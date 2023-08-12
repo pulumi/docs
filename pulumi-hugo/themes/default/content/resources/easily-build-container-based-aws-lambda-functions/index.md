@@ -7,7 +7,7 @@ meta_desc: "Watch as Pulumi VP of Engineering, Lee Zen, helps you to get started
 featured: false
 
 pre_recorded: true
-pulumi_tv: true
+pulumi_tv: false
 unlisted: false
 
 # Gated videos will have a registration form and the user will need

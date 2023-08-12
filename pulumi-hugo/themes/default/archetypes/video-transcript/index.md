@@ -7,7 +7,7 @@ meta_desc: "Search Description"
 featured: false
 
 pre_recorded: true
-pulumi_tv: true
+pulumi_tv: false
 unlisted: false
 
 # Gated videos will have a registration form

@@ -1,8 +1,9 @@
-{{ $h1Class := "" }}
-{{ if eq .small_title "true" }}
-    {{ $h1Class = "small-title" }}
-{{ end }}
+{{ $level := (default .headingLevel 2) }}
 
+{{ $headingClass := "" }}
+{{ if eq .small_title "true" }}
+    {{ $headingClass = "small-title" }}
+{{ end }}
 
 <header class="page-hero">
     <div class="dot-background-container">
@@ -10,8 +11,8 @@
     </div>
     <div class="dot-overlay"></div>
     <div class="page-hero-title">
-        <h1 class="{{ $h1Class }}">
+        <h{{ $level }} class="{{ $headingClass }}">
             <span><span class="rainbow-text" data-text="{{ .title }}">{{ .title }}</span></span>
-        </h1>
+        </h{{ $level }}>
     </div>
 </header>

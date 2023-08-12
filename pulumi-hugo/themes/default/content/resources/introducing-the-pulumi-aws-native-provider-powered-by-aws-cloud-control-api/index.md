@@ -7,7 +7,7 @@ meta_desc: "Pulumi’s AWS Native provider offers a well-defined resource model 
 featured: false
 
 pre_recorded: true
-pulumi_tv: true
+pulumi_tv: false
 unlisted: false
 
 # Gated videos will have a registration form and the user will need

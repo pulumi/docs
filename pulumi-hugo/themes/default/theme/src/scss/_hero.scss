@@ -104,7 +104,7 @@
     .page-hero-title {
         @apply w-full flex flex-col items-center justify-center pointer-events-none;
 
-        h1 {
+        h1, h2, h3 {
             @apply text-center max-w-4xl my-10;
             @screen lg {
                 font-size: 4.5rem;

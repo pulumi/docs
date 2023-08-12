@@ -7,7 +7,7 @@ meta_desc: "In this week's episode of Modern Infrastructure Wednesday, we go in-
 featured: false
 
 pre_recorded: true
-pulumi_tv: true
+pulumi_tv: false
 unlisted: false
 
 # Gated videos will have a registration form and the user will need

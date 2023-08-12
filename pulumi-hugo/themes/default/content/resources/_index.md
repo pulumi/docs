@@ -24,9 +24,6 @@ sections:
     - label: Pulumi AI Answers
       anchor: ai-answers
       icon: comments
-    - label: PulumiTV
-      anchor: pulumitv
-      icon: tv
     - label: Whitepapers
       anchor: whitepapers
       icon: book

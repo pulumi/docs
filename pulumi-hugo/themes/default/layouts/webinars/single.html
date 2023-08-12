@@ -7,7 +7,7 @@
             </div>
         </header>
     {{ else }}
-        {{ partial "hero.html" (dict "title" .Params.hero.title "small_title" "true") }}
+        {{ partial "hero.html" (dict "title" "Resources" "small_title" "true" "headingLevel" 3) }}
     {{ end }}
 {{ end }}
 
@@ -50,15 +50,17 @@
                         <div class="description text-gray-600">
                             {{ .description | markdownify }}
                         </div>
-                        <h4>Presenters</h4>
-                        <ul class="list-none p-0">
-                            {{ range .presenters }}
-                                <li class="mb-4">
-                                    <div class="text-purple">{{ .name }}</div>
-                                    <div class="text-sm">{{ .role }}</div>
-                                </li>
-                            {{ end }}
-                        </ul>
+                        {{ if .presenters }}
+                            <h4>Presenters</h4>
+                            <ul class="list-none p-0">
+                                {{ range .presenters }}
+                                    <li class="mb-4">
+                                        <div class="text-purple">{{ .name }}</div>
+                                        <div class="text-sm">{{ .role }}</div>
+                                    </li>
+                                {{ end }}
+                            </ul>
+                        {{ end }}
                         {{ if isset . "learn" }}
                             <h4 class="text-orange">Join us to learn:</h4>
                             <ul class="text-gray-600">
@@ -99,98 +101,82 @@
             {{ else }}
                 <div class="md:mx-auto w-full">
                     {{ $topLevelContext := . }}
-                    {{ with .Params.main }}
-                        <!-- Rendered with Hugo's YouTube shortcode: https://gohugo.io/content-management/shortcodes/#youtube -->
-                        <div class="rounded shadow-md mb-10" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-                            <iframe src="{{ .youtube_url }}" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen=""></iframe>
+
+                    <div class="mx-auto max-w-4xl">
+                        <a class="bg-violet-100 inline-flex items-center text-gray-800 font-semibold rounded py-2 px-4" href="/resources/#videos">
+                            <span><i class="fas fa-video mr-2"></i></span>
+                            <span>Video</span>
+                        </a>
+                        <div>
+                            <h1 class="text-4xl mt-6 mb-2">{{ .Title }}</h1>
                         </div>
-                        <div class="my-10 flex">
-                            <a href="#gettingStartedList" class="btn-primary mr-4">Get Started With Pulumi</a>
-                            <a href="{{ relref $topLevelContext "/resources" }}" class="btn-secondary">More Resources</a>
+                        <div class="font-display mt-0 mb-4">
+                            Published
+                            <pulumi-datetime class="inline-block" date="{{ .Params.main.sortable_date }}"></pulumi-datetime>
                         </div>
-                        <span class="text-sm font-bold">
-                            Published:
-                            <pulumi-datetime class="inline-block" date="{{ .sortable_date }}"></pulumi-datetime>
-                        </span>
-                        <p class="description text-gray-600">
-                            {{ .description | markdownify }}
+                        <p class="description my-8 text-gray-700">
+                            {{ .Params.main.description | markdownify }}
                         </p>
-                        <h4>Presenters</h4>
-                        <ul class="list-none p-0">
-                            {{ range .presenters }}
-                                <li class="mb-4">
-                                    <div class="text-purple">{{ .name }}</div>
-                                    <div class="text-sm">{{ .role }}</div>
-                                </li>
-                            {{ end }}
-                        </ul>
-                        {{ if isset . "learn" }}
-                            <h4>What you will learn:</h4>
-                            <ul class="text-gray-600">
-                                {{ range .learn }}
-                                    <li>{{ . }}</li>
-                                {{ end }}
-                            </ul>
-                        {{ end }}
-                    {{ end }}
-                    {{ if .Params.transcript }}
-                        <div class="mt-10">
-                            <h4>Transcript</h4>
-                            <p class="description">{{ .Params.transcript | markdownify }}</p>
+                    </div>
+
+                    <div class="my-12">
+                        <!-- Rendered with Hugo's YouTube shortcode: https://gohugo.io/content-management/shortcodes/#youtube -->
+                        <div class="rounded-xl shadow-lg mb-10" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+                            <iframe src="{{ .Params.main.youtube_url }}" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen=""></iframe>
                         </div>
-                    {{ end }}
+                    </div>
+
+                    <div class="mx-auto max-w-4xl">
+
+                        {{ if .Params.main.presenters }}
+                            <div class="my-8">
+                                <h4>Presenters</h4>
+                                <ul>
+                                    {{ range .Params.main.presenters }}
+                                        <li class="mb-4">
+                                            <div>{{ .name }}</div>
+                                            <div class="text-sm">{{ .role }}</div>
+                                        </li>
+                                    {{ end }}
+                                </ul>
+                            </div>
+                        {{ end }}
+
+                        {{ if .Params.main.learn }}
+                            <div class="my-8">
+                                <h4>What you'll learn</h4>
+                                <ul>
+                                    {{ range .Params.main.learn }}
+                                        <li>{{ . }}</li>
+                                    {{ end }}
+                                </ul>
+                            </div>
+                        {{ end }}
+
+                        <div class="mt-12 flex justify-center">
+                            <a href="/docs/get-started/" class="btn-primary mr-4">Get Started With Pulumi</a>
+                            <a href="/resources" class="btn-secondary">More Resources</a>
+                        </div>
+
+                        {{ if .Params.transcript }}
+                            <div class="mt-8">
+                                <details>
+                                    <summary class="rounded-md p-4 border border-gray-400 mb-4 cursor-pointer">
+                                        Show video transcript
+                                    </summary>
+                                    <div class="description">
+                                        {{ .Params.transcript | markdownify }}
+                                    </div>
+                                </details>
+                            </div>
+                        {{ end }}
+                    </div>
                 </div>
             {{ end }}
         </div>
     </section>
 
-    <section id="gettingStartedList" class="px-4">
-        <div class="container mx-auto max-w-6xl pb-16">
-            <div class="{{ if .Params.gated }}md:mx-8{{ end }}">
-                <h4 class="text-orange">Get Started with Pulumi</h4>
-                <ul class="text-gray-600">
-                    {{ if .Params.aws_only }}
-                        <li>
-                            <strong><a class="link" href="{{ relref . "/docs/clouds/aws/get-started" }}">Create an AWS S3 Bucket</a></strong> then modify the bucket to host a
-                            static website.
-                        </li>
-                        <li>
-                            <strong><a class="link" href="{{ relref . "/registry/packages/aws" }}">Learn how to use Pulumi's AWS Classic Provider</a></strong
-                            >. It uses the AWS SDK to manage and provision resources.
-                        </li>
-                        <li>
-                            <strong><a class="link" href="https://aws.amazon.com/marketplace/pp/prodview-dwn22batkhsyg">Get Pulumi Enterprise Edition</a></strong> for AWS on AWS
-                            Marketplace.
-                        </li>
-                        <li>
-                            <strong><a class="link" href="{{ relref . "/docs/install" }}">Download Pulumi</a></strong
-                            >, a free open source infrastructure as code tool.
-                        </li>
-                        <li>
-                            <strong><a class="link" href="{{ relref . "/learn" }}">Learn all the concepts of Pulumi</a></strong> with step-by-step tutorials.
-                        </li>
-                    {{ else }}
-                        <li>
-                            <strong><a class="link" href="{{ relref . "/docs/clouds/aws/get-started" }}">Create an AWS S3 Bucket</a></strong> then modify the bucket to host a
-                            static website.
-                        </li>
-                        <li>
-                            <strong><a class="link" href="{{ relref . "/docs/clouds/azure/get-started" }}">Create an Azure Resource Group and Storage Account</a></strong
-                            >, then export the storage account’s connection string.
-                        </li>
-                        <li>
-                            <strong><a class="link" href="{{ relref . "/docs/clouds/gcp/get-started" }}">Create a Google Cloud Storage Bucket</a></strong> and apply labels to that
-                            bucket.
-                        </li>
-                        <li>
-                            <strong><a class="link" href="{{ relref . "/docs/clouds/kubernetes/get-started" }}">Create a Kubernetes NGINX deployment</a></strong> and add a config
-                            value for MiniKube deployments.
-                        </li>
-                    {{ end }}
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    {{ partial "learnmore-contactus.html" . }}
+    <div class="mx-auto mb-12 max-w-4xl">
+        {{ partial "learnmore-ai.html" . }}
+    </div>
 {{ end }}

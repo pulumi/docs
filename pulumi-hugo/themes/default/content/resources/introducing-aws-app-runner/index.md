@@ -7,7 +7,7 @@ meta_desc: "Learn how to get started using AWS App Runner with Pulumi to quickly
 featured: false
 
 pre_recorded: true
-pulumi_tv: true
+pulumi_tv: false
 unlisted: false
 
 # Gated videos will have a registration form and the user will need

@@ -7,7 +7,7 @@ meta_desc: "In this demo Komal Ali will walk you through a self service cloud pl
 featured: false
 
 pre_recorded: true
-pulumi_tv: true
+pulumi_tv: false
 unlisted: false
 
 # Gated videos will have a registration form and the user will need
