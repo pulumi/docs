@@ -20,83 +20,88 @@
 
 
     <section id="webinarLandingPage" class="px-4">
-        <div class="container mx-auto max-w-6xl pt-16 pb-8 md:flex">
+        <div class="container mx-auto max-w-6xl pt-16 pb-8">
             {{ if .Params.gated }}
                 {{ $buttonText := (cond (eq .Params.pre_recorded true) "WATCH NOW" "REGISTER NOW") }}
                 {{ $multipleSessions := isset .Params "multiple" }}
-                <div class="md:w-1/2 md:mx-8">
-                    {{ $preRecorded := .Params.pre_recorded }}
-                    {{ with .Params.main }}
-                        <h4>Overview</h4>
-                        <p><a href="#webinarRegistrationForm" class="btn md:hidden">{{ $buttonText }}</a></p>
-                        {{ if eq $preRecorded true }}
-                            <span class="uppercase text-orange text-sm font-bold">On Demand | Recorded on:</span>
-                        {{ end }}
-                        {{ if $multipleSessions }}
-                            <span>Multiple sessions available. Check the registration form for dates and times.</span>
-                        {{ else }}
-                            {{ if ne .hide_date true }}
-                                <h6 class="mt-4"><pulumi-datetime class="uppercase text-orange text-sm font-bold" date="{{ .sortable_date }}"></pulumi-datetime></h6>
+                <div>
+                    <h1 class="text-5xl mb-12 text-center md:mx-8">{{ .Title }}</h1>
+                </div>
+                <div class="md:flex">
+                    <div class="md:w-1/2 md:mx-8">
+                        {{ $preRecorded := .Params.pre_recorded }}
+                        {{ with .Params.main }}
+                            <h4>Overview</h4>
+                            <p><a href="#webinarRegistrationForm" class="btn md:hidden">{{ $buttonText }}</a></p>
+                            {{ if eq $preRecorded true }}
+                                <span class="uppercase text-orange text-sm font-bold">On Demand | Recorded on:</span>
+                            {{ end }}
+                            {{ if $multipleSessions }}
+                                <span>Multiple sessions available. Check the registration form for dates and times.</span>
                             {{ else }}
-                                <h6 class="mt-4">Date to be announced</h6>
+                                {{ if ne .hide_date true }}
+                                    <h6 class="mt-4"><pulumi-datetime class="uppercase text-orange text-sm font-bold" date="{{ .sortable_date }}"></pulumi-datetime></h6>
+                                {{ else }}
+                                    <h6 class="mt-4">Date to be announced</h6>
+                                {{ end }}
+                            {{ end }}
+                            <h6 class="mt-2">Duration: {{ .duration }}</h6>
+                            {{ if .youtube_url }}
+                                <div class="my-8">
+                                    <a href="{{ .youtube_url }}" target="_blank" rel="noopener noreferrer" class="btn-secondary">WATCH NOW</a>
+                                </div>
+                            {{ end }}
+                            <div class="description text-gray-600">
+                                {{ .description | markdownify }}
+                            </div>
+                            {{ if .presenters }}
+                                <h4>Presenters</h4>
+                                <ul class="list-none p-0">
+                                    {{ range .presenters }}
+                                        <li class="mb-4">
+                                            <div class="text-purple">{{ .name }}</div>
+                                            <div class="text-sm">{{ .role }}</div>
+                                        </li>
+                                    {{ end }}
+                                </ul>
+                            {{ end }}
+                            {{ if isset . "learn" }}
+                                <h4 class="text-orange">Join us to learn:</h4>
+                                <ul class="text-gray-600">
+                                    {{ range .learn }}
+                                        <li>{{ . }}</li>
+                                    {{ end }}
+                                </ul>
+                            {{ end }}
+                            <h4>Prerequisites</h4>
+                            <div>This course will be taught using Pulumi Cloud. To follow along, sign up for your free account: <a class="text-blue-700 font-semibold underline hover:cursor-pointer" href="https://app.pulumi.com/signup">https://app.pulumi.com/signup</a></div>
+                        {{ end }}
+                    </div>
+                    <div id="webinarRegistrationForm" class="mt-10 md:mt-0 md:w-1/2 md:mx-8 bg-gray-200 rounded p-6">
+                        {{ if $timePassed }}
+                            <h4 class="text-orange">Recording Coming Soon!</h4>
+                            <p>This live webinar is no longer available. The recording will be posted to this page when it is available.</p>
+                        {{ else }}
+                            {{ $formHeader := (cond (eq .Params.pre_recorded true) "Watch The Recording Now" "Register Here") }}
+                            {{ if isset .Params.form "header" }}
+                                {{ $formHeader = .Params.form.header }}
+                            {{ end }}
+                            <h4 class="text-orange">{{ $formHeader }}</h4>
+                            {{ if $multipleSessions }}
+                                <pulumi-webinar-form-select
+                                    label-class="block mb-2 font-normal text-sm"
+                                    select-class="w-full px-2 py-1 text-sm rounded block text-gray-700 border border-gray-300 rounded bg-white focus:outline-none focus:ring"
+                                    sessions="{{ .Params.multiple | jsonify }}"
+                                ></pulumi-webinar-form-select>
+                            {{ else }}
+                                <pulumi-hubspot-form
+                                    form-id="{{ .Params.form.hubspot_form_id }}"
+                                    go-to-webinar-key="{{ .Params.form.gotowebinar_key }}"
+                                    salesforce-campaign-id="{{ .Params.form.salesforce_campaign_id }}"
+                                ></pulumi-hubspot-form>
                             {{ end }}
                         {{ end }}
-                        <h6 class="mt-2">Duration: {{ .duration }}</h6>
-                        {{ if .youtube_url }}
-                            <div class="my-8">
-                                <a href="{{ .youtube_url }}" target="_blank" rel="noopener noreferrer" class="btn-secondary">WATCH NOW</a>
-                            </div>
-                        {{ end }}
-                        <div class="description text-gray-600">
-                            {{ .description | markdownify }}
-                        </div>
-                        {{ if .presenters }}
-                            <h4>Presenters</h4>
-                            <ul class="list-none p-0">
-                                {{ range .presenters }}
-                                    <li class="mb-4">
-                                        <div class="text-purple">{{ .name }}</div>
-                                        <div class="text-sm">{{ .role }}</div>
-                                    </li>
-                                {{ end }}
-                            </ul>
-                        {{ end }}
-                        {{ if isset . "learn" }}
-                            <h4 class="text-orange">Join us to learn:</h4>
-                            <ul class="text-gray-600">
-                                {{ range .learn }}
-                                    <li>{{ . }}</li>
-                                {{ end }}
-                            </ul>
-                        {{ end }}
-                        <h4>Prerequisites</h4>
-                        <div>This course will be taught using Pulumi Cloud. To follow along, sign up for your free account: <a class="text-blue-700 font-semibold underline hover:cursor-pointer" href="https://app.pulumi.com/signup">https://app.pulumi.com/signup</a></div>
-                    {{ end }}
-                </div>
-                <div id="webinarRegistrationForm" class="mt-10 md:mt-0 md:w-1/2 md:mx-8 bg-gray-200 rounded p-6">
-                    {{ if $timePassed }}
-                        <h4 class="text-orange">Recording Coming Soon!</h4>
-                        <p>This live webinar is no longer available. The recording will be posted to this page when it is available.</p>
-                    {{ else }}
-                        {{ $formHeader := (cond (eq .Params.pre_recorded true) "Watch The Recording Now" "Register Here") }}
-                        {{ if isset .Params.form "header" }}
-                            {{ $formHeader = .Params.form.header }}
-                        {{ end }}
-                        <h4 class="text-orange">{{ $formHeader }}</h4>
-                        {{ if $multipleSessions }}
-                            <pulumi-webinar-form-select
-                                label-class="block mb-2 font-normal text-sm"
-                                select-class="w-full px-2 py-1 text-sm rounded block text-gray-700 border border-gray-300 rounded bg-white focus:outline-none focus:ring"
-                                sessions="{{ .Params.multiple | jsonify }}"
-                            ></pulumi-webinar-form-select>
-                        {{ else }}
-                            <pulumi-hubspot-form
-                                form-id="{{ .Params.form.hubspot_form_id }}"
-                                go-to-webinar-key="{{ .Params.form.gotowebinar_key }}"
-                                salesforce-campaign-id="{{ .Params.form.salesforce_campaign_id }}"
-                            ></pulumi-hubspot-form>
-                        {{ end }}
-                    {{ end }}
+                    </div>
                 </div>
             {{ else }}
                 <div class="md:mx-auto w-full">
