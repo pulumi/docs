@@ -2,7 +2,7 @@
 # Name of the webinar.
 title: Getting Started with 1Password and Pulumi
 meta_desc: Join us for a hands-on lab showing you how to integrate 1Password into your Pulumi workflow.
-meta_image: "/images/resources/1password-pulumi.png"
+meta_image: "/images/resources/1password-pulumi-jilian.png"
 
 # A featured webinar will display first in the list.
 featured: false
@@ -58,26 +58,22 @@ main:
     datetime: ""
     # Description of the webinar.
     description: |
-      If you’re using 1Password to manage keys, account passwords and other sensitive information you can now access those secrets from the Pulumi CLI using the new Pulumi 1Password plugin.
+      Software developers need to secure their workflows to prevent the accidental exposure of API keys and other secrets. 1Password is known as a capable password manager, but [1Password Developer Tools](https://developer.1password.com/) also provide a set of capabilities to secure secrets throughout the software development lifecycle. 
 
-      Join Pulumi and 1Password for a short walkthrough of this powerful new feature and get your questions answered by the experts.
+      In this session, Sr. Software Engineer Jillian Morgan digs into how to use the 1Password CLI to manage secrets in a Pulumi workflow. Join Pulumi and 1Password for a short walkthrough of this powerful new feature and get your questions answered by the experts.
 
 
     # The webinar presenters
     presenters:
         - name: Ringo De Smet
           role: Customer Experience Architect, Pulumi
-        - name: Clarence Wong
-          role: Senior Product Partnerships Manager, 1Password
-        - name: Jason Harris
-          role: Principal Platform Evangelist, 1Password
-        - name: Simon Barendse
+
+        - name: Jillian Morgan
           role: Senior Software Engineer, 1Password
 
     # A bullet point list containing what the user will learn during the webinar.
     learn:
-        - How to set up the Pulumi 1Password Plugin
-        - Accessing your 1Password secrets from the Pulumi CLI
+        - How to access your 1Password secrets from the Pulumi CLI
         - Best practices for securing sensitive values during your deployments
 
 # The right hand side form section.
