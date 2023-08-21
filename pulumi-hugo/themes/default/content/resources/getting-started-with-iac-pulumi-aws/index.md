@@ -9,7 +9,7 @@ main:
     - name: Josh Kodroff
       role: Sr. Solutions Architect, Pulumi
     - name: Marina Novikova
-      role: Partner Solutions Architect, AWS
+      role: Sr. Partner Solutions Architect, AWS
   learn:
     - The basics of the Pulumi Programming Model
     - How to provision, update, and destroy AWS resources
@@ -44,6 +44,6 @@ title: Getting Started with Infrastructure as Code on AWS
 title_tag: "Getting Started with IaC on AWS"
 meta_desc: This workshop is designed to help new users become familiar with the
   core concepts needed to effectively deploy resources on AWS using Pulumi.
-meta_image:
+meta_image: "/images/resources/intro-aws-classic-v6.png"
 url_slug: getting-started-with-iac-pulumi-aws
 ---
