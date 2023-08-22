@@ -200,6 +200,24 @@ Once the GitHub app has been installed, the deployment settings for a stack can 
 
 ## Common Scenarios
 
+### Environment Variables
+
+By default, there are a set of environment variables set by the process automatically:
+
+- `GITHUB_TOKEN`: Personal Access Token configured when the source is GitHub (unless there is a token configured by the custom environment variables)
+- `PULUMI_DEPLOY_OIDC_CONFIG`: OIDC configuration provided for the cloud integrations
+- `PULUMI_CI_SYSTEM`: "Pulumi Deployments"
+- `PULUMI_CI_BUILD_ID`: Current deployment ID
+- `PULUMI_CI_BUILD_NUMBER`: Current deployment version
+- `PULUMI_CI_BUILD_URL`: Current deployment URL
+- `PULUMI_CI_ORGANIZATION`: Current account organization
+- `PULUMI_CI_PROJECT`: Current project name
+- `PULUMI_CI_STACK`: Current stack name
+
+These can be extended by configuring custom environment variables:
+
+![Pulumi UI - Environment Variables](../ui-custom-env-variables.png)
+
 ### Path Filtering
 
 When using the GitHub app and push-to-deploy, you may want to filter deployment events to only target file changes in specific directories. You can easily do this using path filtering, so a deployment is only triggered if there is a change in files that match the path filters. This is especially useful for monorepos where you may have multiple Pulumi programs within the same repository.
