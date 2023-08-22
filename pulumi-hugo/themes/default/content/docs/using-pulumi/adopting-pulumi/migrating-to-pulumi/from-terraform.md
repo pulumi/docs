@@ -16,7 +16,7 @@ aliases:
 If your infrastructure was provisioned with Terraform, there are a number of options that will help you adopt Pulumi.
 
 * **Coexist** with resources provisioned by Terraform by referencing a `.tfstate` file.
-* **Import** existing resources into Pulumi [in the usual way](/docs/using-pulumi/adopting-pulumi/import/) or using `pulumi convert --from terraform` along with some import helper code to adopt all resources from an existing `.tfstate` file.
+* **Import** existing resources into Pulumi [in the usual way](/docs/using-pulumi/adopting-pulumi/import/).
 * **Convert** any Terraform HCL to Pulumi code using `pulumi convert --from terraform`.
 
 This range of techniques helps to either temporarily or permanently use Pulumi alongside Terraform, in addition to fully migrating existing infrastructure to Pulumi.
@@ -479,28 +479,6 @@ In cases where the converter does not yet support a feature, the `pulumi convert
     <pulumi-choosable type="language" value="go"><code>notImplemented</code></pulumi-choosable>
     <pulumi-choosable type="language" value="csharp"><code>NotImplemented</code></pulumi-choosable>
 </pulumi-chooser> function that will need to be filled in manually. For most projects, the converter should be able to convert 90-95% of the code without any TODOs, with only a small percentage of items to address manually, significantly reducing migration time compared to doing an entire migration by hand. We are actively improving the converter by adding support for missing features and improving the overall quality of the converted code to reduce the amount of manual fix-ups required.
-
-### Importing Resources
-
-That command converted the static HCL source code to Pulumi code. What if you want to import existing resource states from a `.tfstate` file, however, to avoid unnecessarily recreating your infrastructure?
-
-If you are using TypeScript, [copy the `import.ts` file from this repo](https://github.com/pulumi/tf2pulumi/blob/master/misc/import/import.ts) into your new stack's directory and add the following near the top of your generated `index.ts` file just before any resource creations:
-
-```typescript
-...
-import "./import";
-...
-```
-
-Next, set the `importFromStatefile` config setting on your project to a valid location of a `.tfstate` file to import resources from that state:
-
-```bash
-$ pulumi config set importFromStatefile ./terraform.tfstate
-```
-
-After doing this, the first `pulumi up` for a new stack with this configuration variable set will import instead of create all of the resources defined in the code. Once imported, the existing resources in your cloud provider can now be managed by Pulumi going forward. See the [Importing Infrastructure User Guide](/docs/using-pulumi/adopting-pulumi/import/) for more details on importing existing resources.
-
-If you are using Go, the following example can be used to [Programmatically Import Resources from an Existing Terraform State File](https://github.com/pulumi/tf2pulumi/tree/master/misc/import-go). Similar to the steps above for TypeScript, there are a set of files in that repo for Go that can be copied into your new stack's directory to allowing importing from a `.tfstate` file.
 
 ### Example Conversion
 
