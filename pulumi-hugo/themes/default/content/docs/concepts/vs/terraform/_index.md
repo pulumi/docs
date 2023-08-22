@@ -25,15 +25,15 @@ aliases:
     }
 </style>
 
-Choosing the right cloud engineering platform is critical. We want you to have the best information possible to pick the solution that fits your needs.
+Choosing the right infrastructure as code platform is critical. We want you to have the best information possible to pick the solution that fits your needs.
 
 ## What is Pulumi?
 
-Pulumi’s universal infrastructure as code platform helps teams tame the cloud’s complexity using the world’s most popular programming languages (TypeScript, Go, .NET, Python, and Java) and markup languages (YAML, CUE).
+Pulumi is an open source infrastructure as code platform that helps teams tame the cloud’s complexity using the world’s most popular programming languages (TypeScript, Go, .NET, Python, and Java) and markup languages (YAML, CUE).
 
 ## What is Terraform?
 
-Terraform provides open-source [infrastructure as code](/what-is/what-is-infrastructure-as-code/) software for cloud service management with a consistent CLI workflow. Terraform allows you to write, plan, and apply changes to deliver infrastructure as code.
+Terraform provides [infrastructure as code](/what-is/what-is-infrastructure-as-code/) software for cloud service management with a consistent CLI workflow. Terraform allows you to write, plan, and apply changes to deliver infrastructure as code.
 
 <div class="rounded shadow-md" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
     <iframe
@@ -80,7 +80,7 @@ Terraform provides open-source [infrastructure as code](/what-is/what-is-infrast
 
 ## Pulumi vs. Terraform: Similarities {#similarities}
 
-Terraform and Pulumi have some similarities in that you can create, deploy and manage infrastructure as code on any cloud. Like Terraform, Pulumi is [open source on GitHub](https://github.com/pulumi/pulumi) and is [free to use](/docs/get-started/). Both Terraform and Pulumi offer a desired state infrastructure as code model where the code represents the desired infrastructure state and the deployment engine compares this desired state with the stack’s current state and determines what resources need to be created, updated or deleted.  Both Terraform and Pulumi support many cloud providers, including [AWS](/aws/), [Azure](/azure/), and [Google Cloud](/gcp/), plus other services like CloudFlare, Digital Ocean, and more. Thanks to integration with Terraform providers, Pulumi is also able to support a superset of the providers that Terraform currently offers.
+Similarities between Terraform and Pulumi include the ability to create, deploy, and manage infrastructure as code on any cloud. Terraform is a free-to-use, Business Source License model based, infrastructure as code tool from HashiCorp. Pulumi is fully open source [Apache 2.0 licensed](https://github.com/pulumi/pulumi). Both Terraform and Pulumi follow a desired state infrastructure as code model, where the IaC code represents the desired state of the infrastructure. The deployment engine compares this desired state with the current state of the stack and determines the necessary actions, such as creating, updating, or deleting resources. Both Terraform and Pulumi support many cloud providers, including [AWS](/aws/), [Azure](/azure/), and [Google Cloud](/gcp/), plus other services like CloudFlare, Digital Ocean, and more. Finally, with Pulumi you get access to all Pulumi providers as well as support for all open source terraform providers.
 
 ## Pulumi vs. Terraform: Key Differences {#differences}
 
@@ -92,11 +92,11 @@ Here is a summary of the key differences between Pulumi and Terraform:
 | ------- | ------ | --------- |
 | [Language Support](#language) | Python, TypeScript, JavaScript, Go, C#, F#, Java, YAML | HashiCorp Configuration Language (HCL) |
 | [IDE Support](#ide) | Code completion, strong typing, error squiggles, rich resource documentation, etc. | Limited |
+| [OSS License](#license) | Yes, Apache License 2.0 | No, Business Source License 1.1 |
 | [State Management](#state) | Managed through Pulumi Cloud by default, self-managed options available. | Self-managed by default, managed SaaS offering available. |
 | [Provider Support](#providers) | Native cloud providers with 100% same-day resource coverage plus Terraform-based providers for additional coverage. | Support across multiple IaaS, SaaS, and PaaS providers. |
 | [Cloud Native Support](#cloud-native) | Richly typed. Includes CRDs & in-cluster operator support for GitOps delivery. | Core API typed. Generic support for CRD. |
 | [Dynamic Provider Support](#dynamic-providers) | Yes | No |
-| [OSS License](#license) | Apache License 2.0 | Business Source License 1.1 |
 | [Infrastructure Reuse and Modularity](#reuse) | Flexible. Reuse functions, classes, packages, and Pulumi components. | Constrained. Can only reuse Terraform modules. |
 | [Testing and Validation](#testing) | Unit, property, and integration testing. Supports popular test frameworks. | Integration testing only |
 | [Modes of Execution](#modes) | Run CLI commands or initiate commands programmatically with Automation API. | Run CLI commands or perform remote runs with SaaS offering. |
@@ -110,7 +110,9 @@ Here is a summary of the key differences between Pulumi and Terraform:
 | [Transformations](#transformations) | Yes | No |
 | [Import Code from other IaC Tools](#converting) | Yes | No |
 
-Getting started with Pulumi is easy. If you have experience with Terraform and already have HCL, you can convert it to Pulumi. Follow our [Converting Terraform HCL to Pulumi](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-terraform/#converting-terraform-hcl-to-pulumi) guide. If you would like a reference on Terraform terminology or command equivalents in Pulumi, see [Terminology and Command Equivalence](/docs/concepts/vs/terraform/terminology/) table. If you would like to see how other Pulumi customers have migrated from Terraform to Pulumi, see the [Atlassian case study](/case-studies/atlassian/) and the [Green Park Sports case study](/case-studies/greenpark-sports/). If you would like to deploy a simple program, follow our Get Started guide:
+Getting started with Pulumi is easy. If you have experience with Terraform and already have HCL, you can convert it to Pulumi. Follow our comprehensive guides in our [Migration Hub](/blog/migration-hub/) to use our [self-service migration tools](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-terraform/) or work with our [Expert Services teams](/contact?form=tf-migration) that can help you with migration and training. As part of Pulumi Enterprise and Business Critical Editions, [Terraform workspace migrations](/blog/tf-migration-offer) are bundled as part of the onboarding process.
+
+If you would like a reference on Terraform terminology or command equivalents in Pulumi, see [Terminology and Command Equivalence](/docs/concepts/vs/terraform/terminology/) table. If you would like to see how other Pulumi customers have migrated from Terraform to Pulumi, see the [Atlassian case study](/case-studies/atlassian/) and the [Green Park Sports case study](/case-studies/greenpark-sports/). If you would like to deploy a simple program, follow our Get Started guide:
 
 {{< get-started >}}
 
@@ -228,4 +230,4 @@ Pulumi allows you to convert templates by Terraform HCL , Kubernetes YAML, and A
 
 ## Get Started with Pulumi
 
-Pulumi’s Universal Infrastructure as Code platform supports the widest range of builders, clouds, programming languages, and cloud architectures available today. [Get started today](/docs/get-started/).
+Pulumi’s Infrastructure as Code platform supports the widest range of builders, clouds, programming languages, and cloud architectures available today. [Get started today](/docs/get-started/).
