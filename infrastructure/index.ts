@@ -48,6 +48,9 @@ const config = {
     setRootRecord: stackConfig.get("setRootRecord") || undefined,
 };
 
+const aiAppStack = new pulumi.StackReference('pulumi/pulumi-ai-app-infra/prod');
+const previewAiAppDomain = aiAppStack.requireOutput('previewAiAppDistributionDomain');
+
 // originBucketName is the name of the S3 bucket to use as the CloudFront origin for the
 // website. This bucket is presumed to exist prior to the Pulumi run; if it doesn't, this
 // program will fail.
@@ -129,7 +132,7 @@ if (config.makeFallbackBucket) {
     );
 }
 
-// We deny the s3:ListBucket permission to anyone but account users to prevent unintended 
+// We deny the s3:ListBucket permission to anyone but account users to prevent unintended
 // disclosure of the bucket's contents.
 const originBucketPolicy = new aws.s3.BucketPolicy("origin-bucket-policy", {
     bucket: originBucket.bucket,
@@ -265,6 +268,16 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
                 httpsPort: 443,
                 originSslProtocols: ["TLSv1.2"],
             },
+        },
+        {
+            originId: previewAiAppDomain,
+            domainName: previewAiAppDomain,
+            customOriginConfig: {
+                originProtocolPolicy: "https-only",
+                httpPort: 80,
+                httpsPort: 443,
+                originSslProtocols: ["TLSv1.2"],
+            },
         }
     ],
 
@@ -394,6 +407,24 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
             minTtl: 0,
             maxTtl: 0,
         },
+
+        // AI app, preview, with caching handled by the app
+        {
+            ...baseCacheBehavior,
+            targetOriginId: previewAiAppDomain,
+            pathPattern: '/ai-preview',
+            defaultTtl: 0,
+            minTtl: 0,
+            maxTtl: 0,
+        },
+        {
+            ...baseCacheBehavior,
+            targetOriginId: previewAiAppDomain,
+            pathPattern: '/ai-preview/*',
+            defaultTtl: 0,
+            minTtl: 0,
+            maxTtl: 0,
+        }
     ],
 
     // "All" is the most broad distribution, and also the most expensive.
