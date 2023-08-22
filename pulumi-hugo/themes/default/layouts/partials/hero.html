@@ -14,5 +14,8 @@
         <h{{ $level }} class="{{ $headingClass }}">
             <span><span class="rainbow-text" data-text="{{ .title }}">{{ .title }}</span></span>
         </h{{ $level }}>
+        {{ if .subtitle }}
+            <p class="text-2xl">{{ .subtitle }}</p>
+        {{ end }}
     </div>
 </header>
