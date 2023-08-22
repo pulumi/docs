@@ -19,7 +19,7 @@ been easier to adopt Pulumi.
 
 ## Why Pulumi?
 
-Nearly 2,000 customers and over 100,000 practitioners have chosen Pulumi for their infrastructure as code needs. About
+Nearly 2,000 customers and over 130,000 practitioners have chosen Pulumi for their infrastructure as code needs. About
 half the time, these end users have an existing infrastructure as code solution that has stopped meeting their needs.
 The other half of the time, infrastructure may have been created in the cloud console ("click-ops"), using a cloud CLI,
 or some other manual provisioning tool, but now needs to become repeatable and scalable using infrastructure as code.
@@ -30,6 +30,7 @@ The most common reasons teams prefer Pulumi include:
 * Accessible to the entire organization, thanks to industry standard languages
 * Ability to deal with complexity at scale, thanks to stacks, config, sharing and reuse, and more
 * Perfect confidence thanks to policies and testing
+* Secure by-default, with built-in support for secrets
 * Highly programmable engine can be embedded anywhere, to build custom platforms and tools
 * Instant collaborative bridge between developers and infrastructure experts
 
