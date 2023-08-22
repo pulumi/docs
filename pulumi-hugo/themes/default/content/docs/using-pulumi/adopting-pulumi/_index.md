@@ -31,7 +31,7 @@ Support for these techniques differs based on how your existing infrastructure w
 |                    | [Coexistence](#coexistence) | [Importing](#importing-infrastructure) | [Conversion](#conversion) |
 |--------------------|:-------:|:------:|:-------:|
 | [Terraform](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-terraform/) | ✅      | ✅     | ✅      |
-| [AWS CloudFormation](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-aws/) | ✅      | ✅     |         |
+| [AWS CloudFormation](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-aws/) | ✅      | ✅     | ✅       |
 | [Azure ARM](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-azure/)          | ✅      | ✅     | ✅      |
 | [Kubernetes YAML](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-kubernetes/)    | ✅      | ✅     | ✅      |
 | Other              | ✅      | ✅     |         |
