@@ -14,9 +14,9 @@
                     </h1>
                     <p class="text-center lg:text-left leading-7">{{ .Params.hero.description | markdownify }}</p>
                     <div class="overlay-middle mt-8 flex text-center justify-center items-center flex-col mx-auto lg:mx-0 md:flex-row">
-                        <a class="home-hero-btn-primary mr-0 md:mr-4 mb-3 md:mb-0" href="{{ relref . "/docs/get-started" }}">{{ .Params.hero.cta_text }}</a>
+                        <a class="home-hero-btn-primary mr-0 md:mr-4 mb-3 md:mb-0" href="/docs/get-started/">{{ .Params.hero.cta_text }}</a>
                         <div class="btn-secondary px-12 py-2 rounded-full cursor-pointer">
-                            <a href="{{ relref . "/docs/get-started/install" }}">
+                            <a href="/docs/install/">
                                 Download<br /> Open Source
                             </a>
                         </div>
@@ -148,7 +148,7 @@
                             {{ range $logo := $logos }}
                                 <div class="p-6 flex flex-col flex-grow items-end h-24 justify-center">
                                     {{ if $logo.link }}
-                                        <a class="w-full h-full" href="{{ relref $pageContext $logo.link }}">
+                                        <a class="w-full h-full" href="{{ $logo.link }}">
                                             {{ partial "customer-logo.html" (dict "logo" $logo.name) }}
                                         </a>
                                     {{ else }}
@@ -170,7 +170,7 @@
                             {{ range $logo := $logos }}
                                 <div class="p-6 flex flex-col flex-grow items-end h-24 justify-center">
                                     {{ if $logo.link }}
-                                        <a class="w-full h-full" href="{{ relref $pageContext $logo.link }}">
+                                        <a class="w-full h-full" href="{{ $logo.link }}">
                                             {{ partial "customer-logo.html" (dict "logo" $logo.name) }}
                                         </a>
                                     {{ else }}
@@ -324,8 +324,8 @@
                 </p>
                 <p>- Mike Corsaro, Senior Software Engineer at Bitbucket</p>
                 <div class="mt-12 flex flex-col sm:flex-row justify-center flex-grow">
-                    <a class="btn-primary mb-6 sm:mr-2 sm:mb-0" href="{{ relref . "/case-studies/atlassian" }}">Read Atlassian Case Study</a>
-                    <a class="btn-secondary" href="{{ relref . "/case-studies" }}">See more case studies</a>
+                    <a class="btn-primary mb-6 sm:mr-2 sm:mb-0" href="/case-studies/atlassian/">Read Atlassian Case Study</a>
+                    <a class="btn-secondary" href="/case-studies/">See more case studies</a>
                 </div>
             </div>
         </div>
@@ -357,7 +357,7 @@
                 <h2 class="text-white">{{ .Params.get_started.title }}</h2>
                 <p class="text-white">{{ .Params.get_started.description }}</p>
                 <div class="mt-16">
-                    <a class="btn-secondary" href="{{ relref . "/docs/get-started" }}">{{ .Params.get_started.cta_text }}</a>
+                    <a class="btn-secondary" href="/docs/get-started/">{{ .Params.get_started.cta_text }}</a>
                 </div>
             </div>
         </div>
