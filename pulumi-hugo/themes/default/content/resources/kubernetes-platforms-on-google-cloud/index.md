@@ -1,9 +1,9 @@
 ---
 # Name of the webinar.
-title: "Advanced Kubernetes Platforms on Google Cloud with Pulumi"
-title_tag: "Kubernetes Platforms on Google Cloud with Pulumi (Aug 2023 Workshop)"
-meta_desc: "In this workshop, we’ll explore how to deliver and scale a Kubernetes platform on Google Cloud."
-meta_image: "/images/resources/advanced-kubernetes-on-google-cloud.png"
+title: Advanced Kubernetes Platforms on Google Cloud with Pulumi
+title_tag: Kubernetes Platforms on Google Cloud with Pulumi (Aug 2023 Workshop)
+meta_desc: In this workshop, we’ll explore how to deliver and scale a Kubernetes platform on Google Cloud.
+meta_image: "/images/resources/advanced-kubernetes-on-google-cloud-engin.png"
 
 # A featured webinar will display first in the list.
 featured: false
@@ -37,8 +37,8 @@ block_external_search_index: false
 # data for Google Events
 event_data:
   name: Pulumi - Advanced Kubernetes Platforms on Google Cloud with Pulumi
-  start_date: 2023-08-10T08:00:00.000-04:00
-  end_date: 2023-08-10T09:30:00.000-04:00
+  start_date: 2023-09-11T10:00:00.000-04:00
+  end_date: 2023-09-11T11:30:00.000-04:00
   url: "https://www.pulumi.com/resources/kubernetes-platforms-on-google-cloud"
   description: |
     Platform engineering teams often need to help development teams stand up core platforms, build release automation, deploy applications, and scale resources to match customer demand. A best practice in these scenarios is to break up these services into multiple stacks to enable updates to infrastructure and processes that won’t disrupt production.
@@ -62,15 +62,15 @@ hero:
 # Content for the left hand side section of the page.
 main:
     # Webinar title.
-    title: "Advanced Kubernetes Platforms on Google Cloud with Pulumi"
+    title: Advanced Kubernetes Platforms on Google Cloud with Pulumi
     # URL for embedding a URL for ungated webinars.
     youtube_url: 
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2023-08-10T08:00:00.000-04:00
+    sortable_date: 2023-09-11T08:00:00.000-04:00
     # Duration of the webinar.
-    duration: "90 minutes"
+    duration: 90 minutes
     # Datetime of the webinar.
-    datetime: "8/10/2023 8:00am - 9:30am EDT"
+    datetime: 9/11/2023 10:00am - 11:30am EDT
     # Description of the webinar.
     description: |
         Platform engineering teams often need to help development teams stand up core platforms, build release automation, deploy applications, and scale resources to match customer demand. A best practice in these scenarios is to break up these services into multiple stacks to enable updates to infrastructure and processes that won’t disrupt production.
@@ -79,10 +79,10 @@ main:
 
     # The webinar presenters
     presenters:
-        - name: "Tim Hiatt"
-          role: "Technical Solutions Consultant, Google Cloud"
-        - name: "Josh Kodroff"
-          role: "Sr. Solutions Architect, Pulumi"
+        - name: Tim Hiatt
+          role: Technical Solutions Consultant, Google Cloud
+        - name: Engin Diri
+          role: Customer Experience Architect, Pulumi
 
     # A bullet point list containing what the user will learn during the webinar.
     learn:
@@ -95,8 +95,8 @@ main:
 # The right hand side form section.
 form:
     # HubSpot form id.
-    hubspot_form_id: "97c69295-4776-460d-8bce-3e34dfe6707d"
-    salesforce_campaign_id: 701Du000000AYV1IAO
+    hubspot_form_id: 5f859a0d-bf36-4969-82f5-a4dd818b62ef
+    salesforce_campaign_id: 701Du000000AupeIAC
 
 aws_only: false
 ---
