@@ -588,7 +588,26 @@ packages.
 In the following example, the default providers for [aws](/registry/packages/aws/) and [kubernetes](/registry/packages/kubernetes/) are disabled.
 
 ```yaml
-pulumi:disable-default-providers:
-  - aws
-  - kubernetes
+config:
+  pulumi:disable-default-providers:
+    - aws
+    - kubernetes
 ```
+
+### `pulumi:tags`
+
+A list of [stack tags](/docs/concepts/stack/#stack-tags) which are read by the Pulumi CLI and automatically applied on the stack at
+every `pulumi up` or `pulumi refresh` action.
+
+```yaml
+config:
+  pulumi:tags:
+    company: "Some LLC"
+    team: Ops
+```
+
+Pulumi CLI only creates or updates tags which are listed in the config. If you remove a tag from the stack config, you have to remove it from the stack in Pulumi Cloud manually.
+
+Stack tags applied by Pulumi CLI are listed in the `Tags` section of the Overview tab:
+
+![Tags applied by Pulumi CLI](/images/docs/concepts/stack-config-tags.png)
