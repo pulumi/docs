@@ -426,8 +426,9 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
             ...baseCacheBehavior,
             // allow all methods
             allowedMethods: ["DELETE", "GET", "HEAD", "OPTIONS", "PATCH", "POST", "PUT"],
-            // cache none:
-            cachedMethods: [],
+            cachedMethods: [
+                "GET", "HEAD", "OPTIONS",
+            ],
             targetOriginId: previewAiAppDomain,
             pathPattern: '/ai-preview/*',
             defaultTtl: 0,
