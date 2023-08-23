@@ -6,6 +6,8 @@ overview: Pulumi offers migration solutions for everyone, no matter where you ar
 meta_desc: The Migration Hub is your one-stop-shop for adopting Pulumi. Whether you're looking for a Terraform
     alternative or you're just starting with IaC, we can help.
 
+meta_image: /images/migrate/pulumi-migration-hub.png
+
 capabilities:
     - title: Self-Serve Conversion Tools
       icon: code
