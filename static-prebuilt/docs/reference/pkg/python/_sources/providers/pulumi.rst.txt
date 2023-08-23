@@ -8,8 +8,8 @@ module.
 
 .. epigraph::
 
-  **Note**: The Pulumi Python SDK requires Python version 3.6 or greater. Please see the
-  `Python getting started </docs/reference/python/#getting-started>`_ documentation for details on how to get started with
+  **Note**: The Pulumi Python SDK requires an officially supported version of Python. See
+  `Pulumi & Python </docs/languages-sdks/python/>`_ for details on how to get started with
   Python.
 
 The Pulumi Python Resource Model
