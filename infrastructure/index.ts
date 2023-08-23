@@ -411,6 +411,11 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
         // AI app, preview, with caching handled by the app
         {
             ...baseCacheBehavior,
+            // allow all methods
+            allowedMethods: ["DELETE", "GET", "HEAD", "OPTIONS", "PATCH", "POST", "PUT"],
+            cachedMethods: [
+                "GET", "HEAD", "OPTIONS",
+            ],
             targetOriginId: previewAiAppDomain,
             pathPattern: '/ai-preview',
             defaultTtl: 0,
@@ -419,6 +424,11 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
         },
         {
             ...baseCacheBehavior,
+            // allow all methods
+            allowedMethods: ["DELETE", "GET", "HEAD", "OPTIONS", "PATCH", "POST", "PUT"],
+            cachedMethods: [
+                "GET", "HEAD", "OPTIONS",
+            ],
             targetOriginId: previewAiAppDomain,
             pathPattern: '/ai-preview/*',
             defaultTtl: 0,
