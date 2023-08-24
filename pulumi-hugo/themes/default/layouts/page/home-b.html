@@ -351,78 +351,15 @@
     </section>
 
     <!-- Get Started -->
-    <section class="my-16 lg:my-32 lg:pt-48 relative overflow-hidden flex flex-col">
+    <section class="my-16 lg:my-32 relative overflow-hidden flex flex-col">
         <div class="container mx-auto px-3">
-            <div class="w-full bg-violet-600 text-white rounded shadow p-16 lg:pt-56 text-center">
+            <div class="w-full bg-violet-600 text-white rounded shadow p-16 text-center">
                 <h2 class="text-white">{{ .Params.get_started.title }}</h2>
                 <p class="text-white">{{ .Params.get_started.description }}</p>
                 <div class="mt-16">
                     <a class="btn-secondary" href="/docs/get-started/">{{ .Params.get_started.cta_text }}</a>
                 </div>
             </div>
-        </div>
-
-        <div class="w-full order-first pb-16 lg:hidden">
-            <pulumi-swiper slides="1" centered-slides="true" initial-slide="3" loop="true" autoplay="true" autoplay-delay="5000" speed="1000">
-                {{ range $tweet := .Params.get_started.tweets }}
-                    <pulumi-swipeable>
-                        <div class="w-full px-4">
-                            <div class="flex flex-col card p-6 bg-white h-56">
-                                <p class="text-left mt-0">{{ $tweet.text }}</p>
-                                <div class="flex flex-grow items-end">
-                                    <div>
-                                        <img class="rounded-full w-12 h-12" src="{{ $tweet.avatar }}" />
-                                    </div>
-                                    <p class="ml-4 text-gray-600">{{ $tweet.username }}</p>
-                                    <div class="flex-grow flex justify-end my-4">
-                                        <img src="/logos/tech/twitter.svg" alt="Twitter" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </pulumi-swipeable>
-                {{ end }}
-            </pulumi-swiper>
-        </div>
-        <div class="large-container mx-auto absolute top-0 left-0 pt-16 hidden lg:block">
-            <pulumi-swiper slides="3" centered-slides="true" initial-slide="3" loop="true" autoplay="false" autoplay-delay="4000" speed="1000">
-                {{ range $tweet := .Params.get_started.tweets }}
-                    <pulumi-swipeable>
-                        <div class="w-full px-4 text-left">
-                            <div class="flex flex-col card p-6 bg-white h-72">
-                                <p class="flex-grow mt-0">{{ $tweet.text }}</p>
-                                <div class="flex items-center w-full pb-1">
-                                    <a href="{{ $tweet.link }}" target="_blank" rel="noopener noreferrer">
-                                        <!-- If the browser fails to load the Twitter avatar, just hide it. -->
-                                        <div class="rounded-full border-none w-12 h-12 mr-4 overflow-hidden">
-                                            <img src="{{ $tweet.avatar }}" onerror="$(this).hide();" />
-                                        </div>
-                                    </a>
-                                    <a href="{{ $tweet.link }}" class="flex-grow text-gray-600 hover:text-gray-600 hover:underline" target="_blank" rel="noopener noreferrer">
-                                        {{ $tweet.username }}
-                                    </a>
-
-                                    {{ if eq $tweet.source "twitter" }}
-                                        <img class="w-8 h-8" src="/logos/tech/twitter.svg" alt="Twitter" />
-                                    {{ end }}
-
-                                    {{ if eq $tweet.source "reddit" }}
-                                        <img class="w-8 h-8" src="/logos/tech/reddit.svg" alt="Reddit" />
-                                    {{ end }}
-
-                                    {{ if eq $tweet.source "linkedin" }}
-                                        <img class="w-8 h-8" src="/logos/tech/linkedin.svg" alt="LinkedIn" />
-                                    {{ end }}
-
-                                    {{ if eq $tweet.source "blog" }}
-                                        <i class="fas fa-blog text-gray-500 text-2xl"></i>
-                                    {{ end }}
-                                </div>
-                            </div>
-                        </div>
-                    </pulumi-swipeable>
-                {{ end }}
-            </pulumi-swiper>
         </div>
     </section>
 {{ end }}
