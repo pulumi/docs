@@ -50,6 +50,7 @@ const config = {
 
 const aiAppStack = new pulumi.StackReference('pulumi/pulumi-ai-app-infra/prod');
 const previewAiAppDomain = aiAppStack.requireOutput('previewAiAppDistributionDomain');
+const aiAppDomain = aiAppStack.requireOutput('aiAppDistributionDomain');
 
 // originBucketName is the name of the S3 bucket to use as the CloudFront origin for the
 // website. This bucket is presumed to exist prior to the Pulumi run; if it doesn't, this
@@ -431,6 +432,34 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
             ],
             targetOriginId: previewAiAppDomain,
             pathPattern: '/ai-preview/*',
+            defaultTtl: 0,
+            minTtl: 0,
+            maxTtl: 0,
+        },
+
+        // AI app, live, with caching handled by the app
+        {
+            ...baseCacheBehavior,
+            // allow all methods
+            allowedMethods: ["DELETE", "GET", "HEAD", "OPTIONS", "PATCH", "POST", "PUT"],
+            cachedMethods: [
+                "GET", "HEAD", "OPTIONS",
+            ],
+            targetOriginId: aiAppDomain,
+            pathPattern: '/ai',
+            defaultTtl: 0,
+            minTtl: 0,
+            maxTtl: 0,
+        },
+        {
+            ...baseCacheBehavior,
+            // allow all methods
+            allowedMethods: ["DELETE", "GET", "HEAD", "OPTIONS", "PATCH", "POST", "PUT"],
+            cachedMethods: [
+                "GET", "HEAD", "OPTIONS",
+            ],
+            targetOriginId: aiAppDomain,
+            pathPattern: '/ai/*',
             defaultTtl: 0,
             minTtl: 0,
             maxTtl: 0,
