@@ -279,7 +279,17 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
                 httpsPort: 443,
                 originSslProtocols: ["TLSv1.2"],
             },
-        }
+        },
+        {
+            originId: aiAppDomain,
+            domainName: aiAppDomain,
+            customOriginConfig: {
+                originProtocolPolicy: "https-only",
+                httpPort: 80,
+                httpsPort: 443,
+                originSslProtocols: ["TLSv1.2"],
+            },
+        },
     ],
 
     // Default object to serve when no path is given.
