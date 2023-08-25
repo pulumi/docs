@@ -1,0 +1,25 @@
+body.section-workshop-signup {
+
+    .top-nav-bar, .desktop-menu {
+        display: none;
+    }
+
+    .header-container > nav > header > div {
+        justify-content: space-between;
+    }
+
+    .header-btn-primary {
+        visibility: hidden;
+    }
+
+    .header-btn-primary::after {
+        visibility: visible;
+        @include gradient-button;
+        @apply py-3 px-6;
+
+        @screen xl {
+            @apply text-lg;
+        }
+        content: "Try Pulumi"
+    }
+}
