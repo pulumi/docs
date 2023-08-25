@@ -1837,7 +1837,7 @@ POST /api/stacks/{organization}/{project}/{stack}/hooks
 | `payloadUrl`       | string        | body | URL to send request to                                                                                                                                                          |
 | `projectName`      | string        | body | **Optional.** project name (required for stack webhooks)                                                                                                                        |
 | `stackName`        | string        | body | **Optional.** stack name (required for stack webhooks)                                                                                                                          |
-| `format`           | string        | body | **Optional.** format of the payload. Possible values are `raw`, `slack`, or `pulumi_deployments`. Default is `raw`.                                                             |
+| `format`           | string        | body | **Optional.** format of the payload. Possible values are `raw`, `slack`, `ms_teams` or `pulumi_deployments`. Default is `raw`.                                                  |
 | `filters`          | array[string] | body | **Optional.** list of filters for events the webhook should receive. See [webhook docs](/docs/pulumi-cloud/webhooks#filters) for more information on what filters are available |
 | `secret`           | string        | body | **Optional.** secret used as the HMAC key. See [webhook docs](/docs/pulumi-cloud/webhooks#headers) for more information                                                         |
 
