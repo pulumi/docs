@@ -222,6 +222,8 @@ These can be extended by configuring custom environment variables:
 
 When using the GitHub app and push-to-deploy, you may want to filter deployment events to only target file changes in specific directories. You can easily do this using path filtering, so a deployment is only triggered if there is a change in files that match the path filters. This is especially useful for monorepos where you may have multiple Pulumi programs within the same repository.
 
+Path filters are relative to the repository root, and should reference a file by name or a directory must reference files by name relative to the repository or directories via glob patterns such as `/**` to include all changes within a directory.
+
 ![Pulumi UI - Path Filters](../ui-path-filters.png)
 
 As with any other deployment setting, the path filters may be set via the Pulumi Console, using the REST API or defined in code using the Service provider.
