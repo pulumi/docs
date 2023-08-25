@@ -429,6 +429,12 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
             ],
             targetOriginId: previewAiAppDomain,
             pathPattern: '/ai-preview',
+            forwardedValues: {
+                queryString: true,
+                cookies: {
+                    forward: "none",
+                },
+            },
             defaultTtl: 0,
             minTtl: 0,
             maxTtl: 0,
@@ -442,6 +448,12 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
             ],
             targetOriginId: previewAiAppDomain,
             pathPattern: '/ai-preview/*',
+            forwardedValues: {
+                queryString: true,
+                cookies: {
+                    forward: "none",
+                },
+            },
             defaultTtl: 0,
             minTtl: 0,
             maxTtl: 0,
@@ -457,6 +469,12 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
             ],
             targetOriginId: aiAppDomain,
             pathPattern: '/ai',
+            forwardedValues: {
+                queryString: true,
+                cookies: {
+                    forward: "none",
+                },
+            },
             defaultTtl: 0,
             minTtl: 0,
             maxTtl: 0,
@@ -470,6 +488,12 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
             ],
             targetOriginId: aiAppDomain,
             pathPattern: '/ai/*',
+            forwardedValues: {
+                queryString: true,
+                cookies: {
+                    forward: "none",
+                },
+            },
             defaultTtl: 0,
             minTtl: 0,
             maxTtl: 0,
