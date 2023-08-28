@@ -271,7 +271,11 @@ Several schema types contain a `language` field which is a map from a supported 
 
 Language-specific information for a package.
 
-For `nodejs`:
+{{% chooser language "javascript,typescript,python,go,csharp,java" / %}}
+
+{{% choosable language "javascript,typescript" %}}
+
+For `javascript, typescript`:
 
 | Property                  | Type          | Required | Description                                                                          |
 |---------------------------|---------------|----------|--------------------------------------------------------------------------------------|
@@ -291,16 +295,22 @@ For `nodejs`:
 | `pluginName`              | `string`      | No       | The name of the plugin, which might be different from the package name.              |
 | `pluginVersion`           | `string`      | No       | The version of the plugin, which might be different from the version of the package. |
 
+{{% /choosable %}}
+{{% choosable language python %}}
+
 For `python`:
 
 | Property               | Type          | Required | Description                                                              |
 |------------------------|---------------|----------|--------------------------------------------------------------------------|
 | `packageName`          | `string`      | No       | PackageName is an override for the name of the generated python package. |
-| `requires`             | `map[string]` | No       | Description for the NPM package.                                         |
+| `requires`             | `map[string]` | No       | Description for the PyPi package.                                         |
 | `readme`               | `string`      | No       | Readme contains the text for the package's README.md files.              |
 | `moduleNameOverrides`  | `map[string]` | No       | Optional overrides for Pulumi module names.                              |
 | `compatibility`        | `string`      | No       | Toggle compatibility mode for a specified target.                        |
 | `respectSchemaVersion` | `boolean`     | No       | Use the [`package.version`](#package) field in the generated SDK.        |
+
+{{% /choosable %}}
+{{% choosable language go %}}
 
 For `go`:
 
@@ -313,6 +323,9 @@ For `go`:
 | `generateResourceContainerTypes` | `boolean`     | Generate container types (arrays, maps, pointer output types etc.) for each resource. These are typically used to support external references. |
 | `respectSchemaVersion`           | `boolean`     | Use the [`package.version`](#package) field in the generated SDK.                                                                              |
 
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
 For `csharp`:
 
 | Property                 | Type          | Required | Description                                                                                         |
@@ -324,6 +337,9 @@ For `csharp`:
 | `rootNamespace`          | `string`      | No       | The root namespace that the generated package should live under. This setting defaults to "Pulumi". |
 | `respectSchemaVersion`   | `boolean`     | No       | Use the [`package.version`](#package) field in the generated SDK.                                   |
 
+{{% /choosable %}}
+{{% choosable language java %}}
+
 For `java`:
 
 | Property       | Type          | Required | Description                                                                                      |
@@ -332,6 +348,8 @@ For `java`:
 | `basePackage`  | `string`      | No       | Prefixes the generated Java package. This setting defaults to "com.pulumi".                      |
 | `buildFiles`   | `string`      | No       | Generates build files for the chosen build tool. Supported values: "gradle".                     |
 | `dependencies` | `map[string]` | No       | Java dependencies to use with the `buildFiles`. Example: "com.pulumi.gcp" -> "6.23.0".           |
+
+{{% /choosable %}}
 
 ### PropertyLanguage
 
