@@ -153,8 +153,8 @@ result = None
 if is_minikube:
     result = frontend.spec.apply(lambda v: v["cluster_ip"] if "cluster_ip" in v else None)
 else:
-    ingress = frontend.status.load_balancer.apply(lambda v: v["ingress"][0] if "ingress" in v else "Value pending deployment")
-    result = ingress.apply(lambda v: v["ip"] if v and "ip" in v else (v["hostname"] if v and "hostname" in v else "Value pending deployment"))
+    ingress = frontend.status.load_balancer.apply(lambda v: v["ingress"][0] if "ingress" in v else "output<string>")
+    result = ingress.apply(lambda v: v["ip"] if v and "ip" in v else (v["hostname"] if v and "hostname" in v else "output<string>"))
 
 pulumi.export("ip", result)
 ```
