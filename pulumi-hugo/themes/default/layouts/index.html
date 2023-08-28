@@ -6,8 +6,8 @@
         <div class="dot-overlay"></div>
         <div class="home-page-hero-content pb-12">
             <h1 class="flex flex-col items-center">
-                <span class="inline-block" data-text="{{ index (.Params.hero.title) 0 }}">Infrastructure as code</span>
-                <span class="rainbow-text inline-block text-center" data-text="{{ index (.Params.hero.title) 1 }}">in any programming language</span>
+                <span class="inline-block" data-text="{{ index (.Params.hero.title) 0 }}">{{ index (.Params.hero.title) 0 }}</span>
+                <span class="rainbow-text inline-block text-center" data-text="{{ index (.Params.hero.title) 1 }}">{{ index (.Params.hero.title) 1 }}</span>
             </h1>
             <p class="text-center leading-7">{{ .Params.hero.description | markdownify }}</p>
             <div class="overlay-middle mt-8 flex text-center justify-center items-center flex-col mx-auto lg:mx-0 md:flex-row">

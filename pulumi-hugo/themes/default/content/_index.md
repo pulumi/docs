@@ -3,7 +3,7 @@ title: Pulumi - Infrastructure as Code in any Programming Language
 meta_desc: Pulumi's open source infrastructure as code SDK enables you to create, deploy, and manage infrastructure on any cloud, using your favorite languages.
 
 hero:
-  title: [ "Infrastructure as code", "in any programming language" ]
+  title: [ "The only open source", "infrastructure as code" ]
   description: |
     Build infrastructure intuitively on any cloud using familiar languages.
   cta_text: Get Started
