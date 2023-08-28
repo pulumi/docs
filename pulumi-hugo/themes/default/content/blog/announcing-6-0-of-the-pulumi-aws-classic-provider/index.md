@@ -57,7 +57,7 @@ The new release ships fixes for many [highly upvoted issues along with Pulumi-sp
 
 The 6.0 release removed a few resources that have been deprecated for a long while. All of those resources were replaced with newer versions containing a more logical organization of modules and resource names. The old resources have been deprecated for years, so it's unlikely that you were still using them. But in case you do, we applied automatic aliases to make migration as straightforward as possible.
 
-We also shipped a few, small breaking changes to properties that may allow one or many items. We aligned those with the capabilities of the upstream provider and the AWS services ensure Pulumi users can access the full capabilities of the platform.
+We also shipped a few, small breaking changes to properties that may allow one or many items. We aligned those with the capabilities of the upstream provider and the AWS services ensure Pulumi users can access the full capabilities of the AWS platform.
 
 You can see a full list of changes and learn more about migrating your existing programs in our [Migration Guide](https://www.pulumi.com/registry/packages/aws/how-to-guides/6-0-migration).
 
