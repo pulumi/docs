@@ -30,7 +30,7 @@ Previewing update (dev):
  +   └─ kubernetes:core:Service  nginx           create
 
  Outputs:
-  + ip  : output<string>
+  + ip  : "Value pending deployment"
   - name: "nginx-xw231xdt"
 
 Resources:
@@ -54,7 +54,7 @@ Updating (dev):
  +   └─ kubernetes:core:Service  nginx           created
 
 Outputs:
-  + ip  : "10.100.249.54"
+  + ip  : "a88e9d6d9c86d40a5b0effe1431e9d0c-123456789.eu-central-1.elb.amazonaws.com"
   - name: "nginx-xw231xdt"
 
 Resources:
