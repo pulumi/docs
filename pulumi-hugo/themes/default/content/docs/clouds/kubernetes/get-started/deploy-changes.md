@@ -30,7 +30,7 @@ Previewing update (dev):
  +   └─ kubernetes:core:Service  nginx           create
 
  Outputs:
-  + ip  : "Value pending deployment"
+  + ip  : "output<string>"
   - name: "nginx-xw231xdt"
 
 Resources:
