@@ -333,16 +333,17 @@ if (config.testingFlow) {
             targetOriginId: registryCDN,
             pathPattern: "/registry/*",
             defaultTtl: 0,
+            minTtl: 0,
             maxTtl: 0,
             forwardedValues: {
+                queryString: true,
                 cookies: {
-                    forward: "none",
+                    forward: "all",
                 },
-                queryString: false,
                 headers: [
-                    "Origin",
-                    "Access-Control-Request-Headers",
-                    "Access-Control-Request-Method",
+                    // CloudFront will not cache the objects associated with this cache behavior.
+                    // Instead, it will send every request to the origin.
+                    "*",
                 ],
             },
         },
