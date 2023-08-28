@@ -25,7 +25,7 @@ Join Pulumi on Thursday, September 7, 2023 for a live workshop on [getting start
 
 ### Terraform Plugin Framework Support
 
-More and more Terraform resources are migrating to the [Terraform Plugin Framework](https://developer.hashicorp.com/terraform/plugin/framework). We are excited to announce that 6.0 supports all resources implemented with both Plugin SDK and Plugin Framework technologies. This means that users get access to the entire API of the upstream provider.
+More and more Terraform resources are migrating to the [Terraform Plugin Framework](https://developer.hashicorp.com/terraform/plugin/framework). We are excited to announce that 6.0 supports all resources implemented with both the new Terraform Plugin SDK and the legacy Terraform Plugin Framework technologies. This means that you get access to the entire API of the upstream provider.
 
 ### New Resources and Functions
 
