@@ -434,9 +434,6 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
                 cookies: {
                     forward: "all",
                 },
-                headers: [
-                    "*"
-                ],
             },
             defaultTtl: 0,
             minTtl: 0,
@@ -456,9 +453,6 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
                 cookies: {
                     forward: "all",
                 },
-                headers: [
-                    "*"
-                ],
             },
             defaultTtl: 0,
             minTtl: 0,
@@ -480,9 +474,6 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
                 cookies: {
                     forward: "all",
                 },
-                headers: [
-                    "*"
-                ],
             },
             defaultTtl: 0,
             minTtl: 0,
@@ -502,9 +493,6 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
                 cookies: {
                     forward: "all",
                 },
-                headers: [
-                    "*"
-                ],
             },
             defaultTtl: 0,
             minTtl: 0,
