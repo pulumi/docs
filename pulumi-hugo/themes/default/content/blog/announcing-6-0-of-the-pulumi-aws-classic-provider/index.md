@@ -13,7 +13,7 @@ tags:
 
 ---
 
-We are excited to announce 6.0 of the Pulumi AWS Classic provider. The AWS Classic provider is the most heavily used provider across the entire Pulumi ecosystem, and offers access to the full surface area of the upstream Terraform AWS Provider from within Pulumi projects in all supported Pulumi languages. The 6.0 release brings a substantial set of fixes and improvements to the provider, including a number of breaking changes as part of the major version release.
+We are excited to announce 6.0 of the [Pulumi AWS Classic provider](https://www.pulumi.com/registry/packages/aws/). The AWS Classic provider is the most heavily used provider across the entire Pulumi ecosystem, and offers access to the full surface area of the upstream Terraform AWS Provider from within Pulumi projects in all supported Pulumi languages. The [6.0 release](https://github.com/pulumi/pulumi-aws/releases/tag/v6.0.2) brings a substantial set of fixes and improvements to the provider, including a number of breaking changes as part of the major version release.
 
 This blog post walks you through the list of notable changes in the new major version.
 
@@ -51,7 +51,7 @@ Pulumi AWS Classic 6.0 ships all improvements and bug fixes of upstream versions
 
 ### Fixes for Highly Upvoted Issues
 
-The new release ships a few Pulumi-specific fixes as well. A good example is a highly upvoted issue [unexpected behavior of defaultTags](https://github.com/pulumi/pulumi-aws/issues/1655) that has been fixed and is available in the new release.
+The new release ships fixes for many [highly upvoted issues along with  Pulumi-specific enhancements](https://github.com/pulumi/pulumi-aws/issues?q=label%3A6.0+sort%3Areactions-%2B1-desc+-label%3Akind%2Ftask+-label%3Akind%2Fepic+is%3Aclosed). This includes resolving [constant diff from wafv2 with no changes](https://github.com/pulumi/pulumi-aws/issues/1423) and [unexpected behavior of defaultTags](https://github.com/pulumi/pulumi-aws/issues/1655) that have been fixed and are available in the new release.
 
 ### MaxItemsOne and Deprecations
 
