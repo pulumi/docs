@@ -432,8 +432,11 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
             forwardedValues: {
                 queryString: true,
                 cookies: {
-                    forward: "none",
+                    forward: "all",
                 },
+                headers: [
+                    "*"
+                ],
             },
             defaultTtl: 0,
             minTtl: 0,
@@ -451,8 +454,11 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
             forwardedValues: {
                 queryString: true,
                 cookies: {
-                    forward: "none",
+                    forward: "all",
                 },
+                headers: [
+                    "*"
+                ],
             },
             defaultTtl: 0,
             minTtl: 0,
@@ -472,8 +478,11 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
             forwardedValues: {
                 queryString: true,
                 cookies: {
-                    forward: "none",
+                    forward: "all",
                 },
+                headers: [
+                    "*"
+                ],
             },
             defaultTtl: 0,
             minTtl: 0,
@@ -491,8 +500,11 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
             forwardedValues: {
                 queryString: true,
                 cookies: {
-                    forward: "none",
+                    forward: "all",
                 },
+                headers: [
+                    "*"
+                ],
             },
             defaultTtl: 0,
             minTtl: 0,
