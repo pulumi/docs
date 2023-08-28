@@ -13,7 +13,7 @@ tags:
 
 ---
 
-We are excited to announce 6.0 of the [Pulumi AWS Classic provider](https://www.pulumi.com/registry/packages/aws/). The AWS Classic provider is the most heavily used provider across the entire Pulumi ecosystem, and offers access to the full surface area of the upstream Terraform AWS Provider from within Pulumi projects in all supported Pulumi languages. The [6.0 release](https://github.com/pulumi/pulumi-aws/releases/tag/v6.0.2) brings a substantial set of fixes and improvements to the provider, including a number of breaking changes as part of the major version release.
+We are excited to announce 6.0 of the [Pulumi AWS Classic provider](https://www.pulumi.com/registry/packages/aws/). The AWS Classic provider is the most heavily used provider across the entire Pulumi ecosystem, and offers access to the full surface area of the upstream Terraform AWS Provider in Pulumi projects in all supported languages. The [6.0 release](https://github.com/pulumi/pulumi-aws/releases/tag/v6.0.2) brings a substantial set of fixes and improvements to the provider, including a number of breaking changes as part of the major version release.
 
 This blog post walks you through the list of notable changes in the new major version.
 
