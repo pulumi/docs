@@ -51,7 +51,7 @@ Pulumi AWS Classic 6.0 ships all improvements and bug fixes of upstream versions
 
 ### Fixes for Highly Upvoted Issues
 
-The new release ships fixes for many [highly upvoted issues along with  Pulumi-specific enhancements](https://github.com/pulumi/pulumi-aws/issues?q=label%3A6.0+sort%3Areactions-%2B1-desc+-label%3Akind%2Ftask+-label%3Akind%2Fepic+is%3Aclosed). This includes resolving [constant diff from wafv2 with no changes](https://github.com/pulumi/pulumi-aws/issues/1423) and [unexpected behavior of defaultTags](https://github.com/pulumi/pulumi-aws/issues/1655) that have been fixed and are available in the new release.
+The new release ships fixes for many [highly upvoted issues along with Pulumi-specific enhancements](https://github.com/pulumi/pulumi-aws/issues?q=label%3A6.0+sort%3Areactions-%2B1-desc+-label%3Akind%2Ftask+-label%3Akind%2Fepic+is%3Aclosed). This includes resolving [constant diff from wafv2 with no changes](https://github.com/pulumi/pulumi-aws/issues/1423) and [unexpected behavior of defaultTags](https://github.com/pulumi/pulumi-aws/issues/1655) that have been fixed and are available in the new release.
 
 ### MaxItemsOne and Deprecations
 
