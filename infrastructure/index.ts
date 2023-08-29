@@ -235,6 +235,14 @@ if (config.redirectDomain) {
     domainAliases.push(config.redirectDomain);
 }
 
+// AllViewerExceptHostHeader passes all cookies, querystrings, and headers except the Host header.
+// https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-origin-request-policies.html
+const allViewerExceptHostHeaderId = "b689b0a8-53d0-40ab-baf2-68738e2966ac";
+
+// CachingDisabled sets min, max, and default cache TTLs to 0.
+// https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-cache-policies.html
+const cachingDisabledId = "4135ea2d-6df8-44a3-9df3-4b5a84be39ad";
+
 // distributionArgs configures the CloudFront distribution. Relevant documentation:
 // https://www.terraform.io/docs/providers/aws/r/cloudfront_distribution.html
 // https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-web-values-specify.html
@@ -429,15 +437,9 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
             ],
             targetOriginId: previewAiAppDomain,
             pathPattern: '/ai-preview',
-            forwardedValues: {
-                queryString: true,
-                cookies: {
-                    forward: "all",
-                },
-            },
-            defaultTtl: 0,
-            minTtl: 0,
-            maxTtl: 0,
+            originRequestPolicyId: allViewerExceptHostHeaderId,
+            cachePolicyId: cachingDisabledId,
+            forwardedValues: undefined, // forwardedValues conflicts with cachePolicyId, so we unset it.
         },
         {
             ...baseCacheBehavior,
@@ -448,15 +450,9 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
             ],
             targetOriginId: previewAiAppDomain,
             pathPattern: '/ai-preview/*',
-            forwardedValues: {
-                queryString: true,
-                cookies: {
-                    forward: "all",
-                },
-            },
-            defaultTtl: 0,
-            minTtl: 0,
-            maxTtl: 0,
+            originRequestPolicyId: allViewerExceptHostHeaderId,
+            cachePolicyId: cachingDisabledId,
+            forwardedValues: undefined, // forwardedValues conflicts with cachePolicyId, so we unset it.
         },
 
         // AI app, live, with caching handled by the app
@@ -469,15 +465,9 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
             ],
             targetOriginId: aiAppDomain,
             pathPattern: '/ai',
-            forwardedValues: {
-                queryString: true,
-                cookies: {
-                    forward: "all",
-                },
-            },
-            defaultTtl: 0,
-            minTtl: 0,
-            maxTtl: 0,
+            originRequestPolicyId: allViewerExceptHostHeaderId,
+            cachePolicyId: cachingDisabledId,
+            forwardedValues: undefined, // forwardedValues conflicts with cachePolicyId, so we unset it.
         },
         {
             ...baseCacheBehavior,
@@ -488,15 +478,9 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
             ],
             targetOriginId: aiAppDomain,
             pathPattern: '/ai/*',
-            forwardedValues: {
-                queryString: true,
-                cookies: {
-                    forward: "all",
-                },
-            },
-            defaultTtl: 0,
-            minTtl: 0,
-            maxTtl: 0,
+            originRequestPolicyId: allViewerExceptHostHeaderId,
+            cachePolicyId: cachingDisabledId,
+            forwardedValues: undefined, // forwardedValues conflicts with cachePolicyId, so we unset it.
         }
     ],
 
