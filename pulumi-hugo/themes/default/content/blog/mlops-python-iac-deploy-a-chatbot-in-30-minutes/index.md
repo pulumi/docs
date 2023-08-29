@@ -3,7 +3,7 @@ date: 2023-08-23
 title: "Pulumi Python + MLOps: Deploy a chatbot in 30 minutes or less!"
 allow_long_title: true
 meta_desc: "Accelerating AI/ML Innovation with Infrastructure as Code through a Hands-On Journey to deploy your own chatbot."
-meta_image: "meta.png"
+meta_image: "chatbot-api-prompt.png"
 authors:
     - kat-morgan
 tags:
