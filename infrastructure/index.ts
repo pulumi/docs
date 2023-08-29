@@ -49,7 +49,6 @@ const config = {
 };
 
 const aiAppStack = new pulumi.StackReference('pulumi/pulumi-ai-app-infra/prod');
-const previewAiAppDomain = aiAppStack.requireOutput('previewAiAppDistributionDomain');
 const aiAppDomain = aiAppStack.requireOutput('aiAppDistributionDomain');
 
 // originBucketName is the name of the S3 bucket to use as the CloudFront origin for the
@@ -279,16 +278,6 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
             },
         },
         {
-            originId: previewAiAppDomain,
-            domainName: previewAiAppDomain,
-            customOriginConfig: {
-                originProtocolPolicy: "https-only",
-                httpPort: 80,
-                httpsPort: 443,
-                originSslProtocols: ["TLSv1.2"],
-            },
-        },
-        {
             originId: aiAppDomain,
             domainName: aiAppDomain,
             customOriginConfig: {
@@ -427,35 +416,7 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
             maxTtl: 0,
         },
 
-        // AI app, preview, with caching handled by the app
-        {
-            ...baseCacheBehavior,
-            // allow all methods
-            allowedMethods: ["DELETE", "GET", "HEAD", "OPTIONS", "PATCH", "POST", "PUT"],
-            cachedMethods: [
-                "GET", "HEAD", "OPTIONS",
-            ],
-            targetOriginId: previewAiAppDomain,
-            pathPattern: '/ai-preview',
-            originRequestPolicyId: allViewerExceptHostHeaderId,
-            cachePolicyId: cachingDisabledId,
-            forwardedValues: undefined, // forwardedValues conflicts with cachePolicyId, so we unset it.
-        },
-        {
-            ...baseCacheBehavior,
-            // allow all methods
-            allowedMethods: ["DELETE", "GET", "HEAD", "OPTIONS", "PATCH", "POST", "PUT"],
-            cachedMethods: [
-                "GET", "HEAD", "OPTIONS",
-            ],
-            targetOriginId: previewAiAppDomain,
-            pathPattern: '/ai-preview/*',
-            originRequestPolicyId: allViewerExceptHostHeaderId,
-            cachePolicyId: cachingDisabledId,
-            forwardedValues: undefined, // forwardedValues conflicts with cachePolicyId, so we unset it.
-        },
-
-        // AI app, live, with caching handled by the app
+        // AI app with caching handled by the app
         {
             ...baseCacheBehavior,
             // allow all methods
