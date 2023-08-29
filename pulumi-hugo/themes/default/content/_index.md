@@ -3,7 +3,7 @@ title: Pulumi - Infrastructure as Code in any Programming Language
 meta_desc: Pulumi's open source infrastructure as code SDK enables you to create, deploy, and manage infrastructure on any cloud, using your favorite languages.
 
 hero:
-  title: [ "The only open source", "infrastructure as code" ]
+  title: [ "Open Source", "Infrastructure as Code" ]
   description: |
     Build infrastructure intuitively on any cloud using familiar languages.
   cta_text: Get Started
@@ -15,7 +15,7 @@ code_faster:
   title: Code and ship faster
   description: |
     Author infrastructure code using programming languages you know and love. Write statements to define infrastructure using your IDE with autocomplete, type checking, and documentation.
-    
+
     Test your code with unit tests and deliver it through CI/CD pipelines to validate and deploy to any cloud.
 
 ai:
@@ -24,7 +24,7 @@ ai:
   alt: AI prompted to 'Give me an AWS static website behind a CloudFront CDN' and outputting Pulumi code
   description: |
     Want help writing infrastructure code? Use Pulumi AI to generate code for your desired infrastructure – all through natural language commands.
-    
+
     Ask Pulumi AI to iterate on your code to make changes and add new resources.
 
 embed:
@@ -92,7 +92,7 @@ get_started:
       avatar: https://pbs.twimg.com/profile_images/752334791782039552/BsVNGBaV_400x400.jpg
       link: https://twitter.com/BryanMigliorisi/status/1450123026901651460
       text: |
-        There is no way around the fact that devops is complicated but @PulumiCorp is a game changer for me.  Blows away CloudForamtion, TerraForm, CDK, etc.  
+        There is no way around the fact that devops is complicated but @PulumiCorp is a game changer for me.  Blows away CloudForamtion, TerraForm, CDK, etc.
     -
       source: twitter
       username: "@krangarajan"
@@ -106,7 +106,7 @@ get_started:
       avatar: https://pbs.twimg.com/profile_images/1197754531335016449/etr4hfpJ_400x400.jpg
       link: https://twitter.com/Vetium/status/1589452885149900800
       text: |
-        Without a doubt the most approachable tool in the IaaC space is 
+        Without a doubt the most approachable tool in the IaaC space is
         @PulumiCorp.
 
         Somewhat enjoying provisioning a scheduled run of a Lambda.
@@ -182,7 +182,7 @@ get_started:
       avatar: https://pbs.twimg.com/profile_images/1581098587034771457/9HrxXWw4_400x400.jpg
       link: https://twitter.com/swarupdonepudi/status/1644820071167201280
       text: |
-        I love @PulumiCorp so much because it is like 50% of the reason why we dared to build https://planton.cloud. 
+        I love @PulumiCorp so much because it is like 50% of the reason why we dared to build https://planton.cloud.
 
         An equivalent of 50K lines of declarative infra code has been put behind APIs to support the features on the platform with https://www.pulumi.com/docs/using-pulumi/automation-api/
     -
@@ -196,7 +196,7 @@ get_started:
         Finished no-code website builder.
 
         Managed to automate deploying a website created with said builder with @PulumiCorp
- 
+
   title: Built by engineers for engineers. Open source.
   description: "[Join us](/community) in the community, and let’s build together."
 ---
