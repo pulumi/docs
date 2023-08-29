@@ -228,6 +228,12 @@ Path filters are relative to the repository root, and should reference a file by
 
 As with any other deployment setting, the path filters may be set via the Pulumi Console, using the REST API or defined in code using the Service provider.
 
+### Skip intermediate deployments
+
+By default, when multiple deployments are pushed, they will be executed sequentially until the backlog is completed. In some cases, you may wish to only execute the most recent deployment since the changes are accumulative. By enabling the `Skip intermediate deployments` setting, Pulumi will skip all intermediary deployments of the same type and will execute only the latest.
+
+![Pulumi UI - Skip intermediate deployments](../ui-skip-intermediate-deployments.png)
+
 ### Customizing the Deployment Environment
 
 By default, the deployment is executed using the [pulumi/pulumi](https://hub.docker.com/r/pulumi/pulumi) image. However, there may be scenarios where you might want to customize the image used for the execution, e.g. if you want to use a different version of python or need to include additional dependencies.
