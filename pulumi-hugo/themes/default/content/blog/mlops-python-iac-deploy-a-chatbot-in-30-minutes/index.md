@@ -21,11 +21,11 @@ tags:
 
 # Deploy a chatbot in 30 minutes or less
 
-Welcome to the future, or rather today, where *you* can deploy an advanced AI ChatBot in 30 minutes or less.
+Welcome to the future! Today *you* can deploy an advanced AI ChatBot in the cloud or on your own hardware, in 30 minutes or less. That's right, we're diving right in and getting hands on using Pulumi Python Infrastructure as Code (IaC) to practice MLOps with your very own chatbot API.
 
-That's right, we're diving right in and getting hands on using Pulumi Python Infrastructure as Code (IaC) to practice MLOps, and you can follow along at home!
+Allow me to introduce the start of a "Pulumi Python + MLOps" series where we walk the hero's journey of MLOps together and make things a bit easier for everyone along the way.
 
-Did I mention this IaC is written in Python? A language already familiar to most in the AI industry. Buckle up, because this is not just a tutorial. This is the beginning of the "Pulumi Python + MLOps" series where we walk the hero's journey of MLOps together and make things a bit easier for everyone along the way.
+Did I mention this IaC is written in Python? While Pulumi supports many languages, we chose python for this project as it is already familiar to most in the AI industry.
 
 Let's introduce some key concepts and technologies to start off.
 
