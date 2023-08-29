@@ -230,6 +230,15 @@ const lambdaFunctionAssociations = getLambdaFunctionAssociations(
     config.doEdgeRedirects,
 );
 
+
+// AllViewerExceptHostHeader passes all cookies, querystrings, and headers except the Host header.
+// https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-origin-request-policies.html
+const allViewerExceptHostHeaderId = "b689b0a8-53d0-40ab-baf2-68738e2966ac";
+
+// CachingDisabled sets min, max, and default cache TTLs to 0.
+// https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-cache-policies.html
+const cachingDisabledId = "4135ea2d-6df8-44a3-9df3-4b5a84be39ad";
+
 const baseCacheBehavior = {
     targetOriginId: originBucket.arn,
     compress: true,
@@ -335,17 +344,9 @@ if (config.testingFlow) {
             defaultTtl: 0,
             minTtl: 0,
             maxTtl: 0,
-            forwardedValues: {
-                queryString: true,
-                cookies: {
-                    forward: "all",
-                },
-                headers: [
-                    // CloudFront will not cache the objects associated with this cache behavior.
-                    // Instead, it will send every request to the origin.
-                    "*",
-                ],
-            },
+            originRequestPolicyId: allViewerExceptHostHeaderId,
+            cachePolicyId: cachingDisabledId,
+            forwardedValues: undefined, // forwardedValues conflicts with cachePolicyId, so we unset it.
         },
     )
 }
@@ -366,14 +367,6 @@ if (!config.testingFlow) {
         domainAliases.push(config.redirectDomain);
     }
 }
-
-// AllViewerExceptHostHeader passes all cookies, querystrings, and headers except the Host header.
-// https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-origin-request-policies.html
-const allViewerExceptHostHeaderId = "b689b0a8-53d0-40ab-baf2-68738e2966ac";
-
-// CachingDisabled sets min, max, and default cache TTLs to 0.
-// https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-cache-policies.html
-const cachingDisabledId = "4135ea2d-6df8-44a3-9df3-4b5a84be39ad";
 
 // distributionArgs configures the CloudFront distribution. Relevant documentation:
 // https://www.terraform.io/docs/providers/aws/r/cloudfront_distribution.html
