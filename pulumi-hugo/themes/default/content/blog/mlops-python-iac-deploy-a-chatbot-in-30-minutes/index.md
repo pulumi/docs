@@ -184,4 +184,4 @@ If you followed along then tell us how it worked out for you! We would love to k
 
 > *figure x: Midjourney generated image of an imagined machine learning research engineer working among cables, computers, keyboards, and screens, in the glow of electronic lights. Image was generated from a prompt ~80% produced by ChatGPT based on this blog post content and a few superficial details about the author.
 
-![Midjourney generated image of an imagined machine learning research engineer working among cables, computers, keyboards, and screens, in the glow of electronic lights. Image was generated from a prompt produced by ChatGPT based on this blog post content and a few superficial details about the author.](image-3.png)
+![Midjourney generated image of an imagined machine learning research engineer working among cables, computers, keyboards, and screens, in the glow of electronic lights. Image was generated from a prompt produced by ChatGPT based on this blog post content and a few superficial details about the author.](image-2.png)
