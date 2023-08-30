@@ -18,7 +18,7 @@ aliases:
 - /docs/guides/continuous-delivery/cd-gitlab-ci/
 ---
 
-[GitLab CI/CD](https://about.gitlab.com/features/gitlab-ci-cd/) enables the management of deploying
+[GitLab CI/CD](https://docs.gitlab.com/ee/topics/build_your_application.html) enables the management of deploying
 staging and production stacks based on commits to specific Git branches. This is sometimes
 referred to as Push-to-Deploy.
 

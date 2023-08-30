@@ -25,7 +25,7 @@ in a series going in-depth on how to do just that.
 
 The goal of this article series is to give you a clear understanding of AWS credential management and how that relates to using Pulumi within a CI/CD environment.
 Once you have the AWS credentials in-place, you can then follow our [Continuous Delivery](https://www.pulumi.com/docs/using-pulumi/continuous-delivery/) guide for
-configuring your specific CI/CD service, whether you want to use [CircleCI](https://circleci.com), [GitLab CI](https://about.gitlab.com/product/continuous-integration/), or
+configuring your specific CI/CD service, whether you want to use [CircleCI](https://circleci.com), [GitLab CI](https://docs.gitlab.com/ee/topics/build_your_application.html), or
 [Travis CI](https://travis-ci.org).
 
 > **NOTE:** These recommendations do not apply if you are running your own CI/CD system within your
