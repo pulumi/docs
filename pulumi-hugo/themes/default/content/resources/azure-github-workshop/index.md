@@ -41,7 +41,7 @@ event_data:
   end_date: 2023-09-19T09:00:00.000-07:00
   url: "https://www.pulumi.com/resources/azure-github-workshop"
   description: |
-    When managing cloud infrastructure, it’s important to establish a build-test-release process for your team. In this session, experts from the Azure, GitHub, and Pulumi teams will show you how to use Pulumi’s Azure Native v2 provider and your favorite programming languages to stand up new projects on Azure quickly. Then, we’ll show you how Pulumi’s new Review Stacks feature creates a temporary cloud environment for every Pull Request in GitHub automatically – making it easier than ever to validate both infrastructure and app code before release.
+    When managing cloud infrastructure, it’s important to establish a build-test-release process for your team. In this session, experts from the Azure, GitHub, and Pulumi teams will show you how to use Pulumi’s [Azure Native v2 provider](/blog/introducing-azure-native-v2/) and your favorite programming languages to stand up new projects on Azure quickly. Then, we’ll show you how Pulumi’s new Review Stacks feature creates a temporary cloud environment for every Pull Request in GitHub automatically – making it easier than ever to validate both infrastructure and app code before release.
 
 # The url slug for the webinar landing page. If this is an external
 # webinar, use the external URL as the value here.
@@ -60,7 +60,7 @@ hero:
 # Content for the left hand side section of the page.
 main:
     # Webinar title.
-    title: "Getting Started with Azure IaC and Review Stacks"
+    title: "Getting Started with Azure IaC and Review Stacks on GitHub"
     # URL for embedding a URL for ungated webinars.
     youtube_url:
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
@@ -71,7 +71,7 @@ main:
     datetime: "7/27/2023 8:00am - 9:30am PDT"
     # Description of the webinar.
     description: |
-        When managing cloud infrastructure, it’s important to establish a build-test-release process for your team. In this session, experts from the Azure, GitHub, and Pulumi teams will show you how to use Pulumi’s Azure Native v2 provider and your favorite programming languages to stand up new projects on Azure quickly. Then, we’ll show you how Pulumi’s new Review Stacks feature creates a temporary cloud environment for every Pull Request in GitHub automatically – making it easier than ever to validate both infrastructure and app code before release.
+        When managing cloud infrastructure, it’s important to establish a build-test-release process for your team. In this session, experts from the Azure, GitHub, and Pulumi teams will show you how to use Pulumi’s [Azure Native v2 provider](/blog/introducing-azure-native-v2/) and your favorite programming languages to stand up new projects on Azure quickly. Then, we’ll show you how Pulumi’s new Review Stacks feature creates a temporary cloud environment for every Pull Request in GitHub automatically – making it easier than ever to validate both infrastructure and app code before release.
 
     # The webinar presenters
     presenters:
@@ -84,9 +84,9 @@ main:
 
     # A bullet point list containing what the user will learn during the webinar.
     learn:
-        - Infrastructure as Code on Azure
-        - Serverless architectures
-        - Setting up Review Stacks with GitHub and Pulumi
+        - Infrastructure as Code on Azure in programming languages
+        - How to deploy serverless architectures with code
+        - Set up an infrastructure deployment workflow using GitHub and Pulumi's Review Stacks feature
 
 # The right hand side form section.
 form:
