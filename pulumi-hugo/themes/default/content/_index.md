@@ -66,6 +66,7 @@ customer_logos:
     - name: washington-trust
       link: https://youtu.be/Q63ZaX340M4
     - name: nubank
+    - name: docker
 
 customer_quotes:
   panther:
