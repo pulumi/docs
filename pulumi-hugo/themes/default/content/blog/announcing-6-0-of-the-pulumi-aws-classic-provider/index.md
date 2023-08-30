@@ -59,6 +59,8 @@ The 6.0 release removes several deprecated resources. All of those resources wer
 
 We also shipped a few, small breaking changes to properties that may allow one or many items. We aligned those with the capabilities of the upstream provider and the AWS services ensure Pulumi users can access the full capabilities of the AWS platform.
 
+### Migration Guide
+
 You can see a full list of changes and learn more about migrating your existing programs in our [Migration Guide](https://www.pulumi.com/registry/packages/aws/how-to-guides/6-0-migration).
 
 ### Get Started Today
