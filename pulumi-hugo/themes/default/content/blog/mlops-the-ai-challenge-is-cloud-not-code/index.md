@@ -2,8 +2,8 @@
 date: 2023-08-30
 title: "The Real AI Challenge is Cloud, not Code!"
 allow_long_title: true
-meta_desc: "Accelerating AI/ML Innovation with Infrastructure as Code through a Hands-On Journey to deploy your own chatbot."
-meta_image: "chatbot-api-prompt.png"
+meta_desc: "Accelerating AI/ML innovation with infrastructure as code through a hands-on journey to deploy your own chatbot"
+meta_image: "meta.png"
 authors:
     - kat-morgan
 tags:
@@ -34,15 +34,13 @@ Intended to help users blaze a trail of success, this blog post is the first ins
 
 Instructure as code (IaC) is a key component to solving the cloud orchestration challenge present in AI/ML. By applying the rigor and precision of software development practices to cloud operations, IaC offers AI/ML professionals an efficient, reliable, and predictable way to develop at the highest velocity.
 
-For now, we'll skip the long-winded sales pitches and AI ethics debates, and instead focus on providing a concrete example of using IaC for MLOps. We will dive into the deep end and use Pulumi to deploy a private LlaMa 2 API chatbot service ... in 30 minutes or less!
-
-First, though, let's take a quick look at some terminology:
+Before we get into the details of using Pulumi to deploy a private LlaMa 2 API chatbot service---in 30 minutes or less, of course---let's start with some quick terminology/context:
 
 - Katwalk Server is a demo AI application written to host your choice of LLM either locally or in the cloud, and serve it as an OpenAI API compatible service. As a practical, hands-on introduction to IaC for the MLOps space, this project aims to demystify the concepts and showcase the benefits Pulumi can bring to your AI/ML projects.
 - Large Language Models or LLMs (like ChatGPT) are machine learning models trained to generate human-like conversational text which have already become essential tools for businesses and individuals, transforming every day tasks and how we interact with technology.
 - [LlaMa](https://ai.meta.com/llama/) is an LLM created by Meta, available for free for research and commercial use.
 
-> Figure 2. Or just let ChatGPT describe itself:
+> Figure 2. Or just let ChatGPT describe itself
 ![Alt text](image-1.png)
 
 ## Deploy a private LlaMa 2 API chatbot service ... in 30 minutes or less!
@@ -92,12 +90,12 @@ Next let's setup our secure configuration and secret storage in a local file for
 ```bash
 # Create & Export a pulumi secret decryption password file
 # This allows for decrypting any secrets in your Pulumi.<stack>.yaml file
-# !WARNING! Please use a more secure password than this example.
+# !WARNING! Please use a more secure password than this example
 export PULUMI_CONFIG_PASSPHRASE_FILE=$HOME/.pulumi/secret
 echo "keepItSecretKeepItSafePassword" > ~/.pulumi/secret
 
-# There are many ways to store pulumi state, here we use a local file.
-# Other state backends include s3, Pulumi Cloud, and more.
+# There are many ways to store Pulumi state, here we use a local file
+# Other state backends include S3, Pulumi Cloud, and more
 pulumi login file://~/.pulumi
 
 # Initialize your stack
@@ -122,7 +120,7 @@ pulumi config set hfModel "meta-llama/Llama-2-7b-chat-hf"
 
 ### 4. Deploy in the cloud on Runpod.io
 
-While there are three providers already supported in this codebase, this post illustrates deploying to Runpod.io, a GPU and ML dedicated cloud catering to AI workloads, and development tasks.
+While there are three providers already supported in this codebase, this post illustrates deploying to Runpod.io, a GPU and ML dedicated cloud catering to AI workloads and development tasks.
 
 ```bash
 # This enables the IaC to deploy Katwalk Server
@@ -187,5 +185,5 @@ If you followed along then tell us how it worked out for you! We would love to k
 
 Join us in the [Pulumi Community Slack](https://slack.pulumi.com) or in the [Pulumiverse Community Katwalk Github repository](https://github.com/pulumiverse/katwalk) to decide what #aiChallenge we tackle next!
 
-> Figure 4. Midjourney generated image of an imagined machine learning research engineer working among cables, computers, keyboards, and screens, in the glow of electronic lights. Image was generated from a prompt ~80% produced by ChatGPT based on this blog post content and a few superficial details about the author.
+> Figure 4. Midjourney generated image of an imagined machine learning research engineer working among cables, computers, keyboards, and screens, in the glow of electronic lights. Image was generated from a prompt ~80% produced by ChatGPT based on this blog post content and a few superficial details about the author
 ![Midjourney generated image of an diffusion generated machine learning research engineer working among cables, computers, keyboards, and screens, in the glow of electronic lights. Image was generated from a prompt produced by LlaMa 2 Katwalk server based on this blog post content and a few superficial details about the author.](image-2.png)
