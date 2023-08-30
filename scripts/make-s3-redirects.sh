@@ -21,3 +21,12 @@ while read key location; do
 done < "$redirects_file"
 
 rm "$redirects_file"
+
+# Apply custom redirects supplied in the `scripts/redirects` directory.
+ls -l "./scripts/redirects/" | tail -n +2 | awk '{print $9}' | while read line; do
+    redirect_file="./scripts/redirects/$line"
+    while read key location; do
+        echo "Redirecting $key to $location"
+        aws s3api put-object --key "$key" --website-redirect-location "$location" --bucket "$destination_bucket" --acl public-read --region "$(aws_region)"
+    done < "$redirect_file"
+done
