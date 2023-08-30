@@ -1,6 +1,6 @@
 ---
-date: 2023-08-23
-title: "Pulumi Python + MLOps: Deploy a chatbot in 30 minutes or less!"
+date: 2023-08-30
+title: "The Real AI Challenge is Cloud, not Code!"
 allow_long_title: true
 meta_desc: "Accelerating AI/ML Innovation with Infrastructure as Code through a Hands-On Journey to deploy your own chatbot."
 meta_image: "chatbot-api-prompt.png"
@@ -19,13 +19,22 @@ tags:
     - python
 ---
 
-# Deploy a chatbot in 30 minutes or less
+The AI industry is stealing the show as tech's goldrush of the '20s. Just looking at ChatGPT's [record setting user growth](https://www.reuters.com/technology/chatgpt-sets-record-fastest-growing-user-base-analyst-note-2023-02-01/), and rapid 3rd party integration [by top brands](https://www.forbes.com/sites/bernardmarr/2023/05/30/10-amazing-real-world-examples-of-how-companies-are-using-chatgpt-in-2023/?sh=ed1c90f14418), it is not surprising the hype suggests this is the beginning of a major digital transformation.
 
-Welcome to the future! Today *you* can deploy an advanced AI ChatBot in the cloud or on your own hardware, in 30 minutes or less. That's right, we're diving right in and getting hands on using Pulumi Python Infrastructure as Code (IaC) to practice MLOps with your very own chatbot API.
+When it comes to taking advantage of AI/ML in your own organization, realizing the benefits comes with major obstacles, not least of which is the almost complete lack of well practiced platform engineering architectures, industry consensus, and operational knowledge. Which is why it is easy to say, *The most difficult challenge that we face with AI today, is a problem of cloud orchestration*.
 
-Allow me to introduce the start of a "Pulumi Python + MLOps" series where we walk the hero's journey of MLOps together and make things a bit easier for everyone along the way.
+Now here to help cut through the barriers, in this first installment of the "*Pulumi Python + MLOps*" series we will introduce you to the Katwalk Server, a demo AI application which we will use as a testing ground for developing many parts of the AI development and operations lifecycle.
 
-Did I mention this IaC is written in Python? While Pulumi supports many languages, we chose python for this project as it is already familiar to most in the AI industry.
+> # *The most difficult challenge that we face with AI today, is a problem of cloud orchestration*
+
+> figure 1. A sneak peak at the map of ML development and product path
+![A sneak peak at the map of ML development and product path](image.png)
+
+For now, let's save the long winded sales pitches and AI ethics debates for another time. In this post, we will dive into the deep end as we deploy a private LlaMa 2 API chatbot service ... in 30 minutes or less!
+
+> # *deploy a private LlaMa 2 API chatbot service ... in 30 minutes or less!*
+
+Have I mentioned the solution is Python? While Pulumi supports many languages, we chose python for this project as a familiar language in the AI industry.
 
 Let's introduce some key concepts and technologies to start off.
 
@@ -35,13 +44,12 @@ Let's introduce some key concepts and technologies to start off.
 
 - Large Language Model or "LLM"s like ChatGPT are machine learning models trained to generate human-like conversational text which have already become essential tools for businesses and individuals, transforming every day tasks and how we interact with technology.
 
-> Or letting ChatGPT describe itself:
-
+> figure 2. Or just let ChatGPT describe itself:
 ![Alt text](image-1.png)
 
-Now, let's get to the fun part and deploy a chat API!
+If you are ready to try the *#MLOpsChallenge* along with us, then let's double check a few requirements before starting the clock on our 30 minute chatbot challenge.
 
-Requirements:
+## Requirements:
 
 * [Pulumi](https://www.pulumi.com/docs/install/)
 * [Python3](https://www.python.org/downloads/)
@@ -50,18 +58,23 @@ Requirements:
 * [Huggingface access to LLaMa2](https://huggingface.co/meta-llama)
   * [Meta LLaMa2 Access](https://ai.meta.com/resources/models-and-libraries/llama-downloads/)
 
-> !NOTE! Access to LLaMa2 via Huggingface is not required if using a non-private model repository. Learn more [HERE](https://huggingface.co/docs/transformers.js/guides/private)
-
 Optional Requirements (must choose one)
 
 * [Docker](https://docs.docker.com/engine/install/)
-  * [Nvidia Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html)
   * [Nvidia CUDA Enabled GPU](https://developer.nvidia.com/cuda-gpus)
+  * [Nvidia Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html)
 * [Azure](https://azure.microsoft.com/en-us)
   * [Azure CLI](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli)
+* [Runpod.io](https://runpod.io)
+  * [Runpod api key](https://docs.runpod.io/docs/graphql-api)
 
+--------------------------------------------------------------------------
+
+Now, for the real fun, let's start the timer and deploy our own chatbot!
 
 ### 1. Prepare your Pulumi IaC Directory:
+
+First we need to clone our IaC repository from Github and prepare our python environment.
 
 ```bash
 # Clone the repository and cd to the pulumi iac directory
@@ -74,7 +87,9 @@ python3 -m venv venv && source venv/bin/activate
 python -m pip install -r requirements.txt
 ```
 
-## 2. Login & Initialize your pulumi state file and stack
+### 2. Login & Initialize your pulumi state file and stack
+
+Next let's setup our secure configuration and secret storage in a local file for now.
 
 ```bash
 # Create & Export a pulumi secret decryption password file
@@ -93,7 +108,9 @@ pulumi stack init --stack dev
 ```
 
 
-## Configure required credentials
+### 3. Configure required credentials
+
+Configure your Huggingface credentials. If you open the `Pulumi.${stackName}.yaml` file, you can see the encrypted secrets in this plain text yaml configuration.
 
 ```bash
 # Set Huggingface.co username
@@ -106,21 +123,19 @@ pulumi config set --secret hfToken <huggingface_api_token>
 pulumi config set hfModel "meta-llama/Llama-2-7b-chat-hf"
 ```
 
-## Deploy locally with Docker
+### 4. Deploy in the cloud on Runpod.io
 
-> WARNING: LLM Models can use up 30 to 100 gigabytes of disk space or more!
+While there are 3 providers already supported in this codebase, I am going to demonstrate deploying to Runpod.io, a GPU and ML dedicated cloud catering to AI workloads, and development tasks.
 
 ```bash
 # This enables the IaC to deploy Katwalk Server
 pulumi config set deploy True
 
-# Set the deploy runtime to docker to deploy locally
-pulumi config set runtime docker
+# Set the deploy runtime to runpod to deploy on the Runpod cloud
+pulumi config set runtime runpod
 
-# (OPTIONAL): set a local directory to store llm model(s)
-# If you do not set this path then Pulumi will fallback to
-# provision and utilize a docker volume for model storage.
-pulumi config set modelsPath /home/kat/models
+# Configure your Runpod API Token as a secure Pulumi secret
+pulumi config set --secret runpodToken <your_runpod_api_token>
 
 # Finally, run `pulumi up` to deploy!
 pulumi up
@@ -129,59 +144,54 @@ pulumi up
 pulumi destroy
 ```
 
-## Deploy in the cloud on Azure Container Instances
+Providers supported so far include:
 
-```bash
-# This enables the IaC to deploy Katwalk Server
-pulumi config set deploy True
+* Docker (locally)
+* Runpod.io GPU Cloud
+* Azure Container Instances
 
-# Set the deploy runtime to docker to deploy locally
-pulumi config set runtime azure
+### 5. Build the Katwalk Container
 
-# Finally, run `pulumi up` to deploy!
-pulumi up
-
-# When done, you can 'destroy' the stack to deprovision your deployment
-pulumi destroy
-```
-
-## Build the Katwalk Container
+While there are many other ways to orchestrate ML services in the cloud and locally, in this project we are taking ownership of the full application and infrastructure story. In fact, all 3 supported providers use the same container image to serve the LlaMa LLM API Service, and you can build it yourself just like this:
 
 ```bash
 # Set image build to True
-pulumi config set imageBuild True # Defaults to False
+pulumi config set imageBuild True
 
-# Set registry and image location
-# This should be compatible with any OCI registry
-# - private registry
-# - docker.io
-# - quay.io
-pulumi config set registry ghcr.io
-pulumi config set registryNamespace usrbinkat
+# Let's build this without pushing to a registry for now
+pulumi config set imagePush False
 
-pulumi config set password --secret <registry_password_or_api_token>
-pulumi config set username $USERNAME
+# Give your katwalk image a project name
+pulumi config set registryProject $(whoami)
 
-kip pushing the image to a registry:
-
-pulumi config set skipImageUpload True
+# Now build the image!
+pulumi up
 ```
 
+### 6. Talk to your chatbot!
 
-```txt
-...rest of instructions go here...
+Once your Katwalk LlaMa server is running, you can interact with the API by sending prompts as a json payload. In future posts we will orchestrate a chat frontend for our chatbot but for now we'll use a curl command. You can also substitute an API developer tool such as Postman or Insomnia!
+
+```bash
+# send a prompt with curl
+curl -s -X 'POST' 'http://${RUNPOD_FQDN}:8000/v1/chat' -H 'accept: application/json' -H 'Content-Type: application/json' -d '{"prompt": "Write a short story about a robot."}'
+{
+  "text": [
+    "\nOnce upon a time, there was a little robot named R2. R2 was a friendly and curious robot who lived in a big city. One day, R2 decided to go on an adventure. He set out to explore the city and learn about all the different things he could see and do.\nAs R2 explored the city, he met all kinds of people. Some were kind and welcoming, while others were scared or suspicious of him. Despite this, R2 continued to be friendly and curious, always asking questions and trying to learn more about the world around him.\nOne day, while R2 was exploring a busy market, he saw a group of people gathered around a little girl who was"
+  ]
+}
 ```
 
-Using API developer tools such as Postman or Insomnia, or even directly from the command line with curl, go ahead and query your new endpoint to try the chatbot for yourself!
-
+> figure 3. A prompt and response from [meta-llama/Llama-2-7b-chat-hf](https://huggingface/meta-llama/Llama-2-7b-chat-hf) hosted on Katwalk Server
 ![chatbot-api-response](./chatbot-api-prompt.png)
 
 In a world where data is the new black gold and tokens are money, deploying a ChatBot in 30 minutes is not just interesting, it is a novel capability quickly becoming a necessity.
 
-Platform engineering, DevOps, or MLOps may be the next hardest step in building the AI future. However Pulumi lowers the barrier to success in ML research and product development, and Python based IaC empowers the MLOps community to build equity in common AI platform code, and share IaC in a familiar language.
+Platform engineering, DevOps, or MLOps may be the next hardest step in building the AI future. Pulumi offers a reliable path to higher velocity AI App development and MLOps. Together with Python based IaC, empowers the MLOps community to build equity in common AI platform code, and share IaC in a familiar language.
 
 If you followed along then tell us how it worked out for you! We would love to know what you are looking forward to, or if you have ideas for future installments of the Pulumi Python + MLOps series!
 
-> *figure x: Midjourney generated image of an imagined machine learning research engineer working among cables, computers, keyboards, and screens, in the glow of electronic lights. Image was generated from a prompt ~80% produced by ChatGPT based on this blog post content and a few superficial details about the author.
+Join us in the [Pulumi Community Slack](LINK) or in the [Pulumiverse Community Katwalk Github repository](https://github.com/pulumiverse/katwalk) to decide what #aiChallenge we tackle next!
 
-![Midjourney generated image of an imagined machine learning research engineer working among cables, computers, keyboards, and screens, in the glow of electronic lights. Image was generated from a prompt produced by ChatGPT based on this blog post content and a few superficial details about the author.](image-2.png)
+> figure 4. Midjourney generated image of an imagined machine learning research engineer working among cables, computers, keyboards, and screens, in the glow of electronic lights. Image was generated from a prompt ~80% produced by ChatGPT based on this blog post content and a few superficial details about the author.
+![Midjourney generated image of an diffusion generated machine learning research engineer working among cables, computers, keyboards, and screens, in the glow of electronic lights. Image was generated from a prompt produced by LlaMa 2 Katwalk server based on this blog post content and a few superficial details about the author.](image-2.png)
