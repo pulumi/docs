@@ -33,7 +33,7 @@ More and more Terraform resources are migrating to the [Terraform Plugin Framewo
 
 Since the previous major release of 5.0, we have shipped 57 additional minor and patch releases, enabling you to keep up with the latest and greatest enhancements. The new major version of the AWS Classic provider brings 56 new resources and 23 new functions. Additions include resources for Audit Manager, Chime, Fin Space, Global Accelerator, Open Search, Quicksight, Resource Explorer, Route53, Transfer, and many other AWS services.
 
-You can see a full list of new resources and functions in [Release Notes](https://github.com/pulumi/pulumi-aws/releases/tag/v6.0.0).
+You can see a full list of new resources and functions in [Release Notes](https://github.com/pulumi/pulumi-aws/releases/tag/v6.0.2).
 
 ### SDK Size Optimization
 
