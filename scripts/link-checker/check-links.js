@@ -256,7 +256,7 @@ function getDefaultExcludedKeywords() {
         "https://shell.azure.com/",
         "https://portal.azure.com/",
         "https://www.noaa.gov/information-technology/open-data-dissemination",
-
+        "https://www.inc.com/inc5000/2023",
     ];
 }
 
