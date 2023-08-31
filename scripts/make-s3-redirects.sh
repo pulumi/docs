@@ -26,7 +26,10 @@ rm "$redirects_file"
 ls -l "./scripts/redirects/" | tail -n +2 | awk '{print $9}' | while read line; do
     redirect_file="./scripts/redirects/$line"
     while read key location; do
-        echo "Redirecting $key to $location"
-        aws s3api put-object --key "$key" --website-redirect-location "$location" --bucket "$destination_bucket" --acl public-read --region "$(aws_region)"
+        # skip empty lines
+        if [[ ! -z "$key" ]]; then
+            echo "Redirecting $key to $location"
+            aws s3api put-object --key "$key" --website-redirect-location "$location" --bucket "registry-origin-pr-2963-5e4873c3" --acl public-read --region "us-west-2"
+        fi
     done < "$redirect_file"
 done
