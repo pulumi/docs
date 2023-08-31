@@ -45,4 +45,3 @@ registry/packages/aws/api-docs/macie/s3bucketassociation/index.html|https://www.
 registry/packages/aws/api-docs/rds/securitygroup/index.html|https://www.pulumi.com/registry/packages/aws/api-docs/rds/
 registry/packages/aws/api-docs/redshift/securitygroup/index.html|https://www.pulumi.com/registry/packages/aws/api-docs/redshift/
 registry/packages/aws/api-docs/ses/confgurationset/index.html|https://www.pulumi.com/registry/packages/aws/api-docs/ses/configurationset/
-
