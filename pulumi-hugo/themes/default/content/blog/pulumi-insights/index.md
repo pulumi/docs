@@ -2,10 +2,16 @@
 title: "Pulumi Insights: Intelligence for Cloud Infrastructure"
 allow_long_title: true
 authors: ["luke-hoban"]
-tags: ["pulumi-news"]
 meta_desc: "Pulumi Insights provides intelligence, search, and analytics over any infrastructure in any cloud across your organization, leveraging the latest advances in generative AI and Large Language Models (LLMs)."
 date: "2023-04-13T06:00:00-08:00"
 meta_image: "insights.png"
+tags:
+    - pulumi-news
+    - features
+    - pulumi-releases
+    - ai
+    - llm
+    - data-and-analytics
 ---
 
 We've seen incredible acceleration of cloud adoption over the past 5 years. Pulumi’s flagship open source IaC solution gives engineers great tools to scale up their cloud infrastructure using the same programming languages and tools they already know and love. As a result, thousands of companies of every size and scale have adopted Pulumi as a lynchpin of their cloud infrastructure strategy.

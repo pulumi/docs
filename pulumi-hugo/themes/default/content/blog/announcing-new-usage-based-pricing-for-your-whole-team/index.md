@@ -7,6 +7,7 @@ authors:
    - luke-hoban
 tags:
    - features
+   - ai
 ---
 
 Today we are launching **Pulumi Team Edition**, a new way for teams to adopt and use Pulumi and the Pulumi Service to collaborate on building, managing and deploying cloud infrastructure as code. Pulumi Team Edition is priced based on the number of cloud resources under management, with a generous free tier to ensure that teams can get up and running with Pulumi Team Edition at no cost.
