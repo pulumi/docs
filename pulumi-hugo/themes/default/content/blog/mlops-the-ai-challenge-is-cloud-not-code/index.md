@@ -21,18 +21,18 @@ tags:
 
 The AI industry is stealing the show as tech's goldrush of the '20s. Just looking at ChatGPT's [record setting user growth](https://www.reuters.com/technology/chatgpt-sets-record-fastest-growing-user-base-analyst-note-2023-02-01/), and rapid 3rd party integration [by top brands](https://www.forbes.com/sites/bernardmarr/2023/05/30/10-amazing-real-world-examples-of-how-companies-are-using-chatgpt-in-2023/?sh=ed1c90f14418), it is not surprising the hype suggests this is the beginning of a major digital transformation.
 
-When it comes to taking advantage of AI/ML in your own organization, realizing the benefits comes with major obstacles, not least of which is the almost complete lack of well practiced platform engineering architectures, industry consensus, and operational knowledge. Which is why it is easy to say, *The most difficult challenge that we face with AI today is a problem of cloud orchestration*.
-
-This high-level diagram easily illustrates the complexity involved.
+However, using AI/ML in your own products has some major challenges and obstacles. Below is a diagram of the end to end workflow of building and using an AI model:  preparing the data, training a model, fine-tuning a model, hosting and running a model, building a backend service to serve the model, and building the user interface that interacts with the model. Most AI engineers are only involved in a few steps of the process. However, there is one challenge that is common across the entire workflow:  creating and managing the cloud infrastructure is hard. 
 
 > Figure 1. A sneak peak at the map of ML development and product path
 ![A sneak peak at the map of ML development and product path](image.png)
 
-Intended to help users blaze a trail of success, this blog post is the first installment of the *Pulumi Python + MLOps* series. Through the journey of this series we will start from the beginning with a basic app and the simple cloud deployment architecture in this post, and follow the chatbot development through its evolution into a robust and resilient cloud native service.
+Training a model requires spinning up hyper scale GPU clusters. Preparing and consuming the training or fine-tuning data requires managing data warehouses and buckets of object storage. Building an AI backend service requires packaging the model, deploying and scaling the model across compute infrastructure, creating and managing the network infrastructure like load balancing, and managing the vector databases. Building great frontend user experiences requires provisioning and managing CDNs and web application services. Suffice to say:  *The most difficult challenge that we face with AI today is a problem of cloud orchestration*.
+
+Most of this cloud orchestration today is done manually or with complex scripts. This is usually fraught with errors and simply doesn't scale. Too much time is spent making cloud infrastructure work instead of focusing on actual AI/ML tasks. Infrastructure as code (IaC) is a key component to solving the cloud orchestration challenge present in AI/ML. By applying the rigor and precision of software development practices to cloud operations, IaC offers AI/ML professionals an efficient, reliable, and predictable way to develop at the highest velocity. Pulumi is an open source infrastructure as code platform that allows engineers to use any programming languages, including Python, to provision and manage AI infrastructure. 
+
+This blog post is the first installment of a series on *AI Infrastructure as Python*. We will start this journey with building an AI backend service for a chatbot. In this post, we will deploy a LLM model behind an API backend running on compute infrastructure in the cloud. This entire infrastructure pipeline will be deployed using IaC written in Python. The series will follow this AI backend service through its evolution into a robust and resilient cloud native service.
 
 > # *The most difficult challenge that we face with AI today is a problem of cloud orchestration*
-
-Instructure as code (IaC) is a key component to solving the cloud orchestration challenge present in AI/ML. By applying the rigor and precision of software development practices to cloud operations, IaC offers AI/ML professionals an efficient, reliable, and predictable way to develop at the highest velocity.
 
 Before we get into the details of using Pulumi to deploy a private LlaMa 2 API chatbot service---in 30 minutes or less, of course---let's start with some quick terminology/context:
 
@@ -49,7 +49,8 @@ If you are ready to try the *#MLOpsChallenge* along with us, then let's double c
 
 ### Requirements
 
-* [Pulumi](https://www.pulumi.com/docs/install/)
+* [Pulumi CLI](https://www.pulumi.com/docs/install/)
+* [Pulumi account and access token](https://app.pulumi.com/signup)
 * [Python3](https://www.python.org/downloads/)
 * [Git CLI](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 * [Huggingface Token](https://huggingface.co/docs/transformers.js/guides/private)
@@ -83,20 +84,14 @@ python3 -m venv venv && source venv/bin/activate
 python -m pip install -r requirements.txt
 ```
 
-### 2. Login & initialize your Pulumi state file and stack
+### 2. Login to Pulumi Cloud and initialize stack
 
-Next let's setup our secure configuration and secret storage in a local file for now.
+Next, let's setup our state and secrets store in Pulumi Cloud. 
 
 ```bash
-# Create & Export a pulumi secret decryption password file
-# This allows for decrypting any secrets in your Pulumi.<stack>.yaml file
-# !WARNING! Please use a more secure password than this example
-export PULUMI_CONFIG_PASSPHRASE_FILE=$HOME/.pulumi/secret
-echo "keepItSecretKeepItSafePassword" > ~/.pulumi/secret
-
-# There are many ways to store Pulumi state, here we use a local file
-# Other state backends include S3, Pulumi Cloud, and more
-pulumi login file://~/.pulumi
+# There are many ways to store Pulumi state, here we use Pulumi Cloud
+# Other state backends include S3, local file, and more
+pulumi login 
 
 # Initialize your stack
 # Here we name the stack "dev"
