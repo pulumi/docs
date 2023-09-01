@@ -99,7 +99,7 @@ between `objectId` and `externalId`. Click **Save** once you are done.
 
 Under the **Settings** expansion panel, the **Scope** drop-down should be set to **Sync only assigned users and groups**. This ensures that only the users who are assigned to this application are synced with Pulumi, and not everyone in your Azure Active Directory.
 
-![settings scope]/images/docs/reference/service/scim/azuread/settings_scope.png)
+![settings scope](/images/docs/reference/service/scim/azuread/settings_scope.png)
 
 Set the **Provisioning Status** to **On** and then click **Save**.
 
