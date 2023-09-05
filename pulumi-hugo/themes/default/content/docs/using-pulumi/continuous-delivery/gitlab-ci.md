@@ -80,7 +80,7 @@ only:
 - merge_requests
 ```
 
-We will use this configuration to run the `pulumi preview` command only in merge request pipelines.
+The example script provided below will demonstrate how to use this configuration to run the `pulumi preview` command only in merge request pipelines.
 
 ## Sample Scripts
 
@@ -93,9 +93,9 @@ by going to [https://gitlab.com](https://gitlab.com) > (select your project) > S
 
 The following are samples only. You may choose to structure your configuration any way you like.
 
-The `pulumi-preview.sh` script (not shown here) is similar to the `run-pulumi.sh`, except that
-it runs the `pulumi preview` command instead of the `pulumi up --yes` command, which performs a dry-run
-of your project deployment that only shows you changes (if any) in your infrastructure.
+The `pulumi-preview.sh` script (not shown here) is similar to the `run-pulumi.sh` script, except that
+it runs the `pulumi preview` command instead of the `pulumi up --yes` command. The preview command performs a dry-run
+of your project deployment and only shows you changes (if any) in your infrastructure.
 
 ### `.gitlab-ci.yml`
 
