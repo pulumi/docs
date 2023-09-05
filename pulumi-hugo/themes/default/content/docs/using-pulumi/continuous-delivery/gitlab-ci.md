@@ -28,7 +28,7 @@ as code (IaC) best practices. Pulumi is built with CI/CD integration in mind bec
 - It doesn't require any particular arrangement of stacks or workflow to work in CI/CD processes.
 - It can be run from anywhere and your infrastructure code can be hosted anywhere.
 
-This guide will demonstrate examples under the context of a Pulumi TypeScript project with the code hosted in a GitLab repository,
+The examples provided in this guide were created under the context of a Pulumi TypeScript project with the project code hosted in a GitLab repository,
 but the steps described below can be altered to fit into any existing type of deployment setup.
 
 ## Prerequisites
