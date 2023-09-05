@@ -1,5 +1,6 @@
 ---
 title: "Pulumi 💜's Open Source"
+title_tag: "Pulumi Loves Open Source"
 allow_long_title: True
 authors: ["joe-duffy"]
 tags: ["opensource", "license", "apache", "bsl"]
