@@ -22,12 +22,9 @@ This guide walks you through configuring Okta as a SAML SSO identity provider (I
 
 - [Single Sign-On](/docs/pulumi-cloud/access-management/saml/sso/)
 
-> **Note:** The screen shots below are using the Okta _Classic UI_. You can switch to it by clicking the gear
-> icon on the upper right corner of the screen.
-
 ## Creating the Okta Application
 
-The first step is to create a new Okta Application Integration. Of the various "sign on methods"
+The first step is to create a new Okta Application Integration. Of the various "sign-in methods"
 available, choose **SAML 2.0**.
 
 ![Creating an Okta Application](/images/docs/reference/service/saml-okta/create-okta-application.png)
@@ -35,23 +32,27 @@ available, choose **SAML 2.0**.
 ### Configuring the Application
 
 Next you will be guided through a wizard to configure the Okta application. The first step is to
-give it a name---Pulumi Cloud for example---and an icon.
+give it a name---Pulumi Cloud for example---and an [icon](https://www.pulumi.com/brand/).
 
 ![Configuring a SAML Integration](/images/docs/reference/service/saml-okta/create-saml-integration.png)
 
 The next step is to configure the SAML application's settings.
 
-{{< saml-warning >}}
+    {{% notes type="info" %}}
+The values you need to use are dependent upon your Pulumi organization name. Be sure to replace `<orgName>` with your actual organization name.
+    {{% /notes %}}
 
 | SAML Setting | Value |
 | --------------- | ----- |
-| Single Sign-on URL | `https://api.pulumi.com/login/<acmecorp>/sso/saml/acs` |
-| Audience URI | `https://api.pulumi.com/login/<acmecorp>/sso/saml/metadata` |
-| Default Relay State | `https://api.pulumi.com/login/<acmecorp>/sso` |
-| Name ID Format | EmailAddress or Persistent |
-| App username | Email |
+| Single Sign-on URL | `https://api.pulumi.com/login/<orgName>/sso/saml/acs` |
+| Audience URI | `https://api.pulumi.com/login/<orgName>/sso/saml/metadata` |
+| Default Relay State | `https://api.pulumi.com/login/<orgName>/sso` |
+| Name ID Format | `Persistent` |
+| App username | `Email` |
 
-> **Important:** Do not change the value of the Name ID Format once your users have started using Pulumi---not even switching its value between `EmailAddress` or `Persistent`.
+    {{% notes type="warning" %}}
+> **Important:** Do not change the value of the Name ID Format once your users have started using Pulumi. Once a given SAML identity has been associated with a user, any change to the username sent by Okta will result in login failures for that user.
+    {{% /notes %}}
 
 In addition, you can optionally provide two attribute statements so that users
 who sign in with their Okta credentials will have proper user names.
@@ -60,6 +61,12 @@ who sign in with their Okta credentials will have proper user names.
 | --------- | ----- |
 | firstName | user.firstName |
 | lastName  | user.lastName  |
+
+If you plan on using [SCIM](/docs/pulumi-cloud/access-management/scim/okta/), you will need to provide the above attributes, in addition to the `email` attribute.
+
+| Attribute | Value |
+| --------- | ----- |
+| email     | user.email |
 
 ![Configuration Settings](/images/docs/reference/service/saml-okta/configure-saml-settings.png)
 
@@ -80,8 +87,8 @@ The final step is to configure the Pulumi Cloud with details on your new Okta-ba
 SAML application. To do this, you need to obtain the IDP metadata document from Okta and then provide
 it to Pulumi.
 
-First, navigate to the **Sign On** tab on the application page and click the "View Setup Instructions"
-button.
+First, navigate to the **Sign On** tab on the application page and click the
+**"View SAML setup instructions"** link in the right column.
 
 ![View Setup Instructions](/images/docs/reference/service/saml-okta/view-setup-instructions.png)
 
