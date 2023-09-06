@@ -213,10 +213,19 @@
 
         <!--Segment tracking-->
         <script>
+            // Do not load Segment for these user agents.
+            userAgentBlacklist = [
+                'Mozilla/5.0 (compatible; SiteAuditBot/0.97; +http://www.semrush.com/bot.html)',
+                'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36'
+            ]
+
             !(function () {
                 var analytics = (window.analytics = window.analytics || []);
                 if (!analytics.initialize)
                     if (analytics.invoked) window.console && console.error && console.error("Segment snippet included twice.");
+                    else if(userAgentBlacklist.includes(navigator.userAgent)) {
+                        console.log("Segment snippet not loaded for user agent: " + navigator.userAgent);
+                    }
                     else {
                         analytics.invoked = !0;
                         analytics.methods = [
