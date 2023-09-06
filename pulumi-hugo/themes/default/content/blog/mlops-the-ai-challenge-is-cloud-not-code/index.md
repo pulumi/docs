@@ -81,7 +81,7 @@ git clone https://github.com/pulumiverse/katwalk && cd katwalk/pulumi
 python3 -m venv venv && source venv/bin/activate
 
 # Install python dependencies
-python -m pip install -r requirements.txt
+python3 -m pip install -r requirements.txt
 ```
 
 ### 2. Login to Pulumi Cloud and initialize stack
