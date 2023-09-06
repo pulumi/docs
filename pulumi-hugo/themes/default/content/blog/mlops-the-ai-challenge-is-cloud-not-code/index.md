@@ -21,14 +21,14 @@ tags:
 
 The AI industry is stealing the show as tech's goldrush of the '20s. Just looking at ChatGPT's [record setting user growth](https://www.reuters.com/technology/chatgpt-sets-record-fastest-growing-user-base-analyst-note-2023-02-01/), and rapid 3rd party integration [by top brands](https://www.forbes.com/sites/bernardmarr/2023/05/30/10-amazing-real-world-examples-of-how-companies-are-using-chatgpt-in-2023/?sh=ed1c90f14418), it is not surprising the hype suggests this is the beginning of a major digital transformation.
 
-However, using AI/ML in your own products has some major challenges and obstacles. Below is a diagram of the end to end workflow of building and using an AI model:  preparing the data, training a model, fine-tuning a model, hosting and running a model, building a backend service to serve the model, and building the user interface that interacts with the model. Most AI engineers are only involved in a few steps of the process. However, there is one challenge that is common across the entire workflow:  creating and managing the cloud infrastructure is hard. 
+However, using AI/ML in your own products has some major challenges and obstacles. Below is a diagram of the end to end workflow of building and using an AI model:  preparing the data, training a model, fine-tuning a model, hosting and running a model, building a backend service to serve the model, and building the user interface that interacts with the model. Most AI engineers are only involved in a few steps of the process. However, there is one challenge that is common across the entire workflow:  creating and managing the cloud infrastructure is hard.
 
 > Figure 1. A sneak peak at the map of ML development and product path
 ![A sneak peak at the map of ML development and product path](image.png)
 
 Training a model requires spinning up hyper scale GPU clusters. Preparing and consuming the training or fine-tuning data requires managing data warehouses and buckets of object storage. Building an AI backend service requires packaging the model, deploying and scaling the model across compute infrastructure, creating and managing the network infrastructure like load balancing, and managing the vector databases. Building great frontend user experiences requires provisioning and managing CDNs and web application services. Suffice to say:  *The most difficult challenge that we face with AI today is a problem of cloud orchestration*.
 
-Most of this cloud orchestration today is done manually or with complex scripts. This is usually fraught with errors and simply doesn't scale. Too much time is spent making cloud infrastructure work instead of focusing on actual AI/ML tasks. Infrastructure as code (IaC) is a key component to solving the cloud orchestration challenge present in AI/ML. By applying the rigor and precision of software development practices to cloud operations, IaC offers AI/ML professionals an efficient, reliable, and predictable way to develop at the highest velocity. Pulumi is an open source infrastructure as code platform that allows engineers to use any programming languages, including Python, to provision and manage AI infrastructure. 
+Most of this cloud orchestration today is done manually or with complex scripts. This is usually fraught with errors and simply doesn't scale. Too much time is spent making cloud infrastructure work instead of focusing on actual AI/ML tasks. Infrastructure as code (IaC) is a key component to solving the cloud orchestration challenge present in AI/ML. By applying the rigor and precision of software development practices to cloud operations, IaC offers AI/ML professionals an efficient, reliable, and predictable way to develop at the highest velocity. Pulumi is an open source infrastructure as code platform that allows engineers to use any programming languages, including Python, to provision and manage AI infrastructure.
 
 This blog post is the first installment of a series on *AI Infrastructure as Python*. We will start this journey with building an AI backend service for a chatbot. In this post, we will deploy a LLM model behind an API backend running on compute infrastructure in the cloud. This entire infrastructure pipeline will be deployed using IaC written in Python. The series will follow this AI backend service through its evolution into a robust and resilient cloud native service.
 
@@ -51,7 +51,7 @@ If you are ready to try the *#MLOpsChallenge* along with us, then let's double c
 
 * [Pulumi CLI](https://www.pulumi.com/docs/install/)
 * [Pulumi account and access token](https://app.pulumi.com/signup)
-* [Python3](https://www.python.org/downloads/)
+* [Python3 (3.11+)](https://www.python.org/downloads/)
 * [Git CLI](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 * [Huggingface Token](https://huggingface.co/docs/transformers.js/guides/private)
 * [Huggingface access to LLaMa2](https://huggingface.co/meta-llama)
@@ -81,17 +81,17 @@ git clone https://github.com/pulumiverse/katwalk && cd katwalk/pulumi
 python3 -m venv venv && source venv/bin/activate
 
 # Install python dependencies
-python -m pip install -r requirements.txt
+python3 -m pip install -r requirements.txt
 ```
 
 ### 2. Login to Pulumi Cloud and initialize stack
 
-Next, let's setup our state and secrets store in Pulumi Cloud. 
+Next, let's setup our state and secrets store in Pulumi Cloud.
 
 ```bash
 # There are many ways to store Pulumi state, here we use Pulumi Cloud
 # Other state backends include S3, local file, and more
-pulumi login 
+pulumi login
 
 # Initialize your stack
 # Here we name the stack "dev"
@@ -161,7 +161,7 @@ Once your Katwalk LlaMa server is running, you can interact with the API by send
 
 ```bash
 # send a prompt with curl
-curl -s -X 'POST' 'http://${RUNPOD_FQDN}:8000/v1/chat' -H 'accept: application/json' -H 'Content-Type: application/json' -d '{"prompt": "Write a short story about a robot."}'
+curl -s -X 'POST' 'http://${RUNPOD_FQDN}/v1/chat' -H 'accept: application/json' -H 'Content-Type: application/json' -d '{"prompt": "Write a short story about a robot."}'
 {
   "text": [
     "\nOnce upon a time, there was a little robot named R2. R2 was a friendly and curious robot who lived in a big city. One day, R2 decided to go on an adventure. He set out to explore the city and learn about all the different things he could see and do.\nAs R2 explored the city, he met all kinds of people. Some were kind and welcoming, while others were scared or suspicious of him. Despite this, R2 continued to be friendly and curious, always asking questions and trying to learn more about the world around him.\nOne day, while R2 was exploring a busy market, he saw a group of people gathered around a little girl who was"
