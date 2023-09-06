@@ -47,11 +47,11 @@ The values you need to use are dependent upon your Pulumi organization name. Be 
 | Single Sign-on URL | `https://api.pulumi.com/login/<orgName>/sso/saml/acs` |
 | Audience URI | `https://api.pulumi.com/login/<orgName>/sso/saml/metadata` |
 | Default Relay State | `https://api.pulumi.com/login/<orgName>/sso` |
-| Name ID Format | `Persistent` (`EmailAddress` will also work, but is not recommended) |
+| Name ID Format | `Persistent` |
 | App username | `Email` |
 
     {{% notes type="warning" %}}
-> **Important:** Do not change the value of the Name ID Format once your users have started using Pulumi---not even switching its value between `EmailAddress` or `Persistent`.
+> **Important:** Do not change the value of the Name ID Format once your users have started using Pulumi. Once a given SAML identity has been associated with a user, any change to the username sent by Okta will result in login failures for that user.
     {{% /notes %}}
 
 In addition, you can optionally provide two attribute statements so that users
