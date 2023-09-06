@@ -25,7 +25,7 @@ For ease of navigation, here are links to all the blog posts in the series (any 
 * [IaC Recommended Practices: Structuring Pulumi Projects](/blog/iac-recommended-practices-structuring-pulumi-projects/)
 * [IaC Recommended Practices: Using Stack References](/blog/iac-recommended-practices-using-stack-references/)
 * **IaC Recommended Practices: RBAC and Security (the post you're reading)**
-* IaC Recommended Practices: Using Automation API
+* [IaC Recommended Practices: Using Automation API](/blog/iac-recommended-practices-using-automation-api/)
 * IaC Recommended Practices: Adding Pulumi Deployments
 * IaC Recommended Practices: Refactoring for Reuse
 
