@@ -33,7 +33,7 @@ but the steps described below can be altered to fit into any existing type of de
 
 ## Prerequisites
 
-- Sign up for a [Pulumi account](https://app.pulumi.com) using your GitLab credentials.
+- Sign up for a [Pulumi account](https://app.pulumi.com).
 - Create a [Pulumi Access Token](https://app.pulumi.com/account/tokens).
 - Install the [latest Pulumi CLI](/docs/install/).
 - Create a [blank GitLab project](https://docs.gitlab.com/ee/user/project/) without a README.
