@@ -8,7 +8,7 @@ import { getLambdaFunctionAssociations } from "./cloudfrontLambdaAssociations";
 
 const stackConfig = new pulumi.Config();
 
-const stackRef = new pulumi.StackReference(`pulumi/registry/registry-testing`)
+const stackRef = new pulumi.StackReference(`pulumi/registry/testing`)
 const registryCDN = stackRef.getOutput("cloudFrontDomain");
 
 const config = {
@@ -356,16 +356,12 @@ if (config.testingFlow) {
 // domainAliases is a list of CNAMEs that accompany the CloudFront distribution. Any
 const domainAliases = [];
 
-// The testing flow does not have a configured domain, so we don't need to add any aliases
-// for the time being.
-if (!config.testingFlow) {
-    // websiteDomain is the A record for the website bucket associated with the website.
-    domainAliases.push(config.websiteDomain);
+// websiteDomain is the A record for the website bucket associated with the website.
+domainAliases.push(config.websiteDomain);
 
-    // redirectDomain is the domain to use for fully-qualified 301 redirects.
-    if (config.redirectDomain) {
-        domainAliases.push(config.redirectDomain);
-    }
+// redirectDomain is the domain to use for fully-qualified 301 redirects.
+if (config.redirectDomain) {
+    domainAliases.push(config.redirectDomain);
 }
 
 // distributionArgs configures the CloudFront distribution. Relevant documentation:
@@ -599,8 +595,7 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
 
     // CloudFront certs must be in us-east-1, just like API Gateway.
     viewerCertificate: {
-        acmCertificateArn: config.testingFlow ? undefined : config.certificateArn,
-        cloudfrontDefaultCertificate: config.testingFlow,
+        acmCertificateArn: config.certificateArn,
         sslSupportMethod: "sni-only",
         minimumProtocolVersion: "TLSv1.2_2018",
     },
@@ -645,34 +640,32 @@ function getDomainAndSubdomain(domain: string): { subdomain: string, parentDomai
     };
 }
 
-if (!config.testingFlow) {
 // Creates a new Route53 DNS record pointing the domain to the CloudFront distribution.
-    async function createAliasRecord(
-            targetDomain: string, distribution: aws.cloudfront.Distribution): Promise<aws.route53.Record> {
+async function createAliasRecord(
+    targetDomain: string, distribution: aws.cloudfront.Distribution): Promise<aws.route53.Record> {
 
-        const domainParts = getDomainAndSubdomain(targetDomain);
-        const hostedZone = await aws.route53.getZone({ name: config.hostedZone || domainParts.parentDomain });
-        return new aws.route53.Record(
-            config.websiteDomain,
-            {
-                name: config.setRootRecord ? "" : domainParts.subdomain,
-                zoneId: hostedZone.zoneId,
-                type: "A",
-                aliases: [
-                    {
-                        name: distribution.domainName,
-                        zoneId: distribution.hostedZoneId,
-                        evaluateTargetHealth: true,
-                    },
-                ],
-            },
-            {
-                protect: true,
-            });
-    }
-
-    [...new Set(domainAliases)].map(alias => createAliasRecord(alias, cdn));
+    const domainParts = getDomainAndSubdomain(targetDomain);
+    const hostedZone = await aws.route53.getZone({ name: config.hostedZone || domainParts.parentDomain });
+    return new aws.route53.Record(
+        config.websiteDomain,
+        {
+            name: config.setRootRecord ? "" : domainParts.subdomain,
+            zoneId: hostedZone.zoneId,
+            type: "A",
+            aliases: [
+                {
+                    name: distribution.domainName,
+                    zoneId: distribution.hostedZoneId,
+                    evaluateTargetHealth: true,
+                },
+            ],
+        },
+        {
+            protect: true,
+        });
 }
+
+[...new Set(domainAliases)].map(alias => createAliasRecord(alias, cdn));
 
 export const uploadsBucketName = uploadsBucket.bucket;
 export const originBucketWebsiteDomain = originBucket.websiteDomain;
