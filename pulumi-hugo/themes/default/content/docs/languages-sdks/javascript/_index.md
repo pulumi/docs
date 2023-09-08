@@ -10,7 +10,11 @@ menu:
     weight: 1
 aliases:
 - /docs/reference/javascript/
+- /docs/reference/typescript/
 - /docs/intro/languages/javascript/
+- /docs/intro/languages/typescript/
+- /javascript/
+- /typescript/
 ---
 
 <img src="/logos/tech/logo-nodejs.png" align="right" width="150" style="padding:8px; margin-top: -64px">

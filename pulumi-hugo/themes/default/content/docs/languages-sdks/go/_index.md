@@ -10,6 +10,8 @@ menu:
         weight: 4
 aliases:
 - /docs/intro/languages/go/
+- /go/
+- /golang/
 ---
 
 <img src="/logos/tech/logo-golang.png" align="right" width="150" style="padding:8px; margin-top: -64px">
