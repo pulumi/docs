@@ -32,7 +32,7 @@ We will be deploying:
 * [Amazon AWS SageMaker Model Endpoint](https://www.pulumi.com/registry/packages/aws/api-docs/sagemaker/model/)
 * [Amazon AWS CloudWatch MetricAlarm](https://www.pulumi.com/registry/packages/aws/api-docs/cloudwatch/metricalarm/)
 
-[Pulumi templates](../how-to-create-and-share-a-pulumi-template) enhance Infrastructure as Code (IaC) development by providing a pre-written code framework designed to help you bootstrap new pulumi projects quickly.
+[Pulumi templates](../how-to-create-and-share-a-pulumi-template) enhance the infrastructure as code (IaC) development experience by providing a pre-written code framework designed to help you bootstrap new Pulumi projects quickly.
 
 You can use the `sagemaker-aws-python` template as a working python starting point for your own AWS SageMaker deployments, and customize the model you use, SageMaker configuration, and CloudWatch integration just to scratch the surface. Your only limits are your imagination.
 
