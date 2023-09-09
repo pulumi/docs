@@ -102,7 +102,7 @@ if __name__ == "__main__":
 
 ### 5. Run the test prompt
 
-Now source the local `venv` and run the script using the AWS name of your new endpoint from pulumi state outputs:
+Now source the local `venv` and run the script using the name of your new endpoint from Pulumi state outputs:
 
 ```bash
 # On Linux & MacOS
