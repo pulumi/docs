@@ -23,7 +23,7 @@ tags:
 
 Welcome to another post in the Pulumi + Python MLOps #MLOpsChallenge series!
 
-In this short tutorial we will deploy a publicly available Huggingface model on Amazon AWS SageMaker, and test a prompt using a short python script.
+In this short tutorial we will deploy a publicly available Huggingface model on Amazon AWS SageMaker, and we will test a prompt using a short python script.
 
 We will be deploying:
 
