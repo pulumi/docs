@@ -81,7 +81,7 @@ pulumi up
 
 Once your stack has finished deploying, use this rudimentary Python snippet to test the deployed SageMaker endpoint.
 
-> NOTE: notice that we are using `us-east-1` in this script, be sure to change the reagion in python to match the reagion you deployed the SageMaker endpoint into.
+> NOTE: notice that we are using `us-east-1` in this script, be sure to change the reagion in python to match the region you deployed the SageMaker endpoint into.
 
 ### 4. Save the following python snippet as `test.py`
 
