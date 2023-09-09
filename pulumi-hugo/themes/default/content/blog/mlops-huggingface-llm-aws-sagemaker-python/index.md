@@ -114,7 +114,7 @@ python3 test.py $(pulumi stack output EndpointName)
 
 ### 6. Cleanup / Teardown
 
-Finally, be sure to clean up un-used resources when you're done with one easy command.
+Finally, when you're finished with testing your Hugging Face model on SageMaker, you can easily clean up un-used resources with one easy command.
 
 ```bash
 pulumi destroy
