@@ -71,7 +71,7 @@ pulumi new sagemaker-aws-python
 
 ### 3. Deploy your model as a new SageMaker endpoint
 
-This step may take between 10 and 20 minutes while Amazon AWS builds your infrastructure. You can follow along in the console as resources are provisioned, or open the link displayed in terminal for your stack in a browser to follow along there too!
+This step may take between 10 and 20 minutes while Amazon builds your infrastructure. You can follow along in the console as resources are provisioned, or open the link displayed in terminal for your stack in a browser to follow along there too!
 
 ```bash
 pulumi up
