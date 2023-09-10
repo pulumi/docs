@@ -1,8 +1,8 @@
 ---
 date: 2023-09-08
-title: "Deploy a Hugging Face Model on Amazon SageMaker with Pulumi Python IaC"
+title: "Deploy a Hugging Face Model on Amazon Sagemaker with Pulumi Python IaC"
 allow_long_title: true
-meta_desc: "Guided short tutorial on starting a Pulumi infrastructure as code project to deploy Hugging Face LLMs on Amazon SageMaker machine learning platform"
+meta_desc: "Guided short tutorial on starting a Pulumi infrastructure as code project to deploy Hugging Face LLMs on Amazon Sagemaker machine learning platform"
 meta_image: "meta.png"
 authors:
     - kat-morgan
@@ -118,7 +118,7 @@ After responding to all prompts, the `pulumi new` command will proceed to setup 
 
 ![Pulumi new project ready to go message](pulumi-new-project-ready-to-go.png)
 
-### 3. Deploy your model as a new SageMaker endpoint
+### 3. Deploy your model as a new Sagemaker endpoint
 
 This step may take between 10 and 20 minutes while Amazon builds your infrastructure and deploys the configured model. You can follow along in the console as resources are provisioned, or open the link displayed in terminal to view the deployment status and other stack information in Pulumi Cloud.
 
