@@ -1,8 +1,8 @@
 ---
 date: 2023-09-08
-title: "Deploy a Hugging Face Model on Amazon Sagemaker with Pulumi Python IaC"
+title: "Deploy a Hugging Face Model on Amazon SageMaker with Pulumi Python IaC"
 allow_long_title: true
-meta_desc: "Guided short tutorial on starting a Pulumi infrastructure as code project to deploy Hugging Face LLMs on Amazon Sagemaker machine learning platform"
+meta_desc: "Guided short tutorial on starting a Pulumi infrastructure as code project to deploy Hugging Face LLMs on Amazon SageMaker machine learning platform"
 meta_image: "meta.png"
 authors:
     - kat-morgan
@@ -19,7 +19,7 @@ tags:
     - llama2
     - devops
     - python
-    - sagemaker
+    - SageMaker
     - huggingface
     - platformengineering
 ---
@@ -32,8 +32,8 @@ tags:
 [Infrastructure as Code]:https://www.pulumi.com/what-is/what-is-infrastructure-as-code
 [IaC]:https://www.pulumi.com/what-is/what-is-infrastructure-as-code
 [AWS IAM Roles]:/registry/packages/aws/api-docs/iam/role
-[Amazon Sagemaker Model Endpoint]:/registry/packages/aws/api-docs/sagemaker/model
-[Amazon Cloudwatch alarms]:/registry/packages/aws/api-docs/cloudwatch/metricalarm
+[Amazon SageMaker Model Endpoint]:/registry/packages/aws/api-docs/SageMaker/model
+[Amazon CloudWatch alarms]:/registry/packages/aws/api-docs/cloudwatch/metricalarm
 [Pulumi project and stack]:/docs/using-pulumi/organizing-projects-stacks/
 [Pulumi Cloud]:https://www.pulumi.com/product/pulumi-cloud
 [Pulumi state]:https://www.pulumi.com/docs/concepts/state
@@ -48,13 +48,13 @@ tags:
 [NousResearch/Llama-2-7b-chat-hf]:https://huggingface.co/NousResearch/Llama-2-7b-chat-hf
 [AWS CLI]:https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
 [AWS Credentials]:https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-authentication.html
-[Amazon Sagemaker]:https://aws.amazon.com/pm/sagemaker
+[Amazon SageMaker]:https://aws.amazon.com/pm/SageMaker
 [tremendous value]:https://blogs.nvidia.com/blog/2023/01/26/what-are-large-language-models-used-for
 [Large Language Models]:https://en.wikipedia.org/wiki/Large_language_model
 [LLM]:https://en.wikipedia.org/wiki/Large_language_model
 Welcome to another installment of [Pulumi Python] #MLOpsChallenge!
 
-In this short tutorial we will deploy a publicly available [Meta AI LlaMa 2] based model from [Hugging Face], on [Amazon Sagemaker]. Then we will test it with a [natural language prompt] using a short [Python] script.
+In this short tutorial we will deploy a publicly available [Meta AI LlaMa 2] based model from [Hugging Face], on [Amazon SageMaker]. Then we will test it with a [natural language prompt] using a short [Python] script.
 
 It may be tempting to dismiss AI as yet another over hyped and complicated technology, but is it really? What if you could start using this cutting edge technology without the stress? AI/ML models, including [Large Language Models] (LLM) like what we will demonstrate today, offer [tremendous value] to organizations, but only if AI/ML platform resources can be reliably, easily, and cost effectively provisioned and put to work. By utilizing [Infrastructure as Code] (IaC) written as [Pulumi Python] programs, machine learning operations teams benefit from [IaC] making deploying AI applications the easiest part of your AI/ML journey. Benefits of [Pulumi Python] based [IaC] for your AI/ML projects include:
 
@@ -64,15 +64,15 @@ It may be tempting to dismiss AI as yet another over hyped and complicated techn
 
 ## Pulumi makes AI/ML Easy?
 
-For this exercise we will deploy a [Pulumi Template] from scratch. Starting from the `pulumi new` command, we will initialize a new [Pulumi project and stack]. This will provide everything required to deploy our chosen Hugging Face model as an [Amazon Sagemaker Model Endpoint]
+For this exercise we will deploy a [Pulumi Template] from scratch. Starting from the `pulumi new` command, we will initialize a new [Pulumi project and stack]. This will provide everything required to deploy our chosen Hugging Face model as an [Amazon SageMaker Model Endpoint]
 
-You can use the `sagemaker-aws-python` template as a working Python starting point for your own Amazon Sagemaker deployments, and customize the model you use, Sagemaker configuration, and Cloudwatch integration as well, just to scratch the surface. Your only limits are your imagination.
+You can use the `SageMaker-aws-python` template as a working Python starting point for your own Amazon SageMaker deployments, and customize the model you use, SageMaker configuration, and CloudWatch integration as well, just to scratch the surface. Your only limits are your imagination.
 
-Now let's look at what the `sagemaker-aws-python` template will deploy in this tutorial:
+Now let's look at what the `SageMaker-aws-python` template will deploy in this tutorial:
 
 * [AWS IAM Roles]
-* [Amazon Cloudwatch alarms]
-* [Amazon Sagemaker Model Endpoint]
+* [Amazon CloudWatch alarms]
+* [Amazon SageMaker Model Endpoint]
 * A [Meta AI LlaMa 2] based LLM ([NousResearch/Llama-2-7b-chat-hf]) from [Hugging Face]
 
 ## Requirements
@@ -99,26 +99,26 @@ pulumi login
 
 ### 2. Prepare a new Pulumi project
 
-Here we create our new Pulumi project directory and populate it from the `sagemaker-aws-python` [Pulumi template](https://github.com/pulumi/templates)
+Here we create our new Pulumi project directory and populate it from the `SageMaker-aws-python` [Pulumi template](https://github.com/pulumi/templates)
 
 ```bash
 # Create a new directory & change directories into it
-mkdir newSagemaker && cd newSagemaker
+mkdir newSageMaker && cd newSageMaker
 
-# Start your project from the sagemaker-aws-python template
+# Start your project from the SageMaker-aws-python template
 # Follow along with the prompts to create your new project and initialize a stack
-pulumi new sagemaker-aws-python
+pulumi new SageMaker-aws-python
 ```
 
-While creating a new project from the `sagemaker-aws-python` Pulumi template, you will be prompted for a [project](https://www.pulumi.com/docs/concepts/projects/) name, description, [stack](https://www.pulumi.com/docs/concepts/stack/) name, and Amazon Web Service [Region](https://aws.amazon.com/about-aws/global-infrastructure/regions_az/). You can proceed with defaults, or supply your own.
+While creating a new project from the `SageMaker-aws-python` Pulumi template, you will be prompted for a [project](https://www.pulumi.com/docs/concepts/projects/) name, description, [stack](https://www.pulumi.com/docs/concepts/stack/) name, and Amazon Web Service [Region](https://aws.amazon.com/about-aws/global-infrastructure/regions_az/). You can proceed with defaults, or supply your own.
 
 After responding to all prompts, the `pulumi new` command will proceed to setup a [Python Virtual Environment] (venv) and download all dependencies into the [venv].
 
-![pulumi new template command](pulumi-new-sagemaker-template-and-stack.png)
+![pulumi new template command](pulumi-new-SageMaker-template-and-stack.png)
 
 ![Pulumi new project ready to go message](pulumi-new-project-ready-to-go.png)
 
-### 3. Deploy your model as a new Sagemaker endpoint
+### 3. Deploy your model as a new SageMaker endpoint
 
 This step may take between 10 and 20 minutes while Amazon builds your infrastructure and deploys the configured model. You can follow along in the console as resources are provisioned, or open the link displayed in terminal to view the deployment status and other stack information in Pulumi Cloud.
 
@@ -126,13 +126,13 @@ This step may take between 10 and 20 minutes while Amazon builds your infrastruc
 pulumi up
 ```
 
-![Screenshot of iTerm2 displaying the resulting stack output after deploying the base sagemaker-aws-python Pulumi template](pulumi-up-sagemaker-endpoint.png)
+![Screenshot of iTerm2 displaying the resulting stack output after deploying the base SageMaker-aws-python Pulumi template](pulumi-up-SageMaker-endpoint.png)
 
-### 4. Try your new Sagemaker endpoint
+### 4. Try your new SageMaker endpoint
 
-Once your stack has finished deploying, use this rudimentary Python snippet to test the deployed Sagemaker endpoint.
+Once your stack has finished deploying, use this rudimentary Python snippet to test the deployed SageMaker endpoint.
 
-> NOTE: Notice that we are using `us-east-1` in this script. Be sure to change the region in Python to match the region you deployed the Sagemaker endpoint into.
+> NOTE: Notice that we are using `us-east-1` in this script. Be sure to change the region in Python to match the region you deployed the SageMaker endpoint into.
 
 First, save the following python snippet as `test.py`:
 
@@ -140,7 +140,7 @@ First, save the following python snippet as `test.py`:
 import json, boto3, argparse
 
 def main(endpoint_name):
-    client = boto3.client('sagemaker-runtime', region_name='us-east-1')
+    client = boto3.client('SageMaker-runtime', region_name='us-east-1')
     payload = json.dumps({"inputs": "In 3 words, name the biggest mountain on earth?"})
     response = client.invoke_endpoint(EndpointName=endpoint_name, ContentType="application/json", Body=payload)
     print("Response:", json.loads(response['Body'].read().decode()))
@@ -162,11 +162,11 @@ source venv/bin/activate
 python3 test.py $(pulumi stack output EndpointName)
 ```
 
-![Screenshot of executing test.py in terminal to generate a response to the question "what is the biggest mountain on earth?"](sagemaker-test-py.png)
+![Screenshot of executing test.py in terminal to generate a response to the question "what is the biggest mountain on earth?"](SageMaker-test-py.png)
 
 ### 5. Cleanup all resources
 
-Finally, when you're finished with testing your Hugging Face model on Sagemaker, you can easily clean up un-used resources with one easy command.
+Finally, when you're finished with testing your Hugging Face model on SageMaker, you can easily clean up un-used resources with one easy command.
 
 ```bash
 pulumi destroy
@@ -174,7 +174,7 @@ pulumi destroy
 
 ## Conclusion
 
-To recap, in a few commands, we created a new Pulumi Python project from a ready-to-roll template, deployed an LLM endpoint on Amazon Sagemaker, and tested it with a short Python script to generate a response from our model!
+To recap, in a few commands, we created a new Pulumi Python project from a ready-to-roll template, deployed an LLM endpoint on Amazon SageMaker, and tested it with a short Python script to generate a response from our model!
 
 AI and ML is rapidly becoming a necessity with every new day. It may appear daunting or out of reach at first glance, but with the power of IaC written as Pulumi Python programs, getting started has never been easier.
 
