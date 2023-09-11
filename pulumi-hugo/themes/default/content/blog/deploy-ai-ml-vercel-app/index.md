@@ -2,7 +2,7 @@
 date: 2023-09-11
 title: "Deploying Your AI/ML Chatbot Frontend To Vercel Using Pulumi"
 allow_long_title: true
-meta_desc: "Deploying Your AI/ML Chatbot Frontend To Vercel Using Pulumi"
+meta_desc: "Learn how to effortlessly deploy your AI/ML chatbot frontend to Vercel using Pulumi and Python to take your AI DevOps skills to the next level"
 meta_image: meta.png
 authors:
     - adora-nwodo
@@ -20,12 +20,12 @@ The process of taking an idea and turning it into reality has been nothing short
 
 But our AI adventure hasn't ended there; it's only just begun.
 
-Now, imagine this: A Vue.js chatbot frontend, seamlessly integrating human interaction and the AI chatbot API. This blog post is the second installment of a series on AI Infrastructure as Python. We'd delve into the creation of a captivating Vue.js chatbot frontend, and with Pulumi, we'll deploy it to Vercel.
+Now, imagine this: A Vue.js chatbot frontend, seamlessly integrating human interaction and the AI chatbot API. This blog post is part of the series on AI Infrastructure as Python. We'd delve into the creation of a captivating Vue.js chatbot frontend, and with Pulumi, we'll deploy it to Vercel.
 
 Before we get into the details of using Pulumi to deploy a Vue.js frontend app to Vercel, let's start with some quick terminology/context:
 
-- Katwalk Frontend is a demo Vue.js application that integrates with the Katwalk Server to produce a function web interface for you to communicate with your chatbot. 
-- Vercel is a modern web development cloud platform and hosting provider. It specialises in making web application deployment simple and efficient.
+- Katwalk Frontend is a demo Vue.js application that integrates with the [Katwalk Server](https://github.com/pulumiverse/katwalk) to produce a function web interface for you to communicate with your chatbot. 
+- [Vercel](https://vercel.com/) is a modern web development cloud platform and hosting provider. It specialises in making web application deployment simple and efficient.
 
 ## Integrate Your Chatbot Service With a Frontend And Deploy It!
 If you are ready to integrate your chatbot and deploy it to Vercel along with us, then let's double check a few requirements before we continue. While Pulumi supports many languages, we chose Python for this project, as Python is a familiar language in the AI industry and this is part of the *#MLOpsChallenge*.
@@ -40,7 +40,7 @@ If you are ready to integrate your chatbot and deploy it to Vercel along with us
 * [Vercel account and access token](https://vercel.com/guides/how-do-i-use-a-vercel-api-access-token#creating-an-access-token)
 
 
-Now that you have everything needed to get started, let's hook up our frontend and deploy it to vercel using Pulumi.
+Now that you have everything needed to get started, let's hook up our frontend and deploy the frontend to vercel using Pulumi.
 
 ### 1. Clone the repo and setup your project
 
@@ -73,7 +73,7 @@ pulumi stack init --stack dev
 
 ### 3. Configure deployment credentials
 
-Before the deployment, you will need to set the config values for your Vercel token, katwalk-api dns name, repsitory name, and repository type. The Vercel token is supposed to be set as a secret. If you open the `Pulumi.${stackName}.yaml` file, you can see the encrypted secret in this plain text YAML configuration.
+Before the deployment, you will need to set the config values for your Vercel token,the URL to the Katwalk Server endpoint, the repository name, and the repository type. The Vercel token is supposed to be set as a secret. If you open the `Pulumi.${stackName}.yaml` file, you can see the encrypted secret in this plain text YAML configuration.
 
 ```bash
 # Set your katwalk-api path here - It should have this format https://{domain}/v1/chat
@@ -83,7 +83,7 @@ pulumi config set backendDns <katwalk_api>
 pulumi config set repoName <repo_name>
 
 # The git provider of the repository. Must be either `github`, `gitlab`, or `bitbucket`.
-pulumi config set repoType <repo_name>
+pulumi config set repoType <github|gitlab|bitbucket>
 
 # Configure vercel token as secret
 pulumi config set --secret token <vercel_token>
@@ -97,9 +97,6 @@ Now, you're set up to deploy your Vue app to Vercel.
 ```bash
 # Finally, run `pulumi up` to deploy!
 pulumi up
-
-# When done, you can 'destroy' the stack to deprovision your deployment
-pulumi destroy
 ```
 
 ### 6. Interact with your chatbot
@@ -109,7 +106,16 @@ Once your web app is running, you can visit the website, send prompts and see th
 > Figure 1. A prompt and response screenshot from our Katwalk Frontend
 ![chatbot-webapp](./chatbot-webapp.png)
 
+### 7. Tear down resources
+
+Now that you've tested out this code and you can see the chatbot in action, remember to deprovision your deployment by running: 
+
+```bash
+pulumi destroy
+```
+
 ## Explaining the Pulumi code
+
 If you'd like to learn about what the Pulumi code is doing, then stick around. In this section, we'll dive into the Python Pulumi code which is responsible for deploying the Vue.js project to Vercel using Pulumi. Let's break down the code step by step to understand how it works. 
 
 ### 1. Import the necessary modules
@@ -121,6 +127,7 @@ import pulumiverse_vercel as vercel
 The code begins by importing the required modules. `pulumi` is the primary Pulumi Python library, while `pulumiverse_vercel` is a Pulumi provider for Vercel. These modules provide the necessary functionality to define and manage our web app infrastructure.
 
 ### 2. Configuration settings
+
 ```python
 config = pulumi.Config()
 backendDns = config.require("backendDns")
@@ -128,9 +135,10 @@ token = config.require_secret("token")
 repoName = config.require("repoName")
 repoType = config.require("repoType")
 ```
-Here, we retrieve configuration settings using Pulumi's configuration management. Configuration values like `backendDns`, `token`, `repoName`, and `repoType` are essential for setting up the Vercel deployment. These were the values that you provided using the pulumi config set command before deploying the stack.
+Here, we retrieve configuration settings using Pulumi's configuration management. Configuration values like `backendDns`, `token`, `repoName`, and `repoType` are essential for setting up the Vercel deployment. These were the values that you provided using the `pulumi config set` command before deploying the stack.
 
 ### 3. Vercel provider
+
 ```python
 provider = vercel.Provider("vercel-provider",
     api_token = token
@@ -139,6 +147,7 @@ provider = vercel.Provider("vercel-provider",
 This part initializes the Vercel provider with the Vercel API token. The provider is used to authenticate and interact with the Vercel platform programmatically.
 
 ### 4. Creating a Vercel project
+
 ```python
 project = vercel.Project("vercel-project", 
     name = "vercel-git-project",
@@ -155,6 +164,7 @@ project = vercel.Project("vercel-project",
 Here, we define a Vercel project named `vercel-git-project`. The `git_repository` parameter specifies the Git repository details, including `repoName` and `repoType`. We also associate this project with the Vercel provider using `opts`.
 
 ### 5. Setting Environment Variables
+
 ```python
 environment = vercel.ProjectEnvironmentVariable("vercel-env",
     project_id = project.id,
@@ -169,6 +179,7 @@ environment = vercel.ProjectEnvironmentVariable("vercel-env",
 This section sets an environment variable named `VUE_APP_BACKEND_DNS` for the Vercel project. It links this environment variable to the `project.id` and specifies that it should be available only in the `production` environment.
 
 ### 6. Deploying the Project
+
 ```python
 deployment = vercel.Deployment("vercel-deployment",
     project_id = project.id,
