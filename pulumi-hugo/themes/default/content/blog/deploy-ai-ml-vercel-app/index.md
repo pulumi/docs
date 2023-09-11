@@ -1,6 +1,6 @@
 ---
 date: 2023-09-11
-title: "Deploy AI ML Vercel App"
+title: "Deploying Your AI/ML Chatbot Frontend To Vercel Using Pulumi"
 allow_long_title: true
 meta_desc: "Deploying Your AI/ML Chatbot Frontend To Vercel Using Pulumi"
 meta_image: meta.png
