@@ -31,9 +31,9 @@ tags:
 [Pulumi Python]:https://www.pulumi.com/docs/reference/pkg/python/pulumi
 [Infrastructure as Code]:https://www.pulumi.com/what-is/what-is-infrastructure-as-code
 [IaC]:https://www.pulumi.com/what-is/what-is-infrastructure-as-code
-[AWS IAM Roles]:/registry/packages/aws/api-docs/iam/role
+[IAM Roles]:/registry/packages/aws/api-docs/iam/role
 [Amazon SageMaker Model Endpoint]:/registry/packages/aws/api-docs/SageMaker/model
-[Amazon CloudWatch alarms]:/registry/packages/aws/api-docs/cloudwatch/metricalarm
+[CloudWatch alarms]:/registry/packages/aws/api-docs/cloudwatch/metricalarm
 [Pulumi project and stack]:/docs/using-pulumi/organizing-projects-stacks/
 [Pulumi Cloud]:https://www.pulumi.com/product/pulumi-cloud
 [Pulumi state]:https://www.pulumi.com/docs/concepts/state
@@ -52,11 +52,12 @@ tags:
 [tremendous value]:https://blogs.nvidia.com/blog/2023/01/26/what-are-large-language-models-used-for
 [Large Language Models]:https://en.wikipedia.org/wiki/Large_language_model
 [LLM]:https://en.wikipedia.org/wiki/Large_language_model
+
 Welcome to another installment of [Pulumi Python] #MLOpsChallenge!
 
 In this short tutorial we will deploy a publicly available [Meta AI LlaMa 2] based model from [Hugging Face], on [Amazon SageMaker]. Then we will test it with a [natural language prompt] using a short [Python] script.
 
-It may be tempting to dismiss AI as yet another over hyped and complicated technology, but is it really? What if you could start using this cutting edge technology without the stress? AI/ML models, including [Large Language Models] (LLM) like what we will demonstrate today, offer [tremendous value] to organizations, but only if AI/ML platform resources can be reliably, easily, and cost effectively provisioned and put to work. By utilizing [Infrastructure as Code] (IaC) written as [Pulumi Python] programs, machine learning operations teams benefit from [IaC] making deploying AI applications the easiest part of your AI/ML journey. Benefits of [Pulumi Python] based [IaC] for your AI/ML projects include:
+Running models from Hugging Face on Amazon SageMaker is a popular deployment option for AI/ML backend services. While the SageMaker console allows for provisioning these cloud resources, this deployment pattern is labor intensive to document and vulnerable to human errors when reproducing as a regular operations practice. Infrastructure as Code (IaC) offers a reliable and easy to duplicate deployment practice. By developing this IaC in Pulumi, practitioners can choose to write their infrastructure code in Python to seamlessly develop both AI application code and IaC code in the same language.
 
 1. Easily create AI/ML infrastructure, together with other supporting infrastructure _in the same Pulumi program_
 2. [Pulumi templates] enhance the infrastructure as code (IaC) development experience by providing a pre-written code framework designed to help you bootstrap new Pulumi projects quickly.
@@ -64,16 +65,9 @@ It may be tempting to dismiss AI as yet another over hyped and complicated techn
 
 ## Pulumi makes AI/ML Easy?
 
-For this exercise we will deploy a [Pulumi Template] from scratch. Starting from the `pulumi new` command, we will initialize a new [Pulumi project and stack]. This will provide everything required to deploy our chosen Hugging Face model as an [Amazon SageMaker Model Endpoint]
+For this exercise we will deploy a [Pulumi Template] from scratch. Starting from the `pulumi new` command, we will initialize a new [Pulumi project and stack]. This will provide everything required to deploy our chosen Hugging Face model as an [Amazon SageMaker Model Endpoint].
 
-You can use the `sagemaker-aws-python` template as a working Python starting point for your own Amazon SageMaker deployments, and customize the model you use, SageMaker configuration, and CloudWatch integration as well, just to scratch the surface. Your only limits are your imagination.
-
-Now let's look at what the `sagemaker-aws-python` template will deploy in this tutorial:
-
-* [AWS IAM Roles]
-* [Amazon CloudWatch alarms]
-* [Amazon SageMaker Model Endpoint]
-* A [Meta AI LlaMa 2] based LLM ([NousResearch/Llama-2-7b-chat-hf]) from [Hugging Face]
+You can use the `sagemaker-aws-python` template as a working Python starting point for your own Amazon SageMaker deployments, and customize the model you use, SageMaker configuration, and CloudWatch integration as well, just to scratch the surface. Out of the box, this template provisions Amazon [IAM Roles] to assign SageMaker privileges, [CloudWatch alarms] to alert incase of latency or error spikes for the endpoint, and of course a [Meta AI LlaMa 2] based LLM ([NousResearch/Llama-2-7b-chat-hf]) hosted on [Hugging Face].
 
 ## Requirements
 
