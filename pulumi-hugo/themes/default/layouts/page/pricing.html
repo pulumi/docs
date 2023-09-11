@@ -1,19 +1,21 @@
 {{ define "hero" }}
-    {{ partial "hero.html" (dict "title" "Pricing") }}
+    {{ partial "hero.html" (dict "title" "Pulumi Cloud Pricing") }}
 {{ end }}
 
 {{ define "main" }}
-    <section class="container mx-auto text-center my-16">
-        <h2 class="mt-14 text-center">Fully managed infrastructure as code platform</h2>
+    <section class="container mx-auto text-center mt-8 mb-16">
+        <h2 class="mt-6 text-center">Fully managed infrastructure as code platform</h2>
         <p class="max-w-3xl mx-auto mt-6">
             {{/* prettier-ignore-start */}}
         <a class="underline" href="/product/pulumi-service">Pulumi Cloud</a> is the easiest way to adopt
-        Pulumi's <a class="underline" href="https://github.com/pulumi/pulumi">open source SDK</a>.
-        <p>Prefer to manage your own state storage backend?
-        <a class="text-blue-600 underline" href="/docs/concepts/state#using-a-self-managed-backend"> Learn more</a>.
-        </p>
+        and use Pulumi's <a class="underline" href="https://github.com/pulumi/pulumi">open source SDK</a>.
             {{/* prettier-ignore-end */}}
         </p>
+
+        <div class="mt-10">
+            <a href="https://app.pulumi.com/signup" target="_blank" rel="noopener noreferrer" class="btn-primary">Get started with Pulumi Cloud</a>
+            <p class="text-xs pt-1">Unlimited resources. No credit card required.</p>
+        </div>
     </section>
 
     <section id="plans" class="relative">
@@ -35,7 +37,10 @@
                             <h3 class="title mb-8 h-14 lg:h-24 xl:h-14">Individual</h3>
                             <p class="text-base mb-8 mt-0 h-14 max-w-xs lg:h-24 xl:h-14">Start using infrastructure as code for individual projects.</p>
 
-                            <div class="text-black text-2xl lg:text-xl xl:text-2xl h-20">Always free</div>
+                            <div class="h-20">
+                                <div class="text-black text-2xl lg:text-xl xl:text-2xl lg:whitespace-nowrap">Always free</div>
+                                <p class="m-0  text-sm mt-2">Unlimited resources</p>
+                            </div>
 
                             <div class="flex-grow lg:whitespace-nowrap">
                                 <div class="text-base pt-4 text-black mb-4">Everything to <b>get started</b>:</div>
@@ -80,8 +85,8 @@
                                 </ul>
                             </div>
 
-                            <div class="mt-8 lg:mt-4 xl:mt-8 flex flex-col w-48">
-                                <a href="/docs/quickstart" class="btn-secondary py-3 px-6 text-center">Get Started</a>
+                            <div class="z-10 mt-8 lg:mt-4 xl:mt-8 flex flex-col">
+                                <a href="/docs/quickstart" class="btn-secondary py-3 px-6 text-center">Get Started with Individual</a>
                                 <p class="text-xs pt-1 my-0 text-center">Follow the step-by-step guide!</p>
                             </div>
                         </div>
@@ -97,7 +102,10 @@
                                     <h3 class="title mb-8 h-14 lg:h-24 xl:h-14">Individual</h3>
                                     <p class="text-base mb-8 mt-0 h-14 max-w-xs lg:h-24 xl:h-14">Start using infrastructure as code for individual projects.</p>
 
-                                    <div class="text-black text-2xl lg:text-xl xl:text-2xl h-14">Always free</div>
+                                    <div class="h-20">
+                                        <div class="text-black text-2xl lg:text-xl xl:text-2xl lg:whitespace-nowrap">Always free</div>
+                                        <p class="m-0  text-sm mt-2">Unlimited resources</p>
+                                    </div>
 
                                     <div class="flex-grow lg:whitespace-nowrap">
                                         <div class="text-base pt-4 text-black mb-4">Everything to <b>get started</b>:</div>
@@ -136,8 +144,8 @@
                                         </ul>
                                     </div>
 
-                                    <div class="lg:hidden mt-8 lg:mt-4 xl:mt-8 flex flex-col w-56 xl:w-60">
-                                        <a href="/docs/quickstart" class="btn-secondary py-3 px-6 text-center">Get Started</a>
+                                    <div class="z-10 lg:hidden mt-8 lg:mt-4 xl:mt-8 flex flex-col w-56 xl:w-60">
+                                        <a href="/docs/quickstart" class="btn-primary py-3 px-6 text-center">Get Started</a>
                                         <p class="text-xs pt-1 my-0 text-center">Follow the step-by-step guide!</p>
                                     </div>
                                 </div>
@@ -195,7 +203,7 @@
                                     </div>
 
                                     <div class="lg:hidden mt-8 relative z-0 flex flex-col w-56 xl:w-60">
-                                        <a id="teamStartTrialButton" class="btn-secondary py-3 px-6 text-center">14-day Free Trial</a>
+                                        <a id="teamStartTrialButton" class="btn-secondary py-3 px-6 text-center">Start trial</a>
                                         <p class="text-xs pt-1 my-0 text-center">No credit card needed.</p>
                                     </div>
                                 </div>
@@ -270,7 +278,7 @@
                                     </div>
 
                                     <div class="lg:hidden mt-8 relative z-0 flex flex-col w-56 xl:w-60">
-                                        <a id="enterpriseStartTrialButton" class="btn-primary py-3 px-6 text-center">14-day Free Trial</a>
+                                        <a id="enterpriseStartTrialButton" class="btn-primary py-3 px-6 text-center">Start trial</a>
                                         <p class="text-xs pt-1 my-0 text-center">No credit card needed.</p>
                                     </div>
                                 </div>
@@ -348,7 +356,7 @@
                                     </div>
 
                                     <div class="lg:hidden mt-8 lg:mt-4 xl:mt-8 relative z-0 flex flex-col w-56 xl:w-60">
-                                        <a id="businessCriticalStartTrialButton" class="btn-secondary py-3 px-6 text-center">14-day Free Trial</a>
+                                        <a id="businessCriticalStartTrialButton" class="btn-secondary py-3 px-6 text-center">Start trial</a>
                                         <p class="text-xs pt-1 my-0 text-center">No credit card needed.</p>
                                     </div>
                                 </div>
@@ -358,12 +366,12 @@
 
                     <div class="hidden lg:flex justify-center pb-8">
                         <div class="flex flex-col w-80 mr-9">
-                            <a id="pricingStartTrial" class="btn-primary py-3 px-12 text-center">Start Trial of All Features</a>
+                            <a id="pricingStartTrial" class="btn-primary py-3 px-12 text-center">Start trial</a>
                             <p class="text-xs pt-1 my-0 text-center">14-day trial. No credit card needed.</p>
                         </div>
 
                         <div class="flex flex-col w-80">
-                            <a href="/contact/?form=sales" class="btn-secondary py-3 px-6 text-center">Contact Us</a>
+                            <a href="/contact/?form=sales" class="btn-secondary py-3 px-6 text-center">Talk to a human</a>
                             <p class="text-xs pt-1 my-0 text-center">Contact us for a demo & quote.</p>
                         </div>
                     </div>
@@ -1790,11 +1798,11 @@
                             <h2 class="mb-12 text-center">Ready to try Pulumi Cloud?</h2>
                             <div class="flex flex-col lg:flex-row self-stretch items-center lg:justify-between">
                                 <div class="flex flex-col justify-center align-center text-center w-full md:w-2/4 lg:ml-14 lg:mr-4 mb-14 lg:mb-0 z-0">
-                                    <a id="pricingStartTrialBottomCTA" class="btn-primary py-3">Start Trial of All Features</a>
+                                    <a id="pricingStartTrialBottomCTA" class="btn-primary py-3">Start trial</a>
                                     <p class="text-xs pt-1 my-0">14-day trial. No credit card needed.</p>
                                 </div>
                                 <div class="flex flex-col justify-center align-center text-center w-full md:w-2/4 lg:mr-14 lg:ml-4">
-                                    <a href="/contact/?form=sales" class="btn-secondary py-3 px-6">Contact Us</a>
+                                    <a href="/contact/?form=sales" class="btn-secondary py-3 px-6">Talk to a human</a>
                                     <p class="text-xs pt-1 my-0">Contact us for a demo & quote.</p>
                                 </div>
                             </div>
