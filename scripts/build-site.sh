@@ -26,18 +26,34 @@ make copy_static_prebuilt
 
 REGISTRY_COMMIT="$(go mod graph | grep pulumi/registry/themes/default | sed 's/.*-//')"
 
-printf "Generating API docs from registry commit %s...\n\n" "${REGISTRY_COMMIT}"
-pushd tools/resourcedocsgen
-go build -o "${GOPATH}/bin/resourcedocsgen" .
-resourcedocsgen docs registry --commitSha "${REGISTRY_COMMIT}" --logtostderr
-popd
+# In the testing environment this is done by the pulumi/registry repo. Once this moves to prod,
+# we can remove this altogether, since API docs generation will no longer be done here.
+if [[ "$DEPLOYMENT_ENVIRONMENT" != "testing" ]]; then
+    printf "Generating API docs from registry commit %s...\n\n" "${REGISTRY_COMMIT}"
+    pushd tools/resourcedocsgen
+    go build -o "${GOPATH}/bin/resourcedocsgen" .
+    resourcedocsgen docs registry --commitSha "${REGISTRY_COMMIT}" --logtostderr
+    popd
+fi
 
 printf "Running Hugo...\n\n"
 if [ "$1" == "preview" ]; then
     export HUGO_BASEURL="http://$(origin_bucket_prefix)-$(build_identifier).s3-website.$(aws_region).amazonaws.com"
     GOGC=3 hugo --minify --buildFuture --templateMetrics -e "preview"
 else
-    GOGC=3 hugo --minify --buildFuture --templateMetrics -e production
+    case ${DEPLOYMENT_ENVIRONMENT} in
+    testing)
+        export HUGO_BASEURL="https://www.pulumi-test.io"
+        GOGC=3 hugo --minify --buildFuture --templateMetrics -e "preview"
+        ;;
+    production)
+        GOGC=3 hugo --minify --buildFuture --templateMetrics -e "production"
+        ;;
+    *)
+        echo "Unknown environment '${DEPLOYMENT_ENVIRONMENT}'"
+        exit 1
+        ;;
+    esac
 fi
 
 # Purge unused CSS.
