@@ -10,7 +10,6 @@ menu:
         weight: 5
 aliases:
 - /docs/intro/languages/java/
-- /java/
 ---
 
 <img src="/logos/tech/java.svg" align="right" width="90" style="padding:8px; margin-top: -64px">

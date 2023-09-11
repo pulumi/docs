@@ -11,7 +11,6 @@ menu:
 aliases:
 - /docs/reference/python/
 - /docs/intro/languages/python/
-- /python/
 ---
 
 <img src="/logos/tech/logo-python.svg" align="right" width="150" style="padding:8px; margin-top: -64px">
