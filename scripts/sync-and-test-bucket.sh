@@ -66,7 +66,7 @@ aws s3 website $destination_bucket_uri --index-document index.html --error-docum
 echo "Synchronizing to $destination_bucket_uri..."
 aws s3 sync "$build_dir" "$destination_bucket_uri" --acl public-read --delete --quiet --region "$(aws_region)"
 
-if [[ "$1" == "update" ]]; then
+if [[ "$1" == "update" && "$DEPLOYMENT_ENVIRONMENT" == "testing" ]]; then
     # We host the bundle files in a separate bucket that `/css` and `js` routes to to enable managing the bundles
     # generated from both the docs and hugo repos.
     bundleBucket=$(pulumi -C infrastructure stack output bundlesS3BucketName)
