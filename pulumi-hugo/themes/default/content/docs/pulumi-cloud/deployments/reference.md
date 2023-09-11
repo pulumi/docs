@@ -236,9 +236,13 @@ By default, when multiple deployments are pushed, they will be executed sequenti
 
 ### Customizing the Deployment Environment
 
-By default, the deployment is executed using the [pulumi/pulumi](https://hub.docker.com/r/pulumi/pulumi) image. However, there may be scenarios where you might want to customize the image used for the execution, e.g. if you want to use a different version of python or need to include additional dependencies.
+By default, the deployment is executed using the [pulumi/pulumi](https://hub.docker.com/r/pulumi/pulumi) image.
+The pulumi/pulumi image is a unix-based image which includes the pulumi CLI in its `$PATH` and the [LTS versions](https://github.com/pulumi/pulumi-docker-containers/blob/main/README.md#version-policy) of all supported SDK runtime(s) for your Pulumi program.
 
-This is possible by specifying a custom executor image for your deployment.
+However, there may be scenarios where you might want to customize the image used for the execution, e.g. if you want to use a different version of python or need to include additional dependencies.
+
+This is possible by specifying a custom executor image for your deployment. Using the custom executor image field, you can pin to a specific version of the pulumi/pulumi image,
+or point to a completely custom image hosted in a public or private container registry.
 
 ![Pulumi UI - Custom Executor](../ui-custom-executor.png)
 
