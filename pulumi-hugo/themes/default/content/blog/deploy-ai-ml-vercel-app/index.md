@@ -30,7 +30,7 @@ With Pulumi, developer productivity increases, scalability is a breeze, and the 
 
 Before we get into the details of using Pulumi to deploy a Vue.js frontend app to Vercel, let's start with some quick terminology/context:
 
-- Katwalk Frontend is a demo Vue.js application that integrates with the [Katwalk Server](https://github.com/pulumiverse/katwalk) to produce a function web interface for you to communicate with your chatbot. 
+- [Katwalk Frontend](https://github.com/pulumiverse/katwalk/tree/main/src/app/katwalk-frontend) is a demo Vue.js application that integrates with the [Katwalk Server](https://github.com/pulumiverse/katwalk) to produce a function web interface for you to communicate with your chatbot. 
 - [Vercel](https://vercel.com/) is a modern web development cloud platform and hosting provider. It specialises in making web application deployment simple and efficient.
 
 ## Integrate Your Chatbot Service With a Frontend And Deploy It!
@@ -54,7 +54,7 @@ The first thing we need to do is clone the repository from GitHub and setup the 
 
 ```bash
 # Clone the repository and cd to the infra directory
-git clone https://github.com/pulumiverse/katwalk-frontend && cd katwalk-frontend/infra
+git clone https://github.com/pulumiverse/katwalk && cd katwalk/pulumi
 
 # Create and initialize the python virtual env
 python3 -m venv venv && source venv/bin/activate
@@ -79,12 +79,9 @@ pulumi stack init --stack dev
 
 ### 3. Configure deployment credentials
 
-Before the deployment, you will need to set the config values for your Vercel token,the URL to the Katwalk Server endpoint, the repository name, and the repository type. The Vercel token is supposed to be set as a secret. If you open the `Pulumi.${stackName}.yaml` file, you can see the encrypted secret in this plain text YAML configuration.
+Before the deployment, you will need to set the config values for your Vercel token, the repository name, and the repository type. The Vercel token is supposed to be set as a secret. If you open the `Pulumi.${stackName}.yaml` file, you can see the encrypted secret in this plain text YAML configuration.
 
 ```bash
-# Set your katwalk-api path here - It should have this format https://{domain}/v1/chat
-pulumi config set backendDns <katwalk_api>
-
 # The name of the git repository. It should have this format {account-name}/{repository-name}
 pulumi config set repoName <repo_name>
 
@@ -136,12 +133,11 @@ The code begins by importing the required modules. `pulumi` is the primary Pulum
 
 ```python
 config = pulumi.Config()
-backendDns = config.require("backendDns")
 token = config.require_secret("token")
 repoName = config.require("repoName")
 repoType = config.require("repoType")
 ```
-Here, we retrieve configuration settings using Pulumi's configuration management. Configuration values like `backendDns`, `token`, `repoName`, and `repoType` are essential for setting up the Vercel deployment. These were the values that you provided using the `pulumi config set` command before deploying the stack.
+Here, we retrieve configuration settings using Pulumi's configuration management. Configuration values like `token`, `repoName`, and `repoType` are essential for setting up the Vercel deployment. These were the values that you provided using the `pulumi config set` command before deploying the stack.
 
 ### 3. Vercel provider
 
@@ -162,6 +158,7 @@ project = vercel.Project("vercel-project",
         repo = repoName,
         type = repoType
     ),
+    root_directory = "./src/app/katwalk-frontend",
     opts = pulumi.ResourceOptions(
         provider = provider
     )
