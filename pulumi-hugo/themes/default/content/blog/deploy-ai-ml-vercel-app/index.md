@@ -44,7 +44,7 @@ Now that you have everything needed to get started, let's hook up our frontend a
 
 ### 1. Clone the repo and setup your project
 
-The first we need to do is clone the repository from GitHub and setup the Pulumi Python environment.
+The first thing we need to do is clone the repository from GitHub and setup the Pulumi Python environment.
 
 ```bash
 # Clone the repository and cd to the infra directory
