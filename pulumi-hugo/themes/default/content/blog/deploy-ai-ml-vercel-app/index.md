@@ -22,6 +22,12 @@ But our AI adventure hasn't ended there; it's only just begun.
 
 Now, imagine this: A Vue.js chatbot frontend, seamlessly integrating human interaction and the AI chatbot API. This blog post is part of the series on AI Infrastructure as Python. We'd delve into the creation of a captivating Vue.js chatbot frontend, and with Pulumi, we'll deploy it to Vercel.
 
+The complexity of building end-to-end AI/ML applications rests not only in the algorithms and models, but also in the several layers of infrastructure required to bring them to life. Consider this: You have a brilliantly designed Vue.js chatbot frontend, a chatbot API powered by llama models, a Vercel cloud hosting environment for the frontend, and a Runpod environment for the API. But here's the catch: you have to weave all of these pieces together seamlessly.
+
+Individual scripts or manual settings to set up and manage each component can soon create a tangled web of inefficiencies and potential problems. That's where Pulumi comes in as the pivotal figure in our AI/ML journey. From the frontend to the backend, Pulumi orchestrates the programmatic generation and coordination of every critical infrastructure element. It's the link that connects your lofty AI goals with the pragmatism of efficient development.
+
+With Pulumi, developer productivity increases, scalability is a breeze, and the complex infrastructure piece fits together with easily. Now that you can see why this is important, let's get started.
+
 Before we get into the details of using Pulumi to deploy a Vue.js frontend app to Vercel, let's start with some quick terminology/context:
 
 - Katwalk Frontend is a demo Vue.js application that integrates with the [Katwalk Server](https://github.com/pulumiverse/katwalk) to produce a function web interface for you to communicate with your chatbot. 
