@@ -1,5 +1,5 @@
 ---
-date: 2023-09-08
+date: 2023-09-11
 title: "Deploy a Hugging Face Model on Amazon SageMaker with Pulumi Python IaC"
 allow_long_title: true
 meta_desc: "Guided short tutorial on starting a Pulumi infrastructure as code project to deploy Hugging Face LLMs on Amazon SageMaker machine learning platform"
