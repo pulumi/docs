@@ -66,9 +66,9 @@ It may be tempting to dismiss AI as yet another over hyped and complicated techn
 
 For this exercise we will deploy a [Pulumi Template] from scratch. Starting from the `pulumi new` command, we will initialize a new [Pulumi project and stack]. This will provide everything required to deploy our chosen Hugging Face model as an [Amazon SageMaker Model Endpoint]
 
-You can use the `SageMaker-aws-python` template as a working Python starting point for your own Amazon SageMaker deployments, and customize the model you use, SageMaker configuration, and CloudWatch integration as well, just to scratch the surface. Your only limits are your imagination.
+You can use the `sagemaker-aws-python` template as a working Python starting point for your own Amazon SageMaker deployments, and customize the model you use, SageMaker configuration, and CloudWatch integration as well, just to scratch the surface. Your only limits are your imagination.
 
-Now let's look at what the `SageMaker-aws-python` template will deploy in this tutorial:
+Now let's look at what the `sagemaker-aws-python` template will deploy in this tutorial:
 
 * [AWS IAM Roles]
 * [Amazon CloudWatch alarms]
@@ -99,22 +99,22 @@ pulumi login
 
 ### 2. Prepare a new Pulumi project
 
-Here we create our new Pulumi project directory and populate it from the `SageMaker-aws-python` [Pulumi template](https://github.com/pulumi/templates)
+Here we create our new Pulumi project directory and populate it from the `sagemaker-aws-python` [Pulumi template](https://github.com/pulumi/templates)
 
 ```bash
 # Create a new directory & change directories into it
 mkdir newSageMaker && cd newSageMaker
 
-# Start your project from the SageMaker-aws-python template
+# Start your project from the sagemaker-aws-python template
 # Follow along with the prompts to create your new project and initialize a stack
-pulumi new SageMaker-aws-python
+pulumi new sagemaker-aws-python
 ```
 
-While creating a new project from the `SageMaker-aws-python` Pulumi template, you will be prompted for a [project](https://www.pulumi.com/docs/concepts/projects/) name, description, [stack](https://www.pulumi.com/docs/concepts/stack/) name, and Amazon Web Service [Region](https://aws.amazon.com/about-aws/global-infrastructure/regions_az/). You can proceed with defaults, or supply your own.
+While creating a new project from the `sagemaker-aws-python` Pulumi template, you will be prompted for a [project](https://www.pulumi.com/docs/concepts/projects/) name, description, [stack](https://www.pulumi.com/docs/concepts/stack/) name, and Amazon Web Service [Region](https://aws.amazon.com/about-aws/global-infrastructure/regions_az/). You can proceed with defaults, or supply your own.
 
 After responding to all prompts, the `pulumi new` command will proceed to setup a [Python Virtual Environment] (venv) and download all dependencies into the [venv].
 
-![pulumi new template command](pulumi-new-SageMaker-template-and-stack.png)
+![pulumi new template command](pulumi-new-sagemaker-template-and-stack.png)
 
 ![Pulumi new project ready to go message](pulumi-new-project-ready-to-go.png)
 
@@ -126,7 +126,7 @@ This step may take between 10 and 20 minutes while Amazon builds your infrastruc
 pulumi up
 ```
 
-![Screenshot of iTerm2 displaying the resulting stack output after deploying the base SageMaker-aws-python Pulumi template](pulumi-up-SageMaker-endpoint.png)
+![Screenshot of iTerm2 displaying the resulting stack output after deploying the base sagemaker-aws-python Pulumi template](pulumi-up-sagemaker-endpoint.png)
 
 ### 4. Try your new SageMaker endpoint
 
@@ -162,7 +162,7 @@ source venv/bin/activate
 python3 test.py $(pulumi stack output EndpointName)
 ```
 
-![Screenshot of executing test.py in terminal to generate a response to the question "what is the biggest mountain on earth?"](SageMaker-test-py.png)
+![Screenshot of executing test.py in terminal to generate a response to the question "what is the biggest mountain on earth?"](sagemaker-test-py.png)
 
 ### 5. Cleanup all resources
 
