@@ -20,9 +20,9 @@ Because mocks don't execute any real work, unit tests run very fast. Also, they 
 
 ## Get Started
 
-Unit tests are supported in all existing Pulumi runtimes: Node.js, Python, Go, and .NET.
-
 Let's build a sample test suite. The example uses AWS resources, but the same capabilities and workflow apply to any Pulumi provider. To follow along, complete the [Get Started with AWS](/docs/clouds/aws/get-started/) guide to set up a basic Pulumi program in your language of choice.
+
+Note that unit tests are supported in all [existing Pulumi runtimes](https://www.pulumi.com/docs/languages-sdks/).
 
 ## Sample Program
 
@@ -202,7 +202,7 @@ npm install --global mocha
 Then, install additional NPM modules to your program:
 
 ```bash
-npm install mocha @types/mocha ts-node
+npm install mocha @types/mocha ts-node --global --save-dev
 ```
 
 {{% /choosable %}}
@@ -329,7 +329,7 @@ public static class Testing
 
 {{% /choosable %}}
 
-The definition of the mocks interface is available at the [runtime API reference page](/docs/reference/pkg/nodejs/pulumi/pulumi/runtime/#Mocks).
+The definition of the mocks interface is available at the [runtime API reference page](https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/pulumi/runtime/#Mocks).
 
 ## Write the Tests
 
@@ -347,11 +347,11 @@ pulumi.runtime.setMocks({
 });
 
 describe("Infrastructure", function() {
-    let infra: typeof import("../index");
+    let infra: typeof import("./index");
 
     before(async function() {
         // It's important to import the program _after_ the mocks are defined.
-        infra = await import("../index");
+        infra = await import("./index");
     })
 
     describe("#server", function() {
