@@ -107,7 +107,7 @@ pulumi up
 
 ### 5. Interact with your chatbot
 
-Once your web app is running, you can visit the website, send prompts and see the response in real-time!
+Once your web app is running, you can visit the website at `https://vercel-git-project.vercel.app`, send prompts and see the response in real-time!
 
 > Figure 2. A prompt and response screenshot from our Katwalk Frontend
 ![chatbot-webapp](./chatbot-webapp.png)
