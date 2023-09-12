@@ -20,9 +20,9 @@ Because mocks don't execute any real work, unit tests run very fast. Also, they 
 
 ## Get Started
 
-Unit tests are supported in all existing Pulumi runtimes: Node.js, Python, Go, and .NET.
-
 Let's build a sample test suite. The example uses AWS resources, but the same capabilities and workflow apply to any Pulumi provider. To follow along, complete the [Get Started with AWS](/docs/clouds/aws/get-started/) guide to set up a basic Pulumi program in your language of choice.
+
+Note that unit tests are supported in all [existing Pulumi runtimes](https://www.pulumi.com/docs/languages-sdks/).
 
 ## Sample Program
 
@@ -202,7 +202,7 @@ npm install --global mocha
 Then, install additional NPM modules to your program:
 
 ```bash
-npm install mocha @types/mocha ts-node
+npm install mocha @types/mocha ts-node --global --save-dev
 ```
 
 {{% /choosable %}}
@@ -230,6 +230,7 @@ dotnet add package NUnit
 dotnet add package NUnit3TestAdapter
 dotnet add package Moq
 dotnet add package FluentAssertions
+dotnet add package Microsoft.NET.Test.Sdk
 ```
 
 {{% /choosable %}}
@@ -313,23 +314,69 @@ func (mocks) Call(args pulumi.MockCallArgs) (resource.PropertyMap, error) {
 Testing.cs:
 
 ```csharp
-public static class Testing
+using System.Collections.Immutable;
+using System.Threading.Tasks;
+using Pulumi;
+using Pulumi.Testing;
+
+namespace UnitTesting
 {
-    public static Task<ImmutableArray<Resource>> RunAsync<T>() where T : Stack, new()
+    class Mocks : IMocks
     {
-        var mocks = new Mock<IMocks>();
-        mocks.Setup(m => m.NewResourceAsync(It.IsAny<MockResourceArgs>()))
-            .ReturnsAsync((MockResourceArgs args) => (args.Id ?? "", args.Inputs));
-        mocks.Setup(m => m.CallAsync(It.IsAny<MockCallArgs>()))
-            .ReturnsAsync((MockCallArgs args) => args.Args);
-        return Deployment.TestAsync<T>(mocks.Object, new TestOptions { IsPreview = false });
+        public Task<(string? id, object state)> NewResourceAsync(MockResourceArgs args)
+        {
+            var outputs = ImmutableDictionary.CreateBuilder<string, object>();
+
+            outputs.AddRange(args.Inputs);
+
+            if (args.Type == "aws:ec2/instance:Instance")
+            {
+                outputs.Add("publicIp", "203.0.113.12");
+                outputs.Add("publicDns", "ec2-203-0-113-12.compute-1.amazonaws.com");
+            }
+
+            args.Id ??= $"{args.Name}_id";
+            return Task.FromResult<(string? id, object state)>((args.Id, (object)outputs));
+        }
+
+        public Task<object> CallAsync(MockCallArgs args)
+        {
+            var outputs = ImmutableDictionary.CreateBuilder<string, object>();
+
+            if (args.Token == "aws:index/getAmi:getAmi")
+            {
+                outputs.Add("architecture", "x86_64");
+                outputs.Add("id", "ami-0eb1f3cdeeb8eed2a");
+            }
+
+            return Task.FromResult((object)outputs);
+        }
+    }
+
+    public static class Testing
+    {
+        public static Task<ImmutableArray<Resource>> RunAsync<T>() where T : Stack, new()
+        {
+            return Deployment.TestAsync<T>(new Mocks(), new TestOptions { IsPreview = false });
+        }
+
+        public static Task<T> GetValueAsync<T>(this Output<T> output)
+        {
+            var tcs = new TaskCompletionSource<T>();
+            output.Apply(v =>
+            {
+                tcs.SetResult(v);
+                return v;
+            });
+            return tcs.Task;
+        }
     }
 }
 ```
 
 {{% /choosable %}}
 
-The definition of the mocks interface is available at the [runtime API reference page](/docs/reference/pkg/nodejs/pulumi/pulumi/runtime/#Mocks).
+The definition of the mocks interface is available at the [runtime API reference page](https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/pulumi/runtime/#Mocks).
 
 ## Write the Tests
 
@@ -347,11 +394,11 @@ pulumi.runtime.setMocks({
 });
 
 describe("Infrastructure", function() {
-    let infra: typeof import("../index");
+    let infra: typeof import("./index");
 
     before(async function() {
         // It's important to import the program _after_ the mocks are defined.
-        infra = await import("../index");
+        infra = await import("./index");
     })
 
     describe("#server", function() {
@@ -435,8 +482,11 @@ The overall structure and scaffolding of our tests will look like any ordinary N
 WebserverStackTests.cs:
 
 ```csharp
+using System.Linq;
+using System.Threading.Tasks;
+using FluentAssertions;
 using NUnit.Framework;
-using Pulumi.Utilities;
+using Pulumi.Aws.Ec2;
 
 namespace UnitTesting
 {
@@ -491,7 +541,7 @@ def test_server_tags(self):
 // check 1: Instances have a Name tag.
 pulumi.All(infra.server.URN(), infra.server.Tags).ApplyT(func(all []interface{}) error {
 	urn := all[0].(pulumi.URN)
-	tags := all[1].(map[string]interface{})
+	tags := all[1].(map[string]string)
 
 	assert.Containsf(t, tags, "Name", "missing a Name tag on server %v", urn)
 	wg.Done()
@@ -512,20 +562,9 @@ public async Task InstanceHasNameTag()
     var instance = resources.OfType<Instance>().FirstOrDefault();
     instance.Should().NotBeNull("EC2 Instance not found");
 
-    var tags = await OutputUtilities.GetValueAsync(instance.Tags);
+    var tags = await instance.Tags.GetValueAsync();
     tags.Should().NotBeNull("Tags are not defined");
     tags.Should().ContainKey("Name");
-}
-
-public static Task<T> GetValueAsync<T>(this Output<T> output)
-{
-    var tcs = new TaskCompletionSource<T>();
-    output.Apply(v =>
-    {
-        tcs.SetResult(v);
-        return v;
-    });
-    return tcs.Task;
 }
 ```
 
@@ -534,7 +573,7 @@ public static Task<T> GetValueAsync<T>(this Output<T> output)
 This looks like a normal test, with a few noteworthy pieces:
 
 - Since we're querying resource state without doing a deployment, there are many properties whose values will be undefined. This includes any output properties computed by your cloud provider that you did not explicitly return from the mocks. That's fine for these tests&mdash;we're checking for valid inputs anyway.
-- Because all Pulumi resource properties are [outputs](/docs/concepts/inputs-outputs/)&mdash;since many of them are computed asynchronously&mdash;we need to use the `apply` method to get access to the values.
+- Because all Pulumi resource properties are [outputs](/docs/concepts/inputs-outputs/)&mdash;since many of them are computed asynchronously&mdash;we need to use the `apply` method to get access to the values (see the `GetValueAsync` function in the `Testing.cs` file).
 - Finally, since these outputs are resolved asynchronously, we need to use the framework's built-in asynchronous test capability.
 
 After we've gotten through that setup, we get access to the raw inputs as plain values. The tags property is a map, so we make sure it is (1) defined, and (2) not missing an entry for the `Name` key. This is very basic, but we can check anything!
@@ -577,9 +616,9 @@ def test_server_userdata(self):
 // check 2: Instances must not use an inline userData script.
 pulumi.All(infra.server.URN(), infra.server.UserData).ApplyT(func(all []interface{}) error {
 	urn := all[0].(pulumi.URN)
-	userData := all[1].(*string)
+	userData := all[1].(string)
 
-	assert.Nilf(t, userData, "illegal use of userData on server %v", urn)
+	assert.Emptyf(t, userData, "illegal use of userData on server %v", urn)
 	wg.Done()
 	return nil
 })
@@ -598,7 +637,7 @@ public async Task InstanceMustNotUseInlineUserData()
     var instance = resources.OfType<Instance>().FirstOrDefault();
     instance.Should().NotBeNull("EC2 Instance not found");
 
-    var tags = await OutputUtilities.GetValueAsync(instance.Tags);
+    var tags = await instance.UserData.GetValueAsync();
     tags.Should().BeNull();
 }
 ```
@@ -676,8 +715,8 @@ public async Task SecurityGroupMustNotHaveSshPortsOpenToInternet()
 
     foreach (var securityGroup in resources.OfType<SecurityGroup>())
     {
-        var urn = await OutputUtilities.GetValueAsync(securityGroup.Urn);
-        var ingress = await OutputUtilities.GetValueAsync(securityGroup.Ingress);
+        var urn = await securityGroup.Urn.GetValueAsync();
+        var ingress = await securityGroup.Ingress.GetValueAsync();
         foreach (var rule in ingress)
         {
             (rule.FromPort == 22 && rule.CidrBlocks.Any(b => b == "0.0.0.0/0"))
@@ -889,7 +928,7 @@ func createInfrastructure(ctx *pulumi.Context) (*infrastructure, error) {
 		InstanceType:   pulumi.String("t2-micro"),
 		SecurityGroups: pulumi.StringArray{group.ID()}, // reference the group object above
 		Ami:            pulumi.String("ami-c55673a0"),  // AMI for us-east-2 (Ohio)
-		Tags:           pulumi.Map{"Name": pulumi.String("webserver")},
+		Tags:           pulumi.StringMap{"Name": pulumi.String("webserver")},
 	})
 	if err != nil {
 		return nil, err
