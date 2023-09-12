@@ -102,14 +102,14 @@ Now, you're set up to deploy your Vue app to Vercel.
 pulumi up
 ```
 
-### 6. Interact with your chatbot
+### 5. Interact with your chatbot
 
 Once your web app is running, you can visit the website, send prompts and see the response in real-time!
 
 > Figure 1. A prompt and response screenshot from our Katwalk Frontend
 ![chatbot-webapp](./chatbot-webapp.png)
 
-### 7. Tear down resources
+### 6. Tear down resources
 
 Now that you've tested out this code and you can see the chatbot in action, remember to deprovision your deployment by running: 
 
