@@ -164,6 +164,6 @@ To recap, in a few commands, we created a new Pulumi Python project from a ready
 
 AI and ML is rapidly becoming a necessity with every new day. It may appear daunting or out of reach at first glance, but with the power of IaC written as Pulumi Python programs, getting started has never been easier.
 
-If you followed along then tell us how it worked out for you! We would love to know what you are looking forward to, or if you have ideas for future installments of the Pulumi Python #MLOpsChallenge series!
+If you followed along then tell us how it worked out for you! We would love to know what you are looking forward to, or if you have ideas for future installments of the Pulumi Python #PulumiMLOps series!
 
-Join us on [Twitter](https://twitter.com/pulumicorp), and on the [Pulumi Community Slack](https://slack.pulumi.com) to decide what #MLOpsChallenge we take on next!
+Join us on [Twitter](https://twitter.com/pulumicorp), and on the [Pulumi Community Slack](https://slack.pulumi.com) to decide what #PulumiMLOps we take on next!
