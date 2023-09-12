@@ -491,7 +491,7 @@ def test_server_tags(self):
 // check 1: Instances have a Name tag.
 pulumi.All(infra.server.URN(), infra.server.Tags).ApplyT(func(all []interface{}) error {
 	urn := all[0].(pulumi.URN)
-	tags := all[1].(map[string]interface{})
+	tags := all[1].(map[string]string)
 
 	assert.Containsf(t, tags, "Name", "missing a Name tag on server %v", urn)
 	wg.Done()
@@ -577,9 +577,9 @@ def test_server_userdata(self):
 // check 2: Instances must not use an inline userData script.
 pulumi.All(infra.server.URN(), infra.server.UserData).ApplyT(func(all []interface{}) error {
 	urn := all[0].(pulumi.URN)
-	userData := all[1].(*string)
+	userData := all[1].(string)
 
-	assert.Nilf(t, userData, "illegal use of userData on server %v", urn)
+	assert.Emptyf(t, userData, "illegal use of userData on server %v", urn)
 	wg.Done()
 	return nil
 })
@@ -889,7 +889,7 @@ func createInfrastructure(ctx *pulumi.Context) (*infrastructure, error) {
 		InstanceType:   pulumi.String("t2-micro"),
 		SecurityGroups: pulumi.StringArray{group.ID()}, // reference the group object above
 		Ami:            pulumi.String("ami-c55673a0"),  // AMI for us-east-2 (Ohio)
-		Tags:           pulumi.Map{"Name": pulumi.String("webserver")},
+		Tags:           pulumi.StringMap{"Name": pulumi.String("webserver")},
 	})
 	if err != nil {
 		return nil, err
