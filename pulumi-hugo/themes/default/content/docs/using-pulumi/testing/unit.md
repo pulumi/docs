@@ -230,6 +230,7 @@ dotnet add package NUnit
 dotnet add package NUnit3TestAdapter
 dotnet add package Moq
 dotnet add package FluentAssertions
+dotnet add package Microsoft.NET.Test.Sdk
 ```
 
 {{% /choosable %}}
@@ -313,16 +314,67 @@ func (mocks) Call(args pulumi.MockCallArgs) (resource.PropertyMap, error) {
 Testing.cs:
 
 ```csharp
-public static class Testing
+// Copyright 2016-2020, Pulumi Corporation
+
+using System.Collections.Immutable;
+using System.Threading.Tasks;
+using Pulumi;
+using Pulumi.Testing;
+
+namespace UnitTesting
 {
-    public static Task<ImmutableArray<Resource>> RunAsync<T>() where T : Stack, new()
+    class Mocks : IMocks
     {
-        var mocks = new Mock<IMocks>();
-        mocks.Setup(m => m.NewResourceAsync(It.IsAny<MockResourceArgs>()))
-            .ReturnsAsync((MockResourceArgs args) => (args.Id ?? "", args.Inputs));
-        mocks.Setup(m => m.CallAsync(It.IsAny<MockCallArgs>()))
-            .ReturnsAsync((MockCallArgs args) => args.Args);
-        return Deployment.TestAsync<T>(mocks.Object, new TestOptions { IsPreview = false });
+        public Task<(string? id, object state)> NewResourceAsync(MockResourceArgs args)
+        {
+            var outputs = ImmutableDictionary.CreateBuilder<string, object>();
+
+            // Forward all input parameters as resource outputs, so that we could test them.
+            outputs.AddRange(args.Inputs);
+
+            if (args.Type == "aws:ec2/instance:Instance")
+            {
+                outputs.Add("publicIp", "203.0.113.12");
+                outputs.Add("publicDns", "ec2-203-0-113-12.compute-1.amazonaws.com");
+            }
+
+            // Default the resource ID to `{name}_id`.
+            // We could also format it as `/subscription/abc/resourceGroups/xyz/...` if that was important for tests.
+            args.Id ??= $"{args.Name}_id";
+            return Task.FromResult<(string? id, object state)>((args.Id, (object)outputs));
+        }
+
+        public Task<object> CallAsync(MockCallArgs args)
+        {
+            var outputs = ImmutableDictionary.CreateBuilder<string, object>();
+
+            if (args.Token == "aws:index/getAmi:getAmi")
+            {
+                outputs.Add("architecture", "x86_64");
+                outputs.Add("id", "ami-0eb1f3cdeeb8eed2a");
+            }
+
+            return Task.FromResult((object)outputs);
+        }
+    }
+
+    public static class Testing
+    {
+        public static Task<ImmutableArray<Resource>> RunAsync<T>() where T : Stack, new()
+        {
+            return Deployment.TestAsync<T>(new Mocks(), new TestOptions { IsPreview = false });
+        }
+
+        public static Task<T> GetValueAsync<T>(this Output<T> output)
+        {
+            var tcs = new TaskCompletionSource<T>();
+            output.Apply(v =>
+            {
+                tcs.SetResult(v);
+                return v;
+            });
+            return tcs.Task;
+        }
     }
 }
 ```
@@ -435,8 +487,11 @@ The overall structure and scaffolding of our tests will look like any ordinary N
 WebserverStackTests.cs:
 
 ```csharp
+using System.Linq;
+using System.Threading.Tasks;
+using FluentAssertions;
 using NUnit.Framework;
-using Pulumi.Utilities;
+using Pulumi.Aws.Ec2;
 
 namespace UnitTesting
 {
@@ -512,20 +567,9 @@ public async Task InstanceHasNameTag()
     var instance = resources.OfType<Instance>().FirstOrDefault();
     instance.Should().NotBeNull("EC2 Instance not found");
 
-    var tags = await OutputUtilities.GetValueAsync(instance.Tags);
+    var tags = await instance.Tags.GetValueAsync();
     tags.Should().NotBeNull("Tags are not defined");
     tags.Should().ContainKey("Name");
-}
-
-public static Task<T> GetValueAsync<T>(this Output<T> output)
-{
-    var tcs = new TaskCompletionSource<T>();
-    output.Apply(v =>
-    {
-        tcs.SetResult(v);
-        return v;
-    });
-    return tcs.Task;
 }
 ```
 
@@ -534,7 +578,7 @@ public static Task<T> GetValueAsync<T>(this Output<T> output)
 This looks like a normal test, with a few noteworthy pieces:
 
 - Since we're querying resource state without doing a deployment, there are many properties whose values will be undefined. This includes any output properties computed by your cloud provider that you did not explicitly return from the mocks. That's fine for these tests&mdash;we're checking for valid inputs anyway.
-- Because all Pulumi resource properties are [outputs](/docs/concepts/inputs-outputs/)&mdash;since many of them are computed asynchronously&mdash;we need to use the `apply` method to get access to the values.
+- Because all Pulumi resource properties are [outputs](/docs/concepts/inputs-outputs/)&mdash;since many of them are computed asynchronously&mdash;we need to use the `apply` method (see the `GetValueAsync` function in the `Testing.cs` file) to get access to the values.
 - Finally, since these outputs are resolved asynchronously, we need to use the framework's built-in asynchronous test capability.
 
 After we've gotten through that setup, we get access to the raw inputs as plain values. The tags property is a map, so we make sure it is (1) defined, and (2) not missing an entry for the `Name` key. This is very basic, but we can check anything!
@@ -598,7 +642,7 @@ public async Task InstanceMustNotUseInlineUserData()
     var instance = resources.OfType<Instance>().FirstOrDefault();
     instance.Should().NotBeNull("EC2 Instance not found");
 
-    var tags = await OutputUtilities.GetValueAsync(instance.Tags);
+    var tags = await instance.UserData.GetValueAsync();
     tags.Should().BeNull();
 }
 ```
@@ -676,8 +720,8 @@ public async Task SecurityGroupMustNotHaveSshPortsOpenToInternet()
 
     foreach (var securityGroup in resources.OfType<SecurityGroup>())
     {
-        var urn = await OutputUtilities.GetValueAsync(securityGroup.Urn);
-        var ingress = await OutputUtilities.GetValueAsync(securityGroup.Ingress);
+        var urn = await securityGroup.Urn.GetValueAsync();
+        var ingress = await securityGroup.Ingress.GetValueAsync();
         foreach (var rule in ingress)
         {
             (rule.FromPort == 22 && rule.CidrBlocks.Any(b => b == "0.0.0.0/0"))
