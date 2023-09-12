@@ -26,7 +26,7 @@ The complexity of building end-to-end AI/ML applications rests not only in the a
 
 Individual scripts or manual settings to set up and manage each component can soon create a tangled web of inefficiencies and potential problems. That's where Pulumi comes in as the pivotal figure in our AI/ML journey. From the frontend to the backend, Pulumi orchestrates the programmatic generation and coordination of every critical infrastructure element. It's the link that connects your lofty AI goals with the pragmatism of efficient development.
 
-With Pulumi, developer productivity increases, scalability is a breeze, and the complex infrastructure piece fits together with easily. Now that you can see why this is important, let's get started.
+With Pulumi, developer productivity increases, scalability is a breeze, and the complex infrastructure pieces fit together easily. Now that you can see why this is important, let's get started.
 
 Before we get into the details of using Pulumi to deploy a Vue.js frontend app to Vercel, let's start with some quick terminology/context:
 
