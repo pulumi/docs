@@ -1,5 +1,5 @@
 ---
-date: 2023-09-11
+date: 2023-09-13
 title: "Deploying Your AI/ML Chatbot Frontend To Vercel Using Pulumi"
 allow_long_title: true
 meta_desc: "Learn how to effortlessly deploy your AI/ML chatbot frontend to Vercel using Pulumi and Python to take your AI DevOps skills to the next level"
@@ -150,7 +150,7 @@ Here, we retrieve configuration settings using Pulumi's configuration management
 
 ```python
 provider = vercel.Provider("vercel-provider",
-    api_token = vclToken
+    api_token = vcl_token
 )
 ```
 This part initializes the Vercel provider with the Vercel API token. The provider is used to authenticate and interact with the Vercel platform programmatically.
