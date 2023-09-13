@@ -47,7 +47,7 @@ The token also contains custom claims that provide additional, deployment-specif
 As part of the process that exchanges your deployment's OIDC token for cloud provider credentials, the cloud provider must check the OIDC token's claims against the conditions configured in the provider's trust relationship. The configuration of a trust relationship varies depending on the cloud provider, but typically uses at least the Audience, Subject, and Issuer claims. These claims can be use to restrict trust to specific organizations, projects, stacks, etc.:
 
 - The Issuer claim is typically used to validate that the token is properly signed. The issuer's public signing key is fetched and used to validate the token's signature.
-- The Audience claim contains the name of the organization associated with the deployment. You can use this claim to restrict credentials to a specific organizaiton or organizations.
+- The Audience claim contains the name of the organization associated with the deployment. You can use this claim to restrict credentials to a specific organization or organizations.
 - The Subject claim contains a variety of information about the deployment. You can use this claim to restrict credentials to a specific organization, project, stack, operation, or scope.
 - The various custom claims contain the same information as the Subject claim. If your cloud provider supports configuring trust relationships based on custom claims, you can use these claims for the same purposes as the Subject claim.
 
