@@ -91,6 +91,9 @@ pulumi config set gitRepoName <repo_name>
 # The git provider of the repository. Must be either `github`, `gitlab`, or `bitbucket`.
 pulumi config set gitRepoType <github|gitlab|bitbucket>
 
+# Configure vercel project name. Your vercel website will be `https://{vclProjectName}.vercel.app`
+pulumi config set vclProjectName <vercel_project_name>
+
 # Configure vercel token as secret
 pulumi config set --secret vclToken <vercel_token>
 
@@ -107,7 +110,7 @@ pulumi up
 
 ### 5. Interact with your chatbot
 
-Once your web app is running, you can visit the website at `https://vercel-git-project.vercel.app`, send prompts and see the response in real-time!
+Once your web app is running, you can visit the website at `https://{vclProjectName}.vercel.app`, send prompts and see the response in real-time!
 
 > Figure 2. A prompt and response screenshot from our Katwalk Frontend
 ![chatbot-webapp](./chatbot-webapp.png)
@@ -136,11 +139,12 @@ The code begins by importing the required modules. `pulumi` is the primary Pulum
 
 ```python
 config = pulumi.Config()
+vclProjectName = config.require("vclProjectName")
 vclToken = config.require_secret("vclToken")
 gitRepoName = config.require("gitRepoName")
 gitRepoType = config.require("gitRepoType")
 ```
-Here, we retrieve configuration settings using Pulumi's configuration management. Configuration values like `vclToken`, `gitRepoName`, and `gitRepoType` are essential for setting up the Vercel deployment. These were the values that you provided using the `pulumi config set` command before deploying the stack.
+Here, we retrieve configuration settings using Pulumi's configuration management. Configuration values like `vclProjectName`, `vclToken`, `gitRepoName`, and `gitRepoType` are essential for setting up the Vercel deployment. These were the values that you provided using the `pulumi config set` command before deploying the stack.
 
 ### 3. Vercel provider
 
@@ -155,7 +159,7 @@ This part initializes the Vercel provider with the Vercel API token. The provide
 
 ```python
 project = vercel.Project("vercel-project", 
-    name = "vercel-git-project",
+    name = vclProjectName,
     framework = "vue",
     git_repository = vercel.ProjectGitRepositoryArgs(
         repo = gitRepoName,
