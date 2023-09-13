@@ -91,11 +91,11 @@ pulumi config set gitRepoName <repo_name>
 # The git provider of the repository. Must be either `github`, `gitlab`, or `bitbucket`.
 pulumi config set gitRepoType <github|gitlab|bitbucket>
 
-# Configure vercel project name. Your vercel website will be `https://{vclProjectName}.vercel.app`
-pulumi config set vclProjectName <vercel_project_name>
+# Configure vercel project name. Your vercel website will be `https://{vcl_project_name}.vercel.app`
+pulumi config set vclProjectName <vcl_project_name>
 
 # Configure vercel token as secret
-pulumi config set --secret vclToken <vercel_token>
+pulumi config set --secret vclToken <vcl_token>
 
 ```
 
@@ -110,7 +110,7 @@ pulumi up
 
 ### 5. Interact with your chatbot
 
-Once your web app is running, you can visit the website at `https://{vclProjectName}.vercel.app`, send prompts and see the response in real-time!
+Once your web app is running, you can visit the website at `https://{vcl_project_name}.vercel.app`, send prompts and see the response in real-time!
 
 > Figure 2. A prompt and response screenshot from our Katwalk Frontend
 ![chatbot-webapp](./chatbot-webapp.png)
@@ -139,10 +139,10 @@ The code begins by importing the required modules. `pulumi` is the primary Pulum
 
 ```python
 config = pulumi.Config()
-vclProjectName = config.require("vclProjectName")
-vclToken = config.require_secret("vclToken")
-gitRepoName = config.require("gitRepoName")
-gitRepoType = config.require("gitRepoType")
+vcl_project_name = config.require("vclProjectName")
+vcl_token = config.require_secret("vclToken")
+git_repo_name = config.require("gitRepoName")
+git_repo_type = config.require("gitRepoType")
 ```
 Here, we retrieve configuration settings using Pulumi's configuration management. Configuration values like `vclProjectName`, `vclToken`, `gitRepoName`, and `gitRepoType` are essential for setting up the Vercel deployment. These were the values that you provided using the `pulumi config set` command before deploying the stack.
 
@@ -159,11 +159,11 @@ This part initializes the Vercel provider with the Vercel API token. The provide
 
 ```python
 project = vercel.Project("vercel-project", 
-    name = vclProjectName,
+    name = vcl_project_name,
     framework = "vue",
     git_repository = vercel.ProjectGitRepositoryArgs(
-        repo = gitRepoName,
-        type = gitRepoType
+        repo = git_repo_name,
+        type = git_repo_type
     ),
     root_directory = "src/app/katwalk-frontend",
     opts = pulumi.ResourceOptions(
@@ -171,7 +171,7 @@ project = vercel.Project("vercel-project",
     )
 )
 ```
-Here, we define a Vercel project named `vercel-git-project`. The `git_repository` parameter specifies the Git repository details, including `gitRepoName` and `gitRepoType`. We also associate this project with the Vercel provider using `opts`.
+Here, we define a Vercel project `vcl_project_name`. The `git_repository` parameter specifies the Git repository details, including `git_repo_name` and `git_repo_type`. We also associate this project with the Vercel provider using `opts`.
 
 ### 5. Setting Environment Variables
 
