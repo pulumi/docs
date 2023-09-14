@@ -16,7 +16,7 @@ tags:
 
 ---
 
-The process of taking an idea and turning it into reality has been nothing short of extraordinary since we started innovating with Artificial Intelligence. With this technology, machines learn about and communicate with people, while also helping us in ways we never could have imagined only a few years ago. If you've been following along, you might recall our [previous article](https://www.pulumi.com/blog/mlops-the-ai-challenge-is-cloud-not-code/) where we used Python and Pulumi to a chatbot API (named katwalk) to the cloud.
+The process of taking an idea and turning it into reality has been nothing short of extraordinary since we started innovating with Artificial Intelligence. With this technology, machines learn about and communicate with people, while also helping us in ways we never could have imagined only a few years ago. If you've been following along, you might recall our [previous article](https://www.pulumi.com/blog/mlops-the-ai-challenge-is-cloud-not-code/) where we used Python and Pulumi to a chatbot API (named katwalk) to the cloud.
 
 But our AI adventure hasn't ended there; it's only just begun.
 
@@ -25,7 +25,7 @@ Now, imagine this: A Vue.js chatbot frontend, seamlessly integrating human inter
 > Figure 1. Architecture diagram
 ![architecture](./architecture.png)
 
-The complexity of building end-to-end AI/ML applications rests not only in the algorithms and models, but also in the several layers of infrastructure required to bring them to life. Consider this: You have a Vue.js chatbot frontend, a chatbot API powered by LLaMA models, a Vercel cloud hosting environment for the frontend, and a Runpod environment for the API. But here's the catch: you have to weave all of these pieces together seamlessly.
+The complexity of building end-to-end AI/ML applications rests not only in the algorithms and models, but also in the several layers of infrastructure required to bring them to life. Consider this: You have a Vue.js chatbot frontend, a chatbot API powered by LLaMA models, a Vercel cloud hosting environment for the frontend, and a Runpod environment for the API. But here's the catch: you have to weave all of these pieces together seamlessly.
 
 Individual scripts or manual settings to set up and manage each component can soon create a tangled web of inefficiencies and potential problems. We can use Pulumi here to deploy everything. From the frontend to the backend, Pulumi orchestrates the programmatic generation and coordination of every critical infrastructure element.
 
@@ -208,4 +208,4 @@ If you've joined us on this incredible journey to connect the dots between the A
 
 Our journey doesn't end here; it's merely a waypoint on the ever-evolving road of innovation. We invite you to share your thoughts, ideas, and suggestions for future installments of the Pulumi Python + MLOps series. Together, we'll continue pushing the boundaries of what's possible in the world of AI development.
 
-Join us in the [Pulumi Community Slack](https://slack.pulumi.com) or in the [Pulumiverse Community Katwalk Frontend Github repository](https://github.com/pulumiverse/katwalk-frontend) to decide what #aiChallenge we tackle next!
+Join us in the [Pulumi Community Slack](https://slack.pulumi.com) or in the [Pulumiverse Katwalk GitHub repository](https://github.com/pulumiverse/katwalk/) to decide what #aiChallenge we tackle next!
