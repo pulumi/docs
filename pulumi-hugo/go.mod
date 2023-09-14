@@ -6,5 +6,5 @@ replace github.com/pulumi/pulumi-hugo/themes/default => ./themes/default
 
 require (
 	github.com/pulumi/pulumi-hugo/themes/default v0.0.0-20220504042409-82f5a4588c0e // indirect
-	github.com/pulumi/registry/themes/default v0.0.0-20230913200332-c3d30dae3bc8 // indirect
+	github.com/pulumi/registry/themes/default v0.0.0-20230914120212-c84a52354471 // indirect
 )
