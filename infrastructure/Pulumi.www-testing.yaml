@@ -9,4 +9,4 @@ config:
   www.pulumi.com:websiteLogsBucketName: pulumi-test-io-website-logs
   www.pulumi.com:hostedZone: www.pulumi-test.io
   www.pulumi.com:setRootRecord: true
-  www.pulumi.com:testingFlow: true
+  www.pulumi.com:registryStack: "pulumi/registry/testing"

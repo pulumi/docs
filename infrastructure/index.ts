@@ -8,9 +8,6 @@ import { getLambdaFunctionAssociations } from "./cloudfrontLambdaAssociations";
 
 const stackConfig = new pulumi.Config();
 
-const stackRef = new pulumi.StackReference(`pulumi/registry/testing`)
-const registryCDN = stackRef.getOutput("cloudFrontDomain");
-
 const config = {
     // websiteDomain is the domain/host to serve content at.
     websiteDomain: stackConfig.require("websiteDomain"),
@@ -49,14 +46,15 @@ const config = {
     // (e.g. in dev environment) you may want to set this to false. This will then take the subdomain
     // of the `websiteDomain` rather than use the root of that zone.
     setRootRecord: stackConfig.get("setRootRecord") || undefined,
-     
-    // testingFlow is a flag set in the stack config and used to indicate which pieces of infrastructure
-    // should be created when run against the test environment.
-    testingFlow: stackConfig.getBoolean("testingFlow") || undefined,
+
+    // the registry stack to reference to route traffic to for `/registry` routes.
+    registryStack: stackConfig.require("registryStack"),
 };
 
 const aiAppStack = new pulumi.StackReference('pulumi/pulumi-ai-app-infra/prod');
 const aiAppDomain = aiAppStack.requireOutput('aiAppDistributionDomain');
+const registryStack = new pulumi.StackReference(config.registryStack);
+const registryCDN = registryStack.getOutput("cloudFrontDomain");
 
 // originBucketName is the name of the S3 bucket to use as the CloudFront origin for the
 // website. This bucket is presumed to exist prior to the Pulumi run; if it doesn't, this
@@ -121,8 +119,6 @@ const uploadsBucketAcl = new aws.s3.BucketAclV2("uploads-bucket-acl", {
     dependsOn: [uploadsBucketPublicAccessBlock, uploadsBucketOwnershipControls],
 });
 
-// Create a bucket to store  bundle files. These will be served under the /css, /js route using a custom cloudfront behavior
-// which will only be configured in the testing flow.
 const bundlesBucket = new aws.s3.Bucket("bundles-bucket", {
     website: {
         indexDocument: "index.html",
@@ -271,85 +267,82 @@ const bundleBehaviors: aws.types.input.cloudfront.DistributionOrderedCacheBehavi
 const registryOrigins: aws.types.input.cloudfront.DistributionOrigin[] = [];
 const registryBehaviors: aws.types.input.cloudfront.DistributionOrderedCacheBehavior[] = [];
 
-// Only provision additional cloudfront behavors and origins if we're in the testing flow as to not make
-// any changes to the production infrastructure at this point.
-if (config.testingFlow) {
-    bundleOrigins.push(
-        {
-            originId: bundlesBucket.arn,
-            domainName: bundlesBucket.websiteEndpoint,
-            customOriginConfig: {
-                originProtocolPolicy: "http-only",
-                httpPort: 80,
-                httpsPort: 443,
-                originSslProtocols: ["TLSv1.2"],
-            }
+bundleOrigins.push(
+    {
+        originId: bundlesBucket.arn,
+        domainName: bundlesBucket.websiteEndpoint,
+        customOriginConfig: {
+            originProtocolPolicy: "http-only",
+            httpPort: 80,
+            httpsPort: 443,
+            originSslProtocols: ["TLSv1.2"],
         }
-    );
-    bundleBehaviors.push(
-        {
-            ...baseCacheBehavior,
-            targetOriginId: bundlesBucket.arn,
-            pathPattern: "/css/*",
-            defaultTtl: oneHour,
-            maxTtl: oneHour,
-            forwardedValues: {
-                cookies: {
-                    forward: "none",
-                },
-                queryString: false,
-                headers: [
-                    "Origin",
-                    "Access-Control-Request-Headers",
-                    "Access-Control-Request-Method",
-                ],
+    }
+);
+bundleBehaviors.push(
+    {
+        ...baseCacheBehavior,
+        targetOriginId: bundlesBucket.arn,
+        pathPattern: "/css/*",
+        defaultTtl: oneHour,
+        maxTtl: oneHour,
+        forwardedValues: {
+            cookies: {
+                forward: "none",
             },
+            queryString: false,
+            headers: [
+                "Origin",
+                "Access-Control-Request-Headers",
+                "Access-Control-Request-Method",
+            ],
         },
-        {
-            ...baseCacheBehavior,
-            targetOriginId: bundlesBucket.arn,
-            pathPattern: "/js/*",
-            defaultTtl: oneHour,
-            maxTtl: oneHour,
-            forwardedValues: {
-                cookies: {
-                    forward: "none",
-                },
-                queryString: false,
-                headers: [
-                    "Origin",
-                    "Access-Control-Request-Headers",
-                    "Access-Control-Request-Method",
-                ],
+    },
+    {
+        ...baseCacheBehavior,
+        targetOriginId: bundlesBucket.arn,
+        pathPattern: "/js/*",
+        defaultTtl: oneHour,
+        maxTtl: oneHour,
+        forwardedValues: {
+            cookies: {
+                forward: "none",
             },
-        }
-    );
-    registryOrigins.push(
-        {
-            originId: registryCDN,
-            domainName: registryCDN,
-            customOriginConfig: {
-                originProtocolPolicy: "https-only",
-                httpPort: 80,
-                httpsPort: 443,
-                originSslProtocols: ["TLSv1.2"],
-            }
-        }
-    );
-    registryBehaviors.push(
-        {
-            ...baseCacheBehavior,
-            targetOriginId: registryCDN,
-            pathPattern: "/registry/*",
-            defaultTtl: 0,
-            minTtl: 0,
-            maxTtl: 0,
-            originRequestPolicyId: allViewerExceptHostHeaderId,
-            cachePolicyId: cachingDisabledId,
-            forwardedValues: undefined, // forwardedValues conflicts with cachePolicyId, so we unset it.
+            queryString: false,
+            headers: [
+                "Origin",
+                "Access-Control-Request-Headers",
+                "Access-Control-Request-Method",
+            ],
         },
-    )
-}
+    }
+);
+registryOrigins.push(
+    {
+        originId: registryCDN,
+        domainName: registryCDN,
+        customOriginConfig: {
+            originProtocolPolicy: "https-only",
+            httpPort: 80,
+            httpsPort: 443,
+            originSslProtocols: ["TLSv1.2"],
+        }
+    }
+);
+registryBehaviors.push(
+    {
+        ...baseCacheBehavior,
+        targetOriginId: registryCDN,
+        pathPattern: "/registry/*",
+        defaultTtl: 0,
+        minTtl: 0,
+        maxTtl: 0,
+        originRequestPolicyId: allViewerExceptHostHeaderId,
+        cachePolicyId: cachingDisabledId,
+        forwardedValues: undefined, // forwardedValues conflicts with cachePolicyId, so we unset it.
+    },
+)
+
 
 
 
