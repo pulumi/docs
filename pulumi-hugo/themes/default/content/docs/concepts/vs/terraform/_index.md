@@ -1,8 +1,8 @@
 ---
-title_tag: "Pulumi vs. Terraform"
+title_tag: "Terraform vs. Pulumi"
 meta_desc: Pulumi and Terraform have a few similarities, but they differ in many key ways. This page helps provide a rundown of these major differences.
 title: Terraform
-h1: Pulumi vs Terraform
+h1: Terraform vs. Pulumi
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   concepts:
