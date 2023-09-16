@@ -14,7 +14,7 @@ We build the Pulumi website statically with Hugo, manage our Node.js dependencie
 
 * [Go](https://golang.org/) (>= 1.15)
 * [Hugo](https://gohugo.io) (>= 0.92)
-* [Node.js](https://nodejs.org/en/) (>= 1.14)
+* [Node.js](https://nodejs.org/en/) (>= 18)
 * [Yarn](https://classic.yarnpkg.com/en/) (1.x)
 
 ### VS Code devcontainer
