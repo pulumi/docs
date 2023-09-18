@@ -48,13 +48,11 @@ const config = {
     setRootRecord: stackConfig.get("setRootRecord") || undefined,
 
     // the registry stack to reference to route traffic to for `/registry` routes.
-    registryStack: stackConfig.require("registryStack"),
+    registryStack: stackConfig.get("registryStack"),
 };
 
 const aiAppStack = new pulumi.StackReference('pulumi/pulumi-ai-app-infra/prod');
 const aiAppDomain = aiAppStack.requireOutput('aiAppDistributionDomain');
-const registryStack = new pulumi.StackReference(config.registryStack);
-const registryCDN = registryStack.getOutput("cloudFrontDomain");
 
 // originBucketName is the name of the S3 bucket to use as the CloudFront origin for the
 // website. This bucket is presumed to exist prior to the Pulumi run; if it doesn't, this
@@ -267,82 +265,86 @@ const bundleBehaviors: aws.types.input.cloudfront.DistributionOrderedCacheBehavi
 const registryOrigins: aws.types.input.cloudfront.DistributionOrigin[] = [];
 const registryBehaviors: aws.types.input.cloudfront.DistributionOrderedCacheBehavior[] = [];
 
-bundleOrigins.push(
-    {
-        originId: bundlesBucket.arn,
-        domainName: bundlesBucket.websiteEndpoint,
-        customOriginConfig: {
-            originProtocolPolicy: "http-only",
-            httpPort: 80,
-            httpsPort: 443,
-            originSslProtocols: ["TLSv1.2"],
-        }
-    }
-);
-bundleBehaviors.push(
-    {
-        ...baseCacheBehavior,
-        targetOriginId: bundlesBucket.arn,
-        pathPattern: "/css/*",
-        defaultTtl: oneHour,
-        maxTtl: oneHour,
-        forwardedValues: {
-            cookies: {
-                forward: "none",
-            },
-            queryString: false,
-            headers: [
-                "Origin",
-                "Access-Control-Request-Headers",
-                "Access-Control-Request-Method",
-            ],
-        },
-    },
-    {
-        ...baseCacheBehavior,
-        targetOriginId: bundlesBucket.arn,
-        pathPattern: "/js/*",
-        defaultTtl: oneHour,
-        maxTtl: oneHour,
-        forwardedValues: {
-            cookies: {
-                forward: "none",
-            },
-            queryString: false,
-            headers: [
-                "Origin",
-                "Access-Control-Request-Headers",
-                "Access-Control-Request-Method",
-            ],
-        },
-    }
-);
-registryOrigins.push(
-    {
-        originId: registryCDN,
-        domainName: registryCDN,
-        customOriginConfig: {
-            originProtocolPolicy: "https-only",
-            httpPort: 80,
-            httpsPort: 443,
-            originSslProtocols: ["TLSv1.2"],
-        }
-    }
-);
-registryBehaviors.push(
-    {
-        ...baseCacheBehavior,
-        targetOriginId: registryCDN,
-        pathPattern: "/registry/*",
-        defaultTtl: 0,
-        minTtl: 0,
-        maxTtl: 0,
-        originRequestPolicyId: allViewerExceptHostHeaderId,
-        cachePolicyId: cachingDisabledId,
-        forwardedValues: undefined, // forwardedValues conflicts with cachePolicyId, so we unset it.
-    },
-)
+if (config.registryStack) {
+    const registryStack = new pulumi.StackReference(config.registryStack);
+    const registryCDN = registryStack.getOutput("cloudFrontDomain");
 
+    bundleOrigins.push(
+        {
+            originId: bundlesBucket.arn,
+            domainName: bundlesBucket.websiteEndpoint,
+            customOriginConfig: {
+                originProtocolPolicy: "http-only",
+                httpPort: 80,
+                httpsPort: 443,
+                originSslProtocols: ["TLSv1.2"],
+            }
+        }
+    );
+    bundleBehaviors.push(
+        {
+            ...baseCacheBehavior,
+            targetOriginId: bundlesBucket.arn,
+            pathPattern: "/css/*",
+            defaultTtl: oneHour,
+            maxTtl: oneHour,
+            forwardedValues: {
+                cookies: {
+                    forward: "none",
+                },
+                queryString: false,
+                headers: [
+                    "Origin",
+                    "Access-Control-Request-Headers",
+                    "Access-Control-Request-Method",
+                ],
+            },
+        },
+        {
+            ...baseCacheBehavior,
+            targetOriginId: bundlesBucket.arn,
+            pathPattern: "/js/*",
+            defaultTtl: oneHour,
+            maxTtl: oneHour,
+            forwardedValues: {
+                cookies: {
+                    forward: "none",
+                },
+                queryString: false,
+                headers: [
+                    "Origin",
+                    "Access-Control-Request-Headers",
+                    "Access-Control-Request-Method",
+                ],
+            },
+        }
+    );
+    registryOrigins.push(
+        {
+            originId: registryCDN,
+            domainName: registryCDN,
+            customOriginConfig: {
+                originProtocolPolicy: "https-only",
+                httpPort: 80,
+                httpsPort: 443,
+                originSslProtocols: ["TLSv1.2"],
+            }
+        }
+    );
+    registryBehaviors.push(
+        {
+            ...baseCacheBehavior,
+            targetOriginId: registryCDN,
+            pathPattern: "/registry/*",
+            defaultTtl: 0,
+            minTtl: 0,
+            maxTtl: 0,
+            originRequestPolicyId: allViewerExceptHostHeaderId,
+            cachePolicyId: cachingDisabledId,
+            forwardedValues: undefined, // forwardedValues conflicts with cachePolicyId, so we unset it.
+        },
+    )
+}
 
 
 
