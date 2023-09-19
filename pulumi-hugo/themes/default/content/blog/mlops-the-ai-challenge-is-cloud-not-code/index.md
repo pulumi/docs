@@ -3,7 +3,7 @@ date: 2023-08-30
 title: "The Real AI Challenge is Cloud, not Code!"
 allow_long_title: true
 meta_desc: "Accelerating AI/ML innovation with infrastructure as code through a hands-on journey to deploy your own chatbot"
-meta_image: "mlops-series-chatbot.png"
+meta_image: "deploy-your-own-chatbot-with-pulumi-huggingface.png"
 authors:
     - kat-morgan
 tags:

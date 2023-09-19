@@ -63,5 +63,6 @@ aws_only: true
 title: Platform Engineering with AWS Proton and Pulumi
 meta_desc: "In this workshop, you will learn how to enable self-service
   infrastructure for your organization using AWS Proton and Pulumi. "
+meta_image: "platform-engineering-aws-proton-marina.png"
 url_slug: platform-with-aws-proton-and-pulumi
 ---
