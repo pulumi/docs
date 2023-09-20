@@ -1,0 +1,9 @@
+id = "tyler-mulligan"
+name = "Tyler Mulligan"
+status = "guest"
+role = "puluminary"
+title = "Senior DevOps Engineer"
+company = "SANS Institute"
+
+[social]
+github = "catmeme"
