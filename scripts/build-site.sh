@@ -41,19 +41,12 @@ if [ "$1" == "preview" ]; then
     export HUGO_BASEURL="http://$(origin_bucket_prefix)-$(build_identifier).s3-website.$(aws_region).amazonaws.com"
     GOGC=3 hugo --minify --buildFuture --templateMetrics -e "preview"
 else
-    case ${DEPLOYMENT_ENVIRONMENT} in
-    testing)
+    if [ "$DEPLOYMENT_ENVIRONMENT" == "testing" ]; then
         export HUGO_BASEURL="https://www.pulumi-test.io"
         GOGC=3 hugo --minify --buildFuture --templateMetrics -e "preview"
-        ;;
-    production)
+    else
         GOGC=3 hugo --minify --buildFuture --templateMetrics -e "production"
-        ;;
-    *)
-        echo "Unknown environment '${DEPLOYMENT_ENVIRONMENT}'"
-        exit 1
-        ;;
-    esac
+    fi
 fi
 
 # Purge unused CSS.
