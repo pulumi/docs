@@ -194,7 +194,6 @@ Once the GitHub app has been installed, the deployment settings for a stack can 
 
 ### Limitations
 
-- Configuring deployment settings for a stack currently requires admin privileges in the Pulumi organization.
 - The GitHub app may only be installed by a GitHub *and* Pulumi admin.
 - Currently, there is a 1 to 1 mapping between GitHub organizations and Pulumi organizations.
 
@@ -205,6 +204,7 @@ Once the GitHub app has been installed, the deployment settings for a stack can 
 By default, there are a set of environment variables set by the process automatically:
 
 - `GITHUB_TOKEN`: Personal Access Token configured when the source is GitHub (unless there is a token configured by the custom environment variables)
+- `PULUMI_ACCESS_TOKEN`: A temporary token with read-write access only to the stack being deployed.
 - `PULUMI_DEPLOY_OIDC_CONFIG`: OIDC configuration provided for the cloud integrations
 - `PULUMI_CI_SYSTEM`: "Pulumi Deployments"
 - `PULUMI_CI_BUILD_ID`: Current deployment ID
@@ -214,7 +214,7 @@ By default, there are a set of environment variables set by the process automati
 - `PULUMI_CI_PROJECT`: Current project name
 - `PULUMI_CI_STACK`: Current stack name
 
-These can be extended by configuring custom environment variables:
+These can be overridden or extended by configuring custom environment variables:
 
 ![Pulumi UI - Environment Variables](../ui-custom-env-variables.png)
 
