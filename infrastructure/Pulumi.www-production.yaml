@@ -10,3 +10,4 @@ config:
   www.pulumi.com:websiteLogsBucketName: www-prod.pulumi.com-website-logs
   www.pulumi.com:hostedZone: www.pulumi.com
   www.pulumi.com:setRootRecord: true
+  www.pulumi.com:registryStack: "pulumi/registry/production"
