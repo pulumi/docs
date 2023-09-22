@@ -41,6 +41,6 @@ block_external_search_index: false
 aws_only: false
 title: Getting Started with Kubernetes on Google Cloud
 meta_desc: In this workshop, you will learn how to deploy a Kubernetes cluster on Google Cloud and run containerized applications on the cluster.
-meta_image: "intro-k8s-google-cloud-jay.png"
+meta_image: "/images/resources/intro-k8s-google-cloud-jay.png"
 url_slug: kubernetes-on-google-cloud
 ---
