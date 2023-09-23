@@ -8,7 +8,7 @@ menu:
   concepts:
     identifier: dependsOn
     parent: options
-    weight: 5
+    weight: 6
 aliases:
 - /docs/intro/concepts/resources/options/dependson/
 ---

@@ -8,7 +8,7 @@ menu:
   concepts:
     identifier: protect
     parent: options
-    weight: 9
+    weight: 10
 aliases:
 - /docs/intro/concepts/resources/options/protect/
 ---
