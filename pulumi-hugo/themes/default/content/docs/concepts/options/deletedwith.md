@@ -15,7 +15,7 @@ aliases:
 
 The `deletedWith` resource option allows you to skip resource deletion if a another resource is being deleted as well.
 
-Pulumi will normally call the providers delete action for every resource during a delete operation. Sometimes this is redundant if another resource is deleted, such as a parent container resource, and can cause your delete or destroy operations to take longer than needed.
+Pulumi will normally call the provider's delete action for every resource during a delete operation. Sometimes, this is redundant if another resource is also deleted, such as a parent container resource, and can cause your delete or destroy operations to take longer than needed.
 
 For example, if you are deleting a Kubernetes cluster or Kubernetes namespace, you might want to speed up deletion by skipping delete on any Pulumi managed resources created in that Kubernetes cluster or namespace since they will be deleted implicitely.
 
@@ -72,7 +72,7 @@ if err != nil {
 
 ```csharp
 var ns = new Namespace("res1");
-var dep = new Deployment("res2", new DeploymentArgs(), 
+var dep = new Deployment("res2", new DeploymentArgs(),
     new CustomResourceOptions { DeletedWith = { ns } });
 ```
 
@@ -81,7 +81,7 @@ var dep = new Deployment("res2", new DeploymentArgs(),
 
 ```java
 var ns = new Namespace("res1");
-var dep = new Deployment("res2", new DeploymentArgs(), 
+var dep = new Deployment("res2", new DeploymentArgs(),
    CustomResourceOptions.builder()
         .deletedWith(ns)
         .build());
@@ -100,7 +100,6 @@ resources:
     name: res2
     options:
       deletedWtih: ${ns}
-        
 ```
 
 {{% /choosable %}}
