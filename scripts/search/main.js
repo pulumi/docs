@@ -14,7 +14,7 @@ const hugoPageItems = JSON.parse(fs.readFileSync(pathToFullSiteJSON, "utf-8").to
 // As part of the Registry build, we also generate a collection of JSON files that we use to power
 // the API docs navigation. We use this file here as well to add resource listings, etc., to the
 // index to make them more findable by their type names and the like.
-const pathToRegistryPackagesJSON = "./public/registry/packages/navs";
+// const pathToRegistryPackagesJSON = "./public/registry/packages/navs";
 
 // Configuration values required for updating the Algolia index.
 const config = {
@@ -43,23 +43,23 @@ console.log(" ↳ Building secondary page objects...");
 const secondaryPageObjects = page.getSecondaryObjects(primaryPageObjects);
 
 // Generate a list of all Registry items -- modules, resources, functions, etc.
-console.log(" ↳ Building Registry resource objects...");
-const registryObjects = registry.getObjects(pathToRegistryPackagesJSON, hugoPageItems);
+// console.log(" ↳ Building Registry resource objects...");
+// const registryObjects = registry.getObjects(pathToRegistryPackagesJSON, hugoPageItems);
 
 // Remove any objects from primaryPageObjects that also exist in registryObjects (to de-dupe).
-const filteredPageObjects = primaryPageObjects.filter(o => registryObjects.find(ro => ro.href === o.href) === undefined);
+const filteredPageObjects = primaryPageObjects;
 
 // Stitch these lists together into one tidy bundle.
 let allObjects = [
     ...filteredPageObjects,
     ...secondaryPageObjects,
-    ...registryObjects,
+    // ...registryObjects,
 ];
 
 // Temporary hack: Remove any references to `azure-native-v1`. This line can be
 // removed once the azure-native-v1 package is removed from the Registry.
 // https://github.com/pulumi/registry/issues/2879
-allObjects = allObjects.filter(o => !o.href.includes("azure-native-v1"));
+// allObjects = allObjects.filter(o => !o.href.includes("azure-native-v1"));
 
 // Gather up index settings, synonyms, and rules.
 const indexSettings = {
