@@ -28,11 +28,13 @@ REGISTRY_COMMIT="$(go mod graph | grep pulumi/registry/themes/default | sed 's/.
 
 # In the testing environment this is done by the pulumi/registry repo. Once this moves to prod,
 # we can remove this altogether, since API docs generation will no longer be done here.
-printf "Generating API docs from registry commit %s...\n\n" "${REGISTRY_COMMIT}"
-pushd tools/resourcedocsgen
-go build -o "${GOPATH}/bin/resourcedocsgen" .
-resourcedocsgen docs registry --commitSha "${REGISTRY_COMMIT}" --logtostderr
-popd
+# if [[ "$DEPLOYMENT_ENVIRONMENT" != "testing" ]]; then
+#     printf "Generating API docs from registry commit %s...\n\n" "${REGISTRY_COMMIT}"
+#     pushd tools/resourcedocsgen
+#     go build -o "${GOPATH}/bin/resourcedocsgen" .
+#     resourcedocsgen docs registry --commitSha "${REGISTRY_COMMIT}" --logtostderr
+#     popd
+# fi
 
 printf "Running Hugo...\n\n"
 if [ "$1" == "preview" ]; then
