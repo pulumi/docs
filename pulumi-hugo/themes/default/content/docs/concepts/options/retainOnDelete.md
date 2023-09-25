@@ -8,7 +8,7 @@ menu:
   concepts:
     identifier: retainOnDelete
     parent: options
-    weight: 13
+    weight: 14
 aliases:
 - /docs/intro/concepts/resources/options/retainondelete/
 ---

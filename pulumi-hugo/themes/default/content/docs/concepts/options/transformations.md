@@ -8,7 +8,7 @@ menu:
   concepts:
     identifier: transformations
     parent: options
-    weight: 14
+    weight: 15
 aliases:
 - /docs/intro/concepts/resources/options/transformations/
 ---

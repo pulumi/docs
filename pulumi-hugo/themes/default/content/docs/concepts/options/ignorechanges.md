@@ -8,7 +8,7 @@ menu:
   concepts:
     identifier: ignoreChanges
     parent: options
-    weight: 6
+    weight: 7
 aliases:
 - /docs/intro/concepts/resources/options/ignorechanges/
 ---

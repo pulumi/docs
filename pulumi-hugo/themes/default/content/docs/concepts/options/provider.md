@@ -8,7 +8,7 @@ menu:
   concepts:
     identifier: provider
     parent: options
-    weight: 10
+    weight: 11
 aliases:
 - /docs/concepts/resources/options/provider/
 ---

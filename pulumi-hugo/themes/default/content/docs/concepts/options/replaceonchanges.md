@@ -8,7 +8,7 @@ menu:
   concepts:
     identifier: replaceOnChanges
     parent: options
-    weight: 12
+    weight: 13
 aliases:
 - /docs/intro/concepts/resources/options/replaceonchanges/
 ---

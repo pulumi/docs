@@ -8,7 +8,7 @@ menu:
   concepts:
     identifier: import
     parent: options
-    weight: 7
+    weight: 8
 aliases:
 - /docs/intro/concepts/resources/options/import/
 ---
