@@ -1,5 +1,5 @@
 ---
-title: Contact Us
+title: Talk to a human
 meta_desc: Contact Pulumi for any general inquiries, including requests for pricing, support, or training.
 layout: contact
 form:

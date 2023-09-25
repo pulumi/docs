@@ -54,13 +54,13 @@ deployment:
     descriptionTop: |
         [Install Self-Hosted Pulumi Cloud](/docs/pulumi-cloud/self-hosted/) in any on-premises or cloud provider environment or run in air-gapped environments, including those requiring FedRAMP.
     descriptionBottom: |
-        [Contact us](/contact/) if you don't see your desired deployment option.
+        [Talk to a Pulumi team member](/contact/) if you don't see your desired deployment option.
 pricing:
     title: Pricing
     description: |
         Self-Hosted Pulumi is included in the Business Critical edition of Pulumi and provided as a free 30 day trial.
 questions:
-    title: Questions?
+    title: Talk to a human
     description: |
         If you have any questions about Self-Hosted Pulumi, please contact us or visit the self-hosted docs.
 ---

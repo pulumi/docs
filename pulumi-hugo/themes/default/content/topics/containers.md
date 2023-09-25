@@ -45,7 +45,7 @@ sections:
     - id: get-started
       label: Get Started
     - id: contact
-      label: Contact Us
+      label: Talk to a human
 
 examples:
     - title: Deploy Nginx to AWS Fargate

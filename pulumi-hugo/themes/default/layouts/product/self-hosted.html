@@ -34,19 +34,19 @@
                 <div class="flex flex-col pb-8 sm:pb-0">
                     <img class="h-12" src="/logos/tech/aws.svg" alt="AWS" />
                     <h5 class="my-6">AWS</h5>
-                    <a href="{{ relref $pageContext "/docs/pulumi-cloud/self-hosted/deployment-options/eks-hosted" }}" class="btn-secondary">AWS Docs</a>
+                    <a href="/docs/pulumi-cloud/self-hosted/deployment-options/eks-hosted/" class="btn-secondary">AWS Docs</a>
                 </div>
 
                 <div class="flex flex-col pb-8 sm:pb-0">
                     <img class="h-12" src="/logos/pkg/azure-native.svg" alt="Azure" />
                     <h5 class="my-6">Azure</h5>
-                    <a href="{{ relref $pageContext "/docs/pulumi-cloud/self-hosted/deployment-options/aks-hosted" }}" class="btn-secondary">Azure Docs</a>
+                    <a href="/docs/pulumi-cloud/self-hosted/deployment-options/aks-hosted/" class="btn-secondary">Azure Docs</a>
                 </div>
 
                 <div class="flex flex-col pb-8 sm:pb-0">
                     <img class="h-12" src="/images/self-hosted/docker-whale.svg" alt="Docker" />
                     <h5 class="my-6">Docker</h5>
-                    <a href="{{ relref $pageContext "/docs/pulumi-cloud/self-hosted/deployment-options/local-docker" }}" class="btn-secondary">Docker Docs</a>
+                    <a href="/docs/pulumi-cloud/self-hosted/deployment-options/local-docker/" class="btn-secondary">Docker Docs</a>
                 </div>
             </div>
             <div class="flex flex-col sm:flex-row sm:mt-16 justify-between w-full mb-28 lg:w-8/12">
@@ -55,7 +55,7 @@
                         <img class="h-12" src="/logos/tech/gcp-logo.svg" alt="Google Cloud" />
                     </div>
                     <h5 class="my-6">Google Cloud</h5>
-                    <a href="{{ relref $pageContext "/docs/pulumi-cloud/self-hosted/deployment-options/gke-hosted" }}" class="btn-secondary">Google Docs</a>
+                    <a href="/docs/pulumi-cloud/self-hosted/deployment-options/gke-hosted/" class="btn-secondary">Google Docs</a>
                 </div>
 
                 <div class="flex flex-col pb-8 sm:pb-0">
@@ -63,13 +63,13 @@
                         <img class="h-12" src="/images/self-hosted/kubernetes-logo-only.svg" alt="Kubernetes" />
                     </div>
                     <h5 class="my-6">Kubernetes</h5>
-                    <a href="{{ relref $pageContext "/docs/pulumi-cloud/self-hosted/deployment-options/byo-infra-hosted" }}" class="btn-secondary">Kubernetes Docs</a>
+                    <a href="/docs/pulumi-cloud/self-hosted/deployment-options/byo-infra-hosted/" class="btn-secondary">Kubernetes Docs</a>
                 </div>
 
                 <div class="flex flex-col pb-8 sm:pb-0">
                     <img class="flex-grow h-52 sm:h-24 mt-6" src="/images/self-hosted/vmware.png" alt="VMware" />
                     <h5 class="mt-0 mb-6">VMware</h5>
-                    <a href="{{ relref $pageContext "/contact" }}" class="btn-secondary">Contact Us</a>
+                    <a href="/contact/" class="btn-secondary">Talk to a human</a>
                 </div>
             </div>
         {{ end }}
@@ -130,7 +130,7 @@
                     <h2>{{ .title }}</h2>
                     <p class="max-w-xl mx-auto my-20">{{ .description | markdownify }}</p>
                     <div class="mt-12">
-                        <a class="btn-secondary" href="{{ relref $pageContext " /pricing" }}">Pricing</a>
+                        <a class="btn-secondary" href="/pricing/">Pricing</a>
                     </div>
                 {{ end }}
             </div>
@@ -162,8 +162,8 @@
                     <h2 class="text-white mt-16">{{ .title }}</h2>
                     <p class="text-white">{{ .description }}</p>
                     <div class="flex flex-col sm:flex-row mt-16 justify-between">
-                        <a class="btn-secondary w-56" href="{{ relref $pageContext "/contact" }}">Contact Us</a>
-                        <a class="btn-primary w-56" href="{{ relref $pageContext "/docs/pulumi-cloud/self-hosted/" }}">Self-Hosted Docs</a>
+                        <a class="btn-secondary w-56" href="/contact/">Talk to a human</a>
+                        <a class="btn-primary w-56" href="/docs/pulumi-cloud/self-hosted/">Self-Hosted Docs</a>
                     </div>
                 </div>
             </div>

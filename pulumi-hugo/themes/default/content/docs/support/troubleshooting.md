@@ -16,7 +16,7 @@ aliases:
 Sometimes things go wrong. If you can't update your stack, or there's another problem that is
 preventing you from being productive, you've come to the right place.
 
-## Contact Us
+## Talk to a human
 
 [Join Community Slack](https://slack.pulumi.com), where our whole team, in addition to a passionate
 community of users, are there to help. Any and all questions are welcome!

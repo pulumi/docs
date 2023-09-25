@@ -57,7 +57,7 @@ carousel:
 contact_us_form:
     section_id: contact
     hubspot_form_id: 8381e562-5fdf-4736-bb10-86096705e4ee
-    headline: Contact Us?
+    headline: Talk to a human
     quote:
         title: Learn how top engineering teams are using Pulumi to manage CI/CD in any cloud.
         name: Josh Imhoff
