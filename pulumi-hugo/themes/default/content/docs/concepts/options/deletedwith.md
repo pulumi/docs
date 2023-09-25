@@ -49,7 +49,7 @@ let dep = new k8s.apps.v1.Deployment("res2", {/*...*/}, { deletedWith: ns });
 import pulumi_kubernetes as k8s
 
 ns = k8s.core.v1.Namespace("res1". {})
-dep = k8s.apps.v1.Deployment("res2", opts=ResourceOptions(deletedWith=ns))
+dep = k8s.apps.v1.Deployment("res2", opts=ResourceOptions(deleted_with=ns))
 ```
 
 {{% /choosable %}}
@@ -73,11 +73,15 @@ if err != nil {
 ```csharp
 var ns = new Namespace("res1");
 var dep = new Deployment("res2", new DeploymentArgs(),
-    new CustomResourceOptions { DeletedWith = { ns } });
+    new CustomResourceOptions { DeletedWith = ns });
 ```
 
 {{% /choosable %}}
 {{% choosable language java %}}
+
+{{% notes "info" %}}
+This resource option is not yet implemented for Java. You can follow up the [implementation status on Github](https://github.com/pulumi/pulumi-java/issues/944).
+{{% /notes %}}
 
 ```java
 var ns = new Namespace("res1");
@@ -99,7 +103,7 @@ resources:
     type: kubernetes:apps/v1:Deployment
     name: res2
     options:
-      deletedWtih: ${ns}
+      deletedWith: ${ns}
 ```
 
 {{% /choosable %}}
