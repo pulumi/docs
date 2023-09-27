@@ -9,10 +9,10 @@ source ./scripts/common.sh
 node ./scripts/search/main.js "$1"
 
 # Fetch the name of the bucket from the metadata file.
-docs_bucket="$(cat "$(origin_bucket_metadata_filepath)" | jq -r ".bucket")"
+destination_bucket="$(cat "$(origin_bucket_metadata_filepath)" | jq -r ".bucket")"
 
 # Upload the `search-index.json` file to S3 where it can be accessed by the update search index cron.
-aws s3 cp "./public/search-index-docs.json" "s3://${docs_bucket}/search-index.json" --acl public-read --region "$(aws_region)"
+aws s3 cp "./public/search-index-docs.json" "s3://${destination_bucket}/search-index.json" --acl public-read --region "$(aws_region)"
 
 # Upload the `search-index-settings.json` file to S3 where it can be accessed by the update search index cron.
-aws s3 cp "./public/search-index-settings.json" "s3://${docs_bucket}/search-index-settings.json" --acl public-read --region "$(aws_region)"
+aws s3 cp "./public/search-index-settings.json" "s3://${destination_bucket}/search-index-settings.json" --acl public-read --region "$(aws_region)"
