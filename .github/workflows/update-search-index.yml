@@ -4,9 +4,10 @@ on:
     - cron:  '*/60 * * * *'
   workflow_dispatch:
 jobs:
-  merge:
+  update:
     name: Update Algolia Search Index
     runs-on: ubuntu-latest
+    environment: testing
     steps:
       - name: Install Node
         uses: actions/setup-node@v1
@@ -24,12 +25,13 @@ jobs:
           ALGOLIA_APP_ID: ${{ vars.ALGOLIA_APP_ID }}
           ALGOLIA_APP_SEARCH_KEY: ${{ vars.ALGOLIA_APP_SEARCH_KEY }}
           ALGOLIA_APP_ADMIN_KEY: ${{  secrets.ALGOLIA_APP_ADMIN_KEY }}
+          DEPLOYMENT_ENVIRONMENT: ${{ vars.DEPLOYMENT_ENVIRONMENT }}
 
   notify:
     if: failure()
     name: Send slack notification
     runs-on: ubuntu-latest
-    needs: [merge]
+    needs: [update]
     steps:
       - name: Slack Notification
         uses: docker://sholung/action-slack-notify:v2.3.0
