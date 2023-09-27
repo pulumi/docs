@@ -89,3 +89,9 @@ ci_pull_request_closed:
 ci_bucket_cleanup:
 	$(MAKE) banner
 	./scripts/ci-bucket-cleanup.sh
+
+.PHONY: ci_update_search_index
+ci_update_search_index:
+	$(MAKE) ensure
+	echo "Updating search index in testing..."
+	./scripts/ci-update-search-index.sh testing

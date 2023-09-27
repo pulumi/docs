@@ -1,0 +1,42 @@
+name: "Scheduled jobs: Update Seach Index"
+on:
+  schedule:
+    - cron:  '*/60 * * * *'
+  workflow_dispatch:
+jobs:
+  merge:
+    name: Update Algolia Search Index
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: '18.x'
+
+      - name: Check out the repo
+        uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.PULUMI_BOT_TOKEN }}
+
+      - name: Update search indexes
+        run: make update_search_indexes
+        env:
+          ALGOLIA_APP_ID: ${{ vars.ALGOLIA_APP_ID }}
+          ALGOLIA_APP_SEARCH_KEY: ${{ vars.ALGOLIA_APP_SEARCH_KEY }}
+          ALGOLIA_APP_ADMIN_KEY: ${{  secrets.ALGOLIA_APP_ADMIN_KEY }}
+
+  notify:
+    if: failure()
+    name: Send slack notification
+    runs-on: ubuntu-latest
+    needs: [merge]
+    steps:
+      - name: Slack Notification
+        uses: docker://sholung/action-slack-notify:v2.3.0
+        env:
+          SLACK_CHANNEL: docs-ops
+          SLACK_COLOR: "#F54242"
+          SLACK_MESSAGE: "update search index failure in pulumi/docs repo :meow_sad:"
+          SLACK_USERNAME: docsbot
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
+          SLACK_ICON: https://www.pulumi.com/logos/brand/avatar-on-white.png
