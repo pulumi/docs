@@ -4,6 +4,7 @@ on:
     # * is a special character in YAML so you have to quote this string.
     # Run every day at 3:00PM UTC.
     - cron:  '0 15 * * *'
+  workflow_dispatch:
 permissions:
       id-token: write   # This is required for requesting the JWT
       contents: read    # This is required for actions/checkout
