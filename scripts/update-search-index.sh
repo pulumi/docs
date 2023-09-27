@@ -13,6 +13,3 @@ destination_bucket="$(cat "$(origin_bucket_metadata_filepath)" | jq -r ".bucket"
 
 # Upload the `search-index.json` file to S3 where it can be accessed by the update search index cron.
 aws s3 cp "./public/search-index-docs.json" "s3://${destination_bucket}/search-index.json" --acl public-read --region "$(aws_region)"
-
-# Upload the `search-index-settings.json` file to S3 where it can be accessed by the update search index cron.
-aws s3 cp "./public/search-index-settings.json" "s3://${destination_bucket}/search-index-settings.json" --acl public-read --region "$(aws_region)"

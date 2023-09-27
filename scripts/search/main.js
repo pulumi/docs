@@ -81,9 +81,9 @@ const indexRules = settings.getRules();
 
 // Write the results, just so we have them.
 console.log(" ↳ Writing results...");
-fs.writeFileSync("./public/search-index-docs.json", JSON.stringify(docsObjects, null, 4));
 fs.writeFileSync("./public/search-index.json", JSON.stringify(allObjects, null, 4));
 fs.writeFileSync("./public/search-index-settings.json", JSON.stringify({ indexSettings, indexSynonyms, indexRules }, null, 4));
+fs.writeFileSync("./public/search-index-docs.json", JSON.stringify(docsObjects, null, 4));
 console.log(" ↳ Done. ✨\n");
 
 // Update the Algolia index, including all page objects and index settings (like searchable
