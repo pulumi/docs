@@ -1,9 +1,9 @@
 const axios = require('axios');
+const settings = require("./settings");
 
 // URL of the JSON file
 const registrySearchIndexUrl = "https://www.pulumi.com/registry/search-index.json";
 const docsSearchIndexUrl = "https://www.pulumi.com/search-index.json";
-const indexSettingsUrl = "https://www.pulumi.com/search-index-settings.json";
 
 // Configuration values required for updating the Algolia index.
 const config = {
@@ -21,7 +21,6 @@ async function publishIndex() {
 
     let registryIndex = [];
     let docsIndex = [];
-    let indexSettings = [];
 
     async function fetchIndexFiles() {
         return Promise.all([
@@ -33,10 +32,6 @@ async function publishIndex() {
                 .then((response) => {
                     docsIndex = response.data;
                 }),
-            axios.get(indexSettingsUrl)
-                .then((response) => {
-                    indexSettings = response.data;
-                })
             ]);
     }
 
@@ -52,6 +47,18 @@ async function publishIndex() {
         ...filteredDocsObjects,
         ...registryIndex,
     ];
+
+    // Gather up index settings, synonyms, and rules.
+    const indexSettings = {
+        searchableAttributes: settings.getSearchableAttributes(),
+        attributesForFaceting: settings.getAttributesForFaceting(),
+        attributesToHighlight: settings.getAttributesToHighlight(),
+        customRanking: settings.getCustomRanking(),
+        ignorePlurals: true,
+    };
+
+    const indexSynonyms = settings.getSynonyms();
+    const indexRules = settings.getRules();
 
     // Update the Algolia index, including all page objects and index settings (like searchable
     // attributes, custom ranking, synonyms, etc.).
