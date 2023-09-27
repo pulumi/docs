@@ -50,7 +50,7 @@ if [ "$bucket_count" == "0" ]; then
 fi
 
 # Query for the bucket currently serving pulumi.com.
-currently_deployed_bucket="$(curl -s https://www.pulumi.com/metadata.json | jq -r '.bucket' || echo '')"
+currently_deployed_bucket="$(curl -s ${WEBSITE_URL}/metadata.json | jq -r '.bucket' || echo '')"
 
 maybe_echo "Found ${bucket_count} recent buckets matching the prefix $(origin_bucket_prefix)-${bucket_prefix}:"
 
