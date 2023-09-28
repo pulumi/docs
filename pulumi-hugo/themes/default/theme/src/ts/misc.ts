@@ -80,6 +80,10 @@ function bindToggles(selector) {
 }
 
 function generateOnThisPage() {
+    // Hide the table of contents by default. We explicitly decide when to show it
+    // below based on if elements exist to display.
+    $(".table-of-contents").hide();
+
     var $ul = $(".table-of-contents .content ul.table-of-contents-list");
     if ($ul) {
         var found = false;
