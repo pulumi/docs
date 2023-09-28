@@ -212,6 +212,31 @@ const logsBucketACL = new aws.s3.BucketAclV2("logs-bucket-acl", {
     dependsOn: [logsBucketOwnershipControls],
 });
 
+// The canonical user ID for the account.
+const owner = aws.s3.getCanonicalUserId({});
+// Grant the CloudFront log delivery account permission to write to the bucket.
+const logsBucketDeliveryACL = new aws.s3.BucketAclV2("logs-bucket-delivery-acl", {
+    bucket: websiteLogsBucket.id,
+    accessControlPolicy: {
+        grants: [
+            {
+                grantee: {
+                    // The canconical ID for the `awslogsdelivery` account.
+                    // see: https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/AccessLogs.html#AccessLogsOverview
+                    id: "c4c1ede66af53448b93c283ce9448c4ba468c9432aa01d700d3878632f77d2d0",
+                    type: "CanonicalUser",
+                },
+                permission: "WRITE",
+            },
+        ],
+        owner: {
+            id: owner.then(owner => owner.id),
+        },
+    },
+}, {
+    dependsOn: [logsBucketOwnershipControls],
+});
+
 
 
 const fiveMinutes = 60 * 5;
