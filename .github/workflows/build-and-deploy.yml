@@ -15,7 +15,7 @@ jobs:
       GOPATH: ${{ github.workspace }}/go
     name: Install deps and build site
     runs-on: ubuntu-22.04-8core
-    environment: production
+    environment: testing
     steps:
 
       - uses: actions/checkout@v2
@@ -40,7 +40,7 @@ jobs:
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v2
         with:
-          role-to-assume: arn:aws:iam::388588623842:role/ContinuousDelivery
+          role-to-assume: arn:aws:iam::571684982431:role/ContinuousDelivery
           role-session-name: docs-deploy
           role-duration-seconds: 7200
           aws-region: us-west-2
