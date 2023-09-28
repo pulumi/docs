@@ -36,7 +36,6 @@ jobs:
       - name: Update Hugo modules
         run: |
           hugo mod get github.com/pulumi/pulumi-hugo/themes/default
-          hugo mod get github.com/pulumi/registry/themes/default
 
       - name: Identify relevant commits
         run: |
