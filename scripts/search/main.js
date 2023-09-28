@@ -35,7 +35,7 @@ const secondaryPageObjects = page.getSecondaryObjects(primaryPageObjects);
 
 // Stitch these lists together into one tidy bundle.
 let allObjects = [
-    ...filteredPageObjects,
+    ...primaryPageObjects,
     ...secondaryPageObjects,
 ];
 
