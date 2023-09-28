@@ -24,39 +24,70 @@ $ pulumi destroy
 
 You'll be prompted to make sure you really want to delete these resources.
 
-```
-Previewing destroy (dev):
+```bash
+Previewing destroy (dev)
 
-     Type                           Name            Plan
- -   pulumi:pulumi:Stack            quickstart-dev  delete
- -   ├─ kubernetes:core:Service     nginx           delete
- -   └─ kubernetes:apps:Deployment  nginx           delete
+View in Browser (Ctrl+O): https://app.pulumi.com/diana-pulumi-corp/quickstart/dev/previews/d8815e7e-ff90-40a4-a502-0030def67827
+
+     Type                              Name            Plan
+ -   pulumi:pulumi:Stack               quickstart-dev  delete
+ -   ├─ kubernetes:core/v1:Service     nginx           delete
+ -   └─ kubernetes:apps/v1:Deployment  nginx           delete
+
 
 Outputs:
-  - ip: "10.105.234.140"
+  - ip: "10.103.199.118"
 
 Resources:
     - 3 to delete
 
-Do you want to perform this destroy? yes
-Destroying (dev):
+Do you want to perform this destroy?  [Use arrows to move, type to filter]
+  yes
+> no
+  details
+```
 
-     Type                           Name            Status
- -   pulumi:pulumi:Stack            quickstart-dev  deleted
- -   ├─ kubernetes:core:Service     nginx           deleted
- -   └─ kubernetes:apps:Deployment  nginx           deleted
+Select `yes` using the arrows and hit enter to delete the resources in Kubernetes.
+
+```bash
+Do you want to perform this destroy? yes
+Destroying (dev)
+
+View in Browser (Ctrl+O): https://app.pulumi.com/diana-pulumi-corp/quickstart/dev/updates/3
+
+     Type                              Name            Status
+ -   pulumi:pulumi:Stack               quickstart-dev  deleted
+ -   ├─ kubernetes:core/v1:Service     nginx           deleted (0.42s)
+ -   └─ kubernetes:apps/v1:Deployment  nginx           deleted (2s)
+
 
 Outputs:
-  - ip: "10.105.234.140"
+  - ip: "10.103.199.118"
 
 Resources:
     - 3 deleted
 
-Duration: 1s
+Duration: 5s
+
+The resources in the stack have been deleted, but the history and configuration associated with the stack are still maintained.
+If you want to remove the stack completely, run `pulumi stack rm dev`.
 ```
 
 To delete the stack itself, run [`pulumi stack rm`](/docs/cli/commands/pulumi_stack_rm). Note that this removes the stack
 entirely from the Pulumi Cloud, along with all of its update history.
+
+```bash
+$ pulumi stack rm
+This will permanently remove the 'dev' stack!
+Please confirm that this is what you`d like to do by typing `dev`:
+```
+
+Type `dev` and hit enter to remove the stack.
+
+```bash
+Please confirm that this is what you`d like to do by typing `dev`: dev
+Stack 'dev' has been removed!
+```
 
 Next, we'll look at some next steps.
 
