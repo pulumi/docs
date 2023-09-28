@@ -12,7 +12,7 @@ hero:
         helps create, deploy, and manage 100% of your Microsoft Azure infrastructure, including
         containers, serverless functions, and infrastructure using modern programming languages.
     cta_text: See what's new
-    cta_url: "/registry/packages/azure-native"
+    cta_url: "/registry/packages/azure-native/"
     ide:
         tabs:
             - title: index.ts
@@ -176,7 +176,7 @@ azure_overview:
     - Keep your cloud secure and in compliance by enforcing policies on every deployment.
     - Codify best practices and policies then share them with your team or community as self-service architectures.
   cta: Learn More
-  cta_url: "/blog/full-coverage-of-azure-resources-with-azure-native"
+  cta_url: "/blog/full-coverage-of-azure-resources-with-azure-native/"
 
 arm2pulumi:
   title: ARM &rarr; Pulumi
@@ -186,7 +186,7 @@ arm2pulumi:
     If you can deploy a resource with ARM templates, you can deploy it with the Pulumi Azure provider!
 
   cta: Learn More
-  cta_url: "/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-azure"
+  cta_url: "/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-azure/"
 
 detail_sections:
   - title: 100% API Coverage
@@ -195,7 +195,7 @@ detail_sections:
         Resource Manager giving you the full power of Azure at your fingertips. Every
         property of each resource is always represented in the SDKs.
     cta: Learn More
-    cta_url: "/registry/packages/azure-native"
+    cta_url: "/registry/packages/azure-native/"
     items:
         - title: Everything In One Place
           icon: cloud-with-nodes
@@ -224,7 +224,7 @@ detail_sections:
         specifications published by Microsoft, which means you'll always have access to the latest
         Azure features and improvements.
     cta: Learn More
-    cta_url: "/blog/full-coverage-of-azure-resources-with-azure-native"
+    cta_url: "/blog/full-coverage-of-azure-resources-with-azure-native/"
     items:
         - title: Auto Generated
           icon: cycle
@@ -276,7 +276,7 @@ superpowers:
 
   - title: Smart Architecture
     cta: Learn more
-    cta_url: "/product/packages"
+    cta_url: "/product/packages/"
     icon_type: architecture
     description: |
         YAML and templated DSLs force you to write the same boilerplate code over and over.
@@ -285,7 +285,7 @@ superpowers:
 
   - title: Be Proactive, Not Reactive
     cta: Learn more
-    cta_url: "/docs/using-pulumi/crossguard"
+    cta_url: "/docs/using-pulumi/crossguard/"
     icon_type: policy
     description: |
         When you enable Pulumi's Policy as Code feature, you instantly gain the power to
@@ -294,7 +294,7 @@ superpowers:
 
   - title: Reduce Deployment Complexity
     cta: Learn more
-    cta_url: "/docs/using-pulumi/testing"
+    cta_url: "/docs/using-pulumi/testing/"
     icon_type: testing
     description: |
         Deploying untested code can lead to some unexpected results. Pulumi lets you take advantage

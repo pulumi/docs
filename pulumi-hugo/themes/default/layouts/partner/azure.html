@@ -13,7 +13,7 @@
                 <p class="mr-4">{{ .Params.hero.description | markdownify }}</p>
                 {{ if .Params.hero.cta_url }}
                     <p class="my-6">
-                        <a class="inline-flex items-center link" href="{{ relref . .Params.hero.cta_url }}">
+                        <a class="inline-flex items-center link" href="{{ .Params.hero.cta_url }}">
                             <span class="inline-block w-6 text-orange-300 mr-3">
                                 <svg
                                     aria-hidden="true"
@@ -48,8 +48,8 @@
                     </p>
                 {{ end }}
                 <div class="header-hero-actions mt-8">
-                    <a class="btn-primary mr-4" href="{{ relref . "/docs/clouds/azure/get-started" }}">Get Started</a>
-                    <a class="btn-secondary" href="{{ relref . "#azure-overview" }}">Learn More</a>
+                    <a class="btn-primary mr-4" href="/docs/clouds/azure/get-started/">Get Started</a>
+                    <a class="btn-secondary" href="#azure-overview">Learn More</a>
                 </div>
             </div>
             <div class="w-full order-first px-3 lg:px-0 lg:order-last mt-8 lg:mt-0 lg:w-1/2 lg:mt-0">
@@ -203,7 +203,7 @@
                                 {{ end }}
                             </ul>
                             <div class="my-8">
-                                <a class="btn-secondary lg:inline-block" href="{{ relref $pageContext .cta_url }}">
+                                <a class="btn-secondary lg:inline-block" href="{{ .cta_url }}">
                                     {{ .cta }}
                                 </a>
                             </div>
@@ -223,7 +223,7 @@
                             <h3>{{ .title | markdownify }}</h3>
                             <p>{{ .description | markdownify }}</p>
                             <div class="my-8">
-                                <a class="btn-secondary lg:inline-block" href="{{ relref $pageContext .cta_url }}">
+                                <a class="btn-secondary lg:inline-block" href="{{ .cta_url }}">
                                     {{ .cta }}
                                 </a>
                             </div>
@@ -255,7 +255,7 @@
                     <p class="md:px-24 lg:px-0">{{ $item.description | markdownify }}</p>
 
                     {{ if $item.cta }}
-                        <a class="hidden btn-secondary lg:inline-block my-4" href="{{ relref $pageContext $item.cta_url }}">
+                        <a class="hidden btn-secondary lg:inline-block my-4" href="{{ $item.cta_url }}">
                             {{ $item.cta }}
                         </a>
                     {{ end }}
@@ -274,7 +274,7 @@
             </div>
             {{ if $item.cta }}
                 <div class="container mx-auto md:px-24 lg:hidden lg:px-0 text-center">
-                    <a class="btn-secondary my-4" href="{{ relref $pageContext $item.cta_url }}">
+                    <a class="btn-secondary my-4" href="{{ $item.cta_url }}">
                         {{ $item.cta }}
                     </a>
                 </div>
@@ -296,13 +296,13 @@
                             </div>
                             <div class="lg:pl-6 lg:pr-12">
                                 <h4 class="text-center lg:text-left mt-0">
-                                    <a class="link" href="{{ relref $pageContext $item.cta_url }}">
+                                    <a class="link" href="{{ $item.cta_url }}">
                                         <span class="align-middle">{{ $item.title }}</span>
                                     </a>
                                 </h4>
                                 <p class="leading-relaxed md:px-24 lg:px-0">{{ $item.description }}</p>
                                 <p class="m-0 text-lg text-center lg:text-left">
-                                    <a class="link" href="{{ relref $pageContext $item.cta_url }}">
+                                    <a class="link" href="{{ $item.cta_url }}">
                                         <span class="transition-all hover:mr-1">{{ $item.cta }}</span>
                                         <span>&rarr;</span>
                                     </a>

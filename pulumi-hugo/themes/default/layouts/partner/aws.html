@@ -14,8 +14,8 @@
                 <div>
                     <div class="flex justify-start items-start mt-8">
                         <div class="flex flex-col lg:flex-row items-start">
-                            <a class="btn-primary mr-4" href="{{ relref . "/docs/clouds/aws/get-started" }}">Get Started</a>
-                            <a class="btn-secondary" href="{{ relref . "/resources#upcoming" }}">Watch a Workshop</a>
+                            <a class="btn-primary mr-4" href="/docs/clouds/aws/get-started/">Get Started</a>
+                            <a class="btn-secondary" href="/resources#upcoming">Watch a Workshop</a>
                         </div>
                         <img class="w-32 mr-4" src="/images/partners/aws-devops-badge.png" alt="AWS Devops Badge" />
                     </div>
@@ -72,9 +72,9 @@
 
                     <h5>Sharing and Reuse</h5>
                     <p>
-                        Sharing and reusing your infrastructure code is available right out of the box with <a href="{{ relref . "/product/packages" }}">Pulumi Packages</a>. You
+                        Sharing and reusing your infrastructure code is available right out of the box with <a href="/product/packages/">Pulumi Packages</a>. You
                         can use your preferred programming language's native package managers to share and distribute infrastructure code within your organization. Or, browse
-                        publicly available packages in <a href="{{ relref . "/registry" }}">Pulumi Registry</a>.
+                        publicly available packages in <a href="/registry/">Pulumi Registry</a>.
                     </p>
                 </div>
             </div>
@@ -110,14 +110,14 @@
 
                     <h5>Architect for self-service</h5>
                     <p>
-                        Pulumi's unique approach to <a href="{{ relref . "/what-is/what-is-infrastructure-as-code" }}">Infrastructure as Code</a>
+                        Pulumi's unique approach to <a href="/what-is/what-is-infrastructure-as-code/">Infrastructure as Code</a>
                         allows you to build self-service infrastructure platforms. You can abstract away complexity for your teammates, allowing folks to focus on what's important.
                     </p>
 
                     <h5>Continuous delivery for infrastructure</h5>
                     <p>
                         Pulumi gives you the power to continuously test and deliver your cloud infrastructure by
-                        <a href="{{ relref . "/docs/using-pulumi/continuous-delivery/" }}">integrating</a> with your favorite CI/CD platforms. By automating your testing and
+                        <a href="/docs/using-pulumi/continuous-delivery/">integrating</a> with your favorite CI/CD platforms. By automating your testing and
                         delivery you can focus more on delivering value to your customers.
                     </p>
                 </div>
@@ -136,8 +136,8 @@
             <h4 class="w-10/12 mx-auto mt-0">Gain full auditability and visibility into all your environments to tame complexity and put security first.</h4>
             <p class="text-center w-full p-5 lg:w-1/2 lg:p-0 mx-auto">
                 Manage cloud infrastructure with dashboards that provide visibility into your infrastructure and any changes,
-                <a href="{{ relref . "/docs/pulumi-cloud/organizations#organization-roles" }}">role-based access controls</a>, and
-                <a href="{{ relref . "/docs/using-pulumi/crossguard" }}">Policy as Code</a> enforcement across your organization.
+                <a href="/docs/pulumi-cloud/organizations#organization-roles">role-based access controls</a>, and
+                <a href="/docs/using-pulumi/crossguard/">Policy as Code</a> enforcement across your organization.
             </p>
             <div class="flex flex-col xl:flex-row xl:mt-12">
                 <div class="w-full p-5 lg:p-0 xl:w-1/2">
@@ -150,12 +150,12 @@
                     <h5>Secrets management made easy</h5>
                     <p>
                         Pulumi provides you with any easy way to ensure secrets are kept safe during the entire software development lifecycle. You can have Pulumi manage your
-                        <a href="{{ relref . "/docs/concepts/secrets" }}">secrets</a> for you or bring your own secrets management provider.
+                        <a href="/docs/concepts/secrets/">secrets</a> for you or bring your own secrets management provider.
                     </p>
 
                     <h5>Keep your workflows secure</h5>
                     <p>
-                        Enable <a href="{{ relref . "/docs/using-pulumi/crossguard" }}">Policy as Code</a> within your organization so that you can define guardrails for your
+                        Enable <a href="/docs/using-pulumi/crossguard/">Policy as Code</a> within your organization so that you can define guardrails for your
                         infrastructure, ensuring engineers are following best practices and putting security first. This helps you prevent mistakes before they occur and respond
                         rapidly to any incidents.
                     </p>
@@ -198,7 +198,7 @@
             </div>
         </div>
         <p class="text-blue-500 text-center font-bold mt-10">
-            <a class="link" data-track="logos-case-study" href="{{ relref . "/case-studies" }}">Read our customer use cases</a> &rarr;
+            <a class="link" data-track="logos-case-study" href="/case-studies/">Read our customer use cases</a> &rarr;
         </p>
     </section>
 
@@ -208,11 +208,11 @@
             <div class="w-full lg:w-5/12 px-8">
                 <h3>Programmatic Infrastructure as Code</h3>
                 <p>
-                    Pulumi <a href="{{ relref . "/automation" }}">Automation API</a> exposes the full power of infrastructure as code through a programmatic interface, instead of
+                    Pulumi <a href="/automation/">Automation API</a> exposes the full power of infrastructure as code through a programmatic interface, instead of
                     through CLI commands. Automation API lets you use the Pulumi engine as an SDK, enabling you to create software that can create, update, configure, and destroy
                     infrastructure dynamically. This enables you to build custom cloud interfaces that are tailored to your team, organization, or customers.
                 </p>
-                {{ partial "sparkle-arrow-cta" (dict "url" (relref . "/blog/automation-api") "text" "Learn More About Automation API" "textColor" "grey" "textAlign" "left") }}
+                {{ partial "sparkle-arrow-cta" (dict "url" "/blog/automation-api" "text" "Learn More About Automation API" "textColor" "grey" "textAlign" "left") }}
             </div>
 
             <div class="w-full mt-8 lg:mt-0 lg:w-7/12">
@@ -273,7 +273,7 @@
                     Crosswalk enables you to blur the lines between application and infrastructure code enabling you to author an entire full-stack application in one program. With
                     support for inline Lambda functions and ease-of-use helper functions, building robust applications on AWS has never been easier.
                 </p>
-                {{ partial "sparkle-arrow-cta" (dict "url" (relref . "/docs/clouds/aws/guides/") "text" "Learn More About Crosswalk" "textColor" "grey" "textAlign" "left") }}
+                {{ partial "sparkle-arrow-cta" (dict "url" "/docs/clouds/aws/guides/" "text" "Learn More About Crosswalk" "textColor" "grey" "textAlign" "left") }}
             </div>
         </div>
     </section>
@@ -319,7 +319,7 @@
                 <div class="shadow-2xl bg-violet-600 px-16 pt-4 pb-12 rounded">
                     <h4 class="text-white">Get started now</h4>
                     <p class="mb-16 text-white">Deploy your first app in just five minutes. Follow our tutorials for AWS, Azure, Google Cloud, Kubernetes, and more.</p>
-                    <a href="{{ relref . "/docs/clouds/aws/get-started" }}" class="btn-secondary">Get Started</a>
+                    <a href="/docs/clouds/aws/get-started/" class="btn-secondary">Get Started</a>
                 </div>
             </div>
 
@@ -327,7 +327,7 @@
                 <div class="shadow-2xl px-16 pt-4 pb-12 rounded">
                     <h4>Migrating from other tools</h4>
                     <p class="mb-12">Transition to Pulumi with converter tools for Terraform, AWS CloudFormation, Azure Resource Manager, and Kubernetes.</p>
-                    <a href="{{ relref . "/docs/using-pulumi/adopting-pulumi" }}" class="btn-secondary">Explore Convertor Tools</a>
+                    <a href="/docs/using-pulumi/adopting-pulumi/" class="btn-secondary">Explore Convertor Tools</a>
                 </div>
             </div>
         </div>
