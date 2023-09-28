@@ -15,14 +15,6 @@ module:
           target: layouts
         - source: data
           target: data
-    - path: github.com/pulumi/registry/themes/default
-      mounts:
-        - source: content
-          target: content
-        - source: layouts
-          target: layouts
-        - source: data
-          target: data
 
 security:
   funcs:
