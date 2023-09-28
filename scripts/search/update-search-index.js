@@ -1,5 +1,6 @@
 const axios = require('axios');
 const settings = require("./settings");
+const algoliasearch = require("algoliasearch");
 
 // URL of the JSON file
 const registrySearchIndexUrl = "https://www.pulumi.com/registry/search-index.json";
@@ -16,6 +17,10 @@ const config = {
 if (!config.appID || !config.searchAPIKey || !config.adminAPIKey || !config.indexName) {
     throw new Error(`Missing one or more required configuration values. (Provided keys: [${Object.keys(config)}])`);
 }
+
+// Initialize the Algolia search client.
+const client = algoliasearch(config.appID, config.adminAPIKey);
+const algoliaIndex = client.initIndex(config.indexName);
 
 async function publishIndex() {
 
