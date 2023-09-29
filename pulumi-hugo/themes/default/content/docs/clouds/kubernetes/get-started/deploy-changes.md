@@ -80,7 +80,7 @@ View the `ip` [stack output](/docs/concepts/stack#outputs) from the nginx servic
 $ pulumi stack output ip
 ```
 
-> **Using minikube:** Minikube does not support type `LoadBalancer`. Instead, forward the nginx service:
+> **If using Minikube:** Minikube does not support type `LoadBalancer`. Instead, forward the nginx service:
 >
 >  ```bash
 >  $ kubectl get service
