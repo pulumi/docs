@@ -1,27 +1,10 @@
 const fs = require("fs");
 const page = require("./page");
-const algoliasearch = require("algoliasearch");
 
 // As part of the Hugo build, we generate a JSON file at /index.json containing a record for every
 // page of the website. We use this file to generate primary search records for Algolia.
 const pathToFullSiteJSON = "./public/index.json";
 const hugoPageItems = JSON.parse(fs.readFileSync(pathToFullSiteJSON, "utf-8").toString());
-
-// Configuration values required for updating the Algolia index.
-const config = {
-    appID: process.env.ALGOLIA_APP_ID,
-    searchAPIKey: process.env.ALGOLIA_APP_SEARCH_KEY,
-    adminAPIKey: process.env.ALGOLIA_APP_ADMIN_KEY,
-    indexName: process.argv[2],
-};
-
-if (!config.appID || !config.searchAPIKey || !config.adminAPIKey || !config.indexName) {
-    throw new Error(`Missing one or more required configuration values. (Provided keys: [${Object.keys(config)}])`);
-}
-
-// Initialize the Algolia search client.
-const client = algoliasearch(config.appID, config.adminAPIKey);
-const algoliaIndex = client.initIndex(config.indexName);
 
 // Generate a list of primary page objects. This list contains one record for every page of the site.
 console.log("\nBuilding search index...");
@@ -38,13 +21,6 @@ let allObjects = [
     ...primaryPageObjects,
     ...secondaryPageObjects,
 ];
-
-// Generate array of objects related to docs. The primary objects are included here instead of the filtered objects,
-// since these will be filtered by the job that stiches the registry and docs objects together.
-let docsObjects = [
-    ...primaryPageObjects,
-    ...secondaryPageObjects,
-]
 
 // Temporary hack: Remove any references to `azure-native-v1`. This line can be
 // removed once the azure-native-v1 package is removed from the Registry.
