@@ -55,21 +55,3 @@ allObjects = allObjects.filter(o => !o.href.includes("azure-native-v1"));
 console.log(" ↳ Writing results...");
 fs.writeFileSync("./public/search-index.json", JSON.stringify(allObjects, null, 4));
 console.log(" ↳ Done. ✨\n");
-
-// Update the Algolia index, including all page objects and index settings (like searchable
-// attributes, custom ranking, synonyms, etc.).
-async function updateIndex(objects) {
-    console.log("Updating search index...");
-
-    try {
-        console.log(` ↳ Replacing all records in the '${ config.indexName }' index...`);
-        const result = await algoliaIndex.replaceAllObjects(objects, { safe: true });
-        console.log(`   ↳ ${result.objectIDs.length} records updated.`);
-        console.log(" ↳ Done. ✨\n");
-    }
-    catch (error) {
-        console.error(error);
-    }
-}
-
-updateIndex(allObjects);
