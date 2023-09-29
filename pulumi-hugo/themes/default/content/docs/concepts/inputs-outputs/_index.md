@@ -528,7 +528,7 @@ connectionString := pulumi.All(sqlServer.Name, database.Name).ApplyT(
         server := args[0]
         db := args[1]
         return pulumi.Sprintf("Server=tcp:%s.database.windows.net;initial catalog=%s...", server, db)
-    }
+    },
 )
 ```
 
