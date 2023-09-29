@@ -522,14 +522,17 @@ connection_string = Output.all(server=sql_server.name, db=database.name) \
 {{% choosable language go %}}
 
 ```go
+
 connectionString := pulumi.All(sqlServer.Name, database.Name).ApplyT(
-    func (args []interface{}) (string, error) {
-        server := args[0].(string)
-        db := args[1].(string)
-        return fmt.Sprintf("Server=tcp:%s.database.windows.net;initial catalog=%s...", server, db), nil
-    },
+    func (args []interface{}) pulumi.StringOutput  {
+        server := args[0]
+        db := args[1]
+        return pulumi.Sprintf("Server=tcp:%s.database.windows.net;initial catalog=%s...", server, db)
+    }
 )
 ```
+
+**A Note on error handling** The function `ApplyT` spawns a Goroutine to await the availability of the implicated dependencies. This function accepts a `T` or `(T, error)` signature; the latter accomodates for error handling. Alternatively, one may use the `ApplyTWithContext` function in which the provided context can be used to reject the output as canceled. Error handling may also be achieved using an `error` `chan`.
 
 {{% /choosable %}}
 {{% choosable language csharp %}}
@@ -920,8 +923,8 @@ url = Output.all(hostname, port).apply(lambda l: f"http://{l[0]}:{l[1]}/")
 {{% choosable language go %}}
 
 ```go
-var hostname pulumi.StringOutput
-var port pulumi.NumberOutput
+hostname := pulumi.String("localhost").ToStringOutput()
+port := pulumi.Int(8080).ToIntOutput()
 
 // Would like to produce a string equivalent to: http://${hostname}:${port}/
 url := pulumi.All(hostname, port).ApplyT(func (args []interface{}) string {
@@ -1167,9 +1170,9 @@ _, err = s3.NewBucketPolicy(ctx, "cloudfront-bucket-policy", &s3.BucketPolicyArg
 			})
 
 			if err != nil {
-				return pulumi.String(""), err
+				return pulumi.StringOutput{}, err
 			}
-			return pulumi.String(policy), nil
+			return pulumi.String(policy).ToStringOutput(), nil
 		}).(pulumi.StringOutput),
 }, pulumi.Parent(bucket))
 if err != nil {
