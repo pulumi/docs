@@ -92,6 +92,5 @@ ci_bucket_cleanup:
 
 .PHONY: ci_update_search_index
 ci_update_search_index:
-	$(MAKE) ensure
 	echo "Updating search index: ${DEPLOYMENT_ENVIRONMENT}..."
 	./scripts/ci-update-search-index.sh "${DEPLOYMENT_ENVIRONMENT}"
