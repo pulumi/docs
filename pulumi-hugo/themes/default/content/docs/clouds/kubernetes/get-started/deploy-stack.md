@@ -25,8 +25,6 @@ This command instructs Pulumi to determine the resources needed to create the st
 ```bash
 Previewing update (dev)
 
-View in Browser (Ctrl+O): https://app.pulumi.com/diana-pulumi-corp/quickstart/dev/previews/cc72bfca-4167-4282-8482-b4fe2e0d9fad
-
      Type                              Name            Plan
  +   pulumi:pulumi:Stack               quickstart-dev  create
  +   └─ kubernetes:apps/v1:Deployment  app-dep         create
