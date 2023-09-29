@@ -1007,7 +1007,7 @@ Response
 
 ### Pause Deployments
 
-Pauses all new deployments for a stack or organization. Already running deployments are allowed to complete and are not paused. New deployments are queued, and will run when the stack or organization's deployments are resumed.
+Pauses all queued deployments for a stack or organization. Deployments that are already running are allowed to complete and are not paused. New deployments are queued, and will run when the stack or organization's deployments are resumed.
 
 Only [organization administrators]({{< ref "/docs/pulumi-cloud/organizations#organization-roles" >}}) can pause deployments for an organization.
 
