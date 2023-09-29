@@ -1011,7 +1011,7 @@ Pauses all new deployments for a stack or organization. Already running deployme
 
 Only [organization administrators]({{< ref "/docs/pulumi-cloud/organizations#organization-roles" >}}) can pause deployments for an organization.
 
-Note that you can only pause deployments for a stack that has had deployments configured for it via [deployment settings](#deployment-settings)
+Note that you can only pause deployments for a stack that has [deployment settings](#deployment-settings) configured.
 
 ```
 // Pauses new deployments for a stack
