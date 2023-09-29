@@ -25,8 +25,6 @@ Pulumi computes the minimally disruptive change to achieve the desired state des
 ```bash
 Previewing update (dev)
 
-View in Browser (Ctrl+O): https://app.pulumi.com/diana-pulumi-corp/quickstart/dev/previews/1aed8afe-5f92-48bc-bbb4-0249471150c6
-
      Type                              Name            Plan
      pulumi:pulumi:Stack               quickstart-dev
  +   ├─ kubernetes:apps/v1:Deployment  nginx           create
