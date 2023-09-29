@@ -22,7 +22,7 @@ $ pulumi up
 
 Pulumi computes the minimally disruptive change to achieve the desired state described by the program.
 
-```bash
+```
 Previewing update (dev)
 
      Type                              Name            Plan
@@ -51,7 +51,7 @@ Select `yes` using the arrows and hit enter to update the resources in Kubernete
 
 Pulumi will create the service since it is now defined in the program.
 
-```bash
+```
 Do you want to perform this update? yes
 Updating (dev)
 
