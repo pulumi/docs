@@ -55,8 +55,6 @@ Pulumi will create the service since it is now defined in the program.
 Do you want to perform this update? yes
 Updating (dev)
 
-View in Browser (Ctrl+O): https://app.pulumi.com/diana-pulumi-corp/quickstart/dev/updates/2
-
      Type                              Name            Status
      pulumi:pulumi:Stack               quickstart-dev
  +   ├─ kubernetes:apps/v1:Deployment  nginx           created (3s)
