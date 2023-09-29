@@ -366,7 +366,7 @@ The GitHub block describes settings for Pulumi Deployments' GitHub integration.
 
 ### Get Settings
 
-Gets the [deployment settings](#deploymentsettings) associated with a stack.
+Gets the [deployment settings](#deployment-settings) associated with a stack.
 
 ```
 GET https://api.pulumi.com/api/preview/{organization}/{project}/{stack}/deployment/settings
@@ -408,7 +408,7 @@ curl -XGET -H "Content-Type: application/json" -H "Authorization: token $PULUMI_
 
 ### Patch Settings
 
-Patches the [deployment settings](#deploymentsettings) associated with a stack.
+Patches the [deployment settings](#deployment-settings) associated with a stack.
 
 ```
 POST https://api.pulumi.com/api/preview/{organization}/{project}/{stack}/deployment/settings
@@ -513,7 +513,7 @@ Then the new settings for the stack are:
 
 ### Clear Settings
 
-Clears the [deployment settings](#deploymentsettings) associated with a stack.
+Clears the [deployment settings](#deployment-settings) associated with a stack.
 
 ```
 DELETE https://api.pulumi.com/api/preview/{organization}/{project}/{stack}/deployment/settings
@@ -540,7 +540,7 @@ The stack **must** exist before a deployment can be created for it. If you attem
 
 {{% /notes %}}
 
-A deployment request consists of optional [deployment settings](#deploymentsettings) and the operation to perform.
+A deployment request consists of optional [deployment settings](#deployment-settings) and the operation to perform.
 
 #### Examples
 
@@ -1002,6 +1002,106 @@ Response
             "line": "    Done!\n"
         }
     ]
+}
+```
+
+### Pause Deployments
+
+Pauses all queued deployments for a stack or organization. Deployments that are already running are allowed to complete and are not paused. New deployments are queued, and will run when the stack or organization's deployments are resumed.
+
+Only [organization administrators]({{< ref "/docs/pulumi-cloud/organizations#organization-roles" >}}) can pause deployments for an organization.
+
+Note that you can only pause deployments for a stack that has [deployment settings](#deployment-settings) configured.
+
+```
+// Pauses new deployments for a stack
+POST https://api.pulumi.com/api/preview/{organization}/{project}/{stack}/deployments/pause
+
+// Pauses new deployments for an organization
+POST https://api.pulumi.com/api/preview/{organization}/deployments/pause
+```
+
+#### Example
+
+```shell
+curl -i -XPOST -H "Content-Type: application/json" -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+--location "https://api.pulumi.com/api/preview/my-org/aws-ts-s3-folder/dev/deployments/pause"
+```
+
+### Resume Deployments
+
+Resumes deployments for a stack or organization. This will cause queued deployments to start being processed.
+
+```
+// Resumes deployment for a stack
+POST https://api.pulumi.com/api/preview/{organization}/{project}/{stack}/deployments/resume
+
+// Resumes deployments for an organization
+POST https://api.pulumi.com/api/preview/{organization}/deployments/resume
+```
+
+#### Example
+
+```shell
+curl -i -XPOST -H "Content-Type: application/json" -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+--location "https://api.pulumi.com/api/preview/my-org/aws-ts-s3-folder/dev/deployments/resume"
+```
+
+### Get Deployments Metadata
+
+Get metadata related to deployments for a stack or organization. This includes information such as
+if deployments are paused, and why they're paused.
+
+```
+// Get deployments metadata for a stack
+GET https://api.pulumi.com/api/preview/{organization}/{project}/{stack}/deployments/metadata
+
+// Get deployments metadata for an organization
+GET https://api.pulumi.com/api/preview/{organization}/deployments/metadata
+```
+
+#### Example
+
+##### Request
+
+```shell
+curl -XGET -H "Content-Type: application/json" -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+--location "https://api.pulumi.com/api/preview/my-org/aws-ts-s3-folder/dev/deployments/metadata"
+```
+
+##### Response
+
+```json
+{
+  "paused": true,
+  "stackPaused": false,
+  "organizationPaused": true
+}
+```
+
+##### Request
+
+```shell
+curl -XGET -H "Content-Type: application/json" -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+--location "https://api.pulumi.com/api/preview/my-org/deployments/metadata"
+```
+
+##### Response
+
+```json
+{
+  "paused": false,
+  "pausedStacks": ["aws-ts-s3-folder/dev", "aws-ts-s3-folder/staging"],
+  "concurrency": 1,
+  "deploymentCounts": {
+    "notStarted": 2,
+    "accepted": 0,
+    "running": 0,
+    "failed": 0,
+    "succeeded": 5,
+    "skipped": 0,
+    "total": 7
+  }
 }
 ```
 
