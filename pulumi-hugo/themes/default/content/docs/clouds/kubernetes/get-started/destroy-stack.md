@@ -51,8 +51,6 @@ Select `yes` using the arrows and hit enter to delete the resources in Kubernete
 Do you want to perform this destroy? yes
 Destroying (dev)
 
-View in Browser (Ctrl+O): https://app.pulumi.com/diana-pulumi-corp/quickstart/dev/updates/3
-
      Type                              Name            Status
  -   pulumi:pulumi:Stack               quickstart-dev  deleted
  -   ├─ kubernetes:core/v1:Service     nginx           deleted (0.42s)
