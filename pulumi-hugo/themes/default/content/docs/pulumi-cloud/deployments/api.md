@@ -366,7 +366,7 @@ The GitHub block describes settings for Pulumi Deployments' GitHub integration.
 
 ### Get Settings
 
-Gets the [deployment settings](#deploymentsettings) associated with a stack.
+Gets the [deployment settings](#deployment-settings) associated with a stack.
 
 ```
 GET https://api.pulumi.com/api/preview/{organization}/{project}/{stack}/deployment/settings
@@ -408,7 +408,7 @@ curl -XGET -H "Content-Type: application/json" -H "Authorization: token $PULUMI_
 
 ### Patch Settings
 
-Patches the [deployment settings](#deploymentsettings) associated with a stack.
+Patches the [deployment settings](#deployment-settings) associated with a stack.
 
 ```
 POST https://api.pulumi.com/api/preview/{organization}/{project}/{stack}/deployment/settings
@@ -513,7 +513,7 @@ Then the new settings for the stack are:
 
 ### Clear Settings
 
-Clears the [deployment settings](#deploymentsettings) associated with a stack.
+Clears the [deployment settings](#deployment-settings) associated with a stack.
 
 ```
 DELETE https://api.pulumi.com/api/preview/{organization}/{project}/{stack}/deployment/settings
@@ -540,7 +540,7 @@ The stack **must** exist before a deployment can be created for it. If you attem
 
 {{% /notes %}}
 
-A deployment request consists of optional [deployment settings](#deploymentsettings) and the operation to perform.
+A deployment request consists of optional [deployment settings](#deployment-settings) and the operation to perform.
 
 #### Examples
 
@@ -1011,7 +1011,7 @@ Pauses all new deployments for a stack or organization. Already running deployme
 
 Only [organization administrators]({{< ref "/docs/pulumi-cloud/organizations#organization-roles" >}}) can pause deployments for an organization.
 
-Note that you can only pause deployments for a stack that has had deployments configured for it via [deployment settings](#deploymentsettings)
+Note that you can only pause deployments for a stack that has had deployments configured for it via [deployment settings](#deployment-settings)
 
 ```
 // Pauses new deployments for a stack
