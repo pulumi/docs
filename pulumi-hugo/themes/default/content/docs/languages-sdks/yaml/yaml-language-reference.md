@@ -179,7 +179,7 @@ outputs:
   secondOutputName: ${reference.outputs["outputName"]}
 ```
 
-The above output will have the value of the `outputName` output from the stack `org/project/stack`
+The above output will have the value of the `outputName` output from the stack `org/project/stack`.
 
 ### Expressions
 
