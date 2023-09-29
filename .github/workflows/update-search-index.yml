@@ -20,7 +20,7 @@ jobs:
           token: ${{ secrets.PULUMI_BOT_TOKEN }}
 
       - name: Update search indexes
-        run: make update_search_indexes
+        run: make ci_update_search_index
         env:
           ALGOLIA_APP_ID: ${{ vars.ALGOLIA_APP_ID }}
           ALGOLIA_APP_SEARCH_KEY: ${{ vars.ALGOLIA_APP_SEARCH_KEY }}
