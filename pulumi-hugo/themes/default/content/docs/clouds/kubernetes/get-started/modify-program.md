@@ -240,12 +240,18 @@ func main() {
 				return ""
 			}).(pulumi.StringOutput)
 		} else {
-			ip = frontend.Status.ApplyT(func(val *corev1.ServiceStatus) string {
-				if val.LoadBalancer.Ingress[0].Ip != nil {
-					return *val.LoadBalancer.Ingress[0].Ip
-				}
-				return *val.LoadBalancer.Ingress[0].Hostname
-			}).(pulumi.StringOutput)
+      ip = frontend.Status.ApplyT(func(val *corev1.ServiceStatus) string {
+          if val.LoadBalancer.Ingress != nil && len(val.LoadBalancer.Ingress) > 0 {
+              ingress := val.LoadBalancer.Ingress[0]
+              if ingress.Ip != nil {
+                  return *ingress.Ip
+              }
+              if ingress.Hostname != nil {
+                  return *ingress.Hostname
+              }
+          }
+          return ""
+      }).(pulumi.StringOutput)
 		}
 
 		ctx.Export("ip", ip)
