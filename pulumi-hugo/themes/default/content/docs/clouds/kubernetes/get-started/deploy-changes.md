@@ -97,7 +97,7 @@ $ pulumi stack output ip
 >  Forwarding from [::1]:8080 -> 80
 > ```
 
-Curl nginx to verify is running.
+Curl nginx to verify it is running.
 
 ```bash
 $ $(pulumi config get isMinikube) && curl "http://localhost:8080" || curl $(pulumi stack output ip)
