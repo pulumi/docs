@@ -157,9 +157,29 @@ resources:
       provider: ${provider}
 ```
 
-### Outputs
+### Outputs and Stack References
 
-The value of `outputs` is an object whose keys are the logical names of the outputs that are available from outside the Pulumi stack (via `pulumi stack output`), and whose values are potentially computed expressions the resolve to the values of the desired outputs.
+The value of [`outputs`](https://www.pulumi.com/docs/concepts/stack/#outputs) is an object whose keys are the logical names of the outputs that are available from outside the Pulumi stack (via [`pulumi stack output`](https://www.pulumi.com/docs/cli/commands/pulumi_stack_output/)), and whose values are potentially computed expressions that resolve to the values of the desired outputs.
+
+```yaml
+outputs:
+  outputName: ${resource.id}
+```
+
+Stack references can be used to access the outputs of one stack from within another stack. A stack reference requires the fully qualified name of the stack as an argument in the format of `<organization>/<project>/<stack>`.
+
+```yaml
+resources:
+  reference:
+    type: pulumi:pulumi:StackReference
+    properties:
+      name: org/project/stack
+
+outputs:
+  secondOutputName: ${reference.outputs["outputName"]}
+```
+
+The above output will have the value of the `outputName` output from the stack `org/project/stack`
 
 ### Expressions
 
@@ -422,8 +442,6 @@ variables:
       folder:
         fn::fileArchive: ./folder
 ```
-
-The expression `${reference}` will have the value of the `outputName` output from the stack `org/project/stack`.
 
 ##### `fn::secret`
 
