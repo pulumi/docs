@@ -48,8 +48,6 @@ Select `yes` using the arrows and hit enter to create the resources in Kubernete
 Do you want to perform this update? yes
 Updating (dev)
 
-View in Browser (Ctrl+O): https://app.pulumi.com/diana-pulumi-corp/quickstart/dev/updates/1
-
      Type                              Name            Status
  +   pulumi:pulumi:Stack               quickstart-dev  created (3s)
  +   └─ kubernetes:apps/v1:Deployment  app-dep         created (1s)
