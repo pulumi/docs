@@ -27,8 +27,6 @@ You'll be prompted to make sure you really want to delete these resources.
 ```bash
 Previewing destroy (dev)
 
-View in Browser (Ctrl+O): https://app.pulumi.com/diana-pulumi-corp/quickstart/dev/previews/d8815e7e-ff90-40a4-a502-0030def67827
-
      Type                              Name            Plan
  -   pulumi:pulumi:Stack               quickstart-dev  delete
  -   ├─ kubernetes:core/v1:Service     nginx           delete
