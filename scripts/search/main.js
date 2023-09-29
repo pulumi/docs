@@ -56,6 +56,13 @@ let allObjects = [
     ...registryObjects,
 ];
 
+// Generate array of objects related to docs. The primary objects are included here instead of the filtered objects,
+// since these will be filtered by the job that stiches the registry and docs objects together.
+let docsObjects = [
+    ...primaryPageObjects,
+    ...secondaryPageObjects,
+]
+
 // Temporary hack: Remove any references to `azure-native-v1`. This line can be
 // removed once the azure-native-v1 package is removed from the Registry.
 // https://github.com/pulumi/registry/issues/2879
@@ -76,6 +83,7 @@ const indexRules = settings.getRules();
 console.log(" ↳ Writing results...");
 fs.writeFileSync("./public/search-index.json", JSON.stringify(allObjects, null, 4));
 fs.writeFileSync("./public/search-index-settings.json", JSON.stringify({ indexSettings, indexSynonyms, indexRules }, null, 4));
+fs.writeFileSync("./public/search-index-docs.json", JSON.stringify(docsObjects, null, 4));
 console.log(" ↳ Done. ✨\n");
 
 // Update the Algolia index, including all page objects and index settings (like searchable
