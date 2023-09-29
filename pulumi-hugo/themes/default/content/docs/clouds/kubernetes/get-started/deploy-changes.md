@@ -89,7 +89,7 @@ $ pulumi stack output ip
 >  nginx-9e5d5cd4   ClusterIP   10.103.199.118   <none>        80/TCP    6m47s
 >  ```
 >
-> Note: The assigned name for this particular nginx service is `nginx-9e5d5cd4`. In a new terminal window, run:
+> Note: The assigned name for this particular nginx service is `nginx-9e5d5cd4`; yours will be different. In a new terminal window, run:
 >
 > ```bash
 >  $ kubectl port-forward service/nginx-9e5d5cd4 8080:80
