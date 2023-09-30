@@ -73,7 +73,7 @@ const examplePolicy: ResourceValidationPolicy = {
             }
         },
     },
-    validateResource: validateTypedResource(aws.s3.Bucket, (_, args, reportViolation) => {
+    validateResource: validateResourceOfType(aws.s3.Bucket, (_, args, reportViolation) => {
         const config = args.getConfig<{ message?: string }>();
         if (!config.message) {
             config.message = "Setting reasonable defaults is recommended!";
@@ -137,7 +137,7 @@ const examplePolicy: ResourceValidationPolicy = {
         },
         required: ["message"],
     },
-    validateResource: validateTypedResource(aws.s3.Bucket, (_, args, reportViolation) => {
+    validateResource: validateResourceOfType(aws.s3.Bucket, (_, args, reportViolation) => {
         // The `?` after the `message` property in the type specified to the `getConfig` function is no
         // longer necessary since `message` is required and will always have a value.
         const config = args.getConfig<{ message: string }>();
