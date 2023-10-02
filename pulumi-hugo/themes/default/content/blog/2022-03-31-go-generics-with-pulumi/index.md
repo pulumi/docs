@@ -8,6 +8,10 @@ authors: ["david-flanagan"]
 tags: ["community"]
 ---
 
+{{% notes type="warning" %}}
+This post is outdated. For the latest on Go Generics, [visit this blog post](/blog/go-generics-preview/).
+{{% /notes %}}
+
 March 15th, 2022... just two weeks ago. The Go team [released Go 1.18](https://go.dev/blog/go1.18) to the world. What seems like a trivial point release actually brings a huge new feature to the Go language: Generics.
 
 In this article, I want to show you how you can use this new feature to build a great developer experience with your abstractions for your Pulumi programs.
