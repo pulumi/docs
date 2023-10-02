@@ -42,6 +42,7 @@ async function publishIndex() {
 
     await fetchIndexFiles().catch((error) => {
         console.error("error retrieving index file:", error);
+        process.exit(1);
     });
 
     // De-dupe any registry objects that also may exist in the docs index.
