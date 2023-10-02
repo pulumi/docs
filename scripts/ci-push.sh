@@ -8,7 +8,7 @@ source ./scripts/ci-login.sh
 ./scripts/sync-and-test-bucket.sh update
 
 if [[ "$DEPLOYMENT_ENVIRONMENT" != "testing" ]]; then
-    ./scripts/update-search-index.sh production
+    ./scripts/generate-search-index.sh production
 fi
 
 node ./scripts/await-in-progress.js
