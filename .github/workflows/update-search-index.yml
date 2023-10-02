@@ -7,7 +7,7 @@ jobs:
   update:
     name: Update Algolia Search Index
     runs-on: ubuntu-latest
-    environment: testing
+    environment: production
     steps:
       - name: Install Node
         uses: actions/setup-node@v1
