@@ -7,6 +7,10 @@ authors: ["vova-ivanov"]
 tags: ["aws", "typescript", "containers", "kubernetes", "docker"]
 ---
 
+{{% notes type="warning" %}}
+This post is outdated and contains references to a pre-release version of Pulumi Crosswalk (`@pulumi/awsx`). For updated AWSx documentation and examples, [see the AWS Guides](/docs/clouds/aws/guides/).
+{{% /notes %}}
+
 In this blog post, we return to the PERN application we previously [migrated to Kubernetes](/blog/deploying-a-pern-stack-application-to-aws/) and replace the PostgreSQL database with MongoDB. Although it might seem like a difficult task initially, the straightforward design of Pulumi and Kubernetes allows us to easily transition the application form a PERN stack to a MERN one.
 
 <!--more-->

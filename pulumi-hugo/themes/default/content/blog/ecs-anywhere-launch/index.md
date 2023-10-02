@@ -12,6 +12,10 @@ tags:
     - containers
 ---
 
+{{% notes type="warning" %}}
+This post is outdated and contains references to a pre-release version of Pulumi Crosswalk (`@pulumi/awsx`). For updated AWSx documentation and examples, [see the AWS Guides](/docs/clouds/aws/guides/).
+{{% /notes %}}
+
 When Amazon’s Elastic Container Service (ECS) first launched in 2014, it enabled an easy and convenient way of deploying and scheduling containers in the AWS ecosystem. Back then, you would run a set of EC2 instances, and ECS would deploy containers to instances based on the size, resources, and placement requirements you specified.
 
 <!--more-->
