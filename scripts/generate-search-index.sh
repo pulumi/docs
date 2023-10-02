@@ -4,9 +4,7 @@ set -o errexit -o pipefail
 
 source ./scripts/common.sh
 
-# Run the script that updates the Algolia search index. The value passed into this script denotes
-# the name of the index to be updated (e.g., 'preview' or 'production').
-node ./scripts/search/main.js "$1"
+node ./scripts/search/main.js
 
 # Fetch the name of the bucket from the metadata file.
 destination_bucket="$(cat "$(origin_bucket_metadata_filepath)" | jq -r ".bucket")"
