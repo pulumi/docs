@@ -87,6 +87,14 @@ $ pulumi stack import --file my-app-production.checkpoint.json # import the new 
 
 In addition, if you have any encrypted configuration in your stack, you'll need to re-run `pulumi config set --secret <key> <value>` because pulumi.com uses a different key to encrypt your secrets than the local endpoint does.
 
+### Which domains and IPs should I allowlist?
+
+Should your network have egress limitations, please ensure you allowlist the subsequent domain and IP addresses:
+
+- api.pulumi.com
+- 34.208.94.47
+- 34.212.116.224
+
 ## Resource names
 
 ### Why do resource names have random hex character suffixes?
@@ -137,7 +145,7 @@ Pulumi uses strongly typed languages with programming languages that support [I
 
 ## More FAQ
 
-* [Kubernetes guides FAQ](/docs/clouds/kubernetes/guides/faq/)
-* [Policy as code FAQ](/docs/using-pulumi/crossguard/faq/)
-* [Pulumi Deployments FAQ](/docs/pulumi-cloud/deployments/faq/)
-* [Pulumi Cloud SCIM FAQ](/docs/pulumi-cloud/access-management/scim/faq/)
+- [Kubernetes guides FAQ](/docs/clouds/kubernetes/guides/faq/)
+- [Policy as code FAQ](/docs/using-pulumi/crossguard/faq/)
+- [Pulumi Deployments FAQ](/docs/pulumi-cloud/deployments/faq/)
+- [Pulumi Cloud SCIM FAQ](/docs/pulumi-cloud/access-management/scim/faq/)
