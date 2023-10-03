@@ -52,7 +52,7 @@ README templates can reference Stack outputs and resource properties, for exampl
 
 The new experience lives in the Stack page, which can be navigated to through Projects and clicking on the specific Stack you want to view the README for. Let's take a look at this new feature!
 
-![Stack READMEs in the Pulumi Console](stack-readme.gif)
+![Stack READMEs in the Pulumi Console](https://www.pulumi.com/uploads/stack-readme.gif)
 
 The `Pulumi.README.md` file we added to the Stack 'Production' above is a template README for our Pulumi Service. In it we have links to our AWS authentication tool, our CloudWatch metrics, to our production deployment documentation, and so on. The common places that we navigate to and from when managing this Stack. Here is some of the Markdown for this README:
 

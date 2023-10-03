@@ -28,7 +28,7 @@ Head over to <https://app.pulumi.com> and - supposing you're logged in -
 you'll be presented with the usual homepage. But now we've added a
 shiny new 'Add New Project' button. Here's how that works:
 
-![new-project-ui-1](./new-project-ui-1.gif)
+![new-project-ui-1](https://www.pulumi.com/uploads/new-project-ui-1.gif)
 
 - Clicking the 'Add New Project' button takes you to a series of
   available templates - essentially a matrix of cloud provider and

@@ -159,4 +159,4 @@ Learn more in the [Stack READMEs blog](/blog/stack-readme/)!
 
 We spent some time in the last month improving the SAML/SCIM experience for our customers. The key improvements made were around deprovisioning and provisioning users and how we handle username updates with special characters. Organization Administrators can now remove a user from their identity provider which will deprovision the user in Pulumi, and then re-add them through the identity provider and they will be re-added to the Pulumi organization. Our customers requested this functionality for supporting organization re-orgs and team permission changes. This makes the process of managing Pulumi access with a SCIM provisioner more seamless.
 
-![Gif of identity provider deprovision and re-provisioning flow](scim.gif)
+![Gif of identity provider deprovision and re-provisioning flow](https://www.pulumi.com/uploads/scim.gif)

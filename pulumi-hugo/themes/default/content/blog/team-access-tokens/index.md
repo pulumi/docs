@@ -24,7 +24,7 @@ Since Pulumi Teams are only available on these editions, Team Access Tokens are 
 
 ## See it in action!
 
-![Team Access Tokens in the Pulumi Service](team_tokens.gif)
+![Team Access Tokens in the Pulumi Service](https://www.pulumi.com/uploads/team_tokens.gif)
 
 ## Hear from our customers
 

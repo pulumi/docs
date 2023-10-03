@@ -28,14 +28,14 @@ overview:
 ai:
     title: AI
     subtitle: Code faster with the power of AI.
-    image: /images/product/pulumi-insights-ai-web.gif
+    image: https://www.pulumi.com/uploads/pulumi-insights-ai-web.gif
     description: |
         Author infastructure as code programs in your favorite programming language using large-language models, and automate infrastructure creation through AI. You can tap into the Pulumi platform's deep understanding of usage patterns to leverage recommendations and generate infrastructure as code automatically. 
 
 search:
     title: Search
     subtitle: Find anything in any cloud.
-    image: /images/product/pulumi-insights-search.gif
+    image: https://www.pulumi.com/uploads/pulumi-insights-search.gif
     description: |
         Ask any questions about your infrastructure across more than 100 clouds, using either structured search queries or natural language prompts. Search helps you find that needle in the haystack – locating a single resource across many clouds and environments – as well as running sophisticated queries such as tracking down untagged or expensive resources across the whole organization.
 
