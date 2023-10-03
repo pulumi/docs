@@ -6,19 +6,15 @@
     <section id="overview" class="my-12">
         <div class="container mx-auto text-center flex-col">
             <h2>Pulumi CrossGuard</h2>
-            <p>Continuously enforce your organization's cloud governance &mdash; security, compliance, cost controls, and more.</p>
-            <div class="header-hero-actions mt-8">
-                <a class="btn-primary" href="{{ relref . "/docs/using-pulumi/crossguard/get-started" }}">Try CrossGuard</a>
-                <a class="btn-secondary" href="{{ relref . "/contact.md" }}">Get a Demo</a>
-            </div>
-            <div class="mt-8 text-sm">
-                Open source and available in
-                <a class="link" href="{{ relref . "/pricing" }}">any Pulumi edition</a>.
+            <p>Enforce your organization's cloud governance &mdash; security, compliance, cost controls, and more.</p>
+            <div class="header-hero-actions mt-8 flex-row">
+                <a class="btn-primary mr-2" href="/docs/using-pulumi/crossguard/get-started">Try CrossGuard</a>
+                <a class="btn-secondary ml-2" href="/contact.md">Get a Demo</a>
             </div>
         </div>
     </section>
 
-    <section id="what-it-is" class="mt-32 px-4 px-4">
+    <section id="what-it-is" class="mt-32 px-4">
         <div class="container mx-auto">
             <h2 class="text-center">Features</h2>
             <div class="md:flex mx-auto max-w-5xl mb-8">
@@ -80,6 +76,50 @@
                             databases, pricing lists, and more.
                         </p>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="compliance-enforcement" class="my-24 px-4">
+        <div class="container mx-auto">
+            <div class="bg-gray-200 rounded-xl mx-0 lg:mx-32 text-center pt-12">
+                <h3>Enterprise Compliance Enforcement</h3>
+                <div class="p-4 mx-auto w-full lg:w-2/3 text-xl text-gray-700">
+                    Business Critical customers can enforce compliance and remediate non-compliance using Pulumi provided policies across your organizataion.
+                </div>
+                <div class="md:flex mx-auto">
+                    <div class="md:w-1/3 p-4">
+                        <div class="text-center p-6 h-full">
+                            {{ partial "color-icon.html" (dict "icon" "shield" "icon_color" "violet") }}
+                            <h5>Compliance-ready Policies</h5>
+                            <p>
+                                Choose from hundreds of policies for AWS, Azure, Google Cloud, and Kubernetes. Support for PCI DSS, ISO 27001, SOC 2, and CIS Benchmarks.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="md:w-1/3 p-4">
+                        <div class="text-center p-6 h-full">
+                            {{ partial "color-icon.html" (dict "icon" "shield" "icon_color" "violet") }}
+                            <h5>Server-side Enforcement</h5>
+                            <p>
+                                Set policy packs that block prohibited deployments across your entire organization, preventing issues.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="md:w-1/3 p-4">
+                        <div class="text-center p-6 h-full">
+                            {{ partial "color-icon.html" (dict "icon" "shield" "icon_color" "violet") }}
+                            <h5>Compliance Remediation</h5>
+                            <p>
+                                Codify reactive solutions to compliance requirements by transforming non-compliant resources into compliant ones.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-hero-actions pb-16 md:flex-col lg:flex-row">
+                    <a class="btn-primary btn-primary-blue-bg mr-2" href="/docs/using-pulumi/crossguard/get-started">Start a free trial</a>
+                    <a class="btn-secondary ml-2" href="/contact.md">Contact Us</a>
                 </div>
             </div>
         </div>
@@ -197,7 +237,27 @@
                             </div>
                         </div>
                         <div class="card-cta-btn text-center">
-                            <a class="btn-primary" href="{{ relref . "/case-studies/lemonade" }}">Learn More</a>
+                            <a class="btn-primary" href="/case-studies/lemonade">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full lg:w-1/2 p-6">
+                    <div class="flex flex-col card p-6 bg-white h-full relative">
+                        <p class="text-left mt-0 italic text-black">
+                            CrossGuard gives us the ability to prevent undesired and insecure resources from being deployed to any environment. It also allows us to block the deployment of certain resource SKUs that may incur unnecessary expense.
+                        </p>
+                        <div class="flex flex-grow items-end">
+                            <div class="w-2/3 text-left">
+                                <p class="text-black mb-0">Dennis Sauvé</p>
+                                <p class="mt-0">DevOps Engineer</p>
+                            </div>
+                            <div class="w-1/3 my-4">
+                                {{ partial "customer-logo.html" (dict "logo" "washington-trust") }}
+                            </div>
+                        </div>
+                        <div class="card-cta-btn text-center">
+                            <a class="btn-primary" href="/case-studies/lemonade">Learn More</a>
                         </div>
                     </div>
                 </div>
@@ -218,28 +278,10 @@
                             </div>
                         </div>
                         <div class="card-cta-btn text-center">
-                            <a class="btn-primary" href="{{ relref . "/case-studies/credijusto" }}">Learn More</a>
+                            <a class="btn-primary" href="/case-studies/credijusto">Learn More</a>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="webinar" class="bg-white py-16 px-4">
-        <div class="container mx-auto">
-            <div class="text-center mb-8">
-                <h2>Getting Started with Policy as Code</h2>
-            </div>
-
-            <!-- Rendered with Hugo's YouTube shortcode: https://gohugo.io/content-management/shortcodes/#youtube -->
-            <div class="rounded shadow-md" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-                <iframe
-                    src="//www.youtube.com/embed/_8YYfhtTs94?rel=0"
-                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;"
-                    allowfullscreen=""
-                    title="Introduction to Pulumi: Universal Infrastructure as Code"
-                ></iframe>
             </div>
         </div>
     </section>
