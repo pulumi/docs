@@ -88,3 +88,40 @@ If the CI build originated from a pull request, e.g. the Travis CI job had type 
 then the results will be placed as a comment on the Pull Request as well.
 
 ![Comment on Pull Request](/images/docs/github-app/pr-comment.png)
+
+## GitHub Enterprise Server support
+
+GitHub Enterprise Server is supported for [Pulumi Business Critical Edition](https://www.pulumi.com/enterprise/), for it to work, Pulumi has to provision the GitHub application into your GitHub instance.
+
+### Installation
+
+1. [Sign in to your Pulumi account.](https://app.pulumi.com/signin)
+2. Ensure you have selected the Pulumi organization you wish to use with the GitHub app by choosing it in the Organization drop-down.
+3. Navigate to Settings > Integrations.
+4. Select the "GitHub Enterprise Server App" button.
+
+    ![Install the Pulumi GitHub Enterprise Server App](/images/docs/github-app/gha-enterprise-server-install.png)
+
+    If this page says you already have the app installed, you can stop here. If the page asks you to accept additional permissions for the app, please accept the permissions and stop here.
+
+5. A dialog will pop-up requesting information about your GitHub installation.
+
+    Complete your installation hostname and the type of account where you want to provision the App.
+
+    ![GitHub Enterprise Server App Installation Dialog](/images/docs/github-app/gh-enterprise-installation-dialog.png)
+
+    For Personal accounts, no extra information is required, click on the install button to continue.
+
+    ![GitHub Enterprise Server App Installation Dialog for personal account](/images/docs/github-app/gh-enterprise-installation-dialog-personal.png)
+
+    For Organization accounts, the organization name is required to continue.
+
+    ![GitHub Enterprise Server App Installation Dialog for organization account](/images/docs/github-app/gh-enterprise-installation-dialog-organization.png)
+
+6. After selecting "Install" you will be directed to GitHub where you will have to complete the Application name.
+
+    ![GitHub App provisioning](/images/docs/github-app/gh-enterprise-installation-app-name.png)
+
+7. The last step will be to select where do you want to install the application
+
+    ![GitHub App installation](/images/docs/github-app/gh-enterprise-installation-selection.png)
