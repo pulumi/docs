@@ -52,13 +52,13 @@ form:
     hubspot_form_id: 35baf46c-fd6e-4321-a75f-fc9319e31efb
 
 learn:
-    title: Learn More
+    title: Get Started
     items:
-        - title: Announcement Blog
-          description: To learn more about the Pulumi Deployments Preview and see examples of it in action, read the launch announcement blog.
+        - title: Try Pulumi Deployments today
+          description: Deploy infrastructure on any cloud by creating a free Pulumi account.
           buttons:
-            - link: /blog/pulumi-deployments
-              action: Announcement
+            - link: https://app.pulumi.com/signup
+              action: Sign up for Pulumi Cloud
         - title: Documentation
           description: Refer to our documentation to get Pulumi Deployments set up once you have been accepted into the Preview.
           buttons:
