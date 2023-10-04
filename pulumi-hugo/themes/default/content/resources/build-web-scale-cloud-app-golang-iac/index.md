@@ -39,6 +39,6 @@ block_external_search_index: false
 aws_only: true
 title: Building Web-Scale Cloud Applications with Go and IaC
 meta_desc: Learn to use Go and Pulumi in building robust, web-scale cloud applications.
-mata_image: "/images/resources/web-scale-cloud-app-golang-iac_engin.png"
+meta_image: "/images/resources/web-scale-cloud-app-golang-iac_engin.png"
 url_slug: build-web-scale-cloud-app-golang-iac
 ---
