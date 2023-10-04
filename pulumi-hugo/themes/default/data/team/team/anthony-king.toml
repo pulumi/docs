@@ -1,0 +1,10 @@
+id = "anthony-king"
+name = "Anthony King"
+status = "guest"
+role = "puluminary"
+title = "Infrastructure Engineer"
+company = "Dataplane"
+
+[social]
+github = "antdking"
+linkedin = "anthony-d-king"
