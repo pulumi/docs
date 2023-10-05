@@ -24,18 +24,6 @@ export REPO_THEME_PATH="themes/default/"
 printf "Copying prebuilt docs...\n\n"
 make copy_static_prebuilt
 
-REGISTRY_COMMIT="$(go mod graph | grep pulumi/registry/themes/default | sed 's/.*-//')"
-
-# In the testing environment this is done by the pulumi/registry repo. Once this moves to prod,
-# we can remove this altogether, since API docs generation will no longer be done here.
-if [[ "$DEPLOYMENT_ENVIRONMENT" != "testing" ]]; then
-    printf "Generating API docs from registry commit %s...\n\n" "${REGISTRY_COMMIT}"
-    pushd tools/resourcedocsgen
-    go build -o "${GOPATH}/bin/resourcedocsgen" .
-    resourcedocsgen docs registry --commitSha "${REGISTRY_COMMIT}" --logtostderr
-    popd
-fi
-
 printf "Running Hugo...\n\n"
 if [ "$1" == "preview" ]; then
     export HUGO_BASEURL="http://$(origin_bucket_prefix)-$(build_identifier).s3-website.$(aws_region).amazonaws.com"
