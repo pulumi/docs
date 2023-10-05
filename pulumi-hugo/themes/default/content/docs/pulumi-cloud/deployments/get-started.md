@@ -8,4 +8,10 @@ menu:
     weight: 1
 ---
 
-TBD.
+## Manual
+
+TODO
+
+## Wizard
+
+TODO

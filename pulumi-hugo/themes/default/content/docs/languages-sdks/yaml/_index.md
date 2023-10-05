@@ -76,6 +76,8 @@ YAML documents is in the [Pulumi YAML reference](/docs/languages-sdks/yaml/yaml-
 
 ## Templates
 
+TODO: link to `pulumi new` docs / templates.
+
 The fastest way to start a new project is to use a template. The template will initialize a Pulumi
 project and set up starter resources for the chosen cloud. The `yaml` template is cloud agnostic.
 

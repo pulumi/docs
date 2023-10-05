@@ -9,4 +9,8 @@ menu:
     identifier: developer-portals
 ---
 
-TBD.
+TODO
+
+* Backstage
+* Private templates
+* NPW
