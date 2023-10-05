@@ -7,7 +7,7 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     usingpulumi:
         identifier: pulumi-packages
-        weight: 6
+        weight: 7
 aliases:
 - /docs/guides/pulumi-packages/
 ---

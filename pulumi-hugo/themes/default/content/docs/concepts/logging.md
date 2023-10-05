@@ -6,7 +6,7 @@ h1: "Logging"
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   concepts:
-    weight: 9
+    weight: 10
 aliases:
 - /docs/intro/concepts/logging/
 ---

@@ -6,7 +6,7 @@ h1: Deploy with Pulumi Button
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   pulumicloud:
-    weight: 9
+    weight: 10
 aliases:
 - /docs/reference/service/pulumi-button/
 - /docs/console/extensions/pulumi-button/
