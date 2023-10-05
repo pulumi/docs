@@ -17,7 +17,7 @@ We build the Pulumi website statically with Hugo, manage our dependencies with N
 
 * [Go](https://golang.org/) (>= 1.15)
 * [Hugo](https://gohugo.io) (>= 0.92)
-* [Node.js](https://nodejs.org/en/) (>= 1.14)
+* [Node.js](https://nodejs.org/en/) (>= 18)
 * [Yarn](https://classic.yarnpkg.com/en/) (1.x)
 
 Our TypeScript documentation is generated directly from source using [TypeDoc](http://typedoc.org/), and we check in the resulting files at `./content/reference/pkg/nodejs`.
