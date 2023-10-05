@@ -3,7 +3,10 @@ on:
   pull_request:
     branches:
       - master
-      - ced/tuesday-night
+      - 10/10-content
+      - 10/10-blog
+      - 10/11-content
+      - 10/11-blog
 jobs:
   preview:
     # Only run this job for events that originate on this repository.
