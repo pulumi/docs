@@ -11,7 +11,6 @@ if [ -z "${AWS_ACCESS_KEY_ID:-}" ] || [ -z "${AWS_SECRET_ACCESS_KEY:-}" ] || [ -
     exit
 fi
 
-source ./scripts/ci-login.sh
 source ./scripts/common.sh
 
 if [[ "$GITHUB_EVENT_NAME" == "pull_request" && ! -z "$GITHUB_EVENT_PATH" ]]; then
