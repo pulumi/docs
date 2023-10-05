@@ -10,7 +10,7 @@ keywords:
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   concepts:
-    weight: 8
+    weight: 9
 
 aliases:
 - /docs/reference/state/

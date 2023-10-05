@@ -7,11 +7,13 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   pulumicloud:
     identifier: deployments
-    weight: 4
+    weight: 5
 
 aliases:
 - /docs/intro/pulumi-service/deployments/
 - /docs/intro/deployments/
+- /docs/intro/deployments/platform/
+- /docs/pulumi-cloud/deployments/platform/
 ---
 
 Pulumi Deployments is a fully managed platform for managing infrastructure at scale. Whether you are just getting started in the cloud and want the easiest path to set up secure CI/CD, or are a platform engineer building a self-service platform to support thousands of engineers, Pulumi Deployments is the fastest way to go from code to cloud. We provide the building blocks that enable you to scale your cloud footprint without scaling your headcount, with tools that are designed to power public and private cloud platforms, APIs, and self-service infrastructure portals.

@@ -6,7 +6,7 @@ h1: Pulumi Cloud audit logs
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   pulumicloud:
-    weight: 7
+    weight: 8
 aliases:
 - /docs/intro/console/collaboration/auditing/
 - /docs/intro/console/auditing/
