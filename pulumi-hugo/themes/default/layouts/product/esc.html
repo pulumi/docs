@@ -179,4 +179,73 @@
             </div>
         </div>
     </section>
+
+    <section id="screenshot" class="container mx-auto my-16">
+        <div class="max-w-5xl mx-auto text-center">
+            <h2>Frequently asked questions</h2>
+        </div>
+        <ul class="list-none p-0 mx-5 xl:ml-12" data-faq-type="faq-pricing">
+            <li class="accordion-item text-2xl py-3">
+                {{ partial "accordian-header" (dict "text" "What is Pulumi Environments, Secrets and Configurations" "large_header" true) }}
+                <div class="accordion-item-body-no-animation text-base">
+                    <p>
+                        Pulumi Environments, Secrets and Configuration (ESC), a new open source project and managed service as part of Pulumi Cloud that enables teams to manage hierarchical collections of configuration and secrets, and then consume those configuration and secrets from a variety of different infrastructure and application services. 
+                    </p>
+                    <p>
+                        {{ "Pulumi ESC integrates with Pulumi Cloud identity and RBAC to provide rich control over access to secret configuration within an organization.  Pulumi ESC supports multiple Configuration Providers, enabling static key/value configuration, as well as dynamically retrieved configuration and secrets via OIDC and additional providers like 1Password and Vault.  Pulumi ESC is available via the new `esc` CLI, Pulumi Cloud, the Pulumi Cloud REST API, and Pulumi IaC stack configuration." | markdownify }}
+                    </p>
+                </div>
+            </li>
+            <li class="accordion-item text-2xl py-3">
+                {{ partial "accordian-header" (dict "text" "What is an environment?" "large_header" true) }}
+                <div class="accordion-item-body-no-animation text-base">
+                    <p>
+                        An environment describes a collection of configuration.  It is typically intended to capture the configuration needed to work with a particular environment - for example the production environment for your key customer or line of business service.
+                    </p>
+                    <p>An environment is represented by a YAML document.  This document has two top level entries:</p>
+                    <p class="ml-8">
+                        {{ "`imports`:  An optional set of other environments that this environment derives from, enabling composition of environments, and avoiding repetition across environments." | markdownify}}
+                    </p>
+                    <p class="ml-8">
+                        {{ "`values`: An arbitrary nested collection of key/value pairs representing top level configuration values. " | markdownify}}
+                    </p>
+                </div>
+            </li>
+            <li class="accordion-item text-2xl py-3">
+                {{ partial "accordian-header" (dict "text" "What secrets and configurations can I manage with ESC?" "large_header" true) }}
+                <div class="accordion-item-body-no-animation text-base">
+                    <p>
+                        Pulumi ESC enables teams to manage hierarchical collections of configuration and secrets (‘“environments”), and then consume those configuration and secrets from a variety of different infrastructure and application services. Examples include the management of AWS configurations and secrets, API keys, database credentials, or environment-specific variables such as service endpoints and AWS regions.
+                    </p>
+                </div>
+            </li>
+            <li class="accordion-item text-2xl py-3">
+                {{ partial "accordian-header" (dict "text" "What secrets and configuration providers are supported?" "large_header" true) }}
+                <div class="accordion-item-body-no-animation text-base">
+                    <ul>
+                        <li>Cyberark Literal </li>
+                        <li>AWS OIDC</li>
+                        <li>Pulumi Stack Reference</li>
+                        <li>1Password</li>
+                        <li>Vault</li>
+                    </ul>
+                </div>
+            </li>
+            <li class="accordion-item text-2xl py-3">
+                {{ partial "accordian-header" (dict "text" "How are secrets stored and transmitted securely?" "large_header" true) }}
+                <div class="accordion-item-body-no-animation text-base">
+                    <p>
+                        Pulumi ESC encrypts all data at rest using per-environment managed encryption keys.  All API routes serving the Pulumi ESC API are HTTPS, and authenticated via Pulumi Access Token.
+                    </p>
+                </div>
+            </li>
+            <li class="accordion-item text-2xl py-3">
+                {{ partial "accordian-header" (dict "text" "Who can use and manage secrets in ESC and how do they authenticate?" "large_header" true) }}
+                <div class="accordion-item-body-no-animation text-base">
+                    <p>
+                        Users and automation can authenticate with a Pulumi Access Token. They can use personal, team or organization tokens.
+                    </p>
+                </div>
+            </li>
+    </section>
 {{ end }}
