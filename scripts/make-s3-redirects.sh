@@ -14,7 +14,7 @@ redirects_file="./redirects.txt"
 aws s3 cp "s3://${destination_bucket}/redirects.txt" "$redirects_file" --region "$(aws_region)"
 
 echo "Processing S3 redirects ${destination_bucket}..."
-batch_size=5
+batch_size=50
 command_count=0
 IFS="|"
 while read key location; do
