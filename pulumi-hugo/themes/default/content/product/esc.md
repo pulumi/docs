@@ -4,7 +4,8 @@ layout: esc
 
 meta_title: "Compliance-Ready Engineering Policies: The Future of Policy-as-Code"
 meta_desc: Centralized environments, secrets, and configurations management for cloud applications and infrastructure
-aliases: /esc
+aliases:
+    - /esc
 
 benefits:
     title: Benefits of Pulumi ESC
