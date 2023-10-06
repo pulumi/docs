@@ -76,8 +76,6 @@ YAML documents is in the [Pulumi YAML reference](/docs/languages-sdks/yaml/yaml-
 
 ## Templates
 
-TODO: link to `pulumi new` docs / templates.
-
 The fastest way to start a new project is to use a template. The template will initialize a Pulumi
 project and set up starter resources for the chosen cloud. The `yaml` template is cloud agnostic.
 
@@ -85,6 +83,10 @@ project and set up starter resources for the chosen cloud. The `yaml` template i
 - `pulumi new azure-yaml`: creates a starter Azure Pulumi YAML project
 - `pulumi new gcp-yaml`: creates a starter Google Cloud Pulumi YAML project
 - `pulumi new kubernetes-yaml`: creates a starter Kubernetes Pulumi YAML project
+
+By default, `pulumi new` provides a number of templates provided by Pulumi, but it can also use your own custom templates.
+
+To learn more about building and working with custom templates, see [Custom Templates](/docs/pulumi-cloud/developer-portals/templates) and the [`pulumi new`](/docs/cli/commands/pulumi_new/) docs.
 
 ## Pulumi Programming Model
 
