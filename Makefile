@@ -18,11 +18,6 @@ clean:
 ensure: clean
 	./scripts/ensure.sh
 
-.PHONY: ensure_tools
-ensure_tools:
-	echo "Restoring resourcedocsgen deps..."
-	cd tools/resourcedocsgen && go mod download
-
 .PHONY: serve
 serve:
 	./scripts/serve.sh
