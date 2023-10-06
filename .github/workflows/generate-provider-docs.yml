@@ -77,7 +77,7 @@ jobs:
         uses: actions/setup-dotnet@v1
         with:
           dotnet-version: ${{matrix.dotnetverson}}
-      - run: make ensure ensure_tools
+      - run: make ensure
         working-directory: docs
       - if: github.event.action == 'non-resource-provider'
         name: run yarn install in nodejs sdk

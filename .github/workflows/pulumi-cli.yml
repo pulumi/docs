@@ -72,7 +72,7 @@ jobs:
         uses: actions/setup-dotnet@v1
         with:
           dotnet-version: ${{matrix.dotnetverson}}
-      - run: make ensure ensure_tools
+      - run: make ensure
         working-directory: docs
       - name: run yarn install in nodejs sdk
         run: yarn install && yarn run tsc
