@@ -1,5 +1,5 @@
 languageCode: en-us
-title: Pulumi - Universal Infrastructure as Code
+title: Pulumi - Infrastructure as Code in Any Programming Language
 
 module:
   imports:
