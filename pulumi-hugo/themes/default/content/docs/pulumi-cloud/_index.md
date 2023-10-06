@@ -71,7 +71,9 @@ Integrate Pulumi with your current continuous delivery pipeline. Build your own 
 
 ### Building a developer portal
 
-TODO
+* [Backstage Plugin](/docs/pulumi-cloud/developer-portals/backstage)
+* [Custom templates](/docs/pulumi-cloud/developer-portals/templates)
+* [New Project Wizard](/docs/pulumi-cloud/deployments/get-started)
 
 ### Insights and analytics
 
