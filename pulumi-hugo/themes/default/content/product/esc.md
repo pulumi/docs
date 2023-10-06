@@ -2,7 +2,8 @@
 title: "Pulumi ESC: Environments, Secrets and Configurations"
 layout: esc
 
-meta_desc: "Compliance-Ready Engineering Policies: The Future of Policy-as-Code"
+meta_title: "Compliance-Ready Engineering Policies: The Future of Policy-as-Code"
+meta_desc: Centralized environments, secrets, and configurations management for cloud applications and infrastructure
 aliases: /esc
 
 benefits:
