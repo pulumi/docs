@@ -77,7 +77,7 @@ $ esc env get myorg/test foo
     bar
 
 
-   Stack
+   References
 
   • test:2:10
 ```
@@ -164,7 +164,7 @@ $ esc env get myorg/test data.nums[1]
     2
 
 
-   Stack
+   References
 
   • test:7:15
 ```
@@ -190,7 +190,7 @@ $ esc env get myorg/test greeting
     ${salutation}, ${name}
 
 
-   Stack
+   References
 
   • test:9:15
 
