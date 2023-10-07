@@ -1,0 +1,257 @@
+{{ define "hero" }}
+    {{ partial "hero" (dict "title" .Params.title) }}
+{{ end }}
+
+{{ define "main" }}
+    {{ $pageContext := . }}
+    <h2 class="text-center mt-12">Internal developer platform-in-a-box</h2>
+
+    <section id="challenges" class="container mx-auto my-16">
+        <div class="max-w-5xl mx-auto text-center px-6">
+            <h3>Challenges for platform teams</h3>
+        </div>
+        <div class="flex flex-wrap justify-content items-stretch text-left my-4">
+            {{ range $item := .Params.challenges.items }}
+                <div class="w-full lg:w-1/3 p-4">
+                    <div class="h-full card bg-white p-4">
+                        <div class="icon-section mb-8">
+                            <img src="/images/product/esc-legend-{{ $item.number }}.svg" alt="#{{ $item.number }}" />
+                        </div>
+                        <div>
+                            <h5>{{ $item.title }}</h5>
+                        </div>
+                        <div class="mt-6">
+                            <p>{{ $item.description }}</p>
+                        </div>
+                    </div>
+                </div>
+            {{ end }}
+        </div>
+    </section>
+
+    <section id="solutions" class="container mx-auto my-16">
+        <div class="max-w-5xl mx-auto text-center px-6">
+            <h3>How Pulumi’s platform-in-a-box can help</h3>
+            <p>Internal developer platforms (IDPs) enable developers to quickly provision approved infrastructure, boosting productivity with pre-configured architectures, automated testing, and deployment adhering to organizational standards.</p>
+        </div>
+        <div class="md:flex mx-auto mb-8">
+            <div class="md:w-1/3 p-4">
+                <div class="text-center p-6 h-full">
+                    {{ partial "color-icon.html" (dict "icon" "lightning" "icon_color" "yellow") }}
+                    <h5>Boost developer productivity</h5>
+                    <p>
+                        Help your developers ship faster by abstracting the complexities of configuring, testing, and deploying infrastructure. Provide self-serve infrastructure and eliminate bottlenecks on platform teams.
+                    </p>
+                </div>
+            </div>
+            <div class="md:w-1/3 p-4">
+                <div class="text-center p-6 h-full">
+                    {{ partial "color-icon.html" (dict "icon" "gavel" "icon_color" "salmon") }}
+                    <h5>Enforce standards and compliance</h5>
+                    <p>
+                        Make sure infrastructure is standardized and follows company standards and compliance. Distribute approved templates and enforce processes for testing and deployment.
+                    </p>
+                </div>
+            </div>
+            <div class="md:w-1/3 p-4">
+                <div class="text-center p-6 h-full">
+                    {{ partial "color-icon.html" (dict "icon" "eye" "icon_color" "purple") }}
+                    <h5>Increase visibility and observability</h5>
+                    <p>
+                        Always know what infrastructure is running and where so you can monitor costs, identify security risks, update software, and more.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="md:flex justify-center mx-auto mb-8">
+            <div class="md:w-1/3 p-4">
+                <div class="text-center p-6 h-full">
+                    {{ partial "color-icon.html" (dict "icon" "puzzle" "icon_color" "purple") }}
+                    <h5>IDP solutions out-of-the-box</h5>
+                    <p>
+                        Use Pulumi building blocks to build every layer of your IDP. Building blocks are composable and programmable via rich APIs, with open source and SaaS options available.
+                    </p>
+                </div>
+            </div>
+            <div class="md:w-1/3 p-4">
+                <div class="text-center p-6 h-full">
+                    {{ partial "color-icon.html" (dict "icon" "collab" "icon_color" "blue") }}
+                    <h5>Collaborate across DevSecOps</h5>
+                    <p>
+                        Pulumi’s infrastructure and policy as code engine foster collaboration between developers, security, and operations through common, popular programming languages.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="case-studies" class="mx-auto my-16 py-16">
+            <h3 class="text-center mb-12">{{ .Params.case_studies.title }}</h3>
+            <div class="lg:flex">
+                {{ range $item := .Params.case_studies.items }}
+                    <div class="lg:w-1/3 px-4 mb-12 lg:mb-0">
+                        <div class="flex flex-col h-full card p-6 bg-white relative">
+                            <p class="text-left mt-0 italic font-semibold text-black">{{ $item.quote }}</p>
+                            <div class="w-1/3 my-4">
+                                {{ partial "customer-logo.html" (dict "logo" $item.image) }}
+                            </div>
+
+                            <div class="card-cta-btn text-center">
+                                <a class="btn-secondary" href="{{ $item.link }}">Read the case study</a>
+                            </div>
+                        </div>
+                    </div>
+                {{ end }}
+            </div>
+    </section>
+
+    <section id="how-it-works" class="container mx-auto my-16 pt-8">
+        <div class="max-w-5xl mx-auto text-center px-6">
+            <h3>How Pulumi for platform teams works</h3>
+            <p>Pulumi offers all the building blocks needed to build internal developer platforms (IDPs). Use them together as a complete IDP solution or integrate components selectively into your existing IDP via rich APIs.</p>
+        </div>
+        <img src="/images/product/platform-teams-diagram.png" alt="Pulumi for Platform Teams architecture diagram" />
+    </section>
+
+    <section id="developer-control" class="mb-8 px-6 lg:px-0 relative">
+        <div class="shape-background home-background-yellow-left">
+            <div class="shape-container flex flex-row-reverse">
+                <div class="dot-background-container self-end">
+                    <div class="dot-background-overlay"></div>
+                    <div class="dot-background no-animate"></div>
+                </div>
+                <div class="circle-left"></div>
+                <div class="circle-right"></div>
+            </div>
+        </div>
+
+        <div class="container mx-auto">
+            <div class="flex flex-col lg:flex-row">
+                <div class="w-full my-auto lg:w-1/2 lg:mr-32 z-10 p-8">
+                    {{ partial "color-icon.html" (dict "icon" "code" "icon_color" "yellow") }}
+                    <h3>Developer Control</h3>
+                    <p>Define standard infrastructure as code templates in your preferred programming language with Pulumi, allowing developers in your organization to self-service infrastructure. Make self-service provisioning easy for developers with Pulumi’s out-of-the-box portal or integrate your Backstage portal.</p>
+                </div>
+                <div class="w-full lg:w-1/2 block lg:flex flex-col lg:justify-center p-6 md:pl-24 xl:pl-0">
+                    {{ range $item := .Params.control.items }}
+                        <div class="w-full p-4">
+                            <div class="h-full card bg-white p-4">
+                                <div>
+                                    <h5>{{ $item.title }}</h5>
+                                </div>
+                                <div class="mt-6">
+                                    <p>{{ $item.description }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="integration-and-delivery" class="py-12 px-6 lg:px-0 relative">
+        <div class="shape-background home-background-salmon-right">
+            <div class="shape-container flex">
+                <div class="dot-background-container self-end">
+                    <div class="dot-background-overlay"></div>
+                    <div class="dot-background no-animate"></div>
+                </div>
+                <div class="circle-left"></div>
+                <div class="circle-right"></div>
+            </div>
+        </div>
+
+        <div class="container mx-auto flex flex-col lg:flex-row">
+            <div class="w-full lg:w-1/2 block lg:flex flex-col lg:justify-center p-6 md:pl-24 xl:pl-0">
+                {{ range $item := .Params.integration.items }}
+                    <div class="w-full p-4">
+                        <div class="h-full card bg-white p-4">
+                            <div>
+                                <h5>{{ $item.title }}</h5>
+                            </div>
+                            <div class="mt-6">
+                                <p>{{ $item.description }}</p>
+                            </div>
+                        </div>
+                    </div>
+                {{ end }}
+            </div>
+            <div class="w-full my-auto lg:w-1/2 order-first lg:order-last lg:ml-32 z-10 px-8">
+                {{ partial "color-icon.html" (dict "icon" "gear" "icon_color" "salmon") }}
+                <h3>Integration & delivery</h3>
+                <p>After setting up your portal and templates, automate a standardized deployment process by integrating your existing CI/CD tools. Use Pulumi Deployments for managed deployments with advanced capabilities and integrations. For more control, opt for Pulumi Automation API to program and operate self-hosted deployments.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="security" class="my-12 lg:py-12 px-6 lg:px-0 relative">
+        <div class="shape-background home-background-purple-left">
+            <div class="shape-container">
+                <div class="dot-background-container">
+                    <div class="dot-background-overlay"></div>
+                    <div class="dot-background no-animate"></div>
+                </div>
+                <div class="circle-left"></div>
+                <div class="circle-right"></div>
+            </div>
+        </div>
+
+        <div class="container mx-auto">
+            <div class="flex flex-col lg:flex-row">
+                <div class="w-full my-auto lg:w-1/2 lg:mr-32 z-10 p-8">
+                    {{ partial "color-icon.html" (dict "icon" "security" "icon_color" "purple") }}
+                    <h3>Security, monitoring, and logging</h3>
+                    <p>Secure, monitor, and log infrastructure deployed by your IDP. Set up deployment guardrails that enforce compliance. Receive detailed history, tracking, and audit logs for infrastructure. Manage configurations and secrets centrally and securely, ensuring you have visibility and control over who can access config & secrets.</p>
+                </div>
+                <div class="w-full lg:w-1/2 block lg:flex flex-col lg:justify-center p-6 md:pl-24 xl:pl-0">
+                    {{ range $item := .Params.security.items }}
+                        <div class="w-full p-4">
+                            <div class="h-full card bg-white p-4">
+                                <div>
+                                    <h5>{{ $item.title }}</h5>
+                                </div>
+                                <div class="mt-6">
+                                    <p>{{ $item.description }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="onboarding" class="container mx-auto justify-center text-center my-16 p-4">
+        <h3 class="mb-8">Oboarding help is available</h3>
+        <div class="card max-w-7xl mx-auto bg-white px-4 py-12">
+            <div class="flex flex-wrap justify-content items-stretch text-left mb-12">
+                <div class="w-full lg:w-1/4 px-12">
+                    <h5>Platform assessment</h5>
+                    <p>We have architects available to assist you with free assessments and recommendations.</p>
+                </div>
+                <div class="w-full lg:w-1/4 px-12">
+                    <h5>Platform workshops</h5>
+                    <p>Our engineers present workshops that teach you how to use Pulumi and IaC to accomplish your IDP goals.</p>
+                </div>
+                <div class="w-full lg:w-1/4 px-12">
+                    <h5>Template building</h5>
+                    <p>Get help from our experts on building internal infrastructure templates for any cloud and any programming language.</p>
+                </div>
+                <div class="w-full lg:w-1/4 px-12">
+                    <h5>Migration services</h5>
+                    <p>We can help you migrate from your existing Terraform or IaC tool and offer solutions for hybrid IaC scenarios.</p>
+                </div>
+            </div>
+            <a class="btn-secondary" href="/contact">Contact us</a>
+        </div>
+    </section>
+
+    <section id="form" class="container mx-auto justify-center text-center my-16 p-4">
+        <div class="w-full lg:w-1/3 card bg-white mx-auto p-12">
+            <h3>Talk to an architect</h3>
+            <p>Ready to build your IDP with Pulumi? Our architects are available to providea free consultation and recommendations on how to get started.</p>
+            <pulumi-hubspot-form form-id="2c0ddce4-175a-4278-8ded-ca67d615bd59" class="mt-10"></pulumi-hubspot-form>
+        </div>
+    </section>
+{{ end }}
