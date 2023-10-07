@@ -223,11 +223,13 @@
                 {{ partial "accordian-header" (dict "text" "What secrets and configuration providers are supported?" "large_header" true) }}
                 <div class="accordion-item-body-no-animation text-base">
                     <ul>
-                        <li>Cyberark Literal </li>
                         <li>AWS OIDC</li>
-                        <li>Pulumi Stack Reference</li>
-                        <li>1Password</li>
-                        <li>Vault</li>
+                        <li>AWS Secrets Manager</li>
+                        <li>Azure OIDC</li>
+                        <li>Azure KeyVault</li>
+                        <li>GCP OIDC</li>
+                        <li>GCP Secrets Manager</li>
+
                     </ul>
                 </div>
             </li>
@@ -235,7 +237,7 @@
                 {{ partial "accordian-header" (dict "text" "How are secrets stored and transmitted securely?" "large_header" true) }}
                 <div class="accordion-item-body-no-animation text-base">
                     <p>
-                        Pulumi ESC encrypts all data at rest using per-environment managed encryption keys.  All API routes serving the Pulumi ESC API are HTTPS, and authenticated via Pulumi Access Token.
+                        Pulumi ESC encrypts all data at rest using AWS S3 encryption. All API routes serving the Pulumi ESC API are HTTPS, and authenticated via Pulumi Access Token.
                     </p>
                 </div>
             </li>
