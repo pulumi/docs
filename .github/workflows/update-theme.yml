@@ -1,7 +1,7 @@
 name: "Scheduled jobs: Update Hugo modules"
 on:
   schedule:
-    - cron:  '*/30 * * * *'
+    - cron:  '*/15 * * * *'
   workflow_dispatch:
 jobs:
   merge:
