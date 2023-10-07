@@ -458,8 +458,7 @@ In order to reference an environment, we just add a new `environment:` section a
 
 ```yaml
 environment:
-  imports:
-    test
+  - test
 config:
   # normal pulumi config
 ```
