@@ -611,3 +611,16 @@ Pulumi CLI only creates or updates tags which are listed in the config. If you r
 Stack tags applied by Pulumi CLI are listed in the `Tags` section of the Overview tab:
 
 ![Tags applied by Pulumi CLI](/images/docs/concepts/stack-config-tags.png)
+
+## Using ESC Environments from Pulumi Stack Config
+
+Often there is common configuration and secrets you do not want to duplicate in various stack configuration files.  ESC Environments can help with that!
+
+Once you have a [ESC Environment](/docs/concepts/environments/) setup and you are [projecting pulumi config](/docs/concepts/environments/#projecting-pulumi-config), you can import that environment (or multiple environments) into your Pulumi stack.
+
+```yaml
+environment:
+  - test
+config:
+    # normal pulumi config
+```
