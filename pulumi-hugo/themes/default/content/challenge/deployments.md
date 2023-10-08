@@ -54,7 +54,7 @@ We will first create a project in the Pulumi Service console. Navigate to [app.p
 
 Follow the Get Started commands on the Overview page of your new stack. Create a new directory for your project in your CLI, and then pull down your project. Don't run `pulumi up` just yet. Next, create a git repository in your project directory and push it to GitHub.
 
-![alt_text](/images/challenge/Step2.gif "pull down project locally")
+![alt_text](https://www.pulumi.com/uploads/static/images/challenge/Step2.gif "pull down project locally")
 
 ### Step 3. Set Up Pulumi Push to Deploy
 
@@ -72,7 +72,7 @@ Select the Actions button, then select "Update", and Deploy to start a deploymen
 
 Lastly, validate that the endpoints of your deployed infrastructure is working. You can copy out the endpoint URL string from the deployment logs or under the Outputs section of the Overview tab.
 
-![alt_text](/images/challenge/Step5.gif "validate endpoints")
+![alt_text](https://www.pulumi.com/uploads/static/images/challenge/Step5.gif "validate endpoints")
 
 Congratulations!. You've completed this Pulumi Challenge. If you'd like to tear down all of these resources, run `pulumi destroy -y`. Otherwise, have fun playing around with your infrastructure stack! Add whatever you like, and with Pulumi Deployments, committing a change to the git repo will kick off a new deployment. :)
 

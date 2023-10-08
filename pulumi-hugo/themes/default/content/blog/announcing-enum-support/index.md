@@ -169,22 +169,22 @@ Using the provided constants, you can avoid referring back to the documentation 
 
 {{% choosable language typescript %}}
 
-![ENUM_TYPESCRIPT](ts-enum.gif)
+![ENUM_TYPESCRIPT](https://www.pulumi.com/uploads/content/blog/announcing-enum-support/ts-enum.gif)
 
 {{% /choosable %}}
 {{% choosable language python %}}
 
-![ENUM_PYTHON](python-enum.gif)
+![ENUM_PYTHON](https://www.pulumi.com/uploads/content/blog/announcing-enum-support/python-enum.gif)
 
 {{% /choosable %}}
 {{% choosable language csharp %}}
 
-![ENUM_CSHARP](csharp-enum.gif)
+![ENUM_CSHARP](https://www.pulumi.com/uploads/content/blog/announcing-enum-support/csharp-enum.gif)
 
 {{% /choosable %}}
 {{% choosable language go %}}
 
-![ENUM_GO](go-enum.gif)
+![ENUM_GO](https://www.pulumi.com/uploads/content/blog/announcing-enum-support/go-enum.gif)
 
 {{% /choosable %}}
 
