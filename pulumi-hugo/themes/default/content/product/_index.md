@@ -16,8 +16,7 @@ overview:
     description: |
         Build and ship infrastructure faster using languages you know and love. Use Pulumi’s open source SDK to provision infrastructure on any cloud, and securely and collaboratively build and manage infrastructure using Pulumi Cloud.
 
-key_features:
-    title: Key features
+key_features_above:
     items:
         - title: "Author in any language, deploy to any cloud"
           sub_title: "Pulumi Infrastructure as Code Engine"
@@ -31,12 +30,46 @@ key_features:
               - title: Code faster
                 description: |
                     Write infrastructure code in languages you love using your IDE and any language ecosystem tool.
+                icon: code
+                color: yellow
               - title: Generate code with AI
                 description: |
                     Ask [Pulumi AI](/ai/) to create your desired infrastructure code with natural language prompts.
+                icon: cycle
+                color: salmon
               - title: Write Policy as Code
                 description: |
                     Write Policy as Code in programming languages to enforce best practices with [Crossguard](/crossguard/).
+                icon: shield
+                color: blue
+        - title: One source of truth for your Secrets and Configurations
+          sub_title: "Pulumi ESC: Environments, Secrets and Configurations"
+          description:
+            Centralized environments, secrets, and configurations management for cloud applications and infrastructure. Define environments as collections of secrets and configurations, which can be pulled from any source and locked down with RBAC, versioning and audit controls.
+          image: "/images/product/pulumi-iac-code.png"
+          button:
+            text: "Learn more about Pulumi ESC"
+            link: "/product/esc/"
+          features:
+              - title: Frictionless Security
+                description: |
+                    Easy-to-use single source of truth for all configurations with guardrails. Seamlessly adopt short-lived dynamic secrets.
+                icon: lock
+                color: purple
+              - title: Improve Developer Efficiency
+                description: |
+                    Never have downtime over changed configurations. Change once and have it updated everywhere. 
+                icon: lightning
+                color: yellow
+              - title: Control Access and Compliance
+                description: |
+                    Enforce least-privileged access through role-based access controls. All changes are fully logged for auditing.
+                icon: gavel
+                color: salmon
+        
+key_features:
+    title: Key features
+    items:
 
         - title: "Create infrastructure automation workflows"
           sub_title: "Pulumi Automation API"
