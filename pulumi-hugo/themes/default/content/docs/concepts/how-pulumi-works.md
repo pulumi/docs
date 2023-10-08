@@ -6,7 +6,7 @@ h1: "How Pulumi works"
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   concepts:
-    weight: 11
+    weight: 12
 aliases:
 - /docs/reference/how/
 - /docs/tour/basics-programs/

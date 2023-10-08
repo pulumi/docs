@@ -6,7 +6,7 @@ h1: Pulumi Cloud REST API docs
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   pulumicloud:
-    weight: 11
+    weight: 12
     identifier: pulumi-cloud-rest-api
 aliases:
   - /docs/reference/service-rest-api/
