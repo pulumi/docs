@@ -37,16 +37,79 @@
         </div>
     </section>
 
-    <section id="info-graphic" class="relative p-4">
-        <div class="shape-background product-graphic-section">
-            <div class="shape-container">
-                <div class="circle-left"></div>
-            </div>
-        </div>
-
+    <section id="info-graphic" class="relative p-4 mb-16">
         <div class="container mx-auto rounded-xl bg-white">
             <img class="block z-10" src="/images/product/pulumi_marketecture.png" alt="Pulumi Cloud Engineering Platform" />
         </div>
+    </section>
+
+    <section id="key-features-above">
+        {{ range $index, $feature := .Params.key_features_above.items }}
+            <div class="mb-16 pt-8 relative">
+                {{ if eq $index 0 }}
+                    <div class="shape-background home-background-yellow-left pt-24">
+                        <div class="shape-container flex">
+                            <div class="circle-left"></div>
+                            <div class="circle-right"></div>
+                        </div>
+                    </div>
+
+                    <div class="container mx-auto mt-16 text-center w-11/12 sm:w-9/12">
+                        <h3>{{ $feature.title }}</h3>
+                        <div class="flex flex-col lg:flex-row">
+                            <div class="w-full my-auto lg:w-1/2 lg:mr-32 z-10 p-8 text-left">
+                                <h4>{{ $feature.sub_title}}</h4>
+                                <p class="text-lg">{{ $feature.description | markdownify }}</p>
+                            </div>
+                            <div class="w-full lg:w-1/2 block lg:flex lg:justify-center p-6 md:pl-24 xl:pl-0">
+                                <img src="/images/product/pulumi-iac-code.png" alt="Pulumi infrastructure as code example" />
+                            </div>
+                        </div>
+                    </div>
+                {{ else }}
+                    <div class="shape-background home-background-salmon-right pt-24">
+                        <div class="shape-container">
+                            <div class="circle-left"></div>
+                            <div class="circle-right"></div>
+                        </div>
+                    </div>
+
+                    <div class="container mx-auto mt-16 text-center w-11/12 sm:w-9/12">
+                        <h3>{{ $feature.title }}</h3>
+                        <div class="flex flex-col lg:flex-row">
+                            <div class="w-full lg:w-1/2 block lg:flex lg:justify-center p-6 md:pl-24 xl:pl-0">
+                                <img src="/images/product/pulumi-iac-code.png" alt="Pulumi infrastructure as code example" />
+                            </div>
+                            <div class="w-full my-auto lg:w-1/2 lg:ml-32 z-10 p-8 text-left">
+                                <h4>{{ $feature.sub_title}}</h4>
+                                <p class="text-lg">{{ $feature.description | markdownify }}</p>
+                            </div>
+                        </div>
+                    </div>
+                {{ end}}
+
+                <div class="max-w-7xl mx-auto flex flex-wrap justify-content items-stretch text-left my-4">
+                    {{ range $item := $feature.features }}
+                        <div class="w-full lg:w-1/3 p-3">
+                            <div class="h-full card bg-white p-8">
+                                <div class="icon-section mb-8">
+                                    {{ partial "color-icon.html" (dict "icon" $item.icon "icon_color" $item.color) }}
+                                </div>
+                                <div>
+                                    <h5>{{ $item.title }}</h5>
+                                </div>
+                                <div class="mt-6">
+                                    <p>{{ $item.description | markdownify }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    {{ end }}
+                </div>
+                <div class="pt-8 text-center">
+                    <a href="{{ $feature.button.link }}" class="btn-secondary block sm:inline">{{ $feature.button.text }}</a>
+                </div>
+            </div>
+        {{ end }}
     </section>
 
     <section id="key-features">
