@@ -34,7 +34,7 @@ Pods have a specific [lifecycle](https://kubernetes.io/docs/concepts/workloads/P
 
 When deploying an application, you can see the status of the Pods.
 
-![Deployment](kubectl-pod-status.gif)
+![Deployment](https://www.pulumi.com/uploads/content/blog/getting-started-with-k8s-part2/kubectl-pod-status.gif)
 
 ## Services
 

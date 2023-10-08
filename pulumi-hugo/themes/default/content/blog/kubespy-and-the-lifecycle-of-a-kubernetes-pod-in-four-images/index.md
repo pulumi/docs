@@ -21,7 +21,7 @@ of Pulumi is fine-grained status updates for Kubernetes resources. On
 the CLI they look like this:
 <!--more-->
 
-![status-rich](./status-rich.gif)
+![status-rich](https://www.pulumi.com/uploads/content/blog/kubespy-and-the-lifecycle-of-a-kubernetes-pod-in-four-images/status-rich.gif)
 
 But wait --- how does this work exactly? What is *actually happening*
 when you deploy a `Pod` to a cluster? How does a `Service` go from

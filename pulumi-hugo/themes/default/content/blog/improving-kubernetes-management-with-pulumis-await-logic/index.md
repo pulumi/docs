@@ -42,7 +42,7 @@ the resource status has been verified by the await logic.
 You can see an example of what this looks like in practice in the
 screencast below:
 
-![status-rich](./status-rich.gif)
+![status-rich](https://www.pulumi.com/uploads/content/blog/improving-kubernetes-management-with-pulumis-await-logic/status-rich.gif)
 
 Pulumi's sophisticated await logic helps customers with a couple use
 cases:

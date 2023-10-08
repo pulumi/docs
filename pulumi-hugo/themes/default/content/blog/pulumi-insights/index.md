@@ -40,11 +40,11 @@ Our new [Pulumi AI](/ai) is an assistant purpose-built for creating cloud infras
 
 Using natural language, you can ask to accomplish a specific Cloud Infrastructure goal, and receive a Pulumi program in your favorite language. In addition, Pulumi AI supports iterating on your cloud infrastructure allowing the addition of new features, improving security and performance, fixing correctness issues and clarifying requirements.
 
-<img src="pulumiai-cloudflare+s3.gif" alt="Pulumi AI - Cloudflare + S3" width=600/>
+<img src="https://www.pulumi.com/uploads/content/blog/pulumi-insights/pulumiai-cloudflare+s3.gif" alt="Pulumi AI - Cloudflare + S3" width=600/>
 
 The open source [`pulumi-ai`](https://github.com/pulumi/pulumi-ai) CLI takes these ideas even further, by interactively deploying any cloud infrastructure you request using natural language prompts. You can build arbitrarily complex cloud infrastructure, without requiring detailed knowledge of specific APIs! Of course, since we're using Pulumi’s Automation API under the hood, you can go to the Pulumi Cloud console to see everything that has been deployed, and even jump straight into your Cloud Console to inspect the results.
 
-![`pulumi-ai` CLI](pulumi-ai.gif)
+![`pulumi-ai` CLI](https://www.pulumi.com/uploads/content/blog/pulumi-insights/pulumi-ai.gif)
 
 Pulumi AI will enhance your team's ability to go from concept to product. This demo shows Pulumi AI taking natural language input and deploying cloud infrastructure and services which are exposed live on the internet, constantly updating as you refine your request.
 
