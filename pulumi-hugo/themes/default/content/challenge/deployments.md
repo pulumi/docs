@@ -60,7 +60,7 @@ Follow the Get Started commands on the Overview page of your new stack. Create a
 
 Return to the Pulumi Service console, select the Settings tab, and then select Deploy. To enable Pulumi Deployments, first install the [Pulumi GitHub App](https://github.com/apps/pulumi). Once installed, you will be presented with Deployment settings. Select your GitHub organization/repository, the branch, and the folder you want to connect. Scroll down to the Environment variable and provide your cloud credentials (e.g., for AWS, it would be AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, AWS_SESSION_TOKEN).
 
-![alt_text](/images/challenge/Step3.gif "set up push to deploy")
+![alt_text](https://www.pulumi.com/uploads/static/images/challenge/Step3.gif "set up push to deploy")
 
 ### Step 4. Deploy Stack with Pulumi Deployments
 
