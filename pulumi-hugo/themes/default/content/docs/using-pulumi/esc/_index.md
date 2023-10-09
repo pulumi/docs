@@ -47,7 +47,7 @@ Go deeper on how environments can be managed using [Pulumi ESC](/docs/concepts/e
 
 ## Getting Started with Pulumi ESC
 
-Here is a link to our [fancy new tutorial](/docs/using-pulumi/esc/get-started/).
+Check out the [Pulumi ESC tutorial](/docs/using-pulumi/esc/get-started/).
 
 ## ESC CLI overview
 
