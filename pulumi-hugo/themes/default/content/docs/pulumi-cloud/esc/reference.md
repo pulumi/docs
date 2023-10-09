@@ -7,7 +7,7 @@ menu:
   pulumicloud:
     identifier: reference
     parent: esc
-    weight: 2
+    weight: 4
 ---
 
 ```yaml
