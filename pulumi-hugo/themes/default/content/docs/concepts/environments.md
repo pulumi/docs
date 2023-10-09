@@ -55,7 +55,7 @@ Only the environments the user has access to will be listed.
 
 ### Set a value
 
-To set a value, use `esc env set orgName/environmentName key value`
+To set a value, use `esc env set orgName/environmentName key value`:
 
 ```bash
 $ esc env set myorg/test foo bar
