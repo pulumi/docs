@@ -619,6 +619,7 @@ Often there is common configuration and secrets you do not want to duplicate in 
 Once you have a [ESC Environment](/docs/concepts/environments/) setup and you are [projecting pulumi config](/docs/concepts/environments/#projecting-pulumi-config), you can import that environment (or multiple environments) into your Pulumi stack.
 
 ```yaml
+# import the test Pulumi ESC Environment and all of it's configuration
 environment:
   - test
 config:
