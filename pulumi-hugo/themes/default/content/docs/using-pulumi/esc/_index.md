@@ -9,7 +9,7 @@ menu:
   weight: 4
 ---
 
-Pulumi ESC Environments allow teams to tackle configuration complexity at scale, alleviating maintenance and operational burden and reducing costly mistakes, and creating a more secure by default posture. Let's walk through some of the key capabilities of ESC Environments.
+Pulumi ESC allows teams to tackle configuration complexity at scale, alleviating maintenance and operational burden and reducing costly mistakes, and creating a more secure by default posture. Let's walk through some of the key capabilities of Pulumi ESC.
 
 ## Import - Removing Duplication and Copy/Paste
 
