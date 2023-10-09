@@ -259,7 +259,7 @@ Navigate to your organization in the Pulumi Cloud console, choose Environments i
 
 ![Environments Intelligent YAML Editor](/images/docs/concepts/environments-editor.png)
 
-## Adding in OIDC and Secrets providers
+## Adding OIDC and Secrets providers
 
 So far we have been looking at static config.  What about dynamic config or secrets?
 
