@@ -4,9 +4,9 @@ title_tag: Environments, Secrets, and Configuration (ESC)
 h1: Environments, Secrets, and Configuration (ESC)
 meta_desc: Pulumi ESC allows you to compose and manage hierarchical collections of configuration and secrets and consume them in various ways.
 menu:
- usingpulumi:
-  identifier: environments_esc
-  weight: 4
+  usingpulumi:
+    identifier: esc
+    weight: 4
 ---
 
 Pulumi ESC allows teams to tackle configuration complexity at scale, alleviating maintenance and operational burden and reducing costly mistakes, and creating a more secure by default posture. Let's walk through some of the key capabilities of Pulumi ESC.
