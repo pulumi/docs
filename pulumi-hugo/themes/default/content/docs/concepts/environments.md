@@ -19,11 +19,7 @@ Pulumi ESC enables teams to create collections of configuration and secrets call
 Teams can have as many environments as they need to manage their complexity.
 
 {{% notes type="info" %}}
-The CLI examples below use the new standalone `esc` CLI. All of the same commands work with the `pulumi` CLI as well.
-
-While `pulumi` primary focus is Infrastructure-as-Code (IaC) scenarios, `esc` can be used in many more scenarios and is not limited to IaC alone.
-
-But `pulumi` has first class support for ESC environments!  Stacks can import environments and work natively with `pulumi up` and `pulumi preview`.
+The examples below use the new standalone `esc` CLI, but all `esc` subcommands are available in the `pulumi` CLI as well. The `pulumi` CLI also has native support for ESC environments via `pulumi preview` and `pulumi up`. See the [Using with Pulumi IaC](#using-with-pulumi-iac) documentation for details.
 {{% /notes %}}
 
 ## Create a new environment
@@ -82,7 +78,9 @@ $ esc env get myorg/test foo
   • test:2:10
 ```
 
-Please note that get does not resolve dynamic values or secrets, it only shows you the value.  
+{{% notes type="info" %}}
+Please note that `get` does not resolve providers or secrets. In that case it will display the definition and [unknown] for the value.  To resolve secret or provider values, you need to [open the environment](#getting-access-to-secret-values).
+{{% /notes %}}
 
 ### Get all values
 
