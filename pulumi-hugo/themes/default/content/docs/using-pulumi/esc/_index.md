@@ -37,7 +37,7 @@ Teams can create environments and then control what permissions others have to t
 
 ## OIDC and access Secrets
 
-Teams can setup OIDC logins attached to environments, which then can be used to retrieve dynamic short-lived credentials. They can also pull secrets from other secrets managers and vaults.
+Teams can setup OIDC in their cloud providers to allow environments to retrieve dynamic short-lived credentials. They can also pull secrets from other secrets managers and vaults.
 
 These can be used with [Pulumi IaC](/docs/concepts/environments/#using-with-pulumi-iac) with `pulumi up`. These can be used to [run external CLIs](/docs/concepts/environments/#running-third-party-commands-using-pulumi-esc-secrets-and-config) like `aws`, `kubectl`, and more.
 
