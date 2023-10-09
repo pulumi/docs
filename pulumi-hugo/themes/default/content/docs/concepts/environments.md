@@ -255,7 +255,7 @@ Run `esc edit --help` for more options.
 
 ### Editing config as YAML in the Pulumi Cloud console
 
-Navigate to your org in the Pulumi console, go to Environments in the left hand navigation, and select your environment.
+Navigate to your organization in the Pulumi Cloud console, choose Environments in the left-hand navigation, and select your environment.
 
 ![Environments Intelligent YAML Editor](/images/docs/concepts/environments-editor.png)
 
