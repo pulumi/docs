@@ -86,7 +86,7 @@ Please note that get does not resolve dynamic values or secrets, it only shows y
 
 ### Get all values
 
-To get all values, we run `esc env set orgName/environmentName` without the property name.
+To get all values, run `esc env set orgName/environmentName` without the property name:
 
 ```bash
 $ esc env set myorg/test foo
