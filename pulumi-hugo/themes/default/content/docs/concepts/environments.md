@@ -190,7 +190,7 @@ $ esc env get myorg/test greeting
 
 ### Editing config as YAML with the CLI
 
-To edit config in a default editor, use `pulumi edit orgName/environmentName`.
+To edit config in a default editor, use `pulumi edit orgName/environmentName`:
 
 ```bash
 $ esc env edit myorg/test
