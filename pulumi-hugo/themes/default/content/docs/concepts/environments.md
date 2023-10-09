@@ -253,7 +253,7 @@ $ esc env edit --editor=code myorg/test
 
 Run `esc edit --help` for more options.
 
-### Editing config as yaml using the Pulumi console
+### Editing config as YAML in the Pulumi Cloud console
 
 Navigate to your org in the Pulumi console, go to Environments in the left hand navigation, and select your environment.
 
