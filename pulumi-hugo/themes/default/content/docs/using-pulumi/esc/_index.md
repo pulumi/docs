@@ -35,7 +35,7 @@ Here is one way those teams might organize their environments:
 
 Teams can create environments and then control what permissions others have to those environments. They can control who can update and preview environments, as well as who can open environments and see secrets. Audit logs let teams know who has changed or accessed configuration.
 
-## OIDC and access Secrets
+## Dynamic Secrets Providers
 
 Teams can setup OIDC in their cloud providers to allow environments to retrieve dynamic short-lived credentials. They can also pull secrets from other secrets managers and vaults.
 
