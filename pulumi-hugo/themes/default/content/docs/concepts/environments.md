@@ -63,7 +63,7 @@ $ esc env set myorg/test foo bar
 
 ### Get a value
 
-To get a preview of that value, use `esc env set orgName/environmentName key`
+To get a preview of that value, use `esc env set orgName/environmentName key`:
 
 ```bash
 $ esc env get myorg/test foo
