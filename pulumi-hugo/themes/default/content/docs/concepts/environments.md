@@ -188,7 +188,7 @@ $ esc env get myorg/test greeting
 
 ```
 
-### Editing config as yaml using the CLI
+### Editing config as YAML with the CLI
 
 To edit config in a default editor, use `pulumi edit orgName/environmentName`.
 
