@@ -10,6 +10,7 @@ menu:
 search:
   boost: true
   keywords:
+    - environments
     - secrets
     - configuration
 ---
