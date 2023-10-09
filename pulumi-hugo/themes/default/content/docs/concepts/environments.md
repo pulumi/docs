@@ -200,13 +200,13 @@ By default this will drop you into your `$SHELL` or vi as a fallback.
 
 ```shell
 values:
-    foo: bar
-    data:
-        active: true
-        nums:
-            - 1
-            - 2
-            - 3
+  foo: bar
+  data:
+    active: true
+    nums:
+      - 1
+      - 2
+      - 3
 ---
 # Please edit the environment definition above.
 # The object below is the current result of
