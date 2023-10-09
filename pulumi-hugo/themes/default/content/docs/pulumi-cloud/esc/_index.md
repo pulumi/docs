@@ -7,7 +7,6 @@ menu:
   pulumicloud:
     identifier: esc
     weight: 4
-    identifier: esc
 ---
 
 ## Pulumi ESC
