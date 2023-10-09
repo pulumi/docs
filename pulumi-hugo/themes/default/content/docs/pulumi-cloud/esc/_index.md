@@ -23,15 +23,15 @@ Pulumi ESC is offered as a fully managed cloud service in Pulumi Cloud (and Pulu
 
 Support for dynamic configuration providers allow Pulumi ESC to integrate with secrets stored in any other provider.  Organizations often use AWS OICD, AWS Secrets Manager, Vault, Azure OIDC, Azure KeyVault, GCP OIDC, and GCP Secrets Manager plus many more sources of truth for their secrets and configuration.  Pulumi ESC supports them all, providing a single interface to your configuration and secrets, no matter where their source of truth is.  Pulumi ESC works with these tools to provide improved management of secrets and configuration.
 
-Teams can setup OIDC in their cloud providers to allow environments to retrieve dynamic short-lived credentials. They can also pull secrets from other secrets managers and vaults.
+Teams can setup OIDC in their cloud providers to allow Environments to retrieve dynamic short-lived credentials. They can also pull secrets from other secrets managers and vaults.
 
-These can be used with [Pulumi IaC](/docs/concepts/environments/#using-with-pulumi-iac) with `pulumi up`. These can be used to [run external CLIs](/docs/concepts/environments/#running-third-party-commands-using-pulumi-esc-secrets-and-config) like `aws`, `kubectl`, and more.
+These credentials can be used with [Pulumi IaC](/docs/concepts/environments/#using-with-pulumi-iac) with `pulumi up` as well as used to [run external CLIs](/docs/concepts/environments/#running-third-party-commands-using-pulumi-esc-secrets-and-config) like `aws`, `kubectl`, and more.
 
 ## Import - Removing Duplication and Copy/Paste
 
 Environments contain collections of secrets and configuration, but can also import one or more other environments.  Values can be overridden, interpolated from other values, and arbitrarily nested.  This allows for flexible composition and reuse, and avoids copy paste.
 
-Platform and service teams can centralize and control common config and secrets by creating environments that other teams can import. They can trace what other environments or stacks are using their configuration and assess blast radius of any changes.
+Platform and service teams can centralize and control common configuration and secrets by creating Environments that other teams can import. They can trace what other Environments or stacks are using their configuration and assess the blast radius of any changes.
 
 ### Organizing Environments
 
@@ -43,7 +43,7 @@ Imagine a hypothetical dev organization comprised of a few teams:
 * The communications team, that manages secrets/config for the mailing service and texting service.
 * The central platform team, that owns most common config, including OIDC config and the keys/config for the feature flag system.
 
-Teams can manage permissions to these environments to minimize security exposure.
+Teams can manage permissions to these Environments to minimize security exposure.
 
 Here is one way those teams might organize their environments:
 
@@ -57,7 +57,7 @@ Environments are defined as YAML documents which can describe how to project and
 
 Pulumi ESC brokers access to secrest and configuration that live in other systems, and so authentication and granular RBAC are critical to ensure robust access controls across your organization. Pulumi ESC leverages the same Pulumi Cloud identity, RBAC, Teams, SAML/SCIM and scoped access tokens that are used for Pulumi IaC today, extending these all to managing access to Environments as well as Stacks.
 
-Teams can create environments and then control what permissions others have to those environments. They can control who can update and preview environments, as well as who can open environments and see secrets. Audit logs let teams know who has changed or accessed configuration.
+Teams can create and control access to their Environments. They can control who can update and preview Environments, as well as who can open Environments and retrieve their secrets. Audit logs let teams know who has changed or accessed configuration.
 
 ## Auditable
 
@@ -69,16 +69,16 @@ The `esc` CLI and the Pulumi ESC Rest API enables environments to be accessed fr
 
 ## Conceptual Overview of Environments
 
-Go deeper on how environments can be managed using [Pulumi ESC](/docs/concepts/environments/).
+Learn more about [managing Environments using Pulumi ESC](/docs/concepts/environments/).
 
 ## Getting Started with Pulumi ESC
 
-Check out the [Pulumi ESC tutorial](/docs/pulumi-cloud/esc/get-started/).
+Begin your journey with Pulumi ESC through a hands-on, self-paced [tutorial](/docs/using-pulumi/esc/get-started/).
 
 ## ESC CLI overview
 
-Please see [ESC CLI overview](/docs/esc-cli/) for details on interacting with environments using the command line.
+Please see [ESC CLI overview](/docs/esc-cli/) for details on interacting with Environments using the command line.
 
 ## Syntax Reference
 
-[Pulumi ESC yaml syntax](reference/) shows examples of simple and complex configuration, imports, and common providers.
+[The Pulumi ESC Syntax Reference documentation](reference/) shows examples of simple and complex configuration, imports, and common provider integrations.

@@ -15,7 +15,7 @@ Log in to the Pulumi Cloud.
 
 The Pulumi Cloud manages your Pulumi ESC environments. Simply run
 
-    $ pulumi login
+    $ esc login
 
 and this command will prompt you for an access token, including a way to launch your web browser to
 easily obtain one. You can script by using `PULUMI_ACCESS_TOKEN` environment variable.

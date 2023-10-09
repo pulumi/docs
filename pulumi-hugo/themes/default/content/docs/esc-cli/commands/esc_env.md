@@ -23,7 +23,7 @@ To begin working with environments, run the `env init` command:
 
 This will prompt you to create a new environment to hold secrets and configuration.
 
-For more information, please visit the project page: https://www.pulumi.com/docs/esc
+For more information, please visit the project page: https://www.pulumi.com/docs/pulumi-cloud/esc
 
 ## Options
 
