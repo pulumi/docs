@@ -47,7 +47,7 @@ class Program
     static Task<int> Main() => Deployment.RunAsync<MyStack>();
 }
 
-public MyStack : Stack
+public class MyStack : Stack
 {
     public MyStack()
     {
