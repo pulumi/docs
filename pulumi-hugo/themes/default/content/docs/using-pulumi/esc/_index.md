@@ -51,7 +51,7 @@ Check out the [Pulumi ESC tutorial](/docs/using-pulumi/esc/get-started/).
 
 ## ESC CLI overview
 
-Please see [ESC CLI overview](esc/) for details on interacting with environments using the command line.
+Please see [ESC CLI overview](/docs/esc-cli/) for details on interacting with environments using the command line.
 
 ## Syntax Reference
 
