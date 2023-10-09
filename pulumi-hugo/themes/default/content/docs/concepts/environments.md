@@ -165,9 +165,7 @@ $ esc env get myorg/test data.nums[1]
 
 ### Interpolated values
 
-Values do not have to be static. You can use interpolation to dynamically compose values from other values.
-
-For example:
+Values do not have to be static. You can use interpolation to dynamically compose values from other values. For example:
 
 ```bash
 $ esc env set myorg/test name World
