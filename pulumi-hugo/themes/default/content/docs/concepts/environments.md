@@ -109,9 +109,7 @@ $ esc env get myorg/test
 
 ### Structured Configuration
 
-Structured configuration is also supported and can be set using `esc env set orgName/environment name key value` where key uses . and array syntax.
-
-For example:
+Structured configuration is also supported and can be set using `esc env set orgName/environment name key value`, where the key parameter can use either object-property (`.`) or array `[]` syntax. For example:
 
 ```bash
 $ esc env set myorg/test data.active true
