@@ -40,7 +40,7 @@ The environment name must be specified in the `orgName/environmentName` format w
 
 ## Listing environments
 
-To see the list of environments, use `esc env ls`
+To see the list of environments, use `esc env ls`:
 
 ```bash
 $ esc env ls
