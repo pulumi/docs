@@ -251,7 +251,7 @@ You can also specify your editor using the `--editor` flag, such as:
 $ esc env edit --editor=code myorg/test
 ```
 
-Please run `esc edit --help` for more options.
+Run `esc edit --help` for more options.
 
 ### Editing config as yaml using the Pulumi console
 
