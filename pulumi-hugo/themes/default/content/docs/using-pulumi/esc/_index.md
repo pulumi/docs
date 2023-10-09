@@ -43,7 +43,7 @@ These can be used with [Pulumi IaC](/docs/concepts/environments/#using-with-pulu
 
 ## Conceptual Overview of Environments
 
-Go deeper on what [ESC environments](/docs/concepts/environments/) can do.
+Go deeper on how environments can be managed using [Pulumi ESC](/docs/concepts/environments/).
 
 ## Getting Started with Pulumi ESC
 
