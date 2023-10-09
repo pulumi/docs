@@ -590,7 +590,7 @@ and state files are now encrypted using the new secrets provider.
 
 With Pulumi ESC environments, you can manage secrets wherever they live. Pulumi ESC environments provide a centralized abstraction in front of the most common secrets manager/vaults while providing security through RBAC and audit controls.  
 
-### Multiple Teams that own secrets but have to share
+### Sharing Secrets Across Multiple Teams
 
 You may have multiple teams that each own different secrets and manage their lifetimes, and choose to store them in various AWS secret manager secrets.  
 
