@@ -4,7 +4,7 @@
 
 {{ define "main" }}
     {{ $pageContext := . }}
-    <section id="overview" class="container mx-auto my-16 lg:mt-16 lg:mb-8 px-6">
+    <!--<section id="overview" class="container mx-auto my-16 lg:mt-16 lg:mb-8 px-6">
         <div class="lg:flex">
             <div class="lg:w-1/2 lg:order-last mb-8 lg:mb-0 relative h-full">
                 <div class="rounded-xl shadow-2xl relative h-0 overflow-hidden" style="padding-bottom: 50.25%;">
@@ -23,10 +23,17 @@
                     Today’s cloud environments access a multitude of configurations – including network settings, deployment options, API Keys, and other important secrets, such as database credentials –  from many different types of cloud infrastructure and SaaS services. Every team stores these configurations in different locations, from different secrets managers to plaintext files. This sprawl leads to configurations that are untraceable and lack access controls, leading to operational bottlenecks, outages linked to human error, and security breaches. Pulumi ESC enables you to centrally manage all configurations and secrets across your organization.
                 </p>
                 <div class="my-8">
-                    <a class="btn-primary" href="">Learn More</a>
+                    <a class="btn-primary" href="">Get Started</a>
                 </div>
             </div>
         </div>
+    </section>-->
+    <section id="overview" class="max-w-5xl mx-auto text-center my-16 px-6">
+            <h3>Centralized environments, secrets, and configurations management for cloud applications and infrastructure</h3>
+            <p class="text-left">Today’s cloud environments access a multitude of configurations – including network settings, deployment options, API Keys, and other important secrets, such as database credentials –  from many different types of cloud infrastructure and SaaS services. Every team stores these configurations in different locations, from different secrets managers to plaintext files. This sprawl leads to configurations that are untraceable and lack access controls, leading to operational bottlenecks, outages linked to human error, and security breaches. Pulumi ESC enables you to centrally manage all configurations and secrets across your organization.</p>
+            <div class="mt-8">
+                <a href="/docs/get-started/" class="btn-primary">Get Started</a>
+            </div>
     </section>
 
     <section id="benefits" class="container mx-auto text-center my-16 px-6">
@@ -76,7 +83,7 @@
     </section>
 
     <section id="screenshot" class="container mx-auto my-16">
-        <div class="max-w-5xl mx-auto text-center">
+        <div class="max-w-5xl mx-auto text-center py-8">
             <h2>Centrally manage all environments</h2>
         </div>
         <div class="flex flex-wrap items-stretch">
@@ -99,7 +106,7 @@
     </section>
 
     <section id="screenshot" class="container mx-auto my-16">
-        <div class="max-w-5xl mx-auto text-center">
+        <div class="max-w-5xl mx-auto text-center pb-4">
             <h2>Natively integrated with your infrastructure</h2>
         </div>
         <div class="hidden lg:block">
@@ -189,7 +196,7 @@
                 {{ partial "accordian-header" (dict "text" "What is Pulumi Environments, Secrets and Configurations" "large_header" true) }}
                 <div class="accordion-item-body-no-animation text-base">
                     <p>
-                        Pulumi Environments, Secrets and Configuration (ESC), a new open source project and managed service as part of Pulumi Cloud that enables teams to manage hierarchical collections of configuration and secrets, and then consume those configuration and secrets from a variety of different infrastructure and application services. 
+                        Pulumi Environments, Secrets and Configuration (ESC), is an open source project and managed service as part of Pulumi Cloud that enables teams to manage hierarchical collections of configuration and secrets, and then consume those configuration and secrets from a variety of different infrastructure and application services. 
                     </p>
                     <p>
                         {{ "Pulumi ESC integrates with Pulumi Cloud identity and RBAC to provide rich control over access to secret configuration within an organization.  Pulumi ESC supports multiple Configuration Providers, enabling static key/value configuration, as well as dynamically retrieved configuration and secrets via OIDC and additional providers like 1Password and Vault.  Pulumi ESC is available via the new `esc` CLI, Pulumi Cloud, the Pulumi Cloud REST API, and Pulumi IaC stack configuration." | markdownify }}
