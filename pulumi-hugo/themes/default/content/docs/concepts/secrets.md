@@ -637,7 +637,7 @@ values:
                     secretId: production/rdsPassword
 ```
 
-We can use the command line to open this environmenta and access this secrets, if access controls allow:
+We can use the command line to open this environment and access this secret, if access controls allow:
 
 ```bash
 $ pulumi env open myorg/subscription_management_prod
