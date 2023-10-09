@@ -14,9 +14,7 @@ search:
     - configuration
 ---
 
-Pulumi ESC enables teams to create collections of configuration and secrets called Environments. Teams can then access those environment collections they have access to using the `esc` cli or `pulumi` cli, REST API, and SDK for various application and infrastructure needs. These environments can be composed of other environments to allow teams increased flexibility and fine-grained access control.
-
-Teams can have as many environments as they need to manage their complexity.
+Pulumi ESC enables teams to create collections of configuration and secrets called Environments. Teams can then access those environment collections using the `esc` CLI, `pulumi` CLI, Pulumi SDK, or Pulumi Cloud REST API for various application and infrastructure needs. These environments can be composed of other environments to allow teams increased flexibility and fine-grained access control. Teams can have as many environments as they need.
 
 {{% notes type="info" %}}
 The examples below use the new standalone `esc` CLI, but all `esc` subcommands are available in the `pulumi` CLI as well. The `pulumi` CLI also has native support for ESC environments via `pulumi preview` and `pulumi up`. See the [Using with Pulumi IaC](#using-with-pulumi-iac) documentation for details.
