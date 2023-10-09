@@ -266,7 +266,7 @@ const opts = {
         MD040: false,
         // Allow hard tabs.
         MD010: false,
-        // Allow puncuation in headers.
+        // Allow punctuation in headers.
         MD026: false,
         // Allow dollars signs in code blocks without values
         // immediately below the command.
@@ -284,6 +284,8 @@ const opts = {
         MD028: false,
         // Allow indentation in unordered lists.
         MD007: false,
+        // Allow bare URLs.
+        MD034: false,
     },
     customRules: [
         {

@@ -150,7 +150,7 @@ export class ServiceDeployment extends pulumi.ComponentResource {
 
 With infrastructure as code, you can use your IDE to refactor.
 
-![Refactoring by Pull-Up method](./refactor.gif)
+![Refactoring by Pull-Up method](https://www.pulumi.com/uploads/content/blog/refactoring-iac/refactor.gif)
 
 ## Composing
 

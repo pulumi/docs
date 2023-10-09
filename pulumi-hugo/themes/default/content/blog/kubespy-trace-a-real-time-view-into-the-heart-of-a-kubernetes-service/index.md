@@ -67,7 +67,7 @@ this information in the CLI experience. See
 on the subject, or [try it out](/kubernetes/) for
 yourself!
 
-![status-rich](./status-rich.gif)
+![status-rich](https://www.pulumi.com/uploads/content/blog/kubespy-trace-a-real-time-view-into-the-heart-of-a-kubernetes-service/status-rich.gif)
 
 ## A real-time view of a Service's life
 

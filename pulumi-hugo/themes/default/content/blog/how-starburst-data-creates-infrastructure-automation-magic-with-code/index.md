@@ -69,7 +69,7 @@ Adopting Pulumi and its Automation API provided several benefits that made Starb
 
 **Consistent deployment lifecycles:** Using Pulumi’s [integration with GitHub Actions](/docs/using-pulumi/continuous-delivery/github-actions/), Starburst engineers built a streamlined CI/CD process where infrastructure and application code builds within the same pipelines with automated test environments. They accomplished this using Pulumi Automation API to abstract the underlying runtime environments, circumventing the need for additional layers and wrappers.
 
-![Infrastructure automation code](starburst-code.png)
+![Infrastructure automation code](https://www.pulumi.com/uploads/content/blog/how-starburst-data-creates-infrastructure-automation-magic-with-code/starburst-code.png)
 
 ## Try Pulumi for Infrastructure as Code Automation
 
