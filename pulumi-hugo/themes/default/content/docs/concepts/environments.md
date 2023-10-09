@@ -142,7 +142,7 @@ $ esc env get myorg/test
           - 3
 ```
 
-For structured config, `true` and `false` values are persisted as boolean values, and values convertible to integers are persisted as integers.
+`true` and `false` values are persisted as boolean values, and values convertible to integers are persisted as integers.
 
 You can also get any specific value at any level of the config hierarchy.  For example:
 
@@ -196,7 +196,7 @@ To edit config in a default editor, use `pulumi edit orgName/environmentName`:
 $ esc env edit myorg/test
 ```
 
-By default this will drop you into your `$SHELL` or vi as a fallback.
+By default this will drop you into your `$EDITOR` or `vi` as a fallback.
 
 ```shell
 values:
