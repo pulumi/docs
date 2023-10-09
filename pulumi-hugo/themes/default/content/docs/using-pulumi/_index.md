@@ -17,7 +17,6 @@ Learn how to adopt Pulumi, organize projects & stacks, use the Automation API, c
 - [Adopting Pulumi](adopting-pulumi/)
 - [Organizing projects & stacks](organizing-projects-stacks/)
 - [Automation API](automation-api/)
-- [Environments (ESC)](esc/)
 - [Continuous delivery](continuous-delivery/)
 - [Policy as code](crossguard/)
 - [Pulumi packages](pulumi-packages/)
