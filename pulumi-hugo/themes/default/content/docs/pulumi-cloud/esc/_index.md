@@ -6,6 +6,7 @@ meta_desc: Pulumi ESC allows you to compose and manage hierarchical collections 
 menu:
   pulumicloud:
     weight: 4
+    identifier: esc
 ---
 
 TBD.
