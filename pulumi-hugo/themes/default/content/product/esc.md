@@ -26,13 +26,13 @@ benefits:
 diagram:
     items:
         - number: 1
-          description: Pulumi ESC enables you to define environments which are collections of secrets and configurations. 
+          description: Pulumi ESC enables you to define environments, which are collections of secrets and configurations. Each environment can be composed from multiple environments.
         - number: 2
-          description: Each environment can be composed of multiple environments together.
+          description: Pulumi ESC supports a variety of configuration and secrets sources, and it has an extensible plugin model that allows third-party sources. 
         - number: 3
-          description: Every value in an environment can be access from any execution environment.
+          description: Pulumi ESC has a rich API that allows for easy integration.  Every value in an environment can be accessed from any execution environment. 
         - number: 4
-          description: Every environment can be locked down with RBAC, versioned, and audited.
+          description: Every environment can be locked down with RBAC, versioned, and audited. 
 
 screenshot:
     items:

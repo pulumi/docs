@@ -21,7 +21,7 @@ key_features_above:
         - title: "Author in any language, deploy to any cloud"
           sub_title: "Pulumi Infrastructure as Code Engine"
           description:
-            Define infrastructure as code (IaC) in TypeScript/JavaScript, Python, Go, C#, Java, and YAML using your IDE and test frameworks for a fast inner dev loop. Deploy to [100+ providers](/registry/) like AWS, Azure, Google Cloud, and Kubernetes.
+            Define infrastructure as code (IaC) in TypeScript/JavaScript, Python, Go, C#, Java, and YAML using your IDE and test frameworks for a fast inner dev loop. Deploy to [150+ providers](/registry/) like AWS, Azure, Google Cloud, and Kubernetes.
           image: "/images/product/pulumi-iac-code.png"
           button:
             text: "Learn more about Pulumi SDK"
