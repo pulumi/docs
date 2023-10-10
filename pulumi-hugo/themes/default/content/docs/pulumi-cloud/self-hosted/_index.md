@@ -7,7 +7,7 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     pulumicloud:
         identifier: self-hosted
-        weight: 10
+        weight: 11
 aliases:
   - /docs/guides/self-hosted/
 ---

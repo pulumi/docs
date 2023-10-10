@@ -8,7 +8,7 @@ menu:
     usingpulumi:
         name: Continuous Delivery
         identifier: cont_delivery
-        weight: 4
+        weight: 5
 aliases:
 - /docs/reference/cd/
 - /docs/console/continuous-delivery/

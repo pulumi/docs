@@ -24,27 +24,27 @@ Every time a deployment runs, the Pulumi Cloud issues a new OIDC token specific 
 
 The token contains the standard audience, issuer, and subject claims:
 
-| Claim | Description |
-| ----- | ----------- |
-| `aud` | _(Audience)_ The name of the organization associated with the deployment. |
-| `iss` | _(Issuer)_ The issuer of the OIDC token: `https://api.pulumi.com/oidc`. |
+| Claim | Description                                                                                                                                                                                                                                                                                                                                                                                                                   |
+|-------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `aud` | _(Audience)_ The name of the organization associated with the deployment.                                                                                                                                                                                                                                                                                                                                                     |
+| `iss` | _(Issuer)_ The issuer of the OIDC token: `https://api.pulumi.com/oidc`.                                                                                                                                                                                                                                                                                                                                                       |
 | `sub` | _(Subject)_ The subject of the OIDC token. Because this value is often used for configuring trust relationships, the subject claim contains information about the associated deployment. The value is composed as follows: `pulumi:deploy:org:<organization name>:project:<project name>:stack:<stack name>:operation:<operation kind>:scope:write`. Each component of the subject claim is also available as a custom claim. |
 
 The token also contains custom claims that provide additional, deployment-specific information:
 
-| Claim | Description |
-| ----- | ----------- |
-| `stackId` | The fully-qualified identifier of the stack being deployed. |
-| `operation` | The deployment operation (one of `preview`, `update`, `refresh`, or `destroy`). |
-| `org` | The name of the organization associated with the deployment. |
-| `project` | The name of the project being deployed. |
-| `stack` | The name of the stack being deployed. |
-| `deployment` | The deployment version. |
-| `scope` | The scope of the OIDC token. Always `write`. |
+| Claim        | Description                                                                     |
+|--------------|---------------------------------------------------------------------------------|
+| `stackId`    | The fully-qualified identifier of the stack being deployed.                     |
+| `operation`  | The deployment operation (one of `preview`, `update`, `refresh`, or `destroy`). |
+| `org`        | The name of the organization associated with the deployment.                    |
+| `project`    | The name of the project being deployed.                                         |
+| `stack`      | The name of the stack being deployed.                                           |
+| `deployment` | The deployment version.                                                         |
+| `scope`      | The scope of the OIDC token. Always `write`.                                    |
 
 ## Configuring trust relationships
 
-As part of the process that exchanges your deployment's OIDC token for cloud provider credentials, the cloud provider must check the OIDC token's claims against the conditions configured in the provider's trust relationship. The configuration of a trust relationship varies depending on the cloud provider, but typically uses at least the Audience, Subject, and Issuer claims. These claims can be use to restrict trust to specific organizations, projects, stacks, etc.:
+As part of the process that exchanges your deployment's OIDC token for cloud provider credentials, the cloud provider must check the OIDC token's claims against the conditions configured in the provider's trust relationship. The configuration of a trust relationship varies depending on the cloud provider, but typically uses at least the Audience, Subject, and Issuer claims. These claims can be used to restrict trust to specific organizations, projects, stacks, etc.:
 
 - The Issuer claim is typically used to validate that the token is properly signed. The issuer's public signing key is fetched and used to validate the token's signature.
 - The Audience claim contains the name of the organization associated with the deployment. You can use this claim to restrict credentials to a specific organization or organizations.

@@ -7,7 +7,7 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   languages:
     name: Overview
-    weight: 6
+    weight: 7
 
 aliases:
 - /docs/reference/languages/

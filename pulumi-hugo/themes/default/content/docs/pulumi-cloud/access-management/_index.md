@@ -6,7 +6,7 @@ h1: Pulumi Cloud access management
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   pulumicloud:
-    weight: 5
+    weight: 7
     identifier: access-management
 ---
 
