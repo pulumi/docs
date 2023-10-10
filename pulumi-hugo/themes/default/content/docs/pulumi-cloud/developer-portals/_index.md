@@ -14,22 +14,20 @@ A common pattern we have seen is that as companies grow in size and complexity, 
 
 Pulumi provides several features to help you get your own developer portal off the ground faster:
 
-* Custom project templates
-* Pulumi Backstage plugin
-* Pulumi's New Project Wizard
+* Organization Templates
+* New Project Wizard
+* Pulumi Backstage Plugin
 
-## Custom templates
+## Organization Templates
 
-[Custom templates](/docs/pulumi-cloud/developer-portals/templates) can provide your Pulumi organization with a centralized repository for all your cloud components, best practices, and configurations.
-They allow your Pulumi team members to organize, discover, and deploy cloud resources with ease, all within the Pulumi platform or within your own integrations.
+[Organization Templates](/docs/pulumi-cloud/developer-portals/templates) can provide your Pulumi organization with a centralized repository for all your cloud components, best practices, and configurations. They allow your Pulumi organization members to organize, discover, and deploy cloud resources with ease, all within the Pulumi platform or within your own integrations.
 
-We support organizational templates on the Enterprise and Business Critical editions of Pulumi Cloud.
+We support Organization Templates on the Enterprise and Business Critical editions of Pulumi Cloud.
 
-## Backstage plugin
+## New Project Wizard
 
-[Backstage](https://backstage.io) is an open-source framework for building developer portals.
-Using the [Pulumi Backstage plugin](/docs/pulumi-cloud/developer-portals/backstage) you can create new Pulumi projects from your organization's custom templates, and you can run previews, updates, or [Deployments](/docs/pulumi-cloud/deployments) directly from your Backstage instance.
+The [New Project Wizard](/docs/pulumi-cloud/developer-portals/new-project-wizard) allows anyone in your organization to pick a template they want to install, and walk through configuring the deployment of that template.  There is support for configuring [Pulumi Deployments](/docs/pulumi-cloud/deployments/get-started/#new-project-wizard) automatically, so that the template can be deployed without needing the Pulumi CLI locally, or any other CI/CD configuration.  Just a few clicks and you have deployed your infrastructure.
 
-## New project wizard
+## Pulumi Backstage Plugin
 
-Pulumi's [New Project Wizard](/docs/pulumi-cloud/developer-portals/new-project-wizard) can also leverage your organization's custom templates to automatically commit and deploy code for new Pulumi projects entirely from within your browser.
+[Backstage](https://backstage.io) is an open-source framework for building developer portals. Using the [Pulumi Backstage Plugin](/docs/pulumi-cloud/developer-portals/backstage) you can create new Pulumi projects from your Organization Templates, and you can run previews, updates, or execure [Pulumi Deployments](/docs/pulumi-cloud/deployments) directly from your Backstage instance.

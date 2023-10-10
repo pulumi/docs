@@ -1,24 +1,21 @@
 ---
-title: With Custom Templates
-title_tag: Building Developer Portals with Custom Project Templates
-h1: Building Developer Portals with Custom Project Templates
-meta_desc: Lean how to build template projects, and configure them to work with your Pulumi organization.
+title: Organization Templates
+title_tag: Get started with Organization Templates
+h1: Building Developer Portals with Organization Templates
+meta_desc: Lean how to build template projects and configure them to work with your Pulumi organization.
 menu:
   pulumicloud:
-    weight: 2
+    weight: 1
     parent: developer-portals
 ---
 
-A large number of public project templates are provided by Pulumi in [https://github.com/pulumi/examples](https://github.com/pulumi/examples) and [https://github.com/pulumi/templates](https://github.com/pulumi/templates).
-These can be useful for teams starting from scratch; however, as your business and infrastructure grows in complexity it is likely you will want new Pulumi projects to include some custom, internal functionality not provided by these public templates.
+A large number of public project templates are provided by Pulumi in [https://github.com/pulumi/examples](https://github.com/pulumi/examples) and [https://github.com/pulumi/templates](https://github.com/pulumi/templates). These can be useful for teams starting from scratch; however, as your business and infrastructure grows in complexity it is likely you will want new Pulumi projects to include some custom, internal functionality not provided by these public templates.
 
-Pulumi allows you to define _custom_ project templates to help get projects off the ground faster.
-This enables you to provide new Pulumi projects with consistent code structure, conventions, or best practices, for example.
+Pulumi allows you to define _Organization Templates_ to help get projects off the ground faster. This enables you to provide new Pulumi projects with consistent code structure, conventions, or best practices.
 
-## Defining a custom template
+## Defining an Organization Template
 
-A template can be hosted in a public or private GitHub repository, and its only requirement is that it must contain a valid `Pulumi.yaml` at the root or within a subdirectory of the repository.
-A single repository can provide multiple templates from various subdirectories.
+A template can be hosted in a public or private GitHub repository, and its only requirement is that it must contain a valid `Pulumi.yaml` at the root or within a subdirectory of the repository. A single repository can provide multiple templates from various subdirectories.
 
 The `Pulumi.yaml` file can optionally contain a `template` section, which typically includes a `config` section for specifying required config values for the project. Each config value can have a `description` and a `default` value. Config values can be marked as [`secret`](/docs/concepts/secrets), which ensures values in templated project will be stored with secure encryption.
 
@@ -40,26 +37,25 @@ The above snippet includes an `aws:region` configuration value with a default va
 
 When a project is created from a template, the resulting project will include:
 
-* A modifed `Pulumi.yaml` file, which reflects the new project's name and description.
+* A modified `Pulumi.yaml` file, which reflects the new project's name and description.
 * A new `Pulumi.<stack>.yaml` file, which includes populated configuration values as specified in the `template` section of the source `Pulumi.yaml`.
-* A copy of all other files colocated with the source `Pulumi.yaml`.
+* A copy of all other files co-located with the source `Pulumi.yaml`.
 
-Any occurences of `${PROJECT}` or `${DESCRIPTION}` -- in `Pulumi.yaml` or any other files -- will be replaced with their respective values.
+Any occurrences of `${PROJECT}` or `${DESCRIPTION}` -- in `Pulumi.yaml` or any other files -- will be replaced with their respective values.
 
-## Using custom templates with your Pulumi organization
+## Using Organization Templates within your Pulumi organization
 
 {{% notes "info" %}}
-Custom templates are only available to organizations using the Enterprise and Business Critical editions.
+Organization Templates are only available to organizations using the Enterprise and Business Critical editions.
 
 If you would like to use this feature, [contact us](/contact?form=sales) to upgrade.
 {{% /notes %}}
 
-A Pulumi admin can configure their organization to use custom templates with the [New Project Wizard](/docs/pulumi-cloud/developer-portals/new-project-wizard).
-By doing so, your organization's members will be able to:
+A Pulumi organization admin can configure their organization to use Organization Templates with the [New Project Wizard](/docs/pulumi-cloud/developer-portals/new-project-wizard). By doing so, your organization's members will be able to:
 
 * Template and configure new Pulumi projects from their browser.
 * Automatically push code for new projects into new or existing GitHub repositories.
-* Configure [Deployments](/docs/pulumi-cloud/deployments) to automatically work with new projects.
+* Configure [Pulumi Deployments](/docs/pulumi-cloud/deployments) to automatically work with new projects.
 
 ### Prerequisites
 
