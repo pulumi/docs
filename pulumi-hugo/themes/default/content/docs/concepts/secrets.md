@@ -588,7 +588,7 @@ and state files are now encrypted using the new secrets provider.
 
 ## Manage Secrets using Pulumi ESC environments
 
-With Pulumi ESC environments, you can manage secrets wherever they live. Pulumi ESC environments provide a centralized abstraction in front of the most common secrets manager/vaults while providing security through RBAC and audit controls.  
+With Pulumi ESC, you can manage secrets wherever they live. Pulumi ESC provides a centralized abstraction in front of the most common secrets manager/vaults while providing security through RBAC and audit controls.
 
 ### Sharing Secrets Across Multiple Teams
 
@@ -704,7 +704,7 @@ values:
                     name: db-key
 ```
 
-Now, stacks or other environments that import this environment will have access to the Azure and GCP secrets from one easy access point.
+Now stacks or other environments that import this environment will have access to the Azure and GCP secrets from one easy access point.
 
 ```bash
 $ pulumi env open myorg/cross_cloud
