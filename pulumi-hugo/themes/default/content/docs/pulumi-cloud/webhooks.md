@@ -6,7 +6,7 @@ h1: Pulumi Cloud webhooks
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   pulumicloud:
-    weight: 8
+    weight: 9
 aliases:
 - /docs/reference/service/webhooks/
 - /docs/console/extensions/webhooks/

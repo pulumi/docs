@@ -8,7 +8,7 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     usingpulumi:
         identifier: crossguard
-        weight: 5
+        weight: 6
 aliases:
 - /docs/guides/crossguard/
 - /policy-as-code/

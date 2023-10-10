@@ -61,7 +61,7 @@ You can ensure that every environment and every commit is automatically validate
 
 Sometimes infrastructure requires ad-hoc operations. You may want to run a refresh to rectify some cloud state changes:
 
-![Running a Pulumi Refresh in the Pulumi Service](refresh.gif)
+![Running a Pulumi Refresh in the Pulumi Service](https://www.pulumi.com/uploads/content/blog/pulumi-deployments/refresh.gif)
 
 Whatever the situation calls for, you can easily update, refresh, and modify infrastructure with the click of a button in the Pulumi Service console.
 
@@ -217,7 +217,7 @@ Multi-region infrastructure build outs become a breeze, as workloads can be easi
 
 Whether you use the built-in cloud delivery workflows like Push to Deploy, or build your own custom platform with the REST API and Remote Automation API, you get full observability into every deployment. Anyone in your organization can view updates status, update logs, and the full history of deployments.
 
-![Update Logs in the Pulumi Service](update-logs.gif)
+![Update Logs in the Pulumi Service](https://www.pulumi.com/uploads/content/blog/pulumi-deployments/update-logs.gif)
 
 You can build platform automation without worrying about how you’ll surface the results across your product, engineering, and infrastructure teams.
 

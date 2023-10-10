@@ -54,7 +54,7 @@ case_studies:
 capabilities:
     title: Key capabilities
     items:
-        - title: Manage infrastructure state and secrets
+        - title: Manage infrastructure state, secrets, and configuration
           image: /images/product/console-resource-graph.svg
           details:
             - title: Fully-managed, single source of truth
@@ -66,9 +66,9 @@ capabilities:
 
                 Audit changes or rollback to previous versions with a [complete history](/docs/concepts/state/#checkpoints) of your state.
 
-            - title: Automatic secrets management
+            - title: Manage infrastructure secrets and configuration
               description: |
-                Use built-in secrets management for encrypted data such as credentials or tokens. You can also bring your own secrets manager.
+                Use built-in secrets management for encrypted data such as credentials or tokens. Store and manage collections of config in [Pulumi ESC](/product/esc) into environment groupings.
 
               more_info: |
                 Your infrastructure [state is encrypted](/docs/concepts/state/#state-encryption) in transit and at rest.
