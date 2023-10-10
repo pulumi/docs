@@ -7,7 +7,7 @@ meta_desc: Pulumi Deployments is a new feature that automates the execution of P
 overview:
     title: The fastest way to go from code to cloud
     description: |
-        [Pulumi Deployments](/docs/pulumi-cloud/deployments/) gives you a fast and simple way to deploy infrastructure to any cloud using GitHub pull requests or API calls. You don't have to install and configure a local CLI because Pulumi Deployments executes Pulumi commands in [Pulumi Cloud](/product/pulumi-cloud/). Available now in preview.
+        [Pulumi Deployments](/docs/pulumi-cloud/deployments/) is a fast and flexible way to deploy infrastructure on any cloud and at any scale, using GitHub pull requests, API calls, and console. No CLI setup needed since [Pulumi Cloud](/product/pulumi-cloud/) manages deployments.
 
 quotes:
     items:
@@ -58,12 +58,15 @@ learn:
           description: Deploy infrastructure on any cloud by creating a free Pulumi account.
           buttons:
             - link: https://app.pulumi.com/signup
+              type: primary
               action: Sign up for Pulumi Cloud
         - title: Documentation
           description: Refer to our documentation to get Pulumi Deployments set up once you have been accepted into the Preview.
           buttons:
             - link: /docs/pulumi-cloud/deployments
+              type: secondary
               action: Pulumi Deployments Docs
             - link: /docs/reference/deployments-rest-api
+              type: secondary
               action: Pulumi Deployments REST API Docs
 ---

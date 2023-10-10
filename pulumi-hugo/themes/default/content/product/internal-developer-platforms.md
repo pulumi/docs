@@ -1,5 +1,5 @@
 ---
-title: "Self-Service Developer Platforms with Pulumi"
+title: "Pulumi for Platform Teams"
 layout: internal-developer-platforms
 
 meta_title: "Self-Service Developer Platforms with Pulumi"
