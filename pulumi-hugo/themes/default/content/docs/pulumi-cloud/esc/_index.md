@@ -55,7 +55,7 @@ Begin your journey with Pulumi ESC through a hands-on, self-paced [tutorial](/do
 
 ## Pulumi ESC CLI overview
 
-Please see [ESC CLI overview](/docs/esc-cli/) and for details on interacting with environments using the command line.
+Please see [ESC CLI overview](/docs/esc-cli/) for details on interacting with environments using the command line.
 
 ## Syntax Reference
 
