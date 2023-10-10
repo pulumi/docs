@@ -664,7 +664,7 @@ Which should look like this:
 
 ### Cross-cloud secrets
 
-Imagine you have a cross-cloud product that leverages services in GCP and Azure, and you have to manage secrets to access those services in GCP Secrets Manager and in Azure KeyVault.  With Pulumi ESC environments, you can coalesce your secrets access to a single entry point.
+Imagine you have a cross-cloud product that leverages services in GCP and Azure, and you have to manage secrets to access those services in GCP Secrets Manager and in Azure KeyVault.  With Pulumi ESC, you can coalesce your secret access to a single entry point.
 
 Here is an example environment config named `Cross_Cloud`:
 

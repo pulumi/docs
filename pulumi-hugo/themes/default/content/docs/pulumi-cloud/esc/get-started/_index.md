@@ -291,7 +291,7 @@ For the purposes of this tutorial, you've manually added the values of your API 
 With Pulumi ESC, you can dynamically retrieve those values directly from a provider. In this next section, you will learn how to configure your environment file to retrieve secret values from AWS Secrets Manager.
 
 {{< notes >}}
-This step assumes that you already have [Pulumi configured as an OIDC provider in AWS](https://www.pulumi.com/docs/pulumi-cloud/deployments/oidc/aws/).
+This step assumes that you already have [Pulumi configured as an OIDC provider in AWS](/docs/pulumi-cloud/esc/providers/#setting-up-oidc).
 {{< /notes >}}
 
 In both your `app-env-dev` and `app-env-test` environment files, update your code to the following:
@@ -593,4 +593,4 @@ In this tutorial, you created and retrieved values from a Pulumi environment. Yo
 To learn more about managing configuration and secrets in Pulumi, take a look at the following resources:
 
 - Learn more about [environments](/docs/concepts/environments/), [secrets](/docs/concepts/secrets/), and [configuration](/docs/concepts/config/) in the Pulumi documentation.
-- Learn more about defining Pulumi ESC environment files in the [Pulumi ESC CLI documentation](/docs/pulumi-cloud/esc/reference).
+- Learn more about defining Pulumi ESC environment files in the [Pulumi ESC YAML Syntax Reference](/docs/pulumi-cloud/esc/reference).
