@@ -79,7 +79,7 @@ You can build drift detection into your platform and get automated alerts on une
 aws.cloudwatch.onSchedule("drift-lambda", "cron(0/5 * * * ? *)", async() => {
     const outstandingDeployments = [];
     for(let s of stacks) {
-        const url = `https://api.pulumi.com/api/preview/${s.organization}/${s.project}/${s.stack}/deployments`;
+        const url = `https://api.pulumi.com/api/stacks/${s.organization}/${s.project}/${s.stack}/deployments`;
         const response = await fetch(url, {
             method: "POST",
             headers,
@@ -89,7 +89,7 @@ aws.cloudwatch.onSchedule("drift-lambda", "cron(0/5 * * * ? *)", async() => {
         const deployment = await response.json();
         outstandingDeployments.push(deployment.id);
     }
-}
+})
 ```
 
 This scheduled Lambda runs refresh operations through the Deployments REST API. When one of those deployments detects changes, we get notified. With platform automation that automatically and proactively detects changes, your cloud team can reduce the number of surprise incidents, freeing them up to focus on higher-leverage activities. The full source code is available for the [Drift Detection example](https://github.com/pulumi/deploy-demos/tree/main/pulumi-programs/drift-detection).
