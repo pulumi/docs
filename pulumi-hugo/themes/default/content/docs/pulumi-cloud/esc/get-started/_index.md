@@ -59,7 +59,7 @@ Navigate to the root of the repo and deploy the application resources using the 
 ```bash
 cd tutorials
 chmod a+x cfn-deploy.sh
-. ./cfn-deploy.sh
+./cfn-deploy.sh
 ```
 
 You will see an output similar to the following:
@@ -402,13 +402,13 @@ Then run the following commands to execute the script:
 
 ```bash
 chmod a+x validate-endpoint.sh
-. ./validate-endpoint.sh
+./validate-endpoint.sh
 ```
 
 When providing the name of your `app-env-dev` environment file, you should see a response similar to the following:
 
 ``` bash
-$ . ./validate-endpoints.sh
+$ ./validate-endpoints.sh
 "You have reached the simulated DEV endpoint."
 ```
 
