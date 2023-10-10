@@ -52,7 +52,7 @@ Alternatively, a stack's deployment settings may be defined and subsequently mod
 
 To modify an environment variable in the deployment settings, you only need to specify the changed settings:
 
-```POST https://api.pulumi.com/api/preview/{org}/{project}/{stack}/deployment/settings```
+```POST https://api.pulumi.com/api/stacks/{org}/{project}/{stack}/deployments/settings```
 
 ```json
 {
@@ -104,24 +104,22 @@ A deployment trigger refers to a method of initializing a deployment. Currently,
 
 ### REST API
 
-Once deployment settings are defined for a stack, triggering a deployment is as simple as a two-line request.
+Once deployment settings are defined for a stack, triggering a deployment is as simple as a one-line request.
 
-```POST https://api.pulumi.com/api/preview/{org}/{project}/{stack}/deployments```
+```POST https://api.pulumi.com/api/stacks/{org}/{project}/{stack}/deployments```
 
 ```json
 {
-    "inheritSettings": true,
     "operation": "update/preview/refresh/destroy"
 }
 ```
 
-The `inheritSettings` property allows you to make use of the predefined deployment settings for the stack. If you would rather not use the predefined settings, set `inheritSettings` to `false`. If you need to override some specific settings, specify them in the request body.
+If you need to override some specific settings, you can specify them in the request body.
 
-```POST https://api.pulumi.com/api/preview/{org}/{project}/{stack}/deployments```
+```POST https://api.pulumi.com/api/stacks/{org}/{project}/{stack}/deployments```
 
 ```json
 {
-    "inheritSettings": true,
     "operation": "update/preview/refresh/destroy",
     "operationContext": {
         "environmentVariables": {
@@ -132,6 +130,8 @@ The `inheritSettings` property allows you to make use of the predefined deployme
     }
 }
 ```
+
+If you would rather not use the predefined settings at all, you must set `inheritSettings` to `false` in your request body and define the entire settings object.
 
 The merge behavior of deployment settings are further explained in the [REST API documentation](../api).
 
