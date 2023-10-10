@@ -34,7 +34,7 @@ Whenever a node in the graph is updated, all downstream nodes will be automatica
 via a webhook triggering Pulumi Deployments.
 ```
 
-![Dependent Stacks Updating Automatically via Pulumi Deployments](auto-deploy.gif)
+![Dependent Stacks Updating Automatically via Pulumi Deployments](https://www.pulumi.com/uploads/content/blog/dependent-stack-updates/auto-deploy.gif)
 
 [Automatically updating dependent stacks](https://github.com/pulumi/pulumi/issues/2309) and providing a way to write Pulumi programs that can [express nested stack updates](https://github.com/pulumi/pulumi/issues/2209) are two of the most requested features across the Pulumi project, and we’re excited to enable both of these via Pulumi Cloud and Pulumi Deployments.
 

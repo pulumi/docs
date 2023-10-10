@@ -39,7 +39,7 @@ You can either create your own Slack app (or use an existing one you may already
 
 By following these steps, which can also be found in [our webhooks documentation](/docs/pulumi-cloud/webhooks), in a few clicks you will have a Slack incoming webhook URL which you can use to set up a webhook in [Pulumi Cloud](https://app.pulumi.com), as shown in the GIF below.
 
-![Setting it up in the UI](webhooks_2.gif)
+![Setting it up in the UI](https://www.pulumi.com/uploads/content/blog/slack-integration/webhooks_2.gif)
 
 There are Pulumi customers with hundreds to thousands of stacks, making setting up webhooks for each via the UI a time consuming task. In order to enable Pulumi notifications at scale, we have added Pulumi Cloud REST API endpoints for creating webhooks as well as [Pulumi Service Provider](https://www.pulumi.com/registry/packages/pulumiservice) support.
 
