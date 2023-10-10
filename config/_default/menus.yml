@@ -37,6 +37,11 @@ cli:
     weight: 2
     parent: commands
 
+  - name: env
+    url: /docs/cli/commands/pulumi_env/
+    weight: 2
+    parent: commands
+
   - name: gen-completion
     url: /docs/cli/commands/pulumi_gen-completion/
     weight: 2
