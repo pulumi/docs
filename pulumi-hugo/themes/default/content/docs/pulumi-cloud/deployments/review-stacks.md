@@ -54,7 +54,7 @@ curl -i -XPOST -H "Content-Type: application/json" -H "Authorization: token $PUL
 
 ### Pulumi Cloud Service provider
 
-You can use Pulumi to manage and code review Deployment Settings and Review Stacks with the [Pulumi Cloud provider](/registry/packages/pulumiservice).
+You can use Pulumi to manage and code review Deployment Settings and Review Stacks with the [Pulumi Cloud Service provider](/registry/packages/pulumiservice).
 
 ```typescript
 import * as pulumiservice from "@pulumi/pulumiservice";
