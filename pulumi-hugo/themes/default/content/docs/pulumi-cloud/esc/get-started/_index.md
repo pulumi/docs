@@ -401,6 +401,7 @@ Replace the value of `acme/app-env-dev` with the name of your Pulumi organizatio
 Then run the following commands to execute the script:
 
 ```bash
+chmod a+x validate-endpoint.sh
 . ./validate-endpoint.sh
 ```
 
