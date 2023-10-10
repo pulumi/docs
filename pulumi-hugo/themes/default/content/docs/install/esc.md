@@ -27,8 +27,8 @@ $ brew install pulumi/tap/esc
 
 ### MacOS binary download
 
-<a class="btn btn-secondary mx-2" href="https://get.pulumi.com/esc/releases/download/esc-v0.5.0-darwin-x64.tar.gz">amd64</a>
-<a class="btn btn-secondary mx-2" href="https://get.pulumi.com/esc/releases/download/esc-v0.5.0-darwin-arm64.tar.gz">arm64</a></p>
+<a class="btn btn-secondary mx-2" href="https://get.pulumi.com/esc/releases/esc-v0.5.0-darwin-x64.tar.gz">amd64</a>
+<a class="btn btn-secondary mx-2" href="https://get.pulumi.com/esc/releases/esc-v0.5.0-darwin-arm64.tar.gz">arm64</a></p>
 
 macOS Sierra (10.12) or later is required.
 
@@ -132,7 +132,7 @@ The installer script can be rerun to subsequently install new updates.
 If you do not wish to use the previous options, you can install Pulumi manually.
 
 <!-- markdownlint-disable url -->
-1. Download [Pulumi ESC 0.5.0 for macOS](https://get.pulumi.com/esc/releases/download/esc-v0.5.0-darwin-x64.tar.gz).
+1. Download [Pulumi ESC 0.5.0 for macOS](https://get.pulumi.com/esc/releases/esc-v0.5.0-darwin-x64.tar.gz).
 <!-- markdownlint-enable url -->
 
 1. Extract the tarball and move the binaries in the `esc` directory to a directory included in your system's `$PATH`.
@@ -155,7 +155,7 @@ $ curl -fsSL https://get.pulumi.com/esc | sh
 </div>
 <div class="w-full">
 <h3 class="no-anchor pt-4"><i class="fas fa-download pr-2"></i>Linux Binary Download</h3>
-<p><a class="btn btn-secondary mx-2" href="https://get.pulumi.com/esc/releases/download/esc-v0.5.0-linux-x64.tar.gz">amd64</a></p>
+<p><a class="btn btn-secondary mx-2" href="https://get.pulumi.com/esc/releases/esc-v0.5.0-linux-x64.tar.gz">amd64</a></p>
 </div>
 </div>
 
@@ -205,7 +205,7 @@ See [How to permanently set $PATH on Unix](https://stackoverflow.com/questions/1
 Alternatively, you can install Pulumi ESC manually. We provide a prebuilt binary for Linux.
 
 <!-- markdownlint-disable url -->
-1. Download [Pulumi ESC 0.5.0 for Linux x64](https://get.pulumi.com/esc/releases/download/esc-v0.5.0-linux-x64.tar.gz).
+1. Download [Pulumi ESC 0.5.0 for Linux x64](https://get.pulumi.com/esc/releases/esc-v0.5.0-linux-x64.tar.gz).
 <!-- markdownlint-enable url -->
 
 1. Extract the tarball and move the binaries in the `esc` directory to a directory included in your system's `$PATH`.
@@ -221,7 +221,7 @@ Alternatively, you can install Pulumi ESC manually. We provide a prebuilt binary
 <div class="w-full">
 <h3 class="no-anchor pt-4"><i class="fas fa-download pr-2"></i>Windows Binary Download</h3>
 <p>
-<a class="btn btn-secondary mx-2" href="https://get.pulumi.com/esc/releases/download/esc-v0.5.0-windows-x64.zip">amd64</a>
+<a class="btn btn-secondary mx-2" href="https://get.pulumi.com/esc/releases/esc-v0.5.0-windows-x64.zip">amd64</a>
 </p>
 </div>
 </div>
@@ -274,7 +274,7 @@ This will install the `esc.exe` CLI to `%USERPROFILE%\.pulumi\bin` and add it to
 Alternatively, you can install Pulumi ESC manually using binaries built for Windows x64.
 
 <!-- markdownlint-disable url -->
-1. Download [Pulumi ESC 0.5.0 binaries for Windows x64](https://get.pulumi.com/esc/releases/download/esc-v0.5.0-windows-x64.zip). For prior versions and release notes, see the [Available Versions](/docs/install/versions/) page.
+1. Download [Pulumi ESC 0.5.0 binaries for Windows x64](https://get.pulumi.com/esc/releases/esc-v0.5.0-windows-x64.zip). For prior versions and release notes, see the [Available Versions](/docs/install/versions/) page.
 <!-- markdownlint-enable url -->
 
 1. Unzip the file and extract the contents to a folder such as `C:\esc`.
