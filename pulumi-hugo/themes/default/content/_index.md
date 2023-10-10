@@ -38,7 +38,7 @@ embed:
 
 secrets:
   title: Tame configuration and secrets sprawl
-  image: /images/product/esc-screenshot.png
+  image: /images/product/esc-homepage-screenshot.png
   alt: a screenshot of Pulumi ESC
   description: |
     Easy-to-use single source of truth for all configurations with guardrails. Seamlessly adopt short-lived dynamic secrets. Never have downtime over changed configurations because you can change once and have it updated everywhere. Enforce least-privileged access through role-based access controls.
