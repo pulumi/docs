@@ -44,7 +44,7 @@ Pulumi ESC is available today in preview via the new `esc` CLI, as part of Pulum
 
 ## A Taste of Pulumi ESC
 
-Pulumi ESC allows you to define _environments_, each of which specifies a collection of _secrets_ and _configuration_ values. Environments are specified as _code_, and each environment can import one or more other environments (for composition and inheritance), and can specify its own configuration values directly, or pulled from another secrets provider.
+[Pulumi ESC](https://www.pulumi.com/product/esc/) allows you to define _environments_, each of which specifies a collection of _secrets_ and _configuration_ values. Environments are specified as _code_, and each environment can import one or more other environments (for composition and inheritance), and can specify its own configuration values directly, or be pulled from another secrets provider.
 
 The following example shows a Pulumi ESC environment which dynamically pulls values from AWS OIDC, HashiCorp Vault and AWS Secrets Manager, as well as setting environment-specific configuration and overriding inherited configuration.
 
@@ -197,7 +197,7 @@ Note that when we run this command, `esc run` uses our local authentication cred
 
 Next, we can define a second environment for our shopping-service application.  This will be deployed with Pulumi IaC, so we’ll provide some default configuration for this service in the `pulumiConfig` section.
 
-We run `esc env init shopping-service` to create our new environment. And then `esc env edit shopping-service` to open an editor to populare our new environment.  We can then add the following to our environment, where it will be encrypted and stored for us.
+We run `esc env init shopping-service` to create our new environment. And then `esc env edit shopping-service` to open an editor to populate our new environment.  We can then add the following to our environment, where it will be encrypted and stored for us.
 
 ```yaml
 # shopping-service
@@ -267,7 +267,7 @@ Pulumi ESC can already be accessed from application code via the REST API, but w
 
 ### Syncing Configuration to External Systems
 
-While the esc CLI and REST APIs can be used today to pull configuration down into many existing places where environments will be consumed, there are also many systems that store their configuration in more "walled gardens" which would need to be pushed into for optimal usability.  For example, pushing configuration values into a CI/CD system’s configuration system to avoid needing to copy/paste configuration and secrets manually into their UI.  We are working on additional integrations for Pulumi ESC that can "push"/"sync" configuration into systems directly, so that you can still benefit from the usability of their native configuration systems, without having to take on the problems of configuration sprawl, long-lived static secrets and duplication and copy/paste of secrets.  See [pulumi/esc#58](https://github.com/pulumi/esc/issues/58).
+While the `esc` CLI and REST APIs can be used today to pull configuration down into many existing places where environments will be consumed, there are also many systems that store their configuration in more "walled gardens" which would need to be pushed into for optimal usability.  For example, pushing configuration values into a CI/CD system’s configuration system to avoid needing to copy/paste configuration and secrets manually into their UI.  We are working on additional integrations for Pulumi ESC that can "push"/"sync" configuration into systems directly, so that you can still benefit from the usability of their native configuration systems, without having to take on the problems of configuration sprawl, long-lived static secrets and duplication and copy/paste of secrets.  See [pulumi/esc#58](https://github.com/pulumi/esc/issues/58).
 
 ### Dynamic Configuration Provider Ecosystem
 

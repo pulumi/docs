@@ -21,14 +21,14 @@ In this tutorial, we’ll demonstrate the power of Pulumi ESC in managing config
 
 You will need the following tools to complete this tutorial:
 
-- A [Pulumi account and access token](/docs/pulumi-cloud/accounts/#access-tokens)
+- A [Pulumi account](https://app.pulumi.com) and [access token](/docs/pulumi-cloud/access-management/access-tokens/)
 - The [Pulumi ESC CLI](/docs/install/esc/)
 {{< notes type="info" >}}
 Pulumi ESC is a service of Pulumi Cloud that can be used with or without Pulumi IaC. This means that if you already have the Pulumi IaC CLI installed, you do not need to install the Pulumi ESC CLI, and you may substitute `pulumi env` anywhere you see the `esc env` command in this guide.
 {{< /notes >}}
 - An [Amazon Web Services](https://aws.amazon.com/) account
 - The [AWS CLI](https://aws.amazon.com/cli/)
-- An [OIDC provider created for Pulumi](/pulumi-cloud/deployments/oidc/aws/) in AWS
+- An [OIDC provider created for Pulumi](/docs/pulumi-cloud/deployments/oidc/aws/) in AWS
   - Note that when defining the  `Subject Identifier`, the format for environments is `pulumi:environments:org:<pulumi-org>:env:<environment-name>`
 - Python 3.7 or higher installed
 
@@ -58,7 +58,8 @@ Navigate to the root of the repo and deploy the application resources using the 
 
 ```bash
 cd tutorials
-. ./cfn-deploy.sh
+chmod a+x cfn-deploy.sh
+./cfn-deploy.sh
 ```
 
 You will see an output similar to the following:
@@ -74,6 +75,11 @@ Please see the below for your application output values:
 
 [
     [
+        {
+            "OutputKey": "StackName",
+            "OutputValue": "pulumi-esc-tutorial-stack-10026875",
+            "Description": "The name of your CloudFormation stack"
+        },
         {
             "OutputKey": "ApplicationEndpointUrl",
             "OutputValue": "https://nixsrrftwh.execute-api.eu-central-1.amazonaws.com",
@@ -395,13 +401,14 @@ Replace the value of `acme/app-env-dev` with the name of your Pulumi organizatio
 Then run the following commands to execute the script:
 
 ```bash
-. ./validate-endpoint.sh
+chmod a+x validate-endpoint.sh
+./validate-endpoint.sh
 ```
 
 When providing the name of your `app-env-dev` environment file, you should see a response similar to the following:
 
 ``` bash
-$ . ./validate-endpoints.sh
+$ ./validate-endpoints.sh
 "You have reached the simulated DEV endpoint."
 ```
 
@@ -580,10 +587,10 @@ See the Pulumi documentation on [Accessing Configuration from Code](https://www.
 
 {{< cleanup >}}
 
-Then run the following command from the root of the sample application folder to delete the AWS resources:
+Then run the following command from the root of the sample application folder to delete the AWS resources, replacing the placeholder text with the name of your CloudFormation stack as provided in your stack outputs:
 
 ```bash
-aws cloudformation delete-stack --stack-name pulumi-esc-tutorial-stack
+aws cloudformation delete-stack --stack-name <your-stack-name>
 ```
 
 ## Next Steps
