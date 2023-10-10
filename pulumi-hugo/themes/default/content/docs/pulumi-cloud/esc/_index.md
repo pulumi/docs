@@ -23,7 +23,7 @@ Support for dynamic configuration providers allow Pulumi ESC to integrate with s
 
 Teams can setup OIDC in their cloud providers to allow Environments to retrieve dynamic short-lived credentials. They can also pull secrets from other secrets managers and vaults.
 
-These credentials can be used with [Pulumi IaC](/docs/concepts/environments/#using-with-pulumi-iac) with `pulumi up` as well as used to [run external CLIs](/docs/concepts/environments/#running-third-party-commands-using-pulumi-esc-secrets-and-config) like `aws`, `kubectl`, and more.
+These credentials can be used with [Pulumi IaC](/docs/pulumi-cloud/esc/environments/#using-with-pulumi-iac) with `pulumi up` as well as used to [run external CLIs](/docs/pulumi-cloud/esc/environments/#running-third-party-commands-using-pulumi-esc-secrets-and-config) like `aws`, `kubectl`, and more.
 
 ## Composable
 
@@ -47,13 +47,13 @@ Environments must be “opened” to compute and see the set of value they provi
 
 The `esc` CLI and the Pulumi ESC Rest API enables environments to be accessed from any application, infrastructure provider, automation system.  At launch, first-class integrations are available with Pulumi IaC, local environment and .env files, GitHub Actions, and more
 
-## Conceptual Overview of environments
+## Detailed overview of environments
 
-Learn more about [managing environments using Pulumi ESC](/docs/concepts/environments/).
+Learn more about [managing environments using Pulumi ESC](/docs/pulumi-cloud/esc/environments/).
 
 ## Getting Started with Pulumi ESC
 
-Begin your journey with Pulumi ESC through a hands-on, self-paced [tutorial](/docs/using-pulumi/esc/get-started/).
+Begin your journey with Pulumi ESC through a hands-on, self-paced [tutorial](/docs/pulumi-cloud/esc/get-started/).
 
 ## Pulumi ESC CLI overview
 
