@@ -114,7 +114,7 @@ Unlike with ksonnet though, Pulumi programs are deployed using the
 is making toward being complete (as well as feedback when things go
 wrong!).
 
-![KubeUpdate](./kube-update.gif)
+![KubeUpdate](https://www.pulumi.com/uploads/content/blog/if-you-liked-ksonnet-youll-love-pulumi/kube-update.gif)
 
 And finally, a major area where Pulumi goes beyond ksonnet in scope, it
 works with public and private cloud resources as well as

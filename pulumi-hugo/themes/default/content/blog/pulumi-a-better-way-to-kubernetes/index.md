@@ -106,7 +106,7 @@ easier to understand the state of your k8s resources, and
 [get the information you need](/blog/unified-logs-with-pulumi-logs/) to
 make changes when something goes wrong.
 
-![See detailed status during deployments with Pulumi](./deployment-zoom.gif)
+![See detailed status during deployments with Pulumi](https://www.pulumi.com/uploads/content/blog/pulumi-a-better-way-to-kubernetes/deployment-zoom.gif)
 
 ## Integrating with CI/CD
 

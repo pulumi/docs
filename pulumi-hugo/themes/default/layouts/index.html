@@ -281,7 +281,7 @@
         {{ partial "home/quote.html" (dict "quote" .Params.customer_quotes.snowflake) }}
     </section>
 
-    <!-- Search every cloud -->
+    <!-- Tame configuration and secrets sprawl -->
     <section class="py-12 lg:my-12 px-6 lg:px-0 relative">
         <div class="shape-background home-background-yellow-right">
             <div class="shape-container">
@@ -296,15 +296,15 @@
 
         <div class="container mx-auto flex flex-col lg:flex-row">
             <div class="w-full lg:w-1/2 flex items-center justify-center mt-12 lg:mt-0">
-                <img src="{{ .Params.search.image }}" alt="{{ .Params.search.alt }}" />
+                <img src="{{ .Params.secrets.image }}" alt="{{ .Params.secrets.alt }}" class="card" />
             </div>
             <div class="my-auto"></div>
             <div class="w-full my-auto lg:w-1/2 order-first lg:order-last lg:ml-32 z-10 px-8">
-                <h3>{{ .Params.search.title }}</h3>
-                <p class="text-lg">{{ .Params.search.description | markdownify }}</p>
+                <h3>{{ .Params.secrets.title }}</h3>
+                <p class="text-lg">{{ .Params.secrets.description | markdownify }}</p>
                 <div class="mt-8">
                     <span class="text-lg text-gray-600">Learn more: </span>
-                    <a href="/product/pulumi-insights" class="underline text-lg text-blue-600">Pulumi Insights<i class="fa fa-arrow-right ml-2"></i></a>
+                    <a href="/product/esc" class="underline text-lg text-blue-600">Pulumi ESC<i class="fa fa-arrow-right ml-2"></i></a>
                 </div>
             </div>
         </div>

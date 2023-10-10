@@ -47,7 +47,11 @@ For more granular access control, edit the trust policy to add the `sub` claim t
 
 Make a note of the IAM role's ARN; it will be necessary to enable OIDC for your stack.
 
-## Enabling OIDC for your Stack
+## Enabling OIDC for your Stack via the Pulumi Console
+
+{{% notes "info" %}}
+In addition to the Pulumi Console, deployment settings including OIDC can be configured for a stack using the [pulumiservice.DeploymentSettings](https://www.pulumi.com/registry/packages/pulumiservice/api-docs/deploymentsettings/) resource or via the [REST API](/docs/pulumi-cloud/deployments/api/#patchsettings).
+{{% /notes %}}
 
 1. Navigate to your stack in the Pulumi Console.
 2. Open the stack's "Settings" tab.
