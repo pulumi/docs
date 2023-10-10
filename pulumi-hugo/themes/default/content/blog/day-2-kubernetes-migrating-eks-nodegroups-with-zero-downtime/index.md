@@ -51,9 +51,9 @@ to specifically target the `2xlarge` node group.
 Once the workload is deployed, we can validate it is up and running by accessing
 the `echoserver` behind the NGINX endpoint using `curl`:
 
-![Kubernetes Cluster Workload](k8s-cluster-workload.gif)
+![Kubernetes Cluster Workload](https://www.pulumi.com/uploads/content/blog/day-2-kubernetes-migrating-eks-nodegroups-with-zero-downtime/k8s-cluster-workload.gif)
 
-> **Note**: You can open the <a href="./k8s-cluster-workload.gif" target="_blank">GIF</a> for a maximized view.
+> **Note**: You can open the <a href="https://www.pulumi.com/uploads/content/blog/day-2-kubernetes-migrating-eks-nodegroups-with-zero-downtime/k8s-cluster-workload.gif" target="_blank">GIF</a> for a maximized view.
 
 ## The Great Migration
 
@@ -142,9 +142,9 @@ migrated NGINX over to it.
 We achieved this node group migration with zero downtime to our apps during
 load testing and decommissioning of the original node group.
 
-![EKS Migration](eks-migration.gif)
+![EKS Migration](https://www.pulumi.com/uploads/content/blog/day-2-kubernetes-migrating-eks-nodegroups-with-zero-downtime/eks-migration.gif)
 
-> **Note**: You can open the <a href="./eks-migration.gif" target="_blank">GIF</a> for a maximized view.
+> **Note**: You can open the <a href="https://www.pulumi.com/uploads/content/blog/day-2-kubernetes-migrating-eks-nodegroups-with-zero-downtime/eks-migration.gif" target="_blank">GIF</a> for a maximized view.
 
 ## Learn More
 

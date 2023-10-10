@@ -249,7 +249,7 @@ The following links may be helpful in building your own custom image:
 
 We showed you a simple example of how you can get started with using Pulumi in your Spinnaker instance.
 
-* Check out [detailed examples for Pulumi](/docs/tutorials/).
+* Check out [detailed examples for Pulumi](https://github.com/pulumi/examples).
 * Learn how to use the multitude of [providers](/registry/) available with Pulumi.
 * We hope that you find the plugin useful in running Pulumi in your Spinnaker instance. If you run into problems or
   would like to provide feedback, we encourage you to open an issue in the [plugin repo](https://github.com/pulumi/spinnaker-preconfigured-job-plugin).

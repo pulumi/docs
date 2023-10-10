@@ -12,9 +12,9 @@ while read line; do
 
     # get size in bytes
     size=$(wc -c "$line" | awk '{print $1}');
-    # verify staged files less than 4MB
-    if [ $((size)) -gt 4194304 ]; then
-        echo -e "\033[93m WARNING: $line greater than 4MB in size. \033[0m"
+    # verify staged files less than 3MB
+    if [ $((size)) -gt 3000000 ]; then
+        echo -e "\033[93m WARNING: $line greater than 3MB in size. \033[0m"
         exit 1
     fi
 done

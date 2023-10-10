@@ -51,7 +51,7 @@ But it’s not perfect!  There may be a few errors when I copy this code into a 
 
 ![That gave me an error](that-gave-an-error.png)
 
-Pulumi AI doesn’t just rename the property -- it actually recognizes that the property expects an array, and adjusts to match this requirement.  
+Pulumi AI doesn’t just rename the property -- it actually recognizes that the property expects an array, and adjusts to match this requirement.
 
 ![addressPrefixes diff](diff.png)
 
@@ -61,25 +61,25 @@ The ability to interactively fine tune results to your specific needs is one of 
 
 ## Interactivity using the `pulumi-ai` CLI
 
-The Pulumi AI website is fantastic for learning and discovery and the end result is optimized to show how Pulumi code might look. You can then take this code and deploy it using the `pulumi` CLI.  However, we can go a step further and automate this process and build infrastructure directly using natural language, without needing to write (or copy/paste) any IaC code at all.  
+The Pulumi AI website is fantastic for learning and discovery and the end result is optimized to show how Pulumi code might look. You can then take this code and deploy it using the `pulumi` CLI.  However, we can go a step further and automate this process and build infrastructure directly using natural language, without needing to write (or copy/paste) any IaC code at all.
 
-This is what the [`pulumi-ai`](https://github.com/pulumi/pulumi-ai) CLI enables.  By combining Pulumi AI with [Pulumi Automation API](https://www.pulumi.com/automation/), the `pulumi-ai` CLI takes a natural language query, creates a Pulumi program, and automatically deploys that program using the Pulumi Automation API, showing the user all the outputs (like IP addresses, resource names, etc.).  
+This is what the [`pulumi-ai`](https://github.com/pulumi/pulumi-ai) CLI enables.  By combining Pulumi AI with [Pulumi Automation API](https://www.pulumi.com/automation/), the `pulumi-ai` CLI takes a natural language query, creates a Pulumi program, and automatically deploys that program using the Pulumi Automation API, showing the user all the outputs (like IP addresses, resource names, etc.).
 
-This integration delivers an incredible experience.  With just a few words of natural language guidance, you can create cloud infrastructure, modify it, extend it, and ultimately, if you so choose see it run live on the internet. 
+This integration delivers an incredible experience.  With just a few words of natural language guidance, you can create cloud infrastructure, modify it, extend it, and ultimately, if you so choose see it run live on the internet.
 
-![`pulumi-ai` CLI in action](pulumi-ai.gif)
+![`pulumi-ai` CLI in action](https://www.pulumi.com/uploads/content/blog/pulumi-ai/pulumi-ai.gif)
 
 Giving Pulumi AI the tools to build cloud infrastructure is an awesome power, and of course, with great power comes great responsibility. Use this in a development sandbox, with appropriately scoped permissions, and be sure to audit the infrastructure that is deployed.
 
 ## Is this the right level of abstraction?
 
-It’s reasonable to ask whether Pulumi AI offers the ideal level of abstraction for AI assistance for Infrastructure as Code. Kelsey Hightower mentioned this on the day that Pulumi AI launched: 
+It’s reasonable to ask whether Pulumi AI offers the ideal level of abstraction for AI assistance for Infrastructure as Code. Kelsey Hightower mentioned this on the day that Pulumi AI launched:
 
 <a href="https://twitter.com/kelseyhightower/status/1646538701818986501?s=20"><img src="kelsey-tweet.png" width="560" alt="If you're using generative AI tools to write infrastructure code, or YAML files, that's a hint you're working at the wrong level of abstraction. Instead of guessing, consider using a template to abstract away the details, and only expose the decisions a human needs to make." style="padding: 3px; filter: drop-shadow(3px 3px 3px #aaaaaa);"/></a>
 
-We believe that fundamentally, both code and templates, while having different use cases, are important. Giving teams working the tools to discover, learn and use cloud infrastructure APIs via IaC is an incredible productivity boost and addresses real and important needs around examples, content, and tackling cloud complexity.  At the same time, we all want to see the level of abstraction raised for cloud infrastructure.  Indeed, one of our primary goals at Pulumi since our founding has been to raise the abstraction level from raw cloud primitives to higher level components that are aligned with the needs of specific usage scenarios.  
+We believe that fundamentally, both code and templates, while having different use cases, are important. Giving teams working the tools to discover, learn and use cloud infrastructure APIs via IaC is an incredible productivity boost and addresses real and important needs around examples, content, and tackling cloud complexity.  At the same time, we all want to see the level of abstraction raised for cloud infrastructure.  Indeed, one of our primary goals at Pulumi since our founding has been to raise the abstraction level from raw cloud primitives to higher level components that are aligned with the needs of specific usage scenarios.
 
-This inspires two objectives we have in developing Pulumi AI.  
+This inspires two objectives we have in developing Pulumi AI.
 
 The first is to enable Pulumi AI to use higher-level components when available, so that it is working at the right level of abstraction for the problem at hand. Pulumi AI does this today, for example, by favoring use of the higher level `awsx` and `eks` packages over the raw primitives from the `aws` package in its output.  This ensures that Pulumi AI solves complex problems in simple and composable ways when possible, but falls down into lower level building blocks when it must.  Just like an expert (human!) Pulumi developer would do when given the same set of tasks.
 
@@ -89,7 +89,7 @@ All of these are important, and each of them represents a direction of our inves
 
 ## The Future
 
-Pulumi AI is already offering practical value for thousands of users. We have an incredible number of opportunities to extend and apply this technology to many aspects of cloud engineering. The impact is profound today and will be even more so in the future. 
+Pulumi AI is already offering practical value for thousands of users. We have an incredible number of opportunities to extend and apply this technology to many aspects of cloud engineering. The impact is profound today and will be even more so in the future.
 
 We’re just getting started and hope you join us on our journey!  Experience [Pulumi AI](/ai) today and join us for one of these upcoming events to learn more:
 

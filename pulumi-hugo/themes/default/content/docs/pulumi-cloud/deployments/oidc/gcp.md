@@ -32,7 +32,11 @@ When following the instructions in the documentation:
 
 Make a note of the workload identity pool ID, provider ID, and service account email address. These will be necessary to enable OIDC for your stack.
 
-## Enabling OIDC for your Stack
+## Enabling OIDC for your Stack via the Pulumi Console
+
+{{% notes "info" %}}
+In addition to the Pulumi Console, deployment settings including OIDC can be configured for a stack using the [pulumiservice.DeploymentSettings](https://www.pulumi.com/registry/packages/pulumiservice/api-docs/deploymentsettings/) resource or via the [REST API](/docs/pulumi-cloud/deployments/api/#patchsettings).
+{{% /notes %}}
 
 1. Navigate to your stack in the Pulumi Console.
 2. Open the stack's "Settings" tab.
