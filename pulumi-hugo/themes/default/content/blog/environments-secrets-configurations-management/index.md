@@ -44,7 +44,7 @@ Pulumi ESC is available today in preview via the new `esc` CLI, as part of Pulum
 
 ## A Taste of Pulumi ESC
 
-[Pulumi ESC](https://www.pulumi.com/product/esc/) allows you to define _environments_, each of which specifies a collection of _secrets_ and _configuration_ values. Environments are specified as _code_, and each environment can import one or more other environments (for composition and inheritance), and can specify its own configuration values directly, or be pulled from another secrets provider.
+Pulumi ESC allows you to define _environments_, each of which specifies a collection of _secrets_ and _configuration_ values. Environments are specified as _code_, and each environment can import one or more other environments (for composition and inheritance), and can specify its own configuration values directly, or be pulled from another secrets provider.
 
 The following example shows a Pulumi ESC environment which dynamically pulls values from AWS OIDC, HashiCorp Vault and AWS Secrets Manager, as well as setting environment-specific configuration and overriding inherited configuration.
 
