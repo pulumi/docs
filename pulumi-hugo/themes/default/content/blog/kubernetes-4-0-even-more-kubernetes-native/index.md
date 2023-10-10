@@ -31,7 +31,7 @@ Pulumi Kubernetes 4.0 uses Kubernetes Server-Side Apply by default, supports ups
 
 Together, these additions make Pulumi’s support for Kubernetes even more Kubernetes-native, allowing the best of both worlds between Kubernetes’ flexible resource model and Pulumi’s robust desired state infrastructure as code model, all while using your favorite languages (TypeScript, Python, Go, .NET and Java) to define and manage your Kubernetes Infrastructure.  Pulumi programs that need to manage Kubernetes resources that are also modified by other systems (external controllers, managed Kubernetes service control planes, `kubectl` or other IaC solutions) can faithfully represent the modifications they want to make to existing resources within the Pulumi resource lifecycle.  Pulumi accurately detects any differences between the current state of resources in the cluster, and the desired state specified by Pulumi IaC.
 
-![Upsert](https://www.pulumi.com/blog/kubernetes-server-side-apply/upsert.gif)
+![Upsert](https://www.pulumi.com/uploads/content/blog/kubernetes-server-side-apply/upsert.gif)
 
 ## Server-Side Apply, Upserts and Patch Resources
 

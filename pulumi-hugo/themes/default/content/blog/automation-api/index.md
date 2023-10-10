@@ -244,7 +244,7 @@ def delete_handler(id: str):
 
 {{< /chooser >}}
 
-![HTTP server demo](http.gif)
+![HTTP server demo](https://www.pulumi.com/uploads/content/blog/automation-api/http.gif)
 
 Check out the full `Pulumi over HTTP` example in [TypeScript](https://github.com/pulumi/automation-api-examples/tree/main/nodejs/pulumiOverHttp-ts), [Go](https://github.com/pulumi/automation-api-examples/tree/main/go/pulumi_over_http) and [Python](https://github.com/pulumi/automation-api-examples/tree/main/python/pulumi_over_http).
 
@@ -444,7 +444,7 @@ with connect(
 
 {{< /chooser >}}
 
-![Database migration demo](dbmigration.gif)
+![Database migration demo](https://www.pulumi.com/uploads/content/blog/automation-api/dbmigration.gif)
 
 See the full database deployment and migration Automation API program in [TypeScript](https://github.com/pulumi/automation-api-examples/tree/main/nodejs/databaseMigration-ts), [Go](https://github.com/pulumi/automation-api-examples/tree/main/go/database_migration) and [Python](https://github.com/pulumi/automation-api-examples/tree/main/python/database_migration).
 
@@ -533,13 +533,13 @@ nAnimalsService := web.NewWebService("nAnimals", func() http.Handler {
 
 {{< /chooser >}}
 
-![Halloumi demo](halloumi.gif)
+![Halloumi demo](https://www.pulumi.com/uploads/content/blog/automation-api/halloumi.gif)
 
 Check out the full `halloumi` source in [TypeScript](https://github.com/pulumi/halloumi/tree/main/nodejs) and [Go](https://github.com/pulumi/halloumi/tree/main/go).
 
 Like any other framework, you can even set a breakpoint to debug orchestration logic or the pulumi program itself, including `Apply` callbacks.
 
-![Debuggin demo](debugging.gif)
+![Debuggin demo](https://www.pulumi.com/uploads/content/blog/automation-api/debugging.gif)
 
 ## Supercharged Ops Tooling
 
@@ -577,7 +577,7 @@ func NewAddCmd() *cobra.Command {
 }
 ```
 
-![vmgr add demo](vmgr_add.gif)
+![vmgr add demo](https://www.pulumi.com/uploads/content/blog/automation-api/vmgr_add.gif)
 
 Our `vmgr cron` environment cleanup job takes advantage of Pulumi’s declarative model. It queries the Pulumi Service for stacks older than five days and removes them along with any child resources:
 

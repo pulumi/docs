@@ -125,7 +125,7 @@ gains from better tooling support. In particular:
 - **Reusable components.** Build on top of base classes, and share for
   easy reuse, standard configurations and so on.
 
-![code-completion](./code-completion.gif)
+![code-completion](https://www.pulumi.com/uploads/content/blog/building-your-first-serverless-app-using-only-javascript/code-completion.gif)
 
 ## Want more?
 

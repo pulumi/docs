@@ -138,7 +138,7 @@ Similar to the prior example, exporting the stack state file to extract the secr
 
 It's often acceptable to provide your passwords, API keys, or other sensitive information to your stack via the stack configuration file. But in other situations, it's even better to directly generate a random password as part of your Pulumi app. However, the challenge is to ensure the generated password doesn't change value when updating your stack.
 
-![a code snippet of a Pulumi program that generates and uses a random password](images/password.svg)
+![a code snippet of a Pulumi program that generates and uses a random password](https://www.pulumi.com/uploads/content/blog/pulumi-recommended-patterns-the-basics/images/password.svg)
 
 In this code, we generate a password using the API [`RandomPassword`](/registry/packages/random/api-docs/randompassword). As you would expect because we're using Pulumi's API, Pulumi already knows that the property `dbPassword.result` is a secret and encrypts it by default.
 

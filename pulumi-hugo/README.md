@@ -71,15 +71,13 @@ make clean
 
 This repository is a [Hugo module](https://gohugo.io/hugo-modules/) that doubles as a development server. **It does not contain every page of the Pulumi website**, because most of those pages (e.g., those comprising our CLI and SDK docs) are generated from source code, so they aren't meant to be edited by humans directly.
 
-Because of this, many of the links you follow when browsing around on the development server (to paths underneath `/docs/reference` for example) will fail to resolve because they originate from another repository &mdash; most likely https://github.com/pulumi/docs or https://github.com/pulumi/registry. When we build the Pulumi website, we merge this module along with any others into a single build artifact, but when you're working within an individual module like this one, you may find you're unable to reach certain pages or verify the links you may want to make to them.
+Because of this, many of the links you follow when browsing around on the development server (to paths underneath `/registry` or `/docs/reference`, for example) will fail to resolve because they originate from another repository &mdash; most likely https://github.com/pulumi/registry or https://github.com/pulumi/docs. When we build the Pulumi website, we merge this module along with any others into a single build artifact, but when you're working within an individual module like this one, you may find you're unable to reach certain pages or verify the links you may want to make to them.
 
 If you want to link to a page that exists on https://pulumi.com but not in this repository, use the page's path **starting at the root** in a Markdown or HTML link. For example, in a Markdown file, to link to the [Digital Ocean Droplet](https://www.pulumi.com/registry/packages/digitalocean/api-docs/droplet/) page (a page that doesn't exist in this repository, but that would exist in an integration build), you'd use:
 
 ```markdown
 [Digital Ocean Droplet](/registry/packages/digitalocean/api-docs/droplet/)
 ```
-
-We used to recommend using `{{ relref }}` for these links, which are checked in the build for https://github.com/pulumi/docs; however, this often caused confusion because when a link was incorrect, the failure would not be obviously connected to a change here. For a detailed explanation see [#2701](https://github.com/pulumi/pulumi-hugo/pull/2071).
 
 ### What's in this repo
 
@@ -92,26 +90,25 @@ You'll find all of these files in `themes/default`.
 ### What's not in this repo
 
 * Generated documentation for the Pulumi CLI and SDK. You'll find this at https://github.com/pulumi/docs.
-* Generated tutorials. You'll find these at https://github.com/pulumi/examples).
+* Generated tutorials. You'll find these at https://github.com/pulumi/examples.
 * Templates used for generating resource documentation. You'll find these at https://github.com/pulumi/pulumi.
+* The Pulumi Registry. You'll find this at https://github.com/pulumi/registry.
 
 ## Merging and releasing
 
-When a pull request is merged into the `master` branch of this repository, the content of the pull request isn't published immediately. Instead, it's published at some point later, typically as a result of an [hourly GitHub Actions job in pulumi/docs](https://github.com/pulumi/docs/actions/workflows/update-theme.yml) that checks this repository and others for new content. When that hourly job finds new content to be published, it creates a new pull request (or updates an existing one) on pulumi/docs, builds and tests a full site preview, and merges that pull request automatically after the tests pass, triggering the website to be republished.
+When a pull request is merged into the `master` branch of this repository, the content of the pull request isn't published immediately. Instead, it's published at some point later, typically as a result of an [hourly GitHub Actions job in pulumi/docs](https://github.com/pulumi/docs/actions/workflows/update-theme.yml) that checks this repository and others for new content. When that job (which runs every 15 minutes) finds new content to be published, it creates a new pull request (or updates an existing one) on pulumi/docs, builds and tests a full site preview, and merges that pull request automatically after the tests pass, triggering the website to be republished.
 
 The typical timeline looks something like this:
 
-* 8:45 AM: A PR is merged into pulumi-hugo `master`.
+* 8:59 AM: A PR is merged into pulumi-hugo `master`.
 * 9:00 AM: The [`Scheduled Jobs: Update Hugo modules`](https://github.com/pulumi/docs/actions/workflows/update-theme.yml) workflow runs in pulumi/docs.
-* 9:05 AM: The workflow detects the newly merged pulumi-hugo content and generates a new PR on pulumi/docs.
-* 9:30 AM: The pulumi/docs PR is automatically merged into `master`, triggering a redeployment of pulumi.com.
-* 10:00 AM: The new content is live.
+* 9:02 AM: The workflow detects the newly merged pulumi-hugo content and generates a new PR on pulumi/docs.
+* 9:08 AM: The pulumi/docs PR build completes and is automatically merged into `master`, triggering a redeployment of pulumi.com.
+* 9:18 AM: The new content is live.
 
-In other words, once the pulumi/docs PR is generated, it usually takes about an hour (half-hour for the PR build, another for the website deployment) for new content to appear on pulumi.com.
+In other words, it generally takes between 15 and 30 minutes for a change merged into this repository to appear on pulumi.com. Note, however, that despite that we schedule the module-update job to run every 15 minutes, GitHub doesn't guarantee that this happens precisely on time; delays of up to several minutes are unfortunately fairly common.
 
-Note, however, that despite that we schedule the module-update job to run at the top of the hour, it often doesn't; delays of 20 minutes or more are unfortunately fairly common.
-
-If having more direct control over release timing is important, you can opt to trigger the module-update job manually. To do that, [navigate to the workflow](https://github.com/pulumi/docs/actions/workflows/update-theme.yml) and choose **Run Workflow** to kick it off immediately:
+If having more direct control over release timing is important, you can opt to trigger the module-update job manually to save some time. To do that, [navigate to the workflow](https://github.com/pulumi/docs/actions/workflows/update-theme.yml) and choose **Run Workflow** to kick it off immediately:
 
 ![image](https://user-images.githubusercontent.com/274700/168188720-e4b2ee56-4b84-4c4f-ad3a-68e145d69124.png)
 

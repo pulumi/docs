@@ -46,7 +46,11 @@ Because Azure's federated credentials require that the subject identifier exactl
 * `pulumi:deploy:org:contoso:project:core:stack:dev:operation:refresh:scope:write`
 * `pulumi:deploy:org:contoso:project:core:stack:dev:operation:destroy:scope:write`
 
-## Enabling OIDC for your Stack
+## Enabling OIDC for your Stack via the Pulumi Console
+
+{{% notes "info" %}}
+In addition to the Pulumi Console, deployment settings including OIDC can be configured for a stack using the [pulumiservice.DeploymentSettings](https://www.pulumi.com/registry/packages/pulumiservice/api-docs/deploymentsettings/) resource or via the [REST API](/docs/pulumi-cloud/deployments/api/#patchsettings).
+{{% /notes %}}
 
 1. Navigate to your stack in the Pulumi Console.
 2. Open the stack's "Settings" tab.

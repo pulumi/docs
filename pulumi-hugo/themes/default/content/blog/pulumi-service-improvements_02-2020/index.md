@@ -49,7 +49,7 @@ into your CI/CD tool of choice. So, for example, you'll now see links to the [Ci
 
 We now pretty print JSON configuration values and have much better support for viewing multi-line data.
 
-{{< figure alt="JSON and mutiline configuration values" src="./pretty-print-multiline-json.gif" class="md:max-w-lg" >}}
+{{< figure alt="JSON and mutiline configuration values" src="https://www.pulumi.com/uploads/content/blog/pulumi-service-improvements_02-2020/pretty-print-multiline-json.gif" class="md:max-w-lg" >}}
 
 ## Download Earlier Checkpoints
 
@@ -81,7 +81,7 @@ They can even go one step further, review the specific access granted from vario
 
 We've made some changes that dramatically improve the Pulumi Service's performance when rendering large update logs.
 
-{{< figure alt="Log rendering performance" src="./log-rendering-perf.gif" class="md:max-w-lg" >}}
+{{< figure alt="Log rendering performance" src="https://www.pulumi.com/uploads/content/blog/pulumi-service-improvements_02-2020/log-rendering-perf.gif" class="md:max-w-lg" >}}
 
 ## Audit Logs
 
