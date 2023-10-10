@@ -47,7 +47,7 @@ node scripts/translate-redirects.js "$build_dir" "$(pulumi -C infrastructure con
 aws s3 mb $destination_bucket_uri --region "$(aws_region)" || true
 # set `BlockPublicAcls` to false to enable setting the public-read ACL below.
 aws s3api put-public-access-block --bucket "$destination_bucket" --public-access-block-configuration BlockPublicAcls=false
-# set `ObjectOwnership=ObjectWriter`, since as of April 2023 the default has changed to `BucketOwnerEnforced` which 
+# set `ObjectOwnership=ObjectWriter`, since as of April 2023 the default has changed to `BucketOwnerEnforced` which
 # disables bucket ACLs.
 aws s3api put-bucket-ownership-controls --bucket "$destination_bucket" --ownership-controls="Rules=[{ObjectOwnership=ObjectWriter}]"
 aws s3api put-bucket-acl --bucket "$destination_bucket" --acl bucket-owner-full-control
@@ -84,6 +84,8 @@ echo "$s3_website_url"
 
 # Set the content-type of latest-version explicitly. (Otherwise, it'll be set as binary/octet-stream.)
 aws s3 cp "$build_dir/latest-version" "${destination_bucket_uri}/latest-version" \
+    --content-type "text/plain" --acl public-read --region "$(aws_region)" --metadata-directive REPLACE
+aws s3 cp "$build_dir/esc/latest-version" "${destination_bucket_uri}/esc/latest-version" \
     --content-type "text/plain" --acl public-read --region "$(aws_region)" --metadata-directive REPLACE
 
 # Smoke test the deployed website. Specs are in ../cypress/integration.
