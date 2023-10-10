@@ -21,7 +21,7 @@ Pulumi ESC enables teams to create collections of configuration and secrets call
 Environments have built-in support for dynamic secret and config providers allowing for security and infrastructure best practices such as short-term credentials via OIDC and dynamically pulling secret values as need for all major cloud providers.
 
 {{% notes type="info" %}}
-The examples below use the new standalone `esc` CLI, but all `esc` subcommands are available in the `pulumi` CLI as well. The `pulumi` CLI also has native support for ESC environments via `pulumi preview` and `pulumi up`. See the [Using with Pulumi IaC](#using-with-pulumi-iac) documentation for details.
+The examples below use the new standalone `esc` CLI, but all `esc` subcommands are available in the `pulumi` CLI as well. The `pulumi` CLI also has native support for Pulumi ESC environments via `pulumi preview` and `pulumi up`. See the [Using with Pulumi IaC](#using-with-pulumi-iac) documentation for details.
 {{% /notes %}}
 
 ## Create a new environment
@@ -287,7 +287,7 @@ So far, in our examples we have been previewing static values.
 
 For example if you try to get the value of `aws` in the config right now, it will show `[unknown]`.
 
-In order to see secrets, you need to "open" the environment using `esc env open orgName/environmentName`. For example:
+In order to see secrets, you need to "open" the environment using `esc open orgName/environmentName`. For example:
 
 ```bash
 $ env env open myorg/test
@@ -308,7 +308,7 @@ $ env env open myorg/test
 You can also open and retrieve the value of a specific key, like this:
 
 ```bash
-$ esc env open myorg/test secrets.paymentApiKey
+$ esc open myorg/test secrets.paymentApiKey
 "prod_4kcdWj8ZfdBfgjQea135DU00EXAMPLE"
 ```
 
@@ -335,13 +335,13 @@ values:
 Now you can see those project environment variables if you open the environment with the `-f shell` or `-f dotenv` option.
 
 ```bash
-$ esc env open -f shell myorg/test
+$ esc open -f shell myorg/test
 export AWS_ACCESS_KEY_ID="AKIAIOSFODNN7EXAMPLE"
 export AWS_SECRET_ACCESS_KEY="wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY"
 export AWS_SESSION_TOKEN="eyJpc3MiOiJPbmxpbmUgSldUIEJ1aWxkZXIiLCJpYXQiOjE2OTY1NzA3NTIsImV4cCI6MTcyODEwNjc1MiwiYXVkIjoid3d3LmV4YW1wbGUuY29tIiwic3ViIjoianJvY2tldEBleGFtcGxlLmNvbSIsIkdpdmVuTmFtZSI6IkpvaG5ueSIsIlN1cm5hbWUiOiJSb2NrZXQiLCJFbWFpbCI6Impyb2NrZXRAZXhhbXBsZS5jb20iLCJSb2xlIjpbIk1hbmFnZXIiLCJQcm9qZWN0IEFkbWluaXN0cmF0b3IiXX0"
 export MY_ENV_VAR="true"
 
-$ esc env open -f dotenv myorg/test
+$ esc open -f dotenv myorg/test
 AWS_ACCESS_KEY_ID="AKIAIOSFODNN7EXAMPLE"
 AWS_SECRET_ACCESS_KEY="wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY"
 AWS_SESSION_TOKEN="eyJpc3MiOiJPbmxpbmUgSldUIEJ1aWxkZXIiLCJpYXQiOjE2OTY1NzA3NTIsImV4cCI6MTcyODEwNjc1MiwiYXVkIjoid3d3LmV4YW1wbGUuY29tIiwic3ViIjoianJvY2tldEBleGFtcGxlLmNvbSIsIkdpdmVuTmFtZSI6IkpvaG5ueSIsIlN1cm5hbWUiOiJSb2NrZXQiLCJFbWFpbCI6Impyb2NrZXRAZXhhbXBsZS5jb20iLCJSb2xlIjpbIk1hbmFnZXIiLCJQcm9qZWN0IEFkbWluaXN0cmF0b3IiXX0"
@@ -351,7 +351,7 @@ MY_ENV_VAR="true"
 You can evaluate those environment variables in your current shell with:
 
 ```yaml
-$ eval $(esc env open -f shell myorg/test)
+$ eval $(esc open -f shell myorg/test)
 ```
 
 ## Running third party commands using Pulumi ESC secrets and config
@@ -409,7 +409,7 @@ values:
 When we run `esc env open` on that environment we get the combined values:
 
 ```bash
-$ esc env open myorg/test
+$ esc open myorg/test
 {
   "environmentName": "prod",
   "instanceType": "m5.4xlarge",

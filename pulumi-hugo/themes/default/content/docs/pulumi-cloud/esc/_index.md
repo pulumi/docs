@@ -53,7 +53,7 @@ Learn more about [managing Environments using Pulumi ESC](/docs/concepts/environ
 
 Begin your journey with Pulumi ESC through a hands-on, self-paced [tutorial](/docs/using-pulumi/esc/get-started/).
 
-## ESC CLI overview
+## Pulumi ESC CLI overview
 
 Please see [ESC CLI overview](/docs/esc-cli/) for details on interacting with Environments using the command line.
 

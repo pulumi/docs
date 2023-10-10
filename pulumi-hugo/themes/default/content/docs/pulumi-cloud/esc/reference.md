@@ -173,7 +173,7 @@ values:
     AWS_SESSION_TOKEN: ${awsCreds.sessionToken}
 
   # Configuration nested under the "pulumiConfig" key will be available to Pulumi stacks that
-  # reference this Environment during `pulumi up/preview/refresh/destroy`
+  # reference this environment during `pulumi up/preview/refresh/destroy`
   pulumiConfig:
     aws:region: us-west-2
 ```

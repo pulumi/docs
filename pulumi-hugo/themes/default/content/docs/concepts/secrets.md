@@ -586,7 +586,7 @@ The [supported secrets providers](/docs/cli/commands/pulumi_stack_init/) are:
 After the provider has been changed, you should be able to run `pulumi preview` and see no proposed changes.  Your configuration secrets
 and state files are now encrypted using the new secrets provider.
 
-## Manage Secrets using ESC Environments
+## Manage Secrets using Pulumi ESC Environments
 
 With Pulumi ESC environments, you can manage secrets wherever they live. Pulumi ESC environments provide a centralized abstraction in front of the most common secrets manager/vaults while providing security through RBAC and audit controls.  
 
