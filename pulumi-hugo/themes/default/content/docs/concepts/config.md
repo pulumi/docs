@@ -612,9 +612,9 @@ Stack tags applied by Pulumi CLI are listed in the `Tags` section of the Overvie
 
 ![Tags applied by Pulumi CLI](/images/docs/concepts/stack-config-tags.png)
 
-## Using Pulumi ESC environments from Pulumi Stack Config
+## Using Pulumi ESC from Pulumi Stack Config
 
-Often there is common configuration and secrets you do not want to duplicate in various stack configuration files. Pulumi ESC Environments can help with that!
+Often there is common configuration and secrets you do not want to duplicate in various stack configuration files. Pulumi ESC can help with that!
 
 Once you have an [environment](/docs/concepts/environments/) set up and you are [projecting pulumi configuration](/docs/concepts/environments/#projecting-pulumi-config), you can import that environment (or multiple environments) into your Pulumi stack.
 
