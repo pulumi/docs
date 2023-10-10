@@ -66,7 +66,7 @@ To modify an environment variable in the deployment settings, you only need to s
 
 The [REST API documentation](../api) contains much more thorough information about individual API properties.
 
-### Defined as Code with the Pulumi Service Provider
+### Defined as Code with the Pulumi Cloud Service provider
 
 Finally, a stack's deployment settings may be defined as a resource within the stack itself using the Pulumi Service provider. This lets you securely store your settings in source control alongside your code.
 
