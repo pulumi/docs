@@ -58,6 +58,7 @@ Navigate to the root of the repo and deploy the application resources using the 
 
 ```bash
 cd tutorials
+chmod a+x cfn-deploy.sh
 . ./cfn-deploy.sh
 ```
 
