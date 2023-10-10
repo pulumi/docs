@@ -27,12 +27,12 @@ $ brew install pulumi/tap/esc
 
 ### MacOS binary download
 
-<a class="btn btn-secondary mx-2" href="https://get.pulumi.com/esc/releases/esc-v0.5.1-darwin-x64.tar.gz">amd64</a>
-<a class="btn btn-secondary mx-2" href="https://get.pulumi.com/esc/releases/esc-v0.5.1-darwin-arm64.tar.gz">arm64</a></p>
+<a class="btn btn-secondary mx-2" href="https://get.pulumi.com/esc/releases/esc-v{{< latest-version-esc >}}-darwin-x64.tar.gz">amd64</a>
+<a class="btn btn-secondary mx-2" href="https://get.pulumi.com/esc/releases/esc-v{{< latest-version-esc >}}-darwin-arm64.tar.gz">arm64</a></p>
 
 macOS Sierra (10.12) or later is required.
 
-The latest version of Pulumi ESC is 0.5.1.
+The latest version of Pulumi ESC is {{< latest-version-esc >}}.
 
 {{% notes type="info" %}}
 For a streamlined Pulumi ESC walkthrough, including language runtime installation and cloud configuration, see the [Get Started](/docs/pulumi-cloud/esc/getting-started) guides.
@@ -132,7 +132,7 @@ The installer script can be rerun to subsequently install new updates.
 If you do not wish to use the previous options, you can install Pulumi manually.
 
 <!-- markdownlint-disable url -->
-1. Download [Pulumi ESC 0.5.1 for macOS](https://get.pulumi.com/esc/releases/esc-v0.5.1-darwin-x64.tar.gz).
+1. Download [Pulumi ESC {{< latest-version-esc >}} for macOS](https://get.pulumi.com/esc/releases/esc-v{{< latest-version-esc >}}-darwin-x64.tar.gz).
 <!-- markdownlint-enable url -->
 
 1. Extract the tarball and move the binaries in the `esc` directory to a directory included in your system's `$PATH`.
@@ -155,11 +155,11 @@ $ curl -fsSL https://get.pulumi.com/esc/install.sh | sh
 </div>
 <div class="w-full">
 <h3 class="no-anchor pt-4"><i class="fas fa-download pr-2"></i>Linux Binary Download</h3>
-<p><a class="btn btn-secondary mx-2" href="https://get.pulumi.com/esc/releases/esc-v0.5.1-linux-x64.tar.gz">amd64</a></p>
+<p><a class="btn btn-secondary mx-2" href="https://get.pulumi.com/esc/releases/esc-v{{< latest-version-esc >}}-linux-x64.tar.gz">amd64</a></p>
 </div>
 </div>
 
-The latest version of Pulumi ESC is 0.5.1.
+The latest version of Pulumi ESC is {{< latest-version-esc >}}.
 
 {{< get-started-note >}}
 
@@ -205,7 +205,7 @@ See [How to permanently set $PATH on Unix](https://stackoverflow.com/questions/1
 Alternatively, you can install Pulumi ESC manually. We provide a prebuilt binary for Linux.
 
 <!-- markdownlint-disable url -->
-1. Download [Pulumi ESC 0.5.1 for Linux x64](https://get.pulumi.com/esc/releases/esc-v0.5.1-linux-x64.tar.gz).
+1. Download [Pulumi ESC {{< latest-version-esc >}} for Linux x64](https://get.pulumi.com/esc/releases/esc-v{{< latest-version-esc >}}-linux-x64.tar.gz).
 <!-- markdownlint-enable url -->
 
 1. Extract the tarball and move the binaries in the `esc` directory to a directory included in your system's `$PATH`.
@@ -221,14 +221,14 @@ Alternatively, you can install Pulumi ESC manually. We provide a prebuilt binary
 <div class="w-full">
 <h3 class="no-anchor pt-4"><i class="fas fa-download pr-2"></i>Windows Binary Download</h3>
 <p>
-<a class="btn btn-secondary mx-2" href="https://get.pulumi.com/esc/releases/esc-v0.5.1-windows-x64.zip">amd64</a>
+<a class="btn btn-secondary mx-2" href="https://get.pulumi.com/esc/releases/esc-v{{< latest-version-esc >}}-windows-x64.zip">amd64</a>
 </p>
 </div>
 </div>
 
 Windows 8 and later are supported.
 
-The latest version of Pulumi ESC is 0.5.1. For older versions, see [Available Versions](/docs/install/versions/).
+The latest version of Pulumi ESC is {{< latest-version-esc >}}. For older versions, see [Available Versions](/docs/install/versions/).
 
 {{< get-started-note >}}
 
@@ -274,7 +274,7 @@ This will install the `esc.exe` CLI to `%USERPROFILE%\.pulumi\bin` and add it to
 Alternatively, you can install Pulumi ESC manually using binaries built for Windows x64.
 
 <!-- markdownlint-disable url -->
-1. Download [Pulumi ESC 0.5.1 binaries for Windows x64](https://get.pulumi.com/esc/releases/esc-v0.5.1-windows-x64.zip). For prior versions and release notes, see the [Available Versions](/docs/install/versions/) page.
+1. Download [Pulumi ESC {{< latest-version-esc >}} binaries for Windows x64](https://get.pulumi.com/esc/releases/esc-v{{< latest-version-esc >}}-windows-x64.zip). For prior versions and release notes, see the [Available Versions](/docs/install/versions/) page.
 <!-- markdownlint-enable url -->
 
 1. Unzip the file and extract the contents to a folder such as `C:\esc`.
@@ -298,7 +298,7 @@ After installing Pulumi ESC, verify everything is in working order by running th
 
 ```bash
 $ esc version
-v0.5.1
+v{{< latest-version-esc >}}
 ```
 
 {{% /choosable %}}
@@ -307,7 +307,7 @@ v0.5.1
 
 ```bash
 $ esc version
-v0.5.1
+v{{< latest-version-esc >}}
 ```
 
 {{% /choosable %}}
@@ -316,7 +316,7 @@ v0.5.1
 
 ```bash
 > esc version
-v0.5.1
+v{{< latest-version-esc >}}
 ```
 
 {{% /choosable %}}
