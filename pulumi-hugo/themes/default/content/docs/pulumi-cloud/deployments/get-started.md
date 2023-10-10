@@ -21,7 +21,7 @@ TODO
 It's possible to create a new Pulumi project, commit its code, and deploy it entirely from within your browser by using Deployments in combination with the New Project Wizard.
 
 Navigate to the "New Project" tab.
-Select "Use a template" if you'd like to create a fully-featured project, or select "Use a starter" if you want to create a bare-bones project with only the minimal necessary boilerplate.
+Select "Use a template" if you'd like to create a fully featured project, or select "Use a starter" if you want to create a bare-bones project with only the minimal necessary boilerplate.
 
 In order to use templates you will need to authorize Pulumi with GitHub so that it can clone private repositories as template sources and commit new code for your projects.
 Click the button and accept the required permissions if you would like to use templates.
