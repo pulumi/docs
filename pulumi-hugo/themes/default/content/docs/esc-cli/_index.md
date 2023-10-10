@@ -1,6 +1,6 @@
 ---
 title_tag: Pulumi ESC CLI Overview
-meta_desc: An overview of the Pulumi ESC (Environments, Configuration, and Secrets) CLI.
+meta_desc: An overview of the Pulumi ESC (Environments, Secrets, and Configuration) CLI.
 title: Pulumi ESC CLI
 h1: Pulumi ESC CLI overview
 no_on_this_page: true
