@@ -36,7 +36,7 @@ Each stack in your organization can be configured with deployment settings that 
 - Deployment Prerequisites - custom docker images, build steps, npm package resolution, and acquisition of necessary tools like `ssh`, and environment variables
 - Cloud Auth - IAM roles, OIDC configuration for temporary credentials, and any other identity-related config required to deploy into your cloud of choice
 
-These settings can be configured through the Pulumi Cloud Console, via a REST API, or via Pulumi using the Pulumi Service provider. The console interface is simple and lets you configure settings in just a few minutes, while the REST API and Pulumi Service provider allows you to build tools on top of Pulumi Deployments such as internal dev portals and service catalogs that help internal users kickstart their infrastructure journey with a secure, best practice workflow.
+These settings can be configured with the Pulumi Cloud console, Pulumi Cloud REST API, or Pulumi itself using Pulumi Cloud provider. The console interface is simple and lets you configure settings in just a few minutes, while the REST API and Pulumi Service provider allows you to build tools on top of Pulumi Deployments such as internal dev portals and service catalogs that help internal users kickstart their infrastructure journey with a secure, best practice workflow.
 
 Once configured, every deployment will inherit stack settings. A one-line POST payload can trigger a new deployment run, without having to restate any configuration or cloud credentials. This means that privileged users can configure deployments, and less privileged users can subsequently trigger updates without having direct access to sensitive credentials and data on their local machines.
 
