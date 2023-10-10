@@ -58,7 +58,7 @@ This enables the resulting stack to use a bundle of pre-configured secrets and c
 Here you can configure the repository and optional subdirectory to use when committing your new project code.
 
 {{% notes "info" %}}
-If you granted the Pulumi GitHub app access to _all_ repostories, the New Project Wizard will allow users to create projects with Deployments enabled in new repositories.
+If you granted the Pulumi GitHub app access to _all_ repositories, the New Project Wizard will allow users to create projects with Deployments enabled in new repositories.
 
 If the app only has access to _some_ repositories, users will only be able to create new projects with Deployments enabled in _existing_ repositories.
 {{% /notes %}}
@@ -81,7 +81,7 @@ In summary, after going through this wizard you will have:
 
 ## Creating a new project manually
 
-This walkthrough shows you how to create a new project using `pulumi new`, upload to GitHub using the `gh` cli, and then configure Pulumi Deployments.
+This walk-through shows you how to create a new project using `pulumi new`, upload to GitHub using the `gh` CLI, and then configure Pulumi Deployments.
 
 ### Prerequisites
 
@@ -96,7 +96,8 @@ Let's get started!
 
 ### Create project and upload to a new GitHub repository
 
-* *Create project with `pulumi new`.  If you do not specify the template and configuration, you will be prompted.  Here we are selecting the `aws-typescript` when presented with a list of options and accepting the defaults for project name and description, as well as stack name.
+* Create a project by running `pulumi new`.  If you do not specify the template and configuration, you will be prompted.
+Here we are selecting the `aws-typescript` template and accepting the defaults for project name and description, as well as stack name.
 
 ```bash
 $ mkdir test_deployments
@@ -137,7 +138,7 @@ Your new project is ready to go!
 To perform an initial deployment, run `pulumi up`
 ```
 
-* Init the local git repository
+* Initialize the local git repository:
 
 ```bash
 $ git init
@@ -191,7 +192,7 @@ Branch 'main' set up to track remote branch 'main' from 'origin'.
 
 ### Configure deployment settings
 
-Now that we have a GitHub repository, we can configure out Pulumi Deployment.
+Now that we have a GitHub repository, we can configure it to use Pulumi Deployments.
 
 * Navigate to your stack in Pulumi Cloud.  It should be at `https://app.pulumi.com/<your_organization>/test_deployments/dev` if you accepted the defaults.  Replace `<your_organization>` with your Pulumi organization name.
 
@@ -221,10 +222,8 @@ Alternatively, you can navigate to `https://app.pulumi.com`, select `Stacks` in 
     * [OIDC Connect](/docs/pulumi-cloud/deployments/oidc/)
     * [Environment Variables](/docs/pulumi-cloud/deployments/reference/#environment-variables)
 
-Go to [Using Deployments](/docs/pulumi-cloud/deployments/reference/) for more information
+(See [Using Deployments](/docs/pulumi-cloud/deployments/reference/) for more information about all of the available settings.)
 
-* Click the `Save deployment configuration` button
-
-* Click the Deploy button in the top right to deploy.
+Finally, click the `Save deployment configuration` button to save our settings, and click the "Deploy" button in the top right to trigger a deployment.
 
 ![Deploy Button](../ui-deploy-button.gif)
