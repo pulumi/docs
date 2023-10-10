@@ -21,7 +21,7 @@ In this tutorial, we’ll demonstrate the power of Pulumi ESC in managing config
 
 You will need the following tools to complete this tutorial:
 
-- A [Pulumi account](https://app.pulumi.com) and [access token](/docs/pulumi-cloud/accounts/#access-tokens)
+- A [Pulumi account](https://app.pulumi.com) and [access token](/docs/pulumi-cloud/access-management/access-tokens/)
 - The [Pulumi ESC CLI](/docs/install/esc/)
 {{< notes type="info" >}}
 Pulumi ESC is a service of Pulumi Cloud that can be used with or without Pulumi IaC. This means that if you already have the Pulumi IaC CLI installed, you do not need to install the Pulumi ESC CLI, and you may substitute `pulumi env` anywhere you see the `esc env` command in this guide.
