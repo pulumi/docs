@@ -30,7 +30,7 @@ While Pulumi Deployments has some overlap in functionality offered by a traditio
 
 ## Deployment Settings
 
-Each stack in your organization can be configured with deployment settings that describes everything needed to run an update. Deployment settings turns a stack into an atomic, deployable unit of infrastructure that self-describes all of its requirements and dependencies. That includes:
+Each stack in your organization can be configured with deployment settings that describe everything needed to run an update. Deployment settings turns a stack into an atomic, deployable unit of infrastructure that self-describes all of its requirements and dependencies. That includes:
 
 - Source Control - the Pulumi program and stack configuration
 - Deployment Prerequisites - custom docker images, build steps, npm package resolution, and acquisition of necessary tools like `ssh`, and environment variables
