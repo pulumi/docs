@@ -27,9 +27,9 @@ We support organizational templates on the Enterprise and Business Critical edit
 
 ## Backstage plugin
 
-[Backstage](https://www.backstage.com) is an open-source framework for building developer portals.
+[Backstage](https://backstage.io) is an open-source framework for building developer portals.
 Using the [Pulumi Backstage plugin](/docs/pulumi-cloud/developer-portals/backstage) you can create new Pulumi projects from your organization's custom templates, and you can run previews, updates, or [Deployments](/docs/pulumi-cloud/deployments) directly from your Backstage instance.
 
 ## New project wizard
 
-Pulumi's [New Project Wizard](/docs/pulumi-cloud/deployments/get-started/#new-project-wizard) can also leverage your organization's custom templates to automatically commit and deploy code for new Pulumi projects entirely from within your browser.
+Pulumi's [New Project Wizard](/docs/pulumi-cloud/developer-portals/new-project-wizard) can also leverage your organization's custom templates to automatically commit and deploy code for new Pulumi projects entirely from within your browser.

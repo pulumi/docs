@@ -10,14 +10,14 @@ menu:
 ---
 
 A large number of public project templates are provided by Pulumi in [https://github.com/pulumi/examples](https://github.com/pulumi/examples) and [https://github.com/pulumi/templates](https://github.com/pulumi/templates).
-These can be useful for teams starting from scratch, however as your business and infrastructure grows in complexity it is likely you will want new Pulumi projects to include some custom, internal functionality not provided by these public templates.
+These can be useful for teams starting from scratch; however, as your business and infrastructure grows in complexity it is likely you will want new Pulumi projects to include some custom, internal functionality not provided by these public templates.
 
 Pulumi allows you to define _custom_ project templates to help get projects off the ground faster.
 This enables you to provide new Pulumi projects with consistent code structure, conventions, or best practices, for example.
 
 ## Defining a custom template
 
-A template can be hosted in a public or private GitHub repository, and it's only requirement is that it must contain a valid `Pulumi.yaml` at the root or within a subdirectory of the repository.
+A template can be hosted in a public or private GitHub repository, and its only requirement is that it must contain a valid `Pulumi.yaml` at the root or within a subdirectory of the repository.
 A single repository can provide multiple templates from various subdirectories.
 
 The `Pulumi.yaml` file can optionally contain a `template` section, which typically includes a `config` section for specifying required config values for the project. Each config value can have a `description` and a `default` value. Config values can be marked as [`secret`](/docs/concepts/secrets), which ensures values in templated project will be stored with secure encryption.
@@ -54,7 +54,7 @@ Custom templates are only available to organizations using the Enterprise and Bu
 If you would like to use this feature, [contact us](/contact?form=sales) to upgrade.
 {{% /notes %}}
 
-A Pulumi admin can configure their organization to use custom templates with the [New Project Wizard](/docs/pulumi-cloud/deployments/get-started#wizard).
+A Pulumi admin can configure their organization to use custom templates with the [New Project Wizard](/docs/pulumi-cloud/developer-portals/new-project-wizard).
 By doing so, your organization's members will be able to:
 
 * Template and configure new Pulumi projects from their browser.
@@ -80,7 +80,7 @@ You will also need to authorize Pulumi with GitHub in order to use private repos
 This authorization is needed in order to act on your behalf (and not as the Pulumi GitHub app) when fetching and creating private repositories.
 More specifically, this ensures that only repositories your GitHub user would normally have access can be used as template sources.
 
-Navigating to your organization's "Settings → Integrations" tab will show a "Organization Template Sources" section. If you have not already authorized you will see an "Authorize GitHub" button. Click the button and accept the required permissions.
+Navigating to your organization's "Settings → Integrations" tab will show an "Organization Template Sources" section. If you have not already authorized you will see an "Authorize GitHub" button. Click the button and accept the required permissions.
 
 ### Organization settings
 

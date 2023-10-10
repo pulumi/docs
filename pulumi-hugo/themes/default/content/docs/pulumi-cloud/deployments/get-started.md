@@ -23,7 +23,7 @@ It's possible to create a new Pulumi project, commit its code, and deploy it ent
 Navigate to the "New Project" tab.
 Select "Use a template" if you'd like to create a fully-featured project, or select "Use a starter" if you want to create a bare-bones project with only the minimal necessary boilerplate.
 
-In order to use templates you will need to authorize Pulumi with Github so that it can clone private repositories as template sources and commit new code for your projects.
+In order to use templates you will need to authorize Pulumi with GitHub so that it can clone private repositories as template sources and commit new code for your projects.
 Click the button and accept the required permissions if you would like to use templates.
 
 {{% notes "info" %}}
@@ -45,7 +45,7 @@ Provide a name for the project you're about to create, along with an optional de
 
 This impacts the resulting `Pulumi.yaml` file, and the name of `Pulumi.<stack>.yaml`.
 
-### Cofiguration
+### Configuration
 
 This section allows you to provide values for any necessary configuration, if you're using a [template](/docs/pulumi-cloud/developer-portals/templates) that declares required configuration keys.
 

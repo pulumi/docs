@@ -80,7 +80,7 @@ Integrate Pulumi with your current continuous delivery pipeline. Build your own 
 
 * [Backstage Plugin](/docs/pulumi-cloud/developer-portals/backstage)
 * [Custom templates](/docs/pulumi-cloud/developer-portals/templates)
-* [New Project Wizard](/docs/pulumi-cloud/deployments/get-started)
+* [New Project Wizard](/docs/pulumi-cloud/developer-portals/new-project-wizard)
 
 ### Pulumi ESC (Environments, Secrets, and Configuration)
 
