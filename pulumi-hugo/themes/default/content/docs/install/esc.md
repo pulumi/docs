@@ -22,7 +22,7 @@ search:
 ## Package manager
 
 ```bash
-$ brew install pulumi/tap/esc
+$ brew update && brew install pulumi/tap/esc
 ```
 
 ### MacOS binary download
@@ -57,7 +57,7 @@ You can install Pulumi ESC through the [Homebrew package manager](https://brew.s
 [Pulumi Homebrew Tap](https://github.com/pulumi/homebrew-tap/)
 
 ```bash
-$ brew install pulumi/tap/esc
+$ brew update && brew install pulumi/tap/esc
 ```
 
 This will install the `esc` CLI to the usual place (often `/usr/local/bin/esc`) and add it to your path.
