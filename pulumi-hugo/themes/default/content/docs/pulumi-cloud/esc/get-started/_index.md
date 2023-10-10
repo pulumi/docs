@@ -415,7 +415,7 @@ This section of the tutorial is optional and requires the installation of the [P
 
 Pulumi ESC works independently of [Pulumi Infrastructure as Code (IaC)](/docs/get-started/), providing developers the flexibility to centrally manage their environment configuration regardless of how or where those environments are created.
 
-Pulumi ESC also integrates seamlessly with Pulumi IaC, and this next section will demonstrate how to leverage Pulumi ESC in your own Pulumi programs.
+Pulumi ESC also integrates seamlessly with Pulumi IaC, and this next section will demonstrate how to leverage Pulumi ESC in your own Pulumi programs. This works everywhere, including Pulumi Deployments and GitHub Actions, without any additional work or changes.
 
 ### Create and Configure a New Project
 

@@ -585,3 +585,149 @@ The [supported secrets providers](/docs/cli/commands/pulumi_stack_init/) are:
 
 After the provider has been changed, you should be able to run `pulumi preview` and see no proposed changes.  Your configuration secrets
 and state files are now encrypted using the new secrets provider.
+
+## Manage Secrets using Pulumi ESC environments
+
+With Pulumi ESC, you can manage secrets wherever they live. Pulumi ESC provides a centralized abstraction in front of the most common secrets manager/vaults while providing security through RBAC and audit controls.
+
+### Sharing Secrets Across Multiple Teams
+
+You may have multiple teams that each own different secrets and manage their lifetimes, and choose to store them in various AWS secret manager secrets.  
+
+For example, let's say you have a centralized billing service team that manages your team's payment process API keys. They can have a `Billing` environment defined like this:
+
+```yaml
+values:
+    aws:
+        creds:
+            fn::open::aws-login:
+            oidc:
+                duration: 1h
+                roleArn: arn:aws:iam::************:role/billing-oidc
+                sessionName: pulumi-environments-session
+    team:
+        secrets:
+        fn::open::aws-secrets:
+            region: us-west-2
+            login: ${aws.creds}
+            get:
+                paymentApiKey:
+                    secretId: production/paymentAPIKey
+                backupPaymentAPIKey:
+                    secretId: production/backupPaymentAPIKey
+```
+
+There could be another environment for the Subscription Management team, `Subscription_Management_Prod`, that imports the `Billing` environment.
+
+```yaml
+imports:
+- Prod
+- Billing
+values:
+    serviceName: Subscription Management
+    numInstances: 3
+    # more service specific values  here
+
+    secrets:
+        fn::open::aws-secrets:
+            region: us-west-2
+            login: ${aws.creds}
+            get:
+                dbPassword:
+                    secretId: production/rdsPassword
+```
+
+We can use the command line to open this environment and access this secret, if access controls allow:
+
+```bash
+$ pulumi env open myorg/subscription_management_prod
+```
+
+Which should look like this:
+
+```json
+{
+  "aws": {
+    "creds": {
+      "accessKeyId": "AKIAIOSFODNN7EXAMPLE",
+      "secretAccessKey": "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY",
+      "sessionToken": "eyJpc3MiOiJPbmxpbmUgSldUIEJ1aWxkZXIiLCJpYXQiOjE2OTY1NzA3NTIsImV4cCI6MTcyODEwNjc1MiwiYXVkIjoid3d3LmV4YW1wbGUuY29tIiwic3ViIjoianJvY2tldEBleGFtcGxlLmNvbSIsIkdpdmVuTmFtZSI6IkpvaG5ueSIsIlN1cm5hbWUiOiJSb2NrZXQiLCJFbWFpbCI6Impyb2NrZXRAZXhhbXBsZS5jb20iLCJSb2xlIjpbIk1hbmFnZXIiLCJQcm9qZWN0IEFkbWluaXN0cmF0b3IiXX0.yUSeKObQ29c6VHBdmOA4a35yW3SyhZ5DPiG96_u6Tvk"
+    }
+  },
+  "secrets": {
+    "backupPaymentAPIKey": "prod_3c88Pc8ZfdBdpa135DUEXAMPLE",
+    "dbPassword": "correct horse battery staple",
+    "paymentApiKey": "prod_4kcdWj8ZfdBfgjQea135DU00EXAMPLE"
+  }
+}
+```
+
+### Cross-cloud secrets
+
+Imagine you have a cross-cloud product that leverages services in GCP and Azure, and you have to manage secrets to access those services in GCP Secrets Manager and in Azure KeyVault.  With Pulumi ESC environments, you can coalesce your secrets access to a single entry point.
+
+Here is an example environment config named `Cross_Cloud`:
+
+```yaml
+values:
+    azure:
+        login:
+            fn::open::azure-login:
+                clientId: aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee
+                tenantId: aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee
+                subscriptionId: /subscriptions/00000000-0000-0000-0000-000000000000
+                oidc: true
+    secrets:
+        fn::open::azure-secrets:
+            login: ${azure.login}
+            vault: https://vault-name.vault.azure.net/type/name/version
+            get:
+                api-key:
+                    name: api-key
+                app-secret:
+                    name: app-secret
+
+    # GCP Provider examples
+    gcp:
+        login:
+            fn::open::gcp-login:
+                project: 123456789
+                oidc:
+                    workloadPoolId: pulumi-esc
+                    providerId: pulumi-esc
+                    serviceAccount: pulumi-esc@foo-bar-123456.iam.gserviceaccount.com
+    secrets:
+        fn::open::gcp-secrets:
+            login: ${gcp.login}
+            access:
+                dbPassword:
+                    name: db-key
+```
+
+Now stacks or other environments that import this environment will have access to the Azure and GCP secrets from one easy access point.
+
+```bash
+$ pulumi env open myorg/cross_cloud
+```
+
+Which should look like this:
+
+```json
+{
+  "gcp": {
+    "login": {
+      // removed for brevity
+    }
+  },
+  "azure": {
+    "login": {
+      // removed for brevity
+    }
+  },
+  "secrets": {
+    "api-key": "ZPUpfjKtY2PDWq3EnyVN",
+    "app-secret": "vW62BqN9uewuoTtKJB2W3BCxUbHDXc",
+    "dbPassword": "Rule-Danger-Gray-Dust-9"
+  }
+}
+```
