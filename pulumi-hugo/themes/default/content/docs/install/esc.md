@@ -106,7 +106,7 @@ $ brew install esc
 Alternatively, you can run our installation script.
 
 ```bash
-$ curl -fsSL https://get.pulumi.com/esc | sh
+$ curl -fsSL https://get.pulumi.com/esc/install.sh | sh
 ```
 
 This will install the `esc` CLI to `~/.pulumi/bin` and add it to your path. When it can't automatically add `esc` to your path, you will be prompted to add it manually.
@@ -149,7 +149,7 @@ If you do not wish to use the previous options, you can install Pulumi manually.
 <h3 class="no-anchor pt-4"><i class="fas fa-box pr-2"></i>Install Script</h3>
 
 ```bash
-$ curl -fsSL https://get.pulumi.com/esc | sh
+$ curl -fsSL https://get.pulumi.com/esc/install.sh | sh
 ```
 
 </div>
@@ -181,7 +181,7 @@ In addition, there are many ways to install Pulumi ESC:
 To install, run our installation script:
 
 ```bash
-$ curl -fsSL https://get.pulumi.com/esc | sh
+$ curl -fsSL https://get.pulumi.com/esc/install.sh | sh
 ```
 
 This will install the `esc` CLI to `~/.pulumi/bin` and add it to your path. When it can't automatically add `esc` to your path, you will be prompted to add it manually.
@@ -338,7 +338,7 @@ If you get an error that `esc` could not be found, it means your path has not be
 ### Installation script
 
 ```bash
-$ curl -fsSL https://get.pulumi.com/esc | sh -s -- --version <version>
+$ curl -fsSL https://get.pulumi.com/esc/install.sh | sh -s -- --version <version>
 ```
 
 {{% /choosable %}}
@@ -350,7 +350,7 @@ $ curl -fsSL https://get.pulumi.com/esc | sh -s -- --version <version>
 To install, run our installation script:
 
 ```bash
-$ curl -fsSL https://get.pulumi.com/esc | sh -s -- --version <version>
+$ curl -fsSL https://get.pulumi.com/esc/install.sh | sh -s -- --version <version>
 ```
 
 {{% /choosable %}}
