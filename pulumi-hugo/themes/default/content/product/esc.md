@@ -4,6 +4,7 @@ layout: esc
 
 meta_title: "Pulumi ESC: Environments, Secrets, and Configurations"
 meta_desc: Centralized environments, secrets, and configurations management for cloud applications and infrastructure
+meta_image: "/images/product/esc-how-it-works-diagram.png"
 aliases:
     - /esc
 
