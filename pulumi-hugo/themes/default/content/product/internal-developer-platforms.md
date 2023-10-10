@@ -16,7 +16,7 @@ challenges:
           description: Set up guardrails that enforce compliance and standardswhile maintaining visibility over what’s being deployed and how.
         - number: 3
           title: Balancing agility and guardrails
-          description: The challenge is accomplishing speed and compliance with limited resources without stifling developers’autonomy and flow.
+          description: Accomplishing both speed and compliance with limited resources and without stifling developers’ autonomy and flow.
 
 case_studies:
     title: Case Studies
