@@ -31,7 +31,7 @@ The wizard also shows you the commands you need to run in the CLI.
 
 Haven't setup your CLI for a specific cloud yet? Check out this docs page on how to do that.
 
-![New Project Wizard](./new-project-wizard.gif)
+![New Project Wizard](https://www.pulumi.com/uploads/content/blog/announcing-support-for-email-based-identities/new-project-wizard.gif)
 
 Once you've deployed your first stack, the next step is up to you. You can refer to our documentation on integrating Pulumi into your CI/CD pipeline, setting up chat-ops workflows via Webhooks, or taking your Kubernetes solutions to the next level!
 

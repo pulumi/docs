@@ -29,7 +29,7 @@ Pulumi Registry, an integral part of the Pulumi Cloud Engineering Platform, tame
 
 Once you find a package of interest, everything you need to know to build, deploy, and manage cloud infrastructure with that package is at your fingertips. If you’re using a package for the first time or using a service you haven’t used before, Pulumi Registry has tutorials and scenario-specific how-to guides to help you get started. If you want to jump right in, you can install the package–whether you need the NuGet package, the npm package, the Python package, or the Go module–right from Pulumi Registry. If you’re already familiar with the package and need the API reference, it’s only a click away. We’ve also taken this opportunity to make some improvements to the API documentation (which was previously hosted on pulumi.com/docs), like adding a left navigation and type-ahead filter so it’s easier to quickly find the resource or method you’re looking for.
 
-![A GIF showing the functionality of Pulumi Registry](registry.gif)
+![A GIF showing the functionality of Pulumi Registry](https://www.pulumi.com/uploads/content/blog/introducing-pulumi-registry/registry.gif)
 
 👉 [Visit the Registry](/registry/)
 

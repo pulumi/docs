@@ -16,7 +16,7 @@ aliases:
 
 CrossGuard is Pulumi's Policy as Code offering. CrossGuard empowers you to set guardrails to enforce compliance for resources so developers within an organization can provision their own infrastructure while sticking to best practices and security compliance. Using Policy as Code, you can write flexible business or security policies.
 
-Using CrossGuard, organization administrators can apply these rules to particular stacks within their organization. When policies are executed as part of your Pulumi deployments, any violation will gate or block that update from proceeding.
+Using CrossGuard, organization administrators can apply these rules to particular stacks within their organization. When policies are executed as part of your Pulumi deployments, any violation will gate or block that update from proceeding. Policy remediations also allow you to automatically fix violations.
 
 Learn more about [Policy as Code core concepts](/docs/using-pulumi/crossguard/core-concepts/).
 

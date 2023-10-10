@@ -2267,6 +2267,266 @@ curl \
 ]
 ```
 
+## Environments
+
+<!-- ###################################################################### -->
+
+### List Environments available to the authenticated user.
+
+```
+GET /api/environments/{organization}
+```
+
+#### Parameters
+
+| Parameter           | Type   | In    | Description                                                                                                  |
+|---------------------|--------|-------|--------------------------------------------------------------------------------------------------------------|
+| `organization`      | string | path  | organization name
+| `continuationToken` | string | query | **Optional.** the continuation token to use for retrieving the next set of results if results were truncated |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  https://api.pulumi.com/api/environments/{organization}
+```
+
+#### Default response
+
+```
+Status: 200 OK
+```
+
+```
+{
+	"environments": [
+		{
+			"organization": "{organization}",
+			"name": "my-first-environment",
+			"created": "2023-10-10 11:28:01",
+			"modified" :"2023-10-10 12:24:03",
+		}
+	]
+}
+
+```
+
+### Create Environment
+
+```
+POST /api/environments/{organization}/{environment}
+```
+
+#### Parameters
+
+| Parameter           | Type   | In    | Description       |
+|---------------------|--------|-------|-------------------|
+| `organization`      | string | path  | organization name |
+| `environment`       | string | path  | environment name  |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  --request POST \
+  --data '<yaml content>' \
+  https://api.pulumi.com/api/environments/{organization}/{environment}
+```
+
+#### Default response
+
+```
+Status: 200 OK
+```
+
+### Get Environment
+
+```
+GET /api/environments/{organization}/{environment}
+```
+
+| Parameter           | Type   | In    | Description       |
+|---------------------|--------|-------|-------------------|
+| `organization`      | string | path  | organization name |
+| `environment`       | string | path  | environment name  |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  --request GET \
+  https://api.pulumi.com/api/environments/{organization}/{environment}
+```
+
+#### Default response
+
+```
+Status: 200 OK
+```
+
+```
+{
+	"values:
+    aws:
+      creds:
+        fn::open::aws-login:
+          oidc:
+            duration: 1h
+            roleArn: arn:aws:iam::12345678900:role/my-environments-oidc
+            sessionName: my-environments-session
+    environmentVariables:
+      AWS_ACCESS_KEY_ID: ${aws.creds.accessKeyId}
+      AWS_SECRET_ACCESS_KEY: ${aws.creds.secretAccessKey}
+      AWS_SESSION_TOKEN: ${aws.creds.sessionToken}"
+}
+```
+
+### Update Environment
+
+```
+PATCH /api/environments/{organization}/{environment}
+```
+
+| Parameter           | Type   | In    | Description       |
+|---------------------|--------|-------|-------------------|
+| `organization`      | string | path  | organization name |
+| `environment`       | string | path  | environment name  |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  --request PATCH \
+  --data '<yaml content>' \
+  https://api.pulumi.com/api/environments/{organization}/{environment}
+  
+```
+
+#### Default response
+
+```
+Status: 200 OK
+```
+
+### Delete Environment
+
+```
+DELETE /api/environments/{organization}/{environment}
+```
+
+| Parameter           | Type   | In    | Description       |
+|---------------------|--------|-------|-------------------|
+| `organization`      | string | path  | organization name |
+| `environment`       | string | path  | environment name  |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  --request DELETE \
+  https://api.pulumi.com/api/environments/{organization}/{environment}
+```
+
+#### Default response
+
+```
+Status: 200 OK
+```
+
+### Open Environment
+
+```
+POST /api/environments/{organization}/{environment}/open
+```
+
+| Parameter           | Type   | In    | Description       |
+|---------------------|--------|-------|-------------------|
+| `organization`      | string | path  | organization name |
+| `environment`       | string | path  | environment name  |
+| `duration`          | string | query | **Optional.** open duration - A duration string is a possibly signed sequence of decimal numbers, each with optional fraction and a unit suffix, such as "300ms", "-1.5h" or "2h45m". Valid time units are "ns", "us" (or "µs"), "ms", "s", "m", "h". |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  --request POST \
+  https://api.pulumi.com/api/environments/{organization}/{environment}/open
+```
+
+#### Default response
+
+```
+Status: 200 OK
+```
+
+```
+{
+	"id": 1234567,
+  "diagnostics": ""
+}
+```
+
+### Read Open Environment
+
+```
+GET /api/environments/{organization}/{environment}/open/{openSessionID}
+```
+
+| Parameter           | Type   | In    | Description       |
+|---------------------|--------|-------|-------------------|
+| `organization`      | string | path  | organization name |
+| `environment`       | string | path  | environment name  |
+| `openSessionID`     | string | path  | open session id   |
+| `property`          | string | query | **Optional.** path to a specific property |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  --request GET \
+  https://api.pulumi.com/api/environments/{organization}/{environment}/open/{openSessionID}
+```
+
+#### Default response
+
+```
+Status: 200 OK
+```
+
+```
+"values":
+  "aws":
+    "creds":
+      "accessKeyId": "<redacted>",
+      "secretAccessKey": "<redacted>",
+      "sessionToken": "<redacted>",
+  "environmentVariables":
+    "AWS_ACCESS_KEY_ID": "<redacted>",
+    "AWS_SECRET_ACCESS_KEY": "<redacted>",
+    "AWS_SESSION_TOKEN": "<redacted>""
+```
+
 ## Audit Logs
 
 <!-- ###################################################################### -->

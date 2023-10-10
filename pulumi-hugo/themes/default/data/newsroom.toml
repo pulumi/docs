@@ -1,4 +1,16 @@
 [[releases]]
+date = "10th October 2023"
+title = "Pulumi Makes Cloud Configuration Simple and Secure with Pulumi ESC"
+summary = "Pulumi Makes Cloud Configuration Simple and Secure with Pulumi ESC."
+url = "https://info.pulumi.com/press-release/announcing-pulumi-esc"
+
+[[releases]]
+date = "10th October 2023"
+title = "Pulumi Raises $41M in Series C Funding to Expand Infrastructure as Code Market"
+summary = "Pulumi Raises $41M in Series C Funding to Expand Infrastructure as Code Market."
+url = "https://info.pulumi.com/press-release/pulumi-raises-series-c"
+
+[[releases]]
 date = "13th April 2023"
 title = "Pulumi Launches Pulumi Insights - Intelligence for Infrastructure as Code"
 summary = "Advanced search, analytics, and AI delivers the world's smartest infrastructure platform."

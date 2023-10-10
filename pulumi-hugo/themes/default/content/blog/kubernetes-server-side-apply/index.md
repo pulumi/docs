@@ -704,7 +704,7 @@ resources:
 
 Here is what it looks like to update an existing `ConfigMap` with this program.
 
-![Upsert a ConfigMap](upsert.gif)
+![Upsert a ConfigMap](https://www.pulumi.com/uploads/content/blog/kubernetes-server-side-apply/upsert.gif)
 
 ```
 $ kubectl get configmap app-settings -o yaml

@@ -87,7 +87,7 @@ freshly-provisioned cluster in the EC2 cloud:
 make up run-cluster get-results down INPUT_LINES=1000000 CLUSTER_SIZE=3
 ```
 
-![tty-fast](./tty-fast.gif)
+![tty-fast](https://www.pulumi.com/uploads/content/blog/data-science-on-demand-spinning-up-a-wallaroo-cluster-is-easy-with-pulumi/tty-fast.gif)
 
 Let's break that down and see what's really going on here.
 

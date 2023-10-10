@@ -10,6 +10,7 @@ menu:
     weight: 1
 
 aliases:
+- /get-started/install/
 - /docs/reference/install/
 - /docs/get-started/install/
 

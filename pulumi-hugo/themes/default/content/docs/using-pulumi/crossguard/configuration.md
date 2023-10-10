@@ -22,6 +22,8 @@ Configuration schema is defined per policy, and then the actual configuration ca
 
 ## Writing Configurable Policy Packs
 
+The process of writing a configurable policy pack entails first creating the configuration schema for the Policy Pack or individual policies and then consuming the configuration from within your policy validation or remediation logic.
+
 ### Enforcement Level
 
 The Policy SDK will automatically make the enforcement levels of all policies configurable. You can configure the enforcement level for all policies in a Policy Pack or configure it for each individual policy. The top-level enforcement level under `all` will override the existing enforcement levels of all policies in the Policy Pack. A configured enforcement level for a specific policy will override the policy's existing enforcement level as well as the top-level configured enforcement level.
