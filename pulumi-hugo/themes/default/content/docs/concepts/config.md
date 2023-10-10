@@ -616,7 +616,7 @@ Stack tags applied by Pulumi CLI are listed in the `Tags` section of the Overvie
 
 Often there is common configuration and secrets you do not want to duplicate in various stack configuration files. Pulumi ESC Environments can help with that!
 
-Once you have an [environment](/docs/concepts/environments/) setup and you are [projecting pulumi config](/docs/concepts/environments/#projecting-pulumi-config), you can import that environment (or multiple environments) into your Pulumi stack.
+Once you have an [environment](/docs/concepts/environments/) set up and you are [projecting pulumi configuration](/docs/concepts/environments/#projecting-pulumi-config), you can import that environment (or multiple environments) into your Pulumi stack.
 
 ```yaml
 # import the test environment and all of it's configuration
