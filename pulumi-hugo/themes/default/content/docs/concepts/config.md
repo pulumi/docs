@@ -619,7 +619,7 @@ Often there is common configuration and secrets you do not want to duplicate in 
 Once you have an [environment](/docs/concepts/environments/) set up and you are [projecting pulumi configuration](/docs/concepts/environments/#projecting-pulumi-config), you can import that environment (or multiple environments) into your Pulumi stack.
 
 ```yaml
-# import the test environment and all of it's configuration
+# import the test environment and all of its configuration
 environment:
   - test
 config:
