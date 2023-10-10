@@ -34,9 +34,7 @@ macOS Sierra (10.12) or later is required.
 
 The latest version of Pulumi ESC is {{< latest-version-esc >}}.
 
-{{% notes type="info" %}}
-For a streamlined Pulumi ESC walkthrough, including language runtime installation and cloud configuration, see the [Get Started](/docs/pulumi-cloud/esc/getting-started) guides.
-{{% /notes %}}
+{{< esc-get-started-note >}}
 
 ## Other installation methods
 
@@ -161,7 +159,7 @@ $ curl -fsSL https://get.pulumi.com/esc/install.sh | sh
 
 The latest version of Pulumi ESC is {{< latest-version-esc >}}.
 
-{{< get-started-note >}}
+{{< esc-get-started-note >}}
 
 ## Other installation methods
 
@@ -230,7 +228,7 @@ Windows 8 and later are supported.
 
 The latest version of Pulumi ESC is {{< latest-version-esc >}}. For older versions, see [Available Versions](/docs/install/versions/).
 
-{{< get-started-note >}}
+{{< esc-get-started-note >}}
 
 ## Other installation methods
 
