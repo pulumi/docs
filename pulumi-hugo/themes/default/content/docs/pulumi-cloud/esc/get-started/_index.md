@@ -29,7 +29,7 @@ Pulumi ESC is a service of Pulumi Cloud that can be used with or without Pulumi 
 - An [Amazon Web Services](https://aws.amazon.com/) account
 - The [AWS CLI](https://aws.amazon.com/cli/)
 - An [OIDC provider created for Pulumi](/pulumi-cloud/deployments/oidc/aws/) in AWS
-  - Note that when defining the  `Subject Identifier`, the format for Environments is `pulumi:environments:org:<pulumi-org>:env:<environment-name>`
+  - Note that when defining the  `Subject Identifier`, the format for environments is `pulumi:environments:org:<pulumi-org>:env:<environment-name>`
 - Python 3.7 or higher installed
 
 Let's get started!
@@ -106,9 +106,9 @@ Please see the below for your application output values:
 
 The API keys for this service have been randomly generated and stored as secrets in AWS Secrets Manager.
 
-The endpoint URLs as well as the names of the Secrets Manager Secrets have been outputted for easy reference. You can also see these values in the `Outputs` tab of your CloudFormation stack in the AWS Console.
+The endpoint URLs as well as the names of the Secrets Manager secrets have been outputted for easy reference. You can also see these values in the `Outputs` tab of your CloudFormation stack in the AWS Console.
 
-Before moving onto the next part of the tutorial, you will want to go into the Secrets Manager console and retrieve those Secret values.
+Before moving onto the next part of the tutorial, you will want to go into the Secrets Manager console and retrieve those secret values.
 
 ![Retrieving secret values from the AWS Console](./esc-retrieve-aws-secret.gif)
 
@@ -164,13 +164,13 @@ With Pulumi ESC, you can centralize these values as a single source of truth bec
 - applications always have the latest values without manual intervention
 - sensitive values are not unintentionally exposed
 
-In the next section, you will learn how to centralize and access your application configuration information by creating a Pulumi ESC Environment.
+In the next section, you will learn how to centralize and access your application configuration information by creating a Pulumi ESC environment.
 
 ### Create an Environment
 
-In Pulumi ESC, an Environment is a collection of configuration intended to capture the configuration needed to work with a particular environment.
+In Pulumi ESC, an environment is a collection of configuration intended to capture the configuration needed to work with a particular environment.
 
-In an Environment file, values are defined as a series of key-value pairs in YAML format. All variables will be defined under a top-level key named `values`. These values can be strings, numbers, or arrays, and they can be manually provided, dynamically generated from external sources, or referenced from other values in the file.
+In an environment file, values are defined as a series of key-value pairs in YAML format. All variables will be defined under a top-level key named `values`. These values can be strings, numbers, or arrays, and they can be manually provided, dynamically generated from external sources, or referenced from other values in the file.
 
 ```yaml
 values:
@@ -179,7 +179,7 @@ values:
     myKey2: "myValue2"
 ```
 
-In this section, we will be creating three separate Environments:
+In this section, we will be creating three separate environments:
 
 - `app-env-global` for our globally shared configuration
 - `app-env-dev` for our development configuration
@@ -187,17 +187,17 @@ In this section, we will be creating three separate Environments:
 
 To do so, navigate to [Pulumi Cloud](https://app.pulumi.com) and select the `Environments` link in the left-hand menu.
 
-You will be directed to the Environments landing page. To create a new Environment, click the `Create environment` button, and then enter a name for your environment (e.g., `app-env-global` for the shared configuration Environment).
+You will be directed to the Environments landing page. To create a new environment, click the `Create environment` button, and then enter a name for your environment (e.g., `app-env-global` for the shared configuration environment).
 
-![Creating a new Environment in the Pulumi Cloud console](./esc-create-environment.gif)
+![Creating a new environment in the Pulumi Cloud console](./esc-create-environment.gif)
 
-Repeat the same steps to create the Environments for `app-env-dev` and `app-env-test`. Then, click on the name of the `app-env-global` Environment to open its definition editor.
+Repeat the same steps to create the environments for `app-env-dev` and `app-env-test`. Then, click on the name of the `app-env-global` environment to open its definition editor.
 
-In the editor, you will be presented with a split pane view. The left side is where you will write the definition of your Environment configuration, and the right side will show a preview of your configuration in JSON format.
+In the editor, you will be presented with a split pane view. The left side is where you will write the definition of your environment configuration, and the right side will show a preview of your configuration in JSON format.
 
 The configuration that you will be adding to the `app-env-global` file is the base URL of your application endpoint. Because this URL will be the same across environments, you only need to define it in one place, and you can reference it from other environments accordingly. You will learn more about how to do this using `imports` later in this tutorial.
 
-Using the value of the `ApplicationEndpointUrl` from the CloudFormation output in the previous step, add the following details to the `app-env-global` Environment file, making sure to replace the placeholder text with the actual value of your application endpoint URL:
+Using the value of the `ApplicationEndpointUrl` from the CloudFormation output in the previous step, add the following details to the `app-env-global` environment file, making sure to replace the placeholder text with the actual value of your application endpoint URL:
 
 ```yaml
 values:
@@ -206,11 +206,11 @@ values:
 
 Scroll to the bottom of the page and click `Save`.
 
-The Environment preview will update to show your added configuration similar to the following:
+The environment preview will update to show your added configuration similar to the following:
 
 ![Adding configuration values to an environment](./esc-add-global-env-config.gif)
 
-Repeat the same steps to populate your development and test Environment files with the following details:
+Repeat the same steps to populate your development and test environment files with the following details:
 
 ```yaml
 values:
@@ -219,14 +219,14 @@ values:
 ```
 
 {{< notes type="info" >}}
-Your `app-env-test` Environment file should have a value of "test" for the `ENVIRONMENT` parameter, and the value of `API_KEY` should be the auto-generated value of the `escTestApiKey` secret from Secrets Manager.
+Your `app-env-test` environment file should have a value of "test" for the `ENVIRONMENT` parameter, and the value of `API_KEY` should be the auto-generated value of the `escTestApiKey` secret from Secrets Manager.
 {{< /notes >}}
 
 ### Retrieve Environment Values
 
-Now that you have populated your Environment files, you can verify that your values have been successfully stored by retrieving them through the Pulumi ESC CLI.
+Now that you have populated your environment files, you can verify that your values have been successfully stored by retrieving them through the Pulumi ESC CLI.
 
-The CLI has a built-in `get` command that enables you to retrieve a single value from your Environment. The format of the full command looks like the following:
+The CLI has a built-in `get` command that enables you to retrieve a single value from your environment. The format of the full command looks like the following:
 
 ```bash
 esc env get <your-org>/<your-environment-name> <variable-key-name>
@@ -238,7 +238,7 @@ Let's assume that your Pulumi organization is named `acme` and the environment t
 esc env get acme/app-env-dev API_KEY
 ```
 
-Running this command should return the value of the API key that you added to your Environment file. The output will look similar to the following:
+Running this command should return the value of the API key that you added to your environment file. The output will look similar to the following:
 
 ```bash
 $ esc env get acme/app-env-dev API_KEY
@@ -247,9 +247,9 @@ $ esc env get acme/app-env-dev API_KEY
 
 ### Importing Environments
 
-There may be scenarios in which the value you need to retrieve lives in a different Environment file. For example, since your base application endpoint URL will be the same across environments, it would be more efficient to define it once in one place rather than multiple times across multiple Environment files.
+There may be scenarios in which the value you need to retrieve lives in a different environment file. For example, since your base application endpoint URL will be the same across environments, it would be more efficient to define it once in one place rather than multiple times across multiple environment files.
 
-With Pulumi ESC, you have the ability to import other Environments into your Environment file and make use of the imported configuration values and secrets. Similar to `values`, `imports` is a top level key you will need to define in the Environment file, meaning the syntax to create an import looks like the following:
+With Pulumi ESC, you have the ability to import other environments into your environment file and make use of the imported configuration values and secrets. Similar to `values`, `imports` is a top level key you will need to define in the environment file, meaning the syntax to create an import looks like the following:
 
 ```yaml
 imports:
@@ -260,14 +260,14 @@ values:
     ...
 ```
 
-In both your `app-env-dev` and `app-env-test` Environment files, add the following code to import the `app-env-global` Environment:
+In both your `app-env-dev` and `app-env-test` environment files, add the following code to import the `app-env-global` environment:
 
 ```yaml
 imports:
   - app-env-global
 ```
 
-When you save the file, the Environment preview will update to show that `ENDPOINT_URL` is now included in the list of accessible variables in this environment.
+When you save the file, the environment preview will update to show that `ENDPOINT_URL` is now included in the list of accessible variables in this environment.
 
 ```yaml
 {
@@ -286,18 +286,18 @@ $ esc env get acme/app-env-dev ENDPOINT_URL
 
 ### Dynamically Generate Environment Values
 
-For the purposes of this tutorial, you've manually added the values of your API keys to your `dev` and `test` Environment files. However, this is not the recommended best practice when it comes to the storing, management, and retrieval of sensitive values.
+For the purposes of this tutorial, you've manually added the values of your API keys to your `dev` and `test` environment files. However, this is not the recommended best practice when it comes to the storing, management, and retrieval of sensitive values.
 
-With Pulumi ESC, you can dynamically retrieve those values directly from a provider. In this next section, you will learn how to configure your Environment file to retrieve secret values from AWS Secrets Manager.
+With Pulumi ESC, you can dynamically retrieve those values directly from a provider. In this next section, you will learn how to configure your environment file to retrieve secret values from AWS Secrets Manager.
 
 {{< notes >}}
 This step assumes that you already have [Pulumi configured as an OIDC provider in AWS](https://www.pulumi.com/docs/pulumi-cloud/deployments/oidc/aws/).
 {{< /notes >}}
 
-In both your `app-env-dev` and `app-env-test` Environments files, update your code to the following:
+In both your `app-env-dev` and `app-env-test` environment files, update your code to the following:
 
 ```yaml
-# Example for the app-env-dev Environment file
+# Example for the app-env-dev environment file
 imports:
   - app-env-global
 values:
@@ -324,11 +324,11 @@ Make sure to do the following:
 - replace the placeholder text for the `roleArn` parameter with the ARN of your OIDC role
 - provide a value for `duration` no greater than the [maximum session duration](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use.html) of your OIDC role
 - provide the name of the AWS region that you deployed your sample application into
-- provide the relevant values for `secretId` and `ENVIRONMENT` in the corresponding Environment file
+- provide the relevant values for `secretId` and `ENVIRONMENT` in the corresponding environment file
 
-As shown with the `${aws.login}` and `${aws.secrets.api-key}` references above, values within Pulumi ESC Environments, as well as its imports, can be referenced through the use of interpolations. Below is an example of what this would look like in the console:
+As shown with the `${aws.login}` and `${aws.secrets.api-key}` references above, values within Pulumi ESC environments, as well as its imports, can be referenced through the use of interpolations. Below is an example of what this would look like in the console:
 
-![Adding AWS provider integration into an Environment](./esc-aws-provider-integration.png)
+![Adding AWS provider integration into an environment](./esc-aws-provider-integration.png)
 
 You can verify your provider connection and the retrieval of your secret from AWS Secrets Manager by running the `esc open acme/app-env-dev API_KEY` command.
 
@@ -342,7 +342,7 @@ The Pulumi ESC CLI also has a `run` command that enables you to run other comman
 
 For example, if you have a CI/CD pipeline that will automatically push blog post updates to a content-management system, you can enable it to retrieve the endpoint and API key specific to its environment and run the command to update the post.
 
-However, values in your Environment file are not exposed as environment variables by default. You can expose them by adding your key-value pairs under a second-level key labeled `environmentVariables`:
+However, values in your environment file are not exposed as environment variables by default. You can expose them by adding your key-value pairs under a second-level key labeled `environmentVariables`:
 
 ```yaml
 values:
@@ -350,10 +350,10 @@ values:
     myEnvVarKey: myEnvVarValue
 ```
 
-Following the above format, add the `environmentVariables` key to your `app-env-dev` and `app-env-test` Environment files. Then, move your `ENDPOINT_URL`, `ENVIRONMENT` and `API_KEY` variables so that they are nested underneath it before saving your file.
+Following the above format, add the `environmentVariables` key to your `app-env-dev` and `app-env-test` environment files. Then, move your `ENDPOINT_URL`, `ENVIRONMENT` and `API_KEY` variables so that they are nested underneath it before saving your file.
 
 ```yaml
-# Example for the app-env-dev Environment file
+# Example for the app-env-dev environment file
 imports:
   - app-env-global
 values:
@@ -388,9 +388,9 @@ esc run acme/app-env-dev \
 
 This script executes a Python file that is meant to simulate an application that interacts with your endpoint.
 
-As seen above, the `ENDPOINT_URL`, `ENVIRONMENT`, and `API_KEY` values that you defined in your Environments file are referenced directly in the command as environment variables, without needing to explicitly set them locally and without needing to use the `esc env get` command to retrieve their values inline.
+As seen above, the `ENDPOINT_URL`, `ENVIRONMENT`, and `API_KEY` values that you defined in your environment file are referenced directly in the command as environment variables, without needing to explicitly set them locally and without needing to use the `esc env get` command to retrieve their values inline.
 
-Replace the value of `acme/app-env-dev` with the name of your Pulumi organization and desired Environment and save the file.
+Replace the value of `acme/app-env-dev` with the name of your Pulumi organization and desired environment and save the file.
 
 Then run the following commands to execute the script:
 
@@ -398,7 +398,7 @@ Then run the following commands to execute the script:
 . ./validate-endpoint.sh
 ```
 
-When providing the name of your `app-env-dev` Environment file, you should see a response similar to the following:
+When providing the name of your `app-env-dev` environment file, you should see a response similar to the following:
 
 ``` bash
 $ . ./validate-endpoints.sh
@@ -464,7 +464,7 @@ Defining the configuration this way may be fine when dealing with a singular pro
 
 ### Centralize the Configuration
 
-To centralize this configuration for your Pulumi program, you will need to add a second-level key named `pulumiConfig` in your Environment file that will expose the values nested underneath it to Pulumi IaC.
+To centralize this configuration for your Pulumi program, you will need to add a second-level key named `pulumiConfig` in your environment file that will expose the values nested underneath it to Pulumi IaC.
 
 ```yaml
 values:
@@ -472,7 +472,7 @@ values:
     aws:region: us-east-2
 ```
 
-Then return to your `Pulumi.<your-stack-name>.yaml` file and update it to import your Environment as shown below:
+Then return to your `Pulumi.<your-stack-name>.yaml` file and update it to import your environment as shown below:
 
 ```yaml
 environment:
@@ -517,16 +517,16 @@ Resources:
 Duration: 7s
 ```
 
-If you view your resource in the AWS console, you will see that your program resources will get created in the region you specified in your Environment file.
+If you view your resource in the AWS console, you will see that your program resources will get created in the region you specified in your environment file.
 
 ![Showing AWS S3 bucket properties](./esc-show-s3-region.png)
 
 ### Access Configuration from Code
 
-You can also reference the `pulumiConfig` Environment values directly from within your Pulumi program in the same way that you would access them from the project's config file.
+You can also reference the `pulumiConfig` environment values directly from within your Pulumi program in the same way that you would access them from the project's config file.
 
 ```yaml
-# Example Environment File
+# Example environment File
 values:
   pulumiConfig:
     myKey: "Test value"
@@ -588,9 +588,9 @@ aws cloudformation delete-stack --stack-name pulumi-esc-tutorial-stack
 
 ## Next Steps
 
-In this tutorial, you created and retrieved values from a Pulumi Environment. You also exposed and programmatically consumed values as environment variables and as Pulumi configuration.
+In this tutorial, you created and retrieved values from a Pulumi environment. You also exposed and programmatically consumed values as environment variables and as Pulumi configuration.
 
 To learn more about managing configuration and secrets in Pulumi, take a look at the following resources:
 
-- Learn more about [Environments](/docs/concepts/environments/), [Secrets](/docs/concepts/secrets/), and [Configuration](/docs/concepts/config/) in the Pulumi documentation.
-- Learn more about defining Pulumi ESC Environment files in the [ESC CLI documentation](/docs/pulumi-cloud/esc/reference).
+- Learn more about [environments](/docs/concepts/environments/), [secrets](/docs/concepts/secrets/), and [configuration](/docs/concepts/config/) in the Pulumi documentation.
+- Learn more about defining Pulumi ESC environment files in the [Pulumi ESC CLI documentation](/docs/pulumi-cloud/esc/reference).
