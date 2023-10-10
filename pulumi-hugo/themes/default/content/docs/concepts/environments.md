@@ -16,7 +16,7 @@ search:
 
 Do you have secrets and configuration that is copy/pasted around multiple environments, that is prone to drift and accidental disclosure? Have you ever made a change to a config or secret and were unsure what the impact would be? Is it hard for developers in your organization to get access to short-lived credentials to work in the environments they need to develop and deploy into? Do you struggle to audit access levels and who has accessed or changed your secrets and configuration?
 
-Pulumi ESC enables teams to create collections of configuration and secrets called Environments. Teams can then access those environment collections using the `esc` CLI, `pulumi` CLI, Pulumi SDK, or Pulumi Cloud REST API for various application and infrastructure needs. These environments can be composed of other environments to allow teams increased flexibility and fine-grained access control. Teams can have as many environments as they need.
+Pulumi ESC (Environments, Secrets, and Configuration) enables teams to create collections of configuration and secrets called Environments. Teams can then access those environment collections using the `esc` CLI, `pulumi` CLI, Pulumi SDK, or Pulumi Cloud REST API for various application and infrastructure needs. These environments can be composed of other environments to allow teams increased flexibility and fine-grained access control. Teams can have as many environments as they need.
 
 Environments have built-in support for dynamic secret and config providers allowing for security and infrastructure best practices such as short-term credentials via OIDC and dynamically pulling secret values as need for all major cloud providers.
 

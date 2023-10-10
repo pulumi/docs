@@ -16,7 +16,7 @@ search:
     - configuration
 ---
 
-Pulumi ESC enables teams to create collections of configuration and secrets called Environments. Teams can then access those environment collections using the `esc` CLI, `pulumi` CLI, Pulumi SDK, or Pulumi Cloud REST API for various application and infrastructure needs. These environments can be composed of other environments to allow teams increased flexibility and fine-grained access control. Teams can have as many environments as they need.
+Pulumi ESC (Environments, Secrets, and Configuration) enables teams to create collections of configuration and secrets called environments. Teams can then access those environment collections using the `esc` CLI, `pulumi` CLI, Pulumi SDK, or Pulumi Cloud REST API for various application and infrastructure needs. These environments can be composed of other environments to allow teams increased flexibility and fine-grained access control. Teams can have as many environments as they need.
 
 Environments have built-in support for dynamic secret and config providers allowing for security and infrastructure best practices such as short-term credentials via OIDC and dynamically pulling secret values as need for all major cloud providers.
 
@@ -251,7 +251,7 @@ Run `esc edit --help` for more options.
 
 ### Editing config as YAML in the Pulumi Cloud console
 
-Navigate to your organization in the Pulumi Cloud console, choose Environments in the left-hand navigation, and select your environment.
+Navigate to your organization in the Pulumi Cloud console, choose environments in the left-hand navigation, and select your environment.
 
 ![Environments Intelligent YAML Editor](/images/docs/concepts/environments-editor.png)
 
