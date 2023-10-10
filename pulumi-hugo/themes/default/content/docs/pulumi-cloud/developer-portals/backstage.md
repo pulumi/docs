@@ -9,7 +9,7 @@ menu:
     parent: developer-portals
 ---
 
-We’ve seen many developer portal technologies rapidly growing in popularity over the last few years.  In particular, we’ve seen many Pulumi users adopting [Backstage](https://backstage.io/) and as a result we built the [Pulumi Backstage Plugin](blog/pulumi-backstage-plugin/) to address the needs of organizations using Backstage and Pulumi together.
+We’ve seen many developer portal technologies rapidly growing in popularity over the last few years.  In particular, we’ve seen Pulumi users adopting [Backstage](https://backstage.io/) and as a result we built the [Pulumi Backstage Plugin](blog/pulumi-backstage-plugin/) to address the needs of organizations using Backstage and Pulumi together.
 
 ![Pulumi Backstage Plugin Activity screenshot](pulumi_backstage_plugin_activity.png)
 

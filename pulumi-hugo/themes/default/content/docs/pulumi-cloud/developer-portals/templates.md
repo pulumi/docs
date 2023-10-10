@@ -9,7 +9,13 @@ menu:
     parent: developer-portals
 ---
 
-A large number of public project templates are provided by Pulumi in [https://github.com/pulumi/examples](https://github.com/pulumi/examples) and [https://github.com/pulumi/templates](https://github.com/pulumi/templates). These can be useful for teams starting from scratch; however, as your business and infrastructure grows in complexity it is likely you will want new Pulumi projects to include some custom, internal functionality not provided by these public templates.
+{{% notes "info" %}}
+Organization Templates are only available to organizations using the Enterprise and Business Critical editions.
+
+If you would like to use this feature, [contact us](/contact?form=sales) to upgrade.
+{{% /notes %}}
+
+A large number of public project templates are provided by Pulumi in our [examples](https://github.com/pulumi/examples) and [templates](https://github.com/pulumi/templates) repos. These can be useful for teams starting from scratch; however, as your business and infrastructure grows in complexity it is likely you will want new Pulumi projects to include some custom, internal functionality not provided by these public templates.
 
 Pulumi allows you to define _Organization Templates_ to help get projects off the ground faster. This enables you to provide new Pulumi projects with consistent code structure, conventions, or best practices.
 
@@ -45,12 +51,6 @@ Any occurrences of `${PROJECT}` or `${DESCRIPTION}` -- in `Pulumi.yaml` or any o
 
 ## Using Organization Templates within your Pulumi organization
 
-{{% notes "info" %}}
-Organization Templates are only available to organizations using the Enterprise and Business Critical editions.
-
-If you would like to use this feature, [contact us](/contact?form=sales) to upgrade.
-{{% /notes %}}
-
 A Pulumi organization admin can configure their organization to use Organization Templates with the [New Project Wizard](/docs/pulumi-cloud/developer-portals/new-project-wizard). By doing so, your organization's members will be able to:
 
 * Template and configure new Pulumi projects from their browser.
@@ -80,10 +80,8 @@ Navigating to your organization's "Settings → Integrations" tab will show an "
 
 ### Organization settings
 
-Navigate to the "Integrations" tab to configure the Pulumi New Project Wizard to use your custom templates.
-Enter sources as `github.com/<owner>/<repo>/<optional subdirectory>`.
-A source can be a directory containing either a `Pulumi.yaml`, or other subdirectories with their own `Pulumi.yaml` files.
-For example, these are both valid sources:
+Navigate to the "Integrations" tab to configure the Pulumi New Project Wizard to define your Organization Templates Source.
+Enter sources as `github.com/<owner>/<repo>/<optional subdirectory>`. A source can be a directory containing either a `Pulumi.yaml`, or other subdirectories with their own `Pulumi.yaml` files. For example, these are both valid sources:
 
 * `github.com/pulumi/templates` (all public Pulumi templates)
 * `github.com/pulumi/templates/aws-typescript` (a specific public template)
