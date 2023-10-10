@@ -5,7 +5,7 @@ meta_desc: Pulumi's open source infrastructure as code SDK enables you to create
 hero:
   title: [ "Open Source", "Infrastructure as Code" ]
   description: |
-    Build infrastructure intuitively on any cloud using familiar languages.
+    Manage infrastructure, secrets, and configurations intuitively on any cloud.
   cta_text: Get Started
   cta_link: /docs/get-started/
   secondary_cta_text: Talk to a human
@@ -36,14 +36,12 @@ embed:
 
     Package cloud architectures into reusable libraries that reduce complex infrastructure down to a few lines of code.
 
-search:
-  title: Search every cloud
-  image: /images/home/search-example-graphic.svg
-  alt: a search bar populated with 'show all my prod stack resources' returning a list of prod resources from different clouds
+secrets:
+  title: Tame configuration and secrets sprawl
+  image: /images/product/esc-screenshot.png
+  alt: a screenshot of Pulumi ESC
   description: |
-    View and search for deployed resources across all your cloud providers – presented in a human-readable way.
-
-    Export your data to gain insights into your infrastructure with your existing analytics tools.
+    Easy-to-use single source of truth for all configurations with guardrails. Seamlessly adopt short-lived dynamic secrets. Never have downtime over changed configurations because you can change once and have it updated everywhere. Enforce least-privileged access through role-based access controls.
 
 customer_logos:
   title: You’ll be in good company
