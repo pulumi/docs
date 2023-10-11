@@ -7,6 +7,7 @@ meta_desc: Pulumi for Platform Teams! Accelerate productivity, enforce complianc
 meta_image: /images/product/platform-teams-meta.png
 
 aliases:
+    - /solutions/platforms/
 
 challenges:
     items:
@@ -59,8 +60,8 @@ integration:
 
 security:
     items:
-        - title: Pulumi Crossguard
-          description: Enforce policies across your organization. Utilize compliance-ready policies for any cloud to enhance compliance and use compliance remediation to automate tasks like auto-tagging, removing Internet access, and enabling storage encryption.
+        - title: Pulumi CrossGuard
+          description: Enforce policies across your organization. Utilize compliance-ready policies for any cloud to enhance compliance and use remediation policies to automatically correct configuration violations like auto-tagging, removing Internet access, and enabling storage encryption.
         - title: Pulumi Cloud
           description: Maintain control and tracking over deployed infrastructure, with complete history of updates and audit logs easily viewable from a console. Enhance security with RBAC, identity provider integrations, SSO, and more.
         - title: Pulumi ESC

@@ -12,11 +12,11 @@ overview:
 use_cases:
     title: Use Cases
     items:
-        - name: Internal developer platforms
+        - name: Internal developer portals
           description: |
-            Createa internal developer platforms (IDPs) to enable developers to quickly provision approved infrastructure, boosting productivity with pre-configured architectures, automated testing, and deployment adhering to organizational standards.
+            Create internal developer portals (IDPs) to enable developers to quickly provision approved infrastructure, boosting productivity with pre-configured architectures, automated testing, and deployment adhering to organizational standards.
 
-            [Learn more about internal developer platforms](/product/internal-developer-platforms/)
+            [Learn more about Pulumi for Platform Teams](/product/internal-developer-platforms/)
 
         - name: Shared services platforms
           case_studies:
