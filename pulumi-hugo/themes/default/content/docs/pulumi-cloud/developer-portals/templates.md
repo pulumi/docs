@@ -15,7 +15,7 @@ Organization Templates are only available to organizations using the Enterprise 
 If you would like to use this feature, [contact us](/contact?form=sales) to upgrade.
 {{% /notes %}}
 
-A large number of public project templates are provided by Pulumi in our [examples](https://github.com/pulumi/examples) and [templates](https://github.com/pulumi/templates) repos. These can be useful for teams starting from scratch; however, as your business and infrastructure grows in complexity it is likely you will want new Pulumi projects to include some custom, internal functionality not provided by these public templates.
+A large number of public project templates are provided by Pulumi in our [examples](https://github.com/pulumi/examples) and [templates](https://github.com/pulumi/templates) repos. These can be useful for teams starting from scratch; however, as your business and infrastructure grow in complexity, it is likely you will want new Pulumi projects to include some custom, internal functionality not provided by these public templates.
 
 Pulumi allows you to define _Organization Templates_ to help get projects off the ground faster. This enables you to provide new Pulumi projects with consistent code structure, conventions, or best practices.
 
@@ -23,7 +23,7 @@ Pulumi allows you to define _Organization Templates_ to help get projects off th
 
 A template can be hosted in a public or private GitHub repository, and its only requirement is that it must contain a valid `Pulumi.yaml` at the root or within a subdirectory of the repository. A single repository can provide multiple templates from various subdirectories.
 
-The `Pulumi.yaml` file can optionally contain a `template` section, which typically includes a `config` section for specifying required config values for the project. Each config value can have a `description` and a `default` value. Config values can be marked as [`secret`](/docs/concepts/secrets), which ensures values in templated project will be stored with secure encryption.
+The `Pulumi.yaml` file can optionally contain a `template` section, which typically includes a `config` section for specifying required config values for the project. Each config value can have a `description` and a `default` value. Config values can be marked as [`secret`](/docs/concepts/secrets), which ensures values in templated projects will be stored with secure encryption.
 
 ```yaml
 name: my-aws-project

@@ -9,9 +9,9 @@ menu:
     parent: developer-portals
 ---
 
-Pulumi Cloud provides a New Project Wizard to help walk your organization's members through the process of creating new Pulumi projects. This provides a more turn-key alternative to the [Pulumi Backstage Plugin](/docs/pulumi-cloud/developer-portals/backstage) or custom-built integrations.
+Pulumi Cloud provides a New Project Wizard to help walk your organization's members through the process of creating new Pulumi projects. This provides a more turnkey alternative to the [Pulumi Backstage Plugin](/docs/pulumi-cloud/developer-portals/backstage) or custom-built integrations.
 
-By using the wizard, users can generate projects from your [Organization Templates](/docs/pulumi-cloud/developer-portals/templates), commit and pushing code to GitHub, and trigger an initial deployment -- all in a few clicks and without leaving the browser.
+By using the wizard, users can generate projects from your [Organization Templates](/docs/pulumi-cloud/developer-portals/templates), commit and push code to GitHub, and trigger an initial deployment -- all in a few clicks and without leaving the browser.
 
 {{% notes "info" %}}
 Make sure you [install](/docs/pulumi-cloud/deployments/reference/#github-app-installation) the Pulumi GitHub App to ensure the New Project Wizard works seamlessly with [Pulumi Deployments](/docs/pulumi-cloud/deployments).
@@ -29,4 +29,4 @@ If you've configured your Pulumi organization to work with [Pulumi Deployments](
 
 ![New Project Wizard Deployment Method](../npw-deploy-method.png)
 
-For more detailed instructions of how to use the New Project Wizard with Pulumi Deployments, see [Get Started with Deployments](/docs/pulumi-cloud/deployments/get-started/#new-project-wizard).
+For more detailed instructions on how to use the New Project Wizard with Pulumi Deployments, see [Get Started with Deployments](/docs/pulumi-cloud/deployments/get-started/#new-project-wizard).
