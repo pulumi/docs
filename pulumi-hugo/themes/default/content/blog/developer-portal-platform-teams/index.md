@@ -64,7 +64,7 @@ The New Project wizard is available now for all Pulumi users, and Organization T
 
 ### Backstage Plugin
 
-We’ve seen many developer portal technologies rapidly growing in popularity over the last few years.  In particular, we’ve seen many Pulumi users adopting [Backstage](https://backstage.io/).  Last week we launched a new [Pulumi Backstage Plugin](blog/pulumi-backstage-plugin/) to address the needs of organizations using Backstage and Pulumi together.
+We’ve seen many developer portal technologies rapidly growing in popularity over the last few years.  In particular, we’ve seen many Pulumi users adopting [Backstage](https://backstage.io/).  Last week we launched a new [Pulumi Backstage Plugin](/blog/pulumi-backstage-plugin/) to address the needs of organizations using Backstage and Pulumi together.
 
 The new Pulumi tab gives you direct access to all Pulumi stack activity associated with your backstage projects that include Pulumi stacks.
 
