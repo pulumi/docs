@@ -54,7 +54,7 @@ Collaborate with other developers and coordinate on updates. Provide fine-graine
 * [Stack Permissions](/docs/pulumi-cloud/projects-and-stacks#stack-permissions)
 * [Project and Stack Management](/docs/pulumi-cloud/projects-and-stacks/)
 
-### Pulumi Environments, Secrets and Configuration (ESC)
+### Pulumi ESC (Environments, Secrets, and Configuration)
 
 Pulumi ESC Environments allow teams to tackle configuration complexity at scale, alleviating maintenance and operational burden and reducing costly mistakes, and creating a more secure by default posture.
 
