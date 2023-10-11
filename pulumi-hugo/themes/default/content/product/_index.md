@@ -39,7 +39,7 @@ key_features_above:
                 color: salmon
               - title: Write Policy as Code
                 description: |
-                    Write Policy as Code in programming languages to enforce best practices with [Crossguard](/crossguard/).
+                    Write Policy as Code in programming languages to enforce best practices with [CrossGuard](/crossguard/).
                 icon: shield
                 color: blue
         - title: One source of truth for your Secrets and Configurations
@@ -236,7 +236,7 @@ key_features:
               - title: Pulumi Automation API
                 description: |
                     Build custom deployment and CI/CD workflows that integrate with Pulumi Developer Portal, custom portals, or CLIs.
-              - title: Developer Portals
+              - title: Developer portals
                 description: |
                     Create internal developer portals to distribute infrastructure templates to developers using Pulumi or the Backstage-plugin.
               - title: State & secrets
@@ -247,7 +247,7 @@ key_features:
                     Manage teams with SCIM, SAML SSO, GitHub, GitLab, or Atlassian. Set permissions and access tokens.
               - title: Policy enforcement
                 description: |
-                    Build policy packs from 150 policies or write your own. Leverage compliance-ready policies for any cloud to increase compliance posture and compliance as code for instant remediation.
+                    Build policy packs from 150 policies or write your own. Leverage compliance-ready policies for any cloud to increase compliance posture and remediation policies to correct violations.
               - title: Audit logs
                 description: |
                     Track and store user actions and change history with option to export logs.

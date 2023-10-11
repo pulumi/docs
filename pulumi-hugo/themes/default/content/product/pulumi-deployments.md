@@ -61,7 +61,7 @@ learn:
               type: primary
               action: Sign up for Pulumi Cloud
         - title: Documentation
-          description: Refer to our documentation to get Pulumi Deployments set up once you have been accepted into the Preview.
+          description: Review our documentation to learn more about Pulumi Deployments.
           buttons:
             - link: /docs/pulumi-cloud/deployments
               type: secondary

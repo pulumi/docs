@@ -11,7 +11,7 @@
             <h2>{{ .title }}</h2>
             <p class="text-left">{{ .description | markdownify }}</p>
             <div class="mt-8">
-                <a href="/docs/pulumi-cloud/deployments/" class="btn-secondary">Get Started with Deployments</a>
+                <a href="https://app.pulumi.com/signup/" class="btn-secondary">Get Started with Deployments</a>
             </div>
         {{ end }}
     </section>
@@ -62,7 +62,7 @@
             <iframe src="{{ .Params.preview.youtube_url }}" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen=""></iframe>
         </div>
         <div class="mt-16">
-            <a href="/docs/pulumi-cloud/deployments/" class="btn-secondary">Get Started with Deployments</a>
+            <a href="https://app.pulumi.com/signup/" class="btn-secondary">Get Started with Deployments</a>
         </div>
     </section>
 
@@ -101,7 +101,7 @@
                         {{ partial "color-icon.html" (dict "icon" "eye" "icon_color" "violet") }}
                         <h5>Review Stacks</h5>
                         <p>
-                            Automate creation and deletion of dedicated cloud environments for every pull request, enable cost-effective reviews.
+                            Automate creation and deletion of dedicated cloud environments for every pull request, enabling cost-effective reviews.
                         </p>
                     </div>
                 </div>
@@ -156,7 +156,7 @@
 
     <section id="pricing" class="relative mx-auto text-center">
         <h2>Pricing</h2>
-        <p>Pulumi deployments costs $0.01 per deployment minute.<br/>Any charges from Pulumi Deployments is in addition to your Pulumi Cloud edition billing. See Pricing to learn more.</p>
+        <p>{{ "Pulumi Deployments costs $0.01 per deployment minute.<br/>Any charges from Pulumi Deployments are in addition to your Pulumi Cloud edition billing. See [Pricing](/pricing) to learn more." | markdownify }}</p>
         <div class="mx-5 mt-8 flex justify-center text-left">
             <div class="lg:flex lg:items-stretch">
                 <div class="edition bg-white p-5 pb-8 xl:pl-8 hidden lg:flex lg:grow card mr-4 xl:mr-8">

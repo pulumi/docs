@@ -4,6 +4,8 @@ layout: internal-developer-platforms
 
 meta_title: "Self-Service Developer Platforms with Pulumi"
 meta_desc: Pulumi for Platform Teams! Accelerate productivity, enforce compliance, and maintain visibility with our internal developer platform-in-a-box.
+meta_image: /images/product/platform-teams-meta.png
+
 aliases:
 
 challenges:
@@ -13,7 +15,7 @@ challenges:
           description: Remove productivity obstacles like configuring cloud architectures, provisioning bottlenecks, and testing and deployment.
         - number: 2
           title: Security and compliance
-          description: Set up guardrails that enforce compliance and standardswhile maintaining visibility over what’s being deployed and how.
+          description: Set up guardrails that enforce compliance and standards while maintaining visibility over what’s being deployed and how.
         - number: 3
           title: Balancing agility and guardrails
           description: Accomplishing both speed and compliance with limited resources and without stifling developers’ autonomy and flow.
@@ -44,7 +46,7 @@ control:
         - title: Pulumi IaC
           description: Utilize open-source IaC in TypeScript/JavaScript, Python, Go, C#, Java, and YAML. Build and distribute reusable infrastructure components for 150+ cloud & SaaS providers, supporting modern and cloud-native architectures.
         - title: Pulumi Developer Portal
-          description: Distribute standard private templates through an out-of-the-box service catalog, which developers can browse and deploy from using the Pulumi Cloud console. API integration with your VCS, Pulumi Deployments, CI/CD, and more.
+          description: Distribute standard private templates through an out-of-the-box Service Catalog experience, which developers can browse and deploy from using the Pulumi Cloud console. API integration with your VCS, Pulumi Deployments, CI/CD, and more.
         - title: Backstage Plugin
           description: Enable developers to browse, deploy, and monitor Pulumi infrastructure deployments from an existing Backstage portal. Use the plugin to integrate Backstage with Pulumi Developer Portal, where your private infrastructure templates are hosted.
 
@@ -62,5 +64,5 @@ security:
         - title: Pulumi Cloud
           description: Maintain control and tracking over deployed infrastructure, with complete history of updates and audit logs easily viewable from a console. Enhance security with RBAC, identity provider integrations, SSO, and more.
         - title: Pulumi ESC
-          description: With Pulumi ESC, centrally store and manage configurations and secrets from different providers. It provides a unified, secure location for all your configuration while managing developer access centrally.
+          description: Centrally store and manage secrets and configuration from different providers. It provides a unified, secure location for all your configuration while managing developer access centrally.
 ---
