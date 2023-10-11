@@ -1,8 +1,8 @@
 ---
 title_tag: "Pulumi Deployments REST API Documentation"
 meta_desc: Documentation for the Pulumi Deployments REST API including configuring settings and OIDC
-title: "REST API docs"
-h1: Pulumi Deployments REST API docs
+title: "REST API"
+h1: Pulumi Deployments REST API
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   pulumicloud:
@@ -17,10 +17,21 @@ aliases:
 The Pulumi Deployments REST API provides a fully-managed remote execution interface for your Pulumi programs.
 
 {{% notes "info" %}}
-Pulumi Deployments is currently in preview.
+Pulumi Deployments is now generally available!
 
-Please post any bug reports or feature requests in the [Service Requests repo](https://github.com/pulumi/service-requests/issues/new/choose).
+We have created new routes for the Pulumi Deployments REST API, which are documented below. The `preview` routes will continue to work for now, but should be considered deprecated and will be removed on October 10th, 2024.
 {{% /notes %}}
+
+## Migrating from the Preview API
+
+For the majority of cases, the new API is a drop-in replacement for the preview API and the only change is that the route itself has changed (i.e. replace with `/api/preview` with `/api/stacks`).
+
+However, there are a few cases where the new API has changed the behavior of the preview API. These changes are as follows:
+
+* The [Create Deployment](#create-deployment) endpoint now defaults to using the stack's deployment settings (i.e. `inheritSettings: true`). To use only the deployment settings present in the request, set `inheritSettings` to `false`.
+* The [List Stack Deployments](#list-stack-deployments) endpoint now returns an object with a `deployments` property instead of a list of deployments.
+* The [List Stack Deployments](#list-stack-deployments) endpoint now returns deployments in descending order (most recent first). To return deployments in ascending order (oldest first), set `asc` to `true`.
+* The Deployment Settings routes have changed. In addition to replacing `api/preview` with `api/stacks`, also replace `deployment/settings` with `deployments/settings` in the URL.
 
 ## Authentication
 
@@ -323,7 +334,7 @@ The GitHub block describes settings for Pulumi Deployments' GitHub integration.
 * **deployCommits** (boolean): True to run `update` deployments for each commit pushed to the configured branch.
 * **previewPullRequests** (boolean): True to run `preview` deployments for each pull request that targets the configured branch.
 * **pullRequestTemplate** (boolean): True to enable [Review Stacks](/docs/pulumi-cloud/deployments/review-stacks) for this branch, and use this stack as a template.
-* **paths** (Optional[list[string]]): A list of path filters that determine whether or not a commit or pull request should trigger a deployment based on the paths affected by the commit or pull request. Path
+* **paths** (Optional[list[string]]): A list of path filters that determine whether a commit or pull request should trigger a deployment based on the paths affected by the commit or pull request. Path
   filters may use the `*` and `**` elements to match a single path component or any number of path components, respectively. If a path filter begins with a `!`, it excludes matching paths rather than including
   matching paths. If all filters are excludes, there is an implicit `**` filter. A deployment will run if any non-excluded file is modified. Note that the list of changed paths returned by GitHub is limited to
   300 files. If there are files changed that aren't matched in the first 300 files returned by the filter, a deployment will not run. You may need to create additional filters so that a deployment will run.
@@ -358,7 +369,7 @@ The GitHub block describes settings for Pulumi Deployments' GitHub integration.
 
 ```json
 {
-  "repository": "pulumi/deploy-demos",
+  "repository": "pulumi/deploy-demos"
 }
 ```
 
@@ -369,7 +380,7 @@ The GitHub block describes settings for Pulumi Deployments' GitHub integration.
 Gets the [deployment settings](#deployment-settings) associated with a stack.
 
 ```
-GET https://api.pulumi.com/api/preview/{organization}/{project}/{stack}/deployment/settings
+GET https://api.pulumi.com/api/stacks/{organization}/{project}/{stack}/deployments/settings
 ```
 
 #### Example
@@ -377,8 +388,9 @@ GET https://api.pulumi.com/api/preview/{organization}/{project}/{stack}/deployme
 ##### Request
 
 ```shell
-curl -XGET -H "Content-Type: application/json" -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
---location "https://api.pulumi.com/api/preview/my-org/aws-ts-s3-folder/dev/deployment/settings"
+curl -XGET -H "Content-Type: application/json" \
+-H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+--location "https://api.pulumi.com/api/stacks/my-org/aws-ts-s3-folder/dev/deployments/settings"
 ```
 
 ##### Response
@@ -411,7 +423,7 @@ curl -XGET -H "Content-Type: application/json" -H "Authorization: token $PULUMI_
 Patches the [deployment settings](#deployment-settings) associated with a stack.
 
 ```
-POST https://api.pulumi.com/api/preview/{organization}/{project}/{stack}/deployment/settings
+POST https://api.pulumi.com/api/stacks/{organization}/{project}/{stack}/deployments/settings
 ```
 
 The final settings for the stack are calculated by merging the settings present in the request with the stack's current settings according to the following rules:
@@ -421,7 +433,7 @@ The final settings for the stack are calculated by merging the settings present 
     * Remove all properties that are explicitly set to `null` in the patch value
     * Merge all non-`null` properties from the patch value that exist in the current property value
     * Add all non-`null` properties from the patch value that do not exist in the current property value
-* For other propertries, replace the current value with the patch value
+* For other properties, replace the current value with the patch value
 
 For example, if the current settings for a stack are:
 
@@ -451,8 +463,9 @@ For example, if the current settings for a stack are:
 And we apply this patch:
 
 ```shell
-curl -i -XPOST -H "Content-Type: application/json" -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
---location "https://api.pulumi.com/api/preview/my-org/aws-ts-s3/dev/deployment/settings" \
+curl -i -XPOST -H "Content-Type: application/json" \
+-H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+--location "https://api.pulumi.com/api/stacks/my-org/aws-ts-s3/dev/deployments/settings" \
 -d '{
   "sourceContext": {
     "git": {
@@ -497,9 +510,9 @@ Then the new settings for the stack are:
     ],
     "environmentVariables": {
       "AWS_REGION": "us-west-2"
-    }
+    },
     "oidc": {
-      "aws" {
+      "aws": {
         "roleArn": "my-role-arn",
         "sessionName": "pulumi-deploy"
       }
@@ -516,14 +529,15 @@ Then the new settings for the stack are:
 Clears the [deployment settings](#deployment-settings) associated with a stack.
 
 ```
-DELETE https://api.pulumi.com/api/preview/{organization}/{project}/{stack}/deployment/settings
+DELETE https://api.pulumi.com/api/stacks/{organization}/{project}/{stack}/deployments/settings
 ```
 
 #### Example
 
 ```shell
-curl -i -XDELETE -H "Content-Type: application/json" -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
---location "https://api.pulumi.com/api/preview/my-org/aws-ts-s3/dev/deployment/settings"
+curl -i -XDELETE -H "Content-Type: application/json" \
+-H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+--location "https://api.pulumi.com/api/stacks/my-org/aws-ts-s3/dev/deployments/settings"
 ```
 
 ### Create Deployment
@@ -531,7 +545,7 @@ curl -i -XDELETE -H "Content-Type: application/json" -H "Authorization: token $P
 Creates a new deployment to execute a Pulumi program via the Pulumi Cloud.
 
 ```
-POST https://api.pulumi.com/api/preview/{organization}/{project}/{stack}/deployments
+POST https://api.pulumi.com/api/stacks/{organization}/{project}/{stack}/deployments
 ```
 
 {{% notes "info" %}}
@@ -549,25 +563,25 @@ A deployment request consists of optional [deployment settings](#deployment-sett
 The following request will create a deployment in the "my-org" Pulumi organization for "aws-ts-s3" project and "dev" stack. It will use only the settings associated with the stack.
 
 ```shell
-curl -i -XPOST -H "Content-Type: application/json" -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
---location "https://api.pulumi.com/api/preview/my-org/aws-ts-s3/dev/deployments" \
+curl -i -XPOST -H "Content-Type: application/json" \
+-H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+--location "https://api.pulumi.com/api/stacks/my-org/aws-ts-s3/dev/deployments" \
 -d '{
-	"operation": "update",
-	"inheritSettings": true
+	"operation": "update"
 }'
 ```
 
 ##### Merged stack and request deployment settings
 
-The following request will create a deployment in the "my-org" Pulumi organization for "aws-ts-s3" project and "dev" stack. It will use merge the settings associated with the stack with the settings present
+The following request will create a deployment in the "my-org" Pulumi organization for "aws-ts-s3" project and "dev" stack. It will merge the settings associated with the stack with the settings present
 in the request according to the rules used by [the Patch Settings endpoint](#patchsettings).
 
 ```shell
-curl -i -XPOST -H "Content-Type: application/json" -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
---location "https://api.pulumi.com/api/preview/my-org/aws-ts-s3/dev/deployments" \
+curl -i -XPOST -H "Content-Type: application/json" \
+-H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+--location "https://api.pulumi.com/api/stacks/my-org/aws-ts-s3/dev/deployments" \
 -d '{
 	"operation": "update",
-	"inheritSettings": true,
     "operationContext": {
         "environmentVariables": {
             "AWS_REGION": "us-east-1"
@@ -584,10 +598,12 @@ targeting [aws-ts-s3-folder](https://github.com/pulumi/examples/tree/master/aws-
 "hello world". Finally, it will run a `pulumi update` against the stack, as specified in the "operation".
 
 ```shell
-curl -i -XPOST -H "Content-Type: application/json" -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
---location "https://api.pulumi.com/api/preview/my-org/aws-ts-s3/dev/deployments" \
+curl -i -XPOST -H "Content-Type: application/json" \
+-H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+--location "https://api.pulumi.com/api/stacks/my-org/aws-ts-s3/dev/deployments" \
 -d '{
 	"operation": "update",
+	"inheritSettings": false,
     "sourceContext": {
         "git": {
             "repoURL": "https://github.com/pulumi/deploy-demos.git",
@@ -615,10 +631,10 @@ Gets details for a specific deployment.
 
 ```
 // Get deployment by ID
-GET https://api.pulumi.com/api/preview/{organization}/{project}/{stack}/deployments/{deploymentID}
+GET https://api.pulumi.com/api/stacks/{organization}/{project}/{stack}/deployments/{deploymentID}
 
 // Get deployment by version
-GET https://api.pulumi.com/api/preview/{organization}/{project}/{stack}/deployments/version/{deploymentVersion}
+GET https://api.pulumi.com/api/stacks/{organization}/{project}/{stack}/deployments/version/{deploymentVersion}
 ```
 
 #### Example
@@ -626,8 +642,9 @@ GET https://api.pulumi.com/api/preview/{organization}/{project}/{stack}/deployme
 ##### Request
 
 ```shell
-curl -XGET -H "Content-Type: application/json" -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
---location "https://api.pulumi.com/api/preview/my-org/aws-ts-s3-folder/dev/deployments/9e5e1331-a018-4845-8714-1598ba8dc52e"
+curl -XGET -H "Content-Type: application/json" \
+-H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+--location "https://api.pulumi.com/api/stacks/my-org/aws-ts-s3-folder/dev/deployments/9e5e1331-a018-4845-8714-1598ba8dc52e"
 ```
 
 ##### Response
@@ -740,98 +757,384 @@ curl -XGET -H "Content-Type: application/json" -H "Authorization: token $PULUMI_
 }
 ```
 
-### List Deployments
+### List Stack Deployments
 
-Gets a list of deployments.
+Gets a list of deployments for a stack.
 
 ```
-GET https://api.pulumi.com/api/preview/{organization}/{project}/{stack}/deployments
+GET https://api.pulumi.com/api/stacks/{organization}/{project}/{stack}/deployments
 ```
 
 The following query parameters may be used for pagination.
 
-* **page** (Optional[int]): The page of results to return (min: 1)
-* **pageSize** (Optional[int]): The number of results to return per page (min: 1, max: 100)
+* **page** (Optional[int]): The page of results to return (min: 1, default: 1)
+* **pageSize** (Optional[int]): The number of results to return per page (min: 1, max: 100, default: 10)
+* **asc** (Optional[bool]): Whether to sort the results in ascending order (default: false)
+* **status** (Optional[string]): The deployment status to filter by. If not specified, all statuses are returned.
 
 #### Example
 
 ##### Request
 
 ```shell
-curl -XGET -H "Content-Type: application/json" -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
---location "https://api.pulumi.com/api/preview/my-org/aws-ts-s3-folder/dev/deployments?page=1&pageSize=5"
+curl -XGET -H "Content-Type: application/json" \
+-H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+--location "https://api.pulumi.com/api/stacks/my-org/aws-ts-s3-folder/dev/deployments?page=1&pageSize=5"
 ```
 
 ##### Response
 
 ```json
-[
-  {
-    "id": "94f6ce58-7bdb-42ca-85a7-80296fe2072e",
-    "created": "2022-10-31 16:07:58.629",
-    "modified": "2022-10-31 16:08:16.463",
-    "status": "failed",
-    "version": 1,
-    "requestedBy": {
-      "name": "Norm Normy",
-      "githubLogin": "norm-pulumi",
-      "avatarUrl": "https://api.pulumi.com/static/avatars/12345.png",
-      "email": "norm@normy.com"
-    }
-  },
-  {
-    "id": "e77c6363-038c-4972-9b57-dee3e6a73014",
-    "created": "2022-10-31 16:58:31.859",
-    "modified": "2022-10-31 16:58:50.302",
-    "status": "failed",
-    "version": 2,
-    "requestedBy": {
-      "name": "Norm Normy",
-      "githubLogin": "norm-pulumi",
-      "avatarUrl": "https://api.pulumi.com/static/avatars/12345.png",
-      "email": "norm@normy.com"
-    }
-  },
-  {
-    "id": "7536b3a1-4171-46bc-98ac-b81f681ce0d5",
-    "created": "2022-10-31 17:02:54.277",
-    "modified": "2022-10-31 17:03:13.660",
-    "status": "failed",
-    "version": 3,
-    "requestedBy": {
-      "name": "Norm Normy",
-      "githubLogin": "norm-pulumi",
-      "avatarUrl": "https://api.pulumi.com/static/avatars/12345.png",
-      "email": "norm@normy.com"
-    }
-  },
-  {
-    "id": "303ba93c-0fa5-466f-9f2f-3878800cea26",
-    "created": "2022-10-31 17:06:03.016",
-    "modified": "2022-10-31 17:07:09.665",
-    "status": "succeeded",
-    "version": 4,
-    "requestedBy": {
-      "name": "Turk Turkleton",
-      "githubLogin": "turkyturk",
-      "avatarUrl": "https://api.pulumi.com/static/avatars/B154678.png",
-      "email": "turk@turkleton.com"
-    }
-  },
-  {
-    "id": "fd4e838c-7b0c-4382-af3f-202c94e086b8",
-    "created": "2022-10-31 17:14:58.430",
-    "modified": "2022-10-31 17:16:46.557",
-    "status": "succeeded",
-    "version": 5,
-    "requestedBy": {
-      "name": "Turk Turkleton",
-      "githubLogin": "turkyturk",
-      "avatarUrl": "https://api.pulumi.com/static/avatars/B154678.png",
-      "email": "turk@turkleton.com"
-    }
-  }
-]
+{
+    "deployments": [
+        {
+            "id": "9e007591-277d-43c6-b256-9f0af0ebdc1b",
+            "created": "2023-09-19 05:49:43.002",
+            "modified": "2023-09-19 05:50:48.516",
+            "status": "succeeded",
+            "version": 959,
+            "requestedBy": {
+                "name": "Beep Boop",
+                "githubLogin": "beepbooplogin",
+                "avatarUrl": "https://api.pulumi.com/static/avatars/12345.png",
+                "email": "beep@boop.com"
+            },
+            "projectName": "simple-resource",
+            "stackName": "dev",
+            "pulumiOperation": "update",
+            "updates": [
+                {
+                    "id": "9dc85505-113f-4c6f-a023-8f80f4bc36b8",
+                    "updateID": "df60a4c7-69dc-426d-8987-39e8544fe983",
+                    "version": 1217,
+                    "startTime": 1694820531,
+                    "endTime": 1694820540,
+                    "result": "succeeded",
+                    "kind": "update",
+                    "message": "",
+                    "environment": {
+                        "key": "value",
+                        ...
+                    }
+                }
+            ],
+            "jobs": [
+                {
+                    "status": "succeeded",
+                    "started": "2023-09-15T23:28:17.644409853Z",
+                    "lastUpdated": "2023-09-15T23:29:02.883538271Z",
+                    "steps": [
+                        {
+                            "name": "Setup",
+                            "status": "succeeded",
+                            "started": "2023-09-15T23:28:17.644409853Z",
+                            "lastUpdated": "2023-09-15T23:28:20.730268067Z"
+                        },
+                        {
+                            "name": "Download deployment executor",
+                            "status": "succeeded",
+                            "started": "2023-09-15T23:28:22.318042694Z",
+                            "lastUpdated": "2023-09-15T23:28:25.36490801Z"
+                        },
+                        {
+                            "name": "Fetch provider credentials via OIDC",
+                            "status": "succeeded",
+                            "started": "2023-09-15T23:28:25.519842902Z",
+                            "lastUpdated": "2023-09-15T23:28:25.729177668Z"
+                        },
+                        {
+                            "name": "Get source",
+                            "status": "succeeded",
+                            "started": "2023-09-15T23:28:25.890605613Z",
+                            "lastUpdated": "2023-09-15T23:28:31.455532053Z"
+                        },
+                        {
+                            "name": "Download dependencies",
+                            "status": "succeeded",
+                            "started": "2023-09-15T23:28:31.69949523Z",
+                            "lastUpdated": "2023-09-15T23:28:50.343866319Z"
+                        },
+                        {
+                            "name": "pulumi update",
+                            "status": "succeeded",
+                            "started": "2023-09-15T23:28:50.561534112Z",
+                            "lastUpdated": "2023-09-15T23:29:02.883538271Z"
+                        }
+                    ]
+                }
+            ],
+            "initiator": "console"
+        },
+        {
+            "id": "717e0c15-b3aa-48e3-a280-a988b28327cf",
+            "created": "2023-09-18 22:01:09.128",
+            "modified": "2023-09-18 22:01:11.287",
+            "status": "failed",
+            "version": 957,
+            "requestedBy": {
+                "name": "Beep Boop",
+                "githubLogin": "beepbooplogin",
+                "avatarUrl": "https://api.pulumi.com/static/avatars/12345.png",
+                "email": "beep@boop.com"
+            },
+            "projectName": "simple-resource",
+            "stackName": "dev",
+            "pulumiOperation": "update",
+            "updates": [],
+            "jobs": [...],
+            "initiator": "console"
+        },
+        {
+            "id": "48b63246-7c5f-49ff-a9bc-6131d051ae4b",
+            "created": "2023-09-18 21:08:16.656",
+            "modified": "2023-09-18 21:25:39.359",
+            "status": "failed",
+            "version": 956,
+            "requestedBy": {
+                "name": "Foo Bar",
+                "githubLogin": "foobarlogin",
+                "avatarUrl": "https://api.pulumi.com/static/avatars/3r2fn32ofn.png",
+                "email": "foo@bar.com"
+            },
+            "projectName": "simple-resource",
+            "stackName": "dev",
+            "pulumiOperation": "update",
+            "updates": [],
+            "jobs": [...],
+            "initiator": "console"
+        },
+        {
+            "id": "130e4135-aec1-40b3-af66-9b434c16a24b",
+            "created": "2023-09-18 17:49:13.979",
+            "modified": "2023-09-18 17:49:15.805",
+            "status": "failed",
+            "version": 955,
+            "requestedBy": {
+                "name": "Foo Bar",
+                "githubLogin": "foobarlogin",
+                "avatarUrl": "https://api.pulumi.com/static/avatars/3r2fn32ofn.png",
+                "email": "foo@bar.com"
+            },
+            "projectName": "simple-resource",
+            "stackName": "dev",
+            "pulumiOperation": "update",
+            "updates": [],
+            "jobs": [...],
+            "initiator": "console"
+        },
+        {
+            "id": "44621244-da37-46d7-82a7-97a6c198c363",
+            "created": "2023-09-15 23:25:21.101",
+            "modified": "2023-09-15 23:29:02.883",
+            "status": "succeeded",
+            "version": 954,
+            "requestedBy": {
+                "name": "Foo Bar",
+                "githubLogin": "foobarlogin",
+                "avatarUrl": "https://api.pulumi.com/static/avatars/3r2fn32ofn.png",
+                "email": "foo@bar.com"
+            },
+            "projectName": "simple-resource",
+            "stackName": "dev",
+            "pulumiOperation": "update",
+            "updates": [...],
+            "jobs": [...],
+            "initiator": "console"
+        }
+    ],
+    "itemsPerPage": 5,
+    "total": 67
+}
+```
+
+### List Organization Deployments
+
+Gets a list of deployments for the entire organization. Only deployments belonging to stacks that the user has access to will be returned.
+
+```
+GET https://api.pulumi.com/api/orgs/{organization}/deployments
+```
+
+The following query parameters may be used for pagination.
+
+* **page** (Optional[int]): The page of results to return (min: 1, default: 1)
+* **pageSize** (Optional[int]): The number of results to return per page (min: 1, max: 100, default: 10)
+* **asc** (Optional[bool]): Whether to sort the results in ascending order (default: false)
+* **status** (Optional[string]): The deployment status to filter by. If not specified, all statuses are returned.
+
+#### Example
+
+##### Request
+
+```shell
+curl -XGET -H "Content-Type: application/json" \
+-H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+--location "https://api.pulumi.com/api/orgs/my-org/deployments?page=1&pageSize=5"
+```
+
+##### Response
+
+```json
+{
+    "deployments": [
+        {
+            "id": "9e007591-277d-43c6-b256-9f0af0ebdc1b",
+            "created": "2023-09-19 05:49:43.002",
+            "modified": "2023-09-19 05:50:48.516",
+            "status": "succeeded",
+            "version": 5,
+            "requestedBy": {
+                "name": "Beep Boop",
+                "githubLogin": "beepbooplogin",
+                "avatarUrl": "https://api.pulumi.com/static/avatars/12345.png",
+                "email": "beep@boop.com"
+            },
+            "projectName": "project-1",
+            "stackName": "dev",
+            "pulumiOperation": "update",
+            "updates": [
+                {
+                    "id": "9dc85505-113f-4c6f-a023-8f80f4bc36b8",
+                    "updateID": "df60a4c7-69dc-426d-8987-39e8544fe983",
+                    "version": 1217,
+                    "startTime": 1694820531,
+                    "endTime": 1694820540,
+                    "result": "succeeded",
+                    "kind": "update",
+                    "message": "",
+                    "environment": {
+                        "key": "value",
+                        ...
+                    }
+                }
+            ],
+            "jobs": [
+                {
+                    "status": "succeeded",
+                    "started": "2023-09-15T23:28:17.644409853Z",
+                    "lastUpdated": "2023-09-15T23:29:02.883538271Z",
+                    "steps": [
+                        {
+                            "name": "Setup",
+                            "status": "succeeded",
+                            "started": "2023-09-15T23:28:17.644409853Z",
+                            "lastUpdated": "2023-09-15T23:28:20.730268067Z"
+                        },
+                        {
+                            "name": "Download deployment executor",
+                            "status": "succeeded",
+                            "started": "2023-09-15T23:28:22.318042694Z",
+                            "lastUpdated": "2023-09-15T23:28:25.36490801Z"
+                        },
+                        {
+                            "name": "Fetch provider credentials via OIDC",
+                            "status": "succeeded",
+                            "started": "2023-09-15T23:28:25.519842902Z",
+                            "lastUpdated": "2023-09-15T23:28:25.729177668Z"
+                        },
+                        {
+                            "name": "Get source",
+                            "status": "succeeded",
+                            "started": "2023-09-15T23:28:25.890605613Z",
+                            "lastUpdated": "2023-09-15T23:28:31.455532053Z"
+                        },
+                        {
+                            "name": "Download dependencies",
+                            "status": "succeeded",
+                            "started": "2023-09-15T23:28:31.69949523Z",
+                            "lastUpdated": "2023-09-15T23:28:50.343866319Z"
+                        },
+                        {
+                            "name": "pulumi update",
+                            "status": "succeeded",
+                            "started": "2023-09-15T23:28:50.561534112Z",
+                            "lastUpdated": "2023-09-15T23:29:02.883538271Z"
+                        }
+                    ]
+                }
+            ],
+            "initiator": "console"
+        },
+        {
+            "id": "717e0c15-b3aa-48e3-a280-a988b28327cf",
+            "created": "2023-09-18 22:01:09.128",
+            "modified": "2023-09-18 22:01:11.287",
+            "status": "failed",
+            "version": 5,
+            "requestedBy": {
+                "name": "Beep Boop",
+                "githubLogin": "beepbooplogin",
+                "avatarUrl": "https://api.pulumi.com/static/avatars/12345.png",
+                "email": "beep@boop.com"
+            },
+            "projectName": "project-2",
+            "stackName": "dev",
+            "pulumiOperation": "update",
+            "updates": [],
+            "jobs": [...],
+            "initiator": "console"
+        },
+        {
+            "id": "48b63246-7c5f-49ff-a9bc-6131d051ae4b",
+            "created": "2023-09-18 21:08:16.656",
+            "modified": "2023-09-18 21:25:39.359",
+            "status": "failed",
+            "version": 4,
+            "requestedBy": {
+                "name": "Foo Bar",
+                "githubLogin": "foobarlogin",
+                "avatarUrl": "https://api.pulumi.com/static/avatars/3r2fn32ofn.png",
+                "email": "foo@bar.com"
+            },
+            "projectName": "project-1",
+            "stackName": "dev",
+            "pulumiOperation": "update",
+            "updates": [],
+            "jobs": [...],
+            "initiator": "console"
+        },
+        {
+            "id": "130e4135-aec1-40b3-af66-9b434c16a24b",
+            "created": "2023-09-18 17:49:13.979",
+            "modified": "2023-09-18 17:49:15.805",
+            "status": "failed",
+            "version": 3,
+            "requestedBy": {
+                "name": "Foo Bar",
+                "githubLogin": "foobarlogin",
+                "avatarUrl": "https://api.pulumi.com/static/avatars/3r2fn32ofn.png",
+                "email": "foo@bar.com"
+            },
+            "projectName": "project-1",
+            "stackName": "dev",
+            "pulumiOperation": "update",
+            "updates": [],
+            "jobs": [...],
+            "initiator": "console"
+        },
+        {
+            "id": "44621244-da37-46d7-82a7-97a6c198c363",
+            "created": "2023-09-15 23:25:21.101",
+            "modified": "2023-09-15 23:29:02.883",
+            "status": "succeeded",
+            "version": 2,
+            "requestedBy": {
+                "name": "Foo Bar",
+                "githubLogin": "foobarlogin",
+                "avatarUrl": "https://api.pulumi.com/static/avatars/3r2fn32ofn.png",
+                "email": "foo@bar.com"
+            },
+            "projectName": "project-1",
+            "stackName": "dev",
+            "pulumiOperation": "update",
+            "updates": [...],
+            "jobs": [...],
+            "initiator": "console"
+        }
+    ],
+    "itemsPerPage": 5,
+    "total": 67
+}
 ```
 
 ### Get Deployment Logs
@@ -839,7 +1142,7 @@ curl -XGET -H "Content-Type: application/json" -H "Authorization: token $PULUMI_
 Gets logs for a specific deployment.
 
 ```
-GET https://api.pulumi.com/api/preview/{organization}/{project}/{stack}/deployments/{deploymentID}/logs
+GET https://api.pulumi.com/api/stacks/{organization}/{project}/{stack}/deployments/{deploymentID}/logs
 ```
 
 #### Streaming logs
@@ -857,8 +1160,9 @@ The following query parameters are available:
 Request
 
 ```shell
-curl -XGET -H "Content-Type: application/json" -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
---location "https://api.pulumi.com/api/preview/my-org/aws-ts-s3-folder/dev/deployments/6b1ec06b-4f41-4cce-a7c9-13ceded14db2/logs"
+curl -XGET -H "Content-Type: application/json" \
+-H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+--location "https://api.pulumi.com/api/stacks/my-org/aws-ts-s3-folder/dev/deployments/6b1ec06b-4f41-4cce-a7c9-13ceded14db2/logs"
 ```
 
 Response
@@ -902,8 +1206,9 @@ Response
 Following request (using `nextToken`)
 
 ```shell
-curl -XGET -H "Content-Type: application/json" -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
---location "https://api.pulumi.com/api/preview/my-org/aws-ts-s3-folder/dev/deployments/6b1ec06b-4f41-4cce-a7c9-13ceded14db2/logs?nextToken=0.2.1"
+curl -XGET -H "Content-Type: application/json" \
+-H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+--location "https://api.pulumi.com/api/stacks/my-org/aws-ts-s3-folder/dev/deployments/6b1ec06b-4f41-4cce-a7c9-13ceded14db2/logs?nextToken=0.2.1"
 ```
 
 Response
@@ -951,8 +1256,9 @@ Request
 
 ```shell
 # Get logs for a deployment starting at the zero offset and a count size of 10
-curl -i -XGET -H "Content-Type: application/json" -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
---location "https://api.pulumi.com/api/preview/my-org/aws-ts-s3-folder/dev/deployments/2ee5b292-28bb-44a5-8532-b6ac32f4ec49/logs/?step=5&count=10&offset=0"
+curl -i -XGET -H "Content-Type: application/json" \
+-H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+--location "https://api.pulumi.com/api/stacks/my-org/aws-ts-s3-folder/dev/deployments/2ee5b292-28bb-44a5-8532-b6ac32f4ec49/logs/?step=5&count=10&offset=0"
 ```
 
 Response
@@ -1015,17 +1321,18 @@ Note that you can only pause deployments for a stack that has [deployment settin
 
 ```
 // Pauses new deployments for a stack
-POST https://api.pulumi.com/api/preview/{organization}/{project}/{stack}/deployments/pause
+POST https://api.pulumi.com/api/stacks/{organization}/{project}/{stack}/deployments/pause
 
 // Pauses new deployments for an organization
-POST https://api.pulumi.com/api/preview/{organization}/deployments/pause
+POST https://api.pulumi.com/api/orgs/{organization}/deployments/pause
 ```
 
 #### Example
 
 ```shell
-curl -i -XPOST -H "Content-Type: application/json" -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
---location "https://api.pulumi.com/api/preview/my-org/aws-ts-s3-folder/dev/deployments/pause"
+curl -i -XPOST -H "Content-Type: application/json" \
+-H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+--location "https://api.pulumi.com/api/stacks/my-org/aws-ts-s3-folder/dev/deployments/pause"
 ```
 
 ### Resume Deployments
@@ -1034,17 +1341,18 @@ Resumes deployments for a stack or organization. This will cause queued deployme
 
 ```
 // Resumes deployment for a stack
-POST https://api.pulumi.com/api/preview/{organization}/{project}/{stack}/deployments/resume
+POST https://api.pulumi.com/api/stacks/{organization}/{project}/{stack}/deployments/resume
 
 // Resumes deployments for an organization
-POST https://api.pulumi.com/api/preview/{organization}/deployments/resume
+POST https://api.pulumi.com/api/orgs/{organization}/deployments/resume
 ```
 
 #### Example
 
 ```shell
-curl -i -XPOST -H "Content-Type: application/json" -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
---location "https://api.pulumi.com/api/preview/my-org/aws-ts-s3-folder/dev/deployments/resume"
+curl -i -XPOST -H "Content-Type: application/json" \
+-H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+--location "https://api.pulumi.com/api/stack/my-org/aws-ts-s3-folder/dev/deployments/resume"
 ```
 
 ### Get Deployments Metadata
@@ -1054,10 +1362,10 @@ if deployments are paused, and why they're paused.
 
 ```
 // Get deployments metadata for a stack
-GET https://api.pulumi.com/api/preview/{organization}/{project}/{stack}/deployments/metadata
+GET https://api.pulumi.com/api/stacks/{organization}/{project}/{stack}/deployments/metadata
 
 // Get deployments metadata for an organization
-GET https://api.pulumi.com/api/preview/{organization}/deployments/metadata
+GET https://api.pulumi.com/api/orgs/{organization}/deployments/metadata
 ```
 
 #### Example
@@ -1065,8 +1373,9 @@ GET https://api.pulumi.com/api/preview/{organization}/deployments/metadata
 ##### Request
 
 ```shell
-curl -XGET -H "Content-Type: application/json" -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
---location "https://api.pulumi.com/api/preview/my-org/aws-ts-s3-folder/dev/deployments/metadata"
+curl -XGET -H "Content-Type: application/json" \
+-H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+--location "https://api.pulumi.com/api/stack/my-org/aws-ts-s3-folder/dev/deployments/metadata"
 ```
 
 ##### Response
@@ -1082,8 +1391,9 @@ curl -XGET -H "Content-Type: application/json" -H "Authorization: token $PULUMI_
 ##### Request
 
 ```shell
-curl -XGET -H "Content-Type: application/json" -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
---location "https://api.pulumi.com/api/preview/my-org/deployments/metadata"
+curl -XGET -H "Content-Type: application/json" \
+-H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+--location "https://api.pulumi.com/api/orgs/my-org/deployments/metadata"
 ```
 
 ##### Response
@@ -1117,12 +1427,13 @@ if the deployment is canceled during the execution of a Pulumi operation.
 {{% /notes %}}
 
 ```
-POST https://api.pulumi.com/api/preview/{organization}/{project}/{stack}/deployments/{deploymentID}/cancel
+POST https://api.pulumi.com/api/stacks/{organization}/{project}/{stack}/deployments/{deploymentID}/cancel
 ```
 
 #### Example
 
 ```shell
-curl -i -XPOST -H "Content-Type: application/json" -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
---location "https://api.pulumi.com/api/preview/my-org/aws-ts-s3-folder/dev/deployments/2ee5b292-28bb-44a5-8532-b6ac32f4ec49/cancel"
+curl -i -XPOST -H "Content-Type: application/json" \
+-H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+--location "https://api.pulumi.com/api/stacks/my-org/aws-ts-s3-folder/dev/deployments/2ee5b292-28bb-44a5-8532-b6ac32f4ec49/cancel"
 ```

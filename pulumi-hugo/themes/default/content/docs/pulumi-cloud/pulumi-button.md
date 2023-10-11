@@ -29,26 +29,13 @@ To create a _Deploy with Pulumi_ button:
 
 ## Preparing your Template
 
-The Pulumi button works with project templates hosted in public GitHub repositories or gists. A template is a Pulumi project that has the required `Pulumi.yaml` file describing the project. The project template can be in the root of the GitHub repository, or within a subdirectory. Multiple projects can be hosted within subdirectories of a single repository.
+The "Deploy with Pulumi" button works with project templates hosted in public or private GitHub repositories or gists.
 
-The `Pulumi.yaml` file can optionally contain a `template` section, which typically includes a `config` section for specifying required config values for the project. Each config value can have a `description` and a `default` value. Config values can also have a `secret` property, which can be set to `true` to indicate that it is a
-[secret](/docs/concepts/config#secrets).
+A template is a Pulumi project that has the required `Pulumi.yaml` file describing the project. The project template can be in the root of the GitHub repository, or within a subdirectory. Multiple projects can be hosted within subdirectories of a single repository.
 
-```yaml
-name: my-aws-project
-runtime: nodejs
-description: My AWS project description
-template:
-  config:
-    aws:region:
-      description: The AWS region to deploy into
-      default: us-west-2
-    myAccessToken:
-      description: My access token
-      secret: true
-```
+A large number of templates are provided by Pulumi in [https://github.com/pulumi/examples](https://github.com/pulumi/examples) and [https://github.com/pulumi/templates](https://github.com/pulumi/templates).
 
-The above snippet includes an `aws:region` config value with a default value of `us-west-2`, as well as a `myAccessToken` config value that is a secret without a default value.
+To learn more about building your own custom templates, see [Custom Templates](/docs/pulumi-cloud/developer-portals/templates).
 
 ### Testing
 

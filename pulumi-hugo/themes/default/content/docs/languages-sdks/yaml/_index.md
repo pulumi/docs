@@ -84,6 +84,10 @@ project and set up starter resources for the chosen cloud. The `yaml` template i
 - `pulumi new gcp-yaml`: creates a starter Google Cloud Pulumi YAML project
 - `pulumi new kubernetes-yaml`: creates a starter Kubernetes Pulumi YAML project
 
+By default, `pulumi new` provides a number of templates provided by Pulumi, but it can also use your own custom templates.
+
+To learn more about building and working with custom templates, see [Custom Templates](/docs/pulumi-cloud/developer-portals/templates) and the [`pulumi new`](/docs/cli/commands/pulumi_new/) docs.
+
 ## Pulumi Programming Model
 
 The Pulumi programming model defines the core concepts you will use when creating infrastructure as
