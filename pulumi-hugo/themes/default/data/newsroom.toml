@@ -1,4 +1,10 @@
 [[releases]]
+date = "11th October 2023"
+title = "Pulumi Gives Enterprises a Multi-Cloud Infrastructure Platform in a Box"
+summary = "Pulumi Gives Enterprises a Multi-Cloud Infrastructure Platform in a Box."
+url = "https://info.pulumi.com/press-release/announcing-pulumi-for-platform-teams"
+
+[[releases]]
 date = "10th October 2023"
 title = "Pulumi Makes Cloud Configuration Simple and Secure with Pulumi ESC"
 summary = "Pulumi Makes Cloud Configuration Simple and Secure with Pulumi ESC."
