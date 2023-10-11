@@ -26,8 +26,8 @@ We support Organization Templates on the Enterprise and Business Critical editio
 
 ## New Project Wizard
 
-The [New Project Wizard](/docs/pulumi-cloud/developer-portals/new-project-wizard) allows anyone in your organization to pick a template they want to install, and walk through configuring the deployment of that template.  There is support for configuring [Pulumi Deployments](/docs/pulumi-cloud/deployments/get-started/#new-project-wizard) automatically, so that the template can be deployed without needing the Pulumi CLI locally, or any other CI/CD configuration.  Just a few clicks and you have deployed your infrastructure.
+The [New Project Wizard](/docs/pulumi-cloud/developer-portals/new-project-wizard) allows anyone in your organization to pick a template they want to install and walk through configuring the deployment of that template. There is support for configuring [Pulumi Deployments](/docs/pulumi-cloud/deployments/get-started/#new-project-wizard) automatically so that the template can be deployed without needing the Pulumi CLI locally or any other CI/CD configuration.  Just a few clicks, and you have deployed your infrastructure.
 
 ## Pulumi Backstage Plugin
 
-[Backstage](https://backstage.io) is an open-source framework for building developer portals. Using the [Pulumi Backstage Plugin](/docs/pulumi-cloud/developer-portals/backstage) you can create new Pulumi projects from your Organization Templates, and you can run previews, updates, or execure [Pulumi Deployments](/docs/pulumi-cloud/deployments) directly from your Backstage instance.
+[Backstage](https://backstage.io) is an open-source framework for building developer portals. Using the [Pulumi Backstage Plugin](/docs/pulumi-cloud/developer-portals/backstage) you can create new Pulumi projects from your Organization Templates, and you can run previews, updates, or execute [Pulumi Deployments](/docs/pulumi-cloud/deployments) directly from your Backstage instance.

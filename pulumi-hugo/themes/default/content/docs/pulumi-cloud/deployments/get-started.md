@@ -33,23 +33,23 @@ On the next screen, select "Pulumi Deployments" as your deployment method.
 You may need to [install the Pulumi GitHub app](/docs/pulumi-cloud/deployments/reference/#github-app-installation) if you haven't already.
 {{% /notes %}}
 
-You'll now to prompted to enter some information about the project you're about to create.
+You'll now be prompted to enter some information about the project you're about to create.
 
 ### Project details
 
 Provide a name for the project you're about to create, along with an optional description and a stack name to include.
 
-This impacts the resulting `Pulumi.yaml` file, and the name of `Pulumi.<stack>.yaml`.
+This impacts the resulting `Pulumi.yaml` file and the name of `Pulumi.<stack>.yaml`.
 
 ### Configuration
 
-This section allows you to provide values for any necessary configuration, if you're using a [template](/docs/pulumi-cloud/developer-portals/templates) that declares required configuration keys.
+This section allows you to provide values for any necessary configuration if you're using a [template](/docs/pulumi-cloud/developer-portals/templates) that declares required configuration keys.
 
 This impacts the `config` stanza in `Pulumi.<stack>.yaml`.
 
 ### Environment
 
-If you've configured [environments](/docs/pulumi-cloud/esc) with your organization you can specify one to use with the resulting stack.
+If you've configured [environments](/docs/pulumi-cloud/esc) with your organization, you can specify one to use with the resulting stack.
 
 This enables the resulting stack to use a bundle of pre-configured secrets and configuration values without needing to re-specify all of them during project creation.
 
@@ -67,11 +67,11 @@ The GitHub owner is not configurable, as that must match the Pulumi GitHub app's
 
 ### Deployment settings
 
-After you've configured your project settings you will be able to configure the behavior of Deployments, including when to trigger new Deployments and environment variables to include with your updates.
+After you've configured your project settings, you will be able to configure the behavior of Deployments, including when to trigger new Deployments and environment variables to include with your updates.
 
 A full description of each setting is available [here](/docs/pulumi-cloud/deployments/reference/#deployment-settings).
 
-After you've configured everything you should see a new Deployment of your project.
+After you've configured everything, you should see a new Deployment of your project.
 
 In summary, after going through this wizard you will have:
 
