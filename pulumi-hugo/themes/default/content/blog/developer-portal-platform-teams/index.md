@@ -20,7 +20,7 @@ tags:
 
 Over the last two years, we’ve seen a huge surge in adoption of Pulumi by __Platform Teams__ -- centralized teams within a business responsible for building out core cloud infrastructure and providing tools to the rest of the organization to maximize the productivity, cost efficacy, compliance and velocity of application and service delivery throughout the organization. These teams use Pulumi to manage their own cloud infrastructure complexity, to offer best practices components to their organizations, to enforce organizational policy, and to drive infrastructure delivery automation.
 
-Today, we’re excited to announce a broad range of new features that extend (Pulumi Cloud’s support for Platform Teams)[/product/internal-developer-platforms/], across the entire lifecycle of cloud delivery.
+Today, we’re excited to announce a broad range of new features that extend [Pulumi Cloud’s support for Platform Teams](/product/internal-developer-platforms/), across the entire lifecycle of cloud delivery.
 
 __Developer Portals__:  Every platform team we work with is looking to expose reusable cloud infrastructure components and templates via a developer portal of some kind. Many are building their own custom developer portals on top of Pulumi Automation API and Pulumi Deployments, but we also wanted to offer options for teams that cannot (or do not want to) build a custom solution.  Today, we are releasing two new options for Platform Teams:
 
@@ -35,7 +35,7 @@ __Policy and Compliance__: Platform teams need robust and flexible solutions for
 
 __Deployments and Delivery__:  Managing the delivery of cloud infrastructure changes across a wide variety of environments is an essential component of a cloud platform, and we released [Pulumi Deployments](/product/pulumi-deployments) in preview last year to provide a rich solution for infrastructure delivery directly within Pulumi Cloud.  Today, we are making that support Generally Available (GA) along with a few key enhancements:
 
-* 🆕 Deployments GA: Pulumi Deployments is now generally available, with pricing and support available across all Pulumi Cloud editions.  
+* 🆕 Deployments GA: Pulumi Deployments is now generally available, with pricing and support available across all Pulumi Cloud editions.
 * 🆕 Deployments Support for GitHub Enterprise: Pulumi Deployments now supports integration with GitHub Enterprise as well as GitHub.com.
 * 🆕 Org-Wide Deployments Overview Page: A new page where you can see all deployments across the organization, giving you a single pane of glass to manage company wide deployments.
 * 🔜 Deployments Customer Managed Agents: Customers will soon be able to run deployments inside agents they run within their own infrastructure, for cases where this is required for unique compliance or security reasons.
@@ -66,11 +66,11 @@ The New Project wizard is available now for all Pulumi users, and Organization T
 
 We’ve seen many developer portal technologies rapidly growing in popularity over the last few years.  In particular, we’ve seen many Pulumi users adopting [Backstage](https://backstage.io/).  Last week we launched a new [Pulumi Backstage Plugin](blog/pulumi-backstage-plugin/) to address the needs of organizations using Backstage and Pulumi together.
 
-The new Pulumi tab gives you direct access to all Pulumi stack activity associated with your backstage projects that include Pulumi stacks.  
+The new Pulumi tab gives you direct access to all Pulumi stack activity associated with your backstage projects that include Pulumi stacks.
 
 ![Pulumi Backstage Plugin](./backstage-plugin.png)
 
-The Pulumi Backstage Plugin also supports two new scaffolding actions, `pulumi:new` and `pulumi:up`, which can be used to template out new Pulumi projects and to trigger updates to Pulumi stacks, fully integrated into the Backstage scaffolding system. 
+The Pulumi Backstage Plugin also supports two new scaffolding actions, `pulumi:new` and `pulumi:up`, which can be used to template out new Pulumi projects and to trigger updates to Pulumi stacks, fully integrated into the Backstage scaffolding system.
 
 ```yaml
 apiVersion: scaffolder.backstage.io/v1beta3
@@ -105,7 +105,7 @@ Check out the [Pulumi Backstage Plugin](https://github.com/pulumi/pulumi-backsta
 
 We first released our [CrossGuard](https://www.pulumi.com/docs/using-pulumi/crossguard/) policy-as-code framework nearly 4 years ago, and have seen many large organizations leverage its rich expressiveness, flexibility and early prevention features to enforce key compliance criteria for their organization.  Support in Pulumi Cloud for automatically enforcing these policies across all Pulumi updates within an organization allows platform teams to put compliance guardrails in place for users within their organization.
 
-However, traditionally each organization has needed to build their own policies, resulting in some activation energy needed to start benefiting from CrossGuard.  As we’ve worked with many customers to build out their own internal compliance policies using CrossGuard, we've identified some common compliance standards and policies that we can offer directly as part of CrossGuard.  
+However, traditionally each organization has needed to build their own policies, resulting in some activation energy needed to start benefiting from CrossGuard.  As we’ve worked with many customers to build out their own internal compliance policies using CrossGuard, we've identified some common compliance standards and policies that we can offer directly as part of CrossGuard.
 
 Today, we are making a large collection of new policies available for CrossGuard users.  These policies support many common compliance standards (PCI DSS, ISO 27001 and CIS) across a broad range of cloud providers (AWS, Azure, Google Cloud and Kubernetes), and dozens of services within each platform.
 
@@ -188,7 +188,7 @@ Check out the [documentation](/docs/using-pulumi/crossguard/core-concepts/#resou
 
 ### Deployments GA
 
-In the last year since we launched Pulumi Deployments in preview, we’ve seen incredible growth in usage and scale of Pulumi Deployments across the Pulumi user base.  Customers use Pulumi Deployments for a single built-for-purpose CI/CD solution for their Pulumi infrastructure delivery, but also leverage rich API-driven deployments, [Review Stacks](/blog/review-stacks/), Click-to-Deploy within the Pulumi Cloud Console, and much more.  
+In the last year since we launched Pulumi Deployments in preview, we’ve seen incredible growth in usage and scale of Pulumi Deployments across the Pulumi user base.  Customers use Pulumi Deployments for a single built-for-purpose CI/CD solution for their Pulumi infrastructure delivery, but also leverage rich API-driven deployments, [Review Stacks](/blog/review-stacks/), Click-to-Deploy within the Pulumi Cloud Console, and much more.
 
 As part of General Availability, we are announcing pricing for deployments at $0.01 per deployment minute.  The new pricing will be effective November 1st.  Individual Edition users get 500 minutes free per month, and Team Edition users get 3,000 minutes free per month. Full details of the pricing can be found on the [Pricing Page](/pricing).
 
