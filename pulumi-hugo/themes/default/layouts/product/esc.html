@@ -8,7 +8,7 @@
             <h1 class="flex flex-col items-center">
                 <span class="rainbow-text inline-block text-center">Pulumi ESC</span>
             </h1>
-            <p class="text-center leading-7">Environments, Secrets, and Configurations</p>
+            <p class="text-center leading-7">Environments, Secrets, and Configuration</p>
         </div>
     </header>
 {{ end }}
@@ -29,9 +29,9 @@
                 </div>
             </div>
             <div class="lg:w-1/2 lg:pr-16">
-                <h3>Centralized environments, secrets, and configurations management for cloud applications and infrastructure</h3>
+                <h3>Centralized environments, secrets, and configuration management for cloud applications and infrastructure</h3>
                 <p>
-                    Today’s cloud environments access a multitude of configurations – including network settings, deployment options, API Keys, and other important secrets, such as database credentials –  from many different types of cloud infrastructure and SaaS services. Every team stores these configurations in different locations, from different secrets managers to plaintext files. This sprawl leads to configurations that are untraceable and lack access controls, leading to operational bottlenecks, outages linked to human error, and security breaches. Pulumi ESC enables you to centrally manage all configurations and secrets across your organization.
+                    Today’s cloud environments access a multitude of configurations – including network settings, deployment options, API Keys, and other important secrets like database credentials –  from many different types of cloud infrastructure and SaaS services. Every team stores configuration settings like these in different locations, from secrets managers to plaintext files. This sprawl leads to configuration that is uncontrolled and untraceable, leading to operational bottlenecks, outages linked to human error, and security breaches. Pulumi ESC enables you to centrally manage all configuration and secrets across your organization.
                 </p>
                 <div class="my-8">
                     <a class="btn-primary" href="">Get Started</a>
@@ -40,8 +40,8 @@
         </div>
     </section>-->
     <section id="overview" class="max-w-5xl mx-auto text-center my-16 px-6">
-            <h3>Centralized environments, secrets, and configurations management for cloud applications and infrastructure</h3>
-            <p class="text-center">Today’s cloud environments access a multitude of configurations – including network settings, deployment options, API Keys, and other important secrets, such as database credentials –  from many different types of cloud infrastructure and SaaS services. Every team stores these configurations in different locations, from different secrets managers to plaintext files. This sprawl leads to configurations that are untraceable and lack access controls, leading to operational bottlenecks, outages linked to human error, and security breaches. Pulumi ESC enables you to centrally manage all configurations and secrets across your organization.</p>
+            <h3>Centralized environments, secrets, and configuration management for cloud applications and infrastructure</h3>
+            <p class="text-center">Today’s cloud environments access a multitude of configurations – including network settings, deployment options, API Keys, and other important secrets like database credentials –  from many different types of cloud infrastructure and SaaS services. Every team stores configuration settings like these in different locations, from secrets managers to plaintext files. This sprawl leads to configuration that is uncontrolled and untraceable, leading to operational bottlenecks, outages linked to human error, and security breaches. Pulumi ESC enables you to centrally manage all configuration and secrets across your organization.</p>
             <div class="mt-8">
                 <a href="/docs/pulumi-cloud/esc/get-started/" class="btn-primary">Get Started</a>
             </div>
@@ -131,7 +131,7 @@
                             <h5>Use any secrets source</h5>
                         </div>
                         <div class="mt-6">
-                            <p>Pull configurations and secrets from any source, static or dynamic. Seamlessly adopt industry best practices of using short-lived, dynamic secrets that are more secure. </p>
+                            <p>Pull configuration and secrets from any source, static or dynamic. Seamlessly adopt industry best practices of using short-lived, dynamic secrets that are more secure. </p>
                         </div>
                     </div>
                 </div>
@@ -144,7 +144,7 @@
                             <h5>Access from anywhere</h5>
                         </div>
                         <div class="mt-6">
-                            <p>Consume configurations and secrets in an environment from any application or tool. You can use ESC for all your configuration and secrets needs independently of Pulumi’s core infrastructure as code offerings.  </p>
+                            <p>Consume configuration and secrets in an environment from any application or tool. You can use ESC for all your configuration and secrets needs independently of Pulumi’s core infrastructure as code offerings.  </p>
                         </div>
                     </div>
                 </div>
@@ -168,7 +168,7 @@
                         <h5>Use any secrets source</h5>
                     </div>
                     <div class="mt-6">
-                        <p>Pull configurations and secrets from any source, static or dynamic. Seamlessly adopt industry best practices of using short-lived, dynamic secrets that are more secure. </p>
+                        <p>Pull configuration and secrets from any source, static or dynamic. Seamlessly adopt industry best practices of using short-lived, dynamic secrets that are more secure. </p>
                     </div>
                 </div>
             </div>
@@ -186,7 +186,7 @@
                         <h5>Access from anywhere</h5>
                     </div>
                     <div class="mt-6">
-                        <p>Consume configurations and secrets in an environment from any application or tool. You can use ESC for all your configuration and secrets needs independently of Pulumi’s core infrastructure as code offerings.  </p>
+                        <p>Consume configuration and secrets in any environment and from any application or tool. You can use Pulumi ESC for all your configuration and secrets needs independently of Pulumi’s core infrastructure as code offerings.</p>
                     </div>
                 </div>
             </div>
@@ -204,13 +204,13 @@
         </div>
         <ul class="list-none p-0 mx-5 xl:ml-12" data-faq-type="faq-pricing">
             <li class="accordion-item text-2xl py-3">
-                {{ partial "accordian-header" (dict "text" "What is Pulumi Environments, Secrets and Configurations" "large_header" true) }}
+                {{ partial "accordian-header" (dict "text" "What is Pulumi ESC (Environments, Secrets and Configuration)?" "large_header" true) }}
                 <div class="accordion-item-body-no-animation text-base">
                     <p>
-                        Pulumi ESC (Environments, Secrets and Configurations), is an open source project and managed service as part of Pulumi Cloud that enables teams to manage hierarchical collections of configuration and secrets, and then consume those configuration and secrets from a variety of different infrastructure and application services.
+                        Pulumi ESC (Environments, Secrets and Configuration), is an [open source project](https://github.com/pulumi/esc) and managed service of Pulumi Cloud that enables teams to manage hierarchical collections of configuration and secrets and consume them from a variety of different infrastructure and application services.
                     </p>
                     <p>
-                        {{ "Pulumi ESC integrates with Pulumi Cloud identity and RBAC to provide rich control over access to secret configuration within an organization.  Pulumi ESC supports multiple Configuration Providers, enabling static key/value configuration, as well as dynamically retrieved configuration and secrets via OIDC and additional providers like 1Password and Vault.  Pulumi ESC is available via the new `esc` CLI, Pulumi Cloud, the Pulumi Cloud REST API, and Pulumi IaC stack configuration." | markdownify }}
+                        {{ "Pulumi ESC integrates with Pulumi Cloud identity and RBAC to provide rich control over access to secret configuration within an organization. Pulumi ESC supports multiple configuration providers, enabling static key/value configuration as well as dynamically retrieved configuration and secrets via OIDC and additional providers like 1Password and Vault.  Pulumi ESC is available via the new `esc` CLI, Pulumi Cloud, the Pulumi Cloud REST API, and Pulumi IaC stack configuration." | markdownify }}
                     </p>
                 </div>
             </li>
@@ -218,11 +218,11 @@
                 {{ partial "accordian-header" (dict "text" "What is an environment?" "large_header" true) }}
                 <div class="accordion-item-body-no-animation text-base">
                     <p>
-                        An environment describes a collection of configuration.  It is typically intended to capture the configuration needed to work with a particular environment - for example the production environment for your key customer or line of business service.
+                        An environment describes a collection of secrets and configuration values. It is typically intended to capture the configuration needed to work with a particular environment - for example the production environment for your key customer or line of business service.
                     </p>
-                    <p>An environment is represented by a YAML document.  This document has two top level entries:</p>
+                    <p>An environment is represented by a YAML document. This document has two top level entries:</p>
                     <p class="ml-8">
-                        {{ "`imports`:  An optional set of other environments that this environment derives from, enabling composition of environments, and avoiding repetition across environments." | markdownify}}
+                        {{ "`imports`: An optional set of other environments that this environment derives from, enabling composition of environments and avoiding repetition across environments." | markdownify}}
                     </p>
                     <p class="ml-8">
                         {{ "`values`: An arbitrary nested collection of key/value pairs representing top level configuration values. " | markdownify}}
@@ -230,10 +230,10 @@
                 </div>
             </li>
             <li class="accordion-item text-2xl py-3">
-                {{ partial "accordian-header" (dict "text" "What secrets and configurations can I manage with ESC?" "large_header" true) }}
+                {{ partial "accordian-header" (dict "text" "What secrets and configuration can I manage with Pulumi ESC?" "large_header" true) }}
                 <div class="accordion-item-body-no-animation text-base">
                     <p>
-                        Pulumi ESC enables teams to manage hierarchical collections of configuration and secrets (‘“environments”), and then consume those configuration and secrets from a variety of different infrastructure and application services. Examples include the management of AWS configurations and secrets, API keys, database credentials, or environment-specific variables such as service endpoints and AWS regions.
+                        Pulumi ESC enables teams to manage hierarchical collections of configuration and secrets (“environments”) and consume them from a variety of different infrastructure and application services. Examples include the management of AWS configurations and secrets, API keys, database credentials, and environment-specific variables such as service endpoints and AWS regions.
                     </p>
                 </div>
             </li>
