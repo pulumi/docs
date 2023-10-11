@@ -468,7 +468,7 @@ $ pulumi up
 
 You cannot specify the organizaiton in the environment reference, as your stack is already tied to the organization.
 
-This will pull in the environment and any pulumi config will be available just likenormal pulumi config.
+This will pull in the environment and any pulumi config will be available just like normal pulumi config.
 
 ## Removing an environment
 
