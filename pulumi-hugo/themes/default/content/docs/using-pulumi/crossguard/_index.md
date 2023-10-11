@@ -38,9 +38,13 @@ Policies can be written in TypeScript/JavaScript (Node.js) or Python and can be 
 To get started with Pulumi CrossGuard, [download and install Pulumi](/docs/install/). Afterwards,
 try the [Getting Started tutorial](/docs/get-started/).
 
+## Compliance Ready Policy Packs
+
+With Pulumi Compliance Ready Policies, you get a comprehensive set of predefined policies for AWS, Azure, Google, and Kubernetes, and an enhanced level of control and governance over your cloud resources. Learn more about Pulumi [Compliance Ready Policies](/docs/using-pulumi/crossguard/compliance-ready-policies/).
+
 ## Pulumi CrossGuard policies for AWS (AWSGuard)
 
-In addition to being able to implement your own CrossGuard policies, we've also created a set of policies that codifies best practices for AWS that you can adopt and use in a Policy Pack. AWSGuard is a configurable library that you can use to enforce best practices for your own Pulumi stacks or organization. [Learn more and get started with AWSGuard](/docs/using-pulumi/crossguard/awsguard/).
+In addition to being able to implement your own CrossGuard policies, or use the Compliance Ready policies, we've also created a set of policies that codifies best practices for AWS that you can adopt and use in a Policy Pack. AWSGuard is a configurable library that you can use to enforce best practices for your own Pulumi stacks or organization. [Learn more and get started with AWSGuard](/docs/using-pulumi/crossguard/awsguard/).
 
 ## Configuring Policy Packs
 
