@@ -238,7 +238,7 @@ key_features:
                     Build custom deployment and CI/CD workflows that integrate with Pulumi Developer Portal, custom portals, or CLIs.
               - title: Developer portals
                 description: |
-                    Create internal developer portals to distribute infrastructure templates to developers using Pulumi or the Backstage-plugin.
+                    Create internal developer portals to distribute infrastructure templates using Pulumi or the Backstage-plugin.
               - title: State & secrets
                 description: |
                     Securely store state with built-in secrets manager or bring your own KMS.
