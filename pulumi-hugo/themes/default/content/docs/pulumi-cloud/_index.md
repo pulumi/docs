@@ -76,11 +76,11 @@ Integrate Pulumi with your current continuous delivery pipeline. Build your own 
 * [Pulumi Deployments](/docs/pulumi-cloud/deployments/)
 * [Deploy with Pulumi Button](/docs/pulumi-cloud/pulumi-button)
 
-### Pulumi ESC (Environments, Secrets, and Configuration)
+### Building developer portals
 
-* [Pulumi ESC](/docs/pulumi-cloud/esc/)
-* [Environments](/docs/concepts/environments/)
-* [Dynamic Providers](/docs/pulumi-cloud/esc/providers/)
+* [Organization Templates](/docs/pulumi-cloud/developer-portals/templates)
+* [New Project Wizard](/docs/pulumi-cloud/developer-portals/new-project-wizard)
+* [Pulumi Backstage Plugin](/docs/pulumi-cloud/developer-portals/backstage)
 
 ### Insights and Analytics
 
