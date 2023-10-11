@@ -14,50 +14,55 @@ aliases:
 - /docs/get-started/kubernetes/deploy-stack/
 ---
 
-Let's go ahead and deploy the stack:
+Deploy the stack:
 
 ```bash
 $ pulumi up
 ```
 
-This command instructs Pulumi to determine the resources needed to create the stack. First, a preview is shown of the changes that will be made:
+This command instructs Pulumi to determine the resources needed to create the stack. A preview is shown of the changes that will be made:
 
-```
-Previewing update (dev):
+```bash
+Previewing update (dev)
 
-     Type                           Name            Plan
- +   pulumi:pulumi:Stack            quickstart-dev  create
- +   └─ kubernetes:apps:Deployment  nginx           create
+     Type                              Name            Plan
+ +   pulumi:pulumi:Stack               quickstart-dev  create
+ +   └─ kubernetes:apps/v1:Deployment  app-dep         create
+
+
+Outputs:
+    name: "app-dep-92efcbdf"
 
 Resources:
     + 2 to create
 
-Do you want to perform this update?
+Do you want to perform this update?  [Use arrows to move, type to filter]
   yes
 > no
   details
 ```
 
-Choosing `yes` will create resources in Kubernetes.
+Select `yes` using the arrows and hit enter to create the resources in Kubernetes.
 
-```
+```bash
 Do you want to perform this update? yes
-Updating (dev):
+Updating (dev)
 
-     Type                           Name            Status
- +   pulumi:pulumi:Stack            quickstart-dev  created
- +   └─ kubernetes:apps:Deployment  nginx           created
+     Type                              Name            Status
+ +   pulumi:pulumi:Stack               quickstart-dev  created (3s)
+ +   └─ kubernetes:apps/v1:Deployment  app-dep         created (1s)
+
 
 Outputs:
-    name: "nginx-xw231xdt"
+    name: "app-dep-b7413dae"
 
 Resources:
     + 2 created
 
-Duration: 11s
+Duration: 10s
 ```
 
-The name of the deployment that we exported is shown as a [stack output](/docs/concepts/stack#outputs).
+The `name` of the deployment that we exported is shown as a [stack output](/docs/concepts/stack#outputs).
 
 {{< console-note >}}
 
