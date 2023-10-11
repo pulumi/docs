@@ -42,5 +42,5 @@ screenshot:
         - title: Traceable
           description: Never lose track of where configurations are being used and where. Trace the downstream impact of any configuration to see if the impact matches your expectations. 
         - title: Versionable
-          description: Enforce least-privileged access through role-based access controls. All changes are fully logged for auditing.
+          description: Create different versions of environments, so you can gracefully migrate between breaking configuration changes.
 ---
