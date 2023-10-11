@@ -42,10 +42,10 @@ key_features_above:
                     Write Policy as Code in programming languages to enforce best practices with [CrossGuard](/crossguard/).
                 icon: shield
                 color: blue
-        - title: One source of truth for your Secrets and Configurations
-          sub_title: "Pulumi ESC: Environments, Secrets and Configurations"
+        - title: One source of truth for your Secrets and Configuration
+          sub_title: "Pulumi ESC: Environments, Secrets and Configuration"
           description:
-            Centralized environments, secrets, and configurations management for cloud applications and infrastructure. Define environments as collections of secrets and configurations, which can be pulled from any source and locked down with RBAC, versioning and audit controls.
+            Centralized environments, secrets, and configuration management for cloud applications and infrastructure. Define environments as collections of configuration and secrets, which can be pulled from any source and locked down with RBAC, versioning and audit controls.
           image: "/images/product/pulumi-iac-code.png"
           button:
             text: "Learn more about Pulumi ESC"
@@ -53,12 +53,12 @@ key_features_above:
           features:
               - title: Frictionless Security
                 description: |
-                    Easy-to-use single source of truth for all configurations with guardrails. Seamlessly adopt short-lived dynamic secrets.
+                    Easy-to-use single source of truth for all configuration and secrets with guardrails. Seamlessly adopt short-lived dynamic secrets.
                 icon: lock
                 color: purple
               - title: Improve Developer Efficiency
                 description: |
-                    Never have downtime over changed configurations. Change once and have it updated everywhere. 
+                    Never have downtime over changed configuration. Change once and have it updated everywhere. 
                 icon: lightning
                 color: yellow
               - title: Control Access and Compliance
