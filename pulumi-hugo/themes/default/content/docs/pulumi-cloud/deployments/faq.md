@@ -12,14 +12,6 @@ aliases:
   - /docs/intro/deployments/faq/
 ---
 
-## General Availability
-
-Pulumi Deployments is currently in preview and is expected to reach general availability (GA) by the end of 2023. We view the platform as stable, and production-ready with users including Pulumi itself relying on deployments in production environments every day. Pulumi does not make breaking changes, even to preview APIs. At GA we will cut a new version of the Deployments REST API, and continue to maintain the preview version for one year or until we’ve assisted all users in migrating. The most significant change that will come with GA is the addition of a pricing model, the details of which are discussed further in this document.
-
-## Pricing
-
-Pulumi Deployments is free during the preview, with plans to add a pricing model when the platform becomes generally available. We will charge based on the number of deployment minutes that you consume, similar to the billing model of GitHub Actions. Custom contract pricing in advance of GA is available for Enterprise customers.  [Contact us for a quote](https://pulumi.com/contact/?form=sales).
-
 ## Roadmap
 
 We track open feature requests for Deployments in the [Pulumi Cloud requests repo](https://github.com/pulumi/pulumi-cloud-requests). Here are a few that have been requested by customers that are on our roadmap:
