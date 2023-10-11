@@ -20,7 +20,7 @@ tags:
 
 Over the last two years, we’ve seen a huge surge in adoption of Pulumi by __Platform Teams__ -- centralized teams within a business responsible for building out core cloud infrastructure and providing tools to the rest of the organization to maximize the productivity, cost efficacy, compliance and velocity of application and service delivery throughout the organization. These teams use Pulumi to manage their own cloud infrastructure complexity, to offer best practices components to their organizations, to enforce organizational policy, and to drive infrastructure delivery automation.
 
-Today, we’re excited to announce a broad range of new features that extend Pulumi Cloud’s support for Platform Teams, across the entire lifecycle of cloud delivery.
+Today, we’re excited to announce a broad range of new features that extend (Pulumi Cloud’s support for Platform Teams)[/product/internal-developer-platforms/], across the entire lifecycle of cloud delivery.
 
 __Developer Portals__:  Every platform team we work with is looking to expose reusable cloud infrastructure components and templates via a developer portal of some kind. Many are building their own custom developer portals on top of Pulumi Automation API and Pulumi Deployments, but we also wanted to offer options for teams that cannot (or do not want to) build a custom solution.  Today, we are releasing two new options for Platform Teams:
 
