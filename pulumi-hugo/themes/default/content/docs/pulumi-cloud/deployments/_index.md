@@ -21,7 +21,7 @@ Pulumi Deployments is a fully managed platform for managing infrastructure at sc
 It provides:
 
 - **Compute** - run infrastructure deployments and workloads (i.e. `pulumi up`) on fully managed, secure, and elastic compute.
-- **Configuration** - A simple, centralized format for specifying everything you need to deploy your infrastructure at the stack level. Source code, cloud credentials, OpenID Connect (OIDC), environment variables, build prerequisites, and dependencies are bundled in an atomic unit.
+- **Configuration** - A simple, centralized place to specify everything you need to deploy your infrastructure at the stack level. Source code, cloud credentials, OpenID Connect (OIDC), environment variables, build prerequisites, and dependencies are bundled in an atomic unit.
 - **Composition** - Trigger deployments via our REST API, click to deploy in the Pulumi Cloud UI, Git Push to Deploy, Review Stacks, Remote Automation API, and other programmatic building blocks that you can compose to build custom cloud automation.
 
 While Pulumi Deployments has some overlap in functionality offered by a traditional CI/CD system (such as GitHub Actions) it is far more flexible and does not have the constraints and limitations of a CI/CD system. When you configure your infrastructure for Deployments, you get to choose what triggers will cause your stack to update. You may choose a `git push` based workflow, as you get with many CI/CD systems, or trigger deployments via the REST API, or choose multiple triggers.
@@ -30,13 +30,13 @@ While Pulumi Deployments has some overlap in functionality offered by a traditio
 
 ## Deployment Settings
 
-Each stack in your organization can be configured with deployment settings, a manifest that describes everything needed to run an update. Deployment settings turns a stack into an atomic, deployable unit of infrastructure that self-describes all of its requirements and dependencies. That includes:
+Each stack in your organization can be configured with deployment settings that describe everything needed to run an update. Deployment settings turns a stack into an atomic, deployable unit of infrastructure that self-describes all of its requirements and dependencies. That includes:
 
 - Source Control - the Pulumi program and stack configuration
 - Deployment Prerequisites - custom docker images, build steps, npm package resolution, and acquisition of necessary tools like `ssh`, and environment variables
 - Cloud Auth - IAM roles, OIDC configuration for temporary credentials, and any other identity-related config required to deploy into your cloud of choice
 
-These settings can be configured through the Pulumi Cloud Console, or via a REST API. The console interface is simple and lets you configure settings in just a few minutes, while the REST API allows you to build tools on top of Pulumi Deployments such as internal dev portals and service catalogs that help internal users kickstart their infrastructure journey with a secure, best practice workflow.
+These settings can be configured with the Pulumi Cloud console, Pulumi Cloud REST API, or Pulumi itself using Pulumi Cloud Service provider. The console interface is simple and lets you configure settings in just a few minutes, while the REST API and Pulumi Service provider allows you to build tools on top of Pulumi Deployments such as internal dev portals and service catalogs that help internal users kickstart their infrastructure journey with a secure, best practice workflow.
 
 Once configured, every deployment will inherit stack settings. A one-line POST payload can trigger a new deployment run, without having to restate any configuration or cloud credentials. This means that privileged users can configure deployments, and less privileged users can subsequently trigger updates without having direct access to sensitive credentials and data on their local machines.
 
