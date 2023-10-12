@@ -24,18 +24,10 @@ jobs:
         with:
           node-version: '18.x'
 
-      - uses: actions/setup-go@v2
-        with:
-          go-version: 1.19.x
-
       - uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: '0.111.0'
           extended: true
-
-      - name: Configure Git
-        run: |
-          git config --global url."https://${{ secrets.PULUMI_BOT_TOKEN }}:x-oauth-basic@github.com/pulumi/pulumi-hugo-internal".insteadOf "https://github.com/pulumi/pulumi-hugo-internal"
 
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v2
