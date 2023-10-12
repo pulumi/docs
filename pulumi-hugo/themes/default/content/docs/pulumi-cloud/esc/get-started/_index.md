@@ -21,7 +21,8 @@ In this tutorial, we’ll demonstrate the power of Pulumi ESC in managing config
 
 You will need the following tools to complete this tutorial:
 
-- A [Pulumi account](https://app.pulumi.com) and [access token](/docs/pulumi-cloud/access-management/access-tokens/)
+- A [Pulumi account](https://app.pulumi.com)
+  - [Optional] Create an [access token](/docs/pulumi-cloud/access-management/access-tokens/)
 - The [Pulumi ESC CLI](/docs/install/esc/)
 {{< notes type="info" >}}
 Pulumi ESC is a service of Pulumi Cloud that can be used with or without Pulumi IaC. This means that if you already have the Pulumi IaC CLI installed, you do not need to install the Pulumi ESC CLI, and you may substitute `pulumi env` anywhere you see the `esc env` command in this guide.
@@ -230,7 +231,22 @@ Your `app-env-test` environment file should have a value of "test" for the `ENVI
 
 ### Retrieve Environment Values
 
-Now that you have populated your environment files, you can verify that your values have been successfully stored by retrieving them through the Pulumi ESC CLI.
+Now that you have populated your environment files, you can verify that your values have been successfully stored by retrieving them through the Pulumi ESC CLI. Start by running the following command to log into the CLI:
+
+```bash
+esc login https://api.pulumi.com/
+```
+
+You will be prompted to log in to the Pulumi Cloud using either the browser or by optionally providing an access token.
+
+```bash
+$ esc login https://api.pulumi.com/
+Manage your Pulumi ESC environments by logging in.
+Run `esc --help` for alternative login options.
+Enter your access token from https://app.pulumi.com/account/tokens
+    or hit <ENTER> to log in using your browser                   :  
+Logged in to https://api.pulumi.com/ as your-pulumi-org (https://app.pulumi.com/your-pulumi-org)
+```
 
 The CLI has a built-in `get` command that enables you to retrieve a single value from your environment. The format of the full command looks like the following:
 
