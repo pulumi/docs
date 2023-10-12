@@ -42,13 +42,13 @@ your execution environment directly to your cloud provider, and which Pulumi may
 {{% /notes %}}
 
 ```bash
-$ pulumi up --logtostderr --logflow -v=9 2> out.txt
+$ pulumi up --logtostderr --logflow -v=10 2> out.txt
 ```
 
 Diagnostic logging can also be controlled with flags and environment variables of the resource providers. For example, Pulumi providers that use a bridged Terraform provider can make use of the [`TF_LOG`](https://www.terraform.io/docs/internals/debugging.html) environment variable (set to `TRACE`, `DEBUG`, `INFO`, `WARN` or `ERROR`) in order to provide additional diagnostic information.
 
 ```bash
-$ TF_LOG=TRACE pulumi up --logtostderr --logflow -v=9 2> out.txt
+$ TF_LOG=TRACE pulumi up --logtostderr --logflow -v=10 2> out.txt
 ```
 
 ## Performance
