@@ -22,7 +22,7 @@ Over the last two years, we’ve seen a huge surge in adoption of Pulumi by __Pl
 
 Today, we’re excited to announce a broad range of new features that extend [Pulumi Cloud’s support for Platform Teams](/product/internal-developer-platforms/), across the entire lifecycle of cloud delivery.
 
-__Developer Portals__:  Every platform team we work with is looking to expose reusable cloud infrastructure components and templates via a developer portal of some kind. Many are building their own custom developer portals on top of Pulumi Automation API and Pulumi Deployments, but we also wanted to offer options for teams that cannot (or do not want to) build a custom solution.  Today, we are releasing two new options for Platform Teams:
+__Developer Portals__:  Every platform team we work with is looking to expose reusable cloud infrastructure components and templates via a developer portal of some kind. Many are building their own custom developer portals on top of Pulumi Automation API and Pulumi Deployments, but we also wanted to offer options for teams that cannot (or do not want to) build a custom solution.  Today, we are releasing three new options for Platform Teams:
 
 * 🆕 Organization Templates and New Project Wizard:  Pulumi Cloud now supports registering your own custom templates for your organization, and enabling developers in your organization to provision them entirely via point-and-click in Pulumi Cloud with the new New Project Wizard.  This offers a great out-of-the box developer portal experience for any team using Pulumi Cloud.
 * 🆕 Pulumi Backstage Plugin:  For teams using Backstage, they can now integrate Pulumi directly within their Backstage instance, via support for a new Pulumi plugin as well as new Pulumi scaffolder actions.
