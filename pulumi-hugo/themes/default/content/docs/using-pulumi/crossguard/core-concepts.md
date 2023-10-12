@@ -96,7 +96,7 @@ A policy has one of the following *enforcement levels*:
 - {{< policy-enforcementlevel-remediate >}} is stricter than mandatory and enables policy remediations where available.
 - {{< policy-enforcementlevel-disabled >}} prevents the policy from running.
 
-The enforcement level can be specified in multiple ways: on the definition of a policy, on the Policy Pack as a whole, or through [*Policy Configuration*](./configuration) for either. If the enforcement is set in multiple places, the most granular setting for any given policy is used (so, policy-specific configuration overrides the Policy Pack-wide configuration). The default enforcement level is {{< policy-enforcementlevel-advisory >}} if no enforcement level is specified on either the policy pack or policy.
+The enforcement level can be specified in multiple ways: on the definition of a policy, on the Policy Pack as a whole, or through [*Policy Configuration*](/docs/using-pulumi/crossguard/configuration/) for either. If the enforcement is set in multiple places, the most granular setting for any given policy is used (so, policy-specific configuration overrides the Policy Pack-wide configuration). The default enforcement level is {{< policy-enforcementlevel-advisory >}} if no enforcement level is specified on either the policy pack or policy.
 
 ### Resource Policies
 
