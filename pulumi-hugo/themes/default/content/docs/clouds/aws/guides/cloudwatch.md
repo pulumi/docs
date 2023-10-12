@@ -92,9 +92,12 @@ const logGroup = new aws.cloudwatch.LogGroup("nginxLogs", {
 });
 const nginx = new awsx.ecs.FargateService("nginx", {
     taskDefinitionArgs: {
-        logGroup, // use our custom LogGroup
+        logGroup: {
+            existing: logGroup // use our custom LogGroup
+        },
         containers: {
             nginx: {
+                name: "nginx",
                 image: "nginx",
                 memory: 128,
             },
