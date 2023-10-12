@@ -18,10 +18,10 @@ search:
 
 Pulumi ESC (Environments, Secrets, and Configuration) enables teams to create collections of configuration and secrets called environments. Teams can then access those environment collections using the `esc` CLI, `pulumi` CLI, Pulumi SDK, or Pulumi Cloud REST API for various application and infrastructure needs. These environments can be composed of other environments to allow teams increased flexibility and fine-grained access control. Teams can have as many environments as they need.
 
-Environments have built-in support for dynamic secret and config providers allowing for security and infrastructure best practices such as short-term credentials via OIDC and dynamically pulling secret values as need for all major cloud providers.
+Environments have built-in support for dynamic secret and config providers allowing for security and infrastructure best practices such as short-term credentials via OIDC and dynamically pulling secret values as needed for all major cloud providers.
 
 {{% notes type="info" %}}
-The examples below use the new standalone `esc` CLI, but all `esc` subcommands are available in the `pulumi` CLI as well. The `pulumi` CLI also has native support for Pulumi ESC environments via `pulumi preview` and `pulumi up`. See the [Using with Pulumi IaC](#using-with-pulumi-iac) documentation for details.
+The examples below use the new standalone `esc` CLI, but all `esc` subcommands are available in the `pulumi` CLI as well. The `pulumi` CLI also has native support for Pulumi ESC environments via `pulumi preview` and `pulumi up`. See [Using with Pulumi IaC](#using-with-pulumi-iac) below for details.
 {{% /notes %}}
 
 ## Create a new environment
@@ -31,7 +31,7 @@ To create a new environment, use `esc env init orgName/environmentName`.  This c
 The environment name must be unique within the organization. Environment names may only contain alphanumeric characters, hyphens, underscores, or periods.
 
 ```bash
-$ esc env init myorg/staging
+$ esc env init myorg/test
 ```
 
 The environment name must be specified in the `orgName/environmentName` format which identifies the environment `environmentName` in the organization `orgName`.
@@ -74,8 +74,7 @@ $ esc env get myorg/test foo
 
     bar
 
-
-   References
+  Defined at
 
   • test:2:10
 ```
@@ -86,10 +85,10 @@ Please note that `get` does not resolve providers or secrets. In that case it wi
 
 ### Get all values
 
-To get all values, run `esc env set orgName/environmentName` without the property name:
+To get all values, run `esc env get orgName/environmentName`:
 
 ```bash
-$ esc env set myorg/test foo
+$ esc env get myorg/test
 
    Value
 
@@ -106,7 +105,13 @@ $ esc env set myorg/test foo
 You can also get values in a different formats, for example:
 
 ```bash
-$ esc env get myorg/test
+$ esc env get myorg/test --value json
+{
+  "foo": "bar"
+}
+
+$ esc env get myorg/test foo --value json
+"bar"
 ```
 
 ### Structured Configuration
@@ -114,10 +119,9 @@ $ esc env get myorg/test
 Structured configuration is also supported and can be set using `esc env set orgName/environment name key value`, where the key parameter can use either object-property (`.`) or array `[]` syntax. For example:
 
 ```bash
-$ esc env set myorg/test data.active true
-$ esc env set myorg/test data.nums[0] 1
-$ esc env set myorg/test data.nums[1] 2
-$ esc env set myorg/test data.nums[2] 3
+$ esc env set myorg/test 'data.active' true
+$ esc env set myorg/test 'data.nums[0]' 1
+$ esc env set myorg/test 'data.nums[1]' 2
 $ esc env get myorg/test
 
    Value
@@ -127,8 +131,7 @@ $ esc env get myorg/test
         "active": true,
         "nums": [
           1,
-          2,
-          3
+          2
         ]
       },
       "foo": "bar"
@@ -137,13 +140,12 @@ $ esc env get myorg/test
    Definition
 
     values:
-      foo: bar
       data:
         active: true
         nums:
           - 1
           - 2
-          - 3
+      foo: bar
 ```
 
 `true` and `false` values are persisted as boolean values, and values convertible to integers are persisted as integers.
@@ -162,9 +164,9 @@ $ esc env get myorg/test data.nums[1]
     2
 
 
-   References
+   Defined at
 
-  • test:7:15
+  • test:6:15
 ```
 
 ### Interpolated values
@@ -172,7 +174,6 @@ $ esc env get myorg/test data.nums[1]
 Values do not have to be static. You can use interpolation to dynamically compose values from other values. For example:
 
 ```bash
-$ esc env set myorg/test name World
 $ esc env set myorg/test salutation Hello
 $ esc env set myorg/test greeting '${salutation}, ${name}'
 $ esc env get myorg/test greeting
@@ -186,10 +187,9 @@ $ esc env get myorg/test greeting
     ${salutation}, ${name}
 
 
-   References
+   Defined at
 
-  • test:9:15
-
+  • test:10:15
 ```
 
 ### Editing config as YAML with the CLI
@@ -200,17 +200,19 @@ To edit config in a default editor, use `pulumi edit orgName/environmentName`:
 $ esc env edit myorg/test
 ```
 
-By default this will drop you into your `$EDITOR` or `vi` as a fallback.
+By default this will drop you into your `$EDITOR`, or `vi` as a fallback.
 
 ```shell
 values:
-  foo: bar
-  data:
-    active: true
-    nums:
-      - 1
-      - 2
-      - 3
+    data:
+        active: true
+        nums:
+            - 1
+            - 2
+    foo: bar
+    salutation: Hello
+    name: World
+    greeting: ${salutation}, ${name}
 ---
 # Please edit the environment definition above.
 # The object below is the current result of
@@ -222,29 +224,25 @@ values:
     "active": true,
     "nums": [
       1,
-      2,
-      3
+      2
     ]
   },
-  "foo": "bar"
+  "foo": "bar",
+  "greeting": "Hello, World",
+  "name": "World",
+  "salutation": "Hello"
 }
 ~
 ~
-~                                                                                                                                                       ~
-~
-~                                                                                                                                                       ~
-~
-~                                                                                                                                                       ~
 ~
 ~
-~
-                        "/tmp/3858705368.yaml" 25L, 404B
+"/tmp/122663818.yaml" 29L, 528B
 ```
 
 You can also specify your editor using the `--editor` flag, such as:
 
 ```bash
-$ esc env edit --editor=code myorg/test
+$ esc env edit --editor="code --wait" myorg/test
 ```
 
 Run `esc edit --help` for more options.
@@ -287,10 +285,10 @@ So far, in our examples we have been previewing static values.
 
 For example if you try to get the value of `aws` in the config right now, it will show `[unknown]`.
 
-In order to see secrets, you need to "open" the environment using `esc open orgName/environmentName`. For example:
+In order to see secrets, you need to "open" the environment using `esc env open orgName/environmentName`. For example:
 
 ```bash
-$ env env open myorg/test
+$ esc env open myorg/test
 {
   "aws": {
     "creds": {
@@ -466,13 +464,13 @@ $ pulumi stack select test
 $ pulumi up
 ```
 
-You cannot specify the organizaiton in the environment reference, as your stack is already tied to the organization.
+You cannot specify the organization in the environment reference, as your stack is already tied to the organization.
 
 This will pull in the environment and any pulumi config will be available just like normal pulumi config.
 
 ## Removing an environment
 
-To remove an environment, you can use `esc env rm orgName/environmentName`.  
+To remove an environment, you can use `esc env rm orgName/environmentName`.
 
 ```bash
 $ esc env rm myorg/test
