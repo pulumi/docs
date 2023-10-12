@@ -17,6 +17,14 @@ Pulumi ESC is offered as a fully managed cloud service in Pulumi Cloud (and Pulu
 
 ![Pulumi ESC ecosystem](img/pulumi_esc.png)
 
+1. Pulumi ESC enables you to define environments, which contain collections of secrets and configuration. Each environment can be composed from multiple environments.
+
+2. Pulumi ESC supports a variety of configuration and secrets sources, and it has an extensible plugin model that allows third-party sources.
+
+3. Pulumi ESC has a rich API that allows for easy integration. Every value in an environment can be accessed from any target execution environment.
+
+4. Every environment can be locked down with RBAC, versioned, and audited.
+
 ## Dynamic Secrets Providers
 
 Support for dynamic configuration providers allow Pulumi ESC to integrate with secrets stored in any other provider.  Organizations often use AWS OIDC, AWS Secrets Manager, Vault, Azure OIDC, Azure KeyVault, GCP OIDC, and GCP Secrets Manager plus many more sources of truth for their secrets and configuration.  Pulumi ESC supports them all, providing a single interface to your configuration and secrets, no matter where their source of truth is.  Pulumi ESC works with these tools to provide improved management of secrets and configuration.
