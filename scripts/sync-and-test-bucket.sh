@@ -60,6 +60,9 @@ fi
 # Make the bucket an S3 website.
 aws s3 website $destination_bucket_uri --index-document index.html --error-document 404.html --region "$(aws_region)"
 
+# Apply any necessary redirects.
+./scripts/make-s3-redirects.sh $build_dir $destination_bucket
+
 # Sync the local build directory to the bucket. Note that we do pass the --delete option
 # here, since in most cases, we'll be continually updating a bucket associated with a PR;
 # passing this option keeps the destination bucket clean.

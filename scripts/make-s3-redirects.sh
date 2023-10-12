@@ -8,10 +8,11 @@ source ./scripts/common.sh
 # redirect (instead of serving the HTML with a meta-redirect). This ensures the right HTTP
 # response code is returned for search engines and enables better support for URL anchors.
 
-build_dir="public"
-destination_bucket="$(cat "$(origin_bucket_metadata_filepath)" | jq -r ".bucket")"
+build_dir="$1"
+destination_bucket="$2"
 redirects_file="./redirects.txt"
-aws s3 cp "s3://${destination_bucket}/redirects.txt" "$redirects_file" --region "$(aws_region)"
+
+# aws s3 cp "s3://${destination_bucket}/redirects.txt" "$redirects_file" --region "$(aws_region)"
 
 echo "Processing S3 redirects for ${destination_bucket}..."
 node scripts/make-s3-redirects.js "${destination_bucket}" "${build_dir}/redirects.txt" "$(aws_region)"

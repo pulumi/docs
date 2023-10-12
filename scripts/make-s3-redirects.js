@@ -30,7 +30,7 @@ async function doRedirects(bucket, region) {
                 try {
                     console.log(` ↳ Redirecting ${key} to ${location}`);
 
-                    const command = new PutObjectCommand({
+                    const putCommand = new PutObjectCommand({
                         Bucket: bucket,
                         Key: key,
                         WebsiteRedirectLocation: location,
@@ -39,13 +39,17 @@ async function doRedirects(bucket, region) {
                         ContentLength: 0,
                     });
 
-                    const res = await client.send(command);
-                    const status = res.$metadata.httpStatusCode;
+                    const putResponse = await client.send(putCommand);
+                    const putStatus = putResponse.$metadata.httpStatusCode;
 
-                    if (status < 400) {
-                        resolve(status);
+                    if (putStatus < 400) {
+                        resolve(putStatus);
+
+                        // The redirect succeeded, so we can delete the file.
+                        fs.rmSync(`./public/${key}`, { force: true });
+
                     } else {
-                        reject(status);
+                        reject(putStatus);
                     }
                 }
                 catch (error) {
@@ -73,6 +77,8 @@ doRedirects(bucket, region)
 
         if (summary.rejected.length > 0) {
             throw new Error(`One or more redirects failed: \n\n${summary.rejected.join("\n")}\n`);
+        } else {
+            console.log(` ↳ ${summary.fulfilled.length} redirects completed successfully.`);
         }
     });
 
