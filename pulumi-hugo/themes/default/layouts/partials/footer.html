@@ -42,9 +42,28 @@
             </ul>
         </div>
 
-        <div class="border my-16"></div>
+        <div class="border mt-16"></div>
 
-        <div class="text-center">
+        <section class="py-8 px-4">
+            <div class="container mx-auto">
+                <div class="flex justify-center flex-col flex-row text-center">
+                    <h4>Sign up for our newsletter</h4>
+                    <div class="flex justify-center my-3">
+                        <pulumi-hubspot-form form-id="027b4c6d-9b73-4ad8-b149-3c8b07fff608" class="newsletter newsletter-dark-border"></pulumi-hubspot-form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <ul class="py-8 flex flex-col text-center md:text-left md:flex-row md:justify-center">
+            {{ range .Site.Menus.legal }}
+                <li class="mr-2 mb-4 lg:mb-0 lg:mr-8 font-semibold">
+                    <a class="link" data-track="footer-legal-{{ .Title | urlize }}" href="{{ .URL }}">{{ .Title }}</a>
+                </li>
+            {{ end }}
+        </ul>
+
+        <div class="text-center mb-8">
             <p class="text-black mb-8">&copy; {{ now.Format "2006" }} Pulumi</p>
 
             <ul class="flex inline-items text-2xl justify-center">
@@ -79,13 +98,5 @@
                 </li>
             </ul>
         </div>
-
-        <ul class="py-16 flex flex-col text-center md:text-left md:flex-row md:justify-center">
-            {{ range .Site.Menus.legal }}
-                <li class="mr-2 mb-4 lg:mb-0 lg:mr-8 font-semibold">
-                    <a class="link" data-track="footer-legal-{{ .Title | urlize }}" href="{{ .URL }}">{{ .Title }}</a>
-                </li>
-            {{ end }}
-        </ul>
     </div>
 </nav>
