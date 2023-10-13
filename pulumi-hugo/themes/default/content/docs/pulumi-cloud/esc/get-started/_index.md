@@ -234,13 +234,13 @@ Your `app-env-test` environment file should have a value of "test" for the `ENVI
 Now that you have populated your environment files, you can verify that your values have been successfully stored by retrieving them through the Pulumi ESC CLI. Start by running the following command to log into the CLI:
 
 ```bash
-esc login https://api.pulumi.com/
+esc login
 ```
 
 You will be prompted to log in to the Pulumi Cloud using either the browser or by optionally providing an access token.
 
 ```bash
-$ esc login https://api.pulumi.com/
+$ esc login
 Manage your Pulumi ESC environments by logging in.
 Run `esc --help` for alternative login options.
 Enter your access token from https://app.pulumi.com/account/tokens
