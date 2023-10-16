@@ -2274,14 +2274,14 @@ curl \
 ### List Environments available to the authenticated user.
 
 ```
-GET /api/environments/{organization}
+GET /api/preview/environments/{organization}
 ```
 
 #### Parameters
 
 | Parameter           | Type   | In    | Description                                                                                                  |
 |---------------------|--------|-------|--------------------------------------------------------------------------------------------------------------|
-| `organization`      | string | path  | organization name
+| `organization`      | string | path  | organization name                                                                                            |
 | `continuationToken` | string | query | **Optional.** the continuation token to use for retrieving the next set of results if results were truncated |
 
 #### Example
@@ -2291,7 +2291,7 @@ curl \
   -H "Accept: application/vnd.pulumi+8" \
   -H "Content-Type: application/json" \
   -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
-  https://api.pulumi.com/api/environments/{organization}
+  https://api.pulumi.com/api/preview/environments/{organization}
 ```
 
 #### Default response
@@ -2317,7 +2317,7 @@ Status: 200 OK
 ### Create Environment
 
 ```
-POST /api/environments/{organization}/{environment}
+POST /api/preview/environments/{organization}/{environment}
 ```
 
 #### Parameters
@@ -2336,7 +2336,7 @@ curl \
   -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
   --request POST \
   --data '<yaml content>' \
-  https://api.pulumi.com/api/environments/{organization}/{environment}
+  https://api.pulumi.com/api/preview/environments/{organization}/{environment}
 ```
 
 #### Default response
@@ -2348,7 +2348,7 @@ Status: 200 OK
 ### Get Environment
 
 ```
-GET /api/environments/{organization}/{environment}
+GET /api/preview/environments/{organization}/{environment}
 ```
 
 | Parameter           | Type   | In    | Description       |
@@ -2364,7 +2364,7 @@ curl \
   -H "Content-Type: application/json" \
   -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
   --request GET \
-  https://api.pulumi.com/api/environments/{organization}/{environment}
+  https://api.pulumi.com/api/preview/environments/{organization}/{environment}
 ```
 
 #### Default response
@@ -2393,7 +2393,7 @@ Status: 200 OK
 ### Update Environment
 
 ```
-PATCH /api/environments/{organization}/{environment}
+PATCH /api/preview/environments/{organization}/{environment}
 ```
 
 | Parameter           | Type   | In    | Description       |
@@ -2410,7 +2410,7 @@ curl \
   -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
   --request PATCH \
   --data '<yaml content>' \
-  https://api.pulumi.com/api/environments/{organization}/{environment}
+  https://api.pulumi.com/api/preview/environments/{organization}/{environment}
   
 ```
 
@@ -2423,7 +2423,7 @@ Status: 200 OK
 ### Delete Environment
 
 ```
-DELETE /api/environments/{organization}/{environment}
+DELETE /api/preview/environments/{organization}/{environment}
 ```
 
 | Parameter           | Type   | In    | Description       |
@@ -2439,7 +2439,7 @@ curl \
   -H "Content-Type: application/json" \
   -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
   --request DELETE \
-  https://api.pulumi.com/api/environments/{organization}/{environment}
+  https://api.pulumi.com/api/preview/environments/{organization}/{environment}
 ```
 
 #### Default response
@@ -2451,7 +2451,7 @@ Status: 200 OK
 ### Open Environment
 
 ```
-POST /api/environments/{organization}/{environment}/open
+POST /api/preview/environments/{organization}/{environment}/open
 ```
 
 | Parameter           | Type   | In    | Description       |
@@ -2468,7 +2468,7 @@ curl \
   -H "Content-Type: application/json" \
   -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
   --request POST \
-  https://api.pulumi.com/api/environments/{organization}/{environment}/open
+  https://api.pulumi.com/api/preview/environments/{organization}/{environment}/open
 ```
 
 #### Default response
@@ -2487,7 +2487,7 @@ Status: 200 OK
 ### Read Open Environment
 
 ```
-GET /api/environments/{organization}/{environment}/open/{openSessionID}
+GET /api/preview/environments/{organization}/{environment}/open/{openSessionID}
 ```
 
 | Parameter           | Type   | In    | Description       |
@@ -2505,7 +2505,7 @@ curl \
   -H "Content-Type: application/json" \
   -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
   --request GET \
-  https://api.pulumi.com/api/environments/{organization}/{environment}/open/{openSessionID}
+  https://api.pulumi.com/api/preview/environments/{organization}/{environment}/open/{openSessionID}
 ```
 
 #### Default response
@@ -2856,7 +2856,7 @@ const body = await(
   await fetch("https://api.pulumi.com/api/orgs/{org}/search/resources", {
     method: "GET",
     headers: headers,
-  }),
+  })
 ).json();
 
 console.log(body);
@@ -3094,7 +3094,7 @@ Attempting to set this on an unsupported subscription results in a 402 status co
 |--------|----------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|-----------------------------------------------|
 | 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | Successful search.                                                                              | [ResourceSearchResult](#resourcesearchresult) |
 | 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request. Not safe to retry.                                                                 | None                                          |
-| 402    | Unsupported Query                                                          | You attempted to use functionality not included in your Pulumi subscription. Not safe to retry. | None                                       |
+| 402    | Unsupported Query                                                          | You attempted to use functionality not included in your Pulumi subscription. Not safe to retry. | None                                          |
 | 422    | [Unprocessable Entity](https://tools.ietf.org/html/rfc2518#section-10.3)   | Unprocessable query. Not safe to retry.                                                         | None                                          |
 | 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error. Safe to retry.                                                                    | None                                          |
 
@@ -3411,9 +3411,9 @@ An individual resource.
 | name         | string\|null  | The logical name of the resource. <br><br>Typically the first parameter provided to the resource when it was instantiated.                                                                                                                                                                                                                                                       |
 | package      | string\|null  | The package component of the resource's [type][types].<br><br>This is `aws` for a resource of type `aws:s3/bucket:Bucket`.                                                                                                                                                                                                                                                       |
 | parent.urn   | string\|null  | The URN of the resource's parent, if it has one.                                                                                                                                                                                                                                                                                                                                 |
-| pending      | string\|null   | The state of the resource if it is pending. <br><br>Typically indicates an operation that was interrupted due to an error, possibly needing manual intervention to resolve.<br><br>Allowed values: `creating`, `deleting`, `updating`, `reading`, `importing`.                                                                                                                   |
-| project      | string\|null | The project the resource belongs to.                                                                                                                                                                                                                                                                                                                                             |
-| properties   | object\|null | The resource's combined input and output values as recorded in Pulumi's state. Only available to certain Pulumi subscriptions.                                                                                                                                                                                                                                                   |
+| pending      | string\|null  | The state of the resource if it is pending. <br><br>Typically indicates an operation that was interrupted due to an error, possibly needing manual intervention to resolve.<br><br>Allowed values: `creating`, `deleting`, `updating`, `reading`, `importing`.                                                                                                                   |
+| project      | string\|null  | The project the resource belongs to.                                                                                                                                                                                                                                                                                                                                             |
+| properties   | object\|null  | The resource's combined input and output values as recorded in Pulumi's state. Only available to certain Pulumi subscriptions.                                                                                                                                                                                                                                                   |
 | protected    | boolean\|null | Whether the resource is [protected](/docs/concepts/options/protect] from deletion.                                                                                                                                                                                                                                                                                               |
 | provider.urn | string\|null  | The URN of the resource's provider.                                                                                                                                                                                                                                                                                                                                              |
 | stack        | string\|null  | The Stack the resource belongs to.                                                                                                                                                                                                                                                                                                                                               |
