@@ -19,7 +19,7 @@ jobs:
       - name: pull-request
         uses: repo-sync/pull-request@v2
         with:
-          source_branch: "pulumi/${{ github.run_id }}-${{ github.run_number }}"
+          source_branch: "esc/${{ github.run_id }}-${{ github.run_number }}"
           destination_branch: "master"
           pr_title: "Regen docs esc@${{ env.ESC_VERSION }}"
           pr_body: "Automated PR"
@@ -67,10 +67,10 @@ jobs:
         run: |
           git config --local user.email "bot@pulumi.com"
           git config --local user.name "pulumi-bot"
-          git checkout -b pulumi/${{ github.run_id }}-${{ github.run_number }}
+          git checkout -b esc/${{ github.run_id }}-${{ github.run_number }}
           git add static/
           git commit -m "Regenerating docs for esc@${{ env.ESC_VERSION }}"
-          git push origin pulumi/${{ github.run_id }}-${{ github.run_number }}
+          git push origin esc/${{ github.run_id }}-${{ github.run_number }}
         working-directory: docs
     strategy:
       matrix:
