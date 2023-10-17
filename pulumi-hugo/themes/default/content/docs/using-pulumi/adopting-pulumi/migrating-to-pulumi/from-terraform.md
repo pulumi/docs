@@ -16,7 +16,7 @@ aliases:
 If your infrastructure was provisioned with Terraform, there are a number of options that will help you adopt Pulumi.
 
 * **Coexist** with resources provisioned by Terraform by referencing a `.tfstate` file.
-* **Import** existing resources into Pulumi [in the usual way](/docs/using-pulumi/adopting-pulumi/import/).
+* **Import** existing resources into Pulumi [in the usual way](/docs/using-pulumi/adopting-pulumi/import/) or using `pulumi convert --from terraform` along with some `pulumi import --from terraform` to adopt all resources from an existing `.tfstate` file.
 * **Convert** any Terraform HCL to Pulumi code using `pulumi convert --from terraform`.
 
 This range of techniques helps to either temporarily or permanently use Pulumi alongside Terraform, in addition to fully migrating existing infrastructure to Pulumi.
@@ -479,6 +479,16 @@ In cases where the converter does not yet support a feature, the `pulumi convert
     <pulumi-choosable type="language" value="go"><code>notImplemented</code></pulumi-choosable>
     <pulumi-choosable type="language" value="csharp"><code>NotImplemented</code></pulumi-choosable>
 </pulumi-chooser> function that will need to be filled in manually. For most projects, the converter should be able to convert 90-95% of the code without any TODOs, with only a small percentage of items to address manually, significantly reducing migration time compared to doing an entire migration by hand. We are actively improving the converter by adding support for missing features and improving the overall quality of the converted code to reduce the amount of manual fix-ups required.
+
+### Importing Resources
+
+That command converted the static HCL source code to Pulumi code. What if you want to import existing resource states from a `.tfstate` file, however, to avoid unnecessarily recreating your infrastructure?
+
+Call `pulumi import --from terraform ./terraform.tfstate` ensuring a valid location of a `.tfstate` file to import resources from that state.
+
+This will read the resources and their ID's out of the terraform state file and run a standard Pulumi import deployment to read them into the Pulumi state.
+
+Before running the deployment the import file generated will be writen out to the current directory, if there are issues importing you can manually edit this file and try again with `pulumi import --file`.
 
 ### Example Conversion
 
