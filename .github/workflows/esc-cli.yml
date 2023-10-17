@@ -21,7 +21,7 @@ jobs:
         with:
           source_branch: "pulumi/${{ github.run_id }}-${{ github.run_number }}"
           destination_branch: "master"
-          pr_title: "Regen docs esc@${{ env.PULUMI_VERSION }}"
+          pr_title: "Regen docs esc@${{ env.ESC_VERSION }}"
           pr_body: "Automated PR"
           pr_label: "automation/esc-cli-docs,automation/merge"
           github_token: ${{ secrets.PULUMI_BOT_TOKEN }}
