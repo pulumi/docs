@@ -69,8 +69,6 @@ jobs:
           git config --local user.name "pulumi-bot"
           git checkout -b pulumi/${{ github.run_id }}-${{ github.run_number }}
           git add static/
-          git add content/
-          git add data/
           git commit -m "Regenerating docs for esc@${{ env.ESC_VERSION }}"
           git push origin pulumi/${{ github.run_id }}-${{ github.run_number }}
         working-directory: docs
