@@ -57,6 +57,7 @@ jobs:
       - run: make ensure
         working-directory: docs
       - name: Update latest version
+        shell: bash
         run: |
           VERSION_TAG=${{ env.ESC_VERSION }}
           echo -n "${ VERSION_TAG#v }" > ./static/esc/latest-version
