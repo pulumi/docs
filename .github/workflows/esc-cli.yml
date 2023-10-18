@@ -40,7 +40,7 @@ jobs:
         with:
           repository: pulumi/esc
           path: esc
-          ref: v${{ github.event.client_payload.ref }}
+          ref: ${{ github.event.client_payload.ref }}
       - name: Install pulumictl
         uses: jaxxstorm/action-install-gh-release@v1.1.0
         with:
