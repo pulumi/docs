@@ -1,0 +1,93 @@
+env:
+  GITHUB_TOKEN: ${{ secrets.PULUMI_BOT_TOKEN }}
+
+name: esc cli docs build
+on:
+  repository_dispatch:
+    types:
+      - esc-cli
+jobs:
+  pull-request:
+    runs-on: ubuntu-latest
+    needs: build-esc-cli-docs
+    steps:
+      - name: checkout docs repo
+        uses: actions/checkout@v2
+      - name: set the esc version
+        run: |
+          echo "ESC_VERSION=${{ github.event.client_payload.ref }}" >> $GITHUB_ENV
+      - name: pull-request
+        uses: repo-sync/pull-request@v2
+        with:
+          source_branch: "esc/${{ github.run_id }}-${{ github.run_number }}"
+          destination_branch: "master"
+          pr_title: "Regen docs esc@${{ env.ESC_VERSION }}"
+          pr_body: "Automated PR"
+          pr_label: "automation/esc-cli-docs,automation/merge"
+          github_token: ${{ secrets.PULUMI_BOT_TOKEN }}
+  build-esc-cli-docs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: set the esc version
+        run: |
+          echo "ESC_VERSION=${{ github.event.client_payload.ref }}" >> $GITHUB_ENV
+      - name: checkout docs repo
+        uses: actions/checkout@v2
+        with:
+          path: docs
+      - name: checkout esc repo
+        uses: actions/checkout@v2
+        with:
+          repository: pulumi/esc
+          path: esc
+          ref: v${{ github.event.client_payload.ref }}
+      - name: Install pulumictl
+        uses: jaxxstorm/action-install-gh-release@v1.1.0
+        with:
+          repo: pulumi/pulumictl
+      - name: Install Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.111.0'
+          extended: true
+      - name: Install node
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{matrix.nodeversion}}
+      - run: make ensure
+        working-directory: docs
+      - name: Update latest version
+        run: |
+          echo -n "${{ env.ESC_VERSION#v }}" > ./static/esc/latest-version
+        working-directory: docs
+      - name: git status
+        run: git status && git diff
+        working-directory: docs
+      - name: commit changes
+        run: |
+          git config --local user.email "bot@pulumi.com"
+          git config --local user.name "pulumi-bot"
+          git checkout -b esc/${{ github.run_id }}-${{ github.run_number }}
+          git add static/
+          git commit -m "Regenerating docs for esc@${{ env.ESC_VERSION }}"
+          git push origin esc/${{ github.run_id }}-${{ github.run_number }}
+        working-directory: docs
+    strategy:
+      matrix:
+        nodeversion:
+          - "18.x"
+  notify:
+    if: failure()
+    name: Send slack notification
+    runs-on: ubuntu-latest
+    needs: [pull-request, build-esc-cli-docs]
+    steps:
+      - name: Slack Notification
+        uses: docker://sholung/action-slack-notify:v2.3.0
+        env:
+          SLACK_CHANNEL: docs-ops
+          SLACK_COLOR: "#F54242"
+          SLACK_MESSAGE: "esc cli docs build failure in pulumi/docs repo :meow_sad:"
+          SLACK_USERNAME: docsbot
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
+          SLACK_ICON: https://www.pulumi.com/logos/brand/avatar-on-white.png
