@@ -59,7 +59,7 @@ jobs:
       - name: Update latest version
         run: |
           VERSION_TAG=${{ env.ESC_VERSION }}
-          echo -n "${ VERSION_TAG#v }" > ./static/esc/latest-version
+          echo -n "${VERSION_TAG#v}" > ./static/esc/latest-version
         working-directory: docs
       - name: git status
         run: git status && git diff
