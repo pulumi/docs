@@ -94,6 +94,8 @@ Should your network have egress limitations, please ensure you allowlist the sub
 - api.pulumi.com
 - 34.208.94.47
 - 34.212.116.224
+- 44.241.59.217
+- 52.40.198.20
 
 These IP addresses and URL are the external facing addresses of the Pulumi Cloud SaaS and should be added to your allowlist to allow traffic from your network to reach our services.
 
