@@ -335,8 +335,15 @@ Now, if you run `pulumi up` while in the `staging` stack, we should see that the
 frontend port is now set to `3002`:
 
 ```bash
-$ pulumi stack output url
-http://localhost:3002
+$ pulumi up
+
+Previewing update (staging)
+...
+...
+
+Outputs:
+    url: "http://localhost:3002"
+...
 ```
 
 Next up, we'll explore how to share outputs with other stacks. Let's go!
