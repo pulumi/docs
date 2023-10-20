@@ -1,7 +1,7 @@
 ---
 # Name of the webinar.
-title: "From Zero to Production in Kubernetes"
-meta_desc: "Explore how to leverage the power of Python with Pulumi, an infrastructure as code platform to define and manage your Kubernetes deployments."
+title: From Zero to Production in Kubernetes
+meta_desc: Explore how to leverage the power of Python with Pulumi, an infrastructure as code platform to define and manage your Kubernetes deployments.
 meta_image: "/images/resources/zero-production-kubernetes.png"
 
 # A featured webinar will display first in the list.
@@ -51,7 +51,7 @@ main:
     # URL for embedding a URL for ungated webinars.
     youtube_url: #"https://www.youtube.com/embed/DPp4veSBUr0?rel=0"
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2023-07-20T09:00:00-07:00
+    sortable_date: 2023-11-15T09:00:00-08:00
     # Duration of the webinar.
     duration: "1 hour"
     # Datetime of the webinar.
@@ -66,11 +66,9 @@ main:
     # The webinar presenters
     presenters:
         - name: Josh Kodroff
-          role: Senior Solutions Architect, Pulumi
-        - name: Damian Curry
-          role: Business Development Technical Director, F5/NGINX
-        - name: Jason Schmidt
-          role: Senior Solutions Architect, F5/NGINX
+          role: Solutions Architect, Pulumi
+        - name: Javier Evans
+          role: Solutions Engineer, NGINX
 
     # A bullet point list containing what the user will learn during the webinar.
     learn:
@@ -80,6 +78,6 @@ main:
 
 # The right hand side form section.
 form:
-    salesforce_campaign_id: "701Du000000AXPXIA4"
-    hubspot_form_id: "56761901-9c1d-43c3-9f4b-bef5a524847b"
+    salesforce_campaign_id: 701Du000000BKYJIA4
+    hubspot_form_id: 998984aa-03fc-4d5e-9ce3-9b96578c75b4
 ---
