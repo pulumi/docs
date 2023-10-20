@@ -3,7 +3,7 @@ title: "Remediation Policies: Continuous and Automatic Compliance"
 authors: ["joe-duffy"]
 tags: ["pulumi-news"]
 meta_desc: "Pulumi CrossGuard remediation policies allow you to automatically fix violations, not just report them, ensuring continuous and automatic compliance."
-date: "2023-10-17"
+date: "2023-10-20"
 meta_image: "remediation.png"
 ---
 
