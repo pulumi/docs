@@ -59,7 +59,7 @@ Please note that while we’re providing the steps and screenshots that are accu
 
 In the navigation pane of the [IAM console](https://console.aws.amazon.com/iam/), choose **Identity providers**, and then choose **Add provider**.
 
-![Navigating to the IAM console and opening the Create Identity Provider wizard](create-idp-start.mp4)
+{{< video title="Navigating to the IAM console and opening the Create Identity Provider wizard" src="./create-idp-start.mp4" autoplay="true" >}}
 
 In the Provider type section, click the radio button next to “OpenID Connect”. For the Provider URL, provide the following URL:
 
