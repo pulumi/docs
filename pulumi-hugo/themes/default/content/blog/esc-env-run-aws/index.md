@@ -1,6 +1,6 @@
 ---
 title: "From Zero to esc env run"
-authors: ["joe-duffy"]
+authors: ["torian-crane"]
 tags: ["pulumi-esc"]
 meta_desc: "From Zero to esc env run placeholder area for blog content."
 date: "2023-10-24"
