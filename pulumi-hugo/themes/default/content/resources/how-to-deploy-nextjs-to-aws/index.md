@@ -6,22 +6,41 @@ type: ai-answers
 date: 2023-07-24
 ---
 
-I will show you how to declare the AWS resources in Pulumi to deploy a Node.js application, which includes Next.js applications as well.
+Are you ready to take your Next.js application to the next level by deploying it to the cloud? In this article, I will show you how to use Pulumi to declare the necessary AWS resources and deploy your Next.js application seamlessly. By the end of this tutorial, you will have your Next.js app running on Amazon S3, served through CloudFront, and accessible to the world.
 
-We'll use the Amazon S3 to store our static content, AWS Lambda for server-side rendering, CloudFront for content delivery, and Route53 for DNS.
+### What is Next.js?
 
-First, you'll need to export your Next.js app to a static HTML application by running next build and next export. This should generate a directory named out which you will need to deploy to your newly created S3 bucket.
+Before we dive into the deployment process, let's quickly recap what Next.js is. Next.js is a popular React framework that allows you to build server-side rendered React applications. It simplifies the development process by providing features like automatic code splitting, server-side rendering, and static site generation. With Next.js, you can create fast, SEO-friendly, and scalable web applications.
 
-Here is the Pulumi code to accomplish it:
+### Preparing your Next.js App for Deployment
+
+To get started, ensure that your Next.js app is ready for deployment. Here are the steps:
+
+1. Build your Next.js app: Navigate to the root directory of your Next.js app and run `next build`. This command compiles your Next.js app into a production-ready bundle.
+
+2. Export your Next.js app: Run `next export`. This command generates a directory called `out` that contains your statically exported Next.js application. This static content will be deployed to Amazon S3.
+
+Now that your Next.js app is prepared for deployment, let's move on to the exciting part - deploying it with Pulumi.
+
+### The Pulumi Deployment Process
+
+In this tutorial, we will use the Pulumi framework to deploy our Next.js app to AWS. Pulumi allows us to declare our infrastructure as code using familiar programming languages such as TypeScript.
+
+The AWS resources we will be using for our deployment are:
+
+- Amazon S3: To store our static content.
+- AWS Lambda: For server-side rendering.
+- CloudFront: For content delivery.
+- Route53: For DNS.
+
+Let's take a closer look at the Pulumi program that will create and configure these resources for us.
 
 ```typescript
-
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
-import * as awsx from "@pulumi/awsx";
 import * as s3 from "@pulumi/aws/s3";
 
-// Create a bucket and expose a bucket object website
+// Create a bucket and expose it as a website
 let siteBucket = new s3.Bucket("s3-website-bucket", {
     website: {
         indexDocument: "index.html",
@@ -32,35 +51,80 @@ let siteDir = "out";  // Compiled Next.js site
 
 // Deploy site assets
 let bucketObject = new s3.BucketObject("nextjs-bucket", {
-    bucket: siteBucket,                       // The S3 bucket object
-    source: new pulumi.asset.FileArchive(siteDir),  // Project static site directory
-    key: "index.html"                         // S3 object store name
-})
+    bucket: siteBucket,
+    source: new pulumi.asset.FileArchive(siteDir),
+    key: "index.html"
+});
 
 // Wire up the static website bucket with a CDN
 let cdn = new aws.cloudfront.Distribution("cdn", {
     origins: [
         {
             originPath: '/',
-            domainName: bucketObject.bucket.bucketRegionHostname, // CloudFront origins refer to S3 buckets that stores our website assets.
+            domainName: bucketObject.bucket.bucketRegionalDomainName,
             s3OriginConfig: {
                 originAccessIdentity: cdnOriginPath
             },
         },
     ],
-    //...additional configuration
+    // ...additional configuration
 });
 
 // Export the website URL
-export const websiteUrl = pulumi.interpolate`http://${siteBucket.websiteEndpoint. hostname}`;
+export const websiteUrl = pulumi.interpolate`http://${siteBucket.websiteEndpoint.hostname}`;
 
-// Export the Cloudfront URL
-export const cdUrl = cdn.domainName.apply(n => `https://${n}`)
-
+// Export the CloudFront URL
+export const cdnUrl = cdn.distributionDomainName.apply(n => `https://${n}`);
 ```
 
-Please note that this is for a statically exported Next.js app. If you want to use server-side rendering (SSR), you would need to deploy Next.js app as a lambda function, which makes the setup a lot more complex.
+The code above creates and configures the necessary AWS resources. Let's break down what each part does:
 
-* [aws.s3.Bucket](https://www.pulumi.com/registry/packages/aws/api-docs/s3/bucket/)
-* [aws.s3.BucketObject](https://www.pulumi.com/registry/packages/aws/api-docs/s3/bucketobject/)
-* [aws.cloudfront.Distribution](https://www.pulumi.com/registry/packages/aws/api-docs/cloudfront/distribution/)
+1. Create an S3 bucket: We create an S3 bucket using the `s3.Bucket` constructor provided by the `@pulumi/aws` package. This bucket will store our static content and serve as the foundation for our Next.js app.
+
+2. Deploy the Next.js app: We use the `s3.BucketObject` constructor to deploy the `out` directory generated by the `next export` command to our S3 bucket. This makes our Next.js app available for hosting.
+
+3. Setup CloudFront CDN: We create a CloudFront distribution using the `aws.cloudfront.Distribution` constructor. This connects our S3 bucket to CloudFront, allowing us to serve our Next.js app globally through a content delivery network.
+
+4. Export the website URL: We export the website URL using the `websiteUrl` variable, which combines the `http` protocol with the `websiteEndpoint.hostname` of our S3 bucket.
+
+5. Export the CloudFront URL: We export the CloudFront URL using the `cdnUrl` variable, which combines the `https` protocol with the `distributionDomainName` of our CloudFront distribution.
+
+### Deploying with Pulumi
+
+Now that you understand the code, it's time to deploy your Next.js app using Pulumi. Follow these steps:
+
+1. Install Pulumi: If you haven't already, install Pulumi by following the instructions in the [Pulumi documentation](https://www.pulumi.com/docs/get-started/install/).
+
+2. Initialize a new Pulumi project: Create a new directory for your project and navigate into it. Run the following command to initialize a new Pulumi project:
+
+   ```shell
+   pulumi new aws-typescript
+   ```
+
+   This command sets up a new Pulumi project with the necessary TypeScript boilerplate code.
+
+3. Copy the Pulumi code: Replace the code in the generated `index.ts` file with the Pulumi code we discussed earlier.
+
+4. Preview the deployment: Run `pulumi preview` to see a preview of the resources that will be created. Pulumi will show you the changes it will make to your AWS infrastructure.
+
+5. Deploy the app: If everything looks good in the preview, run `pulumi up` to deploy your Next.js app to AWS. Pulumi will create the necessary resources and configure them according to your code.
+
+Congratulations! You have successfully deployed your Next.js app to AWS using Pulumi. Pulumi makes it easy to manage the infrastructure as code, allowing you to focus on developing your application.
+
+### Accessing your Next.js App
+
+Once the deployment is complete, you can access your Next.js app through the URLs exported by Pulumi:
+
+- **Website URL**: This is the URL of your Next.js app served directly from the S3 bucket. You can find this URL in the output of the `pulumi up` command or by accessing the `websiteUrl` output variable.
+
+- **CloudFront URL**: This is the URL of your Next.js app served through CloudFront. It provides a globally distributed content delivery network for your app, resulting in improved performance. You can find this URL in the output of the `pulumi up` command or by accessing the `cdnUrl` output variable.
+
+Both URLs will allow you to access your Next.js app and start sharing it with the world.
+
+### Conclusion
+
+Building and deploying a Next.js application to AWS is made easy with Pulumi. By using Pulumi as your infrastructure-as-code framework, you can simplify the process of declaring and managing your AWS resources. In this tutorial, you learned how to deploy your Next.js app to AWS using Pulumi, leveraging resources like Amazon S3, AWS Lambda, CloudFront, and Route53.
+
+Now it's time to take the leap and deploy your Next.js app to the cloud. Start by installing Pulumi and applying the code provided in this tutorial. In no time, your Next.js app will be up and running, ready to serve users from all around the world.
+
+Happy deploying!
