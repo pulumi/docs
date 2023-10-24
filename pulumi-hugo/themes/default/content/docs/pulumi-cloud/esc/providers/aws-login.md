@@ -60,12 +60,12 @@ Make a note of the IAM role's ARN; it will be a necessary input to the `aws-logi
 
 ### AWSLoginOIDC
 
-| Property      | Type     | Description                                                             |
-|---------------|----------|-------------------------------------------------------------------------|
-| `roleArn`     | string   | The ARN of the role to assume.                                          |
-| `sessionName` | string   | The name of the role session.                                           |
-| `duration`    | string   | [Optional] - The duration of the role session.                          |
-| `policyArn`   | string[] | [Optional] - ARNs for additional policies to apply to the role session. |
+| Property      | Type     | Description                                                                                                                                                                                                                                       |
+|---------------|----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `roleArn`     | string   | The ARN of the role to assume.                                                                                                                                                                                                                    |
+| `sessionName` | string   | The name of the role session.                                                                                                                                                                                                                     |
+| `duration`    | string   | [Optional] - The duration of the role session. Defaults to 2 hours. Unless explicitly specified, AWS sets MaxDuration to 1 hour by default. You may need to configure your AWS role with a higher MaxDuration or set the duration here to 1 hour. |
+| `policyArn`   | string[] | [Optional] - ARNs for additional policies to apply to the role session.                                                                                                                                                                           |
 
 ### AWSLoginStatic
 
