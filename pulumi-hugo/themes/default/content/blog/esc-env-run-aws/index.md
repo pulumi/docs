@@ -3,7 +3,7 @@ title: "From Zero to esc env run"
 authors: ["torian-crane"]
 tags: ["aws", "secrets", "credentials-management"]
 meta_desc: "From Zero to esc env run placeholder area for blog content."
-date: "2023-10-24"
+date: "2023-10-27"
 meta_image: "meta.png"
 ---
 
