@@ -141,7 +141,7 @@ Scroll to the bottom of the page and click **Save**.
 
 Step 5: Run your command
 
-Now to the fun part! With your environment set up, try it out by listing all of the S3 buckets in your AWS account as shown below. Start by running the `aws s3 ls` command as normal, making sure that the environment that you're working from does not have any AWS credentials configured. You should see the following response:
+Now to the fun part! With your environment set up, try it out by listing all of the S3 buckets in your AWS account. Start by running the `aws s3 ls` command as normal, making sure that the environment that you're working from does not have any AWS credentials configured. You should see the following response:
 
 ```
 $ aws s3 ls
