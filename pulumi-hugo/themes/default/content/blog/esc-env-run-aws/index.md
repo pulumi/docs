@@ -3,31 +3,31 @@ title: "From Zero to esc run"
 authors: ["torian-crane"]
 tags: ["aws", "secrets", "credentials-management"]
 meta_desc: "From Zero to esc run placeholder area for blog content."
-date: "2023-10-27"
+date: "2023-10-25"
 meta_image: "meta.png"
 ---
 
-The `esc run` command of [Pulumi ESC (Environments, Secrets, and Configuration)](https://www.pulumi.com/product/esc/) is your trusty sidekick in the relentless battle against one of the cloud realm's most notorious villains: credential mismanagement. Whether you’re a seasoned developer or just stepping into the cloud, you’ve likely encountered the frustrating, time-consuming error messages like "Invalid credentials" when your tokens or access keys go astray. It’s a common narrative that can halt progress in its tracks. But, this is an area where `esc run` really shines.
+In a world where cloud computing is the backbone of modern applications, managing environments and secrets is of the utmost importance. Earlier this month we released a new service called Pulumi ESC (Environments, Secrets, and Configuration), the focus of which is to help alleviate the burden of managing cloud configuration by providing a centralized way to handle these critical aspects of cloud development. It's like having a Swiss Army knife in your toolkit, ready to tackle the challenges of cloud infrastructure. This post is the first post in a series that will highlight the specific challenge of **credentials management**, and we’ll specifically dive into how using the `esc run` functionality of Pulumi ESC will make that easier.
 
 <!--more-->
 
 ## The Power of esc run
 
-In a world where cloud computing is the backbone of modern applications, managing environments and secrets is crucial. Pulumi ESC alleviates the maintenance burden, reduces costly mistakes, and streamlines your workflow by providing a centralized way to handle these critical aspects of cloud development. It's like having a Swiss Army knife in your toolkit, ready to tackle the challenges of cloud infrastructure.
+The [Pulumi documentation for the `esc run` command](https://www.pulumi.com/docs/esc-cli/commands/esc_run/) states the following:
 
-Central to Pulumi ESC is the command `esc run`. With a few keystrokes, this command empowers you to run AWS commands like `aws s3 ls` without the need to configure AWS credentials locally each time. Imagine the ease and time saved when you no longer have to chase down access tokens or juggle configuration files before accessing AWS resources. This isn’t just a neat feature; it’s a significant stride towards making your cloud interactions more efficient and less error-prone, and here’s why:
+> This command opens the environment with the given name and runs the given command. If the opened environment contains a top-level ’environmentVariables’ object, each key-value pair in the object is made available to the command as an environment variable.
 
-- **Seamless Command Execution** - The `esc run` command lets you execute AWS commands effortlessly, freeing you from the intricacies of managing AWS credentials on your local machine. It allows you to focus solely on your task at hand, whether it's deploying infrastructure or interacting with cloud resources, without the overhead of credential setup and maintenance.
+But what does this actually mean? If we use AWS as an example, it means that we can run commands like `aws s3 ls` without the need to configure AWS credentials locally each time. It’s a significant stride towards making your cloud interactions more efficient and less error-prone, and here’s a deeper dive into why:
 
-- **Enhanced Security** - One of the standout features of `esc run` is its commitment to security. By eliminating the need to store sensitive information locally, it drastically reduces the risk of accidental exposure. Your credentials and secrets are securely managed within the Pulumi environment, safeguarding your cloud resources and data.
+- **Seamless Command Execution** - The `esc run` command lets you execute AWS commands effortlessly, freeing you from the intricacies of managing AWS credentials on your local machine. Simply put, it significantly reduces the overhead of credential setup and maintenance.
 
-- **Streamlined Collaboration** - `esc run` facilitates team collaboration by providing a consistent environment for all team members to run commands with. Everyone can access the same secure environment, eliminating the complexities of coordinating credentials and configurations across the team. This ensures a smoother development process with fewer hurdles.
+- **Enhanced Security** - One of the standout features of `esc run` is its commitment to security. By removing the local storage of credentials, it drastically reduces the risk of accidental exposure. Your credentials and secrets are securely managed within the Pulumi environment.
 
-As the saying goes, time is money. With Pulumi ESC, by spending a few minutes to download the ESC CLI, you're setting yourself up to save hours of troubleshooting and configuration management each month. The `esc run` command is more than just a command; it’s your ticket to a smoother, more efficient cloud journey.
+- **Streamlined Collaboration** - Because credentials will be centralized, `esc run` facilitates smoother team collaboration by providing a consistent environment for all team members to run commands with. Everyone can access the same secure environment which reduces the complexities of coordinating credentials and configurations across teams.
 
 ## Getting Started with esc run
 
-Now that we've covered why `esc run` is so valuable, let's dive into how you can start using this powerful feature. We'll walk you through the steps to run the `aws s3 ls` command without needing to configure AWS credentials locally.
+Now that we've covered why `esc run` is so valuable, let's dive into how you can start using it! We'll walk you through everything you need to do to run the `aws s3 ls` command without configuring local AWS credentials.
 
 ### Step 1: Install and login to Pulumi ESC
 
@@ -46,7 +46,7 @@ Logged in to pulumi.com as …
 
 While you can [manually set your credentials as secrets](https://www.pulumi.com/docs/esc-cli/commands/esc_env_set/) in your Pulumi ESC environment files, it isn’t a recommended best practice to create or maintain long-lived credentials for your cloud environments. A more secure and efficient alternative is to leverage yet another great feature of Pulumi ESC: dynamic credentials.
 
-Pulumi ESC can dynamically generate credentials on your behalf each time you need to interact with your AWS environments. To do so, you'll need to configure OpenID Connect (OIDC) between Pulumi and AWS. On the AWS side, there are two resources you'll need to create:
+Pulumi ESC can dynamically generate credentials on your behalf each time you need to interact with your AWS environments. To do so, you'll need to [configure OpenID Connect (OIDC) between Pulumi and AWS](https://www.pulumi.com/docs/pulumi-cloud/esc/providers/#setting-up-oidc). On the AWS side, there are two resources you'll need to create:
 
 - An IAM OIDC provider
 - An IAM Role
@@ -56,6 +56,8 @@ Let's start by creating the OIDC provider resource. There are a number of ways y
 {{< notes type="info" >}}
 Please note that while we’re providing the steps and screenshots that are accurate as of the date of this post, AWS documentation is subject to change. For the most current and precise information, always refer to the [official AWS documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_create_oidc.html).
 {{< /notes >}}
+
+#### a. Add identity provider
 
 In the navigation pane of the [IAM console](https://console.aws.amazon.com/iam/), choose **Identity providers**, and then choose **Add provider**.
 
@@ -76,6 +78,8 @@ The AWS console generates the thumbprint value on your behalf. However, if you a
 For the **Audience** field, provide the name of your Pulumi organization. Then scroll down to the bottom of the page and click **Add provider**.
 
 {{< video title="Filling out the fields of the Create Identity Provider wizard" src="./create-idp-wizard.mp4" autoplay="true" loop="true" >}}
+
+#### b. Assign IAM role
 
 You’ll see a notification at the top of your screen prompting you to assign an IAM role to your newly created provider. Click the **Assign role** button.
 
@@ -98,9 +102,11 @@ You will be directed to the last page of the wizard, where you can provide the n
 
 {{< video title="Adding name and description to role then creating it" src="./create-role.mp4" autoplay="true" loop="true" >}}
 
+#### c. Review trust policy
+
 One area that we want to draw your attention to is the **Select trusted entities** section which is where the trust policy of the role is defined.
 
-![An image of the IAM role trust policy](./show-trust-policy.png)
+![An image of the IAM role trust policy](./review-trust-policy.png)
 
 This definition currently allows any Pulumi service to assume this role, but only if the request comes from your organization. You can edit this policy to further limit access to this role to just the Pulumi ESC service, and you can make it even more granular by limiting access to a specific environment. This more detailed configuration is outside the scope of this blog post, but you can learn more about it by checking out the [relevant Pulumi documentation](https://www.pulumi.com/docs/pulumi-cloud/esc/providers/aws-login/#configuring-the-iam-role-and-trust-policy).
 
@@ -129,8 +135,6 @@ values:
     AWS_ACCESS_KEY_ID: ${aws.login.accessKeyId}
     AWS_SECRET_ACCESS_KEY: ${aws.login.secretAccessKey}
     AWS_SESSION_TOKEN: ${aws.login.sessionToken}
-
-
 ```
 
 The variables defined under the `environmentVariables` parameter above are the same environment variables that AWS uses when you’re locally authenticating using the AWS CLI. You can find out more about this provider definition and how it works in the Pulumi ESC documentation for [the AWS provider](https://www.pulumi.com/docs/pulumi-cloud/esc/providers/aws-login/#example) as well as the documentation for [projecting environment variables](https://www.pulumi.com/docs/pulumi-cloud/esc/environments/#projecting-environment-variables).
@@ -139,7 +143,7 @@ Scroll to the bottom of the page and click **Save**.
 
 {{< video title="Adding configuration to Pulumi ESC environment" src="./add-environment-config.mp4" autoplay="true" loop="true" >}}
 
-Step 5: Run your command
+### Step 5: Run your command
 
 Now to the fun part! With your environment set up, try it out by listing all of the S3 buckets in your AWS account. Start by running the `aws s3 ls` command as normal, making sure that the environment that you're working from does not have any AWS credentials configured. You should see the following response:
 
@@ -169,4 +173,4 @@ With Pulumi ESC, you can create an environment, dynamically generate and securel
 
 ## Conclusion
 
-Pulumi ESC, and the `esc run` command in particular, are designed to make your cloud journey smoother, more secure, and less daunting. So, the next time you find yourself drowning in a sea of cloud configurations, remember, with Pulumi ESC and a dash of code, you can say goodbye to manual configuration hassles and hello to efficient, secure, and scalable cloud development with Pulumi ESC. Check it out and let us know what you think!
+Pulumi ESC, and the `esc run` command in particular, are designed to make your cloud journey smoother, more secure, and less daunting. So, the next time you find yourself drowning in a sea of cloud configurations, remember, with Pulumi ESC and a dash of code, you can say goodbye to manual configuration hassles and hello to efficient, secure, and scalable cloud development with Pulumi ESC. Feel free to [join our community on Slack](https://slack.pulumi.com/) and let us know what you think!
