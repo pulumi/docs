@@ -7,7 +7,7 @@ date: "2023-10-27"
 meta_image: "meta.png"
 ---
 
-The `esc run` command of [Pulumi ESC (Environments, Secrets, and Configuration)](https://www.pulumi.com/product/esc/) is your trusty sidekick in the relentless battle against one of the cloud realm's most notorious villains: credential mismanagement. Whether you’re a seasoned developer or just stepping into the cloud realm, you’ve likely encountered the frustrating, time-consuming error messages like "Invalid credentials" when your tokens or access keys go astray. It’s a common narrative that can halt progress in its tracks. But, this is an area where `esc run` really shines.
+The `esc run` command of [Pulumi ESC (Environments, Secrets, and Configuration)](https://www.pulumi.com/product/esc/) is your trusty sidekick in the relentless battle against one of the cloud realm's most notorious villains: credential mismanagement. Whether you’re a seasoned developer or just stepping into the cloud, you’ve likely encountered the frustrating, time-consuming error messages like "Invalid credentials" when your tokens or access keys go astray. It’s a common narrative that can halt progress in its tracks. But, this is an area where `esc run` really shines.
 
 <!--more-->
 
