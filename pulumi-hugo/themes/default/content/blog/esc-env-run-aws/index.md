@@ -7,7 +7,7 @@ date: "2023-10-25"
 meta_image: "meta.png"
 ---
 
-In a world where cloud computing is the backbone of modern applications, managing environments and secrets is of the utmost importance. Earlier this month we released a new service called Pulumi ESC (Environments, Secrets, and Configuration), the focus of which is to help alleviate the burden of managing cloud configuration by providing a centralized way to handle these critical aspects of cloud development. It's like having a Swiss Army knife in your toolkit, ready to tackle the challenges of cloud infrastructure. This post is the first post in a series that will highlight the specific challenge of **credentials management**, and we’ll specifically dive into how using the `esc run` functionality of Pulumi ESC will make that easier.
+In a world where cloud computing is the backbone of modern applications, managing environments and secrets is of the utmost importance. Earlier this month we released a new service called [Pulumi ESC (Environments, Secrets, and Configuration)](https://www.pulumi.com/product/esc/), the focus of which is to help alleviate the burden of managing cloud configuration by providing a centralized way to handle these critical aspects of cloud development. It's like having a Swiss Army knife in your toolkit, ready to tackle the challenges of cloud infrastructure. This post is the first post in a series that will highlight the specific challenge of **credentials management**, and we’ll specifically dive into how using the `esc run` functionality of Pulumi ESC will make that easier.
 
 <!--more-->
 
