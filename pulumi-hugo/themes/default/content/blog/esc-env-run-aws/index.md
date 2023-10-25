@@ -141,7 +141,15 @@ Scroll to the bottom of the page and click **Save**.
 
 Step 5: Run your command
 
-Now to the fun part! With your environment set up, try it out by listing all of the S3 buckets in your AWS account as shown below. Make sure to replace the placeholder text with the names of your own Pulumi organization and environment.
+Now to the fun part! With your environment set up, try it out by listing all of the S3 buckets in your AWS account as shown below. Start by running the `aws s3 ls` command as normal, making sure that the environment that you're working from does not have any AWS credentials configured. You should see the following response:
+
+```
+$ aws s3 ls
+
+Unable to locate credentials. You can configure credentials by running "aws configure".
+```
+
+Now run the command using `esc run` as shown below, making sure to replace the placeholder text with the names of your own Pulumi organization and environment:
 
 ```
 esc run <your-pulumi-org-name>/<your-environment-name> -i aws s3 ls
