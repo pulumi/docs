@@ -118,28 +118,10 @@ const uploadsBucketAcl = new aws.s3.BucketAclV2("uploads-bucket-acl", {
 });
 
 const bundlesBucket = new aws.s3.Bucket("bundles-bucket", {
+    forceDestroy: true,
     website: {
         indexDocument: "index.html",
     },
-});
-
-const bundlesBucketPublicAccessBlock = new aws.s3.BucketPublicAccessBlock("bundles-public-access-block", {
-    bucket: bundlesBucket.id,
-    blockPublicAcls: false,
-});
-
-const bundlesBucketOwnershipControls = new aws.s3.BucketOwnershipControls("bundles-bucket-ownership-controls", {
-    bucket: bundlesBucket.id,
-    rule: {
-        objectOwnership: "ObjectWriter"
-    }
-});
-
-const bundlesBucketAcl = new aws.s3.BucketAclV2("bundles-bucket-acl", {
-    bucket: bundlesBucket.id,
-    acl: aws.s3.PublicReadAcl,
-}, {
-    dependsOn: [bundlesBucketPublicAccessBlock, bundlesBucketOwnershipControls],
 });
 
 // Optionally create a fallback bucket for serving the website directly out of S3 when necessary.
@@ -285,8 +267,6 @@ const baseCacheBehavior = {
     responseHeadersPolicyId: "67f7725c-6f97-4210-82d7-5512b31e9d03", // SecurityHeadersPolicy
 };
 
-const bundleOrigins: aws.types.input.cloudfront.DistributionOrigin[] = [];
-const bundleBehaviors: aws.types.input.cloudfront.DistributionOrderedCacheBehavior[] = [];
 const registryOrigins: aws.types.input.cloudfront.DistributionOrigin[] = [];
 const registryBehaviors: aws.types.input.cloudfront.DistributionOrderedCacheBehavior[] = [];
 
@@ -294,56 +274,6 @@ if (config.registryStack) {
     const registryStack = new pulumi.StackReference(config.registryStack);
     const registryCDN = registryStack.getOutput("cloudFrontDomain");
 
-    bundleOrigins.push(
-        {
-            originId: bundlesBucket.arn,
-            domainName: bundlesBucket.websiteEndpoint,
-            customOriginConfig: {
-                originProtocolPolicy: "http-only",
-                httpPort: 80,
-                httpsPort: 443,
-                originSslProtocols: ["TLSv1.2"],
-            }
-        }
-    );
-    bundleBehaviors.push(
-        {
-            ...baseCacheBehavior,
-            targetOriginId: bundlesBucket.arn,
-            pathPattern: "/css/*",
-            defaultTtl: oneHour,
-            maxTtl: oneHour,
-            forwardedValues: {
-                cookies: {
-                    forward: "none",
-                },
-                queryString: false,
-                headers: [
-                    "Origin",
-                    "Access-Control-Request-Headers",
-                    "Access-Control-Request-Method",
-                ],
-            },
-        },
-        {
-            ...baseCacheBehavior,
-            targetOriginId: bundlesBucket.arn,
-            pathPattern: "/js/*",
-            defaultTtl: oneHour,
-            maxTtl: oneHour,
-            forwardedValues: {
-                cookies: {
-                    forward: "none",
-                },
-                queryString: false,
-                headers: [
-                    "Origin",
-                    "Access-Control-Request-Headers",
-                    "Access-Control-Request-Method",
-                ],
-            },
-        }
-    );
     registryOrigins.push(
         {
             originId: registryCDN,
@@ -370,8 +300,6 @@ if (config.registryStack) {
         },
     )
 }
-
-
 
 // domainAliases is a list of CNAMEs that accompany the CloudFront distribution. Any
 const domainAliases = [];
@@ -430,8 +358,6 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
             },
         },
         ...registryOrigins,
-        // Add css bucket origins. These will be empty in the current production flow.
-        ...bundleOrigins
     ],
 
     // Default object to serve when no path is given.
@@ -443,7 +369,6 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
     },
 
     orderedCacheBehaviors: [
-        ...bundleBehaviors,
         ...registryBehaviors,
         {
             ...baseCacheBehavior,
@@ -693,4 +618,3 @@ export const originBucketWebsiteEndpoint = originBucket.websiteEndpoint;
 export const cloudFrontDomain = cdn.domainName;
 export const websiteDomain = config.websiteDomain;
 export const originS3BucketName = originBucket.bucket;
-export const bundlesS3BucketName = bundlesBucket.bucket;
