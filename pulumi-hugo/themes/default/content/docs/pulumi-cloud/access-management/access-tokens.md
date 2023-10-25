@@ -95,6 +95,10 @@ To delete an access token:
 
 ## Organization access tokens
 
+{{< notes type="info" >}}
+Please note that this functionality is available only in the [Enterprise and Business Critical editions](https://www.pulumi.com/pricing/) of Pulumi.
+{{< /notes >}}
+
 Organization access tokens provide the following benefits:
 
 * Organization access tokens belong to the organization. Any organization admin can view, create, and delete organization tokens. If a member of your organization leaves, you don't have to worry about losing access to core CI/CD tokens attached to their personal account.
