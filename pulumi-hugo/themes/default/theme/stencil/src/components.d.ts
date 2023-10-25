@@ -19,6 +19,9 @@ export namespace Components {
         "modalTitle": string;
         "redirectUrl": string;
     }
+    interface HeaderCta {
+        "buttonClass": string;
+    }
     interface HomeSlots {
         "centerItems": string;
         "imageClass": string;
@@ -196,6 +199,12 @@ declare global {
     var HTMLEventSessionRegistrationModalElement: {
         prototype: HTMLEventSessionRegistrationModalElement;
         new (): HTMLEventSessionRegistrationModalElement;
+    };
+    interface HTMLHeaderCtaElement extends Components.HeaderCta, HTMLStencilElement {
+    }
+    var HTMLHeaderCtaElement: {
+        prototype: HTMLHeaderCtaElement;
+        new (): HTMLHeaderCtaElement;
     };
     interface HTMLHomeSlotsElement extends Components.HomeSlots, HTMLStencilElement {
     }
@@ -415,6 +424,7 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "event-session-registration-modal": HTMLEventSessionRegistrationModalElement;
+        "header-cta": HTMLHeaderCtaElement;
         "home-slots": HTMLHomeSlotsElement;
         "pulumi-api-doc-filterable-nav": HTMLPulumiApiDocFilterableNavElement;
         "pulumi-api-doc-nav-node": HTMLPulumiApiDocNavNodeElement;
@@ -460,6 +470,9 @@ declare namespace LocalJSX {
         "eventSessions"?: string;
         "modalTitle"?: string;
         "redirectUrl"?: string;
+    }
+    interface HeaderCta {
+        "buttonClass"?: string;
     }
     interface HomeSlots {
         "centerItems"?: string;
@@ -628,6 +641,7 @@ declare namespace LocalJSX {
     }
     interface IntrinsicElements {
         "event-session-registration-modal": EventSessionRegistrationModal;
+        "header-cta": HeaderCta;
         "home-slots": HomeSlots;
         "pulumi-api-doc-filterable-nav": PulumiApiDocFilterableNav;
         "pulumi-api-doc-nav-node": PulumiApiDocNavNode;
@@ -671,6 +685,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "event-session-registration-modal": LocalJSX.EventSessionRegistrationModal & JSXBase.HTMLAttributes<HTMLEventSessionRegistrationModalElement>;
+            "header-cta": LocalJSX.HeaderCta & JSXBase.HTMLAttributes<HTMLHeaderCtaElement>;
             "home-slots": LocalJSX.HomeSlots & JSXBase.HTMLAttributes<HTMLHomeSlotsElement>;
             "pulumi-api-doc-filterable-nav": LocalJSX.PulumiApiDocFilterableNav & JSXBase.HTMLAttributes<HTMLPulumiApiDocFilterableNavElement>;
             "pulumi-api-doc-nav-node": LocalJSX.PulumiApiDocNavNode & JSXBase.HTMLAttributes<HTMLPulumiApiDocNavNodeElement>;

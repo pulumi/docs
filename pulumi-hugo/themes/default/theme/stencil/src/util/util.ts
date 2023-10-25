@@ -87,7 +87,7 @@ export function parseUTMCookieString(utmCookieString: string) {
 }
 
 // parseCookie parses the document's cookie into an object.
-export function parseCookie() {
+export function parseCookie(): Record<string, string> {
     return document.cookie.split(";").reduce((obj, cookie) => {
         const index = cookie.indexOf("=");
         const key = cookie.substring(0, index).trim();
