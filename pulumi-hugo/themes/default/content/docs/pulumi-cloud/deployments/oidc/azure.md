@@ -19,6 +19,7 @@ This document outlines the steps required to configure Pulumi Deployments to use
 ## Prerequisites
 
 * You must be an admin of your Pulumi organization.
+* You must have access in the Azure Portal to create and configure Azure Active Directory App registrations.
 
 ## Creating the Azure Active Directory App
 
@@ -28,16 +29,17 @@ After the AAD App has been created, take note of the Application (client) ID and
 
 ## Adding federated credentials
 
-Navigate to the "Certificates & secrets" pane using the sidebar. Then, select the "Federated credentials" tab and click on the "Add credential" button.
+In the Azure Portal:
 
-In the wizard, select "Other Issuer" as the "Federated credential scenario".
-
-Finally, fill in the "Issuer", "Subject Identifier", "Name", and "Audience" fields in the form.
-
-* "Issuer" must be `https://api.pulumi.com/oidc`
-* "Subject Identifier" must be a valid [subject claim](/docs/guides/oidc/#overview) (see examples at the end of this section).
-* "Name" is an arbitrary name for the credential
-* "Audience" must be the name of your Pulumi organization
+1. Navigate to the "Certificates & secrets" pane using the sidebar.
+2. Select the "Federated credentials" tab.
+3. Click on the "Add credential" button. This will start the "Add a credential" wizard.
+4. In the wizard, select "Other Issuer" as the "Federated credential scenario".
+5. Fill in the remaining form fields as follows:
+    * **Issuer:** `https://api.pulumi.com/oidc`
+    * **Subject Identifier:** must be a valid [subject claim](/docs/guides/oidc/#overview) (see examples at the end of this section).
+    * **Name:** An arbitrary name for the credential, e.g. "pulumi-deployments"
+    * **Audience:** The name of your Pulumi organization.
 
 Because Azure's federated credentials require that the subject identifier exactly matches an OIDC token's subject claim, this process must be repeated for each permutation of the subject claim that is possible for a stack. For example, in order to enable all of the valid operations on a stack named `dev` of the `core` project in the `contoso` organization, you would need to create credentials for each of the following subject identifiers:
 
