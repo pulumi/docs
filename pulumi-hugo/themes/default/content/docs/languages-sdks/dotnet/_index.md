@@ -52,7 +52,10 @@ public class MyStack : Stack
     public MyStack()
     {
         // Create an Azure Resource Group
-        var resourceGroup = new ResourceGroup("resourceGroup");
+        var resourceGroup = new ResourceGroup("resourceGroup", new ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
 
         // Create an Azure Storage Account
         var storageAccount = new Account("storage", new AccountArgs
