@@ -1,44 +1,44 @@
 ---
 title: KubeCon + CloudNativeCon 2023
-meta_desc: Join Pulumi at Kubecon EU 2023 to learn about the latest developments in infrastructure as code, Kubernetes, observability, and cloud-native computing.
-meta_image: /images/kubecon/kubecon-meta.png
+meta_desc: Join Pulumi at Kubecon 2023 to learn about the latest developments in infrastructure as code, Kubernetes, observability, and cloud-native computing.
+meta_image: /images/kubecon/kubecon-fall-meta.png
 type: page
 layout: kubecon
 
 
 links:
     items:
-        - heading: RSVP to Happy Hour
-          description: Join Kong, LaunchDarkly, Pulumi, and Honeycomb for an evening of light fare, libations, and conversations.<br/><b>Limited Spots Remaining</b><br/>April 20, 6:30pm CEST at De Kroon Restaurant & Club.
+        - heading: RSVP to DevApps & Brews
+          description: Join Nutanix, Outshift, Pulumi, and Tailscale for an evening of food, drinks, music, and networking.<br/><b>Limited Spots Remaining</b><br/>November 8, 6:00pm CST at AceBounce.
           action: Reserve your spot
-          link: https://kubeconemeahappyhour.eventbrite.com/?aff=pulumi
-        - heading: Join a Workshop
-          description: Our workshops are live, and 100% open source. Choose from fundamental to advanced topics. They are hands-on and code source is provided.
-          action: Check upcoming workshops
-          link: /resources#upcoming
+          link: https://page.gitlab.com/event-nov08-devapps-and-brews-kubeconna.html?utm_medium=referral&utm_campaign=20231108_kubeconna2023_in-person_ancillaryevent&utm_budget=corp&utm_partnerid=0018X000038R0APQA0
+        - heading: Request a Demo
+          description: See how Pulumi can help you ship infrastructure faster, and manage Kubernetes clusters at scale on all major cloud providers. Ready for a change?
+          action: Talk with an Engineer
+          link: /request-a-demo/
 
 workshops:
     items:
-      - title: Getting Started with Kubernetes on Azure
-        date: April 25, 2023
-        description: In this workshop, you will learn how to deploy a Kubernetes cluster on Microsoft Azure and run containerized applications on the cluster.
-        link: /resources/getting-started-with-kubernetes-azure
-        action: Register
+      - title: From Zero to Production in Kubernetes
+        date: November 15, 2023
+        description: Explore how to leverage the power of Python with Pulumi, an infrastructure as code platform to define and manage your Kubernetes deployments.
+        link: /resources/from-zero-to-production-in-kubernetes/
+        action: Register Now
+      - title: Getting Started with Secrets Management on AWS
+        date: November 16, 2023
+        description: Learn how to manage configuration and secrets across all of your AWS environments with Pulumi ESC and AWS Secrets Manager.
+        link: /resources/getting-started-with-secrets-management-aws/
+        action: Register Now
       - title: Getting Started with Kubernetes on AWS
-        date: April 26, 2023
+        date: November 21, 2023
         description: In this workshop, you will learn the fundamentals of setting up EKS clusters on AWS through guided exercises using Pulumi.
-        link: /resources/getting-started-with-kubernetes-aws
-        action: Register
-      - title: Getting Started with Kubernetes on Google Cloud
-        date: April 27, 2023
-        description: In this workshop, you will learn how to deploy a Kubernetes cluster on Google Cloud and run containerized applications on the cluster.
-        link: /resources/getting-started-with-kubernetes-google-cloud
-        action: Register
-      - title: Production-ready Kubernetes for Python Developers
-        date: May 18, 2023
-        description: In this workshop, you will learn how to deploy a Kubernetes cluster using the Python language. (External webinar)
-        link: https://community.cncf.io/events/details/cncf-cncf-online-programs-presents-cncf-on-demand-webinar-production-ready-kubernetes-for-python-developers/
-        action: Register
+        link: /resources/getting-started-with-kubernetes-aws/
+        action: Register Now
+      - title: Sharing Code with Pulumi Packages, Abstractions, and More
+        date:
+        description: Explore how to start sharing Pulumi code with others. Use Go to build a custom architecture for Google Cloud that we'll compile down into a shareable library.
+        link: /resources/simpler-pulumi-package-authoring/
+        action: Watch
 
 templates:
     items:
