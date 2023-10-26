@@ -9,7 +9,7 @@ layout: kubecon
 links:
     items:
         - heading: RSVP to DevApps & Brews
-          description: Join Nutanix, Outshift, Pulumi, and Tailscale for an evening of food, drinks, music, and networking.<br/><b>Limited Spots Remaining</b><br/>November 8, 6:00pm CST at AceBounce.
+          description: Join Gitlab, Nutanix, Outshift, Pulumi, and Tailscale for an evening of food, drinks, music, and networking.<br/><b>Limited Spots Remaining</b><br/>November 8, 6:00pm CST at AceBounce.
           action: Reserve your spot
           link: https://page.gitlab.com/event-nov08-devapps-and-brews-kubeconna.html?utm_medium=referral&utm_campaign=20231108_kubeconna2023_in-person_ancillaryevent&utm_budget=corp&utm_partnerid=0018X000038R0APQA0
         - heading: Request a Demo
