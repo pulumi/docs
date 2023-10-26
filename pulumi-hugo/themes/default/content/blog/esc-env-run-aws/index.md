@@ -27,7 +27,7 @@ But what does this actually mean? If we use AWS as an example, it means that we 
 
 ## Getting Started with esc run
 
-Now that we've covered why `esc run` is so valuable, let's dive into how you can start using it! We'll walk you through everything you need to do to run the `aws s3 ls` command without configuring local AWS credentials.
+Now that we've covered why `esc run` is so valuable, let's dive into how you can start using it! We'll walk you through everything you need to do to run the `aws s3 ls` command without manually configuring local AWS credentials.
 
 ### Step 1: Install and login to Pulumi ESC
 
@@ -65,7 +65,7 @@ In the navigation pane of the [IAM console](https://console.aws.amazon.com/iam/)
 
 In the **Provider type** section, click the radio button next to **OpenID Connect**. For the **Provider URL**, provide the following URL:
 
-```
+```bash
 https://api.pulumi.com/oidc
 ```
 
@@ -122,7 +122,7 @@ Now that we’ve created all the necessary AWS resources, let’s move over to t
 
 Once you’ve created your new environment, you will be presented with a split-pane editor view. You’ll want to clear out the default placeholder content in the editor on the left-hand side and replace it with the following code, making sure to provide the value of your IAM role ARN from the previous step:
 
-```
+```yaml
 values:
   aws:
     login:
@@ -155,7 +155,7 @@ Unable to locate credentials. You can configure credentials by running "aws conf
 
 Now run the command using `esc run` as shown below, making sure to replace the placeholder text with the names of your own Pulumi organization and environment:
 
-```
+```bash
 esc run <your-pulumi-org-name>/<your-environment-name> -i aws s3 ls
 ```
 
