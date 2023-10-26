@@ -6,6 +6,7 @@
     "author": "Christian Nunciato <c@nunciato.org>",
     "license": "MIT",
     "dependencies": {
+        "@octokit/rest": "^20.0.2",
         "concurrently": "^6.0.0",
         "js-yaml": "^3.13.1",
         "markdownlint": "^0.17.2",
