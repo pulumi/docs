@@ -213,8 +213,10 @@ backend = docker.RemoteImage(f"{backend_image_name}_image",
 package main
 
 import (
-    "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-    "github.com/pulumi/pulumi-docker/sdk/v3/go/docker"
+	"fmt"
+
+	"github.com/pulumi/pulumi-docker/sdk/v3/go/docker"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -433,6 +435,8 @@ mongo_image = docker.RemoteImage("mongo_image",
 {{% /choosable %}}
 
 {{% choosable language go %}}
+
+Add this code at the bottom of your program, just before the last `return nil` statement:
 
 ```go
 // Pull the frontend image

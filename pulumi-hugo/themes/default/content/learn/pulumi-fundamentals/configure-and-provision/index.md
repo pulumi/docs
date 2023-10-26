@@ -382,7 +382,16 @@ pulumi config set mongoPort 27017
 This set of commands creates a file in your directory called `Pulumi.dev.yaml`
 to store the configuration for this stack.
 
-Now, try and rerun your Pulumi program.
+The content of the file should be like this:
+
+```yaml
+config:
+  my_first_app:backendPort: "3000"
+  my_first_app:frontendPort: "3001"
+  my_first_app:mongoPort: "27017"
+```
+
+Now, try and rerun your Pulumi program with `pulumi up` command.
 
 Your Pulumi program should now run, but you're not actually using these newly
 configured ports just yet! That's because we don't have any container resources
