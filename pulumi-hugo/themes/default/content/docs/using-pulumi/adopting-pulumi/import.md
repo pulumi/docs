@@ -44,7 +44,7 @@ Your Pulumi stack must be configured correctly---e.g., using the same AWS region
 
 ### Pulumi Import Command
 
-When importing resources via the CLI, there is a specific import syntax definition required for each resource. To see this definition, navigate to the corresponding resource page in the Pulumi registry and take a look at the **Import** section. Using the [AWS S3 Bucket resource](https://www.pulumi.com/registry/packages/aws/api-docs/s3/bucket/#import) as an example, the below code demonstrates how to import an existing AWS S3 bucket named `company-infra-logs` and defines the resource name for your Pulumi program as `infra-logs`:
+When importing resources via the CLI, there is a specific import syntax definition required for each resource. To see this definition, navigate to the corresponding resource page in the Pulumi registry and take a look at the **Import** section. Using the [AWS S3 Bucket resource](https://www.pulumi.com/registry/packages/aws/api-docs/s3/bucket/#import) as an example, the following command imports an existing AWS S3 bucket named `company-infra-logs` and defines the resource name for the Pulumi program as `infra-logs`:
 
 ```bash
 $ pulumi import aws:s3/bucket:Bucket infra-logs company-infra-logs
