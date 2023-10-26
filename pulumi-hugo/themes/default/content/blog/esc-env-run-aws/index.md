@@ -7,7 +7,7 @@ date: "2023-10-26"
 meta_image: "meta.png"
 ---
 
-In a world where cloud computing is the backbone of modern applications, managing environments and secrets is of the utmost importance. Earlier this month we released a new service called [Pulumi ESC (Environments, Secrets, and Configuration)](/product/esc/), the focus of which is to help alleviate the burden of managing cloud configuration and secrets by providing a centralized way to handle these critical aspects of cloud development. It’s like having a Swiss Army knife in your toolkit, ready to tackle the challenges of cloud infrastructure. This post will highlight the specific challenge of **credentials management**, and we’ll specifically dive into how using the esc run functionality of Pulumi ESC will make that easier.
+In a world where cloud computing is the backbone of modern applications, managing environments and secrets is of the utmost importance. Earlier this month we released a new service called [Pulumi ESC (Environments, Secrets, and Configuration)](/product/esc/), the focus of which is to help alleviate the burden of managing cloud configuration and secrets by providing a centralized way to handle these critical aspects of cloud development. It’s like having a Swiss Army knife in your toolkit, ready to tackle the challenges of cloud infrastructure. This post will highlight the specific challenge of **credentials management**, and we’ll specifically dive into how using the `esc run` functionality of Pulumi ESC will make that easier.
 
 <!--more-->
 
@@ -180,7 +180,7 @@ This is one example from several dozen use cases possible via Pulumi ESC. Other 
 
 ## Conclusion
 
-Pulumi ESC, and the `esc run` command in particular, are designed to make your cloud journey smoother, more secure, and less daunting. So, the next time you find yourself drowning in a sea of cloud configurations, remember, with Pulumi ESC and a dash of code, you can say goodbye to manual configuration hassles and hello to efficient, secure, and scalable cloud development with Pulumi ESC.
+Pulumi ESC, and the `esc run` command in particular, is designed to make your cloud journey smoother, more secure, and less daunting. So, the next time you find yourself drowning in a sea of cloud configurations, remember, with Pulumi ESC and a dash of code, you can say goodbye to manual configuration hassles and hello to efficient, secure, and scalable cloud development with Pulumi ESC.
 
 Want to learn more about Pulumi? Our [Get Started with Pulumi](https://www.pulumi.com/docs/get-started/) hub is a great place to start.
 
