@@ -182,7 +182,7 @@ This is one example from several dozen use cases possible via Pulumi ESC. Other 
 
 Pulumi ESC, and the `esc run` command in particular, are designed to make your cloud journey smoother, more secure, and less daunting. So, the next time you find yourself drowning in a sea of cloud configurations, remember, with Pulumi ESC and a dash of code, you can say goodbye to manual configuration hassles and hello to efficient, secure, and scalable cloud development with Pulumi ESC.
 
-Want to learn more about Pulumi? Our [Get Started with Pulumi](https://www.pulumi.com/docs/get-started/) hub is a great place to start. This is also where you can find out how to manually configure OIDC for other Pulumi providers.
+Want to learn more about Pulumi? Our [Get Started with Pulumi](https://www.pulumi.com/docs/get-started/) hub is a great place to start.
 
 If you’re looking for an automated (and faster) way to configure OIDC with Pulumi, we’ve got you covered! Check out our [Examples repo](https://github.com/pulumi/examples) where we offer a wide variety of automations using Pulumi Infrastructure as Code (IaC). For OIDC in particular, we have example automation for:
 
