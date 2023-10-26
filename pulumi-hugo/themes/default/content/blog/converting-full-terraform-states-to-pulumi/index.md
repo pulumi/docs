@@ -9,7 +9,7 @@ tags:
     - migration
 ---
 
-Building on our work of [converting Terraform projects](/docs/converting-full-terraform-programs-to-pulumi), we now have support for adopting resources from Terraform state.
+Building on our work of [converting Terraform projects](/blog/converting-full-terraform-programs-to-pulumi/), we now have support for adopting resources from Terraform state.
 
 <!--more-->
 
