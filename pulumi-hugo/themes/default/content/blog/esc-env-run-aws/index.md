@@ -3,11 +3,11 @@ title: "From Zero to esc run"
 authors: ["torian-crane"]
 tags: ["aws", "secrets", "credentials-management"]
 meta_desc: "From Zero to esc run placeholder area for blog content."
-date: "2023-10-25"
+date: "2023-10-26"
 meta_image: "meta.png"
 ---
 
-In a world where cloud computing is the backbone of modern applications, managing environments and secrets is of the utmost importance. Earlier this month we released a new service called [Pulumi ESC (Environments, Secrets, and Configuration)](/product/esc/), the focus of which is to help alleviate the burden of managing cloud configuration by providing a centralized way to handle these critical aspects of cloud development. It's like having a Swiss Army knife in your toolkit, ready to tackle the challenges of cloud infrastructure. This post is the first post in a series that will highlight the specific challenge of **credentials management**, and we’ll specifically dive into how using the `esc run` functionality of Pulumi ESC will make that easier.
+In a world where cloud computing is the backbone of modern applications, managing environments and secrets is of the utmost importance. Earlier this month we released a new service called [Pulumi ESC (Environments, Secrets, and Configuration)](/product/esc/), the focus of which is to help alleviate the burden of managing cloud configuration and secrets by providing a centralized way to handle these critical aspects of cloud development. It’s like having a Swiss Army knife in your toolkit, ready to tackle the challenges of cloud infrastructure. This post will highlight the specific challenge of **credentials management**, and we’ll specifically dive into how using the esc run functionality of Pulumi ESC will make that easier.
 
 <!--more-->
 
@@ -17,9 +17,9 @@ The [Pulumi documentation for the `esc run` command](/docs/esc-cli/commands/esc_
 
 > This command opens the environment with the given name and runs the given command. If the opened environment contains a top-level ’environmentVariables’ object, each key-value pair in the object is made available to the command as an environment variable.
 
-But what does this actually mean? If we use AWS as an example, it means that we can run commands like `aws s3 ls` without the need to configure AWS credentials locally each time. It’s a significant stride towards making your cloud interactions more efficient and less error-prone, and here’s a deeper dive into why:
+But what does this actually mean? If we use AWS as an example, it means that we can run commands like `aws s3 ls` without the need to manually configure AWS credentials in local environments. It’s a significant stride towards making your cloud interactions more efficient and less error-prone, and here’s a deeper dive into why:
 
-- **Seamless Command Execution** - The `esc run` command lets you execute AWS commands effortlessly, freeing you from the intricacies of managing AWS credentials on your local machine. Simply put, it significantly reduces the overhead of credential setup and maintenance.
+- **Seamless Command Execution** - The `esc run` command lets you execute AWS commands effortlessly, freeing you from the intricacies of managing AWS credentials on your local machine. As a developer, you could get temporary credentials or assume a role for a particular environment to check whether your application works. Simply put, it significantly reduces the overhead of credential setup and maintenance.
 
 - **Enhanced Security** - One of the standout features of `esc run` is its commitment to security. By removing the local storage of credentials, it drastically reduces the risk of accidental exposure. Your credentials and secrets are securely managed within the Pulumi environment.
 
@@ -44,9 +44,9 @@ Logged in to pulumi.com as …
 
 ### Step 2: Create the OIDC configuration
 
-While you can [manually set your credentials as secrets](/docs/esc-cli/commands/esc_env_set/) in your Pulumi ESC environment files, it isn’t a recommended best practice to create or maintain long-lived credentials for your cloud environments. A more secure and efficient alternative is to leverage yet another great feature of Pulumi ESC: dynamic credentials.
+Pulumi ESC offers you the ability to [manually set your credentials as secrets](/docs/esc-cli/commands/esc_env_set/) in your Pulumi ESC environment files. When it comes to something like OpenID Connect (OIDC) configuration, a more secure and efficient alternative is to leverage yet another great feature of Pulumi ESC: dynamic credentials.
 
-Pulumi ESC can dynamically generate credentials on your behalf each time you need to interact with your AWS environments. To do so, you'll need to [configure OpenID Connect (OIDC) between Pulumi and AWS](/docs/pulumi-cloud/esc/providers/#setting-up-oidc). On the AWS side, there are two resources you'll need to create:
+This service can dynamically generate credentials on your behalf each time you need to interact with your AWS environments. To do so, you'll need to [configure OpenID Connect (OIDC) between Pulumi and AWS](/docs/pulumi-cloud/esc/providers/#setting-up-oidc). On the AWS side, there are two resources you'll need to create:
 
 - An IAM OIDC provider
 - An IAM Role
@@ -137,7 +137,7 @@ values:
     AWS_SESSION_TOKEN: ${aws.login.sessionToken}
 ```
 
-The variables defined under the `environmentVariables` parameter above are the same environment variables that AWS uses when you’re locally authenticating using the AWS CLI. You can find out more about this provider definition and how it works in the Pulumi ESC documentation for [the AWS provider](https://www.pulumi.com/docs/pulumi-cloud/esc/providers/aws-login/#example) as well as the documentation for [projecting environment variables](https://www.pulumi.com/docs/pulumi-cloud/esc/environments/#projecting-environment-variables).
+The variables defined under the `environmentVariables` parameter above are the same environment variables that the AWS CLI uses if you were authenticating with something like the `aws configure` command.  What the above configuration is doing is dynamically generating the credentials and projecting those credential values into your local environment. From there, the AWS CLI picks up those environment variables and runs the designated command. You can find out more about this provider definition and how it works in the Pulumi ESC documentation for [the AWS provider](https://www.pulumi.com/docs/pulumi-cloud/esc/providers/aws-login/#example) as well as the documentation for [projecting environment variables](https://www.pulumi.com/docs/pulumi-cloud/esc/environments/#projecting-environment-variables).
 
 Scroll to the bottom of the page and click **Save**.
 
@@ -161,16 +161,33 @@ esc run <your-pulumi-org-name>/<your-environment-name> -i aws s3 ls
 
 Voila! You’ve just run an AWS command without any local AWS credential configuration. This is just the tip of the iceberg of how the `esc run` command can be a game-changer in how you and your team manage and interact with cloud resources.
 
-{{< notes type="info" >}}
-Manually navigating through the steps of configuring an OIDC provider in AWS can be a bit of a puzzle. However, we've got you covered! We've also crafted an automated [example](https://github.com/pulumi/examples/tree/master/aws-py-oidc-provider-pulumi-cloud) using Pulumi Infrastructure as Code (IaC). Dive in and explore how we've simplified the process!
-{{< /notes >}}
-
-## Real-World Use Case: Automated Data Backup
+## Real-World Use Cases
 
 To further illustrate the power of Pulumi ESC, let's consider a real-world use case: automated data backup. Imagine you have a web application that generates daily logs stored in an S3 bucket. You want to schedule a daily backup job to copy these logs to a separate bucket without exposing your AWS credentials in your scripts or having to manually configure them each time.
 
-With Pulumi ESC, you can create an environment, dynamically generate and securely store your AWS credentials, and schedule a daily backup job using a simple script that runs the `aws s3 cp` command. This ensures your backups are automated, secure, and easily maintainable, all thanks to Pulumi ESC.
+With Pulumi ESC, you can create an environment, dynamically generate your AWS credentials, and schedule a daily backup job using a simple script that runs the `aws s3 cp` command. This ensures your backups are automated, secure, and easily maintainable, all thanks to Pulumi ESC.
+
+This is one example from several dozen use cases possible via Pulumi ESC. Other examples include but are not limited to:
+
+- **Disaster Recovery**:
+  - Aside from data backups, Pulumi ESC can also be used in disaster recovery scenarios. The `esc run` command can be utilized to automate the recovery processes, ensuring quicker restoration of services with the correct configurations.
+- **Environment Segregation and Management**:
+  - In organizations with multiple development, staging, and production environments, Pulumi ESC facilitates easy segregation and management of these environments. The `esc run` command allows developers to execute commands in designated environments without the hassle of manual configuration changes.
+- **Continuous Integration/Deployment (CI/CD) Pipelines**:
+  - Pulumi ESC can be integrated into CI/CD pipelines to automate deployment processes. The `esc run` command can be used to execute deployment scripts in a controlled and secure manner, making the deployment process more efficient and error-free.
+- **Application Testing and Debugging**:
+  - The esc run command facilitates smooth testing and debugging processes by allowing developers to run test scripts and debugging commands in designated environments with the necessary configurations set automatically.
 
 ## Conclusion
 
-Pulumi ESC, and the `esc run` command in particular, are designed to make your cloud journey smoother, more secure, and less daunting. So, the next time you find yourself drowning in a sea of cloud configurations, remember, with Pulumi ESC and a dash of code, you can say goodbye to manual configuration hassles and hello to efficient, secure, and scalable cloud development with Pulumi ESC. Feel free to [join our community on Slack](https://slack.pulumi.com/) and let us know what you think!
+Pulumi ESC, and the `esc run` command in particular, are designed to make your cloud journey smoother, more secure, and less daunting. So, the next time you find yourself drowning in a sea of cloud configurations, remember, with Pulumi ESC and a dash of code, you can say goodbye to manual configuration hassles and hello to efficient, secure, and scalable cloud development with Pulumi ESC.
+
+Want to learn more about Pulumi? Our [Get Started with Pulumi](https://www.pulumi.com/docs/get-started/) hub is a great place to start. This is also where you can find out how to manually configure OIDC for other Pulumi providers.
+
+If you’re looking for an automated (and faster) way to configure OIDC with Pulumi, we’ve got you covered! Check out our [Examples repo](https://github.com/pulumi/examples) where we offer a wide variety of automations using Pulumi Infrastructure as Code (IaC). For OIDC in particular, we have example automation for:
+
+- [AWS](https://github.com/pulumi/examples/tree/master/aws-py-oidc-provider-pulumi-cloud)
+- [Azure](https://github.com/pulumi/examples/tree/master/azure-py-oidc-provider-pulumi-cloud)
+- [Google Cloud](https://github.com/pulumi/examples/tree/master/gcp-py-oidc-provider-pulumi-cloud)
+
+Feel free to [join our community on Slack](https://slack.pulumi.com/) and let us know what you think!
