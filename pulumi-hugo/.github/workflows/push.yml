@@ -31,14 +31,9 @@ jobs:
         with:
           token: ${{ secrets.PULUMI_BOT_TOKEN }}
 
-      - name: Fetch the latest pulumi/registry
-        run: |
-          hugo mod get github.com/pulumi/registry/themes/default
-          hugo mod tidy
-
       - name: Build assets
         run: |
-          make ensure build-assets
+          make ensure ci-await build-assets
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -47,12 +42,6 @@ jobs:
         with:
           file_pattern: theme/default/assets/js/bundle.js theme/default/assets/js/marketing.js theme/default/assets/css/bundle.css theme/default/assets/css/marketing.css
           commit_message: Commit asset bundles
-
-      - name: Commit any changes to go.mod/go.sum
-        uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          file_pattern: go.*
-          commit_message: Update go.mod
 
   notify:
     if: failure()

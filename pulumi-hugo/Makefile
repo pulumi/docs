@@ -41,6 +41,10 @@ serve-all:
 build-assets:
 	yarn --cwd ./themes/default/theme run build
 
+.PHONY: ci-await
+ci-await:
+	node ./scripts/ci/await-in-progress.js
+
 .PHONY: ci-pull-request
 ci-pull-request: ensure lint
 	./scripts/ci/pull-request.sh
