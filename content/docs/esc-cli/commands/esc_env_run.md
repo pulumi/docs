@@ -17,7 +17,7 @@ variable. Note that commands are not run in a subshell, so environment variable
 references in the command are not expanded by default. You should invoke the command
 inside a shell if you need environment variable expansion:
 
-    run -- zsh -c '"echo $MY_ENV_VAR"'
+    run -- . -c '"echo $MY_ENV_VAR"'
 
 The command to run is assumed to be non-interactive by default and its output
 streams are filtered to remove any secret values. Use the -i flag to run interactive
