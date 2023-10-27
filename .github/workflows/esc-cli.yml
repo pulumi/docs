@@ -45,6 +45,10 @@ jobs:
         uses: jaxxstorm/action-install-gh-release@v1.1.0
         with:
           repo: pulumi/pulumictl
+      - name: Install esc
+        uses: jaxxstorm/action-install-gh-release@v1.1.0
+        with:
+          repo: pulumi/esc
       - name: Install Hugo
         uses: peaceiris/actions-hugo@v2
         with:
