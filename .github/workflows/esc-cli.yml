@@ -64,6 +64,7 @@ jobs:
       - name: Generate Markdown docs
         run: |
           esc gen-docs ./content/docs/esc-cli/commands
+        working-directory: docs
       - name: Update latest version
         run: |
           VERSION_TAG=${{ env.ESC_VERSION }}
