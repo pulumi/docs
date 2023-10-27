@@ -138,6 +138,76 @@ cli:
     parent: commands
 
 # -------------------------------------
+# ESC Command Line Menu
+# -------------------------------------
+esc_cli:
+
+  - name: esc
+    url: /docs/esc-cli/commands/esc/
+    weight: 1
+    parent: commands
+
+  - name: esc env
+    url: /docs/esc-cli/commands/esc_env/
+    weight: 2
+    parent: commands
+
+  - name: esc completion
+    url: /docs/esc-cli/commands/esc_completion/
+    weight: 2
+    parent: commands
+
+  - name: esc env edit
+    url: /docs/esc-cli/commands/esc_env_edit/
+    weight: 2
+    parent: commands
+
+  - name: esc env get
+    url: /docs/esc-cli/commands/esc_env_get/
+    weight: 2
+    parent: commands
+
+  - name: esc env init
+    url: /docs/esc-cli/commands/esc_env_init/
+    weight: 2
+    parent: commands
+
+  - name: esc env ls
+    url: /docs/esc-cli/commands/esc_env_ls/
+    weight: 2
+    parent: commands
+
+  - name: esc env rm
+    url: /docs/esc-cli/commands/esc_env_rm/
+    weight: 2
+    parent: commands
+
+  - name: esc env set
+    url: /docs/esc-cli/commands/esc_env_set/
+    weight: 2
+    parent: commands
+
+  - name: esc login
+    url: /docs/esc-cli/commands/esc_login/
+    weight: 2
+    parent: commands
+
+  - name: esc open
+    url: /docs/esc-cli/commands/esc_open/
+    weight: 2
+    parent: commands
+
+  - name: esc run
+    url: /docs/esc-cli/commands/esc_run/
+    weight: 2
+    parent: commands
+
+  - name: esc version
+    url: /docs/esc-cli/commands/esc_version/
+    weight: 2
+    parent: commands
+
+# -------------------------------------
 # Languages & SDKs Menus
 # -------------------------------------
 

@@ -56,6 +56,9 @@ jobs:
           node-version: ${{matrix.nodeversion}}
       - run: make ensure
         working-directory: docs
+      - name: Generate Markdown docs
+        run: |
+          esc gen-docs ./content/docs/esc-cli/commands
       - name: Update latest version
         run: |
           VERSION_TAG=${{ env.ESC_VERSION }}
