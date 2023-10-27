@@ -19,11 +19,11 @@ The emergence of DevOps revolutionized software development. Now, with AI powere
 
 <!--more-->
 
-This article unwraps the topics addressed during our "Generative AI, Apps, and DevOps | AI/ML Talks" event in Seattle, focusing on Langchain and GenAI for DevOps. You'll be able to watch Patrick Debois teach LangChain to learn LLMs and GenAI, with code examples and lessons that are easily understood by traditional software engineering.
+This article unwraps the topics addressed during our "Generative AI, Apps, and DevOps | AI/ML Talks" event in Seattle, focusing on Langchain and GenAI for DevOps. You'll be able to [watch Patrick Debois teach LangChain to learn LLMs and GenAI](https://www.pulumi.com/blog/generative-ai-apps-devops-talks-pulumi-user-group/#how-to-use-langchain-to-learn-llms-and-genai-for-devsecops), with code examples and lessons that are easily understood by traditional software engineering.
 
 ## What is LangChain used for?
 
-LangChain is an open-source Python framework designed to empower developers to construct robust generative AI applications. It facilitates the integration of advanced AI models such as OpenAI's GPT, Google's BARD, and Meta's LLaMA. This versatile tool finds application in developing retrieval-augmented chatbots and other personalized assistants, utilizing technologies like ChatGPT. Furthermore, it enables tasks such as question-answering (GQA), summarization, code comprehension, API interactions, data cleansing, and much more.
+LangChain is an open-source Python framework designed to empower developers to construct robust generative AI applications. It facilitates the integration of advanced AI models such as OpenAI's GPT, [Google's BARD](https://bard.google.com), and [Meta's LLaMA](https://ai.meta.com/llama). This versatile tool finds application in developing retrieval-augmented chatbots and other personalized assistants, utilizing technologies like ChatGPT. Furthermore, it enables tasks such as question-answering (GQA), summarization, code comprehension, API interactions, data cleansing, and much more.
 
 ## Why is LangChain becoming popular?
 
