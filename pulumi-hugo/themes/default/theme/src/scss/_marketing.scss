@@ -148,3 +148,67 @@ body {
         }
     }
 }
+
+.home-page-section p {
+    color: black !important;
+}
+
+.home-page-build-section-background {
+    @apply w-full h-full overflow-hidden absolute top-0 left-0 bg-violet-200 shadow-lg;
+
+    // background: rgb(255,255,255);
+    // background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(213,181,215,1) 30%, rgba(208,173,211,1) 50%, rgba(213,181,215,1) 70%, rgba(255,255,255,1) 100%);
+
+    .home-page-build-section-image {
+        @apply w-full h-full;
+        background-image: url("/images/home/hexagons.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        opacity: 0.5;
+    }
+}
+
+.home-page-manage-section-background {
+    @apply w-full h-full overflow-hidden absolute top-0 left-0 bg-yellow-200 shadow-lg;
+
+    // background: rgb(255,255,255);
+    // background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(252,229,170,1) 30%, rgba(250,217,127,1) 50%, rgba(252,229,170,1) 70%, rgba(255,255,255,1) 100%);
+
+    .home-page-manage-section-image {
+        @apply w-full h-full;
+        background-image: url("/images/home/circuits.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        opacity: 0.5;
+    }
+}
+
+.home-page-cloud-section-background {
+    @apply w-full h-full overflow-hidden absolute top-0 left-0 bg-blue-200 shadow-lg;
+
+    // background: rgb(255,255,255);
+    // background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(219,222,247,1) 30%, rgba(184,189,240,1) 50%, rgba(219,222,247,1) 70%, rgba(255,255,255,1) 100%);
+
+    .home-page-cloud-section-image {
+        @apply w-full h-full;
+        background-image: url("/images/home/ship-wheel.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        opacity: 0.6;
+    }
+}
+
+.home-page-science-section-background {
+    @apply w-full h-full overflow-hidden absolute top-0 left-0 bg-gray-800 shadow-lg;
+
+    //background: rgb(255,255,255);
+    //background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(242,219,231,1) 30%, rgba(229,183,206,1) 50%, rgba(242,219,231,1) 70%, rgba(255,255,255,1) 100%);
+
+    .home-page-science-section-image {
+        @apply w-full h-full;
+        background-image: url("/images/home/science.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        opacity: 0.2;
+    }
+}

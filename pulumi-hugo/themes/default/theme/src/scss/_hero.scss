@@ -52,11 +52,45 @@
 
 .home-page-hero {
     @apply relative w-full;
+    min-height: 24rem;
+
+    @screen lg {
+        @apply h-96;
+    }
+
+    .home-page-hero-background {
+        @apply w-full h-full overflow-hidden;
+
+        background-image: url("/images/home/hero-background.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        img {
+            @apply w-full;
+        }
+    }
+
+    .home-page-hero-text {
+        h1 {
+            @apply mx-0;
+            line-height: 3.5rem !important;
+            font-size: 3rem !important;
+        }
+    }
 
     .dot-overlay {
         @apply w-full h-full absolute top-0 left-0 pointer-events-none;
         background: linear-gradient(175deg, rgba(255, 255, 255, 1) 5%, rgba(255, 255, 255, 0.5004551991695115) 50%, rgba(255, 255, 255, 1) 95%);
         z-index: -1;
+    }
+
+    .home-hero-btn-primary {
+        @include gradient-button;
+        @apply py-4 px-12 text-lg;
+    }
+
+    .home-hero-btn-secondary {
+        @apply py-4 px-12 text-lg;
     }
 
     .home-page-hero-content {
@@ -80,15 +114,6 @@
                 line-height: 5.5rem !important;
                 font-size: 5rem !important;
             }
-        }
-
-        .home-hero-btn-primary {
-            @include gradient-button;
-            @apply py-4 px-12 text-lg;
-        }
-
-        .home-hero-btn-secondary {
-            @apply py-4 px-12 text-lg;
         }
     }
 }

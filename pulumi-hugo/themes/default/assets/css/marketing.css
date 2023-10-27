@@ -852,6 +852,98 @@ body .btn-secondary-home-action:focus{
   }
 }
 
+.home-page-section p{
+  color:#000 !important
+}
+
+.home-page-build-section-background{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  --tw-bg-opacity: 1;
+  background-color: rgba(230, 222, 243, var(--tw-bg-opacity));
+  --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
+}
+
+.home-page-build-section-background .home-page-build-section-image{
+  height: 100%;
+  width: 100%;
+  background-image:url("/images/home/hexagons.svg");
+  background-repeat:no-repeat;
+  background-size:cover;
+  opacity:.5
+}
+
+.home-page-manage-section-background{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  --tw-bg-opacity: 1;
+  background-color: rgba(253, 242, 212, var(--tw-bg-opacity));
+  --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
+}
+
+.home-page-manage-section-background .home-page-manage-section-image{
+  height: 100%;
+  width: 100%;
+  background-image:url("/images/home/circuits.svg");
+  background-repeat:no-repeat;
+  background-size:cover;
+  opacity:.5
+}
+
+.home-page-cloud-section-background{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  --tw-bg-opacity: 1;
+  background-color: rgba(219, 222, 247, var(--tw-bg-opacity));
+  --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
+}
+
+.home-page-cloud-section-background .home-page-cloud-section-image{
+  height: 100%;
+  width: 100%;
+  background-image:url("/images/home/ship-wheel.svg");
+  background-repeat:no-repeat;
+  background-size:cover;
+  opacity:.6
+}
+
+.home-page-science-section-background{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  --tw-bg-opacity: 1;
+  background-color: rgba(47, 48, 50, var(--tw-bg-opacity));
+  --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
+}
+
+.home-page-science-section-background .home-page-science-section-image{
+  height: 100%;
+  width: 100%;
+  background-image:url("/images/home/science.svg");
+  background-repeat:no-repeat;
+  background-size:cover;
+  opacity:.2
+}
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;
