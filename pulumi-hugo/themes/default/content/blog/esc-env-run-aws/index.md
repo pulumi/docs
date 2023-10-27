@@ -1,5 +1,5 @@
 ---
-title: "Secure, Short-term Credentials for Every AWS CLI command"
+title: "Dynamic Credentials for Every AWS CLI Command: A Step-by-Step Guide to 'esc run'"
 allow_long_title: true
 date: "2023-10-27"
 draft: false
@@ -153,7 +153,7 @@ Scroll to the bottom of the page and click **Save**.
 
 ### Step 5: Run your command
 
-Now to the fun part! With your environment set up, try it out by listing all of the S3 buckets in your AWS account. Start by running the `aws s3 ls` command as normal, making sure that the environment that you're working from does not have any AWS credentials configured. You should see the following response:
+Now to the fun part! With your environment set up, try it out by listing all of the S3 buckets in your AWS account. Start by running the `aws s3 ls` command as normal, making sure to run it in an environment that does not have any AWS credentials configured. You should see the following response:
 
 ```
 $ aws s3 ls
@@ -161,7 +161,7 @@ $ aws s3 ls
 Unable to locate credentials. You can configure credentials by running "aws configure".
 ```
 
-Now run the command using `esc run` as shown below, making sure to replace the placeholder text with the names of your own Pulumi organization and environment:
+Now run the command using `esc run` as shown below, making sure to replace `<your-pulumi-org-name>` and `<your-environment-name>` with the names of your own Pulumi organization and environment respectively:
 
 ```bash
 esc run <your-pulumi-org-name>/<your-environment-name> -i aws s3 ls
@@ -202,7 +202,7 @@ Pulumi ESC, and the `esc run` command in particular, is designed to make your cl
 
 Want to learn more about Pulumi? Our [Get Started with Pulumi](https://www.pulumi.com/docs/get-started/) hub is a great place to start.
 
-If you’re looking for an automated (and faster) way to configure OIDC with Pulumi, we’ve got you covered! Check out our [Examples repo](https://github.com/pulumi/examples) where we offer a wide variety of automations using Pulumi Infrastructure as Code (IaC). For OIDC in particular, we have example automation for:
+If you’re looking for an automated (and faster) way to configure OIDC with Pulumi, we’ve got you covered! Check out our [Examples repo](https://github.com/pulumi/examples) where we offer a wide variety of automations using Pulumi Infrastructure as Code (IaC). For OIDC configuration in particular, we have example automation for:
 
 - [AWS](https://github.com/pulumi/examples/tree/master/aws-py-oidc-provider-pulumi-cloud)
 - [Azure](https://github.com/pulumi/examples/tree/master/azure-py-oidc-provider-pulumi-cloud)
