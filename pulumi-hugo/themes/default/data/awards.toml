@@ -10,22 +10,22 @@ featured = true
 img = "/logos/press/awards/infrared-100.png"
 url = "https://www.redpoint.com/infrared/100/"
 
-[[awards]]
-title = "Top Open Source Startups, 2023"
-featured = true
-img = "/logos/press/awards/traxcn-logo.png"
-url = "https://tracxn.com/d/emerging-startups/top-open-source-startups-2023"
+# [[awards]]
+# title = "Top Open Source Startups, 2023"
+# featured = true
+# img = "/logos/press/awards/traxcn-logo.png"
+# url = "https://tracxn.com/d/emerging-startups/top-open-source-startups-2023"
 
 [[awards]]
 title = "Best Innovation in Coding Tools, 2022"
 featured = true
 img = "/logos/press/awards/devies-2022.png"
 
-[[awards]]
-title = "Top Open Source Tech Startups 2021"
-featured = false
-img = "/logos/press/awards/tracxn-emerging-startups.png"
-url = "https://tracxn.com/d/emerging-startups/top-open-source-startups-2021"
+# [[awards]]
+# title = "Top Open Source Tech Startups 2021"
+# featured = false
+# img = "/logos/press/awards/tracxn-emerging-startups.png"
+# url = "https://tracxn.com/d/emerging-startups/top-open-source-startups-2021"
 
 [[awards]]
 title = "Coolest Open-Source Tools Of 2021"
