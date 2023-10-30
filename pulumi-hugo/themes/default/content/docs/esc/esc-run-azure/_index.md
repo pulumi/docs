@@ -8,7 +8,7 @@ meta_desc: Learn more about reducing the overhead of credentials management in A
 
 [Pulumi ESC (Environments, Secrets, and Configuration)](/product/esc/) is a service that helps to alleviate the burden of managing cloud configuration and secrets by providing a centralized way to handle these critical aspects of cloud development. This guide will provide the step-by-step process for how to run Azure CLI commands using the `esc run` functionality of Pulumi ESC.
 
-### Step 1: Install and login to Pulumi ESC
+## Step 1: Install and login to Pulumi ESC
 
 To begin, you will need to [install Pulumi ESC](/docs/install/esc/). Once the installation is complete, run the `esc login` command and follow the steps to login to the CLI.
 
@@ -21,7 +21,7 @@ Enter your access token from https://app.pulumi.com/account/tokens
 Logged in to pulumi.com as …
 ```
 
-### Step 2: Create the OIDC configuration
+## Step 2: Create the OIDC configuration
 
 Pulumi ESC offers you the ability to [manually set your credentials as secrets](/docs/esc-cli/commands/esc_env_set/) in your Pulumi ESC environment files. When it comes to something like OpenID Connect (OIDC) configuration, a more secure and efficient alternative is to leverage yet another great feature of Pulumi ESC: dynamic credentials.
 
@@ -39,7 +39,7 @@ Let's start by creating the Microsoft Entra application. There are a number of w
 Please note that while we’re providing steps and screenshots that are accurate as of the date of this post, Azure documentation is subject to change. For the most current and precise information, always refer to the [official Azure documentation](https://learn.microsoft.com/en-us/entra/identity-platform/howto-create-service-principal-portal).
 {{< /notes >}}
 
-#### a. Create a new application registration
+### a. Create a new application registration
 
 In the navigation pane of the [Microsoft Entra console](https://portal.azure.com/#view/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/~/Overview), choose **App registrations** and then click **New registration**.
 
@@ -49,7 +49,7 @@ Provide a name for your application (ex: `pulumi-esc-oidc-app`) and make sure th
 
 {{< video title="Create new application registration wizard" src="./register-new-app-wizard.mp4" autoplay="true" loop="true" >}}
 
-#### b. Create federated credentials
+### b. Create federated credentials
 
 Once you have created your new application registration, you will be redirected to the application's **Overview** page. In the left navigation menu, click the link for **Certificates & secrets**. Then click the **Federated credentials tab** followed by the **Add credential** button.
 
@@ -78,7 +78,7 @@ In the above configuration, the value provided to the **Subject identifier field
 This guide will show you how to create an environment in a later step, and you can learn more about the details of this configuration in the [relevant Pulumi documentation](https://www.pulumi.com/docs/pulumi-cloud/esc/providers/azure-login/#adding-federated-credentials).
 {{< /notes >}}
 
-#### c. Create a service principal
+### c. Create a service principal
 
 Now that you have your federated credentials created, the next step is to create a service principal. This is where you will define what permissions you will allow your Pulumi ESC environment to have in your Azure account.
 
@@ -104,13 +104,13 @@ After creating your Azure resources, make sure to make a note of the following d
 - Directory (tenant) ID
 - Subscription ID
 
-### Step 3: Create a new environment
+## Step 3: Create a new environment
 
 Now that you have created all of the necessary Azure resources, the next step is to create a new environment in the [Pulumi Cloud](https://app.pulumi.com/). Make sure that you have the correct organization selected in the left-hand navigation menu. Then click the **Environments** link, and click the **Create environment** button. In the following pop-up, provide a name for your environment before clicking the  **Create environment** button.
 
 {{< video title="Creating a new Pulumi ESC environment" src="./create-new-environment.mp4" autoplay="true" loop="true" >}}
 
-### Step 4: Add the Azure provider integration
+## Step 4: Add the Azure provider integration
 
 Once you have created your new environment, you will be presented with a split-pane editor view. Delete the default placeholder content in the editor on the left-hand side and replace it with the following code, making sure to replace `<your-client-id>`, `<your-tenant-id>`, and `<your-subscription-id>` with the values from the previous step:
 
@@ -135,7 +135,7 @@ Scroll to the bottom of the page and click **Save**.
 
 [add-environment-config video here]
 
-### Step 5: Run your command
+## Step 5: Run your command
 
 With your environment set up, first run the `az logout` command to make sure your local environment does not have any Azure credentials configured. Next run the `az vm list` command as normal. You should see the following response:
 
