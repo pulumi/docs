@@ -43,21 +43,21 @@ Please note that while we’re providing steps and screenshots that are accurate
 
 In the navigation pane of the [Microsoft Entra console](https://portal.azure.com/#view/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/~/Overview), choose **App registrations** and then click **New registration**.
 
-[new app VIDEO HERE]
+{{< video title="Create new application registration" src="./register-new-app.mp4" autoplay="true" loop="true" >}}
 
 Provide a name for your application (ex: `pulumi-esc-oidc-app`) and make sure that under the **Supported account types** section, the radion button next to **Accounts in this organizational directory only** is selected. Then click **Register**.
 
-[app wizard VIDEO HERE]
+{{< video title="Create new application registration wizard" src="./register-new-app-wizard.mp4" autoplay="true" loop="true" >}}
 
 #### b. Create federated credentials
 
 Once you have created your new application registration, you will be redirected to the application's **Overview** page. In the left navigation menu, click the link for **Certificates & secrets**. Then click the **Federated credentials tab** followed by the **Add credential** button.
 
-[new credentials VIDEO HERE]
+{{< video title="Create new federated credentials" src="./create-new-creds.mp4" autoplay="true" loop="true" >}}
 
 In the dropdown next to **Federated creential scenario**, select the **Other issuer** option. You will be presented with a number of fields to complete.
 
-[select-other-issuer video here]
+{{< video title="Select other issuer from the dropdown" src="./select-other-issuer.mp4" autoplay="true" loop="true" >}}
 
 Provide the following values to the corresponding fields:
 
@@ -66,11 +66,11 @@ Provide the following values to the corresponding fields:
   - Make sure to replace `<organization name>` with the name of your own Pulumi organization
 - **Name**: Provide a name for your credential (ex: `pulumi-esc-oidc-credential`)
 
-[add-credential-fields image here]
+![Add values for federated credentials configuration](./add-credential-fields.png)
 
 For the **Audience** field, click the **Edit** link and provide the name of your Pulumi organization.
 
-[add-audience-field video here]
+{{< video title="Update the audience field" src="./add-audience-field.mp4" autoplay="true" loop="true" >}}
 
 {{< notes type="info" >}}
 In the above configuration, the value provided to the **Subject identifier field** currently allows access to these credentials from any Pulumi ESC environment from within your organization . You can edit this configuration to futher limit access to a specific Pulumi ESC environment by replacing the wildcard (*) with the name of the designated environment.
@@ -84,9 +84,11 @@ Now that you have your federated credentials created, the next step is to create
 
 Navigate the the [subscriptions page of your Azure portal](https://portal.azure.com/#view/Microsoft_Azure_Billing/SubscriptionsBladeV1) and select the subscription to create the service principal in. In the left navigation menu, select **Access control (IAM)**, then click **Add** > **Add role assignment**.
 
-[add-role-assignment video here]
+{{< video title="Add new role assignment" src="./add-role-assignment.mp4" autoplay="true" loop="true" >}}
 
 You will be directed to the **Add role assignment** wizard. Under the **Job function roles** tab, select the **Reader** role from the list, then click **Next**.
+
+{{< video title="Select Reader role" src="./select-reader-role.mp4" autoplay="true" loop="true" >}}
 
 {{< notes type="info" >}}
 For the purposes of this guide, we will be demonstrating how to run the `az vm list` command using the `esc run` functionality. The **Reader** role will provide the permissions we need to do this, but you should select the role that best meets the requirements of your particular business use case.
@@ -94,7 +96,7 @@ For the purposes of this guide, we will be demonstrating how to run the `az vm l
 
 Make sure the radio button next to **User, group, or service principal** is selected, then click **Select members**. In the search box, type in the name of the application you created in a previous step, select it from the list, then click **Select**. From there, click **Next** and then **Review + assign**.
 
-[select-members-raw video here]
+{{< video title="Select member and create resource" src="./select-members-create.mp4" autoplay="true" loop="true" >}}
 
 After creating your Azure resources, make sure to make a note of the following details as you will need it in the next steps:
 
@@ -106,7 +108,7 @@ After creating your Azure resources, make sure to make a note of the following d
 
 Now that you have created all of the necessary Azure resources, the next step is to create a new environment in the [Pulumi Cloud](https://app.pulumi.com/). Make sure that you have the correct organization selected in the left-hand navigation menu. Then click the **Environments** link, and click the **Create environment** button. In the following pop-up, provide a name for your environment before clicking the  **Create environment** button.
 
-[create new env video from AWS here]
+{{< video title="Creating a new Pulumi ESC environment" src="./create-new-environment.mp4" autoplay="true" loop="true" >}}
 
 ### Step 4: Add the Azure provider integration
 
