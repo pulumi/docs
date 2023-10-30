@@ -38,5 +38,6 @@ block_external_search_index: false
 aws_only: true
 title: Getting Started with Secrets Management on AWS
 meta_desc: Learn how to manage configuration and secrets across all of your AWS environments with Pulumi ESC and AWS Secrets Manager.
+meta_image: "/images/resources/secrets_management_pulumi_esc_aws_ringo.png"
 url_slug: getting-started-with-secrets-management-aws
 ---

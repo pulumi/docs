@@ -41,6 +41,6 @@ aws_only: true
 title: Getting Started with Infrastructure as Code on AWS
 title_tag: Getting Started with Infrastructure as Code on AWS
 meta_desc: This workshop is designed to help new users become familiar with the core concepts needed to effectively deploy resources on AWS using Pulumi.
-meta_image: "/images/resources/intro-aws-classic-v6.png"
+meta_image: "/images/resources/getting-started-aws-kat.png"
 url_slug: getting-started-with-iac-pulumi-aws
 ---

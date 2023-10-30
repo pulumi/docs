@@ -43,6 +43,6 @@ aws_only: true
 title: Introduction to AWS in TypeScript
 title_tag: "Introduction to AWS in TypeScript"
 meta_desc: Join this workshop to learn how to set up a successful Infrastructure as Code in TypeScript to provision and manage AWS at scale, using Pulumi.
-meta_image: "/images/resources/intro-aws-classic-v6.png"
+meta_image: "/images/resources/intro-aws-typescript-josh-marina.png"
 url_slug: intro-to-aws-typescript
 ---

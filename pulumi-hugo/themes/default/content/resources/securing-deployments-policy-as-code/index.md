@@ -2,7 +2,7 @@
 # Name of the webinar.
 title: Policy as Code on AWS
 meta_desc: Learn how to write policies for AWS resources with Pulumi using Python and TypeScript!
-meta_image: ""
+meta_image: "/images/resources/policy-as-code-on-aws-marina.png"
 
 # A featured webinar will display first in the list.
 featured: false
