@@ -8,9 +8,13 @@ main:
   presenters:
     - name: Ringo De Smet
       role: Customer Experience Architect, Pulumi
+    - name: Josh Kodroff
+      role: Sr. Solutions Architect, Pulumi
+    - name: Cleve Littlefield
+      role: Engineering Manager, Pulumi
   learn:
-    - Defining environments, which contain collections of secrets and configuration.
-    - Retrieving secrets from AWS Secrets Manager and other third-party sources.
+    - Defining environments, which contain collections of secrets and configuration
+    - Retrieving secrets from AWS Secrets Manager and other third-party sources
     - Building Pulumi ESC into your cloud provisioning workflows
   title: Getting Started with Secrets Management on AWS
   description: |
@@ -38,6 +42,6 @@ block_external_search_index: false
 aws_only: true
 title: Getting Started with Secrets Management on AWS
 meta_desc: Learn how to manage configuration and secrets across all of your AWS environments with Pulumi ESC and AWS Secrets Manager.
-meta_image: "/images/resources/secrets_management_pulumi_esc_aws_ringo.png"
+meta_image: "/images/resources/secrets_management_pulumi_esc_aws_ringo_josh_cleve.png"
 url_slug: getting-started-with-secrets-management-aws
 ---
