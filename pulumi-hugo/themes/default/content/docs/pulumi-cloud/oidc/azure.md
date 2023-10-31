@@ -6,12 +6,13 @@ h1: Configuring OpenID Connect for Azure
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     pulumicloud:
-        parent: deployments-oidc
+        parent: openid-connect
         weight: 1
 
 aliases:
 - /docs/guides/oidc/azure
 - /docs/intro/deployments/oidc/azure/
+- /docs/pulumi-cloud/deployments/oidc/azure/
 ---
 
 This document outlines the steps required to configure Pulumi Deployments to use OpenID Connect to authenticate with Azure. OIDC in Azure uses [workload identity federation](https://learn.microsoft.com/en-us/azure/active-directory/develop/workload-identity-federation) to access Azure resources via an Azure Active Directory App. Access to the temporary credentials is authorized using federated credentials that validate the contents of the OIDC token issued by the Pulumi Cloud.

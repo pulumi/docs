@@ -62,7 +62,7 @@ In the dropdown next to **Federated creential scenario**, select the **Other iss
 Provide the following values to the corresponding fields:
 
 - **Issuer**: `https://api.pulumi.com/oidc`
-- **Subject identifier**: `pulumi:environments:org:<organization name>:env:*`
+- **Subject identifier**: `pulumi:environments:org:<organization name>:env:<environment-name>`
   - Make sure to replace `<organization name>` with the name of your own Pulumi organization
 - **Name**: Provide a name for your credential (ex: `pulumi-esc-oidc-credential`)
 
@@ -73,8 +73,7 @@ For the **Audience** field, click the **Edit** link and provide the name of your
 {{< video title="Update the audience field" src="./add-audience-field.mp4" autoplay="true" loop="true" >}}
 
 {{< notes type="info" >}}
-In the above configuration, the value provided to the **Subject identifier field** currently allows access to these credentials from any Pulumi ESC environment from within your organization . You can edit this configuration to futher limit access to a specific Pulumi ESC environment by replacing the wildcard (*) with the name of the designated environment.
-
+In the above configuration, UPDATE
 This guide will show you how to create an environment in a later step, and you can learn more about the details of this configuration in the [relevant Pulumi documentation](https://www.pulumi.com/docs/pulumi-cloud/esc/providers/azure-login/#adding-federated-credentials).
 {{< /notes >}}
 
@@ -110,7 +109,7 @@ Now that you have created all of the necessary Azure resources, the next step is
 
 {{< video title="Creating a new Pulumi ESC environment" src="./create-new-environment.mp4" autoplay="true" loop="true" >}}
 
-## Step 4: Add the Azure provider integration
+## Step 4: Add the provider integration
 
 Once you have created your new environment, you will be presented with a split-pane editor view. Delete the default placeholder content in the editor on the left-hand side and replace it with the following code, making sure to replace `<your-client-id>`, `<your-tenant-id>`, and `<your-subscription-id>` with the values from the previous step:
 
