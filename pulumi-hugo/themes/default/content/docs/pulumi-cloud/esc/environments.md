@@ -444,7 +444,7 @@ values:
     paymentsApiKey: ${secrets.paymentApiKey}
 ```
 
-### Referencing and environment in your Pulumi stack config.
+### Referencing an environment in your Pulumi stack config.
 
 In order to reference an environment, we just add a new `environment:` section at the top level of our stack yaml file.
 
