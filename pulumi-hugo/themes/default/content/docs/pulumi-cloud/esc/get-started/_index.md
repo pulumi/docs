@@ -499,11 +499,10 @@ Then return to your `Pulumi.<your-stack-name>.yaml` file and update it to import
 
 ```yaml
 environment:
-  imports:
   - app-env-dev
 ```
 
-Make sure to update the value in the `imports` section with the values of your own environment before saving the file.
+Make sure to update the value in the `environment` section with the name of your own environment before saving the file.
 
 Then run the `pulumi up` command.
 
