@@ -15,16 +15,20 @@ aliases:
 - /docs/pulumi-cloud/deployments/oidc/azure/
 ---
 
-This document outlines the steps required to configure Pulumi Deployments to use OpenID Connect to authenticate with Azure. OIDC in Azure uses [workload identity federation](https://learn.microsoft.com/en-us/azure/active-directory/develop/workload-identity-federation) to access Azure resources via an Azure Active Directory App. Access to the temporary credentials is authorized using federated credentials that validate the contents of the OIDC token issued by the Pulumi Cloud.
+This document outlines the steps required to configure Pulumi to use OpenID Connect to authenticate with Azure. OIDC in Azure uses [workload identity federation](https://learn.microsoft.com/en-us/azure/active-directory/develop/workload-identity-federation) to access Azure resources via an Azure Active Directory App. Access to the temporary credentials is authorized using federated credentials that validate the contents of the OIDC token issued by the Pulumi Cloud.
+
+{{< notes type="warning" >}}
+Please note that this guide provides step-by-step instructions based on the official provider documentation which is subject to change. For the most current and precise information, always refer to the [official Azure documentation](https://learn.microsoft.com/en-us/entra/identity-platform/howto-create-service-principal-portal).
+{{< /notes >}}
 
 ## Prerequisites
 
 * You must be an admin of your Pulumi organization.
-* You must have access in the Azure Portal to create and configure Azure Active Directory App registrations.
+* You must have access in the Azure Portal to create and configure Microsoft Entra App registrations.
 
-## Creating the Azure Active Directory App
+## Creating the Microsoft Entra App
 
-To create the Azure Active Directory App and service principal, see the [relevant Azure documentation](https://learn.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal).
+To create the Microsoft Entra App and service principal, see the [relevant Azure documentation](https://learn.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal).
 
 After the AAD App has been created, take note of the Application (client) ID and Directory (tenant) ID. These values will be necessary when enabling OIDC for your stack.
 
