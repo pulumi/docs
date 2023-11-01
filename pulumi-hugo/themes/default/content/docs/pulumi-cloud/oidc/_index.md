@@ -1,5 +1,5 @@
 ---
-title_tag: OpenID Connect Integration for Pulumi Deployments
+title_tag: OpenID Connect Integration for Pulumi
 meta_desc: This page provides an overview of how to configure OpenID Connect integration between
            Pulumi and supported cloud providers.
 title: OpenID Connect
@@ -17,6 +17,8 @@ Pulumi supports OpenID Connect (OIDC) integration across various services. OIDC 
 
 For Pulumi services that make use of OIDC, every time that service runs, the Pulumi Cloud issues a new OIDC token specific to that run. The OIDC token is a short-lived, signed [JSON Web Token](https://jwt.io) that contains information about the service, and that can be exchanged for credentials from a cloud provider. For AWS, Azure, and Google Cloud, this credential exchange can be done automatically as part of the service setup.
 
+## Token Claims
+
 The token contains the standard audience, issuer, and subject claims:
 
 | Claim | Description                                                                                                                                                                                                                                                                                                                                                                                                                   |
@@ -25,7 +27,21 @@ The token contains the standard audience, issuer, and subject claims:
 | `iss` | _(Issuer)_ The issuer of the OIDC token: `https://api.pulumi.com/oidc`.                                                                                                                                                                                                                                                                                                                                                       |
 | `sub` | _(Subject)_ The subject of the OIDC token. Because this value is often used for configuring trust relationships, the subject claim contains information about the associated service. Each component of the subject claim is also available as a custom claim. |
 
-For some services, the token also contains custom claims that provide additional, service-specific information.
+## Custom claims
+
+For some services, the token also contains custom claims that provide additional, service-specific information. You can find more details about the available custom claims below.
+
+### Pulumi Deployments
+
+| Claim        | Description                                                                     |
+|--------------|---------------------------------------------------------------------------------|
+| `stackId`    | The fully-qualified identifier of the stack being deployed.                     |
+| `operation`  | The deployment operation (one of `preview`, `update`, `refresh`, or `destroy`). |
+| `org`        | The name of the organization associated with the deployment.                    |
+| `project`    | The name of the project being deployed.                                         |
+| `stack`      | The name of the stack being deployed.                                           |
+| `deployment` | The deployment version.                                                         |
+| `scope`      | The scope of the OIDC token. Always `write`.                                    |
 
 ## Configuring trust relationships
 

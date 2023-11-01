@@ -35,7 +35,13 @@ In the navigation pane of the [Microsoft Entra console](https://portal.azure.com
 3. In the **Supported account types** section, select **Accounts in this organizational directory only**.
 4. Click **Register**.
 
-After the Microsoft Entra App has been created, take note of your subscription ID, the Application (client) ID, and the Directory (tenant) ID. These values will be necessary when enabling OIDC for your service.
+After the Microsoft Entra App has been created, take note of the following details:
+
+* subscription ID
+* Application (client) ID
+* Directory (tenant) ID.
+
+These values will be necessary when enabling OIDC for your service.
 
 ## Add Federated Credentials
 
@@ -47,13 +53,13 @@ Once you have created your new application registration, you will be redirected 
 4. In the wizard, select **Other Issuer** as the **Federated credential scenario**.
 5. Fill in the remaining form fields as follows:
     * **Issuer:** `https://api.pulumi.com/oidc`
-    * **Subject Identifier:** must be a valid [subject claim](/docs/guides/oidc/#overview) (see examples at the end of this section).
+    * **Subject Identifier:** must be a valid subject claim (see examples at the end of this section).
     * **Name:** An arbitrary name for the credential, e.g. "pulumi-oidc-credentials"
     * **Audience:** The name of your Pulumi organization.
 
 ### Subject claim examples
 
-Depending on the Pulumi service you are configuring OIDC for, the value of the subject claim will be different.
+Depending on the Pulumi service you are configuring OIDC for, the value of the subject claim will be different. The below sections show examples that correspond to each OIDC-supported service.
 
 #### Pulumi Deployments
 
@@ -66,11 +72,13 @@ Because Azure's federated credentials require that the subject identifier exactl
 
 #### Pulumi ESC
 
-You can learn more about setting up OIDC for Pulumi ESC by referring to the [relevant Pulumi documentation](/docs/pulumi-cloud/esc/providers/#setting-up-oidc). The below is an example of a valid subject claim for the `development` environment of the `contoso` organization:
+The below is an example of a valid subject claim for the `development` environment of the `contoso` organization:
 
 * `pulumi:environments:org:contoso:env:development`
 
-## Enabling OIDC in the Pulumi Console
+You can learn more about setting up OIDC for Pulumi ESC by referring to the [relevant Pulumi documentation](/docs/pulumi-cloud/esc/providers/#setting-up-oidc).
+
+## Configure OIDC in the Pulumi Console
 
 ### Pulumi Deployments
 
@@ -78,7 +86,7 @@ You can learn more about setting up OIDC for Pulumi ESC by referring to the [rel
 In addition to the Pulumi Console, deployment settings including OIDC can be configured for a stack using the [pulumiservice.DeploymentSettings](https://www.pulumi.com/registry/packages/pulumiservice/api-docs/deploymentsettings/) resource or via the [REST API](/docs/pulumi-cloud/deployments/api/#patchsettings).
 {{% /notes %}}
 
-1. Navigate to your stack in the Pulumi Console.
+1. Navigate to your stack in the [Pulumi Console](https://app.pulumi.com/).
 2. Open the stack's "Settings" tab.
 3. Choose the "Deploy" panel.
 4. Under the "OpenID Connect" header, toggle "Enable Azure Integration".
@@ -90,7 +98,7 @@ With this configuration, each deployment of this stack will attempt to exchange 
 
 ### Pulumi ESC
 
-The first step is to create a new environment in the [Pulumi Cloud](https://app.pulumi.com/). Make sure that you have the correct organization selected in the left-hand navigation menu. Then:
+The first step is to create a new environment in the [Pulumi Console](https://app.pulumi.com/). Make sure that you have the correct organization selected in the left-hand navigation menu. Then:
 
 1. Click the **Environments** link.
 2. Click the **Create environment** button.
@@ -110,14 +118,5 @@ values:
         oidc: true
 ```
 
-1. Replace `<your-client-id>`, `<your-tenant-id>`, and `<your-subscription-id>` with the values from the previous steps
-
-Scroll to the bottom of the page and click **Save**.
-
-With your environment set up, first run the `az logout` command to make sure your local environment does not have any Azure credentials configured. Next run the `az vm list` command as normal. You should see the following response:
-
-```
-$ az vm list
-
-Please run 'az login' to setup account.
-```
+1. Replace `<your-client-id>`, `<your-tenant-id>`, and `<your-subscription-id>` with the values from the previous steps.
+2. Scroll to the bottom of the page and click **Save**.
