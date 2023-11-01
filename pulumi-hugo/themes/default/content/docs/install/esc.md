@@ -2,7 +2,7 @@
 title_tag: Download & Install Pulumi ESC
 meta_desc: Detailed instructions for downloading and installing Pulumi ESC (Environments, Secrets and Configuration).
 title: Pulumi ESC
-h1: Download & install Pulumi ESC
+h1: Download & Install Pulumi ESC
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   install:
@@ -15,17 +15,19 @@ search:
       - cli
 ---
 
+## Select an Operating System
+
 {{< chooser os "macos,windows,linux" >}}
 
 {{% choosable os macos %}}
 
-## Package manager
+<h3 class="no-anchor pt-4"><i class="fas fa-box pr-2"></i>Homebrew Package Manager</h3>
 
 ```bash
 $ brew update && brew install pulumi/tap/esc
 ```
 
-### MacOS binary download
+<h3 class="no-anchor pt-4"><i class="fas fa-download pr-2"></i>macOS Binary Download</h3>
 
 <a class="btn btn-secondary mx-2" href="https://get.pulumi.com/esc/releases/esc-v{{< latest-version-esc >}}-darwin-x64.tar.gz">amd64</a>
 <a class="btn btn-secondary mx-2" href="https://get.pulumi.com/esc/releases/esc-v{{< latest-version-esc >}}-darwin-arm64.tar.gz">arm64</a></p>
@@ -36,9 +38,58 @@ The latest version of Pulumi ESC is {{< latest-version-esc >}}.
 
 {{< esc-get-started-note >}}
 
-## Other installation methods
+{{% /choosable %}}
+
+{{% choosable os linux %}}
+
+<div class="mb-6 border-solid border-b-2 border-gray-200">
+<div class="w-full md:w-3/4">
+<h3 class="no-anchor pt-4"><i class="fas fa-box pr-2"></i>Install Script</h3>
+
+```bash
+$ curl -fsSL https://get.pulumi.com/esc/install.sh | sh
+```
+
+</div>
+<div class="w-full">
+<h3 class="no-anchor pt-4"><i class="fas fa-download pr-2"></i>Linux Binary Download</h3>
+<p><a class="btn btn-secondary mx-2" href="https://get.pulumi.com/esc/releases/esc-v{{< latest-version-esc >}}-linux-x64.tar.gz">amd64</a></p>
+</div>
+</div>
+
+The latest version of Pulumi ESC is {{< latest-version-esc >}}.
+
+{{< esc-get-started-note >}}
+
+{{% /choosable %}}
+
+{{% choosable os windows %}}
+
+<div class="mb-6 border-solid border-b-2 border-gray-200">
+<div class="w-full">
+<h3 class="no-anchor pt-4"><i class="fas fa-download pr-2"></i>Windows Binary Download</h3>
+<p>
+<a class="btn btn-secondary mx-2" href="https://get.pulumi.com/esc/releases/esc-v{{< latest-version-esc >}}-windows-x64.zip">amd64</a>
+</p>
+</div>
+</div>
+
+Windows 8 and later are supported.
+
+The latest version of Pulumi ESC is {{< latest-version-esc >}}. For older versions, see [Available Versions](/docs/install/versions/).
+
+{{< esc-get-started-note >}}
+
+{{% /choosable %}}
+
+{{% /chooser %}}
+
+### Other installation methods
 
 In addition, there are many ways to install Pulumi ESC:
+
+{{< chooser os "macos,windows,linux" >}}
+{{% choosable os macos %}}
 
 <div class="accordion-item text-2xl py-3 border-t-2">
 <input type="checkbox" class="absolute hidden" id="macos-official-homebrew-tap" />
@@ -93,7 +144,7 @@ $ brew install esc
 <div class="accordion-item text-2xl py-3 border-t-2">
 <input type="checkbox" class="absolute hidden" id="macos-installation-script" />
 <label for="macos-installation-script" class="accordion-label">
-<h5 class="mt-2 w-2/3">Installation Script</h5>
+<h5 class="mt-2 w-2/3">macOs Installation Script</h5>
 <div class="flex flex-grow justify-end items-center">
 <span class="closed-accordion">+</span>
 <span class="open-accordion hidden">-</span>
@@ -101,7 +152,7 @@ $ brew install esc
 </label>
 <div class="accordion-item-body-no-animation text-base">
 
-Alternatively, you can run our installation script.
+To install, run our installation script:
 
 ```bash
 $ curl -fsSL https://get.pulumi.com/esc/install.sh | sh
@@ -119,7 +170,7 @@ The installer script can be rerun to subsequently install new updates.
 <div class="accordion-item text-2xl py-3 border-t-2 border-b-2">
 <input type="checkbox" class="absolute hidden" id="macos-manual-installation" />
 <label for="macos-manual-installation" class="accordion-label">
-<h5 class="mt-2 w-2/3">Manual Installation</h5>
+<h5 class="mt-2 w-2/3">macOS Manual Installation</h5>
 <div class="flex flex-grow justify-end items-center">
 <span class="closed-accordion">+</span>
 <span class="open-accordion hidden">-</span>
@@ -142,33 +193,10 @@ If you do not wish to use the previous options, you can install Pulumi manually.
 
 {{% choosable os linux %}}
 
-<div class="mb-6 border-solid border-b-2 border-gray-200">
-<div class="w-full md:w-3/4">
-<h3 class="no-anchor pt-4"><i class="fas fa-box pr-2"></i>Install Script</h3>
-
-```bash
-$ curl -fsSL https://get.pulumi.com/esc/install.sh | sh
-```
-
-</div>
-<div class="w-full">
-<h3 class="no-anchor pt-4"><i class="fas fa-download pr-2"></i>Linux Binary Download</h3>
-<p><a class="btn btn-secondary mx-2" href="https://get.pulumi.com/esc/releases/esc-v{{< latest-version-esc >}}-linux-x64.tar.gz">amd64</a></p>
-</div>
-</div>
-
-The latest version of Pulumi ESC is {{< latest-version-esc >}}.
-
-{{< esc-get-started-note >}}
-
-## Other installation methods
-
-In addition, there are many ways to install Pulumi ESC:
-
 <div class="accordion-item text-2xl py-3 border-t-2">
 <input type="checkbox" class="absolute hidden" id="linux-installation-script" />
 <label for="linux-installation-script" class="accordion-label">
-<h5 class="mt-2 w-2/3">Installation Script</h5>
+<h5 class="mt-2 w-2/3">Linux Installation Script</h5>
 <div class="flex flex-grow justify-end items-center">
 <span class="closed-accordion">+</span>
 <span class="open-accordion hidden">-</span>
@@ -192,7 +220,7 @@ See [How to permanently set $PATH on Unix](https://stackoverflow.com/questions/1
 <div class="accordion-item text-2xl py-3 border-t-2 border-b-2">
 <input type="checkbox" class="absolute hidden" id="linux-manual-installation" />
 <label for="linux-manual-installation" class="accordion-label">
-<h5 class="mt-2 w-2/3">Manual Installation</h5>
+<h5 class="mt-2 w-2/3">Linux Manual Installation</h5>
 <div class="flex flex-grow justify-end items-center">
 <span class="closed-accordion">+</span>
 <span class="open-accordion hidden">-</span>
@@ -215,29 +243,10 @@ Alternatively, you can install Pulumi ESC manually. We provide a prebuilt binary
 
 {{% choosable os windows %}}
 
-<div class="mb-6 border-solid border-b-2 border-gray-200">
-<div class="w-full">
-<h3 class="no-anchor pt-4"><i class="fas fa-download pr-2"></i>Windows Binary Download</h3>
-<p>
-<a class="btn btn-secondary mx-2" href="https://get.pulumi.com/esc/releases/esc-v{{< latest-version-esc >}}-windows-x64.zip">amd64</a>
-</p>
-</div>
-</div>
-
-Windows 8 and later are supported.
-
-The latest version of Pulumi ESC is {{< latest-version-esc >}}. For older versions, see [Available Versions](/docs/install/versions/).
-
-{{< esc-get-started-note >}}
-
-## Other installation methods
-
-In addition, there are many ways to install Pulumi ESC:
-
 <div class="accordion-item text-2xl py-3 border-t-2">
 <input type="checkbox" class="absolute hidden" id="windows-installation-script" />
 <label for="windows-installation-script" class="accordion-label">
-<h5 class="mt-2 w-2/3">Installation Script</h5>
+<h5 class="mt-2 w-2/3">Windows Installation Script</h5>
 <div class="flex flex-grow justify-end items-center">
 <span class="closed-accordion">+</span>
 <span class="open-accordion hidden">-</span>
@@ -261,7 +270,7 @@ This will install the `esc.exe` CLI to `%USERPROFILE%\.pulumi\bin` and add it to
 <div class="accordion-item text-2xl py-3 border-t-2 border-b-2">
 <input type="checkbox" class="absolute hidden" id="windows-manual-installation" />
 <label for="windows-manual-installation" class="accordion-label">
-<h5 class="mt-2 w-2/3">Manual Installation</h5>
+<h5 class="mt-2 w-2/3">Windows Manual Installation</h5>
 <div class="flex flex-grow justify-end items-center">
 <span class="closed-accordion">+</span>
 <span class="open-accordion hidden">-</span>
@@ -328,46 +337,6 @@ These are common installation-related errors or warnings you may encounter.
 #### Pulumi ESC not found error
 
 If you get an error that `esc` could not be found, it means your path has not been configured correctly. Verify that your system's `$PATH` contains the directory containing the `esc` CLI installed earlier.
-
-{{% chooser os "macos,windows,linux" %}}
-
-{{% choosable os macos %}}
-
-### Installation script
-
-```bash
-$ curl -fsSL https://get.pulumi.com/esc/install.sh | sh -s -- --version <version>
-```
-
-{{% /choosable %}}
-
-{{% choosable os linux %}}
-
-### Installation script
-
-To install, run our installation script:
-
-```bash
-$ curl -fsSL https://get.pulumi.com/esc/install.sh | sh -s -- --version <version>
-```
-
-{{% /choosable %}}
-
-{{% choosable os windows %}}
-
-### Installation script
-
-1. Open a new command prompt window (**WIN+R**: `cmd.exe`):
-
-1. Run our installation script (replace `<version>` with the version number):
-
-```powershell
-> @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; $version = '<version>'; iex ((New-Object System.Net.WebClient).DownloadString('https://get.pulumi.com/esc/install.ps1')).Replace('${Version}', $version)" && SET "PATH=%PATH%;%USERPROFILE%\.pulumi\bin"
-```
-
-{{% /choosable %}}
-
-{{% /chooser %}}
 
 ## Uninstalling Pulumi ESC
 
