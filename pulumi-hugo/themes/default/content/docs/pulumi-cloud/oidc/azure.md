@@ -15,7 +15,7 @@ aliases:
 - /docs/pulumi-cloud/deployments/oidc/azure/
 ---
 
-This document outlines the steps required to configure Pulumi to use OpenID Connect to authenticate with Azure. OIDC in Azure uses [workload identity federation](https://learn.microsoft.com/en-us/azure/active-directory/develop/workload-identity-federation) to access Azure resources via an Azure Active Directory App. Access to the temporary credentials is authorized using federated credentials that validate the contents of the OIDC token issued by the Pulumi Cloud.
+This document outlines the steps required to configure Pulumi to use OpenID Connect to authenticate with Azure. OIDC in Azure uses [workload identity federation](https://learn.microsoft.com/en-us/azure/active-directory/develop/workload-identity-federation) to access Azure resources via a Microsoft Entra App. Access to the temporary credentials is authorized using federated credentials that validate the contents of the OIDC token issued by the Pulumi Cloud.
 
 ## Prerequisites
 
@@ -107,16 +107,16 @@ The first step is to create a new environment in the [Pulumi Console](https://ap
 4. Click the  **Create environment** button.
 5. You will be presented with a split-pane editor view. Delete the default placeholder content in the editor and replace it with the following code:
 
-```yaml
-values:
-  azure:
-    login:
-      fn::open::azure-login:
-        clientId: <your-client-id>
-        tenantId: <your-tenant-id>
-        subscriptionId: /subscriptions/<your-subscription-id>
-        oidc: true
-```
+    ```yaml
+    values:
+      azure:
+        login:
+          fn::open::azure-login:
+            clientId: <your-client-id>
+            tenantId: <your-tenant-id>
+            subscriptionId: /subscriptions/<your-subscription-id>
+            oidc: true
+    ```
 
-1. Replace `<your-client-id>`, `<your-tenant-id>`, and `<your-subscription-id>` with the values from the previous steps.
-2. Scroll to the bottom of the page and click **Save**.
+6. Replace `<your-client-id>`, `<your-tenant-id>`, and `<your-subscription-id>` with the values from the previous steps.
+7. Scroll to the bottom of the page and click **Save**.
