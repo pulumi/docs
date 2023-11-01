@@ -15,40 +15,76 @@ aliases:
 - /docs/pulumi-cloud/deployments/oidc/aws/
 ---
 
-This document outlines the steps required to configure Pulumi Deployments to use OpenID Connect to authenticate with AWS. OIDC in AWS uses a web identity provider to assume an IAM role. Access to the IAM role is authorized using a trust policy that validates the contents of the OIDC token issued by the Pulumi Cloud.
+This document outlines the steps required to configure Pulumi to use OpenID Connect to authenticate with AWS. OIDC in AWS uses a web identity provider to assume an IAM role. Access to the IAM role is authorized using a trust policy that validates the contents of the OIDC token issued by the Pulumi Cloud.
 
 ## Prerequisites
 
 * You must be an admin of your Pulumi organization.
 
-## Adding the identity provider to AWS
+## Create the Identity Provider
 
-To add the Pulumi Cloud as an OIDC provider for IAM, see the [relevant AWS documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_create_oidc.html).
-
-* For the provider URL, use `https://api.pulumi.com/oidc`
-* For the audience, use the name of your organization
+1. In the navigation pane of the [IAM console](https://console.aws.amazon.com/iam/), choose **Identity providers**, and then choose **Add provider**.
+  {{< video title="Starting the Create Identity Provider wizard" src="./create-idp-start.mp4" autoplay="true" loop="true" >}}
+2. In the **Provider type** section, click the radio button next to **OpenID Connect**.
+3. For the **Provider URL**, provide the following URL: `https://api.pulumi.com/oidc`
+4. Click the **Get thumbprint** button.
+  {{< notes type="info" >}}
+  The AWS console generates the thumbprint value on your behalf. However, if you are creating the OIDC provider programmatically, you will need to generate this value yourself and provide the thumbprint value as a part of your resource definition. You can learn more about what a thumbprint is and how to generate/verify it by referring to the [relevant AWS documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_create_oidc_verify-thumbprint.html).
+  {{< /notes >}}
+5. For the **Audience** field, provide the name of your Pulumi organization. Then click **Add provider**.
 
 ## Configuring the IAM Role and Trust Policy
 
-To configure the role and trust in IAM, see the AWS documentation for [creating a role for web identity or OpenID connect federation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-idp_oidc.html#idp_oidc_Create).
+Once you have created the identity provider, you will see a notification at the top of your screen prompting you to assign an IAM role.
 
-* For the identity provider, choose the provider you created above
-* For the audience, choose the name of your organization
+1. Click the **Assign role** button.
+2. Select the **Create a new role** option, then click **Next**.
+  {{< video title="Prompt for assigning IAM role" src="./assign-iam-role-prompt.mp4" autoplay="true" loop="true" >}}
+3. On the IAM **Create role** page, ensure the **Web identity** radio button is selected.
+4. In the **Web identity** section:
+    * Select `api.pulumi.com/oidc` under **Identity provider**.
+    * Select the name of your Pulumi organization under **Audience**. Then click **Next**.
+  {{< video title="Create IAM role wizard" src="./create-role-wizard.mp4" autoplay="true" loop="true" >}}
+5. On the **Add permissions** page, select the permissions that you want to grant to your Pulumi service. Then click **Next**.
+  {{< video title="Adding S3 permissions to IAM role" src="./create-role-add-perms.mp4" autoplay="true" loop="true" >}}
+6. Provide a name and optional description for the IAM role. Then click **Create role**.
+  {{< video title="Adding name and description to role then creating it" src="./create-role.mp4" autoplay="true" loop="true" >}}
 
-For more granular access control, edit the trust policy to add the `sub` claim to the policy's conditions with an appropriate pattern. In the following example, the role may only be assigned by stacks within the "Core" project:
+Make a note of the IAM role's ARN; it will be necessary to enable OIDC for your service.
+
+### Subject claim configuration and examples
+
+For more granular access control, edit the trust policy of your IAM role to add the `sub` claim to the policy's conditions with a valid pattern as shown below.
+
+#### Pulumi Deployments
+
+In the following example, the role may only be assumed by stacks within the `Core` project of the `contoso` organization:
 
 ```json
 "Condition": {
   "StringLike": {
-    "api.pulumi.com/oidc:aud": "<organization name>",
-    "api.pulumi.com/oidc:sub": "pulumi:deploy:org:<organization name>:project:Core:*"
+    "api.pulumi.com/oidc:aud": "contoso",
+    "api.pulumi.com/oidc:sub": "pulumi:deploy:org:contoso:project:Core:*"
   }
 }
 ```
 
-Make a note of the IAM role's ARN; it will be necessary to enable OIDC for your stack.
+#### Pulumi ESC
 
-## Enabling OIDC for your Stack via the Pulumi Console
+In the following example, the role may only be assumed by the `development` environment within the `contoso` organization:
+
+```json
+"Condition": {
+  "StringLike": {
+    "api.pulumi.com/oidc:aud": "contoso",
+    "api.pulumi.com/oidc:sub": "pulumi:environments:org:contoso:env:development"
+  }
+}
+```
+
+## Configuring OIDC via the Pulumi Console
+
+### Pulumi Deployments
 
 {{% notes "info" %}}
 In addition to the Pulumi Console, deployment settings including OIDC can be configured for a stack using the [pulumiservice.DeploymentSettings](https://www.pulumi.com/registry/packages/pulumiservice/api-docs/deploymentsettings/) resource or via the [REST API](/docs/pulumi-cloud/deployments/api/#patchsettings).
@@ -65,3 +101,32 @@ In addition to the Pulumi Console, deployment settings including OIDC can be con
 9. Click the "Save deployment configuration" button.
 
 With this configuration, each deployment of this stack will attempt to exchange the deployment's OIDC token for AWS credentials using the specified IAM role prior to running any pre-commands or Pulumi operations. The fetched credentials are published in the `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, and `AWS_SESSION_TOKEN` environment variables. The raw OIDC token is also available for advanced scenarios in the `PULUMI_OIDC_TOKEN` environment variable and the `/mnt/pulumi/pulumi.oidc` file.
+
+### Pulumi ESC
+
+To configure OIDC for Pulumi ESC, create a new environment in the [Pulumi Console](https://app.pulumi.com/). Make sure that you have the correct organization selected in the left-hand navigation menu. Then:
+
+1. Click the **Environments** link.
+2. Click the **Create environment** button.
+3. Provide a name for your environment.
+4. Click the  **Create environment** button.
+  {{< video title="Creating a new Pulumi ESC environment" src="./create-new-environment.mp4" autoplay="true" loop="true" >}}
+5. You will be presented with a split-pane editor view. Delete the default placeholder content in the editor and replace it with the following code:
+
+    ```yaml
+    values:
+      aws:
+        login:
+          fn::open::aws-login:
+            oidc:
+              duration: 1h
+              roleArn: <your-oidc-iam-role-arn>
+              sessionName: pulumi-environments-session
+    ```
+
+6. Replace `<your-client-id>`, `<your-tenant-id>`, and `<your-subscription-id>` with the values from the previous steps.
+7. Scroll to the bottom of the page and click **Save**.
+
+{{< video title="Adding configuration to Pulumi ESC environment" src="./add-environment-config.mp4" autoplay="true" loop="true" >}}
+
+To learn more about how to set up and use the various providers in Pulumi ESC, please refer to the [relevant Pulumi documentation](/docs/pulumi-cloud/esc/providers/)

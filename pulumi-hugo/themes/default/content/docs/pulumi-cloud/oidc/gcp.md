@@ -46,6 +46,8 @@ Once you have created your workload identity pool and provider, you will be dire
 
 1. Navigate to the [Service Accounts](https://console.cloud.google.com/projectselector2/iam-admin/serviceaccounts) page.
 
+WIP
+
 ### Grant access to the service account
 
 1. Navigate to your workload identity pool's page in the console. Then click the **Grant Access** button.

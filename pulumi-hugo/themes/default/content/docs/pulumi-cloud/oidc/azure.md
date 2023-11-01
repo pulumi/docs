@@ -112,13 +112,14 @@ With this configuration, each deployment of this stack will attempt to exchange 
 
 ### Pulumi ESC
 
-The first step is to create a new environment in the [Pulumi Console](https://app.pulumi.com/). Make sure that you have the correct organization selected in the left-hand navigation menu. Then:
+To configure OIDC for Pulumi ESC, create a new environment in the [Pulumi Console](https://app.pulumi.com/). Make sure that you have the correct organization selected in the left-hand navigation menu. Then:
 
 1. Click the **Environments** link.
 2. Click the **Create environment** button.
 3. Provide a name for your environment.
     * This should be the same as the name provided in the subject claim of your federated credentials.
 4. Click the  **Create environment** button.
+  {{< video title="Creating a new Pulumi ESC environment" src="./create-new-environment.mp4" autoplay="true" loop="true" >}}
 5. You will be presented with a split-pane editor view. Delete the default placeholder content in the editor and replace it with the following code:
 
     ```yaml
@@ -134,3 +135,7 @@ The first step is to create a new environment in the [Pulumi Console](https://ap
 
 6. Replace `<your-client-id>`, `<your-tenant-id>`, and `<your-subscription-id>` with the values from the previous steps.
 7. Scroll to the bottom of the page and click **Save**.
+
+{{< video title="Adding configuration to Pulumi ESC environment" src="./add-environment-config.mp4" autoplay="true" loop="true" >}}
+
+To learn more about how to set up and use the various providers in Pulumi ESC, please refer to the [relevant Pulumi documentation](/docs/pulumi-cloud/esc/providers/)
