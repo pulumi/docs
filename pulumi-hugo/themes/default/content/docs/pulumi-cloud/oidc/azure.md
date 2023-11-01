@@ -37,9 +37,9 @@ In the navigation pane of the [Microsoft Entra console](https://portal.azure.com
 
 After the Microsoft Entra App has been created, take note of the following details:
 
-* subscription ID
+* Subscription ID
 * Application (client) ID
-* Directory (tenant) ID.
+* Directory (tenant) ID
 
 These values will be necessary when enabling OIDC for your service.
 
@@ -77,6 +77,20 @@ The below is an example of a valid subject claim for the `development` environme
 * `pulumi:environments:org:contoso:env:development`
 
 You can learn more about setting up OIDC for Pulumi ESC by referring to the [relevant Pulumi documentation](/docs/pulumi-cloud/esc/providers/#setting-up-oidc).
+
+## Create a Service Principal
+
+To provide Pulumi services the ability to deploy, manage, and interact with Azure resources, you need to associate your Microsoft Entra application with your Subscription or Resource Group.
+
+1. Navigate to the [Subscriptions](https://portal.azure.com/#view/Microsoft_Azure_Billing/SubscriptionsBladeV1) page of the Azure portal.
+2. Select the subscription to create the service principal in.
+    * If you want to limit access to a specific resource group, go to the [Resource Groups](https://portal.azure.com/#view/HubsExtension/BrowseResourceGroups) page instead and select the desired resource group.
+3. In the left navigation menu, select **Access control (IAM)**.
+4. Click **Add** > **Add role assignment** to be taken to the **Add role assignment** wizard.
+5. Under the **Job function roles** tab, select the desired role from the list, then click **Next**.
+6. Select **User, group, or service principal**, then click **Select members**
+7. Enter the name of the application you created in a previous step, select it from the list, then click **Select**.
+8. Click **Next** and then **Review + assign**.
 
 ## Configure OIDC in the Pulumi Console
 
