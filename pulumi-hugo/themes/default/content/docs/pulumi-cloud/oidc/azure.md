@@ -59,7 +59,9 @@ Once you have created your new application registration, you will be redirected 
 
 ### Subject claim examples
 
-Depending on the Pulumi service you are configuring OIDC for, the value of the subject claim will be different. The below sections show examples that correspond to each OIDC-supported service.
+Depending on the Pulumi service you are configuring OIDC for, the value of the subject claim will be different. You can learn more about configuring OIDC with Pulumi by referring to the [relevant documentation](/docs/pulumi-cloud/oidc/).
+
+The below sections show examples that correspond to each OIDC-supported service.
 
 #### Pulumi Deployments
 
@@ -75,8 +77,6 @@ Because Azure's federated credentials require that the subject identifier exactl
 The below is an example of a valid subject claim for the `development` environment of the `contoso` organization:
 
 * `pulumi:environments:org:contoso:env:development`
-
-You can learn more about setting up OIDC for Pulumi ESC by referring to the [relevant Pulumi documentation](/docs/pulumi-cloud/esc/providers/#setting-up-oidc).
 
 ## Create a Service Principal
 

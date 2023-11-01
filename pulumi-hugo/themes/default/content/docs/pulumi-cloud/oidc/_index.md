@@ -33,6 +33,12 @@ For some services, the token also contains custom claims that provide additional
 
 ### Pulumi Deployments
 
+The format of the subject claim for this service is:
+
+`pulumi:deploy:org:<organization name>:project:<project name>:stack:<stack name>:operation:<operation kind>:scope:write`
+
+Valid custom claims for this service as listed in the table below:
+
 | Claim        | Description                                                                     |
 |--------------|---------------------------------------------------------------------------------|
 | `stackId`    | The fully-qualified identifier of the stack being deployed.                     |
@@ -42,6 +48,12 @@ For some services, the token also contains custom claims that provide additional
 | `stack`      | The name of the stack being deployed.                                           |
 | `deployment` | The deployment version.                                                         |
 | `scope`      | The scope of the OIDC token. Always `write`.                                    |
+
+### Pulumi ESC
+
+The format of the subject claim for this service is:
+
+`pulumi:environments:org:<organization name>:env:<environment name>`
 
 ## Configuring trust relationships
 
