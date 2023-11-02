@@ -112,6 +112,10 @@ We will now define our EC2 instance resource below.
 
 {{% /choosable %}}
 
+{{< notes type="warning" >}}
+If you are deploying resources in a region other than the `us-east-1` region, make sure to replace the AMI ID value with the ID that is [specific to your region](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/finding-an-ami.html). Otherwise you may run into an `InvalidAMIID.NotFound` error.
+{{< /notes >}}
+
 All resources have a required [`name`](https://www.pulumi.com/docs/concepts/resources/names/) argument. Each resource has both a [logical name](https://www.pulumi.com/docs/concepts/resources/names/#logicalname) and a [physical name](https://www.pulumi.com/docs/concepts/resources/names/#autonaming).
 
 The logical name is how the resource is known inside Pulumi. This is the value provided to the required `name` argument.
@@ -210,7 +214,10 @@ Use the following steps as a guide for adding the Security Group resource:
 - Preview and deploy your updated project code
 
 Once you have completed these steps, navigate to your instance IP address again. You should now be greeted with a "Welcome to nginx!" home page message that indicates your web server is running and publically accessible.
-> Note: If your web server is still timing out, make sure you are accessing your web server's IP address via HTTP and not HTTPS.
+
+{{< notes type="info" >}}
+If your web server is still timing out, make sure you are accessing your web server's IP address via HTTP and not HTTPS.
+{{< /notes >}}
 
 {{< details "Click here to view the complete project code" >}}
 
