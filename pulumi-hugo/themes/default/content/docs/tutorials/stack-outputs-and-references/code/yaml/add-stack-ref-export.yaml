@@ -1,0 +1,13 @@
+name: s3-writer
+runtime: yaml
+description: A program to create create a Stack Reference
+
+resources:
+  stack-ref:
+    type: pulumi:pulumi:StackReference
+    properties:
+      name: my-org/my-first-program/dev
+
+# Add an export to output the value of the Lambda function name using the stack reference above
+outputs:
+  firstProgramLambdaName: ${stack-ref.outputs["lambdaName"]}

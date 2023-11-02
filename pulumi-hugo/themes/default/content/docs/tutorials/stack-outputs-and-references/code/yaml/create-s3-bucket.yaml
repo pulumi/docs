@@ -1,0 +1,14 @@
+name: s3-writer
+runtime: yaml
+description: A program to create a Lambda write to S3 workflow on AWS
+
+resources:
+  # [Step 1: Create an S3 bucket.]
+  my-bucket:
+    type: aws:s3:Bucket
+
+  # [Step 2: Create a Lambda function.]
+  # TO-DO
+
+  # [Step 3: Create an export.]
+  # TO-DO

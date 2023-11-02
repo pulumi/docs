@@ -1,0 +1,9 @@
+name: s3-writer
+runtime: yaml
+description: A program to create create a Stack Reference
+
+resources:
+  stack-ref:
+    type: pulumi:pulumi:StackReference
+    properties:
+      name: my-org/my-first-program/dev

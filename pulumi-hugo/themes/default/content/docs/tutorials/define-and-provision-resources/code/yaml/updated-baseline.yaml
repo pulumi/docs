@@ -1,0 +1,25 @@
+name: nginx-server
+runtime: yaml
+description: A program to create an Nginx server on AWS
+
+resources:
+  # [Step 2: Create a security group.]
+  webserver-secgrp:
+    #TO-DO
+
+  # [Step 1: Create an EC2 instance.]
+  webserver-www:
+    type: aws:ec2:Instance
+    properties:
+      instanceType: t2.micro
+      ami: "ami-09538990a0c4fe9be"
+      userData: |
+        #!/bin/bash
+        sudo yum update -y
+        sudo yum upgrade -y
+        sudo amazon-linux-extras install nginx1 -y
+        sudo systemctl enable nginx
+        sudo systemctl start nginx
+
+outputs:
+  publicIp: ${webserver-www.publicIp}
