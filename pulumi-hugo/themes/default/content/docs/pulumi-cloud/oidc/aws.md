@@ -130,3 +130,9 @@ To configure OIDC for Pulumi ESC, create a new environment in the [Pulumi Consol
 {{< video title="Adding configuration to Pulumi ESC environment" src="./add-environment-config.mp4" autoplay="true" loop="true" >}}
 
 To learn more about how to set up and use the various providers in Pulumi ESC, please refer to the [relevant Pulumi documentation](/docs/pulumi-cloud/esc/providers/)
+
+## Automate OIDC Configuration
+
+Our [Examples](https://github.com/pulumi/examples) repository provides a wide variety of automations using Pulumi Infrastructure as Code (IaC). If you want to automate the configuration and deployment of OIDC between Pulumi and AWS, take a look at the following examples to help you get started:
+
+* [Configure OIDC for ESC in Pulumi Python](https://github.com/pulumi/examples/tree/master/aws-py-oidc-provider-pulumi-cloud)

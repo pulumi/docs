@@ -119,7 +119,6 @@ To configure OIDC for Pulumi ESC, create a new environment in the [Pulumi Consol
 3. Provide a name for your environment.
     * This should be the same as the name provided in the subject claim of your federated credentials.
 4. Click the  **Create environment** button.
-  {{< video title="Creating a new Pulumi ESC environment" src="./create-new-environment.mp4" autoplay="true" loop="true" >}}
 5. You will be presented with a split-pane editor view. Delete the default placeholder content in the editor and replace it with the following code:
 
     ```yaml
@@ -136,6 +135,11 @@ To configure OIDC for Pulumi ESC, create a new environment in the [Pulumi Consol
 6. Replace `<your-client-id>`, `<your-tenant-id>`, and `<your-subscription-id>` with the values from the previous steps.
 7. Scroll to the bottom of the page and click **Save**.
 
-{{< video title="Adding configuration to Pulumi ESC environment" src="./add-environment-config.mp4" autoplay="true" loop="true" >}}
-
 To learn more about how to set up and use the various providers in Pulumi ESC, please refer to the [relevant Pulumi documentation](/docs/pulumi-cloud/esc/providers/)
+
+## Automate OIDC Configuration
+
+Our [Examples](https://github.com/pulumi/examples) repository provides a wide variety of automations using Pulumi Infrastructure as Code (IaC). If you want to automate the configuration and deployment of OIDC between Pulumi and AWS, take a look at the following examples to help you get started:
+
+* [Configure OIDC for ESC in Pulumi Python](https://github.com/pulumi/examples/tree/master/azure-py-oidc-provider-pulumi-cloud)
+* [Configure OIDC for Deployments in Pulumi TypeScript](https://github.com/pulumi/workshops/blob/main/az-pulumi-deployments/az-oidc-setup/index.ts)

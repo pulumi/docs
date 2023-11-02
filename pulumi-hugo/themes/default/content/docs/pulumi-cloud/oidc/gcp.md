@@ -40,17 +40,21 @@ Please note that this guide provides step-by-step instructions based on the offi
 
 ## Configure a Service Account
 
-Once you have created your workload identity pool and provider, you will be directed to the pool details page.
+Once you have created your workload identity pool and provider, you will be directed to the pool details page. If you already have an appropriate service account created, skip ahead to the steps found in the [Grant access to the service account](/docs/pulumi-cloud/oidc/gcp/#grant-access-to-the-service-account) section. Otherwise, continue through the steps below to create a new one.
 
 ### Create a new service account
 
 1. Navigate to the [Service Accounts](https://console.cloud.google.com/projectselector2/iam-admin/serviceaccounts) page.
-
-WIP
+2. Select your Google Cloud project.
+3. Click "Create Service Account".
+4. Enter a value for the **Service account name** field. Then click **Create And Continue**
+    * The **Service account ID** field will auto-populate based on this value.
+5. In the **Grant this service account access to project** section, select the role(s) that provides the relevant access to your Pulumi service. Then click **Continue**.
+6. Leave the values in the next section blank and click **Done**.
 
 ### Grant access to the service account
 
-1. Navigate to your workload identity pool's page in the console. Then click the **Grant Access** button.
+1. In your workload identity pool's details page, click the **Grant Access** button.
 2. In the **Select service account** dropdown, select the desired service account to associate with the pool.
 3. Under the **Select principals** section, click the **Only identities matching the filter** radio button.
 4. In the **Attribute name** dropdown, select **Subject**.
@@ -95,3 +99,9 @@ In addition to the Pulumi Console, deployment settings including OIDC can be con
 9. Click the "Save deployment configuration" button.
 
 With this configuration, each deployment of this stack will attempt to exchange the deployment's OIDC token for Google Cloud credentials using the specified federated identity prior to running any pre-commands or Pulumi operations. The fetched credentials are published as a credential configuration in the `GOOGLE_CREDENTIALS` environment variable. The raw OIDC token is also available for advanced scenarios in the `PULUMI_OIDC_TOKEN` environment variable and the `/mnt/pulumi/pulumi.oidc` file.
+
+## Automate OIDC Configuration
+
+Our [Examples](https://github.com/pulumi/examples) repository provides a wide variety of example automations using Pulumi Infrastructure as Code (IaC). If you want to automate the configuration and deployment of OIDC between Pulumi and AWS, take a look at the following examples to help you get started:
+
+* [Configure OIDC for ESC in Pulumi Python](https://github.com/pulumi/examples/tree/master/gcp-py-oidc-provider-pulumi-cloud)
