@@ -33,7 +33,7 @@ This document outlines the steps required to configure Pulumi to use OpenID Conn
   {{< /notes >}}
 5. For the **Audience** field, provide the name of your Pulumi organization. Then click **Add provider**.
 
-## Configuring the IAM Role and Trust Policy
+## Configure the IAM Role and Trust Policy
 
 Once you have created the identity provider, you will see a notification at the top of your screen prompting you to assign an IAM role.
 
@@ -82,7 +82,7 @@ In the following example, the role may only be assumed by the `development` envi
 }
 ```
 
-## Configuring OIDC via the Pulumi Console
+## Configure OIDC via the Pulumi Console
 
 ### Pulumi Deployments
 

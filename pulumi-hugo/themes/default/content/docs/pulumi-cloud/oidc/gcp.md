@@ -82,7 +82,7 @@ The below is an example of a valid subject claim for the `development` environme
 
 You can learn more about setting up OIDC for Pulumi ESC by referring to the [relevant Pulumi documentation](/docs/pulumi-cloud/esc/providers/#setting-up-oidc).
 
-## Enabling OIDC for your Stack via the Pulumi Console
+## Configure OIDC in the Pulumi Console
 
 {{% notes "info" %}}
 In addition to the Pulumi Console, deployment settings including OIDC can be configured for a stack using the [pulumiservice.DeploymentSettings](https://www.pulumi.com/registry/packages/pulumiservice/api-docs/deploymentsettings/) resource or via the [REST API](/docs/pulumi-cloud/deployments/api/#patchsettings).
