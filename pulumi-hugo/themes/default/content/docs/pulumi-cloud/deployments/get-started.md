@@ -219,7 +219,7 @@ Alternatively, you can navigate to `https://app.pulumi.com`, select `Stacks` in 
 
 * Now configure settings specific to your Deployment, such as:
 
-    * [OIDC Connect](/docs/pulumi-cloud/deployments/oidc/)
+    * [OIDC Connect](/docs/pulumi-cloud/oidc/)
     * [Environment Variables](/docs/pulumi-cloud/deployments/reference/#environment-variables)
 
 (See [Using Deployments](/docs/pulumi-cloud/deployments/reference/) for more information about all of the available settings.)

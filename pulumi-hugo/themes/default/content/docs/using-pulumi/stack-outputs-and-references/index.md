@@ -560,5 +560,5 @@ You exported Lambda properties into stack outputs, and referenced those outputs 
 
 To learn more about creating and managing resources in Pulumi, take a look at the following resources:
 
-- Learn more about [stacks ouputs and references](/docs/concepts/stack/#stackreferences) in the Pulumi documentation.
+- Learn more about [stack outputs and references](/docs/concepts/stack/#stackreferences) in the Pulumi documentation.
 - Learn more about [Pulumi inputs and outputs](/docs/concepts/inputs-outputs/) in the Pulumi documentation.
