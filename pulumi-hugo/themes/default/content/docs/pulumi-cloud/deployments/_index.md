@@ -56,4 +56,4 @@ Deployment settings plus triggers are the key building blocks of the deployment 
 
 ## Configuring OpenID Connect (OIDC)
 
-Deployments support connectivity between Pulumi and various cloud providers via OIDC. To learn more about configuring OIDC and trust relationships in Pulumi, please refer to the [Pulumi OIDC documentation](/docs/pulumi-cloud/oidc/).
+Deployments supports connectivity between Pulumi and various cloud providers via OIDC. To learn more about configuring OIDC and trust relationships in Pulumi, please refer to the [Pulumi OIDC documentation](/docs/pulumi-cloud/oidc/).
