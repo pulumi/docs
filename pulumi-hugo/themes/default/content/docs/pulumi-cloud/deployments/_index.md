@@ -53,3 +53,7 @@ Pulumi Deployments offers several triggers that you can compose to build higher-
 Triggers can be used together, or not at all. Some users like to use the REST API to trigger deployments from GitHub Actions and disable the built-in `git push` integration. Doing so gives them the flexibility to compose deployment settings, the REST API, and click to deploy into useful platform workflows outside of CI/CD.
 
 Deployment settings plus triggers are the key building blocks of the deployment platforms. With them, you can build highly customized infrastructure automation and developer platforms such as service catalogs, drift detection, temporary infrastructure workflows for cost savings, infrastructure REST APIs, and more. These scenarios and more are discussed further with demos and source code.
+
+## Configuring OpenID Connect (OIDC)
+
+Deployments support connectivity between Pulumi and various cloud providers via OIDC. To learn more about configuring OIDC and trust relationships in Pulumi, please refer to the [Pulumi OIDC documentation](/docs/pulumi-cloud/oidc/).
