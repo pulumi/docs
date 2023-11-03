@@ -29,7 +29,7 @@ Pulumi ESC is a service of Pulumi Cloud that can be used with or without Pulumi 
 {{< /notes >}}
 - An [Amazon Web Services](https://aws.amazon.com/) account
 - The [AWS CLI](https://aws.amazon.com/cli/)
-- An [OIDC provider created for Pulumi](/docs/pulumi-cloud/deployments/oidc/aws/) in AWS
+- An [OIDC provider created for Pulumi](/docs/pulumi-cloud/oidc/aws/) in AWS
   - Note that when defining the  `Subject Identifier`, the format for environments is `pulumi:environments:org:<pulumi-org>:env:<environment-name>`
 - Python 3.7 or higher installed
 
@@ -244,7 +244,7 @@ $ esc login
 Manage your Pulumi ESC environments by logging in.
 Run `esc --help` for alternative login options.
 Enter your access token from https://app.pulumi.com/account/tokens
-    or hit <ENTER> to log in using your browser                   :  
+    or hit <ENTER> to log in using your browser                   :
 Logged in to https://api.pulumi.com/ as your-pulumi-org (https://app.pulumi.com/your-pulumi-org)
 ```
 

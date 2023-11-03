@@ -259,6 +259,6 @@ In this tutorial, you made an EC2 instance configured as an Nginx webserver and 
 
 To learn more about creating resources in Pulumi, take a look at the following resources:
 
-- Learn more about stack outputs and references in the [Stack Ouputs and References](/docs/tutorials/stack-outputs-and-references/) tutorial.
+- Learn more about stack outputs and references in the [Stack Outputs and References](/docs/using-pulumi/stack-outputs-and-references/) tutorial.
 - Learn more about inputs and outputs in the [Inputs and Outputs](/docs/concepts/inputs-outputs/) documentation.
 - Learn more about [resource names](/docs/concepts/resources/names/), [options](/docs/concepts/options/), and [providers](/docs/concepts/resources/providers/) in the Pulumi documentation.
