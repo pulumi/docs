@@ -56,7 +56,7 @@ These outputs are shown during an update, can be easily retrieved with the Pulum
 {{% choosable language typescript %}}
 
 ```typescript
-{{% loadcode "code/typescript/baseline.txt" %}}
+{{% loadcode "code/typescript/baseline.ts" %}}
 ```
 
 {{% /choosable %}}
@@ -86,7 +86,7 @@ The first resource we will define in our project is a simple S3 bucket as shown 
 {{% choosable language typescript %}}
 
 ```typescript
-{{% loadcode "code/typescript/create-s3-bucket.txt" %}}
+{{% loadcode "code/typescript/create-s3-bucket.ts" %}}
 ```
 
 {{% /choosable %}}
@@ -107,9 +107,9 @@ The first resource we will define in our project is a simple S3 bucket as shown 
 
 {{% /choosable %}}
 
-The next resource we will add is a Lambda function with function code that will write a simple `.txt` file to our S3 bucket. We will also add an IAM role that will [grant our Lambda function permission](https://docs.aws.amazon.com/lambda/latest/dg/lambda-intro-execution-role.html) to access AWS services and resources.
+The next resource we will add is a Lambda function with function code that will write a simple `.ts` file to our S3 bucket. We will also add an IAM role that will [grant our Lambda function permission](https://docs.aws.amazon.com/lambda/latest/dg/lambda-intro-execution-role.html) to access AWS services and resources.
 
-To start, let's create a new folder in our project named `s3_writer`. Inside of this folder, we'll create a file named `lambda_function.py` and populate it with code that will write a simple `.txt` file to our bucket.
+To start, let's create a new folder in our project named `s3_writer`. Inside of this folder, we'll create a file named `lambda_function.py` and populate it with code that will write a simple `.ts` file to our bucket.
 
 ```python
 {{% loadcode "code/lambda-code.py" %}}
@@ -122,7 +122,7 @@ Now, we can add the [Lambda function resource definition](https://www.pulumi.com
 {{% choosable language typescript %}}
 
 ```typescript
-{{% loadcode "code/typescript/create-lambda-function.txt" %}}
+{{% loadcode "code/typescript/create-lambda-function.ts" %}}
 ```
 
 {{% /choosable %}}
@@ -161,7 +161,7 @@ We can reference both our Lambda function name and bucket name via their `id` pr
 {{% choosable language typescript %}}
 
 ```typescript
-{{% loadcode "code/typescript/add-lambda-s3-export.txt" %}}
+{{% loadcode "code/typescript/add-lambda-s3-export.ts" %}}
 ```
 
 {{% /choosable %}}
@@ -233,6 +233,12 @@ The first thing we will do is validate that our S3 bucket is empty. We can use t
 aws s3api list-objects-v2 --bucket <bucket_name>
 ```
 
+{{% notes type="info" %}}
+
+The AWS CLI will run AWS commands with the `default` profile by default. If you would like to run commands with a different profile, take a look at the [relevant AWS documentation](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html) to learn how.
+
+{{% /notes %}}
+
 We will want to replace `<bucket_name>` with the actual name of our S3 bucket. While we can manually provide the name of our bucket, we can also programmatically reference our bucket name via the stack outputs.
 
 We'll do this by using the [`pulumi stack output`](/docs/concepts/stack/#outputs) command and provide the name of our desired output as shown below:
@@ -266,7 +272,7 @@ We can verify the outcome of this function execution by running the same `list-o
 {
     "Contents": [
         {
-            "Key": "2023-08-3107:53:28.137776_test_file.txt",
+            "Key": "2023-08-3107:53:28.137776_test_file.ts",
             "LastModified": "2023-08-31T07:53:29+00:00",
             "ETag": "\"f794802bfd4a70851294ba192d382c11\"",
             "Size": 13,
@@ -277,7 +283,7 @@ We can verify the outcome of this function execution by running the same `list-o
 }
 ```
 
-The `.txt` file in the `Key` field of the response object indicates that our Lambda function ran successfully.
+The `.ts` file in the `Key` field of the response object indicates that our Lambda function ran successfully.
 
 We have seen how we can reference our output values from the CLI. Now let's take a look at how we can do the same from within another stack.
 
@@ -289,9 +295,9 @@ For this section, we are going to create a new Pulumi program that will access t
 
 ### Reference the Name of the Lambda Function
 
-Let's start by making a new Pulumi program in a new directory. In this new program, we need to add the code that will reference the values from our first program.
+Let's start by making a new Pulumi project in a new directory. In this new program, we need to add the code that will reference the values from our first program.
 
-This an be done using Pulumi's [Stack Reference functionality](/docs/concepts/stack/#stackreferences). We'll need to pass in the fully qualified name of the stack as an argument. This name is comprised of the [organization](/docs/pulumi-cloud/organizations/), project, and stack names in the format of `<organization>/<project>/<stack>`
+This can be done using Pulumi's [Stack Reference functionality](/docs/concepts/stack/#stackreferences). We'll need to pass in the fully qualified name of the stack as an argument. This name is comprised of the [organization](/docs/pulumi-cloud/organizations/), project, and stack names in the format of `<organization>/<project>/<stack>`
 
 For example, if the name of our organization is `my-org`, the name of our first program is `my-first-program`, and the name of our stack is `dev`, then our fully qualified name will be `my-org/my-first-program/dev`.
 
@@ -302,7 +308,7 @@ With that being said, a stack reference will look like the following in our code
 {{% choosable language typescript %}}
 
 ```typescript
-{{% loadcode "code/typescript/add-stack-reference.txt" %}}
+{{% loadcode "code/typescript/add-stack-reference.ts" %}}
 ```
 
 {{% /choosable %}}
@@ -340,7 +346,7 @@ Let's update our code with the following:
 {{% choosable language typescript %}}
 
 ```typescript
-{{% loadcode "code/typescript/add-stack-ref-export.txt" %}}
+{{% loadcode "code/typescript/add-stack-ref-export.ts" %}}
 ```
 
 {{% /choosable %}}
@@ -405,7 +411,7 @@ An updated version of the Lambda Function project code has been provided below a
 {{% choosable language typescript %}}
 
 ```typescript
-{{% loadcode "code/typescript/updated-baseline-lambda.txt" %}}
+{{% loadcode "code/typescript/updated-baseline-lambda.ts" %}}
 ```
 
 {{% /choosable %}}
@@ -433,7 +439,7 @@ Some baseline code for the Scheduler project has also been provided below:
 {{% choosable language typescript %}}
 
 ```typescript
-{{% loadcode "code/typescript/updated-baseline-scheduler.txt" %}}
+{{% loadcode "code/typescript/updated-baseline-scheduler.ts" %}}
 ```
 
 {{% /choosable %}}
@@ -470,7 +476,7 @@ Once you have completed these steps, wait a few minutes and then run the followi
 aws s3api list-objects-v2 --bucket $(pulumi stack output bucketName)
 ```
 
-You should then see a number of `.txt` files in your S3 bucket.
+You should then see a number of `.ts` files in your S3 bucket.
 
 {{< details "Click here to view the complete project code" >}}
 
@@ -481,7 +487,7 @@ You should then see a number of `.txt` files in your S3 bucket.
 {{% choosable language typescript %}}
 
 ```typescript
-{{% loadcode "code/typescript/create-lambda-arn-export.txt" %}}
+{{% loadcode "code/typescript/create-lambda-arn-export.ts" %}}
 ```
 
 {{% /choosable %}}
@@ -511,7 +517,7 @@ You should then see a number of `.txt` files in your S3 bucket.
 {{% choosable language typescript %}}
 
 ```typescript
-{{% loadcode "code/typescript/create-eb-scheduler.txt" %}}
+{{% loadcode "code/typescript/create-eb-scheduler.ts" %}}
 ```
 
 {{% /choosable %}}
