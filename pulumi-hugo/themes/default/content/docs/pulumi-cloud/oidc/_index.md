@@ -37,7 +37,7 @@ The format of the subject claim for this service is:
 
 `pulumi:deploy:org:<organization name>:project:<project name>:stack:<stack name>:operation:<operation kind>:scope:write`
 
-Valid custom claims for this service as listed in the table below:
+Valid custom claims for this service are listed in the table below:
 
 | Claim        | Description                                                                     |
 |--------------|---------------------------------------------------------------------------------|

@@ -25,4 +25,7 @@ To learn more about how to set up and use the various providers, please refer to
 | [vault-login](/docs/pulumi-cloud/esc/providers/vault-login/)     | The `vault-login` provider enables you to log in to HashiCorp Vault using OpenID Connect or static credentials.               |
 | [vault-secrets](/docs/pulumi-cloud/esc/providers/vault-secrets/) | The `vault-secrets` provider enables you to dynamically import Secrets from HashiCorp Vault into your Environment.            |
 
-To learn more about configuring OIDC and trust relationships in Pulumi, please refer to the [Pulumi OIDC documentation](/docs/pulumi-cloud/oidc/).
+To learn more about configuring OIDC and trust relationships in Pulumi, please refer to the following:
+
+* [Pulumi OIDC documentation](/docs/pulumi-cloud/oidc/)
+* one of the relevant guides in the above provider table
