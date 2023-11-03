@@ -59,7 +59,7 @@ Amazon Elastic Compute Cloud (EC2) provides managed virtual server hosting that 
 {{% choosable language typescript %}}
 
 ```typescript
-{{% loadcode "code/typescript/baseline.ts" %}}
+{{% loadcode "code/typescript/baseline.txt" %}}
 ```
 
 {{% /choosable %}}
@@ -91,7 +91,7 @@ We will now define our EC2 instance resource below.
 {{% choosable language typescript %}}
 
 ```typescript
-{{% loadcode "code/typescript/create-ec2.ts" %}}
+{{% loadcode "code/typescript/create-ec2.txt" %}}
 ```
 
 {{% /choosable %}}
@@ -179,7 +179,7 @@ In this section, you will use Pulumi documentation to configure the security gro
 {{% choosable language typescript %}}
 
 ```typescript
-{{% loadcode "code/typescript/updated-baseline.ts" %}}
+{{% loadcode "code/typescript/updated-baseline.txt" %}}
 ```
 
 {{% /choosable %}}
@@ -226,7 +226,7 @@ If your web server is still timing out, make sure you are accessing your web ser
 {{% choosable language typescript %}}
 
 ```typescript
-{{% loadcode "code/typescript/create-sg.ts" %}}
+{{% loadcode "code/typescript/create-sg.txt" %}}
 ```
 
 {{% /choosable %}}
