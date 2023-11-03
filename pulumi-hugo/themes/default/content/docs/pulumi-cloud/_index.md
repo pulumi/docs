@@ -44,6 +44,7 @@ Explore the following sections to learn more about the features and benefits of 
 * [Personal Access Tokens](/docs/pulumi-cloud/accounts/#personal-access-tokens)
 * [Organization and Team Access Tokens](/docs/pulumi-cloud/access-management/organization-access-tokens/)
 * [SAML Integrations](/docs/pulumi-cloud/access-management/saml/)
+* [OIDC Integrations](/docs/pulumi-cloud/oidc/)
 
 ### Teams and collaboration
 
