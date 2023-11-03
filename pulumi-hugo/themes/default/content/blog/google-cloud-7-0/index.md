@@ -20,7 +20,7 @@ The Pulumi Google Cloud Classic provider can be used to provision any of the clo
 
 ## Looking back
 
-It's been almost 2 years since the last major release of the Google Cloud provider, version 6.0, which was released in November 2021. Since then, we've been hard at work improving the provider and adding new features. Here are some of the highlights:
+Since the initial launch of 6.0 almost two years ago, we've shipped over 70 minor releases to deliver the latest upstream enhancements while also adding many of our own. Here are some of the highlights:
 
 ### Coverage and Growth
 
@@ -101,7 +101,7 @@ Upstream changes for provider, resource, and data source labels are included in 
 
 {{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
-{{% chooseable language typescript %}}
+{{% choosable language typescript %}}
 
 ```typescript
 
@@ -109,7 +109,7 @@ Upstream changes for provider, resource, and data source labels are included in 
 
 {{% /choosable %}}
 
-{{% chooseable language python %}}
+{{% choosable language python %}}
 
 ```python
 
@@ -125,7 +125,7 @@ Upstream changes for provider, resource, and data source labels are included in 
 
 {{% /choosable %}}
 
-{{% chooseable language chsarp %}}
+{{% choosable language chsarp %}}
 
 ```csharp
 
