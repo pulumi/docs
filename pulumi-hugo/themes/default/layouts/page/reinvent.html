@@ -1,127 +1,90 @@
 {{ define "hero" }}
-    {{ partial "hero.html" (dict "title" .Params.title) }}
+    <header class="page-hero">
+        <img class="mx-auto mb-6 w-full" src="/images/reinvent/reinvent-hero.png" />
+    </header>
 {{ end }}
 
 {{ define "main" }}
-    <section id="ctas" class="container mx-auto my-16 text-center">
-        <h2>Meet with us at Booth 739!</h2>
+    <div class="container w-2/3 mt-16 text-center mx-auto relative">
+        <img src="/images/mascot/backpack-pulumipus.svg" alt="" style="transform:scale(-0.5,0.5); top:-128px; left:-280px" class="absolute hidden lg:block" />
+        <h5>We will be at AWS re:Invent, November 27-December 1: <b>Booth #779</b></h5>
+        <h5>Join us to find out how Pulumi’s Infrastructure as Code reduces cloud complexity, accelerates development velocity and helps companies scale and innovate.</h5>
+    </div>
 
-        <div class="my-16">
-            <div class="lg:flex lg:flex-wrap justify-center items-stretch">
-                <div class="lg:w-1/2 px-3 py-6">
-                    <div class="card text-center p-6 relative h-full">
-                        <div class="icon-section">
-                            {{ partial "color-icon.html" (dict "icon" "code" "icon_color" "blue") }}
-                        </div>
-                        <div>
-                            <h5>Announcing Pulumi Crosswalk for AWS v1.0</h5>
-                        </div>
-                        <div class="description">
-                            <p>
-                                Explore our multi-language library of well-architected AWS infrastructure patterns for rapid cloud development. Check it out on
-                                <a href="https://github.com/pulumi/pulumi-awsx" target="_blank">GitHub <i class="fab fa-github"></i></a>
-                            </p>
-                        </div>
-                        <div class="card-cta-btn">
-                            <a href="/blog/crosswalk-for-aws-1-0/" class="btn-primary">Learn More</a>
+    <section id="links" class="container mx-auto my-16 text-center">
+        <div class="container mx-auto">
+            <div class="flex flex-wrap items-stretch justify-center">
+                {{ range $item := .Params.links.items }}
+                    <div class="w-full lg:w-1/2 p-4 my-2">
+                        <div class="card h-full relative flex flex-col bg-white p-8">
+                            <h5>{{ $item.heading }}</h5>
+                            <p class="flex-1">{{ $item.description | markdownify }}</p>
+                            <div class="mt-4">
+                                <a href="{{ $item.link }}" target="_blank" class="btn-secondary" style="white-space: nowrap;">{{ $item.action }}</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="lg:w-1/2 px-3 py-6">
-                    <div class="card text-center p-6 relative h-full">
-                        <div class="icon-section">
-                            {{ partial "color-icon.html" (dict "icon" "team" "icon_color" "salmon") }}
-                        </div>
-                        <div>
-                            <h5>Want to schedule a time to meet?</h5>
-                        </div>
-                        <div class="description">
-                            <p>Meet with our team in-person at AWS reInvent. Use the link below to schedule some time.</p>
-                        </div>
-                        <div class="card-cta-btn">
-                            <a href="https://pulumicorporation.orhygiea.com/c/thayden" class="btn-primary">Meet with us</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="lg:w-1/2 px-3 py-6">
-                    <div class="card text-center p-6 relative h-full">
-                        <div class="icon-section">
-                            {{ partial "color-icon.html" (dict "icon" "code" "icon_color" "blue") }}
-                        </div>
-                        <div>
-                            <h5>Join the Pulumi Challenge</h5>
-                        </div>
-                        <div class="description">
-                            <p>Try Pulumi out for yourself by taking a Pulumi Challenge! You'll build something cool, and we'll send you some super secret swag in return.</p>
-                        </div>
-                        <div class="card-cta-btn">
-                            <a href="{{ relref . "/challenge" }}" class="btn-primary">Pulumi Challenge</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="lg:w-1/2 px-3 py-6">
-                    <div class="card text-center p-6 relative h-full">
-                        <div class="icon-section">
-                            {{ partial "color-icon.html" (dict "icon" "program" "icon_color" "yellow") }}
-                        </div>
-                        <div>
-                            <h5>Pulumi Templates</h5>
-                        </div>
-                        <div class="description">
-                            <p>
-                                Pulumi templates are the fastest way to deploy infrastructure to AWS, Azure, and Google Cloud. After deploying, you can easily modify the
-                                infrastructure by updating the code in TypeScript, Python, Go, Java, .NET/C#, or YAML.
-                            </p>
-                        </div>
-                        <div class="card-cta-btn">
-                            <a href="{{ relref . "/templates" }}" target="_blank" rel="noopener noreferrer" class="btn-primary">Learn More</a>
-                        </div>
-                    </div>
-                </div>
+                {{ end }}
             </div>
         </div>
     </section>
 
-    <section id="circleci-event" class="max-w-4xl mx-auto text-center relative mb-16 px-6 lg:px-0">
-        <div class="shape-background pulumi-service-screenshot">
-            <div class="shape-container">
-                <div class="circle-right"></div>
-                <div class="circle-left"></div>
+    <section id="workshops" style="background-color: #805AC3;">
+        <div class="container mx-auto py-12">
+            <h3 class="px-4 text-white">Workshops</h3>
+            <div class="flex flex-wrap items-stretch justify-center">
+                {{ range $item := .Params.workshops.items }}
+                    <div class="w-full lg:w-1/2 p-4 my-2">
+                        <div class="card h-full relative flex flex-col bg-white p-8">
+                            <h6>{{ $item.title }}</h6>
+                            {{ if $item.date }}
+                                <div class="my-0 py-1 inline-block mr-3 text-gray-600">
+                                    <i class="fas fa-calendar mr-2"></i>
+                                    {{ $item.date }}
+                                </div>
+                            {{ end }}
+                            <div class="flex-grow flex flex-col justify-start mt-3">
+                                <p class="text-gray-700">
+                                    {{ $item.description }}
+                                </p>
+                            </div>
+                            <div class="mt-8">
+                                <a href="{{ $item.link }}" target="_blank" class="btn-secondary btn-disabled">{{ $item.action }}<i class="fa fa-arrow-right ml-2"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                {{ end }}
             </div>
         </div>
+    </section>
 
-        <div class="card bg-white text-center p-8 relative h-full">
-            <img class="mx-auto h-28" src="/images/reinvent/beer-park.png" />
-            <div class="my-8">
-                <h5>Join us on Tuesday, November 30th from 6-9pm</h5>
-                <h3>Sky’s the Limit, Beer Park, Las Vegas</h3>
+    <section id="templates" class="container mx-auto my-16 text-center">
+        <div class=" text-center mx-auto my-8">
+            <h3>Pulumi Templates for Common Use Cases</h3>
+            <p>
+                Pulumi templates are the fastest way to deploy infrastructure. Templates come with predefined infrastructure as code so you can get started instantly. Find some of
+                our templates below, and Happy Templating!
+            </p>
+        </div>
+        <div class="container mx-auto">
+            <div class="flex flex-wrap items-stretch justify-center">
+                {{ range $item := .Params.templates.items }}
+                    <div class="lg:w-1/3 md:w-1/2 w-full my-4">
+                        <div class="card h-full relative flex flex-col bg-white pb-8 mx-4">
+                            <img class="rounded h-40 mx-auto" src="{{ $item.image }}" />
+                            <h5 class="mt-4">{{ $item.heading }}</h5>
+                            <p class="flex-1 px-8 pb-4">{{ $item.description }}</p>
+                            <div>
+                                <a href="{{ $item.link }}" target="_blank" style="font-size: 0.9rem" class="btn-secondary">{{ $item.action }}</a>
+                            </div>
+                        </div>
+                    </div>
+                {{ end }}
             </div>
         </div>
     </section>
 
-    <section id="hiring" class="container mx-auto my-16">
-        <div class="max-w-3xl mx-auto">
-            <h2>Join the team</h2>
-            <div class="text-base text-left mb-8">
-                <p>
-                    Pulumi is reinventing how people build modern cloud applications, with a unique platform that combines deep systems and infrastructure innovation with elegant
-                    programming models and developer tools.
-                </p>
-                <p>
-                    Our team is a diverse and talented group of individuals, with backgrounds in distributed cloud systems, programming languages, developer tools, and operating
-                    systems, from companies from all corners of the industry. Our culture is one of technical excellence, passion for teamwork, and customer obsession.
-                </p>
-                <p>
-                    While we have a fabulous office in downtown Seattle, Pulumi cares about the health, safety and happiness of our employees, and we've been a fully remote company
-                    since March, 2020. We've learned and grown as a company this year, and &mdash; unless otherwise specified &mdash; all of our open positions are remote. We will
-                    continue to collaborate and grow from different locations, and are committed to making sure our team is successful from their home offices.
-                </p>
-                <h3 class="mb-0">Open Positions</h3>
-                <pulumi-greenhouse-jobs-list></pulumi-greenhouse-jobs-list>
-            </div>
-        </div>
-    </section>
+    {{ partial "virtual-communities" . }}
+
+    {{ partial "help-links" . }}
 {{ end }}
