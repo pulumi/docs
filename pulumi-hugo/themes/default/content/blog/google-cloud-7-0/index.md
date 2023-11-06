@@ -14,9 +14,17 @@ tags:
 
 The latest major release of the Pulumi Google Cloud Classic Provider is available now! This [7.0 release](https://github.com/pulumi/pulumi-gcp/releases/tag/v7.0.0) contains the latest upstream changes to keep you up-to-date along with a highly requested bug fix, keeping your journey in managing Google Cloud resources fresh and smooth.
 
-The Pulumi Google Cloud Classic provider can be used to provision any of the cloud resources available in the upstream provider. It is part of the suite of [Pulumi official providers](https://www.pulumi.com/docs/intro/cloud-providers/), which means that it is officially maintained and supported by Pulumi. The provider is also open source and available on [GitHub](https://github.com/pulumi/pulumi-gcp) for you to contribute to and improve.
+The Pulumi Google Cloud Classic provider can be used to provision any of the cloud resources available in the upstream provider. It is part of the suite of [Pulumi official providers](https://www.pulumi.com/docs/intro/cloud-providers/), which means that it is officially maintained and supported by Pulumi. The provider is also open source and available on [GitHub](https://github.com/pulumi/pulumi-gcp) for you to contribute and grow.
 
 <!--more-->
+
+If you are new to Pulumi and would like to get started with the Google Cloud provider, visit any of these pages to jump right in!
+
+- [Getting Started](https://www.pulumi.com/docs/clouds/gcp/get-started/) - A guided walkthrough for creating your first project
+- [Setup & Install](https://www.pulumi.com/registry/packages/gcp/installation-configuration/) - Instructions on installing the Google Cloud provider
+- [How-to guides](https://www.pulumi.com/registry/packages/gcp/how-to-guides/) - Learn how to use the Google Cloud provider to provision specific resources
+- [Templates](https://www.pulumi.com/docs/clouds/gcp/#templates) - Use a quickstart template to create a new project
+- [Pulumi AI](https://www.pulumi.com/ai) - Ask Pulumi AI to create a new project
 
 ## Looking back
 
@@ -95,61 +103,16 @@ This release includes a fix for the [naming of the Service Account resource](htt
 
 ## Labels Rework
 
-Upstream changes for provider, resource, and data source labels are included in this release. You can find more information about this change in the [upstream documentation](https://registry.terraform.io/providers/hashicorp/google/latest/docs/guides/version_5_upgrade#provider-level-labels-rework)
+Upstream changes for provider, resource, and data source labels are included in this release. Global Google Cloud Platform labels configured on the provider are supported through the new `defaultLabels` field. Default labels will be applied to all resources with a `labels` field.
+Resources that previously contained a single `labels`  field will now contain three fields:
 
-<!-- TODO -->
+- The `labels`  field is now non-authoritative and only manages the label keys defined in your configuration for the resource.
+- The output-only `pulumiLabels` field merges the labels defined in the resource's labels field and the global `defaultLabels`. If the same label key exists on both the resource level and provider level, the value on the resource will override the provider-level default.
+- The output-only `effectiveLabels` will list all the labels present on the resource in GCP, including labels configured through Pulumi.
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+Due to the two new output fields, a resource that has a `labels` field may show a diff when upgrading from pulumi-gcp v6 to v7. This diff reflects adding the new resource Output fields and is safe to do.
 
-{{% choosable language typescript %}}
-
-```typescript
-
-```
-
-{{% /choosable %}}
-
-{{% choosable language python %}}
-
-```python
-
-```
-
-{{% /choosable %}}
-
-{{% choosable language go %}}
-
-```go
-
-```
-
-{{% /choosable %}}
-
-{{% choosable language chsarp %}}
-
-```csharp
-
-```
-
-{{% /choosable %}}
-
-{{% choosable language java %}}
-
-```java
-
-```
-
-{{% /choosable %}}
-
-{{% choosable language yaml %}}
-
-```yaml
-
-```
-
-{{% /choosable %}}
-
-{{< /chooser >}}
+You can find more information about this change in the [upstream documentation](https://registry.terraform.io/providers/hashicorp/google/latest/docs/guides/version_5_upgrade#provider-level-labels-rework).
 
 ## Upgrading
 
