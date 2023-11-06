@@ -23,20 +23,28 @@ Dive into Learn Pulumi for a comprehensive walkthrough of key Pulumi concepts in
 
 {{< get-started-next-step path="/learn/pulumi-fundamentals" label="Learn Pulumi Fundamentals" ref="gs-gcp-learn" >}}
 
-## How-to Guides
+## Launch a new project with a template
 
-Explore our how-to guides if you're looking for examples of specific architectures or application stacks. These guides are available in all Pulumi languages and cover many common architectures such as [GKE clusters](/registry/packages/gcp/how-to-guides/gcp-ts-gke-hello-world/), [Cloud Run containers](/registry/packages/gcp/how-to-guides/gcp-ts-cloudrun/), and [Cloud Function HTTP endpoints](/registry/packages/gcp/how-to-guides/gcp-ts-functions/).
+Easily deploy the most common cloud architectures, from [static websites](/templates/static-website/gcp/) to [serverless applications](/templates/serverless-application/gcp/), [virtual machines](/templates/virtual-machine/gcp/), [container services](/templates/container-service/gcp/), and [Kubernetes clusters](/templates/kubernetes/gcp/).
 
-{{< get-started-next-step path="/registry/packages/gcp/how-to-guides" label="Explore How-to Guides" ref="gs-gcp-guides" >}}
+{{< get-started-next-step path="/templates/" label="Browse templates" ref="gs-gcp-guides" >}}
 
-## How Pulumi Works
+## Dive into the docs
 
-Learn how Pulumi works from its architecture to key concepts, including [stacks](/docs/concepts/stack/), [state](/docs/concepts/state/), [configuration](/docs/concepts/config/), and [secrets](/docs/concepts/secrets/).
+Read more about Pulumi's architecture and foundational concepts in depth, including [projects](/docs/concepts/projects/), [stacks](/docs/concepts/stack/), [configuration](/docs/concepts/config/), [secrets](/docs/concepts/secrets/), [resources](/docs/concepts/resources/), [state](/docs/concepts/state/), and more.
 
-{{< get-started-next-step path="/docs/concepts/" label="Read Documentation" ref="gs-gcp-docs" >}}
+{{< get-started-next-step path="/docs/concepts/" label="Read the docs" ref="gs-gcp-docs" >}}
 
-## Blog Posts
+## Try Pulumi ESC (Environments, Secrets, and Configuration)
 
-Read through the latest blog posts about using Pulumi with Google Cloud, including everything from new Google Cloud features and products supported by Pulumi to technical architectures and best practices.
+In this guide, you used [stack configuration](/docs/concepts/config/) and environment variables to configure a single project and stack. Did you know you can also configure multiple Pulumi projects, and even other applications, with [Pulumi ESC](/product/esc/)?
 
-{{< get-started-next-step path="/blog/tag/google-cloud" label="Read the Pulumi Blog" ref="gs-gcp-blog" >}}
+Pulumi ESC introduces the concept of _environments_ --- managed collections of static and dynamic settings that you can use to configure any project, stack, application, or service, including with short-lived cloud credentials through OpenID Connect.
+
+{{< get-started-next-step path="/blog/environments-secrets-configurations-management/" label="Learn more about Pulumi ESC" ref="gs-gcp-esc" >}}
+
+## Check out the blog
+
+Browse the latest posts on using Pulumi with Google Cloud, including everything from new Google Cloud products and features to technical architectures and best practices.
+
+{{< get-started-next-step path="/blog/tag/gcp" label="Browse Google Cloud posts" ref="gs-gcp-blog" >}}
