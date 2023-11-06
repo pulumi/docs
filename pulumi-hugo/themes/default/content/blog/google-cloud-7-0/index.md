@@ -163,6 +163,8 @@ Upgrading from the previous version of the Google Cloud provider is straightforw
 + com.pulumi:pulumi-gcp:7.0.0
 ```
 
+{{% /choosable %}}
+
 {{< /chooser >}}
 
 ## Wrapping Up
