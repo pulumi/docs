@@ -122,9 +122,13 @@ To configure OIDC for Pulumi ESC, create a new environment in the [Pulumi Consol
               duration: 1h
               roleArn: <your-oidc-iam-role-arn>
               sessionName: pulumi-environments-session
+      environmentVariables:
+        AWS_ACCESS_KEY_ID: ${aws.login.accessKeyId}
+        AWS_SECRET_ACCESS_KEY: ${aws.login.secretAccessKey}
+        AWS_SESSION_TOKEN: ${aws.login.sessionToken}
     ```
 
-6. Replace `<your-client-id>`, `<your-tenant-id>`, and `<your-subscription-id>` with the values from the previous steps.
+6. Replace `<your-oidc-iam-role-arn>` with the value from the previous steps.
 7. Scroll to the bottom of the page and click **Save**.
 
 {{< video title="Adding configuration to Pulumi ESC environment" src="./add-environment-config.mp4" autoplay="true" loop="true" >}}
