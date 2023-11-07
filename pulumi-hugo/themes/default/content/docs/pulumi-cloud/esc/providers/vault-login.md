@@ -13,6 +13,8 @@ menu:
 
 The `vault-login` provider enables you to log in to HashiCorp Vault using OpenID Connect or by providing static credentials. The provider will return a set of credentials that can be used to fetch secrets using the `vault-secrets` provider.
 
+Want to use this with OIDC? See [the docs](../../oidc/vault.md).
+
 ## Example
 
 ```yaml
@@ -22,62 +24,6 @@ The `vault-login` provider enables you to log in to HashiCorp Vault using OpenID
         address: https://127.0.0.1:8200/
         jwt:
           role: example-role
-```
-
-## Configuring OIDC in Vault
-To add Pulumi Cloud as an OIDC provider in Vault you'll need to do the following:
-- Enable the [`JWT` auth method](https://developer.hashicorp.com/vault/docs/auth/jwt)
-- Create an associated role
-
-### Enable JWT Auth Method
-To enable the [JWT auth method](https://developer.hashicorp.com/vault/docs/auth/jwt) in Vault:
-```
-$ vault auth enable -path=jwt jwt
-Success! Enabled jwt auth method at: jwt/
-
-$ vault write auth/jwt/config \
-    oidc_discovery_url="https://api.pulumi.com/oidc" \
-    bound_issuer="https://api.pulumi.com/oidc"
-Success! Data written to: auth/jwt/config
-```
-
-### Create JWT Role
-To create a [role](https://developer.hashicorp.com/vault/api-docs/auth/jwt#create-update-role) (assumes existing policy `myExamplePolicy`) using the CLI:
-```
-vault write auth/jwt/role/<role name> \
-  bound_audiences="<org name>"
-  user_claim="sub" \
-  token_policies=myExamplePolicy \
-  allowed_redirect_uris=<vault url>/jwt/callback \
-  role_type=jwt
-```
-
-If you want to use `bound_claims` you'll need to specify the role configuration [as JSON](https://developer.hashicorp.com/vault/docs/auth/jwt#oidc-configuration-troubleshooting):
-```
-$ vault write auth/jwt/role/<role name> -<<EOF
-{
-  "user_claim": "sub",
-  "bound_audiences": "<org name>",
-  "role_type": "jwt",
-  "policies": "myExamplePolicy",
-  "bound_claims": { "env": ["<environment name>","<another environment name>"] },
-  "allowed_redirect_uris": ["<vault url>/jwt/callback"]
-}
-EOF
-```
-
-Pulumi Cloud passes the following JWT structure to Vault:
-```
-{
-  "aud": "<org name>",
-  "env": "<environment name>",
-  "exp": 1699300519,
-  "iat": 1699296919,
-  "iss": "https://api.pulumi.com/oidc",
-  "nbf": 1699296919,
-  "org": "<org name>",
-  "sub": "pulumi:environments:org:<org name>:env:<environment name>"
-}
 ```
 
 ## Inputs
@@ -93,7 +39,7 @@ Pulumi Cloud passes the following JWT structure to Vault:
 | Property | Type   | Description                                               |
 |----------|--------|-----------------------------------------------------------|
 | `role`   | string | The name of the role to use for login.                    |
-| `mount`  | string | [Optional] - The name of the authentication engine mount. |
+| `mount`  | string | [Optional] - The name of the authentication engine mount. Defaults to `jwt`. |
 
 ### VaultLoginToken
 
