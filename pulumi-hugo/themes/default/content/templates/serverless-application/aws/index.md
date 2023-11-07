@@ -25,7 +25,7 @@ The AWS Serverless Application template creates an infrastructure as code projec
 
 ## Creating a new AWS serverless application project
 
-To use this template to deploy your own AWS serverless application, make sure you've [installed Pulumi](/docs/install/gured your AWS credentials](/registry/packages/aws/installation-configuration/), then create a new [project](/docs/concepts/projects/) using the template in your language of choice.
+To use this template to deploy your own AWS serverless application, make sure you've [installed Pulumi](/docs/install/} and [configured your AWS credentials](/registry/packages/aws/installation-configuration/), then create a new [project](/docs/concepts/projects/) using the template in your language of choice.
 
 {{< templates/pulumi-new >}}
 
