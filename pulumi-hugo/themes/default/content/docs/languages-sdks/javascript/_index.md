@@ -19,7 +19,7 @@ aliases:
 
 <img src="/logos/tech/logo-nodejs.png" align="right" width="150" style="padding:8px; margin-top: -64px">
 
-Pulumi supports writing your infrastructure as code in any JavaScript language running on Node.js using any of the [Current, Active and Maintenance LTS versions](https://nodejs.org/en/about/releases/).
+Pulumi supports writing your infrastructure as code in any JavaScript language running on Node.js using any of the [Current, Active and Maintenance LTS versions](https://nodejs.org/en/about/previous-releases).
 
 Because programs are just JavaScript, you may elect to write them in any manner you'd normally write Node.js programs.
 That includes TypeScript, CoffeeScript, or Babel, in addition to your favorite tools such as build systems, linters, or
