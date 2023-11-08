@@ -586,8 +586,8 @@ values:
 ```yaml
 # environment-c
 imports:
-  - environment-b
   - environment-a
+  - environment-b
 values:
   foo: qux
   pulumiConfig:
