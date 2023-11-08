@@ -28,7 +28,7 @@ If you are new to Pulumi and would like to get started with the Google Cloud pro
 
 ## Looking back
 
-Since the initial launch of 6.0 almost two years ago, we've shipped over 70 minor releases to deliver the latest upstream enhancements while also adding many of our own. Here are some of the highlights:
+Since the initial launch of 6.0 almost two years ago, we've shipped over 70 releases to deliver the latest upstream enhancements while also adding many of our own. Here are some of the highlights:
 
 ### Coverage and Growth
 
