@@ -8,11 +8,6 @@ menu:
     pulumicloud:
         parent: openid-connect
         weight: 1
-
-aliases:
-- /docs/guides/oidc/vault
-- /docs/intro/deployments/oidc/vault/
-- /docs/pulumi-cloud/deployments/oidc/vault/
 ---
 
 This document outlines the steps required configured to use Pulumi to use OpenID Connect to authenticate with Vault. This is accomplished using [Vault's JWT authentication method](https://developer.hashicorp.com/vault/docs/auth/jwt#jwt-authentication) to assume a role. Access to the role is authorized using a [Vault policy](https://developer.hashicorp.com/vault/docs/concepts/policies) that validates the contents of the OIDC token issued by Pulumi Cloud.
@@ -51,6 +46,7 @@ The contents of the JWT token from Pulumi is shown below:
 
 Where:
 - `<org-name>` is your Pulumi Cloud organization name (or your username if not part of an organization)
+- `<environment-name>` is the Pulumi Cloud environment name
 - `<subject-identifier>` is the subject identifier of the Pulumi service requesting access
 
 ## Configure Vault JWT OIDC Auth
@@ -90,9 +86,9 @@ To create a [role](https://developer.hashicorp.com/vault/api-docs/auth/jwt#creat
 vault write auth/jwt/role/<role-name> \
   bound_audiences="<org-name>"
   user_claim="sub" \
-  token_policies=<policy-name> \
+  token_policies="<policy-name>" \
   allowed_redirect_uris="<vault-url>/jwt/callback" \
-  role_type=jwt
+  role_type="jwt"
 ```
 
 **IMPORTANT:** you must ensure that `role_type` is set to `jwt` and not `oidc`.
@@ -122,10 +118,6 @@ EOF
 
 ### Pulumi Deployments
 
-{{% notes "info" %}}
-Configuration between Pulumi Deployments and Vault using OIDC is not currently supported. However, you can configure Deployments to retrieve Vault secrets from a Pulumi ESC environment. To set this up:
-{{% /notes %}}
-
 You can pull vault secrets from Pulumi ESC in Deployments. To set this up:
 
   1. Follow the steps under [Pulumi ESC](#pulumi-esc) below to create an environment with vault secrets.
@@ -143,18 +135,19 @@ To configure OIDC for Pulumi ESC, create a new environment in the [Pulumi Consol
   5. You will be presented with a split-pane editor view. Delete the default placeholder content in the editor and replace it with the following code:
 
       ```yaml
-      vault:
-        login:
-          fn::open::vault-login:
-            address: <your-vault-url>
-            jwt:
-              role: <your-role-name>
-        secrets:
-          fn::open::vault-secrets:
-            login: ${vault.login}
-            read:
-              test1:
-                path: <path-to-secret>
+      values:
+        vault:
+          login:
+            fn::open::vault-login:
+              address: <your-vault-url>
+              jwt:
+                role: <your-role-name>
+          secrets:
+            fn::open::vault-secrets:
+              login: ${vault.login}
+              read:
+                test1:
+                  path: <path-to-secret>
       ```
 
   6. Replace `<your-vault-url>`, `<your-role-name>`, and `<path-to-secret>` with the values from the previous steps.
