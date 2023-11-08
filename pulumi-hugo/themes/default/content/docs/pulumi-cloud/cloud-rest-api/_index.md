@@ -2269,6 +2269,10 @@ curl \
 
 ## Environments
 
+{{< notes >}}
+Pulumi ESC (Environments, Secrets, and Configuration) and its associated REST API endpoints are  currently in public preview.
+{{< /notes >}}
+
 <!-- ###################################################################### -->
 
 ### List Environments available to the authenticated user.
@@ -2411,7 +2415,6 @@ curl \
   --request PATCH \
   --data '<yaml content>' \
   https://api.pulumi.com/api/preview/environments/{organization}/{environment}
-  
 ```
 
 #### Default response
