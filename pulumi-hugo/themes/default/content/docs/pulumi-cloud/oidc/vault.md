@@ -1,6 +1,6 @@
 ---
 title_tag: Configure OpenID Connect for Vault | OIDC
-meta_desc: This page describes how to configure OIDC token exchange in Vault for use with Pulumi Deployments
+meta_desc: This page describes how to configure OIDC token exchange in Vault for use with Pulumi
 title: Vault
 h1: Configuring OpenID Connect for Vault
 meta_image: /images/docs/meta-images/docs-meta.png
@@ -17,6 +17,10 @@ aliases:
 
 This document outlines the steps required configured to use Pulumi to use OpenID Connect to authenticate with Vault. This is accomplished using [Vault's JWT authentication method](https://developer.hashicorp.com/vault/docs/auth/jwt#jwt-authentication) to assume a role. Access to the role is authorized using a [Vault policy](https://developer.hashicorp.com/vault/docs/concepts/policies) that validates the contents of the OIDC token issued by Pulumi Cloud.
 
+{{% notes "info" %}}
+The `namespaces` functionality of Vault is not currently supported. More specifically, this configuration will only work for the `root` namespace. This means that this configuration will only work with Vault OSS at this time (Vault HCP and Enterprise are not supported).
+{{% /notes %}}
+
 
 ## Prerequisites
 
@@ -26,11 +30,11 @@ This document outlines the steps required configured to use Pulumi to use OpenID
 
 ## Login Flow
 
-At a high level overview of how Pulumi Cloud authenticates to Vault using the JWT OIDC login flow:
+The following diagram demonstrates the high level overview of how Pulumi Cloud authenticates to Vault using the JWT OIDC login flow:
 
 ![Vault OIDC JWT login flow](./vault/vault-login-oidc.png)
 
-The contents of the JWT from Pulumi looks like this:
+The contents of the JWT token from Pulumi is shown below:
 
 ```json
 {
@@ -41,13 +45,13 @@ The contents of the JWT from Pulumi looks like this:
   "iss": "https://api.pulumi.com/oidc",
   "nbf": 1699296919,
   "org": "<org-name>",
-  "sub": "pulumi:environments:org:<org-name>:env:<environment-name>"
+  "sub": "<subject-identifier>"
 }
 ```
 
 Where:
 - `<org-name>` is your Pulumi Cloud organization name (or your username if not part of an organization)
-- `<environment-name>` is the Pulumi Cloud environment name requesting configuration
+- `<subject-identifier>` is the subject identifier of the Pulumi service requesting access
 
 ## Configure Vault JWT OIDC Auth
 
@@ -87,7 +91,7 @@ vault write auth/jwt/role/<role-name> \
   bound_audiences="<org-name>"
   user_claim="sub" \
   token_policies=<policy-name> \
-  allowed_redirect_uris=<vault-url>/jwt/callback \
+  allowed_redirect_uris="<vault-url>/jwt/callback" \
   role_type=jwt
 ```
 
@@ -119,7 +123,7 @@ EOF
 ### Pulumi Deployments
 
 {{% notes "info" %}}
-Deployment specific Vault OIDC functionality is not currently supported. A [request](https://github.com/pulumi/pulumi-cloud-requests/issues/322) has been opened requesting this functionality. The notes below refer to using ESC with Pulumi Deployments to fetch secrets.
+Configuration between Pulumi Deployments and Vault using OIDC is not currently supported. However, you can configure Deployments to retrieve Vault secrets from a Pulumi ESC environment. To set this up:
 {{% /notes %}}
 
 You can pull vault secrets from Pulumi ESC in Deployments. To set this up:
@@ -160,12 +164,16 @@ To configure OIDC for Pulumi ESC, create a new environment in the [Pulumi Consol
 
   To learn more about how to set up and use the various providers in Pulumi ESC, please refer to the [relevant Pulumi documentation](/docs/pulumi-cloud/esc/providers/)
 
-**NOTE:** if you configured the vault jwt auth method to use a different [mount path](https://developer.hashicorp.com/vault/docs/auth#enabling-disabling-auth-methods) than `jwt` you'll need to specify that using the `mount` option of the [vault-login](../esc/providers/vault-login.md) provider.
+{{% notes "info" %}}
+If you configured the vault jwt auth method to use a different [mount path](https://developer.hashicorp.com/vault/docs/auth#enabling-disabling-auth-methods) than `jwt`, you will need to specify that path using the `mount` option of the [vault-login](../esc/providers/vault-login.md) provider.
+{{% /notes %}}
 
-**NOTE 2:** you can verify these secrets are accessible using the [`esc`](https://www.pulumi.com/docs/install/esc/) CLI (replace `<my-org>` with your organization name).
+
+You can verify that your Vault secrets are accessible by using the [`esc`](https://www.pulumi.com/docs/install/esc/) CLI  as shown below. Make sure to replace `<my-org>` with your Pulumi organization name and `<my-environment>` with the name of your ESC environment.
 
 ```shell
-$ esc open <my-org>/vault-test
+# example output
+$ esc open <my-org>/<my-environment>
 {
   "vault": {
     "login": {
