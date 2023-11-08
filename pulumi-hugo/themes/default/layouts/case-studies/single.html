@@ -13,14 +13,16 @@
         </div>
     </nav>
 
-    <section id="executive-summary" class="mt-8 py-8 px-4 md:px-0">
-        <div class="container mx-auto max-w-4xl py-8 border-b border-gray-300">
-            <h2>Executive Summary</h2>
-            <p class="description">
-                {{ .Params.exec_summary | markdownify }}
-            </p>
-        </div>
-    </section>
+    {{ if .Params.exec_summary }}
+        <section id="executive-summary" class="mt-8 py-8 px-4 md:px-0">
+            <div class="container mx-auto max-w-4xl py-8 border-b border-gray-300">
+                <h2>Executive Summary</h2>
+                <p class="description">
+                    {{ .Params.exec_summary | markdownify }}
+                </p>
+            </div>
+        </section>
+    {{ end }}
 
     <section class="px-4 md:px-0">
         <div class="container mx-auto max-w-4xl mb-4 description">
@@ -39,18 +41,20 @@
         </div>
     </section>
 
-    <section class="mt-8 pb-8 px-4 md:px-0">
-        <div class="container mx-auto max-w-4xl py-8 border-t border-gray-300">
-            <h3>Pulumi Corporation</h3>
-            <p>
-                Pulumi's cloud engineering platform brings infrastructure, developer, and security teams together through a unified software engineering process that tames cloud
-                complexity and accelerates innovation. Using the Pulumi platform, teams can build, deploy, and manage modern cloud applications faster and with more confidence,
-                using any language, any architecture and any cloud. Pulumi lets teams build Universal Infrastructure as Code using popular programming languages (Python,
-                JavaScript, TypeScript, Go, .NET/C#, Java) and markup languages (YAML, JSON, CUE). It enables deploying infrastructure and applications together through a unified
-                delivery process. Finally, teams can manage cloud applications with Policy as Code, better visibility, and controls.
-            </p>
-        </div>
-    </section>
+    {{ if not .Params.hide_pulumi_footer }}
+        <section class="mt-8 pb-8 px-4 md:px-0">
+            <div class="container mx-auto max-w-4xl py-8 border-t border-gray-300">
+                <h3>Pulumi Corporation</h3>
+                <p>
+                    Pulumi's cloud engineering platform brings infrastructure, developer, and security teams together through a unified software engineering process that tames cloud
+                    complexity and accelerates innovation. Using the Pulumi platform, teams can build, deploy, and manage modern cloud applications faster and with more confidence,
+                    using any language, any architecture and any cloud. Pulumi lets teams build Universal Infrastructure as Code using popular programming languages (Python,
+                    JavaScript, TypeScript, Go, .NET/C#, Java) and markup languages (YAML, JSON, CUE). It enables deploying infrastructure and applications together through a unified
+                    delivery process. Finally, teams can manage cloud applications with Policy as Code, better visibility, and controls.
+                </p>
+            </div>
+        </section>
+    {{ end }}
 
     {{ partial "learnmore-contactus.html" . }}
 {{ end }}
