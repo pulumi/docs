@@ -78,6 +78,18 @@ The below is an example of a valid subject claim for the `development` environme
 
 * `pulumi:environments:org:contoso:env:development`
 
+{{< notes type="warning" >}}
+
+If you are integrating Pulumi ESC with Pulumi IaC, using the specific name of the ESC environment in the subject identifier will not work at this time. There is a [known issue](https://github.com/pulumi/pulumi/issues/14509) with the value of the subject identifier that is sent to Azure from Pulumi.
+
+The steps in this guide will work for Pulumi ESC if you use the following syntax instead:
+
+`pulumi:environments:org:contoso:env:<yaml>`
+
+Make sure to replace `contoso` with the name of your Pulumi organization and use the literal value of `<yaml>` as shown above.
+
+{{< /notes >}}
+
 ## Create a Service Principal
 
 To provide Pulumi services the ability to deploy, manage, and interact with Azure resources, you need to associate your Microsoft Entra application with your Subscription or Resource Group.
@@ -119,6 +131,7 @@ To configure OIDC for Pulumi ESC, create a new environment in the [Pulumi Consol
 3. Provide a name for your environment.
     * This should be the same as the name provided in the subject claim of your federated credentials.
 4. Click the  **Create environment** button.
+  {{< video title="Creating a new Pulumi ESC environment" src="../aws/create-new-environment.mp4" autoplay="true" loop="true" >}}
 5. You will be presented with a split-pane editor view. Delete the default placeholder content in the editor and replace it with the following code:
 
     ```yaml
@@ -130,10 +143,49 @@ To configure OIDC for Pulumi ESC, create a new environment in the [Pulumi Consol
             tenantId: <your-tenant-id>
             subscriptionId: /subscriptions/<your-subscription-id>
             oidc: true
+      environmentVariables:
+        ARM_USE_OIDC: 'true'
+        ARM_CLIENT_ID: ${azure.login.clientId}
+        ARM_TENANT_ID: ${azure.login.tenantId}
+        ARM_OIDC_REQUEST_TOKEN: ${azure.login.oidc.token}
+        ARM_OIDC_TOKEN: ${azure.login.oidc.token}
+        ARM_SUBSCRIPTION_ID: ${azure.login.subscriptionId}
+        ARM_OIDC_REQUEST_URL: https://api.pulumi.com/oidc
     ```
 
 6. Replace `<your-client-id>`, `<your-tenant-id>`, and `<your-subscription-id>` with the values from the previous steps.
 7. Scroll to the bottom of the page and click **Save**.
+
+You can validate that your configuration is working by running either of the following:
+
+* `esc open <your-org>/<your-environment>` command of the [ESC CLI](/docs/esc-cli/)
+* `pulumi env open <your-org>/<your-environment>` command of the [Pulumi CLI](/docs/install/)
+
+Make sure to replace `<your-org>` and `<your-environment>` with the values of your Pulumi organization and environment file respectively. You should see output similar to the following:
+
+```bash
+{
+  "azure": {
+    "login": {
+      "clientId": "b537....",
+      "oidc": {
+        "token": "eyJh...."
+      },
+      "subscriptionId": "0282....",
+      "tenantId": "7061...."
+    }
+  },
+  "environmentVariables": {
+    "ARM_CLIENT_ID": "b537....",
+    "ARM_OIDC_REQUEST_TOKEN": "eeyJh....",
+    "ARM_OIDC_REQUEST_URL": "https://api.pulumi.com/oidc",
+    "ARM_OIDC_TOKEN": "eyJh....",
+    "ARM_SUBSCRIPTION_ID": "0282....",
+    "ARM_TENANT_ID": "7061....",
+    "ARM_USE_OIDC": "true"
+  }
+}
+```
 
 To learn more about how to set up and use the various providers in Pulumi ESC, please refer to the [relevant Pulumi documentation](/docs/pulumi-cloud/esc/providers/)
 

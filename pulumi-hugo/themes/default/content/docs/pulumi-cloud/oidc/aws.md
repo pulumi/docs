@@ -133,6 +133,30 @@ To configure OIDC for Pulumi ESC, create a new environment in the [Pulumi Consol
 
 {{< video title="Adding configuration to Pulumi ESC environment" src="./add-environment-config.mp4" autoplay="true" loop="true" >}}
 
+You can validate that your configuration is working by running either of the following:
+
+* `esc open <your-org>/<your-environment>` command of the [ESC CLI](/docs/esc-cli/)
+* `pulumi env open <your-org>/<your-environment>` command of the [Pulumi CLI](/docs/install/)
+
+Make sure to replace `<your-org>` and `<your-environment>` with the values of your Pulumi organization and environment file respectively. You should see output similar to the following:
+
+```bash
+{
+  "aws": {
+    "login": {
+      "accessKeyId": "ASIA....",
+      "secretAccessKey": "rtBS....",
+      "sessionToken": "Fwo...."
+    }
+  },
+  "environmentVariables": {
+    "AWS_ACCESS_KEY_ID": "ASIA....",
+    "AWS_SECRET_ACCESS_KEY": "rtBS....",
+    "AWS_SESSION_TOKEN": "Fwo...."
+  }
+}
+```
+
 To learn more about how to set up and use the various providers in Pulumi ESC, please refer to the [relevant Pulumi documentation](/docs/pulumi-cloud/esc/providers/)
 
 ## Automate OIDC Configuration

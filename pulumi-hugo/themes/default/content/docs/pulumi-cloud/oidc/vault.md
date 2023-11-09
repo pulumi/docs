@@ -16,7 +16,6 @@ This document outlines the steps required configured to use Pulumi to use OpenID
 The `namespaces` functionality of Vault is not currently supported. More specifically, this configuration will only work for the `root` namespace. This means that this configuration will only work with Vault OSS at this time (Vault HCP and Enterprise are not supported).
 {{% /notes %}}
 
-
 ## Prerequisites
 
 * You must be an admin of your Pulumi organization.
@@ -27,7 +26,7 @@ The `namespaces` functionality of Vault is not currently supported. More specifi
 
 The following diagram demonstrates the high level overview of how Pulumi Cloud authenticates to Vault using the JWT OIDC login flow:
 
-![Vault OIDC JWT login flow](./vault/vault-login-oidc.png)
+![Vault OIDC JWT login flow](./vault-login-oidc.png)
 
 The contents of the JWT token from Pulumi is shown below:
 
@@ -45,14 +44,17 @@ The contents of the JWT token from Pulumi is shown below:
 ```
 
 Where:
-- `<org-name>` is your Pulumi Cloud organization name (or your username if not part of an organization)
-- `<environment-name>` is the Pulumi Cloud environment name
-- `<subject-identifier>` is the subject identifier of the Pulumi service requesting access
+
+* `<org-name>` is your Pulumi Cloud organization name (or your username if not part of an organization)
+* `<environment-name>` is the Pulumi Cloud environment name
+* `<subject-identifier>` is the subject identifier of the Pulumi service requesting access
 
 ## Configure Vault JWT OIDC Auth
 
 ### Enable JWT Auth Method in Vault
+
 To enable the [JWT auth method](https://developer.hashicorp.com/vault/docs/auth/jwt) in Vault:
+
 ```
 $ vault auth enable -path=jwt jwt
 Success! Enabled jwt auth method at: jwt/
@@ -63,9 +65,12 @@ $ vault write auth/jwt/config \
 Success! Data written to: auth/jwt/config
 ```
 
-**NOTE:** Vault and Pulumi Cloud use the `jwt` path by default.
+{{% notes "info" %}}
+Vault and Pulumi Cloud use the `jwt` path by default.
+{{% /notes %}}
 
 ### Create Vault Policy
+
 For our example we will create a simple readonly policy (called `reader`) that allows read/list permissions to the `secret` path in Vault.
 
 ```shell
@@ -80,6 +85,7 @@ EOF
 For more advanced use cases see [Vault documentation](https://developer.hashicorp.com/vault/docs/concepts/policies).
 
 ### Create Vault JWT Role
+
 To create a [role](https://developer.hashicorp.com/vault/api-docs/auth/jwt#create-update-role) using the CLI:
 
 ```shell
@@ -91,15 +97,18 @@ vault write auth/jwt/role/<role-name> \
   role_type="jwt"
 ```
 
-**IMPORTANT:** you must ensure that `role_type` is set to `jwt` and not `oidc`.
+{{% notes "warning" %}}
+You must ensure that `role_type` is set to `jwt` and not `oidc`.
+{{% /notes %}}
 
 Replace:
-- `<role-name>` with your own role name
-- `<policy-name>` with your policy (for example the `reader` policy above)
-- `<org-name>` with your Pulumi Cloud organization name (or your username if you are not part of an organization)
-- `<vault-url>` with your Vault URL (Pulumi Cloud must be able to access this URL)
 
-**NOTE:** If you want to use `bound_claims` you'll need to specify the role configuration [as JSON](https://developer.hashicorp.com/vault/docs/auth/jwt#oidc-configuration-troubleshooting):
+* `<role-name>` with your own role name
+* `<policy-name>` with your policy (for example the `reader` policy above)
+* `<org-name>` with your Pulumi Cloud organization name (or your username if you are not part of an organization)
+* `<vault-url>` with your Vault URL (Pulumi Cloud must be able to access this URL)
+
+If you want to use `bound_claims` you'll need to specify the role configuration [as JSON](https://developer.hashicorp.com/vault/docs/auth/jwt#oidc-configuration-troubleshooting):
 
 ```shell
 $ vault write auth/jwt/role/<role-name> -<<EOF
@@ -121,7 +130,7 @@ EOF
 You can pull vault secrets from Pulumi ESC in Deployments. To set this up:
 
   1. Follow the steps under [Pulumi ESC](#pulumi-esc) below to create an environment with vault secrets.
-  2. Follow the [Getting Started](../esc/get-started/) guide and replace environment names to reference the environment created in Step 1. 
+  2. Follow the [Getting Started](../esc/get-started/) guide and replace environment names to reference the environment created in Step 1.
 
 ### Pulumi ESC
 
@@ -131,7 +140,7 @@ To configure OIDC for Pulumi ESC, create a new environment in the [Pulumi Consol
   2. Click the **Create environment** button.
   3. Provide a name for your environment.
   4. Click the  **Create environment** button.
-    {{< video title="Creating a new Pulumi ESC environment" src="./aws/create-new-environment.mp4" autoplay="true" loop="true" >}}
+    {{< video title="Creating a new Pulumi ESC environment" src="../aws/create-new-environment.mp4" autoplay="true" loop="true" >}}
   5. You will be presented with a split-pane editor view. Delete the default placeholder content in the editor and replace it with the following code:
 
       ```yaml
@@ -153,16 +162,18 @@ To configure OIDC for Pulumi ESC, create a new environment in the [Pulumi Consol
   6. Replace `<your-vault-url>`, `<your-role-name>`, and `<path-to-secret>` with the values from the previous steps.
   7. Scroll to the bottom of the page and click **Save**.
 
-  ![Vault environment config](./vault/vault-environment-config.png)
-
-  To learn more about how to set up and use the various providers in Pulumi ESC, please refer to the [relevant Pulumi documentation](/docs/pulumi-cloud/esc/providers/)
+  ![Vault environment config](./vault-environment-config.png)
 
 {{% notes "info" %}}
 If you configured the vault jwt auth method to use a different [mount path](https://developer.hashicorp.com/vault/docs/auth#enabling-disabling-auth-methods) than `jwt`, you will need to specify that path using the `mount` option of the [vault-login](../esc/providers/vault-login.md) provider.
 {{% /notes %}}
 
+You can validate that your configuration is working by running either of the following:
 
-You can verify that your Vault secrets are accessible by using the [`esc`](https://www.pulumi.com/docs/install/esc/) CLI  as shown below. Make sure to replace `<my-org>` with your Pulumi organization name and `<my-environment>` with the name of your ESC environment.
+* `esc open <your-org>/<your-environment>` command of the [ESC CLI](/docs/esc-cli/)
+* `pulumi env open <your-org>/<your-environment>` command of the [Pulumi CLI](/docs/install/)
+
+Make sure to replace the values of `<your-org>` and `<your-environment>` with the values of your Pulumi organization and environment file respectively. You should see output similar to the following:
 
 ```shell
 # example output
@@ -191,3 +202,5 @@ $ esc open <my-org>/<my-environment>
   }
 }
 ```
+
+To learn more about how to set up and use the various providers in Pulumi ESC, please refer to the [relevant Pulumi documentation](/docs/pulumi-cloud/esc/providers/)

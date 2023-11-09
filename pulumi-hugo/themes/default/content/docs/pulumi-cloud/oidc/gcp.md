@@ -84,6 +84,8 @@ You can learn more about setting up OIDC for Pulumi ESC by referring to the [rel
 
 ## Configure OIDC in the Pulumi Console
 
+### Pulumi Deployments
+
 {{% notes "info" %}}
 In addition to the Pulumi Console, deployment settings including OIDC can be configured for a stack using the [pulumiservice.DeploymentSettings](https://www.pulumi.com/registry/packages/pulumiservice/api-docs/deploymentsettings/) resource or via the [REST API](/docs/pulumi-cloud/deployments/api/#patchsettings).
 {{% /notes %}}
@@ -99,6 +101,65 @@ In addition to the Pulumi Console, deployment settings including OIDC can be con
 9. Click the "Save deployment configuration" button.
 
 With this configuration, each deployment of this stack will attempt to exchange the deployment's OIDC token for Google Cloud credentials using the specified federated identity prior to running any pre-commands or Pulumi operations. The fetched credentials are published as a credential configuration in the `GOOGLE_CREDENTIALS` environment variable. The raw OIDC token is also available for advanced scenarios in the `PULUMI_OIDC_TOKEN` environment variable and the `/mnt/pulumi/pulumi.oidc` file.
+
+### Pulumi ESC
+
+To configure OIDC for Pulumi ESC, create a new environment in the [Pulumi Console](https://app.pulumi.com/). Make sure that you have the correct organization selected in the left-hand navigation menu. Then:
+
+1. Click the **Environments** link.
+2. Click the **Create environment** button.
+3. Provide a name for your environment.
+    * This should be the same as the name provided in the subject claim in the previous steps.
+4. Click the  **Create environment** button.
+  {{< video title="Creating a new Pulumi ESC environment" src="../aws/create-new-environment.mp4" autoplay="true" loop="true" >}}
+5. You will be presented with a split-pane editor view. Delete the default placeholder content in the editor and replace it with the following code:
+
+    ```yaml
+    values:
+      gcp:
+        login:
+          fn::open::gcp-login:
+            project: <your-project-id>
+            oidc:
+              workloadPoolId: <your-pool-id>
+              providerId: <your-provider-id>
+              serviceAccount: <your-service-account>
+      pulumiConfig:
+        gcp:accessToken: ${gcp.login.accessToken}
+      environmentVariables:
+        GOOGLE_PROJECT: ${gcp.login.project}
+    ```
+
+6. Replace `<your-project-id>`, `<your-pool-id>`, `<your-provider-id>`, and `<your-service-account>` with the values from the previous steps.
+7. Scroll to the bottom of the page and click **Save**.
+
+You can validate that your configuration is working by running either of the following:
+
+* `esc open <your-org>/<your-environment>` command of the [ESC CLI](/docs/esc-cli/)
+* `pulumi env open <your-org>/<your-environment>` command of the [Pulumi CLI](/docs/install/)
+
+Make sure to replace `<your-org>` and `<your-environment>` with the values of your Pulumi organization and environment file respectively. You should see output similar to the following:
+
+```bash
+{
+  "environmentVariables": {
+    "GOOGLE_PROJECT": 111111111111
+  },
+  "gcp": {
+    "login": {
+      "accessToken": "ya29.....",
+      "expiry": "2023-11-09T11:12:41Z",
+      "project": 111111111111,
+      "tokenType": "Bearer"
+    }
+  },
+  "pulumiConfig": {
+    "gcp:accessToken": "ya29...."
+  }
+}
+```
+
+To learn more about how to set up and use the various providers in Pulumi ESC, please refer to the [relevant Pulumi documentation](/docs/pulumi-cloud/esc/providers/).
 
 ## Automate OIDC Configuration
 
