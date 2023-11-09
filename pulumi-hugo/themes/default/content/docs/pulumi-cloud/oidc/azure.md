@@ -135,6 +135,37 @@ To configure OIDC for Pulumi ESC, create a new environment in the [Pulumi Consol
 6. Replace `<your-client-id>`, `<your-tenant-id>`, and `<your-subscription-id>` with the values from the previous steps.
 7. Scroll to the bottom of the page and click **Save**.
 
+You can validate that your configuration is working by running either of the following:
+
+* `esc open <your-org>/<your-environment>` command of the [ESC CLI](/docs/esc-cli/)
+* `pulumi env open <your-org>/<your-environment>` command of the [Pulumi CLI](/docs/install/)
+
+Make sure to replace `<your-org>` and `<your-org>` with the values of your Pulumi organization and environment file respectively. You should see output similar to the following:
+
+```bash
+{
+  "azure": {
+    "login": {
+      "clientId": "b537....",
+      "oidc": {
+        "token": "eyJh...."
+      },
+      "subscriptionId": "0282....",
+      "tenantId": "7061...."
+    }
+  },
+  "environmentVariables": {
+    "ARM_CLIENT_ID": "b537....",
+    "ARM_OIDC_REQUEST_TOKEN": "eeyJh....",
+    "ARM_OIDC_REQUEST_URL": "https://api.pulumi.com/oidc",
+    "ARM_OIDC_TOKEN": "eyJh....",
+    "ARM_SUBSCRIPTION_ID": "0282....",
+    "ARM_TENANT_ID": "7061....",
+    "ARM_USE_OIDC": "true"
+  }
+}
+```
+
 To learn more about how to set up and use the various providers in Pulumi ESC, please refer to the [relevant Pulumi documentation](/docs/pulumi-cloud/esc/providers/)
 
 ## Automate OIDC Configuration
