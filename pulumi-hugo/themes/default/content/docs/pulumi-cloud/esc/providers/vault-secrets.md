@@ -57,4 +57,4 @@ The `vault-secrets` provider enables you to dynamically import Secrets from Hash
 
 | Property | Type   | Description                                             |
 |----------|--------|---------------------------------------------------------|
-| N/A      | object | A map from names to raw values as read from the server. |
+| N/A      | object | A map from names to raw values as read from the server (`vault.secrets.<key-name>`). |

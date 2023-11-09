@@ -13,6 +13,12 @@ menu:
 
 The `vault-login` provider enables you to log in to HashiCorp Vault using OpenID Connect or by providing static credentials. The provider will return a set of credentials that can be used to fetch secrets using the `vault-secrets` provider.
 
+{{% notes "info" %}}
+The `namespaces` functionality of Vault is not currently supported. More specifically, this configuration will only work for the `root` namespace. This means that this configuration will only work with Vault OSS at this time (Vault HCP and Enterprise are not supported).
+{{% /notes %}}
+
+Want to use this with OIDC? See [the docs](../../oidc/vault.md).
+
 ## Example
 
 ```yaml
@@ -37,7 +43,7 @@ The `vault-login` provider enables you to log in to HashiCorp Vault using OpenID
 | Property | Type   | Description                                               |
 |----------|--------|-----------------------------------------------------------|
 | `role`   | string | The name of the role to use for login.                    |
-| `mount`  | string | [Optional] - The name of the authentication engine mount. |
+| `mount`  | string | [Optional] - The name of the authentication engine mount. Defaults to `jwt`. |
 
 ### VaultLoginToken
 
