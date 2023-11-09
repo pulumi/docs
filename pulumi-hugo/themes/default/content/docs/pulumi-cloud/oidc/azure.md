@@ -78,6 +78,18 @@ The below is an example of a valid subject claim for the `development` environme
 
 * `pulumi:environments:org:contoso:env:development`
 
+{{< notes type="warning" >}}
+
+With Pulumi ESC, defining a subject identifier with a specific environment name is not currently supported at this time. There is a [known issue](https://github.com/pulumi/pulumi/issues/14509) with the value of the subject identifier that is sent to Azure from Pulumi.
+
+The steps for configuring OIDC between Pulumi ESC and Azure will work if you use the following syntax instead:
+
+`pulumi:environments:org:contoso:env:<yaml>`
+
+Make sure to replace `contoso` with the name of your Pulumi organization and leave the literal value of `<yaml>` as shown above.
+
+{{< /notes >}}
+
 ## Create a Service Principal
 
 To provide Pulumi services the ability to deploy, manage, and interact with Azure resources, you need to associate your Microsoft Entra application with your Subscription or Resource Group.
