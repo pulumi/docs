@@ -119,6 +119,7 @@ To configure OIDC for Pulumi ESC, create a new environment in the [Pulumi Consol
 3. Provide a name for your environment.
     * This should be the same as the name provided in the subject claim of your federated credentials.
 4. Click the  **Create environment** button.
+  {{< video title="Creating a new Pulumi ESC environment" src="../aws/create-new-environment.mp4" autoplay="true" loop="true" >}}
 5. You will be presented with a split-pane editor view. Delete the default placeholder content in the editor and replace it with the following code:
 
     ```yaml
