@@ -132,7 +132,33 @@ To configure OIDC for Pulumi ESC, create a new environment in the [Pulumi Consol
 6. Replace `<your-project-id>`, `<your-pool-id>`, `<your-provider-id>`, and `<your-service-account>` with the values from the previous steps.
 7. Scroll to the bottom of the page and click **Save**.
 
-To learn more about how to set up and use the various providers in Pulumi ESC, please refer to the [relevant Pulumi documentation](/docs/pulumi-cloud/esc/providers/)
+You can validate that your configuration is working by running either of the following:
+
+* `esc open <your-org>/<your-environment>` command of the [ESC CLI](/docs/esc-cli/)
+* `pulumi env open <your-org>/<your-environment>` command of the [Pulumi CLI](/docs/install/)
+
+Make sure to replace the values of `<your-org>` and `<your-org>` with the values of your Pulumi organization and environment file respectively. You should see output similar to the following:
+
+```bash
+{
+  "environmentVariables": {
+    "GOOGLE_PROJECT": 111111111111
+  },
+  "gcp": {
+    "login": {
+      "accessToken": "ya29.....",
+      "expiry": "2023-11-09T11:12:41Z",
+      "project": 111111111111,
+      "tokenType": "Bearer"
+    }
+  },
+  "pulumiConfig": {
+    "gcp:accessToken": "ya29...."
+  }
+}
+```
+
+To learn more about how to set up and use the various providers in Pulumi ESC, please refer to the [relevant Pulumi documentation](/docs/pulumi-cloud/esc/providers/).
 
 ## Automate OIDC Configuration
 
