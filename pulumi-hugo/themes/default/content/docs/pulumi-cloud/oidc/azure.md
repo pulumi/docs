@@ -86,7 +86,7 @@ The steps in this guide will work for Pulumi ESC if you use the following syntax
 
 `pulumi:environments:org:contoso:env:<yaml>`
 
-Make sure to replace `contoso` with the name of your Pulumi organization and leave the literal value of `<yaml>` as shown above.
+Make sure to replace `contoso` with the name of your Pulumi organization and use the literal value of `<yaml>` as shown above.
 
 {{< /notes >}}
 
