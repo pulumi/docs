@@ -134,7 +134,7 @@ EOF
 You can pull vault secrets from Pulumi ESC in Deployments. To set this up:
 
   1. Follow the steps under [Pulumi ESC](#pulumi-esc) below to create an environment with vault secrets.
-  2. Follow the [Getting Started](../esc/get-started/) guide and replace environment names to reference the environment created in Step 1.
+  2. Follow the [Getting Started](/docs/pulumi-cloud/esc/get-started/) guide and replace environment names to reference the environment created in Step 1.
 
 ### Pulumi ESC
 
