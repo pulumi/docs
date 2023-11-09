@@ -28,15 +28,7 @@ The `gcp-login` provider enables you to log in to Google Cloud using OpenID Conn
 
 ## Configuring OIDC
 
-To create the Google Cloud Workload Identity Provider, see the [relevant Google Cloud documentation](https://cloud.google.com/iam/docs/workload-identity-federation-with-other-providers).
-
-When following the instructions in the documentation:
-
-* For the provider issuer, use `https://api.pulumi.com/oidc`
-* For the audience, use the name of your organization
-* Recall the [format of the subject claim](/docs/pulumi-cloud/esc/providers/#setting-up-oidc) when adding attribute conditions that check the value of the `google.subject` attribute
-
-Make a note of the workload identity pool ID, provider ID, and service account email address as they will be necessary inputs to the `gcp-login` provider.
+To configure OIDC between Pulumi Cloud and Google Cloud, see the [relevant Pulumi documentation](/docs/pulumi-cloud/oidc/gcp/).
 
 ## Inputs
 

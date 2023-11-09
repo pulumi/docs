@@ -17,8 +17,6 @@ The `vault-login` provider enables you to log in to HashiCorp Vault using OpenID
 The `namespaces` functionality of Vault is not currently supported. More specifically, this configuration will only work for the `root` namespace. This means that this configuration will only work with Vault OSS at this time (Vault HCP and Enterprise are not supported).
 {{% /notes %}}
 
-Want to use this with OIDC? See [the docs](../../oidc/vault.md).
-
 ## Example
 
 ```yaml
@@ -29,6 +27,10 @@ Want to use this with OIDC? See [the docs](../../oidc/vault.md).
         jwt:
           role: example-role
 ```
+
+## Configuring OIDC
+
+To configure OIDC between Pulumi Cloud and Vault, see the [relevant Pulumi documentation](/docs/pulumi-cloud/oidc/vault/).
 
 ## Inputs
 

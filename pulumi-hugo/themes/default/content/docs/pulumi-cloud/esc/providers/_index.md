@@ -12,7 +12,7 @@ menu:
 
 Pulumi ESC Providers enable you to dynamically import Secrets and Configuration from the provider into your Environment.
 
-To learn more about how to set up and use the various providers, please refer to their individual pages.
+To learn more about how to set up and use the various providers, please refer to their individual pages below. You can also learn how to configure OIDC and trust relationships for each provider by referring to the relevant [Pulumi documentation](/docs/pulumi-cloud/oidc/).
 
 | Provider                                                         | Description                                                                                                                   |
 |------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|
@@ -24,8 +24,3 @@ To learn more about how to set up and use the various providers, please refer to
 | [gcp-secrets](/docs/pulumi-cloud/esc/providers/gcp-secrets/)     | The `gcp-secrets` provider enables you to dynamically import Secrets from Google Cloud Secrets Manager into your Environment. |
 | [vault-login](/docs/pulumi-cloud/esc/providers/vault-login/)     | The `vault-login` provider enables you to log in to HashiCorp Vault using OpenID Connect or static credentials.               |
 | [vault-secrets](/docs/pulumi-cloud/esc/providers/vault-secrets/) | The `vault-secrets` provider enables you to dynamically import Secrets from HashiCorp Vault into your Environment.            |
-
-To learn more about configuring OIDC and trust relationships in Pulumi, please refer to the following:
-
-* [Pulumi OIDC documentation](/docs/pulumi-cloud/oidc/)
-* one of the relevant guides in the above provider table
