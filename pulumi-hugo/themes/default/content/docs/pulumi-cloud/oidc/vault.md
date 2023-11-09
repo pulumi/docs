@@ -26,7 +26,7 @@ The `namespaces` functionality of Vault is not currently supported. More specifi
 
 The following diagram demonstrates the high level overview of how Pulumi Cloud authenticates to Vault using the JWT OIDC login flow:
 
-![Vault OIDC JWT login flow](./vault/vault-login-oidc.png)
+![Vault OIDC JWT login flow](./vault-login-oidc.png)
 
 The contents of the JWT token from Pulumi is shown below:
 
@@ -162,7 +162,7 @@ To configure OIDC for Pulumi ESC, create a new environment in the [Pulumi Consol
   6. Replace `<your-vault-url>`, `<your-role-name>`, and `<path-to-secret>` with the values from the previous steps.
   7. Scroll to the bottom of the page and click **Save**.
 
-  ![Vault environment config](./vault/vault-environment-config.png)
+  ![Vault environment config](./vault-environment-config.png)
 
 {{% notes "info" %}}
 If you configured the vault jwt auth method to use a different [mount path](https://developer.hashicorp.com/vault/docs/auth#enabling-disabling-auth-methods) than `jwt`, you will need to specify that path using the `mount` option of the [vault-login](../esc/providers/vault-login.md) provider.
