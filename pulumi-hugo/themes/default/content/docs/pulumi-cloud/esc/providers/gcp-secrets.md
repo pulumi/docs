@@ -43,7 +43,7 @@ To configure OIDC between Pulumi Cloud and Azure, see the [relevant Pulumi docum
 
 Make sure to replace `<your-org>` and `<your-environment>` with the values of your Pulumi organization and environment file respectively. You should see output similar to the following:
 
-```bash
+```json
 {
   "azure": {
     "login": {
