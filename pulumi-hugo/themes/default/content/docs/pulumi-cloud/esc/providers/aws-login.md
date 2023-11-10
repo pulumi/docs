@@ -26,7 +26,7 @@ aws:
 
 ## Configuring OIDC
 
-To configure OIDC between Pulumi Cloud and AWS, see the [relevant Pulumi documentation](/docs/pulumi-cloud/oidc/aws/).
+To learn how to configure OpenID Connect (OIDC) between Pulumi Cloud and AWS, see the [OpenID Connect integration](/docs/pulumi-cloud/oidc/aws/) documentation.
 
 ## Inputs
 

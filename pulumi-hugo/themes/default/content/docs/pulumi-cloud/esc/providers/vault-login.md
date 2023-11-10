@@ -30,7 +30,7 @@ The `namespaces` functionality of Vault is not currently supported. More specifi
 
 ## Configuring OIDC
 
-To configure OIDC between Pulumi Cloud and Vault, see the [relevant Pulumi documentation](/docs/pulumi-cloud/oidc/vault/).
+To learn how to configure OpenID Connect (OIDC) between Pulumi Cloud and Vault, see the [OpenID Connect integration](/docs/pulumi-cloud/oidc/vault/) documentation.
 
 ## Inputs
 
