@@ -27,25 +27,7 @@ The `azure-login` provider enables you to log in to Azure using OpenID Connect o
 
 ## Configuring OIDC
 
-### Creating the Azure Active Directory App
-
-To create the Azure Active Directory App and service principal, see the [relevant Azure documentation](https://learn.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal).
-
-After the AAD App has been created, take note of the Application (client) ID and Directory (tenant) ID. These values will be necessary when enabling OIDC for your Environment.
-
-### Adding federated credentials
-
-Navigate to the "Certificates & secrets" pane using the sidebar. Then, select the "Federated credentials" tab and click on the "Add credential" button.
-
-In the wizard, select "Other Issuer" as the "Federated credential scenario".
-
-Finally, fill in the "Issuer", "Subject Identifier", "Name", and "Audience" fields in the form.
-
-* "Issuer" must be `https://api.pulumi.com/oidc`
-* "Subject Identifier" must be a valid subject claim, for example, to target the `core` Environment, use:
-  * `pulumi:environments:org:contoso:env:core`
-* "Name" is an arbitrary name for the credential
-* "Audience" must be the name of your Pulumi organization
+To learn how to configure OpenID Connect (OIDC) between Pulumi Cloud and Azure, see the [OpenID Connect integration](/docs/pulumi-cloud/oidc/azure/) documentation.
 
 ## Inputs
 

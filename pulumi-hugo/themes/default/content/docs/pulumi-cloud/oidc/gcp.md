@@ -163,6 +163,6 @@ To learn more about how to set up and use the various providers in Pulumi ESC, p
 
 ## Automate OIDC Configuration
 
-Our [Examples](https://github.com/pulumi/examples) repository provides a wide variety of example automations using Pulumi Infrastructure as Code (IaC). If you want to automate the configuration and deployment of OIDC between Pulumi and AWS, take a look at the following examples to help you get started:
+Our [Examples](https://github.com/pulumi/examples) repository provides a wide variety of example automations using Pulumi Infrastructure as Code (IaC). If you want to automate the configuration and deployment of OIDC between Pulumi and GCP, take a look at the following examples to help you get started:
 
 * [Configure OIDC for ESC in Pulumi Python](https://github.com/pulumi/examples/tree/master/gcp-py-oidc-provider-pulumi-cloud)

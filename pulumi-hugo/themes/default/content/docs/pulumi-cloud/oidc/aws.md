@@ -21,6 +21,10 @@ This document outlines the steps required to configure Pulumi to use OpenID Conn
 
 * You must be an admin of your Pulumi organization.
 
+{{< notes type="warning" >}}
+Please note that this guide provides step-by-step instructions based on the official provider documentation which is subject to change. For the most current and precise information, always refer to the [official AWS documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_create_oidc.html).
+{{< /notes >}}
+
 ## Create the Identity Provider
 
 1. In the navigation pane of the [IAM console](https://console.aws.amazon.com/iam/), choose **Identity providers**, and then choose **Add provider**.
