@@ -37,7 +37,7 @@ aws:
 
 To configure OIDC between Pulumi Cloud and AWS, see the [relevant Pulumi documentation](/docs/pulumi-cloud/oidc/aws/). Once you have completed these steps, you can validate that your configuration is working by running either of the following:
 
-* `esc open <your-org>/<your-environment>` command of the [ESC CLI](/docs/esc-cli/)
+* `esc open <your-org>/<your-environment>` command of the [Pulumi ESC CLI](/docs/esc-cli/)
 * `pulumi env open <your-org>/<your-environment>` command of the [Pulumi CLI](/docs/install/)
 
 Make sure to replace `<your-org>` and `<your-environment>` with the values of your Pulumi organization and environment file respectively. You should see output similar to the following:
