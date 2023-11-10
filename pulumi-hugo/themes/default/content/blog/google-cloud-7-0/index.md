@@ -23,12 +23,12 @@ If you are new to Pulumi and would like to get started with the Google Cloud pro
 - [Getting Started](https://www.pulumi.com/docs/clouds/gcp/get-started/) - A guided walkthrough for creating your first project
 - [Setup & Install](https://www.pulumi.com/registry/packages/gcp/installation-configuration/) - Instructions on installing the Google Cloud provider
 - [How-to guides](https://www.pulumi.com/registry/packages/gcp/how-to-guides/) - Learn how to use the Google Cloud provider to provision specific resources
-- [Templates](https://www.pulumi.com/docs/clouds/gcp/#templates) - Use a quickstart template to create a new project
+- [Templates](https://www.pulumi.com/templates/serverless-application/gcp/) - Use a quickstart template to create a new project
 - [Pulumi AI](https://www.pulumi.com/ai) - Ask Pulumi AI to create a new project
 
 ## Looking back
 
-Since the initial launch of 6.0 almost two years ago, we've shipped over 70 releases to deliver the latest upstream enhancements while also adding many of our own. Here are some of the highlights:
+Since the initial launch of 6.0 almost two years ago, we've shipped over 70 releases to deliver the latest upstream enhancements while also adding many of our own. Here are some of the highlights from these releases:
 
 ### Coverage and Growth
 
@@ -66,7 +66,9 @@ Version 6.0 of the Google Cloud provider introduced support for several new modu
 
 If you haven't used these modules yet, now is a great time to try them out! Check out the [Pulumi Registry](https://www.pulumi.com/docs/intro/cloud-providers/google-cloud/) for more information on how to get started or ask [Pulumi AI](https://www.pulumi.com/ai) to create a new project for you.
 
-## Service Account Rename
+## What's New in 7.0
+
+### Service Account Rename
 
 This release includes a fix for the [naming of the Service Account resource](https://github.com/pulumi/pulumi-gcp/issues/722). For consistency and ease of use, `serviceAccount` has been renamed to `serviceaccount`. Node.js, Python, and .Net programs do not require any updates as the resource name has been aliased. However updates are required for Go, Java, and YAML to adjust the import paths and resource type.
 
@@ -101,7 +103,7 @@ This release includes a fix for the [naming of the Service Account resource](htt
 
 {{< /chooser >}}
 
-## Labels Rework
+### Labels Rework
 
 Upstream changes for provider, resource, and data source labels are included in this release. Global Google Cloud Platform labels configured on the provider are supported through the new `defaultLabels` field. Default labels will be applied to all resources with a `labels` field.
 Resources that previously contained a single `labels`  field will now contain three fields:
