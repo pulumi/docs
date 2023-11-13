@@ -532,7 +532,7 @@ $ curl -fsSL https://get.pulumi.com | sh -s -- --version <version>
 
 {{% choosable os windows %}}
 
-<h3 class="no-anchor pt-4">### Chocolatey</h3>
+<h3 class="no-anchor pt-4">Chocolatey</h3>
 
 You can specify a specific version with [Chocolatey package manager](https://chocolatey.org):
 
