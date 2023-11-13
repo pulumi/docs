@@ -1,8 +1,8 @@
 ---
 title_tag: "Download & Install Pulumi"
 meta_desc: This page contains detailed instructions for downloading and installing Pulumi.
-title: "Download & install"
-h1: Download & install Pulumi
+title: "Download & Install"
+h1: Download & Install Pulumi
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   install:
@@ -29,17 +29,19 @@ NOTE: To update this page with a new binary release, do the following:
 - Update `content/docs/install/versions.md`
 -->
 
+## Select an Operating System
+
 {{< chooser os "macos,windows,linux" >}}
 
 {{% choosable os macos %}}
 
-## Package manager
+<h3 class="no-anchor pt-4"><i class="fas fa-box pr-2"></i>Homebrew Package Manager</h3>
 
 ```bash
 $ brew install pulumi/tap/pulumi
 ```
 
-### MacOS binary download
+<h3 class="no-anchor pt-4"><i class="fas fa-download pr-2"></i>macOS Binary Download</h3>
 
 <a class="btn btn-secondary mx-2" href="https://get.pulumi.com/releases/sdk/pulumi-v{{< latest-version >}}-darwin-x64.tar.gz">amd64</a>
 <a class="btn btn-secondary mx-2" href="https://get.pulumi.com/releases/sdk/pulumi-v{{< latest-version >}}-darwin-arm64.tar.gz">arm64</a></p>
@@ -50,10 +52,65 @@ The latest version of Pulumi is {{< latest-version >}}. For older versions, see 
 
 {{< get-started-note >}}
 
-## Other installation methods
+{{% /choosable %}}
+
+{{% choosable os linux %}}
+
+<div class="mb-6 border-solid border-b-2 border-gray-200">
+<div class="w-full md:w-3/4">
+<h3 class="no-anchor pt-4"><i class="fas fa-box pr-2"></i>Install Script</h3>
+
+```bash
+$ curl -fsSL https://get.pulumi.com | sh
+```
+
+</div>
+<div class="w-full">
+<h3 class="no-anchor pt-4"><i class="fas fa-download pr-2"></i>Linux Binary Download</h3>
+<p><a class="btn btn-secondary mx-2" href="https://get.pulumi.com/releases/sdk/pulumi-v{{< latest-version >}}-linux-x64.tar.gz">amd64</a></p>
+</div>
+</div>
+
+The latest version of Pulumi is {{< latest-version >}}. For older versions, see [Available Versions](/docs/install/versions/).
+
+{{< get-started-note >}}
+
+{{% /choosable %}}
+
+{{% choosable os windows %}}
+
+<div class="mb-6 border-solid border-b-2 border-gray-200">
+<div class="w-full md:w-3/4">
+<h3 class="no-anchor pt-4"><i class="fas fa-box pr-2"></i>Installer (MSI)</h3>
+<p>
+<a class="btn btn-secondary mx-2" href="https://github.com/pulumi/pulumi-winget/releases/download/v{{< latest-version >}}/pulumi-{{< latest-version >}}-windows-x64.msi">amd64</a>
+</p>
+</div>
+<div class="w-full">
+<h3 class="no-anchor pt-4"><i class="fas fa-download pr-2"></i>Windows Binary Download</h3>
+<p>
+<a class="btn btn-secondary mx-2" href="https://get.pulumi.com/releases/sdk/pulumi-v{{< latest-version >}}-windows-x64.zip">amd64</a>
+</p>
+</div>
+</div>
+
+Windows 8 and later are supported.
+
+The latest version of Pulumi is {{< latest-version >}}. For older versions, see [Available Versions](/docs/install/versions/).
+
+{{< get-started-note >}}
+
+{{% /choosable %}}
+
+{{% /chooser %}}
+
+### Other installation methods
 
 In addition, there are many ways to install Pulumi:
 
+{{< chooser os "macos,windows,linux" >}}
+
+{{% choosable os macos %}}
 <div class="accordion-item text-2xl py-3 border-t-2">
 <input type="checkbox" class="absolute hidden" id="macos-official-homebrew-tap" />
 <label for="macos-official-homebrew-tap" class="accordion-label">
@@ -184,29 +241,6 @@ If you do not wish to use the previous options, you can install Pulumi manually.
 
 {{% choosable os linux %}}
 
-<div class="mb-6 border-solid border-b-2 border-gray-200">
-<div class="w-full md:w-3/4">
-<h3 class="no-anchor pt-4"><i class="fas fa-box pr-2"></i>Install Script</h3>
-
-```bash
-$ curl -fsSL https://get.pulumi.com | sh
-```
-
-</div>
-<div class="w-full">
-<h3 class="no-anchor pt-4"><i class="fas fa-download pr-2"></i>Linux Binary Download</h3>
-<p><a class="btn btn-secondary mx-2" href="https://get.pulumi.com/releases/sdk/pulumi-v{{< latest-version >}}-linux-x64.tar.gz">amd64</a></p>
-</div>
-</div>
-
-The latest version of Pulumi is {{< latest-version >}}. For older versions, see [Available Versions](/docs/install/versions/).
-
-{{< get-started-note >}}
-
-## Other installation methods
-
-In addition, there are many ways to install Pulumi:
-
 <div class="accordion-item text-2xl py-3 border-t-2">
 <input type="checkbox" class="absolute hidden" id="linux-installation-script" />
 <label for="linux-installation-script" class="accordion-label">
@@ -256,31 +290,6 @@ Alternatively, you can install Pulumi manually. We provide a prebuilt binary for
 {{% /choosable %}}
 
 {{% choosable os windows %}}
-
-<div class="mb-6 border-solid border-b-2 border-gray-200">
-<div class="w-full md:w-3/4">
-<h3 class="no-anchor pt-4"><i class="fas fa-box pr-2"></i>Installer (MSI)</h3>
-<p>
-<a class="btn btn-secondary mx-2" href="https://github.com/pulumi/pulumi-winget/releases/download/v{{< latest-version >}}/pulumi-{{< latest-version >}}-windows-x64.msi">amd64</a>
-</p>
-</div>
-<div class="w-full">
-<h3 class="no-anchor pt-4"><i class="fas fa-download pr-2"></i>Windows Binary Download</h3>
-<p>
-<a class="btn btn-secondary mx-2" href="https://get.pulumi.com/releases/sdk/pulumi-v{{< latest-version >}}-windows-x64.zip">amd64</a>
-</p>
-</div>
-</div>
-
-Windows 8 and later are supported.
-
-The latest version of Pulumi is {{< latest-version >}}. For older versions, see [Available Versions](/docs/install/versions/).
-
-{{< get-started-note >}}
-
-## Other installation methods
-
-In addition, there are many ways to install Pulumi:
 
 <div class="accordion-item text-2xl py-3 border-t-2">
 <input type="checkbox" class="absolute hidden" id="windows-chocolatey" />
@@ -501,7 +510,7 @@ Most installation methods choose the latest version by default. To install a spe
 
 {{% choosable os macos %}}
 
-### Installation script
+<h3 class="no-anchor pt-4">macOS Installation Script</h3>
 
 ```bash
 $ curl -fsSL https://get.pulumi.com | sh -s -- --version <version>
@@ -511,7 +520,7 @@ $ curl -fsSL https://get.pulumi.com | sh -s -- --version <version>
 
 {{% choosable os linux %}}
 
-### Installation script
+<h3 class="no-anchor pt-4">Linux Installation Script</h3>
 
 To install, run our installation script:
 
@@ -523,7 +532,7 @@ $ curl -fsSL https://get.pulumi.com | sh -s -- --version <version>
 
 {{% choosable os windows %}}
 
-### Chocolatey
+<h3 class="no-anchor pt-4">### Chocolatey</h3>
 
 You can specify a specific version with [Chocolatey package manager](https://chocolatey.org):
 
@@ -531,7 +540,7 @@ You can specify a specific version with [Chocolatey package manager](https://cho
 > choco install pulumi --version <version>
 ```
 
-### Installation script
+<h3 class="no-anchor pt-4">Windows Installation Script</h3>
 
 1. Open a new command prompt window (**WIN+R**: `cmd.exe`):
 
