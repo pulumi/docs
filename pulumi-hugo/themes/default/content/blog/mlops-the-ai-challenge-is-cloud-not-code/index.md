@@ -21,6 +21,8 @@ tags:
 
 The AI industry is stealing the show as tech's goldrush of the '20s. Just looking at ChatGPT's [record setting user growth](https://www.reuters.com/technology/chatgpt-sets-record-fastest-growing-user-base-analyst-note-2023-02-01/), and rapid 3rd party integration [by top brands](https://www.forbes.com/sites/bernardmarr/2023/05/30/10-amazing-real-world-examples-of-how-companies-are-using-chatgpt-in-2023/?sh=ed1c90f14418), it is not surprising the hype suggests this is the beginning of a major digital transformation.
 
+{{< youtube "IWfPPlzzBzA?rel=0" >}}
+
 However, using AI/ML in your own products has some major challenges and obstacles. Below is a diagram of the end to end workflow of building and using an AI model:  preparing the data, training a model, fine-tuning a model, hosting and running a model, building a backend service to serve the model, and building the user interface that interacts with the model. Most AI engineers are only involved in a few steps of the process. However, there is one challenge that is common across the entire workflow:  creating and managing the cloud infrastructure is hard.
 
 > Figure 1. A sneak peak at the map of ML development and product path
