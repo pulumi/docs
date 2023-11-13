@@ -382,29 +382,34 @@ var indexHtml = new BucketObject("index.html", BucketObjectArgs.builder()
 {{% choosable language yaml %}}
 
 ```yaml
-ownership-controls:
-  type: aws:s3:BucketOwnershipControls
-  properties:
-    bucket: ${my-bucket.id}
-    rule:
-      objectOwnership: ObjectWriter
 
-public-access-block:
-  type: aws:s3:BucketPublicAccessBlock
-  properties:
-    bucket: ${my-bucket.id}
-    blockPublicAcls: false
+resources:
+  # ...
 
-index.html:
-  type: aws:s3:BucketObject
-  properties:
-    bucket: ${my-bucket.id}
-    source: ${homepage}
-    contentType: text/html
-    acl: public-read
-  options:
-    dependsOn:
-      - ${public-access-block}
+  ownership-controls:
+    type: aws:s3:BucketOwnershipControls
+    properties:
+      bucket: ${my-bucket.id}
+      rule:
+        objectOwnership: ObjectWriter
+
+  public-access-block:
+    type: aws:s3:BucketPublicAccessBlock
+    properties:
+      bucket: ${my-bucket.id}
+      blockPublicAcls: false
+
+  index.html:
+    type: aws:s3:BucketObject
+    properties:
+      bucket: ${my-bucket.id}
+      source:
+        fn::fileAsset: ./index.html
+      contentType: text/html
+      acl: public-read
+    options:
+      dependsOn:
+        - ${public-access-block}
 ```
 
 {{% /choosable %}}
