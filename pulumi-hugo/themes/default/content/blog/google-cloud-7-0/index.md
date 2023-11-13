@@ -18,6 +18,10 @@ The Pulumi Google Cloud Classic provider can be used to provision any of the clo
 
 <!--more-->
 
+{{% notes type="info" %}}
+Join Pulumi on Thursday, November 30, 2023 for a live workshop on [getting started with serverless apps on Google Cloud Run](/resources/serverless-apps-with-google-cloud-run-and-pulumi/), which will feature the new GCP 7.0 provider.
+{{% /notes %}}
+
 If you are new to Pulumi and would like to get started with the Google Cloud provider, visit any of these pages to jump right in!
 
 - [Getting Started](https://www.pulumi.com/docs/clouds/gcp/get-started/) - A guided walkthrough for creating your first project
