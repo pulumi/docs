@@ -20,6 +20,8 @@ The process of taking an idea and turning it into reality has been nothing short
 
 But our AI adventure hasn't ended there; it's only just begun.
 
+{{< youtube "VCBeoquXQrA?rel=0" >}}
+
 Now, imagine this: A Vue.js chatbot frontend, seamlessly integrating human interaction and the AI chatbot API. This blog post is part of the series on AI Infrastructure as Python. We'd delve into the creation of a captivating Vue.js chatbot frontend, and with Pulumi, we'll deploy it to Vercel.
 
 > Figure 1. Architecture diagram
