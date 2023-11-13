@@ -64,7 +64,7 @@ Version 6.0 of the Google Cloud provider introduced support for several new modu
 - [VMware Engine](https://www.pulumi.com/registry/packages/gcp/api-docs/vmwareengine/)
 - [Workstations](https://www.pulumi.com/registry/packages/gcp/api-docs/workstations/)
 
-If you haven't used these modules yet, now is a great time to try them out! Check out the [Pulumi Registry](https://www.pulumi.com/docs/intro/cloud-providers/google-cloud/) for more information on how to get started or ask [Pulumi AI](https://www.pulumi.com/ai) to create a new project for you.
+If you haven't used these modules yet, now is a great time to try them out! Check out the [Pulumi Registry](https://www.pulumi.com/registry/packages/gcp/) for more information on how to get started or ask [Pulumi AI](https://www.pulumi.com/ai) to create a new project for you.
 
 ## What's New in 7.0
 
