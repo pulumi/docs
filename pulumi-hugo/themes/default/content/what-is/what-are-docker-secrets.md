@@ -62,6 +62,12 @@ Restart your terminal to apply the changes to the group, then check that Docker 
 docker --version
 ```
 
+{{< notes type="info" >}}
+
+The command to start Docker depends on your operating system. The above commands show examples for how to do this on Linux. You can find the commands relevant to your own operating system in the [Docker documentation](https://docs.docker.com/engine/install/).
+
+{{< /notes >}}
+
 #### Create a secret via CLI
 
 You can create a secret by piping the secret data into the `docker secret create` command.
