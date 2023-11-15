@@ -172,3 +172,10 @@ While Docker Secrets is a valuable tool for managing sensitive data in Docker Sw
 ### Conclusion
 
 Docker Secrets is a vital feature for anyone using Docker Swarm, offering a secure and straightforward way to handle sensitive data. By understanding and implementing Docker Secrets correctly, teams can significantly enhance the security posture of their containerized applications.
+
+Now that you're equipped with the knowledge of Docker Secrets, take your cloud infrastructure management to the next level with Pulumi. Explore these key resources to deepen your understanding and enhance your implementation strategies:
+
+- **Advanced Secrets Management**: Discover how to efficiently manage sensitive data and secrets in your cloud applications. Dive into Pulumi's [Secrets Management guide](/blog/managing-secrets-with-pulumi/) for in-depth information on encrypting specific values for added security and ensuring that these values never appear in plain text in your state file​.
+- **Container Management Solutions**: Learn about deploying containers with ease using Pulumi. Whether you prefer low-management solutions like AWS Fargate and Microsoft ACI for ease of deployment or require complete control with Kubernetes-based solutions, our [Container Management](/containers/) docs provide comprehensive insights. They cover everything from managing clusters and infrastructure to deploying application containers in various environments​.
+
+Our [community on Slack](https://slack.pulumi.com/) is always open for discussions, questions, and sharing experiences. Join us there and become part of our growing community of cloud professionals!
