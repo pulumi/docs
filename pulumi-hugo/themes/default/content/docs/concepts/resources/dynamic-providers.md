@@ -324,7 +324,7 @@ The `diff` method is invoked when the URN of the resource created by the user al
 
 It returns four optional values:
 
-- `changes: true` if the provider believes there is a difference between the olds and news and wants to do an update or replace to affect this change.
+- `changes: true` if the provider believes there is a difference between the olds and news and wants to do an update or replace to effect this change.
 - `replaces`: An array of property names that have changed that should force a replacement. Returning a non-zero length array tells the Pulumi engine to schedule a replacement instead of an update. Replacements might involve downtime, so this value should only be used when a diff requested by the user cannot be implemented as an in-place update on the cloud provider.
 - `stables`: An array of property names that are known not to change between updates. Pulumi will use this information to allow some [`apply`](/docs/reference/pkg/python/pulumi#outputs-and-inputs) calls on [`Output[T]`](/docs/reference/pkg/python/pulumi#outputs-and-inputs) to be processed during `previews` because it knows that the values of these property names will stay the same during an update.
 - `deleteBeforeReplace`: true if the proposed replacements require that the existing resource be deleted before creating the new one. By default, Pulumi will try to create the new resource before deleting the old one to avoid downtime. If an error occurs, an exception can be thrown from the diff method to return this error to the user.
