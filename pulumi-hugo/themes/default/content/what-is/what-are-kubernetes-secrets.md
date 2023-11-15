@@ -102,7 +102,7 @@ Let's look at a practical example of how to create, read, update, and delete a K
 
 ### Example 2: Reading a Secret
 
-1. Run the following `kubectl` command along with the name of the secret:
+1. Run the following `kubectl` command along with the name of the secret.
 
     ```bash
     $ kubectl get secret shhhhhh
@@ -110,13 +110,13 @@ Let's look at a practical example of how to create, read, update, and delete a K
     # shhhhhh   Opaque   2      2m
     ```
 
-2. To read a specific value within the secret, use `jsonpath` to specify the key:
+2. To read a specific value within the secret, use `jsonpath` to specify the key.
 
     ```bash
     $ kubectl get secret shhhhhh -o jsonpath="{.data.user}" | base64 -d
     # root
     $ kubectl get secret shhhhhh -o jsonpath="{.data.password}" | base64 -d
-    # r00t
+    # root
     ```
 
     Recall that the values are stored as base64 thus we have to decode them to read the actual value. Hence the `base64 -d`.
@@ -125,14 +125,14 @@ Let's look at a practical example of how to create, read, update, and delete a K
 
 In this example we update the password of our secret so that it's a tad harder and does not match the username.
 
-1. Determine the base64 encoding of the new password:
+1. Determine the base64 encoding of the new password.
 
     ```bash
     echo "r00t123" | base64
     # cjAwdDEyMwo=
     ```
 
-2. Open the editor to modify the secret:
+2. Open the editor to modify the secret.
 
     ```bash
     $ kubectl edit secrets shhhhhh
@@ -140,7 +140,7 @@ In this example we update the password of our secret so that it's a tad harder a
 
 3. Replace the `data.password` with the new base64-encoded value from Step 1.
 
-4. View the changes
+4. View the changes.
 
     ```bash
     kubectl get secret shhhhhh -o jsonpath="{.data.password}" | base64 -d
@@ -149,7 +149,7 @@ In this example we update the password of our secret so that it's a tad harder a
 
 ### Example 4: Deleting a Secret
 
-1. Run the following `kubectl` command along with the name of the secret:
+1. Run the following `kubectl` command along with the name of the secret.
 
     ```bash
     $ kubectl delete secret shhhhhh
@@ -164,7 +164,7 @@ Let's explore a real-world example that demonstrates the use of Kubernetes Secre
 
 In the below example, we have MongoDB in the backend provisioned via helm. It was configured by mounting a secret volume containing user credential(s). We then create a pod that mounts the same secret to test the connection to the backend.
 
-1. Define a new secret resource
+1. Define a new secret resource.
 
     ```bash
     $ cat <<EOF > demo-dbcreds.yaml
@@ -179,21 +179,23 @@ In the below example, we have MongoDB in the backend provisioned via helm. It wa
     EOF
     ```
 
-2. Apply the new resource definition:
+2. Apply the new resource definition.
 
     ```bash
     $ kubectl apply -f demo-dbcreds.yaml  --namespace mongodb
     ```
 
-3. Use helm to deploy MongoDB
+3. Use the [MongoDB Bitnami helm chart](https://artifacthub.io/packages/helm/bitnami/mongodb) to deploy MongoDB.
 
   ```bash
     helm install backend \
    --set auth.username=root,auth.database=admin,architecture=standalone,persistence.enabled=false,auth.existingSecret=demo-dbcreds \
   oci://registry-1.docker.io/bitnamicharts/mongodb --namespace mongodb
     ```
+    Note: This deployment is for demo purposes only.
+    In the command above, note the parameter `auth.existingSecret` has a reference to the previously created Secret, `demo-dbcreds`.
 
-4. Confirm the secrets reference in the MongoDB pod
+4. Confirm the secrets reference in the MongoDB pod.
 
     ```bash
     $ kubectl describe pod backend-mongodb-776ff496b7-hmlrq --namespace mongodb
@@ -209,7 +211,7 @@ In the below example, we have MongoDB in the backend provisioned via helm. It wa
     # ...
     ```
 
-5. Create another pod to test connectivity. Note this pod will have the `demo-dbcreds` secret mounted.
+5. Create a pod to test connectivity. Note this pod will have the `demo-dbcreds` secret mounted.
 
     ```bash
     $ cat <<EOF > mongo-conn-test.yaml
@@ -239,15 +241,15 @@ In the below example, we have MongoDB in the backend provisioned via helm. It wa
     EOF
     ```
 
-    Update your host if using a different resource name or namespace. This examples uses `backend-mongodb.mongodb.svc.cluster.local`
+    Update your host if using a different resource name or namespace. This examples uses `backend-mongodb.mongodb.svc.cluster.local`.
 
-6. Create the pod
+6. Create the pod.
 
     ```bash
     $ kubectl apply -f mongo-conn-test.yaml   --namespace mongodb
     ```
 
-7. Verify connectivity
+7. Verify connectivity via the logs.
 
     ```bash
     $ kubectl logs mongo-conn-test --namespace mongodb
@@ -255,7 +257,7 @@ In the below example, we have MongoDB in the backend provisioned via helm. It wa
     # Connected to MongoDB!
     ```
 
-8. Delete the test pod
+8. Delete the test pod.
 
     ```bash
     $ kubectl delete pod mongo-conn-test  --namespace mongodb
