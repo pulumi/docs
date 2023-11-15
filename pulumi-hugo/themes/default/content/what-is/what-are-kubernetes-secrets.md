@@ -33,11 +33,7 @@ Kubernetes, or K8S, is an open-source container orchestration platform designed 
 
 ## What are Kubernetes Secrets?
 
-Kubernetes Secrets, or [Secrets](https://kubernetes.io/docs/concepts/configuration/secret/) for short, are a built-in Kubernetes solution to manage the lifecycle of secrets, which are sensitive data such as passwords, API keys, and tokens. These secrets are consumed by containerized applications directly thereby preventing exposure of sensitive data in code, Docker images, or configuration files.
-
-## Understanding Kubernetes Secrets
-
-One crucial aspect of securing applications is managing sensitive data. We will delve into the use of Kubernetes Secrets by following the lifecycle of database credentials. In particular, you'll learn how to perform the basic CRUD (Create, Read, Update, Delete) operations against a Secret.
+Kubernetes Secrets, or [Secrets](https://kubernetes.io/docs/concepts/configuration/secret/) for short, are a built-in Kubernetes solution to [manage the lifecycle of secrets](./what-is-secrets-management.md), which are sensitive data such as passwords, API keys, and tokens. These secrets are consumed by containerized applications directly thereby preventing exposure of sensitive data in code, Docker images, or configuration files.
 
 ## Why Use Kubernetes Secrets?
 
@@ -64,11 +60,15 @@ Securing sensitive data in Kubernetes Secrets is essential for various reasons:
 
 For more details visit the [Kubernetes Secrets security checklist](https://kubernetes.io/docs/concepts/security/security-checklist/#secrets )
 
-## Kubernetes Secrets CRUD examples
+## Understanding Kubernetes Secrets
+
+One crucial aspect of securing applications is managing sensitive data. We will delve into the use of Kubernetes Secrets by following the lifecycle of database credentials. In particular, you'll learn how to perform the basic CRUD (Create, Read, Update, Delete) operations against a Secret.
+
+### Kubernetes Secrets CRUD examples
 
 Let's look at a practical example of how to create, read, update, and delete a Kubernetes Secret.
 
-### Example 1: Creating a Secret
+#### Example 1: Creating a Secret
 
 1. Define a new secret resource called `shhhhhh` that contains a user and a password. These are saved in the `dbcreds.yaml` file.
 
@@ -100,7 +100,7 @@ Let's look at a practical example of how to create, read, update, and delete a K
     $ kubectl describe secrets shhhhhh  
     ```
 
-### Example 2: Reading a Secret
+#### Example 2: Reading a Secret
 
 1. Run the following `kubectl` command along with the name of the secret.
 
@@ -121,7 +121,7 @@ Let's look at a practical example of how to create, read, update, and delete a K
 
     Recall that the values are stored as base64 thus we have to decode them to read the actual value. Hence the `base64 -d`.
 
-### Example 3: Updating a Secret
+#### Example 3: Updating a Secret
 
 In this example we update the password of our secret so that it's a tad harder and does not match the username.
 
@@ -147,7 +147,7 @@ In this example we update the password of our secret so that it's a tad harder a
     # r00t123
     ```
 
-### Example 4: Deleting a Secret
+#### Example 4: Deleting a Secret
 
 1. Run the following `kubectl` command along with the name of the secret.
 
@@ -156,7 +156,7 @@ In this example we update the password of our secret so that it's a tad harder a
     # secret "shhhhhh" deleted
     ```
 
-## A real world example with database credentials
+### A real world example with database credentials
 
 When managing database credentials, you can use Kubernetes Secrets to securely define, store, and deploy the necessary credentials to your pods. This ensures that your application has secure access to the database, without exposing the credentials in your codebase.
 
@@ -187,14 +187,14 @@ In the below example, we have MongoDB in the backend provisioned via helm. It wa
 
 3. Use the [MongoDB Bitnami helm chart](https://artifacthub.io/packages/helm/bitnami/mongodb) to deploy MongoDB.
 
-  ```bash
-    helm install backend \
-   --set auth.username=root,auth.database=admin,architecture=standalone,persistence.enabled=false,auth.existingSecret=demo-dbcreds \
-  oci://registry-1.docker.io/bitnamicharts/mongodb --namespace mongodb
+    ```bash
+    $ helm install backend \
+       --set auth.username=root,auth.database=admin,architecture=standalone,persistence.enabled=false,auth.existingSecret=demo-dbcreds \
+       oci://registry-1.docker.io/bitnamicharts/mongodb --namespace mongodb
     ```
 
     Note: This deployment is for demo purposes only.
-    In the command above, note the parameter `auth.existingSecret` has a reference to the previously created Secret, `demo-dbcreds`.
+    In the command above, the parameter `auth.existingSecret` has a reference to the previously created Secret, `demo-dbcreds`.
 
 4. Confirm the secrets reference in the MongoDB pod.
 
