@@ -192,6 +192,7 @@ In the below example, we have MongoDB in the backend provisioned via helm. It wa
    --set auth.username=root,auth.database=admin,architecture=standalone,persistence.enabled=false,auth.existingSecret=demo-dbcreds \
   oci://registry-1.docker.io/bitnamicharts/mongodb --namespace mongodb
     ```
+    
     Note: This deployment is for demo purposes only.
     In the command above, note the parameter `auth.existingSecret` has a reference to the previously created Secret, `demo-dbcreds`.
 
