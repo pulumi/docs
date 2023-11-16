@@ -43,7 +43,13 @@ Docker Secrets is a resource for securely managing sensitive data like passwords
 
 ### Creating Secrets
 
-Secrets can be created via the Docker CLI or Docker Compose files. Once created, they are stored in a secure part of the Docker Swarm. Before creating secrets in Docker, you must first make sure you have [Docker installed](https://docs.docker.com/get-docker/). Once you have installed Docker, enable and start the Docker service.
+Secrets can be created via the Docker CLI or Docker Compose files. Once created, they are stored in a secure part of the Docker Swarm.
+
+#### Prerequisites
+
+##### Install Docker
+
+Before creating secrets in Docker, you must first make sure you have [Docker installed](https://docs.docker.com/get-docker/). Once you have installed Docker, enable and start the Docker service.
 
 ```bash
 sudo systemctl enable docker
@@ -67,6 +73,22 @@ docker --version
 The command to start Docker depends on your operating system. The above commands show examples for how to do this on Linux. You can find the commands relevant to your own operating system in the [Docker documentation](https://docs.docker.com/engine/install/).
 
 {{< /notes >}}
+
+##### Create a Swarm
+
+You will also need to initialize a swarm since Docker secrets are a feature of [Docker Swarm](https://docs.docker.com/engine/swarm/key-concepts/).
+
+```
+$ docker swarm init
+
+Swarm initialized: current node (u26cvq5cro6ro76sv47fs2nr4) is now a manager.
+
+To add a worker to this swarm, run the following command:
+
+    docker swarm join --token SWMTKN-1-5fev6zooqj2vi3n4ffhnkzjx96oiogfziizivyordmf12iv0yo-7bqlgowmz7sy2k932cjkbukpi 172.31.30.90:2377
+
+To add a manager to this swarm, run 'docker swarm join-token manager' and follow the instructions.
+```
 
 #### Create a secret via CLI
 
