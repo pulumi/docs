@@ -29,11 +29,11 @@ customer_logos:
       - ro
 ---
 
-Docker, a leading platform in containerization technology, has revolutionized how applications are developed, shipped, and deployed. An essential facet of this ecosystem is the effective management of configuration data. [Docker Configs](https://docs.docker.com/engine/swarm/configs/) is a feature specially crafted to handle non-sensitive configuration information within Docker environments. This guide explores the ins and outs of Docker Secrets, highlighting its importance, functionality, and best practices.
+Docker, a leading platform in containerization technology, has revolutionized how applications are developed, shipped, and deployed. An essential facet of this ecosystem is the effective management of configuration data. [Docker Configs](https://docs.docker.com/engine/swarm/configs/) is a feature specially crafted to handle non-sensitive configuration information within Docker environments. This guide explores the ins and outs of Docker Configs, highlighting its importance, functionality, and best practices.
 
 ### What are Docker Configs?
 
-Docker Configs are a resource in Docker for storing non-sensitive information such as configuration files, separate from a service's image or running containers. This enables keeping Docker images as generic as possible without the need for bind-mounting configuration files into containers or using environment variables. Unlike Docker Secrets, Docker Configs are not encrypted at rest and are directly mounted into the container's filesystem.
+Docker Configs are a resource in Docker for storing non-sensitive information such as configuration files, separate from a service's image or running containers. This enables keeping Docker images as generic as possible without the need for bind-mounting configuration files into containers or using environment variables. Unlike [Docker Secrets](/what-is/what-are-docker-secrets), Docker Configs are not encrypted at rest and are directly mounted into the container's filesystem.
 
 #### Key Features
 
@@ -45,13 +45,7 @@ Docker Configs are a resource in Docker for storing non-sensitive information su
 
 ### Creating Configs
 
-Docker Configs can be created via the Docker CLI.
-
-#### Prerequisites
-
-##### Install Docker
-
-Before creating configs in Docker, you must first make sure you have [Docker installed](https://docs.docker.com/get-docker/). Once you have installed Docker, enable and start the Docker service.
+Docker Configs can be created via the Docker CLI. Before creating configs in Docker, you must first make sure you have [Docker installed](https://docs.docker.com/get-docker/). Once you have installed Docker, enable and start the Docker service.
 
 ```bash
 sudo systemctl enable docker
@@ -76,9 +70,7 @@ The command to start Docker depends on your operating system. The above commands
 
 {{< /notes >}}
 
-##### Create a Swarm
-
-You will also need to initialize a swarm since Docker secrets are a feature of [Docker Swarm](https://docs.docker.com/engine/swarm/key-concepts/).
+You will also need to initialize a swarm since Docker Configs are a feature of [Docker Swarm](https://docs.docker.com/engine/swarm/key-concepts/).
 
 ```
 $ docker swarm init
