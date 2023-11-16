@@ -73,3 +73,4 @@ To configure OIDC for your cloud provider, refer to one of our guides:
 - [Configuring OIDC for AWS](/docs/pulumi-cloud/oidc/aws/)
 - [Configuring OIDC for Azure](/docs/pulumi-cloud/oidc/azure/)
 - [Configuring OIDC for Google Cloud](/docs/pulumi-cloud/oidc/gcp/)
+- [Configuring OIDC for Vault](/docs/pulumi-cloud/oidc/vault/)

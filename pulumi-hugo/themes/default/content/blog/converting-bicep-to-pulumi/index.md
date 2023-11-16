@@ -12,6 +12,8 @@ Bicep is a DSL developed by Microsoft to simplify the authoring of ARM templates
 
 <!--more-->
 
+{{< youtube "VNj1EyQ7wug?rel=0" >}}
+
 The [Bicep](https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/overview?tabs=bicep) language is a domain-specific language for Infrastructure-As-Code built by Microsoft that uses declarative syntax to deploy Azure resources. It was made to address the shortcomings of authoring ARM templates that are written in JSON. Compared to ARM templates, Bicep is much more concise and readable. However, here at Pulumi we believe that using general-purpose programming languages that are familiar to developers is the best way to author Infrastructure-As-Code. Besides being able to use a general-purpose language, you and your team can benefit from using Pulumi Cloud as you scale to larger projects and teams with features such as [Pulumi Deployments](https://www.pulumi.com/blog/pulumi-deployments/), [Organization Access Tokens](https://www.pulumi.com/blog/organization-access-tokens/), [Review Stacks](https://www.pulumi.com/blog/review-stacks/) and more.
 
 That is why I have been working on a new [Pulumi converter plugin](https://github.com/Zaid-Ajaj/pulumi-converter-bicep) that converts Bicep code to any of the supported Pulumi languages using the Pulumi CLI via `pulumi convert`.

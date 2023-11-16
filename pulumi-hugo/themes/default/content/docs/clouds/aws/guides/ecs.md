@@ -111,9 +111,8 @@ pulumi.export("url", lb.load_balancer.dns_name)
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/ecs"
-	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/lb"
-	"github.com/pulumi/pulumi-awsx/sdk/go/awsx/ecs"
+	"github.com/pulumi/pulumi-aws/sdk/v6/go/aws/ecs"
+	xecs "github.com/pulumi/pulumi-awsx/sdk/go/awsx/ecs"
 	"github.com/pulumi/pulumi-awsx/sdk/go/awsx/lb"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
@@ -128,30 +127,32 @@ func main() {
 		if err != nil {
 			return err
 		}
-		_, err = ecs.NewFargateService(ctx, "service", &ecs.FargateServiceArgs{
+
+		tdpma := xecs.TaskDefinitionPortMappingArray{
+			xecs.TaskDefinitionPortMappingArgs{
+				TargetGroup: lb.DefaultTargetGroup,
+			},
+		}
+
+		_, err = xecs.NewFargateService(ctx, "service", &xecs.FargateServiceArgs{
 			Cluster:        cluster.Arn,
 			AssignPublicIp: pulumi.Bool(true),
 			DesiredCount:   pulumi.Int(2),
-			TaskDefinitionArgs: &ecs.FargateServiceTaskDefinitionArgs{
-				Container: &ecs.TaskDefinitionContainerDefinitionArgs{
-					Image:     pulumi.String("nginx:latest"),
-					Cpu:       pulumi.Int(512),
-					Memory:    pulumi.Int(128),
-					Essential: pulumi.Bool(true),
-					PortMappings: []ecs.TaskDefinitionPortMappingArgs{
-						&ecs.TaskDefinitionPortMappingArgs{
-							TargetGroup: lb.DefaultTargetGroup,
-						},
-					},
+			TaskDefinitionArgs: &xecs.FargateServiceTaskDefinitionArgs{
+				Container: &xecs.TaskDefinitionContainerDefinitionArgs{
+					Image:        pulumi.String("nginx:latest"),
+					Cpu:          pulumi.Int(512),
+					Memory:       pulumi.Int(128),
+					Essential:    pulumi.Bool(true),
+					PortMappings: tdpma,
 				},
 			},
 		})
+
 		if err != nil {
 			return err
 		}
-		ctx.Export("url", lb.LoadBalancer.ApplyT(func(loadBalancer *lb.LoadBalancer) (string, error) {
-			return loadBalancer.DnsName, nil
-		}).(pulumi.StringOutput))
+		ctx.Export("url", lb.LoadBalancer.DnsName())
 		return nil
 	})
 }
@@ -412,14 +413,14 @@ package main
 import (
 	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/ec2"
 	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/ecs"
-	"github.com/pulumi/pulumi-awsx/sdk/go/awsx/ec2"
-	"github.com/pulumi/pulumi-awsx/sdk/go/awsx/ecs"
+	xec2 "github.com/pulumi/pulumi-awsx/sdk/go/awsx/ec2"
+	xecs "github.com/pulumi/pulumi-awsx/sdk/go/awsx/ecs"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		vpc, err := ec2.NewVpc(ctx, "vpc", nil)
+		vpc, err := xec2.NewVpc(ctx, "vpc", nil)
 		if err != nil {
 			return err
 		}
@@ -446,7 +447,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		_, err = ecs.NewFargateService(ctx, "service", &ecs.FargateServiceArgs{
+		_, err = xecs.NewFargateService(ctx, "service", &xecs.FargateServiceArgs{
 			Cluster: cluster.Arn,
 			NetworkConfiguration: &ecs.ServiceNetworkConfigurationArgs{
 				Subnets: vpc.PrivateSubnetIds,
@@ -455,8 +456,8 @@ func main() {
 				},
 			},
 			DesiredCount: pulumi.Int(2),
-			TaskDefinitionArgs: &ecs.FargateServiceTaskDefinitionArgs{
-				Container: &ecs.TaskDefinitionContainerDefinitionArgs{
+			TaskDefinitionArgs: &xecs.FargateServiceTaskDefinitionArgs{
+				Container: &xecs.TaskDefinitionContainerDefinitionArgs{
 					Image:     pulumi.String("nginx:latest"),
 					Cpu:       pulumi.Int(512),
 					Memory:    pulumi.Int(128),
@@ -737,9 +738,8 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/ecs"
-	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/lb"
 	"github.com/pulumi/pulumi-awsx/sdk/go/awsx/ecr"
-	"github.com/pulumi/pulumi-awsx/sdk/go/awsx/ecs"
+	xecs "github.com/pulumi/pulumi-awsx/sdk/go/awsx/ecs"
 	"github.com/pulumi/pulumi-awsx/sdk/go/awsx/lb"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
@@ -750,44 +750,47 @@ func main() {
 		if err != nil {
 			return err
 		}
+
 		image, err := ecr.NewImage(ctx, "image", &ecr.ImageArgs{
 			RepositoryUrl: repository.Url,
-			Path:          pulumi.String("./app"),
 		})
 		if err != nil {
 			return err
 		}
+
 		cluster, err := ecs.NewCluster(ctx, "cluster", nil)
 		if err != nil {
 			return err
 		}
+
 		lb, err := lb.NewApplicationLoadBalancer(ctx, "lb", nil)
 		if err != nil {
 			return err
 		}
-		_, err = ecs.NewFargateService(ctx, "service", &ecs.FargateServiceArgs{
+
+		tdpma := xecs.TaskDefinitionPortMappingArray{
+			xecs.TaskDefinitionPortMappingArgs{
+				TargetGroup: lb.DefaultTargetGroup,
+			},
+		}
+		_, err = xecs.NewFargateService(ctx, "service", &xecs.FargateServiceArgs{
 			Cluster:        cluster.Arn,
 			AssignPublicIp: pulumi.Bool(true),
-			TaskDefinitionArgs: &ecs.FargateServiceTaskDefinitionArgs{
-				Container: &ecs.TaskDefinitionContainerDefinitionArgs{
-					Image:     image.ImageUri,
-					Cpu:       pulumi.Int(512),
-					Memory:    pulumi.Int(128),
-					Essential: pulumi.Bool(true),
-					PortMappings: []ecs.TaskDefinitionPortMappingArgs{
-						&ecs.TaskDefinitionPortMappingArgs{
-							TargetGroup: lb.DefaultTargetGroup,
-						},
-					},
+			TaskDefinitionArgs: &xecs.FargateServiceTaskDefinitionArgs{
+				Container: &xecs.TaskDefinitionContainerDefinitionArgs{
+					Image:        image.ImageUri,
+					Cpu:          pulumi.Int(512),
+					Memory:       pulumi.Int(128),
+					Essential:    pulumi.Bool(true),
+					PortMappings: tdpma,
 				},
 			},
 		})
 		if err != nil {
 			return err
 		}
-		ctx.Export("url", lb.LoadBalancer.ApplyT(func(loadBalancer *lb.LoadBalancer) (string, error) {
-			return loadBalancer.DnsName, nil
-		}).(pulumi.StringOutput))
+
+		ctx.Export("url", lb.LoadBalancer.DnsName())
 		return nil
 	})
 }
