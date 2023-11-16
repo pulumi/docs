@@ -20,7 +20,7 @@
         "editor.gotoLocation.multipleDeclarations", "goto",
         "editor.gotoLocation.multipleImplementations", "goto",
         "editor.gotoLocation.multipleTypeDefinitions", "goto",
-        "terminal.integrated.shell.linux", "/usr/bin/zsh",
+        "editor.terminal.integrated.shell.linux", "/usr/bin/zsh",
         "files.trimTrailingWhitespace", true,
         "files.trimFinalNewlines", true
       ],
