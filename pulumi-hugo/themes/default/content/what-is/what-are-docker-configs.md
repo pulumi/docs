@@ -5,35 +5,13 @@ meta_desc: |
 
 type: what-is
 page_title: "What are Docker Configs"
-
-customer_logos:
-  title: Leading engineering organizations are building with Pulumi
-  logos:
-    - items:
-      - snowflake
-      - tableau
-      - atlassian
-      - fauna
-      - ware2go
-    - items:
-      - mindbody
-      - sourcegraph
-      - fenergo
-      - skai
-      - lemonade
-    - items:
-      - clearsale
-      - angellist
-      - webflow
-      - supabase
-      - ro
 ---
 
 Docker, a leading platform in containerization technology, has revolutionized how applications are developed, shipped, and deployed. An essential facet of this ecosystem is the effective management of configuration data. [Docker Configs](https://docs.docker.com/engine/swarm/configs/) is a feature specially crafted to handle non-sensitive configuration information within Docker environments. This guide explores the ins and outs of Docker Configs, highlighting its importance, functionality, and best practices.
 
 ### What are Docker Configs?
 
-Docker Configs are a resource in Docker for storing non-sensitive information such as configuration files, separate from a service's image or running containers. This enables keeping Docker images as generic as possible without the need for bind-mounting configuration files into containers or using environment variables. Unlike [Docker Secrets](/what-is/what-are-docker-secrets), Docker Configs are not encrypted at rest and are directly mounted into the container's filesystem.
+Docker Configs are a resource in Docker for storing non-sensitive information such as configuration files, separate from a service's image or running containers within [Docker Swarm](https://docs.docker.com/engine/swarm/) environments. This enables keeping Docker images as generic as possible without the need for bind-mounting configuration files into containers or using environment variables. Unlike [Docker Secrets](/what-is/what-are-docker-secrets), Docker Configs are not encrypted at rest and are directly mounted into the container's filesystem.
 
 #### Key Features
 
