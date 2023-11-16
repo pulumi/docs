@@ -1,6 +1,12 @@
 
 default: ensure build serve
 
+devcontainer::
+	git submodule update --init --recursive .devcontainer
+	git submodule update --remote --merge .devcontainer
+	rm -rf .devcontainer.json
+	cp .devcontainer/devcontainer.json .devcontainer.json
+
 .PHONY: clean
 clean:
 	./scripts/clean.sh
