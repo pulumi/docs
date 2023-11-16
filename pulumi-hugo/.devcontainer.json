@@ -28,7 +28,6 @@
         "golang.go",
         "github.copilot",
         "ms-python.python",
-        "jetpack-io.devbox",
         "redhat.vscode-yaml",
         "esbenp.prettier-vscode",
         "ms-vscode.makefile-tools",
