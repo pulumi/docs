@@ -10,6 +10,7 @@ public
 yarn-error.log
 .hugo_build.lock
 *.md
+.devcontainer.json
 
 themes/default/theme
 themes/default/assets
