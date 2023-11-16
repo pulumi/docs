@@ -5,35 +5,13 @@ meta_desc: |
 
 type: what-is
 page_title: "What are Docker Secrets"
-
-customer_logos:
-  title: Leading engineering organizations are building with Pulumi
-  logos:
-    - items:
-      - snowflake
-      - tableau
-      - atlassian
-      - fauna
-      - ware2go
-    - items:
-      - mindbody
-      - sourcegraph
-      - fenergo
-      - skai
-      - lemonade
-    - items:
-      - clearsale
-      - angellist
-      - webflow
-      - supabase
-      - ro
 ---
 
 Docker, a leading platform in containerization technology, has revolutionized how applications are developed, shipped, and deployed. One critical aspect of this process is managing sensitive information, commonly known as "secrets." [Docker Secrets](https://docs.docker.com/engine/swarm/secrets/) is a feature specifically designed for safely transmitting and storing confidential data within Docker environments. This guide explores the ins and outs of Docker Secrets, highlighting its importance, functionality, and best practices.
 
 ### What are Docker Secrets?
 
-Docker Secrets is a resource for securely managing sensitive data like passwords, tokens, and SSH keys within [Docker Swarm](https://docs.docker.com/engine/swarm/) environments. It's designed to keep this information safe both in transit and at rest.
+Docker Secrets is a resource for securely managing sensitive data like passwords, tokens, and SSH keys within [Docker Swarm](https://docs.docker.com/engine/swarm/) environments. Unlike [Docker Configs](/what-is/what-are-docker-configs/) when only encrypts data in transit, Docker Secrets are designed to keep data safe both in transit and at rest.
 
 #### Key Features
 
@@ -43,13 +21,7 @@ Docker Secrets is a resource for securely managing sensitive data like passwords
 
 ### Creating Secrets
 
-Secrets can be created via the Docker CLI or Docker Compose files. Once created, they are stored in a secure part of the Docker Swarm.
-
-#### Prerequisites
-
-##### Install Docker
-
-Before creating secrets in Docker, you must first make sure you have [Docker installed](https://docs.docker.com/get-docker/). Once you have installed Docker, enable and start the Docker service.
+Secrets can be created via the Docker CLI or Docker Compose files. Once created, they are stored in a secure part of the Docker Swarm. Before creating secrets in Docker, you must first make sure you have [Docker installed](https://docs.docker.com/get-docker/). Once you have installed Docker, enable and start the Docker service.
 
 ```bash
 sudo systemctl enable docker
@@ -73,8 +45,6 @@ docker --version
 The command to start Docker depends on your operating system. The above commands show examples for how to do this on Linux. You can find the commands relevant to your own operating system in the [Docker documentation](https://docs.docker.com/engine/install/).
 
 {{< /notes >}}
-
-##### Create a Swarm
 
 You will also need to initialize a swarm since Docker secrets are a feature of [Docker Swarm](https://docs.docker.com/engine/swarm/key-concepts/).
 
