@@ -5,35 +5,13 @@ meta_desc: |
 
 type: what-is
 page_title: "What are Docker Secrets"
-
-customer_logos:
-  title: Leading engineering organizations are building with Pulumi
-  logos:
-    - items:
-      - snowflake
-      - tableau
-      - atlassian
-      - fauna
-      - ware2go
-    - items:
-      - mindbody
-      - sourcegraph
-      - fenergo
-      - skai
-      - lemonade
-    - items:
-      - clearsale
-      - angellist
-      - webflow
-      - supabase
-      - ro
 ---
 
 Docker, a leading platform in containerization technology, has revolutionized how applications are developed, shipped, and deployed. One critical aspect of this process is managing sensitive information, commonly known as "secrets." [Docker Secrets](https://docs.docker.com/engine/swarm/secrets/) is a feature specifically designed for safely transmitting and storing confidential data within Docker environments. This guide explores the ins and outs of Docker Secrets, highlighting its importance, functionality, and best practices.
 
 ### What are Docker Secrets?
 
-Docker Secrets is a resource for securely managing sensitive data like passwords, tokens, and SSH keys within [Docker Swarm](https://docs.docker.com/engine/swarm/) environments. It's designed to keep this information safe both in transit and at rest.
+Docker Secrets is a resource for securely managing sensitive data like passwords, tokens, and SSH keys within [Docker Swarm](https://docs.docker.com/engine/swarm/) environments. Unlike [Docker Configs](/what-is/what-are-docker-configs/) when only encrypts data in transit, Docker Secrets are designed to keep data safe both in transit and at rest.
 
 #### Key Features
 
@@ -68,6 +46,20 @@ The command to start Docker depends on your operating system. The above commands
 
 {{< /notes >}}
 
+You will also need to initialize a swarm since Docker secrets are a feature of [Docker Swarm](https://docs.docker.com/engine/swarm/key-concepts/).
+
+```
+$ docker swarm init
+
+Swarm initialized: current node (u26cvq5cro6ro76sv47fs2nr4) is now a manager.
+
+To add a worker to this swarm, run the following command:
+
+    docker swarm join --token SWMTKN-1-5fev6zooqj2vi3n4ffhnkzjx96oiogfziizivyordmf12iv0yo-7bqlgowmz7sy2k932cjkbukpi 172.31.30.90:2377
+
+To add a manager to this swarm, run 'docker swarm join-token manager' and follow the instructions.
+```
+
 #### Create a secret via CLI
 
 You can create a secret by piping the secret data into the `docker secret create` command.
@@ -78,7 +70,7 @@ $ echo "my_secret_data" | docker secret create my_secret -
 ix4v0pm352e7a4idpshbrbrt4
 ```
 
-Verify the secret is created
+Verify the secret is created:
 
 ```bash
 $ docker secret ls
@@ -98,7 +90,7 @@ overall progress: 1 out of 1 tasks
 verify: Service converged
 ```
 
-Inspect the running service to ensure the secret is attached.
+Inspect the service to ensure it is running.
 
 ```bash
 $ docker service ps myservice
