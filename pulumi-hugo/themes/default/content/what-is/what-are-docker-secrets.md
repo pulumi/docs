@@ -100,7 +100,7 @@ $ echo "my_secret_data" | docker secret create my_secret -
 ix4v0pm352e7a4idpshbrbrt4
 ```
 
-Verify the secret is created
+Verify the secret is created:
 
 ```bash
 $ docker secret ls
@@ -120,7 +120,7 @@ overall progress: 1 out of 1 tasks
 verify: Service converged
 ```
 
-Inspect the running service to ensure the secret is attached.
+Inspect the service to ensure it is running.
 
 ```bash
 $ docker service ps myservice
