@@ -6,27 +6,6 @@ meta_desc: |
 type: what-is
 page_title: "What are Kubernetes Secrets"
 
-customer_logos:
-  title: Leading engineering organizations are building with Pulumi
-  logos:
-    - items:
-      - snowflake
-      - tableau
-      - atlassian
-      - fauna
-      - ware2go
-    - items:
-      - mindbody
-      - sourcegraph
-      - fenergo
-      - skai
-      - lemonade
-    - items:
-      - clearsale
-      - angellist
-      - webflow
-      - supabase
-      - ro
 ---
 
 Kubernetes, or K8S, is an open-source container orchestration platform designed to automate the deployment, scaling, and management of containerized applications.
@@ -268,8 +247,6 @@ In the below example, we have MongoDB in the backend provisioned via helm. It wa
 
 Kubernetes secrets are crucial to many applications and we must have a solution to the lifecycle of these. Kubernetes Secrets is the native way to manage secrets. By following best practices and using Kubernetes secrets, you can ensure the security of your applications and sensitive data.
 
-Now that you're equipped with the knowledge of Kubernetes Secrets, take your cloud infrastructure management to the next level with Pulumi. Explore these key resources to deepen your understanding and enhance your implementation strategies:
-
-- **Advanced Secrets Management**: Discover how to efficiently manage sensitive data and secrets in your cloud applications. Dive into Pulumi's [Secrets Management guide](/blog/managing-secrets-with-pulumi/) for in-depth information on encrypting specific values for added security and ensuring that these values never appear in plain text in your state file​.
+Now that you're equipped with the knowledge of Kubernetes Secrets, take your cloud infrastructure management to the next level with Pulumi Advanced Secrets Management. Discover how to efficiently manage sensitive data and secrets in your cloud applications. Dive into Pulumi's [Secrets Management guide](/blog/managing-secrets-with-pulumi/) for in-depth information on encrypting specific values for added security and ensuring that these values never appear in plain text in your state file​.
 
 Our [community on Slack](https://slack.pulumi.com/) is always open for discussions, questions, and sharing experiences. Join us there and become part of our growing community of cloud professionals!
