@@ -25,7 +25,7 @@ workshops:
         link: /resources/intro-to-aws-typescript
         action: Register Now
       - title: Getting Started with Secrets Management on AWS
-        date: November 16, 2023
+        date: December 13, 2023
         description: Learn how to manage configuration and secrets across all of your AWS environments with Pulumi ESC and AWS Secrets Manager.
         link: /resources/getting-started-with-secrets-management-aws/
         action: Register Now
