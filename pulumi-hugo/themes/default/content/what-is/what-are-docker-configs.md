@@ -151,6 +151,17 @@ Docker Configs, similar to Docker Secrets, provide a useful way to manage config
 
 - **Immutable Once Attached to Running Services**: Once a config is attached to a running service, it cannot be edited. Any changes require creating a new config and updating the service to use this new config, which might cause service disruption.
 
+### Best Practices
+
+When using Docker Configs, it's important to follow best practices to ensure efficient and secure management of your configuration data:
+
+- **Use for Non-Sensitive Data Only**: Given that Docker Configs are not encrypted at rest, use them only for non-sensitive configuration data. Store any sensitive information like passwords or API keys in Docker Secrets instead.
+- **Naming Conventions and Organization**: Use clear and consistent naming conventions for your configs. This approach helps in quickly identifying the purpose of each config and its associated services.
+- **Avoid Large Config Files**: Since Docker Configs have a size limitation, avoid using them for very large configuration files. Instead, consider splitting large configurations into smaller, more manageable pieces.
+- **Documentation**: Document your configuration management strategy, including how configs are named, structured, and updated. This documentation is invaluable for new team members and for maintaining consistency across your deployments.
+
+By following these best practices, you can maximize the benefits of Docker Configs in managing your application's configuration data effectively and securely.
+
 ### Conclusion
 
 Docker Configs offer a flexible and secure way to manage non-sensitive configuration data in Docker environments. By storing configuration outside of application code, Docker Configs facilitate a more modular and maintainable architecture.
