@@ -12,6 +12,10 @@ tags:
     - efs
 ---
 
+{{% notes type="warning" %}}
+Some of the code in this post is out of date. See the [AWS guides](/docs/clouds/aws/guides/) for an updated overview and examples.
+{{% /notes %}}
+
 Ever since AWS Lambda was released in 2015, users have wanted persistent file storage beyond the small 512MB `/tmp` disk allocated to each Lambda function.  The following year, Amazon launched EFS,  offering a simple managed file system service for AWS, but initially only available to mount onto Amazon EC2 instances. Over the last few months, AWS has been extending access to EFS to all of the modern compute offerings.  First [EKS](https://aws.amazon.com/about-aws/whats-new/2019/09/amazon-eks-announces-beta-release-of-amazon-efs-csi-driver/) for Kubernetes, then [ECS and Fargate](https://aws.amazon.com/about-aws/whats-new/2020/04/amazon-ecs-aws-fargate-support-amazon-efs-filesystems-generally-available/) for containers.  Today, AWS announced that [EFS is now also supported in Lambda](https://aws.amazon.com/blogs/aws/new-a-shared-file-system-for-your-lambda-functions/), providing easy access to network file systems from your serverless functions.
 
 <!--more-->

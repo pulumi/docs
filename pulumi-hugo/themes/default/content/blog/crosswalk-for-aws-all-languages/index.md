@@ -32,6 +32,10 @@ tags:
 # for additional details, and please remove these comments before submitting for review.
 ---
 
+{{% notes type="warning" %}}
+Portions of this blog post are out of date. See the [AWS guides](/docs/clouds/aws/guides/) for an updated overview and examples.
+{{% /notes %}}
+
 Crosswalk for AWS is a collection of libraries that make it easy to work with AWS using Pulumi Infrastructure as Code.  The Crosswalk for AWS libraries are some of the most widely used higher-level components in the Pulumi ecosystem, with hundreds of organizations building their infrastructure on the simple abstractions over key AWS services like ECS, API Gateway, VPC, Load Balancing, CloudTrail, EC2, ECR, and more.
 
 <!--more-->

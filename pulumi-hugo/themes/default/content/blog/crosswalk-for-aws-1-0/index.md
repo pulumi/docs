@@ -33,6 +33,10 @@ tags:
 # for additional details, and please remove these comments before submitting for review.
 ---
 
+{{% notes type="warning" %}}
+Portions of this blog post are out of date. See the [AWS guides](/docs/clouds/aws/guides/) for an updated overview and examples.
+{{% /notes %}}
+
 We introduced [Crosswalk for AWS](https://www.pulumi.com/docs/clouds/aws/guides/) three years ago as a library of components on top of the core AWS platform to make it easier to get from zero to production on AWS, easier to adopt AWS best practices by default, and easier to evolve your AWS infrastructure as your application needs mature.  Since then, we’ve added many new capabilities, expanded the portfolio of libraries, and made these libraries [available to all Pulumi languages](https://www.pulumi.com/blog/crosswalk-for-aws-all-languages/).  We’ve also seen thousands of Pulumi customers, including more than 25% of all Pulumi AWS users, adopting one or more of the Crosswalk for AWS components to aid in delivering their AWS-based applications and services.
 
 Today, we’re excited to deliver the 1.0 releases of the three core libraries that make up Crosswalk for AWS: [AWSX 1.0](https://www.pulumi.com/registry/packages/awsx/), [EKS 1.0](https://www.pulumi.com/registry/packages/eks/) and [AWS API Gateway 1.0](https://www.pulumi.com/registry/packages/aws-apigateway/).  These 1.0 releases offer a stable supported foundation, available in all Pulumi languages, for these rich infrastructure components.

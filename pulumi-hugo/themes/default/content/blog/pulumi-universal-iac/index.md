@@ -11,6 +11,10 @@ tags:
     - crosswalk
 ---
 
+{{% notes type="warning" %}}
+Some of the code in this post is out of date. See the [AWS guides](/docs/clouds/aws/guides/) for an updated overview and examples.
+{{% /notes %}}
+
 Over the last year since the launch of Pulumi 3.0, we’ve seen incredible growth in adoption and usage of the Pulumi open source project and Cloud Engineering platform, with more than a thousand new open source contributors, tens of thousands of new users, and millions of new cloud infrastructure resources being managed by Pulumi. Pulumi’s infrastructure as code tools are enabling teams to scale up their cloud infrastructure with robust software engineering tools and practices to get the most value out of their cloud platform investments.
 
 Today, we’re excited to announce a wave of innovation across the Pulumi project with a collection of significant new feature launches. These new features bring together Pulumi’s __*Universal Infrastructure as Code*__ offering, supporting the widest range of builders, clouds, programming languages, and cloud architectures.

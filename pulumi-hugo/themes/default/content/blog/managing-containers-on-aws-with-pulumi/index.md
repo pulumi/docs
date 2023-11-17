@@ -13,6 +13,10 @@ tags:
     - lambda
 ---
 
+{{% notes type="warning" %}}
+Some of the code in this post is out of date. See the [AWS guides](/docs/clouds/aws/guides/) for an updated overview and examples.
+{{% /notes %}}
+
 The Amazon Web Services (AWS) Cloud ecosystem is large and vibrant, so vast and vibrant that at times, it can be challenging to know where best to start! In the case of [containers](https://www.pulumi.com/containers/), [Abby Fuller](https://twitter.com/abbyfuller) tweeted a descriptive summary about using AWS container services.
 
 <!--more-->
