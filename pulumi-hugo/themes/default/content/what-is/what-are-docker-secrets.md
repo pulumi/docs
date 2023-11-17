@@ -11,7 +11,7 @@ Docker, a leading platform in containerization technology, has revolutionized ho
 
 ### What are Docker Secrets?
 
-Docker Secrets is a resource for securely managing sensitive data like passwords, tokens, and SSH keys within [Docker Swarm](https://docs.docker.com/engine/swarm/) environments. Unlike [Docker Configs](/what-is/what-are-docker-configs/) when only encrypts data in transit, Docker Secrets are designed to keep data safe both in transit and at rest.
+Docker Secrets is a resource for securely managing sensitive data like passwords, tokens, and SSH keys within [Docker Swarm](https://docs.docker.com/engine/swarm/) environments. Unlike [Docker Configs](/what-is/what-are-docker-configs/) which only encrypts data in transit, Docker Secrets are designed to keep data safe both in transit and at rest.
 
 #### Key Features
 
@@ -160,6 +160,18 @@ my_secret_data
 ### Challenges and Considerations
 
 While Docker Secrets is a valuable tool for managing sensitive data in Docker Swarm, it has its limitations. One major challenge is its confinement to Docker Swarm environments, meaning it's not applicable for standalone Docker containers or other orchestrators like Kubernetes. Additionally, Docker Secrets lacks a direct mechanism for automatic secrets rotation, a crucial aspect for maintaining security over time.
+
+### Best Practices
+
+When using Docker Secrets, it's important to follow best practices to ensure efficient and secure management of your sensitive data:
+
+- **Restrict Access**: Limit access to Docker Secrets to only those services and users that absolutely need it. This minimizes the risk of unauthorized access.
+- **Regular Rotation of Secrets**: Implement a routine for regularly rotating secrets. Although Docker Secrets do not have a built-in mechanism for automatic rotation, regularly changing secrets is crucial for maintaining security.
+- **Use Secrets for Sensitive Data Only**: Store only sensitive information (like passwords, SSL certificates, SSH keys) as Docker Secrets. Avoid using it for non-sensitive configuration data, as this could unnecessarily increase complexity.
+- **Immutable Secrets**: Treat secrets as immutable. If a secret needs to be updated, create a new secret and update the service to use the new secret, instead of updating the existing one.
+- **Integrate with Existing Secret Management Tools**: If you already use secret management tools like HashiCorp Vault, AWS Secrets Manager, or Azure Key Vault, consider integrating Docker Secrets with these tools for centralized management.
+
+By following these best practices, you can maximize the benefits of Docker Secrets in managing your application's sensitive data effectively and securely.
 
 ### Conclusion
 
