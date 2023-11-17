@@ -166,7 +166,7 @@ While Docker Secrets is a valuable tool for managing sensitive data in Docker Sw
 When using Docker Secrets, it's important to follow best practices to ensure efficient and secure management of your sensitive data:
 
 - **Restrict Access**: Limit access to Docker Secrets to only those services and users that absolutely need it. This minimizes the risk of unauthorized access.
-- **Regular Rotation of Secrets**: Implement a routine for regularly rotating secrets. Although Docker Secrets does not have a built-in mechanism for automatic rotation, regularly changing secrets is crucial for maintaining security.
+- **Regular Rotation of Secrets**: Implement a routine for regularly rotating secrets. Although Docker Secrets do not have a built-in mechanism for automatic rotation, regularly changing secrets is crucial for maintaining security.
 - **Use Secrets for Sensitive Data Only**: Store only sensitive information (like passwords, SSL certificates, SSH keys) as Docker Secrets. Avoid using it for non-sensitive configuration data, as this could unnecessarily increase complexity.
 - **Immutable Secrets**: Treat secrets as immutable. If a secret needs to be updated, create a new secret and update the service to use the new secret, instead of updating the existing one.
 - **Integrate with Existing Secret Management Tools**: If you already use secret management tools like HashiCorp Vault, AWS Secrets Manager, or Azure Key Vault, consider integrating Docker Secrets with these tools for centralized management.
