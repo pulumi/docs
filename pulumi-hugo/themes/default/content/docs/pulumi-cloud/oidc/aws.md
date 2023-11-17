@@ -86,6 +86,18 @@ In the following example, the role may only be assumed by the `development` envi
 }
 ```
 
+{{< notes type="warning" >}}
+
+If you are integrating Pulumi ESC with Pulumi IaC, using the specific name of the ESC environment in the subject identifier will not work at this time. There is a [known issue](https://github.com/pulumi/pulumi/issues/14509) with the value of the subject identifier that is sent to AWS from Pulumi.
+
+The steps in this guide will work for Pulumi ESC if you use the following syntax instead:
+
+`pulumi:environments:org:contoso:env:<yaml>`
+
+Make sure to replace `contoso` with the name of your Pulumi organization and use the literal value of `<yaml>` as shown above.
+
+{{< /notes >}}
+
 ## Configure OIDC via the Pulumi Console
 
 ### Pulumi Deployments
