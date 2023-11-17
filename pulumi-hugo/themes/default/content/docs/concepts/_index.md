@@ -42,7 +42,7 @@ Finally, the server's resulting IP address and DNS name are exported as stack ou
 {{% choosable language javascript %}}
 
 ```javascript
-"user strict";
+"use strict";
 const pulumi = require("@pulumi/pulumi");
 const aws = require("@pulumi/aws");
 
