@@ -84,7 +84,7 @@ You can learn more about setting up OIDC for Pulumi ESC by referring to the [rel
 
 {{< notes type="warning" >}}
 
-If you are integrating Pulumi ESC with Pulumi IaC, using the specific name of the ESC environment in the subject identifier will not work at this time. There is a [known issue](https://github.com/pulumi/pulumi/issues/14509) with the value of the subject identifier that is sent to AWS from Pulumi.
+If you are integrating Pulumi ESC with Pulumi IaC, using the specific name of the ESC environment in the subject identifier will not work at this time. There is a [known issue](https://github.com/pulumi/pulumi/issues/14509) with the value of the subject identifier that is sent to the provider from Pulumi.
 
 The steps in this guide will work for Pulumi ESC if you use the following syntax instead:
 
