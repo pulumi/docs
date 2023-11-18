@@ -1,7 +1,0 @@
-.. toctree::
-    providers/pulumi
-    
-    providers/pulumi_policy
-    
-    providers/pulumi_terraform
-    

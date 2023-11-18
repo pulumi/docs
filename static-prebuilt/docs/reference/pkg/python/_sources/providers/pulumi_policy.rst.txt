@@ -1,8 +1,0 @@
-Pulumi Policy
-====================================
-
-
-.. automodule:: pulumi_policy
-    :ignore-module-all:
-    :members:
-    :imported-members:
