@@ -12,7 +12,7 @@ Kubernetes, or K8s, is an open-source container orchestration platform designed 
 
 ## What are Kubernetes Secrets?
 
-Kubernetes Secrets, or [Secrets](https://kubernetes.io/docs/concepts/configuration/secret/) for short, are a built-in Kubernetes solution to [manage the lifecycle of secrets](./what-is-secrets-management.md), which are sensitive data such as passwords, API keys, and tokens. These secrets are consumed by containerized applications directly thereby preventing exposure of sensitive data in code, Docker images, or configuration files.
+Kubernetes Secrets, or [Secrets](https://kubernetes.io/docs/concepts/configuration/secret/) for short, are a built-in Kubernetes solution to manage the lifecycle of secrets, which are sensitive data such as passwords, API keys, and tokens. These secrets are consumed by containerized applications directly thereby preventing exposure of sensitive data in code, Docker images, or configuration files.
 
 ## Why Use Kubernetes Secrets?
 
