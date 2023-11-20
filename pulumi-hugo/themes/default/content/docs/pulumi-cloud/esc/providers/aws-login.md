@@ -6,7 +6,7 @@ h1: aws-login
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     pulumicloud:
-        identifier: aws
+        identifier: aws-login
         parent: esc-providers
         weight: 1
 ---

@@ -8,7 +8,7 @@ menu:
   pulumicloud:
     identifier: vault-login
     parent: esc-providers
-    weight: 7
+    weight: 8
 ---
 
 The `vault-login` provider enables you to log in to HashiCorp Vault using OpenID Connect or by providing static credentials. The provider will return a set of credentials that can be used to fetch secrets using the `vault-secrets` provider.

@@ -8,7 +8,7 @@ menu:
   pulumicloud:
     identifier: vault-secrets
     parent: esc-providers
-    weight: 8
+    weight: 9
 ---
 
 The `vault-secrets` provider enables you to dynamically import Secrets from HashiCorp Vault into your Environment. The provider will return a map of names to Secrets.

@@ -22,5 +22,6 @@ To learn how to set up and use each provider, follow the links below. To learn h
 | [azure-secrets](/docs/pulumi-cloud/esc/providers/azure-secrets/) | The `azure-secrets` provider enables you to dynamically import Secrets from Azure Key Vault into your Environment.            |
 | [gcp-login](/docs/pulumi-cloud/esc/providers/gcp-login/)         | The `gcp-login` provider enables you to log in to Google Cloud using OpenID Connect or static credentials.                    |
 | [gcp-secrets](/docs/pulumi-cloud/esc/providers/gcp-secrets/)     | The `gcp-secrets` provider enables you to dynamically import Secrets from Google Cloud Secrets Manager into your Environment. |
+| [pulumi-stacks](/docs/pulumi-cloud/esc/providers/pulumi-stacks/) | The `pulumi-stacks` provider enables you to import Stack outputs from Pulumi into your Environment.                           |
 | [vault-login](/docs/pulumi-cloud/esc/providers/vault-login/)     | The `vault-login` provider enables you to log in to HashiCorp Vault using OpenID Connect or static credentials.               |
 | [vault-secrets](/docs/pulumi-cloud/esc/providers/vault-secrets/) | The `vault-secrets` provider enables you to dynamically import Secrets from HashiCorp Vault into your Environment.            |
