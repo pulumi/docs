@@ -30,7 +30,7 @@ It is easier to reach a global audience when you have scaled geographically. Thi
 
 Although multi-region deployments are needed for scaling, availability, and performance, there could be downsides associated with them if the design process for being multi-region isn’t well thought out. Some of the challenges that could be encountered are:
 
-- **Complexity:** Each region may have unique requirements, and ensuring consistency in configuration can be challenging. troubleshooting across regions can add complexity to the infrastructure setup.
+- **Complexity:** Each region may have unique requirements, and ensuring consistency in configuration can be challenging. Troubleshooting across regions can add complexity to the infrastructure setup.
 
 - **Cost:** Expanding to multiple regions often increases infrastructure costs. Businesses need to balance the cost of maintaining multiple resources with the benefits of high availability and performance.
 
