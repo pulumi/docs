@@ -1,0 +1,10 @@
+id = "eron-wright"
+name = "Eron Wright"
+title = "Software Engineer"
+weight = 1
+
+status = "active"
+
+[social]
+github = "eronwright"
+linkedin = "eronwright"
