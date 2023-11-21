@@ -20,7 +20,7 @@ tags:
 
 As a team building a distributed cloud service that will be used by different people around the world, you will need strategies to cater to users globally, ensuring uninterrupted service even in the face of disruptions. Have you ever wondered how businesses operate and deliver high-level performance across different regions?  Well, that is the result of scaling applications across multiple regions --- in a bid to ensure constant access and flexibility, organizations distribute their applications and databases across various geographic regions so that if one part faces issues, the service remains available elsewhere.
 
-In this article, we will explore the significance of multi-region scaling and introduce the concept of using Pulumi for multi-region configuration.
+In this article, we will explore the significance of multi-region scaling and show using Pulumi for multi-region deployment.
 
 ## Understanding Multi-Region Scaling
 
