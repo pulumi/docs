@@ -197,6 +197,29 @@ Once the GitHub app has been installed, the deployment settings for a stack can 
 - The GitHub app may only be installed by a GitHub *and* Pulumi admin.
 - Currently, there is a 1 to 1 mapping between GitHub organizations and Pulumi organizations.
 
+#### Private Dependency Packages
+
+If you want to private GitHub repositories, including private packages and resources, the Pulumi program needs access to the SSH private key granted permissions to connect with Github. Failure to do so will result in remote deployments being unable to access those private artifacts, and the deployment may fail.
+
+As a current fix, using the following will allow you to create a private key and allow access to GitHub using SSH to pull down the appropriate artifacts properly:
+  
+1. Add the following code into the `Pre-run commands` and toggle on `Skip automatic dependency installation step` in Advanced Settings:
+
+     ```bash
+        "mkdir /root/.ssh && printf -- \"$SSHKEY\" > /root/.ssh/id_ed25519",
+        "chmod 600 /root/.ssh/id_ed25519",
+        "ssh-keyscan github.com >> ~/.ssh/known_hosts",
+        "cd .. && git config --global --add url.\"git@github.com:\".insteadOf \"https://github.com\"",
+    ```
+
+    ![SSH Key Prerun Command](../limit-prerun-command.png)
+
+2. Toggle `Skip automatic dependency installation step` in Advanced Settings
+
+3. Add the `$SSHKEY` field as a secret environment variable
+
+![SSH Key Env Variable](../limit-env.png)
+
 ## Common Scenarios
 
 ### Environment Variables
