@@ -1,0 +1,6 @@
+name: awsx-vpc-fargate-service-javascript
+runtime:
+  name: nodejs
+  options:
+    typescript: false
+description: A minimal AWS Pulumi YAML program

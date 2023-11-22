@@ -79,3 +79,6 @@ new-learn-topic:
 .PHONY: new-template
 new-template:
 	./scripts/content/new-template.sh
+
+test-examples:
+	./scripts/test-examples.sh preview

@@ -1,0 +1,6 @@
+name: load-balanced-fargate-nginx-javascript
+runtime:
+  name: nodejs
+  options:
+    typescript: false
+description: A minimal AWS Pulumi YAML program

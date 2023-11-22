@@ -1,0 +1,28 @@
+name: load-balanced-fargate-nginx-yaml
+runtime: yaml
+resources:
+  repo:
+    type: awsx:ecr:Repository
+    properties:
+      forceDelete: true
+  lb:
+    type: awsx:lb:ApplicationLoadBalancer
+  cluster:
+    type: aws:ecs:Cluster
+  service:
+    type: awsx:ecs:FargateService
+    properties:
+      cluster: ${cluster.arn}
+      assignPublicIp: true
+      taskDefinitionArgs:
+        container:
+          name: my-service
+          image: "nginx:latest"
+          cpu: 128
+          memory: 512
+          essential: true
+          portMappings:
+            - containerPort: 80
+              targetGroup: ${lb.defaultTargetGroup}
+outputs:
+  url: http://${lb.loadBalancer.dnsName}

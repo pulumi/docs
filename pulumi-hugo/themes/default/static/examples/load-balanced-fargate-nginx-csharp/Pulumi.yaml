@@ -1,0 +1,2 @@
+name: load-balanced-fargate-nginx-csharp
+runtime: dotnet

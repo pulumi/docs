@@ -1,3 +1,35 @@
+{{ $path := .Get "path" }}
+{{ $languages := .Get "languages" }}
+
 <div>
-    <pulumi-choosable type="language" values="{{ .Get 0 }}">{{ .Inner }}</pulumi-choosable>
+    <pulumi-chooser type="language" options="{{ $languages }}"></pulumi-chooser>
 </div>
+
+{{ range $i, $language := split $languages "," }}
+    <div class="w-full">
+        <pulumi-choosable type="language" values="{{ $language }}">
+            <div>
+                {{ $program := "" }}
+                {{ if eq $language "javascript" }}
+                    {{ $program = "index.js" }}
+                {{ else if eq $language "typescript" }}
+                    {{ $program = "index.ts" }}
+                {{ else if eq $language "python" }}
+                    {{ $program = "__main__.py" }}
+                {{ else if eq $language "go" }}
+                    {{ $program = "main.go" }}
+                {{ else if eq $language "csharp" }}
+                    {{ $program = "Program.cs" }}
+                {{ else if eq $language "java" }}
+                    {{ $program = "src/main/java/myproject/App.java" }}
+                {{ else if eq $language "yaml" }}
+                    {{ $program = "Pulumi.yaml" }}
+                {{ end }}
+                {{ if ne $program "" }}
+                    {{ $code := readFile (path.Join "static" "examples" (printf "%s-%s" $path $language) $program) }}
+                    {{ highlight $code $language }}
+                {{ end }}
+            </div>
+        </pulumi-choosable>
+    </div>
+{{ end }}

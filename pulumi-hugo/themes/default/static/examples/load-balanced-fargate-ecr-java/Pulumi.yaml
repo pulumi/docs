@@ -1,0 +1,3 @@
+name: load-balanced-fargate-ecr-yaml
+runtime: java
+description: A minimal AWS Pulumi YAML program
