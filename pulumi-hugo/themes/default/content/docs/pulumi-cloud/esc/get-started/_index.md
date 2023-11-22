@@ -43,9 +43,9 @@ Imagine you're building a system that integrates with a third-party service such
 - weather data provider
 - a content-management system
 
-In the development environment, you might be integrating with the sandbox or development endpoint of the third party service, while in the testing environment, you might be integrating with the production endpoint. Each of these third party services could potentially have different API endpoints and API keys, and having this separation of concerns enables developers to be able to interact with their environments without affecting real users, data, or API limits.
+In the development environment, you might be integrating with the sandbox or development endpoint of the third-party service, while in the testing environment, you might be integrating with the production endpoint. Each of these third-party services could potentially have different API endpoints and API keys, and having this separation of concerns enables developers to be able to interact with their environments without affecting real users, data, or API limits.
 
-In the next steps, you will deploy an example application that will simulate a third party service with both a dev and test endpoint.
+In the next steps, you will deploy an example application that will simulate a third-party service with both a dev and test endpoint.
 
 ### Deploy the Application
 
@@ -115,7 +115,7 @@ The API keys for this service have been randomly generated and stored as secrets
 
 The endpoint URLs as well as the names of the Secrets Manager secrets have been outputted for easy reference. You can also see these values in the `Outputs` tab of your CloudFormation stack in the AWS Console.
 
-Before moving onto the next part of the tutorial, you will want to go into the Secrets Manager console and retrieve those secret values.
+Before moving on to the next part of the tutorial, you will want to go into the Secrets Manager console and retrieve those secret values.
 
 ![Retrieving secret values from the AWS Console](./esc-retrieve-aws-secret.gif)
 
@@ -269,9 +269,9 @@ $ esc env get acme/app-env-dev API_KEY
 
 ### Importing Environments
 
-There may be scenarios in which the value you need to retrieve lives in a different environment file. For example, since your base application endpoint URL will be the same across environments, it would be more efficient to define it once in one place rather than multiple times across multiple environment files.
+There may be scenarios where the value you need to retrieve is stored in a different environment file. For example, since your base application endpoint URL will be the same across environments, it would be more efficient to define it once in one place rather than multiple times across multiple environment files.
 
-With Pulumi ESC, you have the ability to import other environments into your environment file and make use of the imported configuration values and secrets. Similar to `values`, `imports` is a top level key you will need to define in the environment file, meaning the syntax to create an import looks like the following:
+With Pulumi ESC, you can import other environments into your environment file and make use of the imported configuration values and secrets. Similar to `values`, `imports` is a top-level key you will need to define in the environment file, meaning the syntax to create an import looks like the following:
 
 ```yaml
 imports:
