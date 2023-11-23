@@ -68,8 +68,8 @@ main:
     presenters:
         - name: Scott Lowe
           role: Principal Community Engineer, Pulumi
-        - name: TBD 
-          role: Pinecone Engineer
+        - name: Zach Proser 
+          role: Staff Developer Advocate, Pinecone
     
     learn:
         - The basics of infrastructure as code and the Pulumi programming model
