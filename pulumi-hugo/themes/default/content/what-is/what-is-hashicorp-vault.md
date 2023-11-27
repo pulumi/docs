@@ -6,7 +6,7 @@ meta_desc: |
 type: what-is
 page_title: "What is Hashicorp Vault?"
 ---
-### What is HasiCorp Vault?
+### What is HashiCorp Vault?
 
 HashiCorp Vault is a tool for secure secrets management, essential for storing and safeguarding sensitive data like API keys and passwords. It's one of many options in the ecosystem of secrets and configuration management tools supported by [Pulumi ESC](https://www.pulumi.com/product/esc/). As the complexity of modern cloud infrastructure has grown, so has the need for robust and scalable secrets management solutions. Vault's integration with Pulumi ESC addresses this need by providing a secure, centralized platform for managing sensitive information across multiple cloud environments. By leveraging Vault's capabilities within Pulumi ESC and [Pulumi Cloud](https://www.pulumi.com/product/pulumi-cloud/) infrastructure as code solutions, developers can ensure that their cloud infrastructure is secure and compliant with best practices, even as the underlying systems, complexity and requirements evolve.
 
@@ -60,7 +60,7 @@ Key         Value
 myvalue     s3cr3t
 ```
 
-### HasihCorp Vault use cases
+### HashiCorp Vault use cases
 
 HashiCorp Vault is a tool that can be integrated into various cloud architecture platforms and architectures, catering to different needs and scenarios. The most common cloud architectures for use with Vault are:
 
