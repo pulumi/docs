@@ -2,13 +2,13 @@
     <header class="home-page-hero shadow">
         <div class="home-page-hero-background">
             <div class="flex">
-                <div class="w-full lg:w-1/2 p-6 home-page-hero-text">
+                <div class="w-full p-6 home-page-hero-text">
                     <h1 class="flex flex-col items-center">
-                        <span class="inline-block" data-text="{{ index (.Params.hero.title) 0 }}">{{ index (.Params.hero.title) 0 }}</span>
+                        <span class="inline-block mb-3 text-center" data-text="{{ index (.Params.hero.title) 0 }}">{{ index (.Params.hero.title) 0 }}</span>
                         <span class="rainbow-text inline-block text-center" data-text="{{ index (.Params.hero.title) 1 }}">{{ index (.Params.hero.title) 1 }}</span>
                     </h1>
 
-                    <p class="text-center leading-7">{{ .Params.hero.description | markdownify }}</p>
+                    <p class="mt-6 text-center leading-7">{{ .Params.hero.description | markdownify }}</p>
 
                     <div class="relative z-10 overlay-middle mt-8 flex text-center justify-center items-center flex-col mx-auto lg:mx-0 md:flex-row">
                         <a class="home-hero-btn-primary mr-0 md:mr-4 mb-3 md:mb-0" href="{{ .Params.hero.cta_link }}">{{ .Params.hero.cta_text }}</a>
@@ -16,9 +16,9 @@
                     </div>
                 </div>
 
-                <div class="hidden lg:block lg:w-1/2 p-6 flex justify-center align-center">
+                <!--<div class="hidden lg:block lg:w-1/2 p-6 flex justify-center align-center">
                     <img src="/images/home/dancing-music.svg" />
-                </div>
+                </div>-->
             </div>
         </div>
     </header>

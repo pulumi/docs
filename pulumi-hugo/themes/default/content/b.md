@@ -8,9 +8,9 @@ type: page
 layout: home-b
 
 hero:
-  title: [ "Open source", "Infrastructure as Code" ]
+  title: [ "Automate your infrastructure at any scale", "Your Code, Your Cloud, Your Success" ]
   description: |
-    Build, manage, and scale your infrastructure,<br />secrets, and configurations in one place.
+    Build, manage, and scale your infrastructure, secrets, and configurations in one place.
   cta_text: Get Started
   cta_link: /docs/get-started/
   secondary_cta_text: Talk to a human
