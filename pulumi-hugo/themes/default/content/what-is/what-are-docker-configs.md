@@ -4,16 +4,16 @@ meta_desc: |
      Learn more about what Docker Configs are and how to use them.
 
 type: what-is
-page_title: "What are Docker Configs"
+page_title: "What are Docker Configs?"
 ---
 
-Docker, a leading platform in containerization technology, has revolutionized how applications are developed, shipped, and deployed. An essential facet of this ecosystem is the effective management of configuration data. [Docker Configs](https://docs.docker.com/engine/swarm/configs/) is a feature specially crafted to handle non-sensitive configuration information within Docker environments. This guide explores the ins and outs of Docker Configs, highlighting its importance, functionality, and best practices.
+Docker, a leading platform in containerization technology, has revolutionized how applications are developed, shipped, and deployed. An essential facet of this ecosystem is the effective management of configuration data. [Docker Configs](https://docs.docker.com/engine/swarm/configs/) is a feature specially crafted to handle non-sensitive configuration information within Docker environments.
 
-### What are Docker Configs?
+## What are Docker Configs?
 
 Docker Configs are a resource in Docker for storing non-sensitive information such as configuration files, separate from a service's image or running containers within [Docker Swarm](https://docs.docker.com/engine/swarm/) environments. This enables keeping Docker images as generic as possible without the need for bind-mounting configuration files into containers or using environment variables. Unlike [Docker Secrets](/what-is/what-are-docker-secrets), Docker Configs are not encrypted at rest and are directly mounted into the container's filesystem.
 
-#### Key Features
+### Key Features
 
 - **Separation of Configuration from Code**: Docker Configs allow you to store configuration files outside of your Docker images, leading to more generic and reusable images.
 - **Flexibility in Management**: Configs can be added, updated, or removed from services dynamically, without the need to rebuild or restart containers.
@@ -21,7 +21,7 @@ Docker Configs are a resource in Docker for storing non-sensitive information su
 - **Easy Access within Containers**: Configs are automatically mounted into the container's filesystem, making them easily accessible to applications.
 - **Support for Various Data Types**: Configs can store generic strings or binary content, providing flexibility for different types of configuration data.
 
-### Creating Configs
+## Creating Docker Configs
 
 Docker Configs can be created via the Docker CLI. Before creating configs in Docker, you must first make sure you have [Docker installed](https://docs.docker.com/get-docker/). Once you have installed Docker, enable and start the Docker service.
 
@@ -62,7 +62,7 @@ To add a worker to this swarm, run the following command:
 To add a manager to this swarm, run 'docker swarm join-token manager' and follow the instructions.
 ```
 
-#### Create a config via the CLI
+### Create a config via the CLI
 
 You can create a config by piping the configuration data into the `docker config create` command.
 
@@ -106,7 +106,7 @@ ID             NAME          IMAGE          NODE                                
 kf8ysfgiipkb   myservice.1   nginx:latest   ip-172-31-30-90.eu-central-1.compute.internal   Running         Running 35 seconds ago  
 ```
 
-#### Accessing configs inside a container
+### Accessing configs inside a container
 
 Now that you have created a service with a config, you can access the value of this config from within the container.
 
@@ -139,7 +139,7 @@ root@00a6ae3d1bd5:/# cat /my-config
 This is my config data
 ```
 
-### Challenges and Considerations
+## Challenges and Considerations
 
 Docker Configs, similar to Docker Secrets, provide a useful way to manage configuration data in Docker environments, particularly in Docker Swarm. However, they also come with their own set of challenges and considerations:
 
@@ -151,7 +151,7 @@ Docker Configs, similar to Docker Secrets, provide a useful way to manage config
 
 - **Immutable Once Attached to Running Services**: Once a config is attached to a running service, it cannot be edited. Any changes require creating a new config and updating the service to use this new config, which might cause service disruption.
 
-### Best Practices
+## Best Practices
 
 When using Docker Configs, it's important to follow best practices to ensure efficient and secure management of your configuration data:
 
@@ -162,7 +162,7 @@ When using Docker Configs, it's important to follow best practices to ensure eff
 
 By following these best practices, you can maximize the benefits of Docker Configs in managing your application's configuration data effectively and securely.
 
-### Conclusion
+## Conclusion
 
 Docker Configs offer a flexible and secure way to manage non-sensitive configuration data in Docker environments. By storing configuration outside of application code, Docker Configs facilitate a more modular and maintainable architecture.
 
