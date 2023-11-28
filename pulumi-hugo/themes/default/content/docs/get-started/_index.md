@@ -335,7 +335,7 @@ Select one of the following options to get started:
 
 {{< /choosable >}}
 
-Or, watch how to do it in this video walkthrough:
+Alternatively, you can watch the following video which provides a high level overview of how Pulumi works:
 
 <div class="rounded-md shadow border border-gray-300 w-3/4 mx-auto my-4" style="position: relative; padding-bottom: 40.25%; height: 0; overflow: hidden;">
     <iframe
@@ -347,7 +347,7 @@ Or, watch how to do it in this video walkthrough:
     </iframe>
 </div>
 
-See [Registry](/registry/) on how to use other supported clouds.
+The above video demonstrates how to use Pulumi with AWS. To learn how to use Pulumi with other supported clouds, take a look at our [Registry documentation](/registry/).
 
 ## Pulumi Cloud
 
