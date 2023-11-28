@@ -15,7 +15,7 @@ links:
         - heading: Request a Demo
           description: See how Pulumi can help you ship infrastructure faster, and manage your AWS resources at scale. Ready for a change?
           action: Talk with an Engineer
-          link: /request-a-demo/
+          link: https://info.pulumi.com/aws-reinvent-meeting/
 
 workshops:
     items:
@@ -29,10 +29,15 @@ workshops:
         description: Learn how to manage configuration and secrets across all of your AWS environments with Pulumi ESC and AWS Secrets Manager.
         link: /resources/getting-started-with-secrets-management-aws/
         action: Register Now
-      - title: Getting Started with Kubernetes on AWS
-        date: November 21, 2023
-        description: In this workshop, you will learn the fundamentals of setting up EKS clusters on AWS through guided exercises using Pulumi.
-        link: /resources/getting-started-with-kubernetes-aws/
+      - title: Taking AI Apps to Production
+        date: December 14, 2023
+        description: The Pinecone and Pulumi teams will explore the infrastructure and service architecture you need to scale AI apps in production.
+        link: /resources/ai-apps-to-production/
+        action: Register Now
+      - title: Scaling AI Apps
+        date: January 24, 2024
+        description: How do you build and scale the infrastructure and service architectures for AI apps?
+        link: /resources/scaling-ai-apps/
         action: Register Now
       - title: Serverless Architecture on AWS
         date:
@@ -44,7 +49,7 @@ templates:
     items:
         - heading: Container Service Templates
           description: Pulumi program templates are the fastest way to deploy container services on AWS, Azure, or Google Cloud Platform.
-          image: /images/kubecon/templates-container-service.png
+          image: /images/kubecon/templates-container-service-aws.png
           action: Try it
           link: /templates/container-service
         - heading: Kubernetes Application Templates
