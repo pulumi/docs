@@ -67,6 +67,12 @@ $ aws secretsmanager list-secrets
 }
 ```
 
+{{< notes type="info" >}}
+
+Many infrastructure as code platforms, including Pulumi, have support for creating secrets. You can learn more about how to create and manage secrets in Pulumi by taking a look at [Pulumi Secrets documentation](/docs/concepts/secrets/).
+
+{{< /notes >}}
+
 ## Accessing Secrets Manager secrets
 
 Now that you have created a Secrets Manager secret, you can access the value via the AWS CLI using the `aws secretsmanager get-secret-value` command.
