@@ -59,7 +59,7 @@ Let's look at an example of deploying to three distinct regions — `production 
 You can create your stacks by running:
 
 ```bash
-pulumi stack init Pulumi.prodwu2.yaml
+pulumi stack init prodwu2
 pulumi stack init Pulumi.prodwe.yaml
 pulumi stack init Pulumi.stagungsea.yaml
 ```
