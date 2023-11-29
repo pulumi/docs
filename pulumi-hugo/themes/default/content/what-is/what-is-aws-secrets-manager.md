@@ -105,7 +105,123 @@ AWS Secrets Manager is an essential tool for secure secret management in cloud e
 
 Now that you’re equipped with the knowledge of AWS Secrets Manager, take your cloud infrastructure management to the next level with Pulumi. Explore these key resources to deepen your understanding and enhance your implementation strategies:
 
-- **Provision Infrastructure as Code**: Learn about deploying and managing AWS Secrets Manager secrets as well as other AWS resources using Pulumi's Infrastructure as Code capabilities. For comprehensive insights, refer to [Pulumi's AWS Provider documentation](/registry/packages/aws/).
+- **Provision Infrastructure as Code**: Learn about deploying and managing AWS Secrets Manager secrets as well as other AWS resources using Pulumi's Infrastructure as Code capabilities. For comprehensive insights, refer to [Pulumi's AWS Provider documentation](/registry/packages/aws/). You can also see examples of how to create an AWS Secrets Manager secret in a number of supported programming languages below:
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% choosable language typescript %}}
+
+```typescript
+// Copyright 2016-2019, Pulumi Corporation.  All rights reserved.
+// View the full example code here: https://github.com/pulumi/examples/tree/master/aws-ts-secrets-manager
+
+import * as aws from "@pulumi/aws";
+
+// Create a secret
+const secret = new aws.secretsmanager.Secret("secret");
+
+// Store a new secret version
+const secretVersion = new aws.secretsmanager.SecretVersion("secretVersion", {
+    secretId: secret.id,
+    secretString: "mysecret",
+});
+
+// Export secret ID (in this case the ARN)
+export const secretId = secret.id;
+```
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+```python
+# Copyright 2016-2020, Pulumi Corporation.
+# View the full example code here: https://github.com/pulumi/examples/tree/master/aws-py-secrets-manager
+
+import pulumi
+from pulumi_aws import secretsmanager
+
+# Create secret
+secret = secretsmanager.Secret("secret")
+
+# Create secret version
+secret_version = secretsmanager.SecretVersion("secret_version",
+                                              secret_id=secret.id,
+                                              secret_string="mysecret"
+                                              )
+
+# Export secret ID (in this case the ARN)
+pulumi.export("secret_id", secret.id)
+```
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```go
+// Copyright 2016-2021, Pulumi Corporation.
+// View the full example code here: https://github.com/pulumi/examples/tree/master/aws-go-secrets-manager
+
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v6/go/aws/secretsmanager"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		secret, err := secretsmanager.NewSecret(ctx, "secretcontainer", nil)
+		if err != nil {
+			return err
+		}
+
+		_, err = secretsmanager.NewSecretVersion(ctx, "secret", &secretsmanager.SecretVersionArgs{
+			SecretId:     secret.ID(),
+			SecretString: pulumi.String("mysecret"),
+		})
+		if err != nil {
+			return err
+		}
+
+		// Export the ID (in this case the ARN) of the secret
+		ctx.Export("secretContainer", secret.ID())
+		return nil
+	})
+}
+```
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+```csharp
+// Copyright 2016-2021, Pulumi Corporation.
+// View the full example code here: https://github.com/pulumi/examples/tree/master/aws-cs-secrets-manager
+
+using Pulumi;
+using Pulumi.Aws.SecretsManager;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        // Create secret
+        var secret = new Secret("secret");
+
+        // Create secret version
+        var secretVersion = new SecretVersion("secretVersion", new SecretVersionArgs
+        {
+            SecretId = secret.Id,
+            SecretString = "mysecret"
+        });
+
+        this.SecretId = secret.Id;
+    }
+
+    [Output]
+    public Output<string> SecretId { get; set; }
+}
+```
+{{% /choosable %}}
+
 - **Advanced Secrets Management**: Explore Pulumi’s detailed guides on the centralized management of secrets in cloud applications, particularly with Pulumi ESC (Environments, Secrets, and Configurations). For more information, visit the [Pulumi ESC documentation for the AWS Secrets provider](/docs/pulumi-cloud/esc/providers/aws-secrets/).
 
 Our [community on Slack](https://slack.pulumi.com/) is always open for discussions, questions, and sharing experiences. Join us there and become part of our growing community of cloud professionals!
