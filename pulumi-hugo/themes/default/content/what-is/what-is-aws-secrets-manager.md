@@ -95,15 +95,17 @@ $ aws secretsmanager get-secret-value --secret-id MySecretName
 
 AWS Secrets Manager is a powerful tool for managing secrets and cryptographic keys, but  it does come with its own set of challenges, considerations, and limitations. Some of the key aspects to be aware of include:
 
-- **Compatibility and Integration**: AWS Secrets Manager primarily integrates with AWS services and applications. Integrating it with on-premises applications might require additional configurations.
-- **Cost Management**: While AWS Secrets Manager offers robust features, it is important to manage costs associated with the number of API calls and secret versions.
-- **API Request Quotas and Throttling**: AWS Secrets Manager has quotas on the rate of API requests. For example, the combined rate of certain API requests like DescribeSecret and GetSecretValue is limited to 10,000 transactions per second per region. Exceeding these limits can result in throttling, where valid requests are rejected and a throttling error is returned.
+- **Compatibility and integration**: AWS Secrets Manager primarily integrates with AWS services and applications. Integrating it with on-premises applications might require additional configurations.
+- **Cost management**: While AWS Secrets Manager offers robust features, it is important to manage costs associated with the number of API calls and secret versions.
+- **API request quotas and throttling**: AWS Secrets Manager has quotas on the rate of API requests. For example, the combined rate of certain API requests like DescribeSecret and GetSecretValue is limited to 10,000 transactions per second per region. Exceeding these limits can result in throttling, where valid requests are rejected and a throttling error is returned.
 
 Understanding the limitations of AWS Secrets Manager and effectively planning its usage are crucial for seamless integration into your AWS infrastructure. Properly addressing these challenges and considerations is key to leveraging the full benefits of the service.
-Best Practices
-Rotate Secrets Regularly: Implement a routine for regularly rotating secrets to enhance security.
-Provide Least-Privilege Access: Employ IAM policies for granular access control to secrets.
-Audit and Monitor Secret Access: Use AWS CloudTrail and other monitoring tools to track access and modifications to your secrets.
+
+## Best practices
+
+- **Rotate secrets regularly**: Implement a routine for regularly rotating secrets to enhance security.
+- **Provide least-privilege access**: Employ IAM policies for granular access control to secrets.
+- **Audit and monitor secret access**: Use AWS CloudTrail and other monitoring tools to track access and modifications to your secrets.
 
 ## Conclusion
 
@@ -111,7 +113,7 @@ AWS Secrets Manager is an essential tool for secure secret management in cloud e
 
 Now that you’re equipped with the knowledge of AWS Secrets Manager, take your cloud infrastructure management to the next level with Pulumi. Explore these key resources to deepen your understanding and enhance your implementation strategies:
 
-- **Provision Infrastructure as Code**: Learn about deploying and managing AWS Secrets Manager secrets as well as other AWS resources using Pulumi's Infrastructure as Code capabilities. For comprehensive insights, refer to [Pulumi's AWS Provider documentation](/registry/packages/aws/). You can also see examples of how to create an AWS Secrets Manager secret in a number of supported programming languages below:
+- **Provision infrastructure as code**: Learn about deploying and managing AWS Secrets Manager secrets as well as other AWS resources using Pulumi's Infrastructure as Code capabilities. For comprehensive insights, refer to [Pulumi's AWS Provider documentation](/registry/packages/aws/). You can also see examples of how to create an AWS Secrets Manager secret in a number of supported programming languages below:
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -228,6 +230,6 @@ class MyStack : Stack
 ```
 {{% /choosable %}}
 
-- **Advanced Secrets Management**: Explore Pulumi’s detailed guides on the centralized management of secrets in cloud applications, particularly with Pulumi ESC (Environments, Secrets, and Configurations). For more information, visit the [Pulumi ESC documentation for the AWS Secrets provider](/docs/pulumi-cloud/esc/providers/aws-secrets/).
+- **Advanced secrets management**: Explore Pulumi’s detailed guides on the centralized management of secrets in cloud applications, particularly with Pulumi ESC (Environments, Secrets, and Configurations). For more information, visit the [Pulumi ESC documentation for the AWS Secrets provider](/docs/pulumi-cloud/esc/providers/aws-secrets/).
 
 Our [community on Slack](https://slack.pulumi.com/) is always open for discussions, questions, and sharing experiences. Join us there and become part of our growing community of cloud professionals!
