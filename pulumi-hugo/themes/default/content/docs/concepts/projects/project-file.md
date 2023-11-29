@@ -71,6 +71,14 @@ plugins:
 | `template` | optional | Config to be used when creating new stacks in the project. | [template options](#template-options) |
 | `plugins` | optional | Override for the plugin selection. Intended for use in developing pulumi plugins.  | [plugins options](#plugins-options) |
 
+#### About `main`
+
+For all languages `main` can point to a directory to tell Pulumi to use that directory to load the program from instead of the directory with the `Pulumi.yaml` file. Some languages also support `main` pointing to a file to change what the runtime considers the entrypoint.
+
+- For NodeJS `main` can point to a ts or js file and behaves similarly to setting the main attribute in `package.json`.
+- For .NET `main` can point at a project file (e.g. `example.csproj`) and will pass that project to `dotnet run`.
+- For other languages if a file is specified it is ignored and the system behaves as if the files directory was given to `main` instead.
+
 ### `runtime` options
 
 The runtime attribute has an additional property called options where you can further specify runtime configuration.
