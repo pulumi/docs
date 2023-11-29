@@ -77,6 +77,7 @@ For all languages `main` can point to a directory to tell Pulumi to use that dir
 
 - For NodeJS `main` can point to a ts or js file and behaves similarly to setting the main attribute in `package.json`.
 - For .NET `main` can point at a project file (e.g. `example.csproj`) and will pass that project to `dotnet run`.
+- For Python `main` can point to a module file (e.g. `example.py`) and will pass that to `python`.
 - For other languages if a file is specified it is ignored and the system behaves as if the files directory was given to `main` instead.
 
 ### `runtime` options
