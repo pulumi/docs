@@ -1,5 +1,0 @@
-name: awsx-ecr-eks-deployment-service-javascript
-runtime:
-  name: nodejs
-  options:
-    typescript: false

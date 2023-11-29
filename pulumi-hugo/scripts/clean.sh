@@ -2,8 +2,6 @@
 
 set -o errexit -o pipefail
 
-git clean -fdX
-
 yarn cache clean
 hugo mod clean
 
