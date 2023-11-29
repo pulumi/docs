@@ -1,3 +1,0 @@
-name: awsx-vpc-fargate-service-csharp
-runtime: dotnet
-description: A minimal AWS Pulumi YAML program

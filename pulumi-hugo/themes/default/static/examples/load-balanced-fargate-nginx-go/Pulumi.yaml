@@ -1,3 +1,0 @@
-name: load-balanced-fargate-nginx-go
-runtime: go
-description: A minimal AWS Pulumi YAML program

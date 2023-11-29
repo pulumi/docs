@@ -44,7 +44,7 @@ providing full control over the underlying EC2 machine resources that power your
 To run a Docker container in ECS using default network and cluster settings, use the `awsx.ecs.FargateService`
 class. Since we need to access this container over port 80 using a stable address, we will use a load balancer.
 
-{{< example path="load-balanced-fargate-nginx" languages="javascript,typescript,python,go,csharp,java,yaml" >}}
+{{< example-program path="awsx-load-balanced-fargate-nginx" >}}
 
 After deploying this program, `pulumi stack output url` can be used to access the Url output property. We can then access our  NGINX web server behind our load balancer via curl:
 
@@ -83,7 +83,7 @@ To create an ECS service inside of a VPC, we will first create or use an existin
 described in [Pulumi Crosswalk for AWS VPC](/docs/clouds/aws/guides/vpc/). Then we pass the subnets
 from that VPC into the network configuration argument for our cluster:
 
-{{< example path="awsx-vpc-fargate-service" languages="javascript,typescript,python,go,csharp,java,yaml" >}}
+{{< example-program path="awsx-vpc-fargate-service" >}}
 
 When using a custom VPC, you will also need to specify your own security groups if you need to allow ingress or egress.
 
@@ -115,7 +115,7 @@ it separately ahead of time. This makes it very easy to use private registration
 For example, specifying a `path` will run a `docker build` in that path, push the result up to the ECR repository that specified in the first argument, and then pass
 the private ECR repository path to the container:
 
-{{< example path="load-balanced-fargate-ecr" languages="javascript,typescript,python,go,csharp,java,yaml" >}}
+{{< example-program path="awsx-load-balanced-fargate-ecr" >}}
 
 For more information about using ECR, refer to [Pulumi Crosswalk for AWS ECR](/docs/clouds/aws/guides/ecr/).
 

@@ -1,3 +1,0 @@
-name: load-balanced-fargate-nginx-python
-runtime: python
-description: A minimal AWS Pulumi YAML program

@@ -1,3 +1,0 @@
-name: awsx-ecr-eks-deployment-service-java
-runtime: java
-description: A minimal AWS Java Pulumi program

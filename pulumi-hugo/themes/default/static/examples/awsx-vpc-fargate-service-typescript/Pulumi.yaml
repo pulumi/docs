@@ -1,3 +1,0 @@
-name: awsx-vpc-fargate-service-typescript
-runtime: nodejs
-description: A minimal AWS Pulumi YAML program

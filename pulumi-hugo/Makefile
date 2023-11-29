@@ -80,5 +80,5 @@ new-learn-topic:
 new-template:
 	./scripts/content/new-template.sh
 
-test-examples:
-	./scripts/test-examples.sh preview
+test-programs:
+	./scripts/test-programs.sh preview

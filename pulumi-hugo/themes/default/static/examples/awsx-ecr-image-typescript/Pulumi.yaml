@@ -1,3 +1,0 @@
-name: awsx-ecr-image-typescript
-runtime: nodejs
-description: A minimal AWS TypeScript Pulumi program

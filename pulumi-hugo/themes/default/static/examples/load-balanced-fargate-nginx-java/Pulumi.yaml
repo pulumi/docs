@@ -1,3 +1,0 @@
-name: load-balanced-fargate-nginx-yaml
-runtime: java
-description: A minimal AWS Pulumi YAML program

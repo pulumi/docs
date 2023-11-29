@@ -1,3 +1,0 @@
-name: awsx-ecr-image-java
-runtime: java
-description: A minimal AWS Java Pulumi program

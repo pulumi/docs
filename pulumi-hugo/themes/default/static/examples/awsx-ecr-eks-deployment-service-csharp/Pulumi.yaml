@@ -1,3 +1,0 @@
-name: awsx-ecr-eks-deployment-service-csharp
-runtime: dotnet
-description: A C# program to deploy a Kubernetes cluster on AWS
