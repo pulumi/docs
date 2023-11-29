@@ -139,6 +139,12 @@ $ az keyvault secret list --vault-name <YourVaultName>
 ]
 ```
 
+{{< notes type="info" >}}
+
+Many infrastructure as code platforms, including Pulumi, have support for creating secrets. You can learn more about how to create and manage secrets in Pulumi by taking a look at [Pulumi Secrets documentation](/docs/concepts/secrets/).
+
+{{< /notes >}}
+
 ## Accessing Azure Key Vault secrets
 
 Now that you have created an Azure Key Vault secret, you can access the value via the Azure CLI using the `az keyvault secret show` command.
