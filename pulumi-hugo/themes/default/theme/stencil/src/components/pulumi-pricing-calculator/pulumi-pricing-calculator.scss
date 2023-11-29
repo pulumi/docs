@@ -1,0 +1,372 @@
+@import "../../../../src/scss/colors";
+.calculator {
+    margin-right: 36px;
+    margin-left: 36px;
+
+    h3 {
+        text-align: center;
+        color: #000;
+        font-family: "Gilroy";
+        font-size: 48px;
+        font-weight: 500;
+    }
+
+    .edition {
+        text-align: center;
+        font-family: "Gilroy";
+        font-size: 28px;
+        margin-bottom: 36px;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: row;
+        gap: 60px;
+    }
+
+    .inputs {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+
+    .field {
+        margin-bottom: 36px;
+
+        .title {
+            color: #131314;
+            font-family: "Gilroy";
+            font-size: 24px;
+            font-weight: 500;
+        }
+
+        .details {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            .description {
+                width: 400px;
+                font-family: "Inter";
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                color: #2f3032;
+            }
+
+            .utilization {
+                margin-top: 0px;
+            }
+
+            .input {
+                width: 140px;
+                padding: 8px 12px;
+                border-radius: 4px;
+                border: 1px solid #bebfc9;
+                height: 48px;
+
+                input {
+                    all: unset;
+                    width: 80%;
+                }
+
+                .percent {
+                    color: lightgray;
+                }
+            }
+        }
+    }
+
+    .outputs {
+        width: 50%;
+        max-width: 530px;
+        border-radius: 12px;
+        background: #fff;
+        box-shadow: 0px 6px 36px 0px rgba(0, 0, 0, 0.14);
+
+        .contents {
+            display: flex;
+            padding: 36px;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 36px;
+        }
+
+        .gradient {
+            border-radius: 12px 12px 0px 0px;
+            height: 8px;
+            background: linear-gradient(
+                90deg,
+                #f7bf2a 0%,
+                #f26e7e 18.23%,
+                #be5188 38.02%,
+                #8a3391 53.65%,
+                #805ac3 74.48%,
+                #7682f4 100%
+            );
+        }
+
+        .duration {
+            display: flex;
+            align-self: center;
+
+            button {
+                display: flex;
+                padding: 8px 12px;
+                align-items: flex-start;
+                color: #8e8f97;
+                font-family: Inter;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 500;
+                border: 1px solid #8e8f97;
+
+                &:first-of-type {
+                    border-radius: 4px 0px 0px 4px;
+                }
+                &:last-of-type {
+                    border-radius: 0px 4px 4px 0px;
+                }
+
+                &.active {
+                    color: #131314;
+                    background-color: #f2eff9;
+                    border: 1px solid #805ac3;
+                }
+            }
+        }
+
+        .items,
+        .deployment-total {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            color: #2f3032;
+            font-family: "Inter";
+            font-size: 16px;
+            font-weight: 400;
+            width: 100%;
+
+            .item {
+                flex-grow: 1;
+                display: flex;
+                gap: 36px;
+                justify-content: space-between;
+            }
+        }
+
+        .divider {
+            width: 100%;
+            border-bottom: 1px solid #bebfc9;
+        }
+
+        .deployment-total {
+            display: none;
+
+            &.visible {
+                display: flex;
+            }
+
+            .subtitle {
+                font-weight: 600;
+            }
+
+            .item {
+                margin-left: 16px;
+            }
+        }
+
+        .total {
+            display: flex;
+            width: 100%;
+            color: #805ac3;
+            font-family: "Inter";
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 700;
+            justify-content: end;
+            gap: 4px;
+
+            .contact {
+                display: none;
+            }
+
+            &.over-max {
+                justify-content: space-between;
+                .contact {
+                    align-self: center;
+                    display: inline-block;
+                    font-size: 16px;
+                    line-height: 24px;
+                    font-weight: 600;
+                    color: #131314;
+                    a {
+                        color: $brand-blue;
+                        margin-right: 4px;
+                    }
+                }
+                
+                .blurred {
+                    filter: blur(16px);
+                }
+            }
+        }
+    }
+
+    // Remove number incrementer from input
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    input[type="number"] {
+        -moz-appearance: textfield;
+    }
+
+    .deployments {
+        border-radius: 4px;
+        border: 1px solid #805ac3;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 24px;
+
+        i {
+            color: #805ac3;
+            height: 24px;
+            width: 24px;
+            font-size: 24px;
+        }
+
+        &.collapsed {
+            &:hover {
+                background: rgba(242, 239, 249, 0.5);
+            }
+        }
+
+        .default {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+
+            .details {
+                flex-grow: 1;
+                display: flex;
+                flex-direction: column;
+                color: #2f3032;
+
+                .title {
+                    font-family: "Inter";
+                    font-size: 18px;
+                    font-weight: 600;
+                    margin-bottom: 16px;
+                }
+
+                .subtitle {
+                    font-family: "Inter";
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: normal;
+                }
+            }
+        }
+
+        .field {
+            margin-top: 60px;
+            display: none;
+            margin-bottom: 0px;
+            flex-direction: column;
+
+            &.visible {
+                display: flex;
+            }
+        }
+    }
+}
+
+.range {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 140px;
+    display: block;
+    margin-top: 16px;
+}
+
+// Custom percentage slider appearance
+input[type="range"]::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+    border-radius: 10px;
+    background: #4776e6; /* fallback for old browsers */
+    background: linear-gradient(
+        90deg,
+        #f7bf2a 0%,
+        #f26e7e 18.23%,
+        #be5188 38.02%,
+        #8a3391 53.65%,
+        #805ac3 74.48%,
+        #7682f4 100%
+    );
+    height: 7.5px;
+}
+
+input[type="range"]:focus {
+    outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: 2px solid;
+    border-radius: 50%;
+    height: 16px;
+    width: 16px;
+    bottom: 4px;
+    position: relative;
+    background-color: rgba(242, 239, 249, 0.5);
+    cursor: -webkit-grab;
+    -webkit-transition: border 1000ms ease;
+    transition: border 1000ms ease;
+}
+
+.range.purple::-webkit-slider-thumb {
+    border-color: #805ac3;
+}
+
+
+@media(max-width: 1280px) {
+    .calculator .field {
+        .details {
+            flex-direction: column;
+
+            .input {
+                margin-top: 16px;
+            }
+        }
+    }
+}
+
+@media(max-width: 1024px) {
+    .calculator {
+        .content {
+            flex-direction: column;
+        }
+        .outputs {
+            width: 100%;
+            max-width: 1200px;
+        }
+    }
+}
+
+@media(max-width: 640px) {
+    .calculator .field .details {
+        .description {
+            width: 100%
+        }
+        .input {
+            width: 100%;
+        }
+    }
+
+    .range {
+        width: 100%;
+    }
+}

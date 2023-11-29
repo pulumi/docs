@@ -135,6 +135,8 @@ export namespace Components {
         "labelText": string;
         "selectClass"?: string;
     }
+    interface PulumiPricingCalculator {
+    }
     interface PulumiRegistryListSearch {
     }
     interface PulumiResourceLinks {
@@ -344,6 +346,12 @@ declare global {
         prototype: HTMLPulumiMultiSelectFormElement;
         new (): HTMLPulumiMultiSelectFormElement;
     };
+    interface HTMLPulumiPricingCalculatorElement extends Components.PulumiPricingCalculator, HTMLStencilElement {
+    }
+    var HTMLPulumiPricingCalculatorElement: {
+        prototype: HTMLPulumiPricingCalculatorElement;
+        new (): HTMLPulumiPricingCalculatorElement;
+    };
     interface HTMLPulumiRegistryListSearchElement extends Components.PulumiRegistryListSearch, HTMLStencilElement {
     }
     var HTMLPulumiRegistryListSearchElement: {
@@ -448,6 +456,7 @@ declare global {
         "pulumi-hubspot-form": HTMLPulumiHubspotFormElement;
         "pulumi-install": HTMLPulumiInstallElement;
         "pulumi-multi-select-form": HTMLPulumiMultiSelectFormElement;
+        "pulumi-pricing-calculator": HTMLPulumiPricingCalculatorElement;
         "pulumi-registry-list-search": HTMLPulumiRegistryListSearchElement;
         "pulumi-resource-links": HTMLPulumiResourceLinksElement;
         "pulumi-root": HTMLPulumiRootElement;
@@ -583,6 +592,8 @@ declare namespace LocalJSX {
         "labelText"?: string;
         "selectClass"?: string;
     }
+    interface PulumiPricingCalculator {
+    }
     interface PulumiRegistryListSearch {
         "onPackageSearch"?: (event: CustomEvent<string>) => void;
     }
@@ -665,6 +676,7 @@ declare namespace LocalJSX {
         "pulumi-hubspot-form": PulumiHubspotForm;
         "pulumi-install": PulumiInstall;
         "pulumi-multi-select-form": PulumiMultiSelectForm;
+        "pulumi-pricing-calculator": PulumiPricingCalculator;
         "pulumi-registry-list-search": PulumiRegistryListSearch;
         "pulumi-resource-links": PulumiResourceLinks;
         "pulumi-root": PulumiRoot;
@@ -709,6 +721,7 @@ declare module "@stencil/core" {
             "pulumi-hubspot-form": LocalJSX.PulumiHubspotForm & JSXBase.HTMLAttributes<HTMLPulumiHubspotFormElement>;
             "pulumi-install": LocalJSX.PulumiInstall & JSXBase.HTMLAttributes<HTMLPulumiInstallElement>;
             "pulumi-multi-select-form": LocalJSX.PulumiMultiSelectForm & JSXBase.HTMLAttributes<HTMLPulumiMultiSelectFormElement>;
+            "pulumi-pricing-calculator": LocalJSX.PulumiPricingCalculator & JSXBase.HTMLAttributes<HTMLPulumiPricingCalculatorElement>;
             "pulumi-registry-list-search": LocalJSX.PulumiRegistryListSearch & JSXBase.HTMLAttributes<HTMLPulumiRegistryListSearchElement>;
             "pulumi-resource-links": LocalJSX.PulumiResourceLinks & JSXBase.HTMLAttributes<HTMLPulumiResourceLinksElement>;
             "pulumi-root": LocalJSX.PulumiRoot & JSXBase.HTMLAttributes<HTMLPulumiRootElement>;
