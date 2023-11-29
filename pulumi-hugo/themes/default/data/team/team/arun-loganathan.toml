@@ -1,0 +1,10 @@
+id = "arun-loganathan"
+name = "Arun Loganathan"
+title = "Senior Product Manager"
+weight = 1
+
+status = "active"
+
+[social]
+linkedin = "arunkumarl"
+github = "arunkumar611"
