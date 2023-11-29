@@ -66,7 +66,6 @@ $ az group create --location westus --name MyResourceGroup
 }
 ```
 
-
 You can create a Key Vault using the `az keyvault create` command. Note that Key Vault names are [globally unique](https://learn.microsoft.com/en-us/azure/key-vault/general/about-keys-secrets-certificates), so you will need to replace the value of `<YourVaultName>` below with a unique name for your resource:
 
 ```bash

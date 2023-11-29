@@ -7,7 +7,7 @@ type: what-is
 page_title: "What is AWS Secrets Manager?"
 ---
 
-Amazon Web Services (AWS) is a leader in cloud computing, transforming the way organizations manage their digital infrastructure. A critical aspect of this landscape is the management of sensitive data, commonly known as "[secrets](/what-is/what-is-secrets-management/)". AWS Secrets Manager is a service designed for the secure handling of these secrets, offering tools for storing, accessing, and managing confidential information in the cloud. 
+Amazon Web Services (AWS) is a leader in cloud computing, transforming the way organizations manage their digital infrastructure. A critical aspect of this landscape is the management of sensitive data, commonly known as "[secrets](/what-is/what-is-secrets-management/)". AWS Secrets Manager is a service designed for the secure handling of these secrets, offering tools for storing, accessing, and managing confidential information in the cloud.
 
 ## What is AWS Secrets Manager?
 
@@ -137,6 +137,7 @@ const secretVersion = new aws.secretsmanager.SecretVersion("secretVersion", {
 // Export secret ID (in this case the ARN)
 export const secretId = secret.id;
 ```
+
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -160,6 +161,7 @@ secret_version = secretsmanager.SecretVersion("secret_version",
 # Export secret ID (in this case the ARN)
 pulumi.export("secret_id", secret.id)
 ```
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -196,6 +198,7 @@ func main() {
 	})
 }
 ```
+
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -228,6 +231,7 @@ class MyStack : Stack
     public Output<string> SecretId { get; set; }
 }
 ```
+
 {{% /choosable %}}
 
 - **Advanced secrets management**: Explore Pulumi’s detailed guides on the centralized management of secrets in cloud applications, particularly with Pulumi ESC (Environments, Secrets, and Configurations). For more information, visit the [Pulumi ESC documentation for the AWS Secrets provider](/docs/pulumi-cloud/esc/providers/aws-secrets/).
