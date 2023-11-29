@@ -43,7 +43,6 @@
                 {{ if ne $program "" }}
                     {{ $root := slice "static" "programs" (printf "%s-%s" $path $language) }}
                     {{ $code := readFile (path.Join $root $program) }}
-                    {{ $info := os.Stat (path.Join $root) }}
                     <div data-program-path="{{ $path }}" data-program-language="{{ $language }}" data-program-file="{{ $program }}" data-program-depfile="{{ $depfile }}">
                         {{ highlight $code $language }}
                     </div>
