@@ -15,9 +15,9 @@ AWS Secrets Manager is a cloud service for managing, retrieving, and storing sen
 
 ### Key features
 
-- **Secure and Encrypted Storage**: Secrets in AWS Secrets Manager are encrypted during transit and at rest, ensuring a high level of security.
-- **Secrets Lifecycle Management**: AWS Secrets Manager allows you to rotate, manage, and retrieve secrets throughout their lifecycle without disrupting the applications.
-- **Fine-grained Access Control**: You can control access to secrets using AWS Identity and Access Management (IAM) policies.
+- **Secure and encrypted storage**: Secrets in AWS Secrets Manager are encrypted during transit and at rest, ensuring a high level of security.
+- **Secrets lifecycle management**: AWS Secrets Manager allows you to rotate, manage, and retrieve secrets throughout their lifecycle without disrupting the applications.
+- **Fine-grained access control**: You can control access to secrets using AWS Identity and Access Management (IAM) policies.
 
 ## Creating AWS Secrets Manager secrets
 
