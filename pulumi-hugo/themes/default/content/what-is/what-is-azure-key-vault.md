@@ -24,6 +24,7 @@ Azure Key Vault is a cloud service for managing, retrieving, and storing sensiti
 Azure Key Vault secrets can be created via the Azure CLI. Before creating secrets in Azure, you must first make sure you have the [Azure CLI](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli) installed. Once you have installed the Azure CLI, run the `az login` command to [authenticate to your Azure account](https://learn.microsoft.com/en-us/cli/azure/authenticate-azure-cli).
 
 ```bash
+# Example az login interaction and output
 $ az login
 To sign in, use a web browser to open the page https://microsoft.com/devicelogin and enter the code LZURMHUR9 to authenticate.
 [
