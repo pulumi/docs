@@ -15,11 +15,11 @@ Docker Secrets is a resource for securely managing sensitive data like passwords
 
 ### Key Features
 
-- **Secure Storage**: Docker Secrets are encrypted during transit and at rest, offering a robust level of security.
-- **Managed Lifecycle**: Secrets can be created, updated, and removed without restarting containers, ensuring seamless management.
-- **Access Control**: Only services granted explicit access can retrieve these secrets, enhancing security through compartmentalization.
+- **Secure storage**: Docker Secrets are encrypted during transit and at rest, offering a robust level of security.
+- **Managed lifecycle**: Secrets can be created, updated, and removed without restarting containers, ensuring seamless management.
+- **Access control**: Only services granted explicit access can retrieve these secrets, enhancing security through compartmentalization.
 
-## Creating Secrets
+## Creating secrets
 
 Secrets can be created via the Docker CLI or Docker Compose files. Once created, they are stored in a secure part of the Docker Swarm. Before creating secrets in Docker, you must first make sure you have [Docker installed](https://docs.docker.com/get-docker/). Once you have installed Docker, enable and start the Docker service.
 
@@ -157,11 +157,11 @@ root@00a6ae3d1bd5:/# cat /run/secrets/my_secret
 my_secret_data
 ```
 
-## Challenges and Considerations
+## Challenges and considerations
 
 While Docker Secrets is a valuable tool for managing sensitive data in Docker Swarm, it has its limitations. One major challenge is its confinement to Docker Swarm environments, meaning it's not applicable for standalone Docker containers or other orchestrators like Kubernetes. Additionally, Docker Secrets lacks a direct mechanism for automatic secrets rotation, a crucial aspect for maintaining security over time.
 
-## Best Practices
+## Best practices
 
 When using Docker Secrets, it's important to follow best practices to ensure efficient and secure management of your sensitive data:
 
@@ -179,7 +179,7 @@ Docker Secrets is a vital feature for anyone using Docker Swarm, offering a secu
 
 Now that you're equipped with the knowledge of Docker Secrets, take your cloud infrastructure management to the next level with Pulumi. Explore these key resources to deepen your understanding and enhance your implementation strategies:
 
-- **Advanced Secrets Management**: Discover how to efficiently manage sensitive data and secrets in your cloud applications. Dive into Pulumi's [Secrets Management guide](/blog/managing-secrets-with-pulumi/) for in-depth information on encrypting specific values for added security and ensuring that these values never appear in plain text in your state file​.
-- **Container Management Solutions**: Learn about deploying containers with ease using Pulumi. Whether you prefer low-management solutions like AWS Fargate and Microsoft ACI for ease of deployment or require complete control with Kubernetes-based solutions, our [Container Management](/containers/) docs provide comprehensive insights. They cover everything from managing clusters and infrastructure to deploying application containers in various environments​.
+- **Advanced secrets management**: Discover how to efficiently manage sensitive data and secrets in your cloud applications. Dive into Pulumi's [Secrets Management guide](/blog/managing-secrets-with-pulumi/) for in-depth information on encrypting specific values for added security and ensuring that these values never appear in plain text in your state file​.
+- **Container management solutions**: Learn about deploying containers with ease using Pulumi. Whether you prefer low-management solutions like AWS Fargate and Microsoft ACI for ease of deployment or require complete control with Kubernetes-based solutions, our [Container Management](/containers/) docs provide comprehensive insights. They cover everything from managing clusters and infrastructure to deploying application containers in various environments​.
 
 Our [community on Slack](https://slack.pulumi.com/) is always open for discussions, questions, and sharing experiences. Join us there and become part of our growing community of cloud professionals!
