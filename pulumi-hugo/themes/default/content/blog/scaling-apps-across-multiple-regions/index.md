@@ -60,7 +60,7 @@ You can create your stacks by running:
 
 ```bash
 pulumi stack init prodwu2
-pulumi stack init Pulumi.prodwe.yaml
+pulumi stack init prodwe
 pulumi stack init Pulumi.stagungsea.yaml
 ```
 
