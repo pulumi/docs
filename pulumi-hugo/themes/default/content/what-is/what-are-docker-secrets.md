@@ -4,22 +4,22 @@ meta_desc: |
      Learn more about what Docker Secrets are and how to use them.
 
 type: what-is
-page_title: "What are Docker Secrets"
+page_title: "What are Docker Secrets?"
 ---
 
-Docker, a leading platform in containerization technology, has revolutionized how applications are developed, shipped, and deployed. One critical aspect of this process is managing sensitive information, commonly known as "secrets." [Docker Secrets](https://docs.docker.com/engine/swarm/secrets/) is a feature specifically designed for safely transmitting and storing confidential data within Docker environments. This guide explores the ins and outs of Docker Secrets, highlighting its importance, functionality, and best practices.
+Docker, a leading platform in containerization technology, has revolutionized how applications are developed, shipped, and deployed. One critical aspect of this process is managing sensitive information, commonly known as "secrets." [Docker Secrets](https://docs.docker.com/engine/swarm/secrets/) is a feature specifically designed for safely transmitting and storing confidential data within Docker environments.
 
-### What are Docker Secrets?
+## What are Docker Secrets?
 
 Docker Secrets is a resource for securely managing sensitive data like passwords, tokens, and SSH keys within [Docker Swarm](https://docs.docker.com/engine/swarm/) environments. Unlike [Docker Configs](/what-is/what-are-docker-configs/) which only encrypts data in transit, Docker Secrets are designed to keep data safe both in transit and at rest.
 
-#### Key Features
+### Key Features
 
-- **Secure Storage**: Docker Secrets are encrypted during transit and at rest, offering a robust level of security.
-- **Managed Lifecycle**: Secrets can be created, updated, and removed without restarting containers, ensuring seamless management.
-- **Access Control**: Only services granted explicit access can retrieve these secrets, enhancing security through compartmentalization.
+- **Secure storage**: Docker Secrets are encrypted during transit and at rest, offering a robust level of security.
+- **Managed lifecycle**: Secrets can be created, updated, and removed without restarting containers, ensuring seamless management.
+- **Access control**: Only services granted explicit access can retrieve these secrets, enhancing security through compartmentalization.
 
-### Creating Secrets
+## Creating secrets
 
 Secrets can be created via the Docker CLI or Docker Compose files. Once created, they are stored in a secure part of the Docker Swarm. Before creating secrets in Docker, you must first make sure you have [Docker installed](https://docs.docker.com/get-docker/). Once you have installed Docker, enable and start the Docker service.
 
@@ -60,7 +60,7 @@ To add a worker to this swarm, run the following command:
 To add a manager to this swarm, run 'docker swarm join-token manager' and follow the instructions.
 ```
 
-#### Create a secret via CLI
+### Create a secret via CLI
 
 You can create a secret by piping the secret data into the `docker secret create` command.
 
@@ -98,7 +98,7 @@ ID             NAME          IMAGE          NODE                                
 w6i5cct5o9gw   myservice.1   nginx:latest   ip-172-31-30-90.eu-central-1.compute.internal   Running         Running 52 seconds ago
 ```
 
-#### Create a secret via Docker Compose
+### Create a secret via Docker Compose
 
 Before implementing Docker Secrets with Docker Compose, ensure [Docker Compose is installed](https://docs.docker.com/compose/install/) on your system.
 
@@ -124,7 +124,7 @@ Now use Docker Compose to deploy your stack. This will create the secret and att
 docker-compose up -d
 ```
 
-#### Accessing secrets inside a container
+### Accessing secrets inside a container
 
 Now that you have created a service with a secret, you can access the value of this secret from within the container.
 
@@ -157,11 +157,11 @@ root@00a6ae3d1bd5:/# cat /run/secrets/my_secret
 my_secret_data
 ```
 
-### Challenges and Considerations
+## Challenges and considerations
 
 While Docker Secrets is a valuable tool for managing sensitive data in Docker Swarm, it has its limitations. One major challenge is its confinement to Docker Swarm environments, meaning it's not applicable for standalone Docker containers or other orchestrators like Kubernetes. Additionally, Docker Secrets lacks a direct mechanism for automatic secrets rotation, a crucial aspect for maintaining security over time.
 
-### Best Practices
+## Best practices
 
 When using Docker Secrets, it's important to follow best practices to ensure efficient and secure management of your sensitive data:
 
@@ -173,13 +173,13 @@ When using Docker Secrets, it's important to follow best practices to ensure eff
 
 By following these best practices, you can maximize the benefits of Docker Secrets in managing your application's sensitive data effectively and securely.
 
-### Conclusion
+## Conclusion
 
 Docker Secrets is a vital feature for anyone using Docker Swarm, offering a secure and straightforward way to handle sensitive data. By understanding and implementing Docker Secrets correctly, teams can significantly enhance the security posture of their containerized applications.
 
 Now that you're equipped with the knowledge of Docker Secrets, take your cloud infrastructure management to the next level with Pulumi. Explore these key resources to deepen your understanding and enhance your implementation strategies:
 
-- **Advanced Secrets Management**: Discover how to efficiently manage sensitive data and secrets in your cloud applications. Dive into Pulumi's [Secrets Management guide](/blog/managing-secrets-with-pulumi/) for in-depth information on encrypting specific values for added security and ensuring that these values never appear in plain text in your state file​.
-- **Container Management Solutions**: Learn about deploying containers with ease using Pulumi. Whether you prefer low-management solutions like AWS Fargate and Microsoft ACI for ease of deployment or require complete control with Kubernetes-based solutions, our [Container Management](/containers/) docs provide comprehensive insights. They cover everything from managing clusters and infrastructure to deploying application containers in various environments​.
+- **Advanced secrets management**: Discover how to efficiently manage sensitive data and secrets in your cloud applications. Dive into Pulumi's [Secrets Management guide](/blog/managing-secrets-with-pulumi/) for in-depth information on encrypting specific values for added security and ensuring that these values never appear in plain text in your state file​.
+- **Container management solutions**: Learn about deploying containers with ease using Pulumi. Whether you prefer low-management solutions like AWS Fargate and Microsoft ACI for ease of deployment or require complete control with Kubernetes-based solutions, our [Container Management](/containers/) docs provide comprehensive insights. They cover everything from managing clusters and infrastructure to deploying application containers in various environments​.
 
 Our [community on Slack](https://slack.pulumi.com/) is always open for discussions, questions, and sharing experiences. Join us there and become part of our growing community of cloud professionals!

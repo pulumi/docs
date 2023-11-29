@@ -4,24 +4,24 @@ meta_desc: |
      Learn more about what Docker Configs are and how to use them.
 
 type: what-is
-page_title: "What are Docker Configs"
+page_title: "What are Docker Configs?"
 ---
 
-Docker, a leading platform in containerization technology, has revolutionized how applications are developed, shipped, and deployed. An essential facet of this ecosystem is the effective management of configuration data. [Docker Configs](https://docs.docker.com/engine/swarm/configs/) is a feature specially crafted to handle non-sensitive configuration information within Docker environments. This guide explores the ins and outs of Docker Configs, highlighting its importance, functionality, and best practices.
+Docker, a leading platform in containerization technology, has revolutionized how applications are developed, shipped, and deployed. An essential facet of this ecosystem is the effective management of configuration data. [Docker Configs](https://docs.docker.com/engine/swarm/configs/) is a feature specially crafted to handle non-sensitive configuration information within Docker environments.
 
-### What are Docker Configs?
+## What are Docker Configs?
 
 Docker Configs are a resource in Docker for storing non-sensitive information such as configuration files, separate from a service's image or running containers within [Docker Swarm](https://docs.docker.com/engine/swarm/) environments. This enables keeping Docker images as generic as possible without the need for bind-mounting configuration files into containers or using environment variables. Unlike [Docker Secrets](/what-is/what-are-docker-secrets), Docker Configs are not encrypted at rest and are directly mounted into the container's filesystem.
 
-#### Key Features
+### Key features
 
-- **Separation of Configuration from Code**: Docker Configs allow you to store configuration files outside of your Docker images, leading to more generic and reusable images.
-- **Flexibility in Management**: Configs can be added, updated, or removed from services dynamically, without the need to rebuild or restart containers.
-- **Secure Transmission**: Configs are sent to the swarm manager over a mutual TLS connection and are stored securely.
-- **Easy Access within Containers**: Configs are automatically mounted into the container's filesystem, making them easily accessible to applications.
-- **Support for Various Data Types**: Configs can store generic strings or binary content, providing flexibility for different types of configuration data.
+- **Separation of configuration from code**: Docker Configs allow you to store configuration files outside of your Docker images, leading to more generic and reusable images.
+- **Flexibility in management**: Configs can be added, updated, or removed from services dynamically, without the need to rebuild or restart containers.
+- **Secure transmission**: Configs are sent to the swarm manager over a mutual TLS connection and are stored securely.
+- **Easy access within containers**: Configs are automatically mounted into the container's filesystem, making them easily accessible to applications.
+- **Support for various data types**: Configs can store generic strings or binary content, providing flexibility for different types of configuration data.
 
-### Creating Configs
+## Creating Docker Configs
 
 Docker Configs can be created via the Docker CLI. Before creating configs in Docker, you must first make sure you have [Docker installed](https://docs.docker.com/get-docker/). Once you have installed Docker, enable and start the Docker service.
 
@@ -62,7 +62,7 @@ To add a worker to this swarm, run the following command:
 To add a manager to this swarm, run 'docker swarm join-token manager' and follow the instructions.
 ```
 
-#### Create a config via the CLI
+### Create a config via the CLI
 
 You can create a config by piping the configuration data into the `docker config create` command.
 
@@ -106,7 +106,7 @@ ID             NAME          IMAGE          NODE                                
 kf8ysfgiipkb   myservice.1   nginx:latest   ip-172-31-30-90.eu-central-1.compute.internal   Running         Running 35 seconds ago  
 ```
 
-#### Accessing configs inside a container
+### Accessing configs inside a container
 
 Now that you have created a service with a config, you can access the value of this config from within the container.
 
@@ -139,19 +139,19 @@ root@00a6ae3d1bd5:/# cat /my-config
 This is my config data
 ```
 
-### Challenges and Considerations
+## Challenges and considerations
 
 Docker Configs, similar to Docker Secrets, provide a useful way to manage configuration data in Docker environments, particularly in Docker Swarm. However, they also come with their own set of challenges and considerations:
 
 - **Limited to Docker Swarm**: Like Docker Secrets, Docker Configs are specifically designed for Docker Swarm. This means they are not natively available for standalone Docker containers or other container orchestrators like Kubernetes. This limitation can be significant for teams not using Docker Swarm.
 
-- **Not Suitable for Sensitive Data**: Docker Configs are not encrypted at rest, unlike Docker Secrets. This makes them unsuitable for storing sensitive data such as passwords, tokens, or private keys. They should be used only for non-sensitive configuration data.
+- **Not suitable for sensitive data**: Docker Configs are not encrypted at rest, unlike Docker Secrets. This makes them unsuitable for storing sensitive data such as passwords, tokens, or private keys. They should be used only for non-sensitive configuration data.
 
-- **Size Limitation**: There is a size limit for the contents of Docker Configs (typically around 500 KB). This limitation can be a challenge when dealing with large configuration files.
+- **Size limitation**: There is a size limit for the contents of Docker Configs (typically around 500 KB). This limitation can be a challenge when dealing with large configuration files.
 
-- **Immutable Once Attached to Running Services**: Once a config is attached to a running service, it cannot be edited. Any changes require creating a new config and updating the service to use this new config, which might cause service disruption.
+- **Immutable once attached to running services**: Once a config is attached to a running service, it cannot be edited. Any changes require creating a new config and updating the service to use this new config, which might cause service disruption.
 
-### Best Practices
+## Best practices
 
 When using Docker Configs, it's important to follow best practices to ensure efficient and secure management of your configuration data:
 
@@ -162,13 +162,13 @@ When using Docker Configs, it's important to follow best practices to ensure eff
 
 By following these best practices, you can maximize the benefits of Docker Configs in managing your application's configuration data effectively and securely.
 
-### Conclusion
+## Conclusion
 
 Docker Configs offer a flexible and secure way to manage non-sensitive configuration data in Docker environments. By storing configuration outside of application code, Docker Configs facilitate a more modular and maintainable architecture.
 
 Now that you're equipped with the knowledge of Docker Configs, take your cloud infrastructure management to the next level with Pulumi. Explore these key resources to deepen your understanding and enhance your implementation strategies:
 
-- **Advanced Configuration Management**: Discover how to efficiently manage configuration data in your cloud applications. Dive into Pulumi's [Configuration Management docs](/docs/concepts/config/) for in-depth information on creating and managing configuration across stacks and projects.
-- **Container Management Solutions**: Learn about deploying containers with ease using Pulumi. Whether you prefer low-management solutions like AWS Fargate and Microsoft ACI for ease of deployment or require complete control with Kubernetes-based solutions, our [Container Management](/containers/) docs provide comprehensive insights. They cover everything from managing clusters and infrastructure to deploying application containers in various environments.
+- **Advanced configuration management**: Discover how to efficiently manage configuration data in your cloud applications. Dive into Pulumi's [Configuration Management docs](/docs/concepts/config/) for in-depth information on creating and managing configuration across stacks and projects.
+- **Container management solutions**: Learn about deploying containers with ease using Pulumi. Whether you prefer low-management solutions like AWS Fargate and Microsoft ACI for ease of deployment or require complete control with Kubernetes-based solutions, our [Container Management](/containers/) docs provide comprehensive insights. They cover everything from managing clusters and infrastructure to deploying application containers in various environments.
 
 Our [community on Slack](https://slack.pulumi.com/) is always open for discussions, questions, and sharing experiences. Join us there and become part of our growing community of cloud professionals!
