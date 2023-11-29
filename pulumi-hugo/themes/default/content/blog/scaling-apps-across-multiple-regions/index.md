@@ -61,7 +61,7 @@ You can create your stacks by running:
 ```bash
 pulumi stack init prodwu2
 pulumi stack init prodwe
-pulumi stack init Pulumi.stagungsea.yaml
+pulumi stack init stagungsea
 ```
 
 Update your Pulumi configuration YAML files with their corresponding values.
