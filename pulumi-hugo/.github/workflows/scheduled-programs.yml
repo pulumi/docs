@@ -1,0 +1,77 @@
+name: Run example programs
+on:
+  schedule:
+    - cron: "0 8 * * *"
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch: {}
+
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  PULUMI_TEST_OWNER: "moolumi"
+  PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
+  AWS_REGION: "us-west-2"
+  PULUMI_API: https://api.pulumi-staging.io
+
+jobs:
+  test:
+    runs-on: ${{ matrix.platform }}
+    strategy:
+      matrix:
+        platform:
+          - ubuntu-latest
+        go-version:
+          - 1.18.x
+        node-version:
+          - 16.x
+        python-version:
+          - 3.7
+        dotnet:
+          - 6.0.x
+
+    steps:
+      - name: Install Java
+        uses: actions/setup-java@v3
+        with:
+          distribution: temurin
+          java-version: 11
+
+      - name: Install DotNet
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: ${{ matrix.dotnet }}
+
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Install Go
+        uses: actions/setup-go@v3
+        with:
+          go-version: ${{ matrix.go-version }}
+
+      - name: Install Pulumi
+        uses: pulumi/actions@v4
+
+      - name: Install Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Check out the code
+        uses: actions/checkout@v3
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-region: ${{ env.AWS_REGION }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          role-duration-seconds: 14400 # 4 hours
+          role-session-name: pulumi-hugo-examples@githubActions
+          role-to-assume: ${{ secrets.AWS_CI_ROLE_ARN }}
+
+      - name: Run the tests
+        run: make test-programs

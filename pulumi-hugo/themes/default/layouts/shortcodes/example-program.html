@@ -1,0 +1,54 @@
+{{ $path := .Get "path" }}
+{{ $languages := default "javascript,typescript,python,go,csharp,java,yaml" (.Get "languages") }}
+{{ $folder := path.Join "static" "programs" }}
+
+<div>
+    <pulumi-chooser type="language" options="{{ $languages }}"></pulumi-chooser>
+</div>
+
+{{ range $i, $language := split $languages "," }}
+    <div class="w-full">
+        <pulumi-choosable type="language" values="{{ $language }}">
+            <div>
+                {{ $program := "" }}
+                {{ $depfile := "" }}
+                {{ $deplang := "" }}
+                {{ if eq $language "javascript" }}
+                    {{ $program = "index.js" }}
+                    {{ $depfile = "package.json" }}
+                    {{ $deplang = "json" }}
+                {{ else if eq $language "typescript" }}
+                    {{ $program = "index.ts" }}
+                    {{ $depfile = "package.json" }}
+                    {{ $deplang = "json" }}
+                {{ else if eq $language "python" }}
+                    {{ $program = "__main__.py" }}
+                    {{ $depfile = "requirements.txt" }}
+                    {{ $deplang = "plain" }}
+                {{ else if eq $language "go" }}
+                    {{ $program = "main.go" }}
+                    {{ $depfile = "go.mod" }}
+                    {{ $deplang = "bash" }}
+                {{ else if eq $language "csharp" }}
+                    {{ $program = "Program.cs" }}
+                    {{ $depfile = printf "%s.csproj" (printf "%s-%s" $path $language) }}
+                    {{ $deplang = "xml" }}
+                {{ else if eq $language "java" }}
+                    {{ $program = "src/main/java/myproject/App.java" }}
+                    {{ $depfile = "pom.xml" }}
+                    {{ $deplang = "xml" }}
+                {{ else if eq $language "yaml" }}
+                    {{ $program = "Pulumi.yaml" }}
+                {{ end }}
+                {{ if ne $program "" }}
+                    {{ $root := slice "static" "programs" (printf "%s-%s" $path $language) }}
+                    {{ $code := readFile (path.Join $root $program) }}
+                    {{ $info := os.Stat (path.Join $root) }}
+                    <div data-program-path="{{ $path }}" data-program-language="{{ $language }}" data-program-file="{{ $program }}" data-program-depfile="{{ $depfile }}">
+                        {{ highlight $code $language }}
+                    </div>
+                {{ end }}
+            </div>
+        </pulumi-choosable>
+    </div>
+{{ end }}

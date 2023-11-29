@@ -1,0 +1,2 @@
+name: awsx-load-balanced-fargate-nginx-yaml
+runtime: java

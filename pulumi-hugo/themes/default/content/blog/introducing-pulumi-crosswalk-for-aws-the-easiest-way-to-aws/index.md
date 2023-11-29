@@ -7,6 +7,10 @@ authors: ["luke-hoban"]
 tags: ["Serverless","AWS","containers","pulumi-news","Kubernetes","containers", "eks", "lambda", "api-gateway", "docker"]
 ---
 
+{{% notes type="warning" %}}
+Some of the code in this post is out of date. See the [AWS guides](/docs/clouds/aws/guides/) for an updated overview and examples.
+{{% /notes %}}
+
 Amazon Web Services provides an incredible platform for developers to
 build cloud-native applications, and is used by millions of customers of
 all sizes. The building block services that AWS offers enable teams to

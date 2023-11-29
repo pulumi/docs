@@ -12,6 +12,10 @@ tags:
     - serverless
 ---
 
+{{% notes type="warning" %}}
+Some of the code in this post is out of date. See the [AWS guides](/docs/clouds/aws/guides/) for an updated overview and examples.
+{{% /notes %}}
+
 When AWS Lambda launched in 2014, it pioneered the concept of Function-as-a-Service. Developers could write a function in one of the supported programming languages, upload it to AWS, and Lambda executes the function on every invocation.
 
 Ever since then, a zip archive of application code or binaries has been the only supported deployment option. Even AWS Lambda Layers&mdash;reusable components automatically merged into the application code&mdash;used the zip packaging format.

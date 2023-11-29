@@ -8,6 +8,9 @@ meta_desc: "See how Pulumi Crosswalk for AWS lets you use infrastructure as code
 meta_image: "pulumi-crosswalk-for-aws.png"
 ---
 
+{{% notes type="warning" %}}
+Some of the code in this post is out of date. See the [AWS guides](/docs/clouds/aws/guides/) for an updated overview and examples.
+{{% /notes %}}
 
 Amazon Elastic Container Registry ([ECR](https://aws.amazon.com/ecr/))
 is a fully-managed Docker container registry that makes it easy for

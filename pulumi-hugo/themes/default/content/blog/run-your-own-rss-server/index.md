@@ -11,6 +11,10 @@ tags:
     - aws
 ---
 
+{{% notes type="warning" %}}
+Some of the code in this post is out of date. See the [AWS guides](/docs/clouds/aws/guides/) for an updated overview and examples.
+{{% /notes %}}
+
 It's been a few years since [Google shut down Google Reader](https://googleblog.blogspot.com/2013/03/a-second-spring-of-cleaning.html), and while a number of nice commercial alternatives have sprung in its wake, none of them has ever been quite the right fit for me personally.
 
 So a while back, after far too much time spent wandering the blogsphere manually, typing URLs into address bars by hand, I decided to go looking to see whether the universe had produced an open-source solution to this problem --- and to my surprise and delight, it had! [Miniflux](https://miniflux.app/) is an excellent little open-source RSS server and reader, written in Go and backed by PostgreSQL, that also happens to be packaged [as a Docker container](https://hub.docker.com/r/miniflux/miniflux). So in this post, I'll show how easy it is to deploy a Miniflux server of your own on AWS, using only Pulumi and a few lines of TypeScript.

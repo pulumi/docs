@@ -7,6 +7,10 @@ meta_desc: "Use Pulumi's infrastucture-as-code approach to simplify working with
 meta_image: "pulumi-crosswalk-for-aws.png"
 ---
 
+{{% notes type="warning" %}}
+Some of the code in this post is out of date. See the [AWS guides](/docs/clouds/aws/guides/) for an updated overview and examples.
+{{% /notes %}}
+
 <img align="right" src="/images/partners/aws-apn.png">
 
 <br />
