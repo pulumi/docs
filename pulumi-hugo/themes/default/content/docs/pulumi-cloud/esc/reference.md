@@ -167,7 +167,8 @@ values:
       stacks:
         k8-cluster:
           stack: k8-cluster-1/dev
-    kubeconfig: {'fn::toJSON': "${app.k8-cluster.kubeconfig}"}
+    kubeconfig:
+      fn::toJSON: ${app.k8-cluster.kubeconfig}
 
   # ---------------------------------------------------------------------------------------
   # Exports -- expose configuration values to particular consumers
