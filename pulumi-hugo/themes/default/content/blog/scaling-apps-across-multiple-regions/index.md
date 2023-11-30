@@ -88,10 +88,6 @@ config:
   multi-region:appServiceSize: P1V2
   multi-region:environment: production
   multi-region:location: westus2
-
-environment:
-  imports:
-    - shared-multi-region
 ```
 
 **Pulumi.prodwe.yaml:**
@@ -102,10 +98,6 @@ config:
   multi-region:appServiceSize: P1V3
   multi-region:environment: production
   multi-region:location: westeurope
-
-environment:
-  imports:
-    - shared-multi-region
 ```
 
 **Pulumi.stagingsea.yaml:**
@@ -116,10 +108,6 @@ config:
   multi-region:appServiceSize: S1
   multi-region:environment: staging
   multi-region:location: southeastasia
-
-environment:
-  imports:
-    - shared-multi-region
 ```
 
 #### Leveraging ESC
@@ -138,7 +126,7 @@ After which, you can set all the value for the configurations you need. Remember
 esc env set shared-multi-region pulumiConfig.resourceNamePrefix mrapp
 esc env set shared-multi-region pulumiConfig.storageKind "Standard_LRS"
 esc env set shared-multi-region pulumiConfig.storageSkuName "Standard_LRS"
-esc env set shared-multi-region pulumiConfig.tenantId "00000000-0000-0000-0000-000000000000" # Add your tenantId
+esc env set shared-multi-region pulumiConfig.tenantId "00000000-0000-0000-0000-000000000000" # Your tenantId
 ```
 
 After successfully adding your config values to your new environment, you can reference it across all your stacks like this:
