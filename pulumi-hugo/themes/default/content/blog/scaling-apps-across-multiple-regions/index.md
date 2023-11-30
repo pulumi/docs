@@ -61,56 +61,101 @@ You can create your stacks by running:
 ```bash
 pulumi stack init prodwu2
 pulumi stack init prodwe
-pulumi stack init stagungsea
+pulumi stack init stagingsea
 ```
 
 Update your Pulumi configuration YAML files with their corresponding values.
+
+**Pulumi.devwe.yaml:**
+
+```yaml
+config:
+  multi-region:appServiceTier: Free
+  multi-region:appServiceSize: F1
+  multi-region:environment: development
+  multi-region:location: westeurope
+
+environment:
+  imports:
+    - shared-multi-region
+```
 
 **Pulumi.prodwu2.yaml:**
 
 ```yaml
 config:
-  appServiceTier: PremiumV2
-  appServiceSize: P1V2
-  environment: production
-  region: westus2
+  multi-region:appServiceTier: PremiumV2
+  multi-region:appServiceSize: P1V2
+  multi-region:environment: production
+  multi-region:location: westus2
+
+environment:
+  imports:
+    - shared-multi-region
 ```
 
 **Pulumi.prodwe.yaml:**
 
 ```yaml
 config:
-  appServiceTier: PremiumV3
-  appServiceSize: P1V3
-  environment: production
-  region: westeurope
+  multi-region:appServiceTier: PremiumV3
+  multi-region:appServiceSize: P1V3
+  multi-region:environment: production
+  multi-region:location: westeurope
+
+environment:
+  imports:
+    - shared-multi-region
 ```
 
 **Pulumi.stagingsea.yaml:**
 
 ```yaml
 config:
-  appServiceTier: Standard
-  appServiceSize: S1
-  environment: staging
-  region: southeastasia
-```
-
-For configuration values that are shared across stacks, you should use ESC so that you can create them once and reference them everywhere. With ESC, your stack will look similar to this:
-
-```yaml
-config:
-  appServiceTier: PremiumV2
-  appServiceSize: P1V2
-  environment: production
-  region: westus2
+  multi-region:appServiceTier: Standard
+  multi-region:appServiceSize: S1
+  multi-region:environment: staging
+  multi-region:location: southeastasia
 
 environment:
   imports:
-  - tutorial-app-config
+    - shared-multi-region
 ```
 
-Here, `tutorial-app-config` has more configurations and you can add references to them in your stack without copying and pasting multiple lines.
+#### Leveraging ESC
+
+For configuration values that are shared across stacks, you should use ESC so that you can create them once and reference them everywhere. In the referenced codebase, there are other values e.g. `resourceNamePrefix`, `storageKind`, `storageSkuName`, and `tenantId`. Since these values are the same across all our stacks, we can leverage ESC so that we can declare them once and reuse them everywhere.
+
+To leverage ESC, you first need to initialize a new environment like this:
+
+```bash
+esc env init shared-multi-region
+```
+
+After which, you can set all the value for the configurations you need. Remember to add it as part of the `pulumiConfig` object, so that your config yaml understands and can pick it up.
+
+```bash
+esc env set shared-multi-region pulumiConfig.resourceNamePrefix mrapp
+esc env set shared-multi-region pulumiConfig.storageKind "Standard_LRS"
+esc env set shared-multi-region pulumiConfig.storageSkuName "Standard_LRS"
+esc env set shared-multi-region pulumiConfig.tenantId "00000000-0000-0000-0000-000000000000" # Add your tenantId
+```
+
+After successfully adding your config values to your new environment, you can reference it across all your stacks like this:
+
+```yaml
+config:
+  multi-region:appServiceTier: Free
+  multi-region:appServiceSize: F1
+  multi-region:environment: development
+  multi-region:location: westeurope
+
+environment:
+  imports:
+    - shared-multi-region
+```
+
+Here, `shared-multi-region` has more configurations and you can add references to them in your stack without copying and pasting multiple lines.
 
 ### Update Pulumi code
 
@@ -121,30 +166,36 @@ import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
 // Define the configuration
+const stackName: string = pulumi.getStack();
 const config = new pulumi.Config();
+
 const appServiceTier = config.require("appServiceTier");
 const appServiceSize = config.require("appServiceSize");
-const environment = config.require("environment");
-const region = config.require("region");
+const resourceNamePrefix = config.require("resourceNamePrefix"); // gotten from ESC
+const storageKind = config.require("storageKind"); // gotten from ESC
 
-const planName = `my-app-service-plan-${environment}`;
-const resourceGroupName = `my-resource-group-${environment}`;
+// ... more code
 
-// Create the resource group
-const resourceGroup = new azure.core.ResourceGroup(resourceGroupName, {
-    location: region,
+// Create an Azure Resource Group
+const resourceGroup = new azure.resources.ResourceGroup(resourceGroupName, {
+    resourceGroupName: resourceGroupName,
+    location: location,
+    tags
 });
 
-// Create the App Service Plan
-const appServicePlan = new azure.appservice.Plan(planName, {
+// Create an Azure Storage Account
+const storageAccount = new azure.storage.StorageAccount(storageAccountName, {
+    accountName: storageAccountName,
     resourceGroupName: resourceGroup.name,
-    kind: "Linux",
-    reserved: true,
+    kind: storageKind,
+    location: location,
     sku: {
-        tier: appServiceTier,
-        size: appServiceSize,
+        name: storageSkuName
     },
+    tags
 });
+
+// ... more code
 ```
 
 ### Deploy stacks
