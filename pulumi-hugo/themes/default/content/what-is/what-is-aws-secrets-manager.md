@@ -91,6 +91,12 @@ $ aws secretsmanager get-secret-value --secret-id MySecretName
 }
 ```
 
+## Best practices
+
+- **Rotate secrets regularly**: Implement a routine for regularly rotating secrets to enhance security.
+- **Provide least-privilege access**: Employ IAM policies for granular access control to secrets.
+- **Audit and monitor secret access**: Use AWS CloudTrail and other monitoring tools to track access and modifications to your secrets.
+
 ## Challenges and considerations
 
 AWS Secrets Manager is a powerful tool for managing secrets and cryptographic keys, but  it does come with its own set of challenges, considerations, and limitations. Some of the key aspects to be aware of include:
@@ -100,12 +106,6 @@ AWS Secrets Manager is a powerful tool for managing secrets and cryptographic ke
 - **API request quotas and throttling**: AWS Secrets Manager has quotas on the rate of API requests. For example, the combined rate of certain API requests like DescribeSecret and GetSecretValue is limited to 10,000 transactions per second per region. Exceeding these limits can result in throttling, where valid requests are rejected and a throttling error is returned.
 
 Understanding the limitations of AWS Secrets Manager and effectively planning its usage are crucial for seamless integration into your AWS infrastructure. Properly addressing these challenges and considerations is key to leveraging the full benefits of the service.
-
-## Best practices
-
-- **Rotate secrets regularly**: Implement a routine for regularly rotating secrets to enhance security.
-- **Provide least-privilege access**: Employ IAM policies for granular access control to secrets.
-- **Audit and monitor secret access**: Use AWS CloudTrail and other monitoring tools to track access and modifications to your secrets.
 
 ## Conclusion
 

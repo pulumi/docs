@@ -172,6 +172,12 @@ $ az keyvault secret show --name MySecretName --vault-name <YourVaultName>
 }
 ```
 
+## Best practices
+
+- **Regularly rotate secrets**: Implement a strategy for the regular rotation of secrets.
+- **Provide least-privilege access**: Minimize the number of entities with access to the Key Vault.
+- **Monitor access and usage**: Use Azure Monitor and Azure Security Center to track access and activities.
+
 ## Challenges and considerations
 
 Azure Key Vault, while a powerful tool for managing secrets and cryptographic keys, does come with its own set of challenges, considerations, and limitations. Some of the key aspects to be aware of include:
@@ -183,12 +189,6 @@ Azure Key Vault, while a powerful tool for managing secrets and cryptographic ke
 - **Vault segmentation strategy**: It is recommended to use separate key vaults for each specific application or environment (development, pre-production, production) to reduce risk and limit the sharing of keys and secrets across different environments. This approach, while enhancing security, can add complexity to the management of multiple vaults, especially in larger organizations with numerous applications and environments​​.
 
 These considerations highlight the importance of understanding Azure Key Vault's capabilities and limitations in order to effectively incorporate it into an organization's cloud security strategy. Proper planning, configuration, and management are essential to leverage the full benefits of Azure Key Vault while mitigating potential risks and challenges.
-
-## Best practices
-
-- **Regularly rotate secrets**: Implement a strategy for the regular rotation of secrets.
-- **Provide least-privilege access**: Minimize the number of entities with access to the Key Vault.
-- **Monitor access and usage**: Use Azure Monitor and Azure Security Center to track access and activities.
 
 ## Conclusion
 
