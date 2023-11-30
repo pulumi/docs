@@ -113,7 +113,7 @@ AWS Secrets Manager is an essential tool for secure secret management in cloud e
 
 Now that you’re equipped with the knowledge of AWS Secrets Manager, take your cloud infrastructure management to the next level with Pulumi. Explore these key resources to deepen your understanding and enhance your implementation strategies:
 
-- **Provision infrastructure as code**: Learn about deploying and managing AWS Secrets Manager secrets as well as other AWS resources using Pulumi's Infrastructure as Code capabilities. For comprehensive insights, refer to [Pulumi's AWS Provider documentation](/registry/packages/aws/). You can also see examples of how to create an AWS Secrets Manager secret in a number of supported programming languages below:
+- **Streamlined infrastructure management with IaC**: Learn about [deploying and managing AWS Secrets Manager secrets](/registry/packages/aws-native/api-docs/secretsmanager/secret/) as well as other AWS resources using Pulumi's Infrastructure as Code capabilities. Pulumi enables you to define and provision your cloud infrastructure using familiar programming languages, integrating the management of secrets directly into your IaC workflows. Discover how to integrate AWS Secrets Manager into your broader cloud infrastructure with Pulumi by exploring [Pulumi's AWS Provider documentation](/registry/packages/aws-native/). Below are some examples of how to create an AWS Secrets Manager secret in a number of supported programming languages:
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -234,6 +234,6 @@ class MyStack : Stack
 
 {{% /choosable %}}
 
-- **Advanced secrets management**: Explore Pulumi’s detailed guides on the centralized management of secrets in cloud applications, particularly with Pulumi ESC (Environments, Secrets, and Configurations). For more information, visit the [Pulumi ESC documentation for the AWS Secrets provider](/docs/pulumi-cloud/esc/providers/aws-secrets/).
+- **Advanced secrets management**: For organizations utilizing AWS Secrets Manager alongside other cloud platforms, [Pulumi ESC (Environments, Secrets, and Configurations)](/docs/pulumi-cloud/esc/) offers a centralized solution for managing secrets across multiple environments. This is particularly valuable when your infrastructure spans beyond AWS, allowing for seamless integration and management of secrets from various providers in one place. Moreover, Pulumi ESC supports the generation of dynamic credentials, elevating its utility in scenarios where secrets need to be frequently rotated or updated. Dive deeper into how Pulumi ESC can streamline your secrets management workflows by visiting the Pulumi ESC documentation for the [Pulumi ESC documentation for the AWS Secrets provider](/docs/pulumi-cloud/esc/providers/aws-secrets/).
 
 Our [community on Slack](https://slack.pulumi.com/) is always open for discussions, questions, and sharing experiences. Join us there and become part of our growing community of cloud professionals!
