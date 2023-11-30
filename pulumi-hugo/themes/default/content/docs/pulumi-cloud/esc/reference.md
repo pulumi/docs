@@ -161,6 +161,14 @@ values:
           app-secret:
             path: app-secret
 
+  # Pulumi Stacks Provider example
+  app:
+    fn::open::pulumi-stacks:
+      stacks:
+        k8-cluster:
+          stack: k8-cluster-1/dev
+    kubeconfig: {'fn::toJSON': "${app.k8-cluster.kubeconfig}"}
+
   # ---------------------------------------------------------------------------------------
   # Exports -- expose configuration values to particular consumers
   # ---------------------------------------------------------------------------------------
@@ -176,4 +184,9 @@ values:
   # reference this environment during `pulumi up/preview/refresh/destroy`
   pulumiConfig:
     aws:region: us-west-2
+  
+  # Configuration nested under the 'files' key is used to export as files to the environment
+  # when using 'esc open --shell', 'esc run', or `pulumi up/preview/refresh/destroy`
+  files:
+    KUBECONFIG: ${kubeconfig}
 ```
