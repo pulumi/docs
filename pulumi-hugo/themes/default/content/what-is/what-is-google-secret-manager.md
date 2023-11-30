@@ -1,27 +1,27 @@
 ---
-title: What is Google Secret Manager?
+title: What is Google Cloud Secret Manager?
 meta_desc: |
-     Learn more about what Google Secret Manager is and how to use it.
+     Learn more about what Google Cloud Secret Manager is and how to use it.
 
 type: what-is
-page_title: "What Google Secret Manager?"
+page_title: "What is Google Cloud Secret Manager?"
 ---
 
-Google Cloud (GCP) is a leader in cloud computing, transforming the way organizations manage their digital infrastructure. An important aspect of GCP’s security framework is the management of sensitive data, commonly known as "[secrets](/what-is/what-is-secrets-management/)". Google Secret Manager is a service designed for the secure handling of these secrets, offering tools for storing, accessing, and managing confidential information in the cloud.
+Google Cloud is a leader in cloud computing, transforming the way organizations manage their digital infrastructure. An important aspect of Google Cloud’s security framework is the management of sensitive data, commonly known as "[secrets](/what-is/what-is-secrets-management/)". [Google Cloud Secret Manager](https://cloud.google.com/secret-manager) is a service designed for the secure handling of these secrets, offering tools for storing, accessing, and managing confidential information in the cloud.
 
-## What is Google Secret Manager?
+## What is Google Cloud Secret Manager?
 
-Google Secret Manager is a cloud service provided by Google Cloud Platform for managing, securing, and accessing sensitive data such as API keys, passwords, and certificates. It offers a centralized solution for storing and controlling access to private information, ensuring a high level of security within the GCP environment.
+Google Cloud Secret Manager is a cloud service provided by Google Cloud for managing, securing, and accessing sensitive data such as API keys, passwords, and certificates. It offers a centralized solution for storing and controlling access to private information, ensuring a high level of security within the Google Cloud environment.
 
 ### Key features
 
 - **Centralized and secure storage**: Secret Manager provides a central place to store and manage secrets, with built-in encryption at rest.
 - **Fine-grained access control**: It integrates with Google Cloud’s Identity and Access Management (IAM) to control access to secrets.
-- **Versioning and audit logging**: Secret Manager supports versioning of secrets and provides audit logs, enabling tracking of secret access and changes over time.
+- **Versioning and audit logging**: Secret Manager supports versioning of secrets and provides audit logs, enabling tracking of secret access and changes over time. Note that data access activities are not logged by default and must be [explicitly enabled](https://cloud.google.com/logging/docs/audit/configure-data-access#config-console-enable).
 
-## Creating Google Secret Manager secrets
+## Creating Google Cloud Secret Manager secrets
 
-Google Secret Manager secrets can be created via the gcloud CLI. Before creating secrets in Google Cloud, you must first make sure you have [created a Google Cloud project with the Secret Manager API enabled](https://cloud.google.com/secret-manager/docs/configuring-secret-manager).
+Google Cloud Secret Manager secrets can be created via the gcloud CLI. Before creating secrets in Google Cloud, you must first make sure you have [created a Google Cloud project with the Secret Manager API enabled](https://cloud.google.com/secret-manager/docs/configuring-secret-manager).
 
 You will then need to install the [gcloud CLI](https://cloud.google.com/cli). Once you have installed the gcloud CLI, run the `gcloud auth login` command to [authenticate to your Google Cloud account](https://cloud.google.com/sdk/gcloud/reference/auth/login).
 
@@ -74,9 +74,9 @@ Many infrastructure as code platforms, including Pulumi, have support for creati
 
 {{< /notes >}}
 
-## Accessing Azure Key Vault secrets
+## Accessing Google Cloud Secret Manager secrets
 
-Now that you have created a Google Secret Manager secret, you can access the value via the gcloud CLI using the `gcloud secrets versions access` command.
+Now that you have created a Google Cloud Secret Manager secret, you can access the value via the gcloud CLI using the `gcloud secrets versions access` command.
 
 ```bash
 $ gcloud secrets versions access latest --secret="my-secret"
@@ -86,28 +86,28 @@ my-secret-data
 
 ## Challenges and considerations
 
-Google Secret Manager, while a powerful tool for managing secrets and cryptographic keys, does come with its own set of challenges, considerations, and limitations. Some of the key aspects to be aware of include:
+Google Cloud Secret Manager, while a powerful tool for managing secrets and cryptographic keys, does come with its own set of challenges, considerations, and limitations. Some of the key aspects to be aware of include:
 
-- **Compatibility and integration**: Google Secret Manager is optimized for workloads in Google Cloud. For organizations operating in a multi-cloud or hybrid cloud environment, integrating Secret Manager with other cloud platforms might not be straightforward. In such cases, using a third-party tool like [Pulumi ESC](/docs/pulumi-cloud/esc/) might be more effective.
+- **Compatibility and integration**: Google Cloud Secret Manager is optimized for workloads in Google Cloud. For organizations operating in a multi-cloud or hybrid cloud environment, integrating Secret Manager with other cloud platforms might not be straightforward. In such cases, using a third-party tool like [Pulumi ESC](/docs/pulumi-cloud/esc/) might be more effective. For example, Pulumi ESC provides a unified secret management interface across different cloud environments, simplifying the management of secrets in a multi-cloud setup.
 - **Quotas and limits on secret access**: When retrieving secrets frequently, such as in SaaS applications that make API calls, it's important to ensure that project-level quotas are sufficient. Secret Manager has a limit of 90,000 access requests per minute per project, which can be increased via a Google Cloud support ticket. Additionally, there are limits on the size of the secret value (64 KiB) and the number of aliases a secret can have (50 aliases).
-- **Lack of auto-rotation for secrets**: Currently, Google Secret Manager does not have the capability to auto-rotate secrets. This means organizations need to implement their own mechanisms or use infrastructure-as-code (IaC) tools such as [Pulumi](/docs/get-started/) to ensure secrets are rotated in compliance with their security policies.
-- **Logging and audit considerations**: Accessing a secret in Google Secret Manager is not logged by default. However, users can enable granular access logs on secrets and retrieve this data through Google Cloud’s Logs Explorer. This requires activation of relevant data access logs in the Cloud Audit Logs service. Additionally, frequent access logging can lead to large bills, so it’s important to evaluate the necessity of logging every secret request and configure custom retention policies accordingly.
+- **Lack of auto-rotation for secrets**: Currently, Google Cloud Secret Manager does not have the capability to auto-rotate secrets. This means organizations need to implement their own mechanisms to ensure secrets are rotated in compliance with their security policies.
+- **Logging and audit considerations**: Accessing a secret in Google Cloud Secret Manager is not logged by default. However, users can enable granular access logs on secrets and retrieve this data through Google Cloud’s Logs Explorer. This requires activation of relevant data access logs in the Cloud Audit Logs service. Additionally, frequent access logging can lead to large bills, so it’s important to evaluate the necessity of logging every secret request and configure custom retention policies accordingly.
 
-Understanding and addressing these challenges and considerations is key to effectively leveraging Google Secret Manager in a cloud infrastructure, ensuring that the management of secrets aligns with the organization's security and compliance requirements.
+Understanding and addressing these challenges and considerations is key to effectively leveraging Google Cloud Secret Manager in a cloud infrastructure, ensuring that the management of secrets aligns with the organization's security and compliance requirements.
 
 ## Best practices
 
 - **Regularly rotate secrets**: Implement a strategy for the regular rotation of secrets.
 - **Provide least-privilege access**: Minimize the number of entities with access to the secret.
-- **Monitor access and usage**: Utilize GCP’s audit logs to monitor and track access to secrets.
+- **Monitor access and usage**: Utilize Google Cloud’s audit logs to monitor and track access to secrets.
 
 ## Conclusion
 
-Google Secret Manager is a crucial component for securely handling secrets in Google Cloud Platform environments. Effectively using Google Secret Manager can significantly improve the security and management of sensitive information in the cloud.
+Google Cloud Secret Manager is a crucial component for securely handling secrets in Google Cloud environments. Effectively using Google Cloud Secret Manager can significantly improve the security and management of sensitive information in the cloud.
 
-Now that you’re equipped with the knowledge of Google Secret Manager, take your cloud infrastructure management to the next level with Pulumi. Explore these key resources to deepen your understanding and enhance your implementation strategies:
+Now that you’re equipped with the knowledge of Google Cloud Secret Manager, take your cloud infrastructure management to the next level with Pulumi. Explore these key resources to deepen your understanding and enhance your implementation strategies:
 
 - **Provision infrastructure as code**: Learn about deploying and managing Google Secrets Manager secrets as well as other Google Cloud resources using Pulumi's Infrastructure as Code capabilities. For comprehensive insights, refer to [Pulumi's Google Cloud Provider documentation for the Secret Manager resource](/registry/packages/google-native/api-docs/secretmanager/v1/secret/).
-- **Advanced secrets management**: Explore Pulumi’s detailed guides on the centralized management of secrets in cloud applications, particularly with Pulumi ESC (Environments, Secrets, and Configurations). For more information, visit the [Pulumi ESC documentation for the GCP Secrets provider](/docs/pulumi-cloud/esc/providers/gcp-secrets/).
+- **Advanced secrets management**: For organizations utilizing Google Cloud Secret Manager alongside other cloud platforms, Pulumi ESC (Environments, Secrets, and Configurations) offers a centralized solution for managing secrets across multiple environments. This is particularly valuable when your infrastructure spans beyond Google Cloud, allowing for seamless integration and management of secrets from various providers in one place. Moreover, Pulumi ESC supports the storage of dynamic credentials, elevating its utility in scenarios where secrets need to be frequently rotated or updated. Dive deeper into how Pulumi ESC can streamline your multi-cloud secret management by visiting the Pulumi ESC documentation for the GCP Secrets provider. This resource provides specific insights and practical guidance on leveraging Pulumi ESC for a more cohesive and secure secrets management strategy in complex cloud architectures.
 
 Our [community on Slack](https://slack.pulumi.com/) is always open for discussions, questions, and sharing experiences. Join us there and become part of our growing community of cloud professionals!
