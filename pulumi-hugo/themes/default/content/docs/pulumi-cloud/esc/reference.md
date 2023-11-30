@@ -162,7 +162,6 @@ values:
             path: app-secret
 
   # Pulumi Stacks Provider example
-  
   app:
     fn::open::pulumi-stacks:
       stacks:
