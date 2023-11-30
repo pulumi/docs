@@ -172,6 +172,12 @@ $ az keyvault secret show --name MySecretName --vault-name <YourVaultName>
 }
 ```
 
+## Best practices
+
+- **Regularly rotate secrets**: Implement a strategy for the regular rotation of secrets.
+- **Provide least-privilege access**: Minimize the number of entities with access to the Key Vault.
+- **Monitor access and usage**: Use Azure Monitor and Azure Security Center to track access and activities.
+
 ## Challenges and considerations
 
 Azure Key Vault, while a powerful tool for managing secrets and cryptographic keys, does come with its own set of challenges, considerations, and limitations. Some of the key aspects to be aware of include:
@@ -184,19 +190,13 @@ Azure Key Vault, while a powerful tool for managing secrets and cryptographic ke
 
 These considerations highlight the importance of understanding Azure Key Vault's capabilities and limitations in order to effectively incorporate it into an organization's cloud security strategy. Proper planning, configuration, and management are essential to leverage the full benefits of Azure Key Vault while mitigating potential risks and challenges.
 
-## Best practices
-
-- **Regularly rotate secrets**: Implement a strategy for the regular rotation of secrets.
-- **Provide least-privilege access**: Minimize the number of entities with access to the Key Vault.
-- **Monitor access and usage**: Use Azure Monitor and Azure Security Center to track access and activities.
-
 ## Conclusion
 
 Azure Key Vault plays a vital role in securely managing secrets in Azure cloud environments. By effectively utilizing Azure Key Vault, organizations can significantly enhance the security and management of their sensitive data in the cloud.
 
 Now that you’re equipped with the knowledge of Azure Key Vault, take your cloud infrastructure management to the next level with Pulumi. Explore these key resources to deepen your understanding and enhance your implementation strategies:
 
-- **Provision infrastructure as code**: Learn about deploying and managing Azure Key Vault secrets as well as other Azure resources using Pulumi's Infrastructure as Code capabilities. For comprehensive insights, refer to [Pulumi's Azure Provider documentation for the Key Vault resource](/registry/packages/azure-native/api-docs/keyvault/vault/).
-- **Advanced secrets management**: Explore Pulumi’s detailed guides on the centralized management of secrets in cloud applications, particularly with Pulumi ESC (Environments, Secrets, and Configurations). For more information, visit the [Pulumi ESC documentation for the Azure Secrets provider](/docs/pulumi-cloud/esc/providers/azure-secrets/).
+- **Streamlined infrastructure management with IaC**: Learn about [deploying and managing Azure Key Vault secrets](/registry/packages/azure-native/api-docs/keyvault/secret/) as well as other Azure resources using Pulumi's Infrastructure as Code capabilities. Pulumi enables you to define and provision your cloud infrastructure using familiar programming languages, integrating the management of secrets directly into your IaC workflows. Discover how to integrate Azure Key Vault into your broader cloud infrastructure with Pulumi by exploring [Pulumi's Azure Provider documentation](/registry/packages/azure-native/).
+- **Advanced secrets management**: For organizations that use more than one secrets manager and/or store configuration data in multiple locations, [Pulumi ESC (Environments, Secrets, and Configurations)](/docs/pulumi-cloud/esc/) offers a centralized solution for managing secrets and configurations across multiple environments. Moreover, Pulumi ESC integrates with OIDC to allow the dynamic generation of credentials, elevating its utility in scenarios where secrets need to be frequently rotated or updated. Dive deeper into how Pulumi ESC can streamline your secret management workflows by visiting the Pulumi ESC documentation for the [Azure Secrets provider](/docs/pulumi-cloud/esc/providers/azure-secrets/).
 
 Our [community on Slack](https://slack.pulumi.com/) is always open for discussions, questions, and sharing experiences. Join us there and become part of our growing community of cloud professionals!

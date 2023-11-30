@@ -157,10 +157,6 @@ root@00a6ae3d1bd5:/# cat /run/secrets/my_secret
 my_secret_data
 ```
 
-## Challenges and considerations
-
-While Docker Secrets is a valuable tool for managing sensitive data in Docker Swarm, it has its limitations. One major challenge is its confinement to Docker Swarm environments, meaning it's not applicable for standalone Docker containers or other orchestrators like Kubernetes. Additionally, Docker Secrets lacks a direct mechanism for automatic secrets rotation, a crucial aspect for maintaining security over time.
-
 ## Best practices
 
 When using Docker Secrets, it's important to follow best practices to ensure efficient and secure management of your sensitive data:
@@ -172,6 +168,10 @@ When using Docker Secrets, it's important to follow best practices to ensure eff
 - **Integrate with Existing Secret Management Tools**: If you already use secret management tools like HashiCorp Vault, AWS Secrets Manager, or Azure Key Vault, consider integrating Docker Secrets with these tools for centralized management.
 
 By following these best practices, you can maximize the benefits of Docker Secrets in managing your application's sensitive data effectively and securely.
+
+## Challenges and considerations
+
+While Docker Secrets is a valuable tool for managing sensitive data in Docker Swarm, it has its limitations. One major challenge is its confinement to Docker Swarm environments, meaning it's not applicable for standalone Docker containers or other orchestrators like Kubernetes. Additionally, Docker Secrets lacks a direct mechanism for automatic secrets rotation, a crucial aspect for maintaining security over time.
 
 ## Conclusion
 
