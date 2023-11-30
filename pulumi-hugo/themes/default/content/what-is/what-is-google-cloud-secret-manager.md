@@ -84,22 +84,21 @@ $ gcloud secrets versions access latest --secret="my-secret"
 my-secret-data
 ```
 
-## Challenges and considerations
-
-Google Cloud Secret Manager, while a powerful tool for managing secrets and cryptographic keys, does come with its own set of challenges, considerations, and limitations. Some of the key aspects to be aware of include:
-
-- **Compatibility and integration**: Google Cloud Secret Manager is optimized for workloads in Google Cloud. For organizations operating in a multi-cloud or hybrid cloud environment, integrating Secret Manager with other cloud platforms might not be straightforward. In such cases, using a third-party tool like [Pulumi ESC](/docs/pulumi-cloud/esc/) might be more effective. For example, Pulumi ESC provides a unified secret management interface across different cloud environments, simplifying the management of secrets in a multi-cloud setup.
-- **Quotas and limits on secret access**: When retrieving secrets frequently, such as in SaaS applications that make API calls, it's important to ensure that project-level quotas are sufficient. Secret Manager has a limit of 90,000 access requests per minute per project, which can be increased via a Google Cloud support ticket. Additionally, there are limits on the size of the secret value (64 KiB) and the number of aliases a secret can have (50 aliases).
-- **Lack of auto-rotation for secrets**: Currently, Google Cloud Secret Manager does not have the capability to auto-rotate secrets. This means organizations need to implement their own mechanisms to ensure secrets are rotated in compliance with their security policies.
-- **Logging and audit considerations**: Accessing a secret in Google Cloud Secret Manager is not logged by default. However, users can enable granular access logs on secrets and retrieve this data through Google Cloud’s Logs Explorer. This requires activation of relevant data access logs in the Cloud Audit Logs service. Additionally, frequent access logging can lead to large bills, so it’s important to evaluate the necessity of logging every secret request and configure custom retention policies accordingly.
-
-Understanding and addressing these challenges and considerations is key to effectively leveraging Google Cloud Secret Manager in a cloud infrastructure, ensuring that the management of secrets aligns with the organization's security and compliance requirements.
-
 ## Best practices
 
 - **Regularly rotate secrets**: Implement a strategy for the regular rotation of secrets.
 - **Provide least-privilege access**: Minimize the number of entities with access to the secret.
 - **Monitor access and usage**: Utilize Google Cloud’s audit logs to monitor and track access to secrets.
+
+## Challenges and considerations
+
+Google Cloud Secret Manager, while a powerful tool for managing secrets and cryptographic keys, does come with its own set of challenges, considerations, and limitations. Some of the key aspects to be aware of include:
+
+- **Quotas and limits on secret access**: When retrieving secrets frequently, such as in SaaS applications that make API calls, it's important to ensure that project-level quotas are sufficient. Secret Manager has a limit of 90,000 access requests per minute per project, which can be increased via a Google Cloud support ticket. Additionally, there are limits on the size of the secret value (64 KiB) and the number of aliases a secret can have (50 aliases).
+- **Lack of auto-rotation for secrets**: Currently, Google Cloud Secret Manager does not have the capability to auto-rotate secrets. This means organizations need to implement their own mechanisms to ensure secrets are rotated in compliance with their security policies.
+- **Logging and audit considerations**: Accessing a secret in Google Cloud Secret Manager is not logged by default. However, users can enable granular access logs on secrets and retrieve this data through Google Cloud’s Logs Explorer. This requires activation of relevant data access logs in the Cloud Audit Logs service. Additionally, frequent access logging can lead to large bills, so it’s important to evaluate the necessity of logging every secret request and configure custom retention policies accordingly.
+
+Understanding and addressing these challenges and considerations is key to effectively leveraging Google Cloud Secret Manager in a cloud infrastructure, ensuring that the management of secrets aligns with the organization's security and compliance requirements.
 
 ## Conclusion
 
@@ -108,6 +107,6 @@ Google Cloud Secret Manager is a crucial component for securely handling secrets
 Now that you’re equipped with the knowledge of Google Cloud Secret Manager, take your cloud infrastructure management to the next level with Pulumi. Explore these key resources to deepen your understanding and enhance your implementation strategies:
 
 - **Streamlined infrastructure management with IaC**: Learn about [deploying and managing Google Secrets Manager secrets](/registry/packages/google-native/api-docs/secretmanager/v1/secret/) as well as other Google Cloud resources using Pulumi's Infrastructure as Code capabilities. Pulumi enables you to define and provision your cloud infrastructure using familiar programming languages, integrating the management of secrets directly into your IaC workflows. Discover how to integrate Google Secrets Manager into your broader cloud infrastructure with Pulumi by exploring [Pulumi's Google Cloud Provider documentation](/registry/packages/google-native/).
-- **Advanced secrets management**: For organizations utilizing Google Cloud Secret Manager alongside other cloud platforms, [Pulumi ESC (Environments, Secrets, and Configurations)](/docs/pulumi-cloud/esc/) offers a centralized solution for managing secrets across multiple environments. This is particularly valuable when your infrastructure spans beyond Google Cloud, allowing for seamless integration and management of secrets from various providers in one place. Moreover, Pulumi ESC supports the generation of dynamic credentials, elevating its utility in scenarios where secrets need to be frequently rotated or updated. Dive deeper into how Pulumi ESC can streamline your secrets management workflows by visiting the Pulumi ESC documentation for the [GCP Secrets provider](/docs/pulumi-cloud/esc/providers/gcp-secrets/).
+- **Advanced secrets management**: For organizations that use more than one secrets manager and/or store configuration data in multiple locations, [Pulumi ESC (Environments, Secrets, and Configurations)](/docs/pulumi-cloud/esc/) offers a centralized solution for managing secrets and configurations across multiple environments. Moreover, Pulumi ESC integrates with OIDC to allow the dynamic generation of credentials, elevating its utility in scenarios where secrets need to be frequently rotated or updated. Dive deeper into how Pulumi ESC can streamline your secrets management workflows by visiting the Pulumi ESC documentation for the [GCP Secrets provider](/docs/pulumi-cloud/esc/providers/gcp-secrets/).
 
 Our [community on Slack](https://slack.pulumi.com/) is always open for discussions, questions, and sharing experiences. Join us there and become part of our growing community of cloud professionals!
