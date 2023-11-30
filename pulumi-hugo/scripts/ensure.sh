@@ -37,3 +37,6 @@ echo "Installing Node.js modules..."
 yarn install
 yarn --cwd ./themes/default/theme install
 yarn --cwd ./themes/default/theme/stencil install
+
+# Prep Go projects so they're immediately runnable.
+unsuffix_gomods

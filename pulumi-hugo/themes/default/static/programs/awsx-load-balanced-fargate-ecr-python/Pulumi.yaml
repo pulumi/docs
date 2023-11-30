@@ -1,0 +1,2 @@
+name: awsx-load-balanced-fargate-ecr-python
+runtime: python

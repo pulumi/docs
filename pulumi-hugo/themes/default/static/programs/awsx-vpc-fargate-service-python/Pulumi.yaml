@@ -1,0 +1,2 @@
+name: awsx-vpc-fargate-service-python
+runtime: python

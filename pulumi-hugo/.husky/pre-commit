@@ -1,6 +1,14 @@
 #!/usr/bin/env sh
+
 . "$(dirname -- "$0")/_/husky.sh"
+
+. ./scripts/common.sh
 
 yarn run lint-staged
 
 ./scripts/lint/check-file-size.sh
+
+# Fix up any go.mod files included in example programs.
+clean_gomods
+suffix_gomods
+git add "themes/default/static/programs/**/go.mod.txt" || true
