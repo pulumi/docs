@@ -87,3 +87,7 @@ new-learn-topic:
 .PHONY: new-template
 new-template:
 	./scripts/content/new-template.sh
+
+.PHONY: new-example-program
+new-example-program:
+	./scripts/content/new-example-program.sh
