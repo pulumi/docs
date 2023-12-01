@@ -1,0 +1,6 @@
+name: awsx-ecr-repository-javascript
+runtime:
+  name: nodejs
+  options:
+    typescript: false
+description: An example that creates a container-image repository in Amazon Elastic Container Registry (ECR).

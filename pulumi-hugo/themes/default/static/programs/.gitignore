@@ -222,6 +222,9 @@ _pkginfo.txt
 # but keep track of directories ending in .cache
 !?*.[Cc]ache/
 
+# Vision Studio solution files.
+*.sln
+
 # Others
 ClientBin/
 ~$*
@@ -358,8 +361,8 @@ maven-status
 target/
 
 # Nested .gitignores.
-/**/.gitignore
-!.gitignore
+.gitignore
+!./.gitignore
 
 # Stack config files.
 Pulumi.*.yaml

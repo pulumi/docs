@@ -48,11 +48,11 @@ From there, we can just run `pulumi up` to provision a new repository:
 $ pulumi up
 Updating (dev):
 
-     Type                           Name               Status
- +   pulumi:pulumi:Stack            crosswalk-aws-dev  created
- +   ├─ awsx:ecr:Repository         repository         created
- +   │  └─ aws:ecr:Repository       repository         created
- +   └─ aws:ecr:LifecyclePolicy     repository         created
+     Type                           Name             Status
+ +   pulumi:pulumi:Stack            my-project-dev   create
+ +   └─ awsx:ecr:Repository         repository       create
+ +      ├─ aws:ecr:Repository       repository       create
+ +      └─ aws:ecr:LifecyclePolicy  repository       create
 
 Outputs:
     url: "012345678901.dkr.ecr.us-west-2.amazonaws.com/repository-e2fe830"
