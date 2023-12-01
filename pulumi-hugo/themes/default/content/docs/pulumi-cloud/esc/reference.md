@@ -177,9 +177,9 @@ values:
   # Configuration nested under the "environmentVariables" key is used to export environment
   # variables when using `esc open --shell`, `esc run`, or `pulumi up/preview/refresh/destroy`
   environmentVariables:
-    AWS_ACCESS_KEY_ID: ${awsCreds.accessKeyId}
-    AWS_SECRET_ACCESS_KEY: ${awsCreds.secretAccessKey}
-    AWS_SESSION_TOKEN: ${awsCreds.sessionToken}
+    AWS_ACCESS_KEY_ID: ${aws.login.accessKeyId}
+    AWS_SECRET_ACCESS_KEY: ${aws.login.secretAccessKey}
+    AWS_SESSION_TOKEN: ${aws.login.sessionToken}
 
   # Configuration nested under the "pulumiConfig" key will be available to Pulumi stacks that
   # reference this environment during `pulumi up/preview/refresh/destroy`
