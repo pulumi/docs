@@ -40,15 +40,17 @@ Although multi-region deployments are needed for scaling, availability, and perf
 
 ## The Pulumi solution
 
-Pulumi Stacks are flexible enough to do more than merely plan deployments across different stages of development. You may better control infrastructure orchestration with them as an adaptable tool for managing deployments in a variety of circumstances. Consider how Pulumi Stacks can be used effectively in the following ways:
+A stack is a distinct deployment target within a Pulumi project. Stacks enable you to organize, version, and manage your infrastructure code effectively. They are flexible enough to do more than merely plan deployments across different stages of development. You may better control infrastructure orchestration with them as an adaptable tool for managing deployments in a variety of circumstances. Each stack represents a separate instance of your infrastructure, allowing you to deploy and manage your resources in different environments or configurations. To learn more about stacks, you can read [this](https://www.pulumi.com/docs/concepts/stack/).
+
+Consider how Pulumi Stacks can be used effectively in the following ways:
 
 - **Deploying across environments:** You can use stacks to transition between development, staging, and production environments. Stacks allow diverse configurations to be maintained throughout these contexts.
 
-- **Deploying to different regions:** You can use stacks to effortlessly manage deployments in multiple regions (e.g. westus2, westeurope, northeurope etc.). This enables you to scale your infrastructure across geographical locations while maintaining a centralized and consistent approach to resource allocation.
+- **Deploying to different regions:** You can use stacks to effortlessly manage deployments in multiple regions (e.g. westus2, westeurope, northeurope etc.). This enables you to scale your infrastructure across geographical locations while maintaining a centralized and consistent approach to resource allocation. These deployments could be in the same environment, but different regions (e.g. production westeurope, and production westus2), and you can use stacks to handle the different permutations.
 
 - **Deploying to different cloud provider accounts:** Stacks can also be used to automate deployments across several cloud provider accounts. Even when working with different cloud platforms, your deployment process can be unified and consistent.
 
-Pairing Pulumi Stacks with ESC (Environments, Secrets, and Configuration) results in a flexible deployment strategy. The combination empowers users to segregate configurations for each environment, manage secrets securely, and maintain a centralized store for configuration data. This ensures a clean separation of concerns, contributing to improved security and maintainability in multi-environment deployments. ESC is a pivotal aspect of managing stacks. The idea is to store configuration settings separately from your code, ensuring that each stack has configuration values tailored to its specific needs.
+Each of these stacks have their own configuration, but there are also some configuration values that are shared across stacks. To obey the DRY (don't repeat yourself) programming rule, you can pair stacks with ESC (Environments, Secrets, and Configuration). This pairing results in a flexible deployment strategy. The combination empowers users to segregate configurations for each environment, manage secrets securely, and maintain a centralized store for configuration data. This ensures a clean separation of concerns, contributing to improved security and maintainability in multi-environment deployments. ESC is a pivotal aspect of managing stacks. The idea is to store configuration settings separately from your code, ensuring that each stack has configuration values tailored to its specific needs.
 
 In the upcoming demonstration, we'll illustrate how to deploy applications across diverse environments and regions. To create and manage stacks for different regions, you can go through the following steps:
 
@@ -64,7 +66,7 @@ pulumi stack init prodwe
 pulumi stack init stagingsea
 ```
 
-Update your Pulumi configuration YAML files with their corresponding values.
+After creating your stacks, you can update your Pulumi configuration YAML files with their corresponding values.
 
 **Pulumi.devwe.yaml:**
 
@@ -114,6 +116,8 @@ config:
 
 For configuration values that are shared across stacks, you should use ESC so that you can create them once and reference them everywhere. In the referenced codebase, there are other values e.g. `resourceNamePrefix`, `storageKind`, `storageSkuName`, and `tenantId`. Since these values are the same across all our stacks, we can leverage ESC so that we can declare them once and reuse them everywhere.
 
+{{% notes type="info" %}} Pulumi ESC is a feature of Pulumi Cloud and in order to use ESC, you should be using Pulumi Cloud as your backend. {{% /notes %}}
+
 To leverage ESC, you first need to initialize a new environment like this:
 
 ```bash
@@ -147,7 +151,7 @@ Here, `shared-multi-region` has more configurations and you can add references t
 
 ### Update Pulumi code
 
-Update your Pulumi code to use the configurations from the Pulumi stack:
+Once you have referenced your ESC environment in your Pulumi config, you can update your Pulumi code to use the configurations from the Pulumi stack:
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -188,7 +192,7 @@ const storageAccount = new azure.storage.StorageAccount(storageAccountName, {
 
 ### Deploy stacks
 
-Deploy each stack to its respective region
+After writing your infrastructure code, deploy each stack to its respective region
 
 ```bash
 pulumi up --stack prodwu2
