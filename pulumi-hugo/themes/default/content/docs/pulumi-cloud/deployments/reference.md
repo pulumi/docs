@@ -199,9 +199,9 @@ Once the GitHub app has been installed, the deployment settings for a stack can 
 
 #### Private Dependency Packages
 
-If you want to private GitHub repositories, including private packages and resources, the Pulumi program needs access to the SSH private key granted permissions to connect with Github. Failure to do so may result in remote deployments being unable to access those private artifacts, and the deployment may fail.
+If your Pulumi Deployment requires access to private GitHub repositories, e.g. your program uses a private Go module, it is necessary to configure an SSH key with access to the required repos. Without the correct configuration, the Deployment will be unable to access those private artifacts, and the deployment may fail.
 
-As a current fix, using the following will allow you to create a private key and allow access to GitHub using SSH to pull down the appropriate artifacts properly:
+The following will allow you to configure a private key and allow access to GitHub using SSH to pull down the appropriate artifacts properly:
   
 1. Add the following code into the `Pre-run commands` and toggle on `Skip automatic dependency installation step` in Advanced Settings:
 
