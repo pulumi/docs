@@ -210,7 +210,7 @@ The following will allow you to configure a private key and allow access to GitH
     cat /root/.ssh/id_ed25519
     chmod 600 /root/.ssh/id_ed25519
     ssh-keyscan github.com >> ~/.ssh/known_hosts
-    cd .. && git config --global --add url."git@github.com:".insteadOf "https://github.com"
+     cd .. && git config --global --add url.\"git@github.com:\".insteadOf \"https://github.com\"
     ```
 
     ![SSH Key Prerun Command](../limit-prerun-cmd.png)
