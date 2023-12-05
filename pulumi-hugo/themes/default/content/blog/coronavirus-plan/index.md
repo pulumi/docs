@@ -26,7 +26,7 @@ Here are some of the concrete steps we have taken.
 
 The Pulumi team is fortunate enough to have been remote-friendly since our inception, with many employees already outside of our Seattle HQ, including international employees who are ready to help our customers. Over 2 weeks ago, we made the quick decision to move to 100% remote temporarily so that employees are safe and to support social distancing initiatives.
 
-This shift ensures we are doing our utmost to support the containment of the disease spreading. Moving from remote-friendly to all-remote has required some changes, however, our own team has felt that it has overall pushed us to improve communication and knowledge sharing. [GitLab’s all-remote guide](https://about.gitlab.com/company/culture/all-remote/) has been very helpful in this transition.
+This shift ensures we are doing our utmost to support the containment of the disease spreading. Moving from remote-friendly to all-remote has required some changes, however, our own team has felt that it has overall pushed us to improve communication and knowledge sharing. [GitLab’s all-remote guide](https://handbook.gitlab.com/handbook/company/culture/all-remote/) has been very helpful in this transition.
 
 ## Software as a service continuity
 

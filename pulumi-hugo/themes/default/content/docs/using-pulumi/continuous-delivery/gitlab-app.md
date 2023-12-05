@@ -29,7 +29,7 @@ To enable the integration with your GitLab project, you will need to ensure you 
   * After you add the organization, ensure that it uses GitLab [as its identity provider](/docs/pulumi-cloud/organizations#changing-identity-providers).
 
 {{% notes type="warning" %}}
-This feature is currently not compatible with GitLab's [pipelines for merged results](https://docs.gitlab.com/ee/ci/pipelines/pipelines_for_merged_results.html).
+This feature is currently not compatible with GitLab's [pipelines for merged results](https://docs.gitlab.com/ee/ci/pipelines/merged_results_pipelines.html).
 See the [GitLab issue](https://gitlab.com/gitlab-org/gitlab/-/issues/350086) for details as to why.
 {{% /notes %}}
 

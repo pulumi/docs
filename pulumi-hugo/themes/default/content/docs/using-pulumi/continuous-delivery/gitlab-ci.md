@@ -65,7 +65,7 @@ to set and protect environment variables in GitLab by referencing their [variabl
 In order to prevent abuse of protected resources as well as other sensitive information used
 by your repository, GitLab has the concept of [Protected Branches and Tags](https://gitlab.com/help/user/project/protected_branches.md).
 
-Your GitLab repository's `main` or `master` branch is is the only branch that is created as a protected branch by default. If you are running Pulumi CLI commands from any branch other than the `main | master` branch,
+Your GitLab repository's `main` or `master` branch is the only branch that is created as a protected branch by default. If you are running Pulumi CLI commands from any branch other than the `main | master` branch,
 you are likely to run into a login error. This is due to the `PULUMI_ACCESS_TOKEN` environment variable only being accessible by protected branches and tags.
 
 You can fix this by configuring branch protection using [wildcard rules](https://docs.gitlab.com/ee/user/project/protected_branches.html#protect-multiple-branches-with-wildcard-rules). Doing this will
@@ -73,7 +73,7 @@ allow any branches with names that match this rule the ability to access the sec
 
 ## Merge Request Builds
 
-GitLab has the ability to restrict jobs to run only on [merge requests](https://docs.gitlab.com/ee/ci/merge_request_pipelines/). This is done by adding the following configuration to your GitLab pipeline config file:
+GitLab has the ability to restrict jobs to run only on [merge requests](https://docs.gitlab.com/ee/ci/pipelines/merge_request_pipelines.html). This is done by adding the following configuration to your GitLab pipeline config file:
 
 ```
 only:

@@ -15,7 +15,7 @@ with confidence.
 
 ## New To Pulumi and GitLab CI/CD?
 
-GitLab's [merge request pipelines](https://docs.gitlab.com/ee/ci/merge_request_pipelines/) runs a CI/CD workflow for building and testing your software.
+GitLab's [merge request pipelines](https://docs.gitlab.com/ee/ci/pipelines/merge_request_pipelines.html) runs a CI/CD workflow for building and testing your software.
 Pulumi makes a great addition to it, by allowing you to preview any infrastructure changes as part of your merge request flow.
 
 Using the merge request pipeline feature with Pulumi can validate the changes to your infrastructure before they are applied.
