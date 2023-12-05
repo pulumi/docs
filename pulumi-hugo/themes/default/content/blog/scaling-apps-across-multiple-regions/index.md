@@ -124,6 +124,8 @@ To leverage ESC, you first need to initialize a new environment like this:
 esc env init shared-multi-region
 ```
 
+{{% notes type="info" %}} You can use the esc CLI, as shown, or you can use the `pulumi env` command. {{% /notes %}}
+
 After which, you can set all the value for the configurations you need. Remember to add it as part of the `pulumiConfig` object, so that your Pulumi stack understands and can pick it up.
 
 ```bash
@@ -217,6 +219,10 @@ Effectively distributing workloads across various geographic regions is a key st
 - **Active/Passive with cold standby:** Similar to hot standby, in this case, the services in the secondary region aren't allocated until needed for failover. This minimizes costs but might increase recovery time.
 
 - **Active/Active:** Both regions are active, and requests are load-balanced between them. If one region becomes unavailable, it is taken out of rotation.
+
+In the context of infrastructure-as-code using Pulumi, these strategies often translate to the management of multiple stacks. In active/hot standby and active/active configurations, there will typically be two Pulumi stacks, each with its allocated set of resources. This allows for the independent management and deployment of resources in each region.
+
+On the other hand, in an active/cold standby scenario, while there might be a Pulumi stack defined for the cold standby site, it won't have any resources initially allocated. Part of the failover process would involve running a `pulumi up` specifically for the cold standby region, triggering the allocation of resources as needed. This dynamic resource allocation during failover helps optimize costs, as resources are provisioned only when necessary, contributing to a more efficient use of cloud resources.
 
 ### Replicating data
 
