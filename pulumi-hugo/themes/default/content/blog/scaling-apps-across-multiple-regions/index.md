@@ -124,7 +124,7 @@ To leverage ESC, you first need to initialize a new environment like this:
 esc env init shared-multi-region
 ```
 
-After which, you can set all the value for the configurations you need. Remember to add it as part of the `pulumiConfig` object, so that your config yaml understands and can pick it up.
+After which, you can set all the value for the configurations you need. Remember to add it as part of the `pulumiConfig` object, so that your Pulumi stack understands and can pick it up.
 
 ```bash
 esc env set shared-multi-region pulumiConfig.resourceNamePrefix mrapp
