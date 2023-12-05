@@ -1,6 +1,6 @@
 ---
 title: "Scaling Applications Across Multiple Regions"
-date: 2023-12-5T20:24:40Z
+date: 2023-12-05T20:24:40Z
 draft: false
 meta_desc: Learn about deploying applications to multiple regions globally. Uncover strategies for achieving high availability in a distributed environment.
 meta_image: meta.png
