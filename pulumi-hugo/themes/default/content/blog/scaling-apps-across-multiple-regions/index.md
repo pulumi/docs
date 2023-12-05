@@ -192,7 +192,7 @@ const storageAccount = new azure.storage.StorageAccount(storageAccountName, {
 
 ### Deploy stacks
 
-After writing your infrastructure code, deploy each stack to its respective region
+Your Pulumi stacks should be ready to deploy now---you've updated the code to use configuration values that either come from the stack or from Pulumi ESC, and you've done both the per-stack configurations and the Pulumi ESC configuration values. Now it's just a matter of running `pulumi up`:
 
 ```bash
 pulumi up --stack prodwu2
