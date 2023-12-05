@@ -44,7 +44,7 @@ A stack is a distinct deployment target within a Pulumi project. Stacks enable y
 
 Consider how Pulumi Stacks can be used effectively in the following ways:
 
-- **Deploying across environments:** You can use stacks to transition between development, staging, and production environments. Stacks allow diverse configurations to be maintained throughout these contexts.
+- **Deploying to different environments:** You can use stacks to deploy into different environments, like development, staging, and production. Stacks allow separate configurations to be maintained throughout these contexts.
 
 - **Deploying to different regions:** You can use stacks to effortlessly manage deployments in multiple regions (e.g. westus2, westeurope, northeurope etc.). This enables you to scale your infrastructure across geographical locations while maintaining a centralized and consistent approach to resource allocation. These deployments could be in the same environment, but different regions (e.g. production westeurope, and production westus2), and you can use stacks to handle the different permutations.
 
