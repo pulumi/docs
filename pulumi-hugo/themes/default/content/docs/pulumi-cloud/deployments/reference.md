@@ -205,6 +205,14 @@ The following will allow you to configure a private key and allow access to GitH
   
 1. Add the following code into the `Pre-run commands` and toggle on `Skip automatic dependency installation step` in Advanced Settings:
 
+    ```bash
+    mkdir /root/.ssh && printf -- "$SSHKEY" > /root/.ssh/id_ed25519
+    cat /root/.ssh/id_ed25519
+    chmod 600 /root/.ssh/id_ed25519
+    ssh-keyscan github.com >> ~/.ssh/known_hosts
+    cd .. && git config --global --add url.\"git@github.com:\".insteadOf \"https://github.com\"
+    ```
+
     ![SSH Key Prerun Command](../limit-prerun-cmd.png)
 
 2. Add the `$SSHKEY` field as a secret environment variable:
