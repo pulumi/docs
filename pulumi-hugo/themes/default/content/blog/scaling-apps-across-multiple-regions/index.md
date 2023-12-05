@@ -151,7 +151,7 @@ Here, `shared-multi-region` has more configurations and you can add references t
 
 ### Update Pulumi code
 
-Once you have referenced your ESC environment in your Pulumi config, you can update your Pulumi code to use the configurations from the Pulumi stack:
+Once you have set up the Pulumi ESC environment and linked it to your Pulumi stack configuration, you also need to update your Pulumi code to use the configuration values instead of any hard-coded values. This is shown in the code snippet below using the `config.require` method:
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
