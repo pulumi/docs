@@ -52,7 +52,7 @@ Consider how Pulumi Stacks can be used effectively in the following ways:
 
 Each of these stacks have their own configuration, but there are also some configuration values that are shared across stacks. To obey the DRY (don't repeat yourself) programming rule, you can pair stacks with ESC (Environments, Secrets, and Configuration). This pairing results in a flexible deployment strategy. The combination empowers users to segregate configurations for each environment, manage secrets securely, and maintain a centralized store for configuration data. This ensures a clean separation of concerns, contributing to improved security and maintainability in multi-environment deployments. ESC is a pivotal aspect of managing stacks. The idea is to store configuration settings separately from your code, ensuring that each stack has configuration values tailored to its specific needs.
 
-In the upcoming demonstration, we'll illustrate how to deploy applications across diverse environments and regions. To create and manage stacks for different regions, you can go through the following steps:
+In the next section, we'll show how to deploy applications across different regions using Pulumi stacks and Pulumi ESC.
 
 ### Define regions and stacks
 
