@@ -1,0 +1,6 @@
+name: awsx-elb-private-subnet-python
+runtime:
+  name: python
+  options:
+    virtualenv: venv
+description: An example that deploys an ApplicationLoadBalancer listening on a private subnet.

@@ -1,0 +1,44 @@
+{{- $path := .path -}}
+{{- $language := .language -}}
+{{- $from := default "" .from -}}
+{{- $to := default "" .to -}}
+{{- $program := "" -}}
+{{- $depfile := "" -}}
+{{- $deplang := "" -}}
+{{- if eq $language "javascript" -}}
+    {{- $program = "index.js" -}}
+    {{- $depfile = "package.json" -}}
+    {{- $deplang = "json" -}}
+{{- else if eq $language "typescript" -}}
+    {{- $program = "index.ts" -}}
+    {{- $depfile = "package.json" -}}
+    {{- $deplang = "json" -}}
+{{- else if eq $language "python" -}}
+    {{- $program = "__main__.py" -}}
+    {{- $depfile = "requirements.txt" -}}
+    {{- $deplang = "plain" -}}
+{{- else if eq $language "go" -}}
+    {{- $program = "main.go" -}}
+    {{- $depfile = "go.mod.txt" -}}
+    {{- $deplang = "bash" -}}
+{{- else if eq $language "csharp" -}}
+    {{- $program = "Program.cs" -}}
+    {{- $depfile = printf "%s.csproj" (printf "%s-%s" $path $language) -}}
+    {{- $deplang = "xml" -}}
+{{- else if eq $language "java" -}}
+    {{- $program = "src/main/java/myproject/App.java" -}}
+    {{- $depfile = "pom.xml" -}}
+    {{- $deplang = "xml" -}}
+{{- else if eq $language "yaml" -}}
+    {{- $program = "Pulumi.yaml" -}}
+{{- end -}}
+{{- $file := readFile (path.Join "static" "programs" (printf "%s-%s" $path $language) $program) -}}
+{{- if and (ne $from "") (ne $to "") -}}
+    {{- $lines := split $file "\n" -}}
+    {{- $toEnd := after (sub (int $from) 1) $lines -}}
+    {{- $lineCount := add (sub (int $to) (int $from)) 1 -}}
+    {{- $toTo := first $lineCount $toEnd -}}
+    {{- delimit $toTo "\n" | safeHTML -}}
+{{- else -}}
+    {{- $file | safeHTML -}}
+{{- end -}}

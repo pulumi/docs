@@ -1,0 +1,6 @@
+name: awsx-elb-multi-listener-redirect-python
+runtime:
+  name: python
+  options:
+    virtualenv: venv
+description: An example of an ApplicationLoadBalancer with multiple listeners and a custom redirect action.

@@ -11,6 +11,13 @@ module:
           target: content
         - source: static
           target: static
+          excludeFiles:
+            - "programs/*/node_modules"
+            - "programs/*/venv"
+            - "programs/*/__pycache__"
+            - "programs/*/bin"
+            - "programs/*/obj"
+            - "programs/*/target"
         - source: layouts
           target: layouts
         - source: data

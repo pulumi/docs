@@ -61,18 +61,7 @@ Each kind of load balancer is represented by a class in the `awsx.lb` module:
 To create a new load balancer, allocate an instance of its class. In addition to creating the load balancer itself, we
 must also create a _listener_ to let traffic reach it:
 
-```typescript
-import * as awsx from "@pulumi/awsx";
-
-// Create an ALB associated with the default VPC for this region.
-const alb = new awsx.lb.ApplicationLoadBalancer("web-traffic");
-
-// Listen to HTTP traffic on port 80.
-const listener = alb.createListener("web-listener", { port: 80 });
-
-// Export the resulting URL so that it's easy to access.
-export const endpoint = listener.endpoint;
-```
+{{< example-program path="awsx-elb-web-listener">}}
 
 This load balancer listens on port 80, in our account's per-region default VPC, using its public subnets, thereby
 exposing it to the Internet. See below for instructions on how to
@@ -85,8 +74,6 @@ There are a number of additional properties you may set:
 
 * `enableDeletionProtection`: Set to `true` to disable deletion of the resource. This can be helpful to avoid
   accidentally deleting a long-lived, but auto-generated, load balancer URL.
-
-* `enableCrossZoneLoadBalancing`: Set to `true` to enable your NLB to load balance across availability zones.
 
 * `idleTimeout`: The time in seconds a connection is permitted to be idle before being severed. The default is `60`.
 
@@ -108,73 +95,21 @@ To target an EC2 instance with your load balancer, you must do the following:
 
 Aside from those three steps, the code and capabilities of the load balancer are the same as shown above.
 
-> Note that ALBs automatically open ingress traffic to the ports listened on, whereas NLBs do not.
+{{< notes >}}
+Note that ALBs automatically open ingress traffic to the ports listened on, whereas NLBs do not.
+{{< /notes >}}
 
 Here is an example that creates an EC2 instance per availability zone, running a simple Ubuntu web server:
 
-```typescript
-import * as aws from "@pulumi/aws";
-import * as awsx from "@pulumi/awsx";
-import * as pulumi from "@pulumi/pulumi";
-
-export = async () => {
-  const config = new pulumi.Config("aws");
-  const providerOpts = { provider: new aws.Provider("prov", { region: <aws.Region>config.require("region") }) };
-  // Create a security group to open ingress to our load balancer on port 80, and egress out of the VPC.
-  const vpc = awsx.ec2.Vpc.getDefault();
-  const sg = new awsx.ec2.SecurityGroup("web-sg", {
-      vpc,
-      // 1) Open ingress traffic to your load balancer. Explicitly needed for NLB, but not ALB:
-      // ingress: [{ protocol: "tcp", fromPort: 80, toPort: 80, cidrBlocks: [ "0.0.0.0/0" ] }],
-      // 2) Open egress traffic from your EC2 instance to your load balancer (for health checks).
-      egress: [{ protocol: "-1", fromPort: 0, toPort: 0, cidrBlocks: [ "0.0.0.0/0" ] }],
-  });
-
-  // Creates an ALB associated with the default VPC for this region and listen on port 80.
-  // 3) Be sure to pass in our explicit SecurityGroup created above so that traffic may flow.
-  const alb = new awsx.lb.ApplicationLoadBalancer("web-traffic", { securityGroups: [ sg ] });
-  const listener = alb.createListener("web-listener", { port: 80 });
-  const publicIps: pulumi.Output<string>[] = [];
-  const subnets = await vpc.publicSubnets;
-
-  // For each subnet, and each subnet/zone, create a VM and a listener.
-  for (let i = 0; i < subnets.length; i++) {
-      // 4) Create the instance in the same VPC, passing in the security group with egress rule.
-      const vm = new aws.ec2.Instance(`web-${i}`, {
-          ami: aws.getAmi({
-              filters: [
-                  { name: "name", values: [ "ubuntu/images/hvm-ssd/ubuntu-trusty-14.04-amd64-server-*" ] },
-                  { name: "virtualization-type", values: [ "hvm" ] },
-              ],
-              mostRecent: true,
-              owners: [ "099720109477" ], // Canonical
-          }).then(ami => ami.id),
-          instanceType: "t2.micro",
-          subnetId: subnets[i].subnet.id,
-          availabilityZone: subnets[i].subnet.availabilityZone,
-          vpcSecurityGroupIds: alb.securityGroups.map(sg => sg.securityGroup.id),
-          userData: `#!/bin/bash
-  echo "Hello World, from Server ${i+1}!" > index.html
-  nohup python -m SimpleHTTPServer 80 &`,
-        }, providerOpts);
-        publicIps.push(vm.publicIp);
-        // 5) Attach your load balancer's target group the target EC2 instance(s).
-        alb.attachTarget("target-" + i, vm);
-      };
-  }
-
-  // Export the resulting URL so that it's easy to access.
-  export const endpoint = listener.endpoint.hostname;
-};
-```
+{{< example-program path="awsx-load-balanced-ec2-instances" >}}
 
 After deploying this using `pulumi up`, we will have a fully functional endpoint:
 
 ```bash
-$ for i in {1..5}; do curl http://$(pulumi stack output endpoint); done
+$ for i in {1..5} ; do curl "http://$(pulumi stack output endpoint)" ; done
 Hello World, from Server 1!
 Hello World, from Server 1!
-Hello World, from Server 2!
+Hello World, from Server 3!
 Hello World, from Server 2!
 Hello World, from Server 1!
 ```
@@ -194,36 +129,7 @@ the number of and placement of VMs. Refer to the API docs for
 Your ECS service can use ELB to distribute traffic evenly across each of your service's tasks. To target an ECS service
 with your load balancer, pass the listener in your task definition's `portMappings`:
 
-```typescript
-import * as awsx from "@pulumi/awsx";
-
-// Create a new ECS cluster. This will use the default VPC; to override, pass in a VPC manually.
-const cluster = new awsx.ecs.Cluster("my-cluster");
-
-// Create an ALB associated with the default VPC for this region and listen for HTTP on port 80.
-const alb = new awsx.lb.ApplicationLoadBalancer("web-traffic");
-const listener = alb.createListener("web-listener", { port: 80 });
-
-// Create a new ECS service using the 'nginx' image. Supply the listener we just created
-// in the `portMappings` section. This will both properly connect the service and launched
-// instances to the target group. Although we show FargateService, EC2Service works too.
-const nginx = new awsx.ecs.FargateService("nginx-task", {
-    cluster,
-    taskDefinitionArgs: {
-        containers: {
-            nginx: {
-                image: "nginx",
-                memory: 128,
-                portMappings: [ listener ],
-            },
-        },
-    },
-    desiredCount: 2,
-});
-
-// Export the resulting URL so that it's easy to access.
-export const endpoint = listener.endpoint.hostname;
-```
+{{< example-program path="awsx-load-balanced-fargate-nginx" >}}
 
 > [Pulumi Crosswalk for AWS ECS](/docs/clouds/aws/guides/ecs/) -- those classes in the `awsx.ecs` package -- will automatically create the
 > right ingress and egress rules. If you are using raw `aws.ecs`, you will need to manually manage the security group
@@ -257,22 +163,11 @@ documentation.
 
 ## Listening on Private Subnets
 
-By default, your load balancer will use the VPC's public subnets. This listens for traffic coming from the Internet.
+By default, your load balancer will created as _internet-facing_, meaning it'll use the VPC's public subnets and listen for traffic coming from the Internet.
 If you want to instead keep your load balancer private, servicing traffic inside of your VPC over its private subnets,
-set the `external` property to `false`:
+set the `internal` property to `true`:
 
-```typescript
-import * as awsx from "@pulumi/awsx";
-
-// Creates an ALB associated with the default VPC for this region, using its private subnets.
-const alb = new awsx.lb.ApplicationLoadBalancer("web-traffic", { external: false });
-
-// Listen to HTTP traffic on port 80.
-const listener = alb.createListener("web-listener", { port: 80 });
-
-// Export the resulting URL so that it's easy to access.
-export const endpoint = listener.endpoint;
-```
+{{< example-program path="awsx-elb-private-subnet">}}
 
 For complete control, you can elect instead to pass in an explicit list of subnets using the `subnets` property.
 
@@ -280,25 +175,12 @@ For complete control, you can elect instead to pass in an explicit list of subne
 
 Each region contains [a default VPC](https://docs.aws.amazon.com/vpc/latest/userguide/default-vpc.html) for your
 account. The load balancers created above will use it automatically, in addition to its default public or private
-subnets, depending on whether you've overridden the default of public using `external`.
+subnets, depending on whether you've overridden the default of public using `internal`.
 
-If you'd like to create a load balancer for a custom VPC, pass the `vpc` property:
+If you'd like to create a load balancer for a custom VPC, provision (or look up) the VPC, then use the `subnetIds`
+property of the load balancer to associate it with the VPC's public or private subnet:
 
-```typescript
-import * as awsx from "@pulumi/awsx";
-
-// Allocate (or get) a custom VPC:
-const vpc = new awsx.ec2.Vpc("web-vpc", { ... });
-
-// Creates an ALB associated with our custom VPC.
-const alb = new awsx.lb.ApplicationLoadBalancer("web-traffic", { vpc });
-
-// Listen to HTTP traffic on port 80.
-const listener = alb.createListener("web-listener", { port: 80 });
-
-// Export the resulting URL so that it's easy to access.
-export const endpoint = listener.endpoint;
-```
+{{< example-program path="awsx-elb-vpc" >}}
 
 For more information on creating and configuring VPCs, refer to [Pulumi Crosswalk for AWS VPC](/docs/clouds/aws/guides/vpc/).
 
@@ -310,7 +192,7 @@ need. However, target groups and listeners are more powerful than this and have 
 Let's review the core concepts involved in both NLB and ALB style load balancers:
 
 * A _load balancer_ serves as the single point of contact for clients. The load balancer distributes incoming
-  application traffic across multiple targets, such as EC2 instances, in multiple Availability Zones. This increases
+  application traffic across multiple targets, such as EC2 instances, in multiple availability zones. This increases
   the availability of your application. You add one or more listeners to your load balancer.
 
 * A [_listener_](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-listeners.html) checks
@@ -331,14 +213,8 @@ This includes creating target groups automatically that leverage the same inboun
 
 ### Manually Configuring Listeners
 
-A listener may be created as shown earlier (by calling `createListener` on a load balancer), from a target group if
-we want to automatically associate that as its default action (by calling `createListener` on a target group), or
-by allocating a `NetworkTargetGroup` or `ApplicationTargetGroup` explicitly.
-
-During the creation of a listener, there are numerous options available. The `createListener` functions will attempt
-to choose smart defaults based on the scenario of creating the listener against a load balancer or target group.
-
-These options include:
+During the creation of a listener, the `listener` property will attempt to choose smart defaults based on the scenario
+of creating the listener against a load balancer or target group, but there are several configuration options available. These include:
 
 * `protocol`: NLBs support `TCP`, `TLS`, `HTTP`, and `HTTPS`, while ALBs support `HTTP` and `HTTPS`. If not specified,
   NLBs default to `TCP` and ALBs will select `HTTP` or `HTTPS` based on the port supplied.
@@ -348,60 +224,42 @@ These options include:
   [Create an HTTPS Listener for Your Application Load Balancer](
   https://docs.aws.amazon.com/elasticloadbalancing/latest/application/create-https-listener.html) for more information.
 
-* `defaultAction` and `defaultActions`: Configure the rules and actions to take in response to traffic reaching your
+* `defaultActions`: Configure the rules and actions to take in response to traffic reaching your
   load balancer. By default, that entails forwarding traffic to a target group. However, additional options are
-  available via the `ListenerDefaultActionArgs` type. You may provide multiple rules, each with a priority.
+  available via the `ListenerDefaultAction` type. You may provide multiple rules:
 
     * `authenticateCognito`: Enable Cognito authentication for access through your load balancer. For more
-      information, see [Authenticate Users Using and Application Load Balancer](
-      https://docs.aws.amazon.com/elasticloadbalancing/latest/application/listener-authenticate-users.html).
+      information, see [Authenticate Users Using and Application Load Balancer](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/listener-authenticate-users.html).
 
     * `authenticateOidc`: Authenticate access through your load balancer using an OpenID Connect (OIDC) compliant
       identity provider.
 
     * `fixedResponse`: Return a custom HTTP response, rather than forwarding traffic. For details, see
-      [Fixed-Response Actions](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-listeners.html#fixed-response-actions)
+      [Fixed-Response Actions](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-listeners.html#fixed-response-actions).
 
     * `redirect`: Redirect from one URL to another. For details, see
-      [Redirect Actions](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-listeners.html#redirect-actions)
+      [Redirect Actions](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-listeners.html#redirect-actions).
 
-As an example of a custom action, the following load balancer ensures all HTTP traffic is redirected to HTTPS:
+As an example of a custom action, the following load balancer redirects HTTP traffic on port 80 to port 8080 by defining two listeners, one configured to redirect to the other:
 
-```typescript
-import * as awsx from "@pulumi/awsx";
+{{< example-program path="awsx-elb-multi-listener-redirect" >}}
 
-// Create an ALB. One listener on port 80 redirects to port 443, while the 443 listener passes traffic through.
-const alb = new awsx.lb.NetworkLoadBalancer("web-traffic");
-const httpListener = alb.createListener("http-listener", {
-    port: 80,
-    protocol: "HTTP",
-    defaultAction: {
-        type: "redirect",
-        redirect: {
-            protocol: "HTTPS",
-            port: "443",
-            statusCode: "HTTP_301",
-        },
-    },
-});
-const target = alb.createTargetGroup("web-target", { ... });
-const httpsListener = target.createListener("http-listener", { port: 443, ... });
-// attach the target to something that can serve traffic.
+```bash
+$ curl -I "http://$(pulumi stack output endpoint):8080"
 
-// Export the resulting URL so that it's easy to access.
-export const endpoint = listener.endpoint;
+HTTP/1.1 301 Moved Permanently
+Location: http://lb-692829a-1197942792.us-west-2.elb.amazonaws.com:8081/
 ```
 
-For more information on listener rules, refer to the [AWS documentation about listeners](
-https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-listeners.html#rule-action-types).
+For more information on listener rules, refer to the [AWS documentation about listeners](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-listeners.html#rule-action-types).
 
 ### Manually Configuring Target Groups
 
 A target group is automatically created for each listener that doesn't override the default action. This group
 can then be used to load balance any number of targets, including EC2 instances, ECS services, or arbitrary IPs.
 
-To create a target group manually, call `createTargetGroup` on the load balancer, or allocate a
-`NetworkTargetGroup` or `ApplicationTargetGroup` by hand. When doing so, the following additional options are available:
+You can also create a target group manually, either by defining a `defaultTargetGroup` on the load balancer directly or by allocating a
+`TargetGroupAttachment` resource. When doing so, the following additional options are available:
 
 * `deregistrationDelay`: The amount of time for ELB to wait before changing the state of a load balancer from
   draining to unused. The range is 0-3600 seconds, and the default is 300. This is the period of time in which

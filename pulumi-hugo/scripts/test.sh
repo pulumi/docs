@@ -11,9 +11,13 @@ pulumi whoami -v
 #
 
 # Delete install artifacts (but leave any existing go.mod files in place so we can use them.)
-find ./themes/default/static/programs/* -name 'node_modules' | xargs rm -rf
-find ./themes/default/static/programs/* -name 'go.sum' | xargs rm -f
-find ./themes/default/static/programs/* -name 'package-lock.json' | xargs rm -f
+find ./themes/default/static/programs/* -type d -maxdepth 1 -name "node_modules" | xargs rm -rf
+find ./themes/default/static/programs/* -type d -maxdepth 1 -name "venv" | xargs rm -rf
+find ./themes/default/static/programs/* -type d -maxdepth 1 -name "__pycache__" | xargs rm -rf
+find ./themes/default/static/programs/* -type d -maxdepth 1 -name "bin" | xargs rm -rf
+find ./themes/default/static/programs/* -type d -maxdepth 1 -name "obj" | xargs rm -rf
+find ./themes/default/static/programs/* -type d -maxdepth 1 -name "target" | xargs rm -rf
+find ./themes/default/static/programs/* -type f -maxdepth 1 -name "go.sum" | xargs rm -f
 
 # Fix up go.mod files.
 clean_gomods
@@ -22,6 +26,12 @@ unsuffix_gomods
 pushd themes/default/static/programs
     for dir in */; do
         project="$(basename $dir)"
+
+        # Optionally test only selected examples by setting an ONLY_TEST="<example-path>"
+        # environment variable (e.g., ONLY_TEST="awsx-ecr-repository").
+        if [[ ! -z "$ONLY_TEST" && "$dir" != "$ONLY_TEST"* ]]; then
+            continue
+        fi
 
         echo "***"
         echo "* $project"
@@ -34,7 +44,7 @@ pushd themes/default/static/programs
         # Install dependencies.
         pulumi -C "$project" install
 
-        # Skip certain programs known not to work.
+        # Skip previews known not to work.
 
         # Java examples of FargateService erroneously complain about missing container declarations.
         # https://github.com/pulumi/pulumi-awsx/issues/820
@@ -50,15 +60,25 @@ pushd themes/default/static/programs
         pulumi -C "$project" cancel --stack $fqsn --yes || true
         pulumi -C "$project" destroy --stack $fqsn --yes --refresh --remove || true
 
-        # Delete any existing Docker images.
-        # docker rmi -f "$(docker images -aq)" || true
-
         # Create a new stack.
         pulumi -C "$project" stack select $fqsn || pulumi -C "$project" stack init $fqsn
         pulumi -C "$project" config set aws:region us-west-2 || true
 
         # Preview or deploy.
         if [[ "$1" == "update" ]]; then
+
+            # Skip updates known not to work.
+
+            # Error converting 'java.util.Collections$UnmodifiableRandomAccessList' to 'TypeShape{type=interface java.util.List, parameters=[TypeShape{type=class com.pulumi.aws.lb.outputs.TargetGroupTargetHealthState, parameters=[]}]}'.
+            # https://github.com/pulumi/pulumi-java/issues/1276
+            # if [[ "$project" == "awsx-elb-web-listener-java" ]]; then
+            #     continue
+            # elif [[ "$project" == "awsx-elb-multi-listener-redirect-java" ]]; then
+            #     continue
+            # elif [[ "$project" == "awsx-load-balanced-ec2-instances-java" ]]; then
+            #     continue
+            # fi
+
             pulumi -C "$project" up --yes
         else
             pulumi -C "$project" preview
@@ -72,6 +92,3 @@ popd
 
 clean_gomods
 suffix_gomods
-
-# Delete build/test artifacts.
-git clean -fdX themes/default/static/examples

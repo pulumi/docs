@@ -9,10 +9,8 @@
                 <h2>{{ .Params.hero.title }}</h2>
                 <p class="mr-4">{{ .Params.hero.body | markdownify }}</p>
             </div>
-            <div class="w-full order-first lg:order-last mt-8 lg:mt-0 lg:w-1/2 lg:mt-0">
-                <div class="rounded shadow-md" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-                    {{ partial "code" (dict "code" .Params.hero.code "lang" "js" "mode" "dark" "chrome" true) }}
-                </div>
+            <div class="w-full order-first lg:order-last mt-8 lg:w-1/2 lg:mt-0">
+                {{ partial "example-program" (dict "path" "awsx-load-balanced-fargate-nginx") }}
             </div>
         </div>
     </section>
@@ -63,7 +61,11 @@
                     </div>
                 </div>
                 <div class="md:w-1/2">
-                    {{ partial "code" (dict "code" .code "lang" "js" "mode" "dark") }}
+                    {{ if .code }}
+                        {{ partial "code" (dict "code" .code "lang" "js" "mode" "dark") }}
+                    {{ else if .path }}
+                        {{ partial "example-program" (dict "path" .path) }}
+                    {{ end }}
                 </div>
             </div>
         {{ end }}

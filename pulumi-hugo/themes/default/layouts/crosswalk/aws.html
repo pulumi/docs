@@ -71,31 +71,7 @@
                     </p>
                 </div>
                 <div class="md:w-1/2 md:ml:4">
-                    <pulumi-chooser type="language" options="typescript,python,go,csharp,java,yaml">
-                        <pulumi-choosable type="language" class="highlight" value="typescript">
-                            {{ partial "code" (dict "code" .Params.architectures.ts "lang" "ts") }}
-                        </pulumi-choosable>
-
-                        <pulumi-choosable type="language" class="highlight" value="python">
-                            {{ partial "code" (dict "code" .Params.architectures.py "lang" "go") }}
-                        </pulumi-choosable>
-
-                        <pulumi-choosable type="language" class="highlight" value="go">
-                            {{ partial "code" (dict "code" .Params.architectures.go "lang" "go") }}
-                        </pulumi-choosable>
-
-                        <pulumi-choosable type="language" class="highlight" value="csharp">
-                            {{ partial "code" (dict "code" .Params.architectures.csharp "lang" "csharp") }}
-                        </pulumi-choosable>
-
-                        <pulumi-choosable type="language" class="highlight" value="java">
-                            {{ partial "code" (dict "code" .Params.architectures.java "lang" "java") }}
-                        </pulumi-choosable>
-
-                        <pulumi-choosable type="language" class="highlight" value="yaml">
-                            {{ partial "code" (dict "code" .Params.architectures.yaml "lang" "yaml") }}
-                        </pulumi-choosable>
-                    </pulumi-chooser>
+                    {{ partial "example-program" (dict "path" "awsx-load-balanced-fargate-nginx") }}
                 </div>
             </div>
         </div>
@@ -120,31 +96,7 @@
                     </p>
                 </div>
                 <div class="md:w-1/2 md:ml:4">
-                    <pulumi-chooser type="language" options="typescript,python,go,csharp,java,yaml">
-                        <pulumi-choosable type="language" class="highlight" value="typescript">
-                            {{ partial "code" (dict "code" .Params.vpc.ts "lang" "ts") }}
-                        </pulumi-choosable>
-
-                        <pulumi-choosable type="language" class="highlight" value="python">
-                            {{ partial "code" (dict "code" .Params.vpc.py "lang" "go") }}
-                        </pulumi-choosable>
-
-                        <pulumi-choosable type="language" class="highlight" value="go">
-                            {{ partial "code" (dict "code" .Params.vpc.go "lang" "go") }}
-                        </pulumi-choosable>
-
-                        <pulumi-choosable type="language" class="highlight" value="csharp">
-                            {{ partial "code" (dict "code" .Params.vpc.csharp "lang" "csharp") }}
-                        </pulumi-choosable>
-
-                        <pulumi-choosable type="language" class="highlight" value="java">
-                            {{ partial "code" (dict "code" .Params.vpc.java "lang" "java") }}
-                        </pulumi-choosable>
-
-                        <pulumi-choosable type="language" class="highlight" value="yaml">
-                            {{ partial "code" (dict "code" .Params.vpc.yaml "lang" "yaml") }}
-                        </pulumi-choosable>
-                    </pulumi-chooser>
+                    {{ partial "example-program" (dict "path" "awsx-elb-vpc") }}
                 </div>
             </div>
         </div>
