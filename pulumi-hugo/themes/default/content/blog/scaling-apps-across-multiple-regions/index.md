@@ -1,6 +1,6 @@
 ---
 title: "Scaling Applications Across Multiple Regions"
-date: 2023-11-30T20:24:40Z
+date: 2023-12-5T20:24:40Z
 draft: false
 meta_desc: Learn about deploying applications to multiple regions globally. Uncover strategies for achieving high availability in a distributed environment.
 meta_image: meta.png
@@ -202,7 +202,7 @@ pulumi up --stack stagingsea
 
 Now, you have seen how to use stacks to represent regions and environments. With this approach, the dynamism happens through your configuration and your code doesn’t have to change per region.
 
-To see a full application with more detail, click [here](https://github.com/pulumi/pulumitv/tree/master/multi-region).
+To see a full application with more detail, click [here](https://github.com/pulumi/pulumitv/tree/master/2023/december/multi-region).
 
 ## Considerations for high availability
 
