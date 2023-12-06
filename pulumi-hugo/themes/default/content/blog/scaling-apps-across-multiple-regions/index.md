@@ -104,7 +104,7 @@ For configuration values that are shared across stacks, Pulumi ESC allows you to
 
 {{% notes type="info" %}} Pulumi ESC is a feature of Pulumi Cloud and in order to use ESC, you should be using Pulumi Cloud as your backend. {{% /notes %}}
 
-To leverage ESC, you first need to initialize a new environment like this:
+To leverage Pulumi ESC, you first need to initialize a new environment like this:
 
 ```bash
 esc env init shared-multi-region
