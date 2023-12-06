@@ -24,7 +24,7 @@ In this article, we will explore the significance of multi-region scaling and sh
 
 ## Understanding multi-region scaling
 
-When distributed systems adapt (or implement) multi-region scaling, they already position themselves for high availability because the redundancy minimizes downtime and ensures that the service stays up and running. If one region experiences issues, such as server downtime or network problems, the application remains accessible to users in other regions. This also leads to better performance in their systems because a fast and responsive experience for users across the globe is achieved.
+When distributed systems adopt (or implement) multi-region scaling, they position themselves for high availability because the redundancy minimizes downtime and ensures that the service stays up and running. If one region experiences issues, such as server downtime or network problems, the application remains accessible to users in other regions. This also leads to better performance in their systems because a fast and responsive experience for users across the globe is achieved.
 
 It is easier to reach a global audience when you have scaled geographically. This means that if you have customers in Europe and the US and you’re a multi-regional cloud service, by distributing your traffic across different instances, you can improve your customers' experience by serving users worldwide and also catering to diverse regions and time zones. Specific data protection and privacy regulations are also met, as multi-region scaling allows systems to adhere to these regulations by keeping data within defined boundaries.
 
