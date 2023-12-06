@@ -100,7 +100,7 @@ config:
 
 #### Leveraging Pulumi ESC
 
-For configuration values that are shared across stacks, you should use ESC so that you can create them once and reference them everywhere. In the referenced codebase, there are other values e.g. `resourceNamePrefix`, `storageKind`, `storageSkuName`, and `tenantId`. Since these values are the same across all our stacks, we can leverage ESC so that we can declare them once and reuse them everywhere.
+For configuration values that are shared across stacks, Pulumi ESC allows you to  create them once and reference them in multiple stacks. In the referenced codebase, there are other values e.g. `resourceNamePrefix`, `storageKind`, `storageSkuName`, and `tenantId`. Since these values are the same across all our stacks, we can leverage ESC so that we can declare them once and reuse them everywhere.
 
 {{% notes type="info" %}} Pulumi ESC is a feature of Pulumi Cloud and in order to use ESC, you should be using Pulumi Cloud as your backend. {{% /notes %}}
 
