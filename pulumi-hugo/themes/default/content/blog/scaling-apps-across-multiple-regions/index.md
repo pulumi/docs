@@ -68,20 +68,6 @@ pulumi stack init stagingsea
 
 After creating your stacks, you can update your Pulumi configuration YAML files with their corresponding values (typically done with the `pulumi config set` command).
 
-**Pulumi.devwe.yaml:**
-
-```yaml
-config:
-  multi-region:appServiceTier: Free
-  multi-region:appServiceSize: F1
-  multi-region:environment: development
-  multi-region:location: westeurope
-
-environment:
-  imports:
-    - shared-multi-region
-```
-
 **Pulumi.prodwu2.yaml:**
 
 ```yaml
@@ -139,10 +125,10 @@ After successfully adding your config values to your new environment, you can re
 
 ```yaml
 config:
-  multi-region:appServiceTier: Free
-  multi-region:appServiceSize: F1
-  multi-region:environment: development
-  multi-region:location: westeurope
+  multi-region:appServiceTier: Standard
+  multi-region:appServiceSize: S1
+  multi-region:environment: staging
+  multi-region:location: southeastasia
 
 environment:
   imports:
