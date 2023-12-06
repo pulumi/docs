@@ -110,7 +110,7 @@ To leverage Pulumi ESC, you first need to initialize a new environment like this
 esc env init shared-multi-region
 ```
 
-{{% notes type="info" %}} You can use the esc CLI, as shown, or you can use the `pulumi env` command. {{% /notes %}}
+{{% notes type="info" %}} You can use the `esc` CLI, as shown, or you can use the `pulumi env` command. {{% /notes %}}
 
 After which, you can set all the value for the configurations you need. Remember to add it as part of the `pulumiConfig` object, so that your Pulumi stack understands and can pick it up.
 
