@@ -20,43 +20,36 @@ section.docs-home {
     }
 
     div.header {
+        @apply flex flex-col gap-4 p-6 rounded bg-no-repeat bg-bottom bg-cover;
+
         background-image: url("/images/docs/docs-home-header-background-mobile.svg");
-        background-repeat: no-repeat;
-        min-height: 197px;
-        background-position: right 0;
-        display: flex;
-        flex-direction: column;
-        gap: 14px;
-        padding: 28px 0 21px 24px;
-        flex: 1;
 
-        h1 {
-            font-family: 'Gilroy';
-            font-size: 36px;
-            line-height: 36px;
-            color: #2f3032;
-            margin: 0;
+        p {
+            @apply max-w-md;
         }
 
-        @media (min-width: 768px) {
+        @screen md {
+            @apply bg-auto;
             background-image: url("/images/docs/docs-home-header-background-tablet.svg");
-            p {
-                font-size: 15px;
-                max-width: 436px;
+        }
+
+        @screen lg {
+            background-image: url("/images/docs/docs-home-header-background-desktop.svg");
+        }
+
+        @screen xl {
+            .docs-content-width-expanded & {
+                background-image: url("/images/docs/docs-home-header-background-desktop-wide.svg");
+                @apply bg-right;
             }
         }
-        
-        @media (min-width: 1280px) {
-            background-image: url("/images/docs/docs-home-header-background-desktop.svg");
-            p {
-                font-size: 16px;
+
+        @screen xxl {
+            .docs-content-width-expanded & {
+                p {
+                    @apply max-w-lg;
+                }
             }
-            
-            .wider {
-                max-width: 100%;
-                padding-right: 275px;
-            }
-            
         }
 
         div.link-buttons {
@@ -195,12 +188,12 @@ section.docs-home {
             border-radius: 4px;
 
             div.card-icon {
-                background: map-get($gray, 100); 
+                background: map-get($gray, 100);
                 border-bottom: 1px solid map-get($gray, 150);
                 border-radius: 4px 4px 0px 0px;
                 display: flex;
                 justify-content: center;
-                padding: 24px 0px;  
+                padding: 24px 0px;
             }
 
             div.label {

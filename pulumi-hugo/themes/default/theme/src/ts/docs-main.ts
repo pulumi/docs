@@ -38,9 +38,7 @@ $(window).on("load", function() {
         else {
             packageCardBackground.css("background", "#f9f9f9");
         }
-    
     });
-    
 
     function loadContentWidthState() {
         const contentWidthState = window.localStorage.getItem("content-width-state");
@@ -53,14 +51,12 @@ $(window).on("load", function() {
 
     let collapseContentButton = $("#collapse-content-button")
     let expandContentButton = $("#expand-content-button")
-    
+
     function expandContentWidth() {
         $(".docs-main-content").addClass("docs-content-width-expanded");
         if (window.location.pathname.startsWith("/registry")) {
             $(".docs-main-content").addClass("expand-registry");
         }
-        $("#docs-home-banner").find("p").addClass("wider");
-        $("#docs-home-banner").css("background-image", `url("/images/docs/docs-home-header-background-desktop-wide.svg")`);
         collapseContentButton.removeClass("hide");
         expandContentButton.addClass("hide");
         window.localStorage.setItem("content-width-state", "expanded");
@@ -68,11 +64,9 @@ $(window).on("load", function() {
 
     function collapseContentWidth() {
         $(".docs-main-content").removeClass("docs-content-width-expanded");
-        $("#docs-home-banner").find("p").removeClass("wider");
-        $("#docs-home-banner").css("background-image", `url("/images/docs/docs-home-header-background-desktop.svg")`);
         collapseContentButton.addClass("hide");
         expandContentButton.removeClass("hide");
-        window.localStorage.setItem("content-width-state", "collaped");
+        window.localStorage.setItem("content-width-state", "collapsed");
     }
 
     expandContentButton.on("click", expandContentWidth);
@@ -90,7 +84,7 @@ function setDocsMainNavPosition() {
             docsNavToggleIcon.removeClass("close-docs-main-nav")
             docsNavToggleIcon.addClass("open-docs-main-nav");
         }
-    } 
+    }
 
     let mainNav = $(".main-nav");
     let mainNavToggle = $(".docs-nav-toggle");
@@ -108,7 +102,7 @@ function setDocsMainNavPosition() {
 
     if ($(this).width() > 1280) {
         docsMainNavToggleWrapper.removeClass("docs-nav-show");
-        docsMainNavToggleWrapper.removeClass("docs-nav-hide");   
+        docsMainNavToggleWrapper.removeClass("docs-nav-hide");
     } else if (!docsMainNavToggleWrapper.hasClass("docs-nav-hide") && !docsMainNavToggleWrapper.hasClass("docs-nav-show")) {
         docsMainNavToggleWrapper.addClass("docs-nav-hide");
     }
