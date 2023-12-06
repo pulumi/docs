@@ -98,7 +98,7 @@ config:
   multi-region:location: southeastasia
 ```
 
-#### Leveraging ESC
+#### Leveraging Pulumi ESC
 
 For configuration values that are shared across stacks, you should use ESC so that you can create them once and reference them everywhere. In the referenced codebase, there are other values e.g. `resourceNamePrefix`, `storageKind`, `storageSkuName`, and `tenantId`. Since these values are the same across all our stacks, we can leverage ESC so that we can declare them once and reuse them everywhere.
 
