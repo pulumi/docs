@@ -2,9 +2,11 @@
 {{ $languages := default "javascript,typescript,python,go,csharp,java,yaml" .languages }}
 {{ $folder := path.Join "static" "programs" }}
 
-<div>
-    <pulumi-chooser type="language" options="{{ $languages }}"></pulumi-chooser>
-</div>
+{{ if gt (len (split $languages ",")) 1 }}
+    <div>
+        <pulumi-chooser type="language" options="{{ $languages }}"></pulumi-chooser>
+    </div>
+{{ end }}
 
 {{ range $i, $language := split $languages "," }}
     <div class="w-full">

@@ -64,7 +64,7 @@
                     {{ if .code }}
                         {{ partial "code" (dict "code" .code "lang" "js" "mode" "dark") }}
                     {{ else if .path }}
-                        {{ partial "example-program" (dict "path" .path) }}
+                        {{ partial "example-program" (dict "path" .path "languages" .languages) }}
                     {{ end }}
                 </div>
             </div>

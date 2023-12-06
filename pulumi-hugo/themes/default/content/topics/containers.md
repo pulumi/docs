@@ -99,65 +99,11 @@ examples:
       body: >
           This example shows a container used for executing a long-running task. Here, we use a container to
           perform a thumbnail extraction on a piece of video uploaded to an S3 bucket.
-      code: |
-          import * as aws from "@pulumi/aws";
-          import * as awsx from "@pulumi/awsx";
-
-          // A bucket to store videos and thumbnails.
-          const bucket = new aws.s3.Bucket("bucket");
-
-          const repo = new awsx.ecr.Repository("repo", {
-              forceDelete: true,
-          });
-
-          const image = new awsx.ecr.Image("image", {
-              repositoryUrl: repo.url,
-              context: "./app",
-          });
-
-          const role = new aws.iam.Role("thumbnailerRole", {
-              assumeRolePolicy: aws.iam.assumeRolePolicyForPrincipal({ Service: "lambda.amazonaws.com" }),
-          });
-
-          const lambdaS3Access =  new aws.iam.RolePolicyAttachment("lambdaFullAccess", {
-              role: role.name,
-              policyArn: aws.iam.ManagedPolicy.AWSLambdaExecute,
-          });
-
-          const thumbnailer = new aws.lambda.Function("thumbnailer", {
-              packageType: "Image",
-              imageUri: image.imageUri,
-              role: role.arn,
-              timeout: 900,
-          });
-
-          // When a new video is uploaded, run the FFMPEG task on the video file.
-          // Use the time index specified in the filename (e.g. cat_00-01.mp4 uses timestamp 00:01)
-          bucket.onObjectCreated("onNewVideo", thumbnailer, { filterSuffix: ".mp4" });
-
-          // Export the bucket name.
-          export const bucketName = bucket.id;
-
-          // When a new thumbnail is created, log a message.
-          bucket.onObjectCreated("onNewThumbnail", new aws.lambda.CallbackFunction<aws.s3.BucketEvent, void>("onNewThumbnail", {
-              callback: async bucketArgs => {
-                  console.log("onNewThumbnail called");
-                  if (!bucketArgs.Records) {
-                      return;
-                  }
-
-                  for (const record of bucketArgs.Records) {
-                      console.log(`*** New thumbnail: file ${record.s3.object.key} was saved at ${record.eventTime}.`);
-                  }
-              },
-              policies: [
-                  aws.iam.ManagedPolicy.AWSLambdaExecute, // Provides wide access to Lambda and S3
-              ],
-          }), { filterSuffix: ".jpg" });
+      path: aws-lambda-container-thumbnailer
+      languages: javascript,typescript
       cta:
           url: /docs/quickstart
           label: GET STARTED
-
 contact_us_form:
     section_id: contact
     hubspot_form_id: abf0bd4b-5e71-44a9-aad1-b55b5cce561d
