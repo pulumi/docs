@@ -56,7 +56,7 @@ In the next section, we'll show how to deploy applications across different regi
 
 ### Define regions and stacks
 
-Let's look at an example of deploying to three distinct regions — `production westus2`, `production westeurope`, and `staging southeastasia` — using stacks. In this scenario, we will use three specific stacks: `Pulumi.prodwu2.yaml`, `Pulumi.prodwe.yaml`, and `Pulumi.stagingsea.yaml`. Each stack serves not only to organize deployments across different environments but also to cater to the unique configurations required for specific regions.
+Let's look at an example of deploying to three distinct regions — `production westus2`, `production westeurope`, and `staging southeastasia` — using stacks. In this scenario, we will use three stacks: `prodwu2`, `prodwe`, and `stagingsea`. Each of these stacks will have a stack configuration file associated with it, named `Pulumi.<stack>.yaml`. In this example, we are using stacks both to deploy into different environments (production and staging), but also to deploy into different regions (West US 2, West Europe, and Southeast Asia).
 
 You can create your stacks by running:
 
