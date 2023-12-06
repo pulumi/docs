@@ -66,7 +66,7 @@ pulumi stack init prodwe
 pulumi stack init stagingsea
 ```
 
-After creating your stacks, you can update your Pulumi configuration YAML files with their corresponding values.
+After creating your stacks, you can update your Pulumi configuration YAML files with their corresponding values (typically done with the `pulumi config set` command).
 
 **Pulumi.devwe.yaml:**
 
