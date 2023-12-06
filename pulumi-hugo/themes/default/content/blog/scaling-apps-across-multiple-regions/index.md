@@ -206,7 +206,7 @@ Effectively distributing workloads across various geographic regions is a key st
 
 - **Active/Active:** Both regions are active, and requests are load-balanced between them. If one region becomes unavailable, it is taken out of rotation.
 
-In the context of infrastructure-as-code using Pulumi, these strategies often translate to the management of multiple stacks. In active/hot standby and active/active configurations, there will typically be two Pulumi stacks, each with its allocated set of resources. This allows for the independent management and deployment of resources in each region.
+In the context of infrastructure as code using Pulumi, these strategies directly translate to the management of multiple stacks. In active/hot standby and active/active configurations, there will typically be two Pulumi stacks, each with its allocated set of resources. This allows for the independent management and deployment of resources in each region.
 
 On the other hand, in an active/cold standby scenario, while there might be a Pulumi stack defined for the cold standby site, it won't have any resources initially allocated. Part of the failover process would involve running a `pulumi up` specifically for the cold standby region, triggering the allocation of resources as needed. This dynamic resource allocation during failover helps optimize costs, as resources are provisioned only when necessary, contributing to a more efficient use of cloud resources.
 
