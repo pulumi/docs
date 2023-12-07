@@ -1,5 +1,5 @@
 ---
-title: What is a CircleCI secret?
+title: What is a CircleCI Secret?
 meta_desc: |
     Learn more about what CircleCI secrets are and how to use them.
 
