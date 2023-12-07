@@ -2,6 +2,7 @@
 # Name of the webinar.
 title: "Taking AI Apps to Production"
 meta_desc: "The Pinecone and Pulumi teams will explore the infrastructure and service architecture you need to scale AI apps in production."
+meta_image: "/images/resources/taking-ai-apps-to-production-scott.png"
 
 # A featured webinar will display first in the list.
 featured: false
