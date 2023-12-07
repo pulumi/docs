@@ -182,8 +182,8 @@ export class Convert {
                 };
             case "arm":
                 return {
-                    name: "arm2pulumi",
-                    githubURL: "https://github.com/pulumi/arm2pulumi",
+                    name: "the ARM converter",
+                    githubURL: "https://github.com/pulumi/pulumi",
                 };
             case "cf":
                 return {
@@ -449,6 +449,9 @@ export class Convert {
 
         if (this.from === "tf") {
             tool = <code>pulumi convert --from terraform</code>;
+        }
+        if (this.from === "arm") {
+            tool = <code>pulumi convert --from arm</code>;
         }
 
         return (
