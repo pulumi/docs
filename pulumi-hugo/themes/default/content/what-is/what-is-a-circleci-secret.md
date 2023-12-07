@@ -11,7 +11,7 @@ page_title: "What is a CircleCI secret?"
 
 ## What is a CircleCI secret?
 
-CircleCI secrets are sensitive information necessary for building and deploying applications securely within your CI/CD pipeline. They can include API tokens, SSH keys, and environment variables containing credentials. These are to be hidden from the public and even from certain team members to maintain the security and integrity of the access they provide. In CircleCI, secrets are used within the configuration of continuous integration and delivery pipelines to allow automated processes to interact securely with other services, repositories, and infrastructure. Managing these secrets is crucial to prevent unauthorized access and potential security breaches.
+CircleCI secrets are sensitive information that must be protected to guarantee the safe and reliable building and deployment of applications within your CI/CD pipeline. They can include API tokens, SSH keys, and environment variables containing credentials. These are to be hidden from the public and protected with access control to maintain the security and integrity of the access they provide. In CircleCI, secrets are used within the configuration of continuous integration and delivery pipelines to allow automated processes to interact securely with other services, repositories, and infrastructure. Managing these secrets is crucial to prevent unauthorized access and potential security breaches.
 
 ### Key features
 
