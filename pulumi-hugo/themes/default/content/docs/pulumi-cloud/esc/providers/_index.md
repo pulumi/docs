@@ -7,6 +7,7 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     pulumicloud:
         parent: esc
+        weight: 5
         identifier: esc-providers
 ---
 
