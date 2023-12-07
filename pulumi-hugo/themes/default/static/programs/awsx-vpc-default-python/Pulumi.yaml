@@ -1,0 +1,6 @@
+name: awsx-vpc-default-python
+runtime:
+  name: python
+  options:
+    virtualenv: venv
+description: An example of fetching the default AWS VPC for the current region.

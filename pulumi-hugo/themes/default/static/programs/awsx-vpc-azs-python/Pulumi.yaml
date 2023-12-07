@@ -1,0 +1,6 @@
+name: awsx-vpc-azs-python
+runtime:
+  name: python
+  options:
+    virtualenv: venv
+description: An example that creates a new VPC and configuring availability zones.

@@ -1,0 +1,3 @@
+name: awsx-vpc-sg-ec2-csharp
+runtime: dotnet
+description: An example that deploys an EC2 instance using a VPC and security group with Crosswalk for AWS.

@@ -1,0 +1,14 @@
+name: awsx-vpc-default-yaml
+runtime: yaml
+description: An example of fetching the default AWS VPC for the current region.
+
+resources:
+  # Fetch the default VPC for the current AWS region.
+  default-vpc:
+    type: awsx:ec2:DefaultVpc
+
+outputs:
+  # Export a few properties to make them easy to use.
+  vpcId: ${default-vpc.vpcId}
+  publicSubnetIds: ${default-vpc.publicSubnetIds}
+  privateSubnetIds: ${default-vpc.privateSubnetIds}

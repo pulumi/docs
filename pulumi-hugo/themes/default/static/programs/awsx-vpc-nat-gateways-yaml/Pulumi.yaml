@@ -1,0 +1,13 @@
+name: awsx-vpc-nat-gateways-yaml
+runtime: yaml
+description: An example that creates a new VPC with a custom NAT gateway strategy.
+
+resources:
+  vpc:
+    type: awsx:ec2:Vpc
+    properties:
+      natGateways:
+        strategy: Single
+
+outputs:
+  vpcId: ${vpc.vpcId}

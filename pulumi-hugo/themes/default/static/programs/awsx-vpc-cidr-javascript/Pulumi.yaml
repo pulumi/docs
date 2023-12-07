@@ -1,0 +1,6 @@
+name: awsx-vpc-cidr-javascript
+runtime:
+  name: nodejs
+  options:
+    typescript: false
+description: An example that creates a new VPC and configuring a custom CIDR block.
