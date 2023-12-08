@@ -136,7 +136,7 @@ Addressing these challenges and considerations requires a thoughtful approach to
 
 ## Conclusion  
 
-Cloudflare secrets are essential for secret management in cloud environments, particularly for applications running on Cloudflare. Properly utilizing Cloudflare secrets can significantly strengthen the security and management of sensitive data in cloud applications. Consider exploring more Cloudflare services and tools to enhance your cloud infrastructure's security and management efficiency.
+Following security best practices for Cloudflare secrets are crucial in managing sensitive information in your solutions, applications, and cloud environments.
 
 Now that you know Cloudflare secrets, take your cloud infrastructure management to the next level with [Pulumi](link):
 
