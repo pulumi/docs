@@ -326,7 +326,7 @@ The following topics provide more details on the core concepts of Pulumi and how
 <div class="md:flex flex-row mt-6 mb-6">
     <div class="md:w-1/2 border-solid md:ml-4 border-t-2 border-gray-200">
         <h3 class="no-anchor pt-4"><a href="/docs/concepts/environments"><i class="fas fa-cubes pr-2"></i>Environments (ESC)</a></h3>
-        <p>Learn how to configure various environments in Pulumi.</p>
+        <p>Learn how to configure your deployment environments with Pulumi ESC.</p>
     </div>
      <div class="md:w-1/2 border-solid border-t-2 border-gray-200">
         <h3 class="no-anchor pt-4"><a href="/docs/concepts/state"><i class="fas fa-file-alt pr-2"></i>State and Backends</a></h3>
