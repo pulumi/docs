@@ -45,18 +45,16 @@ Make sure to replace `<your-org>` and `<your-environment>` with the values of yo
 
 ```json
 {
-  "azure": {
+  "environmentVariables": {
+    "GOOGLE_PROJECT": 111111111111
+    "CLOUDSDK_AUTH_ACCESS_TOKEN": "ya29...."
+  },
+  "gcp": {
     "login": {
-      "clientId": "b537....",
-      "oidc": {
-        "token": "eyJh...."
-      },
-      "subscriptionId": "0282....",
-      "tenantId": "7061...."
-    },
-    "secrets": {
-      "api-key": "my-api-key",
-      "app-secret": "my-app-secret"
+      "accessToken": "ya29.....",
+      "expiry": "2023-11-09T11:12:41Z",
+      "project": 111111111111,
+      "tokenType": "Bearer"
     }
   }
 }
