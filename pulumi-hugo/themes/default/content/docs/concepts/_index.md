@@ -342,7 +342,7 @@ The following topics provide more details on the core concepts of Pulumi and how
     </div>
     <div class="md:w-1/2 border-solid border-t-2 border-gray-200">
         <h3 class="no-anchor pt-4"><a href="/docs/concepts/update-plans"><i class="fas fa-upload pr-2"></i>Update Plans</a></h3>
-        <p>Learn how to use update plans.</p>
+        <p>Learn about how to constrain your deployments with update plans.</p>
     </div>
 </div>
 
