@@ -294,7 +294,7 @@ The following topics provide more details on the core concepts of Pulumi and how
     </div>
     <div class="md:w-1/2 border-solid border-t-2 border-gray-200">
         <h3 class="no-anchor pt-4"><a href="/docs/concepts/resources"><i class="fas fa-server pr-2"></i>Resources</a></h3>
-        <p>Learn more about how to use and manage resources in your program.</p>
+        <p>Learn more about how to use and manage resources in your programs.</p>
     </div>
 </div>
 
