@@ -83,7 +83,7 @@ $ npx wrangler secret list
 ]
 ```
 
-### Accessing the secret by a Cloudflare Worker
+### Accessing the secret from a Cloudflare Worker
 
 Now that you have created a secret, your application can access it by referencing it in the Worker code.
 
