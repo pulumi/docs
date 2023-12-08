@@ -110,7 +110,7 @@ Published secrets-demo (3.61 sec)
 Current Deployment ID: e7c2b8e7-e13a-4a11-9667-024eed3cce05
 ```
 
-Read the secret by curling the deployment URL
+Read the secret by curling the deployment URL.
 
 ```bash
 $ curl https://secrets-demo.diana-247.workers.dev
