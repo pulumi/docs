@@ -118,7 +118,7 @@ $ curl https://secrets-demo.diana-247.workers.dev
 Secret: dragons and unicorns are real
 ```
 
-## Best Practices
+## Best practices
 
 - **Rotate secrets regularly**: Implement a routine for regularly rotating secrets to enhance security.
 - **Provide least-privilege access**: Employ policies for granular access control to secrets.
