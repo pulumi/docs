@@ -97,7 +97,7 @@ export default {
 };
 ```
 
-Deploy the changes
+Deploy the changes.
 
 ```bash
 $ npx wrangler deploy
