@@ -8,22 +8,16 @@ div.highlight {
         flex: 1;
     }
 
-
     .copy-button-container {
         display: none;
 
-        i.copy {
-            display: none;
-        }
-
         flex-direction: row;
         width: fit-content;
-        margin: 5px 3px 0 0;
+        margin: 8px 7px 0 0;
         background: #4d5bd9;
-        
+
         box-shadow: 0px 0px 12px #364098;
         border-radius: 4px;
-        padding: 3px 7px 5px 7px;
         position: absolute;
         top: 0;
         right: 0;
@@ -70,8 +64,9 @@ div.highlight {
     .copy-button {
         @include transition;
         color: #fff;
-        font-size: 12px;
+        font-size: 14px;
         font-family: 'Inter';
+        padding: 8px 8px 8px 10px;
 
         .code-mode-dark & {
             @apply text-gray-600;
