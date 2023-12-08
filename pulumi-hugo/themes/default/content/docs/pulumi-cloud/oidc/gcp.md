@@ -155,6 +155,7 @@ Make sure to replace `<your-org>` and `<your-environment>` with the values of yo
 {
   "environmentVariables": {
     "GOOGLE_PROJECT": 111111111111
+    "CLOUDSDK_AUTH_ACCESS_TOKEN": "ya29...."
   },
   "gcp": {
     "login": {
@@ -163,9 +164,6 @@ Make sure to replace `<your-org>` and `<your-environment>` with the values of yo
       "project": 111111111111,
       "tokenType": "Bearer"
     }
-  },
-  "pulumiConfig": {
-    "gcp:accessToken": "ya29...."
   }
 }
 ```
