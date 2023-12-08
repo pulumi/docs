@@ -132,7 +132,8 @@ Using Cloudfalre secrets comes with particular challenges and considerations:
 - **Access control complexity:** Setting up fine-grained access controls is crucial but can become complex as teams and projects scale. Defining and maintaining access permissions for different roles and responsibilities can be challenging. Clearly define roles and duties to determine who needs access to specific secrets. Use role-based access control (RBAC) principles to simplify and organize permissions.
 - **Integration with external secret management systems:**  Organizations may already have established processes for secrets management using external tools, and integrating these with Cloudfalre secrets can be complex. Evaluate whether integrating with an external secrets management system is necessary for your organization. If required, explore solutions that integrate with Cloudfalre and provide a unified approach to secrets management. Ensure that the chosen solution aligns with your security and compliance requirements.
 
-Addressing these challenges and considerations requires a thoughtful approach to [secrets management](./what-is-secrets-management.md), clear communication within the development team, and a commitment to maintaining security best practices.
+Addressing these challenges and considerations requires a thoughtful approach to [secrets management](
+/what-is/what-is-secrets-management/), clear communication within the development team, and a commitment to maintaining security best practices.
 
 ## Conclusion  
 
