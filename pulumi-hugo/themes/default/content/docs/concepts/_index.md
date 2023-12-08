@@ -302,7 +302,7 @@ The following topics provide more details on the core concepts of Pulumi and how
 <div class="md:flex flex-row mt-6 mb-6">
     <div class="md:w-1/2 border-solid md:ml-4 border-t-2 border-gray-200">
         <h3 class="no-anchor pt-4"><a href="/docs/concepts/options"><i class="fas fa-swatchbook pr-2"></i>Resource options</a></h3>
-        <p>Learn more about how to use and manage resources options in your program.</p>
+        <p>Learn more about how to use and manage resource options in your program.</p>
     </div>
     <div class="md:w-1/2 border-solid border-t-2 border-gray-200">
         <h3 class="no-anchor pt-4"><a href="/docs/concepts/inputs-outputs"><i class="fas fa-file-import pr-2"></i>Inputs and Outputs</a></h3>
