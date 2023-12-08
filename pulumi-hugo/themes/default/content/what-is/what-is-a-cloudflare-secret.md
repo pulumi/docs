@@ -4,7 +4,7 @@ meta_desc: |
     Learn more about what Cloudflare secrets are and how to use them.
 
 type: what-is
-page_title: "What is a Cloudflare secret?"
+page_title: "What is a Cloudflare Secret?"
 ---
 
 
