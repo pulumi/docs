@@ -305,7 +305,7 @@ The following topics provide more details on the core concepts of Pulumi and how
         <p>Learn more about how to use and manage resource options in your program.</p>
     </div>
     <div class="md:w-1/2 border-solid border-t-2 border-gray-200">
-        <h3 class="no-anchor pt-4"><a href="/docs/concepts/inputs-outputs"><i class="fas fa-file-import pr-2"></i>Inputs and Outputs</a></h3>
+        <h3 class="no-anchor pt-4"><a href="/docs/concepts/inputs-outputs"><i class="fas fa-file-import pr-2"></i>Inputs and outputs</a></h3>
         <p>Learn how to use resource properties to handle dependencies between resources.</p>
     </div>
 </div>
