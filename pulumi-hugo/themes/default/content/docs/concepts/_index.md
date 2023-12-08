@@ -341,7 +341,7 @@ The following topics provide more details on the core concepts of Pulumi and how
         <p>Learn about how to access log information for diagnostics and debugging.</p>
     </div>
     <div class="md:w-1/2 border-solid border-t-2 border-gray-200">
-        <h3 class="no-anchor pt-4"><a href="/docs/concepts/update-plans"><i class="fas fa-upload pr-2"></i>Update Plans</a></h3>
+        <h3 class="no-anchor pt-4"><a href="/docs/concepts/update-plans"><i class="fas fa-upload pr-2"></i>Update plans</a></h3>
         <p>Learn about how to constrain your deployments with update plans.</p>
     </div>
 </div>
