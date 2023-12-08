@@ -4,26 +4,28 @@ set -o errexit -o pipefail
 
 source ./scripts/common.sh
 
-pulumi whoami -v
+programs_dir="themes/default/static/programs"
 
-#
-# Run program tests.
-#
-
-# Delete install artifacts (but leave any existing go.mod files in place so we can use them.)
-find ./themes/default/static/programs/* -type d -maxdepth 1 -name "node_modules" | xargs rm -rf
-find ./themes/default/static/programs/* -type d -maxdepth 1 -name "venv" | xargs rm -rf
-find ./themes/default/static/programs/* -type d -maxdepth 1 -name "__pycache__" | xargs rm -rf
-find ./themes/default/static/programs/* -type d -maxdepth 1 -name "bin" | xargs rm -rf
-find ./themes/default/static/programs/* -type d -maxdepth 1 -name "obj" | xargs rm -rf
-find ./themes/default/static/programs/* -type d -maxdepth 1 -name "target" | xargs rm -rf
-find ./themes/default/static/programs/* -type f -maxdepth 1 -name "go.sum" | xargs rm -f
+# Delete install artifacts, but leave existing go.mod files.
+git clean -fdX -e '!go.mod' "${programs_dir}/*"
 
 # Fix up go.mod files.
 clean_gomods
 unsuffix_gomods
 
-pushd themes/default/static/programs
+# By default, only run previews.
+mode="${1:-preview}"
+
+# If we're only running previews, just use local mode -- it's faster.
+if [[ "$mode" == "preview" ]]; then
+    org="organization"
+    export PULUMI_CONFIG_PASSPHRASE="foo"
+    pulumi login --local
+else
+    org="$(pulumi whoami -v --json | jq -r .user)"
+fi
+
+pushd "$programs_dir"
     for dir in */; do
         project="$(basename $dir)"
 
@@ -33,11 +35,12 @@ pushd themes/default/static/programs
             continue
         fi
 
+        echo
         echo "***"
         echo "* $project"
         echo "***"
+        echo
 
-        org="$(pulumi whoami -v --json | jq -r .user)"
         stack="dev"
         fqsn="${org}/${project}/${stack}"
 
@@ -65,19 +68,19 @@ pushd themes/default/static/programs
         pulumi -C "$project" config set aws:region us-west-2 || true
 
         # Preview or deploy.
-        if [[ "$1" == "update" ]]; then
+        if [[ "$mode" == "update" ]]; then
 
             # Skip updates known not to work.
 
             # Error converting 'java.util.Collections$UnmodifiableRandomAccessList' to 'TypeShape{type=interface java.util.List, parameters=[TypeShape{type=class com.pulumi.aws.lb.outputs.TargetGroupTargetHealthState, parameters=[]}]}'.
             # https://github.com/pulumi/pulumi-java/issues/1276
-            # if [[ "$project" == "awsx-elb-web-listener-java" ]]; then
-            #     continue
-            # elif [[ "$project" == "awsx-elb-multi-listener-redirect-java" ]]; then
-            #     continue
-            # elif [[ "$project" == "awsx-load-balanced-ec2-instances-java" ]]; then
-            #     continue
-            # fi
+            if [[ "$project" == "awsx-elb-web-listener-java" ]]; then
+                continue
+            elif [[ "$project" == "awsx-elb-multi-listener-redirect-java" ]]; then
+                continue
+            elif [[ "$project" == "awsx-load-balanced-ec2-instances-java" ]]; then
+                continue
+            fi
 
             pulumi -C "$project" up --yes
         else
@@ -86,9 +89,14 @@ pushd themes/default/static/programs
 
         # Destroy and remove.
         pulumi -C "$project" destroy --yes --remove
-
     done
 popd
 
 clean_gomods
 suffix_gomods
+
+# Log out of local mode.
+if [[ "$mode" == "preview" ]]; then
+    export PULUMI_CONFIG_PASSPHRASE="foo"
+    pulumi logout --local
+fi
