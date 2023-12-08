@@ -329,7 +329,7 @@ The following topics provide more details on the core concepts of Pulumi and how
         <p>Learn how to configure your deployment environments with Pulumi ESC.</p>
     </div>
      <div class="md:w-1/2 border-solid border-t-2 border-gray-200">
-        <h3 class="no-anchor pt-4"><a href="/docs/concepts/state"><i class="fas fa-file-alt pr-2"></i>State and Backends</a></h3>
+        <h3 class="no-anchor pt-4"><a href="/docs/concepts/state"><i class="fas fa-file-alt pr-2"></i>State and backends</a></h3>
         <p>Learn how Pulumi stores state and manages concurrency.</p>
     </div>
 </div>
