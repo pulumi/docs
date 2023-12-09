@@ -9,9 +9,8 @@
 {{ end }}
 
 {{ range $i, $language := split $languages "," }}
-    <div class="w-full">
+    <div class="example-program w-full">
         <pulumi-choosable type="language" values="{{ $language }}">
-            <div>
                 {{ $program := "" }}
                 {{ $depfile := "" }}
                 {{ $deplang := "" }}
@@ -48,8 +47,15 @@
                     <div data-program-path="{{ $path }}" data-program-language="{{ $language }}" data-program-file="{{ $program }}" data-program-depfile="{{ $depfile }}">
                         {{ highlight $code $language }}
                     </div>
+                    <div class="example-program-footer bg-white">
+                        <pulumi-tooltip>
+                            <a href="https://github.com/pulumi/pulumi-hugo/tree/{{ site.Params.contentRepositoryBaseBranch }}/{{ getenv "REPO_THEME_PATH" }}static/programs/{{ $path }}-{{ $language }}" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <span slot="content">Open this example on GitHub</span>
+                        </pulumi-tooltip>
+                    </div>
                 {{ end }}
-            </div>
         </pulumi-choosable>
     </div>
 {{ end }}
