@@ -43,7 +43,7 @@ To use secrets in GitHub Actions, you'd need to follow these steps:
     - Provide a name for the environment, e.g., `demo``.
     - Click on the "Configure environment" button.
 
-2. **Create an Environment secret**
+2. **Create an environment secret**
 
     - In the environment configuration page from Step 1,
     - Scroll to the "Environment secrets" section.
@@ -53,7 +53,7 @@ To use secrets in GitHub Actions, you'd need to follow these steps:
             Value: `github_pat_123123123`
     - Click "Add secret" to save it.
 
-3. **Use the secret in the Workflow**
+3. **Use the secret in the workflow**
 
     - You can see a reference to the secret using the `secrets.` context in the workflow YAML file (e.g., ``.github/workflows/super-linter.yml`)
     - Ensure the name of the secret matches: `GITHUB_TOKEN: ${{ secrets.DEMO_GITHUB_TOKEN }}`
