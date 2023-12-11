@@ -19,7 +19,7 @@ Using GitHub Action Secrets provides several key features that enhance the secur
 
 - **Automatic encryption** - Secrets are always encrypted.
 - **Limited access** - A workflow will access a referenced secret during execution only. The GitHub UI does not expose secrets, nor are they available to users viewing the repository.
-- **Log Redaction** - GitHub Actions automatically redacts secrets from most logs and prevents them from being exposed in the workflow run logs.
+- **Log redaction** - GitHub Actions automatically redacts secrets from most logs and prevents them from being exposed in the workflow run logs.
 - **Dynamic configurations** - By referencing secrets in workflow files, you can easily update sensitive information without modifying the code. This flexibility is beneficial when collaborating with others or managing multiple environments (e.g., development, staging, production).
 
 ## Using GitHub Action Secrets
