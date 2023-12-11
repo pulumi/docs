@@ -41,7 +41,13 @@ Let's review some of the generated project files:
 
 {{% /choosable %}}
 
-{{% choosable language "javascript,typescript,python,go,java" %}}
+{{% choosable language python %}}
+
+- `__main__.py` is the Pulumi program that defines your stack resources.
+
+{{% /choosable %}}
+
+{{% choosable language "javascript,typescript,go,csharp,java" %}}
 
 <!-- The wrapping spans are infortunately necessary here; without them, the renderer gets confused and generates invalid markup. -->
 - <span>{{< langfile >}}</span> is the Pulumi program that defines your stack resources.
