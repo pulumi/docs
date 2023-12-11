@@ -1,6 +1,6 @@
 module awsx-vpc-azs-go
 
-go 1.21
+go 1.20
 
 require (
 	github.com/pulumi/pulumi-awsx/sdk/v2 v2.3.0
