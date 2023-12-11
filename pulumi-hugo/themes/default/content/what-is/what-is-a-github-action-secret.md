@@ -34,7 +34,7 @@ An existing GitHub personal access token is required to proceed. Navigate to you
 
 To use secrets in GitHub Actions, you'd need to follow these steps:
 
-1. **Create a new Environment**
+1. **Create a new environment**
 
     - Go to your GitHub repository.
     - Click on the "Settings" tab.
