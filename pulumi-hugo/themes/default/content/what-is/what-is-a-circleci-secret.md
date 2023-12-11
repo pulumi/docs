@@ -1,28 +1,28 @@
 ---
 title: What is a CircleCI Secret?
 meta_desc: |
-    Learn more about what CircleCI secrets are and how to use them.
+    Learn more about CircleCI Secrets and how to use them.
 
 type: what-is
 page_title: "What is a CircleCI Secret?"
 ---
 
-[CircleCI](https://circleci.com/) is an agile continuous integration/continuous deployment ([CI/CD](./what-is-ci-cd.md)) platform. It aims to automate software development processes for faster, more reliable releases. CircleCI secrets empower developers to safeguard critical data while streamlining workflows.
+[CircleCI](https://circleci.com/) is an agile, continuous integration/continuous deployment ([CI/CD](./what-is-ci-cd.md)) platform. It aims to automate software development processes for faster, more reliable releases. CircleCI secrets empower developers to safeguard critical data while streamlining workflows.
 
-## What is a CircleCI secret?
+## What is a CircleCI Secret?
 
-CircleCI secrets are sensitive information that must be protected to guarantee the safe and reliable building and deployment of applications within your CI/CD pipeline. They can include API tokens, SSH keys, and environment variables containing credentials. These are to be hidden from the public and protected with access control to maintain the security and integrity of the access they provide. In CircleCI, secrets are used within the configuration of continuous integration and delivery pipelines to allow automated processes to interact securely with other services, repositories, and infrastructure. Managing these secrets is crucial to prevent unauthorized access and potential security breaches.
+CircleCI Secrets are sensitive information that must be protected to guarantee the safe and reliable building and deployment of applications within your CI/CD pipeline. They can include API tokens, SSH keys, and environment variables containing credentials. These are to be hidden from the public and protected with access control to maintain security and integrity. In CircleCI, secrets are used within the configuration of continuous integration and delivery pipelines to allow automated processes to interact securely with other services, repositories, and infrastructure. Managing these secrets is crucial to prevent unauthorized access and potential security breaches.
 
 ### Key features
 
-- **Pipeline integration:** CircleCI secrets integrate into workflows, eliminating the need for complex setup. This built-in solution ensures automatic retrieval and management of credentials throughout the build, test, and deployment phases.
+- **Pipeline integration:** CircleCI Secrets integrate into workflows, eliminating the need for complex setup. This built-in solution ensures automatic retrieval and management of credentials throughout the build, test, and deployment phases.
 - **Environment variable flexibility:** CircleCI secrets can be easily referenced as environment variables across workflows. This flexibility allows a single codebase to cater to various development environments, including Dev, QA, pre-prod, etc.
 - **Centralized version control:** CircleCI centralizes configuration files with secret references in the `.circleci` home directory. This approach removes the necessity of embedding sensitive data directly into your application.
-- **Native CircleCI tools for secrets management:** The [CircleCI CLI](https://github.com/CircleCI-Public/circleci-cli) and [CircleCI-Env-Inspector](https://github.com/CircleCI-Public/CircleCI-Env-Inspector) provides support for secrets management. The Inspector tool includes the ability to effortlessly create, rotate, audit, and generate reports—all without the hassle of installing additional complex systems.
+- **Native CircleCI tools for secrets management:** The [CircleCI CLI](https://github.com/CircleCI-Public/circleci-cli) and [CircleCI-Env-Inspector](https://github.com/CircleCI-Public/CircleCI-Env-Inspector) provide support for secrets management. The Inspector tool includes the ability to effortlessly create, rotate, audit, and generate reports—all without the hassle of installing additional complex systems.
 
-## Getting started with CircleCI secrets
+## Getting started with CircleCI Secrets
 
-### Define a CircleCI secret via the CLI
+### Define a CircleCI Secret via the CLI
 
 To complete the CLI Installation, visit the [official installation page](https://circleci.com/docs/local-cli/). Then, define a secret via the CLI as follows:
 
@@ -86,7 +86,7 @@ This example illustrates how CircleCI secrets can be leveraged within jobs to se
 
 ### Configure CircleCI workflows with secrets
 
-A workflow is a set of rules defining a collection of jobs and their run order. You can integrate CircleCI secrets into workflows by referencing them in the configuration files. Doing so ensures your sensitive data remains secure while being accessible during the execution of CI/CD pipelines. For example, let's assume you have a secret named `API_KEY` that you've defined for your CircleCI project. In your `.circleci/config.yml` file, you can reference this secret within your workflow steps:
+A workflow is a set of rules defining a collection of jobs and their run order. You can integrate CircleCI secrets into workflows by referencing them in the configuration files. Doing so ensures your sensitive data remains secure while being accessible during the execution of CI/CD pipelines. For example, assume you have a secret named `API_KEY` that you've defined for your CircleCI project. In your `.circleci/config.yml` file, you can reference this secret within your workflow steps:
 
 ```yaml
 version: 2.1
@@ -139,19 +139,19 @@ Check out [more security recommendations](https://circleci.com/docs/security-rec
 Using CircleCI secrets comes with particular challenges and considerations that organizations should know to ensure a secure and efficient CI/CD pipeline.
 
 - **Management of secrets overhead:**  As the number of secrets and contexts grows, managing them can become challenging. Teams must actively track and monitor the usage of secrets, identifying where and by whom they are employed.
-- **Access control complexity:** Setting up fine-grained access controls is crucial but can become complex as teams and projects scale. Defining and maintaining access permissions for different roles and responsibilities can be challenging. Clearly define roles and duties to determine who needs access to specific secrets. Use role-based access control (RBAC) principles to simplify and organize permissions.
-- **Integration with external secret management systems:**  Organizations may already have established processes for secrets management using external tools, and integrating these with CircleCI secrets can be complex. Evaluate whether integrating with an external secrets management system is necessary for your organization. If required, explore solutions that integrate with CircleCI and provide a unified approach to secrets management. Ensure that the chosen solution aligns with your security and compliance requirements.
+- **Access control complexity:** Setting up fine-grained access controls is crucial but can become complex as teams and projects scale. Defining and maintaining access permissions for different roles and responsibilities can be challenging. Clearly define roles to determine who needs access to specific secrets. Use role-based access control (RBAC) principles to simplify and organize permissions.
+- **Integration with external secret management systems:**  Organizations may already have established processes for secret management using external tools, and integrating these with CircleCI secrets can be complex. Evaluate whether integrating with an external secrets management system is necessary for your organization. If required, explore solutions that integrate with CircleCI and provide a unified approach to secrets management. Ensure that the chosen solution aligns with your security and compliance requirements.
 
 Addressing these challenges and considerations requires a thoughtful approach to [secrets management](./what-is-secrets-management.md), clear communication within the development team, and a commitment to maintaining security best practices throughout the CI/CD pipeline. Regular reviews and updates to your secret management strategy will help ensure a secure and efficient development process.
 
 ## Conclusion
 
-Securing secrets in CircleCI is crucial for reinforcing the security of your CI/CD pipelines without compromising efficiency. Properly managing sensitive data within these workflows is essential to maintain the confidentiality of critical information. This not only safeguards your data but also streamlines development processes, striking a balance between security and operational agility.
+Securing secrets in CircleCI is crucial for reinforcing the security of your CI/CD pipelines without compromising efficiency. Properly managing sensitive data within these workflows is essential to maintain the confidentiality of critical information. CircleCI Secrets streamline development processes, balancing security and operational agility.
 
 Now that you know about CircleCI secrets, take your cloud infrastructure management to the next level with Pulumi:
 
 - **Connect [Pulumi IaC to CircleCI](https://www.pulumi.com/docs/using-pulumi/continuous-delivery/circleci/)**. Use Pulumi Orbs to create, deploy, and manage cloud-native applications and infrastructure in your favorite language.
 - **Integrate Pulumi in your pipelines**: Review a comprehensive guide on how to [build cloud infrastructure from your CI pipeline with Pulumi](https://circleci.com/blog/reusable-ci-cd-components-with-circleci-orbs-and-pulumi/)
-- **Use Pulumi ESC**: Discover how to manage sensitive data and secrets in your cloud applications efficiently. Dive into Pulumi's [Secrets Management guide](/blog/managing-secrets-with-pulumi/) for in-depth information on encrypting specific values for added security and ensuring that these values never appear in plain text in your state file​.
+- **Use Pulumi ESC**: Discover how to manage sensitive information in your cloud applications. Dive into Pulumi's [Secrets Management guide](/blog/managing-secrets-with-pulumi/) for in-depth information on encrypting specific values for added security and ensuring that these values never appear in plain text in your state file​.
 
 Our [community on Slack](https://slack.pulumi.com/) is always open for discussions, questions, and sharing experiences. Join us there and become part of our growing community of cloud professionals!

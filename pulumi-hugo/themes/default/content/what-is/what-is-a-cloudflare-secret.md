@@ -1,26 +1,25 @@
 ---
 title: What is a Cloudflare Secret?
 meta_desc: |
-    Learn more about what Cloudflare secrets are and how to use them.
+    Learn more about Cloudflare Secrets and how to use them.
 
 type: what-is
 page_title: "What is a Cloudflare Secret?"
 ---
 
+[Cloudflare](https://www.cloudflare.com/) operates one of the world's largest networks, providing network and cloud services to improve website and application security and performance. A critical security aspect of building applications and solutions integrating with Cloudflare involves the management of sensitive data, commonly known as [secrets](/what-is/what-is-secrets-management/)." Cloudflare has a secure mechanism for handling secrets, offering tools for storing, accessing, and managing confidential information in the cloud.
 
-[Cloudflare](https://www.cloudflare.com/) operates one of the world's largest networks, providing network and cloud services to improve website and application security and performance. A critical security aspect of building applications and solutions integrating with Cloudflare involves the management of sensitive data, commonly known as secrets. "[secrets](/what-is/what-is-secrets-management/)." Cloudflare has a secure mechanism for handling secrets, offering tools for storing, accessing, and managing confidential information in the cloud.
+## What is a Cloudflare Secret?
 
-## What is a Cloudflare secret?
-
-Cloudflare secrets are sensitive information stored as encrypted environment variables for serverless applications known as [Cloudflare Workers](https://developers.cloudflare.com/workers/). Secrets include but are not limited to database credentials, API keys, and other confidential data. There is no need to hard-code sensitive information in plain text.
+Cloudflare secrets are sensitive information stored as encrypted environment variables for [Cloudflare Workers](https://developers.cloudflare.com/workers/) - serverless applications. Secrets include but are not limited to database credentials, API keys, and other confidential data. There is no need to hard-code sensitive information in plain text.
 
 ### Key features
 
 - **Secure and encrypted storage**: Secrets in Cloudflare are encrypted during transit and at rest, ensuring high security.
-- **Native application integration:** Cloudflare secrets integrate directly with Cloudflare Workers, eliminating the need for complex setup. This built-in solution ensures automatic retrieval and management of credentials.
+- **Native application integration:** Cloudflare secrets integrate directly with Cloudflare Workers, eliminating the need for complex setup. This built-in solution provides automatic retrieval and management of credentials.
 - **Environment variable flexibility:** Cloudflare secrets are easily referenced as environment variables across Workers.
 
-## Creating Cloudflare secrets via the CLI
+## Creating Cloudflare Secrets via the CLI
 
 You can create secrets via [Wrangler](https://developers.cloudflare.com/workers/wrangler/), the Cloudflare Workers CLI.
 
@@ -120,20 +119,20 @@ Secret: dragons and unicorns are real
 
 ## Best practices
 
-- **Rotate secrets regularly**: Implement a routine for regularly rotating secrets to enhance security.
+- **Rotate secrets regularly**: Implement a routine for periodically rotating secrets to enhance security.
 - **Provide least-privilege access**: Employ policies for granular access control to secrets.
 - **Audit and monitor secret access**: Use monitoring tools to track access and modifications to your secrets.
 
 ### Challenges and considerations
 
-Using Cloudfalre secrets comes with particular challenges and considerations:
+Using Cloudflare Secrets comes with particular challenges and considerations:
 
 - **Management of secrets overhead:**  As the number of secrets and contexts grows, managing them can become challenging. Teams must actively track and monitor the usage of secrets, identifying where and by whom they are employed.
 - **Access control complexity:** Setting up fine-grained access controls is crucial but can become complex as teams and projects scale. Defining and maintaining access permissions for different roles and responsibilities can be challenging. Clearly define roles and duties to determine who needs access to specific secrets. Use role-based access control (RBAC) principles to simplify and organize permissions.
-- **Integration with external secret management systems:**  Organizations may already have established processes for secrets management using external tools, and integrating these with Cloudfalre secrets can be complex. Evaluate whether integrating with an external secrets management system is necessary for your organization. If required, explore solutions that integrate with Cloudfalre and provide a unified approach to secrets management. Ensure that the chosen solution aligns with your security and compliance requirements. Two popular secret management systems include [AWS Secrets Manager](./what-is-aws-secrets-manager.md) and [Google Cloud Secret Manager](./what-is-google-cloud-secret-manager).
+- **Integration with external secret management systems:**  Organizations may already have established processes for secrets management using external tools, and integrating these with Cloudflare secrets can be complex. Evaluate whether integrating with an external secrets management system is necessary for your organization. If required, explore solutions that integrate with Cloudflare and provide a unified approach to secrets management. Ensure that the chosen solution aligns with your security and compliance requirements. Two popular secret management systems include [AWS Secrets Manager](./what-is-aws-secrets-manager.md) and [Google Cloud Secret Manager](./what-is-google-cloud-secret-manager).
 
 Addressing these challenges and considerations requires a thoughtful approach to [secrets management](
-/what-is/what-is-secrets-management/), clear communication within the development team, and a commitment to maintaining security best practices. A beta product to faciliatate secrets management and tackle the above challenges is available for Cloudflare as the [Cloudflare Secrets Store](https://blog.cloudflare.com/secrets-store/).
+/what-is/what-is-secrets-management/), clear communication within the development team, and a commitment to maintaining security best practices. A beta product to facilitate secrets management and tackle the above challenges is available for Cloudflare as the [Cloudflare Secrets Store](https://blog.cloudflare.com/secrets-store/).
 
 ## Conclusion  
 
@@ -247,7 +246,7 @@ func main() {
 
 {{% /choosable %}}
 
-- **Get started tutorital**: Follow a simple tutorial to [deploy a Hello World web application using Cloudflare Workers and Pulumi](https://developers.cloudflare.com/pulumi/tutorial/hello-world/)
-- **Advanced secrets management**: For organizations that use more than one secrets manager and/or store configuration data in multiple locations, [Pulumi ESC (Environments, Secrets, and Configurations)](/docs/pulumi-cloud/esc/) offers a centralized solution for managing secrets and configurations across multiple environments. Moreover, Pulumi ESC integrates with OIDC to allow the dynamic generation of credentials, elevating its utility in scenarios where secrets need to be frequently rotated or updated. Dive deeper into how Pulumi ESC can streamline your secrets management workflows by visiting the Pulumi ESC documentation for the [Pulumi ESC documentation for the AWS Secrets provider](/docs/pulumi-cloud/esc/providers/aws-secrets/).
+- **Get started tutorial**: Follow a simple tutorial to [deploy a Hello World web application using Cloudflare Workers and Pulumi](https://developers.cloudflare.com/pulumi/tutorial/hello-world/)
+- **Advanced secrets management**: For organizations that use more than one secrets manager or store configuration data in multiple locations, [Pulumi ESC (Environments, Secrets, and Configurations)](/docs/pulumi-cloud/esc/) offers a centralized solution for managing secrets and configurations across various environments. Moreover, Pulumi ESC integrates with OIDC to allow the dynamic generation of credentials, elevating its utility in scenarios where secrets need to be frequently rotated or updated. Dive deeper into how Pulumi ESC can streamline your secrets management workflows by visiting the Pulumi ESC documentation for the [Pulumi ESC documentation for the AWS Secrets provider](/docs/pulumi-cloud/esc/providers/aws-secrets/).
 
 Our [community on Slack](https://slack.pulumi.com/) is always open for discussions, questions, and sharing experiences. Join us there and become part of our growing community of cloud professionals!

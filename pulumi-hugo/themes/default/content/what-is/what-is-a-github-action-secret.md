@@ -1,27 +1,28 @@
 ---
-title: What is a GitHub Action secret?
+title: What is a GitHub Action Secret?
 meta_desc: |
-    Learn more about what GitHub Action secrets are and how to use them.
+    Learn more about GitHub Action Secrets and how to use them.
 
 type: what-is
-page_title: "What is a GitHub Action secret?"
+page_title: "What is a GitHub Action Secret?"
 ---
 
 [GitHub Actions](https://github.com/features/actions) is an automation feature provided by [GitHub](https://github.com/) that allows you to define workflows to automate various aspects of your software development process directly within your GitHub repository. A prevalent example is automatically running a linter test every time a commit is made against an opened pull request.
 
-## What is a GitHub Action secret?
+## What is a GitHub Action Secret?
 
 In GitHub Actions, secrets are encrypted environment variables you can store and use in your workflows. Secrets store sensitive information, such as API keys, access tokens, or passwords, without exposing them to your files.
 
 ### Key features
 
-Using GitHub Action secrets provides several key features that enhance the security and flexibility of your workflows:
+Using GitHub Action Secrets provides several key features that enhance the security and flexibility of your workflows:
 
-- **Automatic encryption** - Secrets are encrypted and only during execution, a workflow will access a referenced secret. The GitHub UI does not expose secrets, nor are they available to users viewing the repository.
+- **Automatic encryption** - Secrets are always encrypted.
+- **Limited access** - A workflow will access a referenced secret during execution only. The GitHub UI does not expose secrets, nor are they available to users viewing the repository.
 - **Log Redaction** - GitHub Actions automatically redacts secrets from most logs and prevents them from being exposed in the workflow run logs.
 - **Dynamic configurations** - By referencing secrets in workflow files, you can easily update sensitive information without modifying the code. This flexibility is beneficial when collaborating with others or managing multiple environments (e.g., development, staging, production).
 
-## Using GitHub Action secrets
+## Using GitHub Action Secrets
 
 In this example, we list the steps required to configure a GitHub Token for use in one of the most popular GitHub Actions, [Super Linter](https://github.com/marketplace/actions/super-linter). We can obtain extra details about a given commit's code quality when provided with a GitHub Token. This token is sensitive; thus, it will be stored and referenced as a secret within a GitHub [Environment](https://docs.github.com/en/actions/deployment/targeting-different-environments/using-environments-for-deployment).
 
@@ -37,12 +38,12 @@ To use secrets in GitHub Actions, you'd need to follow these steps:
 
     - Go to your GitHub repository.
     - Click on the "Settings" tab.
-    - In the left sidebar, click on "Environments"
+    - In the left sidebar, click on "Environments".
     - Click on the "New environment" button.
-    - Provide a name for the environment, e.g., "demo"
+    - Provide a name for the environment, e.g., `demo``.
     - Click on the "Configure environment" button.
 
-2. **Create an Environment secret:**
+2. **Create an Environment secret**
 
     - In the environment configuration page from Step 1,
     - Scroll to the "Environment secrets" section.
@@ -52,12 +53,12 @@ To use secrets in GitHub Actions, you'd need to follow these steps:
             Value: `github_pat_123123123`
     - Click "Add secret" to save it.
 
-3. **Use the secret in the Workflow:**
+3. **Use the secret in the Workflow**
 
-    - In the workflow YAML file (e.g., `.github/workflows/super-linter.yml`), you can see a reference to the secret using the `secrets` context.
+    - You can see a reference to the secret using the `secrets.` context in the workflow YAML file (e.g., ``.github/workflows/super-linter.yml`)
     - Ensure the name of the secret matches: `GITHUB_TOKEN: ${{ secrets.DEMO_GITHUB_TOKEN }}`
 
-For more information, visit the GitHub guide [Using secrets in GitHub Actions](https://docs.github.com/en/actions/security-guides/using-secrets-in-github-actions)
+For more information, visit the GitHub guide [Using Secrets in GitHub Actions](https://docs.github.com/en/actions/security-guides/using-secrets-in-github-actions)
 
 ## Best practices
 
@@ -67,13 +68,13 @@ For more information, visit the GitHub guide [Using secrets in GitHub Actions](h
 
 ## Challenges and considerations
 
-Using GitHub Action secrets provides a secure way to manage sensitive information. Still, there are challenges and considerations to remember:
+Using GitHub Action Secrets provides a secure way to manage sensitive information. Still, there are challenges and considerations to remember:
 
 - **Nongrandular access scope** - Secrets are repository-wide, and there's no inherent support for limiting secrets to specific workflows or jobs. Exercise caution with repository-wide secrets and explore external solutions for more granular access control.
 - **Unavailability of secrets in Pull Requests** - Secrets are unavailable in workflows triggered by pull requests from forks by default. For workflows involving pull requests, especially from forks, consider alternative solutions or design workflows that don't rely on sensitive information.
 - **Limited default visibility and auditing:** - Limited visibility into when and by whom secrets are accessed during workflow runs. Consider implementing additional logging or external monitoring tools to enhance the visibility and audibility of secret usage in workflows.
 
-For more details on GitHub Actions and secrets, refer to the official [Encrypted secrets documentation](https://docs.github.com/en/actions/security-guides/encrypted-secrets).
+Refer to the official [secrets documentation](https://docs.github.com/en/actions/security-guides/encrypted-secrets) for more details on GitHub Actions Secrets.
 
 ## Conclusion
 
