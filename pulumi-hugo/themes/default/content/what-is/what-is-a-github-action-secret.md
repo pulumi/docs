@@ -70,7 +70,7 @@ For more information, visit the GitHub guide [Using secrets in GitHub Actions](h
 
 Using GitHub Actions secrets provides a secure way to manage sensitive information. Still, there are challenges and considerations to remember:
 
-- **Nongrandular access scope** - Secrets are repository-wide, and there's no inherent support for limiting secrets to specific workflows or jobs. Exercise caution with repository-wide secrets and explore external solutions for more granular access control.
+- **Nongranular access scope** - Secrets are repository-wide, and there's no inherent support for limiting secrets to specific workflows or jobs. Exercise caution with repository-wide secrets and explore external solutions for more granular access control.
 - **Unavailability of secrets in Pull Requests** - Secrets are unavailable in workflows triggered by pull requests from forks by default. For workflows involving pull requests, especially from forks, consider alternative solutions or design workflows that don't rely on sensitive information.
 - **Limited default visibility and auditing:** - Limited visibility into when and by whom secrets are accessed during workflow runs. Consider implementing additional logging or external monitoring tools to enhance the visibility and audibility of secret usage in workflows.
 
