@@ -125,7 +125,7 @@ Secret: dragons and unicorns are real
 
 ### Challenges and considerations
 
-Using Cloudflare Secrets comes with particular challenges and considerations:
+Using Cloudflare secrets comes with particular challenges and considerations:
 
 - **Management of secrets overhead:**  As the number of secrets and contexts grows, managing them can become challenging. Teams must actively track and monitor the usage of secrets, identifying where and by whom they are employed.
 - **Access control complexity:** Setting up fine-grained access controls is crucial but can become complex as teams and projects scale. Defining and maintaining access permissions for different roles and responsibilities can be challenging. Clearly define roles and duties to determine who needs access to specific secrets. Use role-based access control (RBAC) principles to simplify and organize permissions.
