@@ -7,7 +7,7 @@ type: what-is
 page_title: "What is a Cloudflare Secret?"
 ---
 
-[Cloudflare](https://www.cloudflare.com/) operates one of the world's largest networks, providing network and cloud services to improve website and application security and performance. A critical security aspect of building applications and solutions integrating with Cloudflare involves the management of sensitive data, commonly known as [secrets](/what-is/what-is-secrets-management/)." Cloudflare has a secure mechanism for handling secrets, offering tools for storing, accessing, and managing confidential information in the cloud.
+[Cloudflare](https://www.cloudflare.com/) operates one of the world's largest networks, providing network and cloud services to improve website and application security and performance. A critical security aspect of building applications and solutions integrating with Cloudflare involves the management of sensitive data, commonly known as [secrets](/what-is/what-is-secrets-management/). Cloudflare has a secure mechanism for handling secrets, offering tools for storing, accessing, and managing confidential information in the cloud.
 
 ## What is a Cloudflare secret?
 
