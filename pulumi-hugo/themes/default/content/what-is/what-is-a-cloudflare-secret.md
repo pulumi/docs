@@ -11,7 +11,7 @@ page_title: "What is a Cloudflare Secret?"
 
 ## What is a Cloudflare secret?
 
-Cloudflare secrets are sensitive information stored as encrypted environment variables for [Cloudflare Workers](https://developers.cloudflare.com/workers/) - serverless applications. Secrets include but are not limited to database credentials, API keys, and other confidential data. There is no need to hard-code sensitive information in plain text.
+Cloudflare secrets are sensitive information stored as encrypted environment variables for [Cloudflare Workers](https://developers.cloudflare.com/workers/) (execution environments for serverless applications). Secrets include but are not limited to database credentials, API keys, and other confidential data. There is no need to hard-code sensitive information in plain text.
 
 ### Key features
 
