@@ -24,7 +24,7 @@ Using GitHub Actions secrets provides several key features that enhance the secu
 
 ## Using GitHub Actions secrets
 
-This example lists the steps required to configure a GitHub token in one of the most popular GitHub Actions, [super linter](https://github.com/marketplace/actions/super-linter). We can obtain extra details about a given commit's code quality when provided with a GitHub token. This token is sensitive; thus, it will be stored and referenced as a secret within a GitHub [Environment](https://docs.github.com/en/actions/deployment/targeting-different-environments/using-environments-for-deployment).
+This example lists the steps required to configure a GitHub token in one of the most popular GitHub Actions, [super linter](https://github.com/marketplace/actions/super-linter). We can obtain extra details about a given commit's code quality when provided with a GitHub token. This token is sensitive; thus, it will be stored and referenced as a secret within a GitHub [environment](https://docs.github.com/en/actions/deployment/targeting-different-environments/using-environments-for-deployment).
 
 ### Prerequisites
 
