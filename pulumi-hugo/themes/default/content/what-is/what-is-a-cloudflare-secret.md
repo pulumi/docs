@@ -86,7 +86,7 @@ $ npx wrangler secret list
 
 Now that you have created a secret, your application can access it by referencing it in the Worker code.
 
-Edit the `src/index.ts` so the return response reads:
+For example, in TypeScript you might use code that looks something like this to retrieve and return the value of the Cloudflare secret:
 
 ```typescript
 export default {
