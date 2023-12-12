@@ -109,7 +109,7 @@ Published secrets-demo (3.61 sec)
 Current Deployment ID: e7c2b8e7-e13a-4a11-9667-024eed3cce05
 ```
 
-Read the secret by curling the deployment URL.
+Here's an example of using `curl` against a Cloudflare Worker serverless application using the code above to retrieve and return a Cloudflare secret value:
 
 ```bash
 $ curl https://secrets-demo.diana-247.workers.dev
