@@ -89,6 +89,9 @@ pushd "$programs_dir"
 
         # Destroy and remove.
         pulumi -C "$project" destroy --yes --remove
+
+        # Clean up artifacts.
+        git clean -fdX -e '!go.mod' .
     done
 popd
 
@@ -97,6 +100,6 @@ suffix_gomods
 
 # Log out of local mode.
 if [[ "$mode" == "preview" ]]; then
-    export PULUMI_CONFIG_PASSPHRASE="foo"
+    unset PULUMI_CONFIG_PASSPHRASE
     pulumi logout --local
 fi
