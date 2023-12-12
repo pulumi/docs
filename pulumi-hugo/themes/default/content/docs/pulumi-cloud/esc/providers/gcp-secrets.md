@@ -45,17 +45,20 @@ Make sure to replace `<your-org>` and `<your-environment>` with the values of yo
 
 ```json
 {
+  "environmentVariables": {
+    "GOOGLE_PROJECT": 111111111111
+    "CLOUDSDK_AUTH_ACCESS_TOKEN": "ya29...."
+  },
   "gcp": {
     "login": {
-        "accessToken": "ya29.c....",
-        "expiry": "2023-10-07T03:17:40Z" ,
-        "project": 123456789,
-        "tokenType": "Bearer"
-    },
-    "secrets": {
-      "api-key": "my-api-key",
-      "app-secret": "my-app-secret"
+      "accessToken": "ya29.....",
+      "expiry": "2023-11-09T11:12:41Z",
+      "project": 111111111111,
+      "tokenType": "Bearer"
     }
+  },
+  "pulumiConfig": {
+    "gcp:accessToken": "ya29...."
   }
 }
 ```
