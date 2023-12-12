@@ -19,7 +19,7 @@ Cloudflare secrets are sensitive information stored as encrypted environment var
 - **Native application integration:** Cloudflare secrets integrate directly with Cloudflare Workers, eliminating the need for complex setup. This built-in solution provides automatic retrieval and management of credentials.
 - **Environment variable flexibility:** Cloudflare secrets are easily referenced as environment variables across Workers.
 
-## Creating Cloudflare Secrets via the CLI
+## Creating Cloudflare secrets via the CLI
 
 You can create secrets via [Wrangler](https://developers.cloudflare.com/workers/wrangler/), the Cloudflare Workers CLI.
 
