@@ -230,7 +230,7 @@ Now, we can use this directly within our Pulumi IaC project by modifying its sta
 
 ```yaml
 # Pulumi.staging.yaml
-environments:
+environment:
   - shopping-service-staging
 ```
 

@@ -26,7 +26,7 @@ h6 {
 
 pre,
 .code-max-h {
-    @apply rounded my-4;
+    @apply rounded mb-4;
 }
 
 pre {
@@ -204,5 +204,30 @@ div.highlight.line-numbers {
     .code-tabbed-status {
         background: #1f2557;
         @apply h-3 rounded-b;
+    }
+}
+
+.example-program {
+
+    .example-program-footer {
+        @apply hidden;
+    }
+
+    @screen md {
+        pre, .code-max-h {
+            @apply rounded-t rounded-b-none mb-0 pb-0.5;
+        }
+
+        .example-program-footer {
+            @apply block bg-blue-900 -mt-1 pb-1 px-2 rounded-b text-base mb-4 text-right;
+
+            a {
+                @apply text-blue-300 ;
+
+                &:hover {
+                    @apply text-blue-200;
+                }
+            }
+        }
     }
 }
