@@ -56,6 +56,9 @@ Make sure to replace `<your-org>` and `<your-environment>` with the values of yo
       "project": 111111111111,
       "tokenType": "Bearer"
     }
+  },
+  "pulumiConfig": {
+    "gcp:accessToken": "ya29...."
   }
 }
 ```
