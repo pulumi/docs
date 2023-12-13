@@ -7,7 +7,7 @@ type: what-is
 page_title: "What is a CircleCI Secret?"
 ---
 
-[CircleCI](https://circleci.com/) is an agile, continuous integration/continuous deployment ([CI/CD](./what-is-ci-cd.md)) platform. It aims to automate software development processes for faster, more reliable releases. CircleCI secrets empower developers to safeguard critical data while streamlining workflows.
+[CircleCI](https://circleci.com/) is an agile, continuous integration/continuous deployment ([CI/CD](/what-is/what-is-ci-cd/)) platform. It aims to automate software development processes for faster, more reliable releases. CircleCI secrets empower developers to safeguard critical data while streamlining workflows.
 
 ## What is a CircleCI secret?
 
@@ -142,7 +142,7 @@ Using CircleCI secrets comes with particular challenges and considerations that 
 - **Access control complexity:** Setting up fine-grained access controls is crucial but can become complex as teams and projects scale. Defining and maintaining access permissions for different roles and responsibilities can be challenging. Clearly define roles to determine who needs access to specific secrets. Use role-based access control (RBAC) principles to simplify and organize permissions.
 - **Integration with external secret management systems:**  Organizations may already have established processes for secret management using external tools, and integrating these with CircleCI secrets can be complex. Evaluate whether integrating with an external secrets management system is necessary for your organization. If required, explore solutions that integrate with CircleCI and provide a unified approach to secrets management. Ensure that the chosen solution aligns with your security and compliance requirements.
 
-Addressing these challenges and considerations requires a thoughtful approach to [secrets management](./what-is-secrets-management.md), clear communication within the development team, and a commitment to maintaining security best practices throughout the CI/CD pipeline. Regular reviews and updates to your secret management strategy will help ensure a secure and efficient development process.
+Addressing these challenges and considerations requires a thoughtful approach to [secrets management](/what-is/what-is-secrets-management/), clear communication within the development team, and a commitment to maintaining security best practices throughout the CI/CD pipeline. Regular reviews and updates to your secret management strategy will help ensure a secure and efficient development process.
 
 ## Conclusion
 

@@ -82,7 +82,7 @@ GitHub Actions secrets are encrypted and only exposed to workflow runs. They are
 
 Now that you know about GitHub Actions secrets, take your cloud infrastructure management to the next level with Pulumi:
 
-- **Integrate your [continuous delivery with Pulumi](https://www.pulumi.com/docs/using-pulumi/continuous-delivery/github-Actionss/)**: Ship software faster and more safely by combining Pulumi with the other components of your automated infrastructure.
+- **Integrate your [continuous delivery with Pulumi](https://www.pulumi.com/docs/using-pulumi/continuous-delivery/github-actionss/)**: Ship software faster and more safely by combining Pulumi with the other components of your automated infrastructure.
 - **Install the [Pulumi GitHub App](https://www.pulumi.com/docs/using-pulumi/continuous-delivery/github-app/)**:  Once installed, the Pulumi GitHub app will submit rich, inline comments on any pull request or commit that introduces a change to your Pulumi-managed infrastructure.
 - **Manage sensitive data and secrets with Pulumi**: Dive into Pulumi's [Secrets Management guide](/blog/managing-secrets-with-pulumi/) for in-depth information on encrypting specific values for added security and ensuring that these values never appear in plain text in your state file​.
 - **Use the [GitHub provider for Pulumi](https://www.pulumi.com/registry/packages/github/#github)**: Provision any of the cloud resources available in GitHub.
