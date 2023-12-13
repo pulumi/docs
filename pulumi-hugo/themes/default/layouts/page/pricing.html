@@ -39,7 +39,7 @@
 
                             <div class="h-20">
                                 <div class="text-black text-2xl lg:text-xl xl:text-2xl lg:whitespace-nowrap">Always free</div>
-                                <p class="m-0  text-sm mt-2">Unlimited resources</p>
+                                <p class="m-0 text-base mt-2">Unlimited resources</p>
                             </div>
 
                             <div class="lg:whitespace-nowrap">
@@ -154,7 +154,7 @@
 
                                     <div class="h-20">
                                         <div class="text-black text-2xl lg:text-xl xl:text-2xl lg:whitespace-nowrap">Always free</div>
-                                        <p class="m-0  text-sm mt-2">Unlimited resources</p>
+                                        <p class="m-0 text-base mt-2">Unlimited resources</p>
                                     </div>
 
                                     <div class="flex-grow lg:whitespace-nowrap">
@@ -223,11 +223,14 @@
                                     <p class="text-base mb-8 mt-0 h-14 max-w-xs lg:h-24 xl:h-14">The basics of infrastructure as code for teams wanting to ship faster.</p>
 
                                     <div class="h-20">
-                                        <div class="text-black text-2xl lg:text-xl xl:text-2xl flex items-center lg:whitespace-nowrap">
-                                            $1 /
-                                            <div class="m-0 text-xs mt-1 flex flex-col pl-1"><span>2000</span><span>credits</span></div>
+                                        <div class="flex">
+                                            <div class="text-black text-2xl lg:text-xl xl:text-2xl flex items-center lg:whitespace-nowrap">
+                                                $1 /
+                                                <div class="m-0 text-xs mt-1 flex flex-col pl-1"><span>2000</span><span>credits</span></div>
+                                            </div>
+                                            <a class="bg-blue-100 hover:underline text-blue-600 rounded-2xl font-medium px-4 py-1.5 ml-2 inline-block" href="#calculator">Estimate your cost</a>
                                         </div>
-                                        <p class="m-0"><a class="underline" href="#faq-pricing">150k free credits included</a></p>
+                                        <p class="m-0 mt-1"><a class="underline" href="#faq-pricing">150k free credits included</a></p>
                                     </div>
 
                                     <div>
@@ -336,7 +339,7 @@
 
                                     <div class="h-20">
                                         <div class="text-black text-2xl lg:text-xl xl:text-2xl lg:whitespace-nowrap">Custom</div>
-                                        <p class="m-0 text-base mt-1"><a href="/contact/?form=sales" class="underline">Contact us</a> for a demo & quote.</p>
+                                        <p class="m-0 text-base mt-2"><a href="/contact/?form=sales" class="underline">Contact us</a> for a demo & quote.</p>
                                     </div>
 
                                     <div>
@@ -447,7 +450,7 @@
 
                                     <div class="h-20">
                                         <div class="text-black text-2xl lg:text-xl xl:text-2xl xl:whitespace-nowrap">Custom</div>
-                                        <p class="m-0 text-base mt-1"><a href="/contact/?form=sales" class="underline">Contact us</a> for a demo & quote.</p>
+                                        <p class="m-0 text-base mt-2"><a href="/contact/?form=sales" class="underline">Contact us</a> for a demo & quote.</p>
                                     </div>
 
                                     <div>
@@ -2129,6 +2132,10 @@
                         <span><i class="fa fa-check pricing-checkmark"></i></span>
                     </div>
                 </div>
+            </div>
+
+            <div id="calculator" class="mt-16 mb-24">
+                <pulumi-pricing-calculator></pulumi-pricing-calculator>
             </div>
 
             <div class="flex justify-center mt-24">
