@@ -22,7 +22,7 @@ jobs:
           pr_body: "Automated PR"
           pr_label: "automation/pulumi-cli-docs,automation/merge"
           github_token: ${{ secrets.PULUMI_BOT_TOKEN }}
-  build-pulumi-cli-docs:
+  update-latest-dev-version:
     runs-on: ubuntu-latest
     steps:
       - name: checkout docs repo
