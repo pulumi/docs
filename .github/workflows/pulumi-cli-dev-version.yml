@@ -20,7 +20,6 @@ jobs:
           destination_branch: "master"
           pr_title: "Regen dev version pulumi@${{ github.event.client_payload.dev_version}}"
           pr_body: "Automated PR"
-          pr_label: "automation/pulumi-cli-docs,automation/merge"
           github_token: ${{ secrets.PULUMI_BOT_TOKEN }}
   update-latest-dev-version:
     runs-on: ubuntu-latest
