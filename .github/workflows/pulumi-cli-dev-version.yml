@@ -36,7 +36,7 @@ jobs:
           git config --local user.email "bot@pulumi.com"
           git config --local user.name "pulumi-bot"
           git checkout -b pulumi/${{ github.run_id }}-${{ github.run_number }}
-          git add static/
+          git add static/latest-dev-version
           git commit -m "Updating latest pulumi dev version@${{ github.event.client_payload.dev_version }}"
           git push origin pulumi/${{ github.run_id }}-${{ github.run_number }}
   notify:
