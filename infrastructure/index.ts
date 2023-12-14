@@ -94,6 +94,34 @@ const uploadsBucket = new aws.s3.Bucket("uploads-bucket", {
     }],
 });
 
+if (pulumi.getStack() === "www-testing") {
+    const marketingAppStack = new pulumi.StackReference("pulumi/marketing-db/staging");
+    const marketingAppAccountId = marketingAppStack.getOutput("awsAccountId");
+
+    const uploadsBucketPolicy = new aws.s3.BucketPolicy("uploads-bucket-policy", {
+        bucket: uploadsBucket.bucket,
+        policy: JSON.stringify({
+            "Version": "2012-10-17",
+            "Statement": [
+                {
+                    "Sid": "Example permissions",
+                    "Effect": "Allow",
+                    "Principal": {
+                        "AWS": `arn:aws:iam::${marketingAppAccountId}:root`
+                    },
+                    "Action": [
+                        "s3:GetLifecycleConfiguration",
+                        "s3:ListBucket"
+                    ],
+                    "Resource": [
+                        `arn:aws:s3:::${uploadsBucket.bucket}`
+                    ]
+                }
+            ]
+        }),
+    });
+}
+
 // This needs to be set in order to allow the use of ACLs. This was added to update our infrastructure to be
 // compatible with the default S3 settings from AWS' April update. `ObjectWriter` was the prior default, so
 // changing it to that here to match the configuration prior to the update.
