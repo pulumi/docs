@@ -1683,6 +1683,33 @@ LocalWorkspace does not utilize this extensibility point.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pulumi.automation.LocalWorkspace.add_environments">
+<span class="sig-name descname"><span class="pre">add_environments</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stack_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">environment_names</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pulumi.automation.LocalWorkspace.add_environments" title="Permalink to this definition"></a></dt>
+<dd><p>Adds environments to the end of a stack’s import list. Imported environments are merged in order
+per the ESC merge rules. The list of environments behaves as if it were the import list in an anonymous
+environment.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>environment_names</strong> – The names of the environment to add.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pulumi.automation.LocalWorkspace.remove_environment">
+<span class="sig-name descname"><span class="pre">remove_environment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stack_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">environment_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pulumi.automation.LocalWorkspace.remove_environment" title="Permalink to this definition"></a></dt>
+<dd><p>Removes the specified environment from the stack configuration.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>stack_name</strong> – The name of the stack.</p></li>
+<li><p><strong>environment_name</strong> – The name of the environment to remove.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pulumi.automation.LocalWorkspace.get_config">
 <span class="sig-name descname"><span class="pre">get_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stack_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pulumi.automation.ConfigValue" title="pulumi.automation._config.ConfigValue"><span class="pre">ConfigValue</span></a></span></span><a class="headerlink" href="#pulumi.automation.LocalWorkspace.get_config" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the value associated with the specified stack name and key,
@@ -2218,6 +2245,25 @@ cloud provider. Any such changes are adopted into the current stack.</p>
 <dd class="field-even"><p>DestroyResult</p>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pulumi.automation.Stack.add_environments">
+<span class="sig-name descname"><span class="pre">add_environments</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">environment_names</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pulumi.automation.Stack.add_environments" title="Permalink to this definition"></a></dt>
+<dd><p>Adds environments to the end of a stack’s import list. Imported environments are merged in order
+per the ESC merge rules. The list of environments behaves as if it were the import list in an anonymous
+environment.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>environment_names</strong> – The names of the environments to add.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pulumi.automation.Stack.remove_environment">
+<span class="sig-name descname"><span class="pre">remove_environment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">environment_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pulumi.automation.Stack.remove_environment" title="Permalink to this definition"></a></dt>
+<dd><p>Removes an environment from a stack’s import list.</p>
 </dd></dl>
 
 <dl class="py method">
