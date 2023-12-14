@@ -43,7 +43,7 @@ jobs:
     if: failure()
     name: Send slack notification
     runs-on: ubuntu-latest
-    needs: [pull-request, build-pulumi-cli-docs]
+    needs: [pull-request, update-latest-dev-version]
     steps:
       - name: Slack Notification
         uses: docker://sholung/action-slack-notify:v2.3.0
