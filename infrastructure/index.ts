@@ -100,25 +100,26 @@ if (pulumi.getStack() === "www-testing") {
 
     const uploadsBucketPolicy = new aws.s3.BucketPolicy("uploads-bucket-policy", {
         bucket: uploadsBucket.bucket,
-        policy: JSON.stringify({
-            "Version": "2012-10-17",
-            "Statement": [
-                {
-                    "Sid": "Example permissions",
-                    "Effect": "Allow",
-                    "Principal": {
-                        "AWS": `arn:aws:iam::${marketingAppAccountId}:root`
-                    },
-                    "Action": [
-                        "s3:GetLifecycleConfiguration",
-                        "s3:ListBucket"
-                    ],
-                    "Resource": [
-                        `arn:aws:s3:::${uploadsBucket.bucket}`
-                    ]
-                }
-            ]
-        }),
+        policy: pulumi.all([uploadsBucket.bucket, marketingAppAccountId])
+            .apply(([bucket, accountId]) => JSON.stringify({
+                "Version": "2012-10-17",
+                "Statement": [
+                    {
+                        "Sid": "Example permissions",
+                        "Effect": "Allow",
+                        "Principal": {
+                            "AWS": `arn:aws:iam::${accountId}:root`
+                        },
+                        "Action": [
+                            "s3:GetLifecycleConfiguration",
+                            "s3:ListBucket"
+                        ],
+                        "Resource": [
+                            `arn:aws:s3:::${bucket}`
+                        ]
+                    }
+                ]
+            })),
     });
 }
 
