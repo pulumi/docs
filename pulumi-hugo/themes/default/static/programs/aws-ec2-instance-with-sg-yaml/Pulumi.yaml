@@ -1,0 +1,24 @@
+name: aws-ec2-instance-with-sg-yaml
+runtime: yaml
+description: An example that shows how to create an EC2 instance and security group.
+resources:
+  group:
+    type: aws:ec2:SecurityGroup
+    properties:
+      description: Enable HTTP access
+      ingress:
+        - protocol: tcp
+          fromPort: 80
+          toPort: 80
+          cidrBlocks:
+            - 0.0.0.0/0
+  server:
+    type: aws:ec2:Instance
+    properties:
+      ami: ami-0319ef1a70c93d5c8
+      instanceType: t2.micro
+      vpcSecurityGroupIds:
+        - ${group.id}
+outputs:
+  publicIp: ${server.publicIp}
+  publicDns: ${server.publicDns}
