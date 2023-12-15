@@ -85,6 +85,18 @@ values:
 
 The `aws s3 cp` command can be used to copy files to, from, and between S3 buckets. If you do not already have an S3 bucket in your environment, you will need to create one in order to validate your configuration.
 
+First check that your local environment does not have any AWS credentials configured by running the `aws configure list` command as shown below:
+
+```bash
+$ aws configure list
+      Name                    Value             Type    Location
+      ----                    -----             ----    --------
+   profile                <not set>             None    None
+access_key                <not set>             None    None
+secret_key                <not set>             None    None
+    region                <not set>             None    None
+```
+
 You can then use the following command to create the bucket, making sure to replace the following values as described:
 
 - `<your-bucket-name>` with a [globally unique name](https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html) for your bucket
