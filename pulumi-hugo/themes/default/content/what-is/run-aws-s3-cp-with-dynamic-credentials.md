@@ -81,14 +81,19 @@ values:
     AWS_SESSION_TOKEN: ${aws.login.sessionToken}
 ```
 
-### Step 5: Create a new S3 bucket
+### Step 5: [Optional] Create a new S3 bucket
 
-The `aws s3 cp` command can be used to copy files to, from, and between S3 buckets. If you do not already have an S3 bucket in your environment, you will need to create one. You can do so via the AWS CLI using the following command, making sure to replace the value of `<your-bucket-name>` with a [globally unique name](https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html) for your bucket and the value of `<your-aws-region>` with your desired AWS region:
+The `aws s3 cp` command can be used to copy files to, from, and between S3 buckets. If you do not already have an S3 bucket in your environment, you will need to create one in order to validate your configuration.
+
+You can then use the following command to create the bucket, making sure to replace the following values as described:
+
+- `<your-bucket-name>` with a [globally unique name](https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html) for your bucket
+- `<your-aws-region>` with your desired AWS region
+- `<your-pulumi-org-name>` with the name of your own Pulumi organization
+- `<your-environment-name>` with the name of your environment
 
 ```bash
-aws s3api create-bucket \
-    --bucket <your-bucket-name> \
-    --region <your-aws-region>
+esc run <your-pulumi-org-name>/<your-environment-name> -i aws s3api create-bucket --bucket <your-bucket-name> --region <your-aws-region>
 ```
 
 ### Step 6: Create a sample file
@@ -104,41 +109,16 @@ In the next step, you will use the `aws s3 cp` command to copy this file into yo
 
 ### Step 7: Run the aws s3 cp command
 
-First make sure that your local environment does not have any AWS credentials configured. You can do this by running the `aws s3 cp` command normally as shown below:
+To copy the local file to your S3 bucket, run the command using `esc run` as shown below, making sure to replace `<your-pulumi-org-name>` and `<your-environment-name>` with the names of your own Pulumi organization and environment respectively:
 
 ```bash
-$ aws s3 cp test.txt s3://<your-bucket-name>/copied-file.txt
-
-Unable to locate credentials. You can configure credentials by running "aws configure".
-```
-
-Now run the command using `esc run` as shown below, making sure to replace `<your-pulumi-org-name>` and `<your-environment-name>` with the names of your own Pulumi organization and environment respectively:
-
-```bash
-esc run <your-pulumi-org-name>/<your-environment-name> -- aws s3 cp test.txt s3://<your-bucket-name>/copied-file.txt
+esc run <your-pulumi-org-name>/<your-environment-name> -i aws s3 cp test.txt s3://<your-bucket-name>/copied-file.txt
 ```
 
 Then validate that your file was successfully uploaded by running the following command, making sure to replace the value of `<your-bucket-name>` with the name of your S3 bucket:
 
 ```bash
-aws s3api list-objects-v2 \
-    --bucket <your-bucket-name>
-```
-
-You should see output similar to the following:
-
-```bash
-{
-    "Contents": [
-        {
-            "LastModified": "2019-11-05T23:11:50.000Z",
-            "ETag": "\"621503c373607d548b37cff8778d992c\"",
-            "StorageClass": "STANDARD",
-            "Key": "copied-file.txt",
-            "Size": 391
-        }
-    ]
-}
+esc run <your-pulumi-org-name>/<your-environment-name> -i aws s3api list-objects-v2 --bucket <your-bucket-name>
 ```
 
 ## Conclusion
