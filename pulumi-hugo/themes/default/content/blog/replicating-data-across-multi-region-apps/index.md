@@ -2,7 +2,7 @@
 title: "Replicating Data Across Multi Region Apps"
 date: 2023-12-15T11:03:10Z
 draft: false
-meta_desc: Learn about the tradeoffs in distributed databases when building for multiple regions.
+meta_desc: Learn about the tradeoffs in distributed databases and data replication when using them for multi-region applications.
 meta_image: meta.png
 authors:
     - adora-nwodo
