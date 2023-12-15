@@ -626,7 +626,7 @@ The Automation API is your tool to tame Cloud Engineering complexity and give yo
 
 - [Go documentation](https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/auto)
 - [JavaScript/TypeScript documentation](https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/pulumi/automation)
-- [Python documentation](https://www.pulumi.com/docs/reference/pkg/python/pulumi/#module-pulumi.x.automation)
+- [Python documentation](https://www.pulumi.com/docs/reference/pkg/python/pulumi/#module-pulumi.automation)
 - [The Automation API examples repo](https://github.com/pulumi/automation-api-examples)
 - The list of [known issues](https://github.com/pulumi/pulumi/issues?q=is%3Aissue+is%3Aopen+label%3Aarea%2Fautomation-api). Please [file more](https://github.com/pulumi/pulumi/issues/new?assignees=&labels=needs-triage&template=bug_report.md&title=) as you find them!
 - [The Pulumi Kubernetes Operator](https://github.com/pulumi/pulumi-kubernetes-operator)

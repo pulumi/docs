@@ -16,14 +16,14 @@ All resource input and output values are recorded as [`state`](/docs/concepts/st
 
 The Pulumi Cloud always transmits and stores entire state files securely; however, Pulumi also supports encrypting specific values as “secrets” for extra protection. Encryption ensures that these values never appear as plaintext in your state file. By default, the encryption method uses automatic, per-stack encryption keys provided by the Pulumi Cloud or you can use a [provider of your own choosing](#configuring-secrets-encryption) instead.
 
-To encrypt a configuration setting before runtime, you can use the CLI command [`config set`](/docs/concepts/config#configuration) command with a [`--secret`](#secrets) flag. You can also set a secret during runtime. Any [`Output<T>`](/docs/reference/pkg/python/pulumi#outputs-and-inputs) value can be marked secret. If an output is a secret, any computed values derived from it—such as those derived through an [`apply`](/docs/reference/pkg/python/pulumi#outputs-and-inputs) call —will also be marked secret. All these encrypted values are stored in your state file.
+To encrypt a configuration setting before runtime, you can use the CLI command [`config set`](/docs/concepts/config#configuration) command with a [`--secret`](#secrets) flag. You can also set a secret during runtime. Any [`Output<T>`](/docs/concepts/inputs-outputs/#outputs) value can be marked secret. If an output is a secret, any computed values derived from it—such as those derived through an [`apply`](/docs/concepts/inputs-outputs/#apply) call —will also be marked secret. All these encrypted values are stored in your state file.
 
-An [`Output<T>`](/docs/reference/pkg/python/pulumi#outputs-and-inputs) can be marked secret in a number of ways:
+An [`Output<T>`](/docs/concepts/inputs-outputs/#outputs) can be marked secret in a number of ways:
 
 - By reading a secret from configuration using {{< pulumi-config-getsecret >}} or {{< pulumi-config-requiresecret >}}.
 - By creating a new secret value with {{< pulumi-secret-new >}}, such as when generating a new random password.
 - By marking a resource as having secret properties using [`additionalSecretOutputs`](/docs/concepts/inputs-outputs).
-- By computing a secret value by using [`apply`](/docs/reference/pkg/python/pulumi#outputs-and-inputs) or {{< pulumi-all >}} with another secret value.
+- By computing a secret value by using [`apply`](/docs/concepts/inputs-outputs/#apply) or {{< pulumi-all >}} with another secret value.
 
 As soon as an `Output<T>` is marked secret, the Pulumi engine will encrypt it wherever it is stored.
 
@@ -51,8 +51,8 @@ There are two ways to programmatically create secret values:
 {{% /choosable %}}
 {{% choosable language python %}}
 
-- Using [`get_secret`](/docs/reference/pkg/python/pulumi#pulumi.Config.get_secret) or [`require_secret`](/docs/reference/pkg/python/pulumi#pulumi.Config.require_secret) when reading a value from config.
-- Calling [`Output.secret`](/docs/reference/pkg/python/pulumi#pulumi.Output.secret) to construct a secret from an existing value.
+- Using [`get_secret`](/docs/reference/pkg/python/pulumi/#pulumi.Config.get_secret) or [`require_secret`](/docs/reference/pkg/python/pulumi/#pulumi.Config.require_secret) when reading a value from config.
+- Calling [`Output.secret`](/docs/reference/pkg/python/pulumi/#pulumi.Output.secret) to construct a secret from an existing value.
 
 {{% /choosable %}}
 {{% choosable language go %}}
@@ -592,7 +592,7 @@ With Pulumi ESC, you can manage secrets wherever they live. Pulumi ESC provides 
 
 ### Sharing Secrets Across Multiple Teams
 
-You may have multiple teams that each own different secrets and manage their lifetimes, and choose to store them in various AWS secret manager secrets.  
+You may have multiple teams that each own different secrets and manage their lifetimes, and choose to store them in various AWS secret manager secrets.
 
 For example, let's say you have a centralized billing service team that manages your team's payment process API keys. They can have a `Billing` environment defined like this:
 

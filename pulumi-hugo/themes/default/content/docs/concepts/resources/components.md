@@ -24,7 +24,7 @@ The implicit `pulumi:pulumi:Stack` resource is itself a component resource that 
 
 ## Authoring a New Component Resource
 
-To author a new component, either in a program or for a reusable library, create a subclass of [`ComponentResource`](/docs/reference/pkg/python/pulumi#pulumi.ComponentResource). Inside of its constructor, chain to the base constructor, passing its type string, name, arguments, and options. Also inside of its constructor, allocate any child resources, passing the [`parent`](/docs/concepts/options/parent) option as appropriate to ensure component resource children are parented correctly.
+To author a new component, either in a program or for a reusable library, create a subclass of [`ComponentResource`](/docs/reference/pkg/python/pulumi/#pulumi.ComponentResource). Inside of its constructor, chain to the base constructor, passing its type string, name, arguments, and options. Also inside of its constructor, allocate any child resources, passing the [`parent`](/docs/concepts/options/parent) option as appropriate to ensure component resource children are parented correctly.
 
 Here’s a simple component example:
 
