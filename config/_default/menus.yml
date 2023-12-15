@@ -220,7 +220,7 @@ languages:
   - name: SDK docs
     identifier: sdk-docs-python
     parent: python
-    pageRef: /docs/reference/pkg/python/pulumi
+    url: https://www.pulumi.com/docs/reference/pkg/python/pulumi/
     weight: 1
   - name: SDK docs
     identifier: sdk-docs-go
