@@ -3,40 +3,27 @@
 set -o errexit -o pipefail
 set -x
 
-# Optional argument to generate docs for just a single provider.
-REPO_OVERRIDE="${1:-}"
-
 PACKAGES=(
   "pulumi"
   "pulumi_policy"
   "pulumi_terraform"
 )
 
+OUTDIR="../../static-prebuilt/docs/reference/pkg/python"
+
 pushd "tools/pydocgen"
+
 pipenv --python 3
 pipenv install
-
 pipenv run pip install sphinx-rtd-theme
 
-if [ -z "${REPO_OVERRIDE:-}" ]; then
-    echo "Building all Python docs..."
-    # Install the Python package for all the providers.
-    for PACKAGE in "${PACKAGES[@]}" ; do \
-        pipenv run pip install "${PACKAGE}"
-    done
-
-    # Run the pydocgen to generate the docs for all the packages.
-    pipenv run python -m pydocgen "../../static-prebuilt/docs/reference/pkg/python" "../../content/docs/reference/pkg"
-else
-    # Install the Python package and run the pydocgen tool for just the provider that
-    # was requested.
-    echo "Building Python docs for ${REPO_OVERRIDE}..."
-    PACKAGE="pulumi"
-    if [ "${REPO_OVERRIDE}" != "pulumi" ]; then
-        PACKAGE="pulumi_${REPO_OVERRIDE}"
-    fi
+echo "Building all Python docs..."
+# Install each package.
+for PACKAGE in "${PACKAGES[@]}" ; do \
     pipenv run pip install "${PACKAGE}"
-    pipenv run python -m pydocgen "../../static-prebuilt/docs/reference/pkg/python" "../../content/docs/reference/pkg" "${PACKAGE}"
-fi
+done
+
+rm -rf "$OUTDIR"
+pipenv run sphinx-build -j auto -b dirhtml ./source "$OUTDIR"
 
 popd
