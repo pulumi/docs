@@ -7,7 +7,7 @@ type: what-is
 page_title: Run 'aws s3 sync' with Dynamic Credentials
 ---
 
-The [`aws s3 sync`](https://docs.aws.amazon.com/cli/latest/reference/s3/sync.html) command is part of the AWS Command Line Interface (CLI) and synchronizes files and directories between your local file system and Amazon S3 buckets. This command simplifies uploading and downloading files to and from S3.
+The [`aws s3 sync`](https://docs.aws.amazon.com/cli/latest/reference/s3/sync.html) command is part of the AWS Command Line Interface (CLI) and synchronizes files and directories between your local file system and Amazon S3 buckets. This command simplifies uploading files to and downloading files from S3.
 
 The `aws s3 sync` command can be a powerful tool, especially when dealing with large datasets or multiple files. This command is executed in the terminal using the AWS CLI and necessitates proper management of AWS credentials. Typically, two kinds of credentials are used: temporary credentials, which offer heightened security but require manual updates, and long-term credentials, which are more convenient but pose more significant security risks.
 

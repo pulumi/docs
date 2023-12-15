@@ -37,7 +37,7 @@ But what does this actually mean? If we use AWS as an example, it means that we 
 
 ## Getting started with esc run
 
-### Step 1: Install and login to Pulumi ESC
+### Step 1: Install and log in to Pulumi ESC
 
 To begin, you’ll need to [install Pulumi ESC](/docs/install/esc/). Once the installation is complete, run the `esc login` command and follow the steps to log in to the CLI.
 
@@ -93,7 +93,7 @@ values:
 
 ### Step 5: Create sample metric data
 
-You will need to add metric data if you do not already have it. With your environment set up, validate your configuration
+You can skip this step if you already have metric data in your AWS account. Otherwise, you will need to add metric data to validate your configuration.
 
 - Check your local environment does not have any AWS credentials configured by running the `aws configure list` command as shown below:
 
@@ -118,7 +118,7 @@ $  esc run <your-pulumi-org-name>/<your-environment-name> -- aws cloudwatch put-
 
 ### Step 6: Create a sample metric data query file
 
-Create a file named `sampleQuery.json` to contain three sample queries.
+Create a file named `sampleQuery.json` to contain three sample queries (you may need to adjust the queries below if you skipped the previous step).
 
 ```bash
 $ cat <<EOF> sampleQuery.json
