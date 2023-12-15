@@ -1,8 +1,6 @@
 module aws-ec2-instance-with-sg-go
 
-go 1.21
-
-toolchain go1.21.5
+go 1.20
 
 require (
 	github.com/pulumi/pulumi-aws/sdk/v4 v4.38.1
