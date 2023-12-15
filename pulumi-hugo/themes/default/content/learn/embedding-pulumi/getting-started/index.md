@@ -180,7 +180,7 @@ With the Automation API, we can invoke programs that are passed inline (meaning 
 
 In the {{< langfile >}} in the `api` directory, replace all of the contents with the following code:
 
-{{< code-filename file="learn-auto-api/api/requirements.txt" >}}
+{{< code-filename file="learn-auto-api/api/__main__.py" >}}
 
 ```python {.line-numbers}
 import burner
