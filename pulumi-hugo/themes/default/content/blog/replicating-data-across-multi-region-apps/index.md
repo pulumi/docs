@@ -48,7 +48,7 @@ As mentioned earlier, though, more than just network partitioning comes into pla
 
 Therefore, the challenge lies in finding the right balance. Striking a compromise between data consistency and system performance (in the form of availability) is a delicate task requiring a careful analysis of the principles of the CAP theorem, guiding system architects in making informed choices that align with the specific needs and priorities of their distributed applications.
 
-## Using Pulumi for data replication in your cloud service
+## Using Pulumi to configure data replication
 
 Now that you’ve seen the impact of CAP theorem-related decisions on distributed data stores and the applications that use them, let’s take a look at a specific example. Let’s say you are building a distributed system and you want to have a central database with multiple replicas across the different availability zones (or regions) where your application will be deployed.
 
