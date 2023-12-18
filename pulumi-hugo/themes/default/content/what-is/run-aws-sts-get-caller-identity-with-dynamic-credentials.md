@@ -1,17 +1,17 @@
 ---
-title: Run 'aws ec2 start-instances' using Dynamic Credentials
+title: Run 'aws sts get-caller-identity' using Dynamic Credentials
 meta_desc: |
-     Learn how to use dynamic credentials in Pulumi ESC for executing commands like 'aws ec2 start-instances' in a more secure and efficient manner.
+     Learn how to use dynamic credentials in Pulumi ESC for executing commands like 'aws sts get-caller-identity' in a more secure and efficient manner.
 
 type: what-is
-page_title: Run 'aws ec2 start-instances' using Dynamic Credentials
+page_title: Run 'aws sts get-caller-identity' using Dynamic Credentials
 ---
 
-The [`aws ec2 start-instances` command](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/start-instances.html) is part of the AWS Command Line Interface (CLI) and is utilized for starting Amazon Elastic Compute Cloud (Amazon EC2) instances that were previously stopped. Amazon EC2 provides scalable computing capacity in the AWS cloud, enabling users to launch and manage virtual servers as per their requirements.
+The [`aws sts get-caller-identity` command](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/sts/get-caller-identity.html) is part of the AWS Command Line Interface (CLI) and is utilized for retrieving the details about the IAM user or role whose credentials are used to call operations in AWS. Amazon Simple Token Service (STS)  enables users to request temporary, limited-privilege credentials for AWS interactions.
 
-Using the `aws ec2 start-instances` command is key in managing EC2 instances, providing an easy way to bring an instance back to an active and running state after it has been stopped. This command is executed in the terminal using the AWS CLI and necessitates proper management of AWS credentials for security. Typically, there are two kinds of credentials used: temporary credentials, offering heightened security but requiring manual updates, and long-term credentials, which are more convenient but pose greater security risks.
+Using the `aws sts get-caller-identity` command is key in managing access to AWS, providing an easy way to view the details of the entity that was used to make a specific call to AWS. This command is executed in the terminal using the AWS CLI and necessitates proper management of AWS credentials for security. Typically, there are two kinds of credentials used: temporary credentials, offering heightened security but requiring manual updates, and long-term credentials, which are more convenient but pose greater security risks.
 
-With [Pulumi ESC (Environments, Secrets, and Configurations)](/docs/pulumi-cloud/esc/), handling these credentials becomes simpler and more secure. Pulumi ESC facilitates [managing dynamic credentials from AWS using OIDC](/blog/esc-env-run-aws/), ensuring all your AWS CLI commands, including `aws ec2 start-instances`, are executed seamlessly. This approach eliminates concerns over invalid credentials and reduces the risks associated with manual credential management.
+With [Pulumi ESC (Environments, Secrets, and Configurations)](/docs/pulumi-cloud/esc/), handling these credentials becomes simpler and more secure. Pulumi ESC facilitates [managing dynamic credentials from AWS using OIDC](/blog/esc-env-run-aws/), ensuring all your AWS CLI commands, including `aws sts get-caller-identity`, are executed seamlessly. This approach eliminates concerns over invalid credentials and reduces the risks associated with manual credential management.
 
 ## Using Pulumi ESC for dynamic credentials with AWS
 
@@ -19,7 +19,7 @@ With [Pulumi ESC (Environments, Secrets, and Configurations)](/docs/pulumi-cloud
 
 - Securely share credentials with teammates in a consistent way.
 - Minimize the risks associated with locally configured, long-lived and highly privileged credentials.
-- Ensure teams can easily and safely run commands like aws ec2 start-instances without requiring deep security expertise.
+- Ensure teams can easily and safely run commands like aws sts get-caller-identity without requiring deep security expertise.
 
 ## What is the esc run command?
 
@@ -27,7 +27,7 @@ The [Pulumi documentation for the `esc run` command](https://www.pulumi.com/docs
 
 > This command opens the environment with the given name and runs the given command. If the opened environment contains a top-level ’environmentVariables’ object, each key-value pair in the object is made available to the command as an environment variable.
 
-But what does this actually mean? If we use AWS as an example, it means that we can run commands like `aws ec2 start-instances` without the need to configure AWS credentials locally each time. It’s a significant stride towards making your cloud interactions more efficient and less error-prone, and here’s a deeper dive into why:
+But what does this actually mean? If we use AWS as an example, it means that we can run commands like `aws sts get-caller-identity` without the need to configure AWS credentials locally each time. It’s a significant stride towards making your cloud interactions more efficient and less error-prone, and here’s a deeper dive into why:
 
 - **Seamless Command Execution** - The `esc run` command lets you execute AWS commands effortlessly, freeing you from the intricacies of managing AWS credentials on your local machine. Simply put, it significantly reduces the overhead of credential setup and maintenance.
 
@@ -81,7 +81,7 @@ values:
     AWS_SESSION_TOKEN: ${aws.login.sessionToken}
 ```
 
-### Step 5: Run the aws ec2 start-instances command
+### Step 5: Run the aws sts get-caller-identity command
 
 First check that your local environment does not have any AWS credentials configured by running the `aws configure list` command as shown below:
 
@@ -95,15 +95,15 @@ secret_key                <not set>             None    None
     region                <not set>             None    None
 ```
 
-You can then use the following command to start a stopped instance as shown below, making sure to replace `<your-pulumi-org-name>`, `<your-environment-name>`, and `<your-stopped-instance-id>` with the names of your own Pulumi organization, environment, and desired EC2 instance ID respectively:
+You can then use the following command to list the details of the calling entity as shown below, making sure to replace `<your-pulumi-org-name>` and `<your-environment-name>` with the names of your own Pulumi organization and environment respectively:
 
 ```bash
-esc run <your-pulumi-org-name>/<your-environment-name> -- aws ec2 start-instances --instance-ids <your-stopped-instance-id>
+esc run <your-pulumi-org-name>/<your-environment-name> -- aws sts get-caller-identity
 ```
 
 ## Conclusion
 
-Pulumi ESC makes it easier than ever to tame infrastructure complexity, especially when running commands like aws ec2 start-instances. Pulumi ESC supports dynamic credentials using OIDC across AWS, Azure, and Google Cloud. Check out the following links to learn more about Pulumi ESC today.
+Pulumi ESC makes it easier than ever to tame infrastructure complexity, especially when running commands like aws sts get-caller-identity. Pulumi ESC supports dynamic credentials using OIDC across AWS, Azure, and Google Cloud. Check out the following links to learn more about Pulumi ESC today.
 
 - [Getting Started](/docs/pulumi-cloud/esc/get-started)
 - [Documentation](/docs/pulumi-cloud/esc)
