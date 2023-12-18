@@ -111,12 +111,11 @@ if (pulumi.getStack() === "www-testing") {
                             "AWS": `arn:aws:iam::${accountId}:root`
                         },
                         "Action": [
-                            "s3:GetLifecycleConfiguration",
-                            "s3:ListBucket",
-                            "s3:PutObject"
+                            "s3:PutObject",
+                            "s3:PutObjectAcl"
                         ],
                         "Resource": [
-                            `arn:aws:s3:::${bucket}`
+                            `arn:aws:s3:::${bucket}/*`
                         ]
                     }
                 ]
