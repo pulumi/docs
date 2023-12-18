@@ -1,0 +1,10 @@
+{
+    "name": "awsx-apigateway-auth-cognito-javascript",
+    "main": "index.js",
+    "dependencies": {
+        "@pulumi/pulumi": "^3.0.0",
+        "@pulumi/aws": "^6.0.0",
+        "@pulumi/aws-apigateway": "^2.1.0",
+        "@pulumi/awsx": "^2.0.2"
+    }
+}

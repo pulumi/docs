@@ -10,8 +10,6 @@ import com.pulumi.aws.ec2.SecurityGroup;
 import com.pulumi.aws.ec2.SecurityGroupArgs;
 import com.pulumi.aws.ec2.inputs.GetAmiArgs;
 import com.pulumi.aws.ec2.inputs.GetAmiFilterArgs;
-import com.pulumi.aws.ec2.inputs.SecurityGroupEgressArgs;
-import com.pulumi.aws.ec2.inputs.SecurityGroupIngressArgs;
 import com.pulumi.aws.ec2.outputs.GetAmiResult;
 import com.pulumi.awsx.ec2.Vpc;
 import com.pulumi.core.Output;
@@ -40,7 +38,7 @@ public class App {
                 .ami(ami.applyValue(GetAmiResult::id))
                 .instanceType("t2.micro")
                 .vpcSecurityGroupIds(Output.all(securityGroup.id()))
-                .subnetId(vpc.publicSubnetIds().applyValue(x -> x.get(0)))
+                .subnetId(vpc.publicSubnetIds().applyValue(ids -> ids.get(0)))
                 .build()
             );
 

@@ -1,0 +1,3 @@
+name: awsx-apigateway-http-proxy-java
+runtime: java
+description: An example that creates an API Gateway instance and configures a route as an HTTP proxy.
