@@ -7,7 +7,7 @@ meta_desc: "Learn the fundamentals of Infrastructure as Code (IaC) through guide
 featured: false
 
 # If the video is pre-recorded or live.
-pre_recorded: true
+pre_recorded: false
 
 # If the video is part of the PulumiTV series. Setting this value to true will list the video in the "PulumiTV" section.
 pulumi_tv: false
@@ -20,7 +20,7 @@ unlisted: false
 
 # Gated webinars will have a registration form and the user will need
 # to fill out the form before viewing.
-gated: false
+gated: true
 
 # The layout of the landing page.
 type: webinars
@@ -54,9 +54,9 @@ main:
     # Webinar title.
     title: "Getting started with Infrastructure as Code on Oracle Cloud"
     # URL for embedding a URL for ungated webinars.
-    youtube_url: "https://www.youtube.com/embed/oDVSN0uwJTg"
+    youtube_url: #"https://www.youtube.com/embed/oDVSN0uwJTg"
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2022-07-14T09:00:00-07:00
+    sortable_date: 2024-02-22T09:00:00-08:00
     # Duration of the webinar.
     duration: "90 minutes"
     # Datetime of the webinar.
@@ -69,10 +69,10 @@ main:
 
     # The webinar presenters
     presenters:
-        - name: "Laura Santamaria"
-          role: "Developer Advocate, Pulumi"
-        - name: "Rahul M R"
-          role: "Senior Solutions Architect, Oracle"
+            - name: Josh Kodroff
+              role: Sr. Solutions Architect, Pulumi
+            - name: Eli Schilling
+              role: Developer Advocate, Cloud Native and DevOps @ Oracle
 
     # A bullet point list containing what the user will learn during the webinar.
     learn:
@@ -82,5 +82,6 @@ main:
 # The right hand side form section.
 form:
     # HubSpot form id.
-    hubspot_form_id: ""
+    hubspot_form_id: 53f62fbc-252b-4407-813e-4d0462b119e7
+    salesforce_campaign_id: 701Du000000Bu34IAC
 ---
