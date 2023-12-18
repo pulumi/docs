@@ -1,6 +1,6 @@
 ---
 title: "Replicating Data to Support Multi-Region Applications"
-date: 2023-12-15T11:03:10Z
+date: 2023-12-18T11:03:10Z
 draft: false
 meta_desc: Learn about the tradeoffs in distributed databases and data replication when using them for multi-region applications.
 meta_image: meta.png
@@ -36,7 +36,7 @@ Any discussion of data replication among multiple regions invariably needs to ad
 
 - **Availability – all clients can always read and write the data:** Prioritizing high availability means that the system responds to client read and write requests even in the event of network partitions. Accepting eventual consistency and accepting some transient divergence among replicas may be required to achieve availability.
 
-- **Partition Tolerance – the system will continue to work despite physical partitions:** Partition tolerance is non-negotiable in cloud computing, when systems span numerous regions and components are distributed. It ensures that the system continues to function even in the face of physical partitions or network outages, but doing so will require strategic compromises in terms of consistency or availability.
+- **Partition Tolerance – the system will continue to work despite partitions:** Partition tolerance is non-negotiable in cloud computing, when systems span numerous regions and components are distributed. It ensures that the system continues to function even in the face of physical partitions or network outages, but doing so will require strategic compromises in terms of consistency or availability.
 
 To reiterate, application and infrastructure architects have no choice but to tolerate network partitioning, as networks outside their control or influence—either the cloud provider’s network or the internet or both—typically fall in the replication path. Therefore, application and infrastructure architects have to choose the behavior of the data store when (not if) network partitioning occurs:
 
@@ -93,7 +93,7 @@ const cosmosDbAccount = new azure.documentdb.DatabaseAccount("myCosmosDbAccount"
 
 You will need to choose a consistency level that aligns with your application requirements, such as "Session," "Bounded staleness," "Eventual," "Strong," or "Consistent prefix." [This page](https://learn.microsoft.com/en-us/azure/cosmos-db/consistency-levels) has more details on the different consistency levels, but let’s look at a couple specific configurations.
 
-Recall that strong consistency ensures that all nodes or replicas in the system view the same data simultaneously, regardless of which node they are accessing. In other words, after performing a write operation, any subsequent read action from any node must return the most recent write value. This consistency mode guarantees the linear ordering of processes, and the system behaves like a single, coherent entity. Strong consistency prioritizes consistency over availability in the event of network partition.
+Recall that strong consistency ensures that all nodes or replicas in the system view the same data simultaneously, regardless of which node they are accessing. In other words, after performing a write operation, any subsequent read action from any node must return the most recent write value. This consistency mode guarantees the linear ordering of processes, and the system behaves like a single, coherent entity. Strong consistency prioritizes consistency over availability in the event of network partition. It also hinders performance as the write must be acknowledged by multiple nodes.
 
 You can prioritize strong consistency by configuring the Azure Cosmos DB account to use the "Strong" consistency level. This ensures that all read and write operations observe the most recent version of the data across all replicas.
 
