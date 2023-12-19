@@ -1,7 +1,7 @@
 ---
 # Name of the webinar.
 title: "Getting Started with Infrastructure as Code on AWS"
-title_tag: "Getting Started with IaC on AWS (Feb 2023 Workshop)"
+title_tag: "Getting Started with Infrastructure as Code on AWS"
 meta_desc: "In this workshop, you will learn the fundamentals of Infrastructure as Code through a series of guided exercises using the Pulumi Cloud Engineering platform."
 
 # A featured webinar will display first in the list.
@@ -36,8 +36,8 @@ block_external_search_index: false
 # data for Google Events
 event_data:
   name: Pulumi - Getting Started with Infrastructure as Code on AWS
-  start_date: 2023-02-02T09:00:00.000-08:00
-  end_date: 2023-02-02T10:00:00.000-08:00
+  start_date: 2024-01-10T09:00:00.000-08:00
+  end_date: 2024-01-10T10:30:00.000-08:00
   url: "https://www.pulumi.com/resources/getting-started-with-iac-aws/"
   description: In this workshop, you will learn the fundamentals of Infrastructure as Code through a series of guided exercises using Pulumi’s Cloud Engineering platform. You will be introduced to Pulumi, an infrastructure as code platform, where you can use familiar programming languages to provision modern cloud infrastructure. This workshop is designed to help users completely new to Pulumi to become familiar with the core concepts to be effective with the Pulumi Infrastructure as Code platform. We will guide you through the Pulumi platform with diagrams and a series of hands on exercises to help you understand the building blocks available in Pulumi.
 
@@ -62,20 +62,23 @@ main:
     # URL for embedding a URL for ungated webinars.
     youtube_url: #"https://www.youtube.com/embed/Ap0aLb-RQSc"
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2023-02-02T09:00:00.000-08:00
+    sortable_date: 2024-01-10T09:00:00.000-08:00
     # Duration of the webinar.
-    duration: "60 minutes"
+    duration: "90 minutes"
     # Datetime of the webinar.
-    datetime: "2/2/2023 09:00am - 10:00am PT"
+    datetime:
     # Description of the webinar.
-    description: "In this workshop, you will learn the fundamentals of Infrastructure as Code through a series of guided exercises using Pulumi’s Cloud Engineering platform. You will be introduced to Pulumi, an infrastructure as code platform, where you can use familiar programming languages to provision modern cloud infrastructure. This workshop is designed to help users completely new to Pulumi to become familiar with the core concepts to be effective with the Pulumi Infrastructure as Code platform. We will guide you through the Pulumi platform with diagrams and a series of hands on exercises to help you understand the building blocks available in Pulumi."
+    description: |
+      In this workshop, you will learn the fundamentals of Infrastructure as Code through a series of guided exercises using Pulumi’s Cloud Engineering platform. You will be introduced to Pulumi, an infrastructure as code platform, where you can use familiar programming languages to provision modern cloud infrastructure.
+
+      This workshop is designed to help users completely new to Pulumi to become familiar with the core concepts to be effective with the Pulumi Infrastructure as Code platform. We will guide you through the Pulumi platform with diagrams and a series of hands on exercises to help you understand the building blocks available in Pulumi.
 
     # The webinar presenters
     presenters:
         - name: "Josh Kodroff"
           role: "Sr. Solutions Architect, Pulumi"
         - name: "Marina Novikova"
-          role: "Partner Solution Architect at Amazon Web Services (AWS)"
+          role: "Sr. Partner Solutions Architect, AWS"
 
     # A bullet point list containing what the user will learn during the webinar.
     learn:
@@ -85,8 +88,8 @@ main:
 # The right hand side form section.
 form:
     # HubSpot form id.
-    hubspot_form_id: "b5206c33-26dc-41dc-9c2f-09e9af949afd"
-    salesforce_campaign_id: "701Du0000009l8TIAQ"
+    hubspot_form_id: "d8c4e51d-db5e-4faa-85f6-654af88641f0"
+    salesforce_campaign_id: "701Du000000Bu1cIAC"
 
 aws_only: true
 ---

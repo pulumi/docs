@@ -1,0 +1,32 @@
+name: awsx-apigateway-openapi-full-yaml
+runtime: yaml
+description: An example of configuring an API Gateway instance with an OpenAPI/Swagger JSON definition.
+
+resources:
+  api:
+    type: aws-apigateway:RestAPI
+    properties:
+      swaggerString: |
+        {
+          "swagger": "2.0",
+          "info": {
+            "title": "example",
+            "version": "1.0"
+          },
+          "paths": {
+            "/": {
+              "get": {
+                "x-amazon-apigateway-integration": {
+                  "httpMethod": "GET",
+                  "passthroughBehavior": "when_no_match",
+                  "type": "http_proxy",
+                  "uri": "https://httpbin.org/uuid"
+                }
+              }
+            }
+          },
+          "x-amazon-apigateway-binary-media-types": ["*/*"]
+        }
+
+outputs:
+  url: ${api.url}

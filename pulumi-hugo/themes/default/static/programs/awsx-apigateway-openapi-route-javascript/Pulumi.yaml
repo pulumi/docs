@@ -1,0 +1,6 @@
+name: awsx-apigateway-openapi-route-javascript
+runtime:
+  name: nodejs
+  options:
+    typescript: false
+description: n example of configuring an API Gateway route with an OpenAPI/Swagger definition.

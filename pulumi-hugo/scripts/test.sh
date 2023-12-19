@@ -35,6 +35,14 @@ pushd "$programs_dir"
             continue
         fi
 
+        # Skip programs we know don't compile.
+
+        # API Gateway authorizer parameter `providerArns` is mistyped.
+        # https://github.com/pulumi/pulumi-aws-apigateway/issues/121
+        if [[ "$project" == "awsx-apigateway-auth-cognito-java" ]]; then
+            continue
+        fi
+
         echo
         echo "***"
         echo "* $project"
@@ -47,7 +55,7 @@ pushd "$programs_dir"
         # Install dependencies.
         pulumi -C "$project" install
 
-        # Skip previews known not to work.
+        # Skip programs we know don't successfully preview.
 
         # Java examples of FargateService erroneously complain about missing container declarations.
         # https://github.com/pulumi/pulumi-awsx/issues/820
@@ -56,6 +64,12 @@ pushd "$programs_dir"
         elif [[ "$project" == "awsx-load-balanced-fargate-ecr-java" ]]; then
             continue
         elif [[ "$project" == "awsx-load-balanced-fargate-nginx-java" ]]; then
+            continue
+        fi
+
+        # Custom-domain examples won't work because of the hosted-zone lookup (which will fail unless
+        # the credentials can access the specified Route 53 zone).
+        if [[ "$project" == "awsx-apigateway-custom-domain-"* ]]; then
             continue
         fi
 
@@ -70,7 +84,7 @@ pushd "$programs_dir"
         # Preview or deploy.
         if [[ "$mode" == "update" ]]; then
 
-            # Skip updates known not to work.
+            # Skip programs we know don't successfully update.
 
             # Error converting 'java.util.Collections$UnmodifiableRandomAccessList' to 'TypeShape{type=interface java.util.List, parameters=[TypeShape{type=class com.pulumi.aws.lb.outputs.TargetGroupTargetHealthState, parameters=[]}]}'.
             # https://github.com/pulumi/pulumi-java/issues/1276

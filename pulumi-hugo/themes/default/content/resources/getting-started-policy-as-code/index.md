@@ -1,7 +1,7 @@
 ---
 # Name of the webinar.
-title: "Getting Started with Policy as Code for Any Cloud"
-meta_desc: "Erin Krengel and Cameron Stokes will demonstrate practical examples for defining and enforcing policies on AWS, Azure and Google Cloud."
+title: "Policy as Code on AWS"
+meta_desc: "In this session, we will show you how to enforce best practices by creating policies that scale from a single infrastructure stack to your entire organization"
 
 aliases:
   - /webinars/getting-started-policy-as-code-2020-04-09
@@ -11,7 +11,7 @@ aliases:
 featured: false
 
 # If the video is pre-recorded or live.
-pre_recorded: true
+pre_recorded: false
 
 # If the video is part of the PulumiTV series. Setting this value to true will list the video in the "PulumiTV" section.
 pulumi_tv: false
@@ -24,7 +24,7 @@ unlisted: false
 
 # Gated webinars will have a registration form and the user will need
 # to fill out the form before viewing.
-gated: false
+gated: true
 
 # The layout of the landing page.
 type: webinars
@@ -40,32 +40,32 @@ url_slug: "getting-started-policy-as-code"
 # The content of the hero section.
 hero:
     # The title text in the hero. This also serves as the pages H1.
-    title: "Getting Started with Policy as Code for Any Cloud"
+    title: "Policy as Code on AWS"
     # The image the appears on the right hand side of the hero.
     image: "/icons/containers.svg"
 
 # Content for the left hand side section of the page.
 main:
     # Webinar title.
-    title: "Getting Started with Policy as Code for Any Cloud"
+    title: "Policy as Code on AWS"
     # URL for embedding a URL for ungated webinars.
-    youtube_url: "https://www.youtube.com/embed/_8YYfhtTs94"
+    youtube_url: #"https://www.youtube.com/embed/_8YYfhtTs94"
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2020-04-09T11:00:00.000-07:00
+    sortable_date: 2024-02-14T09:00:00.000-08:00
     # Duration of the webinar.
-    duration: "30 minutes"
+    duration: "90 minutes"
     # Datetime of the webinar.
-    datetime: "THU APR 09, 2020 AT 11:00AM PDT"
+    datetime:
     # Description of the webinar.
     description: |
-        Poorly configured cloud infrastructure is a common source of security, reliability and cost issues that result in the types of headlines that make executive leaders cringe. The Pulumi team will show you how to enforce best practices by creating durable policies that scale from a single infrastructure stack to company-wide policies. From properly secured S3 buckets to mandated resource labels, Pulumi’s Policy as Code capabilities help you to prevent defective configurations from impacting your cloud of choice.
+        Poorly configured cloud infrastructure can be an unwelcome source of security, reliability, and cost issues. In this session, the Pulumi team will show you how to enforce best practices by creating policies that scale from a single infrastructure stack to your entire organization. And you can do all of this in TypeScript and/or Python!
 
     # The webinar presenters
     presenters:
-        - name: Erin Krengel
-          role: Software Engineer, Pulumi
-        - name: Cameron Stokes
-          role: Customer Engineer, Pulumi
+        - name: Josh Kodroff
+          role: Sr. Solutions Architect, Pulumi
+        - name: Marina Novikova
+          role: Sr. Partner Solutions Architect, AWS
 
     # A bullet point list containing what the user will learn during the webinar.
     learn:
@@ -76,8 +76,9 @@ main:
 form:
     # GoToWebinar webinar key. This key allows us to register people for webinars via the
     # HubSpot form.
-    gotowebinar_key: "9002810409971052299"
+    gotowebinar_key: 
 
     # HubSpot form id.
-    hubspot_form_id: "5b1083f6-e034-459c-a1b6-f2bc6d900963"
+    hubspot_form_id: 5631e676-649a-4064-8bf3-8a17961c92e8
+    salesforce_campaign_id: 701Du000000Bu2zIAC
 ---

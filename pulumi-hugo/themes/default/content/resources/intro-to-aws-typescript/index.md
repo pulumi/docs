@@ -19,17 +19,17 @@ main:
     In this workshop, you will learn the fundamentals of infrastructure as code through guided exercises. You will be introduced to Pulumi, an infrastructure-as-code platform, where you can use familiar programming languages to provision modern cloud infrastructure.
 
     This workshop is designed to help new users become familiar with the core concepts needed to effectively deploy resources on AWS. We will guide you through the Pulumi platform with diagrams and a series of labs to help accelerate your cloud projects.
-  sortable_date: 2023-12-05T09:00:00.000-08:00
+  sortable_date: 2024-02-07T09:00:00.000-08:00
 event_data:
   name: Introduction to AWS in TypeScript
-  start_date: 2023-12-05T09:00:00.000-08:00
-  end_date: 2023-12-05T10:30:00.000-08:00
+  start_date: 2024-02-07T09:00:00.000-08:00
+  end_date: 2024-02-07T10:30:00.000-08:00
   url: https://www.pulumi.com/resources/intro-to-aws-typescript
   description: |
     In this workshop, you will learn the fundamentals of infrastructure as code through guided exercises. You will be introduced to Pulumi, an infrastructure-as-code platform, where you can use familiar programming languages to provision modern cloud infrastructure. This workshop is designed to help new users become familiar with the core concepts needed to effectively deploy resources on AWS. We will guide you through the Pulumi platform with diagrams and a series of labs to help accelerate your cloud projects.
 form:
-  hubspot_form_id: 3051a439-0133-4417-b19b-bc1e33606db1
-  salesforce_campaign_id: 701Du000000BQqHIAW
+  hubspot_form_id: 7c617807-21a0-4b0a-9188-52587217c272
+  salesforce_campaign_id: 701Du000000Bu2pIAC
   gotowebinar_key: ""
 featured: false
 pre_recorded: false

@@ -28,52 +28,58 @@ Personal access tokens map to the permissions of a user, organization access tok
 
 Both organization and team token activities produce audit log events which are accessible from the **Audit Logs** page. All audit log events surface the token’s unique name, and in the event of audit log export, the token’s UUID as well.
 
-| Action | Personal | Team | Organization | Admin |
-| - | - | - | - | - |
-| **Stacks** | **Personal** | **Team** | **Organization** | **Admin** |
-| List stacks | ✅ | ✅ | ✅ | ✅ |
-| Get stack | ✅ | ✅ | ✅ | ✅ |
-| Get stack state | ✅ | ✅ | ✅ |✅ |
-| Transfer stack | | | | ✅ |
-| Delete stack | ✅ | ✅ | ✅ | ✅ |
-| List webhooks | | ✅ | ✅ | ✅ |
-| Create webhook | | ✅ | ✅ | ✅ |
-| Get webhook | | ✅ | ✅ | ✅ |
-| Ping webhook | | ✅ | ✅ | ✅ |
-| List webhook deliveries | | ✅ | ✅ | ✅ |
-| **Stack tags** | **Personal** | **Team** | **Organization** | **Admin** |
-| Get stack tags | ✅ | ✅ | ✅ | ✅ |
-| Set stack tag | ✅ | ✅ | ✅ | ✅ |
-| Delete stack tag | ✅ | ✅ | ✅ | ✅ |
-| **Stack updates** | **Personal** | **Team** | **Organization** | **Admin** |
-| List stack updates | ✅ | ✅ | ✅ | ✅ |
-| Get update status | ✅ | ✅ | ✅ | ✅ |
-| List update events | ✅ | ✅ | ✅ | ✅ |
-| List previews | ✅ | ✅ | ✅ | ✅ |
-| **Organizations** | **Personal** | **Team** | **Organization** | **Admin** |
-| List users | | ✅ | ✅ | ✅ |
-| Add user to organization | | | | ✅ |
-| Remove user from organization | | | | ✅ |
-| List teams | | ✅ | ✅ | ✅ |
-| Create team | | | ✅ | ✅ |
-| Delete team | | | ✅ | ✅ |
-| Update team membership | | | | ✅ |
-| Grant stack access to team | | | | ✅ |
-| Remove stack access from team | | | | ✅ |
-| Create team token |  | | | ✅ |
-| Delete team token |  | | | ✅ |
-| Update member role | | | | ✅ |
-| List access tokens | | | | ✅ |
-| Create access token | | | | |
-| Delete access token | | | | |
-| List webhooks | | | ✅ | ✅ |
-| Create webhook | | | ✅ | ✅ |
-| Get webhook | | | ✅ | ✅ |
-| Ping webhook | | | ✅ | ✅ |
-| List webhooks deliveries | | | ✅ | ✅ |
-| **Audit logs** | **Personal** | **Team** | **Organization** | **Admin** |
-| Get audit log events (JSON) | | | | ✅ |
-| Export audit log events (CSV or CEF) | | | | ✅ |
+| Action                                | Personal     | Team     | Organization     | Admin     |
+|---------------------------------------|--------------|----------|------------------|-----------|
+| **Stacks**                            | **Personal** | **Team** | **Organization** | **Admin** |
+| List stacks                           | ✅            | ✅        | ✅                | ✅         |
+| Get stack                             | ✅            | ✅        | ✅                | ✅         |
+| Get stack state                       | ✅            | ✅        | ✅                | ✅         |
+| Transfer stack                        |              |          |                  | ✅         |
+| Delete stack                          | ✅            | ✅        | ✅                | ✅         |
+| List webhooks                         |              | ✅        | ✅                | ✅         |
+| Create webhook                        |              | ✅        | ✅                | ✅         |
+| Get webhook                           |              | ✅        | ✅                | ✅         |
+| Ping webhook                          |              | ✅        | ✅                | ✅         |
+| List webhook deliveries               |              | ✅        | ✅                | ✅         |
+| **Stack tags**                        | **Personal** | **Team** | **Organization** | **Admin** |
+| Get stack tags                        | ✅            | ✅        | ✅                | ✅         |
+| Set stack tag                         | ✅            | ✅        | ✅                | ✅         |
+| Delete stack tag                      | ✅            | ✅        | ✅                | ✅         |
+| **Stack updates**                     | **Personal** | **Team** | **Organization** | **Admin** |
+| List stack updates                    | ✅            | ✅        | ✅                | ✅         |
+| Get update status                     | ✅            | ✅        | ✅                | ✅         |
+| List update events                    | ✅            | ✅        | ✅                | ✅         |
+| List previews                         | ✅            | ✅        | ✅                | ✅         |
+| **Organizations**                     | **Personal** | **Team** | **Organization** | **Admin** |
+| List users                            |              | ✅        | ✅                | ✅         |
+| Add user to organization              |              |          |                  | ✅         |
+| Remove user from organization         |              |          |                  | ✅         |
+| List teams                            |              | ✅        | ✅                | ✅         |
+| Create team                           |              |          | ✅                | ✅         |
+| Delete team                           |              |          | ✅                | ✅         |
+| Update team membership                |              |          |                  | ✅         |
+| Grant stack access to team            |              |          |                  | ✅         |
+| Remove stack access from team         |              |          |                  | ✅         |
+| Create team token                     |              |          |                  | ✅         |
+| Delete team token                     |              |          |                  | ✅         |
+| Update member role                    |              |          |                  | ✅         |
+| List access tokens                    |              |          |                  | ✅         |
+| Create access token                   |              |          |                  |           |
+| Delete access token                   |              |          |                  |           |
+| **Webhooks**                          | **Personal** | **Team** | **Organization** | **Admin** |
+| List stack webhooks                   | ✅            | ✅        | ✅                | ✅         |
+| Create stack webhook                  | ✅            | ✅        | ✅                | ✅         |
+| Get stack webhook                     | ✅            | ✅        | ✅                | ✅         |
+| Ping stack webhook                    | ✅            | ✅        | ✅                | ✅         |
+| List stack webhooks deliveries        | ✅            | ✅        | ✅                | ✅         |
+| List organization webhooks            |              |          |                  | ✅         |
+| Create organization webhook           |              |          |                  | ✅         |
+| Get organization webhook              |              |          |                  | ✅         |
+| Ping organization webhook             |              |          |                  | ✅         |
+| List organization webhooks deliveries |              |          |                  | ✅         |
+| **Audit logs**                        | **Personal** | **Team** | **Organization** | **Admin** |
+| Get audit log events (JSON)           |              |          |                  | ✅         |
+| Export audit log events (CSV or CEF)  |              |          |                  | ✅         |
 
 ## Personal access tokens
 
@@ -84,14 +90,14 @@ These access tokens have the same permission as your user.
 To create an access token:
 
 1. Select **Personal access tokens** from the user menu.
-1. Select **Create token**.
+2. Select **Create token**.
 
 ### Deleting Personal Access Tokens
 
 To delete an access token:
 
 1. Select **Personal access tokens** from the user menu.
-1. Select **Delete token** from the 3-dot menu at the end of the table row.
+2. Select **Delete token** from the 3-dot menu at the end of the table row.
 
 ## Organization access tokens
 

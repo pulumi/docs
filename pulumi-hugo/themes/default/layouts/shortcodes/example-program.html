@@ -1,49 +1,76 @@
 {{ $path := .Get "path" }}
 {{ $languages := default "javascript,typescript,python,go,csharp,java,yaml" (.Get "languages") }}
-{{ $folder := path.Join "static" "programs" }}
+{{ $programsDir := slice "static" "programs" }}
+{{ $showChooser := gt (len (split $languages ",")) 1 }}
 
-{{ if gt (len (split $languages ",")) 1 }}
+{{ if $showChooser }}
+    {{ $eachLang := split $languages "," }}
+    {{ $chooserLangs := slice }}
+    {{ range $eachLang }}
+        {{ $lang := index (split . ":") 0 }}
+        {{ $programDir := path.Join $programsDir (printf "%s-%s" $path $lang) }}
+        {{ if fileExists $programDir }}
+            {{ $chooserLangs = $chooserLangs | append $lang }}
+        {{ end }}
+    {{ end }}
     <div>
-        <pulumi-chooser type="language" options="{{ $languages }}"></pulumi-chooser>
-    </div>
+        <pulumi-chooser type="language" options="{{ delimit $chooserLangs "," }}">
 {{ end }}
 
 {{ range $i, $language := split $languages "," }}
+    {{ $range := split $language ":" }}
+    {{ $language = index $range 0 }}
+    {{ $lineRange := split (index $range 1) "-" }}
+    {{ $from := default 1 (index $lineRange 0) }}
+    {{ $to := default 9999 (index $lineRange 1) }}
+
     <div class="example-program w-full">
-        <pulumi-choosable type="language" values="{{ $language }}">
-            {{ $program := "" }}
-            {{ $depfile := "" }}
-            {{ $deplang := "" }}
-            {{ if eq $language "javascript" }}
-                {{ $program = "index.js" }}
-                {{ $depfile = "package.json" }}
-                {{ $deplang = "json" }}
-            {{ else if eq $language "typescript" }}
-                {{ $program = "index.ts" }}
-                {{ $depfile = "package.json" }}
-                {{ $deplang = "json" }}
-            {{ else if eq $language "python" }}
-                {{ $program = "__main__.py" }}
-                {{ $depfile = "requirements.txt" }}
-                {{ $deplang = "plain" }}
-            {{ else if eq $language "go" }}
-                {{ $program = "main.go" }}
-                {{ $depfile = "go.mod.txt" }}
-                {{ $deplang = "bash" }}
-            {{ else if eq $language "csharp" }}
-                {{ $program = "Program.cs" }}
-                {{ $depfile = printf "%s.csproj" (printf "%s-%s" $path $language) }}
-                {{ $deplang = "xml" }}
-            {{ else if eq $language "java" }}
-                {{ $program = "src/main/java/myproject/App.java" }}
-                {{ $depfile = "pom.xml" }}
-                {{ $deplang = "xml" }}
-            {{ else if eq $language "yaml" }}
-                {{ $program = "Pulumi.yaml" }}
-            {{ end }}
-            {{ if ne $program "" }}
-                {{ $root := slice "static" "programs" (printf "%s-%s" $path $language) }}
-                {{ $code := readFile (path.Join $root $program) }}
+        {{ if $showChooser }}
+            <pulumi-choosable type="language" values="{{ $language }}">
+        {{ end }}
+
+        {{ $program := "" }}
+        {{ $depfile := "" }}
+        {{ $deplang := "" }}
+        {{ if eq $language "javascript" }}
+            {{ $program = "index.js" }}
+            {{ $depfile = "package.json" }}
+            {{ $deplang = "json" }}
+        {{ else if eq $language "typescript" }}
+            {{ $program = "index.ts" }}
+            {{ $depfile = "package.json" }}
+            {{ $deplang = "json" }}
+        {{ else if eq $language "python" }}
+            {{ $program = "__main__.py" }}
+            {{ $depfile = "requirements.txt" }}
+            {{ $deplang = "plain" }}
+        {{ else if eq $language "go" }}
+            {{ $program = "main.go" }}
+            {{ $depfile = "go.mod.txt" }}
+            {{ $deplang = "bash" }}
+        {{ else if eq $language "csharp" }}
+            {{ $program = "Program.cs" }}
+            {{ $depfile = printf "%s.csproj" (printf "%s-%s" $path $language) }}
+            {{ $deplang = "xml" }}
+        {{ else if eq $language "java" }}
+            {{ $program = "src/main/java/myproject/App.java" }}
+            {{ $depfile = "pom.xml" }}
+            {{ $deplang = "xml" }}
+        {{ else if eq $language "yaml" }}
+            {{ $program = "Pulumi.yaml" }}
+        {{ end }}
+
+        {{ if ne $program "" }}
+            {{ $programFilePath := path.Join $programsDir (printf "%s-%s" $path $language) $program }}
+
+            {{ if fileExists $programFilePath }}
+                {{ $code := readFile $programFilePath }}
+                {{ $lines := split $code "\n" }}
+                {{ $toEnd := after (sub (int $from) 1) $lines }}
+                {{ $lineCount := add (sub (int $to) (int $from)) 1 }}
+                {{ $toTo := first $lineCount $toEnd }}
+                {{ $code = delimit $toTo "\n" }}
+
                 <div data-program-path="{{ $path }}" data-program-language="{{ $language }}" data-program-file="{{ $program }}" data-program-depfile="{{ $depfile }}">
                     {{ highlight $code $language }}
                 </div>
@@ -52,10 +79,19 @@
                         <a href="https://github.com/pulumi/pulumi-hugo/tree/{{ $.Site.Params.contentRepositoryBaseBranch }}/{{ getenv "REPO_THEME_PATH" }}static/programs/{{ $path }}-{{ $language }}" target="_blank">
                             <i class="fab fa-github"></i>
                         </a>
-                        <span slot="content">Open this example on GitHub</span>
+                        <span slot="content">View full example on GitHub</span>
                     </pulumi-tooltip>
                 </div>
             {{ end }}
-        </pulumi-choosable>
+        {{ end }}
+
+        {{ if $showChooser }}
+            </pulumi-choosable>
+        {{ end }}
+    </div>
+{{ end }}
+
+{{ if $showChooser }}
+        </pulumi-chooser>
     </div>
 {{ end }}
