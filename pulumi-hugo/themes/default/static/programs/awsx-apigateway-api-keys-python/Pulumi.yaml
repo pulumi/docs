@@ -1,0 +1,6 @@
+name: awsx-apigateway-api-keys-python
+runtime:
+  name: python
+  options:
+    virtualenv: venv
+description: An example that deploys an API Gateway instance with support for API keys.

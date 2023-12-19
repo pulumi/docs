@@ -1,0 +1,22 @@
+name: awsx-apigateway-validation-types-yaml
+runtime: yaml
+description: An example of configuring request validators for an API Gateway instance.
+
+resources:
+  api:
+    type: aws-apigateway:RestAPI
+    properties:
+      requestValidator: PARAMS_ONLY
+      routes:
+        - path: /search
+          method: GET
+          target:
+            type: http_proxy
+            uri: https://www.example.com/
+          requestValidator: ALL
+          requiredParameters:
+            - name: q
+              in: query
+
+outputs:
+  url: ${api.url}

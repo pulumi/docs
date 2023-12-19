@@ -2,6 +2,7 @@
 # Name of the webinar.
 title: Scaling AI Apps
 meta_desc: "How do you build and scale the infrastructure and service architectures for AI apps?"
+meta_image: "/images/resources/scaling-ai-apps.png"
 
 # A featured webinar will display first in the list.
 featured: false

@@ -1,0 +1,3 @@
+name: awsx-apigateway-auth-cognito-java
+runtime: java
+description: An example that deploys an API Gateway REST API with an Amazon Cognito authorizer.
