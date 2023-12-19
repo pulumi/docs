@@ -95,7 +95,7 @@ secret_key                <not set>             None    None
     region                <not set>             None    None
 ```
 
-You can then use the following command to list the details of the calling entity as shown below, making sure to replace `<your-pulumi-org-name>` and `<your-environment-name>` with the names of your own Pulumi organization and environment respectively:
+To list the details of the calling entity, run the command using `esc run` as shown below, making sure to replace `<your-pulumi-org-name>` and `<your-environment-name>` with the names of your own Pulumi organization and environment respectively:
 
 ```bash
 esc run <your-pulumi-org-name>/<your-environment-name> -- aws sts get-caller-identity
