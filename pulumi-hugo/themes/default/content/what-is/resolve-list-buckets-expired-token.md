@@ -101,7 +101,7 @@ esc run <your-pulumi-org-name>/<your-environment-name> -i aws s3 ls --query "Buc
 
 ## Conclusion
 
-Pulumi ESC makes it easier than ever to tame infrastructure complexity, especially when running commands like `aws s3 ls`. Because Pulumi ESC supports dynamic credentials using OIDC across AWS, Azure, and Google Cloud, you no longer have to worry about credential errors like ExpiredToken as the service will dynamically generate and refresh them for you. Check out the following links to learn more about Pulumi ESC today.
+Pulumi ESC makes it easier than ever to tame infrastructure complexity, especially when running commands like `aws s3 ls`. Because Pulumi ESC supports dynamic credentials using OIDC across AWS, Azure, and Google Cloud, you no longer have to worry about credential errors like "ExpiredToken" as the service will dynamically generate and refresh them for you. Check out the following links to learn more about Pulumi ESC today.
 
 - [Getting Started](/docs/pulumi-cloud/esc/get-started)
 - [Documentation](/docs/pulumi-cloud/esc)
