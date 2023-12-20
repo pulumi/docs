@@ -73,6 +73,8 @@ echo "$s3_website_url"
 # Set the content-type of latest-version explicitly. (Otherwise, it'll be set as binary/octet-stream.)
 aws s3 cp "$build_dir/latest-version" "${destination_bucket_uri}/latest-version" \
     --content-type "text/plain" --acl public-read --region "$(aws_region)" --metadata-directive REPLACE
+aws s3 cp "$build_dir/latest-dev-version" "${destination_bucket_uri}/latest-dev-version" \
+    --content-type "text/plain" --acl public-read --region "$(aws_region)" --metadata-directive REPLACE
 aws s3 cp "$build_dir/esc/latest-version" "${destination_bucket_uri}/esc/latest-version" \
     --content-type "text/plain" --acl public-read --region "$(aws_region)" --metadata-directive REPLACE
 
