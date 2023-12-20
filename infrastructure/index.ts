@@ -96,28 +96,40 @@ const uploadsBucket = new aws.s3.Bucket("uploads-bucket", {
 
 if (pulumi.getStack() === "www-testing") {
     const marketingAppStack = new pulumi.StackReference("pulumi/marketing-db/staging");
-    const marketingAppAccountId = marketingAppStack.getOutput("awsAccountId");
+    const ecsRoleArn = marketingAppStack.getOutput("ecsRoleArn");
 
     const uploadsBucketPolicy = new aws.s3.BucketPolicy("uploads-bucket-policy", {
         bucket: uploadsBucket.bucket,
-        policy: pulumi.all([uploadsBucket.bucket, marketingAppAccountId])
-            .apply(([bucket, accountId]) => JSON.stringify({
+        policy: pulumi.all([uploadsBucket.bucket, ecsRoleArn])
+            .apply(([bucket, roleArn]) => JSON.stringify({
                 "Version": "2012-10-17",
                 "Statement": [
                     {
-                        "Sid": "Example permissions",
+                        "Action": [
+                            "s3:ListBucket",
+                            "s3:GetBucketLocation"
+                        ],
+                        "Principal": {
+                            "AWS": roleArn,
+                         },
+                        "Effect": "Allow",
+                        "Resource": [
+                            `arn:aws:s3:::${bucket}`
+                        ]
+                    },
+                    {
                         "Effect": "Allow",
                         "Principal": {
-                            "AWS": `arn:aws:iam::${accountId}:root`
+                            "AWS": roleArn,
                         },
                         "Action": [
-                            "s3:PutObject",
-                            "s3:PutObjectAcl"
+                            "s3:GetObject",
+                            "s3:PutObject"
                         ],
                         "Resource": [
                             `arn:aws:s3:::${bucket}/*`
                         ]
-                    }
+                    },
                 ]
             })),
     });
