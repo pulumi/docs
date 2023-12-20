@@ -25,7 +25,7 @@ The [Pulumi documentation for the `esc run` command](https://www.pulumi.com/docs
 
 > This command opens the environment with the given name and runs the given command. If the opened environment contains a top-level ’environmentVariables’ object, each key-value pair in the object is made available to the command as an environment variable.
 
-But what does this actually mean? If we use AWS as an example, it means that we can run commands like `aws s3api list-buckets` without the need to configure AWS credentials locally each time. It’s a significant stride towards making your cloud interactions more efficient and less error-prone, and here’s a deeper dive into why:
+But what does this actually mean? If we use AWS as an example, it means that we can run commands like `aws s3 ls` without the need to configure AWS credentials locally each time. It’s a significant stride towards making your cloud interactions more efficient and less error-prone, and here’s a deeper dive into why:
 
 - **Seamless Command Execution** - The `esc run` command lets you execute AWS commands effortlessly, freeing you from the intricacies of managing AWS credentials on your local machine. Simply put, it significantly reduces the overhead of credential setup and maintenance.
 
@@ -93,15 +93,15 @@ secret_key                <not set>             None    None
     region                <not set>             None    None
 ```
 
-Now run the `aws s3api list-buckets` command using `esc run` as shown below, making sure to replace `<your-pulumi-org-name>` and `<your-environment-name>` with the names of your own Pulumi organization and environment respectively:
+Now run the `aws s3 ls` command using `esc run` as shown below, making sure to replace `<your-pulumi-org-name>` and `<your-environment-name>` with the names of your own Pulumi organization and environment respectively:
 
 ```bash
-esc run <your-pulumi-org-name>/<your-environment-name> -i aws s3api list-buckets --query "Buckets[].Name"
+esc run <your-pulumi-org-name>/<your-environment-name> -i aws s3 ls --query "Buckets[].Name"
 ```
 
 ## Conclusion
 
-Pulumi ESC makes it easier than ever to tame infrastructure complexity, especially when running commands like `aws s3 ls`. Because Pulumi ESC supports dynamic credentials using OIDC across AWS, Azure, and Google Cloud, you no longer have to worry about credentials errors as the service will dynamically generate and refresh them for you. Check out the following links to learn more about Pulumi ESC today.
+Pulumi ESC makes it easier than ever to tame infrastructure complexity, especially when running commands like `aws s3 ls`. Because Pulumi ESC supports dynamic credentials using OIDC across AWS, Azure, and Google Cloud, you no longer have to worry about ExpiredToken errors as the service will dynamically generate and refresh them for you. Check out the following links to learn more about Pulumi ESC today.
 
 - [Getting Started](/docs/pulumi-cloud/esc/get-started)
 - [Documentation](/docs/pulumi-cloud/esc)
