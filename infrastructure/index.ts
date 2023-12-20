@@ -100,8 +100,8 @@ if (pulumi.getStack() === "www-testing") {
 
     const uploadsBucketPolicy = new aws.s3.BucketPolicy("uploads-bucket-policy", {
         bucket: uploadsBucket.bucket,
-        policy: pulumi.all([uploadsBucket.bucket, ecsRoleArn])
-            .apply(([bucket, roleArn]) => JSON.stringify({
+        policy: pulumi.all([uploadsBucket.arn, ecsRoleArn])
+            .apply(([bucketArn, roleArn]) => JSON.stringify({
                 "Version": "2012-10-17",
                 "Statement": [
                     {
@@ -113,9 +113,7 @@ if (pulumi.getStack() === "www-testing") {
                             "AWS": roleArn,
                          },
                         "Effect": "Allow",
-                        "Resource": [
-                            `arn:aws:s3:::${bucket}`
-                        ]
+                        "Resource": bucketArn,
                     },
                     {
                         "Effect": "Allow",
@@ -126,9 +124,7 @@ if (pulumi.getStack() === "www-testing") {
                             "s3:GetObject",
                             "s3:PutObject"
                         ],
-                        "Resource": [
-                            `arn:aws:s3:::${bucket}/*`
-                        ]
+                        "Resource": `${bucketArn}/*`,
                     },
                 ]
             })),
