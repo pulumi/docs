@@ -1,68 +1,70 @@
 {{ define "hero" }}
-    {{ partial "hero" (dict "title" .Params.page_title "small_title" "true") }}
+{{ partial "hero" (dict "title" .Params.page_title "small_title" "true") }}
 {{ end }}
 
 {{ define "main" }}
-    <section class="my-16 relative">
-        <div class="shape-background what-is-dots hidden xl:block">
-            <div class="shape-container">
-                <div class="dot-background-container">
-                    <div class="dot-background-overlay"></div>
-                    <div class="dot-background no-animate"></div>
-                </div>
-
-                <div class="circle-top"></div>
-                <div class="circle-middle"></div>
-                <div class="circle-bottom"></div>
+<section class="my-16 relative">
+    <div class="shape-background what-is-dots hidden xl:block">
+        <div class="shape-container">
+            <div class="dot-background-container">
+                <div class="dot-background-overlay"></div>
+                <div class="dot-background no-animate"></div>
             </div>
+
+            <div class="circle-top"></div>
+            <div class="circle-middle"></div>
+            <div class="circle-bottom"></div>
         </div>
+    </div>
 
-        <div class="container mx-auto">
-            <div class="lg:flex lg:justify-end">
-                <div class="lg:max-w-5xl">
-                    {{ with .Params.video }}
-                        <div class="card p-6 my-12">
-                            <h4>{{ .title }}</h4>
-                            <div>
-                                <div class="" style="position: relative; padding-bottom: 48.25%; height: 0; overflow: hidden;">
-                                    <iframe src="{{ .youtube_url }}" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen=""></iframe>
-                                </div>
-                                <p>
-                                    {{ .description }}
-                                </p>
-                            </div>
-                            <div>
-                                <div class="accordion-item text-2xl py-3 border-b-2 border-t-2">
-                                    {{ partial "accordian-header" (dict "text" "Transcript" "large_header" false) }}
+    <div class="container mx-auto">
+        <div class="lg:flex lg:justify-end">
+            <div class="lg:max-w-5xl">
+                {{ with .Params.video }}
+                <div class="card p-6 my-12">
+                    <h4>{{ .title }}</h4>
+                    <div>
+                        <div class="" style="position: relative; padding-bottom: 48.25%; height: 0; overflow: hidden;">
+                            <iframe src="{{ .youtube_url }}"
+                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;"
+                                allowfullscreen=""></iframe>
+                        </div>
+                        <p>
+                            {{ .description }}
+                        </p>
+                    </div>
+                    <div>
+                        <div class="accordion-item text-2xl py-3 border-b-2 border-t-2">
+                            {{ partial "accordian-header" (dict "text" "Transcript" "large_header" false) }}
 
 
-                                    <div class="accordion-item-body-no-animation text-base">
-                                        <p>{{ .transcript | markdownify }}</p>
-                                    </div>
-                                </div>
+                            <div class="accordion-item-body-no-animation text-base">
+                                <p>{{ .transcript | markdownify }}</p>
                             </div>
                         </div>
-                    {{ end }}
-
-
-                    <div class="bg-white px-3">
-                        {{ .Content }}
                     </div>
+                </div>
+                {{ end }}
+
+
+                <div class="bg-white px-3">
+                    {{ .Content }}
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section id="get-started" class="container px-6 lg:px-0 mx-auto my-16">
-        <div class="w-full bg-violet-600 card p-6 lg:p-16 lg:pt-24 text-center">
-            <div class="max-w-xl mx-auto">
+<section id="get-started" class="container px-6 lg:px-0 mx-auto my-16">
+    <div class="w-full bg-violet-600 card p-6 lg:p-16 lg:pt-24 text-center">
+        <div class="max-w-xl mx-auto">
                 <h2 class="text-white hidden lg:block px-0 lg:px-16">Get started today</h2>
                 <h4 class="text-white mt-0 lg:hidden">Get started today</h4>
                 <p class="text-white">Pulumi is open source and free to get started. Deploy your first stack today.</p>
                 <div class="mt-16">
                     <a class="btn-secondary" href="/docs/get-started/">Get Started</a>
                 </div>
-            </div>
         </div>
-    </section>
+    </div>
+</section>
 {{ end }}

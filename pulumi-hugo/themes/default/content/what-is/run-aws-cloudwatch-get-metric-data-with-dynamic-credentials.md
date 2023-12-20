@@ -203,7 +203,7 @@ Then validate that your output is similar to the following:
 
 ## Conclusion
 
-Pulumi ESC supports dynamic credentials using OIDC across AWS, Azure, and Google Cloud. Check out the following links to learn more about Pulumi ESC today.
+Pulumi ESC makes it easier than ever to tame infrastructure complexity, especially when running commands like `aws cloudwatch get-metric-data`. Pulumi ESC supports dynamic credentials using OIDC across AWS, Azure, and Google Cloud. Check out the following links to learn more about Pulumi ESC today.
 
 - Follow the [Getting Started](/docs/pulumi-cloud/esc/get-started) guide.
 - Read the [Documentation](/docs/pulumi-cloud/esc) for all the commands and features available.

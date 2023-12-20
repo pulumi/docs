@@ -103,10 +103,10 @@ esc run <your-pulumi-org-name>/<your-environment-name> -- aws ec2 start-instance
 
 ## Conclusion
 
-Pulumi ESC makes it easier than ever to tame infrastructure complexity, especially when running commands like aws ec2 start-instances. Pulumi ESC supports dynamic credentials using OIDC across AWS, Azure, and Google Cloud. Check out the following links to learn more about Pulumi ESC today.
+Pulumi ESC makes it easier than ever to tame infrastructure complexity, especially when running commands like `aws ec2 start-instances`. Pulumi ESC supports dynamic credentials using OIDC across AWS, Azure, and Google Cloud. Check out the following links to learn more about Pulumi ESC today.
 
-- [Getting Started](/docs/pulumi-cloud/esc/get-started)
-- [Documentation](/docs/pulumi-cloud/esc)
-- [Open Source](https://github.com/pulumi/esc)
+- Follow the [Getting Started](/docs/pulumi-cloud/esc/get-started) guide.
+- Read the [Documentation](/docs/pulumi-cloud/esc) for all the commands and features available.
+- Visit the [Open Source](https://github.com/pulumi/esc) repo for Pulumi ESC.
 
 Feel free to [join our community on Slack](https://slack.pulumi.com/) and let us know what you think!
