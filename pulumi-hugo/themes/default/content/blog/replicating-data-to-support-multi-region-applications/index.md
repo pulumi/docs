@@ -1,6 +1,6 @@
 ---
 title: "Replicating Data to Support Multi-Region Applications"
-date: 2023-12-18T11:03:10Z
+date: 2023-12-27T11:03:10Z
 draft: false
 meta_desc: Learn about the tradeoffs in distributed databases and data replication when using them for multi-region applications.
 meta_image: meta.png
