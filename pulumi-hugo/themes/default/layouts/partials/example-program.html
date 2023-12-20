@@ -76,7 +76,7 @@
                 </div>
                 <div class="example-program-footer bg-white">
                     <pulumi-tooltip>
-                        <a href="https://github.com/pulumi/pulumi-hugo/tree/master/{{ getenv "REPO_THEME_PATH" }}static/programs/{{ $path }}-{{ $language }}" target="_blank">
+                        <a href="https://github.com/pulumi/pulumi-hugo/tree/{{ $.Site.Params.contentRepositoryBaseBranch }}/{{ getenv "REPO_THEME_PATH" }}static/programs/{{ $path }}-{{ $language }}" target="_blank">
                             <i class="fab fa-github"></i>
                         </a>
                         <span slot="content">View full example on GitHub</span>
