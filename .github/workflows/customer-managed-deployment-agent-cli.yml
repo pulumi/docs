@@ -1,0 +1,105 @@
+env:
+  GITHUB_TOKEN: ${{ secrets.PULUMI_BOT_TOKEN }}
+
+name: customer-managed-deployment-agent cli docs build
+on:
+  repository_dispatch:
+    types:
+      - customer-managed-deployment-agent
+jobs:
+  pull-request:
+    runs-on: ubuntu-latest
+    needs: build-customer-managed-deployment-agent-cli-docs
+    steps:
+      - name: checkout docs repo
+        uses: actions/checkout@v2
+      - name: set the customer-managed-deployment-agent version
+        run: |
+          echo "CMDA_VERSION=${{ github.event.client_payload.ref }}" >> $GITHUB_ENV
+      - name: pull-request
+        uses: repo-sync/pull-request@v2
+        with:
+          source_branch: "customer-managed-deployment-agent/${{ github.run_id }}-${{ github.run_number }}"
+          destination_branch: "master"
+          pr_title: "Regen docs customer-managed-deployment-agent@${{ env.CMDA_VERSION }}"
+          pr_body: "Automated PR"
+          pr_label: "automation/customer-managed-deployment-agent-docs,automation/merge"
+          github_token: ${{ secrets.PULUMI_BOT_TOKEN }}
+  build-customer-managed-deployment-agent-cli-docs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: set the customer-managed-deployment-agent version
+        run: |
+          echo "CMDA_VERSION=${{ github.event.client_payload.ref }}" >> $GITHUB_ENV
+      - name: checkout docs repo
+        uses: actions/checkout@v2
+        with:
+          path: docs
+# TODO: uncomment these steps if the CMDA gets a dedicated docs page and gen-docs command
+#      - name: checkout customer-managed-deployment-agent repo
+#        uses: actions/checkout@v2
+#        with:
+#          repository: pulumi/customer-managed-deployment-agent
+#          path: customer-managed-deployment-agent
+#          ref: ${{ github.event.client_payload.ref }}
+#      - name: Install pulumictl
+#        uses: jaxxstorm/action-install-gh-release@v1.10.0
+#        with:
+#          repo: pulumi/pulumictl
+#      - name: Install customer-managed-deployment-agent
+#        uses: jaxxstorm/action-install-gh-release@v1.10.0
+#        with:
+#          repo: pulumi/customer-managed-deployment-agent
+#          binaries-location: customer-managed-deployment-agent
+#      - name: Install Hugo
+#        uses: peaceiris/actions-hugo@v2
+#        with:
+#          hugo-version: '0.111.0'
+#          extended: true
+#      - name: Install node
+#        uses: actions/setup-node@v2
+#        with:
+#          node-version: ${{matrix.nodeversion}}
+#      - run: make ensure
+#        working-directory: docs
+#      - name: Generate Markdown docs
+#        run: |
+#          customer-managed-deployment-agent gen-docs ./content/docs/customer-managed-deployment-agent-cli/commands
+#        working-directory: docs
+      - name: Update latest version
+        run: |
+          VERSION_TAG=${{ env.CMDA_VERSION }}
+          echo -n "${VERSION_TAG#v}" > ./static/customer-managed-deployment-agent/latest-version
+        working-directory: docs
+      - name: git status
+        run: git status && git diff
+        working-directory: docs
+      - name: commit changes
+        run: |
+          git config --local user.email "bot@pulumi.com"
+          git config --local user.name "pulumi-bot"
+          git checkout -b customer-managed-deployment-agent/${{ github.run_id }}-${{ github.run_number }}
+          git add static/
+          git add content/
+          git commit -m "Regenerating docs for customer-managed-deployment-agent@${{ env.CMDA_VERSION }}"
+          git push origin customer-managed-deployment-agent/${{ github.run_id }}-${{ github.run_number }}
+        working-directory: docs
+    strategy:
+      matrix:
+        nodeversion:
+          - "18.x"
+  notify:
+    if: failure()
+    name: Send slack notification
+    runs-on: ubuntu-latest
+    needs: [pull-request, build-customer-managed-deployment-agent-cli-docs]
+    steps:
+      - name: Slack Notification
+        uses: docker://sholung/action-slack-notify:v2.3.0
+        env:
+          SLACK_CHANNEL: docs-ops
+          SLACK_COLOR: "#F54242"
+          SLACK_MESSAGE: "customer-managed-deployment-agent cli docs build failure in pulumi/docs repo :meow_sad:"
+          SLACK_USERNAME: docsbot
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
+          SLACK_ICON: https://www.pulumi.com/logos/brand/avatar-on-white.png
