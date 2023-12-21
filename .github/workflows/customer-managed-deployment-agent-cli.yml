@@ -23,7 +23,7 @@ jobs:
           destination_branch: "master"
           pr_title: "Regen docs customer-managed-deployment-agent@${{ env.CMDA_VERSION }}"
           pr_body: "Automated PR"
-          pr_label: "automation/customer-managed-deployment-agent-cli-docs,automation/merge"
+          pr_label: "automation/customer-managed-deployment-agent-docs,automation/merge"
           github_token: ${{ secrets.PULUMI_BOT_TOKEN }}
   build-customer-managed-deployment-agent-cli-docs:
     runs-on: ubuntu-latest
