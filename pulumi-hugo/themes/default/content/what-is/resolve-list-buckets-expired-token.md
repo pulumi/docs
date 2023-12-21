@@ -81,33 +81,13 @@ values:
 
 ### Step 5: Run the aws CLI command
 
-With your environment set up, you can now validate your configuration. First make sure that your local environment does not have any AWS credentials configured. You can do this by running the `aws configure list` command as shown below:
-
-```bash
-# Example output when credentials are not configured
-$ aws configure list
-      Name                    Value             Type    Location
-      ----                    -----             ----    --------
-   profile                <not set>             None    None
-access_key                <not set>             None    None
-secret_key                <not set>             None    None
-    region                <not set>             None    None
-```
-
-Optionally, if you are using temporary credentials in your environment, run the `aws configure get aws_session_token` command as shown below to verify that a session token is not configured:
-
-```bash
-$ aws configure get aws_session_token
-# No output will be returned if this credential is not configured.
-```
-
-If your environment has credentials configured, you will need to remove those credentials first. To do this, reference the [AWS CLI documentation](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html#cli-configure-files-where) to determine the location of your credentials files based on your operating system. Then modify these files to remove the credentials.
-
-Now run the `aws s3 ls` command using `esc run` as shown below, making sure to replace `<your-pulumi-org-name>` and `<your-environment-name>` with the names of your own Pulumi organization and environment respectively:
+With your environment set up, you can validate your configuration and verify that the error has been resolved by running the `aws s3 ls` command using `esc run` as shown below, making sure to replace `<your-pulumi-org-name>` and `<your-environment-name>` with the names of your own Pulumi organization and environment respectively:
 
 ```bash
 esc run <your-pulumi-org-name>/<your-environment-name> -i aws s3 ls --query "Buckets[].Name"
 ```
+
+
 
 ## Conclusion
 
