@@ -107,13 +107,13 @@ secret_key                <not set>             None    None
     region                <not set>             None    None
 ```
 
-To get the list of lambda functions, run the command using `esc run` as shown below, making sure to replace `<your-pulumi-org-name>`, `<your-environment-name>`, and `<aws-region>` with the names of your own Pulumi organization, ESC environment, and AWS Region, respectively.
+To get the list of Lambda functions, run the command using `esc run` as shown below, making sure to replace `<your-pulumi-org-name>`, `<your-environment-name>`, and `<aws-region>` with the names of your own Pulumi organization, ESC environment, and AWS Region, respectively.
 
 ```bash
 $ esc run <your-pulumi-org-name>/<your-environment-name> -- aws lambda list-functions --region <aws-region>
 ```
 
-Your output will vary depending on the number of deployed lambdas. Example,
+Your output will vary depending on the number of deployed Lambda functions. Example,
 
 ```bash
 {
