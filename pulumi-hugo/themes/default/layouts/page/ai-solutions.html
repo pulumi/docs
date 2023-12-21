@@ -4,9 +4,9 @@
 
 {{ define "main" }}
     <!-- Overview -->
-    <section class="container mx-auto my-16">
+    <section class="container mx-auto mb-6">
         <div class="flex flex-wrap">
-            <div class="max-w-5xl mx-auto text-center my-16 px-6">
+            <div class="max-w-5xl mx-auto text-center px-6">
                 <h2>{{ .Params.overview.title }}</h2>
                 <p>{{ .Params.overview.description | markdownify }}</p>
             </div>
@@ -14,8 +14,8 @@
     </section>
 
     <!-- Logos carousel -->
-    <section class="container mx-auto text-center overflow-hidden px-3 mt-24">
-        <h3 class="text-center mb-10">{{ .Params.customer_logos.title }}</h3>
+    <section class="container mx-auto text-center overflow-hidden px-3">
+        <h3 class="text-center mb-4">{{ .Params.customer_logos.title }}</h3>
 
         <div class="w-full order-first pb-16 items-center justify-center hidden lg:block">
             <pulumi-swiper slides="6" centered-slides="true" loop="true" autoplay="true" autoplay-delay="500" speed="2000">
@@ -70,22 +70,17 @@
         </div>
     </section>
 
-    <!-- Getting Started -->
-
-    <section id="get-started" class="my-32 relative">
-        <div class="shape-background product-get-started-section">
-            <div class="shape-container">
-                <div class="circle-center"></div>
-                <div class="circle-right"></div>
-            </div>
-        </div>
-
-        <div class="container mx-auto">
-            <div class="w-full lg:w-2/3 px-4 py-2 lg:p-8 lg:px-4 mx-auto text-center">
-                <div class="lg:shadow-2xl bg-violet-600 p-8 lg:px-24 lg:pt-4 g:pb-12 rounded-xl">
-                    <h4 class="text-white">{{ .Params.get_started.get_started.title }}</h4>
-                    <p class="mb-12 text-white">{{ .Params.get_started.get_started.description }}</p>
-                    <a href="{{ relref . "/contact?form=sales" }}" class="btn-secondary">{{ .Params.get_started.get_started.cta_text }}</a>
+    <section class="bg-gray-100">
+        <div class="container mx-auto pb-12">
+            <div class="flex flex-col md:flex-row">
+                <div class="w-full lg:w-1/2 mx-auto p-6">
+                    <div class="mt-10 md:mt-0 bg-gray-200 rounded p-6 shadow">
+                        <h4>
+                            Reduce the friction of provisioning and managing infrastructure
+                            for AI and ML and accelerate your time to market. Chat with our team
+                        </h4>
+                        <pulumi-hubspot-form form-id="5d548546-024b-481a-9dad-6c1140548bee"></pulumi-hubspot-form>
+                    </div>
                 </div>
             </div>
         </div>
