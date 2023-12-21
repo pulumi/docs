@@ -7,7 +7,7 @@ type: what-is
 page_title: An error occurred (InvalidAccessKeyId) when calling the ListBuckets operation
 ---
 
-The error message "An error occurred (InvalidAccessKeyId) when calling the ListBuckets operation" in AWS (Amazon Web Services) indicates that the provided AWS Access Key Id does not exist in their records. AWS Access Key Ids are used by AWS to authenticate and authorize access to various AWS services and resources. When you attempt an AWS CLI operation with an invalid or nonexistent Access Key Id, this error arises, as AWS cannot validate the provided identifier.
+The error message "An error occurred (InvalidAccessKeyId) when calling the ListBuckets operation" in AWS (Amazon Web Services) indicates that the provided AWS Access Key Id does not exist in their records. AWS Access Key IDs are used by AWS to authenticate and authorize access to various AWS services and resources. When you attempt an AWS CLI operation with an invalid or nonexistent Access Key ID, this error arises, as AWS cannot validate the provided identifier.
 
 [Pulumi ESC (Environments, Secrets, and Configurations)](/docs/pulumi-cloud/esc/) offers a solution to the challenges of managing credentials and can make errors like this a thing of the past. By enabling the [management of dynamic credentials from AWS using OIDC](/blog/esc-env-run-aws/), Pulumi ESC simplifies and secures your AWS CLI operations. This approach eliminates the need for manually providing credentials and is a more secure solution than the use of long-term credentials, which can often present a security risk. Pulumi ESC also enables you to focus on your tasks without the interruption of credential-related errors, providing a more efficient flow for your AWS operations and tasks.
 
