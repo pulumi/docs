@@ -83,15 +83,19 @@ values:
 
 ### Step 5: Run the aws ec2 describe-instances command
 
-First make sure that your local environment does not have any AWS credentials configured. You can do this by running the `aws ec2 describe-instances` command normally as shown below:
+First check that your local environment does not have any AWS credentials configured by running the `aws configure list` command as shown below:
 
 ```bash
-$ aws ec2 describe-instances --region us-east-1
-
-Unable to locate credentials. You can configure credentials by running "aws configure".
+$ aws configure list
+      Name                    Value             Type    Location
+      ----                    -----             ----    --------
+   profile                <not set>             None    None
+access_key                <not set>             None    None
+secret_key                <not set>             None    None
+    region                <not set>             None    None
 ```
 
-Now run the command using `esc run` as shown below, making sure to replace `<your-pulumi-org-name>`, `<your-environment-name>`, and `<your-aws-region>` with the names of your own Pulumi organization, environment, and desired AWS region respectively:
+To get details about an instance, run the command using `esc run` as shown below, making sure to replace `<your-pulumi-org-name>`, `<your-environment-name>`, and `<your-aws-region>` with the names of your own Pulumi organization, environment, and desired AWS region respectively:
 
 ```bash
 esc run <your-pulumi-org-name>/<your-environment-name> -- aws ec2 describe-instances --region <your-aws-region>

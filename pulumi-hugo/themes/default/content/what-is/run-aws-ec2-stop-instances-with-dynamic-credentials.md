@@ -95,7 +95,7 @@ secret_key                <not set>             None    None
     region                <not set>             None    None
 ```
 
-You can then use the following command to stop a running instance as shown below, making sure to replace `<your-pulumi-org-name>`, `<your-environment-name>`, and `<your-running-instance-id>` with the names of your own Pulumi organization, environment, and desired EC2 instance ID respectively:
+To stop a running instance, run the command using `esc run` as shown below, making sure to replace `<your-pulumi-org-name>`, `<your-environment-name>`, and `<your-running-instance-id>` with the names of your own Pulumi organization, environment, and desired EC2 instance ID respectively:
 
 ```bash
 esc run <your-pulumi-org-name>/<your-environment-name> -- aws ec2 stop-instances --instance-ids <your-running-instance-id>
