@@ -1,0 +1,85 @@
+{{ define "hero" }}
+    <header class="page-hero">
+        <div class="dot-background-container">
+            <div class="dot-background"></div>
+        </div>
+        <div class="dot-overlay"></div>
+        <div class="page-hero-title">
+            <h1 class="rainbow-text mb-0">Microsoft for Startups Founders Hub Offer</h1>
+        </div>
+    </header>
+{{ end }}
+
+{{ define "main" }}
+    <h2 class="mt-8 text-center">Founders Hub members get up to <b>$15,000</b> in Pulumi Credits</h2>
+
+    <section id="success-stories" class="text-center p-8">
+        <div class="card mx-auto w-full lg:w-1/2 p-8">
+            <h3 class="text-gray-700 text-3xl font-medium">Pulumi Startup Success Stories</h3>
+            <div class="flex lg:flex-row flex-wrap justify-center space-x-4 spacy-y-4">
+                <a href="/case-studies/sourcegraph/"><img src="/logos/customers/sourcegraph-logo-cropped.svg" class="h-6 lg:h-8 my-2" alt="Sourcegraph" /></a>
+                <a href="/case-studies/panther-labs/"><img src="/logos/customers/panther-labs-wordmark.svg" class="h-6 lg:h-8 my-2" alt="Panther" /></a>
+                <img src="/logos/customers/cockroach-labs-logo.svg" class="h-6 lg:h-8 my-2" alt="CockroachDB" />
+                <a href="/case-studies/lemonade/"><img src="/logos/customers/lemonade-cropped.svg" class="h-6 lg:h-8 my-2" alt="Lemonade" /></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="details" class="container mx-auto py-8 justify-center flex flex-col lg:flex-row">
+        <div class="w-full lg:w-1/2 pr-8">
+            <h3 class="flex align-middle text-black ml-8 lg:ml-0">
+                {{ partial "color-icon.html" (dict "icon" "rocketship" "icon_color" "black") }}<span class="hidden lg:block" style="line-height: 80px;"
+                    >Why Pulumi for Startups?</span
+                ><span class="block lg:hidden">Why Pulumi for Startups?</span>
+            </h3>
+            <h4 class="flex align-middle text-2xl ml-12 lg:ml-5 mt-2">
+                <span class="mr-7 w-8 h-8 text-center bg-orange-200 rounded-full hidden lg:block">1</span><span>Help your small, nimble team scale up infrastructure</span>
+            </h4>
+            <p class="text-gray-600 pl-12 lg:pl-20">
+                Pulumi for Startups is the easiest way for early-stage companies to build and deploy their cloud apps, using our Infrastructure as Code (IaC) platform. Your team
+                can manage and automate cloud infrastructure, using their favorite programming languages like JavaScript, TypeScript, Python, .NET, Java, and Go. Adopt the best of
+                the cloud without having to learn new DSL dialects and remove the need to dedicate entire teams to just manage and scale your infrastructure.
+            </p>
+            <h4 class="flex align-middle text-2xl ml-12 lg:ml-5">
+                <span class="mr-7 w-8 h-8 text-center bg-salmon-200 rounded-full hidden lg:block">2</span><span>Get up to $15,000 in Pulumi credits</span>
+            </h4>
+            <p class="text-gray-600 pl-12 lg:pl-20">
+                Microsoft for Startups Founders Hub members get exclusive savings on Pulumi with up to $15,000 in free Pulumi Credits so your whole team can use Pulumi.
+            </p>
+            <h4 class="flex align-middle text-2xl ml-12 lg:ml-5">
+                <span class="mr-7 w-8 h-8 text-center bg-violet-200 rounded-full hidden lg:block">3</span><span>Access to exclusive office hours and events</span>
+            </h4>
+            <p class="text-gray-600 pl-12 lg:pl-20">You will get access to exclusive office hours and workshops to help you ship your product quickly.</p>
+            <h3 class="flex align-middle text-black ml-8 lg:ml-0">
+                {{ partial "color-icon.html" (dict "icon" "team" "icon_color" "black") }}<span style="line-height: 80px;">Who can join?</span>
+            </h3>
+            <p class="text-gray-600 pl-12 lg:pl-20 mt-0">Pulumi for Startups is designed for pre-series A companies with less than $1M in annual revenue. The Microsoft for Startups offer is exclusive to Founders Hub members.</p>
+            <h3 class="flex align-middle text-black ml-8 lg:ml-0">
+                {{ partial "color-icon.html" (dict "icon" "clock" "icon_color" "black") }}<span class="hidden xl:block" style="line-height: 80px;">How long is the program?</span
+                ><span class="block xl:hidden">How long is the program?</span>
+            </h3>
+            <p class="text-gray-600 pl-12 lg:pl-20 mt-0">Bill credits will be applied for up to 12 months</p>
+            <div>
+                <img src="/logos/tech/microsoft-founders.svg" alt="Microsoft founders hub logo" class="mt-16 h-60" >
+            </div>
+        </div>
+        <div class="w-full lg:w-1/2 pl-8">
+            <div class="mt-10 md:mt-0 md:mx-8 bg-gray-200 rounded p-6">
+                <pulumi-hubspot-form form-id="d6c3c14c-3b16-4d64-861a-b7af962f9337"></pulumi-hubspot-form>
+            </div>
+        </div>
+    </section>
+
+    <section id="lemonade-testimonial" class="container mx-auto px-4 my-16 flex justify-center text-center">
+        <div class="w-full lg:w-1/2">
+            <p>
+                <i
+                    >"Pulumi supercharged our whole organization and empowered our developer teams to self-provision resources and ship new capabilities faster without having to
+                    wait for the infrastructure team to deploy new resources on their behalf."</i
+                >
+            </p>
+            <p class="mb-0 font-semibold">- Igor Shapiro, Principal Engineer</p>
+            <span class="flex justify-center">{{ partial "customer-logos/lemonade" }}</span>
+        </div>
+    </section>
+{{ end }}
