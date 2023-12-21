@@ -83,7 +83,7 @@ values:
 
 ### Step 5: Run the aws s3 ls command
 
-First check that your local environment does not have any AWS credentials configured by running the `aws configure list` command as shown below:
+First make sure that your local environment does not have any AWS credentials configured by running the `aws configure list` command as shown below:
 
 ```bash
 $ aws configure list
