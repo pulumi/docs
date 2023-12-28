@@ -50,7 +50,9 @@ db = Database('db',
 
 ```go
 db, err := NewDatabase(ctx, "db", &DatabaseArgs{ /*...*/ },
-    pulumi.Aliases(pulumi.Alias{Name: pulumi.String("old-name-for-db")}))
+    pulumi.Aliases([]pulumi.Alias{
+        {Name: pulumi.String("old-name-for-db")},
+    }))
 ```
 
 {{% /choosable %}}
@@ -120,9 +122,9 @@ db = Database('db',
 
 ```go
 db, err := NewDatabase(ctx, "db", &DatabaseArgs{ /*...*/ },
-    pulumi.Aliases([]pulumi.Alias{pulumi.Alias{
-        URN: pulumi.URN("urn:pulumi:stackname::projectname::aws:rds/database:Database::old-name-for-db"),
-    }})
+    pulumi.Aliases([]pulumi.Alias{
+        {URN: pulumi.URN("urn:pulumi:stackname::projectname::aws:rds/database:Database::old-name-for-db")},
+    }))
 )
 ```
 
