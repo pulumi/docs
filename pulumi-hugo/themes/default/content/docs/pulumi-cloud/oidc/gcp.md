@@ -70,9 +70,14 @@ The below sections show examples that correspond to each OIDC-supported service.
 
 #### Pulumi Deployments
 
-The below is an example of a valid subject claim for the `dev` stack of the `contoso` organization:
+To enable valid operations on a specific stack, Google federated credentials require an exact match on the OIDC token subject claim. Unfortunately, the subject identifier does *not* currently allow wildcards. Therefore, you must create credentials for each permutation of the subject claim that is possible for the stack.
 
-* `pulumi:deploy:org:contoso:project:core:stack:dev:operation:*:scope:write`
+For example, to enable all of the valid operations on a stack named `dev` of the `core` project in the `contoso` organization, you would need to create credentials for each of the following subject identifiers:
+
+* `pulumi:deploy:org:contoso:project:core:stack:dev:operation:preview:scope:write`
+* `pulumi:deploy:org:contoso:project:core:stack:dev:operation:update:scope:write`
+* `pulumi:deploy:org:contoso:project:core:stack:dev:operation:refresh:scope:write`
+* `pulumi:deploy:org:contoso:project:core:stack:dev:operation:destroy:scope:write`
 
 #### Pulumi ESC
 
