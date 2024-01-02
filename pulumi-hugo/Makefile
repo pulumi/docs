@@ -29,7 +29,15 @@ build:
 
 .PHONY: test
 test:
-	./scripts/test.sh preview
+	$(MAKE) test-programs
+
+.PHONY: test-programs
+test-programs:
+	./scripts/programs/test.sh preview
+
+.PHONY: upgrade-programs
+upgrade-programs:
+	./scripts/programs/upgrade.sh
 
 .PHONY: test-full
 test-full:

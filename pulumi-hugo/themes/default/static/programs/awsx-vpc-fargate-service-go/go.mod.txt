@@ -3,7 +3,7 @@ module awsx-vpc-fargate-service-yaml
 go 1.20
 
 require (
-	github.com/pulumi/pulumi-aws/sdk/v6 v6.10.0
-	github.com/pulumi/pulumi-awsx/sdk/v2 v2.3.0
-	github.com/pulumi/pulumi/sdk/v3 v3.97.0
+	github.com/pulumi/pulumi-aws/sdk/v6 v6.17.0
+	github.com/pulumi/pulumi-awsx/sdk/v2 v2.4.0
+	github.com/pulumi/pulumi/sdk/v3 v3.99.0
 )

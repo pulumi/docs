@@ -488,7 +488,7 @@ outputs:
 {{% notes type="warning" %}}
 
 You may need to grant permissions to your S3 object, `index.html`. Ensure it has public read access if intended.
- 
+
 {{% /notes %}}
 
 Update your stack to deploy these changes to AWS:

@@ -1,0 +1,77 @@
+name: "Scheduled Jobs: Upgrade Examples"
+on:
+  schedule:
+    - cron: "0 6 * * *"
+  workflow_dispatch: {}
+
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+jobs:
+  upgrade:
+    runs-on: ${{ matrix.platform }}
+    strategy:
+      matrix:
+        platform:
+          - ubuntu-latest
+        go-version:
+          - 1.20.x
+        node-version:
+          - 18.x
+        python-version:
+          - 3.8
+        dotnet-version:
+          - 6.0.x
+        java-version:
+          - 11
+
+    steps:
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Install Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install Go
+        uses: actions/setup-go@v3
+        with:
+          go-version: ${{ matrix.go-version }}
+
+      - name: Install Java
+        uses: actions/setup-java@v3
+        with:
+          distribution: temurin
+          java-version: ${{ matrix.java-version }}
+
+      - name: Install DotNet
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: ${{ matrix.dotnet-version }}
+
+      - name: Install Pulumi
+        uses: pulumi/actions@v4
+
+      - name: Check out the code
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.PULUMI_BOT_TOKEN }}
+
+      - name: Upgrade and test example programs
+        run: make upgrade-programs test-programs
+
+      - name: Create a pull request
+        uses: peter-evans/create-pull-request@v3
+        with:
+          branch: examples/upgrade
+          author: Pulumi Bot <bot@pulumi.com>
+          committer: Pulumi Bot <bot@pulumi.com>
+          title: Upgrade Go module dependencies in example programs
+          # labels: "automation/merge"
+          commit-message: Upgrade Go module dependencies in example programs
+          token: ${{ secrets.PULUMI_BOT_TOKEN }}
+          body: |
+            Upgrades Go module dependencies in example programs to their latest versions.

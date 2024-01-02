@@ -3,6 +3,7 @@
 set -o errexit -o pipefail
 
 source ./scripts/common.sh
+source ./scripts/programs/common.sh
 
 # Check for Go, Hugo, Node, and Yarn.
 if [[ -z "$(which go)" ]]; then

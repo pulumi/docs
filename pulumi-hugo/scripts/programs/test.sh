@@ -2,7 +2,7 @@
 
 set -o errexit -o pipefail
 
-source ./scripts/common.sh
+source ./scripts/programs/common.sh
 
 programs_dir="themes/default/static/programs"
 
