@@ -31,6 +31,7 @@ meta_image: meta.png
 # yourself if you don't already have one.
 authors:
     - arun-loganathan
+    - german-lena 
 
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
@@ -66,7 +67,7 @@ With the launch of Customer-Managed Deployment Agents, you can now self-host the
 Customer-Managed Agents support all the deployment triggers currently offered by Pulumi Deployments such as click to deploy, the Pulumi Deployments REST API, git push to deploy, etc. 
 
 {{% notes "info" %}}
-Customer-Managed deployment agents is available to business-critical customers. [Contact sales](/contact/?form=sales) if you are interested and want to enable customer-managed deployments. If you are a self-hosted customer, please get in touch **(add link)** to be notified when it is available.
+Customer-Managed deployment agents is available to business-critical customers. [Contact sales](/contact/?form=sales) if you are interested and want to enable customer-managed deployments. If you are a self-hosted customer, please [get in touch](https://share.hsforms.com/1YajiJ73sSuGn5RoTkyvKxg2mxud) to be notified when it is available.
 {{% /notes %}}
 
 
@@ -100,7 +101,7 @@ Go to the deployment setting found under the settings page of a stack. Scroll do
 
 Ensure that agents have the cloud provider credentials to be able to deploy in your environments. You have two methods:
 
-1. Use the [OIDC configuration](https://www.pulumi.com/docs/pulumi-cloud/oidc/)
+1. Use the [OIDC configuration](/docs/pulumi-cloud/oidc)
 2. Directly provide credentials to agents through environment variables configured in the host, or passing the environment variables when invoking the binary. Example:
 
    ```bash
@@ -134,4 +135,4 @@ On the deployments page, you can see all the deployments including pending deplo
 ## Your Journey, Our Support
 Customer-Managed Deployment Agents empower you to align your deployment strategies with the specific requirements of your infrastructure. Whether it's ensuring compliance, enhancing security, or customizing deployment processes, Customer-Managed agents provide the flexibility you need.
 
-Embark on this journey to simplify your infrastructure deployments with our new feature. We are here every step of the way to assist you. Share your feedback **add link** with us. 
+Embark on this journey to simplify your infrastructure deployments with our new feature. We are here every step of the way to assist you. Share your [feedback](https://github.com/pulumi/pulumi-cloud-requests/issues/new/choose) with us.
