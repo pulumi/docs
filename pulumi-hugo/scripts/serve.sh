@@ -3,6 +3,7 @@
 set -o errexit -o pipefail
 
 source ./scripts/common.sh
+source ./scripts/programs/common.sh
 
 # Prep Go projects so they're immediately runnable.
 unsuffix_gomods
