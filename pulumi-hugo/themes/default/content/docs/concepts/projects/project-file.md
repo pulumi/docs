@@ -38,12 +38,15 @@ backend:
 options:
   refresh: always
 template:
+  displayName: Example Template
   description: An example template
   config:
     aws:region:
       description: The AWS region to deploy into
       default: us-east-1
       secret: true
+  metadata:
+    cloud: aws
 plugins:
   providers:
     - name: aws
@@ -154,8 +157,10 @@ Schemas are only valid for project property keys. For setting the value of a pro
 
 | Name | Required | Description |
 | - | - | - |
+| `displayName` | optional | A user-friendly name for the template. This should follow `Title Case` format and be succinct. This field is only supported by Pulumi CLI >= 3.95. |
 | `description` | optional | Description of the template. |
 | `config` | required | Config to request when using this template with `pulumi new`. |
+| `metadata` | optional | A map of user-defined tags to attach to the template. This field is only supported by Pulumi CLI >= 3.95. |
 
 #### `config`
 
