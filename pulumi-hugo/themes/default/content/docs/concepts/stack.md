@@ -753,7 +753,7 @@ const logFile = new aws.s3.BucketObject("log", {
 
 ```typescript
 const infra: StackReference = new pulumi.StackReference(...);
-const ip: Output<string> = infra.getOutput("privateIp");
+const ip: Output<any> = infra.getOutput("privateIp");
 const logKey: Output<string> = ip.apply(ip => `logs/${ip}.log`);
 const logFile: aws.s3.BucketObject = new aws.s3.BucketObject("log", {
     // ...
