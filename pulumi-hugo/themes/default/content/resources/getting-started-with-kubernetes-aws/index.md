@@ -54,6 +54,6 @@ aws_only: true
 title: Getting Started with Kubernetes on AWS
 meta_desc: In this workshop, you will learn the fundamentals of setting up EKS
   clusters on AWS through guided exercises using Pulumi.
-meta_image: "/images/resources/kubernetes-on-aws-ringo-powered.png"
+meta_image: "/images/resources/getting-started-kubernetes-on-aws-josh-marina.png"
 url_slug: getting-started-with-kubernetes-aws
 ---

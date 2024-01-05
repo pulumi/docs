@@ -3,6 +3,7 @@
 title: "Getting Started with Infrastructure as Code on AWS"
 title_tag: "Getting Started with Infrastructure as Code on AWS"
 meta_desc: "In this workshop, you will learn the fundamentals of Infrastructure as Code through a series of guided exercises using the Pulumi Cloud Engineering platform."
+meta_image: "/images/resources/get-started-aws_josh-marina.png"
 
 # A featured webinar will display first in the list.
 featured: false

@@ -2,6 +2,7 @@
 # Name of the webinar.
 title: "Policy as Code on AWS"
 meta_desc: "In this session, we will show you how to enforce best practices by creating policies that scale from a single infrastructure stack to your entire organization"
+meta_image: "/images/resources/policy-as-code-on-aws-marina.png"
 
 aliases:
   - /webinars/getting-started-policy-as-code-2020-04-09

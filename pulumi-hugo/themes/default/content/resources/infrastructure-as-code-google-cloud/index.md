@@ -53,5 +53,6 @@ title: Getting Started with Infrastructure as Code on Google Cloud
 meta_desc: This workshop is designed to help new users become familiar with the
   core concepts needed to effectively deploy resources on Google Cloud using
   Pulumi.
+meta_image: "/images/resources/getting-started-iac-google-josh-jay.png"
 url_slug: infrastructure-as-code-google-cloud
 ---

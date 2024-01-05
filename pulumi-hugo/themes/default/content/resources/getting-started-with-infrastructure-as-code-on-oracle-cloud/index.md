@@ -2,6 +2,7 @@
 # Name of the webinar.
 title: "Getting started with Infrastructure as Code on Oracle Cloud"
 meta_desc: "Learn the fundamentals of Infrastructure as Code (IaC) through guided exercises using Pulumi on Oracle Cloud Infrastructure."
+meta_image: "/images/resources/getting-started-oracle-josh-eli.png"
 
 # A featured webinar will display first in the list.
 featured: false
