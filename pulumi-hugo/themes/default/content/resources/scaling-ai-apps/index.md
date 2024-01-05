@@ -67,8 +67,8 @@ main:
 
     # The webinar presenters
     presenters:
-        - name: Scott Lowe
-          role: Principal Community Engineer, Pulumi
+        - name: Engin Diri
+          role: Sr. Community Engineer, Pulumi
     
     learn:
         - The basics of infrastructure as code and the Pulumi programming model
