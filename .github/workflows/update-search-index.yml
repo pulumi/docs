@@ -12,7 +12,7 @@ jobs:
       - name: Install Node
         uses: actions/setup-node@v1
         with:
-          node-version: '16.x'
+          node-version: '18.x'
 
       - name: Check out the repo
         uses: actions/checkout@v2
