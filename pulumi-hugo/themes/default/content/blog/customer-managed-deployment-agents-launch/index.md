@@ -135,4 +135,4 @@ On the deployments page, you can see all the deployments including pending deplo
 ## Your Journey, Our Support
 Customer-Managed Deployment Agents empower you to align your deployment strategies with the specific requirements of your infrastructure. Whether it's ensuring compliance, enhancing security, or customizing deployment processes, Customer-Managed agents provide the flexibility you need.
 
-Embark on this journey to simplify your infrastructure deployments with our new feature. We are here every step of the way to assist you. Share your [feedback](https://github.com/pulumi/pulumi-cloud-requests/issues/new/choose) with us.
+Embark on this journey to simplify your infrastructure deployments with our new feature. We are here every step of the way to assist you. Share any feedback in the [Pulumi Cloud Requests repository](https://github.com/pulumi/pulumi-cloud-requests/issues/new/choose) with us.
