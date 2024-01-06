@@ -77,15 +77,15 @@ Before you begin, ensure you have installed the [Pulumi Github App](/docs/using-
 
 ### Install and configure the agent
 
-Go to **Deployment runners** under Organization Settings in the left-hand navigation menu. Once on the Deployment runners page, click on the 'Add a new pool' button. Next provide a name and description for your agent. You will then get a new access token for the pool, ensure to copy and save the token in a secure location.
+Go to **Deployment runners** under Organization Settings in the left-hand navigation menu. Once on the Deployment runners page, click on the 'Add a new pool' button. Next, provide a name and description for your agent. You will then get a new access token for the pool, ensure to copy and save the token in a secure location.
 
-{{< video title="Install the agents" src="./install-the-agents.mp4" autoplay="true" loop="true" >}}
+{{< video title="Create a new pool" src="./create-new-pool.mp4" autoplay="true" loop="true" >}}
 
 {{< notes type="warning" >}}
 If you run into issues, ensure docker is running before you configure and start the agents. Ensure you restart or refresh the shell session (example: `source ~/.zshrc`).
 {{< /notes >}}
 
-{{< video title="Configure the agents" src="./configure-the-agents.mp4" autoplay="true" loop="true" >}}
+{{< video title="Configure the agents" src="./configure-agents.mp4" autoplay="true" loop="true" >}}
 
 Now your first agent should be up and running! You can verify the status of the agent by refreshing the page. Additionally, you can use the same token to set up multiple agents to increase concurrency of your deployments and they will be assigned to the same pool.
 
@@ -97,7 +97,7 @@ Agents poll Pulumi Cloud every 30 seconds to check for pending deployments. In t
 
 Go to deployment settings, found under the settings tab on a stack under 'Deploy'. Scroll down and select the pool you created under the Deployment Runner pool drop-down.
 
-{{< video title="Assign Stack to Deployment Pool" src="./configure-the-stack.mp4" autoplay="true" loop="true" >}}
+{{< video title="Assign Stack to Deployment Pool" src="./configure-stack.mp4" autoplay="true" loop="true" >}}
 
 Ensure that agents have the cloud provider credentials to be able to deploy in your environments. You have two methods:
 
@@ -123,13 +123,13 @@ Ensure that agents have the cloud provider credentials to be able to deploy in y
 
 You have completed the setup. Try out the agent by doing `pulumi refresh` through the **Actions** drop-down in your stack page.
 
-{{< video title="Run a deployment on the agent" src="./verify-complete-setup.mp4" autoplay="true" loop="true" >}}
+{{< video title="Run a deployment on the agent" src="./verify-setup.mp4" autoplay="true" loop="true" >}}
 
 You should see the logs in the agent running on the machine you configured and also in the Pulumi Cloud console.
 
 On the deployments page, you can see all the deployments including pending deployments, and which deployment agents were used in a deployment.
 
-![Deployments page](./view-deployments-status.png)
+![Deployments page](./view-deployment-status.png)
 
 
 ## Your Journey, Our Support
