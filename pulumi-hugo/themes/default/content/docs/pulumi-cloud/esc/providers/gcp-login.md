@@ -34,7 +34,7 @@ To learn how to configure OpenID Connect (OIDC) between Pulumi Cloud and Google 
 
 | Property      | Type                                        | Description                                                                      |
 |---------------|---------------------------------------------|----------------------------------------------------------------------------------|
-| `project`     | string                                      | The **numerical** ID of the GCP project, aka project number. (e.g. 951040570662) |
+| `project`     | number                                      | The **numerical** ID of the GCP project, aka project number. (e.g. 951040570662) |
 | `accessToken` | [GCPLoginAccessToken](#gcploginaccesstoken) | [Optional] Options for access token login.                                       |
 | `oidc`        | [GCPLoginOIDC](#gcploginoidc)               | [Optional] Options for OIDC login.                                               |
 
