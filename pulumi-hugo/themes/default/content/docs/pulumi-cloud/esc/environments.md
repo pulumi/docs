@@ -82,7 +82,15 @@ $ esc env get myorg/test foo
   • test:2:10
 ```
 
-Note that `esc env get` returns only statically defined plain-text values and definitions; it does not resolve provider-managed values or secrets. (For these, `get` returns the item definition with a value of `[unknown]`.) To resolve dynamically retrieved values or secrets, you must instead [open the environment](#opening-an-environment).
+{{% notes type="warning" %}}
+
+**Why is the value shown as `[unknown]`?**
+
+The command `esc env get` returns statically defined plain-text values and definitions. It does **not** return secrets defined in the environment nor resolves values from specified provider configuration, therefore, attempting to `get` a secret results in an `[unknown]` output.
+
+Use [`esc env open`](#opening-an-environment) to access secrets; this opens the environment and resolves dynamically retrieved values or secrets.
+
+{{% /notes %}}
 
 ### Getting all values
 
