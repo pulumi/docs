@@ -81,6 +81,8 @@ Go to **Deployment runners** under Organization Settings in the left-hand naviga
 
 {{< video title="Create a new pool" src="./create-new-pool.mp4" autoplay="true" loop="true" >}}
 
+Download and install the agents using the command provided. Once installed, provide the access token previously copied to configure the agent. 
+
 {{< notes type="warning" >}}
 If you run into issues, ensure docker is running before you configure and start the agents. Ensure you restart or refresh the shell session (example: `source ~/.zshrc`).
 {{< /notes >}}
