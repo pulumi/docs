@@ -54,7 +54,7 @@ Since its launch, Pulumi Deployments has transformed how organizations manage th
 
 With the launch of Customer-Managed Agents, you can now self-host the deployment agents within your infrastructure, bringing the same power and flexibility of Pulumi-hosted deployments to isolated environments. Customers with hard security and compliance requirements can now fully leverage Pulumi Deployments. 
 
-Newton, a leading crypto trading platform and a Pulumi Cloud customer, was in the private beta of Customer-Managed Agents. “Pulumi's rapid innovation and customer-centric approach never fail to impress. The introduction of Customer-Managed Agents is a testament to their ongoing commitment.” said Shaun Martin, Director of Engineering at Newton, “We're thrilled with the turnkey solutions Pulumi Deployments offer, enhancing our infrastructure management while upholding our stringent security requirements.”
+Newton, a leading crypto trading platform and a Pulumi Cloud customer, was in the private beta of Customer-Managed Agents. “Pulumi's rapid innovation and customer-centric approach never fail to impress. The introduction of Customer-Managed Agents is a testament to their ongoing commitment,” said Shaun Martin, Director of Engineering at Newton. “We're thrilled with the turnkey solutions Pulumi Deployments offer, enhancing our infrastructure management while upholding our stringent security requirements.”
 
 ## Key Benefits of Customer-Managed Deployment Agents
 
