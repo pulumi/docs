@@ -49,6 +49,10 @@ const config = {
 
     // the registry stack to reference to route traffic to for `/registry` routes.
     registryStack: stackConfig.get("registryStack"),
+
+    // the marketing portal stack to reference to allow the marketing portal
+    // to add items to the uploads bucket.
+    marketingPortalStack: stackConfig.get("marketingPortalStack"),
 };
 
 const aiAppStack = new pulumi.StackReference('pulumi/pulumi-ai-app-infra/prod');
@@ -94,8 +98,8 @@ const uploadsBucket = new aws.s3.Bucket("uploads-bucket", {
     }],
 });
 
-if (pulumi.getStack() === "www-testing") {
-    const marketingAppStack = new pulumi.StackReference("pulumi/marketing-db/staging");
+if (config.marketingPortalStack) {
+    const marketingAppStack = new pulumi.StackReference(config.marketingPortalStack);
     const ecsRoleArn = marketingAppStack.getOutput("ecsRoleArn");
 
     const uploadsBucketPolicy = new aws.s3.BucketPolicy("uploads-bucket-policy", {
@@ -111,7 +115,7 @@ if (pulumi.getStack() === "www-testing") {
                         ],
                         "Principal": {
                             "AWS": roleArn,
-                         },
+                            },
                         "Effect": "Allow",
                         "Resource": bucketArn,
                     },
