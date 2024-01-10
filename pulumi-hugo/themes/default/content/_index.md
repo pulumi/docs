@@ -12,14 +12,12 @@ hero:
   secondary_cta_link: /contact/?form=sales
 
 code_faster:
-  title: Code and ship faster
+  title: Build and ship faster with infrastructure as code
   description: |
     Author infrastructure code using programming languages you know and love. Write statements to define infrastructure using your IDE with autocomplete, type checking, and documentation.
 
-    Test your code with unit tests and deliver it through CI/CD pipelines to validate and deploy to any cloud.
-
 ai:
-  title: Boost productivity with AI
+  title: Code on demand with Pulumi AI
   image: /images/home/ai-graphic.svg
   alt: AI prompted to 'Give me an AWS static website behind a CloudFront CDN' and outputting Pulumi code
   description: |
@@ -28,23 +26,23 @@ ai:
     Ask Pulumi AI to iterate on your code to make changes and add new resources.
 
 embed:
-  title: Embed IaC anywhere
-  image: /images/home/automation-api-diagram.svg
+  title: Build productive platforms for both developers and operators
+  image: /blog/developer-portal-platform-teams/platform-teams.png
   alt: a flowchart with arrows going from Automation API program to Infrasctucture as Code programs to Pulumi Engine deploys stacks
   description: |
-    With Automation API, embed Pulumi in your applications to power custom cloud infrastructure automation. No CLI - just code so you can manage 10x more resources.
+    Internal developer portals (IDPs) enable your developers to quickly provision security-compliant infrastructure, boost productivity with pre-configured architectures and automate testing and deployments, adhering to organizational standards.
 
-    Package cloud architectures into reusable libraries that reduce complex infrastructure down to a few lines of code.
+    Pulumi’s infrastructure and policy as code engine fosters collaboration between your developers, security, and operation teams through common, popular programming languages.
 
 secrets:
-  title: Tame configuration and secrets sprawl
-  image: /images/product/esc-homepage-screenshot.png
+  title: Manage configuration and secrets with modular Environments
+  image: /blog/environments-secrets-configurations-management/esc.gif
   alt: a screenshot of Pulumi ESC
   description: |
     Easy-to-use single source of truth for all configurations with guardrails. Seamlessly adopt short-lived dynamic secrets. Never have downtime over changed configurations because you can change once and have it updated everywhere. Enforce least-privileged access through role-based access controls.
 
 customer_logos:
-  title: You’ll be in good company
+  title: Trusted by your peers
   logos:
     - name: mercedes-benz
       link: /case-studies/mercedes-benz
