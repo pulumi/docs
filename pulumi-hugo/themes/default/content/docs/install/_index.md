@@ -48,7 +48,7 @@ $ brew install pulumi/tap/pulumi
 
 macOS Sierra (10.12) or later is required.
 
-The latest version of Pulumi is {{< latest-version >}}. For older versions, see [Available Versions](/docs/install/versions/).
+The latest version of Pulumi is {{< latest-version >}}. For older versions, see [Available Versions](/docs/install/versions/). For a list of features, bug fixes, and more see the [CHANGELOG](https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md).
 
 {{< get-started-note >}}
 
@@ -71,7 +71,7 @@ $ curl -fsSL https://get.pulumi.com | sh
 </div>
 </div>
 
-The latest version of Pulumi is {{< latest-version >}}. For older versions, see [Available Versions](/docs/install/versions/).
+The latest version of Pulumi is {{< latest-version >}}. For older versions, see [Available Versions](/docs/install/versions/). For a list of features, bug fixes, and more see the [CHANGELOG](https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md).
 
 {{< get-started-note >}}
 
@@ -96,7 +96,7 @@ The latest version of Pulumi is {{< latest-version >}}. For older versions, see 
 
 Windows 8 and later are supported.
 
-The latest version of Pulumi is {{< latest-version >}}. For older versions, see [Available Versions](/docs/install/versions/).
+The latest version of Pulumi is {{< latest-version >}}. For older versions, see [Available Versions](/docs/install/versions/). For a list of features, bug fixes, and more see the [CHANGELOG](https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md).
 
 {{< get-started-note >}}
 
