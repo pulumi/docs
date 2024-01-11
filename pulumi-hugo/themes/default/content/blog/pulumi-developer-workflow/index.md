@@ -3,7 +3,7 @@ title: "Pulumi ESC + Devcontainer Developer Workflow"
 date: 2024-01-10T19:41:13Z
 draft: false
 meta_desc: "Batteries Included: A hands on Pulumi IaC Developer Workflow experience."
-meta_image: meta.png
+meta_image: image-vscode-codespaces-blank.png
 authors:
     - kat-morgan
 tags:
