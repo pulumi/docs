@@ -37,26 +37,28 @@ Before we dive in, make sure you are prepared with the following:
 - Github Account
 - 10 minutes (aprox.)
 
-## Requirements
+### Requirements
 
 Remembering that our goal is to setup an all inclusive developer environment, let's take a moment and consider the requirements for this project.
 
 #### Commandline Utilities:
-  1. Pulumi CLI
-  2. Pulumi ESC
-  3. Kubectl
-  4. Direnv
-  5. KinD
-  6. Github CLI
-  7. Git CLI
-  8. Other tools like jq, etc
+
+1. Pulumi CLI
+2. Pulumi ESC
+3. Kubectl
+4. Direnv
+5. KinD
+6. Github CLI
+7. Git CLI
+8. Other tools like jq, etc
 
 #### Safe Secrets Handling:
-  - Pulumi Auth
-  - Github Auth
-  - Kubeconfig
 
-## Diving In
+- Pulumi Auth
+- Github Auth
+- Kubeconfig
+
+### Diving In
 
 Alright, let's jump in and get started!
 
@@ -75,7 +77,6 @@ Click the button to launch a blank codespaces session to build your new project 
 
 ![New Blank Github Codespaces](image-vscode-codespaces-blank.png)
 
-
 #### Pulumi Devcontainer
 
 First, we need to make sure we have all of our cli dependencies by pulling in the [Pulumi Devcontainer].
@@ -91,7 +92,6 @@ cp -f .devcontainer/devcontainer.json .devcontainer.json
 
 gh codespace rebuild
 ```
-
 
 #### Pulumi Cloud
 
@@ -123,7 +123,6 @@ pulumi env set workshop environmentVariables.GITHUB_TOKEN --plaintext \${secrets
 eval $(pulumi env open workshop --format shell)
 ```
 
-
 #### Direnv: Automatic Environment Variables
 
 Various non-secret environment variables may be worth maintaining in code locally as well. There are many ways to do this, but here we are going to use Direnv to automatically load environment variables from a .envrc file.
@@ -132,7 +131,6 @@ Various non-secret environment variables may be worth maintaining in code locall
 echo 'export KUBECONFIG=${PWD}/.kube/config' >> .envrc && direnv allow
 direnv allow
 ```
-
 
 #### KinD: Kubernetes-in-docker
 
@@ -151,7 +149,6 @@ pulumi env set workshop kubeconfig.kind (kubectl config view --raw --output json
 pulumi env set workshop secrets.kubeconfig.kind --secret "(kubectl config view --raw --output json | jq . -c)"
 pulumi env set workshop files.KUBECONFIG --plaintext \${secrets.kubeconfig.kind}
 ```
-
 
 #### Minecraft: Now let's create the deployment code!
 
@@ -172,7 +169,6 @@ pulumi new \
 pulumi up -y --skip-preview
 ```
 
-
 #### Git Code Repository
 
 Now with our github token saved and exported in our environment, let's initialize our git code repository.
@@ -186,7 +182,6 @@ gh auth setup-git
 git config --global user.email usrbinkat@braincraft.io
 git config --global user.name usrbinkat
 ```
-
 
 ## Videos
 
