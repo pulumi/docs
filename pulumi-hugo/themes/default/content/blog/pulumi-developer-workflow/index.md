@@ -58,44 +58,68 @@ Remembering that our goal is to setup an all inclusive developer environment, le
 - Github Auth
 - Kubeconfig
 
-### Diving In
-
-Alright, let's jump in and get started!
-
 #### Github Codespaces
 
-Go ahead and launch a new [Github Codespaces].
+Alright, let's jump in and get started by launching a new [Github Codespaces].
 
 [![Blank GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/github/codespaces-blank)
 
-Click the button to launch a blank codespaces session to build your new project in or create a new one directly on [Github's Codespaces Console].
+Click the button to launch a blank codespaces session that we will build a new project inside of, or create a new one directly on [Github's Codespaces Console] yourself.
+
+![New Blank Github Codespaces](image-vscode-codespaces-blank.png)
 
 > Note:
 >
 > This demonstration focuses on using the Web based VSCode environment offered in Github Codespaces.
 > Alternatively you can skip directly to the [Pulumi Devcontainer](#pulumi-devcontainer) section to follow along in your own local VSCode editor.
 
-![New Blank Github Codespaces](image-vscode-codespaces-blank.png)
+#### Git Code Repository
+
+Now create a git code repository to version control this project infrastructure code in Github.
+
+```bash
+# Authenticate with Github before proceeding.
+gh auth login
+
+# Create new Git Repository
+gh repo create workshop --public \
+  --gitignore Python --license apache-2.0 \
+  --description "pulumi iac developer workflow workshop"
+
+# Initialize the git repository
+git clone --recurse-submodules https://github.com/usrbinkat/workshop .
+
+# Configure `git` cli to use the `gh` cli for authentication with Github
+gh auth setup-git
+
+# Configure the username and email associated with your Github account.
+git config --global user.email usrbinkat@braincraft.io
+git config --global user.name usrbinkat
+
+# List files being tracked by git and their current status.
+git status
+```
 
 #### Pulumi Devcontainer
 
-First, we need to make sure we have all of our cli dependencies by pulling in the [Pulumi Devcontainer].
+Now, to make sure we have all of our cli dependencies, let's grab the [Pulumi Devcontainer].
 
 ```bash
-# Initialize the git repository
-git init --initial-branch=main
-
 # Add the Pulumi Devcontainer git submodule
 git submodule add https://github.com/pulumi/devcontainer .devcontainer
 git submodule update --init --recursive .devcontainer
+
+# Copy the devcontainer config of your choice into the top level of your project
+# so it will auto select by default when you open Codespaces in the future.
 cp -f .devcontainer/devcontainer.json .devcontainer.json
 
+# Rebuild the codespaces using the newly added Pulumi Devcontainer
 gh codespace rebuild
 ```
 
 #### Pulumi Cloud
 
-let's login to Pulumi and initialize a new ESC Environment.
+Let's login to Pulumi Cloud and initialize a new ESC environment to store our environment variables, secrets, and configuration which should be preserved and distributed securely from your Pulumi Cloud account.
 
 ```bash
 # Login to Pulumi Cloud
@@ -107,18 +131,7 @@ pulumi env init workshop
 
 In our environment, we maintain our secrets including api personal access tokens, kubeconfigs, and such all with Pulumi's Environments, Secrets, and Configuration cloud service.
 
-Before we initialize our new Git repository, let's setup our Github credentials in Pulumi ESC for safe keeping and use later.
-
 ```bash
-# Load your Github Personal Access Token into the Pulumi ESC Environment for safe keeping to use later.
-# https://github.com/settings/tokens
-pulumi env set workshop secrets.GITHUB_TOKEN --secret ghp_6b9XXXXXXXXXXXXXXXXXXXXXXXXflAj
-
-# Set the secrets.GITHUB_TOKEN key path as a Pulumi ESC environment variable.
-pulumi env set workshop environmentVariables.GITHUB_TOKEN --plaintext \${secrets.GITHUB_TOKEN}
-
-#pulumi env set workshop files.GITHUB_TOKEN_FILE --plaintext \${secrets.GITHUB_TOKEN}
-
 # Load the newly updated Pulumi ESC Environment in the local shell
 eval $(pulumi env open workshop --format shell)
 ```
@@ -128,30 +141,57 @@ eval $(pulumi env open workshop --format shell)
 Various non-secret environment variables may be worth maintaining in code locally as well. There are many ways to do this, but here we are going to use Direnv to automatically load environment variables from a .envrc file.
 
 ```bash
-echo 'export KUBECONFIG=${PWD}/.kube/config' >> .envrc && direnv allow
+# Add environment variables useful during development to .envrc
+cat <<EOF >> .envrc
+NO_COLOR=true
+PULUMI_HOME=\${HOME}/.pulumi
+PULUMI_SKIP_UPDATE_CHECK=true
+PULUMI_SKIP_CONFIRMATIONS=true
+PULUMI_PYTHON_CMD=/usr/bin/python3
+export KUBECONFIG=\${PWD}/.kube/config
+EOF
+```
+
+Now you can enable direnv on this directory.
+
+```bash
+# Enable direnv in this directory.
 direnv allow
 ```
+
+> Note:
+>
+> Env variables shown are for educational purposes only and should be used with care.
+> Read more about available Pulumi Environment variables here:
+> https://www.pulumi.com/docs/cli/environment-variables
 
 #### KinD: Kubernetes-in-docker
 
 We are going to use Kubernetes to demonstrate our Pulumi IaC. Let's go ahead and create a new cluster now.
 
 ```bash
-# Create a Kind Cluster
+# Create the directory for your new kind kubeconfig
 mkdir .kube
+
+# Create a Kind Cluster
 kind create cluster
 
-# Let's make sure our kubeconfig works
+# Let's make sure our kubeconfig works and pods are starting up
 kubectl get pods -A
 
 # Load Kubeconfig into Pulumi ESC as an encrypted secret for safe keeping.
+# This is an example use case for storing kubeconfig which would not usually be practical
+# for disposable kind kubernetes clusters like this however the approach is practical in many
+# other scenarios which you may come across.
 pulumi env set workshop secrets.kubeconfig.kind --secret "$(jq . -R -s < $KUBECONFIG)"
 pulumi env set workshop files.KUBECONFIG --plaintext \${secrets.kubeconfig.kind}
 ```
 
-#### Minecraft: Now let's create the deployment code!
+#### Now let's create the deployment code!
 
 If fortune favors the bold, let's be bold on this next step and let AI write our sample code on the fly!
+
+As this is a "hello world" style demonstration intended to showcase the developer workflow more than any specific cloud technologies, let's deploy something fun like a Minecraft server! Be sure to watch for the video demonstration of this exercise on Pulumi's PulumiTV YouTube channel for an extra easter egg bonus step!
 
 ```bash
 # Write a new Pulumi Python IaC program to deploy Minecraft on Kubernetes
@@ -163,27 +203,25 @@ pulumi new \
   --stack "workshop" \
   --force \
   --dir .;
+```
 
-# Deploy Minecraft on Kubernetes!
+```bash
+# Deploy your new Pulumi IaC on Kubernetes!
 pulumi stack select workshop
 pulumi up
+```
 
+```bash
 # Check for your new Minecraft pod
 kubectl get po
 ```
 
-#### Git Code Repository
-
-Now with our github token saved and exported in our environment, let's create our Github code repository and push all of this code to Github.
+#### Cleanup
 
 ```bash
-# Create new Git Repository
-gh repo create workshop --public --description "pulumi iac developer workflow workshop" --gitignore Python --license apache-2.0 --source .
-
-# Configure `git` cli to use the `gh` cli as an authentication helper
-gh auth setup-git
-git config --global user.email usrbinkat@braincraft.io
-git config --global user.name usrbinkat
+pulumi destroy -y --skip-preview
+pulumi stack rm workshop
+kind delete cluster --name kind
 ```
 
 ## Videos
