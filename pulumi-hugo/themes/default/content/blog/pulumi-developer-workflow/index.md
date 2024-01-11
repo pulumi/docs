@@ -144,9 +144,8 @@ kind create cluster
 # Let's make sure our kubeconfig works
 kubectl get pods -A
 
-# Broken steps:
-pulumi env set workshop kubeconfig.kind (kubectl config view --raw --output json | jq . -c)
-pulumi env set workshop secrets.kubeconfig.kind --secret "(kubectl config view --raw --output json | jq . -c)"
+# Load Kubeconfig into Pulumi ESC as an encrypted secret for safe keeping.
+pulumi env set workshop secrets.kubeconfig.kind --secret "$(jq . -R -s < $KUBECONFIG)"
 pulumi env set workshop files.KUBECONFIG --plaintext \${secrets.kubeconfig.kind}
 ```
 
@@ -157,21 +156,25 @@ If fortune favors the bold, let's be bold on this next step and let AI write our
 ```bash
 # Write a new Pulumi Python IaC program to deploy Minecraft on Kubernetes
 pulumi new \
-  --ai "Write a program using pulumi kubernetes helm v3 Release to deploy the itzg/minecraft-server helm chart on Kubernetes." \
-  --language python \
-  --name pulumi-minecraft-kubernetes \
-  --stack pulumi-iac-workshop \
+  --ai "Write a program using pulumi kubernetes helm v3 Release to deploy the itzg/minecraft-server helm chart on Kubernetes, and set " \
   --description "A pulumi infrastructure as code (iac) program for deploying and serving minecraft on kubernetes" \
+  --name "minecraft-on-kubernetes" \
+  --language python \
+  --stack "workshop" \
   --force \
   --dir .;
 
 # Deploy Minecraft on Kubernetes!
-pulumi up -y --skip-preview
+pulumi stack select workshop
+pulumi up
+
+# Check for your new Minecraft pod
+kubectl get po
 ```
 
 #### Git Code Repository
 
-Now with our github token saved and exported in our environment, let's initialize our git code repository.
+Now with our github token saved and exported in our environment, let's create our Github code repository and push all of this code to Github.
 
 ```bash
 # Create new Git Repository
