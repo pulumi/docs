@@ -1,8 +1,20 @@
-name: nginx-server
+name: aws-ec2-sg-nginx-server-yaml
 runtime: yaml
 description: A program to create an Nginx server on AWS
 
 resources:
+  # [Step 2: Create a security group.]
+  webserver-secgrp:
+    type: aws:ec2:SecurityGroup
+    properties:
+      description: Enable HTTP access
+      ingress:
+        - protocol: tcp
+          fromPort: 80
+          toPort: 80
+          cidrBlocks:
+            - 0.0.0.0/0
+
   # [Step 1: Create an EC2 instance.]
   webserver-www:
     type: aws:ec2:Instance
@@ -16,8 +28,8 @@ resources:
         sudo amazon-linux-extras install nginx1 -y
         sudo systemctl enable nginx
         sudo systemctl start nginx
-
-  # [Step 2: Create a security group.]
+      vpcSecurityGroupIds:
+        - ${webserver-secgrp.id}
 
 outputs:
   publicIp: ${webserver-www.publicIp}

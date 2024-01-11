@@ -59,7 +59,11 @@ Amazon Elastic Compute Cloud (EC2) provides managed virtual server hosting that 
 {{% choosable language typescript %}}
 
 ```typescript
-{{% loadcode "code/typescript/baseline.txt" %}}
+{{< example-program-snippet path="aws-ec2-sg-nginx-server" language="typescript" from="1" to="2" >}}
+
+{{< example-program-snippet path="aws-ec2-sg-nginx-server" language="typescript" from="25" to="25" >}}
+
+{{< example-program-snippet path="aws-ec2-sg-nginx-server" language="typescript" from="12" to="12" >}}
 ```
 
 {{% /choosable %}}
@@ -67,7 +71,11 @@ Amazon Elastic Compute Cloud (EC2) provides managed virtual server hosting that 
 {{% choosable language python %}}
 
 ```python
-{{% loadcode "code/python/baseline.py" %}}
+{{< example-program-snippet path="aws-ec2-sg-nginx-server" language="python" from="1" to="2" >}}
+
+{{< example-program-snippet path="aws-ec2-sg-nginx-server" language="python" from="22" to="22" >}}
+
+{{< example-program-snippet path="aws-ec2-sg-nginx-server" language="python" from="13" to="13" >}}
 ```
 
 {{% /choosable %}}
@@ -75,7 +83,11 @@ Amazon Elastic Compute Cloud (EC2) provides managed virtual server hosting that 
 {{% choosable language yaml %}}
 
 ```yaml
-{{% loadcode "code/yaml/baseline.yaml" %}}
+{{< example-program-snippet path="aws-ec2-sg-nginx-server" language="yaml" from="1" to="3" >}}
+
+{{< example-program-snippet path="aws-ec2-sg-nginx-server" language="yaml" from="18" to="18" >}}
+
+{{< example-program-snippet path="aws-ec2-sg-nginx-server" language="yaml" from="6" to="6" >}}
 ```
 
 {{% /choosable %}}
@@ -91,7 +103,9 @@ We will now define our EC2 instance resource below.
 {{% choosable language typescript %}}
 
 ```typescript
-{{% loadcode "code/typescript/create-ec2.txt" %}}
+{{< example-program-snippet path="aws-ec2-sg-nginx-server" language="typescript" from="1" to="10" >}}
+
+{{< example-program-snippet path="aws-ec2-sg-nginx-server" language="typescript" from="23" to="31" >}}
 ```
 
 {{% /choosable %}}
@@ -99,7 +113,9 @@ We will now define our EC2 instance resource below.
 {{% choosable language python %}}
 
 ```python
-{{% loadcode "code/python/create-ec2.py" %}}
+{{< example-program-snippet path="aws-ec2-sg-nginx-server" language="python" from="1" to="11" >}}
+
+{{< example-program-snippet path="aws-ec2-sg-nginx-server" language="python" from="22" to="31" >}}
 ```
 
 {{% /choosable %}}
@@ -107,7 +123,8 @@ We will now define our EC2 instance resource below.
 {{% choosable language yaml %}}
 
 ```yaml
-{{% loadcode "code/yaml/create-ec2.yaml" %}}
+{{< example-program-snippet path="aws-ec2-sg-nginx-server" language="yaml" from="1" to="5" >}}
+{{< example-program-snippet path="aws-ec2-sg-nginx-server" language="yaml" from="18" to="35" >}}
 ```
 
 {{% /choosable %}}
@@ -179,7 +196,10 @@ In this section, you will use Pulumi documentation to configure the security gro
 {{% choosable language typescript %}}
 
 ```typescript
-{{% loadcode "code/typescript/updated-baseline.txt" %}}
+{{< example-program-snippet path="aws-ec2-sg-nginx-server" language="typescript" from="1" to="12" >}}
+const securityGroup = // TO-DO
+
+{{< example-program-snippet path="aws-ec2-sg-nginx-server" language="typescript" from="23" to="31" >}}
 ```
 
 {{% /choosable %}}
@@ -187,7 +207,10 @@ In this section, you will use Pulumi documentation to configure the security gro
 {{% choosable language python %}}
 
 ```python
-{{% loadcode "code/python/updated-baseline.py" %}}
+{{< example-program-snippet path="aws-ec2-sg-nginx-server" language="python" from="1" to="13" >}}
+security_group = # TO-DO
+
+{{< example-program-snippet path="aws-ec2-sg-nginx-server" language="python" from="22" to="31" >}}
 ```
 
 {{% /choosable %}}
@@ -195,7 +218,10 @@ In this section, you will use Pulumi documentation to configure the security gro
 {{% choosable language yaml %}}
 
 ```yaml
-{{% loadcode "code/yaml/updated-baseline.yaml" %}}
+{{< example-program-snippet path="aws-ec2-sg-nginx-server" language="yaml" from="1" to="7" >}}
+    # TO-DO
+
+{{< example-program-snippet path="aws-ec2-sg-nginx-server" language="yaml" from="18" to="35" >}}
 ```
 
 {{% /choosable %}}
@@ -226,7 +252,7 @@ If your web server is still timing out, make sure you are accessing your web ser
 {{% choosable language typescript %}}
 
 ```typescript
-{{% loadcode "code/typescript/create-sg.txt" %}}
+{{< example-program-snippet path="aws-ec2-sg-nginx-server" language="typescript" >}}
 ```
 
 {{% /choosable %}}
@@ -234,7 +260,7 @@ If your web server is still timing out, make sure you are accessing your web ser
 {{% choosable language python %}}
 
 ```python
-{{% loadcode "code/python/create-sg.py" %}}
+{{< example-program-snippet path="aws-ec2-sg-nginx-server" language="python" >}}
 ```
 
 {{% /choosable %}}
@@ -242,7 +268,7 @@ If your web server is still timing out, make sure you are accessing your web ser
 {{% choosable language yaml %}}
 
 ```yaml
-{{% loadcode "code/yaml/create-sg.yaml" %}}
+{{< example-program-snippet path="aws-ec2-sg-nginx-server" language="yaml" >}}
 ```
 
 {{% /choosable %}}
