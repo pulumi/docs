@@ -100,7 +100,7 @@ const uploadsBucket = new aws.s3.Bucket("uploads-bucket", {
 
 if (config.marketingPortalStack) {
     const marketingAppStack = new pulumi.StackReference(config.marketingPortalStack);
-    const ecsRoleArn = marketingAppStack.getOutput("ecsRoleArn");
+    const ecsRoleArn = marketingAppStack.requireOutput("ecsRoleArn");
 
     const uploadsBucketPolicy = new aws.s3.BucketPolicy("uploads-bucket-policy", {
         bucket: uploadsBucket.bucket,
