@@ -258,6 +258,11 @@ function getDefaultExcludedKeywords() {
         "https://www.noaa.gov/information-technology/open-data-dissemination",
         "https://www.inc.com/inc5000/2023",
         "https://www.inc.com/inc5000",
+        "https://www.weforum.org/press/2020/10/recession-and-automation-changes-our-future-of-work-but-there-are-jobs-coming-report-says-52c5162fce/",
+        "https://www.reuters.com/technology/chatgpt-sets-record-fastest-growing-user-base-analyst-note-2023-02-01/",
+        "https://www.reddit.com/r/pulumi/comments/130b4rn/ama_with_luke_hoban_cto_on_pulumi_insightsai_at/",
+        "https://platform.openai.com/account/api-keys",
+        "https://dash.cloudflare.com/sign-up/",
     ];
 }
 
