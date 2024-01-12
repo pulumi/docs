@@ -1,6 +1,6 @@
 name: Build and deploy testing
 on:
-  pull_request:
+  push:
     branches:
       - master
 permissions:
