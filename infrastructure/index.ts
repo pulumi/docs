@@ -49,6 +49,10 @@ const config = {
 
     // the registry stack to reference to route traffic to for `/registry` routes.
     registryStack: stackConfig.get("registryStack"),
+
+    // the marketing portal stack to reference to allow the marketing portal
+    // to add items to the uploads bucket.
+    marketingPortalStack: stackConfig.get("marketingPortalStack"),
 };
 
 const aiAppStack = new pulumi.StackReference('pulumi/pulumi-ai-app-infra/prod');
@@ -93,6 +97,43 @@ const uploadsBucket = new aws.s3.Bucket("uploads-bucket", {
         allowedOrigins: ["*"],
     }],
 });
+
+if (config.marketingPortalStack) {
+    const marketingAppStack = new pulumi.StackReference(config.marketingPortalStack);
+    const ecsRoleArn = marketingAppStack.requireOutput("ecsRoleArn");
+
+    const uploadsBucketPolicy = new aws.s3.BucketPolicy("uploads-bucket-policy", {
+        bucket: uploadsBucket.bucket,
+        policy: pulumi.all([uploadsBucket.arn, ecsRoleArn])
+            .apply(([bucketArn, roleArn]) => JSON.stringify({
+                "Version": "2012-10-17",
+                "Statement": [
+                    {
+                        "Action": [
+                            "s3:ListBucket",
+                            "s3:GetBucketLocation"
+                        ],
+                        "Principal": {
+                            "AWS": roleArn,
+                            },
+                        "Effect": "Allow",
+                        "Resource": bucketArn,
+                    },
+                    {
+                        "Effect": "Allow",
+                        "Principal": {
+                            "AWS": roleArn,
+                        },
+                        "Action": [
+                            "s3:GetObject",
+                            "s3:PutObject"
+                        ],
+                        "Resource": `${bucketArn}/*`,
+                    },
+                ]
+            })),
+    });
+}
 
 // This needs to be set in order to allow the use of ACLs. This was added to update our infrastructure to be
 // compatible with the default S3 settings from AWS' April update. `ObjectWriter` was the prior default, so
