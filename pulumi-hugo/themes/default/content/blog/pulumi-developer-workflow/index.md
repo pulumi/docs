@@ -79,7 +79,7 @@ Now create a git code repository to version control this project infrastructure 
 
 ```bash
 # Authenticate with Github before proceeding.
-gh auth login
+gh auth login --scopes "repo,gist,read:packages,admin:org,delete_repo" --web
 
 # Create new Git Repository
 gh repo create workshop --public \
@@ -87,14 +87,14 @@ gh repo create workshop --public \
   --description "pulumi iac developer workflow workshop"
 
 # Initialize the git repository
-git clone --recurse-submodules https://github.com/usrbinkat/workshop .
+git clone --recurse-submodules https://github.com/${GITHUB_USER}/workshop .
 
 # Configure `git` cli to use the `gh` cli for authentication with Github
 gh auth setup-git
 
 # Configure the username and email associated with your Github account.
-git config --global user.email usrbinkat@braincraft.io
-git config --global user.name usrbinkat
+git config --global user.email ${GIT_COMMITTER_EMAIL}
+git config --global user.name ${GITHUB_USER}
 
 # List files being tracked by git and their current status.
 git status
@@ -114,7 +114,7 @@ git submodule update --init --recursive .devcontainer
 cp -f .devcontainer/devcontainer.json .devcontainer.json
 
 # Rebuild the codespaces using the newly added Pulumi Devcontainer
-gh codespace rebuild
+gh codespace rebuild --codespace ${CODESPACE_NAME}
 ```
 
 #### Pulumi Cloud
@@ -143,12 +143,13 @@ Various non-secret environment variables may be worth maintaining in code locall
 ```bash
 # Add environment variables useful during development to .envrc
 cat <<EOF >> .envrc
-NO_COLOR=true
-PULUMI_HOME=\${HOME}/.pulumi
-PULUMI_SKIP_UPDATE_CHECK=true
-PULUMI_SKIP_CONFIRMATIONS=true
-PULUMI_PYTHON_CMD=/usr/bin/python3
+export NO_COLOR=true
+export PULUMI_HOME=\${HOME}/.pulumi
+export PULUMI_SKIP_UPDATE_CHECK=true
+export PULUMI_SKIP_CONFIRMATIONS=true
+export PULUMI_PYTHON_CMD=/usr/bin/python3
 export KUBECONFIG=\${PWD}/.kube/config
+source venv/bin/activate 2>/dev/null || true
 EOF
 ```
 
@@ -205,11 +206,15 @@ pulumi new \
   --dir .;
 ```
 
+Now let's see if our new Infrastructure as Code Pulumi Python Codebase will deploy!
+
 ```bash
-# Deploy your new Pulumi IaC on Kubernetes!
+# Deploy your new Pulumi IaC on Kubernetes
 pulumi stack select workshop
 pulumi up
 ```
+
+#### Conclusion
 
 ```bash
 # Check for your new Minecraft pod
@@ -224,7 +229,7 @@ pulumi stack rm workshop
 kind delete cluster --name kind
 ```
 
-## Videos
+#### Videos
 
 {{< youtube "kDB-YRKFfYE?rel=0" >}}
 
