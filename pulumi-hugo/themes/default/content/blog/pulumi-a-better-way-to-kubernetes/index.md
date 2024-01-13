@@ -124,7 +124,7 @@ Kubernetes to be productive with Pulumi.
 
 Since you can [manage a full infrastructure stack](/blog/using-helm-and-pulumi-to-define-cloud-native-infrastructure-as-code/)
 with Pulumi, you can
-[create infrastructure on demand]data-science-on-demand-spinning-up-a-wallaroo-cluster-is-easy-with-pulumi)
+[create infrastructure on demand](/blog/data-science-on-demand-spinning-up-a-wallaroo-cluster-is-easy-with-pulumi/)
 (k8s cluster, databases, networking, object storage, etc.), spin up your
 application, run tests, and then tear the whole stack back down! This
 saves you money and builds confidence that you can recover from disaster
