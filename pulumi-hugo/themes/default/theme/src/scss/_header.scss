@@ -193,7 +193,7 @@
                     @apply relative;
 
                     .header-nav-drop-down-menu {
-                        @apply w-full absolute hidden pt-6 mt-2 top-0 z-20;
+                        @apply w-full absolute hidden mt-5 pt-3 top-0 z-20;
                         min-width: fit-content;
                         ul {
                             @apply bg-white text-left rounded shadow-3xl p-5 whitespace-nowrap;
