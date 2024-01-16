@@ -8,13 +8,10 @@ authors:
 
 tags:
 - pinecone
-- provider
+- providers
 - serverless
 - ai
-
 ---
-
-![Pulumi and Pinecone](./picture1.png)
 
 ## Hello, Pulumi Pinecone Provider!  👋
 
