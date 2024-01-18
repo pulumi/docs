@@ -5,10 +5,12 @@ title: vault-secrets
 h1: vault-secrets
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  pulumicloud:
+  pulumiesc:
     identifier: vault-secrets
     parent: esc-providers
     weight: 9
+aliases:
+- /docs/pulumi-cloud/esc/providers/vault-secrets/
 ---
 
 The `vault-secrets` provider enables you to dynamically import Secrets from HashiCorp Vault into your Environment. The provider will return a map of names to Secrets.

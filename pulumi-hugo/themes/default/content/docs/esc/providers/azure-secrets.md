@@ -5,10 +5,12 @@ title: azure-secrets
 h1: azure-secrets
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    pulumicloud:
+    pulumiesc:
         identifier: azure-secrets
         parent: esc-providers
         weight: 4
+aliases:
+- /docs/pulumi-cloud/esc/providers/azure-secrets/
 ---
 
 The `azure-secrets` provider enables you to dynamically import Secrets and Configuration from Azure Key Vault into your Environment. The provider will return a map of names to Secrets.

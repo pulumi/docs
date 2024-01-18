@@ -5,10 +5,12 @@ title: aws-secrets
 h1: aws-secrets
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    pulumicloud:
+    pulumiesc:
         identifier: aws-secrets
         parent: esc-providers
         weight: 2
+aliases:
+- /docs/pulumi-cloud/esc/providers/aws-secrets/
 ---
 
 The `aws-secrets` provider enables you to dynamically import Secrets from AWS Secrets Manager into your Environment. The provider will return a map of names to Secrets.

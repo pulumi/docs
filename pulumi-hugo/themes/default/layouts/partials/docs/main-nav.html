@@ -2,8 +2,8 @@
     {{ if hasPrefix .RelPermalink "/docs/" }}
         {{/* Render a top-level menu for our major docs sections */}}
         {{ $toc_page := . }}
-        {{ $toc_sections := slice "Download & install" "Get started" "Clouds" "Concepts" "Pulumi Cloud" "Using Pulumi" "Languages & SDKs" "Pulumi CLI" "Pulumi ESC CLI" "Support" }}
-        {{ $toc_menus := dict "Download & install" .Site.Menus.install "Get started" .Site.Menus.getstarted "Clouds" .Site.Menus.clouds "Concepts" .Site.Menus.concepts "Pulumi Cloud" .Site.Menus.pulumicloud "Using Pulumi" .Site.Menus.usingpulumi "Languages & SDKs" .Site.Menus.languages "Pulumi CLI" .Site.Menus.cli "Pulumi ESC CLI" .Site.Menus.esc_cli "Support" .Site.Menus.support }}
+        {{ $toc_sections := slice "Download & install" "Get started" "Clouds" "Concepts" "Pulumi Cloud" "Pulumi ESC" "Using Pulumi" "Languages & SDKs" "Pulumi CLI" "Pulumi ESC CLI" "Support" }}
+        {{ $toc_menus := dict "Download & install" .Site.Menus.install "Get started" .Site.Menus.getstarted "Clouds" .Site.Menus.clouds "Concepts" .Site.Menus.concepts "Pulumi Cloud" .Site.Menus.pulumicloud "Pulumi ESC" .Site.Menus.pulumiesc "Using Pulumi" .Site.Menus.usingpulumi "Languages & SDKs" .Site.Menus.languages "Pulumi CLI" .Site.Menus.cli "Pulumi ESC CLI" .Site.Menus.esc_cli "Support" .Site.Menus.support }}
 
         {{ range $index, $element := $toc_sections }}
             {{ $sidenav_selected := "" }}

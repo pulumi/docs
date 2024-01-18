@@ -5,10 +5,12 @@ title: pulumi-stacks
 h1: pulumi-stacks
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    pulumicloud:
+    pulumiesc:
         identifier: pulumi-stacks
         parent: esc-providers
         weight: 7
+aliases:
+- /docs/pulumi-cloud/esc/providers/pulumi-stacks/
 ---
 
 The `pulumi-stacks` provider enables you to import Stack outputs from Pulumi into your Environment.

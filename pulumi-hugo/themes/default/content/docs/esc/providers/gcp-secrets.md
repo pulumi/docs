@@ -5,10 +5,12 @@ title: gcp-secrets
 h1: gcp-secrets
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  pulumicloud:
+  pulumiesc:
     identifier: gcp-secrets
     parent: esc-providers
     weight: 6
+aliases:
+- /docs/pulumi-cloud/esc/providers/gcp-secrets/
 ---
 
 The `gcp-secrets` provider enables you to dynamically import Secrets from Google Cloud Secrets Manager into your Environment. The provider will return a map of names to Secrets.

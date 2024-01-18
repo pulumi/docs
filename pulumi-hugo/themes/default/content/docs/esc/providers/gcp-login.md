@@ -5,10 +5,12 @@ title: gcp-login
 h1: gcp-login
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    pulumicloud:
+    pulumiesc:
         identifier: gcp-login
         parent: esc-providers
         weight: 5
+aliases:
+- /docs/pulumi-cloud/esc/providers/gcp-login/
 ---
 
 The `gcp-login` provider enables you to log in to Google Cloud using OpenID Connect or by providing static credentials. The provider will return a set of credentials that can be used to access Google Cloud resources or fetch secrets using the `gcp-secrets` provider.

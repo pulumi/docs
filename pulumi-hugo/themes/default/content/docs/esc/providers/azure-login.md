@@ -5,10 +5,12 @@ title: azure-login
 h1: azure-login
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    pulumicloud:
+    pulumiesc:
         identifier: azure-login
         parent: esc-providers
         weight: 3
+aliases:
+- /docs/pulumi-cloud/esc/providers/azure-login/
 ---
 
 The `azure-login` provider enables you to log in to Azure using OpenID Connect or by providing static credentials. The provider will return a set of credentials that can be used to access Azure resources or fetch secrets using the `azure-secrets` provider.

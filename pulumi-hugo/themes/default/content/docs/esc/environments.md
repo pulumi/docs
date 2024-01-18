@@ -4,8 +4,7 @@ title_tag: Pulumi ESC Environments
 h1: Pulumi ESC Environments
 meta_desc: Pulumi ESC allows you to compose and manage hierarchical collections of configuration and secrets and consume them in various ways.
 menu:
-  pulumicloud:
-    parent: esc
+  pulumiesc:
     identifier: environments
     weight: 2
 search:
@@ -14,6 +13,8 @@ search:
     - environments
     - secrets
     - configuration
+aliases:
+  - /docs/pulumi-cloud/esc/environments/
 ---
 
 Pulumi ESC (Environments, Secrets, and Configuration) lets you define collections of configuration settings and secrets called _environments_ and use them in any application or service. Environments are YAML documents composed of static key-value pairs, programmatic expressions, dynamically retrieved values from supported providers including all major clouds through OpenID Connect (OIDC), and other Pulumi ESC environments.

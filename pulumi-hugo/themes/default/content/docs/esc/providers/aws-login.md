@@ -5,10 +5,12 @@ title: aws-login
 h1: aws-login
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    pulumicloud:
+    pulumiesc:
         identifier: aws-login
         parent: esc-providers
         weight: 1
+aliases:
+- /docs/pulumi-cloud/esc/providers/aws-login/
 ---
 
 The `aws-login` provider enables you to log in to your AWS account using OpenID Connect or by providing static credentials. The provider will return a set of credentials that can be used to access AWS resources or fetch secrets using the `aws-secrets` provider.
