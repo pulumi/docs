@@ -6,6 +6,10 @@ authors: ["matt-ellis"]
 tags: ["features","Security"]
 ---
 
+{{% notes type="info" %}}
+We recommend [Pulumi ESC](/docs/esc/) for managing secrets with Pulumi. Since this blog post, we have [launched Pulumi ESC](blog/environments-secrets-configurations-management/) which offers first class support for secrets, getting dynamic short-term credentials from cloud providers, simplifying your configurations with hierarchical environments, and much more.
+{{% /notes %}}
+
 We've had a 1st class concept of encrypted secrets configuration ever
 since first releasing Pulumi. Customers have told us they love having
 such a simple and easy way to ensure safe management of tokens, database
