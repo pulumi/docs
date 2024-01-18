@@ -2,7 +2,7 @@
 title: "Pulumi ESC + Devcontainer Developer Workflow"
 date: 2024-01-10T19:41:13Z
 draft: false
-meta_desc: "Batteries Included: A hands on Pulumi IaC Developer Workflow experience."
+meta_desc: "What does Github, Devcontainers, VSCode, Pulumi, and Pulumi ESC bring to DevOps? Everything you need to orchestrate the cloud!"
 meta_image: image-vscode-codespaces-blank.png
 authors:
     - kat-morgan
@@ -19,15 +19,51 @@ tags:
     - codespaces
 ---
 
-Have you ever felt like every 'get started' guide starts out with the obligatory prerequisites task list? Want to try Pulumi without the headache or just elevate your current DevOps workflow? Dive into this short "batteries included" workflow demonstration and see how Pulumi, ESC, and Devcontainers are a match made in heaven for your orchestration productivity, or share with a friend and confidently colaborate without falling into the infamous "works on my machine" cope.
+Have you ever felt like every 'get started' guide promises an easy path to success and then slams you with a long requirements list? I want to share Pulumi with you, and better than fighting with installing python or jodejs, or meeting any number of other requirements. Wouldnt it be nice if everything you need was just ready to grab and go?
+
+Dive into this short "batteries included" DevOps developer workflow demonstration and see how Pulumi, ESC, and Devcontainers are a match made in heaven for your cloud ops productivity.
 
 <!--more-->
 
 ## Intro
 
-Getting started with new tools and projects can be exciting and fun, however it is also common to pick up something new and feel like the getting started experience would be better if all the prerequisites and starting effort was just solved already.
+Below, we are going to cover a few different topics regarding how to easily get started with Pulumi, other technologies that pair well with Pulumi during the development process, and conclude with a demonstration of how to use these tools together to quickly get comfortable in a complete cloud developer environment.
 
-In this blog post we are going to explore a few new things from Pulumi to make getting started, and even well established workflows easier to reproduce, maintain, and share with others so that you can invest brain power into getting the important things done without distractions.
+At just over six months into the quest to conquer DevOps and GitOps with Pulumi, I have come across a commonly shared question, most recently brought up during a great customer conversation at AWS re:Invent.
+
+>
+> "What should be inside of a DevOps git repository?"
+>
+
+Unlike many other programs, Pulumi is not just a single tool, but rather an cloud developer ecosystem of tools, SDK packages, and services wrapped in Pulumi Cloud which work together as a complete developer experience.
+
+Many cloud native tools and platforms require a plethora of dependencies and accompanying tooling. Pulumi can feel a bit daunting with it's support of many general purpose programming languages, SDK packages, and cloud providers offering many forks in the road on the path to success.
+
+If you've ever struggled to choose a flavor of ice cream among the dizying number of choices on offer then if you are anything like me you may easily recognize the concept of being "paralized by choices".
+
+Freezing, while great for ice cream, does not offer quite as much satisfaction while attacking an engineering or developer problem.
+
+In the DevOps world, whether you are Paladin, Wizard, or Warlock (*cough* DnD nerds) Pulumi's powerful toolset is both a worthy endeavor, and a rewarding challenge to master.
+
+Pulumi has been a part of my tool belt for over 3 years now, however it was not a consistent or core responsibility prior to joing Pulumi so I have uncovered many of my own eureka moments.
+
+In true DevOps fassion, the work leading up to this blog post alone included a roller coaster of chronic scope creep, pushing deadlines, learning things that changed my entire approach, and sent me back to the drawing board. Frankly, 10 days ago I was on the verge of questioning the idea of turn key developer environments. the entire plan was on the rocks.
+
+Was I doing too much? Had the spirit of the project exceeded it's deliverable reality? I was teetering on the cliff weighing my resolve when in the middle of a demo hacking session with a colleague all of these new tools and skills came together in a vision for making this your batteries included Pulumi developer workflow.
+
+All you have to do is "turn the key" or hit that git clone button and you are a step away from your first  `pulumi up` command.
+
+Without further delay, I could not be more excited to share with you the best way to dive in with with Pulumi for yourself.
+
+## Pulumi Developer Day 0
+
+>
+> What's in a Day 0?
+>
+
+Day zero is going to be your planning and design phase. Sometimes this includes various stages of research, and other times it is a matter of just getting started with hands on investigation.
+
+For us, we have just a few requirements to get started, and I bet you are already at least half of the way there.
 
 ## Prerequisites
 
@@ -36,42 +72,69 @@ Before we dive in, make sure you are prepared with the following:
 - Web Browser
 - Github Account
 - 10 minutes (aprox.)
+- Pulumi Cloud Personal Access Token (PAT)
 
 ### Requirements
 
-Remembering that our goal is to setup an all inclusive developer environment, let's take a moment and consider the requirements for this project.
+Remembering that our goal is to setup an all inclusive developer environment, let's take a moment and consider what we need at the starting line of our "Day 0" for this project.
 
 #### Commandline Utilities:
 
-1. Pulumi CLI
-2. Pulumi ESC
-3. Kubectl
-4. Direnv
-5. KinD
-6. Github CLI
-7. Git CLI
-8. Other tools like jq, etc
-
-#### Safe Secrets Handling:
-
-- Pulumi Auth
-- Github Auth
-- Kubeconfig
+|      Tool              | Description                     |
+|:----------------------:|:-------------------------------:|
+| Pulumi CLI             | Infrastructure as Code          |
+| Pulumi ESC             | Secrets and Configuration Store |
+| Kubectl                | Kubernetes CLI                  |
+| Direnv                 | Automatic Environment Variables |
+| KinD                   | Kubernetes Local Cluster        |
+| Github CLI             | Github & Git Repository CLI     |
+| Other: (jq, curl, etc) | Other useful tools              |
 
 #### Github Codespaces
 
+Okay, so we have a few tools to install, but what if we could skip that step and just get started right away? That's where the Pulumi Devcontainer, and Github Codespaces comes in.
+
 Alright, let's jump in and get started by launching a new [Github Codespaces].
 
-[![Blank GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/github/codespaces-blank)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/pulumi/devcontainer?devcontainer_path=.devcontainer%2Fdevcontainer.json)
 
-Click the button to launch a blank codespaces session that we will build a new project inside of, or create a new one directly on [Github's Codespaces Console] yourself.
+You can the 'Open in Github Codespaces' button to directly launch a new codespaces session from here, or you can go directly to the [Pulumi Devcontainer] repo and launch a new codespaces session from there with more customization options in the click through menues to launch your new session.
 
-![New Blank Github Codespaces](image-vscode-codespaces-blank.png)
+[Pulumi Devcontainer]:https://github.com/pulumi/devcontainer
 
 > Note:
+> This demonstration focuses on using the Web based VSCode environment offered in Github Codespaces. Alternatively you choose to launch the [Pulumi Devcontainer](#pulumi-devcontainer) in your own local VSCode editor with Docker.
 >
-> This demonstration focuses on using the Web based VSCode environment offered in Github Codespaces.
-> Alternatively you can skip directly to the [Pulumi Devcontainer](#pulumi-devcontainer) section to follow along in your own local VSCode editor.
+
+With a new codespaces session launched, you should see a new VSCode editor window open in your browser. If you are not already familiar with VSCode, you can learn more about it here: https://code.visualstudio.com/docs
+
+![Alt text](image.png)
+
+Contratulations! Your new developer environment is ready to to start coding Pulumi.
+
+For our final Day 0 step, we need an idea of what we are going to build with our Infrastructure-as-Code (IaC) program.
+
+For this, why dont we deploy a Minecraft server on Kubernetes? It's a fun way to get started with Pulumi, and a great way to show off your new developer environment to friends and maybe even a gateway to DevOps for young gamers and future engineers.
+
+# Pulumi Developer Day 1
+
+Okay, we have an environment, we have a plan, all we need now is to hammer out some code. ... Or do we?
+
+More than just hype, here at Pulumi the big brains in Engineering have been turning caffeine to code at a break neck pace to release some amazing results to help you along with your IaC development as well. Powered by ChatGPT, Pulumi's "[Pulumi AI](https://www.pulumi.com/ai)" is augmented by our Pulumi Cloud Providers, Docs, and SDKs ready to be your cloud ninja sidekick.
+
+Better experienced than just as been working on some pretty cool AI tools to help developers get started with Pulumi, which brings us to the next step in our journey.
+
+## Pulumi AI
+
+Pulumi AI is available as a web based tool much like the now familiar ChatGPT console, however it is also built into the `pulumi` cli tool, which means you can use it right from your terminal in your new codespaces developer environment.
+
+```bash
+pulumi new --ai
+```
+
+![Alt text](image-1.png)
+
+<details>
 
 #### Git Code Repository
 
@@ -79,7 +142,7 @@ Now create a git code repository to version control this project infrastructure 
 
 ```bash
 # Authenticate with Github before proceeding.
-gh auth login --scopes "repo,gist,read:packages,admin:org,delete_repo" --web
+gh auth login --web --git-protocol https --scopes "repo,gist,read:packages,admin:org,delete_repo,codespace"
 
 # Create new Git Repository
 gh repo create workshop --public \
@@ -99,6 +162,35 @@ git config --global user.name ${GITHUB_USER}
 # List files being tracked by git and their current status.
 git status
 ```
+
+#### Direnv: Automatic Environment Variables
+
+Various non-secret environment variables may be worth maintaining in code locally as well. There are many ways to do this, but here we are going to use Direnv to automatically load environment variables from a .envrc file.
+
+```bash
+# Add environment variables useful during development to .envrc
+cat <<EOF >> .envrc
+export NO_COLOR=true
+export PULUMI_HOME=\${HOME}/.pulumi
+export PULUMI_SKIP_UPDATE_CHECK=true
+export PULUMI_SKIP_CONFIRMATIONS=true
+export KUBECONFIG=\${PWD}/.kube/config
+source venv/bin/activate 2>/dev/null || true
+EOF
+```
+
+Now you can enable direnv on this directory.
+
+```bash
+# Enable direnv in this directory.
+direnv allow
+```
+
+> Note:
+>
+> Env variables shown are for educational purposes only and should be used with care.
+> Read more about available Pulumi Environment variables here:
+> https://www.pulumi.com/docs/cli/environment-variables
 
 #### Pulumi Devcontainer
 
@@ -129,43 +221,6 @@ pulumi login
 pulumi env init workshop
 ```
 
-In our environment, we maintain our secrets including api personal access tokens, kubeconfigs, and such all with Pulumi's Environments, Secrets, and Configuration cloud service.
-
-```bash
-# Load the newly updated Pulumi ESC Environment in the local shell
-eval $(pulumi env open workshop --format shell)
-```
-
-#### Direnv: Automatic Environment Variables
-
-Various non-secret environment variables may be worth maintaining in code locally as well. There are many ways to do this, but here we are going to use Direnv to automatically load environment variables from a .envrc file.
-
-```bash
-# Add environment variables useful during development to .envrc
-cat <<EOF >> .envrc
-export NO_COLOR=true
-export PULUMI_HOME=\${HOME}/.pulumi
-export PULUMI_SKIP_UPDATE_CHECK=true
-export PULUMI_SKIP_CONFIRMATIONS=true
-export PULUMI_PYTHON_CMD=/usr/bin/python3
-export KUBECONFIG=\${PWD}/.kube/config
-source venv/bin/activate 2>/dev/null || true
-EOF
-```
-
-Now you can enable direnv on this directory.
-
-```bash
-# Enable direnv in this directory.
-direnv allow
-```
-
-> Note:
->
-> Env variables shown are for educational purposes only and should be used with care.
-> Read more about available Pulumi Environment variables here:
-> https://www.pulumi.com/docs/cli/environment-variables
-
 #### KinD: Kubernetes-in-docker
 
 We are going to use Kubernetes to demonstrate our Pulumi IaC. Let's go ahead and create a new cluster now.
@@ -188,6 +243,13 @@ pulumi env set workshop secrets.kubeconfig.kind --secret "$(jq . -R -s < $KUBECO
 pulumi env set workshop files.KUBECONFIG --plaintext \${secrets.kubeconfig.kind}
 ```
 
+In our environment, we maintain our secrets including api personal access tokens, kubeconfigs, and such all with Pulumi's Environments, Secrets, and Configuration cloud service.
+
+```bash
+# Load the newly updated Pulumi ESC Environment in the local shell
+eval $(pulumi env open workshop --format shell)
+```
+
 #### Now let's create the deployment code!
 
 If fortune favors the bold, let's be bold on this next step and let AI write our sample code on the fly!
@@ -197,13 +259,13 @@ As this is a "hello world" style demonstration intended to showcase the develope
 ```bash
 # Write a new Pulumi Python IaC program to deploy Minecraft on Kubernetes
 pulumi new \
-  --ai "Write a program using pulumi kubernetes helm v3 Release to deploy the itzg/minecraft-server helm chart on Kubernetes, and set " \
+  --ai "Write a program using pulumi kubernetes helm v3 Release to deploy the itzg/minecraft-server helm chart on Kubernetes, and include a pulumi output to show the helm release status." \
   --description "A pulumi infrastructure as code (iac) program for deploying and serving minecraft on kubernetes" \
   --name "minecraft-on-kubernetes" \
   --language python \
   --stack "workshop" \
   --force \
-  --dir .;
+  --dir .
 ```
 
 Now let's see if our new Infrastructure as Code Pulumi Python Codebase will deploy!
@@ -221,12 +283,15 @@ pulumi up
 kubectl get po
 ```
 
+</details>
+
 #### Cleanup
 
 ```bash
 pulumi destroy -y --skip-preview
 pulumi stack rm workshop
 kind delete cluster --name kind
+gh repo delete ${GITHUB_USER}/workshop
 ```
 
 #### Videos
