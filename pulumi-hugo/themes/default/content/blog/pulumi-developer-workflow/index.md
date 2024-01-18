@@ -78,7 +78,7 @@ Before we dive in, make sure you are prepared with the following:
 
 Remembering that our goal is to setup an all inclusive developer environment, let's take a moment and consider what we need at the starting line of our "Day 0" for this project.
 
-#### Commandline Utilities:
+### Commandline Utilities:
 
 |      Tool              | Description                     |
 |:----------------------:|:-------------------------------:|
@@ -90,7 +90,7 @@ Remembering that our goal is to setup an all inclusive developer environment, le
 | Github CLI             | Github & Git Repository CLI     |
 | Other: (jq, curl, etc) | Other useful tools              |
 
-#### Github Codespaces
+### Github Codespaces
 
 Okay, so we have a few tools to install, but what if we could skip that step and just get started right away? That's where the Pulumi Devcontainer, and Github Codespaces comes in.
 
@@ -154,11 +154,13 @@ I chose python for this project, but you can choose any of the supported languag
 pulumi up -y
 ```
 
+## Pulumi Developer Day 2
+
 And because no hero's journey can be documented without the gruesome account of what came before, I have included many of the manual steps required to get to this point below by hand.
 
 <details>
 
-#### Git Code Repository
+### Git Code Repository
 
 Now create a git code repository to version control this project infrastructure code in Github.
 
