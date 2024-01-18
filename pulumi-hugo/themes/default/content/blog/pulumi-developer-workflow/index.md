@@ -1,8 +1,8 @@
 ---
-title: "Push to start GitOps with Pulumi, Github, Devcontainers, and AI"
+title: "The Pulumi 'Push to start' GitOps Experience"
 date: 2024-01-10T19:41:13Z
 draft: false
-meta_desc: "What does Github, Devcontainers, VSCode, Pulumi, and Pulumi ESC bring to DevOps? Everything you need to orchestrate the cloud, dive in to try your hand at cloud orchestration in 10 minutes or less!"
+meta_desc: "Of all the tricks, tools, and secrets to learn in 2024, Pulumi, Codespaces, Devcontainers, and AI are *the* cloud developer story of 2024. It's your big opportunity in 2024. Will you capture it or just let it slip?"
 meta_image: image-vscode-codespaces-blank.png
 authors:
     - kat-morgan
