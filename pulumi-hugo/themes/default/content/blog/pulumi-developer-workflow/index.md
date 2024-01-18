@@ -2,7 +2,7 @@
 title: "The Pulumi 'Push to start' GitOps Experience"
 date: 2024-01-10T19:41:13Z
 draft: false
-meta_desc: "Of all the tricks, tools, and secrets to learn in 2024, Pulumi, Codespaces, Devcontainers, and AI are *the* cloud developer story of 2024. It's your big opportunity in 2024. Will you capture it or just let it slip?"
+meta_desc: "Of all the tools, and tricks of the trade, Pulumi + Codespaces + Devcontainers + AI are THE cloud developer story of 2024. It's your big opportunity. Will you capture it or just let it slip?"
 meta_image: image-vscode-codespaces-blank.png
 authors:
     - kat-morgan
@@ -23,9 +23,11 @@ tags:
 
 As a skeptic of "quick starts" myself, I approach most marketing promises with a measure of cautious excitement. If the great and powerful algorithm, a friend, or a peer brought your attention here now, then I invite you to take this one seriously. Pulumi, with it's full support of many general purpose programming languages, can feel like a hastle to set up even if you are already a seasoned developer, and it can feel even worse if you are new to infrastructure as code and coming from a traditional ops background. Finding that magical easy street to success can be elusive and many tasks done with Pulumi require dedication and creativity, but as you will see here, writing and deploying a new Pulumi IaC program in golang, typescript, python, even dotnet, c# and more can actually be surprisingly easy to do yourself.
 
-Sharing Pulumi with people is a genuine passion found among Pulumians all around the globe but we all know evidence reigns king among engineers who, like any good practitioner, expects evidence. If seeing is believing then let's make some magic happen to see how getting started is easy, and evolving your developer workflow with Pulumi is better than just easy, it's remarkably powerful and ready for you to adopt in your daily workflows right away too.
+Sharing Pulumi with people is a genuine passion found among Pulumians all around the globe but we all know evidence reigns king among engineers who, like any good practitioner, expect proof, and of course a hands on experience is always the best.
 
-Continue with me for this short "batteries included" DevOps developer experience and see how Pulumi, ESC, and Devcontainers are a cloud ops match made in heaven whether you are developing on remote infrastructures or in the comfort of your own devices. The demo app may be a bit light hearted, but the methods we use to get there are going so worth it I guarantee you will come away with something new.
+If seeing is believing then let's make some magic happen to see how easy getting started can be. Evolving your developer workflow with Pulumi gets even better than just easy, it's remarkably powerful and ready for you to adopt in your daily workflows right away too.
+
+Continue with me for this short "batteries included" DevOps developer experience and see how Pulumi, ESC, and Devcontainers are a cloud ops match made in heaven whether you are developing on remote infrastructures or in the comfort of your own devices. The demo app may be a bit light hearted, but the methods we use to get there are so worth it I guarantee you can come away with something new just by trying it yourself.
 
 >
 > Hint:
@@ -34,43 +36,41 @@ Continue with me for this short "batteries included" DevOps developer experience
 
 <!--more-->
 
-Below, we are going to cover a few different topics regarding how to easily get started with Pulumi, including other technologies that pair well with a Pulumi workflow during the development process, and conclude with a demo and wrap up of how the pieces all come together to free you from the burden of preparing and maintaining your cloud ops environment. Because the fun part is the building, not the prep!
+Below, we are going to cover a few different topics regarding how to easily get started with Pulumi, including other technologies that pair well with a Pulumi workflow during the development process, and finally conclude with a demo and wrap up to see how all of the pieces together form an intuitive and highly effective combination of tools. The fun part is the building, not the prep!
 
-At just over six months into the quest to conquer DevOps and GitOps with Pulumi, I have come across a commonly shared question, most recently brought up during a great customer conversation at AWS re:Invent.
+At just over six months into my personal quest to conquer DevOps and GitOps with Pulumi, I have come across a commonly shared question, most recently brought up during a great customer conversation at AWS re:Invent.
 
->
-> "What should be inside of a GitOps git repository?"
->
+### "What should be inside of a GitOps git repository?"
 
-Unlike many other programs, Pulumi is not just a single tool, but rather a cloud developer ecosystem with tools, SDK packages, and cloud service solutions that together form a complete cloud developer experience.
+Pulumi is not just a single tool, but rather a cloud developer ecosystem with tools, SDK packages, and cloud service solutions which together form a complete cloud developer experience.
 
-Many cloud native tools and platforms require a plethora of dependencies and accompanying tooling. Pulumi can feel a bit daunting with it's support of many general purpose programming languages, SDK packages, and cloud providers offering more compelling options than we can conquer in a day.
+Many cloud native tools and platforms require a plethora of dependencies and accompanying tooling. Pulumi can feel a bit daunting with it's support of many general purpose programming languages, SDK packages, and cloud providers offering more compelling options than we can hope to conquer in a day.
 
-When it comes to ice cream, sometimes just selecting what flavor to have can be too much (a good tech article requires food references right?). Not un-like ice cream, when choosing where to start with cloud automation the symptoms of "choice paralysis" can plague even the most veteran dev and ops professionals.
+When it comes to ice cream, sometimes just selecting what flavor to have can be too much. *Any good tech article requires food references right?* Not un-like ice cream, when choosing where to start with cloud automation the symptoms of "choice paralysis" can plague even the most veteran dev and ops professionals.
 
 In the DevOps world, whether you are Paladin, Wizard, or Warlock (*cough* DnD nerds) Pulumi's powerful toolset is both a worthy endeavor to learn, and a rewarding challenge to master. Because freezing, while great for ice cream, is not as satisfying when tackling the next cloud problem.
 
 In true DevOps fassion, the work leading up to this blog post alone included a roller coaster of chronic scope creep, pushing deadlines, learning things that scrapped the planned approach and sent us back to the drawing board.
 
-Was I doing too much? Had the spirit of the project ambitions exceeded viable goals? I was teetering on the cliff of uncertainty weighing the risks when in the middle of a demo hacking session with a friend, all of these new tools and skills came together in a vision that tied the loose ends into a clean, one click to start, batteries included, Pulumi developer workflow. After all, you find the best solutions burried in the details, and the only way to reach them is with determination and digging.
+Have we taken on too much? Has the spirit of the project's ambitions exceeded viable goals? I was teetering on the cliff of uncertainty weighing the risks when in the middle of a demo hacking session with a friend, all of these new tools and and insights came together in a vision that tied the loose ends into a clean, one click to start, batteries included, "Pulumi Developer Workflow". After all, you find the best solutions burried in the details, and the only way to reach them is with determination and digging.
 
-Frankly, 10 days ago, I was doubting the viability of turn key promises. Could these holy grail aspirations be on the rocks? Was the struggle necessary? The struggle was a phoenix moment for this project but the pay off is a better and more convenient way of work that instantly became core in my daily developer workflow and I am sure there is something for everyone in this particular story (hint hint, if the Github DA' radar picks this up let's chat!).
+Frankly, 10 days ago, I was doubting the viability of turn key promises. Could these holy grail aspirations be on the rocks? Was the struggle necessary? The struggle was a phoenix moment for this project but the pay off is a more reliable and effective way of work that I was able to instantly adopt as the fundamental hub central to all of my daily developer work (and play!). I am confident there is something for everyone in this particular story.
 
 So what exactly is this workflow? All you have to do is "turn the key" or hit that git clone button and you are a step away from your first  `pulumi up` command. Yep, we're really talking about a zero risk, one push to start workflow.
 
-Without further delay, I could not be more excited to share with you what I believe is the very best way to dive into the best cloud engineering developer environment yet. So let's get to clicking!
+Without further delay, I could not be more excited to share with you the best way to dive into DevOps cloud engineering yet. So let's get to clicking!
 
 ## Cloud Ops: Day 0
 
->
-> What's in a Day 0?
->
+Because we're counting like computers, of course we start with zero.
+
+> ## What's in a Day 0?
 
 Day zero is going to be your planning and design phase. Sometimes this includes various stages of research, and other times it is a matter of just getting started with hands on investigation.
 
 For us, we have just a few requirements to get started, and I bet you are already at least half of the way there.
 
-### What do we need?
+> ## What do we need?
 
 Okay, even the fanciest push to start car still wants a fob in your pocket, so let's cover those bases real quick.
 
@@ -78,11 +78,13 @@ Okay, even the fanciest push to start car still wants a fob in your pocket, so l
 - Github Account
 - 10 minutes (aprox.)
 
-### Criteria
+> ## Criteria
 
-Alright, you have internet and a browser. Your prep work is done! Remembering that our goal is to setup an all inclusive developer environment, let's recount what we need for a successful "Day 0". Siri, Alexa, and ChatGPT are great but they cannot help us here just yet, so we're going to have to do this the "old fashioned way".
+Alright, you have internet and a browser. Your prep work is done! Remembering our goal of an all inclusive developer environment, let's recount what we need for our *"Day 0"* . Siri, Alexa, and ChatGPT are great but they cannot help us here just yet, so we're going to do this the "old fashioned way".
 
-### Commandline Utilities
+Below is an abreviated list of the tools baked into the Pulumi Devcontainer which we will be using.
+
+> ## Commandline Utilities
 
 |      Tool               | Description                      |
 |:-----------------------:|:--------------------------------:|
@@ -97,20 +99,21 @@ Alright, you have internet and a browser. Your prep work is done! Remembering th
 
 ## Cloud native ... cloud developer environment?
 
-Yes! We are going to develop in the cloud, for the cloud, with the cloud, and we are going to do it all from a web browser. If you are already familiar with Github Codespaces, then you might know what to expect next. If not, you are in for a treat.
+Yes! We are going to develop in the cloud, for the cloud, with the cloud, and for today we will do it all from a web browser. If you are already familiar with Github Codespaces, then you might know what to expect next. If not, you are in for a treat.
 
 Alright, let's jump in and get started by launching a new [Github Codespaces]. (click the button)
 
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/pulumi/devcontainer?devcontainer_path=.devcontainer%2Fdevcontainer.json) this button ^
+  👇 The button right here 👇
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://bit.ly/pulumi-devcontainer) This button ^ __ ^ yes that is the one, after all why shouldnt you click it?
 
 Did you click the button? It's safe, I promise. If you prefer a more informed approach then follow this [Github Codespaces Link](https://docs.github.com/en/codespaces/overview) for more detailed info about Codespaces and how it works.
 
-Clicking the 'Open in Github Codespaces' button takes you directly into launching a new codespaces session if you are logged into Github, otherwise login and then continue with your dev environment, or navigate directly to the [Pulumi Devcontainer] repo and fork / clone the template repository and launch a codespaces session from there with access to more customization options during setup.
+Clicking the 'Open in Github Codespaces' button takes you directly into launching a new codespaces session if you are logged into Github. Otherwise, proceed by logging in and then continue with your dev environment, or navigate directly to the [Pulumi Devcontainer] repo and fork / clone the template repository to launch your own codespaces session with access to more customization options during setup.
 
 [Pulumi Devcontainer]:https://github.com/pulumi/devcontainer
 
 > Note:
-> This demonstration is heavily focused on the Web based Codespaces environment offered by Github. Alternatively, the well known VSCode IDE also supports running Devcontainers with docker allowing you the choice of running [Pulumi Devcontainer](#pulumi-devcontainer) locally complete with Docker-in-docker and even KinD in Docker as we will see shortly!
+> This demonstration is deeply integrated into the Web based Codespaces environment offered by Github. Alternatively, the well known VSCode IDE also supports running Devcontainers with docker allowing you the choice of running [Pulumi Devcontainer](#pulumi-devcontainer) locally, complete with support for Docker-in-docker, and even KinD in Docker as we will see shortly!
 >
 
 With a new codespaces session launched, you should see the VSCode IDE in your browser. If you are not already familiar with VSCode, you can learn more about it in the [VSCode Docs](https://code.visualstudio.com/docs).
@@ -121,28 +124,26 @@ Contratulations! Your developer environment is ready for some Pulumi action.
 
 For our final Day 0 step, we need an idea of what we are going to build with our Infrastructure-as-Code (IaC) program.
 
-For this, why dont we deploy a Minecraft server on Kubernetes? It's a fun way to get started with Pulumi, and a great way to show off your cloud skills to friends. Maybe share with your favorite young minecraft gamers and young technology masterminds! DevOps is for everyone! AI, Hyperscale Cloud, Enterprise, On-prem Operations, even Gamers and bright young engineers on their way to cloud ops greatness.
+For this, why dont we deploy a Minecraft server on Kubernetes? It's a fun way to get started with Pulumi, and a great way to show off your cloud skills to friends. Maybe share with your favorite young minecraft gamers and young technology masterminds! DevOps is for everyone! AI, Hyperscale Cloud, Enterprise, On-prem, and even Homelab Operations deserve some DevOps heaven. Pulumi is for anyone on their pilgrimage to CloudOps nirvana.
 
 ## Pulumi Developer Day 1
 
-Okay, we have an environment, we have a plan, all we need now is to hammer out some code .... or do we?
+> ### We have an environment! We have a plan! Now we need to write our code ... or do we?
 
-Don't just take my word for it, but it is more than just hype. Here at Pulumi the big brains in Engineering have successfully churned the caffeine to code. Just 2 years ago these results would be nothing short of sci-fi fantasy.
+Don't just take my word for it, but it is more than just hype. Here at Pulumi the big brains in Engineering have successfully churned the caffeine to code and just since ChatGPT launched at the end of 2022, engineered and implemented a brilliant chatbot implementation to make learning and using Pulumi just that much easier. Thinking back, just two years ago these results would be nothing short of sci-fi fantasy.
 
->
 > What can Pulumi AI do?
 > Honestly we are only just beginning to discover the possibilities ourselves! You can try it out for yourself in the [Pulumi AI WebUI](https://www.pulumi.com/ai/) or read on if you prefer the convenience of a just an editor and terminal like I do.
->
 
 To help you along the way, Pulumi's ChatGPT powered custom coding chat bot, Pulumi's "[Pulumi AI](https://www.pulumi.com/ai)" is augmented by our Pulumi Cloud Providers, Docs, and SDKs ready to be your cloud ninja sidekick.
 
 Better experienced than just as been working on some pretty cool AI tools to help developers get started with Pulumi, which brings us to the next step in our journey.
 
-## Pulumi AI
+#### Pulumi AI to the rescue!
 
-Pulumi AI is available as a web based tool much like the now familiar ChatGPT console, however it is also built into the `pulumi` cli tool, which means you can chat interactively right from the pulumi command line interface, conveniently configured already in your new Codespaces IDE.
+Pulumi AI is available as a web based tool much like the now familiar ChatGPT console, however it is also built into the `pulumi` cli tool, which means you can chat interactively from the pulumi command line interface, conveniently configured already in your new Codespaces IDE.
 
-Let's try it.
+Let's try it!
 
 ### Step 1. Login to Pulumi Cloud
 
@@ -160,13 +161,15 @@ pulumi new
 
 ### Step 3. YOLO for fun and profit!
 
-Let's go all in on this one and try the AI option. We can always try again if it doesn't work out.
+Let's go all in on this one and try Pulumi AI. We can always enhance the prompt with additional dialog back and forth during the `pulumi new` chat if it doesn't meet our expectations right away.
 
 It is good to keep in mind that even as advanced as AI is today, the practice is still very much in it's infancy. We can dive into the details of Traditional Ops (Imperative Ops), GitOps (Declarative Ops), and AI Ops (Probability Augmented Ops) in another post, but for now let's just see how close the Pulumi AI can get us.
 
 ![Alt text](image-1.png)
 
-Woohoo! We selected the AI option on CLI, let's follow the user prompts and feed the AI a prompt of what to build. Let's try something like this:
+Woohoo! We selected the AI option on CLI, let's follow the user prompts and feed the AI a simple prompt of what we want our Pulumi project to create.
+
+Let's try something like this:
 
 ```bash
 Write a program using pulumi kubernetes helm v3 Release to deploy the itzg/minecraft-server helm chart on Kubernetes, and include a pulumi output to show the helm release status."
@@ -176,11 +179,15 @@ How did we do? Let's see what the AI came up with.
 
 ![pulumi ai](image-2.png)
 
-It's looking pretty good for a simple deployment. We cant get too confident yet but since we are brave let's proceed. I have a kind cluster deployed with codespaces docker-in-docker so let's use that to try the deployment. Proceed through the prompts and we will come to our next steps.
+It's looking pretty good for a simple deployment. We cant get too confident yet but fortune favors the bold so let's proceed in hopes of *good* fortune today. I already ran `kind create cluster` in my Codespaces using the included Devcontainer `docker-outside-of-docker` "feature", so let's start by trying the deployment there to to test. Proceed through the remaining prompts from the `pulumi new` interactive cli and then you can continue to next steps.
 
 ![python venv ready to rock and roll](image-3.png)
 
 I chose python for this project, but you can choose any of the supported languages. We can see that `pulumi new` has created a new python virtual environment for us programatically. In addition to the boilerplate to support our new project, Pulumi AI wrote the first iteration of our Python Minecraft Deployment IaC! The next steps are printed on screen. Assuming your kind cluster and kubeconfig are ready to roll we just have one step left.
+
+Hint, this is where we get the name for our annual "[Pulumi Up](https://youtu.be/J5BudoobwgY) confrence.
+
+**Follow the link for the full playlist of 2023 Pulumi Up sessions**
 
 ```bash
 pulumi up -y
@@ -188,8 +195,9 @@ pulumi up -y
 
 ## Pulumi Developer Day 2
 
-And because no hero's journey can be documented without the gruesome account of what came before, I have included many of the manual steps required to get to this point below by hand.
+And because no hero's journey can be documented without the gruesome account of what came before, I have included many of the manual steps required to reach this state one command at a time.
 
+**click 'Details' to expand**
 <details>
 
 ### Git Code Repository
