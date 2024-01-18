@@ -134,6 +134,28 @@ pulumi new --ai
 
 ![Alt text](image-1.png)
 
+Okay, so we select the ai option with the arrow and enter keys, and then we are prompted to enter a description of what we want to build. Let's try something like this:
+
+```bash
+Write a program using pulumi kubernetes helm v3 Release to deploy the itzg/minecraft-server helm chart on Kubernetes, and include a pulumi output to show the helm release status."
+```
+
+Now, we should remember that we are working with very new experimental technology but if we are feeling bold enough let's see how it does with writing the code.
+
+![pulumi ai](image-2.png)
+
+It's looking pretty good for a simple deployment. We cant get too confident yet but since we are brave let's proceed. I have a kind cluster deployed with codespaces docker-in-docker so let's use that to try the deployment. Proceed through the prompts and we will come to our next steps.
+
+![python venv ready to rock and roll](image-3.png)
+
+I chose python for this project, but you can choose any of the supported languages. We can see that `pulumi new` has created a new python virtual environment for us programatically. In addition to the boilerplate to support our new project, Pulumi AI wrote the first iteration of our Python Minecraft Deployment IaC! The next steps are printed on screen. Assuming your kind cluster and kubeconfig are ready to roll we just have one step left.
+
+```bash
+pulumi up -y
+```
+
+And because no hero's journey can be documented without the gruesome account of what came before, I have included many of the manual steps required to get to this point below by hand.
+
 <details>
 
 #### Git Code Repository
