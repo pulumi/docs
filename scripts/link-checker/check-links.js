@@ -253,6 +253,7 @@ function getDefaultExcludedKeywords() {
         "https://thenewstack.io/",
         "https://rootly.com/",
         "https://www.vultr.com/",
+        "https://my.vultr.com/",
         "https://my.vultr.com/settings/#settingsapi",
         "https://shell.azure.com/",
         "https://portal.azure.com/",
