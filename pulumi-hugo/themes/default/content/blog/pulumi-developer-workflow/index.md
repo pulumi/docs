@@ -187,7 +187,7 @@ I chose python for this project, but you can choose any of the supported languag
 
 Hint, this is where we get the name for our annual "[Pulumi Up](https://youtu.be/J5BudoobwgY) confrence.
 
-**Follow the link for the full playlist of 2023 Pulumi Up sessions**
+> **Follow the link for the full playlist of 2023 Pulumi Up sessions**
 
 ```bash
 pulumi up -y
@@ -197,7 +197,8 @@ pulumi up -y
 
 And because no hero's journey can be documented without the gruesome account of what came before, I have included many of the manual steps required to reach this state one command at a time.
 
-**click 'Details' to expand**
+> **click 'Details' to expand**
+
 <details>
 
 ### Git Code Repository
