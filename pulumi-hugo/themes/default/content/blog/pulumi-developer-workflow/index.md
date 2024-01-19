@@ -2,7 +2,7 @@
 title: "The Pulumi 'Push to start' GitOps Experience"
 date: 2024-01-10T19:41:13Z
 draft: false
-meta_desc: "Of all the tools, and tricks of the trade, Pulumi + Codespaces + Devcontainers + AI are THE cloud developer story of 2024. It's your big opportunity. Will you capture it or just let it slip?"
+meta_desc: "Of all the cloud tools and tricks, AI + Pulumi + Github is THE cloud developer story of 2024. It's your opportunity. Will you capture it or just let it slip?"
 meta_image: image-vscode-codespaces-blank.png
 authors:
     - kat-morgan
