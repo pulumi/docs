@@ -42,7 +42,7 @@ Environment variables should be set in the `./all-in-one/docker-compose.yml` fil
 
 ### Option #2 - Provide your own Database
 
-The service is tested against a MySQL version 5.6 instance. It is assumed that you have a DB instance called `pulumi-db` running at port `3306` and accessible within a network called `pulumi-ee`.
+The service is tested against a MySQL version 8.0 instance. It is assumed that you have a DB instance called `pulumi-db` running at port `3306` and accessible within a network called `pulumi-ee`.
 
 {{% notes "info" %}}
 You will need the `migrations` folder downloaded locally, which contains the DB scripts that need to be applied against your DB instance.
