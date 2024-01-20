@@ -55,7 +55,7 @@ How can we overcome the learning curve? Picking up and mastering a new tool can 
 
 Recognizing achievable goals can be tricky when you are learning something new. Always over-estimate the complexity of each step. If you over-estimate how complicated a task might be, the biggest risk is accomplishing the goal faster than you think! Either way, the learning journey should be enjoyable and rewarding by following this rule.
 
-Helpful tools are more abundant than ever. I recommend Pulumi as one of the most helpful tools but that is my bias showing through. Consider how intuitive, durrable, and well integrated any tool selection you make will be. Today we're using multiple features and services of both the Pulumi and Pulumi Cloud offering, as well as a number of tightly integrated Git, Github, Devcontainers, and VSCode to make light work of a traditionally considerably complicated achievement.
+Helpful tools are more abundant than ever. I recommend Pulumi as one of the most helpful tools but that is my bias showing through. Consider how intuitive, durrable, and well integrated any tool selection you make will be. Today we're using multiple features and services of both the Pulumi and Pulumi Cloud offering, as well as a demonstrating the benefits of a tightly integrated Git, Github, Devcontainers, and VSCode workflow to make light work of a traditionally considerably complicated achievement.
 
 The resulting developer stack left me feeling like I will be successful automating anything. Be sure to share your experience with us in the [Pulumi Community Slack](https://join.slack.com/t/pulumi-community/shared_invite/zt-2amio1u4h-5Y35enT27Y0dk4N8ZYHbMg) or find us on [Twitter/X @PulumiCorp](https://twitter.com/PulumiCorp) too!
 
@@ -230,11 +230,11 @@ Hint, this is where we get the name for our annual "[Pulumi Up](https://youtu.be
 pulumi up -y
 ```
 
-## Pulumi Developer Day 2
+## DevOps Day 2
 
 Finally it is day two. This is the beginning of a choose-your-own-adventure wonderland and the opportunities go almost as far as your imagination. This is where we commit our code and plan our next change requests and enhancements.
 
-We can commit this code to git. Build a Github Actions Workflow to automate the CI testing of our IaC with every git pr or commit. Once you have a production ready IaC, you can add another to deploy to production clusters. If you run `make act` you will see how comfortable testing new github actions workflows can be in the convenience of your new enhanced IDE workflow.
+We can commit this code to git. Build a Github Actions Workflow to automate the CI testing of our IaC with every git pr or commit. Once you have a production ready IaC, you can add another to deploy to production clusters. If you run `make act` you will see how comfortable testing new github actions workflows can be in the convenience of your new enhanced IDE workflow. You can see the devcontainer workflow running yourself right away by executing `make act` as a starting point.
 
 To conclude, Pulumi is not a single tool. Pulumi is a complete cloud developer ecosystem. Together, tools, SDKs, and cloud services come together forming the most accelerated way to create your own cloud success legends.
 
