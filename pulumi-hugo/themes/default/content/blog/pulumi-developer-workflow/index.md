@@ -46,12 +46,12 @@ Freezing, while great for ice cream, is not quite as satisfying when building th
 
 How can we overcome the learning curve? Picking up and mastering a new tool can be easy if we choose to start small.
 
-> Tech Learning Hacks:
+> #### Tech Learning Hacks:
 >
-> #### 🏆 Do: Start  
-> #### 🔨 Use: Helpful Tools  
-> #### 🥅 Make: Achievable Goals  
-> #### 🎉 Win: Celebrate Successes
+> 🏆 Do: Start  
+> 🔨 Use: Helpful Tools  
+> 🥅 Make: Achievable Goals  
+> 🎉 Win: Celebrate Successes
 
 Recognizing achievable goals can be tricky when you are learning something new. Always over-estimate the complexity of each step. If you over-estimate how complicated a task might be, the biggest risk is accomplishing the goal faster than you think! Either way, the learning journey should be enjoyable and rewarding by following this rule.
 
@@ -172,7 +172,7 @@ Focusing on something fun, let's deploy Minecraft as the app for our Kubernetes 
 Don't just take my word for it. The big brains of Pulumi's AI Engineering team have delivered a brilliant Pulumi AI. Your Pulumi IaC developer sidekick to make learning and developing Pulumi just that much easier.
 
 > Q: What can Pulumi AI do?  
-> A: Today's AI is all experimenta. As an industry, we are only just beginning to discover the possibilities, but you are invited to try it yourself with the [Pulumi AI WebUI](https://www.pulumi.com/ai/) or with the `pulumi new` cli as demonstratedon below.
+> A: Today's AI is all experimental. As an industry, we are only just beginning to discover the possibilities, but you are invited to try it yourself with the [Pulumi AI WebUI](https://www.pulumi.com/ai/) or with the `pulumi new` cli as demonstrated below.
 
 #### `~$ pulumi new --ai`
 
@@ -238,7 +238,7 @@ We can commit this code to git. Build a Github Actions Workflow to automate the 
 
 To conclude, Pulumi is not a single tool. Pulumi is a complete cloud developer ecosystem. Together, tools, SDKs, and cloud services come together forming the most accelerated way to create your own cloud success legends.
 
-Follow PulumiTV for up-coming examples built on this solution and to see how Pulumi ESC brings safety to your secrets and more.
+Follow [PulumiTV](https://youtube.com/@PulumiTV) for up-coming examples built on this solution and to see how Pulumi ESC brings safety to your secrets and more.
 
 Because no hero's journey is complete without a gruesome account of what came before, I have included many of the manual steps required to reach this state one command at a time for the ~~morbidly~~ curious as well.
 
@@ -364,7 +364,7 @@ eval $(pulumi env open workshop --format shell)
 
 If fortune favors the bold, let's be bold on this next step and let AI write our sample code on the fly!
 
-As this is a "hello world" style demonstration intended to showcase the developer workflow more than any specific cloud technologies, let's deploy something fun like a Minecraft server! Be sure to watch for the video demonstration of this exercise on Pulumi's PulumiTV YouTube channel for an extra easter egg bonus step!
+As this is a "hello world" style demonstration intended to showcase the developer workflow more than any specific cloud technologies, let's deploy something fun like a Minecraft server! Be sure to watch for the video demonstration of this exercise on Pulumi's [PulumiTV](https://youtube.com/@PulumiTV) YouTube channel for an extra easter egg bonus step!
 
 ```bash
 # Write a new Pulumi Python IaC program to deploy Minecraft on Kubernetes
@@ -407,10 +407,6 @@ pulumi stack rm workshop
 kind delete cluster --name kind
 gh repo delete ${GITHUB_USER}/workshop
 ```
-
-#### Videos
-
-{{< youtube "kDB-YRKFfYE?rel=0" >}}
 
 [Github Codespaces]:https://github.com/features/codespaces
 [Github's Codespaces Console]:https://github.com/codespaces
