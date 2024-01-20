@@ -117,7 +117,8 @@ Okay, even the fanciest push to start car still requires a fob, so let's cover t
 
 Next let's review the tools we will depend on for developing and deploying our project.
 
-> ## Commandline Utilities
+> ## Commandline Utilities:
+>
 > *Dependencies supplied in the Pulumi devcontainer `ghcr.io/pulumi/devcontainer`
 
 |      Tool               | Description                      |
