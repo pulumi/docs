@@ -19,7 +19,7 @@ tags:
     - codespaces
 ---
 
-![Github Codespaces](image-4.png)
+![Github Codespaces](image-vscode-codespaces-blank.png)
 
 As a skeptic of "quick starts" myself, I approach most marketing promises with a measure of cautious excitement. If the great and powerful algorithm, friends, or a peer brought your attention here, then I invite you to take this one seriously.
 
