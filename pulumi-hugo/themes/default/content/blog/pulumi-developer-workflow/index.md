@@ -38,7 +38,7 @@ This is a "bring your own [Github](https://github.com) login" event, so refresh 
 
 ### Three tips to learn new technology:
 
-When it comes to ice cream, sometimes just selecting your flavor can be too much. Similarly, when choosing where to start with cloud tooling the onset of "choice paralysis" can be chronic. Pulumi's powerful toolset is both a worthy endeavor to learn, and a rewarding challenge to master.
+When it comes to ice cream, sometimes just selecting your flavor can be too much. Similarly, when choosing where to start with cloud tooling the onset of "choice paralysis" can be chronic. Pulumi's powerful toolset is both a worthy endeavor to learn, and a rewarding challenge to master. There is no better time to learn than the present!
 
 > "If you are short on time and have a bike, do you stop to hop on the bike, or choose to walk because there is no time to stop and get on?"
 
@@ -48,10 +48,10 @@ How can we overcome the learning curve? Picking up and mastering a new tool can 
 
 > Tech Learning Hacks:
 >
-> 🏆 Do: Start  
-> 🔨 Use: Helpful Tools  
-> 🥅 Make: Achievable Goals  
-> 🎉 Win: Celebrate Successes
+> ###### 🏆 Do: Start  
+> ###### 🔨 Use: Helpful Tools  
+> ###### 🥅 Make: Achievable Goals  
+> ###### 🎉 Win: Celebrate Successes
 
 Recognizing achievable goals can be tricky when you are learning something new. Always over-estimate the complexity of each step. If you over-estimate how complicated a task might be, the biggest risk is accomplishing the goal faster than you think! Either way, the learning journey should be enjoyable and rewarding by following this rule.
 
