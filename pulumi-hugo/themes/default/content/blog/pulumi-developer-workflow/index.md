@@ -48,10 +48,10 @@ How can we overcome the learning curve? Picking up and mastering a new tool can 
 
 > Tech Learning Hacks:
 >
-> ###### 🏆 Do: Start  
-> ###### 🔨 Use: Helpful Tools  
-> ###### 🥅 Make: Achievable Goals  
-> ###### 🎉 Win: Celebrate Successes
+> #### 🏆 Do: Start  
+> #### 🔨 Use: Helpful Tools  
+> #### 🥅 Make: Achievable Goals  
+> #### 🎉 Win: Celebrate Successes
 
 Recognizing achievable goals can be tricky when you are learning something new. Always over-estimate the complexity of each step. If you over-estimate how complicated a task might be, the biggest risk is accomplishing the goal faster than you think! Either way, the learning journey should be enjoyable and rewarding by following this rule.
 
@@ -103,11 +103,11 @@ You may have assembled projects piece by piece before. In the devcontainer repo,
 
 And now for the feature presentation, let's get to dev'ing!
 
-> ## What's in a Day 0?
+> #### What's in a Day 0?
 
 For this exercise, we have just a few requirements to get started.
 
-> ## Prerequisites
+> #### Prerequisites
 
 Okay, even the fanciest push to start car still requires a fob, so let's cover those bases super quick.
 
