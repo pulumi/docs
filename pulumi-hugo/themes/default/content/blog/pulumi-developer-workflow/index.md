@@ -48,9 +48,9 @@ How can we overcome the learning curve? Picking up and mastering a new tool can 
 
 > Tech Learning Hacks:
 >
-> 🏆 Do: Start
-> 🔨 Use: Helpful Tools
-> 🥅 Make: Achievable Goals
+> 🏆 Do: Start  
+> 🔨 Use: Helpful Tools  
+> 🥅 Make: Achievable Goals  
 > 🎉 Win: Celebrate Successes
 
 Recognizing achievable goals can be tricky when you are learning something new. Always over-estimate the complexity of each step. If you over-estimate how complicated a task might be, the biggest risk is accomplishing the goal faster than you think! Either way, the learning journey should be enjoyable and rewarding by following this rule.
@@ -135,51 +135,46 @@ Next let's review the tools we will depend on for developing and deploying our p
 
 Besides our command line tools and the programming language of your choice, we need an editor to write our code with. Many practitioners are fluent with vim, emacs, others turn to editors like VSCode, IntelliJ, and others. We are going to choose the Github Codespaces VSCode IDE for it's deep integration with Github, and it's convenience of requiring nothing from the user other than a web browser to use.
 
-If you are already familiar with Github Codespaces, then you might know what to expect next. If not, you are in for a treat.
+If you are already familiar with Github Codespaces, then you might know what to expect next. If not, you are in for a treat, and yes that is right, we are *developing for the cloud, in the cloud, with the cloud*.
 
-Github Codespaces. We are developing for the cloud, in the cloud, with the cloud.
+Alright, let's jump in and get started by launching a new [Github Codespaces].
 
-Alright, let's jump in and get started by launching a new [Github Codespaces]. (click the button)
+  👇 Click this button to begin.👇  
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://bit.ly/pulumi-devcontainer)  
 
-  👇 The button right here 👇
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://bit.ly/pulumi-devcontainer) This button ^ __ ^ yes that is the one, after all why shouldnt you click it?
+If you prefer a more informed approach you can launch the same codespaces by navigating to the [Pulumi Devcontainer Repository](https://github.com/pulumi/devcontainer) or you can learn more about Codespaces at this [Github Codespaces Link](https://docs.github.com/en/codespaces/overview).
 
-Did you click the button? It's safe, I promise. If you prefer a more informed approach then follow this [Github Codespaces Link](https://docs.github.com/en/codespaces/overview) for more detailed info about Codespaces and how it works.
-
-Clicking the 'Open in Github Codespaces' button takes you directly into launching a new codespaces session if you are logged into Github. Otherwise, proceed by logging in and then continue with your dev environment, or navigate directly to the [Pulumi Devcontainer] repo and fork / clone the template repository to launch your own codespaces session with access to more customization options during setup.
+Clicking the 'Open in Github Codespaces' button should take you directly into a new Codespaces session.
 
 [Pulumi Devcontainer]:https://github.com/pulumi/devcontainer
 
 > Note:
-> This demonstration is deeply integrated into the Web based Codespaces environment offered by Github. Alternatively, the well known VSCode IDE also supports running Devcontainers with docker allowing you the choice of running [Pulumi Devcontainer](#pulumi-devcontainer) locally, complete with support for Docker-in-docker, and even KinD in Docker as we will see shortly!
+> This demonstration is deeply integrated into the Web based Codespaces environment offered by Github. Alternatively, VSCode also supports running Devcontainers with docker locally allowing you the benefit of [Pulumi Devcontainer](#pulumi-devcontainer).
 >
 
 With a new codespaces session launched, you should see the VSCode IDE in your browser. If you are not already familiar with VSCode, you can learn more about it in the [VSCode Docs](https://code.visualstudio.com/docs).
 
-![Alt text](image.png)
+![Screenshot: Pulumi Devcontainer Codespaces session](image.png)
 
 Contratulations! Your developer environment is ready for some Pulumi action.
 
-For our final Day 0 step, we need an idea of what we are going to build with our Infrastructure-as-Code (IaC) program.
+For our final Day 0 step, we still need to decide what app to deploy with our Infrastructure-as-Code (IaC) program.
 
-For this, why dont we deploy a Minecraft server on Kubernetes? It's a fun way to get started with Pulumi, and a great way to show off your cloud skills to friends. Maybe share with your favorite young minecraft gamers and young technology masterminds! DevOps is for everyone! AI, Hyperscale Cloud, Enterprise, On-prem, and even Homelab Operations deserve some DevOps heaven. Pulumi is for anyone on their pilgrimage to CloudOps nirvana.
+Focusing on something fun, let's deploy Minecraft as the app for our Kubernetes exercise. It's a fun way to get started with Pulumi, a great way to show off your cloud skills to friends, and maybe even share with your favorite young young future technologists! After all, Open Source DevOps is for everyone!
 
-## Pulumi Developer Day 1
+## DevOps Day 1
 
-> ### We have an environment! We have a plan! Now we need to write our code ... or do we?
+> ### We have an environment! We have a plan!
+> ### Now we need to code ... or do we?
 
-Don't just take my word for it, but it is more than just hype. Here at Pulumi the big brains in Engineering have successfully churned the caffeine to code and just since ChatGPT launched at the end of 2022, engineered and implemented a brilliant chatbot implementation to make learning and using Pulumi just that much easier. Thinking back, just two years ago these results would be nothing short of sci-fi fantasy.
+Don't just take my word for it. The big brains of Pulumi's AI Engineering team have delivered a brilliant Pulumi AI. Your Pulumi IaC developer sidekick to make learning and developing Pulumi just that much easier.
 
-> What can Pulumi AI do?
-> Honestly we are only just beginning to discover the possibilities ourselves! You can try it out for yourself in the [Pulumi AI WebUI](https://www.pulumi.com/ai/) or read on if you prefer the convenience of a just an editor and terminal like I do.
+> Q: What can Pulumi AI do?
+> A: Today's AI is all experimenta. As an industry, we are only just beginning to discover the possibilities, but you are invited to try it yourself with the [Pulumi AI WebUI](https://www.pulumi.com/ai/) or with the `pulumi new` cli as demonstratedon below.
 
-To help you along the way, Pulumi's ChatGPT powered custom coding chat bot, Pulumi's "[Pulumi AI](https://www.pulumi.com/ai)" is augmented by our Pulumi Cloud Providers, Docs, and SDKs ready to be your cloud ninja sidekick.
+#### `~$ pulumi new --ai`
 
-Better experienced than just as been working on some pretty cool AI tools to help developers get started with Pulumi, which brings us to the next step in our journey.
-
-#### Pulumi AI to the rescue!
-
-Pulumi AI is available as a web based tool much like the now familiar ChatGPT console, however it is also built into the `pulumi` cli tool, which means you can chat interactively from the pulumi command line interface, conveniently configured already in your new Codespaces IDE.
+[Pulumi AI](https://pulumi.com/ai) is available via webui much like the ChatGPT console. Besides the familiar browser based interface, Pulumi AI is also built into the `pulumi new` cli too! Now you can prompt Pulumi AI interactively from the convenience of the command line tools you will already be using, conveniently configured already in your new Codespaces IDE.
 
 Let's try it!
 
@@ -201,7 +196,7 @@ pulumi new
 
 Let's go all in on this one and try Pulumi AI. We can always enhance the prompt with additional dialog back and forth during the `pulumi new` chat if it doesn't meet our expectations right away.
 
-It is good to keep in mind that even as advanced as AI is today, the practice is still very much in it's infancy. We can dive into the details of Traditional Ops (Imperative Ops), GitOps (Declarative Ops), and AI Ops (Probability Augmented Ops) in another post, but for now let's just see how close the Pulumi AI can get us.
+It is good to keep in mind that even as advanced as AI is today, the practice is still very much in it's infancy. We will save more deep dives into the differences of Traditional Ops (Imperative Ops), GitOps (Automated Declarative Ops), and AI Ops (Probability Augmented GitOps) in another post, for now let's see how close the Pulumi AI can take us.
 
 ![Alt text](image-1.png)
 
@@ -217,11 +212,13 @@ How did we do? Let's see what the AI came up with.
 
 ![pulumi ai](image-2.png)
 
-It's looking pretty good for a simple deployment. We cant get too confident yet but fortune favors the bold so let's proceed in hopes of *good* fortune today. I already ran `kind create cluster` in my Codespaces using the included Devcontainer `docker-outside-of-docker` "feature", so let's start by trying the deployment there to to test. Proceed through the remaining prompts from the `pulumi new` interactive cli and then you can continue to next steps.
+It's looking pretty good for a simple deployment. In DevOps nothing works till the CI testing turns green. Since fortune favors the bold let's proceed. For my developer workflow I ran `kind create cluster` in the Codespaces terminal. You can do the same or add your own kubeconfig to deploy on your choice of cluster.
 
-![python venv ready to rock and roll](image-3.png)
+Of course, proceed through the remaining prompts from the `pulumi new` interactive cli.
 
-I chose python for this project, but you can choose any of the supported languages. We can see that `pulumi new` has created a new python virtual environment for us programatically. In addition to the boilerplate to support our new project, Pulumi AI wrote the first iteration of our Python Minecraft Deployment IaC! The next steps are printed on screen. Assuming your kind cluster and kubeconfig are ready to roll we just have one step left.
+![pulumi configured a full python venv as it's last stage of the pulumi new command function](image-3.png)
+
+I chose Python for this project, but you can choose any of the supported languages. We can see that `pulumi new` creates a new python virtual environment for us programatically. In addition to the boilerplate supporting our new project, Pulumi AI wrote the first iteration of our Python Minecraft Deployment IaC! The next steps should be printed to screen. Assuming your kubernetes cluster kubeconfig is ready to roll we just have one step left.
 
 Hint, this is where we get the name for our annual "[Pulumi Up](https://youtu.be/J5BudoobwgY) confrence.
 
@@ -233,9 +230,15 @@ pulumi up -y
 
 ## Pulumi Developer Day 2
 
-And because no hero's journey can be documented without the gruesome account of what came before, I have included many of the manual steps required to reach this state one command at a time.
+Finally it is day two. This is the beginning of a choose-your-own-adventure wonderland and the opportunities go almost as far as your imagination. This is where we commit our code and plan our next change requests and enhancements.
 
-Pulumi is not a single tool, rather Pulumi is a complete cloud developer ecosystem. Together, tools, SDK packages, and cloud service solutions which together form a complete cloud developer experience. Many cloud native tools and platforms require a plethora of dependencies and accompanying tooling. Like a lot of things in tech, Pulumi can feel a bit daunting with it's support of many general purpose programming languages, SDK packages, and cloud providers.
+We can commit this code to git. Build a Github Actions Workflow to automate the CI testing of our IaC with every git pr or commit. Once you have a production ready IaC, you can add another to deploy to production clusters. If you run `make act` you will see how comfortable testing new github actions workflows can be in the convenience of your new enhanced IDE workflow.
+
+To conclude, Pulumi is not a single tool. Pulumi is a complete cloud developer ecosystem. Together, tools, SDKs, and cloud services come together forming the most accelerated way to create your own cloud success legends.
+
+Follow PulumiTV for up-coming examples built on this solution and to see how Pulumi ESC brings safety to your secrets and more.
+
+Because no hero's journey is complete without a gruesome account of what came before, I have included many of the manual steps required to reach this state one command at a time for the ~~morbidly~~ curious as well.
 
 > **click 'Details' to expand**
 
