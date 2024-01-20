@@ -19,8 +19,6 @@ tags:
     - codespaces
 ---
 
-![Github Codespaces](image-vscode-codespaces-blank.png)
-
 As a skeptic of "quick starts" myself, I approach most marketing promises with a measure of cautious excitement. If the great and powerful algorithm, friends, or a peer brought your attention here, then I invite you to take this one seriously.
 
 Pulumi, with it's full support of many general purpose programming languages, can appear like a chore to get started with. The feeling can haunt seasoned developers as much as practitioners new to infrastructure code.
@@ -48,9 +46,9 @@ How can we overcome the learning curve? Picking up and mastering a new tool can 
 
 > #### Tech Learning Hacks:
 >
-> 🏆 Do: Start  
-> 🔨 Use: Helpful Tools  
-> 🥅 Make: Achievable Goals  
+> 🏆 Do: Start
+> 🔨 Use: Helpful Tools
+> 🥅 Make: Achievable Goals
 > 🎉 Win: Celebrate Successes
 
 Recognizing achievable goals can be tricky when you are learning something new. Always over-estimate the complexity of each step. If you over-estimate how complicated a task might be, the biggest risk is accomplishing the goal faster than you think! Either way, the learning journey should be enjoyable and rewarding by following this rule.
@@ -140,8 +138,8 @@ If you are already familiar with Github Codespaces, then you might know what to 
 
 Alright, let's jump in and get started by launching a new [Github Codespaces].
 
-  👇 Click this button to begin.👇  
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://bit.ly/pulumi-devcontainer)  
+  👇 Click this button to begin.👇
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://bit.ly/pulumi-devcontainer)
 
 If you prefer a more informed approach you can launch the same codespaces by navigating to the [Pulumi Devcontainer Repository](https://github.com/pulumi/devcontainer) or you can learn more about Codespaces at this [Github Codespaces Link](https://docs.github.com/en/codespaces/overview).
 
@@ -171,7 +169,7 @@ Focusing on something fun, let's deploy Minecraft as the app for our Kubernetes 
 
 Don't just take my word for it. The big brains of Pulumi's AI Engineering team have delivered a brilliant Pulumi AI. Your Pulumi IaC developer sidekick to make learning and developing Pulumi just that much easier.
 
-> Q: What can Pulumi AI do?  
+> Q: What can Pulumi AI do?
 > A: Today's AI is all experimental. As an industry, we are only just beginning to discover the possibilities, but you are invited to try it yourself with the [Pulumi AI WebUI](https://www.pulumi.com/ai/) or with the `pulumi new` cli as demonstrated below.
 
 #### `~$ pulumi new --ai`
