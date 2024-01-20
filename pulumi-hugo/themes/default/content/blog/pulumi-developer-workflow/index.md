@@ -166,6 +166,7 @@ Focusing on something fun, let's deploy Minecraft as the app for our Kubernetes 
 ## DevOps Day 1
 
 > ### We have an environment! We have a plan!
+>
 > ### Now we need to code ... or do we?
 
 Don't just take my word for it. The big brains of Pulumi's AI Engineering team have delivered a brilliant Pulumi AI. Your Pulumi IaC developer sidekick to make learning and developing Pulumi just that much easier.
