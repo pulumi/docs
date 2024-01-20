@@ -171,7 +171,7 @@ Focusing on something fun, let's deploy Minecraft as the app for our Kubernetes 
 
 Don't just take my word for it. The big brains of Pulumi's AI Engineering team have delivered a brilliant Pulumi AI. Your Pulumi IaC developer sidekick to make learning and developing Pulumi just that much easier.
 
-> Q: What can Pulumi AI do?
+> Q: What can Pulumi AI do?  
 > A: Today's AI is all experimenta. As an industry, we are only just beginning to discover the possibilities, but you are invited to try it yourself with the [Pulumi AI WebUI](https://www.pulumi.com/ai/) or with the `pulumi new` cli as demonstratedon below.
 
 #### `~$ pulumi new --ai`
