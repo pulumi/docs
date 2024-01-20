@@ -73,7 +73,7 @@ In this story, it took two tries to achieve the goal. Often it can take several 
 
 Let's track our devops journey in typical "DevOps Day" style. Because we're [counting like computers](https://en.wikipedia.org/wiki/Zero-based_numbering#:~:text=In%20computer%20science%2C%20zero%20is,from%20zero%20rather%20than%20one.), of course we start with zero. In other words we need a goal, and we will be starting from scratch.
 
-Day zero is going to be your planning and design phase. Sometimes this includes various stages of research, and other times it is a matter of just getting started with hands on investigation.
+Day zero is going to be your design, planning, and prep phase. Sometimes this includes various stages of research, and other times it is a matter of just getting started with hands on investigation.
 
 Every journey includes a beginning and an end. To demonstrate the Pulumi *Push to Start* developer workflow, we need a project to develop! For this adventure let's use Pulumi's [Pulumi Kubernetes Provider](https://www.pulumi.com/registry/packages/kubernetes) from the Pulumi Providers registry, which is one of our most popular providers, to deploy an app on Kubernetes.
 
