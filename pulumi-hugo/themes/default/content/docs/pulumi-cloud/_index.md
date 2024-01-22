@@ -59,8 +59,8 @@ Collaborate with other developers and coordinate on updates. Provide fine-graine
 
 Pulumi ESC Environments allow teams to tackle configuration complexity at scale, alleviating maintenance and operational burden and reducing costly mistakes, and creating a more secure by default posture.
 
-* [Pulumi ESC](/docs/pulumi-cloud/esc/)
-* [Pulumi ESC Syntax Reference](/docs/pulumi-cloud/esc/reference/)
+* [Pulumi ESC](/docs/esc/)
+* [Pulumi ESC Syntax Reference](/docs/esc/reference/)
 
 ### CI/CD integrations and extensions
 
