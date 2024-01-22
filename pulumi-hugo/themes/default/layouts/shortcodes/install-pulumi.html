@@ -10,13 +10,35 @@
         </div>
     </pulumi-choosable>
     <pulumi-choosable type="os" value="windows">
+        {{- .Inner -}}
         <div class="highlight">
             <pre class="chroma"><code class="language-bat" data-lang="bat"><span class="p">&gt;</span> choco install pulumi</code></pre>
         </div>
-        {{- .Inner -}}
     </pulumi-choosable>
 </pulumi-chooser>
 <p>
-    Or explore
-    <a href="/docs/install/" target="_blank" rel="noopener">more installation options</a>.
+    Other installation options <a href="/docs/install/" target="_blank" rel="noopener">are available</a>.
+    When the installation completes, you can test it out by reading the current version:
+</p>
+<pulumi-choosable type="os" value="macos">
+    <div class="highlight">
+        <pre class="chroma"><code class="language-bash" data-lang="bash">$ pulumi version
+v{{ readFile "static/latest-version" }}</code></pre>
+    </div>
+</pulumi-choosable>
+<pulumi-choosable type="os" value="linux">
+    <div class="highlight">
+        <pre class="chroma"><code class="language-bash" data-lang="bash">$ pulumi version
+v{{ readFile "static/latest-version" }}</code></pre>
+    </div>
+</pulumi-choosable>
+<pulumi-choosable type="os" value="windows">
+    <div class="highlight">
+        <pre class="chroma"><code class="language-bat" data-lang="bat"><span class="p">&gt;</span> pulumi version
+v{{ readFile "static/latest-version" }}</code></pre>
+    </div>
+</pulumi-choosable>
+<p>
+    If this doesn't work, you may need to restart your terminal to ensure the folder containing
+    the <code>pulumi</code> command is on your <code>PATH</code>.
 </p>
