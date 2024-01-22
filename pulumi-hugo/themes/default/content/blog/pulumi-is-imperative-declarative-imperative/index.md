@@ -1,8 +1,8 @@
 ---
-title: "Pulumi Is Imperative, Declarative, and Imperative"
+title: "Pulumi's Declarative and Imperative Approach IaC"
 date: 2022-09-23
-meta_desc: Pulumi is often debated to be imperative or declarative.
-  What if I tell you that Pulumi is imperative, declarative and imperative?
+meta_desc: Pulumi provides an imperative and declarative approach to infrastructure as code (IaC) solutions
+
 meta_image: meta.png
 authors:
     - ringo-de-smet
