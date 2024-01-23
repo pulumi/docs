@@ -4,7 +4,7 @@
     "private": true,
     "repository": "git@github.com:pulumi/pulumi-hugo",
     "author": "Christian Nunciato <c@nunciato.org>",
-    "license": "MIT",
+    "license": "Apache-2.0",
     "dependencies": {
         "@octokit/rest": "^20.0.2",
         "concurrently": "^6.0.0",
