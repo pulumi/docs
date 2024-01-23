@@ -31,7 +31,7 @@ This is a "bring your own [GitHub](https://github.com) login" event, so refresh 
 
 ## Index
 
-- [Three tips to learn new technology](#three-tips-to-learn-new-technology)
+- [New technology learning advice](#new-technology-learning-advice)
 - [A DevOps Journey](#a-devops-journey)
 - [DevOps Day 0: Plan & Prepare](#devops-day-0)
 - [DevOps Day 1: Execute](#devops-day-1)
@@ -256,7 +256,7 @@ Let's check on the status of our deployment.
 kubectl get po
 ```
 
-With any luck, our [Pulumi AI](https://pulumi.com/ai) gave you a working program right out of the gate. For references on kubernetes pulumi package resources to expand your infrastructure from here head to the [Pulumi Registry Kubernetes Provider](https://www.pulumi.com/registry/packages/kubernetes/) page for more.
+With any luck, our [Pulumi AI](https://pulumi.com/ai) gave you a working program right out of the gate. For references on Kubernetes Pulumi package resources to expand your infrastructure from here head to the [Pulumi Registry Kubernetes Provider](https://www.pulumi.com/registry/packages/kubernetes/) page for more.
 
 Sharing Pulumi with people is a genuine passion found among Pulumians all around the globe but we all know evidence reigns king among engineers who, like any good practitioner, expect proof. Evolving your developer workflow with Pulumi gets even better than just easy, it's remarkably powerful and ready for you to adopt in your daily workflows right away too.
 
