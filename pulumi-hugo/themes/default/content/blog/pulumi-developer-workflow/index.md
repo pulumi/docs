@@ -250,7 +250,7 @@ Follow [PulumiTV](https://youtube.com/@PulumiTV) for upcoming examples built on 
 
 Because no hero's journey is complete without a gruesome account of what came before, I have included many of the manual steps required to reach this state one command at a time for the ~~morbidly~~ curious as well.
 
-#### Conclusion
+## Conclusion
 
 ```bash
 # Check for your new Minecraft pod
