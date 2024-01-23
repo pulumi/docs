@@ -63,7 +63,7 @@ The resulting developer stack left me feeling like I would be successful automat
 
 In true DevOps fashion, development for this blog post featured a roller coaster of chronic scope creep, pushing deadlines, discovering details that scrapped the original plan, and during the final finish line approach too! The worry and doubt was palpable.
 
-Have we taken on too much? Did project ambitions exceed the achievable? The solution struck while on a demo hacking side quest with a friend. A single vision came into focus, tying everything together into a simple "*Push to Start*" Pulumi developer workflow.
+Have we taken on too much? Did project ambitions exceed the achievable? The solution emerged while hacking on a side quest with a friend. A single vision came into focus, tying everything together into a simple "*Push to Start*" Pulumi developer workflow.
 
 In this story, it took two tries to achieve the goal. Often it can take several tries. With that backstory let's begin this next learning adventure together.
 
@@ -73,9 +73,9 @@ Let's track our DevOps journey in typical "DevOps Day" style. Because we're [cou
 
 Day zero is going to be your design, planning, and prep phase. Sometimes this includes various stages of research and other times it is a matter of just getting started with hands-on investigation.
 
-Every journey includes a beginning and an end. To demonstrate the Pulumi *Push to Start* developer workflow, we need a project to develop! For this adventure let's use Pulumi's [Pulumi Kubernetes Provider](https://www.pulumi.com/registry/packages/kubernetes) from the Pulumi Providers registry, which is one of our most popular providers, to deploy an app on Kubernetes.
+Every journey includes a beginning and an end. To demonstrate the Pulumi *Push to Start* developer workflow, we need a project to develop! For this adventure let's use the [Pulumi Kubernetes Provider](https://www.pulumi.com/registry/packages/kubernetes) from the Pulumi Providers registry to deploy an app on Kubernetes. This provider is one of our most popular providers, as you might guess.
 
-In this case, we can practice with a new project from the [Community Engineering](https://www.pulumi.com/community/) team. The GitHub [pulumi/devcontainer](https://github.com/pulumi/devcontainer) which is a GitHub [template repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template). This repository contains the fundamentals of a new Pulumi Infrastructure as Code GitOps project. Let's begin with a quick tour of the GitOps repo boilerplate.
+In this case, we can practice with a new project from the [Community Engineering](https://www.pulumi.com/community/) team. The GitHub [pulumi/devcontainer](https://github.com/pulumi/devcontainer) repository is a GitHub [template repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) containing all the fundamentals of a new Pulumi infrastructure as code GitOps project. Let's begin with a quick tour of the GitOps repo boilerplate.
 
 > "*What belongs in a GitOps git repository?*"
 
@@ -97,7 +97,7 @@ Filtering through the conflicting opinions and advice about proper GitOps repo h
    - Deployment: Continuous Deployment
    - Safety: Version Controls
 
-You may have assembled projects piece by piece before. In the dev container repo, we provide a turn-key "known good" starter kit which will even improve over time. As a community resource, we welcome bugs and contributions!
+You may have assembled projects piece by piece before. In the [pulumi/devcontainer repository](https://github.com/pulumi/devcontainer), we provide a turnkey "known good" starter kit which will even improve over time. As a community resource, we welcome bugs and contributions!
 
 And now for the feature presentation, let's get to dev'ing!
 
@@ -132,7 +132,7 @@ Next, let's review the tools we will depend on for developing and deploying our 
 
 ## Cloud-native ... cloud developer environment?
 
-Besides our command line tools and the programming language of your choice, we need an editor to write our code with. Many practitioners are fluent with vim, Emacs, others turn to editors like VSCode, IntelliJ, and others. We are going to choose the GitHub Codespaces VSCode IDE for its deep integration with GitHub, and its convenience of requiring nothing from the user other than a web browser to use.
+Besides our command line tools and the programming language of your choice, we need an editor to write our code with. Many practitioners are fluent with Vim or Emacs; others turn to editors like VSCode, IntelliJ, and others. We are going to choose the GitHub Codespaces VSCode IDE for its deep integration with GitHub, and its convenience of requiring nothing from the user other than a web browser to use.
 
 If you are already familiar with GitHub Codespaces, then you might know what to expect next. If not, you are in for a treat, and yes that is right, we are *developing for the cloud, in the cloud, with the cloud*.
 
@@ -174,7 +174,7 @@ Don't just take my word for it. The big brains of Pulumi's AI Engineering team h
 
 [Pulumi AI](https://pulumi.com/ai) is available via WebUI much like the ChatGPT console. Besides the familiar browser-based interface, Pulumi AI is also built into the `pulumi new` CLI too! Now you can prompt Pulumi AI interactively from the convenience of the command line tools you will already be using, conveniently configured in your new Codespaces IDE.
 
-Let's try it!
+Let's try it! (Reminder: Perform all these steps from within the Codespaces IDE.)
 
 ### Step 1. Login to Pulumi Cloud
 
