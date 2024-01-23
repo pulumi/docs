@@ -1,6 +1,6 @@
 ---
 title: "The Pulumi 'Push to start' GitOps Experience"
-date: 2024-01-19T19:41:13Z
+date: 2024-01-23T19:41:13Z
 draft: false
 meta_desc: "Of all the cloud tools and tricks, AI + Pulumi + Github is THE cloud developer story of 2024. It's your opportunity. Will you capture it or just let it slip?"
 meta_image: image-vscode-codespaces-blank.png
@@ -27,12 +27,22 @@ However, I'll show you that finding the proverbial easy street is easier than yo
 
 This is a "bring your own [GitHub](https://github.com) login" event, so refresh that login. You will want to grab a [Pulumi Cloud](https://app.pulumi.com) login as well. With credentials in hand, you are set with everything that you need to start. Let's go!
 
+<!--more-->
+
+## Index
+
+- [Three tips to learn new technology](#three-tips-to-learn-new-technology)
+- [A DevOps Journey](#a-devops-journey)
+- [DevOps Day 0: Plan & Prepare](#devops-day-0)
+- [DevOps Day 1: Execute](#devops-day-1)
+- [DevOps Day 2: Enhance](#devops-day-2)
+- [Conclusion](#conclusion)
+- [Cleanup](#cleanup)
+
 >
 > Hint:
 > all of the steps in this demo are ready to run yourself from the [Pulumi Devcontainer](https://github.com/pulumi/devcontainer) using just your web browser and a Github account. Even better, they are real activities that Pulumians use every day to orchestrate the cloud too!
 >
-
-<!--more-->
 
 ### Three tips to learn new technology
 
@@ -101,13 +111,13 @@ You may have assembled projects piece by piece before. In the [pulumi/devcontain
 
 And now for the feature presentation, let's get to dev'ing!
 
-> #### What's in a Day 0?
+#### What's in a DevOps Day 0?
 
-For this exercise, we have just a few requirements to get started.
+Day 0 usually includes aspects of planning and preparing. For this exercise, we have just a few requirements to get started. Let's knock these out and get to the fun stuff!
 
-> #### Prerequisites
+#### Prerequisites
 
-Okay, even the fanciest push-to-start car still requires a fob, so let's cover those bases super quick.
+Now, even the fanciest push-to-start car still requires a fob, so let's cover those bases super quick.
 
 - Web browser
 - GitHub account
@@ -115,9 +125,9 @@ Okay, even the fanciest push-to-start car still requires a fob, so let's cover t
 
 Next, let's review the tools we will depend on for developing and deploying our project.
 
-> #### Commandline Utilities:
->
-> *Dependencies supplied in the Pulumi devcontainer `ghcr.io/pulumi/devcontainer`
+#### Commandline Utilities:
+
+*Dependencies supplied in the Pulumi devcontainer `ghcr.io/pulumi/devcontainer`
 
 |      Tool               | Description                      |
 |:-----------------------:|:--------------------------------:|
@@ -153,7 +163,9 @@ Clicking the 'Open in GitHub Codespaces' button should take you directly into a 
 
 With a new codespaces session launched you should see the VSCode IDE in your browser. If you are not already familiar with VSCode, you can learn more about it in the [VSCode Docs](https://code.visualstudio.com/docs).
 
-![Screenshot: Pulumi Devcontainer Codespaces session]Congratulations! Your developer environment is ready for some Pulumi action.
+Congratulations! Your developer environment is ready for some Pulumi action.
+
+![Screenshot: Pulumi Devcontainer Codespaces session](image-vscode-codespaces-blank.png)
 
 For our final Day 0 step, we still need to decide what app to deploy with our Infrastructure-as-Code (IaC) program.
 
@@ -203,7 +215,7 @@ Woohoo! We selected the AI option on CLI, let's follow the user prompts and feed
 Let's try something like this:
 
 ```bash
-Write a program using pulumi kubernetes helm v3 Release to deploy the itzg/minecraft-server helm chart on Kubernetes, and include a pulumi output to show the helm release status."
+Write a pulumi infrastructure as code program which creates the namespce 'minecraft' and using the pulumi_kubernetes.helm.v3.Release to deploy the https://itzg.github.io/minecraft-server-charts 'minecraft-server' helm chart, sets EULA to true, deploys onto Kubernetes in the minecraft namespace."
 ```
 
 How did we do? Let's see what the AI came up with.
@@ -220,7 +232,7 @@ I chose Python for this project, but you can choose any of the supported languag
 
 Hint, this is where we get the name for our annual "[Pulumi Up](https://youtu.be/J5BudoobwgY) conference.
 
-> **Follow the link for the full playlist of 2023 Pulumi Up sessions**
+> **[Follow the link](https://youtu.be/J5BudoobwgY) for the full playlist of 2023 Pulumi Up sessions**
 
 ```bash
 pulumi up -y
@@ -238,7 +250,18 @@ Follow [PulumiTV](https://youtube.com/@PulumiTV) for upcoming examples built on 
 
 Because no hero's journey is complete without a gruesome account of what came before, I have included many of the manual steps required to reach this state one command at a time for the ~~morbidly~~ curious as well.
 
-> **click 'Details' to expand**
+#### Conclusion
+
+```bash
+# Check for your new Minecraft pod
+kubectl get po
+```
+
+Sharing Pulumi with people is a genuine passion found among Pulumians all around the globe but we all know evidence reigns king among engineers who, like any good practitioner, expect proof. Evolving your developer workflow with Pulumi gets even better than just easy, it's remarkably powerful and ready for you to adopt in your daily workflows right away too.
+
+Continue with me for this short "batteries included" DevOps developer experience and see how Pulumi, ESC, and Devcontainers are a cloud ops match made in heaven whether you are developing on remote infrastructures or in the comfort of your own devices. The demo app may be a bit light-hearted, but the methods we use to get there are so worth it; I guarantee you can come away with something new just by trying it yourself.
+
+> **click 'details' to expand**
 
 <details>
 
@@ -381,17 +404,6 @@ Now let's see if our new Infrastructure as Code Pulumi Python Codebase will depl
 pulumi stack select workshop
 pulumi up
 ```
-
-#### Conclusion
-
-```bash
-# Check for your new Minecraft pod
-kubectl get po
-```
-
-Sharing Pulumi with people is a genuine passion found among Pulumians all around the globe but we all know evidence reigns king among engineers who, like any good practitioner, expect proof. Evolving your developer workflow with Pulumi gets even better than just easy, it's remarkably powerful and ready for you to adopt in your daily workflows right away too.
-
-Continue with me for this short "batteries included" DevOps developer experience and see how Pulumi, ESC, and Devcontainers are a cloud ops match made in heaven whether you are developing on remote infrastructures or in the comfort of your own devices. The demo app may be a bit light-hearted, but the methods we use to get there are so worth it; I guarantee you can come away with something new just by trying it yourself.
 
 </details>
 
