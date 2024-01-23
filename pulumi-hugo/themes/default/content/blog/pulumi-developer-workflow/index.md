@@ -25,7 +25,7 @@ Pulumi, with its full support of many general-purpose programming languages, can
 
 However, I'll show you that finding the proverbial easy street is easier than you might believe. The `pulumi new` developer story just gets sweeter when combined with a few other nice-to-have conveniences.
 
-This is a "bring your own [GitHub](https://github.com) login" event, so refresh that login and you will want to grab a [Pulumi Cloud](https://app.pulumi.com) login as well. With credentials in hand, you are set with everything that you need to start so let's go!
+This is a "bring your own [GitHub](https://github.com) login" event, so refresh that login. You will want to grab a [Pulumi Cloud](https://app.pulumi.com) login as well. With credentials in hand, you are set with everything that you need to start. Let's go!
 
 >
 > Hint:
