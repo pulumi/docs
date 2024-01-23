@@ -7,6 +7,8 @@ menu:
   pulumiesc:
     identifier: reference
     weight: 4
+aliases:
+  - /docs/pulumi-cloud/esc/reference
 ---
 
 ```yaml
@@ -189,7 +191,7 @@ values:
   # reference this environment during `pulumi up/preview/refresh/destroy`
   pulumiConfig:
     aws:region: us-west-2
-  
+
   # Configuration nested under the 'files' key is used to export as files to the environment
   # when using 'esc open --shell', 'esc run', or `pulumi up/preview/refresh/destroy`
   files:

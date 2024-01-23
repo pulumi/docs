@@ -8,6 +8,8 @@ menu:
   pulumiesc:
     weight: 6
     identifier: faq
+aliases:
+  - /docs/pulumi-cloud/esc/faq
 ---
 
 ## Is it safe to use Pulumi ESC for my production stacks?

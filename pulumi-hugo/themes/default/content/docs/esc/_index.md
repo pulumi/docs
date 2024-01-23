@@ -10,7 +10,6 @@ menu:
     identifier: esc
     weight: 5
 aliases:
-  - /docs/esc/
   - /docs/pulumi-cloud/esc/
 ---
 
@@ -18,7 +17,7 @@ Pulumi ESC (Environments, Secrets, and Configuration) allows teams to tackle sec
 
 Pulumi ESC enables teams to aggregate secrets and configuration from many sources into a composable collection called an [environment](/docs/concepts/environments/). Teams can then consume those configuration and secrets from a variety of different infrastructure and application services.  Pulumi ESC works hand-in-hand with Pulumi IaC to simplify configuration management, as well as a standalone CLI and API for other use cases apart from Pulumi IaC.
 
-Pulumi ESC is offered as a fully managed cloud service in [Pulumi Cloud](/docs/pulumi-cloud/) (and Pulumi Cloud Self-hosted in the near future). The [pulumi/esc project](https://github.com/pulumi/esc) is open source, and contains the evaluation engine for environments, the esc CLI, and in the future, the extensible plugins for source and target integrations.  
+Pulumi ESC is offered as a fully managed cloud service in [Pulumi Cloud](/docs/pulumi-cloud/) (and Pulumi Cloud Self-hosted in the near future). The [pulumi/esc project](https://github.com/pulumi/esc) is open source, and contains the evaluation engine for environments, the esc CLI, and in the future, the extensible plugins for source and target integrations.
 
 ![Pulumi ESC ecosystem](img/pulumi_esc.png)
 
