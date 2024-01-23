@@ -59,7 +59,7 @@ The resulting developer stack left me feeling like I would be successful automat
 
 ### A DevOps Journey
 
-> The best solutions are often burried in the details. The only way to reach them is to dig.
+> The best solutions are often buried in the details. The only way to reach them is to dig.
 
 In true DevOps fashion, development for this blog post featured a roller coaster of chronic scope creep, pushing deadlines, discovering details that scrapped the original plan, and during the final finish line approach too! The worry and doubt was palpable.
 
