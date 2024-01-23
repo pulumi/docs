@@ -34,7 +34,7 @@ This is a "bring your own [GitHub](https://github.com) login" event, so refresh 
 
 <!--more-->
 
-### Three tips to learn new technology:
+### Three tips to learn new technology
 
 When it comes to ice cream, sometimes just selecting your flavor can be too much. Similarly, when choosing where to start with cloud tooling the onset of "choice paralysis" can be chronic. Pulumi's powerful toolset is both a worthy endeavor to learn and a rewarding challenge to master. There is no better time to learn than the present!
 
