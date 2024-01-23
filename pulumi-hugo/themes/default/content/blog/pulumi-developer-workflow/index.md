@@ -25,9 +25,9 @@ Pulumi, with its full support of many general-purpose programming languages, can
 
 However, I'll show you that finding the proverbial easy street is easier than you might believe. The `pulumi new` developer story just gets sweeter when combined with a few other nice-to-have conveniences.
 
-This is a "bring your own [GitHub](https://github.com) login" event, so refresh that login. You will want to grab a [Pulumi Cloud](https://app.pulumi.com) login as well. With credentials in hand, you are set with everything that you need to start. Let's go!
-
 <!--more-->
+
+This is a "bring your own [GitHub](https://github.com) login" event, so refresh that login. You will want to grab a [Pulumi Cloud](https://app.pulumi.com) login as well. With credentials in hand, you are set with everything that you need to start. Let's go!
 
 ## Index
 
@@ -44,7 +44,7 @@ This is a "bring your own [GitHub](https://github.com) login" event, so refresh 
 > all of the steps in this demo are ready to run yourself from the [Pulumi Devcontainer](https://github.com/pulumi/devcontainer) using just your web browser and a Github account. Even better, they are real activities that Pulumians use every day to orchestrate the cloud too!
 >
 
-### Three tips to learn new technology
+## New technology learning advice
 
 When it comes to ice cream, sometimes just selecting your flavor can be too much. Similarly, when choosing where to start with cloud tooling the onset of "choice paralysis" can be chronic. Pulumi's powerful toolset is both a worthy endeavor to learn and a rewarding challenge to master. There is no better time to learn than the present!
 
@@ -54,11 +54,11 @@ Freezing, while great for ice cream, is not quite as satisfying when building th
 
 How can we overcome the learning curve? Picking up and mastering a new tool can be easy if we choose to start small.
 
-> #### Tech Learning Hacks:
+> ### Tech learning hacks:
 >
-> 🏆 Do: Start
-> 🔨 Use: Helpful Tools
-> 🥅 Make: Achievable Goals
+> 🏆 Do: Start  
+> 🔨 Use: Helpful Tools  
+> 🥅 Make: Achievable Goals  
 > 🎉 Win: Celebrate Successes
 
 Recognizing achievable goals can be tricky when you are learning something new. Always over-estimate the complexity of each step. If you overestimate how complicated a task might be, the biggest risk is accomplishing the goal faster than you think! Either way, the learning journey should be enjoyable and rewarding by following this rule.
@@ -67,7 +67,7 @@ Helpful tools are more abundant than ever. I recommend Pulumi as one of the most
 
 The resulting developer stack left me feeling like I would be successful automating anything. Be sure to share your experience with us in the [Pulumi Community Slack](https://join.slack.com/t/pulumi-community/shared_invite/zt-2amio1u4h-5Y35enT27Y0dk4N8ZYHbMg) or find us on [Twitter/X @PulumiCorp](https://twitter.com/PulumiCorp) too!
 
-### A DevOps Journey
+## A DevOps journey
 
 > The best solutions are often buried in the details. The only way to reach them is to dig.
 
@@ -77,7 +77,7 @@ Have we taken on too much? Did project ambitions exceed the achievable? The solu
 
 In this story, it took two tries to achieve the goal. Often it can take several tries. With that backstory let's begin this next learning adventure together.
 
-### DevOps Day 0
+### DevOps day 0
 
 Let's track our DevOps journey in typical "DevOps Day" style. Because we're [counting like computers](https://en.wikipedia.org/wiki/Zero-based_numbering#:~:text=In%20computer%20science%2C%20zero%20is,from%20zero%20rather%20than%20one.), of course, we start with zero. In other words, we need a goal, and we will be starting from scratch.
 
@@ -111,7 +111,7 @@ You may have assembled projects piece by piece before. In the [pulumi/devcontain
 
 And now for the feature presentation, let's get to dev'ing!
 
-#### What's in a DevOps Day 0?
+#### What's in a DevOps day 0?
 
 Day 0 usually includes aspects of planning and preparing. For this exercise, we have just a few requirements to get started. Let's knock these out and get to the fun stuff!
 
@@ -140,7 +140,7 @@ Next, let's review the tools we will depend on for developing and deploying our 
 | Github CLI              | Github & Git Repository Binaries |
 | curl, jq, act, awk, etc | Other useful tools               |
 
-## Cloud-native ... cloud developer environment?
+### Cloud-native ... cloud developer environment?
 
 Besides our command line tools and the programming language of your choice, we need an editor to write our code with. Many practitioners are fluent with Vim or Emacs; others turn to editors like VSCode, IntelliJ, and others. We are going to choose the GitHub Codespaces VSCode IDE for its deep integration with GitHub, and its convenience of requiring nothing from the user other than a web browser to use.
 
@@ -171,11 +171,10 @@ For our final Day 0 step, we still need to decide what app to deploy with our In
 
 Focusing on something fun, let's deploy Minecraft as the app for our Kubernetes exercise. It's a fun way to get started with Pulumi, a great way to show off your cloud skills to friends, and maybe even share with your favorite young future technologists! After all, Open Source DevOps is for everyone!
 
-## DevOps Day 1
+### DevOps day 1
 
-> ### We have an environment! We have a plan!
->
-> ### Now we need to code ... or do we?
+> We have an environment! We have a plan!
+> Now we need to code ... or do we?
 
 Don't just take my word for it. The big brains of Pulumi's AI Engineering team have delivered a brilliant Pulumi AI. Your Pulumi IaC developer sidekick makes learning and developing Pulumi just that much easier.
 
@@ -188,21 +187,21 @@ Don't just take my word for it. The big brains of Pulumi's AI Engineering team h
 
 Let's try it! (Reminder: Perform all these steps from within the Codespaces IDE.)
 
-### Step 1. Login to Pulumi Cloud
+#### Step 1. Login to Pulumi Cloud
 
 ```bash
 # First Login to Pulumi Cloud for a few features we will use in upcoming GitOps content.
 pulumi login
 ```
 
-### Step 2. Create a new program
+#### Step 2. Create a new program
 
 ```bash
 # Let's create a new pulumi with the Pulumi CLI
 pulumi new
 ```
 
-### Step 3. YOLO for fun and profit!
+#### Step 3. YOLO for fun and profit!
 
 Let's go all in on this one and try Pulumi AI. We can always enhance the prompt with additional dialog back and forth during the `pulumi new` chat if it doesn't meet our expectations right away.
 
@@ -238,7 +237,7 @@ Hint, this is where we get the name for our annual "[Pulumi Up](https://youtu.be
 pulumi up -y
 ```
 
-## DevOps Day 2
+### DevOps day 2
 
 Finally, it is day two. This is the beginning of a choose-your-own-adventure wonderland and the opportunities go almost as far as your imagination. This is where we commit our code and plan our next change requests and enhancements.
 
@@ -246,20 +245,26 @@ We can commit this code to git. Build a Github Actions Workflow to automate the 
 
 To conclude, Pulumi is not a single tool. Pulumi is a complete cloud developer ecosystem. Tools, SDKs, and cloud services come together forming the most accelerated way to create your own cloud success legends.
 
-Follow [PulumiTV](https://youtube.com/@PulumiTV) for upcoming examples built on this solution and to see how Pulumi ESC brings safety to your secrets and more.
-
-Because no hero's journey is complete without a gruesome account of what came before, I have included many of the manual steps required to reach this state one command at a time for the ~~morbidly~~ curious as well.
-
 ## Conclusion
+
+### Did it deploy?
+
+Let's check on the status of our deployment.
 
 ```bash
 # Check for your new Minecraft pod
 kubectl get po
 ```
 
+With any luck, our [Pulumi AI](https://pulumi.com/ai) gave you a working program right out of the gate. For references on kubernetes pulumi package resources to expand your infrastructure from here head to the [Pulumi Registry Kubernetes Provider](https://www.pulumi.com/registry/packages/kubernetes/) page for more.
+
 Sharing Pulumi with people is a genuine passion found among Pulumians all around the globe but we all know evidence reigns king among engineers who, like any good practitioner, expect proof. Evolving your developer workflow with Pulumi gets even better than just easy, it's remarkably powerful and ready for you to adopt in your daily workflows right away too.
 
-Continue with me for this short "batteries included" DevOps developer experience and see how Pulumi, ESC, and Devcontainers are a cloud ops match made in heaven whether you are developing on remote infrastructures or in the comfort of your own devices. The demo app may be a bit light-hearted, but the methods we use to get there are so worth it; I guarantee you can come away with something new just by trying it yourself.
+Follow [PulumiTV](https://youtube.com/@PulumiTV) for upcoming examples built on this solution and to see how Pulumi ESC brings safety to your secrets and more.
+
+### What's in the recipe?
+
+Because no hero's journey is complete without a gruesome account of what came before, I have included many of the manual steps required to reach this state one command at a time for the ~~morbidly~~ curious as well.
 
 > **click 'details' to expand**
 
@@ -292,7 +297,7 @@ git config --global user.name ${GITHUB_USER}
 git status
 ```
 
-#### Direnv: Automatic Environment Variables
+### Direnv: Automatic Environment Variables
 
 Various non-secret environment variables may be worth maintaining in code locally as well. There are many ways to do this, but here we are going to use Direnv to automatically load environment variables from a .envrc file.
 
@@ -321,7 +326,7 @@ direnv allow
 > Read more about available Pulumi Environment variables here:
 > https://www.pulumi.com/docs/cli/environment-variables
 
-#### Pulumi Devcontainer
+### Pulumi Devcontainer
 
 Now, to make sure we have all of our CLI dependencies, let's grab the [Pulumi Devcontainer].
 
@@ -338,7 +343,7 @@ cp -f .devcontainer/devcontainer.json .devcontainer.json
 gh codespace rebuild --codespace ${CODESPACE_NAME}
 ```
 
-#### Pulumi Cloud
+### Pulumi Cloud
 
 Let's login to Pulumi Cloud and initialize a new ESC environment to store our environment variables, secrets, and configuration which should be preserved and distributed securely from your Pulumi Cloud account.
 
@@ -350,7 +355,7 @@ pulumi login
 pulumi env init workshop
 ```
 
-#### KinD: Kubernetes-in-docker
+### KinD: Kubernetes-in-docker
 
 We are going to use Kubernetes to demonstrate our Pulumi IaC. Let's go ahead and create a new cluster now.
 
@@ -379,7 +384,7 @@ In our environment, we maintain our secrets including API personal access tokens
 eval $(pulumi env open workshop --format shell)
 ```
 
-#### Now let's create the deployment code!
+### Now let's create the deployment code!
 
 If fortune favors the bold, let's be bold on this next step and let AI write our sample code on the fly!
 
@@ -405,9 +410,7 @@ pulumi stack select workshop
 pulumi up
 ```
 
-</details>
-
-#### Cleanup
+### Cleanup
 
 ```bash
 pulumi destroy -y --skip-preview
@@ -419,3 +422,5 @@ gh repo delete ${GITHUB_USER}/workshop
 [Github Codespaces]:https://github.com/features/codespaces
 [Github's Codespaces Console]:https://github.com/codespaces
 [Pulumi Devcontainer]:https://github.com/pulumi/devcontainer
+
+</details>
