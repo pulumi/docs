@@ -148,7 +148,7 @@ Clicking the 'Open in GitHub Codespaces' button should take you directly into a 
 [Pulumi Devcontainer]:https://github.com/pulumi/devcontainer
 
 > Note:
-> This demonstration is deeply integrated into the Web based Codespaces environment offered by Github. Alternatively, VSCode also supports running Devcontainers with docker locally allowing you the benefit of [Pulumi Devcontainer](#pulumi-devcontainer) on your own hardware.
+> This demonstration is deeply integrated into the Web based Codespaces environment offered by Github. Alternatively, VSCode also supports running Devcontainers with Docker locally allowing you the benefit of [Pulumi Devcontainer](#pulumi-devcontainer) on your own hardware.
 >
 
 With a new codespaces session launched you should see the VSCode IDE in your browser. If you are not already familiar with VSCode, you can learn more about it in the [VSCode Docs](https://code.visualstudio.com/docs).
