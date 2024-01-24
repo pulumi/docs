@@ -121,6 +121,8 @@ $ pulumi stack output bucketName
 
 Running that command will print out the name of your bucket.
 
+{{< auto-naming-note resource="bucket" suffix="daa12be" >}}
+
 {{< console-note >}}
 
 Now that your bucket has been provisioned, let's modify the bucket to host a static website.

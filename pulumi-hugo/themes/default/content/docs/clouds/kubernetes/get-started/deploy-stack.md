@@ -27,18 +27,17 @@ Previewing update (dev)
 
      Type                              Name            Plan
  +   pulumi:pulumi:Stack               quickstart-dev  create
- +   └─ kubernetes:apps/v1:Deployment  app-dep         create
-
+ +   └─ kubernetes:apps/v1:Deployment  nginx           create
 
 Outputs:
-    name: "app-dep-92efcbdf"
+    name: "nginx-516e16fd"
 
 Resources:
     + 2 to create
 
 Do you want to perform this update?  [Use arrows to move, type to filter]
-  yes
-> no
+> yes
+  no
   details
 ```
 
@@ -46,23 +45,23 @@ Select `yes` using the arrows and hit enter to create the resources in Kubernete
 
 ```bash
 Do you want to perform this update? yes
-Updating (dev)
-
+Updating (dev):
      Type                              Name            Status
  +   pulumi:pulumi:Stack               quickstart-dev  created (3s)
- +   └─ kubernetes:apps/v1:Deployment  app-dep         created (1s)
-
+ +   └─ kubernetes:apps/v1:Deployment  nginx           created (2s)
 
 Outputs:
-    name: "app-dep-b7413dae"
+    name: "nginx-bec13562"
 
 Resources:
     + 2 created
 
-Duration: 10s
+Duration: 4s
 ```
 
 The `name` of the deployment that we exported is shown as a [stack output](/docs/concepts/stack#outputs).
+
+{{< auto-naming-note resource="deployment" suffix="bec13562" >}}
 
 {{< console-note >}}
 

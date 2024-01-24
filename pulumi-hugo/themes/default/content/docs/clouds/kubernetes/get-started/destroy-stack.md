@@ -25,23 +25,21 @@ $ pulumi destroy
 You'll be prompted to make sure you really want to delete these resources.
 
 ```bash
-Previewing destroy (dev)
-
+Previewing destroy (dev):
      Type                              Name            Plan
  -   pulumi:pulumi:Stack               quickstart-dev  delete
  -   ├─ kubernetes:core/v1:Service     nginx           delete
  -   └─ kubernetes:apps/v1:Deployment  nginx           delete
 
-
 Outputs:
-  - ip: "10.103.199.118"
+  - ip: "10.110.183.208"
 
 Resources:
     - 3 to delete
 
 Do you want to perform this destroy?  [Use arrows to move, type to filter]
-  yes
-> no
+> yes
+  no
   details
 ```
 
@@ -49,21 +47,19 @@ Select `yes` using the arrows and hit enter to delete the resources in Kubernete
 
 ```bash
 Do you want to perform this destroy? yes
-Destroying (dev)
-
+Destroying (dev):
      Type                              Name            Status
- -   pulumi:pulumi:Stack               quickstart-dev  deleted
- -   ├─ kubernetes:core/v1:Service     nginx           deleted (0.42s)
- -   └─ kubernetes:apps/v1:Deployment  nginx           deleted (2s)
-
+ -   pulumi:pulumi:Stack               quickstart-dev  deleted (0.00s)
+ -   ├─ kubernetes:core/v1:Service     nginx           deleted (0.94s)
+ -   └─ kubernetes:apps/v1:Deployment  nginx           deleted (4s)
 
 Outputs:
-  - ip: "10.103.199.118"
+  - ip: "10.110.183.208"
 
 Resources:
     - 3 deleted
 
-Duration: 5s
+Duration: 6s
 
 The resources in the stack have been deleted, but the history and configuration associated with the stack are still maintained.
 If you want to remove the stack completely, run `pulumi stack rm dev`.

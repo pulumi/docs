@@ -23,27 +23,22 @@ $ pulumi up
 Pulumi computes the minimally disruptive change to achieve the desired state described by the program.
 
 ```
-Previewing update (dev)
-
-     Type                              Name            Plan
-     pulumi:pulumi:Stack               quickstart-dev
- +   ├─ kubernetes:apps/v1:Deployment  nginx           create
- +   ├─ kubernetes:core/v1:Service     nginx           create
- -   └─ kubernetes:apps/v1:Deployment  app-dep         delete
-
+Previewing update (dev):
+     Type                           Name            Plan
+     pulumi:pulumi:Stack            quickstart-dev
+ +   └─ kubernetes:core/v1:Service  nginx           create
 
 Outputs:
   + ip  : "10.96.0.0"
-  - name: "app-dep-b7413dae"
+  - name: "nginx-bec13562"
 
 Resources:
-    + 2 to create
-    - 1 to delete
-    3 changes. 1 unchanged
+    + 1 to create
+    2 unchanged
 
 Do you want to perform this update?  [Use arrows to move, type to filter]
-  yes
-> no
+> yes
+  no
   details
 ```
 
@@ -53,25 +48,20 @@ Pulumi will create the service since it is now defined in the program.
 
 ```
 Do you want to perform this update? yes
-Updating (dev)
-
-     Type                              Name            Status
-     pulumi:pulumi:Stack               quickstart-dev
- +   ├─ kubernetes:apps/v1:Deployment  nginx           created (3s)
- +   ├─ kubernetes:core/v1:Service     nginx           created (10s)
- -   └─ kubernetes:apps/v1:Deployment  app-dep         deleted (1s)
-
+Updating (dev):
+     Type                           Name            Status
+     pulumi:pulumi:Stack            quickstart-dev
+ +   └─ kubernetes:core/v1:Service  nginx           created (10s)
 
 Outputs:
-  + ip  : "10.103.199.118"
-  - name: "app-dep-b7413dae"
+  + ip  : "10.110.183.208"
+  - name: "nginx-bec13562"
 
 Resources:
-    + 2 created
-    - 1 deleted
-    3 changes. 1 unchanged
+    + 1 created
+    2 unchanged
 
-Duration: 23s
+Duration: 12s
 ```
 
 View the `ip` [stack output](/docs/concepts/stack#outputs) from the nginx service.
