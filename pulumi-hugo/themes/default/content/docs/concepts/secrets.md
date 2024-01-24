@@ -12,26 +12,30 @@ aliases:
 - /secrets/
 ---
 
-All resource input and output values are recorded as [`state`](/docs/concepts/state), and are stored in the Pulumi Cloud, a file, or a pluggable provider that you choose. These raw values are usually just server names, configuration settings, etc. However, these values sometimes contain sensitive data, such as database passwords or service tokens. **Pulumi never sends authentication secrets or credentials to the Pulumi Cloud**.
+All resource input and output values are recorded as stack [_state_](/docs/concepts/state) and stored in Pulumi Cloud, in a state file, or in your self-managed [backend](/docs/concepts/state/) of choice. These values are usually just plain-text strings, such as configuration settings, computed URLs, or resource identifiers. Sometimes, however, these values contain sensitive data, such as database passwords or service tokens, that must be handled carefully and protected from exposure.
 
-The Pulumi Cloud always transmits and stores entire state files securely; however, Pulumi also supports encrypting specific values as “secrets” for extra protection. Encryption ensures that these values never appear as plaintext in your state file. By default, the encryption method uses automatic, per-stack encryption keys provided by the Pulumi Cloud or you can use a [provider of your own choosing](#configuring-secrets-encryption) instead.
+Pulumi Cloud transmits and stores entire state files securely, but Pulumi also supports encrypting individual values as _secrets_ for additional protection. Encryption ensures that these values never appear as plain text in your state file. By default, the encryption method uses automatic, per-stack encryption keys provided by Pulumi Cloud, but you can also use a [provider of your own choosing](#configuring-secrets-encryption) instead.
 
-To encrypt a configuration setting before runtime, you can use the CLI command [`config set`](/docs/concepts/config#configuration) command with a [`--secret`](#secrets) flag. You can also set a secret during runtime. Any [`Output<T>`](/docs/concepts/inputs-outputs/#outputs) value can be marked secret. If an output is a secret, any computed values derived from it—such as those derived through an [`apply`](/docs/concepts/inputs-outputs/#apply) call —will also be marked secret. All these encrypted values are stored in your state file.
+{{% notes %}}
+The Pulumi CLI **never** transmits your cloud credentials to Pulumi Cloud.
+{{% /notes %}}
 
-An [`Output<T>`](/docs/concepts/inputs-outputs/#outputs) can be marked secret in a number of ways:
+To encrypt a configuration setting before runtime, use the [`pulumi config set`](/docs/concepts/config#configuration) CLI command with a [`--secret`](#secrets) flag. You can also declare secrets at runtime; any [output](/docs/concepts/inputs-outputs/#outputs) value can also be marked secret. If an output is a secret, any computed values derived from it, such as those derived from a call to [`apply`](/docs/concepts/inputs-outputs/#apply), will also be marked secret. All these of encrypted values are stored as ciphertext in your state file.
+
+An output can be marked secret in a number of ways:
 
 - By reading a secret from configuration using {{< pulumi-config-getsecret >}} or {{< pulumi-config-requiresecret >}}.
 - By creating a new secret value with {{< pulumi-secret-new >}}, such as when generating a new random password.
 - By marking a resource as having secret properties using [`additionalSecretOutputs`](/docs/concepts/inputs-outputs).
 - By computing a secret value by using [`apply`](/docs/concepts/inputs-outputs/#apply) or {{< pulumi-all >}} with another secret value.
 
-As soon as an `Output<T>` is marked secret, the Pulumi engine will encrypt it wherever it is stored.
+As soon as an output is marked secret, the Pulumi engine will encrypt it wherever it is stored.
 
 {{% notes "info" %}}
-Inside of an `apply` or `Output.all` call, your secret is decrypted into plaintext for use within the callback. It is up to your program to treat this value sensitively and only pass the plaintext value to code that you trust.
+Note that when using `apply` or `Output.all`, secrets are decrypted into plain text for use within the callback handler. It is up to your program to treat this value sensitively and only pass the plain-text value to code that you trust.
 {{% /notes %}}
 
-## Programmatically Creating Secrets
+## Creating secrets programmatically
 
 There are two ways to programmatically create secret values:
 
@@ -192,35 +196,35 @@ The `Parameter` resource’s `value` property is encrypted in the Pulumi state f
 
 Pulumi tracks the transitive use of secrets, so that your secret won’t end up accidentally leaking into the state file. Tracking includes automatically marking data generated from secret inputs as secret themselves, as well as fully encrypting any resource properties that include secrets in them.
 
-## How Secrets Relate to Outputs
+## How secrets relate to outputs
 
-Secrets have the same type, `Output<T>`, as do unencrypted resource outputs. The difference is that they are marked internally as needing encryption before persisting in the state file. When you combine an existing output that is marked as a secret using `apply`  or `Output.all`, the resulting output is also marked as a secret.
+Secrets have the same type, `Output<T>`, as unencrypted resource outputs. The difference is that they are marked internally as needing encryption before persisting in the state file. When you combine an existing output that is marked as a secret using `apply`  or `Output.all`, the resulting output is also marked as a secret.
 
-An `apply`’s callback is given the plaintext value of the underlying secret. Although Pulumi ensures that the value returned from an `apply` on a secret is also marked as secret, Pulumi cannot guarantee that the `apply` callback itself will not expose the secret value —for instance, by explicitly printing the value to the console or saving it to a file.
+An `apply`’s callback is given the plain-text value of the underlying secret. Although Pulumi ensures that the value returned from an `apply` on a secret is also marked as secret, Pulumi cannot guarantee that the `apply` callback itself will not expose the secret value —for instance, by explicitly printing the value to the console or saving it to a file.
 
 {{% notes "warning" %}}
-Be careful that you do not pass this plaintext value to code that might expose it.
+Be careful that you do not pass this plain-text value to code that might expose it.
 {{% /notes %}}
 
-## Explicitly Marking Resource Outputs as Secrets
+## Explicitly marking resource outputs as secrets
 
 It is possible to mark resource outputs as containing secrets. In this case, Pulumi will automatically treat those outputs as secrets and encrypt them in the state file and anywhere they flow to. To do so, use the [`additional secret outputs`](/docs/concepts/resources#additionalsecretoutputs) option.
 
-## Encrypted Secrets in Configuration Data {#secrets}
+## Encrypted secrets in configuration data {#secrets}
 
-Some configuration data is sensitive, such as database passwords or service tokens. For such cases, passing the `--secret` flag to the `config set` command encrypts the data and stores the resulting ciphertext instead of plaintext.
+Some configuration data is sensitive, such as database passwords or service tokens. For such cases, passing the `--secret` flag to the `config set` command encrypts the data and stores the resulting ciphertext instead of plain text.
 
 {{% notes "info" %}}
-By default, the Pulumi CLI uses a per-stack encryption key managed by the Pulumi Cloud, and a per-value salt, to encrypt values. To use an alternative encryption provider, refer to [Configuring Secrets Encryption](#configuring-secrets-encryption).
+By default, the Pulumi CLI uses a per-stack encryption key managed by Pulumi Cloud, and a per-value salt, to encrypt values. To use an alternative encryption provider, refer to [Configuring Secrets Encryption](#configuring-secrets-encryption).
 {{% /notes %}}
 
-For example, this command sets a configuration variable named `dbPassword` to the plaintext value `S3cr37`:
+For example, this command sets a configuration variable named `dbPassword` to the plain-text value `S3cr37`:
 
 ```bash
 $ pulumi config set --secret dbPassword S3cr37
 ```
 
-If we list the configuration for our stack, the plaintext value for `dbPassword` will not be printed:
+If we list the configuration for our stack, the plain-text value for `dbPassword` will not be printed:
 
 ```bash
 $ pulumi config
@@ -306,13 +310,13 @@ $ pulumi up
 Password: [secret]
 ```
 
-By default, configuration values are saved in plaintext. To explicitly denote a plaintext or unencrypted configuration value, pass the `--plaintext` flag. This flag can be used to indicate that you did not want an encrypted secret.
+By default, configuration values are saved in plain text. To explicitly denote a plain text or unencrypted configuration value, pass the `--plaintext` flag. This flag can be used to indicate that you did not want an encrypted secret.
 
 ```bash
 $ pulumi config set --plaintext aws:region us-west-2
 ```
 
-## Using Configuration and Secrets in Code
+## Using configuration and secrets in code
 
 To access configuration or secret values for your package, project, or component, use the `pulumi.Config` type. This type offers a collection of getters and setters for retrieving configuration values of various types by their key.
 
@@ -321,7 +325,7 @@ To begin, allocate an instance of the `pulumi.Config` object. Its constructor ta
 For example, assume the following configuration values have been set:
 
 ```bash
-$ pulumi config set name BroomeLLC             # set a plaintext value
+$ pulumi config set name BroomeLLC             # set a plain-text value
 $ pulumi config set --secret dbPassword S3cr37 # set an encrypted secret value
 ```
 
@@ -454,24 +458,24 @@ $ pulumi config set --path endpoints[0].url https://example.com
 $ pulumi config set --path --secret endpoints[0].token accesstokenvalue
 ```
 
-### A Warning: Using Secrets in Code
+{{% notes type="warning" %}}
+Secret values are decrypted and made available in plain text to the program at runtime. These values may be read using any of the standard `pulumi.Config` getters shown above. While it is possible to read a secret using the ordinary non-secret getters, this is almost certainly not what you want. Use the secret variants of the configuration APIs instead, as this ensures that all transitive uses of that secret are themselves also marked as secrets.
+{{% /notes %}}
 
-On `pulumi up`, secret values are decrypted and made available in plaintext at runtime. These may be read through any of the standard `pulumi.Config` getters shown above. While it is possible to read a secret using the ordinary non-secret getters, this is almost certainly not what you want. Use the secret variants of the configuration APIs instead, since this ensures that all transitive uses of that secret are themselves also marked as secrets.
+## Configuring secrets encryption
 
-## Configuring Secrets Encryption
-
-The Pulumi Cloud automatically manages per-stack encryption keys on your behalf. Anytime you encrypt a value using `--secret` or by programmatically wrapping it as a secret at runtime, a secure protocol is used between the CLI and Pulumi Cloud that ensures secret data is encrypted in transit, at rest, and physically anywhere it gets stored. For more details about the concept of state files and backends, refer to [State and Backends](/docs/concepts/state/).
+Pulumi Cloud automatically manages per-stack encryption keys on your behalf. Anytime you encrypt a value using `--secret` or by programmatically wrapping it as a secret at runtime, a secure protocol is used between the CLI and Pulumi Cloud that ensures secret data is encrypted in transit, at rest, and physically anywhere it gets stored. For more details about the concept of state files and backends, refer to [State and Backends](/docs/concepts/state/).
 
 The default encryption mechanism may be insufficient in the following scenarios:
 
-1. If you are using the Pulumi CLI independent of the Pulumi Cloud-either in local mode, or by using one of the
+1. If you are using the Pulumi CLI independent of Pulumi Cloud --- either in local mode, or by using one of the
    available backend plugins (such as those that store state in AWS S3, Azure Blob Store, or Google Object Storage).
 
 2. If your team already has a preferred cloud encryption provider that you would like to use.
 
 In both cases, you can continue using secrets management as described above, but instruct Pulumi to use an alternative encryption provider.
 
-### Initializing a Stack with Alternative Encryption
+### Initializing a stack with alternative encryption
 
 To specify an alternative encryption provider, specify it at stack initialization time:
 
@@ -483,7 +487,7 @@ After doing so, all encryption operations for your stack will use the custom pro
 
 Pulumi uses the Go Cloud Development Kit to implement pluggable secrets providers. In the event configuration or authentication options below do not work, the [Go CDK documentation](https://gocloud.dev/howto/secrets/) can be consulted for debugging information.
 
-### Available Encryption Providers
+### Available encryption providers
 
 Pulumi supports the following encryption providers:
 
@@ -565,7 +569,7 @@ $ pulumi stack init my-stack \
     --secrets-provider="hashivault://payroll"
 ```
 
-### Changing the Secrets Provider for a Stack
+### Changing the secrets provider for a stack
 
 To change the secrets provider for an existing stack use the [`pulumi stack change-secrets-provider`](/docs/cli/commands/pulumi_stack_change-secrets-provider) command.
 
@@ -586,11 +590,26 @@ The [supported secrets providers](/docs/cli/commands/pulumi_stack_init/) are:
 After the provider has been changed, you should be able to run `pulumi preview` and see no proposed changes.  Your configuration secrets
 and state files are now encrypted using the new secrets provider.
 
-## Manage Secrets using Pulumi ESC environments
+## Committing configuration to source control
+
+When you run `pulumi config set --secret` to generate a new Pulumi secret, the Pulumi CLI uses the stack's unique encryption key to encrypt the raw value and store the resulting ciphertext in the stack configuration file (`Pulumi.dev.yaml`, for example). If you opened this file in a text editor, you'd see that the contents would look something like this:
+
+```yaml
+config:
+  myStack:somePlainTextItem: somePlainText
+  myStack:someSecretItem:
+    secure: AAABAIIlW0ewSuZ1FJxw/+Rpw6BNqTUvGJ30O8WkpL2hB4aPyS7UU68=
+```
+
+Decrypting this ciphertext requires the encryption key that was used to create it. For stacks managed with Pulumi Cloud, these keys are obtained automatically, but only for users with [read access](/docs/pulumi-cloud/projects-and-stacks/#stack-permissions) to the stack. For self-managed backends, the keys must be supplied by the user, either by providing the stack's current passphrase (when using the [`passphrase`](#changing-the-secrets-provider-for-a-stack) provider) or by authenticating with the stack's [encryption provider](#available-encryption-providers).
+
+It's therefore considered safe, and good practice, to check these files into source control, as doing so allows you to version your code and configuration in tandem. If you'd prefer not to check in these files, however, you can easily rebuild them, using the most recently deployed configuration, with [`pulumi config refresh`](/docs/cli/commands/pulumi_config_refresh/).
+
+## Managing secrets with Pulumi ESC environments
 
 With Pulumi ESC, you can manage secrets wherever they live. Pulumi ESC provides a centralized abstraction in front of the most common secrets manager/vaults while providing security through RBAC and audit controls.
 
-### Sharing Secrets Across Multiple Teams
+### Sharing secrets across multiple teams
 
 You may have multiple teams that each own different secrets and manage their lifetimes, and choose to store them in various AWS secret manager secrets.
 
