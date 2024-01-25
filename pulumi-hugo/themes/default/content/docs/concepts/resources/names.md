@@ -140,9 +140,7 @@ let role = new aws.iam.Role("my-role", {
 {{% choosable language python %}}
 
 ```python
-role = iam.Role('my-role', {
-    name='my-role-001'
-})
+role = iam.Role('my-role', name='my-role-001')
 ```
 
 {{% /choosable %}}
@@ -218,9 +216,11 @@ let role = new aws.iam.Role("my-role", {
 {{% choosable language python %}}
 
 ```python
-role = iam.Role('my-role', {
-    name=f'my-role-{ pulumi.get_project() }-{ pulumi.get_stack() }')
-}, opts=ResourceOptions(delete_before_replace=True))
+role = iam.Role(
+    'my-role',
+    name=f'my-role-{ pulumi.get_project() }-{ pulumi.get_stack() }',
+    opts=ResourceOptions(delete_before_replace=True),
+)
 ```
 
 {{% /choosable %}}
