@@ -90,7 +90,7 @@ You can close this subshell by running the `exit` command.
 
 For supported cloud providers, the `esc run` command also enables you to run commands like `aws s3 ls` without having to manually configure provider credentials in your local environments. In this section, you will learn how to use Pulumi ESC with dynamically generated cloud credentials so that every provider command you run uses short-term, scoped credentials issued via OpenID Connect (OIDC).
 
-If you have not done so already, make sure you have [configured OIDC connectivity](/docs/esc/get-started/begin/#configure-openid-connect-oidc) between Pulumi and one of the below supported providers.
+If you have not done so already, make sure you have [configured OIDC connectivity](/docs/esc/get-started/begin/#configure-openid-connect-oidc) between Pulumi and a supported provider listed below.
 
 {{< notes type="info" >}}
 This functionality is currently not available for the Azure cloud provider.
