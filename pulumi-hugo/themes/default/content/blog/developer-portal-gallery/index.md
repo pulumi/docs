@@ -47,7 +47,7 @@ Late last year [we announced Pulumi for Developer Portals](/blog/building-develo
 
 ## What the Pulumi Cloud New Project Wizard?
 
-The Pulumi Cloud [New Project Wizard](/pulumi-cloud/developer-portals/new-project-wizard) is the fastest way to get a Pulumi program up and running. The New Project Wizard provides a more turnkey, out-of-the-box alternative to the [Pulumi Backstage Plugin](/docs/pulumi-cloud/developer-portals/backstage) or custom-built integrations.
+The Pulumi Cloud [New Project Wizard](/docs/pulumi-cloud/developer-portals/new-project-wizard) is the fastest way to get a Pulumi program up and running. The New Project Wizard provides a more turnkey, out-of-the-box alternative to the [Pulumi Backstage Plugin](/docs/pulumi-cloud/developer-portals/backstage) or custom-built integrations.
 
 By using the wizard, developers can generate Pulumi programs from your Organization Templates, commit and push code to GitHub, and trigger an initial deployment – all in a few clicks and without leaving the browser.
 
