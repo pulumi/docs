@@ -43,6 +43,6 @@ aws_only: false
 title: Developer Infrastructure with Pulumi and Okteto
 title_tag: Developer Infrastructure with Pulumi and Okteto
 meta_desc: Learn the essentials of automating cloud resource provisioning with Pulumi and Okteto in this hands-on session.
-meta_image: 
+meta_image: "/images/resources/developer-infra-okteto-engin-arsh.png"
 url_slug: developer-infrastructure-with-pulumi-and-okteto
 ---

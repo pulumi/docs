@@ -40,6 +40,6 @@ aws_only: false
 title: What's New in Pulumi
 title_tag: What's New in Pulumi
 meta_desc: Explore the latest features and updates in Pulumi, and learn how these enhancements can streamline your cloud infrastructure management.
-meta_image: 
+meta_image: "/images/resources/Whats-New-Meagan-Arun.png"
 url_slug: whats-new-pulumi-cloud
 ---

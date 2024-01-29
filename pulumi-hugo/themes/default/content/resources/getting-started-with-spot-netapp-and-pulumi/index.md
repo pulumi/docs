@@ -42,6 +42,6 @@ aws_only: false
 title: Getting started with Spot by NetApp with Pulumi
 title_tag: Getting started with Spot by NetApp with Pulumi
 meta_desc: Learn to architect and automate resilient, cost-efficient cloud infrastructures using Pulumi's IaC capabilities with Spot's cloud optimization solutions.
-meta_image: 
+meta_image: "/images/resources/getting-started-spot-netapp-engin-shon.png"
 url_slug: getting-started-with-spot-netapp-and-pulumi
 ---

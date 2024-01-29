@@ -3,7 +3,7 @@
 title: "Getting Started with Infrastructure as Code on AWS"
 title_tag: "Getting Started with Infrastructure as Code on AWS"
 meta_desc: "In this workshop, you will learn the fundamentals of Infrastructure as Code through a series of guided exercises using the Pulumi Cloud Engineering platform."
-meta_image: "/images/resources/get-started-aws_josh-marina.png"
+meta_image: "/images/resources/getting-started-aws-engin.png"
 
 # A featured webinar will display first in the list.
 featured: false
@@ -70,9 +70,9 @@ main:
     datetime:
     # Description of the webinar.
     description: |
-      In this workshop, you will learn the fundamentals of Infrastructure as Code through a series of guided exercises using Pulumi’s Cloud Engineering platform. You will be introduced to Pulumi, an infrastructure as code platform, where you can use familiar programming languages to provision modern cloud infrastructure.
+      Learn the fundamentals of Infrastructure as Code through a series of guided exercises using AWS and Pulumi’s platform, where you can use familiar programming languages to provision modern cloud infrastructure.
 
-      This workshop is designed to help users completely new to Pulumi to become familiar with the core concepts to be effective with the Pulumi Infrastructure as Code platform. We will guide you through the Pulumi platform with diagrams and a series of hands on exercises to help you understand the building blocks available in Pulumi.
+      This workshop is designed to help users who are completely new to Pulumi become familiar with the core concepts to be effective with the Pulumi Infrastructure as Code platform. We will guide you through the Pulumi platform with diagrams and a series of hands-on exercises to help you understand the building blocks available in Pulumi.
 
     # The webinar presenters
     presenters:
@@ -83,7 +83,7 @@ main:
     learn:
         - The basics of the Pulumi Programming Model
         - How to provision, update, and destroy AWS resources
-        - All the new features of aws-classic v6 and AWSX
+        - Build a simple serverless App with Lambda and s3 bucket
 # The right hand side form section.
 form:
     # HubSpot form id.

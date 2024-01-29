@@ -2,6 +2,7 @@
 # Name of the webinar.
 title: "Building a Kubernetes Platform in AWS EKS with Pulumi"
 meta_desc: "In this workshop, you will examine how Pulumi interacts with Kubernetes, and build real-world examples of managing Amazon EKS clusters."
+meta_image: "/images/resources/kubernetes-platform-amazon-eks-josh-carlos.png"
 
 # A featured webinar will display first in the list.
 featured: false
@@ -56,7 +57,7 @@ main:
     # URL for embedding a URL for ungated webinars.
     youtube_url: # "https://www.youtube.com/embed/emUSsZDcu6E"
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2024-04-03T09:00:00-07:00
+    sortable_date: 2024-03-25T09:00:00-07:00
     # Duration of the webinar.
     duration: "90 minutes"
     # Datetime of the webinar.

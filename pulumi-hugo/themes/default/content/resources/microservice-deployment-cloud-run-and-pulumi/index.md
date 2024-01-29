@@ -41,6 +41,6 @@ aws_only: false
 title: Efficient Microservice Deployment on Cloud Run with Pulumi
 title_tag: Efficient Microservice Deployment on Cloud Run with Pulumi
 meta_desc: Join the workshop 'Efficient Microservice Deployment on Google Cloud Run' to learn how to build and deploy microservices with minimal code changes.
-meta_image: 
+meta_image: "/images/resources/microservice-deployment-cloud-run-kat-xiang.png"
 url_slug: microservice-deployment-cloud-run-and-pulumi
 ---

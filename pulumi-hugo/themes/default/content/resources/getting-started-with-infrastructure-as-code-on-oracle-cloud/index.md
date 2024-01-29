@@ -1,7 +1,7 @@
 ---
 # Name of the webinar.
 title: "Getting started with Infrastructure as Code on Oracle Cloud"
-meta_desc: "Learn the fundamentals of Infrastructure as Code (IaC) through guided exercises using Pulumi on Oracle Cloud Infrastructure."
+meta_desc: "Learn the fundamentals of Infrastructure as Code (IaC) and watch virtual networks and Kubernetes clusters materialize from a bit of Python and a few magical keystrokes."
 meta_image: "/images/resources/getting-started-oracle-josh-eli.png"
 
 # A featured webinar will display first in the list.
@@ -17,7 +17,7 @@ pulumi_tv: false
 preview_image: ""
 
 # Webinars with unlisted as true will not be shown on the webinar list
-unlisted: false
+unlisted: true
 
 # Gated webinars will have a registration form and the user will need
 # to fill out the form before viewing.
@@ -30,8 +30,8 @@ type: webinars
 # landing/registration page. If the webinar is external you will need
 # set the 'block_external_search_index' flag to true so Google does not index
 # the webinar page created.
-external: false
-block_external_search_index: false
+external: true
+block_external_search_index: true
 
 # The url slug for the webinar landing page. If this is an external
 # webinar, use the external URL as the value here.
@@ -40,7 +40,7 @@ url_slug: "getting-started-with-infrastructure-as-code-on-oracle-cloud"
 # The content of the hero section.
 hero:
     # The title text in the hero. This also serves as the pages H1.
-    title: "Getting started with Infrastructure as Code on Oracle Cloud"
+    title: "Provision and manage Kubernetes the easy way with Pulumi on Oracle Cloud"
     # The image the appears on the right hand side of the hero.
     image: "/icons/containers.svg"
 
