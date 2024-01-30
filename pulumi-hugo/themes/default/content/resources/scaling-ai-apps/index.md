@@ -8,7 +8,7 @@ meta_image: "/images/resources/scaling-ai-apps.png"
 featured: false
 
 # If the video is pre-recorded or live.
-pre_recorded: false
+pre_recorded: true
 
 # If the video is part of the PulumiTV series. Setting this value to true will list the video in the "PulumiTV" section.
 pulumi_tv: false
@@ -21,7 +21,7 @@ unlisted: false
 
 # Gated webinars will have a registration form and the user will need
 # to fill out the form before viewing.
-gated: true
+gated: false
 
 # The layout of the landing page.
 type: webinars
@@ -52,11 +52,11 @@ main:
     # Webinar title.
     title: Scaling AI Apps
     # URL for embedding a URL for ungated webinars.
-    youtube_url:
+    youtube_url: "https://www.youtube.com/embed/D0cOJNf0pCQ?si=fWOK5IXu-sG3-C6A?rel=0"
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
     sortable_date: 2024-01-24T09:00:00.000-08:00
     # Duration of the webinar.
-    duration: "60 minutes"
+    duration: "1 hour"
     # Datetime of the webinar.
     datetime: 
     # Description of the webinar.
