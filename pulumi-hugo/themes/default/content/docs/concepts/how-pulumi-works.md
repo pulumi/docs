@@ -32,7 +32,7 @@ In the next section, we will describe each of these components and see how they 
 The _language host_ is responsible for running a Pulumi program and setting up an environment where it can register resources with the _deployment engine_. The language host consists of two different pieces:
 
 1. A language executor, which is a binary named `pulumi-language-<language-name>`, that Pulumi uses to launch the runtime for the language your program is written in (e.g. Node or Python). This binary is distributed with the Pulumi CLI.
-2. A language runtime, which is responsible for preparing your program to be executed and observes its execution in order to detect resource registrations. When a resource is _registered_ (via `new Resource()` in JavaScript or `Resource(...)` in Python), the language runtime communicates the registration request back to the _deployment engine_. The language runtime is distributed as a regular package, just like any other code that might depend on your program. For example, the Node runtime is contained in the [`@pulumi/pulumi`](https://www.npmjs.com/package/@pulumi/pulumi) package available on npm, and the Python runtime is contained in the [`pulumi`](https://pypi.org/project/pulumi/) package available on PyPI.
+2. A language SDK is responsible for preparing your program to be executed and observing its execution in order to detect resource registrations. When a resource is _registered_ (via `new Resource()` in JavaScript or `Resource(...)` in Python), the language SDK communicates the registration request back to the _deployment engine_. The language SDK is distributed as a regular package, just like any other code that might depend on your program. For example, the Node SDK is contained in the [`@pulumi/pulumi`](https://www.npmjs.com/package/@pulumi/pulumi) package available on npm, and the Python SDK is contained in the [`pulumi`](https://pypi.org/project/pulumi/) package available on PyPI.
 
 ## Deployment engine
 
@@ -44,7 +44,7 @@ The deployment engine is embedded in the `pulumi` CLI itself.
 
 A resource provider is made up of two different pieces:
 
-1. A _resource plugin_, is the binary used by the deployment engine to manage a resource. These plugins are stored in the _plugin cache_ (located in `~/.pulumi/plugins`) and can be managed using the [`pulumi plugin`](/docs/cli/commands/pulumi_plugin) set of commands.
+1. A _resource plugin_ is the binary used by the deployment engine to manage a resource. These plugins are stored in the _plugin cache_ (located in `~/.pulumi/plugins`) and can be managed using the [`pulumi plugin`](/docs/cli/commands/pulumi_plugin) set of commands.
 2. An _SDK_ which provides bindings for each type of resource the provider can manage.
 
 Like the language runtime itself, the SDKs are available as regular packages. For example, there is a [`@pulumi/aws`](https://www.npmjs.com/package/@pulumi/aws) package for Node available on npm and a [`pulumi_aws`](https://pypi.org/project/pulumi-aws) package for Python available on PyPI.  When these packages are added to your project, they run [`pulumi plugin install`](/docs/cli/commands/pulumi_plugin_install) behind the scenes to download the resource plugin from Pulumi.com.
@@ -387,7 +387,7 @@ resources:
 
 This time, the engine will not need to make any changes to `media-bucket` since its desired state matches its actual state. However, when the resource request for `app-bucket` is processed, the engine sees there's no existing resource named `app-bucket` in the current state so it must create a new S3 bucket. Once that process is complete and the language host has shut down, the engine looks for any resources in the current state which it did not see a resource registration for. In this case, since we removed the registration of `content-bucket` from our program, the engine calls the resource provider to delete the existing `content-bucket` bucket.
 
-## Creation and Deletion Order
+## Creation and deletion order
 
 Pulumi executes resource operations in parallel whenever possible, but understands that some resources may have dependencies on other resources. If an [output](/docs/concepts/inputs-outputs/) of one resource is provided as an input to another, the engine records the dependency between these two resources as part of the state and uses these when scheduling operations. This list can also be augmented by using the [dependsOn](/docs/concepts/resources#dependson) resource option.
 
