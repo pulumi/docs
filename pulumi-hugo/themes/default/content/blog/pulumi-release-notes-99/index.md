@@ -1,6 +1,7 @@
 ---
-title: "Pulumi Release Notes: Pulumi ESC, Deployments GA, MFA ..."
-date: 2024-01-31T11:06:04-08:00
+title: "Pulumi Release Notes: Pulumi ESC, Deployments GA, MFA, AWS S3 Express One Zone Support, and more!"
+allow_long_title: true
+date: 2024-02-01T11:06:04-08:00
 draft: false
 meta_desc: The latest Pulumi updates include Pulumi ESC, Deployments GA, MFA, AWS S3 Express One Zone Support, and more 
 meta_image: meta.png
@@ -21,13 +22,12 @@ We've had a busy last few months at Pulumi. From shipping a brand new product to
   - [Pulumi AI coverage and performance](#pulumi-ai-coverage-and-performance)
 - [Pulumi Cloud](#pulumi-cloud)
   - [Pulumi ESC Preview](#pulumi-esc-preview)
+  - [Developer Portal Gallery](#developer-portal-gallery)
   - [Deployments GA](#deployments-ga)
   - [Customer Managed Agents](#customer-managed-agents)
   - [MFA](#mfa)
   - [Pricing Calculator](#pricing-calculator)
   - [Historical Views](#historical-views)
-  - [Dev Portals](#dev-portals)
-  - [Remediation Policies](#remediation-policies)
 - [Core](#core)
 - [Providers and Packages](#providers-and-packages)
   - [AWS 6.0 to AWSX](#aws-60-to-awsx)
@@ -55,6 +55,12 @@ Pulumi AI can now write Pulumi programs for all 150 cloud providers in [Pulumi r
 
 [Pulumi ESC](/docs/esc/) is our answer to the growing needs of our customers to manage secret sprawl and streamline config management. Pulumi ESC allows teams to store and aggregate secrets and configuration from various sources into a composable collection called an environment. You can dynamically generate [OIDC credentials](/docs/pulumi-cloud/oidc/aws/#pulumi-esc-1) from all three major cloud providers (AWS, Azure and GCP), and integrate with other [secrets managers](/docs/esc/get-started/retrieve-external-secrets/) like AWS Secrets Manager, Hashicorp Vault, Azure Vault and GCP Secret manager to pull secrets during runtime. Its hierarchical structure simplifies the composition and reuse of configurations, ensuring secure, auditable management and robust access control. [Get started](/docs/esc/get-started/) with Pulumi ESC
 
+### Developer Portal Gallery 
+
+We launched a new template gallery in the [New Project Wizard](/docs/pulumi-cloud/developer-portals/new-project-wizard), supercharging Platform teams to provision and distribute organization templates for their development teams to get up and running fast. Developers can generate Pulumi programs from these templates, commit and push code to GitHub and trigger deployment within the Pulumi Cloud console. The gallery supports three template types: Organization Templates for custom internal projects, Pulumi Templates authored by Pulumi to cover common architectural patterns and AI Generated Templates created through Pulumi AI. For more information, check out the full [blog post](/blog/developer-portal-gallery/).
+
+{{< video title="Pulumi new AI and deploy" src="../developer-portal-gallery/gallery.mp4" controls="false" autoplay="true" loop="true" >}}
+
 ### Deployments GA
 
 [Pulumi Deployments](/docs/pulumi-cloud/deployments) was made [generally available](/blog/deployments-ga) with new improvements such as support for [GitHub Enterprise](/docs/using-pulumi/continuous-delivery/github-app/#github-enterprise-server-support). Since launch, Pulumi Deployments has made infrastructure management at scale seamless for our customers, offering out of the box features such as [Review Stack](/docs/pulumi-cloud/deployments/review-stacks) and multiple deployment triggers.
@@ -81,15 +87,7 @@ Stack update page now contains the historical resources in the stack and the his
 
 ![Historical views](../update-page-improvements/update-page.png)
 
-### Dev Portals
 
-Build [Developer Portals faster with Pulumi](/blog/building-developer-portals) using the host of tools we recently released. We've rolled out a [New Project Wizard](/docs/pulumi-cloud/developer-portals/new-project-wizard) to streamline infrastructure provisioning via point-and-click, [Organization Templates](/docs/pulumi-cloud/developer-portals/templates/) to standardize infrastructure creation practices, [Pulumi Backstage Plugin](/docs/pulumi-cloud/developer-portals/backstage/) to enable faster integration for teams already using Backstage, and an extension of 'pulumi new' to support private organization templates. These innovations are geared towards making deployment simpler, encouraging best practices, and providing flexibility for customizing developer portals, ultimately aimed at increasing productivity and efficiency.
-
-{{< video title="The New Project Wizard in Pulumi Cloud" src="https://www.pulumi.com/uploads/npw.mp4" controls="false" autoplay="true" loop="true" >}}
-
-### Remediation Policies
-
-We have enhanced our policy engine, [CrossGuard](/crossguard/) with [Remediation Policies](/blog/remediation-policies/). Users could previously use use CrossGuard to apply policies that are mandatory or advisory to ensure each infrastructure deployment is compliant with the company defined policies. With Remediation policies we've extended that capability to set the Policy engine to auto-apply remediation policies such as assigning tags without blocking the developers from the infrastructure deployment, simplifying enforcement of best practices.
 
 ## Core
 
@@ -100,6 +98,8 @@ Placeholder
 ### AWS 6.0 to AWSX
 
 We have launched [AWSx](https://www.pulumi.com/registry/packages/awsx/) 2.0, bringing all the benefits [AWS Classic 6.0](/blog/announcing-6-0-of-the-pulumi-aws-classic-provider/) to Pulumi Crosswalk for AWS (AWSx). The new versions offer several fixes and improvements, including support for the latest Terraform Plugin Framework, 56 new resources and 23 new functions for various AWS services.
+
+[!AWS 6.0 vs 5.0 provider coverage](/blog/announcing-6-0-of-the-pulumi-aws-classic-provider/aws_api.png)
 
 ### Pulumi Google Cloud Classic 7.0
 
