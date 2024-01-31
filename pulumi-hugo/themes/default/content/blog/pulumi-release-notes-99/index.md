@@ -71,13 +71,13 @@ We now support [multi-factor authentication](/blog/multi-factor-auth-mfa-in-pulu
 
 ### Pricing Calculator
 
-[Pulumi cost calculator](/pricing/#calculator) for Team Edition enables you to quickly estimate the cost of using Pulumi Cloud. Simply input the number of resources in all your cloud accounts and the percentage of time they will be running to quickly get the total cost per month with a break down of estimated credits, free credits and cost per credit. You can also use the calculator to estimate the cost of using Pulumi Deployments
+[Pulumi cost calculator](/pricing/#calculator) for Team Edition enables you to quickly estimate the cost of using Pulumi Cloud. Simply input the number of resources in all your cloud accounts and the percentage of time they will be running to quickly get the total cost per month with a break down of estimated credits, free credits and cost per credit. You can also use the calculator to estimate the cost of using Pulumi Deployments.
 
 ![Screenshot of the pricing calculator](../pricing-calculator-blog/pricing_calc.png)
 
 ### Historical Views
 
-Stack update page now contains the historical resources in the stack and the historical stack outputs. Simply click on details on each pulumi update to see the resource state and stack output at the time of the update. This history extends all the way back to the first update of the stack. Check [historical views](/blog/update-page-improvements/) blog post for more
+Stack update page now contains the historical resources in the stack and the historical stack outputs. Simply click on details on each pulumi update to see the resource state and stack output at the time of the update. This history extends all the way back to the first update of the stack. Check [historical views](/blog/update-page-improvements/) blog post for more.
 
 ![Historical views](../update-page-improvements/update-page.png)
 
@@ -103,9 +103,7 @@ We have launched [AWSx](https://www.pulumi.com/registry/packages/awsx/) 2.0 brin
 
 ### Pulumi Google Cloud Classic 7.0
 
-We have updated the [Pulumi Google Cloud Classic Provider](https://www.pulumi.com/registry/packages/gcp/) to reflect the latest developments from Google Cloud, including updates to existing resources and adding support for new resources, functions and input properties. One of the key update is the [fix](https://github.com/pulumi/pulumi-gcp/issues/722) for renaming of the Service Account resource for consistency and ease of use. We also made changes to align with [upstream changes](https://www.pulumi.com/blog/google-cloud-7-0/#:~:text=upstream%20documentation) to labels. Upgrading to this new version is straightforward. Checkout our [migration guide](https://www.pulumi.com/registry/packages/gcp/how-to-guides/7-0-migration/)
-
-https://www.pulumi.com/blog/google-cloud-7-0/
+We have updated the [Pulumi Google Cloud Classic Provider](https://www.pulumi.com/registry/packages/gcp/) to reflect the latest developments from Google Cloud, including updates to existing resources and adding support for new resources, functions and input properties. One of the key update is the [fix](https://github.com/pulumi/pulumi-gcp/issues/722) for renaming of the Service Account resource for consistency and ease of use. We also made changes to align with [upstream changes](https://www.pulumi.com/blog/google-cloud-7-0/#:~:text=upstream%20documentation) to labels. Upgrading to this new version is straightforward. Checkout our [blog post](/blog/google-cloud-7-0/) and [migration guide](https://www.pulumi.com/registry/packages/gcp/how-to-guides/7-0-migration/).
 
 ### AWS S3 Express One Zone Support
 
