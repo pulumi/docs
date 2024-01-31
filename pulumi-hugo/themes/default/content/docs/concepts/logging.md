@@ -40,11 +40,11 @@ pulumi.log.error("fatal error")
 {{% choosable language python %}}
 
 ```python
-log.info("message")
-log.info("message", resource)
-log.debug("hidden by default")
-log.warn("warning")
-log.error("fatal error")
+pulumi.info("message")
+pulumi.info("message", resource)
+pulumi.debug("hidden by default")
+pulumi.warn("warning")
+pulumi.error("fatal error")
 ```
 
 {{% /choosable %}}
