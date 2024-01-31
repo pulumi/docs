@@ -62,7 +62,8 @@ values:
     # Functions -- configuration may be transformed with the following functions
     # ---------------------------------------------------------------------------------------
 
-    # Scalar values may be marked secret
+    # Scalar values may be marked secret. The value will be encrypted and
+    # stored as ciphertext when the environment is saved.
     # Path is "app.password"
     password:
       fn::secret: YQ!r24kdF7
@@ -76,6 +77,11 @@ values:
     # Path is "app.passwordB64"
     passwordB64:
       fn::toBase64: ${app.password}
+
+    # Decodes a base64-encoded string
+    # Path is "app.plainString"
+    plainString:
+      fn::fromBase64: ${app.passwordB64}
 
     # Encode the argument as a JSON string
     # Path is "app.jsonConfig"
