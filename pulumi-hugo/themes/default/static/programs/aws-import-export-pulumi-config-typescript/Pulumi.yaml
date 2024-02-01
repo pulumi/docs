@@ -1,0 +1,7 @@
+name: aws-import-export-pulumi-config-typescript
+runtime: nodejs
+description: An example that retrieves and exports a Pulumi config value
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: aws-typescript
