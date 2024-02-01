@@ -34,7 +34,7 @@ We've had a busy last few months at Pulumi. From shipping a brand new product of
   - [AWSX now uses AWS 6.0](#awsx-now-uses-aws-60)
   - [Pulumi Google Cloud Classic 7.0](#pulumi-google-cloud-classic-70)
   - [AWS S3 Express One Zone Support](#aws-s3-express-one-zone-support)
-  - [New Provider resources](#new-provider-resources)
+  - [New Provider Resources](#new-provider-resources)
   - [New Community Providers](#new-community-providers)
 - [Wrap up](#wrap-up)
 
@@ -48,7 +48,7 @@ Pulumi AI's new feature enables [deploying cloud infrastructure using AI prompts
 
 ### Pulumi AI coverage and performance
 
-Pulumi AI can now write Pulumi programs for all 150 cloud providers in the [Pulumi registry](https://www.pulumi.com/registry/) - up from 20 cloud providers. Pulumi AI has also been updated to OpenAI's GPT-4 Turbo for enhanced performance along with fine tuning of our prompts to improve our AI's ability to write code.
+Pulumi AI can now write Pulumi programs for all 150 cloud providers in the [Pulumi registry](/registry/) - up from 20 cloud providers. Pulumi AI has also been updated to OpenAI's GPT-4 Turbo for enhanced performance along with fine tuning of our prompts to improve our AI's ability to write code.
 
 ## Pulumi Cloud
 
@@ -110,23 +110,30 @@ Additionally, the import system no longer renames resources to try and make uniq
 
 We have launched [AWSx](https://www.pulumi.com/registry/packages/awsx/) 2.0, bringing all the benefits [AWS Classic 6.0](/blog/announcing-6-0-of-the-pulumi-aws-classic-provider/) to Pulumi Crosswalk for AWS (AWSx). The new versions offer several fixes and improvements, including support for the latest Terraform Plugin Framework, 56 new resources and 23 new functions for various AWS services.
 
-[!AWS 6.0 vs 5.0 provider coverage](/blog/announcing-6-0-of-the-pulumi-aws-classic-provider/aws_api.png)
+![AWS 6.0 vs 5.0 provider coverage](/blog/announcing-6-0-of-the-pulumi-aws-classic-provider/aws_api.png)
 
 ### Pulumi Google Cloud Classic 7.0
 
-We have updated the [Pulumi Google Cloud Classic Provider](https://www.pulumi.com/registry/packages/gcp/) to reflect the latest developments from Google Cloud, including updates to existing resources and adding support for new resources, functions and input properties. One of the key update is the [fix](https://github.com/pulumi/pulumi-gcp/issues/722) for renaming of the Service Account resource for consistency and ease of use. We also made changes to align with [upstream changes](https://www.pulumi.com/blog/google-cloud-7-0/#:~:text=upstream%20documentation) to labels. Upgrading to this new version is straightforward. Check out our [blog post](/blog/google-cloud-7-0/) and [migration guide](https://www.pulumi.com/registry/packages/gcp/how-to-guides/7-0-migration/).
+We have updated the [Pulumi Google Cloud Classic Provider](registry/packages/gcp/) to reflect the latest developments from Google Cloud, including updates to existing resources and adding support for new resources, functions and input properties. One of the key update is the [fix](https://github.com/pulumi/pulumi-gcp/issues/722) for renaming of the Service Account resource for consistency and ease of use. We also made changes to align with [upstream changes](https://www.pulumi.com/blog/google-cloud-7-0/#:~:text=upstream%20documentation) to labels. Upgrading to this new version is straightforward. Check out our [blog post](/blog/google-cloud-7-0/) and [migration guide](/registry/packages/gcp/how-to-guides/7-0-migration/).
 
 ### AWS S3 Express One Zone Support
 
 We [added support](/blog/amazon-s3-express-one-zone/) for [Amazon S3 Express One Zone](https://aws.amazon.com/s3/storage-classes/express-one-zone/), a new storage class offering up to 10X faster performance and reduced request costs by 50%. S3 Express One Zone is ideal for data-intensive applications such as AI/ML, HPC, etc. This update is part of our commitment to provide timely and effective support for the latest AWS offerings.
 
-### New Provider resources
+### New Provider Resources
 
-Placeholder
+We have added 641 functions and 662 resources across our most popular providers, along with many more throughout our ecosystem.
+
+![New Provider Resources and Functions](new-provider-resources-functions.png)
 
 ### New Community Providers
 
-Placeholder
+We welcome new providers to our registry! 
+
+* [Pinecone](/registry/packages/pinecone/)
+* [Talos Linux](/registry/packages/talos/)
+
+![New Community Providers](new-community-providers.png)
 
 ## Wrap up
 
