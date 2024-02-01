@@ -20,6 +20,7 @@ We've had a busy last few months at Pulumi. From shipping a brand new product of
 - [AI](#ai)
   - [Deploy with Pulumi within Pulumi AI](#deploy-with-pulumi-within-pulumi-ai)
   - [Pulumi AI coverage and performance](#pulumi-ai-coverage-and-performance)
+  - [Pulumi AI Answers](#pulumi-ai-answers)
 - [Pulumi Cloud](#pulumi-cloud)
   - [Pulumi ESC Preview](#pulumi-esc-preview)
   - [Developer Portal Gallery](#developer-portal-gallery)
@@ -50,11 +51,18 @@ Pulumi AI's new feature enables [deploying cloud infrastructure using AI prompts
 
 Pulumi AI can now write Pulumi programs for all 150 cloud providers in the [Pulumi registry](/registry/) - up from 20 cloud providers. Pulumi AI has also been updated to OpenAI's GPT-4 Turbo for enhanced performance along with fine tuning of our prompts to improve our AI's ability to write code.
 
+### Pulumi AI Answers
+
+Pulumi AI Answers has become a go-to repository, hosting an extensive collection of over 50,000 anonymized, infrastructure-as-code commonly asked queries, all carefully selected and presented by Pulumi. As this repository continues to expand, we're seeing an exponential increase in user traffic, underscoring the immense value it offers. It's inspiring to see the Pulumi community actively leveraging it as they build and scale their cloud infrastructure
+
+
 ## Pulumi Cloud
 
 ### Pulumi ESC Preview
 
-[Pulumi Environment, Secrets and Configuration (ESC)](/docs/esc/) is our answer to the growing needs of our customers to manage secret sprawl and streamline config management. Pulumi ESC allows teams to store and aggregate secrets and configuration from various sources into a composable collection called an environment. You can dynamically generate [OIDC credentials](/docs/pulumi-cloud/oidc/aws/#pulumi-esc-1) from all three major cloud providers (AWS, Azure and GCP), and integrate with other [secrets managers](/docs/esc/get-started/retrieve-external-secrets/) like AWS Secrets Manager, Hashicorp Vault, Azure Vault and GCP Secret manager to pull secrets during runtime. Its hierarchical structure simplifies the composition and reuse of configurations, ensuring secure, auditable management and robust access control. [Get started](/docs/esc/get-started/) with Pulumi ESC
+[Pulumi Environment, Secrets and Configuration (ESC)](/docs/esc/) is our answer to the growing needs of our customers to manage secret sprawl and streamline config management. Pulumi ESC allows teams to store and aggregate secrets and configuration from various sources into a composable collection called an environment. You can dynamically generate [OIDC credentials](/docs/pulumi-cloud/oidc/aws/#pulumi-esc-1) from all three major cloud providers (AWS, Azure and GCP), and integrate with other [secrets managers](/docs/esc/get-started/retrieve-external-secrets/) like AWS Secrets Manager, Hashicorp Vault, Azure Vault and GCP Secret manager to pull secrets during runtime. Its hierarchical structure simplifies the composition and reuse of configurations, ensuring secure, auditable management and robust access control. With Pulumi ESC, the trend is clear: organizations are choosing its comprehensive approach for managing secrets and configurations, and they are here to stay. [Get started](/docs/esc/get-started/) with Pulumi ESC
+
+![Pulumi ESC Growth](pulumi-esc-growth.png)
 
 ### Developer Portal Gallery 
 
