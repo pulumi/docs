@@ -53,7 +53,7 @@ Pulumi AI can now write Pulumi programs for all 150 cloud providers in the [Pulu
 
 ### Pulumi AI Answers
 
-Pulumi AI Answers has become a go-to repository, hosting an extensive collection of over 50,000 anonymized, infrastructure-as-code commonly asked queries, all carefully selected and presented by Pulumi. As this repository continues to expand, we're seeing an exponential increase in user traffic, underscoring the immense value it offers. It's inspiring to see the Pulumi community actively leveraging it as they build and scale their cloud infrastructure
+[Pulumi AI Answers](https://www.pulumi.com/ai/answers), launch late last year, has become a go-to repository, hosting an extensive collection of over 50,000 anonymized, infrastructure-as-code commonly asked queries, all carefully selected and presented by Pulumi. As this repository continues to expand, we're seeing an exponential increase in user traffic, underscoring the immense value it offers. It's inspiring to see the Pulumi community actively leveraging it as they build and scale their cloud infrastructure
 
 
 ## Pulumi Cloud
@@ -72,7 +72,7 @@ We launched a new template gallery in the [New Project Wizard](/docs/pulumi-clou
 
 ### Deployments GA
 
-[Pulumi Deployments](/docs/pulumi-cloud/deployments) was made [generally available](/blog/deployments-ga) with new improvements such as support for [GitHub Enterprise](/docs/using-pulumi/continuous-delivery/github-app/#github-enterprise-server-support). Since launch, Pulumi Deployments has made infrastructure management at scale seamless for our customers, offering out of the box features such as [Review Stack](/docs/pulumi-cloud/deployments/review-stacks) and multiple deployment triggers.
+[Pulumi Deployments](/docs/pulumi-cloud/deployments) was made [generally available](/blog/deployments-ga) with new improvements such as support for [GitHub Enterprise](/docs/using-pulumi/continuous-delivery/github-app/#github-enterprise-server-support). Since launch, Pulumi Deployments has made infrastructure management at scale seamless for our customers, offering out of the box features such as [Review Stacks](/docs/pulumi-cloud/deployments/review-stacks) and multiple deployment triggers.
 
 ### Customer Managed Agents
 
