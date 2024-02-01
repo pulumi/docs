@@ -616,13 +616,18 @@ A `Resource` has the following schema:
 
 | Property     | Type            | Required | Description                                                                                                                                                    |
 |--------------|-----------------|----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `name`       | `string`        | Yes      | The name of the resource.                                                                                                                                      |
+| `id`         | `string`        | Yes      | The provider determined ID for this resource type. The is required unless `component` is `true`                                                                |
 | `type`       | `Type Token`    | Yes      | The type of the corresponding Pulumi resource.                                                                                                                 |
-| `id`         | `string`        | Yes      | The provider determined ID for this resource type.                                                                                                             |
-| `parent`     | `string`        | No       | The name of the [parent](/docs/concepts/options/parent/) resource. The mentioned name must be present in the `nameTable`.     |
+| `name`       | `string`        | Yes      | The name of the resource.                                                                                                                                      |
+| `logicalName` | `string`       | No       | The [logical name](/docs/concepts/resources/names/#logicalname) of the resource. The original `name` property is then used just for codegen purposes (i.e. the source name). If either property is not set then the other field is used to fill it in. |
+| `parent`     | `string`        | No       | The name of the [parent](/docs/concepts/options/parent/) resource. The mentioned name must be present in the `nameTable`.                                      |
 | `provider`   | `string`        | No       | The name of the [provider](/docs/concepts/options/provider/) resource. The mentioned name must be present in the `nameTable`. |
 | `version`    | `string`        | No       | The [version](/docs/concepts/options/version/) of the provider to use.                                                        |
 | `properties` | `array[string]` | No       | The list of properties to include in the generated code. If unspecified all properties will be included.                                                       |
+| `component`  | `boolean`       | No       | This import should create an empty component resource. `id` must not be set if this is `true`.                                                                 |
+| `remote`     | `boolean`       | No       | This is a component in a [component package](/docs/using-pulumi/pulumi-packages/#types-of-pulumi-packages). `component` must be `true` if this is `true`.      |
+
+To make it easier to import resources into complex programs and/or components, you can run `pulumi preview --import-file <file>` to generate a placeholder import file for every resource that would be created. The generated file will contain all the names, URNs, and types already filled in, with blank `id` fields that need to be filled in.
 
 Check out the video clip below for a demo.
 
