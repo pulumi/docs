@@ -36,6 +36,36 @@
         <meta name="robots" content="noindex" />
     {{ end }}
 
+    <!-- Organization schema for google -->
+    {{ if eq .Params.include_organization_schema true }}
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "Corporation",
+                "name": "Pulumi",
+                "@id": "https://www.pulumi.com/product/",
+                "description": "Pulumi lets engineers deliver infrastructure as code faster, using any programming language. The Pulumi Platform enables customers to manage 10x more resources at lower cost than traditional tools, while Pulumi Insights unlocks analytics and search across cloud infrastructure, and enables novel AI-driven infrastructure automation.",
+                "logo": "https://camo.githubusercontent.com/ffc5afc9f46a37b2f0d286d9d0af06786843507b2ddc162cdb41ef6a08f3b5ab/68747470733a2f2f7777772e70756c756d692e636f6d2f696d616765732f6c6f676f2f6c6f676f2d6f6e2d77686974652d626f782e7376673f",
+                "foundingDate" : "2017",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Seattle, WA",
+                    "addressCountry": "United States",
+                    "postalCode": "98101",
+                    "streetAddress": "1525” 4th Ave. Suite 800"
+                },
+                "email": "mailto:team@pulumi.com",
+                "url": "https://www.pulumi.com",
+                "sameAs": [
+                    "https://twitter.com/PulumiCorp",
+                    "https://www.linkedin.com/company/pulumi",
+                    "https://www.youtube.com/channel/UC2Dhyn4Ev52YSbcpfnfP0Mw",
+                    "https://github.com/pulumi/pulumi"
+                ]
+            }
+        </script>
+    {{ end }}
+
 
     <!-- Events info for Google events. -->
     {{ if .Params.event_data }}
