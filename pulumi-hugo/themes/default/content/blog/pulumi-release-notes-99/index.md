@@ -29,6 +29,7 @@ We've had a busy last few months at Pulumi. From shipping a brand new product of
   - [Pricing Calculator](#pricing-calculator)
   - [Historical Views](#historical-views)
 - [Core](#core)
+  - [Import Improvements](#import-improvements)
 - [Providers and Packages](#providers-and-packages)
   - [AWSX now uses AWS 6.0](#awsx-now-uses-aws-60)
   - [Pulumi Google Cloud Classic 7.0](#pulumi-google-cloud-classic-70)
@@ -91,7 +92,17 @@ The Pulumi Cloud stack update page now contains the historical resources in the 
 
 ## Core
 
-Placeholder
+### Import Improvements
+
+We've made several improvements to the [`pulumi import`](/docs/using-pulumi/adopting-pulumi/import/#pulumi-import-command) command to make it easier to [bulk import](/docs/using-pulumi/adopting-pulumi/import/#bulk-import-operations) resources into complex programs and [components](/docs/concepts/resources/components/). You can now:
+
+- Import one resource and then use that resource as the parent for another imported resource. Previously, parents could only refer to resources that already existed, meaning you would have had to do two imports.
+- Specify that a resource is a component to be used as the parent of other imported resources via a new `component` property in the import file.
+- Specify parents by name without having to have the parent URN in the `nameTable`.
+- Specify the [`logicalName`](/docs/concepts/resources/names/#logicalname) of resources.
+- Run `pulumi preview --import-file <file>` on a program to generate a placeholder import file for every resource that would be created as part of the program. The generated file will contain all the names, types, and URNs already filled in, with blank `id` fields that need to be filled in. This is useful when you already have the structure of the resources for your program and just need to fill in the IDs of existing resources.
+
+Additionally, the import system no longer renames resources to try and make unique names and no longer errors just because two resources of different types have the same name. The rules for uniqueness now match what's valid when writing a Pulumi program. The import system will error if you try to import two resources that would end up with the same URN.
 
 ## Providers and Packages
 
