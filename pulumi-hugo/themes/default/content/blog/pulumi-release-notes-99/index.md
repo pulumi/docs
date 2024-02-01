@@ -43,7 +43,7 @@ We've had a busy last few months at Pulumi. From shipping a brand new product of
 
 ### Deploy with Pulumi within Pulumi AI
 
-Pulumi AI's new feature enables [deploying cloud infrastructure using AI prompts](/blog/pulumi-ai-new). Users can rapidly generate and deploy templates through natural language inputs in 'pulumi new' CLI command and new project wizard, significantly streamlining the cloud setup process. Additionally, you now have the option to deploy the Pulumi AI generated Pulumi programs from within [Pulumi AI]([/ai/](https://www.pulumi.com/ai)) and in the New Project Wizard in the Pulumi Cloud console.
+Pulumi AI's new feature enables [deploying cloud infrastructure using AI prompts](/blog/pulumi-ai-new). Users can rapidly generate and deploy templates through natural language inputs in 'pulumi new' CLI command and new project wizard, significantly streamlining the cloud setup process. Additionally, you now have the option to deploy the Pulumi AI generated Pulumi programs from within [Pulumi AI](https://www.pulumi.com/ai) and in the New Project Wizard in the Pulumi Cloud console.
 
 {{< video title="Pulumi new AI and deploy" src="../pulumi-ai-new/pulumi-new-ai.mp4" controls="false" autoplay="true" loop="true" >}}
 
@@ -122,7 +122,7 @@ We have launched [AWSx](https://www.pulumi.com/registry/packages/awsx/) 2.0, bri
 
 ### Pulumi Google Cloud Classic 7.0
 
-We have updated the [Pulumi Google Cloud Classic Provider](registry/packages/gcp/) to reflect the latest developments from Google Cloud, including updates to existing resources and adding support for new resources, functions and input properties. One of the key update is the [fix](https://github.com/pulumi/pulumi-gcp/issues/722) for renaming of the Service Account resource for consistency and ease of use. We also made changes to align with [upstream changes](https://www.pulumi.com/blog/google-cloud-7-0/#:~:text=upstream%20documentation) to labels. Upgrading to this new version is straightforward. Check out our [blog post](/blog/google-cloud-7-0/) and [migration guide](/registry/packages/gcp/how-to-guides/7-0-migration/).
+We have updated the [Pulumi Google Cloud Classic Provider](/registry/packages/gcp/) to reflect the latest developments from Google Cloud, including updates to existing resources and adding support for new resources, functions and input properties. One of the key update is the [fix](https://github.com/pulumi/pulumi-gcp/issues/722) for renaming of the Service Account resource for consistency and ease of use. We also made changes to align with [upstream changes](https://www.pulumi.com/blog/google-cloud-7-0/#:~:text=upstream%20documentation) to labels. Upgrading to this new version is straightforward. Check out our [blog post](/blog/google-cloud-7-0/) and [migration guide](/registry/packages/gcp/how-to-guides/7-0-migration/).
 
 ### AWS S3 Express One Zone Support
 
