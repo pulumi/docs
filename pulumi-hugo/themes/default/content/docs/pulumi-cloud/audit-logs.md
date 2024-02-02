@@ -206,6 +206,14 @@ Custom defined keys:
 | Team Deleted                             | indicates the deletion of a team from organization                                                                         |
 | Team Updated                             | indicates the updating of a team in an organization                                                                        |
 | User Added New Identity to Their Account | indicates a user has associated a new identity with their Pulumi account                                            |
-| User Login                        | indicates a user has successfully logged into the Pulumi Cloud                                                             |
-| User Login Failed                               | indicates a user tried and failed to log into the Pulumi Cloud        |
-| SAML Configuration Updated                      | indicates the organization's SAML configuration has been updated  |
+| User Login                               | indicates a user has successfully logged into the Pulumi Cloud                                                             |
+| User Login Failed                        | indicates a user tried and failed to log into the Pulumi Cloud        |
+| SAML Configuration Updated               | indicates the organization's SAML configuration has been updated  |
+| Environment Created                      | indicates the creation of an environment |
+| Environment Updated                      | indicates the updating of an environment |
+| Environment Deleted                      | indicates the deletion of an environment |
+| Environment Open                         | indicates the opening of an environment |
+| Environment Read                         | indicates the reading of an open environment |
+| Environment Read Open                    | indicates the opening and reading of an environment |
+| Environment Unauthorized Open            | indicates the attempt to open an environment the user does not have permission to |
+| Stack Provider Open                      | indicates the opening of a stack provider within an environment |
