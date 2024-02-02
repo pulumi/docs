@@ -33,8 +33,6 @@ aliases:
     - /case-studies/merceded-benz
 ---
 
-{{< youtube "MGA_Bba2GqQ?rel=0" >}}
-
 ## About MBRDNA
 
 Embedded in a worldwide network, Mercedes-Benz Research & Development North America
@@ -47,6 +45,8 @@ durability of the latest driver assistant and telematic systems. The Digital Hub
 Seattle, Washington focuses on developing cloud architectures and platforms for the next
 generation of connected car services. MBRDNA also has a Testing and Regulatory Affairs
 Division in Ann Arbor and an Advanced Vehicle Design center in Carlsbad.
+
+{{< youtube "MGA_Bba2GqQ?rel=0" >}}
 
 ## Innovating in the Era of the Connected Car
 
