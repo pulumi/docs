@@ -13,6 +13,7 @@ aliases:
 - /get-started/install/
 - /docs/reference/install/
 - /docs/get-started/install/
+- /install/
 
 search:
    boost: true
