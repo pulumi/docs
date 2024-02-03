@@ -64,27 +64,19 @@ Next, install the required language runtime, if you have not already.
 
 ### Configure Pulumi to access your AWS account
 
-Pulumi requires cloud credentials to manage and provision resources. You must use an IAM user account that has **Programmatic access** with rights to deploy and manage resources handled through Pulumi.
+Pulumi requires cloud credentials to manage and provision resources. You must use an IAM user account that has **programmatic access** with rights to deploy and manage resources handled through Pulumi.
 
 If you have previously <a href="https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html" target="_blank">installed</a> and <a href="https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html" target="_blank">configured</a> the AWS CLI, Pulumi will respect and use your configuration settings.
 
-If you do not have the AWS CLI installed or plan on using Pulumi from within a CI/CD pipeline, <a href="https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html#access-keys-and-secret-access-keys" target="_blank">retrieve your access key ID and secret access key</a> and then set the `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` environment variables on your workstation.
+If you don't have the AWS CLI installed, or you plan on using Pulumi in a CI/CD pipeline, <a href="https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html#access-keys-and-secret-access-keys" target="_blank">retrieve your access key ID and secret access key</a> and then set the `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` environment variables on your workstation:
 
-{{< chooser os "linux,macos,windows" >}}
-{{% choosable os linux %}}
+{{< chooser os "linux,macos,windows" />}}
 
-```bash
-$ export AWS_ACCESS_KEY_ID=<YOUR_ACCESS_KEY_ID>
-$ export AWS_SECRET_ACCESS_KEY=<YOUR_SECRET_ACCESS_KEY>
-```
-
-{{% /choosable %}}
-
-{{% choosable os macos %}}
+{{% choosable os "linux,macos" %}}
 
 ```bash
-$ export AWS_ACCESS_KEY_ID=<YOUR_ACCESS_KEY_ID>
-$ export AWS_SECRET_ACCESS_KEY=<YOUR_SECRET_ACCESS_KEY>
+$ export AWS_ACCESS_KEY_ID="<YOUR_ACCESS_KEY_ID>"
+$ export AWS_SECRET_ACCESS_KEY="<YOUR_SECRET_ACCESS_KEY>"
 ```
 
 {{% /choosable %}}
@@ -97,7 +89,24 @@ $ export AWS_SECRET_ACCESS_KEY=<YOUR_SECRET_ACCESS_KEY>
 ```
 
 {{% /choosable %}}
-{{< /chooser >}}
+
+AWS profiles are also supported:
+
+{{% choosable os "linux,macos" %}}
+
+```bash
+$ export AWS_PROFILE="<YOUR_PROFILE_NAME>"
+```
+
+{{% /choosable %}}
+
+{{% choosable os windows %}}
+
+```powershell
+> $env:AWS_PROFILE = "<YOUR_PROFILE_NAME>"
+```
+
+{{% /choosable %}}
 
 For additional information on setting and using AWS credentials, see [AWS Setup](/registry/packages/aws/installation-configuration/).
 
