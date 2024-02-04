@@ -2,10 +2,11 @@
 default: ensure build serve
 
 devcontainer::
-	mkdir -p .devvcontainer
+	mkdir -p .devcontainer
 	git submodule update --init .github/devcontainer
 	git submodule update --remote --merge .github/devcontainer
-	rsync -av .devcontainer/devcontainer .devcontainer
+	rsync -av .github/devcontainer/.devcontainer .
+	cp -f .devcontainer/hugo/* .devcontainer/
 
 .PHONY: clean
 clean:
