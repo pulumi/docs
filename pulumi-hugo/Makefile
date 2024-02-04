@@ -2,10 +2,10 @@
 default: ensure build serve
 
 devcontainer::
-	git submodule update --init --recursive .devcontainer
-	git submodule update --remote --merge .devcontainer
-	rm -rf .devcontainer.json
-	cp .devcontainer/devcontainer.json .devcontainer.json
+	mkdir -p .devvcontainer
+	git submodule update --init .github/devcontainer
+	git submodule update --remote --merge .github/devcontainer
+	rsync -av .devcontainer/devcontainer .devcontainer
 
 .PHONY: clean
 clean:
