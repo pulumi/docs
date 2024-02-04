@@ -45,7 +45,7 @@ class MyComponent extends pulumi.ComponentResource {
 
 ```typescript
 class MyComponent extends pulumi.ComponentResource {
-    constructor(name, opts) {
+    constructor(name: string, opts: pulumi.ComponentResourceOptions) {
         super("pkg:index:MyComponent", name, {}, opts);
     }
 }
