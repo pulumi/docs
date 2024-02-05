@@ -241,7 +241,7 @@ const bucketObject = new aws.s3.BucketObject("index.html", {
     source: new pulumi.asset.FileAsset("./index.html"),
     contentType: "text/html",
     acl: "public-read",
-}, { dependsOn: publicAccessBlock });
+}, { dependsOn: [publicAccessBlock,ownershipControls] });
 ```
 
 {{% /choosable %}}
@@ -267,7 +267,7 @@ bucket_object = s3.BucketObject(
     source=pulumi.FileAsset('index.html'),
     content_type='text/html',
     acl='public-read',
-    opts=pulumi.ResourceOptions(depends_on=[public_access_block]),
+    opts=pulumi.ResourceOptions(depends_on=[public_access_block, ownership_controls]),
 )
 ```
 
@@ -300,7 +300,8 @@ _, err = s3.NewBucketObject(ctx, "index.html", &s3.BucketObjectArgs{
     ContentType: pulumi.String("text/html"),
     Acl:         pulumi.String("public-read"),
 }, pulumi.DependsOn([]pulumi.Resource{
-    publicAccessBlock,
+			publicAccessBlock,
+			ownershipControls,
 }))
 if err != nil {
     return err
@@ -335,9 +336,10 @@ var indexHtml = new BucketObject("index.html", new()
     Acl = "public-read",
 }, new CustomResourceOptions
 {
-    DependsOn = new[]
+    DependsOn = new Resource[]
     {
         publicAccessBlock,
+        ownershipControls,
     },
 });
 ```
@@ -373,7 +375,9 @@ var indexHtml = new BucketObject("index.html", BucketObjectArgs.builder()
     .contentType("text/html")
     .acl("public-read")
     .build(), CustomResourceOptions.builder()
-        .dependsOn(publicAccessBlock)
+        .dependsOn(
+            publicAccessBlock,
+            ownershipControls)
         .build());
 ```
 
@@ -410,6 +414,7 @@ resources:
     options:
       dependsOn:
         - ${public-access-block}
+        - ${ownership-controls}
 ```
 
 {{% /choosable %}}
