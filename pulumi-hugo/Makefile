@@ -6,7 +6,10 @@ devcontainer::
 	git submodule update --init .github/devcontainer
 	git submodule update --remote --merge .github/devcontainer
 	rsync -av .github/devcontainer/.devcontainer .
+	yarn prettier --write .devcontainer/*.json
+	yarn prettier --write .devcontainer/*/*.json
 	cp -f .devcontainer/hugo/* .devcontainer/
+	rm -rf .github/devcontainer/* .github/devcontainer/.* 2>/dev/null || true
 
 .PHONY: clean
 clean:
