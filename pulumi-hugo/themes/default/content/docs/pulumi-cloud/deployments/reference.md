@@ -207,7 +207,6 @@ The following will allow you to configure a private key and allow access to GitH
 
     ```bash
     mkdir /root/.ssh && printf -- "$SSHKEY" > /root/.ssh/id_ed25519
-    cat /root/.ssh/id_ed25519
     chmod 600 /root/.ssh/id_ed25519
     ssh-keyscan github.com >> ~/.ssh/known_hosts
      cd .. && git config --global --add url.\"git@github.com:\".insteadOf \"https://github.com\"
