@@ -152,6 +152,13 @@
                     "scanRepositories": ["/home/vscode", "/workspaces"],
                     "path": "/usr/local/bin/git"
                 },
+                "github.copilot": {
+                    "enable": {
+                        "*": false,
+                        "markdown": false,
+                        "plaintext": false
+                    }
+                },
                 "go": {
                     "testTags": "all",
                     "vetOnSave": "off",
@@ -299,6 +306,7 @@
                 "github.vscode-pull-request-github",
                 "matt-rudge.auto-open-preview-panel",
                 "ms-vscode-remote.remote-containers",
+                "ms-edgedevtools.vscode-edge-devtools",
                 "bierner.markdown-preview-github-styles",
                 "visualstudioexptteam.vscodeintellicode",
                 "bierner.markdown-preview-github-styles",
