@@ -18,7 +18,7 @@ ensure:
 	./scripts/ensure.sh
 
 .PHONY: lint
-lint: ensure
+lint:
 	./scripts/lint.sh
 
 .PHONY: format
