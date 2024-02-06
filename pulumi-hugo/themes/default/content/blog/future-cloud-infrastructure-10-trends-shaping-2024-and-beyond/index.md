@@ -36,7 +36,8 @@ tags:
     - iac
     - cloud-computing
     - multi-cloud
-    - forecast
+    - finops
+    - platform-engineering
     - devops
 
 # See the blogging docs at https://github.com/pulumi/pulumi-hugo/blob/master/BLOGGING.md

@@ -21,7 +21,7 @@ tags:
     - python
     - SageMaker
     - huggingface
-    - platform_engineering
+    - platform-engineering
 ---
 
 [Pulumi CLI]:/docs/install/
@@ -70,6 +70,8 @@ We will use the `sagemaker-aws-python` [Pulumi Template] to bootstrap our Python
 * [AWS Credentials] (pre-configured)
 
 ## Instructions
+
+{{< youtube "9rwsutZbVfI?rel=0" >}}
 
 ### 1. Login to Pulumi Cloud and initialize stack
 
