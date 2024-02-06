@@ -19,7 +19,12 @@ We build the Pulumi website statically with Hugo, manage our Node.js dependencie
 
 ### VS Code devcontainer
 
-Alternatively you can use the [devcontainer environment](https://code.visualstudio.com/docs/remote/create-dev-container) included in this repo. Open this folder in [VS Code](https://code.visualstudio.com/) and run the `Remote-Containers: Reopen in container` command in the [command palette](https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette).
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/pulumi/pulumi-hugo)
+
+Alternatively you can select from the following:
+
+1. Click ['Open in Github Codespaces'](https://codespaces.new/pulumi/pulumi-hugo) to develop remotely in Github Codespaces from your browser, or via your local VSCode IDE connected to Github Codespaces.
+2. Use the [devcontainer environment](https://code.visualstudio.com/docs/remote/create-dev-container) included in this repo locally with your own VSCode + Docker environment. To do so, open this folder in [VSCode](https://code.visualstudio.com/) and run the `Remote-Containers: Reopen in container` command in the [command palette](https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette).
 
 Within the container you can run the various make commands explained below. Port 1313 is forwarded into the container so you can use your normal browser to access the results of `make serve` or `make serve-all` at http://localhost:1313.
 
