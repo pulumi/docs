@@ -1,7 +1,7 @@
 
 default: ensure build serve
 
-devcontainer::
+devcontainer: ensure
 	mkdir -p .devcontainer
 	git submodule update --init .github/devcontainer
 	git submodule update --remote --merge .github/devcontainer
@@ -20,7 +20,7 @@ ensure:
 	./scripts/ensure.sh
 
 .PHONY: lint
-lint:
+lint: ensure
 	./scripts/lint.sh
 
 .PHONY: format
