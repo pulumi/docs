@@ -7,6 +7,11 @@ authors: ["guinevere-saenger"]
 tags: ["go", "migration", "packages", "github-actions", "people-ops", "ci-cd"]
 ---
 
+{{% notes type="info" %}}
+We recently updated this article to reflect that `parentTeamId` of the `Team` resource accepts a `string` instead of an `int` since v5.9.1 of the
+[Pulumi Github](/registry/packages/github/) package.
+{{% /notes %}}
+
 Ah, GitHub. The home of all developers. The place where we share code. The world’s most awkward social media site. The secret LinkedIn for techies. The tool we use for company org structure, work planning, code ownership, and permissions…
 
 Wait.
@@ -278,15 +283,10 @@ func setupTeams(ctx *pulumi.Context, parentTeam *Team) error {
   for _, childTeam := range parentTeam.Teams {
      // set each child team's parent team ID to the current team ID
      ghChildTeam, err := github.NewTeam(ctx, childTeam.Slug, &github.TeamArgs{
-        Description: pulumi.String(childTeam.Description),
-        Name:        pulumi.String(childTeam.Name),
-        Privacy:     pulumi.String("closed"),
-        ParentTeamId: ghParentTeam.ID().ApplyT(func(id interface{}) int {
-        // we need to re-cast id as an int so we can then transform it into a pulumi.IntOutput, which can be used to set the ParentTeamId.
-           x := fmt.Sprintf("%v", id)
-           y, _ := strconv.Atoi(x)
-           return y
-        }).(pulumi.IntOutput),
+        Description:  pulumi.String(childTeam.Description),
+        Name:         pulumi.String(childTeam.Name),
+        Privacy:      pulumi.String("closed"),
+        ParentTeamId: ghParentTeam.ID(),
      }, pulumi.Protect(false))
      if err != nil {
         fmt.Println("encountered error creating new Pulumi github team: ", childTeam.Name)
