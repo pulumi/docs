@@ -177,8 +177,8 @@ export class Convert {
                 };
             case "kube":
                 return {
-                    name: "kube2pulumi",
-                    githubURL: "https://github.com/pulumi/kube2pulumi",
+                    name: "the Kubernetes converter",
+                    githubURL: "https://github.com/pulumi/pulumi",
                 };
             case "arm":
                 return {
@@ -447,11 +447,16 @@ export class Convert {
             <a href={this.conversionTool.githubURL}>{this.conversionTool.name}</a> :
             this.conversionTool.name;
 
-        if (this.from === "tf") {
-            tool = <code>pulumi convert --from terraform</code>;
-        }
-        if (this.from === "arm") {
-            tool = <code>pulumi convert --from arm</code>;
+        switch (this.from) {
+            case "tf":
+                tool = <code>pulumi convert --from terraform</code>;
+                break;
+            case "arm":
+                tool = <code>pulumi convert --from arm</code>;
+                break;
+            case "kube":
+                tool = <code>pulumi convert --from kubernetes</code>;
+                break;
         }
 
         return (

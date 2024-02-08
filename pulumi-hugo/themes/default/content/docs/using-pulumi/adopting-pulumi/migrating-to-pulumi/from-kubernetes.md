@@ -756,8 +756,10 @@ The Helm Release resource also supports importing existing Helm releases by usin
 
 ## Converting Kubernetes YAML
 
-In addition to deploying Kubernetes YAML via the methods above, you can also convert Kubernetes YAML to Pulumi program code using `kube2pulumi`. `kube2pulumi` will take your YAML manifest and
-convert it into the language of your choice. You can get started using `kube2pulumi` either by [installing the binary](https://github.com/pulumi/kube2pulumi#building-and-installation) or via the [web interface](/kube2pulumi/).
+In addition to deploying Kubernetes YAML via the methods above, you can also convert Kubernetes YAML to Pulumi program code using `pulumi convert --from kubernetes --language <language> --out <output_dir>`. The converter will take your YAML manifest and
+convert it into your preferred language within the designated output directory. For more information about this plugin, please visit the [official repository](https://github.com/pulumi/pulumi-converter-kubernetes).
+
+Alternatively, for a user-friendly interface, you can also opt to convert your manifests via the intuitive [web interface](/kube2pulumi/).
 
 ## Rendering Kubernetes YAML
 

@@ -55,10 +55,10 @@ examples:
                   image: pulumi/pulumi-kubernetes-operator:v0.0.2
                   command:
                     - pulumi-kubernetes-operator
-                args:
-                  - "--zap-level=debug"
-                imagePullPolicy: Always
-                env:
+                  args:
+                    - "--zap-level=debug"
+                  imagePullPolicy: Always
+                  env:
                     - name: WATCH_NAMESPACE
                       valueFrom:
                         fieldRef:
@@ -99,61 +99,61 @@ examples:
               - patch
               - update
               - watch
-        - apiGroups:
-            - apps
-          resources:
-            - deployments
-            - daemonsets
-            - replicasets
-            - statefulsets
-          verbs:
-            - create
-            - delete
-            - get
-            - list
-            - patch
-            - update
-            - watch
-        - apiGroups:
-            - monitoring.coreos.com
-          resources:
-            - servicemonitors
-          verbs:
-            - get
-            - create
-        - apiGroups:
-            - apps
-          resourceNames:
-            - pulumi-kubernetes-operator
-          resources:
-            - deployments/finalizers
-          verbs:
-            - update
-        - apiGroups:
-            - ""
-          resources:
-            - pods
-          verbs:
-            - get
-        - apiGroups:
-            - apps
-          resources:
-            - replicasets
-            - deployments
-          verbs:
-            - get
-        - apiGroups:
-            - pulumi.com
-          resources:
-            - '*'
-          verbs:
-            - create
-            - delete
-            - get
-            - list
-            - patch
-            - update
-            - watch
+          - apiGroups:
+              - apps
+            resources:
+              - deployments
+              - daemonsets
+              - replicasets
+              - statefulsets
+            verbs:
+              - create
+              - delete
+              - get
+              - list
+              - patch
+              - update
+              - watch
+          - apiGroups:
+              - monitoring.coreos.com
+            resources:
+              - servicemonitors
+            verbs:
+              - get
+              - create
+          - apiGroups:
+              - apps
+            resourceNames:
+              - pulumi-kubernetes-operator
+            resources:
+              - deployments/finalizers
+            verbs:
+              - update
+          - apiGroups:
+              - ""
+            resources:
+              - pods
+            verbs:
+              - get
+          - apiGroups:
+              - apps
+            resources:
+              - replicasets
+              - deployments
+            verbs:
+              - get
+          - apiGroups:
+              - pulumi.com
+            resources:
+              - '*'
+            verbs:
+              - create
+              - delete
+              - get
+              - list
+              - patch
+              - update
+              - watch
 
 form:
     hubspot_form_id: 8381e562-5fdf-4736-bb10-86096705e4ee
