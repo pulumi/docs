@@ -105,7 +105,8 @@ We will now define our EC2 instance resource below.
 ```typescript
 {{< example-program-snippet path="aws-ec2-sg-nginx-server" language="typescript" from="1" to="10" >}}
 
-{{< example-program-snippet path="aws-ec2-sg-nginx-server" language="typescript" from="23" to="31" >}}
+{{< example-program-snippet path="aws-ec2-sg-nginx-server" language="typescript" from="23" to="29" >}}
+{{< example-program-snippet path="aws-ec2-sg-nginx-server" language="typescript" from="31" to="33" >}}
 ```
 
 {{% /choosable %}}
@@ -115,7 +116,8 @@ We will now define our EC2 instance resource below.
 ```python
 {{< example-program-snippet path="aws-ec2-sg-nginx-server" language="python" from="1" to="11" >}}
 
-{{< example-program-snippet path="aws-ec2-sg-nginx-server" language="python" from="22" to="31" >}}
+{{< example-program-snippet path="aws-ec2-sg-nginx-server" language="python" from="22" to="27" >}}
+{{< example-program-snippet path="aws-ec2-sg-nginx-server" language="python" from="29" to="31" >}}
 ```
 
 {{% /choosable %}}
@@ -124,7 +126,9 @@ We will now define our EC2 instance resource below.
 
 ```yaml
 {{< example-program-snippet path="aws-ec2-sg-nginx-server" language="yaml" from="1" to="5" >}}
-{{< example-program-snippet path="aws-ec2-sg-nginx-server" language="yaml" from="18" to="35" >}}
+{{< example-program-snippet path="aws-ec2-sg-nginx-server" language="yaml" from="18" to="30" >}}
+
+{{< example-program-snippet path="aws-ec2-sg-nginx-server" language="yaml" from="34" to="35" >}}
 ```
 
 {{% /choosable %}}
