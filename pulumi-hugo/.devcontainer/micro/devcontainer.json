@@ -1,5 +1,5 @@
 {
-  "name": "pulumi/devcontainer:hugo",
+  "name": "pulumi/devcontainer:hugo-micro",
   "remoteUser": "vscode",
   "dockerFile": "Dockerfile",
   "init": true,
@@ -11,19 +11,11 @@
   "securityOpt": ["seccomp=unconfined"],
   "features": {},
   "mounts": [],
-  "postCreateCommand": "devcontainer-links",
-  //"workspaceFolder": "/workspaces/devcontainer",
-  //"workspaceMount": "source=.,target=/home/vscode/devcontainer,type=bind,consistency=cached",
-  //"workspaceFolder": "/home/vscode/devcontainer",
   "forwardPorts": [1313, 2222, 6000, 7681, 8080],
   "customizations": {
     "vscode": {
       "settings": {
         "telemetry.enableTelemetry": "off",
-        "initializeCommand": "echo 'Initializing...'",
-        "postCreateCommand": "echo 'Post create...'",
-        "postStartCommand": "echo 'Post start...'",
-        "postAttachCommand": "echo 'Post attach...'",
         "window": {
           "titleBarStyle": "custom",
           "title": "${localWorkspaceFolderBasename}${separator}${containerName}${separator}${profileName}${separator}${activeEditorShort}"
@@ -87,8 +79,6 @@
           "formatOnSave": true,
           "insertSpaces": true,
           "tabScrolling": "auto",
-          //"tabFocusMode": false,
-          //"tabMovesFocus": false,
           "tabCompletion": "on",
           "tabDecoration": true,
           "fontLigatures": true,
@@ -150,13 +140,6 @@
           "scanRepositories": ["/home/vscode", "/workspaces"],
           "path": "/usr/local/bin/git"
         },
-        "github.copilot": {
-          "enable": {
-            "*": false,
-            "markdown": false,
-            "plaintext": false
-          }
-        },
         "go": {
           "testTags": "all",
           "vetOnSave": "off",
@@ -172,7 +155,6 @@
         },
         "terminal": {
           "integrated": {
-            //"cwd": "/home/vscode/devcontainer",
             "fontSize": 14,
             "scrollback": 10000,
             "cursorStyle": "outline",
@@ -189,18 +171,6 @@
               "linux": "/usr/bin/bash"
             }
           }
-        },
-        "vs-kubernetes": {
-          "vs-kubernetes.namespace": "*",
-          "vs-kubernetes.outputFormat": "yaml",
-          "vs-kubernetes.helm-path": "/usr/local/bin/helm",
-          "vs-kubernetes.kubeconfig": "/home/vscode/.kube/config",
-          "vs-kubernetes.kubectl-path": "/usr/local/bin/kubectl",
-          "vs-kubernetes.knownKubeconfigs": [
-            "/workspaces/*/.kube/config",
-            "/home/vscode/*/.kube/config",
-            "/home/vscode/.kube/config"
-          ]
         },
         "remote": {
           "restoreForwardedPorts": true,
@@ -234,7 +204,6 @@
           ]
         },
         "workbench": {
-          "colorTheme": "Cyberpunk",
           "startupEditor": "readme",
           "action.terminal.focusNext": {
             "key": "ctrl+shift+down",
@@ -298,28 +267,10 @@
       },
       "extensions": [
         "golang.go",
-        "vscodevim.vim",
-        "github.copilot",
-        "max-ss.cyberpunk",
         "ms-python.python",
         "redhat.vscode-yaml",
-        "esbenp.prettier-vscode",
         "oderwat.indent-rainbow",
-        "okteto.kubernetes-context",
-        "ms-vsliveshare.vsliveshare",
-        "chadonsom.auto-view-readme",
-        "ms-azuretools.vscode-docker",
-        "github.vscode-github-actions",
-        "ms-kubernetes-tools.kind-vscode",
-        "ms-vscode.vscode-typescript-next",
-        "github.vscode-pull-request-github",
-        "matt-rudge.auto-open-preview-panel",
-        "ms-vscode-remote.remote-containers",
-        "ms-edgedevtools.vscode-edge-devtools",
-        "bierner.markdown-preview-github-styles",
-        "visualstudioexptteam.vscodeintellicode",
-        "bierner.markdown-preview-github-styles",
-        "ms-kubernetes-tools.vscode-kubernetes-tools"
+        "ms-vscode.vscode-typescript-next"
       ]
     }
   }
