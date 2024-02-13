@@ -5,16 +5,16 @@ meta_desc: Pulumi's open source infrastructure as code SDK enables you to create
 include_organization_schema: true
 
 hero:
-  title: [ "Open Source", "Infrastructure as Code" ]
+  title: [ "10x Infrastructure", "Engineering With AI" ]
   description: |
-    Manage infrastructure, secrets, and configurations intuitively on any cloud.
+    Gain 10x better scale, more productivity, and faster time to market.
   cta_text: Get Started
   cta_link: /docs/get-started/
   secondary_cta_text: Talk to a human
   secondary_cta_link: /contact/?form=sales
 
 code_faster:
-  title: Build and ship faster with infrastructure as code
+  title: Build and ship faster using<br/>open source infrastructure as code
   description: |
     Author infrastructure code using programming languages you know and love. Write statements to define infrastructure using your IDE with autocomplete, type checking, and documentation.
 

@@ -4,8 +4,8 @@
             <div class="flex">
                 <div class="w-full p-6 home-page-hero-text lg:pt-14">
                     <h1 class="flex flex-col items-center">
-                        <span class="inline-block mb-3 text-center" data-text="{{ index (.Params.hero.title) 0 }}">{{ index (.Params.hero.title) 0 }}</span>
-                        <span class="rainbow-text inline-block text-center" data-text="{{ index (.Params.hero.title) 1 }}">{{ index (.Params.hero.title) 1 }}</span>
+                        <span class="inline-block mb-3 text-center" data-text="{{ index (.Params.hero.title) 0 }}"><span class="rainbow-text">10x</span> Infrastructure</span>
+                        <span class="inline-block text-center" data-text="{{ index (.Params.hero.title) 1 }}">Engineering with AI</span>
                     </h1>
 
                     <p class="mt-6 text-center leading-7">{{ .Params.hero.description | markdownify }}</p>
@@ -77,7 +77,7 @@
         <div class="container mx-auto z-10 relative">
             <div class="w-full lg:w-2/3 mx-auto">
                 <div class="text-center">
-                    <h3>{{ .Params.code_faster.title }}</h3>
+                    <h3>{{ .Params.code_faster.title | markdownify }}</h3>
                     <p class="text-lg">{{ .Params.code_faster.description | markdownify }}</p>
                     {{ range $item := .Params.code_faster.items }}
                         <h6>{{ $item.title }}</h6>
