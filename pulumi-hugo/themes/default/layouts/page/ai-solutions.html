@@ -1,88 +1,190 @@
 {{ define "hero" }}
-    {{ partial "hero.html" (dict "title" .Params.title) }}
+<header class="home-page-hero">
+    <div class="dot-background-container pointer-events-none">
+        <div class="dot-background"></div>
+    </div>
+    <div class="dot-overlay"></div>
+    <div class="home-page-hero-content pb-12">
+        <h1 class="flex flex-col items-center">
+            <span class="rainbow-text inline-block text-center">{{ .Params.overview.title }}</span>
+        </h1>
+        <p class="text-center leading-7">{{ .Params.overview.description }}</p>
+    </div>
+</header>
 {{ end }}
 
+
 {{ define "main" }}
-    <!-- Overview -->
-    <section class="container mx-auto mb-6">
-        <div class="flex flex-wrap">
-            <div class="max-w-5xl mx-auto text-center px-6">
-                <h2>{{ .Params.overview.title }}</h2>
-                <p>{{ .Params.overview.description | markdownify }}</p>
-            </div>
+
+<!-- Proof Points -->
+
+<section id="case-studies" class="relative px-6 mb-28">
+    <!-- <div class="shape-background pulumi-service-case-studies">
+        <div class="shape-container">
+            <div class="circle-right"></div>
         </div>
-    </section>
+    </div> -->
 
-    <!-- Logos carousel -->
-    <section class="container mx-auto text-center overflow-hidden px-3">
-        <h3 class="text-center mb-4">{{ .Params.customer_logos.title }}</h3>
-
-        <div class="w-full order-first pb-16 items-center justify-center hidden lg:block">
-            <pulumi-swiper slides="6" centered-slides="true" loop="true" autoplay="true" autoplay-delay="500" speed="2000">
-                {{ range $logo := .Params.customer_logos.logos }}
-                    <pulumi-swipeable>
-                        <div class="p-6 flex flex-col flex-grow items-end h-24 justify-center">
-                            {{ if $logo.link }}
-                                <a class="w-full h-full" href="{{ $logo.link }}" target="_blank">
-                                    {{ partial "customer-logo.html" (dict "logo" $logo.name) }}
-                                </a>
-                            {{ else }}
-                                {{ partial "customer-logo.html" (dict "logo" $logo.name) }}
-                            {{ end }}
-                        </div>
-                    </pulumi-swipeable>
-                {{ end }}
-            </pulumi-swiper>
-        </div>
-
-        <div class="w-full order-first pb-16 items-center justify-center block lg:hidden">
-            <pulumi-swiper slides="3" centered-slides="true" loop="true" autoplay="true" autoplay-delay="500" speed="2000">
-                {{ range $logo := .Params.customer_logos.logos }}
-                    <pulumi-swipeable>
-                        <div class="p-6 flex flex-col flex-grow items-end h-24 justify-center">
-                            {{ if $logo.link }}
-                                <a class="w-full h-full" href="{{ $logo.link }}" target="_blank">
-                                    {{ partial "customer-logo.html" (dict "logo" $logo.name) }}
-                                </a>
-                            {{ else }}
-                                {{ partial "customer-logo.html" (dict "logo" $logo.name) }}
-                            {{ end }}
-                        </div>
-                    </pulumi-swipeable>
-                {{ end }}
-            </pulumi-swiper>
-        </div>
-    </section>
-
-    <!-- Benefits -->
-    <section class="container mx-auto my-16 text-center">
-        <h2>{{ .Params.benefits.title }}</h2>
-        <div class="flex flex-wrap items-stretch justify-center">
-            {{ range $benefit := .Params.benefits.benefits.items }}
-                <div class="w-full h-full lg:w-1/3 px-8 mt-8 lg:mb-0">
-                    <div class="lg:max-w-xs lg:mx-auto">
-                        {{ partial "color-icon.html" (dict "icon" $benefit.icon "icon_color" $benefit.icon_color) }}
-                        <h5>{{ $benefit.title }}</h5>
-                        <p class="key-feature-description">{{ $benefit.description | markdownify }}</p>
-                    </div>
+    <div class="container mx-auto">
+        <div class="flex flex-wrap justify-center items-stretch rounded-xl bg-violet-100 gradient">
+            {{ $image_classes := "inline-block md:float-center " }}
+            {{ range .Params.case_studies.items }}
+            <div class="w-full lg:w-1/3 text-center my-8 relative">
+                <div class="h-full p-8">
+                    <p class="top-0 pb-4">{{ .description | markdownify }}</p>
+                    <a href="{{ .link }}" class="{{ $image_classes }}">
+                        <img src="{{ .logo }}" class="{{ $image_classes }}" alt="{{ .name }}" />
+                    </a>
+                    <!-- <div class="absolute bottom-0 left-0 w-full">
+                        <a href="{{ .link }}" class="btn-secondary whitespace-nowrap">Read More</a>
+                    </div> -->
                 </div>
+            </div>
             {{ end }}
         </div>
-    </section>
+    </div>
+</section>
 
-    <section class="bg-gray-100">
-        <div class="container mx-auto pb-12">
-            <div class="flex flex-col md:flex-row">
-                <div class="w-full lg:w-1/2 mx-auto p-6">
-                    <div class="mt-10 md:mt-0 bg-gray-200 rounded p-6 shadow">
-                        <h4>
-                            Reduce the friction of provisioning and managing infrastructure
-                            for AI and ML and accelerate your time to market. Chat with our team
-                        </h4>
-                        <pulumi-hubspot-form form-id="5d548546-024b-481a-9dad-6c1140548bee"></pulumi-hubspot-form>
-                    </div>
+
+<!-- Benefit Blades -->
+
+<section id="benefits" class="container mx-auto my-16">
+    <!-- <div class="max-w-5xl mx-auto text-center py-8">
+        <h2>Centrally manage all environments</h2>
+    </div> -->
+    <div class="flex flex-wrap items-stretch">
+        <div class="w-full lg:w-2/3">
+            <img src={{ .Params.benefits.author.img }} alt={{ .Params.benefits.author.alt }} />
+        </div>
+        <div class="w-full content-center lg:w-1/3 p-4">
+            <div class="card bg-white p-4 my-4">
+                <div>
+                    <h5>{{ .Params.benefits.author.title }}</h5>
+                </div>
+                <div class="mt-6">
+                    <p>{{ .Params.benefits.author.description }}</p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
+<section id="benefits" class="container mx-auto my-16">
+    <!-- <div class="max-w-5xl mx-auto text-center py-8">
+        <h2>Centrally manage all environments</h2>
+    </div> -->
+    <div class="flex flex-wrap items-stretch">
+        <div class="w-full lg:w-1/3 p-4">
+            <div class="card bg-white align-middle p-4 my-4">
+                <div>
+                    <h5>{{ .Params.benefits.save.title }}</h5>
+                </div>
+                <div class="mt-6">
+                    <p>{{ .Params.benefits.save.description }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="w-full lg:w-2/3">
+            <img src={{ .Params.benefits.save.img }} alt={{ .Params.benefits.save.alt }} />
+        </div>
+    </div>
+</section>
+
+<section id="benefits" class="container mx-auto my-16">
+    <!-- <div class="max-w-5xl mx-auto text-center py-8">
+        <h2>Centrally manage all environments</h2>
+    </div> -->
+    <div class="flex flex-wrap items-stretch">
+        <div class="w-full lg:w-2/3">
+            <img src={{ .Params.benefits.provision.img }} alt={{ .Params.benefits.provision.alt }} />
+        </div>
+        <div class="w-full lg:w-1/3 p-4">
+            <div class="card bg-white align-middle p-4 my-4">
+                <div>
+                    <h5>{{ .Params.benefits.provision.title }}</h5>
+                </div>
+                <div class="mt-6">
+                    <p>{{ .Params.benefits.provision.description }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Architecture Templates -->
+
+<section id="architectures" class="mx-auto my-16 py-16">
+    <h3 class="text-center mb-12">{{ .Params.architectures.title }}</h3>
+    <div class="lg:flex justify-center ">
+        {{ $image_classes := "inline-block md:float-center " }}
+        {{ range $item := .Params.architectures.items }}
+        <div class="lg:w-1/4 px-4 mb-12 lg:mb-0">
+            <div class="flex flex-col h-full card p-6 bg-white relative">
+                <p class="text-left mt-0 italic font-semibold text-black">{{ $item.description }}</p>
+                <a href="{{ .link }}" class="{{ $image_classes }}">
+                    <img src="{{ .logo }}" class="{{ $image_classes }}" alt="{{ .name }}" />
+                </a>
+                <div class="card-cta-btn text-center">
+                    <a class="btn-secondary" href="{{ $item.link }}">Deploy</a>
+                </div>
+            </div>
+        </div>
+        {{ end }}
+    </div>
+</section>
+
+<!-- Logos carousel -->
+<section class="container mx-auto text-center overflow-hidden px-3">
+    <h3 class="text-center mb-4">{{ .Params.customer_logos.title }}</h3>
+    <div class="w-full order-first pb-16 items-center justify-center hidden lg:block">
+        <pulumi-swiper slides="6" centered-slides="true" loop="true" autoplay="true" autoplay-delay="500" speed="2000">
+            {{ range $logo := .Params.customer_logos.logos }}
+            <pulumi-swipeable>
+                <div class="p-6 flex flex-col flex-grow items-end h-24 justify-center">
+                    {{ if $logo.link }}
+                    <a class="w-full h-full" href="{{ $logo.link }}" target="_blank">
+                        {{ partial "customer-logo.html" (dict "logo" $logo.name) }}
+                    </a>
+                    {{ else }}
+                    {{ partial "customer-logo.html" (dict "logo" $logo.name) }}
+                    {{ end }}
+                </div>
+            </pulumi-swipeable>
+            {{ end }}
+        </pulumi-swiper>
+    </div>
+
+    <div class="w-full order-first pb-16 items-center justify-center block lg:hidden">
+        <pulumi-swiper slides="3" centered-slides="true" loop="true" autoplay="true" autoplay-delay="500" speed="2000">
+            {{ range $logo := .Params.customer_logos.logos }}
+            <pulumi-swipeable>
+                <div class="p-6 flex flex-col flex-grow items-end h-24 justify-center">
+                    {{ if $logo.link }}
+                    <a class="w-full h-full" href="{{ $logo.link }}" target="_blank">
+                        {{ partial "customer-logo.html" (dict "logo" $logo.name) }}
+                    </a>
+                    {{ else }}
+                    {{ partial "customer-logo.html" (dict "logo" $logo.name) }}
+                    {{ end }}
+                </div>
+            </pulumi-swipeable>
+            {{ end }}
+        </pulumi-swiper>
+    </div>
+</section>
+
+<section class="bg-gray-100">
+    <div class="container mx-auto pb-12">
+        <div class="flex flex-col md:flex-row">
+            <div class="w-full lg:w-1/2 mx-auto p-6">
+                <div class="mt-10 md:mt-0 bg-gray-200 rounded p-6 shadow">
+                    <h4>
+                        Chat with our team
+                    </h4>
+                    <pulumi-hubspot-form form-id="5d548546-024b-481a-9dad-6c1140548bee"></pulumi-hubspot-form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 {{ end }}
