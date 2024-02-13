@@ -59,18 +59,27 @@ architectures:
           link: https://www.pulumi.com/solutions/ai-arch/
           logo: /logos/customers/pinecone.png
           description: |
-            Microservices backend and Pinecone vector database for semantic search.
-
+            Deploy a microservices backend and Pinecone vector database for semantic search.
         - name: Langchain
           link: https://github.com/pulumi/examples/tree/master/aws-py-langserve
           logo: /logos/customers/langchain.png
           description: |
-            LangServe running as Docker container on Amazon ECS and ALB.
+            Deploy LangServe running as Docker container on Amazon ECS and ALB.
+        - name: Hugging Face
+          link: https://github.com/pulumiverse/katwalk
+          logo: /logos/customers/huggingface.png
+          description: |
+            Deploy a LLM from Hugging Face on Docker, Azure, or Runpod.
+        - name: SageMaker
+          link: https://github.com/pulumi/templates/tree/master/sagemaker-aws-python
+          logo: /logos/customers/sagemaker.png
+          description: |
+            Deploy the Llama2 Large Language Model on Amazon SageMaker.
 
 
 
 customer_logos:
-  title: Organizations managing AI and ML infrastructure with Pulumi
+  title: Organizations managing AI infrastructure with Pulumi
   logos:
     - name: altana
     - name: cto-ai
