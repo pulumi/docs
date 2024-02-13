@@ -426,6 +426,15 @@ apps.
 In the second example, we showed you how to extend the Pulumi code to deploy additional cloud resources, in this case a
 Pinecone serverless index to hold custom data for our Gandalf app.
 
+{{% notes type="info" %}}
+
+Want to get hands on with LangServe and walk through it live? We have two upcoming dates for a workshop focused on LangChain and LangServe!
+
+- [Deploying LangChain Applications on AWS with Pulumi](https://www.pulumi.com/resources/deploying-langchain-applications-on-aws-with-pulumi) on March 14, 2024
+- [Deploying LangChain Applications on AWS with Pulumi](https://www.pulumi.com/resources/deploying-langchain-apps-on-aws-with-pulumi) again on April 17, 2024
+
+{{% /notes %}}
+
 As always, we welcome your feedback and contributions in
 the [Pulumi Community Slack](https://slack.pulumi.com/), [GitHub repository,](https://github.com/pulumi/pulumi)
 and [Pulumi Community Discussions](https://github.com/pulumi/pulumi/discussions).
