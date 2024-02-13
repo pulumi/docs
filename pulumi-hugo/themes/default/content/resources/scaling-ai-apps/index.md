@@ -50,7 +50,7 @@ hero:
 # Content for the left hand side section of the page.
 main:
     # Webinar title.
-    title: Scaling AI Apps
+    title: "AI Apps on Steroids: Scaling Vector Databases with Pinecone"
     # URL for embedding a URL for ungated webinars.
     youtube_url: "https://www.youtube.com/embed/D0cOJNf0pCQ?si=fWOK5IXu-sG3-C6A?rel=0"
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
