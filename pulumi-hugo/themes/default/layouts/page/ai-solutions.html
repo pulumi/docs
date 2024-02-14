@@ -33,7 +33,7 @@
                 <div class="h-full p-8">
                     <p class="top-0 pb-4">{{ .description | markdownify }}</p>
                     <a href="{{ .link }}" class="{{ $image_classes }}">
-                        <img src="{{ .logo }}" class="{{ $image_classes }}" alt="{{ .name }}" />
+                        <img src="{{ .logo }}" class="{{ $image_classes }} h-8" alt="{{ .name }}" />
                     </a>
                     <!-- <div class="absolute bottom-0 left-0 w-full">
                         <a href="{{ .link }}" class="btn-secondary whitespace-nowrap">Read More</a>
