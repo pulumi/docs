@@ -67,7 +67,7 @@ between the API and the database.
 | Variable Name            | Description                                                                                                                                  |
 |--------------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
 | PULUMI_LICENSE_KEY       | The license key value. A JWT string.<br><br>**Note**: Be sure to enclose the value in single-quotes.                                         |
-| PULUMI_DATABASE_ENDPOINT | The database server endpoint in the format `host:port`. This should be a MySQL 5.6 server.                                                   |
+| PULUMI_DATABASE_ENDPOINT | The database server endpoint in the format `host:port`. This should be a MySQL 8.0 server.                                                   |
 | PULUMI_DATABASE_NAME     | The name of the database on the database server.                                                                                             |
 | PULUMI_API_DOMAIN        | The internet or network-local domain using which the API service can be reached, e.g. `pulumiapi.acmecorp.com`. Default is `localhost:8080`. |
 | PULUMI_CONSOLE_DOMAIN    | The internet or network-local domain using which the Console can be reached, e.g. `pulumiconsole.acmecorp.com`. Default is `localhost:3000`. |
@@ -250,7 +250,7 @@ The database migrations container is configurable to enable connections to the d
 | MYSQL_ROOT_USERNAME           | The root username to log in to the MySQL database. Defaults to `root`.                                                                                                                                                              |
 | MYSQL_ROOT_PASSWORD           | The root user password to log in to the MySQL database.                                                                                                                                                                             |
 | MYSQL_ALLOW_EMPTY_PASSWORD    | Set to `true` to allow the container to be started with a blank password for the root user.                                                                                                                                         |
-| PULUMI_DATABASE_ENDPOINT      | The database server endpoint in the format `host:port`. This should be a MySQL 5.6 server.                                                                                                                                          |
+| PULUMI_DATABASE_ENDPOINT      | The database server endpoint in the format `host:port`. This should be a MySQL 8.0 server.                                                                                                                                          |
 | PULUMI_DATABASE_PING_ENDPOINT | The database server endpoint to ping for availability before login.                                                                                                                                                                 |
 | RUN_MIGRATIONS_EXTERNALLY     | Request for migrations to be run against an external database.                                                                                                                                                                      |
 
