@@ -48,7 +48,7 @@ I have learned a lot of skills that I have never learned in the classrooms.
 
 ## Reflection and Next Steps
 
-Although the CMS application's basic infrastructure is working and provides a content management interface for updating the webinars and events pages, there are more things I want to improve. During the last meeting with the marketing team, we discussed creating a [custom widget](https://www.netlifycms.org/docs/custom-widgets/#header) for shortcodes and image storage system. I created the necessary GitHub issues and added them to a GitHub project but didn't have the time to implement it.
+Although the CMS application's basic infrastructure is working and provides a content management interface for updating the webinars and events pages, there are more things I want to improve. During the last meeting with the marketing team, we discussed creating a [custom widget](https://docs.netlify.com/) for shortcodes and image storage system. I created the necessary GitHub issues and added them to a GitHub project but didn't have the time to implement it.
 
 I realized I should have had a clearer time schedule of development when writing the proposal and coming up with a priority list of the features I wanted to develop initially. During my meeting with the marketing team in the beginning we only discussed the potential improvement but failed to count the time it takes to develop each feature and the priority of them. If I could communicate about that better and write a better-timed plan, I would be able to implement more new features.
 

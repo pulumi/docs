@@ -8,19 +8,19 @@ authors: ["zephyr-zhou"]
 tags: ["aws", "github-actions", "netlify", "s3", "cloudfront", "certificate-manager", "route53"]
 ---
 
-[Netlify CMS](https://www.netlifycms.org/docs/intro/) is an open-source content management system that provides UI for editing content and adopting Git workflow. Initially, we want to take advantage of it to increase efficiency to edit Pulumi's website. However, during development, we found few examples are deploying the CMS application on AWS instead of Netlify, its home platform. Therefore, in this blog post, we would like to share how to organize Netlify's file structure and use Pulumi to store the content on S3 buckets, connect to CloudFront, and configure certificate in Certificate Manager.
+[Netlify CMS](https://docs.netlify.com/) is an open-source content management system that provides UI for editing content and adopting Git workflow. Initially, we want to take advantage of it to increase efficiency to edit Pulumi's website. However, during development, we found few examples are deploying the CMS application on AWS instead of Netlify, its home platform. Therefore, in this blog post, we would like to share how to organize Netlify's file structure and use Pulumi to store the content on S3 buckets, connect to CloudFront, and configure certificate in Certificate Manager.
 
 <!--more-->
 
 {{% notes type="info" %}}
-Because we are deploying CMS on AWS, we can not use Netlify's Identity Service, which manages the access token sent by Github API. We will introduce how to write the [External OAuth Client-Server](https://www.netlifycms.org/docs/external-oauth-clients/) and deploy it on AWS in the next post.
+Because we are deploying CMS on AWS, we can not use Netlify's Identity Service, which manages the access token sent by Github API. We will introduce how to write the [External OAuth Client-Server](https://docs.netlify.com/security/secure-access-to-sites/identity/registration-login/#external-provider-authentication) and deploy it on AWS in the next post.
 {{% /notes %}}
 
-For this project, we use [Nelify CMS's Github backend](https://www.netlifycms.org/docs/github-backend/). Our CMS app changes website content stored in another Github repository under the same account. The website uses Hugo as the static site generator.
+For this project, we use [Netlify CMS's Github backend](https://docs.netlify.com/git/overview/). Our CMS app changes website content stored in another Github repository under the same account. The website uses Hugo as the static site generator.
 
 ## Extracting CMS As a Stand-alone React App
 
-The [starter template](https://www.netlifycms.org/docs/start-with-a-template/) provided by Netlify implements the CMS application inside the target repository. We extract the CMS application from the target repository and copy it in another repository under the same Github account to improve the modularity.
+The [starter template](https://docs.netlify.com/get-started/) provided by Netlify implements the CMS application inside the target repository. We extract the CMS application from the target repository and copy it in another repository under the same Github account to improve the modularity.
 
 We can use the [templates from @talves](https://github.com/ADARTA/netlify-cms-react-example) to extract the CMS as a stand-alone React application.
 
@@ -28,11 +28,11 @@ We can use the [templates from @talves](https://github.com/ADARTA/netlify-cms-re
 
 The `config.yml` file configures Netlify CMS to look for content segments that can be edited and which backend instructions it needs to follow.
 
-The template, `cms/public/index.html` contains the entry point for React to insert the generated content under `<div id=root>`. We can change website's title, but more importantly, we linked the configuration file `cms/public/config.yml` of the Netlify CMS by following the [instructions](https://www.netlifycms.org/docs/configuration-options/).
+The template, `cms/public/index.html` contains the entry point for React to insert the generated content under `<div id=root>`. We can change website's title, but more importantly, we linked the configuration file `cms/public/config.yml` of the Netlify CMS by following the [instructions](https://docs.netlify.com/environment-variables/overview/#configuration-options-and-limitations).
 
 ![Custom Neltify Config File](./custom-config-file.png)
 
-The template uses config.json in `./src/components/NetlifyCMS/config.json`, and sets [CMS Manual Init](https://www.netlifycms.org/docs/beta-features/#manual-initialization) in file `./src/components/NetlifyCMS/setup.js` and file `./src/components/NetlifyCMS/index.js`.
+The template uses config.json in `./src/components/NetlifyCMS/config.json`, and sets [CMS Manual Init](https://docs.netlify.com/cli/get-started/#manual-setup) in file `./src/components/NetlifyCMS/setup.js` and file `./src/components/NetlifyCMS/index.js`.
 
 ![Template's CMS config](./template-cms-config1.jpg)
 ![Template's CMS config](./template-cms-config2.jpg)
@@ -51,7 +51,7 @@ Simplifying the file and deleting unneeded parameters produces this:
 
 ![File Structure](./file-structure.jpg)
 
-The `./src/index.js` file is the entry point for React to create the App class inside `./public/index.html`'s  `<div id=root>`. `App` (defined in `./src/App.js`) is a React Component that returns the `NetlifyCMS` React component defined inside `./src/components/NetlifyCMS/index.js`. We can also specify the [custom preview](https://www.netlifycms.org/docs/customization/#registerpreviewtemplate) and [custom widget](https://www.netlifycms.org/docs/custom-widgets/#header) for the CMS app in this file.
+The `./src/index.js` file is the entry point for React to create the App class inside `./public/index.html`'s  `<div id=root>`. `App` (defined in `./src/App.js`) is a React Component that returns the `NetlifyCMS` React component defined inside `./src/components/NetlifyCMS/index.js`. We can also specify the [custom preview](https://docs.netlify.com/create/cloud-project/previewing/) and [custom widget](https://docs.netlify.com/) for the CMS app in this file.
 
 To preview the CMS app content, run `yarn start`.
 

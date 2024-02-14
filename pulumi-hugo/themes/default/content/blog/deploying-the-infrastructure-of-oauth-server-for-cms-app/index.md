@@ -12,17 +12,17 @@ tags: ["aws","github-actions", "netlify", "oauth", "ecs", "fargate"]
 Some of the code in this post is out of date. See the [AWS guides](/docs/clouds/aws/guides/) for an updated overview and examples.
 {{% /notes %}}
 
-In our [previous post](/blog/deploying-netlify-cms-on-aws/), we deployed our CMS app on AWS instead of Netlify. We couldn't use [Netlify's Identity Service](https://docs.netlify.com/visitor-access/identity/#enable-identity-in-the-ui), which manages GitHub access to Netlify CMS, because we deployed on AWS. As a result, we needed to implement an external [OAuth Server](https://www.netlifycms.org/docs/external-oauth-clients/#header).
+In our [previous post](/blog/deploying-netlify-cms-on-aws/), we deployed our CMS app on AWS instead of Netlify. We couldn't use [Netlify's Identity Service](https://docs.netlify.com/visitor-access/identity/#enable-identity-in-the-ui), which manages GitHub access to Netlify CMS, because we deployed on AWS. As a result, we needed to implement an external [OAuth Server](https://docs.netlify.com/security/secure-access-to-sites/identity/registration-login/#external-provider-authentication).
 
 We used Netlify's Go example to deploy on ECS Fargate and configure the domain and certificate. To deploy the application on Fargate, we used a Typescript Pulumi project. This is a polyglot application where the OAuth server is implemented in Go and the infrastructure is deployed with Typescript. We'll show how we accomplished the deployment.
 
 <!--more-->
 
-[Backend](https://www.netlifycms.org/docs/github-backend/) is a package that supports communications between Netlify CMS and repositories like GitHub, GitLab, and Bitbucket. The Pulumi [example code](https://github.com/pulumi/examples/tree/master/aws-ts-netlify-cms-and-oauth/cms-oauth) uses backend to authenticate to the CMS. The OAuth Server also enables authorization for GitLab and Bitbucket by changing the callback URL to `https://{{YOUR_OAUTH_SERVER_URL}}/callback/{{YOUR_BACKEND_NAME}}`. To learn more about configuring OAuth Server, refer to the [Environment Variable and Pulumi Stack Configuration](/blog/deploying-the-infrastructure-of-oauth-server-for-cms-app#environment-variables-and-pulumi-stack-configuration) section.
+[Backend](https://docs.netlify.com/git/overview/) is a package that supports communications between Netlify CMS and repositories like GitHub, GitLab, and Bitbucket. The Pulumi [example code](https://github.com/pulumi/examples/tree/master/aws-ts-netlify-cms-and-oauth/cms-oauth) uses backend to authenticate to the CMS. The OAuth Server also enables authorization for GitLab and Bitbucket by changing the callback URL to `https://{{YOUR_OAUTH_SERVER_URL}}/callback/{{YOUR_BACKEND_NAME}}`. To learn more about configuring OAuth Server, refer to the [Environment Variable and Pulumi Stack Configuration](/blog/deploying-the-infrastructure-of-oauth-server-for-cms-app#environment-variables-and-pulumi-stack-configuration) section.
 
 ## Building the OAuth Server
 
-Netlify's CMS website provides [External OAuth Client examples](https://www.netlifycms.org/docs/external-oauth-clients/#header) for various languages and platforms. We used the [Go example](https://github.com/igk1972/netlify-cms-oauth-provider-go) as a template for our server.
+Netlify's CMS website provides [External OAuth Client examples](https://docs.netlify.com/security/secure-access-to-sites/identity/registration-login/#external-provider-authentication) for various languages and platforms. We used the [Go example](https://github.com/igk1972/netlify-cms-oauth-provider-go) as a template for our server.
 
 In *Netlify's example*, the `./dotenv/dotenv.go` retrieves environment variables from a file. The main.go file uses [goth](https://github.com/markbates/goth) to instantiate the OAuth provider. The `./randstr/randstr.go` file generates a random string for the `SESSION_SECRET` environment variable, which is used for authentication. However,  Pulumi can implement both functions, replacing the code in goth by using Pulumi's random package.
 
