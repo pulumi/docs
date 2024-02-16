@@ -216,18 +216,10 @@ values:
 
 It can be accessed through the `context` attribute and contains the following information:
 
-```yaml
-context:
-  rootEnvironment:
-    name: "..." # the name of the root environment being evaluated
-  currentEnvironment:
-    name: "..." # the name of the current environment being evaluated
-  pulumi:
-    user:
-      login: "..." #the user login identifier
-    organization:
-      login: "..." #the organization login identifier
-```
+* `context.rootEnvironment.name`: the name of the root environment being evaluated
+* `context.currentEnvironment.name`: the name of the current environment being evaluated
+* `context.user.login`: the user login identifier
+* `context.organization.login`: the organization login identifier
 
 ## Editing environments
 

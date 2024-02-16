@@ -34,6 +34,9 @@ values:
   # References to this value will use the path excluding the
   # top-level "values" key
 
+  # Values can interpolate contextual information
+  namespace: ${context.rootEnvironment.name}/${context.pulumi.user.login}
+
   # Path is "app"
   app:
     # Path is "app.setting"
