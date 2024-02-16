@@ -118,7 +118,7 @@ With that, it's time to get to start writing some real tests.
 
 As devoted practitioners of [test-driven development](https://en.wikipedia.org/wiki/Test-driven_development), we're going to start by writing some unit tests --- specifically, some _failing_ unit tests that we can fix by writing the Pulumi code to make them pass.
 
-Recall that our design requires just two cloud resources: a Lambda function and a Lambda function URL. For the function itself, we'll use the high-level [`aws.lambda.CallbackFunction`](/docs/concepts/inputs-outputs/function-serialization/) resource, one of my favorites for managing for Lambdas because it requires only one property: an inline JavaScript function to handle the event that triggers the Lambda.
+Recall that our design requires just two cloud resources: a Lambda function and a Lambda function URL. For the function itself, we'll use the high-level [`aws.lambda.CallbackFunction`](/docs/concepts/function-serialization/) resource, one of my favorites for managing for Lambdas because it requires only one property: an inline JavaScript function to handle the event that triggers the Lambda.
 
 For the URL resource --- the eventual triggerer of that event ---  you'll use an [`aws.lambda.FunctionURL`](/registry/packages/aws/api-docs/lambda/functionurl) configured to make the Lambda publicly accessible (i.e., available to anyone on the internet) and embeddable on any domain, making it easy, for example, to embed the URL as the `src` attribute of an [HTML5 `audio` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio).
 

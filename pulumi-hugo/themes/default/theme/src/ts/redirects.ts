@@ -9,7 +9,7 @@ if (path === "/docs/intro/concepts/programming-model/" || path === "/docs/refere
         "#aliases": "/docs/concepts/resources/#aliases",
         "#all": "/docs/concepts/inputs-outputs/#all",
         "#apply": "/docs/concepts/inputs-outputs/#apply",
-        "#assets-and-archives": "/docs/concepts/inputs-outputs/assets-archives/",
+        "#assets-and-archives": "/docs/concepts/assets-archives/",
         "#autonaming": "/docs/concepts/resources/#autonaming",
         "#components": "/docs/concepts/resources/#components",
         "#config": "/docs/concepts/config",

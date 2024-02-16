@@ -1,32 +1,32 @@
 [[entries]]
 term = "Component"
 description = "A Pulumi component is a logical group of resources that contains other components and physical cloud resources."
-link = "/docs/concepts/resources/components"
+link = "/docs/concepts/resources/components/"
 
 [[entries]]
 term = "Stack"
 description = "A stack is an isolated, independently configurable instance of a Pulumi program. Stacks are commonly used to denote different phases of development (such as development, staging and production) or feature branches (such as feature-x-dev, jane-feature-x-dev)."
-link = "/docs/concepts/stack"
+link = "/docs/concepts/stack/"
 
 [[entries]]
 term = "Program"
 description = "Pulumi programs are authored in general-purpose programming languages such as JavaScript or Python. You can use any packages supported by the language’s package manager, as well as Pulumi packages."
-link = "/docs/concepts/how-pulumi-works"
+link = "/docs/concepts/how-pulumi-works/"
 
 [[entries]]
 term = "Deployment Engine"
 description = "The deployment engine is responsible for computing the set of operations needed to drive the current state of your infrastructure into the desired state expressed by your program."
-link = "/docs/concepts/how-pulumi-works"
+link = "/docs/concepts/how-pulumi-works/"
 
 [[entries]]
 term = "Self-hosted"
 description = "Self-hosted in Pulumi applies to on-premise \"behind a firewall\" scenarios, as well as environments hosted within your own AWS, Azure, or Google Cloud account."
-link = "/docs/concepts/state#deciding-on-a-state-backend"
+link = "/docs/concepts/state/#deciding-on-a-state-backend"
 
 [[entries]]
 term = "Pulumi Cloud"
 description = "The Pulumi Cloud refers to the web application at `app.pulumi.com` which automatically manages deployment state and enables collaboration between developers and operators."
-link = "/docs/pulumi-cloud"
+link = "/docs/pulumi-cloud/"
 
 [[entries]]
 term = "IdP"
@@ -46,27 +46,27 @@ link = "https://en.wikipedia.org/wiki/SAML_Metadata#Introduction_to_SAML_Metadat
 [[entries]]
 term = "Organization"
 description = "An organization is the primary grouping unit for stacks within the Pulumi Cloud."
-link = "/docs/pulumi-cloud/organizations"
+link = "/docs/pulumi-cloud/organizations/"
 
 [[entries]]
 term = "Language Host"
 description = "The language host is responsible for running a Pulumi program and setting up an environment where it can register resources with the deployment engine."
-link = "/docs/concepts/how-pulumi-works"
+link = "/docs/concepts/how-pulumi-works/"
 
 [[entries]]
 term = "Language Executor"
 description = "A language executor is a binary named pulumi-language-<language-name>, that Pulumi uses to launch the runtime for the language your program is written in (e.g. Node or Python). This binary is distributed with the Pulumi CLI."
-link = "/docs/concepts/how-pulumi-works"
+link = "/docs/concepts/how-pulumi-works/"
 
 [[entries]]
 term = "Resource Provider"
 description = "A Pulumi resource provider consists of two different pieces: a resource plugin and an SDK."
-link = "/docs/concepts/resources/providers"
+link = "/docs/concepts/resources/providers/"
 
 [[entries]]
 term = "Resource Plugin"
 description = "A resource plugin is the binary used by the deployment engine to manage a resource."
-link = "/docs/concepts/how-pulumi-works"
+link = "/docs/concepts/how-pulumi-works/"
 
 [[entries]]
 term = "SDK"
@@ -76,52 +76,52 @@ link = "https://en.wikipedia.org/wiki/Software_development_kit"
 [[entries]]
 term = "Resources"
 description = "All resources have a name, which must be unique in the Pulumi program."
-link = "/docs/concepts/resources"
+link = "/docs/concepts/resources/"
 
 [[entries]]
 term = "Resource Args"
 description = "The args provided to a resource determine what inputs will be used to initialize the resource. These can be either raw values or outputs from other resources."
-link = "/docs/concepts/resources"
+link = "/docs/concepts/resources/"
 
 [[entries]]
 term = "Outputs"
 description = "Outputs are a key part of how Pulumi tracks dependencies between resources. Because the values of Outputs are not available until resources are created, these are represented using the special Output type."
-link = "/docs/concepts/inputs-outputs"
+link = "/docs/concepts/inputs-outputs/"
 
 [[entries]]
 term = "Secrets"
 description = "The Pulumi CLI and programming model offer ways for you to encrypt configuration values with the --secret flag or by programmatically wrapping it as a secret at runtime."
-link = "/docs/concepts/config"
+link = "/docs/concepts/config/"
 
 [[entries]]
 term = "Stack Output"
 description = "A stack output is a value exported from a stack. A stack’s outputs can be easily retrieved from the Pulumi CLI and are displayed on pulumi.com."
-link = "/docs/concepts/stack#outputs"
+link = "/docs/concepts/stack/#outputs"
 
 [[entries]]
 term = "Stack Reference"
 description = "Stack references provide a way to access the outputs of one stack from another stack."
-link = "/docs/concepts/stack#stack-references"
+link = "/docs/concepts/stack/#stack/references/"
 
 [[entries]]
 term = "Config"
 description = "Configuration values are always stored as strings, but can be parsed as richly typed values. You may set and get configuration values via the CLI or by using the Config object."
-link = "/docs/concepts/config"
+link = "/docs/concepts/config/"
 
 [[entries]]
 term = "Dynamic Providers"
 description = "Dynamic Providers are a flexible and low-level mechanism to plug arbitrary code directly into the deployment process. It is currently in preview."
-link = "/docs/concepts/resources/dynamic-providers"
+link = "/docs/concepts/resources/dynamic-providers/"
 
 [[entries]]
 term = "Packages"
 description = "Pulumi packages are normal NPM or Python packages. They transitively depend on @pulumi/pulumi which defines how resources created by a Pulumi program will be communicated to the Pulumi engine. The ability to register resources with the Pulumi engine is the only difference between a Pulumi package and any other NPM package."
-link = "/registry"
+link = "/registry/"
 
 [[entries]]
 term = "Runtime Code"
 description = "You can create libraries and components that allow the caller to pass in JavaScript callbacks to invoke at runtime."
-link = "/docs/concepts/inputs-outputs/function-serialization"
+link = "/docs/concepts/function-serialization/"
 
 [[entries]]
 term = "SAML"
@@ -131,12 +131,12 @@ link = "https://en.wikipedia.org/wiki/SAML_2.0"
 [[entries]]
 term = "Stack Tags"
 description = "Stacks have associated metadata in the form of tags, with each tag consisting of a name and value. Stack tags are only supported when logged into the Pulumi Cloud backend."
-link = "/docs/concepts/stack#stack-tags"
+link = "/docs/concepts/stack/#stack-tags"
 
 [[entries]]
 term = "API"
 description = "Application Programming Interface. Pulumi offers APIs for working with a wide variety of cloud platforms, as well as higher-level APIs that make it easier to deliver cloud applications and infrastructure."
-link = "/registry"
+link = "/registry/"
 
 [[entries]]
 term = "CLI"
@@ -146,30 +146,30 @@ link = "/docs/cli/"
 [[entries]]
 term = "Project"
 description = "A Pulumi project is any folder which contains a Pulumi.yaml file."
-link = "/docs/concepts/projects"
+link = "/docs/concepts/projects/"
 
 [[entries]]
 term = "Project File"
 description = "The Pulumi.yaml project file specifies metadata about your project."
-link = "/docs/concepts/projects/project-file"
+link = "/docs/concepts/projects/project-file/"
 
 [[entries]]
 term = "Paths"
 description = "When your Pulumi program references resources in the local filesystem, they are always relative to the working directory."
-link = "/docs/concepts/projects#paths"
+link = "/docs/concepts/projects/#project-relative-paths"
 
 [[entries]]
 term = "State"
 description = "Pulumi stores its own copy of the current state of your infrastructure. This is often called state, and is stored in transactional snapshots we call checkpoints."
-link = "/docs/concepts/state"
+link = "/docs/concepts/state/"
 
 
 [[entries]]
 term = "Checkpoint"
 description = "A checkpoint is recorded by Pulumi at various points so that it can operate reliably—whether that means diffing goal state versus current state during an update, recovering from failure, or destroying resources accurately to clean up afterwards."
-link = "/docs/concepts/state"
+link = "/docs/concepts/state/"
 
 [[entries]]
 term = "Secrets Encryption"
 description = "The Pulumi Cloud automatically manages per-stack encryption keys on your behalf. Anytime you encrypt a value using --secret or by programmatically wrapping it as a secret at runtime, a secure protocol is used between the CLI and Pulumi Cloud that ensures secret data is encrypted in transit, at rest, and physically anywhere it gets stored."
-link = "/docs/concepts/secrets"
+link = "/docs/concepts/secrets/"

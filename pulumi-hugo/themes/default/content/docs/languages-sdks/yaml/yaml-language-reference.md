@@ -411,7 +411,7 @@ The expression `${policyVersion}` will have the value `v1.1`.
 
 ##### `fn::*Asset` and `fn::*Archive`
 
-[Assets and Archives](/docs/concepts/inputs-outputs/assets-archives/) are intrinsic types to Pulumi, like strings and numbers, and some resources may take these as inputs or return them as outputs. The built-ins create each kind of asset or archive. Each takes all take a single string value.
+[Assets and Archives](/docs/concepts/assets-archives/) are intrinsic types to Pulumi, like strings and numbers, and some resources may take these as inputs or return them as outputs. The built-ins create each kind of asset or archive. Each takes all take a single string value.
 
 | Built-In | Argument Type | Description |
 | - | - | - |
