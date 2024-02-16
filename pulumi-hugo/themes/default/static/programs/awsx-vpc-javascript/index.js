@@ -1,4 +1,5 @@
 "use strict";
+const pulumi = require("@pulumi/pulumi");
 const awsx = require("@pulumi/awsx");
 
 // Allocate a new VPC with the default settings.

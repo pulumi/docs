@@ -6,7 +6,7 @@ h1: Pulumi glossary
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   concepts:
-    weight: 13
+    weight: 15
 aliases:
 - /docs/reference/glossary/
 ---

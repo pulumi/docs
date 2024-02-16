@@ -6,10 +6,10 @@ h1: Assets & archives
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   concepts:
-    weight: 1
-    parent: inputs-outputs
+    weight: 13
 aliases:
 - /docs/intro/concepts/assets-archives/
+- /docs/concepts/inputs-outputs/assets-archives/
 ---
 
 The Pulumi SDK provides two classes for working with files: `Asset` and `Archive`. Some Pulumi resource inputs accept either an `Asset` or an `Archive` as input, and Pulumi understands how to take the files referenced by the `Asset` or `Archive` and package them up for use by the resource. There are several different concrete implementations of these two concepts, based on the three ways the files might be provided, whether in memory, on disk, or in an archive. Similarly, files can be consumed by resources that expect a variety of packaging formats.

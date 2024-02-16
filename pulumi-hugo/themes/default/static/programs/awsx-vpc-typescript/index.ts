@@ -1,3 +1,4 @@
+import * as pulumi from "@pulumi/pulumi";
 import * as awsx from "@pulumi/awsx";
 
 // Allocate a new VPC with the default settings.

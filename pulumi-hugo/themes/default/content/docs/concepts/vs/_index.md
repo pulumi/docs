@@ -7,7 +7,7 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   concepts:
     identifier: vs
-    weight: 14
+    weight: 16
 aliases:
 - /docs/reference/vs/
 - /docs/intro/vs/
