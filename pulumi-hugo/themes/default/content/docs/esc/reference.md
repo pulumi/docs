@@ -34,9 +34,6 @@ values:
   # References to this value will use the path excluding the
   # top-level "values" key
 
-  # Values can interpolate contextual information
-  namespace: ${context.rootEnvironment.name}/${context.pulumi.user.login}
-
   # Path is "app"
   app:
     # Path is "app.setting"
@@ -60,6 +57,12 @@ values:
     # Values within the environment and its imports may be referenced
     # Path is "app.settingCopy"
     settingCopy: ${app.setting}
+
+    # Values can interpolate contextual information
+    rootEnvName: ${context.rootEnvironment.name}
+    currentEnvName: ${context.currentEnvironment.name}
+    currentUser: ${context.pulumi.user.login}
+    currentOrg: ${context.organization.login}
 
     # ---------------------------------------------------------------------------------------
     # Functions -- configuration may be transformed with the following functions
