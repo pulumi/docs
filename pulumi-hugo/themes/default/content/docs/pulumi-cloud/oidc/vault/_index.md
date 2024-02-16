@@ -157,7 +157,6 @@ To configure OIDC for Pulumi ESC, create a new environment in the [Pulumi Cloud 
               address: <your-vault-url>
               jwt:
                 role: <your-role-name>
-                subjectAttributes: ...
           secrets:
             fn::open::vault-secrets:
               login: ${vault.login}
