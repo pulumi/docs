@@ -98,6 +98,36 @@ Make sure to replace `contoso` with the name of your Pulumi organization and use
 
 {{< /notes >}}
 
+##### Subject customization
+
+It is possible to customize the OIDC token subject claim by setting configuring the `subjectAttributes` setting. It expects an array of keys to include in it:
+
+* `rootEnvironment.name`: the name of the root evironment being evaluated
+* `currentEnvironment.name`: the name of the current evironment being evaluated
+* `pulumi.user.login`: the login identifier of the user opening the environment
+* `pulumi.organization.login`: the login identifier of the organization
+
+The subject always contains the following prefix `pulumi:environments:pulumi.organization.login:{ORGANIZATION_NAME}` and every key configured will be appended prefixed with the key name, for example, having the following environment:
+
+```yaml
+values:
+  aws:
+    login:
+      fn::open::aws-login:
+        oidc:
+          ...
+          subjectAttributes:
+            - currentEnvironment.name
+            - pulumi.user.login
+```
+
+The subject will be formed with the prefix `pulumi:environments:pulumi.organization.login:contoso` appending the following values for each key:
+
+* `:currentEnvironment.name:development`
+* `:pulumi.user.login:userLogin`
+
+Issuing `pulumi:environments:pulumi.organization.login:contoso:currentEnvironment.name:development:pulumi.user.login:userLogin`.
+
 ## Configure OIDC via the Pulumi Console
 
 ### Pulumi Deployments
@@ -138,6 +168,7 @@ To configure OIDC for Pulumi ESC, create a new environment in the [Pulumi Consol
               duration: 1h
               roleArn: <your-oidc-iam-role-arn>
               sessionName: pulumi-environments-session
+              subjectAttributes: ...
       environmentVariables:
         AWS_ACCESS_KEY_ID: ${aws.login.accessKeyId}
         AWS_SECRET_ACCESS_KEY: ${aws.login.secretAccessKey}

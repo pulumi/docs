@@ -90,6 +90,35 @@ Make sure to replace `contoso` with the name of your Pulumi organization and use
 
 {{< /notes >}}
 
+##### Subject customization
+
+It is possible to customize the OIDC token subject claim by setting configuring the `subjectAttributes` setting. It expects an array of keys to include in it:
+
+* `rootEnvironment.name`: the name of the root evironment being evaluated
+* `currentEnvironment.name`: the name of the current evironment being evaluated
+* `pulumi.user.login`: the login identifier of the user opening the environment
+* `pulumi.organization.login`: the login identifier of the organization
+
+The subject always contains the following prefix `pulumi:environments:pulumi.organization.login:{ORGANIZATION_NAME}` and every key configured will be appended prefixed with the key name, for example, having the following environment:
+
+```yaml
+values:
+  azure:
+    login:
+      fn::open::azure-login:
+        ...
+        subjectAttributes:
+          - currentEnvironment.name
+          - pulumi.user.login
+```
+
+The subject will be formed with the prefix `pulumi:environments:pulumi.organization.login:contoso` appending the following values for each key:
+
+* `:currentEnvironment.name:development`
+* `:pulumi.user.login:userLogin`
+
+Issuing `pulumi:environments:pulumi.organization.login:contoso:currentEnvironment.name:development:pulumi.user.login:userLogin`.
+
 ## Create a Service Principal
 
 To provide Pulumi services the ability to deploy, manage, and interact with Azure resources, you need to associate your Microsoft Entra application with your Subscription or Resource Group.
@@ -143,6 +172,7 @@ To configure OIDC for Pulumi ESC, create a new environment in the [Pulumi Consol
             tenantId: <your-tenant-id>
             subscriptionId: /subscriptions/<your-subscription-id>
             oidc: true
+            subjectAttributes: ...
       environmentVariables:
         ARM_USE_OIDC: 'true'
         ARM_CLIENT_ID: ${azure.login.clientId}

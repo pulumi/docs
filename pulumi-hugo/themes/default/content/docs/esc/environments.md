@@ -205,6 +205,30 @@ $ esc env get myorg/test greeting
   • test:10:15
 ```
 
+### Pulumi Contextual information
+
+Contextual information is available and can be used to interpolate on any environment value.
+
+```yaml
+values:
+  personalNamespace: ${context.rootEnvironment.name}/${context.pulumi.user.login}
+```
+
+It can be accessed through the `context` attribute and contains the following information:
+
+```yaml
+context:
+  rootEnvironment:
+    name: "..." # the name of the root environment being evaluated
+  currentEnvironment:
+    name: "..." # the name of the current environment being evaluated
+  pulumi:
+    user:
+      login: "..." #the user login identifier
+    organization:
+      login: "..." #the organization login identifier
+```
+
 ## Editing environments
 
 Environments may be edited in a number of ways.
