@@ -221,7 +221,7 @@ It is possible to customize the OIDC token subject claim by setting configuring 
 * `pulumi.user.login`: the login identifier of the user opening the environment
 * `pulumi.organization.login`: the login identifier of the organization
 
-The subject always contains the following prefix `pulumi:environments:pulumi.organization.login:{ORGANIZATION_NAME}` and every key configured will be appended prefixed with the key name, for example, having the following environment:
+The subject always contains the following prefix `pulumi:environments:pulumi.organization.login:{ORGANIZATION_NAME}` and every key configured will be appended to this prefix. For example, consider the following environment:
 
 ```yaml
 values:
@@ -236,9 +236,4 @@ values:
             - pulumi.user.login
 ```
 
-The subject will be formed with the prefix `pulumi:environments:pulumi.organization.login:contoso` appending the following values for each key:
-
-* `:currentEnvironment.name:development`
-* `:pulumi.user.login:userLogin`
-
-Issuing `pulumi:environments:pulumi.organization.login:contoso:currentEnvironment.name:development:pulumi.user.login:userLogin`
+The subject will be `pulumi:environments:pulumi.organization.login:contoso:currentEnvironment.name:development:pulumi.user.login:userLogin`. Note how the keys and values are appended along with the prefix.
