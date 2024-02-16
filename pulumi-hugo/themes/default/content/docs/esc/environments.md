@@ -214,7 +214,7 @@ values:
   personalNamespace: ${context.rootEnvironment.name}/${context.pulumi.user.login}
 ```
 
-It can be accessed through the `context` attribute and contains the following information:
+It can be accessed through the `context` attribute with the following options:
 
 * `context.rootEnvironment.name`: the name of the root environment being evaluated
 * `context.currentEnvironment.name`: the name of the current environment being evaluated
