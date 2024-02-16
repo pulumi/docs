@@ -163,7 +163,6 @@ To configure OIDC for Pulumi ESC, create a new environment in the [Pulumi Consol
             tenantId: <your-tenant-id>
             subscriptionId: /subscriptions/<your-subscription-id>
             oidc: true
-            subjectAttributes: ...
       environmentVariables:
         ARM_USE_OIDC: 'true'
         ARM_CLIENT_ID: ${azure.login.clientId}
