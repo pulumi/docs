@@ -109,9 +109,10 @@ jobs:
           git config --local user.email "bot@pulumi.com"
           git config --local user.name "pulumi-bot"
           git checkout -b pulumi/${{ github.run_id }}-${{ github.run_number }}
-          git add static/
           git add content/
           git add data/
+          git add static-prebuilt/
+          git add static/
           git commit -m "Regenerating docs for Pulumi@${{ env.PULUMI_VERSION}}"
           git push origin pulumi/${{ github.run_id }}-${{ github.run_number }}
         working-directory: docs
