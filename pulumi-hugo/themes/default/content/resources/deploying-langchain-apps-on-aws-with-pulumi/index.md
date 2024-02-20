@@ -2,7 +2,7 @@
 # Name of the webinar.
 title: Deploying LangChain Applications on AWS with Pulumi
 meta_desc: This workshop will show a practical AI use case for Pulumi. Using Pulumi & TypeScript, we'll demonstrate deploying a LangChain/LangServe app on AWS.
-meta_image: 
+meta_image: "/images/resources/deploy-langchain-apps-aws-engin-lance.png"
 
 # A featured webinar will display first in the list.
 featured: false
@@ -70,6 +70,8 @@ main:
     presenters:
         - name: Engin Diri
           role: Sr. Solutions Architect, Pulumi
+        - name: Lance Martin
+          role: Software Engineer, LangChain
 
     # A bullet point list containing what the user will learn during the webinar.
     learn:

@@ -38,7 +38,7 @@ tags:
     - ai
     - ml
     - community
-    - platform_engineering
+    - platform-engineering
 
 # See the blogging docs at https://github.com/pulumi/pulumi-hugo/blob/master/BLOGGING.md
 # for details, and please remove these comments before submitting for review.

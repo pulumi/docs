@@ -2,7 +2,7 @@
 # Name of the webinar.
 title: Get started with CI/CD for AWS using Pulumi & GitHub Actions
 meta_desc: In this workshop, you will learn the fundamentals of an infrastructure CI/CD pipeline through guided exercises using Pulumi.
-meta_image: 
+meta_image: "/images/resources/cicd-aws-github-actions-diana.png"
 
 # A featured webinar will display first in the list.
 featured: false
