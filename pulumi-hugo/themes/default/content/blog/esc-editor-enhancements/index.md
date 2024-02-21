@@ -1,9 +1,9 @@
 ---
-title: "Pulumi ESC Enhanced Editor: Elevating the Authoring Experience"
+title: "Introducing the Latest ESC Editor Enhancements for Improved Authoring"
 allow_long_title: true
 date: 2024-02-22T00:00:00-07:00
 draft: false
-meta_desc: "Enhanced Pulumi ESC Editor streamlines the authoring experience of environments for developers"
+meta_desc: "The new enhancements to Pulumi ESC Editor streamlines the authoring experience of environments for developers"
 meta_image: "meta.png"
 authors:
   - pat-gavlin
@@ -25,7 +25,7 @@ With [Pulumi ESC](/product/esc), our goal is to not only create a tool that simp
 
 Tap 'Ctrl+Space' in the editor reveal the list of functions and properties. 
 
-{{< video title="Pulumi ESC editor enhancements demo" src="./esc-enhanced-editor-demo.mp4" autoplay="true" loop="true" >}}
+{{< video title="Pulumi ESC editor enhancements demo" src="./esc-editor-enhancements-demo.mp4" autoplay="true" loop="true" >}}
 
 ## Contextual Information to your environments
 
