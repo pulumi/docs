@@ -13,28 +13,28 @@ tags:
   - secrets
 ---
 
-With [Pulumi ESC](/product/esc), our goal is to not only create a tool that simplifies the development process but also one that developers love. Building on this goal, we're excited to unveil the new Enhanced Pulumi ESC Editor, a big leap forward designed to improve the authoring experience for developers everywhere. This upgrade is focused on addressing the common challenges encountered during coding such as syntax errors and the need for frequent documentation lookups. Our aim is to make the process of authoring environments straightforward and remove the common hurdles for a smoother workflow.
+With [Pulumi ESC](/product/esc), our goal is to not only create a tool that simplifies the development process but also one that developers love. In pursuit of this goal, we're excited to announce enhancements to the Pulumi ESC environment editor. These enhancements are focused on addressing common challenges encountered when authoring environments: syntax errors, type errors, frequent context switches to and from documentation, and more. Our aim is to make the process of authoring environments as straightforward as possible by removing common hurdles.
 
 <!--more-->
 
-## Highlights of the Enhanced Editor
+## Highlights
 
-- **Auto-complete**: This feature provides suggestions for code snippets and resource properties, eliminating the constant need to reference documentation. It's engineered to accelerate and refine the coding process, enabling developers to concentrate on innovation and problem-solving
-- **Enhanced Diagnostics**: This goes beyond basic syntax checks by providing in-depth insights into potential errors, coupled with real-time fix recommendations. It serves as your personal coding assistant
-- **Hover Documentation**: Simply hover over any piece of code to see a detailed tooltip with relevant insights and examples. This instant access to information reduces manual documentation lookups, streamlining the development process and minimizing disruptions
+- **Auto-complete**: This feature provides suggestions for code snippets and resource properties, easing the need to reference documentation. It is engineered to accelerate and refine the coding process, enabling developers to concentrate on innovation and problem-solving.
+- **Enhanced Diagnostics**: These diagnostics go beyond basic syntax checks by providing in-depth, as-you-type insights into errors.
+- **Hover Documentation**: Hover over any piece of code to see a detailed tooltip with relevant documentation and examples. This instant access to information reduces the need to context switch, streamlining the development process and minimizing disruptions.
 
-Tap 'Ctrl+Space' on the Editor reveal the list of functions and properties. 
+Tap 'Ctrl+Space' in the editor reveal the list of functions and properties. 
 
-{{< video title="Pulumi ESC Enhanced Editor Demo" src="./esc-enhanced-editor-demo.mp4" autoplay="true" loop="true" >}}
+{{< video title="Pulumi ESC editor enhancements demo" src="./esc-enhanced-editor-demo.mp4" autoplay="true" loop="true" >}}
 
 ## Contextual Information to your environments
 
-We also added support for getting rich contextual information such as current user, organization, environment name to the environments. You can use it to enrich audit logs, refine OIDC subject for granualar access and more! You can use the `context` attribute along with the following options to get contextual information:
+We have also added support for accessing contextual information from within an ESC environment such as the current user, organization, and environment name. You can use this information to enrich audit logs, refine OIDC claims for more granular access, and more! This information is available by accessing the `context` property, and contains the following information:
 
 * `context.rootEnvironment.name`: the name of the root environment being evaluated
 * `context.currentEnvironment.name`: the name of the current environment being evaluated
-* `context.user.login`: the user login identifier
-* `context.organization.login`: the organization login identifier
+* `context.user.login`: the login of the user evaluating the environment
+* `context.organization.login`: the name of the user's organization
 
 ```yaml
 values:
