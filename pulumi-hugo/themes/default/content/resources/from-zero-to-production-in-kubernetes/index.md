@@ -49,7 +49,7 @@ main:
     # Webinar title.
     title: "From Zero to Production in Kubernetes"
     # URL for embedding a URL for ungated webinars.
-    youtube_url: #"https://www.youtube.com/embed/l8Ha60IJ6m8?si=AiKU_4MK3w3aAE_l?rel=0"
+    youtube_url: "https://www.youtube.com/embed/l8Ha60IJ6m8?si=AiKU_4MK3w3aAE_l?rel=0"
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
     sortable_date: 2023-11-15T09:00:00-08:00
     # Duration of the webinar.
