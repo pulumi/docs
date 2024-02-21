@@ -47,7 +47,7 @@ tags:
 
 Though I have expertise in leading implementations and upgrades for internal platforms, none were specifically for developers. However, experience remains vital across departments, addressing tools, processes, systems, and best practices, aiming to reduce cognitive load, increase productivity, enhance collaboration, boost communication and much more. 
 
-Intriguingly, engineering teams may perceive its value differently. Therefore, we will dive into the concept of developer experience, aka DevEX, which, in truth, should translate into a competitive advantage.
+Intriguingly, engineering teams may perceive its value differently. Therefore, we will dive into the concept of developer experience, aka DevEx, which, in truth, should translate into a competitive advantage.
 
 <!--more-->
 
@@ -65,7 +65,7 @@ Intriguingly, engineering teams may perceive its value differently. Therefore, w
 
 ## What is developer experience
 
-Developer experience (DevEX), also referred to as DevX or DX, encompasses systems, technology, processes, and culture that collectively impact the effectiveness of software development. It looks at all components of a developer's ecosystem—from environment to workflows to tools—and evaluates how they contribute to developer productivity, satisfaction, and operational impact.
+Developer experience (DevEx), also referred to as DevX or DX, encompasses systems, technology, processes, and culture that collectively impact the effectiveness of software development. It looks at all components of a developer's ecosystem—from environment to workflows to tools—and evaluates how they contribute to developer productivity, satisfaction, and operational impact.
 
 Developer experience revolves around the ease or difficulty of executing essential tasks. **A positive developer experience means those tasks are relatively easy to perform, translating into higher performance.**
 
@@ -220,13 +220,13 @@ Implementing developer experience requires a holistic approach that blends cultu
 
 Now that DevEx has been defined let's address some common misconceptions about developer experience.
 
-### Devex is not the same as User Experience (UX)
+### DevEx is not the same as User Experience (UX)
 
 Developer experience may sound similar to user experience (for developers), but it's different, although user experience is a component. For example, a platform engineer [building an internal developer platform](https://www.pulumi.com/blog/developer-portal-platform-teams/) must view the developers as their customers and create a good user experience by making it intuitive and easy to use.
 
 ### DevEx is not about enabling lazy developers
 
-Part of the DevEX strategy is to retain talent. Companies that invest in DevEx don't do it to pamper developers. The true reason behind it is that they want their developers to stay "in the zone," also known as "deep work." When in this state, they are immersed in writing code and solving problems they enjoy working on, and their creativity is higher, it sparks innovative ideas, and the quality and speed of their output are also higher.
+Part of the DevEx strategy is to retain talent. Companies that invest in DevEx don't do it to pamper developers. The true reason behind it is that they want their developers to stay "in the zone," also known as "deep work." When in this state, they are immersed in writing code and solving problems they enjoy working on, and their creativity is higher, it sparks innovative ideas, and the quality and speed of their output are also higher.
 
 {{< youtube "NbhpII8DIKA?rel=0" >}}
 
@@ -234,7 +234,7 @@ Part of the DevEX strategy is to retain talent. Companies that invest in DevEx d
 
 Technology impacts developer experience, [a robust generative AI tool can help create code faster](https://www.pulumi.com/ai), and internal developer platforms can help reduce cognitive load on developers. But again, tooling is only one aspect of it. Tools can't fix culture or replace processes. Many DevEx considerations should be considered to ensure that when the development teams adopt a tool, it addresses their pain points and enables developers.
 
-### Devex is not a one-person decision
+### DevEx is not a one-person decision
 
 DevEx should be a joint effort from the entire team. One needs to be aware of the issues to plan to fix them, so open communication and team collaboration are vital to developing and implementing a DevEx strategy, intersecting DevOps and platform engineering initiatives. Many large organizations already have DevEx teams or professionals with a bird's-eye view of what happens within the engineering team. They are internal advocates for software engineers. They consider the developer's journey from being new developers and their 'Time to First Contribution' to day-to-day activities. They work with engineers to learn which problems are a priority and identify misconceptions and bottlenecks that may slow the development process.
 
