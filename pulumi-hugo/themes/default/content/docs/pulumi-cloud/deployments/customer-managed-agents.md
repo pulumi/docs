@@ -18,7 +18,7 @@ Customer-Managed Agents allow you to self-host deployment agents bringing the sa
 
 <sup>1</sup> *Currently Linux and MacOS are supported*
 
-Customer-Managed Agents support all the deployment triggers currently offered by Pulumi Deployments such as click to deploy, the Pulumi Deployments REST API, git push to deploy, Review Stacks, and remote Automation API.
+Customer-Managed Agents support all the [deployment triggers](docs/pulumi-cloud/deployments/#deployment-triggers) currently offered by Pulumi Deployments such as click to deploy, the Pulumi Deployments REST API, git push to deploy, Review Stacks, and remote Automation API.
 
 {{% notes "info" %}}
 Customer-Managed Agents is available on the Business Critical edition of Pulumi Cloud. [Contact sales](/contact/?form=sales) if you are interested and want to enable Customer-Managed Agents. If you are a self-hosted Pulumi Cloud customer, please [get in touch](https://share.hsforms.com/1YajiJ73sSuGn5RoTkyvKxg2mxud) to be notified when it is available.
