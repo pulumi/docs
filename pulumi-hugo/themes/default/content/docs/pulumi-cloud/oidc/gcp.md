@@ -89,15 +89,36 @@ You can learn more about setting up OIDC for Pulumi ESC by referring to the [rel
 
 {{< notes type="warning" >}}
 
-If you are integrating Pulumi ESC with Pulumi IaC, using the specific name of the ESC environment in the subject identifier will not work at this time. There is a [known issue](https://github.com/pulumi/pulumi/issues/14509) with the value of the subject identifier that is sent to the provider from Pulumi.
+If you are integrating Pulumi ESC with Pulumi IaC, the default subject identifier of the ESC environment will not work at this time. There is a [known issue](https://github.com/pulumi/pulumi/issues/14509) with the subject identifier's value sent to Azure from Pulumi.
 
-The steps in this guide will work for Pulumi ESC if you use the following syntax instead:
-
-`pulumi:environments:org:contoso:env:<yaml>`
-
-Make sure to replace `contoso` with the name of your Pulumi organization and use the literal value of `<yaml>` as shown above.
+Use 'subjectAttributes' to customize the subject identifier to work with Pulumi IaC. Alternatively, you can use this syntax: `pulumi:environments:org:contoso:env:<yaml>` when configuring the subject claim in your cloud provider account. Make sure to replace `contoso` with the name of your Pulumi organization and use the literal value of `<yaml>` as shown.
 
 {{< /notes >}}
+
+##### Subject customization
+
+It is possible to customize the OIDC token subject claim by setting configuring the `subjectAttributes` setting. It expects an array of keys to include in it:
+
+* `rootEnvironment.name`: the name of the root evironment being evaluated
+* `currentEnvironment.name`: the name of the current evironment being evaluated
+* `pulumi.user.login`: the login identifier of the user opening the environment
+* `pulumi.organization.login`: the login identifier of the organization
+
+The subject always contains the following prefix `pulumi:environments:pulumi.organization.login:{ORGANIZATION_NAME}` and every key configured will be appended to this prefix. For example, consider the following environment:
+
+```yaml
+values:
+  gcp:
+    login:
+      fn::open::gcp-login:
+        oidc:
+          ...
+          subjectAttributes:
+            - currentEnvironment.name
+            - pulumi.user.login
+```
+
+The subject will be `pulumi:environments:pulumi.organization.login:contoso:currentEnvironment.name:development:pulumi.user.login:userLogin`. Note how the keys and values are appended along with the prefix.
 
 ## Configure OIDC in the Pulumi Console
 

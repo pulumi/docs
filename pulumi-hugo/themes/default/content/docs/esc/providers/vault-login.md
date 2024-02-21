@@ -48,6 +48,7 @@ To learn how to configure OpenID Connect (OIDC) between Pulumi Cloud and Vault, 
 |----------|--------|-----------------------------------------------------------|
 | `role`   | string | The name of the role to use for login.                    |
 | `mount`  | string | [Optional] - The name of the authentication engine mount. Defaults to `jwt`. |
+| `subjectAttributes`  | string[] | [Optional] - Subject attributes to be included in the OIDC token. For more information see the see the [OpenID subject customization](/docs/pulumi-cloud/oidc/vault#subject-customization) documentation |
 
 ### VaultLoginToken
 

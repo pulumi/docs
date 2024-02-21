@@ -58,6 +58,12 @@ values:
     # Path is "app.settingCopy"
     settingCopy: ${app.setting}
 
+    # Values can interpolate contextual information
+    rootEnvName: ${context.rootEnvironment.name}
+    currentEnvName: ${context.currentEnvironment.name}
+    currentUser: ${context.pulumi.user.login}
+    currentOrg: ${context.organization.login}
+
     # ---------------------------------------------------------------------------------------
     # Functions -- configuration may be transformed with the following functions
     # ---------------------------------------------------------------------------------------
