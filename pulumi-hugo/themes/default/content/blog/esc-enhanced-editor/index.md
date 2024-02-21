@@ -17,13 +17,15 @@ With [Pulumi ESC](/product/esc), our goal is to not only create a tool that simp
 
 <!--more-->
 
-## Highlights of the Enhanced Editor:
+## Highlights of the Enhanced Editor
 
 - **Auto-complete**: This feature provides suggestions for code snippets and resource properties, eliminating the constant need to reference documentation. It's engineered to accelerate and refine the coding process, enabling developers to concentrate on innovation and problem-solving
 - **Enhanced Diagnostics**: This goes beyond basic syntax checks by providing in-depth insights into potential errors, coupled with real-time fix recommendations. It serves as your personal coding assistant
 - **Hover Documentation**: Simply hover over any piece of code to see a detailed tooltip with relevant insights and examples. This instant access to information reduces manual documentation lookups, streamlining the development process and minimizing disruptions
 
-### Placeholder for recorded video 
+Tap 'Ctrl+Space' on the Editor reveal the list of functions and properties. 
+
+{{< video title="Pulumi ESC Enhanced Editor Demo" src="./esc-enhanced-editor-demo.mp4" autoplay="true" loop="true" >}}
 
 ## Contextual Information to your environments
 
