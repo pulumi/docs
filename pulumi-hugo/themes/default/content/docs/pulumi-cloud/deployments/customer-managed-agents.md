@@ -8,7 +8,7 @@ menu:
     weight: 2
 ---
 
-Customer-managed deployments allow you to self-host deployment agents bringing the same power and flexibility as Pulumi-hosted deployments. Self-hosting your agents comes with many benefits:
+Customer-Managed Agents allow you to self-host deployment agents bringing the same power and flexibility as Pulumi-hosted deployments. Self-hosting your agents comes with many benefits:
 
 - **Host anywhere**: You can host the deployment agents anywhere to manage infrastructure, even within your fully private VPCs
 - **Any hardware, any environment<sup>1</sup>**: Run the agents on any hardware of your choice and configure the environment that meets your needs
