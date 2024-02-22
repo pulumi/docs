@@ -29,6 +29,10 @@ challenges:
             color: yellow
           description: "Implementing robust security measures and ensuring compliance across all cloud services and infrastructure."
 
+solutions_header:
+    title: "Tailored Solutions for Cloud Success"
+    description: "Our suite of solutions addresses the unique challenges of cloud and platform engineering, ensuring your infrastructure is efficient, secure, and ready for the future."
+
 solutions:
     categories:
         - title: Cloud Infrastructure Optimization
