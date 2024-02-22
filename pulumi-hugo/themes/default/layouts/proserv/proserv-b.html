@@ -1,0 +1,102 @@
+{{ define "hero" }}
+    {{ partial "hero" (dict "title" .Params.title) }}
+{{ end }}
+
+{{ define "main" }}
+    {{ $pageContext := . }}
+
+    <section id="overview" class="max-w-5xl mx-auto text-center my-16 px-6">
+    {{ with .Params.overview }}
+        <h2>{{ .title }}</h2>
+        <p class="text-left">{{ .description | markdownify }}</p>
+    {{ end }}
+    </section>
+
+    <section id="challenges" class="container mx-auto my-16">
+    {{ with .Params.challenges }}
+    <div class="max-w-5xl mx-auto text-center px-6">
+        <h3>{{ .title }}</h3>
+    </div>
+    <div class="flex flex-wrap justify-content items-stretch text-left my-4">
+        {{ range $index, $item := .items }}
+                <div class="h-full bg-white p-4 w-full lg:w-1/3 mx-auto">
+                    <div class="h-full card bg-white p-4">
+                        <div class="icon-section mb-8">
+                            {{ partial "color-icon.html" (dict "icon" $item.icon.name "icon_color" $item.icon.color) }}
+                        </div>
+                        <div>
+                            <h5>{{ $item.title }}</h5>
+                        </div>
+                        <div class="mt-6">
+                            <p>{{ $item.description }}</p>
+                        </div>
+                    </div>
+                </div>
+            {{ end }}
+        </div>
+    {{ end }}
+    </section>
+
+
+    <section id="solutions" class="mb-8 px-6 lg:px-0 relative">
+    {{ with .Params.solutions }}
+    {{ range $solutionsIndex, $solution := .categories }}
+    {{ $isSolutionIndexEven := (modBool $solutionsIndex 2) }}
+        <div class="shape-background home-background-yellow-left">
+            <div class="shape-container flex flex-row-reverse">
+                <div class="dot-background-container self-end">
+                    <div class="dot-background-overlay"></div>
+                    <div class="dot-background no-animate"></div>
+                </div>
+                <div class="circle-left"></div>
+                <div class="circle-right"></div>
+            </div>
+        </div>
+
+        <div class="container mx-auto">
+            <div class="flex flex-col lg:flex-row">
+                {{ if $isSolutionIndexEven }}
+                <div class="w-full my-auto lg:w-1/2 lg:mr-32 z-10 p-8">
+                    {{ partial "color-icon.html" (dict "icon" "code" "icon_color" "yellow") }}
+                    <h3>{{ .title }}</h3>
+                    <p>{{ .description }}</p>
+                </div>
+                {{ end }}
+                <div class="w-full lg:w-1/2 block lg:flex flex-col lg:justify-center p-6 md:pl-24 xl:pl-0">
+                    {{ range $childIndex, $child := $solution.children }}
+                        <div class="w-full p-4">
+                            <div class="h-full card bg-white p-4">
+                                <div>
+                                    <h5>{{ $child.title }}</h5>
+                                </div>
+                                <div class="mt-6">
+                                    <p>{{ $child.description }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    {{ end }}
+                </div>
+                {{ if (not $isSolutionIndexEven) }}
+                <div class="w-full my-auto lg:w-1/2 lg:mr-32 z-10 p-8">
+                    {{ partial "color-icon.html" (dict "icon" "code" "icon_color" "yellow") }}
+                    <h3>{{ .title }}</h3>
+                    <p>{{ .description }}</p>
+                </div>
+                {{ end }}
+            </div>
+        </div>
+    {{ end }}
+    {{ end }}
+    </section>
+
+
+    <section id="form" class="container mx-auto justify-center text-center my-16 p-4">
+    {{ with .Params.form }}
+        <div class="w-full lg:w-1/3 card bg-white mx-auto p-12">
+            <h3>{{ .title }}</h3>
+            <p>{{ .description }}</p>
+            <pulumi-hubspot-form form-id={{ .id }} class="mt-10"></pulumi-hubspot-form>
+        </div>
+    {{ end }}
+    </section>
+{{ end }}
