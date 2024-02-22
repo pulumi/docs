@@ -197,30 +197,9 @@ Once the GitHub app has been installed, the deployment settings for a stack can 
 - The GitHub app may only be installed by a GitHub *and* Pulumi admin.
 - Currently, there is a 1 to 1 mapping between GitHub organizations and Pulumi organizations.
 
-#### Private Dependency Packages
-
-If your Pulumi Deployment requires access to private GitHub repositories, e.g. your program uses a private Go module, it is necessary to configure an SSH key with access to the required repos. Without the correct configuration, the Deployment will be unable to access those private artifacts, and the deployment may fail.
-
-The following will allow you to configure a private key and allow access to GitHub using SSH to pull down the appropriate artifacts properly:
-  
-1. Add the following code into the `Pre-run commands` and toggle on `Skip automatic dependency installation step` in Advanced Settings:
-
-    ```bash
-    mkdir /root/.ssh && printf -- "$SSHKEY" > /root/.ssh/id_ed25519
-    chmod 600 /root/.ssh/id_ed25519
-    ssh-keyscan github.com >> ~/.ssh/known_hosts
-     cd .. && git config --global --add url.\"git@github.com:\".insteadOf \"https://github.com\"
-    ```
-
-    ![SSH Key Prerun Command](../limit-prerun-cmd.png)
-
-2. Add the `$SSHKEY` field as a secret environment variable:
-
-![SSH Key Env Variable](../limit-env.png)
-
 ## Common Scenarios
 
-### Environment Variables
+### Environment variables
 
 By default, there are a set of environment variables set by the process automatically:
 
@@ -239,7 +218,37 @@ These can be overridden or extended by configuring custom environment variables:
 
 ![Pulumi UI - Environment Variables](../ui-custom-env-variables.png)
 
-### Path Filtering
+### Deployment permissions
+
+By default, the permissions that are granted to a deployment depend on how the deployment is being invoked. If the
+deployment is created via the REST API or by using the Actions buttons in the Pulumi Cloud console, it is
+granted the permissions of the user that has executed the action. However, if a deployment is created because of a `git push`
+or a pull request, it uses an ephemeral stack token that has admin permissions on only the stack itself, but nothing
+else.
+
+In practice, the consequences of this are twofold:
+
+- If your organization has default stack permissions set to `NONE`, then any deployment created by a `git push` or a pull
+  request will not be able to access any [Stack References](https://www.pulumi.com/docs/concepts/stack/#stackreferences),
+  and will fail if it tries to do so.
+- If your organization has default environment permissions set to `NONE`, then any deployment created by a `git push` or a
+  pull request will not be able to access any [ESC Environments](https://www.pulumi.com/docs/esc/environments/) that are
+  listed in the stack's configuration file.
+
+#### Granting extra permissions to a deployment
+
+If you want to change the permissions that are granted to a deployment, you can do so by setting the `PULUMI_ACCESS_TOKEN`
+environment variable to a token with the desired permissions in the stack's deployment settings. This token can be an individual,
+team or organization token, and it will grant the deployment the permissions that are associated with the token. If this
+environment variable is set it will be used regardless of how the deployment was created (REST API, `git push`, etc.).
+
+If using an individual or team token, the token must have at minimum:
+
+- `WRITE` access to the stack that is being deployed
+- `READ` access to any stacks from which Stack References are being used
+- `OPEN` access to any ESC environment that is listed in the stack's configuration file, including any environments that are imported transitively.
+
+### Path filtering
 
 When using the GitHub app and push-to-deploy, you may want to filter deployment events to only target file changes in specific directories. You can easily do this using path filtering, so a deployment is only triggered if there is a change in files that match the path filters. This is especially useful for monorepos where you may have multiple Pulumi programs within the same repository.
 
@@ -249,13 +258,34 @@ Path filters are relative to the repository root, and should reference a file by
 
 As with any other deployment setting, the path filters may be set via the Pulumi Console, using the REST API or defined in code using the Service provider.
 
+### Private dependency packages
+
+If your Pulumi Deployment requires access to private GitHub repositories, e.g. your program uses a private Go module, it is necessary to configure an SSH key with access to the required repos. Without the correct configuration, the Deployment will be unable to access those private artifacts, and the deployment may fail.
+
+The following will allow you to configure a private key and allow access to GitHub using SSH to pull down the appropriate artifacts properly:
+
+1. Add the following code into the `Pre-run commands` and toggle on `Skip automatic dependency installation step` in Advanced Settings:
+
+    ```bash
+    mkdir /root/.ssh && printf -- "$SSHKEY" > /root/.ssh/id_ed25519
+    chmod 600 /root/.ssh/id_ed25519
+    ssh-keyscan github.com >> ~/.ssh/known_hosts
+     cd .. && git config --global --add url.\"git@github.com:\".insteadOf \"https://github.com\"
+    ```
+
+   ![SSH Key Prerun Command](../limit-prerun-cmd.png)
+
+2. Add the `$SSHKEY` field as a secret environment variable:
+
+![SSH Key Env Variable](../limit-env.png)
+
 ### Skip intermediate deployments
 
 By default, when multiple deployments are pushed, they will be executed sequentially until the backlog is completed. In some cases, you may wish to only execute the most recent deployment since the changes are accumulative. By enabling the `Skip intermediate deployments` setting, Pulumi will skip all intermediary deployments of the same type and will execute only the latest.
 
 ![Pulumi UI - Skip intermediate deployments](../ui-skip-intermediate-deployments.png)
 
-### Customizing the Deployment Environment
+### Customizing the deployment environment
 
 By default, the deployment is executed using the [pulumi/pulumi](https://hub.docker.com/r/pulumi/pulumi) image.
 The pulumi/pulumi image is a unix-based image which includes the pulumi CLI in its `$PATH` and the [LTS versions](https://github.com/pulumi/pulumi-docker-containers/blob/main/README.md#version-policy) of all supported SDK runtime(s) for your Pulumi program.
@@ -296,7 +326,7 @@ Pulumi Deployments can be used to automatically deploy dependent stacks via Depl
 
 Either method requires that your stacks are configured with [Deployment Settings](/docs/pulumi-cloud/deployments/reference/#deployment-settings).
 
-#### Deployment Webhook Destinations
+#### Deployment webhook destinations
 
 [Deployment Webhook Destinations](/docs/pulumi-cloud/webhooks/#deployment-webhooks) allow you to pick one or more event types on a stack (i.e. `update succeeded`, or `refresh failed`) and automatically deliver an event to a destination - in this case the Create Deployment API for another Stack.
 
