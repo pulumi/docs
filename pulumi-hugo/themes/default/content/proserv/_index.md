@@ -44,9 +44,9 @@ solutions:
           description: "Developing comprehensive developer portals that centralize access to tools, resources, and documentation, fostering an efficient and collaborative environment."
         - title: "Migration and Adoption"
           icon:
-            name: rocketship
-            color: yellow
-          description: "Leverage Pulumi's expertise to migrate and adopt infrastructure and policy as code, including migrations from other IaC tools."
+              name: rocketship
+              color: yellow
+          description: "Leverage Pulumi's expertise to migrate and adopt infrastructure and policy as code, including migrations from AWS CloudFormation, Terraform, AWS CDK, and other IaC tools."
 
 challenges:
     title: "Challenges in Cloud and Platform Engineering"
