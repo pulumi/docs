@@ -232,7 +232,7 @@
     </script>
 
     <script async defer src="https://buttons.github.io/buttons.js"></script>
-    {{- if eq hugo.Environment "production" }}
+    {{- if ne hugo.Environment "production" }}
         <!-- Clearbit snippet -->
         <script src="https://tag.clearbitscripts.com/v1/pk_54e7d7c428c6d5e79098374d93a7b333/tags.js" referrerpolicy="strict-origin-when-cross-origin"></script>
 
@@ -259,13 +259,14 @@
             ]
 
             !(function () {
-                var analytics = (window.analytics = window.analytics || []);
+                var i = "analytics",
+                    analytics = (window[i] = window[i] || []);
                 if (!analytics.initialize)
-                    if (analytics.invoked) window.console && console.error && console.error("Segment snippet included twice.");
-                    else if(userAgentBlacklist.includes(navigator.userAgent)) {
+                    if (analytics.invoked) {
+                        window.console && console.error && console.error("Segment snippet included twice.");
+                    } else if (userAgentBlacklist.includes(navigator.userAgent)) {
                         console.log("Segment snippet not loaded for user agent: " + navigator.userAgent);
-                    }
-                    else {
+                    } else {
                         analytics.invoked = !0;
                         analytics.methods = [
                             "trackSubmit",
@@ -281,37 +282,102 @@
                             "alias",
                             "debug",
                             "page",
+                            "screen",
                             "once",
                             "off",
                             "on",
+                            "addSourceMiddleware",
+                            "addIntegrationMiddleware",
+                            "setAnonymousId",
+                            "addDestinationMiddleware",
+                            "register",
                         ];
-                        analytics.factory = function (t) {
+                        analytics.factory = function (e) {
                             return function () {
-                                var e = Array.prototype.slice.call(arguments);
-                                e.unshift(t);
-                                analytics.push(e);
+                                if (window[i].initialized) return window[i][e].apply(window[i], arguments);
+                                var n = Array.prototype.slice.call(arguments);
+                                if (["track", "screen", "alias", "group", "page", "identify"].indexOf(e) > -1) {
+                                    var c = document.querySelector("link[rel='canonical']");
+                                    n.push({ __t: "bpc", c: (c && c.getAttribute("href")) || void 0, p: location.pathname, u: location.href, s: location.search, t: document.title, r: document.referrer });
+                                }
+                                n.unshift(e);
+                                analytics.push(n);
                                 return analytics;
                             };
                         };
-                        for (var t = 0; t < analytics.methods.length; t++) {
-                            var e = analytics.methods[t];
-                            analytics[e] = analytics.factory(e);
+                        for (var n = 0; n < analytics.methods.length; n++) {
+                            var key = analytics.methods[n];
+                            analytics[key] = analytics.factory(key);
                         }
-                        analytics.load = function (t, e) {
-                            var n = document.createElement("script");
-                            n.type = "text/javascript";
-                            n.async = !0;
-                            n.src = "https://cdn.segment.com/analytics.js/v1/" + t + "/analytics.min.js";
-                            var a = document.getElementsByTagName("script")[0];
-                            a.parentNode.insertBefore(n, a);
-                            analytics._loadOptions = e;
+                        analytics.load = function (key, n) {
+                            var t = document.createElement("script");
+                            t.type = "text/javascript";
+                            t.async = !0;
+                            t.setAttribute("data-global-segment-analytics-key", i);
+                            t.src = "https://cdn.segment.com/analytics.js/v1/" + key + "/analytics.min.js";
+                            var r = document.getElementsByTagName("script")[0];
+                            r.parentNode.insertBefore(t, r);
+                            analytics._loadOptions = n;
                         };
-                        analytics.SNIPPET_VERSION = "4.1.0";
+                        analytics._writeKey = "UK90Ofwacetj5VCPJ7cUgkbNcKLSHO3u";
+                        analytics.SNIPPET_VERSION = "5.2.0";
                         analytics.load("UK90Ofwacetj5VCPJ7cUgkbNcKLSHO3u");
                         analytics.page();
                     }
             })();
         </script>
+
+        <!-- Segment Consent Manager -->
+        <script>
+            window.consentManagerConfig = function(exports) {
+                var React = exports.React;
+                var inEU = exports.inEU;
+
+                var bannerContent = React.createElement(
+                    'span',
+                    null,
+                    'We use cookies (and other similar technologies) to collect data to improve your experience on our site. By using our website, you՚re agreeing to the collection of data as described in our',
+                    ' ',
+                    React.createElement(
+                        'a',
+                        { href: '/docs/legal/website-data-collection-policy/', target: '_blank' },
+                        'Website Data Collection Policy'
+                    ),
+                    '.'
+                )
+                var bannerSubContent = React.createElement(
+                    'div',
+                    { class: "manage-cookies-btn" },
+                    'Manage cookies'
+                )
+                //var bannerSubContent = 'You can change your preferences at any time.'
+                var preferencesDialogTitle = 'Website Data Collection Preferences'
+                var preferencesDialogContent =
+                    'We use data collected by cookies and JavaScript libraries to improve your browsing experience, analyze site traffic, deliver personalized advertisements, and increase the overall performance of our site.'
+                var cancelDialogTitle = 'Are you sure you want to cancel?'
+                var cancelDialogContent =
+                    'Your preferences have not been saved. By continuing to use our website, you are agreeing to our Website Data Collection Policy.'
+
+                return {
+                    container: '#segment-consent-manager',
+                    writeKey: 'UK90Ofwacetj5VCPJ7cUgkbNcKLSHO3u',
+                    bannerContent: bannerContent,
+                    bannerSubContent: bannerSubContent,
+                    preferencesDialogTitle: preferencesDialogTitle,
+                    preferencesDialogContent: preferencesDialogContent,
+                    cancelDialogTitle: cancelDialogTitle,
+                    cancelDialogContent: cancelDialogContent,
+                    shouldRequireConsent: () => true,
+                    closeBehavior: exports.inEU() ? "dismiss" : "accept",
+                    bannerTextColor: "black",
+                }
+            }
+        </script>
+
+        <script
+            src="https://unpkg.com/@segment/consent-manager@5.3.0/standalone/consent-manager.js"
+            defer
+        ></script>
 
         <!-- Facebook Domain Verification -->
         <meta name="facebook-domain-verification" content="phlf6qes2bxa9ufzk8zt2es0qivg8j" />
