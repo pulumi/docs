@@ -1,19 +1,11 @@
 ---
-# Name of the webinar.
-title: "Getting Started with Infrastructure as Code on DigitalOcean"
-meta_desc: "In this hands-on workshop, you will learn how to stand up basic services using Infrastructure as Code through a series of hands-on labs."
+# Name of the event, <= 60 characters
+title: Getting Started with Infrastructure as Code on DigitalOcean
+meta_desc: In this hands-on workshop, you will learn how to stand up basic services using Infrastructure as Code through a series of hands-on labs.
+meta_image:
 
 # A featured webinar will display first in the list.
 featured: false
-
-# If the video is pre-recorded or live.
-pre_recorded: true
-
-# If the video is part of the PulumiTV series. Setting this value to true will list the video in the "PulumiTV" section.
-pulumi_tv: false
-
-# The preview image will be shown on the list page.
-preview_image: ""
 
 # Webinars with unlisted as true will not be shown on the webinar list
 unlisted: false
@@ -34,53 +26,55 @@ block_external_search_index: false
 
 # The url slug for the webinar landing page. If this is an external
 # webinar, use the external URL as the value here.
-url_slug: "getting-started-with-infrastructure-as-code-on-digital-ocean"
-
-# The content of the hero section.
-hero:
-    # The title text in the hero. This also serves as the pages H1.
-    title: "Getting Started with Infrastructure as Code on DigitalOcean"
-    # The image the appears on the right hand side of the hero.
-    image: "/icons/containers.svg"
-
-# Webinar pages support multiple session via the 'multiple' property.
-# multiple:
-#   - datetime: 2020-02-05T10:00:00-07:00
-#     hubspot_form_id: ""
-#     gotowebinar_key: ""
+url_slug: getting-started-with-infrastructure-as-code-on-digital-ocean
 
 # Content for the left hand side section of the page.
 main:
     # Webinar title.
-    title: "Getting Started with Infrastructure as Code on DigitalOcean"
+    title: Getting Started with Infrastructure as Code on DigitalOcean
+
+    event_type: workshop # workshop | event
+
     # URL for embedding a URL for ungated webinars.
-    youtube_url: "https://www.youtube.com/embed/VEJg-PGL8dk?rel=0"
+    youtube_url: https://www.youtube.com/embed/VEJg-PGL8dk?rel=0
+
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
     sortable_date: 2022-11-17T09:00:00-07:00
+
     # Duration of the webinar.
-    duration: "90 minutes"
-    # Datetime of the webinar.
-    datetime: ""
+    duration: 90 minutes
+
+    # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
+    location: virtual
+
     # Description of the webinar.
     description: |
-        In this hands-on workshop, the Pulumi and the DigitalOcean teams will show you how to stand up basic services using Infrastructure as Code (IaC) through a series of hands-on labs.
+        In this hands-on workshop, the Pulumi and the DigitalOcean teams will show you how to stand up basic services using Infrastructure as Code (IaC) through a series of hands-on labs.ects.
 
-    # The webinar presenters
-    presenters:
-        - name: Josh Kodroff
-          role: Senior Solutions Architect, Pulumi
-        - name: Christian Nunciato
-          role: Technical Content Lead, Pulumi
-        - name: Chris Sevilleaja
-          role: Senior Developer Advocate, DigitalOcean
-
-    # A bullet point list containing what the user will learn during the webinar.
     learn:
         - How to use Pulumi to provision cloud resources
         - How to use IaC on DigitalOcean
 
+    # The webinar presenters
+    presenters:
+        - name: Josh Kodroff
+          role: Sr Solutions Architect, Pulumi
+          photo: /images/team/josh-kodroff.jpg
+        - name: Christian Nunciato
+          role: Technical Content Lead, Pulumi
+          photo: /images/team/christian-nunciato.jpg
+        - name: Chris Sevilleaja
+          role: Senior Developer Advocate, DigitalOcean
+
+    # case-sensitive
+    tags:
+        level: Beginner # Beginner, Intermediate, Advanced
+        topics: ["DigitalOcean"]
+        languages: []
+
 # The right hand side form section.
 form:
     # HubSpot form id.
-    hubspot_form_id: "7498bb01-dceb-4519-ab4e-9413355ada23"
+    hubspot_form_id: 7498bb01-dceb-4519-ab4e-9413355ada23
+    salesforce_campaign_id:
 ---

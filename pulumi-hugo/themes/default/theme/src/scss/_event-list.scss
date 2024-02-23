@@ -50,8 +50,8 @@
             }
         }
 
-        // On initial load without a target in the url, the all tab should be active.
-        li[data-filter-name="all"] {
+        // On initial load without a target in the url, the upcoming tab should be active.
+        li[data-filter-name="upcoming"] {
             @include gradient-border;
 
             > a {
@@ -61,10 +61,10 @@
     }
 }
 
-@each $filter-name in "all" "featured" "upcoming" "videos" "ai-answers" "whitepapers" "livestreams" {
+@each $filter-name in "upcoming" "on-demand" "ai-answers"{
     ##{$filter-name}:target {
-        @if $filter-name != "all" {
-            ~ .event-list-filter li[data-filter-name="all"] {
+        @if $filter-name != "upcoming" {
+            ~ .event-list-filter li[data-filter-name="upcoming"] {
                 @apply flex-grow border-solid border-b-2 border-transparent;
                 border-image-source: none;
 
@@ -80,10 +80,6 @@
                     }
                 }
             }
-
-            ~ h3[data-filter-title="all"] {
-                @apply hidden;
-            }
         }
 
         ~ .event-list-filter li[data-filter-name="#{$filter-name}"] {
@@ -92,10 +88,6 @@
             > a {
                 @apply font-semibold text-black;
             }
-        }
-
-        ~ h3[data-filter-title="#{$filter-name}"] {
-            @apply block;
         }
 
         // When the page is loaded without a hash in the URL (a selected filter) we load
@@ -120,6 +112,6 @@
 
 .event-list-item {
     article {
-        height: 320px;
+        height: 380px;
     }
 }

@@ -1,5 +1,5 @@
 ---
-title: Resources
+title: Events
 meta_desc: |
     Resources about modern cloud native topics to connect, collaborate, and learn new techniques and best practices.
 
@@ -9,24 +9,10 @@ aliases:
   - /events
 
 sections:
-    - label: All
-      anchor: all
-      icon: asterisk
-    - label: Featured
-      anchor: featured
-      icon: star
-    - label: Upcoming
+    - label: Upcoming events
       anchor: upcoming
-      icon: users
-    - label: Videos
-      anchor: videos
-      icon: video
-    - label: Pulumi AI Answers
-      anchor: ai-answers
-      icon: comments
-    - label: Whitepapers
-      anchor: whitepapers
-      icon: book
+    - label: On-demand recordings
+      anchor: on-demand
 
 outputs: ["html", "rss"]
 ---

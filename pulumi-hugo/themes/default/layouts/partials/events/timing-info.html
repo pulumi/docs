@@ -1,0 +1,31 @@
+<div class="container pr-4">
+    <div class="flex flex-row flex-wrap">
+        <div class="w-1/2 md:w-1/3 p-2">
+            <div class="border border-gray-300 rounded-md p-2">
+                <div class="border-b border-gray-300 pb-2 text-gray-700">
+                    <i class="far fa-calendar mr-2"></i>
+                    <span class="text-sm">DATE</span>
+                </div>
+                <div class="pt-2">{{ .datetime | time.Format ":date_medium" }}</div>
+            </div>
+        </div>
+        <div class="w-1/2 md:w-1/3 p-2">
+            <div class="border border-gray-300 rounded-md p-2">
+                <div class="border-b border-gray-300 pb-2 text-gray-700">
+                    <i class="far fa-clock mr-2"></i>
+                    <span class="text-sm">TIME</span>
+                </div>
+                <div class="pt-2">{{ .datetime | time.Format ":time_short" }}</div>
+            </div>
+        </div>
+        <div class="w-1/2 md:w-1/3 p-2">
+            <div class="border border-gray-300 rounded-md p-2">
+                <div class="border-b border-gray-300 pb-2 text-gray-700">
+                    <i class="far fa-hourglass mr-2"></i>
+                    <span class="text-sm">DURATION</span>
+                </div>
+                <div class="pt-2">{{ .duration }}</div>
+            </div>
+        </div>
+    </div>
+</div>

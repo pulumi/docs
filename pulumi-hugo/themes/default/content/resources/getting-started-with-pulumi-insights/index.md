@@ -1,23 +1,18 @@
 ---
-# Name of the webinar.
-title: "Getting Started with Pulumi Insights"
-meta_desc: "In this workshop, you will learn how you can improve your team's productivity with the Search, Analytics, and Intelligence capabilities of Pulumi AI"
+# Name of the event, <= 60 characters
+title: Getting Started with Pulumi Insights
+meta_desc: In this workshop, you will learn how you can improve your team's productivity with the Search, Analytics, and Intelligence capabilities of Pulumi AI
+meta_image:
 
 # A featured webinar will display first in the list.
-featured: true
-
-# If the video is pre-recorded or live.
-pre_recorded: false
-
-# If the video is part of the PulumiTV series. Setting this value to true will list the video in the "PulumiTV" section.
-pulumi_tv: false
+featured: false
 
 # Webinars with unlisted as true will not be shown on the webinar list
 unlisted: false
 
 # Gated webinars will have a registration form and the user will need
 # to fill out the form before viewing.
-gated: true
+gated: false
 
 # The layout of the landing page.
 type: webinars
@@ -27,29 +22,31 @@ type: webinars
 # set the 'block_external_search_index' flag to true so Google does not index
 # the webinar page created.
 external: false
-block_external_search_index: true
+block_external_search_index: false
 
 # The url slug for the webinar landing page. If this is an external
 # webinar, use the external URL as the value here.
-url_slug: "getting-started-with-pulumi-insights"
-
-# The content of the hero section.
-hero:
-    # The title text in the hero. This also serves as the pages H1.
-    title: "Getting Started with Pulumi Insights"
-    # The image the appears on the right hand side of the hero.
-    image: "/icons/containers.svg"
+url_slug: getting-started-with-pulumi-insights
 
 # Content for the left hand side section of the page.
 main:
     # Webinar title.
-    title: "Getting Started with Pulumi Insights"
+    title: Getting Started with Pulumi Insights
+
+    event_type: workshop # workshop | event
+
+    # URL for embedding a URL for ungated webinars.
+    youtube_url: https://www.youtube.com/embed/FX5utv5eU6o?rel=0
+
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
     sortable_date: 2023-05-11T09:00:00-07:00
+
     # Duration of the webinar.
-    duration: "1 hour"
-    # Datetime of the webinar.
-    datetime: "May 11, 2023"
+    duration: 1 hour
+
+    # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
+    location: virtual
+
     # Description of the webinar.
     description: |
         Pulumi makes deploying cloud resources faster and simpler at scale. As teams deploy resources across many cloud providers and SaaS platforms they generate massive amounts of data about each update and resource in their organization and can now leverage this data to derive critical business insights. With Pulumi Insights, users have Search, Analytics, and Intelligence capabilities at their fingertips and this workshop will show you how each feature can make your team more productive by:
@@ -57,15 +54,25 @@ main:
         - Exporting Insights data to your favorite analytics platform
         - Assisting the creation of new infrastructure code with the power of Pulumi AI.
 
+    learn:
+
     # The webinar presenters
     presenters:
         - name: Josh Kodroff
-          role: Senior Solutions Architect, Pulumi
-        - name: Meagan Cojocar
-          role: Principal Product Manager, Pulumi
+          role: Sr. Solutions Architect, Pulumi
+          photo: /images/team/josh-kodroff.jpg
+        - name: Marina Novikova
+          role: Sr. Partner Solutions Architect, AWS
+          photo: /images/team/marina-novikova.jpg
+        - name: Bryce Lampe
+          role: Software Engineer, Pulumim
+          photo: /images/team/bryce-lampe.jpg
 
-    # A bullet point list containing what the user will learn during the webinar.
-
+    # case-sensitive
+    tags:
+        level: Beginner # Beginner, Intermediate, Advanced
+        topics: ["AI"]
+        languages: []
 
 # The right hand side form section.
 form:

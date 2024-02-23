@@ -1,14 +1,5 @@
 {{ define "hero" }}
-    {{ if eq .Params.aws_dev_day true }}
-        <header class="aws-dev-day-header relative w-full py-32 px-16 overflow-hidden">
-            <div class="flex flex-col justify-center items-center">
-                <img src="/images/webinar/aws-dev-day/devdaywhite.png" alt="AWS Dev Day" />
-                <h1 class="text-white">{{ .Params.hero.title }}</h1>
-            </div>
-        </header>
-    {{ else }}
-        {{ partial "hero.html" (dict "title" "Resources" "small_title" "true" "headingLevel" 3) }}
-    {{ end }}
+    {{ partial "hero.html" (dict "title" "Events" "small_title" "true" "headingLevel" 3) }}
 {{ end }}
 
 {{ define "main" }}
@@ -21,167 +12,54 @@
 
     <section id="webinarLandingPage" class="px-4">
         <div class="container mx-auto max-w-6xl pt-16 pb-8">
-            {{ if .Params.gated }}
-                {{ $buttonText := (cond (eq .Params.pre_recorded true) "WATCH NOW" "REGISTER NOW") }}
-                {{ $multipleSessions := isset .Params "multiple" }}
-                <div>
-                    <h1 class="text-5xl mb-12 text-center md:mx-8">{{ .Title }}</h1>
-                </div>
-                <div class="md:flex">
-                    <div class="md:w-1/2 md:mx-8">
-                        {{ $preRecorded := .Params.pre_recorded }}
-                        {{ with .Params.main }}
-                            <h4>Overview</h4>
-                            <p><a href="#webinarRegistrationForm" class="btn md:hidden">{{ $buttonText }}</a></p>
-                            {{ if eq $preRecorded true }}
-                                <span class="uppercase text-orange text-sm font-bold">On Demand | Recorded on:</span>
-                            {{ end }}
-                            {{ if $multipleSessions }}
-                                <span>Multiple sessions available. Check the registration form for dates and times.</span>
-                            {{ else }}
-                                {{ if ne .hide_date true }}
-                                    <h6 class="mt-4"><pulumi-datetime class="uppercase text-orange text-sm font-bold" date="{{ .sortable_date }}"></pulumi-datetime></h6>
-                                {{ else }}
-                                    <h6 class="mt-4">Date to be announced</h6>
-                                {{ end }}
-                            {{ end }}
-                            <h6 class="mt-2">Duration: {{ .duration }}</h6>
-                            {{ if .youtube_url }}
-                                <div class="my-8">
-                                    <a href="{{ .youtube_url }}" target="_blank" rel="noopener noreferrer" class="btn-secondary">WATCH NOW</a>
-                                </div>
-                            {{ end }}
-                            <div class="description text-gray-600">
-                                {{ .description | markdownify }}
-                            </div>
-                            {{ if .presenters }}
-                                <h4>Presenters</h4>
-                                <ul class="list-none p-0">
-                                    {{ range .presenters }}
-                                        <li class="mb-4">
-                                            <div class="text-purple">{{ .name }}</div>
-                                            <div class="text-sm">{{ .role }}</div>
-                                        </li>
-                                    {{ end }}
-                                </ul>
-                            {{ end }}
-                            {{ if isset . "learn" }}
-                                <h4 class="text-orange">Join us to learn:</h4>
-                                <ul class="text-gray-600">
-                                    {{ range .learn }}
-                                        <li>{{ . }}</li>
-                                    {{ end }}
-                                </ul>
-                            {{ end }}
-                            <h4>Prerequisites</h4>
-                            <div>This course will be taught using Pulumi Cloud. To follow along, sign up for your free account: <a class="text-blue-700 font-semibold underline hover:cursor-pointer" href="https://app.pulumi.com/signup">https://app.pulumi.com/signup</a></div>
+            <div class="md:mx-auto w-full">
+                <a><div class=""></div></a>
+                {{ if .Params.main.youtube_url }}
+                    <a href="/resources/#on-demand"><div class="text-blue-600 mb-4"><i class="fa fa-arrow-left mr-2"></i>All on-demand recordings</div></a>
+                {{ else }}
+                    <a href="/resources/#upcoming"><div class="text-blue-600 mb-4"><i class="fa fa-arrow-left mr-2"></i>All upcoming events</div></a>
+                {{ end }}
+                <span class="font-medium">WORKSHOP</span>
+                <span class="text-gray-300">&#8226;</span>
+                {{ if .Params.main.youtube_url }}
+                    <span class="font-normal">ON-DEMAND</span>
+                {{ else }}
+                    <span class="font-normal">VIRTUAL</span>
+                {{ end }}
+                <h2 class="mb-6 mt-0 text-3xl font-medium">{{ .Params.title }}</h2>
+
+                <div class="flex flex-col lg:flex-row">
+                    <div class="mx-auto w-full lg:w-1/2 mb-4">
+                        {{ if not .Params.main.youtube_url }}
+                            {{ partial "events/timing-info.html" (dict "datetime" .Params.main.sortable_date "duration" .Params.main.duration) }}
                         {{ end }}
+                        {{ partial "events/summary.html" (dict "description" .Params.main.description "learn" .Params.main.learn) }}
                     </div>
-                    <div id="webinarRegistrationForm" class="mt-10 md:mt-0 md:w-1/2 md:mx-8 bg-gray-200 rounded p-6">
-                        {{ if $timePassed }}
-                            <h4 class="text-orange">Recording Coming Soon!</h4>
-                            <p>This live webinar is no longer available. The recording will be posted to this page when it is available.</p>
-                        {{ else }}
-                            {{ $formHeader := (cond (eq .Params.pre_recorded true) "Watch The Recording Now" "Register Here") }}
-                            {{ if isset .Params.form "header" }}
-                                {{ $formHeader = .Params.form.header }}
-                            {{ end }}
-                            <h4 class="text-orange">{{ $formHeader }}</h4>
-                            {{ if $multipleSessions }}
-                                <pulumi-webinar-form-select
-                                    label-class="block mb-2 font-normal text-sm"
-                                    select-class="w-full px-2 py-1 text-sm rounded block text-gray-700 border border-gray-300 rounded bg-white focus:outline-none focus:ring"
-                                    sessions="{{ .Params.multiple | jsonify }}"
-                                ></pulumi-webinar-form-select>
-                            {{ else }}
+
+                    <div class="w-full lg:w-1/2 lg:pl-4 mb-4">
+                        {{ if .Params.main.youtube_url }}
+                            <!-- Rendered with Hugo's YouTube shortcode: https://gohugo.io/content-management/shortcodes/#youtube -->
+                            <div class="rounded-xl shadow-lg mb-10" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+                                <iframe src="{{ .Params.main.youtube_url }}" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen=""></iframe>
+                            </div>
+                        {{ else if and .Params.gated (not $timePassed) }}
+                            <div class="rounded-xl mb-10 p-8" style="box-shadow: 0px 6px 36px 0px #00000024;">
+                                <div class="text-2xl">Register today</div>
                                 <pulumi-hubspot-form
                                     form-id="{{ .Params.form.hubspot_form_id }}"
                                     go-to-webinar-key="{{ .Params.form.gotowebinar_key }}"
                                     salesforce-campaign-id="{{ .Params.form.salesforce_campaign_id }}"
                                 ></pulumi-hubspot-form>
-                            {{ end }}
-                        {{ end }}
-                    </div>
-                </div>
-            {{ else }}
-                <div class="md:mx-auto w-full">
-                    {{ $topLevelContext := . }}
-
-                    <div class="mx-auto max-w-4xl">
-                        <a class="bg-violet-100 inline-flex items-center text-gray-800 font-semibold rounded py-2 px-4" href="/resources/#videos">
-                            <span><i class="fas fa-video mr-2"></i></span>
-                            <span>Video</span>
-                        </a>
-                        <div>
-                            <h1 class="text-4xl mt-6 mb-2">{{ .Title }}</h1>
-                        </div>
-                        <div class="font-display mt-0 mb-4">
-                            Published
-                            <pulumi-datetime class="inline-block" date="{{ .Params.main.sortable_date }}"></pulumi-datetime>
-                        </div>
-                        <p class="description my-8 text-gray-700">
-                            {{ .Params.main.description | markdownify }}
-                        </p>
-                    </div>
-
-                    <div class="my-12">
-                        <!-- Rendered with Hugo's YouTube shortcode: https://gohugo.io/content-management/shortcodes/#youtube -->
-                        <div class="rounded-xl shadow-lg mb-10" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-                            <iframe src="{{ .Params.main.youtube_url }}" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen=""></iframe>
-                        </div>
-                    </div>
-
-                    <div class="mx-auto max-w-4xl">
-
-                        {{ if .Params.main.presenters }}
-                            <div class="my-8">
-                                <h4>Presenters</h4>
-                                <ul>
-                                    {{ range .Params.main.presenters }}
-                                        <li class="mb-4">
-                                            <div>{{ .name }}</div>
-                                            <div class="text-sm">{{ .role }}</div>
-                                        </li>
-                                    {{ end }}
-                                </ul>
-                            </div>
-                        {{ end }}
-
-                        {{ if .Params.main.learn }}
-                            <div class="my-8">
-                                <h4>What you'll learn</h4>
-                                <ul>
-                                    {{ range .Params.main.learn }}
-                                        <li>{{ . }}</li>
-                                    {{ end }}
-                                </ul>
-                            </div>
-                        {{ end }}
-
-                        <div class="mt-12 flex justify-center">
-                            <a href="/docs/get-started/" class="btn-primary mr-4">Get Started With Pulumi</a>
-                            <a href="/resources" class="btn-secondary">More Resources</a>
-                        </div>
-
-                        {{ if .Params.transcript }}
-                            <div class="mt-8">
-                                <details>
-                                    <summary class="rounded-md p-4 border border-gray-400 mb-4 cursor-pointer">
-                                        Show video transcript
-                                    </summary>
-                                    <div class="description">
-                                        {{ .Params.transcript | markdownify }}
-                                    </div>
-                                </details>
                             </div>
                         {{ end }}
                     </div>
                 </div>
-            {{ end }}
+                    
+                {{ if .Params.main.presenters }}
+                    {{ partial "events/event-speakers.html" (dict "presenters" .Params.main.presenters) }}
+                {{ end }}
+                </div>
         </div>
     </section>
-
-    <div class="mx-auto mb-12 max-w-4xl">
-        {{ partial "learnmore-ai.html" . }}
-    </div>
 {{ end }}
+ 

@@ -1,28 +1,84 @@
 ---
-preview_image:
-hero:
-  image: /icons/containers.svg
-  title: "Build an ETL pipeline with Amazon Redshift and AWS Glue | Modern Infrastructure"
-title: "Build an ETL pipeline with Amazon Redshift and AWS Glue"
-meta_desc: |
-    Learn how to combine AWS Glue and Amazon Redshift to build a fully-automated ETL pipeline with Pulumi. We'll use three components to complete our example.
-url_slug: build-etl-pipeline-amazon-redshift-aws-glue-modern-infrastructure
-featured: false
-pre_recorded: true
-pulumi_tv: false
-unlisted: false
-gated: false
-type: webinars
-external: false
-no_getting_started: true
-block_external_search_index: false
-main:
-  title: "Build an ETL pipeline with Amazon Redshift and AWS Glue | Modern Infrastructure"
-  description: |
-    Learn how to combine AWS Glue and Amazon Redshift to build a fully-automated ETL pipeline with Pulumi. We'll use three components to complete our ETL pipeline-to-be:  ▪️ A Glue crawler. The crawler is responsible for fetching data from some external source (for us, an S3 bucket) and importing it into a Glue catalog.  ▪️ A Glue job. The job is responsible for running an ETL script (e.g., on a schedule) to process the data imported by the crawler into the catalog. ▪️ A Glue script. The script is where the ETL magic happens. Ours will be written in Python and be responsible for extracting data from the catalog, applying some slight transformations, and loading the transformed data into Redshift. ► Get the code to follow along at https://www.pulumi.com/blog/redshift-etl-with-pulumi-and-aws-glue/   ✅ Get Started with Pulumi: https://pulumip.us/Get-Started ✅ Create a Pulumi account. It's free: https://pulumip.us/Sign-Up-OpenSource  00:00 Introduction 00:10 What we did in "Deploying a Data Warehouse with Pulumi and Amazon Redshift." 00:30 Common question when setting up an ETL pipeline 00:58 What is AWS Glue? 01:23 Watch part 1, if you haven't: https://youtu.be/2v_53eWGrqE 01:49 Recap of where we left off on part 1 of the demo 02:10 Three components to complete our ETL pipeline 02:20 1. Glue crawler 02:47 2. Glue job 03:01 3. Glue script 03:27 Adding the Glue crawler 05:30 Adding the Glue job 07:23 Adding the Glue script 08:40 Deploy! 09:31 Load some data 10:36 Take a look at the AWS console  10:59 Go to the Glue console 12:04 Go to the Glue Job section 12:29 Go to the Redshift console to verify the data 13:15 Let's put in more data to verify the glue job 15:53 Summary of what we did (part 1 + part  2) 17:10 Check out the Metabase package (AWS) 17:38 Goodbyes
-  sortable_date: 2023-02-01T20:40:52Z
-  youtube_url: https://www.youtube.com/embed/cbAzk9ovR9s
-transcript: |
-    Welcome to another episode of modern infrastructure Wednesday. We're gonna build a ETL pipeline with Amazon Red Ship and Aws Glue. If you recall from our last episode, we learned how to deploy data warehouse with Pulumi and Amazon Redshift. Uh we covered using Pulumi to load unstructured data for a from Amazon S3 into Amazon Redshift cluster. And at the end of that episode, there are a few unanswered questions. For example, how do we avoid importing and processing the same data twice? How can we transform the data during the ingestion process? And what are our options for loading data automatically, for example, on a regular schedule. So when your platform of choice is Amazon Redshift, those questions will often be answered by pointing you to another Amazon service. Uh for example, Aws glue. So with glue, you can define processes that monitor external data sources like S3, keep track of data that's already been processed and write code in general purpose programming languages like Python to process and transform the data on its way into Redshift. There's a lot more you can do with glue. However, for this project, it's just what we need uh watch the previous video to get up to speed on what we're building and why. Uh when we left off, we've gotten red shift up and running and we were able to pull the data from S3 into redshift directly by running a manual query in the redshift console. But that's as far as we got, there was no automation, no protection from duplicate records, just the absolute basics. So we're gonna pick up from there uh just to quickly recap. Uh, we deployed a VPC with a private subnet, a red shift cluster deployed into the subnet, an S3 bucket that we use to hold some raw data and a VPC endpoint allowing direct access to the bucket over the private network. So now it's time to add in glue at a high level. We'll need three components to complete our ETL pipeline to be um, one a glue crawler. So the crawler is responsible for fetching data from some external source. Uh, for us, it's a S3 bucket and then importing it into a glue catalog. A catalog is a kind of staging database that tracks your data through the ingestion process. Our particular crawler will pull our S3 bucket for new data and import that into a catalog table. Two a glue job. The job is responsible for running an ETL script on a schedule to process the data imported by the crawler into the catalog and then finally three a glue script. The script is where all the ETL magic happens. Ours will be written in Python and be responsible for extracting data from the catalog, applying some slight transformations to it and loading the transform data in the red shift. So next, we will translate these high-level components into concrete plumy resources. Step one, adding a glue crawler. Uh So the first thing is we'll need a unique name for a glue catalog. So we'll set it using plume config here. All right. Now, back end editor, what we'll do is copy in some code for the glue crawler. So do that. All right. So, so this pulls in the glue database name. Um, this piece of code defines a aws Ron expression. So it runs every 15 minutes. Um, this is specifically creating the glue catalog and then this is defining a im role granting glue access to the S3 bucket that we created on up here. And then finally, this is the glue crawler to process the contents of the data bucket on a schedule. So feeding it in the name, the role and then the schedule. And then we're also pulling in, uh, the S3 bucket from above. Ok. So let's run, let's save this and run a quick pulling me up. Ok. That is now done. Now, let's add the glue job. So, so this is step two, adding the glue job. Uh, we're gonna paste in some code again. Ok. This job is fairly simple, but still requires a few different aws resources. So here we create a glue connection to the Redshift cluster. Um It's just pulling in the user name and password that we define from plume config. Uh Then we'll need a S3 bucket. This is where glue is gonna look for the glue script that we'll cover in step three. Um We will upload the glue script into the S3 bucket and then this is the glue job that runs the uh ETL script. Um So in here you'll see they're passing in the connection. Uh Then it's defining how big uh all, all the compute resources and settings that you'll need uh for the glue job. Uh So we're passing in more uh variables of various sorts that were defined earlier and the code and then lastly, uh we're gonna create a glue trigger to run the job every 15 minutes. So, uh the glue crawler crawls every 15 minutes and then the job will be triggered to run every 15 minutes as well. So before we deploy this, uh we'll need a script. So step three is we're gonna add the glue script. So we got to create a new file here. We're gonna call it glue job dot Pie. I will copy and code here. It saves. So there's a lot going on in this script. But the general gist is that when it runs, it will extract all unprocessed data from our glue catalog. Transform that data using a simple mapping to tweak some field names. Uh Again, this is just to demonstrate how that's done and then it loads the resulting data into redshift, a glue jaw bookmark, a glu job bookmark guarantees that we don't process the same data more than once. All right, with that, we are now ready to deploy. So run pulling me up and let's get that going. Oops, forgot to save. Let's try that again. OK. All right. That is done. All right. Now let's load some sample data. So like the previous episode, we simulated this part since we don't have an actual application, generating real data for us. So we're gonna run a few, we're gonna run the following commands to write a few Jason records to a file called events one TXT. So we'll do that. And then with the aws cli, we'll upload that file into a S3 data bucket using the name we exported at the end of the last deployment. So that thing. All right. And that should be it. Ok. Now we wait for the glue job and crawler to kick off. Um, but in the meantime, let's take a look at the AWS console real quick. So here we have our red shift. Uh, let's see. See that there is a cluster that we created. So that is good. And then let's go to the glue console. And All right. So, yeah, there, this is the glue data catalog that was created, uh, from our Pulumi code and then this is the crawler and yeah, it should be, uh, crawling every 15 minutes. So, um, well, I'm gonna take a break here and come back and hopefully it's crawled and we can, uh, finish out, uh, today's episode. All right. So the crawler has finished crawling. You can see that there was a crawl that run that started here and there was one table change. So that looks good. Uh, we'll jump into the job section and we'll look at this glue job here. Take a look at runs and we'll see that a run has succeeded. And so that's good, um, successful run. So let's go into the red shift console next and just verify that our data is there. So let's see. This is our cluster, we can query our data here. Um, ok, we're gonna, we're on a query in my Redshift cluster. So let's see. So star from this. Ok. Let's see if that. And that is great. That is exactly the events that we put in events one txt. So we can also, um, you know, put in some more data. So if we four back here. Ok. All right. So do that. Hm. Upload that to S3 bucket as well. All right. So that's gonna kick off and go again into glue jaw. But what I wanted to show with this next thing is, um, because of the way that we set up the glue jaw bookmark, it's able to ignore events dash one when it's processing and process only events dash two and get it all into the right place. So, um, we are gonna take a quick break and let the job run. So let's see. Ok, so glue console was crawled. Um, it was able to pick up the new file we put into the S3 bucket. Now let's go into jobs real quick. Go back to this glue job here. Yeah, I, yep. So that succeeded. So that worked, we can jump to the red shift console and query your data real quick to see if those events were added in. Uh, so let's see if we can do that here. So we will run this and excellent. So the events from events two txt made it in four and five. So that is excellent. So we know that our glue job works. Um, so the crawler was able to crawl through bucket, pick up the new file and then the glue job ingested it, but it blissfully ignored the older file that already was processed, you know, thanks to the glue job bookmark and then it was able to take all the new events and drop those events, those records right into the red shift in this table. To conclude, we did quite a lot here. So from previous episode, we took, uh, we set up a Redshift data warehouse and it was able to ingest things from S3 and process it. So in this episode, we spun that back up. And then we added a few different things. Uh with using Aws glue, we, we built out a ETL pipeline. So we set up a group, a glue crawler that was able to fetch data from um R S3 bucket, then a glue job that executed a ETL script and a glue script itself that did a lot of all the eto magic like extracting the data, applying transformations and loading it into redshift now that that's all working. Um You know, we only touched the surface level of red shift and glue. Um So there is so much more that is possible with these tools. So highly recommend y'all to dig into the documentation to explore both of them in more depth. And once you're up and running with Redshift, you might also want to check out this meta base package and deploy me registry. Uh This meta base package makes it easy to deploy meta base alongside Redshift on AWS. So it allows you to build powerful data analysis and visualization experiences with your data. Um And here at Pulumi, we actually uh use this um as our B I tool on top of our data warehouse. So with that, uh I just wanna thank everyone for joining on this episode of Modern Infrastructure Wednesday. My name is Aaron Cal, your host. Thank you.
+# Name of the event, <= 60 characters
+title: Build an ETL pipeline with Amazon Redshift and AWS Glue
+meta_desc: Learn how to combine AWS Glue and Amazon Redshift to build a fully-automated ETL pipeline with Pulumi. We'll use three components to complete our example.
+meta_image:
 
+# A featured webinar will display first in the list.
+featured: false
+
+# Webinars with unlisted as true will not be shown on the webinar list
+unlisted: false
+
+# Gated webinars will have a registration form and the user will need
+# to fill out the form before viewing.
+gated: false
+
+# The layout of the landing page.
+type: webinars
+
+# External webinars will link to an external page instead of a webinar
+# landing/registration page. If the webinar is external you will need
+# set the 'block_external_search_index' flag to true so Google does not index
+# the webinar page created.
+external: false
+block_external_search_index: false
+
+# The url slug for the webinar landing page. If this is an external
+# webinar, use the external URL as the value here.
+url_slug: build-etl-pipeline-amazon-redshift-aws-glue-modern-infrastructure
+
+# Content for the left hand side section of the page.
+main:
+    # Webinar title.
+    title: Build an ETL pipeline with Amazon Redshift and AWS Glue
+
+    event_type: workshop # workshop | event
+
+    # URL for embedding a URL for ungated webinars.
+    youtube_url: https://www.youtube.com/embed/cbAzk9ovR9s?rel=0
+
+    # Sortable date. The datetime Hugo will use to sort the webinars in date order.
+    sortable_date: 2023-02-01T20:40:52Z
+
+    # Duration of the webinar.
+    duration: 18 minutes
+    # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
+    location: virtual
+
+    # Description of the webinar.
+    description: |
+        Learn how to combine AWS Glue and Amazon Redshift to build a fully-automated ETL pipeline with Pulumi. We'll use three components to complete our ETL pipeline-to-be: 
+        
+        ▪️ A Glue crawler. The crawler is responsible for fetching data from some external source (for us, an S3 bucket) and importing it into a Glue catalog.
+        
+        ▪️ A Glue job. The job is responsible for running an ETL script (e.g., on a schedule) to process the data imported by the crawler into the catalog.
+        
+        ▪️ A Glue script. The script is where the ETL magic happens. Ours will be written in Python and be responsible for extracting data from the catalog, applying some slight transformations, and loading the transformed data into Redshift.
+        
+        ► [Get the code](https://www.pulumi.com/blog/redshift-etl-with-pulumi-and-aws-glue/) to follow along 
+        
+        ✅ [Get Started with Pulumi](https://pulumip.us/Get-Started)
+
+        The first in a series of videos, we'll use a fictional company named Zephyr to explore common questions that users ask when working with Pulumi. Zephyr wants to increase development velocity and flexibly scale different aspects of its online store. The demo will show deploying Zephyr's application, their online store.
+
+    learn:
+
+    # The webinar presenters
+    presenters:
+        - name: Aaron Kao
+          role: VP Marketing, Pulumi
+          photo: /images/team/aaron-kao.jpg
+
+    # case-sensitive
+    tags:
+        level: Beginner # Beginner, Intermediate, Advanced
+        topics: ["AWS Glue"]
+        languages: ["Python"]
+
+# The right hand side form section.
+form:
+    # HubSpot form id.
+    hubspot_form_id:
+    salesforce_campaign_id:
 ---

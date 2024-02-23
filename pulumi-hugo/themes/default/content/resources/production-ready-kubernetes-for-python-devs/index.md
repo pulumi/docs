@@ -1,19 +1,11 @@
 ---
-# Name of the webinar.
-title: "Production-ready Kubernetes for Python Developers"
-meta_desc: "In this workshop, you will learn how to deploy a Kubernetes cluster using the Python language. Hosted by Cloud Native Computing Foundation."
+# Name of the event, <= 60 characters
+title: Production-ready Kubernetes for Python Developers
+meta_desc: In this workshop, you will learn how to deploy a Kubernetes cluster using the Python language. Hosted by Cloud Native Computing Foundation.
+meta_image:
 
 # A featured webinar will display first in the list.
 featured: false
-
-# If the video is pre-recorded or live.
-pre_recorded: false
-
-# If the video is part of the PulumiTV series. Setting this value to true will list the video in the "PulumiTV" section.
-pulumi_tv: false
-
-# The preview image will be shown on the list page.
-preview_image: ""
 
 # Webinars with unlisted as true will not be shown on the webinar list
 unlisted: false
@@ -34,42 +26,42 @@ block_external_search_index: true
 
 # The url slug for the webinar landing page. If this is an external
 # webinar, use the external URL as the value here.
-url_slug: "https://community.cncf.io/events/details/cncf-cncf-online-programs-presents-cncf-on-demand-webinar-production-ready-kubernetes-for-python-developers/"
-
-# The content of the hero section.
-hero:
-    # The title text in the hero. This also serves as the pages H1.
-    title: "Production-ready Kubernetes for Python Developers"
-    # The image the appears on the right hand side of the hero.
-    image: "/icons/containers.svg"
-
-# Webinar pages support multiple session via the 'multiple' property.
-# multiple:
-#   - datetime: 2020-02-05T10:00:00-07:00
-#     hubspot_form_id: ""
-#     gotowebinar_key: ""
+url_slug: https://community.cncf.io/events/details/cncf-cncf-online-programs-presents-cncf-on-demand-webinar-production-ready-kubernetes-for-python-developers/
 
 # Content for the left hand side section of the page.
 main:
     # Webinar title.
-    title: "Production-ready Kubernetes for Python Developers"
+    title: Production-ready Kubernetes for Python Developers
+
+    event_type: workshop # workshop | event
+
     # URL for embedding a URL for ungated webinars.
-    youtube_url: ""
+    youtube_url:
+
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
     sortable_date: 2023-05-18T12:00:00-08:00
+
     # Duration of the webinar.
-    duration: "1 hour"
-    # Datetime of the webinar.
-    datetime: ""
+    duration: 1 hour
+
+    # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
+    location: virtual
+
     # Description of the webinar.
-    description: ""
+    description:
 
     # The webinar presenters
     presenters:
-        - name: ""
-          role: ""
 
-    # A bullet point list containing what the user will learn during the webinar.
-    learn:
-        - ""
+    # case-sensitive
+    tags:
+        level: Beginner # Beginner, Intermediate, Advanced
+        topics: ["Kubernetes"]
+        languages: ["Python"]
+
+# The right hand side form section.
+form:
+    # HubSpot form id.
+    hubspot_form_id:
+    salesforce_campaign_id:
 ---

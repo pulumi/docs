@@ -1,19 +1,11 @@
 ---
-# Name of the webinar.
+# Name of the event, <= 60 characters
 title: "AI: Friend or Foe | AI Talks for DevOps"
-meta_desc: Join us to explore how AI impacts DevOps and how we build, deploy, and manage infrastructure and software applications. [in person | San Francisco]
+meta_desc: Join us to explore how AI impacts DevOps and how we build, deploy, and manage infrastructure and software applications.
+meta_image:
 
 # A featured webinar will display first in the list.
 featured: false
-
-# If the video is pre-recorded or live.
-pre_recorded: false
-
-# If the video is part of the PulumiTV series. Setting this value to true will list the video in the "PulumiTV" section.
-pulumi_tv: false
-
-# The preview image will be shown on the list page.
-preview_image: ""
 
 # Webinars with unlisted as true will not be shown on the webinar list
 unlisted: false
@@ -34,47 +26,42 @@ block_external_search_index: true
 
 # The url slug for the webinar landing page. If this is an external
 # webinar, use the external URL as the value here.
-url_slug: "https://info.pulumi.com/sf-ai-talks-for-devops-software-developers"
-
-# The content of the hero section.
-hero:
-    # The title text in the hero. This also serves as the pages H1.
-    title: ""
-    # The image the appears on the right hand side of the hero.
-    image: "/icons/containers.svg"
-
-# Webinar pages support multiple session via the 'multiple' property.
-# multiple:
-#   - datetime: 2020-02-05T10:00:00-07:00
-#     hubspot_form_id: ""
-#     gotowebinar_key: ""
+url_slug: https://info.pulumi.com/sf-ai-talks-for-devops-software-developers
 
 # Content for the left hand side section of the page.
 main:
     # Webinar title.
-    title: ""
+    title: "AI: Friend or Foe | AI Talks for DevOps"
+
+    event_type: workshop # workshop | event
+
     # URL for embedding a URL for ungated webinars.
-    youtube_url: ""
+    youtube_url:
+
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
     sortable_date: 2023-11-08T17:00:00-07:00
+
     # Duration of the webinar.
-    duration: "1 day"
-    # Datetime of the webinar.
-    datetime: ""
+    duration: 1 day
+
+    # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
+    location: San Francisco, CA
+
     # Description of the webinar.
-    description: ""
+    description:
 
     # The webinar presenters
     presenters:
-        - name: ""
-          role: ""
 
-    # A bullet point list containing what the user will learn during the webinar.
-    learn:
-        - ""
+    # case-sensitive
+    tags:
+        level: # Beginner, Intermediate, Advanced
+        topics: ["AI"]
+        languages: []
 
 # The right hand side form section.
 form:
     # HubSpot form id.
-    hubspot_form_id: ""
+    hubspot_form_id:
+    salesforce_campaign_id:
 ---

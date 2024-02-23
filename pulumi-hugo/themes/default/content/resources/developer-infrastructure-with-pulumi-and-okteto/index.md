@@ -1,48 +1,80 @@
 ---
-preview_image: ""
-hero:
-  image: /icons/containers.svg
-  title: Developer Infrastructure with Pulumi and Okteto
-main:
-  duration: 60 minutes
-  presenters:
-    - name: Arsh Sharma
-      role: Developer Experience Engineer, Okteto
-    - name: Engin Diri
-      role: Sr. Community Engineer, Pulumi
-  learn:
-    - How to create self-serviced, production-like development environments
-    - How Okteto and Pulumi work together
-    - How to provision and deprovision cloud resources in Okteto with Pulumi
-  title: Developer Infrastructure with Pulumi and Okteto
-  description: |
-    In this workshop, you will learn the essentials of automating cloud resource provisioning with Pulumi and Okteto. This hands-on session is tailored for developers and platform engineers eager to adopt Infrastructure as Code (IaC) practices using familiar programming languages. Learn how to deploy cloud resources efficiently across any cloud provider and enhance your development workflow with Okteto's on-demand environments.
-    
-    Perfect for those looking to streamline their development process and foster better collaboration between teams, this workshop promises to equip you with practical skills for more effective cloud resource management.
-  sortable_date: 2024-03-04T09:00:00.000-08:00
-event_data:
-  name: Developer Infrastructure with Pulumi and Okteto
-  start_date: 2024-03-04T09:00:00.000-08:00
-  end_date: 2024-03-04T10:00:00.000-08:00
-  url: https://www.pulumi.com/resources/developer-infrastructure-with-pulumi-and-okteto
-  description: |
-    In this workshop, you will learn the essentials of automating cloud resource provisioning with Pulumi and Okteto. This hands-on session is tailored for developers and platform engineers eager to adopt Infrastructure as Code (IaC) practices using familiar programming languages. Learn how to deploy cloud resources efficiently across any cloud provider and enhance your development workflow with Okteto's on-demand environments.Perfect for those looking to streamline their development process and foster better collaboration between teams, this workshop promises to equip you with practical skills for more effective cloud resource management.
-form:
-  hubspot_form_id: 97146af6-3e33-4bed-a12e-99e861c328fd
-  salesforce_campaign_id: 701PQ000006EP1iYAG
-  gotowebinar_key: ""
+# Name of the event, <= 60 characters
+title: Developer Infrastructure with Pulumi and Okteto
+meta_desc: Learn the essentials of automating cloud resource provisioning with Pulumi and Okteto in this hands-on session.
+meta_image: /images/resources/developer-infra-okteto-engin-arsh.png
+
+# A featured webinar will display first in the list.
 featured: false
-pre_recorded: false
-pulumi_tv: false
+
+# Webinars with unlisted as true will not be shown on the webinar list
 unlisted: false
+
+# Gated webinars will have a registration form and the user will need
+# to fill out the form before viewing.
 gated: true
+
+# The layout of the landing page.
 type: webinars
+
+# External webinars will link to an external page instead of a webinar
+# landing/registration page. If the webinar is external you will need
+# set the 'block_external_search_index' flag to true so Google does not index
+# the webinar page created.
 external: false
 block_external_search_index: false
-aws_only: false
-title: Developer Infrastructure with Pulumi and Okteto
-title_tag: Developer Infrastructure with Pulumi and Okteto
-meta_desc: Learn the essentials of automating cloud resource provisioning with Pulumi and Okteto in this hands-on session.
-meta_image: "/images/resources/developer-infra-okteto-engin-arsh.png"
+
+# The url slug for the webinar landing page. If this is an external
+# webinar, use the external URL as the value here.
 url_slug: developer-infrastructure-with-pulumi-and-okteto
+
+# Content for the left hand side section of the page.
+main:
+    # Webinar title.
+    title: Developer Infrastructure with Pulumi and Okteto
+
+    event_type: workshop # workshop | event
+
+    # URL for embedding a URL for ungated webinars.
+    youtube_url: 
+
+    # Sortable date. The datetime Hugo will use to sort the webinars in date order.
+    sortable_date: 2024-03-04T09:00:00.000-08:00
+
+    # Duration of the webinar.
+    duration: 1 hour
+
+    # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
+    location: virtual
+
+    # Description of the webinar.
+    description: |
+        In this workshop, you will learn the essentials of automating cloud resource provisioning with Pulumi and Okteto. This hands-on session is tailored for developers and platform engineers eager to adopt Infrastructure as Code (IaC) practices using familiar programming languages. Learn how to deploy cloud resources efficiently across any cloud provider and enhance your development workflow with Okteto's on-demand environments.
+    
+        Perfect for those looking to streamline their development process and foster better collaboration between teams, this workshop promises to equip you with practical skills for more effective cloud resource management.
+
+    learn:
+        - How to create self-serviced, production-like development environments
+        - How Okteto and Pulumi work together
+        - How to provision and deprovision cloud resources in Okteto with Pulumi
+
+    # The webinar presenters
+    presenters:
+        - name: Arsh Sharma
+          role: Developer Experience Engineer, Okteto
+        - name: Engin Diri
+          role: Sr. Solutions Architect, Pulumi
+          photo: /images/team/engin-diri.jpg
+
+    # case-sensitive
+    tags:
+        level: Beginner # Beginner, Intermediate, Advanced
+        topics: ["Okteto"]
+        languages: []
+
+# The right hand side form section.
+form:
+    # HubSpot form id.
+    hubspot_form_id: 97146af6-3e33-4bed-a12e-99e861c328fd
+    salesforce_campaign_id: 701PQ000006EP1iYAG
 ---

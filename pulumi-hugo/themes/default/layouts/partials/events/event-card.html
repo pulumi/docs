@@ -1,0 +1,63 @@
+<li data-display-date="{{ .displayDate }}" class="w-full m-0 p-2 lg:w-1/2 group" data-filters="{{ delimit .filters " " }}">
+    {{ $href := .link }}
+    {{ $relref := "noopener noreferrer" }}
+    {{ $target := "_blank" }}
+
+    {{ if eq .external false }}
+        {{ $href = (relref .pageContext .link) }}
+
+        {{ $relref = "" }}
+        {{ $target = "" }}
+    {{ end }}
+
+    <article class="card bg-white h-80 md:h-72 flex flex-col mx-2 md:mx-0 border border-gray-200 hover:border-gray-500">
+        <a href="{{ $href }}" rel="{{ $relref }}" target="{{ $target }}" class="w-full h-full">
+            <span class="block w-full h-full p-4 flex flex-col justify-between">
+                <span>
+                    <span class="flex flex-row justify-between">
+                        <span class="w-10/12">
+                            <span class="font-medium text-gray-800">WORKSHOP</span>
+                            <span class="text-gray-300">&#8226;</span>
+                            {{ if .data.Params.main.youtube_url }}
+                                <span class="font-normal text-gray-800">ON-DEMAND</span>
+                            {{ else }}
+                                <span class="font-normal text-gray-800">{{ .data.Params.main.location | upper }}</span>
+                            {{ end }}
+                            <h6 class="mt-2 mb-0 text-xl md:text-2xl">
+                                {{ .data.Params.title }}
+                                {{ if .external }}<i class="text-sm ml-2 fas fa-external-link-alt"></i>{{ end }}
+                            </h6>
+                        </span>
+                        <span class="flex flex-col justify-between border-2 border-gray-300 rounded w-16 overflow-visible h-16">
+                            <div class="bg-white text-center text-2xl pt-0.5 text-gray-900 font-semibold">
+                                {{ .datetime | time.Format "2" }}
+                            </div>
+                            <div class="bg-gray-300 text-center text-xs md:text-sm py-0.5 text-gray-900">
+                                {{ upper (.datetime | time.Format "Jan 06") }}
+                            </div>
+                        </span>
+                    </span>
+                    <span class="flex flex-col justify-start mt-3">
+                        <p class="m-0 mb-4 pt-0 text-gray-700">
+                            {{ .data.Params.meta_desc }}
+                        </p>
+                    </span>
+                </span>
+                <span class="flex flex-row justify-between">
+                    <span class="flex flex-row mr-2 w-2/3">
+                        {{ if .data.Params.main.tags }}
+                            {{ partial "events/tags.html" (dict "tags" .data.Params.main.tags) }}
+                        {{ end }}
+                    </span>
+                    <span class="text-blue-600 flex flex-col justify-end">
+                        {{ if .data.Params.main.youtube_url }}
+                            <div class="align-bottom">Watch on-demand<i class="fa fa-arrow-right ml-2"></i></div>
+                        {{ else if .upcoming }}
+                            <div class="align-bottom">Register<i class="fa fa-arrow-right ml-2"></i></div>
+                        {{ end }}
+                    </span>
+                </span>
+            </span>
+        </a>
+    </article>
+</li>

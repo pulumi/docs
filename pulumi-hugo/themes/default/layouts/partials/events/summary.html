@@ -1,0 +1,18 @@
+<div class="container pr-4">
+    <div class="mt-8 mb-4">
+        <i class="fas fa-info-circle text-blue-600 mr-1"></i>
+        <span class="text-md">This workshop is taught with Pulumi Cloud. <a href="https://app.pulumi.com/signup/" class="text-blue-600 cursor-pointer">Sign up for free</a> to follow along.</span>
+    </div>
+    <div class="text-md my-4">{{ .description | markdownify }}</div>
+    {{ if .learn }}
+        <div class="my-4 lg:my-8">
+            <div class="text-md mb-2">You'll Learn:</div>
+            {{ range $item := .learn }}
+                <div class="my-2">
+                    <i class="fas fa-check-circle mr-1"></i>
+                    <span class="text-md">{{ $item }}</span>
+                </div>
+            {{ end }}
+        </div>
+    {{ end }}
+</div>

@@ -1,20 +1,12 @@
 ---
-# Name of the webinar.
+# Name of the event, <= 60 characters
 title: Get started with CI/CD for AWS using Pulumi & GitHub Actions
 meta_desc: In this workshop, you will learn the fundamentals of an infrastructure CI/CD pipeline through guided exercises using Pulumi.
 meta_image: "/images/resources/cicd-aws-github-actions-diana.png"
 
+
 # A featured webinar will display first in the list.
 featured: false
-
-# If the video is pre-recorded or live.
-pre_recorded: false
-
-# If the video is part of the PulumiTV series. Setting this value to true will list the video in the "PulumiTV" section.
-pulumi_tv: false
-
-# The preview image will be shown on the list page.
-preview_image: ""
 
 # Webinars with unlisted as true will not be shown on the webinar list
 unlisted: false
@@ -37,34 +29,34 @@ block_external_search_index: false
 # webinar, use the external URL as the value here.
 url_slug: cicd-for-aws-with-pulumi-and-github-actions
 
-# The content of the hero section.
-hero:
-    # The title text in the hero. This also serves as the pages H1.
-    title: Get started with CI/CD for AWS using Pulumi & GitHub Actions
-    # The image the appears on the right hand side of the hero.
-    image: "/icons/containers.svg"
-
-# Webinar pages support multiple session via the 'multiple' property.
-# multiple:
-#   - datetime: 2020-02-05T10:00:00-07:00
-#     hubspot_form_id: ""
-#     gotowebinar_key: ""
-
 # Content for the left hand side section of the page.
 main:
     # Webinar title.
     title: Get started with CI/CD for AWS using Pulumi & GitHub Actions
+
+    event_type: workshop # workshop | event
+
     # URL for embedding a URL for ungated webinars.
-    youtube_url: 
+    youtube_url:
+
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
     sortable_date: 2024-03-29T09:00:00-07:00
+
     # Duration of the webinar.
-    duration: "90 minutes"
-    # Datetime of the webinar.
-    datetime: ""
+    duration: 90 minutes
+
+    # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
+    location: virtual
+
     # Description of the webinar.
     description: |
         This workshop introduces new users to DevOps best practices. You will become familiar with the core concepts needed to deploy cloud resources continuously. Walk through configuring Pulumi GitHub Actions to deploy AWS resources programmatically and accelerate your cloud projects with the skeleton code provided.
+
+    learn:
+        - The basics of the Pulumi programming model
+        - The key components of a continuous pipeline
+        - How to build your own infrastructure CI/CD pipeline
+        - Configuring the Pulumi GitHub Actions to deploy AWS resources
 
     # The webinar presenters
     presenters:
@@ -72,14 +64,17 @@ main:
           role: Technical Content Engineer, Pulumi
         - name: Marina Novikova
           role: Sr. Solutions Architect, AWS
+          photo: /images/team/marina-novikova.jpg
 
-    # A bullet point list containing what the user will learn during the webinar.
-    learn:
-        - The basics of the Pulumi programming model
-        - The key components of a continuous pipeline
-        - How to build your own infrastructure CI/CD pipeline
-        - Configuring the Pulumi GitHub Actions to deploy AWS resources
+    # case-sensitive
+    tags:
+        level: Beginner # Beginner, Intermediate, Advanced
+        topics: ["GitHub Actions", "AWS"]
+        languages: []
+
+# The right hand side form section.
 form:
+    # HubSpot form id.
     hubspot_form_id: 33107308-f24a-47f2-bb6d-c26850491d0d
     salesforce_campaign_id: 701PQ0000074nvmYAA
 ---

@@ -1,0 +1,15 @@
+<span class="flex flex-row flex-wrap">
+    {{ if .tags.level }}
+        <div class="bg-purple-100 text-gray-900 text-sm px-2 mr-2 mb-2 rounded-md">{{ .tags.level }}</div>
+    {{ end }}
+    {{ if .tags.topics }}
+        {{ range $topic := .tags.topics }}
+            <div class="bg-purple-100 text-gray-900 text-sm px-2 mr-2 mb-2 rounded-md">{{ $topic }}</div>
+        {{ end }}
+    {{ end }}
+    {{ if .tags.languages }}
+        {{ range $language := .tags.languages }}
+            <div class="bg-purple-100 text-gray-900 text-sm px-2 mr-2 mb-2 rounded-md">{{ $language }}</div>
+        {{ end }}
+    {{ end }}
+</span>
