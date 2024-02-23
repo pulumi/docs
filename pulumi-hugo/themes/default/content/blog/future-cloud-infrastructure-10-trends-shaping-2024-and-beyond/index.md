@@ -52,7 +52,7 @@ In 2024, several trends will dominate cloud computing, driving innovation, effic
 
 According to [Gartner](https://www.gartner.com/en/newsroom/press-releases/2023-11-29-gartner-says-cloud-will-become-a-business-necessity-by-2028), cloud adoption will move from being a technology disruptor to a necessity for maintaining business competitiveness. In 2024, worldwide end-user spending on public cloud services is forecast to total $679 billion and is projected to **exceed $1 trillion in 2027**.
 
-{{< figure alt="The future of cloud computing. Credit: Gartner" src="https://media.licdn.com/dms/image/D4E12AQElUBX5yuTQKA/article-inline_image-shrink_1500_2232/0/1701900870466?e=1708560000&v=beta&t=kuCJujRb-C3eeP7u4hGnXmy2DQrY1YYUzEI4ed9P-P0" caption="The future of cloud computing. Credit: Gartner" width=100% >}}
+{{< figure alt="The future of cloud computing. Credit: Gartner" src="/blog/future-cloud-infrastructure-10-trends-shaping-2024-and-beyond/gartner-cloud-2028.png" caption="The future of cloud computing. Credit: Gartner" width=100% >}}
 
 According to McKinsey & Company's "[In search of cloud value](https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/in-search-of-cloud-value-can-generative-ai-transform-cloud-roi)" report:
 
@@ -65,7 +65,7 @@ According to McKinsey & Company's "[In search of cloud value](https://www.mckins
 
 Multi-cloud and Hybrid (mixing cloud and on-premise infrastructure) environments are a trend that is here to stay. According to Forbes, by **2024, 85% of large-sized companies will have a multi-cloud strategy**. Organizations recognize the importance of leveraging multiple cloud providers and on-premises infrastructure to optimize performance, enhance redundancy, and mitigate risks.
 
-{{< figure alt="Why organizations are using multiple clouds chart. Credit: Cisco Systems" src="https://media.licdn.com/dms/image/D4E12AQEs9JuY5rKdGg/article-inline_image-shrink_1500_2232/0/1701900695659?e=1708560000&v=beta&t=Dvt6x86Vb5yqtpWviHwxn5Vraq30UlbcA-AfRXyzytU" caption="Credit: Cisco Systems" width=100% >}}
+{{< figure alt="Why organizations are using multiple clouds chart. Credit: Cisco Systems" src="/blog/future-cloud-infrastructure-10-trends-shaping-2024-and-beyond/why-organizations-are-using-multiple-clouds-cisco.png" caption="Credit: Cisco Systems" width=100% >}}
 
 The following trends also relate to this multi-cloud and hybrid approach as companies seek ways to balance flexibility and cost while increasing overall productivity with security and compliance in mind.
 
