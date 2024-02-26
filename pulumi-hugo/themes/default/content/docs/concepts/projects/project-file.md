@@ -14,52 +14,13 @@ aliases:
 - /docs/reference/project-file/
 ---
 
-The `Pulumi.yaml` project file specifies metadata about your project, such as the project name and language runtime for your project.
+Every Pulumi program has a project file, named `Pulumi.yaml` which specifies metadata about your project, such as the project name and language runtime. The project file must begin with a capital `P`, and supports either `.yml` or `.yaml`. For more information about Pulumi projects, see the following [Pulumi projects overview](/docs/intro/concepts/project/).
 
-## Example project files
-
-### Example project file with only required attributes
-
-```yaml
-name: Example Pulumi project file with only required attributes
-runtime: nodejs
-```
-
-### Example project file with all possible attributes
-
-```yaml
-name: Example Pulumi project file with all possible attributes
-runtime: yaml
-description: An example project with all attributes
-main: example-project/
-stackConfigDir: config/
-backend:
-  url: https://pulumi.example.com
-options:
-  refresh: always
-template:
-  displayName: Example Template
-  description: An example template
-  config:
-    aws:region:
-      description: The AWS region to deploy into
-      default: us-east-1
-      secret: true
-  metadata:
-    cloud: aws
-plugins:
-  providers:
-    - name: aws
-      path: ../../bin
-  languages:
-    - name: yaml
-      path: ../../../pulumi-yaml/bin
-      version: 1.2.3
-```
+{{< notes >}}
+For Pulumi programs specifically written in Pulumi YAML, the project file not only serves as a configuration and metadata repository but can also contain the program's infrastructure definition itself. Learn more about [PulumiYAML](/docs/intro/languages/yaml/).
+{{< /notes >}}
 
 ## Attributes
-
-### All attributes
 
 | Name | Required | Description | Options |
 | - | - | - | - |
@@ -74,7 +35,7 @@ plugins:
 | `template` | optional | Config to be used when creating new stacks in the project. | [template options](#template-options) |
 | `plugins` | optional | Override for the plugin selection. Intended for use in developing pulumi plugins.  | [plugins options](#plugins-options) |
 
-#### About `main`
+### About `main`
 
 For all languages `main` can point to a directory to tell Pulumi to use that directory to load the program from instead of the directory with the `Pulumi.yaml` file. Some languages also support `main` pointing to a file to change what the runtime considers the entrypoint.
 
@@ -193,3 +154,44 @@ Use this option to link to local plugin binaries. This option is intended for us
 | Name | Required | Description |
 | - | - | - |
 | `config` | optional | Config directory relative to the location of `Pulumi.yaml`. |
+
+## Example project files
+
+### Example project file with only required attributes
+
+```yaml
+name: Example Pulumi project file with only required attributes
+runtime: nodejs
+```
+
+### Example project file with all possible attributes
+
+```yaml
+name: Example Pulumi project file with all possible attributes
+runtime: yaml
+description: An example project with all attributes
+main: example-project/
+stackConfigDir: config/
+backend:
+  url: https://pulumi.example.com
+options:
+  refresh: always
+template:
+  displayName: Example Template
+  description: An example template
+  config:
+    aws:region:
+      description: The AWS region to deploy into
+      default: us-east-1
+      secret: true
+  metadata:
+    cloud: aws
+plugins:
+  providers:
+    - name: aws
+      path: ../../bin
+  languages:
+    - name: yaml
+      path: ../../../pulumi-yaml/bin
+      version: 1.2.3
+```
