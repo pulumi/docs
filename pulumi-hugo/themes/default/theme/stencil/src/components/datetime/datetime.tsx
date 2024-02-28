@@ -9,13 +9,20 @@ export class Datetime {
     @Prop()
     class?: string;
 
+    @Prop()
+    timeonly?: boolean;
+
     @Prop({ mutable: true })
     date: string;
 
     componentWillLoad() {
         const date = new Date(this.date);
 
-        const options: Intl.DateTimeFormatOptions = {
+        const options: Intl.DateTimeFormatOptions = this.timeonly ? {
+            timeZoneName: "short",
+            hour: "numeric",
+            minute: "2-digit",
+        } : {
             timeZoneName: "long",
             weekday: "short",
             year: "numeric",

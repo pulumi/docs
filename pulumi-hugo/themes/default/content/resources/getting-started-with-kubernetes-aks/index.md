@@ -1,9 +1,7 @@
 ---
 # Name of the event, <= 60 characters
-title: Getting Started with Infrastructure as Code on AWS
-meta_desc: In this workshop, you will learn the fundamentals of Infrastructure as Code through a series of guided exercises using the Pulumi Cloud Engineering platform.
-meta_image:
-
+title: Getting stated with Kubernetes on AKS with Pulumi
+meta_desc: Learn the fundamentals of building and deploying containerized workloads and get an introduction to Pulumi's IaC platform and deployment on Azure.
 # A featured webinar will display first in the list.
 featured: false
 
@@ -26,12 +24,12 @@ block_external_search_index: false
 
 # The url slug for the webinar landing page. If this is an external
 # webinar, use the external URL as the value here.
-url_slug: getting-started-with-iac-aws
+url_slug: getting-started-with-kubernetes-aks
 
 # Content for the left hand side section of the page.
 main:
     # Webinar title.
-    title: Getting Started with Infrastructure as Code on AWS
+    title: Getting stated with Kubernetes on AKS with Pulumi
 
     event_type: workshop # workshop | event
 
@@ -39,40 +37,34 @@ main:
     youtube_url:
 
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2024-03-20T09:00:00.000-07:00
+    sortable_date: 2024-03-26T09:00:00.000-07:00
 
     # Duration of the webinar.
-    duration: 1 hour
+    duration: 90 minutes
 
     # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
     location: virtual
 
     # Description of the webinar.
     description: |
-        Learn the fundamentals of Infrastructure as Code through a series of guided exercises using AWS and Pulumi’s platform, where you can use familiar programming languages to provision modern cloud infrastructure.
+        Getting started with Kubernetes doesn't have to be complex! Pulumi's infrastructure-as-code (IaC) platform can help remove the complexity and enable even beginner developers to use any programming language to provision modern infrastructure. In this session, you will learn the fundamentals of building and deploying containerized workloads and get an introduction to Pulumi's IaC platform and deployment on Azure.
 
-        This workshop is designed to help users who are completely new to Pulumi become familiar with the core concepts to be effective with the Pulumi Infrastructure as Code platform. We will guide you through the Pulumi platform with diagrams and a series of hands-on exercises to help you understand the building blocks available in Pulumi.
-
-    learn:
-        - The basics of the Pulumi Programming Model
-        - How to provision, update, and destroy AWS resources
-        - Build a simple serverless App with Lambda and s3 bucket
+        We’ll guide you through setting up an Azure AKS cluster and deploying a containerized workload to the cluster. This workshop is designed to help new users become familiar with the core concepts needed to effectively deploy Kubernetes clusters and workloads on Azure. We will guide you through the Pulumi platform with diagrams and a series of examples to help accelerate your cloud projects.
 
     # The webinar presenters
     presenters:
-        - name: Josh Kodroff
-          role: Sr. Solutions Architect, Pulumi
-          photo: /images/team/josh-kodroff.jpg
+        - name: Engin Diri
+          role: Sr. Community Engineer, Pulumi
+          photo: /images/team/engin-diri.jpg
 
     # case-sensitive
     tags:
         level: Beginner # Beginner, Intermediate, Advanced
-        topics: ["AWS"]
+        topics: ["Azure", "Kubernetes"]
         languages: []
 
 # The right hand side form section.
 form:
-    # HubSpot form id.
-    hubspot_form_id: ad4c73db-9f9e-4925-a9e6-bd42866d09cc
-    salesforce_campaign_id: 701PQ000007obTUYAY
+    hubspot_form_id: 54cb6dec-96e5-4849-bfdb-21f77a1a8209
+    salesforce_campaign_id: 701PQ000007oxyYYAQ
 ---

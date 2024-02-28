@@ -92,6 +92,7 @@ export namespace Components {
     interface PulumiDatetime {
         "class"?: string;
         "date": string;
+        "timeonly"?: boolean;
     }
     interface PulumiDeveloperQuotes {
         "quotes": string;
@@ -553,6 +554,7 @@ declare namespace LocalJSX {
     interface PulumiDatetime {
         "class"?: string;
         "date"?: string;
+        "timeonly"?: boolean;
     }
     interface PulumiDeveloperQuotes {
         "quotes"?: string;

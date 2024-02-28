@@ -2,7 +2,7 @@
 # Name of the event, <= 60 characters
 title: Getting Started with Kubernetes on AWS
 meta_desc: In this workshop, you will learn the fundamentals of setting up EKS clusters on AWS through guided exercises using Pulumi.
-meta_image: /images/resources/getting-started-kubernetes-on-aws-josh-marina.png
+meta_image:
 
 # A featured webinar will display first in the list.
 featured: false
@@ -12,7 +12,7 @@ unlisted: false
 
 # Gated webinars will have a registration form and the user will need
 # to fill out the form before viewing.
-gated: false
+gated: true
 
 # The layout of the landing page.
 type: webinars
@@ -36,14 +36,13 @@ main:
     event_type: workshop # workshop | event
 
     # URL for embedding a URL for ungated webinars.
-    youtube_url: https://www.youtube.com/embed/OB3KT1el_Lg?rel=0
+    youtube_url: 
 
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2024-01-17T09:00:00.000-08:00
+    sortable_date: 2024-03-25T09:00:00.000-07:00
 
     # Duration of the webinar.
-    duration: 90 minutes
-
+    duration: 1 hour
     # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
     location: virtual
 
@@ -80,6 +79,6 @@ main:
 # The right hand side form section.
 form:
     # HubSpot form id.
-    hubspot_form_id: 233eddfe-9189-4561-a11a-883399863d70
-    salesforce_campaign_id: 701Du000000Bu26IAC
+    hubspot_form_id: d1df662a-d996-45b9-b089-98c53871d0bc
+    salesforce_campaign_id: 701PQ000007otWmYAI
 ---

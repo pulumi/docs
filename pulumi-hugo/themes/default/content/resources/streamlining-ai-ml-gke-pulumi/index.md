@@ -1,9 +1,7 @@
 ---
 # Name of the event, <= 60 characters
-title: Getting Started with Infrastructure as Code on AWS
-meta_desc: In this workshop, you will learn the fundamentals of Infrastructure as Code through a series of guided exercises using the Pulumi Cloud Engineering platform.
-meta_image:
-
+title: Streamlining AI/ML Workflows on GKE with Pulumi
+meta_desc: Learn to harness the capabilities of GPUs and TPUs effortlessly, empowering data scientists to focus on model development rather than infrastructure management.
 # A featured webinar will display first in the list.
 featured: false
 
@@ -26,12 +24,12 @@ block_external_search_index: false
 
 # The url slug for the webinar landing page. If this is an external
 # webinar, use the external URL as the value here.
-url_slug: getting-started-with-iac-aws
+url_slug: streamlining-ai-ml-gke-pulumi
 
 # Content for the left hand side section of the page.
 main:
     # Webinar title.
-    title: Getting Started with Infrastructure as Code on AWS
+    title: Streamlining AI/ML Workflows on GKE with Pulumi
 
     event_type: workshop # workshop | event
 
@@ -39,40 +37,38 @@ main:
     youtube_url:
 
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2024-03-20T09:00:00.000-07:00
+    sortable_date: 2024-03-28T09:00:00.000-07:00
 
     # Duration of the webinar.
-    duration: 1 hour
+    duration: 90 minutes
 
     # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
     location: virtual
 
     # Description of the webinar.
     description: |
-        Learn the fundamentals of Infrastructure as Code through a series of guided exercises using AWS and Pulumi’s platform, where you can use familiar programming languages to provision modern cloud infrastructure.
-
-        This workshop is designed to help users who are completely new to Pulumi become familiar with the core concepts to be effective with the Pulumi Infrastructure as Code platform. We will guide you through the Pulumi platform with diagrams and a series of hands-on exercises to help you understand the building blocks available in Pulumi.
+        One of the most popular ways to train and serve models is to do AI/ML on Kubernetes. However, data scientists typically don't do double duty as platform managers. Standing up a Kubernetes environment can be a challenge for data scientists but most data scientists know Python. We will demonstrate how with Pulumi you can deploy a machine learning platform on GKE and leverage the power of GPUs and TPUs
 
     learn:
-        - The basics of the Pulumi Programming Model
-        - How to provision, update, and destroy AWS resources
-        - Build a simple serverless App with Lambda and s3 bucket
+        - How to deploy a machine learning platform on GKE using Pulumi, eliminating the challenges of Kubernetes management.
+        - How to harness the computational power of GPUs and TPUs seamlessly within your AI/ML workflows.
 
     # The webinar presenters
     presenters:
         - name: Josh Kodroff
-          role: Sr. Solutions Architect, Pulumi
+          role: Sr Solutions Architect, Pulumi
           photo: /images/team/josh-kodroff.jpg
+        - name: Jason Smith
+          role: Sr Cloud Customer Engineer, Google
 
     # case-sensitive
     tags:
-        level: Beginner # Beginner, Intermediate, Advanced
-        topics: ["AWS"]
-        languages: []
+        level: Intermediate # Beginner, Intermediate, Advanced
+        topics: ["AI", "Kubernetes"]
+        languages: ["Python"]
 
 # The right hand side form section.
 form:
-    # HubSpot form id.
-    hubspot_form_id: ad4c73db-9f9e-4925-a9e6-bd42866d09cc
-    salesforce_campaign_id: 701PQ000007obTUYAY
+    hubspot_form_id: 71503050-8ca0-4e76-bb92-5d35d08636a0
+    salesforce_campaign_id: 701PQ000007ohFTYAY
 ---

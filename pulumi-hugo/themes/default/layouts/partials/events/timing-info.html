@@ -15,7 +15,8 @@
                     <i class="far fa-clock mr-2"></i>
                     <span class="text-sm">TIME</span>
                 </div>
-                <div class="pt-2">{{ .datetime | time.Format ":time_short" }}</div>
+                {{ $timeFormatOptions := (dict "timeZoneName" "short" "hour" "numeric" "minute" "2-digit")}}
+                <div class="pt-2"><pulumi-datetime date="{{ .datetime }}" timeonly></pulumi-datetime></div>
             </div>
         </div>
         <div class="w-1/2 md:w-1/3 p-2">
