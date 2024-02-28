@@ -1,6 +1,6 @@
 ---
 # Name of the event, <= 60 characters
-title: Getting stated with Kubernetes on AKS with Pulumi
+title: Getting started with Kubernetes on AKS with Pulumi
 meta_desc: Learn the fundamentals of building and deploying containerized workloads and get an introduction to Pulumi's IaC platform and deployment on Azure.
 # A featured webinar will display first in the list.
 featured: false
@@ -29,7 +29,7 @@ url_slug: getting-started-with-kubernetes-aks
 # Content for the left hand side section of the page.
 main:
     # Webinar title.
-    title: Getting stated with Kubernetes on AKS with Pulumi
+    title: Getting started with Kubernetes on AKS with Pulumi
 
     event_type: workshop # workshop | event
 
