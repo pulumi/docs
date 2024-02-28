@@ -88,7 +88,7 @@ training, and other services efforts. No project is too small: we are currently 
 100KLOCs of legacy infrastructure as code that needs to be migrated, for example.
 
 _Today we are also announcing an extension to
-[our **Terraform Migration Offer**]({{< relref "/blog/tf-migration-offer" >}})_, in which we will bundle migration of
+[our **Terraform Migration Offer**](/blog/tf-migration-offer/)_, in which we will bundle migration of
 your Terraform projects with your [Pulumi Enterprise or Business Critical]({{< relref "/pricing" >}}) subscription.
 Today we are excited to announce that this same package is now available for all migration efforts, including AWS
 CloudFormation, Azure Resource Manager (ARM), ..., or even infrastructure that was manually provisioned. We are also prepared
