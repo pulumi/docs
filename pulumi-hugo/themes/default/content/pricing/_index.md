@@ -6,4 +6,6 @@ layout: pricing
 menu:
     header:
         weight: 2
+aliases:
+    - /blog/tf-migration-offer
 ---
