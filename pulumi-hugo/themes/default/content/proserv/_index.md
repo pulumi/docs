@@ -1,6 +1,6 @@
 ---
 title: "Pulumi Professional Services"
-layout: proserv
+layout: proserv-b
 
 meta_title: "Pulumi Professional Services - Accelerate Your Cloud Journey"
 meta_desc: "Explore Pulumi Professional Services for expert guidance on cloud infrastructure, automation, and best practices to streamline your cloud journey."
@@ -9,44 +9,6 @@ overview:
     title: "Empowering Your Cloud Transformation"
     description: |
         At Pulumi Professional Services, we partner with you to accelerate your cloud transformation journey. Leveraging our deep expertise in infrastructure as code (IaC), we provide tailored solutions that enhance your cloud and platform engineering efforts, ensuring a seamless, secure, and scalable cloud environment.
-
-solutions_header:
-    title: "Tailored Solutions for Cloud Success"
-    description: "Our suite of solutions addresses the unique challenges of cloud and platform engineering, ensuring your infrastructure is efficient, secure, and ready for the future."
-
-solutions:
-    items_per_row: 3
-    items:
-        - title: "Cloud Infrastructure Automation"
-          icon:
-            name: rocketship
-            color: yellow
-          description: "Automate your cloud infrastructure with Pulumi's IaC tools, enabling rapid deployment and management of cloud resources."
-        - title: "Security and Compliance Frameworks"
-          icon:
-            name: security
-            color: yellow
-          description: "Implement comprehensive security and compliance frameworks to protect your cloud environments and meet regulatory standards."
-        - title: "Scalable Architecture Design"
-          icon:
-            name: buildings
-            color: yellow
-          description: "Design scalable, resilient cloud architectures that support your business objectives and growth."
-        - title: "FinOps and Cost Optimization"
-          icon:
-              name: exchange
-              color: yellow
-          description: "Implementing FinOps best practices and cost optimization strategies to maximize your cloud investment, reducing waste and aligning costs with business value."
-        - title: "Integrated Developer Portals"
-          icon:
-            name: code-window
-            color: yellow
-          description: "Developing comprehensive developer portals that centralize access to tools, resources, and documentation, fostering an efficient and collaborative environment."
-        - title: "Migration and Adoption"
-          icon:
-              name: rocketship
-              color: yellow
-          description: "Leverage Pulumi's expertise to migrate and adopt infrastructure and policy as code, including migrations from AWS CloudFormation, Terraform, AWS CDK, and other IaC tools."
 
 challenges:
     title: "Challenges in Cloud and Platform Engineering"
@@ -66,16 +28,62 @@ challenges:
             name: shield
             color: yellow
           description: "Implementing robust security measures and ensuring compliance across all cloud services and infrastructure."
-        # - title: "Optimizing Cloud Costs"
-        #   icon:
-        #     name: guage
-        #     color: yellow
-        #   description: "Managing and optimizing cloud expenses to ensure cost-effectiveness without compromising on performance or scalability."
-        # - title: "Streamlining Developer Experience"
-        #   icon:
-        #     name: collab
-        #     color: yellow
-        #   description: "Creating a seamless, integrated developer experience across tools and platforms, enhancing productivity and collaboration."
+
+solutions_header:
+    title: "Tailored Solutions for Cloud Success"
+    description: "Our suite of solutions addresses the unique challenges of cloud and platform engineering, ensuring your infrastructure is efficient, secure, and ready for the future."
+
+solutions:
+    categories:
+        - title: Cloud Infrastructure Optimization
+          description: |
+            Optimize your cloud infrastructure for efficiency, security, and scalability with Pulumi's expert guidance. Tailor your environment to meet the demands of modern applications and workflows.
+          icon:
+              name: cloud
+          children:
+            - title: Migration and Adoption
+              description: |
+                Seamlessly migrate and adopt infrastructure as code practices with Pulumi's expertise. Transition from AWS CloudFormation, Terraform, AWS CDK, and other IaC tools to a unified Pulumi ecosystem, enhancing your cloud infrastructure's flexibility and maintainability.
+            - title: Cost Optimization
+              description: |
+                Implement FinOps principles and cost optimization strategies to ensure your cloud spending is efficient and aligned with your business objectives. Gain insights into usage patterns and optimize resources to reduce costs without sacrificing performance.
+            - title: Security and Compliance
+              description: |
+                Strengthen your cloud infrastructure's security posture and ensure compliance with industry standards. Pulumi helps you implement robust security frameworks and compliance checks, safeguarding your data and applications in the cloud.
+
+        - title: Developer Experience and Productivity
+          description: |
+            Enhance developer productivity and streamline the development lifecycle with integrated tools and practices. Foster a culture of innovation and efficiency across your development teams.
+          icon:
+              name: code-window
+          children:
+            - title: Integrated Developer Portals
+              description: |
+                Create centralized developer portals that offer easy access to tools, documentation, and resources. Improve collaboration and streamline workflows to boost productivity and innovation.
+            - title: Automation and CI/CD
+              description: |
+                Automate your development and deployment processes with Pulumi's CI/CD integrations. Achieve faster release cycles and more reliable builds, enabling your team to focus on delivering value.
+            - title: Collaboration and Best Practices
+              description: |
+                Promote a collaborative development environment and adopt best practices for cloud-native development. Leverage Pulumi's expertise to build a culture of continuous improvement and learning.
+
+        - title: Project Management and Delivery
+          description: |
+            Ensure the successful delivery of your cloud and infrastructure projects with Pulumi's project management expertise. From planning to execution, manage projects efficiently and meet your strategic goals.
+          icon:
+              name: clipboard
+          children:
+            - title: Agile Project Management
+              description: |
+                Adopt agile methodologies tailored to cloud infrastructure projects. Pulumi's approach to agile project management ensures flexibility, continuous improvement, and customer-centric delivery.
+            - title: Resource and Timeline Optimization
+              description: |
+                Optimize resource allocation and project timelines to meet your infrastructure goals. Pulumi helps you balance project demands with available resources, ensuring timely and efficient delivery.
+            - title: Stakeholder Engagement and Communication
+              description: |
+                Maintain effective communication with all stakeholders throughout the project lifecycle. Pulumi's project management practices ensure transparency, alignment, and satisfaction across teams and stakeholders.
+
+
 
 form:
     title: "Talk to a Cloud Architect"
