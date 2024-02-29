@@ -2,7 +2,7 @@
 # Name of the event, <= 60 characters
 title: Getting Started with Kubernetes on AWS
 meta_desc: In this workshop, you will learn the fundamentals of setting up EKS clusters on AWS through guided exercises using Pulumi.
-meta_image:
+meta_image: /images/resources/getting-started-kubernetes-on-aws-josh-marina.png
 
 # A featured webinar will display first in the list.
 featured: false
