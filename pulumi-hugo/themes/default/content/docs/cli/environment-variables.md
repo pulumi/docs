@@ -154,6 +154,17 @@ aliases:
     </dd>
     <dt>
         <span class="font-mono">
+            PULUMI_EXPERIMENTAL
+        </span>
+    </dt>
+    <dd>
+        <p>
+            Enables experimental options and commands.
+        </p>
+        <pre><code class="text-xs">PULUMI_EXPERIMENTAL=true</code></pre>
+    </dd>
+    <dt>
+        <span class="font-mono">
             PULUMI_HOME
         </span>
     </dt>
@@ -187,6 +198,17 @@ aliases:
             run a different Python binary.
         </p>
         <pre><code class="text-xs">PULUMI_PYTHON_CMD="python-version-binary"</code></pre>
+    </dd>
+    <dt>
+        <span class="font-mono">
+            PULUMI_SKIP_CHECKPOINTS
+        </span>
+    </dt>
+    <dd>
+        <p>
+            As of <a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#3401-2022-09-17"><code>v3.40.1</code></a>, you may skip saving state checkpoints and only save the final deployment. See <a href="https://github.com/pulumi/pulumi/issues/10668">#10668</a>. This is an experimental feature that also requires <code>PULUMI_EXPERIMENTAL=true</code> to be set for versions <a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#31040-2024-01-31"><code>&gt;= v3.40.1, &lt; v3.104.0</code></a>.
+        </p>
+        <pre><code class="text-xs">PULUMI_SKIP_CHECKPOINTS=true</code></pre>
     </dd>
     <dt>
         <span class="font-mono">
