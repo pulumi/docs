@@ -38,7 +38,7 @@ The Pulumi Cloud provides fine-grained access controls for stacks. Stack permiss
 based on the member's role within the organization and their team membership.
 Additionally, any member who creates a stack is granted admin permissions on that stack.
 
-Organization admins can control the stack default permissions at the organization level from **Settings** > **General**.
+Organization admins can control the stack default permissions at the organization level from **Settings** > **Access Management**.
 There are four types of stack permissions: `None`, `Read`, `Write`, and `Admin`.
 [Team permissions](/docs/pulumi-cloud/access-management/teams#team-permissions) will expand these default permissions.
 
