@@ -12,161 +12,184 @@ aliases:
 - /docs/guides/adopting/import/
 ---
 
-Most infrastructure projects require working with existing cloud resources, either by building on top of existing
-resources or adopting existing resources under management with a new and more robust infrastructure provisioning solution.
+Most infrastructure as code projects require working with existing cloud resources, whether those resources were originally created with another IaC tool or manually provisioned with a cloud provider console or CLI. Interacting with a previously created cloud resource with Pulumi typically happens in one of two ways:
 
-No matter how you've provisioned these resources &mdash; manually in your cloud provider's console or CLI, using an
-infrastructure as code tool like Terraform or AWS CloudFormation &mdash; Pulumi enables you to adopt and manage your resources.
+1. Referencing the properties of the existing cloud resource in order to use those properties to configure a Pulumi-managed resource.
+1. Adopting the existing resource to bring it under management by Pulumi.
 
-<!--more-->
+The first scenario is sometimes called _coexistence_, and you can learn more it in [Adopting Pulumi > Coexistence](/docs/using-pulumi/adopting-pulumi#coexistence). The second scenario is called _adoption_ or _import_, and you can learn more about it the sections that follow.
 
-When working with existing resources, there are two primary scenarios:
+## Two ways to import a resource
 
-* You need to reference existing resources to use as inputs to new resources in Pulumi
-* You need to adopt existing resources under management so they can be managed by Pulumi
+There are two ways to import an existing cloud resource into a Pulumi project:
 
-For the first situation, consult [the user guide index](/docs/using-pulumi/adopting-pulumi#coexistence). For the
-second, let's now see how to adopt existing resources.
+1. With the [`pulumi import`](/docs/cli/commands/pulumi_import) CLI command. This command imports the resource into the currently selected [stack](3/docs/concepts/stack/) and generates code describing the resource's current configuration for you to add to your Pulumi program.
 
-## Adopting Existing Resources
+1. In code, with the [`import` resource option](/docs/concepts/options/import/). This option is supplied by as an additional property on a resource declaration that you write into your Pulumi program yourself.
 
-There are two ways to adopt existing resources so that Pulumi is able to manage subsequent updates to them. The first way is to use the
-[`import`](/docs/cli/commands/pulumi_import) cli command. This command specifies that a resource defined in
-your Pulumi program should adopt an existing resource from a cloud provider rather than creating a new one after running `pulumi up`.
-Another way is to use the [`import`](/docs/concepts/resources#import) resource option.
-This resource option is defined in your Pulumi program, and like the `import` command, the `import` resource option adopts an existing resource in the cloud provider rather
-creating a new one. Using this option lets you specify
-the `import` behavior inside the Pulumi code for your infrastructure deployment, instead of outside of it in a manual workflow.
+Both approaches allow you to adopt and begin managing existing cloud resources with Pulumi, but they work in slightly different ways, and are suited to slightly different use cases. The sections below explain both in more detail.
 
-{{% notes type="warning" %}}
-Your Pulumi stack must be configured correctly---e.g., using the same AWS region as the resource you're importing---otherwise the resource will not be found.
-{{% /notes %}}
+## How resource import works
 
-### Pulumi Import Command
+Import uses the selected stack's configured [provider](/docs/concepts/resources/providers/) to look up the desired resource in the cloud provider, read its current configuration, and add the resource to the stack to bring it under management by Pulumi from that point forward. For this, it requires two pieces of information:
 
-When importing resources via the CLI, there is a specific import syntax definition required for each resource. To see this definition, navigate to the corresponding resource page in the Pulumi registry and take a look at the **Import** section. Using the [AWS S3 Bucket resource](https://www.pulumi.com/registry/packages/aws/api-docs/s3/bucket/#import) as an example, the following command imports an existing AWS S3 bucket named `company-infra-logs` and defines the resource name for the Pulumi program as `infra-logs`:
+* The _type_ of cloud resource to import --- either as a type _token_ (a string that uniquely identifies a Pulumi resource type) when using the CLI or as a resource declaration when importing in code. The type token of an Amazon S3 Bucket resource, for example, is `aws:s3/bucket:Bucket`.
+
+* The _name_ and _value_ of the property to use for the resource lookup. Lookup properties vary by resource. For an Amazon S3 bucket, the property used for lookup is [`bucket`](/registry/packages/aws/api-docs/s3/bucket/#bucket_nodejs), so the value to use for the lookup would be the bucket's globally unique name. For an Amazon VPC, however, the property used for lookup is [`id`](/registry/packages/aws/api-docs/ec2/vpc/#id_nodejs), so the value to use for it would be its AWS-assigned unique identifier.
+
+### Where to find the type token and lookup property {#where-to-find}
+
+You'll find the type token and lookup property in the Import section of the resource's API documentation in the [Pulumi Registry](/registry/). The type token is quoted in the `pulumi import` example, and the lookup property can be found in the description just above it:
+
+![Where to find the type token and lookup property for a resource](./token-and-lookup.png)
+
+{{< notes >}}
+Make sure the resource provider is configured in a way that allows it to locate the resource you want to import --- e.g., that the resource is in the same region as other resources in your stack --- or the import operation may fail.
+{{< /notes >}}
+
+## Importing resources with the CLI
+
+The `pulumi import` command looks up the resource using the specified type token and resource identifier, adds the resource to the stack's current state, and emits the code required to manage the resource with Pulumi from that point forward. This option requires the least manual effort, so is generally recommended, and is best suited to projects consisting consisting of only one stack.
+
+To import an existing cloud resource with the Pulumi CLI, use the following syntax:
+
+```bash
+$ pulumi import <type> <name> <id>
+```
+
+* The first argument, `type`, is the Pulumi type token to use for the imported resource.
+
+    As mentioned in [Where to find the type token and lookup property](#how-import-works), you'll find the type token for a given resource by navigating to the Import section of the resource's API documentation in the [Pulumi Registry](/registry/). For example, the type token of an [Amazon S3 Bucket](/registry/packages/aws/api-docs/s3/bucket/#import) resource, for example, is `aws:s3/bucket:Bucket`.
+
+* The second argument, `name`, is the [resource name](/docs/concepts/resources/names) to apply to the resource once it's imported. The generated code will use this name for the resource declaration (the first parameter in any resource), so like all Pulumi resource names, it must be unique among all resources for this type within the scope of the containing project. (That is, you may have an S3 bucket and a VPC named `foo`, but you cannot have two S3 buckets named `foo`.)
+
+* The third argument, `id`, is the value to use for the resource lookup in the cloud provider. This value should correspond to the designated lookup property specified in the Import section of the resource's API documentation in the Registry.
+
+For help identifying a resource's type token and lookup property, see [Where to find the type token and lookup property](#where-to-find) above. To learn more about the additional options available on the `pulumi import` command, see the [`import` command documentation](/docs/cli/commands/pulumi_import/).
+
+### Example
+
+In this example, a previously provisioned Amazon S3 bucket named `company-infra-logs` is imported into a Pulumi stack named `dev` (the currently [selected](/docs/cli/commands/pulumi_stack_select/) stack) and given a resource name of `infra-logs`:
 
 ```bash
 $ pulumi import aws:s3/bucket:Bucket infra-logs company-infra-logs
 
-     Type                 Name             Plan
- +   pulumi:pulumi:Stack  import-post-dev  create
- =   └─ aws:s3:Bucket     infra-logs       import
+Previewing import (dev)
+
+     Type                 Name        Plan
+ +   pulumi:pulumi:Stack  dev         create
+ =   └─ aws:s3:Bucket     my-bucket   import
 
 Resources:
     + 1 to create
     = 1 to import
     2 changes
+
+Do you want to perform this import?
+> yes
+  no
+  details
 ```
 
-Pulumi will perform the import of the S3 bucket and generate the code required for you to add it to your
-application.
+Choosing to proceed immediately adds the resource to the current stack's state and emits a block of code to `STDOUT` to be added to the Pulumi program. If the current program were written in TypeScript, for example, the resulting CLI output would resemble the following:
 
-{{< chooser language "typescript,python,csharp,go" >}}
+```plain
+...
 
-{{% choosable language typescript %}}
+Importing (dev)
 
-```typescript
+     Type                 Name        Status
+ +   pulumi:pulumi:Stack  dev         created (3s)
+ =   └─ aws:s3:Bucket     my-bucket   imported (1s)
+
+Resources:
+    + 1 created
+    = 1 imported
+    2 changes
+
+Duration: 4s
+
+Please copy the following code into your Pulumi application. Not doing so
+will cause Pulumi to report that an update will happen on the next update command.
+
+Please note that the imported resources are marked as protected. To destroy them
+you will need to remove the `protect` option and run `pulumi update` *before*
+the destroy will take effect.
+
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const demo = new aws.s3.Bucket("infra-logs", {
-    acl: "private",
+const my_bucket = new aws.s3.Bucket("infra-logs", {
+    arn: "arn:aws:s3:::company-infra-logs",
     bucket: "company-infra-logs",
-    forceDestroy: false,
+    hostedZoneId: "Z3BJ4Q6RFIQJ6N",
+    requestPayer: "BucketOwner",
+    serverSideEncryptionConfiguration: {
+        rule: {
+            applyServerSideEncryptionByDefault: {
+                sseAlgorithm: "AES256",
+            },
+        },
+    },
 }, {
     protect: true,
 });
 ```
 
-{{% /choosable %}}
-{{% choosable language python %}}
+After importing the resource and pasting the generated code into your program, you can run `pulumi up`, and all subsequent operations
+will behave as though Pulumi had provisioned the new resource from the outset:
 
-```python
-import pulumi
-import pulumi_aws as aws
+```plain
+$ pulumi up
+...
 
-demo = aws.s3.Bucket("infra-logs",
-    acl="private",
-    bucket="company-infra-logs",
-    force_destroy=False,
-    opts=ResourceOptions(protect=True))
+Updating (dev)
+
+    Type                 Name
+    pulumi:pulumi:Stack  dev
+
+Resources:
+    2 unchanged
+
+Duration: 2s
 ```
 
-{{% /choosable %}}
-{{% choosable language go %}}
+Notice that by default, resources imported with the CLI are marked as _protected_ to guard against accidental deletion. If you forgot, for example, to append the generated code to your program before running another `pulumi up`, Pulumi would first interpret the missing code as an intention to delete the new resource, but then fail on the existence of the `protect` property, leaving the resource intact. See the [`protect`](/docs/concepts/resources/#protect) documentation to learn more.
 
-```go
-package main
+### Demo
 
-import (
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/s3"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
+The following short video illustrates the `pulumi import` process end to end:
 
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := s3.NewBucket(ctx, "infra-logs", &s3.BucketArgs{
-			Acl:          pulumi.String("private"),
-			Bucket:       pulumi.String("company-infra-logs"),
-			ForceDestroy: pulumi.Bool(false),
-		}, pulumi.Protect(true))
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
+{{< youtube "6qHVbu8vb4w" >}}
 
-{{% /choosable %}}
-{{% choosable language csharp %}}
+## Importing resources in code
 
-```csharp
-using Pulumi;
-using Aws = Pulumi.Aws;
+Another way to import existing cloud resources into a Pulumi project is in code, using the [`import` resource option](/docs/concepts/options/import/). This approach involves writing the code to define the resource yourself, which may be preferable in scenarios that call for importing multiple resources of the same type across multiple stacks and/or deployment environments.
 
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var demo = new Aws.S3.Bucket("infra-logs", new Aws.S3.BucketArgs
-        {
-            Acl = "private",
-            Bucket = "company-infra-logs",
-            ForceDestroy = false,
-        }, new CustomResourceOptions
-        {
-            Protect = true,
-        });
-    }
+Code-based import also differs from the CLI-based approach in that it doesn't imperatively modify the state of the current stack. Whereas running `pulumi import` with the CLI adds imported resources to your stack state directly, using the `import` resource option delegates that responsibility to the program to be handled as part of the normal infrastructure lifecycle --- for example, on the next `pulumi up`.
 
-}
-```
+### Example
 
-{{% /choosable %}}
-{{< /chooser >}}
-
-After successfully importing a resource and adding the generated code to your program, you can run `pulumi up` and all subsequent operations
-will behave as though Pulumi provisioned the resource from the outset. The resource is added to the Pulumi
-[state](/docs/concepts/state/), and marked as a [protected](/docs/concepts/resources#protect)
-resource (by default) to ensure that imported infrastructure is not accidentally deleted if the user forgets to include the code for the resource in their program before doing a deployment.
-
-### Pulumi Import Resource Operation
-
-This example imports an existing AWS EC2 security group with ID `sg-04aeda9a214730248`:
+The following example imports an existing AWS EC2 security group with an assigned cloud provider ID of `sg-04aeda9a214730248`:
 
 {{< chooser language "javascript,typescript,python,go,csharp" >}}
 
 {{% choosable language javascript %}}
 
 ```javascript
-let aws = require("@pulumi/aws");
+const aws = require("@pulumi/aws");
 
-let group = new aws.ec2.SecurityGroup("my-sg", {
+const group = new aws.ec2.SecurityGroup("my-sg", {
     name: "my-sg-62a569b",
-    ingress: [{ protocol: "tcp", fromPort: 80, toPort: 80, cidrBlocks: ["0.0.0.0/0"] }],
-}, { import: "sg-04aeda9a214730248" });
+    ingress: [{
+        protocol: "tcp",
+        fromPort: 80,
+        toPort: 80,
+        cidrBlocks: ["0.0.0.0/0"]
+    }],
+}, {
+    import: "sg-04aeda9a214730248"
+});
 ```
 
 {{% /choosable %}}
@@ -175,10 +198,17 @@ let group = new aws.ec2.SecurityGroup("my-sg", {
 ```typescript
 import * as aws from "@pulumi/aws";
 
-let group = new aws.ec2.SecurityGroup("my-sg", {
+const group = new aws.ec2.SecurityGroup("my-sg", {
     name: "my-sg-62a569b",
-    ingress: [{ protocol: "tcp", fromPort: 80, toPort: 80, cidrBlocks: ["0.0.0.0/0"] }],
-}, { import: "sg-04aeda9a214730248" });
+    ingress: [{
+        protocol: "tcp",
+        fromPort: 80,
+        toPort: 80,
+        cidrBlocks: ["0.0.0.0/0"]
+    }],
+}, {
+    import: "sg-04aeda9a214730248"
+});
 ```
 
 {{% /choosable %}}
@@ -250,20 +280,14 @@ var group = new SecurityGroup("my-sg",
 
 {{< /chooser >}}
 
-{{% notes type="info" %}}
-**Note:** Import IDs are resource specific. The ID to use is the same as the ID that gets assigned when Pulumi has provisioned a resource of that type from scratch and can be found in the resource's API docs. We support import IDs for all generally available providers.
-{{% /notes %}}
-
-When Pulumi first sees a resource with an `import` option set (in this case `my-sg`), it will adopt the existing resource by querying the target cloud provider for a resource of that type with the given ID, instead of creating a new resource as usual.
-
-To perform the import, run `pulumi up` as usual, and you will see `=` instead of the usual `+`, indicating an import operation:
+When Pulumi encounters a resource with the `import` option set, it looks up the resource in the cloud provider using the specified ID, where the ID value corresponds to the resource's [designated lookup property](#where-to-find). On the next `pulumi up`, if the resource is found, you'll notice an `=` symbol beside the resource indicating that it'll be imported:
 
 ```
 $ pulumi up
 Previewing update (dev):
 
      Type                       Name              Plan
-     pulumi:pulumi:Stack        import-dev
+     pulumi:pulumi:Stack        dev
  =   └─ aws:ec2:SecurityGroup   my-sg             import
 
 Resources:
@@ -271,40 +295,43 @@ Resources:
     1 unchanged
 ```
 
-If the resource is not found, an error will occur:
+If the resource isn't found, the preview will fail:
 
 ```
 error: Preview failed: importing sg-04aeda9a214730248: security group not found
 ```
 
-After successfully importing a resource, you can delete the import option, rerun `pulumi up`, and all subsequent operations will behave as though Pulumi provisioned the resource from the outset. Be careful, as this applies to `destroy` operations also.
+After successfully importing a resource, you can delete the `import` option if you like, then re-run `pulumi up`, and all subsequent operations will now behave as though Pulumi had provisioned the imported resource from the outset.
 
-#### Mismatched State
+Be aware this applies to `destroy` operations also. Once an imported resource has been brought under management with Pulumi, destroying its containing stack will delete the imported resource as well in the usual way. If you wish to ensure that an imported resource survives through `pulumi destroy`, consider using the [`retainOnDelete`](/docs/concepts/options/protect/) resource option.
+
+### Mismatched state
 
 An important part of importing resources using the `import` resource option is that the resulting Pulumi program, after the import is complete, will faithfully generate the same desired state as your existing infrastructure's actual state. After the import, you may edit your program to generate and apply new desired states to update your infrastructure.
 
 Because of this, all properties need to be fully specified. If you forget to specify a property, or that property's value is incorrect, you'll first receive a warning during preview, and then an error during the actual import update.
 
-For instance, keeping with the example above, let's say we specified the wrong `ingress` rule by choosing port 22 instead of port 80. We'll see a warning:
+For instance, keeping with the example above, if you'd specified the wrong `ingress` rule by choosing port `22` instead of port `80`, you'd see a warning:
 
 ```
 $ pulumi preview
 Previewing update (dev):
      Type                      Name        Plan       Info
-     pulumi:pulumi:Stack       import-dev
+     pulumi:pulumi:Stack       dev
  =   └─ aws:ec2:SecurityGroup  my-sg       import     [diff: ~ingress]; 1 warning
 
 Diagnostics:
   aws:ec2:SecurityGroup (my-sg):
-    warning: imported resource sg-04aeda9a214730248's property 'ingress' does not match the existing value;
-             importing this resource will fail
+    warning: imported resource sg-04aeda9a214730248's property 'ingress'
+             does not match the existing value; importing this resource
+             will fail
 ```
 
-If we'd like to see details on what specifically did not match, select the `details` option:
+To see details on what specifically didn't match, you can select the `details` option:
 
 ```
 + pulumi:pulumi:Stack: (create)
-    [urn=urn:pulumi:dev::import::pulumi:pulumi:Stack::import-dev]
+    [urn=urn:pulumi:dev::import::pulumi:pulumi:Stack::dev]
     = aws:ec2/securityGroup:SecurityGroup: (import)
         [id=sg-0d188488272df7df8]
         [urn=urn:pulumi:dev::import::aws:ec2/securityGroup:SecurityGroup::my-sg]
@@ -327,24 +354,26 @@ Attempting to proceed will fail completely with an error:
 
 ```
 Diagnostics:
-  pulumi:pulumi:Stack (import-dev):
+  pulumi:pulumi:Stack (dev):
     error: update failed
 
   aws:ec2:SecurityGroup (my-sg):
-    error: imported resource sg-04aeda9a214730248's property 'ingress' does not match the existing value
+    error: imported resource sg-04aeda9a214730248's property 'ingress'
+           does not match the existing value
 ```
 
 {{% notes type="info" %}}
-**Note:** Because of [auto-naming](/docs/concepts/resources#autonaming), it's common to accidentally get in a situation where names don't match. For example, if we left off the security group's name, `"my-sg-62a569b"`, in the earlier example, Pulumi would still auto-name the resource, leading to an error `imported resource sg-04aeda9a214730248's property 'name' does not match the existing value`. To fix this problem, make sure to specify names for all resources explicitly.
+Because of [auto-naming](/docs/concepts/resources/#autonaming), it's easy to get into a situation where names don't match. For example, in the earlier example, if you'd left off the security group's `name`, `my-sg-62a569b`, Pulumi would auto-name the resource by default, leading to an error: `imported resource sg-04aeda9a214730248's property 'name' does not match the existing value`. To fix this problem, make sure to specify the names of all resources explicitly, using [Pulumi configuration](/docs/concepts/config/) where necessary to handle naming conflicts across multiple stacks.
 {{% /notes %}}
 
-### Bulk Import Operations
+## Bulk Import Operations
 
 If you need to import multiple resources, the CLI `import` command can be used with a JSON file that contains references to existing cloud resources. Using a JSON file with the `import` command can be helpful as part of scripting large bulk imports of cloud resources.
 
 ```json
 {
-	"resources": [{
+	"resources": [
+        {
 			"type": "aws:ec2/vpc:Vpc",
 			"name": "application-vpc",
 			"id": "vpc-0ad77710973388316"
@@ -363,13 +392,13 @@ If you need to import multiple resources, the CLI `import` command can be used w
 }
 ```
 
-We can then run the command:
+Pass the path to the JSON file using the `--file` (`-f`) option:
 
 ```bash
-pulumi import -f resources.json
+$ pulumi import --file ./my-resources.json
 ```
 
-We can then see Pulumi will generate all of the resource code for us as follows:
+After adding the specified resources to the current stack state, Pulumi will generate all of the code necessary for managing the resources from that point forward:
 
 {{< chooser language "typescript,python,csharp,go" >}}
 
@@ -628,7 +657,3 @@ A `Resource` has the following schema:
 | `remote`     | `boolean`       | No       | This is a component in a [component package](/docs/using-pulumi/pulumi-packages/#types-of-pulumi-packages). `component` must be `true` if this is `true`.      |
 
 To make it easier to import resources into complex programs and/or components, you can run `pulumi preview --import-file <file>` to generate a placeholder import file for every resource that would be created. The generated file will contain all the names, URNs, and types already filled in, with blank `id` fields that need to be filled in.
-
-Check out the video clip below for a demo.
-
-{{< youtube "6qHVbu8vb4w" >}}
