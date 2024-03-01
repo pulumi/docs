@@ -62,6 +62,7 @@ main:
     presenters:
         - name: Diana Esteves
           role: Technical Content Engineer, Pulumi
+          photo: /images/team/diana-esteves.jpg
         - name: Marina Novikova
           role: Sr. Solutions Architect, AWS
           photo: /images/team/marina-novikova.jpg

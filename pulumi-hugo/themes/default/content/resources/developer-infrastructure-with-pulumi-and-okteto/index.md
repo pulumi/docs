@@ -62,6 +62,7 @@ main:
     presenters:
         - name: Arsh Sharma
           role: Developer Experience Engineer, Okteto
+          photo: /images/people/arsh-sharma.jpg
         - name: Engin Diri
           role: Sr. Solutions Architect, Pulumi
           photo: /images/team/engin-diri.jpg

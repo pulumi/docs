@@ -65,6 +65,7 @@ main:
           photo: /images/team/josh-kodroff.jpg
         - name: Javier Evans
           role: Solutions Engineer, NGINX
+          photo: /images/people/javier-evans.jpg
 
     # case-sensitive
     tags:

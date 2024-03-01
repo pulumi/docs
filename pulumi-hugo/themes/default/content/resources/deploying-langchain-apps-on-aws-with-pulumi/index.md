@@ -63,6 +63,7 @@ main:
           photo: /images/team/engin-diri.jpg
         - name: Lance Martin
           role: Software Engineer, LangChain
+          photo: /images/people/lance-martin.jpg
 
     # case-sensitive
     tags:

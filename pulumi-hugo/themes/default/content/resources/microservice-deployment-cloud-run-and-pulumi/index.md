@@ -63,6 +63,7 @@ main:
           photo: /images/team/kat-morgan.jpg
         - name: Xiang Shen
           role: Solutions Architect, Google Cloud
+          photo: /images/people/xiang-shen.jpg
 
     # case-sensitive
     tags:
