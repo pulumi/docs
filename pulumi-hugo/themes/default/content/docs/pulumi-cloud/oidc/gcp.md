@@ -100,7 +100,7 @@ Use 'subjectAttributes' to customize the subject identifier to work with Pulumi 
 It is possible to customize the OIDC token subject claim by setting configuring the `subjectAttributes` setting. It expects an array of keys to include in it:
 
 * `rootEnvironment.name`: the name of the root evironment being evaluated
-* `currentEnvironment.name`: the name of the current evironment being evaluated
+* `currentEnvironment.name`: the name of the current environment being evaluated
 * `pulumi.user.login`: the login identifier of the user opening the environment
 * `pulumi.organization.login`: the login identifier of the organization
 

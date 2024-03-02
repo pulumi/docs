@@ -661,6 +661,30 @@ Diagnostics:
 
 To unset a value inherited from another environment, overwrite it with `null`.
 
+## Setting up Access to Environments
+
+{{% notes "info" %}}
+Access controls and Teams are only available to organizations using Pulumi Enterprise Edition and Pulumi Business Critical Edition.To learn more about editions visit the [pricing page](/pricing/).
+{{% /notes %}}
+
+### Organization-wide permissions
+
+Go to the `Access Management` page under Settings to set Organization-wide environment permissions. Members of the organization will receive these permissions. By default, the environment permissions for the organization is set to `write`. There are four options:
+
+* `none`: Members have access to none of the environments
+* `read`: Members can view only plaintext key values (i.e., the definition of the environment). They won’t be able to see the secret values in plaintext, run any provider configurations to retrieve credentials or run any functions. They cannot perform any Pulumi IaC operations such as `refresh`, `up`, `destroy` on stacks that imports the environment
+* `open`: Members with ‘open’ permissions can decrypt secrets and see them in plaintext. Additionally, they can get dynamic credentials using provider configurations and evaluate functions defined in the environment. They can perform any Pulumi IaC operation on stacks that import an environment as long as they have ‘write’ access to the stack and ‘open’ access to the environment
+* `write`: Members will have permissions to `open` and `update` any environment
+
+### Team permissions
+
+You can grant environment-wise permissions to members of a Team. There are four roles:
+
+* `Environment reader`: Team members will have `read` permissions
+* `Environment opener`: Team members will have `open` permissions
+* `Environment editor`: Team members will have `write` permissions
+* `Environment admin`: Team members will have `write` and `delete` permissions
+
 ## Deleting an environment
 
 To remove an environment, use `esc env rm [<org-name>/]<environment-name>`:
