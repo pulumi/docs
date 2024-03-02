@@ -661,7 +661,7 @@ Diagnostics:
 
 To unset a value inherited from another environment, overwrite it with `null`.
 
-## Setting up Access to Environments
+## Setting up access to environments
 
 {{% notes "info" %}}
 Access controls and Teams are only available to organizations using Pulumi Enterprise Edition and Pulumi Business Critical Edition.To learn more about editions visit the [pricing page](/pricing/).
