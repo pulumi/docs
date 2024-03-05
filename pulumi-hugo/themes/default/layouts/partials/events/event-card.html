@@ -16,7 +16,7 @@
                 <span>
                     <span class="flex flex-row justify-between">
                         <span class="w-10/12">
-                            <span class="font-medium text-gray-800">WORKSHOP</span>
+                            <span class="font-medium text-gray-800">{{ .data.Params.main.event_type | upper }}</span>
                             <span class="text-gray-300">&#8226;</span>
                             {{ if .data.Params.main.youtube_url }}
                                 <span class="font-normal text-gray-800">ON-DEMAND</span>
