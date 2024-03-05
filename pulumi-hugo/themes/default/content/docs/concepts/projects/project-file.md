@@ -14,22 +14,22 @@ aliases:
 - /docs/reference/project-file/
 ---
 
-Every Pulumi program has a project file, named `Pulumi.yaml` which specifies metadata about your project, such as the project name and language runtime. The project file must begin with a capital `P`, and supports either `.yml` or `.yaml`. For more information about Pulumi projects, see the following [Pulumi projects overview](/docs/intro/concepts/project/).
+Every Pulumi program has a project file, `Pulumi.yaml`, which specifies metadata about your project, such as the project name and language runtime. The project file must begin with a capital `P` and have an extension of either `.yml` or `.yaml`. For more information about Pulumi projects, see the following [Pulumi projects overview](/docs/intro/concepts/project/).
 
 {{< notes >}}
-For Pulumi programs specifically written in Pulumi YAML, the project file not only serves as a configuration and metadata repository but can also contain the program's infrastructure definition itself. Learn more about [PulumiYAML](/docs/intro/languages/yaml/).
+For Pulumi programs specifically written in Pulumi YAML, the project file not only serves as a configuration and metadata repository but also contains the program's infrastructure definition itself. To learn more, see [Pulumi YAML](/docs/intro/languages/yaml/).
 {{< /notes >}}
 
 ## Attributes
 
 | Name | Required | Description | Options |
 | - | - | - | - |
-| `name` | required | Name of the project containing alphanumeric characters, hyphens, underscores, and periods. | None. |
+| `name` | required | Name of the project containing alphanumeric characters, hyphens, underscores, and periods. | None |
 | `runtime` | required | Installed language runtime of the project: `nodejs`, `python`, `go`, `dotnet`, `java` or `yaml`. | [runtime options](#runtime-options)
-| `description` | optional | A brief description of the project. | None. |
+| `description` | optional | A brief description of the project. | None |
 | `config` | optional | Project level config (Added in v3.44). | [config options](#config-options) |
-| `main` | optional | Path to the Pulumi program. The default is the working directory. | None. |
-| `stackConfigDir` | optional | Config directory location relative to the location of `Pulumi.yaml`. | None. |
+| `main` | optional | Path to the Pulumi program, relative to the location of `Pulumi.yaml`. The default is the current working directory. | None |
+| `stackConfigDir` | optional | Config directory location relative to the location of `Pulumi.yaml`. | None |
 | `backend` | optional | [Backend](/docs/concepts/state/) of the project. | [backend options](#backend-options) |
 | `options` | optional | Additional project options. | [options options](#options-options) |
 | `template` | optional | Config to be used when creating new stacks in the project. | [template options](#template-options) |
@@ -37,25 +37,30 @@ For Pulumi programs specifically written in Pulumi YAML, the project file not on
 
 ### About `main`
 
-For all languages `main` can point to a directory to tell Pulumi to use that directory to load the program from instead of the directory with the `Pulumi.yaml` file. Some languages also support `main` pointing to a file to change what the runtime considers the entrypoint.
+For all languages, `main` can point to a directory to have Pulumi load the program from that directory instead of the directory containing `Pulumi.yaml`.
 
-- For NodeJS `main` can point to a ts or js file and behaves similarly to setting the main attribute in `package.json`.
-- For .NET `main` can point at a project file (e.g. `example.csproj`) and will pass that project to `dotnet run`.
-- For Python `main` can point to a module file (e.g. `example.py`) and will pass that to `python`.
-- For other languages if a file is specified it is ignored and the system behaves as if the files directory was given to `main` instead.
+Some languages also support using `main` to point to a specific file to change what the runtime considers the program entrypoint.
+
+- For Node.js projects, `main` can point to a `.ts` or `.js` file and behaves similarly to setting the `main` attribute in `package.json`. When the `main` property is set in `Pulumi.yaml`, it may be omitted from `package.json` (and vice-versa). When it exists in both `Pulumi.yaml` and `package.json`, the value in `Pulumi.yaml` takes precedence.
+
+- For Python projects, `main` can point to a module file (e.g., `example.py`) and the file will be passed to `python`.
+
+- For .NET projects, `main` can point to a .NET project file (e.g., `example.csproj`) and the file will be passed to `dotnet run`.
+
+For all other languages, the actual filename is ignored, and the system behaves as though `main` referred to the file's containing directory.
 
 ### `runtime` options
 
-The runtime attribute has an additional property called options where you can further specify runtime configuration.
+The runtime attribute has an additional property called `options` where you can further specify runtime configuration.
 
 | Name | Use case | Description |
 | - | - | - |
-| `typescript` | Only applicable for the **nodejs** runtime | Boolean indicating whether to use `ts-node` or not. |
-| `nodeargs` | Only applicable for the **nodejs** runtime | Arguments to pass to `node`. |
-| `buildTarget` | Only applicable for the **go** runtime | Path to save the compiled go binary to. |
-| `binary` | Applicable for the **go**, **.net**, and **java** runtimes | Path to pre-built executable. |
-| `virtualenv` | Ony applicable for the **python** runtime | Virtual environment path. |
-| `compiler` | Only applicable for **YAML** projects | Executable and arguments issued to standard out. |
+| `typescript` | Only applies to the `nodejs` runtime | Boolean indicating whether to use `ts-node` or not. |
+| `nodeargs` | Only applies to the `nodejs` runtime | Arguments to pass to `node`. |
+| `buildTarget` | Only applies to the `go` runtime | Path to save the compiled go binary to. |
+| `binary` | applies to the `go`, `dotnet`, and `java` runtimes | Path to a pre-built executable. |
+| `virtualenv` | Only applies to the `python` runtime | Virtual environment path. |
+| `compiler` | Only applies to the `yaml` runtime | Executable and arguments issued to standard out. |
 
 #### About `nodeargs`
 
@@ -64,14 +69,14 @@ Arguments specified here are passed to `node` when running the Pulumi program. F
 #### About `buildTarget`
 
 - For Go
-  - If specified, go sources in `$CWD` will be compiled via `go build` to the specified path before being run.
-  - If unspecified, go sources in `$CWD` will be compiled via `go build` to a temporary executable that is deleted after running.
+  - If specified, Go sources in `$CWD` will be compiled with `go build` to the specified path before being run.
+  - If unspecified, Go sources in `$CWD` will be compiled with `go build` to a temporary executable that is deleted after running.
   - Cannot be specified with the `binary` runtime option.
 
 #### About `binary`
 
 - For Go, cannot be specified with the `buildTarget` runtime option.
-- For .NET, if not specified, a .NET project in `$CWD` will be invoked via `dotnet run`.
+- For .NET, if not specified, a .NET project in `$CWD` will be invoked with `dotnet run`.
 
 #### About `virtualenv`
 
