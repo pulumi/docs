@@ -69,4 +69,7 @@ learn:
             - link: /docs/reference/deployments-rest-api
               type: secondary
               action: Pulumi Deployments REST API Docs
+
+aliases:
+    - /deployments
 ---
