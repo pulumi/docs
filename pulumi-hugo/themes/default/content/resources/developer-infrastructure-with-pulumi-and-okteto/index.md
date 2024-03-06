@@ -12,7 +12,7 @@ unlisted: false
 
 # Gated webinars will have a registration form and the user will need
 # to fill out the form before viewing.
-gated: true
+gated: false
 
 # The layout of the landing page.
 type: webinars
@@ -36,7 +36,7 @@ main:
     event_type: workshop # workshop | event
 
     # URL for embedding a URL for ungated webinars.
-    youtube_url: 
+    youtube_url: https://www.youtube.com/embed/HuJNtRGXjs8?si=v_DZwOvZi6uF6L9W?rel=0
 
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
     sortable_date: 2024-03-04T09:00:00.000-08:00
@@ -56,7 +56,7 @@ main:
     learn:
         - How to create self-serviced, production-like development environments
         - How Okteto and Pulumi work together
-        - How to provision and deprovision cloud resources in Okteto with Pulumi
+        - How to provision and de-provision cloud resources in Okteto with Pulumi
 
     # The webinar presenters
     presenters:
@@ -70,7 +70,7 @@ main:
     # case-sensitive
     tags:
         level: Beginner # Beginner, Intermediate, Advanced
-        topics: ["Okteto"]
+        topics: ["Platform Engineering", "Developer Experience", "Okteto"]
         languages: []
 
 # The right hand side form section.
