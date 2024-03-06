@@ -8,7 +8,7 @@ menu:
   concepts:
     identifier: vs-opentofu
     parent: vs
-    weight: 1
+    weight: 6
 aliases:
 - /docs/reference/vs/opentofu/
 - /docs/intro/vs/opentofu/
@@ -131,7 +131,7 @@ Pulumi provides dynamic providers that allow you to extend your system by creati
 
 ### OSS License {#license}
 
-OpenTofu uses the weak copyleft [Mozilla Public License 2.0](https://github.com/HashiCorp/terraform/blob/main/LICENSE). Conversely, Pulumi open-source projects use the permissive and business-friendly [Apache License 2.0](https://github.com/pulumi/pulumi/blob/master/LICENSE). This includes the core [Pulumi repo](https://github.com/pulumi/pulumi), all of the open-source Pulumi resource providers (such as the [Azure Native provider](https://github.com/pulumi/pulumi-azure-native)), and other useful projects.
+OpenTofu uses the weak copyleft [Mozilla Public License 2.0](https://github.com/opentofu/opentofu/blob/main/LICENSE). Conversely, Pulumi open-source projects use the permissive and business-friendly [Apache License 2.0](https://github.com/pulumi/pulumi/blob/master/LICENSE). This includes the core [Pulumi repo](https://github.com/pulumi/pulumi), all of the open-source Pulumi resource providers (such as the [Azure Native provider](https://github.com/pulumi/pulumi-azure-native)), and other useful projects.
 
 ### Infrastructure Reuse and Modularity {#reuse}
 

@@ -7,7 +7,7 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   concepts:
     parent: vs
-    weight: 8
+    weight: 10
 aliases:
 - /docs/reference/vs/custom/
 - /docs/intro/vs/custom/

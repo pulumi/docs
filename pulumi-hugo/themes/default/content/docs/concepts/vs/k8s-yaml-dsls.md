@@ -7,7 +7,7 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   concepts:
     parent: vs
-    weight: 6
+    weight: 8
 
 aliases:
 - /docs/reference/vs/k8s_yaml_dsls/

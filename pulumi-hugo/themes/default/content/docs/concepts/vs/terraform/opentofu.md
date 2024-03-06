@@ -8,7 +8,7 @@ menu:
   concepts:
     identifier: vs-terraform-opentofu
     parent: vs
-    weight: 1
+    weight: 7
 
 ---
 
@@ -31,7 +31,7 @@ OpenTofu is a fork of Terraform 1.6.x so there are many similiarities for now. T
 
 ## Terraform vs. OpenTofu: Key Differences {#differences}
 
-Terraform and OpenTofu differ in that Terraform is not open source, using the Business Source License model. OpenTofu, however, uses the weak copyleft [Mozilla Public License 2.0](https://github.com/HashiCorp/terraform/blob/main/LICENSE). Terraform also has a paid offering called Terraform Cloud, a fully managed SaaS service that version controls and manages Terraform state. Terraform Cloud also provides access to remote operations, policy as code, and audit logging. OpenTofu is supported by env0 and Spacelift SaaS services for managing Terraform state. As Terraform and OpenTofu continue to diverge, more key differences will emerge.
+Terraform and OpenTofu differ in that Terraform is not open source, using the [Business Source License](https://github.com/HashiCorp/terraform/blob/main/LICENSE) model. OpenTofu, however, uses the weak copyleft [Mozilla Public License 2.0](https://github.com/opentofu/opentofu/blob/main/LICENSE). Terraform also has a paid offering called Terraform Cloud, a fully managed SaaS service that version controls and manages Terraform state. Terraform Cloud also provides access to remote operations, policy as code, and audit logging. OpenTofu is supported by env0 and Spacelift SaaS services for managing Terraform state. As Terraform and OpenTofu continue to diverge, more key differences will emerge.
 
 Here is a summary of the key differences between Terraform and OpenTofu:
 
