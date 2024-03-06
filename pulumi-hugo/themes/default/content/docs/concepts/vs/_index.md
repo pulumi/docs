@@ -28,4 +28,5 @@ Here are several useful comparisons that will help you understand Pulumi's place
 * [Serverless Framework](/docs/concepts/vs/serverless/)
 * [Kubernetes YAML and DSLs](/docs/concepts/vs/k8s-yaml-dsls/)
 * [Chef, Puppet, Ansible, Salt, etc.](/docs/concepts/vs/chef-puppet-etc/)
+* [OpenTofu](/docs/concepts/vs/opentofu/)
 * [Custom Solutions](/docs/concepts/vs/custom/)

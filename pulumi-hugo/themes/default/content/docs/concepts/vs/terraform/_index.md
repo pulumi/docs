@@ -80,7 +80,7 @@ Terraform provides infrastructure as code software for cloud service management 
 
 ## Pulumi vs. Terraform: Similarities {#similarities}
 
-Similarities between Terraform and Pulumi include the ability to create, deploy, and manage infrastructure as code on any cloud. Both Terraform and Pulumi follow a desired state infrastructure as code model, where the IaC code represents the desired state of the infrastructure. The deployment engine compares this desired state with the current state of the stack and determines the necessary actions, such as creating, updating, or deleting resources. Both Terraform and Pulumi support many cloud providers, including [AWS](/aws/), [Azure](/azure/), and [Google Cloud](/gcp/), plus other services like CloudFlare, Digital Ocean, and more. Finally, with Pulumi you get access to all Pulumi providers as well as support for all open source terraform providers.
+Similarities between Terraform and Pulumi include the ability to create, deploy, and manage infrastructure as code on any cloud. Both Terraform and Pulumi follow a desired state infrastructure as code model, where the IaC code represents the desired state of the infrastructure. The deployment engine compares this desired state with the current state of the stack and determines the necessary actions, such as creating, updating, or deleting resources. Both Terraform and Pulumi support many cloud providers, including [AWS](/aws/), [Azure](/azure/), and [Google Cloud](/gcp/), plus other services like CloudFlare, Digital Ocean, and more. Finally, with Pulumi you get access to all Pulumi providers as well as support for all open source Terraform providers.
 
 ## Pulumi vs. Terraform: Key Differences {#differences}
 
