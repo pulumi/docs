@@ -1,0 +1,7 @@
+name: aws-simulated-dbserver-database-csharp
+runtime: dotnet
+description: An example that deploys a simulated database server and database resource
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: aws-csharp

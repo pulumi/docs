@@ -1,0 +1,14 @@
+name: aws-simulated-dbserver-database-yaml
+runtime: yaml
+
+variables:
+  sqlServer:
+    name: "myDbServer"
+    ipAddress: "10.0.0.0/24"
+  database:
+    name: myExampleDatabase
+    engine: sql-db
+
+outputs:
+  sqlServerName: ${sqlServer.name}
+  databaseName: ${database.name}

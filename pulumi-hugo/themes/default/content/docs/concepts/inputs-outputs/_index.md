@@ -318,13 +318,14 @@ In this case, Pulumi is taking the _output_ from one resource and using it as th
 
 All resources created by Pulumi will have properties which are returned from the cloud provider API. These values are called *outputs*.
 
-Outputs are values of type {{< pulumi-output >}}, which behave very much like [promises](https://en.wikipedia.org/wiki/Futures_and_promises) or [monads](https://en.wikipedia.org/wiki/Monad_(functional_programming)). Simply put, outputs are a way of representing values that are not initially known but will become available once the infrastructure resource has completed provisioning, and this happens *asynchronously*. This is because the provisioning of resources is an asynchronous operation. It takes time for a cloud provider to complete the provisioning process, and Pulumi optimizes the process by [executing operations in parallel rather than sequentially](/docs/concepts/how-pulumi-works/#creation-and-deletion-order).
+Outputs are a unique and complex type in Pulumi which behave very much like [promises](https://en.wikipedia.org/wiki/Futures_and_promises). Simply put, outputs are a way of representing values that are not initially known but will become available once the infrastructure resource has completed provisioning, and this happens *asynchronously*. This is because the provisioning of resources is an asynchronous operation. It takes time for a cloud provider to complete the provisioning process, and Pulumi optimizes the process by [executing operations in parallel rather than sequentially](/docs/concepts/how-pulumi-works/#creation-and-deletion-order).
 
-Because outputs are asynchronous, their actual plain values are not immediately available. If you need to access an output’s plain value, you can do so using one of the following options:
+Because outputs are asynchronous, their actual plain values are not immediately available. Note that _outputs themselves are not plain/primitive types_, and they cannot be converted into plain types. For example, you cannot turn an a variable of type Output<T> into a regular String or an Integer. An output can only be transformed into another output.
 
-- [Apply](/docs/concepts/inputs-outputs/apply/): a callback that receives the plain value and computes a new output, generally used for accessing single values
-- [Lifting](/docs/concepts/inputs-outputs/lifting/): directly read the value of an output, generally used for accessing nested values
-- [Interpolation](/docs/concepts/inputs-outputs/outputs-and-strings/): concatenate string outputs with other strings
+If you need to access and interact with an output’s plain value, you can do so using one of the following options:
+
+- [Apply](/docs/concepts/inputs-outputs/apply/): used for accessing single output values
+- [All](/docs/concepts/inputs-outputs/all/): used for accessing multiple output values
 
 ## Tracking dependencies
 

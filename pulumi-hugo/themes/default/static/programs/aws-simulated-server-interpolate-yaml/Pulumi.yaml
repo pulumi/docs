@@ -1,0 +1,10 @@
+name: aws-simulated-server-interpolate-yaml
+runtime: yaml
+
+variables:
+  webServer:
+    hostName: "www.mywebserver.com"
+    port: "8080"
+
+outputs:
+  serverUrl: https://${hostname}:${port}

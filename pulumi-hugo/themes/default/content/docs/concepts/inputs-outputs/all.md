@@ -16,7 +16,9 @@ This can be used to compute an entirely new output value, such as creating a new
 
 ## Creating a new string
 
-To demonstate, let’s say we have created a server resource and a database resource, and their Output values are as follows:
+Outputs that return to the engine as strings cannot be used directly in operations such as string concatenation until the output value has returned to Pulumi. In these scenarios, you'll need to wait for the value to return using [`apply`](/docs/content/inputs-outputs/apply/).
+
+To demonstate, let’s say you have created a server resource and a database resource, and their output values are as follows:
 
 ```python
 # Example outputs for the server resource
@@ -32,13 +34,13 @@ To demonstate, let’s say we have created a server resource and a database reso
 }
 ```
 
-We want to create a database connection string that uses the following format:
+From the outputs of these resources, you want to create a database connection string that uses the following format:
 
 ```bash
 Server=tcp:<YourServerName>.database.windows.net,initial catalog=<YourDatabaseName>;
 ```
 
-In the following example, we provide the name of the server and the name of the database as arguments to `all()`. Those arguments are made available to the {{< pulumi-apply >}} function and subsequently used to create the database connection string:
+In the following example, you provide the name of the server and the name of the database as arguments to `all()`. Those arguments are made available to the {{< pulumi-apply >}} function and subsequently used to create the database connection string:
 
 {{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
 
@@ -48,7 +50,7 @@ In the following example, we provide the name of the server and the name of the 
 var pulumi = require("@pulumi/pulumi");
 // ...
 let connectionString = pulumi.all([sqlServer.name, database.name])
-    .apply(([server, db]) => `Server=tcp:${server}.database.windows.net;initial catalog=${db}...`);
+    .apply(([server, db]) => `Server=tcp:${server}.database.windows.net;initial catalog=${db};`);
 ```
 
 {{% /choosable %}}
@@ -59,7 +61,7 @@ let connectionString = pulumi.all([sqlServer.name, database.name])
 import * as pulumi from "@pulumi/pulumi";
 // ...
 let connectionString = pulumi.all([sqlServer.name, database.name])
-    .apply(([server, db]) => `Server=tcp:${server}.database.windows.net;initial catalog=${db}...`);
+    .apply(([server, db]) => `Server=tcp:${server}.database.windows.net;initial catalog=${db};`);
 ```
 
 {{% /choosable %}}
@@ -72,7 +74,7 @@ In python, you can pass in unnamed arguments to `Output.all` to create an Output
 from pulumi import Output
 # ...
 connection_string = Output.all(sql_server.name, database.name) \
-    .apply(lambda args: f"Server=tcp:{args[0]}.database.windows.net;initial catalog={args[1]}...")
+    .apply(lambda args: f"Server=tcp:{args[0]}.database.windows.net;initial catalog={args[1]};")
 ```
 
 Or, you can pass in named (keyword) arguments to `Output.all` to create an Output dictionary, for example:
@@ -81,7 +83,7 @@ Or, you can pass in named (keyword) arguments to `Output.all` to create an Outpu
 from pulumi import Output
 # ...
 connection_string = Output.all(server=sql_server.name, db=database.name) \
-    .apply(lambda args: f"Server=tcp:{args['server']}.database.windows.net;initial catalog={args['db']}...")
+    .apply(lambda args: f"Server=tcp:{args['server']}.database.windows.net;initial catalog={args['db']};")
 ```
 
 {{% /choosable %}}
@@ -94,7 +96,7 @@ connectionString := pulumi.All(sqlServer.Name, database.Name).ApplyT(
     func (args []interface{}) pulumi.StringOutput  {
         server := args[0]
         db := args[1]
-        return pulumi.Sprintf("Server=tcp:%s.database.windows.net;initial catalog=%s...", server, db)
+        return pulumi.Sprintf("Server=tcp:%s.database.windows.net;initial catalog=%s;", server, db)
     },
 )
 ```
@@ -108,17 +110,17 @@ connectionString := pulumi.All(sqlServer.Name, database.Name).ApplyT(
 
 // When all the input values have the same type, Output.All can be used and produces an ImmutableArray.
 var connectionString = Output.All(sqlServer.name, database.name)
-    .Apply(t => $"Server=tcp:{t[0]}.database.windows.net;initial catalog={t[1]}...");
+    .Apply(t => $"Server=tcp:{t[0]}.database.windows.net;initial catalog={t[1]};");
 
 // For more flexibility, 'Output.Tuple' is used so that each unwrapped value will preserve their distinct type.
 var connectionString2 = Output.Tuple(sqlServer.name, database.name)
-    .Apply(t => $"Server=tcp:{t.Item1}.database.windows.net;initial catalog={t.Item2}...");
+    .Apply(t => $"Server=tcp:{t.Item1}.database.windows.net;initial catalog={t.Item2};");
 
 // Or using a more natural Tuple syntax and a statement lambda expression.
-var connectionString2 = Output.Tuple(sqlServer.name, database.name).Apply(t =>
+var connectionString3 = Output.Tuple(sqlServer.name, database.name).Apply(t =>
 {
     var (serverName, databaseName) = t;
-    return $"Server=tcp:{serverName}.database.windows.net;initial catalog={databaseName}...";
+    return $"Server=tcp:{serverName}.database.windows.net;initial catalog={databaseName};";
 });
 ```
 
@@ -131,11 +133,11 @@ var connectionString2 = Output.Tuple(sqlServer.name, database.name).Apply(t =>
 
 // When all the input values have the same type, Output.all can be used
 var connectionString = Output.all(sqlServer.name(), database.name())
-        .applyValue(t -> String.format("Server=tcp:%s.database.windows.net;initial catalog=%s...", t.get(0), t.get(1));
+        .applyValue(t -> String.format("Server=tcp:%s.database.windows.net;initial catalog=%s;", t.get(0), t.get(1));
 
 // For more flexibility, 'Output.tuple' is used so that each unwrapped value will preserve their distinct type.
 var connectionString2 = Output.tuple(sqlServer.name, database.name)
-        .applyValue(t -> String.format("Server=tcp:%s.database.windows.net;initial catalog=%s...", t.t1, t.t2));
+        .applyValue(t -> String.format("Server=tcp:%s.database.windows.net;initial catalog=%s;", t.t1, t.t2));
 ```
 
 {{% /choosable %}}
@@ -146,7 +148,7 @@ YAML does not have the `Apply` or `All` functions. Instead, you can access prope
 
 ```yaml
 variables:
-  connectionString: Server=tcp:${sqlServer.name}.database.windows.net;initial catalog=${database.name}...
+  connectionString: Server=tcp:${sqlServer.name}.database.windows.net;initial catalog=${database.name};
 ```
 
 {{% /choosable %}}
@@ -156,8 +158,16 @@ variables:
 The `all` function works by returning an output that represents the combination of multiple outputs. Based on the example output values provided above, the final value of the generated connection string will resemble the following:
 
 ```bash
-Server=tcp:myDbServer.database.windows.net;initial catalog=myExampleDatabase
+Server=tcp:myDbServer.database.windows.net;initial catalog=myExampleDatabase;
 ```
+
+### Using string interpolation
+
+There is an easier way to generate a concatenated string value using multiple outputs, and that is by using interpolation. Pulumi exposes interpolation helpers that enables you to create strings that contain outputs. These interpolation methods wrap [all](/docs/concepts/inputs-outputs/all/) and [apply](/docs/concepts/inputs-outputs/apply/) with an interface that resembles your language's native string formatting functions. The below example demonstrates how to create a URL from the hostname and port output values of a web server.
+
+{{< example-program path="aws-simulated-server-interpolate" >}}
+
+You can use string interpolation to do things like export a [stack output](/docs/using-pulumi/stack-outputs-and-references/) or provide a dynamically computed string as a new resource argument.
 
 ## Creating a new data structure
 
