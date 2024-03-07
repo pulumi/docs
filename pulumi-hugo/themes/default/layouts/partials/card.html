@@ -1,0 +1,49 @@
+<!-- FILEPATH: /workspaces/pulumi-hugo/themes/default/layouts/partials/card.html -->
+
+<!--
+This partial represents a card component that can be used to display information in a visually appealing way.
+
+Schema for Expected Data Input:
+- .icon_name (string): The name of the icon to be displayed in the card.
+- .icon_color (string): The color of the icon.
+- .title (string): The title of the card.
+- .description (string): The description of the card.
+- .button_type
+- .button_text
+
+Function:
+- Renders a card component with an optional icon, title, and description.
+- If the .icon_name is provided, it will render an icon using the "color-icon.html" partial.
+- The .title and .description will be displayed in their respective sections of the card.
+-->
+
+{{ if not .button_type }} {{ $button_type := "offset" }} {{ end }}
+
+    <div class="h-full card bg-white p-4">
+        {{ if .icon_name }}
+        <div class="icon-div mb-8">
+            {{ partial "color-icon.html" (dict "icon" .icon_name "icon_color" .icon_color) }}
+        </div>
+        {{ end }}
+        {{if .title }}
+        <div>
+            <h5>{{ .title }}</h5>
+        </div>
+        {{ end }}
+        {{if .description }}
+        <div class="mt-6">
+            <p>{{ .description }}</p>
+        </div>
+        {{ end }}
+
+        {{ if .button_text }}
+        {{ $button_type := .button_type }}
+            {{ if eq $button_type "download" }}
+                {{ partial "card-button-download.html" (dict "text" .button_text "ref" .button_ref) }}
+            {{ else if eq $button_type "offset" }}
+
+            {{ else if eq $button_type "contained" }}
+
+            {{ end }}
+        {{ end }}
+    </div>

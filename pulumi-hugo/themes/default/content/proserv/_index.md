@@ -16,17 +16,14 @@ challenges:
         - title: "Complex Cloud Environments"
           icon:
             name: cloud
-            color: yellow
           description: "Navigating the complexity of multi-cloud environments and ensuring consistent infrastructure across platforms."
         - title: "Infrastructure Scalability"
           icon:
             name: nodes
-            color: yellow
           description: "Scaling infrastructure efficiently to meet growing demands while maintaining performance and cost-effectiveness."
         - title: "Security and Compliance"
           icon:
             name: shield
-            color: yellow
           description: "Implementing robust security measures and ensuring compliance across all cloud services and infrastructure."
 
 solutions_header:
@@ -34,7 +31,12 @@ solutions_header:
     description: "Our suite of solutions addresses the unique challenges of cloud and platform engineering, ensuring your infrastructure is efficient, secure, and ready for the future."
 
 solutions:
-    categories:
+    button_options:
+        parents:
+            # type: contained
+        children:
+            type: download
+    parents:
         - title: Cloud Infrastructure Optimization
           description: |
             Optimize your cloud infrastructure for efficiency, security, and scalability with Pulumi's expert guidance. Tailor your environment to meet the demands of modern applications and workflows.
@@ -44,12 +46,21 @@ solutions:
             - title: Migration and Adoption
               description: |
                 Seamlessly migrate and adopt infrastructure as code practices with Pulumi's expertise. Transition from AWS CloudFormation, Terraform, AWS CDK, and other IaC tools to a unified Pulumi ecosystem, enhancing your cloud infrastructure's flexibility and maintainability.
+              button:
+                text: Download Migration and Adoption
+                ref: google
             - title: Cost Optimization
               description: |
                 Implement FinOps principles and cost optimization strategies to ensure your cloud spending is efficient and aligned with your business objectives. Gain insights into usage patterns and optimize resources to reduce costs without sacrificing performance.
+              button:
+                text: Download Cost Optimization
+                ref: google
             - title: Security and Compliance
               description: |
                 Strengthen your cloud infrastructure's security posture and ensure compliance with industry standards. Pulumi helps you implement robust security frameworks and compliance checks, safeguarding your data and applications in the cloud.
+              button:
+                text: Download Security and Compliance
+                ref: google
 
         - title: Developer Experience and Productivity
           description: |
@@ -60,12 +71,21 @@ solutions:
             - title: Integrated Developer Portals
               description: |
                 Create centralized developer portals that offer easy access to tools, documentation, and resources. Improve collaboration and streamline workflows to boost productivity and innovation.
+              button:
+                text: Download Integrated Developer Portals
+                ref: google
             - title: Automation and CI/CD
               description: |
                 Automate your development and deployment processes with Pulumi's CI/CD integrations. Achieve faster release cycles and more reliable builds, enabling your team to focus on delivering value.
+              button:
+                text: Download Automation and CI/CD
+                ref: google
             - title: Collaboration and Best Practices
               description: |
                 Promote a collaborative development environment and adopt best practices for cloud-native development. Leverage Pulumi's expertise to build a culture of continuous improvement and learning.
+              button:
+                text: Download Collaboration and Best Practices
+                ref: google
 
         - title: Project Management and Delivery
           description: |
@@ -76,12 +96,21 @@ solutions:
             - title: Agile Project Management
               description: |
                 Adopt agile methodologies tailored to cloud infrastructure projects. Pulumi's approach to agile project management ensures flexibility, continuous improvement, and customer-centric delivery.
+              button:
+                text: Download Agile Project Management
+                ref: google
             - title: Resource and Timeline Optimization
               description: |
                 Optimize resource allocation and project timelines to meet your infrastructure goals. Pulumi helps you balance project demands with available resources, ensuring timely and efficient delivery.
+              button:
+                text: Download Resource and Timeline Optimization
+                ref: google
             - title: Stakeholder Engagement and Communication
               description: |
                 Maintain effective communication with all stakeholders throughout the project lifecycle. Pulumi's project management practices ensure transparency, alignment, and satisfaction across teams and stakeholders.
+              button:
+                text: Download Stakeholder Engagement and Communication
+                ref: google
 
 
 
