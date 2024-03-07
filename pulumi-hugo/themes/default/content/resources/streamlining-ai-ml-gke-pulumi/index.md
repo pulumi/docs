@@ -2,6 +2,7 @@
 # Name of the event, <= 60 characters
 title: Streamlining AI/ML Workflows on GKE with Pulumi
 meta_desc: Learn to harness the capabilities of GPUs and TPUs effortlessly, empowering data scientists to focus on model development rather than infrastructure management.
+meta_image: /images/resources/streamlining-ai-ml-workflows-gke-josh-jay.png
 # A featured webinar will display first in the list.
 featured: false
 
@@ -60,6 +61,7 @@ main:
           photo: /images/team/josh-kodroff.jpg
         - name: Jason Smith
           role: Sr Cloud Customer Engineer, Google
+          photo: /images/team/jay-smith-google-jpeg.jpg
 
     # case-sensitive
     tags:

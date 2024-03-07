@@ -2,6 +2,7 @@
 # Name of the event, <= 60 characters
 title: Getting started with Kubernetes on AKS with Pulumi
 meta_desc: Learn the fundamentals of building and deploying containerized workloads and get an introduction to Pulumi's IaC platform and deployment on Azure.
+meta_image: /images/resources/kubernetes-aks-azure-engin.png
 # A featured webinar will display first in the list.
 featured: false
 
