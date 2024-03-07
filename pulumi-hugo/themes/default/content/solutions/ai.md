@@ -53,28 +53,32 @@ case_studies:
 
 
 architectures:
-    title: AI Templates
+    title: AI Use Cases
     items:
         - name: Pinecone
           link: https://www.pulumi.com/solutions/ai-arch/
           logo: /logos/customers/pinecone.png
+          header: AI Microservices Backend
           description: |
             Deploy a microservices backend and Pinecone vector database for semantic search.
         - name: Langchain
           link: https://github.com/pulumi/examples/tree/master/aws-py-langserve
           logo: /logos/customers/langchain.png
+          header: Retrieval Augumented Generation
           description: |
             Deploy LangServe running as Docker container on Amazon ECS and ALB.
         - name: Hugging Face
           link: https://github.com/pulumiverse/katwalk
           logo: /logos/customers/huggingface.png
+          header: Large Language Models
           description: |
             Deploy a LLM from Hugging Face on Docker, Azure, or Runpod.
-        - name: SageMaker
-          link: https://github.com/pulumi/templates/tree/master/sagemaker-aws-python
-          logo: /logos/customers/sagemaker.png
+        - name: Flowise
+          link: /blog/low-code-llm-apps-with-local-ai-flowise-and-pulumi/
+          logo: /logos/customers/flowise.png
+          header: Low Code Chatbot
           description: |
-            Deploy the Llama2 Large Language Model on Amazon SageMaker.
+            Deploy a Flowise created LocalAI chatbot to AWS.
 
 
 

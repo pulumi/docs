@@ -109,17 +109,15 @@ In the event you’d like to add new providers, or understand how this integrati
 
 #### Converting From OpenTofu to Pulumi {#providers-converting}
 
-The Pulumi CLI can be used to convert Terraform HCL to Pulumi via `pulumi convert --from terraform`. To learn more, see [Converting Terraform HCL to Pulumi](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-terraform/#converting-terraform-hcl-to-pulumi) in our Adopting Pulumi user guide.
+The Pulumi CLI can be used to convert HCL to Pulumi via `pulumi convert --from terraform`. To learn more, see [Converting HCL to Pulumi](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-terraform/#converting-terraform-hcl-to-pulumi) in our Adopting Pulumi user guide.
 
-For an example of how to do a Terraform-to-Pulumi conversion, see our article, [Converting Full Terraform Programs to Pulumi](/blog/converting-full-terraform-programs-to-pulumi/).
+#### Using Pulumi and OpenTofu Side-by-Side {#providers-side-by-side}
 
-#### Using Pulumi and Terraform Side-by-Side {#providers-side-by-side}
+Pulumi supports [consuming local or remote OpenTofu state](/blog/using-terraform-remote-state-with-pulumi/) from your Pulumi programs. This helps with incremental adoption, whereby you continue managing a subset of your infrastructure with OpenTofu while you incrementally move to Pulumi.
 
-Pulumi supports [consuming local or remote Terraform state](/blog/using-terraform-remote-state-with-pulumi/) from your Pulumi programs. This helps with incremental adoption, whereby you continue managing a subset of your infrastructure with Terraform while you incrementally move to Pulumi.
+For example, maybe you would like to keep your VPC and low-level network definitions written in OpenTofu so as to avoid any disruption, or maybe some of the team would like to stay on OpenTofu for now and make a shift in the future. Using the state reference support described previously, you can author higher-level infrastructure in Pulumi that consumes the OpenTofu-provisioned VPC information (such as the VPC ID, Subnet IDs, etc.), making the co-existence of Pulumi and OpenTofu easy to automate.
 
-For example, maybe you would like to keep your VPC and low-level network definitions written in Terraform so as to avoid any disruption, or maybe some of the team would like to stay on Terraform for now and make a shift in the future. Using the state reference support described previously, you can author higher-level infrastructure in Pulumi that consumes the Terraform-provisioned VPC information (such as the VPC ID, Subnet IDs, etc.), making the co-existence of Pulumi and Terraform easy to automate.
-
-To learn more, see [Referencing Terraform State](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-terraform/#referencing-terraform-state) in our Adopting Pulumi user guide.
+To learn more, see [Referencing OpenTofu State](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-terraform/#referencing-terraform-state) in our Adopting Pulumi user guide.
 
 ### Cloud Native Support {#cloud-native}
 
@@ -183,7 +181,7 @@ Transformations, which are unique to Pulumi, allow you to programmatically set o
 
 ### Import Code from Other IaC Tools {#converting}
 
-Pulumi allows you to convert templates by Terraform HCL , Kubernetes YAML, and Azure ARM into Pulumi programs. This preserves existing program structure, which may be important if you carefully designed your existing infrastructure as code layout in terms of names, modules, and configurability. Conversion takes care of the static program structure and will automatically generate a new, fully-functional Pulumi program that matches the source infrastructure as code program. To learn more, see [Conversion](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/#conversion) in our Adopting Pulumi user guide.
+Pulumi allows you to convert templates from HCL , Kubernetes YAML, and Azure ARM into Pulumi programs. This preserves existing program structure, which may be important if you carefully designed your existing infrastructure as code layout in terms of names, modules, and configurability. Conversion takes care of the static program structure and will automatically generate a new, fully-functional Pulumi program that matches the source infrastructure as code program. To learn more, see [Conversion](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/#conversion) in our Adopting Pulumi user guide.
 
 ## Get Started with Pulumi
 

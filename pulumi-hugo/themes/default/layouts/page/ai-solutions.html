@@ -18,7 +18,7 @@
 
 <!-- Proof Points -->
 
-<section id="case-studies" class="relative px-6 mb-28">
+<section id="case-studies" class="relative px-6 mb-16">
     <!-- <div class="shape-background pulumi-service-case-studies">
         <div class="shape-container">
             <div class="circle-right"></div>
@@ -45,9 +45,31 @@
     </div>
 </section>
 
+<!-- Architecture Templates -->
+
+<section id="architectures" class="mx-auto my-16 pb-16">
+    <h2 class="text-center mb-16 pb-12">{{ .Params.architectures.title }}</h2>
+    <div class="lg:flex justify-center my-16">
+        {{ $image_classes := "inline-block md:float-center " }}
+        {{ range $item := .Params.architectures.items }}
+        <div class="lg:w-1/4 px-4 mb-12 lg:mb-0">
+            <div class="flex flex-col h-full card p-6 bg-white relative">
+                <h5>{{ $item.header }}</h5>
+                <p class="text-left mt-0 italic text-black">{{ $item.description }}</p>
+                <a href="{{ .link }}" class="{{ $image_classes }}">
+                    <img src="{{ .logo }}" class="{{ $image_classes }} h-16" alt="{{ .name }}" />
+                </a>
+                <div class="card-cta-btn text-center">
+                    <a class="btn-secondary" href="{{ $item.link }}">Deploy</a>
+                </div>
+            </div>
+        </div>
+        {{ end }}
+    </div>
+</section>
 
 <!-- Benefit Blades -->
-
+<h2 class="text-center mb-16 pb-12">Benefits for AI</h2>
 <section id="benefits" class="container mx-auto my-16">
     <!-- <div class="max-w-5xl mx-auto text-center py-8">
         <h2>Centrally manage all environments</h2>
@@ -63,6 +85,9 @@
                 </div>
                 <div class="mt-6">
                     <p>{{ .Params.benefits.author.description }}</p>
+                    <div class="my-8">
+                        <a class="btn-primary" href="/ai/">Try Pulumi AI</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -108,28 +133,6 @@
                 </div>
             </div>
         </div>
-    </div>
-</section>
-
-<!-- Architecture Templates -->
-
-<section id="architectures" class="mx-auto my-16 py-16">
-    <h3 class="text-center mb-12">{{ .Params.architectures.title }}</h3>
-    <div class="lg:flex justify-center ">
-        {{ $image_classes := "inline-block md:float-center " }}
-        {{ range $item := .Params.architectures.items }}
-        <div class="lg:w-1/4 px-4 mb-12 lg:mb-0">
-            <div class="flex flex-col h-full card p-6 bg-white relative">
-                <p class="text-left mt-0 italic font-semibold text-black">{{ $item.description }}</p>
-                <a href="{{ .link }}" class="{{ $image_classes }}">
-                    <img src="{{ .logo }}" class="{{ $image_classes }}" alt="{{ .name }}" />
-                </a>
-                <div class="card-cta-btn text-center">
-                    <a class="btn-secondary" href="{{ $item.link }}">Deploy</a>
-                </div>
-            </div>
-        </div>
-        {{ end }}
     </div>
 </section>
 
