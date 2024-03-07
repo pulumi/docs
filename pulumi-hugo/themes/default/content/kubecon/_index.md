@@ -8,13 +8,13 @@ layout: kubecon
 
 links:
     items:
-        - heading: Happy Hour (coming soon)
-          description: Join Pulumi and partners for an evening of food, drinks music and networking. More details coming soon<br/><b>Limited Spots</b><br/>
-          action: Coming Soon
-          link: 
+        - heading: "RSVP to Meetup: Development & Data Productivity in the Age of AI"
+          description: Join Docker, Pulumi, Tailscale, and New Relic for drinks, snacks, and casual conversations.<br/><b>Limited Spots Remaining</b><br/>Thursday, March 21 - 6:00 PM at Tonton Becton
+          action: Reserve your spot
+          link: https://www.eventbrite.com/e/docker-meetup-at-kubecon-development-data-productivity-in-the-age-of-ai-tickets-850415043287
         - heading: Request a Demo
           description: See how Pulumi can help you ship infrastructure faster, and manage Kubernetes clusters at scale on all major cloud providers. Ready for a change?
-          action: Talk with an Engineer
+          action: Talk with an engineer
           link: https://info.pulumi.com/kubecon-europe/
 
 workshops:
