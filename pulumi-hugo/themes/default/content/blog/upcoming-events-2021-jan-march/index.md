@@ -26,8 +26,6 @@ To kickoff the year we start with a technical session that demonstrates how to c
 
 Taught by Pulumi and Codefresh engineers, you'll receive a thorough understanding of CI/CD and infrastructure as code best practices.
 
-Sign up for [CI/CD Pipelines for Kubernetes Apps with Pulumi & Codefresh](/resources/ci-cd-pipelines-for-kubernetes-apps-with-codefresh) on January 21, 10:00 AM MST.
-
 ## Intro to Pulumi
 
 If you're new to infrastructure as code, this workshop is for you. You will learn the fundamentals of Infrastructure as Code through a series of guided exercises using Pulumi’s Cloud Engineering platform. The workshop covers setting up Pulumi, an infrastructure as code platform that uses programming languages to provision modern cloud infrastructure.
@@ -54,8 +52,6 @@ Feb 9: Intro to Pulumi, 9 AM PST
 Feb 23: Intro to Pulumi, 9 AM PST
 March 9: Intro to Pulumi, 9 AM PST
 
-[Register for a session today.](/resources/introduction-to-pulumi/)
-
 ## Deploying Microservices with Pulumi and AWS Lambda
 
 This serverless workshop demonstrates how Pulumi can accelerate provisioning of cloud infrastructure. The workshop shows how to build a set of microservices utilizing AWS’s newest Lambda features. Attendees will be guided through the process of provisioning a set of Lambda resources in AWS and see real time examples of how Pulumi’s innovative programming model helps turbocharge cloud engineering.
@@ -68,8 +64,6 @@ If you're an active Pulumi user and building serverless applications this hands-
 
 Sign up to learn about one of the major cloud technologies.
 
-[Feb 17: Deploying Microservices with Pulumi and AWS Lambda, 9 - 11 AM PST](/resources/deplying-microservices-with-pulumi-and-aws-lambda)
-
 ## Building a Kubernetes Platform in Amazon EKS with Pulumi
 
 Kubernetes is one of the major cloud technologies and in this hands-on workshop, we’ll examine how Pulumi works with Kubernetes through real-world examples of managing Amazon EKS clusters. We’ll focus on building a user-friendly Kubernetes platform, installing software that makes Kubernetes easy to use for application developers.
@@ -81,5 +75,3 @@ Attendees will be guided through the process of provisioning an Amazon EKS clust
 - Install an example application to show the end-to-end user experience for users.
 
 Get a solid foundation for provisioning Kubernetes clusters and applications by signing up.
-
-[Feb 24: Building a Kubernetes Platform in Amazon EKS with Pulumi, 9-11am pacific](/resources/building-a-kubernetes-platform-in-amazon-eks)

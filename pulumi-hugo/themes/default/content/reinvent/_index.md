@@ -39,11 +39,6 @@ workshops:
         description: How do you build and scale the infrastructure and service architectures for AI apps?
         link: /resources/scaling-ai-apps/
         action: Register Now
-      - title: Serverless Architecture on AWS
-        date:
-        description: Explore building up a serverless microservices architecture on AWS using infrastructure as code, cloud engineering principles, and TypeScript.
-        link: /resources/serverless-architecture-aws/
-        action: Watch
 
 templates:
     items:

@@ -44,7 +44,7 @@ After [shipping 1.0 last year](/blog/pulumi-1-0/), we've been hard at work helpi
 
 * **Delivery**. As we've worked with customers to go from development to production, we've added [more CI/CD integrations](/docs/using-pulumi/continuous-delivery/) as well as [environment management capabilities to help at scale](/blog/pulumi-service-improvements_02-2020/), such as [project and stack tagging and filtering](/docs/concepts/stack#stack-tags).
 
-* **Architecture**. Customers are [building their own platforms](/resources/building-self-service-clouds/) that use abstraction and packaging mechanisms, including our component model, to codify their own best practices. [New coexistence and migration options](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/) help to build larger systems out of many component parts, including those you haven't been able to port to Pulumi yet.
+* **Architecture**. Customers are building their own platforms that use abstraction and packaging mechanisms, including our component model, to codify their own best practices. [New coexistence and migration options](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/) help to build larger systems out of many component parts, including those you haven't been able to port to Pulumi yet.
 
 * **Policy**. [Our new policy as code framework, CrossGuard](/docs/using-pulumi/crossguard/), lets you define policies using familiar languages and then apply those policies at deployment-time. This prevents mistakes from ever getting out the door, including cost, security, and compliance. [Configurable policy packs](/docs/using-pulumi/crossguard/configuration/) let you write a single policy and apply it flexibly across your projects.
 
@@ -62,7 +62,7 @@ Expect The Pulumipus to pop up from time to time to help you out with your infra
 
 Today is an exciting day for us, our customers, and our community &mdash; your passionate support and feedback shaped this release, and we thank you.
 
-To learn more, [join us for our launch event next Wednesday](/resources/pulumi-update-2020-04-29/), [check out the new superpowers page](/superpowers/) with more details and videos, or just [download Pulumi and give it a try](/docs/get-started/). If you're upgrading from Pulumi 1.0, [please see our migration guide](/docs/install/migrating-2.0).
+To learn more, join us for our launch event next Wednesday, [check out the new superpowers page](/superpowers/) with more details and videos, or just [download Pulumi and give it a try](/docs/get-started/). If you're upgrading from Pulumi 1.0, [please see our migration guide](/docs/install/migrating-2.0).
 
 <div class="header-hero-actions mt-8 mb-8 text-center">
     <a class="btn btn-lg mr-2" href="/docs/quickstart">

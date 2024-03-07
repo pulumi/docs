@@ -13,38 +13,6 @@ sessionize_id: wbl7wd7l
 workshops:
   title: Workshops
   items:
-    - title: How to Build a Self-Service Cloud with Python
-      icon: cloud-with-nodes
-      icon_color: salmon
-      link: /resources/getting-started-with-automation-api
-      times: [ "2021-10-21T12:00:00-07:00" ]
-      description: |
-        In this workshop, you’ll build a Python & Flask web application that lets you and your developers deploy applications at the click of a button.
-
-    - title: Getting Started with Infrastructure as Code on AWS
-      icon: code
-      icon_color: yellow
-      link: /resources/getting-started-with-aws
-      times: [ "2021-10-21T09:00:00-07:00" ]
-      description: |
-        In this workshop, you will learn the fundamentals of Infrastructure as Code on AWS through a series of exercises using Pulumi’s Cloud Engineering platform.
-
-    - title: Getting Started with Azure and Infrastructure as Code
-      icon: code
-      icon_color: blue
-      link: /resources/getting-started-with-azure-native
-      times: [ "2021-10-21T09:00:00-07:00" ]
-      description: |
-        In this workshop, you’ll use the Azure native provider to build infrastructure using TypeScript SDK and examine some of the features not previously possible.
-
-    - title: Getting Started with Google Cloud & Infrastructure as Code
-      icon: code
-      icon_color: fuchsia
-      link: /resources/getting-started-with-google-cloud-platform
-      times: [ "2021-10-21T12:00:00-07:00" ]
-      description: |
-        In this workshop, we’ll use the Google Cloud native provider to build infrastructure using TypeScript and examine some of Pulumi's newest features.
-
     - title: From Zero to Production in Kubernetes
       icon: rocketship
       icon_color: salmon

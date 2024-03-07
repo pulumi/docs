@@ -185,5 +185,4 @@ Check out the video below for a demo of packaging AWS Lambda functions as contai
 Further steps:
 
 - Check out the full [Lambda + Docker example](https://github.com/pulumi/examples/tree/master/aws-ts-lambda-thumbnailer) in the Pulumi Examples.
-- [Sign-up](https://www.pulumi.com/resources/deplying-microservices-with-pulumi-and-aws-lambda/) for a hands-on Pulumi AWS Lambda Workshop.
 - [Get Started](https://www.pulumi.com/docs/clouds/aws/get-started/) with Pulumi for AWS today.

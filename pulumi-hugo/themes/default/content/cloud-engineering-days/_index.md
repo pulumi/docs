@@ -151,75 +151,45 @@ media:
 workshops:
   title: Cloud Engineering Workshops
   items:
-    - title: "Pulumi 101: A static site on AWS"
-      link: /resources/pulumi-101-static-site-on-aws/
-      link_text: View Recording
-      description: |
-        Learn the basics of Pulumi from projects to components. Use TypeScript and templates to stand up a static site on AWS using S3.
-
-    - title: "Pulumi 101: Serverless containers on Google Cloud"
-      link: /resources/pulumi-101-serverless-containers-gcp
-      link_text: View Recording
-      description: |
-        Learn the basics of Pulumi from projects to components. Use Python and templates to stand up serverless containers on Cloud Run from Google Cloud.
-
     - title: "Building with Containers on Azure"
       link: /resources/building-containers-azure
       link_text: View Recording
       description: |
         Explore more about building up a containerized microservices architecture on Azure using infrastructure as code and cloud engineering principles
 
-    - title: "Pulumi 101: Kubernetes on Azure"
-      link: /resources/pulumi-101-kubernetes-on-azure
-      link_text: View Recording
-      description: |
-        Learn the basics of Pulumi using C# and templates to stand up a small Kubernetes cluster on AKS from Azure.
-
-    - title: "Serverless Architecture on AWS"
-      link: /resources/serverless-architecture-aws
-      link_text: View Recording
-      description: |
-        Explore building up a serverless microservices architecture on AWS using infrastructure as code, cloud engineering principles, and TypeScript.
-
-    - title: "Sharing Code with Pulumi Packages, Abstractions, and More"
-      link: /resources/simpler-pulumi-package-authoring
-      link_text: View Recording
-      description: |
-        Explore how to start sharing Pulumi code with others. Use Go to build a custom architecture for Google Cloud that we’ll compile down into a shareable library.
-
     - title: "Securing Deployments with Policy as Code"
       link: /resources/securing-deployments-policy-as-code
-      link_text: Recording Coming Soon
+      link_text: View Recording
       description: |
         The Pulumi team will show you how to enforce best practices by creating policies that scale from a single infrastructure stack to your entire organization.
 
     - title: "Getting Started with Infrastructure as Code on DigitalOcean"
       link: /resources/getting-started-with-infrastructure-as-code-on-digital-ocean
-      link_text: Recording Coming Soon
+      link_text: View Recording
       description: |
         In this hands-on workshop, you will learn how to stand up basic services using Infrastructure as Code through a series of hands-on labs.
 
     - title: "Getting Started with Infrastructure as Code Azure with Java"
       link: /resources/getting-started-infrascructure-as-code-azure-java
-      link_text: Recording Coming Soon
+      link_text: View Recording
       description: |
         Learn the basics of Azure and Pulumi with a hands-on lab that will take you from deploying a simple static website to deploying a Spring Boot application.
 
     - title: "Production-Ready Networking on AWS with Python"
       link: /resources/production-ready-networking-aws-with-python
-      link_text: Register Now
+      link_text: View Recording
       description: |
         In this workshop you'll learn to apply Infrastructure as Code concepts to build a hub and spoke network topology with an inspection VPC.
 
     - title: "Building Virtual Networks with Pulumi and Tailscale"
       link: /resources/building-virtual-networks-with-pulumi-and-tailscale
-      link_text: Register Now
+      link_text: View Recording
       description: |
         This workshop will demonstrate how to securely connect end-user devices and cloud resources using infrastructure as code written in real programming languages.
 
     - title: "Deploying and Managing Kafka with Pulumi and Confluent"
       link: /resources/deploying-and-managing-kafka-with-pulumi-and-confluent
-      link_text: Register Now
+      link_text: View Recording
       description: |
         In this session, we’ll introduce you to Apache Kafka—a community distributed event streaming platform capable of handling trillions of events a day.
 

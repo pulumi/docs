@@ -178,6 +178,6 @@ resources:
     other:
         title: Other resources
         items:
-            - "[Watch a workshop](/resources/getting-started-with-azure-native/)"
+            - "[Watch a workshop](/resources/#upcoming)"
             - "[Convert an existing ARM template](/arm2pulumi/)"
 ---

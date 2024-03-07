@@ -16,7 +16,7 @@ In this article, I’ll show how Pulumi can be used with Aiven’s services to c
 This tutorial will use Python, Pulumi, Grafana, and an AWS Lambda function to simulate recording temperature data in an InfluxDB database.
 
 {{% notes type="info" %}}
-Register for [Multicloud OSS Database Deployments With Zero Downtime - Pulumi and Aiven](https://www.pulumi.com/resources/multicloud-oss-database-deployments-with-aiven/) and learn how to build robust, multi-cloud applications using the language, open source database, and cloud of your choice.
+Register for Multicloud OSS Database Deployments With Zero Downtime - Pulumi and Aiven and learn how to build robust, multi-cloud applications using the language, open source database, and cloud of your choice.
 {{% /notes %}}
 
 <!--more-->

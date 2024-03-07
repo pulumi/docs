@@ -89,7 +89,7 @@ Ringo is one of the founding board members of [the Pulumiverse](https://www.pulu
 <img src="rizel-scarlett.png" width="200" height="200" alt="Rizel Scarlett"/>
 <a data-track="twitter" href="https://twitter.com/blackgirlbytes"><i class="fab fa-twitter"></i></a>&nbsp;<a data-track="github" href="https://github.com/blackgirlbytes"><i class="fab fa-github"></i></a>&nbsp;<a data-track="linkedin" href="https://www.linkedin.com/in/rizel-bobb-semple/"><i class="fab fa-linkedin"></i></a>
 
-Rizel brings her remarkable talent for guidance and teaching to the Pulumi community. She has participated in many Pulumi events, including [Cloud Engineering Summit](https://www.pulumi.com/resources/from-code-to-cloud/), and [appearing on the PulumiVision livestream](https://youtu.be/2uQEIYuJBZ4).
+Rizel brings her remarkable talent for guidance and teaching to the Pulumi community. She has participated in many Pulumi events, including Cloud Engineering Summit, and [appearing on the PulumiVision livestream](https://youtu.be/2uQEIYuJBZ4).
 
 ### Simen A. W. Olsen
 

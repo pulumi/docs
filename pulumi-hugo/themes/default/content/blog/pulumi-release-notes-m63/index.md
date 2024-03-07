@@ -28,7 +28,7 @@ It's been an incredibly busy few weeks at Pulumi. We've met thousands of you at 
 
 ## Cloud Engineering Summit
 
-On October 20th, thousands of you joined us for our second annual Cloud Engineering Summit. We heard from industry leaders like Pulumi CEO Joe Duffy, Google's Kelsey Hightower, AWS' Emily Freeman, Microsoft's Adora Nwodo, and many more on topics from [modern reference architectures for Kubernetes](/resources/building-a-modern-app-reference-architecture-for-kubernetes/) to [migrating a monolith to cloud-native](/resources/migrating-a-monolith-to-cloud-native/). You can watch these and all Cloud Engineering Summit sessions on our website–make sure to catch any sessions you missed!
+On October 20th, thousands of you joined us for our second annual Cloud Engineering Summit. We heard from industry leaders like Pulumi CEO Joe Duffy, Google's Kelsey Hightower, AWS' Emily Freeman, Microsoft's Adora Nwodo, and many more on topics from modern reference architectures for Kubernetes to migrating a monolith to cloud-native. You can watch these and all Cloud Engineering Summit sessions on our website–make sure to catch any sessions you missed!
 
 [Watch Cloud Engineering Summit sessions on-demand](/cloud-engineering-summit/replay/)
 

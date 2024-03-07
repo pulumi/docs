@@ -60,8 +60,6 @@ templates:
 
 knowledge:
     items:
-        - link: /resources/infrastructure-as-software-best-practices/
-          image: /images/video-thumbnails/infrastructure-as-software-best-practices-thumbnail.png
         - link: /resources/ci-cd-pipelines-for-kubernetes-apps-with-codefresh/
           image: /images/video-thumbnails/gitops-with-pulumi-codefresh-thumbnail.png
 
