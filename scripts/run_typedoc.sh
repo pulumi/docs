@@ -14,9 +14,7 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 TOOL_TYPEDOC="$SCRIPT_DIR/../node_modules/.bin/typedoc"
 
-PULUMI_DOC_TMP=`mktemp -d`
-PULUMI_DOC_BASE="$SCRIPT_DIR/../content/docs/reference/pkg/nodejs/pulumi"
-PULUMI_DOC_DATA_BASE="$SCRIPT_DIR/../data/pkg/nodejs/pulumi"
+OUTDIR="${SCRIPT_DIR}/../static-prebuilt/docs/reference/pkg/nodejs/pulumi"
 
 # Set this to 1 to run all generation in parallel.
 PARALLEL=0
@@ -40,7 +38,7 @@ generate_docs() {
 
     if [[ ! -z "$GENPKG" ]]; then
         echo -e "\033[0;95m$1\033[0m"
-        echo -e "\033[0;93mGenerating typedocs\033[0m"
+        echo -e "\033[0;93mGenerating pulumi.com API docs\033[0m"
 
         # Change to the target directory and rebuild if necessary.
         PKGPATH=../$2
@@ -59,19 +57,12 @@ generate_docs() {
         PKG_REPO_DIR=$PKG_REPO_DIR/$3
         fi
 
-        # Generate the docs, copy any READMEs, and remember the Git hash.
-        ${TOOL_TYPEDOC} --json "${PULUMI_DOC_TMP}/$1.docs.json" \
-            --mode modules --includeDeclarations --excludeExternals --excludePrivate
-        mkdir -p ${PULUMI_DOC_TMP}/readmes
-        find . -name 'README.md' -exec rsync -R {} ${PULUMI_DOC_TMP}/readmes \;
-        HEAD_COMMIT=$(git rev-parse HEAD)
+        ${TOOL_TYPEDOC} --out "${OUTDIR}/$1" \
+            --excludeInternal --excludeExternals --excludePrivate \
+            --cleanOutputDir \
+            --skipErrorChecking \
+            index.ts
 
-        # Change back to the origin directory and create the API documents.
-        popd
-        echo -e "\033[0;93mGenerating pulumi.com API docs\033[0m"
-        pushd ./tools/tscdocgen
-        echo -e "go run *.go" "$SCRIPT_DIR/../${PKGPATH}" "$1" "${PULUMI_DOC_TMP}/$1.docs.json" "${PULUMI_DOC_BASE}/$1" "${PULUMI_DOC_DATA_BASE}" "$PKG_REPO_DIR" $HEAD_COMMIT
-        go run *.go "$SCRIPT_DIR/../${PKGPATH}" "$1" "${PULUMI_DOC_TMP}/$1.docs.json" "${PULUMI_DOC_BASE}/$1" "${PULUMI_DOC_DATA_BASE}" "$PKG_REPO_DIR" $HEAD_COMMIT
         popd
     fi
 }

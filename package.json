@@ -28,7 +28,7 @@
     "postcss": "^8.3.7",
     "postcss-cli": "^8.3.1",
     "sitemapper": "^3.2.2",
-    "typedoc": "0.18.0",
-    "typescript": "~3.8.3"
+    "typedoc": "^0.25.11",
+    "typescript": "^4.9.5"
   }
 }
