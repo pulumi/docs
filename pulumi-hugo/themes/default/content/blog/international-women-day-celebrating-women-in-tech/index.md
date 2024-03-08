@@ -28,10 +28,6 @@ Below, you can meet some of Pulumi's tech women - their experience, why they cho
 
 ## Pulumi's Women in Tech
 
-### Jasmine Dahilig, Software Engineer
-
-"A lot of people told me that I wasn't smart enough to pursue computer science. My own parents told me I wasn't good at math and that science "didn't suit" me. At first, I believed them... I gave up before I even tried. Luckily, tech was just too interesting and I couldn't stop myself from having fun writing software. Then I double majored in computer science and applied mathematics, and after 10 years in the tech industry... well I guess they were wrong! Hehe! Disclaimer: you do not need a degree to work in tech, but if you want a degree in STEM you can do it! Either way, I'm rooting for you!!!"
-
 ### Sarah Hughes, Software Engineer
 
 "I was lucky enough to go to high school with a ton of other girls who were into tech, so I took AP Computer Science in a class that was close to a 50/50 split. It really helped to start from scratch on equal footing. (Almost) everyone knew absolutely nothing, and it was obvious that our strengths and weaknesses were completely independent of gender."
@@ -42,7 +38,7 @@ Below, you can meet some of Pulumi's tech women - their experience, why they cho
 
 ### Kelsey Dirks, Customer Success Manager
 
-"When I entered university I chose Electrical Engineering as my major. I soon learned coding was not my specialty and switched to Communications, but I loved the people in the classes. It was clear both the professors and students were passionate about their craft. I knew that when I left university, I wanted to work with these types of people, but I had no idea in what capacity. Over the years, my experience led me to be a Customer Success Manager.
+"When I entered university, I chose Electrical Engineering as my major. I soon learned coding was not my specialty and switched to Communications, but I loved the people in the classes. It was clear both the professors and students were passionate about their craft. I knew that when I left university, I wanted to work with these types of people, but I had no idea in what capacity. Over the years, my experience led me to be a Customer Success Manager.
 
 What I would tell my younger self is to not stress about trying to figure everything out right away. Every job will have its ups and downs, but when it comes to a career, trust that it will all work out. The biggest piece of advice I can give to women entering the tech field is don’t be afraid to lean on your female support system. If you aren’t able to advocate for yourself, your sisters in STEM will."
 
