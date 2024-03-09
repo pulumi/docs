@@ -63,7 +63,7 @@ Programs reside in a *project*, which is a directory that contains source code f
 
 To illustrate these concepts, the following program shows how to create an AWS EC2 security group named `web-sg` with a single ingress rule and a `t2.micro`-sized EC2 instance using that security group.
 
-To use the security group, the EC2 resource requires the security group's ID. Pulumi enables this through the output property `name` on the security group resource. Pulumi understands dependencies between resources and uses the relationships between resources to maximize parallelism and ensures correct ordering when a stack is instantiated.
+To use the security group, the EC2 resource requires the security group's ID. Pulumi enables this through the output property `id` on the security group resource. Pulumi understands dependencies between resources and uses the relationships between resources to maximize parallelism and ensures correct ordering when a stack is instantiated.
 
 Finally, the server's resulting IP address and DNS name are exported as stack outputs so that their values can be accessed through either a CLI command or by another stack.
 

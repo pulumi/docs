@@ -1,4 +1,4 @@
-﻿using Pulumi;
+using Pulumi;
 using Pulumi.Aws.Ec2;
 using Pulumi.Aws.Ec2.Inputs;
 using System.Collections.Generic;
@@ -20,7 +20,7 @@ return await Deployment.RunAsync(() =>
     var server = new Instance("web-server", new InstanceArgs {
         Ami = "ami-0319ef1a70c93d5c8",
         InstanceType = "t2.micro",
-        VpcSecurityGroupIds = { group.Name }
+        VpcSecurityGroupIds = { group.Id }
     });
 
     return new Dictionary<string, object?>
