@@ -78,10 +78,11 @@ Make sure to replace `<your-org>` and `<your-environment>` with the values of yo
 
 ### VaultSecretsLogin
 
-| Property  | Type   | Description                                                                   |
-|-----------|--------|-------------------------------------------------------------------------------|
-| `address` | string | The URL of the vault server. Must contain a scheme and hostname, but no path. |
-| `token`   | string | The token to use for authentication.                                          |
+| Property    | Type   | Description                                                                   |
+|-------------|--------|-------------------------------------------------------------------------------|
+| `address`   | string | The URL of the vault server. Must contain a scheme and hostname, but no path. |
+| `namespace` | string | [Optional] The namespace to use for the session.                              |
+| `token`     | string | The token to use for authentication.                                          |
 
 #### VaultSecretsRead
 
