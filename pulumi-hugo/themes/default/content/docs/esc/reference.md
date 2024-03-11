@@ -170,6 +170,7 @@ values:
         address: https://127.0.0.1:8200/
         jwt:
           role: example-role
+        namespace: example # namespace is only supported for Vault Enterprise
     secrets:
       fn::open::vault-secrets:
         login: ${vault.login}
@@ -178,6 +179,7 @@ values:
             path: api-key
           app-secret:
             path: app-secret
+            field: app-field
 
   # Pulumi Stacks Provider example
   app:
