@@ -231,6 +231,8 @@ dotnet add package NUnit3TestAdapter
 dotnet add package Moq
 dotnet add package FluentAssertions
 dotnet add package Microsoft.NET.Test.Sdk
+dotnet add package Pulumi
+dotnet add package Pulumi.Aws
 ```
 
 {{% /choosable %}}
