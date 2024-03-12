@@ -1,9 +1,9 @@
 ---
-title: "Pulumi Kubernetes 4.10: ConfigGroup/ConfigFile resources for Java, YAML SDKs"
+title: "New: ConfigGroup, ConfigFile resources for Java, YAML SDKs"
 date: 2024-03-30T00:00:00-07:00
 
 meta_desc: >-
-  Pulumi Kubernetes v4.10 offers new resources for applying Kubernetes manifests consistently across Pulumi SDKs, and broaden support to the Java and YAML SDKs.
+  Pulumi Kubernetes v4.10 offers new resources for applying Kubernetes manifests consistently across Pulumi SDKs, and broadens support to the Java and YAML SDKs.
 
 authors:
     - eron-wright
@@ -15,7 +15,7 @@ tags:
 ---
 
 The Pulumi Kubernetes provider makes it easy to deploy Kubernetes resources to your cluster, giving you options
-based on how your application or workload is packaged. The options include strongly-typed resources for 
+based on how your application or workload is packaged. The options include strongly-typed resources for
 standard Kubernetes types, [Helm](https://helm.sh/) charts, [Kustomizations](https://kustomize.io/), and Kubernetes manifests.
 
 In v4.10, we leveled up the support for working with Kubernetes manifests with the introduction of the `yaml/v2` package.
@@ -47,8 +47,12 @@ The `ConfigGroup` resource accepts the following input properties:
 | `resourcePrefix` | A prefix for auto-generated names of the child resources. Defaults to the `ConfigGroup` name.                                                            |
 | `skipAwait`      | Skips over the readiness checks on the child resources.                                                                                                  |
 
+Note that all objects defined within the manifest must have a `metadata.name` field;
+Pulumi [autonaming](https://www.pulumi.com/docs/concepts/resources/names/#autonaming) is not supported.
+
 ### Manifest Files
-Here's an example of applying a Kubernetes manifest file to your cluster:
+
+Here's an example of applying a Kubernetes manifest file to your cluster.
 
 ```yaml
 name: demo-cg-1
@@ -62,7 +66,8 @@ resources:
 ```
 
 ### YAML Text
-Here's how to apply an inline manifest:
+
+Here's how to apply an inline manifest.
 
 ```yaml
 name: demo-cg-2
@@ -88,12 +93,16 @@ resources:
 ```
 
 ### Object Literals
-With `ConfigGroup` it is possible to define a Kubernetes object using Pulumi property values.
+
+With `ConfigGroup` it's easy to define a Kubernetes object using Pulumi property values. Let's create a
+Kubernetes namespace and deploy a custom resource into that namespace.
 
 ```yaml
 name: demo-cg-3
 runtime: yaml
 resources:
+  ns:
+    type: kubernetes:core/v1:Namespace
   cg:
     type: kubernetes:yaml/v2:ConfigGroup
     properties:
@@ -101,24 +110,29 @@ resources:
       - apiVersion: stable.example.com/v1
         kind: CronTab
         metadata:
+          namespace: ${ns.metadata.name}
           name: my-crontab
         spec:
           cronSpec: "* * * * */5"
 ```
 
-This feature is expecially useful for Pulumi YAML, since the `apiextensions.k8s.io:CustomResource` resource isn't 
+This feature is expecially useful for Pulumi YAML, since the `apiextensions.k8s.io:CustomResource` resource isn't
 supported yet (see [pulumi-kubernetes#2787](https://github.com/pulumi/pulumi-kubernetes/issues/2787)).
 
 ### Resource Prefixes
-A notable change from 'v1' is how resource prefixes work. The purpose of the resource prefix is to ensure the uniqueness
-of child resource names, as described in [Pulumi: Resource Names](https://www.pulumi.com/docs/concepts/resources/names/#urns).
 
-Note that the resource prefix is +not+ applied to the Kubernetes object names.
+The purpose of the resource prefix is to ensure the uniqueness
+of child resource names, as described in [Pulumi: Resource Names](https://www.pulumi.com/docs/concepts/resources/names/#urns).
+The best practice is to use the component name as a prefix, and now that's the default behavior.
+
+Note that the resource prefix is __not__ applied to the Kubernetes object names.
 
 ### Transformation Support
+
 The Kubernetes provider generally supports resource transformations, e.g. to apply a resource alias or
-to apply an object name prefix or object label. Unfortunately, transformations aren't yet possible with the
-new `ConfigGroup` resource, but stay tuned as we work towards a GA release later this year.
+to apply an object name prefix or object label. Transformations aren't yet possible with the
+new `ConfigGroup` resource (see [pulumi/pulumi#12996](https://github.com/pulumi/pulumi/issues/12996)),
+but stay tuned as we work towards a GA release later this year.
 
 ## kubernetes.yaml/v2.ConfigFile
 
@@ -134,6 +148,7 @@ The `ConfigFile` resource accepts the following input properties:
 | `skipAwait`      | Skips over the readiness checks on the child resources.                                       |
 
 ### Manifest File
+
 Here's an example of applying a Kubernetes manifest file to your cluster:
 
 ```yaml
