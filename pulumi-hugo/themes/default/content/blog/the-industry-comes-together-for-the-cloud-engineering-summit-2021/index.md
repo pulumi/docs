@@ -48,7 +48,7 @@ We’ll cap off the summit in a free, post-event workshop with Marina Novikova a
 
 ## Apple
 
-New to the Cloud Engineering Summit this year, cloud services experts Fariba Khan and Stephen Van Gordon will share their experiences managing infrastructure at scale in _[Lifecycle of a Pulumi Program](/resources/lifecycle-of-a-pulumi-program/)_. They’ll talk about building a custom state backend, using CI/CD tooling, and the Pulumi Automation API to empower teams to provision secure-by-default configurations automatically.
+New to the Cloud Engineering Summit this year, cloud services experts Fariba Khan and Stephen Van Gordon will share their experiences managing infrastructure at scale in Lifecycle of a Pulumi Program. They’ll talk about building a custom state backend, using CI/CD tooling, and the Pulumi Automation API to empower teams to provision secure-by-default configurations automatically.
 
 ## Google Cloud
 

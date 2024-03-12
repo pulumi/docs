@@ -23,7 +23,7 @@ The first scenario is sometimes called _coexistence_, and you can learn more it 
 
 There are two ways to import an existing cloud resource into a Pulumi project:
 
-1. With the [`pulumi import`](/docs/cli/commands/pulumi_import) CLI command. This command imports the resource into the currently selected [stack](3/docs/concepts/stack/) and generates code describing the resource's current configuration for you to add to your Pulumi program.
+1. With the [`pulumi import`](/docs/cli/commands/pulumi_import) CLI command. This command imports the resource into the currently selected [stack](/docs/concepts/stack/) and generates code describing the resource's current configuration for you to add to your Pulumi program.
 
 1. In code, with the [`import` resource option](/docs/concepts/options/import/). This option is supplied by as an additional property on a resource declaration that you write into your Pulumi program yourself.
 
