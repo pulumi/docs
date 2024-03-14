@@ -110,6 +110,27 @@ values:
   # environment is opened.
   # ---------------------------------------------------------------------------------------
 
+  # 1Password Provider examples
+  1password:
+    secrets:
+      fn::open::1password-secrets:
+        login:
+          serviceAccountToken:
+            fn::secret: "ops_123ABC"
+        get:
+          email_section_example:
+            ref: "op://Management/PagerDuty/Admin/email"
+          anna_sans_section_example:
+            ref: "op://dev/Stripe/publishable-key"
+          olaf_attr_example:
+            ref: "op://development/GitHub/Security/one-time password?attribute=otp"
+          sven_ssh_example:
+            ref: "op://Private/ssh keys/ssh key/private key?ssh-format=openssh"
+          nokk_whitespace_example:
+            ref: "op://development/aws/Access Keys/access_key_id"
+          gale_unique_id_example:
+            ref: "op://prod/yj3jfj2vzsbiwqabprflnl27lm/password"
+
   # AWS Provider examples
   aws:
     login:
