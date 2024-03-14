@@ -4591,6 +4591,11 @@ typedarray@^0.0.6:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha512-/aCDEGatGvZ2BIk+HmLf4ifCJFwvKFNb9/JeZPMulfgFracn9QFcAf5GO8B/mweUjSoblS5In0cWhqpfs/5PQA==
 
+typedoc-plugin-script-inject@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/typedoc-plugin-script-inject/-/typedoc-plugin-script-inject-1.0.0.tgz#f0f62efaaa562f49c878370f603707caa075c41c"
+  integrity sha512-dxzZbuUzyJHhSxf5FGzPz6DW3Hys3pXppwgZCFW7Jne9k0cZ8g4Tll/J5FAbIJiqSgsk/Gs17JtzT2ZyriWfMw==
+
 typedoc@^0.25.11:
   version "0.25.11"
   resolved "https://registry.yarnpkg.com/typedoc/-/typedoc-0.25.11.tgz#75080c594c1e26b7676f90faebb367fb5a32dc8d"

@@ -13,6 +13,7 @@ set -o errexit -o pipefail
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 TOOL_TYPEDOC="$SCRIPT_DIR/../node_modules/.bin/typedoc"
+TOOL_TYPEDOC_CONFIG="$SCRIPT_DIR/../typedoc.json"
 
 OUTDIR="${SCRIPT_DIR}/../static-prebuilt/docs/reference/pkg/nodejs/pulumi"
 
@@ -61,6 +62,8 @@ generate_docs() {
             --excludeInternal --excludeExternals --excludePrivate \
             --cleanOutputDir \
             --skipErrorChecking \
+            --plugin typedoc-plugin-script-inject \
+            --options "$TOOL_TYPEDOC_CONFIG" \
             index.ts
 
         popd
