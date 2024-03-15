@@ -89,12 +89,10 @@ customer_logos:
     - name: cto-ai
     - name: levitate-ai
     - name: modal
-    - name: mpathic
     - name: pinecone
     - name: ozette
     - name: outmind-ai
     - name: synthesis-ai
-    - name: relational-ai
     - name: retain-ai
     - name: taranis
 

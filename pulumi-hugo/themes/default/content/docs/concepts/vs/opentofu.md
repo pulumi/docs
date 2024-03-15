@@ -1,8 +1,8 @@
 ---
-title_tag: "OpenTofu vs. Pulumi"
+title_tag: "Pulumi vs. OpenTofu"
 meta_desc: Pulumi and OpenTofu have a few similarities, but they differ in many key ways. This page helps provide a rundown of these major differences.
 title: OpenTofu
-h1: OpenTofu vs. Pulumi
+h1: Pulumi vs. OpenTofu
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   concepts:
