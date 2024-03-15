@@ -31,7 +31,7 @@ url_slug: getting-started-with-iac-google-cloud
 # Content for the left hand side section of the page.
 main:
     # Webinar title.
-    title: Getting Started with Infrastructure as Code on AWS
+    title: Getting Started with Infrastructure as Code on Google Cloud
 
     event_type: workshop # workshop | event
 
