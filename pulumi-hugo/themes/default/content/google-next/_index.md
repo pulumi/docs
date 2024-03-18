@@ -1,6 +1,6 @@
 ---
 title: Google Cloud Next 2024
-meta_desc: Join Pulumi at Kubecon Paris 2024 to learn about the latest developments in Infrastructure as Code, Kubernetes, platform engineering, and more.
+meta_desc: Join Pulumi at Google Next 2024 to learn about the latest developments in Infrastructure as Code, Google Cloud integrations, platform engineering, and more.
 meta_image: /images/google-next/google-next-24-meta.png
 type: page
 layout: google-next
