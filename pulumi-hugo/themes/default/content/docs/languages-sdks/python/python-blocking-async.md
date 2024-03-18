@@ -12,22 +12,29 @@ aliases:
 - /python/async/
 ---
 
-In large and complex Python Pulumi programs, blocking calls can prevent progress
-from being made by the Pulumi runtime by preventing the event loop from
-processing asynchronous tasks.  
+A Python Pulumi program runs an
+[`asyncio`](https://docs.python.org/3/library/asyncio.html)) event loop to
+create the resources that the Pulumi program describes---this isn't directly
+visible to the Python program.
 
-If the output from the blocking code will be used as an input to a resource,
-then the blocking code may be executed on another thread with the future result
-captured as a `pulumi.Output` object. In the same way, asynchronous code (using
-Python’s [`asyncio`](https://docs.python.org/3/library/asyncio.html)) can also
-be evaluated concurrently with the Pulumi runtime and the future result also
-captured using `pulumi.Output`.
+A consequence of this is that blocking calls prevent progress from being made by
+the Pulumi runtime by preventing the event loop from processing asynchronous
+tasks.  
+
+The `pulumi.Output` object can be used to pass the output from both synchronous
+and asynchronous calls without blocking the event loop.
+
+For synchronous or blocking code, this should be executed on another thread
+with the future result captured as a `pulumi.Output`---using `asyncio.to_thread`
+and `pulumi.Output.from_input` respectively.
+
+For asynchronous code the coroutine or other awaitable resilt can also be passed to `pulumi.Output.from_input` to create a `pulumi.Output` object.
 
 ## Background
 
 As covered in [Concepts](/docs/intro/concepts), when a Pulumi program is run it creates resources and the dependencies or
 connections between them. Consider the following example (taken from the Pulumi
-blog article [Programming the Cloud with Python](/blog/programming-the-cloud-with-python))
+blog article [Programming the Cloud with Python](/blog/programming-the-cloud-with-python)):
 
 ```python
 import mimetypes
@@ -77,8 +84,8 @@ This can cause problems both with blocking code and with explicitly asynchronous
 
 - Blocking code will prevent the event loop on the Pulumi program’s thread from
   pumping while the blocking code is executing
-- Asynchronous code may not be executed unless it is explicitly scheduled. It is
-  not appropriate to call `asyncio.run` from within a Pulumi program
+- Asynchronous code may not be executed unless it is explicitly scheduled. For example, it is
+  not possible to call `asyncio.run` from within a Pulumi program because there is already an event loop running.
 
 ### Blocking Code
 
@@ -88,14 +95,14 @@ evaluating. For simple Pulumi programs this is not consequential, but for more
 complex programs it is possible to be waiting on blocking code that causes all
 progress to be stalled waiting for that blocking code to complete.
 
-Examples of this might include calls to requests.get, or subprocess.run that are
+Examples of this might include calls to `requests.get`, or `subprocess.run` that are
 used to collect information needed to configure the Pulumi program or provide
 input from external sources.
 
 If the result from the blocking code is used to provide the input for a
 resource, then the blocking call can be wrapped into a future---in the form of a
 `pulumi.Output` object---using [`pulumi.Output.from_input`](/docs/reference/pkg/python/pulumi/#pulumi.Output.from_input). This allows the following
-pattern
+pattern:
 
 ```python
 import asyncio
@@ -126,7 +133,7 @@ be used to transform an output value
 ### Asynchronous Code
 
 Explicitly async code can be used in exactly the same way---`pulumi.Output.from_input` can convert any awaitable value into a `pulumi.Output`.
-To use the same example as above with an equivalent asynchronous implementation
+To use the same example as above with an equivalent asynchronous implementation:
 
 ```python
 import asyncio
@@ -159,7 +166,7 @@ mycli_output = pulumi.Output.from_input(mycli_coro)
 The examples above both use calling a local process to demonstrate a pattern that is useful in Python Pulumi programs. This applies to other blocking and async requirements too, for example if you need to call a REST API you might use `requests.get` or an async equivalent such as `httpx.AsyncClient.get`
 
 For running other processes, you can stay entirely within the Pulumi programming model by using the [Command](/registry/packages/command) package. With this package both of the examples above can be
-simplified to the following
+simplified to the following:
 
 ```python
 import shlex
@@ -176,7 +183,7 @@ def call_my_cli(foo: str) -> Output[str]:
 mycli_output = call_my_cli('bar')
 ```
 
-If the input to the function needs to be a `pulumi.Output` itself---_i.e._ if it is the result of creating another resource, or calling another command, then we can use [`pulumi.Output.concat`](/docs/reference/pkg/python/pulumi#pulumi.Output.concat) as follows
+If the input to the function needs to be a `pulumi.Output` itself---_i.e._ if it is the result of creating another resource, or calling another command, then we can use [`pulumi.Output.concat`](/docs/reference/pkg/python/pulumi#pulumi.Output.concat) as follows:
 
 ```python
 import shlex

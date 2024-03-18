@@ -31,6 +31,15 @@ The Pulumi SDK is available to Python developers as a Pip package distributed on
 
 The Pulumi programming model includes a core concept of `Input` and `Output` values, which are used to track how outputs of one resource flow in as inputs to another resource.  This concept is important to understand when getting started with Python and Pulumi, and the [Inputs and Outputs](/docs/concepts/inputs-outputs/) documentation is recommended to get a feel for how to work with this core part of Pulumi in common cases.
 
+### Blocking and Asynchronous Code
+
+A Python Pulumi program is single threaded and the Pulumi runtime creates an
+event loop to enable the runtime to be asynchronous.
+
+Given these constraints, [Blocking and Async Python with
+Pulumi](python-blocking-async) gives some recommendations on using blocking and
+asynchronous code within Python Pulumi programs.
+
 ## Using Pulumi PyPI Packages {#pypi-packages}
 
 ### Virtual Environments
