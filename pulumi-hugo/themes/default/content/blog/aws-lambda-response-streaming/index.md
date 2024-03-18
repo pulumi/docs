@@ -89,7 +89,7 @@ The notable changes to the Lambda function code that support response streaming 
 
 ## Streaming Performance Considerations
 
-For this simple text-based example, there is little need to worry about overall performance. However, if the response is large or the client is expected to perform a lot of processing on the response data, AWS suggests using Node’s `pipeline()` in place of the built-in `write()` method in case data is produced faster than it can be consumed by the client. `pipeline()` effectively helps you to pipe between streams, forward errors and properly clean up – providing a callback when the pipeline is complete. You can learn more about this approach in [Backpressuring in streams](https://nodejs.org/en/docs/guides/backpressuring-in-streams/) in the Node docs.
+For this simple text-based example, there is little need to worry about overall performance. However, if the response is large or the client is expected to perform a lot of processing on the response data, AWS suggests using Node’s `pipeline()` in place of the built-in `write()` method in case data is produced faster than it can be consumed by the client. `pipeline()` effectively helps you to pipe between streams, forward errors and properly clean up – providing a callback when the pipeline is complete. You can learn more about this approach in [Backpressuring in streams](https://nodejs.org/en/learn/modules/backpressuring-in-streams) in the Node docs.
 
 ## Packaging and deploying your Lambda Function for streaming with Pulumi
 

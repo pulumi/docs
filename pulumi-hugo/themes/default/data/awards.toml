@@ -109,12 +109,6 @@ img = "/logos/press/sdtimes.png"
 url = "https://sdtimes.com/softwaredev/companies-to-watch-in-2019"
 
 [[awards]]
-title = "EMA Top 3 Serverless Products"
-featured = true
-img = "/logos/press/awards/ema-top-3.png"
-url = "https://www.ematop3.com/serverless.html"
-
-[[awards]]
 title = "DevOps Company of the Year Nominee"
 featured = false
 img = "/logos/press/awards/computing-devops-2019.png"
