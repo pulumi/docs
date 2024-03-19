@@ -28,7 +28,7 @@ For synchronous or blocking code, this should be executed on another thread
 with the future result captured as a `pulumi.Output`---using `asyncio.to_thread`
 and `pulumi.Output.from_input` respectively.
 
-For asynchronous code the coroutine or other awaitable resilt can also be passed to `pulumi.Output.from_input` to create a `pulumi.Output` object.
+For asynchronous code the coroutine or other awaitable result can also be passed to `pulumi.Output.from_input` to create a `pulumi.Output` object.
 
 ## Background
 
