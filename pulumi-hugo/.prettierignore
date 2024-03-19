@@ -14,3 +14,6 @@ yarn-error.log
 themes/default/theme
 themes/default/assets
 themes/default/layouts
+# Don't check csharp build products
+themes/default/static/programs/*/bin/*
+themes/default/static/programs/*/obj/*
