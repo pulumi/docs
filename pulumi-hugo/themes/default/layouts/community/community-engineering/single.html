@@ -45,7 +45,7 @@
                         <div class="w-1/3">
                             <div>
                                 <time time="{{ $talk.date }}">
-                                    {{ time.Format "1/2/2006 @ 3:04 PM" $talk.date }}
+                                    {{ time.Format "01/02/2006" $talk.date }}
                                 </time>
                                 {{ if $talk.slides }}
                                     &bull; <a class="text-blue-500 underline" href="{{ $talk.slides }}">Slides</a>
