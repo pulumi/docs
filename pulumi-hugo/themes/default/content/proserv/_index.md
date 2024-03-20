@@ -33,7 +33,7 @@ solutions_header:
 solutions:
     button_options:
         parents:
-            # type: contained
+            # type:
         children:
             type: download
     parents:
@@ -47,20 +47,20 @@ solutions:
               description: |
                 Seamlessly migrate and adopt infrastructure as code practices with Pulumi's expertise. Transition from AWS CloudFormation, Terraform, AWS CDK, and other IaC tools to a unified Pulumi ecosystem, enhancing your cloud infrastructure's flexibility and maintainability.
               button:
-                text: Download Migration and Adoption
-                ref: google
+                text: Download Migration and Adoption Worksheet
+                ref: /documents/proserv/Migration_And_Adoption_Quickstart.pdf
             - title: Cost Optimization
               description: |
                 Implement FinOps principles and cost optimization strategies to ensure your cloud spending is efficient and aligned with your business objectives. Gain insights into usage patterns and optimize resources to reduce costs without sacrificing performance.
               button:
-                text: Download Cost Optimization
-                ref: google
+                text: Download Cost Optimization Worksheet
+                ref: /documents/proserv/Cost_Optimization_Quickstart.pdf
             - title: Security and Compliance
               description: |
                 Strengthen your cloud infrastructure's security posture and ensure compliance with industry standards. Pulumi helps you implement robust security frameworks and compliance checks, safeguarding your data and applications in the cloud.
               button:
-                text: Download Security and Compliance
-                ref: google
+                text: Download Security and Compliance Worksheet
+                ref: /documents/proserv/Security_And_Compliance_Quickstart.pdf
 
         - title: Developer Experience and Productivity
           description: |
@@ -72,20 +72,17 @@ solutions:
               description: |
                 Create centralized developer portals that offer easy access to tools, documentation, and resources. Improve collaboration and streamline workflows to boost productivity and innovation.
               button:
-                text: Download Integrated Developer Portals
-                ref: google
+                text: Download Integrated Developer Portals Worksheet
+                ref: /documents/proserv/Integrated_Developer_Portals_Quickstart.pdf
             - title: Automation and CI/CD
               description: |
                 Automate your development and deployment processes with Pulumi's CI/CD integrations. Achieve faster release cycles and more reliable builds, enabling your team to focus on delivering value.
               button:
-                text: Download Automation and CI/CD
-                ref: google
+                text: Download Automation and CI/CD Worksheet
+                ref: /documents/proserv/Automation_and_CI-CD_Quickstart.pdf
             - title: Collaboration and Best Practices
               description: |
                 Promote a collaborative development environment and adopt best practices for cloud-native development. Leverage Pulumi's expertise to build a culture of continuous improvement and learning.
-              button:
-                text: Download Collaboration and Best Practices
-                ref: google
 
         - title: Project Management and Delivery
           description: |
@@ -96,23 +93,12 @@ solutions:
             - title: Agile Project Management
               description: |
                 Adopt agile methodologies tailored to cloud infrastructure projects. Pulumi's approach to agile project management ensures flexibility, continuous improvement, and customer-centric delivery.
-              button:
-                text: Download Agile Project Management
-                ref: google
             - title: Resource and Timeline Optimization
               description: |
                 Optimize resource allocation and project timelines to meet your infrastructure goals. Pulumi helps you balance project demands with available resources, ensuring timely and efficient delivery.
-              button:
-                text: Download Resource and Timeline Optimization
-                ref: google
             - title: Stakeholder Engagement and Communication
               description: |
                 Maintain effective communication with all stakeholders throughout the project lifecycle. Pulumi's project management practices ensure transparency, alignment, and satisfaction across teams and stakeholders.
-              button:
-                text: Download Stakeholder Engagement and Communication
-                ref: google
-
-
 
 form:
     title: "Talk to a Cloud Architect"
