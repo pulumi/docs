@@ -33,7 +33,6 @@ solutions_header:
 solutions:
     button_options:
         parents:
-            # type:
         children:
             type: download
     parents:

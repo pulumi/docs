@@ -1,4 +1,17 @@
+<!--
+    Documentation:
 
+    This file creates a list of card groups. Each card group has a section header
+    that can include a title, description, and icon configuration. The section
+    header toggles from being on the left side, then the right side, then the
+    left side again. In the mobile view, the header is displayed at the top of
+    each card group with no toggle.
+
+    Example usage:
+    <section id="solutions">
+        {{ partial "card-group-toggled.html" (dict "card_group" .Params.solutions) }}
+    </section>
+-->
 <div class="mb-8 px-6 lg:px-0 relative">
 {{ with .card_group }}
 {{ $button_type_children := .button_options.children.type}}
@@ -23,15 +36,12 @@
         <div class="flex flex-col lg:flex-row">
             {{ if $isSolutionIndexEven }}
                 <div class="w-full my-auto lg:w-1/2 lg:mr-32 z-10 p-8 order-first lg:order-none">
-                {{ else }}
+            {{ else }}
                 <div class="w-full my-auto lg:w-1/2 lg:mr-32 z-10 p-8 order-first lg:order-last">
-                {{ end }}
+            {{ end }}
                     {{ partial "color-icon.html" (dict "icon" .icon.name "icon_color" $iconColor) }}
                     <h3>{{ .title }}</h3>
                     <p>{{ .description }}</p>
-                    <!-- <div class="card-cta-btn text-center">
-                        <a class="btn-secondary" href="google.com">Click Me</a>
-                    </div> -->
                 </div>
             <div class="w-full lg:w-1/2 block lg:flex flex-col lg:justify-center p-6 md:pl-24 xl:pl-0">
                 {{ range $childIndex, $child := $parent.children }}
