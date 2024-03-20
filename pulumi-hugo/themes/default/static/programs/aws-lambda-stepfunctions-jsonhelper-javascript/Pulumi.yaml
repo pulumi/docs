@@ -1,0 +1,10 @@
+name: aws-lambda-stepfunctions-jsonhelper-javascript
+runtime:
+  name: nodejs
+  options:
+    typescript: false
+description: An example that creates a Lambda function and Step Function to demonstrate the JSON stringify helper
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: aws-javascript

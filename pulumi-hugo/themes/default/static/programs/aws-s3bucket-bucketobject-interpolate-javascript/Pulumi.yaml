@@ -1,0 +1,10 @@
+name: aws-s3bucket-bucketobject-interpolate-javascript
+runtime:
+  name: nodejs
+  options:
+    typescript: false
+description: An example that creates an S3 bucket and bucket object
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: aws-javascript

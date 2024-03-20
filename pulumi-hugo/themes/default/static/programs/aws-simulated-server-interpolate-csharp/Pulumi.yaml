@@ -1,7 +1,0 @@
-name: aws-simulated-server-interpolate-csharp
-runtime: dotnet
-description: An example that creates a simulated webserver and interpolates the value of the URL
-config:
-  pulumi:tags:
-    value:
-      pulumi:template: aws-csharp

@@ -18,7 +18,7 @@ This can be used to compute an entirely new output value, such as creating a new
 
 Outputs that return to the engine as strings cannot be used directly in operations such as string concatenation until the output value has returned to Pulumi. In these scenarios, you'll need to wait for the value to return using [`apply`](/docs/concepts/inputs-outputs/apply/).
 
-To demonstate, let’s say you have created a server resource and a database resource, and their output values are as follows:
+To demonstrate, let’s say you have created a server resource and a database resource, and their output values are as follows:
 
 ```python
 # Example outputs for the server resource
@@ -163,9 +163,9 @@ Server=tcp:myDbServer.database.windows.net;initial catalog=myExampleDatabase;
 
 ### Using string interpolation
 
-There is an easier way to generate a concatenated string value using multiple outputs, and that is by using interpolation. Pulumi exposes interpolation helpers that enables you to create strings that contain outputs. These interpolation methods wrap [all](/docs/concepts/inputs-outputs/all/) and [apply](/docs/concepts/inputs-outputs/apply/) with an interface that resembles your language's native string formatting functions. The below example demonstrates how to create a URL from the hostname and port output values of a web server.
+There is an easier way to generate a concatenated string value using multiple outputs, and that is by using interpolation. Pulumi exposes interpolation helpers that enables you to create strings that contain outputs. These interpolation methods wrap [all](/docs/concepts/inputs-outputs/all/) and [apply](/docs/concepts/inputs-outputs/apply/) with an interface that resembles your language's native string formatting functions. The example below demonstrates how to create a URL from the hostname and port output values of a web server.
 
-{{< example-program path="aws-simulated-server-interpolate" >}}
+{{< example-program path="aws-s3bucket-bucketobject-interpolate" >}}
 
 You can use string interpolation to do things like export a [stack output](/docs/using-pulumi/stack-outputs-and-references/) or provide a dynamically computed string as a new resource argument.
 
@@ -328,3 +328,9 @@ This example is not applicable in Pulumi YAML.
 {{% /choosable %}}
 
 {{< /chooser >}}
+
+## Creating a JSON object
+
+You can also [create JSON objects](/docs/concepts/inputs-outputs/apply/#outputs-and-json) using multiple output values in Pulumi. Doing so requires the use of `apply` or one of Pulumi's [JSON-specific helpers](/docs/concepts/inputs-outputs/apply/#converting-outputs-to-json).
+
+{{< example-program path="aws-s3websitebucket-oai-bucketpolicy" >}}

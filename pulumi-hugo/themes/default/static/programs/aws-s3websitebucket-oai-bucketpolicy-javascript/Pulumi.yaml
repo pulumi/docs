@@ -1,0 +1,10 @@
+name: aws-s3websitebucket-oai-bucketpolicy-javascript
+runtime:
+  name: nodejs
+  options:
+    typescript: false
+description: An example that creates a website S3 bucket, a CloudFront Origin Access Identity, and a bucket policy.
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: aws-javascript

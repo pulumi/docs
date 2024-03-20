@@ -1,0 +1,10 @@
+name: aws-lambda-stepfunctions-jsonhelper-python
+runtime:
+  name: python
+  options:
+    virtualenv: venv
+description: An example that creates a Lambda function and Step Function to demonstrate the JSON stringify helper
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: aws-python
