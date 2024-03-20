@@ -13,10 +13,6 @@
                 <h2 class="mb-1">{{ $personData.name }}</h2>
                 <div class="text-sm text-gray-700 mb-1">
                     <span class="">{{ $personData.title }}</span>
-                    <span>
-                        <span class="hidden md:inline">&bull; </span>
-                        <a class="block md:inline text-blue-500 underline" href="{{ relref . "/community/community-engineering" }}">See all community engineers</a>
-                    </span>
                 </div>
                 {{ partial "widgets/social-icons.html" (dict "social" $personData.social)}}
                 <div class="my-8 text-left">
