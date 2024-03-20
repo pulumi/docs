@@ -20,7 +20,7 @@ standard Kubernetes types, [Helm](https://helm.sh/) charts, [Kustomizations](htt
 
 In v4.10, we leveled up the support for working with Kubernetes manifests with the introduction of the `yaml/v2` package.
 The package provides new implementations of the `ConfigGroup` and `ConfigFile` resources, expanding support to the
-Pulumi Java SDK and to Pulumi YAML.
+Pulumi Java SDK and to Pulumi YAML. The new implementations are also smarter about applying the objects in the correct order.
 
 Please note that these resources are in a preview stage of maturity, as we continue to round out the feature set.
 These new resources are provided side-by-side with the existing implementations.
@@ -119,6 +119,23 @@ resources:
 This feature is expecially useful for Pulumi YAML, since the `apiextensions.k8s.io:CustomResource` resource isn't
 supported yet (see [pulumi-kubernetes#2787](https://github.com/pulumi/pulumi-kubernetes/issues/2787)).
 
+### Resource Ordering
+
+The `ConfigGroup` resource automatically detects dependencies between resources in the manifest(s).
+For example, it knows to install namespaces and Custom Resource Definitions (CRDs) first.
+
+Use the `config.kubernetes.io/depends-on` annotation to declare an explicit resource dependency.
+The annotation accepts a list of resource references, delimited by commas.
+
+It consists of the group, kind, name, and optionally the namespace, delimited by forward slashes.
+
+| Resource Scope   | Format                                         |
+| :--------------- | :--------------------------------------------- |
+| namespace-scoped | `<group>/namespaces/<namespace>/<kind>/<name>` |
+| cluster-scoped   | `<group>/<kind>/<name>`                        |
+
+For resources in the “core” group, the empty string is used instead (for example: `/namespaces/test/Pod/pod-a`).
+
 ### Resource Prefixes
 
 The purpose of the resource prefix is to ensure the uniqueness
@@ -159,6 +176,56 @@ resources:
     type: kubernetes:yaml/v2:ConfigFile
     properties:
       file: ./manifest.yaml
+```
+
+## Example: Certificate Manager
+
+Here's a complete example of how to install and use cert-manager using `ConfigGroup` resources.
+
+```yaml
+name: cert-manager
+runtime: yaml
+description: Installs cert-manager.  See https://cert-manager.io/docs/installation/kubectl/ for details.
+variables: {}
+resources:
+  install:
+    type: kubernetes:yaml/v2:ConfigGroup
+    properties:
+      files:
+      - https://github.com/cert-manager/cert-manager/releases/download/v1.14.4/cert-manager.yaml
+  test:
+    type: kubernetes:yaml/v2:ConfigGroup
+    options:
+      dependsOn:
+      - ${install}
+    properties:
+      yaml: |
+        apiVersion: v1
+        kind: Namespace
+        metadata:
+          name: cert-manager-test
+        ---
+        apiVersion: cert-manager.io/v1
+        kind: Issuer
+        metadata:
+          name: test-selfsigned
+          namespace: cert-manager-test
+        spec:
+          selfSigned: {}
+        ---
+        apiVersion: cert-manager.io/v1
+        kind: Certificate
+        metadata:
+          name: selfsigned-cert
+          namespace: cert-manager-test
+          annotations:
+            config.kubernetes.io/depends-on: cert-manager.io/namespaces/cert-manager-test/Issuer/test-selfsigned
+        spec:
+          dnsNames:
+            - example.com
+          secretName: selfsigned-cert-tls
+          issuerRef:
+            name: test-selfsigned
 ```
 
 ## Conclusion
