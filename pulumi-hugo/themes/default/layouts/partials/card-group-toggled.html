@@ -1,4 +1,4 @@
-<!--
+{{/*
     Documentation:
 
     This file creates a list of card groups. Each card group has a section header
@@ -11,7 +11,7 @@
     <section id="solutions">
         {{ partial "card-group-toggled.html" (dict "card_group" .Params.solutions) }}
     </section>
--->
+*/}}
 <div class="mb-8 px-6 lg:px-0 relative">
 {{ with .card_group }}
 {{ $button_type_children := .button_options.children.type}}
