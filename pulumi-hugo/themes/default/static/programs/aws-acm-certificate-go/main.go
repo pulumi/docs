@@ -7,7 +7,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		cert, err := acm.NewCertificate(ctx, "cert", &acm.CertificateArgs{
+		_, err := acm.NewCertificate(ctx, "cert", &acm.CertificateArgs{
 			DomainName:       pulumi.String("example.com"),
 			ValidationMethod: pulumi.String("DNS"),
 		})
