@@ -15,9 +15,7 @@ aliases:
 - /docs/guides/crosswalk/aws/cloudwatch/
 ---
 
-<a href="./">
-    <img src="/images/docs/reference/crosswalk/aws/logo.svg" align="right" width="280" style="margin: 0 0 32px 16px;">
-</a>
+{{< crosswalk-header >}}
 
 [Amazon CloudWatch](https://aws.amazon.com/cloudwatch/) is a monitoring and management service built for developers,
 system operators, site reliability engineers (SRE), and IT managers. AWS CloudWatch provides data and actionable insights

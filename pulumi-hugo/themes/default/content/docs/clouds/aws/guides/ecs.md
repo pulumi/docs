@@ -16,9 +16,7 @@ aliases:
 - /docs/guides/crosswalk/aws/ecs/
 ---
 
-<a href="./">
-    <img src="/images/docs/reference/crosswalk/aws/logo.svg" align="right" width="280" style="margin: 0 0 32px 16px;">
-</a>
+{{< crosswalk-header >}}
 
 [Amazon Elastic Container Service (Amazon ECS)](https://aws.amazon.com/ecs) is a scalable, high-performance container
 orchestration service that supports Docker containers and allows you to easily run and scale containerized applications

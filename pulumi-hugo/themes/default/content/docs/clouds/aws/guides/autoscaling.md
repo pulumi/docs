@@ -15,9 +15,7 @@ aliases:
 - /docs/guides/crosswalk/aws/autoscaling/
 ---
 
-<a href="./">
-    <img src="/images/docs/reference/crosswalk/aws/logo.svg" align="right" width="280" style="margin: 0 0 32px 16px;">
-</a>
+{{< crosswalk-header >}}
 
 [AWS Auto Scaling](https://aws.amazon.com/autoscaling) monitors your applications and automatically adjusts capacity to
 maintain steady, predictable performance at the lowest possible cost. Using AWS Auto Scaling, it’s easy to setup

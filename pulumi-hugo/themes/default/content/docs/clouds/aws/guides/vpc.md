@@ -16,9 +16,7 @@ aliases:
 - /docs/guides/crosswalk/aws/vpc/
 ---
 
-<a href="./">
-    <img src="/images/docs/reference/crosswalk/aws/logo.svg" align="right" width="280" style="margin: 0 0 32px 16px;">
-</a>
+{{< crosswalk-header >}}
 
 [Amazon Virtual Private Cloud (Amazon VPC)](https://aws.amazon.com/vpc) lets you provision a logically isolated section
 of the AWS Cloud where you can launch AWS resources in a virtual network that you define. You have complete control

@@ -16,9 +16,7 @@ aliases:
 - /docs/guides/crosswalk/aws/elb/
 ---
 
-<a href="./">
-    <img src="/images/docs/reference/crosswalk/aws/logo.svg" align="right" width="280" style="margin: 0 0 32px 16px;">
-</a>
+{{< crosswalk-header >}}
 
 [Elastic Load Balancing](https://aws.amazon.com/elasticloadbalancing/) (ELB) automatically distributes incoming
 application traffic across multiple targets, such as Amazon EC2 instances, containers, IP addresses, and Lambda

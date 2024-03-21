@@ -15,9 +15,7 @@ aliases:
 - /docs/guides/crosswalk/aws/ecr/
 ---
 
-<a href="./">
-    <img src="/images/docs/reference/crosswalk/aws/logo.svg" align="right" width="280" style="margin: 0 0 32px 16px;">
-</a>
+{{< crosswalk-header >}}
 
 [Amazon Elastic Container Registry (ECR)](https://aws.amazon.com/ecr/) is a managed Docker container registry that
 makes it easy to store, manage, and deploy Docker container images. ECR supports private Docker registries with

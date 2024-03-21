@@ -17,9 +17,7 @@ aliases:
  - /docs/guides/crosswalk/aws/eks/
 ---
 
-<a href="./">
-    <img src="/images/docs/reference/crosswalk/aws/logo.svg" align="right" width="280" style="margin: 0 0 32px 16px;">
-</a>
+{{< crosswalk-header >}}
 
 [Amazon Elastic Kubernetes Service (Amazon EKS)](https://aws.amazon.com/eks) makes it easy to deploy,
 manage, and scale containerized applications using Kubernetes on AWS. Amazon EKS runs the Kubernetes management
