@@ -87,10 +87,14 @@ customer_logos:
   logos:
     - name: altana
     - name: cto-ai
+    - name: fennel-ai
+    - name: ai-io
     - name: levitate-ai
     - name: modal
     - name: pinecone
     - name: ozette
+    - name: nostra-ai
+    - name: flux-ai
     - name: outmind-ai
     - name: synthesis-ai
     - name: retain-ai
