@@ -1,0 +1,74 @@
+<!DOCTYPE html><html class="default" lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>@pulumi/cloud</title><meta name="description" content="Documentation for @pulumi/cloud"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="assets/style.css"/><link rel="stylesheet" href="assets/highlight.css"/><script defer src="assets/main.js"></script><script async src="assets/icons.js" id="tsd-icons-script"></script><script async src="assets/search.js" id="tsd-search-script"></script><script async src="assets/navigation.js" id="tsd-nav-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os";document.body.style.display="none";setTimeout(() => app?app.showPage():document.body.style.removeProperty("display"),500)</script><header class="tsd-page-toolbar"><div class="tsd-toolbar-contents container"><div class="table-cell" id="tsd-search" data-base="."><div class="field"><label for="tsd-search-field" class="tsd-widget tsd-toolbar-icon search no-caption"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><use href="assets/icons.svg#icon-search"></use></svg></label><input type="text" id="tsd-search-field" aria-label="Search"/></div><div class="field"><div id="tsd-toolbar-links"></div></div><ul class="results"><li class="state loading">Preparing search index...</li><li class="state failure">The search index is not available</li></ul><a href="index.html" class="title">@pulumi/cloud</a></div><div class="table-cell" id="tsd-widgets"><a href="#" class="tsd-widget tsd-toolbar-icon menu no-caption" data-toggle="menu" aria-label="Menu"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><use href="assets/icons.svg#icon-menu"></use></svg></a></div></div></header><div class="container container-main"><div class="col-content"><div class="tsd-page-title"><h2>@pulumi/cloud</h2></div><div class="tsd-panel tsd-typography"><p><a href="https://travis-ci.com/pulumi/pulumi-cloud"><img src="https://travis-ci.com/pulumi/pulumi-cloud.svg?token=eHg7Zp5zdDDJfTjY8ejq&branch=master" alt="Build Status"></a></p>
+<a id="md:pulumi-cloud-framework-preview" class="tsd-anchor"></a><h1><a href="#md:pulumi-cloud-framework-preview">Pulumi Cloud Framework (Preview)</a></h1><p>Pulumi Cloud Framework is our multi-cloud framework for building modern container and serverless cloud applications.</p>
+<p>This is a preview library demonstrating how to build Pulumi <a href="https://www.pulumi.com/docs/reference/component-tutorial/">components</a>
+that can abstract over and target multiple clouds.</p>
+<p>For developers targeting a single cloud platform like AWS, Azure or GCP, we recommend using the
+<a href="https://github.com/pulumi/pulumi-aws">@pulumi/aws</a>,
+<a href="https://github.com/pulumi/pulumi-azure">@pulumi/azure</a> and
+<a href="https://github.com/pulumi/pulumi-gcp">@pulumi/gcp</a> packages respectively. These packages give
+you full access to the breadth of the platform&#39;s capabilities and come with many abstractions to
+make developing against that platform easier.</p>
+<a id="md:installing" class="tsd-anchor"></a><h2><a href="#md:installing">Installing</a></h2><p>This package is available for Node.js (JavaScript or TypeScript).</p>
+<p>To install the core API package, use either <code>npm</code>:</p>
+<pre><code><span class="hl-0">$</span><span class="hl-1"> </span><span class="hl-0">npm</span><span class="hl-1"> </span><span class="hl-0">install</span><span class="hl-1"> @</span><span class="hl-0">pulumi</span><span class="hl-1">/</span><span class="hl-0">cloud</span>
+</code><button>Copy</button></pre>
+<p>or <code>yarn</code>:</p>
+<pre><code><span class="hl-0">$</span><span class="hl-1"> </span><span class="hl-0">yarn</span><span class="hl-1"> </span><span class="hl-0">add</span><span class="hl-1"> @</span><span class="hl-0">pulumi</span><span class="hl-1">/</span><span class="hl-0">cloud</span>
+</code><button>Copy</button></pre>
+<p>Note that there are implementation packages for each major cloud provider that you will need also.</p>
+<p>For AWS, install the package using either <code>npm</code>:</p>
+<pre><code><span class="hl-0">$</span><span class="hl-1"> </span><span class="hl-0">npm</span><span class="hl-1"> </span><span class="hl-0">install</span><span class="hl-1"> @</span><span class="hl-0">pulumi</span><span class="hl-1">/</span><span class="hl-0">cloud</span><span class="hl-1">-</span><span class="hl-0">aws</span>
+</code><button>Copy</button></pre>
+<p>or <code>yarn</code>:</p>
+<pre><code><span class="hl-0">$</span><span class="hl-1"> </span><span class="hl-0">yarn</span><span class="hl-1"> </span><span class="hl-0">add</span><span class="hl-1"> @</span><span class="hl-0">pulumi</span><span class="hl-1">/</span><span class="hl-0">cloud</span><span class="hl-1">-</span><span class="hl-0">aws</span>
+</code><button>Copy</button></pre>
+<blockquote>
+<p><strong>Note:</strong> At the moment, only Amazon Web Services (AWS) support is fleshed out enough to be used.
+Azure support is currently being worked on and is in an early preview state.  It can be used, but issues may be encountered.  To use Azure change the above lines to:</p>
+</blockquote>
+<pre><code><span class="hl-0">$</span><span class="hl-1"> </span><span class="hl-0">npm</span><span class="hl-1"> </span><span class="hl-0">install</span><span class="hl-1"> @</span><span class="hl-0">pulumi</span><span class="hl-1">/</span><span class="hl-0">cloud</span><span class="hl-1">-</span><span class="hl-0">azure</span><br/><span class="hl-0">$</span><span class="hl-1"> </span><span class="hl-0">yarn</span><span class="hl-1"> </span><span class="hl-0">add</span><span class="hl-1"> @</span><span class="hl-0">pulumi</span><span class="hl-1">/</span><span class="hl-0">cloud</span><span class="hl-1">-</span><span class="hl-0">azure</span>
+</code><button>Copy</button></pre>
+<blockquote>
+<p>We also intend to support GCP in the future.  <a href="https://github.com/pulumi/pulumi-cloud/issues/518">https://github.com/pulumi/pulumi-cloud/issues/518</a> tracks this request.</p>
+</blockquote>
+<a id="md:concepts" class="tsd-anchor"></a><h2><a href="#md:concepts">Concepts</a></h2><p>The Pulumi Cloud Framework is in preview.  It provides abstractions that can allow one to write a
+cloud-application on many different cloud providers (i.e. Amazon Web Services (AWS), Azure, Google
+Cloud Platform (GCP)), using a common API.</p>
+<p>There is an abstraction package, <code>@pulumi/cloud</code>, that defines the APIs common to all cloud
+providers.  This provides a highly productive view on modern cloud architectures, akin to Java or
+.NET&#39;s approach to operating systems.  Because these abstractions allow one to operate over
+different cloud platforms in a consistent manner, low level functionality and capabilities of the
+individual platforms are intentionally not exposed.</p>
+<p>There are implementation packages for individual cloud providers, such as <code>@pulumi/cloud-aws</code>, which
+first and foremost implement those APIs for the target cloud in question, but also offer more
+specific functionality in the form of derived classes that provide cloud-specific functionality.
+This allows you to mix multi-cloud code with cloud-specific logic.</p>
+<p>Note that you are free, of course, to intersperse these abstractions with specific resources in your
+cloud platform of choice, using the appropriate Pulumi platform framework.  This delivers the
+highest fidelity possible. For example, <a href="http://github.com/pulumi/pulumi-aws">pulumi/pulumi-aws</a> or
+<a href="http://github.com/pulumi/pulumi-azure">pulumi/pulumi-azure</a>.  These frameworks will give access to
+the full power of those platforms, but will in turn create applications specific to them.</p>
+<a id="md:packages" class="tsd-anchor"></a><h3><a href="#md:packages">Packages</a></h3><p>Currently, Pulumi Cloud contains two primary packages: <code>api</code> and <code>aws</code>.</p>
+<p><a href="https://github.com/pulumi/pulumi-cloud/tree/master/api"><code>@pulumi/cloud</code></a> defines the cloud
+abstractions common to building modern cloud applications, and can be used by any Pulumi application
+directly for cloud-neutral logic.  For example, the <code>Service</code> type expresses a load balanced
+container, <code>API</code> exposes simple serverless functions over HTTP, and <code>timer</code> allows you to schedule
+timers.  All serverless functions are expressed using lambdas in your language of choice.  The
+package also offers simple data abstractions, systems like <code>Table</code> and <code>Bucket</code>.</p>
+<p><a href="https://github.com/pulumi/pulumi-cloud/tree/master/aws"><code>@pulumi/cloud-aws</code></a> supplies an implementation
+of those abstractions, built on top of the <code>@pulumi/aws</code> library.  Its implementation types offer
+more AWS-specific functionality than is available in the <code>@pulumi/cloud</code> package.</p>
+<p>To use either, simply reference them in the usual NPM style in your program.  You may decide to code
+against either the APIs or the implementation types, depending on the style of code you&#39;re writing
+and functionality you need.</p>
+<p>If you code against <code>@pulumi/cloud</code> directly, you will need to configure your program before running
+<code>pulumi update</code>. This can be done simply by running the <code>pulumi config set</code> command; for instance,
+to select <code>aws</code>, you will run:</p>
+<pre><code><span class="hl-0">$</span><span class="hl-1"> </span><span class="hl-0">pulumi</span><span class="hl-1"> </span><span class="hl-0">config</span><span class="hl-1"> </span><span class="hl-0">set</span><span class="hl-1"> </span><span class="hl-2">cloud</span><span class="hl-1">:</span><span class="hl-0">provider</span><span class="hl-1"> </span><span class="hl-0">aws</span>
+</code><button>Copy</button></pre>
+<p>For more details see the examples in <code>examples</code>, or online at: <a href="https://docs.pulumi.com/quickstart/">https://docs.pulumi.com/quickstart/</a></p>
+<a id="md:reference" class="tsd-anchor"></a><h2><a href="#md:reference">Reference</a></h2><p>For detailed reference documentation, please visit the API docs site for this package:</p>
+<ul>
+<li><a href="https://pulumi.com/docs/reference/pkg/nodejs/pulumi/cloud/">@pulumi/cloud</a></li>
+</ul>
+</div></div><div class="col-sidebar"><div class="page-menu"><div class="tsd-navigation settings"><details class="tsd-index-accordion"><summary class="tsd-accordion-summary"><h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><use href="assets/icons.svg#icon-chevronDown"></use></svg>Settings</h3></summary><div class="tsd-accordion-details"><div class="tsd-filter-visibility"><h4 class="uppercase">Member Visibility</h4><form><ul id="tsd-filter-options"><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-protected" name="protected"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Protected</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-inherited" name="inherited" checked/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Inherited</span></label></li></ul></form></div><div class="tsd-theme-toggle"><h4 class="uppercase">Theme</h4><select id="tsd-theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></div></div></details></div><details open class="tsd-index-accordion tsd-page-navigation"><summary class="tsd-accordion-summary"><h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><use href="assets/icons.svg#icon-chevronDown"></use></svg>On This Page</h3></summary><div class="tsd-accordion-details"><a href="#md:pulumi-cloud-framework-preview"><span>Pulumi <wbr/>Cloud <wbr/>Framework (<wbr/>Preview)</span></a><ul><li><a href="#md:installing"><span>Installing</span></a></li><li><a href="#md:concepts"><span>Concepts</span></a></li><li><ul><li><a href="#md:packages"><span>Packages</span></a></li></ul></li><li><a href="#md:reference"><span>Reference</span></a></li></ul></div></details></div><div class="site-menu"><nav class="tsd-navigation"><a href="modules.html" class="current"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="assets/icons.svg#icon-1"></use></svg><span>@pulumi/cloud</span></a><ul class="tsd-small-nested-navigation" id="tsd-nav-container" data-base="."><li>Loading...</li></ul></nav></div></div></div><div class="tsd-generator"><p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></div><div class="overlay"></div><script async src="/docs/reference/pkg/nodejs/pulumi/pulumi/redirects.js" crossOrigin="anonymous"></script></body></html>

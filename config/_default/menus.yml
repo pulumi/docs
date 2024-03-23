@@ -215,7 +215,7 @@ languages:
   - name: SDK docs
     identifier: sdk-docs-javascript
     parent: javascript
-    pageRef: /docs/reference/pkg/nodejs/pulumi/pulumi
+    url: https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/pulumi/
     weight: 1
   - name: SDK docs
     identifier: sdk-docs-python
