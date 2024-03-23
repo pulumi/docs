@@ -12,12 +12,10 @@ import { LambdaEdge } from "./lambdaEdge";
 
 /**
  * Returns the Lambda function associations for the CloudFront distribution.
- * @param addSecurityHeaders If true, creates Lambda@Edge that sets security headers on
- * origin responses and adds the Lambda to the list of associated triggers.
  * @param doEdgeRedirects If true, creates a Lambda@Edge function that that conditionally
 *  redirects based on the URL of the request.
  */
-export function getLambdaFunctionAssociations(addSecurityHeaders: boolean, doEdgeRedirects: boolean):
+export function getLambdaFunctionAssociations(doEdgeRedirects: boolean):
     aws.types.input.cloudfront.DistributionDefaultCacheBehaviorLambdaFunctionAssociation[] {
 
     const associations = [];
@@ -26,31 +24,6 @@ export function getLambdaFunctionAssociations(addSecurityHeaders: boolean, doEdg
     const provider = new aws.Provider("usEast1", {
         region: aws.Region.USEast1,
     });
-
-    if (addSecurityHeaders) {
-        const securityHeadersLambda = new LambdaEdge(
-            "security",
-            {
-                disableResourceNamePrefix: true,
-                func: getSecurityHeadersLambdaCallback(),
-                funcDescription: "Lambda function that sets security headers on a Cloudfront origin response.",
-            },
-            {
-                provider,
-            },
-        );
-        associations.push({
-            includeBody: false,
-            lambdaArn: securityHeadersLambda.getLambdaEdgeArn(),
-            // Origin response is a type of trigger that runs the function only when CF
-            // contacts the origin for a file. Thus reducing the number of times the func
-            // is actually invoked.
-            //
-            // See the following link for all trigger events supported by CF:
-            // https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/lambda-cloudfront-trigger-events.html
-            eventType: "origin-response",
-        });
-    }
 
     if (doEdgeRedirects) {
         const edgeRedirectsLambda = new LambdaEdge(
@@ -71,26 +44,6 @@ export function getLambdaFunctionAssociations(addSecurityHeaders: boolean, doEdg
     }
 
     return associations;
-}
-
-function getSecurityHeadersLambdaCallback(): aws.lambda.Callback<CloudFrontResponseEvent, CloudFrontResponse> {
-    // See the following link for an example:
-    // https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/lambda-edge-how-it-works-tutorial.html
-    return (event, context, callback) => {
-
-        // Get contents of response.
-        const response = event.Records[0].cf.response;
-        const headers = response.headers;
-
-        // Set new headers.
-        headers["x-frame-options"] = [{
-            key: "X-Frame-Options",
-            value: "DENY",
-        }];
-
-        // Return modified response.
-        callback(null, response);
-    };
 }
 
 function getEdgeRedirectsLambdaCallback():

@@ -25,7 +25,7 @@ const config = {
     // sync-and-test-bucket script (i.e., scripts/sync-and-test-bucket.sh).
     pathToOriginBucketMetadata: stackConfig.require("pathToOriginBucketMetadata"),
     // addSecurityHeaders indicates if standard security headers should be added.
-    // Setting this true will add a Lambda@Edge function that adds the security headers.
+    // Setting this true will configure security headers to be more strict.
     addSecurityHeaders: stackConfig.getBoolean("addSecurityHeaders") || false,
     // doEdgeRedirects is whether to perform redirects at the CloudFront layer.
     // Setting this true will add a Lambda@Edge function that handles that redirect logic.
@@ -268,7 +268,6 @@ const oneWeek = oneHour * 24 * 7;
 const oneYear = oneWeek * 52;
 
 const lambdaFunctionAssociations = getLambdaFunctionAssociations(
-    config.addSecurityHeaders,
     config.doEdgeRedirects,
 );
 
@@ -281,7 +280,35 @@ const allViewerExceptHostHeaderId = "b689b0a8-53d0-40ab-baf2-68738e2966ac";
 // https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-cache-policies.html
 const cachingDisabledId = "4135ea2d-6df8-44a3-9df3-4b5a84be39ad";
 
-const baseCacheBehavior = {
+const SecurityHeadersPolicy = new aws.cloudfront.ResponseHeadersPolicy('security-headers', {
+    securityHeadersConfig: {
+        frameOptions: {
+            frameOption: config.addSecurityHeaders ? 'DENY' : 'SAMEORIGIN',
+            override: false,
+        },
+        // These remaining options are derived from:
+        // https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-response-headers-policies.html#managed-response-headers-policies-security
+        // "SecurityHeadersPolicy" with ID "67f7725c-6f97-4210-82d7-5512b31e9d03"
+        referrerPolicy: {
+            referrerPolicy: 'strict-origin-when-cross-origin',
+            override: false,
+        },
+        contentTypeOptions: {
+            override: true,
+        },
+        strictTransportSecurity: {
+            accessControlMaxAgeSec: 31536000,
+            override: false,
+        },
+        xssProtection: {
+            protection: true,
+            modeBlock: true,
+            override: false,
+        }
+    }
+})
+
+const baseCacheBehavior: aws.types.input.cloudfront.DistributionDefaultCacheBehavior = {
     targetOriginId: originBucket.arn,
     compress: true,
 
@@ -304,8 +331,7 @@ const baseCacheBehavior = {
 
     lambdaFunctionAssociations,
 
-    // https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-response-headers-policies.html#managed-response-headers-policies-security
-    responseHeadersPolicyId: "67f7725c-6f97-4210-82d7-5512b31e9d03", // SecurityHeadersPolicy
+    responseHeadersPolicyId: SecurityHeadersPolicy.id,
 };
 
 const registryOrigins: aws.types.input.cloudfront.DistributionOrigin[] = [];
@@ -396,6 +422,8 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
                 httpPort: 80,
                 httpsPort: 443,
                 originSslProtocols: ["TLSv1.2"],
+                originReadTimeout: 60,
+                originKeepaliveTimeout: 60,
             },
         },
         ...registryOrigins,
@@ -541,6 +569,7 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
             pathPattern: '/ai',
             originRequestPolicyId: allViewerExceptHostHeaderId,
             cachePolicyId: cachingDisabledId,
+            lambdaFunctionAssociations: [],
             forwardedValues: undefined, // forwardedValues conflicts with cachePolicyId, so we unset it.
         },
         {
@@ -554,6 +583,7 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
             pathPattern: '/ai/*',
             originRequestPolicyId: allViewerExceptHostHeaderId,
             cachePolicyId: cachingDisabledId,
+            lambdaFunctionAssociations: [],
             forwardedValues: undefined, // forwardedValues conflicts with cachePolicyId, so we unset it.
         }
     ],
