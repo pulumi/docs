@@ -23,7 +23,7 @@ The Key-Value Table Editor simplifies configuration tasks, allowing for direct i
 - **CRUD Operations**: Perform Create, Read, Update, and Delete (CRUD) operations on your secrets and  plaintext values
 - **Decrypting Secrets**: Safely decrypt secrets one at a time, directly within the editor
 - **Environment Imports**: [Import environments](/docs/esc/environments/#importing-other-environments) and define the order of imports to suit your project's needs
-- **Variables Projections**: Make variables available as [Pulumi Config](/docs/esc/environments/#projecting-environment-variables), [environment variables](/docs/esc/environments/#projecting-environment-variables), and files, streamlining your deployment and runtime configuration.
+- **Variables Projections**: Make variables available as [Pulumi Config](/docs/esc/environments/#using-environments-with-pulumi-iac), [environment variables](/docs/esc/environments/#projecting-environment-variables), and files, streamlining your deployment and runtime configuration.
 - **Interpolations and References**: Add references to existing path-values, or add [interpolations](/docs/esc/environments/#interpolating-values) to dynamically generate values
 
 ![Key-Value Table Editor](esc-key-value-table-editor.png)
