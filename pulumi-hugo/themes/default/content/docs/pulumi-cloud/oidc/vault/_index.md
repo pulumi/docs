@@ -12,10 +12,6 @@ menu:
 
 This document outlines the steps required to use Pulumi with OpenID Connect to authenticate with Vault. This is accomplished using [Vault's JWT authentication method](https://developer.hashicorp.com/vault/docs/auth/jwt#jwt-authentication) to assume a role. Access to the role is authorized using a [Vault policy](https://developer.hashicorp.com/vault/docs/concepts/policies) that validates the contents of the OIDC token issued by Pulumi Cloud.
 
-{{< notes "info" >}}
-The `namespaces` functionality of Vault is not currently supported. More specifically, this configuration will only work for the `root` namespace. This means that this configuration will only work with Vault OSS at this time (Vault HCP and Enterprise are not supported).
-{{< /notes >}}
-
 {{< notes type="warning" >}}
 Please note that this guide provides step-by-step instructions based on the official provider documentation which is subject to change. For the most current and precise information, always refer to the [official Vault documentation](https://developer.hashicorp.com/vault/docs).
 {{< /notes >}}
@@ -157,6 +153,7 @@ To configure OIDC for Pulumi ESC, create a new environment in the [Pulumi Cloud 
               address: <your-vault-url>
               jwt:
                 role: <your-role-name>
+              namespace: <your-namespace> # namespace is only supported for Vault Enterprise
           secrets:
             fn::open::vault-secrets:
               login: ${vault.login}
@@ -165,7 +162,7 @@ To configure OIDC for Pulumi ESC, create a new environment in the [Pulumi Cloud 
                   path: <path-to-secret>
       ```
 
-  6. Replace `<your-vault-url>`, `<your-role-name>`, and `<path-to-secret>` with the values from the previous steps.
+  6. Replace `<your-vault-url>`, `<your-role-name>`, `<your-namespace>`, and `<path-to-secret>` with the values from the previous steps.
   7. Scroll to the bottom of the page and click **Save**.
 
       ![Vault environment config](./vault-environment-config.png)
