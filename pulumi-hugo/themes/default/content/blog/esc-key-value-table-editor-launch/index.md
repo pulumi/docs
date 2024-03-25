@@ -18,7 +18,7 @@ We're excited to announce the launch of the Key-Value Table Editor within Pulumi
 
 <!--more-->
 
-The Key-Value Table Editor simplifies configuration tasks, allowing for direct input of plaintext values, and secrets. Key capabilities of the Table Editor include:
+The Key-Value Table Editor simplifies configuration tasks, allowing for direct input of plaintext and secret values. Key capabilities of the Table Editor include:
 
 - **CRUD Operations**: Perform Create, Read, Update, and Delete (CRUD) operations on your secrets and  plaintext values
 - **Decrypting Secrets**: Safely decrypt secrets one at a time, directly within the editor
