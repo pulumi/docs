@@ -265,6 +265,10 @@ function getDefaultExcludedKeywords() {
         "https://www.reddit.com/r/pulumi/comments/130b4rn/ama_with_luke_hoban_cto_on_pulumi_insightsai_at/",
         "https://platform.openai.com/account/api-keys",
         "https://dash.cloudflare.com/sign-up/",
+        "https://www.sdxcentral.com/articles/news/pulumi-wants-to-piece-together-aws-lego-blocks/2019/06/",
+        "https://www.sdxcentral.com/articles/news/pulumi-code-dev-platform-adds-premium-team-tier-scores-15m-series-a/2018/10/",
+        "https://www.gartner.com/en/newsroom/press-releases/2023-11-29-gartner-says-cloud-will-become-a-business-necessity-by-2028",
+        "https://www.gartner.com/en/articles/what-is-platform-engineering",
     ];
 }
 
