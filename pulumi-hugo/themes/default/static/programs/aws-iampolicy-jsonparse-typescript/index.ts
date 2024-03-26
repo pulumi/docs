@@ -21,10 +21,12 @@ const jsonIAMPolicy = pulumi.output(`{
     ]
 }`);
 
+// Parse the string output.
 const policyWithNoStatements: pulumi.Output<object> = pulumi.jsonParse(jsonIAMPolicy).apply(policy => {
-    // delete the policy statements
+    // Empty the policy's Statements list.
     policy.Statement = [];
     return policy;
 });
 
+// Export the modified policy.
 export const policy = policyWithNoStatements;

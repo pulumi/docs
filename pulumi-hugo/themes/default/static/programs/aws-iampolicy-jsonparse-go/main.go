@@ -6,6 +6,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
+
 		jsonIAMPolicy := pulumi.ToOutput(`{
 		    "Version": "2012-10-17",
 		    "Statement": [
@@ -27,14 +28,17 @@ func main() {
 		    ]
 		}`).(pulumi.StringInput)
 
+		// Parse the string output.
 		policyWithNoStatements := pulumi.JSONUnmarshal(jsonIAMPolicy).ApplyT(
 			func(v interface{}) (interface{}, error) {
 
-				// delete the policy statements
+				// Empty the policy's Statements list.
 				v.(map[string]interface{})["Statement"] = []pulumi.ArrayOutput{}
 				return v, nil
-			})
+			},
+		)
 
+		// Export the modified policy.
 		ctx.Export("policy", policyWithNoStatements)
 		return nil
 	})
