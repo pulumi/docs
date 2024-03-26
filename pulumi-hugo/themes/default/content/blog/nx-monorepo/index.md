@@ -1,5 +1,5 @@
 ---
-title: "Using Nx to Manage a Monorepo"
+title: "Using Pulumi Inside Node.js Monorepos"
 
 # The date represents the post's publish date, and by default corresponds with
 # the date and time this file was generated. Dates are used for display and
@@ -7,7 +7,7 @@ title: "Using Nx to Manage a Monorepo"
 # published. To influence the ordering of posts published on the same date, use
 # the time portion of the date value; posts are sorted in descending order by
 # date/time.
-date: 2024-03-13T17:19:00+01:00
+date: 2024-03-26T17:19:00+01:00
 
 # The draft setting determines whether a post is published. Set it to true if
 # you want to be able to merge the post without publishing it.
@@ -17,7 +17,7 @@ draft: false
 # of the content of the post, which is useful for targeting search results or
 # social-media previews. This field is required or the build will fail the
 # linter test. Max length is 160 characters.
-meta_desc: Creating a monorepo with Nx to colocate reusable Pulumi components, Pulumi infrastructure programs and application code.
+meta_desc: Using Pulumi with Node.js monorepo tooling like Nx to colocate reusable Pulumi components, Pulumi infrastructure programs and application code.
 
 # The meta_image appears in social-media previews and on the blog home page. A
 # placeholder image representing the recommended format, dimensions and aspect
@@ -40,9 +40,17 @@ tags:
 # for details, and please remove these comments before submitting for review.
 ---
 
-This post shows how to can build a seamless development workflow by integrating Pulumi code level abstractions, such as [Component Resources](https://www.pulumi.com/docs/concepts/resources/components/), with a build system like [Nx](https://nx.dev). Component resources let us create reusable components that manage logical groupings of resources. With modern monorepo tooling, and our recent improvements to make Pulumi aware of monorepo setups, we can colocate these reusable components, Pulumi infrastructure programs, and application code all in one monorepo, and have Nx manage the build and deploy-time dependencies for us.
+One of Pulumi's core goals is to provide cloud engineers with access to the very best software engineering tooling available.  Using traditional programming languages like Node.js, Python, Go, .NET and Java means the latest and greatest software engineering tools from each of these ecosystems is available to bring to bear on managing cloud infrastructure, natively integrated with your existing development environments.
+
+In the Node.js ecosystem, we've seen an explosion of great tooling over the last couple of years around support for monorepos - larger repositories built out of many smaller projects, and sharing code and dependencies smartly across all the various projects.  We've seen many of our Pulumi Node.js users adopting these tools and repo structures, including tools like [Yarn Workspaces](https://yarnpkg.com/features/workspaces), [pnpm](https://pnpm.io/), [Turborepo](https://turbo.build/), and especially [Nx](https://nx.dev).
+
+While it has always been possible to apply these tools to Pulumi Node.js projects in TypeScript or JavaScript just like any other Node.js project, we've recently made [a](https://github.com/pulumi/pulumi/issues/15436) [number](https://github.com/pulumi/pulumi/issues/2661) [of](https://github.com/pulumi/pulumi/issues/7168) [enhancements](https://github.com/pulumi/pulumi/issues/3013) [and](https://github.com/pulumi/pulumi/issues/15455) [fixes](https://github.com/pulumi/examples/issues/1605) to make sure that Pulumi works truly seamlessly with these tools.
+
+In this post, we'll show how you can build a seamless development workflow by integrating Pulumi code level abstractions, such as [Component Resources](https://www.pulumi.com/docs/concepts/resources/components/), with a monorepo-based build system like [Nx](https://nx.dev).
 
 <!--more-->
+
+Component resources let us create reusable components that manage logical groupings of resources. With modern monorepo tooling, and our recent improvements to make Pulumi aware of monorepo setups, we can colocate these reusable components, Pulumi infrastructure programs, and application code all in one monorepo, and have Nx manage the build and deploy-time dependencies for us.
 
 We will walk through an example project that deploys a website built with [Astro](https://astro.build) to AWS S3. The complete code can be found at [pulumi/examples/nx-monorepo](https://github.com/pulumi/examples/tree/master/nx-monorepo).
 
@@ -268,3 +276,5 @@ We can see that Nx used the cached results for 2 of our tasks, `s3folder` and `w
 ## Conclusion
 
 In this post we've shown how we can combine Pulumi's code level abstractions with a build system to create a seamless developer workflow. By using a monorepo we can colocate our reusable components with the Pulumi programs that use the components, as well as our application code. Tools like Nx allow us to intelligently manage the dependencies between the packages in the monorepo, ensuring we are always deploying the correct version of the code.
+
+Pulumi provides you with access to the latest and greatest software engineering tools (like Nx), and allows you to bring them to bear on managing cloud infrastructure, natively integrated with your existing development environments.
