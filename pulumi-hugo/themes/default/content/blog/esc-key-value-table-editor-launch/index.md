@@ -14,7 +14,7 @@ tags:
 ---
 
 
-We're excited to announce the launch of the Key-Value Table Editor within Pulumi Environments, Secrets, and Configurations ([ESC](/product/esc)). At Pulumi, we're committed to providing flexible solutions that cater to diverse development needs and practices. This latest addition underscores our dedication to this principle by offering another user-friendly interface for managing complex configurations and secrets.
+We're excited to announce the launch of the Pulumi Environments, Secrets, and Configurations ([ESC](/product/esc)) Key-Value Table Editor. At Pulumi, we're committed to providing flexible solutions that cater to diverse development needs and practices. This latest addition underscores our dedication to this principle by offering a user-friendly interface for managing complex configurations and secrets.
 
 <!--more-->
 
