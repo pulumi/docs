@@ -196,7 +196,7 @@ NX   Successfully ran target deploy for project infra and 4 tasks it depends on 
 
 The output tells us that Nx found the 4 dependant tasks for the `deploy` task of the `infra` package and ran them successfully.
 
-If we now run `npx nx deploy infra` again we can see Nx's caching mechanism in action. Nx notices that there are no code changes to the `infra` package, and that none of its dependencies have changed either, so it just replays the output from the previous run.
+If we now run `npx nx deploy infra` again, we can see Nx's caching mechanism in action. Nx notices that there are no code changes to the `infra` package, and that none of its dependencies have changed either, so it just replays the output from the previous run.
 
 ```
   ✔    3/3 dependent project tasks succeeded [3 read from cache]
