@@ -16,9 +16,11 @@ tags:
 
 We're excited to announce the launch of the Pulumi Environments, Secrets, and Configurations ([ESC](/product/esc)) Key-Value Table Editor. At Pulumi, we're committed to providing flexible solutions that cater to diverse development needs and practices. This latest addition underscores our dedication to this principle by offering a user-friendly interface for managing complex configurations and secrets.
 
+Pulumi ESC simplifies the management of secrets and configurations by reducing duplication and drift, empowering development teams to focus on building and deploying. The existing YAML-based code editor offers a native way for developers to author and manage configurations.
+
 <!--more-->
 
-The Key-Value Table Editor simplifies configuration tasks, allowing for direct input of plaintext and secret values. Key capabilities of the Table Editor include:
+The Key-Value Table Editor we are launching today introduces an alternate visual interface for handling configuration tasks, enabling the direct input of plaintext and secret values.  Key capabilities of the Table Editor include:
 
 - **CRUD Operations**: Perform Create, Read, Update, and Delete (CRUD) operations on your secrets and  plaintext values
 - **Decrypting Secrets**: Safely decrypt secrets one at a time, directly within the editor
@@ -32,7 +34,9 @@ In the current release of the Table view, [provider configurations](/docs/esc/pr
 
 ## What’s Next?
 
-Looking to the future, we are already planning the next set of enhancements for the Key-Value Table Editor. Soon, you'll be able to add and edit provider configurations directly within the table view, offering a more guided experience in utilizing Pulumi ESC's rich providers.
+Looking to the future, we are already working on the next set of enhancements for the Key-Value Table Editor. Soon, you will have the capability to add and edit provider configurations directly within the table view.
+
+Pulumi ESC's diverse array of providers not only allows teams to dynamically acquire cloud provider credentials at runtime, thus eliminating the need for static, long-lived credentials but also enables retrieving secrets from external secrets managers, such as AWS Secrets Manager and HashiCorp Vault, directly within ESC. This means users can seamlessly pull and utilize secrets within ESC, enhancing security and flexibility. The upcoming provider configuration support in the Table view will offer a guided experience, simplifying the process of leveraging Pulumi ESC's comprehensive set of providers.
 
 ## Conclusion
 
