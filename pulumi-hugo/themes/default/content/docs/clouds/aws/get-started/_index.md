@@ -12,6 +12,7 @@ menu:
 aliases:
 - /docs/quickstart/aws/
 - /docs/get-started/aws/
+- /docs/aws/
 ---
 
 {{< cloud-intro "AWS" >}}

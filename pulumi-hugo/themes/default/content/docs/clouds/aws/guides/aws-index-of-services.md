@@ -1,14 +1,14 @@
 ---
-title_tag: AWS Index of Services | Crosswalk
-title: AWS services
-h1: AWS index of services
+title_tag: Index of AWS Services | Crosswalk
+title: Index of AWS services
+h1: Index of AWS services
 meta_desc: Pulumi Crosswalk for AWS supports all AWS services. This page provides a complete list of supported services.
 meta_image: /images/docs/meta-images/docs-clouds-aws-meta-image.png
 menu:
   clouds:
     parent: aws-guides
     identifier: aws-guides-aws-services
-    weight: 11
+    weight: 12
 aliases:
 - /docs/reference/crosswalk/aws/other/
 - /docs/guides/crosswalk/aws/other/
