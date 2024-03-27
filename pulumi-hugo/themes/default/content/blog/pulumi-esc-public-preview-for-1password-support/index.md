@@ -1,15 +1,16 @@
 ---
-title: "Pulumi ESC Public Preview for 1Password Support"
+title: "Announcing 1Password Support for Pulumi ESC in Public Preview"
 date: 2024-03-27T12:00:00-06:00
-meta_desc: Pulumi ESC adds integration support for 1Password (public preview) to empower developers to work more efficiently and securely using their preferred tooling. 
+allow_long_title: true
+meta_desc: "Pulumi ESC adds integration support for 1Password (public preview) to empower developers to work more efficiently and securely using their preferred tools"
 meta_image: meta.png
 authors:
-    - tejitha-raju
-    - diana-esteves
+  - tejitha-raju
+  - diana-esteves
 tags:
-    - esc
-    - secrets
-    - 1password
+  - esc
+  - secrets
+  - 1password
 
 ---
 
