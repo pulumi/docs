@@ -14,7 +14,7 @@ tags:
 
 ---
 
-Today, we are thrilled to add integration support for 1Password in preview within Pulumi Environments, Secrets, and Configuration ([ESC](/product/esc)). Since its launch, numerous organizations have leveraged Pulumi ESC to manage secrets and simplify configurations using hierarchical environments. Leveraging Pulumi ESC’s comprehensive set of providers, users have obtained dynamic cloud provider credentials and retrieved secrets from other secrets management platforms, including HashiCorp Vault.
+Today, we are thrilled to add integration support for 1Password in preview within Pulumi Environments, Secrets, and Configuration ([ESC](/product/esc)). Since its launch, numerous organizations have leveraged Pulumi ESC to manage secrets and simplify configurations using composable environments. Leveraging Pulumi ESC’s comprehensive set of providers, users have obtained dynamic cloud provider credentials and retrieved secrets from other secrets management platforms, including HashiCorp Vault.
 
 The addition of 1Password, known for its developer-centric approach to secrets management, to our roster of integrations has been a top request among our community. As users of 1Password ourselves, this collaboration represents more than just a feature release; it embodies our commitment to enriching the developer experience and fostering secure, efficient development workflows.
 
