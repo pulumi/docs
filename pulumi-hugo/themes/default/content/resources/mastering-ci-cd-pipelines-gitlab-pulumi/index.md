@@ -62,6 +62,7 @@ main:
           photo: /images/team/josh-kodroff.jpg
         - name: Matt Genelin
           role: Solutions Architect, GitLab
+          photo: /images/people/matt-genelin.jpg
 
     # case-sensitive
     tags:

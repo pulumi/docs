@@ -65,6 +65,7 @@ main:
           photo: /images/team/engin-diri.jpg
         - name: Shon Harris
           role: Developer Relations Lead, NetApp
+          photo: /images/people/shon-harris.jpg
 
     # case-sensitive
     tags:

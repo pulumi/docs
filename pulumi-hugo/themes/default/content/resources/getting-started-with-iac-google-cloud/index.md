@@ -62,8 +62,9 @@ main:
         - name: Diana Esteves
           role: Solutions Architect, Pulumi
           photo: /images/team/diana-esteves.jpg
-        - name: Jayson Smith
+        - name: Jason Smith
           role: Sr. Cloud Customer Engineer, Google
+          photo: /images/team/jay-smith-google-jpeg.jpg
 
     # case-sensitive
     tags:
