@@ -153,7 +153,7 @@ if __name__ == "__main__":
     args = sys.argv[1:]
     context = set_context(
         org="<org>",
-        project="burner-program-2",
+        project="api",
         stackd="dev",
         dirname="api",
         request="timezone"
@@ -222,7 +222,7 @@ api_path = os.path.abspath("api")
 def spin_up_program(requested):
     context = infra.set_context(
         org='<org>',
-        project='burner-program-2',
+        project='api',
         stackd='dev',
         dirname=f'{api_path}',
         req=f'{requested}'
