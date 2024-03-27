@@ -2,7 +2,7 @@
 # Name of the event, <= 60 characters
 title: Mastering CI/CD Pipelines with Pulumi and GitLab
 meta_desc: In this workshop, you'll learn how to use Pulumi's deep integration with GitLab to create and manage CI/CD pipelines for your infrastructure.
-meta_image:
+meta_image: /images/resources/cicd-gitlab.png
 
 # A featured webinar will display first in the list.
 featured: false
