@@ -22,8 +22,9 @@ PARALLEL=0
 
 # Generates API documentation for a given package. The arguments are:
 #     * $1 - the simple name of the package (e.g., "azure" for the pulumi-azure package)
-#     * $2 - the package root directory (to run `make ensure` for dependency updates)
-#     * $3 - the package source directory, relative to the root, optionally empty if the same
+#     * $2 - the typescript entry point file for the package, relative to the source directory, usually index.ts.
+#     * $3 - the package root directory (to run `make ensure` for dependency updates)
+#     * $4 - the package source directory, relative to the root, optionally empty if the same
 # If the PKGS envvar is set, only packages in that list (space delimited) are regenerated.
 generate_docs() {
     GENPKG=""
@@ -42,20 +43,20 @@ generate_docs() {
         echo -e "\033[0;93mGenerating pulumi.com API docs\033[0m"
 
         # Change to the target directory and rebuild if necessary.
-        PKGPATH=../$2
+        PKGPATH=../$3
         pushd $PKGPATH
         if [[ -z "$NOBUILD" ]]; then
             git clean -xdf
             make ensure && make build && make install
         fi
-        if [[ ! -z "$3" ]]; then
-            PKGPATH=$PKGPATH/$3
-            cd $3
+        if [[ ! -z "$4" ]]; then
+            PKGPATH=$PKGPATH/$4
+            cd $4
         fi
 
-        PKG_REPO_DIR=$2
-        if [[ ! -z "$3" ]]; then
-        PKG_REPO_DIR=$PKG_REPO_DIR/$3
+        PKG_REPO_DIR=$3
+        if [[ ! -z "$4" ]]; then
+        PKG_REPO_DIR=$PKG_REPO_DIR/$4
         fi
 
         ${TOOL_TYPEDOC} --out "${OUTDIR}/$1" \
@@ -64,20 +65,20 @@ generate_docs() {
             --skipErrorChecking \
             --plugin typedoc-plugin-script-inject \
             --options "$TOOL_TYPEDOC_CONFIG" \
-            index.ts
+            "$2"
 
         popd
     fi
 }
 
 REPOS=(
-    "awsx,pulumi-awsx/sdk/nodejs"
-    "cloud,pulumi-cloud/api"
-    "eks,pulumi-eks/nodejs/eks"
-    "kubernetesx,pulumi-kubernetesx/nodejs/kubernetesx"
-    "policy,pulumi-policy,sdk/nodejs/policy"
-    "pulumi,pulumi/sdk/nodejs"
-    "terraform,pulumi-terraform,sdk/nodejs"
+    "awsx,index.ts,pulumi-awsx/sdk/nodejs"
+    "cloud,types.ts,pulumi-cloud/api"
+    "eks,index.ts,pulumi-eks/nodejs/eks"
+    "kubernetesx,index.ts,pulumi-kubernetesx/nodejs/kubernetesx"
+    "policy,index.ts,pulumi-policy,sdk/nodejs/policy"
+    "pulumi,index.ts,pulumi/sdk/nodejs"
+    "terraform,index.ts,pulumi-terraform,sdk/nodejs"
 )
 
 PIDS=()
@@ -87,13 +88,14 @@ for repo in ${REPOS[*]}
 do
     IFS=',' read -r -a repo_parts <<< "$repo"
     SIMPLE_NAME=${repo_parts[0]}
-    PACKAGE_NAME=${repo_parts[1]}
-    ROOT_PATH=${repo_parts[2]}
+    ENTRY_POINT=${repo_parts[1]}
+    PACKAGE_NAME=${repo_parts[2]}
+    ROOT_PATH=${repo_parts[3]}
     if [ "$PARALLEL" -eq "1" ]; then
-        generate_docs $SIMPLE_NAME $PACKAGE_NAME $ROOT_PATH &
+        generate_docs $SIMPLE_NAME $ENTRY_POINT $PACKAGE_NAME $ROOT_PATH &
         PIDS+=($!)
     else
-        generate_docs $SIMPLE_NAME $PACKAGE_NAME $ROOT_PATH
+        generate_docs $SIMPLE_NAME $ENTRY_POINT $PACKAGE_NAME $ROOT_PATH
         PIDS+=($!)
     fi
     echo -e $!
