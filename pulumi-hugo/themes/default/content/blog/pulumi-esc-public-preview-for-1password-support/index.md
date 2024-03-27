@@ -1,120 +1,102 @@
 ---
-title: "Pulumi ESC Public Preview for 1Password Support"
+title: "Announcing 1Password Support for Pulumi ESC in Public Preview"
 date: 2024-03-27T12:00:00-06:00
-meta_desc: Pulumi ESC adds integration support for 1Password (public preview) to empower developers to work more efficiently and securely using their preferred tooling. 
+allow_long_title: true
+meta_desc: "Pulumi ESC adds integration support for 1Password (public preview) to empower developers to work more efficiently and securely using their preferred tools"
 meta_image: meta.png
 authors:
-    - tejitha-raju
-    - diana-esteves
+  - tejitha-raju
+  - diana-esteves
 tags:
-    - esc
-    - secrets
-    - 1password
+  - esc
+  - secrets
+  - 1password
 
 ---
 
-Today, we extend the capabilities of Pulumi ESC (Environments, Secrets, and Configuration) by integrating with 1Password, a developer-friendly secrets management solution.  With the new 1Password integration, developers can reference their secrets stored inside 1Password from their environments, and consume those from their infrastructure and applications directly.  That means no more need to copy/paste secrets around, no need for plain text secrets on developer machines, and easier integration of your secrets in 1Password with secrets and configuration from other systems of record!
+Today, we are thrilled to add integration support for 1Password in preview within Pulumi Environments, Secrets, and Configuration ([ESC](/product/esc)). Since its launch, numerous organizations have leveraged Pulumi ESC to manage secrets and simplify configurations using composable environments. Leveraging Pulumi ESC’s comprehensive set of providers, users have obtained dynamic cloud provider credentials and retrieved secrets from other secrets management platforms, including HashiCorp Vault.
+
+The addition of 1Password, known for its developer-centric approach to secrets management, to our roster of integrations has been a top request among our community. As users of 1Password ourselves, this collaboration represents more than just a feature release; it embodies our commitment to enriching the developer experience and fostering secure, efficient development workflows.
 
 <!--more-->
 
-1Password support has been one of the most highly requested features since our Pulumi ESC launch last October, and we're excited to have been able to partner with the 1Password team to deliver it to ESC users.  We are also internal users of both 1Password and ESC here at Pulumi and are now happily using 1Password with ESC in our own internal infrastructure. The integration is now available to our users in public preview.
-
-We invite developers to explore these new capabilities and experience how they can streamline their workflows. Adding 1Password to our list of supported providers aims to address the growing demand for effective secrets management in the dynamically evolving cloud environment.
-
-## See it in action
+Pulumi ESC's addition of the 1Password provider empowers development teams to seamlessly incorporate secrets and configurations stored within 1Password into their workflows. By using the retrieved values as [environment variables](/docs/esc/environments/#projecting-environment-variables) or within [Pulumi Config](/docs/esc/environments/#using-environments-with-pulumi-iac) at runtime, teams can bypass the manual and error-prone process of copying and pasting secrets, significantly enhancing security and efficiency.
 
 {{% notes type="info" %}}
-To further enrich your skills and knowledge, we invite you to register for our upcoming workshop, ["Managing team secrets with 1Password & Pulumi ESC"](https://www.pulumi.com/resources/managing-team-secrets-1password-pulumi-esc/), designed to help you start with Pulumi ESC and its integration with 1Password.
+Join our upcoming workshop, ["Managing team secrets with 1Password & Pulumi ESC"](https://www.pulumi.com/resources/managing-team-secrets-1password-pulumi-esc/), to explore Pulumi ESC and the 1Password integration in detail.
 {{% /notes %}}
 
-{{< video title="Pulumi ESC and 1Password Demo" src="demo-esc-1password.mp4" controls="false" rc="/blog/developer-portal-gallery/gallery.mp4" width=600 height=420 autoplay="true" loop="true" >}}
+## How does it work?
 
-In the video above,  
+1. Create a 1Password service account with access to necessary vaults
+2. Enter the service token into the 1Password provider configuration within your Pulumi ESC Environment (See syntax below)
+3. Define a path-name, and enter the vault name, item name and field name that you want to import into the path name you defined
 
-1. Mr. Keys generates and stores Google OAuth 2.0 Client IDs in 1Password
-![Screenshot of OAuth creds stored in 1Password](example-1.png)
-2. Mr. Keys configured Pulumi ESC with 1Password.
+**1Password provider syntax:**
 
-    ```yaml
-    values:
-      1password:
-        secrets:
-          fn::open::1password-secrets:
-            login:
-              serviceAccountToken:
-                fn::secret:
-                  ciphertext: ZXN*not shown*...=
-            get:
-              google_oauth_client_id:
-                ref: "op://dev-environment/buzz/username"
-              google_oauth_client_secret:
-                ref: "op://dev-environment/buzz/credential"
-      environmentVariables:
-        GOOGLE_OAUTH_CLIENT_ID: ${1password.secrets.google_oauth_client_id}
-        GOOGLE_OAUTH_CLIENT_SECRET: ${1password.secrets.google_oauth_client_secret}
-    ```
+```yaml
+values:
+  1password:
+    secrets:
+      fn::open::1password-secrets:
+        login:
+          serviceAccountToken:
+            fn::secret: <input your service token here>
+        get:
+          <path-name>:
+            ref: op://<vault-name>/<item-name>/[section-name/]field-name
+```
 
-3. Ms. Code tests her Golang application locally with the dynamically retrieved Google OAuth credentials.
+## Demo
 
-    ```bash
-    # sans secrets management, expected to fail
-    $ go run main.go
-    2024/03/21 14:32:09 Starting HTTP Server. Listening at ":8000"
-    Missing required parameter: client_id
-    Error 400: invalid_request
+Now that we know how to use the Pulumi ESC 1Password provider, let's use it to pull AWS CLI credentials stored in 1Password and use them within Pulumi ESC.
 
-    # with pulumi esc + 1password integration ✨🔐✨
-    $ esc run buzz-dev-environment go run main.go
-    2024/03/21 14:32:09 Starting HTTP Server. Listening at ":8000"
-    ```
+* Create AWS CLI credentials through AWS IAM and store it in 1Password Vault. In the demo, we've stored the AWS credentials in `Engineering` vault with `aws-cli-creds` item name with two fields `access-key` and `secret-access-key`
+* Create a new Pulumi ESC Environment with the following definition. Ensure to replace the `serviceAccountToken` with your 1Password token
 
-4. Ms. Code successfully authenticates with her Google OAuth credentials.
-![Screenshot of successfully obtaining the Google User details](example-2.png)
-5. At a later point, Ms. Code needs DockerHub credentials to push her image, so she asks Mr. Keys to add these. Mr. Keys stores the Docker username and personal access token in 1Password. (This part is not shown in the demo clip.)
-![Screenshot of DockerHub creds stored in 1Password](example-3.png)
-6. Mr. Keys updates the Pulumi ESC Environment, `​​buzz-dev-environment`
+```yaml
+values:
+  1password:
+    secrets:
+      fn::open::1password-secrets:
+        login:
+          serviceAccountToken:
+            fn::secret: ops_eyJzaWduSW5B..[Redacted]
+        get:
+          aws-access-key:
+            ref: op://Engineering/aws-cli-creds/access-key
+          aws-secret-access-key:
+            ref: op://Engineering/aws-cli-creds/secret-access-key
+  environmentVariables:
+    AWS_ACCESS_KEY_ID: ${1password.secrets.aws-access-key}
+    AWS_SECRET_ACCESS_KEY: ${1password.secrets.aws-secret-access-key}
+ ```
 
-    ```yaml
-    values:
-      1password:
-        secrets:
-          fn::open::1password-secrets:
-            login:
-              serviceAccountToken:
-                fn::secret:
-                  ciphertext: ZXN*not shown*...=
-            get:
-              google_oauth_client_id:
-                ref: "op://dev-environment/buzz/username"
-              google_oauth_client_secret:
-                ref: "op://dev-environment/buzz/credential"
-              docker_pat:
-                ref: "op://dev-environment/dockerhub/password"
-              docker_usr:
-                ref: "op://dev-environment/dockerhub/username"
-      environmentVariables:
-        GOOGLE_OAUTH_CLIENT_ID: ${1password.secrets.google_oauth_client_id}
-        GOOGLE_OAUTH_CLIENT_SECRET: ${1password.secrets.google_oauth_client_secret}
-        DOCKER_PAT: ${1password.secrets.docker_pat}
-        DOCKER_USR: ${1password.secrets.docker_usr}
-    ```
+* Open the environment to ensure we are able to successfully pull the credentials from 1Password
+* Use the Pulumi ESC run command to run any AWS CLI commands
 
-7. Lastly, Ms. Code then consumes the credentials via Pulumi ESC to log in and push the image
+{{< video title="Pulumi ESC 1Password Provider Demo" src="esc-1password-provider-demo.mp4" controls="false" autoplay="true" loop="true" >}}
 
-    ```bash
-    $ esc run buzz-dev-environment  -- bash -c 'echo "$DOCKER_PAT" | docker login -u $DOCKER_USR --password-stdin'
-    Login Succeeded
+`esc run` passes the configuration stored under the `environmentVariables` section into a temporary environment's env variables. The secure credentials are never stored locally on your machine.
 
-    $ TAG="nullstring/buzz:dev"
-    $ docker build . -t $TAG
-    $ docker push $TAG
-    ```
+
+## Unlocking New Possibilities
+
+With 1Password integration available within Pulumi ESC, we unlock a range of opportunities for developers to enhance workflow efficiency and security:
+
+1. **Broad Cloud Provider Support**: What we demonstrated with AWS applies equally to other cloud providers.
+2. **Database Secrets Management**: Securely manage and inject database credentials for PostgreSQL, MySQL, etc., into your infrastructure as code (IaC) projects.
+3. **CI/CD Integration**: Utilize Pulumi ESC and 1Password within CI/CD pipelines, such as GitHub Actions, to ensure secure and efficient workflows.
+
+These examples merely scratch the surface of what's possible. The combination of 1Password and Pulumi ESC opens up a wealth of scenarios to streamline operations and secure your infrastructure.
 
 ## Conclusion
 
-Our collaboration with 1Password marks a significant enhancement in the flexibility and security of Pulumi ESC, empowering developers with a seamless solution for managing secrets. This partnership reiterates our commitment to providing a highly efficient, secure development environment by facilitating the integration of critical secrets directly into your projects without compromising security. For a hands-on understanding of this integration and to optimize your secret management strategies, we encourage you to delve into the detailed documentation provided for both Pulumi ESC and 1Password integration:
+Pulumi ESC's 1Password integration reiterates our commitment to providing choice and flexibility for developers. The 1Password provider brings the power of 1Password within ESC in a highly secure manner. We are excited to continue to work with our partners at 1Password and evolve our integration.
 
-* Visit the [1Password CI/CD Integration page](https://developer.1password.com/docs/ci-cd/) for Pulumi ESC docs.
-* Visit our [Pulumi ESC docs](https://www.pulumi.com/docs/esc/environments/ ) to learn more about Pulumi ESC and a complete list of supported providers.
+Your journey towards streamlined, secure cloud infrastructure management begins here. We can't wait to see what you build with Pulumi ESC.
 
-Don't miss the opportunity to elevate your platform engineering skills by joining our specially curated workshop, ["Managing team secrets with 1Password & Pulumi ESC"](https://www.pulumi.com/resources/managing-team-secrets-1password-pulumi-esc/). Your journey towards streamlined, secure cloud infrastructure management begins here.
+* Visit the [1Password CI/CD Integrations page](https://developer.1password.com/docs/ci-cd/) for links to the Pulumi ESC [1Password provider docs](/docs/esc/providers/1password-secrets/)
+* Visit our [Pulumi ESC docs](/docs/esc/) to learn more about Pulumi ESC and its supported [providers](docs/esc/providers/)
+
+As always, we deeply value your insights. Your [feedback](https://github.com/pulumi/esc/issues/new/choose) is instrumental in helping us refine and enhance our solutions to better align with your needs.
