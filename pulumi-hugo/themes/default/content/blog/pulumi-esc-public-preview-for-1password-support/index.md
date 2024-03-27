@@ -14,7 +14,7 @@ tags:
 
 ---
 
-Today, we are thrilled to add integration support for 1Password in preview within Pulumi Environments, Secrets, and Configuration ([ESC](/product/esc)). Since its launch, numerous organizations have leveraged Pulumi ESC to manage secrets and simplify configuration management using hierarchical environments. Leveraging Pulumi ESC’s comprehensive set of providers, users have obtained dynamic cloud provider credentials and retrieved secrets from other secrets management platforms, including HashiCorp Vault.
+Today, we are thrilled to add integration support for 1Password in preview within Pulumi Environments, Secrets, and Configuration ([ESC](/product/esc)). Since its launch, numerous organizations have leveraged Pulumi ESC to manage secrets and simplify configurations using hierarchical environments. Leveraging Pulumi ESC’s comprehensive set of providers, users have obtained dynamic cloud provider credentials and retrieved secrets from other secrets management platforms, including HashiCorp Vault.
 
 The addition of 1Password, known for its developer-centric approach to secrets management, to our roster of integrations has been a top request among our community. As users of 1Password ourselves, this collaboration represents more than just a feature release; it embodies our commitment to enriching the developer experience and fostering secure, efficient development workflows.
 
@@ -32,7 +32,7 @@ Join our upcoming workshop, ["Managing team secrets with 1Password & Pulumi ESC"
 2. Enter the service token into the 1Password provider configuration within your Pulumi ESC Environment (See syntax below)
 3. Define a path-name, and enter the vault name, item name and field name that you want to import into the path name you defined
 
-1Password provider syntax:
+**1Password provider syntax:**
 
 ```yaml
 values:
@@ -74,14 +74,15 @@ values:
 
 * Open the environment to ensure we are able to successfully pull the credentials from 1Password
 * Use the Pulumi ESC run command to run any AWS CLI commands
-  
+
+{{< video title="Pulumi ESC 1Password Provider Demo" src="esc-1password-provider-demo.mp4" controls="false" autoplay="true" loop="true" >}}
+
 `esc run` passes the configuration stored under the `environmentVariables` section into a temporary environment's env variables. The secure credentials are never stored locally on your machine.
 
-## Placeholder to add a video
 
 ## Unlocking New Possibilities
 
-With 1Password now integrated into Pulumi ESC, we unlock a range of opportunities for developers to enhance workflow efficiency and security:
+With 1Password integration available within Pulumi ESC, we unlock a range of opportunities for developers to enhance workflow efficiency and security:
 
 1. **Broad Cloud Provider Support**: What we demonstrated with AWS applies equally to other cloud providers.
 2. **Database Secrets Management**: Securely manage and inject database credentials for PostgreSQL, MySQL, etc., into your infrastructure as code (IaC) projects.
