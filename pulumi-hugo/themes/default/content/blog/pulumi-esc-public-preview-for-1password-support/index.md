@@ -114,7 +114,7 @@ In the video above,
 
 Our collaboration with 1Password marks a significant enhancement in the flexibility and security of Pulumi ESC, empowering developers with a seamless solution for managing secrets. This partnership reiterates our commitment to providing a highly efficient, secure development environment by facilitating the integration of critical secrets directly into your projects without compromising security. For a hands-on understanding of this integration and to optimize your secret management strategies, we encourage you to delve into the detailed documentation provided for both Pulumi ESC and 1Password integration:
 
-* Visit [1Password's CI/CD Integration page](https://developer.1password.com/docs/ci-cd/) for Pulumi ESC docs.
+* Visit the [1Password CI/CD Integration page](https://developer.1password.com/docs/ci-cd/) for Pulumi ESC docs.
 * Visit our [Pulumi ESC docs](https://www.pulumi.com/docs/esc/environments/ ) to learn more about Pulumi ESC and a complete list of supported providers.
 
-Don't miss the opportunity to elevate your platform engineering skills by joining our specially curated workshop on managing team secrets effectively with Pulumi ESC and 1Password. Your journey towards streamlined, secure cloud infrastructure management begins here.
+Don't miss the opportunity to elevate your platform engineering skills by joining our specially curated workshop, ["Managing team secrets with 1Password & Pulumi ESC"](https://www.pulumi.com/resources/managing-team-secrets-1password-pulumi-esc/). Your journey towards streamlined, secure cloud infrastructure management begins here.
