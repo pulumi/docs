@@ -3,7 +3,7 @@ title: "Pulumi Release Notes: Pulumi ESC, Deployments GA, Pulumi AI Improvements
 allow_long_title: true
 date: 2024-02-01T11:06:04-08:00
 draft: false
-meta_desc: The latest Pulumi updates include Pulumi ESC, Deployments GA, Pulumi AI Improvements, AWS S3 Express One Zone Support, and more 
+meta_desc: The latest Pulumi updates include Pulumi ESC, Deployments GA, Pulumi AI Improvements, AWS S3 Express One Zone Support, and more
 meta_image: meta.png
 authors:
     - arun-loganathan
@@ -45,7 +45,7 @@ We've had a busy last few months at Pulumi. From shipping a brand new product of
 
 Pulumi AI's new feature enables [deploying cloud infrastructure using AI prompts](/blog/pulumi-ai-new). Users can rapidly generate and deploy templates through natural language inputs in 'pulumi new' CLI command and new project wizard, significantly streamlining the cloud setup process. Additionally, you now have the option to deploy the Pulumi AI generated Pulumi programs from within [Pulumi AI](https://www.pulumi.com/ai) and in the New Project Wizard in the Pulumi Cloud console.
 
-{{< video title="Pulumi new AI and deploy" src="../pulumi-ai-new/pulumi-new-ai.mp4" controls="false" autoplay="true" loop="true" >}}
+{{< video title="Pulumi new AI and deploy" src="https://www.pulumi.com/uploads/pulumi-new-ai.mp4" controls="false" autoplay="true" loop="true" >}}
 
 ### Pulumi AI coverage and performance
 
@@ -64,11 +64,11 @@ Pulumi AI can now write Pulumi programs for all 150 cloud providers in the [Pulu
 
 ![Pulumi ESC Growth](pulumi-esc-growth.png)
 
-### Developer Portal Gallery 
+### Developer Portal Gallery
 
 We launched a new template gallery in the [New Project Wizard](/docs/pulumi-cloud/developer-portals/new-project-wizard), supercharging Platform teams to provision and distribute organization templates for their development teams to get up and running fast. Developers can generate Pulumi programs from these templates, commit and push code to GitHub and trigger deployment within the Pulumi Cloud console. The gallery supports three template types: Organization Templates for custom internal projects, Pulumi Templates authored by Pulumi to cover common architectural patterns and AI-Generated Templates created through Pulumi AI. For more information, check out the full [blog post](/blog/developer-portal-gallery/).
 
-{{< video title="Pulumi new AI and deploy" src="../developer-portal-gallery/gallery.mp4" controls="false" autoplay="true" loop="true" >}}
+{{< video title="Pulumi new AI and deploy" src="https://www.pulumi.com/uploads/gallery.mp4" controls="false" autoplay="true" loop="true" >}}
 
 ### Deployments GA
 
@@ -78,7 +78,7 @@ We launched a new template gallery in the [New Project Wizard](/docs/pulumi-clou
 
 [Customer Managed Agents](/blog/customer-managed-deployment-agents-launch/) for Pulumi Deployments enable customers with hard security and compliance requirements to take advantage of the powerful capabilities of Pulumi Deployments. By self-hosting the agents, you can host them anywhere within your infrastructure on any hardware and environment in order to meet compliance requirements to keep cloud provider credentials within your private network.
 
-{{< video title="Pulumi new AI and deploy" src="../customer-managed-deployment-agents-launch/verify-setup.mp4" controls="false" autoplay="true" loop="true" >}}
+{{< video title="Pulumi new AI and deploy" src="https://www.pulumi.com/uploads/verify-setup.mp4" controls="false" autoplay="true" loop="true" >}}
 
 ### MFA in Pulumi Cloud
 
@@ -136,7 +136,7 @@ We have added 641 functions and 662 resources across our most popular providers,
 
 ### New Community Providers
 
-We welcome new providers to our registry! 
+We welcome new providers to our registry!
 
 * [Pinecone](/registry/packages/pinecone/)
 * [Talos Linux](/registry/packages/talos/)

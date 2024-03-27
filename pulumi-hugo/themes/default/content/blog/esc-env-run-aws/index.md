@@ -46,7 +46,7 @@ $ esc login
 Manage your Pulumi ESC environments by logging in.
 Run `esc --help` for alternative login options.
 Enter your access token from https://app.pulumi.com/account/tokens
-    or hit <ENTER> to log in using your browser                   :  
+    or hit <ENTER> to log in using your browser                   :
 Logged in to pulumi.com as …
 ```
 
@@ -69,7 +69,7 @@ Please note that while we’re providing steps and screenshots that are accurate
 
 In the navigation pane of the [IAM console](https://console.aws.amazon.com/iam/), choose **Identity providers**, and then choose **Add provider**.
 
-{{< video title="Navigating to the IAM console and opening the Create Identity Provider wizard" src="./create-idp-start.mp4" autoplay="true" loop="true" >}}
+{{< video title="Navigating to the IAM console and opening the Create Identity Provider wizard" src="https://www.pulumi.com/uploads/create-idp-start.mp4" autoplay="true" loop="true" >}}
 
 In the **Provider type** section, click the radio button next to **OpenID Connect**. For the **Provider URL**, provide the following URL:
 
@@ -85,7 +85,7 @@ The AWS console generates the thumbprint value on your behalf. However, if you a
 
 For the **Audience** field, provide the name of your Pulumi organization. Then scroll down to the bottom of the page and click **Add provider**.
 
-{{< video title="Filling out the fields of the Create Identity Provider wizard" src="./create-idp-wizard.mp4" autoplay="true" loop="true" >}}
+{{< video title="Filling out the fields of the Create Identity Provider wizard" src="https://www.pulumi.com/uploads/create-idp-wizard.mp4" autoplay="true" loop="true" >}}
 
 #### b. Assign IAM role
 
@@ -93,22 +93,22 @@ You’ll see a notification at the top of your screen prompting you to assign an
 
 This will prompt you to either create a new role or use an existing role. For the purposes of this blog, we will select the **Create a new role** option and demonstrate how to configure it for use with Pulumi ESC.
 
-{{< video title="Prompt for assigning IAM role" src="./assign-iam-role-prompt.mp4" autoplay="true" loop="true" >}}
+{{< video title="Prompt for assigning IAM role" src="https://www.pulumi.com/uploads/assign-iam-role-prompt.mp4" autoplay="true" loop="true" >}}
 
 This will then direct you to the IAM **Create role** page. The **Web identity** radio button should already be selected for you but if not, make sure that it is selected. Then scroll down and make sure that the following is selected in the **Web identity** section:
 
 - the `api.pulumi.com/oidc` provider is selected under **Identity provider**
 - the name of your Pulumi organization is selected under **Audience**
 
-{{< video title="Create IAM role wizard" src="./create-role-wizard.mp4" autoplay="true" loop="true" >}}
+{{< video title="Create IAM role wizard" src="https://www.pulumi.com/uploads/create-role-wizard.mp4" autoplay="true" loop="true" >}}
 
 Click **Next** which will direct you to the **Add permissions** page. This is where you will select what permissions you will allow your Pulumi ESC environment to have in your AWS account. Since we want to interact with S3, let’s go ahead and select the **AmazonS3FullAccess** policy from the list. Then scroll down and click **Next**.
 
-{{< video title="Adding S3 permissions to IAM role" src="./create-role-add-perms.mp4" autoplay="true" loop="true" >}}
+{{< video title="Adding S3 permissions to IAM role" src="https://www.pulumi.com/uploads/create-role-add-perms.mp4" autoplay="true" loop="true" >}}
 
 You will be directed to the last page of the wizard, where you can provide the name and an optional description for the role and review all of the role’s configuration details before creating it.
 
-{{< video title="Adding name and description to role then creating it" src="./create-role.mp4" autoplay="true" loop="true" >}}
+{{< video title="Adding name and description to role then creating it" src="https://www.pulumi.com/uploads/create-role.mp4" autoplay="true" loop="true" >}}
 
 #### c. Review trust policy
 
@@ -124,7 +124,7 @@ After creating your role, make sure to make a note of your role’s ARN value as
 
 Now that we’ve created all the necessary AWS resources, let’s move over to the Pulumi side of things. You’ll first want to create a new environment in the [Pulumi Cloud](https://app.pulumi.com/). Make sure that you have the correct organization selected in the left-hand navigation menu. Then click the **Environments** link, and click the **Create environment** button. In the following pop-up, provide a name for your environment before clicking the  **Create environment** button.
 
-{{< video title="Creating a new Pulumi ESC environment" src="./create-new-environment.mp4" autoplay="true" loop="true" >}}
+{{< video title="Creating a new Pulumi ESC environment" src="https://www.pulumi.com/uploads/create-new-environment.mp4" autoplay="true" loop="true" >}}
 
 ### Step 4: Add the AWS provider integration
 
@@ -149,7 +149,7 @@ The variables defined under the `environmentVariables` parameter above are the s
 
 Scroll to the bottom of the page and click **Save**.
 
-{{< video title="Adding configuration to Pulumi ESC environment" src="./add-environment-config.mp4" autoplay="true" loop="true" >}}
+{{< video title="Adding configuration to Pulumi ESC environment" src="https://www.pulumi.com/uploads/add-environment-config.mp4" autoplay="true" loop="true" >}}
 
 ### Step 5: Run your command
 

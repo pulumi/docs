@@ -46,7 +46,7 @@ $ esc login
 Manage your Pulumi ESC environments by logging in.
 Run `esc --help` for alternative login options.
 Enter your access token from https://app.pulumi.com/account/tokens
-    or hit <ENTER> to log in using your browser                   :  
+    or hit <ENTER> to log in using your browser                   :
 Logged in to pulumi.com as …
 ```
 
@@ -67,7 +67,7 @@ Once you have OIDC configured between Pulumi and AWS, the next step is to create
 - In the pop-up window, provide a name for your environment. e.g., `aws-prod-env`
 - Click the **Create environment** button.
 
-{{< video title="Open environment in Pulumi ESC console" src="/what-is/esc-create-new-env.mp4" autoplay="true" loop="true" >}}
+{{< video title="Open environment in Pulumi ESC console" src="https://www.pulumi.com/uploads/esc-create-new-env.mp4" autoplay="true" loop="true" >}}
 
 ### Step 4: Add the AWS provider integration
 

@@ -28,7 +28,7 @@ Please note that this guide provides step-by-step instructions based on the offi
 ## Create the Identity Provider
 
 1. In the navigation pane of the [IAM console](https://console.aws.amazon.com/iam/), choose **Identity providers**, and then choose **Add provider**.
-  {{< video title="Starting the Create Identity Provider wizard" src="./create-idp-start.mp4" autoplay="true" loop="true" >}}
+  {{< video title="Starting the Create Identity Provider wizard" src="https://www.pulumi.com/uploads/create-idp-start.mp4" autoplay="true" loop="true" >}}
 2. In the **Provider type** section, click the radio button next to **OpenID Connect**.
 3. For the **Provider URL**, provide the following URL: `https://api.pulumi.com/oidc`
 4. Click the **Get thumbprint** button.
@@ -43,16 +43,16 @@ Once you have created the identity provider, you will see a notification at the 
 
 1. Click the **Assign role** button.
 2. Select the **Create a new role** option, then click **Next**.
-  {{< video title="Prompt for assigning IAM role" src="./assign-iam-role-prompt.mp4" autoplay="true" loop="true" >}}
+  {{< video title="Prompt for assigning IAM role" src="https://www.pulumi.com/uploads/assign-iam-role-prompt.mp4" autoplay="true" loop="true" >}}
 3. On the IAM **Create role** page, ensure the **Web identity** radio button is selected.
 4. In the **Web identity** section:
     * Select `api.pulumi.com/oidc` under **Identity provider**.
     * Select the name of your Pulumi organization under **Audience**. Then click **Next**.
-  {{< video title="Create IAM role wizard" src="./create-role-wizard.mp4" autoplay="true" loop="true" >}}
+  {{< video title="Create IAM role wizard" src="https://www.pulumi.com/uploads/create-role-wizard.mp4" autoplay="true" loop="true" >}}
 5. On the **Add permissions** page, select the permissions that you want to grant to your Pulumi service. Then click **Next**.
-  {{< video title="Adding S3 permissions to IAM role" src="./create-role-add-perms.mp4" autoplay="true" loop="true" >}}
+  {{< video title="Adding S3 permissions to IAM role" src="https://www.pulumi.com/uploads/create-role-add-perms.mp4" autoplay="true" loop="true" >}}
 6. Provide a name and optional description for the IAM role. Then click **Create role**.
-  {{< video title="Adding name and description to role then creating it" src="./create-role.mp4" autoplay="true" loop="true" >}}
+  {{< video title="Adding name and description to role then creating it" src="https://www.pulumi.com/uploads/create-role.mp4" autoplay="true" loop="true" >}}
 
 Make a note of the IAM role's ARN; it will be necessary to enable OIDC for your service.
 
@@ -147,7 +147,7 @@ To configure OIDC for Pulumi ESC, create a new environment in the [Pulumi Consol
 2. Click the **Create environment** button.
 3. Provide a name for your environment.
 4. Click the  **Create environment** button.
-  {{< video title="Creating a new Pulumi ESC environment" src="./create-new-environment.mp4" autoplay="true" loop="true" >}}
+  {{< video title="Creating a new Pulumi ESC environment" src="https://www.pulumi.com/uploads/create-new-environment.mp4" autoplay="true" loop="true" >}}
 5. You will be presented with a split-pane editor view. Delete the default placeholder content in the editor and replace it with the following code:
 
     ```yaml
@@ -168,7 +168,7 @@ To configure OIDC for Pulumi ESC, create a new environment in the [Pulumi Consol
 6. Replace `<your-oidc-iam-role-arn>` with the value from the previous steps.
 7. Scroll to the bottom of the page and click **Save**.
 
-{{< video title="Adding configuration to Pulumi ESC environment" src="./add-environment-config.mp4" autoplay="true" loop="true" >}}
+{{< video title="Adding configuration to Pulumi ESC environment" src="https://www.pulumi.com/uploads/add-environment-config.mp4" autoplay="true" loop="true" >}}
 
 You can validate that your configuration is working by running either of the following:
 

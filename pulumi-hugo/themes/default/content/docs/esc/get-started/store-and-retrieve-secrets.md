@@ -36,7 +36,7 @@ You can store and retrieve values in an environment via one of the following met
 
 To store values in your environment using the Editor view, first click on the name of the environment to open it. You will be presented with a split pane view. The left side is the YAML-based code editor view, and this is where you will write the definition of your environment configuration. The right side will show a preview of your configuration in JSON format.
 
-{{< video title="Open environment in Pulumi ESC console" src="/docs/esc/get-started/esc-open-env.mp4" autoplay="true" loop="true" >}}
+{{< video title="Open environment in Pulumi ESC console" src="https://www.pulumi.com/uploads/esc-open-env.mp4" autoplay="true" loop="true" >}}
 
 Next, delete the placeholder text in the environment file and add the following simple configuration definition in its place:
 
@@ -49,7 +49,7 @@ values:
 
 As shown above, you can specify that a value should be stored as a secret by using the `fn::secret` function. Once you have added the configuration, click the **Save** button located at the bottom of the editor.
 
-{{< video title="Adding values to the environment in the Pulumi ESC console" src="/docs/esc/get-started/esc-add-env-values.mp4" autoplay="true" loop="true" >}}
+{{< video title="Adding values to the environment in the Pulumi ESC console" src="https://www.pulumi.com/uploads/esc-add-env-values.mp4" autoplay="true" loop="true" >}}
 
 The **Environment preview** pane on the right hand side will then update to show your added configuration in JSON format. You will notice that the value of "myPassword" has been hidden from view in both the defintion and preview panes.
 
@@ -57,15 +57,15 @@ The **Environment preview** pane on the right hand side will then update to show
 
 To store values in your environment using the Editor view, first click on the name of the environment to open it. Then, at the top of the Editor view view, click the **Table view** button to switch the editor from the YAML view to the table view.
 
-{{< video title="Adding values to the environment in the Pulumi ESC console" src="/docs/esc/get-started/esc-open-env-table-view.mp4" autoplay="true" loop="true" >}}
+{{< video title="Adding values to the environment in the Pulumi ESC console" src="https://www.pulumi.com/uploads/esc-open-env-table-view.mp4" autoplay="true" loop="true" >}}
 
 Next, under the **Configuration** section section, you will see fields labeled **Path** and **Value**. You will define your configuraton values using these fields. In the **Path** field, type in `myEnvironment`, and in the **Value** field, type in `development`. Then click **Save**.
 
-{{< video title="Adding values to the environment in the Pulumi ESC console" src="/docs/esc/get-started/esc-add-config-table-view.mp4" autoplay="true" loop="true" >}}
+{{< video title="Adding values to the environment in the Pulumi ESC console" src="https://www.pulumi.com/uploads/esc-add-config-table-view.mp4" autoplay="true" loop="true" >}}
 
 Next, click the **+Secret/config** button to create a new configuration. This time, you will create a configuration that will be stored as a secret. To do so, enter `myPassword` for the value of **Path** and `demo-password-123` for the value of **Value**. Click the **secret** checkbox to indicate that this configuration will be stored as a secret, then click **Save**.
 
-{{< video title="Adding values to the environment in the Pulumi ESC console" src="/docs/esc/get-started/esc-add-secret-table-view.mp4" autoplay="true" loop="true" >}}
+{{< video title="Adding values to the environment in the Pulumi ESC console" src="https://www.pulumi.com/uploads/esc-add-secret-table-view.mp4" autoplay="true" loop="true" >}}
 
 You will notice that the value of `myPassword` is hidden from view after saving.
 
@@ -100,17 +100,17 @@ Using this method enables you to add your configuration values in the same way t
 
 To retrieve values using the Editor view, scroll to the bottom of your environment page and click the **Open** button. This will return any statically defined plain-text values and definitions.
 
-{{< video title="Clicking the open button in the Pulumi ESC console" src="/docs/esc/get-started/esc-open-env-view-values.mp4" autoplay="true" loop="true" >}}
+{{< video title="Clicking the open button in the Pulumi ESC console" src="https://www.pulumi.com/uploads/esc-open-env-view-values.mp4" autoplay="true" loop="true" >}}
 
 As shown above, it does not return the value of secrets defined, nor does it resolve values that are dynamically generated from a provider. To view these values, you will need to click the **Show secrets** slider.
 
-{{< video title="Clicking the show secrets slider the Pulumi ESC console" src="/docs/esc/get-started/esc-env-show-secrets.mp4" autoplay="true" loop="true" >}}
+{{< video title="Clicking the show secrets slider the Pulumi ESC console" src="https://www.pulumi.com/uploads/esc-env-show-secrets.mp4" autoplay="true" loop="true" >}}
 
 ### Retrieve via the Table view
 
 Non-secret configuration values remain visible in the Table view after their creation, but secret values are automatically hidden. To reveal the value of a secret using the Table view, click the small eye icon.
 
-{{< video title="Clicking the show secrets slider the Pulumi ESC console" src="/docs/esc/get-started/esc-show-secret-table-view.mp4" autoplay="true" loop="true" >}}
+{{< video title="Clicking the show secrets slider the Pulumi ESC console" src="https://www.pulumi.com/uploads/esc-show-secret-table-view.mp4" autoplay="true" loop="true" >}}
 
 ### Retrieve via the CLI
 
@@ -132,15 +132,15 @@ Running this command should return the following response:
 $ esc env get my-dev-environment myEnvironment
 
    Value
-  
+
     "development"
-  
+
    Definition
-  
+
     development
-  
+
    Defined at
-  
+
   • my-dev-environment:2:8
 ```
 
@@ -156,14 +156,14 @@ Running this command should return the following response:
 $ esc env get my-dev-environment
 
    Value
-  
+
     {
       "myEnvironment": "development",
       "myPassword": "[secret]"
     }
-  
+
    Definition
-  
+
     values:
       myEnvironment: "development"
       myPassword:

@@ -78,7 +78,7 @@ values:
 You can validate this configuration by [opening the environment via the ESC console](/docs/esc/get-started/store-and-retrieve-secrets/#retrieve-via-the-console), clicking the **Open** button and then clicking the **Show secrets** slider.
 
 <video autoplay loop muted playsinline>
-    <source src="/docs/esc/get-started/esc-show-aws-secret.mp4" type="video/mp4">
+    <source src="https://www.pulumi.com/uploads/esc-show-aws-secret.mp4" type="video/mp4">
     Your browser does not support the video tag.
 </video>
 
@@ -175,7 +175,7 @@ values:
 You can validate this configuration by [opening the environment via the ESC console](/docs/esc/get-started/store-and-retrieve-secrets/#retrieve-via-the-console), clicking the **Open** button and then clicking the **Show secrets** slider.
 
 <video autoplay loop muted playsinline>
-    <source src="/docs/esc/get-started/esc-show-azure-secret.mp4" type="video/mp4">
+    <source src="https://www.pulumi.com/uploads/esc-show-azure-secret.mp4" type="video/mp4">
     Your browser does not support the video tag.
 </video>
 
@@ -271,7 +271,7 @@ values:
 You can validate this configuration by [opening the environment via the ESC console](/docs/esc/get-started/store-and-retrieve-secrets/#retrieve-via-the-console), clicking the **Open** button and then clicking the **Show secrets** slider.
 
 <video autoplay loop muted playsinline>
-    <source src="/docs/esc/get-started/esc-show-gcp-secret.mp4" type="video/mp4">
+    <source src="https://www.pulumi.com/uploads/esc-show-gcp-secret.mp4" type="video/mp4">
     Your browser does not support the video tag.
 </video>
 

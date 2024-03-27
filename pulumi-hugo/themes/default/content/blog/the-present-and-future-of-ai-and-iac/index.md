@@ -15,16 +15,16 @@ AI is impacting almost every industry today, and for good reason - we are seeing
 
 Software development is among the earliest and most prominent fields to realize the benefits of AI, evidenced by the rapid adoption of tools like Github Copilot which is now one of the most heavily adopted developer tools of all time. Developers are benefiting from an incredible increase in their productivity with better scale and faster time to market.
 
-We’re seeing the impacts of AI in the cloud Infrastructure development space in two impactful and complimentary directions: 
+We’re seeing the impacts of AI in the cloud Infrastructure development space in two impactful and complimentary directions:
 
 * 🤖➜☁️: AI is transforming how we author, build and manage cloud infrastructure
 * ☁️➜🤖: Cloud infrastructure tooling is changing how we build and deliver AI-based applications
 
-At Pulumi, we’ve already seen profound impacts from AI in both of these directions. 
+At Pulumi, we’ve already seen profound impacts from AI in both of these directions.
 
 <!--more-->
 
-Infrastructure engineers are using [Pulumi AI](/ai/) to discover solutions for cloud infrastructure needs, leading to a dynamic experience where you can generate solutions in seconds with a few simple prompts, and using tools like GitHub Copilot to quickly iterate on and test their infrastructure. 
+Infrastructure engineers are using [Pulumi AI](/ai/) to discover solutions for cloud infrastructure needs, leading to a dynamic experience where you can generate solutions in seconds with a few simple prompts, and using tools like GitHub Copilot to quickly iterate on and test their infrastructure.
 
 At the same time, thousands of organizations are using Pulumi and Pulumi Cloud to manage the fundamentally cloud-native infrastructure and services available to build and scale AI-based applications - managed vector databases, elastic compute services, model serving, streaming API management services, and workflow management - all evolving at the rapid pace of the AI space, and scaling with the demand that organizations are seeing for AI.
 
@@ -52,11 +52,11 @@ As Infrastructure as Code tooling and cloud development generally embraces tradi
 
 Of course, it’s not enough just to have the code you need; you actually have to deploy that code to create and manage your cloud infrastructure. This means getting the code into source control, setting up continuous delivery, and connecting to the configuration and secrets needed for the environment you are deploying to. Recently, we added “Deploy with Pulumi” support to each Pulumi AI answer, along with `pulumi new` support in the Pulumi CLI, enabling you can go from a few simple text prompts to a working solution fully integrated with source control, CI/CD and Pulumi ESC in [less than 30 seconds](/blog/pulumi-ai-new/).
 
-{{< video title="Deploy with Pulumi button in Pulumi AI" src="../pulumi-ai-new/dwp.mp4" controls="false" autoplay="true" loop="true" >}}
+{{< video title="Deploy with Pulumi button in Pulumi AI" src="https://www.pulumi.com/uploads/dwp.mp4" controls="false" autoplay="true" loop="true" >}}
 
 ### Near Future
 
-Even with the rapid progress over the last year, we’re clearly still just getting started in realizing the impact of AI on cloud infrastructure management.  
+Even with the rapid progress over the last year, we’re clearly still just getting started in realizing the impact of AI on cloud infrastructure management.
 
 Tightening the feedback loop for tools like Pulumi AI will continue to enable AI to iterate and solve more complex cloud infrastructure challenges, and arrive at correct working solutions. And instead of asking questions and getting back code, these tools will soon be able to actually do the deployments and verify that they work. The result is a natural language interface, which can build and evolve cloud infrastructure. Even as the interface becomes natural language, Infrastructure as Code is a uniquely good “code-behind” for this because it maintains a desired state configuration for the infrastructure, which AI tools can easily iterate on and manage. The incredible pace of improvement in AI model skill and performance for writing code in particular will accrue directly into improvements here.
 
