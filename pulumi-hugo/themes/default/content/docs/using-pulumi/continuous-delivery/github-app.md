@@ -69,6 +69,8 @@ integration Pulumi with whatever system you currently use.
 Once installed in your organization, any `pulumi preview` or `pulumi up` that is run in your CI
 system will have its results reported back to GitHub.
 
+{{% notes type="info" %}}You need to have the `.git` folder included in your Pulumi project folder to take advantage of some of these features. If you copy your Pulumi code into a container or somewhere else and don't include the `.git` folder then some of this functionality won't work.{{% /notes %}}
+
 ## GitHub UI
 
 There are two places that Pulumi update results will be displayed: Pull Requests or commit Check.
