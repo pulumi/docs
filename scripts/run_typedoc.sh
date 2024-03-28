@@ -74,7 +74,6 @@ generate_docs() {
 REPOS=(
     "awsx,index.ts,pulumi-awsx/sdk/nodejs"
     "cloud,types.ts,pulumi-cloud/api"
-    "eks,index.ts,pulumi-eks/nodejs/eks"
     "kubernetesx,index.ts,pulumi-kubernetesx/nodejs/kubernetesx"
     "policy,index.ts,pulumi-policy,sdk/nodejs/policy"
     "pulumi,index.ts,pulumi/sdk/nodejs"
