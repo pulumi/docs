@@ -146,13 +146,16 @@ Using Bastion hosts is a best practice.
 
 #### Inline Images
 
-To add images to the body of your post, first place them within in the folder containing the post's Markdown file (e.g., at `blog/my-new-post/platypus.png`), then reference them relatively:
+To add images to the body of your post, first place them within the folder containing the post's Markdown file (e.g., at `blog/my-new-post/platypus.png`), then reference them relatively:
 
 ```
 ![The humble platypus](platypus.png)
 ```
 
 #### Social ("Meta") Images
+
+> [!IMPORTANT]
+> If you are adding _any_ logos to the meta image, you must absolutely ensure these are current. Using a wrong or outdated logo can have a severe negative impact on social sharing timelines due caching. 
 
 When you generate a new post, an [OpenGraph](http://ogp.me/) placeholder image is included for you, and a reference to that image is added to the post's frontmatter as well, as its `meta_image`. The `meta_image` is meant to accompany the post in social previews (Twitter cards, unfurled Slack links, etc.) and on the Pulumi blog home page. It's optional, but recommended, as it can help to make your post more attractive and informative.
 
@@ -212,7 +215,7 @@ Because the website is deployed in response to a commit to pulumi/docs `master`,
 - [ ] Spell and grammar check. Consider using a service such as [Grammarly](http://grammarly.com).
 - [ ] Check for a break `<!--more-->` after the first paragraph, and ensure that your post's introduction looks right on the blog home page.
 - [ ] Check that your meta_image appears properly on the blog home page. Do not use animated GIFs for preview images.
-- [ ] Check that your meta_image is using the current Pulumi logo.
+- [ ] Check that your meta_image is using the current logos for Pulumi and others.
 - [ ] Preview locally. Check formatting, links, and images for appearance.
-- [ ] Use the [Twitter card validator](https://cards-dev.twitter.com/validator) to check the how the blog appears in a tweet (use the preview provided in the PR).
-- [ ] Reach out in #blogs to make Marketing aware that your post is about to go live!
+- [ ] Use the [Twitter card validator](https://cards-dev.twitter.com/validator) to check how the blog appears in a tweet (use the preview provided in the PR).
+- [ ] Reach out in [#blogs](https://pulumi.slack.com/archives/CCBFCGU94) to make Marketing aware that your post is about to go live!
