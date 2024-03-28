@@ -178,7 +178,7 @@ def pulumi_program():
 
 With the Automation API, we can invoke programs that are passed inline (meaning all of the actual code that's being run is part of the automation we'll define later) or passed via a local program. "Local" in this case is local to the system running the Automation API itself, not necessarily local to your machine. Local programs are probably the most commonly used. However, inline programs are great for running tests or other smaller, atomized actions. Here, we're setting up a local program with the `pulumi_program` function, which makes the entire local program callable by the API. The function itself should be a usable, runnable Pulumi program as demonstrated here. The program itself is setting up an AWS Lambda function with the requisite roles and policies and an invocation. The exports will get fed up to our API program.
 
-In the {{< langfile >}} in the `api` directory, replace all of the contents with the following code:
+In the `__main__.py` in the `api` directory, replace all of the contents with the following code:
 
 {{< code-filename file="learn-auto-api/api/__main__.py" >}}
 

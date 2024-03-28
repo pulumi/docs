@@ -24,7 +24,7 @@ The Automation API allows us to create an API for our current infrastructure. Ha
 
 Let's start out with scaffolding the code by importing the right libraries and doing a bit of conversion of our basic Pulumi commands (create, configure, refresh, destroy, and update) to code with the automation API library. We'll be working in the `infra` directory at this point.
 
-First, clear out the {{< langfile >}} file in the `infra` directory; from here on out, it's just there as a placeholder for the module itself in Python.
+First, clear out the `__main__.py` file in the `infra` directory; from here on out, it's just there as a placeholder for the module itself in Python.
 
 Next, add a file called `basic.py` into the `infra` directory with this code in it:
 
