@@ -39,7 +39,7 @@ main:
     youtube_url:
 
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2024-04-04T09:00:00.000-07:00
+    sortable_date: 2024-05-09T09:00:00.000-07:00
 
     # Duration of the webinar.
     duration: 1 hour
@@ -66,7 +66,7 @@ main:
     tags:
         level: Beginner # Beginner, Intermediate, Advanced
         topics: ["AWS"]
-        languages: []
+        languages: ["TypeScript"]
 
 # The right hand side form section.
 form:
