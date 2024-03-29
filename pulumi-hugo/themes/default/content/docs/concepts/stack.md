@@ -150,7 +150,7 @@ As a best practice, custom tags should not be prefixed with `pulumi:`, `gitHub:`
 
 Tags can be deleted by running [`pulumi stack tag rm <name>`](/docs/cli/commands/pulumi_stack_tag_rm).
 
-## Stack Outputs {#outputs}
+## Stack outputs {#outputs}
 
 A stack can export values as stack outputs. These outputs are shown during an update, can be easily retrieved with the Pulumi CLI, and are displayed in the Pulumi Cloud. They can be used for important values like resource IDs, computed IP addresses, and DNS names.
 
@@ -344,7 +344,7 @@ Note: If you export an actual resource, it too will be JSON serialized. This usu
 
 Stack outputs respect secret annotations and are encrypted appropriately. If a stack contains any secret values, their plaintext values will not be shown by default. Instead, they will be displayed as secret in the CLI. Pass `--show-secrets` to `pulumi stack output` to see the plaintext value.
 
-## Getting the Current Stack Programmatically
+## Getting the current stack programmatically
 
 The {{< pulumi-getstack >}} function gives you the currently deploying stack, which can be useful in naming, tagging, or accessing resources.
 
@@ -403,9 +403,9 @@ variables:
 
 {{< /chooser >}}
 
-## Stack References {#stackreferences}
+## Stack references {#stackreferences}
 
-Stack references allow you to access the outputs of one stack from another stack. Inter-Stack Dependencies allow one stack to reference the outputs of another stack.
+Stack references allow you to access the outputs of one stack from another stack. Inter-stack dependencies allow one stack to reference the outputs of another stack.
 
 To reference values from another stack, create an instance of the `StackReference` type using the fully qualified name of the stack as an input, and then read exported stack outputs by their name:
 
@@ -729,7 +729,7 @@ Stack references support two ways of reading outputs from the referenced stack:
 * `getOutputDetails` returns an `OutputDetails` object that provides direct access to the output value.
   This is useful when you want to process the output directly in your code.
 
-As demonstration of **`getOutput`**,
+As a demonstration of `getOutput`,
 suppose that your referenced stack exports a `privateIp` output.
 You want to incorporate the IP address into the name of an S3 bucket object
 containing logs from that machine.
@@ -993,7 +993,7 @@ infra.outputDetailsAsync("subnets").thenAccept(subnetsJSON -> {
 A stack can be exported to see the raw data associated with the stack. This is useful when manual changes need to be applied to the stack due to changes made in the target cloud platform that Pulumi is not aware of. The modified stack can then be imported to set the current state of the stack to the new values.
 
 {{% notes "warning"%}}
-This is a powerful capability that subverts the usual way that Pulumi manages resources and ensures immutable and repeatable infrastructure deployments. Importing an incorrect stack specification could lead to orphaning of cloud resources or the inability to make future updates to the stack. Use care when using the import and export capabilities.
+This is a powerful capability that subverts the usual way that Pulumi manages resources and ensures immutable and repeatable infrastructure deployments. Importing an incorrect stack specification could lead to the orphaning of cloud resources or the inability to make future updates to the stack. Use care when using the import and export capabilities.
 {{% /notes %}}
 
 ```bash
@@ -1004,7 +1004,11 @@ $ pulumi stack import --file stack.json
 
 ## Destroy a stack
 
-Before deleting a stack, if the stack still resources associated with it, they must first be deleted via `pulumi destroy`. This command uses the latest configuration values, rather than the ones that were last used when the program was deployed.
+Before deleting a stack, if the stack still has resources associated with it, they must first be deleted via `pulumi destroy`. This command uses the latest configuration values, rather than the ones that were last used when the program was deployed.
+
+{{% notes type="info" %}}
+There are scenarios when `pulumi destroy` may fail to delete resources as expected due to dependencies, permissions, or the resources being in a locked or protected state. For detailed steps on how to troubleshoot and resolve these issues, refer to our [troubleshooting guide](/docs/support/troubleshooting/).
+{{% /notes %}}
 
 ## Delete a stack
 

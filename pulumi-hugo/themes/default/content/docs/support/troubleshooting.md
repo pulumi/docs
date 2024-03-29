@@ -26,7 +26,7 @@ projects](https://github.com/pulumi) by [opening new issues](https://github.com/
 
 Or email our support team: [support@pulumi.com](mailto:support@pulumi.com).
 
-## Verbose Logging
+## Verbose logging
 
 Verbose logging of the internals of the Pulumi engine and resource providers can be enabled by
 passing the `-v` flag to any `pulumi` CLI command. Pulumi emits logs at log levels between `1` and
@@ -55,7 +55,7 @@ $ TF_LOG=TRACE pulumi up --logtostderr --logflow -v=10 2> out.txt
 
 If you are seeing unexpectedly slow performance, you can gather a trace to understand what
 operations are being performed throughout the deployment and what the long poles are for your
-deployment. In most cases, the most time consuming operations will be the provisioning of one or more resources in your cloud
+deployment. In most cases, the most time-consuming operations will be the provisioning of one or more resources in your cloud
 provider, however, there may be cases where Pulumi itself is doing work that is limiting the performance
 of your deployments, and this may indicate an opportunity to further improve the Pulumi deployment
 orchestration engine to get the maximal parallelism and performance possible for your cloud
@@ -93,7 +93,7 @@ $ pulumi up --tracing http://localhost:9411/api/v1/spans
 
 To view a trace locally navigate to the [Jaeger UI](http://localhost:16686/search).
 
-## Common Problems
+## Common problems
 
 ### 403 error fetching plugin
 
@@ -121,7 +121,7 @@ The method for fixing this issue depends on whether you are using an Intel based
 1. [Login to Pulumi](/docs/concepts/state#logging-into-and-out-of-state-backends).
 1. Run a Pulumi preview to check everything is ok: `pulumi pre`
 
-### 409 Conflict: Another update is currently in progress. {#conflict}
+### 409 conflict: Another update is currently in progress. {#conflict}
 
 Run `pulumi cancel` to cancel the update.
 
@@ -147,7 +147,7 @@ run into a bug in Pulumi. If this update was not triggered by someone else, you 
 `pulumi cancel` command to cancel the current update. This operation revokes the "lease" that the service has given
 to the person who initiated the stack update.
 
-### 500 Internal Server Error {#internal-server-error}
+### 500 Internal server error {#internal-server-error}
 
 The Pulumi CLI interacts with the Pulumi web service throughout the course of an update. If the
 service is unable to process an update, it is possible that users of the CLI may see this error message
@@ -155,7 +155,7 @@ throughout the course of an update.
 
 We take great pride in service uptime and work rapidly to fix service interruption. The [Pulumi status page](https://status.pulumi.com) communicates information about service incidents.
 
-### post-step event returned an error {#post-step-event}
+### Post-step event returned an error {#post-step-event}
 
 If an I/O error occurs after "post-step event returned an error", you can safely re-start your
 update. If you see "after mutation of snapshot", you have hit a bug in Pulumi. You will possibly
@@ -187,12 +187,12 @@ If you must downgrade the version of a provider your `pulumi` program depends on
 and change the version of the provider your stack depends on and then import that as the latest state of your stack.
 
 The `pulumi` program that you author for your infrastructure may contain one or more dependencies to `providers`.
-The version information for these providers is stored in the deployment for each of your stacks (since each pulumi program belongs to a stack).
+The version information for these providers is stored in the deployment for each of your stacks (since each Pulumi program belongs to a stack).
 This error can occur when the deployment state for a stack already contains a newer version of a specific provider, but you are trying
-to run a `pulumi up` (or `preview`) command after downgrading the provider dependency in your pulumi program.
+to run a `pulumi up` (or `preview`) command after downgrading the provider dependency in your Pulumi program.
 
 This error occurs because the `pulumi` [plugin cache](/docs/cli/commands/pulumi_plugin_ls/) does not have the required version installed.
-This is more likely to occur if you are running `pulumi` in a CI/CD environment, since your plugin cache is likely not saved across builds.
+This is more likely to occur if you are running `pulumi` in a CI/CD environment since your plugin cache is likely not saved across builds.
 
 It is okay to have multiple versions of a provider installed and have stacks depend on different provider version. It is only a problem when you
 downgrade the version of a particular stack that was already deployed using a newer version.
@@ -207,10 +207,10 @@ error: could not load plugin for aws provider 'urn:pulumi:<stack_name>::pulumi-s
 
 If your network blocks external traffic and you're using the Pulumi Cloud to manage your state, your security team may need the following details to allow the Pulumi CLI to connect to the Pulumi Cloud:
 
-- The URL that the Pulumi CLI uses to connect to the Pulumi Cloud is `https://api.pulumi.com`. (It does not use `https://app.pulumi.com`, so if you want to view the console from a web browser, you'll need enable that as well.)
+- The URL that the Pulumi CLI uses to connect to the Pulumi Cloud is `https://api.pulumi.com`. (It does not use `https://app.pulumi.com`, so if you want to view the console from a web browser, you will need to enable that as well.)
 - All access goes over HTTPS via port 443.
 
-### Nothing happens due to network proxy
+### Nothing happens due to a network proxy
 
 You run Pulumi and nothing happens, with output resembling this:
 
@@ -223,7 +223,7 @@ Resources:
 $
 ```
 
-If you have a system-wide proxy server running on your machine, it may be misconfigured. The [Pulumi architecture](/docs/concepts/how-pulumi-works/) has three different components, running as separate processes which talk to each other using a bidirectional gRPC protocol
+If you have a system-wide proxy server running on your machine, it may be misconfigured. The [Pulumi architecture](/docs/concepts/how-pulumi-works/) has three different components, running as separate processes that talk to each other using a bidirectional gRPC protocol
 on IP address `127.0.0.1`. Your proxy server should be configured **NOT** to proxy
 these local network connections. Add both `127.0.0.1` and `localhost` to the exclusion list of your proxy server.
 
@@ -232,13 +232,35 @@ these local network connections. Add both `127.0.0.1` and `localhost` to the exc
 This error is often caused by a misconfigured ingress-controller not updating the `status.loadBalancer`
 field once the Ingress resource is ready to route traffic.
 
-In some cases this may be fixed by running `pulumi refresh`.
+In some cases, this may be fixed by running `pulumi refresh`.
 
-#### *Traefik*
+#### Traefik
 
 For the Traefik controller, verify that the `kubernetes.ingressEndpoint` config
 is [set properly](https://docs.traefik.io/providers/kubernetes-ingress/). This option was
 introduced in Traefik 1.7.0.
+
+### Pulumi destroy fails {#pulumi-destroy-fails}
+
+There are scenarios when `pulumi destroy` will fail to delete resources as expected. This is anticipated due to the nature of cloud provider dependencies, permissions, resources being in a state that prevents their deletion, or when a timeout is not long enough for the cloud provider to complete its operation. Review the output to identify which resources were not deleted and consider the following steps depending on the nature of the failure.
+
+#### Check to see if a resource was deleted after all
+
+Some resources take time to be removed. Common examples include CloudFront Lambda@Edge functions, which will fail to `destroy` but will eventually disappear without requiring further action. In these cases, you can wait and run `pulumi refresh` to see if the cloud provider was able to remove the resource.
+
+#### Check dependencies
+
+If the issue is due to dependencies, identify and delete the dependent external resources manually. This may involve navigating the cloud provider's console or using its CLI to pinpoint and resolve these dependencies.
+
+#### Empty or adjust resources
+
+Occasionally a resource cannot be deleted because it contains data or uses network interfaces or other dependencies managed outside the stack. Common examples include deleting VPCs with EINs attached elsewhere or deleting a security group when it is in use. You will need to evaluate the dependencies given the failure and take the necessary actions to resolve this on each provider resource.
+
+#### Delete resources manually
+
+For each resource that couldn't be deleted, use the cloud provider's console or CLI to manually delete it. This may be necessary for resources in a locked state or those with specific permissions preventing automated deletion.
+
+Once you have resolved the source of the deletion failure, you can run `pulumi refresh` to validate that all of your resources are destroyed. This command will update your Pulumi state to reflect the current state in the cloud, effectively recognizing any manual deletions or changes that occurred outside of Pulumi's management.
 
 ### Synchronous call made to "X" with an unregistered provider {#synchronous-call}
 
@@ -333,10 +355,10 @@ const val = stackReference.getOutputSync("outputName");
 
 This warning may be benign. However, if you are experiencing crashes or hangs in Pulumi (especially in Node.js version 12.11.0 and above) and you see this warning, then it is likely that the older version of Pulumi is the issue.
 
-A warning is issued so as to not break existing code that is functionality properly. However, the root cause of this problem
-pertains to undefined behavior in the Node.js runtime, so apparently-working code today may begin crashing or hanging in the future. We recommend updating your code to ensure your Pulumi program works reliably.
+A warning is issued so as to not break existing code that is functioning properly. However, the root cause of this problem
+pertains to undefined behavior in the Node.js runtime, so code that works today may begin crashing or hanging in the future. We recommend updating your code to ensure your Pulumi program works reliably.
 
-There are only two ways supported to avoid this issue:
+There are only two supported ways to avoid this issue:
 
 #### Use getOutput/requireOutput instead {#use-getoutput}
 
@@ -349,7 +371,7 @@ In this form the result of the call is an `Output` (which internally asynchronou
 easily be passed as a resource input and supports [simple to access properties](/docs/concepts/inputs-outputs#lifting) off of it.
 
 However, because the value is not known synchronously, it is not possible to have the value affect the flow of your application.
-For example if the output value is an array, there is no way to know the length of the array in order to make specific resources
+For example, if the output value is an array, there is no way to know the length of the array in order to make specific resources
 corresponding to it.  If the exact value is needed for this purpose the only way to get it is like so:
 
 #### Pass the stack reference name in as a string
@@ -367,7 +389,7 @@ value defined elsewhere in your application. If the value is known, it can be co
 If the stack-reference-name truly is dynamic and cannot be known ahead of time to supply directly into the app, then this
 approach will not work, and the only way to workaround the issue is to follow the steps in [Use getOutput/requireOutput](#use-getoutput).
 
-## Recovering from an Interrupted Update {#interrupted-update-recovery}
+## Recovering from an interrupted update {#interrupted-update-recovery}
 
 If the Pulumi CLI is interrupted when performing a deployment, you may see a warning message
 that looks something like this on your next update:
@@ -414,7 +436,7 @@ resolve any pending operations that Pulumi could not fix unaided.
 
 At this point your stack should be valid, up-to-date, and ready to accept future updates.
 
-## Manually Editing Your Deployment {#editing-your-deployment}
+## Manually editing your deployment {#editing-your-deployment}
 
 Sometimes the only recourse for fixing a stack that is unable to complete deployments is to edit the
 deployment directly. We would love to hear about the issues you are experiencing
@@ -427,7 +449,7 @@ make changes to your stack is that the stack's state has been corrupted in some 
 are a variety of ways that a stack's state could be corrupted, but in almost all cases it is possible
 to manually edit the stack's state to fix the issue.
 
-This is an advanced operation and should be an absolute last resort. We recommend you check-in with the [Pulumi Community Slack](https://slack.pulumi.com) first before editing your snapshot.
+This is an advanced operation and should be an absolute last resort. We recommend you check in with the [Pulumi Community Slack](https://slack.pulumi.com) first before editing your snapshot.
 
 If you intend to unprotect or delete a resource, consider using the [`pulumi state`](/docs/cli/commands/pulumi_state) command instead of editing your state directly. `pulumi state` makes fixes to your state without
 requiring you to edit the JSON representation of your stack's current state.
@@ -439,7 +461,7 @@ to a file:
 $ pulumi stack export --file state.json
 ```
 
-This file contains a lot of information. At the top-level, this JSON object has two fields:
+This file contains a lot of information. At the top level, this JSON object has two fields:
 
 | Field | Description |
 | - | - |
