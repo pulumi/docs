@@ -97,6 +97,6 @@ Pulumi ESC's 1Password integration reiterates our commitment to providing choice
 Your journey towards streamlined, secure cloud infrastructure management begins here. We can't wait to see what you build with Pulumi ESC.
 
 * Visit the [1Password CI/CD Integrations page](https://developer.1password.com/docs/ci-cd/) for links to the Pulumi ESC [1Password provider docs](/docs/esc/providers/1password-secrets/)
-* Visit our [Pulumi ESC docs](/docs/esc/) to learn more about Pulumi ESC and its supported [providers](docs/esc/providers/)
+* Visit our [Pulumi ESC docs](/docs/esc/) to learn more about Pulumi ESC and its supported [providers](/docs/esc/providers/)
 
 As always, we deeply value your insights. Your [feedback](https://github.com/pulumi/esc/issues/new/choose) is instrumental in helping us refine and enhance our solutions to better align with your needs.

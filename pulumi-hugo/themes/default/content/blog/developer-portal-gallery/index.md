@@ -35,7 +35,6 @@ tags:
     - features
     - developer-portals
     - platform-engineering
-    
 
 # See the blogging docs at https://github.com/pulumi/pulumi-hugo/blob/master/BLOGGING.md
 # for details, and please remove these comments before submitting for review.
@@ -46,7 +45,7 @@ Late last year [we announced Pulumi for Developer Portals](/blog/building-develo
 <!--more-->
 ## See it in action
 
-{{< video title="Walking through the gallery experience" src="/blog/developer-portal-gallery/gallery.mp4" width=600 height=420 autoplay="true" loop="true" >}}
+{{< video title="Walking through the gallery experience" src="https://www.pulumi.com/uploads/gallery.mp4" width=600 height=420 autoplay="true" loop="true" >}}
 
 ## What the Pulumi Cloud New Project Wizard?
 
@@ -63,7 +62,7 @@ The Pulumi Cloud template gallery is a curated collection of templates designed 
 The new template gallery in Pulumi Cloud contains three types of templates:
 
 1. **Organization Templates**: Pulumi Cloud Enterprise and Business Critical editions support registering [your own custom templates for your organization](/docs/pulumi-cloud/developer-portals/templates) which will be made available in the New Project Wizard. This enables platform teams to standardize infrastructure creation and distribute those best practices where developers are already spending their time.
-2. **Pulumi Templates**: All Pulumi Cloud organizations get a handful of Pulumi templates included in the gallery, [templates Pulumi has authored](/templates) to cover common architecture patterns.  
+2. **Pulumi Templates**: All Pulumi Cloud organizations get a handful of Pulumi templates included in the gallery, [templates Pulumi has authored](/templates) to cover common architecture patterns.
 3. **AI Generated Templates**: Starting today, you can leverage [Pulumi AI](/ai) to genera†e the templates you need from the template gallery. Pulumi AI is a purpose-built AI assistant that can create cloud infrastructure using Pulumi. If your developers are looking for a template that is not yet created, Pulumi AI can dramatically reduce the time it takes to build their Pulumi program.
 
 ## Wrapping up

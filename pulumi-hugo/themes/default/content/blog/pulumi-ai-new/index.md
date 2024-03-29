@@ -30,7 +30,7 @@ The `pulumi new` command is the starting point for almost every new Pulumi proje
 
 Now, `pulumi new` users working with the Pulumi Cloud backend have the additional option to use Pulumi AI to generate a template on demand instead of selecting from one of the pre-defined templates.
 
-{{< video title="Using pulumi new with the new AI option" src="pulumi-new-ai.mp4" controls="false" autoplay="true" loop="true" >}}
+{{< video title="Using pulumi new with the new AI option" src="https://www.pulumi.com/uploads/pulumi-new-ai.mp4" controls="false" autoplay="true" loop="true" >}}
 
 The Pulumi AI response is streamed back directly into the CLI, and if Pulumi AI didn’t get it quite right, you can request to “revise” the question to ask Pulumi AI to adjust it’s answer with a follow-up prompt.  When the results look good, you can hit “yes” to deploy the template, generating the source code in your chosen language and installing dependencies for the target cloud providers.  With a simple `pulumi up` your new cloud infrastructure is deployed and running in the cloud.
 
@@ -48,7 +48,7 @@ Thousands of developers are already discovering answers to their questions via P
 
 Now, every Pulumi AI and Pulumi AI Answers page includes its own Deploy with Pulumi button.  The Deploy with Pulumi button can be used along with any template or Pulumi code example to deploy that code using Pulumi Cloud via the [New Project Wizard](/docs/pulumi-cloud/developer-portals/new-project-wizard).  We’ve extended that to support deploying projects defined by a Pulumi AI answer.  This includes the code snippet, but also the project dependencies, a useful description, and language-specific project files.
 
-{{< video title="Deploy with Pulumi button in Pulumi AI" src="dwp.mp4" controls="false" autoplay="true" loop="true" >}}
+{{< video title="Deploy with Pulumi button in Pulumi AI" src="https://www.pulumi.com/uploads/dwp.mp4" controls="false" autoplay="true" loop="true" >}}
 
 Recently, we introduced many [improvements to the New Project Wizard in Pulumi Cloud](/blog/building-developer-portals/), including the ability to deploy a template with just a few clicks using Pulumi Deployments to do the deployments, the Pulumi GitHub app to template the code into a repo for you, and Pulumi ESC to provide access to short-lived credentials for your cloud environment.  Once these are configured for users in an organization, any template can be deployed via the New Project Wizard and the Deploy with Pulumi button in just a few clicks.
 

@@ -23,9 +23,9 @@ With [Pulumi ESC](/product/esc), our goal is to not only create a tool that simp
 - **Enhanced Diagnostics**: These diagnostics go beyond basic syntax checks by providing in-depth, as-you-type insights into errors.
 - **Hover Documentation**: Hover over any piece of code to see a detailed tooltip with relevant documentation and examples. This instant access to information reduces the need to context switch, streamlining the development process and minimizing disruptions.
 
-Tap 'Ctrl+Space' in the editor reveal the list of functions and properties. 
+Tap 'Ctrl+Space' in the editor reveal the list of functions and properties.
 
-{{< video title="Pulumi ESC editor enhancements demo" src="./esc-editor-enhancements-demo.mp4" autoplay="true" loop="true" >}}
+{{< video title="Pulumi ESC editor enhancements demo" src="https://www.pulumi.com/uploads/esc-editor-enhancements-demo.mp4" autoplay="true" loop="true" >}}
 
 ## Contextual Information to your environments
 
