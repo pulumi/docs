@@ -54,7 +54,7 @@ This provider is currently in **preview**.
 
 | Property              | Type   | Description                                                                   |
 |-----------------------|--------|-------------------------------------------------------------------------------|
-| `serviceAccountToken` | string | The service account token to use for authentication..                         |
+| `serviceAccountToken` | string | The service account token to use for authentication.                         |
 
 ### 1PasswordSecretsGet
 
