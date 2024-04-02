@@ -25,6 +25,12 @@ workshops:
         description: In this workshop, you will learn the core concepts needed to effectively deploy resources on Google Cloud with Pulumi.
         link: /resources/getting-started-with-iac-google-cloud/
         action: Register Now
+      - title: Serverless Java Production - Resilience and Optimization in GCP
+        location: virtual
+        datetime: 2024-04-15T09:00:00.000-07:00
+        description: Join this workshop for direct Google advice on serverless architecture, delivered with the power and convenience of Pulumi’s cloud orchestration platform.
+        link: /resources/serverless-java-production-resilience-and-optimization-gcp/
+        action: Register Now
 
 templates:
     items:
