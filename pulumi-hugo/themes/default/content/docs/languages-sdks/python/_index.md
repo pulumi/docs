@@ -134,6 +134,10 @@ $ venv/bin/pip install -r requirements.txt
 
 {{< /chooser >}}
 
+### Dev Versions
+
+Pulumi SDKs also publish pre-release versions, that include all the latest changes from the main development branch.  If you would like to install them, you can use the `--pre` flag to do so.  For example `pip install --pre -r requirements.txt`.
+
 ## Package Documentation
 
 In addition to the standard packages the [Pulumi Registry](/registry/) houses 100+ Python packages.

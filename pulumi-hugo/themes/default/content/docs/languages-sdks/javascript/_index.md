@@ -281,6 +281,10 @@ For instance, if `@pulumi/random` v4.8.2 contained a fix you rely on, use this i
 When you use a version of `@pulumi/random` in your consuming project which is too old, NPM will warn you that you
 need to upgrade.
 
+## Dev Versions
+
+Pulumi SDKs also publish pre-release versions, that include all the latest changes from the main development branch.  If you would like to install them, you can use the `dev` tag to do so.  For example using `npm` you can use `npm add @pulumi/pulumi@dev`, and similarly for `yarn` `yarn add @pulumi/pulumi@dev`.
+
 ## Package Documentation
 
 In addition to the standard and cloud-agnostic packages the [Pulumi Registry](/registry/) houses 100+ Node.js packages.

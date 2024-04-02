@@ -257,6 +257,10 @@ If you don't use Azure DevOps or GitHub Actions, Pulumi also supports a number o
 
 SDK reference documentation, organized by language.
 
+## Dev Versions
+
+Pulumi SDKs also publish pre-release versions, that include all the latest changes from the main development branch.  To use them you can use the `--prerelease` flag.  For example `dotnet add package Pulumi --prerelease`.
+
 ### Standard Packages
 
 In addition to the standard packages the [Pulumi Registry](/registry/) houses 100+ .NET packages.
