@@ -5,7 +5,6 @@ config:
   www.pulumi.com:doEdgeRedirects: "true"
   www.pulumi.com:hostedZone: www.pulumi.com
   www.pulumi.com:makeFallbackBucket: "false"
-  www.pulumi.com:marketingPortalStack: pulumi/marketing-db/production
   www.pulumi.com:originBucketNameOverride: ""
   www.pulumi.com:pathToOriginBucketMetadata: ../origin-bucket-metadata.json
   www.pulumi.com:registryStack: "pulumi/registry/production"
