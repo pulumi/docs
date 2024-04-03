@@ -218,8 +218,8 @@ It can be accessed through the `context` attribute with the following options:
 
 * `context.rootEnvironment.name`: the name of the root environment being evaluated
 * `context.currentEnvironment.name`: the name of the current environment being evaluated
-* `context.user.login`: the user login identifier
-* `context.organization.login`: the organization login identifier
+* `context.pulumi.user.login`: the user login identifier
+* `context.pulumi.organization.login`: the organization login identifier
 
 ## Editing environments
 
