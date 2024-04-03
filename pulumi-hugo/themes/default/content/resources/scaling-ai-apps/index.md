@@ -69,7 +69,7 @@ main:
     # case-sensitive
     tags:
         level: Beginner # Beginner, Intermediate, Advanced
-        topics: ["AI"]
+        topics: ["AI", "AWS", "Pinecone"]
         languages:
 
 # The right hand side form section.
