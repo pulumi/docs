@@ -399,67 +399,7 @@ const stream = new aws.kinesis.Stream("mystream", {
 
 This example provisions an S3 bucket, bucket metric, bucket notification, and bucket object, and applies the necessary access controls to allow anyone on the internet to retrieve objects from the bucket.
 
-```typescript
-import * as aws from "@pulumi/aws";
-import * as pulumi from "@pulumi/pulumi";
-
-const bucket = new aws.s3.Bucket("my-bucket");
-
-const bucketMetric = new aws.s3.BucketMetric("my-bucket-metric", {
-    bucket: bucket.id,
-});
-
-const bucketNotification = new aws.s3.BucketNotification(
-    "my-bucket-notification",
-    {
-        bucket: bucket.id,
-    },
-);
-
-const bucketObject = new aws.s3.BucketObject("my-bucket-object", {
-    bucket: bucket.id,
-    content: "hello world",
-});
-
-const publicAccessBlock = new aws.s3.BucketPublicAccessBlock(
-    "public-access-block",
-    {
-        bucket: bucket.id,
-        blockPublicAcls: false,
-    },
-);
-
-const ownershipControls = new aws.s3.BucketOwnershipControls(
-    "ownership-controls",
-    {
-        bucket: bucket.id,
-        rule: {
-            objectOwnership: "ObjectWriter",
-        },
-    },
-);
-
-const bucketPolicy = new aws.s3.BucketPolicy(
-    "my-bucket-policy",
-    {
-        bucket: bucket.id,
-        policy: pulumi.jsonStringify({
-            Version: "2012-10-17",
-            Statement: [
-                {
-                    Effect: "Allow",
-                    Principal: "*",
-                    Action: ["s3:GetObject"],
-                    Resource: [
-                        pulumi.interpolate`${bucket.arn}/*`, // policy refers to bucket name explicitly
-                    ],
-                },
-            ],
-        }),
-    },
-    { dependsOn: [publicAccessBlock, ownershipControls] },
-);
-```
+{{< example-program path="aws-s3-bucket-resources" >}}
 
 ## Create an SQS queue
 

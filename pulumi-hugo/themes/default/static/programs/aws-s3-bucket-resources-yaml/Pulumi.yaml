@@ -1,0 +1,58 @@
+name: aws-s3-bucket-resources-yaml
+runtime: yaml
+description: An example that deploys S3 bucket, metric, notification, object, and policy resources.
+
+resources:
+  my-bucket:
+    type: aws:s3:Bucket
+    properties: {}
+
+  ownership-controls:
+    type: aws:s3:BucketOwnershipControls
+    properties:
+      bucket: ${my-bucket.id}
+      rule:
+        objectOwnership: ObjectWriter
+
+  public-access-block:
+    type: aws:s3:BucketPublicAccessBlock
+    properties:
+      bucket: ${my-bucket.id}
+      blockPublicAcls: false
+
+  my-bucket-metric:
+    type: aws:s3:BucketMetric
+    properties:
+      bucket: ${my-bucket.id}
+
+  my-bucket-notification:
+    type: aws:s3:BucketNotification
+    properties:
+      bucket: ${my-bucket.id}
+
+  my-bucket-object:
+    type: aws:s3:BucketObject
+    properties:
+      bucket: ${my-bucket.id}
+      content: hello world
+    options:
+      dependsOn:
+        - ${public-access-block}
+        - ${ownership-controls}
+
+  my-bucket-policy:
+    type: aws:s3:BucketPolicy
+    properties:
+      bucket: ${my-bucket.id}
+      policy: ${publicReadPolicyForBucket.json}
+
+variables:
+  publicReadPolicyForBucket:
+    fn::invoke:
+      function: aws:iam:getPolicyDocument
+      arguments:
+        statements:
+          - effect: Allow
+            principal: "*"
+            action: s3:GetObject
+            resource: ${my-bucket.id}/*
