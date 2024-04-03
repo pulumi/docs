@@ -2339,7 +2339,6 @@ curl \
   -H "Content-Type: application/json" \
   -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
   --request POST \
-  --data '<yaml content>' \
   https://api.pulumi.com/api/preview/environments/{organization}/{environment}
 ```
 
