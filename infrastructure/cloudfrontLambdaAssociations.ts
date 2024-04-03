@@ -1,5 +1,6 @@
 // Copyright 2016-2021, Pulumi Corporation.  All rights reserved.
 
+import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 import {
     CloudFrontRequest,
@@ -10,44 +11,38 @@ import {
 import * as URLPattern from "url-pattern";
 import { LambdaEdge } from "./lambdaEdge";
 
-/**
- * Returns the Lambda function associations for the CloudFront distribution.
- * @param doEdgeRedirects If true, creates a Lambda@Edge function that that conditionally
-*  redirects based on the URL of the request.
- */
-export function getLambdaFunctionAssociations(doEdgeRedirects: boolean):
-    aws.types.input.cloudfront.DistributionDefaultCacheBehaviorLambdaFunctionAssociation[] {
+// Edge functions must be defined in us-east-1.
+const usEast1Provider = new aws.Provider("usEast1", {
+    region: aws.Region.USEast1,
+});
 
-    const associations = [];
+export function getEdgeRedirectAssociation(): aws.types.input.cloudfront.DistributionDefaultCacheBehaviorLambdaFunctionAssociation {
+    const edgeRedirectsLambda = new LambdaEdge("redirects", {
+        func: getEdgeRedirectsLambdaCallback(),
+        funcDescription: "Lambda function that conditionally redirects based on a path-matching expression.",
+    }, { provider: usEast1Provider });
 
-    // Edge functions must be defined in us-east-1.
-    const provider = new aws.Provider("usEast1", {
-        region: aws.Region.USEast1,
-    });
-
-    if (doEdgeRedirects) {
-        const edgeRedirectsLambda = new LambdaEdge(
-            "redirects",
-            {
-                func: getEdgeRedirectsLambdaCallback(),
-                funcDescription: "Lambda function that conditionally redirects based on a path-matching expression.",
-            },
-            {
-                provider,
-            },
-        );
-        associations.push({
-            includeBody: false,
-            lambdaArn: edgeRedirectsLambda.getLambdaEdgeArn(),
-            eventType: "origin-request",
-        });
-    }
-
-    return associations;
+    return {
+        includeBody: false,
+        lambdaArn: edgeRedirectsLambda.getLambdaEdgeArn(),
+        eventType: "origin-request",
+    };
 }
 
-function getEdgeRedirectsLambdaCallback():
-    aws.lambda.Callback<CloudFrontRequestEvent, CloudFrontRequest | CloudFrontResponse> {
+export function getAIAnswersRewriteAssociation(): aws.types.input.cloudfront.DistributionDefaultCacheBehaviorLambdaFunctionAssociation {
+    const aiAnswersRewritesLambda = new LambdaEdge("answers-rewrites", {
+        func: getAIAnswersRewritesLambdaCallback(),
+        funcDescription: "Lambda function that rewrites HTTP 404s from Pulumi AI Answers as 410s.",
+    }, { provider: usEast1Provider });
+
+     return {
+        includeBody: false,
+        lambdaArn: aiAnswersRewritesLambda.getLambdaEdgeArn(),
+        eventType: "origin-response",
+    };
+}
+
+function getEdgeRedirectsLambdaCallback(): aws.lambda.Callback<CloudFrontRequestEvent, CloudFrontRequest | CloudFrontResponse> {
     // https://aws.amazon.com/blogs/networking-and-content-delivery/handling-redirectsedge-part1/
     return (event: CloudFrontRequestEvent, context, callback) => {
         const request = event.Records[0].cf.request;
@@ -81,6 +76,28 @@ function getEdgeRedirectsLambdaCallback():
             },
         };
         callback(null, modifiedResponse);
+    };
+}
+
+function getAIAnswersRewritesLambdaCallback(): aws.lambda.Callback<CloudFrontRequestEvent, CloudFrontRequest | CloudFrontResponse> {
+    return (event: CloudFrontResponseEvent, context, callback) => {
+        const request = event.Records[0].cf.request;
+        const response = event.Records[0].cf.response;
+
+        // When requests for an AI Answers page return 404, either the page doesn't exist or we've explicitly unpublished it.
+        // For the latter case, it'd be great if the AI App could 410 (Gone), but unfortunately Next.js doesn't support this.
+        // So we use this function to rewrite the responses for these pages on the way out.
+        // https://github.com/vercel/next.js/discussions/53225
+        if (request.uri.match(/\/ai\/answers\//) && response.status === "404") {
+            callback(null, {
+                ...response,
+                status: "410",
+                statusDescription: "Gone",
+            });
+        }
+
+        callback(null, response);
+        return;
     };
 }
 
