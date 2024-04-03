@@ -13,7 +13,7 @@ links:
           action: Reserve your spot
           link: https://go.chronosphere.io/google-cloud-next-2024-happy-hour.html?utm_source=pulumi&utm_medium=email&utm_campaign=cheers-to-observability-vegas
         - heading: Request a Demo
-          description: See how Pulumi can help you ship infrastructure faster, and manage Kubernetes clusters at scale on all major cloud providers. Ready for a change?
+          description: See how Pulumi can help you ship infrastructure faster, and manage Google Cloud resources. Ready for a change?
           action: Talk with an engineer
           link: https://info.pulumi.com/google-next-2024
 
