@@ -60,7 +60,7 @@ tbody tr td:first-child {
 | [AWS Certificate Manager Private Certificate Authority](https://docs.aws.amazon.com/acm-pca/latest/userguide/PcaWelcome.html) | Managed private CA service | | [acmpca](/registry/packages/aws/api-docs/acmpca/) |
 | [Amazon API Gateway](https://aws.amazon.com/api-gateway/) | Secure, scalable APIs | [User Guide](/docs/clouds/aws/guides/api-gateway/) | [apigateway](/registry/packages/aws/api-docs/apigateway/) |
 | [AWS App Mesh](https://aws.amazon.com/app-mesh/) | App-level service networking | | [appmesh](/registry/packages/aws/api-docs/appmesh/) |
-| [AWS AppSync](https://aws.amazon.com/app-mesh/) | Data-driven apps and APIs | | [appsync](/registry/packages/aws/api-docs/appsync/) |
+| [AWS AppSync](https://aws.amazon.com/appsync/) | Data-driven apps and APIs | | [appsync](/registry/packages/aws/api-docs/appsync/) |
 | [Amazon Athena](https://aws.amazon.com/athena/) | Serverless queries over S3 | | [athena](/registry/packages/aws/api-docs/athena/) |
 | [AWS Auto Scaling](https://aws.amazon.com/autoscaling) | Automatic scaling policies | [User Guide](/docs/clouds/aws/guides/autoscaling/) | [autoscaling](/registry/packages/aws/api-docs/autoscaling/) |
 | [AWS Backup](https://aws.amazon.com/backup/) | Centrally managed backups | | [backup](/registry/packages/aws/api-docs/backup/) |
