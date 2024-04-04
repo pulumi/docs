@@ -69,7 +69,7 @@ main:
     # case-sensitive
     tags:
         level: Advanced # Beginner, Intermediate, Advanced
-        topics: ["GitHub Actions"]
+        topics: ["GitHub Actions", "AWS", "DevOps", "CI/CD"]
         languages: []
 
 # The right hand side form section.
