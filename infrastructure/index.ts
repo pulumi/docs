@@ -4,7 +4,7 @@ import * as aws from "@pulumi/aws";
 import * as pulumi from "@pulumi/pulumi";
 import * as fs from "fs";
 
-import { getLambdaFunctionAssociations } from "./cloudfrontLambdaAssociations";
+import { getAIAnswersRewriteAssociation, getEdgeRedirectAssociation } from "./cloudfrontLambdaAssociations";
 
 const stackConfig = new pulumi.Config();
 
@@ -30,6 +30,10 @@ const config = {
     // doEdgeRedirects is whether to perform redirects at the CloudFront layer.
     // Setting this true will add a Lambda@Edge function that handles that redirect logic.
     doEdgeRedirects: stackConfig.getBoolean("doEdgeRedirects") || false,
+    // doAIAnswersRewrites indicates whether to rewrite HTTP status for AI Answers pages that 404
+    // (e.g., due to unpublishing) as HTTP 410 (Gone). Setting this true will add a Lambda@Edge
+    // function that handles this logic.
+    doAIAnswersRewrites: stackConfig.getBoolean("doAIAnswersRewrites") || false,
     // makeFallbackBucket toggles whether to configure a bucket for serving the website
     // directly out of S3 --- for example, when CloudFront is unavailable. In order to
     // comply with AWS configuration rules, the bucket will be named to match the
@@ -260,17 +264,10 @@ const logsBucketDeliveryACL = new aws.s3.BucketAclV2("logs-bucket-delivery-acl",
     dependsOn: [logsBucketOwnershipControls],
 });
 
-
-
 const fiveMinutes = 60 * 5;
 const oneHour = fiveMinutes * 12;
 const oneWeek = oneHour * 24 * 7;
 const oneYear = oneWeek * 52;
-
-const lambdaFunctionAssociations = getLambdaFunctionAssociations(
-    config.doEdgeRedirects,
-);
-
 
 // AllViewerExceptHostHeader passes all cookies, querystrings, and headers except the Host header.
 // https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-origin-request-policies.html
@@ -328,9 +325,7 @@ const baseCacheBehavior: aws.types.input.cloudfront.DistributionDefaultCacheBeha
     minTtl: 0,
     defaultTtl: fiveMinutes,
     maxTtl: fiveMinutes,
-
-    lambdaFunctionAssociations,
-
+    lambdaFunctionAssociations: config.doEdgeRedirects ? [getEdgeRedirectAssociation()] : [],
     responseHeadersPolicyId: SecurityHeadersPolicy.id,
 };
 
@@ -583,7 +578,7 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
             pathPattern: '/ai/*',
             originRequestPolicyId: allViewerExceptHostHeaderId,
             cachePolicyId: cachingDisabledId,
-            lambdaFunctionAssociations: [],
+            lambdaFunctionAssociations: config.doAIAnswersRewrites ? [getAIAnswersRewriteAssociation()] : [],
             forwardedValues: undefined, // forwardedValues conflicts with cachePolicyId, so we unset it.
         }
     ],

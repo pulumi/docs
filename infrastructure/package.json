@@ -9,8 +9,7 @@
         "tslint": "^6.1.3"
     },
     "dependencies": {
-        "@pulumi/aws": "^5.4.0",
-        "@pulumi/awsx": "^0.40.0",
+        "@pulumi/aws": "^6.28.2",
         "@pulumi/pulumi": "^3.32.1",
         "url-pattern": "^1.0.3"
     }

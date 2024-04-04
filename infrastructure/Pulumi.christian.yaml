@@ -1,10 +1,11 @@
 config:
   aws:region: us-west-2
-  www.pulumi.com:addSecurityHeaders: "true"
+  www.pulumi.com:addSecurityHeaders: true
   www.pulumi.com:certificateArn: arn:aws:acm:us-east-1:372027080554:certificate/54d0431c-2cf9-4c40-bd3c-324cfb8b7d32
-  www.pulumi.com:doEdgeRedirects: "true"
-  www.pulumi.com:makeFallbackBucket: "true"
-  www.pulumi.com:originBucketNameOverride: ""
+  www.pulumi.com:doEdgeRedirects: true
+  www.pulumi.com:doAIAnswersRewrites: true
+  www.pulumi.com:makeFallbackBucket: true
   www.pulumi.com:pathToOriginBucketMetadata: ../origin-bucket-metadata.json
+  www.pulumi.com:registryStack: pulumi/registry/testing
   www.pulumi.com:websiteDomain: www-christian.pulumi-dev.io
   www.pulumi.com:websiteLogsBucketName: www-christian.pulumi-dev.io-logs
