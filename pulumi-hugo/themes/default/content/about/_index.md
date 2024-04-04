@@ -106,10 +106,10 @@ spotlight:
       top: 120
       left: 850
       opacity: 100
-    - id: anita-trimbur
-      name: Anita Trimbur
+    - id: sarah-hughes
+      name: Sarah Hughes
       size: 94
-      top: -50
+      top: -40
       left: 900
       opacity: 100
     - id: george-huang
