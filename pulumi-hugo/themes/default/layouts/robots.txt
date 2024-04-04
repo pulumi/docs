@@ -11,4 +11,5 @@ Disallow: /registry/packages/azure-native-v1
 
 Sitemap: https://www.pulumi.com/sitemap-index.xml
 Sitemap: https://www.pulumi.com/ai/sitemap-index.xml
+Sitemap: https://www.pulumi.com/ai/sitemap-index.xml?state=unpublished
 Host: www.pulumi.com
