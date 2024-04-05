@@ -28,6 +28,8 @@ const additionalObjects = [
             "@pulumi/pulumi",
             "javascript sdk",
             "typescript sdk",
+            "nodejs sdk",
+            "node sdk",
             "sdk",
         ],
         "ancestors": [
