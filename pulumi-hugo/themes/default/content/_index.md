@@ -5,7 +5,7 @@ meta_desc: Pulumi's open source infrastructure as code SDK enables you to create
 include_organization_schema: true
 
 hero:
-  title: [ "10x Infrastructure", "Engineering With AI" ]
+  title: [ "Infrastructure as Code", "in Any Programming Language" ]
   description: |
     Gain 10x better scale, more productivity, and faster time to market.
   cta_text: Get Started
