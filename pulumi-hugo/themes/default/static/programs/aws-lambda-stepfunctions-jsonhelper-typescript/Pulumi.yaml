@@ -5,3 +5,4 @@ config:
   pulumi:tags:
     value:
       pulumi:template: aws-typescript
+  aws-native:region: us-west-2

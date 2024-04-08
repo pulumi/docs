@@ -1076,9 +1076,9 @@ This operation is so common that Pulumi provides first-class helper functions to
 
 If you need to construct a JSON string using output values from Pulumi resources, you can easily do so using a JSON stringify helper. These helpers unwrap Pulumi outputs without requiring the use of `apply` and produce JSON string outputs suitable for passing to other resources as inputs.
 
-For example, you can write the definition of an AWS Step Function State Machine as a native JSON object, embed outputs from other resources (such as a Lambda Function ARN) within the JSON object, and then convert the entire definition into the JSON string representation that is required by the State Machine resource definition:
+In this example, a JSON string for an S3 bucket policy is composed with two outputs: the authenticated user's account ID and the bucket's computed Amazon Resource Name (ARN). Here, since the statement's `Resource` property uses only an ARN, the ARN output can be passed as a value directly. To compose more complex values, you can either use `apply` or [`all`](/docs/concepts/inputs-outputs/all/) to assemble and return a new output or, for string values, use a string helper such as below, which composes the ARN for the `Principal` property using the account ID output:
 
-{{< example-program path="aws-lambda-stepfunctions-jsonhelper" >}}
+{{< example-program path="aws-s3-bucketpolicy-jsonstringify" languages="javascript,typescript,python,go,csharp" >}}
 
 #### Converting JSON strings to outputs
 

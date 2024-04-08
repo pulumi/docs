@@ -1,42 +1,86 @@
-/*
-The Pulumi Go SDK does not currently support serializing or deserializing maps with unknown values.
-It is tracked [here](https://github.com/pulumi/pulumi/issues/12460).
-
-The following is a simplified example of using `pulumi.JSONMarshal` in Go.
-*/
-
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/sfn"
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/lambda"
+	"github.com/pulumi/pulumi-aws/sdk/v6/go/aws/iam"
+	"github.com/pulumi/pulumi-aws/sdk/v6/go/aws/lambda"
+	"github.com/pulumi/pulumi-aws/sdk/v6/go/aws/sfn"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		pulumi.JSONMarshal(pulumi.ToMapOutput(map[string]pulumi.Output{
-			"bool": pulumi.ToOutput(true),
-			"int":  pulumi.ToOutput(1),
-			"str":  pulumi.ToOutput("hello"),
-			"arr": pulumi.ToArrayOutput([]pulumi.Output{
-				pulumi.ToOutput(false),
-				pulumi.ToOutput(1.0),
-				pulumi.ToOutput(""),
-				pulumi.ToMapOutput(map[string]pulumi.Output{
-					"key": pulumi.ToOutput("value"),
+
+		lambdaRole, err := iam.NewRole(ctx, "lambda-role", &iam.RoleArgs{
+			AssumeRolePolicy: pulumi.JSONMarshal(map[string]interface{}{
+				"Version": pulumi.ToOutput("2012-10-17"),
+				"Statement": pulumi.ToOutput([]interface{}{
+					pulumi.ToMapOutput(map[string]pulumi.Output{
+						"Action": pulumi.ToOutput("sts:AssumeRole"),
+						"Effect": pulumi.ToOutput("Allow"),
+						"Principal": pulumi.ToMapOutput(map[string]pulumi.Output{
+							"Service": pulumi.ToOutput("lambda.amazonaws.com"),
+						}),
+					}),
 				}),
 			}),
-			"map": pulumi.ToMapOutput(map[string]pulumi.Output{
-				"key": pulumi.ToOutput("value"),
+			ManagedPolicyArns: pulumi.StringArray{
+				pulumi.String("arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+
+		sfnRole, err := iam.NewRole(ctx, "sfn-role", &iam.RoleArgs{
+			AssumeRolePolicy: pulumi.JSONMarshal(map[string]interface{}{
+				"Version": pulumi.ToOutput("2012-10-17"),
+				"Statement": pulumi.ToOutput([]interface{}{
+					pulumi.ToMapOutput(map[string]pulumi.Output{
+						"Action": pulumi.ToOutput("sts:AssumeRole"),
+						"Effect": pulumi.ToOutput("Allow"),
+						"Principal": pulumi.ToMapOutput(map[string]pulumi.Output{
+							"Service": pulumi.ToOutput("states.amazonaws.com"),
+						}),
+					}),
+				}),
 			}),
-			// The following functionality is currently unsupported as myResource
-			// is an unknown value.
-			"unknown": myResource.ApplyT(func(res interface{}) (interface{}, error) {
-				return "Hello World!", nil
+			ManagedPolicyArns: pulumi.StringArray{
+				pulumi.String("arn:aws:iam::aws:policy/AWSLambda_FullAccess"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+
+		helloFunction, err := lambda.NewFunction(ctx, "hello-function", &lambda.FunctionArgs{
+			Runtime: lambda.RuntimePython3d9,
+			Handler: pulumi.String("handler.handler"),
+			Role:    lambdaRole.Arn,
+			Code:    pulumi.NewFileArchive("./function"),
+		})
+		if err != nil {
+			return err
+		}
+
+		_, err = sfn.NewStateMachine(ctx, "stateMachine", &sfn.StateMachineArgs{
+			RoleArn: sfnRole.Arn,
+			Type:    pulumi.String("EXPRESS"),
+			Definition: pulumi.JSONMarshal(map[string]interface{}{
+				"Comment": pulumi.ToOutput("A Hello World example of the Amazon States Language using two AWS Lambda Functions"),
+				"StartAt": pulumi.ToOutput("Hello"),
+				"States": pulumi.ToMapOutput(map[string]pulumi.Output{
+					"Hello": pulumi.ToMapOutput(map[string]pulumi.Output{
+						"Type":     pulumi.ToOutput("Task"),
+						"Resource": helloFunction.Arn,
+						"End":      pulumi.ToOutput(true),
+					}),
+				}),
 			}),
-		}))
+		})
+		if err != nil {
+			return err
+		}
+
 		return nil
 	})
 }
