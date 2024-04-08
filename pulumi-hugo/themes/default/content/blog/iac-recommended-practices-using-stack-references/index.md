@@ -4,8 +4,6 @@ date: 2023-03-31
 meta_desc: This post discusses the use of stack references to share information among multiple Pulumi projects, and the recommended practices around their use.
 meta_image: meta.png
 authors:
-    - aaron-kao
-    - christian-nunciato
     - scott-lowe
 tags:
     - best-practices
@@ -17,7 +15,7 @@ This is the fourth post in a series of blog posts focused on Zephyr Archaeotech 
 
 As you may have read in earlier Zephyr posts, the ultimate goal of the Zephyr series is to share recommended practices on the use of Pulumi to manage your infrastructure and application resources (using a fictional company and a somewhat complex containerized application as the use case). The series exposes those recommended practices over time---not all right away, and not without also discussing the context for the recommendations. This is deliberate, demonstrating how "point-in-time" recommendations change based on the needs of the company and its requirements.
 
-Here are links to all the blog posts in the series (entries not linked below are planned but haven't yet been published; this list will get updated as new posts go live):
+Here are links to all the blog posts in the series:
 
 * [IaC Recommended Practices: Code Organization and Stacks](/blog/iac-recommended-practices-code-organization-and-stacks/)
 * [IaC Recommended Practices: Developer Stacks and Git Branches](/blog/iac-recommended-practices-developer-stacks-git-branches/)
@@ -25,8 +23,7 @@ Here are links to all the blog posts in the series (entries not linked below are
 * **IaC Recommended Practices: Using Stack References** (you are here)
 * [IaC Recommended Practices: RBAC and Security](/blog/iac-recommended-practices-rbac-and-security/)
 * [IaC Recommended Practices: Using Automation API](/blog/iac-recommended-practices-using-automation-api/)
-* IaC Recommended Practices: Adding Pulumi Deployments
-* IaC Recommended Practices: Refactoring for Reuse
+* [IaC Recommended Practices: Wrapping Up](/blog/iac-recommended-practices-wrapping-up)
 
 ## Reviewing Zephyr's current status
 

@@ -4,8 +4,6 @@ date: 2023-07-26
 meta_desc: In this post in the continuing series on IaC recommended practices, the Zephyr teams starts using the Pulumi Automation API to orchestrate multiple stacks.
 meta_image: meta.png
 authors:
-    - aaron-kao
-    - christian-nunciato
     - scott-lowe
 tags:
     - best-practices
@@ -18,7 +16,7 @@ Welcome to the sixth post in our series of blog posts focused on infrastructure 
 
 The ultimate goal of this series is to discuss recommended practices for using Pulumi to manage a fairly complex containerized application. These practices have unfolded organically, as a direct response to Zephyr's evolving needs. The aim is to demonstrate that recommended practices (or best practices) are not set in stone, but are rather "point in time" recommendations that adapt as your company grows.
 
-For ease of navigation, here are links to all the blog posts in the series (any entries listed below that aren't linked haven't yet been published; this list will get updated as new posts go live):
+For ease of navigation, here are links to all the posts in the series:
 
 * [IaC Recommended Practices: Code Organization and Stacks](/blog/iac-recommended-practices-code-organization-and-stacks/)
 * [IaC Recommended Practices: Developer Stacks and Git Branches](/blog/iac-recommended-practices-developer-stacks-git-branches/)
@@ -26,8 +24,7 @@ For ease of navigation, here are links to all the blog posts in the series (any 
 * [IaC Recommended Practices: Using Stack References](/blog/iac-recommended-practices-using-stack-references/)
 * [IaC Recommended Practices: RBAC and Security](/blog/iac-recommended-practices-rbac-and-security/)
 * **IaC Recommended Practices: Using Automation API** (you are here)
-* IaC Recommended Practices: Adding Pulumi Deployments
-* IaC Recommended Practices: Refactoring for Reuse
+* [IaC Recommended Practices: Wrapping Up](/blog/iac-recommended-practices-wrapping-up)
 
 ## Reviewing the state of Pulumi at Zephyr
 
@@ -200,4 +197,4 @@ This post discussed the following recommended practices when using Pulumi Automa
 * **Use local source to decouple Automation API programs from Pulumi programs when separate teams are involved.** When separate teams are creating, managing, or maintaining the Automation API programs and the Pulumi programs, using local source instead of inline source enables the teams to operate somewhat independently.
 * **When there is a single team managing both Automation API programs and Pulumi programs, use inline source.** This is also true when, perhaps due to compliance or regulatory concerns, the Automation API program should be more tightly coupled to the Pulumi programs it is automating.
 
-The Zephyr series continues in the next IaC Recommended Practices post with a look at [Pulumi Deployments](/docs/pulumi-cloud/deployments/), and how adding Pulumi Deployments to their environment was a natural next step for Zephyr. Don't miss it!
+The Zephyr series wraps up in the next post, where we summarize all our recommendations so far. We'll also take a look at areas of potential future growth for the team at Zephyr. Don't miss it!

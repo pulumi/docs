@@ -4,8 +4,6 @@ date: 2023-05-23
 meta_desc: This is the fifth post in a series on recommended practices for infrastructure as code with Pulumi. This post focuses on RBAC and security.
 meta_image: meta.png
 authors:
-    - aaron-kao
-    - christian-nunciato
     - scott-lowe
 tags:
     - zephyr
@@ -18,7 +16,7 @@ This post continues our series of blog posts focused on IaC recommended practice
 
 The ultimate goal of this series is to discuss recommended practices for using Pulumi to manage a fairly complex containerized application. You've seen these recommended practices emerge over the course of the series---not all immediately, and not all right away. Structuring the blog series in this way is a deliberate decision; many recommended practices are "point in time" recommendations: they are context-dependent and the recommendations for any given company, like Zephyr, may change as the company and its needs change.
 
-For ease of navigation, here are links to all the blog posts in the series (any entries listed below that aren't linked haven't yet been published; this list will get updated as new posts go live):
+For ease of navigation, here are links to all the blog posts in the series:
 
 * [IaC Recommended Practices: Code Organization and Stacks](/blog/iac-recommended-practices-code-organization-and-stacks/)
 * [IaC Recommended Practices: Developer Stacks and Git Branches](/blog/iac-recommended-practices-developer-stacks-git-branches/)
@@ -26,8 +24,7 @@ For ease of navigation, here are links to all the blog posts in the series (any 
 * [IaC Recommended Practices: Using Stack References](/blog/iac-recommended-practices-using-stack-references/)
 * **IaC Recommended Practices: RBAC and Security (the post you're reading)**
 * [IaC Recommended Practices: Using Automation API](/blog/iac-recommended-practices-using-automation-api/)
-* IaC Recommended Practices: Adding Pulumi Deployments
-* IaC Recommended Practices: Refactoring for Reuse
+* [IaC Recommended Practices: Wrapping Up](/blog/iac-recommended-practices-wrapping-up)
 
 ## Recapping what's happened so far
 

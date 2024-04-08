@@ -4,9 +4,9 @@ date: 2023-02-20T13:30:00-07:00
 meta_desc: This is the first in a series of blog posts on recommended practices for using Pulumi. Code organization and the use of Pulumi stacks are the focus areas.
 meta_image: meta.png
 authors:
-    - scott-lowe
-    - christian-nunciato
     - aaron-kao
+    - christian-nunciato
+    - scott-lowe
 tags:
     - best-practices
     - cloud-engineering
@@ -19,7 +19,7 @@ This is the first in a series of blog posts that explores how a fictional compan
 
 The ultimate goal of this series is to discuss recommended practices for using Pulumi to manage a fairly complex containerized application. However, it's important to note that these recommended practices will emerge over the course of the series---not all immediately, and not all in the beginning. This is a deliberate decision to allow you to see how Zephyr's use of Pulumi evolves as the company grows and their online retail store application changes to accommodate their growth.
 
-Here are links to all the blog posts in the series (entries below that are not linked are planned but haven't yet been published---this will get updated as new posts are published):
+Here are links to all the blog posts in the series:
 
 * **IaC Recommended Practices: Code Organization and Stacks** (this post)
 * [IaC Recommended Practices: Developer Stacks and Git Branches](/blog/iac-recommended-practices-developer-stacks-git-branches/)
@@ -27,8 +27,7 @@ Here are links to all the blog posts in the series (entries below that are not l
 * [IaC Recommended Practices: Using Stack References](/blog/iac-recommended-practices-using-stack-references/)
 * [IaC Recommended Practices: RBAC and Security](/blog/iac-recommended-practices-rbac-and-security/)
 * [IaC Recommended Practices: Using Automation API](/blog/iac-recommended-practices-using-automation-api/)
-* IaC Recommended Practices: Adding Pulumi Deployments
-* IaC Recommended Practices: Refactoring for Reuse
+* [IaC Recommended Practices: Wrapping Up](/blog/iac-recommended-practices-wrapping-up)
 
 ## Setting up the scenario
 

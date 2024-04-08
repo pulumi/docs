@@ -4,9 +4,8 @@ date: 2023-03-17
 meta_desc: The third post in the Zephyr series examines recommended practices around structuring Pulumi projects.
 meta_image: meta.png
 authors:
-    - scott-lowe
     - christian-nunciato
-    - aaron-kao
+    - scott-lowe
 tags:
     - best-practices
     - cloud-engineering
@@ -17,7 +16,7 @@ This is the third post in a series of blog posts focused on Zephyr Archaeotech E
 
 The [first blog post](/blog/iac-recommended-practices-code-organization-and-stacks/) in the Zephyr series specifically mentions that the series will show "how Zephyr's use of Pulumi evolves as the company grows and their online retail store application changes to accommodate their growth." While the ultimate goal of this series is to discuss recommended practices for using Pulumi to manage a fairly complex containerized application, it's important to note that many recommended practices are "point in time" recommendations: best practices are context-dependent and the recommended practices for a given organization will change as the company and its infrastructure needs also change. This blog post is an example of that evolution in action: the practices that worked well for Zephyr while they were smaller and had smaller infrastructure and less teams working on that infrastructure are no longer ideal as the company has grown.
 
-Here are links to all the blog posts in the series (entries below that are not linked are planned but haven't yet been published---this will get updated as new posts are published):
+Here are links to all the blog posts in the series:
 
 * [IaC Recommended Practices: Code Organization and Stacks](/blog/iac-recommended-practices-code-organization-and-stacks/)
 * [IaC Recommended Practices: Developer Stacks and Git Branches](/blog/iac-recommended-practices-developer-stacks-git-branches/)
@@ -25,8 +24,7 @@ Here are links to all the blog posts in the series (entries below that are not l
 * [IaC Recommended Practices: Using Stack References](/blog/iac-recommended-practices-using-stack-references/)
 * [IaC Recommended Practices: RBAC and Security](/blog/iac-recommended-practices-rbac-and-security/)
 * [IaC Recommended Practices: Using Automation API](/blog/iac-recommended-practices-using-automation-api/)
-* IaC Recommended Practices: Adding Pulumi Deployments
-* IaC Recommended Practices: Refactoring for Reuse
+* [IaC Recommended Practices: Wrapping Up](/blog/iac-recommended-practices-wrapping-up)
 
 ## Catching up with Zephyr
 
