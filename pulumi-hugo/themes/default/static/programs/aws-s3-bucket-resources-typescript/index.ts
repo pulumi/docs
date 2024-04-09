@@ -31,10 +31,14 @@ const bucketObject = new aws.s3.BucketObject(
     { dependsOn: [publicAccessBlock, ownershipControls] },
 );
 
-const bucketPolicy = new aws.s3.BucketPolicy("my-bucket-policy", {
-    bucket: bucket.id,
-    policy: bucket.id.apply(publicReadPolicyForBucket),
-});
+const bucketPolicy = new aws.s3.BucketPolicy(
+    "my-bucket-policy",
+    {
+        bucket: bucket.id,
+        policy: bucket.id.apply(publicReadPolicyForBucket),
+    },
+    { dependsOn: [publicAccessBlock, ownershipControls] },
+);
 
 function publicReadPolicyForBucket(bucketName: string): string {
     return JSON.stringify({

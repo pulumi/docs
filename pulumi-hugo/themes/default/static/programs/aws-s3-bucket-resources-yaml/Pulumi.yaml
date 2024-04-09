@@ -44,15 +44,15 @@ resources:
     type: aws:s3:BucketPolicy
     properties:
       bucket: ${my-bucket.id}
-      policy: ${publicReadPolicyForBucket.json}
-
-variables:
-  publicReadPolicyForBucket:
-    fn::invoke:
-      function: aws:iam:getPolicyDocument
-      arguments:
-        statements:
-          - effect: Allow
-            principal: "*"
-            action: s3:GetObject
-            resource: ${my-bucket.id}/*
+      policy:
+        fn::toJSON:
+          Version: "2012-10-17"
+          Statement:
+            - Effect: Allow
+              Principal: "*"
+              Action: "s3:GetObject"
+              Resource: "arn:aws:s3:::${my-bucket.id}/*"
+    options:
+      dependsOn:
+        - ${public-access-block}
+        - ${ownership-controls}
