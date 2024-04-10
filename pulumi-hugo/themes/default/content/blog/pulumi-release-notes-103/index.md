@@ -3,7 +3,7 @@ title: "Pulumi Release Notes: Pulumi ESC, Pulumi Dev Releases, and more!"
 allow_long_title: true
 date: 2024-04-12T11:06:04-08:00
 draft: false
-meta_desc: The latest Pulumi updates include Pulumi ESC, Pulumi AI, Pulumi CLI & SDK Dev Releases and new Pulumi providers
+meta_desc: The latest Pulumi updates include Pulumi ESC, Pulumi AI, Pulumi CLI & SDK Dev Releases, and new Pulumi providers
 meta_image: meta.png
 authors:
     - arun-loganathan
@@ -12,7 +12,7 @@ tags:
     - release-notes
 ---
 
-As always, we continue to ship new features in response to the feedback from our growing community of users. We've shipped several security and usability features to [Pulumi ESC](/docs/esc) in response to feedback from our growing user base. We've also add new enhancements to our core Platform CLI and Providers. In addition to the release notes, stay up to date all things Pulumi by following the [new features blogs](/blog/tag/features) and the [pulumi/pulumi repo changelog](https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md). There's lot to cover, so let's get started. Let's walk through the major updates across Pulumi from the last few months!
+As always, we have been actively rolling out new features in response to the invaluable feedback from our ever-growing community.  We've shipped several security and usability features to [Pulumi ESC](/docs/esc) in response to feedback from our growing user base. Moreover, we've also added new enhancements to our core Platform CLI and Providers. In addition to the release notes, stay up-to-date with all things Pulumi by following the [new features blogs](/blog/tag/features) and the [pulumi/pulumi repo changelog](https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md). With so much to explore, let’s dive into the major updates across Pulumi from the past two months!
 
 <!--more-->
 
@@ -43,7 +43,7 @@ We continue to invest in Pulumi AI and improve the quality of programs in TypeSc
 
 ### Pulumi ESC 1Password Support
 
-In collaboration with 1Password, we've launched the [1Password provider](/docs/esc/providers/1password-secrets/) for Pulumi ESC in public preview. This highly requested feature from our community allows you to pull secrets and configurations stored in 1Password directly into ESC, and use them as [environment variables](/docs/esc/environments/#projecting-environment-variables) or within [Pulumi Config](/docs/esc/environments/#using-environments-with-pulumi-iac). This integration eliminates the need for manual secret copy and paste, enhancing both security and efficiency. For more details, refer to our [blog post](/blog/pulumi-esc-public-preview-for-1password-support/).
+In collaboration with 1Password, we've launched the [1Password provider](/docs/esc/providers/1password-secrets/) for Pulumi ESC in public preview. This feature, highly requested by our community, allows you to pull secrets and configurations stored in 1Password directly into ESC, and use them as [environment variables](/docs/esc/environments/#projecting-environment-variables) or within [Pulumi Config](/docs/esc/environments/#using-environments-with-pulumi-iac). This integration eliminates the need for manual secret copy and paste, enhancing both security and efficiency. For more details, refer to our [blog post](/blog/pulumi-esc-public-preview-for-1password-support/).
 
 {{< video title="Pulumi ESC 1Password Provider Demo" src="https://www.pulumi.com/uploads/esc-1password-provider-demo.mp4" controls="false" autoplay="true" loop="true" >}}
 
@@ -61,17 +61,17 @@ We've upgraded the Pulumi ESC YAML editor with features aimed at simplifying the
 
 ### Pulumi ESC OIDC customization 
 
-Pulumi ESC now offers [subject customization](docs/pulumi-cloud/oidc/azure/#subject-customization) for OIDC tokens, enhancing security across AWS, GCP and Azure by aligning federated credentials with specific identifiers. By configuring the `subjectAttributes` setting, users can include specific environment, user, and organization information in the [OIDC](/docs/pulumi-cloud/oidc/) token subject claim, offering more granular control and customization for cloud resource access. This capability is especially valuable for customers using Azure, where subject claims are required to precisely match the string specified in the policy.
+Pulumi ESC now offers [subject customization](/docs/pulumi-cloud/oidc/azure/#subject-customization) for OIDC tokens, enhancing security across AWS, GCP and Azure by aligning federated credentials with specific identifiers. By configuring the `subjectAttributes` setting, users can include specific environment, user, and organization information in the [OIDC](/docs/pulumi-cloud/oidc/) token subject claim, offering more granular control and customization for cloud resource access. This capability is especially valuable for customers using Azure, where subject claims are required to precisely match the string specified in the policy.
 
 ### Pulumi ESC Audit Logs
 
-Pulumi ESC now features comprehensive Audit Logs for all Create, Read, Update, and Delete (CRUD) operations, strengthening your cloud security framework. This critical addition to Pulumi ESC enables organizations to closely monitor and audit their cloud infrastructure changes, ensuring enhanced oversight and security compliance. Through detailed logging, teams gain valuable insights into their operational activities, facilitating improved governance and accountability across cloud resources.
+Pulumi ESC now features comprehensive Audit Logs for all Create, Read, Open, Update, and Delete (CRUD) operations, strengthening your cloud security framework. This critical addition to Pulumi ESC enables organizations to closely monitor and audit their cloud infrastructure changes, ensuring enhanced oversight and security compliance. Through detailed logging, teams gain valuable insights into their operational activities, facilitating improved governance and accountability across cloud resources.
 
 ## Core
 
 ### Dev Releases for the Pulumi CLI and SDKs
 
-We introduced [Dev Releases](/blog/introducing-dev-releases/) allowing developers to access the latest features and improvements in Pulumi's infrastructure as code tools ahead of their official release. With this initiative, we aim to engage our community and gather early feedback, enhancing the product development process. This is crucial for identifying and resolving potential issues early, contributing to a smoother transition to new releases. Dev Releases will also be at the cutting edge of Pulumi's evolving capabilities, with the latest bug fixes and features available within minutes of Pulumi developers merging. For instructions on how to use the CLI Dev releases see the [Install Docs](/docs/install/#installing-dev-releases), and for pre-release versions of Dev SDKs see the docs for [Node.js](/docs/languages-sdks/javascript/#dev-versions), [Python](/docs/languages-sdks/python/#dev-versions), [.NET](docs/languages-sdks/dotnet/#dev-versions), and [Go](/docs/languages-sdks/go/#dev-versions).
+We introduced [Dev Releases](/blog/introducing-dev-releases/), allowing developers to access the latest features and improvements in Pulumi's infrastructure as code tools ahead of their official release. With this initiative, we aim to engage our community and gather early feedback, enhancing the product development process. This is crucial for identifying and resolving potential issues early, contributing to a smoother transition to new releases. Dev Releases will also be at the cutting edge of Pulumi's evolving capabilities, with the latest bug fixes and features available within minutes of Pulumi developers merging. For instructions on how to use the CLI Dev releases see the [Install Docs](/docs/install/#installing-dev-releases), and for pre-release versions of Dev SDKs see the docs for [Node.js](/docs/languages-sdks/javascript/#dev-versions), [Python](/docs/languages-sdks/python/#dev-versions), [.NET](docs/languages-sdks/dotnet/#dev-versions), and [Go](/docs/languages-sdks/go/#dev-versions).
 
 ### Automation API support to install Pulumi CLI 
 
