@@ -37,7 +37,7 @@ As always, we have been actively rolling out new features in response to the inv
 
 ### Pulumi AI Evolution
 
-We continue to invest in Pulumi AI and improve the quality of programs in TypeScript, Python, Go, and C#. Key enhancements include generating code that accurately imports providers, with a special focus on those authored by our community and partners, ensuring the use of correct syntax for Pulumi YAML, embracing modern C# syntax like top-level statements, and implementing comprehensive spellchecking for modules and parameters. These updates continue to push Pulumi AI as a robust, developer-friendly platform, enabling you to build with greater confidence and efficiency.
+We continue to invest in [Pulumi AI](https://www.pulumi.com/ai) and improve the quality of programs in TypeScript, Python, Go, and C#. Key enhancements include generating code that accurately imports providers, with a special focus on those authored by our community and partners, ensuring the use of correct syntax for Pulumi YAML, embracing modern C# syntax like top-level statements, and implementing comprehensive spellchecking for modules and parameters. These updates continue to push Pulumi AI as a robust, developer-friendly platform, enabling you to build with greater confidence and efficiency.
 
 ## Pulumi Cloud
 
@@ -81,7 +81,7 @@ The Pulumi Automation API now offers the functionality to [install the Pulumi CL
 
 ### New Provider Resources
 
-We have added 121 functions and 159 resources across our most popular providers, along with many more throughout our ecosystem. Notably, Palo Alto Networks is now supported in the [Azure Native Provider](/registry/packages/azure-native/)
+We have added 121 functions and 159 resources across our most popular providers, along with many more throughout our ecosystem. Notably, Palo Alto Networks is now supported in the [Azure Native Provider](/registry/packages/azure-native/).
 
 ![New Provider Resources and Functions](new-provider-resources-functions.png)
 
