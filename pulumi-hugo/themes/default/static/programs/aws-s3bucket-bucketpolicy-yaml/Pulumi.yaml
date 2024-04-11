@@ -11,19 +11,17 @@ resources:
     properties:
       bucket: ${myBucket.id}
       policy:
-        Version: "2012-10-17"
-        Statement:
-          - Effect: "Allow"
-            Principal:
-              Service: "lambda.amazonaws.com"
-            Action:
-              - "s3:PutObject"
-              - "s3:PutObjectAcl"
-            Resource:
-              Fn::Sub: "${myBucket.arn}/*"
+        fn::toJSON:
+          Version: "2012-10-17"
+          Statement:
+            - Effect: "Allow"
+              Principal:
+                Service: "lambda.amazonaws.com"
+              Action:
+                - "s3:PutObject"
+                - "s3:PutObjectAcl"
+              Resource: "${myBucket.arn}/*"
 
 outputs:
-  bucket_name:
-    value: ${myBucket.id}
-  bucket_arn:
-    value: ${myBucket.arn}
+  bucket_name: ${myBucket.id}
+  bucket_arn: ${myBucket.arn}

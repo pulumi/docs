@@ -26,13 +26,26 @@ else
 fi
 
 pushd "$programs_dir"
+    found_first_program=false
+
     for dir in */; do
         project="$(basename $dir)"
 
         # Optionally test only selected examples by setting an ONLY_TEST="<example-path>"
         # environment variable (e.g., ONLY_TEST="awsx-ecr-repository").
-        if [[ ! -z "$ONLY_TEST" && "$dir" != "$ONLY_TEST"* ]]; then
+        if [[ ! -z "$ONLY_TEST" && "$project" != "$ONLY_TEST"* ]]; then
             continue
+        fi
+
+        # Optionally test only from the specified example forward by setting ONLY_TEST_FROM="<example-path>".
+        if [[ ! -z "$ONLY_TEST_FROM" ]]; then
+            if [[ "$project" == "$ONLY_TEST_FROM"* && "$found_first_program" == false ]]; then
+                found_first_program=true
+            fi
+
+            if [ "$found_first_program" == false ]; then
+                continue
+            fi
         fi
 
         # Skip programs we know don't compile.
