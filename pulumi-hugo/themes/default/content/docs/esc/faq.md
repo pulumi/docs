@@ -6,7 +6,7 @@ h1: Pulumi ESC FAQs
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   pulumiesc:
-    weight: 6
+    weight: 7
     identifier: faq
 aliases:
   - /docs/pulumi-cloud/esc/faq

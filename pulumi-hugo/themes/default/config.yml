@@ -1,3 +1,12 @@
 module:
   hugoVersion:
     min: 0.92.0
+
+menus:
+  # This allows the "Integrate With Pulumi IaC" to appear in both the ESC "Getting Started" menu and the
+  # and the "Other Integrations" menu.
+  pulumiesc:
+    - name: Pulumi IaC
+      weight: 1
+      pageRef: /docs/esc/get-started/integrate-with-pulumi-iac
+      parent: esc-other-integrations
