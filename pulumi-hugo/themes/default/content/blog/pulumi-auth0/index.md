@@ -13,7 +13,7 @@ tags:
 
 *Guest author Lead Devops Engineer Fernando Carletti, writes about using the Pulumi Auth0 provider to manage resources at Credijusto.*
 
-Auth0 allows you to simplify your authentication process. The [Auth0 Provider](/registry/packages/auth0/api-docs/) allows you to manage the Auth0 resources, managing Applications, Databases, Social Connections, APIs, and other resources. Here at [Credijusto](https://credijusto.com) we use it manage authentication from the front-end through all the APIs that serve that request, leveraging the complexity of the authentication to Auth0.
+Auth0 allows you to simplify your authentication process. The [Auth0 Provider](/registry/packages/auth0/api-docs/) allows you to manage the Auth0 resources, managing Applications, Databases, Social Connections, APIs, and other resources. Here at Credijusto we use it manage authentication from the front-end through all the APIs that serve that request, leveraging the complexity of the authentication to Auth0.
 
 For this article, we will start a new Pulumi project in a fresh Auth0 account and fully configure it for a backend and a single page application and set up a connection to Github which allows you apps to authenticate with it using OAuth.
 

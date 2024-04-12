@@ -172,7 +172,7 @@ It's important to note that in this selected architecture, we're working within 
 5. **API:** API Gateway
 6. **Output:** Stack outputs
 
-Resources are contained within the VPC, policies and security groups exercise principle of least privilege, and logging is enabled. [`lambda_handler.py`](https://github.com/catmeme/arti/blob/main/src/arti_ai/lambda_handler.py) is responsible for handling API Gateway requests and imports the Slack app.
+Resources are contained within the VPC, policies and security groups exercise principle of least privilege, and logging is enabled. [`lambda_api_handler.py`](https://github.com/catmeme/arti/blob/main/src/arti_ai/lambda_api_handler.py) is responsible for handling API Gateway requests and imports the Slack app.
 
 ### Prerequisites
 

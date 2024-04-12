@@ -95,7 +95,7 @@ In this code snippet, we assume that the Snowflake connection parameters are pas
 
 #### Step 5: Packaging the Lambda Function
 
-To deploy our Lambda function, we need to package it along with the necessary dependencies. We can create a zip file that includes our Lambda function code (`lambda_handler.py`) and the required libraries (`snowflake-connector-python`, `pandas`, `numpy`). We can use the `pulumi.AssetArchive` function to package the code:
+To deploy our Lambda function, we need to package it along with the necessary dependencies. We can create a zip file that includes our Lambda function code (`lambda_api_handler.py`) and the required libraries (`snowflake-connector-python`, `pandas`, `numpy`). We can use the `pulumi.AssetArchive` function to package the code:
 
 ```python
 import pulumi

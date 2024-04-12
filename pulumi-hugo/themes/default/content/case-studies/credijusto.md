@@ -8,10 +8,9 @@ meta_desc: Learn how Credijusto worked with Pulumi to help its development team 
 
 customer_name: Credijusto
 customer_logo: /logos/customers/credijusto_logo.svg
-customer_url: https://credijusto.com
 
 exec_summary: |
-    Founded in 2015, [Credijusto](https://credijusto.com/) provides asset-backed loans and
+    Founded in 2015, Credijusto provides asset-backed loans and
     equipment leases to small and medium-sized enterprises (SMEs). With approximately 300
     employees, it has launched several new financial products at better rates, faster delivery,
     and peerless customer experience when compared to traditional lenders. Its operations
