@@ -1,6 +1,6 @@
 ---
 title: "New: ConfigGroup, ConfigFile resources for Java, YAML SDKs"
-date: 2024-03-30T00:00:00-07:00
+date: 2024-04-12T00:00:00-07:00
 
 meta_desc: >-
   Pulumi Kubernetes v4.10 offers new resources for applying Kubernetes manifests consistently across Pulumi SDKs, and broadens support to the Java and YAML SDKs.
