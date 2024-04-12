@@ -67,8 +67,9 @@ main:
     # case-sensitive
     tags:
         level: Beginner # Beginner, Intermediate, Advanced
-        topics: ["Azure", "Pulumi Deployments"]
+        topics: ["Pulumi Deployments"]
         languages:
+        clouds: ["Azure"]
 
 # The right hand side form section.
 form:

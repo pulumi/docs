@@ -68,8 +68,9 @@ main:
     # case-sensitive
     tags:
         level: Intermediate # Beginner, Intermediate, Advanced
-        topics: ["Backstage", "Oracle Cloud", "Platform Engineering"]
+        topics: ["Backstage", "Platform Engineering"]
         languages: ["YAML"]
+        clouds: ["Oracle"]
 
 # The right hand side form section.
 form:

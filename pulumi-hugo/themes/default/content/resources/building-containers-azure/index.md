@@ -62,8 +62,9 @@ main:
     # case-sensitive
     tags:
         level: Intermediate # Beginner, Intermediate, Advanced
-        topics: ["Azure", "Containers"]
-        languages: ["Go"]
+        topics: ["Containers"]
+        languages: ["Golang"]
+        clouds: ["Azure"]
 
 # The right hand side form section.
 form:

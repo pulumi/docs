@@ -64,8 +64,9 @@ main:
     # case-sensitive
     tags:
         level: Beginner # Beginner, Intermediate, Advanced
-        topics: ["Google Cloud"]
+        topics: []
         languages: []
+        clouds: ["Google Cloud"]
 
 # The right hand side form section.
 form:

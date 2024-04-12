@@ -66,7 +66,7 @@ main:
     tags:
         level: Beginner # Beginner, Intermediate, Advanced
         topics: []
-        languages: ["Go"]
+        languages: ["Golang"]
 
 # The right hand side form section.
 form:

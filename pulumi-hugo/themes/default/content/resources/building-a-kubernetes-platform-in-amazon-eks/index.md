@@ -69,8 +69,9 @@ main:
     # case-sensitive
     tags:
         level: Intermediate # Beginner, Intermediate, Advanced
-        topics: ["Kubernetes", "EKS"]
+        topics: ["Kubernetes"]
         languages: []
+        clouds: ["AWS"]
 
 # The right hand side form section.
 form:

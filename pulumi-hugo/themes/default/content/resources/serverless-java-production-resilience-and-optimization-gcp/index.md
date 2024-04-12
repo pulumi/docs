@@ -71,8 +71,9 @@ main:
     # case-sensitive
     tags:
         level:  # Beginner, Intermediate, Advanced
-        topics: ["Google Cloud", "Serverless"]
+        topics: ["Serverless"]
         languages: ["Java"]
+        clouds: ["Google Cloud"]
 
 # The right hand side form section.
 form:

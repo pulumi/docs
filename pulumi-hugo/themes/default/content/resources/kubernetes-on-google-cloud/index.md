@@ -69,8 +69,9 @@ main:
     # case-sensitive
     tags:
         level: Intermediate # Beginner, Intermediate, Advanced
-        topics: ["Google Cloud", "Kubernetes"]
+        topics: ["Kubernetes"]
         languages: []
+        clouds: ["Google Cloud"]
 
 # The right hand side form section.
 form:

@@ -69,8 +69,9 @@ main:
     # case-sensitive
     tags:
         level: Intermediate # Beginner, Intermediate, Advanced
-        topics: ["Kubernetes", "AKS"]
+        topics: ["Kubernetes"]
         languages: ["Python"]
+        clouds: ["Azure"]
 
 # The right hand side form section.
 form:

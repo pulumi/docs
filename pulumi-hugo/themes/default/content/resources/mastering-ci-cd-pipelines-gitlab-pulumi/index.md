@@ -67,8 +67,9 @@ main:
     # case-sensitive
     tags:
         level:  # Beginner, Intermediate, Advanced
-        topics: ["AWS", "CI/CD", "DevOps", "GitLab"]
+        topics: ["CI/CD", "DevOps", "GitLab"]
         languages: ["TypeScript"]
+        clouds: ["AWS"]
 
 # The right hand side form section.
 form:

@@ -63,7 +63,7 @@ export class FilterSelectOption {
         return (
             <div>
                 <label>
-                    <input type="checkbox" value={this.value} onChange={this.onChange.bind(this)} checked={this.selected} />
+                    <input type="checkbox" value={this.value} onChange={this.onChange.bind(this)} checked={this.selected} class={`${this.selected ? 'selected' : ''}`}/>
                     <slot />
                 </label>
             </div>

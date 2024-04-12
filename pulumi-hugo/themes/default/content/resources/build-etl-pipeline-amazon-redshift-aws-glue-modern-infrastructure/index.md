@@ -75,6 +75,7 @@ main:
         level: Beginner # Beginner, Intermediate, Advanced
         topics: ["AWS Glue"]
         languages: ["Python"]
+        clouds: ["AWS"]
 
 # The right hand side form section.
 form:

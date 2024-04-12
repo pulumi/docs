@@ -69,6 +69,7 @@ main:
         level: Beginner # Beginner, Intermediate, Advanced
         topics: []
         languages: ["TypeScript", "Python"]
+        clouds: ["AWS"]
 
 # The right hand side form section.
 form:

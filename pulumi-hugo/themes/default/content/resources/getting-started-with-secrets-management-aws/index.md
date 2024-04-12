@@ -73,6 +73,7 @@ main:
         level: Beginner # Beginner, Intermediate, Advanced
         topics: ["Pulumi ESC"]
         languages: []
+        clouds: ["AWS"]
 
 # The right hand side form section.
 form:

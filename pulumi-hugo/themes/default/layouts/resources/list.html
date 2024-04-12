@@ -17,17 +17,45 @@
     <!-- Create dicts so we can sort the resources by start/publish date. -->
     {{ $upcomingEvents := slice }}
     {{ $onDemandRecordings := slice }}
+    {{ $filterTopics := slice }}
+    {{ $filterLangs := slice }}
+    {{ $filterClouds := slice }}
     <!-- Create the resource data dicts for webinars. -->
     {{ range $webinars }}
+        {{ $listed := false }}
         <!-- If the webinar is not marked as unlisted we will add it to the list. -->
         {{ if eq .Params.unlisted false }}
             <!-- sort into upcoming / on-demand lists -->
             {{ $eventDateUnix := (add (.Params.main.sortable_date | time.AsTime).UnixMilli (duration "hour" 24).Milliseconds) }}
-                {{ if lt $nowUnix $eventDateUnix }}
-                    {{ $upcomingEvents = $upcomingEvents | append (dict "date" .Params.main.sortable_date "data" .) }}
-                {{ else if (or .Params.main.youtube_url .Params.main.external) }}
-                    {{ $onDemandRecordings = $onDemandRecordings | append (dict "date" .Params.main.sortable_date "data" .) }}
+            {{ if lt $nowUnix $eventDateUnix }}
+                {{ $listed = true }}
+                {{ $upcomingEvents = $upcomingEvents | append (dict "date" .Params.main.sortable_date "data" .) }}
+            {{ else if (or .Params.main.youtube_url .Params.main.external) }}
+                {{ $listed = true }}
+                {{ $onDemandRecordings = $onDemandRecordings | append (dict "date" .Params.main.sortable_date "data" .) }}
+            {{ end }}
+
+            {{ if and .Params.main.tags $listed }}
+                {{ if .Params.main.tags.topics }}
+                    {{ range  $topic := .Params.main.tags.topics }}
+                        {{ $filterTopics = $filterTopics | append $topic }}                                
+                    {{ end }}
                 {{ end }}
+                {{ if .Params.main.tags.languages }}
+                    {{ range  $lang := .Params.main.tags.languages }}
+                        {{ $filterLangs = $filterLangs | append $lang }}                                
+                    {{ end }}
+                {{ end }}
+                {{ if .Params.main.tags.clouds }}
+                    {{ range  $cloud := .Params.main.tags.clouds }}
+                        {{ $filterClouds = $filterClouds | append $cloud }}                                
+                    {{ end }}
+                {{ end }}
+            {{ end }}
+            {{ $filterTopics = sort ($filterTopics | uniq) }}
+            {{ $filterLangs = sort ($filterLangs | uniq) }}
+            {{ $filterClouds = sort ($filterClouds | uniq) }}
+
         {{ end }}
     {{ end }}
 
@@ -37,11 +65,33 @@
         {{ if eq .Params.unlisted false }}
             <!-- sort into upcoming / on-demand lists -->
             {{ $eventDateUnix := (add (.Params.main.sortable_date | time.AsTime).UnixMilli (duration "hour" 24).Milliseconds) }}
-                {{ if lt $nowUnix $eventDateUnix }}
-                    {{ $upcomingEvents = $upcomingEvents | append (dict "date" .Params.main.sortable_date "data" .) }}
-                {{ else if (or .Params.main.youtube_url .Params.main.external) }}
-                    {{ $onDemandRecordings = $onDemandRecordings | append (dict "date" .Params.main.sortable_date "data" .) }}
+            {{ if lt $nowUnix $eventDateUnix }}
+                {{ $upcomingEvents = $upcomingEvents | append (dict "date" .Params.main.sortable_date "data" .) }}
+            {{ else if (or .Params.main.youtube_url .Params.main.external) }}
+                {{ $onDemandRecordings = $onDemandRecordings | append (dict "date" .Params.main.sortable_date "data" .) }}
+            {{ end }}
+
+            {{ if .Params.main.tags }}
+                {{ if .Params.main.tags.topics }}
+                    {{ range  $topic := .Params.main.tags.topics }}
+                        {{ $filterTopics = $filterTopics | append $topic }}                                
+                    {{ end }}
                 {{ end }}
+                {{ if .Params.main.tags.languages }}
+                    {{ range  $lang := .Params.main.tags.languages }}
+                        {{ $filterLangs = $filterLangs | append $lang }}                                
+                    {{ end }}
+                {{ end }}
+                {{ if .Params.main.tags.clouds }}
+                    {{ range  $cloud := .Params.main.tags.clouds }}
+                        {{ $filterClouds = $filterClouds | append $cloud }}                                
+                    {{ end }}
+                {{ end }}
+            {{ end }}
+            {{ $filterTopics = sort ($filterTopics | uniq) }}
+            {{ $filterLangs = sort ($filterLangs | uniq) }}
+            {{ $filterClouds = sort ($filterClouds | uniq) }}
+
         {{ end }}
     {{ end }}
 
@@ -54,36 +104,84 @@
             <span id="on-demand" class="hidden"></span>
 
             <!-- The event filter -->
-            <div class="pulumi-event-list-container event-list-filter container mx-auto flex border-b-2">
-                <div class="scroll-container hidden lg:flex items-center">
-                    <button id="slideBackwards"><i class="text-gray-500 text-3xl fas fa-angle-left"></i></button>
+            <div class="pulumi-event-list-container event-list-filter container mx-auto w-full flex flex-col-reverse lg:flex-row flex-wrap justify-between border-b-2">
+                <div class="w-2/3 sm:w-1/2 md:w-auto">
+                    <div class="scroll-container hidden lg:flex items-center">
+                        <button id="slideBackwards"><i class="text-gray-500 text-3xl fas fa-angle-left"></i></button>
+                    </div>
+                    <ul id="event-list-filter-nav" class="flex flex-col md:flex-row px-4 lg:px-0">
+                        {{ range $item := .Params.sections }}
+                            <li data-filter-name="{{ $item.anchor }}" class="mb-0">
+                                <a class="whitespace-nowrap" href="#{{ $item.anchor }}">
+                                    <span>{{ $item.label }}</span>
+                                </a>
+                            </li>
+                        {{ end }}
+                    </ul>
+                    <div class="scroll-container hidden lg:flex items-center">
+                        <button id="slideForward"><i class="text-gray-500 text-3xl fas fa-angle-right"></i></button>
+                    </div>
                 </div>
-                <ul id="event-list-filter-nav">
-                    {{ range $item := .Params.sections }}
-                        <li data-filter-name="{{ $item.anchor }}" class="mb-0">
-                            <a class="whitespace-nowrap" href="#{{ $item.anchor }}">
-                                <span>{{ $item.label }}</span>
-                            </a>
-                        </li>
-                    {{ end }}
-                </ul>
-                <div class="scroll-container hidden lg:flex items-center">
-                    <button id="slideForward"><i class="text-gray-500 text-3xl fas fa-angle-right"></i></button>
-                </div>
+                <pulumi-filter-select class="flex justify-self-end w-full md:w-1/2">
+                    <!-- skill level filters -->
+                    <pulumi-filter-select-option-group name="level" class="items-center">
+                        <div class="toggle" slot="toggle">Skill Level</div>
+                        <div class="options">
+                            <pulumi-filter-select-option value="beginner" label="Beginner">Beginner</pulumi-filter-select-option>
+                            <pulumi-filter-select-option value="intermediate" label="Intermediate">Intermediate</pulumi-filter-select-option>
+                            <pulumi-filter-select-option value="advanced" label="Advanced">Advanced</pulumi-filter-select-option>
+                        </div>
+                    </pulumi-filter-select-option-group>
+
+                    <!-- cloud filters -->
+                    <pulumi-filter-select-option-group name="cloud" class="mx-1 items-center">
+                        <div class="toggle" slot="toggle">Cloud</div>
+                        <div class="options">
+                            {{ range $cloud := $filterClouds }}
+                                {{ $id := (lower (replace $cloud " " "-")) }}
+                                <pulumi-filter-select-option value="{{ $id }}" label="{{ $cloud }}">{{ $cloud }}</pulumi-filter-select-option>
+                            {{ end }}
+                        </div>
+                    </pulumi-filter-select-option-group>
+
+                    <!-- topic filters -->
+                    <pulumi-filter-select-option-group name="topic" class="mx-1 items-center">
+                        <div class="toggle" slot="toggle">Topic</div>
+                        <div class="options">
+                            {{ range $topic := $filterTopics }}
+                                {{ $id := (lower (replace $topic " " "-")) }}
+                                <pulumi-filter-select-option value="{{ $id }}" label="{{ $topic }}">{{ $topic }}</pulumi-filter-select-option>
+                            {{ end }}
+                        </div>
+                    </pulumi-filter-select-option-group>
+
+                    <!-- language filters -->
+                    <pulumi-filter-select-option-group name="language" class="mx-1 items-center">
+                        <div class="toggle" slot="toggle">Language</div>
+                        <div class="options">
+                            {{ range $lang := $filterLangs }}
+                                {{ $id := (lower (replace $lang " " "-")) }}
+                                <pulumi-filter-select-option value="{{ $id }}" label="{{ $lang }}">{{ $lang }}</pulumi-filter-select-option>
+                            {{ end }}
+                        </div>
+                    </pulumi-filter-select-option-group>
+
+                </pulumi-filter-select>
             </div>
 
             <!-- Resources list. -->
             {{ $upcomingMonthHeader := "" }}
             {{ $ondemandMonthHeader := "" }}
-            <ul class="flex flex-wrap list-none p-0 mb-8 sm:p-2 resource-list">
+            <ul class="event-list flex flex-wrap list-none p-0 mb-8 sm:p-2 resource-list">
                 <!-- Loop over the upcoming resource items to create the tiles ascending -->
                 {{ range sort $upcomingEvents "date" "asc" }}
+                    {{ $data := .data }}
+
                     {{ $datetime := "" }}
                     {{ $link := "" }}
                     {{ $external := false }}
                     {{ $filters := slice }}
-
-                    {{ $data := .data }}
+                    {{ $tags := $data.Params.main.tags }}
                     {{ $displayDate := dateFormat "January 2, 2006" .date }}
 
                     {{ if eq $data.Type "webinars" }}
@@ -101,11 +199,26 @@
                             {{ $filters = $filters | append "featured" }}
                         {{ end }}
 
+                        <!-- add tags to the filters list -->
+                        {{ if $tags }}
+                            {{ $filters = $filters | append (lower $tags.level) }}
+                            {{ range  $topic := $tags.topics }}
+                                {{ $filters = $filters | append (lower (replace $topic " " "-")) }}                                
+                            {{ end }}
+                            {{ range  $lang := $tags.languages }}
+                                {{ $filters = $filters | append (lower (replace $lang " " "-")) }}                                
+                            {{ end }}
+                            {{ range  $cloud := $tags.clouds }}
+                                {{ $filters = $filters | append (lower (replace $cloud " " "-")) }}                                
+                            {{ end }}
+                        {{ end }}
+
                         <!-- place the event in the correct tab, add a month header if needed -->
                         {{ $filters = $filters | append "upcoming" }}
                         {{ if ne $upcomingMonthHeader (.date | time.Format "January 2006") }}
                             {{ $upcomingMonthHeader = (.date | time.Format "January 2006") }}
-                            <li  class="w-full m-0 px-4 py-6 lg:w-full group" data-filters="{{ delimit $filters " " }}">
+                            {{ $filterMonth := (.date | time.Format "Jan-06") }}
+                            <li  class="w-full m-0 px-4 py-6 lg:w-full group month-label {{ $filterMonth | lower }}" data-filters="upcoming">
                                 <span class="text-2xl"><i class="far fa-calendar mr-2"></i>{{ $upcomingMonthHeader }}</span>
                             </li>
                         {{ end }}      
@@ -124,7 +237,7 @@
                     {{ $link := "" }}
                     {{ $external := false }}
                     {{ $filters := slice }}
-
+                    {{ $tags := $data.Params.main.tags }}
                     {{ $displayDate = dateFormat "January 2, 2006" .date }}
 
                     <!-- Set the values based on the type of the page. -->
@@ -141,11 +254,26 @@
                         {{ if $data.Params.featured }}
                             {{ $filters = $filters | append "featured" }}
                         {{ end }}
+                        
+                        <!-- add tags to the filters list -->
+                        {{ if $tags }}
+                            {{ $filters = $filters | append (lower $tags.level) }}
+                            {{ range  $topic := $tags.topics }}
+                                {{ $filters = $filters | append (lower (replace $topic " " "-")) }}                                
+                            {{ end }}
+                            {{ range  $lang := $tags.languages }}
+                                {{ $filters = $filters | append (lower (replace $lang " " "-")) }}                                
+                            {{ end }}
+                            {{ range  $cloud := $tags.clouds }}
+                                {{ $filters = $filters | append (lower (replace $cloud " " "-")) }}                                
+                            {{ end }}
+                        {{ end }}
 
                         {{ $filters = $filters | append "on-demand" }}
                         {{ if ne $ondemandMonthHeader (.date | time.Format "January 2006") }}
                             {{ $ondemandMonthHeader = (.date | time.Format "January 2006") }}
-                            <li  class="w-full m-0 px-4 py-6 lg:w-full group" data-filters="{{ delimit $filters " " }}">
+                            {{ $filterMonth := (.date | time.Format "Jan-06") }}
+                            <li  class="w-full m-0 px-4 py-6 lg:w-full group month-label {{ $filterMonth | lower }}" data-filters="on-demand">
                                 <span class="text-2xl"><i class="fa fa-video mr-2"></i>{{ $ondemandMonthHeader }}</span>
                             </li>
                         {{ end }}
@@ -155,6 +283,7 @@
                     {{ partial "events/event-card.html" $tileOptions }}
                 {{ end }}
             </ul>
+            <div class="no-results text-center text-lg mb-8 hidden">Looks like we don't have any events that match your filters.</div>
         </div>
     </div>
 {{ end }}

@@ -67,8 +67,9 @@ main:
     # case-sensitive
     tags:
         level: Intermediate # Beginner, Intermediate, Advanced
-        topics: ["Tailscale", "AWS"]
+        topics: ["Tailscale"]
         languages: ["TypeScript"]
+        clouds: ["AWS"]
 
 # The right hand side form section.
 form:

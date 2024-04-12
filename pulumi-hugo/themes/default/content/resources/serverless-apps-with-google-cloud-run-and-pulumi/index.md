@@ -66,8 +66,9 @@ main:
     # case-sensitive
     tags:
         level: Beginner # Beginner, Intermediate, Advanced
-        topics: ["Google Cloud", "Docker"]
+        topics: ["Docker"]
         languages: ["Python"]
+        clouds: ["Google Cloud"]
 
 # The right hand side form section.
 form:

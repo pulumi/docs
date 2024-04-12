@@ -1,38 +1,73 @@
-/**
- * sortResourceItems sorts the visible items in the resource list.
- *
- * @param {bool} sortDescending Whether the items should be sorted in descending order.
- */
-function sortResourceItems(sortDescending) {
-    const resourceList = $("ul.resource-list");
-    const items = resourceList.children("li").detach();
+const filterResourceItems = (filters) => {
+    const events = $(".event-list").find(".event-card");
+    const monthLabels = $(".event-list").find(".month-label");
+    $(monthLabels).css("display", "none")
+    const noResultsMessage = $(".pulumi-event-list-container").find(".no-results");
+    $(noResultsMessage).removeClass("hidden");
 
-    Array.from(items).sort(function (a, b) {
-        const firstDate = $(a).attr("data-display-date");
-        const secondDate = $(b).attr("data-display-date");
+    if (filters.length > 0) {
+        $(events).each((i, event) => {
+            const tags = ($(event).attr("data-filters")).split(" ");
+            const dateLabel = $(event).attr("data-month-label");
 
-        if (sortDescending) {
-            return new Date(firstDate).getTime() < new Date(secondDate).getTime() ? 1 : -1;
-        }
-        return new Date(firstDate).getTime() > new Date(secondDate).getTime() ? 1 : -1;
-    });
-
-    resourceList.append(items);
-}
-
-$(function () {
-    const pathParts = location.pathname.split("/");
-    if (pathParts.length > 1 && pathParts[1] === "resources") {
-        window.addEventListener("hashchange", function () {
-            const shouldSortDescending = location.hash !== "#upcoming";
-            sortResourceItems(shouldSortDescending);
+            if (!tags.includes(location.hash.slice(1))) {
+                $(event).css("display", "none");
+            } else {
+                let matches = 0;
+                tags.forEach(tag => {
+                    if (filters.includes(tag)) {
+                        matches++;
+                    }
+                });
+                if (matches > 0) {
+                    $(noResultsMessage).addClass("hidden");
+                    $(event).css("display", "block");
+                    $(`.month-label.${dateLabel}`).css("display", "block");
+                } else {
+                    $(event).css("display", "none");
+                }
+            }
         });
+    } else {
+        $(events).each((i, event) => {
+            const tags = ($(event).attr("data-filters")).split(" ");
+            const dateLabel = $(event).attr("data-month-label");
 
-        $(document).ready(function () {
-            const shouldSortDescending = location.hash !== "#upcoming";
-            sortResourceItems(shouldSortDescending);
+            if (!tags.includes(location.hash.slice(1))) {
+                $(event).css("display", "none");
+                const dateLabel = $(event).attr("data-month-label");
+            } else {
+                $(noResultsMessage).addClass("hidden");
+                $(event).css("display", "block");
+                $(`.month-label.${dateLabel}`).css("display", "block");
+            }
         });
     }
+}
+
+$(".pulumi-event-list-container").on("filterSelect", event => {
+    const detail: unknown = event.detail;
+    const filters = detail as any[];
+    const filtersText: string[] = [];
+
+    filters.forEach(filter => {
+        filtersText.push(filter.value);
+    });
+
+    filterResourceItems(filtersText);
+});
+
+$(window).on('hashchange', function() {
+    const options = $('pulumi-filter-select-option').toArray() as Array<any>;
+    let selectedFilters = [];
+
+    options.forEach((option) => {
+        const shadow = option.shadowRoot;
+        if($(shadow).find('.selected').length > 0) {
+            selectedFilters.push(option.value);
+        }
+    })
+    filterResourceItems(selectedFilters);
 });
 
 $(function () {

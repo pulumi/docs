@@ -67,8 +67,9 @@ main:
     # case-sensitive
     tags:
         level: Beginner # Beginner, Intermediate, Advanced
-        topics: ["AI", "AWS"]
+        topics: ["AI"]
         languages: []
+        clouds: ["AWS"]
 
 # The right hand side form section.
 form:

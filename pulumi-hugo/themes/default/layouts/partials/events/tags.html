@@ -2,6 +2,11 @@
     {{ if .tags.level }}
         <div class="bg-purple-100 text-gray-900 text-sm px-2 mr-2 mb-2 rounded-md">{{ .tags.level }}</div>
     {{ end }}
+    {{ if .tags.clouds }}
+        {{ range $cloud := .tags.clouds }}
+            <div class="bg-purple-100 text-gray-900 text-sm px-2 mr-2 mb-2 rounded-md">{{ $cloud }}</div>
+        {{ end }}
+    {{ end }}
     {{ if .tags.topics }}
         {{ range $topic := .tags.topics }}
             <div class="bg-purple-100 text-gray-900 text-sm px-2 mr-2 mb-2 rounded-md">{{ $topic }}</div>

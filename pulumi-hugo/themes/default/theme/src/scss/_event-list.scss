@@ -59,6 +59,48 @@
             }
         }
     }
+
+    pulumi-filter-select {
+        @apply items-end pb-4;
+
+        pulumi-filter-select-option-group {
+            @apply font-display text-base;
+    
+            .toggle {
+                @apply pl-2 pr-6 py-1 rounded bg-white border border-gray-300 transition-all;
+    
+                @screen md {
+                    @apply w-32;
+                }
+    
+                &:hover {
+                    @apply text-black;
+                    background-color: #e8e8ec;
+                }
+            }
+    
+            .options {
+                @apply bg-white py-2 pl-1 pr-4 rounded shadow mt-1 border border-gray-300 leading-loose z-50;
+    
+                @screen md {
+                    @apply pr-8;
+                }
+            }
+    
+            &:hover,
+            &[expanded] {
+                &::part(toggle) {
+                    @apply text-black;
+                }
+    
+                .toggle {
+                    @apply text-black;
+                    background-color: #e8e8ec;
+                }
+            }
+        }
+    }
+    
 }
 
 @each $filter-name in "upcoming" "on-demand" "ai-answers"{

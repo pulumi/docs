@@ -58,6 +58,7 @@ main:
         level: Intermediate # Beginner, Intermediate, Advanced
         topics: ["AWS Lambda"]
         languages: []
+        clouds: ["AWS"]
 
 # The right hand side form section.
 form:

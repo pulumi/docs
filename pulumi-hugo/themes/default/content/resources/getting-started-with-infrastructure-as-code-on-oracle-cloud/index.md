@@ -56,8 +56,9 @@ main:
     # case-sensitive
     tags:
         level: Beginner # Beginner, Intermediate, Advanced
-        topics: ["Oracle Cloud", "Kubernetes"]
+        topics: ["Kubernetes"]
         languages: ["Python"]
+        clouds: ["Oracle"]
 
 # The right hand side form section.
 form:

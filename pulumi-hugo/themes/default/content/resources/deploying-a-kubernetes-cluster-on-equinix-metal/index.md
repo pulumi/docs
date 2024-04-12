@@ -67,8 +67,9 @@ main:
     # case-sensitive
     tags:
         level: Beginner # Beginner, Intermediate, Advanced
-        topics: ["Equinix", "Kubernetes"]
+        topics: ["Kubernetes"]
         languages: []
+        clouds: ["Equinix"]
 
 # The right hand side form section.
 form:

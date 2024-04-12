@@ -68,8 +68,9 @@ main:
     # case-sensitive
     tags:
         level: Intermediate # Beginner, Intermediate, Advanced
-        topics: ["AWS", "AWS Proton"]
+        topics: ["AWS Proton"]
         languages: []
+        clouds: ["AWS"]
 
 # The right hand side form section.
 form:

@@ -56,8 +56,9 @@ main:
     # case-sensitive
     tags:
         level: Beginner # Beginner, Intermediate, Advanced
-        topics: ["AWS", "Kubernetes", "Docker"]
+        topics: ["Kubernetes", "Docker"]
         languages: []
+        clouds: ["AWS"]
 
 # The right hand side form section.
 form:

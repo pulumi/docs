@@ -68,8 +68,9 @@ main:
     # case-sensitive
     tags:
         level: Beginner # Beginner, Intermediate, Advanced
-        topics: ["AI", "LangChain", "AWS"]
+        topics: ["AI", "LangChain"]
         languages: ["TypeScript"]
+        clouds: ["AWS"]
 
 # The right hand side form section.
 form:

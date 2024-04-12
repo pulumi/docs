@@ -67,8 +67,9 @@ main:
     # case-sensitive
     tags:
         level: Beginner # Beginner, Intermediate, Advanced
-        topics: ["Azure"]
+        topics: []
         languages: ["Java"]
+        clouds: ["Azure"]
 
 # The right hand side form section.
 form:

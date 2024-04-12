@@ -69,8 +69,9 @@ main:
     # case-sensitive
     tags:
         level: Beginner # Beginner, Intermediate, Advanced
-        topics: ["DigitalOcean"]
+        topics: []
         languages: []
+        clouds: ["DigitalOcean"]
 
 # The right hand side form section.
 form:
