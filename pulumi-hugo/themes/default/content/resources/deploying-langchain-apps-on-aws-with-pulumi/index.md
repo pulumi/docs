@@ -1,7 +1,7 @@
 ---
 # Name of the event, <= 60 characters
 title: Deploying LangChain Applications on AWS with Pulumi
-meta_desc: This workshop will show a practical AI use case for Pulumi. Using Pulumi & TypeScript, we'll demonstrate deploying a LangChain/LangServe app on AWS.
+meta_desc: This workshop will show a practical AI use case for Pulumi. Using Pulumi & TypeScript, we'll demonstrate deploying a LangChain app on AWS.
 meta_image: "/images/resources/deploy-langchain-apps-aws-engin-lance.png"
 
 # A featured webinar will display first in the list.
@@ -49,21 +49,18 @@ main:
 
     # Description of the webinar.
     description: |
-        In this workshop, you will first be introduced to Pulumi, an infrastructure-as-code platform, where you can use familiar programming languages to provision modern cloud infrastructure. Following that introduction, attendees will see how to use Pulumi to deploy an AI application using LangChain/LangServe onto AWS, providing a practical use case for how infrastructure as code helps streamline deploying AI applications.
+        In this workshop, you will first be introduced to Pulumi, an infrastructure-as-code platform, where you can use familiar programming languages to provision modern cloud infrastructure. Following that introduction, attendees will see how to use Pulumi to deploy an AI application using LangChain with FlowAI onto AWS, providing a practical use case for how infrastructure as code helps streamline deploying AI applications.
 
     learn:
         - The basics of Pulumi for infrastructure as code
-        - The basics of LangChain and LangServe
-        - How to deploy a LangChain/LangServe application on AWS using Pulumi
+        - The basics of LangChain
+        - How to deploy a LangChain application on AWS using Pulumi
 
     # The webinar presenters
     presenters:
         - name: Engin Diri
           role: Sr. Solutions Architect, Pulumi
           photo: /images/team/engin-diri.jpg
-        - name: Lance Martin
-          role: Software Engineer, LangChain
-          photo: /images/people/lance-martin.jpg
 
     # case-sensitive
     tags:
