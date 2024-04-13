@@ -19,7 +19,8 @@ based on how your application or workload is packaged. The options include stron
 standard Kubernetes types, [Helm](https://helm.sh/) charts, [Kustomizations](https://kustomize.io/), and Kubernetes manifests.
 
 In v4.10, we leveled up the support for working with Kubernetes manifests with the introduction of the `yaml/v2` package.
-The package provides new implementations of the `ConfigGroup` and `ConfigFile` resources, expanding support to the
+The package provides new implementations of the [`ConfigGroup`](/registry/packages/kubernetes/api-docs/yaml/v2/configgroup/)
+and [`ConfigFile`](/registry/packages/kubernetes/api-docs/yaml/v2/configfile/) resources, expanding support to the
 Pulumi Java SDK and to Pulumi YAML. The new implementations are also smarter about applying the objects in the correct order.
 
 Please note that these resources are in a preview stage of maturity, as we continue to round out the feature set.
@@ -50,7 +51,7 @@ The `ConfigGroup` resource accepts the following input properties:
 Note that all objects defined within the manifest must have a `metadata.name` field;
 Pulumi [autonaming](https://www.pulumi.com/docs/concepts/resources/names/#autonaming) is not supported.
 
-See the [API Reference documentation](https://www.pulumi.com/registry/packages/kubernetes/api-docs/yaml/v2/configgroup/)
+See the [API Reference documentation](/registry/packages/kubernetes/api-docs/yaml/v2/configgroup/)
 for more information.
 
 ### Manifest Files
@@ -167,7 +168,7 @@ The `ConfigFile` resource accepts the following input properties:
 | `resourcePrefix` | A prefix for auto-generated names of the child resources. Defaults to the `ConfigFile` name. |
 | `skipAwait`      | Skips over the readiness checks on the child resources.                                       |
 
-See the [API Reference documentation](https://www.pulumi.com/registry/packages/kubernetes/api-docs/yaml/v2/configfile/)
+See the [API Reference documentation](/registry/packages/kubernetes/api-docs/yaml/v2/configfile/)
 for more information.
 
 ### Manifest File
