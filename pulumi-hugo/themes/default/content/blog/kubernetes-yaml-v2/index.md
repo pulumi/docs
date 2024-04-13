@@ -1,7 +1,7 @@
 ---
 title: "New: ConfigGroup, ConfigFile resources for Java, YAML SDKs"
 date: 2024-04-12T00:00:00-07:00
-
+meta_image: meta.png
 meta_desc: >-
   Pulumi Kubernetes v4.10 offers new resources for applying Kubernetes manifests consistently across Pulumi SDKs, and broadens support to the Java and YAML SDKs.
 
@@ -49,6 +49,9 @@ The `ConfigGroup` resource accepts the following input properties:
 
 Note that all objects defined within the manifest must have a `metadata.name` field;
 Pulumi [autonaming](https://www.pulumi.com/docs/concepts/resources/names/#autonaming) is not supported.
+
+See the [API Reference documentation](https://www.pulumi.com/registry/packages/kubernetes/api-docs/yaml/v2/configgroup/)
+for more information.
 
 ### Manifest Files
 
@@ -163,6 +166,9 @@ The `ConfigFile` resource accepts the following input properties:
 | `file`           | A file or URL to a Kubernetes manifest file.                                                  |
 | `resourcePrefix` | A prefix for auto-generated names of the child resources. Defaults to the `ConfigFile` name. |
 | `skipAwait`      | Skips over the readiness checks on the child resources.                                       |
+
+See the [API Reference documentation](https://www.pulumi.com/registry/packages/kubernetes/api-docs/yaml/v2/configfile/)
+for more information.
 
 ### Manifest File
 
