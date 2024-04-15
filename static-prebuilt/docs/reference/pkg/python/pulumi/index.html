@@ -1294,8 +1294,8 @@ Output so that dependent resources can be properly tracked.</p>
 <p>‘func’ is not allowed to make resources.</p>
 <p>‘func’ can return other Outputs.  This can be handy if you have a Output&lt;SomeVal&gt;
 and you want to get a transitive dependency of it.</p>
-<p>This function will be called during execution of a <cite>pulumi up</cite> request.  It may not run
-during <cite>pulumi preview</cite> (as the values of resources are of course may not be known then).</p>
+<p>This function will be called during execution of a <cite>pulumi up</cite> or <cite>pulumi preview</cite> request.
+It may not run when the values of the resource is unknown.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>func</strong> (<em>Callable</em><em>[</em><em>[</em><em>T_co</em><em>]</em><em>,</em><em>Input</em><em>[</em><em>U</em><em>]</em><em>]</em>) – A function that will, given this Output’s value, transform the value to
