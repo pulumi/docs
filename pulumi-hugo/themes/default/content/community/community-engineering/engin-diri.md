@@ -7,6 +7,11 @@ layout: community-engineering/single
 aliases:
   - /engin
 talks:
+  - event: "GitOpsCon NA 2024"
+    title: "Gain Platform Superpowers with the KEBAP Stack!"
+    url: https://gitopsconna2024.sched.com/event/b9b16b655584d1d2a27855757eb3fc37
+    date: 2024-04-15T12:05:00.000-07:00
+    slides: https://static.sched.com/hosted_files/gitopsconna2024/65/gain-platform-superpowers-with-the-kebap-stack.pdf
   - event: "CNCF-hosted Co-located Events Europe 2024"
     title: "Empowering Giants: Guide Your Enterprise with CNOE in Operational Tech Choices"
     url: https://colocatedeventseu2024.sched.com/event/1YFgu/cl-lightning-talk-empowering-giants-guide-your-enterprise-with-cnoe-in-operational-tech-choices-engin-diri-pulumi
