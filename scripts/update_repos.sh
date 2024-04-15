@@ -74,8 +74,9 @@ update_repo() {
     mkdir -p "../${repo}" && cd "../${repo}"
     git remote -v || git clone "git@github.com:pulumi/${repo}.git" .
     echo -e "\033[0;93mPulling changes\033[0m"
-    git checkout master >/dev/null
-    git pull origin master >/dev/null
+    default_branch=$(git symbolic-ref refs/remotes/origin/HEAD | cut -d'/' -f4)
+    git checkout ${default_branch} >/dev/null
+    git pull origin ${default_branch} >/dev/null
     git fetch --tags >/dev/null
     echo -e "\033[0;93mChecking out latest release\033[0m"
     LATEST_RELEASE=$(git describe --tags `git rev-list --max-count=1 --tags --not --tags='*-dev'`)
