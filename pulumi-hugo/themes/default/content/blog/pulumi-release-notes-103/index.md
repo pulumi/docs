@@ -27,7 +27,7 @@ As always, we have been actively rolling out new features in response to the inv
 - [Core](#core)
   - [Dev Releases for the Pulumi CLI and SDKs](#dev-releases-for-the-pulumi-cli-and-sdks)
   - [Automation API support to install Pulumi CLI](#automation-api-support-to-install-pulumi-cli)
-  - [Node.js Monorepo Support](#node.sj-monorepo-support)
+  - [Node.js Monorepo Support](#nodejs-monorepo-support)
 - [Providers and Packages](#providers-and-packages)
   - [New Provider Resources](#new-provider-resources)
   - [New Community Providers](#new-community-providers)
@@ -72,7 +72,7 @@ Pulumi ESC now features comprehensive Audit Logs for all Create, Read, Open, Upd
 
 ### Dev Releases for the Pulumi CLI and SDKs
 
-We introduced [Dev Releases](/blog/introducing-dev-releases/), allowing developers to access the latest features and improvements in Pulumi's infrastructure as code tools ahead of their official release. With this initiative, we aim to engage our community and gather early feedback, enhancing the product development process. This is crucial for identifying and resolving potential issues early, contributing to a smoother transition to new releases. Dev Releases will also be at the cutting edge of Pulumi's evolving capabilities, with the latest bug fixes and features available within minutes of Pulumi developers merging. For instructions on how to use the CLI Dev releases see the [Install Docs](/docs/install/#installing-dev-releases), and for pre-release versions of Dev SDKs see the docs for [Node.js](/docs/languages-sdks/javascript/#dev-versions), [Python](/docs/languages-sdks/python/#dev-versions), [.NET](docs/languages-sdks/dotnet/#dev-versions), and [Go](/docs/languages-sdks/go/#dev-versions).
+We introduced [Dev Releases](/blog/introducing-dev-releases/), allowing developers to access the latest features and improvements in Pulumi's infrastructure as code tools ahead of their official release. With this initiative, we aim to engage our community and gather early feedback, enhancing the product development process. This is crucial for identifying and resolving potential issues early, contributing to a smoother transition to new releases. Dev Releases will also be at the cutting edge of Pulumi's evolving capabilities, with the latest bug fixes and features available within minutes of Pulumi developers merging. For instructions on how to use the CLI Dev releases see the [install docs](/docs/install/#installing-dev-releases), and for pre-release versions of Dev SDKs see the docs for [Node.js](/docs/languages-sdks/javascript/#dev-versions), [Python](/docs/languages-sdks/python/#dev-versions), [.NET](docs/languages-sdks/dotnet/#dev-versions), and [Go](/docs/languages-sdks/go/#dev-versions).
 
 ### Automation API support to install Pulumi CLI 
 
