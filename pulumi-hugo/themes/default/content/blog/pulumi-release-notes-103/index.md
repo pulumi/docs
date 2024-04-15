@@ -37,7 +37,7 @@ As always, we have been actively rolling out new features in response to the inv
 
 ### Pulumi AI Evolution
 
-We continue to invest in [Pulumi AI](https://www.pulumi.com/ai) and improve the quality of programs in TypeScript, Python, Go, and C#. Key enhancements include generating code that accurately imports providers, with a special focus on those authored by our community and partners, ensuring the use of correct syntax for Pulumi YAML, embracing modern C# syntax like top-level statements, and implementing comprehensive spellchecking for modules and parameters. These updates continue to push Pulumi AI as a robust, developer-friendly platform, enabling you to build with greater confidence and efficiency.
+We continue to invest in [Pulumi AI](https://www.pulumi.com/ai) and improve the quality of programs in TypeScript, Python, Go, and C#. Key enhancements include generating code that accurately imports providers, with a special focus on those authored by our community and partners, ensuring the use of correct syntax for Pulumi YAML, embracing modern C# syntax like top-level statements, and implementing comprehensive spellchecking for modules and parameters. These updates continue to push Pulumi AI as a robust, developer-friendly platform, enabling you to build with greater confidence and efficiency. Moreover, you can now cancel in-progress prompts within Pulumi AI should you need to make any changes to your prompt. 
 
 ## Pulumi Cloud
 
@@ -75,7 +75,7 @@ We introduced [Dev Releases](/blog/introducing-dev-releases/), allowing develope
 
 ### Automation API support to install Pulumi CLI 
 
-The Pulumi Automation API now offers the functionality to [install the Pulumi CLI](https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/auto#InstallPulumiCommand) directly through the API. This feature enables deploying programs utilizing the Automation API without the need for prior CLI installation. Explore the [example code](https://github.com/pulumi/automation-api-examples/tree/main/go/cli_installation) to see how to integrate the new API seamlessly. 
+The Pulumi Automation API now offers the functionality to [install the Pulumi CLI](https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/auto#InstallPulumiCommand) directly through the API. This feature enables deploying programs utilizing the Automation API without the need for prior CLI installation. Explore the example code in [go](https://github.com/pulumi/automation-api-examples/tree/main/go/cli_installation), [node.js](docs/reference/pkg/nodejs/pulumi/pulumi/classes/automation.PulumiCommand.html#install), [python](/docs/reference/pkg/python/pulumi/#pulumi.automation.PulumiCommand.install), and [.NET](https://github.com/pulumi/pulumi-dotnet/blob/edf4a5e904110f198d579d8db0b178aa9af9cdfa/sdk/Pulumi.Automation/Commands/LocalPulumiCommand.cs#L107) to see how to integrate the new API seamlessly. 
 
 ## Providers and Packages
 
