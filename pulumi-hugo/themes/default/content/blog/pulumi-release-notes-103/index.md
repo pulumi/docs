@@ -27,6 +27,7 @@ As always, we have been actively rolling out new features in response to the inv
 - [Core](#core)
   - [Dev Releases for the Pulumi CLI and SDKs](#dev-releases-for-the-pulumi-cli-and-sdks)
   - [Automation API support to install Pulumi CLI](#automation-api-support-to-install-pulumi-cli)
+  - [Node.js Monorepo Support](#node.sj-monorepo-support)
 - [Providers and Packages](#providers-and-packages)
   - [New Provider Resources](#new-provider-resources)
   - [New Community Providers](#new-community-providers)
@@ -75,7 +76,11 @@ We introduced [Dev Releases](/blog/introducing-dev-releases/), allowing develope
 
 ### Automation API support to install Pulumi CLI 
 
-The Pulumi Automation API now offers the functionality to [install the Pulumi CLI](https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/auto#InstallPulumiCommand) directly through the API. This feature enables deploying programs utilizing the Automation API without the need for prior CLI installation. Explore the example code in [go](https://github.com/pulumi/automation-api-examples/tree/main/go/cli_installation), [node.js](docs/reference/pkg/nodejs/pulumi/pulumi/classes/automation.PulumiCommand.html#install), [python](/docs/reference/pkg/python/pulumi/#pulumi.automation.PulumiCommand.install), and [.NET](https://github.com/pulumi/pulumi-dotnet/blob/edf4a5e904110f198d579d8db0b178aa9af9cdfa/sdk/Pulumi.Automation/Commands/LocalPulumiCommand.cs#L107) to see how to integrate the new API seamlessly. 
+The Pulumi Automation API now offers the functionality to [install the Pulumi CLI](https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/auto#InstallPulumiCommand) directly through the API. This feature enables deploying programs utilizing the Automation API without the need for prior CLI installation. Explore the example code in [Go](https://github.com/pulumi/automation-api-examples/tree/main/go/cli_installation), [Node.js](docs/reference/pkg/nodejs/pulumi/pulumi/classes/automation.PulumiCommand.html#install), [Python](/docs/reference/pkg/python/pulumi/#pulumi.automation.PulumiCommand.install), and [.NET](https://github.com/pulumi/pulumi-dotnet/blob/edf4a5e904110f198d579d8db0b178aa9af9cdfa/sdk/Pulumi.Automation/Commands/LocalPulumiCommand.cs#L107) to see how to integrate the new API seamlessly. 
+
+### Node.js Monorepo Support
+
+Pulumi now seamlessly integrates with Node.js monorepos using tools like Nx. We've enhanced Pulumi to support yarn/npm workspaces, widely used in Node.js monorepos. This enhancement facilitates better project management by automatically handling dependencies and building processes. The integration allows Pulumi infrastructure codes to coexist with application codes in the same repository, improving development workflow efficiency by using Nx's capabilities to manage build and deploy dependencies effectively.  Check out the [blog post](/blog/nx-monorepo/) for more details. 
 
 ## Providers and Packages
 
