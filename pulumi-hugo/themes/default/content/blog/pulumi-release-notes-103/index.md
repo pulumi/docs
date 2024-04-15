@@ -76,7 +76,7 @@ We introduced [Dev Releases](/blog/introducing-dev-releases/), allowing develope
 
 ### Automation API support to install Pulumi CLI 
 
-The Pulumi Automation API now offers the functionality to [install the Pulumi CLI](https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/auto#InstallPulumiCommand) directly through the API. This feature enables deploying programs utilizing the Automation API without the need for prior CLI installation. Explore the example code in [Go](https://github.com/pulumi/automation-api-examples/tree/main/go/cli_installation), [Node.js](docs/reference/pkg/nodejs/pulumi/pulumi/classes/automation.PulumiCommand.html#install), [Python](/docs/reference/pkg/python/pulumi/#pulumi.automation.PulumiCommand.install), and [.NET](https://github.com/pulumi/pulumi-dotnet/blob/edf4a5e904110f198d579d8db0b178aa9af9cdfa/sdk/Pulumi.Automation/Commands/LocalPulumiCommand.cs#L107) to see how to integrate the new API seamlessly. 
+The Pulumi Automation API now offers the functionality to install the Pulumi CLI directly through the API. This feature enables deploying programs utilizing the Automation API without the need for prior CLI installation. Explore an [example in Go](https://github.com/pulumi/automation-api-examples/tree/main/go/cli_installation) and refer to the new APIs in [Go](https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/auto#InstallPulumiCommand), [Node.js](/docs/reference/pkg/nodejs/pulumi/pulumi/classes/automation.PulumiCommand.html#install), [Python](/docs/reference/pkg/python/pulumi/#pulumi.automation.PulumiCommand.install), and [.NET](https://github.com/pulumi/pulumi-dotnet/blob/edf4a5e904110f198d579d8db0b178aa9af9cdfa/sdk/Pulumi.Automation/Commands/LocalPulumiCommand.cs#L107).
 
 ### Node.js Monorepo Support
 
