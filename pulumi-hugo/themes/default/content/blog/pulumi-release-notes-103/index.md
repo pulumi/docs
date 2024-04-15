@@ -1,9 +1,9 @@
 ---
-title: "Pulumi Release Notes: Pulumi ESC, Pulumi Dev Releases, and more!"
+title: "Pulumi Release Notes: Pulumi ESC Table Editor, 1Password Support, Pulumi Dev Releases, and more!"
 allow_long_title: true
 date: 2024-04-12T11:06:04-08:00
 draft: false
-meta_desc: The latest Pulumi updates include Pulumi ESC, Pulumi AI, Pulumi CLI & SDK Dev Releases, and new Pulumi providers
+meta_desc: The latest Pulumi updates include a new Pulumi ESC Key Value Editor, 1Password ESC Provider, Pulumi CLI & SDK Dev Releases, and more!
 meta_image: meta.png
 authors:
     - arun-loganathan
