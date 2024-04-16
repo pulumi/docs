@@ -79,6 +79,10 @@ By using [npm workspaces](https://docs.npmjs.com/cli/v10/using-npm/workspaces) w
 
 Pulumi has builtin TypeScript support and compiles your code on the fly without manual build-step, however this is currently limited to TypeScript 3.8. We are working on providing more choice here, but in the mean time Nx makes it easy to add a build-step to compile code using any version of TypeScript. For this example we are using the latest and greatest, TypeScript 5.4.
 
+{{% notes type="info" %}}
+As of [v3.113.0 of the @pulumi/pulumi NPM package](https://www.npmjs.com/package/@pulumi/pulumi) any version of TypeScript is supported natively. To select the version to use, add it as a [dependency to your package.json](/docs/languages-sdks/javascript/#typescript-versions).
+{{% /notes %}}
+
 ## Declaring Dependencies
 
 If we were to manually build and deploy the code in our monorepo, we would have to run the following steps:
