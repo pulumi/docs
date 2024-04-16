@@ -7,8 +7,9 @@ h1: OpenID Connect integration
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     pulumicloud:
+        parent: openid-connect
         identifier: openid-connect-client
-        weight: 5
+        weight: 4
 ---
 
 Pulumi supports establishing trust relationships with third party OIDC providers by leveraging id_tokens and allowing it to be exchanged by a short-lived Pulumi access token. This mechanism enhances security by eliminating the necessity for hardcoded credentials.
