@@ -2,7 +2,7 @@
 # Name of the event, <= 60 characters
 title: Managing team secrets with 1Password & Pulumi ESC
 meta_desc: Learn Pulumi ESC + 1Password for secure, automated secret management in multi-cloud setups. Store & fetch secrets easily in our workshop
-meta_image: 
+meta_image: "/images/resources/1password-pulumi-esc-platform-engineering.png"
 
 # A featured webinar will display first in the list.
 featured: false
