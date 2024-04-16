@@ -56,7 +56,7 @@ We've upgraded the Pulumi ESC YAML editor with features aimed at simplifying the
 
 ### Pulumi ESC OIDC customization 
 
-Pulumi ESC now offers [subject customization](/docs/pulumi-cloud/oidc/azure/#subject-customization) for OIDC tokens, enhancing security across AWS, GCP and Azure by aligning federated credentials with specific identifiers. By configuring the `subjectAttributes` setting, users can include specific environment, user, and organization information in the [OIDC](/docs/pulumi-cloud/oidc/) token subject claim, offering more granular control and customization for cloud resource access. This capability is especially valuable for customers using Azure, where subject claims are required to precisely match the string specified in the policy.
+Pulumi ESC now offers [subject customization](/docs/pulumi-cloud/oidc/provider/azure/#subject-customization) for OIDC tokens, enhancing security across AWS, GCP and Azure by aligning federated credentials with specific identifiers. By configuring the `subjectAttributes` setting, users can include specific environment, user, and organization information in the [OIDC](/docs/pulumi-cloud/oidc/) token subject claim, offering more granular control and customization for cloud resource access. This capability is especially valuable for customers using Azure, where subject claims are required to precisely match the string specified in the policy.
 
 ### Pulumi ESC Audit Logs
 

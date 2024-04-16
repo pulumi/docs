@@ -66,9 +66,9 @@ In order to use the Git Push to Deploy and Click to Deploy features in the Pulum
 3. Choose the “Deploy” panel.
 4. Under the “OpenID Connect” header, toggle to your cloud provider
 5. Follow the cloud provider specific docs below
-   1. [Configuring OIDC for AWS](/docs/guides/oidc/aws/)
-   2. [Configuring OIDC for Azure](/docs/guides/oidc/azure/)
-   3. [Configuring OIDC for GCP](/docs/guides/oidc/gcp/)
+   1. [Configuring OIDC for AWS](/docs/guides/oidc/provider/aws/)
+   2. [Configuring OIDC for Azure](/docs/guides/oidc/provider/azure/)
+   3. [Configuring OIDC for GCP](/docs/guides/oidc/provider/gcp/)
 
 ### Viewing Deployment logs
 

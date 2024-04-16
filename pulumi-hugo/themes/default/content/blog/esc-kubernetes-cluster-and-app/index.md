@@ -162,7 +162,7 @@ values:
     aws:region: us-west-2
 ```
 
-Notice that this environment uses the `aws-login` ESC provider to [dynamically load short-lived credentials using OIDC](/docs/pulumi-cloud/oidc/aws/).
+Notice that this environment uses the `aws-login` ESC provider to [dynamically load short-lived credentials using OIDC](/docs/pulumi-cloud/oidc/provider/aws/).
 These credentials are then exposed as environment variables for consumers of this environment. We also set the AWS region
 in the `pulumiConfig` section to configure the region for `pulumi` to manage resources with the `pulumi-aws` provider.
 

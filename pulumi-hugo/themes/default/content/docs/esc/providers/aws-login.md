@@ -28,7 +28,7 @@ aws:
 
 ## Configuring OIDC
 
-To learn how to configure OpenID Connect (OIDC) between Pulumi Cloud and AWS, see the [OpenID Connect integration](/docs/pulumi-cloud/oidc/aws/) documentation.
+To learn how to configure OpenID Connect (OIDC) between Pulumi Cloud and AWS, see the [OpenID Connect integration](/docs/pulumi-cloud/oidc/provider/aws/) documentation.
 
 ## Inputs
 
@@ -45,7 +45,7 @@ To learn how to configure OpenID Connect (OIDC) between Pulumi Cloud and AWS, se
 | `sessionName` | string   | The name of the role session.                                                                                                                                                                                                                     |
 | `duration`    | string   | [Optional] - The duration of the role session. Defaults to 2 hours. Unless explicitly specified, AWS sets MaxDuration to 1 hour by default. You may need to configure your AWS role with a higher MaxDuration or set the duration here to 1 hour. |
 | `policyArns`  | string[] | [Optional] - ARNs for additional policies to apply to the role session.                                                                                                                                                                           |
-| `subjectAttributes`  | string[] | [Optional] - Subject attributes to be included in the OIDC token. For more information see the see the [OpenID subject customization](/docs/pulumi-cloud/oidc/aws#subject-customization) documentation |
+| `subjectAttributes`  | string[] | [Optional] - Subject attributes to be included in the OIDC token. For more information see the see the [OpenID subject customization](/docs/pulumi-cloud/oidc/provider/aws#subject-customization) documentation |
 
 ### AWSLoginStatic
 

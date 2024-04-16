@@ -29,7 +29,7 @@ The `azure-login` provider enables you to log in to Azure using OpenID Connect o
 
 ## Configuring OIDC
 
-To learn how to configure OpenID Connect (OIDC) between Pulumi Cloud and Azure, see the [OpenID Connect integration](/docs/pulumi-cloud/oidc/azure/) documentation.
+To learn how to configure OpenID Connect (OIDC) between Pulumi Cloud and Azure, see the [OpenID Connect integration](/docs/pulumi-cloud/oidc/provider/azure/) documentation.
 
 ## Inputs
 
@@ -40,7 +40,7 @@ To learn how to configure OpenID Connect (OIDC) between Pulumi Cloud and Azure, 
 | `subscriptionId` | string | The subscription ID to use                                        |
 | `clientSecret`   | string | [Optional] - The client secret to use for authentication, if any. |
 | `oidc`           | bool   | [Optional] - Whether to use OIDC to log in. Defaults to `false`.  |
-| `subjectAttributes`  | string[] | [Optional] - Subject attributes to be included in the OIDC token. For more information see the see the [OpenID subject customization](/docs/pulumi-cloud/oidc/azure#subject-customization) documentation |
+| `subjectAttributes`  | string[] | [Optional] - Subject attributes to be included in the OIDC token. For more information see the see the [OpenID subject customization](/docs/pulumi-cloud/oidc/provider/azure#subject-customization) documentation |
 
 ## Outputs
 

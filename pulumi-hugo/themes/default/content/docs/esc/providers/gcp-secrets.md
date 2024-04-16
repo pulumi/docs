@@ -38,7 +38,7 @@ The `gcp-secrets` provider enables you to dynamically import Secrets from Google
 
 ## Configuring OIDC
 
-To learn how to configure OpenID Connect (OIDC) between Pulumi Cloud and Google Cloud, see the [OpenID Connect integration](/docs/pulumi-cloud/oidc/gcp/) documentation. Once you have completed these steps, you can validate that your configuration is working by running either of the following:
+To learn how to configure OpenID Connect (OIDC) between Pulumi Cloud and Google Cloud, see the [OpenID Connect integration](/docs/pulumi-cloud/oidc/provider/gcp/) documentation. Once you have completed these steps, you can validate that your configuration is working by running either of the following:
 
 * `esc open <your-org>/<your-environment>` command of the [Pulumi ESC CLI](/docs/esc-cli/)
 * `pulumi env open <your-org>/<your-environment>` command of the [Pulumi CLI](/docs/install/)
