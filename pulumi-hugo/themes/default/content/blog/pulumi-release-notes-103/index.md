@@ -1,9 +1,9 @@
 ---
-title: "Pulumi Release Notes: Pulumi ESC Table Editor, 1Password Support, Pulumi Dev Releases, and more!"
+title: "Pulumi Release Notes: Pulumi Dev Releases, Pulumi ESC Table Editor, 1Password Support , and more!"
 allow_long_title: true
 date: 2024-04-15T11:06:04-08:00
 draft: false
-meta_desc: The latest Pulumi updates include a new Pulumi ESC Key Value Editor, 1Password ESC Provider, Pulumi CLI & SDK Dev Releases, and more!
+meta_desc: The latest Pulumi updates include a new Pulumi ESC Key Value Table Editor, 1Password ESC Provider, Pulumi CLI & SDK Dev Releases, and more!
 meta_image: meta.png
 authors:
     - arun-loganathan
@@ -16,8 +16,6 @@ As always, we have been actively rolling out new features in response to the inv
 
 <!--more-->
 
-- [AI](#ai)
-  - [Pulumi AI Evolution](#pulumi-ai-evolution)
 - [Pulumi Cloud](#pulumi-cloud)
   - [Pulumi ESC 1Password Support](#pulumi-esc-1password-support)
   - [Pulumi ESC Key-Value Table Editor](#pulumi-esc-key-value-table-editor)
@@ -32,13 +30,9 @@ As always, we have been actively rolling out new features in response to the inv
   - [New Provider Resources](#new-provider-resources)
   - [New Community Providers](#new-community-providers)
   - [Pulumi Registry Documentation Update](#pulumi-registry-documentation-update)
+- [AI](#ai)
+  - [Pulumi AI Evolution](#pulumi-ai-evolution)
 - [Wrap up](#wrap-up)
-
-## AI
-
-### Pulumi AI Evolution
-
-We continue to invest in [Pulumi AI](https://www.pulumi.com/ai) and improve the quality of programs in TypeScript, Python, Go, and C#. Key enhancements include generating code that accurately imports providers, with a special focus on those authored by our community and partners, ensuring the use of correct syntax for Pulumi YAML, embracing modern C# syntax like top-level statements, and implementing comprehensive spellchecking for modules and parameters. These updates continue to push Pulumi AI as a robust, developer-friendly platform, enabling you to build with greater confidence and efficiency. Moreover, you can now cancel in-progress prompts within Pulumi AI should you need to make any changes to your prompt. 
 
 ## Pulumi Cloud
 
@@ -104,6 +98,12 @@ We welcome new providers to our registry!
 ### Pulumi Registry Documentation Update
 
 The [Pulumi Registry](/registry) documentation has significantly improved example code generation across programming languages. Systemic improvements benefit over 900 examples—700+ in Python, 200+ in Go, and a selection in C#—with notable improvements in type instantiations.
+
+## AI
+
+### Pulumi AI Evolution
+
+We continue to invest in [Pulumi AI](https://www.pulumi.com/ai) and improve the quality of programs in TypeScript, Python, Go, and C#. Key enhancements include generating code that accurately imports providers, with a special focus on those authored by our community and partners, ensuring the use of correct syntax for Pulumi YAML, embracing modern C# syntax like top-level statements, and implementing comprehensive spellchecking for modules and parameters. These updates continue to push Pulumi AI as a robust, developer-friendly platform, enabling you to build with greater confidence and efficiency. Moreover, you can now cancel in-progress prompts within Pulumi AI should you need to make any changes to your prompt. 
 
 ## Wrap up
 
