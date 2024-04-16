@@ -1,9 +1,9 @@
 ---
-title_tag: OpenID Connect Integration for Pulumi
+title_tag: OpenID Connect Provider Integration for Pulumi
 meta_desc: This page provides an overview of how to configure OpenID Connect integration between
            Pulumi and supported cloud providers.
-title: OpenID Connect
-h1: OpenID Connect integration
+title: OpenID Provider
+h1: OpenID Connect Provider integration
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     pulumicloud:
@@ -70,7 +70,7 @@ The Subject and custom claims are particularly useful for configuring trust rela
 
 To configure OIDC for your cloud provider, refer to one of our guides:
 
-- [Configuring OIDC for AWS](/docs/pulumi-cloud/oidc/aws/)
-- [Configuring OIDC for Azure](/docs/pulumi-cloud/oidc/azure/)
-- [Configuring OIDC for Google Cloud](/docs/pulumi-cloud/oidc/gcp/)
-- [Configuring OIDC for Vault](/docs/pulumi-cloud/oidc/vault/)
+- [Configuring OIDC for AWS](/docs/pulumi-cloud/oidc/provider/aws/)
+- [Configuring OIDC for Azure](/docs/pulumi-cloud/oidc/provider/azure/)
+- [Configuring OIDC for Google Cloud](/docs/pulumi-cloud/oidc/provider/gcp/)
+- [Configuring OIDC for Vault](/docs/pulumi-cloud/oidc/provider/vault/)
