@@ -12,7 +12,7 @@ tags:
    - pulumi-releases
 ---
 
-We have been busy shipping improvements in the last 2 months. Let's walk through the release highlights across Pulumi engineering areas from March and April. If you want to learn more between release blogs, follow the CLI improvements in the [pulumi/pulumi repo changelog](https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md) and Pulumi Cloud features in the [new features blogs](/blog/tag/features).
+We have been busy shipping improvements in the last 2 months. Let's walk through the release highlights across Pulumi engineering areas from March and April. If you want to learn more between release blogs, follow the CLI improvements in the [pulumi/pulumi repo changelog](https://github.com/pulumi/pulumi-aws-native/releases) and Pulumi Cloud features in the [new features blogs](/blog/tag/features).
 
 <!--more-->
 
