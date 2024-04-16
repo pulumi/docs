@@ -24,7 +24,7 @@ For third party services that have capabilities to issue OIDC id_tokens, it is p
 
 Navigate to **OIDC Issuers** under your Organization's **Settings** and click on **Register a new issuer**.
 
-SCREENSHOT
+![Register new issuer](./register-new-issuer.png)
 
 The issuer URL is used to fetch the OpenID Configuration metadata by appending `/.well-known/openid-configuration`.
 
@@ -101,7 +101,7 @@ For the claim values, it is possible to use the following wildcard notation for 
 
 In this example, it can be configured as `runner-*` to match any pod name with the `runner-` prefix.
 
-SCREENSHOT
+![Kubernetes policy example](./kubernetes-policy.png)
 
 ## Exchanging OIDC tokens
 

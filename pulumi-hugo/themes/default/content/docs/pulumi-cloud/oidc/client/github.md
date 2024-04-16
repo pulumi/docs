@@ -24,7 +24,7 @@ Please note that this guide provides step-by-step instructions based on the offi
 
 1. Navigate to **OIDC Issuers** under your Organization's **Settings** and click on **Register a new issuer**.
 1. Name the issuer and complete the url: `https://token.actions.githubusercontent.com`
-   SCREENSHOT
+   ![Register Github](../register-github.png)
 1. Submit the form
 
 ## Conrigure the Authorization Policies
@@ -32,8 +32,8 @@ Please note that this guide provides step-by-step instructions based on the offi
 1. Click on the issuer name
 1. Change the policy decision to `Allow`
 1. Change the token type to `Organization`
-1. Add a new rule and configure it to verify the token audience to match your github organization url: `aud: ttps://github.com/octo-org`. For further information about Github token claims refer to the [official Github documentation](https://docs.github.com/en/actions/deployment/security-hardening-your-deployments/about-security-hardening-with-openid-connect#understanding-the-oidc-token).
-   SCREENSHOT
+1. Add a new rule and configure it to verify the token audience to match your github organization url: `aud: https://github.com/octo-org`. For further information about Github token claims refer to the [official Github documentation](https://docs.github.com/en/actions/deployment/security-hardening-your-deployments/about-security-hardening-with-openid-connect#understanding-the-oidc-token).
+   ![Github policy example](../github-policies.png)
 1. Click on update
 
 ## Set up the Github Actions step to fetch the OIDC token
