@@ -175,6 +175,22 @@ Tools like VS Code will give you completion lists, live error reporting and inli
 
 <img src="/images/docs/reference/vscode.png" alt="Pulumi TypeScript in VS Code" width="700">
 
+## TypeScript Versions
+
+Pulumi ships with a bundled version of TypeScript 3.8.3 and uses this compiler by default. You can use a different version by adding the desired version of TypeScript to your package.json file. When Pulumi runs a TypeScript program, it will first attempt to load the compiler from the local node_modules directory, and then fallback to the bundled version. Pulumi supports all TypeScript versions from 3.8 and up, including the latest TypeScript 5 release.
+
+```json
+{
+    "name": "my-package",
+    "version": "1.0.0",
+    "dependencies": {
+        ...
+        "typescript": "^5.4.2",
+        ...
+    }
+}
+```
+
 ## Disabling built in TypeScript support
 
 You can disable the built in TypeScript support by changing the `runtime` setting in `Pulumi.yaml` to look like the following:
