@@ -1,8 +1,9 @@
 ---
 # Name of the event, <= 60 characters
-title: Streamlining AI/ML Workflows on GKE with Pulumi
-meta_desc: Learn to harness the capabilities of GPUs and TPUs effortlessly, empowering data scientists to focus on model development rather than infrastructure management.
-meta_image: /images/resources/streamlining-ai-ml-workflows-gke-josh-jay.png
+title: How to migrate to Pulumi from Terraform
+meta_desc: Learn how to build on top of your existing Terraform codebases with Pulumi or replace Terraform entirely.
+meta_image:
+
 # A featured webinar will display first in the list.
 featured: false
 
@@ -25,12 +26,12 @@ block_external_search_index: false
 
 # The url slug for the webinar landing page. If this is an external
 # webinar, use the external URL as the value here.
-url_slug: streamlining-ai-ml-gke-pulumi
+url_slug: how-to-migrate-to-pulumi-from-terraform
 
 # Content for the left hand side section of the page.
 main:
     # Webinar title.
-    title: Streamlining AI/ML Workflows on GKE with Pulumi
+    title: How to migrate to Pulumi from Terraform
 
     event_type: workshop # workshop | event
 
@@ -38,7 +39,7 @@ main:
     youtube_url:
 
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2024-05-29T09:00:00.000-07:00
+    sortable_date: 2024-05-21T09:00:00-07:00
 
     # Duration of the webinar.
     duration: 90 minutes
@@ -48,29 +49,29 @@ main:
 
     # Description of the webinar.
     description: |
-        One of the most popular ways to train and serve models is to do AI/ML on Kubernetes. However, data scientists typically don't do double duty as platform managers. Standing up a Kubernetes environment can be a challenge for data scientists but most data scientists know Python. We will demonstrate how with Pulumi you can deploy a machine learning platform on GKE and leverage the power of GPUs and TPUs
-
+        Many organizations are intrigued by the power of using general purpose languages with Pulumi to manage their infrastructure, but have a large existing investment in Terraform codebases. In this workshop, you'll learn how you can build on top of your existing Terraform code with Pulumi or replace Terraform entirely.
+    
     learn:
-        - How to deploy a machine learning platform on GKE using Pulumi, eliminating the challenges of Kubernetes management.
-        - How to harness the computational power of GPUs and TPUs seamlessly within your AI/ML workflows.
+        - Approaches to using resources managed outside of Pulumi in Pulumi programs.
+        - How to leverage your organization's existing Terraform by consuming TF outputs in Pulumi programs.
+        - How to convert your existing Terraform code automatically to the Pulumi language of your choice and import resources from Terraform state files into your Pulumi state files.
 
     # The webinar presenters
     presenters:
         - name: Josh Kodroff
-          role: Sr Solutions Architect, Pulumi
+          role: Senior Solutions Architect, Pulumi
           photo: /images/team/josh-kodroff.jpg
-        - name: Jason Smith
-          role: Sr Cloud Customer Engineer, Google
-          photo: /images/team/jay-smith-google-jpeg.jpg
 
     # case-sensitive
     tags:
-        level: Intermediate # Beginner, Intermediate, Advanced
-        topics: ["AI", "Kubernetes"]
-        languages: ["Python"]
+        level: Beginner # Beginner, Intermediate, Advanced
+        topics: []
+        languages: []
+        clouds: []
 
 # The right hand side form section.
 form:
-    hubspot_form_id: efa6cfed-49e2-4d1f-a041-ec69fadab1fa
-    salesforce_campaign_id: 701PQ000009Jo3zYAC
+    # HubSpot form id.
+    hubspot_form_id: 8f93df59-6803-4db3-912f-c8fdeb646e97
+    salesforce_campaign_id: 701PQ00000AN6VLYA1
 ---
