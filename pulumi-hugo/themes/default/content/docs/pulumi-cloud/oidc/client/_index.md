@@ -12,7 +12,7 @@ menu:
         weight: 4
 ---
 
-Pulumi supports establishing trust relationships with third party OIDC providers by leveraging id_tokens and allowing it to be exchanged by a short-lived Pulumi access token. This mechanism enhances security by eliminating the necessity for hardcoded credentials.
+Pulumi supports establishing trust relationships with third party OIDC providers by leveraging id_tokens and allowing it to be exchanged for a short-lived Pulumi access token. This mechanism enhances security by eliminating the necessity for hardcoded credentials.
 
 ## Overview
 
