@@ -52,20 +52,10 @@ talks:
     url: https://www.civo.com/navigate/europe/2023
     date: 2023-09-05T10:00:00.000-07:00
     slides: null
-  - event: Kubernetes Community Days Munich 2023
-    title: No YAML!
-    url: https://community.cncf.io/events/details/cncf-kcd-munich-presents-kcd-munich-2023/
-    date: 2023-06-17T10:00:00.000-07:00
-    slides: null
   - event: DevOpsDays Amsterdam
     title: How To Build A Production Ready Kubernetes
     url: https://devopsdays.org/events/2023-amsterdam/program/ws-engin-diri-ringo-de-smet
     date: 2023-06-21T10:00:00.000-07:00
-    slides: null
-  - event: Vienna DevOps Meetup
-    title: "Pulumi: Kickstarting Your Journey to Modern Infrastructure Automation"
-    url: https://www.meetup.com/meetup-group-ziwnrlfj/events/293323160/
-    date: 2023-05-23T10:00:00.000-07:00
     slides: null
   - event: Kubernetes Community Days Munich 2023
     title: No YAML!
@@ -76,12 +66,17 @@ talks:
     title: Combining AWS CDK resources with Pulumi
     url: https://www.meetup.com/german-aws-cdk-happy-hour/events/292241169/
     date: 2023-06-16T10:00:00.000-07:00
-    slides: null
+    slides: null    
   - event: Azure Rosenheim Meetup
     title: "Pulumi & Azure: Der Turbo-Boost für deine Cloud-Projekte"
     url: https://www.meetup.com/de-DE/azure-meetup-rosenheim/events/292822487/
     date: 2023-05-25T10:00:00.000-07:00
     slides: https://github.com/whiteducksoftware/azure-meetup-rosenheim/blob/master/Azure-Meetup-2023-05-25-Pulumi-and-Azure-Der-Turbo-Boost-fuer-deine-Cloud-Projekte/2023-05-25-azure-rosenheim-meetup.pdf
+  - event: Vienna DevOps Meetup
+    title: "Pulumi: Kickstarting Your Journey to Modern Infrastructure Automation"
+    url: https://www.meetup.com/meetup-group-ziwnrlfj/events/293323160/
+    date: 2023-05-23T10:00:00.000-07:00
+    slides: null    
   - event: KubeHuddle Toronto 2023
     title: No YAML!
     url: https://kubehuddle.com/2023/toronto/
