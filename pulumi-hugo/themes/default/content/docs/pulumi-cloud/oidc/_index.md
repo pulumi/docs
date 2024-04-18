@@ -20,4 +20,4 @@ There are two ways Pulumi can integrate using OpenID Connect. Pulumi can operate
 
 The integration of different pieces of infrastructure and tools comes with the unavoidable requirement of distributing credentials across all the different pieces that interact. Different mechanisms evolved to make this process simpler, but there is always a last secret to unblock secure access to a secrets vault, this is known as "Secret Zero".
 
-By relying on OpenId Connect we get to solve the Secret Zero problem while complying to the bases of a Zero Trust model. It stablishes a secure mechanism to exchange credentials between Pulumi and other services removing the need of securing that last secret and reducing the risk of leaking a credential that could turn the system vulnerable.
+Relying on OpenId Connect solves the Secret Zero problem while complying with a Zero Trust model. It establishes a secure mechanism to exchange credentials between Pulumi and other services, removing the need to maintain that last secret and reducing the risk of leaking a credential that could make the entire system vulnerable.
