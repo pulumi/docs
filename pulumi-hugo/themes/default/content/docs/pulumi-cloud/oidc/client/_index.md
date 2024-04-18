@@ -89,7 +89,7 @@ It is also required to configure at least one claim validation rule. When defini
 }
 ```
 
-You can target the pool name by defining the path as `"kubernetes.io".pod.name`.
+You can target the pod name by defining the path as `"kubernetes.io".pod.name`.
 
 Note the use of quotes to scape dots in the object keys.
 
