@@ -91,7 +91,7 @@ It is also required to configure at least one claim validation rule. When defini
 
 You can target the pod name by defining the path as `"kubernetes.io".pod.name`.
 
-Note the use of quotes to scape dots in the object keys.
+Note the use of quotes to escape dots in the object keys.
 
 For the claim values, it is possible to use the following wildcard notation for flexible matching:
 
