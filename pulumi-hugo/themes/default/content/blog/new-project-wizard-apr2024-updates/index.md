@@ -36,17 +36,15 @@ Here’s a breakdown of the latest enhancements:
 ### Org-only Template Sources
 Previously, the Developer Portal Gallery included both the Organization's custom templates as well as Pulumi-authored templates. With this update, you can now deactivate Pulumi-authored templates, ensuring that users only deploy organizationally approved templates. This simplifies template discovery and selection, reinforcing governance and compliance across development projects.
 
-**Placeholder GIF**
+{{< video title="Org-only Template Sources" src="./org-only-templates.mp4" width=600 height=420 autoplay="true" loop="true" >}}
 
 ### Default Repository Locations
 A significant source of friction in the previous NPW flow involved users selecting destination repositories for their projects. This often resulted in misplacements and inconsistencies that complicated audits and governance. Now, admins can set default repository locations for each template source within the gallery. This eliminates the need for developers to select a repository, automatically using predetermined locations and streamlining deployments.
 
-**Placeholder GIF**
+{{< video title="Org-only Template Sources" src="./default-repos.mp4" width=600 height=420 autoplay="true" loop="true" >}}
 
 ### Auto-generated Project Names
 Another improvement is the auto-generation of project names. Previously, users had to specify a project name, requiring additional input and sometimes leading to naming conflicts. Now, the NPW automatically generates unique project names, further reducing friction and simplifying the project creation process.
-
-**Placeholder GIF**
 
 ## Wrapping up
 
