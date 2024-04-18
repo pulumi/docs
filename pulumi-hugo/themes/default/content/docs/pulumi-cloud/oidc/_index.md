@@ -14,4 +14,10 @@ Pulumi supports OpenID Connect (OIDC) integration across various services by lev
 
 ## Overview
 
-There are two ways Pulumi can integrate using OpenID Connect.  Pulumi can operate as an [OIDC provider](/docs/pulumi-cloud/oidc/provider/) issuing signed, short-lived tokens that can be exchanged by short-term credentials from your cloud provider; or as an [OIDC client](/docs/pulumi-cloud/oidc/client/) accepting short-liver OIDC Tokens issued by a trusted OIDC provided to be exchanged by short-liver Pulumi access tokens.
+There are two ways Pulumi can integrate using OpenID Connect. Pulumi can operate as an [OIDC provider](/docs/pulumi-cloud/oidc/provider/) issuing signed, short-lived tokens that can be exchanged by short-term credentials from your cloud provider; or as an [OIDC client](/docs/pulumi-cloud/oidc/client/) accepting short-liver OIDC Tokens issued by a trusted OIDC provided to be exchanged by short-liver Pulumi access tokens.
+
+## Solving the Secret Zero problem
+
+The integration of different pieces of infrastructure and tools comes with the unavoidable requirement of distributing credentials across all the different pieces that interacts. Different mechanisms evolved to make this process simpler, but there is always a last secret to unblock secure access to a secrets vault, this is known as the Secret Zero.
+
+By relting on OpenId Connect we get to solve the Secret Zero problem while complying to the bases of a Zero Trust model. It stablishes a secure mechanism to exchange credentials between Pulumi and other services removing the need of securing that last secret and reducing the risk of leaking a credential that could turn the system vulnerable.
