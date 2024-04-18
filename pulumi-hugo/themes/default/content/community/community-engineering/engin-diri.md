@@ -7,6 +7,11 @@ layout: community-engineering/single
 aliases:
   - /engin
 talks:
+  - event: "Mastering GitOps 2024"
+    title: "Wie man mit Backstage, IaC und GitOps eine interne Entwicklerplattform auf Kubernetes aufbaut"
+    url: https://www.mastering-gitops.de/veranstaltung-21908-se-0-wie-man-mit-backstage-iac-und-gitops-eine-interne-entwicklerplattform-auf-kubernetes-aufbaut.html
+    date: 2024-03-18T10:00:00.000-07:00
+    slides: null
   - event: "GitOpsCon NA 2024"
     title: "Gain Platform Superpowers with the KEBAP Stack!"
     url: https://gitopsconna2024.sched.com/event/b9b16b655584d1d2a27855757eb3fc37
