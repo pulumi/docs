@@ -16,7 +16,7 @@ Pulumi supports establishing trust relationships with third party OIDC providers
 
 ## Overview
 
-For third party services that have capabilities to issue OIDC id_tokens, it is possible to register them as a trusted OICD Issuer to leverage these tokens to be exchanged by a short-lived Pulumi access token automatically to avoid having to store hardcoded credentials.
+For third party services that have capabilities to issue OIDC id_tokens, it is possible to register them as a trusted OIDC Issuer to leverage these tokens to be exchanged by a short-lived Pulumi access token automatically to avoid having to store hardcoded credentials.
 
 ## Configuring trust relationships
 
