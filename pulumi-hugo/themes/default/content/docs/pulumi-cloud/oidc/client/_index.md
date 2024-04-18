@@ -61,7 +61,7 @@ To prevent a range of security attacks, Pulumi stores the provider's TLS certifi
 
 When a new OIDC issuer is registered, a default authorization policy is provisioned denying any token exchange. Explicitly configuring **allow** policies is required.
 
-When configuring a policy, it needs to explicitly call out what kind of token can be requested as well what team or user it will be scoped to for such token types.
+When configuring a policy, it is required to explicitly state what kind of token can be requested and what team or user the token should be scoped to.
 
 It is also required to configure at least one claim validation rule. When defining the claim key, it is possible to target nested claims by defining the claim path. For example, having the following structure:
 
