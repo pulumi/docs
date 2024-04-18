@@ -1,0 +1,10 @@
+name: aws-iam-role-policyattachment-managedpolicy-javascript
+runtime:
+  name: nodejs
+  options:
+    typescript: false
+description: An example that deploys an IAM role and a policy attachment with an AWS managed policy on AWS.
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: aws-javascript

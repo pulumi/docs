@@ -13,6 +13,7 @@ menu:
 aliases:
 - /docs/reference/crosswalk/aws/iam/
 - /docs/guides/crosswalk/aws/iam/
+- /docs/clouds/aws/aws-guides/iam/
 ---
 
 <a href="./">
@@ -22,10 +23,6 @@ aliases:
 [AWS Identity and Access Management (IAM)](https://aws.amazon.com/iam/) enables you to manage access to AWS services
 and resources securely. Using IAM, you can create and manage AWS users and groups, and use permissions to allow and
 deny their access to AWS resources.
-
-{{% notes type="info" %}}
-This functionality is available in TypeScript only and as part of the [AWS Classic provider](/registry/packages/aws/).
-{{% /notes %}}
 
 ## Overview
 
@@ -68,34 +65,17 @@ https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html).
 
 Pulumi Crosswalk for AWS in TypeScript defines [the `aws.iam.PolicyDocument` interface](
 /registry/packages/aws/api-docs/iam) to add strong type checking to your policy documents. By using
-this type, we will know at compile time whether we've mistyped an attribute:
+this type, you will know at compile time whether you've mistyped an attribute:
 
 ```typescript
-import * as aws from "@pulumi/aws";
-
-const policy: aws.iam.PolicyDocument = {
-    Version: "2012-10-17",
-    Statement: [
-        {
-            Action: "sts:AssumeRole",
-            Principal: {
-               Service: "ec2.amazonaws.com"
-            },
-            Effect: "Allow",
-        },
-    ],
-};
+{{% example-program-snippet path="aws-iam-strongly-typed" language="typescript" from="1" to="15" %}}
 ```
 
-This policy object can then be used to configure a variety of IAM objects, as we will see below. For example, we can
+This policy object can then be used to configure a variety of IAM objects, as you will see below. For example, you can
 use the above policy to configure an IAM role that permits an assume role action for a given principal:
 
 ```typescript
-const role = new aws.iam.Role("instance-role", {
-    assumeRolePolicy: policy,
-    path: "/",
-});
-const profile = new aws.iam.InstanceProfile("instance-profile", { role });
+{{% example-program-snippet path="aws-iam-strongly-typed" language="typescript" from="17" to="22" %}}
 ```
 
 ### Pre-Defined IAM Managed Policies
@@ -104,66 +84,10 @@ An AWS managed policy is a standalone policy that is created and administered by
 the policy has its own Amazon Resource Name (ARN) that includes the policy name. For example,
 `arn:aws:iam::aws:policy/IAMReadOnlyAccess` is an AWS managed policy.
 
-In places that accept a policy ARN, such as the `RolePolicyAttachment` resource, you can pass the ARN as a string,
-but that requires that you either memorize or look up the ARN each time. Instead, you can use the strongly typed
-`ManagedPolicy` enum, which exports a collection of constants for all available managed policies.
-
-For example, instead of typing out the ARN by hand, we can just reference `ManagedPolicy`'s `IAMReadOnlyAccess`
+In places that accept a policy ARN, such as the `RolePolicyAttachment` resource, you can pass the ARN as a string, but that requires that you either memorize or look up the ARN each time. Instead, you can use the strongly typed `ManagedPolicy` enum, which exports a collection of constants for all available managed policies. For example, instead of typing out the ARN by hand, you can just reference `ManagedPolicy`'s `IAMReadOnlyAccess`
 enum value:
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% choosable language "javascript,typescript" %}}
-
-```typescript
-const role = ...;
-const rolePolicyAttachment = new aws.iam.RolePolicyAttachment("rpa", {
-    role: role,
-    policyArn: aws.iam.ManagedPolicy.IAMReadOnlyAccess,
-});
-```
-
-{{% /choosable %}}
-
-{{% choosable language python %}}
-
-```python
-role = ...
-role_policy_attachment = aws.iam.RolePolicyAttachment('rpa',
-    role=role,
-    policy_arn=aws.iam.ManagedPolicy.IAMReadOnlyAccess,
-)
-```
-
-{{% /choosable %}}
-
-{{% choosable language go %}}
-
-```go
-role := ...
-rolePolicyAttachment, err := iam.NewRolePolicyAttachment("rpa", &iam.RolePolicyAttachmentArgs{}
-    Role: role,
-    PolicyArn: iam.ManagedPolicyIAMReadOnlyAccess,
-})
-if err != nil {
-    return err
-}
-```
-
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-
-```csharp
-var role = ...;
-var rolePolicyAttachment = new Iam.RolePolicyAttachment("rpa", new Iam.RolePolicyAttachmentArgs
-{
-    Role = role,
-    PolicyArn = Iam.ManagedPolicy.IAMReadOnlyAccess.ToString(),
-})
-```
-
-{{% /choosable %}}
+{{< example-program path="aws-iam-role-policyattachment-managedpolicy" >}}
 
 For a full list of available managed policy ARNs, refer to the
 [API documentation](/registry/packages/aws/api-docs/iam/).
@@ -181,158 +105,7 @@ application that uses it to interact with AWS. A user in AWS consists of a name 
 Use the [`User` resource](/registry/packages/aws/api-docs/iam/user) to create new
 IAM users. This example creates an IAM user and attaches a policy:
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% choosable language "javascript,typescript" %}}
-
-```typescript
-import * as aws from "@pulumi/aws";
-
-const user = new aws.iam.User("webmaster", {
-    path: "/system/",
-    tags: { "Name": "webmaster" },
-});
-const userAccessKey = new aws.iam.AccessKey("webmasterKey", { user: user.name });
-const userPolicy = new aws.iam.UserPolicy("webmasterPolicy", {
-    user,
-    policy: {
-        Version: "2012-10-17",
-        Statement: [{
-            Action: [ "ec2:Describe*" ],
-            Effect: "Allow",
-            Resource: "*",
-        }],
-    },
-});
-```
-
-{{% /choosable %}}
-
-{{% choosable language python %}}
-
-```python
-import json
-import pulumi_aws as aws
-
-user = aws.iam.User('webmaster',
-    path='/system/',
-    tags={ 'Name': 'webmaster' },
-)
-user_access_key = aws.iam.AccessKey('webmasterKey',
-    user=user.name,
-)
-user_policy = aws.iam.UserPolicy('webmasterPolicy',
-    user=user.id,
-    policy=json.dumps({
-        'Version': '2012-10-17',
-        'Statement': [{
-            'Action': [ 'ec2:Describe*' ],
-            'Effect': 'Allow',
-            'Resource': '*'
-        }],
-    }),
-)
-```
-
-{{% /choosable %}}
-
-{{% choosable language go %}}
-
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		user, err := iam.NewUser(ctx, "webmaster", &iam.UserArgs{
-			Path: pulumi.String("/system/"),
-			Tags: pulumi.StringMap{
-				"Name": pulumi.String("webmaster"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-
-		userAccessKey, err := iam.NewAccessKey(ctx, "webmasterKey", &iam.AccessKeyArgs{
-			User: user.Name,
-		})
-		if err != nil {
-			return err
-		}
-
-		userPolicy, err := iam.NewUserPolicy(ctx, "webmasterPolicy", &iam.UserPolicyArgs{
-			User: user.ID().ToStringOutput(),
-			Policy: pulumi.String(`{
-	"Version": "2012-10-17",
-	"Statement": [{
-		"Action": [ "ec2:Describe*" ],
-		"Effect": "Allow",
-		"Resource": "*"
-	}]
-}
-`),
-		})
-		if err != nil {
-			return err
-		}
-
-		ctx.Export("userId", user.ID())
-		ctx.Export("userAccessKeyId", userAccessKey.ID())
-		ctx.Export("userPolicyId", userPolicy.ID())
-		return nil
-	})
-}
-```
-
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-
-```csharp
-using Pulumi;
-using Iam = Pulumi.Aws.Iam;
-using System.Collections.Generic;
-using System.Collections.Immutable;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var user = new Iam.User("webmaster", new Iam.UserArgs
-        {
-            Path = "/system",
-            Tags = new Dictionary<string, string>
-            {
-                { "Name", "webmaster" },
-            }.ToImmutableDictionary(),
-        });
-        var userAccessKey = new Iam.AccessKey("webmasterKey", new Iam.AccessKeyArgs
-        {
-            User = user.Name,
-        });
-        var userPolicy = new Iam.UserPolicy("webmasterPolicy", new Iam.UserPolicyArgs
-        {
-            User = user.Name,
-            Policy = @"{
-    ""Version"": ""2012-10-17"",
-    ""Statement"": [{
-        ""Action"": [ ""ec2:Describe*"" ],
-        ""Effect"": ""Allow"",
-        ""Resource"": ""*""
-    }]
-}
-",
-        });
-    }
-}
-```
-
-{{% /choosable %}}
+{{< example-program path="aws-iam-user-userpolicy" >}}
 
 For more options available when configuring IAM users, see the [API documentation](
 /registry/packages/aws/api-docs/iam/user).
@@ -351,6 +124,7 @@ https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users.html).
 
 An IAM group is a collection of IAM users, making it easier for you specify permissions for multiple users at once.
 For example, you could have a group called Admins and give that group the types of permissions that administrators need.
+
 Any user in that group automatically has the permissions assigned to the group. If a new user joins your organization
 and needs administrator privileges, you can assign the appropriate permissions by adding the user to that group.
 Similarly, if a person changes jobs in your organization, instead of editing that user's permissions, you can remove
@@ -360,194 +134,7 @@ Use the [`Group` resource](/registry/packages/aws/api-docs/iam/group) to manage
 IAM groups. For example, this code creates a new group for an organization's developers, specifies a policy for that
 group, and adds a couple users into it, thereby granting them permissions from the developer group all at once:
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% choosable language "javascript,typescript" %}}
-
-```typescript
-import * as aws from "@pulumi/aws";
-
-// Create our users.
-const jane = new aws.iam.User("jane", ...);
-const mary = new aws.iam.User("mary", ...);
-
-// Define a group and assign a policy for it.
-const devs = new aws.iam.Group("devs", {
-    path: "/users/",
-});
-const myDeveloperPolicy = new aws.iam.GroupPolicy("my_developer_policy", {
-    group: devs.id,
-    policy: {
-        Version: "2012-10-17",
-        Statement: [{
-            Action: [ "ec2:Describe*" ],
-            Effect: "Allow",
-            Resource: "*",
-        }],
-    },
-});
-
-// Finally add the users as members to this group.
-const devTeam = new aws.iam.GroupMembership("dev-team", {
-    group: devs.id,
-    users: [ jane.id, mary.id ],
-});
-```
-
-{{% /choosable %}}
-
-{{% choosable language python %}}
-
-```python
-import json
-import pulumi_aws as aws
-
-# Create our users.
-jane = aws.iam.User('jane', ...)
-mary = aws.iam.User('mary', ...)
-
-# Define a group and assign a policy for it.
-devs = aws.iam.Group('devs',
-    path='/users/',
-)
-my_developer_policy = aws.iam.GroupPolicy('my_developer_policy',
-    group=devs.id,
-    policy=json.dumps({
-        'Version': '2012-10-17',
-        'Statement': [{
-            'Action': [ 'ec2:Describe*' ],
-            'Effect': 'Allow',
-            'Resource': '*',
-        }],
-    }),
-)
-
-# Finally add the users as members to this group.
-dev_team = aws.iam.GroupMembership('dev-team',
-    group=devs.id,
-    users=[ jane.id, mary.id ],
-)
-```
-
-{{% /choosable %}}
-
-{{% choosable language go %}}
-
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		// Create our users.
-		jane, err := iam.NewUser(ctx, "jane", &iam.UserArgs{...})
-		if err != nil {
-			return err
-		}
-		mary, err := iam.NewUser(ctx, "mary", &iam.UserArgs{...})
-		if err != nil {
-			return err
-		}
-
-		// Define a group and assign a policy for it.
-		devs, err := iam.NewGroup(ctx, "devs", &iam.GroupArgs{
-			Path: pulumi.String("/users/"),
-		})
-		if err != nil {
-			return err
-		}
-		myDeveloperPolicy, err := iam.NewGroupPolicy(
-			ctx, "my_developer_policy", &iam.GroupPolicyArgs{
-				Group: devs.ID().ToStringOutput(),
-				Policy: pulumi.String(`{
-	"Version": "2012-10-17",
-	"Statement": [{
-		"Action": [ "ec2:Describe*" ],
-		"Effect": "Allow",
-		"Resource": "*"
-	}]
-}
-`),
-            },
-		)
-		if err != nil {
-			return err
-		}
-
-		// Finally add the users as members to this group.
-		devTeam, err := iam.NewGroupMembership(
-			ctx, "dev-team", &iam.GroupMembershipArgs{
-				Group: devs.ID().ToStringOutput(),
-				Users: pulumi.StringArray{
-					jane.ID().ToStringOutput(),
-					mary.ID().ToStringOutput(),
-				},
-			},
-		)
-		if err != nil {
-			return err
-		}
-
-		ctx.Export("devsGroupId", devs.ID())
-		ctx.Export("devsGroupPolicyId", myDeveloperPolicy.ID())
-		ctx.Export("devsGroupMembershipId", devTeam.ID())
-		return nil
-	})
-}
-```
-
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-
-```csharp
-using Pulumi;
-using Iam = Pulumi.Aws.Iam;
-using System.Collections.Generic;
-using System.Collections.Immutable;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        // Create our users.
-        var jane = new Iam.User("jane", new Iam.UserArgs{});
-        var mary = new Iam.User("mary", new Iam.UserArgs{});
-
-        // Define a group and assign a policy for it.
-        var devs = new Iam.Group("devs", new Iam.GroupArgs
-        {
-            Path = "/users/",
-        });
-        var myDeveloperPolicy = new Iam.GroupPolicy("my_developer_policy", new Iam.GroupPolicyArgs
-        {
-            Group = devs.Id,
-            Policy = @"{
-    ""Version"": ""2012-10-17"",
-    ""Statement"": [{
-        ""Action"": [ ""ec2:Describe*"" ],
-        ""Effect"": ""Allow"",
-        ""Resource"": ""*""
-    }]
-}
-",
-        });
-
-        // Finally add the users as members to this group.
-        var devTeam = new Iam.GroupMembership("dev-team", new Iam.GroupMembershipArgs
-        {
-            Group = devs.Id,
-            Users = { jane.Id, mary.Id },
-        });
-    }
-}
-```
-
-{{% /choosable %}}
+{{< example-program path="aws-iam-user-group-grouppolicy" >}}
 
 For more information, refer to the API documentation for [groups](
 /registry/packages/aws/api-docs/iam/group), [group membership](
@@ -569,140 +156,7 @@ you assume a role, it provides you with temporary security credentials for your 
 To manage IAM roles, use the [`Role` resource](/registry/packages/aws/api-docs/iam/role).
 The following example creates a new role with a custom policy document, and also attaches a managed policy afterwards:
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% choosable language "javascript,typescript" %}}
-
-```typescript
-import * as aws from "@pulumi/aws";
-
-const role = new aws.iam.Role("my-role", {
-    assumeRolePolicy: {
-        Version: "2012-10-17",
-        Statement: [{
-            Action: "sts:AssumeRole",
-            Principal: {
-                Service: "ec2.amazonaws.com"
-            },
-            Effect: "Allow",
-        }]
-    },
-});
-const rolePolicyAttachment = new aws.iam.RolePolicyAttachment("my-rpa", {
-    role: role,
-    policyArn: aws.iam.IAMReadOnlyAccess,
-});
-```
-
-{{% /choosable %}}
-
-{{% choosable language python %}}
-
-```python
-import json
-import pulumi_aws as aws
-
-role = aws.iam.Role('my-role',
-    assume_role_policy=json.dumps({
-        'Version': '2012-10-17',
-        'Statement': [{
-            'Action': 'sts:AssumeRole',
-            'Principal': {
-                'Service': 'ec2.amazonaws.com'
-            },
-            'Effect': 'Allow',
-        }],
-    }),
-)
-role_policy_attachment = aws.iam.RolePolicyAttachment('my-rpa',
-    role=role.id,
-    policy_arn='arn:aws:iam::aws:policy/ReadOnlyAccess',
-)
-```
-
-{{% /choosable %}}
-
-{{% choosable language go %}}
-
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		role, err := iam.NewRole(ctx, "my-role", &iam.RoleArgs{
-			AssumeRolePolicy: pulumi.String(`{
-	"Version": "2012-10-17",
-	"Statement": [{
-		"Action": [ "sts:AssumeRole" ],
-		"Principal": {
-			"Service": "ec2.amazonaws.com"
-		},
-		"Effect": "Allow"
-	}]
-}
-`),
-		    },
-		)
-		if err != nil {
-			return err
-		}
-
-		_, err = iam.NewRolePolicyAttachment(
-			ctx, "my-rpa", &iam.RolePolicyAttachmentArgs{
-				Role:      role.ID().ToStringOutput(),
-				PolicyArn: pulumi.String("arn:aws:iam::aws:policy/ReadOnlyAccess"),
-			},
-		)
-		return err
-	})
-}
-```
-
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-
-```csharp
-using Pulumi;
-using Iam = Pulumi.Aws.Iam;
-using System.Collections.Generic;
-using System.Collections.Immutable;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var role = new Iam.Role("my-role", new Iam.RoleArgs
-        {
-            AssumeRolePolicy = @"{
-    ""Version"": ""2012-10-17"",
-    ""Statement"": [{
-        ""Action"": [ ""sts:AssumeRole"" ],
-        ""Principal"": {
-            ""Service"": ""ec2.amazonaws.com""
-        },
-        ""Effect"": ""Allow""
-    }]
-}
-",
-        });
-        var rolePolicyAttachment = new Iam.RolePolicyAttachment("my-rpa",
-            new Iam.RolePolicyAttachmentArgs
-            {
-                Role = role.Id,
-                PolicyArn = "arn:aws:iam::aws:policy/ReadOnlyAccess",
-            }
-        );
-    }
-}
-```
-
-{{% /choosable %}}
+{{< example-program path="aws-iam-role-policyattachment-managedpolicy" >}}
 
 Roles are often useful for creating [instance profiles](
 https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2_instance-profiles.html), which
@@ -710,46 +164,7 @@ controls the IAM role assumed by compute running inside of your AWS account, whe
 Lambda, for example. To create one, use the [`InstanceProfile` resource](
 /registry/packages/aws/api-docs/iam/instanceprofile) and pass in your role:
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% choosable language "javascript,typescript" %}}
-
-```typescript
-const profile = new aws.iam.InstanceProfile("instance-profile", { role });
-```
-
-{{% /choosable %}}
-
-{{% choosable language python %}}
-
-```python
-profile = aws.iam.InstanceProfile('instance-profile', role=role.id)
-```
-
-{{% /choosable %}}
-
-{{% choosable language go %}}
-
-```go
-profile, err := aws.iam.NewInstanceProfile(
-    ctx, "instance-profile", &aws.iam.InstanceProfileArgs{
-        Role: role.ID().ToStringOutput(),
-    },
-)
-if err != nil {
-    return err
-}
-```
-
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-
-```csharp
-var profile = new Iam.InstanceProfile("instance-profile", { Role = role.Id });
-```
-
-{{% /choosable %}}
+{{< example-program path="aws-iam-role-instanceprofile" >}}
 
 For specific information about configuring roles, refer to [the API documentation](
 /registry/packages/aws/api-docs/iam/role). For more general information about IAM Roles, refer to the
