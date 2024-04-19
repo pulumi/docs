@@ -137,4 +137,5 @@ curl -X POST  \
 
 To configure OIDC, refer to one of our guides:
 
-- [Configuring OIDC for Github](/docs/pulumi-cloud/oidc-client/github/)
+- [Configuring OIDC for Github](/docs/pulumi-cloud/oidc/client/github/)
+- [Configuring OIDC for Google Kubernetes Engine](/docs/pulumi-cloud/oidc/client/kubernetes-gke/)
