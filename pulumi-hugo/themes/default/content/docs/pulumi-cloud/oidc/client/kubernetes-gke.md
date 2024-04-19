@@ -17,6 +17,7 @@ See ["Bound Tokens"](https://cloud.google.com/blog/products/containers-kubernete
 ## Prerequisites
 
 * You must be an admin of your Pulumi organization.
+* You must have a GKE cluster.
 
 {{< notes type="warning" >}}
 Please note that this guide provides step-by-step instructions based on the official provider documentation which is subject to change. For the most current and precise information, always refer to the [official Bound Service Account Tokens documentation](https://kubernetes.io/docs/concepts/storage/projected-volumes/#serviceaccounttoken).
