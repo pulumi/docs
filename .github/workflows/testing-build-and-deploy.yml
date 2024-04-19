@@ -1,8 +1,8 @@
 name: Build and deploy testing
 on:
-  pull_request:
+  push:
     branches:
-      - master
+      - testing/hugo-retirement
 permissions:
       id-token: write   # This is required for requesting the JWT
       contents: read    # This is required for actions/checkout
