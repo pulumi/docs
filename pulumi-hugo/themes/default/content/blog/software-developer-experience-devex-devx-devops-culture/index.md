@@ -244,9 +244,8 @@ Developer experience (DevEx) is essential for creating maximum output while incr
 
 By dedicating attention to improving the DevEx, companies will also be able to bring more talent aboard, reduce their "Time to First Contribution," enable developers to provide higher output contributions and improve talent retention. It's time to start focusing on superior developer experiences.
 
-- Join the [Developer Infrastructure workshop with Pulumi and Okteto](https://www.pulumi.com/resources/developer-infrastructure-with-pulumi-and-okteto/). Perfect for those looking to streamline their development process and foster better team collaboration
-- Read [The Pulumi 'Push to start' GitOps Experience](https://www.pulumi.com/blog/pulumi-developer-workflow/)
 - Discover [Pulumi for Platform Teams: New Features for Developer Portals, Policy and Deployments](https://www.pulumi.com/blog/developer-portal-platform-teams/)
+- Read [The Pulumi 'Push to start' GitOps Experience](https://www.pulumi.com/blog/pulumi-developer-workflow/)
 
 ---
 
