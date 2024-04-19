@@ -25,7 +25,7 @@ Please note that this guide provides step-by-step instructions based on the offi
 ## Register the OIDC issuer
 
 1. Navigate to **OIDC Issuers** under your Organization's **Settings** and click on **Register a new issuer**.
-1. Name the issuer and complete the url: `https://container.googleapis.com/v1/projects/PROJECT_NAME/locations/us-west1/clusters/CLUSTER_NAME/`
+1. Name the issuer and complete the url: `https://container.googleapis.com/v1/projects/PROJECT_NAME/locations/LOCATION/clusters/CLUSTER_NAME/`
    ![Register GKE](../register-gke.png)
 1. Submit the form
 
