@@ -19,7 +19,7 @@ See ["Bound Tokens"](https://cloud.google.com/blog/products/containers-kubernete
 * You must be an admin of your Pulumi organization.
 
 {{< notes type="warning" >}}
-Please note that this guide provides step-by-step instructions based on the official provider documentation which is subject to change. For the most current and precise information, always refer to the [official Bound Service Account Tokens documentation](https://github.com/kubernetes/enhancements/tree/master/keps/sig-auth/1205-bound-service-account-tokens).
+Please note that this guide provides step-by-step instructions based on the official provider documentation which is subject to change. For the most current and precise information, always refer to the [official Bound Service Account Tokens documentation](https://kubernetes.io/docs/concepts/storage/projected-volumes/#serviceaccounttoken).
 {{< /notes >}}
 
 ## Register the OIDC issuer
@@ -34,8 +34,8 @@ Please note that this guide provides step-by-step instructions based on the offi
 1. Click on the issuer name
 1. Change the policy decision to `Allow`
 1. Change the token type to `Organization`
-1. Add a new rule and configure it to verify the pod requesting the token: `"kubernetes.io".pod.name: runner-*`.
-   ![kubernetes policy example](../kubernetes-policy.png)
+1. Add a new rule and configure it to verify namespace and the service name:
+   ![kubernetes policy example](../gke-policy.png)
 1. Click on update
 
 ## Sample
