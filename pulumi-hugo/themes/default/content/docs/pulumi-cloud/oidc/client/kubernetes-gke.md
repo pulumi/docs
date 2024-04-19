@@ -29,7 +29,7 @@ Please note that this guide provides step-by-step instructions based on the offi
    ![Register GKE](../register-gke.png)
 1. Submit the form
 
-## Conrigure the Authorization Policies
+## Configure the Authorization Policies
 
 1. Click on the issuer name
 1. Change the policy decision to `Allow`
