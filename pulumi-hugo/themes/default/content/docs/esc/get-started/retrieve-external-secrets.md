@@ -127,7 +127,7 @@ To retrieve secret values from Azure Key Vault, you must first:
 
 - [create an Azure Key Vault](https://learn.microsoft.com/en-us/azure/key-vault/general/quick-create-portal)
 - add a Key Vault role assignment
-  - On your Key Vault's service page, follow steps 3 - 8 in the [Azure OIDC guide](/docs/pulumi-cloud/oidc/azure/#create-a-service-principal), making sure to select the "Key Vault Secrets Officer" role under the **Job functions role** tab
+  - On your Key Vault's service page, follow steps 3 - 8 in the [Azure OIDC guide](/docs/pulumi-cloud/oidc/provider/azure/#create-a-service-principal), making sure to select the "Key Vault Secrets Officer" role under the **Job functions role** tab
 - [create an Azure Key Vault secret](https://learn.microsoft.com/en-us/azure/key-vault/secrets/quick-create-portal)
 
 Once that is complete, you will need to update your environment definition to add the [`azure-secrets` provider](/docs/esc/providers/azure-secrets/) configuration. To do this, add the following configuration to your environment definition, making sure to:

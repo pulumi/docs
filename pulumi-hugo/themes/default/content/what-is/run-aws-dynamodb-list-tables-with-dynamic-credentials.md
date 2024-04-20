@@ -54,7 +54,7 @@ Logged in to pulumi.com as …
 
 Pulumi ESC allows you to manually set your credentials as secrets in your Pulumi ESC environment files. When it comes to something like OIDC configuration, a more secure and efficient alternative is to leverage yet another great feature of Pulumi ESC: dynamic credentials.
 
-This service can dynamically generate credentials on your behalf whenever you interact with your AWS environments. To do so, follow the [guide for configuring OIDC between Pulumi and AWS](/docs/pulumi-cloud/oidc/aws/). Ensure the IAM role you create has sufficient permissions to perform the AWS DynamoDB actions.
+This service can dynamically generate credentials on your behalf whenever you interact with your AWS environments. To do so, follow the [guide for configuring OIDC between Pulumi and AWS](/docs/pulumi-cloud/oidc/provider/aws/). Ensure the IAM role you create has sufficient permissions to perform the AWS DynamoDB actions.
 
 ### Step 3: Create a new Pulumi ESC environment
 

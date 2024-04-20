@@ -99,13 +99,13 @@ This managed experience uses [Pulumi Deployments](/docs/pulumi-cloud/deployments
 
 ### AWS
 
-Cloud Import for AWS within the Pulumi Cloud requires that you configure OIDC to enable a secure, temporary credential exchange workflow. See [the guide on configuring OIDC for AWS with Pulumi Deployments](/docs/pulumi-cloud/oidc/aws/) for more details.
+Cloud Import for AWS within the Pulumi Cloud requires that you configure OIDC to enable a secure, temporary credential exchange workflow. See [the guide on configuring OIDC for AWS with Pulumi Deployments](/docs/pulumi-cloud/oidc/provider/aws/) for more details.
 
 !["The Cloud Import for AWS configuration form within the Pulumi Cloud"](../cloud-import-aws.png)
 
 ### Azure
 
-Cloud Import for Azure within the Pulumi Cloud requires that you configure OIDC to enable a secure, temporary credential exchange workflow. See [the guide on configuring OIDC for Azure with Pulumi Deployments](/docs/pulumi-cloud/oidc/azure/) for more details.
+Cloud Import for Azure within the Pulumi Cloud requires that you configure OIDC to enable a secure, temporary credential exchange workflow. See [the guide on configuring OIDC for Azure with Pulumi Deployments](/docs/pulumi-cloud/oidc/provider/azure/) for more details.
 
 !["The Cloud Import for Azure configuration form within the Pulumi Cloud."](../cloud-import-azure.png)
 
