@@ -71,9 +71,9 @@ In this demo, we are going to use Github Actions to retrieve Pulumi credentials 
 3. Add a policy to allow OIDC and configure the sub and audience for your organization and repositories. In the demo, we are using:
 
 <!-- markdownlint-disable no-bare-urls -->
-    * **Aud**: https://github.com/***organization***
+* **Aud**: https://github.com/***organization***
 
-    * **Sub**: repo:***organization***/***repo***:*
+* **Sub**: repo:***organization***/***repo***:*
 <!-- markdownlint-enable no-bare-urls -->
 4. Create a GitHub action. Here is a sample code. Ensure to replace the organization name with your organization in the `fetch pulumi token` step.
 
