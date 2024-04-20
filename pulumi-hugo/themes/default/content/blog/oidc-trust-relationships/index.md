@@ -59,7 +59,7 @@ When you set up an OIDC Trust Relationship in Pulumi Cloud, you can set policies
 
 ## Seamless Integration with Pulumi ESC
 
-OIDC Trust Relationships seamlessly integrate with Pulumi ESC (Environments, Secrets, and Config), providing a comprehensive solution for managing infrastructure and secret/configuration needs. You can now use your native GitHub app token to exchange it for a short-lived Pulumi Token, and ESC will seamlessly exchange it for a cloud token through an ESC environment.
+OIDC Trust Relationships seamlessly integrate with [Pulumi ESC](/docs/esc/), providing a comprehensive solution for managing infrastructure and access to secrets and configuration. You can now use your native GitHub app token to exchange it for a short-lived Pulumi Token, and ESC will seamlessly exchange it for a cloud token through an ESC environment.
 
 ## Demo
 
