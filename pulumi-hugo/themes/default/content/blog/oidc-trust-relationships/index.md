@@ -28,8 +28,8 @@ meta_image: meta.png
 # `id` properties of the team member files at /data/team/team. Create a file for
 # yourself if you don't already have one.
 authors:
-    - cleve-littlefield
     - german-lena
+    - cleve-littlefield
 
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
