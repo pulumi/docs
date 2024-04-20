@@ -11,7 +11,7 @@ date: 2024-04-19T21:45:13Z
 
 # The draft setting determines whether a post is published. Set it to true if
 # you want to be able to merge the post without publishing it.
-draft: true
+draft: false
 
 # Use the meta_desc property to provide a brief summary (one or two sentences)
 # of the content of the post, which is useful for targeting search results or
@@ -35,6 +35,7 @@ authors:
 tags:
     - oidc
     - oidc-connect
+    - new-feature
 
 # See the blogging docs at https://github.com/pulumi/pulumi-hugo/blob/master/BLOGGING.md
 # for details, and please remove these comments before submitting for review.
