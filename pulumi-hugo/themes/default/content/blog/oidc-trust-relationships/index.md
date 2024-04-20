@@ -1,5 +1,5 @@
 ---
-title: "Introducing OIDC Connect Trust Relationships for Pulumi Cloud"
+title: "OIDC Connect Trust Relationships for Pulumi Cloud"
 
 # The date represents the post's publish date, and by default corresponds with
 # the date and time this file was generated. Dates are used for display and
@@ -60,16 +60,19 @@ When you set up an OIDC Trust Relationship in Pulumi Cloud, you can set policies
 
 In this demo, we are going to use Github Actions to retrieve Pulumi credentials and use those credentials to list all the Pulumi ESC Environments in our organization.
 
+<!-- markdownlint-disable ol-prefix -->
 1. Go to the OIDC Issuers Page.
 2. Register Issuer and give a name and (optional) max expiration. Enter the GitHub actions URL `https://token.actions.githubusercontent.com`.
 3. Add a policy to allow OIDC and configure the sub and audience as needed, and save the policy. In the demo, we are using:
 
+<!-- markdownlint-disable no-bare-urls -->
     * **Aud**: https://github.com/***organization***
 
     * **Sub**: repo:***organization***/***repo***:*
-
+<!-- markdownlint-enable no-bare-urls -->
 4. Create a GitHub action. Here is a sample code. Ensure to replace the organization name with your organization in the `fetch pulumi token` step.
 
+<!-- markdownlint-disable code-block-style -->
 ```yaml
 name: Pulumi ESC List Environments
 on:
@@ -120,15 +123,14 @@ jobs:
       - name: List all Pulumi ESC Environments
         run: pulumi env ls -o arun-test
 ```
+<!-- markdownlint-enable code-block-style -->
 5. Go to GitHub Actions page, and run the workflow you just created.
-
-
+<!-- markdownlint-enable ol-prefix -->
 {{< video title="GitHub Actions OIDC Trust Demo" src="./oidc-trust-demo.mp4" width=600 height=420 autoplay="true" loop="true" >}}
 
 ## Seamless Integration with Pulumi ESC
 
 OIDC Trust Relationships seamlessly integrate with Pulumi ESC (Environments, Secrets, and Config), providing a comprehensive solution for managing infrastructure and secret/configuration needs. You can now use your native GitHub app token to exchange it for a short-lived Pulumi Token, and ESC will seamlessly exchange it for a cloud token through an ESC environment.
-
 
 ## Next steps
 
