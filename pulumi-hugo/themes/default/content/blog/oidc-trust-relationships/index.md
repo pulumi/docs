@@ -57,6 +57,10 @@ OIDC Trust Relationships simplify the authentication process by allowing you to 
 
 When you set up an OIDC Trust Relationship in Pulumi Cloud, you can set policies to deny or approve token exchanges based on issuer subject or additional claims. We support wildcard matching to create simple policies that support complex authorization scenarios. Based on your specific policy requirements, these policies can be used to issue a token scoped to an organization, team, or personal access.
 
+## Seamless Integration with Pulumi ESC
+
+OIDC Trust Relationships seamlessly integrate with Pulumi ESC (Environments, Secrets, and Config), providing a comprehensive solution for managing infrastructure and secret/configuration needs. You can now use your native GitHub app token to exchange it for a short-lived Pulumi Token, and ESC will seamlessly exchange it for a cloud token through an ESC environment.
+
 ## Demo
 
 In this demo, we are going to use Github Actions to retrieve Pulumi credentials and use them to list all the Pulumi ESC Environments in our organization.
@@ -128,10 +132,6 @@ jobs:
 5. Go to GitHub Actions page, and run the workflow you just created.
 <!-- markdownlint-enable ol-prefix -->
 {{< video title="GitHub Actions OIDC Trust Demo" src="./oidc-trust-demo.mp4" width=600 height=420 autoplay="true" loop="true" >}}
-
-## Seamless Integration with Pulumi ESC
-
-OIDC Trust Relationships seamlessly integrate with Pulumi ESC (Environments, Secrets, and Config), providing a comprehensive solution for managing infrastructure and secret/configuration needs. You can now use your native GitHub app token to exchange it for a short-lived Pulumi Token, and ESC will seamlessly exchange it for a cloud token through an ESC environment.
 
 ## Next steps
 
