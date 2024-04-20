@@ -41,7 +41,7 @@ tags:
 # for details, and please remove these comments before submitting for review.
 ---
 
-We are excited to introduce a powerful addition to Pulumi's authentication capabilities: OIDC Connect Trust Relationships. This feature makes it easy to integrate Pulumi securely into any ecosystem that supports OIDC Connect. By incorporating OIDC Connect, Pulumi is not only extending its compatibility with a broader range of environments but also reinforcing its commitment to delivering top-tier, secure, and scalable solutions to developers and enterprises alike. Whether you are working within CI/CD pipelines or engaging directly with cloud services, this new feature ensures that your infrastructure management is more secure, efficient, and aligned with industry best practices.
+We are excited to introduce a powerful addition to Pulumi's authentication capabilities: OIDC Connect Trust Relationships. This feature makes it easy to integrate Pulumi securely into any ecosystem that supports OIDC Connect. By incorporating [OIDC Connect](/docs/pulumi-cloud/oidc/client/), Pulumi is not only extending its compatibility with a broader range of environments but also reinforcing its commitment to delivering top-tier, secure, and scalable solutions to developers and enterprises alike. Whether you are working within CI/CD pipelines or engaging directly with cloud services, this new feature ensures that your infrastructure management is more secure, efficient, and aligned with industry best practices.
 
 <!--more-->
 
@@ -68,7 +68,7 @@ In this demo, we are going to use Github Actions to retrieve Pulumi credentials 
 <!-- markdownlint-disable ol-prefix -->
 1. Go to the OIDC Issuers Page.
 2. Register Issuer and give a name and (optional) max expiration. Enter the GitHub actions URL `https://token.actions.githubusercontent.com`.
-3. Add a policy to allow OIDC and configure the sub and audience as needed, and save the policy. In the demo, we are using:
+3. Add a policy to allow OIDC and configure the sub and audience for your organization and repositories. In the demo, we are using:
 
 <!-- markdownlint-disable no-bare-urls -->
     * **Aud**: https://github.com/***organization***
