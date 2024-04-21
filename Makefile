@@ -88,3 +88,11 @@ ci_bucket_cleanup:
 ci_update_search_index:
 	echo "Updating search index: ${DEPLOYMENT_ENVIRONMENT}..."
 	./scripts/ci-update-search-index.sh "${DEPLOYMENT_ENVIRONMENT}"
+
+.PHONY: serve-all
+serve-all:
+	./node_modules/.bin/concurrently --kill-others -r "./scripts/serve.sh" "yarn --cwd ./theme run start"
+
+.PHONY: build-assets
+build-assets:
+	yarn --cwd ./theme run build
