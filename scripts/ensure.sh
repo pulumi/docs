@@ -13,3 +13,5 @@ fi
 # Install the Node dependencies for the website and the infrastructure.
 yarn install
 yarn --cwd infrastructure install
+yarn --cwd theme install
+yarn --cwd theme/stencil install
