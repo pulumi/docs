@@ -54,6 +54,7 @@ main:
     learn:
         - The basics of Pulumi for infrastructure as code
         - The basics of LlamaIndex
+        - Create a Chatbot with LlamaIndex for AWS Bedrock and Streamlit UI
         - How to deploy a LlamaIndex application on AWS using Pulumi
 
     # The webinar presenters
