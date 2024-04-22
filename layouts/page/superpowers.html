@@ -1,0 +1,187 @@
+{{ define "hero" }}
+    {{ partial "hero" (dict "title" "Universal Infrastructure with Superpowers") }}
+{{ end }}
+
+{{ define "main" }}
+    <section id="overview" class="my-16">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2>Supercharge your cloud infrastructure.</h2>
+            <p>Pulumi 2.0 includes new capabilities for Delivery, Provisioning, Architecture, Testing, and Policy-as-code &mdash; on any cloud, using your favorite languages.</p>
+            <p>Read more about what's new in Pulumi 2.0 <a class="link" href="{{ relref . "/blog/pulumi-2-0" }}">here.</a></p>
+            <div>
+                <div class="flex justify-center items-center mt-8">
+                    <div class="flex flex-col lg:flex-row items-start">
+                        <a class="btn-primary mr-4" href="{{ relref . "/docs/get-started" }}">Get Started</a>
+                        <a class="btn-secondary" href="#launch">Watch the Launch Event</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Superpowers grid -->
+    <a id="superpowers"></a>
+    <section class="bg-white pt-24 px-4 justify-center" id="editions">
+        <div class="container mx-auto lg:flex justify-center">
+            <ul class="flex flex-col md:flex-row md:flex-wrap items-start list-none p-0">
+                <li class="md:w-1/2 md:flex items-start mt-0">
+                    <div class="text-center md:text-left mb-4 md:mb-0">
+                        <div class="inline-block bg-blue-100 border-4 border-blue-200 rounded-full p-6" style="fill: #4387c7;">
+                            {{ partial "superpower-icon" (dict "type" "cloud") }}
+                        </div>
+                    </div>
+                    <div class="md:pl-6 md:pr-12">
+                        <h4 class="text-center md:text-left font-normal mt-0">
+                            <a class="link" href="{{ relref . "/docs/get-started" }}"> Any cloud, any language </a>
+                        </h4>
+                        <p>
+                            Pulumi works with top programming languages across all public clouds with support for dozens of popular infrastructure service providers including
+                            private and hybrid clouds.
+                        </p>
+                        <p class="m-0 text-center md:text-left">
+                            <a class="link" href="{{ relref . "/docs/get-started" }}">
+                                <span class="transition-all hover:mr-1">Learn more</span>
+                                <span>&rarr;</span>
+                            </a>
+                        </p>
+                        <div class="mb-12 pb-12 border-b border-gray-1"></div>
+                    </div>
+                </li>
+                <li class="md:w-1/2 md:flex items-start mt-0">
+                    <div class="text-center md:text-left mb-4 md:mb-0">
+                        <div class="inline-block bg-blue-100 border-4 border-blue-200 rounded-full p-6" style="fill: #4387c7;">
+                            {{ partial "superpower-icon" (dict "type" "provisioning") }}
+                        </div>
+                    </div>
+                    <div class="md:pl-6 md:pr-12">
+                        <h4 class="text-center md:text-left font-normal mt-0">
+                            <a class="link" href="{{ relref . "/docs/get-started" }}"> Provisioning </a>
+                        </h4>
+                        <p>
+                            Reduce complexity and ship applications to any cloud faster. Boost productivity using the best languages and tools. Plan, preview, and track all
+                            changes. Easy SaaS and self-hosted options.
+                        </p>
+                        <p class="m-0 text-center md:text-left">
+                            <a class="link" href="{{ relref . "/docs/get-started" }}">
+                                <span class="transition-all hover:mr-1">Learn more</span>
+                                <span>&rarr;</span>
+                            </a>
+                        </p>
+                        <div class="mb-12 pb-12 border-b border-gray-1"></div>
+                    </div>
+                </li>
+                <li class="md:w-1/2 md:flex items-start mt-0">
+                    <div class="text-center md:text-left mb-4 md:mb-0">
+                        <div class="inline-block bg-blue-100 border-4 border-blue-200 rounded-full p-6" style="fill: #4387c7;">
+                            {{ partial "superpower-icon" (dict "type" "delivery") }}
+                        </div>
+                    </div>
+                    <div class="md:pl-6 md:pr-12">
+                        <h4 class="text-center md:text-left font-normal mt-0">
+                            <a class="link" href="{{ relref . "/docs/using-pulumi/continuous-delivery/" }}"> Delivery </a>
+                        </h4>
+                        <p>
+                            Continuously deliver apps and infrastructure with CI/CD and SCM integrations and built-in secrets management. Improve velocity and visibility for
+                            deployments in complex global environments.
+                        </p>
+                        <p class="m-0 text-center md:text-left">
+                            <a class="link" href="{{ relref . "/docs/using-pulumi/continuous-delivery/" }}">
+                                <span class="transition-all hover:mr-1">Learn more</span>
+                                <span>&rarr;</span>
+                            </a>
+                        </p>
+                        <div class="mb-12 pb-12 border-b border-gray-1"></div>
+                    </div>
+                </li>
+                <li class="md:w-1/2 md:flex items-start mt-0">
+                    <div class="text-center md:text-left mb-4 md:mb-0">
+                        <div class="inline-block bg-blue-100 border-4 border-blue-200 rounded-full p-6" style="fill: #4387c7;">
+                            {{ partial "superpower-icon" (dict "type" "architecture") }}
+                        </div>
+                    </div>
+                    <div class="md:pl-6 md:pr-12">
+                        <h4 class="text-center md:text-left font-normal mt-0">
+                            <a class="link" href="{{ relref . "/docs/concepts/" }}"> Architecture </a>
+                        </h4>
+                        <p>
+                            Avoid reinventing the wheel with infrastructure that codifies patterns and best practices. Benefit from an ecosystem of libraries and language packages
+                            shared with the community.
+                        </p>
+                        <p class="m-0 text-center md:text-left">
+                            <a class="link" href="{{ relref . "/docs/concepts/" }}">
+                                <span class="transition-all hover:mr-1">Learn more</span>
+                                <span>&rarr;</span>
+                            </a>
+                        </p>
+                        <div class="mb-12 pb-12 border-b border-gray-1"></div>
+                    </div>
+                </li>
+                <li class="md:w-1/2 md:flex items-start mt-0">
+                    <div class="text-center md:text-left mb-4 md:mb-0">
+                        <div class="inline-block bg-blue-100 border-4 border-blue-200 rounded-full p-6" style="fill: #4387c7;">
+                            {{ partial "superpower-icon" (dict "type" "policy") }}
+                        </div>
+                    </div>
+                    <div class="md:pl-6 md:pr-12">
+                        <h4 class="text-center md:text-left font-normal mt-0">
+                            <a class="link" href="{{ relref . "/docs/using-pulumi/crossguard" }}"> Policy </a>
+                        </h4>
+                        <p>
+                            Prevent mistakes from getting deployed. Enforce security, compliance, cost controls, and best practices using policies defined in real languages. Apply
+                            policies across the organization with fine-grained controls.
+                        </p>
+                        <p class="m-0 text-center md:text-left">
+                            <a class="link" href="{{ relref . "/docs/using-pulumi/crossguard" }}">
+                                <span class="transition-all hover:mr-1">Learn more</span>
+                                <span>&rarr;</span>
+                            </a>
+                        </p>
+                        <div class="mb-12 pb-12 md:pb-4 border-b border-gray-1 md:border-0"></div>
+                    </div>
+                </li>
+                <li class="md:w-1/2 md:flex items-start mt-0">
+                    <div class="text-center md:text-left mb-4 md:mb-0">
+                        <div class="inline-block bg-blue-100 border-4 border-blue-200 rounded-full p-6" style="fill: #4387c7;">
+                            {{ partial "superpower-icon" (dict "type" "testing") }}
+                        </div>
+                    </div>
+                    <div class="md:pl-6 md:pr-12">
+                        <h4 class="text-center md:text-left font-normal mt-0">
+                            <a class="link" href="{{ relref . "/docs/using-pulumi/testing" }}"> Testing </a>
+                        </h4>
+                        <p>
+                            Be confident that infrastructure is correct before and after deployment. Use popular tools and test-driven techniques. Perform integration tests for
+                            ephemeral environments and post-deployment validation.
+                        </p>
+                        <p class="m-0 text-center md:text-left">
+                            <a class="link" href="{{ relref . "/docs/using-pulumi/testing" }}">
+                                <span class="transition-all hover:mr-1">Learn more</span>
+                                <span>&rarr;</span>
+                            </a>
+                        </p>
+                        <div class="mb-12 pb-12 md:pb-4"></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Get started -->
+    <div class="text-center pt-16 pb-32 text-lg px-4" style="background: linear-gradient(#ffffff, #f7fafc);">
+        <div class="md:inline-flex items-center shadow-lg bg-white rounded px-4 md:px-12 py-6 mx-auto border border-gray-400">
+            <div class="text-left">
+                <p class="text-gray-700 leading-relaxed mt-0 md:mt-4">
+                    <strong class="mr-2">Give it a try!</strong>
+                    <span>Deploy your first Pulumi app in just five minutes.</span>
+                </p>
+            </div>
+            <div class="inline-flex items-center md:ml-10">
+                <a class="btn-primary" href="{{ relref . "/docs/get-started" }}" title="Create your first project with Pulumi">
+                    <span>Get Started</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    {{ partial "newsletter.html" . }}
+{{ end }}

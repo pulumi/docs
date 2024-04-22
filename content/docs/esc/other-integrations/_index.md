@@ -1,0 +1,21 @@
+---
+title: Other Integrations
+title_tag: Other Integrations for Pulumi ESC
+h1: Other Integrations for Pulumi ESC
+meta_desc: Learn how to integrate Pulumi ESC with other tools.
+menu:
+  pulumiesc:
+    identifier: esc-other-integrations
+    weight: 6
+aliases:
+  - /docs/pulumi-cloud/esc/other-integrations/
+---
+
+Pulumi ESC's rich metadata and support for popular configuration formats enables easy integration with other developer tools.
+
+To learn how to configure common integrations, follow the links below.
+
+| Tool                                                                     | Description                                                                                                                   |
+|--------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|
+| [Pulumi IaC](/docs/esc/get-started/integrate-with-pulumi-iac)            | Pulumi IaC has builtin support for sourcing stack configuration from ESC environments.                                        |
+| [Direnv](/docs/esc/other-integrations/direnv)                            | Pulumi ESC can be integrated with Direnv to source environment variables, secrets, and configuration from ESC environments.   |

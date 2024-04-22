@@ -1,0 +1,10 @@
+id = "casey-huang"
+name = "Casey Huang"
+title = "Software Engineer"
+weight = 1
+
+status = "active"
+
+[social]
+linkedin = "casey-huang-73410458"
+github = "caseyyh"

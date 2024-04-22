@@ -1,0 +1,10 @@
+id = "florian-stadler"
+name = "Florian Stadler"
+title = "Software Engineer"
+weight = 1
+
+status = "active"
+
+[social]
+github = "flostadler"
+linkedin = "florian-stadler-052b31149"

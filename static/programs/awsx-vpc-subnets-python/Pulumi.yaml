@@ -1,0 +1,6 @@
+name: awsx-vpc-subnets-python
+runtime:
+  name: python
+  options:
+    virtualenv: venv
+description: An example that creates a new VPC with a custom subnet specification.

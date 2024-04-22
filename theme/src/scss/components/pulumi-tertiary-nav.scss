@@ -1,0 +1,42 @@
+pulumi-tertiary-nav {
+    @apply bg-white text-base text-black;
+
+    ul {
+        @apply flex justify-evenly items-center flex-wrap text-base px-4;
+        list-style: none !important;
+
+        @screen md {
+            @apply text-base py-0;
+        }
+
+        li {
+            @apply flex-grow border-solid border-b-2 border-transparent;
+
+            > a {
+                @apply block py-2 px-4 font-normal text-lg text-center text-gray-700 no-underline cursor-pointer;
+
+                @screen md {
+                    @apply py-4;
+                }
+            }
+
+            &.active {
+                @include gradient-border;
+
+                > a {
+                    @apply font-semibold text-black;
+                }
+            }
+
+            &:not(.active) {
+                &:hover {
+                    @apply border-gray-600;
+
+                    > a {
+                        @apply text-black;
+                    }
+                }
+            }
+        }
+    }
+}

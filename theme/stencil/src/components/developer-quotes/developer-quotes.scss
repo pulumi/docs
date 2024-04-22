@@ -1,0 +1,8 @@
+pulumi-developer-quotes {
+    .quote-card {
+        box-shadow: 0 6px 36px rgb(0, 0, 0, 0.1);
+        &:hover {
+            box-shadow: 10px 15px 60px rgb(0, 0, 0, 0.2);
+        }
+    }
+}

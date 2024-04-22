@@ -1,0 +1,3 @@
+name: awsx-vpc-default-java
+runtime: java
+description: An example of fetching the default AWS VPC for the current region.

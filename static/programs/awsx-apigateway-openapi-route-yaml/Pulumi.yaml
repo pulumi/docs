@@ -1,0 +1,10 @@
+name: awsx-apigateway-openapi-route-yaml
+runtime: yaml
+description: n example of configuring an API Gateway route with an OpenAPI/Swagger definition.
+outputs:
+  # Export the name of the bucket
+  bucketName: ${my-bucket.id}
+resources:
+  # Create an AWS resource (S3 Bucket)
+  my-bucket:
+    type: aws:s3:Bucket

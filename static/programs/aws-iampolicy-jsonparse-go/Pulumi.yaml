@@ -1,0 +1,7 @@
+name: aws-iampolicy-jsonparse-go
+runtime: go
+description: An example that deploys an IAM policy and manipulates it using JSON parsing.
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: aws-go

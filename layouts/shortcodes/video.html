@@ -1,0 +1,15 @@
+{{ $src := .Get "src" }}
+
+{{ $title := default "" (.Get "title") }}
+{{ $controls := default true (eq (.Get "controls") "true") }}
+{{ $autoplay := default false (eq (.Get "autoplay") "true") }}
+{{ $loop := default false (eq (.Get "loop") "true") }}
+
+<div class="my-4">
+    <video class="flex outline-none rounded w-full" title="{{ $title }}"
+        {{ if $controls }} controls {{ end }}
+        {{ if $autoplay }} autoplay muted playsinline {{ end }}
+        {{ if $loop }} loop {{ end }}>
+        <source src="{{ $src }}" />
+    </video>
+</div>

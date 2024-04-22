@@ -1,0 +1,11 @@
+id = "kat-cosgrove"
+name = "Kat Cosgrove"
+title = "Staff Developer Advocate"
+weight = 1
+
+status = "inactive"
+
+[social]
+github = "katcosgrove"
+twitter = "dixie3flatline"
+linkedin = "katcosgrove"

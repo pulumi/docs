@@ -1,0 +1,2 @@
+name: awsx-ecr-eks-deployment-service-go
+runtime: go

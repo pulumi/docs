@@ -1,0 +1,42 @@
+<!--
+Reusable event schedule with accordions for long descriptions
+
+Schedule data should be structured like:
+    heading:
+    subheading:
+    items:
+        - title:
+          description:
+          time:
+
+background color adjustable through "bg_color" (limited to tailwind) or "background_color" (hex or css colors)
+schedule tile color adjustable through "tile-color"
+-->
+
+<section id="schedule" class="bg-{{ .bg_color }} event-schedule" style="background-color: {{ .background_color }}">
+    <div class="container mx-auto py-16 px-6 lg:px-0">
+        <h2 class="text-center">{{ .schedule.heading }}</h2>
+        <p class="text-center mb-8">{{ .schedule.subheading }}</p>
+        <div class="schedule mx-auto w-full lg:w-2/3">
+            {{ range $index, $item := .schedule.items }}
+                <div class="flex flex-row mt-4">
+                    <div class="bg-white rounded-md flex justify-center p-4 mr-4 w-44 text-sm md:text-base" style="max-height: 56px;">{{ $item.time }}</div>
+                    {{ if $item.description }}
+                        <div class="schedule-item rounded-md h-min">
+                            <input type="checkbox" id="chck{{ $index }}" />
+                            <label class="schedule-item-label w-full" for="chck{{ $index }}">
+                                <div class="w-5/6 pr-2">{{ $item.title }}</div>
+                                <span class="text-violet-600 mr-2 accordion-details hidden md:block">Details</span>
+                            </label>
+                            <div class="schedule-item-content">
+                                {{ $item.description | markdownify }}
+                            </div>
+                        </div>
+                    {{ else }}
+                        <div class="rounded-md h-min bg-white w-full p-4">{{ $item.title }}</div>
+                    {{ end }}
+                </div>
+            {{ end }}
+        </div>
+    </div>
+</section>

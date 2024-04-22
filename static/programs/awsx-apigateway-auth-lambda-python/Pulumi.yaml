@@ -1,0 +1,6 @@
+name: awsx-apigateway-auth-lambda-python
+runtime:
+  name: python
+  options:
+    virtualenv: venv
+description: An example that deploys an API Gateway REST API with an AWS Lambda authorizer.

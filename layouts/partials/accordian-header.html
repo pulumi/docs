@@ -1,0 +1,18 @@
+{{ if eq .checked "true" }}
+    <input type="checkbox" class="absolute hidden" id="{{ .text }}" checked="checked" />
+{{ else }}
+    <input type="checkbox" class="absolute hidden" id="{{ .text }}" />
+{{ end }}
+
+
+<label for="{{ .text }}" class="accordion-label">
+    {{ if eq .large_header true }}
+        <h5 class="mt-2 w-2/3">{{ .text }}</h5>
+    {{ else }}
+        <h6 class="mt-2 w-2/3">{{ .text }}</h6>
+    {{ end }}
+    <div class="flex flex-grow justify-end items-center">
+        <span class="closed-accordion">{{ partial "icons/accordion-closed" }}</span>
+        <span class="open-accordion hidden">{{ partial "icons/accordion-open" }}</span>
+    </div>
+</label>

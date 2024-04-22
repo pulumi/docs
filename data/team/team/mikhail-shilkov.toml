@@ -1,0 +1,11 @@
+id = "mikhail-shilkov"
+name = "Mikhail Shilkov"
+title = "Engineering Manager"
+weight = 1
+
+status = "active"
+
+[social]
+github = "MikhailShilkov"
+linkedin = "MikhailShilkov"
+twitter = "MikhailShilkov"

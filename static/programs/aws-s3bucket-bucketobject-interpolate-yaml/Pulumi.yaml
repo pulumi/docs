@@ -1,0 +1,19 @@
+name: aws-s3bucket-bucketobject-interpolate-yaml
+runtime: yaml
+description: An example that creates an S3 bucket and bucket object
+
+resources:
+  bucket:
+    type: aws:s3/bucket:Bucket
+    name: bucket
+
+  bucketObject:
+    type: aws:s3/bucketObject:BucketObject
+    name: bucket-object
+    properties:
+      bucket: ${bucket.id}
+      key: some-file.txt
+      content: some-content
+
+outputs:
+  s3Url: s3://${bucket.id}/${bucketObject.key}

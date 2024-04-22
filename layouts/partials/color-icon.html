@@ -1,0 +1,9 @@
+{{ $size := "large" }}
+{{ if eq .size "small" }}
+    {{ $size = "small"}}
+{{ end }}
+
+<div class="icon-{{ .icon }} icon-{{ .icon }}-{{ .icon_color }} icon-{{ .icon }}-{{ $size }}">
+    {{ $path := .icon | printf "%s/%s" "icons" | printf "%s" }}
+    {{ partial $path }}
+</div>

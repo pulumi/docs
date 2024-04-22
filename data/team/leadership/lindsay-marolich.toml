@@ -1,0 +1,9 @@
+id = "lindsay-marolich"
+name = "Lindsay Marolich"
+title = "VP of Growth"
+weight = 7
+
+status = "active"
+
+[social]
+linkedin = "lmarolich"

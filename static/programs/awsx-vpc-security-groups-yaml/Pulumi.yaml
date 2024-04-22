@@ -1,0 +1,35 @@
+name: awsx-vpc-security-groups-yaml
+runtime: yaml
+description: An example that creates a new VPC with a custom security group.
+
+resources:
+  vpc:
+    type: awsx:ec2:Vpc
+    properties:
+      natGateways:
+        strategy: Single
+
+  securityGroup:
+    type: aws:ec2:SecurityGroup
+    properties:
+      vpcId: ${vpc.vpcId}
+      ingress:
+        - fromPort: 22
+          toPort: 22
+          protocol: tcp
+          cidrBlocks:
+            - "203.0.113.25/32"
+        - fromPort: 443
+          toPort: 443
+          protocol: tcp
+          cidrBlocks:
+            - "0.0.0.0/0"
+      egress:
+        - fromPort: 0
+          toPort: 0
+          protocol: "-1"
+          cidrBlocks:
+            - 0.0.0.0/0
+
+outputs:
+  vpcId: ${vpc.vpcId}
