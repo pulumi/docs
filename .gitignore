@@ -57,5 +57,8 @@ _vendor/
 # Ignore log files.
 /scripts/link-checker/pages-with-broken-links.txt
 
+# Ignore assets
+assets/
+
 .doctrees/
 .buildinfo
