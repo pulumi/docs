@@ -1,5 +1,5 @@
 ---
-title: "OIDC Connect Trust Relationships for Pulumi Cloud"
+title: "OpenID Connect Trust Relationships for Pulumi Cloud"
 
 # The date represents the post's publish date, and by default corresponds with
 # the date and time this file was generated. Dates are used for display and
@@ -17,7 +17,7 @@ draft: false
 # of the content of the post, which is useful for targeting search results or
 # social-media previews. This field is required or the build will fail the
 # linter test. Max length is 160 characters.
-meta_desc: Introducing OIDC Connect Trust Relationships for Pulumi Cloud
+meta_desc: Introducing OpenID Connect (OIDC) Trust Relationships for Pulumi Cloud
 
 # The meta_image appears in social-media previews and on the blog home page. A
 # placeholder image representing the recommended format, dimensions and aspect
@@ -34,32 +34,32 @@ authors:
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
     - oidc
-    - oidc-connect
-    - new-feature
+    - openid-connect
+    - feature
 
 # See the blogging docs at https://github.com/pulumi/pulumi-hugo/blob/master/BLOGGING.md
 # for details, and please remove these comments before submitting for review.
 ---
 
-We are excited to introduce a powerful addition to Pulumi's authentication capabilities: OIDC Connect Trust Relationships. This feature makes it easy to integrate Pulumi securely into any ecosystem that supports OIDC Connect. By incorporating [OIDC Connect](/docs/pulumi-cloud/oidc/client/), Pulumi is not only extending its compatibility with a broader range of environments but also reinforcing its commitment to delivering top-tier, secure, and scalable solutions to developers and enterprises alike. Whether you are working within CI/CD pipelines or engaging directly with cloud services, this new feature ensures that your infrastructure management is more secure, efficient, and aligned with industry best practices.
+We are excited to introduce a powerful addition to Pulumi's authentication capabilities: OpenID Connect (OIDC) Trust Relationships. This feature makes it easy to integrate Pulumi securely into any ecosystem that supports OIDC. By incorporating [OIDC](/docs/pulumi-cloud/oidc/client/), Pulumi is not only extending its compatibility with a broader range of environments but also reinforcing its commitment to delivering top-tier, secure, and scalable solutions to developers and enterprises alike. Whether you are working within CI/CD pipelines or engaging directly with cloud services, this new feature ensures that your infrastructure management is more secure, efficient, and aligned with industry best practices.
 
 <!--more-->
 
 ## Addressing the "Secret Zero" Challenge
 
-A lot of platforms deal with the “secret zero” challenge, where they are very secure but to access them you often have to maintain a long-term access token. Managing long-term access tokens has always been a challenge for developers. Often those secrets are set and forgotten, leaving the team to scramble when it comes time to rotate them. This struggle often leads to those secrets not being rotated very often. This long-term access token becomes a weak point in the overall security posture as well as a hassle for developers.  With OIDC Trust Relationships, we're tackling the "secret zero" challenge head-on by introducing exchanging a secure platform token for a short-term Pulumi token. This enhances security and simplifies token management.
+A lot of platforms deal with the “secret zero” challenge, which have a weak link where they require a static, long-lived access token. Managing long-lived access tokens has always been a challenge for developers. Often those secrets are set and forgotten, leaving the team to scramble when it comes time to rotate them. This struggle often leads to those secrets not being rotated very often. This long-term access token becomes a weak point in the overall security posture as well as a hassle for developers.  With OIDC Trust Relationships, we're tackling the "secret zero" challenge head-on by introducing exchanging a secure platform token for a short-term Pulumi token. This enhances security and simplifies token management.
 
 ## Simplified Authentication
 
-OIDC Trust Relationships simplify the authentication process by allowing you to securely request dynamic credentials for Pulumi using your preferred OIDC Connect provider. OIDC connect is supported across many popular CI/CD systems, such as GitHub, GitLab, Circle CI, and more. In addition, OIDC Connect can be used from within most cloud providers, such as AWS, Azure, GCP, and more.
+OIDC Trust simplifies the authentication process by allowing you to securely request dynamic credentials for Pulumi using your preferred OIDC provider. OIDC is supported across many popular CI/CD systems, such as GitHub, GitLab, Circle CI, and more. In addition, OIDC can be used from within most cloud providers, such as AWS, Azure, GCP, and more.
 
 ## Enhanced Security with Policy Controls
 
-When you set up an OIDC Trust Relationship in Pulumi Cloud, you can set policies to deny or approve token exchanges based on issuer subject or additional claims. We support wildcard matching to create simple policies that support complex authorization scenarios. Based on your specific policy requirements, these policies can be used to issue a token scoped to an organization, team, or personal access.
+When you set up an OIDC Trust in Pulumi Cloud, you can set policies to deny or approve token exchanges based on issuer subject or additional claims. We support wildcard matching to create simple policies that support complex authorization scenarios. Based on your specific policy requirements, these policies can be used to issue a token scoped to an organization, team, or personal access.
 
 ## Seamless Integration with Pulumi ESC
 
-OIDC Trust Relationships seamlessly integrate with [Pulumi ESC](/docs/esc/), providing a comprehensive solution for managing infrastructure and access to secrets and configuration. You can now use your native GitHub app token to exchange it for a short-lived Pulumi Token, and ESC will seamlessly exchange it for a cloud token through an ESC environment.
+OIDC Trust seamlessly integrate with [Pulumi ESC](/docs/esc/), providing a comprehensive solution for managing infrastructure and access to secrets and configuration. You can now use your native GitHub app token to exchange it for a short-lived Pulumi Token, and ESC will seamlessly exchange it for a cloud token through an ESC environment.
 
 ## Demo
 
@@ -75,7 +75,7 @@ In this demo, we are going to use Github Actions to retrieve Pulumi credentials 
 
 * **Sub**: repo:***organization***/***repo***:*
 <!-- markdownlint-enable no-bare-urls -->
-4. Create a GitHub action. Here is a sample code. Ensure to replace the organization name with your organization in the `fetch pulumi token` step.
+4. Create a GitHub action. Here is a sample code. Make sure to substitute the `aud` claim with your organization's name in the `fetch pulumi token` step.
 
 <!-- markdownlint-disable code-block-style -->
 ```yaml
@@ -126,7 +126,7 @@ jobs:
           PULUMI_ACCESS_TOKEN: ${{ env.PULUMI_ACCESS_TOKEN }}
 
       - name: List all Pulumi ESC Environments
-        run: pulumi env ls -o arun-test
+        run: pulumi env ls
 ```
 <!-- markdownlint-enable code-block-style -->
 5. Go to GitHub Actions page, and run the workflow you just created.
@@ -135,5 +135,5 @@ jobs:
 
 ## Next steps
 
-* [OIDC Connect Trust Relationships overview](/docs/pulumi-cloud/oidc/client/)
+* [OIDC Trust Relationships overview](/docs/pulumi-cloud/oidc/client/)
 * [Configuring OIDC for Github](/docs/pulumi-cloud/oidc/client/github/)
