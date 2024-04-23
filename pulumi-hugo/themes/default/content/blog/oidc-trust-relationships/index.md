@@ -17,7 +17,7 @@ draft: false
 # of the content of the post, which is useful for targeting search results or
 # social-media previews. This field is required or the build will fail the
 # linter test. Max length is 160 characters.
-meta_desc: Introducing OpenID Connect Trust Relationships for Pulumi Cloud
+meta_desc: Introducing OpenID Connect (OIDC) Trust Relationships for Pulumi Cloud
 
 # The meta_image appears in social-media previews and on the blog home page. A
 # placeholder image representing the recommended format, dimensions and aspect
@@ -41,7 +41,7 @@ tags:
 # for details, and please remove these comments before submitting for review.
 ---
 
-We are excited to introduce a powerful addition to Pulumi's authentication capabilities: OpenID Connect Trust Relationships. This feature makes it easy to integrate Pulumi securely into any ecosystem that supports OpenID Connect. By incorporating [OpenID Connect](/docs/pulumi-cloud/oidc/client/), Pulumi is not only extending its compatibility with a broader range of environments but also reinforcing its commitment to delivering top-tier, secure, and scalable solutions to developers and enterprises alike. Whether you are working within CI/CD pipelines or engaging directly with cloud services, this new feature ensures that your infrastructure management is more secure, efficient, and aligned with industry best practices.
+We are excited to introduce a powerful addition to Pulumi's authentication capabilities: OpenID Connect (OIDC) Trust Relationships. This feature makes it easy to integrate Pulumi securely into any ecosystem that supports OIDC. By incorporating [OIDC](/docs/pulumi-cloud/oidc/client/), Pulumi is not only extending its compatibility with a broader range of environments but also reinforcing its commitment to delivering top-tier, secure, and scalable solutions to developers and enterprises alike. Whether you are working within CI/CD pipelines or engaging directly with cloud services, this new feature ensures that your infrastructure management is more secure, efficient, and aligned with industry best practices.
 
 <!--more-->
 
@@ -51,7 +51,7 @@ A lot of platforms deal with the “secret zero” challenge, which have a weak 
 
 ## Simplified Authentication
 
-OIDC Trust simplifies the authentication process by allowing you to securely request dynamic credentials for Pulumi using your preferred OpenID Connect provider. OpenID Connect is supported across many popular CI/CD systems, such as GitHub, GitLab, Circle CI, and more. In addition, OpenID Connect can be used from within most cloud providers, such as AWS, Azure, GCP, and more.
+OIDC Trust simplifies the authentication process by allowing you to securely request dynamic credentials for Pulumi using your preferred OIDC provider. OIDC is supported across many popular CI/CD systems, such as GitHub, GitLab, Circle CI, and more. In addition, OIDC can be used from within most cloud providers, such as AWS, Azure, GCP, and more.
 
 ## Enhanced Security with Policy Controls
 
@@ -135,5 +135,5 @@ jobs:
 
 ## Next steps
 
-* [OpenID Connect Trust Relationships overview](/docs/pulumi-cloud/oidc/client/)
+* [OIDC Trust Relationships overview](/docs/pulumi-cloud/oidc/client/)
 * [Configuring OIDC for Github](/docs/pulumi-cloud/oidc/client/github/)
