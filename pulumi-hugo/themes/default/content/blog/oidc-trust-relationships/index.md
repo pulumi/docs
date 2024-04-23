@@ -75,7 +75,7 @@ In this demo, we are going to use Github Actions to retrieve Pulumi credentials 
 
 * **Sub**: repo:***organization***/***repo***:*
 <!-- markdownlint-enable no-bare-urls -->
-4. Create a GitHub action. Here is a sample code. Ensure to replace the organization name with your organization in the `fetch pulumi token` step.
+4. Create a GitHub action. Here is a sample code. Make sure to substitute the `aud` claim with your organization's name in the `fetch pulumi token` step.
 
 <!-- markdownlint-disable code-block-style -->
 ```yaml
