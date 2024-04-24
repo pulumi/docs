@@ -154,22 +154,27 @@ Event filtering allows you to choose which events should be delivered to each we
 all events, or filter to specific events (only failures, only deployment events, etc.).
 The following table describes the various event filters available and the context in which they are relevant.
 
-| Filter                 | Event Kind      | Webhook Type               | Triggered                         |
-|------------------------|-----------------|----------------------------|-----------------------------------|
-| `stack_created`        | `stack`         | Organization webhooks only | When a stack is created.          |
-| `stack_deleted`        | `stack`         | Organization webhooks only | When a stack is deleted.          |
-| `preview_succeeded`    | `stack_preview` | Both                       | When a stack `preview` succeeds.  |
-| `preview_failed`       | `stack_preview` | Both                       | When a stack `preview` fails.     |
-| `update_succeeded`     | `stack_update`  | Both                       | When a stack `update` succeeds.   |
-| `update_failed`        | `stack_update`  | Both                       | When a stack `update` fails.      |
-| `destroy_succeeded`    | `stack_update`  | Both                       | When a stack `destroy` succeeds.  |
-| `destroy_failed`       | `stack_update`  | Both                       | When a stack `destroy` fails.     |
-| `refresh_succeeded`    | `stack_update`  | Both                       | When a stack `refresh` succeeds.  |
-| `refresh failed`       | `stack_update`  | Both                       | When a stack `refresh` fails.     |
-| `deployment_queued`    | `deployment`    | Both                       | When a deployment is queued.      |
-| `deployment_started`   | `deployment`    | Both                       | When a deployment starts running. |
-| `deployment_succeeded` | `deployment`    | Both                       | When a deployment succeeds.       |
-| `deployment_failed`    | `deployment`    | Both                       | When a deployment fails.          |
+| Filter                        | Event Kind          | Webhook Type               | Triggered                                        |
+|-------------------------------|---------------------|----------------------------|--------------------------------------------------|
+| `stack_created`               | `stack`             | Organization webhooks only | When a stack is created.                         |
+| `stack_deleted`               | `stack`             | Organization webhooks only | When a stack is deleted.                         |
+| `preview_succeeded`           | `stack_preview`     | Both                       | When a stack `preview` succeeds.                 |
+| `preview_failed`              | `stack_preview`     | Both                       | When a stack `preview` fails.                    |
+| `update_succeeded`            | `stack_update`      | Both                       | When a stack `update` succeeds.                  |
+| `update_failed`               | `stack_update`      | Both                       | When a stack `update` fails.                     |
+| `destroy_succeeded`           | `stack_update`      | Both                       | When a stack `destroy` succeeds.                 |
+| `destroy_failed`              | `stack_update`      | Both                       | When a stack `destroy` fails.                    |
+| `refresh_succeeded`           | `stack_update`      | Both                       | When a stack `refresh` succeeds.                 |
+| `refresh failed`              | `stack_update`      | Both                       | When a stack `refresh` fails.                    |
+| `deployment_queued`           | `deployment`        | Both                       | When a deployment is queued.                     |
+| `deployment_started`          | `deployment`        | Both                       | When a deployment starts running.                |
+| `deployment_succeeded`        | `deployment`        | Both                       | When a deployment succeeds.                      |
+| `deployment_failed`           | `deployment`        | Both                       | When a deployment fails.                         |
+| `drift_detected`              | `drift_detection`   | Both                       | When drift is detected in a drift detection run. |
+| `drift_detection_succeeded`   | `drift_detection`   | Both                       | When a drift detection run succeeds.             |
+| `drift_detection_failed`      | `drift_detection`   | Both                       | When a drift detection run fails.                |
+| `drift_remediation_succeeded` | `drift_remediation` | Both                       | When a drift remediation run succeeds.           |
+| `drift_remediation_failed`    | `drift_remediation` | Both                       | When a drift remediation run fails.              |
 
 ## Webhook Formats
 
@@ -314,6 +319,52 @@ the organization name, and a URL for the event. It will also contain the `stackN
     "version": 127,
 	"operation": "update",
 	"status": "running"
+}
+```
+
+##### Drift detection
+
+```json
+{
+  "user": {
+    "name": "Morty Smith",
+    "githubLogin": "morty",
+    "avatarUrl": "https://crazy-adventures.net/morty.png"
+  },
+  "organization": {
+    "name": "Crazy Adventures",
+    "githubLogin": "crazy-adventures",
+    "avatarUrl": "https://crazy-adventures.net/logo.png"
+  },
+  "projectName": "website",
+  "stackName": "website-prod",
+  "driftDetected": true,
+  "driftRunId": "11bf162b-d9d5-4715-8f88-20dcd0e0b167",
+  "status": "succeeded",
+  "resourceChanges": { "update": 3, "delete": 1 },
+  "referenceUrl": "https://app.pulumi.com/crazy-adventures/website/website-prod/deployments/127"
+}
+```
+
+##### Drift remediation
+
+```json
+{
+  "user": {
+    "name": "Morty Smith",
+    "githubLogin": "morty",
+    "avatarUrl": "https://crazy-adventures.net/morty.png"
+  },
+  "organization": {
+    "name": "Crazy Adventures",
+    "githubLogin": "crazy-adventures",
+    "avatarUrl": "https://crazy-adventures.net/logo.png"
+  },
+  "projectName": "website",
+  "stackName": "website-prod",
+  "status": "succeeded",
+  "resourceChanges": { "update": 3, "delete": 1 },
+  "referenceUrl": "https://app.pulumi.com/crazy-adventures/website/website-prod/deployments/128"
 }
 ```
 

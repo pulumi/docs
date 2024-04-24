@@ -2529,6 +2529,609 @@ Status: 200 OK
     "AWS_SESSION_TOKEN": "<redacted>""
 ```
 
+## Schedules
+
+<!-- ###################################################################### -->
+
+### Create Drift Schedule
+
+Note: This is a convenience API for ease of use to create a Drift Schedule, but the same configuration is possible via the raw deployments schedule APIs.
+
+```
+POST /api/stacks/{organization}/{project}/{stack}/deployments/drift/schedules
+```
+
+#### Parameters
+
+| Parameter           | Type   | In    | Description                                                                                                  |
+|---------------------|--------|-------|--------------------------------------------------------------------------------------------------------------|
+| `organization`      | string | path  | organization name                                                                                            |
+| `project`           | string | path  | project name                                                                                                 |
+| `stack`             | string | path  | stack name                                                                                                   |
+| `scheduleCron`      | string | body  | cron expression for when to run drift detection                                                              |
+| `autoRemediate`     | bool   | body  | true if detected drift should be remediated automatically                                                    |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  --request POST \
+  --data '{"scheduleCron":"0 0 * * 0", "autoRemediate":true}' \
+  https://api.pulumi.com/api/stacks/{organization}/{project}/{stack}/deployments/drift/schedules
+```
+
+#### Default response
+
+```
+Status: 200 OK
+```
+
+```
+{
+  "id": "12345678-8102-447f-b246-e9ec85786e23",
+  "orgID": "87654321-8b3b-418a-8c01-5ddd0e00bace",
+  "scheduleCron": "0 0 * * *",
+  "nextExecution": "2024-04-20 00:00:00.000",
+  "paused": false,
+  "kind": "deployment",
+  "definition": {
+    "programID": "12345678-9f94-4a92-8bfb-c2da724fa65b",
+    "request": {
+        "inheritSettings": true,
+        "operation": "detect-drift",
+        "operationContext": {
+            "options": {
+                "remediateIfDriftDetected": true
+            }
+        }
+    }
+  },
+  "created": "2024-04-19 01:00:00.000",
+  "modified": "2024-04-19 01:00:00.000",
+  "lastExecuted": null
+}
+```
+
+### Update Drift Schedule
+
+Note: This is a convenience API for ease of use to update a Drift Schedule, but the same configuration is possible via the raw deployments schedule APIs.
+
+```
+POST /api/stacks/{organization}/{project}/{stack}/deployments/drift/schedules/{scheduleID}
+```
+
+| Parameter           | Type   | In    | Description                                                                                                  |
+|---------------------|--------|-------|--------------------------------------------------------------------------------------------------------------|
+| `organization`      | string | path  | organization name                                                                                            |
+| `project`           | string | path  | project name                                                                                                 |
+| `stack`             | string | path  | stack name                                                                                                   |
+| `scheduleID`        | string | path  | schedule ID that you want to update                                                                          |
+| `scheduleCron`      | string | body  | cron expression for when to run drift detection                                                              |
+| `autoRemediate`     | bool   | body  | true if detected drift should be remediated automatically                                                    |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  --request POST \
+  --data '{"scheduleCron":"0 0 * * 0","autoRemediate":true}' \
+  https://api.pulumi.com/api/stacks/{organization}/{project}/{stack}/deployments/drift/schedules/{scheduleID}
+```
+
+#### Default response
+
+```
+Status: 200 OK
+```
+
+```
+{
+  "id": "12345678-8102-447f-b246-e9ec85786e23",
+  "orgID": "87654321-8b3b-418a-8c01-5ddd0e00bace",
+  "scheduleCron": "0 0 * * *",
+  "nextExecution": "2024-04-20 00:00:00.000",
+  "paused": false,
+  "kind": "deployment",
+  "definition": {
+    "programID": "12345678-9f94-4a92-8bfb-c2da724fa65b",
+    "request": {
+        "inheritSettings": true,
+        "operation": "detect-drift",
+        "operationContext": {
+            "options": {
+                "remediateIfDriftDetected": true
+            }
+        }
+    }
+  },
+  "created": "2024-04-19 01:00:00.000",
+  "modified": "2024-04-19 01:00:00.000",
+  "lastExecuted": null
+}
+```
+
+### Create TTL Schedule
+
+Note: This is a convenience API for ease of use to create a TTL Schedule, but the same configuration is possible via the raw deployments schedule APIs.
+
+```
+POST /api/stacks/{organization}/{project}/{stack}/deployments/ttl/schedules
+```
+
+#### Parameters
+
+| Parameter           | Type   | In    | Description                                                                                                  |
+|---------------------|--------|-------|--------------------------------------------------------------------------------------------------------------|
+| `organization`      | string | path  | organization name                                                                                            |
+| `project`           | string | path  | project name                                                                                                 |
+| `stack`             | string | path  | stack name                                                                                                   |
+| `timestamp`         | string | body  | ISO 8601 timestamp specifying when to destroy the stack. Example: `2024-04-20T00:00:00.000Z`                 |
+| `deleteAfterDestroy`| bool   | body  | true if the stack should be deleted after resources are destroyed                                            |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  --request POST \
+  --data '{"timestamp":"2024-04-20T00:00:00.000Z","deleteAfterDestroy":true}' \
+  https://api.pulumi.com/api/stacks/{organization}/{project}/{stack}/deployments/ttl/schedules
+```
+
+#### Default response
+
+```
+Status: 200 OK
+```
+
+```
+{
+  "id": "12345678-8102-447f-b246-e9ec85786e23",
+  "orgID": "87654321-8b3b-418a-8c01-5ddd0e00bace",
+  "scheduleOnce": "2024-04-20 00:00:00.000",
+  "nextExecution": "2024-04-20 00:00:00.000",
+  "paused": false,
+  "kind": "deployment",
+  "definition": {
+    "programID": "12345678-9f94-4a92-8bfb-c2da724fa65b",
+    "request": {
+        "inheritSettings": true,
+        "operation": "destroy",
+        "operationContext": {
+            "options": {
+                "deleteAfterDestroy": true
+            }
+        }
+    }
+  },
+  "created": "2024-04-19 01:00:00.000",
+  "modified": "2024-04-19 01:00:00.000",
+  "lastExecuted": null
+}
+```
+
+### Update TTL Schedule
+
+Note: This is a convenience API for ease of use to update a TTL Schedule, but the same configuration is possible via the raw deployments schedule APIs.
+
+```
+POST /api/stacks/{organization}/{project}/{stack}/deployments/ttl/schedules/{scheduleID}
+```
+
+| Parameter           | Type   | In    | Description                                                                                                  |
+|---------------------|--------|-------|--------------------------------------------------------------------------------------------------------------|
+| `organization`      | string | path  | organization name                                                                                            |
+| `project`           | string | path  | project name                                                                                                 |
+| `stack`             | string | path  | stack name                                                                                                   |
+| `scheduleID`        | string | path  | schedule ID that you want to update                                                                          |
+| `timestamp`         | string | body  | ISO 8601 timestamp specifying when to destroy the stack. Example: `2024-04-20T00:00:00.000Z`                 |
+| `deleteAfterDestroy`| bool   | body  | true if the stack should be deleted after resources are destroyed                                            |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  --request POST \
+  --data '{"timestamp":"2024-04-20T00:00:00.000Z","deleteAfterDestroy":true}' \
+  https://api.pulumi.com/api/stacks/{organization}/{project}/{stack}/deployments/ttl/schedules/{scheduleID}
+```
+
+#### Default response
+
+```
+Status: 200 OK
+```
+
+```
+{
+  "id": "12345678-8102-447f-b246-e9ec85786e23",
+  "orgID": "87654321-8b3b-418a-8c01-5ddd0e00bace",
+  "scheduleOnce": "2024-04-20 00:00:00.000",
+  "nextExecution": "2024-04-20 00:00:00.000",
+  "paused": false,
+  "kind": "deployment",
+  "definition": {
+    "programID": "12345678-9f94-4a92-8bfb-c2da724fa65b",
+    "request": {
+        "inheritSettings": true,
+        "operation": "destroy",
+        "operationContext": {
+            "options": {
+                "deleteAfterDestroy": true
+            }
+        }
+    }
+  },
+  "created": "2024-04-19 01:00:00.000",
+  "modified": "2024-04-19 01:00:00.000",
+  "lastExecuted": null
+}
+```
+
+### Create Raw Deployment Schedule
+
+```
+POST /api/stacks/{organization}/{project}/{stack}/deployments/schedules
+```
+
+#### Parameters
+
+| Parameter           | Type                                                                             | In    | Description                                                                                         |
+|---------------------|----------------------------------------------------------------------------------|-------|-----------------------------------------------------------------------------------------------------|
+| `organization`      | string                                                                           | path  | organization name                                                                                   |
+| `project`           | string                                                                           | path  | project name                                                                                        |
+| `stack`             | string                                                                           | path  | stack name                                                                                          |
+| `scheduleCron`      | string                                                                           | body  | cron expression for when to run the pulumi operation                                                |
+| `scheduleOnce`      | string                                                                           | body  | ISO 8601 timestamp specifying when to run the pulumi operation. Example: `2024-04-20T00:00:00.000Z` |
+| `request`           | [CreateDeploymentRequest](/docs/pulumi-cloud/deployments/api/#create-deployment) | body  | The create deployment request object that will be executed on every invocation                      |
+
+Note: Exactly one of `scheduleCron` and `scheduleOnce` must be set.
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  --request POST \
+  --data '{ "scheduleCron":"0 0 * * 0", "request": { "operation": "update" } }' \
+  https://api.pulumi.com/api/stacks/{organization}/{project}/{stack}/deployments/schedules
+```
+
+#### Default response
+
+```
+Status: 200 OK
+```
+
+```
+{
+  "id": "12345678-8102-447f-b246-e9ec85786e23",
+  "orgID": "87654321-8b3b-418a-8c01-5ddd0e00bace",
+  "scheduleCron": "0 0 * * *",
+  "nextExecution": "2024-04-20 00:00:00.000",
+  "paused": false,
+  "kind": "deployment",
+  "definition": {
+      "programID": "12345678-911a-43a3-8389-109be345b1d6",
+      "request": {
+          "operation": "update"
+      }
+  },
+  "created": "2024-04-19 01:00:00.000",
+  "modified": "2024-04-19 01:00:00.000",
+  "lastExecuted": null
+}
+```
+
+### Update Raw Deployment Schedule
+
+```
+POST /api/stacks/{organization}/{project}/{stack}/deployments/schedules/{scheduleID}
+```
+
+#### Parameters
+
+| Parameter           | Type                                                                             | In    | Description                                                                                         |
+|---------------------|----------------------------------------------------------------------------------|-------|-----------------------------------------------------------------------------------------------------|
+| `organization`      | string                                                                           | path  | organization name                                                                                   |
+| `project`           | string                                                                           | path  | project name                                                                                        |
+| `stack`             | string                                                                           | path  | stack name                                                                                          |
+| `scheduleID`        | string                                                                           | path  | schedule ID that you want to update                                                                 |
+| `scheduleCron`      | string                                                                           | body  | cron expression for when to run the pulumi operation                                                |
+| `scheduleOnce`      | string                                                                           | body  | ISO 8601 timestamp specifying when to run the pulumi operation. Example: `2024-04-20T00:00:00.000Z` |
+| `request`           | [CreateDeploymentRequest](/docs/pulumi-cloud/deployments/api/#create-deployment) | body  | The create deployment request object that will be executed on every invocation                      |
+
+Note: Exactly one of `scheduleCron` and `scheduleOnce` must be set.
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  --request POST \
+  --data '{ "scheduleCron":"0 0 * * 0", "request": { "operation": "update" } }' \
+  https://api.pulumi.com/api/stacks/{organization}/{project}/{stack}/deployments/schedules/{scheduleID}
+```
+
+#### Default response
+
+```
+Status: 200 OK
+```
+
+```
+{
+  "id": "12345678-8102-447f-b246-e9ec85786e23",
+  "orgID": "87654321-8b3b-418a-8c01-5ddd0e00bace",
+  "scheduleCron": "0 0 * * *",
+  "nextExecution": "2024-04-20 00:00:00.000",
+  "paused": false,
+  "kind": "deployment",
+  "definition": {
+      "programID": "12345678-911a-43a3-8389-109be345b1d6",
+      "request": {
+          "operation": "update"
+      }
+  },
+  "created": "2024-04-19 01:00:00.000",
+  "modified": "2024-04-19 01:00:00.000",
+  "lastExecuted": null
+}
+```
+
+### Get Schedule
+
+```
+GET /api/stacks/{organization}/{project}/{stack}/deployments/schedules/{scheduleID}
+```
+
+| Parameter           | Type   | In    | Description                                                                                                  |
+|---------------------|--------|-------|--------------------------------------------------------------------------------------------------------------|
+| `organization`      | string | path  | organization name                                                                                            |
+| `project`           | string | path  | project name                                                                                                 |
+| `stack`             | string | path  | stack name                                                                                                   |
+| `scheduleID`        | string | path  | schedule ID that you want to get                                                                             |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  --request GET \
+  https://api.pulumi.com/api/stacks/{organization}/{project}/{stack}/deployments/schedules/{scheduleID}
+```
+
+#### Default response
+
+```
+Status: 200 OK
+```
+
+```
+{
+  "id": "12345678-8102-447f-b246-e9ec85786e23",
+  "orgID": "87654321-8b3b-418a-8c01-5ddd0e00bace",
+  "scheduleCron": "0 0 * * *",
+  "nextExecution": "2024-04-20 00:00:00.000",
+  "paused": false,
+  "kind": "deployment",
+  "definition": {
+    "programID": "12345678-9f94-4a92-8bfb-c2da724fa65b",
+    "request": {
+      "operation": "update"
+    }
+  },
+  "created": "2024-04-19 01:00:00.000",
+  "modified": "2024-04-19 01:00:00.000",
+  "lastExecuted": null
+}
+```
+
+### Delete Schedule
+
+```
+DELETE /api/stacks/{organization}/{project}/{stack}/deployments/schedules/{scheduleID}
+```
+
+| Parameter           | Type   | In    | Description                                                                                                  |
+|---------------------|--------|-------|--------------------------------------------------------------------------------------------------------------|
+| `organization`      | string | path  | organization name                                                                                            |
+| `project`           | string | path  | project name                                                                                                 |
+| `stack`             | string | path  | stack name                                                                                                   |
+| `scheduleID`        | string | path  | schedule ID that you want to delete                                                                          |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  --request DELETE \
+  https://api.pulumi.com/api/stacks/{organization}/{project}/{stack}/deployments/schedules/{scheduleID}
+```
+
+#### Default response
+
+```
+Status: 200 OK
+```
+
+### Pause Schedule
+
+```
+POST /api/stacks/{organization}/{project}/{stack}/deployments/schedules/{scheduleID}/pause
+```
+
+| Parameter           | Type   | In    | Description                                                                                                  |
+|---------------------|--------|-------|--------------------------------------------------------------------------------------------------------------|
+| `organization`      | string | path  | organization name                                                                                            |
+| `project`           | string | path  | project name                                                                                                 |
+| `stack`             | string | path  | stack name                                                                                                   |
+| `scheduleID`        | string | path  | schedule ID that you want to pause                                                                           |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  --request POST \
+  https://api.pulumi.com/api/stacks/{organization}/{project}/{stack}/deployments/schedules/{scheduleID}/pause
+```
+
+#### Default response
+
+```
+Status: 200 OK
+```
+
+### Resume Schedule
+
+```
+POST /api/stacks/{organization}/{project}/{stack}/deployments/schedules/{scheduleID}/resume
+```
+
+| Parameter           | Type   | In    | Description                                                                                                  |
+|---------------------|--------|-------|--------------------------------------------------------------------------------------------------------------|
+| `organization`      | string | path  | organization name                                                                                            |
+| `project`           | string | path  | project name                                                                                                 |
+| `stack`             | string | path  | stack name                                                                                                   |
+| `scheduleID`        | string | path  | schedule ID that you want to resume                                                                          |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  --request POST \
+  https://api.pulumi.com/api/stacks/{organization}/{project}/{stack}/deployments/schedules/{scheduleID}/resume
+```
+
+#### Default response
+
+```
+Status: 200 OK
+```
+
+### List Schedules of a stack
+
+```
+GET /api/stacks/{organization}/{project}/{stack}/deployments/schedules
+```
+
+#### Parameters
+
+| Parameter           | Type   | In    | Description                                                                                                  |
+|---------------------|--------|-------|--------------------------------------------------------------------------------------------------------------|
+| `organization`      | string | path  | organization name                                                                                            |
+| `project`           | string | path  | project name                                                                                                 |
+| `stack`             | string | path  | stack name                                                                                                   |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  https://api.pulumi.com/api/stacks/{organization}/{project}/{stack}/deployments/schedules
+```
+
+#### Default response
+
+```
+Status: 200 OK
+```
+
+```
+{
+  "scheduledDeployments": [
+    {
+      "id": "12345678-8102-447f-b246-e9ec85786e23",
+      "orgID": "87654321-8b3b-418a-8c01-5ddd0e00bace",
+      "scheduleCron": "0 0 * * *",
+      "nextExecution": "2024-04-20 00:00:00.000",
+      "paused": false,
+      "kind": "deployment",
+      "definition": {
+        "programID": "12345678-9f94-4a92-8bfb-c2da724fa65b",
+        "request": {
+          "operation": "update"
+        }
+      },
+      "created": "2024-04-19 01:00:00.000",
+      "modified": "2024-04-19 01:00:00.000",
+      "lastExecuted": null
+    }
+  ]
+}
+```
+
+### List Scheduled Deployment History
+
+```
+GET /api/stacks/{organization}/{project}/{stack}/deployments/schedules/{scheduleID}/history
+```
+
+| Parameter           | Type   | In    | Description                                                                                                  |
+|---------------------|--------|-------|--------------------------------------------------------------------------------------------------------------|
+| `organization`      | string | path  | organization name                                                                                            |
+| `project`           | string | path  | project name                                                                                                 |
+| `stack`             | string | path  | stack name                                                                                                   |
+| `scheduleID`        | string | path  | schedule ID whose history you want to see                                                                    |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  --request GET \
+  https://api.pulumi.com/api/stacks/{organization}/{project}/{stack}/deployments/schedules/{scheduleID}/history
+```
+
+#### Default response
+
+```
+Status: 200 OK
+```
+
+```
+{
+    "scheduledDeploymentsHistory": [
+        {
+            "id": "12345678-2772-4667-bc7f-ac288ff54717",
+            "scheduledActionID": "12345678-0570-4ed9-a9ff-9c54cd538a14",
+            "executed": "2024-04-14 00:00:00.000",
+            "version": 1,
+            "result": "skipped"
+        }
+    ]
+}
+```
+
 ## Audit Logs
 
 <!-- ###################################################################### -->

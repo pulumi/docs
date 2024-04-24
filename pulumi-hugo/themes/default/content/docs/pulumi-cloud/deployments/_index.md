@@ -48,11 +48,17 @@ Pulumi Deployments offers several triggers that you can compose to build higher-
 - `git push` to Deploy - Deep integration with the Pulumi GitHub App that enables automatic previews on every pull request, and an automated update whenever code is pushed to the target branch.
 - [Review Stacks](/docs/pulumi-cloud/deployments/review-stacks) - dedicated cloud environments that get created automatically every time a pull request is opened.
 - Click to Deploy - trigger a deployment from the Pulumi Cloud Console with the push of a button. Very useful for day-to-day operational activities such as debugging a stuck stack, or rectifying drift via a refresh without having to pull a stack and its accompanying source code onto your machine.
+- [Scheduled Deployments](/docs/pulumi-cloud/deployments/schedules) - schedule deployment on a cron schedule or one time deployment.
 - Remote Automation API - Your favorite strongly typed Pulumi orchestration tool, Automation API, lets you offload update workloads into the cloud. Write deployment scripts that update thousands of environments simultaneously without worrying about compute.
 
 Triggers can be used together, or not at all. Some users like to use the REST API to trigger deployments from GitHub Actions and disable the built-in `git push` integration. Doing so gives them the flexibility to compose deployment settings, the REST API, and click to deploy into useful platform workflows outside of CI/CD.
 
 Deployment settings plus triggers are the key building blocks of the deployment platforms. With them, you can build highly customized infrastructure automation and developer platforms such as service catalogs, drift detection, temporary infrastructure workflows for cost savings, infrastructure REST APIs, and more. These scenarios and more are discussed further with demos and source code.
+
+## Additional features
+
+- [Drift](/docs/pulumi-cloud/deployments/drift) - detect drift between the cloud and Pulumi state.
+- [Time to Live](/docs/pulumi-cloud/deployments/ttl) - configure a schedule to automatically tear down resources for a stack.
 
 ## Configuring OpenID Connect (OIDC)
 
