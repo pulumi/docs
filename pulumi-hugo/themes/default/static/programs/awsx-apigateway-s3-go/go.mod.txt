@@ -1,10 +1,8 @@
 module awsx-apigateway-s3-go
 
-go 1.21
-
-toolchain go1.21.9
+go 1.20
 
 require (
-	github.com/pulumi/pulumi-aws-apigateway/sdk/v2 v2.4.0
-	github.com/pulumi/pulumi/sdk/v3 v3.112.0
+	github.com/pulumi/pulumi-aws-apigateway/sdk/v2 v2.1.1
+	github.com/pulumi/pulumi/sdk/v3 v3.100.0
 )

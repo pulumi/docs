@@ -10,6 +10,9 @@ tags:
     - automation api
     - deployments
 ---
+{{% notes type="warning" %}}
+Portions of this blog post are out of date. See the [drift detection](/blog/drift-detection/) and [time-to-live stacks](/blog/ttl/) blog posts for an updated overview and examples.
+{{% /notes %}}
 
 Adoption of modern cloud technologies and services is driving enormous value for organizations, but many companies are finding that deploying and managing cloud infrastructure is a bottleneck on how fast they can scale. When your tools can't keep up, scaling your cloud footprint means proportionally scaling your headcount. Things quickly fall apart as demand for cloud infrastructure often outpaces the bandwidth of infrastructure teams. This leads to slow product releases, longer lead times to get new products to market, and burned-out operational teams.
 

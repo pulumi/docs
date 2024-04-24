@@ -1,10 +1,8 @@
 module aws-ec2-sg-nginx-server-go
 
-go 1.21
-
-toolchain go1.21.9
+go 1.20
 
 require (
-	github.com/pulumi/pulumi-aws/sdk/v6 v6.29.1
-	github.com/pulumi/pulumi/sdk/v3 v3.112.0
+	github.com/pulumi/pulumi-aws/sdk/v6 v6.17.0
+	github.com/pulumi/pulumi/sdk/v3 v3.100.0
 )

@@ -31,6 +31,9 @@ tags:
 # See the blogging docs at https://github.com/pulumi/pulumi-hugo/blob/master/BLOGGING.md.
 # for additional details, and please remove these comments before submitting for review.
 ---
+{{% notes type="warning" %}}
+Portions of this blog post are out of date. See the Pulumi Deployments [drift detection blog post](/blog/drift-detection) for an updated overview and examples.
+{{% /notes %}}
 
 Let's face it, at some point someone is going to modify your carefully-crafted and automated infrastructure without updating your Pulumi program. These changes cause the desired state of our Pulumi program's to be inconsistent with the state of the world. These inconsistencies are often referred to as "drift". In this article, I want to cover a couple of patterns for detecting and reconciling this drift with your Pulumi programs.
 
