@@ -1,3 +1,10 @@
+
+[[releases]]
+date = "24th April 2024"
+title = "Pulumi Launches Drift Detection and Time-to-Live Stacks to Improve Cloud Costs and Robustness"
+summary = "Pulumi Launches Drift Detection and Time-to-Live Stacks to Improve Cloud Costs and Robustness."
+url = "https://info.pulumi.com/announcement/infrastructure-lifecycle-management"
+
 [[releases]]
 date = "21st February 2024"
 title = "Pulumi Launches New Infrastructure Libraries for the GenAI Stack"

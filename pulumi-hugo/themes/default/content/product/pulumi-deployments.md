@@ -17,17 +17,17 @@ quotes:
           quote: |
             “Pulumi allows every engineer to build and update infrastructure instead of only our infrastructure team. With Pulumi Deployments, we could easily set up a standardized CI/CD infrastructure workflow for every engineer that immediately makes them productive.”
 
+        - company: oleria
+          name: Jim Alkove
+          name_title: CEO of Oleria
+          quote: |
+            “At Oleria, we understand the importance of addressing issues with privacy, security, and data integrity. Earning and maintaining our trust isn’t just a responsibility but a fundamental aspect of our mission. Pulumi also understands how these attributes affect cloud infrastructure. Our team is excited to use these new [infrastructure lifecycle management] capabilities, giving us even more confidence as we enable our customers to securely manage access to decentralized SaaS applications, adaptively and intelligently."
+
         - company: alkira
           name: Santosh Dornal
           name_title: Head of Software Test & DevOps at Alkira
           quote: |
             “I’m making developers at Alkira significantly more productive while also making my job easier using Pulumi. I can get developers using IaC immediately with Pulumi Deployments and its GitHub integration, while Pulumi Insights makes it really easy to find idle developer environments that need to be shut down, which reduces our cloud costs.”
-
-        - company: oleria
-          name: Jim Alkove
-          name_title: CEO of Oleria
-          quote: |
-            “At Oleria, we understand the importance of addressing issues with privacy, security, and data integrity. Earning and maintaining our trust isn’t just a responsibility but a fundamental aspect of our mission. Pulumi also understands how these attributes affect cloud infrastructure. Our team is excited to use these new capabilities, giving us even more confidence as we enable our customers to securely manage access to decentralized SaaS applications, adaptively and intelligently."
 
 benefits:
     title: How will Pulumi Deployments benefit me?
@@ -84,6 +84,10 @@ faq:
       - header: How does drift detection work?
         content: |
           Drift detection and remediation operate continuously, on a schedule of your choosing, comparing the state of your resources with the expected configurations defined in your Pulumi setups. Any discrepancies triggered by modifications, deletions, or additions of resources are promptly reported and, if configured, can be automatically remediated. Alerts can be configured to be sent via webhooks, Slack, or Microsoft Teams, with detailed information about the drift's nature and scope provided directly within the alerts.
+
+      - header: Can you use drift detection without Pulumi Deployments?
+        content: |
+          Yes, you can configure your existing CI/CD system to run `pulumi refresh --preview-only` regularly, and the results will still be displayed as part of the Drift tab in Pulumi Cloud and you can receive notifications when drift is detected.
 
       - header: What granularity can you define schedules for Scheduled Deployments?
         content: |
