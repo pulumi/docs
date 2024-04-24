@@ -1,21 +1,21 @@
 ---
-title: Microsoft Build - May 23–25, 2023
+title: Microsoft Build - May 21-23, 2024
 meta_desc: Join us to find out how Pulumi’s Infrastructure as Code reduces cloud complexity, accelerates development velocity and helps companies scale and innovate.
 meta_image: /images/microsoft-build/meta.png
 type: page
 layout: microsoft-build
 
-display_title: Microsoft Build <br/> May 23–25, 2023
+display_title: Microsoft Build <br/> May 21–23, 2024
 links:
     items:
-        - heading: Join Us for Happy Hour
-          description: No speakers, no agenda. Just a casual evening to network and have fun! Meet fellow engineers and CEO Joe Duffy and CTO Luke Hoban. Food and drinks are on us. May 23, 5:00 Pm PDT at Rhein Haus Seattle.
-          action: RSVP
-          link: https://www.meetup.com/pulumi-seattle/events/293452944/
         - heading: Join a Workshop
           description: Our workshops are live, and 100% open source. Choose from fundamental to advanced topics. They are hands-on and code source is provided.
           action: Check upcoming workshops
           link: /resources#upcoming
+        - heading: Request a Demo
+          description: See how Pulumi can help you ship infrastructure faster, and manage your Azure resources at scale. Ready for a change?
+          action: Talk with an Engineer
+          link: https://info.pulumi.com/msbuild/
 
 workshops:
     items:
