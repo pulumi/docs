@@ -24,8 +24,8 @@ In order to set up a deployment schedule in the Pulumi Cloud console, follow the
 
 ![Schedule](../schedule.png)
 
-3. Select "Drift"
-4. (Optional) Turn on auto-remediation if applicable
+3. Select "Raw operation"
+4. Select from the drop-down the type of operation you would like to schedule
 5. Set the schedule using a cron expression
 6. Save the Schedule
 <!-- markdownlint-enable ol-prefix -->
