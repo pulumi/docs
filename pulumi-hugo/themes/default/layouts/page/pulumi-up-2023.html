@@ -5,29 +5,38 @@
     <div class="banner-image flex justify-center">
         <div class="text-center py-16">
             <img src="/images/pulumiup-2023/logo.svg" alt="Pulumi UP, virtual, free" class="mx-auto mt-16 h-40" />
-            <h3 class="yellow-header-text">June 15, 2023</h3>
-            <div class="banner-description mx-auto mb-12 w-1/2">
-                <h4>The Global Infrastructure as Code Conference</h4>
+            <h3 class="yellow-header-text">September 18, 2024</h3>
+            <div class="banner-description mx-auto mb-12 w-2/3">
+                <h4>The Global Cloud and IaC Conference</h4>
                 <p>
-                    Join us virtually for a half-day of technical talks, best practices, and demos about the latest innovations in Infrastructure as Code, cloud application
-                    development, and software engineering.
+                    Dive into the future of cloud and Infrastructure as Code (IaC).<br/>Watch talks that demonstrate how to build and scale on the cloud, through Platform Engineering, with AI, and more
                 </p>
             </div>
-            <a class="btn-primary btn-primary-blue-bg" href="https://www.youtube.com/playlist?list=PLyy8Vx2ZoWlqkEzXbjUvE_CoEmBkT9Xoe" target="_blank">Watch On-Demand</a>
+            <a class="btn-secondary" href="https://sessionize.com/pulumiup-conference-2024" target="_blank">Submit a Proposal</a>
+            <a class="btn-primary" href="#register">Register</a>
         </div>
     </div>
 
     <div class="below-banner-description mx-auto px-8 my-10 w-full flex-col">
-        <h4>The Global Infrastructure as Code Conference</h4>
+        <h4>The Global Cloud and IaC Conference</h4>
         <p>
-            Join us virtually for a half-day of technical talks, best practices, and demos about the latest innovations in Infrastructure as Code, cloud application development,
-            and software engineering.
+            Dive into the future of cloud and Infrastructure as Code (IaC).<br/>Watch talks that demonstrate how to build and scale on the cloud, through Platform Engineering, with AI, and more
         </p>
     </div>
 
-    <section id="ai-panel" class="mb-12">
+    <section id="countdown" class="pt-12">
+        <pulumi-date-countdown-circles
+            date-string="{{ .Params.event_date }}"
+            value-label-class="block font-normal"
+            container-class="flex flex-wrap justify-center items-center"
+            text-class="px-3 text-4xl m-0"
+        >
+        </pulumi-date-countdown-circles>
+    </section>
+
+    <section id="ai-panel" class="my-12">
         <div class="container mx-auto text-center">
-            <h2 class="text-center">AI and the Future of Cloud Development</h2>
+            <h2 class="text-center">Watch PulumiUP 2023 On-Demand</h2>
             <p class="text-center mb-8">
                 Get ready for the future of cloud development! Listen to industry experts in our unfiltered panel discussion on how AI is transforming the cloud native landscape.
                 Stay ahead of the curve by hearing and learning from the best in the industry.
@@ -77,7 +86,7 @@
         </div>
     </section>
 
-    <section id="dev-stories" style="background: linear-gradient(180deg, #7BDEFF, #DBF4E4 100%);">
+    <section id="dev-stories" style="background: linear-gradient(180deg, #cbeffe, #ddf6ff 100%);">
         <div class="container mx-auto px-4 pb-16 text-center">
             <h2>DevStories and Demos</h2>
             <p class="text-lg">
@@ -107,7 +116,7 @@
         </div>
     </section>
 
-    <section id="workshops" style="background: linear-gradient(180deg, #DBF4E4 0%, #7BDEFF 100%);">
+    <section id="workshops" style="background: linear-gradient(180deg, #ddf6ff 0%, #ddf6ff 100%);">
         <div class="container mx-auto py-16">
             <h2 class="px-4 pb-8">Workshops</h2>
 
@@ -123,7 +132,7 @@
                             <p>{{ .description }}</p>
                             <div class="my-8">
                                 <a href="{{ .url }}" class="btn-secondary">
-                                    <span class="text-violet-600">Register Now &#8594;</span>
+                                    <span class="text-violet-600">Watch On-Demand &#8594;</span>
                                 </a>
                             </div>
                         </div>
@@ -159,7 +168,7 @@
         </div>
     </section>
 
-    {{ partial "event-schedule.html" (dict "schedule" .Params.schedule "background_color" "#7bdeff") }}
+    {{ partial "event-schedule.html" (dict "schedule" .Params.schedule "background_color" "#cbeffe") }}
 
 
     <section id="speakers" class="relative mb-8">
@@ -205,6 +214,21 @@
                     {{ end }}
                 </div>
             {{ end }}
+        </div>
+    </section>
+
+    <section id="register" class="bg-gray-100">
+        <div class="container mx-auto pb-12">
+            <div class="flex flex-col md:flex-row">
+                <div class="w-full lg:w-1/2 mx-auto p-6">
+                    <div class="mt-10 md:mt-0 bg-gray-200 rounded p-6 shadow">
+                        <h4>
+                            Register for PulumiUp 2024
+                        </h4>
+                        <pulumi-hubspot-form form-id="08a1925e-2f41-4bc4-baeb-88c2c9d89981" salesforce-campaign-id="701PQ00000Aa9TdYAJ"></pulumi-hubspot-form>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 {{ end }}

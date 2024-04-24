@@ -1,12 +1,12 @@
 ---
-title: "PulumiUP: Infrastructure as Code Conference | June 15, 2023"
+title: "PulumiUP: Infrastructure as Code Conference | Sept 18, 2024"
 type: page
 layout: pulumi-up-2023
 meta_image: /images/pulumiup-2023/meta.png
 meta_desc: |
     PulumiUP is a virtual conference with industry-recognized leaders, demos, and panel discussions about the future of IaC, Platform Engineering & DevOps and Cloud
 
-event_date: 2023-06-15T08:00:00-07:00
+event_date: 2024-09-18T08:00:00-07:00
 
 aliases:
     - /pulumiup
