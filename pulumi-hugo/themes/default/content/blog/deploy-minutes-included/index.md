@@ -26,19 +26,19 @@ Paired with the launch of [Drift Detection and Remediation](/blog/drift-detectio
 
 ### Drift Detection
 
-Stay on top of your infrastructure's health with our new [Drift Detection](/docs/pulumi-cloud/deployments/drift-detection) feature. Drift Detection helps you monitor and rectify discrepancies between your desired infrastructure state and the actual state, ensuring consistency and compliance.
+Stay on top of your infrastructure's health with our new [Drift Detection](/docs/pulumi-cloud/deployments/drift) feature. Drift Detection helps you monitor and rectify discrepancies between your desired infrastructure state and the actual state, ensuring consistency and compliance.
 
 ### TTL Stacks
 
-Manage resources effectively with [Time to Live (TTL) Stacks](/docs/pulumi-cloud/deployments/ttl-stacks). This feature automatically deallocates resources after a set period, perfect for temporary or experimental deployments, reducing costs and manual cleanup efforts.
+Manage resources effectively with [Time to Live (TTL) Stacks](/docs/pulumi-cloud/deployments/ttl). This feature automatically deallocates resources after a set period, perfect for temporary or experimental deployments, reducing costs and manual cleanup efforts.
 
 ### Scheduled Deployments
 
-Optimize your deployment strategy with [Scheduled Deployments](/docs/pulumi-cloud/deployments/scheduled-deployments). This feature allows you to plan and execute deployments at specific times, making it easier to manage updates during off-peak hours, minimizing impact on your services.
+Optimize your deployment strategy with [Scheduled Deployments](/docs/pulumi-cloud/deployments/schedules). This feature allows you to plan and execute deployments at specific times, making it easier to manage updates during off-peak hours, minimizing impact on your services.
 
 ## Pulumi Deployments for Everyone
 
-To help ensure all Pulumi Cloud users can get started with Pulumi Deployments, we are introducing an updated allocation model for deployment minutes. Now, all customer tiers—Team, Enterprise, and Business Critical—will receive 3,000 free deployment minutes each month. This change allows our users to test and leverage Pulumi Deployments without upfront commitments or the need to engage in lengthy procurement processes. The table below shows the Pulumi Deployments dimensions (both pricing and limits) by tier, more details can be found on our [pricing page](https://www.pulumi.com/pricing/).
+To help ensure all Pulumi Cloud users can get started with Pulumi Deployments, we are introducing an updated allocation model for deployment minutes. Now, all customer tiers—Team, Enterprise, and Business Critical—will receive 3,000 free deployment minutes each month. This change allows our users to test and leverage Pulumi Deployments without upfront commitments or the need to engage in lengthy procurement processes. The table below shows the Pulumi Deployments dimensions (both pricing and limits) by tier, more details can be found on our [pricing page](/pricing).
 
 | Dimension               | Individual | Team        | Enterprise  | Business Critical |
 |-------------------------|------------|-------------|-------------|-------------------|
