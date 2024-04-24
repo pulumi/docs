@@ -23,7 +23,7 @@ These new features are:
 
 We built these features based on customer feedback, and our 2,500+ customers are excited:
 
-> "At Oleria, we understand the importance of addressing issues with privacy, security, and data integrity. Earning and maintaining our trust isn’t just a responsibility but a fundamental aspect of our mission," said Jim Alkove, CEO of Oleria.  "Pulumi also understands how these attributes affect cloud infrastructure. Our team is excited to use these new capabilities, giving us even more confidence as we enable our customers to securely manage access to decentralized SaaS applications, adaptively and intelligently."
+> "At [Oleria](https://www.oleria.com), we understand the importance of addressing issues with privacy, security, and data integrity. Earning and maintaining our trust isn’t just a responsibility but a fundamental aspect of our mission," said Jim Alkove, CEO of Oleria.  "Pulumi also understands how these attributes affect cloud infrastructure. Our team is excited to use these new capabilities, giving us even more confidence as we enable our customers to securely manage access to decentralized SaaS applications, adaptively and intelligently."
 
 These advanced features are available today in the Enterprise and Business Critical editions of Pulumi Cloud. These features together enable an end-to-end experience for managing the lifecycle and consistency of your cloud infrastructure to ensure enterprises have the capabilities needed to operate at scale.
 
