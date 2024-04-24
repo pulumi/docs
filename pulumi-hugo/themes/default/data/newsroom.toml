@@ -1,4 +1,10 @@
 [[releases]]
+date = "21st February 2024"
+title = "Pulumi Launches New Infrastructure Libraries for the GenAI Stack"
+summary = "Pulumi Launches New Infrastructure Libraries for the GenAI Stack."
+url = "https://info.pulumi.com/announcement/new-infrastructure-libraries-genai-stack"
+
+[[releases]]
 date = "11th October 2023"
 title = "Pulumi Gives Enterprises a Multi-Cloud Infrastructure Platform in a Box"
 summary = "Pulumi Gives Enterprises a Multi-Cloud Infrastructure Platform in a Box."
@@ -153,6 +159,48 @@ date = "18th June 2018"
 title = "Pulumi Launches Cloud Development Platform to Help Teams Get Code to the Cloud Faster"
 summary = "Company funded by Madrona Venture Group and Tola Capital to help companies accelerate cloud application development and infrastructure delivery. "
 url = "https://info.pulumi.com/press-release/pulumi-launches-cloud-development-platform-to-help-teams-get-code-to-the-cloud-faster/"
+
+[[coverage]]
+date = "15th March 2024"
+title = "10 Hot Takes Ahead of KubeCon EU 2024"
+img = "/logos/press/cloudnativenow.png"
+url = "https://cloudnativenow.com/features/10-hot-takes-ahead-of-kubecon-eu-2024/"
+
+[[coverage]]
+date = "8th March 2024"
+title = "A taste 4 open source at Kubecon CloudNativeCon Europe 2024"
+img = "/logos/press/computerweekly.png"
+url = "https://www.computerweekly.com/blog/Open-Source-Insider/A-taste-of-4-open-source-at-Kubecon-CloudNativeCon-Europe-2024"
+
+[[coverage]]
+date = "3rd March 2024"
+title = "Making cloud infrastructure programmable for developers"
+img = "/logos/press/infoworld.png"
+url = "https://www.infoworld.com/article/3713000/making-cloud-infrastructure-programmable-for-developers.html"
+
+[[coverage]]
+date = "29th February 2024"
+title = "Pulumi’s Joe Duffy on New Infrastructure Libraries"
+img = "/logos/press/techstrong.png"
+url = "https://techstrong.tv/videos/interviews/pulumi-joe-duffy-new-infrastructure-libraries"
+
+[[coverage]]
+date = "21st February 2024"
+title = "Pulumi Templates for GenAI Stacks: Pinecone, LangChain First"
+img = "/logos/press/newstack.png"
+url = "https://thenewstack.io/pulumi-templates-for-genai-stacks-pinecone-langchain-first/"
+
+[[coverage]]
+date = "12th February 2024"
+title = "10 ways generative AI will transform software development"
+img = "/logos/press/infoworld.png"
+url = "https://www.infoworld.com/article/3712826/10-ways-generative-ai-will-transform-software-development.html"
+
+[[coverage]]
+date = "8th February 2024"
+title = "AI will impact every aspect of software development life cycle, says Pulumi founder"
+img = "/logos/press/tfir.png"
+url = "https://tfir.io/ai-will-impact-every-aspect-of-software-development-life-cycle-says-pulumi-founder/"
 
 [[coverage]]
 date = "6th May 2022"
