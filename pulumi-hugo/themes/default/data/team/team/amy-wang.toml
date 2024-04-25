@@ -1,0 +1,11 @@
+id = "amy-wang"
+name = "Amy Wang"
+title = "Senior AI Engineer"
+company = "Pulumi"
+weight = 1
+
+status = "active"
+
+[social]
+github="wongstein"
+linkedin = "amy-wang-32a44634"

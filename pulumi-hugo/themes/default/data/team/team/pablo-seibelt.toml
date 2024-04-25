@@ -1,0 +1,11 @@
+id = "pablo-seibelt"
+name = "Pablo Seibelt"
+title = "Data Engineer"
+company = "Pulumi"
+weight = 1
+
+status = "active"
+
+[social]
+github = "sicarul"
+linkedin = "pabloseibelt"

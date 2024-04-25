@@ -1,0 +1,49 @@
+{{ if isset .form "section_id" }}
+    <section id="{{ .form.section_id }}" class="py-8 px-4">
+        <h3 class="text-center">{{ .form.headline }}</h3>
+
+        <div class="container mx-auto max-w-6xl py-8 sm:px-10 text-sm relative">
+            <div class="mb-8 md:flex  md:max-w-32 align-top">
+                {{ if isset .form "quote" }}
+                    <div class="md:w-5/12 md:mr-8">
+                        <h5>
+                            {{ .form.quote.title }}
+                        </h5>
+                        <div class="relative py-8 px-10">
+                            <i class="fa fa-quote-left text-gray-200 absolute top-0 left-0 ml-4 mt-4 text-5xl z-0"></i>
+                            <p class="leading-loose mt-0 z-10 relative italic">
+                                {{ .form.quote.content }}
+                            </p>
+                            <div class="leading-relaxed flex items-start">
+                                <div>
+                                    <div class="font-semibold">
+                                        {{ .form.quote.name }}
+                                    </div>
+                                    <div>
+                                        {{ .form.quote.name_title }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {{ end }}
+                <div class="mt-4 mx-auto md:w-7/12 md:mt-0 p-10 bg-white rounded rounded-lg shadow-lg border border-gray-300">
+                    <div class="mx-auto flex justify-center">
+                        <div class="hs-form hs-form-fg-dark font-normal">
+                            <pulumi-hubspot-form form-id="{{ .form.hubspot_form_id }}" class="{{ .form.class_names }}"></pulumi-hubspot-form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{{ else }}
+    <div class="mt-4 mx-auto md:w-full md:mt-0 p-10 bg-white rounded rounded-lg shadow-lg border border-gray-300">
+        <h3 class="text-center">{{ .form.headline }}</h3>
+        <div class="mx-auto flex justify-center">
+            <div class="hs-form hs-form-fg-dark font-normal">
+                <pulumi-hubspot-form form-id="{{ .form.hubspot_form_id }}" class="{{ .form.class_names }}"></pulumi-hubspot-form>
+            </div>
+        </div>
+    </div>
+{{ end }}

@@ -1,0 +1,51 @@
+name: Pull request
+on:
+  pull_request:
+    branches:
+      - master
+      - 4/24-docs
+      - 4/24-content
+jobs:
+  preview:
+    # Only run this job for events that originate on this repository.
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    env:
+      GOPATH: ${{ github.workspace }}/go
+    name: Build and deploy preview
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: "18.x"
+
+      - name: Install Go
+        uses: actions/setup-go@v2
+        with:
+          go-version: 1.21.x
+
+      - name: Install Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: "0.111.0"
+          extended: true
+
+      - name: Check out branch
+        uses: actions/checkout@v2
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v2
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-west-2
+          role-to-assume: ${{ secrets.AWS_CI_ROLE_ARN }}
+          role-session-name: PullRequestPreviewSession
+
+      - name: Build and deploy preview
+        run: make ci-pull-request
+        env:
+          GITHUB_TOKEN: ${{ secrets.PULUMI_BOT_TOKEN }}
+          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
+          ALGOLIA_APP_ID: ${{ vars.ALGOLIA_APP_ID }}
+          ALGOLIA_APP_SEARCH_KEY: ${{ vars.ALGOLIA_APP_SEARCH_KEY }}

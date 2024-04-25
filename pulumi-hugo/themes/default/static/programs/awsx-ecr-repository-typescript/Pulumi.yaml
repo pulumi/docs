@@ -1,0 +1,3 @@
+name: awsx-ecr-repository-typescript
+runtime: nodejs
+description: An example that creates a container-image repository in Amazon Elastic Container Registry (ECR).

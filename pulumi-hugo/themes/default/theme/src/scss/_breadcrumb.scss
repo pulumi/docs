@@ -1,0 +1,39 @@
+ol.docs-breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding-left: 0;
+    gap: 6px;
+
+    li {
+        margin: 0;
+
+        a {
+            font-family: 'Inter';
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 1.5;
+            color: #5f6065;
+
+            &:hover {
+                color: #5f6065;
+                text-decoration: underline;
+                text-underline-offset: 4px;
+                text-decoration-color: #8e8f97;
+            }
+        }
+
+        &.active a {
+            font-weight: 700;
+        }
+        
+        &:not(:last-child) {
+            &::after {
+                display: inline-block;
+                padding-left: 6px;
+                color: #bebfc9;
+                content: "/";
+            }
+        }
+    }
+}

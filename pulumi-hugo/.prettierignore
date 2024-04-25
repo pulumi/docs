@@ -1,0 +1,19 @@
+_vendor
+node_modules
+/resources
+/assets/css/bundle.css
+themes/*/resources
+public
+.idea
+.vscode
+.DS_Store
+yarn-error.log
+.hugo_build.lock
+*.md
+.devcontainer
+themes/default/theme
+themes/default/assets
+themes/default/layouts
+# Don't check csharp build products
+themes/default/static/programs/*/bin/*
+themes/default/static/programs/*/obj/*

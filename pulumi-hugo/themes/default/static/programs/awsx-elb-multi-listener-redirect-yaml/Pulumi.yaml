@@ -1,0 +1,26 @@
+name: awsx-elb-multi-listener-redirect-yaml
+runtime: yaml
+description: An example of an ApplicationLoadBalancer with multiple listeners and a custom redirect action.
+resources:
+  # Create a load balancer in the default VPC.
+  alb:
+    type: awsx:lb:ApplicationLoadBalancer
+    properties:
+      listeners:
+        # Redirect HTTP traffic on port 8080 to port 8081.
+        - port: 8080
+          protocol: HTTP
+          defaultActions:
+            - type: redirect
+              redirect:
+                port: "8081"
+                protocol: HTTP
+                statusCode: HTTP_301
+
+        # Accept HTTP traffic on port 8081.
+        - port: 8081
+          protocol: HTTP
+
+outputs:
+  # Export the resulting URL so that it's easy to access.
+  endpoint: ${alb.loadBalancer.dnsName}

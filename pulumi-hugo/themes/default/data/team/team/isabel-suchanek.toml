@@ -1,0 +1,11 @@
+id = "isabel-suchanek"
+name = "Isabel Suchanek"
+title = "Software Engineer"
+company = "Pulumi"
+weight = 1
+
+status = "active"
+
+[social]
+github = "isabeldepapel"
+linkedin = "isabelsuchanek"

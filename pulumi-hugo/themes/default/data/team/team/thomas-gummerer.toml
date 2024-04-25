@@ -1,0 +1,10 @@
+id = "thomas-gummerer"
+name = "Thomas Gummerer"
+title = "Software Engineer"
+weight = 1
+
+status = "active"
+
+[social]
+github = "tgummerer"
+linkedin = "tgummerer"

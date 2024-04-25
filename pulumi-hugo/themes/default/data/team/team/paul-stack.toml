@@ -1,0 +1,10 @@
+id = "paul-stack"
+name = "Paul Stack"
+title = "Engineering Manager"
+weight = 1
+
+status = "inactive"
+
+[social]
+github = "stack72"
+twitter = "stack72"

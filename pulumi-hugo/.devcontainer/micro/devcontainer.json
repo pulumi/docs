@@ -1,0 +1,277 @@
+{
+  "name": "pulumi/devcontainer:hugo-micro",
+  "remoteUser": "vscode",
+  "dockerFile": "Dockerfile",
+  "init": true,
+  "runArgs": [],
+  "privileged": true,
+  "overrideCommand": false,
+  "updateRemoteUserUID": true,
+  "shutdownAction": "stopContainer",
+  "securityOpt": ["seccomp=unconfined"],
+  "features": {},
+  "mounts": [],
+  "forwardPorts": [1313, 2222, 6000, 7681, 8080],
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "telemetry.enableTelemetry": "off",
+        "window": {
+          "titleBarStyle": "custom",
+          "title": "${localWorkspaceFolderBasename}${separator}${containerName}${separator}${profileName}${separator}${activeEditorShort}"
+        },
+        "search": {
+          "defaultViewMode": "list"
+        },
+        "vim": {
+          "disableExtension": true,
+          "useSystemClipboard": true,
+          "useCtrlKeys": true,
+          "easymotion": true,
+          "incsearch": true,
+          "hlsearch": true,
+          "cursorStylePerMode": {
+            "normal": "block",
+            "insert": "line",
+            "visual": "underline",
+            "visualline": "underline",
+            "visualblock": "underline",
+            "replace": "block"
+          },
+          "insertModeKeyBindings": [
+            {
+              "before": ["j", "j"],
+              "after": ["<esc>"]
+            }
+          ],
+          "handleKeys": {
+            "<C-a>": false,
+            "<C-f>": false
+          }
+        },
+        "extensions.experimental.affinity": {
+          "vscodevim.vim": 1
+        },
+        "zenmode": {
+          "toggle": true,
+          "hideTabs": false,
+          "fullScreen": true,
+          "hideMinimap": true,
+          "centerLayout": false,
+          "hideStatusBar": false,
+          "hideActivityBar": false,
+          "hideLineNumbers": false,
+          "silentNotifications": true,
+          "hideLineDecorations": false,
+          "hideCursorInOverviewRuler": true
+        },
+        "editor": {
+          "tabSize": 4,
+          "fontSize": 14,
+          "autoSave": "onFocusChange",
+          "wordWrap": "off",
+          "showTabs": true,
+          "showIcons": true,
+          "tabSizing": "shrink",
+          "lineHeight": 20,
+          "autoIndent": true,
+          "lineNumbers": "relative",
+          "formatOnSave": true,
+          "insertSpaces": true,
+          "tabScrolling": "auto",
+          "tabCompletion": "on",
+          "tabDecoration": true,
+          "fontLigatures": true,
+          "enablePreview": true,
+          "startupEditor": "readme",
+          "tabCloseButton": "right",
+          "minimap.enabled": false,
+          "openPositioning": "right",
+          "restoreViewState": true,
+          "renderWhitespace": "all",
+          "suggestSelection": "first",
+          "closeOnFileDelete": true,
+          "autoClosingQuotes": "always",
+          "snippetSuggestions": "top",
+          "autoClosingBrackets": "always",
+          "tabHistoryNavigation": true,
+          "quickSuggestionsDelay": 50,
+          "autoImportCompletions": true,
+          "scrollBeyondLastLine": true,
+          "highlightModifiedTabs": true,
+          "inlineSuggest.enabled": true,
+          "parameterHints.enabled": true,
+          "trimTrailingWhitespace": true,
+          "lineHighlightBackground": "#30BFBF",
+          "highlightActiveIndentGuide": true,
+          "fontFamily": "'FiraMono Nerd Font Mono', monospace",
+          "gotoLocation": {
+            "multipleReferences": "goto",
+            "multipleDefinitions": "goto",
+            "multipleDeclarations": "goto",
+            "multipleImplementations": "goto",
+            "multipleTypeDefinitions": "goto"
+          },
+          "scrollbar": {
+            "alwaysConsumeMouseWheel": true
+          },
+          "bracketPairColorization": {
+            "enabled": true
+          }
+        },
+        "files": {
+          "encoding": "utf8",
+          "autoSave": "onFocusChange",
+          "trimFinalNewlines": true,
+          "insertFinalNewline": true,
+          "trimTrailingWhitespace": true
+        },
+        "git": {
+          "enabled": true,
+          "autofetch": true,
+          "autoStash": true,
+          "autorefresh": true,
+          "gitProtocol": "https",
+          "ignoreSubmodules": true,
+          "enableSmartCommit": true,
+          "ignoreLegacyWarning": true,
+          "autoRepositoryDetection": "openEditors",
+          "defaultCloneParentDirectory": "/home/vscode",
+          "scanRepositories": ["/home/vscode", "/workspaces"],
+          "path": "/usr/local/bin/git"
+        },
+        "go": {
+          "testTags": "all",
+          "vetOnSave": "off",
+          "buildTags": "all",
+          "lintOnSave": "off",
+          "testOnSave": "off",
+          "buildOnSave": "off",
+          "formatTool": "goimports",
+          "testEnvVars": {
+            "GOFLAGS": "-count=1"
+          },
+          "generateTestsFlags": ["-count=1"]
+        },
+        "terminal": {
+          "integrated": {
+            "fontSize": 14,
+            "scrollback": 10000,
+            "cursorStyle": "outline",
+            "cursorBlinking": true,
+            "copyOnSelection": true,
+            "sendKeybindingsToShell": false,
+            "cursorStyleInactive": "line",
+            "fontFamily": "FiraMono Nerd Font Mono",
+            "commandsToSkipShell": [],
+            "scrollbar": {
+              "alwaysConsumeMouseWheel": true
+            },
+            "shell": {
+              "linux": "/usr/bin/bash"
+            }
+          }
+        },
+        "remote": {
+          "restoreForwardedPorts": true,
+          "localPortHost": "127.0.0.1"
+        },
+        "2gua.rainbow-brackets": true,
+        "indentRainbow": {
+          "indicatorStyle": "light",
+          "colorOnWhiteSpaceOnly": true,
+          "lightIndicatorStyleLineWidth": 12,
+          "ignoreEmptyLines": true,
+          "errorColor": "rgba(255, 20, 147, 0.3)",
+          "tabmixColor": "rgba(128, 32, 96, 0.3)",
+          "colors": [
+            "rgba(50, 150, 250, 0.1)",
+            "rgba(200, 50, 250, 0.1)",
+            "rgba(50, 250, 150, 0.1)",
+            "rgba(250, 50, 150, 0.1)",
+            "rgba(50, 200, 250, 0.1)",
+            "rgba(150, 50, 250, 0.1)",
+            "rgba(50, 250, 200, 0.1)",
+            "rgba(250, 150, 50, 0.1)"
+          ],
+          "ignoreErrorLanguages": [
+            "haskell",
+            "markdown",
+            "plaintext",
+            "shellscript",
+            "dockerfile",
+            "plaintext"
+          ]
+        },
+        "workbench": {
+          "startupEditor": "readme",
+          "action.terminal.focusNext": {
+            "key": "ctrl+shift+down",
+            "mac": "cmd+shift+down"
+          }
+        },
+        "autoOpenPreviewPanel.openPreviewToTheSide": false,
+        "explorer.openEditors.visible": 1,
+        "explorer": {
+          "openEditors": {
+            "visible": 1
+          },
+          "autoRevealExclude": {
+            "**/.git/objects/**": true,
+            "**/.git/subtree-cache/**": true,
+            "**/node_modules/**": true
+          },
+          "autoReveal": true,
+          "sortOrder": "filesFirst"
+        }
+      },
+      "[makefile]": {
+        "editor.insertSpaces": false,
+        "editor.renderWhitespace": "selection"
+      },
+      "[yaml]": {
+        "editor": {
+          "trimTrailingWhitespace": true,
+          "insertFinalNewline": true,
+          "wordWrap": "off",
+          "lineNumbers": "relative",
+          "renderWhitespace": "all",
+          "autoSave": "onFocusChange",
+          "formatOnSave": true,
+          "insertSpaces": true,
+          "tabSize": 2,
+          "minimap.enabled": true,
+          "scrollBeyondLastLine": true,
+          "scrollbar": {
+            "alwaysConsumeMouseWheel": true
+          }
+        }
+      },
+      "[markdown]": {
+        "editor": {
+          "tabSize": 4,
+          "wordWrap": "on",
+          "autoSave": "onFocusChange",
+          "lineNumbers": "relative",
+          "formatOnSave": true,
+          "insertSpaces": true,
+          "minimap.enabled": false,
+          "renderWhitespace": "all",
+          "insertFinalNewline": true,
+          "scrollBeyondLastLine": true,
+          "trimTrailingWhitespace": false,
+          "scrollbar": {
+            "alwaysConsumeMouseWheel": true
+          }
+        }
+      },
+      "extensions": [
+        "golang.go",
+        "ms-python.python",
+        "redhat.vscode-yaml",
+        "oderwat.indent-rainbow",
+        "ms-vscode.vscode-typescript-next"
+      ]
+    }
+  }
+}

@@ -1,0 +1,39 @@
+# In Pulumi YAML, you can access the values of outputs directly.
+name: aws-s3websitebucket-oai-bucketpolicy-yaml
+runtime: yaml
+description: An example that creates a website S3 bucket, a CloudFront Origin Access Identity, and a bucket policy.
+resources:
+  content-bucket:
+    type: aws:s3:Bucket
+    properties:
+      acl: private
+      website:
+        indexDocument: index.html
+        errorDocument: index.html
+      forceDestroy: true
+
+  cloudfront-origin-access-identity:
+    type: aws:cloudfront:OriginAccessIdentity
+    properties:
+      comment: OAI-${content-bucket.bucketDomainName}
+
+  cloudfront-bucket-policy:
+    type: aws:s3:BucketPolicy
+    properties:
+      bucket: ${content-bucket.id}
+      policy: ${cloudfrontAccessPolicy.json}
+
+variables:
+  cloudfrontAccessPolicy:
+    fn::invoke:
+      Function: aws:iam:getPolicyDocument
+      Arguments:
+        statements:
+          - principals:
+              - type: AWS
+                identifiers:
+                  - ${cloudfront-origin-access-identity.iamArn}
+            actions:
+              - s3:GetObject
+            resources:
+              - ${content-bucket.arn}/*

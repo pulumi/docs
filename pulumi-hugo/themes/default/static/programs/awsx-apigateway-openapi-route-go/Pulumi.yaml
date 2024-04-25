@@ -1,0 +1,3 @@
+name: awsx-apigateway-openapi-route-go
+runtime: go
+description: n example of configuring an API Gateway route with an OpenAPI/Swagger definition.

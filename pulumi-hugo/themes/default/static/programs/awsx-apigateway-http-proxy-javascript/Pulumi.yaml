@@ -1,0 +1,6 @@
+name: awsx-apigateway-http-proxy-javascript
+runtime:
+  name: nodejs
+  options:
+    typescript: false
+description: An example that creates an API Gateway instance and configures a route as an HTTP proxy.

@@ -1,0 +1,6 @@
+name: aws-ec2-sg-nginx-server-javascript
+runtime:
+  name: nodejs
+  options:
+    typescript: false
+description: An examples that deploys a simple public facing Nginx server

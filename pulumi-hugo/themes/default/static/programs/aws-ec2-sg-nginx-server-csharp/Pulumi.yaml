@@ -1,0 +1,3 @@
+name: aws-ec2-sg-nginx-server-csharp
+runtime: dotnet
+description: An examples that deploys a simple public facing Nginx server

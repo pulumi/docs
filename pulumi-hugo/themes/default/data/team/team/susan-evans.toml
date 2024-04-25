@@ -1,0 +1,10 @@
+id = "susan-evans"
+name = "susan evans"
+title = "UX Design Lead"
+weight = 1
+
+status = "active"
+
+[social]
+github = "susanev"
+linkedin = "susanev"

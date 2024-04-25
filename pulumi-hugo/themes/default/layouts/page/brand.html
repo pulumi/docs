@@ -1,0 +1,65 @@
+{{ define "hero" }}
+    {{ partial "hero" (dict "title" .Params.title ) }}
+{{ end }}
+
+{{ define "main" }}
+    <nav>
+        <div class="container mx-auto">
+            <pulumi-tertiary-nav items="{{ .Params.sections | jsonify }}"></pulumi-tertiary-nav>
+        </div>
+    </nav>
+
+    <section id="logos" class="mb-8 px-4 md:px-0 hidden">
+        <div class="container mx-auto max-w-4xl pt-8">
+            <h2>Pulumi Logos</h2>
+            <p>Logos are available in SVG or PNG format, and are suitable for both print and digital use.</p>
+            <ul class="flex flex-wrap justify-around list-none p-0 pt-8">
+                {{ range .Params.logos }}
+                    <li class="text-center md:w-1/2 mb-12">
+                        <div class="rounded {{ if .bg }}bg-gray-900{{ end }} p-8">
+                            <a class="inline-block w-{{ .size }}" href="/logos/brand/{{ .file }}.svg" download>
+                                <img src="/logos/brand/{{ .file }}.svg" title="{{ .name }}" />
+                            </a>
+                        </div>
+                        <div class="mt-6 flex flex-col sm:flex-row items-center place-content-center">
+                            <a class="btn btn-sm btn-brand-download mb-4 sm:mr-4 sm:mb-0 w-48" href="/logos/brand/{{ .file }}.svg" download>
+                                <span>Download SVG</span>
+                            </a>
+                            <a class="btn btn-sm btn-brand-download w-48" href="/logos/brand/{{ .file }}.png" download>
+                                <span>Download PNG</span>
+                            </a>
+                        </div>
+                    </li>
+                {{ end }}
+            </ul>
+        </div>
+    </section>
+
+    <section id="colors" class="mb-8 px-4 md:px-0 hidden">
+        <div class="container mx-auto max-w-4xl py-8">
+            <h2>Pulumi Brand Colors</h2>
+            <p>Official Pulumi brand colors, in hexadecimal, RGB, CMYK and Pantone color values.</p>
+            <ul class="flex flex-wrap justify-center list-none p-0">
+                {{ range .Params.colors }}
+                    <li class="md:w-1/2 md:pr-4">
+                        <div class="bg-{{ .name | lower }}-500 inline-block px-8 py-4 rounded text-black">
+                            <div class="my-1 font-bold">{{ .name }}</div>
+                            <dl class="flex flex-wrap">
+                                <dt class="w-1/3 opacity-75">Hex</dt>
+                                <dd class="w-2/3">{{ .hex }}</dd>
+                                <dt class="w-1/3 opacity-75">RGB</dt>
+                                <dd class="w-2/3">{{ .rgb }}</dd>
+                                <dt class="w-1/3 opacity-75">CMYK</dt>
+                                <dd class="w-2/3">{{ .cmyk }}</dd>
+                                <dt class="w-1/3 opacity-75">Pantone</dt>
+                                <dd class="w-2/3">{{ .pms }}</dd>
+                            </dl>
+                        </div>
+                    </li>
+                {{ end }}
+            </ul>
+        </div>
+    </section>
+
+    {{ partial "learnmore-contactus.html" . }}
+{{ end }}

@@ -1,0 +1,10 @@
+id = "alexandre-nedelec"
+name = "Alexandre Nédélec"
+status = "guest"
+role = "puluminary"
+title = "Software Engineer"
+company = "Avanade"
+
+[social]
+github = "TechWatching"
+twitter = "TechWatching"

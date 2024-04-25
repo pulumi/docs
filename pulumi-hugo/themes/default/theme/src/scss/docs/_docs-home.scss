@@ -1,0 +1,217 @@
+section.docs-home {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    h1, h2, h3, p {
+        margin: 0 !important;
+        margin-top: 0;
+    }
+
+    h2 {
+        margin-bottom: 12px;
+    }
+
+    h3 {
+        font-family: 'Gilroy';
+        font-weight: 500;
+        font-size: 21px;
+        color: map-get($gray, 950);
+    }
+
+    div.header {
+        @apply flex flex-col gap-4 p-6 rounded bg-no-repeat bg-bottom bg-cover;
+
+        background-image: url("/images/docs/docs-home-header-background-mobile.svg");
+
+        p {
+            @apply max-w-md;
+        }
+
+        @screen md {
+            @apply bg-auto;
+            background-image: url("/images/docs/docs-home-header-background-tablet.svg");
+        }
+
+        @screen lg {
+            background-image: url("/images/docs/docs-home-header-background-desktop.svg");
+        }
+
+        @screen xl {
+            .docs-content-width-expanded & {
+                background-image: url("/images/docs/docs-home-header-background-desktop-wide.svg");
+                @apply bg-right;
+            }
+        }
+
+        @screen xxl {
+            .docs-content-width-expanded & {
+                p {
+                    @apply max-w-lg;
+                }
+            }
+        }
+
+        div.link-buttons {
+            display: flex;
+            gap: 8px;
+
+            a {
+                padding: 5px 16px;
+                border-radius: 4px;
+                border: 1px map-get($brand, "blue") solid;
+                background: $white;
+                font-family: 'Inter';
+                font-weight: 400;
+                font-size: 14px;
+                color: $white;
+
+                &.docs-primary-link-btn {
+                    background: map-get($brand, "blue");
+                    color: $white;
+
+                    &:hover {
+                        background: map-get($brand, "blue-darker");
+                    }
+                }
+
+                &.docs-secondary-link-btn {
+                    color: map-get($brand, "blue");
+
+                    &:hover {
+                        background: map-get($blue, 100);
+                    }
+                }
+            }
+        }
+    }
+
+    h2 {
+        font-family: 'Gilroy';
+        font-weight: 500;
+        font-size: 24px;
+        color: map-get($gray, 950);
+    }
+
+    div.docs-home-section {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    div.blue-sparkle {
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        background: map-get($blue, 100);
+        border-radius: 4px;
+
+        .heading {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        div.sparkle {
+            background-image: url("/images/docs/sparkle.svg");
+            width: 48px;
+            height: 40px;
+        }
+    }
+
+    a.full-width-card {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        padding: 24px;
+        background: $white;
+        border: 1px solid map-get($gray, 150);
+        box-shadow: 0px 2px 24px rgba(95, 96, 101, 0.14);
+        border-radius: 4px;
+
+        div.icon-heading {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid map-get($gray, 150);
+
+            div.icon {
+                top: -1px;
+            }
+        }
+
+        &:hover {
+            background: map-get($gray, 100);
+            border: 1px solid map-get($gray, 350);
+        }
+    }
+
+    div.cards-logo-label-link {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        flex-direction: row;
+
+        &.clouds a {
+            flex-basis: 100%;
+
+            div.label {
+                padding: 12px;
+            }
+
+            @media (min-width: 768px) {
+                flex-basis: 49%;
+            }
+        }
+
+        &.languages a {
+            flex-basis: 32%;
+
+            @media (min-width: 1240px) {
+                flex-basis: 15%;
+            }
+
+            div.card-icon {
+                padding: 12px 0px;
+            }
+            div.label {
+                padding: 8px 12px;
+            }
+        }
+
+        a {
+            flex: 1;
+            border: 1px solid #E5E5E9;
+            filter: drop-shadow(0px 2px 24px rgba(95, 96, 101, 0.14));
+            border-radius: 4px;
+
+            div.card-icon {
+                background: map-get($gray, 100);
+                border-bottom: 1px solid map-get($gray, 150);
+                border-radius: 4px 4px 0px 0px;
+                display: flex;
+                justify-content: center;
+                padding: 24px 0px;
+            }
+
+            div.label {
+                background: $white;
+                border-radius: 0px 0px 4px 4px;
+                font-family: 'Inter';
+                font-weight: 400;
+                font-size: 18px;
+                color: map-get($gray, 950);
+            }
+
+            &:hover {
+                border: 1px solid map-get($gray, 350);
+            }
+        }
+    }
+
+    div.docs-home-section h2#clouds + p {
+        margin-bottom: 12px !important;
+    }
+}

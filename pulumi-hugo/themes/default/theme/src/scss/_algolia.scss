@@ -1,0 +1,209 @@
+@import "../../node_modules/@algolia/autocomplete-theme-classic/dist/theme.min.css";
+
+// CSS variables exposed by the Autocomplete classic theme.
+// https://www.algolia.com/doc/ui-libraries/autocomplete/api-reference/autocomplete-theme-classic
+:root {
+    --aa-base-unit: 14;
+    --aa-primary-color-rgb: theme(rgbColors.blue.400);
+    --aa-font-family: theme(fontFamily.body);
+    --aa-input-icon-size: 16px;
+    --aa-icon-color-rgb: theme(rgbColors.gray.900);
+    --aa-input-border-color-rgb: theme(rgbColors.gray.500);
+    --aa-input-border-color-alpha: 1;
+    --aa-selected-color-rgb: theme(rgbColors.blue.100);
+    --aa-selected-color-alpha: 0.9;
+    --aa-description-highlight-background-color-rgb: theme(rgbColors.blue.200);
+    --aa-description-highlight-background-color-alpha: 0;
+    --aa-search-input-height: 42px;
+}
+
+// Use our standard rounding for the button and the modal.
+.aa-Form, .aa-DetachedSearchButton {
+    @apply rounded;
+}
+
+
+// The container of the modal, including search-box and results panel.
+.aa-DetachedFormContainer {
+    @apply border-transparent;
+}
+
+.aa-Panel {
+    @apply relative;
+}
+
+// The container of a data source. (In our panel, we only have one.)
+.aa-Source {
+
+    // By default, Algolia gives this element `relative` positioning, which causes it to act as an
+    // absolute positioning container. However, because we want the header and footer to be pinned
+    // to the top and bottom of the `.aa-Panel` (this element's parent), we override this setting to
+    // give it `static` positioning instead.
+    @apply pt-12 pb-6 static;
+
+    // Similarly, we unset the `filter` property (which Algolia sets on this element when a query is
+    // running), as it implicitly turns the element into a relative-positioning container.
+    // https://stackoverflow.com/questions/52937708/why-does-applying-a-css-filter-on-the-parent-break-the-child-positioning
+    .aa-Panel--stalled & {
+        @apply filter-none;
+    }
+}
+
+// The container of the header, which renders the tabs.
+.aa-SourceHeader {
+    @apply bg-white z-40 m-0 absolute top-0 right-0 left-0;
+
+    // We need a bit more specificity here to override the defaults set by the control.
+    .aa-DetachedContainer &  {
+        @apply my-0;
+    }
+
+    // The list of tabs.
+    ul {
+        @apply p-0 m-0 flex items-center font-normal border-b border-gray-200;
+
+        li {
+            @apply border-b-2 border-transparent flex items-end transition-colors text-gray-700 mr-2;
+
+            button {
+                @apply px-3 py-2 flex items-center whitespace-nowrap;
+
+                // The tab icon.
+                img {
+                    @apply mr-1.5 opacity-70;
+                }
+
+                // The tab label (e.g., "All results").
+                .label {
+                    @apply font-semibold;
+                    font-size: 0.9em;
+                }
+
+                // The result-count badge.
+                .count {
+                    @apply ml-2 text-xs flex items-center rounded bg-violet-100 bg-opacity-60 text-gray-700 px-1.5 py-0.5;
+
+                    // When the item count is zero, don't show a background.
+                    &.count-0 {
+                        @apply bg-transparent;
+                    }
+                }
+            }
+
+            // On hover, show a faint underline.
+            &:hover:not(.disabled) {
+                @apply border-violet-300;
+            }
+
+            // When active, show a strong underline.
+            &.active, &.active:hover:not(.disabled) {
+                @apply text-gray-900 border-violet-600;
+
+                button {
+                    img {
+                        @apply opacity-100;
+                    }
+
+                    .label {
+                        @apply text-gray-900;
+                    }
+                }
+            }
+
+            // Make disabled tabs look disabled.
+            &.disabled {
+                @apply opacity-50;
+
+                button {
+                    @apply cursor-default;
+                }
+            }
+        }
+    }
+}
+
+// The container of an individual result item.
+.aa-Item {
+    @apply bg-gray-100 bg-opacity-80 mb-2 px-2 relative;
+
+    .result {
+
+        // The breadcrumb.
+        .ancestors {
+            @apply text-xs text-gray-700 mb-2;
+        }
+
+        // The title and description.
+        .item {
+            @apply leading-relaxed;
+
+            .title {
+                @apply font-semibold text-gray-900 mb-2 inline-flex items-center;
+
+                .label {
+                    @apply absolute top-4 right-3 text-xs text-gray-700 ml-3 inline-flex items-center rounded px-1 py-0.5 font-normal border;
+
+                    &.docs {
+                        @apply border-salmon-300;
+                    }
+
+                    &.packages {
+                        @apply border-yellow-300;
+                    }
+                }
+            }
+
+            .description {
+                @apply text-xs text-gray-800 leading-relaxed;
+            }
+        }
+    }
+
+    // The highlight indicator (i.e., the portion of item, if any, that matches the search query).
+    mark {
+        @apply bg-transparent border-b border-blue-600 border-opacity-50;
+    }
+}
+
+// The container of the footer.
+.aa-SourceFooter {
+    @apply bg-white z-40 py-2 mt-2 px-2 absolute right-0 bottom-0 left-0 text-xs text-gray-600;
+
+    > div {
+        @apply pt-2 border-t border-gray-300 flex items-center justify-start;
+
+        > span {
+            @apply mr-4;
+        }
+    }
+}
+
+// The no-results panel.
+.aa-SourceNoResults {
+    @apply flex flex-col items-center justify-center px-4 py-8;
+
+    mark {
+        @apply bg-transparent font-semibold;
+    }
+
+    p {
+        @apply my-1;
+    }
+
+    img {
+        @apply mb-4;
+    }
+}
+
+// The autocomplete button (i.e., the widget rendered by Algolia that opens the search dialog).
+.aa-Autocomplete {
+
+    // When the dialog is open, this class gets set on the `body` tag.
+    .aa-Detached & {
+
+        // Lighten the text color when the dialog is open to make it less contrasty/distracting.
+        .aa-DetachedSearchButtonQuery {
+            @apply text-gray-600;
+        }
+    }
+}

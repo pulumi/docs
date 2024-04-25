@@ -1,0 +1,52 @@
+{{ define "main" }}
+    <div class="layout-{{ .Page.Layout }} container flex flex-col mx-auto mb-32">
+        <header class="container mx-auto md:w-10/12 lg:w-6/12 mt-8 px-4 lg:px-0">
+            {{ partial "templates/breadcrumb.html" . }}
+            <h1 class="text-5xl mb-8">
+                {{ .Title }}
+            </h1>
+            <div>
+                <span class="text-lg">
+                    <p>
+                        {{ .Description | markdownify }}
+                    </p>
+                </span>
+            </div>
+        </header>
+        <section class="container mx-auto mt-6">
+            <ul class="w-full md:flex md:flex-wrap lg:max-w-6xl mx-auto lg:justify-center p-0 list-none">
+                {{ range $page := .Page.CurrentSection.Pages }}
+                    <li class="md:w-1/2 lg:w-1/3">
+                        <div class="px-4 py-2 w-full h-full">
+                            <div class="shadow-xl rounded-xl bg-white py-4 px-6 h-full border border-gray-200">
+                                {{ with $page }}
+                                    {{ if .Params.meta_image }}
+                                        <a class="text-gray-900" href="{{ .RelPermalink }}">
+                                            <img class="rounded" src="{{ (.Resources.GetMatch .Params.meta_image).RelPermalink }}" alt="{{ .Title }}" />
+                                        </a>
+                                    {{ end }}
+                                    <h2 class="mt-4 leading-none">
+                                        <span class="text-2xl">
+                                            <a class="text-gray-900" href="{{ .RelPermalink }}">{{ .Title }}</a>
+                                        </span>
+                                    </h2>
+                                    <p>
+                                        {{ .Params.card_desc }}
+                                    </p>
+                                {{ end }}
+                            </div>
+                        </div>
+                    </li>
+                {{ end }}
+            </ul>
+        </section>
+        <section class="container mx-auto px-4 lg:px-0">
+            <div class="lg:max-w-3xl mx-auto">
+                <hr class="my-16" />
+                <div class="text-gray-700">
+                    {{ .Content }}
+                </div>
+            </div>
+        </section>
+    </div>
+{{ end }}

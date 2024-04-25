@@ -1,0 +1,6 @@
+name: aws-iam-user-userpolicy-python
+runtime:
+  name: python
+  options:
+    virtualenv: venv
+description: An example that deploys an IAM user and user policy on AWS.

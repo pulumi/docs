@@ -1,0 +1,10 @@
+id = "justin-vanpatten"
+name = "Justin Van Patten"
+title = "Engineering Manager"
+weight = 1
+
+status = "active"
+
+[social]
+github = "justinvp"
+twitter = "justinvp"

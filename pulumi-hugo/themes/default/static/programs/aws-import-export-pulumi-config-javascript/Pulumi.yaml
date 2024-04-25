@@ -1,0 +1,10 @@
+name: aws-import-export-pulumi-config-javascript
+runtime:
+  name: nodejs
+  options:
+    typescript: false
+description: An example that retrieves and exports a Pulumi config value
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: aws-javascript

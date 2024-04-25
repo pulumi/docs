@@ -1,0 +1,18 @@
+#self-hosted-overview,
+#self-hosted-deployment {
+    a:not(.btn-secondary, .btn-primary) {
+        text-decoration: underline;
+    }
+}
+
+#self-hosted-questions {
+    .btn-primary {
+        border-color: $white;
+    }
+}
+
+#self-hosted-capabilities {
+    .card:nth-child(even) {
+        margin-right: 0px;
+    }
+}
