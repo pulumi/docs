@@ -1,5 +1,18 @@
 [
   {
+    "version": "v3.114.0",
+    "date": "2024-04-26T19:05:50Z",
+    "downloads": {
+      "linux-x64": "https://get.pulumi.com/releases/sdk/pulumi-v3.114.0-linux-x64.tar.gz",
+      "linux-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v3.114.0-linux-arm64.tar.gz",
+      "darwin-x64": "https://get.pulumi.com/releases/sdk/pulumi-v3.114.0-darwin-x64.tar.gz",
+      "darwin-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v3.114.0-darwin-arm64.tar.gz",
+      "windows-x64": "https://get.pulumi.com/releases/sdk/pulumi-v3.114.0-windows-x64.zip"
+    },
+    "checksums": "https://get.pulumi.com/releases/sdk/pulumi-3.114.0-checksums.txt",
+    "latest": true
+  },
+  {
     "version": "v3.113.3",
     "date": "2024-04-19T16:57:16Z",
     "downloads": {
@@ -9,8 +22,7 @@
       "darwin-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v3.113.3-darwin-arm64.tar.gz",
       "windows-x64": "https://get.pulumi.com/releases/sdk/pulumi-v3.113.3-windows-x64.zip"
     },
-    "checksums": "https://get.pulumi.com/releases/sdk/pulumi-3.113.3-checksums.txt",
-    "latest": true
+    "checksums": "https://get.pulumi.com/releases/sdk/pulumi-3.113.3-checksums.txt"
   },
   {
     "version": "v3.113.2",
