@@ -7,10 +7,15 @@ layout: community-engineering/single
 aliases:
   - /engin
 talks:
+  - event: "LA DevOps"
+    title: "Cloud Native DevOps with Pulumi and ArgoCD"
+    url: https://www.meetup.com/meetup-group-zzqwjltm/events/300366094/
+    date: 2024-04-25T10:00:00.000-07:00
+    slides: null
   - event: "Mastering GitOps 2024"
     title: "Wie man mit Backstage, IaC und GitOps eine interne Entwicklerplattform auf Kubernetes aufbaut"
     url: https://www.mastering-gitops.de/veranstaltung-21908-se-0-wie-man-mit-backstage-iac-und-gitops-eine-interne-entwicklerplattform-auf-kubernetes-aufbaut.html
-    date: 2024-03-18T10:00:00.000-07:00
+    date: 2024-04-18T10:00:00.000-07:00
     slides: null
   - event: "GitOpsCon NA 2024"
     title: "Gain Platform Superpowers with the KEBAP Stack!"
