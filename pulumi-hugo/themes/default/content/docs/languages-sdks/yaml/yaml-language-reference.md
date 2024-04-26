@@ -132,10 +132,11 @@ resources:
 
 #### Explicit provider
 
-To create an explicit provider instance, preferably with a specific version, use the [`resources`](#resources) section and prefix the name of the provider with `pulumi:providers` which will the value of the `type` property.
+To create an explicit provider instance, preferably with a specific version, use the [`resources`](#resources) section. For the `type` property, prefix the name of the provider with `pulumi:providers`.
 
 ```yaml
-provider:
+resources:
+  provider:
     type: pulumi:providers:azure
     options:
       version: 5.1.0
