@@ -17,6 +17,7 @@ clean:
 .PHONY: ensure
 ensure: clean
 	./scripts/ensure.sh
+	$(MAKE) build-assets
 
 .PHONY: serve
 serve:
