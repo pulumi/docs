@@ -1,0 +1,12 @@
+id = "diana-esteves"
+name = "Diana Esteves"
+title = "Solutions Architect"
+company = "Pulumi"
+weight = 1
+
+status = "active"
+
+[social]
+github = "desteves"
+twitter = "null_string"
+linkedin = "dianaesteves"

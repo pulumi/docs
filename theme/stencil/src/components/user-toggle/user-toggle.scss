@@ -1,0 +1,19 @@
+pulumi-user-toggle {
+    display: inline;
+
+    [slot]  {
+        display: none;
+    }
+
+    .signed-out {
+        [slot="signed-out"] {
+            display: inherit;
+        }
+    }
+
+    .signed-in {
+        [slot="signed-in"] {
+            display: inherit;
+        }
+    }
+}

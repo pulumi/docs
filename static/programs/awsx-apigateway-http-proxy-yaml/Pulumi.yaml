@@ -1,0 +1,17 @@
+name: awsx-apigateway-http-proxy-yaml
+runtime: yaml
+description: An example that creates an API Gateway instance and configures a route as an HTTP proxy.
+
+resources:
+  api:
+    type: aws-apigateway:RestAPI
+    properties:
+      routes:
+        - path: /
+          method: GET
+          target:
+            type: http_proxy
+            uri: https://www.example.com/
+
+outputs:
+  url: ${api.url}

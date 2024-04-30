@@ -1,0 +1,27 @@
+name: aws-s3bucket-bucketpolicy-yaml
+runtime: yaml
+description: An example that deploys an S3 bucket and bucket policy on AWS.
+
+resources:
+  myBucket:
+    type: aws:s3/bucket:Bucket
+
+  myBucketPolicy:
+    type: aws:s3/bucketPolicy:BucketPolicy
+    properties:
+      bucket: ${myBucket.id}
+      policy:
+        fn::toJSON:
+          Version: "2012-10-17"
+          Statement:
+            - Effect: "Allow"
+              Principal:
+                Service: "lambda.amazonaws.com"
+              Action:
+                - "s3:PutObject"
+                - "s3:PutObjectAcl"
+              Resource: "${myBucket.arn}/*"
+
+outputs:
+  bucket_name: ${myBucket.id}
+  bucket_arn: ${myBucket.arn}

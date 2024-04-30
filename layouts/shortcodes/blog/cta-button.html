@@ -1,0 +1,16 @@
+{{ $label := .Get 0 }}
+{{ $url := .Get 1 }}
+{{ $target := .Get 2 }}
+
+
+<a
+    href="{{ $url }}"
+    class="btn btn-secondary whitespace-nowrap"
+    {{ if $target }}target="{{ $target }}"{{ end }}
+    {{ if eq $target "_blank" }}rel="noopener noreferrer"{{ end }}
+>
+    {{ $label }}
+    {{ if eq $target "_blank" }}
+        <i class="text-sm ml-2 fas fa-external-link-alt"></i>
+    {{ end }}
+</a>

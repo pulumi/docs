@@ -1,0 +1,79 @@
+@import "mixins";
+
+div.highlight {
+    display: flex;
+
+    pre,
+    div.copy-button-container {
+        flex: 1;
+    }
+
+    .copy-button-container {
+        display: none;
+
+        flex-direction: row;
+        width: fit-content;
+        margin: 8px 7px 0 0;
+        background: #4d5bd9;
+
+        box-shadow: 0px 0px 12px #364098;
+        border-radius: 4px;
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        &:hover {
+            background: #4552c3;
+            box-shadow: 0px 0px 12px #364098;
+        }
+
+        &:active {
+            background: #4d5bd9;
+            box-shadow: 0px 0px 12px #364098;
+        }
+
+
+        .code-mode-dark & {
+            background: #4d5bd9;
+        }
+
+        button.copy-button {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        // Use a slightly narrower tooltip for these.
+        pulumi-tooltip {
+            .tooltip-content {
+                @apply w-auto whitespace-nowrap;
+            }
+        }
+
+        @media (min-width: 768px) {
+            display: flex;
+        }
+
+        @media(min-width: 1024px) {
+            i.copy {
+                display: flex;
+            }
+        }
+    }
+
+    .copy-button {
+        @include transition;
+        color: #fff;
+        font-size: 14px;
+        font-family: 'Inter';
+        padding: 8px 8px 8px 10px;
+
+        .code-mode-dark & {
+            @apply text-gray-600;
+
+            &:hover {
+                @apply text-gray-500;
+            }
+        }
+    }
+}

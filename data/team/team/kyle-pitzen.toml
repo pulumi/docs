@@ -1,0 +1,12 @@
+id = "kyle-pitzen"
+name = "Kyle Pitzen"
+title = "Engineering Manager"
+company = "Pulumi"
+weight = 1
+
+status = "active"
+
+[social]
+github = "kpitzen"
+twitter = "kylepitzen"
+linkedin = "kyle-pitzen"

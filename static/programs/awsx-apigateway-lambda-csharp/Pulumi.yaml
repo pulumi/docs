@@ -1,0 +1,3 @@
+name: awsx-apigateway-lambda-csharp
+runtime: dotnet
+description: An example that deploys an API Gateway REST API with a single endpoint backed by AWS Lambda.

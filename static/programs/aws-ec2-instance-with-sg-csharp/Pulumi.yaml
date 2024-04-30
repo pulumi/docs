@@ -1,0 +1,3 @@
+name: aws-ec2-instance-with-sg-csharp
+runtime: dotnet
+description: An example that shows how to create an EC2 instance and security group.

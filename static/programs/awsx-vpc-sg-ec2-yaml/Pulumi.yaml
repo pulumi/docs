@@ -1,0 +1,39 @@
+name: awsx-vpc-sg-ec2-yaml
+runtime: yaml
+description: An example that deploys an EC2 instance using a VPC and security group with Crosswalk for AWS.
+
+variables:
+  amiId:
+    fn::invoke:
+      function: aws:ec2:getAmi
+      arguments:
+        filters:
+          - name: "name"
+            values: ["amzn2-ami-hvm-*"]
+        owners: ["amazon"]
+        mostRecent: true
+      return: id
+
+resources:
+  vpc:
+    type: awsx:ec2:Vpc
+    properties:
+      natGateways:
+        strategy: Single
+
+  securityGroup:
+    type: aws:ec2:SecurityGroup
+    properties:
+      vpcId: ${vpc.vpcId}
+
+  instance:
+    type: aws:ec2:Instance
+    properties:
+      ami: ${amiId}
+      instanceType: t2.micro
+      vpcSecurityGroupIds:
+        - ${securityGroup.id}
+      subnetId: ${vpc.publicSubnetIds[0]}
+
+outputs:
+  vpcId: ${vpc.vpcId}

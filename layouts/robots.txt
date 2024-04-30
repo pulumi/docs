@@ -1,0 +1,15 @@
+User-agent: *
+{{- if ne hugo.Environment "production" }}
+Disallow: *
+{{ end }}
+
+# Disallow certain pages that are preceived as soft-404s.
+Disallow: /docs/search/$
+
+# Disallow azure-native-v1. See https://github.com/pulumi/registry/issues/2879 for details.
+Disallow: /registry/packages/azure-native-v1
+
+Sitemap: https://www.pulumi.com/sitemap-index.xml
+Sitemap: https://www.pulumi.com/ai/sitemap-index.xml
+Sitemap: https://www.pulumi.com/ai/sitemap-index.xml?state=unpublished
+Host: www.pulumi.com

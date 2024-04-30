@@ -1,0 +1,251 @@
+{{ define "hero" }}
+    {{ partial "hero" (dict "title" .Params.title ) }}
+{{ end }}
+
+{{ define "main" }}
+    <div class="my-32">
+        <section id="overview" class="container mx-auto px-6 lg:px-56 text-center mb-32">
+            <h2 class="max-w-2xl mx-auto">{{ .Params.overview.title }}</h2>
+            <p class="text-lg">{{ .Params.overview.description }}</p>
+        </section>
+
+        <section id="best-practices" class="container mx-auto flex my-16">
+            <div class="hidden lg:block lg:w-1/3"></div>
+            <div class="w-full lg:w-2/3 bg-gray-200 text-center p-6 lg:p-16 lg:rounded-2xl">
+                <div class="max-w-xl mx-auto">
+                    <h2>{{ .Params.best_practices.title }}</h2>
+                    <p class="text-gray-600">{{ .Params.best_practices.description | markdownify }}</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="build" class="py-8 relative">
+            <div class="shape-background cloud-engineering-small-dots-build">
+                <div class="relative w-full h-full">
+                    <div class="dot-background-container">
+                        <div class="dot-background-overlay"></div>
+                        <div class="dot-background no-animate"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container mx-auto flex flex-col lg:flex-row relative">
+                <div class="w-full lg:w-1/2 relative">
+                    <div class="shape-background cloud-engineering-build-section">
+                        <div class="relative w-full h-full">
+                            <div class="circle-left"></div>
+                            <div class="circle-right"></div>
+                        </div>
+                    </div>
+
+                    <div class="cloud-engineering-build-card card">
+                        <h3>{{ .Params.build.title }}</h3>
+                        <p class="text-gray-600">{{ .Params.build.description }}</p>
+                    </div>
+                </div>
+
+                <div class="w-full lg:w-1/2 p-6 lg:p-0">
+                    {{ range $item := .Params.build.items }}
+                        <h6>{{ $item.title }}</h6>
+                        <p>{{ $item.description }}</p>
+                    {{ end }}
+                </div>
+            </div>
+        </section>
+
+        <section id="deploy" class="py-8 mt-2 relative">
+            <div class="shape-background cloud-engineering-small-dots">
+                <div class="relative w-full h-full">
+                    <div class="dot-background-container">
+                        <div class="dot-background-overlay"></div>
+                        <div class="dot-background no-animate"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container mx-auto flex flex-col lg:flex-row">
+                <div class="w-full lg:w-1/2 relative">
+                    <div class="shape-background cloud-engineering-deploy-section">
+                        <div class="relative w-full h-full">
+                            <div class="circle-left"></div>
+                            <div class="circle-right"></div>
+                        </div>
+                    </div>
+
+                    <div class="p-6 lg:p-16 max-w-md card mx-auto mb-16 lg:mx-0 lg:ml-8 lg:mb-0 bg-white">
+                        <h3 class="mb-6 mt-0">{{ .Params.deploy.title }}</h3>
+                        <p class="text-gray-600">{{ .Params.deploy.description }}</p>
+                    </div>
+                </div>
+
+                <div class="w-full lg:w-1/2 p-6 lg:p-0">
+                    {{ range $item := .Params.deploy.items }}
+                        <h6>{{ $item.title }}</h6>
+                        <p>{{ $item.description }}</p>
+                    {{ end }}
+                </div>
+            </div>
+        </section>
+
+        <section id="manage" class="py-8 mt-3 relative">
+            <div class="shape-background cloud-engineering-small-dots">
+                <div class="shape-container">
+                    <div class="dot-background-container">
+                        <div class="dot-background-overlay"></div>
+                        <div class="dot-background no-animate"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container mx-auto flex flex-col lg:flex-row">
+                <div class="w-full lg:w-1/2 relative">
+                    <div class="shape-background cloud-engineering-manage-section">
+                        <div class="shape-container">
+                            <div class="circle-left"></div>
+                            <div class="circle-right"></div>
+                        </div>
+                    </div>
+
+                    <div class="p-6 lg:p-16 max-w-md card mx-auto mb-16 lg:mx-0 lg:ml-8 lg:mb-0 bg-white">
+                        <h3>{{ .Params.manage.title }}</h3>
+                        <p class="text-gray-600">{{ .Params.manage.description }}</p>
+                    </div>
+                </div>
+
+                <div class="w-full lg:w-1/2 p-6 lg:p-0">
+                    {{ range $item := .Params.manage.items }}
+                        <h6>{{ $item.title }}</h6>
+                        <p>{{ $item.description }}</p>
+                    {{ end }}
+                </div>
+            </div>
+        </section>
+
+        <section id="benefits" class="lg:my-32 relative">
+            <div class="shape-background cloud-engineering-benefits-section">
+                <div class="shape-container">
+                    <div class="circle-left"></div>
+                    <div class="circle-right"></div>
+                </div>
+            </div>
+
+            <div class="container mx-auto my-16 ">
+                <h2 class="mx-auto text-center mb-16">{{ .Params.benefits.title | markdownify }}</h2>
+                <div class="benefits-section">
+                    {{ range $item := .Params.benefits.items }}
+                        <div class="benefits-item-auto-h card bg-white">
+                            <div class="icon-section">
+                                {{ partial "color-icon.html" (dict "icon" $item.icon "icon_color" $item.icon_color) }}
+                            </div>
+                            <div>
+                                <h5>{{ $item.title }}</h5>
+                            </div>
+                            <div class="description">
+                                <p>{{ $item.description }}</p>
+                            </div>
+                        </div>
+                    {{ end }}
+                </div>
+            </div>
+        </section>
+
+        <section id="use-cases" class="mt-16 mb-32 relative">
+            <div class="shape-background cloud-engineering-use-cases-section">
+                <div class="shape-container">
+                    <div class="circle-right"></div>
+                </div>
+            </div>
+
+            <div class="container mx-auto text-center">
+                <h2 class="text-center">{{ .Params.use_cases.title }}</h2>
+                <div class="cloud-engineering-use-cases">
+                    {{ range $item := .Params.use_cases.items }}
+                        <div class="w-full lg:w-1/3 pb-4 pt-8">
+                            <h5>{{ $item | markdownify }}</h5>
+                        </div>
+                    {{ end }}
+                </div>
+                <p class="my-8">{{ .Params.use_cases.description }}</p>
+                <a class="btn-primary mt-8" href="{{ relref . "/solutions" }}">See Solutions</a>
+            </div>
+        </section>
+
+        <section id="case-studies" class="w-full my-16 hidden lg:block relative">
+            <div class="shape-background cloud-engineering-case-studies-section">
+                <div class="shape-container">
+                    <div class="circle-left"></div>
+                </div>
+            </div>
+
+            <div class="w-full">
+                <h2 class="text-center mb-16">{{ .Params.case_studies.title }}</h2>
+                <div class="large-container mx-auto">
+                    <pulumi-swiper slides="3" centered-slides="true" initial-slide="3" loop="true" autoplay="true" autoplay-delay="5000" speed="2000">
+                        {{ range $item := .Params.case_studies.items }}
+                            <pulumi-swipeable>
+                                <div class="w-full px-4">
+                                    <div class="flex flex-col card p-6 bg-white">
+                                        <p class="text-left mt-0 italic font-semibold text-black">{{ $item.quote | markdownify }}</p>
+                                        <div class="flex flex-grow">
+                                            <div class="w-2/3 text-left">
+                                                <p class="text-black mb-0">{{ $item.name }}</p>
+                                                <p class="mt-0">{{ $item.title }}</p>
+                                            </div>
+                                            <div class="w-1/3 my-4">
+                                                {{ partial "customer-logo.html" (dict "logo" $item.company) }}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </pulumi-swipeable>
+                        {{ end }}
+                    </pulumi-swiper>
+                </div>
+            </div>
+        </section>
+        <section id="case-studies" class="w-full my-16 overflow-hidden lg:hidden relative">
+            <div class="shape-background cloud-engineering-case-studies-section">
+                <div class="shape-container">
+                    <div class="circle-left"></div>
+                </div>
+            </div>
+
+            <div class="w-full">
+                <h2 class="text-center mb-16">{{ .Params.case_studies.title }}</h2>
+                <pulumi-swiper slides="1" loop="true" autoplay="true" autoplay-delay="5000" speed="2000">
+                    {{ range $item := .Params.case_studies.items }}
+                        <pulumi-swipeable>
+                            <div class="w-full px-4">
+                                <div class="flex flex-col card p-6 bg-white">
+                                    <p class="text-left mt-0 italic font-semibold text-black">{{ $item.quote }}</p>
+                                    <div class="flex flex-grow">
+                                        <div class="w-2/3 text-left">
+                                            <p class="text-black mb-0">{{ $item.name }}</p>
+                                            <p class="mt-0">{{ $item.title }}</p>
+                                        </div>
+                                        <div class="w-1/3 my-4">
+                                            {{ partial "customer-logo.html" (dict "logo" $item.company) }}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </pulumi-swipeable>
+                    {{ end }}
+                </pulumi-swiper>
+            </div>
+        </section>
+
+        <section id="get-started" class="container px-6 lg:px-0 mx-auto my-16">
+            <div class="w-full bg-violet-600 card p-6 lg:p-16 lg:pt-24 text-center">
+                <div class="max-w-xl mx-auto">
+                    <h2 class="text-white hidden lg:block px-0 lg:px-16">{{ .Params.get_started.title }}</h2>
+                    <h4 class="text-white mt-0 lg:hidden">{{ .Params.get_started.title }}</h4>
+                    <p class="text-white">{{ .Params.get_started.description }}</p>
+                    <div class="mt-16">
+                        <a class="btn-secondary" href="{{ relref . "/docs/get-started" }}">{{ .Params.get_started.cta_text }}</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+{{ end }}

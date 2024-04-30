@@ -1,0 +1,36 @@
+pulumi-filter-select {
+    pulumi-filter-select-option-group {
+        @apply font-display text-base;
+
+        .toggle {
+            @apply pl-2 pr-6 py-1 rounded bg-white border-2 border-gray-900 transition-all;
+
+            @screen md {
+                @apply w-48;
+            }
+
+            &:hover {
+                @apply bg-gray-900 text-white;
+            }
+        }
+
+        .options {
+            @apply bg-white py-2 pl-1 pr-4 rounded border border-gray-900 shadow mt-1 leading-loose z-50;
+
+            @screen md {
+                @apply pr-8;
+            }
+        }
+
+        &:hover,
+        &[expanded] {
+            &::part(toggle) {
+                @apply text-white;
+            }
+
+            .toggle {
+                @apply bg-gray-900 text-white;
+            }
+        }
+    }
+}

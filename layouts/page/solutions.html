@@ -1,0 +1,192 @@
+{{ define "hero" }}
+    {{ partial "hero" (dict "title" .Params.title ) }}
+{{ end }}
+
+{{ define "main" }}
+    <section id="overview" class="container mx-auto my-32 p-6 md:p-0">
+        <h2 class="max-w-2xl px-8 mx-auto text-center">{{ .Params.overview.title }}</h2>
+        <p class="text-center text-lg">{{ .Params.overview.description }}</p>
+    </section>
+
+    <div class="w-full relative overflow-visible">
+        <div class="shape-background solutions-page">
+            <div class="shape-container">
+                <div class="dot-background-container">
+                    <div class="dot-background-overlay"></div>
+                    <div class="dot-background no-animate"></div>
+                </div>
+                <div class="circle-left"></div>
+                <div class="circle-right"></div>
+            </div>
+        </div>
+
+        <section id="use-cases" class="container mx-auto p-6">
+            <div class="card p-4 md:p-8 lg:p-32 bg-white">
+                <h2>{{ .Params.use_cases.title }}</h2>
+
+                <ul class="list-none mt-6">
+                    {{ $listLength := len .Params.use_cases.items }}
+                    {{ range $index, $item := .Params.use_cases.items }}
+                        {{ $itemClass := "border-t-2" }}
+                        {{ if eq (add $index 1) $listLength }}
+                            {{ $itemClass = "border-t-2 border-b-2" }}
+                        {{ end }}
+
+
+                        <li class="accordion-item {{ $itemClass }} py-6">
+                            {{ partial "accordian-header" (dict "text" $item.name) }}
+
+
+                            <div class="accordion-item-body-no-animation">
+                                <p class="mt-6">{{ $item.description | markdownify }}</p>
+
+                                {{ if $item.case_studies }}
+                                    <ul class="list-none mt-6 pl-0">
+                                        {{ range $cs := $item.case_studies }}
+                                            <li><a href="{{ $cs.link }}" class="link">Case Study: {{ $cs.name }}</a></li>
+                                        {{ end }}
+                                    </ul>
+                                {{ end }}
+                            </div>
+                        </li>
+                    {{ end }}
+                </ul>
+            </div>
+        </section>
+
+        <section id="architectures" class="container mx-auto mt-32 p-6 lg:p-0">
+            <h2 class="text-center">{{ .Params.architectures.title }}</h2>
+
+            <div class="flex flex-wrap mt-16">
+                {{ range $item := .Params.architectures.items }}
+                    <div class="w-full lg:w-1/2 p-4 my-2">
+                        <div class="card text-center py-16 px-8 relative bg-white">
+                            <h4>{{ $item.name }}</h4>
+                            <p class="mt-6 mb-16">{{ $item.description }}</p>
+                            <p class="mb-4">Relevant Case Studies</p>
+                            <div class="w-full flex flex-wrap justify-center items-center">
+                                {{ range $cs := $item.case_studies }}
+                                    <div class="w-full md:w-1/3 my-2 md:my-0 px-6 sm:px-32 md:px-4">
+                                        <a href="{{ $cs.link }}" class="link">
+                                            {{ partial "customer-logo.html" (dict "logo" $cs.logo "black" true) }}
+                                        </a>
+                                    </div>
+                                {{ end }}
+                            </div>
+                            <div class="card-cta-btn">
+                                <a href="{{ $item.cta_link }}" class="btn-primary">{{ $item.cta_text }}</a>
+                            </div>
+                        </div>
+                    </div>
+                {{ end }}
+            </div>
+        </section>
+    </div>
+
+    <section id="personas" class="container mx-auto p-6 lg:p-0 my-16 lg:my-32 flex flex-col">
+        <pulumi-chooser class="solutions-persona-chooser" type="persona" options="developer,devops,security,leader" class="inline">
+            <pulumi-choosable type="persona" class="highlight" value="developer">
+                <div class="w-full flex flex-wrap">
+                    {{ range $item := .Params.personas.developers.items }}
+                        <div class="w-full lg:w-1/3 p-2 lg:p-8 flex flex-col">
+                            <div class="w-1/3">
+                                {{ partial "color-icon.html" (dict "icon" $item.icon "icon_color" $item.icon_color) }}
+                            </div>
+                            <div>
+                                <h5>{{ $item.title }}</h5>
+                            </div>
+                            <div class="flex items-end flex-grow">
+                                <p>{{ $item.description | markdownify }}</p>
+                            </div>
+                        </div>
+                    {{ end }}
+                </div>
+            </pulumi-choosable>
+
+            <pulumi-choosable type="persona" class="highlight" value="devops">
+                <div class="w-full flex flex-wrap">
+                    {{ range $item := .Params.personas.devops.items }}
+                        <div class="w-full lg:w-1/3 p-2 lg:p-8 flex flex-col">
+                            <div class="w-1/3">
+                                {{ partial "color-icon.html" (dict "icon" $item.icon "icon_color" $item.icon_color) }}
+                            </div>
+                            <div>
+                                <h5>{{ $item.title }}</h5>
+                            </div>
+                            <div class="flex items-end flex-grow">
+                                <p>{{ $item.description | markdownify }}</p>
+                            </div>
+                        </div>
+                    {{ end }}
+                </div>
+            </pulumi-choosable>
+
+            <pulumi-choosable type="persona" class="highlight" value="security">
+                <div class="w-full flex flex-wrap">
+                    {{ range $item := .Params.personas.security.items }}
+                        <div class="w-full lg:w-1/3 p-2 lg:p-8 flex flex-col">
+                            <div class="w-1/3">
+                                {{ partial "color-icon.html" (dict "icon" $item.icon "icon_color" $item.icon_color) }}
+                            </div>
+                            <div>
+                                <h5>{{ $item.title }}</h5>
+                            </div>
+                            <div class="flex items-end flex-grow">
+                                <p>{{ $item.description | markdownify }}</p>
+                            </div>
+                        </div>
+                    {{ end }}
+                </div>
+            </pulumi-choosable>
+
+            <pulumi-choosable type="persona" class="highlight" value="leader">
+                <div class="w-full flex flex-wrap">
+                    {{ range $item := .Params.personas.leader.items }}
+                        <div class="w-full lg:w-1/3 p-2 lg:p-8 flex flex-col">
+                            <div class="w-1/3">
+                                {{ partial "color-icon.html" (dict "icon" $item.icon "icon_color" $item.icon_color) }}
+                            </div>
+                            <div>
+                                <h5>{{ $item.title }}</h5>
+                            </div>
+                            <div class="flex items-end flex-grow">
+                                <p>{{ $item.description | markdownify }}</p>
+                            </div>
+                        </div>
+                    {{ end }}
+                </div>
+            </pulumi-choosable>
+        </pulumi-chooser>
+        <div class="mb-2 lg:mb-8 order-first">
+            <h2>
+                <span class="inline-block">
+                    {{ .Params.personas.title }}
+                </span>
+                <span class="rainbow-text inline-block">
+                    <pulumi-choosable type="persona" value="developer">
+                        <span>for Developers</span>
+                    </pulumi-choosable>
+                    <pulumi-choosable type="persona" value="devops">
+                        <span>for DevOps & Infra Teams</span>
+                    </pulumi-choosable>
+                    <pulumi-choosable type="persona" value="security">
+                        <span>for Security Engineers</span>
+                    </pulumi-choosable>
+                    <pulumi-choosable type="persona" value="leader">
+                        <span>for Engineering Leaders</span>
+                    </pulumi-choosable>
+                </span>
+            </h2>
+        </div>
+    </section>
+
+    <section class="container mx-auto my-12 md:my-24 p-6 lg:p-0">
+        <div class="w-full bg-violet-600 rounded shadow p-16 pt-24 text-center">
+            <h2 class="text-white">{{ .Params.get_started.title }}</h2>
+            <p class="text-white">{{ .Params.get_started.description }}</p>
+            <div class="mt-16">
+                <a class="btn-secondary" href="{{ relref . "/docs/get-started" }}">{{ .Params.get_started.cta_text }}</a>
+            </div>
+        </div>
+    </section>
+{{ end }}

@@ -1,0 +1,10 @@
+id = "kat-morgan"
+name = "Kat Morgan"
+title = "Senior Community Engineer"
+company = "Pulumi"
+
+status = "active"
+
+[social]
+github = "usrbinkat"
+twitter = "usrbinkat"

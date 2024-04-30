@@ -1,0 +1,49 @@
+{{ with .File }}
+    {{ if not $.Page.Params.no_on_this_page }}
+        <div class="on-this-page">
+            <h6 class="no-anchor mt-2">
+                <a href="#">
+                    <span class="text-base"> On this page </span>
+                </a>
+            </h6>
+            <ul class="text-sm">
+                {{/* This will be populated dynamically with all H2s and H3s on the page; see assets/js/main.js */}}
+            </ul>
+        </div>
+    {{ end }}
+{{ end }}
+
+
+<h6 class="mt-2">
+    <span class="text-base">Source code</span>
+</h6>
+<div class="inline-flex items-center text-sm">
+    <i class="fab fa-github text-lg mr-1.5"></i>
+    <span class="whitespace-nowrap flex-1">
+        {{ partial "templates/source-link" (dict "prefix" .Params.template.prefix "languages" (delimit .Params.template.languages ",")) }}
+    </span>
+    <span><i class="text-blue-700 fas fa-external-link-alt text-xs ml-1.5 pb-1"></i></span>
+</div>
+
+{{ $thisCloud := $.Page.Params.cloud.slug }}
+{{ $siblings := where .CurrentSection.Pages "Params.cloud.slug" "!=" $thisCloud }}
+
+{{ if gt (len $siblings) 0 }}
+    <h6 class="mt-8">
+        <span class="text-base">This template is also available for:</span>
+    </h6>
+    <ul class="text-sm">
+        {{ range $sibling := .CurrentSection.Pages }}
+            {{ $siblingCloud := $sibling.Params.cloud }}
+            {{ if ne $thisCloud $siblingCloud.slug }}
+                <li class="">
+                    <span class="inline-flex items-center">
+                        <a class="text-blue-700" href="{{ .RelPermalink }}">
+                            {{ $siblingCloud.name }}
+                        </a>
+                    </span>
+                </li>
+            {{ end }}
+        {{ end }}
+    </ul>
+{{ end }}

@@ -1,0 +1,37 @@
+{{ define "hero" }}
+    {{ partial "hero" (dict "title" .Params.title ) }}
+{{ end }}
+
+{{ define "main" }}
+    <section id="press-and-news" class="bg-gray-100 py-16 px-4">
+        <div class="container mx-auto md:flex flex-col lg:flex-row items-top max-w-5xl">
+            <div class="md:w/1-2 md:px-8">
+                <h3 class="text-center md:text-left font-medium text-6xl">Press Releases</h3>
+                <ul class="list-none mt-8 p-0">
+                    {{ range $.Site.Data.newsroom.releases }}
+                        <li class="pb-4">
+                            <div class="text-sm text-gray-700">{{ .date }}</div>
+                            <h5 class="mt-2 mb-0">{{ .title }}</h5>
+                            <a data-track="press-release" class="block my-4" href="{{ .url }}">Read more &rarr;</a>
+                        </li>
+                    {{ end }}
+                </ul>
+            </div>
+            <div class="md:w/1-2 md:px-8">
+                <h3 class="text-center md:text-left font-medium text-6xl">Recent News</h3>
+                <ul class="list-none mt-8 p-0">
+                    {{ range $.Site.Data.newsroom.coverage }}
+                        <li class="pb-4">
+                            <div class="text-sm text-gray-700">{{ .date }}</div>
+                            <img class="mt-4 h-5" src="{{ .img }}" />
+                            <h5 class="mt-2 mb-0">{{ .title }}</h5>
+                            {{ if .url }}
+                                <a data-track="news-{{ .url | urlize }}" class="block my-4" href="{{ .url }}" target="_blank" rel="noopener noreferrer"> Read more &rarr; </a>
+                            {{ end }}
+                        </li>
+                    {{ end }}
+                </ul>
+            </div>
+        </div>
+    </section>
+{{ end }}
