@@ -1,0 +1,6 @@
+name: aws-static-website-with-runtime-logic-python
+description: An example that demonstrates a few interesting things you can do at runtime with Pulumi.
+runtime:
+  name: python
+  options:
+    virtualenv: venv
