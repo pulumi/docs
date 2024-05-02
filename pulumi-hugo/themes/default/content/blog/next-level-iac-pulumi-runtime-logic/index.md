@@ -61,22 +61,25 @@ import * as aws from "@pulumi/aws";
 import * as childProcess from "child_process";
 
 // Build the website.
-const proc = childProcess.execSync("hugo", { stdio: "inherit", cwd: "./www" });
+const result = childProcess.execSync("hugo --destination ./public", { stdio: "pipe", cwd: "./www" });
 
 // Provision a storage bucket for the website.
 const bucket = new aws.s3.Bucket("bucket", {
     website: {
-        indexDocument: "index.html"
+        indexDocument: "index.html",
     },
 });
 
 // Copy the website home page into the bucket.
-const homepage = new aws.s3.BucketObject("index.html", {
-    bucket: bucket.id,
-    content: fs.readFileSync("./www/public/index.html", "utf-8"),
-    contentType: "text/html",
-    acl: "public-read",
-});
+const homepage = new aws.s3.BucketObject(
+    "index.html",
+    {
+        bucket: bucket.id,
+        content: fs.readFileSync("./www/public/index.html", "utf-8"),
+        contentType: "text/html",
+        acl: "public-read",
+    },
+);
 ```
 
 {{% /choosable %}}
@@ -88,15 +91,27 @@ import pulumi_aws as aws
 import subprocess
 
 # Build the website.
-result = subprocess.run(["hugo", "--destination", "./public"], stdout=subprocess.PIPE, cwd="./www", check=True, shell=True)
-
-# Log the build output to the console.
-print(result.stdout.decode())
+result = subprocess.run(
+    ["hugo", "--destination", "./public"],
+    stdout=subprocess.PIPE,
+    cwd="./www",
+    check=True,
+    shell=True,
+)
 
 # Provision a storage bucket for the website.
-bucket = aws.s3.Bucket("bucket", website=aws.s3.BucketWebsiteArgs(
-    index_document="index.html"
-))
+bucket = aws.s3.Bucket(
+    "bucket", website=aws.s3.BucketWebsiteArgs(index_document="index.html")
+)
+
+# Copy the website home page into the bucket
+homepage = aws.s3.BucketObject(
+    "index.html",
+    bucket=bucket.id,
+    content=open("./www/public/index.html", "r").read(),
+    content_type="text/html",
+    acl="public-read",
+)
 ```
 
 {{% /choosable %}}
@@ -150,20 +165,24 @@ Again, a totally reasonable approach. But again, why bother, when you have the f
 ```typescript
 // ...
 
-// Fetch some redirects from a hypothetical CMS, pulling its URL from the environment.
+// Fetch some redirects from a hypothetical CMS.
 const redirects = fetch(`${process.env.CMS_ENDPOINT}/redirects.json`)
     .then(response => response.json())
-    .then(items => items.forEach((redirect: any, i: number) => {
-
-        // Create an S3 website redirect for each one.
-        new aws.s3.BucketObject(`redirect-${i}`, {
-            bucket: bucket.id,
-            key: redirect.from,
-            websiteRedirect: redirect.to,
-            acl: "public-read",
-        });
-    }),
-);
+    .then(items =>
+        items.forEach((redirect: any, i: number) => {
+            // Create an S3 website redirect for each one.
+            new aws.s3.BucketObject(
+                `redirect-${i}`,
+                {
+                    bucket: bucket.id,
+                    key: redirect.from,
+                    websiteRedirect: redirect.to,
+                    acl: "public-read",
+                },
+                { dependsOn: [ownershipControls, publicAccess] },
+            );
+        }),
+    );
 ```
 
 {{% /choosable %}}
@@ -184,7 +203,8 @@ redirects = json.loads(response.text)
 
 # Create an S3 website redirect for each one.
 for i, redirect in enumerate(redirects):
-    aws.s3.BucketObject(f"redirect-{i}",
+    aws.s3.BucketObject(
+        f"redirect-{i}",
         bucket=bucket.id,
         key=redirect["from"],
         website_redirect=redirect["to"],
@@ -233,16 +253,14 @@ const cdn = new aws.cloudfront.Distribution("cdn", {
     // ...
 });
 
-// Register a function to be invoked before the program exits.
-process.on("beforeExit", () => {
-
+function createInvalidation(id: string) {
     // Only invalidate after a deployment.
     if (pulumi.runtime.isDryRun()) {
         console.log("This is a Pulumi preview, so skipping cache invalidation.");
         return;
     }
 
-    cdn.id.apply(id => {
+    process.on("beforeExit", () => {
         const client = new cloudfront.CloudFrontClient({ region });
         const command = new cloudfront.CreateInvalidationCommand({
             DistributionId: id,
@@ -250,12 +268,13 @@ process.on("beforeExit", () => {
                 CallerReference: `invalidation-${Date.now()}`,
                 Paths: {
                     Quantity: 1,
-                    Items: [ "/*" ],
+                    Items: ["/*"],
                 },
             },
         });
 
-        client.send(command)
+        client
+            .send(command)
             .then(result => {
                 console.log(`Invalidation status for ${id}: ${result.Invalidation?.Status}.`);
                 process.exit(0);
@@ -265,7 +284,10 @@ process.on("beforeExit", () => {
                 process.exit(1);
             });
     });
-});
+}
+
+// Register a function to be invoked before the program exits.
+cdn.id.apply(id => createInvalidation(id));
 ```
 
 The relevant code is the call to [`process.on("beforeExit")`](https://nodejs.org/api/process.html#event-beforeexit), which registers a function to be invoked just before the program exits using the resolved ID of the distribution. (For more on how the `apply()` method works, see [Inputs and Outputs](https://www.pulumi.com/docs/concepts/inputs-outputs/).) The function returns early for Pulumi previews --- no sense clearing the cache if the site hasn't changed --- and uses the [AWS SDK for JavaScript](https://aws.amazon.com/sdk-for-javascript/) to submit the invalidation request to CloudFront, naming it uniquely with a timestamp and logging the result to the console:
@@ -279,22 +301,7 @@ The relevant code is the call to [`process.on("beforeExit")`](https://nodejs.org
 import boto3
 import asyncio
 
-# Create a CloudFront distribution for the website.
-cdn = aws.cloudfront.Distribution("cdn",
-    enabled=True,
-    default_root_object="index.html",
-    origins=[
-        aws.cloudfront.DistributionOriginArgs(
-            origin_id=bucket.arn,
-            domain_name=bucket.website_endpoint,
-            # ...
-        )
-    ],
-    #...
-)
-
 def create_invalidation(id):
-
     # Don't bother invalidating unless it's an actual deployment.
     if pulumi.runtime.is_dry_run():
         print("This is a Pulumi preview, so skipping cache invalidation.")
@@ -304,25 +311,24 @@ def create_invalidation(id):
     result = client.create_invalidation(
         DistributionId=id,
         InvalidationBatch={
-            "CallerReference": f"invalidation-{str(time.time)}",
+            "CallerReference": f"invalidation-{time.time()}",
             "Paths": {
                 "Quantity": 1,
-                "Items": [ "/*" ],
+                "Items": ["/*"],
             },
         },
     )
 
-    print(f"Cache invalidation of distribution {id}: {result['Invalidation']['Status']}.")
+    print(
+        f"Cache invalidation for distribution {id}: {result['Invalidation']['Status']}."
+    )
+
 
 # Register a function to be invoked before the program exits.
-async def invalidate(id):
-    await asyncio.to_thread(create_invalidation, id)
-
-# Wait for the distribution ID to become available.
-cdn.id.apply(lambda id: invalidate(id))
+cdn.id.apply(lambda id: atexit.register(lambda: create_invalidation(id)))
 ```
 
-The relevant code is the call to [`asyncio.to_thread()`](https://docs.python.org/3/library/asyncio-task.html#running-in-threads), which registers a function to be invoked just before the program exits using the resolved ID of the distribution. (For more on how the `apply()` method works, see [Inputs and Outputs](https://www.pulumi.com/docs/concepts/inputs-outputs/).) The function returns early for Pulumi previews --- no sense clearing the cache if the site hasn't changed --- and uses [Boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html) to submit the invalidation request to CloudFront, naming it uniquely with a timestamp and logging the result to the console:
+The relevant code is the call to [`atexit.register()`](https://docs.python.org/3/library/atexit.html), which registers a function to be invoked just before the program exits using the resolved ID of the distribution. (For more on how the `apply()` method works, see [Inputs and Outputs](https://www.pulumi.com/docs/concepts/inputs-outputs/).) The function returns early for Pulumi previews --- no sense clearing the cache if the site hasn't changed --- and uses [Boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html) to submit the invalidation request to CloudFront, naming it uniquely with a timestamp and logging the result to the console:
 
 {{% /choosable %}}
 
