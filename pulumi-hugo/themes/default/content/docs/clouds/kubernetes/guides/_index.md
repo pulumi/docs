@@ -54,26 +54,6 @@ easier to work with the API and deploy resources. Crosswalk revamps the Kubernet
 composition, but produces the exact semantic API output type. The ability to
 drop into and inject a given API type's raw spec is maintained through out.
 
-## Query for Kubernetes
-
-Maintaining and understanding Kubernetes clusters requires coordination
-and delivery of continuous changes. The API surface area is complex and highly
-disjointed when you want to make sense of what is taking place in the cluster, and why it is occuring.
-
-Common choices for these assessments include a mix of `kubectl`
-and [`client-go`][k8s-clientgo], and require the user to form manual joins
-across resources, and perform a reactive series of queries to understand what is taking place.
-
-To gain detailed insights, we've released a new tool called [Pulumi Query](#pulumi-query) that
-helps you understand your clusters passively or in real-time.
-By exposing Kubernetes through a library of streaming queries, it becomes easy
-to write apps that can tail API resources, discover distinct versions of a
-given Pod, or even inform you of which Services are publicly exposed to the
-Internet.
-
-[Get started][pulumi-kq] with `pulumi/query` to understand Kubernetes
-clusters and workloads through a new lens.
-
 ## Pulumi Kubernetes Operator
 
 <a href="./">
