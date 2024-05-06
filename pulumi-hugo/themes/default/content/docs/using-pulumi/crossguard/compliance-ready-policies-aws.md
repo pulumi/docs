@@ -8,7 +8,7 @@ menu:
   usingpulumi:
     parent: crossguard-compliance-ready-policies
 ---
-There's a total of 89 Compliance Ready Policies for the Aws provider.
+There's a total of 93 Compliance Ready Policies for the Aws provider.
 
 All those policies are available in the `@pulumi/aws-compliance-policies` package.
 
@@ -128,7 +128,7 @@ Associated metadata for this policy:
 
 Severity: <span style='background-color: #F4D8A5;'>high</span>
 
-Frameworks: iso27001, pcidss
+Frameworks: hitrust, iso27001, pcidss
 
 Topics: encryption, network
 
@@ -154,7 +154,7 @@ Associated metadata for this policy:
 
 Severity: <span style='background-color: #F4D8A5;'>high</span>
 
-Frameworks: iso27001, pcidss
+Frameworks: hitrust, iso27001, pcidss
 
 Topics: encryption, network
 
@@ -176,7 +176,7 @@ Associated metadata for this policy:
 
 Severity: <span style='background-color: #F4D8A5;'>high</span>
 
-Frameworks: none
+Frameworks: hitrust, iso27001, pcidss
 
 Topics: network
 
@@ -200,7 +200,7 @@ Associated metadata for this policy:
 
 Severity: <span style='background-color: #F9F88A;'>medium</span>
 
-Frameworks: iso27001, pcidss
+Frameworks: hitrust, iso27001, pcidss
 
 Topics: logging, network
 
@@ -222,7 +222,7 @@ Associated metadata for this policy:
 
 Severity: <span style='background-color: #F9F88A;'>medium</span>
 
-Frameworks: iso27001, pcidss
+Frameworks: hitrust, iso27001, pcidss
 
 Topics: logging, network
 
@@ -248,7 +248,7 @@ Associated metadata for this policy:
 
 Severity: <span style='background-color: #B7E4C7;'>low</span>
 
-Frameworks: iso27001, pcidss
+Frameworks: hitrust, iso27001, pcidss
 
 Topics: encryption, storage
 
@@ -272,7 +272,7 @@ Associated metadata for this policy:
 
 Severity: <span style='background-color: #B7E4C7;'>low</span>
 
-Frameworks: iso27001, pcidss
+Frameworks: hitrust, iso27001, pcidss
 
 Topics: encryption, storage
 
@@ -344,7 +344,7 @@ Associated metadata for this policy:
 
 Severity: <span style='background-color: #B7E4C7;'>low</span>
 
-Frameworks: iso27001, pcidss
+Frameworks: hitrust, iso27001, pcidss
 
 Topics: encryption, storage
 
@@ -366,7 +366,7 @@ Associated metadata for this policy:
 
 Severity: <span style='background-color: #F4D8A5;'>high</span>
 
-Frameworks: iso27001, pcidss
+Frameworks: hitrust, iso27001, pcidss
 
 Topics: encryption, storage
 
@@ -436,7 +436,7 @@ Associated metadata for this policy:
 
 Severity: <span style='background-color: #B7E4C7;'>low</span>
 
-Frameworks: iso27001, pcidss
+Frameworks: hitrust, iso27001, pcidss
 
 Topics: encryption, storage
 
@@ -458,7 +458,7 @@ Associated metadata for this policy:
 
 Severity: <span style='background-color: #F4D8A5;'>high</span>
 
-Frameworks: iso27001, pcidss
+Frameworks: hitrust, iso27001, pcidss
 
 Topics: encryption, storage
 
@@ -480,7 +480,7 @@ Associated metadata for this policy:
 
 Severity: <span style='background-color: #F4D8A5;'>high</span>
 
-Frameworks: iso27001, pcidss
+Frameworks: hitrust, iso27001, pcidss
 
 Topics: encryption, storage
 
@@ -528,7 +528,7 @@ Associated metadata for this policy:
 
 Severity: <span style='background-color: #F9F88A;'>medium</span>
 
-Frameworks: iso27001, pcidss
+Frameworks: hitrust, iso27001, pcidss
 
 Topics: logging, network
 
@@ -550,7 +550,7 @@ Associated metadata for this policy:
 
 Severity: <span style='background-color: #F4D8A5;'>high</span>
 
-Frameworks: iso27001, pcidss
+Frameworks: hitrust, iso27001, pcidss
 
 Topics: encryption, network
 
@@ -572,7 +572,7 @@ Associated metadata for this policy:
 
 Severity: <span style='background-color: #F4D8A5;'>high</span>
 
-Frameworks: iso27001, pcidss
+Frameworks: hitrust, iso27001, pcidss
 
 Topics: encryption, network
 
@@ -594,7 +594,7 @@ Associated metadata for this policy:
 
 Severity: <span style='background-color: #F4D8A5;'>high</span>
 
-Frameworks: iso27001, pcidss
+Frameworks: hitrust, iso27001, pcidss
 
 Topics: network
 
@@ -616,7 +616,7 @@ Associated metadata for this policy:
 
 Severity: <span style='background-color: #E4A5A5;'>critical</span>
 
-Frameworks: iso27001, pcidss
+Frameworks: hitrust, iso27001, pcidss
 
 Topics: network
 
@@ -638,7 +638,7 @@ Associated metadata for this policy:
 
 Severity: <span style='background-color: #F9F88A;'>medium</span>
 
-Frameworks: iso27001, pcidss
+Frameworks: hitrust, iso27001, pcidss
 
 Topics: logging, network
 
@@ -660,7 +660,7 @@ Associated metadata for this policy:
 
 Severity: <span style='background-color: #E4A5A5;'>critical</span>
 
-Frameworks: iso27001, pcidss
+Frameworks: hitrust, iso27001, pcidss
 
 Topics: encryption, network
 
@@ -686,7 +686,7 @@ Associated metadata for this policy:
 
 Severity: <span style='background-color: #B7E4C7;'>low</span>
 
-Frameworks: iso27001, pcidss
+Frameworks: hitrust, iso27001, pcidss
 
 Topics: encryption, storage
 
@@ -708,7 +708,7 @@ Associated metadata for this policy:
 
 Severity: <span style='background-color: #F4D8A5;'>high</span>
 
-Frameworks: iso27001, pcidss
+Frameworks: hitrust, iso27001, pcidss
 
 Topics: encryption, storage
 
@@ -734,7 +734,7 @@ Associated metadata for this policy:
 
 Severity: <span style='background-color: #F4D8A5;'>high</span>
 
-Frameworks: iso27001, pcidss
+Frameworks: hitrust, iso27001, pcidss
 
 Topics: network
 
@@ -754,7 +754,7 @@ Associated metadata for this policy:
 
 Severity: <span style='background-color: #F4D8A5;'>high</span>
 
-Frameworks: iso27001, pcidss
+Frameworks: hitrust, iso27001, pcidss
 
 Topics: encryption, storage
 
@@ -776,7 +776,7 @@ Associated metadata for this policy:
 
 Severity: <span style='background-color: #F4D8A5;'>high</span>
 
-Frameworks: iso27001, pcidss
+Frameworks: hitrust, iso27001, pcidss
 
 Topics: encryption, storage
 
@@ -800,7 +800,7 @@ Associated metadata for this policy:
 
 Severity: <span style='background-color: #F4D8A5;'>high</span>
 
-Frameworks: iso27001, pcidss
+Frameworks: hitrust, iso27001, pcidss
 
 Topics: network
 
@@ -822,7 +822,7 @@ Associated metadata for this policy:
 
 Severity: <span style='background-color: #F4D8A5;'>high</span>
 
-Frameworks: iso27001, pcidss
+Frameworks: hitrust, iso27001, pcidss
 
 Topics: encryption, storage
 
@@ -844,7 +844,7 @@ Associated metadata for this policy:
 
 Severity: <span style='background-color: #F4D8A5;'>high</span>
 
-Frameworks: iso27001, pcidss
+Frameworks: hitrust, iso27001, pcidss
 
 Topics: encryption, storage
 
@@ -868,7 +868,7 @@ Associated metadata for this policy:
 
 Severity: <span style='background-color: #B7E4C7;'>low</span>
 
-Frameworks: iso27001, pcidss
+Frameworks: hitrust, iso27001, pcidss
 
 Topics: encryption, storage
 
@@ -890,7 +890,7 @@ Associated metadata for this policy:
 
 Severity: <span style='background-color: #F4D8A5;'>high</span>
 
-Frameworks: iso27001, pcidss
+Frameworks: hitrust, iso27001, pcidss
 
 Topics: network
 
@@ -912,7 +912,7 @@ Associated metadata for this policy:
 
 Severity: <span style='background-color: #F4D8A5;'>high</span>
 
-Frameworks: iso27001, pcidss
+Frameworks: hitrust, iso27001, pcidss
 
 Topics: encryption, storage
 
@@ -936,7 +936,7 @@ Associated metadata for this policy:
 
 Severity: <span style='background-color: #E4A5A5;'>critical</span>
 
-Frameworks: iso27001, pcidss
+Frameworks: hitrust, iso27001, pcidss
 
 Topics: encryption, network
 
@@ -958,7 +958,7 @@ Associated metadata for this policy:
 
 Severity: <span style='background-color: #E4A5A5;'>critical</span>
 
-Frameworks: none
+Frameworks: hitrust, iso27001, pcidss
 
 Topics: network
 
@@ -1050,7 +1050,7 @@ Associated metadata for this policy:
 
 Severity: <span style='background-color: #B7E4C7;'>low</span>
 
-Frameworks: iso27001, pcidss
+Frameworks: hitrust, iso27001, pcidss
 
 Topics: container, encryption, storage
 
@@ -1072,7 +1072,7 @@ Associated metadata for this policy:
 
 Severity: <span style='background-color: #F4D8A5;'>high</span>
 
-Frameworks: iso27001, pcidss, soc2
+Frameworks: hitrust, iso27001, pcidss
 
 Topics: container, vulnerability
 
@@ -1094,7 +1094,7 @@ Associated metadata for this policy:
 
 Severity: <span style='background-color: #F4D8A5;'>high</span>
 
-Frameworks: iso27001, pcidss
+Frameworks: hitrust, iso27001, pcidss
 
 Topics: container
 
@@ -1116,7 +1116,7 @@ Associated metadata for this policy:
 
 Severity: <span style='background-color: #F4D8A5;'>high</span>
 
-Frameworks: iso27001, pcidss
+Frameworks: hitrust, iso27001, pcidss
 
 Topics: container, encryption, storage
 
@@ -1138,7 +1138,7 @@ Associated metadata for this policy:
 
 Severity: <span style='background-color: #F4D8A5;'>high</span>
 
-Frameworks: iso27001, pcidss, soc2
+Frameworks: hitrust, iso27001, pcidss
 
 Topics: container, vulnerability
 
@@ -1164,7 +1164,7 @@ Associated metadata for this policy:
 
 Severity: <span style='background-color: #B7E4C7;'>low</span>
 
-Frameworks: iso27001, pcidss
+Frameworks: hitrust, iso27001, pcidss
 
 Topics: encryption, storage
 
@@ -1208,7 +1208,7 @@ Associated metadata for this policy:
 
 Severity: <span style='background-color: #F4D8A5;'>high</span>
 
-Frameworks: iso27001, pcidss
+Frameworks: hitrust, iso27001, pcidss
 
 Topics: encryption, storage
 
@@ -1234,7 +1234,7 @@ Associated metadata for this policy:
 
 Severity: <span style='background-color: #E4A5A5;'>critical</span>
 
-Frameworks: iso27001, pcidss
+Frameworks: hitrust, iso27001, pcidss
 
 Topics: network
 
@@ -1256,7 +1256,7 @@ Associated metadata for this policy:
 
 Severity: <span style='background-color: #F4D8A5;'>high</span>
 
-Frameworks: iso27001, pcidss
+Frameworks: hitrust, iso27001, pcidss
 
 Topics: encryption, kubernetes
 
@@ -1282,7 +1282,7 @@ Associated metadata for this policy:
 
 Severity: <span style='background-color: #F9F88A;'>medium</span>
 
-Frameworks: iso27001, pcidss
+Frameworks: hitrust, iso27001, pcidss
 
 Topics: logging, network
 
@@ -1302,7 +1302,7 @@ Associated metadata for this policy:
 
 Severity: <span style='background-color: #F4D8A5;'>high</span>
 
-Frameworks: none
+Frameworks: hitrust
 
 Topics: availability, network
 
@@ -1324,7 +1324,7 @@ Associated metadata for this policy:
 
 Severity: <span style='background-color: #E4A5A5;'>critical</span>
 
-Frameworks: iso27001, pcidss
+Frameworks: hitrust, iso27001, pcidss
 
 Topics: network
 
@@ -1346,11 +1346,107 @@ Associated metadata for this policy:
 
 Severity: <span style='background-color: #F4D8A5;'>high</span>
 
-Frameworks: none
+Frameworks: hitrust
 
 Topics: availability, network
 
 Link: <https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-healthchecks.html>
+
+## iam
+
+### AccountPasswordPolicy
+
+#### aws-iam-password-policy-minimum-password-length
+
+Policy name: `aws-iam-password-policy-minimum-password-length`
+
+Code path: `aws.iam.AccountPasswordPolicy.minimumPasswordLength`
+
+Ensure IAM password policy requires minimum length of 14 or greater.
+
+Service: Iam
+
+Resource: AccountPasswordPolicy
+
+Associated metadata for this policy:
+
+Severity: <span style='background-color: #F4D8A5;'>high</span>
+
+Frameworks: cis
+
+Topics: vulnerability
+
+Link: <https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_passwords_account-policy.html>
+
+#### aws-iam-password-policy-prevent-reuse
+
+Policy name: `aws-iam-password-policy-prevent-reuse`
+
+Code path: `aws.iam.AccountPasswordPolicy.passwordReusePrevention`
+
+Ensure IAM password policy prevents password reuse.
+
+Service: Iam
+
+Resource: AccountPasswordPolicy
+
+Associated metadata for this policy:
+
+Severity: <span style='background-color: #F4D8A5;'>high</span>
+
+Frameworks: cis, hitrust
+
+Topics: vulnerability
+
+Link: <https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_passwords_account-policy.html>
+
+### PolicyAttachment
+
+#### aws-iam-policy-attachment-only-attachment-through-groups
+
+Policy name: `aws-iam-policy-attachment-only-attachment-through-groups`
+
+Code path: `aws.iam.PolicyAttachment.onlyPermissionsViaGroups`
+
+Ensure IAM Users Receive Permissions Only Through Groups.
+
+Service: Iam
+
+Resource: PolicyAttachment
+
+Associated metadata for this policy:
+
+Severity: <span style='background-color: #F4D8A5;'>high</span>
+
+Frameworks: cis
+
+Topics: vulnerability
+
+Link: <https://docs.aws.amazon.com/IAM/latest/UserGuide/id_groups_manage_attach-policy.html>
+
+### UserPolicyAttachment
+
+#### aws-iam-user-policy-attachment-only-attachment-through-groups
+
+Policy name: `aws-iam-user-policy-attachment-only-attachment-through-groups`
+
+Code path: `aws.iam.UserPolicyAttachment.onlyPermissionsViaGroups`
+
+Ensure IAM Users Receive Permissions Only Through Groups.
+
+Service: Iam
+
+Resource: UserPolicyAttachment
+
+Associated metadata for this policy:
+
+Severity: <span style='background-color: #F4D8A5;'>high</span>
+
+Frameworks: cis
+
+Topics: vulnerability
+
+Link: <https://docs.aws.amazon.com/IAM/latest/UserGuide/id_groups_manage_attach-policy.html>
 
 ## kms
 
@@ -1394,7 +1490,7 @@ Associated metadata for this policy:
 
 Severity: <span style='background-color: #F9F88A;'>medium</span>
 
-Frameworks: iso27001, pcidss
+Frameworks: hitrust, iso27001, pcidss
 
 Topics: encryption
 
@@ -1510,7 +1606,7 @@ Associated metadata for this policy:
 
 Severity: <span style='background-color: #E4A5A5;'>critical</span>
 
-Frameworks: iso27001, pcidss
+Frameworks: hitrust, iso27001, pcidss
 
 Topics: permissions, security
 
@@ -1558,7 +1654,7 @@ Associated metadata for this policy:
 
 Severity: <span style='background-color: #B7E4C7;'>low</span>
 
-Frameworks: iso27001, pcidss
+Frameworks: hitrust, iso27001, pcidss
 
 Topics: encryption, storage
 
@@ -1580,7 +1676,7 @@ Associated metadata for this policy:
 
 Severity: <span style='background-color: #F4D8A5;'>high</span>
 
-Frameworks: none
+Frameworks: hitrust
 
 Topics: availability
 
@@ -1602,7 +1698,7 @@ Associated metadata for this policy:
 
 Severity: <span style='background-color: #F4D8A5;'>high</span>
 
-Frameworks: iso27001, pcidss
+Frameworks: hitrust, iso27001, pcidss
 
 Topics: encryption, storage
 
@@ -1624,7 +1720,7 @@ Associated metadata for this policy:
 
 Severity: <span style='background-color: #F9F88A;'>medium</span>
 
-Frameworks: iso27001, pcidss
+Frameworks: hitrust, iso27001, pcidss
 
 Topics: backup, resilience
 
@@ -1648,7 +1744,7 @@ Associated metadata for this policy:
 
 Severity: <span style='background-color: #E4A5A5;'>critical</span>
 
-Frameworks: iso27001, pcidss
+Frameworks: hitrust, iso27001, pcidss
 
 Topics: network
 
@@ -1738,7 +1834,7 @@ Associated metadata for this policy:
 
 Severity: <span style='background-color: #B7E4C7;'>low</span>
 
-Frameworks: iso27001, pcidss
+Frameworks: hitrust, iso27001, pcidss
 
 Topics: encryption, storage
 
@@ -1760,7 +1856,7 @@ Associated metadata for this policy:
 
 Severity: <span style='background-color: #E4A5A5;'>critical</span>
 
-Frameworks: iso27001, pcidss
+Frameworks: hitrust, iso27001, pcidss
 
 Topics: network
 
@@ -1804,7 +1900,7 @@ Associated metadata for this policy:
 
 Severity: <span style='background-color: #F4D8A5;'>high</span>
 
-Frameworks: iso27001, pcidss
+Frameworks: hitrust, iso27001, pcidss
 
 Topics: encryption, storage
 
@@ -1826,7 +1922,7 @@ Associated metadata for this policy:
 
 Severity: <span style='background-color: #F9F88A;'>medium</span>
 
-Frameworks: iso27001, pcidss
+Frameworks: hitrust, iso27001, pcidss
 
 Topics: backup, resilience
 
@@ -1896,7 +1992,7 @@ Associated metadata for this policy:
 
 Severity: <span style='background-color: #B7E4C7;'>low</span>
 
-Frameworks: iso27001, pcidss
+Frameworks: hitrust, iso27001, pcidss
 
 Topics: encryption, storage
 
@@ -1918,7 +2014,7 @@ Associated metadata for this policy:
 
 Severity: <span style='background-color: #F4D8A5;'>high</span>
 
-Frameworks: iso27001, pcidss
+Frameworks: hitrust, iso27001, pcidss
 
 Topics: encryption, storage
 
@@ -1940,7 +2036,7 @@ Associated metadata for this policy:
 
 Severity: <span style='background-color: #E4A5A5;'>critical</span>
 
-Frameworks: cis, iso27001, pcidss
+Frameworks: cis, hitrust, iso27001, pcidss
 
 Topics: security, storage
 
@@ -1984,7 +2080,7 @@ Associated metadata for this policy:
 
 Severity: <span style='background-color: #F4D8A5;'>high</span>
 
-Frameworks: iso27001, pcidss
+Frameworks: hitrust, iso27001, pcidss
 
 Topics: encryption, storage
 
@@ -2032,7 +2128,7 @@ Associated metadata for this policy:
 
 Severity: <span style='background-color: #B7E4C7;'>low</span>
 
-Frameworks: iso27001, pcidss
+Frameworks: hitrust, iso27001, pcidss
 
 Topics: encryption
 
