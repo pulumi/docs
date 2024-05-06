@@ -2,4 +2,4 @@ module github.com/pulumi/pulumi-docs
 
 go 1.16
 
-require github.com/pulumi/pulumi-hugo/themes/default v0.0.0-20240506132104-faa48fb52cd4 // indirect
+require github.com/pulumi/pulumi-hugo/themes/default v0.0.0-20240506214023-ca737c21ed9f // indirect
