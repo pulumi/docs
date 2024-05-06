@@ -54,9 +54,6 @@ easier to work with the API and deploy resources. Crosswalk revamps the Kubernet
 composition, but produces the exact semantic API output type. The ability to
 drop into and inject a given API type's raw spec is maintained through out.
 
-[Get started][pulumi-kx] with `pulumi/kubernetesx` to manage Kubernetes
-workloads using constructs built for everyone.
-
 ## Query for Kubernetes
 
 Maintaining and understanding Kubernetes clusters requires coordination
