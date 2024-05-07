@@ -89,6 +89,7 @@ customer_logos:
     - name: cto-ai
     - name: fennel-ai
     - name: ai-io
+    - name: nvidia
     - name: levitate-ai
     - name: modal
     - name: pinecone

@@ -54,6 +54,7 @@ customer_logos:
     - name: cockroach-labs
     - name: meta
     - name: webflow
+    - name: nvidia
     - name: bluenile
     - name: dutchie
       link: https://youtu.be/X1qetq7PjjY
