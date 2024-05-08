@@ -1550,12 +1550,12 @@ PATCH /api/orgs/{organization}/teams/{team}
 
 #### Parameters
 
-| Parameter      | Type   | In   | Description                                                              |
-|----------------|--------|------|--------------------------------------------------------------------------|
-| `organization` | string | path | organization name                                                        |
-| `team`         | string | path | team name                                                                |
-| `memberAction` | string | body | The action for the user and team - possible values are `add` or `remove` |
-| `member`       | string | body | user name                                                                |
+| Parameter      | Type   | In   | Description                                                                                    |
+|----------------|--------|------|------------------------------------------------------------------------------------------------|
+| `organization` | string | path | organization name                                                                              |
+| `team`         | string | path | team name                                                                                      |
+| `memberAction` | string | body | The action for the user and team - possible values are `add`, `remove`, `promote`, or `demote` |
+| `member`       | string | body | user name                                                                                      |
 
 #### Example
 
