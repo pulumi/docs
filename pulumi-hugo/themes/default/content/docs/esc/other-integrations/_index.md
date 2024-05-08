@@ -15,7 +15,8 @@ Pulumi ESC's rich metadata and support for popular configuration formats enables
 
 To learn how to configure common integrations, follow the links below.
 
-| Tool                                                                     | Description                                                                                                                   |
-|--------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|
-| [Pulumi IaC](/docs/esc/get-started/integrate-with-pulumi-iac)            | Pulumi IaC has builtin support for sourcing stack configuration from ESC environments.                                        |
-| [Direnv](/docs/esc/other-integrations/direnv)                            | Pulumi ESC can be integrated with Direnv to source environment variables, secrets, and configuration from ESC environments.   |
+| Tool                                                          | Description                                                                                                                 |
+|---------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|
+| [Pulumi IaC](/docs/esc/get-started/integrate-with-pulumi-iac) | Pulumi IaC has builtin support for sourcing stack configuration from ESC environments.                                      |
+| [Direnv](/docs/esc/other-integrations/direnv)                 | Pulumi ESC can be integrated with Direnv to source environment variables, secrets, and configuration from ESC environments. |
+| [Docker](/docs/esc/other-integrations/docker)                 | Pulumi ESC can be used to configure environment variables, secrets, and configuration for Docker operations.                |
