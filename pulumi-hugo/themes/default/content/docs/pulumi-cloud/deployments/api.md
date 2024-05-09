@@ -753,7 +753,8 @@ curl -XGET -H "Content-Type: application/json" \
         "repoDir": "aws-ts-s3-folder"
       }
     }
-  }
+  },
+  "pulumiOperation": "update"
 }
 ```
 
