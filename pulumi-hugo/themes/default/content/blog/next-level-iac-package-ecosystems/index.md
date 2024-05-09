@@ -16,19 +16,19 @@ tags:
     - python
 ---
 
-Every experienced tech professional I know has a programming language they love. But is it the syntax and symbols that make it so loveable? Not really. It's the community and package ecosystem surrounding the language that makes a real impact on your heart... and on your productivity!<!--more--> If we look at some of the biggest success stories in tech; Python, Node.js, Ruby, Perl, and Go, the common thread between all of them is an extensive ecosystem of packages, libraries, modules (or whatever you decide to call them…  ahem, Gems?!). A great language will allow you to build anything with ease, but a great ecosystem will have already written it for you, and made it available in an easy to install-and-use package.
+Every experienced tech professional I know has a programming language they love. But is it the syntax and symbols that make it so loveable? Not really. It's the community and package ecosystem surrounding the language that makes a real impact on your heart... and on your productivity!<!--more--> If we look at some of the biggest success stories in tech; Python, Node.js, Ruby, Perl, and Go, the common thread between all of them is an extensive ecosystem of packages, libraries, modules (or whatever you decide to call them…  ahem, Gems?!). A great language will allow you to build anything you can imagine, but a great ecosystem will have already written it for you, and made it available in an convenient to install-and-use package.
 
 ![Pulumi Language Ecosystem](pulumi-language-ecosystem.png)
 
-One of the amazing things about Pulumi is that it is built around general-purpose programming languages, and that means your Pulumi programs have access to the entire ecosystem of packages that come with that language. This is a stark difference between Pulumi and other infrastructure automation tools that use proprietary domain-specific languages with not much in the way of community around them. Some tools might allow you to write custom code, but they certainly don’t make it easy, and still… you have to write it yourself, which just adds so much overhead to a project where your core concern isn’t writing that custom function, but rather shipping your own product on the infrastructure you are trying to automate.
+One of the amazing things about Pulumi is that it is built around general-purpose programming languages, and that means your Pulumi programs have access to the entire ecosystem of packages that come with that language. This is a stark difference between Pulumi and other infrastructure automation tools that use proprietary domain-specific languages with not much in the way of community around them. Some tools might allow you to write custom code, but they certainly don’t make it convenient, and still… you have to write it yourself, which just adds so much overhead to a project where your core concern isn’t writing that custom function, but rather shipping your own product on the infrastructure you are trying to automate.
 
 The flexibility that Pulumi gives you, and the access to these powerful libraries of code, means your productivity can skyrocket when you get to write in your favorite language, using your preferred tools and the package ecosystem you already know, love, and rely on every day.
 
-Let’s have a look at a concrete example where this package ecosystem can get you out of a tough spot with ease.
+Let’s have a look at a concrete example where this package ecosystem can get you out of a tough spot.
 
 ## Use Case: Determining S3 MIME types on-the-fly
 
-A popular example of cloud infrastructure automation is creating a S3 bucket and pushing some files to it. This is a common task that many of us have had to do, and most infrastructure-automation tools have an easy way to accomplish this. 
+A popular example of cloud infrastructure automation is creating a S3 bucket and pushing some files to it. This is a common task that many of us have had to do, and most infrastructure-automation tools have a way to accomplish this. 
 
 Here’s our public answer for [how to do that in Pulumi using TypeScript][s3-bucket-example]: 
 
@@ -70,7 +70,7 @@ contentType: "text/plain", // MIME-type of the file. Adjust if you upload a diff
 
 Yeah, hard-coding the MIME type for every file I need to upload is a not going to scale. In fact, I’m probably going to get a random directory full of files I need to iterate over, each with different file types, and it will change every time it runs, and we won’t know what type of file it is ahead of time.
 
-Packages to the rescue!! Turns out that determining the MIME type of a file in TypeScript is as easy as importing the [community-created `mime-types` library][npm-mimetypes] and a single function call to `mime.lookup(...)`:
+Packages to the rescue!! Turns out that determining the MIME type of a file in TypeScript only involves importing the community-created [`mime-types`][npm-mimetypes] library and a single function call to `mime.lookup(...)`:
 
 ```typescript
 import * as mime from 'mime-types'
@@ -79,7 +79,7 @@ const mimeType = mime.lookup(‘path/to/your/local/file.ext’);
 
 ```
 
-So, to work that into our Pulumi program from above, it’s as simple as:
+So, to work that into our Pulumi program from above, we only need to make two small edits:
 
 ```typescript {hl_lines=[4,20]}
 import * as pulumi from '@pulumi/pulumi';
