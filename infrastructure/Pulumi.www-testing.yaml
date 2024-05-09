@@ -6,7 +6,6 @@ config:
   www.pulumi.com:doEdgeRedirects: "true"
   www.pulumi.com:hostedZone: www.pulumi-test.io
   www.pulumi.com:makeFallbackBucket: "false"
-  www.pulumi.com:marketingPortalStack: pulumi/marketing-db/staging
   www.pulumi.com:pathToOriginBucketMetadata: ../origin-bucket-metadata.json
   www.pulumi.com:registryStack: "pulumi/registry/testing"
   www.pulumi.com:setRootRecord: "true"
