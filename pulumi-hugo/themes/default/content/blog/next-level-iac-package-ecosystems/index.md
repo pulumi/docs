@@ -16,7 +16,7 @@ tags:
     - python
 ---
 
-Every experienced tech professional I know has a programming language they love. But is it the syntax and symbols that make it so loveable? Not really. It's the community and package ecosystem surrounding the language that makes a real impact on your heart... and on your productivity!<!--more--> If we look at some of the biggest success stories in tech; Python, Node.js, Ruby, Perl, and Go, the common thread between all of them is an extensive ecosystem of packages, libraries, modules (or whatever you decide to call them…  ahem, Gems?!). A great language will allow you to build anything you can imagine, but a great ecosystem will have already written it for you, and made it available in an convenient to install-and-use package.
+Every experienced tech professional I know has a programming language they love. But is it the syntax and symbols that make it so loveable? Not really. It's the community and package ecosystem surrounding the language that makes a real impact on your heart... and on your productivity!<!--more--> If we look at some of the biggest success stories in tech; Python, Node.js, Ruby, Perl, and Go, the common thread between all of them is an extensive ecosystem of packages, libraries, modules (or whatever you decide to call them…  ahem, Gems?!). A great language will allow you to build anything you can imagine, but a great ecosystem will have already written it for you, and made it available in a convenient to install-and-use package.
 
 ![Pulumi Language Ecosystem](pulumi-language-ecosystem.png)
 
@@ -81,7 +81,7 @@ const mimeType = mime.lookup(‘path/to/your/local/file.ext’);
 
 So, to work that into our Pulumi program from above, we only need to make two small edits:
 
-```typescript {hl_lines=[4,20]}
+```typescript {hl_lines=[4,21]}
 import * as pulumi from '@pulumi/pulumi';
 import * as aws from '@pulumi/aws';
 import * as fs from 'fs';
@@ -114,7 +114,7 @@ export const objectUrl = pulumi.interpolate`s3://${bucket.id}/${bucketObject.key
 ```
 
 
-Well that was pretty straightforward, wasn't it? Trying to do this in other tools might take all day to figure out the right way to implement it, but in Pulumi it worked exactly like you would expect it to, in no time at all.
+Well that was pretty straightforward, wasn't it? Trying to do this in anther tool might take all day to figure out the right way to implement it, but in Pulumi it worked exactly like you would expect it to, in no time at all.
 
 
 ## The possibilities are endless
