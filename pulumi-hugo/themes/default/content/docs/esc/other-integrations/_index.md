@@ -20,3 +20,4 @@ To learn how to configure common integrations, follow the links below.
 | [Pulumi IaC](/docs/esc/get-started/integrate-with-pulumi-iac) | Pulumi IaC has builtin support for sourcing stack configuration from ESC environments.                                      |
 | [Direnv](/docs/esc/other-integrations/direnv)                 | Pulumi ESC can be integrated with Direnv to source environment variables, secrets, and configuration from ESC environments. |
 | [Docker](/docs/esc/other-integrations/docker)                 | Pulumi ESC can be used to configure environment variables, secrets, and configuration for Docker operations.                |
+| [Kubernetes](/docs/esc/other-integrations/kubernetes)                 | Pulumi ESC can be used to connect to a Kubernetes cluster.                |
