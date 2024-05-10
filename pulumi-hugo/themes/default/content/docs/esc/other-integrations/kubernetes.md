@@ -171,5 +171,3 @@ values:
 
 When this environment is opened, expect to see a combination
 of environment variables and files.
-
-{{< get-started-stepper >}}

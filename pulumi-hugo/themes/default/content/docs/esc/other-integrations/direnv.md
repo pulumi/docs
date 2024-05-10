@@ -83,5 +83,3 @@ You can then retrieve the value of the environment variable:
 $ echo $ESC_HELLO
 Hello, <your-pulumi-login>!
 ```
-
-{{< get-started-stepper >}}

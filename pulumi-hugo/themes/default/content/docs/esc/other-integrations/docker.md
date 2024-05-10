@@ -133,5 +133,3 @@ $ esc run <your-environment-name> -- sh -c 'echo ${docker.password} | docker log
 
 Login Succeeded
 ```
-
-{{< get-started-stepper >}}
