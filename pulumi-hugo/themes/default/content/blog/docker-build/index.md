@@ -98,6 +98,7 @@ Suppose your Pulumi program has a subfolder called `./app` that contains a file 
 {{% choosable language typescript %}}
 
 ```typescript
+import * as pulumi from "@pulumi/pulumi"
 import * as aws from "@pulumi/aws";
 import * as docker_build from "@pulumi/docker-build";
 
