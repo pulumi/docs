@@ -116,7 +116,9 @@ aws s3api put-bucket-cors --bucket "$destination_bucket" --cors-configuration "f
 
 # Finally, if it's a preview, post a comment to the PR that directs the user to the resulting bucket URL.
 if [[ "$1" == "preview" ]]; then
+    echo "Posting PR preview link..."
     pr_comment_api_url="$(cat "$GITHUB_EVENT_PATH" | jq -r ".pull_request._links.comments.href")"
+    echo "${pr_comment_api_url}"
     post_github_pr_comment \
         "Your site preview for commit $(git_sha_short) is ready! :tada:\n\n${s3_website_url}." \
         $pr_comment_api_url
