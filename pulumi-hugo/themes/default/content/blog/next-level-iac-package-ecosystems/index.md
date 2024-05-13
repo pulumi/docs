@@ -113,8 +113,6 @@ export const objectUrl = pulumi.interpolate`s3://${bucket.id}/${bucketObject.key
 
 ```
 Well that was pretty straightforward, wasn't it? Trying to do this in anther tool might take all day to figure out the right way to implement it, but in Pulumi it worked exactly like you would expect it to, in no time at all.
-
-
 ## The possibilities are endless
 
 What other packages can you imagine using in your infrastructure solutions? Maybe you could use the [`text-to-image`][npm-text-to-image] library to [generate an image badge for your website][cnunciato-image-badge-example]? Maybe use the [`crypto`][nodejs-crypto-module] module to encrypt a file before uploading it to S3? Or possibly using [`octokit`][npm-octokit] to check on the state of something in git before taking the next step in your automation?
