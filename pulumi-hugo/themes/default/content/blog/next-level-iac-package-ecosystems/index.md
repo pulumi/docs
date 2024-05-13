@@ -1,7 +1,7 @@
 ---
 title: "Next-level IaC: Powering Up Pulumi with Package Ecosystems"
 allow_long_title: true
-date: 2024-05-08
+date: 2024-05-13
 draft: false
 meta_desc: Pulumi unlocks access to powerful package ecosystems which provide a lot of value and flexibility to your IaC workflows.
 meta_image: meta.png
