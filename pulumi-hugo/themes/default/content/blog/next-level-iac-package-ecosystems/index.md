@@ -119,9 +119,6 @@ What other packages can you imagine using in your infrastructure solutions? Mayb
 
 Whatever you can do with code in your favorite language, you can do in Pulumi as part of your infrastructure automation. I’m not saying you should use [`cowsay`][npm-cowsay] to generate custom [MOTD][wiki-motd] banners for your ssh logins, I’m just saying you _could_.
 
-
-
-
 [s3-bucket-example]: https://www.pulumi.com/ai/answers/fZ6JumwyAXHcXys5tFFkqq/uploading-files-to-amazon-s3-using-typescript
 [npm-mimetypes]: https://www.npmjs.com/package/mime-types
 [npm-text-to-image]: https://www.npmjs.com/package/text-to-image
