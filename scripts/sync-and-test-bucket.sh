@@ -119,6 +119,7 @@ if [[ "$1" == "preview" ]]; then
     echo "Posting PR preview link..."
     pr_comment_api_url="$(cat "$GITHUB_EVENT_PATH" | jq -r ".pull_request._links.comments.href")"
     echo "${pr_comment_api_url}"
+    echo "$(cat $GITHUB_EVENT_PATH | jq)"
     post_github_pr_comment \
         "Your site preview for commit $(git_sha_short) is ready! :tada:\n\n${s3_website_url}." \
         $pr_comment_api_url
