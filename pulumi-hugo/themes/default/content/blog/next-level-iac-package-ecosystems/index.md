@@ -110,7 +110,6 @@ export const bucketName = bucket.id;
 
 // Export the URL of the file in the S3 bucket
 export const objectUrl = pulumi.interpolate`s3://${bucket.id}/${bucketObject.key}`;
-
 ```
 Well that was pretty straightforward, wasn't it? Trying to do this in [another tool][terraform-mime-example] might take all day to figure out the right way to implement it, but in Pulumi it worked exactly like you would expect it to, in no time at all.
 
