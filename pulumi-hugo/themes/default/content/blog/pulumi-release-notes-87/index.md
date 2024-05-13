@@ -125,7 +125,7 @@ Every week we keep shipping provider updates. A few highlights on our native pro
 
 - Kubernetes shipped support for v1.27.0 and all its resources ([changelog](https://github.com/pulumi/pulumi-kubernetes/blob/master/CHANGELOG.md))
 - Azure Native shipped six new resources for `containerstorage`, `guestconfiguration`, and `hybridcloud` ([releases](https://github.com/pulumi/pulumi-azure-native/releases))
-- AWS Native shipped 33 new resources in `apigatewayv2`, `appconfig`, `chatbot`, `comprehend`, `connect`, `datasync`, `devopsguru`, `ec2`, `frauddetector`, `lambda`, `msk`, `neptune`, `quicksight`, `ram`, `sagemaker`, `ssmcontacts`, and `vpclattice` modules ([changelog](https://github.com/pulumi/pulumi-aws-native/blob/master/CHANGELOG.md))
+- AWS Native shipped 33 new resources in `apigatewayv2`, `appconfig`, `chatbot`, `comprehend`, `connect`, `datasync`, `devopsguru`, `ec2`, `frauddetector`, `lambda`, `msk`, `neptune`, `quicksight`, `ram`, `sagemaker`, `ssmcontacts`, and `vpclattice` modules ([changelog](https://github.com/pulumi/pulumi-aws-native/releases))
 
 Two new community packages were added to the Registry: 
 
