@@ -67,7 +67,7 @@ const webhook = new pulumiservice.Webhook("example-webhook", {
 
 ```python
 import pulumi
-import pulumi_service
+import pulumi_pulumiservice
 webhook = pulumi_service.Webhook("example-webhook",
     active: True,
     display_name: "webhook example",
