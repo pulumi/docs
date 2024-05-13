@@ -28,11 +28,11 @@ post_github_pr_comment() {
     local pr_comment_api_url=$2
     local pr_comment_body=$(printf '{ "body": "%s" }' "$pr_comment")
 
-    curl -v \
+    curl -s \
          -X POST \
          -H "Authorization: token ${GITHUB_TOKEN}" \
          -d "$pr_comment_body" \
-         $pr_comment_api_url
+         $pr_comment_api_url > /dev/null
 }
 
 # Returns the Git SHA of the HEAD commit. For pull requests, we take this from GitHub event metadata, since in that case, the HEAD commit will contain the SHA of the merge commit with the base branch.
