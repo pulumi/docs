@@ -112,7 +112,10 @@ export const bucketName = bucket.id;
 export const objectUrl = pulumi.interpolate`s3://${bucket.id}/${bucketObject.key}`;
 
 ```
-Well that was pretty straightforward, wasn't it? Trying to do this in anther tool might take all day to figure out the right way to implement it, but in Pulumi it worked exactly like you would expect it to, in no time at all.
+Well that was pretty straightforward, wasn't it? Trying to do this in [another tool][terraform-mime-example] might take all day to figure out the right way to implement it, but in Pulumi it worked exactly like you would expect it to, in no time at all.
+
+It's a real game-changer when you can just quickly grab something complicated like MIME typing from a package. But when you can't, you're going to be stuck figuring out how to write that functionality yourself, from scratch, using things like Bash and primitive data types, and then find yourself copy-pasting that stuff all over the place. All the while fully aware of how much time you're wasting by having to do so. That's a real pain! It's the kind of pain most people managing infrastructure have been through before.
+
 ## The possibilities are endless
 
 What other packages can you imagine using in your infrastructure solutions? Maybe you could use the [`text-to-image`][npm-text-to-image] library to [generate an image badge for your website][cnunciato-image-badge-example]? Maybe use the [`crypto`][nodejs-crypto-module] module to encrypt a file before uploading it to S3? Or possibly using [`octokit`][npm-octokit] to check on the state of something in git before taking the next step in your automation?
@@ -127,4 +130,4 @@ Whatever you can do with code in your favorite language, you can do in Pulumi as
 [wiki-motd]: https://en.wikipedia.org/wiki/Message_of_the_day
 [npm-octokit]: https://www.npmjs.com/package/octokit
 [nodejs-crypto-module]: https://nodejs.org/api/crypto.html#crypto
-
+[terraform-mime-example]: https://engineering.statefarm.com/blog/terraform-s3-upload-with-mime/
