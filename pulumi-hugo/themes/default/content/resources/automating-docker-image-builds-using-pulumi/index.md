@@ -1,7 +1,7 @@
 ---
 # Name of the event, <= 60 characters
-title: Building AI-powered Applications at Pulumi
-meta_desc: Learn how the Pulumi engineering team builds AI-powered capabilities and the lessons learned bringing these features into production.
+title: Automating Docker Image Builds using Pulumi and Docker
+meta_desc: Join our workshop to master automating your Docker build process using Pulumi Docker Build provider and Docker Build Cloud with TypeScript.
 meta_image:
 
 # A featured webinar will display first in the list.
@@ -26,12 +26,12 @@ block_external_search_index: false
 
 # The url slug for the webinar landing page. If this is an external
 # webinar, use the external URL as the value here.
-url_slug: building-ai-powered-applications-at-pulumi
+url_slug: automating-docker-image-builds-using-pulumi
 
 # Content for the left hand side section of the page.
 main:
     # Webinar title.
-    title: Building AI-powered Applications at Pulumi
+    title: Automating Docker Image Builds using Pulumi and Docker
 
     event_type: workshop # workshop | event
 
@@ -39,7 +39,7 @@ main:
     youtube_url:
 
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2024-07-10T09:00:00.000-07:00
+    sortable_date: 2024-06-25T09:00:00.000-07:00
 
     # Duration of the webinar.
     duration: 90 minutes
@@ -49,29 +49,31 @@ main:
 
     # Description of the webinar.
     description: |
-        Developers, DevOps, and Platform Engineering teams are increasingly charged with helping their organizations to deliver product innovation using AI capabilities. For the past 18 months, Pulumi has built and shipped a variety a AI-powered capabilities for customers using Pulumi Cloud to manage underlying AI infrastructure.
-
-        In this session, you'll hear from Pulumi Engineering Manager, Aaron Friel about the lessons learned building applications with Large Language Models at Pulumi.
+        In this workshop, you will learn how to automate your Docker build process by leveraging the Pulumi Docker Build provider and Docker Build Cloud. You will use TypeScript to define your infrastructure as code (IaC), including the configuration of Docker builds. Additionally, you will set up a Docker Build Cloud to use external caching to reduce the time required for builds significantly.
 
     learn:
-        - Best practices for experimenting with AI in product development
-        - Architecture and cost considerations when managing AI infrastructure at scale
+        - How to create and configure a Docker Build Cloud (DBC) builder
+        - How to create a Pulumi program in Typescript to define IaC
+        - How to build NGINX Dockerfile in Pulumi and DBC
 
     # The webinar presenters
     presenters:
-        - name: Aaron Friel
-          role: Engineering Manager, Pulumi
-          photo: /images/team/aaron-friel.jpg
+        - name: Diana Esteves
+          role: Solutions Architect, Pulumi
+          photo: /images/team/diana-esteves.jpg
+        - name: Michael Irwin
+          role: Senior Manager, Developer Relations, Docker
+          photo: /images/people/michael-irwin.jpg
 
     # case-sensitive
     tags:
         level: Intermediate # Beginner, Intermediate, Advanced
-        topics: ["AI"]
-        languages: []
+        topics: ["Docker"]
+        languages: ["TypeScript"]
 
 # The right hand side form section.
 form:
     # HubSpot form id.
-    hubspot_form_id: ce41b4a0-18fa-4b5f-a988-ea89178dabae
-    salesforce_campaign_id: 701PQ000008jy1sYAA
+    hubspot_form_id: 64754c08-8bf2-427d-8ded-eac9214c64af
+    salesforce_campaign_id: 701PQ00000CsD30YAF
 ---
