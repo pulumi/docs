@@ -105,7 +105,7 @@ markup:
 
 params:
   canonicalURL: https://www.pulumi.com
-  contentRepositoryURL: https://github.com/pulumi/pulumi-hugo
+  contentRepositoryURL: https://github.com/pulumi/docs
   contentRepositoryBaseBranch: master
   registryRepositoryURL: https://github.com/pulumi/registry
   registryRepositoryBaseBranch: master
