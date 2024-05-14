@@ -30,7 +30,11 @@ Let’s have a look at a concrete example where this package ecosystem can get y
 
 A popular example of cloud infrastructure automation is creating an S3 bucket and pushing some files to it. This is a common task that many of us have had to do, and most infrastructure-automation tools have a way to accomplish this. 
 
-Here’s our public answer for [how to do that in Pulumi using TypeScript][s3-bucket-example]: 
+Here’s our public answer for [how to do that in Pulumi][s3-bucket-example]: 
+
+{{< chooser language "typescript,python" />}}
+
+{{% choosable language typescript %}}
 
 ```typescript
 import * as pulumi from '@pulumi/pulumi';
@@ -50,7 +54,7 @@ const fileContents = fs.readFileSync(filePath, {encoding: 'utf-8'});
 // Upload the file to the S3 bucket.
 const bucketObject = new aws.s3.BucketObject("my-bucket-object", {
     bucket: bucket, // Reference to the bucket created above.
-    key: "file.txt", // This will be the file's name in the bucket.
+    key: "file.ext", // This will be the file's name in the bucket.
     content: fileContents, // Contents of the file.
     contentType: "text/plain", // MIME-type of the file. Adjust if you upload a different type of file.
 });
@@ -60,26 +64,95 @@ export const bucketName = bucket.id;
 
 // Export the URL of the file in the S3 bucket
 export const objectUrl = pulumi.interpolate`s3://${bucket.id}/${bucketObject.key}`;
-``` 
+```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+# Create an S3 bucket
+bucket = aws.s3.Bucket('my-bucket')
+
+# The path to the file to upload to S3
+file_path = "path/to/your/local/file.ext"  # Replace with the path to the file you want to upload
+
+# Read the contents of the file to be uploaded to S3.
+with open(file_path, 'rb') as file:
+    file_contents = file.read()
+
+# Upload the file to the S3 bucket
+bucket_object = aws.s3.BucketObject('my-bucket-object',
+                                bucket=bucket.id, # Reference to the bucket created above.
+                                key='file.ext',  # This will be the file's name in the bucket.
+                                content=file_contents,
+                                content_type='text/plain')  # MIME-type of the file. Adjust if you upload a different type of file.
+
+# Export the name of the bucket
+pulumi.export('bucket_name', bucket.id)
+
+# Export the URL of the file in the S3 bucket
+pulumi.export('object_url', pulumi.Output.concat('s3://', bucket.id, '/', bucket_object.key))
+```
+
+{{% /choosable %}}
+
 
 However, something that stands out as a weak link here is the line:
+
+{{< chooser language "typescript,python" />}}
+
+{{% choosable language typescript %}}
 
 ```typescript
 contentType: "text/plain", // MIME-type of the file. Adjust if you upload a different type of file.
 ```
 
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+```python
+content_type='text/plain')  # MIME-type of the file. Adjust if you upload a different type of file.
+```
+{{% /choosable %}}
+
 Yeah, hard-coding the MIME type for every file I need to upload is a not going to scale. In fact, I’m probably going to get a random directory full of files I need to iterate over, each with different file types, and it will change every time it runs, and we won’t know what type of file it is ahead of time.
 
-Packages to the rescue!! Turns out that determining the MIME type of a file in TypeScript only involves importing the community-created [`mime-types`][npm-mimetypes] library and a single function call to `mime.lookup(...)`:
+Packages to the rescue!! Turns out that determining the MIME type of a file in TypeScript only involves importing a community-created [`mime-types`][npm-mimetypes] [library][python-mimetypes] and a single function call to guess the mimetype:
+
+{{< chooser language "typescript,python" />}}
+
+{{% choosable language typescript %}}
 
 ```typescript
 import * as mime from 'mime-types'
 
-const mimeType = mime.lookup(‘path/to/your/local/file.ext’);
+// Detect the MIME type of the file
+const mimeType = mime.lookup('path/to/your/local/file.ext');
 
 ```
+{{% /choosable %}}
 
-So, to work that into our Pulumi program from above, we only need to make two small edits:
+{{% choosable language python %}}
+
+```python
+import mimetypes
+
+# Detect the MIME type of the file
+mime_type, _ = mimetypes.guess_type('path/to/your/local/file.ext')
+```
+
+{{% /choosable %}}
+
+So, to work that into our Pulumi program from above, we only need to make a few small edits:
+
+{{< chooser language "typescript,python" />}}
+
+{{% choosable language typescript %}}
 
 ```typescript {hl_lines=[4,21]}
 import * as pulumi from '@pulumi/pulumi';
@@ -111,6 +184,45 @@ export const bucketName = bucket.id;
 // Export the URL of the file in the S3 bucket
 export const objectUrl = pulumi.interpolate`s3://${bucket.id}/${bucketObject.key}`;
 ```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+```python {hl_lines=[3,16,23]}
+import pulumi
+import pulumi_aws as aws
+import mimetypes
+
+# Create an S3 bucket
+bucket = aws.s3.Bucket('my-bucket')
+
+# The path to the file to upload to S3
+file_path = "path/to/your/local/file.ext"  # Replace with the path to the file you want to upload
+
+# Read the contents of the file to be uploaded to S3.
+with open(file_path, 'rb') as file:
+    file_contents = file.read()
+
+# Detect the MIME type of the file
+mime_type, _ = mimetypes.guess_type(file_path)
+
+# Upload the file to the S3 bucket
+bucket_object = aws.s3.BucketObject('my-bucket-object',
+                                bucket=bucket.id, # Reference to the bucket created above.
+                                key='file.ext',  # This will be the file's name in the bucket.
+                                content=file_contents,
+                                content_type=mime_type or 'application/octet-stream') # MIME-type of the file
+
+# Export the name of the bucket
+pulumi.export('bucket_name', bucket.id)
+
+# Export the URL of the file in the S3 bucket
+pulumi.export('object_url', pulumi.Output.concat('s3://', bucket.id, '/', bucket_object.key))
+```
+
+{{% /choosable %}}
+
 Well that was pretty straightforward, wasn't it? Trying to do this in [another tool][terraform-mime-example] might take all day to figure out the right way to implement it, but in Pulumi it worked exactly like you would expect it to, in no time at all.
 
 It's a real game-changer when you can just quickly grab something complicated like MIME typing from a package. But when you can't, you're going to be stuck figuring out how to write that functionality yourself, from scratch, using things like Bash and primitive data types, and then find yourself copy-pasting that stuff all over the place. All the while fully aware of how much time you're wasting by having to do so. That's a real pain! It's the kind of pain most people managing infrastructure have been through before.
@@ -130,3 +242,4 @@ Whatever you can do with code in your favorite language, you can do in Pulumi as
 [npm-octokit]: https://www.npmjs.com/package/octokit
 [nodejs-crypto-module]: https://nodejs.org/api/crypto.html#crypto
 [terraform-mime-example]: https://engineering.statefarm.com/blog/terraform-s3-upload-with-mime/
+[python-mimetypes]: https://docs.python.org/3/library/mimetypes.html
