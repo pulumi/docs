@@ -51,7 +51,8 @@ homepage = aws.s3.BucketObject(
 )
 
 # Fetch some redirects from a hypothetical CMS.
-response = requests.get(f"{os.environ['CMS_ENDPOINT']}/redirects.json")
+endpoint = os.environ["CMS_ENDPOINT"] if "CMS_ENDPOINT" in os.environ else "https://gist.githubusercontent.com/cnunciato/013c2ffd2ced08fa31ab8c376d2d408e/raw/44f219160c8d9cd8febcaddd34fd5ac0b3631e02"
+response = requests.get(f"{endpoint}/redirects.json")
 redirects = json.loads(response.text)
 
 # Create an S3 website redirect for each one.

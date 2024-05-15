@@ -46,7 +46,8 @@ const homepage = new aws.s3.BucketObject(
 );
 
 // Fetch some redirects from a hypothetical CMS.
-const redirects = fetch(`${process.env.CMS_ENDPOINT}/redirects.json`)
+const endpoint = process.env.CMS_ENDPOINT ?? "https://gist.githubusercontent.com/cnunciato/013c2ffd2ced08fa31ab8c376d2d408e/raw/44f219160c8d9cd8febcaddd34fd5ac0b3631e02";
+const redirects = fetch(`${endpoint}/redirects.json`)
     .then(response => response.json())
     .then(items =>
         items.forEach((redirect: any, i: number) => {
