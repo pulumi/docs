@@ -1,0 +1,44 @@
+name: awsx-apigateway-auth-lambda-yaml
+runtime: yaml
+description: An example that deploys an API Gateway REST API with an AWS Lambda authorizer.
+
+resources:
+  role:
+    type: aws:iam:Role
+    properties:
+      assumeRolePolicy:
+        fn::toJSON:
+          Version: "2012-10-17"
+          Statement:
+            - Action: sts:AssumeRole
+              Effect: Allow
+              Principal:
+                Service: lambda.amazonaws.com
+      managedPolicyArns:
+        - arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole
+
+  authorizer:
+    type: aws:lambda:Function
+    properties:
+      runtime: python3.9
+      handler: handler.handler
+      role: ${role.arn}
+      code:
+        fn::fileArchive: ./authorizer
+
+  api:
+    type: aws-apigateway:RestAPI
+    properties:
+      routes:
+        - path: /
+          localPath: www
+          authorizers:
+            - authType: custom
+              type: request
+              parameterName: Authorization
+              identitySource:
+                - method.request.header.Authorization
+              handler: ${authorizer}
+
+outputs:
+  url: ${api.url}

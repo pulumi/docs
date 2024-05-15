@@ -1,0 +1,57 @@
+<!--
+# Schema Documentation
+
+This schema represents a card group with a title and a list of items. Each item can have a title, an optional icon, and a description.
+
+## Properties
+
+- `card_group` (object): Represents the card group.
+    - `title` (string, optional): The title of the card group. If left out, the title won't appear.
+    - `items` (array): An array of items in the card group.
+        - `title` (string): The title of the item.
+        - `icon` (object, optional): Represents the icon of the item.
+            - `name` (string): The name of the icon.
+        - `description` (string): The description of the item.
+
+## Icon Color
+
+The icon color is determined based on the order of the item in the list. It uses the `$.Site.Data.color.icon_colors` list to pick a color. The color list will be iterated through, and each item will be assigned a color based on its order in the list.
+
+Note: Make sure to define the `$.Site.Data.color.icon_colors` list in your Hugo configuration file or data file.
+
+Example usage:
+card_group:
+    title: "Challenges in Cloud and Platform Engineering"
+    items:
+        - title: "Complex Cloud Environments"
+          icon:
+            name: cloud
+          description: "Navigating the complexity of multi-cloud environments and ensuring consistent infrastructure across platforms."
+-->
+
+
+<div class="container mx-auto my-16">
+{{ with .card_group }}
+    {{ if .title }}
+    <div class="max-w-5xl mx-auto text-center px-6">
+        <h3>{{ .title }}</h3>
+    </div>
+    {{ end }}
+    <div class="flex flex-wrap justify-content items-stretch text-left my-4">
+    {{ $colorNames := site.Data.colors.icon_colors }}
+    {{ range $index, $item := .items }}
+    {{ $colorIndex := mod $index (len $colorNames) }}
+    {{ $iconColor := index $colorNames $colorIndex }}
+        <div class="h-full bg-white p-4 w-full lg:w-1/3 mx-auto">
+            {{ partial "card.html" (dict
+                    "title" $item.title
+                    "description" $item.description
+                    "icon_name" $item.icon.name
+                    "icon_color" $iconColor
+                )
+            }}
+        </div>
+    {{ end }}
+    </div>
+{{ end }}
+</div>

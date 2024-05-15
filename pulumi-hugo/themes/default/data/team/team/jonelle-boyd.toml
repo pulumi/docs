@@ -1,0 +1,10 @@
+id = "jonelle-boyd"
+name = "Jonelle Boyd"
+title = "Sr. UX Designer"
+weight = 1
+
+status = "active"
+
+[social]
+github = "jonelleb"
+linkedin = "jonelle-boyd"

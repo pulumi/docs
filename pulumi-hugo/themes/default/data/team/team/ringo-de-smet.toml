@@ -1,0 +1,11 @@
+id = "ringo-de-smet"
+name = "Ringo De Smet"
+title = "Customer Experience Architect"
+weight = 1
+
+status = "active"
+
+[social]
+github = "ringods"
+twitter = "ringods"
+linkedin = "ringodesmet"

@@ -1,0 +1,3 @@
+name: awsx-vpc-typescript
+runtime: nodejs
+description: An example that creates a new VPC using the default settings.

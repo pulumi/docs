@@ -1,0 +1,161 @@
+{{ define "hero" }}
+    {{ partial "hero" (dict "title" "Cloud Engineering on Google Cloud") }}
+{{ end }}
+
+{{ define "main" }}
+    <section id="overview" class="my-16">
+        <div class="flex flex-wrap container mx-auto">
+            <div class="w-full order-last lg:mt-0 lg:order-first lg:w-1/2 px-5">
+                <h2>Universal Infrastructure as Code for Google Cloud</h2>
+                <p class="mr-4">
+                    Pulumi's <a href="/what-is/what-is-infrastructure-as-code/">infrastructure as code</a>
+                    SDK helps create, deploy, and manage Google Cloud Platform containers, serverless functions, and infrastructure using real programming languages.
+                </p>
+                <div>
+                    <div class="flex justify-start items-start mt-8">
+                        <div class="flex flex-col lg:flex-row items-start">
+                            <a class="btn-primary mr-4" href="/docs/clouds/gcp/get-started/">Get Started</a>
+                            <a class="btn-secondary" href="#benefits">Learn More</a>
+                        </div>
+                        <img class="object-scale-down w-48 md:ml-4" src="/images/partners/gcp-partner.png" alt="Google Cloud Premium Partner" />
+                    </div>
+                </div>
+            </div>
+            <div class="w-full order-first lg:order-last mt-8 lg:mt-0 lg:w-1/2 lg:mt-0">
+                {{ partial "code-tabbed" (dict "tabs" .Params.hero.ide.tabs "chrome" "true" "mode" "dark") }}
+            </div>
+        </div>
+    </section>
+
+    <section class="container mx-auto my-16 lg:my-24">
+        {{ partial "benefits.html" (dict "benefits" .Params.benefits) }}
+    </section>
+
+    <section id="packages" class="container mx-auto my-12">
+        <div class="flex flex-wrap">
+            <div class="w-full lg:w-1/2 p-6">
+                <pulumi-chooser type="language" options="typescript,python,go,csharp,java,yaml">
+                    <pulumi-choosable type="language" class="highlight" value="typescript">
+                        {{ partial "code" (dict "code" .Params.package.ts "lang" "ts") }}
+                    </pulumi-choosable>
+
+                    <pulumi-choosable type="language" class="highlight" value="python">
+                        {{ partial "code" (dict "code" .Params.package.py "lang" "go") }}
+                    </pulumi-choosable>
+
+                    <pulumi-choosable type="language" class="highlight" value="go">
+                        {{ partial "code" (dict "code" .Params.package.go "lang" "go") }}
+                    </pulumi-choosable>
+
+                    <pulumi-choosable type="language" class="highlight" value="csharp">
+                        {{ partial "code" (dict "code" .Params.package.csharp "lang" "csharp") }}
+                    </pulumi-choosable>
+
+                    <pulumi-choosable type="language" class="highlight" value="java">
+                        {{ partial "code" (dict "code" .Params.package.java "lang" "java") }}
+                    </pulumi-choosable>
+
+                    <pulumi-choosable type="language" class="highlight" value="yaml">
+                        {{ partial "code" (dict "code" .Params.package.yaml "lang" "yaml") }}
+                    </pulumi-choosable>
+                </pulumi-chooser>
+            </div>
+
+            <div class="w-full lg:w-1/2 p-6">
+                <h3>Reduce your complexity with shared packages</h3>
+                <p>
+                    Pulumi Packages enable you to define cloud infrastructure once and then consume that package in any supported Pulumi language. You can easily reduce boilerplate
+                    code, define best practices, and allow teammates to use your package in the language of their choice, regardless of the language you authored the package with.
+
+                    <a href="/registry/">Pulumi Registry</a> is the central location where you can find all of the Pulumi Packages you can use.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="native" class="container mx-auto my-12">
+        <div class="flex flex-wrap">
+            <div class="w-full lg:w-1/2 p-6">
+                <h3>Access to all Google Cloud APIs</h3>
+                <p>
+                    Google Cloud Native gives you access to 100% of the resources available in the Google Cloud APIs. You have access to every property of every resource and every
+                    version of every resource is available. The SDK is generated from the Google API Discovery Service, giving you same-day access to new features and bug fixes.
+                </p>
+            </div>
+
+            <div class="w-full lg:w-1/2 p-6 order-first lg:order-last">
+                <pulumi-chooser type="language" options="typescript,python,go,csharp,java,yaml">
+                    <pulumi-choosable type="language" class="highlight" value="typescript">
+                        {{ partial "code" (dict "code" .Params.native.ts "lang" "ts") }}
+                    </pulumi-choosable>
+
+                    <pulumi-choosable type="language" class="highlight" value="python">
+                        {{ partial "code" (dict "code" .Params.native.py "lang" "go") }}
+                    </pulumi-choosable>
+
+                    <pulumi-choosable type="language" class="highlight" value="go">
+                        {{ partial "code" (dict "code" .Params.native.go "lang" "go") }}
+                    </pulumi-choosable>
+
+                    <pulumi-choosable type="language" class="highlight" value="csharp">
+                        {{ partial "code" (dict "code" .Params.native.csharp "lang" "csharp") }}
+                    </pulumi-choosable>
+
+                    <pulumi-choosable type="language" class="highlight" value="java">
+                        {{ partial "code" (dict "code" .Params.native.java "lang" "java") }}
+                    </pulumi-choosable>
+
+                    <pulumi-choosable type="language" class="highlight" value="yaml">
+                        {{ partial "code" (dict "code" .Params.native.yaml "lang" "yaml") }}
+                    </pulumi-choosable>
+                </pulumi-chooser>
+            </div>
+        </div>
+    </section>
+
+    <section id="gke" class="container mx-auto my-12">
+        <div class="flex flex-wrap">
+            <div class="w-full lg:w-1/2 p-6">
+                <pulumi-chooser type="language" options="typescript,python,go,csharp,java">
+                    <pulumi-choosable type="language" class="highlight" value="typescript">
+                        {{ partial "code" (dict "code" .Params.gke.ts "lang" "ts") }}
+                    </pulumi-choosable>
+
+                    <pulumi-choosable type="language" class="highlight" value="python">
+                        {{ partial "code" (dict "code" .Params.gke.py "lang" "go") }}
+                    </pulumi-choosable>
+
+                    <pulumi-choosable type="language" class="highlight" value="go">
+                        {{ partial "code" (dict "code" .Params.gke.go "lang" "go") }}
+                    </pulumi-choosable>
+
+                    <pulumi-choosable type="language" class="highlight" value="csharp">
+                        {{ partial "code" (dict "code" .Params.gke.csharp "lang" "csharp") }}
+                    </pulumi-choosable>
+
+                    <pulumi-choosable type="language" class="highlight" value="java">
+                        {{ partial "code" (dict "code" .Params.gke.java "lang" "java") }}
+                    </pulumi-choosable>
+
+                    <!-- <pulumi-choosable type="language" class="highlight" value="yaml">
+                        {{ partial "code" (dict "code" .Params.gke.yaml "lang" "yaml") }}
+                    </pulumi-choosable> -->
+                </pulumi-chooser>
+            </div>
+
+            <div class="w-full lg:w-1/2 p-6">
+                <h2>Create your own GKE cluster</h2>
+                <p>
+                    Pulumi supports programming against Kubernetes - Minikube, custom on-premises, or cloud-hosted custom clusters or in managed clusters such as Google GKE. This
+                    code defines a GKE cluster with configurable settings that could be packaged in a module and then used to deploy an app to the cluster.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    {{ partial "how-pulumi-works.html" . }}
+
+    {{ partial "get-started.html" . }}
+
+    {{ partial "hand-raise-section" . }}
+{{ end }}

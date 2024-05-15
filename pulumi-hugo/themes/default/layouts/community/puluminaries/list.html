@@ -1,0 +1,58 @@
+{{ define "hero" }}
+    {{ partial "hero" (dict "title" "Puluminaries") }}
+{{ end }}
+
+{{ define "main" }}
+    <section class="max-w-4xl container mx-auto py-8 px-4 text-center text-lg">
+        <p>
+            The Puluminaries program recognizes members of the Pulumi community who are experts and leaders in the field of programming and infrastructure, but also who give back
+            to the community to make it grow! They help others get started, give feedback to make Pulumi’s roadmap even better, and educate people through content or public
+            speaking. The program is open to all members of the community, and we welcome anyone to join the program.
+        </p>
+    </section>
+
+    <section id="team" class="px-4">
+        <div class="container md:mx-auto max-w-5xl text-center">
+            <!-- Hide the list initially, in order to avoid any visual flicker when shuffled. -->
+            <ul class="invisible inline-flex flex-wrap list-none justify-center p-0" data-shuffle="true">
+                {{ $thisPage := . }}
+                {{ range $.Site.Data.team.team }}
+                    {{ if (and (eq .status "guest") (eq .role "puluminary")) }}
+                        <li class="text-center w-48 mx-4 mb-8">
+                            <img class="rounded mb-4 shadow-md mx-auto" src="/images/team/{{ .id }}.jpg" alt="{{ .name }}" />
+                            <h2 class="text-3xl {{ if .bio }}cursor-pointer{{ end }} mb-0 text-gray-900" {{ if .bio }}data-toggle="modal" data-target="#{{ .id }}"{{ end }}>
+                                <span class="text-gray-900">{{ .name }}</span>
+                            </h2>
+                            <div>{{ .title }}</div>
+                            <div>{{ .company }}</div>
+                            <div class="text-center">
+                                {{ partial "widgets/social-icons.html" (dict "social" .social) }}
+                            </div>
+                        </li>
+                    {{ end }}
+                {{ end }}
+            </ul>
+        </div>
+    </section>
+
+    <section id="contact" class="pt-16 px-4">
+        <div class="container mx-auto text-center ">
+            <h2 class="text-4xl my-6">Nominate a Puluminary!</h2>
+            <div class="w-full md:max-w-2xl md:mx-auto">
+                <div class="mt-4 mx-auto md:w-full md:mt-0 p-10 bg-white rounded rounded-lg shadow-lg border border-gray-300">
+                    <div class="mx-auto flex justify-center">
+                        <div class="hs-form hs-form-fg-dark font-normal">
+                            If you know someone who would be a great addition to the Puluminaries, please email us at
+                            <a href="mailto:da@pulumi.com?subject=Puluminary%20Nomination">da@pulumi.com</a>!
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mb-16 mt-8">
+            <p class="mt-8">
+                <img class="mx-auto" width="25%" src="/images/community/puluminaries.png" alt="Pulumaries logo" />
+            </p>
+        </div>
+    </section>
+{{ end }}

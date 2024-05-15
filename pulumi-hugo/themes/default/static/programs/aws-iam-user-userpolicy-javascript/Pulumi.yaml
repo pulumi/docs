@@ -1,0 +1,6 @@
+name: aws-iam-user-userpolicy-javascript
+runtime:
+  name: nodejs
+  options:
+    typescript: false
+description: An example that deploys an IAM user and user policy on AWS.

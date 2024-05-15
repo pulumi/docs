@@ -1,0 +1,18 @@
+<!--
+    card-button-download partial
+
+    Purpose:
+    This HTML code represents a card button for downloading a file.
+    It contains a link with a download button icon and text.
+
+    Parameters:
+    - ref: The URL of the file to be downloaded.
+    - text: The desired button text.
+-->
+
+<div class="card-cta-contained-btn text-center">
+    <a class="btn-download" href={{ .ref }}>
+        <i class="fa fa-download"></i>
+        {{ .text }}
+    </a>
+</div>

@@ -1,0 +1,7 @@
+name: aws-s3bucket-bucketpolicy-typescript
+runtime: nodejs
+description: An example that deploys an S3 bucket and bucket policy on AWS.
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: aws-typescript

@@ -1,0 +1,107 @@
+{{ define "main" }}
+    <div class="pulumi-up-body text-white pb-12 ">
+        <div class="relative overflow-hidden pulumi-up-video-section">
+            <video class="pulumiup-video" autoplay muted loop>
+                <source src="https://www.pulumi.com/uploads/pulumiup-lofi.mp4" type="video/mp4" />
+            </video>
+            <div class="pulumiup-title">
+                <div class="neon-container">
+                    <h1>
+                        <span class="blue-neon-sign-xl">Pulumi</span>
+                        <span class="green-neon-sign-xl">UP</span>
+                    </h1>
+                </div>
+                <div class="flex justify-center items-center">
+                    <a href="#main-event" class="btn btn-orange inline-block ml-8 orange-neon">Watch The Announcements</a>
+                </div>
+            </div>
+        </div>
+        <div class="container mx-auto pt-4 pb-16">
+            <section id="main-event">
+                <div class="w-full">
+                    <div class="mb-24">
+                        <h2 class="text-center my-16 md:my-4">Watch The Announcements</h2>
+                        <div class="rounded shadow-md mx-4 md:mx-0" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+                            <iframe
+                                src="//www.youtube.com/embed/Zko70KVGcgo?rel=0"
+                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;"
+                                allowfullscreen=""
+                                title="PulumiUP: Announcing Pulumi 3.0"
+                            ></iframe>
+                        </div>
+                    </div>
+                    <div class="px-4">
+                        <h3>About</h3>
+                        <p>{{ .Params.event_description | markdownify }}</p>
+
+                        <h3>Speakers</h3>
+                        <div class="flex flex-wrap">
+                            {{ range $id := .Params.speakers }}
+                                {{ $authorPage := $.Site.GetPage (printf "/authors/%s" ($id | urlize)) }}
+                                {{ $authorData := index $.Site.Data.team.team $id }}
+
+
+                                <div class="flex flex-col md:flex-row w-full md:w-1/2 items-center text-center md:text-left md:items-start mt-4 pr-4">
+                                    <div class="speaker-image lg:mr-2">
+                                        <img src="/images/team/{{ $authorData.id }}.jpg" alt="{{ $authorData.name }}" title="{{ $authorData.name }}" />
+                                    </div>
+                                    <div class="flex flex-col justify-center h-full">
+                                        <h5 class="ml-2">{{ $authorData.name }}</h5>
+                                        <p class="ml-2 my-0">{{ $authorData.title }}, {{ $authorData.company }}</p>
+                                    </div>
+                                </div>
+                            {{ end }}
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <section id="thank-you" class="container mx-auto mb-16">
+        <h3 class="text-center">Supported by our friends at</h3>
+        <ul class="list-none lg:flex">
+            <li class="w-1/3 lg:w-1/6 p-6 mx-auto">
+                <img class="w-full lg:h-16" src="/logos/tech/aws.svg" alt="Amazon Web Services" />
+            </li>
+
+            <li class="w-1/3 lg:w-1/6 p-6 mx-auto">
+                <img class="w-full lg:h-16" src="/logos/customers/fenergo-wordmark.svg" alt="Fenergo" />
+            </li>
+
+            <li class="w-1/3 lg:w-1/6 p-6 mx-auto">
+                <img class="w-full lg:h-16" src="/logos/tech/github.svg" alt="Github" />
+            </li>
+
+            <li class="w-1/3 lg:w-1/6 p-6 mx-auto">
+                <img class="w-full lg:h-16" src="/logos/tech/honeycomb-logo.svg" alt="Honeycomb" />
+            </li>
+
+            <li class="w-1/3 lg:w-1/6 p-6 mx-auto">
+                <img class="w-full lg:h-16" src="/logos/tech/jfrog.svg" alt="JFrog" />
+            </li>
+
+            <li class="w-1/3 lg:w-1/6 p-6 mx-auto">
+                <img class="w-full lg:h-16" src="/logos/customers/snowflake-logo.svg" alt="Snowflake" />
+            </li>
+        </ul>
+    </section>
+
+    <section id="get-started" class="container px-6 lg:px-0 mx-auto my-16">
+        <div class="w-full bg-violet-600 card p-6 lg:p-16 lg:pt-24 text-center">
+            <div class="max-w-xl mx-auto">
+                <h2 class="text-white hidden lg:block px-0 lg:px-16">Get started with Cloud Engineering</h2>
+                <h4 class="text-white mt-0 lg:hidden">Get started with Cloud Engineering</h4>
+                <p class="text-white">
+                    Pulumi is a cloud engineering platform that brings infrastructure, application development, and compliance teams together through a unified software engineering
+                    process to deliver and manage modern cloud applications.
+                </p>
+                <div class="mt-16">
+                    <a class="btn-secondary" href="{{ relref . "/docs/get-started" }}"> Get Started </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Vibur" />
+{{ end }}

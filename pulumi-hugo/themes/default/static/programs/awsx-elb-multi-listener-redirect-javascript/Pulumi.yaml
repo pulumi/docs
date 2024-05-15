@@ -1,0 +1,6 @@
+name: awsx-elb-multi-listener-redirect-javascript
+runtime:
+  name: nodejs
+  options:
+    typescript: false
+description: An example of an ApplicationLoadBalancer with multiple listeners and a custom redirect action.

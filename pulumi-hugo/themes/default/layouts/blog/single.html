@@ -1,0 +1,65 @@
+{{ define "main" }}
+    <div class="container mx-auto px-4 py-8">
+        <div class="xxl:flex">
+            <div class="flex flex-col lg:flex-row xxl:w-9/12">
+                <div class="lg:w-1/4 xxl:w-4/12  pr-8">
+                    {{ partial "blog/sidebar.html" . }}
+                </div>
+
+                <div class="lg:w-3/4 xxl:w-9/12">
+                    <article class="mb-8 pb-8 border-b border-gray-200">
+                        {{ if and (.Params.h1) (not .Params.notitle) }}
+                            <h1 class="no-anchor">{{ .Params.h1 }}</h1>
+                        {{ else if and (ne .Title "") (not .Params.notitle) }}
+                            <h1 class="no-anchor">{{ .Title }}</h1>
+                        {{ end }}
+
+
+                        <p>Posted on <time>{{ .Date.Format "Monday, Jan 2, 2006" }}</time></p>
+
+                        <div class="flex items-center">
+                            <span class="text-sm text-gray-700">
+                                {{ partial "blog/authors.html" (dict "context" . "authors" .Params.authors) }}
+                            </span>
+                        </div>
+                        <section>
+                            {{ .Content }}
+                        </section>
+
+                        <div>
+                            {{ if .Params.tags }}
+                                <ul class="tags m-0 mt-8 p-0 text-sm">
+                                    {{ range $tag := .Params.tags }}
+                                        <li class="mt-0 inline-flex">
+                                            <a class="tag tag-blog" href="/blog/tag/{{ $tag | urlize }}/">
+                                                {{ $tag | urlize }}
+                                            </a>
+                                        </li>
+                                    {{ end }}
+                                </ul>
+                            {{ end }}
+                        </div>
+
+                        <section class="py-8 newsletter-input">
+                            <div class="container mx-auto">
+                                <div class="text-center">
+                                    <h4 class="">Subscribe to the Pulumi Monthly Newsletter</h4>
+                                    <div class="inline-block">
+                                        <pulumi-hubspot-form form-id="6d45d68a-4244-4f23-bbec-941f8ccb2b44" class="newsletter newsletter-dark-border"></pulumi-hubspot-form>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </div>
+
+            <div class="xxl:w-3/12 lg:pl-8">
+                <div class="sticky-sidebar">
+                    {{ partial "blog/right-nav.html" . }}
+                    {{ partial "docs/right-nav-ad.html" }}
+                </div>
+            </div>
+        </div>
+    </div>
+{{ end }}

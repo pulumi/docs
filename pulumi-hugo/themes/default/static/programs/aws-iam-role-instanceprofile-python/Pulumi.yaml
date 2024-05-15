@@ -1,0 +1,10 @@
+name: aws-iam-role-instanceprofile-python
+runtime:
+  name: python
+  options:
+    virtualenv: venv
+description: An example that deploys an IAM role and instance profile on AWS.
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: aws-python

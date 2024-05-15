@@ -1,0 +1,6 @@
+name: awsx-apigateway-lambda-javascript
+runtime:
+  name: nodejs
+  options:
+    typescript: false
+description: An example that deploys an API Gateway REST API with a single endpoint backed by AWS Lambda.

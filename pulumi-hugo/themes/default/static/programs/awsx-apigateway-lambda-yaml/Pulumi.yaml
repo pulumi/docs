@@ -1,0 +1,41 @@
+name: awsx-apigateway-lambda-yaml
+runtime: yaml
+description: An example that deploys an API Gateway REST API with a single endpoint backed by AWS Lambda.
+resources:
+  # The URL at which the REST API will be served.
+  role:
+    type: aws:iam:Role
+    properties:
+      assumeRolePolicy:
+        fn::toJSON:
+          Version: "2012-10-17"
+          Statement:
+            - Action: sts:AssumeRole
+              Effect: Allow
+              Principal:
+                Service: lambda.amazonaws.com
+      managedPolicyArns:
+        - arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole
+
+  # The URL at which the REST API will be served.
+  handler:
+    type: aws:lambda:Function
+    properties:
+      runtime: python3.9
+      handler: handler.handler
+      role: ${role.arn}
+      code:
+        fn::fileArchive: ./function
+
+  # The URL at which the REST API will be served.
+  api:
+    type: aws-apigateway:RestAPI
+    properties:
+      routes:
+        - path: /
+          method: GET
+          eventHandler: ${handler}
+
+outputs:
+  # The URL at which the REST API will be served.
+  url: ${api.url}

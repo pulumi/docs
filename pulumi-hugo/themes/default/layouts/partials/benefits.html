@@ -1,0 +1,18 @@
+<div>
+    <h2 class="text-center">{{ .benefits.title }}</h2>
+    <div class="benefits-section">
+        {{ range $item := .benefits.items }}
+            <div class="benefits-item card">
+                <div class="icon-section">
+                    {{ partial "color-icon.html" (dict "icon" $item.icon "icon_color" $item.icon_color) }}
+                </div>
+                <div>
+                    <h5>{{ $item.title }}</h5>
+                </div>
+                <div class="description">
+                    <p>{{ $item.description }}</p>
+                </div>
+            </div>
+        {{ end }}
+    </div>
+</div>

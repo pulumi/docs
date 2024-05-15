@@ -1,0 +1,6 @@
+name: aws-eks-cluster-javascript
+runtime:
+  name: nodejs
+  options:
+    typescript: false
+description: An example that deploys a Kubernetes cluster on AWS.

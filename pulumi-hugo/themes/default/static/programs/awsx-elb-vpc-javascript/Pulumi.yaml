@@ -1,0 +1,6 @@
+name: awsx-elb-vpc-javascript
+runtime:
+  name: nodejs
+  options:
+    typescript: false
+description: An example that deploys an ApplicationLoadBalancer in a VPC.

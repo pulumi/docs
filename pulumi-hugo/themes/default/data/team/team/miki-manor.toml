@@ -1,0 +1,9 @@
+id = "miki-manor"
+name = "Miki Manor"
+title = "DevOps Team Lead"
+company = "Skai"
+status = "guest"
+role = "puluminary"
+[social]
+github = "MikiManor"
+linkedin = "mikimanor"

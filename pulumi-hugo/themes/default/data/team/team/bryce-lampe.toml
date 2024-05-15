@@ -1,0 +1,11 @@
+id = "bryce-lampe"
+name = "Bryce Lampe"
+title = "Software Engineer"
+company = "Pulumi"
+weight = 1
+
+status = "active"
+
+[social]
+github = "blampe"
+linkedin = "brycelampe"

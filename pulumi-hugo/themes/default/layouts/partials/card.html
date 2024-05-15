@@ -1,0 +1,51 @@
+<!--
+This partial represents a card component that can be used to display information in a visually appealing way.
+
+Schema for Expected Data Input:
+- .icon_name (string, optional): The name of the icon to be displayed in the card.
+- .icon_color (string, optional): The color of the icon.
+- .title (string, optional): The title of the card.
+- .description (string, optional): The description of the card.
+- .button_type (string, optional): The type of button to be displayed in the card. Possible values are "download", "offset", and "contained".
+- .button_text (string, optional): The text to be displayed on the button.
+
+Button Types:
+- "download": Renders a download button using the "card-button-download.html" partial. This button is typically used for downloading files or resources.
+- "offset": Renders an offset button. This button exists partially outside (offset) the card on the bottom center edge.
+- "contained": Renders a contained button. This button is fully within the card and centered at the bottom of the card.
+
+Effect:
+- Renders a card component with optional icon, title, description, and button.
+- The appearance and functionality of the card can be customized based on the provided data and configuration values.
+-->
+
+{{ if not .button_type }} {{ $button_type := "offset" }} {{ end }}
+{{ $button_type := .button_type }}
+
+    <div class="h-full card bg-white p-4">
+        {{ if .icon_name }}
+        <div class="icon-div mb-8">
+            {{ partial "color-icon.html" (dict "icon" .icon_name "icon_color" .icon_color) }}
+        </div>
+        {{ end }}
+        {{if .title }}
+        <div>
+            <h5>{{ .title }}</h5>
+        </div>
+        {{ end }}
+        {{if .description }}
+        <div class="mt-6">
+            <p>{{ .description }}</p>
+        </div>
+        {{ end }}
+
+        {{ if .button_text }}
+            {{ if eq $button_type "download" }}
+                {{ partial "card-button-download.html" (dict "text" .button_text "ref" .button_ref) }}
+            {{ else if eq $button_type "offset" }}
+                <!-- TODO implement the offset button here-->
+            {{ else if eq $button_type "contained" }}
+                <!-- TODO implement the contained button here-->
+            {{ end }}
+        {{ end }}
+    </div>

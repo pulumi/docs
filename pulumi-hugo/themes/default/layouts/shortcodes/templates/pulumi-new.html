@@ -1,0 +1,50 @@
+{{/* Generates a language chooser containing commands for `pulumi new`, using
+    frontmatter obtained from the surrounding content file.
+*/}}
+
+{{ $prefix := .Page.Params.template.prefix }}
+{{ $dirname := .Page.Params.template.dirname }}
+{{ $languages := .Page.Params.template.languages }}
+
+
+<div>
+    <pulumi-chooser type="language" options="{{ delimit $languages "," }}"></pulumi-chooser>
+</div>
+
+{{/* The formatting below (specifically what's contained within the `pre` tags) is
+    important because it controls how the code snippet is rendered on-page in terms of line breaks,
+    tabs, spaces, etc. The Prettier formatter mangles this spacing, so the formatting needs to
+    be ignored.
+*/}}
+
+
+<!-- prettier-ignore -->
+{{ range $language := $languages }}
+{{ $templateName := (printf "%s-%s" $prefix $language) }}
+<div>
+    <pulumi-choosable type="language" values="{{ $language }}">
+        <div class="highlight">
+            <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ mkdir {{ $dirname }} <span class="o">&amp;&amp;</span> <span class="nb">cd</span> {{ $dirname }}
+</span></span><span class="line"><span class="cl">$ pulumi new {{ $templateName }}
+</span></span></code></pre>
+        </div>
+    </pulumi-choosable>
+</div>
+
+<pulumi-choosable type="language" values="{{ $language }}">
+    <div class="p-1 p-4 rounded bg-violet-100 md:flex items-center">
+        <div class="flex-1">
+            <span class="text-violet-900 text-sm">
+                Alternatively, you can create and configure a new project with this template
+                (<span class="font-mono text-sm">{{ $templateName }}</span>)
+                in the Pulumi Service.
+            </span>
+        </div>
+        <div class="mt-4 md:mt-0 md:ml-2">
+            <a href="https://app.pulumi.com/new?template=https://github.com/pulumi/templates/tree/master/{{ $templateName }}" target="_blank">
+                <img src="https://get.pulumi.com/new/button.svg" title="Create a new {{ $templateName }} project in the Pulumi Service">
+            </a>
+        </div>
+    </div>
+</pulumi-choosable>
+{{ end }}

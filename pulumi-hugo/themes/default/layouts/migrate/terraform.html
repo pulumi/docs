@@ -1,0 +1,113 @@
+{{ define "hero" }}
+    {{ partial "hero" (dict "title" "Pulumi for Terraform Users") }}
+{{ end }}
+
+{{ define "main" }}
+    <section id="overview" class="container mx-auto px-2 my-4 mb-20">
+        <div class="flex flex-wrap">
+            <div class="w-full lg:w-1/2 p-6">
+                <div>
+                    <h2>The open source infrastructure as code platform</h2>
+                    <p>
+                        Pulumi is fully open source while Terraform is committed to the Business Source License, a restrictive source available license.
+                        Pulumi uses general purpose programming languages and YAML that better help you tame cloud complexity and accelerate development velocity, rather than proprietary domain-specific languages (DSL) such as HashiCorp Configuration Language (HCL).
+                        See our <a href="/docs/concepts/vs/terraform">Pulumi vs. Terraform guide</a> for detailed differences between the two platforms.
+                    </p>
+                    <p>
+                        Migrate off of Terraform to a more modern and open source infrastructure as code platform.
+                    </p>
+                </div>
+                <div class="mt-8 flex justify-left">
+                    <a href="/get-started" class="btn-primary">Get Started with Pulumi</a>
+                </div>
+            </div>
+
+            <div class="w-full lg:w-1/2 p-6">
+                <div class="rounded shadow-md" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+                    <iframe
+                        src="//www.youtube.com/embed/PqAP4BunQZU?rel=0"
+                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;"
+                        allowfullscreen=""
+                        title="Pulumi for Terraform Users"
+                    ></iframe>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    {{ partial "benefits.html" .Params }}
+
+
+    <section id="code" class="py-16 px-4">
+        <div class="container mx-auto">
+            <div class="md:flex my-8">
+                <div class="md:w-1/2 md:mr-4 md:pr-24">
+                    <h3>Take advantage of real coding features with Pulumi</h3>
+                    <p>Pulumi provides a more expressive and efficient way to define cloud resources:</p>
+                    <ul>
+                        <li>Use variable loops, not copy/paste</li>
+                        <li>Use any Node libaries (or Python/Go)</li>
+                        <li>On-the-fly error checking</li>
+                        <li>Freeform code instead of complex interpolations</li>
+                    </ul>
+                    <p class="my-8"><a class="link" href="https://github.com/pulumi/examples">Find many other examples here</a>.</p>
+                </div>
+                <div class="md:w-1/2 md:ml:4">
+                    {{ partial "code" (dict "code" .Params.examples.one.ts "lang" "js" "mode" "dark") }}
+                    {{ partial "code" (dict "code" .Params.examples.one.tf "lang" "plain" "mode" "dark") }}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="code" class="bg-gray-100 py-16">
+        <div class="container mx-auto">
+            <div class="md:flex my-8">
+                <div class="md:w-1/2 md:mr-4 md:pr-24">
+                    <h3>Productive cloud native programming</h3>
+                    <p>
+                        Pulumi is designed with cloud native computing in mind - from containers to serverless, providing a productive model for quickly building and deploying
+                        apps:
+                    </p>
+                    <ul>
+                        <li>Rich, built in support for event handlers</li>
+                        <li>Easy-to-use in-line Lambdas for simple functions</li>
+                        <li>Use JavaScript for both infrastructure and Lambda callbacks</li>
+                        <li>Avoid the need for significant boiler plate code</li>
+                    </ul>
+                    <p class="my-8"><a class="link" href="https://github.com/pulumi/examples">Find many other examples here</a>.</p>
+                </div>
+                <div class="md:w-1/2 md:ml:4">
+                    {{ partial "code" (dict "code" .Params.examples.two.ts "lang" "js" "mode" "dark") }}
+                    {{ partial "code" (dict "code" .Params.examples.two.tf "lang" "plain" "mode" "dark") }}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="migrate" class="container mx-auto w-full relative overflow-visible py-20 px-4">
+        <div class="flex justify-center mt-24">
+            <div class="card ready-cta w-full rounded-xl p-1 gradient">
+                <div class="flex justify-center rounded-xl bg-violet-100">
+                    <div class="p-8 md:p-16 lg:pt-28 lg:pb-28 inline-flex flex-col items-center">
+                        <h2 class="mb-12 text-center">Next Steps with Pulumi</h2>
+                        <p class="container mx-auto max-w-3xl text-lg text-center my-8">
+                            Follow our Get Started guide to begin using Pulumi. If you need help migrating from Terraform,
+                            our Expert Services team can help migrate your Terraform workspaces and train your team.
+                            Talk to a Pulumi team member to get started.
+                        </p>
+                        <div class="flex flex-col self-stretch items-center lg:flex-row">
+                            <div class="flex flex-col justify-center align-center text-center w-full md:w-2/4 lg:ml-14 lg:mr-14 mb-14 lg:mb-0 z-0">
+                                <a href="/get-started" class="btn-primary py-3">Get Started</a>
+                            </div>
+                            <div class="flex flex-col justify-center align-center text-center w-full md:w-2/4 lg:ml-14 lg:mr-14 mb-14 lg:mb-0 z-0">
+                                <a href="/contact/?form=tf-migration" class="btn-secondary py-3">Start Migration</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{{ end }}
