@@ -28,7 +28,7 @@ Let’s have a look at a concrete example where this package ecosystem can get y
 
 ## Use Case: Determining S3 MIME types on-the-fly
 
-A popular example of cloud infrastructure automation is creating an S3 bucket and pushing some files to it. This is a common task that many of us have had to do, and most infrastructure-automation tools have a way to accomplish this. 
+A popular example of cloud infrastructure automation is creating an S3 bucket and pushing some files to it. This is a common task that many of us have had to do, and most infrastructure automation tools have a way to accomplish this. 
 
 Here’s our public answer for [how to do that in Pulumi][s3-bucket-example]: 
 
@@ -39,23 +39,19 @@ Here’s our public answer for [how to do that in Pulumi][s3-bucket-example]:
 ```typescript
 import * as pulumi from '@pulumi/pulumi';
 import * as aws from '@pulumi/aws';
-import * as fs from 'fs';
 
 // Create an S3 bucket where we will upload the file.
 const bucket = new aws.s3.Bucket("my-bucket", {
     // You can apply additional bucket settings here.
 });
 
-const filePath = "path/to/your/local/file.ext"; // Replace with the path to the file you want to upload
-
-// Read the contents of the file to be uploaded to S3.
-const fileContents = fs.readFileSync(filePath, {encoding: 'utf-8'});
+const filePath = "path/to/your/local/file.txt"; // Replace with the path to the file you want to upload
 
 // Upload the file to the S3 bucket.
 const bucketObject = new aws.s3.BucketObject("my-bucket-object", {
     bucket: bucket, // Reference to the bucket created above.
-    key: "file.ext", // This will be the file's name in the bucket.
-    content: fileContents, // Contents of the file.
+    key: "file.txt", // This will be the file's name in the bucket.
+    source: pulumi.FileAsset(filePath), // Contents of the file.
     contentType: "text/plain", // MIME-type of the file. Adjust if you upload a different type of file.
 });
 
@@ -78,17 +74,13 @@ import pulumi_aws as aws
 bucket = aws.s3.Bucket('my-bucket')
 
 # The path to the file to upload to S3
-file_path = "path/to/your/local/file.ext"  # Replace with the path to the file you want to upload
-
-# Read the contents of the file to be uploaded to S3.
-with open(file_path, 'rb') as file:
-    file_contents = file.read()
+file_path = "path/to/your/local/file.txt"  # Replace with the path to the file you want to upload
 
 # Upload the file to the S3 bucket
 bucket_object = aws.s3.BucketObject('my-bucket-object',
                                 bucket=bucket.id, # Reference to the bucket created above.
-                                key='file.ext',  # This will be the file's name in the bucket.
-                                content=file_contents,
+                                key='file.txt',  # This will be the file's name in the bucket.
+                                source=pulumi.FileAsset(file_path),
                                 content_type='text/plain')  # MIME-type of the file. Adjust if you upload a different type of file.
 
 # Export the name of the bucket
@@ -122,7 +114,7 @@ content_type='text/plain')  # MIME-type of the file. Adjust if you upload a diff
 
 Yeah, hard-coding the MIME type for every file I need to upload is a not going to scale. In fact, I’m probably going to get a random directory full of files I need to iterate over, each with different file types, and it will change every time it runs, and we won’t know what type of file it is ahead of time.
 
-Packages to the rescue!! Turns out that determining the MIME type of a file in TypeScript only involves importing a community-created [`mime-types`][npm-mimetypes] [library][python-mimetypes] and a single function call to guess the mimetype:
+Packages to the rescue!! Turns out that determining the MIME type of a file only involves importing a community-created module like [`mime-types`][npm-mimetypes] in TypeScript, or using the [mimetypes][python-mimetypes] module from Python's standard library, and a single function call to guess the MIME type:
 
 {{< chooser language "typescript,python" />}}
 
@@ -132,7 +124,7 @@ Packages to the rescue!! Turns out that determining the MIME type of a file in T
 import * as mime from 'mime-types'
 
 // Detect the MIME type of the file
-const mimeType = mime.lookup('path/to/your/local/file.ext');
+const mimeType = mime.lookup('path/to/your/local/file.txt');
 
 ```
 {{% /choosable %}}
@@ -143,7 +135,7 @@ const mimeType = mime.lookup('path/to/your/local/file.ext');
 import mimetypes
 
 # Detect the MIME type of the file
-mime_type, _ = mimetypes.guess_type('path/to/your/local/file.ext')
+mime_type, _ = mimetypes.guess_type('path/to/your/local/file.txt')
 ```
 
 {{% /choosable %}}
@@ -154,27 +146,23 @@ So, to work that into our Pulumi program from above, we only need to make a few 
 
 {{% choosable language typescript %}}
 
-```typescript {hl_lines=[4,21]}
+```typescript {hl_lines=[3,17]}
 import * as pulumi from '@pulumi/pulumi';
 import * as aws from '@pulumi/aws';
-import * as fs from 'fs';
-import * as mime from `mime-types’;
+import * as mime from 'mime-types';
 
 // Create an S3 bucket where we will upload the file.
 const bucket = new aws.s3.Bucket("my-bucket", {
     // You can apply additional bucket settings here.
 });
 
-const filePath = "path/to/your/local/file.ext"; // Replace with the path to the file you want to upload
-
-// Read the contents of the file to be uploaded to S3.
-const fileContents = fs.readFileSync(filePath, {encoding: 'utf-8'});
+const filePath = "path/to/your/local/file.txt"; // Replace with the path to the file you want to upload
 
 // Upload the file to the S3 bucket.
 const bucketObject = new aws.s3.BucketObject("my-bucket-object", {
     bucket: bucket, // Reference to the bucket created above.
     key: "file.txt", // This will be the file's name in the bucket.
-    content: fileContents, // Contents of the file.
+    source: pulumi.FileAsset(filePath), // Contents of the file.
     contentType: mime.lookup(filePath) || "application/octet-stream", // MIME-type of the file
 });
 
@@ -189,7 +177,7 @@ export const objectUrl = pulumi.interpolate`s3://${bucket.id}/${bucketObject.key
 
 {{% choosable language python %}}
 
-```python {hl_lines=[3,16,23]}
+```python {hl_lines=[3,12,19]}
 import pulumi
 import pulumi_aws as aws
 import mimetypes
@@ -198,11 +186,7 @@ import mimetypes
 bucket = aws.s3.Bucket('my-bucket')
 
 # The path to the file to upload to S3
-file_path = "path/to/your/local/file.ext"  # Replace with the path to the file you want to upload
-
-# Read the contents of the file to be uploaded to S3.
-with open(file_path, 'rb') as file:
-    file_contents = file.read()
+file_path = "path/to/your/local/file.txt"  # Replace with the path to the file you want to upload
 
 # Detect the MIME type of the file
 mime_type, _ = mimetypes.guess_type(file_path)
@@ -210,8 +194,8 @@ mime_type, _ = mimetypes.guess_type(file_path)
 # Upload the file to the S3 bucket
 bucket_object = aws.s3.BucketObject('my-bucket-object',
                                 bucket=bucket.id, # Reference to the bucket created above.
-                                key='file.ext',  # This will be the file's name in the bucket.
-                                content=file_contents,
+                                key='file.txt',  # This will be the file's name in the bucket.
+                                source=pulumi.FileAsset(file_path),
                                 content_type=mime_type or 'application/octet-stream') # MIME-type of the file
 
 # Export the name of the bucket
