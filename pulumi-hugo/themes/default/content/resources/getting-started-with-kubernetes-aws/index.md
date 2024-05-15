@@ -1,8 +1,8 @@
 ---
 # Name of the event, <= 60 characters
-title: Getting Started with Kubernetes on AWS
+title: Getting Started with Kubernetes on AWS using Pulumi
 meta_desc: In this workshop, you will learn the fundamentals of setting up EKS clusters on AWS through guided exercises using Pulumi.
-meta_image: /images/resources/getting-started-kubernetes-on-aws-josh-marina.png
+meta_image:
 
 # A featured webinar will display first in the list.
 featured: false
@@ -31,7 +31,7 @@ url_slug: getting-started-with-kubernetes-aws
 # Content for the left hand side section of the page.
 main:
     # Webinar title.
-    title: Getting Started with Kubernetes on AWS
+    title: Getting Started with Kubernetes on AWS using Pulumi
 
     event_type: workshop # workshop | event
 
@@ -39,18 +39,16 @@ main:
     youtube_url: 
 
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2024-03-25T09:00:00.000-07:00
+    sortable_date: 2024-06-11T09:00:00.000-07:00
 
     # Duration of the webinar.
-    duration: 1 hour
+    duration: 90 minutes
     # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
     location: virtual
 
     # Description of the webinar.
     description: |
-        Getting started with Kubernetes doesn't have to be complex! Pulumi's infrastructure-as-code (IaC) platform can help remove the complexity and enable even beginner developers to use any programming language to provision modern infrastructure.
-
-        In this session, you will learn the fundamentals of building and deploying containerized workloads and get an introduction to Pulumi's IaC platform and deployment on AWS.
+        In this session, you will learn the fundamentals of building and deploying containerized workloads and get an introduction to Pulumi’s IaC platform and deployment on AWS.
 
         We’ll guide you through setting up an Amazon EKS cluster on AWS and deploying a containerized workload to the cluster.
 
@@ -66,9 +64,6 @@ main:
         - name: Josh Kodroff
           role: Sr Solutions Architect, Pulumi
           photo: /images/team/josh-kodroff.jpg
-        - name: Marina Novikova
-          role: Sr. Partner Solutions Architect, AWS
-          photo: /images/team/marina-novikova.jpg
 
     # case-sensitive
     tags:
@@ -80,6 +75,6 @@ main:
 # The right hand side form section.
 form:
     # HubSpot form id.
-    hubspot_form_id: d1df662a-d996-45b9-b089-98c53871d0bc
-    salesforce_campaign_id: 701PQ000007otWmYAI
+    hubspot_form_id: a1baea91-cf37-4ee7-b45f-3a643e20f305
+    salesforce_campaign_id: 701PQ00000CydsSYAR
 ---

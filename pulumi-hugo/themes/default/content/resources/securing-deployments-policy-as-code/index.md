@@ -35,10 +35,10 @@ main:
     event_type: workshop # workshop | event
 
     # URL for embedding a URL for ungated webinars.
-    youtube_url: https://www.youtube.com/embed/W-f5nNXZ2cE?rel=0
+    youtube_url:
 
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2023-11-02T09:00:00-07:00
+    sortable_date: 2024-06-13T09:00:00-07:00
 
     # Duration of the webinar.
     duration: 90 minutes
@@ -60,19 +60,16 @@ main:
         - name: Josh Kodroff
           role: Sr Solutions Architect, Pulumi
           photo: /images/team/josh-kodroff.jpg
-        - name: Marina Novikova
-          role: Sr Partner Solutions Architect, AWS
-          photo: /images/team/marina-novikova.jpg
 
     # case-sensitive
     tags:
-        level: Intermediate # Beginner, Intermediate, Advanced
+        level: Beginner # Beginner, Intermediate, Advanced
         topics: []
         languages: ["Python", "TypeScript"]
         clouds: ["AWS"]
 
 # The right hand side form section.
 form:
-    hubspot_form_id: 2db1d6c8-1d2c-4388-aff7-fd647eb7ec74
-    salesforce_campaign_id: 701Du000000BGSgIAO
+    hubspot_form_id: 2683c422-a64a-433c-a1c5-120bbd7bab02
+    salesforce_campaign_id: 701PQ00000CyelHYAR
 ---
