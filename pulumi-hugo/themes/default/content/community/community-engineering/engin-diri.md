@@ -3,6 +3,7 @@ title: Engin Diri
 id: engin-diri
 first_name: Engin
 meta_desc: Engin Diri is a solutions architect on the community engineering team.
+meta_image: community/community-engineering/engin-social-card.png
 layout: community-engineering/single
 aliases:
   - /engin
