@@ -43,7 +43,7 @@ simply records `unknown`.
 
 The next most common issue is creating resources inside an [`apply`
 function](/docs/concepts/inputs-outputs/#apply). If the value for the apply is
-unknown at preview time than the entire apply function will not run. This results in the plan not recording
+unknown at preview time, then the apply function will not run. This results in the plan not recording
 anything for the resources created inside the apply and reporting an error at update time when they try to
 create. This mostly comes up in the context of needing to create a resource for every item in an array, we
 have [an issue on GitHub](https://github.com/pulumi/pulumi/issues/4834) tracking support for this.
