@@ -1,0 +1,6 @@
+name: awsx-elb-web-listener-javascript
+runtime:
+  name: nodejs
+  options:
+    typescript: false
+description: An example that deploys an ApplicationLoadBalancer listening on port 80.

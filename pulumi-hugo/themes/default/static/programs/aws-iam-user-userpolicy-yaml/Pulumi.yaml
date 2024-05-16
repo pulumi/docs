@@ -1,0 +1,29 @@
+name: aws-iam-user-userpolicy-yaml
+runtime: yaml
+description: An example that deploys an IAM user and user policy on AWS.
+
+resources:
+  webmasterUser:
+    type: aws:iam/user:User
+    properties:
+      path: /system/
+      name: webmaster
+
+  webmasterAccessKey:
+    type: aws:iam/accessKey:AccessKey
+    name: webmaster
+    properties:
+      user: ${webmasterUser.name}
+
+  webmasterPolicy:
+    type: aws:iam/userPolicy:UserPolicy
+    properties:
+      user: ${webmasterUser.name}
+      policy:
+        fn::toJSON:
+          Version: "2012-10-17"
+          Statement:
+            - Effect: Allow
+              Action:
+                - "ec2:Describe*"
+              Resource: "*"

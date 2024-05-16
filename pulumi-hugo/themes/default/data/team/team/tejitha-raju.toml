@@ -1,0 +1,12 @@
+id = "tejitha-raju"
+name = "Tejitha Raju"
+title = "Product Manager"
+company = "Pulumi"
+weight = 1
+
+status = "active"
+
+[social]
+github = "tejavar"
+twitter = ""
+linkedin = "tejitha-r"

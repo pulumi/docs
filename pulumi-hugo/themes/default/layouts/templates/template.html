@@ -1,0 +1,25 @@
+{{ define "main" }}
+    <div class="layout-{{ .Page.Layout }} container mx-auto flex flex-col lg:flex-row items-start mb-32">
+        <div class="hidden lg:block lg:w-3/12 mt-24 sticky-sidebar flex-1">
+            <nav class="px-6 pt-2 pb-6 mb-8">
+                {{ partial "templates/left-nav.html" . }}
+            </nav>
+        </div>
+        <div class="lg:w-6/12 my-8 px-4 lg:px-0 w-full">
+            <header>
+                {{ partial "templates/breadcrumb.html" . }}
+                <h1 class="text-5xl mb-0">
+                    {{ .Title }}
+                </h1>
+            </header>
+            <section class="mt-8 mb-16">
+                {{ .Content }}
+            </section>
+        </div>
+        <div class="hidden lg:block lg:w-3/12 mt-24 sticky-sidebar flex-1">
+            <nav class="px-6 mb-8">
+                {{ partial "templates/right-nav.html" . }}
+            </nav>
+        </div>
+    </div>
+{{ end }}

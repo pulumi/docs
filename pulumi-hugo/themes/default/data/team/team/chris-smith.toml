@@ -1,0 +1,9 @@
+id = "chris-smith"
+name = "Chris Smith"
+
+status = "inactive"
+
+[social]
+github   = "chrsmith"
+linkedin = "chris-smith-0b213386"
+twitter  = "aChrisSmith"

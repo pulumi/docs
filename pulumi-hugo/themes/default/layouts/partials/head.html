@@ -1,0 +1,415 @@
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+    <!-- Our CSS and JS bundles. -->
+    {{ partial "assets" . }}
+
+
+    <!-- Google Site Verification for Google Webmaster tools and YouTube. -->
+    <meta name="google-site-verification" content="N-ezSTIu4P3bSc4TqidV4wWCkMzFiMN269ZgDYArGkk" />
+
+    {{ if .Params.redirect_to }}
+        {{ $delay := 0 }}
+
+        {{/* https://developers.google.com/search/docs/advanced/crawling/301-redirects#metarefresh */}}
+        {{ if .Params.redirect_temporarily }}
+            {{ $delay = 1 }}
+        {{ end }}
+
+
+        <meta http-equiv="refresh" content="{{ $delay }}; url={{ .Params.redirect_to }}" />
+    {{ end }}
+
+    {{ if eq .Params.block_external_search_index true }}
+        <meta name="robots" content="noindex" />
+    {{ end }}
+
+
+    <!--
+        We use taxonomy pages for tags and authors for our blog posts. These
+        pages end up cannibalising other pages on our site that rank for key terms.
+        To avoid this, we add the `noidex` tag to tell search engines not index taxonomy pages.
+    -->
+    {{ if .Data.Singular }}
+        <meta name="robots" content="noindex" />
+    {{ end }}
+
+    <!-- Organization schema for google -->
+    {{ if eq .Params.include_organization_schema true }}
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "Corporation",
+                "name": "Pulumi",
+                "@id": "https://www.pulumi.com/product/",
+                "description": "Pulumi lets engineers deliver infrastructure as code faster, using any programming language. The Pulumi Platform enables customers to manage 10x more resources at lower cost than traditional tools, while Pulumi Insights unlocks analytics and search across cloud infrastructure, and enables novel AI-driven infrastructure automation.",
+                "logo": "https://camo.githubusercontent.com/ffc5afc9f46a37b2f0d286d9d0af06786843507b2ddc162cdb41ef6a08f3b5ab/68747470733a2f2f7777772e70756c756d692e636f6d2f696d616765732f6c6f676f2f6c6f676f2d6f6e2d77686974652d626f782e7376673f",
+                "foundingDate" : "2017",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Seattle, WA",
+                    "addressCountry": "United States",
+                    "postalCode": "98101",
+                    "streetAddress": "1525” 4th Ave. Suite 800"
+                },
+                "email": "mailto:team@pulumi.com",
+                "url": "https://www.pulumi.com",
+                "sameAs": [
+                    "https://twitter.com/PulumiCorp",
+                    "https://www.linkedin.com/company/pulumi",
+                    "https://www.youtube.com/channel/UC2Dhyn4Ev52YSbcpfnfP0Mw",
+                    "https://github.com/pulumi/pulumi"
+                ]
+            }
+        </script>
+    {{ end }}
+
+
+    <!-- Events info for Google events. -->
+    {{ if .Params.event_data }}
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "Event",
+                "name": "{{ .Params.event_data.name }}",
+                "startDate": "{{ .Params.event_data.start_date }}",
+                "endDate": "{{ .Params.event_data.end_date }}",
+                "eventStatus": "https://schema.org/EventScheduled",
+                "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+                "location": {
+                  "@type": "VirtualLocation",
+                  "url": {{ .Params.event_data.url }}
+                },
+                "description": "{{ .Params.event_data.description }}",
+                "organizer": {
+                  "@type": "Organization",
+                  "name": "Pulumi",
+                  "url": "https://pulumi.com"
+                }
+              }
+        </script>
+    {{ end }}
+
+
+    <!--
+        Metadata tags for OpenGraph and Twitter.
+    -->
+
+    {{ $ogImage := "/logos/brand/og-default.png" }}
+    {{ $twitterImage := "/logos/brand/twitter-summary.png" }}
+    {{ $twitterCardType := "summary" }}
+
+    {{ if .Params.meta_image }}
+        {{ if in "blog templates" .Section }}
+            {{ $ogImage = (.Resources.GetMatch .Params.meta_image).RelPermalink }}
+        {{ else }}
+            {{ $ogImage = .Params.meta_image }}
+        {{ end }}
+
+
+        <!-- Only use large-image Twitter cards where we've set meta_images. -->
+        {{ $twitterImage = $ogImage }}
+        {{ $twitterCardType = "summary_large_image" }}
+    {{ end }}
+
+
+    <meta property="og:image" content="{{ $ogImage | absURL }}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="{{ .Permalink }}" />
+    <meta property="og:site_name" content="pulumi" />
+
+    <meta name="twitter:image" content="{{ $twitterImage | absURL }}" />
+    <meta name="twitter:card" content="{{ $twitterCardType }}" />
+    <meta name="twitter:site" content="@PulumiCorp" />
+
+    {{ if .Params.meta_twitter_creator }}
+        <meta name="twitter:creator" content="{{ .Params.meta_twitter_creator }}" />
+    {{ else if .Params.authors }}
+        {{ range $idx, $authorName := .Params.authors }}
+            {{ $authorData := index $.Site.Data.team.team $authorName }}
+            {{ with $authorData.social }}
+                {{ with .twitter }}
+                    <meta name="twitter:creator" content="@{{ . }}" />
+                {{ end }}
+            {{ end }}
+        {{ end }}
+    {{ end }}
+
+    {{ if .Params.meta_title }}
+        <meta property="og:title" content="{{ .Params.meta_title }}" />
+    {{ else if .Params.title }}
+        <meta property="og:title" content="{{ .Params.title }}" />
+    {{ else }}
+        <meta property="og:title" content="{{ .Site.Title }}" />
+    {{ end }}
+
+    {{ if .Params.meta_desc }}
+        <meta name="description" content="{{ .Params.meta_desc }}" />
+        <meta property="og:description" content="{{ .Params.meta_desc }}" />
+    {{ else if and .IsHome .Site.Params.meta_desc }}
+        <meta name="description" content="{{ .Site.Params.meta_desc }}" />
+        <meta property="og:description" content="{{ .Site.Params.meta_desc }}" />
+    {{ else if .Summary }}
+        <meta name="description" content="{{ .Summary }}" />
+        <meta property="og:description" content="{{ .Summary }}" />
+    {{ end }}
+
+    {{ if .IsHome }}
+        <title>{{ .Site.Title }}</title>
+    {{ else if .Title }}
+        {{ $title := .Title }}
+        {{ if .Params.title_tag }}
+            {{ $title = .Params.title_tag }}
+        {{ end }}
+
+
+        <!-- The blog tags, specifically the tag lists, end up clashing with other page titles on the website. We
+             add "Blog" to the title so that the titles no longer clash. -->
+        {{ if and (eq .Type "blog") .IsPage }}
+            <title>{{ $title }} | Pulumi Blog</title>
+        {{ else if eq .Type "blog" }}
+            {{ if gt $.Paginator.PageNumber 1 }}
+                <title>{{ $title }} | Page {{$.Paginator.PageNumber}} | Pulumi Blog</title>
+            {{ else }}
+                <title>{{ $title }} | Pulumi Blog</title>
+            {{ end }}
+        {{ else if eq .Type "docs" }}
+            <title>{{ $title }} | Pulumi Docs</title>
+        {{ else if eq .Type "registry" }}
+            <title>{{ replace $title "/" "." }} | Pulumi Registry</title>
+        {{ else }}
+            <title>{{ $title }} | Pulumi</title>
+        {{ end }}
+    {{ else if not (or .Params.redirect_to .Params.private) }}
+        <!--
+            TODO[pulumi/docs#1127]: can't enable this until Python docs are fixed.
+            \{\{ /* errorf "%q: Missing 'title' directive; please specify this to improve search indexing." .Path */ \}\}
+        -->
+    {{ end }}
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+
+    <!--
+        The canonical URL for the website. In all cases, this should be the public-facing
+        production URL of the site, to avoid SEO penalties for duplicate content.
+        https://support.google.com/webmasters/answer/139066?hl=en
+        https://en.wikipedia.org/wiki/Canonical_link_element
+    -->
+
+    {{ if .Params.canonical_url }}
+        <link rel="canonical" href="{{ .Params.canonical_url }}" />
+    {{ else }}
+        <link rel="canonical" href="{{ .Site.Params.canonicalURL }}{{ .RelPermalink }}" />
+    {{ end }}
+
+
+    <!-- RSS link for the blog. -->
+    <link rel="alternate" type="application/rss+xml" href="{{ "/blog/rss.xml" | absURL }}" title="Pulumi Blog" />
+
+    <!-- Lazy-load Sentry.  -->
+    <script src="https://js.sentry-cdn.com/02614bf2f18e4615a73218b810563ced.min.js" crossorigin="anonymous"></script>
+    <script>
+        Sentry.onLoad(function() {
+            Sentry.init({
+                environment: "{{ hugo.Environment }}",
+                {{ if in "preview production" hugo.Environment }}
+                    release: "{{ getenv "ASSET_BUNDLE_ID" }}",
+                {{ end }}
+
+                // Don't send Sentry events for browsers we don't support.
+                beforeSend(event) {
+                    const ua = event.request.headers["User-Agent"];
+
+                    if (ua && ua.match(/Linespider|Yeti/)) {
+                        return null;
+                    }
+
+                    return event;
+                }
+            });
+        });
+    </script>
+
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    {{- if eq hugo.Environment "production" }}
+        <!-- Clearbit snippet -->
+        <script src="https://tag.clearbitscripts.com/v1/pk_54e7d7c428c6d5e79098374d93a7b333/tags.js" referrerpolicy="strict-origin-when-cross-origin"></script>
+
+        <!-- Start VWO Async SmartCode -->
+        <link rel="preconnect" href="https://dev.visualwebsiteoptimizer.com" />
+        <script type='text/javascript' id='vwoCode'>
+            window._vwo_code || (function() {
+            var account_id=737937,
+            version=2.1,
+            settings_tolerance=2000,
+            hide_element='body',
+            hide_element_style = 'opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important',
+            /* DO NOT EDIT BELOW THIS LINE */
+            f=false,w=window,d=document,v=d.querySelector('#vwoCode'),cK='_vwo_'+account_id+'_settings',cc={};try{var c=JSON.parse(localStorage.getItem('_vwo_'+account_id+'_config'));cc=c&&typeof c==='object'?c:{}}catch(e){}var stT=cc.stT==='session'?w.sessionStorage:w.localStorage;code={use_existing_jquery:function(){return typeof use_existing_jquery!=='undefined'?use_existing_jquery:undefined},library_tolerance:function(){return typeof library_tolerance!=='undefined'?library_tolerance:undefined},settings_tolerance:function(){return cc.sT||settings_tolerance},hide_element_style:function(){return'{'+(cc.hES||hide_element_style)+'}'},hide_element:function(){if(performance.getEntriesByName('first-contentful-paint')[0]){return''}return typeof cc.hE==='string'?cc.hE:hide_element},getVersion:function(){return version},finish:function(e){if(!f){f=true;var t=d.getElementById('_vis_opt_path_hides');if(t)t.parentNode.removeChild(t);if(e)(new Image).src='https://dev.visualwebsiteoptimizer.com/ee.gif?a='+account_id+e}},finished:function(){return f},addScript:function(e){var t=d.createElement('script');t.type='text/javascript';if(e.src){t.src=e.src}else{t.text=e.text}d.getElementsByTagName('head')[0].appendChild(t)},load:function(e,t){var i=this.getSettings(),n=d.createElement('script'),r=this;t=t||{};if(i){n.textContent=i;d.getElementsByTagName('head')[0].appendChild(n);if(!w.VWO||VWO.caE){stT.removeItem(cK);r.load(e)}}else{var o=new XMLHttpRequest;o.open('GET',e,true);o.withCredentials=!t.dSC;o.responseType=t.responseType||'text';o.onload=function(){if(t.onloadCb){return t.onloadCb(o,e)}if(o.status===200){_vwo_code.addScript({text:o.responseText})}else{_vwo_code.finish('&e=loading_failure:'+e)}};o.onerror=function(){if(t.onerrorCb){return t.onerrorCb(e)}_vwo_code.finish('&e=loading_failure:'+e)};o.send()}},getSettings:function(){try{var e=stT.getItem(cK);if(!e){return}e=JSON.parse(e);if(Date.now()>e.e){stT.removeItem(cK);return}return e.s}catch(e){return}},init:function(){if(d.URL.indexOf('__vwo_disable__')>-1)return;var e=this.settings_tolerance();w._vwo_settings_timer=setTimeout(function(){_vwo_code.finish();stT.removeItem(cK)},e);var t;if(this.hide_element()!=='body'){t=d.createElement('style');var i=this.hide_element(),n=i?i+this.hide_element_style():'',r=d.getElementsByTagName('head')[0];t.setAttribute('id','_vis_opt_path_hides');v&&t.setAttribute('nonce',v.nonce);t.setAttribute('type','text/css');if(t.styleSheet)t.styleSheet.cssText=n;else t.appendChild(d.createTextNode(n));r.appendChild(t)}else{t=d.getElementsByTagName('head')[0];var n=d.createElement('div');n.style.cssText='z-index: 2147483647 !important;position: fixed !important;left: 0 !important;top: 0 !important;width: 100% !important;height: 100% !important;background: white !important;';n.setAttribute('id','_vis_opt_path_hides');n.classList.add('_vis_hide_layer');t.parentNode.insertBefore(n,t.nextSibling)}var o='https://dev.visualwebsiteoptimizer.com/j.php?a='+account_id+'&u='+encodeURIComponent(d.URL)+'&vn='+version;if(w.location.search.indexOf('_vwo_xhr')!==-1){this.addScript({src:o})}else{this.load(o+'&x=true')}}};w._vwo_code=code;code.init();})();
+        </script>
+        <!-- End VWO Async SmartCode -->
+
+        <!--Segment tracking-->
+        <script>
+            // Do not load Segment for these user agents.
+            userAgentBlacklist = [
+                'Mozilla/5.0 (compatible; SiteAuditBot/0.97; +http://www.semrush.com/bot.html)',
+                'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36'
+            ]
+
+            !(function () {
+                var i = "analytics",
+                    analytics = (window[i] = window[i] || []);
+                if (!analytics.initialize)
+                    if (analytics.invoked) {
+                        window.console && console.error && console.error("Segment snippet included twice.");
+                    } else if (userAgentBlacklist.includes(navigator.userAgent)) {
+                        console.log("Segment snippet not loaded for user agent: " + navigator.userAgent);
+                    } else {
+                        analytics.invoked = !0;
+                        analytics.methods = [
+                            "trackSubmit",
+                            "trackClick",
+                            "trackLink",
+                            "trackForm",
+                            "pageview",
+                            "identify",
+                            "reset",
+                            "group",
+                            "track",
+                            "ready",
+                            "alias",
+                            "debug",
+                            "page",
+                            "screen",
+                            "once",
+                            "off",
+                            "on",
+                            "addSourceMiddleware",
+                            "addIntegrationMiddleware",
+                            "setAnonymousId",
+                            "addDestinationMiddleware",
+                            "register",
+                        ];
+                        analytics.factory = function (e) {
+                            return function () {
+                                if (window[i].initialized) return window[i][e].apply(window[i], arguments);
+                                var n = Array.prototype.slice.call(arguments);
+                                if (["track", "screen", "alias", "group", "page", "identify"].indexOf(e) > -1) {
+                                    var c = document.querySelector("link[rel='canonical']");
+                                    n.push({ __t: "bpc", c: (c && c.getAttribute("href")) || void 0, p: location.pathname, u: location.href, s: location.search, t: document.title, r: document.referrer });
+                                }
+                                n.unshift(e);
+                                analytics.push(n);
+                                return analytics;
+                            };
+                        };
+                        for (var n = 0; n < analytics.methods.length; n++) {
+                            var key = analytics.methods[n];
+                            analytics[key] = analytics.factory(key);
+                        }
+                        analytics.load = function (key, n) {
+                            var t = document.createElement("script");
+                            t.type = "text/javascript";
+                            t.async = !0;
+                            t.setAttribute("data-global-segment-analytics-key", i);
+                            t.src = "https://cdn.segment.com/analytics.js/v1/" + key + "/analytics.min.js";
+                            var r = document.getElementsByTagName("script")[0];
+                            r.parentNode.insertBefore(t, r);
+                            analytics._loadOptions = n;
+                        };
+                        analytics._writeKey = "UK90Ofwacetj5VCPJ7cUgkbNcKLSHO3u";
+                        analytics.SNIPPET_VERSION = "5.2.0";
+                        analytics.load("UK90Ofwacetj5VCPJ7cUgkbNcKLSHO3u");
+                        analytics.page();
+                    }
+            })();
+        </script>
+
+        <!-- Segment Consent Manager -->
+        <script>
+            window.consentManagerConfig = function(exports) {
+                var React = exports.React;
+                var inEU = exports.inEU;
+
+                var bannerContent = React.createElement(
+                    'span',
+                    null,
+                    'We use cookies (and other similar technologies) to collect data to improve your experience on our site. By using our website, you՚re agreeing to the collection of data as described in our',
+                    ' ',
+                    React.createElement(
+                        'a',
+                        { href: '/docs/legal/website-data-collection-policy/', target: '_blank' },
+                        'Website Data Collection Policy'
+                    ),
+                    '.'
+                )
+                var bannerSubContent = React.createElement(
+                    'div',
+                    { class: "manage-cookies-btn" },
+                    'Manage cookies'
+                )
+                //var bannerSubContent = 'You can change your preferences at any time.'
+                var preferencesDialogTitle = 'Website Data Collection Preferences'
+                var preferencesDialogContent =
+                    'We use data collected by cookies and JavaScript libraries to improve your browsing experience, analyze site traffic, deliver personalized advertisements, and increase the overall performance of our site.'
+                var cancelDialogTitle = 'Are you sure you want to cancel?'
+                var cancelDialogContent =
+                    'Your preferences have not been saved. By continuing to use our website, you are agreeing to our Website Data Collection Policy.'
+
+                return {
+                    container: '#segment-consent-manager',
+                    writeKey: 'UK90Ofwacetj5VCPJ7cUgkbNcKLSHO3u',
+                    bannerContent: bannerContent,
+                    bannerSubContent: bannerSubContent,
+                    preferencesDialogTitle: preferencesDialogTitle,
+                    preferencesDialogContent: preferencesDialogContent,
+                    cancelDialogTitle: cancelDialogTitle,
+                    cancelDialogContent: cancelDialogContent,
+                    shouldRequireConsent: () => true,
+                    closeBehavior: exports.inEU() ? "dismiss" : "accept",
+                    bannerTextColor: "black",
+                }
+            }
+        </script>
+
+        <script
+            src="https://unpkg.com/@segment/consent-manager@5.3.0/standalone/consent-manager.js"
+            defer
+        ></script>
+
+        <!-- Facebook Domain Verification -->
+        <meta name="facebook-domain-verification" content="phlf6qes2bxa9ufzk8zt2es0qivg8j" />
+    {{- end }}
+
+
+    <!-- Apply anchor links to headings in the docs, blog and taxonomy pages. -->
+    {{ if and (not .IsHome) (.Section) (in "docs blog authors tags registry" .Section) }}
+        <script async defer src="//cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"></script>
+        <script>
+            // Wait for the window's `load` event to ensure the deferred anchor.js script has finished loading as well.
+            window.addEventListener("load", function (event) {
+                if (anchors) {
+                    anchors.add("h1:not(.no-anchor), h2:not(.no-anchor), h3:not(.no-anchor), h4:not(.no-anchor), h5:not(.no-anchor), h6:not(.no-anchor)");
+                }
+            });
+        </script>
+    {{ end }}
+
+    {{/* Tests to enforce required frontmatter for certain content types. */}}
+    {{ if and (eq .Type "blog") (eq .BundleType "leaf") .IsPage }}
+        {{ if not .Params.authors }}
+            {{ errorf "Blog posts require authors: %s" .File.Path }}
+        {{ else }}
+            {{ range $authorID := .Params.authors }}
+                {{ if not (index $.Site.Data.team.team $authorID) }}
+                    {{ errorf "Blog posts author (%s) not found: %s" $authorID $.Page.File.Path }}
+                {{ end }}
+            {{ end }}
+        {{ end }}
+        {{ if not .Params.tags }}
+            {{ errorf "Blog posts require tags: %s" .File.Path }}
+        {{ end }}
+    {{ end }}
+</head>

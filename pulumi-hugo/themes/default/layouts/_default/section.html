@@ -1,0 +1,20 @@
+{{ define "main" }}
+    <div class="md:flex">
+        <div class="md:w-3/12">
+            {{ partial "docs/main-nav.html" . }}
+        </div>
+
+        <div class="md:w-6/12">
+            {{ $h1 := .Title }}
+            {{ if .Params.h1 }}
+                {{ $h1 = .Params.h1 }}
+            {{ end }}
+            <h1>{{ $h1 }}</h1>
+            {{ .Content }}
+        </div>
+
+        <div class="md:w-3/12">
+            {{ partial "docs/table-of-contents.html" }}
+        </div>
+    </div>
+{{ end }}

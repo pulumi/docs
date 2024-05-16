@@ -1,0 +1,14 @@
+{
+    "name": "aws-static-website-with-runtime-logic-typescript",
+    "main": "index.ts",
+    "devDependencies": {
+        "@types/node": "^18"
+    },
+    "dependencies": {
+        "@aws-sdk/client-cloudfront": "^3.563.0",
+        "@pulumi/aws": "^6.0.0",
+        "@pulumi/awsx": "^2.0.2",
+        "@pulumi/pulumi": "^3.113.0",
+        "typescript": "^5.0.0"
+    }
+}

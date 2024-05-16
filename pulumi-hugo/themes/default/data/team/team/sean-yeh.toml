@@ -1,0 +1,9 @@
+id = "sean-yeh"
+name = "Sean Yeh"
+title = "Software Engineer"
+weight = 1
+
+status = "active"
+
+[social]
+github = "seanyeh"

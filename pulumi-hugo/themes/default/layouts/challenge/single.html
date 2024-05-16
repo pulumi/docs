@@ -1,0 +1,33 @@
+{{ define "hero" }}
+    <div class="container mx-auto">
+        <img src="{{ or .Params.banner_image "/images/challenge/challenge_banner.png" }}" alt="Pulumi Challenge banner image." />
+    </div>
+{{ end }}
+
+{{ define "main" }}
+    <div class="container mx-auto px-4 md:px-0">
+        <div class="md:w-3/12 my-8 sticky-sidebar md:pr-8">
+            <nav></nav>
+        </div>
+        <div class="mx-auto md:w-7/12 my-8">
+            <section class="container mx-auto my-8">
+                {{ .Content }}
+            </section>
+            <a
+                href="https://twitter.com/share?ref_src=twsrc%5Etfw"
+                class="twitter-share-button"
+                data-size="large"
+                data-text="I just completed a Pulumi Challenge! "
+                data-hashtags="PulumiChallenge"
+                data-show-count="false"
+                >Tweet</a
+            >
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <p>
+                <a href="{{ relref . "/challenge" }}">&larr; View Other Challenges</a>
+            </p>
+        </div>
+
+        <div class="md:w-2/12 md:ml-8 m8-8 "></div>
+    </div>
+{{ end }}

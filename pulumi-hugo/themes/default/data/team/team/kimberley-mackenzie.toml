@@ -1,0 +1,9 @@
+id = "kimberley-mackenzie"
+name = "Kimberley Mackenzie"
+title = "Senior UX Engineer"
+weight = 1
+
+status = "active"
+
+[social]
+github = "kimberleyamackenzie"

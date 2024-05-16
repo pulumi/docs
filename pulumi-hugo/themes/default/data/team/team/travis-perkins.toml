@@ -1,0 +1,11 @@
+id = "travis-perkins"
+name = "Travis Perkins"
+title = "VP of Customer Operations"
+company = "Pulumi"
+weight = 1
+status = "active"
+
+[social]
+github = "Tperk96"
+twitter = "Tperk96"
+linkedin = "traviskperkins"

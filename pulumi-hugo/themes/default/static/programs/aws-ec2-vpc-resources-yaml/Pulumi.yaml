@@ -1,0 +1,84 @@
+name: aws-ec2-vpc-resources-yaml
+runtime: yaml
+description: An example that deploys a VPC with an internet gateway, public subnet, route table, and security group, and launches an Amazon Linux EC2 instance with NGINX.
+
+resources:
+  myVpc:
+    type: aws:ec2:Vpc
+    properties:
+      cidrBlock: "10.0.0.0/16"
+  myInternetGateway:
+    type: aws:ec2:InternetGateway
+    properties:
+      vpcId: ${myVpc.id}
+
+  mySubnet:
+    type: aws:ec2:Subnet
+    properties:
+      vpcId: ${myVpc.id}
+      cidrBlock: "10.0.1.0/24"
+      mapPublicIpOnLaunch: true
+
+  myRouteTable:
+    type: aws:ec2:RouteTable
+    properties:
+      vpcId: ${myVpc.id}
+      routes:
+        - cidrBlock: "0.0.0.0/0"
+          gatewayId: ${myInternetGateway.id}
+
+  myRouteTableAssociation:
+    type: aws:ec2:RouteTableAssociation
+    properties:
+      routeTableId: ${myRouteTable.id}
+      subnetId: ${mySubnet.id}
+
+  mySecurityGroup:
+    type: aws:ec2:SecurityGroup
+    properties:
+      vpcId: ${myVpc.id}
+      description: "Allow HTTP inbound traffic"
+      ingress:
+        - protocol: tcp
+          fromPort: 80
+          toPort: 80
+          cidrBlocks:
+            - "0.0.0.0/0"
+      egress:
+        - protocol: "-1"
+          fromPort: 0
+          toPort: 0
+          cidrBlocks:
+            - "0.0.0.0/0"
+
+  myInstance:
+    type: aws:ec2:Instance
+    properties:
+      ami: ${myAmi.id}
+      instanceType: "t2.micro"
+      subnetId: ${mySubnet.id}
+      securityGroups:
+        - ${mySecurityGroup.id}
+      userData: |
+        #!/bin/bash
+        sudo yum update -y
+        sudo yum upgrade -y
+        sudo amazon-linux-extras install nginx1 -y
+        sudo systemctl enable nginx
+        sudo systemctl start nginx;
+
+variables:
+  myAmi:
+    fn::invoke:
+      function: aws:ec2:getAmi
+      arguments:
+        mostRecent: true
+        filters:
+          - name: description
+            values:
+              - "Amazon Linux 2 *"
+        owners:
+          - "amazon"
+
+outputs:
+  publicUrl: http://${myInstance.publicIp}

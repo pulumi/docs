@@ -1,0 +1,100 @@
+.note {
+    display: flex;
+    flex-direction: row;
+    border-radius: 4px;
+    padding: 10px 12px 12px 12px;
+    align-items: flex-start;
+    gap: 12px;
+    margin: 12px 0;
+    position: relative;
+
+    p {
+        margin-bottom: 16px;
+        line-height: 1.6;
+
+        &:first-of-type {
+            margin-top: 0;
+        }
+    }
+
+    :last-child {
+        margin-bottom: 0;
+    }
+
+    a {
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    i {
+        font-size: 15px;
+        margin-top: 2px;
+    }
+
+    div.icon-and-line {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    div.line {
+        display: flex;
+        width: 2px;
+        border-radius: 100px;
+        margin-top: 4px;
+        position: absolute;
+        top: 28px;
+        height: calc(100% - 46px);
+    }
+
+    div.content {
+        font-family: 'Inter';
+        font-weight: 400;
+        font-size: 14px;
+        color: #131314;
+        flex-direction: row;
+        min-width: 0;
+    }
+
+    &.note-info {
+        background: #f6f7fd;
+
+        a, 
+        i {
+            color: #4d5bd9;
+        }
+
+        div.line {
+            background-color: #a6adec;
+        }
+
+        code {
+            background-color: #ebedfb;
+        }
+    }
+
+    &.note-warning {
+        background: #fcf2e9;
+
+        a {
+            color: #9D5314;
+        }
+
+        i {
+            color: #e0771c;
+        }
+
+        div.line {
+            background-color: #ecad77;
+        }
+
+        code {
+            background: #f9e6d4;
+        }
+    }
+
+    div.highlight div.copy-button-container button.copy-button i {
+        color: #fff;
+    }
+}

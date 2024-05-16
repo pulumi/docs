@@ -1,0 +1,3 @@
+name: awsx-load-balanced-ec2-instances-java
+runtime: java
+description: An example that deploys multiple load-balanced VMs in Amazon EC2.

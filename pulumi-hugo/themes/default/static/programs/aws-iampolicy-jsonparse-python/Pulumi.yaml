@@ -1,0 +1,10 @@
+name: aws-iampolicy-jsonparse-python
+runtime:
+  name: python
+  options:
+    virtualenv: venv
+description: An example that deploys an IAM policy and manipulates it using JSON parsing.
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: aws-python

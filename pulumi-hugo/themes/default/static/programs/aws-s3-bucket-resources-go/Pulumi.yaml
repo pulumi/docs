@@ -1,0 +1,7 @@
+name: aws-s3-bucket-resources-go
+runtime: go
+description: An example that deploys S3 bucket, metric, notification, object, and policy resources.
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: aws-go

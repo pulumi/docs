@@ -1,0 +1,6 @@
+name: aws-ec2-vpc-resources-python
+runtime:
+  name: python
+  options:
+    virtualenv: venv
+description: An example that deploys a VPC with an internet gateway, public subnet, route table, and security group, and launches an Amazon Linux EC2 instance with Nginx.

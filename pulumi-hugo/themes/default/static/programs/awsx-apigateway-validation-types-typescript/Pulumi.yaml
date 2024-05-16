@@ -1,0 +1,3 @@
+name: awsx-apigateway-validation-types-typescript
+runtime: nodejs
+description: An example of configuring request validators for an API Gateway instance.
