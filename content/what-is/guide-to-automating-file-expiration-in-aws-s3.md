@@ -21,32 +21,53 @@ Here's a step-by-step explanation of what we'll do:
 
 Now, let's write a Pulumi program in TypeScript that creates an S3 bucket with a lifecycle policy to expire objects after 30 days.
 
-```yaml
+```typescript
+import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
+import * as awsx from "@pulumi/awsx";
 
 // Create an S3 bucket
-const bucket = new aws.s3.Bucket("my-bucket", {
-    // Bucket settings here
+const bucket = new aws.s3.Bucket("my-automated-bucket", {
+    // Bucket settings can be added here
 });
 
-// Define a lifecycle rule to expire objects in the bucket after 30 days
-const bucketLifecyclePolicy = new aws.s3.BucketLifecycleConfiguration("my-bucket-lifecycle", {
-    bucket: bucket.id, // Reference to the bucket created above
+// Define a lifecycle rule to transition objects to Glacier after 90 days
+const bucketLifecyclePolicy = new aws.s3.BucketLifecycleConfigurationV2("my-bucket-lifecycle", {
+    bucket: bucket.id,
     rules: [
         {
-            id: "expireObjects",
-            enabled: true,
-            expiration: {
-                days: 30, // Number of days after which to expire the object
-            },
-            noncurrentVersionExpiration: {
-                noncurrentDays: 30, // Applies the same rule for non-current versions of objects
-            },
-            abortIncompleteMultipartUpload: {
-                daysAfterInitiation: 7, // Clean up incomplete multipart uploads after 7 days
-            },
+            id: "archiveToGlacier",
+            status: "Enabled",  // Use "status" instead of "enabled"
+            transitions: [
+                {
+                    days: 90,
+                    storageClass: "GLACIER",
+                },
+            ],
         },
     ],
+});
+
+// Define a bucket policy to enforce server-side encryption with AWS managed keys (SSE-S3)
+const bucketPolicy = new aws.s3.BucketPolicy("my-bucket-policy", {
+    bucket: bucket.id,
+    policy: bucket.id.apply(id => JSON.stringify({
+        Version: "2012-10-17",
+        Statement: [
+            {
+                Sid: "EnforceSSE",
+                Effect: "Deny",
+                Principal: "*",
+                Action: "s3:PutObject",
+                Resource: `arn:aws:s3:::${id}/*`,
+                Condition: {
+                    StringNotEquals: {
+                        "s3:x-amz-server-side-encryption": "AES256",
+                    },
+                },
+            },
+        ],
+    })),
 });
 
 // Export the name of the bucket
@@ -60,7 +81,7 @@ The expiration property inside the rule is what controls the deletion of the obj
 Finally, we export the bucket name, which can be useful if you want to reference this bucket from other parts of your Pulumi program or from other Pulumi stacks.
 
 
-# Verify the configuration of your S3 file expiration
+## Verify the configuration of your S3 file expiration
 
 After deployment, you can verify the lifecycle configuration in the AWS Management Console:
 
@@ -69,11 +90,9 @@ After deployment, you can verify the lifecycle configuration in the AWS Manageme
 - Go to the "Management" tab.
 - Check the "Lifecycle rules" section to see the applied rules.
 
-# Wrapping Up
+## Wrapping Up
 
 This simple Pulumi program will ensure that any files uploaded to the documents/ folder in your S3 bucket will be automatically deleted after 30 days, helping you manage storage costs and keep your bucket tidy without manual intervention.
-
-# Additional use cases and considerations for S3 automation with Pulumi
 
 ## Additional Use Cases for S3 Automation with Pulumi
 
@@ -87,13 +106,13 @@ Automating S3 with Pulumi can extend beyond file expiration to address various o
 
 By leveraging Pulumi with AWS S3, you can automate and streamline various aspects of your AWS S3 management, leading to more efficient, cost-effective, and secure cloud storage operations.
 
-For more advanced configurations, refer to the [Pulumi AWS documentation](https://www.pulumi.com/docs/reference/pkg/aws/s3/bucketlifecycleconfiguration/) and the [AWS S3 Lifecycle Management guide](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lifecycle-mgmt.html).
+For more advanced configurations, refer to the [Pulumi AWS documentation](/docs/reference/pkg/aws/s3/bucketlifecycleconfiguration/) and the [AWS S3 Lifecycle Management guide](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lifecycle-mgmt.html).
 
 ## Want to learn more about Pulumi?
 
-- Follow the [Getting Started](/docs/pulumi-cloud/esc/get-started) guide.
-- Read the [Documentation](/docs/pulumi-cloud/esc) for all the commands and features available.
-- Visit the [Open Source](https://github.com/pulumi/esc) repo for Pulumi ESC.
+Pulumi is free, [open source](https://github.com/pulumi/pulumi), and optionally pairs with the [Pulumi Cloud](/docs/pulumi-cloud/) to make managing infrastructure secure, reliable, and hassle-free.
 
-[Join our community on Slack](https://slack.pulumi.com/) to discuss this topic further, and let us know what you think.
+- Follow the [Getting Started](/docs/get-started/) guide to give Pulumi a try.
+
+- [Join our community on Slack](https://slack.pulumi.com/) to discuss this guide, and let us know what you think.
 
