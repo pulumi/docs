@@ -10,7 +10,7 @@ menu:
         weight: 1
 ---
 
-This document outlines the steps required to configure Pulumi to accept Github id_tokens to be exchanged by Organization access tokens
+This document outlines the steps required to configure Pulumi to accept Github id_tokens to be exchanged by Organization access tokens.
 
 ## Prerequisites
 
@@ -27,14 +27,21 @@ Please note that this guide provides step-by-step instructions based on the offi
    ![Register Github](../register-github.png)
 1. Submit the form
 
-## Conrigure the Authorization Policies
+## Configure the Authorization Policies
 
 1. Click on the issuer name
-1. Change the policy decision to `Allow`
-1. Change the token type to `Organization`
-1. Add a new rule and configure it to verify the token audience to match your github organization url: `aud: https://github.com/octo-org`. For further information about Github token claims refer to the [official Github documentation](https://docs.github.com/en/actions/deployment/security-hardening-your-deployments/about-security-hardening-with-openid-connect#understanding-the-oidc-token).
+2. Change the policy decision to `Allow`
+3. Change the token type to `Organization`
+4. Add a policy to allow OIDC and configure the sub and audience for your organization and repositories:
+
+<!-- markdownlint-disable no-bare-urls -->
+* **Aud**: https://github.com/***organization***
+
+* **Sub**: repo:***organization***/***repo***:*
+<!-- markdownlint-enable no-bare-urls -->
+For further information about Github token claims refer to the [official Github documentation](https://docs.github.com/en/actions/deployment/security-hardening-your-deployments/about-security-hardening-with-openid-connect#understanding-the-oidc-token).
    ![Github policy example](../github-policies.png)
-1. Click on update
+5. Click on update
 
 ## Set up the Github Actions step to fetch the OIDC token
 
