@@ -1,35 +1,35 @@
 ---
 title: "Pulumi Release Notes: CED Launches, Skip Checkpoints flag, Automation API NodeJS parallel inline programs, and much more!"
 allow_long_title: true
- 
+
 # The date represents the post's publish date, and by default corresponds with
 # the date this file was generated. Posts with future dates are visible in development,
 # but excluded from production builds. Use the time and timezone-offset portions of
 # of this value to schedule posts for publishing later.
 date: 2022-11-08
- 
+
 # Use the meta_desc property to provide a brief summary (one or two sentences)
 # of the content of the post, which is useful for targeting search results or social-media
 # previews. This field is required or the build will fail the linter test.
 meta_desc: The latest Pulumi updates include our providers updates, enhancements made in the CLI and any Pulumi Service features released in the last two months.
- 
+
 # The meta_image appears in social-media previews and on the blog home page.
 # A placeholder image representing the recommended format, dimensions and aspect
 # ratio has been provided for you.
 meta_image: meta.png
- 
+
 # At least one author is required. The values in this list correspond with the `id`
 # properties of the team member files at /data/team/team. Create a file for yourself
 # if you don't already have one.
 authors:
    - meagan-cojocar
- 
+
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
    - features
    - pulumi-releases
- 
-# See the blogging docs at https://github.com/pulumi/pulumi-hugo/blob/master/BLOGGING.md.
+
+# See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md.
 # for additional details, and please remove these comments before submitting for review.
 ---
 
@@ -78,7 +78,7 @@ In October we announced a set of major updates which deepen and extend Pulumi’
 - [Pulumi Kubernetes Operator v1.10](https://github.com/pulumi/pulumi-kubernetes-operator/#readme): New integration with Flux for richer GitOps support, and ability to deploy Pulumi stacks from directly within the Kubernetes resource model
 - [New Pulumi Provider for Flux](https://www.pulumi.com/registry/packages/flux/): Manage Flux with Infrastructure as Code
 - [Pulumi Kubernetes Provider v3.22](/registry/packages/kubernetes): Server Side Apply Option and Resource Patch
-  
+
 👉  Learn more in the [Pulumi+Kubernetes: New Flux Integration and Inline Programs blog](/blog/pulumi-kubernetes-new-2022).
 
 ## Pulumi CLI and core technologies
@@ -109,10 +109,10 @@ Previewing destroy (demo/dev)
 
 View Live: https://app.pulumi.com/meagan/demo/dev/previews/632658ed-41e0-411d-b8a8-f41cc6122ef4
 
-     Type                 Name                  Plan       
- -   pulumi:pulumi:Stack  dev                   delete     
- -   └─ aws:s3:Bucket     my-bucket             delete     
- 
+     Type                 Name                  Plan
+ -   pulumi:pulumi:Stack  dev                   delete
+ -   └─ aws:s3:Bucket     my-bucket             delete
+
 Outputs:
   - bucketName: "my-bucket-ad305ba"
 

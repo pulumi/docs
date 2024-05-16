@@ -6,7 +6,6 @@ security:
   funcs:
     getenv:
       - ASSET_BUNDLE_ID
-      - REPO_THEME_PATH
       - PULUMI_CONVERT_URL
       - PULUMI_AI_WS_URL
       - GITHUB_TOKEN

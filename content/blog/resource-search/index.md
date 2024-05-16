@@ -14,7 +14,7 @@ date: 2023-05-19
 # which is useful for targeting search results or social-media previews.
 # This field is required or the build will fail the linter test.
 # Max length is 160 characters.
-meta_desc: Pulumi Cloud recently launched Resource Search. Today we are announcing two new improvements to the feature- advanced filtering and Pulumi Teams support. 
+meta_desc: Pulumi Cloud recently launched Resource Search. Today we are announcing two new improvements to the feature- advanced filtering and Pulumi Teams support.
 
 # The meta_image appears in social-media previews and on the blog home page.
 # A placeholder image representing the recommended format, dimensions and aspect ratio
@@ -33,7 +33,7 @@ authors:
 tags:
     - features
 
-# See the blogging docs at https://github.com/pulumi/pulumi-hugo/blob/master/BLOGGING.md.
+# See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md.
 # for additional details,
 # and please remove these comments before submitting for review.
 ---

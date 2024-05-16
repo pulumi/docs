@@ -75,7 +75,7 @@ jobs:
           aws-region: ${{ env.AWS_REGION }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           role-duration-seconds: 14400 # 4 hours
-          role-session-name: pulumi-hugo-examples@githubActions
+          role-session-name: pulumi-docs-examples@githubActions
           role-to-assume: ${{ secrets.AWS_CI_ROLE_ARN }}
 
       - name: Upgrade and test example programs
