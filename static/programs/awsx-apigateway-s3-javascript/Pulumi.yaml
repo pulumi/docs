@@ -1,0 +1,6 @@
+name: awsx-apigateway-s3-javascript
+runtime:
+  name: nodejs
+  options:
+    typescript: false
+description: An example that uses API Gateway to serve static content from Amazon S3.

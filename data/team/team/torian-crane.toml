@@ -1,0 +1,11 @@
+id = "torian-crane"
+name = "Torian Crane"
+title = "Sr. Technical Content Engineer"
+weight = 1
+
+status = "active"
+
+[social]
+github = "toriancrane"
+linkedin = "toriancrane"
+twitter = "toriancrane"

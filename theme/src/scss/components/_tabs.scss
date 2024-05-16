@@ -1,0 +1,40 @@
+pulumi-tabs {
+
+    // The tab list.
+    &::part(tabs) {
+        // If we don't to this, we'll get a flash of unstyled content.
+        @apply list-none p-0 mb-2 overflow-scroll flex;
+    }
+
+    // An individual tab.
+    &::part(tab) {
+        @apply font-display bg-transparent flex-auto;
+        border-bottom: 2px solid theme("colors.gray.300");
+    }
+
+    &[justify="center"] {
+        &::part(tabs) {
+            @screen sm {
+                @apply justify-center;
+            }
+        }
+
+        &::part(tab) {
+            @apply flex-none;
+        }
+    }
+
+    // The active tab.
+    &::part(active-tab) {
+        @include gradient-border();
+    }
+
+    // An anchor within a tab.
+    &::part(anchor) {
+        @apply py-2 px-6;
+
+        @screen md {
+            @apply px-8;
+        }
+    }
+}

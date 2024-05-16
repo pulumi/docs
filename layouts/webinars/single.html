@@ -1,0 +1,65 @@
+{{ define "hero" }}
+    {{ partial "hero.html" (dict "title" "Events" "small_title" "true" "headingLevel" 3) }}
+{{ end }}
+
+{{ define "main" }}
+    <!-- time variables to remove registration forms from past events -->
+    {{ $nowUnix := now.UnixMilli }}
+    <!-- add 24 hours to event date to list it for an extra day -->
+    {{ $eventDateUnix := (add (.Params.main.sortable_date | time.AsTime).UnixMilli (duration "hour" 24).Milliseconds) }}
+    {{ $timePassed := gt $nowUnix $eventDateUnix }}
+
+
+    <section id="webinarLandingPage" class="px-4">
+        <div class="container mx-auto max-w-6xl pt-16 pb-8">
+            <div class="md:mx-auto w-full">
+                <a><div class=""></div></a>
+                {{ if .Params.main.youtube_url }}
+                    <a href="/resources/#on-demand"><div class="text-blue-600 mb-4"><i class="fa fa-arrow-left mr-2"></i>All on-demand recordings</div></a>
+                {{ else }}
+                    <a href="/resources/#upcoming"><div class="text-blue-600 mb-4"><i class="fa fa-arrow-left mr-2"></i>All upcoming events</div></a>
+                {{ end }}
+                <span class="font-medium">WORKSHOP</span>
+                <span class="text-gray-300">&#8226;</span>
+                {{ if .Params.main.youtube_url }}
+                    <span class="font-normal">ON-DEMAND</span>
+                {{ else }}
+                    <span class="font-normal">VIRTUAL</span>
+                {{ end }}
+                <h2 class="mb-6 mt-0 text-3xl font-medium">{{ .Params.title }}</h2>
+
+                <div class="flex flex-col lg:flex-row">
+                    <div class="mx-auto w-full lg:w-1/2 mb-4">
+                        {{ if not .Params.main.youtube_url }}
+                            {{ partial "events/timing-info.html" (dict "datetime" .Params.main.sortable_date "duration" .Params.main.duration) }}
+                        {{ end }}
+                        {{ partial "events/summary.html" (dict "description" .Params.main.description "learn" .Params.main.learn) }}
+                    </div>
+
+                    <div class="w-full lg:w-1/2 lg:pl-4 mb-4">
+                        {{ if .Params.main.youtube_url }}
+                            <!-- Rendered with Hugo's YouTube shortcode: https://gohugo.io/content-management/shortcodes/#youtube -->
+                            <div class="rounded-xl shadow-lg mb-10" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+                                <iframe src="{{ .Params.main.youtube_url }}" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen=""></iframe>
+                            </div>
+                        {{ else if and .Params.gated (not $timePassed) }}
+                            <div class="rounded-xl mb-10 p-8" style="box-shadow: 0px 6px 36px 0px #00000024;">
+                                <div class="text-2xl">Register today</div>
+                                <pulumi-hubspot-form
+                                    form-id="{{ .Params.form.hubspot_form_id }}"
+                                    go-to-webinar-key="{{ .Params.form.gotowebinar_key }}"
+                                    salesforce-campaign-id="{{ .Params.form.salesforce_campaign_id }}"
+                                ></pulumi-hubspot-form>
+                            </div>
+                        {{ end }}
+                    </div>
+                </div>
+                    
+                {{ if .Params.main.presenters }}
+                    {{ partial "events/event-speakers.html" (dict "presenters" .Params.main.presenters) }}
+                {{ end }}
+                </div>
+        </div>
+    </section>
+{{ end }}
+ 

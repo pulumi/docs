@@ -1,0 +1,6 @@
+name: awsx-vpc-javascript
+runtime:
+  name: nodejs
+  options:
+    typescript: false
+description: An example that creates a new VPC using the default settings.

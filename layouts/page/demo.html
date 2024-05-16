@@ -1,0 +1,40 @@
+{{ define "main" }}
+    {{ $pageContext := . }}
+
+
+    <section class="bg-gray-100">
+        <div class="container mx-auto pb-12">
+            <div class="flex flex-col md:flex-row">
+                <div class="w-full md:w-1/2 p-6">
+                    <h1 class="text-5xl font-bold mb-6">{{ .Params.overview.title }}</h1>
+                    <ul>
+                        {{ range $detail := .Params.overview.details }}
+                            <li>{{ $detail }}</li>
+                        {{ end }}
+                    </ul>
+
+                    <div class="flex flex-wrap justify-center items-center mt-12">
+                        {{ range $logo := .Params.customer_logos.logos }}
+                            <div class="w-1/4 p-3">
+                                {{ if $logo.link }}
+                                    <a href="{{ relref $pageContext $logo.link }}">
+                                        {{ partial "customer-logo.html" (dict "logo" $logo.name "hoverable" true) }}
+                                    </a>
+                                {{ else }}
+                                    {{ partial "customer-logo.html" (dict "logo" $logo.name "hoverable" true) }}
+                                {{ end }}
+                            </div>
+                        {{ end }}
+                    </div>
+                </div>
+
+                <div class="w-full md:w-1/2 p-6">
+                    <div class="mt-10 md:mt-0 bg-gray-200 rounded p-6 shadow">
+                        <h4>Request a demo</h4>
+                        <pulumi-hubspot-form form-id="{{ .Params.form.form_id }}"></pulumi-hubspot-form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{{ end }}

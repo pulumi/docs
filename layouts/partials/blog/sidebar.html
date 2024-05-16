@@ -1,0 +1,79 @@
+<!--
+    Blog sidebar, showing a list of tags, search, and a quick intro for context.
+-->
+<aside class="lg:pr-8 sticky-sidebar">
+    <!-- Sidebar menu toggle for mobile. -->
+    <div class="lg:hidden">
+        <button class="blog-sidebar-toggle items-center px-3 py-2 border rounded text-purple border-purple">Toggle Blog Navigation</button>
+    </div>
+
+    {{ if eq .Page.Title "Blog" }}
+        <h1 class="no-anchor hidden lg:flex mt-2 mb-6">
+            <a data-track="sidebar" class="text-2xl" href="{{ relref . "/blog" }}">Pulumi Blog</a>
+        </h1>
+    {{ else }}
+        <h2 class="no-anchor hidden lg:flex mt-2 mb-6">
+            <a data-track="sidebar" class="text-2xl" href="{{ relref . "/blog" }}">Pulumi Blog</a>
+        </h2>
+    {{ end }}
+
+
+    <!-- Sidebar content. Hidden on smaller displays unless toggled. -->
+    <div class="blog-sidebar-content hidden lg:block">
+        {{ partial "blog/search" . }}
+
+
+        <hr class="my-8" />
+
+        {{ partial "sidebar-cta" . }}
+
+
+        <hr class="my-8" />
+
+        <div class="my-4">
+            <h5 class="no-anchor">Recent Posts</h5>
+            <ul class="list-none p-0">
+                {{ range $post := first 10 (where .Site.Pages "Type" "blog").ByDate.Reverse }}
+                    {{ if in $post.File.Filename "_index.md" }}
+                        {{/* The /blog/_index.md file unfortunately shows up in the list, so we skip it. */}}
+                    {{ else }}
+                        <li class="my-4 leading-snug">
+                            <a data-track="recent-post" class="text-sm" href="{{ $post.RelPermalink }}">{{ $post.Title }}</a>
+                        </li>
+                    {{ end }}
+                {{ end }}
+            </ul>
+        </div>
+        <hr class="my-8" />
+
+        {{/* Only show the top N blog tags. This lists releases first, then features, then most popular descendingly. */}}
+
+        {{ $allTags := .Site.Taxonomies.tags.ByCount }}
+        {{ $releases := where $allTags "Name" "pulumi-releases" }}
+        {{ $features := where $allTags "Name" "features" }}
+        {{ $others := where $allTags "Name" "not in" "pulumi-releases features" }}
+
+
+        <ul class="tags list-none p-0 mb-2 inline-flex flex-wrap text-xs">
+            {{ range $i, $tagInfo := (slice $releases $features (first 40 $others)) }}
+                {{ range $tagInfo }}
+                    {{ $tag := .Name }}
+                    <li>
+                        <a
+                            data-track="blog-tag-{{ $tag | urlize }}"
+                            class="tag tag-blog text-xs m-1 {{ if eq (lower $tag) (urlize ((lower $.Title))) }}active{{ end }}"
+                            href="{{ .Page.RelPermalink }}"
+                        >
+                            {{ $tag }}
+                        </a>
+                    </li>
+                {{ end }}
+            {{ end }}
+        </ul>
+        <a class="text-blue-600 text-sm block m-1 mb-4" href="{{ relref . "/blog/tag" }}">All blog tags &rarr;</a>
+    </div>
+
+    <div class="lg:hidden pb-4">
+        <!-- Vertical spacer, for mobile layouts. -->
+    </div>
+</aside>

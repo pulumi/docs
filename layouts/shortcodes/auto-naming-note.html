@@ -1,0 +1,8 @@
+{{ $resource := default "resource" (.Get "resource") }}
+{{ $suffix := default "abc123" (.Get "suffix") }}
+
+<p>
+    The extra characters you see tacked onto the {{ $resource }} name (<code>-{{ $suffix }}</code>) are the result of <em>auto-naming</em>,
+    a feature that lets you use the same resource names across multiple stacks without naming collisions. You can learn more about
+    auto-naming <a href="/docs/concepts/resources/names/#autonaming">in the Concepts docs</a>.
+</p>

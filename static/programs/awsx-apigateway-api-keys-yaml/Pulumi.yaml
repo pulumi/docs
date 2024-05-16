@@ -1,0 +1,35 @@
+name: awsx-apigateway-api-keys-yaml
+runtime: yaml
+description: An example that deploys an API Gateway instance with support for API keys.
+
+resources:
+  api:
+    type: aws-apigateway:RestAPI
+    properties:
+      routes:
+        - path: /
+          localPath: data
+          index: index.json
+          contentType: application/json
+          apiKeyRequired: true
+
+  key:
+    type: aws:apigateway:ApiKey
+
+  plan:
+    type: aws:apigateway:UsagePlan
+    properties:
+      apiStages:
+        - apiId: ${api.api.id}
+          stage: ${api.stage.stageName}
+
+  planKey:
+    type: aws:apigateway:UsagePlanKey
+    properties:
+      keyId: ${key.id}
+      keyType: "API_KEY"
+      usagePlanId: ${plan.id}
+
+outputs:
+  url: ${api.url}
+  apiKey: ${key.value}

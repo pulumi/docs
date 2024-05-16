@@ -1,0 +1,3 @@
+name: awsx-load-balanced-ec2-instances-typescript
+runtime: nodejs
+description: An example that deploys multiple load-balanced VMs in Amazon EC2.

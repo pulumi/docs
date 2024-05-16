@@ -1,0 +1,5 @@
+name: awsx-load-balanced-fargate-ecr-javascript
+runtime:
+  name: nodejs
+  options:
+    typescript: false

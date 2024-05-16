@@ -1,0 +1,11 @@
+id = "devon-grove"
+name = "Devon Grove"
+title = "Software Engineer"
+weight = 1
+
+status = "active"
+
+[social]
+github = "djgrove"
+twitter = "devongroveweb"
+linkedin = "devongrove"

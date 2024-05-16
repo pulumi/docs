@@ -1,0 +1,10 @@
+id = "will-jones"
+name = "Will Jones"
+title = "Software Engineer"
+weight = 1
+
+status = "active"
+
+[social]
+github = "lunaris"
+linkedin = "will-jones-991658ba"

@@ -1,0 +1,10 @@
+name: aws-simulated-dbserver-database-python
+runtime:
+  name: python
+  options:
+    virtualenv: venv
+description: An example that deploys a simulated database server and database resource
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: aws-python

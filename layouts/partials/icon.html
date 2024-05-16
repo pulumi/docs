@@ -1,0 +1,4 @@
+<span>
+    {{ $path := .icon | printf "%s/%s" "icons" | printf "%s" }}
+    {{ partial $path }}
+</span>

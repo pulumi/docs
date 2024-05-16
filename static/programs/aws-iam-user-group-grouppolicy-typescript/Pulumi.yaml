@@ -1,0 +1,7 @@
+name: aws-iam-user-group-grouppolicy-typescript
+runtime: nodejs
+description: An example that deploys an IAM user, group, and group policy on AWS.
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: aws-typescript

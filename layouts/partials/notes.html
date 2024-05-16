@@ -1,0 +1,16 @@
+{{ $type := default "info" .type }}
+{{ $icon := "info-circle" }}
+
+{{ if eq $type "warning" }}
+    {{ $icon = "exclamation-triangle" }}
+{{ end }}
+
+<div class="note note-{{ $type }}">
+    <div class="icon-and-line">
+        <i class="fas fa-{{ $icon }}"></i>
+        <div class="line"></div>
+    </div>
+    <div class="content">
+        {{ .text }}
+    </div>
+</div>

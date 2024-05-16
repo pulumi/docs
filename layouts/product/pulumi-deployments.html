@@ -1,0 +1,402 @@
+{{ define "hero" }}
+    {{ partial "hero" (dict "title" .Params.title) }}
+{{ end }}
+
+{{ define "main" }}
+    {{ $pageContext := . }}
+
+    <section id="overview" class="max-w-5xl mx-auto text-center my-16 px-6">
+        {{ with .Params.overview }}
+            <h2>{{ .title }}</h2>
+            <p class="text-center w-full lg:w-3/4 mx-auto">{{ .description | markdownify }}</p>
+            <div class="mt-8">
+                <a href="https://app.pulumi.com/signup/" class="btn-secondary">Get Started with Deployments</a>
+            </div>
+        {{ end }}
+    </section>
+
+    <section id="quotes" class="w-full my-16">
+        <div class="w-full">
+            <div class="lg:flex lg:items-stretch justify-center">
+                {{ range $item := .Params.quotes.items }}
+                    <div class="lg:w-1/3 px-4 mb-12 lg:mb-0">
+                        <div class="flex flex-col h-full card p-6 bg-white relative">
+                            <p class="text-left mt-0 italic text-xs font-semibold text-black">{{ $item.quote }}</p>
+                            <div class="flex flex-grow items-end justify-between pb-2">
+                                <div class="w-2/3 text-left">
+                                    <p class="text-black mb-0 text-xs">{{ $item.name }}</p>
+                                    <p class="mt-0 text-xs">{{ $item.name_title }}</p>
+                                </div>
+                                <div class="my-4 h-8">
+                                    {{ partial "customer-logo.html" (dict "logo" $item.company) }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {{ end }}
+            </div>
+        </div>
+    </section>
+
+    <section id="benefits" class="container mx-auto my-16 lg:mt-16 lg:mb-8 px-6">
+        <div class="lg:flex">
+            <div class="lg:w-2/3 lg:order-last mb-8 lg:mb-0 relative h-full">
+                <img class="card mx-auto bg-white" src="/images/product/pulumi-deployments-graphic.png" alt="Pulumi Deployments Architecture Screenshot" />
+                <div class="hidden lg:block xl:hidden mt-8 text-center">
+                    <a href="https://app.pulumi.com/signup/" class="btn-secondary">Get Started with Deployments</a>
+                </div>
+            </div>
+            <div class="lg:w-1/3 lg:pr-8">
+                {{ with .Params.benefits }}
+                    <h3>{{ .title }}</h3>
+                    <p class="text-sm">{{ .description | markdownify }}</p>
+                    <div class="mt-8 text-center block lg:hidden xl:block">
+                        <a href="https://app.pulumi.com/signup/" class="btn-secondary">Get Started with Deployments</a>
+                    </div>
+                {{ end }}
+            </div>
+        </div>
+    </section>
+
+    <section id="options" class="container mx-auto text-center mt-16 px-6">
+        <div class="max-w-5xl mx-auto text-center px-6">
+            <h2>{{ .Params.options.title }}</h2>
+            <div class="text-left">{{ .Params.options.description }}</div>
+        </div>
+        <div class="flex flex-wrap justify-content items-stretch text-left my-4">
+            {{ range $item := .Params.options.items }}
+                <div class="w-full lg:w-1/3 p-3">
+                    <div class="h-full card bg-white p-8">
+                        <div class="icon-section mb-8">
+                            {{ partial "color-icon.html" (dict "icon" $item.icon "icon_color" $item.icon_color) }}
+                        </div>
+                        <div>
+                            <h5>{{ $item.title }}</h5>
+                        </div>
+                        <div class="mt-6">
+                            <p>{{ $item.description | markdownify }}</p>
+                        </div>
+                    </div>
+                </div>
+            {{ end }}
+        </div>
+    </section>
+
+    <section id="enterprise-features" class="container mx-auto text-center mt-16 px-6">
+        <div class="max-w-5xl mx-auto text-center px-6">
+            <h2>Enterprise ready features</h2>
+        </div>
+        <div class="container mx-auto">
+            <div class="md:flex mx-auto max-w-5xl mb-8">
+                <div class="md:w-1/3 p-4">
+                    <div class="text-center p-6 h-full">
+                        {{ partial "color-icon.html" (dict "icon" "eye" "icon_color" "blue") }}
+                        <h5>Drift Detection</h5>
+                        <p>
+                            Continuously detect and remediate drift, the deviation of actual cloud infrastructure from the infrastructure as code source of truth. 
+                        </p>
+                    </div>
+                </div>
+                <div class="md:w-1/3 p-4">
+                    <div class="text-center p-6 h-full">
+                        {{ partial "color-icon.html" (dict "icon" "security" "icon_color" "violet") }}
+                        <h5>OIDC Support</h5>
+                        <p>
+                            Use OpenID Connect Configuration to use short-lived tokens issued by Pulumi Cloud to make changes to your cloud resources.
+                        </p>
+                    </div>
+                </div>
+                <div class="md:w-1/3 p-4">
+                    <div class="text-center p-6 h-full">
+                        {{ partial "color-icon.html" (dict "icon" "git-merged" "icon_color" "yellow") }}
+                        <h5>GitHub Enterprise Support</h5>
+                        <p>
+                            Integrate Pulumi Deployments into your GitHub Enterprise instance so developers can provision infrastructure through GitHub.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="md:flex mx-auto max-w-5xl mb-8">
+                <div class="md:w-1/3 p-4">
+                    <div class="text-center p-6 h-full">
+                        {{ partial "color-icon.html" (dict "icon" "team" "icon_color" "salmon") }}
+                        <h5>ChatOps Integration</h5>
+                        <p>
+                            Get status notifications in Slack and Microsoft Teams for deployment statuses.
+                        </p>
+                    </div>
+                </div>
+                <div class="md:w-1/3 p-4">
+                    <div class="text-center p-6 h-full">
+                        {{ partial "color-icon.html" (dict "icon" "buildings" "icon_color" "blue") }}
+                        <h5>Self-hosted Runners</h5>
+                        <p>
+                            Run agents on your own private infrastructure for more control over your Pulumi Deployments.
+                        </p>
+                    </div>
+                </div>
+                <div class="md:w-1/3 p-4">
+                    <div class="text-center p-6 h-full">
+                        {{ partial "color-icon.html" (dict "icon" "exchange" "icon_color" "purple") }}
+                        <h5>Flexible Webhooks</h5>
+                        <p>Program custom workflows using events sent from Pulumi Deployments.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="relative mx-auto text-center">
+        <h2>Pricing</h2>
+        <p>{{ "Pulumi Deployments costs $0.01 per deployment minute.<br/>Any charges from Pulumi Deployments are in addition to your Pulumi Cloud edition billing. See [Pricing](/pricing) to learn more." | markdownify }}</p>
+        <div class="mx-5 mt-8 flex justify-center text-left">
+            <div class="lg:flex lg:items-stretch">
+                <div class="edition bg-white p-5 pb-8 xl:pl-8 hidden lg:flex lg:grow card mr-4 xl:mr-8">
+                    <div class="max-w-md lg:max-w-xs mx-auto">
+                        <div class="h-full flex flex-col pt-6">
+                            <h4 class="title mb-2 h-14 lg:h-24 xl:h-14">Individual</h4>
+                            <div class="h-20">
+                                <p class="m-0  text-xs mt-2">500 included Pulumi Deployments minutes/month</p>
+                            </div>
+
+                            <div class="flex-grow lg:whitespace-nowrap">
+                                <div class="text-base text-black mb-4">Everything to <b>get started</b>:</div>
+                                <ul class="list-none text-left text-sm inline-block pl-0">
+                                    <li>
+                                        <span>
+                                            <i class="fa fa-check pricing-checkmark mr-2"></i>
+                                            <span>500 included deploy minutes/month</span>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span>
+                                            <i class="fa fa-check pricing-checkmark mr-2"></i>
+                                            <span>Deploy via GitHub, API, and console</span>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span>
+                                            <i class="fa fa-check pricing-checkmark mr-2"></i>
+                                            <span>Self-hosted deployment runners available</span>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="trialed-editions">
+                    <div class="hidden lg:block gradient lg:w-full"></div>
+                    <div class=" lg:flex lg:flex-row">
+                        
+                        <div class="edition py-5 px-0 lg:hidden">
+                            <div class="h-full bg-white max-w-md mx-auto">
+                                <div class="h-full flex flex-col px-4 py-4">
+                                    <h4 class="title mb-2 h-14 lg:h-24 xl:h-14">Individual</h4>
+                                    <div class="h-20">
+                                        <p class="m-0  text-xs mt-2">500 included Pulumi Deployments minutes/month</p>
+                                    </div>
+
+                                    <div class="flex-grow lg:whitespace-nowrap">
+                                        <div class="text-base text-black mb-4">Everything to <b>get started</b>:</div>
+                                        <ul class="list-none text-left text-sm inline-block pl-0">
+                                            <li>
+                                                <span>
+                                                    <i class="fa fa-check pricing-checkmark mr-2"></i>
+                                                    <span>500 included deploy minutes/month</span>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span>
+                                                    <i class="fa fa-check pricing-checkmark mr-2"></i>
+                                                    <span>Deploy via GitHub, API, and console</span>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span>
+                                                    <i class="fa fa-check pricing-checkmark mr-2"></i>
+                                                    <span>Self-hosted deployment runners available</span>
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="edition py-5 px-0 lg:pb-3.5 lg:w-1/3">
+                            <div class="h-full bg-white max-w-md mx-auto">
+                                <div class="h-full flex flex-col pr-4 pl-4 xl:pl-8 py-4">
+                                    <h4 class="title mb-2 h-14 lg:h-24 xl:h-14">Team</h4>
+                                    <div class="h-20">
+                                        <div class="text-black text-xl lg:text-xl flex items-center lg:whitespace-nowrap">
+                                            $0.01 /
+                                            <div class="m-0 text-xs mt-1 flex flex-col pl-1"><span>deploy</span><span>minute</span></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex-grow">
+                                        <div class="text-base text-black mb-4">Everything in <b>Individual</b>, plus:</div>
+                                        <ul class="list-none text-left text-sm inline-block pl-0">
+                                            <li>
+                                                <span>
+                                                    <i class="fa fa-check pricing-checkmark mr-2"></i>
+                                                    <span>3,000 included Pulumi Deployments minutes/month, then $0.01 per deploy minute</span>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span>
+                                                    <i class="fa fa-check pricing-checkmark mr-2"></i>
+                                                    <span>5 concurrent deployments</span>
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="lg:hidden mt-8 relative z-0 flex flex-col w-56 xl:w-60">
+                                        <a id="teamStartTrialButton" class="btn-secondary py-3 px-6 text-center">Start trial</a>
+                                        <p class="text-xs pt-1 my-0 text-center">No credit card needed.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="edition py-5 px-0 lg:pb-3.5 lg:w-1/3">
+                            <div class="h-full bg-white max-w-md mx-auto">
+                                <div class="h-full flex flex-col px-4 py-4">
+                                    <h4 class="title mb-2 h-14 lg:h-24 xl:h-14">Enterprise</h4>
+                                    <div class="h-20">
+                                        <div class="text-black text-xl lg:text-xl xl:whitespace-nowrap">Custom</div>
+                                        <p class="m-0 text-xs mt-1"><a href="/contact/?form=sales" class="underline">Contact us</a> for a demo & quote.</p>
+                                    </div>
+
+                                    <div class="flex-grow">
+                                        <div class="text-base text-black mb-4">Everything in <b>Team</b>, plus:</div>
+                                        <ul class="list-none text-left text-sm inline-block pl-0">
+                                            <li>
+                                                <span>
+                                                    <i class="fa fa-check pricing-checkmark mr-2"></i>
+                                                    <span>Volume pricing available</span>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span>
+                                                    <i class="fa fa-check pricing-checkmark mr-2"></i>
+                                                    <span>Drift detection</span>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span>
+                                                    <i class="fa fa-check pricing-checkmark mr-2"></i>
+                                                    <span>Time-to-live stacks</span>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span>
+                                                    <i class="fa fa-check pricing-checkmark mr-2"></i>
+                                                    <span>Scheduled deployments</span>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span>
+                                                    <i class="fa fa-check pricing-checkmark mr-2"></i>
+                                                    <span>25 concurrent deployments</span>
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="edition py-5 px-0 lg:pb-3.5 lg:w-1/3">
+                            <div class="h-full bg-white max-w-md mx-auto">
+                                <div class="h-full flex flex-col pl-4 pr-4 xl:pr-0 py-4">
+                                    <h4 class="title mb-2 h-14 lg:h-24 xl:h-14 xl:whitespace-nowrap">Business Critical</h4>
+                                    <div class="h-20">
+                                        <div class="text-black text-xl lg:text-xl xl:whitespace-nowrap">Custom</div>
+                                        <p class="m-0 text-xs mt-1"><a href="/contact/?form=sales" class="underline">Contact us</a> for a demo & quote.</p>
+                                    </div>
+
+                                    <div class="flex-grow">
+                                        <div class="text-base text-black mb-4">Everything in <b>Enterprise</b>, plus:</div>
+                                        <ul class="list-none text-left text-sm inline-block pl-0">
+                                            <li>
+                                                <span>
+                                                    <i class="fa fa-check pricing-checkmark mr-2"></i>
+                                                    <span>Volume pricing available</span>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span>
+                                                    <i class="fa fa-check pricing-checkmark mr-2"></i>
+                                                    <span>GitHub Enterprise integration</span>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span>
+                                                    <i class="fa fa-check pricing-checkmark mr-2"></i>
+                                                    <span>150 concurrent deployments</span>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span>
+                                                    <i class="fa fa-check pricing-checkmark mr-2"></i>
+                                                    <span>Self-hosted deployment runners included</span>
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="container mx-auto my-16">
+        <div class="max-w-5xl mx-auto text-center">
+            <h2>Frequently asked questions</h2>
+        </div>
+        <ul class="list-none p-0 mx-5 xl:ml-12" data-faq-type="faq-deployments">
+            {{ range $item := .Params.faq.items }}
+                <li class="accordion-item text-2xl py-3">
+                    {{ partial "accordian-header" (dict "text" $item.header "large_header" true) }}
+                    <div class="accordion-item-body-no-animation text-base">
+                        {{ $item.content | markdownify }}
+                    </div>
+                </li>
+            {{ end }}
+        </ul>
+    </section>
+
+    <section id="learn" class="container mx-auto text-center mt-16 px-6">
+        <div class="max-w-5xl mx-auto text-center px-6">
+            <h2>{{ .Params.learn.title }}</h2>
+            <div class="text-left">{{ .Params.learn.description }}</div>
+        </div>
+        <div class="flex flex-wrap justify-content items-stretch text-left my-4">
+            {{ range $item := .Params.learn.items }}
+                <div class="w-full lg:w-1/2 p-3">
+                    <div class=" card h-full bg-white p-12">
+                        <div>
+                            <h5>{{ $item.title }}</h5>
+                        </div>
+                        <div class="mt-6">
+                            <p>{{ $item.description | markdownify }}</p>
+                        </div>
+                        {{ range $button := $item.buttons }}
+                            <div class="my-2 py-4 z-10 relative">
+                                <a href="{{ $button.link }}" class="z-10 btn-{{ $button.type }}">{{ $button.action }}</a>
+                            </div>
+                        {{ end }}
+                    </div>
+                </div>
+            {{ end }}
+        </div>
+    </section>
+{{ end }}

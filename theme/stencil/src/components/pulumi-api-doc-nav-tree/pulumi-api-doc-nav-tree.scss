@@ -1,0 +1,181 @@
+@import "../../../../src/scss/colors";
+
+.symbol-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.symbol {
+    height: 14px;
+    width: 14px;
+    border-width: 1px;
+    border-style: solid;
+    box-sizing: border-box;
+    border-radius: 50%;
+    margin-right: 6px;
+
+    &.module,
+    &.function,
+    &.resource {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+    }
+
+    &.module {
+        border-color: map-get($green, 700);
+
+        &:before {
+            content: "M";
+            color: map-get($green, 700);
+            font-size: 9px;
+            font-weight: 700;
+        }
+    }
+
+    &.function {
+        border-color: red;
+
+        &:before {
+            content: "F";
+            color: red;
+            font-size: 9px;
+            font-weight: 700;
+        }
+    }
+
+    &.resource {
+        border-color: map-get($blue, 700);
+
+        &:before {
+            content: "R";
+            color: map-get($blue, 700);
+            font-size: 9px;
+            font-weight: 700;
+        }
+    }
+}
+
+$base-ch-width-xl: 24ch;
+$base-ch-width-l: 12ch;
+
+.nav-tree-item {
+    
+    a {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: map-get($gray, 900);
+        max-width: 24ch;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    summary {
+        width: 100%;
+        padding-left: 8px;
+        @media (max-width: 1279px) {
+            &.depth-0 {
+                max-width: $base-ch-width-l;
+            }
+            &.depth-1 {
+                max-width: $base-ch-width-l - 2;
+            }
+
+            &.depth-2 {
+                max-width: $base-ch-width-l - 4;
+            }
+        }
+        @media (min-width: 1280px) {
+            &.depth-0 {
+                max-width: $base-ch-width-xl;
+            }
+            &.depth-1 {
+                max-width: $base-ch-width-xl - 2;
+            }
+
+            &.depth-2 {
+                max-width: $base-ch-width-xl - 4;
+            }
+        }
+    }
+}
+
+.content-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.link-container {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+details {
+    padding: 0.25rem 0.5rem;
+
+    // Hide the open/close markers by default.
+    summary {
+        list-style: none;
+        padding: 0.25rem 0rem;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #f9f9f9;
+        }
+
+        &.is-link:hover {
+            text-decoration: underline;
+        }
+
+         &[data-selected="true"] {
+            background-color: #e0e0e0;
+            font-weight: bold;
+
+            a:hover {
+                text-decoration: none;
+            }
+        }
+
+        &::-webkit-details-marker {
+            display: none;
+        }
+
+        a {
+            padding: 0.25rem;
+        }
+    }
+
+    &[data-expandable] {
+        > summary::before {
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            content: "\f0da";
+            display: inline-block;
+            cursor: none;
+            visibility: hidden;
+        }
+    }
+
+    &[data-expandable="true"] {
+        > summary::before {
+            margin-right: 0.5rem;
+            cursor: pointer;
+            visibility: visible;
+        }
+
+        &[open] {
+            > summary::before {
+                transform: rotate(90deg);
+            }
+        }
+    }
+}

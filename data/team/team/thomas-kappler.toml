@@ -1,0 +1,11 @@
+id = "thomas-kappler"
+name = "Thomas Kappler"
+title = "Software Engineer"
+weight = 1
+
+status = "active"
+
+[social]
+github = "thomas11"
+linkedin = "thomaskappler"
+twitter = "jugglingbits"

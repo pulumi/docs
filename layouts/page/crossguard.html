@@ -1,0 +1,300 @@
+{{ define "hero" }}
+    {{ partial "hero" (dict "title" "Policy as Code for Any Cloud") }}
+{{ end }}
+
+{{ define "main" }}
+    <section id="overview" class="my-12">
+        <div class="container mx-auto text-center flex-col">
+            <h2>Pulumi CrossGuard</h2>
+            <p>Enforce your organization's cloud governance &mdash; security, compliance, cost controls, and more.</p>
+            <div class="header-hero-actions mt-8 flex-row">
+                <a class="btn-primary mr-2" href="/docs/using-pulumi/crossguard/get-started/">Try CrossGuard</a>
+                <a class="btn-secondary ml-2" href="/request-a-demo/">Get a Demo</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="what-it-is" class="mt-32 px-4">
+        <div class="container mx-auto">
+            <h2 class="text-center">Features</h2>
+            <div class="md:flex mx-auto max-w-5xl mb-8">
+                <div class="md:w-1/3 p-4">
+                    <div class="text-center p-6 h-full">
+                        {{ partial "color-icon.html" (dict "icon" "shield" "icon_color" "violet") }}
+                        <h5>Any Policy</h5>
+                        <p>
+                            Use off-the-shelf rules or define your own for security, cost, compliance, reliability best practices &mdash; just about anything. Use package managers
+                            to share and reuse rules.
+                        </p>
+                    </div>
+                </div>
+                <div class="md:w-1/3 p-4">
+                    <div class="text-center p-6 h-full">
+                        {{ partial "color-icon.html" (dict "icon" "clouds" "icon_color" "yellow") }}
+                        <h5>Any Cloud</h5>
+                        <p>
+                            Govern application and infrastructure resources on any cloud, including AWS, Azure, Google Cloud, Kubernetes, and 150+ more infrastructure
+                            providers.
+                        </p>
+                    </div>
+                </div>
+                <div class="md:w-1/3 p-4">
+                    <div class="text-center p-6 h-full">
+                        {{ partial "color-icon.html" (dict "icon" "rocketship" "icon_color" "salmon") }}
+                        <h5>Familiar and Powerful</h5>
+                        <p>
+                            Define custom policies using familiar languages like JavaScript and Python. Use great editors, test frameworks, libraries, and tools for productivity
+                            and correctness.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="md:flex mx-auto max-w-5xl mb-8">
+                <div class="md:w-1/3 p-4">
+                    <div class="text-center p-6 h-full">
+                        {{ partial "color-icon.html" (dict "icon" "exchange" "icon_color" "blue") }}
+                        <h5>Flexible Enforcement</h5>
+                        <p>
+                            Apply policies using coarse- or fine-grained controls. Target individual projects, manage organization-wide policies, or group projects for differences
+                            in environments and regions.
+                        </p>
+                    </div>
+                </div>
+                <div class="md:w-1/3 p-4">
+                    <div class="text-center p-6 h-full">
+                        {{ partial "color-icon.html" (dict "icon" "gear" "icon_color" "purple") }}
+                        <h5>Configurable</h5>
+                        <p>Define policies that can be configured at the point of application, including enforcement level, letting you vary behavior based on project needs.</p>
+                    </div>
+                </div>
+                <div class="md:w-1/3 p-4">
+                    <div class="text-center p-6 h-full">
+                        {{ partial "color-icon.html" (dict "icon" "cycle" "icon_color" "violet") }}
+                        <h5>Automate and Integrate</h5>
+                        <p>
+                            Automate governance using programmable libraries and REST APIs, easily integrating with external services such as web services, asset tracking
+                            databases, pricing lists, and more.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="compliance-enforcement" class="my-24 px-4">
+        <div class="container mx-auto">
+            <div class="bg-gray-200 rounded-xl mx-0 lg:mx-32 text-center pt-12">
+                <h3>Enterprise Compliance Enforcement</h3>
+                <div class="p-4 mx-auto w-full lg:w-2/3 text-xl text-gray-700">
+                    Business Critical customers can enforce compliance and remediate non-compliance using Pulumi provided policies across your organization.
+                </div>
+                <div class="md:flex mx-auto">
+                    <div class="md:w-1/3 p-4">
+                        <div class="text-center p-6 h-full">
+                            {{ partial "color-icon.html" (dict "icon" "shield" "icon_color" "violet") }}
+                            <h5>Compliance-ready Policies</h5>
+                            <p>
+                                Choose from hundreds of policies for AWS, Azure, Google Cloud, and Kubernetes. Support for PCI DSS, ISO 27001, SOC 2, and CIS Benchmarks.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="md:w-1/3 p-4">
+                        <div class="text-center p-6 h-full">
+                            {{ partial "color-icon.html" (dict "icon" "shield" "icon_color" "violet") }}
+                            <h5>Server-side Enforcement</h5>
+                            <p>
+                                Set policy packs that block prohibited deployments across your entire organization, preventing issues.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="md:w-1/3 p-4">
+                        <div class="text-center p-6 h-full">
+                            {{ partial "color-icon.html" (dict "icon" "shield" "icon_color" "violet") }}
+                            <h5>Remediation Policies</h5>
+                            <p>
+                                Codify reactive solutions to compliance requirements by transforming non-compliant resources into compliant ones.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-hero-actions pb-16 md:flex-col lg:flex-row relative">
+                    <a class="btn-primary mr-2 z-10" href="https://app.pulumi.com/site/trial">Start a free trial</a>
+                    <a class="btn-secondary ml-2" href="/contact/">Talk to a human</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="scenarios" class="py-16 px-4">
+        <div class="text-center mb-8">
+            <h2>Policy as Code Scenarios</h2>
+            <p class="my-0">Accelerate your organization's delivery while still staying compliant</p>
+        </div>
+        <div class="container md:mx-auto md:flex mb-8">
+            <div class="md:w-1/2 flex-shrink-0 md:mr-8">
+                <h4>Security</h4>
+                <p>Maintain security across all cloud infrastructure assets.</p>
+                <div class="md:ml:4">
+{{ $code := `new PolicyPack("acmecorp-security", {
+    policies: [{
+        name: "prohibited-public-internet",
+        description: "Reject public internet access.",
+        enforcementLevel: "mandatory",
+        validateResource: validateResourceOfType(
+            aws.ec2.SecurityGroup,
+            (sg, args, reportViolation) => {
+                const hasInternetAccess = sg.ingress.find(
+                    rule => rule.cidrBlocks.includes("0.0.0.0/0")
+                );
+                if (hasInternetAccess) {
+                    reportViolation("Illegal internet access");
+                }
+            },
+        ),
+    }],
+);`
+}}
+
+                    {{ partial "code" (dict "code" $code "lang" "js") }}
+                </div>
+                <p class="text-sm italic mt-0">Prohibiting network access from the Internet.</p>
+            </div>
+            <div class="md:w-1/2 flex-shrink-0 md:mr-8">
+                <h4>Compliance</h4>
+                <p>Meet, and stay meeting, compliance standards.</p>
+                <div class="md:ml:4">
+{{ $code := `new PolicyPack("acmecorp-compliance", {
+    policies: [{
+        name: "required-storage-region",
+        description: "Data must be stored in the US.",
+        enforcementLevel: "mandatory",
+        validateResource: validateResourceOfType(
+            aws.s3.Bucket, (bucket, args, reportViolation) => {
+                if (!bucket.region.startsWith("us-")) {
+                    reportViolation("Non-US bucket detected");
+                }
+            },
+        ),
+    }],
+);`
+}}
+
+                    {{ partial "code" (dict "code" $code "lang" "js") }}
+                </div>
+                <p class="text-sm italic mt-0">Disallowing storage outside of specific regions.</p>
+            </div>
+        </div>
+        <div class="container md:mx-auto md:flex">
+            <div class="md:w-1/2 flex-shrink-0 md:mr-8">
+                <h4>Cost Controls</h4>
+                <p>Ensure cost conscious deployments.</p>
+                <div class="md:ml:4">
+{{ $code := `new PolicyPack("acmecorp-cost", {
+    policies: [{
+        name: "required-cost-tags",
+        description: "Cost tags are required.",
+        enforcementLevel: "mandatory",
+        validateResource: (args, reportViolation) => {
+            if (isTaggable(args.type) &&
+                !args.resource["tags"]["Cost Center"]) {
+                reportViolation("Resource missing tags");
+            }
+        ),
+    }],
+);`
+}}
+
+                    {{ partial "code" (dict "code" $code "lang" "js") }}
+                </div>
+                <p class="text-sm italic mt-0">Requiring specific cost allocation tags.</p>
+            </div>
+            <div class="md:w-1/2 flex-shrink-0 md:mr-8">
+                <h4>Continuous Delivery</h4>
+                <p>Catch policy violations before they escape using CI/CD.</p>
+                <img class="block mx-auto rounded" src="/images/screens/pac-in-action.png" alt="Policy as Code in CI/CD" />
+                <p class="text-sm italic">A live dashboard of organizational violations in Pulumi Cloud.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="case-studies" class="py-16 px-4">
+        <div class="container mx-auto">
+            <div class="lg:flex lg:items-stretch">
+                <div class="w-full lg:w-1/2 p-6">
+                    <div class="flex flex-col card p-6 bg-white h-full relative">
+                        <p class="text-left mt-0 italic text-black">
+                            Pulumi supercharged our whole organization by letting us create reusable building blocks that developers can leverage to provision new resources and
+                            enforce organizational policies for logging, permissions, resource tagging and security. This has empowered our developer teams to self-provision
+                            resources and ship new capabilities faster without having to wait for the infrastructure team to deploy new resources on their behalf.
+                        </p>
+                        <div class="flex flex-grow items-end">
+                            <div class="w-2/3 text-left">
+                                <p class="text-black mb-0">Igor Shapiro</p>
+                                <p class="mt-0">Principal Engineer</p>
+                            </div>
+                            <div class="w-1/3 my-4">
+                                {{ partial "customer-logo.html" (dict "logo" "lemonade") }}
+                            </div>
+                        </div>
+                        <div class="card-cta-btn text-center">
+                            <a class="btn-primary" href="/case-studies/lemonade/">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full lg:w-1/2 p-6">
+                    <div class="flex flex-col card p-6 bg-white h-full relative">
+                        <p class="text-left mt-0 italic text-black">
+                            CrossGuard gives us the ability to prevent undesired and insecure resources from being deployed to any environment. It also allows us to block the deployment of certain resource SKUs that may incur unnecessary expense.
+                        </p>
+                        <div class="flex flex-grow items-end">
+                            <div class="w-2/3 text-left">
+                                <p class="text-black mb-0">Dennis Sauvé</p>
+                                <p class="mt-0">DevOps Engineer</p>
+                            </div>
+                            <div class="w-1/3 my-4">
+                                {{ partial "customer-logo.html" (dict "logo" "washington-trust") }}
+                            </div>
+                        </div>
+                        <div class="card-cta-btn text-center">
+                            <a class="btn-primary" href="/case-studies/washington-trust-bank/">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full lg:w-1/2 p-6">
+                    <div class="flex flex-col card p-6 bg-white h-full relative">
+                        <p class="text-left mt-0 italic text-black">
+                            With Pulumi CrossGuard we can provide reusable infrastructure components to our application teams and ensure that their implementations adhere to
+                            company standards.
+                        </p>
+                        <div class="flex flex-grow items-end">
+                            <div class="w-2/3 text-left">
+                                <p class="text-black mb-0">Fernando Carlietti</p>
+                                <p class="mt-0">Lead DevOps Engineer</p>
+                            </div>
+                            <div class="w-1/3 my-4">
+                                {{ partial "customer-logo.html" (dict "logo" "credijusto") }}
+                            </div>
+                        </div>
+                        <div class="card-cta-btn text-center">
+                            <a class="btn-primary" href="/case-studies/credijusto/">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="get-started" class="container px-6 lg:px-0 mx-auto my-28 px-6">
+        <div class="w-full bg-violet-600 card p-6 lg:p-16 lg:pt-24 text-center">
+            <div class="max-w-xl mx-auto">
+                <h2 class="text-white hidden lg:block px-0 lg:px-16">Getting Started with Policy as Code</h2>
+                <h4 class="text-white mt-0 lg:hidden">Getting Started with Policy as Code</h4>
+                <div class="mt-16">
+                    <a class="btn-secondary" href="/docs/using-pulumi/crossguard/">Get started with CrossGuard</a>
+                </div>
+            </div>
+        </div>
+    </section>
+{{ end }}

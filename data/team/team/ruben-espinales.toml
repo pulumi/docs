@@ -1,0 +1,9 @@
+id = "ruben-espinales"
+name = "Ruben Espinales"
+title = "Marketing Operations Manager"
+weight = 1
+
+status = "active"
+
+[social]
+linkedin = "respinales"

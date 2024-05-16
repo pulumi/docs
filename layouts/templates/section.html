@@ -1,0 +1,48 @@
+{{ define "hero" }}
+    {{ partial "hero" (dict "title" "Pulumi Templates") }}
+{{ end }}
+
+{{ define "main" }}
+    <div class="layout-{{ .Page.Layout }} container mx-auto mb-32 px-4 lg:px-0">
+        <div class="max-w-3xl mx-auto text-lg">
+            <span class="text-gray-800">
+                <p>
+                    {{ .Description }}
+                </p>
+            </span>
+        </div>
+        <section class="mt-8">
+            {{ $pages := where (where .Site.Pages ".Type" "templates") ".Layout" "overview" }}
+
+
+            <ul class="w-full flex flex-col md:flex-row md:flex-wrap md:justify-center p-0 list-none">
+                {{ range $page := sort $pages ".Params.weight" "asc" }}
+                    <li class="md:w-1/2 lg:w-1/3 m-4">
+                        <div class="shadow-xl rounded-xl bg-white py-4 px-6 w-full h-full border border-gray-200">
+                            {{ with $page }}
+                                {{ if .Params.meta_image }}
+                                    <a href="{{ relref . $page.RelPermalink }}" title="{{ .Title }}">
+                                        <img class="rounded" src="{{ (.Resources.GetMatch .Params.meta_image).RelPermalink }}" alt="{{ .Title }}" />
+                                    </a>
+                                {{ end }}
+                                <h2 class="mt-4 leading-none">
+                                    <span class="text-2xl">
+                                        <a class="text-gray-900" href="{{ relref . $page.RelPermalink }}">{{ .Title }}</a>
+                                    </span>
+                                </h2>
+                                <p>
+                                    {{ .Params.meta_desc }}
+                                </p>
+                                <ul>
+                                    {{ range $p := $page.Pages }}
+                                        <li><a href="{{ $p.RelPermalink }}">{{ $p.Title }}</a></li>
+                                    {{ end }}
+                                </ul>
+                            {{ end }}
+                        </div>
+                    </li>
+                {{ end }}
+            </ul>
+        </section>
+    </div>
+{{ end }}

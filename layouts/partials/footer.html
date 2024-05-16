@@ -1,0 +1,103 @@
+<nav class="footer">
+    <div class="w-full h-16 lg:h-32">
+        <div class="dot-background no-animate"></div>
+    </div>
+
+    <div class="container mx-auto">
+        <div class="footer-nav-container">
+            <div class="hidden md:w-1/12"></div>
+            <ul>
+                <li><a data-track="footer-get-started" href="/docs/get-started/" class="link">Get Started</a></li>
+                <li><a data-track="footer-install" href="/docs/install/" class="link">Install</a></li>
+                <li><a data-track="footer-documentation" href="/docs/" class="link">Documentation</a></li>
+                <li><a data-track="footer-apis" href="/registry/" class="link">Registry</a></li>
+                <li><a data-track="public-roadmap" href="https://github.com/orgs/pulumi/projects/44/" class="link">Public Roadmap</a></li>
+                <li><a data-track="footer-security" href="/security/" class="link">Security</a></li>
+            </ul>
+
+            <ul>
+                <li><a data-track="footer-enterprise" href="/enterprise/" class="link">Enterprise</a></li>
+                <li><a data-track="footer-aws" href="/aws/" class="link">AWS</a></li>
+                <li><a data-track="footer-azure" href="/azure/" class="link">Azure</a></li>
+                <li><a data-track="footer-gcp" href="/gcp/" class="link">Google Cloud</a></li>
+                <li><a href="/containers/" class="link">Containers</a></li>
+                <li><a href="/serverless/" class="link">Serverless</a></li>
+                <li><a href="/kubernetes/" class="link">Kubernetes</a></li>
+            </ul>
+
+            <ul>
+                <li><a data-track="footer-about-us" href="/about/" class="link">About Us</a></li>
+                <li><a data-track="footer-contact-us" href="/request-a-demo/" class="link">Request a Demo</a></li>
+                <li><a data-track="footer-contact-us" href="/contact/" class="link">Talk to a human</a></li>
+                <li><a data-track="footer-support" href="https://support.pulumi.com/" class="link">Support</a></li>
+                <li><a data-track="footer-careers" href="/careers/" class="link">Careers</a></li>
+            </ul>
+
+            <ul>
+                <li><a data-track="footer-events" href="/resources/" class="link">Resources</a></li>
+                <li><a data-track="footer-events" href="https://archive.pulumi.com/" target="_blank" rel="noopener noreferrer" class="link">Slack Archive</a></li>
+                <li><a data-track="footer-events" href="/case-studies/" class="link">Case Studies</a></li>
+                <li><a data-track="footer-events" href="/awards/" class="link">Awards &amp; Recognitions</a></li>
+                <li><a data-track="footer-brand" href="/brand/" class="link">Brand Resources</a></li>
+                <li><a class="link cursor-pointer" onclick="window.consentManager.openConsentManager();">Your Website Preferences</a></li>
+            </ul>
+        </div>
+
+        <div class="border mt-16"></div>
+
+        <section class="py-8 px-4">
+            <div class="container mx-auto">
+                <div class="flex justify-center flex-col flex-row text-center">
+                    <h4>Sign up for our newsletter</h4>
+                    <div class="flex justify-center my-3">
+                        <pulumi-hubspot-form form-id="027b4c6d-9b73-4ad8-b149-3c8b07fff608" class="newsletter newsletter-dark-border"></pulumi-hubspot-form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <ul class="py-8 flex flex-col text-center md:text-left md:flex-row md:justify-center">
+            {{ range .Site.Menus.legal }}
+                <li class="mr-2 mb-4 lg:mb-0 lg:mr-8 font-semibold">
+                    <a class="link" data-track="footer-legal-{{ .Title | urlize }}" href="{{ .URL }}">{{ .Title }}</a>
+                </li>
+            {{ end }}
+        </ul>
+
+        <div class="text-center mb-8">
+            <p class="text-black mb-8">&copy; Pulumi {{ now.Format "2006" }}</p>
+
+            <ul class="flex inline-items text-2xl justify-center">
+                <li class="mr-8">
+                    <a data-track="footer-twitter" href="https://twitter.com/pulumicorp" target="_blank">
+                        <img class="h-6" src="/logos/tech/twitter.svg" alt="Pulumi Twitter" />
+                    </a>
+                </li>
+
+                <li class="mr-8">
+                    <a data-track="footer-slack" href="https://slack.pulumi.com/" target="_blank">
+                        <img class="h-6" src="/logos/tech/slack.svg" alt="Pulumi Slack" />
+                    </a>
+                </li>
+
+                <li class="mr-8">
+                    <a data-track="footer-linkedin" href="https://www.linkedin.com/company/pulumi/" target="_blank">
+                        <img class="h-6" src="/logos/tech/linkedin.svg" alt="Pulumi LinkedIn" />
+                    </a>
+                </li>
+
+                <li class="mr-8">
+                    <a data-track="footer-youtube" href="https://www.youtube.com/channel/UC2Dhyn4Ev52YSbcpfnfP0Mw" target="_blank">
+                        <img class="h-6" src="/logos/tech/youtube.svg" alt="Pulumi YouTube" />
+                    </a>
+                </li>
+
+                <li>
+                    <a data-track="footer-github" href="https://github.com/pulumi/" target="_blank">
+                        <img class="h-6" src="/logos/tech/github.svg" alt="Pulumi Github" />
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

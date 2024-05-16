@@ -1,0 +1,10 @@
+id = "zaid-ajaj"
+name = "Zaid Ajaj"
+title = "Software Engineer"
+weight = 1
+
+status = "active"
+
+[social]
+github = "Zaid-Ajaj"
+twitter = "zaid_ajaj"

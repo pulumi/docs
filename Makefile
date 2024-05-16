@@ -17,6 +17,7 @@ clean:
 .PHONY: ensure
 ensure: clean
 	./scripts/ensure.sh
+	$(MAKE) build-assets
 
 .PHONY: serve
 serve:
@@ -88,3 +89,45 @@ ci_bucket_cleanup:
 ci_update_search_index:
 	echo "Updating search index: ${DEPLOYMENT_ENVIRONMENT}..."
 	./scripts/ci-update-search-index.sh "${DEPLOYMENT_ENVIRONMENT}"
+
+.PHONY: serve-all
+serve-all:
+	./node_modules/.bin/concurrently --kill-others -r "./scripts/serve.sh" "yarn --cwd ./theme run start"
+
+.PHONY: build-assets
+build-assets:
+	yarn --cwd ./theme run build
+
+.PHONY: test
+test:
+	$(MAKE) test-programs
+
+.PHONY: test-programs
+test-programs:
+	./scripts/programs/test.sh preview
+
+.PHONY: upgrade-programs
+upgrade-programs:
+	./scripts/programs/upgrade.sh
+
+.PHONY: new-learn-module
+new-learn-module:
+	./scripts/content/new-learn-module.sh
+
+.PHONY: new-learn-topic
+new-learn-topic:
+	./scripts/content/new-learn-topic.sh
+
+.PHONY: new-template
+new-template:
+	./scripts/content/new-template.sh
+
+.PHONY: new-example-program
+new-example-program:
+	./scripts/content/new-example-program.sh
+
+.PHONY: new-blog-post
+new-blog-post:
+	hugo new --kind blog-post --contentDir content \
+	"blog/$(shell bash -c 'read -p "Slug (e.g., 'my-new-post'): " slug; echo $$slug')"
+

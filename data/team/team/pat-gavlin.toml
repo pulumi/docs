@@ -1,0 +1,11 @@
+id = "pat-gavlin"
+name = "Pat Gavlin"
+title = "Software Engineer"
+weight = 1
+
+status = "active"
+
+[social]
+github = "pgavlin"
+linkedin = "pgavlin"
+twitter = "pgavlin"

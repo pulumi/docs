@@ -1,0 +1,79 @@
+{{ define "hero" }}
+    {{ partial "hero" (dict "title" "Cloud Engineering with Containers") }}
+{{ end }}
+
+{{ define "main" }}
+    <section id="overview" class="my-16">
+        <div class="flex flex-wrap container mx-auto">
+            <div class="w-full order-last lg:mt-0 lg:order-first lg:w-1/2 px-5">
+                <h2>{{ .Params.hero.title }}</h2>
+                <p class="mr-4">{{ .Params.hero.body | markdownify }}</p>
+            </div>
+            <div class="w-full order-first lg:order-last mt-8 lg:w-1/2 lg:mt-0">
+                {{ partial "example-program" (dict "path" "awsx-load-balanced-fargate-nginx") }}
+            </div>
+        </div>
+    </section>
+
+    <section id="what-is-container-management" class="py-16 px-4">
+        <div class="container md:mx-auto md:max-w-4xl">
+            <h3>What is Container Management?</h3>
+            <p>
+                Docker, and containers more generally, transformed the way that developers could build, ship, and run applications. As a standardized unit of delivery, containers
+                have all of the libraries, code, and runtime knowledge they need to work, and so can be deployed and scaled into any environment.
+            </p>
+            <p>
+                For DevOps teams, container management is an important capability whether delivering containers into bespoke environments, or more likely through a managed cloud
+                offering such as AWS Fargate, AWS ECS, and Microsoft ACI, or through Kubernetes - either on-premises or AWS EKS, Microsoft AKS, or Google GKE.
+            </p>
+        </div>
+    </section>
+    <section id="deploying-containers" class="py-16 px-4">
+        <div class="container md:mx-auto md:max-w-4xl">
+            <h3>Deploying containers with Pulumi</h3>
+            <p>
+                Container management solutions are broadly split into two options: low-management solutions for ease of deployment, and Kubernetes-based solutions for complete
+                control.
+            </p>
+            <h4>Low Cluster Management</h4>
+            <p>
+                AWS Fargate, and Microsoft ACI are examples of services that enable the deployment of containers without having to manage servers or clusters. This means teams can
+                very easily build container applications and deploy them into production without worrying about infrastructure, but gaining the benefits of seamless scaling.
+            </p>
+            <h4>Kubernetes Management</h4>
+            <p>
+                While running Kubernetes on-premises is a viable, and well-used solution, the major cloud vendors also offer Kubernetes sevices: Amazon EKS, Microsoft AKS, and
+                Google GKE.
+            </p>
+            <p>Pulumi makes it simple to interact with any of the services available from the major cloud vendors, and with Kubernetes.</p>
+        </div>
+    </section>
+    <section id="code" class="py-16 px-4">
+        {{ range .Params.examples }}
+            <div class="container md:mx-auto md:flex">
+                <div class="md:w-1/2 md:pr-24">
+                    <h3>{{ .title }}</h3>
+                    <p>
+                        {{ .body | safeHTML }}
+                    </p>
+                    <div class="my-8">
+                        <a class="btn-primary" href="{{ .cta.url }}"> Get Started </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    {{ if .code }}
+                        {{ partial "code" (dict "code" .code "lang" "js" "mode" "dark") }}
+                    {{ else if .path }}
+                        {{ partial "example-program" (dict "path" .path "languages" .languages) }}
+                    {{ end }}
+                </div>
+            </div>
+        {{ end }}
+    </section>
+
+    {{ partial "how-pulumi-works.html" . }}
+
+    {{ partial "get-started.html" . }}
+
+    {{ partial "hand-raise-section" . }}
+{{ end }}

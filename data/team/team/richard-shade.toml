@@ -1,0 +1,11 @@
+id = "richard-shade"
+name = "Richard Shade"
+title = "Customer Experience Architect"
+company = "Pulumi"
+weight = 1
+
+status = "active"
+
+[social]
+github = "rshade"
+linkedin = "richardshade"

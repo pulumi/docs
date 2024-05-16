@@ -1,0 +1,22 @@
+{{ $repo := .Get "repo" }}
+{{ $branch := .Get "branch" }}
+{{ $prefix := .Get "prefix" }}
+{{ $languages := split (.Get "languages") "," }}
+
+
+<div class="tiles mt-4">
+    {{ range $language := $languages }}
+        {{ $templateURL := printf "https://github.com/%s/tree/%s/%s-%s" $repo $branch $prefix $language }}
+        <div class="pb-4 md:pr-4 flex-1">
+            <a
+                class="tile p-4"
+                href="https://app.pulumi.com/new?template={{ $templateURL }}"
+                title="Create a new {{ $language | title }} project in the Pulumi Service"
+                alt="{{ $language }}"
+                target="_blank"
+            >
+                <img class="h-10 mx-auto" src="/logos/tech/{{ . }}.svg" />
+            </a>
+        </div>
+    {{ end }}
+</div>

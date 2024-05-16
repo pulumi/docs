@@ -1,0 +1,6 @@
+name: awsx-apigateway-api-keys-javascript
+runtime:
+  name: nodejs
+  options:
+    typescript: false
+description: An example that deploys an API Gateway instance with support for API keys.

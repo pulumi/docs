@@ -1,0 +1,37 @@
+<div class="docs-type-nav-search">
+    <div class="docs-type-nav">
+        {{ $mode := .Scratch.Get "mode" }}
+        {{ if eq "docs" $mode }}
+            <a class="tab-selected" href="/docs">
+                <img class="tab-icon" src="/icons/docs.svg" />
+                Docs
+            </a>
+            <a class="tab" href="/registry">
+                <img class="tab-icon" src="/icons/registry-light.svg" />
+                Packages
+            </a>
+        {{ else }}
+            <a class="tab" href="/docs">
+                <img class="tab-icon" src="/icons/docs-light.svg" />
+                Docs
+            </a>
+            <a class="tab-selected" href="/registry">
+                <img class="tab-icon" src="/icons/registry.svg" />
+                Packages
+            </a>
+        {{ end }}
+    </div>
+    <div class="docs-search">
+        <div
+            id="search"
+            data-app-id="{{ getenv "ALGOLIA_APP_ID" }}"
+            data-search-key="{{ getenv "ALGOLIA_APP_SEARCH_KEY" }}"
+            data-facets="Docs,Registry"
+            data-index="production"
+        ></div>
+    </div>
+    <div class="content-width-controls">
+        <div id="expand-content-button" class="icon icon-18-18 width-expand-18-18 expand-content"></div>
+        <div id="collapse-content-button" class="icon icon-18-18 width-collapse-18-18 collapse-content hide"></div>
+    </div>
+</div>

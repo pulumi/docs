@@ -1,0 +1,10 @@
+id = "joshua-studt"
+name = "Joshua Studt"
+title = "Senior Backend Engineer"
+company = "Underdog Fantasy"
+status = "guest"
+role = "puluminary"
+
+[social]
+github = "orionstudt"
+linkedin = "orionstudt"

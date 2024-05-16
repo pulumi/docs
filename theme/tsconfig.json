@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "pretty": true,
+        "target": "es2015",
+        "module": "esnext",
+        "moduleResolution": "node",
+        "esModuleInterop": true,
+        "importHelpers": true,
+        "experimentalDecorators": true,
+        "noEmitOnError": true,
+        "lib": ["dom", "es2015"]
+    },
+    "files": ["src/ts/main.ts"]
+}
