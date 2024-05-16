@@ -2,8 +2,9 @@ _vendor
 node_modules
 /resources
 /assets/css/bundle.css
-themes/*/resources
+*/resources
 public
+.github
 .idea
 .vscode
 .DS_Store
@@ -11,9 +12,28 @@ yarn-error.log
 .hugo_build.lock
 *.md
 .devcontainer
-themes/default/theme
-themes/default/assets
-themes/default/layouts
+assets
+config
+cypress
+data
+docfx
+infrastructure
+theme
+tools
+layouts
+scripts
+
 # Don't check csharp build products
-themes/default/static/programs/*/bin/*
-themes/default/static/programs/*/obj/*
+static/programs/*/bin/*
+static/programs/*/obj/*
+
+static/registry/
+static-prebuilt
+
+# Ignore auto-generated docs
+content/docs/reference/pkg
+
+# Ignore config files
+tsconfig.json
+package.json
+typedoc.json
