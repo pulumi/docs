@@ -69,3 +69,19 @@ For more information see https://github.com/pulumi/docs/blob/master/tools/resour
 ## Deploying updates
 
 When changes are merged into `master`, https://www.pulumi.com/ is automatically deployed.
+
+## Migrating from pulumi-hugo
+
+The pulumi-hugo repository was archived on May 16, 2024. This repository previously housed most of our website content. This content has now moved to this repository. There is a slight directory structure change in this repo compared to pulumi-hugo. For the most part, everything that was located under the `themes/default` directory in pulumi-hugo now lives under the root directory of this repository, i.e. `themes/default/content/blog` is now under `/content/blog`. Everything still functions the same way it did previously when it comes to local devleopment, e.g. `make ensure`, `make serve`, `make build-assets`, etc.
+
+### How to migrate PRs from the pulumi-hugo repo
+
+If you have open pull requests in the pulumi-hugo repo, here are the steps to follow in order to move them over to the docs repository. You will need to copy over your files to the docs repo and place them in the new directory location.
+
+#### Steps:
+1. Clone the docs repo if you haven't done so already.
+2. Create a new branch in the docs repository.
+3. Copy the files you changed/added to the docs repo. The directory structure is similar to how this repo was configured, except everything under themes/default has been moved to the root. For example, if you have a blog under `themes/default/content/blog/my-cool-blog`, you will need to relocate it under `content/blog/my-cool-blog` in the docs repo.
+4. Run make ensure in the docs repo and then a make serve to verify the files have been moved correctly.
+5. Push changes to the docs repo.
+6. Open a PR in the docs repo to add the changes there.
