@@ -7,11 +7,10 @@ source ./scripts/programs/common.sh
 programs_dir="static/programs"
 
 # Delete install artifacts, but leave existing go.mod files.
-git clean -fdX -e '!go.mod' "${programs_dir}/*"
+git clean -fdX "${programs_dir}/*"
 
 # Fix up go.mod files.
 clean_gomods
-unsuffix_gomods
 
 pushd "$programs_dir"
     for dir in */; do
@@ -35,4 +34,3 @@ pushd "$programs_dir"
 popd
 
 clean_gomods
-suffix_gomods
