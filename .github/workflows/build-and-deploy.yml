@@ -42,7 +42,7 @@ jobs:
         uses: pulumi/actions@v4
 
       - name: Build and deploy
-        run: make ci_${GITHUB_EVENT_NAME}
+        run: make ci_push
         env:
           CDN_PULUMI_URN: ${{ vars.CDN_PULUMI_URN }}
           PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
