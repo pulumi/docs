@@ -1,6 +1,6 @@
-name: Build and deploy
+name: Pull Request
 on:
-  push:
+  pull_request:
     branches:
       - master
 permissions:
@@ -12,7 +12,7 @@ jobs:
       GOPATH: ${{ github.workspace }}/go
     name: Install deps and build site
     runs-on: ubuntu-22.04-8core
-    environment: production
+    environment: testing
     steps:
 
       - uses: actions/checkout@v2
@@ -33,7 +33,7 @@ jobs:
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v2
         with:
-          role-to-assume: arn:aws:iam::388588623842:role/ContinuousDelivery
+          role-to-assume: arn:aws:iam::571684982431:role/ContinuousDelivery
           role-session-name: docs-deploy
           role-duration-seconds: 7200
           aws-region: us-west-2
@@ -42,7 +42,7 @@ jobs:
         uses: pulumi/actions@v4
 
       - name: Build and deploy
-        run: make ci_${GITHUB_EVENT_NAME}
+        run: make ci_pull_request
         env:
           CDN_PULUMI_URN: ${{ vars.CDN_PULUMI_URN }}
           PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
