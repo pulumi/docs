@@ -57,7 +57,7 @@ Replace `org-name` with the right Pulumi organization.
 ## Sample Github Actions workflow
 
 ```
-name: Pulumi UP
+name: Pulumi preview
 on:
   workflow_dispatch:
 
