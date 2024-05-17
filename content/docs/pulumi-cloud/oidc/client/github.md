@@ -35,7 +35,7 @@ Please note that this guide provides step-by-step instructions based on the offi
 4. Add a policy to allow OIDC and configure the sub and audience for your organization and repositories:
 
 <!-- markdownlint-disable no-bare-urls -->
-* **Aud**: https://github.com/***organization***
+* **Aud**: urn:pulumi:org:***org-name***
 
 * **Sub**: repo:***organization***/***repo***:*
 <!-- markdownlint-enable no-bare-urls -->
