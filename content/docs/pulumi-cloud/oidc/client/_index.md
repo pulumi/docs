@@ -63,29 +63,23 @@ When a new OIDC issuer is registered, a default authorization policy is provisio
 
 When configuring a policy, it is required to explicitly state what kind of token can be requested and what team or user the token should be scoped to.
 
-It is also required to configure at least one claim validation rule. When defining the claim key, it is possible to target nested claims by defining the claim path. For example, having the following structure:
+It is recommended to always verify the token audience and subject claims according to the provider security recommendations:
+
+![Sample github policies](./github-policies.png)
+
+When defining the claim key, it is possible to target nested claims by defining the claim path. For example, having the following structure:
 
 ```json
 {
-  "aud": [
-    "urn:pulumi:ORG_NAME"
-  ],
-  "exp": ...,
-  "iat": ...,
-  "iss": "https://container.googleapis.com/v1/projects/sample/locations/us-west1/clusters/sample",
+  ...
   "kubernetes.io": {
-    "namespace": "default",
     "pod": {
       "name": "runner-ddfaa34e-dfrjh",
       "uid": "b99b58df-cce5-405a-a33d-49a4cf8cf7bd"
     },
-    "serviceaccount": {
-      "name": "default",
-      "uid": "5993991f-ee08-4eaf-b5a8-714b71739058"
-    }
+    ...
   },
-  "nbf": ...,
-  "sub": "system:serviceaccount:default:default"
+  ...
 }
 ```
 
