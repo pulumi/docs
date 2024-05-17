@@ -52,7 +52,7 @@ For further information about Github token claims refer to the [official Github 
           requested-token-type: urn:pulumi:token-type:access_token:organization
 ```
 
-Replace `org-name` with the right Pulumi organization.
+Replace `org-name` with the right Pulumi organization. For more information, check the [GitHub action documentation](https://github.com/marketplace/actions/pulumi-auth-action).
 
 ## Sample Github Actions workflow
 
