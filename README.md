@@ -58,6 +58,7 @@ The `Makefile` exposes a number of useful helpers:
 * `make serve` runs the Hugo server locally at http://localhost:1313 and watches content and layout folders for changes
 * `make serve-all` does the same as `make serve`, but also watches changes to CSS and JS source files and rebuilds those as well
 * `make build` generates the website and writes it to `./public`
+* `make build-assets` builds only the CSS and JavaScript asset bundles
 * `make serve-static` runs a local HTTP server that serves the contents of `./public`
 * `make test` tests all of the programs in `./static/programs` (pass `ONLY_TEST="your-prefix-*"` to test only a subset of them)
 * `make generate` builds the TypeScript, Python, and CLI documentation
