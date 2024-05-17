@@ -17,6 +17,12 @@ The `transformations` resource option provides a list of transformations to appl
 
 Each transformation is a callback that gets invoked by the Pulumi runtime. It receives the resource type, name, input properties, resource options, and the resource instance object itself. The callback returns a new set of resource input properties and resource options that will be used to construct the resource instead of the original values.
 
+{{% notes type="warning" %}}
+Notice that `transformations` will be deprecated in the future in favor of `transforms`.
+
+See the [transforms](/docs/concepts/options/transforms/#transforms-vs-transformations) page for guidance on the differences.
+{{% /notes %}}
+
 This example looks for all VPC and Subnet resources inside of a component’s child hierarchy and adds an option to ignore any changes for tags properties (perhaps because we manage all VPC and Subnet tags outside of Pulumi):
 
 {{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
