@@ -67,8 +67,7 @@ permissions:
 
 jobs:
   run_cron_job:
-    runs-on: ubuntu-20.04
-    timeout-minutes: 30
+    runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v4
