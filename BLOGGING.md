@@ -6,7 +6,7 @@ steps to make it happen.
 ## Set Up Your Development Environment
 
 If you haven't already, clone this repository and
-[follow the instructions in the README](https://github.com/pulumi/pulumi-hugo#running-hugo-locally)
+[follow the instructions in the README](https://github.com/pulumi/docs)
 to set up your environment and run the development web server.
 
 Once you're able to run:
@@ -32,7 +32,7 @@ including all the required frontmatter parameters.
 
    This will prompt you for a "slug" (a URL-friendly path) for your post and create a
    minimal post that you can browse to at http://localhost:1313/blog/. You'll find the new
-   post's source file at `themes/default/content/blog/[your-slug]/_index.md` containing the set of
+   post's source file at `content/blog/[your-slug]/_index.md` containing the set of
    [Hugo front matter](https://gohugo.io/content-management/front-matter/) properties you'll need to get started:
 
    ```
@@ -75,7 +75,7 @@ including all the required frontmatter parameters.
    **Canonical link**
    If you are posting a blog that originated somewhere else (for example, a syndicated community post) you will want to add the setting `canonical_url` for the URL where the blog post originated.
 
-1. If you don't already have a [TOML](https://github.com/toml-lang/toml) file [in the `team` directory](https://github.com/pulumi/pulumi-hugo/tree/master/themes/default/data/team/team) of the repo, create one now. For Pulumi employees, that file should look something like this (your `id` can be any string, but we recommend `firstname-lastname`):
+1. If you don't already have a [TOML](https://github.com/toml-lang/toml) file [in the `team` directory](https://github.com/pulumi/docs/tree/master/data/team/team) of the repo, create one now. For Pulumi employees, that file should look something like this (your `id` can be any string, but we recommend `firstname-lastname`):
 
    ```toml
    id = "christian-nunciato"
@@ -101,7 +101,7 @@ including all the required frontmatter parameters.
 
    The `social` section, and the items within it, are optional.
 
-   Once your team-member file's been created, add your author image at [`themes/default/static/images/team`](https://github.com/pulumi/pulumi-hugo/tree/master/themes/default/static/images/team). The image should be a square JPG (400x400 max) named with your author `id` (e.g., `christian-nunciato.jpg`).
+   Once your team-member file's been created, add your author image at [`static/images/team`](https://github.com/pulumi/docs/tree/master/static/images/team). The image should be a square JPG (400x400 max) named with your author `id` (e.g., `christian-nunciato.jpg`).
 
    Update the new post's `authors` property to use your author `id`. If you're still running the development server, you should see the change reflected in the browser immediately.
 
@@ -155,7 +155,7 @@ To add images to the body of your post, first place them within the folder conta
 #### Social ("Meta") Images
 
 > [!IMPORTANT]
-> If you are adding _any_ logos to the meta image, you must absolutely ensure these are current. Using a wrong or outdated logo can have a severe negative impact on social sharing timelines due caching. 
+> If you are adding _any_ logos to the meta image, you must absolutely ensure these are current. Using a wrong or outdated logo can have a severe negative impact on social sharing timelines due caching.
 
 When you generate a new post, an [OpenGraph](http://ogp.me/) placeholder image is included for you, and a reference to that image is added to the post's frontmatter as well, as its `meta_image`. The `meta_image` is meant to accompany the post in social previews (Twitter cards, unfurled Slack links, etc.) and on the Pulumi blog home page. It's optional, but recommended, as it can help to make your post more attractive and informative.
 
@@ -211,7 +211,7 @@ Because the website is deployed in response to a commit to pulumi/docs `master`,
 
 ## Publishing Check List
 
-- [ ] As mentioned, use the Hugo blog-post generator instead of copying another post: `make new-blog-post` (or alternatively, the more verbose but equivalent `hugo new --kind blog-post "themes/default/content/blog/[your-slug]"`)
+- [ ] As mentioned, use the Hugo blog-post generator instead of copying another post: `make new-blog-post` (or alternatively, the more verbose but equivalent `hugo new --kind blog-post "content/blog/[your-slug]"`)
 - [ ] Spell and grammar check. Consider using a service such as [Grammarly](http://grammarly.com).
 - [ ] Check for a break `<!--more-->` after the first paragraph, and ensure that your post's introduction looks right on the blog home page.
 - [ ] Check that your meta_image appears properly on the blog home page. Do not use animated GIFs for preview images.

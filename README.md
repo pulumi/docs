@@ -8,9 +8,8 @@ First, be sure to read our [contributing guide](CONTRIBUTING.md) and review our 
 
 ## About this repository
 
-This repository hosts the documentation that we **generate** for the Pulumi CLI, SDK, and tutorials sourced from https://github.com/pulumi/examples. It's also responsible for building and deploying the https://www.pulumi.com website.
+This repository hosts all of our hand-crafted documentation, including, guides, tutorials, blogs, and landing pages, as well as all of the assets and templates we use to render the Pulumi website. It also houses the documentation that we generate for the Pulumi CLI and SDK, and it's responsible for building and deploying the https://www.pulumi.com website.
 
-If you're interested in contributing a blog post or other documentation, **you'll likely want to consult [pulumi/pulumi-hugo](https://github.com/pulumi/pulumi-hugo) instead**. There, you'll find all of our hand-crafted documentation, including, guides, tutorials, blogs, and landing pages, along with all of the assets and templates we use to render the Pulumi website. You'll also find all of the instructions you need to get going.
 ## Toolchain
 
 We build the Pulumi website statically with Hugo, manage our dependencies with Node.js and Yarn, and write our documentation in Markdown. Below is a list of the tools you'll need if you'd like to work on the project:

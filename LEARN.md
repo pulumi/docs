@@ -6,8 +6,8 @@ steps to make it happen.
 ## Setting up your development environment
 
 If you haven't done so already, clone this repository and
-[follow the instructions in the README](https://github.com/pulumi/pulumi-hugo)
-to set up your `pulumi/pulumi-hugo` development environment and run the development web server.
+[follow the instructions in the README](https://github.com/pulumi/docs)
+to set up your `pulumi/docs` development environment and run the development web server.
 
 Once you're able to run:
 
@@ -19,7 +19,7 @@ $ make serve
 
 ## How Learn content is organized
 
-All content lives under `./themes/default/content/learn`. Modules, which appear as cards on the Learn home page, sit at the top level of the `learn` folder, and each of the topics that comprise a given module live as siblings underneath their parent module. There are only these two levels in the hierarchy; no further nesting is supported as of today.
+All content lives under `./content/learn`. Modules, which appear as cards on the Learn home page, sit at the top level of the `learn` folder, and each of the topics that comprise a given module live as siblings underneath their parent module. There are only these two levels in the hierarchy; no further nesting is supported as of today.
 
 Both modules and topics can have their own meta images as well.
 
@@ -72,7 +72,7 @@ We have a couple of helpers that make it easy to create new modules and topics. 
 
 ### Creating a new module
 
-When you know what you want to call the new module, make sure you're at the root of the `pulumi-hugo` repository, then run the new-module helper as below. (You can do this anytime; you don't have to be running the development server first.)
+When you know what you want to call the new module, make sure you're at the root of the `docs` repository, then run the new-module helper as below. (You can do this anytime; you don't have to be running the development server first.)
 
 ```
 $ make new-learn-module
@@ -85,7 +85,7 @@ $ make new-learn-module
 ...
 
 Module name (e.g., pulumi-101-aws): pulumi-101-azure
-themes/default/content/learn/pulumi-101-azure created
+content/learn/pulumi-101-azure created
 ```
 
 Hugo will do its best to convert the slug to a proper title -- e.g., `pulumi-101-aws` becomes `Pulumi 101 Aws`. If you find that the conversion looks a bit weird, or if you just want to change it to something else, you can do that by editing the module file's YAML frontmatter directly.
@@ -97,11 +97,11 @@ $ make new-learn-module
 ...
 
 Module name (e.g., pulumi-101-aws): pulumi-101-azure
-themes/default/content/learn/pulumi-101-azure created
+content/learn/pulumi-101-azure created
 
 ...
 Topic name (e.g., basics): basics
-themes/default/content/learn/pulumi-101-azure/basics created
+content/learn/pulumi-101-azure/basics created
 ```
 
 When you want to create a topic for a module that already exists, use the topic-specific helper:
@@ -118,7 +118,7 @@ $ make new-learn-topic
 
 Module name (e.g., pulumi-101-aws): pulumi-101-azure
 Topic name (e.g., basics): advanced-basics
-themes/default/content/learn/pulumi-101-azure/advanced-basics created
+content/learn/pulumi-101-azure/advanced-basics created
 ```
 
 At this point, your new topic is created and you're ready to start writing. Each file should contain annotated frontmatter explaining how each property works, and if you find you don't have something you need, feel free to reach out in the #docs channel.

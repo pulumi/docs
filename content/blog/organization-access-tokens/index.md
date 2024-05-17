@@ -28,7 +28,7 @@ tags:
     - features
     - pulumi-enterprise
 
-# See the blogging docs at https://github.com/pulumi/pulumi-hugo/blob/master/BLOGGING.md.
+# See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md.
 # for additional details, and please remove these comments before submitting for review.
 ---
 As enterprise adoption of the Pulumi Service has grown 350% over the last year, we've seen a strong customer demand for tools to manage automated Pulumi use cases such as CI/CD and Automation API at scale. Today we are launching Organization Access Tokens to empower our largest customers to manage automated workloads in a secure and collaborative manner.

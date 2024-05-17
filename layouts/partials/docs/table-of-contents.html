@@ -55,7 +55,7 @@
     {{ $isCLICommand := hasPrefix .Path "docs/cli/commands" }}
     {{ $isAPIDoc := and (hasPrefix .Path "docs/reference/pkg/") (ne .Path "docs/reference/pkg/_index.md") }}
     {{ if not (or $isCLICommand $isAPIDoc $.Page.Params.no_edit_this_page) }}
-        {{ $repoURL := "https://github.com/pulumi/pulumi-hugo" }}
+        {{ $repoURL := "https://github.com/pulumi/docs" }}
         {{ if (hasPrefix .Path "registry/") }}
             {{ $repoURL = "https://github.com/pulumi/registry" }}
         {{ end }}

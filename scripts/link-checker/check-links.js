@@ -199,8 +199,6 @@ function getDefaultExcludedKeywords() {
         "https://github.com/pulumi/docs/issues/new",
         "https://github.com/pulumi/registry/edit/master",
         "https://github.com/pulumi/registry/issues/new",
-        "https://github.com/pulumi/pulumi-hugo/edit/master",
-        "https://github.com/pulumi/pulumi-hugo/issues/new",
         "https://www.linkedin.com/",
         "https://linkedin.com/",
         "https://marketplace.visualstudio.com/items?itemName=pulumi.build-and-release-task",
