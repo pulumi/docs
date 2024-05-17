@@ -22,10 +22,6 @@ jobs:
         with:
           node-version: '18.x'
 
-      - uses: actions/setup-go@v2
-        with:
-          go-version: 1.19.x
-
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v2
         with:
