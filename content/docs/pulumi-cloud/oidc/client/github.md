@@ -43,80 +43,32 @@ For further information about Github token claims refer to the [official Github 
    ![Github policy example](../github-policies.png)
 5. Click on update
 
-## Set up the Github Actions step to fetch the OIDC token
+## Set up the Github Actions to use Pulumi's authentication action
 
 ```yaml
-- name: Fetch OIDC token
-  run: |
-    OIDC_GH_TOKEN=$(curl -H "Authorization: bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" "$ACTIONS_ID_TOKEN_REQUEST_URL"  | jq -r '.value')
-    echo "OIDC_GH_TOKEN=$OIDC_GH_TOKEN" >> $GITHUB_ENV
+      - uses: pulumi/auth-actions@v1
+        with:
+          organization: org-name
+          requested-token-type: urn:pulumi:token-type:access_token:organization
 ```
 
-## Set up the Github Actions step to exchange it for a Pulumi access token
-
-```yaml
-- name: Fetch Pulumi access token
-  run: |
-    PULUMI_ACCESS_TOKEN=$(curl -X POST  \
-    -H 'Content-Type: application/x-www-form-urlencoded' \
-    -d 'audience=urn:pulumi:org:ORG_NAME \
-    -d 'grant_type=urn:ietf:params:oauth:grant-type:token-exchange' \
-    -d 'subject_token_type=urn:ietf:params:oauth:token-type:id_token' \
-    -d 'requested_token_type=urn:pulumi:token-type:access_token:organization' \
-    -d 'subject_token=${{ env.OIDC_GH_TOKEN }}' \
-    https://api.pulumi.com/oauth/token | jq -r '.access_token')
-    echo "::add-mask::$PULUMI_ACCESS_TOKEN"
-    echo "PULUMI_ACCESS_TOKEN=$PULUMI_ACCESS_TOKEN" >> $GITHUB_ENV
-```
-
-Replace ORG_NAME with the right Pulumi organization
+Replace `org-name` with the right Pulumi organization.
 
 ## Sample Github Actions workflow
 
-```yaml
-name: Pulumi UP
-on:
-  workflow_dispatch:
-
-permissions:
-  id-token: write
-  contents: read
-
-jobs:
-  run_cron_job:
-    runs-on: ubuntu-20.04
+	@@ -88,35 +71,15 @@ jobs:
     timeout-minutes: 30
 
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
-      - name: Install pulumi
-        uses: pulumi/actions@v4
-
-      - name: Install deps
-        run: yarn
-
-      - name: Fetch OIDC token
-        run: |
-          OIDC_GH_TOKEN=$(curl -H "Authorization: bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" "$ACTIONS_ID_TOKEN_REQUEST_URL"  | jq -r '.value')
-          echo "OIDC_GH_TOKEN=$OIDC_GH_TOKEN" >> $GITHUB_ENV
-
-      - name: Fetch Pulumi access token
-        run: |
-          PULUMI_ACCESS_TOKEN=$(curl -X POST  \
-            -H 'Content-Type: application/x-www-form-urlencoded' \
-            -d 'audience=urn:pulumi:org:ORG_NAME' \
-            -d 'grant_type=urn:ietf:params:oauth:grant-type:token-exchange' \
-            -d 'subject_token_type=urn:ietf:params:oauth:token-type:id_token' \
-            -d 'requested_token_type=urn:pulumi:token-type:access_token:organization' \
-            -d 'subject_token=${{ env.OIDC_GH_TOKEN }}' \
-            https://api.pulumi.com/api/oauth/token | jq -r '.access_token')
-          echo "::add-mask::$PULUMI_ACCESS_TOKEN"
-          echo "PULUMI_ACCESS_TOKEN=$PULUMI_ACCESS_TOKEN" >> $GITHUB_ENV
-
-      - uses: pulumi/actions@v4
+      - uses: pulumi/auth-actions@v1
         with:
-          command: up
-          stack-name: ...
+          organization: org-name
+          requested-token-type: urn:pulumi:token-type:access_token:organization
+
+      - uses: pulumi/actions@v5
+        with:
+          command: preview
+          stack-name: org-name/stack-name
 ```
