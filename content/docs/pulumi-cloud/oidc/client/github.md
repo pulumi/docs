@@ -56,7 +56,18 @@ Replace `org-name` with the right Pulumi organization.
 
 ## Sample Github Actions workflow
 
-	@@ -88,35 +71,15 @@ jobs:
+```
+name: Pulumi UP
+on:
+  workflow_dispatch:
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  run_cron_job:
+    runs-on: ubuntu-20.04
     timeout-minutes: 30
 
     steps:
