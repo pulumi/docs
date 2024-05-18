@@ -525,15 +525,14 @@ $ pulumi stack init my-stack \
     --secrets-provider="awskms://1234abcd-12ab-34cd-56ef-1234567890ab?region=us-east-1"
 ```
 
-If you have previously configured the AWS CLI, the same credentials will be used to encrypt/decrypt secrets using the specified KMS key. For this reason, it is important to ensure that the credentials have the appropriate permissions to interact with the key accordingly. Your AWS CLI credentials can be overridden using the standard `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` environment variables. For more options, refer to the [AWS Go SDK documentation](https://docs.aws.amazon.com/sdk-for-go/api/aws/session/).
+If you have previously configured the AWS CLI, the same credentials will be used to encrypt/decrypt secrets using the specified KMS key. For this reason, it is important to ensure that the credentials have the appropriate permissions to interact with the key accordingly. If needed, your AWS CLI credentials can be overridden using the standard `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` environment variables. For more options, refer to the [AWS Go SDK documentation](https://docs.aws.amazon.com/sdk-for-go/api/aws/session/).
 
-{{% notes "info" %}}
 As of Pulumi CLI v3.33.1, instead of specifying the AWS Profile using the `AWS_PROFILE` environment variable, add `awssdk=v2` and `profile=` followed by the profile name to the query string.
 
 1. By ID: `awskms://1234abcd-12ab-34cd-56ef-1234567890ab?region=us-east-1&awssdk=v2&profile=dev`.
 1. By alias: `awskms://alias/ExampleAlias?region=us-east-1&awssdk=v2&profile=qa`.
 1. By ARN: `awskms:///arn:aws:kms:us-east-1:111122223333:key/1234abcd-12ab-34bc-56ef-1234567890ab?region=us-east-1&awssdk=v2&profile=prod`.
-{{% /notes %}}
+
 {{% notes "info" %}}
 
 As of Pulumi CLI v3.41.1, this secrets backend supports [encryption context](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#encrypt_context) by setting `context_{key}={value}` in the query string.
@@ -620,7 +619,7 @@ It's therefore considered safe and good practice to check these files into sourc
 
 ## Managing secrets with Pulumi ESC environments
 
-With Pulumi ESC, you can manage secrets wherever they live. Pulumi ESC provides a centralized abstraction in front of the most common secrets manager/vaults while providing security through RBAC and audit controls.
+With [Pulumi ESC](/docs/esc/), you can manage secrets wherever they live. Pulumi ESC provides a centralized abstraction in front of the most common secrets manager/vaults while providing security through RBAC and audit controls.
 
 ### Sharing secrets across multiple teams
 
