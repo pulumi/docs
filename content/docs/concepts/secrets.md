@@ -318,8 +318,6 @@ $ pulumi config set --plaintext aws:region us-west-2
 
 To access configuration or secret values for your package, project, or component, use the `pulumi.Config` type. This type offers a collection of getters and setters for retrieving configuration values of various types by their key.
 
-To begin, allocate an instance of the `pulumi.Config` object. Its constructor takes an optional namespace for all configuration keys being read back. Similar rules to the CLI usage apply here, in that if you omit the namespace argument, the current project is used. This is the common case for project configuration but is not what you want for packages and components which need their own isolated configuration.
-
 For example, assume the following configuration values have been set:
 
 ```bash
@@ -327,7 +325,9 @@ $ pulumi config set name BroomeLLC             # set a plain-text value
 $ pulumi config set --secret dbPassword S3cr37 # set an encrypted secret value
 ```
 
-Use the following code to access these configuration values in your Pulumi program:
+To begin, allocate an instance of the `pulumi.Config` object as shown in the code below. Its constructor takes an optional namespace for all configuration keys being read back. Similar rules to the CLI usage apply here, in that if you omit the namespace argument, the current project is used. This is the common case for project configuration but is not what you want for packages and components which need their own isolated configuration.
+
+The remainder of the code example demonstrates how to access these configuration values in your Pulumi program:
 
 {{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
 
@@ -447,13 +447,27 @@ config:
 
 In this example, we have read back the `name` and `dbPassword` configuration variables programmatically. The `name` is just the string `BroomeLLC`, while the `dbPassword` is a secret output value that is encrypted.
 
+### Explicitly set config namespace
+
 Notice the keys used above have no namespaces, both in the CLI gestures and in the `pulumi.Config` constructor. This means they have taken our project name as the default namespace. We could have specified this explicitly, as in `pulumi config set broome-proj:name BroomeLLC` and `new pulumi.Config("broome-proj")`.
+
+### Create secrets within structured config
 
 Secrets within structured config are also supported. Consider a list of endpoints, each having a `url` and `token` property. The `token` value could be stored as a secret:
 
 ```bash
 $ pulumi config set --path endpoints[0].url https://example.com
 $ pulumi config set --path --secret endpoints[0].token accesstokenvalue
+```
+
+The above configuration would look like the following in your `Pulumi.<project-name>.yaml` file:
+
+```yaml
+config:
+  project-name:endpoints:
+    - token:
+        secure: AAABALsgfFnV0KbGLybu5f+oTqUFmPl2l7oer5EACw15g7rE6GMYQqGgMoZ07QgT
+      url: https://example.com
 ```
 
 {{% notes type="warning" %}}
@@ -511,7 +525,7 @@ $ pulumi stack init my-stack \
     --secrets-provider="awskms://1234abcd-12ab-34cd-56ef-1234567890ab?region=us-east-1"
 ```
 
-If you have previously configured the AWS CLI, the same credentials will be used. These can also be overridden using the standard `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` environment variables. For more options, refer to the [AWS Go SDK documentation](https://docs.aws.amazon.com/sdk-for-go/api/aws/session/).
+If you have previously configured the AWS CLI, the same credentials will be used to encrypt/decrypt secrets using the specified KMS key. For this reason, it is important to ensure that the credentials have the appropriate permissions to interact with the key accordingly. Your AWS CLI credentials can be overridden using the standard `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` environment variables. For more options, refer to the [AWS Go SDK documentation](https://docs.aws.amazon.com/sdk-for-go/api/aws/session/).
 
 {{% notes "info" %}}
 As of Pulumi CLI v3.33.1, instead of specifying the AWS Profile using the `AWS_PROFILE` environment variable, add `awssdk=v2` and `profile=` followed by the profile name to the query string.
@@ -521,6 +535,7 @@ As of Pulumi CLI v3.33.1, instead of specifying the AWS Profile using the `AWS_P
 1. By ARN: `awskms:///arn:aws:kms:us-east-1:111122223333:key/1234abcd-12ab-34bc-56ef-1234567890ab?region=us-east-1&awssdk=v2&profile=prod`.
 {{% /notes %}}
 {{% notes "info" %}}
+
 As of Pulumi CLI v3.41.1, this secrets backend supports [encryption context](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#encrypt_context) by setting `context_{key}={value}` in the query string.
 Encryption context can be used in [IAM policies conditions](https://docs.aws.amazon.com/kms/latest/developerguide/policy-conditions.html#conditions-kms-encryption-context) and it appears in Cloudtrail logs.
 
