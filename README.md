@@ -48,9 +48,9 @@ Additionally, to build the SDK and CLI documentation, you'll also need:
 
 * **Infrastructure**: We deploy the website as a statically built artifact to a unique Amazon S3 bucket on every commit to the base branch of this repo. The Pulumi program that handles this is located in `./infrastructure`. This is also where you'll find the CloudFront configuration that handles proxying [Pulumi AI](https://pulumi.com/ai) and the [Pulumi Registry](https://pulumi.com/registry).
 
-## Makefile
+## Using the Makefile
 
-The `Makefile` exposes a number of useful helpers:
+The `Makefile` exposes a number of useful helpers for authoring:
 
 * `make ensure` resolves and installs all dependencies
 * `make lint` checks all Markdown files for correctness
