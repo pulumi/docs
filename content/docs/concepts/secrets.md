@@ -20,21 +20,6 @@ Pulumi Cloud transmits and stores entire state files securely, but Pulumi also s
 The Pulumi CLI **never** transmits your cloud credentials to Pulumi Cloud.
 {{% /notes %}}
 
-To encrypt a configuration setting before runtime, use the [`pulumi config set`](/docs/concepts/config#configuration) CLI command with a [`--secret`](#secrets) flag. You can also declare secrets at runtime; any [output](/docs/concepts/inputs-outputs/#outputs) value can also be marked secret. If an output is a secret, any computed values derived from it, such as those derived from a call to [`apply`](/docs/concepts/inputs-outputs/#apply), will also be marked secret. All these of encrypted values are stored as ciphertext in your state file.
-
-An output can be marked secret in a number of ways:
-
-- By reading a secret from configuration using {{< pulumi-config-getsecret >}} or {{< pulumi-config-requiresecret >}}.
-- By creating a new secret value with {{< pulumi-secret-new >}}, such as when generating a new random password.
-- By marking a resource as having secret properties using [`additionalSecretOutputs`](/docs/concepts/inputs-outputs).
-- By computing a secret value by using [`apply`](/docs/concepts/inputs-outputs/#apply) or {{< pulumi-all >}} with another secret value.
-
-As soon as an output is marked secret, the Pulumi engine will encrypt it wherever it is stored.
-
-{{% notes "info" %}}
-Note that when using `apply` or `Output.all`, secrets are decrypted into plain text for use within the callback handler. It is up to your program to treat this value sensitively and only pass the plain-text value to code that you trust.
-{{% /notes %}}
-
 ## Creating secrets programmatically
 
 There are two ways to programmatically create secret values:
@@ -202,11 +187,20 @@ Secrets have the same type, `Output<T>`, as unencrypted resource outputs. The di
 
 An `apply`’s callback is given the plain-text value of the underlying secret. Although Pulumi ensures that the value returned from an `apply` on a secret is also marked as secret, Pulumi cannot guarantee that the `apply` callback itself will not expose the secret value —for instance, by explicitly printing the value to the console or saving it to a file.
 
+An output can be marked secret in a number of ways:
+
+- By reading a secret from configuration using {{< pulumi-config-getsecret >}} or {{< pulumi-config-requiresecret >}}.
+- By creating a new secret value with {{< pulumi-secret-new >}}, such as when generating a new random password.
+- By marking a resource as having secret properties using [`additionalSecretOutputs`](/docs/concepts/inputs-outputs).
+- By computing a secret value by using [`apply`](/docs/concepts/inputs-outputs/#apply) or {{< pulumi-all >}} with another secret value.
+
+As soon as an output is marked secret, the Pulumi engine will encrypt it wherever it is stored.
+
 {{% notes "warning" %}}
 Be careful that you do not pass this plain-text value to code that might expose it.
 {{% /notes %}}
 
-## Explicitly marking resource outputs as secrets
+### Explicitly marking resource outputs as secrets
 
 It is possible to mark resource outputs as containing secrets. In this case, Pulumi will automatically treat those outputs as secrets and encrypt them in the state file and anywhere they flow to. To do so, use the [`additional secret outputs`](/docs/concepts/resources#additionalsecretoutputs) option.
 
@@ -310,7 +304,11 @@ $ pulumi up
 Password: [secret]
 ```
 
-By default, configuration values are saved in plain text. To explicitly denote a plain text or unencrypted configuration value, pass the `--plaintext` flag. This flag can be used to indicate that you did not want an encrypted secret.
+### Explicitly denote unencrypted values
+
+By default, configuration values are saved in plain text. Given this, there may be times where you need to explictly denote a value as plain text or unencrypted. For example, for security purposes, the Pulumi CLI tries to detect when something that looks like an API token or password is supplied to as a Pulumi configuration value. There are some scenarios where it will incorrectly assume a string is a secret and will alert you in the command line while aborting the task.
+
+To circumnavigate this, you can pass the `--plaintext` flag when creating your configuration value. This flag can be used to indicate that you did not want an encrypted secret.
 
 ```bash
 $ pulumi config set --plaintext aws:region us-west-2
