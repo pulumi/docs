@@ -8,6 +8,16 @@ layout: community-engineering/single
 aliases:
   - /engin
 talks:
+  - event: "AWS Community Day Turkiye 20024"
+    title: "The Million-Dollar Mistake: A Tale of DevOps and Skyrocketing AWS Bills"
+    url: https://aws.cloudturkey.io/#schedules
+    date: 2024-05-18T14:00:00.000-07:00
+    slides: null
+  - event: "KCD Istanbul 2024"
+    title: "Gain Platform Superpowers with the KEBAP Stack!"
+    url: https://kcd.istanbul/KCD_Istanbul_2024_Schedule.pdf
+    date: 2024-05-16T12:00:00.000-07:00
+    slides: null
   - event: "LA DevOps"
     title: "Cloud Native DevOps with Pulumi and ArgoCD"
     url: https://www.meetup.com/meetup-group-zzqwjltm/events/300366094/
@@ -19,7 +29,7 @@ talks:
     date: 2024-04-18T10:00:00.000-07:00
     slides: null
   - event: "GitOpsCon NA 2024"
-    title: "Gain Platform Superpowers with the KEBAP Stack!"
+    title: "Gain Platform Superpowers with the KEBAP Stack! ⚡-Talk"
     url: https://gitopsconna2024.sched.com/event/b9b16b655584d1d2a27855757eb3fc37
     date: 2024-04-15T12:05:00.000-07:00
     slides: https://static.sched.com/hosted_files/gitopsconna2024/65/gain-platform-superpowers-with-the-kebap-stack.pdf
