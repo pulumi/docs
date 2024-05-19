@@ -65,6 +65,14 @@ The `Makefile` exposes a number of useful helpers for authoring:
 * `make new-blog-post` scaffolds a new, bare-bones blog post with placeholder content
 * `make new-example-program` generates a new multi-language set of examples at `./static/programs`
 
+As a content contributor, the commands you'll most often use are these:
+
+```bash
+make ensure    # Install or update dependencies.
+make serve     # Run the development server locally on http://localhost:1313.
+make lint      # Identify any Markdown or code-formatting issues so you an fix them.
+```
+
 ## Generating SDK and CLI documentation
 
 We generate two kinds of reference documentation with this repository: language-specific SDK docs (for a subset of Pulumi packages) and CLI docs (for command-line tools like `pulumi` and `esc`). Instructions for generating both types of docs are listed below.
@@ -125,7 +133,7 @@ pulumi gen-markdown ./content/docs/cli/commands    # Generate Pulumi CLI documen
 esc gen-docs ./content/docs/esc-cli/commands       # Generate Pulumi ESC CLI documentation.
 ```
 
-Generated docs reflect the functionality of the currently installed CLI, so make sure you've installed the latest public version of each one ([`pulumi`](https://github.com/pulumi/pulumi/releases), [`esc`](https://github.com/pulumi/esc/releases)) before running these commands and submitting your PR. 
+Generated docs reflect the functionality of the currently installed CLI, so make sure you've installed the latest public version of each one ([`pulumi`](https://github.com/pulumi/pulumi/releases), [`esc`](https://github.com/pulumi/esc/releases)) before running these commands and submitting your PR.
 
 ### Viewing rendered SDK and CLI docs locally
 
