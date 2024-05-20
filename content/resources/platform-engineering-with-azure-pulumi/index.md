@@ -50,7 +50,9 @@ main:
 
     # Description of the webinar.
     description: |
-        It’s now easier than ever for platform engineering teams to help their organizations move faster with Pulumi Infrastructure as Code and Microsoft Azure. In this session, we’ll teach you how to use Azure Deployment Environments to share click-to-deploy templates with your development teams. This session includes hands-on labs that will help you to create cloud resources that meet your requirements and share these capabilities across your organization
+        Platform engineering has become crucial for organizations with 50 or more engineers. As an extension of DevOps at scale, effective platform engineering empowers developers and development teams to utilize self-service capabilities.
+
+In this session, you learn how to use Azure Deployment Environments to share click-to-deploy templates with your development teams. This session includes hands-on labs to help you create cloud resources that meet your requirements and share these capabilities across your organization.
 
     learn:
         - Infrastructure as Code concepts for C# developers
