@@ -1,9 +1,10 @@
-name: "Scheduled jobs: Bucket cleanup"
+name: "Scheduled jobs: Bucket cleanup testing"
 on:
   schedule:
     # * is a special character in YAML so you have to quote this string.
     # Run every day at 3:00PM UTC.
     - cron:  '0 15 * * *'
+  workflow_dispatch:
 permissions:
       id-token: write   # This is required for requesting the JWT
       contents: read    # This is required for actions/checkout
@@ -12,7 +13,7 @@ jobs:
     env:
       GOPATH: ${{ github.workspace }}/go
     name: Bucket cleanup
-    environment: production
+    environment: testing
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -21,15 +22,11 @@ jobs:
         with:
           node-version: '18.x'
 
-      - uses: actions/setup-go@v2
-        with:
-          go-version: 1.20.x
-
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v2
         with:
-          role-to-assume: arn:aws:iam::388588623842:role/ContinuousDelivery
-          role-session-name: docs-cleanup
+          role-to-assume: arn:aws:iam::571684982431:role/ContinuousDelivery
+          role-session-name: docs-deploy
           role-duration-seconds: 7200
           aws-region: us-west-2
 
