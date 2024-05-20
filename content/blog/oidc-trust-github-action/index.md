@@ -71,7 +71,7 @@ jobs:
           stack-name: org-name/stack-name
 ```
 
-For more information about the action, check the [Pulumi auth action documentation](https://github.com/marketplace/actions/pulumi-auth-action).
+For more information about the `pulumi/auth-actions@v1` Action, check the [Pulumi Auth Action documentation](https://github.com/marketplace/actions/pulumi-auth-action).
 
 ## Conclusion
 
