@@ -1,7 +1,7 @@
 ---
 title: "Simplify OIDC Trust with the New Pulumi GitHub Action"
 
-date: 2024-05-17T21:45:13Z
+date: 2024-05-20T21:45:13Z
 
 meta_desc: Introducing Pulumi GitHub Action for OIDC Trust Relationships 
 
@@ -34,7 +34,7 @@ We're excited to announce a new GitHub Action that simplifies the integration of
 
 ## A Quick Refresher on Pulumi's OIDC Trust
 
-The OIDC Trust feature allows you to configure trusted OIDC identity providers, such as GitHub, GitLab, or Google Cloud, within your Pulumi organization. This feature ensures secure and straightforward integration of [Pulumi Cloud](/docs/pulumi-cloud/) within any OIDC-compliant system. Once set up, you can securely exchange short-lived OIDC tokens from these providers for temporary Pulumi access tokens. These Pulumi tokens can then be used to authenticate to Pulumi and perform actions such as deploying your infrastructure using Pulumi IaC, retrieving secrets stored in Pulumi ESC, etc. OIDC Trust solves the "secret zero" challenge by eliminating the need to manage long-lived cloud secrets in your CI/CD environment, enhancing security, simplifying credential management, and aligning with best cloud practices.
+The OIDC Trust feature allows you to configure trusted OIDC identity providers, such as GitHub, GitLab, or Google Cloud, within your Pulumi organization. This feature ensures secure and straightforward integration of [Pulumi Cloud](/docs/pulumi-cloud/) within any OIDC-compliant system. Once set up, you can securely exchange short-lived OIDC tokens from these providers for temporary Pulumi access tokens. These tokens can then be used to authenticate to Pulumi and perform actions such as deploying your infrastructure using Pulumi IaC, retrieving secrets stored in Pulumi ESC, etc. This approach enhances security by eliminating the need to store long-lived sensitive credentials and aligns with best cloud practices.
 
 ## Streamlining OIDC Trust with GitHub Actions
 
