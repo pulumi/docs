@@ -124,3 +124,4 @@ jobs:
 
 * [OIDC Trust Relationships overview](/docs/pulumi-cloud/oidc/client/)
 * [Configuring OIDC for Github](/docs/pulumi-cloud/oidc/client/github/)
+* [Configuring OpenID Connect for Google Kubernetes Engine](/docs/pulumi-cloud/oidc/client/kubernetes-gke/)
