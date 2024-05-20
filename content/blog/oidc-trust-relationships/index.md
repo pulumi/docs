@@ -71,11 +71,11 @@ In this demo, we are going to use Github Actions to retrieve Pulumi credentials 
 3. Add a policy to allow OIDC and configure the sub and audience for your organization and repositories. In the demo, we are using:
 
 <!-- markdownlint-disable no-bare-urls -->
-* **Aud**: https://github.com/***organization***
+* **Aud**: urn:pulumi:org:***organization***
 
 * **Sub**: repo:***organization***/***repo***:*
 <!-- markdownlint-enable no-bare-urls -->
-4. Create a GitHub action. Here is a sample code. Make sure to substitute the `aud` claim with your organization's name in the `fetch pulumi token` step.
+4. Create a GitHub action. Here is a sample code. Make sure to substitute your organization in the `pulumi/auth-actions` organization parameter.
 
 <!-- markdownlint-disable code-block-style -->
 ```yaml
@@ -102,23 +102,10 @@ jobs:
       - name: Install deps
         run: yarn
 
-      - name: fetch gh token
-        run: |
-          OIDC_GH_TOKEN=$(curl -H "Authorization: bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" "$ACTIONS_ID_TOKEN_REQUEST_URL"  | jq -r '.value')
-          echo "OIDC_GH_TOKEN=$OIDC_GH_TOKEN" >> $GITHUB_ENV
-
-      - name: fetch pulumi token
-        run: |
-          PULUMI_ACCESS_TOKEN=$(curl -X POST  \
-            -H 'Content-Type: application/x-www-form-urlencoded' \
-            -d 'audience=urn:pulumi:org:arun-test' \
-            -d 'grant_type=urn:ietf:params:oauth:grant-type:token-exchange' \
-            -d 'subject_token_type=urn:ietf:params:oauth:token-type:id_token' \
-            -d 'requested_token_type=urn:pulumi:token-type:access_token:organization' \
-            -d 'subject_token=${{ env.OIDC_GH_TOKEN }}' \
-            https://api.pulumi.com/api/oauth/token | jq -r '.access_token')
-          echo "::add-mask::$PULUMI_ACCESS_TOKEN"
-          echo "PULUMI_ACCESS_TOKEN=$PULUMI_ACCESS_TOKEN" >> $GITHUB_ENV
+      - uses: pulumi/auth-actions@v1
+        with:
+          organization: organization
+          requested-token-type: urn:pulumi:token-type:access_token:organization
 
       - name: Login to Pulumi
         run: pulumi login
@@ -137,3 +124,4 @@ jobs:
 
 * [OIDC Trust Relationships overview](/docs/pulumi-cloud/oidc/client/)
 * [Configuring OIDC for Github](/docs/pulumi-cloud/oidc/client/github/)
+* [Configuring OpenID Connect for Google Kubernetes Engine](/docs/pulumi-cloud/oidc/client/kubernetes-gke/)
