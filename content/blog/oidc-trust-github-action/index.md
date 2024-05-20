@@ -28,7 +28,7 @@ tags:
 # for details, and please remove these comments before submitting for review.
 ---
 
-We're excited to announce a new GitHub Action that simplifies the integration of Pulumi's powerful [OpenID Connect](/docs/pulumi-cloud/oidc/client/) (OIDC) Trust feature into your [GitHub Actions](/docs/pulumi-cloud/oidc/client/github/) workflows. This action streamlines secure authentication with Pulumi Cloud, allowing you to leverage your existing identity provider and eliminate the need for long-lived Pulumi access tokens.
+We're excited to announce a new GitHub Action that simplifies the integration of Pulumi's powerful [OpenID Connect](/docs/pulumi-cloud/oidc/client/) (OIDC) Trust feature into your [GitHub Actions](/docs/pulumi-cloud/oidc/client/github/) workflows. This action streamlines secure authentication with Pulumi Cloud, allowing you to leverage GitHub as an identity provider and eliminate the need for long-lived Pulumi access tokens.
 
 <!--more-->
 
