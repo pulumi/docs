@@ -142,4 +142,4 @@ lint:
 
 .PHONY: format
 format:
-	yarn prettier --write .
+	./scripts/format.sh

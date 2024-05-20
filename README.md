@@ -25,10 +25,10 @@ See also:
 
 We build the Pulumi website with Hugo, manage our dependencies with Node.js and Yarn, and write our documentation in Markdown. Below is a list of the tools you'll need if you'd like to work on the website (e.g., to contribute docs content, a blog post, etc.):
 
-* [Hugo](https://gohugo.io) (>= 0.111.0)
-  * Hugo 0.111.0 is highly recommended. This is the version we use in our deployment pipelines.
-* [Node.js](https://nodejs.org/en/) (>= 18)
-* [Yarn](https://classic.yarnpkg.com/en/) (1.x)
+* [Hugo](https://gohugo.io/installation/) (>= 0.126.0)
+  * Hugo 0.126.0 is highly recommended. This is the version we use in our deployment pipelines.
+* [Node.js](https://nodejs.org/en/download/package-manager) (>= 18)
+* [Yarn](https://classic.yarnpkg.com/lang/en/docs/install) (1.x)
 
 Additionally, to build the SDK and CLI documentation, you'll also need:
 
@@ -65,12 +65,12 @@ The `Makefile` exposes a number of useful helpers for authoring:
 * `make new-blog-post` scaffolds a new, bare-bones blog post with placeholder content
 * `make new-example-program` generates a new multi-language set of examples at `./static/programs`
 
-As a content contributor, the commands you'll most often use are these:
+As a content contributor, the commands you'll use most often are these:
 
 ```bash
 make ensure    # Install or update dependencies.
 make serve     # Run the development server locally on http://localhost:1313.
-make lint      # Identify any Markdown or code-formatting issues so you an fix them.
+make lint      # Identify any Markdown or code-formatting issues so you can fix them.
 ```
 
 ## Generating SDK and CLI documentation
