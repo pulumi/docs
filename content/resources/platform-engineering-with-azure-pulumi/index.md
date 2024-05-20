@@ -63,7 +63,7 @@ main:
     presenters:
         - name: Sagar Chandra Reddy Lankala
           role: Sr Product Manager, Microsoft
-          photo: /images/team/sagar-lankala.jpg
+          photo: /images/people/sagar-lankala.jpg
         - name: Mikhail Shilkov
           role: Engineering Manager, Pulumi
           photo: /images/team/mikhail-shilkov.jpg
