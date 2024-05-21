@@ -197,7 +197,7 @@ An output can be marked secret in a number of ways:
 As soon as an output is marked secret, the Pulumi engine will encrypt it wherever it is stored.
 
 {{% notes "warning" %}}
-Be careful that you do not pass this plain-text value to code that might expose it.
+Be careful that you do not pass this plain-text value to code that might expose it. Note that when using `apply` or `Output.all`, secrets are decrypted into plain text for use within the callback handler. It is up to your program to treat this value sensitively and only pass the plain-text value to code that you trust.
 {{% /notes %}}
 
 ### Explicitly marking resource outputs as secrets
