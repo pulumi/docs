@@ -1,6 +1,6 @@
 ---
 title: "Celebrating 20,000 Stars: A Milestone for the Pulumi Community"
-date: 2024-05-21T18:48:50Z
+date: 2024-05-23T18:48:50Z
 
 # The draft setting determines whether a post is published. Set it to true if
 # you want to be able to merge the post without publishing it.
@@ -10,7 +10,8 @@ draft: false
 # of the content of the post, which is useful for targeting search results or
 # social-media previews. This field is required or the build will fail the
 # linter test. Max length is 160 characters.
-meta_desc: "Pulumi Celebrates 20,000 Stars on GitHub! Our open-source project has reached an incredible milestone, thanks to the unwavering support of our global developer community. Discover how Pulumi has transformed cloud infrastructure management with 4,400+ contributors, 75,000+ pull requests, and over 100 million downloads. Explore our journey, key features, and future roadmap today."
+meta_desc: "Pulumi celebrates 20,000 stars on GitHub! We couldn't have reached this incredible milestone without y'all. Over the last 7 years, the project has had 4,400+ contributors, 75,000+ pull requests, and over 100 million downloads. Check out a quick recap of the journey, key futures, and future roadmap."
+social_media: "We just past 20k stars on GitHub! We couldn't have reached this incredible milestone without y'all. Read a quick recap of the journey and key features"
 meta_image: meta.png
 authors:
     - aaron-kao
