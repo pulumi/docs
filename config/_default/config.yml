@@ -13,7 +13,8 @@ security:
       - ALGOLIA_APP_SEARCH_KEY
 
 disableKinds:
-  - taxonomy
+  - taxonomyTerm
+  - category
 
 sectionPagesMenu: main
 pygmentsCodeFences: true

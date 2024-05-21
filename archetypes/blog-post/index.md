@@ -34,6 +34,13 @@ authors:
 tags:
     - change-me
 
+
+# The social copy used to promote this post on Twitter and Linkedin. These
+# properties do not actually create the post and have no effect on the
+# generated blog page. They are here strictly for reference.
+social_twitter: "social copy to post on Twitter"
+social_linkedin: "social copy to post on Linkedin"
+
 # See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md
 # for details, and please remove these comments before submitting for review.
 ---
