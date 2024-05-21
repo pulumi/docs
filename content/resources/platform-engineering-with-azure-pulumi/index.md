@@ -1,7 +1,8 @@
 ---
 # Name of the event, <= 60 characters
 title: Platform Engineering with Microsoft Azure and Pulumi
-meta_desc: Explore Azure and Pulumi basics in our workshop, empowering platform engineering teams to swiftly deploy cloud resources and accelerate their IaC initiatives.
+meta_desc: Accelerate deployment with our Azure and Pulumi workshop. Use Azure Deployment Environments for efficient cloud management and quick template distribution.
+
 meta_image:
 
 # A featured webinar will display first in the list.
@@ -49,17 +50,20 @@ main:
 
     # Description of the webinar.
     description: |
-        It’s now easier than ever for platform engineering teams to help their organizations move faster with Infrastructure as Code. In this session, we’ll teach you the basics of Azure and Pulumi with hands-on labs that will help you to create stand up cloud resources that meet your organization's requirements.
+        Platform engineering has become crucial for organizations with 50 or more engineers. As an extension of DevOps at scale, effective platform engineering empowers developers and development teams to utilize self-service capabilities.
+
+        In this session, you learn how to use Azure Deployment Environments to share click-to-deploy templates with your development teams. This session includes hands-on labs to help you create cloud resources that meet your requirements and share these capabilities across your organization.
 
     learn:
         - Infrastructure as Code concepts for C# developers
-        - Managing Azure resources with Pulumi
+        - Managing Azure resources with Pulumi, with a focus on Azure Deployment Environments
         - Enabling IaC re-use across your organization
 
     # The webinar presenters
     presenters:
         - name: Sagar Chandra Reddy Lankala
           role: Sr Product Manager, Microsoft
+          photo: /images/people/sagar-lankala.jpg
         - name: Mikhail Shilkov
           role: Engineering Manager, Pulumi
           photo: /images/team/mikhail-shilkov.jpg
