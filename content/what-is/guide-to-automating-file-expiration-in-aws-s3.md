@@ -1,30 +1,28 @@
 ---
 title: Automating AWS S3 File Expiration with Pulumi
 meta_desc: |
-     A comprehensive guide to automating file expiration in AWS S3 using Pulumi.
+     A comprehensive guide to automate file expiration in AWS S3 using Pulumi.
 
 type: what-is
 page_title: Automate AWS S3 File Expiration with Pulumi
 ---
 
-# A guide to automating AWS S3 file expiration with Pulumi
+# A guide to automate AWS S3 file expiration with Pulumi
 
 In this guide, we'll walk through the process of automating AWS S3 file expiration using Pulumi. Lifecycle rules in AWS S3 allow you to specify actions on objects that meet certain criteria over time, such as transitioning objects to a different storage class or automatically deleting them after a specified period. By following these simple steps in this guide, you'll be able to efficiently manage the lifecycle policies for objects stored in S3 buckets, ensuring that outdated files are automatically expired and removed.
 
-With Pulumi, we can automate S3 file expiration by creating a Pulumi program that sets up these lifecycle rules. We'll use the `aws.s3.BucketLifecycleConfiguration` resource, which allows us to define these rules programmatically.
+With Pulumi, we can automate S3 file expiration by creating a Pulumi program that sets up these lifecycle rules. We'll use the aws.s3.BucketLifecycleConfigurationV2 resource, which allows us to define these rules programmatically.
 
 Here's a step-by-step explanation of what we'll do:
 
-- Define the S3 Bucket: We'll create a new S3 bucket or use an existing one where the files are stored.
-- Set Up Lifecycle Rules: We'll define lifecycle rules to specify how files should be managed as they age. For example, we can define a rule to delete files after 30 days.
-- Apply the Configuration: We'll apply the lifecycle configuration to the S3 bucket using Pulumi.
-
-Now, let's write a Pulumi program in TypeScript that creates an S3 bucket with a lifecycle policy to expire objects after 30 days.
+Define the S3 Bucket: We'll create a new S3 bucket or use an existing one where the files are stored.
+Set Up Lifecycle Rules: We'll define lifecycle rules to specify how files should be managed as they age. For example, we can define a rule to delete files after 30 days.
+Apply the Configuration: We'll apply the lifecycle configuration to the S3 bucket using Pulumi.
+Now, let's write a Pulumi program in TypeScript that creates an S3 bucket with a lifecycle policy to transition objects to Glacier after 90 days.
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
-import * as awsx from "@pulumi/awsx";
 
 // Create an S3 bucket
 const bucket = new aws.s3.Bucket("my-automated-bucket", {
@@ -37,7 +35,10 @@ const bucketLifecyclePolicy = new aws.s3.BucketLifecycleConfigurationV2("my-buck
     rules: [
         {
             id: "archiveToGlacier",
-            status: "Enabled",  // Use "status" instead of "enabled"
+            status: "Enabled",
+            filter: {
+                prefix: "documents/",
+            },
             transitions: [
                 {
                     days: 90,
@@ -74,9 +75,9 @@ const bucketPolicy = new aws.s3.BucketPolicy("my-bucket-policy", {
 export const bucketName = bucket.id;
 ```
 
-In this program, we start by importing the AWS module from Pulumi. We then create an S3 bucket named my-bucket. After that, we define a lifecycle configuration for this bucket. The lifecycle configuration includes a rule named expire-files, which is set to automatically delete files under the documents/ prefix after 30 days.
+In this program, we start by importing the AWS module from Pulumi. We then create an S3 bucket named my-automated-bucket. After that, we define a lifecycle configuration for this bucket. The lifecycle configuration includes a rule named archiveToGlacier, which transitions objects under the documents/ prefix to the Glacier storage class after 90 days.
 
-The expiration property inside the rule is what controls the deletion of the objects. The days sub-property specifies the number of days after object creation when the object should be deleted. The filter property with the prefix sub-property applies this rule to only the objects in the bucket that have keys starting with documents/.
+The filter property with the prefix sub-property ensures that this rule only applies to objects stored under the documents/ folder. The transitions property inside the rule controls the transition of the objects. The days sub-property specifies the number of days after object creation when the objects should be transitioned to Glacier.
 
 Finally, we export the bucket name, which can be useful if you want to reference this bucket from other parts of your Pulumi program or from other Pulumi stacks.
 
@@ -91,7 +92,7 @@ After deployment, you can verify the lifecycle configuration in the AWS Manageme
 
 ## Wrapping up
 
-This simple Pulumi program will ensure that any files uploaded to the documents/ folder in your S3 bucket will be automatically deleted after 30 days, helping you manage storage costs and keep your bucket tidy without manual intervention.
+This simple Pulumi program will ensure that any files uploaded to the documents/ folder in your S3 bucket will be automatically transitioned to Glacier after 90 days, helping you manage storage costs and keep your bucket tidy without manual intervention.
 
 ## Additional use cases for S3 automation with Pulumi
 
