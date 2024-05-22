@@ -1,6 +1,6 @@
 jobs:
   automerge:
-    if: github.event.pull_request.head.repo.full_name == github.repository
+    if: (github.event.pull_request.user.login == 'pulumi-bot') && (github.event.pull_request.head.repo.full_name == github.repository)
     name: Automerge Workflow
     runs-on: ubuntu-latest
     steps:
