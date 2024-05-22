@@ -1,0 +1,16 @@
+{{ define "main" }}
+    <div class="container mx-auto px-4">
+        This is the module layout template.
+
+        <p>{{ .Title }}</p>
+        <ul>
+            {{ range .Pages }}
+                <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+            {{ end }}
+        </ul>
+    </div>
+{{ end }}
+
+{{ define "footer" }}
+
+{{ end }}

@@ -1,0 +1,62 @@
+name: s3-writer
+runtime: yaml
+description: A program to create a Lambda write to S3 workflow on AWS
+
+resources:
+  # [Step 1: Create an S3 bucket.]
+  my-bucket:
+    type: aws:s3:Bucket
+
+  # [Step 2: Create a Lambda function.]
+  lambda-role:
+    type: aws:iam:Role
+    properties:
+      assumeRolePolicy: |
+        { 
+          "Version": "2012-10-17",
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Principal": {
+                "Service": "lambda.amazonaws.com"
+              },
+              "Effect": "Allow"
+            }
+          ]
+        }
+
+  s3-role-policy-attachment:
+    type: aws:iam:RolePolicyAttachment
+    properties:
+      role: ${lambda-role}
+      policyArn: "arn:aws:iam::aws:policy/AmazonS3FullAccess"
+
+  cloudwatch-role-policy-attachment:
+    type: aws:iam:RolePolicyAttachment
+    properties:
+      role: ${lambda-role}
+      policyArn: "arn:aws:iam::aws:policy/CloudWatchLogsFullAccess"
+
+  lambda-function:
+    type: aws:lambda:Function
+    properties:
+      role: ${lambda-role.arn}
+      runtime: python3.10
+      handler: lambda_function.lambda_handler
+      code:
+        fn::fileArchive: "./s3_writer"
+      timeout: 15
+      memorySize: 128
+      environment:
+        variables:
+          BUCKET_NAME: ${my-bucket.id}
+
+  # Gives the EventBridge service permissions to invoke the Lambda function
+  lambda-trigger-event:
+    type: aws:lambda:Permission
+    properties:
+      action: lambda:InvokeFunction
+      principal: events.amazonaws.com
+      function: ${lambda-function.id}
+# [Step 3: Create an export.]
+# TO-DO

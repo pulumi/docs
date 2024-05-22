@@ -1,0 +1,29 @@
+- slug: aws
+  name: Amazon Web Services
+  shortname: AWS
+  description: This is a description of this provider.
+  featured: true
+
+- slug: azure
+  name: Microsoft Azure
+  shortname: Azure
+  description: This is a description of this provider.
+  featured: true
+
+- slug: gcp
+  name: Google Cloud Platform
+  shortname: GCP
+  description: This is a description of this provider.
+  featured: true
+
+- slug: kubernetes
+  name: Kubernetes
+  shortname: Kubernetes
+  description: This is a description of this provider.
+  featured: true
+
+- slug: docker
+  name: Docker
+  shortname: Docker
+  description: This is a description of this provider.
+  featured: false
