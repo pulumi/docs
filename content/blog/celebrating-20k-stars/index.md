@@ -59,7 +59,7 @@ We also want to take this time to reflect on some of the notable features we shi
 - Dec 2022 - [Hierarchical config](https://github.com/pulumi/pulumi/issues/2307)  
 - Apr 2023 - [Pulumi Insights](https://www.pulumi.com/blog/pulumi-insights/) for intelligence, search, and analytics over any infrastructure
 - Apr 2023 - First Pulumi User Group (PUG)
-- Jul 2023 - [Terraform conversion](https://github.com/pulumi/pulumi-terraform-bridge/issues/1273) improvement as easy way to migrate TF to Pulumi
+- Jul 2023 - [Terraform conversion](https://github.com/pulumi/pulumi-terraform-bridge/issues/1273) improvement as an easy way to migrate TF to Pulumi
 - Sep 2023 - [Pulumi AI](https://www.pulumi.com/blog/pulumi-insights-ai-cli/) added to `pulumi` CLI
 - Sep 2023 - [Go generics](https://www.pulumi.com/blog/go-generics-preview/) support added
 - Oct 2023 - Series C fundraise
