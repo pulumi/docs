@@ -1,0 +1,21 @@
+{{ define "main" }}
+    <div class="container mx-auto px-4">
+        This is the provider template.
+
+        {{ $slug := .Path | path.Base }}
+        {{ $provider := index (where .Site.Data.tutorials.providers "slug" $slug) 0 }}
+
+        <h1>{{ $provider.name }}</h1>
+        <p>{{ $provider.description }}</p>
+
+        <ul>
+            {{ range .Pages }}
+                <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+            {{ end }}
+        </ul>
+    </div>
+{{ end }}
+
+{{ define "footer" }}
+
+{{ end }}
