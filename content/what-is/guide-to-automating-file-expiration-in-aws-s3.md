@@ -15,9 +15,10 @@ With Pulumi, we can automate S3 file expiration by creating a Pulumi program tha
 
 Here's a step-by-step explanation of what we'll do:
 
-Define the S3 Bucket: We'll create a new S3 bucket or use an existing one where the files are stored.
-Set Up Lifecycle Rules: We'll define lifecycle rules to specify how files should be managed as they age. For example, we can define a rule to delete files after 30 days.
-Apply the Configuration: We'll apply the lifecycle configuration to the S3 bucket using Pulumi.
+- Define the S3 bucket: We'll create a new S3 bucket or use an existing one where the files are stored.
+- Set up lifecycle rules: We'll define lifecycle rules to specify how files should be managed as they age.
+- Apply the C=configuration: We'll apply the lifecycle configuration to the S3 bucket using Pulumi.
+
 Now, let's write a Pulumi program in TypeScript that creates an S3 bucket with a lifecycle policy to transition objects to Glacier after 90 days.
 
 ```typescript
@@ -108,7 +109,7 @@ By leveraging Pulumi with AWS S3, you can automate and streamline various aspect
 
 For more advanced configurations, refer to the [Pulumi AWS documentation](/docs/reference/pkg/aws/s3/bucketlifecycleconfiguration/) and the [AWS S3 Lifecycle Management guide](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lifecycle-mgmt.html).
 
-## Want to learn more about Pulumi?
+## Learn more about Pulumi
 
 Pulumi is free, [open source](https://github.com/pulumi/pulumi), and optionally pairs with the [Pulumi Cloud](/docs/pulumi-cloud/) to make managing infrastructure secure, reliable, and hassle-free.
 
