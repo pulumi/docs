@@ -75,7 +75,7 @@ const bucketPolicy = new aws.s3.BucketPolicy("my-bucket-policy", {
 export const bucketName = bucket.id;
 ```
 
-In this program, we start by importing the AWS module from Pulumi. We then create an S3 bucket named my-automated-bucket. After that, we define a lifecycle configuration for this bucket. The lifecycle configuration includes a rule named archiveToGlacier, which transitions objects under the documents/ prefix to the Glacier storage class after 90 days.
+In this program, we start by importing the AWS module from Pulumi. We then create an S3 bucket named `my-automated-bucket`. After that, we define a lifecycle configuration for this bucket. The lifecycle configuration includes a rule named `archiveToGlacier`, which transitions objects under the `documents/` prefix to the Glacier storage class after 90 days.
 
 The filter property with the prefix sub-property ensures that this rule only applies to objects stored under the documents/ folder. The transitions property inside the rule controls the transition of the objects. The days sub-property specifies the number of days after object creation when the objects should be transitioned to Glacier.
 
