@@ -60,8 +60,6 @@ generate_example() {
             pulumi install > /dev/null
         popd > /dev/null
     done
-
-    unsuffix_gomods
 }
 
 echo
