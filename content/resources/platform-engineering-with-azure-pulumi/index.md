@@ -3,7 +3,7 @@
 title: Platform Engineering with Microsoft Azure and Pulumi
 meta_desc: Accelerate deployment with our Azure and Pulumi workshop. Use Azure Deployment Environments for efficient cloud management and quick template distribution.
 
-meta_image:
+meta_image: "/images/resources/platform-engineering-azure.png"
 
 # A featured webinar will display first in the list.
 featured: false
@@ -52,7 +52,7 @@ main:
     description: |
         Platform engineering has become crucial for organizations with 50 or more engineers. As an extension of DevOps at scale, effective platform engineering empowers developers and development teams to utilize self-service capabilities.
 
-        In this session, you learn how to use Azure Deployment Environments to share click-to-deploy templates with your development teams. This session includes hands-on labs to help you create cloud resources that meet your requirements and share these capabilities across your organization.
+        In this session, you will learn how to use Azure Deployment Environments to share click-to-deploy templates with your development teams. This session includes hands-on labs to help you create cloud resources that meet your requirements and share these capabilities across your organization.
 
     learn:
         - Infrastructure as Code concepts for C# developers
