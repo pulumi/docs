@@ -14,11 +14,15 @@ aliases:
 - /docs/intro/concepts/config/
 ---
 
-In many cases, different stacks for a single project will need differing values. For instance, you may want to use a different size for your AWS EC2 instance, or a different number of servers for your Kubernetes cluster between your development and production stacks.
+In many cases, different stacks for a single project often require differing values to accommodate various environments and requirements. For example, your development stack might use smaller AWS EC2 instances or fewer servers in a Kubernetes cluster compared to your production stack because development environments are primarily used for coding, testing, and debugging, which generally involve fewer users and lower loads compared to production environments. Reducing resource usage in development environments helps lower costs and speeds up deployment cycles.
 
-Pulumi offers a configuration system for managing such differences. Instead of hard-coding the differences, you can store and retrieve configuration values using a combination of the [CLI](/docs/cli/) and the programming model.
+You can normally configure and access these types of parameters via shell environment variables, but we recommend using configuration instead, especially for multi-stack collaboration scenarios.
 
-The key-value pairs for any given stack are stored in [your project's stack settings file](/docs/concepts/projects#stack-settings-file), which is automatically named `Pulumi.<stack-name>.yaml`. You can typically ignore this file, although you may want to check it in and version it with your project source code.
+> All shell environment variables are passed to the running program and can be accessed using standard runtime APIs, such as `process.env` in Node.js and `os.environ` in Python, which can also be used for dynamic behavior. Configuration is preferable, however, because it is designed for multi-stack collaborative scenarios.
+
+Pulumi provides a configuration system to manage these differences without hard-coding them. You can store and retrieve configuration values using a combination of the [CLI](/docs/cli/) and the programming model.
+
+The key-value pairs for any given stack are stored in [your project's stack settings file](/docs/concepts/projects#stack-settings-file), which is automatically named `Pulumi.<stack-name>.yaml`. You can typically ignore this file, although you may want to check it in and version it with your project source code so that your team can gain visibility into current values, who changed them, and when changes were made. This practice enhances collaboration, accountability, and traceability, ultimately leading to more reliable and maintainable infrastructure configurations.
 
 ## Configuration Options {#config-stack}
 
@@ -26,8 +30,6 @@ You can use both the CLI and the programming model for your Pulumi configuration
 
 * The CLI offers a `config` command with `set` and `get` subcommands for managing key-value pairs.
 * The programming model offers a `Config` object with various getters for retrieving values.
-
-> All shell environment variables are passed to the running program and can be accessed using standard runtime APIs, such as `process.env` in Node.js and `os.environ` in Python, which can also be used for dynamic behavior. Configuration is preferable, however, because it is designed for multi-stack collaborative scenarios.
 
 ## Configuration Keys
 
@@ -257,7 +259,7 @@ variables:
 
 {{< /chooser >}}
 
-Similarly, if you are writing code that will be imported into a broader project, such as your own library of [Pulumi components](/docs/concepts/resources/components/), you should instead pass your library's name to the {{< pulumi-config >}} constructor to limit the scope of the query to values prefixed with the name of your library:
+In addition to the pre-designated namespaces for default providers, you can create your own custom namespaces (e.g. `mylib`). A best practice when working with configuration and [Pulumi components](/docs/concepts/resources/components/) is to explicitly pass your namespace's name to the {{< pulumi-config >}} constructor to limit the scope of the query to values prefixed with the name of your custom namespace:
 
 {{< chooser language "javascript,typescript,python,go,csharp,java" >}}
 
@@ -573,7 +575,7 @@ There are three ways to configure providers:
 
 Please note:
 
-* Configuration file settings are only used by the default provider. If you instantiate a provider object, it will not read values from the stack configuration.
+* Configuration file settings are only used by the default provider. If you instantiate a custom provider object, it will not read values from the stack configuration.
 * The precedence of configuration sources (configuration file, environment and args) can vary between providers. Please refer to the provider's documentation for specific configuration instructions.
 
 ## Pulumi Configuration Options
@@ -614,7 +616,7 @@ Stack tags applied by Pulumi CLI are listed in the `Tags` section of the Overvie
 
 ## Using Pulumi ESC from Pulumi Stack Config
 
-Often there is common configuration and secrets you do not want to duplicate in various stack configuration files. Pulumi ESC can help with that!
+Often there is common configuration and secrets you do not want to duplicate in various stack configuration files. [Pulumi ESC](/docs/concepts/environments/) can help with that!
 
 Once you have an [environment](/docs/concepts/environments/) set up and you are [projecting pulumi configuration](/docs/concepts/environments/#projecting-pulumi-config), you can import that environment (or multiple environments) into your Pulumi stack.
 
