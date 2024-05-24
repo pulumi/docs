@@ -7,7 +7,7 @@ type: what-is
 page_title: Automate AWS S3 File Expiration with Pulumi
 ---
 
-# A guide to automate AWS S3 file expiration with Pulumi
+## A guide to automate AWS S3 file expiration with Pulumi
 
 In this guide, we'll walk through the process of automating AWS S3 file expiration using Pulumi. Lifecycle rules in AWS S3 allow you to specify actions on objects that meet certain criteria over time, such as transitioning objects to a different storage class or automatically deleting them after a specified period. By following these simple steps in this guide, you'll be able to efficiently manage the lifecycle policies for objects stored in S3 buckets, ensuring that outdated files are automatically expired and removed.
 

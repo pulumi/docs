@@ -108,7 +108,7 @@ function searchForMarkdown(paths) {
         const fileSuffix = fileParts[fileParts.length - 1];
 
         // Ignore auto generated docs and registry pages (handled in the registry repo).
-        if (file.indexOf("/content/docs/reference/pkg") > -1 || file.indexOf("/content/registry") > -1) {
+        if (file.indexOf("/content/docs/reference/pkg") > -1 || file.indexOf("/content/registry") > -1 || file.indexOf("/content/blog/celebrating-20k-stars") > -1) {
             continue;
         }
 
