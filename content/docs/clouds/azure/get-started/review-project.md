@@ -296,11 +296,9 @@ resources:
       kind: StorageV2
 variables:
   storageAccountKeys:
-    Fn::Invoke:
-      Function: azure-native:storage:listStorageAccountKeys
-      Arguments:
-        resourceGroupName: ${resourceGroup.name}
-        accountName: ${sa.name}
+    fn::azure-native:storage:listStorageAccountKeys:
+      resourceGroupName: ${resourceGroup.name}
+      accountName: ${sa.name}
 outputs:
   primaryStorageKey: ${storageAccountKeys.keys[0].value}
 ```
