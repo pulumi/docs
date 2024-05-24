@@ -7,7 +7,7 @@ type: what-is
 page_title: Automate AWS S3 File Expiration with Pulumi
 ---
 
-# A guide to automate AWS S3 file expiration with Pulumi
+## A guide to automate AWS S3 file expiration with Pulumi
 
 In this guide, we'll walk through the process of automating AWS S3 file expiration using Pulumi. Lifecycle rules in AWS S3 allow you to specify actions on objects that meet certain criteria over time, such as transitioning objects to a different storage class or automatically deleting them after a specified period. By following these simple steps in this guide, you'll be able to efficiently manage the lifecycle policies for objects stored in S3 buckets, ensuring that outdated files are automatically expired and removed.
 
@@ -82,7 +82,7 @@ The filter property with the prefix sub-property ensures that this rule only app
 
 Finally, we export the bucket name, which can be useful if you want to reference this bucket from other parts of your Pulumi program or from other Pulumi stacks.
 
-## Verify the configuration of your S3 file expiration
+### Verify the configuration of your S3 file expiration
 
 After deployment, you can verify the lifecycle configuration in the AWS Management Console:
 
@@ -91,11 +91,11 @@ After deployment, you can verify the lifecycle configuration in the AWS Manageme
 - Go to the "Management" tab.
 - Check the "Lifecycle rules" section to see the applied rules.
 
-## Wrapping up
+### Wrapping up
 
 This simple Pulumi program will ensure that any files uploaded to the documents/ folder in your S3 bucket will be automatically transitioned to Glacier after 90 days, helping you manage storage costs and keep your bucket tidy without manual intervention.
 
-## Additional use cases for S3 automation with Pulumi
+### Additional use cases for S3 automation with Pulumi
 
 Automating S3 with Pulumi can extend beyond file expiration to address various other needs. Here are some additional use cases:
 
@@ -109,7 +109,7 @@ By leveraging Pulumi with AWS S3, you can automate and streamline various aspect
 
 For more advanced configurations, refer to the [Pulumi AWS documentation](/docs/reference/pkg/aws/s3/bucketlifecycleconfiguration/) and the [AWS S3 Lifecycle Management guide](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lifecycle-mgmt.html).
 
-## Learn more about Pulumi
+### Learn more about Pulumi
 
 Pulumi is free, [open source](https://github.com/pulumi/pulumi), and optionally pairs with the [Pulumi Cloud](/docs/pulumi-cloud/) to make managing infrastructure secure, reliable, and hassle-free.
 
