@@ -31,7 +31,7 @@ url_slug: automating-docker-image-builds-using-pulumi
 # Content for the left hand side section of the page.
 main:
     # Webinar title.
-    title: Automating Image Builds using Pulumi and Docker Build Cloud
+    title: Automate Image Builds using Pulumi and Docker Build Cloud
 
     event_type: workshop # workshop | event
 
