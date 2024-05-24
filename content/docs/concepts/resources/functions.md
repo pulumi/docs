@@ -121,10 +121,8 @@ const example = pulumi.output(aws.apigateway.getDomainName({
 ```yaml
 variables:
   example:
-    Fn::Invoke:
-      Function: aws:apigateway:getDomainName
-      Arguments:
-        domainName: api.example.com
+    fn::aws:apigateway:getDomainName:
+      domainName: api.example.com
 ```
 
 </pulumi-choosable>

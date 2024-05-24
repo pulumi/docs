@@ -80,7 +80,7 @@ There are two ways to programmatically create secret values:
 {{% choosable language yaml %}}
 
 - Setting `configuration.${KEY}.Secret: true` when reading a value from the config.
-- Calling `Fn::Secret` to construct a secret from an existing value.
+- Calling `fn::secret` to construct a secret from an existing value.
 
 {{% /choosable %}}
 
