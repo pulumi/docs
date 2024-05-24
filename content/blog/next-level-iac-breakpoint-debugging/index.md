@@ -245,7 +245,7 @@ Finally, we need to make one more edit to the `pulumi-debug.sh` file we created.
 
 Add the following line to the beginning of the file:
 
-```shell hl_lines{[3]}
+```shell {hl_lines=[3]}
 #!/bin/bash
 
 export NODE_OPTIONS='--inspect-brk=127.0.0.1:9292'
