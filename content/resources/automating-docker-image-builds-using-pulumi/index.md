@@ -1,6 +1,6 @@
 ---
 # Name of the event, <= 60 characters
-title: Automating Image Builds using Pulumi and Docker Build Cloud
+title: Automate Image Builds using Pulumi and Docker Build Cloud
 meta_desc: Join our workshop to master automating your Docker build process using Pulumi Docker Build provider and Docker Build Cloud with TypeScript.
 meta_image:
 
