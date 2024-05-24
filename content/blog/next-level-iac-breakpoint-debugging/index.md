@@ -162,11 +162,13 @@ pulumi stack select dev
 pulumi up -f
 ```
 
+{{% notes type="info" %}}
 Let's walk through these lines to explain what's going on here:
 
 * `pulumi login` to set up credentials for the pulumi backend
 * `pulumi stack select dev` to run this against our `dev` stack
 * `pulumi up -f` to run our program udpate. The -f flag skips the preview phase and also skips the need to interactively confirm that we want to run the update.
+{{% /notes %}}
 
 Open the VS Code terminal panel and first set it to be executable, then try running the script: 
 
@@ -229,8 +231,8 @@ Next, create a file named `launch.json` in the same directory. This will configu
     ]
 }
 ```
-
-Breaking this down a bit: 
+{{% notes type="info" %}}
+Let's break this down a bit: 
 
 * `type: node` tells VS Code that we are using the Node runtime
 * `port: 9292` tells VS Code to attach the debugger to port 9292
@@ -240,6 +242,7 @@ Breaking this down a bit:
 * `restart: {...}` configures VS Code to wait 5 seconds and then retry connecting, up to 5 times. This is here in case it takes a while for the Node.js runtime to start running. It's unlikely, but possible!
 * `skipFiles: {...}` sets up some filters of files *not* to try to debug. This includes everything that is part of node's internals, 3rdparty node modules, and other libraries. That way we don't end up deep in someone else's code unexpectedly and can just focus on our Pulumi program.
 * `name` sets a human-readable name which shows up in the drop down box in VS Code when you choose which [launch configuration][vs-code-launch-configs] to run. 
+{{% /notes %}}
 
 Finally, we need to make one more edit to the `pulumi-debug.sh` file we created. Here will will pass the necessary options to the Node.js runtime to set it to run in debug mode. 
 
@@ -254,8 +257,9 @@ pulumi login
 pulumi stack select dev
 pulumi up -f
 ```
-
+{{% notes type="info" %}}
 The `NODE_OPTIONS` environment variable passes options to the Node.js V8 runtime. In this case, we are passing `--inspect-brk` which tells the Node.js runtime to run in debug mode, which will cause it to pause before running the code, until a debugging client connects to `localhost` on port `9292`.
+{{% /notes %}}
 
 Ok, now we should be ready to run our Pulumi program from VS Code using the `F5` key! Let's give it a try. You should see Pulumi running inside of the "Terminal" tab. You will also see output indicating that it is waiting for a debugger to attach: 
 
@@ -276,13 +280,13 @@ When you're ready for the program to continue on, hit `F5` once again and the pr
 
 ## Considerations and Limitations
 
-Breakpoint debugging is a powerful tool for inspecting the state of your Pulumi program. However, there are some important limitations to consider.
+Breakpoint debugging is a powerful tool for inspecting the state of your Pulumi program. However, there are some important limitations to consider:
 
-**Pulumi programs are only part of the story:** This technique will let you inspect the program you authored, but it doesn't give access to what's happening with the Pulumi backend, the providers, or anything else outside of the program itself. You might find yourself needing to dig deeper to resolve a problem with the stack as a whole. Luckily there are other techniques we can use for that, which we will delve into in an upcoming post.
+* **Pulumi programs are only part of the story:** This technique will let you inspect the program you authored, but it doesn't give access to what's happening with the Pulumi backend, the providers, or anything else outside of the program itself. You might find yourself needing to dig deeper to resolve a problem with the stack as a whole. Luckily there are other techniques we can use for that, which we will delve into in an upcoming post.
 
-**Inputs and Outputs are asynchronous futures:** If you've used Pulumi before you will have encountered [`Input<T>`][input-docs] and [`Output<T>`][output-docs] values, which are a core function of the tool. However, at the time that the debugger hits a breakpoint on those values, they are likely not populated with their final value. That means you won't be able to inspect them in the debugger very well. Instead, you will need to add an [`.apply(...)`][apply-docs] or [`all(..)`][all-docs] block to the code, and place the breakpoint on the materialized value within that block. This follows all the same rules as accessing those variables in code in a Pulumi program. 
+* **Inputs and Outputs are asynchronous futures:** If you've used Pulumi before you will have encountered [`Input<T>`][input-docs] and [`Output<T>`][output-docs] values, which are a core function of the tool. However, at the time that the debugger hits a breakpoint on those values, they are likely not populated with their final value. That means you won't be able to inspect them in the debugger very well. Instead, you will need to add an [`apply(...)`][apply-docs] or [`all(..)`][all-docs] block to the code, and place the breakpoint on the materialized value within that block. This follows all the same rules as accessing those variables in code in a Pulumi program. 
 
-**Limited integration with VS Code:** Unfortunately our technique of running Pulumi in wrapper script as a backgrounded pre-launch task in VS Code leaves some things to be desired. It is different enough from the use case that VS Code had in mind for these features that making things "just work" is a little difficult. For example, we can't easily report on errors in the "Problems" tab. Sometimes VS Code can't tell that the program finished and so you'll have to manually stop the debugging session after Pulumi has completed.
+* **Limited integration with VS Code:** Unfortunately our technique of running Pulumi in wrapper script as a backgrounded pre-launch task in VS Code leaves some things to be desired. It is different enough from the use case that VS Code had in mind for these features that making things "just work" is a little difficult. For example, we can't easily report on errors in the "Problems" tab. Sometimes VS Code can't tell that the program finished and so you'll have to manually stop the debugging session after Pulumi has completed.
 
 Despite these limitations, Pulumi with VS Code as your IDE provides a rich experience compared to trawlling through unstructured logs, or adding in `console.log(...)` calls to echo out ad-hoc debugging information (aka. [`printf` debugging][printf-debugging]). Also, you can enable this for any language that Pulumi supports. Python, Go, and C# all have popular debuggers and IDEs that can be used in the same manner.
 
