@@ -1,0 +1,19 @@
+<div class="shadow">
+    <div class="bg-gray-800 rounded-t">
+        <div class="flex px-3 py-3">
+            <div class="bg-gray-400 rounded-full h-3 w-3"></div>
+            <div class="bg-gray-400 rounded-full h-3 w-3 mx-2"></div>
+            <div class="bg-gray-400 rounded-full h-3 w-3"></div>
+        </div>
+    </div>
+    <div class="" {{ if .height }}style="height: {{ .height }};"{{ end }}>
+        <div class="code-mode-dark h-full overflow-y-scroll no-copy bg-gray-900">
+            {{ highlight .code .lang }}
+        </div>
+    </div>
+    <div class="bg-gray-800 rounded-b text-gray-200 text-sm">
+        <div class="flex px-3 py-2.5">
+            {{ .statusbar }}
+        </div>
+    </div>
+</div>
