@@ -1,8 +1,8 @@
 ---
-title: "Pulumi Professional Services"
+title: "Pulumi Partners"
 layout: proserv-b
 
-meta_title: "Pulumi Professional Services - Accelerate Your Cloud Journey"
+meta_title: "Pulumi Partners - Accelerate Your Cloud Journey"
 meta_desc: "Explore Pulumi Professional Services for expert guidance on cloud infrastructure, automation, and best practices to streamline your cloud journey."
 
 overview:
