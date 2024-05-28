@@ -11,7 +11,6 @@ overview:
         Our mission is to empower our partners with the tools and resources they need to build robust, cloud-native infrastructure solutions. Comprehensive guides, detailed documentation, an engaged community, and expert support make partnering with us a seamless and productive experience. With our infrastructure-as-code platform and extensive API suite, you can create customized, scalable, and secure infrastructure solutions for your clients.
 
 challenges:
-    title: "Challenges in Cloud and Platform Engineering"
     items:
         - title: "Cloud Partners"
           icon:
@@ -26,81 +25,8 @@ challenges:
             name: shield
           description: "Trusted and experienced advisors that provide customized solutions to clients implementing modern Infrastructure as Code"
 
-solutions_header:
-    title: "Tailored Solutions for Cloud Success"
-    description: "Our suite of solutions addresses the unique challenges of cloud and platform engineering, ensuring your infrastructure is efficient, secure, and ready for the future."
-
-solutions:
-    button_options:
-        parents:
-        children:
-            type: download
-    parents:
-        - title: Cloud Infrastructure Optimization
-          description: |
-            Optimize your cloud infrastructure for efficiency, security, and scalability with Pulumi's expert guidance. Tailor your environment to meet the demands of modern applications and workflows.
-          icon:
-              name: cloud
-          children:
-            - title: Migration and Adoption
-              description: |
-                Seamlessly migrate and adopt infrastructure as code practices with Pulumi's expertise. Transition from AWS CloudFormation, Terraform, AWS CDK, and other IaC tools to a unified Pulumi ecosystem, enhancing your cloud infrastructure's flexibility and maintainability.
-              button:
-                text: Download Migration and Adoption Worksheet
-                ref: /documents/proserv/Migration_And_Adoption_Quickstart.pdf
-            - title: Cost Optimization
-              description: |
-                Implement FinOps principles and cost optimization strategies to ensure your cloud spending is efficient and aligned with your business objectives. Gain insights into usage patterns and optimize resources to reduce costs without sacrificing performance.
-              button:
-                text: Download Cost Optimization Worksheet
-                ref: /documents/proserv/Cost_Optimization_Quickstart.pdf
-            - title: Security and Compliance
-              description: |
-                Strengthen your cloud infrastructure's security posture and ensure compliance with industry standards. Pulumi helps you implement robust security frameworks and compliance checks, safeguarding your data and applications in the cloud.
-              button:
-                text: Download Security and Compliance Worksheet
-                ref: /documents/proserv/Security_And_Compliance_Quickstart.pdf
-
-        - title: Developer Experience and Productivity
-          description: |
-            Enhance developer productivity and streamline the development lifecycle with integrated tools and practices. Foster a culture of innovation and efficiency across your development teams.
-          icon:
-              name: code-window
-          children:
-            - title: Integrated Developer Portals
-              description: |
-                Create centralized developer portals that offer easy access to tools, documentation, and resources. Improve collaboration and streamline workflows to boost productivity and innovation.
-              button:
-                text: Download Integrated Developer Portals Worksheet
-                ref: /documents/proserv/Integrated_Developer_Portals_Quickstart.pdf
-            - title: Automation and CI/CD
-              description: |
-                Automate your development and deployment processes with Pulumi's CI/CD integrations. Achieve faster release cycles and more reliable builds, enabling your team to focus on delivering value.
-              button:
-                text: Download Automation and CI/CD Worksheet
-                ref: /documents/proserv/Automation_and_CI-CD_Quickstart.pdf
-            - title: Collaboration and Best Practices
-              description: |
-                Promote a collaborative development environment and adopt best practices for cloud-native development. Leverage Pulumi's expertise to build a culture of continuous improvement and learning.
-
-        - title: Project Management and Delivery
-          description: |
-            Ensure the successful delivery of your cloud and infrastructure projects with Pulumi's project management expertise. From planning to execution, manage projects efficiently and meet your strategic goals.
-          icon:
-              name: clipboard
-          children:
-            - title: Agile Project Management
-              description: |
-                Adopt agile methodologies tailored to cloud infrastructure projects. Pulumi's approach to agile project management ensures flexibility, continuous improvement, and customer-centric delivery.
-            - title: Resource and Timeline Optimization
-              description: |
-                Optimize resource allocation and project timelines to meet your infrastructure goals. Pulumi helps you balance project demands with available resources, ensuring timely and efficient delivery.
-            - title: Stakeholder Engagement and Communication
-              description: |
-                Maintain effective communication with all stakeholders throughout the project lifecycle. Pulumi's project management practices ensure transparency, alignment, and satisfaction across teams and stakeholders.
-
 form:
-    title: "Talk to a Cloud Architect"
-    description: "Ready to transform your cloud infrastructure? Speak with a Pulumi architect today to explore how our professional services can accelerate your cloud journey."
+    title: "Contact our partner team"
+    description: "Ready to enhance your customers' cloud infrastructure with powerful automation and infrastructure-as-code capabilities? Drop our partner team a note to get started with Pulumi."
     id: 2c0ddce4-175a-4278-8ded-ca67d615bd59
 ---
