@@ -1,0 +1,46 @@
+{{ define "hero" }}
+    {{ partial "hero" (dict "title" .Params.title) }}
+{{ end }}
+
+{{ define "main" }}
+    {{ $pageContext := . }}
+
+    <section id="overview" class="max-w-5xl mx-auto text-center my-16 px-6">
+    {{ with .Params.overview }}
+        <h2>{{ .title }}</h2>
+        <p class="text-left">{{ .description | markdownify }}</p>
+        <div class="mt-10">
+            <a href="#form" rel="noopener noreferrer" class="btn-primary">Speak with an Architect!</a>
+        </div>
+    {{ end }}
+    </section>
+
+    <section id="challenges">
+        {{ partial "card-group.html" (dict "card_group" .Params.challenges) }}
+    </section>
+
+    <section id="solutions_header">
+    {{ with .Params.solutions_header }}
+    <div class="max-w-5xl mx-auto text-center px-6">
+        <h3>{{ .title }}</h3>
+        <p>{{ .description }}</p>
+    </div>
+    {{ end }}
+    </section>
+
+    <section id="solutions">
+        {{ partial "card-group-toggled.html" (dict "card_group" .Params.solutions) }}
+    </section>
+
+    <section id="form" class="container mx-auto justify-center text-center my-16 p-4">
+        <div class="w-full lg:w-1/2 card bg-white mx-auto p-12">
+            {{ with .Params.form }}
+                <h3>{{ .title }}</h3>
+                <p>{{ .description }}</p>
+                <pulumi-hubspot-form form-id={{ .id }} class="mt-10"></pulumi-hubspot-form>
+            {{ end }}
+        </div>
+    </section>
+
+
+{{ end }}
