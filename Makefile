@@ -78,6 +78,7 @@ ci_push::
 ci_pull_request:
 	$(MAKE) banner
 	$(MAKE) ensure
+	$(MAKE) lint
 	./scripts/ci-pull-request.sh
 
 .PHONY: ci_pull_request_closed
