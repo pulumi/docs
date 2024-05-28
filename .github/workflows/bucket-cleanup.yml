@@ -25,10 +25,6 @@ jobs:
         with:
           go-version: 1.20.x
 
-      - name: Configure Git
-        run: |
-          git config --global url."https://${{ secrets.PULUMI_BOT_TOKEN }}:x-oauth-basic@github.com/pulumi/pulumi-hugo-internal".insteadOf "https://github.com/pulumi/pulumi-hugo-internal"
-
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v2
         with:
@@ -45,3 +41,4 @@ jobs:
             SLACK_ACCESS_TOKEN: ${{ secrets.SLACK_ACCESS_TOKEN }}
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
             DEPLOYMENT_ENVIRONMENT: ${{ vars.DEPLOYMENT_ENVIRONMENT }}
+            WEBSITE_URL: ${{ vars.WEBSITE_URL }}

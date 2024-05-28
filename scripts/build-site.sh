@@ -19,7 +19,6 @@ export JS_BUNDLE="static/js/bundle.min.${ASSET_BUNDLE_ID}.js"
 # Relative paths to those same files, read by Hugo templates.
 export REL_CSS_BUNDLE="/css/styles.${ASSET_BUNDLE_ID}.css"
 export REL_JS_BUNDLE="/js/bundle.min.${ASSET_BUNDLE_ID}.js"
-export REPO_THEME_PATH="themes/default/"
 
 printf "Copying prebuilt docs...\n\n"
 make copy_static_prebuilt

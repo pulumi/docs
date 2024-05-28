@@ -6,12 +6,11 @@ source ./scripts/programs/common.sh
 
 programs_dir="static/programs"
 
-# Delete install artifacts, but leave existing go.mod files.
-git clean -fdX -e '!go.mod' "${programs_dir}/*"
+# Delete install artifacts.
+git clean -fdX "${programs_dir}/*"
 
 # Fix up go.mod files.
 clean_gomods
-unsuffix_gomods
 
 # By default, only run previews.
 mode="${1:-preview}"
@@ -118,12 +117,11 @@ pushd "$programs_dir"
         pulumi -C "$project" destroy --yes --remove
 
         # Clean up artifacts.
-        git clean -fdX -e '!go.mod' .
+        git clean -fdX .
     done
 popd
 
 clean_gomods
-suffix_gomods
 
 # Log out of local mode.
 if [[ "$mode" == "preview" ]]; then

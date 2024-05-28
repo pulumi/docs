@@ -19,6 +19,10 @@ ensure: clean
 	./scripts/ensure.sh
 	$(MAKE) build-assets
 
+.PHONY: update-repos
+update-repos:
+	./scripts/update_repos.sh
+
 .PHONY: serve
 serve:
 	./scripts/serve.sh
@@ -30,13 +34,14 @@ serve-static:
 .PHONY: generate
 generate:
 	@echo -e "\033[0;32mGENERATE:\033[0m"
-	./scripts/run_typedoc.sh
+	NOBUILD=true ./scripts/run_typedoc.sh
 	./scripts/generate_python_docs.sh
 	pulumi gen-markdown ./content/docs/cli/commands
 
 .PHONY: build
 build:
 	@echo -e "\033[0;32mBUILD:\033[0m"
+	$(MAKE) build-assets
 	./scripts/build-site.sh
 
 .PHONY: check_links
@@ -131,3 +136,10 @@ new-blog-post:
 	hugo new --kind blog-post --contentDir content \
 	"blog/$(shell bash -c 'read -p "Slug (e.g., 'my-new-post'): " slug; echo $$slug')"
 
+.PHONY: lint
+lint:
+	./scripts/lint.sh
+
+.PHONY: format
+format:
+	./scripts/format.sh

@@ -85,11 +85,11 @@ final var remoteAsset = new com.pulumi.asset.RemoteAsset("http://worldclockapi.c
 ```yaml
 variables:
   fileAsset:
-    Fn::FileAsset: ./file.txt
+    fn::fileAsset: ./file.txt
   stringAsset:
-    Fn::StringAsset: Hello, world!
+    fn::stringAsset: Hello, world!
   remoteAsset:
-    Fn::RemoteAsset: http://worldclockapi.com/api/json/est/now
+    fn::remoteAsset: http://worldclockapi.com/api/json/est/now
 ```
 
 {{% /choosable %}}
@@ -273,15 +273,15 @@ var assetArchive = new com.pulumi.asset.AssetArchive(
 ```yaml
 variables:
   fileArchive:
-    Fn::FileArchive: ./file.zip
+    fn::fileArchive: ./file.zip
   remoteArchive:
-    Fn::RemoteArchive: http://contoso.com/file.zip
+    fn::remoteArchive: http://contoso.com/file.zip
   assetArchive:
-    Fn::AssetArchive:
+    fn::assetArchive:
       file:
-        Fn::StringAsset: Hello, World!
+        fn::stringAsset: Hello, World!
       folder:
-        Fn::FileArchive: ./folder
+        fn::fileArchive: ./folder
 ```
 
 {{% /choosable %}}

@@ -367,7 +367,7 @@ Hopefully this first post has given you a few new ways to think about how to do 
 
 You'll find the full source for the examples above on GitHub:
 
-* [TypeScript version](https://github.com/pulumi/pulumi-hugo/tree/master/themes/default/static/programs/aws-static-website-with-runtime-logic-typescript)
-* [Python version](https://github.com/pulumi/pulumi-hugo/tree/master/themes/default/static/programs/aws-static-website-with-runtime-logic-python)
+* [TypeScript version](https://github.com/pulumi/docs/tree/master/static/programs/aws-static-website-with-runtime-logic-typescript)
+* [Python version](https://github.com/pulumi/docs/tree/master/static/programs/aws-static-website-with-runtime-logic-python)
 
 Happy coding!

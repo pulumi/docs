@@ -360,16 +360,13 @@ MigrationBackup/
 maven-status
 target/
 
-# Nested .gitignores.
-*/**/.gitignore
+# Generated .gitignores.
+*/.gitignore
 
 # Stack config files.
 Pulumi.*.yaml
 
-# Program lockfiles. (We unclude go.mod here because we replace it with
-# go.mod.txt to prevent it from being interpreted as a separate Go module and
-# omitted from download.)
-go.mod
+# Program lockfiles.
 go.sum
 package-lock.json
 yarn.lock
