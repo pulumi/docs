@@ -6,25 +6,25 @@ meta_title: "Pulumi Partners - Accelerate Your Cloud Journey"
 meta_desc: "Explore Pulumi Professional Services for expert guidance on cloud infrastructure, automation, and best practices to streamline your cloud journey."
 
 overview:
-    title: "Empowering Your Cloud Transformation"
+    title: "Accelerate Your Cloud Journey"
     description: |
-        At Pulumi Professional Services, we partner with you to accelerate your cloud transformation journey. Leveraging our deep expertise in infrastructure as code (IaC), we provide tailored solutions that enhance your cloud and platform engineering efforts, ensuring a seamless, secure, and scalable cloud environment.
+        Our mission is to empower our partners with the tools and resources they need to build robust, cloud-native infrastructure solutions. Comprehensive guides, detailed documentation, an engaged community, and expert support make partnering with us a seamless and productive experience. With our infrastructure-as-code platform and extensive API suite, you can create customized, scalable, and secure infrastructure solutions for your clients.
 
 challenges:
     title: "Challenges in Cloud and Platform Engineering"
     items:
-        - title: "Complex Cloud Environments"
+        - title: "Cloud Partners"
           icon:
             name: cloud
-          description: "Navigating the complexity of multi-cloud environments and ensuring consistent infrastructure across platforms."
-        - title: "Infrastructure Scalability"
+          description: "World’s leading hyperscalers that provide world class service to our mutual customers"
+        - title: "Technology Partners"
           icon:
             name: nodes
-          description: "Scaling infrastructure efficiently to meet growing demands while maintaining performance and cost-effectiveness."
-        - title: "Security and Compliance"
+          description: "Independent vendors integrate and test their products with Pulumi, enabling comprehensive, end-to-end cloud infrastructure solutions"
+        - title: "System Integrators"
           icon:
             name: shield
-          description: "Implementing robust security measures and ensuring compliance across all cloud services and infrastructure."
+          description: "Trusted and experienced advisors that provide customized solutions to clients implementing modern Infrastructure as Code"
 
 solutions_header:
     title: "Tailored Solutions for Cloud Success"
