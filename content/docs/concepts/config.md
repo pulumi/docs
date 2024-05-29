@@ -14,7 +14,7 @@ aliases:
 - /docs/intro/concepts/config/
 ---
 
-In many cases, different stacks for a single project often require differing values to accommodate various environments and requirements. For example, your development stack might use smaller AWS EC2 instances or fewer servers in a Kubernetes cluster compared to your production stack because development environments are primarily used for coding, testing, and debugging, which generally involve fewer users and lower loads compared to production environments. Reducing resource usage in development environments helps lower costs and speeds up deployment cycles.
+In many cases, resources belonging to different stacks in the same project may need to be configured differently. For example, you may want to configure the virtual machine instances of a project to use less memory or storage in development or testing stacks than you use in production to cut down on costs.
 
 You can normally configure and access these types of parameters via shell environment variables, but we recommend using configuration instead, especially for multi-stack collaboration scenarios.
 
