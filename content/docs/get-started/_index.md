@@ -339,15 +339,13 @@ Alternatively, you can watch the following video which provides a high level ove
 
 <div class="rounded-md shadow border border-gray-300 w-3/4 mx-auto my-4" style="position: relative; padding-bottom: 40.25%; height: 0; overflow: hidden;">
     <iframe
-        src="//www.youtube.com/embed/6f8KF6UGN7g?rel=0"
+        src="//www.youtube.com/embed/Q8tw6YTD3ac?rel=0"
         style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;"
         allowfullscreen=""
-        title="Introduction to Pulumi: Modern Infrastructure as Code"
-        srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img{position:absolute;width:100%;top:0;bottom:0;margin:auto}</style><a href=https://www.youtube.com/embed/6f8KF6UGN7g?autoplay=1><img src='/images/home/youtube-preview.svg' alt='Introduction to Pulumi: Modern Infrastructure as Code'></a>">
+        title="Introduction to Pulumi in Three Minutes"
+        srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img{position:absolute;width:100%;top:0;bottom:0;margin:auto}</style><a href=https://www.youtube.com/embed/Q8tw6YTD3ac?autoplay=1><img src='/images/home/youtube-getting-started.png' alt='Introduction to Pulumi in Three Minutes'></a>">
     </iframe>
 </div>
-
-The above video demonstrates how to use Pulumi with AWS. To learn how to use Pulumi with other supported clouds, take a look at our [Registry documentation](/registry/).
 
 ## Pulumi Cloud
 
