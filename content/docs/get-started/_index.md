@@ -343,7 +343,7 @@ Alternatively, you can watch the following video which provides a high level ove
         style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;"
         allowfullscreen=""
         title="Introduction to Pulumi in Three Minutes"
-        srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img{position:absolute;width:100%;top:0;bottom:0;margin:auto}</style><a href=https://www.youtube.com/embed/Q8tw6YTD3ac?autoplay=1><img src='/images/home/youtube-getting-started.svg' alt='Introduction to Pulumi in Three Minutes'></a>">
+        srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img{position:absolute;width:100%;top:0;bottom:0;margin:auto}</style><a href=https://www.youtube.com/embed/Q8tw6YTD3ac?autoplay=1><img src='/images/home/youtube-getting-started.png' alt='Introduction to Pulumi in Three Minutes'></a>">
     </iframe>
 </div>
 
