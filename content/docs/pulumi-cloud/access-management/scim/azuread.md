@@ -54,9 +54,11 @@ If you are not yet ready to enable provisioning for Groups, disable that.
 
 ### Adjust User Attribute Mappings
 
-Update the mapping for the **userName** attribute to be sourced from **mailNickname** instead of **userPrincipalName**. In the **Mappings** expansion panel, click **Provision Azure Active Directory _Users_** and then click on the corresponding attribute mapping as shown below.
+Update the mapping for **userName** so that is applied **Only during object creation**. In the **Mappings** expansion panel, click **Provision Azure Active Directory _Users_** and then click on the corresponding attribute mapping as shown below.
 
-In the configuration window, change the value of the **Source attribute** drop-down to **mailNickname**.
+In the configuration window, change the value of the **Apply this mapping** drop-down to **Only during object creation**.
+
+Make sure the mapping for the **userName** attribute is sourced from **userPrincipalName**, as indicated by the **Source attribute** drop-down.
 
 The mapping should now be updated as shown below:
 
