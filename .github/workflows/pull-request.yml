@@ -11,7 +11,7 @@ jobs:
     env:
       GOPATH: ${{ github.workspace }}/go
     name: Install deps and build site
-    runs-on: ubuntu-22.04-8core
+    runs-on: ubuntu-22.04
     environment: testing
     steps:
 
