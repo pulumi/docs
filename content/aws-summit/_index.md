@@ -25,12 +25,12 @@ workshops:
         description: Learn best practices and how to write policies for AWS resources with Pulumi using Python and TypeScript.
         link: /resources/securing-deployments-policy-as-code/
         action: Register Now
-        - title: Getting Started with Infrastructure as Code on AWS
+      - title: Getting Started with Infrastructure as Code on AWS
         date: June 27, 2024
         description: Learn the fundamentals of Infrastructure as Code through a series of guided exercises using AWS and Pulumi’s platform
         link: /resources/getting-started-with-iac-aws-typescript/
         action: Register Now
-        - title: Building AI-powered Applications at Pulumi
+      - title: Building AI-powered Applications at Pulumi
         date: July 10, 2024
         description: Learn how the Pulumi engineering team builds AI-powered capabilities and the lessons learned.
         link: /resources/building-ai-powered-applications-at-pulumi/
