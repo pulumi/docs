@@ -261,7 +261,11 @@ Let's inspect the configuration variables. On the left side of the screen you'll
 
 {{< figure src="local-variables-list.png" caption="Figure: Local variables displayed in the Variables side panel.">}}
 
-In our case, we're interested in the value of `indexDocument` variable. We can see that it is getting set to `index.html`... not `good-morning.html`. The Pulumi program didn't break because `index.html` still exists. So we are still publishing our old `index.html`. That makes sense. A quick fix here is to modify `index.ts` and set the default to `good-morning.html`:
+There's also the "Debug" console which provides a [REPL][vs-code-debug-repl] environment to navigate those variables and anything else that is in scope. You can run arbitrary functions here and see their output. In this case we can simply type the variable name at the prompt there, hit enter, and see the value. What's great about the debug console is that Intellisense (e.g. using `TAB` to auto-complete) works here, so you can quickly navigate possible options.
+
+{{< figure src="debug-console-tab-completion-inspect-value.png" caption="Figure: Debug console tab completion and inspecting variable values.">}}
+
+In our case, we're interested in the value of `indexDocument` variable. We can see that it is getting set to `index.html`... not `good-morning.html`. The Pulumi program didn't error because `index.html` still exists. So we are still publishing our old `index.html`. That makes sense. A quick fix here is to modify `index.ts` and set the default to `good-morning.html`:
 
 ```typescript {hl_lines=[8]}
 import * as pulumi from "@pulumi/pulumi";
@@ -277,21 +281,17 @@ const errorDocument = config.get("errorDocument") || "error.html";
 ...
 ```
 
-There's also the "Debug" console which provides a [REPL][vs-code-debug-repl] environment to navigate those variables and anything else that is in scope. You can run arbitrary functions here and see their output. In this case we can simply type the variable name at the prompt there, hit enter, and see the value. What's great about the debug console is that Intellisense (e.g. using `TAB` to auto-complete) works here, so you can quickly navigate possible options.
-
-{{< figure src="debug-console-tab-completion-inspect-value.png" caption="Figure: Debug console tab completion and inspecting variable values.">}}
-
-Earlier, we edited the document, which fixes the program for future runs, but for the current run that we are debugging, `indexDocument` is still set to `index.html`. Let's use the debug console to set the value to `good-morning.html` before we continue the run.
+Ok, we edited the document, which fixes the program for future runs, but for the current run that we are debugging, `indexDocument` is still set to `index.html`. Let's use the debug console to set the value to `good-morning.html` before we continue the run.
 
 ```typescript
 > indexDocument="good-morning.html`
 ```
 
-The output in the debug window will show the new value, and if you over over the inputs being passed to the bucket creation call, it will now show as `good-morning.html`:
+The output in the debug window will show the new value, and if you hover over the inputs being passed to the bucket creation call, it will now show as `good-morning.html`:
 
 {{< figure src="after-edit-value-debug-console-and-hover.png" caption="Figure: Screenshots of debug console and editor window after changing the `indexDocument` variable">}}
 
-When you're ready for the program to continue on, hit `F5` once again and the program will resume operation, either until the program exits or until it reaches the next breakpoint. Optionally you can step through line-by-line using the `F10` key. VS Code provides a variety of [debug actions][vs-code-debug-actions] once the sessions is established.
+When you're ready for the program to continue on, hit `F5` once again and the program will resume operation, either until the program exits or until it reaches the next breakpoint. Optionally you can step through line-by-line using the `F10` key. VS Code provides a variety of [debug actions][vs-code-debug-actions] once the session is established.
 
 Most importantly, check the published website and make sure we fixed the issue! You can find the `cdnURL` output in the `Terminal` tab and click on it from there to open the link.
 
@@ -303,16 +303,17 @@ Breakpoint debugging is a powerful tool for inspecting the state of your Pulumi 
 
 * **Inputs and Outputs are asynchronous futures:** If you've used Pulumi before you will have encountered [`Input<T>`][input-docs] and [`Output<T>`][output-docs] values, which are a core function of the tool. However, at the time that the debugger hits a breakpoint on those values, they are likely not populated with their final value. That means you won't be able to inspect them in the debugger very well. Instead, you will need to add an [`apply(...)`][apply-docs] or [`all(..)`][all-docs] block to the code, and place the breakpoint on the materialized value within that block. This follows all the same rules as accessing those variables in code in a Pulumi program.
 
-```typescript
-bucket.id.apply(id => {
-   // NOTE: The `debugger` keyword automatically sets a breakpoint here, so you don't need to set it via the IDE.
-   debugger
-});
-```
+    ```typescript
+    bucket.id.apply(id => {
+      // NOTE: The `debugger` keyword automatically sets a breakpoint here
+      // so you don't need to set it via the IDE.
+      debugger
+    });
+    ```
 
-* **Limited integration with VS Code:** Unfortunately our technique of running Pulumi in wrapper script as a backgrounded pre-launch task in VS Code leaves some things to be desired. It is different enough from the use case that VS Code had in mind for these features (e.g. interacting with a long-running `tsc-watch` or similar task) that making things "just work" is a little difficult. For example, we can't easily report on errors in the "Problems" tab, and VS Code complains that a problem matcher is missing the first time you run it. Sometimes VS Code can't tell that the program finished and so you'll have to manually stop the debugging session after Pulumi has completed (or wait for the retry/timeout to expire).
+* **Limited integration with VS Code:** Unfortunately our technique of running Pulumi in wrapper script as a backgrounded pre-launch task in VS Code leaves some things to be desired. It is different enough from the use case that VS Code had in mind for these features (e.g. interacting with a long-running `tsc-watch` or similar task) that making things "just work" is a little difficult. For example, we can't easily report on errors in the "Problems" tab, and VS Code complains that a problem matcher is missing the first time you run it. VS Code can't tell that the program finished and so you'll have to manually stop the debugging session after Pulumi has completed (or wait for the retry/timeout to expire).
 
-Despite these limitations, Pulumi with VS Code as your IDE provides a rich experience compared to trawlling through unstructured logs, or adding in `console.log(...)` calls to echo out ad-hoc debugging information (aka. [`printf` debugging][printf-debugging]). Also, you can enable this for any language that Pulumi supports. Python, Go, and C# all have popular debuggers and IDEs that can be used in the same manner. Further, you can configure TypeScript debugging not just in VS Code, but also in any IDE that supports JavaScript debugging (e.g. Visual Studio, Webstorm, neovim, etc). Whatever your favorite IDE or language is, you can use their full range of breakpoint debugging features for your Pulumi programs.
+Despite these limitations, Pulumi with VS Code as your IDE provides a rich experience compared to trawlling through unstructured logs, or adding in `console.log(...)` calls to echo out ad-hoc debugging information (aka. [`printf` debugging][printf-debugging]). Also, you can enable this for any language that Pulumi supports, and most popular IDEs support breakpoint debugging (e.g. Visual Studio, Webstorm, neovim, etc). Python, Go, and C# all have popular debuggers and IDEs that can be used in the same manner. Whatever your preferred IDE or language is, you can use their full range of breakpoint debugging features for your Pulumi programs.
 
 Pulumi also offers detailed logging which can be used to look into the other aspects that breakpoint debugging doesn't cover. In an upcoming article we'll show how to use these tools as well. Until then, have fun [spelunking][code-spelunking] through your code with your favorite IDE!
 
