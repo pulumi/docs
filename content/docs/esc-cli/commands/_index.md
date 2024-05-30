@@ -24,10 +24,7 @@ The most common commands in the CLI that you'll be using are as follows:
 * [esc env rm](/docs/esc-cli/commands/esc_env_rm/) - Remove an environment or a value from an environment
 * [esc env set](/docs/esc-cli/commands/esc_env_set/) - Set a value within an environment
 * [esc env version](/docs/esc-cli/commands/esc_env_version/) - Manage the versions of an environment
-* [esc env version history](/docs/esc-cli/commands/esc_env_version_history/) - Show revision history of an environment
 * [esc env version tag](/docs/esc-cli/commands/esc_env_version_tag/) - Manage tagged versions
-* [esc env version tag ls](/docs/esc-cli/commands/esc_env_version_tag_ls/) - List tagged versions
-* [esc env version tag rm](/docs/esc-cli/commands/esc_env_version_tag_rm/) - Remove a tagged version
 * [esc login](/docs/esc-cli/commands/esc_login/) - Log in to the Pulumi Cloud
 * [esc open](/docs/esc-cli/commands/esc_open/) - Open the environment with the given name
 * [esc run](/docs/esc-cli/commands/esc_run/) - Open the environment with the given name and run a command
