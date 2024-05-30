@@ -1,7 +1,7 @@
 ---
 title: Pulumi + AWS Summit Stockholm
 meta_desc: Join Pulumi at AWS Summit Stockholm to learn about the latest developments in infrastructure as code. Meet us at booth B9.
-meta_image: /aws-summit-meta.png
+meta_image: /images/aws-summit-meta.png
 type: page
 layout: aws-summit
 
@@ -32,7 +32,7 @@ workshops:
         action: Register Now
         - title: Building AI-powered Applications at Pulumi
         date: July 10, 2024
-        description: Learn how the Pulumi engineering team builds AI-powered capabilities and the lessons learned bringing these features into production.
+        description: Learn how the Pulumi engineering team builds AI-powered capabilities and the lessons learned.
         link: /resources/building-ai-powered-applications-at-pulumi/
         action: Register Now
 
