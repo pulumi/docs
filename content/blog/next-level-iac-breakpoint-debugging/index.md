@@ -1,8 +1,8 @@
 ---
-title: "Next Level IaC: Breakpoint Debugging for Pulumi Programs"
-date: 2024-05-27
+title: "Next-level IaC: Breakpoint Debugging for Pulumi Programs"
+date: 2024-05-31
 draft: false
-meta_desc: "Next Level IaC: Breakpoint Debugging for Pulumi Programs"
+meta_desc: "Next-level IaC: Breakpoint Debugging for Pulumi Programs"
 meta_image: meta.png
 authors:
     - troy-howard
@@ -44,72 +44,14 @@ For this example, we will create a new Pulumi project using the [TypeScript AWS 
 ```shell
 $ mkdir good-morning && cd good-morning 
 $ pulumi new static-website-aws-typescript
-
-This command will walk you through creating a new Pulumi project.
-
-Enter a value or leave blank to accept the (default), and press <ENTER>.
-Press ^C at any time to quit.
-
-project name (good-morning):
-project description (A TypeScript program to deploy a static website on AWS):
-Created project 'good-morning
-
-Please enter your desired stack name.
-To create a stack in an organization, use the format <org-name>/<stack-name> (e.g. `acmecorp/dev`).
-stack name (dev):
-Created stack 'dev'
-
-aws:region: The AWS region to deploy into (us-west-2):
-errorDocument: The file to use for error pages (error.html):
-indexDocument: The file to use for top-level pages (index.html):
-path: The path to the folder containing the website (./www):
-Saved config
-
-Installing dependencies...
-
-
-added 294 packages, and audited 295 packages in 7s
-
-43 packages are looking for funding
-  run `npm fund` for details
-
-found 0 vulnerabilities
-Finished installing dependencies
-
-Your new project is ready to go! ✨
-
-To perform an initial deployment, run `pulumi up`
 ```
 
 Then launch this project to make sure it works as expected:
 
 ```shell
 $ pulumi up
+...
 
-Previewing update (dev)
-
-View in Browser (Ctrl+O): https://app.pulumi.com/troy-pulumi-corp/good-morning/dev/previews/########-####-####-####-############
-
-     Type                                   Name                 Plan
- +   pulumi:pulumi:Stack                    good-morning-dev       create
- +   ├─ aws:s3:Bucket                       bucket               create
- +   ├─ aws:cloudfront:Distribution         cdn                  create
- +   ├─ aws:s3:BucketOwnershipControls      ownership-controls   create
- +   ├─ aws:s3:BucketPublicAccessBlock      public-access-block  create
- +   └─ synced-folder:index:S3BucketFolder  bucket-folder        create
- +      ├─ aws:s3:BucketObject              error.html           create
- +      └─ aws:s3:BucketObject              index.html           create
-
-Outputs:
-    cdnHostname   : output<string>
-    cdnURL        : output<string>
-    originHostname: output<string>
-    originURL     : output<string>
-
-Resources:
-    + 8 to create
-
-Do you want to perform this update? yes
 Updating (dev)
 
 View in Browser (Ctrl+O): https://app.pulumi.com/troy-pulumi-corp/good-morning/dev/updates/1
@@ -132,8 +74,6 @@ Outputs:
 
 Resources:
     + 8 created
-
-Duration: 3m21s
 ```
 
 Great! You should be able to navigate to the website using the URL from the `cdnURL` output value.
@@ -148,7 +88,41 @@ If all looks good, let's move on to the next step by opening your project direct
 $ code .
 ```
 
-### Step 2: Create a debug wrapper script 
+### Step 2: Lets break stuff!
+
+Now that we have a perfectly running Pulumi program, in order to have something to debug, we will need to break it!
+
+For this example, we are going to change our `indexDocument` from `index.html` to `good-morning.html`.
+
+```shell
+$ cp ./wwww/index.html ./www/good-morning.html
+```
+
+Next, let's edit the contents to say "Good morning, world!" instead of "Hello, world!":
+
+```html {hl_lines=[5,8]}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Good morning, world!</title>
+</head>
+<body>
+    <h1>Good morning, world! 👋</h1>
+    <p>Deployed with 💜 by <a href="https://pulumi.com/">Pulumi</a>.</p>
+</body>
+</html>
+```
+
+Once that's edited and saved, go ahead let's redeploy the website:
+
+```shell
+$ pulumi up
+```
+
+Everything runs successfully... but if we navigate to the website, we don't see our updated content?! Oh no! What went wrong? Why isn't there an error message?! Time to put on our debugging hats and figure out what is going on. First, let's set up VS Code to enable breakpoint debugging right in the IDE. 
+
+### Step 3: Create a debug wrapper script 
 
 VS Code can run an arbitrary command when you hit `F5`. Typically this would be a one-liner that runs your language runtime like `node foo.js` or `python foo.py`. In our case, we need to run the `pulumi` CLI and need to do more than one step. The easiest way to do this is to create a small wrapper script and call that from VS Code.
 
@@ -177,13 +151,13 @@ $ chmod +x pulumi-debug.sh
 $ ./pulumi-debug.sh
 ```
 
-Ok now let's setup VS Code to run that in debug mode when we hit `F5`!
+Ok now let's set up VS Code to run that in debug mode when we hit `F5`!
 
-### Step 3: Configure VS Code `launch.json` and `task.json`
+### Step 4: Configure VS Code `launch.json` and `tasks.json`
 
-To run our Pulumi program in debug mode we will need to create a couple VS Code configuration files; `launch.json` and `task.json` in a hidden directory called `.vscode` within your project. 
+To run our Pulumi program in debug mode we will need to create a couple of VS Code configuration files, `launch.json` and `tasks.json`, in a hidden directory called `.vscode` within your project. 
 
-Create the `.vscode` directory and then create a new file called `task.json` file in that directory, with the following contents:
+Create the `.vscode` directory and then create a new file called `tasks.json` file in that directory, with the following contents:
 
 ```json
 {
@@ -196,8 +170,7 @@ Create the `.vscode` directory and then create a new file called `task.json` fil
 			"isBackground": true,
             "options": {
                 "cwd": "${workspaceFolder}"
-            },
-
+            }
 		}
 	]
 }
@@ -244,7 +217,7 @@ Let's break this down a bit:
 * `name` sets a human-readable name which shows up in the drop down box in VS Code when you choose which [launch configuration][vs-code-launch-configs] to run. 
 {{% /notes %}}
 
-Finally, we need to make one more edit to the `pulumi-debug.sh` file we created. Here will will pass the necessary options to the Node.js runtime to set it to run in debug mode. 
+Finally, we need to make one more edit to the `pulumi-debug.sh` file we created. Here we will pass the necessary options to the Node.js runtime to set it to run in debug mode. 
 
 Add the following line to the beginning of the file:
 
@@ -270,13 +243,54 @@ Debugger attached.
 Waiting for the debugger to disconnect...
 ``` 
 
-### Step 4: Setting a debugging breakpoint 
+### Step 5: Setting a debugging breakpoint 
 
-Now we can try [setting a breakpoint][vs-code-breakpoints] in our code. Navigate to a line within the code and hit the `F9` key. You'll see a small red dot appear next to the line indicating the breakpoint. You can then run the program again using `F5`. When the execution of the code reaches the line it will pause there.
+Now we can try [setting a breakpoint][vs-code-breakpoints] in our code. Getting back to the problem at hand -- our content doesn't seem to be updating, despite no errors. Let's start at the beginning, by investigating the inputs to our program, aka our configuration... at runtime!
 
-At this point you can navigate around the code [inspecting the state of the local variables][vs-code-data-inspection], like you would in any other debugging session. There's also the "Debug" console which provides a [REPL][vs-code-debug-repl] environment to navigate those variables and anything else that is in scope. You can run arbitrary functions here and see their output. 
+Navigate to line `12` within the code and hit the `F9` key. You'll see a small red dot appear next to the line indicating that a breakpoint has been set. This line defines the bucket our program creates and seems like a good place to stop if we want to check the input configuration before we run the AWS S3 provider call.
+
+{{< figure src="set-a-breakpoint.png" caption="Figure: A breakpoint set on line 12.">}}
+
+You can then run the program again using `F5`. When the execution of the code reaches the line it will pause there. At this point you can navigate around the code [inspecting the state of the local variables][vs-code-data-inspection], like you would in any other debugging session. 
+
+Let's inspect the configuration variables. On the left side of the screen you'll find a "Variables" panel listing all the local variables that are in scope. 
+
+{{< figure src="local-variables-list.png" caption="Figure: Local variables displayed in the Variables side panel.">}}
+
+In our case, we're interested in the value of `indexDocument` variable. We can see that it is getting set to `index.html`... not `good-morning.html`. The Pulumi program didn't break because `index.html` still exists. So we are still publishing our old `index.html`. That makes sense. A quick fix here is to modify `index.ts` and set the default to `good-morning.html`:
+
+```typescript {hl_lines=[8]}
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+import * as synced_folder from "@pulumi/synced-folder";
+
+// Import the program's configuration settings.
+const config = new pulumi.Config();
+const path = config.get("path") || "./www";
+const indexDocument = config.get("indexDocument") || "good-morning.html";
+const errorDocument = config.get("errorDocument") || "error.html";
+
+...
+```
+
+There's also the "Debug" console which provides a [REPL][vs-code-debug-repl] environment to navigate those variables and anything else that is in scope. You can run arbitrary functions here and see their output. In this case we can simply type the variable name at the prompt there, hit enter, and see the value. What's great about the debug console is that Intellisense (e.g. using `TAB` to auto-complete) works here, so you can quickly navigate possible options. 
+
+{{< figure src="debug-console-tab-completion-inspect-value.png" caption="Figure: Debug console tab completion and inspecting variable values.">}}
+
+
+Earlier, we edited the document, which fixes the program for future runs, but for the current run that we are debugging, `indexDocument` is still set to `index.html`. Let's use the debug console to set the value to `good-morning.html` before we continue the run. 
+
+```typescript
+> indexDocument="good-morning.html`
+```
+
+The output in the debug window will show the new value, and if you over over the inputs being passed to the bucket creation call, it will now show as `good-morning.html`:
+
+{{< figure src="after-edit-value-debug-console-and-hover.png" caption="Figure: Screenshots of debug console and editor window after changing the `indexDocument` variable">}}
 
 When you're ready for the program to continue on, hit `F5` once again and the program will resume operation, either until the program exits or until it reaches the next breakpoint. Optionally you can step through line-by-line using the `F10` key. VS Code provides a variety of [debug actions][vs-code-debug-actions] once the sessions is established.
+
+Most importantly, check the published website and make sure we fixed the issue! You can find the `cdnURL` output in the `Terminal` tab and click on it from there to open the link. 
 
 ## Considerations and Limitations
 
@@ -286,7 +300,14 @@ Breakpoint debugging is a powerful tool for inspecting the state of your Pulumi 
 
 * **Inputs and Outputs are asynchronous futures:** If you've used Pulumi before you will have encountered [`Input<T>`][input-docs] and [`Output<T>`][output-docs] values, which are a core function of the tool. However, at the time that the debugger hits a breakpoint on those values, they are likely not populated with their final value. That means you won't be able to inspect them in the debugger very well. Instead, you will need to add an [`apply(...)`][apply-docs] or [`all(..)`][all-docs] block to the code, and place the breakpoint on the materialized value within that block. This follows all the same rules as accessing those variables in code in a Pulumi program. 
 
-* **Limited integration with VS Code:** Unfortunately our technique of running Pulumi in wrapper script as a backgrounded pre-launch task in VS Code leaves some things to be desired. It is different enough from the use case that VS Code had in mind for these features that making things "just work" is a little difficult. For example, we can't easily report on errors in the "Problems" tab. Sometimes VS Code can't tell that the program finished and so you'll have to manually stop the debugging session after Pulumi has completed.
+```typescript
+bucket.id.apply(id => {
+   // NOTE: The `debugger` keyword automatically sets a breakpoint here, so you don't need to set it via the IDE.
+   debugger
+});
+```
+
+* **Limited integration with VS Code:** Unfortunately our technique of running Pulumi in wrapper script as a backgrounded pre-launch task in VS Code leaves some things to be desired. It is different enough from the use case that VS Code had in mind for these features (e.g. interacting with a long-running `tsc-watch` or similar task) that making things "just work" is a little difficult. For example, we can't easily report on errors in the "Problems" tab, and VS Code complains that a problem matcher is missing the first time you run it. Sometimes VS Code can't tell that the program finished and so you'll have to manually stop the debugging session after Pulumi has completed (or wait for the retry/timeout to expire).
 
 Despite these limitations, Pulumi with VS Code as your IDE provides a rich experience compared to trawlling through unstructured logs, or adding in `console.log(...)` calls to echo out ad-hoc debugging information (aka. [`printf` debugging][printf-debugging]). Also, you can enable this for any language that Pulumi supports. Python, Go, and C# all have popular debuggers and IDEs that can be used in the same manner.
 
