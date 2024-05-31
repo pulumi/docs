@@ -44,9 +44,12 @@ outputFormats:
 outputs:
   home:
     - HTML
-    - JSON
   section:
     - HTML
+    - JSON
+  page:
+    - HTML
+    - JSON
 
 taxonomies:
   author: authors

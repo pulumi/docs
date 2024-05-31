@@ -1,0 +1,4 @@
+{{ $title := .Title }}
+{{ $content := .RawContent }}
+{{ $page := dict "title" $title "content" $content "path" .Path }}
+{{ $page | jsonify }}
