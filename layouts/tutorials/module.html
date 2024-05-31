@@ -1,14 +1,70 @@
 {{ define "main" }}
-    <div class="container mx-auto px-4">
-        This is the module layout template.
-
-        <p>{{ .Title }}</p>
-        <ul>
-            {{ range .Pages }}
-                <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-            {{ end }}
-        </ul>
+<div div class="docs-list-main">
+    <div class="docs-main-nav-toggle-wrapper">
+        <div class="docs-main-nav-wrapper">
+            <div id="docs-main-nav" class="docs-main-nav">
+                {{ .Scratch.Set "title" .Title }}
+                {{ partial "docs/tutorials-nav.html" . }}
+            </div>
+        </div>
+        <div class="docs-nav-toggle">
+            <div class="docs-nav-toggle-icon icon icon-24-24"></div>
+        </div>
     </div>
+
+    <div class="docs-main-content-wrapper">
+
+        <div class="docs-main-content">
+            This is the module layout template.
+            <div class="tutorials-main">
+                <header>
+                    {{ partial "templates/breadcrumb.html" . }}
+                </header>
+                <div class="special-h1">
+                    <h1>{{ .Title }}</h1>
+                    <div class="h1-gradient"></div>
+                </div>
+
+                <div>{{ .Content }}</div>
+
+                <div class="module-list">
+                    <h2>Tutorials</h2>
+                    <ul class="p-0 border-4 border-gray-100 rounded">
+                        {{ range $index, $page := .Pages }}
+                            <li
+                                class="flex items-center list-none py-3 px-4 border-gray-200
+                                {{ if lt (add $index 1) (len .Pages) }}border-b{{ end }}
+                                "
+                            >
+                                <span class="w-full">
+                                    <a href="{{ .RelPermalink }}">{{ $page.Title }}</a>
+                                </span>
+                                <span class="text-sm text-gray-600 whitespace-nowrap mx-12">
+                                    <i class="fas fa-stopwatch text-center w-6 text-gray-500"></i>
+                                    {{ $page.Params.estimated_time }} minutes
+                                </span>
+                                <span>
+                                    <a href="{{ .RelPermalink }}">
+                                        <i class="fas fa-chevron-circle-right text-blue-600 p-2"></i>
+                                    </a>
+                                </span>
+                            </li>
+                        {{ end }}
+                    </ul>
+                </div>
+
+                
+            </div>
+        </div>
+        <div class="docs-table-of-contents docs-toc-desktop">
+            {{ partial "docs/table-of-contents.html" . }}
+    
+            {{ partial "docs/feedback.html" . }}
+    
+            {{ partial "docs/right-nav-ad.html" }}
+        </div>
+    </div>
+</div>
 {{ end }}
 
 {{ define "footer" }}

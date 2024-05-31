@@ -1,0 +1,130 @@
+.tutorials-main {
+    h2 {
+        font-size: 24px !important;
+    }
+
+    h3 {
+        font-size: 21px !important;
+    }
+
+    .topic-badge {
+        width: 88px;
+        height: 26px;
+        padding: 6px 8px 6px 8px;
+        margin: 0px 3px;
+        gap: 4px;
+        border-radius: 4px;
+        opacity: 0px;
+        border: 1px solid #B985BD;
+        font-family: Inter;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 21px;
+        text-align: left;
+        align-content: center;
+    }
+
+    .tutorials-clouds {
+
+        font-family: 'Gilroy';
+
+        >ul {
+            display: flex;
+            width: 100%;
+
+            >li {
+                flex-basis: 48%;
+                height: fit-content;
+
+                .card-heading {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: flex-start;
+
+                    h3 {
+                        flex-grow: 1;
+                    }
+
+                    img {
+                        height: 24px;
+                    }
+                }
+
+                >ul {
+                    >li {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        padding: 12px 24px 12px 24px;
+                        gap: 6px;
+                        border-radius: 4px;
+                        border: 1px 0px 0px 0px;
+                        opacity: 0px;
+                        border: 1px solid #DCDCDC;
+
+                        >a {
+                            font-family: Gilroy;
+                            font-size: 18px;
+                            font-weight: 500;
+                            line-height: 36px;
+                            text-align: left;
+                            color: #5F6065;
+                        }
+                    }
+                }
+
+                border-radius: 4px;
+                background: linear-gradient(121deg, #F6F7FD 0%, #F9F7FC 5.24%, #F9F5FA 9.77%, #FEF8F9 14.35%, #FFFDF7 17.83%, #FFF 22.11%, #FFF 79.52%, #FFFDF7 86.29%, #FEF8F9 89.41%, #F9F5FA 92.9%, #F9F7FC 96.56%, #F6F7FD 100%, #F6F7FD 100%),
+                #FFF;
+                box-shadow: 0px 2px 24px 0px rgba(95, 96, 101, 0.14);
+            }
+
+            padding: 12px 24px 12px 24px;
+            gap: 12px;
+            border-radius: 4px;
+            border: 1px 0px 0px 0px;
+            opacity: 0px;
+        }
+    }
+
+    .tutorials-topics, .tutorials-all {
+        >ul {
+            padding: 12px 24px 12px 24px;
+            gap: 12px;
+            border-radius: 4px 0px 0px 0px;
+            border: 1px 0px 0px 0px;
+            opacity: 0px;
+            height: fit-content;
+            >li {
+                flex-basis: 30%;
+                height: 100%;
+                border-radius: 4px;
+                box-shadow: 0px 2px 24px 0px rgba(95, 96, 101, 0.14);
+                padding: 12px 24px 12px 24px;
+                gap: 12px;
+                border-radius: 4px 0px 0px 0px;
+                border: 1px 0px 0px 0px;
+                opacity: 0px;
+                
+                .card-heading {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: flex-start;
+                    border-bottom: 1px solid #E5E5E9;
+                    
+                    h3 {
+                        flex-grow: 1;
+                        a {
+                            color: #2F3023 !important;
+                        }
+                    }
+
+                    img {
+                        width: 24px;
+                        height: 24px;
+                    }
+                }
+            }
+        }
+    }
+}

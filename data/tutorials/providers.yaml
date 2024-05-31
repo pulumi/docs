@@ -2,28 +2,33 @@
   name: Amazon Web Services
   shortname: AWS
   description: This is a description of this provider.
+  logo: /logos/pkg/aws.svg
   featured: true
 
 - slug: azure
   name: Microsoft Azure
   shortname: Azure
   description: This is a description of this provider.
+  logo: /logos/pkg/azure.svg
   featured: true
 
 - slug: gcp
   name: Google Cloud Platform
   shortname: GCP
   description: This is a description of this provider.
+  logo: /logos/pkg/gcp.svg
   featured: true
 
 - slug: kubernetes
   name: Kubernetes
   shortname: Kubernetes
   description: This is a description of this provider.
+  logo: /logos/pkg/kubernetes.svg
   featured: true
 
 - slug: docker
   name: Docker
   shortname: Docker
   description: This is a description of this provider.
+  logo: /logos/pkg/aws.svg
   featured: false
