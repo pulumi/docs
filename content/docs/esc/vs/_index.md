@@ -11,10 +11,9 @@ menu:
 aliases:
 ---
 
-Pulumi is a cloud-native infrastructure as code project. It lets you provision and manage resources across many clouds---AWS, Azure, Google Cloud, Kubernetes, OpenStack---using your favorite language. It works great for a wide range of
-cloud infrastructures and applications, including containers, virtual machines, databases, cloud services, and serverless.
+Pulumi ESC is centralized environments, secrets, and configuration manager for cloud applications and infrastructure. It provides the ability to create environments which are collections of secrets and configuration that can be versioned, branched, and composed inside other collections. ESC supports pulling and centralizing the management of secrets from 1Password, AWS OIDC, AWS Secrets Manager, Azure OIDC, Azure Key Vault, Google Cloud OIDC, Google Cloud Secrets Manager, Pulumi stacks, Vault OIDC, and Vault.
 
-Because of this broad array of supported scenarios, there are many tools that overlap with Pulumi's capabilities. Many
+There are many tools that overlap with Pulumi ESC's capabilities. Many
 of these are complementary and can be used together, whereas some are "either or" decisions.
 
 Here are several useful comparisons that will help you understand Pulumi's place in the cloud tooling ecosystem:
