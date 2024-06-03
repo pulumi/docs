@@ -11,6 +11,7 @@ overview:
         Our mission is to empower our partners with the tools and resources they need to build robust, cloud-native infrastructure solutions. Comprehensive guides, detailed documentation, an engaged community, and expert support make partnering with us a seamless and productive experience. With our infrastructure-as-code platform and extensive API suite, you can create customized, scalable, and secure infrastructure solutions for your clients.
 
 challenges:
+    title: "Partnership Types"
     items:
         - title: "Cloud Partners"
           icon:
