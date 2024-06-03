@@ -124,7 +124,7 @@ def handle_file_uploads(event, say, client, logger):
         logger.error("No valid message found for reaction.")
 ```
 
-Keep in mind, we're not doing any validation here yet, we're blindly copying files from Slack to S3 and having our data loader process them.  It's probably not a good idea to deploy this bot to a public Slack channel without more moderation/validation in place.
+Keep in mind, we're not doing any validation here yet. We're blindly copying files from Slack to S3 and having our data loader process them.  It's probably not a good idea to deploy this bot to a public Slack channel without more moderation/validation in place.
 
 Here's what it looks like when we drag/drop a file into Slack now.  On the right, a file was shared with the bot in private message.  The bot acknowledged this upload with the checkmark reaction, the job is placed on the queue.  Shortly after, on the left, the SQS Lambda handler has finished processing the uploaded file.  We're now able to use the bot to talk about the uploaded files.
 
