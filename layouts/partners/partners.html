@@ -1,3 +1,4 @@
+{{ $allPackages := $.Site.Data.registry.packages }}
 {{ define "hero" }}
     {{ partial "hero" (dict "title" .Params.title) }}
 {{ end }}
