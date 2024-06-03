@@ -14,13 +14,13 @@ tags:
   - features
 ---
 
-Managing secrets and application configurations effectively is crucial for building secure and maintainable software. However, developers often face challenges such as hardcoded credentials, configuration inconsistencies, and security risks. Pulumi Environments, Secrets, and Configurations (ESC) simplifies the management of sensitive data and configurations across your entire application lifecycle. Today, we're thrilled to introduce the official Pulumi ESC SDK in Typescript, Go, and Python, making it even easier to integrate ESC directly into your applications.
+Managing secrets and application configurations effectively is crucial for building secure and maintainable software. However, developers often face challenges such as hardcoded credentials, configuration inconsistencies, and security risks. [Pulumi Environments Secrets and Configurations](/product/esc) (ESC) simplifies the management of sensitive data and configurations across your entire application lifecycle. Today, we're thrilled to introduce the official Pulumi ESC SDK in Typescript, Go, and Python, making it even easier to integrate ESC directly into your applications.
 
 <!--more-->
 
 ## Primer on Pulumi ESC
 
-Pulumi ESC (Environments, Secrets, and Configurations) provides a developer-first solution to simplify how you manage sensitive data and configurations across your entire application lifecycle. It's a fully managed solution allowing teams to generate dynamic cloud provider credentials, aggregate secrets and configurations from multiple sources, and manage them through composable collections called "environments." These environments can be consumed from anywhere, making Pulumi ESC ideal for any application and development workflow. Additionally, while Pulumi ESC works independently to eliminate duplication and reduce drift and sprawl of secrets and configuration for all your applications, it also integrates smoothly with Pulumi Infrastructure as Code (IaC) to enhance these capabilities within the Pulumi ecosystem.
+Pulumi ESC (Environments, Secrets, and Configurations) provides a developer-first solution to simplify how you manage sensitive data and configurations across your entire application lifecycle. It's a fully managed solution allowing teams to generate [dynamic cloud provider](/docs/esc/providers/) credentials, aggregate secrets and configurations from multiple sources, and manage them through composable collections called "[environments](/docs/esc/environments/)." These environments can be consumed from anywhere, making Pulumi ESC ideal for any [application and development workflow](docs/esc/other-integrations/). Additionally, while Pulumi ESC works independently to eliminate duplication and reduce drift and sprawl of secrets and configuration for all your applications, it also [integrates](/docs/esc/get-started/integrate-with-pulumi-iac/) smoothly with Pulumi Infrastructure as Code (IaC) to enhance these capabilities within the Pulumi ecosystem.
 
 ## Introducing the Pulumi ESC SDK
 
