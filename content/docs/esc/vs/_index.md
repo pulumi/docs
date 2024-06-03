@@ -19,3 +19,4 @@ of these are complementary and can be used together, whereas some are "either or
 Here are several useful comparisons that will help you understand Pulumi's place in the cloud tooling ecosystem:
 
 * [HashiCorp Vault](/docs/esc/vs/vault/)
+* [Infisical](/docs/esc/vs/infisical/)
