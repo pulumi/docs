@@ -3,7 +3,7 @@ title: "Unveiling Pulumi ESC Versioning: Manage Secrets and Deployments with Con
 allow_long_title: true
 date: 2024-06-05T00:00:00-07:00
 draft: false
-meta_desc: "The new ESC Versioning features al to Pulumi ESC Editor streamlines the authoring experience of environments for developers"
+meta_desc: "The new ESC Versioning features allows you bring agile practices to your secrets and configuration management, and streamline deployments"
 meta_image: "meta.png"
 authors:
   - arun-loganathan
@@ -36,8 +36,6 @@ Pulumi ESC Versioning delivers significant benefits that can transform your deve
 - **Improved Auditing and Collaboration**: Easily track the complete history of your environments, including who made changes and when. This granular audit trail enhances security, ensures compliance, and promotes seamless collaboration within your team.
 - **Streamlined Development Workflows**: Similar to Docker tags, Pulumi ESC version tags provide a familiar and intuitive way  to categorize and utilize specific revisions to manage different stages of your environments.
 - **Disaster Prevention**: By pinning a version during import, you can test new configurations in isolation before applying them to critical production systems. This minimizes downtime, reduces risk, and ensures business continuity, boosting confidence in deployments and supporting agile practices.
-
-“We’ve always taken a developer-first approach with our product development. Today’s launch follows the same approach,” said Luke Hoban, CTO of Pulumi. “We are bringing software engineering practices of versions, tags, and releases to the secrets and config management space, enabling organizations to move swiftly and securely.”
 
 {{% notes "info" %}}
 Tags and specific version imports are available on the Enterprise and Business Critical editions of Pulumi Cloud. The Team Edition offers access to the latest 5 revisions.
