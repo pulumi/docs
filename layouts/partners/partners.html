@@ -7,13 +7,13 @@
     {{ $pageContext := . }}
 
     <section id="overview" class="max-w-5xl mx-auto text-center my-16 px-6">
-    {{ with .Params.overview }}
-        <h2>{{ .title }}</h2>
-        <p class="text-left">{{ .description | markdownify }}</p>
-        <div class="mt-10">
-            <a href="#form" rel="noopener noreferrer" class="btn-primary">Contact our Partner Team!</a>
-        </div>
-    {{ end }}
+        {{ with .Params.overview }}
+            <h2>{{ .title }}</h2>
+            <p class="text-left">{{ .description | markdownify }}</p>
+            <div class="mt-10">
+                <a href="#form" rel="noopener noreferrer" class="btn-primary">Contact our Partner Team!</a>
+            </div>
+        {{ end }}
     </section>
 
     <section id="challenges">
@@ -21,12 +21,12 @@
     </section>
 
     <section id="solutions_header">
-    {{ with .Params.solutions_header }}
-    <div class="max-w-5xl mx-auto text-center px-6">
-        <h3>{{ .title }}</h3>
-        <p>{{ .description }}</p>
-    </div>
-    {{ end }}
+        {{ with .Params.solutions_header }}
+        <div class="max-w-5xl mx-auto text-center px-6">
+            <h3>{{ .title }}</h3>
+            <p>{{ .description }}</p>
+        </div>
+        {{ end }}
     </section>
 
     <section id="solutions">
@@ -42,35 +42,33 @@
             {{ end }}
         </div>
     </section>
+
     {{ $allGetStarted := $.Site.Data.registry.getstarted }}
     {{ $allPackages := $.Site.Data.registry.packages }}
-    
+
     {{ $featuredPackages := slice }}
     {{ range $allPackages }}
         {{ if .featured }}
             {{ $featuredPackages = $featuredPackages | append . }}
         {{ end }}
     {{ end }}
-    
+
     <div class="packages">
         <section class="featured-packages">
-            <h2>
-                Featured Packages
-            </h2>
+            <h2>Featured Packages</h2>
             <div class="featured-packages-content">
                 {{ range $featuredPackages }}
                     {{ partial "registry/featured-package" (dict "package" .) }}
                 {{ end }}
             </div>
         </section>
-    
+
         <section class="all-packages mt-8">
             <div class="mb-2 px-4 relative z-10">
                 <h4 class="text-lg">Filters</h4>
                 <div class="flex flex-col md:flex-row md:items-start">
                     <div class="flex flex-col" style="min-height: 95px">
                         <pulumi-filter-select class="mb-2">
-    
                             <!-- Package-type options -->
                             <pulumi-filter-select-option-group name="type" class="w-1/2">
                                 <div class="toggle" slot="toggle">Type</div>
@@ -80,7 +78,7 @@
                                     <pulumi-filter-select-option value="component" label="Component">Component</pulumi-filter-select-option>
                                 </div>
                             </pulumi-filter-select-option-group>
-    
+
                             <!-- Use-case options -->
                             <pulumi-filter-select-option-group name="category" class="mx-1 md:mx-4 w-1/2">
                                 <div class="toggle" slot="toggle">Use Case</div>
@@ -94,14 +92,13 @@
                                     <pulumi-filter-select-option value="version control system" label="Version Control">Version Control</pulumi-filter-select-option>
                                 </div>
                             </pulumi-filter-select-option-group>
-    
                         </pulumi-filter-select>
                         <!-- The list of active filters. -->
                         <ul class="package-tags active-tags"></ul>
                     </div>
-    
+
                     <pulumi-registry-list-search class="w-full"></pulumi-registry-list-search>
-    
+
                     <!-- The template used for displaying active filters. -->
                     <template id="active-tag-template">
                         <li>
@@ -111,7 +108,7 @@
                     </template>
                 </div>
             </div>
-    
+
             <h2 class="px-4 inline-flex items-center mt-8 md:mt-0">
                 A &ndash; Z Packages
                 <span class="all-count ml-4 py-0.5 px-3 rounded-full bg-violet-600 text-white text-lg">
@@ -124,7 +121,7 @@
             <div class="flex flex-wrap">
                 <!-- Capture the current (i.e., Page) context so it can be passed into the partial, allowing the partial to build proper relrefs. -->
                 {{ $page := . }}
-    
+
                 {{ range (sort $allPackages "title") }}
                     {{ partial "registry/package" (dict "package" . "page" $page) }}
                 {{ end }}
