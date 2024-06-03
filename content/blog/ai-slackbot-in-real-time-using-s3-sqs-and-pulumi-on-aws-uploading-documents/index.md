@@ -29,7 +29,7 @@ To follow along, clone the project, `git clone https://github.com/catmeme/arti.g
 
 AWS provides [a few ways to integrate with AWS S3 Events](https://docs.aws.amazon.com/AmazonS3/latest/userguide/notification-how-to-event-types-and-destinations.html), for this project, we're going to focus on the latest and most straight-forward, [S3 Event Notifications](https://docs.aws.amazon.com/AmazonS3/latest/userguide/EventNotifications.html).  Depending on your use case, integrating with [EventBridge](https://docs.aws.amazon.com/AmazonS3/latest/userguide/EventBridge.html) may make more sense.
 
-While we can integrate S3 events directly with Lambda, what happens when we add 100's of files at the same time?  Potentially, we have 100's of Lambdas invoked near simultaneously, depending on other factors, this could become an issue.  We'll solve for this by [Using Lambda with Amazon SQS](https://docs.aws.amazon.com/lambda/latest/dg/with-sqs.html), and [reserved concurrency](https://docs.aws.amazon.com/lambda/latest/operatorguide/reserved-concurrency.html).
+While we can integrate S3 events directly with Lambda, what happens when we add 100's of files at the same time? Potentially, hundreds of Lambdas could be invoked simultaneously, which could become an issue depending on other factors. We'll solve for this by [Using Lambda with Amazon SQS](https://docs.aws.amazon.com/lambda/latest/dg/with-sqs.html), and [reserved concurrency](https://docs.aws.amazon.com/lambda/latest/operatorguide/reserved-concurrency.html).
 
 Our Pulumi program is updated to add a Queue and integrate it with our new Lambda SQS handler (policies left out for brevity, you can view them in the `deploy/pulumi/__main__.py` in the project).
 
