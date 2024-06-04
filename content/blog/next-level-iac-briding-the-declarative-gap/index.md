@@ -19,15 +19,16 @@ Pulumi stands out in the world of infrastructure-as-code (IaC) for its flexibili
 
 <!--more-->
 
-In Pulumi, you describe your infrastructure in code – real code, not a [DSL][dsl-wiki] or [YAML][yaml-wiki] – using your preferred general purpose programming language. That means you can use standard constructs like if/else, for loops, and custom code, with easily understood syntax. You don't have to become a specialist in a niche proprietary language, like Terraform's HCL. Rather, you can reuse your existing programming skills, use standard tools like IDEs, linters, and test frameworks, while still gaining all of the benefits of the declarative approach that other tools emphasize.
+In Pulumi, you describe your infrastructure in code – real code, not a [DSL][dsl-wiki] or [YAML][yaml-wiki] – using your preferred general purpose programming language You don't have to become a specialist in a niche proprietary declarative language, like Terraform's HCL. Rather, you can reuse your existing programming skills, writing in standard imperative, object-oriented, and even functional language styles, while still gaining all of the benefits of the declarative style that other tools emphasize.
 
-The unique mix of a [declarative model][pulumi-declarative-imperative-docs] embedded and implemented in standard programming syntax, allows all the flexibility of custom code, while still enabling Pulumi’s [deployment engine][pulumi-engine-docs] to infer opportunities for parallel asynchronous execution and to converge a partially realized system.
+Pulumi provides a unique mix of a [declarative model][pulumi-declarative-imperative-docs] embedded and implemented inside of a standard programming language, allowing all the flexibility of custom imperative code, while still enabling Pulumi's [deployment engine][pulumi-engine-docs] to infer opportunities for parallel asynchronous execution and to converge a partially-realized system.
 
 The secret sauce that lets Pulumi achieve this is the [`apply`][apply-docs] function, and the way it handles inputs and outputs via asynchronous programming constructs, similar to [futures][futures-wiki]. We'll go deeper on that in this article, but first let's talk a little bit about the flow of operations in Pulumi.
 
 ## Pulumi's architecture and flow of operations
 
 Pulumi is a system that is made up of a number of components. At a high level, those are:
+
 - [**Pulumi Programs**][pulumi-program-docs]: The code you write to describe the infrastructure you need.
 - [**Deployment Engine**][pulumi-engine-docs]: A process that executes requests to create/modify infrastructure.
 - [**Resource Providers**][pulumi-providers-docs]: Plugins that interface with cloud services like AWS, Azure, and others.
@@ -38,7 +39,7 @@ These components interact together to manage your infrastructure across multiple
 
 Let's get into an example of how information flows back forth between these components. Suppose you want to write a Pulumi program to create an AWS S3 Bucket to [host a static website][pulumi-static-website-example]. When that bucket is created, it will be given a unique indentifier that you need to use in other parts of your infrastructure, in order to reference the bucket. Every time you create the bucket the identifier will change, so we need to handle this as a variable not a fixed string.
 
-To do that in a Pulumi program, you can create a bucket and then refer to its `id` property later, like this: 
+To do that in a Pulumi program, you can create a bucket and then refer to its `id` property later, like this:
 
 {{< chooser language "typescript,python" />}}
 
@@ -48,7 +49,7 @@ To do that in a Pulumi program, you can create a bucket and then refer to its `i
 import * as pulumi from '@pulumi/pulumi';
 import * as aws from '@pulumi/aws';
 
-// Create an S3 bucket 
+// Create an S3 bucket
 const bucket = new aws.s3.Bucket("bucket");
 
 // Export the name of the bucket
@@ -72,27 +73,27 @@ pulumi.export('bucket_name', bucket.id)
 
 {{% /choosable %}}
 
-When this program runs, the call to create the `bucket` object will issue a request to the *deployment engine*. The deployment engine will load the *resource provider* for AWS, and ask it to create the S3 bucket. The AWS resource provider then issues the request to the AWS API, which will create the bucket and then return the `id` of the newly created resource. The provider will return that to the deployment engine, which will then *set the realized value* on your Pulumi program's `bucket.id` property and then move on to creating anything that depends on that property. 
+When this program runs, the call to create the `bucket` object will issue a request to the *deployment engine*. The deployment engine will load the *resource provider* for AWS, and ask it to create the S3 bucket. The AWS resource provider then issues the request to the AWS API, which will create the bucket and then return the `id` of the newly created resource. The provider will return that to the deployment engine, which will then *set the realized value* on your Pulumi program's `bucket.id` property and then move on to creating anything that depends on that property.
 
 This all seems pretty straight-forward, except that Pulumi programs don't wait and imperatively do each operation, one at a time. Instead the deployment engine will run them in parallel, only waiting in cases where the output of one operation is needed to run the next operation. This can create complex structures with some operations needing to wait for inputs from other operations, and some that don't, all finishing at different times, depending on how long the cloud service takes to process that request.
 
-## Inputs and Outputs as asynchronous futures 
+## Inputs and Outputs as asynchronous futures
 
 Infrastructure automation tasks can be long-running and can result in intermittent errors and may need to be retried before moving on to the next step. A robust IaC solution will need to run concurrently, be able to restart, retry, and resume itself, and understand that a set of tasks could happen in any order, not necessarily in the order you defined them in code.
 
-Back in our Pulumi program code, that means that some of the time the `bucket` object from our earlier example has its `id` property set, and sometimes it doesn't. We wouldn't want to run any operation that needed that variable before it was set, but we also wouldn't want to wait to start operations that don't need that value. 
+Back in our Pulumi program code, that means that some of the time the `bucket` object from our earlier example has its `id` property set, and sometimes it doesn't. We wouldn't want to run any operation that needed that variable before it was set, but we also wouldn't want to wait to start operations that don't need that value.
 
 To address this, Pulumi models the input and output values as [futures][futures-wiki]. This allows you to describe a complex set of needs using a simple value-like syntax. Instead of using a `string` result directly, which would only exist some of the time, you instead work with an [`Output<string>`][output-docs], that Pulumi understands as a reference to a value that currently doesn’t exist, but *will* exist when the operation completes. Similarly, [`Input<string>`][input-docs] describes a dependency on an input string that will *at some point* be provided as the result of another operation. This allows Pulumi to execute the entirety of your graph of infrastructure tasks in parallel, only waiting when necessary.
 
 ## Realizing values using the `apply` function
 
-An important distinction though, is that `Input<T>`/`Output<T>` values are just placeholders for the values that will eventually be present. At a certain point you will need to access the values directly, for example in the context of a transformation. The output of one operation might produce a string, which you need to transform into another data structure before passing to the next operation. Pulumi really shines in this context! 
+An important distinction though, is that `Input<T>`/`Output<T>` values are just placeholders for the values that will eventually be present. At a certain point you will need to access the values directly, for example in the context of a transformation. The output of one operation might produce a string, which you need to transform into another data structure before passing to the next operation. Pulumi really shines in this context!
 
 Using the `apply` function we can pass an `Input<T>` or `Output<T>` to a [transformation function][data-transformation-wiki] which will accept the realized value as its input (and only run when that value is available). Within that function you can handle the string as a normal string, then return it back as an `Output<string>`. This allows you to use the full power of your programming language to perform a custom operation inline with the rest of your infrastructure automation.
 
 Here's a simple example of using `apply` to transform an output to something new using your programming language's libraries. In this case, [Base64 encoding][base64-wiki] the `id` of our `bucket` object.
 
-### Example: Using `apply` to Base64 encode an Output<string> 
+### Example: Using `apply` to Base64 encode an Output<string>
 
 {{< chooser language "typescript,python" />}}
 
@@ -102,7 +103,7 @@ Here's a simple example of using `apply` to transform an output to something new
 import * as pulumi from '@pulumi/pulumi';
 import * as aws from '@pulumi/aws';
 
-// Create an S3 bucket 
+// Create an S3 bucket
 const bucket = new aws.s3.Bucket("bucket");
 
 // Export the name of the bucket
@@ -133,8 +134,8 @@ pulumi.export('bucket_name', bucket.id)
 # A Base64 encoder function to use in the apply function's lambda
 def base64_encode(data):
     data_bytes = data.encode("ascii")
-    base64_bytes = base64.b64encode(data_bytes) 
-    base64_string = base64_bytes.decode("ascii") 
+    base64_bytes = base64.b64encode(data_bytes)
+    base64_string = base64_bytes.decode("ascii")
 
 # Export the name of the bucket, in Base64 encoding
 pulumi.export('bucket_name', bucket.id.apply(lambda data: base64_encode))
