@@ -302,7 +302,7 @@ func main() {
 We have exciting plans to further enhance these capabilities. Here's a sneak peek at what's on the horizon:
 
 - **Pulumi service Provider**: Capabilities to Open, Read, and List any Environment versions and version tags
-- **Automation API**: Capabilities to author new environments, assign version tags
+- **Automation API**: Capabilities to author new environments, and assign version tags
 
 Need more features or want to share feedback? We encourage you to open new issues on our [GitHub repository](https://github.com/pulumi/esc/issues/new/choose) or upvote existing [ones](https://github.com/pulumi/esc/issues).
 
