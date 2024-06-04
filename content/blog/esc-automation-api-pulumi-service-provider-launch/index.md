@@ -36,7 +36,7 @@ Here's a glimpse of what you can achieve:
 
 Bringing Pulumi ESC Environments support into the Pulumi Service Provider empowers you to manage your entire infrastructure and application landscape through a unified approach.
 
-Pulumi ESC Automation API capabilities are available for Typescript, Go, Python, C#, Java, and YAML. See our [Environment](registry/packages/pulumiservice/api-docs/environment/) and [Environment Permissions](registry/packages/pulumiservice/api-docs/teamenvironmentpermission/) Pulumi Service Provider docs. Here are examples of creating environments in Typescript, Go, and Python:
+Pulumi Service Provider ESC capabilities are available for Typescript, Go, Python, C#, Java, and YAML. See our [Environment](registry/packages/pulumiservice/api-docs/environment/) and [Environment Permissions](registry/packages/pulumiservice/api-docs/teamenvironmentpermission/) Pulumi Service Provider docs. Here are examples of creating environments in Typescript, Go, and Python:
 
 {{< chooser language "typescript,python,go" />}}
 
