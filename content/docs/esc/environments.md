@@ -596,7 +596,7 @@ You can use ESC with [Automation API](/docs/using-pulumi/automation-api/) in [No
 
 ## Versioning Environments
 
-Every time you make changes and save an environment, a new, immutable **revision** is created. You can see the history of revisions using `esc env version history`
+Every time you make changes and save an environment, a new, immutable **revision** is created. You can see the history of revisions using `esc env version history` or in the Pulumi Cloud Console. 
 
 ```bash
 $ esc env version history myorg/test
@@ -608,7 +608,7 @@ revision 2
 ...
 ```
 
-Compare revisions using `esc env diff`
+Compare revisions using `esc env diff`.
 
 ```bash
 $ esc env diff myorg/test@3 myorg/test@2
@@ -626,18 +626,30 @@ You can tag your revisions with meaningful names like `Prod`, `Stable`, `v1.1.2`
 
 ```bash
 $ esc env version tag myorg/test@Prod 3
-...
 ```
 
 ### Using Tagged Versions 
 
-Once you tag a revision, you can use the tag to [open](/docs/esc/environments/#opening-an-environment)
+Once you tag a revision, you can use the tag to [open](/docs/esc/environments/#opening-an-environment) a specific environment version.
 
 ```bash
 $ esc open myorg/test@Prod
 ```
 
-Check out Pulumi [ESC CLI documentation](/docs/esc-cli/) for more details on available options and commands.
+You can specify the tagged version when importing the environment. This helps you ensure that you are importing a stable environment version that is not affected by changes. 
+
+```yaml
+# Importing in another ESC Environment
+imports:
+  - test@Prod
+
+# Importing in Pulumi stack Config 
+# Pulumi.dev.yaml
+environment:
+  - test@Prod
+```
+
+You can find more commands and options in the [ESC CLI documentation](/docs/esc-cli/). 
 
 ## Precedence rules
 
