@@ -161,3 +161,5 @@ Here is a summary of the key differences between Pulumi ESC and HashiCorp Vault:
 </table>
 
 Getting started with Pulumi ESC is easy. Follow our [Get Started guide](/docs/esc/get-started/) for ESC to begin. If you want to use Vault with ESC, follow this [guide](/docs/esc/providers/vault-secrets/) to import secrets from vault into ESC environments.
+
+{{< get-started-esc >}}
