@@ -590,13 +590,13 @@ Stacks may only read from environments that belong to the same Pulumi organizati
 
 You can use ESC with [Automation API](/docs/using-pulumi/automation-api/) in [Node](/docs/reference/pkg/nodejs/pulumi/pulumi/classes/automation.Stack.html#addEnvironments), [Go](https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3@v3.117.0/go/auto#LocalWorkspace.AddEnvironments), and [Python](docs/reference/pkg/python/pulumi/#pulumi.automation.LocalWorkspace.add_environments). Following methods are supported today:
 
-- `addEnvironments(...)`: Append environments in order to your Pulumi stack's [import](/docs/esc/environments/#using-environments-with-pulumi-iac) list.
-- `listEnvironments()`: Retrieve a list of environments currently imported into your stack.
-- `removeEnvironment(environment)`: Remove a specific environment from your stack's import list.
+* `addEnvironments(...)`: Append environments in order to your Pulumi stack's [import](/docs/esc/environments/#using-environments-with-pulumi-iac) list.
+* `listEnvironments()`: Retrieve a list of environments currently imported into your stack.
+* `removeEnvironment(environment)`: Remove a specific environment from your stack's import list.
 
 ## Versioning Environments
 
-Every time you make changes and save an environment, a new, immutable **revision** is created. You can see the history of revisions using `esc env version history` or in the Pulumi Cloud Console. 
+Every time you make changes and save an environment, a new, immutable **revision** is created. You can see the history of revisions using `esc env version history` or in the Pulumi Cloud Console.
 
 ```bash
 $ esc env version history myorg/test
@@ -616,19 +616,18 @@ $ esc env diff myorg/test@3 myorg/test@2
 
     --- myorg/test@3
     +++ myorg/test@2
-   
 ...
 ```
 
-### Tagging Versions 
+### Tagging Versions
 
-You can tag your revisions with meaningful names like `Prod`, `Stable`, `v1.1.2`. Each environment has a built-in `latest` tag that always points to the environment’s most recent revision. Use `esc env version tag` to tag a revision. In the following example we are assign `Prod` tag to revision 3 of environment `test`. 
+You can tag your revisions with meaningful names like `Prod`, `Stable`, `v1.1.2`. Each environment has a built-in `latest` tag that always points to the environment’s most recent revision. Use `esc env version tag` to tag a revision. In the following example we are assign `Prod` tag to revision 3 of environment `test`.
 
 ```bash
 $ esc env version tag myorg/test@Prod 3
 ```
 
-### Using Tagged Versions 
+### Using Tagged Versions
 
 Once you tag a revision, you can use the tag to [open](/docs/esc/environments/#opening-an-environment) a specific environment version.
 
@@ -636,20 +635,20 @@ Once you tag a revision, you can use the tag to [open](/docs/esc/environments/#o
 $ esc open myorg/test@Prod
 ```
 
-You can specify the tagged version when importing the environment. This helps you ensure that you are importing a stable environment version that is not affected by changes. 
+You can specify the tagged version when importing the environment. This helps you ensure that you are importing a stable environment version that is not affected by changes.
 
 ```yaml
 # Importing in another ESC Environment
 imports:
   - test@Prod
 
-# Importing in Pulumi stack Config 
+# Importing in Pulumi stack Config
 # Pulumi.dev.yaml
 environment:
   - test@Prod
 ```
 
-You can find more commands and options in the [ESC CLI documentation](/docs/esc-cli/). 
+You can find more commands and options in the [ESC CLI documentation](/docs/esc-cli/).
 
 ## Precedence rules
 
