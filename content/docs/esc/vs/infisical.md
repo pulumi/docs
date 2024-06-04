@@ -151,6 +151,4 @@ Here is a summary of the key differences between Pulumi ESC and Infiniscal:
     </tr>
 </table>
 
-Getting started with Pulumi ESC is easy. Follow our [Get Started guide](/docs/esc/get-started/) for ESC to begin. If you want to use Infisical with ESC, follow this [guide](/docs/esc/providers/vault-secrets/) to import secrets from Infisical into ESC environments.
-
 {{< get-started-esc >}}
