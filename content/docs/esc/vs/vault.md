@@ -41,7 +41,7 @@ There are a couple of fundamental differences between Vault and Pulumi ESC. Firs
 
 While there are differences and similarities between Pulumi ESC and Vault, they can actually be used together for a more powerful experience to store and manage infrastructure and application secrets. ESC environments can reference secrets stored in Vault. Through ESC, secrets in Vault can be organized as collections of secrets that can be versioned, branched, and composed inside other collections. With ESC, non-secret configuration can be stored alongside secrets in Vault. ESC enhances Vault, and they work better together.
 
-Here is a summary of the key differences between Pulumi and Terraform:
+Here is a summary of the key differences between Pulumi ESC and HashiCorp Vault:
 
 <table>
     <tr>
@@ -82,7 +82,7 @@ Here is a summary of the key differences between Pulumi and Terraform:
     </tr>
     <tr>
         <td>CLI</td>
-        <td>ESC provides a CLI that supports injecting application secrets as environment variables and modifying secrets. All commands in the `esc` CLI are also available in the `pulumi` CLI.</td>
+        <td>ESC provides a CLI that supports injecting application secrets as environment variables and modifying secrets. All commands in the <code>esc</code> CLI are also available in the <code>pulumi</code> CLI.</td>
         <td>Limited, Vault has a CLI but lacks the capabilities of injecting secrets as environment variables. The CLI is for modifying secrets. </td>
     </tr>
     <tr>
@@ -140,7 +140,7 @@ Here is a summary of the key differences between Pulumi and Terraform:
     </tr>
     <tr>
         <td>Encrypted Secrets Storage</td>
-        <td>Yes</td>
+        <td>Yes, ESC uses an unique encryption key per environment. All secrets are stored encrypted at rest. </td>
         <td>Yes, Vault uses a security barrier for all requests made to the backend. The security barrier automatically encrypts all data leaving Vault using a 256-bit Advanced Encryption Standard (AES) cipher in the Galois Counter Mode (GCM) with 96-bit nonces.</td>
     </tr>
     <tr>
@@ -150,11 +150,14 @@ Here is a summary of the key differences between Pulumi and Terraform:
     </tr>
     <tr>
         <td>Dynamically generate cloud provider credentials</td>
-        <td>Yes</td>
-        <td>Limited</td>
+        <td>Yes, no root account keys are used to configure dynamic credentials. Available for AWS, Azure, and Google Cloud.</td>
+        <td>Limited, requires the usage of root account keys. Only available for AWS.</td>
+    </tr>
+    <tr>
+        <td>OIDC provider</td>
+        <td>Yes, Pulumi Cloud can be used as an OIDC provider from the Pulumi SDK, CLI, UI, and <code>pulumi-service</code> provider.</td>
+        <td>Limited, configuring Vault as an OIDC provider is only available from the CLI</td>
     </tr>
 </table>
 
 Getting started with Pulumi ESC is easy. Follow our [Get Started guide](/docs/esc/get-started/) for ESC to begin. If you want to use Vault with ESC, follow this [guide](/docs/esc/providers/vault-secrets/) to import secrets from vault into ESC environments.
-
-{{< get-started >}}

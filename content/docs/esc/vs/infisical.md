@@ -1,14 +1,14 @@
 ---
-title_tag: "Pulumi ESC vs HashiCorp Vault"
-meta_desc: Learn about the major differences between Pulumi ESC and HashiCorp Vault.
-title: Pulumi ESC vs HashiCorp Vault
-h1: Pulumi ESC vs HashiCorp Vault
+title_tag: "Pulumi ESC vs Infisical"
+meta_desc: Learn about the major differences between Pulumi ESC and Infisical.
+title: Pulumi ESC vs Infisical
+h1: Pulumi ESC vs Infisical
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     pulumiesc:
-        identifier: vault
+        identifier: infisical
         parent: esc-vs
-        weight: 1
+        weight: 2
 aliases:
 ---
 
@@ -23,25 +23,21 @@ aliases:
     }
 </style>
 
-Choosing the right [secrets management](/what-is/what-is-secrets-management/) tool is important, and we want you to have as much information as possible to make the choice that best suits your needs. We’ve created this document to help you understand how Pulumi ESC compares with HashiCorp Vault, and how ESC and Vault can be used together.
+Choosing the right [secrets management](/what-is/what-is-secrets-management/) tool is important, and we want you to have as much information as possible to make the choice that best suits your needs. We’ve created this document to help you understand how Pulumi ESC compares with Infisical.
 
-## What is HashiCorp Vault?
+## What is Infisical?
 
-HashiCorp Vault is a secrets management tool that provides a centralized platform for managing and controlling access to secrets. It supports dynamic secret generation, encryption as a service, and comprehensive access policies.
+Infisical is a secrets management tool that provides a centralized platform for managing and controlling access to secrets. It supports dynamic secret generation, encryption as a service, and comprehensive access policies.
 
-## Pulumi ESC vs. Vault: Similarities {#similarities}
+## Pulumi ESC vs. Infisical: Similarities {#similarities}
 
-Like Vault, Pulumi ESC is a secrets manager for cloud applications and infrastructure. In both ESC and Vault, secrets can be stored and accessed through a CLI, SDK, or editor interface. Granular access controls can be implemented across all secrets.
+Like Infisical, Pulumi ESC is a secrets manager for cloud applications and infrastructure. In both ESC and Infisical, secrets can be stored and accessed through a CLI, SDK, or editor interface. Granular access controls can be implemented across all secrets.
 
-## Pulumi ESC vs. Vault: Key Differences {#differences}
+## Pulumi ESC vs. Infisical: Key Differences {#differences}
 
-There are a couple of fundamental differences between Vault and Pulumi ESC. First, ESC and Vault differ in that Vault is not open source, using the Business Source License model. In contrast, ESC is fully open source and Apache 2.0 licensed. Second, Vault only stores secrets, whereas ESC stores environments, secrets, and configurations. Third, ESC provides composability of collections of secrets and configuration. Environments can be composed together from multiple other environments, enabling easy inheritance of shared configuration.
+There are a couple of fundamental differences between Infisical and Pulumi ESC. First, ESC and Infisical differ in that Infisical can only add and manage secrets stored in Infiniscal.  ESC supports pulling and centralizing the management of secrets from most secrets managers. Second, Infisical only stores secrets, whereas ESC stores environments, secrets, and configurations. Third, Infiniscal can only store static secrets while ESC can dynamically generate cloud provider credentials for AWS, Azure, and Google Cloud. Fourth, Infiniscal has limited composablity in its environments while ESC has full hierarchical inheritance between its environments.
 
-## Pulumi ESC and Vault:  Better Together
-
-While there are differences and similarities between Pulumi ESC and Vault, they can actually be used together for a more powerful experience to store and manage infrastructure and application secrets. ESC environments can reference secrets stored in Vault. Through ESC, secrets in Vault can be organized as collections of secrets that can be versioned, branched, and composed inside other collections. With ESC, non-secret configuration can be stored alongside secrets in Vault. ESC enhances Vault, and they work better together.
-
-Here is a summary of the key differences between Pulumi and Terraform:
+Here is a summary of the key differences between Pulumi ESC and Infiniscal:
 
 <table>
     <tr>
@@ -55,7 +51,7 @@ Here is a summary of the key differences between Pulumi and Terraform:
     <tr>
         <td>OSS License</td>
         <td>Yes, Apache License 2.0</td>
-        <td>No, Business Source License 1.1</td>
+        <td>Yes, non-standard license</td>
     </tr>
     <tr>
         <td>Hosting/management</td>
@@ -70,7 +66,7 @@ Here is a summary of the key differences between Pulumi and Terraform:
     <tr>
         <td>Open Ecosystem</td>
         <td>Yes, ESC supports pulling and centralizing the management of secrets from 1Password, AWS OIDC, AWS Secrets Manager, Azure OIDC, Azure Key Vault, Google Cloud OIDC, Google Cloud Secrets Manager, Pulumi stacks, Vault OIDC, and Vault.</td>
-        <td>No, can only store and manage secrets store in Vault</td>
+        <td>No, can only store and manage secrets stored in Infisical</td>
     </tr>
     <tr>
         <th colspan=3>Developer Experience</th>
@@ -78,12 +74,12 @@ Here is a summary of the key differences between Pulumi and Terraform:
     <tr>
         <td>Flexible editor</td>
         <td>YAML editor with auto completion, hover documentation, and as-you-type error checking</td>
-        <td>JSON editor</td>
+        <td>GUI editor without YAML support</td>
     </tr>
     <tr>
         <td>CLI</td>
-        <td>ESC provides a CLI that supports injecting application secrets as environment variables and modifying secrets. All commands in the `esc` CLI are also available in the `pulumi` CLI.</td>
-        <td>Limited, Vault has a CLI but lacks the capabilities of injecting secrets as environment variables. The CLI is for modifying secrets. </td>
+        <td>ESC provides a CLI that supports injecting application secrets as environment variables and modifying secrets. All commands in the <code>esc</code> CLI are also available in the <code>pulumi</code> CLI.</td>
+        <td>Yes</td>
     </tr>
     <tr>
         <td>Client SDKs</td>
@@ -96,39 +92,34 @@ Here is a summary of the key differences between Pulumi and Terraform:
         <td>No</td>
     </tr>
     <tr>
-        <td>Ability to see existing secrets</td>
-        <td>Yes</td>
-        <td>No</td>
-    </tr>
-    <tr>
         <td>Secret referencing</td>
         <td>Yes, environments can import secrets from another environment. Secrets updated from the referenced environment will automatically propagate to downstream environments</td>
-        <td>No</td>
+        <td>Yes</td>
     </tr>
     <tr>
         <td>Interpolate values from other values</td>
         <td>Yes, users can construct new dynamic values through string interpolation</td>
-        <td>No</td>
+        <td>Yes</td>
     </tr>
     <tr>
         <td>Composability</td>
         <td>Yes, ESC enables environments that are composed of multiple environments</td>
-        <td>No, Vault users have to create the structure themselves</td>
+        <td>Limited, can reference singular secrets from other environments, but can not hierarchically inherit entire environments.</td>
     </tr>
     <tr>
         <td>Branching / Personal configs</td>
         <td>Yes, users can fork environments for testing without rewriting entire environments</td>
-        <td>No</td>
+        <td>Yes</td>
     </tr>
     <tr>
         <td>Versioning</td>
         <td>Yes, ESC enables entire environments (sets of secrets and configuration) to be versioned. Stacks can be pinned to specific environment versions for quick rollbacks</td>
-        <td>Limited, secrets are individually versioned</td>
+        <td>Yes</td>
     </tr>
     <tr>
         <td>Compare secrets across environment</td>
         <td>No</td>
-        <td>No</td>
+        <td>Yes</td>
     </tr>
     <tr>
         <th colspan=3>Security and Compliance</th>
@@ -140,8 +131,8 @@ Here is a summary of the key differences between Pulumi and Terraform:
     </tr>
     <tr>
         <td>Encrypted Secrets Storage</td>
-        <td>Yes</td>
-        <td>Yes, Vault uses a security barrier for all requests made to the backend. The security barrier automatically encrypts all data leaving Vault using a 256-bit Advanced Encryption Standard (AES) cipher in the Galois Counter Mode (GCM) with 96-bit nonces.</td>
+        <td>Yes, ESC uses an unique encryption key per environment. All secrets are stored encrypted at rest.</td>
+        <td>Yes, Infisical uses TLS for encryption in transit as well as AES256-GCM for symmetric encryption and x25519-xsalsa20-poly1305 for asymmetric encryption operations.</td>
     </tr>
     <tr>
         <td>Access controls</td>
@@ -150,11 +141,14 @@ Here is a summary of the key differences between Pulumi and Terraform:
     </tr>
     <tr>
         <td>Dynamically generate cloud provider credentials</td>
-        <td>Yes</td>
-        <td>Limited</td>
+        <td>Yes, no root account keys are used to configure dynamic credentials. Available for AWS, Azure, and Google Cloud.</td>
+        <td>No</td>
+    </tr>
+    <tr>
+        <td>OIDC provider</td>
+        <td>Yes, Pulumi Cloud can be used as an OIDC provider from the Pulumi SDK, CLI, UI, and <code>pulumi-service</code> provider.</td>
+        <td>No</td>
     </tr>
 </table>
 
-Getting started with Pulumi ESC is easy. Follow our [Get Started guide](/docs/esc/get-started/) for ESC to begin. If you want to use Vault with ESC, follow this [guide](/docs/esc/providers/vault-secrets/) to import secrets from vault into ESC environments.
-
-{{< get-started >}}
+Getting started with Pulumi ESC is easy. Follow our [Get Started guide](/docs/esc/get-started/) for ESC to begin. If you want to use Infisical with ESC, follow this [guide](/docs/esc/providers/vault-secrets/) to import secrets from Infisical into ESC environments.
