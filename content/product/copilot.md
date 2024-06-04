@@ -24,7 +24,6 @@ benefits:
         image: /images/product/pulumi-deployments-graphic.png
         alt: Pulumi Deployments Architecture Screenshot
 
-# TODO: fix examples and descriptions (fragment on compliance checks)
 options:
     title: How do I use Pulumi Copilot?
     description:
@@ -33,22 +32,22 @@ options:
           icon_color: purple
           title: Generate infrastructure code
           description: You can generate a Pulumi program and deploy it as a template in seconds with a few simple text prompts.
-          example: "Example: Create a severless application"
+          example: "Example: Create a new project to deploy a  serverless application on AWS"
         - icon: eye
           icon_color: salmon
           title: Answer questions about existing infrastructure
-          description: Copilot can access infrastructure stack and resource data, so you can You can analyze your infrastructure on cost, compliance, cloud usage
-          example: "Example: TBD"
+          description: Copilot can access infrastructure stack and resource data, so you can You can analyze your infrastructure on cost, compliance, cloud usage.
+          example: "Example:  What is my production VPC ID in us-west-2"
         - icon: shield
           icon_color: blue
           title: Run compliance checks
-          description: You can analyze and update infrastructure for
-          example: "Example: TBD"
+          description: You can analyze infrastructure for security and compliance concerns.
+          example: "Example:  We are going through an internal security audit. Can you tell me any infrastructure that is not following AWS Well-Architected standards?"
         - icon: code-window
           icon_color: fuchsia
           title: Debug failed stack updates
-          description: Copilot can access update and deployment logs of your stacks, so you can easily get answers about what caused failure.
-          example: "Example: TBD"
+          description: Copilot can access update and deployment logs of your stacks, so you can easily get answers about what caused failures.
+          example: "Example:  Why did this update fail?"
 
 # TODO: fill this out for Copilot or remove entirely
 faq:
