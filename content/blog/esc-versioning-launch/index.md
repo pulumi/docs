@@ -33,9 +33,9 @@ Pulumi ESC Versioning introduces a range of powerful features:
 
 Pulumi ESC Versioning delivers significant benefits that can transform your development process:
 
+- **Disaster Prevention**: By pinning a version during import, you can test new configurations in isolation before applying them to critical production systems. This minimizes downtime, reduces risk, and ensures business continuity, boosting confidence in deployments and supporting agile practices.
 - **Improved Auditing and Collaboration**: Easily track the complete history of your environments, including who made changes and when. This granular audit trail enhances security, ensures compliance, and promotes seamless collaboration within your team.
 - **Streamlined Development Workflows**: Similar to Docker tags, Pulumi ESC version tags provide a familiar and intuitive way to categorize and utilize specific revisions to manage different stages of your environments.
-- **Disaster Prevention**: By pinning a version during import, you can test new configurations in isolation before applying them to critical production systems. This minimizes downtime, reduces risk, and ensures business continuity, boosting confidence in deployments and supporting agile practices.
 
 {{% notes "info" %}}
 Tags and specific version imports are available on the Enterprise and Business Critical editions of Pulumi Cloud. The Team Edition offers access to the latest 5 revisions.
@@ -73,8 +73,7 @@ In your Pulumi Cloud Console,
 5. Go to the `Tags` view and copy the reference to the tag
 6. Create a new environment and import the tag
 
-<span style="color: red;">**Update Video**</span>
-{{< video title="Pulumi ESC Versioning Demo" src="" autoplay="true" loop="true" >}}
+{{< video title="Pulumi ESC Versioning Demo" src="esc-versioning-demo.mp4" autoplay="true" loop="true" >}}
 
 ## Real-world Scenarios
 Here are a few examples of how you might use these features:
@@ -82,21 +81,13 @@ Here are a few examples of how you might use these features:
 - **Global Infrastructure Update**: You need to deploy a new configuration to a global service spanning multiple regions. Tag the updated configuration as `Next` and deploy it to one region for testing. After verifying stability, you can confidently roll it out to other regions. If issues arise, quickly revert to the previous `Stable` version, ensuring resilient and minimally disruptive deployments.
 - **Platform Team Releases**: If you're a Platform team responsible for generating configurations, by tagging releases with labels like `v1.0-stable` and `v1.2-development`, you can clearly communicate which configurations are production-ready, keeping other teams informed about the ongoing development, and fostering seamless collaboration.
 - **Code Review and Debugging**: You're working in a development environment where the latest revision includes multiple recent changes, and you notice that the application is experiencing performance issues. By using the Compare Revisions Side-by-Side feature or `esc env diff`, you can quickly identify the specific changes that might be causing the problem, enabling faster troubleshooting and resolution.
-- **A/B Testing**: You can try A/B testing a new checkout flow (checkout-B) against your existing one (checkout-A). Using version tags, you can gradually roll out each to a subset of users, monitoring conversion rates. If checkout-B wins, seamlessly switch all users over with a simple environment reference update – no downtime, no disruption.
 
 These examples are just a glimpse of how Pulumi ESC’s versioning capabilities can streamline your development and deployment process. The possibilities are vast, and you can tailor your tagging strategy to fit your specific needs and operational workflows.
 
-## What’s coming in the future
-
-We're just getting started with versioning in Pulumi ESC! We have exciting plans to further enhance this feature, making it even more powerful. Here's a sneak peek at what's on the horizon:
-
-- **Contextual Comments**: Add comments to versions providing valuable context for your team.
-- **Granular Version Policies**: Enforce organizational best practices and compliance requirements by defining policies that govern how versions are created and managed.
-  
 ## Conclusion
 
-The versioning capabilities in Pulumi ESC mark a significant step towards a more developer-friendly and efficient platform for configuration and secrets management. These features provide a robust foundation for secure, reliable, and auditable deployments, whether you're rolling out infrastructure updates, conducting A/B testing, or ensuring compliance with industry regulations.
+The versioning capabilities in Pulumi ESC mark a significant step towards a more developer-friendly and efficient platform for configuration and secrets management. These features provide a robust foundation for secure, reliable, and auditable deployments, whether you're rolling out infrastructure updates or ensuring compliance with industry regulations.
 
-We're excited to see how you leverage these powerful capabilities. Your feedback is crucial in helping us shape the product to better serve your needs. We encourage you to Open new issues on our [GitHub repository](https://github.com/pulumi/esc/issues/new/choose), upvote existing [ones](https://github.com/pulumi/esc/issues), or join the conversation on our [community Slack](https://slack.pulumi.com/) channel.
+We're excited to see how you leverage these powerful capabilities. Your feedback is crucial in helping us shape the product to better serve your needs. We encourage you to open new issues on our [GitHub repository](https://github.com/pulumi/esc/issues/new/choose), upvote existing [ones](https://github.com/pulumi/esc/issues), or join the conversation on our [community Slack](https://slack.pulumi.com/) channel.
 
-Check out the docs. <span style="color: red;">*Add links*</span>
+Check out the [ESC CLI](/docs/esc-cli/) and [Versioning](/docs/esc/environments/#versioning-environments) docs. 
