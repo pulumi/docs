@@ -19,7 +19,7 @@ Pulumi stands out in the world of infrastructure-as-code (IaC) for its flexibili
 
 <!--more-->
 
-In Pulumi, you describe your infrastructure in code – real code, not a [DSL][dsl-wiki] or [YAML][yaml-wiki] – using your preferred general purpose programming language You don't have to become a specialist in a niche proprietary declarative language, like Terraform's HCL. Rather, you can reuse your existing programming skills, writing in standard imperative, object-oriented, and even functional language styles, while still gaining all of the benefits of the declarative style that other tools emphasize.
+In Pulumi, you describe your infrastructure in code – real code, not a [DSL][dsl-wiki] or [YAML][yaml-wiki] – using your preferred general purpose programming language You don't have to become a specialist in a niche proprietary declarative language, like Terraform's HCL. Rather, you can reuse your existing programming skills, writing in standard imperative, object-oriented, and even [functional language][f-sharp-example] styles, while still gaining all of the benefits of the declarative style that other tools emphasize.
 
 Pulumi provides a unique mix of a [declarative model][pulumi-declarative-imperative-docs] embedded and implemented inside of a standard programming language, allowing all the flexibility of custom imperative code, while still enabling Pulumi's [deployment engine][pulumi-engine-docs] to infer opportunities for parallel asynchronous execution and to converge a partially-realized system.
 
@@ -151,6 +151,7 @@ While Pulumi's asynchronous semantics may seem somewhat complex for basic use ca
 
 [dsl-wiki]: https://en.wikipedia.org/wiki/Domain-specific_language
 [yaml-wiki]: https://en.wikipedia.org/wiki/YAML
+[fsharp-example]: https://github.com/pulumi/examples/blob/master/aws-fs-s3-folder/Program.fs
 [pulumi-static-website-example]: https://www.pulumi.com/registry/packages/aws/how-to-guides/s3-website/
 [pulumi-declarative-imperative-docs]: https://www.pulumi.com/docs/concepts/how-pulumi-works/#declarative-and-imperative-approach
 [pulumi-program-docs]: https://www.pulumi.com/docs/concepts/glossary/#program
