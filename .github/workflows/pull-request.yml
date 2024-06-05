@@ -4,6 +4,7 @@ on:
     branches:
       - master
       - 06/12-content
+      - 06/11-docs
 permissions:
       id-token: write   # This is required for requesting the JWT
       contents: read    # This is required for actions/checkout
