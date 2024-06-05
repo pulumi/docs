@@ -1,7 +1,7 @@
 ---
 title: "Introducing Pulumi ESC Support in Automation API and the Pulumi Service Provider"
 allow_long_title: true
-date: 2024-06-05T00:00:00-07:02
+date: 2024-06-05T00:00:00-05:00
 draft: false
 meta_desc: "The new enhancements to Pulumi ESC Editor streamlines the authoring experience of environments for developers"
 meta_image: "meta.png"
@@ -36,7 +36,7 @@ Here's a glimpse of what you can achieve:
 
 Bringing Pulumi ESC Environments support into the Pulumi Service Provider empowers you to manage your entire infrastructure and application landscape through a unified approach.
 
-Pulumi Service Provider ESC capabilities are available for Typescript, Go, Python, C#, Java, and YAML. See our [Environment](registry/packages/pulumiservice/api-docs/environment/), [Environment Version Tag](/registry/packages/pulumiservice/api-docs/environmentversiontag/) and [Environment Permissions](registry/packages/pulumiservice/api-docs/teamenvironmentpermission/) Pulumi Service Provider docs. Here are examples of creating environments in Typescript, Go, and Python:
+Pulumi Service Provider ESC capabilities are available for Typescript/Javascript, Go, Python, C#, Java, and YAML. See our [Environment](registry/packages/pulumiservice/api-docs/environment/), [Environment Version Tag](/registry/packages/pulumiservice/api-docs/environmentversiontag/) and [Environment Permissions](registry/packages/pulumiservice/api-docs/teamenvironmentpermission/) Pulumi Service Provider docs. Here are examples of creating environments in Typescript/Javascript, Go, and Python:
 
 {{< chooser language "typescript,python,go" />}}
 
@@ -127,7 +127,7 @@ The new Automation API methods for ESC include:
 
 These additions provide the building blocks for advanced automation scenarios such as dynamically configuring applications based on environments, managing environment dependencies, and integrating ESC into CI/CD pipelines.
 
-Pulumi ESC Automation API capabilities are available for [Typescript](/docs/reference/pkg/nodejs/pulumi/pulumi/classes/automation.Stack.html#addEnvironments), [Go](https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3@v3.117.0/go/auto#LocalWorkspace.AddEnvironments), and [Python](/docs/reference/pkg/python/pulumi/#pulumi.automation.LocalWorkspace.add_environments). Here are some examples:
+Pulumi ESC Automation API capabilities are available for [Typescript/Javascript](/docs/reference/pkg/nodejs/pulumi/pulumi/classes/automation.Stack.html#addEnvironments), [Go](https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3@v3.117.0/go/auto#LocalWorkspace.AddEnvironments), and [Python](/docs/reference/pkg/python/pulumi/#pulumi.automation.LocalWorkspace.add_environments). Here are some examples:
 
 {{< chooser language "typescript,python,go" />}}
 
@@ -313,4 +313,4 @@ These powerful new features are available now! We're excited to see how you leve
 To learn more and start leveraging the enhanced capabilities of Pulumi ESC check out the following resources:
 
 - Pulumi Service Provider for ESC [Environment](registry/packages/pulumiservice/api-docs/environment/), [Environment Version Tag](/registry/packages/pulumiservice/api-docs/environmentversiontag/), and [Environment Permissions](registry/packages/pulumiservice/api-docs/teamenvironmentpermission/)
-- Pulumi ESC Automation API in [Node](/docs/reference/pkg/nodejs/pulumi/pulumi/classes/automation.Stack.html#addEnvironments), [Go](https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3@v3.117.0/go/auto#LocalWorkspace.AddEnvironments), [Python](docs/reference/pkg/python/pulumi/#pulumi.automation.LocalWorkspace.add_environments)
+- Pulumi ESC Automation API in [Typescript/Javascript](/docs/reference/pkg/nodejs/pulumi/pulumi/classes/automation.Stack.html#addEnvironments), [Go](https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3@v3.117.0/go/auto#LocalWorkspace.AddEnvironments), [Python](docs/reference/pkg/python/pulumi/#pulumi.automation.LocalWorkspace.add_environments)
