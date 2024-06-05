@@ -145,7 +145,7 @@ pulumi.export('bucket_name', bucket.id.apply(lambda data: base64_encode))
 
 {{% /choosable %}}
 
-Our example shows how to do Base64 encoding, but this technique can be used for any kind of [transformation function][data-transformation-wiki]. These can be as elaborate as your use case requires, and leverage the full power of your [programming language and its entire ecosystem][next-level-iac-package-ecosystems]. Doing custom transformations like this in other popular tools, is often not possible. This leave you stuck using external coordination (e.g. gluing things together with Bash scripts) which breaks the declarative model and interrupts the deployment engine's ability to fully understand your infrastructure's dependency graph.
+Our example shows how to do Base64 encoding, but this technique can be used for any kind of [transformation function][data-transformation-wiki]. These can be as elaborate as your use case requires, and leverage the full power of your [programming language and its entire ecosystem][next-level-iac-package-ecosystems]. Doing custom transformations like this in other popular tools is often not possible. This leaves you stuck using external coordination (e.g. gluing things together with Bash scripts) which breaks their declarative-only model (because you cannot describe everything you need to do in it) and interrupts these tools' ability to fully understand your infrastructure's dependency graph.
 
 While Pulumi's asynchronous semantics may seem somewhat complex for basic use cases, they unlock abilities in more complex use cases, which is when you really need your IaC tooling to show up for you. Because real life is never as simple as demo code.
 
