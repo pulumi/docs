@@ -64,6 +64,7 @@ The `Makefile` exposes a number of useful helpers for authoring:
 * `make generate` builds the TypeScript, Python, and Pulumi CLI documentation
 * `make new-blog-post` scaffolds a new, bare-bones blog post with placeholder content
 * `make new-example-program` generates a new multi-language set of examples at `./static/programs`
+* `make deploy-dev-stack` runs a build, deploys to S3, runs the tests, and deploys to the selected dev stack
 
 As a content contributor, the commands you'll use most often are these:
 
