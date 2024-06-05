@@ -36,7 +36,7 @@ Here's a glimpse of what you can achieve:
 
 Bringing Pulumi ESC Environments support into the Pulumi Service Provider empowers you to manage your entire infrastructure and application landscape through a unified approach.
 
-Pulumi Service Provider ESC capabilities are available for Typescript, Go, Python, C#, Java, and YAML. See our [Environment](registry/packages/pulumiservice/api-docs/environment/) and [Environment Permissions](registry/packages/pulumiservice/api-docs/teamenvironmentpermission/) Pulumi Service Provider docs. Here are examples of creating environments in Typescript, Go, and Python:
+Pulumi Service Provider ESC capabilities are available for Typescript, Go, Python, C#, Java, and YAML. See our [Environment](registry/packages/pulumiservice/api-docs/environment/), [Environment Version Tag](/registry/packages/pulumiservice/api-docs/environmentversiontag/) and [Environment Permissions](registry/packages/pulumiservice/api-docs/teamenvironmentpermission/) Pulumi Service Provider docs. Here are examples of creating environments in Typescript, Go, and Python:
 
 {{< chooser language "typescript,python,go" />}}
 
@@ -50,9 +50,9 @@ var environment = new service.Environment("testing-environment", {
   organization: "service-provider-test-org",
   name: "testing-environment-ts",
   yaml: new pulumi.asset.StringAsset(
-`values:
-  myKey1: "myValue1"
-  myNestedKey:
+    `values:
+    myKey1: "myValue1"
+    myNestedKey:
     myKey2: "myValue2"
     myNumber: 1`
   )
@@ -301,7 +301,7 @@ func main() {
 
 We have exciting plans to further enhance these capabilities. Here's a sneak peek at what's on the horizon:
 
-- **Pulumi service Provider**: Capabilities to Open, Read, and List any Environment versions and version tags
+- **Pulumi service Provider**: Capabilities to Open, Read, and List any environment versions and version tags
 - **Automation API**: Capabilities to author new environments, and assign version tags
 
 Need more features or want to share feedback? We encourage you to open new issues on our [GitHub repository](https://github.com/pulumi/esc/issues/new/choose) or upvote existing [ones](https://github.com/pulumi/esc/issues).
@@ -312,5 +312,5 @@ These powerful new features are available now! We're excited to see how you leve
 
 To learn more and start leveraging the enhanced capabilities of Pulumi ESC check out the following resources:
 
-- Pulumi Service Provider for ESC [Environment](registry/packages/pulumiservice/api-docs/environment/) and [Environment Permissions](registry/packages/pulumiservice/api-docs/teamenvironmentpermission/)
+- Pulumi Service Provider for ESC [Environment](registry/packages/pulumiservice/api-docs/environment/), [Environment Version Tag](/registry/packages/pulumiservice/api-docs/environmentversiontag/), and [Environment Permissions](registry/packages/pulumiservice/api-docs/teamenvironmentpermission/)
 - Pulumi ESC Automation API in [Node](/docs/reference/pkg/nodejs/pulumi/pulumi/classes/automation.Stack.html#addEnvironments), [Go](https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3@v3.117.0/go/auto#LocalWorkspace.AddEnvironments), [Python](docs/reference/pkg/python/pulumi/#pulumi.automation.LocalWorkspace.add_environments)
