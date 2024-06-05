@@ -621,10 +621,10 @@ $ esc env diff myorg/test@3 myorg/test@2
 
 ### Tagging Versions
 
-You can tag your revisions with meaningful names like `Prod`, `Stable`, `v1.1.2`. Each environment has a built-in `latest` tag that always points to the environment’s most recent revision. Use `esc env version tag` to tag a revision. In the following example we are assign `Prod` tag to revision 3 of environment `test`.
+You can tag your revisions with meaningful names like `prod`, `stable`, `v1.1.2`. Each environment has a built-in `latest` tag that always points to the environment’s most recent revision. Use `esc env version tag` to tag a revision. In the following example we are assign `prod` tag to revision 3 of environment `test`.
 
 ```bash
-$ esc env version tag myorg/test@Prod @3
+$ esc env version tag myorg/test@prod @3
 ```
 
 ### Using Tagged Versions
@@ -632,7 +632,7 @@ $ esc env version tag myorg/test@Prod @3
 Once you tag a revision, you can use the tag to [open](/docs/esc/environments/#opening-an-environment) a specific environment version.
 
 ```bash
-$ esc open myorg/test@Prod
+$ esc open myorg/test@prod
 ```
 
 You can specify the tagged version when importing the environment. This helps you ensure that you are importing a stable environment version that is not affected by changes.
@@ -640,12 +640,12 @@ You can specify the tagged version when importing the environment. This helps yo
 ```yaml
 # Importing in another ESC Environment
 imports:
-  - test@Prod
+  - test@prod
 
 # Importing in Pulumi stack Config
 # Pulumi.dev.yaml
 environment:
-  - test@Prod
+  - test@prod
 ```
 
 You can find more commands and options in the [ESC CLI documentation](/docs/esc-cli/).
