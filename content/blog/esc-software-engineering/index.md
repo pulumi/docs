@@ -24,11 +24,11 @@ Today, we are excited to announce the most significant collection of Pulumi ESC 
 
 <!--more-->
 
-* __Versioning__:  Pulumi ESC now supports versioning of environments, allowing you to see and audit every change to the secrets and configuration for an environment, pin references to an environment to a specific version or version tag, and safely roll back an environment to a previous version.
+* [__Versioning__](/blog/esc-versioning-launch):  Pulumi ESC now supports versioning of environments, allowing you to see and audit every change to the secrets and configuration for an environment, pin references to an environment to a specific version or version tag, and safely roll back an environment to a previous version.
 
-* __SDKs__: Pulumi ESC now has SDKs available for Python, TypeScript/JavaScript and Go, enabling ESC to be used directly within applications, tools and services to retrieve and manage secrets and configuration values at runtime.
+* [__SDKs__](/blog/esc-sdk-launch): Pulumi ESC now has SDKs available for Python, TypeScript/JavaScript and Go, enabling ESC to be used directly within applications, tools and services to retrieve and manage secrets and configuration values at runtime.
 
-* __Environments as Code with IaC__: New support for defining and managing Pulumi ESC environments, secrets, and configuration from within Pulumi IaC programs allows source-controlled environment specification and managing secrets and configuration lifecycles via code.
+* [__Environments as Code with IaC__](/blog/esc-automation-api-pulumi-service-provider-launch): New support for defining and managing Pulumi ESC environments, secrets, and configuration from within Pulumi IaC programs allows source-controlled environment specification and managing secrets and configuration lifecycles via code.
 
 All three of these new features double down on Pulumi ESC’s unique approach to secrets and configuration management, which combines a hierarchical and composable approach to defining environments, integration with a wide variety of existing secrets stores and a wide variety of secrets consumers, and a rich configuration-as-code approach. 
 
@@ -63,7 +63,7 @@ And then see the diff between any two versions of an environment:
 
 Revisions can also be tagged to provide semantically meaningful names to specific revisions.  These tags can be moved later on to point to new versions when you are ready to roll them out to consumers.  The latest tag automatically always points to the latest revision.
 
-![Renvironment tags in Pulumi Console](./tags.png)
+![Environment Tags in Pulumi Console](./tags.png)
 
 Most importantly though, you can also then refer to a specific version of an environment anywhere you reference one.
 
