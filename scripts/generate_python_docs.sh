@@ -6,6 +6,7 @@ set -x
 PACKAGES=(
   "pulumi"
   "pulumi_policy"
+  "pulumi_esc_sdk"
   "pulumi_terraform"
 )
 
