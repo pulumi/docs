@@ -588,9 +588,9 @@ Stacks may only read from environments that belong to the same Pulumi organizati
 
 ### With Automation API
 
-You can use ESC with [Automation API](/docs/using-pulumi/automation-api/) in [Node](/docs/reference/pkg/nodejs/pulumi/pulumi/classes/automation.Stack.html#addEnvironments), [Go](https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3@v3.117.0/go/auto#LocalWorkspace.AddEnvironments), and [Python](docs/reference/pkg/python/pulumi/#pulumi.automation.LocalWorkspace.add_environments). Following methods are supported today:
+You can use ESC with [Automation API](/docs/using-pulumi/automation-api/) in [Node](/docs/reference/pkg/nodejs/pulumi/pulumi/classes/automation.Stack.html#addEnvironments), [Go](https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3@v3.117.0/go/auto#LocalWorkspace.AddEnvironments), and [Python](docs/reference/pkg/python/pulumi/#pulumi.automation.LocalWorkspace.add_environments). The following methods are supported today:
 
-* `addEnvironments(...)`: Append environments in order to your Pulumi stack's [import](/docs/esc/environments/#using-environments-with-pulumi-iac) list.
+* `addEnvironments(...)`: Append environments to your Pulumi stack's [import](/docs/esc/environments/#using-environments-with-pulumi-iac) list.
 * `listEnvironments()`: Retrieve a list of environments currently imported into your stack.
 * `removeEnvironment(environment)`: Remove a specific environment from your stack's import list.
 
@@ -624,7 +624,7 @@ $ esc env diff myorg/test@3 myorg/test@2
 You can tag your revisions with meaningful names like `Prod`, `Stable`, `v1.1.2`. Each environment has a built-in `latest` tag that always points to the environment’s most recent revision. Use `esc env version tag` to tag a revision. In the following example we are assign `Prod` tag to revision 3 of environment `test`.
 
 ```bash
-$ esc env version tag myorg/test@Prod 3
+$ esc env version tag myorg/test@Prod @3
 ```
 
 ### Using Tagged Versions
