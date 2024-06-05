@@ -14,7 +14,7 @@ tags:
   - features
 ---
 
-Since the launch of [Pulumi Environments, Secrets and Configuration]((/product/esc)) (ESC), our developer-first configuration and secrets management platform, we've seen exponential growth in usage. Customers have used it to simplify their secrets and configuration management by organizing them into composable collections called 'environments'. Today, we are thrilled to introduce a comprehensive suite of versioning features, giving you unprecedented control and confidence in managing your environments.
+Since the launch of [Pulumi Environments, Secrets and Configuration](/product/esc) (ESC), our developer-first configuration and secrets management platform, we've seen exponential growth in usage. Customers have used it to simplify their secrets and configuration management by organizing them into composable collections called 'environments'. Today, we are thrilled to introduce a comprehensive suite of versioning features, giving you unprecedented control and confidence in managing your environments.
 
 <!--more-->
 
@@ -24,8 +24,8 @@ Pulumi ESC Versioning introduces a range of powerful features:
 
 - **Immutable Revision History**: Every time you save an environment, a new, immutable revision is created, preserving a complete and tamper-proof history of your changes.
 - **Compare Revisions Side-by-Side**: Gain a clear understanding of changes between revisions with our detailed side-by-side comparison view. This helps identify differences, troubleshoot issues, and ensure smooth transitions between versions.
-- **Tag Revisions**: Assign meaningful names to specific revisions, enabling you to easily manage and deploy different versions of your environments. You can use tags like `Production`, `v1.2.1`, `Stable`, `Pre-release`, and `In-development` to clearly communicate the purpose or stage of each version. Each environment has a built-in `latest` tag that always points to the environment’s most recent revision.
-- **Import Specific Versions**: Precisely control which version of an environment is imported, either by specifying a tag (e.g., `environmentA@PROD`) or using a specific revision number (e.g., `environmentB@2`). This method also applies when [importing environments](/docs/esc/environments/#importing-other-environments) via [Pulumi Stack Config](/docs/esc/environments/#importing-other-environments) or via other environments, to effectively 'pin' the desired version. 
+- **Tag Revisions**: Assign meaningful names to specific revisions, enabling you to easily manage and deploy different versions of your environments. You can use tags like `production`, `v1.2.1`, `stable`, `pre-release`, and `in-development` to clearly communicate the purpose or stage of each version. Each environment has a built-in `latest` tag that always points to the environment’s most recent revision.
+- **Import Specific Versions**: Precisely control which version of an environment is imported, either by specifying a tag (e.g., `environmentA@prod`) or using a specific revision number (e.g., `environmentB@2`). This method also applies when [importing environments](/docs/esc/environments/#importing-other-environments) via [Pulumi Stack Config](/docs/esc/environments/#using-environments-with-pulumi-iac) or via other environments, to effectively 'pin' the desired version. 
 - **Rollback to a Specific Version**: Quickly revert your environment to a previous state by rolling back to a specific version or revision. This provides a safety net for deployments and makes it easy to undo unwanted changes.
 - **Retract a Revision**: Quickly remove a revision from your history – crucial for situations like accidentally exposing a secret in plaintext.
 
@@ -78,7 +78,7 @@ In your Pulumi Cloud Console,
 ## Real-world Scenarios
 Here are a few examples of how you might use these features:
 
-- **Global Infrastructure Update**: You need to deploy a new configuration to a global service spanning multiple regions. Tag the updated configuration as `Next` and deploy it to one region for testing. After verifying stability, you can confidently roll it out to other regions. If issues arise, quickly revert to the previous `Stable` version, ensuring resilient and minimally disruptive deployments.
+- **Global Infrastructure Update**: You need to deploy a new configuration to a global service spanning multiple regions. Tag the updated configuration as `next` and deploy it to one region for testing. After verifying stability, you can confidently roll it out to other regions. If issues arise, quickly revert to the previous `stable` version, ensuring resilient and minimally disruptive deployments.
 - **Platform Team Releases**: If you're a Platform team responsible for generating configurations, by tagging releases with labels like `v1.0-stable` and `v1.2-development`, you can clearly communicate which configurations are production-ready, keeping other teams informed about the ongoing development, and fostering seamless collaboration.
 - **Code Review and Debugging**: You're working in a development environment where the latest revision includes multiple recent changes, and you notice that the application is experiencing performance issues. By using the Compare Revisions Side-by-Side feature or `esc env diff`, you can quickly identify the specific changes that might be causing the problem, enabling faster troubleshooting and resolution.
 
