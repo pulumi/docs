@@ -43,9 +43,9 @@ The following language runtimes are currently supported in Pulumi ESC. Select on
             <img class="h-12 mx-auto inline" src="/logos/tech/go.svg" alt="Go">
         </a>
     </div>
-    
+</div>
 
-If your favorite language isn't listed, open a new issue on our [GitHub repository](https://github.com/pulumi/esc/issues/new/choose).
+If your favorite language isn't listed, open a new issue on our [GitHub repository](https://github.com/pulumi/esc-sdk/issues/new/choose).
 
 For further questions, [contact us](/docs/support/troubleshooting#contact-us) and let us
 know what you're looking for.
