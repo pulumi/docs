@@ -34,7 +34,7 @@ Pulumi ESC Versioning introduces a range of powerful features:
 Pulumi ESC Versioning delivers significant benefits that can transform your development process:
 
 - **Improved Auditing and Collaboration**: Easily track the complete history of your environments, including who made changes and when. This granular audit trail enhances security, ensures compliance, and promotes seamless collaboration within your team.
-- **Streamlined Development Workflows**: Similar to Docker tags, Pulumi ESC version tags provide a familiar and intuitive way  to categorize and utilize specific revisions to manage different stages of your environments.
+- **Streamlined Development Workflows**: Similar to Docker tags, Pulumi ESC version tags provide a familiar and intuitive way to categorize and utilize specific revisions to manage different stages of your environments.
 - **Disaster Prevention**: By pinning a version during import, you can test new configurations in isolation before applying them to critical production systems. This minimizes downtime, reduces risk, and ensures business continuity, boosting confidence in deployments and supporting agile practices.
 
 {{% notes "info" %}}
@@ -43,7 +43,7 @@ Tags and specific version imports are available on the Enterprise and Business C
 
 ## How to Get Started
 
-Ready to start using versioning and import version pinning in Pulumi ESC? Here's how you can get started using the CLI or the Console:
+Ready to start using versioning in Pulumi ESC? Here's how you can get started using the CLI or the Console:
 
 ### Using the CLI
 
@@ -51,7 +51,7 @@ Make sure you have the latest [ESC CLI](/docs/install/esc/) installed before you
 
 1. Run `esc env edit <environment-name>` to edit an environment
 2. Run `esc env version history <environment-name>` to view all revision history
-3. Run `esc env diff <environment-name>[@<version>] <environment-name>[@<version>]` to compare changes between versions
+3. Run `esc env diff <environment-name>[@<version>] [[<environment-name>]@<version>]` to compare changes between versions
 4. Run `esc env version tag <environment-name>@<tag>` to assign a tag to the latest revision
 5.  Create a new environment using `esc env init <new-environment-name>` and import the previously edited environment using this syntax:
 ```yaml
@@ -60,18 +60,18 @@ imports:
 ```
 6. Run `esc open <new-environment-name>` to open and confirm that you have imported the right environment version
 
-Check out Pulumi [ESC CLI documentation](/docs/esc-cli/) for more details on available options and commands.
+Check out the [ESC CLI documentation](/docs/esc-cli/) for more details on available options and commands.
 
 ### Using the Console
 
 In your Pulumi Cloud Console,
 
-1. Open an environment, make a change, and ‘save’
-2. Go to the `Versions` Tab and select `Revision History` view to sell the history of changes made to the environment
-3. Click on a revision to see its details or see the differences between revisions using 'compare revisions'
+1. Open an environment, make a change, and click `Save`
+2. Go to the `Versions` Tab and select `Revision History` view to see the history of changes made to the environment
+3. Click on a revision to see its details or view the differences between revisions using `compare revisions`
 4. Add a tag to a revision by clicking on the Actions menu
-5. Go to ‘Tags’ view and copy the reference to the revision
-6. Create a new environment and import that environment revision using that tag
+5. Go to the `Tags` view and copy the reference to the tag
+6. Create a new environment and import the tag
 
 <span style="color: red;">**Update Video**</span>
 {{< video title="Pulumi ESC Versioning Demo" src="" autoplay="true" loop="true" >}}
@@ -81,7 +81,7 @@ Here are a few examples of how you might use these features:
 
 - **Global Infrastructure Update**: You need to deploy a new configuration to a global service spanning multiple regions. Tag the updated configuration as `Next` and deploy it to one region for testing. After verifying stability, you can confidently roll it out to other regions. If issues arise, quickly revert to the previous `Stable` version, ensuring resilient and minimally disruptive deployments.
 - **Platform Team Releases**: If you're a Platform team responsible for generating configurations, by tagging releases with labels like `v1.0-stable` and `v1.2-development`, you can clearly communicate which configurations are production-ready, keeping other teams informed about the ongoing development, and fostering seamless collaboration.
-- **Code Review and Debugging**: You're working in a development environment where the latest revision includes multiple recent changes, and you notice that the application is experiencing performance issues. By using the Compare Revisions Side-by-Side feature, you can quickly identify the specific changes that might be causing the problem, enabling faster troubleshooting and resolution.
+- **Code Review and Debugging**: You're working in a development environment where the latest revision includes multiple recent changes, and you notice that the application is experiencing performance issues. By using the Compare Revisions Side-by-Side feature or `esc env diff`, you can quickly identify the specific changes that might be causing the problem, enabling faster troubleshooting and resolution.
 - **A/B Testing**: You can try A/B testing a new checkout flow (checkout-B) against your existing one (checkout-A). Using version tags, you can gradually roll out each to a subset of users, monitoring conversion rates. If checkout-B wins, seamlessly switch all users over with a simple environment reference update – no downtime, no disruption.
 
 These examples are just a glimpse of how Pulumi ESC’s versioning capabilities can streamline your development and deployment process. The possibilities are vast, and you can tailor your tagging strategy to fit your specific needs and operational workflows.
