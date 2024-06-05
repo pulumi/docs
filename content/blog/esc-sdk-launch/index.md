@@ -14,7 +14,7 @@ tags:
   - features
 ---
 
-Managing secrets and application configurations effectively is crucial for building secure and maintainable software. However, developers often face challenges such as hardcoded credentials, configuration inconsistencies, and security risks. [Pulumi Environments Secrets and Configuration](/product/esc) (ESC) simplifies the management of sensitive data and configuration across your entire application lifecycle. Today, we're thrilled to introduce the official Pulumi ESC SDK in Typescript/Javascript, Go, and Python, making it even easier to integrate ESC directly into your applications.
+Managing secrets and application configurations effectively is crucial for building secure and maintainable software. However, developers often face challenges such as hardcoded credentials, configuration inconsistencies, and security risks. [Pulumi Environments Secrets and Configuration](/product/esc) (ESC) simplifies the management of sensitive data and configuration across your entire application lifecycle. Today, we're thrilled to introduce the official Pulumi ESC SDK in [Typescript/Javascript](/docs/esc/sdk/javascript/), [Go](/docs/esc/sdk/go/), and [Python](/docs/esc/sdk/python/), making it even easier to integrate ESC directly into your applications.
 
 <!--more-->
 
@@ -40,7 +40,57 @@ Here are a few examples of how to use the ESC SDK for various languages:
 {{% choosable language typescript %}}
 
 ```typescript
+import * as esc from "@pulumi/esc-sdk";
 
+async function main() {
+    const PULUMI_ACCESS_TOKEN = process.env.PULUMI_ACCESS_TOKEN!;
+    const orgName = process.env.PULUMI_ORG!;
+    const config = new esc.Configuration({ accessToken: PULUMI_ACCESS_TOKEN });
+    const client = new esc.EscApi(config);
+
+    const envName = "sdk-typescript-example";
+
+    // Create a new environment
+    await client.createEnvironment(orgName, envName);
+
+    const envDef: esc.EnvironmentDefinition = {
+        values: {
+            my_secret: {
+                "fn::secret": "shh! don't tell anyone",
+            },
+        },
+    };
+
+    // Update the environment with the new definition
+    await client.updateEnvironment(orgName, envName, envDef);
+
+    // Open and read the environment
+    const openEnv = await client.openAndReadEnvironment(orgName, envName);
+
+    if (!openEnv) {
+        console.error("Failed to open and read the environment");
+        return;
+    }
+
+    // Acces the value of the secret
+    const secretValue = openEnv.values?.my_secret;
+    console.log(`Secret value: ${secretValue}\n`);
+
+    // List all the environments in the organization
+    const orgEnvs = await client.listEnvironments(orgName);
+    if (!orgEnvs || !orgEnvs.environments) {
+        console.log("No environments found");
+        return;
+    }
+
+    for (const env of orgEnvs.environments) {
+        console.log(`Environment: ${env.name}`);
+    }
+}
+
+(async ()=>{
+    await main();
+})();
 ```
 
 {{% /choosable %}}
@@ -48,7 +98,49 @@ Here are a few examples of how to use the ESC SDK for various languages:
 {{% choosable language python %}}
 
 ```python
+import pulumi_esc_sdk as esc
+import os
 
+accessToken = os.getenv("PULUMI_ACCESS_TOKEN")
+
+orgName = os.getenv("PULUMI_ORG")
+
+configuration = esc.Configuration(access_token=accessToken)
+client = esc.EscClient(configuration)
+
+envName = "sdk-python-example"
+
+# Create environment
+client.create_environment(orgName, envName)
+
+# create a new EnvironmentDefinition with "my_secret" as a secret in values additional_properties
+envDef = esc.EnvironmentDefinition(
+    imports=[],
+    values=esc.EnvironmentDefinitionValues(
+        additional_properties={
+            "my_secret": {
+                "fn::secret": "shh! don't tell anyone"
+            }
+        }
+    )
+)
+
+# Update environment
+client.update_environment(orgName, envName, envDef)
+
+# Open and read the environment
+
+env, values, yaml = client.open_and_read_environment(orgName, envName)
+
+secret = values["my_secret"]
+print(f'Secret: {secret}\n')
+
+# List environments
+
+environments = client.list_environments(orgName)
+
+for env in environments.environments:
+    print(f'Environment: {env.name}')
 ```
 
 {{% /choosable %}}
@@ -56,7 +148,68 @@ Here are a few examples of how to use the ESC SDK for various languages:
 {{% choosable language go %}}
 
 ```go
+package main
 
+import (
+	"log"
+	"os"
+
+	esc "github.com/pulumi/esc-sdk/sdk/go"
+)
+
+func main() {
+	accessToken := os.Getenv("PULUMI_ACCESS_TOKEN")
+	orgName := os.Getenv("PULUMI_ORG")
+	configuration := esc.NewConfiguration()
+	escClient := esc.NewClient(configuration)
+	authCtx := esc.NewAuthContext(accessToken)
+
+	envName := "sdk-go-example"
+	// Create Environment
+	err := escClient.CreateEnvironment(authCtx, orgName, envName)
+	if err != nil {
+		log.Fatalf("Failed to create environment: %v", err)
+	}
+
+	// Update Environment with Secrets
+	updatePayload := &esc.EnvironmentDefinition{
+		Values: &esc.EnvironmentDefinitionValues{
+			AdditionalProperties: map[string]interface{}{
+				"my_secret": map[string]string{
+					"fn::secret": "shh! don't tell anyone",
+				},
+			},
+		},
+	}
+
+	_, err = escClient.UpdateEnvironment(authCtx, orgName, envName, updatePayload)
+	if err != nil {
+		log.Fatalf("Failed to update environment: %v", err)
+	}
+
+	// Open and View Secrets
+	_, values, err := escClient.OpenAndReadEnvironment(authCtx, orgName, envName)
+	if err != nil {
+		log.Fatalf("Failed to open environment: %v", err)
+	}
+
+	mySecret, ok := values["my_secret"]
+	if !ok {
+		log.Fatalf("Secret 'my_secret' not found in environment %s", envName)
+	}
+
+	log.Printf("my_secret: %v\n", mySecret)
+
+	orgEnvs, err := escClient.ListEnvironments(authCtx, orgName, nil)
+	if err != nil {
+		log.Fatalf("Failed to list environments: %v", err)
+	}
+
+	for _, orgEnv := range orgEnvs.Environments {
+		log.Printf("Environment: %v\n", orgEnv.Name)
+	}
+
+}
 ```
 {{% /choosable %}}
 
@@ -70,4 +223,4 @@ Here are some real-world scenarios showcasing how you can leverage the Pulumi ES
 
 ## Get Started Today!
 
-The Pulumi ESC SDK is available now! To learn more and start simplifying your application secrets workflow, check out the Pulumi ESC SDK Documentation. We're confident that this powerful new tool will streamline your development process, enhance your application security, and empower you to build innovative solutions with confidence. Join us on this journey towards a more secure and manageable future for application secrets and configurations!
+The Pulumi ESC SDK is available now! To learn more and start simplifying your application secrets workflow, check out the [Pulumi ESC SDK](/docs/esc/sdk/) Documentation. We're confident that this powerful new tool will streamline your development process, enhance your application security, and empower you to build innovative solutions with confidence. Join us on this journey towards a more secure and manageable future for application secrets and configurations!
