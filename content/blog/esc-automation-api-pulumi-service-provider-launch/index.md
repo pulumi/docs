@@ -26,7 +26,7 @@ These updates build upon Pulumi ESC's commitment to simplify and streamline secr
 
 ## Manage ESC Environments as Code with the Pulumi Service Provider
 
-You can now manage your Pulumi ESC [Environments](/docs/esc/environments/) directly within the Pulumi Service using the powerful Pulumi Service Provider. This means you can define, version, tag your environments, and even control access using familiar Infrastructure as Code (IaC) practices ensuring consistency and repeatability across your deployments.
+You can now manage your Pulumi ESC [Environments](/docs/esc/environments/) directly within the Pulumi Service using the powerful Pulumi Service Provider. This means you can define environments, add [version tags](/docs/esc/environments/#tagging-versions), and even control access using familiar Infrastructure as Code (IaC) practices ensuring consistency and repeatability across your deployments.
 
 Here's a glimpse of what you can achieve:
 
