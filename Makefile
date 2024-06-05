@@ -144,3 +144,7 @@ lint:
 .PHONY: format
 format:
 	./scripts/format.sh
+
+.PHONY: deploy-dev-stack
+deploy-dev-stack:
+	./scripts/deploy-dev-stack.sh $1
