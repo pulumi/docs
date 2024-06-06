@@ -8,6 +8,8 @@ permissions:
       contents: read    # This is required for actions/checkout
 jobs:
   do_cleanup:
+    # Only run this job for events that originate on this repository.
+    if: github.event.pull_request.head.repo.full_name == github.repository
     name: Do cleanup
     runs-on: ubuntu-latest
     env:
