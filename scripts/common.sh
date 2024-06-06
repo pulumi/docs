@@ -30,7 +30,7 @@ post_github_pr_comment() {
 
     curl -s \
          -X POST \
-         -H "Authorization: token ${GITHUB_TOKEN}" \
+         -H "Authorization: token ${PULUMI_BOT_TOKEN}" \
          -d "$pr_comment_body" \
          $pr_comment_api_url > /dev/null
 }
