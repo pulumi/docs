@@ -16,17 +16,18 @@
     <section id="benefits" class="container mx-auto my-16 lg:mt-16 lg:mb-8 px-6">
         <div class="lg:flex">
             <div class="lg:w-1/2 lg:order-last mb-8 lg:mb-0 relative h-full">
-                <img class="card mx-auto bg-white" src="{{ .Params.benefits.graphic.image }}" alt="{{ .Params.benefits.graphic.alt }}" />
-                <div class="hidden lg:block xl:hidden mt-8 text-center">
+                <video class="card mx-auto bg-white" controls="false" autoplay="true" loop="true" src="{{ .Params.benefits.graphic.image }}" >
+                <!-- <img class="card mx-auto bg-white" src="{{ .Params.benefits.graphic.image }}" alt="{{ .Params.benefits.graphic.alt }}" /> -->
+                <!-- <div class="hidden lg:block xl:hidden mt-8 text-center">
                     <a href="https://app.pulumi.com/signup/" class="btn-secondary">{{ .Params.get_started }}</a>
-                </div>
+                </div> -->
             </div>
             <div class="lg:w-1/2 lg:pr-8">
                 <h3>{{ .Params.benefits.title }}</h3>
                 <p class="text-sm">{{ .Params.benefits.description | markdownify }}</p>
-                <div class="mt-8 text-center block lg:hidden xl:block">
+                <!-- <div class="mt-8 text-center block lg:hidden xl:block">
                     <a href="https://app.pulumi.com/signup/" class="btn-secondary">{{ .Params.get_started }}</a>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>

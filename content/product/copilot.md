@@ -21,8 +21,8 @@ benefits:
         
         Simply ask any question, and Copilot will provide relevant, contextual, and effective responses to queries across the entire platform.
     graphic:
-        image: /images/product/pulumi-deployments-graphic.png
-        alt: Pulumi Deployments Architecture Screenshot
+        image: /images/product/copilot-demo.mp4
+        alt: Pulumi Copilot Demo
 
 options:
     title: How do I use Pulumi Copilot?
@@ -52,45 +52,42 @@ options:
 # TODO: fill this out for Copilot or remove entirely
 faq:
     items:
-      - header: What is Pulumi Deployments?
+      - header: What is the pricing for Pulumi Copilot?
         content: |
-          Pulumi Deployments is an infrastructure lifecycle management service. It provides automation of deployment and operational workflows for cloud infrastructure. With Pulumi Deployments, you can orchestrate with ease the at-scale complexities of production infrastructure.
+          <TBD>
 
-      - header: Is there a free tier for Pulumi Deployments?
+      - header: What options do organization administrators have for managing auditing and collaboration?
         content: |
-          Individual Edition has 500 deploy minutes/month. Team, Enterprise, and Business Critical Editions all have 3,000 included deploy minutes/month.
+          All conversations with Pulumi Copilot are logged and can be audited by Organization Administrators.
 
-      - header: How does drift detection work?
+      - header: Can an organization customize the components and templates that Pulumi Copilot uses in its answers?
         content: |
-          Drift detection and remediation operate continuously, on a schedule of your choosing, comparing the state of your resources with the expected configurations defined in your Pulumi setups. Any discrepancies triggered by modifications, deletions, or additions of resources are promptly reported and, if configured, can be automatically remediated. Alerts can be configured to be sent via webhooks, Slack, or Microsoft Teams, with detailed information about the drift's nature and scope provided directly within the alerts.
+          Pulumi Copilot will use templates that an organization has in its Organization Templates.  There is not currently any way to customize the resources/components that Pulumi Copilot will use in code it generates beyond what’s available in the public Pulumi Registry.
 
-      - header: Can you use drift detection without Pulumi Deployments?
+      - header: Will Pulumi Copilot maintain a history of the organization’s conversations?
         content: |
-          Yes, you can configure your existing CI/CD system to run `pulumi refresh --preview-only` regularly, and the results will still be displayed as part of the Drift tab in Pulumi Cloud and you can receive notifications when drift is detected.
+          Yes, Pulumi Copilot will maintain a history of conversations for all users in an organization. Pulumi requires access to these conversations in order to ensure the best experience for customers. This allows Pulumi to manage support requests that may come up as well as evaluate the customer experience to identify areas for improvement in the future.
 
-      - header: What granularity can you define schedules for Scheduled Deployments?
+      - header: Who are the models used for Pulumi Copilot?
         content: |
-          You can define schedules for any stack at the granularity of cron expressions.
+          Pulumi Copilot uses private, paid enterprise versions of Microsoft Azure OpenAI and OpenAI models. 
 
 # TODO: updates to these CTAs
 learn:
     title: Get Started
     items:
         - title: Try Pulumi Copilot today
-          description: Deploy infrastructure on any cloud by creating a free Pulumi account.
+          description: Automate any infrastructure management task by creating a free Pulumi account.
           buttons:
             - link: https://app.pulumi.com/signup
               type: primary
               action: Sign up for Pulumi Cloud
         - title: Documentation
-          description: Review our documentation to learn more about Pulumi Deployments.
+          description: Review our documentation to learn more about Pulumi Copilot.
           buttons:
-            - link: /docs/pulumi-cloud/deployments
+            - link: /docs/pulumi-cloud/copilot
               type: secondary
-              action: Pulumi Deployments Docs
-            - link: /docs/reference/deployments-rest-api
-              type: secondary
-              action: REST API Docs
+              action: Pulumi Copilot Docs
 
 aliases:
     - /copilot
