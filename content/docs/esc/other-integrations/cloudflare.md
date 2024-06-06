@@ -23,7 +23,7 @@ Pulumi ESC integrates with [Cloudflare](https://www.cloudflare.com/) to help dev
 Learn how to:
 
 - Login to your Cloudflare account without having to locally set the `CLOUDFLARE_API_TOKEN` environment variable.
-- Populate the `.dev.vars` from ESC-stored secrets.
+- Populate the `.dev.vars` file from ESC-stored secrets.
 - Pass secrets stored in Pulumi ESC to your production Cloudflare Workers without these being directly in your shell.
 
 ### Prerequisites
@@ -32,7 +32,7 @@ Ensure you have:
 
 - installed [Pulumi ESC](https://www.pulumi.com/docs/install/esc/)
 - installed [Wrangler](https://developers.cloudflare.com/workers/wrangler/install-and-update/#install-wrangler/)
-- a valid and properly scoped [Cloudflare API Token](https://developers.cloudflare.com/workers/wrangler/ci-cd/#api-token)
+- a valid and properly scoped [Cloudflare API token](https://developers.cloudflare.com/workers/wrangler/ci-cd/#api-token)
 - a Pulumi Cloud account. You can sign up for an [always-free, individual tier](https://app.pulumi.com/signup)
 
 {{< notes type="info" >}}
@@ -49,7 +49,6 @@ esc login # if needed
 ## create a new ESC Environment
 ESC_ENV=my-dev-environment
 esc env init ${ESC_ENV}
-esc env ls | grep ${ESC_ENV}
 ```
 
 Edit the Environment in your terminal:
@@ -58,7 +57,7 @@ Edit the Environment in your terminal:
 esc env edit ${ESC_ENV}
 ```
 
-Paste the contents below in the editor and replace the values. Note: the API token is declared as a secret. Once the Environment is saved, Pulumi will encrypt its value and replace it with ciphertext.
+Paste the contents below in the editor and replace the `abc...` API token and Account ID value with yours. Note: the API token is declared as a secret. Once the Environment is saved, Pulumi will encrypt its value and replace it with ciphertext.
 
 ```yaml
 values:
@@ -70,7 +69,7 @@ values:
 
 Now that the Pulumi ESC Environment is created, it can be consumed in a variety of ways, such as running other shell commands without having to set the environment variables locally first.
 
-The `esc run` command opens the Environment you previously created, sets the specified environment variables, and then uses those environment variables in the context of the `wrangler` commands.
+The `esc run` command opens the Environment you previously created, sets the specified environment variables into a temporary environment, and then uses those environment variables in the context of the `wrangler` commands.
 
 ### 2. Use ESC with `wrangler whoami`
 
@@ -80,7 +79,7 @@ Log into your Cloudflare account without needing to manage the credentials direc
 # ensure you're currently not logged in
 npx wrangler logout
 
-# retrieve esc environment and authenticate programmatically
+# retrieve the esc environment and authenticate programmatically
 esc run ${ESC_ENV} npx wrangler whoami
 ```
 
@@ -90,11 +89,7 @@ For additional options and details, see `esc run --help`.
 
 ### 3. Use ESC to create your `.dev.vars` file
 
-The `.dev.vars` file is located in the root of your wrangler project to define secrets used when running `wrangler dev`.
-
-{{< notes type="info" >}}
-**Recommendation** Use a dedicated ESC Environment for your `.dev.vars` definitions because the esc `dotnev` format flag does not support property paths.
-{{< /notes >}}
+The `.dev.vars` file is located in the root of your wrangler project to define secrets used when running `wrangler dev`. Per [Cloudflare documentation](https://developers.cloudflare.com/workers/configuration/secrets/#secrets-in-development), the `.dev.vars` file should be formatted like a `dotenv` file.
 
 Create a new ESC Environment:
 
@@ -109,24 +104,38 @@ Edit the environment in your terminal:
 esc env edit ${ESC_ENV}
 ```
 
-Paste the contents below in the editor:
+There are two options for managing the `.dev.vars` definition.
 
-```yaml
-values:
-  environmentVariables:
-    TOP_SECRET:
-      fn::secret: "the moon is made of cheese"
-```
+- Option 1: Utilize the `--format` export flag for flexibility. A dedicated Environment is required as the format flag does not support property paths Paste the contents below in the editor:
 
-Per [Cloudflare documentation](https://developers.cloudflare.com/workers/configuration/secrets/#secrets-in-development), the `.dev.vars` file should be formatted like a `dotenv` file.
+  ```yaml
+  values:
+    environmentVariables:
+      TOP_SECRET:
+        fn::secret: "the moon is made of cheese"
+  ```
 
-```bash
-# generate the `.dev.vars` file:
-esc env open ${ESC_ENV} --format dotenv > .dev.vars
+  Generate the `.dev.vars` file:
 
-# verify the contents
-cat .dev.vars
-```
+  ```bash
+  esc env open ${ESC_ENV} --format dotenv > .dev.vars
+  ```
+
+- Option 2: Use the `files` section to add a value. When the Environment is opened, the value is copied to a temporary file on your system, with the path set as an environment variable with the key name. Paste the contents below in the editor:
+
+  ```yaml
+  values:
+    environmentVariables:
+      TOP_SECRET: "the moon is made of cheese"
+    files: |
+      DEV_VARS: TOP_SECRET=${environmentVariables.TOP_SECRET}
+  ```
+
+  Generate the `.dev.vars` file:
+
+  ```bash
+  esc run -i ${ESC_ENV} -- sh -c 'cat $DEV_VARS > .dev.vars'
+  ```
 
 ### 4. Use ESC with `wrangler secret put`
 
@@ -193,7 +202,7 @@ ESC_ENV=my-pulumi-environment
 esc env init ${ESC_ENV}
 ```
 
-Paste the contents below in the editor and replace the values. These values are to be consumed by a Pulumi program hence they are placed under the `pulumiConfig` section. See the [syntax reference](https://www.pulumi.com/docs/esc/reference/) for more options.
+Paste the contents below in the editor and replace the `abc...` API token and Account ID value with yours. These values are to be consumed by a Pulumi program hence they are placed under the `pulumiConfig` section. See the [syntax reference](https://www.pulumi.com/docs/esc/reference/) for more options.
 
 ```yaml
 values:
