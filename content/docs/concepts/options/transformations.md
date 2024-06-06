@@ -149,7 +149,7 @@ var vpc = new MyVpcComponent("vpc",
 
 ## Stack Transformations
 
-Transformations can also be applied in bulk to many or all resources in a stack by using Stack Transformations, which are applied to the root stack resource and as a result inherited by all other resources in the stack.
+Transformations can also be applied in bulk to many or all resources in a stack by using Stack Transformations, which are applied to the root stack resource and as a result inherited by all other resources in the stack.  Note that this applies only to resources that are registered after the stack transformation is registered.  Resources in the stack that have already been registered will not get the Stack Transformation applied to them.
 
 {{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
 
