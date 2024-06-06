@@ -36,7 +36,7 @@ options:
         - icon: eye
           icon_color: salmon
           title: Answer questions about existing infrastructure
-          description: Copilot can access infrastructure stack and resource data, so you can You can analyze your infrastructure on cost, compliance, cloud usage.
+          description: Copilot can access infrastructure stack and resource data, so you can analyze your infrastructure on cost, compliance, cloud usage.
           example: "Example:  What is my production VPC ID in us-west-2"
         - icon: shield
           icon_color: blue

@@ -23,7 +23,13 @@ overview:
           icon: nodes
           icon_color: yellow
           description: |
-            Reduce lead time from ideation to delivery through Pulumi AI.
+            Reduce lead time from ideation to delivery through Pulumi AI and Pulumi Copilot.
+
+        - title: Improve Compliance
+          icon: shield
+          icon_color: blue
+          description: |
+            Analyze and update infrastructure to optimize costs, enhance security, and ensure compliance. 
 
 ai:
     title: AI

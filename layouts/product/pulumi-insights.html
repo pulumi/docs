@@ -13,7 +13,7 @@
         {{ end }}
         <div class="flex flex-wrap justify-content items-stretch text-left mt-16">
             {{ range $item := .Params.overview.items }}
-                <div class="w-full lg:w-1/2 p-3">
+                <div class="w-full lg:w-1/3 p-3">
                     <div class="benefits-item-auto-h card bg-white p-12">
                         <div class="icon-section my-">
                             {{ partial "color-icon.html" (dict "icon" $item.icon "icon_color" $item.icon_color) }}
