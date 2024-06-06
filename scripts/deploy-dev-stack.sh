@@ -1,7 +1,5 @@
 #!/bin/bash
 
-#!/bin/bash
-
 set -o errexit -o pipefail
 
 source ./scripts/common.sh

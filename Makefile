@@ -145,6 +145,14 @@ lint:
 format:
 	./scripts/format.sh
 
+.PHONY: new-dev-stack
+new-dev-stack:
+	./scripts/create-dev-stack.sh
+
 .PHONY: deploy-dev-stack
 deploy-dev-stack:
-	./scripts/deploy-dev-stack.sh $1
+	./scripts/deploy-dev-stack.sh
+
+.PHONY: destroy-dev-stack
+destroy-dev-stack:
+	./scripts/destroy-dev-stack.sh
