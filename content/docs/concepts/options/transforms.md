@@ -60,9 +60,9 @@ const vpc = new MyVpcComponent("vpc", {}, {
 {{% choosable language python %}}
 
 ```python
-def transform(args: ResourcetransformArgs):
+def transform(args: ResourceTransformArgs):
     if args.type_ == "aws:ec2/vpc:Vpc" or args.type_ == "aws:ec2/subnet:Subnet":
-        return ResourcetransformResult(
+        return ResourceTransformResult(
             props=args.props,
             opts=ResourceOptions.merge(args.opts, ResourceOptions(
                 ignore_changes=["tags"],
@@ -77,15 +77,16 @@ vpc = MyVpcComponent("vpc", opts=ResourceOptions(transforms=[transform]))
 ```go
 transform := func(_ context.Context, args *pulumi.ResourceTransformArgs) *pulumi.ResourceTransformResult {
     if args.Type == "aws:ec2/vpc:Vpc" || args.Type == "aws:ec2/subnet:Subnet" {
+        args.Opts.IgnoreChanges = append(args.Opts.IgnoreChanges, "tags")
         return &pulumi.ResourceTransformResult{
             Props: args.Props,
-            Opts:  append(args.Opts, pulumi.IgnoreChanges([]string{"tags"}))
+            Opts:  args.Opts,
         }
     }
     return nil
 }
 
-vpc := MyVpcComponent("vpc", pulumi.transforms([]pulumi.ResourceTransform{transform}))
+vpc := MyVpcComponent("vpc", pulumi.Transforms([]pulumi.ResourceTransform{transform}))
 ```
 
 {{% /choosable %}}
@@ -96,7 +97,7 @@ var vpc = new MyVpcComponent("vpc", new ComponentResourceOptions
 {
     ResourceTransforms =
     {
-        (args, _) =>
+        async (args, _) =>
         {
             if (args.Type == "aws:ec2/vpc:Vpc" ||
                 args.Type == "aws:ec2/subnet:Subnet")
@@ -117,7 +118,7 @@ var vpc = new MyVpcComponent("vpc", new ComponentResourceOptions
 {{% choosable language java %}}
 
 ```java
-# Pulumi Java does not support transforms
+// Pulumi Java support for transforms is coming soon
 ```
 
 {{% /choosable %}}
@@ -131,7 +132,7 @@ var vpc = new MyVpcComponent("vpc", new ComponentResourceOptions
 
 {{< /chooser >}}
 
-## Stack transforms
+## Stack Transforms
 
 Transforms can also be applied in bulk to many or all resources in a stack by using Stack transforms, which are applied to the root stack resource and as a result inherited by all other resources in the stack.
 
@@ -140,7 +141,7 @@ Transforms can also be applied in bulk to many or all resources in a stack by us
 {{% choosable language javascript %}}
 
 ```javascript
-pulumi.runtime.registerStackTransform((args) => {
+pulumi.runtime.registerResourceTransform(args => {
     if (isTaggable(args.type)) {
         args.props["tags"] = Object.assign(args.props["tags"], autoTags);
         return { props: args.props, opts: args.opts };
@@ -153,9 +154,12 @@ pulumi.runtime.registerStackTransform((args) => {
 {{% choosable language typescript %}}
 
 ```typescript
-pulumi.runtime.registerStackTransform(args => {
-    // ...
-});
+pulumi.runtime.registerResourceTransform(args => {
+    if (isTaggable(args.type)) {
+        args.props["tags"] = Object.assign(args.props["tags"], autoTags);
+        return { props: args.props, opts: args.opts };
+    }
+};
 ```
 
 {{% /choosable %}}
@@ -163,10 +167,15 @@ pulumi.runtime.registerStackTransform(args => {
 {{% choosable language python %}}
 
 ```python
-def my_transform(args):
-    # ...
+def transform(args: ResourceTransformArgs):
+    if args.type_ == "aws:ec2/vpc:Vpc" or args.type_ == "aws:ec2/subnet:Subnet":
+        return ResourceTransformResult(
+            props=args.props,
+            opts=ResourceOptions.merge(args.opts, ResourceOptions(
+                ignore_changes=["tags"],
+            )))
 
-pulumi.runtime.register_stack_transform(my_transform)
+pulumi.runtime.register_resource_transform(transform)
 ```
 
 {{% /choosable %}}
@@ -174,9 +183,16 @@ pulumi.runtime.register_stack_transform(my_transform)
 {{% choosable language go %}}
 
 ```go
-ctx.RegisterStackTransform(
+ctx.RegisterResourceTransform(
     func(_ context.Context, args *pulumi.ResourceTransformArgs) *pulumi.ResourceTransformResult {
-        // ...
+        if args.Type == "aws:ec2/vpc:Vpc" || args.Type == "aws:ec2/subnet:Subnet" {
+            args.Opts.IgnoreChanges = append(args.Opts.IgnoreChanges, "tags")
+            return &pulumi.ResourceTransformResult{
+                Props: args.Props,
+                Opts:  args.Opts,
+            }
+        }
+        return nil
     },
 )
 ```
@@ -193,9 +209,18 @@ public class MyStack : Stack
         ...
     }
 
-    private static ResourceTransformResult? MyTransform(ResourceTransformArgs args, CancellationToken ct)
+    private static async Task<ResourceTransformResult?> MyTransform(ResourceTransformArgs args, CancellationToken ct)
     {
-        // ...
+        if (args.Type == "aws:ec2/vpc:Vpc" ||
+            args.Type == "aws:ec2/subnet:Subnet")
+        {
+            var options = CustomResourceOptions.Merge(
+                (CustomResourceOptions) args.Options,
+                new CustomResourceOptions { IgnoreChanges = {"tags"} });
+            return new ResourcetransformResult(args.Args, options);
+        }
+
+        return null;
     }
 }
 ```
@@ -204,7 +229,7 @@ public class MyStack : Stack
 {{% choosable language java %}}
 
 ```java
-# Pulumi Java does not support transforms
+// Pulumi Java support for transforms is coming soon
 ```
 
 {{% /choosable %}}
@@ -218,110 +243,18 @@ public class MyStack : Stack
 
 {{< /chooser >}}
 
-## Transforms vs Transformations
+## Transforms vs. Transformations
 
-The `transforms` option is the replacement system to [transformations](/docs/concepts/options/transformations/). Calling transform functions is managed by the engine, rather than by each SDK and so transforms apply to resources created inside remote component resources (such as those in [AWSX](https://www.pulumi.com/registry/packages/awsx/)).
+Transforms are a replacement for [Transformations](/docs/concepts/options/transformations/). Transformations will be deprecated in the future in favor of Transforms.
 
-That last point does not apply to the old `transformations` system, which couldn't operate on resources created inside remote components.
+Transforms offer support for the following capabilities that are not supported by Transformations:
 
-However because `transforms` are invoked by the engine the properties are the values after being serialised and deserialised across the wire protocol to the engine and back to the SDK runtime. As such unlike with `transformations` there is no `Resource` object, and the properties will be raw property maps not typed resource arg classes.
+- **Support for transforming child resources of packaged components**, such as components in [awsx](/registry/packages/awsx) and [eks](/registry/packages/eks).
 
-The new transform system is also natively async. As such, depending on the language you are using you may have to lift your transform function to be `async` and/or to handle an extra parameter for the async context (e.g. a `context.Context` in Go, or `System.Threading.CancellationToken` in C#).
+- **Support for async transform functions**. In Node.js and Python, transform functions can optionally be `async` and return a `Promise`/`Awaitable` so you can use `await` for async calls in the transform. In .NET, transform functions take a `CancellationToken` as an argument and return a `Task` so you can use `await` for async calls in the transform. In Go, transform functions take a `context.Context` as an argument, allowing access to the async context for tracing/logging/cancellation.
 
-As such when moving from `transformations` to `transforms` you will need to update your transform code to handle these differences.
+While the Transforms APIs are similar to Transformations, there are some differences in both API signatures and runtime behavior. These are discussed in detail in [Migrating from Transformations to Transforms](/docs/concepts/options/transformations/#migrating-from-transformations-to-transforms).
 
-### No resource type
+## Transforms for Packaged Component Resources
 
-There is no `Resource` object passed to transform functions. Most of the information you could have retrieved from that object is presented on the transform arguments directly.
-
-For example given the following C# transform:
-
-```csharp
-args =>
-{
-    if (args.Resource.GetResourceType() == "random:index/randomString:RandomString")
-    {
-        var resultOpts = CustomResourceOptions.Merge((CustomResourceOptions)args.Options,
-            new CustomResourceOptions {AdditionalSecretOutputs = {"length"}});
-        return new ResourceTransformationResult(resultArgs, resultOpts);
-    }
-    return null;
-}
-```
-
-We can rewrite this to:
-
-```csharp
-async (args, _) =>
-{
-    if (args.Type == "random:index/randomString:RandomString")
-    {
-        var resultOpts = CustomResourceOptions.Merge((CustomResourceOptions)args.Options,
-            new CustomResourceOptions {AdditionalSecretOutputs = {"length"}});
-        return new ResourceTransformResult(resultArgs, resultOpts);
-    }
-    return null;
-}
-```
-
-### No typed resource args class
-
-In the old transform system the transform function was called with the same object that was passed to the resource constructor. This meant that
-in typed languages like Go and C# you could typecast to the typed arguments struct.
-
-```go
-func(_ context.Context, rta *pulumi.ResourceTransformationArgs) *pulumi.ResourceTransformationResult {
-    if rta.Type == "testprovider:index:Random" {
-        var props *RandomArgs
-        if rta.Props == nil {
-            props = &RandomArgs{}
-        } else {
-            props = rta.Props.(*RandomArgs)
-        }
-        props.Length = props.Length.ToOutput().ApplyT(func(v int) int { return v * 2 })
-
-        return &pulumi.ResourceTransformationResult{
-            Props: props,
-            Opts:  rta.Opts,
-        }
-    }
-    return nil
-}
-```
-
-The new transform system works over the wire protocol, allowing it to run for resources created in other
-processes, but it means the properties object you get is closer to the raw protocol than the typed arguments
-you might expect.
-
-In this Go example the old system would have given us a typed `RandomArgs` structure with the length field
-being a `pulumi.IntInput`. The new system is just a map where we have to know the key is `"length"` and the
-value is a `Float64Output`.
-
-You might ask why `Float64Output` instead of at least `IntOutput`. This is because the wire protocol doesn't
-actually have support for integers (being JSON based), so on receiving the untyped properties the transform
-callback can only go on their JSON values and all numbers are 64-bit floats.
-
-```go
-func(_ context.Context, rta *pulumi.XResourceTransformArgs) *pulumi.XResourceTransformResult {
-    if rta.Type == "testprovider:index:Random" {
-        length := rta.Props["length"].(pulumi.Float64Output)
-        rta.Props["length"] = length.ApplyT(func(v float64) float64 { return v * 2 })
-
-        return &pulumi.XResourceTransformResult{
-            Props: rta.Props,
-            Opts:  rta.Opts,
-        }
-    }
-    return nil
-},
-```
-
-### Natively async
-
-The new transform API has been designed from the start with async support in mind.
-
-In all applicable languages the transform functions support returning a Promise/Task so you can use standard `await` operators for async calls in the transform.
-
-For Go we pass a `context.Context` in as the first argument for the transform function. This is to indicate its async nature, but also allows you access to the async context for tracing/logging/cancellation.
-
-For DotNet we pass a `System.Threading.CancellationToken` as the last argument of the transform function. This allows you to handle cancellation if needed.
+Note that a transform will be called twice for packaged component resources (such as those in [awsx](/registry/packages/awsx) and [eks](/registry/packages/eks)). The transform will be called before the component resource is constructed, providing an opportunity to modify inputs and resource options before being passed to the provider that implements the component, and then again when the component resource is actually created in the provider, providing an opportunity to modify any resource options that were configured inside the implemenation of the component.
