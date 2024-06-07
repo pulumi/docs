@@ -7,6 +7,9 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   support:
     weight: 1
+search:
+  keywords:
+    - debugging pulumi programs
 
 aliases:
   - /docs/reference/troubleshooting/
@@ -50,6 +53,43 @@ Diagnostic logging can also be controlled with flags and environment variables o
 ```bash
 $ TF_LOG=TRACE pulumi up --logtostderr --logflow -v=10 2> out.txt
 ```
+
+## Attaching a debugger to a Pulumi program
+
+When developing or troubleshooting Pulumi programs, you may need to debug your code. This example walks you through starting a Node.js debugging session in VS Code and setting breakpoints.
+
+### Create VS Code launch configuration
+
+In your project directory, create or update `.vscode/launch.json` with the following configuration to enable debugging:
+
+```json
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch Pulumi Program (debug)",
+            "type": "node",
+            "request": "attach",
+            "continueOnAttach": true,
+            "skipFiles": [
+                "${workspaceFolder}/node_modules/**/*.js",
+                "${workspaceFolder}/lib/**/*.js",
+                "<node_internals>/**/*.js"
+            ]
+        }
+    ]
+}
+```
+
+### Set breakpoints and start Pulumi in debug mode
+
+Open your program and set breakpoints by clicking in the gutter next to the line numbers.
+
+In a terminal run `NODE_OPTIONS=”--inspect-brk” pulumi up` to start the deployment process in debug mode. This will cause Pulumi to pause execution and wait for a debugger to attach.
+
+Press `F5` in VS Code to start debugging. VS Code will attach to the waiting Node.js process, and execution will continue until reaching the first breakpoint you have set.
+
+For a step-by-step guide for attaching a debugger to a Pulumi program, check out this [blog on breakpoint debugging.](/blog/next-level-iac-breakpoint-debugging/)
 
 ## Performance
 
