@@ -12,6 +12,14 @@ source ./scripts/common.sh
 #   ./scripts/create-dev-stack.sh stackname               # Same as above, but uses the passed-in argument for the stack name.
 #   STACK_NAME=stackname ./scripts/create-dev-stack.sh    # Same as above, but uses the STACK_NAME environment variable instead.
 
+# Check to make sure the user belongs to the 'pulumi' org and has access to the project.
+if [[ "$(pulumi -C infrastructure stack ls --json | jq -r -C '.[] | select(.url | startswith("https://app.pulumi.com/pulumi/www.pulumi.com/")).url')" == "" ]]; then
+    echo
+    echo "To work with dev stacks, you must belong to the https://app.pulumi.com/pulumi organization and have"
+    echo "access to the 'www.pulumi.com' project. Exiting."
+    exit 0
+fi
+
 stack_name="${STACK_NAME:=$1}"
 
 if [ -z "$stack_name" ]; then
@@ -38,21 +46,26 @@ pulumi -C infrastructure config set registryStack "pulumi/registry/testing"
 pulumi -C infrastructure config set websiteDomain "www-${stack_name}.pulumi-dev.io"
 pulumi -C infrastructure config set websiteLogsBucketName "www-${stack_name}.pulumi-dev.io-logs"
 
+# Always use the pulumi/dev-stacks ESC environment.
+pulumi -C infrastructure config env add dev-stacks --yes
+
 echo
 echo "Done! The stack has been created and is now active:"
 echo
 pulumi -C infrastructure stack ls | grep -v "production" | grep -v "staging" | grep -v "testing"
 
 echo
-echo "To deploy, first open the dev-stacks environment:"
+echo "To deploy, run 'make deploy-dev-stack':"
 echo
-echo '    eval "$(pulumi env open pulumi/dev-stacks --format shell)"'
+echo "    make deploy-dev-stack"
 echo
-echo "Then run 'make deploy-dev-stack' (see ./scripts/deploy-dev-stack.sh for more options):"
+echo "See ./scripts/deploy-dev-stack.sh for more options."
 echo
-echo "    STACK_NAME=pulumi/${stack_name} make deploy-dev-stack"
+echo "All dev stacks are configured to use the ESC 'pulumi/dev-stacks' environment, so you don't"
+echo "have to configure any AWS credentials to use them. ✨"
 echo
 echo "Once deployed, your dev-stack site will be available at https://www-${stack_name}.pulumi-dev.io."
+echo "To tear everything down, run 'make destroy-dev-stack'."
 echo
 echo "Don't forget to commit your stack configuration file:"
 echo
