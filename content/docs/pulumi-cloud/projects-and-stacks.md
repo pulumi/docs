@@ -221,7 +221,7 @@ Here is how it looks rendered in the [Pulumi Cloud UI](https://app.pulumi.com):
 
 To view a stack's details:
 
-1. Navigate to **All stacks** and then a specific stack.
+1. Navigate to **Stacks** and then a specific stack.
 1. Navigate to **Activity**.
 1. Review the stack's outputs, configuration values, and tags.
 
@@ -235,7 +235,7 @@ Custom stack tags can help you group and filter your stacks.
 
 To create a custom tag:
 
-1. Navigate to **All stacks** and then a specific stack.
+1. Navigate to **Stacks** and then a specific stack.
 1. Select **New tag**.
 
 To modify or delete a custom tag:
@@ -248,7 +248,7 @@ To modify or delete a custom tag:
 
 To view stack activity:
 
-1. Navigate to **All stacks** and then a specific stack.
+1. Navigate to **Stacks** and then a specific stack.
 1. Navigate to **Activity**.
 1. Review insights and operations that were performed on your stack resources during the update.
 1. Navigate to **Changes**, **Timeline**, or **Configuration** for more details.
@@ -271,7 +271,7 @@ The **Configuration** section displays the same configuration details found in t
 
 To view a stack's resources:
 
-1. Navigate to **All stacks** and then a specific stack.
+1. Navigate to **Stacks** and then a specific stack.
 1. Navigate to **Resources**.
 1. Select **List View** or **Graph View** to toggle between a list view and a graph view.
 1. Selecting an individual resource from the list or graph view will provide more details.
