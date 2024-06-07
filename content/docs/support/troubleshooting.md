@@ -82,6 +82,7 @@ Create or update `.vscode/launch.json` with the following configuration to enabl
 ```
 
 ### Set breakpoints and start Pulumi in debug mode
+
 Open your program and set breakpoints by clicking in the gutter next to the line numbers.
 
 In a terminal run `NODE_OPTIONS=”--inspect-brk” pulumi up` to start the deployment process in debug mode. This will cause Pulumi to pause execution and wait for a debugger to attach.
@@ -90,7 +91,7 @@ Press `F5` in VS Code to start debugging. VS Code will attach to the waiting Nod
 
 For a step-by-step guide for attaching a debugger to a Pulumi program, check out this [blog on breakpoint debugging.](/blog/next-level-iac-breakpoint-debugging/)
 
-### Debugging by each SDK 
+### Debugging by each SDK
 
 To attach a debugger across Pulumi's supported SDKs, you can configure the program to wait for the debugger to attach before continuing execution.
 
