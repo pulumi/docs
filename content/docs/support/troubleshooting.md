@@ -60,7 +60,7 @@ When developing or troubleshooting Pulumi programs, you may need to debug your c
 
 ### Create VS Code launch configuration
 
-Create or update `.vscode/launch.json` with the following configuration to enable debugging:
+In your project directory, create or update `.vscode/launch.json` with the following configuration to enable debugging:
 
 ```json
 {
