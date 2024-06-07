@@ -12,6 +12,14 @@ source ./scripts/common.sh
 #   ./scripts/destroy-dev-stack.sh stackname               # Same as above, but uses the passed-in argument for the stack name.
 #   STACK_NAME=stackname ./scripts/destroy-dev-stack.sh    # Same as above, but uses the STACK_NAME environment variable instead.
 
+# Check to make sure the user belongs to the 'pulumi' org and has access to the project.
+if [[ "$(pulumi -C infrastructure stack ls --json | jq -r -C '.[] | select(.url | startswith("https://app.pulumi.com/pulumi/www.pulumi.com/")).url')" == "" ]]; then
+    echo
+    echo "To work with dev stacks, you must belong to the https://app.pulumi.com/pulumi organization and have"
+    echo "access to the 'www.pulumi.com' project. Exiting."
+    exit 0
+fi
+
 stack_name="${STACK_NAME:=$1}"
 
 if [ -z "$stack_name" ]; then
@@ -28,7 +36,7 @@ fi
 
 if [[ "$stack_name" == *production* || "$stack_name" == *staging* || "$stack_name" == *testing* ]]; then
     echo
-    echo "Refusing to deploy the $stack_name stack with this script. Exiting."
+    echo "Refusing to destroy the $stack_name stack with this script. Exiting."
     exit 0
 fi
 
@@ -51,7 +59,7 @@ pushd infrastructure
 
             if [[ "$resource_id" != "" ]]; then
                 echo "Emptying ${resource_name}..."
-                aws s3 rm --recursive "s3://${resource_id}"
+                pulumi env run pulumi/dev-stacks -- aws s3 rm --recursive "s3://${resource_id}"
             fi
         fi
     done

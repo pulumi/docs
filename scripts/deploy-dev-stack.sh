@@ -14,6 +14,14 @@ source ./scripts/common.sh
 #   SKIP_BUILD=true ./scripts/deploy-dev-stack.sh               # Skips the build step and goes straight to deployment, but still prompts before update.
 #   SKIP_PREVIEW=true ./scripts/deploy-dev-stack.sh             # Skips the preview before updating. (Is the same as passing --yes.)
 
+# Check to make sure the user belongs to the 'pulumi' org and has access to the project.
+if [[ "$(pulumi -C infrastructure stack ls --json | jq -r -C '.[] | select(.url | startswith("https://app.pulumi.com/pulumi/www.pulumi.com/")).url')" == "" ]]; then
+    echo
+    echo "To work with dev stacks, you must belong to the https://app.pulumi.com/pulumi organization and have"
+    echo "access to the 'www.pulumi.com' project. Exiting."
+    exit 0
+fi
+
 echo
 echo "Listing available stacks for this project..."
 echo
@@ -42,7 +50,7 @@ if [[ -z "$SKIP_BUILD" || "$SKIP_BUILD" == false ]]; then
 
     # This environment variable doesn't actually correspond to any real environment; it just populates a variable
     # we use to name the S3 bucket. (In GHA, we use it to target a GHA environment, but in this context, it has no effect.)
-    DEPLOYMENT_ENVIRONMENT="dev" ./scripts/on-demand-build-sync-test.sh
+    DEPLOYMENT_ENVIRONMENT="dev" pulumi env run pulumi/dev-stacks -- ./scripts/on-demand-build-sync-test.sh
 else
     echo
     echo "Skipping build..."
