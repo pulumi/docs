@@ -19,7 +19,7 @@ Pulumi stands out in the world of infrastructure-as-code (IaC) for its flexibili
 
 <!--more-->
 
-In Pulumi, you describe your infrastructure in code – real code, not a [DSL][dsl-wiki] or [YAML][yaml-wiki] – using your preferred general purpose programming language. You don't have to become a specialist in a niche proprietary declarative language, like Terraform's HCL. Rather, you can reuse your existing programming skills, writing in standard imperative, object-oriented, and even [functional language][f-sharp-example] styles, while still gaining all of the benefits of the declarative style that other tools emphasize.
+In Pulumi, you describe your infrastructure in code – real code, not a [DSL][dsl-wiki] or [YAML][yaml-wiki] – using your preferred general purpose programming language. You don't have to become a specialist in a niche proprietary declarative language, like Terraform's HCL. Rather, you can reuse your existing programming skills, writing in standard imperative, object-oriented, and even [functional language][fsharp-example] styles, while still gaining all of the benefits of the declarative style that other tools emphasize.
 
 Pulumi provides a unique mix of a [declarative model][pulumi-declarative-imperative-docs] embedded and implemented inside of a standard programming language, allowing all the flexibility of custom imperative code, while still enabling Pulumi's [deployment engine][pulumi-engine-docs] to infer opportunities for parallel asynchronous execution and to converge a partially-realized system.
 
