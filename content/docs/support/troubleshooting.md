@@ -91,15 +91,6 @@ Press `F5` in VS Code to start debugging. VS Code will attach to the waiting Nod
 
 For a step-by-step guide for attaching a debugger to a Pulumi program, check out this [blog on breakpoint debugging.](/blog/next-level-iac-breakpoint-debugging/)
 
-### Debugging by each SDK
-
-To attach a debugger across Pulumi's supported SDKs, you can configure the program to wait for the debugger to attach before continuing execution.
-
-- Golang: Use `dlv exec` command to run the program, attach by port. Build using debug flags.
-- Python: Use `debugpy` in entrypoint script to listen and wait, attach by port. Must install debugpy into venv.
-- Csharp: Poll System.Diagnostics.Debugger.IsAttached` in entrypoint script to wait, attach by pid.
-- Java: Use `jdwp` JVM args, attach by port.
-
 ## Performance
 
 If you are seeing unexpectedly slow performance, you can gather a trace to understand what
