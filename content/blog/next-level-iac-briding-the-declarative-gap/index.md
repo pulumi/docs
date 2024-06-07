@@ -149,6 +149,28 @@ Our example shows how to do Base64 encoding, but this technique can be used for 
 
 While Pulumi's asynchronous semantics may seem somewhat complex for basic use cases, they unlock abilities in more complex use cases, which is when you really need your IaC tooling to show up for you. Because real life is never as simple as demo code.
 
+## Next Steps
+
+If you haven't already, [install Pulumi][pulumi-install] today, and follow our self-directed [Getting Started guides][pulumi-start] to learn more about making the most of Pulumi's next-level infrastructure management features at your organization.
+
+To learn more, you can watch the following video which provides a high level overview of how Pulumi works:
+
+<div class="rounded-md shadow border border-gray-300 w-3/4 mx-auto my-4" style="position: relative; padding-bottom: 40.25%; height: 0; overflow: hidden;">
+    <iframe
+        src="//www.youtube.com/embed/Q8tw6YTD3ac?rel=0"
+        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;"
+        allowfullscreen=""
+        title="Introduction to Pulumi in Three Minutes"
+        srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img{position:absolute;width:100%;top:0;bottom:0;margin:auto}</style><a href=https://www.youtube.com/embed/Q8tw6YTD3ac?autoplay=1><img src='/images/home/youtube-getting-started.png' alt='Introduction to Pulumi in Three Minutes'></a>">
+    </iframe>
+</div>
+
+## Pulumi Cloud
+
+The Pulumi Cloud is a fully managed service that helps you adopt Pulumi’s open source SDK with ease. It provides built-in state and secrets management, integrates with source control and CI/CD, and offers a web console and API that make it easier to visualize and manage infrastructure. It is free for individual use, with features available for teams.
+
+<a class="btn btn-secondary" href="https://app.pulumi.com/signup" target="_blank">Create an Account</a>
+
 [dsl-wiki]: https://en.wikipedia.org/wiki/Domain-specific_language
 [yaml-wiki]: https://en.wikipedia.org/wiki/YAML
 [fsharp-example]: https://github.com/pulumi/examples/blob/master/aws-fs-s3-folder/Program.fs
@@ -165,3 +187,5 @@ While Pulumi's asynchronous semantics may seem somewhat complex for basic use ca
 [base64-wiki]: https://en.wikipedia.org/wiki/Base64
 [next-level-iac-package-ecosystems]: https://www.pulumi.com/blog/next-level-iac-package-ecosystems/
 [data-transformation-wiki]: https://en.wikipedia.org/wiki/Data_transformation_(computing)
+[pulumi-install]: https://www.pulumi.com/docs/install/
+[pulumi-start]: https://www.pulumi.com/start
