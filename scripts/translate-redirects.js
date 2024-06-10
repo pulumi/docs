@@ -49,7 +49,7 @@ function getMetaRefreshRedirect(filePath) {
 
     // Extract the redirect from the content of the file.
     const text = fs.readFileSync(filePath, "utf8");
-    const regex = /<meta\s+?http-equiv=refresh\s+?content="0;\s+?url=(.*?)"/gmi;
+    const regex = /<meta\s+?http-equiv="refresh"\s+?content="0;\s+?url=(.*?)"/gmi;
     const match = regex.exec(text);
 
     if (match && match.length === 2) {
