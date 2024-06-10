@@ -103,6 +103,9 @@ Pulumi has a new way to transform component resources and their children, the `t
 `transformations` option doesn't work with multi-language components like Chart "v4". See
 [Resource Option: transforms](content/docs/concepts/options/transforms.md) for more details.
 
+Note: you cannot change an object's namespace or name using a Pulumi transformation, and you cannot add or discard
+an object.
+
 Here's an example of using the `transforms` option to add the `pulumi.com/patchForce` annotation
 to a chart's resources.
 
@@ -153,8 +156,77 @@ not to delete a given object when the resource is destroyed. Simply apply the `h
 to the object. See [Tell Helm Not To Uninstall a Resource](https://helm.sh/docs/howto/charts_tips_and_tricks/#tell-helm-not-to-uninstall-a-resource)
 for details.
 
-## Example: TODO
+## Example: ArgoCD
 
+Here's a real-world example of installing ArgoCD into a Kubernetes cluster, and of using ArgoCD's `Application`
+resource to deploy the 'guestbook' example.
+
+```ts
+import * as k8s from "@pulumi/kubernetes";
+import * as random from "@pulumi/random";
+
+const ns = new k8s.core.v1.Namespace("argo-cd", {
+    metadata: {
+        name: "argocd",
+    },
+});
+
+// create a Secret containing the redis password, as is done with `argocd admin redis-initial-password`
+const password = new random.RandomPassword("argo-cd-redis-password", {
+    length: 16,
+});
+const redisSecret = new k8s.core.v1.Secret("argo-cd-redis-secret", {
+    metadata: {
+        name: "argocd-redis",
+        namespace: ns.metadata.name,
+    },
+    type: "Opaque",
+    stringData: {
+        auth: password.result,
+    },
+}, {dependsOn: [ns], retainOnDelete: true});
+
+// install the ArgoCD server
+const argoChart = new k8s.helm.v4.Chart("argo-cd", {
+    chart: "argo-cd",
+    version: "6.11.1",
+    namespace: ns.metadata.name,
+    repositoryOpts: {
+        repo: "https://argoproj.github.io/argo-helm",
+    },
+}, {dependsOn: [redisSecret]});
+
+// deploy the guestbook using the Application resource
+const guestbook = new k8s.apiextensions.CustomResource("guestbook", {
+    apiVersion: "argoproj.io/v1alpha1",
+    kind: "Application",
+    metadata: {
+        name: "guestbook",
+        namespace: ns.metadata.name,
+    },
+    spec: {
+        project: "default",
+        source: {
+            repoURL: "https://github.com/argoproj/argocd-example-apps.git",
+            targetRevision: "HEAD",
+            path: "guestbook",
+        },
+        "destination": {
+            server: "https://kubernetes.default.svc",
+            namespace: "default",
+        }
+    }
+}, {dependsOn: [argoChart]});
+
+export const redisPassword = password.result;
+```
+
+The program creates the `argocd` namespace, installs the ArgoCD server, and then creates an `Application`.
+Observe how the program installs and uses a Custom Resource Definition (CRD) successfully, and uses `dependsOn`
+to ensure that the CRD is installed first.
+
+Since this chart makes use of a Helm hook to initialize a password for the redis server. Since the Chart v4 resource
+doesn't support Helm hooks, this program uses Pulumi code to accomplish what the hook does.
 
 ## Conclusion
 
