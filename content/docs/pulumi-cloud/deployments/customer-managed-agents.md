@@ -36,7 +36,7 @@ Before you begin, ensure you have installed the [Pulumi Github App](/docs/using-
 6. **(Optional)** Add more agents to the pool to increase concurrency by using the same token
 7. Verify setup by doing a 'pulumi refresh' through the **Actions** drop-down in your stack page
 
-![Pool Details view](../customer-managed-agents-assets/view-agent-status.png)
+![Pool Details view](../../../../blog/customer-managed-deployment-agents-launch/view-agent-status.png)
 
 Agents poll Pulumi Cloud every 30 seconds to check for pending deployments and will disappear from the Pool details page 1-2 hours after being offline. On the deployments page, you can see all the deployments including pending deployments, and which deployment agents were used in a deployment.
 
