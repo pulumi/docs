@@ -6,7 +6,7 @@ description: |
 meta_desc: Learn how BMW used Pulumi to simplify the automation of their AWS and on-premises infrastructure.
 
 customer_name: BMW
-customer_logo: /logos/customers/bmw-logo.png
+customer_logo: /logos/customers/bmw.svg
 customer_url: https://www.bmwusa.com/
 
 exec_summary: |
