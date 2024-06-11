@@ -27,11 +27,11 @@ case_studies:
           description: |
             Increased developers' agility and speed through platform engineering.
 
-        - name: Starburst Data
+        - name: Starburst
           link: /blog/how-starburst-data-creates-infrastructure-automation-magic-with-code/
           logo: starburst
           description: |
-            Increased velocity and speed, with deployments that are up to 10x faster.
+            Increased velocity and speed, with deployments that are up to 3x faster.
 
         - name: BMW
           link: /case-studies/bmw/
