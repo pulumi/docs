@@ -11,7 +11,6 @@ overview:
 
 get_started: Get Started with Copilot
 
-# TODO: replace graphic and alt text
 benefits:
     title: How do I use Pulumi Copilot?
     description: |
@@ -57,7 +56,6 @@ options:
           example: "Example:  Why did my deployment yesterday fail?"
           link: "https://app.pulumi.com/pulumi/?askCopilot=Why did my deployment yesterday fail?"
 
-# TODO: fill this out for Copilot or remove entirely
 faq:
     items:
       - header: Will my data be used to train Pulumi Copilot?
@@ -86,7 +84,6 @@ faq:
         content: |
           Pulumi Copilot uses private, paid enterprise versions of Microsoft Azure OpenAI models. 
 
-# TODO: updates to these CTAs
 learn:
     title: Get Started
     items:
