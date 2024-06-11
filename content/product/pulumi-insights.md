@@ -34,7 +34,7 @@ overview:
 ai:
     title: AI
     subtitle: Automate infrastructure with the power of AI.
-    image: /images/product/pulumi-insights-copilot.gif
+    image: https://www.pulumi.com/uploads/pulumi-insights-copilot.gif
     description: |
         Author infastructure as code programs in your favorite programming language and automate infrastructure management tasks through AI. You can tap into the Pulumi Copilot's deep understanding of your user and organization context to gain deep visibility into your team's activity, discover cost saving opportunities, get compliance, and debug cloud failures. 
 
