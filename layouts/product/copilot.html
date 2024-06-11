@@ -51,7 +51,7 @@
                             <p>{{ $item.description | markdownify }}</p>
                         </div>
                         <div class="my-6">
-                            <p><i>{{ $item.example | markdownify }}</i></p>
+                            <p><i><a href="{{ $item.link | markdownify }}">{{ $item.example | markdownify }}</a></i></p>
                         </div>
                     </div>
                 </div>

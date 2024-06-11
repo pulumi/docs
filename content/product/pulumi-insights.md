@@ -25,7 +25,7 @@ overview:
           description: |
             Reduce lead time from ideation to delivery through Pulumi AI and Pulumi Copilot.
 
-        - title: Improve Compliance
+        - title: Improve Operations
           icon: shield
           icon_color: blue
           description: |
@@ -33,14 +33,14 @@ overview:
 
 ai:
     title: AI
-    subtitle: Automate infrastructure with the power of AI.
+    subtitle: Automate infrastructure with the power of AI
     image: https://www.pulumi.com/uploads/pulumi-insights-copilot.gif
     description: |
-        Author infastructure as code programs in your favorite programming language and automate infrastructure management tasks through AI. You can tap into the Pulumi Copilot's deep understanding of your user and organization context to gain deep visibility into your team's activity, discover cost saving opportunities, get compliance, and debug cloud failures. 
+        Author infastructure as code programs in your favorite programming language and automate infrastructure management tasks through AI. You can tap into the Pulumi Copilot's deep understanding of your user and organization context to gain visibility into your team's activity, discover cost saving opportunities, get compliance, and debug cloud failures. 
 
 search:
     title: Search
-    subtitle: Find anything in any cloud.
+    subtitle: Find anything in any cloud
     image: https://www.pulumi.com/uploads/pulumi-insights-search.gif
     description: |
         Ask any questions about your infrastructure across more than 100 clouds, using either structured search queries or natural language prompts. Search helps you find that needle in the haystack – locating a single resource across many clouds and environments – as well as running sophisticated queries such as tracking down untagged or expensive resources across the whole organization.
@@ -55,17 +55,10 @@ quotes:
 
 analytics:
     title: Analytics
-    subtitle: Gain deeper insights into infrastructure as code.
+    subtitle: Gain deeper insights into infrastructure as code
     image: /images/product/pulumi-insights-analytics.png
     description: |
         Identify anomalies or trends in resource usage and dig into cost, security, and compliance concerns. You can programmatically query a REST API to add automation around search results or to integrate with internal platforms and dashboards. You can export data to other data warehouses including Snowflake, Amazon Redshift, Google BigQuery and Azure Synapse. You also have built-in dashboards that give you key insights about cloud usage.
-
-
-security:
-    title: Pulumi takes security seriously
-    image: /images/product/soc-aicpa.svg
-    description: |
-        Pulumi Service runs in an AWS VPC and our architecture follows industry best practices. All network communication is encrypted using TLS and Pulumi’s endpoints are only accessible via HTTPS. Your data is also encrypted at-rest and Pulumi is compliant with SOC 2 Type II.
 
 pricing:
     title: Pricing

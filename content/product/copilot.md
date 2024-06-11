@@ -13,41 +13,47 @@ get_started: Get Started with Copilot
 
 # TODO: replace graphic and alt text
 benefits:
-    title: Where do I use Pulumi Copilot?
+    title: How do I use Pulumi Copilot?
     description: |
         Pulumi Copilot is an interactive user interface in Pulumi Cloud, Pulumi documentation, and Pulumi CLI.
         
         Pulumi Copilot understands the entirety of over 160 clouds, including public clouds (AWS, Azure, Google Cloud), cloud native (Kubernetes, Helm), SaaS providers (Snowflake, Cloudflare, Datadog), and more. Pulumi Copilot directly interfaces with these cloud APIs and data models.
         
         Simply ask any question, and Copilot will provide relevant, contextual, and effective responses to queries across the entire platform.
+
+        Pulumi Copilot is in beta, and some of the answers may be inaccurate. Please send us your feedback so we can continue to improve the experience by typing `/bug` into Copilot or filing an [issue](https://github.com/pulumi/pulumi/issues/new/choose) in GitHub.
     graphic:
         image: /images/product/copilot-demo.mp4
         alt: Pulumi Copilot Demo
 
 options:
-    title: How do I use Pulumi Copilot?
+    title: What are the use cases of Pulumi Copilot?
     description:
     items:
         - icon: upload-to-cloud
           icon_color: purple
           title: Generate infrastructure code
           description: You can generate a Pulumi program and deploy it as a template in seconds with a few simple text prompts.
-          example: "Example: Create a new project to deploy a  serverless application on AWS"
+          example: "Example:  Create a new project to deploy a serverless application on AWS"
+          link: "https://app.pulumi.com/pulumi/?askCopilot=Create a new project to deploy a serverless application on AWS"
         - icon: eye
           icon_color: salmon
-          title: Answer questions about existing infrastructure
+          title: Discover cost savings
           description: Copilot can access infrastructure stack and resource data, so you can analyze your infrastructure on cost, compliance, cloud usage.
-          example: "Example:  What is my production VPC ID in us-west-2"
+          example: "Example:  What are my least used, most expensive resources?"
+          link: "https://app.pulumi.com/pulumi/?askCopilot=What are my least used, most expensive resources?"
         - icon: shield
           icon_color: blue
           title: Run compliance checks
           description: You can analyze infrastructure for security and compliance concerns.
           example: "Example:  We are going through an internal security audit. Can you tell me any infrastructure that is not following AWS Well-Architected standards?"
+          link: "https://app.pulumi.com/pulumi/?askCopilot=We are going through an internal security audit. Can you tell me any infrastructure that is not following AWS Well-Architected standards?"
         - icon: code-window
           icon_color: fuchsia
           title: Debug failed stack updates
           description: Copilot can access update and deployment logs of your stacks, so you can easily get answers about what caused failures.
-          example: "Example:  Why did this update fail?"
+          example: "Example:  Why did my deployment yesterday fail?"
+          link: "https://app.pulumi.com/pulumi/?askCopilot=Why did my deployment yesterday fail?"
 
 # TODO: fill this out for Copilot or remove entirely
 faq:
@@ -85,9 +91,9 @@ learn:
         - title: Try Pulumi Copilot today
           description: Automate any infrastructure management task by creating a free Pulumi account.
           buttons:
-            - link: https://app.pulumi.com/signup
+            - link: https://app.pulumi.com/
               type: primary
-              action: Sign up for Pulumi Cloud
+              action: Try Copilot
         - title: Documentation
           description: Review our documentation to learn more about Pulumi Copilot.
           buttons:
