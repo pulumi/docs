@@ -15,7 +15,7 @@ tags:
 ---
 
 {{% notes type="info" %}}
-Some of the code in this post is out of date. See the [AWS guides](/docs/clouds/aws/guides/) for an updated overview and examples.
+There are new intelligent cloud management capabilities available in Pulumi Copilot. [Read More.](/copilot)
 {{% /notes %}}
 
 We've seen incredible acceleration of cloud adoption over the past 5 years. Pulumi’s flagship open source IaC solution gives engineers great tools to scale up their cloud infrastructure using the same programming languages and tools they already know and love. As a result, thousands of companies of every size and scale have adopted Pulumi as a lynchpin of their cloud infrastructure strategy.
