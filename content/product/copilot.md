@@ -21,7 +21,9 @@ benefits:
         
         Simply ask any question, and Copilot will provide relevant, contextual, and effective responses to queries across the entire platform.
 
-        Pulumi Copilot is in beta, and some of the answers may be inaccurate. Please send us your feedback so we can continue to improve the experience by typing `/bug` into Copilot or filing an [issue](https://github.com/pulumi/pulumi/issues/new/choose) in GitHub.
+        Pulumi Copilot is available in public beta, and is free while in beta. Organization admins can turn on Copilot in their organization Settings > Access Management > Pulumi Copilot within the Pulumi Cloud console.
+        
+        Some of the answers in Pulumi Copilot may be inaccurate. Please send us your feedback so we can continue to improve the experience by typing `/bug` into Copilot or filing an [issue](https://github.com/pulumi/pulumi/issues/new/choose) in GitHub.
     graphic:
         image: /images/product/copilot-demo.mp4
         alt: Pulumi Copilot Demo
