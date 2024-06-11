@@ -33,10 +33,10 @@ overview:
 
 ai:
     title: AI
-    subtitle: Code faster with the power of AI.
-    image: https://www.pulumi.com/uploads/pulumi-insights-ai-web.gif
+    subtitle: Automate infrastructure with the power of AI.
+    image: /images/product/pulumi-insights-copilot.gif
     description: |
-        Author infastructure as code programs in your favorite programming language using large-language models, and automate infrastructure creation through AI. You can tap into the Pulumi platform's deep understanding of usage patterns to leverage recommendations and generate infrastructure as code automatically. 
+        Author infastructure as code programs in your favorite programming language and automate infrastructure management tasks through AI. You can tap into the Pulumi Copilot's deep understanding of your user and organization context to gain deep visibility into your team's activity, discover cost saving opportunities, get compliance, and debug cloud failures. 
 
 search:
     title: Search
