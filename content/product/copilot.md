@@ -2,12 +2,12 @@
 title: Pulumi Copilot
 layout: copilot
 
-meta_desc: Pulumi Copilot is a virtual teammate that automates management of any cloud
+meta_desc: Pulumi Copilot is an AI-powered assistant for general cloud infrastructure management
 
 overview:
-    title: Virtual Teammate that Automates Management of Any Cloud
+    title: Intelligent Cloud Management
     description: |
-        Pulumi Copilot is a LLM-based assistant that automates any infrastructure management task. Copilot combines the power of large language models with semantic understanding of the cloud to unlock greater insights and controls over managing cloud infrastructure. Using the same GPT experience everyone knows, loves, and uses everyday, engineers can find anything in their cloud infrastructure and take action on any cloud resource. Pulumi Copilot lowers the barriers of managing the lifecycle of cloud infrastructure. 
+        Pulumi Copilot is an AI-powered assistant that automates any infrastructure management task. Copilot combines the power of large language models with semantic understanding of the cloud to unlock greater insights and controls over managing cloud infrastructure. Using the same GPT experience everyone knows, loves, and uses everyday, engineers can find anything in their cloud infrastructure and take action on any cloud resource. Pulumi Copilot lowers the barriers of managing the lifecycle of cloud infrastructure. 
 
 get_started: Get Started with Copilot
 
@@ -21,7 +21,7 @@ benefits:
         
         Simply ask any question, and Copilot will provide relevant, contextual, and effective responses to queries across the entire platform.
 
-        Pulumi Copilot is available in public beta, and is free while in beta. Organization admins can turn on Copilot in their organization Settings > Access Management > Pulumi Copilot within the Pulumi Cloud console.
+        Pulumi Copilot is available in public beta, and is free while in beta. Organization admins can turn on Copilot in their organization **Settings > Access Management > Pulumi Copilot** within the Pulumi Cloud console.
         
         Some of the answers in Pulumi Copilot may be inaccurate. Please send us your feedback so we can continue to improve the experience by typing `/bug` into Copilot or filing an [issue](https://github.com/pulumi/pulumi/issues/new/choose) in GitHub.
     graphic:
