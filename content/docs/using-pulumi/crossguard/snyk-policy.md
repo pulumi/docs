@@ -91,21 +91,23 @@ import (
 )
 
 func main() {
- pulumi.Run(func(ctx *pulumi.Context) error {
-  _, err := docker.NewImage(ctx, "exampleImage", &docker.ImageArgs{
-   ImageName:      pulumi.String("docker.io/your-user-name/your-image-name"),
-   BuildOnPreview: pulumi.Bool(true),
-   Build: &docker.DockerBuildArgs{
-    Dockerfile: pulumi.String("./app/Dockerfile"),
-    Context:    pulumi.String("./app"),
-   },
-   SkipPush: pulumi.Bool(true),
-  })
-  if err != nil {
-   return err
-  }
-  return nil
- })
+    pulumi.Run(func(ctx *pulumi.Context) error {
+        _, err := docker.NewImage(ctx, "exampleImage", &docker.ImageArgs{
+            ImageName:      pulumi.String("docker.io/your-user-name/your-image-name"),
+            BuildOnPreview: pulumi.Bool(true),
+            Build: &docker.DockerBuildArgs{
+                Dockerfile: pulumi.String("./app/Dockerfile"),
+                Context:    pulumi.String("./app"),
+            },
+            SkipPush:       pulumi.Bool(true),
+        })
+
+        if err != nil {
+            return err
+        }
+
+        return nil
+    })
 }
 ```
 
