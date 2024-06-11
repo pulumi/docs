@@ -3,7 +3,7 @@ title_tag: "Snyk Container Scanning | CrossGuard"
 meta_desc: Snyk container scanning helps you ensure that your Docker images are secure.
 title: Synk Container Scanning
 h1: Snyk Container Scanning
-weight: 4
+weight: 3
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   usingpulumi:
