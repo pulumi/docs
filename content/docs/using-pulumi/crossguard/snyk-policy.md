@@ -229,7 +229,7 @@ The Synk policy template supports the following configurable options:
 
 To set the configuration, you can do one of the following:
 
-1. Hard-code the values in `index.ts` within the templated policy. (These values will serve as deafults and may still be overridden on a per-run basis by either of the methods that follow.)
+1. Hard-code the values in `index.ts` within the templated policy. (These values will serve as defaults and may still be overridden on a per-run basis by either of the methods that follow.)
 1. Create a JSON file with the configuration values, e.g.:
 
     ```json
@@ -238,7 +238,7 @@ To set the configuration, you can do one of the following:
             "enforcementLevel": "disabled",
             "dockerfileScanning": true,
             "pulumiProgramAbsPath": "/path/to/pulumi/iac/program"
-        },
+        }
     }
     ```
 
@@ -253,4 +253,4 @@ To set the configuration, you can do one of the following:
 
 ## Next Steps
 
-Once you've tested the Policy Pack, an organization administrator can publish the Policy Pack to the Pulumi Cloud to be enforced across your organization. To learn more see [Enforcing a Policy Pack Across an Organization](/docs/using-pulumi/crossguard/get-started#enforcing-a-policy-pack).
+Once you've tested the Policy Pack, an organization administrator can publish the Policy Pack to Pulumi Cloud to be enforced across your organization. To learn more,see [Enforcing a Policy Pack Across an Organization](/docs/using-pulumi/crossguard/get-started#enforcing-a-policy-pack).
