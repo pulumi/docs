@@ -27,17 +27,17 @@ case_studies:
           description: |
             Increased developers' agility and speed through platform engineering.
 
-        - name: Panther Labs
-          link: /case-studies/panther-labs/
-          logo: panther-labs
+        - name: Starburst Data
+          link: /blog/how-starburst-data-creates-infrastructure-automation-magic-with-code/
+          logo: starburst
           description: |
             Increased velocity and speed, with deployments that are up to 10x faster.
 
-        - name: Mercedes-Benz
-          link: /case-studies/mercedes-benz/
-          logo: mercedes-benz
+        - name: BMW
+          link: /case-studies/bmw/
+          logo: bmw
           description: |
-            Enabled developers to deploy Kubernetes clusters quickly and easily.
+            Enabled developers to deploy across hybrid cloud environments.
 
         - name: Lemonade
           link: /case-studies/lemonade/
