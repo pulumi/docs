@@ -17,10 +17,11 @@ tags:
 
 When you need to install a third-party application into your Kubernetes cluster, you're likely to find a
 Helm chart for that in [Artifact Hub](https://artifacthub.io/) or other registry. Pulumi provides two
-ways to apply a Helm chart, as outlined in [Choosing the Right Helm Resource For Your Use Case](/registry/packages/kubernetes/how-to-guides/choosing-the-right-helm-resource-for-your-use-case/). Today we're happy to announce a new "v4" version of the Chart resource,
-available now in v4.13 of the Pulumi Kubernetes provider. 
+ways to apply a Helm chart, as outlined in [Choosing the Right Helm Resource For Your Use Case](/registry/packages/kubernetes/how-to-guides/choosing-the-right-helm-resource-for-your-use-case/).  The Chart resource offers deeper integration with Pulumi
+and better drift remediation.
 
-The new "v4" Chart resource is provided side-by-side with the existing "v3" Chart resource.
+Today we're happy to announce a new "v4" version of the Chart resource, available now in v4.13 of the Pulumi Kubernetes provider.
+The new Chart v4 resource is provided side-by-side with the existing Chart v3 resource.
 
 ## What's New
 Let's look at what's new with Chart v4.
@@ -28,8 +29,14 @@ Let's look at what's new with Chart v4.
 ### New SDK Support - Java SDK & YAML SDK
 
 The "v4" Chart resource is a multi-language Pulumi Component (MLC) that works consistently across all Pulumi SDKs.
+We expect that having a unified implementation, as is now possible with MLC technology, will lead to fewer issues
+and broader support.
 
 Here, for example, is a simple deployment of [cert-manager](https://cert-manager.io/), a well-known Kubernetes add-on:
+
+{{% chooser language "typescript,python,go,csharp,yaml" / %}}
+
+{{% choosable language yaml %}}
 
 ```yaml
   certman:
@@ -39,6 +46,123 @@ Here, for example, is a simple deployment of [cert-manager](https://cert-manager
       chart: oci://registry-1.docker.io/bitnamicharts/cert-manager
       version: "1.3.1"
 ```
+
+{{% /choosable %}}
+
+{{% choosable language typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as kubernetes from "@pulumi/kubernetes";
+
+const certman = new kubernetes.helm.v4.Chart("certman", {
+    namespace: "cert-manager",
+    chart: "oci://registry-1.docker.io/bitnamicharts/cert-manager",
+    version: "1.3.1",
+});
+```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+```python
+import pulumi
+import pulumi_kubernetes as kubernetes
+
+certman = kubernetes.helm.v4.Chart("certman",
+    namespace="cert-manager",
+    chart="oci://registry-1.docker.io/bitnamicharts/cert-manager",
+    version="1.3.1")
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```go
+package main
+
+import (
+	helmv4 "github.com/pulumi/pulumi-kubernetes/sdk/v4/go/kubernetes/helm/v4"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := helmv4.NewChart(ctx, "certman", &helmv4.ChartArgs{
+			Namespace: pulumi.String("cert-manager"),
+			Chart:     pulumi.String("oci://registry-1.docker.io/bitnamicharts/cert-manager"),
+			Version:   pulumi.String("1.3.1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+```csharp
+using System.Collections.Generic;
+using System.Linq;
+using Pulumi;
+using Kubernetes = Pulumi.Kubernetes;
+
+return await Deployment.RunAsync(() => 
+{
+    var certman = new Kubernetes.Helm.V4.Chart("certman", new()
+    {
+        Namespace = "cert-manager",
+        Chart = "oci://registry-1.docker.io/bitnamicharts/cert-manager",
+        Version = "1.3.1",
+    });
+
+});
+```
+
+{{% /choosable %}}
+
+{{% choosable language java %}}
+
+```java
+package generated_program;
+
+import com.pulumi.Context;
+import com.pulumi.Pulumi;
+import com.pulumi.core.Output;
+import com.pulumi.kubernetes.helm.sh_v4.Chart;
+import com.pulumi.kubernetes.helm.sh_v4.ChartArgs;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Map;
+import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
+public class App {
+    public static void main(String[] args) {
+        Pulumi.run(App::stack);
+    }
+
+    public static void stack(Context ctx) {
+        var certman = new Chart("certman", ChartArgs.builder()
+            .namespace("cert-manager")
+            .chart("oci://registry-1.docker.io/bitnamicharts/cert-manager")
+            .version("1.3.1")
+            .build());
+
+    }
+}
+```
+
+{{% /choosable %}}
+
+{{% /chooser %}}
 
 ### OCI Registry Support
 
@@ -156,7 +280,7 @@ not to delete a given object when the resource is destroyed. Simply apply the `h
 to the object. See [Tell Helm Not To Uninstall a Resource](https://helm.sh/docs/howto/charts_tips_and_tricks/#tell-helm-not-to-uninstall-a-resource)
 for details.
 
-## Example: ArgoCD
+## Example: Argo CD
 
 Here's a real-world example of installing ArgoCD into a Kubernetes cluster, and of using ArgoCD's `Application`
 resource to deploy the 'guestbook' example.
@@ -225,8 +349,8 @@ The program creates the `argocd` namespace, installs the ArgoCD server, and then
 Observe how the program installs and uses a Custom Resource Definition (CRD) successfully, and uses `dependsOn`
 to ensure that the CRD is installed first.
 
-Since this chart makes use of a Helm hook to initialize a password for the redis server. Since the Chart v4 resource
-doesn't support Helm hooks, this program uses Pulumi code to accomplish what the hook does.
+The `argo-cd` chart normally makes use of a Helm hook to initialize a password for the redis server. 
+Since the Chart v4 resource doesn't support Helm hooks, this program creates the password directly.
 
 ## Conclusion
 
