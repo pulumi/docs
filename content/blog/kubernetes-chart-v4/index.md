@@ -1,8 +1,8 @@
 ---
-title: "New: Helm Chart resource for Java, YAML SDKs"
-date: 2024-04-12T00:00:00-07:00
+title: "New: Helm Chart v4 resource with tons of new features"
+date: 2024-06-12T00:00:00-07:00
 meta_desc: >-
-  Pulumi Kubernetes v4.13 offers a new resource for applying Helm charts consistently across Pulumi SDKs, and broadens support to the Java and YAML SDKs.
+  Pulumi Kubernetes v4.13 offers a new resource for applying Helm charts consistently across Pulumi SDKs, with new features and SDK support.
 
 authors:
     - eron-wright
@@ -22,6 +22,7 @@ and better drift remediation.
 Today we're happy to announce a new "v4" version of the Chart resource, available now in v4.13 of the Pulumi Kubernetes provider.
 The new [kubernetes.helm.sh/v4.Chart](/registry/packages/kubernetes/api-docs/helm/v4/chart/) resource is provided
 side-by-side with the existing [kubernetes.helm.sh/v3.Chart](/registry/packages/kubernetes/api-docs/helm/v3/chart/) resource.
+We expect to deprecate v3 in the future.
 
 ## What's New
 
@@ -29,9 +30,9 @@ Let's look at what's new with Chart v4.
 
 ### New SDK Support - Java SDK & YAML SDK
 
-The Chart v4 resource is a multi-language Pulumi Component (MLC) that works consistently across all Pulumi SDKs.
-We expect that having a unified implementation, as is now possible with MLC technology, will lead to fewer issues
-and broader support.
+The Chart v4 resource is a [Pulumi Component](/docs/using-pulumi/pulumi-packages/#types-of-pulumi-packages) that works
+consistently across all Pulumi SDKs. Earlier versions were implemented separately for each SDK, leading to various
+inconsistencies and limited SDK support.
 
 Here, for example, is a simple deployment of [cert-manager](https://cert-manager.io/), a well-known Kubernetes add-on:
 
@@ -154,7 +155,7 @@ public class App {
 
 ```yaml
 resources:
-  certman:
+  cert-manager:
     type: kubernetes:helm.sh/v4:Chart
     properties:
       namespace: cert-manager
@@ -192,9 +193,195 @@ resources as chart values.
 It is also possible to set a chart value to the contents of a text file, similarly to using Helm's `--set-file` argument.
 To do that, simply use a Pulumi Asset as a value within the `values` map.
 
+Here's an example of using a combination of values from different sources.
+
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+
+{{% choosable language "javascript,typescript" %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as kubernetes from "@pulumi/kubernetes";
+
+const certManager = new kubernetes.helm.v4.Chart("cert-manager", {
+    namespace: "cert-manager",
+    chart: "oci://registry-1.docker.io/bitnamicharts/cert-manager",
+    version: "1.3.1",
+    valueYamlFiles: [new pulumi.asset.FileAsset("values.yaml")],
+    values: {
+        commonLabels: {
+            biz: "bam",
+        },
+        extraDeploy: [new pulumi.asset.FileAsset("extras.yaml.tmpl")],
+    },
+});
+```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+```python
+import pulumi
+import pulumi_kubernetes as kubernetes
+
+cert_manager = kubernetes.helm.v4.Chart("cert-manager",
+    namespace="cert-manager",
+    chart="oci://registry-1.docker.io/bitnamicharts/cert-manager",
+    version="1.3.1",
+    value_yaml_files=[pulumi.FileAsset("values.yaml")],
+    values={
+        "commonLabels": {
+            "biz": "bam",
+        },
+        "extraDeploy": [pulumi.FileAsset("extras.yaml.tmpl")],
+    })
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```go
+package main
+
+import (
+	helmv4 "github.com/pulumi/pulumi-kubernetes/sdk/v4/go/kubernetes/helm/v4"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := helmv4.NewChart(ctx, "cert-manager", &helmv4.ChartArgs{
+			Namespace: pulumi.String("cert-manager"),
+			Chart:     pulumi.String("oci://registry-1.docker.io/bitnamicharts/cert-manager"),
+			Version:   pulumi.String("1.3.1"),
+			ValueYamlFiles: pulumi.AssetOrArchiveArray{
+				pulumi.NewFileAsset("values.yaml"),
+			},
+			Values: pulumi.Map{
+				"commonLabels": pulumi.Any(map[string]interface{}{
+					"biz": "bam",
+				}),
+				"extraDeploy": pulumi.Any{
+					pulumi.NewFileAsset("extras.yaml.tmpl"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+```csharp
+using System.Collections.Generic;
+using System.Linq;
+using Pulumi;
+using Kubernetes = Pulumi.Kubernetes;
+
+return await Deployment.RunAsync(() =>
+{
+    var certManager = new Kubernetes.Helm.V4.Chart("cert-manager", new()
+    {
+        Namespace = "cert-manager",
+        Chart = "oci://registry-1.docker.io/bitnamicharts/cert-manager",
+        Version = "1.3.1",
+        ValueYamlFiles = new[]
+        {
+            new FileAsset("values.yaml"),
+        },
+        Values =
+        {
+            { "commonLabels", new Dictionary<string, object?>
+            {
+                ["biz"] = "bam",
+            } },
+            { "extraDeploy", new[]
+            {
+                new FileAsset("extras.yaml.tmpl"),
+            } },
+        },
+    });
+
+});
+```
+
+{{% /choosable %}}
+
+{{% choosable language java %}}
+
+```java
+package generated_program;
+
+import com.pulumi.Context;
+import com.pulumi.Pulumi;
+import com.pulumi.core.Output;
+import com.pulumi.kubernetes.helm.v4.Chart;
+import com.pulumi.kubernetes.helm.v4.ChartArgs;
+import com.pulumi.asset.FileAsset;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Map;
+import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
+public class App {
+    public static void main(String[] args) {
+        Pulumi.run(App::stack);
+    }
+
+    public static void stack(Context ctx) {
+        var certManager = new Chart("certManager", ChartArgs.builder()
+            .namespace("cert-manager")
+            .chart("oci://registry-1.docker.io/bitnamicharts/cert-manager")
+            .version("1.3.1")
+            .valueYamlFiles(new FileAsset("values.yaml"))
+            .values(Map.ofEntries(
+                Map.entry("commonLabels", Map.of("biz", "bam")),
+                Map.entry("extraDeploy", new FileAsset("extras.yaml.tmpl"))
+            ))
+            .build());
+
+    }
+}
+```
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+```yaml
+resources:
+  cert-manager:
+    type: kubernetes:helm.sh/v4:Chart
+    properties:
+      namespace: cert-manager
+      chart: oci://registry-1.docker.io/bitnamicharts/cert-manager
+      version: "1.3.1"
+      valueYamlFiles:
+      - fn::fileAsset: values.yaml
+      values:
+        commonLabels:
+          biz: bam
+        extraDeploy:
+        - fn::fileAsset: extras.yaml.tmpl
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
 ### Better Connectivity
 
-You may now use chart functions that require a connection to the cluster, e.g. to:
+You may now use charts that use chart functions requiring a connection to the cluster, e.g. to:
 
 - Check the Kubernetes server version with [`.Capabilities.KubeVersion`](https://helm.sh/docs/chart_template_guide/builtin_objects/)
 - Check if an API version or kind is available with [`.Capabilities.APIVersions.Has`](https://helm.sh/docs/chart_template_guide/function_list/#capabilitiesapiversionshas)
@@ -743,7 +930,7 @@ public class App {
                     ))
                 ))
             ))
-            .build(), CustomResourceOptions.builder()
+            .build(), ComponentResourceOptions.builder()
                 .dependsOn(argocd)
                 .build());
 
