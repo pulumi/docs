@@ -4,7 +4,7 @@ allow_long_title: true
 
 date: 2024-06-12T04:00:00-07:00
 
-meta_desc: "TODO"
+meta_desc: "Pulumi Copilot is a new conversational AI for Intellignet Cloud Management in Pulumi Cloud"
 
 meta_image: copilot.png
 
@@ -20,11 +20,11 @@ tags:
 
 AI is transforming how users interact with every category of technology today, and cloud infrastructure is no exception.  Last year we launched Pulumi AI to combine generative AI with Pulumi’s knowledge of cloud infrastructure, helping users solve complex cloud development problems using Infrastructure-as-Code.  Pulumi AI has seen rapid adoption and engagement, with tens of thousands of users leveraging Pulumi AI over the last year.
 
-Today, we’re excited to introduce __Pulumi Copilot__, a huge leap forward in applying AI to cloud infrastructure management.  Pulumi Copilot is a new conversational chat interface integrated throughout Pulumi Cloud, enabling Pulumi Cloud users to quickly accomplish a variety of cloud infrastructure management tasks by leveraging the power of large language models plus the rich capabilities of Pulumi Cloud. 
+Today, we’re excited to introduce __Pulumi Copilot__, a huge leap forward in applying AI to cloud infrastructure management.  Pulumi Copilot is a new conversational chat interface integrated throughout Pulumi Cloud, enabling Pulumi Cloud users to quickly accomplish a variety of cloud infrastructure management tasks by leveraging the power of large language models plus the rich capabilities of Pulumi Cloud.
 
 <!--more-->
 
-{{< youtube "MtV_LPZKNP8?rel=0" >}} <!-- FIX LINK -->
+{{< video title="Pulumi Copilot Demo" src="demo.mp4" autoplay="true" loop="true" >}}
 
 Through Pulumi Copilot, you can explore your cloud infrastructure and gain insights across an incredible breadth of use cases, including:
 
@@ -34,7 +34,7 @@ Pulumi Copilot enables these use cases via the following:
 
 __Access any data in Pulumi Cloud__
   * The state of every resource you are managing with Pulumi across _any_ Cloud, _any_ account, and _any_ region.  With [Pulumi Insights'](https://www.pulumi.com/blog/pulumi-insights/) Cloud Supergraph support for 160+ cloud providers, this offers an unprecedented breadth of cloud infrastructure data to explore and interrogate with Pulumi Copilot.
-  * Pulumi stacks, projects, updates, deployments, environments, policies, audit logs and more - enabling historical understanding of what happened when, by who, and why across all of your cloud engineering systems managed by Pulumi. 
+  * Pulumi stacks, projects, updates, deployments, environments, policies, audit logs and more - enabling historical understanding of what happened when, by who, and why across all of your cloud engineering systems managed by Pulumi.
 
 __Pulumi IaC Authoring and Deployment__
   * The same great Pulumi AI features for authoring IaC are now available inside Pulumi Copilot as well, enabling you to quickly solve new IaC problems within Pulumi Cloud, and even deploy code directly from Pulumi Copilot.
@@ -42,13 +42,13 @@ __Pulumi IaC Authoring and Deployment__
 __Access cloud metadata from the clouds themselves__
   * Through the use of new skills, Pulumi Copilot can access cloud metadata in real time in AWS, Azure, Kubernetes, and more, allowing it to join Pulumi’s IaC world view with information about usage, costs, and more – as well as infrastructure not yet under the management of Pulumi.
 
-Pulumi Copilot combines the best generative AI models available in the industry today with Pulumi Copilot “skills” which enable Pulumi Copilot to access the data and actions from within Pulumi Cloud needed to help you with your questions and explorations.  Pulumi Copilot also incorporates the context of where the user is in the Pulumi Cloud console to easily answer questions about “this stack”, or “the latest update”, offering an even more natural, conversational and persistent experience across Pulumi Cloud. 
+Pulumi Copilot combines the best generative AI models available in the industry today with Pulumi Copilot “skills” which enable Pulumi Copilot to access the data and actions from within Pulumi Cloud needed to help you with your questions and explorations.  Pulumi Copilot also incorporates the context of where the user is in the Pulumi Cloud console to easily answer questions about “this stack”, or “the latest update”, offering an even more natural, conversational and persistent experience across Pulumi Cloud.
 
 Pulumi Copilot is Enterprise-Ready on day one - it adheres to all the same identity and role based access control (RBAC) rules that exist across Pulumi Cloud, ensuring that users only have access to stacks, environments and resources that they have permissions for within Pulumi Cloud. This means that each organization gets AI generated responses based solely on their own organizational data.
 
-Pulumi Copilot is available now in public beta, and is free while in beta for all trials, and editions - Team, Enterprise and Business Critical - in Pulumi Cloud. Organization administrators can turn on Pulumi Copilot in their organization at __Settings > Access Management > Pulumi Copilot__ within the Pulumi Cloud console.
+Pulumi Copilot is available now in public beta, and is free while in beta for all organizaations in Pulumi Cloud. Organization administrators can turn on Pulumi Copilot for their organization by going to __Settings > Access Management > Pulumi Copilot__ within the Pulumi Cloud console.
 
-Try Pulumi Copilot now at [https://app.pulumi.com/](https://app.pulumi.com). 
+Try Pulumi Copilot now at [https://app.pulumi.com/](https://app.pulumi.com).
 
 ## Walkthrough of Pulumi Copilot
 
@@ -107,15 +107,15 @@ All of the examples above are things you can do today, but we’re not stopping 
 
 ### Taking Action
 
-In the initial Beta, Pulumi Copilot is restricted to get data and answer questions, but cannot take action directly, beyond guiding users to a place within the Pulumi Cloud console to take the action themselves.  In the near future, we will be extending Pulumi Copilot with the ability to propose actions and then act on them with user approval.  
+In the initial Beta, Pulumi Copilot is restricted to get data and answer questions, but cannot take action directly, beyond guiding users to a place within the Pulumi Cloud console to take the action themselves.  In the near future, we will be extending Pulumi Copilot with the ability to propose actions and then act on them with user approval.
 
-<!-- TODO Issue Link -->
+Check out [pulumi/cloud-requests#958](https://github.com/pulumi/pulumi.ai/issues/958) for more details.
 
 ### Pulumi CLI Integration
 
-One of the most common requests we have gotten from early Pulumi Copilot users has been for integration into the Pulumi CLI where many users spend much of their time day-to-day.  We have started experimenting with CLI integration to help with diagnosing Pulumi update failures, and will be adding this to the CLI in the near future. 
+One of the most common requests we have gotten from early Pulumi Copilot users has been for integration into the Pulumi CLI where many users spend much of their time day-to-day.  We have started experimenting with CLI integration to help with diagnosing Pulumi update failures, and will be adding this to the CLI in the near future.
 
-<!-- TODO Issue Link -->
+Check out [pulumi/cloud-requests#959](https://github.com/pulumi/pulumi.ai/issues/959) for more details.
 
 {{< video title="CLI errors" src="errors.mp4" autoplay="true" loop="true" >}}
 
@@ -123,7 +123,7 @@ One of the most common requests we have gotten from early Pulumi Copilot users h
 
 Pulumi Copilot is initially offered as part of Pulumi Cloud.  But we are working to extend Pulumi Copilot across the rest of pulumi.com, including integration with the Pulumi Docs website.  A new Pulumi Docs skill will allow Pulumi Copilot to help users learn Pulumi concepts and chat with Copilot about these to go deeper on concepts than what is already provided directly within the Pulumi Docs website.
 
-<!-- TODO Issue Link -->
+Check out [pulumi/cloud-requests#961](https://github.com/pulumi/pulumi.ai/issues/961) for more details.
 
 ![Docs website integration](./docs.png)
 
@@ -131,7 +131,7 @@ Pulumi Copilot is initially offered as part of Pulumi Cloud.  But we are working
 
 While Pulumi Copilot already has access to all the Cloud Infrastructure you are managing with Pulumi Cloud, there are many cases where it is useful to reach out to AWS directly to ask questions, get operational metrics, and take action.  We are already working on extending Pulumi Copilot with the ability to run aws and kubectl CLI commands, using short-lived credentials from one of your Pulumi ESC environments.  A sneak peek of that in action - showing how the AWS skill, combined with the ability to get details about resources and ESC environments from within Pulumi Cloud can enable collecting operational metrics from AWS and presenting them for analysis.
 
-<!-- TODO Issue Link -->
+Check out [pulumi/cloud-requests#960](https://github.com/pulumi/pulumi.ai/issues/960) for more details.
 
 <p align="center"><img src="./cloudwatch.png" alt="AWS CLI Skill" width="700" /></p>
 
@@ -140,8 +140,8 @@ While Pulumi Copilot already has access to all the Cloud Infrastructure you are 
 We’re excited to introduce Pulumi Copilot, the first conversational AI for general multi-cloud infrastructure management.  Pulumi Copilot is the next big step toward reimagining cloud infrastructure management via AI-based user experiences. We’re just getting started, with many improvements and new capabilities coming soon on top of the core Pulumi Copilot foundation. Pulumi Copilot is brand new and improving quickly in response to user feedback. If you have questions or suggestions:
 
 * [Open an issue in GitHub](https://github.com/pulumi/cloud-requests)
-* [Reach out to schedule a demo](https://www.pulumi.com/contact/)
+* [Reach out to schedule a demo](/contact/)
 * [Join the Pulumi Community on Slack](https://slack.pulumi.com/)
-* [Check out the Pulumi Copilot docs](https://www.pulumi.com/docs/pulumi-cloud/copilot)
+* [Check out the Pulumi Copilot docs](/docs/pulumi-cloud/copilot)
 
-Get started with Pulumi Copilot in Pulumi Cloud today at [https://app.pulumi.com/](https://app.pulumi.com/). 
+Get started with Pulumi Copilot in Pulumi Cloud today at [https://app.pulumi.com/](https://app.pulumi.com/).
