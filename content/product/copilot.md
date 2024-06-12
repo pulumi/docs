@@ -60,29 +60,27 @@ faq:
     items:
       - header: Will my data be used to train Pulumi Copilot?
         content: |
-          No. We are using Azure’s OpenAI APIs for our text generation and are not using either a self-finetuned model or Azure’s finetuning product.  
-          
-          Learn more by reviewing [Azure’s OpenAI data privacy policy](https://learn.microsoft.com/en-us/legal/cognitive-services/openai/data-privacy#how-does-the-azure-openai-service-process-data)
+          No, Pulumi Copilot is not using either a self-fine tuned model or a fine tuning product, therefore today data is not being used to train Pulumi Copilot.
 
       - header: Can I turn Pulumi Copilot off for my organization?
         content: |
-          If your organization has compliance policies preventing you from using Large Language Models, you can turn Pulumi Copilot off in your organization by navigating to Organization Settings > Access Management > Pulumi Copilot.  
+          Pulumi Copilot is off by default at public beta launch. Organization admins can turn it on by navigating to organization Settings > Access Management > Pulumi Copilot. You can make it available for all members, just admins or no one in your organization. It can be turned off at any point.  
 
       - header: Can Copilot make changes or is it limited to read-only scenarios?
         content: |
           At this time Pulumi Copilot can only perform read operations, such as making GET requests on the user's behalf. If you ask Pulumi Copilot to perform an action, such as making a member an admin, it will confirm it is not able to. 
 
-      - header: Does Copilot send my secrets to the Azure OpenAI API?
+      - header: What data does Pulumi Copilot send to Azure OpenAI API?
         content: |
-          No, the only data sent to the Azure OpenAI API is the user prompt. We do not share any information with the model about your Pulumi state file, we make API calls on your behalf that may surface this information in the response. If you provide secrets in your prompt they will be sent to Azure, and similarly if you have unencrypted secrets in your state file, the model could see portions of it in an API response. 
+          Pulumi Copilot transmits data to Pulumi’s Azure tenant to generate responses, including both contextual data and data about the user’s actions. The transmitted data is encrypted both in transit and at rest; Pulumi Copilot-related data is encrypted in transit using transport layer security (TLS). Furthermore, Pulumi Copilot does not have the ability to decrypt secrets, so no secret data is exposed to either users or the Pulumi’s Azure tenant by Pulumi Copilot.
 
-      - header: Will Pulumi Copilot maintain a history of the organization’s conversations?
+      - header: What data is Pulumi Copilot storing?
         content: |
-          Yes, Pulumi Copilot will maintain a history of conversations for all users in an organization. Pulumi requires access to these conversations in order to ensure the best experience for customers. This allows Pulumi to manage support requests that may come up as well as evaluate the customer experience to identify areas for improvement in the future.
+          Pulumi Copilot stores conversation data, similar to all other product metrics logging in Pulumi Cloud, including the response from Azure’s OpenAI API in order to debug issues and measure model quality. This data is treated sensitively and used only for operational purposes.
 
-      - header: What are the models used for Pulumi Copilot?
+      - header: What model does Pulumi Copilot use?
         content: |
-          Pulumi Copilot uses private, paid enterprise versions of Microsoft Azure OpenAI models. 
+          Pulumi Copilot currently uses OpenAI GPT-4o, hosted in Azure OpenAI Service in a Pulumi owned and managed Azure subscription. Over time the expectation is that Copilot will use a combination of models to improve the user experience and answer quality.
 
 learn:
     title: Get Started
