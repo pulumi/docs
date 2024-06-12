@@ -1,7 +1,6 @@
 ---
 title: "New: Helm Chart resource for Java, YAML SDKs"
 date: 2024-04-12T00:00:00-07:00
-meta_image: meta.png
 meta_desc: >-
   Pulumi Kubernetes v4.13 offers a new resource for applying Helm charts consistently across Pulumi SDKs, and broadens support to the Java and YAML SDKs.
 
