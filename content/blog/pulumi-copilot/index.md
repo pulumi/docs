@@ -18,9 +18,9 @@ tags:
 
 ---
 
-AI is transforming how users interact with every category of software, and cloud infrastructure is no exception.  Last year, we launched Pulumi AI to combine generative AI with Pulumi’s knowledge of cloud infrastructure to help users solve complex cloud development problems using Infrastructure-as-Code.  Pulumi AI has seen rapid adoption and engagement, with tens of thousands of users leveraging Pulumi AI over the last year.
+AI is transforming how users interact with every category of technology today, and cloud infrastructure is no exception.  Last year we launched Pulumi AI to combine generative AI with Pulumi’s knowledge of cloud infrastructure, helping users solve complex cloud development problems using Infrastructure-as-Code.  Pulumi AI has seen rapid adoption and engagement, with tens of thousands of users leveraging Pulumi AI over the last year.
 
-Today, we’re excited to introduce __Pulumi Copilot__, a huge leap forward in applying AI to cloud infrastructure management.  Pulumi Copilot is a new conversational chat interface integrated throughout Pulumi Cloud, enabling Pulumi Cloud users to quickly accomplish a variety of cloud infrastructure management tasks by leveraging the combination of generative AI and the rich capabilities of Pulumi Cloud. 
+Today, we’re excited to introduce __Pulumi Copilot__, a huge leap forward in applying AI to cloud infrastructure management.  Pulumi Copilot is a new conversational chat interface integrated throughout Pulumi Cloud, enabling Pulumi Cloud users to quickly accomplish a variety of cloud infrastructure management tasks by leveraging the power of large language models plus the rich capabilities of Pulumi Cloud. 
 
 <!--more-->
 
@@ -56,11 +56,11 @@ Let’s jump in and take Pulumi Copilot for a spin!
 
 We can start off simple - it’s a conversational chat, so we can introduce ourselves. Pulumi Copilot knows who we are from context and we get a light hearted programming related joke.
 
-![Greeting Pulumi Copilot](./joke.png)
+<p align="center"><img src="./joke.png" alt="drawing" width="400" alt="Greeting"/></p>
 
 Perhaps we need to gain access to additional infrastructure within Pulumi Cloud and need to contact an admin, we can ask who the admins are.
 
-![Admins](./admins.png)
+<p align="center"><img src="./admins.png" alt="drawing" width="400" alt="Admins"/></p>
 
 We get a hyperlink at the end, enabling us to jump directly to the members page, where we can see all of the details about the members and admins of the organization.  Pulumi Copilot helps to not just get information, but then navigate within the Pulumi Cloud console to continue to explore.
 
@@ -68,7 +68,8 @@ We get a hyperlink at the end, enabling us to jump directly to the members page,
 
 Pulumi Copilot has access to everything that Pulumi Cloud manages, including [Pulumi ESC](/docs/esc) environments. We can find all of the environments we have that manage access to GitHub through a natural language query, and then ask a follow up question to get a direct link to where each environment is defined.
 
-![Environments](./environments.png)
+<p align="center"><img src="./environments.png" alt="ESC Environments" width="600" /></p>
+
 
 If we do a Pulumi update, and it fails, we often get a complex error message, caused by some combination of a coding problem or a cloud provider configuration problem or a transient failure in cloud providers backing service.  We can use Pulumi Copilot to ask why an update failed, and get a plain language explanation, leveraging the AI’s existing knowledge of programming languages and cloud providers, combined with access to all of the update logs from within Pulumi Cloud. Notably, we can ask why “this” update failed, taking advantage of the context of the page we are on within Pulumi Cloud to understand which update we are referring to.
 
@@ -76,11 +77,11 @@ If we do a Pulumi update, and it fails, we often get a complex error message, ca
 
 Perhaps we received an email from our compliance team telling us there was an issue with the VPC with id `vpc-04a116f7075fb7ca5`, but we have no idea where that is. Given we have hundreds of AWS accounts and dozens of regions in each of these accounts, finding this resource isn’t simple. We can just ask Pulumi Copilot, and it immediately tells us what AWS account it is in. We can follow this up with a question about which Pulumi project and stack is managing it, and get a link to go directly to the stack to learn more about how it is configured.
 
-![What AWS account is this ID in?](./vpc-id.png)
+<p align="center"><img src="./vpc-id.png" alt="drawing" width="400" alt="What AWS account is this ID in?"/></p>
 
 All of the capabilities of Pulumi AI for writing Pulumi IaC code are also available in Pulumi Copilot, so we can ask how to write a program for a new use case.  But we can also have Pulumi Copilot incorporate information from an existing stack, leveraging multiple Pulumi Copilot skills to help with this task.
 
-{{< video title="Write and Deploy" src="write_deploy.mp4" autoplay="true" loop="true" >}}
+{{< video title="Write and Deploy" src="code.mp4" autoplay="true" loop="true" >}}
 
 If we are thinking about removing some infrastructure we may want to know what other infrastructure potentially depends on it.  We can get a list of stacks which depend on our stack, with hyperlinks directly to those stacks so we can explore their dependencies and take action to update them.
 
@@ -88,15 +89,15 @@ If we are thinking about removing some infrastructure we may want to know what o
 
 If we’re getting started on compliance with a new compliance framework, we can get guidance on areas to focus on for compliance review, ahead of applying more formal compliance tools like [Pulumi Crossguard Compliance Ready Policies](/docs/using-pulumi/crossguard/compliance-ready-policies/).
 
-![FedRAMP](./fedramp.png)
+<p align="center"><img src="./fedramp.png" alt="FedRAMP" width="600" /></p>
 
 And we can get insights into what infrastructure exposed to the internet which we may need to look deeper into with a quick question:
 
-![Insecure endpoints](./insecure-endpoints.png)
+<p align="center"><img src="./insecure-endpoints.png" alt="Insecure endpoints" width="600" /></p>
 
 And our questions don’t have to be limited to English.  Early Spanish-speaking users have found themselves working with Pulumi Copilot in their native language, getting responses automatically in the same language of their question.
 
-![Insecure endpoints](./spanish.png)
+<p align="center"><img src="./spanish.png" alt="drawing" width="400" alt="Español"/></p>
 
 All of these examples are just scratching the surface of what Pulumi Copilot can already do today.  One of the most exciting things about conversational chat interfaces is their wonderfully wide surface area of potential applications - almost any question you might have related to Cloud Infrastructure managed within Pulumi Cloud is something Pulumi Copilot can help with!
 
@@ -132,7 +133,7 @@ While Pulumi Copilot already has access to all the Cloud Infrastructure you are 
 
 <!-- TODO Issue Link -->
 
-![AWS CLI Skill](./cloudwatch.png)
+<p align="center"><img src="./cloudwatch.png" alt="AWS CLI Skill" width="700" /></p>
 
 # Conclusion
 
