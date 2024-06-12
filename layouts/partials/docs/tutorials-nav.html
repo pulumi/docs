@@ -45,28 +45,28 @@
             <div id="toc-menu-{{ $toc_name }}" class="{{ $sidenav_selected }} text-black no-anchor toc-header toggle-topLevel {{ $toggle_class }}" id="{{ $toc_name | urlize }}-toc-header">
                 <a>{{ $toc_name }}</a>
             </div>
-            {{ range .Pages }}
             <div class="sidenav-subsection">
                 <ul class="collapsed">
+                    {{ range .Pages }}
                     <li class="sidenav-topic">
                         <a href="{{ .RelPermalink }}">{{ .Title }}</a>
                     </li>
+                    {{ end }}
                 </ul>
             </div>
-            {{ end }}
         {{ else }}
             <div id="toc-menu-{{ $toc_name }}" class="{{ $sidenav_selected }} text-black no-anchor toc-header toggle-topLevel {{ $toggle_class }}" id="{{ $toc_name | urlize }}-toc-header">
                 <a>{{ .Parent.Title }}</a>
             </div>
-            {{ range .Parent.Pages }}
             <div class="sidenav-subsection">
                 <ul class="collapsed">
+                    {{ range .Parent.Pages }}
                     <li class="sidenav-topic">
                         <a href="{{ .RelPermalink }}">{{ .Title }}</a>
                     </li>
+                    {{ end }}
                 </ul>
             </div>
-            {{ end }}
         {{ end }}
         
     {{ end }}
