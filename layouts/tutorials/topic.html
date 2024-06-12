@@ -1,17 +1,44 @@
 {{ define "main" }}
-    <div class="container mx-auto">
-        This is an individual topic template.
-
-        <p>{{ .Title }}</p>
-
-        {{ .Content }}
-
-        <ul>
-            {{ range .Pages }}
-                <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-            {{ end }}
-        </ul>
+<div div class="docs-list-main">
+    <div class="docs-main-nav-toggle-wrapper">
+        <div class="docs-main-nav-wrapper">
+            <div id="docs-main-nav" class="docs-main-nav">
+                {{ .Scratch.Set "title" .Title }}
+                {{ .Scratch.Set "layout" "topic" }}
+                {{ partial "docs/tutorials-nav.html" . }}
+            </div>
+        </div>
+        <div class="docs-nav-toggle">
+            <div class="docs-nav-toggle-icon icon icon-24-24"></div>
+        </div>
     </div>
+
+    <div class="docs-main-content-wrapper">
+        <div class="docs-main-content">
+            This is an indiviual topic layout template.
+            <div class="tutorials-main">
+                <header>
+                    {{ partial "templates/breadcrumb.html" . }}
+                </header>
+                <div class="special-h1">
+                    <h1>{{ .Title }}</h1>
+                    <div class="h1-gradient"></div>
+                </div>
+
+                <div>{{ .Content }}</div>
+
+                
+            </div>
+        </div>
+        <div class="docs-table-of-contents docs-toc-desktop">
+            {{ partial "docs/table-of-contents.html" . }}
+    
+            {{ partial "docs/feedback.html" . }}
+    
+            {{ partial "docs/right-nav-ad.html" }}
+        </div>
+    </div>
+</div>
 {{ end }}
 
 {{ define "footer" }}

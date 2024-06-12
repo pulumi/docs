@@ -4,6 +4,12 @@ div.icon {
     text-indent: -9999px;
 }
 
+div.icon-10-10 {
+    width: 10px;
+    height: 10px;
+    background-size: 10px 10px;
+}
+
 div.icon-12-12 {
     width: 12px;
     height: 12px;
@@ -325,4 +331,32 @@ div.python-color-32-32 {
 
 div.yaml-color-32-32 {
     background: url(/images/docs/icons/languages/yaml-color-32-32.svg);
+}
+
+div.library-books-12-12 {
+    &:hover {
+        filter: unset;
+    }
+    background: url(/images/docs/icons/library-books-12-12.svg);
+}
+
+div.timer-12-12 {
+    &:hover {
+        filter: unset;
+    }
+    background: url(/images/docs/icons/timer-12-12.svg);
+}
+
+div.play-10-10 {
+    &:hover {
+        filter: unset;
+    }
+    background: url(/images/docs/icons/play-10-10.svg);
+}
+
+div.folder-open-14-14 {
+    &:hover {
+        filter: unset;
+    }
+    background: url(/images/docs/icons/folder-open-14-14.svg);
 }

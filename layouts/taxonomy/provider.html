@@ -1,19 +1,48 @@
 {{ define "main" }}
-    <div class="container mx-auto px-4">
-        This is the provider template.
-
-        {{ $slug := .Path | path.Base }}
-        {{ $provider := index (where .Site.Data.tutorials.providers "slug" $slug) 0 }}
-
-        <h1>{{ $provider.name }}</h1>
-        <p>{{ $provider.description }}</p>
-
-        <ul>
-            {{ range .Pages }}
-                <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-            {{ end }}
-        </ul>
+{{ $slug := .Path | path.Base }}
+{{ $provider := index (where .Site.Data.tutorials.providers "slug" $slug) 0 }}
+<div div class="docs-list-main">
+    <div class="docs-main-nav-toggle-wrapper">
+        <div class="docs-main-nav-wrapper">
+            <div id="docs-main-nav" class="docs-main-nav">
+                {{ .Scratch.Set "title" $provider.shortname }}
+                {{ partial "docs/tutorials-nav.html" . }}
+            </div>
+        </div>
+        <div class="docs-nav-toggle">
+            <div class="docs-nav-toggle-icon icon icon-24-24"></div>
+        </div>
     </div>
+
+    <div class="docs-main-content-wrapper">
+
+        <div class="docs-main-content">
+            {{ partial "docs/breadcrumb.html" . }}
+            This is the provider template.
+            <div class="tutorials-main">
+                <div  class="flex flex-row">
+                    <div class="special-h1">
+                        <h1>{{ $provider.shortname }} tutorials</h1>
+                        <div class="h1-gradient"></div>
+                    </div>
+                </div>
+                <p>{{ $provider.description }}</p>
+                <div class="tutorials-all">
+                    <ul class="flex flex-col md:flex-row md:flex-wrap list-none tutorial-cards">
+                        {{ range .Pages }}
+                        <li class="md:w-1/3 p-4 border border-gray-200 w-full">
+                            <div class="card-heading">
+                                <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+                            </div>
+                            <p>{{ .Description }}</p>
+                        </li>
+                        {{ end }}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {{ end }}
 
 {{ define "footer" }}

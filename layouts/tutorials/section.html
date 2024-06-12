@@ -1,61 +1,100 @@
 {{ define "main" }}
-    <div class="p-8">
-        <div class="flex">
-            <div class="w-2/12 my-2">
-                <h5>Tutorials by cloud provider</h5>
-                <ul>
-                    {{ range $slug := (slice "aws" "azure" "gcp" "kubernetes" "docker") }}
-                        {{ $provider := index (where $.Site.Data.tutorials.providers "slug" $slug) 0 }}
-                        <li><a href="/tutorials/{{ $slug }}">{{ $provider.shortname }} tutorials</a></li>
-                    {{ end }}
-                </ul>
-
-            </div>
-            <div class="w-7/12">
-                <h1>{{ .Title }}</h1>
-                <div>{{ .Content }}</div>
-
-                <h2>Tutorials by cloud provider</h2>
-                <ul class="flex flex-col md:flex-row md:flex-wrap list-none p-0">
-                    {{ range $slug := (slice "aws" "azure" "gcp" "kubernetes") }}
-                        {{ $provider := index (where $.Site.Data.tutorials.providers "slug" $slug) 0 }}
-                        <li class="md:w-1/2 p-4 border border-gray-200 w-full">
-                            <h3>{{ $provider.name }} Tutorials</h3>
-                            <ul class="list-none p-0">
-                                <li><a href="/docs/clouds/{{ $slug }}/get-started/">Get started with Pulumi and {{ $provider.name }}</a></li>
-                                <li><a href="/tutorials/{{ $slug }}">Browse all {{ $provider.name }} tutorials</a></li>
-                            </ul>
-                        </li>
-                    {{ end }}
-                </ul>
-
-                <h3>Tutorials by topic</h3>
-                <ul class="flex flex-col md:flex-row md:flex-wrap list-none p-0">
-                    {{ range $taxonomy, $terms := .Site.Taxonomies.collections }}
-                        {{ $collection := index (where $.Site.Data.tutorials.collections "slug" $taxonomy) 0 }}
-                        <li class="md:w-1/3 p-4 border border-gray-200 w-full">
-                            <h4><a href="/tutorials/{{ $taxonomy }}">{{ $collection.name }}</a></h4>
-                            <p>{{ $collection.description }}</p>
-                            <p>{{ len $terms }} topics</p>
-                        </li>
-                    {{ end }}
-                </ul>
-
-                <h3>All tutorials</h3>
-                <ul class="flex flex-col md:flex-row md:flex-wrap list-none p-0">
-                    {{ range .Pages }}
-                        <li class="md:w-1/3 p-4 border border-gray-200 w-full">
-                            <h4><a href="{{ .RelPermalink }}">{{ .Title }}</a></h4>
-                            <p>{{ .Description }}</p>
-                        </li>
-                    {{ end }}
-                </ul>
-            </div>
-            <div class="w-3/12">
-
+<div div class="docs-list-main">
+    <div class="docs-main-nav-toggle-wrapper">
+        <div class="docs-main-nav-wrapper">
+            <div id="docs-main-nav" class="docs-main-nav">
+                {{ partial "docs/tutorials-nav.html" . }}
             </div>
         </div>
+        <div class="docs-nav-toggle">
+            <div class="docs-nav-toggle-icon icon icon-24-24"></div>
+        </div>
     </div>
+
+    <div class="docs-main-content-wrapper">
+
+        <div class="docs-main-content">
+            <div class="tutorials-main">
+                <div class="special-h1">
+                    <h1>{{ .Title }}</h1>
+                    <div class="h1-gradient"></div>
+                </div>
+
+                <div>{{ .Content }}</div>
+
+                <div class="tutorials-clouds">
+                    <h2>Tutorials by cloud provider</h2>
+                    <ul class="flex flex-col md:flex-row md:flex-wrap list-none p-0 cloud-cards">
+                        {{ range $slug := (slice "aws" "azure" "gcp" "kubernetes") }}
+                        {{ $provider := index (where $.Site.Data.tutorials.providers "slug" $slug) 0 }}
+                        <li class="md:w-1/2 p-4 border border-gray-200 w-full">
+                            <div class="card-heading">
+                                <h3 class="flex-grow">{{ $provider.shortname }} Tutorials</h3>
+                                <img class="hidden lg:block" src="{{ $provider.logo }}" />
+                            </div>
+                            <ul class="list-none p-0 cloud-card">
+                                <li>
+                                    <div class="icon-10-10 play-10-10 ml-2 hidden lg:block"></div>
+                                    <a href="/docs/clouds/{{ $slug }}/get-started/">Get started {{ $provider.shortname
+                                        }}
+                                    </a>
+                                </li>
+                                <li>
+                                    <div class="icon-18-18 grad-cap-18-18 hidden lg:block"></div>
+                                    <a href="/tutorials/{{ $slug }}">Browse tutorials</a>
+                                </li>
+                            </ul>
+                        </li>
+                        {{ end }}
+                    </ul>
+                </div>
+
+                <div class="tutorials-topics">
+                    <h2>Tutorials by topic</h2>
+                    <ul class="flex flex-col md:flex-row md:flex-wrap list-none p-0 tutorial-cards">
+                        {{ range $taxonomy, $terms := .Site.Taxonomies.collections }}
+                        {{ $collection := index (where $.Site.Data.tutorials.collections "slug" $taxonomy) 0 }}
+                        <li class="md:w-1/2 p-4 border border-gray-200 w-full">
+                            <div class="card-heading">
+                                <h3><a href="/tutorials/{{ $taxonomy }}">{{ $collection.name }}</a></h3>
+                                <hr />
+                            </div>
+                            <p>{{ $collection.description }}</p>
+                            <div class="flex flex-row">
+                                <div class="flex items-center topic-badge">
+                                    {{ len $terms }} topics
+                                    <div class="icon icon-12-12 library-books-12-12"></div>
+                                </div>
+                                <div class="flex items-center topic-badge">
+                                    30 min
+                                    <div class="icon icon-12-12 timer-12-12"></div>
+                                </div>
+                            </div>
+                        </li>
+                        {{ end }}
+                    </ul>
+                </div>
+
+                <div class="tutorials-all">
+                    <h2>All tutorials</h2>
+                    <ul class="flex flex-col md:flex-row md:flex-wrap list-none p-0 tutorial-cards">
+                        {{ range .Pages }}
+                        <li class="md:w-1/3 p-4 border border-gray-200 w-full">
+                            <div class="card-heading">
+                                <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+                            </div>
+                            <p class="h-fit">{{ .Description }}</p>
+                        </li>
+                        {{ end }}
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="w-3/12">
+
+        </div>
+    </div>
+</div>
 {{ end }}
 
 {{ define "footer" }}
