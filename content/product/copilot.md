@@ -14,7 +14,7 @@ get_started: Get Started with Copilot
 benefits:
     title: How do I use Pulumi Copilot?
     description: |
-        Pulumi Copilot is an interactive user interface in Pulumi Cloud, Pulumi documentation, and Pulumi CLI.
+        Pulumi Copilot is an interactive user interface in the Pulumi Cloud console and the Pulumi CLI.
         
         Pulumi Copilot understands the entirety of over 160 clouds, including public clouds (AWS, Azure, Google Cloud), cloud native (Kubernetes, Helm), SaaS providers (Snowflake, Cloudflare, Datadog), and more. Pulumi Copilot directly interfaces with these cloud APIs and data models.
         
@@ -22,7 +22,7 @@ benefits:
 
         Pulumi Copilot is available in public beta, and is free while in beta. Organization admins can turn on Copilot in their organization **Settings > Access Management > Pulumi Copilot** within the Pulumi Cloud console.
         
-        Some of the answers in Pulumi Copilot may be inaccurate. Please send us your feedback so we can continue to improve the experience by typing `/bug` into Copilot or filing an [issue](https://github.com/pulumi/pulumi/issues/new/choose) in GitHub.
+        Some of the answers in Pulumi Copilot may be inaccurate. Please send us your feedback so we can continue to improve the experience by typing `/bug` into Copilot.
     graphic:
         image: https://www.pulumi.com/uploads/copilot-demo.mp4
         alt: Pulumi Copilot Demo
