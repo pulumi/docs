@@ -141,7 +141,7 @@ Check out [pulumi/cloud-requests#960](https://github.com/pulumi/pulumi.ai/issues
 
 We’re excited to introduce Pulumi Copilot, the first conversational AI for general multi-cloud infrastructure management.  Pulumi Copilot is the next big step toward reimagining cloud infrastructure management via AI-based user experiences. We’re just getting started, with many improvements and new capabilities coming soon on top of the core Pulumi Copilot foundation. Pulumi Copilot is brand new and improving quickly in response to user feedback. If you have questions or suggestions:
 
-* [Open an issue in GitHub](https://github.com/pulumi/cloud-requests)
+* [Open an issue in GitHub](https://github.com/pulumi/pulumi-cloud-requests)
 * [Reach out to schedule a demo](/contact/)
 * [Join the Pulumi Community on Slack](https://slack.pulumi.com/)
 * [Check out the Pulumi Copilot docs](/docs/pulumi-cloud/copilot)
