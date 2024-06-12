@@ -11,6 +11,10 @@ tags:
     - llm
 ---
 
+{{% notes type="info" %}}
+There are new intelligent cloud management capabilities available in Pulumi Copilot. [Learn More](/blog/pulumi-copilot)
+{{% /notes %}}
+
 Earlier this year we launched [Pulumi AI](/ai), a purpose-built AI assistant that can create Infrastructure as Code (IaC) from natural language prompts using Pulumi.  Since launch, we’ve seen incredible adoption of Pulumi AI, with over 200,000 questions asked so far and growing fast.  Pulumi AI is popular with users new to Pulumi and/or new to the Cloud, but also heavily used by many of the most advanced IaC users and organizations to quickly discover solutions to new problems they need to solve. Over the last few months, we’ve driven major improvements to Pulumi AI through the recently launched Pulumi AI Answers pages with thousands of AI generated answers to common questions, improvements to code generation correctness and performance, and expansion of the languages supported by Pulumi AI.
 
 Today, we are taking the next big step, introducing support for __deploying cloud infrastructure directly from Pulumi AI__.  Going from idea to running cloud infrastructure is just a natural language prompt away!
