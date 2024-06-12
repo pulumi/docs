@@ -44,7 +44,7 @@ Here, for example, is a simple deployment of [cert-manager](https://cert-manager
 import * as pulumi from "@pulumi/pulumi";
 import * as kubernetes from "@pulumi/kubernetes";
 
-const certman = new kubernetes.helm.v4.Chart("certman", {
+const certman = new kubernetes.helm.v4.Chart("cert-manager", {
     namespace: "cert-manager",
     chart: "oci://registry-1.docker.io/bitnamicharts/cert-manager",
     version: "1.3.1",
@@ -59,7 +59,7 @@ const certman = new kubernetes.helm.v4.Chart("certman", {
 import pulumi
 import pulumi_kubernetes as kubernetes
 
-certman = kubernetes.helm.v4.Chart("certman",
+certman = kubernetes.helm.v4.Chart("cert-manager",
     namespace="cert-manager",
     chart="oci://registry-1.docker.io/bitnamicharts/cert-manager",
     version="1.3.1")
@@ -79,7 +79,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := helmv4.NewChart(ctx, "certman", &helmv4.ChartArgs{
+		_, err := helmv4.NewChart(ctx, "cert-manager", &helmv4.ChartArgs{
 			Namespace: pulumi.String("cert-manager"),
 			Chart:     pulumi.String("oci://registry-1.docker.io/bitnamicharts/cert-manager"),
 			Version:   pulumi.String("1.3.1"),
@@ -104,7 +104,7 @@ using Kubernetes = Pulumi.Kubernetes;
 
 return await Deployment.RunAsync(() =>
 {
-    var certman = new Kubernetes.Helm.V4.Chart("certman", new()
+    var certman = new Kubernetes.Helm.V4.Chart("cert-manager", new()
     {
         Namespace = "cert-manager",
         Chart = "oci://registry-1.docker.io/bitnamicharts/cert-manager",
@@ -139,7 +139,7 @@ public class App {
     }
 
     public static void stack(Context ctx) {
-        var certman = new Chart("certman", ChartArgs.builder()
+        var certman = new Chart("cert-manager", ChartArgs.builder()
             .namespace("cert-manager")
             .chart("oci://registry-1.docker.io/bitnamicharts/cert-manager")
             .version("1.3.1")
@@ -191,7 +191,8 @@ Chart v4 offers new ways to work with Chart values. It is now possible to use mu
 resources as chart values.
 
 It is also possible to set a chart value to the contents of a text file, similarly to using Helm's `--set-file` argument.
-To do that, simply use a Pulumi Asset as a value within the `values` map.
+To do that, simply use a Pulumi Asset as a value within the `values` map. This is useful for injecting large
+values into a chart, such as additional templates as supported by the `extraDeploy` parameter of some Bitnami charts.
 
 Here's an example of using a combination of values from different sources.
 
@@ -210,9 +211,9 @@ const certManager = new kubernetes.helm.v4.Chart("cert-manager", {
     valueYamlFiles: [new pulumi.asset.FileAsset("values.yaml")],
     values: {
         commonLabels: {
-            biz: "bam",
+            "pulumi.com/stackName": pulumi.getStack(),
         },
-        extraDeploy: [new pulumi.asset.FileAsset("extras.yaml.tmpl")],
+        extraDeploy: [new pulumi.asset.FileAsset("manifest.yaml")],
     },
 });
 ```
@@ -232,9 +233,9 @@ cert_manager = kubernetes.helm.v4.Chart("cert-manager",
     value_yaml_files=[pulumi.FileAsset("values.yaml")],
     values={
         "commonLabels": {
-            "biz": "bam",
+            "pulumi.com/stackName": pulumi.get_stack(),
         },
-        "extraDeploy": [pulumi.FileAsset("extras.yaml.tmpl")],
+        "extraDeploy": [pulumi.FileAsset("manifest.yaml")],
     })
 ```
 
@@ -261,10 +262,10 @@ func main() {
 			},
 			Values: pulumi.Map{
 				"commonLabels": pulumi.Any(map[string]interface{}{
-					"biz": "bam",
+					"pulumi.com/stackName": ctx.Stack(),
 				}),
-				"extraDeploy": pulumi.Any{
-					pulumi.NewFileAsset("extras.yaml.tmpl"),
+				"extraDeploy": pulumi.Array{
+					pulumi.NewFileAsset("manifest.yaml"),
 				},
 			},
 		})
@@ -301,11 +302,11 @@ return await Deployment.RunAsync(() =>
         {
             { "commonLabels", new Dictionary<string, object?>
             {
-                ["biz"] = "bam",
+                ["pulumi.com/stackName"] = Deployment.Instance.StackName,
             } },
             { "extraDeploy", new[]
             {
-                new FileAsset("extras.yaml.tmpl"),
+                new FileAsset("manifest.yaml"),
             } },
         },
     });
@@ -323,6 +324,7 @@ package generated_program;
 import com.pulumi.Context;
 import com.pulumi.Pulumi;
 import com.pulumi.core.Output;
+import com.pulumi.deployment.Deployment;
 import com.pulumi.kubernetes.helm.v4.Chart;
 import com.pulumi.kubernetes.helm.v4.ChartArgs;
 import com.pulumi.asset.FileAsset;
@@ -339,14 +341,14 @@ public class App {
     }
 
     public static void stack(Context ctx) {
-        var certManager = new Chart("certManager", ChartArgs.builder()
+        var certManager = new Chart("cert-manager", ChartArgs.builder()
             .namespace("cert-manager")
             .chart("oci://registry-1.docker.io/bitnamicharts/cert-manager")
             .version("1.3.1")
             .valueYamlFiles(new FileAsset("values.yaml"))
             .values(Map.ofEntries(
-                Map.entry("commonLabels", Map.of("biz", "bam")),
-                Map.entry("extraDeploy", new FileAsset("extras.yaml.tmpl"))
+                Map.entry("commonLabels", Map.of("pulumi.com/stackName", Deployment.getInstance().getStackName())),
+                Map.entry("extraDeploy", List.of(new FileAsset("manifest.yaml")))
             ))
             .build());
 
@@ -370,9 +372,9 @@ resources:
       - fn::fileAsset: values.yaml
       values:
         commonLabels:
-          biz: bam
+          pulumi.com/stackName: ${pulumi.stack}
         extraDeploy:
-        - fn::fileAsset: extras.yaml.tmpl
+        - fn::fileAsset: manifest.yaml
 ```
 
 {{% /choosable %}}
