@@ -46,7 +46,7 @@ Pulumi Copilot combines the best generative AI models available in the industry 
 
 Pulumi Copilot is Enterprise-Ready on day one - it adheres to all the same identity and role based access control (RBAC) rules that exist across Pulumi Cloud, ensuring that users only have access to stacks, environments and resources that they have permissions for within Pulumi Cloud. This means that each organization gets AI generated responses based solely on their own organizational data.
 
-Pulumi Copilot is available now in public beta, and is free while in beta for all organizaations in Pulumi Cloud. Organization administrators can turn on Pulumi Copilot for their organization by going to __Settings > Access Management > Pulumi Copilot__ within the Pulumi Cloud console.
+Pulumi Copilot is available now in public beta, and is free while in beta for all organizations in Pulumi Cloud. Organization administrators can turn on Pulumi Copilot for their organization by going to __Settings > Access Management > Pulumi Copilot__ within the Pulumi Cloud console.
 
 Try Pulumi Copilot now at [https://app.pulumi.com/](https://app.pulumi.com).
 
