@@ -21,10 +21,11 @@ ways to apply a Helm chart, as outlined in [Choosing the Right Helm Resource For
 and better drift remediation.
 
 Today we're happy to announce a new "v4" version of the Chart resource, available now in v4.13 of the Pulumi Kubernetes provider.
-The new [kubernetes.helm.sh/v4.Chart](/registry/packages/kubernetes/api-docs/helm/v4/chart/) resource is provided 
+The new [kubernetes.helm.sh/v4.Chart](/registry/packages/kubernetes/api-docs/helm/v4/chart/) resource is provided
 side-by-side with the existing [kubernetes.helm.sh/v3.Chart](/registry/packages/kubernetes/api-docs/helm/v3/chart/) resource.
 
 ## What's New
+
 Let's look at what's new with Chart v4.
 
 ### New SDK Support - Java SDK & YAML SDK
@@ -101,7 +102,7 @@ using System.Linq;
 using Pulumi;
 using Kubernetes = Pulumi.Kubernetes;
 
-return await Deployment.RunAsync(() => 
+return await Deployment.RunAsync(() =>
 {
     var certman = new Kubernetes.Helm.V4.Chart("certman", new()
     {
@@ -168,7 +169,7 @@ resources:
 
 ### OCI Registry Support
 
-You can use container registries with OCI support such as [Docker Hub](https://hub.docker.com/) to store and share 
+You can use container registries with OCI support such as [Docker Hub](https://hub.docker.com/) to store and share
 Helm chart packages. The Chart v4 resource now has full support for OCI, bringing it to parity with
 the Release resource.
 
@@ -195,6 +196,7 @@ To do that, simply use a Pulumi Asset as a value within the `values` map.
 ### Better Connectivity
 
 You may now use chart functions that require a connection to the cluster, e.g. to:
+
 - Check the Kubernetes server version with [`.Capabilities.KubeVersion`](https://helm.sh/docs/chart_template_guide/builtin_objects/)
 - Check if an API version or kind is available with [`.Capabilities.APIVersions.Has`](https://helm.sh/docs/chart_template_guide/function_list/#capabilitiesapiversionshas)
 - Use the [`lookup` function](https://helm.sh/docs/chart_template_guide/function_list/#lookup)
@@ -278,7 +280,7 @@ def apply_patchforce_annotation(args: ResourceTransformArgs):
         if not 'annotations' in args.props['metadata']:
             args.props['metadata']['annotations'] = {}
         args.props['metadata']['annotations']['pulumi.com/patchForce'] = 'true'
-    
+
     return ResourceTransformResult(
         props=args.props,
         opts=args.opts)
@@ -302,7 +304,7 @@ ingresscontroller = kubernetes.helm.v4.Chart(
 ### Not Supported: Kubernetes Transformations
 
 Chart v4 does not support the `transformations` argument as seen in Chart v3, that facilitates a
-Kubernetes-centric transformation and/or discarding of objects from the rendered manifest. 
+Kubernetes-centric transformation and/or discarding of objects from the rendered manifest.
 
 One alternative is to use use Pulumi transformations to transform the object and resource options.
 Another is to use post-rendering, which we'll cover next.
@@ -567,7 +569,7 @@ using Pulumi;
 using Kubernetes = Pulumi.Kubernetes;
 using Random = Pulumi.Random;
 
-return await Deployment.RunAsync(() => 
+return await Deployment.RunAsync(() =>
 {
     var ns = new Kubernetes.Core.V1.Namespace("ns", new()
     {
@@ -590,7 +592,7 @@ return await Deployment.RunAsync(() =>
             Namespace = ns.Metadata.Apply(metadata => metadata.Name),
         },
         Type = "Opaque",
-        StringData = 
+        StringData =
         {
             { "auth", redisPasswordResource.Result },
         },
@@ -605,7 +607,7 @@ return await Deployment.RunAsync(() =>
         {
             Repo = "https://argoproj.github.io/argo-helm",
         },
-        Values = 
+        Values =
         {
             { "fullnameOverride", "" },
         },
@@ -825,7 +827,7 @@ The program creates the `argocd` namespace, installs the ArgoCD server, and then
 Observe how the program installs and uses a Custom Resource Definition (CRD) successfully, and uses `dependsOn`
 to ensure that the CRD is installed before using it.
 
-The `argo-cd` chart normally makes use of a Helm hook to initialize a password for the redis server. 
+The `argo-cd` chart normally makes use of a Helm hook to initialize a password for the redis server.
 Since the Chart v4 resource doesn't support Helm hooks, this program creates the password directly.
 
 ## Conclusion
@@ -839,7 +841,7 @@ across the Pulumi SDKs. See [pulumi-kubernetes#1971](https://github.com/pulumi/p
 
 Check out the following links to learn more about Pulumi Kubernetes today!
 
-* [Getting Started](/docs/clouds/kubernetes/get-started/)
-* [Documentation](/docs/clouds/kubernetes/)
-* [Open Source](https://github.com/pulumi/pulumi-kubernetes)
-* [Community Slack](https://slack.pulumi.com/)
+- [Getting Started](/docs/clouds/kubernetes/get-started/)
+- [Documentation](/docs/clouds/kubernetes/)
+- [Open Source](https://github.com/pulumi/pulumi-kubernetes)
+- [Community Slack](https://slack.pulumi.com/)
