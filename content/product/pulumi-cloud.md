@@ -27,17 +27,17 @@ case_studies:
           description: |
             Increased developers' agility and speed through platform engineering.
 
-        - name: Panther Labs
-          link: /case-studies/panther-labs/
-          logo: panther-labs
+        - name: Starburst
+          link: /blog/how-starburst-data-creates-infrastructure-automation-magic-with-code/
+          logo: starburst
           description: |
-            Increased velocity and speed, with deployments that are up to 10x faster.
+            Increased velocity and speed, with deployments that are up to 3x faster.
 
-        - name: Mercedes-Benz
-          link: /case-studies/mercedes-benz/
-          logo: mercedes-benz
+        - name: BMW
+          link: /case-studies/bmw/
+          logo: bmw
           description: |
-            Enabled developers to deploy Kubernetes clusters quickly and easily.
+            Enabled developers to deploy across hybrid cloud environments.
 
         - name: Lemonade
           link: /case-studies/lemonade/
@@ -151,6 +151,78 @@ capabilities:
                 Use a structured query syntax or natural language search (coming soon).
 
                 Share queries with your teammates.
+
+        - title: Automate infrastructure management across any cloud
+          image: /images/product/copilot-prompt.png
+          details:
+            - title: Generate infrastructure as code
+              description: |
+                Generate a Pulumi program and deploy cloud infrastructure in seconds with a few simple text prompts.
+
+              more_info: |
+                **Example Copilot prompts:**
+
+                *“Create a new serverless application on AWS”*
+
+                *“Configure a Kubernetes cluster with best practices on Azure”*
+                
+                *“Deploy a Cloudflare worker that uses sticky load balancing to distribute traffic to my Google Cloud backend”*
+
+
+            - title: Understand your team's cloud usage
+              description: |
+                Copilot has access to all of your Pulumi projects and stacks, and can relate those to your live cloud environments.
+
+              more_info: |
+                **Example Copilot prompts:**
+
+                *“What versions of Kubernetes do I currently have deployed?”*
+
+                *“What AWS account does VPC vpc-04a11 live within?”*
+
+                *“What environments do we have related to Azure?”*
+                
+                *“Describe the architecture of my www-frontend project.”*
+
+            - title: Discover cost savings opportunities
+              description: |
+                Copilot uses a combination of Pulumi and cloud understanding to discover and reclaim cloud waste.
+
+              more_info: |
+                **Example Copilot prompts:**
+
+                *“What are my least used, most expensive resources?”*
+
+                *“What are my top 10 most expensive cloud resources?”*
+
+                *“How much did my cloud costs increase month over month – and what team was responsible for driving them upwards?”*
+                
+            - title: Stay secure
+              description: |
+                Copilot leverages knowledge about security best practices by combining Pulumi’s supergraph and cloud skills.
+
+              more_info: |
+                **Example Copilot prompts:**
+
+                *“Do I have any insecure endpoints open to the Internet?”*
+
+                *“Do any of my S3 buckets have public-read access? If yes, help me make them private.”*
+
+                *“Do you see any anomalous activity within the past 48 hours?”*
+
+            - title: Debug cloud failures
+              description: |
+                Copilot can access history, logs, and runtime metrics so you can easily get answers about what is failing and why.
+
+              more_info: |
+                **Example Copilot prompts:**
+
+                *“Why did my deployment yesterday fail?”*
+
+                *“We had an outage Thursday evening around 11pm. Do you understand why?”*
+
+                *“I can’t access my EC2 instance i-3f8e over the Internet, why?”*
+
 
         - title: Set guardrails and access controls
           image: /images/product/console-policy-group.svg
