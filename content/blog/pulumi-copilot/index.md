@@ -146,6 +146,6 @@ We’re excited to introduce Pulumi Copilot, the first conversational AI for gen
 * [Join the Pulumi Community on Slack](https://slack.pulumi.com/)
 * [Check out the Pulumi Copilot docs](/docs/pulumi-cloud/copilot)
 
-Pulumi Copilot is available now in public beta, and is free while in beta for all organizaations in Pulumi Cloud. Organization administrators can turn on Pulumi Copilot for their organization by going to __Settings > Access Management > Pulumi Copilot__ within the Pulumi Cloud console.
+Pulumi Copilot is available now in public beta, and is free while in beta for all organizations in Pulumi Cloud. Organization administrators can turn on Pulumi Copilot for their organization by going to __Settings > Access Management > Pulumi Copilot__ within the Pulumi Cloud console.
 
 Get started with Pulumi Copilot in Pulumi Cloud today at [https://app.pulumi.com/](https://app.pulumi.com/).
