@@ -14,6 +14,10 @@ tags:
     - data-and-analytics
 ---
 
+{{% notes type="info" %}}
+There are new intelligent cloud management capabilities available in **Pulumi Copilot**. [Learn More](/blog/pulumi-copilot)
+{{% /notes %}}
+
 We've seen incredible acceleration of cloud adoption over the past 5 years. Pulumi’s flagship open source IaC solution gives engineers great tools to scale up their cloud infrastructure using the same programming languages and tools they already know and love. As a result, thousands of companies of every size and scale have adopted Pulumi as a lynchpin of their cloud infrastructure strategy.
 
 Today we're excited to announce **Pulumi Insights**, the next major productivity enhancement for infrastructure as code. Pulumi Insights provides intelligence, search, and analytics over any infrastructure, in any cloud across your organization, leveraging the latest advances in generative AI and Large Language Models (LLMs). Whether you have an AWS VPC, a Kubernetes CRD, or a DataDog alarm definition, Pulumi Insights enables you to intelligently find and interact with all of your resources from within the Pulumi Cloud.
