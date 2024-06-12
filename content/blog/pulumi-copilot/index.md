@@ -91,7 +91,7 @@ If we’re getting started on compliance with a new compliance framework, we can
 
 <p align="center"><img src="./fedramp.png" alt="FedRAMP" width="600" /></p>
 
-And we can get insights into what infrastructure exposed to the internet which we may need to look deeper into with a quick question:
+And we can get insights into what infrastructure is exposed to the internet which we may need to look deeper into with a quick question:
 
 <p align="center"><img src="./insecure-endpoints.png" alt="Insecure endpoints" width="600" /></p>
 
@@ -129,7 +129,7 @@ Pulumi Copilot is initially offered as part of Pulumi Cloud.  But we are working
 
 ### Cloud CLI Skills
 
-While Pulumi Copilot already has access to all the Cloud Infrastructure you are managing with Pulumi Cloud, there are many cases where it is useful to reach out to AWS directly to ask questions, get operational metrics, and take action.  We are already working on extending Pulumi Copilot with the ability to run aws and kubectl CLI commands, using short-lived credentials from one of your Pulumi ESC environments.  A sneak peak of that in action - showing how the AWS skill, combined with the ability to get details about resources and ESC environments from within Pulumi Cloud can enable collecting operational metrics from AWS and presenting them for analysis.
+While Pulumi Copilot already has access to all the Cloud Infrastructure you are managing with Pulumi Cloud, there are many cases where it is useful to reach out to AWS directly to ask questions, get operational metrics, and take action.  We are already working on extending Pulumi Copilot with the ability to run aws and kubectl CLI commands, using short-lived credentials from one of your Pulumi ESC environments.  A sneak peek of that in action - showing how the AWS skill, combined with the ability to get details about resources and ESC environments from within Pulumi Cloud can enable collecting operational metrics from AWS and presenting them for analysis.
 
 <!-- TODO Issue Link -->
 
