@@ -4,7 +4,7 @@ allow_long_title: true
 
 date: 2024-06-12T04:00:00-07:00
 
-meta_desc: "Pulumi Copilot is a new conversational AI for Intellignet Cloud Management in Pulumi Cloud"
+meta_desc: "Pulumi Copilot is a new conversational AI for Intelligent Cloud Management in Pulumi Cloud"
 
 meta_image: copilot.png
 
