@@ -22,7 +22,7 @@ benefits:
         img: /images/solutions/ai/ai_save_cost.svg
         alt: diagram of saving costs and improving security
         description: |
-          Pulumi builds a supergraph of all your organization's infrastructure resources (managed and not managed by Pulumi) and the relationships between each resource (e.g., stacks, data types). With AI, Pulumi helps you save on costs and improve security and compliance.
+          Pulumi builds a supergraph of all your organization's infrastructure resources (managed and not managed by Pulumi) and the relationships between each resource (e.g., stacks, data types). Pulumi Copilot unlocks insights to optimize costs, enhance security, and ensure compliance. 
     provision:
         title: Provision AI Infrastructure with Python
         img: /images/solutions/ai/ai_provision_infra.svg
