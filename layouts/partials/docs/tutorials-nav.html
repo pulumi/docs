@@ -19,7 +19,10 @@
                 {{ $sidenav_selected = "active" }}
             {{ end }}
             <div id="toc-menu-{{ $toc_name }}" class="{{ $sidenav_selected }} text-black no-anchor toc-header toggle-topLevel {{ $toggle_class }}" id="{{ $toc_name | urlize }}-toc-header">
-                <a href="{{ $toc_section_link }}">{{ $toc_name }}</a>
+                <div class="flex items-start topic-badge">
+                    <div class="icon icon-14-14 folder-open-14-14"></div>
+                </div>
+                <a href="{{ $toc_section_link }}" style="color: black">{{ $toc_name }}</a>
                 <span class="toggleButton-topLevel down">
                     <div class="icon icon-14-14 keyboard-arrow-down-gray-14-14"></div>
                 </span>
@@ -41,12 +44,6 @@
         {{ if ne $layout_type "topic" }}
             <div id="toc-menu-{{ $toc_name }}" class="{{ $sidenav_selected }} text-black no-anchor toc-header toggle-topLevel {{ $toggle_class }}" id="{{ $toc_name | urlize }}-toc-header">
                 <a>{{ $toc_name }}</a>
-                <span class="toggleButton-topLevel down">
-                    <div class="icon icon-14-14 keyboard-arrow-down-gray-14-14"></div>
-                </span>
-                <span class="toggleButton-topLevel right">
-                    <div class="icon icon-14-14 keyboard-arrow-right-gray"></div>
-                </span>
             </div>
             {{ range .Pages }}
             <div class="sidenav-subsection">

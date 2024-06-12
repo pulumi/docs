@@ -353,3 +353,10 @@ div.play-10-10 {
     }
     background: url(/images/docs/icons/play-10-10.svg);
 }
+
+div.folder-open-14-14 {
+    &:hover {
+        filter: unset;
+    }
+    background: url(/images/docs/icons/folder-open-14-14.svg);
+}
