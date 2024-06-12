@@ -160,7 +160,7 @@ capabilities:
                 Generate a Pulumi program and deploy cloud infrastructure in seconds with a few simple text prompts.
 
               more_info: |
-                **Example Copilot prompts:**
+                **Example Pulumi Copilot prompts:**
 
                 *“Create a new serverless application on AWS”*
 
@@ -171,10 +171,10 @@ capabilities:
 
             - title: Understand your team's cloud usage
               description: |
-                Copilot has access to all of your Pulumi projects and stacks, and can relate those to your live cloud environments.
+                Pulumi Copilot has access to all of your Pulumi projects and stacks, and can relate those to your live cloud environments.
 
               more_info: |
-                **Example Copilot prompts:**
+                **Example Pulumi Copilot prompts:**
 
                 *“What versions of Kubernetes do I currently have deployed?”*
 
@@ -186,10 +186,10 @@ capabilities:
 
             - title: Discover cost savings opportunities
               description: |
-                Copilot uses a combination of Pulumi and cloud understanding to discover and reclaim cloud waste.
+                Pulumi Copilot uses a combination of Pulumi and cloud understanding to discover and reclaim cloud waste.
 
               more_info: |
-                **Example Copilot prompts:**
+                **Example Pulumi Copilot prompts:**
 
                 *“What are my least used, most expensive resources?”*
 
@@ -199,10 +199,10 @@ capabilities:
                 
             - title: Stay secure
               description: |
-                Copilot leverages knowledge about security best practices by combining Pulumi’s supergraph and cloud skills.
+                Pulumi Copilot leverages knowledge about security best practices by combining Pulumi’s supergraph and cloud skills.
 
               more_info: |
-                **Example Copilot prompts:**
+                **Example Pulumi Copilot prompts:**
 
                 *“Do I have any insecure endpoints open to the Internet?”*
 
@@ -212,10 +212,10 @@ capabilities:
 
             - title: Debug cloud failures
               description: |
-                Copilot can access history, logs, and runtime metrics so you can easily get answers about what is failing and why.
+                Pulumi Copilot can access history, logs, and runtime metrics so you can easily get answers about what is failing and why.
 
               more_info: |
-                **Example Copilot prompts:**
+                **Example Pulumi Copilot prompts:**
 
                 *“Why did my deployment yesterday fail?”*
 

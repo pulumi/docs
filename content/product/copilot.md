@@ -18,11 +18,11 @@ benefits:
         
         Pulumi Copilot understands the entirety of over 160 clouds, including public clouds (AWS, Azure, Google Cloud), cloud native (Kubernetes, Helm), SaaS providers (Snowflake, Cloudflare, Datadog), and more. Pulumi Copilot directly interfaces with these cloud APIs and data models.
         
-        Simply ask any question, and Copilot will provide relevant, contextual, and effective responses to queries across the entire platform.
+        Simply ask any question, and Pulumi Copilot will provide relevant, contextual, and effective responses to queries across the entire platform.
 
         Pulumi Copilot is available in public beta, and is free while in beta. Organization admins can turn on Copilot in their organization **Settings > Access Management > Pulumi Copilot** within the Pulumi Cloud console.
         
-        Some of the answers in Pulumi Copilot may be inaccurate. Please send us your feedback so we can continue to improve the experience by typing `/bug` into Copilot.
+        Some of the answers in Pulumi Copilot may be inaccurate. Please send us your feedback so we can continue to improve the experience by typing `/bug` into Pulumi Copilot.
     graphic:
         image: https://www.pulumi.com/uploads/copilot-demo.mp4
         alt: Pulumi Copilot Demo
@@ -40,7 +40,7 @@ options:
         - icon: eye
           icon_color: salmon
           title: Discover cost savings
-          description: Copilot can access infrastructure stack and resource data, so you can analyze your infrastructure on cost, compliance, cloud usage.
+          description: Pulumi Copilot can access infrastructure stack and resource data, so you can analyze your infrastructure on cost, compliance, and cloud usage.
           example: "Example:  What are my least used, most expensive resources?"
           link: "https://app.pulumi.com/pulumi/?askCopilot=What are my least used, most expensive resources?"
         - icon: shield
@@ -52,7 +52,7 @@ options:
         - icon: code-window
           icon_color: fuchsia
           title: Debug failed stack updates
-          description: Copilot can access update and deployment logs of your stacks, so you can easily get answers about what caused failures.
+          description: Pulumi Copilot can access update and deployment logs of your stacks, so you can easily get answers about what caused failures.
           example: "Example:  Why did my deployment yesterday fail?"
           link: "https://app.pulumi.com/pulumi/?askCopilot=Why did my deployment yesterday fail?"
 
@@ -90,7 +90,7 @@ learn:
           buttons:
             - link: https://app.pulumi.com/
               type: primary
-              action: Try Copilot
+              action: Try Pulumi Copilot
         - title: Documentation
           description: Review our documentation to learn more about Pulumi Copilot.
           buttons:
