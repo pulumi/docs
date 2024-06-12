@@ -5,15 +5,15 @@
 {{ define "main" }}
     {{ $pageContext := . }}
 
-    <section id="overview" class="mx-auto text-center my-16 px-6 lg:flex lg:flex-row">
+    <section id="overview" class="mx-auto my-16 px-6 lg:flex lg:flex-row">
         <div class="w-full lg:w-1/2 mb-8 lg:mb-0 px-8">
             <h2>{{ .Params.overview.title }}</h2>
-            <p class="text-center w-full lg:w-3/4 mx-auto">{{ .Params.overview.description | markdownify }}</p>
+            <p class="w-full">{{ .Params.overview.description | markdownify }}</p>
             <div class="mt-8">
                 <a href="https://app.pulumi.com/" class="btn-secondary">{{ .Params.get_started }}</a>
             </div>
         </div>
-        <div class="w-full lg:w-1/2 mb-8 lg:mb-0 px-8">
+        <div class="w-full lg:w-1/2 content-center mb-8 lg:mb-0 px-8">
             <div class="rounded-xl shadow-2xl relative h-0 overflow-hidden" style="padding-bottom: 50.25%;">
                 <iframe
                     src="https://www.youtube.com/embed/m4kb2k_chyM?si=fHDUOJ-ozZ-2b4_E?rel=0"
@@ -26,13 +26,13 @@
         </div>
     </section>
 
-    <section id="benefits" class="container mx-auto my-16 lg:mt-16 lg:mb-8 px-6 items-stretch">
+    <section id="benefits" class="container mx-auto my-16 lg:mt-20 lg:mb-8 px-6">
         <div class="lg:flex">
-            <div class="lg:w-1/2 lg:pl-8">
+            <div class="lg:w-5/12 lg:pl-8">
                 <h3>{{ .Params.benefits.title }}</h3>
                 <p class="text-sm">{{ .Params.benefits.description | markdownify }}</p>
             </div>
-            <div class="lg:order-first lg:w-1/2 mb-8 lg:mb-0 relative h-full">
+            <div class="lg:order-first lg:w-7/12 mb-8 lg:mb-0 content-center">
                 <video class="card mx-auto bg-white" controls="false" autoplay="true" loop="true" src="{{ .Params.benefits.graphic.image }}" >
             </div>
         </div>
