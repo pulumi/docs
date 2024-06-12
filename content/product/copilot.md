@@ -24,7 +24,7 @@ benefits:
         
         Some of the answers in Pulumi Copilot may be inaccurate. Please send us your feedback so we can continue to improve the experience by typing `/bug` into Copilot or filing an [issue](https://github.com/pulumi/pulumi/issues/new/choose) in GitHub.
     graphic:
-        image: /images/product/copilot-demo.mp4
+        image: https://www.pulumi.com/uploads/copilot-demo.mp4
         alt: Pulumi Copilot Demo
 
 options:
