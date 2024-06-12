@@ -23,14 +23,17 @@ Through Pulumi Copilot, you can explore your cloud infrastructure and gain insig
 Pulumi Copilot enables these use cases via the following:
 
 __Access any data in Pulumi Cloud__
-  * The state of every resource you are managing with Pulumi across _any_ Cloud, _any_ account, and _any_ region.  With [Pulumi Insights'](https://www.pulumi.com/blog/pulumi-insights/) Cloud Supergraph support for 160+ cloud providers, this offers an unprecedented breadth of cloud infrastructure data to explore and interrogate with Pulumi Copilot.
-  * Pulumi stacks, projects, updates, deployments, environments, policies, audit logs and more - enabling historical understanding of what happened when, by who, and why across all of your cloud engineering systems managed by Pulumi.
+
+* The state of every resource you are managing with Pulumi across _any_ Cloud, _any_ account, and _any_ region.  With [Pulumi Insights'](https://www.pulumi.com/blog/pulumi-insights/) Cloud Supergraph support for 160+ cloud providers, this offers an unprecedented breadth of cloud infrastructure data to explore and interrogate with Pulumi Copilot.
+* Pulumi stacks, projects, updates, deployments, environments, policies, audit logs and more - enabling historical understanding of what happened when, by who, and why across all of your cloud engineering systems managed by Pulumi.
 
 __Pulumi IaC Authoring and Deployment__
-  * The same great Pulumi AI features for authoring IaC are now available inside Pulumi Copilot as well, enabling you to quickly solve new IaC problems within Pulumi Cloud, and even deploy code directly from Pulumi Copilot.
+
+* The same great Pulumi AI features for authoring IaC are now available inside Pulumi Copilot as well, enabling you to quickly solve new IaC problems within Pulumi Cloud, and even deploy code directly from Pulumi Copilot.
 
 __Access cloud metadata from the clouds themselves__
-  * Through the use of new skills, Pulumi Copilot can access cloud metadata in real time in AWS, Azure, Kubernetes, and more, allowing it to join Pulumi’s IaC world view with information about usage, costs, and more – as well as infrastructure not yet under the management of Pulumi.
+
+* Through the use of new skills, Pulumi Copilot can access cloud metadata in real time in AWS, Azure, Kubernetes, and more, allowing it to join Pulumi’s IaC world view with information about usage, costs, and more – as well as infrastructure not yet under the management of Pulumi.
 
 ## Frequently Asked Questions
 
