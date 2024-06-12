@@ -111,13 +111,14 @@ All of the examples above are things you can do today, but we’re not stopping 
 
 In the initial Beta, Pulumi Copilot is restricted to get data and answer questions, but cannot take action directly, beyond guiding users to a place within the Pulumi Cloud console to take the action themselves.  In the near future, we will be extending Pulumi Copilot with the ability to propose actions and then act on them with user approval.
 
-Check out [pulumi/cloud-requests#958](https://github.com/pulumi/pulumi.ai/issues/958) for more details.
+
+Check out [pulumi/cloud-requests#414](https://github.com/pulumi/pulumi-cloud-requests/issues/414) for more details.
 
 ### Pulumi CLI Integration
 
 One of the most common requests we have gotten from early Pulumi Copilot users has been for integration into the Pulumi CLI where many users spend much of their time day-to-day.  We have started experimenting with CLI integration to help with diagnosing Pulumi update failures, and will be adding this to the CLI in the near future.
 
-Check out [pulumi/cloud-requests#959](https://github.com/pulumi/pulumi.ai/issues/959) for more details.
+Check out [pulumi/cloud-requests#415](https://github.com/pulumi/pulumi-cloud-requests/issues/415) for more details.
 
 {{< video title="CLI errors" src="errors.mp4" autoplay="true" loop="true" >}}
 
@@ -125,7 +126,7 @@ Check out [pulumi/cloud-requests#959](https://github.com/pulumi/pulumi.ai/issues
 
 Pulumi Copilot is initially offered as part of Pulumi Cloud.  But we are working to extend Pulumi Copilot across the rest of pulumi.com, including integration with the Pulumi Docs website.  A new Pulumi Docs skill will allow Pulumi Copilot to help users learn Pulumi concepts and chat with Copilot about these to go deeper on concepts than what is already provided directly within the Pulumi Docs website.
 
-Check out [pulumi/cloud-requests#961](https://github.com/pulumi/pulumi.ai/issues/961) for more details.
+Check out [pulumi/cloud-requests#417](https://github.com/pulumi/pulumi-cloud-requests/issues/417) for more details.
 
 ![Docs website integration](./docs.png)
 
@@ -133,7 +134,7 @@ Check out [pulumi/cloud-requests#961](https://github.com/pulumi/pulumi.ai/issues
 
 While Pulumi Copilot already has access to all the Cloud Infrastructure you are managing with Pulumi Cloud, there are many cases where it is useful to reach out to AWS directly to ask questions, get operational metrics, and take action.  We are already working on extending Pulumi Copilot with the ability to run aws and kubectl CLI commands, using short-lived credentials from one of your Pulumi ESC environments.  A sneak peek of that in action - showing how the AWS skill, combined with the ability to get details about resources and ESC environments from within Pulumi Cloud can enable collecting operational metrics from AWS and presenting them for analysis.
 
-Check out [pulumi/cloud-requests#960](https://github.com/pulumi/pulumi.ai/issues/960) for more details.
+Check out [pulumi/cloud-requests#416](https://github.com/pulumi/pulumi-cloud-requests/issues/416) for more details.
 
 <p align="center"><img src="./cloudwatch.png" alt="AWS CLI Skill" width="700" /></p>
 
@@ -141,7 +142,7 @@ Check out [pulumi/cloud-requests#960](https://github.com/pulumi/pulumi.ai/issues
 
 We’re excited to introduce Pulumi Copilot, the first conversational AI for general multi-cloud infrastructure management.  Pulumi Copilot is the next big step toward reimagining cloud infrastructure management via AI-based user experiences. We’re just getting started, with many improvements and new capabilities coming soon on top of the core Pulumi Copilot foundation. Pulumi Copilot is brand new and improving quickly in response to user feedback. If you have questions or suggestions:
 
-* [Open an issue in GitHub](https://github.com/pulumi/cloud-requests)
+* [Open an issue in GitHub](https://github.com/pulumi/pulumi-cloud-requests)
 * [Reach out to schedule a demo](/contact/)
 * [Join the Pulumi Community on Slack](https://slack.pulumi.com/)
 * [Check out the Pulumi Copilot docs](/docs/pulumi-cloud/copilot)
