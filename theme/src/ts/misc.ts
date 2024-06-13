@@ -34,6 +34,19 @@ function loadToggleStates() {
         } else if (navigationState.getKey(el.id) == "collapsed") {
             $(el).addClass("toggle").removeClass("toggleVisible");
         }
+
+        // Control open/closed folder icons if they exist as a subelement of the parent toggle-able item.
+        $(el).click(function () {
+            const folderOpenIcon = $(el).find(".folder-open-14-14");
+            const folderClosedIcon = $(el).find(".folder-closed-14-14");
+            if (folderOpenIcon.length > 0) {
+                folderOpenIcon.addClass("folder-closed-14-14").removeClass("folder-open-14-14")
+                console.log("open")
+            } else if (folderClosedIcon.length > 0) {
+                console.log("closed")
+                folderClosedIcon.addClass("folder-open-14-14").removeClass("folder-closed-14-14")
+            }
+        });
     });
 
     $(".toggleVisible, .toggleVisible-topLevel").each(function (i, el) {

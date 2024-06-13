@@ -1,8 +1,8 @@
 <nav class="main-nav">
     {{ if hasSuffix .RelPermalink "/tutorials/" }}
         {{ $toc_page := . }}
-        {{ $toc_sections := slice "Tutorials by cloud provider" "Tutorials by topic" }}
-        {{ $toc_menus := dict "Tutorials by cloud provider" .Site.Data.tutorials.providers "Tutorials by topic" .Site.Data.tutorials.topics }}
+        {{ $toc_sections := slice "Tutorials by cloud" "Tutorials by topic" }}
+        {{ $toc_menus := dict "Tutorials by cloud" .Site.Data.tutorials.providers "Tutorials by topic" .Site.Data.tutorials.topics }}
 
         {{ range $index, $element := $toc_sections }}
             {{ $sidenav_selected := "" }}
@@ -14,9 +14,6 @@
             {{ $toggle_class := "toggle" }}
             {{ if or (hasPrefix $.Page.RelPermalink $toc_section_link) (eq $toc_name "Clouds") }}
                 {{ $toggle_class = "toggleVisible " }}
-            {{ end }}
-            {{ if eq $.Page.RelPermalink $toc_section_link }}
-                {{ $sidenav_selected = "active" }}
             {{ end }}
             <div id="toc-menu-{{ $toc_name }}" class="{{ $sidenav_selected }} text-black no-anchor toc-header toggle-topLevel {{ $toggle_class }}" id="{{ $toc_name | urlize }}-toc-header">
                 <div class="flex items-start topic-badge">

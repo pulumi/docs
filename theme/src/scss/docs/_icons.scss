@@ -360,3 +360,10 @@ div.folder-open-14-14 {
     }
     background: url(/images/docs/icons/folder-open-14-14.svg);
 }
+
+div.folder-closed-14-14 {
+    &:hover {
+        filter: unset;
+    }
+    background: url(/images/docs/icons/folder-closed-14-14.svg);
+}
