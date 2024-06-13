@@ -1,134 +1,83 @@
 {{ define "hero" }}
-    {{ partial "hero" (dict "title" .Params.title) }}
+{{ partial "hero" (dict "title" .Params.title) }}
 {{ end }}
 
 
 {{ define "main" }}
-    {{ $pageContext := . }}
+{{ $pageContext := . }}
 
 
-    <section id="overview" class="max-w-5xl mx-auto text-center my-16 px-6">
+<section id="overview" class="max-w-5xl mx-auto text-center my-16 px-6">
     {{ with .Params.overview }}
-        <h2>{{ .title }}</h2>
-        <p class="text-left">{{ .description | markdownify }}</p>
-        <div class="mt-10">
-            <a href="#form" rel="noopener noreferrer" class="btn-primary">Speak with an Architect!</a>
-        </div>
+    <h2>{{ .title }}</h2>
+    <p class="text-left">{{ .description | markdownify }}</p>
+    <div class="mt-10">
+        <a href="#form" rel="noopener noreferrer" class="btn-primary">Speak with an Architect!</a>
+    </div>
     {{ end }}
-    </section>
+</section>
 
-    <section id="challenges">
-        {{ partial "card-group.html" (dict "card_group" .Params.challenges) }}
-    </section>
+<section id="challenges">
+    {{ partial "card-group.html" (dict "card_group" .Params.challenges) }}
+</section>
 
-    <section id="solutions_header">
+<section id="solutions_header">
     {{ with .Params.solutions_header }}
     <div class="max-w-5xl mx-auto text-center px-6">
         <h3>{{ .title }}</h3>
         <p>{{ .description }}</p>
     </div>
     {{ end }}
-    </section>
+</section>
 
-    <section id="solutions">
-        {{ partial "card-group-toggled.html" (dict "card_group" .Params.solutions) }}
-    </section>
+<section id="solutions">
+    {{ partial "card-group-toggled.html" (dict "card_group" .Params.solutions) }}
+</section>
 
-    <section id="form" class="container mx-auto justify-center text-center my-16 p-4">
-        <div class="w-full lg:w-1/2 card bg-white mx-auto p-12">
-            {{ with .Params.form }}
-                <h3>{{ .title }}</h3>
-                <p>{{ .description }}</p>
-                <pulumi-hubspot-form form-id={{ .id }} class="mt-10"></pulumi-hubspot-form>
-            {{ end }}
-        </div>
-    </section>
+<section id="form" class="container mx-auto justify-center text-center my-16 p-4">
+    <div class="w-full lg:w-1/2 card bg-white mx-auto p-12">
+        {{ with .Params.form }}
+        <h3>{{ .title }}</h3>
+        <p>{{ .description }}</p>
+        <pulumi-hubspot-form form-id={{ .id }} class="mt-10"></pulumi-hubspot-form>
+        {{ end }}
+    </div>
+</section>
 
 
 
-             
-          
-        <section class="all-packages mt-8">
-            {{ $allPackages := .Site.Data.packages }}
-            {{ $featuredPackages := slice }}
-              {{ range $allPackages }}
-                  {{ if .featured }}
-                      {{ $featuredPackages = $featuredPackages | append . }}
-                  {{ end }}
-              {{ end }}
-            <div class="mb-2 px-4 relative z-10">
-                <h4 class="text-lg">Filters</h4>
-                <div class="flex flex-col md:flex-row md:items-start">
-                    <div class="flex flex-col" style="min-height: 95px">
-                        <pulumi-filter-select class="mb-2">
-    
-                            <!-- Package-type options -->
-                            <pulumi-filter-select-option-group name="type" class="w-1/2">
-                                <div class="toggle" slot="toggle">Type</div>
-                                <div class="options">
-                                    <pulumi-filter-select-option value="native-provider" label="Native Provider">Native Provider</pulumi-filter-select-option>
-                                    <pulumi-filter-select-option value="provider" label="Provider">Provider</pulumi-filter-select-option>
-                                    <pulumi-filter-select-option value="component" label="Component">Component</pulumi-filter-select-option>
-                                </div>
-                            </pulumi-filter-select-option-group>
-    
-                            <!-- Use-case options -->
-                            <pulumi-filter-select-option-group name="category" class="mx-1 md:mx-4 w-1/2">
-                                <div class="toggle" slot="toggle">Use Case</div>
-                                <div class="options">
-                                    <pulumi-filter-select-option value="cloud" label="Cloud">Cloud</pulumi-filter-select-option>
-                                    <pulumi-filter-select-option value="database" label="Database">Database</pulumi-filter-select-option>
-                                    <pulumi-filter-select-option value="infrastructure" label="Infrastructure">Infrastructure</pulumi-filter-select-option>
-                                    <pulumi-filter-select-option value="monitoring" label="Monitoring">Monitoring</pulumi-filter-select-option>
-                                    <pulumi-filter-select-option value="network" label="Network">Network</pulumi-filter-select-option>
-                                    <pulumi-filter-select-option value="utility" label="Utility">Utility</pulumi-filter-select-option>
-                                    <pulumi-filter-select-option value="version control system" label="Version Control">Version Control</pulumi-filter-select-option>
-                                </div>
-                            </pulumi-filter-select-option-group>
-    
-                        </pulumi-filter-select>
-                        <!-- The list of active filters. -->
-                        <ul class="package-tags active-tags"></ul>
-                    </div>
-    
-                    <pulumi-registry-list-search class="w-full"></pulumi-registry-list-search>
-    
-                    <!-- The template used for displaying active filters. -->
-                    <template id="active-tag-template">
-                        <li>
-                            <span></span>
-                            <button class="ml-2 text-base hover:text-gray-900" title="Clear filter">&times;</button>
-                        </li>
-                    </template>
-                </div>
+
+
+<section>
+    <div class="max-w-5xl mx-auto text-center px-6">
+        <div class="container mx-auto my-16">
+            <div class="max-w-5xl mx-auto text-center px-6">
+                <h2>Partners</h2>
             </div>
-    
-            <h2 class="px-4 inline-flex items-center mt-8 md:mt-0">
-                A &ndash; Z Packages
-                <span class="all-count ml-4 py-0.5 px-3 rounded-full bg-violet-600 text-white text-lg">
-                    {{ len $allPackages }}
-                </span>
-            </h2>
-            <p class="px-4 mt-0">
-                <a href="{{ relref . "/docs/using-pulumi/pulumi-packages/contribute-to-pulumi-registry" }}" class="font-display underline text-lg">Contribute your own packages</a>
-            </p>
-            <div class="flex flex-wrap">
-                {{ $page := . }}
-    
-                {{ range (sort $allPackages "title") }}
-                    console.log("hello")
+            <div class="flex flex-row flex-wrap justify-content items-stretch text-left my-4">
+                {{ $colorNames := site.Data.colors.icon_colors }}
+                {{ range $partner := .Site.Data.partners.partners}}
+                <div class="w-1/2 h-full bg-white p-4 mx-auto">
+                    <a href="{{ $partner.link }}">
+                        <div class="h-full card bg-white p-4">
+                            <div>
+                                <img class="h-8" src="{{ $partner.logo }}" />
+                            </div>
+                            <div>
+                                <h3>{{ $partner.name }}</h3>
+                            </div>
+                            <div class="mt-6">
+                                <p>{{ $partner.description }}</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
                 {{ end }}
-                <div class="no-results px-4">
-                    <p>
-                        Looks like we don't have any packages that match your filters.
-                        Adjust or clear the filters and try again.
-                    </p>
-                    <button class="reset btn btn-lg">Clear all filters</button>
-                </div>
             </div>
-        </section>
+        </div>
+    </div>
+</section>
 
 
 
 {{ end }}
-
