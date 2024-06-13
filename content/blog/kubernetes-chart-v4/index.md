@@ -533,7 +533,7 @@ child resources.
 
 The child resources created by the chart are presented to your program via the `resources` output, as an array
 of Pulumi Resource objects. In some SDKs, you can cast the resource into the appropriate resource type,
-e.g. `corev1.ConfigMap`. Not all SDKs support this (yet); see [pulumi/pulumi#6346](https://github.com/pulumi/pulumi/issues/6346).
+e.g. `corev1.ConfigMap`. Not all SDKs support this (yet); see [pulumi/pulumi#15788](https://github.com/pulumi/pulumi/issues/15788).
 
 ## Example: Argo CD
 
