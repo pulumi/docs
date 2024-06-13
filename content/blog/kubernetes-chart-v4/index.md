@@ -1,9 +1,9 @@
 ---
-title: "New: Helm Chart v4 resource with tons of new features"
-date: 2024-06-12T00:00:00-07:00
+title: "New: Helm Chart v4 resource with new features and languages"
+date: 2024-06-13T00:00:00-07:00
 meta_desc: >-
   Pulumi Kubernetes v4.13 offers a new resource for applying Helm charts consistently across Pulumi SDKs, with new features and SDK support.
-
+meta_image: chartv4.png
 authors:
     - eron-wright
 
@@ -14,21 +14,22 @@ tags:
     - helm
 ---
 
-When you need to install a third-party application into your Kubernetes cluster, you're likely to find a
-Helm chart for that in [Artifact Hub](https://artifacthub.io/) or other registry. Pulumi provides two
-ways to apply a Helm chart, as outlined in [Choosing the Right Helm Resource For Your Use Case](/registry/packages/kubernetes/how-to-guides/choosing-the-right-helm-resource-for-your-use-case/).  The Chart resource offers deeper integration with Pulumi
-and better drift remediation.
-
 Today we're happy to announce a new "v4" version of the Chart resource, available now in v4.13 of the Pulumi Kubernetes provider.
 The new [kubernetes.helm.sh/v4.Chart](/registry/packages/kubernetes/api-docs/helm/v4/chart/) resource is provided
 side-by-side with the existing [kubernetes.helm.sh/v3.Chart](/registry/packages/kubernetes/api-docs/helm/v3/chart/) resource.
 We expect to deprecate v3 in the future.
 
-## What's New
+When you need to install a third-party application into your Kubernetes cluster, you're likely to find a
+Helm chart for that in [Artifact Hub](https://artifacthub.io/) or other registry. Pulumi provides two
+ways to apply a Helm chart, as outlined in [Choosing the Right Helm Resource For Your Use Case](/registry/packages/kubernetes/how-to-guides/choosing-the-right-helm-resource-for-your-use-case/).  The Chart resource offers deeper integration with Pulumi
+and better drift remediation. v4 brings a host of new features, including enhanced SDK support across all Pulumi SDKs, full OCI registry support, improved handling of chart values, better connectivity for cluster interactions, and improved resource ordering.
+Let's dig in.
+
+## What's new
 
 Let's look at what's new with Chart v4.
 
-### New SDK Support - Java SDK & YAML SDK
+### New language support - Java SDK & YAML SDK
 
 The Chart v4 resource is a [Pulumi Component](/docs/using-pulumi/pulumi-packages/#types-of-pulumi-packages) that works
 consistently across all Pulumi SDKs. Earlier versions were implemented separately for each SDK, leading to various
@@ -167,7 +168,7 @@ resources:
 
 {{< /chooser >}}
 
-### OCI Registry Support
+### OCI registry support
 
 You can use container registries with OCI support such as [Docker Hub](https://hub.docker.com/) to store and share
 Helm chart packages. The Chart v4 resource now has full support for OCI, bringing it to parity with
@@ -178,13 +179,13 @@ To use an authenticated OCI registry, you must first login using `helm registry 
 Chart v4 also supports the use of [Helm chart repositories](https://helm.sh/docs/topics/chart_repository/),
 and adopts the same `repositoryOpts` API as was introduced in the Release resource.
 
-### Lock File Support
+### Lock file support
 
 Helm has support for lock files (Chart.lock) to control a chart's dependencies. When deploying a chart from a local directory,
 Pulumi automatically rebuilds the chart's dependencies if a lock file is present. See
 [Helm Dependency Build](https://helm.sh/docs/helm/helm_dependency_build/) for details.
 
-### Better Handling of Chart Values
+### Better handling of chart values
 
 Chart v4 offers new ways to work with Chart values. It is now possible to use multiple values files and to use
 [Pulumi Assets](/docs/concepts/assets-archives/#assets). Of course you can also use output values from other
@@ -381,7 +382,7 @@ resources:
 
 {{< /chooser >}}
 
-### Better Connectivity
+### Better connectivity
 
 You may now use charts that use chart functions requiring a connection to the cluster, e.g. to:
 
@@ -393,7 +394,7 @@ in your templates to get existing objects in your live cluster.
 Note that the lookup function is executed in both the preview and the non-preview mode, and keep in mind that
 the expected object may not exist during a preview.
 
-### Improved Resource Ordering
+### Improved resource ordering
 
 It's now easy to wait for a chart's resources to be installed before installing other resources,
 simply by using the `dependsOn` option. In earlier versions, we relied on a `ready` output property.
@@ -413,7 +414,7 @@ It consists of the group, kind, name, and optionally the namespace, delimited by
 
 For resources in the “core” group, the empty string is used instead (for example: `/namespaces/test/Pod/pod-a`).
 
-### New-Style Pulumi Transformations
+### New-style Pulumi transformations
 
 Pulumi has a new way to transform component resources and their children, the `transforms`  options. The older
 `transformations` option doesn't work with multi-language components like Chart v4. See
@@ -489,7 +490,28 @@ ingresscontroller = kubernetes.helm.v4.Chart(
 
 {{< /chooser >}}
 
-### Not Supported: Kubernetes Transformations
+### Post-rendering support
+
+New to v4 is support for a post-rendering command, with optional arguments, to be applied to the rendered manifest.
+See [Advanced Helm Techniques: Post Rendering](https://helm.sh/docs/topics/advanced/#post-rendering) for details.
+
+### "Keep" policy
+
+The Chart v4 resource now understands Helm resource policies, specifically "keep" which instructs Pulumi
+not to delete a given object when the resource is destroyed. Simply apply the `helm.sh/resource-policy: keep` annotation
+to the object. See [Tell Helm Not To Uninstall a Resource](https://helm.sh/docs/howto/charts_tips_and_tricks/#tell-helm-not-to-uninstall-a-resource)
+for details.
+
+### Release name
+
+Charts typically generate object names based on the Helm release name. By default, Chart v4 uses its own resource name
+as the release name. To customize the release name, set the `name` property on the `Chart`.
+
+Some charts also accept a `fullnameOverride` value to control object naming, use that if possible.
+
+## Limitations
+
+### Not supported: Kubernetes transformations
 
 Chart v4 does not support the `transformations` argument as seen in Chart v3, that facilitates a
 Kubernetes-centric transformation and/or discarding of objects from the rendered manifest.
@@ -497,26 +519,7 @@ Kubernetes-centric transformation and/or discarding of objects from the rendered
 One alternative is to use use Pulumi transformations to transform the object and resource options.
 Another is to use post-rendering, which we'll cover next.
 
-### Post-Rendering Support
-
-New to v4 is support for a post-rendering command, with optional arguments, to be applied to the rendered manifest.
-See [Advanced Helm Techniques: Post Rendering](https://helm.sh/docs/topics/advanced/#post-rendering) for details.
-
-### "Keep" Policy
-
-The Chart v4 resource now understands Helm resource policies, specifically "keep" which instructs Pulumi
-not to delete a given object when the resource is destroyed. Simply apply the `helm.sh/resource-policy: keep` annotation
-to the object. See [Tell Helm Not To Uninstall a Resource](https://helm.sh/docs/howto/charts_tips_and_tricks/#tell-helm-not-to-uninstall-a-resource)
-for details.
-
-### Release Name
-
-Charts typically generate object names based on the Helm release name. By default, Chart v4 uses its own resource name
-as the release name. To customize the release name, set the `name` property on the `Chart`.
-
-Some charts also accept a `fullnameOverride` value to control object naming, use that if possible.
-
-### Not Supported: Helm Hooks
+### Not supported: Helm hooks
 
 Some charts use hooks to perform pre- and post-installation tasks, and we recommend using the `Release` resource
 to install such charts. Another option is to emulate the hook by performing the task directly, using other Pulumi resources
@@ -526,10 +529,16 @@ such as [kubernetes.batch/v1.Job](/registry/packages/kubernetes/api-docs/batch/v
 Note that Chart v3 does not support hooks either but, for historical reasons, does emit the hooks as ordinary
 child resources.
 
+### Evolving: Resource outputs
+
+The child resources created by the chart are presented to your program via the `resources` output, as an array
+of Pulumi Resource objects. In some SDKs, you can cast the resource into the appropriate resource type,
+e.g. `corev1.ConfigMap`. Not all SDKs support this (yet); see [pulumi/pulumi#6346](https://github.com/pulumi/pulumi/issues/6346).
+
 ## Example: Argo CD
 
-Here's a real-world example of installing ArgoCD into a Kubernetes cluster, and of using ArgoCD's `Application`
-resource to deploy the 'guestbook' example.
+Here's a real-world example of installing [Argo CD](https://argoproj.github.io/cd/) into a Kubernetes cluster,
+and of using Argo CD's `Application` custom resource to deploy the 'guestbook' example.
 
 {{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
@@ -1023,9 +1032,6 @@ Since the Chart v4 resource doesn't support Helm hooks, this program creates the
 Pulumi loves empowering developers to use the best tools for the job, and we recommend using Helm charts to install
 third-party Kubernetes applications. Pulumi complements Helm by handling the cloud resources that are often required,
 such as an IAM Role or cloud storage bucket. Such combinations make for great reusable componentry.
-
-This is part of a broad initiative to use Multi-Language Component (MLC) technology to offer a consistent experience
-across the Pulumi SDKs. See [pulumi-kubernetes#1971](https://github.com/pulumi/pulumi-kubernetes/issues/1971) for details.
 
 Check out the following links to learn more about Pulumi Kubernetes today!
 
