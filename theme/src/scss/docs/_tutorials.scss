@@ -1,13 +1,12 @@
 .tutorials-main {
-    font-family: Gilroy;
     h2 {
         font-size: 24px !important;
     }
-
+    
     h3 {
         font-size: 21px !important;
     }
-
+    
     .topic-badge {
         align-content: center;
         border-radius: 4px;
@@ -23,9 +22,11 @@
         text-align: left;
         width: 88px;
     }
-
+    
     .tutorials-clouds {
 
+        font-family: Gilroy;
+        
         .cloud-cards {
             display: flex;
             width: 100%;
@@ -79,6 +80,9 @@
     }
 
     .tutorials-topics, .tutorials-all {
+        
+        font-family: Gilroy;
+
         .tutorial-cards {
             border-radius: 4px 0px 0px 0px;
             border: 1px 0px 0px 0px;
