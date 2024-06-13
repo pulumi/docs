@@ -70,6 +70,8 @@ faq:
         content: |
           At this time Pulumi Copilot can only perform read operations, such as making GET requests on the user's behalf. If you ask Pulumi Copilot to perform an action, such as making a member an admin, it will confirm it is not able to. 
 
+          The plan in the near future is that Pulumi Copilot expands functionality to perform actions on your behalf, with confirmation actions to ensure you are aware of the steps it is taking. Controls will be available to disable read-write capabilities at the organization level.
+
       - header: What data does Pulumi Copilot send to Azure OpenAI API?
         content: |
           Pulumi Copilot transmits data to Pulumi’s Azure tenant to generate responses, including both contextual data and data about the user’s actions. The transmitted data is encrypted both in transit and at rest; Pulumi Copilot-related data is encrypted in transit using transport layer security (TLS). Furthermore, Pulumi Copilot does not have the ability to decrypt secrets, so no secret data is exposed to either users or the Pulumi’s Azure tenant by Pulumi Copilot.
