@@ -260,7 +260,7 @@ For YAML, your {{< langfile >}} is also your program's main entrypoint file.
 Use the command <code>cat</code>{{< langfile >}} to explore the contents of your
 project's empty program:
 
-{{< chooser language "typescript,python,go,java,yaml" / >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
 
 {{% choosable language typescript %}}
 
@@ -294,6 +294,27 @@ func main() {
 		return nil
 	})
 }
+```
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+```csharp
+using System.Collections.Generic;
+using Pulumi;
+
+return await Deployment.RunAsync(() =>
+{
+    // Add your resources here
+    // e.g. var resource = new Resource("name", new ResourceArgs { });
+
+    // Export outputs here
+    return new Dictionary<string, object?>
+    {
+        ["outputKey"] = "outputValue"
+    };
+});
 ```
 
 {{% /choosable %}}
