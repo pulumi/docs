@@ -46,7 +46,7 @@ for you to create a new one by hand. The `pulumi new` command-line interface
 you need, so let's use that command. The `-y` flag answers "yes" to the prompts to
 create a default project:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
+{{% chooser language "typescript,python,go,csharp,java,yaml" %}}
 
 {{% choosable language typescript %}}
 
@@ -95,6 +95,8 @@ $ pulumi new yaml -y
 ```
 
 {{% /choosable %}}
+
+{{% /chooser %}}
 
 This command prints output similar to the following example with a bit more
 information and status as it goes:
