@@ -118,8 +118,9 @@ aws s3api put-bucket-cors --bucket "$destination_bucket" --cors-configuration "f
 if [[ "$1" == "preview" ]]; then
     pr_comment_api_url="$(cat "$GITHUB_EVENT_PATH" | jq -r ".pull_request._links.comments.href")"
     post_github_pr_comment \
-        "Your site preview for commit $(git_sha_short) is ready! :tada:\n\n${s3_website_url}." \
+        "Your site preview for commit $(git_sha_short) is ready! :tada:\n\n<a href=${s3_website_url} target=_blank>${s3_website_url}</a>." \
         $pr_comment_api_url
+
 fi
 
 echo "Done! The bucket website is now built and available at ${s3_website_url}."
