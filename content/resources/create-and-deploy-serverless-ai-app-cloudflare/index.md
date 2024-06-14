@@ -39,7 +39,7 @@ main:
     youtube_url:
 
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2024-06-18T09:00:00.000-07:00
+    sortable_date: 2024-08-07T09:00:00.000-07:00
 
     # Duration of the webinar.
     duration: 90 minutes
