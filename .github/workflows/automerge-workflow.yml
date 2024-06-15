@@ -1,6 +1,6 @@
 jobs:
   automerge:
-    if: (github.event.pull_request.user.login == 'pulumi-bot') && (github.event.pull_request.head.repo.full_name == github.repository)
+    if: (github.event.pull_request.user.login == 'cnunciato') && (github.event.pull_request.head.repo.full_name == github.repository)
     name: Automerge Workflow
     runs-on: ubuntu-latest
     steps:
@@ -17,7 +17,7 @@ jobs:
           UPDATE_LABELS: automation/update
           UPDATE_METHOD: rebase
         name: Automerge
-        uses: pascalgn/automerge-action@v0.13.1
+        uses: pascalgn/automerge-action@v0.16.3
   notify:
     if: failure()
     name: Send slack notification
