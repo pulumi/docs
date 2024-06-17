@@ -2,22 +2,18 @@
 # Copy and paste one of the partner blocks below and fill out the properties
 # pertaining to that parner.
 
-- name: Partner 1
-  description: Partner1 description
+- name: AWS
   link: https://aws.amazon.com
   logo: /logos/pkg/aws.svg
 
-- name: Partner2
-  description: Parter 2 description text
+- name: Google Cloud
   link: https://www.pulumi.com
   logo: /logos/pkg/gcp.svg
 
-- name: Partner3
-  description: Parter 3 description text
+- name: Azure
   link: https://www.pulumi.com
-  logo: /logos/pkg/aws.svg
+  logo: /logos/pkg/azure-native.svg
 
-- name: Partner4
-  description: Parter 4 description text
+- name: Docker
   link: https://www.pulumi.com
-  logo: /logos/pkg/gcp.svg
+  logo: /logos/pkg/docker.svg
