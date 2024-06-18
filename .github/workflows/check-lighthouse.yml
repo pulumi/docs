@@ -8,7 +8,7 @@ on:
 jobs:
   all:
     name: Lighthouse
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
       - name: Run Lighthouse
         uses: treosh/lighthouse-ci-action@v8
