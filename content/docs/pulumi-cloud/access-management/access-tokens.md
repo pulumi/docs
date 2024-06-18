@@ -90,7 +90,12 @@ These access tokens have the same permission as your user.
 To create an access token:
 
 1. Select **Personal access tokens** from the user menu.
-2. Select **Create token**.
+1. Select **Create token**, which will open a dialog.
+1. Optionally, you may assign a description for additional context.
+1. Choose an expiration period up of up to two years. You may also choose that the token does not expire.
+1. Select **Create token** in the dialog to create the token.
+
+It is strongly recommended that you choose an expiration period for all access tokens you create.
 
 ### Deleting Personal Access Tokens
 
@@ -116,9 +121,15 @@ Organization access tokens provide the following benefits:
 Navigate to your organization and then:
 
 1. Navigate to **Settings** > **Access Tokens**.
-1. Select **Create token**.
+1. Select **Create token**, which will open a dialog.
+1. Provide a unique name for this token across your organization. It can be up to 40 characters.
+1. Optionally, you may assign a description for additional context.
+1. Choose an expiration period up of up to two years. You may also choose that the token does not expire.
+1. Select **Create token** in the dialog to create the token.
 
 The token must have a name that is unique among all organization and team access tokens in the organization., including deleted tokens. This allows tokens taking operations on behalf of your organization to be identifiable in the event that one is compromised. Any other organization admin can delete this token; it is not owned by the admin which created it. Creation of organization access tokens is logged as an audit log event.
+
+It is strongly recommended that you choose an expiration period for all access tokens you create.
 
 #### Admin organization access tokens
 
@@ -158,8 +169,15 @@ Navigate to your Pulumi Organization, then:
 1. Select **Teams**.
 1. Select the Pulumi Team you would like to attach the token to.
 1. Scroll to **Access Tokens**.
+1. Select **Create token**, which will open a dialog.
+1. Provide a unique name for this token across your organization. It can be up to 40 characters.
+1. Optionally, you may assign a description for additional context.
+1. Choose an expiration period up of up to two years. You may also choose that the token does not expire.
+1. Select **Create token** in the dialog to create the token.
 
 The token must have a name that is unique among all organization and team access tokens in the organization., including deleted tokens. This allows tokens taking operations on behalf of your organization to be identifiable in the event that one is compromised. Any other organization admin can delete this token; it is not owned by the admin which created it. Creation of organization access tokens is logged as an audit log event.
+
+It is strongly recommended that you choose an expiration period for all access tokens you create.
 
 ### Viewing team access tokens
 
