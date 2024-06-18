@@ -3,7 +3,7 @@ title_tag: "Frequently Asked Questions (FAQs) | CrossGuard"
 meta_desc: This page contains Frequently Asked Questions about Pulumi CrossGuard and Policy Packs.
 title: FAQ
 h1: Policy as code FAQ
-weight: 5
+weight: 6
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   usingpulumi:
@@ -92,8 +92,8 @@ Existing Python Policy Packs can opt-in to using the built-in virtual environmen
 {{% choosable os macos %}}
 
 ```bash
-$ python3 -m venv venv
-$ venv/bin/pip install -r requirements.txt
+python3 -m venv venv
+venv/bin/pip install -r requirements.txt
 ```
 
 {{% /choosable %}}
@@ -101,8 +101,8 @@ $ venv/bin/pip install -r requirements.txt
 {{% choosable os linux %}}
 
 ```bash
-$ python3 -m venv venv
-$ venv/bin/pip install -r requirements.txt
+python3 -m venv venv
+venv/bin/pip install -r requirements.txt
 ```
 
 {{% /choosable %}}
@@ -137,7 +137,7 @@ To install a new dependency in the virtual environment, add an entry to `require
 {{% choosable os macos %}}
 
 ```bash
-$ venv/bin/pip install -r requirements.txt
+venv/bin/pip install -r requirements.txt
 ```
 
 {{% /choosable %}}
@@ -145,7 +145,7 @@ $ venv/bin/pip install -r requirements.txt
 {{% choosable os linux %}}
 
 ```bash
-$ venv/bin/pip install -r requirements.txt
+venv/bin/pip install -r requirements.txt
 ```
 
 {{% /choosable %}}
