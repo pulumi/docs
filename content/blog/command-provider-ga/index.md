@@ -7,7 +7,7 @@ draft: false
 
 meta_desc: >-
     Version v1 of the Pulumi Command provider marks the provider’s general availability (GA).
-    The release also includes expanded support for copying assets.
+    The release expands support for copying assets between local and remote hosts.
 
 meta_image: meta.png
 
@@ -178,12 +178,12 @@ return await Deployment.RunAsync(() =>
 
 Rather than simply putting a “v1” label on the existing provider, we used this opportunity to enhance it with some previously requested capabilities.
 
-- The former CopyFile resource was renamed to CopyToRemote and can now copy whole directories in addition to individual files.
-- The source of the copy is now a Pulumi [asset or archive](https://www.pulumi.com/docs/concepts/assets-archives/). This provides full interoperability with the Pulumi ecosystem and is the same as in, for instance, AWS Bucket uploads.
+- The former `CopyFile` resource was renamed to `CopyToRemote` and can now copy whole directories in addition to individual files.
+- The source of the copy is now a [Pulumi asset or archive](https://www.pulumi.com/docs/concepts/assets-archives/). This provides full interoperability with the Pulumi ecosystem.
 - The use of assets and archives also makes Pulumi run copy operations only if the source has changed.
 - Capturing stdout and stderr of commands can now be switched off, which is useful when they might contain secrets or are very noisy.
 - There are now official examples in the Pulumi examples repository, and examples have also been added to the API documentation in the Pulumi registry.
-- Environment handling for remote commands was fixed and better documented.
+- Environment handling for remote commands was fixed and is better documented.
 
 Here’s an example of copying a directory to a remote host.
 **TODO: Insert remote copy directory example here**
