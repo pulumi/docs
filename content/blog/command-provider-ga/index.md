@@ -74,6 +74,30 @@ resources:
 
 {{% /choosable %}}
 
+{{% choosable language java %}}
+
+```java
+public class App {
+    public static void main(String[] args) {
+        Pulumi.run(App::stack);
+    }
+
+    public static void stack(Context ctx) {
+        final var config = ctx.config();
+        final var pulumiTags = config.get("pulumiTags");
+        var pet = new RandomPet("pet");
+
+        var petFileCommand = new Command("petFileCommand", CommandArgs.builder()
+            .create(pet.id().applyValue(id -> String.format("touch \"%s.txt\"", id)))
+            .delete(pet.id().applyValue(id -> String.format("rm \"%s.txt\"", id)))
+            .triggers(pet.id())
+            .build());
+    }
+}
+```
+
+{% /choosable %}}
+
 {{% choosable language typescript %}}
 
 ```typescript
