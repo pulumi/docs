@@ -64,8 +64,8 @@ resources:
   petFileCommand:
     type: command:local:Command
     properties:
-      create: !Sub 'touch "${pet.id}.txt"'
-      delete: !Sub 'rm "${pet.id}.txt"'
+      create: 'touch "${pet.id}.txt"'
+      delete: 'rm "${pet.id}.txt"'
       triggers:
         # Replace this resource, i.e., re-run the 'create'
         # command, when the pet resource changes.
