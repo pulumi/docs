@@ -60,9 +60,9 @@ main:
 
     # The webinar presenters
     presenters:
-        - name: Diana Esteves
-          role: Solutions Architect, Pulumi
-          photo: /images/team/diana-esteves.jpg
+        - name: Engin Diri
+          role: Customer Experience Architect, Pulumi
+          photo: /images/team/engin-diri.jpg
 
     # case-sensitive
     tags:
