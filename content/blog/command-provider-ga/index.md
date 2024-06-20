@@ -1,12 +1,12 @@
 ---
-title: "Announcing the general availability of the Command provider"
+title: "Pulumi Command Provider 1.0"
 
 date: 2024-06-20T11:02:20+02:00
 
 draft: false
 
 meta_desc: >-
-    Version v1 of the Pulumi Command provider marks the provider’s general availability (GA).
+    The 1.0 release of the Pulumi Command provider marks the provider’s general availability (GA).
     The release expands support for copying assets between local and remote hosts.
 
 meta_image: meta.png
@@ -35,8 +35,8 @@ social:
     linkedin:
 ---
 
-Today, we’re happy to announce version v1.0.0 of the Pulumi Command provider. This release marks the provider’s official transition from preview status to general availability (GA).
-Since its first preview release in late 2021, many users found the flexibility of the Command package valuable. In fact, it’s currently our tenth-most popular provider, so it's time to make things official!
+Today, we’re happy to announce the 1.0 release of the [Pulumi Command](https://www.pulumi.com/registry/packages/command/) provider. This release marks the provider’s official transition from preview status to general availability (GA).
+Since its first preview release in late 2021, thousands of Pulumi users incorporated the Command package into their cloud infrastructure projects to help manage local and remote command execution and filesystem operations. In fact, the Command provider is already our ninth-most popular provider, so it's time to make things official!
 
 <!--more-->
 
