@@ -202,12 +202,10 @@ return await Deployment.RunAsync(() =>
 
 Rather than simply putting a “v1” label on the existing provider, we used this opportunity to enhance it with some previously requested capabilities.
 
-- The former `CopyFile` resource was renamed to `CopyToRemote` and can now copy whole directories in addition to individual files.
-- The source of the copy is now a [Pulumi asset or archive](https://www.pulumi.com/docs/concepts/assets-archives/). This provides full interoperability with the Pulumi ecosystem.
-- The use of assets and archives also makes Pulumi run copy operations only if the source has changed.
-- Capturing stdout and stderr of commands can now be switched off, which is useful when they might contain secrets or are very noisy.
-- There are now official examples in the Pulumi examples repository, and examples have also been added to the API documentation in the Pulumi registry.
-- Environment handling for remote commands was fixed and is better documented.
+- The API documentation in the Pulumi registry has [examples in all Pulumi languages](https://github.com/pulumi/pulumi-command/issues/196) and is expanded.
+- Capturing stdout and stderr of commands can now [be switched off](https://github.com/pulumi/pulumi-command/pull/451), which is useful when they might contain secrets or are very noisy.
+- Environment handling for remote commands was [fixed and is better documented](https://github.com/pulumi/pulumi-command/pull/395).
+- The `CopyFile` resource is [superseded](https://github.com/pulumi/pulumi-command/pull/423) by the new `CopyToRemote` resource. It can copy whole directories in addition to individual files. The source of the copy is now a [Pulumi asset or archive](https://www.pulumi.com/docs/concepts/assets-archives/) which provides full interoperability with the Pulumi ecosystem. The use of assets and archives also makes Pulumi run copy operations only if the source has changed. For an easy transition, the previous `CopyFile` resource will remain available for a while with a deprecation notice.
 
 Here’s an example of copying a directory to a remote host.
 **TODO: Insert remote copy directory example here**
