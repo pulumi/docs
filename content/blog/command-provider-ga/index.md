@@ -40,7 +40,7 @@ Since its first preview release in late 2021, thousands of Pulumi users incorpor
 
 <!--more-->
 
-The Pulumi Command Provider enables you to execute commands and scripts either locally or remotely as part of the Pulumi resource model, enabling stateful command execution. It also has convenient support for copying assets via SSH. Being able to run arbitrary commands provides great flexibility.
+The Pulumi Command Provider enables you to execute commands and scripts either locally or remotely as part of the Pulumi resource model, enabling stateful command execution. It also has convenient support for copying assets via SSH. Being able to run arbitrary commands opens up a wide variety of scenarios and integrations with other tools and systems.
 
 Some of the provider's popular uses include:
 
