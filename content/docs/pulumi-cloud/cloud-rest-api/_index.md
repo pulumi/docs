@@ -53,6 +53,34 @@ Content-Type: application/json
 
 ## Stacks
 
+### Create Stack
+
+Creates a new stack in the Pulumi Cloud. If the project does not exist, it will also be created.
+
+```
+POST /api/stacks/{organization}/{project}
+```
+
+#### Parameters
+
+| Parameter      | Type   | In   | Description                                                                                      |
+|----------------|--------|------|--------------------------------------------------------------------------------------------------|
+| `organization` | string | path | Organization name                                                                                |
+| `project`      | string | path | Name of the project to create the stack under. If the project doesn't exist, it will be created. |
+| `stackName`    | string | path | Name of the stack being created.                                                                 |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  --request POST \
+  --data '{"stackName":"{stackName}"}' \
+  https://api.pulumi.com/api/stacks/{organization}/{project}
+```
+
 ### List Stacks
 
 Lists stacks available to the authenticated user.
