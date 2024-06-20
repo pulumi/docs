@@ -67,7 +67,7 @@ POST /api/stacks/{organization}/{project}
 |----------------|--------|------|--------------------------------------------------------------------------------------------------|
 | `organization` | string | path | Organization name                                                                                |
 | `project`      | string | path | Name of the project to create the stack under. If the project doesn't exist, it will be created. |
-| `stackName`    | string | path | Name of the stack being created.                                                                 |
+| `stackName`    | string | body | Name of the stack being created.                                                                 |
 
 #### Example
 
