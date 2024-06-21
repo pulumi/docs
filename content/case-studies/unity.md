@@ -10,10 +10,10 @@ customer_logo: /logos/customers/unity.png
 customer_url: https://unity.com/
 
 exec_summary: |
-    tbd
+    Unity Technologies' Aura division faced challenges with their legacy Jenkins service, causing deployment delays and inefficiencies in CI/CD processes. To enhance performance and developer autonomy, Aura adopted Pulumi's Platform Engineering Capabilities and Automation API. Transitioning from Amazon ECS to Amazon EKS and further replacing Jenkins with GitHub Actions and self-hosted runners, they streamlined infrastructure management, reducing provisioning times and costs. Pulumi's TypeScript support and automation features empowered developers to self-serve cloud infrastructure, improving productivity and ensuring infrastructure integrity. This modernization accelerated development cycles and strengthened Aura's competitive edge in the market.
 
 sections:
-    - label: Exec Summary
+    - label: Executive Summary
       anchor: executive-summary
     - label: Introduction
       anchor: introduction
@@ -37,13 +37,11 @@ sections:
 
 ## About Unity
 
-tbd
-
-## Introduction
-
 [Unity](https://unity.com/) is the world's leading platform for creating and operating interactive, real-time 3D (RT3D) content. In November 2022, Unity merged with ironSource to help mobile content creators prosper with a leading business platform designed to turn any app into a successful business. Today, 84 of the top 100 games use the [Unity Grow](https://unity.com/grow) platform as part of their monetization strategy.
 
 The [Aura](https://unity.com/solutions/device-management) division within Unity supports engaging telcos, operators and their clients throughout the mobile device lifecycle. Aura’s DevOps team wanted to modernize their developer platform and CI/CD systems to improve performance, control costs and simplify the process of version upgrades. Their legacy Jenkins service was hard to maintain, and they needed a robust solution to streamline their CI/CD processes, enable self-service for developers, and maintain infrastructure integrity.
+
+## Introduction
 
 Aura turned to Pulumi to automate infrastructure management, reduce deployment times, and boost overall team productivity by enabling more team members to write and deploy infrastructure as code using their standard software release process and preferred programming language: TypeScript.
 
