@@ -435,3 +435,16 @@ scrape_configs:
     static_configs:
       - targets: ["api.pulumi.com"]
 ```
+
+## Deployments
+
+In order to enable [Deployments](/docs/pulumi-cloud/deployments), the following must be configured:
+
+* `PULUMI_SERVICE_METADATA_BLOB_STORAGE_ENDPOINT` or `PULUMI_LOCAL_OBJECTS` [object storage](#object-storage)
+* [Customer-Managed Agents](/docs/pulumi-cloud/deployments/customer-managed-agents/) - You also need to update the `pulumi-deployment-agent.yaml` configuration file by setting `service_url` to `<PULUMI_API_DOMAIN>`. The configuration file can be found in the directory where the agent is extracted. Example:
+
+    ```yaml
+    token: pul-d2d2….
+    version: v0.0.5
+    service_url: https://pulumiapi.acmecorp.com
+    ```
