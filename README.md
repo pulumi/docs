@@ -1,11 +1,29 @@
+<p align="center">
+  <a href="https://www.pulumi.com?utm_campaign=pulumi-docs-github-repo&utm_source=github.com&utm_medium=top-logo" title="Pulumi Documentation - Build and Deploy Infrastructure as Code Solutions on Any Cloud">
+    <img src="https://www.pulumi.com/images/logo/logo-on-white-box.svg?" width="350">
+   </a>
+
+  [![Slack](http://www.pulumi.com/images/docs/badges/slack.svg)](https://slack.pulumi.com?utm_campaign=pulumi-docs-github-repo&utm_source=github.com&utm_medium=slack-badge)
+  [![GitHub Discussions](https://img.shields.io/github/discussions/pulumi/pulumi)](https://github.com/pulumi/pulumi/discussions)
+  [![License](https://img.shields.io/github/license/pulumi/pulumi)](LICENSE)
+  ![Deployment Status](https://github.com/pulumi/docs/actions/workflows/build-and-deploy.yml/badge.svg?branch=master&event=push)
+  ![Examples Tests](https://github.com/pulumi/docs/actions/workflows/scheduled-test.yml/badge.svg?branch=master)
+
 # Pulumi Documentation Site
 
-![Deployment Status](https://github.com/pulumi/docs/actions/workflows/build-and-deploy.yml/badge.svg?branch=master&event=push)
-![Examples Tests](https://github.com/pulumi/docs/actions/workflows/scheduled-test.yml/badge.svg?branch=master)
+## Table of contents
+
+- :blue_book: [View Pulumi Docs](https://pulumi.com/docs/?utm_campaign=pulumi-docs-github-repo&utm_source=github.com&utm_medium=docs-toc)
+- :clap: [Contributing](#Contributing)
+- :toolbox:	[Setup and Development](#setup-and-development)
+  - [Generating SDK and CLI documentation](#generating-sdk-and-cli-documentation)
+- :busts_in_silhouette: [Pulumi Community](#community)
+- :compass:	[Pulumi Roadmap](#pulumi-roadmap)
+- :blue_book: [Pulumi Resources](#pulumi-resources)
 
 ## About this repository
 
-This repository hosts all of the hand-crafted documentation, guides, tutorials, blogs, and landing pages that you see on https://pulumi.com, as well as all of the assets and templates we use to render the Pulumi website. It also houses the documentation that we generate for the Pulumi CLI and language SDKs, and it's responsible for building and deploying the website (with Pulumi, of course!).
+This repository hosts all of the hand-crafted documentation, guides, tutorials, blogs, and landing pages that you see on [https://pulumi.com](https://pulumi.com?utm_campaign=pulumi-docs-github-repo&utm_source=github.com&utm_medium=about-docs), as well as all of the assets and templates we use to render the Pulumi website. It also houses the documentation that we generate for the Pulumi CLI and language SDKs, and it's responsible for building and deploying the website (with Pulumi, of course!).
 
 ### What's not in this repository
 
@@ -21,7 +39,9 @@ See also:
 * [Publishing a Pulumi blog post](./BLOGGING.md)
 * [Documentation and coding style guide](./STYLE-GUIDE.md)
 
-## Toolchain
+# Setup and Development
+
+### Toolchain
 
 We build the Pulumi website with Hugo, manage our dependencies with Node.js and Yarn, and write our documentation in Markdown. Below is a list of the tools you'll need if you'd like to work on the website (e.g., to contribute docs content, a blog post, etc.):
 
@@ -38,7 +58,7 @@ Additionally, to build the SDK and CLI documentation, you'll also need:
 * [Pulumi](https://www.pulumi.com/docs/install)
 * [Pulumi ESC](https://www.pulumi.com/docs/install/esc)
 
-## Repository layout
+### Repository layout
 
 * **Documentation and page content**: We generally follow Hugo's [directory-structure conventions](https://gohugo.io/getting-started/directory-structure/), with Markdown files in `./content`, layout files (including partials and shortcodes) in `./layout`, and data files in `./data`. There are also several [Hugo templates](https://gohugo.io/content-management/archetypes/) available in `./archetypes` for bootstrapping common content types like blog posts and Learn modules.
 
@@ -48,7 +68,7 @@ Additionally, to build the SDK and CLI documentation, you'll also need:
 
 * **Infrastructure**: We deploy the website as a statically built artifact to a unique Amazon S3 bucket on every commit to the base branch of this repo. The Pulumi program that handles this is located in `./infrastructure`. This is also where you'll find the CloudFront configuration that handles proxying [Pulumi AI](https://pulumi.com/ai) and the [Pulumi Registry](https://pulumi.com/registry).
 
-## Using the Makefile
+### Using the Makefile
 
 The `Makefile` exposes a number of useful helpers for authoring:
 
@@ -101,7 +121,7 @@ make update-repos
 
 Once you've done this, you can generate the docs for each package.
 
-#### Generating the Node.js and Python SDK docs
+### Generating the Node.js and Python SDK docs
 
 The Node and Python SDK docs are built with [TypeDoc](http://typedoc.org/) and [Pydocgen](https://pypi.org/project/pydocgen/). The easiest way to generate these docs is to use the `make generate` helper:
 
@@ -115,7 +135,7 @@ Generated docs are rendered into the `./static-prebuilt/nodejs` and `./static-pr
 
 See below to learn how to view these rendered docs locally.
 
-#### Generating the .NET SDK docs
+### Generating the .NET SDK docs
 
 The .NET SDK docs are built with [Docfx](https://github.com/dotnet/docfx). To generate these, you'll need both `dotnet` and `docfx` installed and on your PATH. For example, assuming you've already [installed the `dotnet` executable](https://dotnet.microsoft.com/en-us/download) for your platform, you can:
 
@@ -175,3 +195,26 @@ If you have open pull requests in the pulumi-hugo repo, here are the steps to fo
 4. Run make ensure in the docs repo and then a make serve to verify the files have been moved correctly.
 5. Push changes to the docs repo.
 6. Open a PR in the docs repo to add the changes there.
+
+## Community
+
+Engage with our community to elevate your developer experience:
+
+- **Join our online [Pulumi Community on Slack](https://slack.pulumi.com/?utm_campaign=pulumi-docs-repo&utm_source=github.com&utm_medium=welcome-slack)** - Interact with thousands of Pulumi developers for collaborative problem-solving and knowledge-sharing!
+- **Join a [Local Pulumi User Groups (PUGs)](https://www.meetup.com/pro/pugs/)**-  Attend tech-packed meetups and hands-on virtual or in-person workshops.
+- **Follow [@PulumiCorp](https://twitter.com/PulumiCorp) on X (Twitter)** - Get real-time updates, technical insights, and sneak peeks into the latest features.
+- **Subscribe to our YouTube Channel, [PulumiTV](https://www.youtube.com/@PulumiTV)** - Learn about AI / ML essentials, launches, workshops, demos and more.
+- **Follow our [LinkedIn](https://www.linkedin.com/company/pulumi/?utm_campaign=pulumi-docs-github-repo&utm_source=github.com&utm_medium=docs-community)** - Uncover company news, achievements, and behind-the-scenes glimpses.
+
+## Pulumi roadmap
+
+Review the planned work for the upcoming quarter and a selected backlog of issues that are on our mind but not yet scheduled on the [Pulumi Roadmap.](https://github.com/orgs/pulumi/projects/44)
+
+## Pulumi resources
+
+Delve deeper into Pulumi with additional resources:
+
+- [Get Started with Pulumi](https://www.pulumi.com/docs/get-started/?utm_campaign=pulumi-docs-github-repo&utm_source=github.com&utm_medium=docs-resources): Deploy a simple application in AWS, Azure, Google Cloud, or Kubernetes using Pulumi.
+- [Registry](https://www.pulumi.com/registry/?utm_campaign=pulumi-docs-github-repo&utm_source=github.com&utm_medium=docs-resources): Search for packages and learn about the supported resources you need. Install the package directly into your project, browse the API documentation, and start building.
+- [Try Pulumi AI](https://www.pulumi.com/ai/?utm_campaign=pulumi-docs-github-repo&utm_source=github.com&utm_medium=docs-resources) - Use natural-language prompts to generate Pulumi infrastructure-as-code programs in any language.
+- [Pulumi Blog](https://www.pulumi.com/blog/?utm_campaign=pulumi-docs-github-repo&utm_source=github.com&utm_medium=docs-resources) - Stay in the loop with our latest tech announcements, insightful articles, and updates.
