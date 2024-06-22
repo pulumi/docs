@@ -203,6 +203,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#pulumi.StringAsset"><code class="docutils literal notranslate"><span class="pre">StringAsset</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="#pulumi.create_urn"><code class="docutils literal notranslate"><span class="pre">create_urn()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="#pulumi.debug"><code class="docutils literal notranslate"><span class="pre">debug()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pulumi.deprecated"><code class="docutils literal notranslate"><span class="pre">deprecated()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="#pulumi.error"><code class="docutils literal notranslate"><span class="pre">error()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="#pulumi.export"><code class="docutils literal notranslate"><span class="pre">export()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="#pulumi.get"><code class="docutils literal notranslate"><span class="pre">get()</span></code></a></li>
@@ -456,6 +457,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#pulumi.runtime.invoke"><code class="docutils literal notranslate"><span class="pre">invoke()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#pulumi.runtime.invoke_async"><code class="docutils literal notranslate"><span class="pre">invoke_async()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#pulumi.runtime.is_dry_run"><code class="docutils literal notranslate"><span class="pre">is_dry_run()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pulumi.runtime.register_resource_transform"><code class="docutils literal notranslate"><span class="pre">register_resource_transform()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#pulumi.runtime.register_stack_transform"><code class="docutils literal notranslate"><span class="pre">register_stack_transform()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#pulumi.runtime.register_stack_transformation"><code class="docutils literal notranslate"><span class="pre">register_stack_transformation()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#pulumi.runtime.reset_options"><code class="docutils literal notranslate"><span class="pre">reset_options()</span></code></a></li>
@@ -1594,7 +1596,7 @@ matching.</p></li>
 <li><p><strong>additional_secret_outputs</strong> (<em>Optional</em><em>[</em><em>List</em><em>[</em><em>str</em><em>]</em><em>]</em>) – If provided, a list of output property names that should
 also be treated as secret.</p></li>
 <li><p><strong>id</strong> (<em>Optional</em><em>[</em><em>Input</em><em>[</em><em>str</em><em>]</em><em>]</em>) – If provided, an existing resource ID to read, rather than create.</p></li>
-<li><p><strong>import</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – When provided with a resource ID, import indicates that this resource’s provider should
+<li><p><strong>import_</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – When provided with a resource ID, import indicates that this resource’s provider should
 import its state from the cloud resource with the given ID. The inputs to the resource’s constructor must align
 with the resource’s current state. Once a resource has been imported, the import property must be removed from
 the resource’s options.</p></li>
@@ -2045,6 +2047,17 @@ and stream_id if provided.</p>
 </ul>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pulumi.deprecated">
+<span class="sig-prename descclassname"><span class="pre">pulumi.</span></span><span class="sig-name descname"><span class="pre">deprecated</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">C</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">C</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pulumi.deprecated" title="Permalink to this definition"></a></dt>
+<dd><p>Decorator to indicate a function is deprecated.</p>
+<p>As well as inserting appropriate statements to indicate that the function is
+deprecated, this decorator also tags the function with a special attribute
+so that Pulumi code can detect that it is deprecated and react appropriately
+in certain situations.</p>
+<p>message is the deprecation message that should be printed if the function is called.</p>
 </dd></dl>
 
 <dl class="py function">
@@ -2668,7 +2681,7 @@ LocalWorkspace does not utilize this extensibility point.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pulumi.automation.LocalWorkspace.remove_stack">
-<span class="sig-name descname"><span class="pre">remove_stack</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stack_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pulumi.automation.LocalWorkspace.remove_stack" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">remove_stack</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stack_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preserve_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pulumi.automation.LocalWorkspace.remove_stack" title="Permalink to this definition"></a></dt>
 <dd><p>Deletes the stack and all associated configuration and history.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -3683,7 +3696,7 @@ This customizes the location of $PULUMI_HOME where metadata is stored and plugin
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pulumi.automation.Workspace.remove_stack">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">remove_stack</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stack_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pulumi.automation.Workspace.remove_stack" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">remove_stack</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stack_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preserve_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pulumi.automation.Workspace.remove_stack" title="Permalink to this definition"></a></dt>
 <dd><p>Deletes the stack and all associated configuration and history.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -4497,9 +4510,16 @@ for the argument <cite>preview</cite>.</p>
 </dd></dl>
 
 <dl class="py function">
+<dt class="sig sig-object py" id="pulumi.runtime.register_resource_transform">
+<span class="sig-prename descclassname"><span class="pre">pulumi.runtime.</span></span><span class="sig-name descname"><span class="pre">register_resource_transform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pulumi.ResourceTransformArgs" title="pulumi.resource.ResourceTransformArgs"><span class="pre">ResourceTransformArgs</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Awaitable</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pulumi.ResourceTransformResult" title="pulumi.resource.ResourceTransformResult"><span class="pre">ResourceTransformResult</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#pulumi.ResourceTransformResult" title="pulumi.resource.ResourceTransformResult"><span class="pre">ResourceTransformResult</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pulumi.runtime.register_resource_transform" title="Permalink to this definition"></a></dt>
+<dd><p>Add a transform to all future resources constructed in this Pulumi stack.</p>
+</dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="pulumi.runtime.register_stack_transform">
 <span class="sig-prename descclassname"><span class="pre">pulumi.runtime.</span></span><span class="sig-name descname"><span class="pre">register_stack_transform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pulumi.ResourceTransformArgs" title="pulumi.resource.ResourceTransformArgs"><span class="pre">ResourceTransformArgs</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Awaitable</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pulumi.ResourceTransformResult" title="pulumi.resource.ResourceTransformResult"><span class="pre">ResourceTransformResult</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#pulumi.ResourceTransformResult" title="pulumi.resource.ResourceTransformResult"><span class="pre">ResourceTransformResult</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi.runtime.register_stack_transform" title="Permalink to this definition"></a></dt>
 <dd><p>Add a transform to all future resources constructed in this Pulumi stack.</p>
+<p>Deprecated: use <cite>register_resource_transform</cite> instead.</p>
 </dd></dl>
 
 <dl class="py function">
