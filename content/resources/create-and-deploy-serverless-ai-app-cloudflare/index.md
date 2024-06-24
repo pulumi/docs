@@ -61,8 +61,6 @@ main:
         - name: Diana Esteves
           role: Solutions Architect, Pulumi
           photo: /images/team/diana-esteves.jpg
-        - name: Confidence Okoghenun
-          role: Senior Developer Advocate, Cloudflare
 
     # case-sensitive
     tags:
