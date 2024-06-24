@@ -1,20 +1,23 @@
 ---
-title: Pulumi - Infrastructure as Code in any Programming Language
+title: Pulumi - Universal Infrastructure as Code
 meta_desc: Pulumi's open source infrastructure as code SDK enables you to create, deploy, and manage infrastructure on any cloud, using your favorite languages.
 
-include_organization_schema: true
+block_external_search_index: true
+
+type: page
+layout: home-b
 
 hero:
-  title: [ "Infrastructure as Code", "in Any Programming Language" ]
+  title: [ "Automate your infrastructure at any scale", "Your Code, Your Cloud, Your Success" ]
   description: |
-    Gain 10x better scale, more productivity, and faster time to market.
+    Build, manage, and scale your infrastructure, secrets, and configurations in one place.
   cta_text: Get Started
   cta_link: /docs/get-started/
   secondary_cta_text: Talk to a human
   secondary_cta_link: /contact/?form=sales
 
 code_faster:
-  title: Build and ship faster using<br/>open source infrastructure as code
+  title: Build and ship faster with infrastructure as code
   description: |
     Author infrastructure code using programming languages you know and love. Write statements to define infrastructure using your IDE with autocomplete, type checking, and documentation.
 
@@ -46,7 +49,8 @@ secrets:
 customer_logos:
   title: Trusted by your peers
   logos:
-    - name: bmw
+    - name: mercedes-benz
+      link: /case-studies/mercedes-benz
     - name: snowflake
       link: /case-studies/snowflake
     - name: lemonade
@@ -54,7 +58,6 @@ customer_logos:
     - name: cockroach-labs
     - name: meta
     - name: webflow
-    - name: nvidia
     - name: bluenile
     - name: dutchie
       link: https://youtu.be/X1qetq7PjjY
