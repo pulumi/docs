@@ -22,7 +22,7 @@ Use access tokens to sign into the Pulumi Cloud via the CLI or automate your usa
 
 Pulumi offers three types of access tokens: Personal, organization, and team. Personal access tokens are available to everyone, organization and team access tokens are only available to Enterprise and Business Critical customers. Organization and team access tokens are machine tokens that are not connected to a user account.
 
-Tokens can optionally be assigned an expiration period of up to two years, at which point the token will no longer be valid for any Pulumi operation. Expired tokens cannot be reactivated. It's strongly recommended that you assign an expiration to your token to encourage token rotation.
+Tokens can optionally be assigned an expiration period of up to two years, at which point the token will no longer be valid for any Pulumi operation. Expired tokens cannot be refreshed or reactivated. It's strongly recommended that you assign an expiration to your token to encourage token rotation.
 
 ## Access token permissions
 
