@@ -39,7 +39,7 @@ main:
     youtube_url:
 
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2024-05-16T09:00:00.000-07:00
+    sortable_date: 2024-08-14T09:00:00.000-07:00
 
     # Duration of the webinar.
     duration: 90 minutes
@@ -76,6 +76,6 @@ main:
 # The right hand side form section.
 form:
     # HubSpot form id.
-    hubspot_form_id: 9a6e3798-5620-43ca-a948-86b382a15932
-    salesforce_campaign_id: 701PQ000008k4ATYAY
+    hubspot_form_id: af82ece6-c2e2-4311-ac92-0785b259e3cb
+    salesforce_campaign_id: 701PQ00000FDALtYAP
 ---

@@ -1,7 +1,7 @@
 ---
 # Name of the event, <= 60 characters
-title: "GitOps in Action: Deploy a Serverless AI app with Cloudflare"
-meta_desc: Learn how to provision Cloudflare resources using GitOps. In particular, you'll deploy a Serverless AI text-to-image web app on Cloudflare Workers AI.
+title: Getting started with CI/CD for AWS using GitHub Actions
+meta_desc: In this workshop, you will learn the fundamentals of an infrastructure CI/CD pipeline through guided exercises. You will use GitHub Actions and Pulumi.
 meta_image:
 
 # A featured webinar will display first in the list.
@@ -26,12 +26,12 @@ block_external_search_index: false
 
 # The url slug for the webinar landing page. If this is an external
 # webinar, use the external URL as the value here.
-url_slug: create-and-deploy-serverless-ai-app-cloudflare
+url_slug: getting-started-with-ci-cd-aws-pulumi-github-actions
 
 # Content for the left hand side section of the page.
 main:
     # Webinar title.
-    title: "GitOps in Action: Deploy a Serverless AI app with Cloudflare"
+    title: Getting started with CI/CD for AWS using GitHub Actions
 
     event_type: workshop # workshop | event
 
@@ -39,7 +39,7 @@ main:
     youtube_url:
 
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2024-08-07T09:00:00.000-07:00
+    sortable_date: 2024-07-17T09:00:00.000-07:00
 
     # Duration of the webinar.
     duration: 90 minutes
@@ -49,31 +49,30 @@ main:
 
     # Description of the webinar.
     description: |
-        Develop and deploy a Serverless AI application using Cloudflare Workers and Pulumi. Throughout this workshop, you'll be guided in deploying cloud resources using a GitOps approach. Specifically, you'll utilize GitHub for version control and Pulumi as your Infrastructure as Code solution to manage your Cloudflare resources effectively.
+        In this workshop, you will become familiar with the core concepts needed to deploy cloud resources continuously. You'll define Infrastructure as Code (IaC), and configure Pulumi GitHub Actions to deploy AWS resources after a commit and merge.
 
     learn:
-        - Build a Serverless AI app with Cloudflare Workers
-        - Develop Infrastructure as Code with Pulumi in TypeScript
-        - Implement GitOps best practices
+        - The basics of the Pulumi programming model
+        - The key components of a continuous pipeline
+        - How to build your own infrastructure CI/CD pipeline
+        - Configuring the Pulumi GitHub Actions to deploy AWS resources
 
     # The webinar presenters
     presenters:
         - name: Diana Esteves
           role: Solutions Architect, Pulumi
           photo: /images/team/diana-esteves.jpg
-        - name: Confidence Okoghenun
-          role: Senior Developer Advocate, Cloudflare
 
     # case-sensitive
     tags:
         level: Beginner # Beginner, Intermediate, Advanced
-        topics: ["GitOps"]
-        languages: ["TypeScript"]
-        clouds: ["Cloudflare"]
+        topics: ["CI/CD", "GitHub Actions"]
+        languages: []
+        clouds: ["AWS"]
 
 # The right hand side form section.
 form:
     # HubSpot form id.
-    hubspot_form_id: 5da47c5a-c616-4266-b772-52b80c10c452
-    salesforce_campaign_id: 701PQ00000DVW5lYAH
+    hubspot_form_id: 613b3a4c-ba2d-4beb-85ac-2068f8e66c60
+    salesforce_campaign_id: 701PQ00000F0O07YAF
 ---
