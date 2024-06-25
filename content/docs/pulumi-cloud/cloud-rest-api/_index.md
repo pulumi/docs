@@ -1842,7 +1842,7 @@ EMPTY RESPONSE BODY
 
 <!-- ###################################################################### -->
 
-### List User Access Tokens
+### List Personal Access Tokens
 
 ```
 GET /api/user/tokens
@@ -1850,7 +1850,9 @@ GET /api/user/tokens
 
 #### Parameters
 
-None
+| Parameter           | Type   | In    | Description                                                                                                  |
+|---------------------|--------|-------|--------------------------------------------------------------------------------------------------------------|
+| `show_expired`      | string | query | **Optional.** whether to return previously expired tokens with results. Defaults to false.                   |
 
 #### Example
 
@@ -1859,7 +1861,7 @@ curl \
   -H "Accept: application/vnd.pulumi+8" \
   -H "Content-Type: application/json" \
   -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
-  https://api.pulumi.com/api/user/tokens
+  https://api.pulumi.com/api/user/tokens?show_expired=true
 ```
 
 #### Default response
