@@ -1623,6 +1623,44 @@ EMPTY RESPONSE BODY
 
 <!-- ###################################################################### -->
 
+### Update User's Role
+
+```
+PATCH /api/orgs/{organization}/members/{username}
+```
+
+#### Parameters
+
+| Parameter      | Type   | In    | Description                                                  |
+|----------------|--------|-------|--------------------------------------------------------------|
+| `organization` | string | query | organization name to filter stacks by                        |
+| `username`     | string | path  | user name                                                    |
+| `role`         | string | body  | The role to assign - possible values are `admin` or `member` |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  --request PATCH \
+  --data '{"role":"{role}"}' \
+  https://api.pulumi.com/api/orgs/{organization}/members/{username}
+```
+
+#### Default response
+
+```
+Status: 200 OK
+```
+
+```
+EMPTY RESPONSE BODY
+```
+
+<!-- ###################################################################### -->
+
 ### Remove User from Organization
 
 ```
@@ -2176,44 +2214,6 @@ curl \
 
 ```
 Status: 204 OK
-```
-
-```
-EMPTY RESPONSE BODY
-```
-
-<!-- ###################################################################### -->
-
-### Update User's Role
-
-```
-PATCH /api/orgs/{organization}/members/{username}
-```
-
-#### Parameters
-
-| Parameter      | Type   | In    | Description                                                  |
-|----------------|--------|-------|--------------------------------------------------------------|
-| `organization` | string | query | organization name to filter stacks by                        |
-| `username`     | string | path  | user name                                                    |
-| `role`         | string | body  | The role to assign - possible values are `admin` or `member` |
-
-#### Example
-
-```bash
-curl \
-  -H "Accept: application/vnd.pulumi+8" \
-  -H "Content-Type: application/json" \
-  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
-  --request PATCH \
-  --data '{"role":"{role}"}' \
-  https://api.pulumi.com/api/orgs/{organization}/members/{username}
-```
-
-#### Default response
-
-```
-Status: 200 OK
 ```
 
 ```
