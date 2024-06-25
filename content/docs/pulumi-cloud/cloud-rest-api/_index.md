@@ -1850,9 +1850,9 @@ GET /api/user/tokens
 
 #### Parameters
 
-| Parameter           | Type   | In    | Description                                                                                                  |
-|---------------------|--------|-------|--------------------------------------------------------------------------------------------------------------|
-| `show_expired`      | string | query | **Optional.** whether to return previously expired tokens with results. Defaults to false.                   |
+| Parameter           | Type   | In    | Description                                                                                |
+|---------------------|--------|-------|--------------------------------------------------------------------------------------------|
+| `show_expired`      | string | query | **Optional.** whether to return previously expired tokens with results. Defaults to false. |
 
 #### Example
 
@@ -1897,9 +1897,10 @@ POST /api/user/tokens
 
 #### Parameters
 
-| Parameter     | Type   | In   | Description                    |
-|---------------|--------|------|--------------------------------|
-| `description` | string | body | Descripton of the access token |
+| Parameter     | Type   | In   | Description                                                                                                                        |
+|---------------|--------|------|------------------------------------------------------------------------------------------------------------------------------------|
+| `description` | string | body | Description of the access token.                                                                                                   |
+| `expires`     | int    | body | **Optional.** unix epoch timestamp at which the token should expire, up to two years from present. 0 for no expiry. Defaults to 0. |
 
 #### Example
 
@@ -1909,8 +1910,8 @@ curl \
   -H "Content-Type: application/json" \
   -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
   --request POST \
-  --data '{"description":"{description}"}' \
-  https://api.pulumi.com/api/stacks/{organization}/{project}/{stack}/tags
+  --data '{"description":"{description}", "expires": 0}' \
+  https://api.pulumi.com/api/user/tokens
 ```
 
 #### Default response
