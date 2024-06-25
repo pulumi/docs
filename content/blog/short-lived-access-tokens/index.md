@@ -17,13 +17,13 @@ tags:
 
 ---
 
-We are excited to introduce a new feature that our users have been eagerly awaiting: Short-Lived Access Tokens! This enhancement allows you to set an optional expiry date on Personal Access Token, Team Access Token, and Organization Access Token, making them automatically invalid after a specified date. This feature is now available in the [Pulumi Cloud console](https://app.pulumi.com) and the [Pulumi Cloud REST API](/blog/short-lived-access-tokens/create-token.mp4), providing enhanced security and control over your access tokens.
+We are excited to introduce a new feature that our users have been eagerly awaiting: Short-Lived Access Tokens! This enhancement allows you to set an optional expiry date on [Personal Access Token](/docs/pulumi-cloud/access-management/access-tokens/#personal-access-tokens), [Team Access Token](/docs/pulumi-cloud/access-management/access-tokens/#team-access-tokens), and [Organization Access Token](/docs/pulumi-cloud/access-management/access-tokens/#organization-access-tokens), making them automatically invalid after a specified date. This feature is now available in the [Pulumi Cloud console](https://app.pulumi.com) and the [Pulumi Cloud REST API](/blog/short-lived-access-tokens/create-token.mp4), providing enhanced security and control over your access tokens.
 
 <!--more-->
 
 ## Why Short-Lived Access Tokens?
 
-Security and flexibility are paramount in managing infrastructure as code (IaC), and our users have consistently requested the ability to create access tokens with a limited lifespan. With short-lived access tokens, you can:
+Security and flexibility are paramount in managing infrastructure as code (IaC) and [Environments, Secrets and Config (ESC)](/docs/esc), and our users have consistently requested the ability to create access tokens with a limited lifespan. With short-lived access tokens, you can:
 
 1. **Enhance Security**: By limiting the lifespan of your access tokens, you reduce the risk of tokens being misused if they are inadvertently exposed.
 2. **Improve Automation**: Automate token management in your CI/CD pipelines, ensuring that tokens expire as needed and can then be rotated.
