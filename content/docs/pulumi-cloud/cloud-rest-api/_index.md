@@ -1659,6 +1659,133 @@ EMPTY RESPONSE BODY
 
 <!-- ###################################################################### -->
 
+### List Organization Access Tokens
+
+```
+GET /api/orgs/{org}/tokens
+```
+
+#### Parameters
+
+| Parameter           | Type   | In    | Description                                                                                |
+|---------------------|--------|-------|--------------------------------------------------------------------------------------------|
+| `show_expired`      | string | query | **Optional.** whether to return previously expired tokens with results. Defaults to false. |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  https://api.pulumi.com/api/orgs/{org}/tokens?show_expired=true
+```
+
+#### Default response
+
+```
+Status: 200 OK
+```
+
+```
+{
+  "tokens": [
+    {
+      "id": "b02514e2-ddf6-41dc-8e16-6abf3914e68f",
+      "description": "CI/CD token - Feb 2024",
+      "expires": 1719333788,
+      "lastUsed": 1627590233,
+      "name": "Feb2024CICD"
+    },
+    {
+      "id": "ad9f7508-493a-4fbe-9918-62f1f71a53f8",
+      "description": "An org token created in Feb 2023",
+      "expires": 0,
+      "lastUsed": 1606860942,
+      "name": "Feb2023CICD"
+    }
+  ]
+}
+```
+
+<!-- ###################################################################### -->
+
+### Create Organization Access Token
+
+```
+POST /api/orgs/{org}/tokens
+```
+
+#### Parameters
+
+| Parameter     | Type   | In   | Description                                                                                                                        |
+|---------------|--------|------|------------------------------------------------------------------------------------------------------------------------------------|
+| `description` | string | body | Description of the access token.                                                                                                   |
+| `name`        | string | body | Unique name of the access token, up to 40 characters. Must be unique across the org, including deleted tokens.                     |
+| `expires`     | int    | body | **Optional.** unix epoch timestamp at which the token should expire, up to two years from present. 0 for no expiry. Defaults to 0. |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  --request POST \
+  --data '{"description": "{description}", "name": "{unique_name}", "expires": 0}' \
+  https://api.pulumi.com/api/orgs/{org}/tokens
+```
+
+#### Default response
+
+```
+Status: 204 OK
+```
+
+```
+{
+  "id": "74529ccd-27c0-40f7-bc4a-589f145ba67f",
+  "tokenValue": "pul-75a564ac7f3a48079a0c448c1e1ec95c4cfed141"
+}
+```
+
+<!-- ###################################################################### -->
+
+### Delete Organization Access Token
+
+```
+DELETE /api/orgs/{org}/tokens/{tokenId}
+```
+
+#### Parameters
+
+| Parameter | Type   | In   | Description          |
+|-----------|--------|------|----------------------|
+| `tokenId` | string | path | the token identifier |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  --request DELETE \
+  https://api.pulumi.com/api/orgs/{org}/tokens/{tokenId}
+```
+
+#### Default response
+
+```
+Status: 204 OK
+```
+
+```
+EMPTY RESPONSE BODY
+```
+
+<!-- ###################################################################### -->
+
 ### List Teams
 
 ```
@@ -1930,171 +2057,6 @@ EMPTY RESPONSE BODY
 
 <!-- ###################################################################### -->
 
-### Update User's Role
-
-```
-PATCH /api/orgs/{organization}/members/{username}
-```
-
-#### Parameters
-
-| Parameter      | Type   | In    | Description                                                  |
-|----------------|--------|-------|--------------------------------------------------------------|
-| `organization` | string | query | organization name to filter stacks by                        |
-| `username`     | string | path  | user name                                                    |
-| `role`         | string | body  | The role to assign - possible values are `admin` or `member` |
-
-#### Example
-
-```bash
-curl \
-  -H "Accept: application/vnd.pulumi+8" \
-  -H "Content-Type: application/json" \
-  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
-  --request PATCH \
-  --data '{"role":"{role}"}' \
-  https://api.pulumi.com/api/orgs/{organization}/members/{username}
-```
-
-#### Default response
-
-```
-Status: 200 OK
-```
-
-```
-EMPTY RESPONSE BODY
-```
-
-<!-- ###################################################################### -->
-
-### List Organization Access Tokens
-
-```
-GET /api/orgs/{org}/tokens
-```
-
-#### Parameters
-
-| Parameter           | Type   | In    | Description                                                                                |
-|---------------------|--------|-------|--------------------------------------------------------------------------------------------|
-| `show_expired`      | string | query | **Optional.** whether to return previously expired tokens with results. Defaults to false. |
-
-#### Example
-
-```bash
-curl \
-  -H "Accept: application/vnd.pulumi+8" \
-  -H "Content-Type: application/json" \
-  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
-  https://api.pulumi.com/api/orgs/{org}/tokens?show_expired=true
-```
-
-#### Default response
-
-```
-Status: 200 OK
-```
-
-```
-{
-  "tokens": [
-    {
-      "id": "b02514e2-ddf6-41dc-8e16-6abf3914e68f",
-      "description": "CI/CD token - Feb 2024",
-      "expires": 1719333788,
-      "lastUsed": 1627590233,
-      "name": "Feb2024CICD"
-    },
-    {
-      "id": "ad9f7508-493a-4fbe-9918-62f1f71a53f8",
-      "description": "An org token created in Feb 2023",
-      "expires": 0,
-      "lastUsed": 1606860942,
-      "name": "Feb2023CICD"
-    }
-  ]
-}
-```
-
-<!-- ###################################################################### -->
-
-### Create Organization Access Token
-
-```
-POST /api/orgs/{org}/tokens
-```
-
-#### Parameters
-
-| Parameter     | Type   | In   | Description                                                                                                                        |
-|---------------|--------|------|------------------------------------------------------------------------------------------------------------------------------------|
-| `description` | string | body | Description of the access token.                                                                                                   |
-| `name`        | string | body | Unique name of the access token, up to 40 characters. Must be unique across the org, including deleted tokens.                     |
-| `expires`     | int    | body | **Optional.** unix epoch timestamp at which the token should expire, up to two years from present. 0 for no expiry. Defaults to 0. |
-
-#### Example
-
-```bash
-curl \
-  -H "Accept: application/vnd.pulumi+8" \
-  -H "Content-Type: application/json" \
-  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
-  --request POST \
-  --data '{"description": "{description}", "name": "{unique_name}", "expires": 0}' \
-  https://api.pulumi.com/api/orgs/{org}/tokens
-```
-
-#### Default response
-
-```
-Status: 204 OK
-```
-
-```
-{
-  "id": "74529ccd-27c0-40f7-bc4a-589f145ba67f",
-  "tokenValue": "pul-75a564ac7f3a48079a0c448c1e1ec95c4cfed141"
-}
-```
-
-<!-- ###################################################################### -->
-
-### Delete Organization Access Token
-
-```
-DELETE /api/orgs/{org}/tokens/{tokenId}
-```
-
-#### Parameters
-
-| Parameter | Type   | In   | Description          |
-|-----------|--------|------|----------------------|
-| `tokenId` | string | path | the token identifier |
-
-#### Example
-
-```bash
-curl \
-  -H "Accept: application/vnd.pulumi+8" \
-  -H "Content-Type: application/json" \
-  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
-  --request DELETE \
-  https://api.pulumi.com/api/orgs/{org}/tokens/{tokenId}
-```
-
-#### Default response
-
-```
-Status: 204 OK
-```
-
-```
-EMPTY RESPONSE BODY
-```
-
-<!-- ###################################################################### -->
-
 ### List Team Access Tokens
 
 ```
@@ -2214,6 +2176,44 @@ curl \
 
 ```
 Status: 204 OK
+```
+
+```
+EMPTY RESPONSE BODY
+```
+
+<!-- ###################################################################### -->
+
+### Update User's Role
+
+```
+PATCH /api/orgs/{organization}/members/{username}
+```
+
+#### Parameters
+
+| Parameter      | Type   | In    | Description                                                  |
+|----------------|--------|-------|--------------------------------------------------------------|
+| `organization` | string | query | organization name to filter stacks by                        |
+| `username`     | string | path  | user name                                                    |
+| `role`         | string | body  | The role to assign - possible values are `admin` or `member` |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  --request PATCH \
+  --data '{"role":"{role}"}' \
+  https://api.pulumi.com/api/orgs/{organization}/members/{username}
+```
+
+#### Default response
+
+```
+Status: 200 OK
 ```
 
 ```
