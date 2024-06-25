@@ -17,7 +17,7 @@ tags:
 
 ---
 
-We are excited to introduce a new feature that our users have been eagerly awaiting: Short-Lived Access Tokens! This enhancement allows you to set an optional expiry date on Personal Access Token, Team Access Token, and Organization Access Token, making them automatically invalid after a specified date. This feature is now available in the [Pulumi Cloud console](app.pulumi.com) and the [Pulumi Cloud REST API](/docs/pulumi-cloud/cloud-rest-api), providing enhanced security and control over your access tokens.
+We are excited to introduce a new feature that our users have been eagerly awaiting: Short-Lived Access Tokens! This enhancement allows you to set an optional expiry date on Personal Access Token, Team Access Token, and Organization Access Token, making them automatically invalid after a specified date. This feature is now available in the [Pulumi Cloud console](https://app.pulumi.com) and the [Pulumi Cloud REST API](/docs/pulumi-cloud/cloud-rest-api), providing enhanced security and control over your access tokens.
 
 <!--more-->
 
@@ -33,15 +33,15 @@ Security and flexibility are paramount in managing infrastructure as code (IaC),
 
 ### Creating Short-Lived Tokens in the console
 
-When creating a new access token in the Pulumi Console, you will now see an optional expiry date field. Simply set the date when you want the token to expire, and it will automatically become invalid on that date. This feature is available for Personal Access Tokens, Team Access Tokens, and Organization Access Tokens (note: Team Access Tokens and Organization Access Tokens are available in the Enterprise and Business Critical editions of Pulumi Cloud).
+When creating a [new access token in the Pulumi Console](/docs/pulumi-cloud/access-management/access-tokens), you will now see an optional expiry date field. Simply set the date when you want the token to expire, and it will automatically become invalid on that date. This feature is available for Personal Access Tokens, Team Access Tokens, and Organization Access Tokens (note: Team Access Tokens and Organization Access Tokens are only available in the Enterprise and Business Critical editions of Pulumi Cloud).
 
-![Creating Short-Lived Tokens](create.gif)
+![Creating Short-Lived Tokens](create-token.mp4)
 
 Learn more by reviewing [our access token documentation](/docs/pulumi-cloud/access-management/access-tokens).
 
 ### OIDC Trust Relationships
 
-A few months ago [we released OpenID Connect (OIDC) Trust Relationships for Pulumi Cloud](/blog/oidc-trust-relationships), allowing you to generate short-lived Pulumi Cloud tokens using OIDC from within your CI/CD pipelines, such as GitHub Actions. Now we are exposing the optional expiration field on in the console and in the REST API. Your OIDC generated tokens will also show in the UI alongside those created with other methods.
+A few months ago [we released OpenID Connect (OIDC) Trust Relationships for Pulumi Cloud](/blog/oidc-trust-relationships), allowing you to generate short-lived Pulumi Cloud tokens using OIDC from within your CI/CD pipelines, such as GitHub Actions. Now we are exposing the optional expiration field in the console and in the REST API. Your OIDC generated tokens will also show in the UI alongside those created with other methods.
 
 ### REST API Support
 
