@@ -109,10 +109,10 @@ Parameters:
 - `grant_type`: `urn:ietf:params:oauth:grant-type:token-exchange`
 - subject_token_type: `urn:ietf:params:oauth:token-type:id_token`
 - requested_token_type:
-    - Org token: `urn:pulumi:token-type:access_token:organization`
+    - Org token: `urn:pulumi:token-type:access_token:organization` (`admin` scope is supported to request access tokens with admin privileges which should be explicitly allowed by an authorization policy)
     - Team token (scope is required): `urn:pulumi:token-type:access_token:team`
     - Personal token (scope is required): `urn:pulumi:token-type:access_token:personal`
-- scope: a single scope will be supported initially and used to define when asking for a team or personal token, what team/user it should be assigned to. Format: `team:TEAM_NAME` (for example: `team:OPS_AUTOMATIONS`) or `user:USER_LOGIN` (for example: `user:djohn`)
+- scope: a single scope will be supported initially and used to define when asking for a team or personal token, what team/user it should be assigned to. Format: `team:TEAM_NAME` (for example: `team:OPS_AUTOMATIONS`) or `user:USER_LOGIN` (for example: `user:djohn`). It is also supported, only for organization tokens, the `admin` scope to request organization tokens with admin privileges (the authorization policy has to explicitly allow admin privileges for it to be accepted).
 - expiration: (int, time in seconds) used to customize the token expiration required by the operation. The default token expiration (2 hours) will be used.
 - subject_token: token issued by the IdP
 
