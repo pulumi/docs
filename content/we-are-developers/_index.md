@@ -6,12 +6,12 @@ type: page
 layout: we-are-developers
 
 display_title: WeAreDevelopers Berlin <br/> July 17-19, 2024
-# links:
-#     items:
-#         - heading: Request a Demo
-#           description: See how Pulumi can help you ship infrastructure faster, and manage your Azure resources at scale. Ready for a change?
-#           action: Talk with an Engineer
-#           link: https://info.pulumi.com/msbuild/
+links:
+    items:
+        - heading: Request a Demo
+          description: See how Pulumi can help you ship infrastructure faster, and manage your resources at scale. Ready for a change?
+          action: Talk with an Engineer
+          link: https://info.pulumi.com/meet-us/wearedevelopers
 
 workshops:
     items:
