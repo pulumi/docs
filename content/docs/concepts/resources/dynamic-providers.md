@@ -12,14 +12,18 @@ aliases:
 - /docs/intro/concepts/resources/dynamic-providers/
 ---
 
-There are three types of resource providers. The first are the standard resource providers. These resource providers are built and maintained by Pulumi. There is a second kind, called a dynamic resource provider, which we will discuss here. These resource providers run only in the context of your program. They are not shareable. The third type of resource provider is shareable. You write it yourself and then you can distribute it so that others can use it.
+There are three types of resource providers. The first are the standard resource providers. These resource providers are built and maintained by Pulumi and can be found in the [Pulumi Registry](https://www.pulumi.com/registry/). The second type are custom providers written by you using [Pulumi Packages](/docs/using-pulumi/pulumi-packages). Both the standard and custom providers are able to be used across all the languages Pulumi supports. The third type is the dynamic resource provider discussed on this page. 
 
-Dynamic resource providers can be written in any language you choose. Because they are not shareable, dynamic resource providers do not need a plugin.
+Dynamic resource providers are only able to be used in Pulumi programs written in the same language as the dynamic resource provider. But, they are lighter weight than custom providers and for many use-cases are sufficient to leverage the Pulumi state model. 
+
+{{% notes type="info" %}}
+**Note:** The Pulumi registry includes the [Command Provider](https://www.pulumi.com/registry/packages/command/) as an even lighter weight solution and can be used in place of a dynamic resource provider in some cases.
+{{% /notes %}}
 
 There are several reasons why you might want to write a dynamic resource provider. Here are some of them:
 
-- You want to create some new custom resource types.
-- You want to use a cloud provider that Pulumi doesn’t support. For example, you might want to write a dynamic resource provider for WordPress.
+- You want to create some new custom resource types without all the overhead of a custom provider.
+- You want to use a cloud provider that Pulumi doesn’t support and only need a few resources to be supported. For example, you might want to write a dynamic resource provider for WordPress.
 
 All dynamic providers must conform to certain interface requirements. You must at least implement the `create` function but, in practice, you will probably also want to implement the `read`, `update`, and `delete` functions as well.
 
@@ -536,7 +540,7 @@ class MyResource(Resource):
 
 ### Example: Random
 
-This example generates a random number using a dynamic provider. It highlights using dynamic providers to run some code only when a resource is created, and then store the results of that in the state file so that this value is maintained across deployments of the resource. Because we want our random number to be created once, and then remain stable for subsequent updates, we cannot use a random number generator in our program; we need dynamic providers. The result is a provider similar to the one provided in `@pulumi/random`, just specific to our program and language.
+This example generates a random number using a dynamic provider. It represents the simplest dynamic provider that brings together the various topics described above. It highlights using dynamic providers to run some code only when a resource is created, and then store the results of that in the state file so that this value is maintained across deployments of the resource. Because we want our random number to be created once, and then remain stable for subsequent updates, we cannot use a random number generator in our program; we need dynamic providers. The result is a provider similar to the one provided in [Random](https://www.pulumi.com/registry/packages/random/), just specific to our program and language.
 
 Implementing this example requires that we have a provider and resource type:
 
@@ -637,9 +641,13 @@ class Random(Resource):
 
 Now, with this, we can construct new `Random` resource instances, and Pulumi will drive the right calls at the right time.
 
-### Example: GitHub Labels REST API
+### Example: GitHub Labels REST API (Creds via Pulumi Config)
 
-This example highlights how to make REST API calls to a backing provider to perform CRUD operations. In this case, the backing provider is the GitHub API. Because the resource provider method implementations will be serialized and used in a different process, we keep all the work to initialize the REST client and to make calls to it, local to each function.
+This example highlights how to make REST API calls to a backing provider to perform CRUD operations. In this case, the backing provider is the GitHub API. 
+
+A fundamental requirement for a dynamic provider that calls an API is managing the credentials needed for the API calls. One approach is to just pass the necessary creds as inputs when declaring resources using the dynamic resource provider. But passing provider credentials when declaring resources is an antipattern, to say the least. Therefore, other mechanisms that allow the dynamic resource provider to consume the needed credentials outside of the resource declaration are preferred. This example uses [Pulumi Config](/docs/concepts/config) to get the credential.
+
+Because the resource provider method implementations will be serialized and used in a different process, we keep all the work to initialize the REST client and to make calls to it, local to each function.
 
 {{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
 
@@ -650,8 +658,8 @@ let pulumi = require("@pulumi/pulumi");
 let Octokit = require("@octokit/rest");
 
 // Set this value before creating an instance to configure the authentication token to use for deployments
-let auth = "token invalid";
-exports.setAuth = function(token) { auth = token; }
+let config = new pulumi.Config();
+let auth = config.requireSecret("githubToken");
 
 const githubLabelProvider = {
     async create(inputs) {
@@ -687,8 +695,8 @@ import * as pulumi from "@pulumi/pulumi";
 import { Octokit } from "@octokit/rest";
 
 // Set this value before creating an instance to configure the authentication token to use for deployments
-let auth = "token invalid";
-export function setAuth(token: string) { auth = token; }
+const config = new pulumi.Config()
+const auth = config.requireSecret("githubToken")
 
 export interface LabelResourceInputs {
     owner: pulumi.Input<string>;
@@ -746,13 +754,14 @@ export class Label extends pulumi.dynamic.Resource {
 {{% choosable language python %}}
 
 ```python
+import pulumi
 from pulumi import ComponentResource, export, Input, Output
 from pulumi.dynamic import Resource, ResourceProvider, CreateResult, UpdateResult
 from typing import Optional
 from github import Github, GithubObject
 
-auth = "<auth token>"
-g = Github(auth)
+config = pulumi.Config()
+auth = config.require_secret("githubToken")
 
 class GithubLabelArgs(object):
     owner: Input[str]
@@ -797,6 +806,69 @@ label = GithubLabel("foo", GithubLabelArgs("lukehoban", "todo", "mylabel", "d94f
 
 export("label_color", label.color)
 export("label_url", label.url)
+```
+
+{{% /choosable %}}
+{{% choosable language go %}}
+
+```go
+// Dynamic Providers are not currently supported in Go.
+```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
+```csharp
+// Dynamic Providers are currently not supported in .NET.
+```
+
+{{% /choosable %}}
+{{% choosable language yaml %}}
+
+```yaml
+# Dynamic Providers are not supported in YAML.
+```
+
+{{% /choosable %}}
+
+{{% choosable language java %}}
+
+```java
+// Dynamic Providers are currently not supported in Java.
+```
+
+{{% /choosable %}}
+{{< /chooser >}}
+
+### Example: Pulumi Cloud REST API (Creds via Environment Variables)
+
+This example highlights how to make REST API calls to a backing provider to perform CRUD operations. In this case, the backing provider is the [Pulumi Cloud API](/docs/pulumi-cloud/cloud-rest-api).
+
+A fundamental requirement for a dynamic provider that calls an API is managing the credentials needed for the API calls. One approach is to just pass the necessary creds as inputs when declaring resources using the dynamic resource provider. But passing provider credentials when declaring resources is an antipattern, to say the least. Therefore, other mechanisms that allow the dynamic resource provider to consume the needed credentials outside of the resource declaration are preferred. This example uses environment variables to pass the credentials. A big advantage of this approach is that if the credentials change before `pulumi destroy` is run, there is no need to first run a `pulumi up` to update the credentials used by the dynamic provider.
+
+Because the resource provider method implementations will be serialized and used in a different process, we keep all the work to initialize the REST client and to make calls to it, local to each function.
+
+{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
+
+{{% choosable language javascript %}}
+
+```javascript
+// JAVASCRIPT CODE GOES HERE
+```
+
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
+```typescript
+// TYPESCRIPT CODE GOES HERE
+```
+
+{{% /choosable %}}
+{{% choosable language python %}}
+
+```python
+## PYTHON CODE GOES HERE
+
 ```
 
 {{% /choosable %}}
