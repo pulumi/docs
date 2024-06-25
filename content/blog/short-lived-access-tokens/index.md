@@ -35,7 +35,7 @@ Security and flexibility are paramount in managing infrastructure as code (IaC),
 
 When creating a [new access token in the Pulumi Console](/docs/pulumi-cloud/access-management/access-tokens), you will now see an optional expiry date field. Simply set the date when you want the token to expire, and it will automatically become invalid on that date. This feature is available for Personal Access Tokens, Team Access Tokens, and Organization Access Tokens (note: Team Access Tokens and Organization Access Tokens are only available in the Enterprise and Business Critical editions of Pulumi Cloud).
 
-![Creating Short-Lived Tokens](create-token.mp4)
+{{< video title="Short Lived Access Token in Pulumi Cloud" src="create-token.mp4" controls="false" autoplay="true" loop="true" >}}
 
 Learn more by reviewing [our access token documentation](/docs/pulumi-cloud/access-management/access-tokens).
 
