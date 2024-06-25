@@ -53,6 +53,34 @@ Content-Type: application/json
 
 ## Stacks
 
+### Create Stack
+
+Creates a new stack in the Pulumi Cloud. If the project does not exist, it will also be created.
+
+```
+POST /api/stacks/{organization}/{project}
+```
+
+#### Parameters
+
+| Parameter      | Type   | In   | Description                                                                                      |
+|----------------|--------|------|--------------------------------------------------------------------------------------------------|
+| `organization` | string | path | Organization name                                                                                |
+| `project`      | string | path | Name of the project to create the stack under. If the project doesn't exist, it will be created. |
+| `stackName`    | string | body | Name of the stack being created.                                                                 |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  --request POST \
+  --data '{"stackName":"{stackName}"}' \
+  https://api.pulumi.com/api/stacks/{organization}/{project}
+```
+
 ### List Stacks
 
 Lists stacks available to the authenticated user.
@@ -455,6 +483,120 @@ Status: 204 OK
 
 ```
 EMPTY RESPONSE BODY
+```
+
+<!-- ###################################################################### -->
+
+## Stack Policy Information
+
+### Get Stack Policy Groups
+
+Get Policy Groups associated with a stack.
+
+```
+GET /api/stacks/{organization}/{project}/{stack}/policygroups
+```
+
+#### Parameters
+
+| Parameter      | Type   | In   | Description       |
+|----------------|--------|------|-------------------|
+| `organization` | string | path | organization name |
+| `project`      | string | path | project name      |
+| `stack`        | string | path | stack name        |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  https://api.pulumi.com/api/stacks/{organization}/{project}/{stack}/policygroups
+```
+
+#### Default response
+
+```
+Status: 200 OK
+```
+
+```
+{
+  "policyGroups": [
+    {
+      "name": "continuous-policy",
+      "isOrgDefault": false,
+      "numStacks": 1,
+      "numEnabledPolicyPacks": 1
+    }
+  ]
+}
+```
+
+### Get Stack Policy Packs
+
+Get Policy Packs associated with a stack.
+
+```
+GET /api/stacks/{organization}/{project}/{stack}/policypacks
+```
+
+#### Parameters
+
+| Parameter      | Type   | In   | Description       |
+|----------------|--------|------|-------------------|
+| `organization` | string | path | organization name |
+| `project`      | string | path | project name      |
+| `stack`        | string | path | stack name        |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  https://api.pulumi.com/api/stacks/{organization}/{project}/{stack}/policypacks
+```
+
+#### Default response
+
+```
+Status: 200 OK
+```
+
+```
+{
+  "requiredPolicies": [
+    {
+      "name": "continuous-policy",
+      "version": 3,
+      "versionTag": "0.0.3",
+      "displayName": "",
+      "packLocation": "REDACTED",
+      "config": {
+        "all": {
+          "enforcementLevel": "mandatory"
+        },
+        "continuous-policy": {
+          "enforcementLevel": "mandatory",
+          "policies": [
+            {
+              "assertion": {
+                "operator": "eq",
+                "value": 0
+              },
+              "label": "No node12 Lambdas",
+              "mode": "ai",
+              "query": "nodejs version 12"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
 ```
 
 <!-- ###################################################################### -->
@@ -2266,11 +2408,533 @@ curl \
   }
 ]
 ```
+<!-- ###################################################################### -->
+
+## Policy Groups
+
+### List Policy Groups
+
+List a summaries of policy groups by organization.
+
+```
+GET /api/orgs/{organization}/policygroups
+```
+
+#### Parameters
+
+| Parameter           | Type   | In    | Description                                                                                                  |
+|---------------------|--------|-------|--------------------------------------------------------------------------------------------------------------|
+| `organization`      | string | path  | organization name                                                                                            |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  https://api.pulumi.com/api/orgs/{organization}/policygroups
+```
+
+#### Default response
+
+```
+Status: 200 OK
+```
+
+```
+{
+  "policyGroups": [
+    {
+      "name": "continuous-policy",
+      "isOrgDefault": false,
+      "numStacks": 1,
+      "numEnabledPolicyPacks": 1
+    },
+    {
+      "name": "default-policy-group",
+      "isOrgDefault": true,
+      "numStacks": 2569,
+      "numEnabledPolicyPacks": 1
+    }
+  ]
+}
+```
+
+### Get Policy Group
+
+Get policy group information.
+
+```
+GET /api/orgs/{organization}/policygroups/{policyGroup}
+```
+
+#### Parameters
+
+| Parameter           | Type   | In    | Description                                                                                                  |
+|---------------------|--------|-------|--------------------------------------------------------------------------------------------------------------|
+| `organization`      | string | path  | organization name                                                                                            |
+| `policyGroup`      | string | path  | policy group name                                                                                            |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  https://api.pulumi.com/api/orgs/{organization}/policygroups/{policyGroup}
+```
+
+#### Default response
+
+```
+Status: 200 OK
+```
+
+```
+{
+  "name": "continuous-policy",
+  "isOrgDefault": false,
+  "stacks": [
+    {
+      "name": "global",
+      "routingProject": "continuous-policy"
+    }
+  ],
+  "appliedPolicyPacks": [
+    {
+      "name": "continuous-policy",
+      "displayName": "",
+      "version": 3,
+      "versionTag": "0.0.3",
+      "config": {
+        "all": {
+          "enforcementLevel": "mandatory"
+        },
+        "continuous-policy": {
+          "enforcementLevel": "mandatory",
+          "policies": [
+            {
+              "assertion": {
+                "operator": "eq",
+                "value": 0
+              },
+              "label": "No node12 Lambdas",
+              "mode": "ai",
+              "query": "nodejs version 12"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
+```
+
+<!-- ###################################################################### -->
+
+## Policy Packs
+
+### List Policy Packs
+
+List policy packs by organization.
+
+```
+GET /api/orgs/{organization}/policypacks
+```
+
+#### Parameters
+
+| Parameter           | Type   | In    | Description                                                                                                  |
+|---------------------|--------|-------|--------------------------------------------------------------------------------------------------------------|
+| `organization`      | string | path  | organization name                                                                                            |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  https://api.pulumi.com/api/orgs/{organization}/policypacks
+```
+
+#### Default response
+
+```
+Status: 200 OK
+```
+
+```
+{
+  "policyPacks": [
+    {
+      "name": "aws-iso27001-compliance-ready-policies-typescript",
+      "displayName": "",
+      "versions": [
+        1
+      ],
+      "versionTags": [
+        "0.0.1"
+      ]
+    },
+    {
+      "name": "aws-typescript",
+      "displayName": "",
+      "versions": [
+        1
+      ],
+      "versionTags": [
+        "0.0.1"
+      ]
+    },
+    {
+      "name": "continuous-policy",
+      "displayName": "",
+      "versions": [
+        3,
+        2,
+        1
+      ],
+      "versionTags": [
+        "0.0.3",
+        "0.0.2",
+        "0.0.1"
+      ]
+    },
+    {
+      "name": "pulumi-vanta-policies",
+      "displayName": "",
+      "versions": [
+        1
+      ],
+      "versionTags": [
+        "0.0.1"
+      ]
+    }
+  ]
+}
+```
+
+### Get Latest Policy Pack Version
+
+Get policy pack information including config schema for the latest version.
+
+```
+GET /api/orgs/{organization}/policypacks/{policyPack}/latest
+```
+
+#### Parameters
+
+| Parameter           | Type   | In    | Description                                                                                                  |
+|---------------------|--------|-------|--------------------------------------------------------------------------------------------------------------|
+| `organization`      | string | path  | organization name                                                                                            |
+| `policyPack`        | string | path  | policy pack name                                                                                             |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  https://api.pulumi.com/api/orgs/{organization}/policypacks/{policyPack}/latest
+```
+
+#### Default response
+
+```
+Status: 200 OK
+```
+
+```
+{
+  "name": "continuous-policy",
+  "displayName": "",
+  "version": 3,
+  "versionTag": "0.0.3",
+  "policies": [
+    {
+      "name": "continuous-policy",
+      "displayName": "",
+      "description": "Continuous global policies that can be configured dynamically across the entire org using Pulumi Resource Search.",
+      "enforcementLevel": "mandatory",
+      "message": "",
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "policies": {
+            "items": {
+              "properties": {
+                "assertion": {
+                  "properties": {
+                    "operator": {
+                      "enum": [
+                        "eq",
+                        "gt",
+                        "lt",
+                        "lte",
+                        "gte"
+                      ],
+                      "type": "string"
+                    },
+                    "value": {
+                      "type": "number"
+                    }
+                  },
+                  "type": "object"
+                },
+                "label": {
+                  "type": "string"
+                },
+                "mode": {
+                  "enum": [
+                    "query",
+                    "ai"
+                  ],
+                  "type": "string"
+                },
+                "query": {
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      }
+    }
+  ],
+  "applied": false
+}
+```
+
+### Get Policy Pack at Specific Version
+
+Get policy pack information including config schema for a specific version.
+
+```
+GET /api/orgs/{organization}/policypacks/{policyPack}/versions/{version}
+```
+
+#### Parameters
+
+| Parameter           | Type   | In    | Description                                                                                                  |
+|---------------------|--------|-------|--------------------------------------------------------------------------------------------------------------|
+| `organization`      | string | path  | organization name                                                                                            |
+| `policyPack`        | string | path  | policy pack name                                                                                             |
+| `version`           | string | path  | version identifier                                                                                           |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  https://api.pulumi.com/api/orgs/{organization}/policypacks/{policyPack}/versions/{version}
+```
+
+#### Default response
+
+```
+Status: 200 OK
+```
+
+```
+{
+  "name": "continuous-policy",
+  "displayName": "",
+  "version": 2,
+  "versionTag": "0.0.2",
+  "policies": [
+    {
+      "name": "continuous-policy",
+      "displayName": "",
+      "description": "Continuous global policies that can be configured dynamically across the entire org using Pulumi Resource Search.",
+      "enforcementLevel": "mandatory",
+      "message": "",
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "policies": {
+            "items": {
+              "properties": {
+                "assertion": {
+                  "properties": {
+                    "operator": {
+                      "enum": [
+                        "eq",
+                        "gt",
+                        "lt",
+                        "lte",
+                        "gte"
+                      ],
+                      "type": "string"
+                    },
+                    "value": {
+                      "type": "number"
+                    }
+                  },
+                  "type": "object"
+                },
+                "label": {
+                  "type": "string"
+                },
+                "mode": {
+                  "enum": [
+                    "query",
+                    "ai"
+                  ],
+                  "type": "string"
+                },
+                "query": {
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      }
+    }
+  ],
+  "applied": false
+}
+```
+
+### Get Policy Pack Schema at Specific Version
+
+Get policy pack config schema for a specific version.
+
+```
+GET /api/orgs/{organization}/policypacks/{policyPack}/versions/{version}/schema
+```
+
+#### Parameters
+
+| Parameter           | Type   | In    | Description                                                                                                  |
+|---------------------|--------|-------|--------------------------------------------------------------------------------------------------------------|
+| `organization`      | string | path  | organization name                                                                                            |
+| `policyPack`        | string | path  | policy pack name                                                                                             |
+| `version`           | string | path  | version identifier                                                                                           |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  https://api.pulumi.com/api/orgs/{organization}/policypacks/{policyPack}/versions/{version}/schema
+```
+
+#### Default response
+
+```
+Status: 200 OK
+```
+
+```
+{
+  "configSchema": {
+    "all": {
+      "properties": {
+        "enforcementLevel": {
+          "type": "string",
+          "enum": [
+            "advisory",
+            "mandatory",
+            "remediate",
+            "disabled"
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "continuous-policy": {
+      "properties": {
+        "enforcementLevel": {
+          "enum": [
+            "advisory",
+            "mandatory",
+            "remediate",
+            "disabled"
+          ],
+          "type": "string"
+        },
+        "policies": {
+          "items": {
+            "properties": {
+              "assertion": {
+                "properties": {
+                  "operator": {
+                    "enum": [
+                      "eq",
+                      "gt",
+                      "lt",
+                      "lte",
+                      "gte"
+                    ],
+                    "type": "string"
+                  },
+                  "value": {
+                    "type": "number"
+                  }
+                },
+                "type": "object"
+              },
+              "label": {
+                "type": "string"
+              },
+              "mode": {
+                "enum": [
+                  "query",
+                  "ai"
+                ],
+                "type": "string"
+              },
+              "query": {
+                "type": "string"
+              }
+            },
+            "type": "object"
+          },
+          "type": "array"
+        }
+      },
+      "type": "object"
+    }
+  }
+}
+```
+<!-- ###################################################################### -->
 
 ## Environments
 
 {{< notes >}}
-Pulumi ESC (Environments, Secrets, and Configuration) and its associated REST API endpoints are  currently in public preview.
+Pulumi ESC (Environments, Secrets, and Configuration) and its associated REST API endpoints are currently in public preview.
 {{< /notes >}}
 
 <!-- ###################################################################### -->

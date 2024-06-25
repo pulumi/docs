@@ -65,9 +65,9 @@ main:
     # case-sensitive
     tags:
         level: Beginner # Beginner, Intermediate, Advanced
-        topics: []
+        topics: ["GitOps"]
         languages: ["TypeScript"]
-        clouds: ["Cloudflare", "GitOps"]
+        clouds: ["Cloudflare"]
 
 # The right hand side form section.
 form:
