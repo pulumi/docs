@@ -367,6 +367,9 @@ async function getURLsToCheck(base) {
                 // Tack on any additional pages we'd like to check.
                 .concat([
                     "https://github.com/pulumi/pulumi",
+
+                    // Alternative version of the home page for Google ads.
+                    "https://www.pulumi.com/b/",
                 ])
 
                 // Sort everything alphabetically.
