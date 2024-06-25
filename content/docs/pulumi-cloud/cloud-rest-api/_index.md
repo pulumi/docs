@@ -1889,7 +1889,7 @@ Status: 200 OK
 
 <!-- ###################################################################### -->
 
-### Create User Access Token
+### Create Personal Access Token
 
 ```
 POST /api/user/tokens
@@ -1929,7 +1929,7 @@ Status: 204 OK
 
 <!-- ###################################################################### -->
 
-### Delete User Access Token
+### Delete Personal Access Token
 
 ```
 DELETE /api/user/tokens/{tokenId}
