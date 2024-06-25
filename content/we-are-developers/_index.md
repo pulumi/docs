@@ -1,11 +1,11 @@
 ---
-title: WeAreDevelopers Berlin - July 17-19, 2024
+title: WeAreDevelopers Berlin - July 18-19, 2024
 meta_desc: Join the Pulumi team at the annual WeAreDevelopers Conference in Berlin. Meet us at booth 2.04, July 18-19, 2024
 meta_image: /images/we-are-developers/we-are-developers-meta.png
 type: page
 layout: we-are-developers
 
-display_title: WeAreDevelopers Berlin <br/> July 17-19, 2024
+display_title: WeAreDevelopers Berlin <br/> July 18-19, 2024
 links:
     items:
         - heading: Request a Demo
