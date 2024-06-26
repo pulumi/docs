@@ -65,7 +65,7 @@ Here's a detailed comparison of the two:
     </tr>
     <tr>
         <td>Open Ecosystem</td>
-        <td>Yes, ESC supports pulling and using secrets from multiple sources including HashiCorp Vault, 1Password, AWS Secrets Manager, etc.</td>
+        <td>Yes, supports pulling and using secrets from multiple sources including HashiCorp Vault, 1Password, AWS Secrets Manager, etc.</td>
         <td>No, can only store and manage secrets stored in Infisical</td>
     </tr>
     <tr>
@@ -93,7 +93,7 @@ Here's a detailed comparison of the two:
     </tr>
     <tr>
         <td>Composability</td>
-        <td>Yes, ESC allows easy set up of hierarchical environments that inherit values from imported environments</td>
+        <td>Yes, simple set up of hierarchical environments that inherit values from imported environments</td>
         <td>No, can only reference singular secrets from other environments and references have to be duplicated in multiple environments</td>
     </tr>
     <tr>
