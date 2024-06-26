@@ -763,6 +763,7 @@ from github import Github, GithubObject
 config = pulumi.Config()
 auth = config.require_secret("githubToken")
 
+
 class GithubLabelArgs(object):
     owner: Input[str]
     repo: Input[str]
@@ -778,18 +779,23 @@ class GithubLabelArgs(object):
 
 class GithubLabelProvider(ResourceProvider):
     def create(self, props):
+        auto_secret = True
+        g = Github(auth.get())
         l = g.get_user(props["owner"]).get_repo(props["repo"]).create_label(
             name=props["name"],
             color=props["color"],
             description=props.get("description", GithubObject.NotSet))
         return CreateResult(l.name, {**props, **l.raw_data})
     def update(self, id, _olds, props):
+        auto_secret = True
+        g = Github(auth.get())
         l = g.get_user(props["owner"]).get_repo(props["repo"]).get_label(id)
         l.edit(name=props["name"],
                color=props["color"],
                description=props.get("description", GithubObject.NotSet))
         return UpdateResult({**props, **l.raw_data})
     def delete(self, id, props):
+        g = Github(auth.get())
         l = g.get_user(props["owner"]).get_repo(props["repo"]).get_label(id)
         l.delete()
 
