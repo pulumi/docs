@@ -1,0 +1,82 @@
+{{ define "hero" }}
+    {{ partial "hero" (dict "title" .Params.title) }}
+{{ end }}
+
+{{ define "main" }}
+    {{ $pageContext := . }}
+
+    <section id="overview" class="max-w-5xl mx-auto text-center my-16 px-6">
+    {{ with .Params.overview }}
+        <h2>{{ .title }}</h2>
+        <p class="text-left">{{ .description | markdownify }}</p>
+        <div class="mt-10">
+            <a href="#form" rel="noopener noreferrer" class="btn-primary">Speak with an Architect!</a>
+        </div>
+    {{ end }}
+    </section>
+
+    <section id="challenges">
+        {{ partial "card-group.html" (dict "card_group" .Params.challenges) }}
+    </section>
+
+    <section id="solutions_header">
+    {{ with .Params.solutions_header }}
+    <div class="max-w-5xl mx-auto text-center px-6">
+        <h3>{{ .title }}</h3>
+        <p>{{ .description }}</p>
+    </div>
+    {{ end }}
+    </section>
+
+    <!-- Logos carousel -->
+    <section class="container mx-auto text-center overflow-hidden mt-16 px-3">
+        <h3 class="text-center mb-4">{{ .Params.customer_logos.title }}</h3>
+        <div class="w-full order-first pb-16 items-center justify-center hidden lg:block">
+            <pulumi-swiper slides="6" centered-slides="true" loop="true" autoplay="true" autoplay-delay="500" speed="2000">
+                {{ range $logo := .Params.customer_logos.logos }}
+                <pulumi-swipeable>
+                    <div class="p-6 flex flex-col flex-grow items-end h-24 justify-center">
+                        {{ if $logo.link }}
+                        <a class="w-full h-full" href="{{ $logo.link }}" target="_blank">
+                            {{ partial "customer-logo.html" (dict "logo" $logo.name) }}
+                        </a>
+                        {{ else }}
+                        {{ partial "customer-logo.html" (dict "logo" $logo.name) }}
+                        {{ end }}
+                    </div>
+                </pulumi-swipeable>
+                {{ end }}
+            </pulumi-swiper>
+        </div>
+
+        <div class="w-full order-first pb-16 items-center justify-center block lg:hidden">
+            <pulumi-swiper slides="3" centered-slides="true" loop="true" autoplay="true" autoplay-delay="500" speed="2000">
+                {{ range $logo := .Params.customer_logos.logos }}
+                <pulumi-swipeable>
+                    <div class="p-6 flex flex-col flex-grow items-end h-24 justify-center">
+                        {{ if $logo.link }}
+                        <a class="w-full h-full" href="{{ $logo.link }}" target="_blank">
+                            {{ partial "customer-logo.html" (dict "logo" $logo.name) }}
+                        </a>
+                        {{ else }}
+                        {{ partial "customer-logo.html" (dict "logo" $logo.name) }}
+                        {{ end }}
+                    </div>
+                </pulumi-swipeable>
+                {{ end }}
+            </pulumi-swiper>
+        </div>
+    </section>
+
+    <section id="form" class="container mx-auto justify-center text-center my-8 p-4">
+        <div class="w-full lg:w-1/2 card bg-white mx-auto p-12">
+            {{ with .Params.form }}
+                <h3>{{ .title }}</h3>
+                <p>{{ .description }}</p>
+                <pulumi-hubspot-form form-id={{ .id }} class="mt-10"></pulumi-hubspot-form>
+            {{ end }}
+        </div>
+    </section>
+
+
+{{ end }}
