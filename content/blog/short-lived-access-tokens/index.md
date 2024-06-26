@@ -49,12 +49,13 @@ We have also exposed this functionality in the Pulumi REST API, allowing you to 
 
 ```bash
 # Example API request to create a short-lived token
-curl -X POST https://api.pulumi.com/tokens \
-    -H "Authorization: token YOUR_API_TOKEN" \
-    -d '{
-        "description": "Short-lived token for CI",
-        "expires": "2024-07-01T00:00:00Z"
-    }'
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  --request POST \
+  --data '{"description": "{description}", "name": "{unique_name}", "expires": 0}' \
+  https://api.pulumi.com/api/orgs/{org}/teams/{team}/tokens
 ```
 
 ## Try It Today
