@@ -12,15 +12,15 @@ aliases:
 - /docs/intro/concepts/resources/dynamic-providers/
 ---
 
-There are three types of resource providers. The first are the standard resource providers. These resource providers are built and maintained by Pulumi and can be found in the [Pulumi Registry](https://www.pulumi.com/registry/). The second type are custom providers written by you using [Pulumi Packages](/docs/using-pulumi/pulumi-packages). Both the standard and custom providers are able to be used across all the languages Pulumi supports. The third type is the dynamic resource provider discussed on this page. 
+There are three types of resource providers. The first type are standard resource providers. These resource providers are built and maintained by Pulumi and can be found in the [Pulumi Registry](https://www.pulumi.com/registry/). The second type are custom providers written by you using [Pulumi Packages](/docs/using-pulumi/pulumi-packages). Both the standard and custom providers are able to be used across all the languages Pulumi supports. The third type is the dynamic resource provider discussed on this page.
 
-Dynamic resource providers are only able to be used in Pulumi programs written in the same language as the dynamic resource provider. But, they are lighter weight than custom providers and for many use-cases are sufficient to leverage the Pulumi state model. 
+Dynamic resource providers are only able to be used in Pulumi programs written in the same language as the dynamic resource provider. But, they are lighter weight than custom providers and for many use-cases are sufficient to leverage the Pulumi state model.
 
 {{% notes type="info" %}}
 **Note:** The Pulumi registry includes the [Command Provider](https://www.pulumi.com/registry/packages/command/) as an even lighter weight solution and can be used in place of a dynamic resource provider in some cases.
 {{% /notes %}}
 
-There are several reasons why you might want to write a dynamic resource provider. Here are some of them:
+There are several reasons why you might want to write a dynamic resource provider. For example:
 
 - You want to create some new custom resource types without all the overhead of a custom provider.
 - You want to use a cloud provider that Pulumi doesn’t support and only need a few resources to be supported. For example, you might want to write a dynamic resource provider for WordPress.
@@ -540,7 +540,7 @@ class MyResource(Resource):
 
 ### Example: Random
 
-This example generates a random number using a dynamic provider. It represents the simplest dynamic provider that brings together the various topics described above. It highlights using dynamic providers to run some code only when a resource is created, and then store the results of that in the state file so that this value is maintained across deployments of the resource. Because we want our random number to be created once, and then remain stable for subsequent updates, we cannot use a random number generator in our program; we need dynamic providers. The result is a provider similar to the one provided in [Random](https://www.pulumi.com/registry/packages/random/), just specific to our program and language.
+This example generates a random number using a dynamic provider. It represents the simplest dynamic provider that brings together the various topics described above. It highlights using dynamic providers to run some code only when a resource is created, and then store the results of that in the state file so that this value is maintained across deployments of the resource. Because we want our random number to be created once, and then remain stable for subsequent updates, we cannot use a random number generator in our program; we need dynamic providers. The result is a provider similar to the one provided by the standard [Random Provider](https://www.pulumi.com/registry/packages/random/), just specific to our program and language.
 
 Implementing this example requires that we have a provider and resource type:
 
@@ -643,7 +643,7 @@ Now, with this, we can construct new `Random` resource instances, and Pulumi wil
 
 ### Example: GitHub Labels REST API (Creds via Pulumi Config)
 
-This example highlights how to make REST API calls to a backing provider to perform CRUD operations. In this case, the backing provider is the GitHub API. 
+This example highlights how to make REST API calls to a backing provider to perform CRUD operations. In this case, the backing provider is the GitHub API.
 
 A fundamental requirement for a dynamic provider that calls an API is managing the credentials needed for the API calls. One approach is to just pass the necessary creds as inputs when declaring resources using the dynamic resource provider. But passing provider credentials when declaring resources is an antipattern, to say the least. Therefore, other mechanisms that allow the dynamic resource provider to consume the needed credentials outside of the resource declaration are preferred. This example uses [Pulumi Config](/docs/concepts/config) to get the credential.
 
@@ -886,7 +886,7 @@ const PulumiEnvironmentProvider = {
       }).catch((reason) => {
         console.log("ERROR: ", `${reason.status} - ${reason.response?.statusText}`)
         process.exit(10)
-      }) 
+      })
 
       const envOuts = {id: envId, envName: inputs.environmentName, orgName: inputs.orgName}
       return { id: envId, outs: envOuts }
@@ -896,7 +896,7 @@ const PulumiEnvironmentProvider = {
   async delete(id, props) {
 
     // It is important to set up the headers in the action as opposed to outside of the provider so that the environment variable reference is
-    // stored in state instead of the actual credential value. 
+    // stored in state instead of the actual credential value.
     const headers = {
       'Authorization': `token ${process.env.PULUMI_ACCESS_TOKEN}`,
       'Content-Type': 'application/json'
@@ -911,7 +911,7 @@ const PulumiEnvironmentProvider = {
     .catch((reason) => {
       console.log("ERROR: ", `${reason.response?.status} - ${reason.response?.statusText}`)
       process.exit(20)
-    }) 
+    })
   }
 }
 
@@ -956,9 +956,9 @@ const PulumiEnvironmentProvider: pulumi.dynamic.ResourceProvider = {
   //*** CREATE ***//
   async create(inputs: PulumiEnvironmentProviderArgs): Promise<CreateResult> {
   
-    // Use environment variable for authentication. 
+    // Use environment variable for authentication.
     // This keeps the actual PULUMI_ACCESS_TOKEN value out of state and instead only the env variable reference is kept in state.
-    // Therefore, if the token is changed between the create and the destroy, the destroy will use the new creds. 
+    // Therefore, if the token is changed between the create and the destroy, the destroy will use the new creds.
     const headers = {
       'Authorization': `token ${process.env.PULUMI_ACCESS_TOKEN}`,
       'Content-Type': 'application/json'
@@ -976,7 +976,7 @@ const PulumiEnvironmentProvider: pulumi.dynamic.ResourceProvider = {
       }).catch((reason: AxiosError) => {
         console.log("ERROR: ", `${reason.status} - ${reason.response?.statusText}`)
         process.exit(10)
-      }) 
+      })
 
       const envOuts = {id: envId, envName: inputs.environmentName, orgName: inputs.orgName}
       return { id: envId, outs: envOuts }
@@ -984,9 +984,9 @@ const PulumiEnvironmentProvider: pulumi.dynamic.ResourceProvider = {
 
   //*** DELETE ***//
   async delete(id, props) {
-    // Use environment variable for authentication. 
-    // This keeps the actual PULUMI_ACCESS_TOKEN value out of state and instead only the env variable reference is kept in state.    
-    // Therefore, if the token is changed between the create and the destroy, the destroy will use the new creds. 
+    // Use environment variable for authentication.
+    // This keeps the actual PULUMI_ACCESS_TOKEN value out of state and instead only the env variable reference is kept in state.
+    // Therefore, if the token is changed between the create and the destroy, the destroy will use the new creds.
     const headers = {
       'Authorization': `token ${process.env.PULUMI_ACCESS_TOKEN}`,
       'Content-Type': 'application/json'
@@ -1001,7 +1001,7 @@ const PulumiEnvironmentProvider: pulumi.dynamic.ResourceProvider = {
     .catch((reason: AxiosError) => {
       console.log("ERROR: ", `${reason.response?.status} - ${reason.response?.statusText}`)
       process.exit(20)
-    }) 
+    })
   }
 }
 
