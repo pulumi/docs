@@ -853,22 +853,227 @@ Because the resource provider method implementations will be serialized and used
 {{% choosable language javascript %}}
 
 ```javascript
-// JAVASCRIPT CODE GOES HERE
+const pulumi = require("@pulumi/pulumi");
+const axios = require('axios');
+
+// Use user-specified API URL if provided. Otherwise, use default Pulumi cloud URL.
+const basePulumiApiUrl= process.env.PULUMI_CLOUD_API_URL || "https://api.pulumi.com"
+
+// NOTE: When Pulumi Environments is GAed, the API path will no longer include "preview".
+const basePulumiEnvApiUrl= `${basePulumiApiUrl}/api/preview/environments`
+
+const PulumiEnvironmentProvider = {
+
+  //*** CREATE ***//
+  async create(inputs) {
+  
+    // It is important to set up the headers in the action as opposed to outside of the provider so that the environment variable reference is
+    // stored in state instead of the actual credential value.
+    const headers = {
+      'Authorization': `token ${process.env.PULUMI_ACCESS_TOKEN}`,
+      'Content-Type': 'application/json'
+    }
+
+    const createEnvUrl = `${basePulumiEnvApiUrl}/${inputs.orgName}/${inputs.environmentName}`
+
+    let envId = "unassigned"
+    await axios.post(createEnvUrl, {},
+      {
+          headers: headers
+      }).then((response) => {
+        // Pulumi Cloud does not return a unique ID for an environment. So create one using the org and environment name.
+        envId = `${inputs.orgName}/${inputs.environmentName}`
+      }).catch((reason) => {
+        console.log("ERROR: ", `${reason.status} - ${reason.response?.statusText}`)
+        process.exit(10)
+      }) 
+
+      const envOuts = {id: envId, envName: inputs.environmentName, orgName: inputs.orgName}
+      return { id: envId, outs: envOuts }
+  },
+
+  //*** DELETE ***//
+  async delete(id, props) {
+
+    // It is important to set up the headers in the action as opposed to outside of the provider so that the environment variable reference is
+    // stored in state instead of the actual credential value. 
+    const headers = {
+      'Authorization': `token ${process.env.PULUMI_ACCESS_TOKEN}`,
+      'Content-Type': 'application/json'
+    }
+
+    const deleteEnvUrl = `${basePulumiEnvApiUrl}/${id}`
+    await axios.delete(deleteEnvUrl, {
+          headers: headers
+    })
+    .then((response) => {
+    })
+    .catch((reason) => {
+      console.log("ERROR: ", `${reason.response?.status} - ${reason.response?.statusText}`)
+      process.exit(20)
+    }) 
+  }
+}
+
+class PulumiEnvironment extends pulumi.dynamic.Resource {
+
+  constructor(name, args, opts) {
+    super(PulumiEnvironmentProvider, name, args, opts);
+  }
+}
+
+exports.PulumiEnvironment = PulumiEnvironment;
 ```
 
 {{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript
-// TYPESCRIPT CODE GOES HERE
+import * as pulumi from "@pulumi/pulumi";
+import { Input, Output } from "@pulumi/pulumi";
+import { CreateResult } from "@pulumi/pulumi/dynamic";
+import axios from 'axios'
+import { AxiosResponse, AxiosError } from 'axios'
+
+export interface PulumiEnvironmentArgs {
+  orgName: string;
+  environmentName: string;
+}
+
+export interface PulumiEnvironmentProviderArgs {
+  orgName: string
+  environmentName: string;
+}
+
+// Use user-specified API URL if provided. Otherwise, use default Pulumi cloud URL.
+const basePulumiApiUrl= process.env.PULUMI_CLOUD_API_URL || "https://api.pulumi.com"
+
+// NOTE: When Pulumi Environments is GAed, the API path will no longer include "preview".
+const basePulumiEnvApiUrl= `${basePulumiApiUrl}/api/preview/environments`
+
+const PulumiEnvironmentProvider: pulumi.dynamic.ResourceProvider = {
+
+  //*** CREATE ***//
+  async create(inputs: PulumiEnvironmentProviderArgs): Promise<CreateResult> {
+  
+    // Use environment variable for authentication. 
+    // This keeps the actual PULUMI_ACCESS_TOKEN value out of state and instead only the env variable reference is kept in state.
+    // Therefore, if the token is changed between the create and the destroy, the destroy will use the new creds. 
+    const headers = {
+      'Authorization': `token ${process.env.PULUMI_ACCESS_TOKEN}`,
+      'Content-Type': 'application/json'
+    }
+
+    const createEnvUrl = `${basePulumiEnvApiUrl}/${inputs.orgName}/${inputs.environmentName}`
+
+    let envId:string = "unassigned"
+    await axios.post(createEnvUrl, {},
+      {
+          headers: headers
+      }).then((response: AxiosResponse) => {
+        // Pulumi Cloud does not return a unique ID for an environment. So create one using the org and environment name.
+        envId = `${inputs.orgName}/${inputs.environmentName}`
+      }).catch((reason: AxiosError) => {
+        console.log("ERROR: ", `${reason.status} - ${reason.response?.statusText}`)
+        process.exit(10)
+      }) 
+
+      const envOuts = {id: envId, envName: inputs.environmentName, orgName: inputs.orgName}
+      return { id: envId, outs: envOuts }
+  },
+
+  //*** DELETE ***//
+  async delete(id, props) {
+    // Use environment variable for authentication. 
+    // This keeps the actual PULUMI_ACCESS_TOKEN value out of state and instead only the env variable reference is kept in state.    
+    // Therefore, if the token is changed between the create and the destroy, the destroy will use the new creds. 
+    const headers = {
+      'Authorization': `token ${process.env.PULUMI_ACCESS_TOKEN}`,
+      'Content-Type': 'application/json'
+    }
+
+    const deleteEnvUrl = `${basePulumiEnvApiUrl}/${id}`
+    await axios.delete(deleteEnvUrl, {
+          headers: headers
+    })
+    .then((response: AxiosResponse) => {
+    })
+    .catch((reason: AxiosError) => {
+      console.log("ERROR: ", `${reason.response?.status} - ${reason.response?.statusText}`)
+      process.exit(20)
+    }) 
+  }
+}
+
+export class PulumiEnvironment extends pulumi.dynamic.Resource {
+
+  constructor(name: string, args: PulumiEnvironmentArgs, opts?: pulumi.CustomResourceOptions) {
+    super(PulumiEnvironmentProvider, name, args, opts);
+  }
+}
 ```
 
 {{% /choosable %}}
 {{% choosable language python %}}
 
 ```python
-## PYTHON CODE GOES HERE
+import pulumi
+from pulumi import Input, Output
+from pulumi.dynamic import ResourceProvider, CreateResult, Resource
+import requests
+import os
 
+class PulumiEnvironmentArgs:
+    def __init__(self, org_name: str, environment_name: str):
+        self.org_name = org_name
+        self.environment_name = environment_name
+
+class PulumiEnvironmentProviderArgs:
+    def __init__(self, org_name: str, environment_name: str):
+        self.org_name = org_name
+        self.environment_name = environment_name
+
+# Use user-specified API URL if provided. Otherwise, use default Pulumi cloud URL.
+base_pulumi_api_url = os.getenv("PULUMI_CLOUD_API_URL", "https://api.pulumi.com")
+
+# NOTE: When Pulumi Environments is GAed, the API path will no longer include "preview".
+base_pulumi_env_api_url = f"{base_pulumi_api_url}/api/preview/environments"
+
+# Set up the headers using the environment variable.
+headers = {
+    'Authorization': f"token {os.getenv('PULUMI_ACCESS_TOKEN')}",
+    'Content-Type': 'application/json'
+}
+
+class PulumiEnvironmentProvider(ResourceProvider):
+    def create(self, inputs: PulumiEnvironmentProviderArgs) -> CreateResult:
+
+        create_env_url = f"{base_pulumi_env_api_url}/{inputs['org_name']}/{inputs['environment_name']}"
+
+        env_id = "unassigned"
+        response = requests.post(create_env_url, headers=headers)
+        if response.status_code == 200 or response.status_code == 201:
+            env_id = f"{inputs['org_name']}/{inputs['environment_name']}"
+        else:
+            print(f"ERROR: {response.status_code} - {response.text}")
+            os._exit(10)
+
+        env_outs = {"id": env_id, "envName": inputs['environment_name'], "orgName": inputs['org_name']}
+        return CreateResult(id_=env_id, outs=env_outs)
+
+    def delete(self, id: str, props):
+
+        # The id provides the "org/environment-name" path for the environment
+        delete_env_url = f"{base_pulumi_env_api_url}/{id}"
+
+        response = requests.delete(delete_env_url, headers=headers)
+        if response.status_code != 200:
+            print(f"ERROR: {response.status_code} - {response.text}")
+            os._exit(20)
+
+class PulumiEnvironment(Resource):
+    def __init__(self, name, args: PulumiEnvironmentArgs, opts=None):
+        super().__init__(PulumiEnvironmentProvider(), name, vars(args), opts)
 ```
 
 {{% /choosable %}}
