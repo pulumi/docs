@@ -1,7 +1,7 @@
 ---
 title: "Pulumi Command Provider 1.0"
 
-date: 2024-06-20T11:02:20+02:00
+date: 2024-06-27T11:02:20+02:00
 
 draft: false
 
@@ -395,7 +395,7 @@ The 1.0 release of the Command provider marks a stable API for the 1.x series. R
 - Environment handling for remote commands was [fixed and is better documented](https://github.com/pulumi/pulumi-command/pull/395).
 - The `CopyFile` resource is [superseded](https://github.com/pulumi/pulumi-command/pull/423) by the new `CopyToRemote` resource. It can copy whole directories in addition to individual files. The source of the copy is now a [Pulumi asset or archive](https://www.pulumi.com/docs/concepts/assets-archives/) which provides full interoperability with the Pulumi ecosystem. The use of assets and archives also makes Pulumi run copy operations only if the source has changed. For an easy transition, the previous `CopyFile` resource will remain available for a while with a deprecation notice.
 
-Here’s an example of copying a directory to a remote host. For brevity, the remote server is assumed exist, but it could also be provisioned in the same Pulumi program.
+Here’s an example of copying a directory to a remote host. For brevity, the remote server is assumed to exist, but it could also be provisioned in the same Pulumi program.
 
 {{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
 
@@ -428,15 +428,6 @@ export = async () => {
         privateKey: privateKey,
     };
 
-    // Poll the server until it responds.
-    //
-    // Because other commands depend on this command, they are
-    // guaranteed to hit a ready server.
-    const poll = new remote.Command("poll", {
-        connection: { ...connection, dialErrorLimit: -1 },
-        create: "echo 'Connection established'",
-    })
-
     // Set up source and target of the remote copy.
     const from = config.require("payload")!;
     const archive = new pulumi.asset.FileArchive(from);
@@ -447,7 +438,7 @@ export = async () => {
         connection,
         source: archive,
         remotePath: to,
-    }, { dependsOn: poll });
+    });
 
     // Verify that the expected files were copied to the remote.
     // We want to run this after each copy, i.e., when something changed,
@@ -489,19 +480,11 @@ conn = command.remote.ConnectionArgs(
     privateKey = private_key,
 )
 
-# Poll the server until it responds.
-# Because other commands depend on this command, they are
-# guaranteed to hit a ready server.
-poll = command.remote.Command("poll",
-    connection=conn,
-    create="echo 'Connection established'")
-
 # Copy the files to the remote.
 copy = command.remote.CopyToRemote("copy",
     connection=conn,
     source=archive,
-    destination=dest_dir,
-    opts = pulumi.ResourceOptions(depends_on=[poll]))
+    destination=dest_dir)
 
 # Verify that the expected files were copied to the remote.
 # We want to run this after each copy, i.e., when something changed,
@@ -547,20 +530,10 @@ func main() {
 			PrivateKey: pulumi.String(privateKey),
 		}
 
-		poll, err := remote.NewCommand(ctx, "poll", &remote.CommandArgs{
-			Connection: conn,
-			Create:     pulumi.String("echo 'Connection established'"),
-		})
-		if err != nil {
-			return err
-		}
-
 		copy, err := remote.NewCopyToRemote(ctx, "copy", &remote.CopyToRemoteArgs{
 			Connection: conn,
 			Source:     archive,
-		}, pulumi.DependsOn([]pulumi.Resource{
-			poll,
-		}))
+		})
 		if err != nil {
 			return err
 		}
@@ -604,6 +577,7 @@ return await Deployment.RunAsync(() =>
 
     var archive = new FileArchive(payload);
 
+    // The configuration of our SSH connection to the instance.
     var conn = new Command.Remote.Inputs.ConnectionArgs
     {
         Host = serverPublicIp,
@@ -611,22 +585,16 @@ return await Deployment.RunAsync(() =>
         PrivateKey = privateKey,
     };
 
-    var poll = new Command.Remote.Command("poll", new()
-    {
-        Connection = conn,
-        Create = "echo 'Connection established'",
-    });
-
+    // Copy the files to the remote.
     var copy = new Command.Remote.CopyToRemote("copy", new()
     {
         Connection = conn,
         Source = archive,
-        Triggers = new[]
-        {
-            poll,
-        },
     });
 
+    // Verify that the expected files were copied to the remote.
+    // We want to run this after each copy, i.e., when something changed,
+    // so we use the asset to be copied as a trigger.
     var find = new Command.Remote.Command("find", new()
     {
         Connection = conn,
@@ -688,25 +656,23 @@ public class App {
 
         final var archive = new FileArchive(payload);
 
+        // The configuration of our SSH connection to the instance.
         final var conn = ConnectionArgs.builder()
             .host(serverPublicIp)
             .user(userName)
             .privateKey(privateKey)
             .build();
 
-        var poll = new Command("poll", CommandArgs.builder()
-            .connection(conn)
-            .create("echo 'Connection established'")
-            .build());
-
+        // Copy the files to the remote.
         var copy = new CopyToRemote("copy", CopyToRemoteArgs.builder()
             .connection(conn)
             .source(archive)
             .destination(destDir)
-            .build(), CustomResourceOptions.builder()
-                .dependsOn(poll)
-                .build());
+            .build());
 
+        // Verify that the expected files were copied to the remote.
+        // We want to run this after each copy, i.e., when something changed,
+        // so we use the asset to be copied as a trigger.
         var find = new Command("find", CommandArgs.builder()
             .connection(conn)
             .create(String.format("find %s/%s | sort", destDir,payload))
@@ -727,16 +693,6 @@ public class App {
 ```yaml
 
 resources:
-  # Poll the server until it responds.
-  #
-  # Because other commands depend on this command, they are
-  # guaranteed to hit a ready server.
-  poll:
-    type: command:remote:Command
-    properties:
-      connection: ${conn}
-      create: echo 'Connection established'
-
   # Copy the files to the remote.
   copy:
     type: command:remote:CopyToRemote
@@ -744,9 +700,6 @@ resources:
       connection: ${conn}
       source: ${archive}
       remotePath: ${destDir}
-    options:
-      dependsOn:
-        - ${poll}
 
   # Verify that the expected files were copied to the remote.
   # We want to run this after each copy, i.e., when something changed,
@@ -790,10 +743,8 @@ outputs:
 
 {{% /choosable %}}
 
-## Migration
+### Getting started
 
-If you're currently using one of the v0 pre-release versions of the Command provider, you don't need to make any changes to your existing code. The new features are additive and backward-compatible.
-
-However, the enhanced functionality of copying assets and archives is only available in the new `CopyToRemote` resource. The previous `CopyFile` resource still exists, but is deprecated. If you're using `CopyFile`, you should consider migrating to the new resource after the upgrade to 1.0.
+If you're currently using one of the v0 pre-release versions of the Command provider, you don't need to make any changes to your existing code. However, the enhanced functionality of copying assets and archives is only available in the new `CopyToRemote` resource. If you're using `CopyFile`, you should consider migrating to the new resource after the upgrade to 1.0.
 
 Enjoy the new features, and we’re looking forward to seeing what you build with the Command provider!
