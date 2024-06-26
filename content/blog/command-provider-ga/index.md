@@ -6,8 +6,7 @@ date: 2024-06-20T11:02:20+02:00
 draft: false
 
 meta_desc: >-
-    The 1.0 release of the Pulumi Command provider marks the provider’s general availability (GA).
-    The release expands support for copying assets between local and remote hosts.
+    The 1.0 release of the Pulumi Command provider marks its general availability (GA) and expands support for copying assets to remote hosts.
 
 meta_image: meta.png
 
@@ -210,7 +209,7 @@ using Pulumi;
 using Aws = Pulumi.Aws;
 using Command = Pulumi.Command;
 
-return await Deployment.RunAsync(() => 
+return await Deployment.RunAsync(() =>
 {
     var awsConfig = new Config("aws");
 
@@ -247,7 +246,7 @@ return await Deployment.RunAsync(() =>
     var invokeCommand = new Command.Local.Command("invokeCommand", new()
     {
         Create = $"aws lambda invoke --function-name \"$FN\" --payload '{{\"stackName\": \"{Deployment.Instance.StackName}\"}}' --cli-binary-format raw-in-base64-out out.txt >/dev/null && cat out.txt | tr -d '\"'  && rm out.txt",
-        Environment = 
+        Environment =
         {
             { "FN", lambdaFunction.Arn },
             { "AWS_REGION", awsConfig.Require("region") },
@@ -594,7 +593,7 @@ using System.Collections.Generic;
 using Pulumi;
 using Command = Pulumi.Command;
 
-return await Deployment.RunAsync(() => 
+return await Deployment.RunAsync(() =>
 {
     var config = new Config();
     var serverPublicIp = config.Require("serverPublicIp");
@@ -602,7 +601,7 @@ return await Deployment.RunAsync(() =>
     var privateKey = config.Require("privateKey");
     var payload = config.Require("payload");
     var destDir = config.Require("destDir");
-    
+
     var archive = new FileArchive(payload);
 
     var conn = new Command.Remote.Inputs.ConnectionArgs
@@ -790,7 +789,6 @@ outputs:
 ```
 
 {{% /choosable %}}
-
 
 ## Migration
 
