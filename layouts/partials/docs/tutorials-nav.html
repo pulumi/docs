@@ -47,7 +47,8 @@
             </div>
             <div class="sidenav-subsection">
                 <ul class="collapsed">
-                    {{ range .Pages }}
+                    {{ $sorted_pages := sort .Pages ".Params.index" }}
+                    {{ range $sorted_pages }}
                     <li class="sidenav-topic">
                         <a href="{{ .RelPermalink }}">{{ .Title }}</a>
                     </li>
