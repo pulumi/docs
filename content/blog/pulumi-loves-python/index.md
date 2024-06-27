@@ -26,6 +26,14 @@ Pulumi has long had support to create and manage virtual environments using Pyth
 
 When creating a new Pulumi project, the Pulumi CLI will now ask you if you want to use Poetry to manage your dependencies. If you choose to use Poetry, the Pulumi CLI will automatically create a new Poetry project for you and install the necessary dependencies. To opt-in to using Poetry for an existing Pulumi project, set the [`toolchain` runtime option](https://www.pulumi.com/docs/concepts/projects/project-file/#runtime-options) to `poetry` and run `pulumi install`.
 
+```yaml
+name: python-and-poetry-are-best-friends
+runtime:
+  name: python
+  options:
+    toolchain: poetry
+```
+
 ## Built-in type checking
 
 Pulumi Python SDKs include type hints compatible with type checkers such as [MyPy](https://www.mypy-lang.org) and [Pyright](https://microsoft.github.io/pyright/#/). In the latest release of Pulumi, you can ask Pulumi to run your typechecker of choice for you as part of Pulumi operations and fail if there are any type errors. This can help you catch type errors earlier and ensure that your Pulumi programs are type-safe.
@@ -33,11 +41,10 @@ Pulumi Python SDKs include type hints compatible with type checkers such as [MyP
 Set the [`typechecker` runtime option](https://www.pulumi.com/docs/concepts/projects/project-file/#runtime-options) in your project file to `mypy` or `pyright` to enable automatic type checking.
 
 ```yaml
-name: python-with-poetry-and-typechecking
+name: python-with-typechecking
 runtime:
   name: python
   options:
-    toolchain: poetry
     typechecker: pyright
 ```
 
