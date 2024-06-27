@@ -1,8 +1,8 @@
 ---
-title_tag: Changelog | Self-Hosting Pulumi
+title_tag: Changelog | 
 meta_desc: Changes related to the self-hosted version of Pulumi Cloud.
 title: Changelog
-h1: Pulumi Cloud self-hosted network requirements
+h1: Self-Hosted Changelog 
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     pulumicloud:
