@@ -12,7 +12,7 @@ aliases:
 - /docs/intro/concepts/resources/dynamic-providers/
 ---
 
-There are three types of resource providers. The first type are standard resource providers. These resource providers are built and maintained by Pulumi and can be found in the [Pulumi Registry](https://www.pulumi.com/registry/). The second type are custom providers written by you using [Pulumi Packages](/docs/using-pulumi/pulumi-packages). Both the standard and custom providers are able to be used across all the languages Pulumi supports. The third type is the dynamic resource provider discussed on this page.
+There are three types of resource providers. The first type are standard resource providers. These resource providers are built and maintained by Pulumi and can be found in the [Pulumi Registry](https://www.pulumi.com/registry/). The second type are custom providers written by you using [Pulumi Packages](/docs/using-pulumi/pulumi-packages). Both the standard and custom providers can be used across all the languages Pulumi supports. The third type is the dynamic resource provider discussed on this page.
 
 Dynamic resource providers are only able to be used in Pulumi programs written in the same language as the dynamic resource provider. But, they are lighter weight than custom providers and for many use-cases are sufficient to leverage the Pulumi state model.
 
