@@ -228,3 +228,5 @@ learn-auto-api/
 <br/>
 
 Now that we have our project initialized, let's add some Automation API code!
+
+{{< tutorial-stepper >}}

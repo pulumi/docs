@@ -467,3 +467,5 @@ programmatically, review the
 Congratulations! You’ve finished the Building with Pulumi pathway! In this pathway, you learned all about stacks, outputs, and stack references so you can work in multiple environments. You also learned about secrets in Pulumi and how to use them in your programs.
 
 Go build new things, and watch this space for more learning experiences on Pulumi!
+
+{{< tutorial-stepper >}}

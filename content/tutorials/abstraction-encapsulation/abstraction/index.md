@@ -78,3 +78,5 @@ class StorageClass:
 {{% /choosable %}}
 
 There's a cleaner way to do this, though, with Pulumi if you want to start to share these abstractions with others. We call them _Component Resources_. Let's go explore them next!
+
+{{< tutorial-stepper >}}

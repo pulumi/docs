@@ -236,3 +236,5 @@ To learn more about creating resources in Pulumi, take a look at the following r
 
 - Learn more about inputs and outputs in the [Using Inputs and Outputs](/learn/creating-pulumi-programs/inputs-and-outputs/) tutorial.
 - Learn more about [resource names](https://www.pulumi.com/docs/concepts/resources/names/), [options](https://www.pulumi.com/docs/concepts/options/), and [providers](https://www.pulumi.com/docs/concepts/resources/providers/) in the Pulumi documentation.
+
+{{< tutorial-stepper >}}

@@ -317,3 +317,5 @@ bucket = OurBucketClass("my-bucket", "default")
 {{% /choosable %}}
 
 This way of breaking out the code is only the beginning, though. It still is stuck in the weeds of being specifically following the resource model of an S3 bucket on AWS, and an end user building on top of your code probably doesn't care about these low-level constructs. In Pulumi, everything, including your resources, can be modeled, abstracted, and encapsulated just like anything in your programming language of choice. Why does that matter, or why should you care? The answer to that question is up next!
+
+{{< tutorial-stepper >}}

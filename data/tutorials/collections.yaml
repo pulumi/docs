@@ -1,3 +1,4 @@
 - slug: serverless
   name: Serverless
   description: Learn how to do all kinds of interesting things serverlessly with Pulumi.
+  time_minutes: 30

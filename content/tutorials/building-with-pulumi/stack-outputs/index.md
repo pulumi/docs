@@ -197,3 +197,5 @@ Outputs:
 ```
 
 Next up, we'll explore how to share outputs with other stacks. Let's go!
+
+{{< tutorial-stepper >}}

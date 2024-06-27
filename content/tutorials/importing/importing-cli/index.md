@@ -851,3 +851,5 @@ Now, that's just adding one resource at a time. What's it like to add resources 
 
 [these directions]: https://www.pulumi.com/registry/packages/docker/installation-configuration/
 [a section in the API docs]: https://www.pulumi.com/registry/packages/docker/api-docs/container/#import
+
+{{< tutorial-stepper >}}

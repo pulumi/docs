@@ -217,3 +217,5 @@ It imports the resources into your stack and offers code snippets again for all 
 <br/>
 
 What if you want to specify the import behavior inside of your code, maintaining control as part of your code instead of via manual commands? Let's explore! Onward!
+
+{{< tutorial-stepper >}}

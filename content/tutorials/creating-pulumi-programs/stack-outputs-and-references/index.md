@@ -533,3 +533,5 @@ To learn more about creating and managing resources in Pulumi, take a look at th
 
 - Learn more about [stacks ouputs and references](https://www.pulumi.com/docs/concepts/stack/#stackreferences) in the Pulumi documentation.
 - Learn more about [Pulumi inputs and outputs](https://www.pulumi.com/docs/concepts/inputs-outputs/) in the Pulumi documentation.
+
+{{< tutorial-stepper >}}

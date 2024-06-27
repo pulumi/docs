@@ -322,3 +322,5 @@ learn-auto-api/
 Lines 28 on in `infra_api.py` is all Falcon, a lightweight WSGI framework for REST APIs. But the part that we're really interested in from a Pulumi standpoint is on lines 11 to 25. Each endpoint that returns data from our "datacenter" calls that function and returns the data to the endpoint.
 
 Now we've got some endpoints we can call. We've got a few considerations to take into account in the next module before we can start building with this code.
+
+{{< tutorial-stepper >}}

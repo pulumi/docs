@@ -166,3 +166,5 @@ These examples are only a small sample of the power of the Automation API.
 Congratulations! You've now finished this pathway on embedding Pulumi in other programs, platforms, and systems! In this pathway, you've learned about wrapping the standard Pulumi commands into a program with the Automation API, considering where Pulumi could be run and building out logging and error handling accordingly, and working with the Automation API to integrate your infrastructure into other workflows.
 
 Go build new things, and watch this space for more learning experiences with Pulumi!
+
+{{< tutorial-stepper >}}

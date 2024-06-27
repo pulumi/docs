@@ -75,3 +75,5 @@ Notice that `dev` is now the active stack.
 Next up, we're going to explore how to get information out of a stack to use in
 other places, like elsewhere in our program or in general spots like your
 browser.
+
+{{< tutorial-stepper >}}
