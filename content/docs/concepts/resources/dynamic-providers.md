@@ -12,7 +12,7 @@ aliases:
 - /docs/intro/concepts/resources/dynamic-providers/
 ---
 
-There are three types of resource providers. The first type are standard resource providers. These resource providers are built and maintained by Pulumi and can be found in the [Pulumi Registry](https://www.pulumi.com/registry/). The second type are custom providers written by you using [Pulumi Packages](/docs/using-pulumi/pulumi-packages). Both the standard and custom providers are able to be used across all the languages Pulumi supports. The third type is the dynamic resource provider discussed on this page.
+There are three types of resource providers. The first type are standard resource providers. These resource providers are built and maintained by Pulumi and can be found in the [Pulumi Registry](https://www.pulumi.com/registry/). The second type are custom providers written by you using [Pulumi Packages](/docs/using-pulumi/pulumi-packages). Both the standard and custom providers can be used across all the languages Pulumi supports. The third type is the dynamic resource provider discussed on this page.
 
 Dynamic resource providers are only able to be used in Pulumi programs written in the same language as the dynamic resource provider. But, they are lighter weight than custom providers and for many use-cases are sufficient to leverage the Pulumi state model.
 
@@ -538,9 +538,9 @@ class MyResource(Resource):
 
 ## Dynamic Provider Examples
 
-### Example: Random
+### Example: Random number generator
 
-This example generates a random number using a dynamic provider. It represents the simplest dynamic provider that brings together the various topics described above. It highlights using dynamic providers to run some code only when a resource is created, and then store the results of that in the state file so that this value is maintained across deployments of the resource. Because we want our random number to be created once, and then remain stable for subsequent updates, we cannot use a random number generator in our program; we need dynamic providers. The result is a provider similar to the one provided by the standard [Random Provider](https://www.pulumi.com/registry/packages/random/), just specific to our program and language.
+This example generates a random number using a dynamic provider. It represents the simplest dynamic provider that brings together the various topics described above. It highlights using dynamic providers to run some code only when a resource is created and then stores the results in the state file so that this value is maintained across deployments of the resource. Because we want our random number to be created once, and then remain stable for subsequent updates, we cannot use a random number generator in our program; we need dynamic providers. The result is a provider similar to the one provided by the standard [Random Provider](https://www.pulumi.com/registry/packages/random/), just specific to our program and language.
 
 Implementing this example requires that we have a provider and resource type:
 
