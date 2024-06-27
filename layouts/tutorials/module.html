@@ -30,7 +30,8 @@
                 <div class="module-list">
                     <h2>Tutorials</h2>
                     <ul class="p-0 border-4 border-gray-100 rounded">
-                        {{ range $index, $page := .Pages }}
+                        {{ $sorted_pages := sort .Pages ".Params.index" }}
+                        {{ range $index, $page := $sorted_pages }}
                             <li
                                 class="flex items-center list-none py-3 px-4 border-gray-200
                                 {{ if lt (add $index 1) (len .Pages) }}border-b{{ end }}
