@@ -4252,7 +4252,7 @@ curl \
   -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
   --request PATCH \
   --data '{ "name":"Production", "description": "Pool for the production account" }' \
-  https://api.pulumi.com/api/orgs/{organization}/agent-pools/12345678-8102-447f-b246-e9ec85786e23
+  https://api.pulumi.com/api/orgs/{organization}/agent-pools/{poolId}
 ```
 
 #### Default response
@@ -4289,7 +4289,7 @@ curl \
   -H "Content-Type: application/json" \
   -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
   --request DELETE \
-  https://api.pulumi.com/api/orgs/{organization}/agent-pools/12345678-8102-447f-b246-e9ec85786e23
+  https://api.pulumi.com/api/orgs/{organization}/agent-pools/{poolId}
 ```
 
 #### Default response
@@ -4318,7 +4318,7 @@ curl \
   -H "Accept: application/vnd.pulumi+8" \
   -H "Content-Type: application/json" \
   -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
-  https://api.pulumi.com/api/orgs/{organization}/agent-pools/12345678-8102-447f-b246-e9ec85786e23
+  https://api.pulumi.com/api/orgs/{organization}/agent-pools/{poolId}
 ```
 
 #### Default response
@@ -4341,8 +4341,7 @@ Status: 200 OK
       "pid": "58188",
       "lastSeen": 1719498194000,
       "status": "online"
-    },
-    ...
+    }
   ]
 }
 ```
@@ -4386,8 +4385,7 @@ Status: 200 OK
       "lastSeen": 1715796999,
       "status": "online",
       "lastDeployment": 1715796961
-    },
-    ...
+    }
   ]
 }
 ```
@@ -4472,7 +4470,7 @@ curl \
   -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
   --request PATCH \
   --data '{ "name":"GitHub", "maxExpiration": 3600 }' \
-  https://api.pulumi.com/api/orgs/{organization}/oidc/issuers/e9a13d0e-798e-4e33-bab2-dde06da317bf
+  https://api.pulumi.com/api/orgs/{organization}/oidc/issuers/{issuerId}
 ```
 
 #### Default response
@@ -4518,7 +4516,7 @@ curl \
   -H "Content-Type: application/json" \
   -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
   --request DELETE \
-  https://api.pulumi.com/api/orgs/{organization}/oidc/issuers/e9a13d0e-798e-4e33-bab2-dde06da317bf
+  https://api.pulumi.com/api/orgs/{organization}/oidc/issuers/{issuerId}
 ```
 
 #### Default response
@@ -4547,7 +4545,7 @@ curl \
   -H "Accept: application/vnd.pulumi+8" \
   -H "Content-Type: application/json" \
   -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
-  https://api.pulumi.com/api/orgs/{organization}/oidc/issuers/e9a13d0e-798e-4e33-bab2-dde06da317bf
+  https://api.pulumi.com/api/orgs/{organization}/oidc/issuers/{issuerId}
 ```
 
 #### Default response
@@ -4569,118 +4567,6 @@ Status: 200 OK
   ],
   "maxExpiration": 3600,
   "lastUsed": 1627590233
-}
-```
-
-### Get the issuer's auth policies
-
-```
-GET /api/orgs/{organization}/auth/policies/oidcissuers/{issuerId}
-```
-
-#### Parameters
-
-| Parameter           | Type          | In    | Description         |
-|---------------------|---------------|-------|---------------------|
-| `organization`      | string        | path  | organization name   |
-| `issuerId`          | string        | path  | issuer id to update |
-
-#### Example
-
-```bash
-curl \
-  -H "Accept: application/vnd.pulumi+8" \
-  -H "Content-Type: application/json" \
-  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
-  https://api.pulumi.com/api/orgs/{organization}/auth/policies/oidcissuers/e9a13d0e-798e-4e33-bab2-dde06da317bf
-```
-
-#### Default response
-
-```
-Status: 200 OK
-```
-
-```
-{
-  "id": "e9a13d0e-798e-4e33-bab2-dde06da317bf",
-  "version": 1,
-  "created": "2024-04-19 15:07:54.707",
-  "modified": "2024-04-19 15:07:54.707",
-  "policies": [
-    {
-      "decision": "allow",
-      "tokenType": "organization",
-      "authorizedPermissions": [],
-      "rules": {
-          "aud": "urn:pulumi:org:org-name",
-          "sub": "repo:organization/repo:*"
-      }
-    },
-    ...
-  ]
-}
-```
-
-### Update the issuer's auth policies
-
-```
-PATCH /api/orgs/{organization}/auth/policies/{policyId}
-```
-
-#### Parameters
-
-| Parameter           | Type          | In    | Description         |
-|---------------------|---------------|-------|---------------------|
-| `organization`      | string        | path  | organization name   |
-| `issuerId`          | string        | path  | issuer id to update |
-| `policies`          | array[object] | body  | array of policies   |
-| `policy.decision`   | string        | body  | `deny`/`allow`   |
-| `policy.tokenType`  | string        | body  | `organization`/`team`/`personal`/`runner`   |
-| `policy.teamName`   | string        | body  | the team name to issue tokens on behalf of, required for team token type  |
-| `policy.userLogin`  | string        | body  | the user login to issue tokens on behalf of, required for personal token type  |
-| `policy.runnerID`   | string        | body  | the runner name to issue tokens for, required for runner token type  |
-| `policy.authorizedPermissions`  | array[string] | body  | permissions allowed by the policy (only `admin` is supported for organization tokens)  |
-| `policy.rules`      | object        | body  |  rules to match the token claims |
-
-For more information about authorization rules, refer to [its documentation](../oidc/client/#configure-the-authorization-policies).
-
-#### Example
-
-```bash
-curl \
-  -H "Accept: application/vnd.pulumi+8" \
-  -H "Content-Type: application/json" \
-  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
-  --request PATCH \
-  --data '{ "policies": [{ "decision": "allow", "tokenType": "organization", "rules": { "aud": "urn:pulumi:org:org-name", "sub": "repo:organization/repo:*" }}] }' \
-  https://api.pulumi.com/api/orgs/{organization}/auth/policies/e9a13d0e-798e-4e33-bab2-dde06da317bf
-```
-
-#### Default response
-
-```
-Status: 200 OK
-```
-
-```
-{
-  "id": "e9a13d0e-798e-4e33-bab2-dde06da317bf",
-  "version": 1,
-  "created": "2024-04-19 15:07:54.707",
-  "modified": "2024-04-19 15:07:54.707",
-  "policies": [
-    {
-      "decision": "allow",
-      "tokenType": "organization",
-      "authorizedPermissions": [],
-      "rules": {
-          "aud": "urn:pulumi:org:org-name",
-          "sub": "repo:organization/repo:*"
-      }
-    },
-    ...
-  ]
 }
 ```
 
@@ -4724,11 +4610,120 @@ Status: 200 OK
       "modified": "2024-04-19 15:07:54.693"
       "maxExpiration": 3600,
       "lastUsed": 1627590233
-    },
-    ...
+    }
   ]
 }
 
+```
+
+### Get the issuer's auth policies
+
+```
+GET /api/orgs/{organization}/auth/policies/oidcissuers/{issuerId}
+```
+
+#### Parameters
+
+| Parameter           | Type          | In    | Description         |
+|---------------------|---------------|-------|---------------------|
+| `organization`      | string        | path  | organization name   |
+| `issuerId`          | string        | path  | issuer id to update |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  https://api.pulumi.com/api/orgs/{organization}/auth/policies/oidcissuers/{issuerId}
+```
+
+#### Default response
+
+```
+Status: 200 OK
+```
+
+```
+{
+  "id": "e9a13d0e-798e-4e33-bab2-dde06da317bf",
+  "version": 1,
+  "created": "2024-04-19 15:07:54.707",
+  "modified": "2024-04-19 15:07:54.707",
+  "policies": [
+    {
+      "decision": "allow",
+      "tokenType": "organization",
+      "authorizedPermissions": [],
+      "rules": {
+          "aud": "urn:pulumi:org:org-name",
+          "sub": "repo:organization/repo:*"
+      }
+    }
+  ]
+}
+```
+
+### Update the issuer's auth policies
+
+```
+PATCH /api/orgs/{organization}/auth/policies/{policyId}
+```
+
+#### Parameters
+
+| Parameter           | Type          | In    | Description         |
+|---------------------|---------------|-------|---------------------|
+| `organization`      | string        | path  | organization name   |
+| `issuerId`          | string        | path  | issuer id to update |
+| `policies`          | array[object] | body  | array of policies   |
+| `policy.decision`   | string        | body  | `deny`/`allow`   |
+| `policy.tokenType`  | string        | body  | `organization`/`team`/`personal`/`runner`   |
+| `policy.teamName`   | string        | body  | the team name to issue tokens on behalf of, required for team token type  |
+| `policy.userLogin`  | string        | body  | the user login to issue tokens on behalf of, required for personal token type  |
+| `policy.runnerID`   | string        | body  | the runner name to issue tokens for, required for runner token type  |
+| `policy.authorizedPermissions`  | array[string] | body  | permissions allowed by the policy (only `admin` is supported for organization tokens)  |
+| `policy.rules`      | object        | body  |  rules to match the token claims |
+
+For more information about authorization rules, refer to [its documentation](../oidc/client/#configure-the-authorization-policies).
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  --request PATCH \
+  --data '{ "policies": [{ "decision": "allow", "tokenType": "organization", "rules": { "aud": "urn:pulumi:org:org-name", "sub": "repo:organization/repo:*" }}] }' \
+  https://api.pulumi.com/api/orgs/{organization}/auth/policies/{policyId}
+```
+
+#### Default response
+
+```
+Status: 200 OK
+```
+
+```
+{
+  "id": "e9a13d0e-798e-4e33-bab2-dde06da317bf",
+  "version": 1,
+  "created": "2024-04-19 15:07:54.707",
+  "modified": "2024-04-19 15:07:54.707",
+  "policies": [
+    {
+      "decision": "allow",
+      "tokenType": "organization",
+      "authorizedPermissions": [],
+      "rules": {
+          "aud": "urn:pulumi:org:org-name",
+          "sub": "repo:organization/repo:*"
+      }
+    }
+  ]
+}
 ```
 
 ## Resources Under Management (RUM)
