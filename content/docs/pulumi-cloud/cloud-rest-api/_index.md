@@ -4185,6 +4185,222 @@ Timestamp,Name,Login,Event,Description,SourceIP,RequireOrgAdmin,RequireStackAdmi
 2021-04-11T21:09:52Z,First Last,user1,Secret Decrypted,"Decrypted secret value for stack ""demo-aws-ts-webserver/dev-user1"" (cipher text suffix: ""tbpiX4c="")",192.168.10.11,false,false,false
 ```
 
+
+## Deployment runners
+
+<!-- ###################################################################### -->
+
+### Register a new pool
+
+```
+POST /api/{organization}/agent-pools
+```
+
+#### Parameters
+
+| Parameter           | Type      | In    | Description         |
+|---------------------|-----------|-------|---------------------|
+| `organization`      | string    | path  | organization name   |
+| `name`              | string    | body  | pool name           |
+| `description`       | string    | body  | pool description    |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  --request POST \
+  --data '{ "name":"Production", "description": "Pool for the production account" }' \
+  https://api.pulumi.com/api/{organization}/agent-pools
+```
+
+#### Default response
+
+```
+Status: 200 OK
+```
+
+```
+{
+  "id": "12345678-8102-447f-b246-e9ec85786e23",
+  "tokenValue": "pul-75a564ac7f3a48079a0c448c1e1ec95c4cfed141"
+}
+```
+
+### Update a pool
+
+```
+PATCH /api/{organization}/agent-pools/{poolId}
+```
+
+#### Parameters
+
+| Parameter           | Type      | In    | Description         |
+|---------------------|-----------|-------|---------------------|
+| `organization`      | string    | path  | organization name   |
+| `poolId`            | string    | path  | pool id to update   |
+| `name`              | string    | body  | pool name           |
+| `description`       | string    | body  | pool description    |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  --request PATCH \
+  --data '{ "name":"Production", "description": "Pool for the production account" }' \
+  https://api.pulumi.com/api/{organization}/agent-pools/12345678-8102-447f-b246-e9ec85786e23
+```
+
+#### Default response
+
+```
+Status: 200 OK
+```
+
+```
+{
+  "name":"Production",
+  "description": "Pool for the production account"
+}
+```
+
+### Delete a pool
+
+```
+DELETE /api/{organization}/agent-pools/{poolId}
+```
+
+#### Parameters
+
+| Parameter           | Type      | In    | Description         |
+|---------------------|-----------|-------|---------------------|
+| `organization`      | string    | path  | organization name   |
+| `poolId`            | string    | path  | pool id to delete   |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  --request DELETE \
+  https://api.pulumi.com/api/{organization}/agent-pools/12345678-8102-447f-b246-e9ec85786e23
+```
+
+#### Default response
+
+```
+Status: 204 OK
+```
+
+### Get pool details
+
+
+```
+GET /api/{organization}/agent-pools/{poolId}
+```
+
+#### Parameters
+
+| Parameter           | Type      | In    | Description         |
+|---------------------|-----------|-------|---------------------|
+| `organization`      | string    | path  | organization name   |
+| `poolId`            | string    | path  | pool id to fetch    |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  https://api.pulumi.com/api/{organization}/agent-pools/12345678-8102-447f-b246-e9ec85786e23
+```
+
+#### Default response
+
+```
+Status: 200 OK
+```
+
+```
+{
+  "created": 1715701863000,
+  "id": "12345678-8102-447f-b246-e9ec85786e23",
+  "name":"Production",
+  "description": "Pool for the production account",
+  "agents": [
+    {
+      "version": "v1.1.0",
+      "hostname": "private-ipv4-address.kind.internal",
+      "ip": "192.168.0.17",
+      "pid": "58188",
+      "lastSeen": 1719498194000,
+      "status": "online"
+    },
+    ...
+  ]
+}
+```
+
+### List registered pools
+
+```
+GET /api/{organization}/agent-pools
+```
+
+#### Parameters
+
+| Parameter           | Type      | In    | Description         |
+|---------------------|-----------|-------|---------------------|
+| `organization`      | string    | path  | organization name   |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  https://api.pulumi.com/api/{organization}/agent-pools
+```
+
+#### Default response
+
+```
+Status: 200 OK
+```
+
+```
+{
+  "agentPools": [
+    {
+      "created": 1715701863000,
+      "id": "12345678-8102-447f-b246-e9ec85786e23",
+      "name":"Production",
+      "description": "Pool for the production account",
+      "lastSeen": 1715796999,
+      "status": "online",
+      "lastDeployment": 1715796961
+    },
+    ...
+  ]
+}
+```
+
+## OIDC Issuers
+
+<!-- ###################################################################### -->
+
+
+
+
 ## Resources Under Management (RUM)
 
 <!-- ###################################################################### -->
