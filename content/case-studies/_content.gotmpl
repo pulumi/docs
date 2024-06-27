@@ -1,0 +1,44 @@
+{{ $caseStudiesUrl := "https://cms.pulumi-test.io/api/case-studies/?populate=*" }}
+{{ $caseStudiesReq := resources.GetRemote $caseStudiesUrl (dict
+        "headers" (dict
+            "Authorization" (printf "Bearer %s" (getenv "CMS_API_TOKEN"))
+        )
+        "key" (print $caseStudiesUrl (now.Unix))
+    )
+}}
+
+{{ $caseStudies := $caseStudiesReq | transform.Unmarshal }}
+
+{{ range $caseStudies.data }}
+    {{ $customerUrl := (printf "https://cms.pulumi-test.io/api/customers/%s/?populate=*" (string .attributes.customer.data.id)) }}
+    {{ $customerReq := resources.GetRemote $customerUrl (dict
+            "headers" (dict
+                "Authorization" (printf "Bearer %s" (getenv "CMS_API_TOKEN"))
+            )
+            "key" (print $customerUrl (now.Unix))
+        )
+    }}
+
+    {{ $customer := $customerReq | transform.Unmarshal }}
+    {{ $customerLogo := printf "https://cms.pulumi-test.io%s" $customer.data.attributes.logo.data.attributes.url }}
+    {{ warnf "%s" .attributes.slug }}
+
+    {{ $page := dict
+        "path" .attributes.slug
+        "title" .attributes.title
+        "description" .attributes.description
+        "params" (dict
+            "meta_desc" .attributes.description
+            "customer_name" .attributes.customer.data.attributes.name
+            "customer_logo" $customerLogo
+            "customer_url" .attributes.customer.data.attributes.url
+            "exec_summary" .attributes.executive_summary
+        )
+        "content" (dict
+            "mediaType" "text/markdown"
+            "value" .attributes.body
+        )
+    }}
+
+    {{ $.AddPage $page }}
+{{ end }}
