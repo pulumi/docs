@@ -4185,7 +4185,6 @@ Timestamp,Name,Login,Event,Description,SourceIP,RequireOrgAdmin,RequireStackAdmi
 2021-04-11T21:09:52Z,First Last,user1,Secret Decrypted,"Decrypted secret value for stack ""demo-aws-ts-webserver/dev-user1"" (cipher text suffix: ""tbpiX4c="")",192.168.10.11,false,false,false
 ```
 
-
 ## Deployment runners
 
 <!-- ###################################################################### -->
@@ -4300,7 +4299,6 @@ Status: 204 OK
 ```
 
 ### Get pool details
-
 
 ```
 GET /api/orgs/{organization}/agent-pools/{poolId}
@@ -4613,7 +4611,7 @@ Status: 200 OK
     {
       "decision": "allow",
       "tokenType": "organization",
-      "authorizedPermissions": [], 
+      "authorizedPermissions": [],
       "rules": {
           "aud": "urn:pulumi:org:org-name",
           "sub": "repo:organization/repo:*"
@@ -4675,7 +4673,7 @@ Status: 200 OK
     {
       "decision": "allow",
       "tokenType": "organization",
-      "authorizedPermissions": [], 
+      "authorizedPermissions": [],
       "rules": {
           "aud": "urn:pulumi:org:org-name",
           "sub": "repo:organization/repo:*"
@@ -4715,7 +4713,7 @@ Status: 200 OK
 ```
 
 ```
-{ 
+{
   oidcIssuers: [
     {
       "id": "e9a13d0e-798e-4e33-bab2-dde06da317bf",
@@ -4732,7 +4730,6 @@ Status: 200 OK
 }
 
 ```
-
 
 ## Resources Under Management (RUM)
 
