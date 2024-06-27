@@ -4419,7 +4419,7 @@ curl \
   -H "Content-Type: application/json" \
   -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
   --request POST \
-  --data '{ "name":"GitHub", "description": "https://token.actions.githubusercontent.com", "maxExpiration": 3600 }' \
+  --data '{ "name":"GitHub", "url": "https://token.actions.githubusercontent.com", "maxExpiration": 3600 }' \
   https://api.pulumi.com/api/orgs/{organization}/oidc/issuers
 ```
 
