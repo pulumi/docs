@@ -1,5 +1,5 @@
 ---
-title: "Pulumi Command Provider 1.0"
+title: "Pulumi Command Provider 1.0 Release"
 
 date: 2024-06-27T11:02:20+02:00
 
@@ -392,8 +392,8 @@ The 1.0 release of the Command provider marks a stable API for the 1.x series. R
 
 - The API documentation in the Pulumi registry has [examples in all Pulumi languages](https://github.com/pulumi/pulumi-command/issues/196) and is expanded.
 - Capturing stdout and stderr of commands can now [be switched off](https://github.com/pulumi/pulumi-command/pull/451), which is useful when they might contain secrets or are very noisy.
-- Environment handling for remote commands was [fixed and is better documented](https://github.com/pulumi/pulumi-command/pull/395).
-- The `CopyFile` resource is [superseded](https://github.com/pulumi/pulumi-command/pull/423) by the new `CopyToRemote` resource. It can copy whole directories in addition to individual files. The source of the copy is now a [Pulumi asset or archive](https://www.pulumi.com/docs/concepts/assets-archives/) which provides full interoperability with the Pulumi ecosystem. The use of assets and archives also makes Pulumi run copy operations only if the source has changed. For an easy transition, the previous `CopyFile` resource will remain available for a while with a deprecation notice.
+- Environment handling for remote commands [has better error handling and is better documented](https://github.com/pulumi/pulumi-command/pull/395).
+- The `CopyFile` resource is [superseded](https://github.com/pulumi/pulumi-command/pull/423) by the new `CopyToRemote` resource. It can copy whole directories in addition to individual files. The source of the copy is now a [Pulumi asset or archive](https://www.pulumi.com/docs/concepts/assets-archives/) which provides full interoperability with the Pulumi ecosystem. The use of assets and archives also makes Pulumi run copy operations only if the source has changed. For an easy transition, the previous `CopyFile` resource will remain available with a deprecation notice until the next major version.
 
 Here’s an example of copying a directory to a remote host. For brevity, the remote server is assumed to exist, but it could also be provisioned in the same Pulumi program.
 
