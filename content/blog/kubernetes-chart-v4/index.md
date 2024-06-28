@@ -418,7 +418,7 @@ For resources in the “core” group, the empty string is used instead (for exa
 
 Pulumi has a new way to transform component resources and their children, the `transforms`  options. The older
 `transformations` option doesn't work with multi-language components like Chart v4. See
-[Resource Option: transforms](content/docs/concepts/options/transforms.md) for more details.
+[Resource Option: transforms](/docs/concepts/options/transforms.md) for more details.
 
 Note: you cannot change an object's namespace or name using a Pulumi transformation, and you cannot add or discard
 an object.

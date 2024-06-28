@@ -20,7 +20,7 @@ tags:
 
 ---
 
-When I am talking with community members, who are not using Pulumi yet, I often get asked what would be a good way to include their Infrastructure as Code (IaC) into existing software like a REST API. And my answer is always the same: Use our [Pulumi Automation API](docs/using-pulumi/automation-api/).
+When I am talking with community members, who are not using Pulumi yet, I often get asked what would be a good way to include their Infrastructure as Code (IaC) into existing software like a REST API. And my answer is always the same: Use our [Pulumi Automation API](/docs/using-pulumi/automation-api/).
 
 With the Pulumi Automation API you can include Pulumi IaC into your existing software, and this for any of the Pulumi supported programming languages like TypeScript, Python, Go, or C#. This gives you a greater flexibility and control, which you will not have with other IaC tools like CloudFormation or Terraform.
 
@@ -383,7 +383,7 @@ Result: succeeded
 INFO:     127.0.0.1:49220 - "POST / HTTP/1.1" 200 OK
 ```
 
-You should see the URL of the created infrastructure in the response from the FastAPI server. If you head over to the [Pulumi console](https://app.pulumi.com/), you should see the created stack and the resources that were created and also that [Pulumi Deployments](docs/pulumi-cloud/deployments/) were used to deploy the stack to the specified AWS region.
+You should see the URL of the created infrastructure in the response from the FastAPI server. If you head over to the [Pulumi console](https://app.pulumi.com/), you should see the created stack and the resources that were created and also that [Pulumi Deployments](/docs/pulumi-cloud/deployments/) were used to deploy the stack to the specified AWS region.
 
 ![Pulumi Console](pulumi-console.png)
 
