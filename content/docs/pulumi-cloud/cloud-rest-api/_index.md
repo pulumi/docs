@@ -4573,7 +4573,7 @@ Status: 200 OK
 ### List issuers
 
 ```
-GET /api/{organization}/oidc/issuers
+GET /api/org/{organization}/oidc/issuers
 ```
 
 #### Parameters
@@ -4609,7 +4609,7 @@ Status: 200 OK
       "created": "2024-04-19 15:07:54.693",
       "modified": "2024-04-19 15:07:54.693"
       "maxExpiration": 3600,
-      "lastUsed": 1627590233
+      "lastUsed": "2024-04-19 15:07:00.458"
     }
   ]
 }
@@ -4676,7 +4676,7 @@ PATCH /api/orgs/{organization}/auth/policies/{policyId}
 | Parameter           | Type          | In    | Description         |
 |---------------------|---------------|-------|---------------------|
 | `organization`      | string        | path  | organization name   |
-| `issuerId`          | string        | path  | issuer id to update |
+| `policyId`          | string        | path  | policy id to update |
 | `policies`          | array[object] | body  | array of policies   |
 | `policy.decision`   | string        | body  | `deny`/`allow`   |
 | `policy.tokenType`  | string        | body  | `organization`/`team`/`personal`/`runner`   |
