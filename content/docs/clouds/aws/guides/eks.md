@@ -1217,7 +1217,7 @@ If you would like to disable the creation of a default node group, and instead r
 [`skipDefaultNodeGroup`](/registry/packages/eks/api-docs/cluster/#skipdefaultnodegroup_nodejs)
 as `true` to the `eks.Cluster` constructor. Additional node groups may then be created by
 [creating an `eks.NodeGroupV2`](/registry/packages/eks/api-docs/nodegroupv2) explicitly. In both cases, you
-are likely to want to configure IAM roles for your worker nodes explicitly, which can besupplied to your EKS cluster
+would likely want to configure IAM roles for your worker nodes explicitly, which can be supplied to your EKS cluster
 using the [`instanceRole`](/registry/packages/eks/api-docs/cluster/#instancerole_nodejs) or
 [`instanceRoles`](/registry/packages/eks/api-docs/cluster/#instanceroles_nodejs) properties.
 
@@ -1262,7 +1262,7 @@ const instanceProfile1 = new aws.iam.InstanceProfile("instanceProfile1", {role: 
 const instanceProfile2 = new aws.iam.InstanceProfile("instanceProfile2", {role: role2.name});
 const cluster = new eks.Cluster("cluster", {
     skipDefaultNodeGroup: true,
-    instanceRoles: undefined,
+    instanceRoles: [role1, role2],
 });
 const fixedNodeGroup = new eks.NodeGroupV2("fixedNodeGroup", {
     cluster: cluster,
@@ -1324,7 +1324,7 @@ instance_profile1 = aws.iam.InstanceProfile("instanceProfile1", role=role1.name)
 instance_profile2 = aws.iam.InstanceProfile("instanceProfile2", role=role2.name)
 cluster = eks.Cluster("cluster",
     skip_default_node_group=True,
-    instance_roles=None)
+    instance_roles=[role1, role2])
 fixed_node_group = eks.NodeGroupV2("fixedNodeGroup",
     cluster=cluster,
     instance_type="t2.medium",
@@ -1416,7 +1416,10 @@ func main() {
 		}
 		cluster, err := eks.NewCluster(ctx, "cluster", &eks.ClusterArgs{
 			SkipDefaultNodeGroup: pulumi.BoolRef(true),
-			InstanceRoles:        nil,
+			InstanceRoles:        iam.RoleArray{
+				role1,
+				role2,
+			},
 		})
 		if err != nil {
 			return err
@@ -1518,7 +1521,11 @@ return await Deployment.RunAsync(() =>
     var cluster = new Eks.Cluster("cluster", new()
     {
         SkipDefaultNodeGroup = true,
-        InstanceRoles = null,
+        InstanceRoles = new[]
+        {
+            role1,
+            role2,
+        },
     });
 
     var fixedNodeGroup = new Eks.NodeGroupV2("fixedNodeGroup", new()
@@ -1698,6 +1705,8 @@ resources:
     properties:
       skipDefaultNodeGroup: true
       instanceRoles:
+        - role1
+        - role2
   # Create a node group for fixed compute.
   fixedNodeGroup:
     type: eks:NodeGroupV2
