@@ -1,6 +1,6 @@
 ---
 title: "Pulumi Loves Python"
-date: 2024-06-28T16:17:38+02:00
+date: 2024-07-02T16:17:38+02:00
 draft: false
 meta_desc: First-class Python support with Poetry, Pythonic input types and built-in type checking.
 meta_image: meta.png
@@ -38,7 +38,7 @@ runtime:
 
 Pulumi Python SDKs include type hints compatible with type checkers such as [MyPy](https://www.mypy-lang.org) and [Pyright](https://microsoft.github.io/pyright/#/). In the latest release of Pulumi, you can ask Pulumi to run your typechecker of choice for you as part of Pulumi operations and fail if there are any type errors. This can help you catch type errors earlier and ensure that your Pulumi programs are type-safe.
 
-Set the [`typechecker` runtime option](https://www.pulumi.com/docs/concepts/projects/project-file/#runtime-options) in your project file to `mypy` or `pyright` to enable automatic type checking.
+Add the typechecker of your choice to [your dependencies](https://www.pulumi.com/docs/languages-sdks/python/#packages) and set the [`typechecker` runtime option](https://www.pulumi.com/docs/concepts/projects/project-file/#runtime-options) in your project file to `mypy` or `pyright` to enable automatic type checking.
 
 ```yaml
 name: python-with-typechecking
@@ -47,6 +47,14 @@ runtime:
   options:
     typechecker: pyright
 ```
+
+To enable live type checking in Visual Studio Code set the `typeCheckingMode` setting of the [Pylance extension](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance) to `basic` or higher.
+
+```json
+"python.analysis.typeCheckingMode": "basic"
+```
+
+[Extensions](https://plugins.jetbrains.com/plugin/24146-pyright-language-server) [for other editors](https://github.com/emacs-lsp/lsp-pyright) [typically have](https://github.com/fannheyward/coc-pyright) [this already](https://zed.dev/docs/languages/python) [enabled](https://github.com/sublimelsp/LSP-pyright).
 
 ## Pythonic input types
 
