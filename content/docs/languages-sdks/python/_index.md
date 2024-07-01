@@ -46,7 +46,7 @@ asynchronous code within Python Pulumi programs.
 
 It is not required, but we recommend using a [virtual environment](https://docs.python.org/3/tutorial/venv.html) to isolate the dependencies of your projects and ensure reproducibility between machines.
 
-When creating a new Python project with `pulumi new`, you are offered the choice between `pip` (default) and `poetry` to manage your dependencies. If you choose `pip`, Pulumi will create a virtual environment in a `venv` directory with required dependencies from `requirements.txt` installed in it. If you choose `poetry`, Pulumi will create a `pyproject.toml` file and run poetry to create a virtual environment in its [default location](https://python-poetry.org/docs/basic-usage/#using-your-virtual-environment). Pulumi will automatically use this virtual environment when running the program.
+When creating a new Python project with `pulumi new`, you are offered the choice between pip (default) and `poetry` to manage your dependencies. If you choose `pip`, Pulumi will create a virtual environment in a `venv` directory with required dependencies from `requirements.txt` installed in it. If you choose `poetry`, Pulumi will create a `pyproject.toml` file and run Poetry to create a virtual environment in its [default location](https://python-poetry.org/docs/basic-usage/#using-your-virtual-environment). Pulumi will automatically use this virtual environment when running the program.
 
 This behavior is controlled by the `toolchain` and `virtualenv` `runtime` options in `Pulumi.yaml`.
 
@@ -62,7 +62,7 @@ runtime:
 
 `virtualenv` is the path to a virtual environment to use.
 
-Set the `toolchain` option to `poetry` to use `poetry`:
+To use Poetry, set the `toolchain` option to `poetry`:
 
 ```yaml
 runtime:
@@ -171,7 +171,12 @@ $ poetry add ${PACKAGE_NAME}
 
 ### Dev Versions
 
-Pulumi SDKs also publish pre-release versions, that include all the latest changes from the main development branch.  If you would like to install them, you can use the `--pre` flag with `pip install` to do so.  For example `pip install --pre -r requirements.txt`. When using `poetry`, add the `--allow-prereleases` flag to the `poetry add` command.  For example `poetry add --allow-prereleases ${PACKAGE_NAME}`.
+Pulumi SDKs also publish pre-release versions that include all the latest changes from the main development branch.  If you would like to install a pre-release version, you can use the `--pre` flag with `pip` or the `--allow-prereleaases` flag with `poetry`. For example:
+
+```bash
+pip install --pre -r requirements.txt
+poetry add --allow-prereleases ${PACKAGE_NAME}
+```
 
 ## Package Documentation
 
