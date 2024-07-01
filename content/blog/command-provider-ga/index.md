@@ -1,7 +1,7 @@
 ---
 title: "Pulumi Command Provider 1.0 Release"
 
-date: 2024-06-27T11:02:20+02:00
+date: 2024-07-01T10:00:00-07:00
 
 draft: false
 
