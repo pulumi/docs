@@ -26,7 +26,7 @@ The Pulumi programming model defines the core concepts you will use when creatin
 Pulumi. [Concepts](/docs/intro/concepts) describes these concepts
 with examples available in Python. These concepts are made available to you in the Pulumi SDK.
 
-The Pulumi SDK is available to Python developers as a Pip package distributed on PyPI. To learn more,
+The Pulumi SDK is available to Python developers as a package distributed on PyPI. To learn more,
 [refer to the Pulumi SDK Reference Guide](/docs/reference/pkg/python/pulumi/).
 
 The Pulumi programming model includes a core concept of `Input` and `Output` values, which are used to track how outputs of one resource flow in as inputs to another resource.  This concept is important to understand when getting started with Python and Pulumi, and the [Inputs and Outputs](/docs/concepts/inputs-outputs/) documentation is recommended to get a feel for how to work with this core part of Pulumi in common cases.
@@ -44,53 +44,38 @@ asynchronous code within Python Pulumi programs.
 
 ### Virtual Environments
 
-It is not required, but we recommend using a virtual environment to isolate the dependencies of your projects and ensure reproducibility between machines.
+It is not required, but we recommend using a [virtual environment](https://docs.python.org/3/tutorial/venv.html) to isolate the dependencies of your projects and ensure reproducibility between machines.
 
-As of Pulumi 2.4.0, new Python projects created with `pulumi new` will have a virtual environment created in a `venv` directory with required dependencies from `requirements.txt` installed in it, and Pulumi will automatically use this virtual environment when running the program.
+When creating a new Python project with `pulumi new`, you are offered the choice between pip (default) and `poetry` to manage your dependencies. If you choose `pip`, Pulumi will create a virtual environment in a `venv` directory with required dependencies from `requirements.txt` installed in it. If you choose `poetry`, Pulumi will create a `pyproject.toml` file and run Poetry to create a virtual environment in its [default location](https://python-poetry.org/docs/basic-usage/#using-your-virtual-environment). Pulumi will automatically use this virtual environment when running the program.
 
-This behavior is controlled by the following `virtualenv` `runtime` option in `Pulumi.yaml`:
+This behavior is controlled by the `toolchain` and `virtualenv` `runtime` options in `Pulumi.yaml`.
+
+To use pip, set the `toolchain` option to `pip`, along with the `virtualenv` option:
 
 ```yaml
 runtime:
   name: python
   options:
+    toolchain: pip
     virtualenv: venv
 ```
 
 `virtualenv` is the path to a virtual environment to use.
 
-Existing Python projects can opt-in to using the built-in virtual environment support by setting the `virtualenv` option. To manually create a virtual environment and install dependencies, run the following commands in your project directory:
+To use Poetry, set the `toolchain` option to `poetry`:
 
-{{< chooser os "macos,windows,linux" >}}
-
-{{% choosable os macos %}}
-
-```bash
-$ python3 -m venv venv
-$ venv/bin/pip install -r requirements.txt
+```yaml
+runtime:
+  name: python
+  options:
+    toolchain: poetry
 ```
 
-{{% /choosable %}}
+To further configure `poetry`, you can provide a [`poetry.toml` configuration file](https://python-poetry.org/docs/configuration/#local-configuration) in the project directory.
 
-{{% choosable os linux %}}
+Existing Python projects that do not use a virtual environment can opt-in to using the built-in virtual environment support by setting the above options. After updating the options, run `pulumi install` to create the virtual environment and install dependencies.
 
-```bash
-$ python3 -m venv venv
-$ venv/bin/pip install -r requirements.txt
-```
-
-{{% /choosable %}}
-
-{{% choosable os windows %}}
-
-```bat
-> python -m venv venv
-> venv\Scripts\pip install -r requirements.txt
-```
-
-{{% /choosable %}}
-
-{{< /chooser >}}
+#### Self managed virtual environments
 
 If you prefer to manage the virtual environment on your own (for example, using a tool like [Pipenv](https://github.com/pypa/pipenv)), you can delete the local `venv` directory and unset the `virtualenv` option in `Pulumi.yaml`:
 
@@ -119,7 +104,9 @@ When set, Pulumi will invoke the type checker before running your program. This 
 
 There are many [Pulumi Python packages](/registry) available.
 
-To install a new dependency in the virtual environment, add an entry to `requirements.txt`, and run the following in your project directory:
+#### Pip
+
+To install a new dependency in the virtual environment when using `pip`, add an entry to `requirements.txt`, and run the following in your project directory:
 
 {{< chooser os "macos,windows,linux" >}}
 
@@ -149,9 +136,47 @@ $ venv/bin/pip install -r requirements.txt
 
 {{< /chooser >}}
 
+#### Poetry
+
+To add a new dependency when using `poetry`, run the `poetry add` command in your project directory:
+
+{{< chooser os "macos,windows,linux" >}}
+
+{{% choosable os macos %}}
+
+```bash
+$ poetry add ${PACKAGE_NAME}
+```
+
+{{% /choosable %}}
+
+{{% choosable os linux %}}
+
+```bash
+$ poetry add ${PACKAGE_NAME}
+```
+
+{{% /choosable %}}
+
+{{% choosable os windows %}}
+
+```bat
+> poetry add ${PACKAGE_NAME}
+
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
 ### Dev Versions
 
-Pulumi SDKs also publish pre-release versions, that include all the latest changes from the main development branch.  If you would like to install them, you can use the `--pre` flag to do so.  For example `pip install --pre -r requirements.txt`.
+Pulumi SDKs also publish pre-release versions that include all the latest changes from the main development branch.  If you would like to install a pre-release version, you can use the `--pre` flag with `pip` or the `--allow-prereleaases` flag with `poetry`. For example:
+
+```bash
+pip install --pre -r requirements.txt
+poetry add --allow-prereleases ${PACKAGE_NAME}
+```
 
 ## Package Documentation
 
