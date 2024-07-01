@@ -300,14 +300,15 @@ For `javascript, typescript`:
 
 For `python`:
 
-| Property               | Type          | Required | Description                                                              |
-|------------------------|---------------|----------|--------------------------------------------------------------------------|
-| `packageName`          | `string`      | No       | PackageName is an override for the name of the generated python package. |
-| `requires`             | `map[string]` | No       | Description for the PyPi package.                                         |
-| `readme`               | `string`      | No       | Readme contains the text for the package's README.md files.              |
-| `moduleNameOverrides`  | `map[string]` | No       | Optional overrides for Pulumi module names.                              |
-| `compatibility`        | `string`      | No       | Toggle compatibility mode for a specified target.                        |
-| `respectSchemaVersion` | `boolean`     | No       | Use the [`package.version`](#package) field in the generated SDK.        |
+| Property               | Type          | Required | Description                                                                                                                                            |
+|------------------------|---------------|----------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `packageName`          | `string`      | No       | PackageName is an override for the name of the generated python package.                                                                               |
+| `requires`             | `map[string]` | No       | Description for the PyPi package.                                                                                                                      |
+| `readme`               | `string`      | No       | Readme contains the text for the package's README.md files.                                                                                            |
+| `moduleNameOverrides`  | `map[string]` | No       | Optional overrides for Pulumi module names.                                                                                                            |
+| `compatibility`        | `string`      | No       | Toggle compatibility mode for a specified target.                                                                                                      |
+| `respectSchemaVersion` | `boolean`     | No       | Use the [`package.version`](#package) field in the generated SDK.                                                                                      |
+| `inputTypes`           | `string`      | No       | Controls the types of resource inputs. Either `classes` for args-classes or `classes-and-dicts` for args-classes side by side with typed dictionaries. |
 
 {{% /choosable %}}
 {{% choosable language go %}}
