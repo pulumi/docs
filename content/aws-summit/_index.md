@@ -1,6 +1,6 @@
 ---
-title: Pulumi + AWS Summit Stockholm
-meta_desc: Join Pulumi at AWS Summit Stockholm to learn about the latest developments in infrastructure as code. Meet us at booth B9.
+title: Pulumi + AWS Summit NYC
+meta_desc: Join Pulumi at AWS Summit NYC to learn about the latest developments in infrastructure as code. Meet us at booth 563.
 meta_image: /images/aws-summit-meta.png
 type: page
 layout: aws-summit
@@ -15,25 +15,20 @@ links:
 
 workshops:
     items:
-      - title: Getting Started with Kubernetes on AWS using Pulumi
-        date: June 11, 2024
-        description: Learn the fundamentals of setting up EKS clusters on AWS and deploying a containerized workload to the cluster.
-        link: /resources/getting-started-with-kubernetes-aws/
+      - title: Getting started with CI/CD for AWS using GitHub Actions
+        date: July 17, 2024
+        description: In this workshop, you will learn the fundamentals of an infrastructure CI/CD pipeline through guided exercises. You will use GitHub Actions and Pulumi.
+        link: /resources/getting-started-with-ci-cd-aws-pulumi-github-actions/
         action: Register Now
-      - title: Policy as Code on AWS
-        date: June 13, 2024
-        description: Learn best practices and how to write policies for AWS resources with Pulumi using Python and TypeScript.
-        link: /resources/securing-deployments-policy-as-code/
+      - title: From Zero to Production in Kubernetes
+        date: July 25, 2024
+        description: We’ll explore how to leverage the power of Python with Pulumi, an infrastructure as code platform to define and manage your Kubernetes deployments.
+        link: /resources/from-zero-to-production-in-kubernetes/
         action: Register Now
-      - title: Getting Started with Infrastructure as Code on AWS
-        date: June 27, 2024
-        description: Learn the fundamentals of Infrastructure as Code through a series of guided exercises using AWS and Pulumi’s platform
-        link: /resources/getting-started-with-iac-aws-typescript/
-        action: Register Now
-      - title: Building AI-powered Applications at Pulumi
-        date: July 10, 2024
-        description: Learn how the Pulumi engineering team builds AI-powered capabilities and the lessons learned.
-        link: /resources/building-ai-powered-applications-at-pulumi/
+      - title: Advanced CI/CD for AWS using Pulumi and GitHub Actions
+        date: August 14, 2024
+        description: Learn advanced topics that make up a robust infrastructure CI/CD pipeline through guided exercises.
+        link: /resources/advanced-cicd-aws-pulumi-github-actions/
         action: Register Now
 
 templates:
@@ -65,8 +60,6 @@ knowledge:
 customer_logos:
   title: Trusted by your peers
   logos:
-    - name: mercedes-benz
-      link: /case-studies/mercedes-benz
     - name: snowflake
       link: /case-studies/snowflake
     - name: lemonade
