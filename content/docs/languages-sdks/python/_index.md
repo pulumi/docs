@@ -50,7 +50,7 @@ When creating a new Python project with `pulumi new`, you are offered the choice
 
 This behavior is controlled by the `toolchain` and `virtualenv` `runtime` options in `Pulumi.yaml`.
 
-Set the `toolchain` option to `pip`, along with the `virtualenv` option to use `pip`:
+To use pip, set the `toolchain` option to `pip`, along with the `virtualenv` option: 
 
 ```yaml
 runtime:
