@@ -1,5 +1,5 @@
 ---
-title: "Pulumi Loves Python"
+title: "Enhancing Python Support: Poetry, Type Checking, and More!"
 date: 2024-07-02T16:17:38+02:00
 draft: false
 meta_desc: First-class Python support with Poetry, Pythonic input types and built-in type checking.
@@ -17,8 +17,6 @@ social:
 Pulumi has first-class support for Python, and it is one of our most popular languages. We are always working to improve the Python experience, and we are excited to announce some new features that make it even easier to use Python with Pulumi, including support for Poetry, built-in type checking, and more Pythonic input types.
 
 <!--more-->
-
-<!-- expand on the introduction here -->
 
 ## Poetry
 
