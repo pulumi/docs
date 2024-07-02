@@ -20,9 +20,17 @@ aliases:
 
 Use access tokens to sign into the Pulumi Cloud via the CLI or automate your usage of the Pulumi Cloud using the REST API. Learn more about the REST API in the [Pulumi Cloud REST API docs](/docs/pulumi-cloud/cloud-rest-api/).
 
-Pulumi offers three types of access tokens: Personal, organization, and team. Personal access tokens are available to everyone, organization and team access tokens are only available to Enterprise and Business Critical customers. Organization and team access tokens are machine tokens that are not connected to a user account.
+Pulumi offers three types of access tokens: 
 
-Tokens can optionally be assigned an expiration period of up to two years, at which point the token will no longer be valid for any Pulumi operation. Expired tokens cannot be refreshed or reactivated. It's strongly recommended that you assign an expiration to your token to encourage token rotation.
+1. Personal tokens, which map to the permissions of an individual user. Personal tokens are available to all Pulumi Cloud users.
+1. Organization tokens, which map to the permissions of either a regular organization member or an organization admin, depending on the scope of the token. Organization tokens are only available to Enterprise and Business Critical customers.
+1. Team tokens, which map to the permissions of a team within an organization. For more information on using teams within your Pulumi Cloud organization, see [Teams & Role-based access control (RBAC)
+](docs/pulumi-cloud/access-management/teams/). Team tokens are only available to Enterprise and Business Critical customers.
+
+When using tokens, be mindful of the following security best practices:
+
+- Organization and team access tokens are machine tokens that are not connected to a user account, and therefore should only be used in scenarios like CI/CD pipelines, where the Pulumi actions are not being performed directly by a particular user.
+- Tokens can optionally be assigned an expiration period of up to two years, at which point the token will no longer be valid for any Pulumi operation. Expired tokens cannot be refreshed or reactivated. It's strongly recommended that you assign an expiration to your token to encourage token rotation and improve your organization's security posture.
 
 ## Access token permissions
 
@@ -158,6 +166,10 @@ Organization access tokens can be deleted by any organization admin at any time.
 If you choose to delete a token, its access will immediately be revoked and all further operations using it will fail as unauthorized. The token name will remain reserved for your organization after deletion.
 
 ## Team access tokens
+
+{{< notes type="info" >}}
+Please note that this functionality is available only in the [Enterprise and Business Critical editions](https://www.pulumi.com/pricing/) of Pulumi.
+{{< /notes >}}
 
 Team access tokens provide the following benefits:
 
