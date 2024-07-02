@@ -1,0 +1,41 @@
+name: s3-writer
+runtime: yaml
+description: A program to create an EventBridge Scheduler in AWS.
+
+resources:
+  stack-ref: # TO-DO
+
+  scheduler-role:
+    type: aws:iam:Role
+    properties:
+      assumeRolePolicy: |
+        { 
+          "Version": "2012-10-17",
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Principal": {
+                "Service": "scheduler.amazonaws.com"
+              },
+              "Effect": "Allow"
+            }
+          ]
+        }
+      inlinePolicies:
+        - name: "my-inline-policy"
+          policy:
+            fn::toJSON:
+              Version: 2012-10-17
+              Statement:
+                - Action:
+                    - lambda:*
+                  Effect: Allow
+                  Resource: "*"
+
+  role-policy-attachment:
+    type: aws:iam:RolePolicyAttachment
+    properties:
+      role: ${lambda-role}
+      policyArn: "arn:aws:iam::aws:policy/AmazonS3FullAccess"
+
+  scheduler: # TO-DO

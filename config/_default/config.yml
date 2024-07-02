@@ -12,9 +12,6 @@ security:
       - ALGOLIA_APP_ID
       - ALGOLIA_APP_SEARCH_KEY
 
-disableKinds:
-  - taxonomy
-
 sectionPagesMenu: main
 pygmentsCodeFences: true
 pygmentsUseClasses: true
@@ -48,13 +45,20 @@ outputs:
   section:
     - HTML
 
+disableKinds:
+  - taxonomy
+
 taxonomies:
   author: authors
   tag: tags
+  provider: providers
+  collection: collections
 
 permalinks:
   authors: /blog/author/:slug/
   tags: /blog/tag/:slug/
+  providers: /tutorials/:slug/
+  collections: /tutorials/:slug/
 
 markup:
   goldmark:

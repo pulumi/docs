@@ -1,0 +1,41 @@
+{{/* Emits PREVIOUS and NEXT buttons based on the pages in the current directory,
+    ordered by page index param.
+*/}}
+
+{{ $currentPage := .Page }}
+
+{{/* Get the pages in the current directory. */}}
+{{ $unsortedPages := slice $currentPage }}
+
+{{ range $index, $page := .Page.Parent.CurrentSection.Pages }}
+    {{ if (ne $page.RelPermalink $currentPage.RelPermalink) }}
+        {{ $unsortedPages = $unsortedPages | append $page }}
+    {{ end }}
+{{ end }}
+
+{{/* Sort by index number. */}}
+{{ $pages := sort $unsortedPages ".Params.index" }}
+
+{{/* Set the first and last indexes. */}}
+{{ $first := 0 }}
+{{ $last := sub (len $pages) 1 }}
+
+{{/* Determine the index of the current step. */}}
+{{ $step := -1 }}
+{{ range $index, $element := $pages }}
+    {{ if eq $element.RelPermalink $currentPage.RelPermalink }}
+        {{ $step = $index }}
+    {{ end }}
+{{ end }}
+
+
+<div class="mt-6">
+    {{ if ne $step $first }}
+        {{ $prev := index $pages (sub $step 1) }}
+        <a data-track="previous-step" class="btn btn-secondary" href="{{ $prev.RelPermalink }}">&larr; Previous Step</a>
+    {{ end }}
+    {{ if ne $step $last }}
+        {{ $next := index $pages (add $step 1) }}
+        <a data-track="next-step" class="btn" href="{{ $next.RelPermalink }}">{{ $next.LinkTitle }} &rarr;</a>
+    {{ end }}
+</div>

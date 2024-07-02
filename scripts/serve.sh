@@ -19,4 +19,4 @@ export REL_JS_BUNDLE="/js/bundle.min.${ASSET_BUNDLE_ID}.js"
 # URL to the Pulumi conversion service.
 export PULUMI_CONVERT_URL="${PULUMI_CONVERT_URL:-$(pulumi stack output --stack pulumi/tf2pulumi-service/production url)}"
 
-HUGO_BASEURL=http://localhost:1313 hugo server --buildDrafts --buildFuture
+HUGO_BASEURL=http://localhost:1313 hugo server --renderToMemory --logLevel debug --buildDrafts --buildFuture

@@ -2,20 +2,41 @@
     <div class="docs-type-nav">
         {{ $mode := .Scratch.Get "mode" }}
         {{ if eq "docs" $mode }}
-            <a class="tab-selected" href="/docs">
+            <a class="tab-selected" href="/docs/">
                 <img class="tab-icon" src="/icons/docs.svg" />
                 Docs
             </a>
-            <a class="tab" href="/registry">
+            <a class="tab" href="/tutorials/">
+                <img class="tab-icon" src="/icons/graduation-cap.svg" />
+                Tutorials
+            </a>
+            <a class="tab" href="/registry/">
+                <img class="tab-icon" src="/icons/registry-light.svg" />
+                Packages
+            </a>
+        {{ else if eq "tutorials" $mode }}
+            <a class="tab" href="/docs/">
+                <img class="tab-icon" src="/icons/docs.svg" />
+                Docs
+            </a>
+            <a class="tab-selected" href="/tutorials/">
+                <img class="tab-icon" src="/icons/graduation-cap.svg" />
+                Tutorials
+            </a>
+            <a class="tab" href="/registry/">
                 <img class="tab-icon" src="/icons/registry-light.svg" />
                 Packages
             </a>
         {{ else }}
-            <a class="tab" href="/docs">
+            <a class="tab" href="/docs/">
                 <img class="tab-icon" src="/icons/docs-light.svg" />
                 Docs
             </a>
-            <a class="tab-selected" href="/registry">
+            <a class="tab" href="/tutorials/">
+                <img class="tab-icon" src="/icons/graduation-cap.svg" />
+                Tutorials
+            </a>
+            <a class="tab-selected" href="/registry/">
                 <img class="tab-icon" src="/icons/registry.svg" />
                 Packages
             </a>

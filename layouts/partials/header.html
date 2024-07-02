@@ -1,8 +1,8 @@
-{{ if hasPrefix .RelPermalink "/docs/" }}
+{{ if or (hasPrefix .RelPermalink "/docs/") (hasPrefix .RelPermalink "/tutorials/") }}
     {{ partial "docs-top-nav" . }}
     <div class="header-container docs-hero">
         <span class="hide-on-pinned"> </span>
-        {{ .Scratch.Set "mode" "docs" }}
+        {{ .Scratch.Set "mode" .Section }}
         {{ partial "docs/search.html" . }}
     </div>
 {{ else }}
@@ -300,8 +300,8 @@
                                         <li>
                                             <div class="list-title">
                                                 <a href="/learn/">
-                                                    <i class="fas fa-chalkboard-teacher fa-fw"></i>
-                                                    Learn Pulumi
+                                                    <img src="/icons/graduation-cap.svg" class="inline opacity-90" />
+                                                    Tutorials
                                                     <div class="list-sub-title">Get hands-on with Pulumi concepts</div>
                                                 </a>
                                             </div>
