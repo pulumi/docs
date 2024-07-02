@@ -29,12 +29,12 @@ The default experience is to use the hosted Pulumi Cloud, which takes care of th
 
 Pulumi supports two classes of state backends for storing your infrastructure state:
 
-- **Service**: a managed cloud experience using the online or self-hosted Pulumi Cloud application
+- **Pulumi Cloud**: a managed cloud experience using the online or self-hosted Pulumi Cloud application
 - **Self-Managed**: a manually managed object store, including AWS S3, Azure Blob Storage, Google Cloud Storage, any AWS S3 compatible server such as Minio or Ceph, or your local filesystem
 
 Pulumi's SDK works great with all backends, although some details differ between them.
 
-Pulumi uses the Service backend hosted at <a href="https://app.pulumi.com" target="_blank">`app.pulumi.com`</a> by default as it provides the best combination of usability, safety, and security for most users. Important features include:
+Pulumi Cloud, hosted at <a href="https://app.pulumi.com" target="_blank">`app.pulumi.com`</a>, is the default backend, as it provides the best combination of usability, safety, and security for most users. Important features include:
 
 - Robust state management, with transactional checkpointing for fault tolerance and recovery
 - Concurrent state locking to prevent corrupting your infrastructure state in a team environment
@@ -46,7 +46,7 @@ Pulumi uses the Service backend hosted at <a href="https://app.pulumi.com" targe
 
 The Pulumi Cloud backend requires no additional configuration after [installing the CLI](/docs/install/). Pulumi offers this backend hosted online free for individuals, with [advanced tiers](/pricing/) available for teams and enterprises (with <a href="https://app.pulumi.com/site/trial" target="_blank">free trials</a>). It has successfully undergone multiple security audits including SOC2, pen-testing, and more.
 
-> To learn more about the Pulumi Cloud backend's design, including why it doesn't need your cloud credentials, see [Pulumi Cloud Architecture](#/pulumi-cloud/-architecture). If you are interested in the hosting your own instance, see the [Self-Hosting User Guide](/docs/pulumi-cloud/self-hosted/).
+> To learn more about the Pulumi Cloud backend's design, including why it doesn't need your cloud credentials, see [Pulumi Cloud Architecture](#pulumi-cloud-architecture). If you are interested in the hosting your own instance, see the [Self-Hosting User Guide](/docs/pulumi-cloud/self-hosted/).
 
 Pulumi also lets you manage state yourself using a self-managed backend. Your state is stored as simple JSON files in AWS S3, Azure Blob Store, Google Cloud Storage, an alternative AWS S3 API compatible server such as Minio or Ceph, or on your local filesystem. These self-managed backends are all open source and free to use in any setting. Using a self-managed backend trades off some amount of reliability for additional control over where metadata is stored. For instance, you will need to manually configure secure access, encryption, and history, and devise your own concurrency control and recovery capabilities. To choose a self-managed backend, use the `pulumi login` command [as documented below](#using-a-self-managed-backend).
 
@@ -117,7 +117,7 @@ Enter your access token from https://app.pulumi.com/account/tokens
     or hit <ENTER> to log in using your browser:
 ```
 
-To automatically generate and use a new access token, hit `<ENTER>`. This will open a web browser to interact with the service and request a token. If this is your first time using the service, you will be asked to authenticate using your chosen identity provider (GitHub, GitLab, Atlassian, SAML/SSO, or email).
+To automatically generate and use a new access token, hit `<ENTER>`. This will open a web browser to interact with Pulumi Cloud and request a token. If this is your first time using Pulumi Cloud, you will be asked to authenticate using your chosen identity provider (GitHub, GitLab, Atlassian, SAML/SSO, or email).
 
 To view your access tokens, or create a new one manually, view the <a href="https://app.pulumi.com/account/tokens" target="_blank">Access Tokens</a> page.  You will see a list of past tokens, when they were last used, as well as the ability to revoke them.
 
