@@ -20,7 +20,7 @@ aliases:
 
 Use access tokens to sign into the Pulumi Cloud via the CLI or automate your usage of the Pulumi Cloud using the REST API. Learn more about the REST API in the [Pulumi Cloud REST API docs](/docs/pulumi-cloud/cloud-rest-api/).
 
-Pulumi offers three types of access tokens: 
+Pulumi offers three types of access tokens:
 
 1. Personal tokens, which map to the permissions of an individual user. Personal tokens are available to all Pulumi Cloud users.
 1. Organization tokens, which map to the permissions of either a regular organization member or an organization admin, depending on the scope of the token. Organization tokens are only available to Enterprise and Business Critical customers.
@@ -29,8 +29,8 @@ Pulumi offers three types of access tokens:
 
 When using tokens, be mindful of the following security best practices:
 
-- Organization and team access tokens are machine tokens that are not connected to a user account, and therefore should only be used in scenarios like CI/CD pipelines, where the Pulumi actions are not being performed directly by a particular user.
-- Tokens can optionally be assigned an expiration period of up to two years, at which point the token will no longer be valid for any Pulumi operation. Expired tokens cannot be refreshed or reactivated. It's strongly recommended that you assign an expiration to your token to encourage token rotation and improve your organization's security posture.
+* Organization and team access tokens are machine tokens that are not connected to a user account, and therefore should only be used in scenarios like CI/CD pipelines, where the Pulumi actions are not being performed directly by a particular user.
+* Tokens can optionally be assigned an expiration period of up to two years, at which point the token will no longer be valid for any Pulumi operation. Expired tokens cannot be refreshed or reactivated. It's strongly recommended that you assign an expiration to your token to encourage token rotation and improve your organization's security posture.
 
 ## Access token permissions
 
