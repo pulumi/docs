@@ -317,6 +317,28 @@ Despite these limitations, Pulumi with VS Code as your IDE provides a rich exper
 
 Pulumi also offers detailed logging which can be used to look into the other aspects that breakpoint debugging doesn't cover. In an upcoming article we'll show how to use these tools as well. Until then, have fun [spelunking][code-spelunking] through your code with your favorite IDE!
 
+## Next Steps
+
+If you haven't already, [install Pulumi][pulumi-install] today, and follow our self-directed [Getting Started guides][pulumi-start] to learn more about making the most of Pulumi's next-level infrastructure management features at your organization.
+
+To learn more, you can watch the following video which provides a high level overview of how Pulumi works:
+
+<div class="rounded-md shadow border border-gray-300 w-3/4 mx-auto my-4" style="position: relative; padding-bottom: 40.25%; height: 0; overflow: hidden;">
+    <iframe
+        src="//www.youtube.com/embed/Q8tw6YTD3ac?rel=0"
+        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;"
+        allowfullscreen=""
+        title="Introduction to Pulumi in Three Minutes"
+        srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img{position:absolute;width:100%;top:0;bottom:0;margin:auto}</style><a href=https://www.youtube.com/embed/Q8tw6YTD3ac?autoplay=1><img src='/images/home/youtube-getting-started.png' alt='Introduction to Pulumi in Three Minutes'></a>">
+    </iframe>
+</div>
+
+## Pulumi Cloud
+
+The Pulumi Cloud is a fully managed service that helps you adopt Pulumi’s open source SDK with ease. It provides built-in state and secrets management, integrates with source control and CI/CD, and offers a web console and API that make it easier to visualize and manage infrastructure. It is free for individual use, with features available for teams.
+
+<a class="btn btn-secondary" href="https://app.pulumi.com/signup" target="_blank">Create an Account</a>
+
 [f5-key]: https://www.javatpoint.com/what-is-f5
 [cost-of-debugging]: https://queue.acm.org/detail.cfm?id=3068754/
 [vs-code]: https://code.visualstudio.com/
@@ -340,3 +362,5 @@ Pulumi also offers detailed logging which can be used to look into the other asp
 [node-v8]: https://nodejs.org/en/learn/getting-started/the-v8-javascript-engine
 [cdp-docs]: https://chromedevtools.github.io/devtools-protocol/
 [cdp-sessions-docs]: https://github.com/aslushnikov/getting-started-with-cdp/blob/master/README.md#targets--sessions
+[pulumi-install]: https://www.pulumi.com/docs/install/
+[pulumi-start]: https://www.pulumi.com/start
