@@ -14,11 +14,11 @@ social:
 
 ---
 
-One of our most important goals at Pulumi is to bring the very best of software engineering tools and practice to your cloud infrastructure. Pulumi embraces existing popular programming languages as a way to tap into everything that these language ecosystems offers developers -- rich programming models, familiar syntax, IDE productivity, package management and versioning, componentization and reuse, testing, and so much more.
+One of our most important goals at Pulumi is to bring the very best of software engineering tools and practice to your cloud infrastructure. Pulumi embraces existing popular programming languages as a way to tap into everything that these language ecosystems offer developers -- rich programming models, familiar syntax, IDE productivity, package management and versioning, componentization and reuse, testing, and so much more.
 
-Python in particular has been one of the most popular languages used across the Pulumi platform, and the fastest growing over the last 2 years. Over the last few months, we've on a set of improvements that allow Pulumi users to take advantage of the latest and greatest tooling and features from the Python ecosystem.  The key new features include:
+Python in particular has been one of the most popular languages used across the Pulumi platform, and the fastest growing over the last 2 years. Over the last few months, we've worked on a set of improvements that allow Pulumi users to take advantage of the latest and greatest tooling and features from the Python ecosystem.  The key new features include:
 
-* __More Pythonic resource APIs__: A new dictionary-based API design whcih embraces a simple and familiar Pythonic API design along with access to great type checking and tooling building on recent enhancements to `TypedDict` support in the Python programming language and tools.
+* __More Pythonic resource APIs__: A new dictionary-based API design which embraces a simple and familiar Pythonic API design along with access to great type checking and tooling building on recent enhancements to `TypedDict` support in the Python programming language and tools.
 * __Native support for Poetry__: Built-in support for working with Poetry in place of `pip`, making it easy to integrate Pulumi into project and repos leveraging the popular Poetry package management toolchain for Python.
 * __Type checker integration__: New ability to run your favorite Python type checkers directly within the Pulumi deployment process 
 
@@ -28,8 +28,8 @@ Python in particular has been one of the most popular languages used across the 
 
 Python was one of the first languages we ever supported in Pulumi, and has grown rapidly for defining and building Infrastructure as Code across any cloud. This growth has accelerated over the last year, driven by a few different trends:
 
-1. DevOps practioners with existing Python scritping experience who can naturally extend that experience into their IaC development
-2. AI and Data-focused organizations with deep Python focus braodly within their organization leaning on IaC development whcih leverages the same language and tools
+1. DevOps practitioners with existing Python scripting experience who can naturally extend that experience into their IaC development
+2. AI and Data-focused organizations with deep Python focus broadly within their organization leaning on IaC development which leverages the same language and tools
 3. Broad growth in the Python developer ecosystem
 
 The result has been strong and steady growth of Python Pulumi usage.  This has been especially pronounced among some of the largest and most advanced Pulumi users, who are pushing the boundaries on managing complexity at scale using the best of the Python ecosystem.
