@@ -1,6 +1,6 @@
 ---
 title: "Pulumi + Python: Bringing the Best of Modern Python to IaC"
-date: 2024-07-02T16:17:38+02:00
+date: 2024-07-03T14:17:38+02:00
 draft: false
 meta_desc: A big step forward for Python + Pulumi, with new Pythonic input types, built in type checking and support for Poetry.
 meta_image: meta.png
@@ -73,6 +73,8 @@ To enable live type checking in Visual Studio Code set the `typeCheckingMode` se
 ```
 
 [Extensions](https://plugins.jetbrains.com/plugin/24146-pyright-language-server) [for other editors](https://github.com/emacs-lsp/lsp-pyright) [typically have](https://github.com/fannheyward/coc-pyright) [this already](https://zed.dev/docs/languages/python) [enabled](https://github.com/sublimelsp/LSP-pyright).
+
+We have updated the [NGINX on AWS ECS Fargate example](https://github.com/pulumi/examples/blob/master/aws-py-fargate/Pulumi.yaml) to use builtin typechecking and Poetry to manage dependencies. Check it out to see how you can use these new features in your Pulumi projects.
 
 ### Pythonic input types
 
