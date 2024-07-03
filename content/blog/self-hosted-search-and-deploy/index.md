@@ -32,10 +32,14 @@ Pulumi Resource Search offers multi-cloud search and analytics across every reso
 - **Resource Search API:** Integrate search functionality into your internal systems using the Search API.
 - **Search from the CLI:** Issue resource search queries from within the terminal without needing to change contexts.
 - **Data Export:** Export resource data for further analysis in your data warehouse.
+- 
+For more information on how to enable it in your self-hosted instance read the [self-hosted Resource Search documentation](/docs/pulumi-cloud/self-hosted/components/api/#search).
 
 ## Pulumi Deployments: Automate and Manage Your Infrastructure with Ease
 
 Pulumi Deployments is engineered to streamline infrastructure management tasks with a focus on scalability, automation, and control. This platform allows cloud engineers and platform teams to execute infrastructure actions such as previews, updates, destroys, and refreshes directly within Pulumi’s managed service. By bundling deployment settings like source code, cloud credentials, and environment variables into a single unit, Pulumi Deployments eliminates the complexities of stack management. Users can trigger deployments via Git events, through the Pulumi Cloud UI or leverage REST APIs for custom workflows, providing the flexibility to efficiently transition from code to cloud. In addition, customers using Pulumi Deployments can set up [Drift Detection and Remediation](/docs/pulumi-cloud/deployments/drift), the ability to get notified when the state of your resources changes unexpectedly and optionally remediate it, as well as [Time to Live Stacks](/docs/pulumi-cloud/deployments/ttl), the ability to set a expiration on a stack when it will be destroyed.
+
+![Deployments UI](deploy.png)
 
 ### Key Features
 
@@ -48,7 +52,7 @@ Pulumi Deployments is engineered to streamline infrastructure management tasks w
 - **Scheduled Deployments:** Schedule deployments to occur at specific times.
 - **Review Stacks:** Review and approve stack changes before deployment.
 
-![Deployments UI](deploy.png)
+For more information on how to enable it in your self-hosted instance read the [self-hosted Pulumi Deployments documentation](/docs/pulumi-cloud/self-hosted/components/api/#deployments).
 
 ## Wrapping It Up
 
