@@ -34,8 +34,6 @@ Python was one of the first languages we ever supported in Pulumi, and has grown
 
 The result has been strong and steady growth of Python Pulumi usage.  This has been especially pronounced among some of the largest and most advanced Pulumi users, who are pushing the boundaries on managing complexity at scale using the best of the Python ecosystem.
 
-<p align="center"><img width="500" src="growth2.png" alt="Pulumi + Python Growth"/></p>
-
 ## New Features for Pulumi Python Users
 
 ### Native Support for Poetry
