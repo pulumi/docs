@@ -20,7 +20,7 @@ Python in particular has been one of the most popular languages used across the 
 
 * __More Pythonic resource APIs__: A new dictionary-based API design which embraces a simple and familiar Pythonic API design along with access to great type checking and tooling building on recent enhancements to `TypedDict` support in the Python programming language and tools.
 * __Native support for Poetry__: Built-in support for working with Poetry in place of `pip`, making it easy to integrate Pulumi into project and repos leveraging the popular Poetry package management toolchain for Python.
-* __Type checker integration__: New ability to run your favorite Python type checkers directly within the Pulumi deployment process 
+* __Type checker integration__: New ability to run your favorite Python type checkers directly within the Pulumi deployment process.
 
 <!--more-->
 
