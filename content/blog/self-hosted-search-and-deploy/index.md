@@ -1,5 +1,5 @@
 ---
-title: "Announcing Two New Features for Self-Hosted Pulumi Cloud: Resource Search and Pulumi Deployments"
+title: "Self-Hosted Pulumi Cloud Support for Resource Search and Pulumi Deployments"
 allow_long_title: true
 date: 2024-07-02T09:08:31-07:00
 draft: false
