@@ -39,7 +39,7 @@ Self-hosting is only available with **Pulumi Business Critical**. If you would l
 
 ### April
 
-* [Enable OIDC Trust Relationships](http://localhost:1313/blog/oidc-trust-relationships/)
+* [Enable OIDC Trust Relationships](/blog/oidc-trust-relationships/)
 * Enable otel metrics
 * Expose metrics endpoint
 * Add url query param for graph view

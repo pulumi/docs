@@ -271,6 +271,7 @@ function getDefaultExcludedKeywords() {
         "https://www.digitalnewsasia.com/business/idc-reveals-its-top-predictions-cloud-2023-and-beyond",
         "https://www.gartner.com/smarterwithgartner/welcome-to-the-api-economy",
         "https://code.visualstudio.com/",
+        "https://www.honeycomb.io/",
     ];
 }
 
