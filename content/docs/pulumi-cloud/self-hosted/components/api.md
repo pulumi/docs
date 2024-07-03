@@ -436,7 +436,7 @@ scrape_configs:
       - targets: ["api.pulumi.com"]
 ```
 
-## Deployments
+## Pulumi Deployments
 
 In order to enable [Deployments](/docs/pulumi-cloud/deployments), the following must be configured:
 
