@@ -54,6 +54,8 @@ To enable live type checking in Visual Studio Code set the `typeCheckingMode` se
 
 [Extensions](https://plugins.jetbrains.com/plugin/24146-pyright-language-server) [for other editors](https://github.com/emacs-lsp/lsp-pyright) [typically have](https://github.com/fannheyward/coc-pyright) [this already](https://zed.dev/docs/languages/python) [enabled](https://github.com/sublimelsp/LSP-pyright).
 
+We have updated the [NGINX on AWS ECS Fargate example](https://github.com/pulumi/examples/blob/master/aws-py-fargate/Pulumi.yaml) to use builtin typechecking and Poetry to manage dependencies. Check it out to see how you can use these new features in your Pulumi projects.
+
 ## Pythonic input types
 
 Pulumi has always had a focus on making infrastructure as code feel like idiomatic code and the latest release of Pulumi makes it easier to work with input types in Python.
