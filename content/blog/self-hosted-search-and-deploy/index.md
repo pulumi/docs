@@ -13,6 +13,8 @@ tags:
 
 We are excited to introduce two powerful new features for our Self-Hosted Pulumi Cloud offering: Resource Search and Pulumi Deployments. These two additions are the most significant features added to Pulumi Cloud in the last year and we are thrilled to bring them to our self-hosted customers. Resource Search and Pulumi Deployments both improve the way you can manage and deploy your cloud infrastructure, providing greater visibility, control, and automation.
 
+Alongside these features, we are also introducing today a [Self-Hosted Changelog](/docs/pulumi-cloud/self-hosted/changelog), a log of all relevant changes that self-hosted customers should be aware of.
+
 ## Self-Hosted Pulumi Cloud Overview
 
 Self-Hosting is available in the Pulumi Business Critical edition of Pulumi Cloud, you can try it out with [our 30 day trial](/product/self-hosted). This allows organizations to run the Pulumi Cloud within their own environments, ensuring data control, compliance, and customizability. While Pulumi manages all aspects of its SaaS offering (Pulumi Cloud), Self-Hosted Pulumi Cloud requires customers to handle data backups, service maintenance, and updates.
@@ -53,6 +55,10 @@ Pulumi Deployments is engineered to streamline infrastructure management tasks w
 - **Review Stacks:** Review and approve stack changes before deployment.
 
 Get more details on these features in our [Pulumi Deployments documentation](/docs/pulumi-cloud/deployments). For more information on how to enable it in your self-hosted instance read the [self-hosted Pulumi Deployments documentation](/docs/pulumi-cloud/self-hosted/components/api/#deployments).
+
+## Self-Hosted Changelog
+
+The Self-Hosted Changelog is a newly introduced page that provides a comprehensive log of updates and changes specifically relevant to our self-hosted customers. This changelog ensures customers are fully informed about the latest improvements, bug fixes, and new features in the codebase and associated infrastructure. By keeping up-to-date of these updates, self-hosted customers can better manage their systems, anticipate and resolve potential issues, and take advantage of new functionalities as soon as they become available. Some examples of the types of recent updates on the changelog are adding support for expiration dates on access tokens or adding the ability to enable OTel metrics. This transparency not only helps in maintaining an optimal system but also empowers customers with the knowledge needed to leverage the full potential of our platform.
 
 ## Wrapping It Up
 
