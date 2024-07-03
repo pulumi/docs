@@ -60,4 +60,4 @@ The addition of Resource Search and Pulumi Deployments to our Self-Hosted Pulumi
 
 As of today, all Pulumi Cloud features that have been made generally available are supported in the self-hosted version. We intend to continue to have parity with Pulumi Cloud features in the self-hosted version within 6 months of making the feature generally available.
 
-Try these new features today and experience the enhanced capabilities of the Self-Hosted Pulumi Cloud. For more information or to start a 30-day trial, contact us or visit our [self-hosting guide](https://www.pulumi.com/docs/guides/self-hosting/).
+Try these new features today and experience the enhanced capabilities of the Self-Hosted Pulumi Cloud. For more information or to start a 30-day trial, contact us or visit our [self-hosting documentation](/docs/pulumi-cloud/self-hosted).
