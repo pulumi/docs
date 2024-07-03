@@ -32,8 +32,8 @@ Pulumi Resource Search offers multi-cloud search and analytics across every reso
 - **Resource Search API:** Integrate search functionality into your internal systems using the Search API.
 - **Search from the CLI:** Issue resource search queries from within the terminal without needing to change contexts.
 - **Data Export:** Export resource data for further analysis in your data warehouse.
-- 
-For more information on how to enable it in your self-hosted instance read the [self-hosted Resource Search documentation](/docs/pulumi-cloud/self-hosted/components/api/#search).
+
+Get more details on these features in our [Resource Search documentation](/docs/pulumi-cloud/insights/#pulumi-insights). For more information on how to enable it in your self-hosted instance read the [self-hosted Resource Search documentation](/docs/pulumi-cloud/self-hosted/components/search).
 
 ## Pulumi Deployments: Automate and Manage Your Infrastructure with Ease
 
@@ -52,7 +52,7 @@ Pulumi Deployments is engineered to streamline infrastructure management tasks w
 - **Scheduled Deployments:** Schedule deployments to occur at specific times.
 - **Review Stacks:** Review and approve stack changes before deployment.
 
-For more information on how to enable it in your self-hosted instance read the [self-hosted Pulumi Deployments documentation](/docs/pulumi-cloud/self-hosted/components/api/#deployments).
+Get more details on these features in our [Pulumi Deployments documentation](/docs/pulumi-cloud/deployments). For more information on how to enable it in your self-hosted instance read the [self-hosted Pulumi Deployments documentation](/docs/pulumi-cloud/self-hosted/components/api/#deployments).
 
 ## Wrapping It Up
 
