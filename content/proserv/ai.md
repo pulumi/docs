@@ -1,17 +1,17 @@
 ---
-title: "Pulumi Professional Services"
+title: "Professional Services for AI"
 layout: ai
 
-meta_title: "Pulumi Professional Services - Accelerate Your Cloud Journey"
-meta_desc: "Explore Pulumi Professional Services for expert guidance on cloud infrastructure, automation, and best practices to streamline your cloud journey."
+meta_title: "Pulumi Professional Services - Accelerate Your AI Journey"
+meta_desc: "Explore Pulumi Professional Services for expert guidance on cloud infrastructure, automation, and best practices to streamline your AI journey."
 
 overview:
-    title: "Empowering Your Cloud Transformation"
+    title: "Empowering Your AI Transformation"
     description: |
-        At Pulumi Professional Services, we partner with you to accelerate your cloud transformation journey. Leveraging our deep expertise in infrastructure as code (IaC), we provide tailored solutions that enhance your cloud and platform engineering efforts, ensuring a seamless, secure, and scalable cloud environment.
+        At Pulumi Professional Services, we partner with you to accelerate building and scaling your AI initiatives in the cloud. Leveraging our deep expertise in infrastructure as code (IaC), we provide tailored solutions that allow you to seamlessly and securely productionize your AI workloads across any cloud environment.
 
 challenges:
-    title: "Challenges in Cloud and Platform Engineering"
+    title: "Challenges in Production AI Workloads"
     items:
         - title: "Complex Cloud Environments"
           icon:
@@ -28,7 +28,7 @@ challenges:
 
 solutions_header:
     title: "Tailored Solutions for Cloud Success"
-    description: "Our suite of solutions addresses the unique challenges of cloud and platform engineering, ensuring your infrastructure is efficient, secure, and ready for the future."
+    description: "Our suite of solutions addresses the unique challenges of AI engineering, ensuring your infrastructure is efficient, secure, and ready for the future."
 
 customer_logos:
   title: Organizations managing AI infrastructure with Pulumi
@@ -51,6 +51,6 @@ customer_logos:
 
 form:
     title: "Talk to a Cloud Architect"
-    description: "Ready to transform your cloud infrastructure? Speak with a Pulumi architect today to explore how our professional services can accelerate your cloud journey."
+    description: "Ready to transform your cloud infrastructure? Speak with a Pulumi architect today to explore how our professional services can accelerate your AI journey."
     id: 2c0ddce4-175a-4278-8ded-ca67d615bd59
 ---
