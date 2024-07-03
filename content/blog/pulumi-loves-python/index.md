@@ -19,7 +19,7 @@ One of our most important goals at Pulumi is to bring the very best of software 
 Python in particular has been one of the most popular languages used across the Pulumi platform, and the fastest growing over the last 2 years. Over the last few months, we've worked on a set of improvements that allow Pulumi users to take advantage of the latest and greatest tooling and features from the Python ecosystem.  The key new features include:
 
 * __More Pythonic resource APIs__: A new dictionary-based API design which embraces a simple and familiar Pythonic API design along with access to great type checking and tooling building on recent enhancements to `TypedDict` support in the Python programming language and tools.
-* __Native support for Poetry__: Built-in support for working with Poetry in place of `pip`, making it easy to integrate Pulumi into project and repos leveraging the popular Poetry package management toolchain for Python.
+* __Native support for Poetry__: Built-in support for working with Poetry in place of `pip`, making it easy to integrate Pulumi into projects and repositories leveraging the popular Poetry package management toolchain for Python.
 * __Type checker integration__: New ability to run your favorite Python type checkers directly within the Pulumi deployment process.
 
 <!--more-->
@@ -124,7 +124,7 @@ deployment = Deployment(
 )
 ```
 
-The new Pythonic input types are available in the latest release of the Pulumi SDKs for [Kubernetes](https://www.pulumi.com/registry/packages/kubernetes/) and [AWS](https://www.pulumi.com/registry/packages/aws/), with more providers SDKs to follow soon.
+The new Pythonic input types are available in the latest release of the Pulumi SDKs for [Kubernetes](https://www.pulumi.com/registry/packages/kubernetes/) and [AWS](https://www.pulumi.com/registry/packages/aws/), with more provider SDKs to follow soon.
 
 {{% notes type="info" %}}
 Due to a performance issue in MyPy, type checking of TypedDict-based inputs is currently disabled when using MyPy as a type checker.  We are working on helping resolve [this issue](https://github.com/python/mypy/issues/17231). In the meantime, we recommend using Pyright as a type checker to get the most complete type checking possible for Dict-based Pulumi Python programs.
