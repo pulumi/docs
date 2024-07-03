@@ -16,6 +16,11 @@ Self-hosting is only available with **Pulumi Business Critical**. If you would l
 
 ## 2024
 
+### July
+
+* [Support for Self-Hosted Resource Search and Pulumi Deployments](https://www.pulumi.com/blog/self-hosted-search-and-deploy/)
+* [Support for short lived access tokens](https://www.pulumi.com/blog/short-lived-access-tokens/)
+
 ### June
 
 * [scim] Add logs when filtering invalid members
