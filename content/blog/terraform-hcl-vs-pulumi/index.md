@@ -1,8 +1,8 @@
 ---
-title: "Pulumi vs Terraform HCL: Understanding the Language Differences in Infrastructure as Code"
+title: "Pulumi vs HCL: Understanding the Language Differences in Infrastructure as Code"
 allow_long_title: true
 date: 2024-07-09
-meta_desc: "Compare Pulumi and Terraform HCL for infrastructure as code. Discover how general-purpose languages boost productivity and collaboration cloud management."
+meta_desc: "Compare Pulumi and HCL for infrastructure as code. Discover how general-purpose languages boost productivity and collaboration cloud management."
 meta_image: meta.png
 authors:
 - engin-diri
