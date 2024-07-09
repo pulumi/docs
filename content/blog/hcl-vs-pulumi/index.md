@@ -33,7 +33,7 @@ We’ve worked with 1,000s of companies and 100,000+ developers and infrastructu
 as code using Pulumi and modern languages, and we see several significant recurring themes as they migrate away from
 Terraform and HCL.
 
-### Tapping into Millions of Developers
+### Tapping Into Millions of Developers
 
 Pulumi allows developers to use widely-adopted general-purpose languages for infrastructure as code. This approach taps
 into vast existing developer communities, with JavaScript boasting over 17 million developers, Python 15 million, and Go
@@ -43,7 +43,7 @@ thousand developers who appreciate its specialized syntax for infrastructure des
 
 ![chart-languages](chart-languages.png)
 
-### Pulumi leverages rich ecosystems of general-purpose languages
+### Pulumi Leverages Rich Ecosystems of General-Purpose Languages
 
 Pulumi harnesses the extensive ecosystems surrounding popular programming languages for infrastructure as code. While
 domain-specific languages like HCL have their strengths, Pulumi's approach offers developers access to:
@@ -51,7 +51,7 @@ domain-specific languages like HCL have their strengths, Pulumi's approach offer
 1. Comprehensive IDE support, including features like autocompletion, syntax highlighting, and real-time error
    detection, which may be more advanced than those available for specialized IaC languages
 
-2. wide array of established linting tools to enforce coding standards and catch potential issues early in the
+2. Wide array of established linting tools to enforce coding standards and catch potential issues early in the
    development process
 
 3. Robust testing frameworks that allow for thorough verification and validation of infrastructure configurations, often
@@ -65,7 +65,7 @@ quality. Developers can leverage their existing programming expertise and the va
 communities when working on infrastructure projects, which may require less additional learning compared to adopting a
 specialized syntax
 
-### Pulumi embraces open-source languages and principles
+### Pulumi Embraces Open-Source Languages and Principles
 
 Languages like Python, JavaScript, and Go are developed and maintained by diverse global communities, ensuring
 transparency and collective innovation. These languages have remained open-source throughout their history, with their
@@ -91,7 +91,7 @@ Here's a list of languages Pulumi commonly uses, along with their licenses:
 | TypeScript   | Apache 2.0                                |
 | YAML         | Creative Commons Attribution              |
 
-### Developers Prefer Pulumi for Infrastructure as Code
+### Developers Prefer Pulumi for Infrastructure As Code
 
 While HCL serves its purpose in infrastructure as code, many developers find Pulumi's approach more appealing. Pulumi
 allows engineers to use familiar programming languages, making it easier to leverage existing skills and tools.
@@ -102,7 +102,7 @@ developers to create custom solutions with ease, tapping into the full power of 
 Pulumi's open architecture provides developers with the freedom to integrate various tools and services, fostering a
 diverse and adaptable ecosystem for infrastructure management.
 
-### Enhancing Team Collaboration with Pulumi
+### Enhancing Team Collaboration With Pulumi
 
 Pulumi offers several advantages for fostering better collaboration across teams compared to HCL. While HCL is a
 powerful tool primarily utilized by operations and DevOps teams, its specialized nature for infrastructure tasks might
@@ -116,7 +116,7 @@ teamwork.
 This inclusive approach not only accelerates progress but also democratizes access to infrastructure management,
 avoiding bottlenecks and enhancing overall team efficiency.
 
-### Reducing Redundancy: The Benefits of Pulumi Over HCL's Copy-Paste Challenges
+### Reducing Redundancy: The Benefits of Pulumi Over HCL’s Copy-Paste Challenges
 
 ![spiderman meme](meme.png)
 
@@ -131,7 +131,7 @@ bugs.
 In contrast, Pulumi reduces the need for such redundancies by enabling more dynamic code reuse and better resource
 management, streamlining updates and fostering more robust and error-resistant infrastructure development.
 
-### Pulumi's Advantage Over Custom Tool Requirements
+### Pulumi’s Advantage Over Custom Tool Requirements
 
 As projects expand, managing HCL configurations becomes increasingly complex, often necessitating custom tools for
 efficient large-scale management. While HCL is adept at defining infrastructure as code, it lacks built-in features to
@@ -171,7 +171,7 @@ familiar with, greatly reducing the learning curve and enhancing productivity. T
 integrate seamlessly into existing projects and workflows, making it a more sustainable and scalable choice for modern
 infrastructure needs.
 
-## HCL in the Wild: Practical Comparisons with Pulumi
+## HCL in the Wild: Practical Comparisons With Pulumi
 
 In this section, we'll explore real-life examples to compare and contrast HCL with Pulumi programs. By examining how
 each approach handles similar infrastructure tasks, you'll quickly appreciate the advantages of leveraging a familiar
@@ -180,7 +180,7 @@ programming language through Pulumi.
 This comparison aims to highlight the practical benefits and increased efficiency that Pulumi offers over traditional
 HCL configurations.
 
-### `for_each` loop with conditional expression
+### `for_each` Loop With Conditional Expression
 
 First, let's look at an HCL example featuring a for_each loop with a conditional statement. At first glance, it may seem
 straightforward, but we can immediately see the unique way a loop must be defined in HCL.
@@ -246,7 +246,7 @@ approach is less error-prone, faster, and easier to debug.
 
 However, implementing a `for_each` in HCL can become even more complicated.
 
-### `for_each` loop with multi-level nested dynamic blocks
+### `for_each` Loop With Multi-Level Nested Dynamic Blocks
 
 To give you an idea of how HCL handles cascading nested dynamic providers, consider this: dynamic providers are intended
 to dynamically construct repeatable nested blocks. However, this complexity can make the code difficult to read and
@@ -376,7 +376,7 @@ In Pulumi, using TypeScript as an example, we can easily create new objects of a
 values from our configuration. If we need to add conditions, we can include our usual if statements. This approach
 greatly simplifies the code, making it easy to read and maintain for any future changes.
 
-### Execute code programing code with `null_resource`, `local_file` and `provisioners`
+### Execute Code Programing Code With  `null_resource`, `local_file` and `provisioners`
 
 There are sometimes situations where there is a strong need to execute a script written in a programming language. Most
 prominent use case is packaging up the source code for an AWS lambda function. Let's have a look into an example from
@@ -486,7 +486,7 @@ resource_group = azure_native.resources.ResourceGroup(
 pulumi.export('resourceGroupName', resource_group.name)
 ```
 
-### If Statements Constructed with `count`
+### If Statements Constructed With `count`
 
 ```hcl
 variable "mode" {
