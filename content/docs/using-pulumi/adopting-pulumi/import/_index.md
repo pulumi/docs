@@ -701,4 +701,3 @@ Diagnostics:
 {{% notes type="info" %}}
 Because of [auto-naming](/docs/concepts/resources/#autonaming), it's easy to get into a situation where names don't match. For example, in the earlier example, if you'd left off the security group's `name`, `my-sg-62a569b`, Pulumi would auto-name the resource by default, leading to an error: `imported resource sg-04aeda9a214730248's property 'name' does not match the existing value`. To fix this problem, make sure to specify the names of all resources explicitly, using [Pulumi configuration](/docs/concepts/config/) where necessary to handle naming conflicts across multiple stacks.
 {{% /notes %}}
-
