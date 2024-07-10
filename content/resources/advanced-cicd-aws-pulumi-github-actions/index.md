@@ -65,6 +65,9 @@ main:
         - name: Diana Esteves
           role: Solutions Architect, Pulumi
           photo: /images/team/diana-esteves.jpg
+        - name: Ben De St Paer-Gotch
+          role: Staff Product Manager
+          photo: /images/people/ben-de-st-paer-gotch.jpg
 
     # case-sensitive
     tags:
