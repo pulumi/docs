@@ -8,6 +8,16 @@ layout: community-engineering/single
 aliases:
   - /engin
 talks:
+- event: "The Platformers"
+  title: "The Power of the KEBAP Stack"
+  url: "https://www.linkedin.com/posts/platformers-community_engin-diri-customer-experience-architect-activity-7212732472592142336-Dd_R"
+  date: 2024-07-10T18:00:00.000-07:00
+  slides: null  
+- event: "KCD Munich"
+  title: "Pulumi ❤️ Kubernetes: Different Ways to Deploy Your Workload to Kubernetes"
+  url: "https://www.kcdmunich.de"
+  date: 2024-07-02T18:00:00.000-07:00
+  slides: null
 - event: "Meetup MTG:Bordeaux #3"
   title: "Pulumi ❤️ Azure: Getting Started with Modern Infrastructure as Code"
   url: https://www.meetup.com/mtg-bordeaux/events/300232411/
