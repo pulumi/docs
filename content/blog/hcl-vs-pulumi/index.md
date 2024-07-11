@@ -215,7 +215,11 @@ resource "azurerm_storage_account" "my_storage" {
 }
 ```
 
-Now let’s look at how we can approach the same example using Pulumi and TypeScript.
+Now let’s look at how we can approach the same example using Pulumi.
+
+{{< chooser language "typescript,python,go,csharp,java" />}}
+
+{{% choosable language typescript %}}
 
 ```typescript
 const storageAccountNames: string[] = [
@@ -238,6 +242,170 @@ storageAccountNames.filter((name: string) => name !== "goofy").forEach((name: st
     });
 });
 ```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+```python
+import pulumi
+import pulumi_azure as azure
+
+storage_account_names = ["mickey", "donald", "goofy"]
+
+example = azure.core.ResourceGroup(
+    "example",
+    name="storage-rg",
+    location="West Europe"
+)
+
+for name in filter(lambda n: n != "goofy", storage_account_names):
+    azure.storage.Account(
+        f"my_storage-{name}",
+        name=name,
+        resource_group_name=example.name,
+        location=example.location,
+        account_tier="Standard",
+        account_replication_type="GRS"
+    ) 
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v5/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v5/go/azure/storage"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		storageAccountNames := []string{"mickey", "donald", "goofy"}
+
+		example, err := core.NewResourceGroup(ctx, "example", &core.ResourceGroupArgs{
+			Name:     pulumi.String("storage-rg"),
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+
+		for _, name := range storageAccountNames {
+			if name != "goofy" {
+				_, err := storage.NewAccount(ctx, "my_storage-"+name, &storage.AccountArgs{
+					Name:                   pulumi.String(name),
+					ResourceGroupName:      example.Name,
+					Location:               example.Location,
+					AccountTier:            pulumi.String("Standard"),
+					AccountReplicationType: pulumi.String("GRS"),
+				})
+				if err != nil {
+					return err
+				}
+			}
+		}
+
+		return nil
+	})
+}
+```
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+```csharp
+using Pulumi;
+using Pulumi.Azure.Core;
+using Pulumi.Azure.Storage;
+using System.Collections.Generic;
+
+class Program
+{
+    static Task<int> Main() => Deployment.RunAsync<MyStack>();
+}
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var storageAccountNames = new List<string> { "mickey", "donald", "goofy" };
+
+        var resourceGroup = new ResourceGroup("example", new ResourceGroupArgs
+        {
+            Name = "storage-rg",
+            Location = "West Europe",
+        });
+
+        foreach (var name in storageAccountNames)
+        {
+            if (name != "goofy")
+            {
+                var storageAccount = new Account($"my_storage-{name}", new AccountArgs
+                {
+                    Name = name,
+                    ResourceGroupName = resourceGroup.Name,
+                    Location = resourceGroup.Location,
+                    AccountTier = "Standard",
+                    AccountReplicationType = "GRS",
+                });
+            }
+        }
+    }
+}
+```
+
+{{% /choosable %}}
+
+{{% choosable language java %}}
+
+```java
+import com.pulumi.Context;
+import com.pulumi.Pulumi;
+import com.pulumi.azurenative.core.ResourceGroup;
+import com.pulumi.azurenative.core.ResourceGroupArgs;
+import com.pulumi.azurenative.storage.Account;
+import com.pulumi.azurenative.storage.AccountArgs;
+
+import java.util.List;
+
+public class Main {
+    public static void main(String[] args) {
+        Pulumi.run(Main::stack);
+    }
+
+    public static void stack(Context ctx) {
+        var storageAccountNames = List.of("mickey", "donald", "goofy");
+
+        var resourceGroup = new ResourceGroup("example", ResourceGroupArgs.builder()
+                .name("storage-rg")
+                .location("West Europe")
+                .build());
+
+        for (var name : storageAccountNames) {
+            if (!name.equals("goofy")) {
+                var storageAccount = new Account("my_storage-" + name, AccountArgs.builder()
+                        .name(name)
+                        .resourceGroupName(resourceGroup.name())
+                        .location(resourceGroup.location())
+                        .kind("StorageV2")
+                        .sku(AccountSkuArgs.builder()
+                                .name("Standard_GRS")
+                                .tier("Standard")
+                                .build())
+                        .build());
+            }
+        }
+    }
+}
+```
+
+{{% /choosable %}}
 
 We can see that we leverage the full potential that the generic programming language offers, using `filter` to
 streamline
@@ -329,7 +497,11 @@ using dynamic blocks sparingly to maintain readability and ease of maintenance, 
 abstraction with the help of a module. Overuse of these blocks, especially when defining a resource’s arguments and
 nested blocks directly from input variables, might not provide a useful abstraction.
 
-Have look how this would look like when using Pulumi and one of its generic programming languages:
+Have look how this would look like when using Pulumi:
+
+{{< chooser language "typescript,python,go,csharp,java" />}}
+
+{{% choosable language typescript %}}
 
 ```typescript
 const config = new pulumi.Config();
@@ -371,6 +543,263 @@ let defaultNodePool: azure.types.input.containerservice.KubernetesClusterDefault
     kubeletConfig: kubeletConfigs,
 };
 ```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+```python
+import pulumi
+import pulumi_azure as azure
+
+config = pulumi.Config()
+enable_auto_scaling = config.get_bool("enableAutoScaling") or False
+
+agents_pool_kubelet_configs = config.get_object("agentsPoolKubeletConfigs") or {
+    "allowedUnsafeSysctls": [
+        "kernel.*",
+        "net.*",
+    ],
+    "containerLogMaxLine": 10,
+    "containerLogMaxSizeMb": 10,
+    "cpuCfsQuotaEnabled": True,
+    "cpuCfsQuotaPeriod": "100ms",
+    "cpuManagerPolicy": "none",
+    "imageGcHighThreshold": 85,
+    "imageGcLowThreshold": 65,
+    "podMaxPid": 100,
+    "topologyManagerPolicy": "none",
+}
+
+example = azure.core.ResourceGroup("example",
+                                   name="storage-rg",
+                                   location="West Europe")
+
+kubelet_configs = azure.containerservice.KubernetesClusterDefaultNodePoolKubeletConfigArgs(
+    **agents_pool_kubelet_configs
+)
+
+default_node_pool = azure.containerservice.KubernetesClusterDefaultNodePoolArgs(
+    name="default",
+    vm_size="Standard_DS2_v2",
+    zones=["1", "2", "3"],
+    enable_auto_scaling=enable_auto_scaling,
+    min_count=1,
+    max_count=3,
+    kubelet_config=kubelet_configs,
+)
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v5/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v5/go/azure/containerservice"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		enableAutoScaling := false
+
+		agentsPoolKubeletConfigs := map[string]interface{}{
+			"allowedUnsafeSysctls": []string{
+				"kernel.*",
+				"net.*",
+			},
+			"containerLogMaxLine":   10,
+			"containerLogMaxSizeMb": 10,
+			"cpuCfsQuotaEnabled":    true,
+			"cpuCfsQuotaPeriod":     "100ms",
+			"cpuManagerPolicy":      "none",
+			"imageGcHighThreshold":  85,
+			"imageGcLowThreshold":   65,
+			"podMaxPid":             100,
+			"topologyManagerPolicy": "none",
+		}
+
+		example, err := core.NewResourceGroup(ctx, "example", &core.ResourceGroupArgs{
+			Name:     pulumi.String("storage-rg"),
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+
+		kubeletConfigs := &containerservice.KubernetesClusterDefaultNodePoolKubeletConfigArgs{
+			AllowedUnsafeSysctls: pulumi.StringArray{
+				pulumi.String("kernel.*"),
+				pulumi.String("net.*"),
+			},
+			ContainerLogMaxLine:   pulumi.Int(agentsPoolKubeletConfigs["containerLogMaxLine"].(int)),
+			ContainerLogMaxSizeMb: pulumi.Int(agentsPoolKubeletConfigs["containerLogMaxSizeMb"].(int)),
+			CpuCfsQuotaEnabled:    pulumi.Bool(agentsPoolKubeletConfigs["cpuCfsQuotaEnabled"].(bool)),
+			CpuCfsQuotaPeriod:     pulumi.String(agentsPoolKubeletConfigs["cpuCfsQuotaPeriod"].(string)),
+			CpuManagerPolicy:      pulumi.String(agentsPoolKubeletConfigs["cpuManagerPolicy"].(string)),
+			ImageGcHighThreshold:  pulumi.Int(agentsPoolKubeletConfigs["imageGcHighThreshold"].(int)),
+			ImageGcLowThreshold:   pulumi.Int(agentsPoolKubeletConfigs["imageGcLowThreshold"].(int)),
+			PodMaxPid:             pulumi.Int(agentsPoolKubeletConfigs["podMaxPid"].(int)),
+			TopologyManagerPolicy: pulumi.String(agentsPoolKubeletConfigs["topologyManagerPolicy"].(string)),
+		}
+
+		_, err = containerservice.NewKubernetesClusterDefaultNodePool(ctx, "defaultNodePool", &containerservice.KubernetesClusterDefaultNodePoolArgs{
+			Name:              pulumi.String("default"),
+			VmSize:            pulumi.String("Standard_DS2_v2"),
+			Zones:             pulumi.StringArray{pulumi.String("1"), pulumi.String("2"), pulumi.String("3")},
+			EnableAutoScaling: pulumi.Bool(enableAutoScaling),
+			MinCount:          pulumi.Int(1),
+			MaxCount:          pulumi.Int(3),
+			KubeletConfig:     kubeletConfigs,
+		}, pulumi.Parent(example))
+		if err != nil {
+			return err
+		}
+
+		return nil
+	})
+}
+```
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+```csharp
+using Pulumi;
+using Pulumi.AzureNative.Resources;
+using Pulumi.AzureNative.ContainerService;
+using System.Collections.Generic;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var enableAutoScaling = false;
+
+        var agentsPoolKubeletConfigs = new Dictionary<string, object>
+        {
+            { "allowedUnsafeSysctls", new string[] { "kernel.*", "net.*" } },
+            { "containerLogMaxLine", 10 },
+            { "containerLogMaxSizeMb", 10 },
+            { "cpuCfsQuotaEnabled", true },
+            { "cpuCfsQuotaPeriod", "100ms" },
+            { "cpuManagerPolicy", "none" },
+            { "imageGcHighThreshold", 85 },
+            { "imageGcLowThreshold", 65 },
+            { "podMaxPid", 100 },
+            { "topologyManagerPolicy", "none" }
+        };
+
+        var resourceGroup = new ResourceGroup("example", new ResourceGroupArgs
+        {
+            Name = "storage-rg",
+            Location = "West Europe"
+        });
+
+        var kubeletConfigArgs = new KubernetesClusterDefaultNodePoolKubeletConfigArgs
+        {
+            AllowedUnsafeSysctls = agentsPoolKubeletConfigs["allowedUnsafeSysctls"] as string[],
+            ContainerLogMaxLine = agentsPoolKubeletConfigs["containerLogMaxLine"] as int?,
+            ContainerLogMaxSizeMb = agentsPoolKubeletConfigs["containerLogMaxSizeMb"] as int?,
+            CpuCfsQuotaEnabled = agentsPoolKubeletConfigs["cpuCfsQuotaEnabled"] as bool?,
+            CpuCfsQuotaPeriod = agentsPoolKubeletConfigs["cpuCfsQuotaPeriod"] as string,
+            CpuManagerPolicy = agentsPoolKubeletConfigs["cpuManagerPolicy"] as string,
+            ImageGcHighThreshold = agentsPoolKubeletConfigs["imageGcHighThreshold"] as int?,
+            ImageGcLowThreshold = agentsPoolKubeletConfigs["imageGcLowThreshold"] as int?,
+            PodMaxPid = agentsPoolKubeletConfigs["podMaxPid"] as int?,
+            TopologyManagerPolicy = agentsPoolKubeletConfigs["topologyManagerPolicy"] as string
+        };
+
+        var defaultNodePool = new KubernetesClusterDefaultNodePool("defaultNodePool", new KubernetesClusterDefaultNodePoolArgs
+        {
+            Name = "default",
+            VmSize = "Standard_DS2_v2",
+            Zones = new[] { "1", "2", "3" },
+            EnableAutoScaling = enableAutoScaling,
+            MinCount = 1,
+            MaxCount = 3,
+            KubeletConfig = kubeletConfigArgs
+        }, new CustomResourceOptions { Parent = resourceGroup });
+    }
+}
+
+class Program
+{
+    static Task<int> Main() => Deployment.RunAsync<MyStack>();
+}
+```
+
+{{% /choosable %}}
+
+{{% choosable language java %}}
+
+```java
+import com.pulumi.Context;
+import com.pulumi.Pulumi;
+import com.pulumi.azure.core.ResourceGroup;
+import com.pulumi.azure.core.inputs.ResourceGroupArgs;
+import com.pulumi.azure.containerservice.KubernetesClusterDefaultNodePool;
+import com.pulumi.azure.containerservice.inputs.KubernetesClusterDefaultNodePoolArgs;
+import com.pulumi.azure.containerservice.inputs.KubernetesClusterDefaultNodePoolKubeletConfigArgs;
+
+import java.util.Map;
+import java.util.HashMap;
+
+public class MyStack {
+    public static void main(String[] args) {
+        Pulumi.run(ctx -> {
+            boolean enableAutoScaling = false;
+
+            Map<String, Object> agentsPoolKubeletConfigs = new HashMap<>();
+            agentsPoolKubeletConfigs.put("allowedUnsafeSysctls", new String[]{"kernel.*", "net.*"});
+            agentsPoolKubeletConfigs.put("containerLogMaxLine", 10);
+            agentsPoolKubeletConfigs.put("containerLogMaxSizeMb", 10);
+            agentsPoolKubeletConfigs.put("cpuCfsQuotaEnabled", true);
+            agentsPoolKubeletConfigs.put("cpuCfsQuotaPeriod", "100ms");
+            agentsPoolKubeletConfigs.put("cpuManagerPolicy", "none");
+            agentsPoolKubeletConfigs.put("imageGcHighThreshold", 85);
+            agentsPoolKubeletConfigs.put("imageGcLowThreshold", 65);
+            agentsPoolKubeletConfigs.put("podMaxPid", 100);
+            agentsPoolKubeletConfigs.put("topologyManagerPolicy", "none");
+
+            var resourceGroup = new ResourceGroup("example", ResourceGroupArgs.builder()
+                    .name("storage-rg")
+                    .location("West Europe")
+                    .build());
+
+            var kubeletConfigArgs = KubernetesClusterDefaultNodePoolKubeletConfigArgs.builder()
+                    .allowedUnsafeSysctls((String[]) agentsPoolKubeletConfigs.get("allowedUnsafeSysctls"))
+                    .containerLogMaxLine((Integer) agentsPoolKubeletConfigs.get("containerLogMaxLine"))
+                    .containerLogMaxSizeMb((Integer) agentsPoolKubeletConfigs.get("containerLogMaxSizeMb"))
+                    .cpuCfsQuotaEnabled((Boolean) agentsPoolKubeletConfigs.get("cpuCfsQuotaEnabled"))
+                    .cpuCfsQuotaPeriod((String) agentsPoolKubeletConfigs.get("cpuCfsQuotaPeriod"))
+                    .cpuManagerPolicy((String) agentsPoolKubeletConfigs.get("cpuManagerPolicy"))
+                    .imageGcHighThreshold((Integer) agentsPoolKubeletConfigs.get("imageGcHighThreshold"))
+                    .imageGcLowThreshold((Integer) agentsPoolKubeletConfigs.get("imageGcLowThreshold"))
+                    .podMaxPid((Integer) agentsPoolKubeletConfigs.get("podMaxPid"))
+                    .topologyManagerPolicy((String) agentsPoolKubeletConfigs.get("topologyManagerPolicy"))
+                    .build();
+
+            var defaultNodePool = new KubernetesClusterDefaultNodePool("defaultNodePool", KubernetesClusterDefaultNodePoolArgs.builder()
+                    .name("default")
+                    .vmSize("Standard_DS2_v2")
+                    .zones(new String[]{"1", "2", "3"})
+                    .enableAutoScaling(enableAutoScaling)
+                    .minCount(1)
+                    .maxCount(3)
+                    .kubeletConfig(kubeletConfigArgs)
+                    .build(), new CustomResourceOptions().parent(resourceGroup));
+        });
+    }
+}
+```
+
+{{% /choosable %}}
 
 In Pulumi, using TypeScript as an example, we can easily create new objects of a specific type and populate them with
 values from our configuration. If we need to add conditions, we can include our usual if statements. This approach
@@ -454,12 +883,12 @@ resource "null_resource" "archive" {
 
 We see a confusing mix of different providers (`local` and `null_resource`) and even the use of `provisioner` here. This
 setup is overly complex to read and maintain, leading to a split-brain situation where some logic is in the code and the
-rest in HCL. It also becomes very challenging to debug, especially if the team lacks experience with the Python code.
+rest in HCL. It also becomes very challenging to debug, especially if the team lacks experience with the `Python` code.
 
 In Pulumi, simplicity is key: simply write your Python code and seamlessly integrate it with Pulumi SDK calls. No
-additional steps are necessary, and there's no need to run the Python binary separately to execute the file. It's all
+additional steps are necessary, and there's no need to run the `Python` binary separately to execute the file. It's all
 about streamlining the process to make your life easier. For instance, consider this example where we read the name of
-an Azure Resource Group from a JSON file (`config.json`, illustrating how effortlessly Python can blend with Pulumi’s
+an Azure Resource Group from a JSON file (`config.json`, illustrating how effortlessly `Python` can blend with Pulumi’s
 infrastructure management capabilities.
 
 ```python
@@ -516,6 +945,10 @@ programming practices, making it easier for developers to follow and debug. Pulu
 constructs means you can write more intuitive and straightforward infrastructure code without bending the tool to fit
 unusual patterns.
 
+{{< chooser language "typescript,python,go,csharp,java" />}}
+
+{{% choosable language typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -530,6 +963,138 @@ if (mode == "spoke") {
     });
 }
 ```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+config = pulumi.Config()
+mode = config.get("mode") or ""
+restricted_net_hub_project_id = config.get("restrictedNetHubProjectId") or ""
+
+if mode == "spoke":
+    vpc_shared_spoke = gcp.compute.get_network_output(
+        name="vpc-c-shared-spoke",
+        project=restricted_net_hub_project_id,
+    )
+``` 
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v7/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		mode := ""
+
+		if mode == "spoke" {
+			_, err := compute.LookupNetwork(ctx, &compute.LookupNetworkArgs{
+				Name:    "vpc-c-shared-spoke",
+				Project: "your-restrictedNetHubProjectId",
+			})
+
+			if err != nil {
+				return err
+			}
+		}
+
+		return nil
+	})
+}
+``` 
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+```csharp
+using Pulumi;
+using Pulumi.Gcp.Compute;
+
+class Program
+{
+    static Task<int> Main() => Deployment.RunAsync<ComputeStack>();
+
+    class ComputeStack : Stack
+    {
+        public ComputeStack()
+        {
+            var mode = "";
+
+            if (mode == "spoke")
+            {
+                var network = Output.Tuple(Output.Create("vpc-c-shared-spoke"), Output.Create("your-restrictedNetHubProjectId"))
+                    .Apply(tuple => GetNetwork.InvokeAsync(new GetNetworkArgs
+                    {
+                        Name = tuple.Item1,
+                        Project = tuple.Item2
+                    }));
+
+                // Handle potential errors if necessary
+                network.Apply(n =>
+                {
+                    if (n == null)
+                    {
+                        throw new Exception("Network not found");
+                    }
+                });
+            }
+        }
+    }
+}
+```
+
+{{% /choosable %}}
+
+{{% choosable language java %}}
+
+```java
+import com.pulumi.Pulumi;
+import com.pulumi.core.Output;
+import com.pulumi.gcp.compute.ComputeFunctions;
+import com.pulumi.gcp.compute.inputs.GetNetworkArgs;
+
+public class Main {
+    public static void main(String[] args) {
+        Pulumi.run(ctx -> {
+            String mode = "";
+
+            if ("spoke".equals(mode)) {
+                Output<Tuple<String, String>> networkData = Output.tuple(Output.of("vpc-c-shared-spoke"), Output.of("your-restrictedNetHubProjectId"));
+
+                Output<ComputedNetwork> network = networkData.applyValue(tuple ->
+                        ComputeFunctions.getNetwork(GetNetworkArgs.builder()
+                                .name(tuple.t1)
+                                .project(tuple.t2)
+                                .build()
+                        )
+                );
+
+                network.applyValue(n -> {
+                    if (n == null) {
+                        throw new RuntimeException("Network not found");
+                    }
+                    return null;
+                });
+            }
+        });
+    }
+}
+``` 
+
+{{% /choosable %}}
 
 ### HCL Function Frenzy
 
@@ -558,6 +1123,10 @@ In Pulumi, we can use the same functions from the programming language we pick f
 easier because we don't need to learn new, special functions like in HCL. We can also use extra libraries if we need
 them. Compared to HCL, where you have to learn unique functions, Pulumi lets you work with tools you might already know,
 making the whole process simpler and more flexible.
+
+{{< chooser language "typescript,python,go,csharp,java" />}}
+
+{{% choosable language typescript %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -589,6 +1158,226 @@ export const outputs = {
 };
 ```
 
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+```python
+import pulumi
+
+config = pulumi.Config()
+local_network = config.require("localNetwork")
+peer_network = config.require("peerNetwork")
+prefix = config.require("prefix")
+
+local_network_name = local_network.split("/")[::-1][0]
+peer_network_name = peer_network.split("/")[::-1][0]
+
+local_network_peering = f"{prefix}-{local_network_name}-{peer_network_name}"
+peer_network_peering = f"{prefix}-{peer_network_name}-{local_network_name}"
+network_peering_suffix = "peering"
+
+local_network_peering_name = (
+    local_network_peering if len(local_network_peering) < 63
+    else f"{local_network_peering[:min(58, len(local_network_peering))]}-{network_peering_suffix}"
+)
+
+peer_network_peering_name = (
+    peer_network_peering if len(peer_network_peering) < 63
+    else f"{peer_network_peering[:min(58, len(peer_network_peering))]}-{network_peering_suffix}"
+)
+
+pulumi.export("localNetworkName", local_network_name)
+pulumi.export("peerNetworkName", peer_network_name)
+pulumi.export("localNetworkPeeringName", local_network_peering_name)
+pulumi.export("peerNetworkPeeringName", peer_network_peering_name)
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		localNetwork := "your-local-network"
+		peerNetwork := "your-peer-network"
+		prefix := "your-prefix"
+
+		localNetworkName := reverseString(getNetworkName(localNetwork))
+		peerNetworkName := reverseString(getNetworkName(peerNetwork))
+
+		localNetworkPeering := prefix + "-" + localNetworkName + "-" + peerNetworkName
+		peerNetworkPeering := prefix + "-" + peerNetworkName + "-" + localNetworkName
+		networkPeeringSuffix := "peering"
+
+		localNetworkPeeringName := condenseName(localNetworkPeering, networkPeeringSuffix)
+		peerNetworkPeeringName := condenseName(peerNetworkPeering, networkPeeringSuffix)
+
+		ctx.Export("localNetworkName", pulumi.String(localNetworkName))
+		ctx.Export("peerNetworkName", pulumi.String(peerNetworkName))
+		ctx.Export("localNetworkPeeringName", pulumi.String(localNetworkPeeringName))
+		ctx.Export("peerNetworkPeeringName", pulumi.String(peerNetworkPeeringName))
+
+		return nil
+	})
+}
+
+func getNetworkName(network string) string {
+	parts := strings.Split(network, "/")
+	return parts[len(parts)-1]
+}
+
+func reverseString(s string) string {
+	runes := []rune(s)
+	for i, j := 0, len(runes)-1; i < j; i, j = i+1, j-1 {
+		runes[i], runes[j] = runes[j], runes[i]
+	}
+	return string(runes)
+}
+
+func condenseName(name string, suffix string) string {
+	if len(name) < 63 {
+		return name
+	}
+	return name[:min(58, len(name))] + "-" + suffix
+}
+
+func min(a, b int) int {
+	if a < b {
+		return a
+	}
+	return b
+}
+```
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+```csharp
+using System;
+using System.Linq;
+using Pulumi;
+
+class Program
+{
+    static Task<int> Main() => Deployment.RunAsync<MyStack>();
+
+    class MyStack : Stack
+    {
+        public MyStack()
+        {
+            var localNetwork = "your-local-network";
+            var peerNetwork = "your-peer-network";
+            var prefix = "your-prefix";
+
+            var localNetworkName = ReverseString(GetNetworkName(localNetwork));
+            var peerNetworkName = ReverseString(GetNetworkName(peerNetwork));
+
+            var localNetworkPeering = $"{prefix}-{localNetworkName}-{peerNetworkName}";
+            var peerNetworkPeering = $"{prefix}-{peerNetworkName}-{localNetworkName}";
+            var networkPeeringSuffix = "peering";
+
+            var localNetworkPeeringName = CondenseName(localNetworkPeering, networkPeeringSuffix);
+            var peerNetworkPeeringName = CondenseName(peerNetworkPeering, networkPeeringSuffix);
+
+            this.Export("localNetworkName", localNetworkName);
+            this.Export("peerNetworkName", peerNetworkName);
+            this.Export("localNetworkPeeringName", localNetworkPeeringName);
+            this.Export("peerNetworkPeeringName", peerNetworkPeeringName);
+        }
+
+        private string GetNetworkName(string network)
+        {
+            var parts = network.Split('/');
+            return parts[parts.Length - 1];
+        }
+
+        private string ReverseString(string s)
+        {
+            var chars = s.ToCharArray();
+            Array.Reverse(chars);
+            return new string(chars);
+        }
+
+        private string CondenseName(string name, string suffix)
+        {
+            if (name.Length < 63) return name;
+            return name.Substring(0, Math.Min(58, name.Length)) + "-" + suffix;
+        }
+    }
+}
+``` 
+
+{{% /choosable %}}
+
+{{% choosable language java %}}
+
+```java
+import com.pulumi.Context;
+import com.pulumi.Pulumi;
+import com.pulumi.core.Output;
+import com.pulumi.resources.Stack;
+
+import java.util.Arrays;
+
+public class Program {
+    public static void main(String[] args) {
+        Pulumi.run(Program::stack);
+    }
+
+    public static void stack(Context ctx) {
+        var localNetwork = "your-local-network";
+        var peerNetwork = "your-peer-network";
+        var prefix = "your-prefix";
+
+        var localNetworkName = reverseString(getNetworkName(localNetwork));
+        var peerNetworkName = reverseString(getNetworkName(peerNetwork));
+
+        var localNetworkPeering = String.format("%s-%s-%s", prefix, localNetworkName, peerNetworkName);
+        var peerNetworkPeering = String.format("%s-%s-%s", prefix, peerNetworkName, localNetworkName);
+        var networkPeeringSuffix = "peering";
+
+        var localNetworkPeeringName = condenseName(localNetworkPeering, networkPeeringSuffix);
+        var peerNetworkPeeringName = condenseName(peerNetworkPeering, networkPeeringSuffix);
+
+        ctx.export("localNetworkName", Output.of(localNetworkName));
+        ctx.export("peerNetworkName", Output.of(peerNetworkName));
+        ctx.export("localNetworkPeeringName", Output.of(localNetworkPeeringName));
+        ctx.export("peerNetworkPeeringName", Output.of(peerNetworkPeeringName));
+    }
+
+    private static String getNetworkName(String network) {
+        var parts = network.split("/");
+        return parts[parts.length - 1];
+    }
+
+    private static String reverseString(String s) {
+        var chars = s.toCharArray();
+        for (int i = 0, j = chars.length - 1; i < j; i++, j--) {
+            char temp = chars[i];
+            chars[i] = chars[j];
+            chars[j] = temp;
+        }
+        return new String(chars);
+    }
+
+    private static String condenseName(String name, String suffix) {
+        if (name.length() < 63) return name;
+        return name.substring(0, Math.min(58, name.length())) + "-" + suffix;
+    }
+}
+```
+
+{{% /choosable %}}
+
 ### Pitfalls of HCL's `try` Function
 
 HCL’s `try` function can be problematic because it evaluates each argument until one does not produce an error. While it
@@ -615,7 +1404,11 @@ cloudinit_pre_nodeadm = try(each.value.cloudinit_pre_nodeadm, var.eks_managed_no
 cloudinit_post_nodeadm = try(each.value.cloudinit_post_nodeadm, var.eks_managed_node_group_defaults.cloudinit_post_nodeadm, [])
 ```
 
-Switching to Pulumi and TypeScript provides a clearer, more maintainable approach:
+Switching to Pulumi provides a clearer, more maintainable approach:
+
+{{< chooser language "typescript,python,go,csharp,java" />}}
+
+{{% choosable language typescript %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -628,9 +1421,98 @@ const platform = config.get("platform") || "linux"; // Default to "linux" if und
 pulumi.output({ platform });
 ```
 
-This Pulumi example uses TypeScript's native error handling to provide a more robust and intuitive setup. Unlike
-HCL's `try`, which potentially sweeps errors under the rug, TypeScript encourages addressing them directly,
-resulting in cleaner and more reliable code.
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+```python
+import pulumi
+
+# Example configuration using Python
+config = pulumi.Config()
+platform = config.get("platform") or "linux"  # Default to "linux" if undefined
+
+# Output using straightforward Python logic
+pulumi.export("platform", platform)
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		platform, ok := ctx.GetConfig("platform")
+		if !ok {
+			platform = "linux" // Default to "linux" if undefined
+		}
+
+		ctx.Export("platform", pulumi.String(platform))
+		return nil
+	})
+}
+```
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+```csharp
+using Pulumi;
+
+class Program
+{
+    static Task<int> Main() => Pulumi.Deployment.RunAsync(() => 
+    {
+        var config = new Config();
+        var platform = config.Get("platform") ?? "linux"; // Default to "linux" if undefined
+
+        return new Dictionary<string, object?>
+        {
+            { "platform", platform }
+        };
+    });
+}
+```
+
+{{% /choosable %}}
+
+{{% choosable language java %}}
+
+```java
+import com.pulumi.Config;
+import com.pulumi.Pulumi;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class Main {
+    public static void main(String[] args) {
+        Pulumi.run(ctx -> {
+            Config config = Config.auto();
+            String platform = config.get("platform").orElse("linux"); // Default to "linux" if undefined
+
+            Map<String, Object> result = new HashMap<>();
+            result.put("platform", platform);
+
+            ctx.export("result", result);
+        });
+    }
+}
+``` 
+
+{{% /choosable %}}
+
+This Pulumi example shows how to handle configuration values in a more straightforward way, avoiding the need for
+complex `try` functions which potentially sweep errors under the rug. By using standard programming constructs, you can
+improve the readability and maintainability of your infrastructure code.
 
 ## In Conclusion
 
