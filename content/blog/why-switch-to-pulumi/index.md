@@ -207,7 +207,7 @@ developer platform for an organization. The layers are as follows:
 This diagram illustrates the different layers of an internal developer
 platform:
 
-![](media/image1.png){width="6.5in" height="3.9305555555555554in"}
+![](platform-req-diagram.png){width="6.5in" height="3.9305555555555554in"}
 
 Most solutions struggle to keep up with the requirements of each layer.
 Many of the alternative solutions can't handle the scale of resources to
@@ -222,7 +222,7 @@ designed to fulfill the modern requirements and allow organizations to
 leverage the cloud as a competitive advantage, providing the building
 blocks to build each of the five layers.
 
-![](media/image2.png){width="6.5in" height="3.888888888888889in"}
+![](platform-diagram.png){width="6.5in" height="3.888888888888889in"}
 
 *   **Developer Control Plane.** Pulumi is the simplest and most
     intuitive way to manage cloud infrastructure because of its ability
