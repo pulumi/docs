@@ -21,6 +21,7 @@ import "./toc";
 import "./docs-main";
 import "./redirects";
 import "./algolia/autocomplete";
+import "./turbo";
 
 // Register all Stencil components.
 defineCustomElements();
