@@ -3,6 +3,18 @@ title: "Pulumi vs HCL: Understanding the Language Differences in Infrastructure 
 allow_long_title: true
 date: 2024-07-09
 meta_desc: "Compare Pulumi and HCL for infrastructure as code. Discover how general-purpose languages boost productivity and collaboration cloud management."
+social:
+   twitter: "Discover how general-purpose languages like Python, JavaScript, and Go boost productivity and collaboration in cloud management with Pulumi. Learn why Pulumi offers key advantages over HCL for infrastructure as code. #infrastructureascode #cloudmanagement"
+   linkedin: |
+      Discover how general-purpose languages like Python, JavaScript, and Go boost productivity and collaboration in cloud management with Pulumi.
+      Our latest blog post compares Pulumi's approach to infrastructure as code with HCL, highlighting key advantages:
+
+      - Leverage existing programming skills and vast language ecosystems
+      - Write more intuitive and maintainable infrastructure code
+      - Improve collaboration between development and operations teams
+      - Future-proof your infrastructure management
+   
+      Learn why many organizations are choosing Pulumi to modernize their cloud engineering practices.
 meta_image: meta.png
 authors:
 - engin-diri
