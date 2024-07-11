@@ -1,7 +1,7 @@
 ---
 title: "Why Switch to Pulumi for Cloud Deployments?"
 date: 2024-07-10T19:47:50-07:00
-meta_desc: "Discover why Pulumi is the superior choice for cloud deployments. Learn how it boosts productivity, enables infinite scale, and leverages AI to revolutionize infrastructure management."
+meta_desc: "Pulumi: the top choice for cloud deployments. Boost productivity, scale infinitely, and leverage AI to revolutionize infrastructure management."
 meta_image: meta.png
 authors:
     - aaron-kao
@@ -53,8 +53,7 @@ So why should you switch to Pulumi? How is it different from other
 infrastructure as code tools? This post is intended to answer all those
 questions.
 
-What is Pulumi?
-===============
+# What is Pulumi?
 
 Pulumi is an infrastructure as code platform that allows teams to manage
 and scale infrastructure, configurations, policies, and secrets with
@@ -102,8 +101,7 @@ familiar GPT experience everyone knows, loves, and uses daily, so
 engineers can find and take action on any resource in their cloud
 environments.
 
-Ok, but why does this matter enough for me to switch?
------------------------------------------------------
+## Ok, but why does this matter enough for me to switch?
 
 Only you can answer that question, but there are some compelling reasons
 to adopt the platform trusted by hundreds of thousands of developers.
@@ -151,8 +149,7 @@ manual.
 *Pulumi uses software engineering to tackle the scale of infinite
 combinations.*
 
-Frequently Asked Questions - Why Pulumi?
-========================================
+# Frequently Asked Questions - Why Pulumi?
 
 Some frequently asked questions about why Pulumi based on use cases and
 alternatives. Choose your own adventure:
@@ -167,8 +164,7 @@ alternatives. Choose your own adventure:
     * [Why Pulumi vs. 3rd party IDP providers?](#why-pulumi-vs-3rd-party-idp-providers-think-port-cortex-backstage)
 * [How can I switch to Pulumi?](#how-can-i-switch-to-pulumi)
 
-Why Pulumi, by use case?
-------------------------
+## Why Pulumi, by use case?
 
 There are many different use cases for why engineers use Pulumi:
 infrastructure CICD, modern applications, internal developer platforms,
@@ -186,25 +182,25 @@ repeatability, and consistency. There are a number of components/layers
 that are considered basic requirements when building an internal
 developer platform for an organization. The layers are as follows:
 
--   **Developer Control Plane.** Curated experiences that empower
+*   **Developer Control Plane.** Curated experiences that empower
     developers by meeting them at their level of expertise, whether
     it\'s an abstracted developer portal, custom CLI, or shared IaC
     templates.
 
--   **Integration & Delivery.** Automations to version control, test,
+*   **Integration & Delivery.** Automations to version control, test,
     trace, and deploy all infrastructure from resources, configurations,
     environments, and secrets as well as orchestration automations to
     manage provisioning workflows.
 
--   **Monitoring & Logging.** Components to log, monitor, and observe
+*   **Monitoring & Logging.** Components to log, monitor, and observe
     all infrastructure for greater operational control as well as
     optimize against unnecessary costs.
 
--   **Security & Identity.** Security and compliance guardrails that
+*   **Security & Identity.** Security and compliance guardrails that
     regulate every piece of infrastructure from policies to fine-grained
     access controls to secrets.
 
--   **Resources.** Providers that support modern cloud architectures
+*   **Resources.** Providers that support modern cloud architectures
     such as Kubernetes, containers, serverless, generative AI, machine
     learning, data lakes, hybrid cloud/on-premises, and more.
 
@@ -228,7 +224,7 @@ blocks to build each of the five layers.
 
 ![](media/image2.png){width="6.5in" height="3.888888888888889in"}
 
--   **Developer Control Plane.** Pulumi is the simplest and most
+*   **Developer Control Plane.** Pulumi is the simplest and most
     intuitive way to manage cloud infrastructure because of its ability
     to use standard programming languages, including YAML. This removes
     the friction to the basic requirements of managing cloud
@@ -237,24 +233,24 @@ blocks to build each of the five layers.
     provides private templates that can be integrated with developer
     portals like AWS Proton and Backstage.
 
--   **Integration & Delivery.** Pulumi Automation API can embed IaC
+*   **Integration & Delivery.** Pulumi Automation API can embed IaC
     programs directly in applications, resulting in 10x greater
     management of resources per engineer. Pulumi can take advantage of
     all existing testing frameworks supported by the selected
     programming language.
 
--   **Monitoring & Logging.** Pulumi Insights adds advanced search,
+*   **Monitoring & Logging.** Pulumi Insights adds advanced search,
     analytics, and AI to any cloud infrastructure, giving unique
     insights into cloud usage and cost optimizations. Pulumi partners
     with leading observability solutions making it easy to manage
     monitoring and logging resources through IaC.
 
--   **Security & Identity.** Pulumi provides policy as code with
+*   **Security & Identity.** Pulumi provides policy as code with
     auto-remediation and centralized environments, secrets, and
     configurations manager. Every resource access can be granularly
     controlled and audited.
 
--   **Resources.** Pulumi supports modern cloud architectures such as
+*   **Resources.** Pulumi supports modern cloud architectures such as
     Kubernetes, containers, serverless, generative AI, machine learning,
     data lakes, hybrid cloud/on-premises, and more. Pulumi makes it
     simple to create components that abstract away the complexity of
@@ -276,7 +272,7 @@ and depend on (e.g., databases and storage).
 There are many layers to building and managing AI applications: model
 training, data pipelines, backend services, frontend applications.
 
-![](media/image3.png){width="6.5in" height="7.25in"}
+![](ai-stack.png){width="6.5in" height="7.25in"}
 
 Pulumi provides an abstraction across all the different layers of the AI
 stack (web framework, LLM, containers, databases, secrets, policies,
@@ -284,13 +280,12 @@ configurations, etc) as a simple Python library. Through this
 abstraction AI engineers and developers can manage stacks of
 infrastructure as code.
 
-![](media/image4.png){width="6.5in" height="3.6666666666666665in"}
+![](ai-dev.png){width="6.5in" height="3.6666666666666665in"}
 
 ***Pulumi makes it trivial to take local AI development to production in
 the cloud.***
 
-Why is Pulumi better than the alternatives?
--------------------------------------------
+## Why is Pulumi better than the alternatives?
 
 There are many methods that can be used to approach the needs of cloud
 modernization and infrastructure management. However, Pulumi enables
@@ -481,4 +476,4 @@ We have done lots of migrations from all types of infrastructure as code
 tools, and we are happy to help you think through how to make switching
 to Pulumi as easy as possible.
 
-**\<big CTA button\>**
+{{blog/cta-button "Switch to Pulumi" "https://www.pulumi.com/contact/?form=tf-migration" "_blank"}}
