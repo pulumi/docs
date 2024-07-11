@@ -19,8 +19,6 @@ languages can be a double-edged sword:
 
 ![brian-goetz-tweet](brian-goetz-tweet.png)
 
-## Summary
-
 HashiCorp’s infrastructure as code solution, Terraform, uses a domain-specific language (DSL) to declare cloud
 resources. Pulumi’s infrastructure as code solution, on the other hand, lets you choose from any number of modern
 languages – C#, Java, JavaScript, Go, Python, or TypeScript – or the industry-standard markup language YAML, to declare
