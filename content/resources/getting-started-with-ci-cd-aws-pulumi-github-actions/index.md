@@ -63,7 +63,7 @@ main:
           role: Solutions Architect, Pulumi
           photo: /images/team/diana-esteves.jpg
         - name: Ben De St Paer-Gotch
-          role: Staff Product Manager
+          role: Staff Product Manager, GitHub
           photo: /images/people/ben-de-st-paer-gotch.jpg
 
     # case-sensitive
