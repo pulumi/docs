@@ -182,32 +182,32 @@ repeatability, and consistency. There are a number of components/layers
 that are considered basic requirements when building an internal
 developer platform for an organization. The layers are as follows:
 
-*   **Developer Control Plane.** Curated experiences that empower
+* **Developer Control Plane.** Curated experiences that empower
     developers by meeting them at their level of expertise, whether
     it\'s an abstracted developer portal, custom CLI, or shared IaC
     templates.
 
-*   **Integration & Delivery.** Automations to version control, test,
+* **Integration & Delivery.** Automations to version control, test,
     trace, and deploy all infrastructure from resources, configurations,
     environments, and secrets as well as orchestration automations to
     manage provisioning workflows.
 
-*   **Monitoring & Logging.** Components to log, monitor, and observe
+* **Monitoring & Logging.** Components to log, monitor, and observe
     all infrastructure for greater operational control as well as
     optimize against unnecessary costs.
 
-*   **Security & Identity.** Security and compliance guardrails that
+* **Security & Identity.** Security and compliance guardrails that
     regulate every piece of infrastructure from policies to fine-grained
     access controls to secrets.
 
-*   **Resources.** Providers that support modern cloud architectures
+* **Resources.** Providers that support modern cloud architectures
     such as Kubernetes, containers, serverless, generative AI, machine
     learning, data lakes, hybrid cloud/on-premises, and more.
 
 This diagram illustrates the different layers of an internal developer
 platform:
 
-![](platform-req-diagram.png){width="6.5in" height="3.9305555555555554in"}
+![platform-requirements](platform-req-diagram.png)
 
 Most solutions struggle to keep up with the requirements of each layer.
 Many of the alternative solutions can't handle the scale of resources to
@@ -222,9 +222,9 @@ designed to fulfill the modern requirements and allow organizations to
 leverage the cloud as a competitive advantage, providing the building
 blocks to build each of the five layers.
 
-![](platform-diagram.png){width="6.5in" height="3.888888888888889in"}
+![pulumi platform](platform-diagram.png)
 
-*   **Developer Control Plane.** Pulumi is the simplest and most
+* **Developer Control Plane.** Pulumi is the simplest and most
     intuitive way to manage cloud infrastructure because of its ability
     to use standard programming languages, including YAML. This removes
     the friction to the basic requirements of managing cloud
@@ -233,24 +233,24 @@ blocks to build each of the five layers.
     provides private templates that can be integrated with developer
     portals like AWS Proton and Backstage.
 
-*   **Integration & Delivery.** Pulumi Automation API can embed IaC
+* **Integration & Delivery.** Pulumi Automation API can embed IaC
     programs directly in applications, resulting in 10x greater
     management of resources per engineer. Pulumi can take advantage of
     all existing testing frameworks supported by the selected
     programming language.
 
-*   **Monitoring & Logging.** Pulumi Insights adds advanced search,
+* **Monitoring & Logging.** Pulumi Insights adds advanced search,
     analytics, and AI to any cloud infrastructure, giving unique
     insights into cloud usage and cost optimizations. Pulumi partners
     with leading observability solutions making it easy to manage
     monitoring and logging resources through IaC.
 
-*   **Security & Identity.** Pulumi provides policy as code with
+* **Security & Identity.** Pulumi provides policy as code with
     auto-remediation and centralized environments, secrets, and
     configurations manager. Every resource access can be granularly
     controlled and audited.
 
-*   **Resources.** Pulumi supports modern cloud architectures such as
+* **Resources.** Pulumi supports modern cloud architectures such as
     Kubernetes, containers, serverless, generative AI, machine learning,
     data lakes, hybrid cloud/on-premises, and more. Pulumi makes it
     simple to create components that abstract away the complexity of
@@ -272,7 +272,7 @@ and depend on (e.g., databases and storage).
 There are many layers to building and managing AI applications: model
 training, data pipelines, backend services, frontend applications.
 
-![](ai-stack.png){width="6.5in" height="7.25in"}
+![ai stack](ai-stack.png)
 
 Pulumi provides an abstraction across all the different layers of the AI
 stack (web framework, LLM, containers, databases, secrets, policies,
@@ -280,7 +280,7 @@ configurations, etc) as a simple Python library. Through this
 abstraction AI engineers and developers can manage stacks of
 infrastructure as code.
 
-![](ai-dev.png){width="6.5in" height="3.6666666666666665in"}
+![ai abstraction](ai-dev.png)
 
 ***Pulumi makes it trivial to take local AI development to production in
 the cloud.***
@@ -326,7 +326,7 @@ However, beyond the basics of infrastructure as code there are
 significant differences in terms of productivity experience,
 scalability, and collaboration.
 
-1.  **Increased Productivity.** Pulumi's promise is to build in all the
+1.**Increased Productivity.** Pulumi's promise is to build in all the
     latest advancements in both the developer and operations experience.
     When engineers write code, they now have AI copilots that generate
     code and pair-program alongside them. Their IDEs have autocompletion
@@ -352,7 +352,7 @@ scalability, and collaboration.
     Pulumi Cloud. This means that each organization gets AI-generated
     responses based solely on their own organizational data.
 
-2.  **Greater Scalability.** Pulumi embraces software engineering as a
+2.**Greater Scalability.** Pulumi embraces software engineering as a
     way to solve and manage the exponentially increasing complexity of
     modern architectures. Programming languages with their loops,
     conditional logic, class inheritance, object orientedness allows
@@ -362,7 +362,7 @@ scalability, and collaboration.
     event-driven automations or internal developer portals that provide
     self-service.
 
-3.  **Better Collaboration.** Pulumi makes it easy to prototype new
+3.**Better Collaboration.** Pulumi makes it easy to prototype new
     products and quickly ship them into production because it is easier
     for the platform, development, and security teams to collaborate.
     Platform engineering and devops teams can define and manage common
@@ -389,14 +389,14 @@ Pulumi and CDK are similar in that both allow the usage of programming
 languages to write infrastructure as code. However there are some key
 differences:
 
-1.  **No Vendor Lock-In.** CDK supports only AWS, whereas Pulumi
+1.**No Vendor Lock-In.** CDK supports only AWS, whereas Pulumi
     supports over 150 cloud and SaaS providers, with more being added
     all the time. CDK depends on CloudFormation as the deployment
     engine; it shares many of the same benefits and limitations as
     CloudFormation (see [Pulumi vs.
     CloudFormation](https://www.pulumi.com/docs/concepts/vs/cloud-templates/cloudformation/))
 
-2.  **Translation versus Execution.** Pulumi and CDK support similar
+2.**Translation versus Execution.** Pulumi and CDK support similar
     programming languages but differ fundamentally in their deployment
     approaches. Pulumi\'s engine directly understands these languages
     and communicates with cloud providers. In contrast, CDK transpiles
@@ -410,7 +410,7 @@ differences:
     debugging and successful deployments, whereas Pulumi\'s direct
     approach simplifies this process.
 
-3.  **Versatility.** CDK and Pulumi both support automated testing, but
+3.**Versatility.** CDK and Pulumi both support automated testing, but
     Pulumi offers more versatile options. While both allow unit testing,
     Pulumi\'s deep integration between language and runtime enables
     fast, offline tests (in-memory) with mocked cloud provider calls. In
