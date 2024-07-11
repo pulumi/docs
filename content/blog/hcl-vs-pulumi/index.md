@@ -89,7 +89,7 @@ Here's a list of languages Pulumi commonly uses, along with their licenses:
 | TypeScript   | Apache 2.0                                |
 | YAML         | Creative Commons Attribution              |
 
-### Developers Prefer Pulumi for Infrastructure As Code
+### Developers Onboard Quicker with Pulumi
 
 While HCL serves its purpose in infrastructure as code, many developers find Pulumi's approach more appealing. Pulumi
 allows engineers to use familiar programming languages, making it easier to leverage existing skills and tools.
@@ -114,7 +114,7 @@ teamwork.
 This inclusive approach not only accelerates progress but also democratizes access to infrastructure management,
 avoiding bottlenecks and enhancing overall team efficiency.
 
-### Reducing Redundancy: The Benefits of Pulumi Over HCL’s Copy-Paste Challenges
+### Reducing Redundancy and Copy-Paste Challenges
 
 ![spiderman meme](meme.png)
 
@@ -129,7 +129,7 @@ bugs.
 In contrast, Pulumi reduces the need for such redundancies by enabling more dynamic code reuse and better resource
 management, streamlining updates and fostering more robust and error-resistant infrastructure development.
 
-### Pulumi’s Advantage Over Custom Tool Requirements
+### Reduce Need for Custom Tooling
 
 As projects expand, managing HCL configurations becomes increasingly complex, often necessitating custom tools for
 efficient large-scale management. While HCL is adept at defining infrastructure as code, it lacks built-in features to
@@ -143,7 +143,7 @@ deployment process, and ensuring consistency across various environments without
 This makes Pulumi a more straightforward and resource-efficient choice for teams looking to manage their infrastructure
 effectively as they grow.
 
-### Future-Proofing Infrastructure: The Flexibility of Pulumi
+### Future-Proofing Your Infrastructure
 
 HCL, while robust, lacks the future-proof qualities of Pulumi SDKs due to its fixed syntax and usage constraints. In
 contrast, Pulumi's support for multiple programming languages like Python, TypeScript, and Go, coupled with the
@@ -155,7 +155,7 @@ paradigms becomes essential. Pulumi's adaptable model supports this continuous e
 as code practices can keep pace with the dynamic nature of development environments and preferences, thereby offering a
 more sustainable and scalable solution for long-term projects.
 
-### The Growing Complexity of HCL: Pulumi as a Simplified Alternative
+### Making Infrastructure Code Simpler
 
 As HCL continues to evolve, its fixed syntax and structured approach are likely to lead to greater complexity. This
 evolution could make the language increasingly specialized and challenging for newcomers, particularly those already
@@ -1546,4 +1546,8 @@ As always, we welcome your feedback and contributions in
 the [Pulumi Community Slack](https://slack.pulumi.com/), [GitHub repository,](https://github.com/pulumi/pulumi)
 and [Pulumi Community Discussions](https://github.com/pulumi/pulumi/discussions).
 
-New to Pulumi? Signing up is easy and free. [Get started today](/docs/get-started/)!
+New to Pulumi? Signing up is easy and free. [Get started today!](/docs/get-started/)
+
+Interested in migrating? Our cloud experts can help.
+[Learn more about Pulumi's Migration Services.](/migrate/)
+
