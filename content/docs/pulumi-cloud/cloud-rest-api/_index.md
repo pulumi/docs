@@ -1835,7 +1835,6 @@ GET /api/orgs/{organization}/teams
 | Parameter           | Type   | In    | Description                                                                                                  |
 |---------------------|--------|-------|--------------------------------------------------------------------------------------------------------------|
 | `organization`      | string | path  | organization name                                                                                            |
-| `continuationToken` | string | query | **Optional.** the continuation token to use for retrieving the next set of results if results were truncated |
 
 #### Example
 
