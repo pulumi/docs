@@ -319,7 +319,9 @@ The expression `${item}` will return a JSON value `{ "key1": "value1", "key2": 1
 
 ##### `fn::invoke`
 
-Calls a function from a package and returns either the whole object or a single field if given the `return` property. The schema is:
+Calls a function from a package and returns either the whole object or a single field if given the `return` property. This can be any of the functions in the [registry providers](https://www.pulumi.com/registry/) as well as functions found in the [pulumi-std](https://github.com/pulumi/pulumi-std/tree/master/std) package that includes math functions such as `sum` and `abs` and logic functions such as `anytrue` as well as string functions such as `split`.
+
+The schema is:
 
 | Property | Type | Required | Expression | Description |
 | - | - | - | - | - |
@@ -327,6 +329,8 @@ Calls a function from a package and returns either the whole object or a single 
 | `arguments` | map[string]Expression | Yes | Yes | Arguments to pass to the expression, each key is a named argument. |
 | `options` | [Invoke Options](#invoke-options) | No | No | Options for the provider calling the function. |
 | `return` | string | No | No | Return the value of the field with this name. |
+
+Example calling the [getAmi](https://www.pulumi.com/registry/packages/aws/api-docs/ec2/getami/) function in the AWS provider package:
 
 ```yaml
 variables:
@@ -345,6 +349,23 @@ variables:
 ```
 
 The expression `${AmazonLinuxAmi}` will return the AMI ID returned from the [`aws:getAmi`](/registry/packages/aws/api-docs/getami/) function.
+
+Example calling the `sum` function in the `pulumi-std` provider package to subtract 255 from `${route53Weight}`:
+
+```yaml
+variables:
+  route53Weight: 400
+  modifiedWeight:
+    fn::invoke:
+      function: std:sum
+      arguments:
+        input:
+          - ${route53Weight}
+          - -255
+      return: result
+```
+
+The expression `${modifiedWeight}` will return `145` in this case.
 
 #### Invoke Options
 
