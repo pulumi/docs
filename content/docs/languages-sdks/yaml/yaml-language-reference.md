@@ -319,7 +319,7 @@ The expression `${item}` will return a JSON value `{ "key1": "value1", "key2": 1
 
 ##### `fn::invoke`
 
-Calls a function from a package and returns either the whole object or a single field if given the `return` property. This can be any of the functions in the [registry providers](https://www.pulumi.com/registry/) as well as functions found in the [pulumi-std](https://github.com/pulumi/pulumi-std/tree/master/std) package that includes math functions such as `sum` and `abs` and logic functions such as `anytrue` as well as string functions such as `split`.
+Calls a function from a package and returns either the whole object or a single field if given the `return` property. This can be any of the functions in the [registry providers](https://www.pulumi.com/registry/) as well as functions found in the [pulumi-std](https://github.com/pulumi/pulumi-std/blob/master/FUNCTION_LIST.md) package that includes math functions such as `sum` and `abs`, logic functions such as `anytrue`, and string functions such as `split`.
 
 The schema is:
 
