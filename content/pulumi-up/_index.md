@@ -11,6 +11,28 @@ event_date: 2024-09-18T08:00:00-07:00
 aliases:
     - /pulumiup
 
+confirmed_speakers:
+    - name: Dax Road
+      title: Founding Engineer
+      company: SST
+      image: /images/pulumiup-2023/2024-speakers/dax-road.png
+    - name: Jeremy Adams
+      title: Head of Ecosystems
+      company: Dagger
+      image: /images/pulumiup-2023/2024-speakers/jeremy-adams.png
+    - name: Patty O'Callaghan
+      title: Technical Director
+      company: Charles River Laboratories
+      image: /images/pulumiup-2023/2024-speakers/patty-ocallaghan.jpeg
+    - name: James Clark
+      title: Principal Software Engineer
+      company: Docker
+      image: /images/pulumiup-2023/2024-speakers/james-clark.png
+    - name: Ash Martian
+      title: Data Engineer
+      company: CharacterStrong
+      image: /images/pulumiup-2023/2024-speakers/ash-martian.png
+
 panelists:
     - name: Luke Hoban
       image: /images/team/luke-hoban.jpg
@@ -37,103 +59,6 @@ panelists:
           link: https://www.linkedin.com/in/beyang-liu
         - site: twitter
           link: https://twitter.com/beyang
-      
-
-stories:
-    - name: Sam Cogan
-      position: Solution Architect
-      company: Willis Towers Watson
-      logo: /images/pulumiup-2023/speaker-logos/wtw.svg
-      photo: /images/pulumiup-2023/speakers/sam-cogan.png
-      title: Keeping your Infrastructure Code DRY
-      description: |
-        How to build a library of reusable modules that you can repeatedly reuse in your IaC projects, so you don't repeat yourself (DRY).
-    - name: Dennis Sauvé
-      position: DevOps Engineer
-      company: Washington Trust Bank
-      logo: /images/pulumiup-2023/speaker-logos/washington-trust-bank.svg
-      photo: /images/pulumiup-2023/speakers/dennis-sauve.png
-      title: How a bank modernized its software engineering with infrastructure as code automation
-      description: |
-        Learn how a bank adopted IaC to increase development speed and maintain security requirements.
-    - name: Ala Shiban
-      position: Co-Founder and CEO
-      company: Klotho
-      logo: /images/pulumiup-2023/speaker-logos/klotho.svg
-      photo: /images/pulumiup-2023/speakers/ala-shiban.png
-      title: Creating a ‘Cloud-Aware’ Code Solution
-      description: |
-        Learn how “infrastructure from code” can help you build cloud infrastructure from your application code.
-    - name: Matt Stephenson
-      position: Sr Principal Software Engineer
-      company: Starburst
-      logo: /images/pulumiup-2023/speaker-logos/starburst.svg
-      photo: /images/pulumiup-2023/speakers/matt-stephenson.png
-      title: Creating Infrastructure Automation Magic with Code
-      description: |
-        Dive deep into infrastructure as code automation with Pulumi Automation API and real world examples of how it’s used.
-    - name: Tim Holm
-      position: Co-Founder and CTO
-      company: Nitric
-      logo: /images/pulumiup-2023/speaker-logos/nitric.svg
-      photo: /images/pulumiup-2023/speakers/tim-holm.png
-      title: Engineering a Multi-cloud Platform
-      description: |
-        Learn how to overcome key challenges when planning for cloud-agnostic delivery and build a cloud toolset for developers.
-    - name: Tyler Scheuble
-      position: Head of Platform
-      company: People Data Labs
-      logo: /images/pulumiup-2023/speaker-logos/people-data-labs.svg
-      photo: /images/pulumiup-2023/speakers/tyler-scheuble.png
-      title: Using Monorepos to Level-up your Infrastructure as Code and Software Delivery
-      description: |
-        Learn best practices for structuring IaC projects in Git to improve collaboration and efficiency.
-    - name: Sefi Genis
-      position: Co-Founder and CTO
-      company: Firefly
-      logo: /images/pulumiup-2023/speaker-logos/firefly.svg
-      photo: /images/pulumiup-2023/speakers/sefi-genis.png
-      title: Lessons Learned from Writing Thousands of Lines of IaC
-      description: |
-        Gain valuable insights into immutable architecture, best practices, and recommended design patterns.
-
-workshops:
-  - title: Introduction to Redis and Pulumi
-    url: /resources/introduction-to-redis-and-pulumi/
-    description: |
-      Join the Redis and Pulumi team to learn how to deploy Redis Cloud resources on any cloud using any programming language with Pulumi.
-    date: July 13, 2023
-
-  - title: From Zero to Production in Kubernetes
-    url: /resources/from-zero-to-production-in-kubernetes/
-    description: |
-      Explore how to leverage the power of Python with Pulumi, an infrastructure as code platform to define and manage your Kubernetes deployments.
-    date:  July 20, 2023
-
-  - title: Getting Started with Azure Infrastructure as Code and Review Stacks
-    url: /resources/azure-github-workshop/
-    description: |
-      In this workshop, we’ll explore the new Azure Native v2 provider and Pulumi Review Stacks on GitHub
-    date: July 27, 2023
-
-  - title: Getting Started with Infrastructure as Code on AWS
-    url: /resources/getting-started-with-iac-pulumi-aws/
-    description: |
-      This workshop is designed to help new users become familiar with the
-      core concepts needed to effectively deploy resources on AWS using Pulumi.
-    date: August 2, 2023
-  
-  - title: Advanced Kubernetes Platforms on Google Cloud with Pulumi
-    url: /resources/kubernetes-platforms-on-google-cloud/
-    description: |
-      In this workshop, we’ll explore how to deliver and scale a Kubernetes platform on Google Cloud.
-    date: August 10, 2023
-
-  - title: Deploying a Kubernetes Cluster on Equinix Metal
-    url: /resources/deploying-a-kubernetes-cluster-on-equinix-metal/
-    description: |
-      In this code-centric session, you will learn how to manage Equinix Metal resources using Pulumi and the new Equinix Pulumi provider.
-    date: September 13, 2023
 
 personas:
   groups:
@@ -253,7 +178,7 @@ speakers:
     company: Pulumi
 
 schedule:
-  heading: Schedule At A Glance
+  heading: 2023 Schedule At A Glance
   subheading: Get inspired! Dive into the stories and experiences of innovators and experts, from Startup Founders to Industry Leaders.
   items:
     - title: Opening Keynote, followed by new product launches and demos
@@ -329,19 +254,17 @@ customer_logos:
       - logo: microsoft.png
         link: http://azure.microsoft.com/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
     - logos:
-      - logo: firefly.svg
-        link: https://www.gofirefly.io/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
-      - logo: klotho.svg
-        link: https://klo.dev/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
-      - logo: nitric.png
-        link: https://nitric.io/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
+      - logo: 1password.png
+        link: https://1password.com/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
+      - logo: dagger.png
+        link: https://dagger.io/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
+      - logo: pinecone.png
+        link: https://www.pinecone.io/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
       - logo: new-relic.png
         link: https://developer.newrelic.com/pulumi/get-started-pulumi/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
     - logos:
       - logo: equinix.png
         link: https://www.equinix.com/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
-      - logo: port.png
-        link: https://www.getport.io/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
       - logo: circleci.png
         link: https://circleci.com/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
       - logo: nginx.png
