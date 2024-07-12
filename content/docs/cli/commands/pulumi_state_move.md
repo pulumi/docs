@@ -1,32 +1,33 @@
 ---
-title: "pulumi state unprotect"
+title: "pulumi state move"
 aliases:
-  - /docs/reference/cli/pulumi_state_unprotect/
+  - /docs/reference/cli/pulumi_state_move/
 ---
 
 
 
-Unprotect resources in a stack's state
+Move resources from one stack to another
 
 ## Synopsis
 
-Unprotect resource in a stack's state
+Move resources from one stack to another
 
-This command clears the 'protect' bit on one or more resources, allowing those resources to be deleted.
+This command can be used to move resources from one stack to another. This can be useful when
+splitting a stack into multiple stacks or when merging multiple stacks into one.
 
-To see the list of URNs in a stack, use `pulumi stack --show-urns`.
 
 ```
-pulumi state unprotect [resource URN] [flags]
+pulumi state move [flags] <urn>...
 ```
 
 ## Options
 
 ```
-      --all            Unprotect all resources in the checkpoint
-  -h, --help           help for unprotect
-  -s, --stack string   The name of the stack to operate on. Defaults to the current stack
-  -y, --yes            Skip confirmation prompts
+      --dest string       The name of the stack to move resources to
+  -h, --help              help for move
+      --include-parents   Include all the parents of the moved resources as well
+      --source string     The name of the stack to move resources from
+  -y, --yes               Automatically approve and perform the move
 ```
 
 ## Options inherited from parent commands
