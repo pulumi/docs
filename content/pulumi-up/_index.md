@@ -254,19 +254,17 @@ customer_logos:
       - logo: microsoft.png
         link: http://azure.microsoft.com/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
     - logos:
-      - logo: firefly.svg
-        link: https://www.gofirefly.io/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
-      - logo: klotho.svg
-        link: https://klo.dev/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
-      - logo: nitric.png
-        link: https://nitric.io/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
+      - logo: 1password.png
+        link: https://1password.com/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
+      - logo: dagger.png
+        link: https://dagger.io/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
+      - logo: pinecone.png
+        link: https://www.pinecone.io/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
       - logo: new-relic.png
         link: https://developer.newrelic.com/pulumi/get-started-pulumi/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
     - logos:
       - logo: equinix.png
         link: https://www.equinix.com/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
-      - logo: port.png
-        link: https://www.getport.io/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
       - logo: circleci.png
         link: https://circleci.com/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
       - logo: nginx.png
