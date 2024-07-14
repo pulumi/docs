@@ -211,10 +211,21 @@ public class MyStack : Stack
 
     private static ResourceTransformationResult? MyTransformation(ResourceTransformationArgs args)
     {
-        // ...
+        var tagProperty = args.Args.GetType().GetProperty("Tags");
+        if (tagProperty != null) {
+            var currentResourceTags = (InputMap<string>)tagProperty.GetValue(args.Args, null) ?? new InputMap<string>();
+            currentResourceTags["env"] = "production";
+            tagProperty.SetValue(args.Args, currentResourceTags, null);
+            return new ResourceTransformationResult(args.Args, (CustomResourceOptions)args.Options);
+        }
+        return null;
     }
 }
 ```
+
+{{% notes type="warning" %}}
+It is not currently possible to use stack level transformations in .NET when using a top-level async program. We have an [open issue](https://github.com/pulumi/pulumi-dotnet/issues/202) regarding this feature that you can follow to find out more information.
+{{% /notes %}}
 
 {{% /choosable %}}
 {{% choosable language java %}}
