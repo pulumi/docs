@@ -63,8 +63,6 @@ We are excited to announce the kickoff of the Platform Engineering & DevOps Seri
 
 <!--more-->
 
-RSVP is required due to limited capacity. Secure your spot by visiting the Boston Meetup page. We look forward to seeing you there!
-
 ## Upcoming In-Person Events:
 
 Pulumi is hosting in-person meetups and virtual workshops for engineers interested in Platform Engineering and DevOps experts. Join us for tech talks, hands-on workshops, and opportunities to network with industry peers. See you there!
