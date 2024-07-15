@@ -80,9 +80,9 @@ All other in-person events are yet to be scheduled, so stay tuned for more updat
 
 ### Second In-Person Event: Boston, July 24
 
-Join Pulumi's founder & CEO, [Joe Duffy](https://www.linkedin.com/in/joejduffy/), and [Jamie Baldanza](https://www.linkedin.com/in/jbaldanza/), Director of DevOps at Relay Therapeutics, for the launch of our Boston meetup. This is a great opportunity for DevOps engineers, platform engineers, software engineers and Cloud enthusiasts to connect and share insights.
+Join Pulumi's founder & CEO, [Joe Duffy](https://www.linkedin.com/in/joejduffy/), and [Jamie Baldanza](https://www.linkedin.com/in/jbaldanza/), Director of DevOps at Relay Therapeutics, for the launch of our Boston meetup. This is a great opportunity for DevOps engineers, platform engineers, software engineers, and Cloud enthusiasts to connect and share insights.
 
-RSVP is required due to limited capacity. Secure your spot, and RSVP at the [Boston Meetup page](https://www.meetup.com/boston-pulumi-user-group/events/301985583/). 
+RSVP is required due to limited capacity. Secure your spot, and RSVP at the [Boston Meetup page](https://www.meetup.com/boston-pulumi-user-group/events/301985583/).
 
 Details for the other in-person events will be coming soon, so stay tuned for more updates at [Platform Engineering & DevOps Series](https://info.pulumi.com/platform-engineering-devops-series).
 
