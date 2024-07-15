@@ -59,20 +59,20 @@ social:
 # for details, and please remove these comments before submitting for review.
 ---
 
-We are excited to announce the kickoff of the Platform Engineering & DevOps Series, which will run from July 16 to October 31. This series will feature in-person events across various cities, including Berlin, London, Paris, Sydney, Boston, San Francisco, Seattle, Austin, Denver, and NYC. For those unable to attend an in-person event, we encourage you to participate in a DevOps & Platform Engineering virtual workshop.
+We are excited to announce the kickoff of the Platform Engineering & DevOps Series, which will run from July 16 to October 31. This series will feature in-person events across various cities, including Berlin, London, Paris, Sydney, Boston, San Francisco, Seattle, Austin, Denver, and NYC. For those unable to attend an in-person event, we encourage you to participate in a virtual DevOps & Platform Engineering workshop.
 
 <!--more-->
 
 ## Upcoming In-Person Events
 
-Pulumi is hosting in-person meetups and virtual workshops for engineers interested in Platform Engineering and DevOps experts. Join us for tech talks, hands-on workshops, and opportunities to network with industry peers. See you there!
+Pulumi is hosting in-person meetups and virtual workshops for engineers interested in Platform Engineering and DevOps, covering topics from best practices to setup and implementation to advanced topics. Join us for tech talks, hands-on workshops, and opportunities to network with industry peers.
 
 ### First Platform Engineering & DevOps in-person event: Berlin - July 16
 
 Join [Dominik Kress](https://www.linkedin.com/in/dominik-kress-33a540174/) (Product Manager at Giant Swarm and member of the CNCF Platforms Working Group) and [Guy Menahem](https://www.linkedin.com/in/guy-menahem/) (Solutions Architect at Komodor and community leader at The Platformers) at LOBE Block for an engaging discussion on platform engineering.
 
-- Dominik Kress: What the Heck is the CNCF Platform Working Group? Answers from a Member!
-- Guy Menahem: For This Backstage, You Don’t Need a Special Pass: Platform Engineering in Practice
+- Dominik Kress will present "What the Heck is the CNCF Platform Working Group? Answers from a Member!"
+- Guy Menahem will present "For This Backstage, You Don’t Need a Special Pass: Platform Engineering in Practice."
 
 For more details and to RSVP, visit the [Berlin Meetup page](https://www.meetup.com/berlin-pulumi-user-group/events/301456990/).
 
@@ -96,4 +96,5 @@ No upcoming in-person events in your area? Attend one of our virtual workshops a
 - **Advanced CI/CD for AWS using Pulumi and GitHub Actions**: August 14. Learn more and [register here](https://www.pulumi.com/resources/advanced-cicd-aws-pulumi-github-actions/).
 - **Mastering Platform Engineering: From Setup to Scaling Success**: TBD. Learn more and register here.
 
-Join us for tech talks, hands-on workshops, and opportunities to network with industry peers. We look forward to meeting you in-person or virtually.
+Join us for tech talks, hands-on workshops, and opportunities to network with industry peers. We are excited to meet you in person or virtually.
+See you there!
