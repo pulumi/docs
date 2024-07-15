@@ -88,7 +88,7 @@ RSVP is required due to limited capacity. Secure your spot, and RSVP at the [Bos
 
 Details for the other in-person events will be coming soon, so stay tuned for more updates at [Platform Engineering & DevOps Series](https://info.pulumi.com/platform-engineering-devops-series).
 
-No in-person events in your area? Attend one of our virtual workshops and keep up with the latest in DevOps & Platform Engineering!
+**No in-person events in your area? Attend one of our virtual workshops and keep up with the latest in DevOps & Platform Engineering!**
 
 ### Virtual Workshops
 
