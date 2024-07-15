@@ -162,210 +162,6 @@ The following short video illustrates the `pulumi import` process end to end:
 
 {{< youtube "6qHVbu8vb4w" >}}
 
-## Importing resources in code
-
-Another way to import existing cloud resources into a Pulumi project is in code, using the [`import` resource option](/docs/concepts/options/import/). This approach involves writing the code to define the resource yourself, which may be preferable in scenarios that call for importing multiple resources of the same type across multiple stacks and/or deployment environments.
-
-Code-based import also differs from the CLI-based approach in that it doesn't imperatively modify the state of the current stack. Whereas running `pulumi import` with the CLI adds imported resources to your stack state directly, using the `import` resource option delegates that responsibility to the program to be handled as part of the normal infrastructure lifecycle --- for example, on the next `pulumi up`.
-
-### Example
-
-The following example imports an existing AWS EC2 security group with an assigned cloud provider ID of `sg-04aeda9a214730248`:
-
-{{< chooser language "javascript,typescript,python,go,csharp" >}}
-
-{{% choosable language javascript %}}
-
-```javascript
-const aws = require("@pulumi/aws");
-
-const group = new aws.ec2.SecurityGroup("my-sg", {
-    name: "my-sg-62a569b",
-    ingress: [{
-        protocol: "tcp",
-        fromPort: 80,
-        toPort: 80,
-        cidrBlocks: ["0.0.0.0/0"]
-    }],
-}, {
-    import: "sg-04aeda9a214730248"
-});
-```
-
-{{% /choosable %}}
-{{% choosable language typescript %}}
-
-```typescript
-import * as aws from "@pulumi/aws";
-
-const group = new aws.ec2.SecurityGroup("my-sg", {
-    name: "my-sg-62a569b",
-    ingress: [{
-        protocol: "tcp",
-        fromPort: 80,
-        toPort: 80,
-        cidrBlocks: ["0.0.0.0/0"]
-    }],
-}, {
-    import: "sg-04aeda9a214730248"
-});
-```
-
-{{% /choosable %}}
-{{% choosable language python %}}
-
-```python
-# IMPORTANT: Python appends an underscore (`import_`) to avoid conflicting with the keyword.
-
-import pulumi_aws as aws
-from pulumi import ResourceOptions
-
-group = aws.ec2.SecurityGroup('my-sg',
-    name='my-sg-62a569b',
-    description='Enable HTTP access',
-    ingress=[
-        { 'protocol': 'tcp', 'from_port': 80, 'to_port': 80, 'cidr_blocks': ['0.0.0.0/0'] }
-    ],
-    opts=ResourceOptions(import_='sg-04aeda9a214730248'))
-```
-
-{{% /choosable %}}
-{{% choosable language go %}}
-
-```go
-group, err := ec2.NewSecurityGroup(ctx, "web-sg",
-    &ec2.SecurityGroupArgs{
-        Name:        pulumi.String("web-sg-62a569b"),
-        Description: pulumi.String("Enable HTTP access"),
-        Ingress: ec2.SecurityGroupIngressArray{
-            ec2.SecurityGroupIngressArgs{
-                Protocol:   pulumi.String("tcp"),
-                FromPort:   pulumi.Int(80),
-                ToPort:     pulumi.Int(80),
-                CidrBlocks: pulumi.StringArray{pulumi.String("0.0.0.0/0")},
-            },
-        },
-    },
-    pulumi.Import(pulumi.ID("sg-04aeda9a214730248")),
-)
-if err != nil {
-    return err
-}
-```
-
-{{% /choosable %}}
-{{% choosable language csharp %}}
-
-```csharp
-var group = new SecurityGroup("my-sg",
-    new SecurityGroupArgs {
-        Name = "my-sg-62a569b",
-        Description = "Enable HTTP access",
-        Ingress = {
-            new SecurityGroupIngressArgs {
-                Protocol = "tcp",
-                FromPort = 80,
-                ToPort = 80,
-                CidrBlocks = { "0.0.0.0/0" }
-            }
-        }
-    },
-    new CustomResourceOptions {
-        ImportId = "sg-04aeda9a214730248"
-    }
-);
-```
-
-{{% /choosable %}}
-
-{{< /chooser >}}
-
-When Pulumi encounters a resource with the `import` option set, it looks up the resource in the cloud provider using the specified ID, where the ID value corresponds to the resource's [designated lookup property](#where-to-find). On the next `pulumi up`, if the resource is found, you'll notice an `=` symbol beside the resource indicating that it'll be imported:
-
-```
-$ pulumi up
-Previewing update (dev):
-
-     Type                       Name              Plan
-     pulumi:pulumi:Stack        dev
- =   └─ aws:ec2:SecurityGroup   my-sg             import
-
-Resources:
-    = 1 to import
-    1 unchanged
-```
-
-If the resource isn't found, the preview will fail:
-
-```
-error: Preview failed: importing sg-04aeda9a214730248: security group not found
-```
-
-After successfully importing a resource, you can delete the `import` option if you like, then re-run `pulumi up`, and all subsequent operations will now behave as though Pulumi had provisioned the imported resource from the outset.
-
-Be aware this applies to `destroy` operations also. Once an imported resource has been brought under management with Pulumi, destroying its containing stack will delete the imported resource as well in the usual way. If you wish to ensure that an imported resource survives through `pulumi destroy`, consider using the [`retainOnDelete`](/docs/concepts/options/protect/) resource option.
-
-### Mismatched state
-
-An important part of importing resources using the `import` resource option is that the resulting Pulumi program, after the import is complete, will faithfully generate the same desired state as your existing infrastructure's actual state. After the import, you may edit your program to generate and apply new desired states to update your infrastructure.
-
-Because of this, all properties need to be fully specified. If you forget to specify a property, or that property's value is incorrect, you'll first receive a warning during preview, and then an error during the actual import update.
-
-For instance, keeping with the example above, if you'd specified the wrong `ingress` rule by choosing port `22` instead of port `80`, you'd see a warning:
-
-```
-$ pulumi preview
-Previewing update (dev):
-     Type                      Name        Plan       Info
-     pulumi:pulumi:Stack       dev
- =   └─ aws:ec2:SecurityGroup  my-sg       import     [diff: ~ingress]; 1 warning
-
-Diagnostics:
-  aws:ec2:SecurityGroup (my-sg):
-    warning: imported resource sg-04aeda9a214730248's property 'ingress'
-             does not match the existing value; importing this resource
-             will fail
-```
-
-To see details on what specifically didn't match, you can select the `details` option:
-
-```
-+ pulumi:pulumi:Stack: (create)
-    [urn=urn:pulumi:dev::import::pulumi:pulumi:Stack::dev]
-    = aws:ec2/securityGroup:SecurityGroup: (import)
-        [id=sg-0d188488272df7df8]
-        [urn=urn:pulumi:dev::import::aws:ec2/securityGroup:SecurityGroup::my-sg]
-        [provider=urn:pulumi:dev::import::pulumi:providers:aws::default_1_22_0::04da6b54-80e4-46f7-96ec-b56ff0331ba9]
-      ~ ingress: [
-          ~ [0]: {
-                  ~ cidrBlocks : [
-                      ~ [0]: "0.0.0.0/0" => "0.0.0.0/0"
-                    ]
-                  - description: ""
-                  ~ fromPort   : 80 => 22
-                  ~ protocol   : "tcp" => "tcp"
-                  ~ self       : false => false
-                  ~ toPort     : 80 => 22
-                }
-        ]
-```
-
-Attempting to proceed will fail completely with an error:
-
-```
-Diagnostics:
-  pulumi:pulumi:Stack (dev):
-    error: update failed
-
-  aws:ec2:SecurityGroup (my-sg):
-    error: imported resource sg-04aeda9a214730248's property 'ingress'
-           does not match the existing value
-```
-
-{{% notes type="info" %}}
-Because of [auto-naming](/docs/concepts/resources/#autonaming), it's easy to get into a situation where names don't match. For example, in the earlier example, if you'd left off the security group's `name`, `my-sg-62a569b`, Pulumi would auto-name the resource by default, leading to an error: `imported resource sg-04aeda9a214730248's property 'name' does not match the existing value`. To fix this problem, make sure to specify the names of all resources explicitly, using [Pulumi configuration](/docs/concepts/config/) where necessary to handle naming conflicts across multiple stacks.
-{{% /notes %}}
-
 ## Bulk Import Operations
 
 If you need to import multiple resources, the CLI `import` command can be used with a JSON file that contains references to existing cloud resources. Using a JSON file with the `import` command can be helpful as part of scripting large bulk imports of cloud resources.
@@ -656,4 +452,252 @@ A `Resource` has the following schema:
 | `component`  | `boolean`       | No       | This import should create an empty component resource. `id` must not be set if this is `true`.                                                                 |
 | `remote`     | `boolean`       | No       | This is a component in a [component package](/docs/using-pulumi/pulumi-packages/#types-of-pulumi-packages). `component` must be `true` if this is `true`.      |
 
-To make it easier to import resources into complex programs and/or components, you can run `pulumi preview --import-file <file>` to generate a placeholder import file for every resource that would be created. The generated file will contain all the names, URNs, and types already filled in, with blank `id` fields that need to be filled in.
+To make it easier to import resources into complex programs, you can run `pulumi preview --import-file <file>` to generate a placeholder import file for every resource that would be created. The generated file will contain all the names, URNs, and types already filled in, with blank `id` fields that need to be filled in.
+
+### Example: Import a component with all resources
+
+In this example, the Pulumi program defines a VPC component from the AWS Crosswalk for Pulumi library. The component is imported into the program using the `pulumi import` command.
+
+The following code creates a new VPC using all default settings:
+
+{{< example-program path="awsx-vpc" >}}
+
+Here is how you can import your existing infrastructure to start managing it with Pulumi:
+
+1. `pulumi preview --import-file import.json` to generate a placeholder import file for every resource that would be created. The resulting `import.json` file will look like this:
+
+    ```json
+    {
+        "resources": [
+            {
+                "type": "awsx:ec2:Vpc",
+                "name": "vpc",
+                "component": true
+            },
+            {
+                "type": "aws:ec2/vpc:Vpc",
+                "name": "vpcVpc",
+                "id": "<PLACEHOLDER>",
+                "parent": "vpc",
+                "logicalName": "vpc"
+            },
+            //... more resources
+        ]
+    }
+    ```
+
+    Note that the component is defined as a separate resource, and all `parent` values are set according to the preview.
+
+2. Edit the JSON file to replace all `<PLACEHOLDER>` values with existing resource IDs from your AWS account.
+
+3. Import all the resources in one operation with:
+
+    ```
+    pulumi import --file import.json
+    ```
+
+The same approach can be used to import any component resource and its sub-resources.
+
+## Importing resources in code
+
+Another way to import existing cloud resources into a Pulumi project is in code, using the [`import` resource option](/docs/concepts/options/import/). This approach involves writing the code to define the resource yourself, which may be preferable in scenarios that call for importing multiple resources of the same type across multiple stacks and/or deployment environments.
+
+Code-based import also differs from the CLI-based approach in that it doesn't imperatively modify the state of the current stack. Whereas running `pulumi import` with the CLI adds imported resources to your stack state directly, using the `import` resource option delegates that responsibility to the program to be handled as part of the normal infrastructure lifecycle --- for example, on the next `pulumi up`.
+
+### Example
+
+The following example imports an existing AWS EC2 security group with an assigned cloud provider ID of `sg-04aeda9a214730248`:
+
+{{< chooser language "javascript,typescript,python,go,csharp" >}}
+
+{{% choosable language javascript %}}
+
+```javascript
+const aws = require("@pulumi/aws");
+
+const group = new aws.ec2.SecurityGroup("my-sg", {
+    name: "my-sg-62a569b",
+    ingress: [{
+        protocol: "tcp",
+        fromPort: 80,
+        toPort: 80,
+        cidrBlocks: ["0.0.0.0/0"]
+    }],
+}, {
+    import: "sg-04aeda9a214730248"
+});
+```
+
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
+```typescript
+import * as aws from "@pulumi/aws";
+
+const group = new aws.ec2.SecurityGroup("my-sg", {
+    name: "my-sg-62a569b",
+    ingress: [{
+        protocol: "tcp",
+        fromPort: 80,
+        toPort: 80,
+        cidrBlocks: ["0.0.0.0/0"]
+    }],
+}, {
+    import: "sg-04aeda9a214730248"
+});
+```
+
+{{% /choosable %}}
+{{% choosable language python %}}
+
+```python
+# IMPORTANT: Python appends an underscore (`import_`) to avoid conflicting with the keyword.
+
+import pulumi_aws as aws
+from pulumi import ResourceOptions
+
+group = aws.ec2.SecurityGroup('my-sg',
+    name='my-sg-62a569b',
+    description='Enable HTTP access',
+    ingress=[
+        { 'protocol': 'tcp', 'from_port': 80, 'to_port': 80, 'cidr_blocks': ['0.0.0.0/0'] }
+    ],
+    opts=ResourceOptions(import_='sg-04aeda9a214730248'))
+```
+
+{{% /choosable %}}
+{{% choosable language go %}}
+
+```go
+group, err := ec2.NewSecurityGroup(ctx, "web-sg",
+    &ec2.SecurityGroupArgs{
+        Name:        pulumi.String("web-sg-62a569b"),
+        Description: pulumi.String("Enable HTTP access"),
+        Ingress: ec2.SecurityGroupIngressArray{
+            ec2.SecurityGroupIngressArgs{
+                Protocol:   pulumi.String("tcp"),
+                FromPort:   pulumi.Int(80),
+                ToPort:     pulumi.Int(80),
+                CidrBlocks: pulumi.StringArray{pulumi.String("0.0.0.0/0")},
+            },
+        },
+    },
+    pulumi.Import(pulumi.ID("sg-04aeda9a214730248")),
+)
+if err != nil {
+    return err
+}
+```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
+```csharp
+var group = new SecurityGroup("my-sg",
+    new SecurityGroupArgs {
+        Name = "my-sg-62a569b",
+        Description = "Enable HTTP access",
+        Ingress = {
+            new SecurityGroupIngressArgs {
+                Protocol = "tcp",
+                FromPort = 80,
+                ToPort = 80,
+                CidrBlocks = { "0.0.0.0/0" }
+            }
+        }
+    },
+    new CustomResourceOptions {
+        ImportId = "sg-04aeda9a214730248"
+    }
+);
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
+When Pulumi encounters a resource with the `import` option set, it looks up the resource in the cloud provider using the specified ID, where the ID value corresponds to the resource's [designated lookup property](#where-to-find). On the next `pulumi up`, if the resource is found, you'll notice an `=` symbol beside the resource indicating that it'll be imported:
+
+```
+$ pulumi up
+Previewing update (dev):
+
+     Type                       Name              Plan
+     pulumi:pulumi:Stack        dev
+ =   └─ aws:ec2:SecurityGroup   my-sg             import
+
+Resources:
+    = 1 to import
+    1 unchanged
+```
+
+If the resource isn't found, the preview will fail:
+
+```
+error: Preview failed: importing sg-04aeda9a214730248: security group not found
+```
+
+After successfully importing a resource, you can delete the `import` option if you like, then re-run `pulumi up`, and all subsequent operations will now behave as though Pulumi had provisioned the imported resource from the outset.
+
+Be aware this applies to `destroy` operations also. Once an imported resource has been brought under management with Pulumi, destroying its containing stack will delete the imported resource as well in the usual way. If you wish to ensure that an imported resource survives through `pulumi destroy`, consider using the [`retainOnDelete`](/docs/concepts/options/protect/) resource option.
+
+### Mismatched state
+
+An important part of importing resources using the `import` resource option is that the resulting Pulumi program, after the import is complete, will faithfully generate the same desired state as your existing infrastructure's actual state. After the import, you may edit your program to generate and apply new desired states to update your infrastructure.
+
+Because of this, all properties need to be fully specified. If you forget to specify a property, or that property's value is incorrect, you'll first receive a warning during preview, and then an error during the actual import update.
+
+For instance, keeping with the example above, if you'd specified the wrong `ingress` rule by choosing port `22` instead of port `80`, you'd see a warning:
+
+```
+$ pulumi preview
+Previewing update (dev):
+     Type                      Name        Plan       Info
+     pulumi:pulumi:Stack       dev
+ =   └─ aws:ec2:SecurityGroup  my-sg       import     [diff: ~ingress]; 1 warning
+
+Diagnostics:
+  aws:ec2:SecurityGroup (my-sg):
+    warning: imported resource sg-04aeda9a214730248's property 'ingress'
+             does not match the existing value; importing this resource
+             will fail
+```
+
+To see details on what specifically didn't match, you can select the `details` option:
+
+```
++ pulumi:pulumi:Stack: (create)
+    [urn=urn:pulumi:dev::import::pulumi:pulumi:Stack::dev]
+    = aws:ec2/securityGroup:SecurityGroup: (import)
+        [id=sg-0d188488272df7df8]
+        [urn=urn:pulumi:dev::import::aws:ec2/securityGroup:SecurityGroup::my-sg]
+        [provider=urn:pulumi:dev::import::pulumi:providers:aws::default_1_22_0::04da6b54-80e4-46f7-96ec-b56ff0331ba9]
+      ~ ingress: [
+          ~ [0]: {
+                  ~ cidrBlocks : [
+                      ~ [0]: "0.0.0.0/0" => "0.0.0.0/0"
+                    ]
+                  - description: ""
+                  ~ fromPort   : 80 => 22
+                  ~ protocol   : "tcp" => "tcp"
+                  ~ self       : false => false
+                  ~ toPort     : 80 => 22
+                }
+        ]
+```
+
+Attempting to proceed will fail completely with an error:
+
+```
+Diagnostics:
+  pulumi:pulumi:Stack (dev):
+    error: update failed
+
+  aws:ec2:SecurityGroup (my-sg):
+    error: imported resource sg-04aeda9a214730248's property 'ingress'
+           does not match the existing value
+```
+
+{{% notes type="info" %}}
+Because of [auto-naming](/docs/concepts/resources/#autonaming), it's easy to get into a situation where names don't match. For example, in the earlier example, if you'd left off the security group's `name`, `my-sg-62a569b`, Pulumi would auto-name the resource by default, leading to an error: `imported resource sg-04aeda9a214730248's property 'name' does not match the existing value`. To fix this problem, make sure to specify the names of all resources explicitly, using [Pulumi configuration](/docs/concepts/config/) where necessary to handle naming conflicts across multiple stacks.
+{{% /notes %}}
