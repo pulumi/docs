@@ -490,11 +490,11 @@ Here is how you can import your existing infrastructure to start managing it wit
 
 2. Edit the JSON file to replace all `<PLACEHOLDER>` values with existing resource IDs from your AWS account.
 
-3. Import all the resources in one operation with
+3. Import all the resources in one operation with:
 
-```
-pulumi import --file import.json
-```
+    ```
+    pulumi import --file import.json
+    ```
 
 The same approach can be used to import any component resource and its sub-resources.
 
