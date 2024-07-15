@@ -29,6 +29,7 @@ aliases:
         "#provider": "/docs/concepts/options/provider",
         "#replaceonchanges": "/docs/concepts/options/replaceonchanges",
         "#transformations": "/docs/concepts/options/transformations",
+        "#transforms": "/docs/concepts/options/transforms",
         "#version": "/docs/concepts/options/version",
         "#components": "/docs/concepts/resources/components",
         "#authoring-a-new-component-resource": "/docs/concepts/resources/components/#authoring-a-new-component-resource",
