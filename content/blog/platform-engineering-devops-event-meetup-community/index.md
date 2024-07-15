@@ -17,7 +17,7 @@ draft: false
 # of the content of the post, which is useful for targeting search results or
 # social-media previews. This field is required or the build will fail the
 # linter test. Max length is 160 characters.
-meta_desc:
+meta_desc: Join the Platform Engineering & DevOps Series! In-person events & virtual workshops from July 16 to Oct 31 in cities worldwide. Learn, network, and innovate!
 
 # The meta_image appears in social-media previews and on the blog home page. A
 # placeholder image representing the recommended format, dimensions and aspect
@@ -52,8 +52,8 @@ tags:
 # https://twitter.com/PulumiCorp/status/1755637618631405655
 
 social:
-    twitter:
-    linkedin:
+    twitter: Join the Platform Engineering & DevOps Series! In-person events & virtual workshops from July 16 to Oct 31 in cities worldwide. Learn, network, and innovate!
+    linkedin: Join the Platform Engineering & DevOps Series! In-person events & virtual workshops from July 16 to Oct 31 in cities worldwide. Learn, network, and innovate!
 
 # See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md
 # for details, and please remove these comments before submitting for review.
