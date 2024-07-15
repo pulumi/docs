@@ -12,10 +12,10 @@ aliases:
     - /pulumiup
 
 confirmed_speakers:
-    - name: Dax Road
+    - name: Dax Raad
       title: Founding Engineer
       company: SST
-      image: /images/pulumiup-2023/2024-speakers/dax-road.png
+      image: /images/pulumiup-2023/2024-speakers/dax-raad.png
     - name: Jeremy Adams
       title: Head of Ecosystems
       company: Dagger
