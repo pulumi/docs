@@ -1,5 +1,5 @@
 ---
-title: "Platform Engineering Devops Event Meetup Community"
+title: "Platform Engineering & DevOps Series Kickoff Announcement"
 
 # The date represents the post's publish date, and by default corresponds with
 # the date and time this file was generated. Dates are used for display and
@@ -28,11 +28,15 @@ meta_image: meta.png
 # `id` properties of the team member files at /data/team/team. Create a file for
 # yourself if you don't already have one.
 authors:
-    - joe-duffy
+    - sara-huddleston
 
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
-    - change-me
+    - developer-experience-devex
+    - devops
+    - platform-engineering
+    - community
+    - pulumi-events
 
 
 # The social copy used to promote this post on Twitter and Linkedin. These
@@ -55,31 +59,42 @@ social:
 # for details, and please remove these comments before submitting for review.
 ---
 
-What you put here will appear on the index page. In most cases, you'll also want to add a Read More link after this paragraph (though technically, that's optional. To do that, just add an HTML comment like the one below.
+We are excited to announce the kickoff of the Platform Engineering & DevOps Series, which will run from July 16 to October 31. This series will feature in-person events across various cities, including Berlin, London, Paris, Sydney, Boston, San Francisco, Seattle, Austin, Denver, and NYC. For those unable to attend an in-person event, we encourage you to participate in a DevOps & Platform Engineering virtual workshop.
 
 <!--more-->
 
-And then everything _after_ that comment will appear on the post page itself.
+RSVP is required due to limited capacity. Secure your spot by visiting the Boston Meetup page. We look forward to seeing you there!
 
-Either way, avoid using images or code samples [in the first 70 words](https://gohugo.io/content-management/summaries/#automatic-summary-splitting) of your post, as these may not render properly in summary contexts (e.g., on the blog home page or in social-media previews).
+## Upcoming In-Person Events:
 
-## Writing the Post
+Pulumi is hosting in-person meetups and virtual workshops for engineers interested in Platform Engineering and DevOps experts. Join us for tech talks, hands-on workshops, and opportunities to network with industry peers. See you there!
 
-For help assembling the content of your post, see [BLOGGING.md](https://github.com/pulumi/docs/blob/master/BLOGGING.md). For general formatting guidelines, see the [Style Guide](https://github.com/pulumi/docs/blob/master/STYLE-GUIDE.md).
+### First Platform Engineering & DevOps in-person event: Berlin - July 16
 
-## Code Samples
+Join [Dominik Kress](https://www.linkedin.com/in/dominik-kress-33a540174/) (Product Manager at Giant Swarm and member of the CNCF Platforms Working Group) and [Guy Menahem](https://www.linkedin.com/in/guy-menahem/) (Solutions Architect at Komodor and community leader at The Platformers) at Lobe Block for an engaging discussion on platform engineering.
 
-```typescript
-let bucket = new aws.s3.Bucket("stuff");
-...
-```
+- Dominik Kress: What the Heck is the CNCF Platform Working Group? Answers from a Member!
+- Guy Menahem: For This Backstage, You Don’t Need a Special Pass: Platform Engineering in Practice
 
-## Images
+For more details and to RSVP, visit the [Berlin Meetup page](https://www.meetup.com/berlin-pulumi-user-group/events/301456990/).
 
-![Placeholder Image](meta.png)
+All other in-person events are yet to be scheduled, so stay tuned for more updates.
 
-## Videos
+### Second In-Person Event: Boston, July 24
 
-{{< youtube "kDB-YRKFfYE?rel=0" >}}
+Join Pulumi's founder & CEO, [Joe Duffy](https://www.linkedin.com/in/joejduffy/), and [Jamie Baldanza](https://www.linkedin.com/in/jbaldanza/), Director of DevOps at Relay Therapeutics, for the launch of our Boston meetup. This is a great opportunity for DevOps engineers, platform engineers, software engineers and Cloud enthusiasts to connect and share insights.
 
-Note the `?rel=0` param, which tells YouTube to suggest only videos from same channel.
+RSVP is required due to limited capacity. Secure your spot, and RSVP at the [Boston Meetup page](https://www.meetup.com/boston-pulumi-user-group/events/301985583/). 
+
+Details for the other in-person events will be coming soon, so stay tuned for more updates at [Platform Engineering & DevOps Series](https://info.pulumi.com/platform-engineering-devops-series).
+
+No in-person events in your area? Attend one of our virtual workshops and keep up with the latest in DevOps & Platform Engineering!
+
+### Virtual Workshops
+
+- **Getting Started with CI/CD for AWS using GitHub Actions**: July 17. Learn more and [register here](https://www.pulumi.com/resources/getting-started-with-ci-cd-aws-pulumi-github-actions/).
+- **From Zero to Production in Kubernetes**: July 25. Learn more and [register here](https://www.pulumi.com/resources/from-zero-to-production-in-kubernetes/).
+- **Advanced CI/CD for AWS using Pulumi and GitHub Actions**: August 14. Learn more and [register here](https://www.pulumi.com/resources/advanced-cicd-aws-pulumi-github-actions/).
+- **Mastering Platform Engineering: From Setup to Scaling Success**: TBD. Learn more and register here.
+
+Join us for tech talks, hands-on workshops, and opportunities to network with industry peers. We look forward to meeting you in-person or virtually.
