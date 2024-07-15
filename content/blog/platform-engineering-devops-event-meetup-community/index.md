@@ -63,30 +63,31 @@ We are excited to announce the kickoff of the Platform Engineering & DevOps Seri
 
 <!--more-->
 
-## Upcoming In-Person Events:
+## Upcoming In-Person Events
 
 Pulumi is hosting in-person meetups and virtual workshops for engineers interested in Platform Engineering and DevOps experts. Join us for tech talks, hands-on workshops, and opportunities to network with industry peers. See you there!
 
 ### First Platform Engineering & DevOps in-person event: Berlin - July 16
 
-Join [Dominik Kress](https://www.linkedin.com/in/dominik-kress-33a540174/) (Product Manager at Giant Swarm and member of the CNCF Platforms Working Group) and [Guy Menahem](https://www.linkedin.com/in/guy-menahem/) (Solutions Architect at Komodor and community leader at The Platformers) at Lobe Block for an engaging discussion on platform engineering.
+Join [Dominik Kress](https://www.linkedin.com/in/dominik-kress-33a540174/) (Product Manager at Giant Swarm and member of the CNCF Platforms Working Group) and [Guy Menahem](https://www.linkedin.com/in/guy-menahem/) (Solutions Architect at Komodor and community leader at The Platformers) at LOBE Block for an engaging discussion on platform engineering.
 
 - Dominik Kress: What the Heck is the CNCF Platform Working Group? Answers from a Member!
 - Guy Menahem: For This Backstage, You Don’t Need a Special Pass: Platform Engineering in Practice
 
 For more details and to RSVP, visit the [Berlin Meetup page](https://www.meetup.com/berlin-pulumi-user-group/events/301456990/).
 
-All other in-person events are yet to be scheduled, so stay tuned for more updates.
-
 ### Second In-Person Event: Boston, July 24
 
-Join Pulumi's founder & CEO, [Joe Duffy](https://www.linkedin.com/in/joejduffy/), and [Jamie Baldanza](https://www.linkedin.com/in/jbaldanza/), Director of DevOps at Relay Therapeutics, for the launch of our Boston meetup. This is a great opportunity for DevOps engineers, platform engineers, software engineers, and Cloud enthusiasts to connect and share insights.
+Join Pulumi's founder & CEO, [Joe Duffy](https://www.linkedin.com/in/joejduffy/), and [Jamie Baldanza](https://www.linkedin.com/in/jbaldanza/), Director of DevOps at Relay Therapeutics, for the launch of our Boston meetup at The Foundry. This is a great opportunity for DevOps engineers, platform engineers, software engineers, and Cloud enthusiasts to connect and share insights.
 
 RSVP is required due to limited capacity. Secure your spot, and RSVP at the [Boston Meetup page](https://www.meetup.com/boston-pulumi-user-group/events/301985583/).
 
+### More coming soon!
+
+We expected Seattle, Paris, and London's meetups to happen in early September.
 Details for the other in-person events will be coming soon, so stay tuned for more updates at [Platform Engineering & DevOps Series](https://info.pulumi.com/platform-engineering-devops-series).
 
-**No in-person events in your area? Attend one of our virtual workshops and keep up with the latest in DevOps & Platform Engineering!**
+No upcoming in-person events in your area? Attend one of our virtual workshops and keep up with the latest in DevOps & Platform Engineering!
 
 ### Virtual Workshops
 
