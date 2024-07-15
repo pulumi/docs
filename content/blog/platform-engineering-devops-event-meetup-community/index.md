@@ -65,7 +65,7 @@ We are excited to announce the kickoff of the Platform Engineering & DevOps Seri
 
 ## Upcoming In-Person Events
 
-Pulumi is hosting in-person meetups and virtual workshops for engineers interested in Platform Engineering and DevOps, covering topics from best practices to setup and implementation to advanced topics. Join us for tech talks, hands-on workshops, and opportunities to network with industry peers.
+Pulumi is hosting in-person meetups and virtual workshops for engineers interested in Platform Engineering and DevOps, covering topics from best practices to setup and implementation to advanced topics. Join us for tech talks, hands-on workshops, and opportunities to network with fellow engineers.
 
 ### First Platform Engineering & DevOps in-person event: Berlin - July 16
 
