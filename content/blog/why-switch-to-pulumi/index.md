@@ -53,7 +53,7 @@ So why should you switch to Pulumi? How is it different from other
 infrastructure as code tools? This post is intended to answer all those
 questions.
 
-# What is Pulumi?
+## What is Pulumi?
 
 Pulumi is an infrastructure as code platform that allows you to manage
 and scale infrastructure, configurations, policies, and secrets with
@@ -101,7 +101,7 @@ familiar GPT experience you know, love, and use daily, so
 you can find and take action on any resource in your cloud
 environments.
 
-## Ok, but why does this matter enough for me to switch?
+### Ok, but why does this matter enough for me to switch?
 
 Only you can answer that question, but there are some compelling reasons
 to adopt the platform trusted by hundreds of thousands of developers.
@@ -148,7 +148,13 @@ manual.
 *Pulumi uses software engineering to tackle the scale of infinite
 combinations.*
 
-# Frequently Asked Questions - Why Pulumi?
+{{% notes type="info" %}}
+Customers of Pulumi frequently experience 100% productivity increases, 99% time saved, and 10x acceleration when using Pulumi compared to what they were using before.
+
+![modern-benefits](modern-benefits.png)
+{{% /notes %}}
+
+## Frequently Asked Questions - Why Pulumi?
 
 Some frequently asked questions about why Pulumi based on use cases and
 alternatives. Choose your own adventure:
@@ -163,14 +169,14 @@ alternatives. Choose your own adventure:
     * [Why Pulumi vs. 3rd party IDP providers?](#why-pulumi-vs-3rd-party-idp-providers-think-port-cortex-backstage)
 * [How can I switch to Pulumi?](#how-can-i-switch-to-pulumi)
 
-## Why Pulumi, by use case?
+### Why Pulumi, by use case?
 
 There are many different use cases for why you might use Pulumi:
 infrastructure CICD, modern applications, internal developer platforms,
 AI/ML workloads, and infrastructure modernization. Below are more
 details on two popular use cases.
 
-### Why Pulumi for Internal Developer Platforms?
+#### Why Pulumi for Internal Developer Platforms?
 
 You and your team may build internal developer platforms (IDPs) as a way to
 maximize the use of the cloud at scale across the company while
@@ -254,7 +260,7 @@ vastly simpler.***
 
 [Read more >>](/product/internal-developer-platforms/)
 
-### Why Pulumi for AI Workloads?
+#### Why Pulumi for AI Workloads?
 
 Your company may be using AI as a way to increase innovation and reduce costs.
 AI gives them the ability to design richer and more intuitive interfaces
@@ -281,13 +287,13 @@ the cloud.***
 
 [Read more >>](/solutions/ai/)
 
-## Why is Pulumi better than the alternatives?
+### Why is Pulumi better than the alternatives?
 
 There are many different tools you can use to manage infrastructure. However, Pulumi provides
 you a more productive authoring experience and more power automations that will allow you to
 ship faster and manage the infinite scale of cloud infrastructure. Read on for how Pulumi compares to specific options: clickops, Terraform, CDK, and IDP services.
 
-### Why Pulumi vs. clickops?
+#### Why Pulumi vs. clickops?
 
 Manually provisioning and managing infrastructure for production via the
 cloud console (i.e., clickops) is a bad idea. There isn't repeatability
@@ -299,7 +305,7 @@ infrastructure with changes 100% automated.
 If you don't believe this, just ask any cloud or devops
 subreddit, Slack group, or Discord server.
 
-### Why Pulumi vs. Terraform?
+#### Why Pulumi vs. Terraform?
 
 Pulumi and Terraform are both infrastructure as code (IaC) platforms,
 however they have fundamental differences in how they approach your needs
@@ -367,7 +373,7 @@ scalability, and collaboration.
 
 [Read more >>](/docs/concepts/vs/terraform/)
 
-### Why Pulumi vs. AWS Cloud Development Kit (CDK)?
+#### Why Pulumi vs. AWS Cloud Development Kit (CDK)?
 
 Pulumi and CDK are similar in that both allow you to use programming
 languages to write infrastructure as code. However there are some key
@@ -404,7 +410,7 @@ differences:
 
 [Read more >>](/docs/concepts/vs/cloud-template-transpilers/aws-cdk/)
 
-### Why Pulumi vs. 3rd party IDP providers? (think: Port, Cortex, Backstage)
+#### Why Pulumi vs. 3rd party IDP providers? (think: Port, Cortex, Backstage)
 
 There are many third party providers of internal developer platforms.
 Some are services and others are open source software. These providers
@@ -435,7 +441,7 @@ questions, or talk to a Solutions Architect if you need more detailed
 consultation about your specific architecture.
 {{% /notes %}}
 
-## How can I switch to Pulumi?
+### How can I switch to Pulumi?
 
 Switching to Pulumi doesn't have to be intimidating. We've done this
 with thousands of customers before, and we can guide you through it.
