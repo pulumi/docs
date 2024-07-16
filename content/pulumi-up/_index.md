@@ -11,28 +11,6 @@ event_date: 2024-09-18T08:00:00-07:00
 aliases:
     - /pulumiup
 
-confirmed_speakers:
-    - name: Dax Raad
-      title: Founding Engineer
-      company: SST
-      image: /images/pulumiup-2023/2024-speakers/dax-raad.png
-    - name: Jeremy Adams
-      title: Head of Ecosystems
-      company: Dagger
-      image: /images/pulumiup-2023/2024-speakers/jeremy-adams.png
-    - name: Patty O'Callaghan
-      title: Technical Director
-      company: Charles River Laboratories
-      image: /images/pulumiup-2023/2024-speakers/patty-ocallaghan.jpeg
-    - name: James Clark
-      title: Principal Software Engineer
-      company: Docker
-      image: /images/pulumiup-2023/2024-speakers/james-clark.png
-    - name: Ash Martian
-      title: Data Engineer
-      company: CharacterStrong
-      image: /images/pulumiup-2023/2024-speakers/ash-martian.png
-
 panelists:
     - name: Luke Hoban
       image: /images/team/luke-hoban.jpg
@@ -101,64 +79,44 @@ why_attend:
       description: Meet peers, expand your industry and professional network. Participate in contests, share ideas and join Q&As
 
 speakers:
-  - name: Amanda Silver
-    image: /images/pulumiup-2023/speakers/amanda-silver.png
-    title: CVP Developer Tools
-    logo: /images/pulumiup-2023/speaker-logos/microsoft.svg
-    company: Microsoft
-  - name: Beyang Liu
-    image: /images/pulumiup-2023/speakers/beyang-liu.png
-    title: Co-Founder and CTO
-    logo: /images/pulumiup-2023/speaker-logos/sourcegraph.svg
-    company: Sourcegraph
-  - name: Sam Cogan
-    image: /images/pulumiup-2023/speakers/sam-cogan.png
-    title: Solution Architect
-    logo: /images/pulumiup-2023/speaker-logos/wtw.svg
-    company: Willis Towers Watson
-  - name: Tim Holm
-    image: /images/pulumiup-2023/speakers/tim-holm.png
-    title: Co-Founder and CTO
-    logo: /images/pulumiup-2023/speaker-logos/nitric.svg
-    company: Nitric
-  - name: Ala Shiban
-    image: /images/pulumiup-2023/speakers/ala-shiban.png
-    title: Co-Founder and CEO
-    logo: /images/pulumiup-2023/speaker-logos/klotho.svg
-    company: Klotho
-  - name: Sefi Genis
-    image: /images/pulumiup-2023/speakers/sefi-genis.png
-    title: Co-Founder and CTO
-    logo: /images/pulumiup-2023/speaker-logos/firefly.svg
-    company: Firefly
-  - name: Matt Stephenson
-    image: /images/pulumiup-2023/speakers/matt-stephenson.png
-    title: Sr. Principal Software Engineer
-    logo: /images/pulumiup-2023/speaker-logos/starburst.svg
-    company: Starburst
-  - name: Dennis Sauvé
-    image: /images/pulumiup-2023/speakers/dennis-sauve.png
-    title: DevOps Engineer
-    logo: /images/pulumiup-2023/speaker-logos/washington-trust-bank.svg
-    company: Washington Trust Bank
-  - name: Tyler Scheuble
-    image: /images/pulumiup-2023/speakers/tyler-scheuble.png
-    title: Head of Platform
-    logo: /images/pulumiup-2023/speaker-logos/people-data-labs.svg
-    company: People Data Labs
-  - name: Aaron Torres
-    image: /images/pulumiup-2023/speakers/aaron-torres.png
-    title: Co-Founder
-    logo: /images/pulumiup-2023/speaker-logos/klotho.svg
-    company: Klotho
+  - name: Dax Raad
+    image: /images/pulumiup-2023/2024-speakers/dax-raad.png
+    title: Founding Engineer
+    logo: /images/pulumiup-2023/speaker-logos/sst.png
+    company: SST
+  - name: Jeremy Adams
+    image: /images/pulumiup-2023/2024-speakers/jeremy-adams.png
+    title: Head of Ecosystems
+    logo: /images/pulumiup-2023/sponsors/dagger.png
+    company: Dagger
+  - name: Patty O'Callaghan
+    image: /images/pulumiup-2023/2024-speakers/patty-ocallaghan.jpeg
+    title: Technical Director
+    logo: /images/pulumiup-2023/speaker-logos/charles-river-laboratories.png
+    company: Charles River Laboratories
+  - name: Jim Clark
+    image: /images/pulumiup-2023/2024-speakers/james-clark.png
+    title: Principal Software Engineer
+    logo: /images/pulumiup-2023/speaker-logos/docker.png
+    company: Docker
+  - name: Ash Martian
+    image: /images/pulumiup-2023/2024-speakers/ash-martian.png
+    title: Data Engineer
+    logo: /images/pulumiup-2023/speaker-logos/characterstrong.png
+    company: CharacterStrong
+  - name: Jason Smith
+    image: /images/people/jay-smith.png
+    title: App Modernization Specialist
+    logo: /images/pulumiup-2023/sponsors/google-cloud.svg
+    company: Google
   - name: Meagan Cojocar
     image: /images/team/meagan-cojocar.jpg
     title: Principal Product Manager
     logo: /images/pulumiup-2023/speaker-logos/pulumi.svg
     company: Pulumi
-  - name: Zaid Ajaj
-    image: /images/team/zaid-ajaj.jpg
-    title: Software Engineer
+  - name: Arun Loganathan
+    image: /images/team/arun-loganathan.jpg
+    title: Sr. Product Manager
     logo: /images/pulumiup-2023/speaker-logos/pulumi.svg
     company: Pulumi
   - name: Joe Duffy
@@ -171,70 +129,42 @@ speakers:
     title: CTO
     logo: /images/pulumiup-2023/speaker-logos/pulumi.svg
     company: Pulumi
-  - name: Evan Boyle
-    image: /images/team/evan-boyle.jpg
-    title: Engineering Manager
-    logo: /images/pulumiup-2023/speaker-logos/pulumi.svg
-    company: Pulumi
 
 schedule:
-  heading: 2023 Schedule At A Glance
+  heading: Schedule At A Glance
   subheading: Get inspired! Dive into the stories and experiences of innovators and experts, from Startup Founders to Industry Leaders.
   items:
     - title: Opening Keynote, followed by new product launches and demos
-      description: |
-        Hear from Joe Duffy, co-founder and CEO of Pulumi, about the latest announcements in Pulumi and Infrastructure as Code. Watch demos by Luke Hoban, CTO & co-founder, Meagan Cojocar, Principal Product manager, and Evan Boyle, Engineering Manager.
+      description:
       time: "8:00 AM PT"
 
-    - title: Keeping your Infrastructure Code DRY
-      description: |
-        Sam Cogan, Solution Architect at Willis Towers Watson, will show how you can build a library of reusable modules that you can reuse over and over in your IaC projects. This is not just about boilerplate code, but real, usable modules that provide value to your whole team, help you comply with standards, and build infrastructure faster.
-      time: "8:40 AM PT"
-
-    - title: How a Bank Modernized its Software Engineering with Infrastructure as Code Automation
-      description: |
-        At financial institutions, data privacy and security aren't just best practices, they're Federal requirements. Join Dennis as he shares how Washington Trust Bank has modernized its software development and infrastructure practices since migrating to Azure and adopting infrastructure as code. He will cover how his team enables developers with infrastructure components, prevents developers from deploying forbidden resources with CrossGuard policies, and uses automation to save time and effort.
-      time: "9:00 AM PT"
-
-    - title: Creating a ‘Cloud-Aware’ Code Solution
-      description: |
-        Ala will share how Pulumi enables a new category of “cloud-aware” developer tools that leverage familiar programming languages and can lower barriers to entry to deploying cloud infrastructure for small teams that lack dedicated infrastructure experts. He’ll show how developers can easily create infrastructure from code using familiar languages and without having expertise with a given cloud provider. This enables rapid iteration on cloud applications for early-stage teams who are prototyping and iterating on new products.
-      time: "9:20 AM PT"
-
-    - title: Creating Infrastructure Automation Magic with Code
-      description: |
-        What happens when you combine the expressiveness and flexibility of programming with infrastructure as code automation? Magic. Join Matt as he demonstrates how Starburst uses Pulumi Automation API to increase the speed and accuracy of infrastructure operations (like blue-green deployments with Kubernetes clusters) with code. He will explain how Automation API has reduced complicated, unwieldy tasks into simpler tasks that are completely managed by code.
-      time: "9:40 AM PT"
-
-    - title: Break
+    - title: AI / ML Sessions
       description:
-      time: "10:00 AM PT"
+      time: "9:15 AM PT"
 
-    - title: Engineering a Multi-cloud Platform
-      description: |
-        Many teams invest considerable time in defining architectures unique to a cloud service provider - only to discover the need to support a different cloud provider due to regional availability requirements, mergers, or new supply chain restrictions. In this session, Tim Holm, CTO at Nitric, will introduce key concepts and challenges that every team must consider when planning for cloud-agnostic delivery including:
-        - Platform abstraction
-        - Developer experience
-        - Self-service Infrastructure
-        - Team productivity
-        Tim will also share how his team leveraged the Pulumi platform to build a cloud-agnostic toolset for developers.
-      time: "10:10 AM PT"
+    - title: "Panel: AI / ML"
+      description:
+      time: "11:00 AM PT"
 
-    - title: Using Monorepos to Level-up your Infrastructure as Code and Software Delivery
-      description: |
-        The way you structure your Pulumi projects and stacks in GitHub repositories can impact how well your organization ships infrastructure, especially when there are multiple teams of developers collaborating. Join Tyler as he shares best practices for using monorepos with Pulumi and how this pattern has supported his platform engineering team in delivering more efficient infrastructure deployments and updates, increased code sharing & reuse, and better collaboration.
-      time: "10:30 AM PT"
-      
-    - title: Lessons Learned from Writing Thousands of Lines of IaC
-      description: |
-        Immutable architecture is the backbone of infrastructure as code, to ensure production environments cannot be changed during runtime.  While this has the benefits of its inherent safety measures, this can also be restrictive.  This talk will focus on some of the fundamentals of immutable architecture, best practices and recommended design patterns to work around its limitations, as well as what you most certainly should not be doing when running immutable architecture.
+    - title: Platform Engineering & DevOps Sessions
+      description:
+      time: "11:45 AM PT"
 
-        This will be demonstrated through a real-world example of using Pulumi to deploy a single-tenant SaaS in an automated pipeline, typical challenges encountered, and what was learned on the way.
-      time: "10:50 AM PT"
-    - title: "Panel: AI and the Future of Cloud Development"
-      description: |
-        Prepare yourself for the future of cloud development! Amanda Silver, CVP Developer Tools at Microsoft, Beyang Liu, Co-Founder & CTO at  Sourcegraph and Luke Hoban, CTO at Pulumi, explore the transformative impact of AI on the cloud infrastructure and software engineering industries. This panel will discuss questions like “Where is the software development & infrastructure industry headed next with the rise of AI?” and “How will I benefit (or not) in a world where AI is more capable than ever.”
-      time: "11:10 AM PT"
+    - title: "Panel: Platform Engineering"
+      description:
+      time: "1:00 PM PT"
+
+    - title: Cloud Ecosystem Sessions
+      description:
+      time: "1:45 PM PT"
+
+    - title: "Panel: Security & DevSecOps"
+      description:
+      time: "3:00 PM PT"
+
+    - title: Cloud Culture Sessions
+      description:
+      time: "3:45 PM PT"
 
 registration:
     items:

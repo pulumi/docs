@@ -12,7 +12,6 @@
                     Dive into the future of cloud and Infrastructure as Code (IaC).<br/>Watch talks that demonstrate how to build and scale on the cloud, through Platform Engineering, with AI, and more
                 </p>
             </div>
-            <a class="btn-secondary" href="https://sessionize.com/pulumiup-conference-2024" target="_blank">Submit a Proposal</a>
             <a class="btn-primary" href="#register">Register Now</a>
         </div>
     </div>
@@ -34,22 +33,33 @@
         </pulumi-date-countdown-circles>
     </section>
 
-    <section id="confirmed-speakers" class="my-8">
-        <div class="container mx-auto text-center">
-            <h2 class="pl-8">Confirmed Speakers</h2>
-            <div class="px-4 py-8 flex flex-col md:flex-row text-left justify-center">
-                {{ range .Params.confirmed_speakers }}
-                    <div class="md:w-1/5 flex flex-row md:flex-col my-2">
-                        <img src="{{ .image }}" class="rounded-full h-32 lg:h-44 w-32 lg:w-44 mr-4 md:mr-0" />
-                        <div class="md:mt-4 content-center">
-                            <h6 clas="my-0">{{ .name }}</h6>
-                            <p class="text-sm text-black my-0 flex-wrap">{{ .title }}</p>
-                            <p class="text-sm text-black my-0">{{ .company }}</p>
-                        </div>
-                    </div>
-                {{ end }}
+    <section id="speakers" class="relative my-8">
+        <div class="dot-background-container">
+            <div class="dot-background"></div>
+        </div>
+        <div class="dot-overlay"></div>
+
+        <div class="w-full py-8" style="background-color:rgba(255,255,255,.8)">
+            <div class="container mx-auto text-center">
+                <h2 class="mb-8 text-center">Confirmed Speakers</h2>
+                <ul class="inline-flex flex-wrap list-none justify-center p-0 gap-x-8 gap-y-6">
+                    {{ range .Params.speakers }}
+                        <li class="about-card border-2 border-gray-300 bg-white rounded-md flex overflow-hidden relative">
+                            <div class="flex">
+                                <img class="about-card-photo" src="{{ .image }}" alt="{{ .name }}" />
+                                <div class="flex flex-col w-full justify-center text-left ml-4">
+                                    <div class="font-display font-medium text-gray-900 text-2xl mb-3">{{ .name }}</div>
+                                    <div class="text-sm text-gray-700 mb-3">{{ .title }}</div>
+                                    <img class="h-5 self-start" src="{{ .logo }}" alt="{{ .company }}" />
+                                </div>
+                            </div>
+                        </li>
+                    {{ end }}
+                </ul>
             </div>
-            <a class="btn-primary" href="#register">Register Now</a>
+            <div class="my-16 flex justify-center">
+                <a class="btn-primary" href="#register">Register Now</a>
+            </div>
         </div>
     </section>
 
@@ -72,6 +82,8 @@
             </div>
         </div>
     </section>
+
+    {{ partial "event-schedule.html" (dict "schedule" .Params.schedule "bg_color" "gray-100" ) }}
 
     <section id="why-attend" class="my-8">
         <div class="container mx-auto">
@@ -129,38 +141,6 @@
             <a class="btn-primary" href="https://www.youtube.com/playlist?list=PLyy8Vx2ZoWlqkEzXbjUvE_CoEmBkT9Xoe" target="_blank">Watch On-Demand</a>
         </div>
     </section>
-
-    <section id="speakers" class="relative mb-8">
-        <div class="dot-background-container">
-            <div class="dot-background"></div>
-        </div>
-        <div class="dot-overlay"></div>
-
-        <div class="w-full py-8" style="background-color:rgba(255,255,255,.8)">
-            <div class="container mx-auto text-center">
-                <h2 class="mb-8 text-center">Speakers</h2>
-                <ul class="inline-flex flex-wrap list-none justify-center p-0 gap-x-8 gap-y-6">
-                    {{ range .Params.speakers }}
-                        <li class="about-card border-2 border-gray-300 bg-white rounded-md flex overflow-hidden relative">
-                            <div class="flex">
-                                <img class="about-card-photo" src="{{ .image }}" alt="{{ .name }}" />
-                                <div class="flex flex-col w-full justify-center text-left ml-4">
-                                    <div class="font-display font-medium text-gray-900 text-2xl mb-3">{{ .name }}</div>
-                                    <div class="text-sm text-gray-700 mb-3">{{ .title }}</div>
-                                    <img class="h-5 self-start" src="{{ .logo }}" alt="{{ .company }}" />
-                                </div>
-                            </div>
-                        </li>
-                    {{ end }}
-                </ul>
-            </div>
-            <div class="my-16 flex justify-center">
-                <a class="btn-primary btn-primary-blue-bg" href="https://www.youtube.com/playlist?list=PLyy8Vx2ZoWlqkEzXbjUvE_CoEmBkT9Xoe" target="_blank">Watch On-Demand</a>
-            </div>
-        </div>
-    </section>
-
-    {{ partial "event-schedule.html" (dict "schedule" .Params.schedule "bg_color" "gray-100" ) }}
 
     <section id="sponsors" class="my-0 mb-16 py-4 lg:py-12 overflow-hidden px-3 white-background">
         <div class="container mx-auto text-center">
