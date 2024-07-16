@@ -131,7 +131,7 @@ speakers:
     company: Pulumi
 
 schedule:
-  heading: 2023 Schedule At A Glance
+  heading: Schedule At A Glance
   subheading: Get inspired! Dive into the stories and experiences of innovators and experts, from Startup Founders to Industry Leaders.
   items:
     - title: Opening Keynote, followed by new product launches and demos
