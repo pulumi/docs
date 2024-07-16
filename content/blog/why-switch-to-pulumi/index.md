@@ -24,7 +24,7 @@ tags:
 # https://twitter.com/PulumiCorp/status/1755637618631405655
 
 social:
-    twitter:
+    twitter: Why should you switch to Pulumi? This blog post runs through all the reasons by use case, by alternatives, and by benefits. 
     linkedin:
 ---
 
@@ -33,8 +33,8 @@ The cloud promised to revolutionize your business.
 **Faster innovation. Lower costs. Unlimited scalability.**
 
 But for many companies, that promise remains frustratingly out of reach.
-Instead of accelerating your product development, infrastructure has
-become a bottleneck. Your engineers are bogged down by clunky tools and
+Instead of accelerating product development, infrastructure has
+become a bottleneck. You and your team (DevOps, platform, or infrastructure engineering teams)are bogged down by clunky tools and
 manual processes. Provisioning a simple test environment takes days.
 Rolling out updates across regions? Weeks.
 
@@ -55,31 +55,31 @@ questions.
 
 # What is Pulumi?
 
-Pulumi is an infrastructure as code platform that allows teams to manage
+Pulumi is an infrastructure as code platform that allows you to manage
 and scale infrastructure, configurations, policies, and secrets with
-programming languages. Pulumi facilitates clear collaboration across
+programming languages. Pulumi facilitates clear collaboration across your
 infrastructure, development, and security teams.
 
 **Pulumi's approach is better.**
 
 **10x Better.** Pulumi takes a unique and 10x better approach to
-infrastructure as code by empowering developers with the familiar
-languages and tools they love for application development. While modern
+infrastructure as code by empowering you with the familiar
+languages and tools you love for application development. While modern
 programming languages have evolved to provide powerful features like AI
 copilots, Intellisense, linting tools, testing frameworks, and CICD
 pipelines, infrastructure management has lagged behind, relying on rigid
 scripting languages and error-prone manual processes. Pulumi bridges
-this gap by allowing engineers to use industry-standard programming
+this gap by allowing you to use industry-standard programming
 languages to manage infrastructure with the same level of sophistication
-and tooling they enjoy for application development. Pulumi embraces the
-change and direction the industry is going, so developers never fall
-behind with their IaC tooling.
+and tooling you enjoy for application development. Pulumi embraces the
+change and direction the industry is going, so you never fall
+behind with your IaC tooling.
 
 **Powering the Next Wave.** Pulumi is at the forefront of the industry.
-It helps developers embrace the latest practices (e.g., GitOps) and
+It helps you embrace the latest practices (e.g., Platform Engineering, GitOps) and
 builds the latest technologies (e.g., AI Copilots) into the core user
-experience. It also helps developers build and manage new technology
-paradigms (e.g., AI workloads, LLM, internal developer platforms).
+experience. It also helps you build and manage new technology
+paradigms (e.g., AI workloads, LLMs, internal developer platforms).
 
 **Powerful Automations.** Another unique approach is Pulumi makes it
 easy to automate and scale modern cloud architectures. In the last
@@ -89,16 +89,16 @@ infrastructure platforms, to achieve greater resilience, team agility,
 flexible scaling, and modular codebases. The cloud\'s programmability,
 infinite elasticity, and on-demand nature made it easy to spin up
 micro-sized services tailored to business demands, facilitated by
-technologies like containers, Kubernetes, and serverless. Pulumi enables
-software engineering to be applied to managing infrastructure of this
+technologies like containers, Kubernetes, and serverless. Pulumi empowers you to apply
+software engineering to manage infrastructure of this
 modern and immense scale.
 
 **AI-Powered.** Pulumi builds AI into the core infrastructure management
 experience. Pulumi combines the power of large language models with
 semantic understanding of the cloud to unlock greater insights and
 controls over managing cloud infrastructure. Pulumi leverages the
-familiar GPT experience everyone knows, loves, and uses daily, so
-engineers can find and take action on any resource in their cloud
+familiar GPT experience you know, love, and use daily, so
+you can find and take action on any resource in your cloud
 environments.
 
 ## Ok, but why does this matter enough for me to switch?
@@ -106,9 +106,9 @@ environments.
 Only you can answer that question, but there are some compelling reasons
 to adopt the platform trusted by hundreds of thousands of developers.
 
-**Faster Time to Value.** Companies moved to the cloud as a way to
+**Faster Time to Value.** Your company moved to the cloud as a way to
 increase innovation and reduce costs. However, getting infrastructure to
-developers is a bottleneck for many companies which can slow down
+developers is a frequent bottleneck for you which can slow down
 prototyping new products or shipping new features. Spinning up new
 development or testing environments takes days and rolling out
 production updates across many regions can take weeks. The existing
@@ -118,16 +118,16 @@ enable easy self-service of infrastructure.\
 *Pulumi will speed up your deployments and time to value.*
 
 **Open Platform Commitment.** Some platforms, such as Terraform, have
-altered their licensing and left users uncertain. They are no longer
+altered their licensing and introduced uncertainty. They are no longer
 true open source, and they tie their previously open source software to
 their commercial services. The lack of an open source approach fragments
 the community and introduces proprietary constraints to cloud
 infrastructure.\
 \
-*Pulumi provides an approach to open source and community that provides
-stability and choice.*
+*Pulumi provides you with an approach to open source and community that 
+provides stability and choice.*
 
-**Increased Productivity:** Engineers and developers expect their tools
+**Increased Productivity:** You expect your tools
 and workflows to keep up with the industry: AI copilots, Intellisense,
 linting tools, testing frameworks, and CICD pipelines. But most of these
 innovations are just for building applications and services and not for
@@ -135,13 +135,12 @@ infrastructure, configurations, policies, and secrets. Existing
 infrastructure tools are fraught with bad UX, rigid scripting languages,
 and error prone manual processes.
 
-*Pulumi will increase the productivity and velocity of developers
-through better tooling.*
+*Pulumi will increase your productivity and velocity through better tooling.*
 
 **Infinite Scale.** Modern cloud architectures are distributed systems
 that are microservices that are dynamic and ephemeral in nature. The
 number of infrastructure resource types and the configurable input
-properties is staggering. Engineers face the daunting task of how to
+properties is staggering. You face the daunting task of how to
 combine these resources to solve their unique problems. Without software
 engineering, managing these modern distributed systems is fruitlessly
 manual.
@@ -166,21 +165,17 @@ alternatives. Choose your own adventure:
 
 ## Why Pulumi, by use case?
 
-There are many different use cases for why engineers use Pulumi:
+There are many different use cases for why you might use Pulumi:
 infrastructure CICD, modern applications, internal developer platforms,
 AI/ML workloads, and infrastructure modernization. Below are more
 details on two popular use cases.
 
 ### Why Pulumi for Internal Developer Platforms?
 
-Organization's build internal developer platforms (IDPs) as a way to
-maximize the use of the cloud at scale across the organization while
-being secure and compliant so they can ship faster. IDPs enable
-infrastructure engineers to build a bridge to their developers and
-empower them to leverage the cloud with security, scalability,
-repeatability, and consistency. There are a number of components/layers
-that are considered basic requirements when building an internal
-developer platform for an organization. The layers are as follows:
+You and your team may build internal developer platforms (IDPs) as a way to
+maximize the use of the cloud at scale across the company while
+being secure and compliant so your development teams can ship faster. There are a number of components/layers that are considered basic requirements when building an internal
+developer platform. The layers are as follows:
 
 * **Developer Control Plane.** Curated experiences that empower
     developers by meeting them at their level of expertise, whether
@@ -210,19 +205,17 @@ platform:
 ![platform-requirements](platform-req-diagram.png)
 
 Most solutions struggle to keep up with the requirements of each layer.
-Many of the alternative solutions can't handle the scale of resources to
-be managed, find it difficult to tie infrastructure automation directly
-into the core business, have leaky secrets, and enforce compliance and
+Many of the alternative solutions can't handle the scale of resources you need to
+manage, find it difficult to tie infrastructure automation directly
+into your core business, have leaky secrets, and enforce compliance and
 security incompletely.
 
-Pulumi is a platform engineering solution that enables engineers to
-build a bridge to their developers and empower them to leverage the
+Pulumi is a platform engineering solution that enables you to
+build a bridge to your developers and empower them to leverage the
 cloud with security, scalability, repeatability, and consistency. It is
-designed to fulfill the modern requirements and allow organizations to
-leverage the cloud as a competitive advantage, providing the building
-blocks to build each of the five layers.
+designed to provide the building blocks for each of the five layers.
 
-![pulumi platform](platform-diagram.png)
+![pulumi platform](platform-pulumi-diagram.png)
 
 * **Developer Control Plane.** Pulumi is the simplest and most
     intuitive way to manage cloud infrastructure because of its ability
@@ -245,9 +238,9 @@ blocks to build each of the five layers.
     with leading observability solutions making it easy to manage
     monitoring and logging resources through IaC.
 
-* **Security & Identity.** Pulumi provides policy as code with
-    auto-remediation and centralized environments, secrets, and
-    configurations manager. Every resource access can be granularly
+* **Security & Identity.** Pulumi CrossGuard provides policy as code with
+    auto-remediation. Pulumi ESC makes it easy to manage secrets and configurations 
+    for every environment. Access to each cloud resource and secret can be granularly
     controlled and audited.
 
 * **Resources.** Pulumi supports modern cloud architectures such as
@@ -259,13 +252,15 @@ blocks to build each of the five layers.
 ***Pulumi is purpose built to make all aspects of platform engineering
 vastly simpler.***
 
+[Read more >>](/product/internal-developer-platforms/)
+
 ### Why Pulumi for AI Workloads?
 
-Companies are using AI as a way to increase innovation and reduce costs.
+Your company may be using AI as a way to increase innovation and reduce costs.
 AI gives them the ability to design richer and more intuitive interfaces
 for their products and/or services to connect better with their
 customers. The hardest part of AI is many times not the AI pieces but
-the cloud infrastructure parts: how to provision and manage the
+the cloud infrastructure parts:  how to provision and manage the
 infrastructure that AI workloads run on (e.g., compute and networking)
 and depend on (e.g., databases and storage).
 
@@ -277,22 +272,20 @@ training, data pipelines, backend services, frontend applications.
 Pulumi provides an abstraction across all the different layers of the AI
 stack (web framework, LLM, containers, databases, secrets, policies,
 configurations, etc) as a simple Python library. Through this
-abstraction AI engineers and developers can manage stacks of
-infrastructure as code.
+abstraction you can manage stacks of AI infrastructure as code.
 
 ![ai abstraction](ai-dev.png)
 
 ***Pulumi makes it trivial to take local AI development to production in
 the cloud.***
 
+[Read more >>](/solutions/ai/)
+
 ## Why is Pulumi better than the alternatives?
 
-There are many methods that can be used to approach the needs of cloud
-modernization and infrastructure management. However, Pulumi enables
-companies to ship faster, provides a more productive authoring
-experience, and provides more powerful automations to manage the
-infinite scale of cloud infrastructure. Read on for how we compare to
-specific options: clickops, Terraform, CDK, and IDP services.
+There are many different tools you can use to manage infrastructure. However, Pulumi provides
+you a more productive authoring experience and more power automations that will allow you to 
+ship faster and manage the infinite scale of cloud infrastructure. Read on for how Pulumi compares to specific options: clickops, Terraform, CDK, and IDP services.
 
 ### Why Pulumi vs. clickops?
 
@@ -303,13 +296,13 @@ worse, security breaches. That is why infrastructure as code was
 invented as a way to have a single source of truth for all
 infrastructure with changes 100% automated.
 
-If you don't believe us, just ask any cloud or devops
+If you don't believe this, just ask any cloud or devops
 subreddit, Slack group, or Discord server.
 
 ### Why Pulumi vs. Terraform?
 
 Pulumi and Terraform are both infrastructure as code (IaC) platforms,
-however they have fundamental differences in how they approach the needs
+however they have fundamental differences in how they approach your needs
 of infrastructure management. Let's first start with the similarities.
 
 Both Pulumi and Terraform include the ability to create, deploy, and
@@ -323,94 +316,84 @@ providers, including AWS, Azure, and Google Cloud, plus other services
 like CloudFlare, Digital Ocean, and more.
 
 However, beyond the basics of infrastructure as code there are
-significant differences in terms of productivity experience,
+significant differences that affect productivity,
 scalability, and collaboration.
 
-1.**Increased Productivity.** Pulumi's promise is to build in all the
+1. **Increased Productivity.** As discussed at the beginning, 
+    Pulumi's promise is to build in all the
     latest advancements in both the developer and operations experience.
-    When engineers write code, they now have AI copilots that generate
-    code and pair-program alongside them. Their IDEs have autocompletion
-    and Intellisense squiggles. They have powerful libraries of low
-    level and abstract functions. They have testing frameworks. They
-    have tools to do code reviews and automated release controls via
-    CICD pipelines. They have great software packaging tools. When it
-    comes to managing infrastructure, they have AI copilots that find
-    unique insights and automate cloud tasks. This is all available with
-    Pulumi. Terraform, on the other hand, has built a proprietary
-    ecosystem that doesn't tap into the latest advancements of how code
-    is written or how infrastructure is managed. Pulumi Copilot combines
+    When you write Pulumi code, you now have AI copilots can pair program with you, 
+    IDEs that have autocompletion and Intellisense squiggles, powerful libraries of low
+    level and abstract functions, testing frameworks, code review tools, automated release controls via CICD pipelines, and great software packaging tools. When it
+    comes to managing infrastructure with Pulumi, you also have Pulumi Copilot which combines
     the best generative AI models available in the industry today with
-    access to the data and actions of each user from within Pulumi
-    Cloud. Pulumi Copilot incorporates the context of where the user is
+    access to your data and actions within Pulumi
+    Cloud. Pulumi Copilot incorporates the context of where you are
     in the Pulumi Cloud console to easily answer questions about "this
-    stack", or "the latest update", offering an even more natural,
-    conversational and persistent experience across Pulumi Cloud. Pulumi
-    Copilot is Enterprise-Ready on day one - it adheres to all the same
-    identity and role based access control (RBAC) rules that exist
-    across Pulumi Cloud, ensuring that users only have access to stacks,
-    environments and resources that they have permissions for within
-    Pulumi Cloud. This means that each organization gets AI-generated
-    responses based solely on their own organizational data.
+    stack" or "the latest update" as well as automating cloud tasks.
+    Terraform, on the other hand, has built a proprietary
+    ecosystem that doesn't tap into the latest advancements of how code
+    is written or how infrastructure is managed. 
 
-2.**Greater Scalability.** Pulumi embraces software engineering as a
+2. **Greater Scalability.** Pulumi embraces software engineering as a
     way to solve and manage the exponentially increasing complexity of
     modern architectures. Programming languages with their loops,
     conditional logic, class inheritance, object orientedness allows
     engineers to design more complex and sophisticated infrastructure
-    compared to using HCL. Pulumi also allows engineers to build custom
-    workflows atop their infrastructure programs, giving rise to
+    compared to using HCL. Pulumi also allows you to build custom
+    workflows atop infrastructure programs, giving rise to
     event-driven automations or internal developer portals that provide
     self-service.
 
-3.**Better Collaboration.** Pulumi makes it easy to prototype new
+3. **Better Collaboration.** Pulumi makes it easy to prototype new
     products and quickly ship them into production because it is easier
     for the platform, development, and security teams to collaborate.
-    Platform engineering and devops teams can define and manage common
-    infrastructure across the organization, work with the security teams
+    You (platform engineering and devops teams) can define and manage common
+    infrastructure across the company, work with the security teams
     to set security and compliance guardrails, and enable easy
     self-service of infrastructure whether through custom developer
-    platforms or shared infrastructure libraries. DevOps teams that
-    don't want to program can use use YAML, platform engineering orgs
-    that do can use Python, TypeScript, Golang, C\#, to define common
-    organization-wide components. These components can be consumed by
+    platforms or shared infrastructure libraries. To define common
+    company-wide components, if you don't want to program can use use YAML; if you
+    do, you can use Python, TypeScript, Golang, C\#, etc. These components can be consumed by
     the development team in their own IaC program in any programming
     language with the development tools they already know. It\'s easy to
     start with YAML and move to other languages when more power is
-    desired. With Terraform, everyone has to understand and use HCL. It
-    is harder to build self-service infrastructure platforms because it
+    desired. With Terraform, you have to understand and use HCL. It
+    is difficult to build self-service infrastructure platforms because it
     lacks the programmability and ability to apply software engineering.
     It\'s just harder to bring together platform, development, and
     security teams and empower them with tools that work. Whereas Pulumi
     unblocks infrastructure as the bottleneck for software delivery.
 
+[Read more >>](/docs/concepts/vs/terraform/)
+
 ### Why Pulumi vs. AWS Cloud Development Kit (CDK)?
 
-Pulumi and CDK are similar in that both allow the usage of programming
+Pulumi and CDK are similar in that both allow you to use programming
 languages to write infrastructure as code. However there are some key
 differences:
 
-1.**No Vendor Lock-In.** CDK supports only AWS, whereas Pulumi
+1. **No Vendor Lock-In.** CDK supports only AWS, whereas Pulumi
     supports over 150 cloud and SaaS providers, with more being added
     all the time. CDK depends on CloudFormation as the deployment
     engine; it shares many of the same benefits and limitations as
     CloudFormation (see [Pulumi vs.
     CloudFormation](https://www.pulumi.com/docs/concepts/vs/cloud-templates/cloudformation/))
 
-2.**Translation versus Execution.** Pulumi and CDK support similar
+2. **Execution > Translation.** Pulumi and CDK support similar
     programming languages but differ fundamentally in their deployment
     approaches. Pulumi\'s engine directly understands these languages
     and communicates with cloud providers. In contrast, CDK transpiles
     code into AWS Cloud Assembly, an intermediate format consisting of
     CloudFormation templates and other assets, before deployment via
-    CloudFormation. This difference impacts development speed and
+    CloudFormation. This difference impacts your development speed and
     correctness. CDK\'s approach can lead to slower deployments and
     delayed error discovery, potentially hours into the process since
-    the errors aren't caught during compile time. Additionally, CDK
-    users need expertise in both CloudFormation and CDK for effective
+    the errors aren't caught during compile time. Additionally, you need expertise in both CloudFormation and CDK for effective
     debugging and successful deployments, whereas Pulumi\'s direct
     approach simplifies this process.
 
-3.**Versatility.** CDK and Pulumi both support automated testing, but
+3. **Versatility.** CDK and Pulumi both support automated testing, but
     Pulumi offers more versatile options. While both allow unit testing,
     Pulumi\'s deep integration between language and runtime enables
     fast, offline tests (in-memory) with mocked cloud provider calls. In
@@ -419,6 +402,8 @@ differences:
     This makes Pulumi\'s testing approach more comprehensive and
     flexible than CDK\'s.
 
+[Read more >>](/docs/concepts/vs/cloud-template-transpilers/aws-cdk/)
+
 ### Why Pulumi vs. 3rd party IDP providers? (think: Port, Cortex, Backstage)
 
 There are many third party providers of internal developer platforms.
@@ -426,32 +411,31 @@ Some are services and others are open source software. These providers
 are generally similar in that they offer simple developer portals that
 are a single part of a greater infrastructure management platform.
 
-As we discussed earlier, internal developer platforms have five layers:
+As discussed earlier, internal developer platforms have five layers:
 developer control plane, integration & delivery, monitoring & logging,
 resources management, and security & identity. Most of these providers
 offer easy to use GUI consoles, simple CICD integrations, comprehensive
 suite of monitoring & logging, and some form of role-based access
 controls. However, they lack the infrastructure as code fundamentals and
-automation capabilities that Pulumi has, which enable powerful
+automation capabilities that Pulumi has, which enable you to build powerful
 customizations through software engineering. Many of these solutions
 also lack strong secrets management and policy enforcement capabilities
 that are critical for production and enterprise deployments.
 
-That said, if an off the shelf solution is needed, then one of these
-services or software might be a good choice. Some of these solutions can
-integrate with Pulumi, and if needs become more complex, a switch to
-Pulumi can always be made later.
+That said, if you need an off the shelf solution, then one of these
+services or software might be a good choice for you. Some of these solutions can
+integrate with Pulumi, and if your needs become more complex, you can always switch to
+Pulumi later.
 
 {{% notes type="info" %}}
-We are happy to share specific thoughts on a particular ***Pulumi vs X***
-comparison if you have one in mind. Feel free to join our
-[Slack](http://pulumi) if you have quick technical
+Have a particular ***Pulumi vs X***
+comparison that you need thoughts on? Feel free to join the [Pulumi Community
+Slack](http://pulumi) if you have quick technical
 questions, or talk to a Solutions Architect if you need more detailed
 consultation about your specific architecture.
 {{% /notes %}}
 
-How can I switch to Pulumi?
----------------------------
+## How can I switch to Pulumi?
 
 Switching to Pulumi doesn't have to be intimidating. We've done this
 with thousands of customers before, and we can guide you through it.
