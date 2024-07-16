@@ -94,7 +94,7 @@ No upcoming in-person events in your area? Attend one of our virtual workshops a
 - **Getting Started with CI/CD for AWS using GitHub Actions**: July 17. Learn more and [register here](https://www.pulumi.com/resources/getting-started-with-ci-cd-aws-pulumi-github-actions/).
 - **From Zero to Production in Kubernetes**: July 25. Learn more and [register here](https://www.pulumi.com/resources/from-zero-to-production-in-kubernetes/).
 - **Advanced CI/CD for AWS using Pulumi and GitHub Actions**: August 14. Learn more and [register here](https://www.pulumi.com/resources/advanced-cicd-aws-pulumi-github-actions/).
-- **Mastering Platform Engineering: From Setup to Scaling Success**: TBD. Learn more and register here.
+- **Mastering Platform Engineering: From Setup to Scaling Success**: TBD.
 
 Join us for tech talks, hands-on workshops, and opportunities to network with industry peers. We are excited to meet you in person or virtually.
 See you there!
