@@ -124,7 +124,7 @@ their commercial services. The lack of an open source approach fragments
 the community and introduces proprietary constraints to cloud
 infrastructure.\
 \
-*Pulumi provides you with an approach to open source and community that 
+*Pulumi provides you with an approach to open source and community that
 provides stability and choice.*
 
 **Increased Productivity:** You expect your tools
@@ -239,7 +239,7 @@ designed to provide the building blocks for each of the five layers.
     monitoring and logging resources through IaC.
 
 * **Security & Identity.** Pulumi CrossGuard provides policy as code with
-    auto-remediation. Pulumi ESC makes it easy to manage secrets and configurations 
+    auto-remediation. Pulumi ESC makes it easy to manage secrets and configurations
     for every environment. Access to each cloud resource and secret can be granularly
     controlled and audited.
 
@@ -284,7 +284,7 @@ the cloud.***
 ## Why is Pulumi better than the alternatives?
 
 There are many different tools you can use to manage infrastructure. However, Pulumi provides
-you a more productive authoring experience and more power automations that will allow you to 
+you a more productive authoring experience and more power automations that will allow you to
 ship faster and manage the infinite scale of cloud infrastructure. Read on for how Pulumi compares to specific options: clickops, Terraform, CDK, and IDP services.
 
 ### Why Pulumi vs. clickops?
@@ -319,10 +319,10 @@ However, beyond the basics of infrastructure as code there are
 significant differences that affect productivity,
 scalability, and collaboration.
 
-1. **Increased Productivity.** As discussed at the beginning, 
+1. **Increased Productivity.** As discussed at the beginning,
     Pulumi's promise is to build in all the
     latest advancements in both the developer and operations experience.
-    When you write Pulumi code, you now have AI copilots can pair program with you, 
+    When you write Pulumi code, you now have AI copilots can pair program with you,
     IDEs that have autocompletion and Intellisense squiggles, powerful libraries of low
     level and abstract functions, testing frameworks, code review tools, automated release controls via CICD pipelines, and great software packaging tools. When it
     comes to managing infrastructure with Pulumi, you also have Pulumi Copilot which combines
@@ -333,7 +333,7 @@ scalability, and collaboration.
     stack" or "the latest update" as well as automating cloud tasks.
     Terraform, on the other hand, has built a proprietary
     ecosystem that doesn't tap into the latest advancements of how code
-    is written or how infrastructure is managed. 
+    is written or how infrastructure is managed.
 
 2. **Greater Scalability.** Pulumi embraces software engineering as a
     way to solve and manage the exponentially increasing complexity of
