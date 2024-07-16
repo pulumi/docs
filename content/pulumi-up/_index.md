@@ -82,27 +82,27 @@ speakers:
   - name: Dax Raad
     image: /images/pulumiup-2023/2024-speakers/dax-raad.png
     title: Founding Engineer
-    logo: 
+    logo: /images/pulumiup-2023/speaker-logos/sst.png
     company: SST
   - name: Jeremy Adams
     image: /images/pulumiup-2023/2024-speakers/jeremy-adams.png
     title: Head of Ecosystems
-    logo: 
+    logo: /images/pulumiup-2023/sponsors/dagger.png
     company: Dagger
   - name: Patty O'Callaghan
     image: /images/pulumiup-2023/2024-speakers/patty-ocallaghan.jpeg
     title: Technical Director
-    logo: 
+    logo: /images/pulumiup-2023/speaker-logos/charles-river-laboratories.png
     company: Charles River Laboratories
   - name: Jim Clark
     image: /images/pulumiup-2023/2024-speakers/james-clark.png
     title: Principal Software Engineer
-    logo: 
+    logo: /images/pulumiup-2023/speaker-logos/docker.png
     company: Docker
   - name: Ash Martian
     image: /images/pulumiup-2023/2024-speakers/ash-martian.png
     title: Data Engineer
-    logo: 
+    logo: /images/pulumiup-2023/speaker-logos/characterstrong.png
     company: CharacterStrong
   - name: Jason Smith
     image: /images/people/jay-smith.png
