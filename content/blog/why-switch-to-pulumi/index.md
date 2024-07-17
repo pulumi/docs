@@ -1,6 +1,6 @@
 ---
 title: "Why Switch to Pulumi for Cloud Deployments?"
-date: 2024-07-10T19:47:50-07:00
+date: 2024-07-17T19:47:50-07:00
 meta_desc: "Pulumi: the top choice for cloud deployments. Boost productivity, scale infinitely, and leverage AI to revolutionize infrastructure management."
 meta_image: meta.png
 authors:
@@ -34,7 +34,8 @@ The cloud promised to revolutionize your business.
 
 But for many companies, that promise remains frustratingly out of reach.
 Instead of accelerating product development, infrastructure has
-become a bottleneck. You and your team (DevOps, platform, or infrastructure engineering teams)are bogged down by clunky tools and
+become a bottleneck. You and your team (DevOps, platform, or infrastructure engineering teams)
+are bogged down by clunky tools and
 manual processes. Provisioning a simple test environment takes days.
 Rolling out updates across regions? Weeks.
 
@@ -50,7 +51,7 @@ Enter Pulumi -- the open source infrastructure as code (IaC) platform
 that\'s accelerating time to value for thousands of companies worldwide.
 
 So why should you switch to Pulumi? How is it different from other
-infrastructure as code tools? This post is intended to answer all those
+infrastructure as code tools? This post should answer all those
 questions.
 
 ## What is Pulumi?
@@ -106,7 +107,7 @@ environments.
 Only you can answer that question, but there are some compelling reasons
 to adopt the platform trusted by hundreds of thousands of developers.
 
-**Faster Time to Value.** Your company moved to the cloud as a way to
+**Faster Time to Value.** Your company moved to the cloud to
 increase innovation and reduce costs. However, getting infrastructure to
 developers is a frequent bottleneck for you which can slow down
 prototyping new products or shipping new features. Spinning up new
@@ -178,7 +179,7 @@ details on two popular use cases.
 
 #### Why Pulumi for Internal Developer Platforms?
 
-You and your team may build internal developer platforms (IDPs) as a way to
+You and your team may build internal developer platforms (IDPs) to
 maximize the use of the cloud at scale across the company while
 being secure and compliant so your development teams can ship faster. There are a number of components/layers that are considered basic requirements when building an internal
 developer platform. The layers are as follows:
@@ -218,8 +219,8 @@ security incompletely.
 
 Pulumi is a platform engineering solution that enables you to
 build a bridge to your developers and empower them to leverage the
-cloud with security, scalability, repeatability, and consistency. It is
-designed to provide the building blocks for each of the five layers.
+cloud with security, scalability, repeatability, and consistency. It provides
+ the building blocks for each of the five layers.
 
 ![pulumi platform](platform-pulumi-diagram.png)
 
@@ -229,7 +230,7 @@ designed to provide the building blocks for each of the five layers.
     the friction to the basic requirements of managing cloud
     infrastructure well. Pulumi Automation API makes it simple to code
     any user interface for a developer portal / CLI. Pulumi also
-    provides private templates that can be integrated with developer
+    provides private templates that integrate with developer
     portals like AWS Proton and Backstage.
 
 * **Integration & Delivery.** Pulumi Automation API can embed IaC
@@ -262,10 +263,10 @@ vastly simpler.***
 
 #### Why Pulumi for AI Workloads?
 
-Your company may be using AI as a way to increase innovation and reduce costs.
+Your company may be using AI to increase innovation and reduce costs.
 AI gives them the ability to design richer and more intuitive interfaces
 for their products and/or services to connect better with their
-customers. The hardest part of AI is many times not the AI pieces but
+customers. The hardest part of AI is at times not the AI pieces but
 the cloud infrastructure parts:  how to provision and manage the
 infrastructure that AI workloads run on (e.g., compute and networking)
 and depend on (e.g., databases and storage).
@@ -290,7 +291,7 @@ the cloud.***
 ### Why is Pulumi better than the alternatives?
 
 There are many different tools you can use to manage infrastructure. However, Pulumi provides
-you a more productive authoring experience and more power automations that will allow you to
+you with a more productive authoring experience and more powerful automations that will allow you to
 ship faster and manage the infinite scale of cloud infrastructure. Read on for how Pulumi compares to specific options: clickops, Terraform, CDK, and IDP services.
 
 #### Why Pulumi vs. clickops?
@@ -309,7 +310,7 @@ subreddit, Slack group, or Discord server.
 
 Pulumi and Terraform are both infrastructure as code (IaC) platforms,
 however they have fundamental differences in how they approach your needs
-of infrastructure management. Let's first start with the similarities.
+of infrastructure management. First, here are the similarities.
 
 Both Pulumi and Terraform include the ability to create, deploy, and
 manage infrastructure as code on any cloud. Both Terraform and Pulumi
@@ -328,7 +329,7 @@ scalability, and collaboration.
 1. **Increased Productivity.** As discussed at the beginning,
     Pulumi's promise is to build in all the
     latest advancements in both the developer and operations experience.
-    When you write Pulumi code, you now have AI copilots can pair program with you,
+    When you write Pulumi code, you now have AI copilots that can pair program with you,
     IDEs that have autocompletion and Intellisense squiggles, powerful libraries of low
     level and abstract functions, testing frameworks, code review tools, automated release controls via CICD pipelines, and great software packaging tools. When it
     comes to managing infrastructure with Pulumi, you also have Pulumi Copilot which combines
@@ -364,7 +365,7 @@ scalability, and collaboration.
     the development team in their own IaC program in any programming
     language with the development tools they already know. It\'s easy to
     start with YAML and move to other languages when more power is
-    desired. With Terraform, you have to understand and use HCL. It
+    desired. With Terraform, you must understand and use HCL. It
     is difficult to build self-service infrastructure platforms because it
     lacks the programmability and ability to apply software engineering.
     It\'s just harder to bring together platform, development, and
@@ -410,11 +411,11 @@ differences:
 
 [Read more >>](/docs/concepts/vs/cloud-template-transpilers/aws-cdk/)
 
-#### Why Pulumi vs. 3rd party IDP providers? (think: Port, Cortex, Backstage)
+#### Why Pulumi vs. 3rd party internal developer portal providers? 
 
-There are many third party providers of internal developer platforms.
+There are many third party providers of internal developer portals (think: Port, Cortex, Backstage).
 Some are services and others are open source software. These providers
-are generally similar in that they offer simple developer portals that
+are similar in that they offer simple developer portals that
 are a single part of a greater infrastructure management platform.
 
 As discussed earlier, internal developer platforms have five layers:
@@ -466,4 +467,4 @@ We have done lots of migrations from all types of infrastructure as code
 tools, and we are happy to help you think through how to make switching
 to Pulumi as easy as possible.
 
-{{blog/cta-button "Switch to Pulumi" "https://www.pulumi.com/contact/?form=tf-migration" "_blank"}}
+{{< blog/cta-button "Switch to Pulumi" "https://www.pulumi.com/contact/?form=tf-migration" "_blank" >}}
