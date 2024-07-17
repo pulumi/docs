@@ -120,9 +120,10 @@ func main() {
 {{% choosable language csharp %}}
 
 ```csharp
+using System;
+using System.Collections.Immutable;
 using Pulumi;
 using Pulumi.Awsx.Ec2;
-using System.Collections.Immutable;
 
 await Deployment.RunAsync<MyStack>();
 
@@ -138,11 +139,14 @@ class MyStack : Stack
 
                 if (args.Type == "aws:ec2/subnet:Subnet")
                 {
-                    var tags = args.Args.TryGetValue("tags", out var tagsValue) &&
-                        tagsValue is ImmutableDictionary<string, object> tagsDictionary
-                            ? tagsDictionary
-                            : ImmutableDictionary<string, object>.Empty;
-                    tags = tags.AddRange(myTags);
+                    InputMap<object> tags =
+                        args.Args.TryGetValue("tags", out var tagsValue) && tagsValue is not null ?
+                            tagsValue is Output<ImmutableDictionary<string, object>> tagsOutput ? tagsOutput :
+                            tagsValue is ImmutableDictionary<string, object> tagsDictionary ? tagsDictionary :
+                            throw new InvalidOperationException($"Unexpected tags type: {tagsValue.GetType()}") :
+                        ImmutableDictionary<string, object>.Empty;
+
+                    tags = tags.Apply(t => t.SetItems(myTags));
                     return new(args.Args.SetItem("tags", tags), args.Options);
                 }
                 return null;
