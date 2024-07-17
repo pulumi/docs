@@ -1,7 +1,10 @@
 id = "scott-lowe"
 name = "Scott Lowe"
-title = "Principal Technical Content Engineer"
-status = "active"
+status = "guest"
+role = "puluminary"
+title = "Sr. Principal Solutions Architect"
+company = "Isovalent"
+
 
 [social]
 twitter = "scott_lowe"
