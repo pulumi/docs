@@ -411,7 +411,7 @@ differences:
 
 [Read more >>](/docs/concepts/vs/cloud-template-transpilers/aws-cdk/)
 
-#### Why Pulumi vs. 3rd party internal developer portal providers? 
+#### Why Pulumi vs. 3rd party internal developer portal providers?
 
 There are many third party providers of internal developer portals (think: Port, Cortex, Backstage).
 Some are services and others are open source software. These providers
