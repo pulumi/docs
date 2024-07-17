@@ -46,7 +46,7 @@ asynchronous code within Python Pulumi programs.
 
 It is not required, but we recommend using a [virtual environment](https://docs.python.org/3/tutorial/venv.html) to isolate the dependencies of your projects and ensure reproducibility between machines.
 
-When creating a new Python project with `pulumi new`, you are offered the choice between pip (default) and `poetry` to manage your dependencies. If you choose `pip`, Pulumi will create a virtual environment in a `venv` directory with required dependencies from `requirements.txt` installed in it. If you choose `poetry`, Pulumi will create a `pyproject.toml` file and run Poetry to create a virtual environment in its [default location](https://python-poetry.org/docs/basic-usage/#using-your-virtual-environment). Pulumi will automatically use this virtual environment when running the program.
+When creating a new Python project with `pulumi new`, you are offered the choice between `pip` (default) and `poetry` to manage your dependencies. If you choose `pip`, Pulumi will create a virtual environment in a `venv` directory with required dependencies from `requirements.txt` installed in it. If you choose `poetry`, Pulumi will create a `pyproject.toml` file and run Poetry to create a virtual environment in its [default location](https://python-poetry.org/docs/basic-usage/#using-your-virtual-environment). Pulumi requires Poetry version 1.8.0 or later. Pulumi will automatically use this virtual environment when running the program.
 
 This behavior is controlled by the `toolchain` and `virtualenv` `runtime` options in `Pulumi.yaml`.
 
