@@ -60,7 +60,7 @@ Today we're announcing the [`pulumi state move`](https://www.pulumi.com/docs/cli
 
 <!--more-->
 
-While moving resources between projects is currently possible with some major surgery (our users came up with [automated solutions](https://github.com/pulumi/pulumi/issues/3389#issuecomment-679020482)), it's fairly error prone and difficult.  This makes refactoring Pulumi programs quite cumbersome, and having a simpler, integrated solution for this problem was a [much requested feature](https://github.com/pulumi/pulumi/issues/3389).
+When refactoring a Pulumi project from a [monolithic](https://www.pulumi.com/docs/using-pulumi/organizing-projects-stacks/#monolithic) structure to [micro stacks](https://www.pulumi.com/docs/using-pulumi/organizing-projects-stacks/#micro-stacks), you might need to move resources between different projects or stacks, without recreating them. While this has been possible with some major surgery (our users came up with [automated solutions](https://github.com/pulumi/pulumi/issues/3389#issuecomment-679020482)), it's fairly error prone and difficult.  This makes refactoring Pulumi programs quite cumbersome, and having a simpler, integrated solution for this problem was a [much requested feature](https://github.com/pulumi/pulumi/issues/3389).
 
 The `pulumi state move` command works as follows:
 
