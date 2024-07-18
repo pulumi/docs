@@ -107,6 +107,7 @@ For more information about the specific differences and capabilities offered for
 Pulumi Team, Enterprise and Business Critical editions, refer to the [pricing page](/pricing/).
 
 ## Browser support
+
 The Pulumi Cloud supports the following browsers and versions:
 
 | Browser | Supported version | Read | Write | Admin |
