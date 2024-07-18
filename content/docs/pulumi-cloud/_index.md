@@ -110,9 +110,9 @@ Pulumi Team, Enterprise and Business Critical editions, refer to the [pricing pa
 
 The Pulumi Cloud supports the following browsers and versions:
 
-| Browser | Supported version | Read | Write | Admin |
-|--------|------|------|-------|-------|
-| Chrome | 2 most recent major versions
-| Firefox | Latest version and extended support release (ESR)
-| Safari | 2 most recent major versions
-| Edge | 2 most recent major versions
+| Browser | Supported version | 
+|--------|------|
+| Chrome | 2 most recent major versions |
+| Firefox | Latest version and extended support release (ESR) |
+| Safari | 2 most recent major versions |
+| Edge | 2 most recent major versions |
