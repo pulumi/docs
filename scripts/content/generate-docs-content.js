@@ -1,6 +1,6 @@
 const glob = require("glob");
 const fs = require("fs");
-const parser = require("node-html-parser");
+const cheerio = require("cheerio");
 
 const TurndownService = require("turndown");
 
@@ -17,27 +17,32 @@ async function extractDocsContent() {
 
     paths.forEach(async path => {
         const fileContent = fs.readFileSync(path, "utf-8").toString();
-        const doc = parser.parse(fileContent);
+        const $ = cheerio.load(fileContent);
 
         // Skip redirects.
-        if (doc.querySelector("meta[http-equiv='refresh'][content*='0; url=']")) {
+        if ($("meta[http-equiv='refresh'][content*='0; url=']").length > 0) {
             return;
         }
 
-        const main = doc.querySelector(".docs-main-content .docs-content");
+        const main = $(".docs-main-content .docs-content");
+        const html = main.html();
 
-        if (main && main.textContent) {
+        if (html) {
+            const title =  $("title").text();
+            const h1 =  $("h1").text();
+            const text = main.text();
+
             jsonOutput.push({
                 path: path.replace("./public", ""),
-                title: doc.querySelector("title").textContent,
-                h1: doc.querySelector("h1").textContent,
+                title,
+                h1,
                 main: {
-                    innerHTML: main.innerHTML,
-                    textContent: main.textContent,
-                    markdown: service.turndown(main.innerHTML),
+                    innerHTML: html,
+                    textContent: text,
+                    markdown: service.turndown(html),
                 },
             })
-        }
+        };
     });
 
     return jsonOutput;
