@@ -148,7 +148,7 @@ export class HubspotForm {
                 utmSource: utmData.source,
                 utmMedium: utmData.medium,
             };
-            if(emailAddress !== ""){
+            if(emailAddress !== ""){ // Don't track empty email addresses
                 analytics.track("form-submission", submissionData);
             }
         }
