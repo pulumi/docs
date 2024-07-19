@@ -148,8 +148,9 @@ export class HubspotForm {
                 utmSource: utmData.source,
                 utmMedium: utmData.medium,
             };
-
-            analytics.track("form-submission", submissionData);
+            if(emailAddress !== ""){
+                analytics.track("form-submission", submissionData);
+            }
         }
     }
 
