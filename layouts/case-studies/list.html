@@ -1,12 +1,37 @@
 {{ define "hero" }}
-    {{ partial "hero.html" (dict "title" .Title) }}
+    {{ partial "hero.html" (dict "title" .Title "subtitle" .Description) }}
 {{ end }}
 
 {{ define "main" }}
-    <div class="container mx-auto text-center my-16">
-        <h5 class="mx-auto max-w-xl mb-0">
-            {{ .Description }}
-        </h5>
+    <div class="container mx-auto max-w-xl md:max-w-4xl px-8 pb-8 md:px-0 text-center">
+        <ul class="list-none p-0 flex flex-wrap justify-center">
+            {{ range $logo := .Params.customer_logos.logos }}
+                <li class="w-24 h-12 m-4">{{ partial "customer-logo.html" (dict "logo" $logo.name) }}</li>
+            {{ end }}
+        </ul>
+    </div>
+
+    <div class="container mx-auto text-center pb-8">
+        <h3 id="customer-stories">Customer Stories</h4>
+    </div>
+
+    <div class="container mx-auto px-8 pb-16 md:px-0 text-center justify-center align-middle">
+        <div class="card ready-cta w-full rounded-xl p-1 gradient flex">
+            <div class="w-1/2 px-24 py-8 text-center justify-center align-middle bg-purple-100">
+                <div class="h-24 pb-4">
+                    {{ partial "customer-logo.html" (dict "logo" .Params.featured_customer.name) }}
+                </div>
+                <p class="italic">
+                    "{{ .Params.featured_customer.quote  }}"
+                </p>
+            </div>
+            <div class="w-1/2 bg-violet-600 p-8 align-middle">
+                <p class="text-2xl text-white pb-8" style="color:#fff !important">{{ .Params.featured_customer.headline }}</p>
+                <a class="btn-secondary mr-2" href="{{ .Params.featured_customer.name }}">
+                    Read the Story
+                </a>
+            </div>
+        </div>
     </div>
 
     <div class="container mx-auto max-w-xl md:max-w-4xl px-8 md:px-0">
