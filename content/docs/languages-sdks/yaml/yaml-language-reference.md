@@ -189,7 +189,7 @@ resources:
 
 Third party providers may require a `pluginDownloadURL` option for Pulumi to acquire the provider plugin. The publisher of that provider should provide this URL, following our guide for [Authoring & Publishing](/docs/using-pulumi/pulumi-packages/how-to-author/#publish-your-package).
 
-All of the above examples setting a `version` with a default provider, explicit provider, or on individual resources may be combined with the `pluginDownloadURL` option to use a third party provider. 
+All of the above examples setting a `version` with a default provider, explicit provider, or on individual resources may be combined with the `pluginDownloadURL` option to use a third party provider.
 
 This declares one of Pulumi's own providers as a default provider, setting an explicit `pluginDownloadURL`.
 
