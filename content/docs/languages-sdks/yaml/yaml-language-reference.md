@@ -116,23 +116,34 @@ There are at least two reasons to explicitly define providers in YAML, or explic
 1. Using explicit versions enables pinning the dependencies used, a technique used to improve build reliability.
 2. Using explicit providers enables controlling the options for providers used by each resource, as described in [Unlock Programmatic Control by Disabling Default Providers](/blog/disable-default-providers/).
 
-#### Resource version
+If a specific provider version is necessary, we prefer the approaches in the order described here.
 
-To create a resource with a specific provider version use the `version` option as described in [Resource Options](#resource-options):
+#### Default provider
+
+Declaring a default provider simplifies configuring a provider version across all resources for that provider, as all subsequent resources will 
+
+To configure the default provider instance for all resources for that provider's name, use the [`resources`](#resources) section to declare a provider resource.
+
+For the `type` property, prefix the name of the provider with `pulumi:providers`, for example, `pulumi:providers:aws`. Setting the `defaultProvider` property to `true`, defined at the same level as `type`, configures this as a default provider.
 
 ```yaml
 resources:
-  something:
-    type: aws:s3:Bucket
-    properties:
-      ...
+  aws-provider:
+    type: pulumi:providers:aws
+    defaultProvider: true
     options:
-      version: 5.6.0
+      version: 6.45.0
+  my-bucket:
+    type: aws:s3:Bucket
 ```
+
+In this example the `my-bucket` resource, and any other AWS resources, uses the default AWS provider version 6.45.0.
+
+Only one provider of a given `type` can be declared as the default provider.
 
 #### Explicit provider
 
-To create an explicit provider instance, preferably with a specific version, use the [`resources`](#resources) section. For the `type` property, prefix the name of the provider with `pulumi:providers`.
+To declare an explicit provider instance for specific resources, declare a provider resource the [`resources`](#resources) section. For the `type` property, prefix the name of the provider with `pulumi:providers`.
 
 ```yaml
 resources:
@@ -156,6 +167,42 @@ resources:
       location: WestEurope
     options:
       provider: ${provider}
+```
+
+Explicit providers take precedence over default providers.
+
+#### Resource version
+
+To declare a resource with a specific provider version use the `version` option as described in [Resource Options](#resource-options):
+
+```yaml
+resources:
+  something:
+    type: aws:s3:Bucket
+    properties:
+      ...
+    options:
+      version: 5.6.0
+```
+
+#### Third party providers
+
+Third party providers may require a `pluginDownloadURL` option for Pulumi to acquire the provider plugin. The publisher of that provider should provide this URL, following our guide for [Authoring & Publishing](/docs/using-pulumi/pulumi-packages/how-to-author/#publish-your-package).
+
+All of the above examples setting a `version` with a default provider, explicit provider, or on individual resources may be combined with the `pluginDownloadURL` option to use a third party provider. 
+
+This declares one of Pulumi's own providers as a default provider, setting an explicit `pluginDownloadURL`.
+
+```yaml
+resources:
+  aws-provider:
+    type: pulumi:providers:aws
+    defaultProvider: true
+    options:
+      version: 6.45.0
+      pluginDownloadURL: github://api.github.com/pulumi
+  my-bucket:
+    type: aws:s3:Bucket
 ```
 
 ### Outputs and Stack References
