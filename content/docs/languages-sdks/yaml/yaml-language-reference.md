@@ -120,7 +120,7 @@ If a specific provider version is necessary, we prefer the approaches in the ord
 
 #### Default provider
 
-Declaring a default provider simplifies configuring a provider version across all resources for that provider, as all subsequent resources will 
+Declaring a default provider simplifies configuring a provider version across all resources for that provider.
 
 To configure the default provider instance for all resources for that provider's name, use the [`resources`](#resources) section to declare a provider resource.
 
