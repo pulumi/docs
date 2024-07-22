@@ -143,7 +143,7 @@ Only one provider of a given `type` can be declared as the default provider.
 
 #### Explicit provider
 
-To declare an explicit provider instance for specific resources, declare a provider resource the [`resources`](#resources) section. For the `type` property, prefix the name of the provider with `pulumi:providers`.
+To declare an explicit provider instance for specific resources, declare a provider resource in the [`resources`](#resources) section. For the `type` property, prefix the name of the provider with `pulumi:providers`.
 
 ```yaml
 resources:
