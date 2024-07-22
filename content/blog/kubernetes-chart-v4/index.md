@@ -488,6 +488,51 @@ ingresscontroller = kubernetes.helm.v4.Chart(
 
 {{% /choosable %}}
 
+{{% choosable language "go" %}}
+
+```go
+applyPatchForceAnnotation := func(ctx context.Context, rta *pulumi.ResourceTransformArgs) *pulumi.ResourceTransformResult {
+	transform := func(applier interface{}) {
+		o := rta.Props.ToMapOutputWithContext(ctx).ApplyT(applier)
+		r, err := internals.UnsafeAwaitOutput(ctx, o)
+		if err != nil {
+			panic(err)
+		}
+		rta.Props = r.Value.(pulumi.Map)
+	}
+
+	switch rta.Type {
+	case "kubernetes:helm.sh/v4:Chart":
+		// Do nothing for Helm charts
+	default:
+		transform(func(obj map[string]any) pulumi.Map {
+			// note: obj is an ordinary Unstructured object at this point.
+			unstructured.SetNestedField(obj, "true", "metadata", "annotations", "pulumi.com/patchForce")
+			return pulumi.ToMap(obj)
+		})
+	}
+	return &pulumi.ResourceTransformResult{
+		Props: rta.Props,
+		Opts:  rta.Opts,
+	}
+}
+
+// Use Helm to install the Nginx ingress controller
+_, err = helmv4.NewChart(ctx, "ingresscontroller", &helmv4.ChartArgs{
+	Chart:     pulumi.String("nginx-ingress"),
+	Namespace: ingressNs.Metadata.Name(),
+	RepositoryOpts: &helmv4.RepositoryOptsArgs{
+		Repo: pulumi.String("https://helm.nginx.com/stable"),
+	},
+	Version: pulumi.String("0.14.1"),
+}, pulumi.Transforms([]pulumi.ResourceTransform{applyPatchForceAnnotation}))
+if err != nil {
+	return err
+}
+```
+
+{{% /choosable %}}
+
 {{< /chooser >}}
 
 ### Post-rendering support
