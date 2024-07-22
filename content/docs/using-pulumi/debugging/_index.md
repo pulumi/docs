@@ -188,24 +188,32 @@ Now you can step through the program and inspect variables. Once completed, resu
 
 ## Debugging Go programs
 
-Prepend your Pulumi program with the code to pause and give yourself time to attach the debugger:
+To debug your Pulumi program, you need to override the way Pulumi compiles and runs the application:
 
-```go
-package main
+- To enable debug compilation flags
+- To run the binary under the [`Delve`](https://github.com/go-delve/delve) debugger
 
-import (
- "time"
+First, create a shell script that accomplishes those two tasks. For example, in macOS/Linux it can be a `debug.sh` script in your Pulumi application folder:
 
- "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
+```bash
+#!/bin/bash
+go build -o goapp -gcflags "all=-N -l" .
+exec dlv --listen=:2345 --headless=true --api-version=2 exec ./goapp
+```
 
-func main() {
- pulumi.Run(func(ctx *pulumi.Context) error {
-  time.Sleep(20 * time.Second)
+Be sure to allow to execute this script:
 
-  // ... Your normal Pulumi code follows here
- })
-}
+```bash
+chmod +x debug.sh
+```
+
+Now, change your `Pulumi.yaml` file to invoke the debug script during program compilation:
+
+```yaml
+runtime:
+  name: go
+  options:
+    binary: ./debug.sh
 ```
 
 Run `pulumi up` the usual way:
@@ -215,31 +223,33 @@ pulumi up
 Previewing update (dev)
 
  Type                 Name      Plan       Info
- pulumi:pulumi:Stack  dev       create...
+ pulumi:pulumi:Stack  dev       create...  warning layer=rpc Listening for remote connections
 ```
 
 Set a breakpoint in your program.
 
-Navigate to your IDE and attach the debugger to the process with the name like `pulumi-go.xxxxxxxxxx`. For example, in VS Code, you can define the following `launch.json` file:
+Navigate to your IDE and connect the debugger to the same port as specified in the script (2345 in our case).
+
+For example, in VS Code, you can define the following `launch.json` file:
 
 ```json
 {
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Attach to Process",
+            "name": "Connect to server",
             "type": "go",
             "request": "attach",
-            "mode": "local",
-            "processId": 0
+            "mode": "remote",
+            "remotePath": "${workspaceFolder}",
+            "port": 2345,
+            "host": "127.0.0.1"
         }
     ]
 }
 ```
 
-navigate to the `Run and Debug` menu on the left pane, and then click the Start Debugging (F5) button with the `Attach to Process` configuration. Search for the process with the `pulumi-go` prefix and attach:
-
-![Debug: Attach to Go Process](./go-code-attach.png)
+navigate to the `Run and Debug` menu on the left pane, and then click the Start Debugging (F5) button with the `Connect to server` configuration.
 
 Now you can step through the program and inspect variables. Once completed, resume the execution and let the Pulumi CLI complete.
 
