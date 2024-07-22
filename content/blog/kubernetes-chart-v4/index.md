@@ -426,7 +426,7 @@ an object.
 Here's an example of using the `transforms` option to add the `pulumi.com/patchForce` annotation
 to a chart's resources.
 
-{{< chooser language "typescript,python" >}}
+{{< chooser language "typescript,python,go" >}}
 
 {{% choosable language "javascript,typescript" %}}
 
