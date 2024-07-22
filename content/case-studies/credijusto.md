@@ -9,6 +9,14 @@ meta_desc: Learn how Credijusto worked with Pulumi to help its development team 
 customer_name: Credijusto
 customer_logo: /logos/customers/credijusto_logo.svg
 
+quote: |
+    Once you use a familiar programming language to tackle a problem, you see that you can do way more in less time.
+    Pulumi was a natural choice based on the background and skills of our people in DevOps.
+quote_attrib: Fernando Carlietti, Lead DevOps Engineer
+
+headline_stat: 70%
+headline: Reduction in network configuration code.
+
 exec_summary: |
     Founded in 2015, Credijusto provides asset-backed loans and
     equipment leases to small and medium-sized enterprises (SMEs). With approximately 300

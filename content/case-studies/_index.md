@@ -8,8 +8,9 @@ meta_image: "/images/case-studies/case-studies-logos.png"
 
 featured_customer:
   name: unity
+  headline_stat: 80%
   headline: |
-    80% reduction in deployment times, from weeks to
+    Reduction in deployment times, from weeks to
     hours, significantly improving Unity's time to market.
   quote: |
     Terraform relies on HCL and lacks support for concepts like classes, objects and inheritance.
