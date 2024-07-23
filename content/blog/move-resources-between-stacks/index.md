@@ -172,6 +172,7 @@ Successfully moved resources from dev to dev
 ```
 
 There's a few things worth explaining above:
+
 - We're moving the resources to a different project, so we need to use the fully qualified stack name.  If the resources are being moved between different stacks in the same project, the argument can be only the stack name.
 - Before actually moving the resources, the command gives a list of resources that is being moved.  Since the bucket objects are children of the bucket, they will be included in the move.  However the random pet is not a child resource, so it will not be moved.
 - The command also warns us about dependencies that will not be transferred to the destination stack.  Since we didn't want to include the pet, but the bucket has a dependency on it, pulumi will warn us about that.
