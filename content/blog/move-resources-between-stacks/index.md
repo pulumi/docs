@@ -125,9 +125,35 @@ v-thomas-pulumi-corp/pulumi-demo-move-aws/dev   23 minutes ago  0               
 v-thomas-pulumi-corp/pulumi-demo-move/dev       6 minutes ago   7               <url>
 ```
 
+Next we can find the URN of the resources using `pulumi stack --show-urns`:
+
+```shell
+$ pulumi stack --show-urns
+Current stack is dev:
+    Owner: v-thomas-pulumi-corp
+    Last updated: 13 seconds ago (2024-07-23 13:52:17.58884965 +0200 CEST)
+    Pulumi version used: 3.125.1-dev.0
+Current stack resources (7):
+    TYPE                                    NAME
+    pulumi:pulumi:Stack                     pulumi-demo-move-dev
+    │  URN: urn:pulumi:dev::pulumi-demo-move::pulumi:pulumi:Stack::pulumi-demo-move-dev
+    ├─ random:index/randomPet:RandomPet     a-random-pet
+    │     URN: urn:pulumi:dev::pulumi-demo-move::random:index/randomPet:RandomPet::a-random-pet
+    ├─ aws:s3/bucket:Bucket                 b
+    │  │  URN: urn:pulumi:dev::pulumi-demo-move::aws:s3/bucket:Bucket::b
+    │  ├─ aws:s3/bucketObject:BucketObject  random.html
+    │  │     URN: urn:pulumi:dev::pulumi-demo-move::aws:s3/bucket:Bucket$aws:s3/bucketObject:BucketObject::random.html
+    │  └─ aws:s3/bucketObject:BucketObject  index.html
+    │        URN: urn:pulumi:dev::pulumi-demo-move::aws:s3/bucket:Bucket$aws:s3/bucketObject:BucketObject::index.html
+    ├─ pulumi:providers:random              default_4_16_3
+    │     URN: urn:pulumi:dev::pulumi-demo-move::pulumi:providers:random::default_4_16_3
+    └─ pulumi:providers:aws                 default_6_45_0
+          URN: urn:pulumi:dev::pulumi-demo-move::pulumi:providers:aws::default_6_45_0
+```
+
 Next we can actually move the resources.  Since we're moving the resources from the currently selected stack, we can omit the `--source` argument:
 
-```
+```shell
 $ pulumi state move --dest v-thomas-pulumi-corp/pulumi-demo-move-aws/dev 'urn:pulumi:dev::pulumi-demo-move::aws:s3/bucket:Bucket::b'
 Planning to move the following resources from dev to dev:
 
@@ -181,7 +207,5 @@ const randomSite = new aws.s3.BucketObject("random.html", {
 ```
 
 Note how we now need to specify the content of `random.html`, since we no longer have the random pet in the same program.  In this case we use a [stack reference](https://www.pulumi.com/learn/building-with-pulumi/stack-references/) to reference the output from the source program.  It is of course up to the user how to re-create the output.  It could also come from config, or be hardcoded depending on the use-case.
-
-
 
 As always, we would love to hear your feedback in the [community slack](https://www.pulumi.com/community/).  If you encounter any issues with the command, please open an [issue](https://github.com/pulumi/pulumi/issues).
