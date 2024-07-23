@@ -56,7 +56,7 @@ social:
 # for details, and please remove these comments before submitting for review.
 ---
 
-Today we're announcing the [`pulumi state move`](https://www.pulumi.com/docs/cli/commands/pulumi_state_move/) command, which can be used to move resources that are managed by Pulumi between different stacks and/or projects.  No matter in which stack/project the resource was created in, it can now be moved with a single commmand.
+Today we're announcing the [`pulumi state move`](/docs/cli/commands/pulumi_state_move/) command, which can be used to move resources that are managed by Pulumi between different stacks and/or projects.  No matter in which stack/project the resource was created in, it can now be moved with a single commmand.
 
 <!--more-->
 
