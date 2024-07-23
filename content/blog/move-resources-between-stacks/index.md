@@ -187,7 +187,7 @@ export const randomPetName = randomPet.id;
 
 Only the random pet remains here.  We also export its name, so we can continue using it in the destination program.  Meanwhile the destination program is mostly just a copy of the original AWS resources, but there is an important change:
 
-```
+```typescript
 const stackRef = new pulumi.StackReference(`v-thomas-pulumi-com/pulumi-demo-move/dev`)
 
 const b = new aws.s3.Bucket("b");
