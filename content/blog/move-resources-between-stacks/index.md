@@ -84,7 +84,7 @@ Flags:
 
 Both `dest` and `source` can be either stacks in the current project, or stacks in a different project, using the fully qualified stack names.  Note that this works only for stacks within the same backend, it is currently not possible to move a resource between different backends.
 
-The resources being moved have to be specified by their full URN, and multiple URNs can be passed at once.  For each resource being moved, all the children of that resource will also be moved, and the relationships between all resources being moved is preserved.  Resources with other types of dependencies will however not be moved to the target stack by default.
+The resources being moved have to be specified by their full [URN](/docs/concepts/resources/names/#urns), and multiple URNs can be passed at once.  For each resource being moved, all the children of that resource will also be moved, and the relationships between all resources being moved is preserved.  Resources with other types of dependencies will however not be moved to the target stack by default.
 
 The command will make no attempt to adjust the users program.  Inputs and outputs from broken dependencies will have to be adjusted in the program where the resource is being managed after being moved.  This can be done either by using [stack references](https://www.pulumi.com/docs/concepts/stack/#stackreferences), or recreating the inputs in the program.
 
