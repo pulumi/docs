@@ -313,7 +313,7 @@ However, beyond the basics of infrastructure as code there are
 significant differences that affect productivity,
 scalability, and collaboration.
 
-1. **Increased Productivity.** As discussed at the beginning,
+- **Increased Productivity.** As discussed at the beginning,
     Pulumi's promise is to build in all the
     latest advancements in both the developer and operations experience.
     When you write Pulumi code, you now have AI copilots that can pair program with you,
@@ -329,7 +329,7 @@ scalability, and collaboration.
     ecosystem that doesn't tap into the latest advancements of how code
     is written or how infrastructure is managed.
 
-2. **Greater Scalability.** Pulumi embraces software engineering as a
+- **Greater Scalability.** Pulumi embraces software engineering as a
     way to solve and manage the exponentially increasing complexity of
     modern architectures. Programming languages with their loops,
     conditional logic, class inheritance, object orientedness allows
@@ -339,7 +339,7 @@ scalability, and collaboration.
     event-driven automations or internal developer portals that provide
     self-service.
 
-3. **Better Collaboration.** Pulumi makes it easy to prototype new
+- **Better Collaboration.** Pulumi makes it easy to prototype new
     products and quickly ship them into production because it is easier
     for the platform, development, and security teams to collaborate.
     You (platform engineering and devops teams) can define and manage common
@@ -367,14 +367,14 @@ Pulumi and CDK are similar in that both allow you to use programming
 languages to write infrastructure as code. However, there are some key
 differences:
 
-1. **No Vendor Lock-In.** CDK supports only AWS, whereas Pulumi
+- **No Vendor Lock-In.** CDK supports only AWS, whereas Pulumi
     supports over 150 cloud and SaaS providers, with more being added
     all the time. CDK depends on CloudFormation as the deployment
     engine; it shares many of the same benefits and limitations as
     CloudFormation (see [Pulumi vs.
     CloudFormation](https://www.pulumi.com/docs/concepts/vs/cloud-templates/cloudformation/))
 
-2. **Execution > Translation.** Pulumi and CDK support similar
+- **Execution > Translation.** Pulumi and CDK support similar
     programming languages but differ fundamentally in their deployment
     approaches. Pulumi\'s engine directly understands these languages
     and communicates with cloud providers. In contrast, CDK transpiles
@@ -387,7 +387,7 @@ differences:
     debugging and successful deployments, whereas Pulumi\'s direct
     approach simplifies this process.
 
-3. **Versatility.** CDK and Pulumi both support automated testing, but
+- **Versatility.** CDK and Pulumi both support automated testing, but
     Pulumi offers more versatile options. While both allow unit testing,
     Pulumi\'s deep integration between language and runtime enables
     fast, offline tests (in-memory) with mocked cloud provider calls. In
@@ -425,7 +425,7 @@ Pulumi later.
 Have a particular ***Pulumi vs X***
 comparison that you need thoughts on? Feel free to join the [Pulumi Community
 Slack](http://pulumi) if you have quick technical
-questions, or talk to a Solutions Architect if you need more detailed
+questions, or talk to a [Solutions Architect](https://www.pulumi.com/contact/?form=tf-migration) if you need more detailed
 consultation about your specific architecture.
 {{% /notes %}}
 
