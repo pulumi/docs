@@ -1,7 +1,7 @@
 ---
-title: "Why Switch to Pulumi for Cloud Deployments?"
-date: 2024-07-17T19:47:50-07:00
-meta_desc: "Pulumi: the top choice for cloud deployments. Boost productivity, scale infinitely, and leverage AI to revolutionize infrastructure management."
+title: "Why Switch to Pulumi for Infrastructure as Code?"
+date: 2024-07-23T19:47:50-07:00
+meta_desc: "Pulumi: the top choice for infrastructure as code. Boost productivity, scale infinitely, and leverage AI to revolutionize infrastructure management."
 meta_image: meta.png
 authors:
     - aaron-kao
@@ -9,19 +9,6 @@ tags:
     - infrastructure-as-code
     - platform-engineering
     - ai
-
-
-# The social copy used to promote this post on Twitter and Linkedin. These
-# properties do not actually create the post and have no effect on the
-# generated blog page. They are here strictly for reference.
-
-# Here are some examples of posts we have made in the past for inspiration:
-# https://www.linkedin.com/feed/update/urn:li:activity:7171191945841561601
-# https://www.linkedin.com/feed/update/urn:li:activity:7169021002394296320
-# https://www.linkedin.com/feed/update/urn:li:activity:7155606616455737345
-# https://twitter.com/PulumiCorp/status/1763265391042654623
-# https://twitter.com/PulumiCorp/status/1762900472489185492
-# https://twitter.com/PulumiCorp/status/1755637618631405655
 
 social:
     twitter: Why should you switch to Pulumi? This blog post runs through all the reasons by use case, by alternatives, and by benefits. 
@@ -35,20 +22,21 @@ The cloud promised to revolutionize your business.
 But for many companies, that promise remains frustratingly out of reach.
 Instead of accelerating product development, infrastructure has
 become a bottleneck. You and your team (DevOps, platform, or infrastructure engineering teams)
-are bogged down by clunky tools and
-manual processes. Provisioning a simple test environment takes days.
-Rolling out updates across regions? Weeks.
+are bogged down by:
 
-Meanwhile, the complexity of modern cloud architectures is spiraling out
-of control. Microservices, containers, serverless -- the combinations
-seem infinite. You know there has to be a better way. A way to truly
+- Clunky tools and manual processes
+- Provisioning a simple test environment takes days
+- Rolling out updates across regions takes weeks
+- The combinations of modern cloud architectures seems infinite
+
+You know there has to be a better way. A way to truly
 harness the power of the cloud and turn it into your competitive
 advantage.
 
 **But how?**
 
 Enter Pulumi -- the open source infrastructure as code (IaC) platform
-that\'s accelerating time to value for thousands of companies worldwide.
+that gives 10x better scale, productivity, and time to value for thousands of companies worldwide.
 
 So why should you switch to Pulumi? How is it different from other
 infrastructure as code tools? This post should answer all those
@@ -82,7 +70,7 @@ builds the latest technologies (e.g., AI Copilots) into the core user
 experience. It also helps you build and manage new technology
 paradigms (e.g., AI workloads, LLMs, internal developer platforms).
 
-**Powerful Automations.** Another unique approach is Pulumi makes it
+**Powerful Automations.** Another unique approach is that Pulumi makes it
 easy to automate and scale modern cloud architectures. In the last
 decade, the industry has moved from monolithic to microservices
 architectures, which operate as distributed systems over shared
@@ -128,7 +116,7 @@ infrastructure.\
 *Pulumi provides you with an approach to open source and community that
 provides stability and choice.*
 
-**Increased Productivity:** You expect your tools
+**Increased Productivity.** You expect your tools
 and workflows to keep up with the industry: AI copilots, Intellisense,
 linting tools, testing frameworks, and CICD pipelines. But most of these
 innovations are just for building applications and services and not for
@@ -157,8 +145,7 @@ Customers of Pulumi frequently experience 100% productivity increases, 99% time 
 
 ## Frequently Asked Questions - Why Pulumi?
 
-Some frequently asked questions about why Pulumi based on use cases and
-alternatives. Choose your own adventure:
+Here are some frequently asked questions about why you should choose Pulumi based on the following use cases and alternatives:
 
 * [Why Pulumi, by use case?](#why-pulumi-by-use-case)
     * [Why Pulumi for Internal Developer Platforms?](#why-pulumi-for-internal-developer-platforms)
@@ -181,7 +168,7 @@ details on two popular use cases.
 
 You and your team may build internal developer platforms (IDPs) to
 maximize the use of the cloud at scale across the company while
-being secure and compliant so your development teams can ship faster. There are a number of components/layers that are considered basic requirements when building an internal
+being secure and compliant, so your development teams can ship faster. There are a number of components/layers that are considered basic requirements when building an internal
 developer platform. The layers are as follows:
 
 * **Developer Control Plane.** Curated experiences that empower
@@ -377,7 +364,7 @@ scalability, and collaboration.
 #### Why Pulumi vs. AWS Cloud Development Kit (CDK)?
 
 Pulumi and CDK are similar in that both allow you to use programming
-languages to write infrastructure as code. However there are some key
+languages to write infrastructure as code. However, there are some key
 differences:
 
 1. **No Vendor Lock-In.** CDK supports only AWS, whereas Pulumi
@@ -413,7 +400,7 @@ differences:
 
 #### Why Pulumi vs. 3rd party internal developer portal providers?
 
-There are many third party providers of internal developer portals (think: Port, Cortex, Backstage).
+There are many third party providers of internal developer portals (think Port, Cortex, Backstage).
 Some are services and others are open source software. These providers
 are similar in that they offer simple developer portals that
 are a single part of a greater infrastructure management platform.
