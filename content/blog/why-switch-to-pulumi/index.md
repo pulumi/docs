@@ -147,15 +147,15 @@ Customers of Pulumi frequently experience 100% productivity increases, 99% time 
 
 Here are some frequently asked questions about why you should choose Pulumi based on the following use cases and alternatives:
 
-* [Why Pulumi, by use case?](#why-pulumi-by-use-case)
-    * [Why Pulumi for Internal Developer Platforms?](#why-pulumi-for-internal-developer-platforms)
-    * [Why Pulumi for AI Workloads?](#why-pulumi-for-ai-workloads)
-* [Why is Pulumi better than the alternatives?](#why-is-pulumi-better-than-the-alternatives)
-    * [Why Pulumi vs. clickops?](#why-pulumi-vs-clickops)
-    * [Why Pulumi vs. Terraform?](#why-pulumi-vs-terraform)
-    * [Why Pulumi vs. AWS CDK?](#why-pulumi-vs-aws-cloud-development-kit-cdk)
-    * [Why Pulumi vs. 3rd party IDP providers?](#why-pulumi-vs-3rd-party-idp-providers-think-port-cortex-backstage)
-* [How can I switch to Pulumi?](#how-can-i-switch-to-pulumi)
+- [Why Pulumi, by use case?](#why-pulumi-by-use-case)
+    - [Why Pulumi for Internal Developer Platforms?](#why-pulumi-for-internal-developer-platforms)
+    - [Why Pulumi for AI Workloads?](#why-pulumi-for-ai-workloads)
+- [Why is Pulumi better than the alternatives?](#why-is-pulumi-better-than-the-alternatives)
+    - [Why Pulumi vs. clickops?](#why-pulumi-vs-clickops)
+    - [Why Pulumi vs. Terraform?](#why-pulumi-vs-terraform)
+    - [Why Pulumi vs. AWS CDK?](#why-pulumi-vs-aws-cloud-development-kit-cdk)
+    - [Why Pulumi vs. 3rd party IDP providers?](#why-pulumi-vs-3rd-party-idp-providers-think-port-cortex-backstage)
+- [How can I switch to Pulumi?](#how-can-i-switch-to-pulumi)
 
 ### Why Pulumi, by use case?
 
@@ -171,25 +171,25 @@ maximize the use of the cloud at scale across the company while
 being secure and compliant, so your development teams can ship faster. There are a number of components/layers that are considered basic requirements when building an internal
 developer platform. The layers are as follows:
 
-* **Developer Control Plane.** Curated experiences that empower
+- **Developer Control Plane.** Curated experiences that empower
     developers by meeting them at their level of expertise, whether
     it\'s an abstracted developer portal, custom CLI, or shared IaC
     templates.
 
-* **Integration & Delivery.** Automations to version control, test,
+- **Integration & Delivery.** Automations to version control, test,
     trace, and deploy all infrastructure from resources, configurations,
     environments, and secrets as well as orchestration automations to
     manage provisioning workflows.
 
-* **Monitoring & Logging.** Components to log, monitor, and observe
+- **Monitoring & Logging.** Components to log, monitor, and observe
     all infrastructure for greater operational control as well as
     optimize against unnecessary costs.
 
-* **Security & Identity.** Security and compliance guardrails that
+- **Security & Identity.** Security and compliance guardrails that
     regulate every piece of infrastructure from policies to fine-grained
     access controls to secrets.
 
-* **Resources.** Providers that support modern cloud architectures
+- **Resources.** Providers that support modern cloud architectures
     such as Kubernetes, containers, serverless, generative AI, machine
     learning, data lakes, hybrid cloud/on-premises, and more.
 
@@ -211,7 +211,7 @@ cloud with security, scalability, repeatability, and consistency. It provides
 
 ![pulumi platform](platform-pulumi-diagram.png)
 
-* **Developer Control Plane.** Pulumi is the simplest and most
+- **Developer Control Plane.** Pulumi is the simplest and most
     intuitive way to manage cloud infrastructure because of its ability
     to use standard programming languages, including YAML. This removes
     the friction to the basic requirements of managing cloud
@@ -220,24 +220,24 @@ cloud with security, scalability, repeatability, and consistency. It provides
     provides private templates that integrate with developer
     portals like AWS Proton and Backstage.
 
-* **Integration & Delivery.** Pulumi Automation API can embed IaC
+- **Integration & Delivery.** Pulumi Automation API can embed IaC
     programs directly in applications, resulting in 10x greater
     management of resources per engineer. Pulumi can take advantage of
     all existing testing frameworks supported by the selected
     programming language.
 
-* **Monitoring & Logging.** Pulumi Insights adds advanced search,
+- **Monitoring & Logging.** Pulumi Insights adds advanced search,
     analytics, and AI to any cloud infrastructure, giving unique
     insights into cloud usage and cost optimizations. Pulumi partners
     with leading observability solutions making it easy to manage
     monitoring and logging resources through IaC.
 
-* **Security & Identity.** Pulumi CrossGuard provides policy as code with
+- **Security & Identity.** Pulumi CrossGuard provides policy as code with
     auto-remediation. Pulumi ESC makes it easy to manage secrets and configurations
     for every environment. Access to each cloud resource and secret can be granularly
     controlled and audited.
 
-* **Resources.** Pulumi supports modern cloud architectures such as
+- **Resources.** Pulumi supports modern cloud architectures such as
     Kubernetes, containers, serverless, generative AI, machine learning,
     data lakes, hybrid cloud/on-premises, and more. Pulumi makes it
     simple to create components that abstract away the complexity of
