@@ -455,3 +455,5 @@ tools, and we are happy to help you think through how to make switching
 to Pulumi as easy as possible.
 
 {{< blog/cta-button "Switch to Pulumi" "https://www.pulumi.com/contact/?form=tf-migration" "_blank" >}}
+
+*Meta image credit: [ESO/M. Kornmesser](https://www.eso.org/public/images/eso2402a/)*
