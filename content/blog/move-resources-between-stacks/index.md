@@ -90,7 +90,7 @@ The command will make no attempt to adjust the users program.  Inputs and output
 
 The `pulumi state move` command is available in Pulumi v3.126.0 and later.
 
-# Example
+## Example
 
 To demonstrate how the command works in practice, let's go through an example.  Let's assume we have the following program:
 
