@@ -88,6 +88,6 @@ The resources being moved have to be specified by their full [URN](/docs/concept
 
 The command will make no attempt to adjust the users program.  Inputs and outputs from broken dependencies will have to be adjusted in the program where the resource is being managed after being moved.  This can be done either by using [stack references](https://www.pulumi.com/docs/concepts/stack/#stackreferences), or recreating the inputs in the program.
 
-The `pulumi state move` command is available in Pulumi v3.124.0 and later.
+The `pulumi state move` command is available in Pulumi v3.126.0 and later.
 
 As always, we would love to hear your feedback in the [community slack](https://www.pulumi.com/community/).  If you encounter any issues with the command, please open an [issue](https://github.com/pulumi/pulumi/issues).
