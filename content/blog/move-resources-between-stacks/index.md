@@ -1,59 +1,14 @@
 ---
-title: "Move Resources Between Stacks Or Projects"
-
-# The date represents the post's publish date, and by default corresponds with
-# the date and time this file was generated. Dates are used for display and
-# ordering purposes only; they have no effect on whether or when a post is
-# published. To influence the ordering of posts published on the same date, use
-# the time portion of the date value; posts are sorted in descending order by
-# date/time.
-date: 2024-07-11T15:47:21+02:00
-
-# The draft setting determines whether a post is published. Set it to true if
-# you want to be able to merge the post without publishing it.
-draft: false
-
-# Use the meta_desc property to provide a brief summary (one or two sentences)
-# of the content of the post, which is useful for targeting search results or
-# social-media previews. This field is required or the build will fail the
-# linter test. Max length is 160 characters.
+title: "Introducing `pulumi state move`: Move Resources Between Stacks or Projects"
+allow_long_title: true
+date: 2024-07-24
 meta_desc: Introducing the new `pulumi state move` command that allows moving resources between stacks and projects
-
-# The meta_image appears in social-media previews and on the blog home page. A
-# placeholder image representing the recommended format, dimensions and aspect
-# ratio has been provided for you.
 meta_image: meta.png
-
-# At least one author is required. The values in this list correspond with the
-# `id` properties of the team member files at /data/team/team. Create a file for
-# yourself if you don't already have one.
 authors:
     - thomas-gummerer
-
-# At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
     - announcement
     - CLI
-
-
-# The social copy used to promote this post on Twitter and Linkedin. These
-# properties do not actually create the post and have no effect on the
-# generated blog page. They are here strictly for reference.
-
-# Here are some examples of posts we have made in the past for inspiration:
-# https://www.linkedin.com/feed/update/urn:li:activity:7171191945841561601
-# https://www.linkedin.com/feed/update/urn:li:activity:7169021002394296320
-# https://www.linkedin.com/feed/update/urn:li:activity:7155606616455737345
-# https://twitter.com/PulumiCorp/status/1763265391042654623
-# https://twitter.com/PulumiCorp/status/1762900472489185492
-# https://twitter.com/PulumiCorp/status/1755637618631405655
-
-social:
-    twitter:
-    linkedin:
-
-# See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md
-# for details, and please remove these comments before submitting for review.
 ---
 
 Today we're announcing the [`pulumi state move`](/docs/cli/commands/pulumi_state_move/) command, which can be used to move resources that are managed by Pulumi between different stacks and/or projects. With the `pulumi state move` command, you can refactor your Pulumi Infrastructure as Code without any disruption to your deployed cloud infrastructure, enabling you to evolve and scale with confidence.
