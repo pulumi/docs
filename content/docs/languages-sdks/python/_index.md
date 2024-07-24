@@ -33,10 +33,10 @@ The Pulumi SDK is available to Python developers as a package distributed on PyP
 
 The Pulumi programming model includes a core concept of `Input` and `Output` values, which are used to track how outputs of one resource flow in as inputs to another resource.  This concept is important to understand when getting started with Python and Pulumi, and the [Inputs and Outputs](/docs/concepts/inputs-outputs/) documentation is recommended to get a feel for how to work with this core part of Pulumi in common cases.
 
-In Python, inputs that are objects, that is inputs that group multiple values together, can be reprented either as classes or as dictionary literals. The types for the argument classes have the suffix `Args`, whereas the types for the dictionaries have the suffix `ArgsDict`. Both types take the same arguments, but the dictionary types are often more concise.
+In Python, inputs that are objects, that is inputs that group multiple values together, can be represented either as classes or as dictionary literals. The types for the argument classes have the suffix `Args`, whereas the types for the dictionaries have the suffix `ArgsDict`. Both types take the same arguments, but the dictionary types are often more concise.
 
 {{% notes type="info" %}}
-The types with the suffix `ArgsDict` for dictionary literals were introduced in July 2024. You can still use dictionary literals with providers that have not been updated yet with this change, but you will not benefit from the type checking that the new types provide.
+The types with the suffix `ArgsDict` for dictionary literals were introduced in July 2024. You can still use dictionary literals with [providers](/docs/concepts/how-pulumi-works/#resource-providers) that have not been updated yet with this change, but you will not benefit from the type checking that the new types provide.
 {{% /notes %}}
 
 This example shows two ways to create an `s3.Bucket` resource in Python, once using a dictionary literal and once using a class:
@@ -44,7 +44,7 @@ This example shows two ways to create an `s3.Bucket` resource in Python, once us
 ```python
 import pulumi_aws as aws
 
-bucket = aws.s3.Bucket(
+bucket1 = aws.s3.Bucket(
     "my-bucket-with-dictionary-literals",
     website={
         "error_document": "error.html",
@@ -52,7 +52,7 @@ bucket = aws.s3.Bucket(
     },
 )
 
-bucket = aws.s3.Bucket(
+bucket2 = aws.s3.Bucket(
     "my-bucket-with-args",
     website=aws.s3.BucketWebsiteArgs(
         error_document="error.html",
