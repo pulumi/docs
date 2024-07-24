@@ -30,5 +30,3 @@ The Pulumi CLI includes some commands for inspecting this data. You can use thes
 - [pulumi preview](/docs/cli/commands/pulumi_preview/) - This command displays a preview of the updates to an existing stack whose state is represented by an existing state file.
 
 - [pulumi console](/docs/cli/commands/pulumi_console/) - This command opens the current stack in the Pulumi Console. From there, you can view detailed information about the stack such as its resources, outputs, and configuration values.
-
-
