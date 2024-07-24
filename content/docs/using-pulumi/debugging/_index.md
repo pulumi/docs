@@ -68,6 +68,8 @@ Then, attach your debugger to the process with the `node` runtime. For example, 
 }
 ```
 
+Alternatively, you can use the [Auto Attach](https://code.visualstudio.com/docs/nodejs/nodejs-debugging#_auto-attach) or [JavaScript Debug Terminal](https://code.visualstudio.com/docs/nodejs/nodejs-debugging#_javascript-debug-terminal) to attach automatically without any launch configurations.
+
 Navigate to the `Run and Debug` menu on the left pane, and then click the Start Debugging (F5) button with the `Node.js: Attach` configuration.
 
 Depending on your setup, you may need to attach multiple times until the right `node` process is found. For example, you may be running Node.js policy packs that will hit the debugger as well.
