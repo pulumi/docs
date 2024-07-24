@@ -15,7 +15,7 @@ tags:
     - tutorial
 ---
 
-Pulumi configurations and state data include highly structured information about the resources they manage, such as dependency information, [outputs](/docs/using-pulumi/stack-outputs-and-references/), and more.
+Pulumi configurations and state data include highly structured information about the resources they manage, such as dependency information, [outputs](/docs/concepts/inputs-outputs/#outputs), and more.
 
 The Pulumi CLI includes some commands for inspecting this data. You can use these to integrate other tools with Pulumi's infrastructure data, or just to gain a deeper or more holistic understanding of your infrastructure.
 
