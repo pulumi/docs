@@ -17,7 +17,7 @@ draft: false
 # of the content of the post, which is useful for targeting search results or
 # social-media previews. This field is required or the build will fail the
 # linter test. Max length is 160 characters.
-meta_desc: Introducing the new pulumi state move command that allows moving resources between stacks and projects
+meta_desc: Introducing the new `pulumi state move` command that allows moving resources between stacks and projects
 
 # The meta_image appears in social-media previews and on the blog home page. A
 # placeholder image representing the recommended format, dimensions and aspect
@@ -56,11 +56,11 @@ social:
 # for details, and please remove these comments before submitting for review.
 ---
 
-Today we're announcing the [`pulumi state move`](/docs/cli/commands/pulumi_state_move/) command, which can be used to move resources that are managed by Pulumi between different stacks and/or projects.  No matter in which stack/project the resource was created in, it can now be moved with a single commmand.
+Today we're announcing the [`pulumi state move`](/docs/cli/commands/pulumi_state_move/) command, which can be used to move resources that are managed by Pulumi between different stacks and/or projects. With the `pulumi state move` command, you can refactor your Pulumi Infrastructure as Code without any disruption to your deployed cloud infrastructure, enabling you to evolve and scale with confidence.
 
 <!--more-->
 
-When refactoring a Pulumi project from a [monolithic](https://www.pulumi.com/docs/using-pulumi/organizing-projects-stacks/#monolithic) structure to [micro stacks](https://www.pulumi.com/docs/using-pulumi/organizing-projects-stacks/#micro-stacks), you might need to move resources between different projects or stacks, without recreating them. While this has been possible with some major surgery (our users came up with [automated solutions](https://github.com/pulumi/pulumi/issues/3389#issuecomment-679020482)), it's fairly error prone and difficult.  This makes refactoring Pulumi programs quite cumbersome, and having a simpler, integrated solution for this problem was a [much requested feature](https://github.com/pulumi/pulumi/issues/3389).
+When refactoring a Pulumi project from a [monolithic](https://www.pulumi.com/docs/using-pulumi/organizing-projects-stacks/#monolithic) structure to [micro stacks](https://www.pulumi.com/docs/using-pulumi/organizing-projects-stacks/#micro-stacks), you might need to move resources between different projects or stacks, without recreating them. While this has been possible with some significant manual effort to hand-modify Pulumi state files (our users came up with [automated solutions](https://github.com/pulumi/pulumi/issues/3389#issuecomment-679020482) for this!), doing so can be error prone and time consuming. Having a simpler, integrated solution for this problem was a [much requested feature](https://github.com/pulumi/pulumi/issues/3389). The new `pulumi stack move` command, combined with the [`aliases`](/docs/concepts/options/aliases/) command for refactoring resources within stacks, offers the richest collection of tools for refactoring IaC at scale available in the industry today.
 
 The `pulumi state move` command works as follows:
 
@@ -82,13 +82,11 @@ Flags:
   -y, --yes               Automatically approve and perform the move
 ```
 
-Both `dest` and `source` can be either stacks in the current project, or stacks in a different project, using the fully qualified stack names.  Note that this works only for stacks within the same backend, it is currently not possible to move a resource between different backends.
+Both `dest` and `source` can be either stacks in the current project, or stacks in a different project, using the fully qualified stack names.  Note that this works only for stacks within the same backend, it is currently not possible to move a resource between different backends (though you can [move stacks between backends](/docs/concepts/state/#migrating-between-state-backends) using other existing tools).
 
-The resources being moved have to be specified by their full [URN](/docs/concepts/resources/names/#urns), and multiple URNs can be passed at once.  For each resource being moved, all the children of that resource will also be moved, and the relationships between all resources being moved is preserved.  Resources with other types of dependencies will however not be moved to the target stack by default.  The easiest way to get the full URN of the resources is to use `pulumi stack --show-urns`.  Note that URNs can contain characters that get interpreted by the shell, so it is always a good idea to wrap them in single quotes when passing them as arguments.
+The resources being moved have to be specified by their full [URN](/docs/concepts/resources/names/#urns), and multiple URNs can be passed at once.  For each resource being moved, all the children of that resource will also be moved, and the relationships between all resources being moved is preserved.  Resources with other types of dependencies will however not be moved to the target stack by default.  The easiest way to get the full URN of the resources is to use `pulumi stack --show-urns`.  Note that URNs can contain characters that get interpreted by the shell, so it is always a good idea to wrap them in single quotes (`'`) when passing them as arguments.
 
-The command will make no attempt to adjust the users program.  Inputs and outputs from broken dependencies will have to be adjusted in the program where the resource is being managed after being moved.  This can be done either by using [stack references](https://www.pulumi.com/docs/concepts/stack/#stackreferences), or recreating the inputs in the program.
-
-The `pulumi state move` command is available in Pulumi v3.126.0 and later.
+The `pulumi state move` command won't modify the code of your program directly, it will only modify the state of the source and destination stacks.  So following running the command, you should ensure that you modify both programs to match the changes you have made.  This can typically be accomplished by copy/pasting source code for the resources and/or components between the two codebases. Inputs and outputs of resources that were moved may need to be adjusted as part of this process. This can be done either by using [stack references](/docs/concepts/stack/#stackreferences), or recreating the inputs in the program.
 
 ## Example
 
