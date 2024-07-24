@@ -16,15 +16,16 @@ tags:
 
 TBD
 
-[pulumi stack graph](/docs/cli/commands/pulumi_stack_graph/) - This command can be used to view the dependency graph that a Pulumi program emitted when it was run. This graph is output in the DOT format. This command operates on your stack’s most recent deployment.
+[pulumi stack](/docs/cli/commands/pulumi_stack/) - This command lists the management details, resources, and output names and values of the current stack.
 
-[pulumi stack]() - This command enables you to manage stacks and view stack state.
+[pulumi stack graph](/docs/cli/commands/pulumi_stack_graph/) - This command can be used to export a stack’s dependency graph to a file.
 
-[pulumi stack output](/docs/cli/commands/pulumi_stack_output/) - By default, this command lists all output properties exported from a stack. If a specific property-name is supplied, just that property’s value is shown.
+[pulumi stack output](/docs/cli/commands/pulumi_stack_output/) - This command lists all output names and values that are exported from a stack. If a specific property-name is supplied, just that property’s value is shown.
 
-[pulumi console]() - This command opens the current stack in the Pulumi Console
+[pulumi stack export](/docs/cli/commands/pulumi_stack_export/) - This command generates a human readable version of the state file to standard out.
 
-[pulumi logs](/docs/cli/commands/pulumi_logs/) - This command aggregates log entries associated with the resources in a stack from the corresponding provider. For example, for AWS resources, the pulumi logs command will query CloudWatch Logs for log data relevant to resources in a stack.
+[pulumi preview](/docs/cli/commands/pulumi_preview/) - This command displays a preview of the updates to an existing stack whose state is represented by an existing state file.
 
-pulumi preview - Show a preview of updates to a stack’s resources
+[pulumi console](/docs/cli/commands/pulumi_console/) - This command opens the current stack in the Pulumi Console. From there, you can view detailed information about the stack such as its resources, outputs, and configuration values.
+
 
