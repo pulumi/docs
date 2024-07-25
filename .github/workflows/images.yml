@@ -2,6 +2,7 @@ name: Compress Images
 on:
   pull_request:
     paths:
+      - '.github/workflows/images.yml'
       - '**.jpg'
       - '**.jpeg'
       - '**.png'
