@@ -28,3 +28,4 @@ Learn how to adopt Pulumi, organize projects & stacks, use the Automation API, c
 - [Policy as code](crossguard/)
 - [Pulumi packages](pulumi-packages/)
 - [Testing](testing/)
+- [Debugging](debugging/)

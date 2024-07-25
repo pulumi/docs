@@ -89,7 +89,9 @@ In a terminal run `NODE_OPTIONS=”--inspect-brk” pulumi up` to start the depl
 
 Press `F5` in VS Code to start debugging. VS Code will attach to the waiting Node.js process, and execution will continue until reaching the first breakpoint you have set.
 
-For a step-by-step guide for attaching a debugger to a Pulumi program, check out this [blog on breakpoint debugging.](/blog/next-level-iac-breakpoint-debugging/)
+For a step-by-step guide for attaching a debugger to a Pulumi TypeScript program, check out this [blog on breakpoint debugging.](/blog/next-level-iac-breakpoint-debugging/)
+
+Guides for all languages supported by Pulumi are available in [the Debugging guide](/docs/using-pulumi/debugging/).
 
 ## Performance
 
