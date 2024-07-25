@@ -108,20 +108,21 @@ Next we can actually move the resources.  Since we're moving the resources from 
 
 ```shell
 $ pulumi state move --dest v-thomas-pulumi-corp/pulumi-demo-move-aws/dev 'urn:pulumi:dev::pulumi-demo-move::aws:s3/bucket:Bucket::b'
-Planning to move the following resources from dev to dev:
+Planning to move the following resources from v-thomas-pulumi-corp/pulumi-demo-move/dev to v-thomas-pulumi-corp/pulumi-demo-move-aws/dev:
 
   - urn:pulumi:dev::pulumi-demo-move::aws:s3/bucket:Bucket::b
-  - urn:pulumi:dev::pulumi-demo-move::aws:s3/bucket:Bucket$aws:s3/bucketObject:BucketObject::index.html
   - urn:pulumi:dev::pulumi-demo-move::aws:s3/bucket:Bucket$aws:s3/bucketObject:BucketObject::random.html
+  - urn:pulumi:dev::pulumi-demo-move::aws:s3/bucket:Bucket$aws:s3/bucketObject:BucketObject::index.html
 
-The following resources being moved to dev have dependencies on resources in dev:
-  urn:pulumi:dev::pulumi-demo-move::random:index/randomPet:RandomPet::a-random-pet has a dependency on urn:pulumi:dev::pulumi-demo-move::random:index/randomPet:RandomPet::a-random-pet
-  urn:pulumi:dev::pulumi-demo-move::random:index/randomPet:RandomPet::a-random-pet (content) has a property dependency on urn:pulumi:dev::pulumi-demo-move::random:index/randomPet:RandomPet::a-random-pet
+The following resources being moved to v-thomas-pulumi-corp/pulumi-demo-move-aws/dev have dependencies on resources in v-thomas-pulumi-corp/pulumi-demo-move/dev:
+
+  - urn:pulumi:dev::pulumi-demo-move::aws:s3/bucket:Bucket$aws:s3/bucketObject:BucketObject::random.html has a dependency on urn:pulumi:dev::pulumi-demo-move::random:index/randomPet:RandomPet::a-random-pet
+  - urn:pulumi:dev::pulumi-demo-move::aws:s3/bucket:Bucket$aws:s3/bucketObject:BucketObject::random.html (content) has a property dependency on urn:pulumi:dev::pulumi-demo-move::random:index/randomPet:RandomPet::a-random-pet
 
 If you go ahead with moving these dependencies, it will be necessary to create the appropriate inputs and outputs in the program for the stack the resources are moved to.
 
 Do you want to perform this move? yes
-Successfully moved resources from dev to dev
+Successfully moved resources from v-thomas-pulumi-corp/pulumi-demo-move/dev to v-thomas-pulumi-corp/pulumi-demo-move-aws/dev
 ```
 
 There's a few things worth explaining above:
