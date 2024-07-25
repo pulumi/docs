@@ -8,6 +8,73 @@ meta_desc: |
 
 event_date: 2023-06-15T08:00:00-07:00
 
+speakers:
+  - name: Dax Raad
+    image: /images/pulumiup-2023/2024-speakers/dax-raad.png
+    title: Founding Engineer
+    logo: /images/pulumiup-2023/speaker-logos/sst.png
+    company: SST
+  - name: Jeremy Adams
+    image: /images/pulumiup-2023/2024-speakers/jeremy-adams.png
+    title: Head of Ecosystems
+    logo: /images/pulumiup-2023/sponsors/dagger.png
+    company: Dagger
+  - name: Patty O'Callaghan
+    image: /images/pulumiup-2023/2024-speakers/patty-ocallaghan.png
+    title: Technical Director
+    logo: /images/pulumiup-2023/speaker-logos/charles-river-laboratories.png
+    company: Charles River Laboratories
+  - name: Brian Grant
+    image: /images/pulumiup-2023/2024-speakers/brian-grant.jpeg
+    title: Technical Visionary
+    logo: /images/pulumiup-2023/speaker-logos/warmstealth.jpeg
+    company: Warmstealth
+  - name: Elad Ben-Israel
+    image: /images/pulumiup-2023/2024-speakers/elad-ben-israel.jpeg
+    title: Co-Founder and CEO
+    logo: /images/pulumiup-2023/speaker-logos/winglang.png
+    company: Winglang
+  - name: Adam Jacob
+    image: /images/pulumiup-2023/2024-speakers/adam-jacob.jpeg
+    title: CEO and Co-Founder
+    logo: /images/pulumiup-2023/speaker-logos/system-initiative.png
+    company: System Initiative
+  - name: Jim Clark
+    image: /images/pulumiup-2023/2024-speakers/james-clark.png
+    title: Principal Software Engineer
+    logo: /images/pulumiup-2023/speaker-logos/docker.png
+    company: Docker
+  - name: Ash Martian
+    image: /images/pulumiup-2023/2024-speakers/ash-martian.png
+    title: Data Engineer
+    logo: /images/pulumiup-2023/speaker-logos/characterstrong.png
+    company: CharacterStrong
+  - name: Jason Smith
+    image: /images/people/jay-smith.png
+    title: App Modernization Specialist
+    logo: /images/pulumiup-2023/sponsors/google-cloud.svg
+    company: Google
+  - name: Meagan Cojocar
+    image: /images/team/meagan-cojocar.jpg
+    title: Principal Product Manager
+    logo: /images/pulumiup-2023/speaker-logos/pulumi.svg
+    company: Pulumi
+  - name: Arun Loganathan
+    image: /images/team/arun-loganathan.jpg
+    title: Sr. Product Manager
+    logo: /images/pulumiup-2023/speaker-logos/pulumi.svg
+    company: Pulumi
+  - name: Joe Duffy
+    image: /images/team/joe-duffy.jpg
+    title: Co-Founder and CEO
+    logo: /images/pulumiup-2023/speaker-logos/pulumi.svg
+    company: Pulumi
+  - name: Luke Hoban
+    image: /images/team/luke-hoban.jpg
+    title: CTO
+    logo: /images/pulumiup-2023/speaker-logos/pulumi.svg
+    company: Pulumi
+
 templates:
     items:
         - heading: Serverless AWS, Azure and Google Cloud Templates
