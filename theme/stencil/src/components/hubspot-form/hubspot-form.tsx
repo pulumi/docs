@@ -140,7 +140,7 @@ export class HubspotForm {
         const analytics = (window as any).analytics;
         const analyticsAvailable = analytics && analytics.track && typeof analytics.track === "function";
 
-        if (analyticsAvailable) {
+        if (analyticsAvailable && emailAddress !== "") { // Don't track empty email addresses
             const submissionData = {
                 formId: this.formId,
                 email: emailAddress,
@@ -148,9 +148,7 @@ export class HubspotForm {
                 utmSource: utmData.source,
                 utmMedium: utmData.medium,
             };
-            if(emailAddress !== ""){ // Don't track empty email addresses
-                analytics.track("form-submission", submissionData);
-            }
+            analytics.track("form-submission", submissionData);
         }
     }
 
