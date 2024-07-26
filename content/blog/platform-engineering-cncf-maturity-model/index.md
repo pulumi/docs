@@ -1,5 +1,6 @@
 ---
 title: "The Path to Platform Engineering: Insights from a CNCF Platform Working Group Member"
+allow_long_title: true
 
 # The date represents the post's publish date, and by default corresponds with
 # the date and time this file was generated. Dates are used for display and
@@ -81,7 +82,7 @@ The specific capabilities of a platform are tailored to the needs of its stakeho
 
 ## Defining Cloud Native Platforms
 
-The core of the discussion at the CNCF Platform Working Group is: "What exactly is a cloud-native platform, and why do organizations need one?" 
+The core of the discussion at the CNCF Platform Working Group is: "What exactly is a cloud-native platform, and why do organizations need one?"
 A cloud-native platform is a strategic business initiative that enables organizations to deliver value more efficiently and effectively. It is characterized by:
 
 - **Vendor-neutrality**: A cloud-native platform should be open and agnostic, allowing organizations to leverage a wide range of technologies and services without being locked into a single vendor.
