@@ -73,7 +73,7 @@ And make sure to check [Platform Engineering & DevOps Series](https://info.pulum
 
 ## What is a Platform?
 
-A platform for cloud-native computing is an integrated collection of capabilities designed to meet the needs of its users. It serves as a cross-cutting layer, ensuring a consistent experience in integrating and managing services and capabilities for various applications and use cases. A good platform provides consistent user experiences through portals, project templates, and self-service APIs.
+According to CNCF, a platform in cloud-native computing is an integrated collection of capabilities designed to meet users' needs. It serves as a cross-cutting layer, ensuring a consistent experience integrating and managing services and capabilities for various applications and use cases. A good platform provides consistent user experiences through portals, project templates, and self-service APIs.
 
 [Atlassian](https://www.pulumi.com/case-studies/atlassian/) describes platform teams as creators of capabilities used by multiple product teams, reducing their overhead and cognitive load. Martin Fowler and Evan Bottcher define a digital platform as a foundation of self-service APIs, tools, services, and support arranged as an internal product. These platforms enable autonomous teams to deliver features faster with less coordination.
 
@@ -81,13 +81,14 @@ The specific capabilities of a platform are tailored to the needs of its stakeho
 
 ## Defining Cloud Native Platforms
 
-The core of the discussion is: "What exactly is a cloud-native platform, and why do organizations need one?" A cloud-native platform is a strategic business initiative that enables organizations to deliver value more efficiently and effectively. It is characterized by:
+The core of the discussion at the CNCF Platform Working Group is: "What exactly is a cloud-native platform, and why do organizations need one?" 
+A cloud-native platform is a strategic business initiative that enables organizations to deliver value more efficiently and effectively. It is characterized by:
 
-- Vendor-neutrality: A cloud-native platform should be open and agnostic, allowing organizations to leverage a wide range of technologies and services without being locked into a single vendor.
-- Scalability and flexibility: The platform should be designed to accommodate the growing and changing needs of the organization, with the ability to add or remove components as required easily.
-- Developer-centricity: The platform should empower developers to be more productive by providing self-service capabilities, streamlined workflows, and a consistent developer experience.
-- Operational efficiency: The platform should simplify and automate the management and maintenance of the underlying infrastructure, allowing the organization to focus on delivering value to customers.
-- Continuous improvement: The platform should be designed with a mindset of continuous evolution, with regular updates and enhancements to address emerging needs and technologies.
+- **Vendor-neutrality**: A cloud-native platform should be open and agnostic, allowing organizations to leverage a wide range of technologies and services without being locked into a single vendor.
+- **Scalability and flexibility**: The platform should be designed to accommodate the growing and changing needs of the organization, with the ability to add or remove components as required easily.
+- **[Developer-centricity](https://www.pulumi.com/blog/software-developer-experience-devex-devx-devops-culture/)**: The platform should empower developers to be more productive by providing self-service capabilities, streamlined workflows, and a consistent developer experience.
+- **[Operational efficiency](https://www.pulumi.com/blog/developer-portal-platform-teams/)**: The platform should simplify and automate the management and maintenance of the underlying infrastructure, allowing the organization to focus on delivering value to customers.
+- **Continuous improvement**: The platform should be designed with a mindset of continuous evolution, with regular updates and enhancements to address emerging needs and technologies.
   
 By aligning with these principles, organizations can achieve faster time-to-market, improved developer productivity, and reduced operational overhead.
 
@@ -97,11 +98,11 @@ By aligning with these principles, organizations can achieve faster time-to-mark
 
 The Platform Working Group has developed a Platform Maturity Model. This framework can help assess the current state of a cloud native platform and identify steps to enhance its maturity. It defines five levels:
 
-- Ad-hoc: At the lowest level, the platform is ad-hoc, with no dedicated team or budget and a reliance on individual efforts and workarounds.
-- Operational: The platform has a dedicated team and budget, focusing primarily on operational tasks and maintenance rather than strategic initiatives.
-- Scalable: The platform is now viewed as a product with a clear roadmap and a focus on delivering value to internal customers. The platform team has more autonomy and the ability to drive innovation.
-- Enabled: The platform has become a strategic asset, with a thriving ecosystem of contributors and consumers. The platform team is empowered to make decisions and drive the platform's evolution.
-- Optimized: The platform is continuously optimized, focusing on measuring and improving key performance indicators. The platform is deeply integrated into the organization's technology strategy and decision-making processes.
+- **Ad-hoc**: At the lowest level, the platform is ad-hoc, with no dedicated team or budget and a reliance on individual efforts and workarounds.
+- **Operational**: The platform has a dedicated team and budget, which focus primarily on operational tasks and maintenance rather than strategic initiatives.
+- **Scalable**: The platform is now viewed as a product with a clear roadmap and a focus on delivering value to internal customers. The platform team has more autonomy and the ability to drive innovation.
+- **Enabled**: The platform has become a strategic asset, with a thriving ecosystem of contributors and consumers. The platform team is empowered to make decisions and drive the platform's evolution.
+- **Optimized**: The platform is continuously optimized, focusing on measuring and improving key performance indicators. The platform is deeply integrated into the organization's technology strategy and decision-making processes.
 
 By using the CNCF's [Platform Maturity Model](https://tag-app-delivery.cncf.io/whitepapers/platform-eng-maturity-model/) as a guide, organizations can assess their current level of platform maturity, identify areas for improvement, and develop a roadmap to reach a higher level of platform success. This model has proven to be a valuable tool for many organizations, helping them to align their platform initiatives with their broader business objectives.
 
@@ -111,10 +112,10 @@ One of the key initiatives currently underway within the Platform Working Group 
 
 The core premise of the "Platforms as Products" initiative is that successful cloud-native platforms should be treated and managed like products rather than just technology projects. This means applying principles of product management, such as:
 
-- Defining a clear vision and roadmap: Establishing a long-term vision for the platform and a roadmap to get there, focusing on delivering value to internal customers.
-- Measuring and optimizing for key metrics: Identifying and tracking the right performance indicators to ensure the platform is delivering the desired outcomes.
-- Fostering a thriving ecosystem: Encouraging and enabling a community of contributors and consumers to drive the platform's evolution and adoption.
-- Continuously iterating and improving: Embracing a continuous improvement mindset, with regular updates and enhancements to the platform based on user feedback and emerging needs.
+- **Defining a clear vision and roadmap**: Establishing a long-term vision for the platform and a roadmap to get there, focusing on delivering value to internal customers.
+- **Measuring and optimizing for key metrics**: Identifying and tracking the right performance indicators to ensure the platform is delivering the desired outcomes.
+- **Fostering a thriving ecosystem**: Encouraging and enabling a community of contributors and consumers to drive the platform's evolution and adoption.
+- **Continuously iterating and improving**: Embracing a continuous improvement mindset, with regular updates and enhancements to the platform based on user feedback and emerging needs.
 
 By adopting a product management approach to their cloud native platforms, organizations can better align their platform initiatives with their broader business goals and ensure that the platform delivers tangible value to the organization.
 
@@ -139,7 +140,7 @@ The Platform Working Group is part of the CNCF's App Delivery Technical Advisory
 
 ### Who is Dominik Kress?
 
-[Dominik Kress](https://www.linkedin.com/in/dominik-kress-33a540174/) is a product manager at Giant Swarm and a CNCF Platforms Working Group member. 
+[Dominik Kress](https://www.linkedin.com/in/dominik-kress-33a540174/) is a product manager at Giant Swarm and a CNCF Platforms Working Group member.
 
 He is on a mission to simplify developers' lives by delivering intuitive developer platforms. He has been in the IT industry for over seven years, starting his journey as a Full Stack Software Engineer, falling in love with DevOps and Product Organisations to become a Product Manager for Cloud Technology later.
 
