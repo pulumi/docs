@@ -1,9 +1,9 @@
 ---
-title: "Platform Superpowers With the KEBAP Stack"
+title: "Pulumi in a Cloud Native World"
 date: 2024-07-22
 draft: false
 allow_long_title: true
-meta_desc: "The KEBAP stack is a standardized GitOps stack that combines Kubernetes, External Secrets Operator, Backstage, Argo CD, and Pulumi. Learn how it can help you streamline your software delivery process."
+meta_desc: "See how Pulumi fits into the Cloud Native landscape and how several CNCF projects can be combined with Pulumi to create a standardized GitOps stack."
 meta_image: meta.png
 
 authors:
@@ -19,9 +19,9 @@ tags:
 - gitops
 
 social:
-  twitter: "The KEBAP stack is a standardized GitOps stack that combines Kubernetes, External Secrets Operator, Backstage, Argo CD, and Pulumi. Learn how it can help accelerate your platform engineering efforts."
+  twitter: "Pulumi in a Cloud Native World: See how Pulumi fits into the Cloud Native landscape and how several CNCF projects can be combined with Pulumi to create a standardized GitOps stack. #GitOps #Kubernetes #ArgoCD #Pulumi #Backstage"
   linkedin: |
-    The KEBAP stack is a standardized GitOps stack that combines:
+    See how well Pulumi plays with other CNCF projects in a Cloud Native world. Learn how I combined following projects to create a standardized GitOps stack:
     - Kubernetes
     - External Secrets Operator
     - Backstage
@@ -33,20 +33,27 @@ social:
     This helps reduce the time required to establish development and production environments from months to minutes. #GitOps #Kubernetes #ArgoCD #Pulumi #Backstage
 ---
 
-Ordering infrastructure for your next project can feel in large organizations like this:
+Pulumi: Navigating the Cloud Native Landscape
 
-<img src="6ebAJS.gif" width="500px">
+In today's rapidly evolving tech ecosystem, it's crucial for any tool to seamlessly integrate with the Cloud Native
+Computing Foundation (CNCF) landscape. This vast array of technologies can seem overwhelming, but it presents immense
+opportunities for innovation and efficiency in software delivery.
 
-But it doesn't have to be this way. At Pulumi's Customer Experience Team, we frequently assist software infrastructure
-teams in transitioning from traditional software delivery paradigms to Cloud Native approaches. Most of our customers
-use the introduction of an infrastructure as code tool as a starting point to reevaluate their entire software delivery
-process and adopt a more streamlined, automated, and secure approach.
+At Pulumi's Customer Experience Team, we specialize in guiding software infrastructure teams through their journey from
+traditional delivery paradigms to Cloud Native approaches. We've observed that the adoption of an infrastructure as code
+tool often serves as a catalyst for organizations to reassess their entire software delivery process. This reassessment
+frequently leads to the implementation of more streamlined, automated, and secure methodologies.
 
-While the CNCF landscape remains as complex as ever and new tools are introduced daily, we've found that a recurring
-pattern in our solutions. We've distilled this pattern into a standardized stack that we call the `KEBAP` stack, because
-who doesn't love a good kebap after a long day of coding?
+While the CNCF landscape continues to expand with new tools emerging daily, we've identified recurring patterns in
+successful Cloud Native transformations. Pulumi, as a versatile infrastructure as code platform, plays a pivotal role in
+these patterns. It acts as a unifying force, enabling teams to leverage various CNCF technologies cohesively and
+efficiently.
 
-## What's in the KEBAP Stack?
+By embracing Pulumi and the wider CNCF ecosystem, organizations can create robust, scalable, and future-proof
+infrastructure solutions. This approach not only enhances operational efficiency but also positions teams to readily
+adopt and benefit from emerging Cloud Native technologies.
+
+## One Reference Architecture: The `KEBAP` Stack
 
 The `KEBAP` stack consists of the following components:
 
