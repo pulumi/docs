@@ -23,7 +23,7 @@
         </p>
     </div>
 
-    <section id="countdown" class="pt-12">
+    <section id="countdown" class="pt-12 mb-8">
         <pulumi-date-countdown-circles
             date-string="{{ .Params.event_date }}"
             value-label-class="block font-normal"
@@ -33,35 +33,7 @@
         </pulumi-date-countdown-circles>
     </section>
 
-    <section id="speakers" class="relative my-8">
-        <div class="dot-background-container">
-            <div class="dot-background"></div>
-        </div>
-        <div class="dot-overlay"></div>
-
-        <div class="w-full py-8" style="background-color:rgba(255,255,255,.8)">
-            <div class="container mx-auto text-center">
-                <h2 class="mb-8 text-center">Confirmed Speakers</h2>
-                <ul class="inline-flex flex-wrap list-none justify-center p-0 gap-x-8 gap-y-6">
-                    {{ range .Params.speakers }}
-                        <li class="about-card border-2 border-gray-300 bg-white rounded-md flex overflow-hidden relative">
-                            <div class="flex">
-                                <img class="about-card-photo" src="{{ .image }}" alt="{{ .name }}" />
-                                <div class="flex flex-col w-full justify-center text-left ml-4">
-                                    <div class="font-display font-medium text-gray-900 text-2xl mb-3">{{ .name }}</div>
-                                    <div class="text-sm text-gray-700 mb-3">{{ .title }}</div>
-                                    <img class="h-5 self-start" src="{{ .logo }}" alt="{{ .company }}" />
-                                </div>
-                            </div>
-                        </li>
-                    {{ end }}
-                </ul>
-            </div>
-            <div class="my-16 flex justify-center">
-                <a class="btn-primary" href="#register">Register Now</a>
-            </div>
-        </div>
-    </section>
+    {{ partial "pulumi-up/speakers.html" (dict "speakers" .Params.speakers "include_cta" "true" ) }}
 
     <section id="personas" class="my-8">
         <div class="container mx-auto px-4 py-8 text-center">

@@ -90,10 +90,25 @@ speakers:
     logo: /images/pulumiup-2023/sponsors/dagger.png
     company: Dagger
   - name: Patty O'Callaghan
-    image: /images/pulumiup-2023/2024-speakers/patty-ocallaghan.jpeg
+    image: /images/pulumiup-2023/2024-speakers/patty-ocallaghan.png
     title: Technical Director
     logo: /images/pulumiup-2023/speaker-logos/charles-river-laboratories.png
     company: Charles River Laboratories
+  - name: Brian Grant
+    image: /images/pulumiup-2023/2024-speakers/brian-grant.jpeg
+    title: Technical Visionary
+    logo: /images/pulumiup-2023/speaker-logos/warmstealth.jpeg
+    company: Warmstealth
+  - name: Elad Ben-Israel
+    image: /images/pulumiup-2023/2024-speakers/elad-ben-israel.jpeg
+    title: Co-Founder and CEO
+    logo: /images/pulumiup-2023/speaker-logos/winglang.png
+    company: Winglang
+  - name: Adam Jacob
+    image: /images/pulumiup-2023/2024-speakers/adam-jacob.jpeg
+    title: CEO and Co-Founder
+    logo: /images/pulumiup-2023/speaker-logos/system-initiative.png
+    company: System Initiative
   - name: Jim Clark
     image: /images/pulumiup-2023/2024-speakers/james-clark.png
     title: Principal Software Engineer
