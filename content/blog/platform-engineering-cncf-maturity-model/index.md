@@ -1,5 +1,5 @@
 ---
-title: "Platform Engineering CNCF Maturity Model stuff "
+title: "The Path to Platform Engineering: Insights from a CNCF Platform Working Group Member"
 
 # The date represents the post's publish date, and by default corresponds with
 # the date and time this file was generated. Dates are used for display and
@@ -17,7 +17,7 @@ draft: true
 # of the content of the post, which is useful for targeting search results or
 # social-media previews. This field is required or the build will fail the
 # linter test. Max length is 160 characters.
-meta_desc: 
+meta_desc: Discover Cloud Native Platforms, the Platform Maturity Model, how to approach Platforms as Products, the CNCF Platform Working Group, and more. Get involved!
 
 # The meta_image appears in social-media previews and on the blog home page. A
 # placeholder image representing the recommended format, dimensions and aspect
@@ -34,7 +34,7 @@ authors:
 tags:
     - platform-engineering
     - community
-
+    - pulumi-events
 
 # The social copy used to promote this post on Twitter and Linkedin. These
 # properties do not actually create the post and have no effect on the
@@ -56,29 +56,32 @@ social:
 # for details, and please remove these comments before submitting for review.
 ---
 
-Cool stuff about the meetup. Working in progress
+The Platform Engineering & DevOps in-person meetups launched in Berlin with two great speakers. This blog article is an overview of Dominik Kress's talk, “What the Heck is the CNCF Platform Working Group? Answers from a Member!” where he discussed Cloud Native Platforms, The Platform Maturity Model, and approaching Platforms as Products. Learn more about platform engineering and join the conversation on how to get involved with the CNCF Platform Working Group.
+And make sure to check [Platform Engineering & DevOps Series](https://info.pulumi.com/platform-engineering-devops-series) to attend a meetup near you.
 
 <!--more-->
 
 ## On this platform engineering article:
 
-- Connect dots here
-
-## CNCF Platform Working Group
-
-Within the CNCF, the Platform Working Group is a collaborative effort focused on the critical topic of cloud native platforms. As a member of this working group, I have the privilege of sharing insights and experiences from our discussions.
-
-The Platform Working Group is part of the CNCF's App Delivery Technical Advisory Group, which also includes initiatives around sustainability, runtime, observability, and security. The working group is open to anyone interested in contributing to the conversation around cloud native platforms, and its members come from a diverse range of backgrounds, including product managers, engineers, and industry experts.
+- What is a Platform?
+- Defining Cloud Native Platforms
+- The Platform Maturity Model: Charting the Path to Success
+- Platforms as Products: Driving Success
+- Frequently Asked Questions
 
 {{< youtube "NUPK5CCm6XA?rel=0" >}}
 
+## What is a Platform?
+
+A platform for cloud-native computing is an integrated collection of capabilities designed to meet the needs of its users. It serves as a cross-cutting layer, ensuring a consistent experience in integrating and managing services and capabilities for various applications and use cases. A good platform provides consistent user experiences through portals, project templates, and self-service APIs.
+
+[Atlassian](https://www.pulumi.com/case-studies/atlassian/) describes platform teams as creators of capabilities used by multiple product teams, reducing their overhead and cognitive load. Martin Fowler and Evan Bottcher define a digital platform as a foundation of self-service APIs, tools, services, and support arranged as an internal product. These platforms enable autonomous teams to deliver features faster with less coordination.
+
+The specific capabilities of a platform are tailored to the needs of its stakeholders and users. While platform teams provide these capabilities, they do not always implement them directly. Managed service providers or dedicated internal teams can maintain the underlying implementations, ensuring consistency across the organization. Platforms are tailored to an enterprise’s internal users and are particularly relevant for cloud-native architectures, separating supporting capabilities from application-specific logic.
+
 ## Defining Cloud Native Platforms
 
-The fundamental question is at the core of the Platform Working Group's efforts: "What exactly is a cloud-native platform, and why do organizations need one?"
-
-To address this, the working group has produced a comprehensive white paper that delves into the definition and value of cloud native platforms. The key takeaway is that a cloud-native platform is not just a collection of tools or technologies but a strategic business initiative enabling organizations to deliver value more efficiently and effectively.
-
-The white paper outlines several key characteristics of a successful cloud-native platform:
+The core of the discussion is: "What exactly is a cloud-native platform, and why do organizations need one?" A cloud-native platform is a strategic business initiative that enables organizations to deliver value more efficiently and effectively. It is characterized by:
 
 - Vendor-neutrality: A cloud-native platform should be open and agnostic, allowing organizations to leverage a wide range of technologies and services without being locked into a single vendor.
 - Scalability and flexibility: The platform should be designed to accommodate the growing and changing needs of the organization, with the ability to add or remove components as required easily.
@@ -86,42 +89,64 @@ The white paper outlines several key characteristics of a successful cloud-nativ
 - Operational efficiency: The platform should simplify and automate the management and maintenance of the underlying infrastructure, allowing the organization to focus on delivering value to customers.
 - Continuous improvement: The platform should be designed with a mindset of continuous evolution, with regular updates and enhancements to address emerging needs and technologies.
   
-By aligning the platform with these key principles, organizations can unlock significant value, including faster time-to-market, improved developer productivity, and reduced operational overhead.
+By aligning with these principles, organizations can achieve faster time-to-market, improved developer productivity, and reduced operational overhead.
 
-## The Platform Maturity Model: Charting the Path to Platform Success
+## The Platform Maturity Model: Charting the Path to Success
 
-Building on the foundation of the white paper, the Platform Working Group has developed a Platform Maturity Model - a framework that helps organizations assess the current state of their cloud native platform and identify the steps needed to reach a higher level of maturity.
+{{< figure alt="Dominik Kress at the Berlin Pulumi Group meetup explaining the platform maturity model" src="./dominik-platform-engineering-berlin.png" caption="Dominik Kress at the Berlin Pulumi Group meetup explaining the platform maturity model" width=100% >}}
 
-The Platform Maturity Model defines five distinct levels of platform maturity, each with its own characteristics and considerations:
+The Platform Working Group has developed a Platform Maturity Model. This framework can help assess the current state of a cloud native platform and identify steps to enhance its maturity. It defines five levels:
 
-- Ad-hoc: At the lowest level, the platform is ad-hoc, with no dedicated team or budget, and a reliance on individual efforts and workarounds.
-- Operational: The platform has a dedicated team and budget, but the focus is primarily on operational tasks and maintenance, rather than strategic initiatives.
-- Scalable: The platform is now viewed as a product, with a clear roadmap and a focus on delivering value to internal customers. The platform team has more autonomy and the ability to drive innovation.
+- Ad-hoc: At the lowest level, the platform is ad-hoc, with no dedicated team or budget and a reliance on individual efforts and workarounds.
+- Operational: The platform has a dedicated team and budget, focusing primarily on operational tasks and maintenance rather than strategic initiatives.
+- Scalable: The platform is now viewed as a product with a clear roadmap and a focus on delivering value to internal customers. The platform team has more autonomy and the ability to drive innovation.
 - Enabled: The platform has become a strategic asset, with a thriving ecosystem of contributors and consumers. The platform team is empowered to make decisions and drive the platform's evolution.
-- Optimized: The platform is continuously optimized, with a strong focus on measuring and improving key performance indicators. The platform is deeply integrated into the organization's overall technology strategy and decision-making processes.
+- Optimized: The platform is continuously optimized, focusing on measuring and improving key performance indicators. The platform is deeply integrated into the organization's technology strategy and decision-making processes.
 
-By using the Platform Maturity Model as a guide, organizations can assess their current level of platform maturity, identify areas for improvement, and develop a roadmap to reach a higher level of platform success. This model has proven to be a valuable tool for many organizations, helping them to align their platform initiatives with their broader business objectives.
+By using the CNCF's [Platform Maturity Model](https://tag-app-delivery.cncf.io/whitepapers/platform-eng-maturity-model/) as a guide, organizations can assess their current level of platform maturity, identify areas for improvement, and develop a roadmap to reach a higher level of platform success. This model has proven to be a valuable tool for many organizations, helping them to align their platform initiatives with their broader business objectives.
 
-## Platforms as Products: Driving Platform Success
+## Platforms as Products: Driving Success
 
-One of the key initiatives currently underway within the Platform Working Group is the "Platforms as Products" research project. This effort aims to explore the parallels between traditional product management and the management of cloud native platforms, with the goal of identifying best practices and patterns that can help organizations unlock the full potential of their platforms.
+One of the key initiatives currently underway within the Platform Working Group is the "[Platforms as Products](https://tag-app-delivery.cncf.io/blog/product-thinking-for-platforms/)" research project. This effort aims to explore the parallels between traditional product management and the management of cloud-native platforms to identify best practices and patterns that can help organizations unlock the full potential of their platforms.
 
-The core premise of the "Platforms as Products" initiative is that successful cloud native platforms should be treated and managed like products, rather than just technology projects. This means applying principles of product management, such as:
+The core premise of the "Platforms as Products" initiative is that successful cloud-native platforms should be treated and managed like products rather than just technology projects. This means applying principles of product management, such as:
 
 - Defining a clear vision and roadmap: Establishing a long-term vision for the platform and a roadmap to get there, focusing on delivering value to internal customers.
 - Measuring and optimizing for key metrics: Identifying and tracking the right performance indicators to ensure the platform is delivering the desired outcomes.
 - Fostering a thriving ecosystem: Encouraging and enabling a community of contributors and consumers to drive the platform's evolution and adoption.
 - Continuously iterating and improving: Embracing a continuous improvement mindset, with regular updates and enhancements to the platform based on user feedback and emerging needs.
 
-By adopting a product management approach to their cloud native platforms, organizations can better align their platform initiatives with their broader business goals, and ensure that the platform is delivering tangible value to the organization.
-
-The "Platforms as Products" research project is currently underway, with the Platform Working Group conducting interviews and gathering insights from organizations that have successfully implemented cloud native platforms. The goal is to distill these learnings into a set of best practices and patterns that can be shared with the broader community.
+By adopting a product management approach to their cloud native platforms, organizations can better align their platform initiatives with their broader business goals and ensure that the platform delivers tangible value to the organization.
 
 ## Conclusion
 
 If you're interested in learning more about platform engineering and getting involved in its initiatives, there are several ways to participate:
 
-- Attend the bi-weekly CNCF Platform Working Group meetings: Regular sync meetings are held every other Tuesday at 5 PM Berlin time (11 AM ET).
-- Join the CNCF Slack channel: The Platform Working Group has an active presence on the CNCF Slack, where members discuss ideas, share resources, and collaborate on various initiatives.
+- Attend a Platform Engineering & DevOps in-person meetup, [find a location near you](https://info.pulumi.com/platform-engineering-devops-series)
+- Join the bi-weekly [CNCF Platform Working Group meetings](https://tag-app-delivery.cncf.io/wgs/platforms/#meetings) every other Tuesday at 5 PM Berlin time (11 AM ET).
 - I wish there was a doc page to send them to... check other blog
 - Join the workshop something something
+
+---
+
+## Frequently Asked Questions
+
+### What is the CNCF Platform Working Group?
+
+Within the [CNCF](https://www.cncf.io/), the Platform Working Group is a collaborative effort focused on the critical topic of cloud native platforms. As a working group member, you can share insights and experiences from our discussions.
+
+The Platform Working Group is part of the CNCF's App Delivery Technical Advisory Group, which includes sustainability, runtime, observability, and security initiatives. The working group is open to anyone interested in contributing to the conversation around cloud native platforms, and its members come from diverse backgrounds, including product managers, engineers, and industry experts.
+
+### Who is Dominik Kress?
+
+[Dominik Kress](https://www.linkedin.com/in/dominik-kress-33a540174/) is a product manager at Giant Swarm and a CNCF Platforms Working Group member. 
+
+He is on a mission to simplify developers' lives by delivering intuitive developer platforms. He has been in the IT industry for over seven years, starting his journey as a Full Stack Software Engineer, falling in love with DevOps and Product Organisations to become a Product Manager for Cloud Technology later.
+
+Dominik is passionate about Cloud Transformation, Product Management, and helping people. He loves contributing to the community with talks, articles, or publications.
+
+### How can I participate in the Platform As A Product research?
+
+The "Platforms as Products" research project is currently underway, with the Platform Working Group conducting interviews and gathering insights from organizations that have successfully implemented cloud native platforms. The goal is to distill these learnings into a set of best practices and patterns that can be shared with the broader community.
+
+To participate in this research, [sign up here](https://bit.ly/platform-research).
