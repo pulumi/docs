@@ -33,7 +33,7 @@ social:
     This helps reduce the time required to establish development and production environments from months to minutes. #GitOps #Kubernetes #ArgoCD #Pulumi #Backstage
 ---
 
-Pulumi: Navigating the Cloud Native Landscape
+<img src="cncf.png" width="500px">
 
 In today's rapidly evolving tech ecosystem, it's crucial for any tool to seamlessly integrate with the Cloud Native
 Computing Foundation (CNCF) landscape. This vast array of technologies can seem overwhelming, but it presents immense
@@ -271,7 +271,7 @@ We use Backstage to order other infrastructure components, such as databases, me
 the Pulumi Kubernetes Operator to create the infrastructure components in the Kubernetes cluster. This way, we can
 manage all the infrastructure components in the same way as we manage the Kubernetes clusters.
 
-## The End Result
+## Conclusion and Pulumi Cloud as an Off-the-Shelf Solution
 
 As you can see, Pulumi plays well with other CNCF projects in a Cloud Native world. The combination of best-of-breed
 CNCF projects results in a secure, automated, auditable, reproducible, and programmable set of environments for
@@ -289,7 +289,7 @@ But there is also a downside: The `KEBAP` stack requires a significant investmen
 maintain as you are in full charge of the integration of the components. The CNCF landscape is not and integration map,
 and not all components are designed to work together out of the box or stay compatible with each other in the long run.
 
-For this reason, we at Pulumi offer [Pulumi Cloud ](product/pulumi-cloud). A fully managed service that takes care of
+For this reason, we at Pulumi offer [Pulumi Cloud ](/product/pulumi-cloud). A fully managed service that takes care of
 the integration of different components and provides a seamless experience for managing your infrastructure across all
 of your environments and clouds. Stay tuned for an upcoming blog post where we will show how Pulumi Cloud can be used to
 as an off-the-shelf solution with zero integration effort.
