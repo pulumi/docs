@@ -273,9 +273,10 @@ manage all the infrastructure components in the same way as we manage the Kubern
 
 ## The End Result
 
-The `KEBAP` stack results in a secure, automated, auditable, reproducible, and programmable set of
-environments for building, testing, and operating software. This leads to significant cost savings by automating
-processes that previously required manual intervention and substantial time investment.
+As you can see, Pulumi plays well with other CNCF projects in a Cloud Native world. The combination of best-of-breed
+CNCF projects results in a secure, automated, auditable, reproducible, and programmable set of environments for
+building, testing, and operating software. This leads to significant cost savings by automating processes that
+previously required manual intervention and substantial time investment.
 
 The `KEBAP` stack also facilitates:
 
@@ -284,6 +285,11 @@ The `KEBAP` stack also facilitates:
 - Faster onboarding for new team members
 - Easier compliance with regulatory requirements due to increased auditability
 
-If you're interested in real-world applications of the `KEBAP` stack, we have numerous case studies and examples to
-share.
-Feel free to reach out for more information on how this approach can benefit your organization.
+But there is also a downside: The `KEBAP` stack requires a significant investment in time and resources to set up and
+maintain as you are in full charge of the integration of the components. The CNCF landscape is not and integration map,
+and not all components are designed to work together out of the box or stay compatible with each other in the long run.
+
+For this reason, we at Pulumi offer [Pulumi Cloud ](product/pulumi-cloud). A fully managed service that takes care of
+the integration of different components and provides a seamless experience for managing your infrastructure across all
+of your environments and clouds. Stay tuned for an upcoming blog post where we will show how Pulumi Cloud can be used to
+as an off-the-shelf solution with zero integration effort.
