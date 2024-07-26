@@ -1,6 +1,6 @@
 ---
 title: "Pulumi in a Cloud Native World"
-date: 2024-07-22
+date: 2024-07-28
 draft: false
 allow_long_title: true
 meta_desc: "See how Pulumi fits into the Cloud Native landscape and how several CNCF projects can be combined with Pulumi to create a standardized GitOps stack."
