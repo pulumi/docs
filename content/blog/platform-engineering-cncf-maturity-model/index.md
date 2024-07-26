@@ -57,8 +57,8 @@ social:
 # for details, and please remove these comments before submitting for review.
 ---
 
-The Platform Engineering & DevOps in-person meetups launched in Berlin with two great speakers. This blog article is an overview of Dominik Kress's talk, “What the Heck is the CNCF Platform Working Group? Answers from a Member!” where he discussed Cloud Native Platforms, The Platform Maturity Model, and approaching Platforms as Products. Learn more about platform engineering and join the conversation on how to get involved with the CNCF Platform Working Group.
-And make sure to check [Platform Engineering & DevOps Series](https://info.pulumi.com/platform-engineering-devops-series) to attend a meetup near you.
+The Platform Engineering & DevOps in-person meetups launched in Berlin with two great speakers. This blog article is an overview of Dominik Kress's talk, “What the Heck is the CNCF Platform Working Group? Answers from a Member!” where he discussed Cloud Native Platforms, The Platform Maturity Model, and approaching Platforms as Products. 
+Learn more about platform engineering and how you can get involved with the CNCF Platform Working Group. Make sure to check our [Platform Engineering & DevOps Series](https://info.pulumi.com/platform-engineering-devops-series) to find a meetup near you.
 
 <!--more-->
 
@@ -70,8 +70,6 @@ And make sure to check [Platform Engineering & DevOps Series](https://info.pulum
 - [Platforms as Products: Driving Success](/blog/platform-engineering-cncf-maturity-model/#platforms-as-products-driving-success)
 - [Frequently Asked Questions](/blog/platform-engineering-cncf-maturity-model/#frequently-asked-questions)
 
-{{< youtube "NUPK5CCm6XA?rel=0" >}}
-
 ## What is a Platform?
 
 According to CNCF, a platform in cloud-native computing is an integrated collection of capabilities designed to meet users' needs. It serves as a cross-cutting layer, ensuring a consistent experience integrating and managing services and capabilities for various applications and use cases. A good platform provides consistent user experiences through portals, project templates, and self-service APIs.
@@ -81,6 +79,8 @@ According to CNCF, a platform in cloud-native computing is an integrated collect
 The specific capabilities of a platform are tailored to the needs of its stakeholders and users. While platform teams provide these capabilities, they do not always implement them directly. Managed service providers or dedicated internal teams can maintain the underlying implementations, ensuring consistency across the organization. Platforms are tailored to an enterprise’s internal users and are particularly relevant for cloud-native architectures, separating supporting capabilities from application-specific logic.
 
 ## Defining Cloud Native Platforms
+
+{{< youtube "NUPK5CCm6XA?rel=0" >}}
 
 The core of the discussion at the CNCF Platform Working Group is: "What exactly is a cloud-native platform, and why do organizations need one?"
 A cloud-native platform is a strategic business initiative that enables organizations to deliver value more efficiently and effectively. It is characterized by:
