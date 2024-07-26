@@ -11,13 +11,13 @@ date: 2024-07-26T17:40:17Z
 
 # The draft setting determines whether a post is published. Set it to true if
 # you want to be able to merge the post without publishing it.
-draft: false
+draft: true
 
 # Use the meta_desc property to provide a brief summary (one or two sentences)
 # of the content of the post, which is useful for targeting search results or
 # social-media previews. This field is required or the build will fail the
 # linter test. Max length is 160 characters.
-meta_desc:
+meta_desc: 
 
 # The meta_image appears in social-media previews and on the blog home page. A
 # placeholder image representing the recommended format, dimensions and aspect
@@ -121,8 +121,7 @@ The "Platforms as Products" research project is currently underway, with the Pla
 
 If you're interested in learning more about platform engineering and getting involved in its initiatives, there are several ways to participate:
 
-- Attend the bi-weekly CNCF Platform Working Group meetings: The Platform Working Group holds regular sync meetings every other Tuesday at 5 PM Berlin time (11 AM ET).
+- Attend the bi-weekly CNCF Platform Working Group meetings: Regular sync meetings are held every other Tuesday at 5 PM Berlin time (11 AM ET).
 - Join the CNCF Slack channel: The Platform Working Group has an active presence on the CNCF Slack, where members discuss ideas, share resources, and collaborate on various initiatives.
 - I wish there was a doc page to send them to... check other blog
 - Join the workshop something something
-- 
