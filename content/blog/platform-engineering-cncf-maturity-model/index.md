@@ -12,7 +12,7 @@ date: 2024-07-26T17:40:17Z
 
 # The draft setting determines whether a post is published. Set it to true if
 # you want to be able to merge the post without publishing it.
-draft: true
+draft: false
 
 # Use the meta_desc property to provide a brief summary (one or two sentences)
 # of the content of the post, which is useful for targeting search results or
@@ -64,11 +64,11 @@ And make sure to check [Platform Engineering & DevOps Series](https://info.pulum
 
 ## On this platform engineering article:
 
-- What is a Platform?
-- Defining Cloud Native Platforms
-- The Platform Maturity Model: Charting the Path to Success
-- Platforms as Products: Driving Success
-- Frequently Asked Questions
+- [What is a Platform?](/blog/platform-engineering-cncf-maturity-model/#what-is-a-platform)
+- [Defining Cloud Native Platforms](/blog/platform-engineering-cncf-maturity-model/#defining-cloud-native-platforms)
+- [The Platform Maturity Model: Charting the Path to Success](/blog/platform-engineering-cncf-maturity-model/#the-platform-maturity-model-charting-the-path-to-success)
+- [Platforms as Products: Driving Success](/blog/platform-engineering-cncf-maturity-model/#platforms-as-products-driving-success)
+- [Frequently Asked Questions](/blog/platform-engineering-cncf-maturity-model/#frequently-asked-questions)
 
 {{< youtube "NUPK5CCm6XA?rel=0" >}}
 
