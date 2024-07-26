@@ -4,41 +4,41 @@
         {{ if eq "docs" $mode }}
             <a class="tab-selected" href="/docs/">
                 <img class="tab-icon" src="/icons/docs.svg" />
-                Docs
-            </a>
-            <a class="tab" href="/tutorials/">
-                <img class="tab-icon" src="/icons/graduation-cap.svg" />
-                Tutorials
+                <span>Docs</span>
             </a>
             <a class="tab" href="/registry/">
                 <img class="tab-icon" src="/icons/registry-light.svg" />
-                Packages
+                <span>Packages</span>
+            </a>
+            <a class="tab" href="/tutorials/">
+                <img class="tab-icon" src="/icons/graduation-cap.svg" />
+                <span>Tutorials</span>
             </a>
         {{ else if eq "tutorials" $mode }}
             <a class="tab" href="/docs/">
                 <img class="tab-icon" src="/icons/docs.svg" />
-                Docs
-            </a>
-            <a class="tab-selected" href="/tutorials/">
-                <img class="tab-icon" src="/icons/graduation-cap.svg" />
-                Tutorials
+                <span>Docs</span>
             </a>
             <a class="tab" href="/registry/">
                 <img class="tab-icon" src="/icons/registry-light.svg" />
-                Packages
+                <span>Packages</span>
+            </a>
+            <a class="tab-selected" href="/tutorials/">
+                <img class="tab-icon" src="/icons/graduation-cap.svg" />
+                <span>Tutorials</span>
             </a>
         {{ else }}
             <a class="tab" href="/docs/">
                 <img class="tab-icon" src="/icons/docs-light.svg" />
-                Docs
-            </a>
-            <a class="tab" href="/tutorials/">
-                <img class="tab-icon" src="/icons/graduation-cap.svg" />
-                Tutorials
+                <span>Docs</span>
             </a>
             <a class="tab-selected" href="/registry/">
                 <img class="tab-icon" src="/icons/registry.svg" />
-                Packages
+                <span>Packages</span>
+            </a>
+            <a class="tab" href="/tutorials/">
+                <img class="tab-icon" src="/icons/graduation-cap.svg" />
+                <span>Tutorials</span>
             </a>
         {{ end }}
     </div>

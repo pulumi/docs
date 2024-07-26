@@ -15,7 +15,6 @@
     <div class="docs-main-content-wrapper">
 
         <div class="docs-main-content">
-            This is the module layout template.
             <div class="tutorials-main">
                 <header>
                     {{ partial "templates/breadcrumb.html" . }}
@@ -25,10 +24,13 @@
                     <div class="h1-gradient"></div>
                 </div>
 
+                <img class="my-4" src="./{{ .Params.meta_image }}">
+
                 <div>{{ .Content }}</div>
 
+                <h2>Topics</h2>
                 <div class="module-list">
-                    <h2>Tutorials</h2>
+
                     <ul class="p-0 border-4 border-gray-100 rounded">
                         {{ $sorted_pages := sort .Pages ".Params.index" }}
                         {{ range $index, $page := $sorted_pages }}
@@ -54,14 +56,14 @@
                     </ul>
                 </div>
 
-                
+
             </div>
         </div>
         <div class="docs-table-of-contents docs-toc-desktop">
             {{ partial "docs/table-of-contents.html" . }}
-    
+
             {{ partial "docs/feedback.html" . }}
-    
+
             {{ partial "docs/right-nav-ad.html" }}
         </div>
     </div>

@@ -1,8 +1,8 @@
 ---
-title: Tutorials
-meta_desc: Here is the amazing meta description. It's more than 50 characters but less than 160.
+title: Pulumi Tutorials
+meta_desc: Hands-on guides to help you get the most out of Pulumi.
 aliases:
     - /learn
 ---
 
-Here is a line or two to explain where you are and what you'll find here.
+Hands-on guides to help you get started and get the most out of Pulumi and Pulumi Cloud.

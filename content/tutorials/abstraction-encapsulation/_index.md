@@ -6,7 +6,7 @@ date: 2021-11-17
 description: |
     Explore abstraction and encapsulation with Pulumi and component resources.
 meta_desc: In this tutorial, we will explore using Pulumi to abstract and encapsulate your resource definitions as reusable models for others to use.
-index: 6
+index: 2
 meta_image: meta.png
 level: intermediate
 youll_learn:
@@ -18,10 +18,6 @@ aliases:
 providers:
     - aws
 ---
-
-## Time
-
-How long this tutorial will take depends on your internet connection, reading speed, and other factors. On average, this tutorial should take you about 25 minutes to complete.
 
 ## Prerequisites
 

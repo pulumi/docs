@@ -15,7 +15,6 @@
 
     <div class="docs-main-content-wrapper">
         <div class="docs-main-content">
-            This is an indiviual topic layout template.
             <div class="tutorials-main">
                 <header>
                     {{ partial "templates/breadcrumb.html" . }}
@@ -27,14 +26,14 @@
 
                 <div>{{ .Content }}</div>
 
-                
+
             </div>
         </div>
         <div class="docs-table-of-contents docs-toc-desktop">
             {{ partial "docs/table-of-contents.html" . }}
-    
+
             {{ partial "docs/feedback.html" . }}
-    
+
             {{ partial "docs/right-nav-ad.html" }}
         </div>
     </div>

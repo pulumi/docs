@@ -6,7 +6,7 @@ date: 2021-09-20T08:30:13-05:00
 draft: false
 description: Learn how to use Pulumi for more complex configurations with multiple environments.
 meta_desc: Learn how to create multiple Pulumi programs and work with them interdependently with this tutorial.
-index: 4
+index: 1
 meta_image: practice.png
 youll_learn:
     - Using stacks for unique configurations of different environments

@@ -6,7 +6,7 @@ date: 2022-06-03T11:31:52-05:00
 draft: false
 description: Explore how to import resources and migrate from other platforms to Pulumi.
 meta_desc: In this tutorial, we will explore how you can bring resources created by other tools like CDK or Terraform into Pulumi.
-index: 14
+index: 4
 meta_image: meta.png
 youll_learn:
     - how to import resources
@@ -18,10 +18,6 @@ providers:
 tags:
     - terraform
 ---
-
-## Time
-
-How long this tutorial will take depends on your internet connection, reading speed, and other factors. On average, this tutorial should take you about 30 minutes to complete.
 
 ## Prerequisites
 

@@ -8,7 +8,7 @@ description: |
     Explore building a custom infrastructure API to embed Pulumi in other
     contexts.
 meta_desc: In this tutorial, we will explore how to use Pulumi to build an infrastructure API for deployment and maintenance.
-index: 10
+index: 3
 meta_image: meta.png
 level: advanced
 youll_learn:
@@ -18,10 +18,6 @@ youll_learn:
 aliases:
     - /learn/embedding-pulumi/
 ---
-
-## Time
-
-How long this tutorial will take depends on your internet connection, reading speed, and other factors. On average, this tutorial should take you about 30 minutes to complete.
 
 ## Prerequisites
 

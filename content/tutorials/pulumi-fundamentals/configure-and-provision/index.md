@@ -16,23 +16,15 @@ links:
       url: https://github.com/pulumi/tutorial-pulumi-fundamentals
 ---
 
-Now that we've created our images, we can provision our application with a
-network and containers. First, we're going to add configuration to our Pulumi
-program. Pulumi is a tool to
-[configure](/docs/concepts/config/) your infrastructure,
-and that includes being able to configure the different stacks with different
-values. As a result, it makes sense to include the basic configurations as
-variables at the top of your program.
+Now that you've created the application's Docker images, you can provision the application's networkd and containers. You'll start by adding a few configuration settings the Pulumi program. Pulumi has first-class support for [configuring](/docs/concepts/config/) infrastructure, and that includes being able to configure multiple stacks within the same project with different values.
 
 ## Configure the application
-
-Add the following configuration variables to your Pulumi program:
 
 {{< chooser language "typescript,python,go,java,yaml" / >}}
 
 {{% choosable language typescript %}}
 
-These configuration declarations go below your imports.
+Add the following configuration variables to your Pulumi program somewhere near the top, just below your `import` statements:
 
 ```typescript
 // Get configuration values
@@ -46,7 +38,7 @@ const mongoPort = config.requireNumber("mongoPort");
 
 {{% choosable language python %}}
 
-These configuration declarations go below your imports.
+Add the following configuration variables to your Pulumi program somewhere near the top, just below your `import` statements:
 
 ```python
 # Get configuration values
@@ -60,15 +52,13 @@ mongo_port = config.require_int("mongoPort")
 
 {{% choosable language go %}}
 
-First, add this to the end of your `import` section:
+First, add this line to the end of your `import` section, then run `go mod tidy` to update the `go.mod` and `go.sum` files automatically.
 
 ```go
 "github.com/pulumi/pulumi/sdk/v3/go/pulumi/config"
 ```
 
-Run `go mod tidy` to update the `go.mod` and `go.sum` files as necessary.
-
-Next, add these configuration declarations near the top of the `main()` function, just after the `pulumi.Run` line.
+Next, add the following configuration variables near the top of the `main()` function, just after the `pulumi.Run` line:
 
 ```go
 // Get configuration values
@@ -85,7 +75,7 @@ That last line is, again, just to satisfy Go's requirement that no variables can
 
 {{% choosable language java %}}
 
-These configuration declarations go in the static `stack()` method:
+Add the following configuration variables to your Pulumi program, just inside the static `stack()` method:
 
 ```java
 // Get configuration values
@@ -99,7 +89,7 @@ final var mongoPort = config.requireInteger("mongoPort");
 
 {{% choosable language yaml %}}
 
-These statements go between the `description` and the `resources` where `configuration` and `variables` have been:
+Add the following configuration variables to `Pulumi.yaml` right before the `resources` block:
 
 ```yaml
 # Get configuration values
@@ -121,7 +111,7 @@ variables:
 
 You'll end up using these configuration values later, passing them as environment variables to the containers.
 
-Your Pulumi program should now match this code:
+Your program should now match the following code:
 
 {{< chooser language "typescript,python,go,java,yaml" / >}}
 
@@ -328,6 +318,7 @@ configuration:
 variables:
   backendImageName: backend
   frontendImageName: frontend
+
 resources:
   # Pull the backend image
   backend-image:
@@ -361,10 +352,8 @@ Diagnostics:
     error: an unhandled error occurred: <...> exited with non-zero exit code: 1
 ```
 
-This is because we have specified that this config option is _required_.
-Remember how we can use the same program to define multiple stacks? Let's set
-the ports for this stack, which the Pulumi command line knows already from when
-you first initialized the project (it's the `dev` stack by default):
+This is because we've specified that this config option is _required_. Recall that with Pulumi, you use a single program to define multiple stacks. Let's set
+the ports for the currently selected stack (the `dev` stack), which Pulumi should remember from when you ran `pulumi new` a moment ago:
 
 ```bash
 pulumi config set frontendPort 3001
@@ -372,10 +361,7 @@ pulumi config set backendPort 3000
 pulumi config set mongoPort 27017
 ```
 
-This set of commands creates a file in your directory called `Pulumi.dev.yaml`
-to store the configuration for this stack.
-
-The content of the file should be like this:
+This set of commands creates a file in your directory called `Pulumi.dev.yaml` to store the configuration settings for this stack. The content of the file should look something like this:
 
 ```yaml
 config:
@@ -390,9 +376,9 @@ Your Pulumi program should now run, but you're not actually using these newly
 configured ports just yet! That's because we don't have any container resources
 that use the ports; we only have image resources.
 
-## Create a Container resource
+## Create a container resource
 
-In the last topic, we retrieved Docker images from a remote registry. Now we want to create Docker containers and pass these containers the configuration values we just defined. Our containers will need to connect to each other, so we will need to create a [`Network`](/registry/packages/docker/api-docs/network), which is another resource.
+In the previous topic, we fetched three Docker images from a remote registry, one for each component of the application we're building. Now we want to create Docker containers with these images and pass the containers the configuration values we just defined. These containers will need to communicate with one another, so you'll need to create a [`Docker network`](/registry/packages/docker/api-docs/network) using a new Pulumi resource.
 
 {{< chooser language "typescript,python,go,java,yaml" / >}}
 
@@ -479,9 +465,7 @@ network:
 
 {{% /choosable %}}
 
-Define a new
-[`Container`](/registry/packages/docker/api-docs/container)
-resource in your Pulumi program below the `Network` resource, like this:
+Next, declare a new [`Container`](/registry/packages/docker/api-docs/container) resource just below the `Network` resource, like this:
 
 {{< chooser language "typescript,python,go,java,yaml" / >}}
 
@@ -637,35 +621,45 @@ backend-container:
 
 {{% choosable language typescript %}}
 
-It is important to note something here. In the `Container` resource, we are referencing `repoDigest` from the `RemoteImage` resource. Pulumi now knows there is a dependency between these two resources and will know to create the `Container` resource _after_ the `RemoteImage` resource. Another dependency to note is that the `backendContainer` depends on the `mongoContainer`. If we tried to run `pulumi up` without the `mongoContainer` running or present somewhere in state, Pulumi would let us know that the resource didn't exist and would stop.
+Notice the `Container` definition references the `repoDigest` property of the  `RemoteImage` resource. This tells Pulumi there's a dependency relationship between these two resources, so it'll know to provision the `RemoteImage` first.
+
+Another dependency to note is the `backendContainer`'s reliance on `mongoContainer`. This is an application-level dependency --- the backend service needs to connect to the database on startup --- so we use the `dependsOn` resource option to express the dependency explicitly. If we didn't, Pulumi might attempt to provision the backend service before the database was available, and the deployment would fail.
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-It is important to note something here. In the `Container` resource, we are referencing `repo_digest` from the `RemoteImage` resource. Pulumi now knows there is a dependency between these two resources and will know to create the `Container` resource _after_ the `Image` resource. Another dependency to note is that the `backend_container` depends on the `mongo_container`. If we tried to run `pulumi up` without the `mongo_container` running or present somewhere in state, Pulumi would let us know that the resource didn't exist and would stop.
+Notice the `Container` definition references the `repo_digest` property of the `RemoteImage` resource. This tells Pulumi there's a dependency relationship between these two resources, so it'll know to provision the `RemoteImage` first.
+
+Another dependency to note is the `backend_container`'s reliance on `mongo_container`. This is an application-level dependency --- the backend service needs to connect to the database on startup --- so we use the `depends_on` resource option to express the dependency explicitly. If we didn't, Pulumi might attempt to provision the backend service before the database was available, and the deployment would fail.
 
 {{% /choosable %}}
 
 {{% choosable language go %}}
 
-It is important to note something here. In the `Container` resource, we are referencing `repoDigest` from the `RemoteImage` resource. Pulumi now knows there is a dependency between these two resources and will know to create the `Container` resource _after_ the `RemoteImage` resource. Another dependency to note is that the `backendContainer` depends on the `mongoContainer`. If we tried to run `pulumi up` without the `mongoContainer` running or present somewhere in state, Pulumi would let us know that the resource didn't exist and would stop.
+Notice the `Container` definition references the `RepoDigest` property of the `RemoteImage` resource. This tells Pulumi there's a dependency relationship between these two resources, so it'll know to provision the `RemoteImage` first.
+
+Another dependency to note is that the backend container's reliance on `mongoContainer`. This is an application-level dependency --- the backend service needs to connect to the database on startup --- so we use the `dependsOn` resource option to express the dependency explicitly. If we didn't, Pulumi might attempt to provision the backend service before the database was available, and the deployment would fail.
 
 {{% /choosable %}}
 
 {{% choosable language java %}}
 
-It is important to note something here. In the `Container` resource, we are referencing `repoDigest` from the `RemoteImage` resource. Pulumi now knows there is a dependency between these two resources and will know to create the `Container` resource _after_ the `RemoteImage` resource. Another dependency to note is that the `backendContainer` depends on the `mongoContainer`. If we tried to run `pulumi up` without the `mongoContainer` running or present somewhere in state, Pulumi would let us know that the resource didn't exist and would stop.
+Notice the `Container` definition references the `repoDigest` property of the  `RemoteImage` resource. This tells Pulumi there's a dependency relationship between these two resources, so it'll know to provision the `RemoteImage` first.
+
+Another dependency to note is the `backendContainer`'s reliance on `mongoContainer`. This is an application-level dependency --- the backend service needs to connect to the database on startup --- so we use the `dependsOn` resource option to express the dependency explicitly. If we didn't, Pulumi might attempt to provision the backend service before the database was available, and the deployment would fail.
 
 {{% /choosable %}}
 
 {{% choosable language yaml %}}
 
-It is important to note something here. In the `Container` resource, we are referencing `repoDigest` from the `RemoteImage` resource. Pulumi now knows there is a dependency between these two resources and will know to create the `Container` resource _after_ the `RemoteImage` resource. Another dependency to note is that the `backend-container` depends on the `mongo-container`. If we tried to run `pulumi up` without the `mongo-container` running or present somewhere in state, Pulumi would let us know that the resource didn't exist and would stop.
+Notice the `Container` definition references the `repoDigest` property of the  `RemoteImage` resource. This tells Pulumi there's a dependency relationship between these two resources, so it'll know to provision the `RemoteImage` first.
+
+Another dependency to note is the `backendContainer`'s reliance on `mongoContainer`. This is an application-level dependency --- the backend service needs to connect to the database on startup --- so we use the `dependsOn` resource option to express the dependency explicitly. If we didn't, Pulumi might attempt to provision the backend service before the database was available, and the deployment would fail.
 
 {{% /choosable %}}
 
-It's also important to note the backend container requires some environment variables to connect to the Mongo container and to set the Node environment for Express.js. These are set in the `backend/src/.env` file in the [tutorial-pulumi-fundamentals](https://github.com/pulumi/tutorial-pulumi-fundamentals/tree/main/backend) repository. We don't want to hardcode these values; we want them to be configurable. To do that, we'll need to define some additional configuration values. Like before, we can set them using `pulumi config` on the command line:
+It's also important to note the backend container requires a few environment variables to connect to the Mongo container and configure the Node.js web service. These are set in the `backend/src/.env` file in the [tutorial-pulumi-fundamentals](https://github.com/pulumi/tutorial-pulumi-fundamentals/tree/main/backend) repository. We don't want to hardcode these values; we want them to be configurable. Like before, we can do that using `pulumi config set` on the command line:
 
 ```bash
 pulumi config set mongoHost mongodb://mongo:27017
@@ -674,8 +668,7 @@ pulumi config set nodeEnvironment development
 pulumi config set protocol http://
 ```
 
-Then, we need to add them to the top of our program with the rest of the
-configuration values.
+Now, add these settings to the top of your program file, just below the others:
 
 {{< chooser language "typescript,python,go,java,yaml" / >}}
 
@@ -738,40 +731,36 @@ protocol:
 
 {{% /choosable %}}
 
-All these configuration values are set as required, meaning if you forget to set them with `pulumi config set`, then `pulumi up` will report an error.
+Note that all of these settings are marked _required_. If you attempted to run `pulumi up` before setting them with `pulumi config set`, Pulumi would detect the missing values and the deployment would fail.
 
 {{% choosable language typescript %}}
 
-We also need to create `Container` resources for the frontend and Mongo
-containers. Put the `mongoContainer` declaration just before the `backendContainer` one, and the
-`frontendContainer` declaration after the `backendContainer` declaration. Here's the code for the Mongo container:
+Now you'll create `Container` resources for the frontend and Mongo containers. Put the `mongoContainer` declaration just before `backendContainer`, and the `frontendContainer` declaration after `backendContainer`. Here's the code for the Mongo container:
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-We also need to create `Container` resources for the frontend and Mongo
-containers. Put the `mongo_container` declaration just before the `backend_container` one, and the
+Now you'll create `Container` resources for the frontend and Mongo containers. Put the `mongo_container` declaration just before `backend_container`, and the
 `frontend_container` declaration after `backend_container`. Here's the code for the Mongo container:
 
 {{% /choosable %}}
 
 {{% choosable language go %}}
 
-We also need to create `Container` resources for the frontend and Mongo
-containers. Put the `mongoContainer` declaration just before the declaration for the backend container and declaration for the frontend container just after the declaration for the backend container. Here's the code for the Mongo container:
+Now you'll create `Container` resources for the frontend and Mongo containers. Put the `mongoContainer` declaration just before the backend container, and the frontend container declaration after the backend container. Here's the code for the Mongo container:
 
 {{% /choosable %}}
 
 {{% choosable language java %}}
 
-We also need to create `Container` resources for the frontend and Mongo containers. Put the `mongoContainer` declaration just before the `backendContainer` one, and the `frontendContainer` declaration after the declaration for `backendContainer`. Here's the code for the Mongo container:
+Now you'll create `Container` resources for the frontend and Mongo containers. Put the `mongoContainer` declaration just before `backendContainer`, and the `frontendContainer` declaration after `backendContainer`. Here's the code for the Mongo container:
 
 {{% /choosable %}}
 
 {{% choosable language yaml %}}
 
-We also need to create `Container` resources for the frontend and Mongo containers. Put the `mongo-container` declaration just before the `backend-container` one, and the `frontend-container` declaration after the `backend-container` declaration. Here's the code for the Mongo container:
+Now you'll create `Container` resources for the frontend and Mongo containers. Put the `mongo-container` declaration just before `backend-container`, and the `frontend-container` declaration after `backend-container`. Here's the code for the Mongo container:
 
 {{% /choosable %}}
 
@@ -1653,68 +1642,15 @@ outputs:       {}
 
 {{% /choosable %}}
 
-With Docker networking, we can use image names to refer to a container. In our
-example, the React frontend client sends requests to the Express backend client.
-The URL to the backend is set via the `setupProxy.js` file in the
-`app/frontend/src` directory with the `HTTP_PROXY` environment variable.
+With Docker networking, you can use image names to refer to a container by name. In this application, the React frontend sends requests to the Express backend service. The URL for the backend service is configured via the `setupProxy.js` file in `app/frontend/src` via the `HTTP_PROXY` environment variable.
 
-Run `pulumi up` to get the application running. Open a browser to `http://localhost:3001`, and our application is now deployed.
+Run `pulumi up` to get the application running. Open a browser to `http://localhost:3001` and you should see that the Boba Tea shop is now deployed. Huzzah!
 
-## Update the database
+## Clean up
 
-What if we want to add to the products on the page? We can POST to the API just as we would any API. Generally speaking, you would typically wire the database to an API and update it that way with any cloud, so we're going to do exactly that here.
+Whenever you're working on learning something new with Pulumi, it's always a good idea to clean up any resources you've created so you don't get charged for cloud resources you don't need or leave behind resources you'll never use. Let's clean up.
 
-Open a terminal and run the following command.
-
-```bash
-curl --location --request POST 'http://localhost:3000/api/products' \
---header 'Content-Type: application/json' \
---data-raw '{
-    "ratings": {
-        "reviews": [],
-        "total": 63,
-        "avg": 5
-    },
-    "created": 1600979464567,
-    "currency": {
-        "id": "USD",
-        "format": "$"
-    },
-    "sizes": [
-        "M",
-        "L"
-    ],
-    "category": "boba",
-    "teaType": 2,
-    "status": 1,
-    "_id": "5f6d025008a1b6f0e5636bc7",
-    "images": [
-        {
-            "src": "classic_boba.png"
-        }
-    ],
-    "name": "My New Milk Tea",
-    "price": 5,
-    "description": "none",
-    "productCode": "852542-107"
-}'
-```
-
-You should get back the following response:
-
-```bash
-{"status":"ok","data":{"product":{"ratings":{"reviews":[],"total":63,"avg":5},"created":1600979464567,"currency":{"id":"USD","format":"$"},"sizes":["M","L"],"category":"boba","teaType":2,"status":1,"_id":"5f6d025008a1b6f0e5636bc7","images":[{"_id":"62608f2a9ad5d90026847b0f","src":"classic_boba.png"}],"name":"My New Milk Tea","price":5,"description":"none","productCode":"852542-107","__v":0}}}
-```
-
-Refresh the app on `http://localhost:3001`, and our data is now updated!
-
-## Cleaning up
-
-Whenever you're working on learning something new with Pulumi, it's always a
-good idea to clean up any resources you've created so you don't get charged on a
-free tier or otherwise leave behind resources you'll never use. Let's clean up.
-
-Run the `pulumi destroy` command to remove all of the resources:
+Run `pulumi destroy` to remove everything in the stack:
 
 ```bash
 $ pulumi destroy
@@ -1734,18 +1670,12 @@ The resources in the stack have been deleted, but the history and configuration 
 If you want to remove the stack completely, run 'pulumi stack rm dev'.
 ```
 
-Now your resources should all be cleared! That last comment you see in the
-output notes that the stack and all of the configuration and history will stay
-in your dashboard on the Pulumi Service ([app.pulumi.com](https://app.pulumi.com/)). For now, that's okay. We'll talk
-more about removing the project from your history in another pathway.
+That's it! That last comment you see in the output notes that the stack and all of the configuration and history will stay
+in your dashboard in Pulumi Cloud ([app.pulumi.com](https://app.pulumi.com/)). For now, that's okay. We'll talk
+more about removing the project from your history in another tutorial.
 
 ---
 
-Congratulations, you've now finished Pulumi Fundamentals! You learned to create
-a Pulumi project; work on your Pulumi program to build Docker images,
-containers, and networks; and deploy the infrastructure locally with your first
-resource provider. Now, head back to the main page and explore some other
-tutorials to understand more about Pulumi. The best next step to take is to
-explore the [Building with Pulumi](/learn/building-with-pulumi/) pathway.
+Congratulations! You've completed the Pulumi Fundamentals tutorial. You learned how to create a Pulumi project; work on your Pulumi program to build Docker images, containers, and networks; and deploy the infrastructure locally with your first resource provider. Now, [head back to the main page](/tutorials/) and explore a few other tutorials to understand more about Pulumi. The best next step to take is to dive into the [Building with Pulumi](/tutorials/building-with-pulumi/) tutorial.
 
 {{< tutorial-stepper >}}
