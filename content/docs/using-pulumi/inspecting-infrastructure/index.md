@@ -114,4 +114,3 @@ To learn more about creating and managing resources in Pulumi, take a look at th
 
 - Learn more about the available CLI commands in the [Pulumi CLI documentation](/docs/cli/commands/).
 - Learn more about stack outputs and references in the [Stack Outputs and References](/docs/using-pulumi/stack-outputs-and-references/) tutorial.
-
