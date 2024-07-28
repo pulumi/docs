@@ -50,7 +50,7 @@ In this section, you will run a number of commands in the Pulumi CLI that will e
 
 ### pulumi stack
 
-The [pulumi stack](/docs/cli/commands/pulumi_stack/) command to provide a quick overview of the current stack's status and configuration. Running this command will list the management details, resources, and output names and values of the current stack.
+The [pulumi stack](/docs/cli/commands/pulumi_stack/) command is used to provide a quick overview of the current stack's status and configuration. Running this command will list the management details, resources, and output names and values of the current stack.
 
 Run the `pulumi stack` command as shown below:
 
@@ -72,7 +72,7 @@ Run the `pulumi stack output` command as shown below:
 
 {{< video title="Running the pulumi stack output command" src="https://www.pulumi.com/uploads/aws-cli-pulumi-stack-output.mp4" autoplay="true" loop="true" >}}
 
-If a specific property-name is supplied, just that property’s value is shown. To demonstrate, run the `pulumi stack output <outputname>` command, replacing `<outputname>` with one of the output names of your stack.
+You can return the value of just a single output by adding the name of the desired output property to the command. To demonstrate, run the `pulumi stack output <outputname>` command, replacing `<outputname>` with one of the output names of your stack.
 
 {{< video title="Running the pulumi stack output command for a single output" src="https://www.pulumi.com/uploads/aws-cli-pulumi-stack-output-single.mp4" autoplay="true" loop="true" >}}
 
@@ -86,7 +86,7 @@ Run the `pulumi stack export` command as shown below:
 
 ### pulumi preview
 
-The [pulumi preview](/docs/cli/commands/pulumi_preview/) command is an important tool for understanding the changes that will be made to your infrastructure before actually applying them. It simulates the update, showing a detailed preview of the resources that will be created, updated, or deleted without making any actual changes to your cloud resources.
+The [pulumi preview](/docs/cli/commands/pulumi_preview/) command is an important tool for understanding the changes that will be made to your infrastructure before actually applying them. It does a dry run of the update, showing a detailed preview of the resources that will be created, updated, or deleted without making any actual changes to your cloud resources.
 
 Before running this command, you will need to make a change to your Pulumi program. Change the name of your S3 bucket resource and then save your file.
 
@@ -98,7 +98,7 @@ Now run the `pulumi preview` command to display a preview of the updates that wi
 
 ### pulumi console
 
-The [pulumi console](/docs/cli/commands/pulumi_console/) command opens the current stack in the Pulumi Console, providing a graphica user interface to view and manage your Pulumi stack and resources. From there, you can view detailed information about the stack such as its resources, outputs, and configuration values.
+The [pulumi console](/docs/cli/commands/pulumi_console/) command opens the current stack in the Pulumi Console, providing a graphical user interface to view and manage your Pulumi stack and resources. From there, you can view detailed information about the stack such as its resources, outputs, and configuration values.
 
 {{< video title="Running the pulumi console command" src="https://www.pulumi.com/uploads/aws-cli-pulumi-console.mp4" autoplay="true" loop="true" >}}
 
