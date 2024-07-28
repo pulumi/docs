@@ -106,7 +106,7 @@ The [pulumi console](/docs/cli/commands/pulumi_console/) command opens the curre
 
 {{< cleanup >}}
 
-## Next Steps [WIP]
+## Next Steps
 
 In this tutorial, you used a variety of Pulumi CLI commands to view more details about your infrastructure.
 
