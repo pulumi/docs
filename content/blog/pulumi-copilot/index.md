@@ -18,9 +18,9 @@ tags:
 
 ---
 
-AI is transforming how users interact with every category of technology today, and cloud infrastructure is no exception.  Last year we launched Pulumi AI to combine generative AI with Pulumi’s knowledge of cloud infrastructure, helping users solve complex cloud development problems using Infrastructure-as-Code.  Pulumi AI has seen rapid adoption and engagement, with tens of thousands of users leveraging Pulumi AI over the last year.
+AI is transforming how users interact with every category of technology today, and cloud infrastructure is no exception. Last year we launched Pulumi AI to combine generative AI with Pulumi’s knowledge of cloud infrastructure, helping users solve complex cloud development problems using Infrastructure-as-Code. Pulumi AI has seen rapid adoption and engagement, with tens of thousands of users leveraging Pulumi AI over the last year.
 
-Today, we’re excited to introduce __Pulumi Copilot__, a huge leap forward in applying AI to cloud infrastructure management.  Pulumi Copilot is a new conversational chat interface integrated throughout Pulumi Cloud, enabling Pulumi Cloud users to quickly accomplish a variety of cloud infrastructure management tasks by leveraging the power of large language models plus the rich capabilities of Pulumi Cloud.
+Today, we’re excited to introduce __Pulumi Copilot__, a huge leap forward in applying AI to cloud infrastructure management. Pulumi Copilot is a new conversational chat interface integrated throughout Pulumi Cloud, enabling Pulumi Cloud users to quickly accomplish a variety of cloud infrastructure management tasks by leveraging the power of large language models plus the rich capabilities of Pulumi Cloud.
 
 <!--more-->
 
@@ -33,7 +33,7 @@ Through Pulumi Copilot, you can explore your cloud infrastructure and gain insig
 Pulumi Copilot enables these use cases via the following:
 
 __Access any data in Pulumi Cloud__
-  * The state of every resource you are managing with Pulumi across _any_ Cloud, _any_ account, and _any_ region.  With [Pulumi Insights'](https://www.pulumi.com/blog/pulumi-insights/) Cloud Supergraph support for 160+ cloud providers, this offers an unprecedented breadth of cloud infrastructure data to explore and interrogate with Pulumi Copilot.
+  * The state of every resource you are managing with Pulumi across _any_ Cloud, _any_ account, and _any_ region. With [Pulumi Insights'](https://www.pulumi.com/blog/pulumi-insights/) Cloud Supergraph support for 160+ cloud providers, this offers an unprecedented breadth of cloud infrastructure data to explore and interrogate with Pulumi Copilot.
   * Pulumi stacks, projects, updates, deployments, environments, policies, audit logs and more - enabling historical understanding of what happened when, by who, and why across all of your cloud engineering systems managed by Pulumi.
 
 __Pulumi IaC Authoring and Deployment__
