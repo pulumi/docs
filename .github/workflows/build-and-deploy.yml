@@ -75,7 +75,7 @@ jobs:
       - name: Slack Notification
         uses: docker://sholung/action-slack-notify:v2.3.0
         env:
-          SLACK_CHANNEL: docs-ops
+          SLACK_CHANNEL: docs-ops-critical
           SLACK_COLOR: "#F54242"
           SLACK_MESSAGE: "build and deploy failure in pulumi/docs repo :meow_sad:"
           SLACK_USERNAME: docsbot
