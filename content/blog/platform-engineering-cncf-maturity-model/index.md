@@ -23,7 +23,7 @@ meta_desc: Discover Cloud Native Platforms, the Platform Maturity Model, how to 
 # The meta_image appears in social-media previews and on the blog home page. A
 # placeholder image representing the recommended format, dimensions and aspect
 # ratio has been provided for you.
-meta_image: meta.png
+meta_image: platform-engineering-dominik-tech-talk-cncf.png
 
 # At least one author is required. The values in this list correspond with the
 # `id` properties of the team member files at /data/team/team. Create a file for
@@ -50,15 +50,16 @@ tags:
 # https://twitter.com/PulumiCorp/status/1755637618631405655
 
 social:
-    twitter:
-    linkedin:
+    twitter: Explore platform engineering essentials! Read the article or watch Dominik Kress's talk on Cloud Native Platforms, the Platform Maturity Model, and managing Platforms as Products.
+    linkedin: Explore platform engineering essentials! Read the article or watch Dominik Kress's talk on Cloud Native Platforms, the Platform Maturity Model, and managing Platforms as Products.
 
 # See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md
 # for details, and please remove these comments before submitting for review.
 ---
 
-The Platform Engineering & DevOps in-person meetups launched in Berlin with two great speakers. This blog article is an overview of Dominik Kress's talk, “What the Heck is the CNCF Platform Working Group? Answers from a Member!” where he discussed Cloud Native Platforms, The Platform Maturity Model, and approaching Platforms as Products. 
-Learn more about platform engineering and how you can get involved with the CNCF Platform Working Group. Make sure to check our [Platform Engineering & DevOps Series](https://info.pulumi.com/platform-engineering-devops-series) to find a meetup near you.
+The Platform Engineering & DevOps in-person series launched in Berlin with two great speakers. This blog article is an overview of Dominik Kress's talk, “What the Heck is the CNCF Platform Working Group? Answers from a Member!” in which he discussed Cloud-Native Platforms, The Platform Maturity Model, and approaching Platforms as Products. 
+
+In this article, you'll learn more about [platform engineering] (https://www.pulumi.com/what-is/what-is-platform-engineering/)and how you can get involved with the CNCF Platform Working Group. Make sure to check our [Platform Engineering & DevOps Series](https://info.pulumi.com/platform-engineering-devops-series) to find a meetup near you.
 
 <!--more-->
 
@@ -85,8 +86,8 @@ The specific capabilities of a platform are tailored to the needs of its stakeho
 The core of the discussion at the CNCF Platform Working Group is: "What exactly is a cloud-native platform, and why do organizations need one?"
 A cloud-native platform is a strategic business initiative that enables organizations to deliver value more efficiently and effectively. It is characterized by:
 
-- **Vendor-neutrality**: A cloud-native platform should be open and agnostic, allowing organizations to leverage a wide range of technologies and services without being locked into a single vendor.
-- **Scalability and flexibility**: The platform should be designed to accommodate the growing and changing needs of the organization, with the ability to add or remove components as required easily.
+- **Vendor-neutrality**: A cloud-native platform should be open and agnostic, allowing organizations to leverage various technologies and services without being locked into a single vendor.
+**Scalability and flexibility**: The platform should be designed to accommodate the organization's growing and changing needs, with the ability to add or remove components as needed easily.
 - **[Developer-centricity](https://www.pulumi.com/blog/software-developer-experience-devex-devx-devops-culture/)**: The platform should empower developers to be more productive by providing self-service capabilities, streamlined workflows, and a consistent developer experience.
 - **[Operational efficiency](https://www.pulumi.com/blog/developer-portal-platform-teams/)**: The platform should simplify and automate the management and maintenance of the underlying infrastructure, allowing the organization to focus on delivering value to customers.
 - **Continuous improvement**: The platform should be designed with a mindset of continuous evolution, with regular updates and enhancements to address emerging needs and technologies.
@@ -109,12 +110,12 @@ By using the CNCF's [Platform Maturity Model](https://tag-app-delivery.cncf.io/w
 
 ## Platforms as Products: Driving Success
 
-One of the key initiatives currently underway within the Platform Working Group is the "[Platforms as Products](https://tag-app-delivery.cncf.io/blog/product-thinking-for-platforms/)" research project. This effort aims to explore the parallels between traditional product management and the management of cloud-native platforms to identify best practices and patterns that can help organizations unlock the full potential of their platforms.
+One of the key initiatives currently underway within the Platform Working Group is the "[Platforms as Products](https://tag-app-delivery.cncf.io/blog/product-thinking-for-platforms/)" research project. This effort aims to explore the parallels between traditional product management and the management of cloud-native platforms to identify best practices and patterns that can help organizations unlock their platforms' full potential.
 
 The core premise of the "Platforms as Products" initiative is that successful cloud-native platforms should be treated and managed like products rather than just technology projects. This means applying principles of product management, such as:
 
 - **Defining a clear vision and roadmap**: Establishing a long-term vision for the platform and a roadmap to get there, focusing on delivering value to internal customers.
-- **Measuring and optimizing for key metrics**: Identifying and tracking the right performance indicators to ensure the platform is delivering the desired outcomes.
+- **Measuring and optimizing for key metrics**: Identifying and tracking the right performance indicators to ensure the platform delivers the desired outcomes.
 - **Fostering a thriving ecosystem**: Encouraging and enabling a community of contributors and consumers to drive the platform's evolution and adoption.
 - **Continuously iterating and improving**: Embracing a continuous improvement mindset, with regular updates and enhancements to the platform based on user feedback and emerging needs.
 
@@ -122,12 +123,14 @@ By adopting a product management approach to their cloud native platforms, organ
 
 ## Conclusion
 
-If you're interested in learning more about platform engineering and getting involved in its initiatives, there are several ways to participate:
+This article and Dominik Kress's talk highlighted the importance of platform engineering in cloud-native computing. Key points included defining cloud-native platforms, assessing platform maturity, and managing platforms with product management principles.
 
-- Attend a Platform Engineering & DevOps in-person meetup, [find a location near you](https://info.pulumi.com/platform-engineering-devops-series)
+If you're interested in learning more about platform engineering and getting involved in CNCF's initiatives, there are several ways to participate:
+
+- Attend a Platform Engineering & DevOps in-person meetup, [find a location near you](https://info.pulumi.com/platform-engineering-devops-series).
 - Join the bi-weekly [CNCF Platform Working Group meetings](https://tag-app-delivery.cncf.io/wgs/platforms/#meetings) every other Tuesday at 5 PM Berlin time (11 AM ET).
-- I wish there was a doc page to send them to... check other blog
-- Join the workshop something something
+- Learn how to [build Developer Portals with Pulumi](https://www.pulumi.com/docs/pulumi-cloud/developer-portals/). You can get off the ground faster with organization templates, a new project wizard, or leveraging the backstage plugin.
+- Register for one of our [Platform Engineering or DevOps workshops](https://www.pulumi.com/resources/#upcoming).
 
 ---
 
