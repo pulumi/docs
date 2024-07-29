@@ -59,7 +59,7 @@ social:
 
 The Platform Engineering & DevOps in-person series launched in Berlin with two great speakers. This blog article is an overview of Dominik Kress's talk, “What the Heck is the CNCF Platform Working Group? Answers from a Member!” in which he discussed Cloud-Native Platforms, The Platform Maturity Model, and approaching Platforms as Products. 
 
-In this article, you'll learn more about [platform engineering] (https://www.pulumi.com/what-is/what-is-platform-engineering/)and how you can get involved with the CNCF Platform Working Group. Make sure to check our [Platform Engineering & DevOps Series](https://info.pulumi.com/platform-engineering-devops-series) to find a meetup near you.
+In this article, you'll learn more about [platform engineering](https://www.pulumi.com/what-is/what-is-platform-engineering/)and how you can get involved with the CNCF Platform Working Group. Make sure to check our [Platform Engineering & DevOps Series](https://info.pulumi.com/platform-engineering-devops-series) to find a meetup near you.
 
 <!--more-->
 
