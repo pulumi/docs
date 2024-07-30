@@ -52,7 +52,7 @@ In the next steps, you will learn how to login using both options, and you will 
 
 Run the `pulumi login` command to initiate the authentication process. When prompted, copy and paste your token into the command line and press enter.
 
-{{< video title="Running the pulumi stack command" src="https://www.pulumi.com/uploads/aws-cli-pulumi-login-token.mp4" autoplay="true" loop="true" >}}
+{{< video title="Running the pulumi login command with access token" src="https://www.pulumi.com/uploads/aws-cli-pulumi-login-token.mp4" autoplay="true" loop="true" >}}
 
 In the CLI, you will receive a message to indicate that you've successfully logged in.
 
@@ -60,11 +60,11 @@ In the CLI, you will receive a message to indicate that you've successfully logg
 
 Run the `pulumi login` command to initiate the authentication process. When prompted, press enter to be directed to the browser. From there, login with the appropriate credentials:
 
-{{< video title="Running the pulumi stack command" src="https://www.pulumi.com/uploads/aws-cli-pulumi-login-browser.mp4" autoplay="true" loop="true" >}}
+{{< video title="Running the pulumi login command with browser" src="https://www.pulumi.com/uploads/aws-cli-pulumi-login-browser.mp4" autoplay="true" loop="true" >}}
 
 In both the browser and the CLI, you will receive a message to indicate that you've successfully logged in.
 
-{{< video title="Running the pulumi stack command" src="https://www.pulumi.com/uploads/aws-cli-pulumi-login-browser-success.mp4" autoplay="true" loop="true" >}}
+{{< video title="Showing browser authentication completed" src="https://www.pulumi.com/uploads/aws-cli-pulumi-login-browser-success.mp4" autoplay="true" loop="true" >}}
 
 ## Logging out of the CLI
 
