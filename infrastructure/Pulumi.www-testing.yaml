@@ -11,3 +11,4 @@ config:
   www.pulumi.com:setRootRecord: "true"
   www.pulumi.com:websiteDomain: www.pulumi-test.io
   www.pulumi.com:websiteLogsBucketName: pulumi-test-io-website-logs
+  www.pulumi.com:originBucketNameOverride: "www-testing-pulumi-docs-origin-push-62ebfeee"

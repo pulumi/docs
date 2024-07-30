@@ -5,6 +5,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as fs from "fs";
 
 import { getAIAnswersRewriteAssociation, getEdgeRedirectAssociation } from "./cloudfrontLambdaAssociations";
+import * as monitoring from "./monitoring"
 
 const stackConfig = new pulumi.Config();
 
@@ -684,3 +685,4 @@ export const originBucketWebsiteEndpoint = originBucket.websiteEndpoint;
 export const cloudFrontDomain = cdn.domainName;
 export const websiteDomain = config.websiteDomain;
 export const originS3BucketName = originBucket.bucket;
+// export const canary = monitoring.canary.arn;

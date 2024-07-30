@@ -83,6 +83,13 @@
   resolved "https://registry.yarnpkg.com/@protobufjs/utf8/-/utf8-1.1.0.tgz#a777360b5b39a1a2e5106f8e858f2fd2d060c570"
   integrity sha512-Vvn3zZrhQZkkBE8LSuW3em98c0FwgO4nxzv6OdSxPKJIEKY2bGbHn+mhGIPerzI4twdxaP8/0+06HBpwf345Lw==
 
+"@pulumi/archive@^0.0.6":
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/@pulumi/archive/-/archive-0.0.6.tgz#83d1a12d733e27f45e7123c1f7a17155e18388fb"
+  integrity sha512-VObTwwLti2jl2BVeytYNMupAlBRNVNo3tuNBPNfaJvCcz9LwL2ru7U4R/JsnE8CvekXuuRmQGqenrUN5ZHSP1A==
+  dependencies:
+    "@pulumi/pulumi" "^3.0.0"
+
 "@pulumi/aws@^6.28.2":
   version "6.28.2"
   resolved "https://registry.yarnpkg.com/@pulumi/aws/-/aws-6.28.2.tgz#11c28452887f30dc2f6dec02de302b9f6eaf06b1"
