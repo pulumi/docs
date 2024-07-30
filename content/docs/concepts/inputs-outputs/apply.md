@@ -988,7 +988,7 @@ pulumi.export("InstanceUrl", url)
 {{< example-program-snippet path="aws-ec2-instance-with-sg" language="go" from="24" to="26" >}}
 {{< example-program-snippet path="aws-ec2-instance-with-sg" language="go" from="28" to="31" >}}
 
-        url := server.PublicDns.ApplyT(func(dns string) (string, error) {
+        url := server.PublicDns.ApplyT(func(dns string) string {
 			return "https://" + dns
 		}).(pulumi.StringOutput)
 
