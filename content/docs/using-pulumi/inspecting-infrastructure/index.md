@@ -17,7 +17,7 @@ tags:
 
 Pulumi configurations and state data include highly structured information about the resources they manage, such as dependency information, [outputs](/docs/concepts/inputs-outputs/#outputs), and more.
 
-The Pulumi CLI includes some commands for inspecting this data. You can use these to integrate other tools with Pulumi's infrastructure data, or just to gain a deeper or more holistic understanding of your infrastructure.
+The Pulumi CLI includes commands for inspecting this data. You can use these to integrate other tools with Pulumi's infrastructure data, or just to gain a deeper or more holistic understanding of your infrastructure.
 
 In this tutorial, we'll demonstrate the various ways you can use the Pulumi CLI to inspect your infrastructure.
 
@@ -36,13 +36,27 @@ Additionally, you will need the following tools to complete this tutorial:
 
 Let's get started!
 
-## Create a New Project
+## [Optional] Create a New Project
+
+{{< notes type="info" >}}
+
+The commands found in this tutorial can be run against any projects or stacks that you may have already created. Feel free to skip this step and use your own project/stack if that is the case.
+
+{{< /notes >}}
 
 To start, login to the [Pulumi CLI](/docs/cli/commands/pulumi_login/) and ensure it is [configured to use your AWS account](/docs/clouds/aws/get-started/begin/#configure-pulumi-to-access-your-aws-account). Next, [create a new project](/docs/clouds/aws/get-started/create-project/) and replace the default program code with the following:
 
 {{< example-program path="aws-s3bucket-bucketpolicy" >}}
 
-Then run the `pulumi up` command to deploy your resources.
+This code example creates the following resources:
+
+- An S3 bucket
+- An S3 bucket policy definition
+- An S3 bucket policy attachment
+
+It also includes two exports that will output the name and ARN of the S3 bucket.
+
+Now run the `pulumi up` command to deploy your resources before moving onto the next steps.
 
 ## Inspect your Infrastructure
 
