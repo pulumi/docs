@@ -30,16 +30,29 @@ We've actually already started creating a component resource in the encapsulatio
 
 ## Converting to a component resource
 
-When we're converting to a component resource, we're subclassing the `ComponentResource` so that our new component resource can get all of the lovely benefits of a resource (state tracking, diffs, name fields, etc.) that other resources have.
+When we're converting to a component resource, we subclass `pulumi.ComponentResource` so that our new component resource can get all of the lovely benefits of a resource (state tracking, diffs, name fields, etc.) that other resources have.
 
-In Python, we subclass by using `super()` in the initialization of the class. This call ensures that Pulumi registers the component resource as a resource properly.
+{{% choosable language typescript %}}
+
+In TypeScript, we do this by extending `pulumi.ComponentResource` and calling `super()` in the class constructor. This call ensures that Pulumi registers the component resource as a resource properly.
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+In Python, we do this by passing `pulumi.ComponentResource` in the class definition and calling `super()` in the initializer. This call ensures that Pulumi registers the component resource as a resource properly.
+
+{{% /choosable %}}
 
 {{< chooser language "typescript,python" />}}
 
 {{% choosable language typescript %}}
 
 ```typescript
-// ...
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+type PolicyType = "default" | "locked" | "permissive";
 
 // Create a class that encapsulates the functionality by subclassing
 // pulumi.ComponentResource.
@@ -179,7 +192,7 @@ From here, you can deploy it and get your custom resource appearing in the resou
 
 Congratulations! You've now finished this tutorial on abstraction and encapsulation in Pulumi programs! In this tutorial, you've learned about thinking of code in abstract forms, wrapping up logical groupings of code to make reuse easier, and building with component resources to make those logical groupings something that Pulumi recognizes.
 
-There's a lot more to explore regarding this topic in Pulumi. We're working on more tutorials, but for now, check out some more resources:
+There's a lot more to explore regarding this topic in Pulumi. We're working on more pathways, but for now, check out some more resources:
 
 * [An AWS/Python example](https://github.com/pulumi/examples/tree/master/aws-py-wordpress-fargate-rds)
 * [An Azure/Python example](https://github.com/pulumi/examples/tree/master/classic-azure-py-webserver-component)

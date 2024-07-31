@@ -20,7 +20,7 @@ Breaking apart Pulumi code is essential to keeping a clean, well-organized, and 
 
 ## Breaking apart Pulumi code
 
-Let's take a fairly uncomplicated piece of Pulumi code: the definition of an s3 bucket:
+Let's take a fairly uncomplicated piece of Pulumi code: the definition of an S3 bucket:
 
 {{< chooser language "typescript,python" />}}
 
@@ -50,7 +50,7 @@ pulumi.export("bucket", bucket.bucket_name)
 
 {{% /choosable %}}
 
-Here, we're creating one resource and exporting the output from that resource. In practice however, production systems typically have more requirements than a storage object. We need access policies, for one. Depending on how you're using that storage, you might need networking and other resources, as well. All of these use cases for a storage object requires some kind of policy, though, so when thinking about encapsulating our storage object needs, we probably want to put those two together. Let's adjust our code accordingly:
+Here, we're creating one resource and exporting the output from that resource. In practice however, production systems typically have more requirements than a storage object. We need access policies, for one. Depending on how you're using that storage, you might need networking and other resources, as well. All of these use cases for a storage object require some kind of policy, though, so when thinking about encapsulating our storage object needs, we probably want to put those two together. Let's adjust our code accordingly:
 
 {{< chooser language "typescript,python" />}}
 
@@ -123,7 +123,7 @@ pulumi.export("bucket", bucket.bucket_name)
 
 {{% /choosable %}}
 
-Now, that's nice, but what if we need to make three different storage objects for three different use cases? Sure, we could copy and paste the code over and over, but that's not good practice. It introduces the possibility for errors, makes the whole codebase harder to maintain (what if there's an update to the policy versions that has to go out for security reasons?!?), and in general creates more headaches than it solves. Instead, let's encapsulate the code into something more reusable. We could start out by creating a resource grouping for the kind of resource we wanted to use:
+Now, that's nice, but what if we need to make three different storage objects for three different use cases? Sure, we could copy and paste the code over and over, but that's not good practice. It introduces the possibility for errors, makes the whole codebase harder to maintain (what if there's an update to the policy versions that has to go out for security reasons?), and in general creates more headaches than it solves. Instead, let's encapsulate the code into something more reusable. We could start out by creating a resource grouping for the kind of resource we wanted to use:
 
 {{< chooser language "typescript,python" />}}
 
@@ -131,7 +131,7 @@ Now, that's nice, but what if we need to make three different storage objects fo
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-// ...
+import * as aws from "@pulumi/aws";
 
 class OurBucketClass {
     private bucket: aws.s3.Bucket;
@@ -139,6 +139,7 @@ class OurBucketClass {
 
     constructor(name: string, policyName: string) {
         this.bucket = new aws.s3.Bucket(name);
+
         this.bucketPolicy = new aws.s3.BucketPolicy(policyName, {
             bucket: this.bucket.id,
             policy: {
@@ -154,7 +155,7 @@ class OurBucketClass {
                     ],
                 }],
             },
-        }, { parent: this.bucket });
+        });
     }
 }
 ```
@@ -199,7 +200,7 @@ class OurBucketClass:
 
 {{% /choosable %}}
 
-But that JSON blob of the policy is also an object which we can encapsulate, making our storage object class more usable outside of this specific context. Let's imagine we have a referenceable list of common access policies, perhaps a simple key:value store. In the store, keys are strings that are names of policies, and the values are JSON documents stored in separate files so you can reuse them.
+But that JSON blob of the policy is also an object which we can encapsulate, making our storage object class more usable outside of this specific context. Let's imagine we have a referenceable list of common access policies, perhaps a simple key-value store. In the store, keys are strings that are names of policies, and the values are JSON documents stored in separate files so you can reuse them.
 
 {{< chooser language "typescript,python" />}}
 
