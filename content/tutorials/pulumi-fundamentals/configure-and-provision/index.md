@@ -16,7 +16,7 @@ links:
       url: https://github.com/pulumi/tutorial-pulumi-fundamentals
 ---
 
-Now that you've created the application's Docker images, you can provision the application's networkd and containers. You'll start by adding a few configuration settings the Pulumi program. Pulumi has first-class support for [configuring](/docs/concepts/config/) infrastructure, and that includes being able to configure multiple stacks within the same project with different values.
+Now that you've created the application's Docker images, you can provision the application's network and containers. You'll start by adding a few configuration settings to the Pulumi program. Pulumi has first-class support for [configuring](/docs/concepts/config/) infrastructure, and that includes being able to configure multiple stacks within the same project with different values.
 
 ## Configure the application
 
@@ -301,7 +301,7 @@ public class App {
 {{% choosable language yaml %}}
 
 ```yaml
-name: my_first_app
+name: my-first-app
 runtime: yaml
 description: A minimal Pulumi YAML program
 
@@ -346,9 +346,9 @@ Try and run your `pulumi up` again at this point. You should get an error that l
 
 ```bash
 Diagnostics:
-  pulumi:pulumi:Stack (my_first_app-dev):
-    error: Missing required configuration variable 'my_first_app:frontendPort'
-        please set a value using the command `pulumi config set my_first_app:frontendPort <value>`
+  pulumi:pulumi:Stack (my-first-app-dev):
+    error: Missing required configuration variable 'my-first-app:frontendPort'
+        please set a value using the command `pulumi config set my-first-app:frontendPort <value>`
     error: an unhandled error occurred: <...> exited with non-zero exit code: 1
 ```
 
@@ -365,12 +365,12 @@ This set of commands creates a file in your directory called `Pulumi.dev.yaml` t
 
 ```yaml
 config:
-  my_first_app:backendPort: "3000"
-  my_first_app:frontendPort: "3001"
-  my_first_app:mongoPort: "27017"
+  my-first-app:backendPort: "3000"
+  my-first-app:frontendPort: "3001"
+  my-first-app:mongoPort: "27017"
 ```
 
-Now, try and rerun your Pulumi program with `pulumi up` command.
+Now, try and rerun your Pulumi program with `pulumi up`.
 
 Your Pulumi program should now run, but you're not actually using these newly
 configured ports just yet! That's because we don't have any container resources
@@ -1532,7 +1532,7 @@ public class App {
 {{% choosable language yaml %}}
 
 ```yaml
-name: my_first_app
+name: my-first-app
 runtime: yaml
 description: A minimal Pulumi YAML program
 
@@ -1644,11 +1644,11 @@ outputs:       {}
 
 With Docker networking, you can use image names to refer to a container by name. In this application, the React frontend sends requests to the Express backend service. The URL for the backend service is configured via the `setupProxy.js` file in `app/frontend/src` via the `HTTP_PROXY` environment variable.
 
-Run `pulumi up` to get the application running. Open a browser to `http://localhost:3001` and you should see that the Boba Tea shop is now deployed. Huzzah!
+Run `pulumi up` to get the application running. Open a browser to `http://localhost:3001` and you should see that the Boba Tea shop is now deployed. Well done!
 
 ## Clean up
 
-Whenever you're working on learning something new with Pulumi, it's always a good idea to clean up any resources you've created so you don't get charged for cloud resources you don't need or leave behind resources you'll never use. Let's clean up.
+Whenever you're working on learning something new with Pulumi, it's always a good idea to clean up any resources you've created so you don't get charged for cloud resources you no longer need. Let's do that now.
 
 Run `pulumi destroy` to remove everything in the stack:
 

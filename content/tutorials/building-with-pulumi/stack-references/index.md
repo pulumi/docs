@@ -13,11 +13,11 @@ aliases:
     - /learn/building-with-pulumi/stack-references/
 ---
 
-Stack references extend the utility of stack outputs by allowing you to access them programmatically from another stack at runtime.
+Stack references extend the utility of stack outputs by allowing you to access them programmatically from another Pulumi program at runtime.
 
-In this section, you'll create a new Pulumi program that'll use the stack outputs from the program we just created.
+In this section, you'll create a new project and stack that'll use the stack outputs from the program we created in the previous topic.
 
-Let's start by making a new Pulumi program in a new directory, alongside `my-first-app`:
+Let's start by making a new program in a new directory, alongside `my-first-app`:
 
 {{< chooser language "typescript,python,go,yaml" / >}}
 
@@ -206,23 +206,26 @@ Run `pulumi up`. You'll see the value gets exported from the other project's
 stack to reference in this new project's stack:
 
 ```bash
+$ pulumi up
+...
 
-     Type                 Name               Status
-     pulumi:pulumi:Stack  my-second-app-staging
+Updating (staging)
+...
+
+     Type                 Name                   Status
+ +   pulumi:pulumi:Stack  my-second-app-staging  created (1s)
 
 Outputs:
-  + shopUrl: "http://localhost:3002"
+    shopUrl: "http://localhost:3002"
+
+Resources:
+    + 1 created
+
+Duration: 3s
 ```
 
-These exported values are incredibly useful when using Pulumi stacks. For
-example, let's say you have two systems that depend on one another, perhaps a
-frontend application with a database and a complex backend API. You might have
-two separate staging environments that you want to have reference one another.
-You can use stack references to share automatically generated connection strings
-from the staged API to the staged frontend application to see how they might
-work together.
+These exported values are incredibly useful when using Pulumi stacks. For example, let's say you have two systems that depend on one another, perhaps a frontend application with a database and a complex backend API. You might have two separate staging environments that you want to have reference one another. You can use stack references to share automatically generated connection strings from the staging API to the staging frontend application to see how they might work together.
 
-Next up, we're going to change gears and start exploring how Pulumi handles
-secrets.
+Next up, we're going to change gears and start exploring how Pulumi handles secrets.
 
 {{< tutorials/stepper >}}

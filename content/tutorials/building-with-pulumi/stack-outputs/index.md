@@ -13,7 +13,7 @@ aliases:
     - /learn/building-with-pulumi/stack-outputs/
 ---
 
-Now let's explore _stack outputs_. Stack outputs are values exported by a given stack. These values are shown during an update, can be retrieved with the Pulumi CLI, and are displayed in [Pulumi Cloud](https://app.pulumi.com) once you've exported them. Examples include resource IDs, computed IP addresses, and DNS names. They're useful when you want to run commands with the CLI that reference those values.
+Now let's explore _stack outputs_. Stack outputs are values exported by a given stack. These values are shown during an update, can be retrieved with the Pulumi CLI, and are displayed in [Pulumi Cloud](https://app.pulumi.com) once you've exported them. Examples include resource IDs, computed IP addresses, and DNS names. They're useful in many ways, such as when you want to run CLI commands that reference those values.
 
 To illustrate how stack outputs work, let's set one programmatically. At the end of {{< langfile >}} in `my-first-app`, add the following line:
 
@@ -94,18 +94,17 @@ Outputs:
 
 Notice that there is now a stack output for the value of the key `url`.
 
-We can also get this value by running `pulumi stack output <key>` on any
-particular stack.
+We can get this value by running `pulumi stack output <key>` on any particular stack.
 
 ```bash
 $ pulumi stack output url
 http://localhost:3001
 ```
 
-And we can use this in the `curl` command to check our website:
+We can use it to open our website in a browser:
 
 ```bash
-$ curl $(pulumi stack output url)
+$ open $(pulumi stack output url)
 ```
 
 Before moving on, destroy the `dev` stack, as we'll no longer need it for this tutorial:
@@ -137,15 +136,15 @@ Duration: 6s
 
 ## Making a stack configurable
 
-One of the benefits of using Pulumi stacks is being able to configure each one independently. In this example, you'll learn how to do this by applying different settings to the `dev` and `staging` stacks.
+One of the benefits of using Pulumi stacks is being able to configure each one independently. In this example, you'll learn how to do so by applying different settings to the `dev` and `staging` stacks.
 
-For the `dev` stack, we're actually already done. The stack itself may be empty (we just destroyed it above), but its configuration settings are still intact in `Pulumi.dev.yaml` in case they're needed again. Let's take a look. First, make sure the `dev` stack is still active:
+For the `dev` stack, your work is already done; the stack itself may be empty (we just destroyed it above), but its configuration settings are still there in `Pulumi.dev.yaml` in case you need them again. Let's take a look. First, make sure the `dev` stack is still active:
 
 ```bash
 $ pulumi stack select dev
 ```
 
-Then run the following command to see its configuration values:
+Then run the following command to show all of its configuration values:
 
 ```bash
 $ pulumi config
@@ -159,7 +158,7 @@ nodeEnvironment  development
 protocol         http://
 ```
 
-Now lLet's set the configuration for the `staging` stack, only this time, we'll use a different value for the `frontendPort`:
+Now let's set the configuration for the `staging` stack --- only this time, we'll use a different value for the `frontendPort`:
 
 ```bash
 $ pulumi stack select staging
@@ -198,7 +197,7 @@ config:
   my-first-app:protocol: http://
 ```
 
-Now, if you run `pulumi up` on the `staging` stack, you should see that the frontend port is set to `3002`:
+Now, if you run `pulumi up` on the `staging` stack, you'll see that the frontend port is `3002`:
 
 ```bash
 $ pulumi up

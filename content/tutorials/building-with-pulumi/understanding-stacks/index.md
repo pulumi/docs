@@ -15,7 +15,7 @@ aliases:
 
 Every Pulumi program is deployed to a stack. A stack is an isolated, independently [configurable](/docs/concepts/config/) instance of a Pulumi program. Stacks are commonly used to denote different phases of development (such as `development`, `staging`, and `production`) or feature branches (such as `feature-x-dev`).
 
-A project can have as many stacks as you need. By default, Pulumi creates a stack for you when you start a new project using the `pulumi new` command.
+A project can have as many stacks as you need. By default, as you've seen in previous tutorials, Pulumi creates one for you when you create a new project with `pulumi new`.
 
 ## Create a stack
 
@@ -23,7 +23,7 @@ To create a new stack, we use the command `pulumi stack init <stack-name>`. This
 
 The stack name must be unique within a project. Stack names may only contain alphanumeric characters, hyphens, underscores, or periods.
 
-Let's create a new stack in our project, for our staging environment:
+Let's create a new stack in the `my-first-app` project and call it `staging`:
 
 ```bash
 $ pulumi stack init staging
@@ -31,7 +31,7 @@ $ pulumi stack init staging
 
 ## Listing stacks
 
-We have a couple of stacks in our project now&mdash;but how do we know which
+We have a couple of stacks in our project now --- but how do we know which
 ones we have? If we run the command `pulumi stack ls`, it will tell us!
 
 ```bash
@@ -63,7 +63,7 @@ staging  n/a            n/a             https://app.pulumi.com/***/my-first-app/
 
 Notice that `dev` is now the active stack.
 
-Also note that the stack has a resource count of zero, courtesy of the `pulumi destroy` we ran at the end of the Fundamentals tutorial. If your `dev` stack's resource count isn't zero, be sure to run `pulumi destroy` now before moving on.
+Also note that the stack has a resource count of zero, courtesy of the `pulumi destroy` we ran at the end of the Fundamentals tutorial. If your resource count is something other than zero, be sure to run `pulumi destroy` before moving on.
 
 Next up, we're going to explore how to get information out of a stack to use in
 other places, like elsewhere in our program or in general spots like your

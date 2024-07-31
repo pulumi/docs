@@ -18,28 +18,15 @@ providers:
     - aws
 ---
 
-This tutorial digs a little deeper into what it means to create multiple Pulumi
-programs and work with them interdependently. We will also cover how Pulumi
-uses secrets and how you can test your Pulumi programs.
+This tutorial digs a little deeper into what it means to create multiple Pulumi programs and work with them interdependently. We will also cover how Pulumi uses secrets and how you can test your Pulumi programs.
 
 ## Time
 
-How long this module will take depends on your internet connection, reading
-speed, and other factors. On average, this module should take you about 50
-minutes to complete.
+How long this module will take depends on your internet connection, reading speed, and other factors. On average, this module should take you about 50 minutes to complete.
 
 ## Prerequisites
 
-You should have completed the [Pulumi Fundamentals tutorial](/tutorials/pulumi-fundamentals/) already.
-
-You will need the following tools to complete this module:
-
-* A [Pulumi account and token](/docs/pulumi-cloud/accounts#access-tokens)
-    * If you don't have an account, go to the [signup page](https://app.pulumi.com/signup).
-* [Pulumi CLI](/docs/cli/)
-    * If you don't have the CLI, go to the [installation page](/docs/install/).
-
-As to skills, you should be able to
-
-* use your local terminal.
-* read and understand basic Typescript or Python code.
+- Completion of the [Pulumi Fundamentals tutorial](/tutorials/pulumi-fundamentals/) and an existing `my-first-app` project
+- A [Pulumi Cloud account](https://app.pulumi.com/signup) and [access token](/docs/pulumi-cloud/accounts#access-tokens)
+- The [Pulumi CLI](/docs/install/)
+- [Docker](https://docs.docker.com/get-docker/)

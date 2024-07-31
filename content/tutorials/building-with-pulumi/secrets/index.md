@@ -13,69 +13,58 @@ aliases:
     - /learn/building-with-pulumi/secrets/
 ---
 
-All resource input and output values are recorded as _state_ and are stored
-in Pulumi Cloud, a file, or a pluggable provider that you choose. These
-raw values are usually just server names, configuration settings, and so on. In
-some cases, however, these values contain sensitive data, such as database
-passwords or service tokens.
+All resource input and output values are recorded as _state_ and are stored in Pulumi Cloud, a file, or a pluggable provider that you choose. These raw values are usually just server names, configuration settings, and so on. In some cases, however, these values contain sensitive data, such as database passwords or service tokens.
 
-Pulumi Cloud always transmits and stores entire state files securely;
-however, Pulumi also supports encrypting specific values as "secrets" for extra
-protection. Encryption ensures that these values never appear as plain-text in
-your state file. By default, the encryption method uses automatic, per-stack
-encryption keys provided by Pulumi Cloud or you can use a
-[provider of your own choosing](/docs/concepts/secrets#configuring-secrets-encryption)
+Pulumi Cloud always transmits and stores entire state files securely; however, Pulumi also supports encrypting specific values as "secrets" for extra protection. Encryption ensures that these values never appear as plain-text in your state file. By default, the encryption method uses automatic, per-stack encryption keys provided by Pulumi Cloud or you can use a [provider of your own choosing](/docs/concepts/secrets#configuring-secrets-encryption)
 instead.
 
-To encrypt a configuration setting before runtime, you can use the CLI command
-`pulumi config set` command with a `--secret` flag. All these encrypted values
-are stored in your state file.
+To encrypt a configuration setting before runtime, use the CLI command `pulumi config set` with the `--secret` option. All encrypted values are stored as ciphertext in configuration and state files.
 
-Inside our `my-first-app` program that we have been working with, let's switch
-back to the `dev` stack and set a username and password for MongoDB:
+Back inside the `my-first-app` project, make sure the `staging` is selected and set a username and password for MongoDB:
 
 ```bash
-$ pulumi stack select dev
+$ pulumi stack select staging
 
 $ pulumi config set mongoUsername admin
 $ pulumi config set --secret mongoPassword S3cr37
 ```
 
-If we list the configuration for our stack, the plain-text value for
-`mongoPassword` will not be printed:
+Now try listing the configuration for the stack as before, and notice, the value for `mongoPassword` is hidden:
 
 ```bash
 $ pulumi config
+
 KEY               VALUE
 backendPort      3000
-database          cart
-frontendPort     3001
-mongoPassword    [secret]
-mongoUsername    admin
+database         cart
+frontendPort     3002
 mongoHost        mongodb://mongo:27017
+mongoPassword    [secret]
 mongoPort        27017
+mongoUsername    admin
 nodeEnvironment  development
+protocol         http://
 ```
 
-This is also encrypted in the associated configuration file:
+Notice the password value is also encrypted in the stack configuration file:
 
 ```bash
-$ cat Pulumi.dev.yaml
+$ cat Pulumi.staging.yaml
 
 config:
   my-first-app:backendPort: "3000"
   my-first-app:database: cart
-  my-first-app:frontendPort: "3001"
-  my-first-app:mongoPassword:
-    secure: AAABADQXFlU0mxbTmNyl39UfVg4DdFoL94SCNMX3MkvZhBZjeAM=
-  my-first-app:mongoUsername: admin
+  my-first-app:frontendPort: "3002"
   my-first-app:mongoHost: mongodb://mongo:27017
+  my-first-app:mongoPassword:
+    secure: AAABANASX3meu/8efB9H4oSyXrr/4GPYxfxsomW1NQbIoKU+xSY=
   my-first-app:mongoPort: "27017"
+  my-first-app:mongoUsername: admin
   my-first-app:nodeEnvironment: development
+  my-first-app:protocol: http://
 ```
 
-We can access the secrets similarly to other configuration data, however we must
-specify that it is a secret. Modify the code in {{< langfile >}} inside of `my-first-app` to contain these changes:
+Secrets can be accessed in code using secret-specific helper functions. Modify the code in {{< langfile >}} in `my-first-app` to add the following lines:
 
 {{< chooser language "typescript,python,go,yaml" / >}}
 
@@ -86,7 +75,7 @@ const config = new pulumi.Config();
 // ...
 
 const mongoUsername = config.require("mongoUsername");
-export const mongoPassword = config.requireSecret("mongoPassword");
+const mongoPassword = config.requireSecret("mongoPassword");
 ```
 
 {{% /choosable %}}
@@ -272,7 +261,7 @@ Then, update the backend container resource as follows:
 ```typescript
 const backendContainer = new docker.Container("backendContainer", {
     name: `backend-${stack}`,
-    image: backend.baseImageName,
+    image: backend.repoDigest,
     ports: [
         {
             internal: backendPort,
@@ -295,8 +284,8 @@ const backendContainer = new docker.Container("backendContainer", {
 And finally, add a line at the end of the program to export password as a stack output:
 
 ```typescript
-#...
-export const mongoPassword = mongoPassword;
+// ...
+export { mongoPassword };
 ```
 
 {{% /choosable %}}
@@ -305,7 +294,7 @@ export const mongoPassword = mongoPassword;
 
 ```python
 backend_container = docker.Container("backend_container",
-                                     image=backend.base_image_name,
+                                     image=backend.repo_digest,
                                      name=f"backend-{stack}",
                                      ports=[docker.ContainerPortArgs(
                                          internal=backend_port,
@@ -416,11 +405,15 @@ outputs:
 
 {{% /choosable %}}
 
-When we run `pulumi up`, we find the output is set (so our use of the secret
-worked!), but Pulumi knows that value was a secret, so when we try to set it as
-an output, it will not display.
+Run `pulumi up` again and notice that while the `mongoPassword` output has been registered, it's hidden from view because Pulumi is now tracking it as an encrypted secret:
 
-If we would like to get the plain-text value, we can do it with this command:
+```
+Outputs:
+  + mongoPassword: [secret]
+    url          : "http://localhost:3002"
+```
+
+To get at the underlying plain-text value, you'll need to pass the `--show-secrets` option:
 
 {{% choosable language typescript %}}
 
@@ -458,13 +451,11 @@ S3cr37
 
 {{% /choosable %}}
 
-For more information on how Pulumi uses secrets, including how to set them
-programmatically, review the
-[corresponding docs](/docs/concepts/secrets/).
+To learn more about Pulumi secrets, see the [secrets documentation](/docs/concepts/secrets/).
 
 ---
 
-Congratulations! You’ve finished the Building with Pulumi tutorial! In this tutorial, you learned all about stacks, outputs, and stack references so you can work in multiple environments. You also learned about secrets in Pulumi and how to use them in your programs.
+Congratulations! You’ve finished the Building with Pulumi tutorial. In this tutorial, you learned all about stacks, outputs, and stack references so you can work in multiple environments. You also learned about encrypted secrets and how to use them in your programs.
 
 Go build new things, and watch this space for more learning experiences on Pulumi!
 

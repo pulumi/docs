@@ -26,8 +26,8 @@ Each Pulumi project lives in its own directory. Create one now and change into
 it by running these commands in your terminal:
 
 ```bash
-mkdir my-first-app
-cd my-first-app
+$ mkdir my-first-app
+$ cd my-first-app
 ```
 
 Pulumi will use the directory name as your project name by default. To create an
@@ -85,8 +85,8 @@ $ pulumi new yaml -y
 
 {{% /chooser %}}
 
-This command prints output similar to the following example with a bit more
-information and status as it goes:
+This command creates all of the files you need, initializes a new stack named `dev`
+(an instance of the project), and installs any necessary dependencies:
 
 {{% choosable language typescript %}}
 
@@ -192,9 +192,6 @@ To perform an initial deployment, run 'pulumi up'
 
 {{% /choosable %}}
 
-This command creates all of the files you need, initializes a new stack named `dev`
-(an instance of the project), and installs any necessary dependencies.
-
 ## Inspect your new project
 
 The basic project created by `pulumi new` is comprised of multiple files:
@@ -246,8 +243,7 @@ For YAML, your {{< langfile >}} is also your program's main entrypoint file.
 
 {{% /choosable %}}
 
-Use the command <code>cat</code>{{< langfile >}} to explore the contents of your
-project's empty program:
+Open {{< langfile >}} in your editor of choice to have a look at its contents:
 
 {{< chooser language "typescript,python,go,java,yaml" / >}}
 
@@ -321,10 +317,10 @@ outputs:       {}
 
 {{% /choosable %}}
 
-Feel free to explore the other files.
+Feel free to explore the other files as well.
 
-Let's move on to creating your first real bit of infrastructure with Pulumi:
-some Docker images.
+Now let's move on to creating your first real bit of infrastructure with Pulumi:
+some Docker images!
 
 <!-- [^1]: [project](https://www.pulumi.com/docs/concepts/glossary/#project) -->
 <!-- [^2]: [program](https://www.pulumi.com/docs/concepts/glossary/#program) -->
