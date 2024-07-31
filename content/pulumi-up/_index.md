@@ -94,36 +94,101 @@ speakers:
     title: Technical Director
     logo: /images/pulumiup-2023/speaker-logos/charles-river-laboratories.png
     company: Charles River Laboratories
-  - name: Brian Grant
-    image: /images/pulumiup-2023/2024-speakers/brian-grant.jpeg
-    title: Technical Visionary
-    logo: /images/pulumiup-2023/speaker-logos/warmstealth.jpeg
-    company: Warmstealth
   - name: Elad Ben-Israel
     image: /images/pulumiup-2023/2024-speakers/elad-ben-israel.jpeg
     title: Co-Founder and CEO
     logo: /images/pulumiup-2023/speaker-logos/winglang.png
     company: Winglang
+  - name: Maya Kaczorowski
+    image: /images/pulumiup-2023/2024-speakers/maya-kaczorowski.jpeg
+    title: Chief Product Officer
+    logo: /images/pulumiup-2023/speaker-logos/tailscale.svg
+    company: Tailscale
+  - name: Jan-Peter Alten
+    image: /images/pulumiup-2023/2024-speakers/jan-peter-alten.jpeg
+    title: DevOps Engineer
+    logo: /images/pulumiup-2023/speaker-logos/bmw-group.svg
+    company: BMW Group    
+  - name: Abhay Bothra
+    image: /images/pulumiup-2023/2024-speakers/abhay-bothra.jpeg
+    title: Co-Founder and CTO
+    logo: /images/pulumiup-2023/speaker-logos/fennel-ai.png
+    company: Fennel
+  - name: Alex Radu
+    image: /images/pulumiup-2023/2024-speakers/alex-radu.jpeg
+    title: VP Product & Marketing Manager, Public Cloud
+    logo: /images/pulumiup-2023/speaker-logos/j-p-morgan.png
+    company: J.P. Morgan
   - name: Adam Jacob
     image: /images/pulumiup-2023/2024-speakers/adam-jacob.jpeg
     title: CEO and Co-Founder
     logo: /images/pulumiup-2023/speaker-logos/system-initiative.png
     company: System Initiative
-  - name: Jim Clark
-    image: /images/pulumiup-2023/2024-speakers/james-clark.png
-    title: Principal Software Engineer
-    logo: /images/pulumiup-2023/speaker-logos/docker.png
-    company: Docker
-  - name: Ash Martian
-    image: /images/pulumiup-2023/2024-speakers/ash-martian.png
-    title: Data Engineer
-    logo: /images/pulumiup-2023/speaker-logos/characterstrong.png
-    company: CharacterStrong
+  - name: Brian Grant
+    image: /images/pulumiup-2023/2024-speakers/brian-grant.jpeg
+    title: Technical Visionary
+    logo: /images/pulumiup-2023/speaker-logos/warmstealth.jpeg
+    company: Warmstealth
+  - name: Marina Novikova
+    image: /images/pulumiup-2023/2024-speakers/marina-novikova.jpeg
+    title: Sr. Partner Solution Architect
+    logo: /images/pulumiup-2023/speaker-logos/aws.svg
+    company: AWS
   - name: Jason Smith
     image: /images/people/jay-smith.png
     title: App Modernization Specialist
     logo: /images/pulumiup-2023/sponsors/google-cloud.svg
     company: Google
+  - name: Jim Clark
+    image: /images/pulumiup-2023/2024-speakers/james-clark.png
+    title: Principal Software Engineer
+    logo: /images/pulumiup-2023/speaker-logos/docker.png
+    company: Docker
+  - name: Aditi Godbole
+    image: /images/pulumiup-2023/2024-speakers/aditi-godbole.jpeg
+    title: Data Science, AI & ML Leader
+    logo: /images/pulumiup-2023/speaker-logos/sap.svg
+    company: SAP
+  - name: Sam Cogan
+    image: /images/pulumiup-2023/2024-speakers/sam-cogan.jpeg
+    title: Solutions Architect & Azure MVP
+    logo: /images/pulumiup-2023/speaker-logos/wtw.svg
+    company: WTW
+  - name: Rees Pozzi
+    image: /images/pulumiup-2023/2024-speakers/rees-pozzi.jpeg
+    title: Sr. Platform Engineer
+    logo: /images/pulumiup-2023/speaker-logos/kainos.jpeg
+    company: Kainos
+  - name: Ash Martian
+    image: /images/pulumiup-2023/2024-speakers/ash-martian.png
+    title: Data Engineer
+    logo: /images/pulumiup-2023/speaker-logos/characterstrong.png
+    company: CharacterStrong
+  - name: Shaun Verch
+    image: /images/pulumiup-2023/2024-speakers/shaun-verch.jpeg
+    title: Infrastructure Engineer
+    logo: /images/pulumiup-2023/speaker-logos/oso.jpeg
+    company: OSO
+  - name: Jk Jensen
+    image: /images/pulumiup-2023/2024-speakers/jk-jensen.png
+    title: Team Lead, Staff Software Engineer
+    logo: /images/pulumiup-2023/speaker-logos/mysten-labs.png
+    company: MystenLabs
+  - name: Blake Romano
+    image: /images/pulumiup-2023/2024-speakers/blake-romano.jpeg
+    title: Sr. Software Engineer
+    logo: /images/pulumiup-2023/speaker-logos/imagine-learning.png
+    company: Imagine Learning
+  - name: Denis Willett
+    image: /images/pulumiup-2023/2024-speakers/denis-willett.jpeg
+    title: Software Engineer
+    logo: /images/pulumiup-2023/speaker-logos/ncics.png
+    company: NCICS
+  - name: Alexandre Nédélec
+    image: /images/pulumiup-2023/2024-speakers/alexandre-nédélec.jpeg
+    title: Developer at Avanade
+    logo: /images/pulumiup-2023/speaker-logos/avanade.png
+    company: Avanade
   - name: Meagan Cojocar
     image: /images/team/meagan-cojocar.jpg
     title: Principal Product Manager
