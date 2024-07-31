@@ -1,11 +1,9 @@
 module awsx-apigateway-lambda-go
 
-go 1.21
-
-toolchain go1.21.9
+go 1.21.12
 
 require (
-	github.com/pulumi/pulumi-aws-apigateway/sdk/v2 v2.5.0
-	github.com/pulumi/pulumi-aws/sdk/v6 v6.43.0
-	github.com/pulumi/pulumi/sdk/v3 v3.122.0
+	github.com/pulumi/pulumi-aws-apigateway/sdk/v2 v2.6.0
+	github.com/pulumi/pulumi-aws/sdk/v6 v6.47.0
+	github.com/pulumi/pulumi/sdk/v3 v3.127.0
 )
