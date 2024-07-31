@@ -89,7 +89,7 @@ Stack favorites allow you to label specific stacks for quick and easy access. St
 
 To add a README to a stack:
 
-1. Export a [Stack output](/learn/building-with-pulumi/stack-outputs) named `readme` that contains your templated Stack README markdown, commonly by reading a file, i.e. `Pulumi.README.md`.
+1. Export a [Stack output](/tutorials/building-with-pulumi/stack-outputs) named `readme` that contains your templated Stack README markdown, commonly by reading a file, i.e. `Pulumi.README.md`.
 2. Create a README template for the Stack.
 3. Run `pulumi up` on that Stack.
 4. Navigate to **All stacks** and then select the stack.

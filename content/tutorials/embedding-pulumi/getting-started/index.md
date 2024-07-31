@@ -29,9 +29,9 @@ Let's get started!
 
 We're going to embed Pulumi in a Python program so we can use it in pipelines, APIs, and web interfaces. For the Pulumi program we're using to test our automation, we'll get to some sample code in a moment. If you'd like to use your own Pulumi program, however, go for it!
 
-Just like in all of our other pathways, we're going to create a new Pulumi project to hold our code. You could keep working in whatever project that you already have set up, but it will get a bit messy if you do. Create a new directory called `learn-auto-api`. We'll use this directory name in the rest of this pathway. If you name it something different, don't forget to change the value in the code!
+Just like in all of our other tutorials, we're going to create a new Pulumi project to hold our code. You could keep working in whatever project that you already have set up, but it will get a bit messy if you do. Create a new directory called `learn-auto-api`. We'll use this directory name in the rest of this tutorial. If you name it something different, don't forget to change the value in the code!
 
-Add `api` and `infra` directories in your project, and run `pulumi new` with the `aws-python` template in each one. If you need a refresher on how to do so, head to [Pulumi Fundamentals](/learn/pulumi-fundamentals/). Add a directory called `time` inside your `api` directory to hold the actual application. Your project directory now should match this file tree:
+Add `api` and `infra` directories in your project, and run `pulumi new` with the `aws-python` template in each one. If you need a refresher on how to do so, head to [Pulumi Fundamentals](/tutorials/pulumi-fundamentals/). Add a directory called `time` inside your `api` directory to hold the actual application. Your project directory now should match this file tree:
 
 ```
 learn-auto-api/
@@ -229,4 +229,4 @@ learn-auto-api/
 
 Now that we have our project initialized, let's add some Automation API code!
 
-{{< tutorial-stepper >}}
+{{< tutorials/stepper >}}

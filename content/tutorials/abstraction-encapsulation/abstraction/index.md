@@ -24,7 +24,7 @@ To get to more complex architectures, we need the ability to break apart that co
 
 ## Exploring an example
 
-In the last part of this pathway, we took a simple S3 bucket build and broke out the code into reusable parts. As a build, it's still dependent on the structures built around an S3 bucket. Let's imagine the Pulumipus brand is expanding to all kinds of systems, and so we don't know which infrastructure each team will need. Could we reuse the ideas we just explored? Well, each team will need some kind of storage for objects that has access policies and security controls, no matter whether they're doing a serverless build or a VM-based build. Believe it or not, that mental model, or that abstraction, is nearly identical to the mental model we just built up for S3 buckets, just without depending on the structures of AWS.
+In the last part of this tutorial, we took a simple S3 bucket build and broke out the code into reusable parts. As a build, it's still dependent on the structures built around an S3 bucket. Let's imagine the Pulumipus brand is expanding to all kinds of systems, and so we don't know which infrastructure each team will need. Could we reuse the ideas we just explored? Well, each team will need some kind of storage for objects that has access policies and security controls, no matter whether they're doing a serverless build or a VM-based build. Believe it or not, that mental model, or that abstraction, is nearly identical to the mental model we just built up for S3 buckets, just without depending on the structures of AWS.
 
 Mentally, we're defining an abstract cloud storage system like this:
 
@@ -79,4 +79,4 @@ class StorageClass:
 
 There's a cleaner way to do this, though, with Pulumi if you want to start to share these abstractions with others. We call them _Component Resources_. Let's go explore them next!
 
-{{< tutorial-stepper >}}
+{{< tutorials/stepper >}}

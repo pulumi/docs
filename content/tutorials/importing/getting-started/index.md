@@ -4,7 +4,7 @@ title: "Getting Started"
 layout: topic
 date: 2022-06-03T11:31:57-05:00
 draft: false
-description: Get set up to import resources and migrate to Pulumi in this pathway.
+description: Get set up to import resources and migrate to Pulumi in this tutorial.
 meta_desc: Learn how to set up your local system to get started with bringing Pulumi into your existing ecosystem in this tutorial.
 index: 0
 estimated_time: 2
@@ -13,7 +13,7 @@ aliases:
     - /learn/importing/getting-started/
 ---
 
-Infrastructure as code, as a concept, has been around for a while. We as a community have created many tools and ecosystems to build infrastructure in a reusable, repeatable, and reliable manner. For one reason or another, you've decided to bring resources created by another tool or by hand to Pulumi. This pathway is a practical walkthrough of what you need to know to bring Pulumi into your existing ecosystem.
+Infrastructure as code, as a concept, has been around for a while. We as a community have created many tools and ecosystems to build infrastructure in a reusable, repeatable, and reliable manner. For one reason or another, you've decided to bring resources created by another tool or by hand to Pulumi. This tutorial is a practical walkthrough of what you need to know to bring Pulumi into your existing ecosystem.
 
 ## Starting with some resources
 
@@ -68,8 +68,7 @@ resource "docker_container" "backend-container" {
   name  = "backend-dev"
   env   = [
     "DATABASE_HOST=mongodb://mongo:27017",
-    "DATABASE_NAME=cart",
-    "NODE_ENV=development"
+    "DATABASE_NAME=cart"
   ]
   ports {
     internal = 3000
@@ -166,7 +165,6 @@ Terraform will perform the following actions:
       + env              = [
           + "DATABASE_HOST=mongodb://mongo:27017",
           + "DATABASE_NAME=cart",
-          + "NODE_ENV=development",
         ]
       + exit_code        = (known after apply)
       + gateway          = (known after apply)
@@ -415,7 +413,6 @@ Terraform will perform the following actions:
       + env              = [
           + "DATABASE_HOST=mongodb://mongo:27017",
           + "DATABASE_NAME=cart",
-          + "NODE_ENV=development",
         ]
       + exit_code        = (known after apply)
       + gateway          = (known after apply)
@@ -675,4 +672,4 @@ Apply complete! Resources: 7 added, 0 changed, 0 destroyed.
 
 Now that we have some resources to import, let's go explore what we can do.
 
-{{< tutorial-stepper >}}
+{{< tutorials/stepper >}}

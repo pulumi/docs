@@ -253,8 +253,8 @@ If you were following along, don't forget to tear down your stack and tear down 
 
 <br/>
 <hr/>
-Congratulations! You've now finished this pathway on importing resources and migrating to Pulumi! In this pathway, you've learned about importing resources via a CLI command, importing resources in bulk, and importing resources in code.
+Congratulations! You've now finished this tutorial on importing resources and migrating to Pulumi! In this tutorial, you've learned about importing resources via a CLI command, importing resources in bulk, and importing resources in code.
 
 Go build new things, and watch this space for more learning experiences with Pulumi!
 
-{{< tutorial-stepper >}}
+{{< tutorials/stepper >}}

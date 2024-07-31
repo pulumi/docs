@@ -21,9 +21,9 @@ providers:
 
 ## Prerequisites
 
-You will need the following knowledge to complete this pathway:
+You will need the following knowledge to complete this tutorial:
 
-- Completion of the [Pulumi Fundamentals](/learn/pulumi-fundamentals/) and [Building with Pulumi](/learn/building-with-pulumi/) pathways, OR have experience using Pulumi for other projects
+- Completion of the [Pulumi Fundamentals](/tutorials/pulumi-fundamentals/) and [Building with Pulumi](/tutorials/building-with-pulumi/) tutorials, OR have experience using Pulumi for other projects
 
 Optionally, if you want to build some of the examples yourself to experiment, you'll need the following tools and skills:
 
@@ -34,6 +34,6 @@ Optionally, if you want to build some of the examples yourself to experiment, yo
 - An AWS account (the free version should be fine)
 - Familiarity with either the TypeScript or Python programming language
 
-## About this pathway
+## About this tutorial
 
-In this pathway, we will explore how you can use Pulumi as a tool to help you abstract and encapsulate your resource definitions as reusable models for others to use.
+In this tutorial, we will explore how you can use Pulumi as a tool to help you abstract and encapsulate your resource definitions as reusable models for others to use.

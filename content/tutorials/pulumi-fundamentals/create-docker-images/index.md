@@ -63,7 +63,6 @@ For the purposes of this topic, we've already built the images. We are showing t
 Before you start writing a Pulumi program, you need to install a resource provider. In this case, you'll need the `@pulumi/docker` provider for Node.js. Let's install the provider now:
 
 ```bash
-cd ../
 npm install @pulumi/docker
 ```
 
@@ -145,7 +144,7 @@ application {
 {{% /choosable %}}
 
 Back inside your Pulumi program, you're ready to pull your first Docker image. Remember that a Pulumi program is the code that defines the desired state of your
-infrastructure using a general-purpose programming language. In this case, you're using {{< langname >}}, so the program file is {{< langfile >}}. In {{< langfile >}} file, use any editor to add the following code:
+infrastructure using a general-purpose programming language. In this case, you're using {{< langname >}}, so the program file is {{< langfile >}}. In {{< langfile >}}, use any editor to add the following code:
 
 {{< chooser language "typescript,python,go,java,yaml" / >}}
 
@@ -253,7 +252,7 @@ public class App {
 {{% choosable language yaml %}}
 
 ```yaml
-name: my_first_app
+name: my-first-app
 runtime: yaml
 description: A minimal Pulumi YAML program
 
@@ -644,7 +643,7 @@ public class App {
 {{% choosable language yaml %}}
 
 ```yaml
-name: my_first_app
+name: my-first-app
 runtime: yaml
 description: A minimal Pulumi YAML program
 
@@ -687,4 +686,4 @@ From here, we can move on to configuring and provisioning our containers.
 
 Onward!
 
-{{< tutorial-stepper >}}
+{{< tutorials/stepper >}}

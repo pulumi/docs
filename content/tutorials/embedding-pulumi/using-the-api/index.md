@@ -64,7 +64,7 @@ info: Successfully set project config
 info: Refreshing stack...
 Refreshing (dev)
 
-View Live: https://app.pulumi.com/<org>/learn-auto-api/dev/updates/120
+View in Browser: https://app.pulumi.com/<org>/learn-auto-api/dev/updates/120
 
 
 
@@ -76,7 +76,7 @@ info: Successfully refreshed stack
 info: Updating stack...
 Updating (dev)
 
-View Live: https://app.pulumi.com/<org>/learn-auto-api/dev/updates/121
+View in Browser: https://app.pulumi.com/<org>/learn-auto-api/dev/updates/121
 
 
  +  pulumi:pulumi:Stack learn-auto-api-dev creating
@@ -108,7 +108,7 @@ info: Output: "us-west-2"
 info: Destroying stack...
 Destroying (dev)
 
-View Live: https://app.pulumi.com/<org>/learn-auto-api/dev/updates/122
+View in Browser: https://app.pulumi.com/<org>/learn-auto-api/dev/updates/122
 
 
  -  aws:lambda:Invocation test-invoke deleting
@@ -167,4 +167,4 @@ Congratulations! You've now finished this pathway on embedding Pulumi in other p
 
 Go build new things, and watch this space for more learning experiences with Pulumi!
 
-{{< tutorial-stepper >}}
+{{< tutorials/stepper >}}

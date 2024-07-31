@@ -75,7 +75,7 @@ To use this file, we run `pulumi import -f <path to json file>`.
 $pulumi import -f ../resources.json
 Previewing import (dev)
 
-View Live: https://app.pulumi.com/nimbinatus/learn-pulumi-import/dev/previews/e1a3e822-2d51-442f-b8e1-f2974616ede1
+View in Browser: https://app.pulumi.com/nimbinatus/learn-pulumi-import/dev/previews/e1a3e822-2d51-442f-b8e1-f2974616ede1
 
      Type                       Name                     Plan
      pulumi:pulumi:Stack        learn-pulumi-import-dev
@@ -186,7 +186,7 @@ Do you want to perform this import? details
 Do you want to perform this import? yes
 Importing (dev)
 
-View Live: https://app.pulumi.com/nimbinatus/learn-pulumi-import/dev/updates/2
+View in Browser: https://app.pulumi.com/nimbinatus/learn-pulumi-import/dev/updates/2
 
      Type                       Name                     Status
      pulumi:pulumi:Stack        learn-pulumi-import-dev
@@ -218,4 +218,4 @@ It imports the resources into your stack and offers code snippets again for all 
 
 What if you want to specify the import behavior inside of your code, maintaining control as part of your code instead of via manual commands? Let's explore! Onward!
 
-{{< tutorial-stepper >}}
+{{< tutorials/stepper >}}

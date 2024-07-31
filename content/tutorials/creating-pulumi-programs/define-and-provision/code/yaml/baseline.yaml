@@ -1,7 +1,0 @@
-name: nginx-server
-runtime: yaml
-description: A program to create an Nginx server on AWS
-resources:
-  # [Step 1: Create an EC2 instance.]
-
-  # [Step 2: Create a security group.]

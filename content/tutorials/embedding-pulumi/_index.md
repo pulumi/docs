@@ -21,7 +21,7 @@ aliases:
 
 ## Prerequisites
 
-You will need the following tools to complete this pathway:
+You will need the following tools to complete this tutorial:
 
 - A [Pulumi account and token](/docs/pulumi-cloud/accounts#access-tokens)
     - If you don't have an account, go to the [signup page](https://app.pulumi.com/signup).
@@ -32,10 +32,10 @@ In addition, you should be able to
 
 - code in Python
 
-We recommend that you either have completed [Pulumi Fundamentals](/learn/pulumi-fundamentals/) and [Building with Pulumi](/learn/building-with-pulumi/) OR have experience using Pulumi for other projects.
+We recommend that you either have completed [Pulumi Fundamentals](/tutorials/pulumi-fundamentals/) and [Building with Pulumi](/tutorials/building-with-pulumi/) OR have experience using Pulumi for other projects.
 
-## About this pathway
+## About this tutorial
 
-In this pathway, we will explore how you could use Pulumi as an API for your infrastructure deployment and maintenance.
+In this tutorial, we will explore how you could use Pulumi as an API for your infrastructure deployment and maintenance.
 
-Note that this pathway will not have a specific application and infrastructure to stand up. Rather, we're exploring the Pulumi system, so you can use either a code example of your own or one of ours.
+Note that this tutorial will not have a specific application and infrastructure to stand up. Rather, we're exploring the Pulumi system, so you can use either a code example of your own or one of ours.

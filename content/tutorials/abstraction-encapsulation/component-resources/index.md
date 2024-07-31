@@ -177,9 +177,9 @@ From here, you can deploy it and get your custom resource appearing in the resou
 
 ---
 
-Congratulations! You've now finished this pathway on abstraction and encapsulation in Pulumi programs! In this pathway, you've learned about thinking of code in abstract forms, wrapping up logical groupings of code to make reuse easier, and building with component resources to make those logical groupings something that Pulumi recognizes.
+Congratulations! You've now finished this tutorial on abstraction and encapsulation in Pulumi programs! In this tutorial, you've learned about thinking of code in abstract forms, wrapping up logical groupings of code to make reuse easier, and building with component resources to make those logical groupings something that Pulumi recognizes.
 
-There's a lot more to explore regarding this topic in Pulumi. We're working on more pathways, but for now, check out some more resources:
+There's a lot more to explore regarding this topic in Pulumi. We're working on more tutorials, but for now, check out some more resources:
 
 * [An AWS/Python example](https://github.com/pulumi/examples/tree/master/aws-py-wordpress-fargate-rds)
 * [An Azure/Python example](https://github.com/pulumi/examples/tree/master/classic-azure-py-webserver-component)
@@ -187,4 +187,4 @@ There's a lot more to explore regarding this topic in Pulumi. We're working on m
 
 Go build new things, and watch this space for more learning experiences with Pulumi!
 
-{{< tutorial-stepper >}}
+{{< tutorials/stepper >}}

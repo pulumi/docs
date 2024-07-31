@@ -1656,13 +1656,13 @@ Run `pulumi destroy` to remove everything in the stack:
 $ pulumi destroy
 Previewing destroy (dev)
 
-View Live: https://app.pulumi.com/<org>/<project>/<stack>/previews/<build-id>
+View in Browser: https://app.pulumi.com/<org>/<project>/<stack>/previews/<build-id>
 
 ...
 Do you want to perform this destroy? yes
 Destroying (dev)
 
-View Live: https://app.pulumi.com/<org>/<project>/<stack>/updates/<update-id>
+View in Browser: https://app.pulumi.com/<org>/<project>/<stack>/updates/<update-id>
 
 ...
 
@@ -1678,4 +1678,4 @@ more about removing the project from your history in another tutorial.
 
 Congratulations! You've completed the Pulumi Fundamentals tutorial. You learned how to create a Pulumi project; work on your Pulumi program to build Docker images, containers, and networks; and deploy the infrastructure locally with your first resource provider. Now, [head back to the main page](/tutorials/) and explore a few other tutorials to understand more about Pulumi. The best next step to take is to dive into the [Building with Pulumi](/tutorials/building-with-pulumi/) tutorial.
 
-{{< tutorial-stepper >}}
+{{< tutorials/stepper >}}

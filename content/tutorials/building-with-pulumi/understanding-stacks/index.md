@@ -13,24 +13,15 @@ aliases:
     - /learn/building-with-pulumi/understanding-stacks/
 ---
 
-Every Pulumi program is deployed to a stack. A stack is an isolated,
-independently [configurable](/docs/concepts/config/)
-instance of a Pulumi program. Stacks are commonly used to denote different
-phases of development (such as `development`, `staging`, and `production`) or
-feature branches (such as `feature-x-dev`).
+Every Pulumi program is deployed to a stack. A stack is an isolated, independently [configurable](/docs/concepts/config/) instance of a Pulumi program. Stacks are commonly used to denote different phases of development (such as `development`, `staging`, and `production`) or feature branches (such as `feature-x-dev`).
 
-A project can have as many stacks as you need. By default, Pulumi creates a
-stack for you when you start a new project using the `pulumi new` command.
+A project can have as many stacks as you need. By default, Pulumi creates a stack for you when you start a new project using the `pulumi new` command.
 
 ## Create a stack
 
-To create a new stack, we use the command `pulumi stack init name`. This
-command creates an empty stack `name` and sets it as the _active_ stack.
-The project that the stack is associated with is determined by finding the
-nearest `Pulumi.yaml` file.
+To create a new stack, we use the command `pulumi stack init <stack-name>`. This command creates an empty stack and sets it as the _active_ stack. The project that the stack is associated with is determined by the nearest `Pulumi.yaml` file.
 
-The stack name must be unique within a project. Stack names may only contain
-alphanumeric characters, hyphens, underscores, or periods.
+The stack name must be unique within a project. Stack names may only contain alphanumeric characters, hyphens, underscores, or periods.
 
 Let's create a new stack in our project, for our staging environment:
 
@@ -46,7 +37,7 @@ ones we have? If we run the command `pulumi stack ls`, it will tell us!
 ```bash
 $ pulumi stack ls
 NAME      LAST UPDATE    RESOURCE COUNT  URL
-dev       2 minutes ago  10              https://app.pulumi.com/***/my-first-app/dev
+dev       2 minutes ago  0               https://app.pulumi.com/***/my-first-app/dev
 staging*  n/a            n/a             https://app.pulumi.com/***/my-first-app/staging
 ```
 
@@ -62,18 +53,20 @@ active? For this task, we use the `pulumi stack select` command:
 
 ```bash
 $ pulumi stack select dev
-
 $ pulumi stack ls
+
 NAME     LAST UPDATE    RESOURCE COUNT  URL
-dev*     3 minutes ago  10              https://app.pulumi.com/***/my-first-app/dev
+dev*     3 minutes ago  0               https://app.pulumi.com/***/my-first-app/dev
 staging  n/a            n/a             https://app.pulumi.com/***/my-first-app/staging
 
 ```
 
 Notice that `dev` is now the active stack.
 
+Also note that the stack has a resource count of zero, courtesy of the `pulumi destroy` we ran at the end of the Fundamentals tutorial. If your `dev` stack's resource count isn't zero, be sure to run `pulumi destroy` now before moving on.
+
 Next up, we're going to explore how to get information out of a stack to use in
 other places, like elsewhere in our program or in general spots like your
 browser.
 
-{{< tutorial-stepper >}}
+{{< tutorials/stepper >}}

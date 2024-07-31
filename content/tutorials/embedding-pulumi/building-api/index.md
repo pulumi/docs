@@ -323,4 +323,4 @@ Lines 28 on in `infra_api.py` is all Falcon, a lightweight WSGI framework for RE
 
 Now we've got some endpoints we can call. We've got a few considerations to take into account in the next module before we can start building with this code.
 
-{{< tutorial-stepper >}}
+{{< tutorials/stepper >}}

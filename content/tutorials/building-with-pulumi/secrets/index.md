@@ -14,16 +14,16 @@ aliases:
 ---
 
 All resource input and output values are recorded as _state_ and are stored
-in the Pulumi Service, a file, or a pluggable provider that you choose. These
+in Pulumi Cloud, a file, or a pluggable provider that you choose. These
 raw values are usually just server names, configuration settings, and so on. In
 some cases, however, these values contain sensitive data, such as database
 passwords or service tokens.
 
-The Pulumi Service always transmits and stores entire state files securely;
+Pulumi Cloud always transmits and stores entire state files securely;
 however, Pulumi also supports encrypting specific values as "secrets" for extra
 protection. Encryption ensures that these values never appear as plain-text in
 your state file. By default, the encryption method uses automatic, per-stack
-encryption keys provided by the Pulumi Service or you can use a
+encryption keys provided by Pulumi Cloud or you can use a
 [provider of your own choosing](/docs/concepts/secrets#configuring-secrets-encryption)
 instead.
 
@@ -464,8 +464,8 @@ programmatically, review the
 
 ---
 
-Congratulations! You’ve finished the Building with Pulumi pathway! In this pathway, you learned all about stacks, outputs, and stack references so you can work in multiple environments. You also learned about secrets in Pulumi and how to use them in your programs.
+Congratulations! You’ve finished the Building with Pulumi tutorial! In this tutorial, you learned all about stacks, outputs, and stack references so you can work in multiple environments. You also learned about secrets in Pulumi and how to use them in your programs.
 
 Go build new things, and watch this space for more learning experiences on Pulumi!
 
-{{< tutorial-stepper >}}
+{{< tutorials/stepper >}}

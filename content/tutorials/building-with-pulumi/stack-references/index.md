@@ -13,32 +13,19 @@ aliases:
     - /learn/building-with-pulumi/stack-references/
 ---
 
-We've created some resources. Now, let's see how we can use outputs outside of
-Pulumi. In this part, we're going to explore more about stacks, _stack outputs_,
-and _stack references_. Stack outputs are, as you might guess, the values
-exported from any given stack. These values can also be obtained from the
-[Pulumi Service](https://app.pulumi.com), and they're extremely useful when you
-want to run commands with the CLI that reference those values. Note, though,
-that stack outputs are for the current stack only. If you want to get values
-from another stack, you want to use stack references, which bridge different
-stacks through inter-stack dependencies.
+Stack references extend the utility of stack outputs by allowing you to access them programmatically from another stack at runtime.
 
-Stack references allow you to access the outputs of one stack from another
-stack. Inter-stack dependencies allow one stack to reference the outputs of
-another stack.
+In this section, you'll create a new Pulumi program that'll use the stack outputs from the program we just created.
 
-For this section, we are going to create a new Pulumi program that will bring in
-the stack outputs from the program we just created.
-
-Let's start by making our new Pulumi program in a new directory:
+Let's start by making a new Pulumi program in a new directory, alongside `my-first-app`:
 
 {{< chooser language "typescript,python,go,yaml" / >}}
 
 {{% choosable language typescript %}}
 
 ```bash
-$ mkdir my-second-app
-$ cd my-second-app
+$ mkdir ../my-second-app
+$ cd ../my-second-app
 $ pulumi new typescript -y
 ```
 
@@ -83,7 +70,7 @@ $ pulumi stack init staging
 Now comes the fun part! Let's add a little code to pull in the values from the
 `my-first-app` stacks, based on the corresponding environment.
 
-Add this code to the {{< langfile >}} file inside of `my-second-app`.
+Add this code to the {{< langfile >}} file inside of `my-second-app`:
 
 {{< chooser language "typescript,python,go,yaml" / >}}
 
@@ -238,4 +225,4 @@ work together.
 Next up, we're going to change gears and start exploring how Pulumi handles
 secrets.
 
-{{< tutorial-stepper >}}
+{{< tutorials/stepper >}}

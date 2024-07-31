@@ -13,21 +13,9 @@ aliases:
     - /learn/building-with-pulumi/stack-outputs/
 ---
 
-We've created some resources. Now, let's see how we can use outputs outside of
-Pulumi. In this part, we're going to explore _stack outputs_. Stack outputs
-are, as you might guess, the values exported from any given stack. These values
-are shown during an update, can be retrieved with the Pulumi CLI, and are
-displayed in the [Pulumi Service](https://app.pulumi.com) once you've exported
-them. Example values include resource IDs, computed IP addresses, and DNS names.
-They're extremely useful when you want to run commands with the CLI that
-reference those values. Note, though, that stack outputs are for the current
-stack only. If you want to get values from another stack, you want to use stack
-references, which bridge different stacks through inter-stack dependencies.
+Now let's explore _stack outputs_. Stack outputs are values exported by a given stack. These values are shown during an update, can be retrieved with the Pulumi CLI, and are displayed in [Pulumi Cloud](https://app.pulumi.com) once you've exported them. Examples include resource IDs, computed IP addresses, and DNS names. They're useful when you want to run commands with the CLI that reference those values.
 
-Typically, you will pass some value from your resources into the output, but to
-illustrate how stack outputs work, we will set some stack outputs manually:
-
-At the end of the {{< langfile >}} file of `my-first-app`, add the following line:
+To illustrate how stack outputs work, let's set one programmatically. At the end of {{< langfile >}} in `my-first-app`, add the following line:
 
 {{< chooser language "typescript,python,go,csharp,yaml" / >}}
 
@@ -81,19 +69,19 @@ Replace the existing `outputs: {}` line with this code.
 
 {{% /choosable %}}
 
-Now, run `pulumi up -y`
+Now, run `pulumi up`:
 
 ```bash
 $ pulumi up
 
 Previewing update (dev)
 
-View Live: https://app.pulumi.com/***/my-first-app/dev/previews/...
+View in Browser: https://app.pulumi.com/***/my-first-app/dev/previews/...
 ...
 
 Updating (dev)
 
-View Live: https://app.pulumi.com/***/my-first-app/dev/updates/3
+View in Browser: https://app.pulumi.com/***/my-first-app/dev/updates/3
 ...
 
     pulumi:pulumi:Stack my-first-app-dev running
@@ -120,21 +108,44 @@ And we can use this in the `curl` command to check our website:
 $ curl $(pulumi stack output url)
 ```
 
+Before moving on, destroy the `dev` stack, as we'll no longer need it for this tutorial:
+
+```bash
+$ pulumi destroy --yes
+...
+
+Destroying (dev)
+
+     Type                         Name                  Status
+ -   pulumi:pulumi:Stack          my-first-app-staging  deleted (0.16s)
+ -   ├─ docker:index:Container    backendContainer      deleted (0.43s)
+ -   ├─ docker:index:Container    mongoContainer        deleted (0.51s)
+ -   ├─ docker:index:Container    frontendContainer     deleted (0.31s)
+ -   ├─ docker:index:RemoteImage  mongoImage            deleted (0.60s)
+ -   ├─ docker:index:RemoteImage  frontendImage         deleted (1s)
+ -   ├─ docker:index:RemoteImage  backendImage          deleted (1s)
+ -   └─ docker:index:Network      network               deleted (2s)
+
+Outputs:
+  - url: "http://localhost:3001"
+
+Resources:
+    - 8 deleted
+
+Duration: 6s
+```
+
 ## Making a stack configurable
 
-One of the main reasons to use stacks is to have different configurations
-between them. In this example, we will set a configuration that varies between
-our `dev` and `staging` stacks and set it programmatically.
+One of the benefits of using Pulumi stacks is being able to configure each one independently. In this example, you'll learn how to do this by applying different settings to the `dev` and `staging` stacks.
 
-First, we need to define the configuration. We have already set this in the
-`dev` stack in the Fundamentals tutorial. Let's take a look! Make sure the
-`dev` stack is active:
+For the `dev` stack, we're actually already done. The stack itself may be empty (we just destroyed it above), but its configuration settings are still intact in `Pulumi.dev.yaml` in case they're needed again. Let's take a look. First, make sure the `dev` stack is still active:
 
 ```bash
 $ pulumi stack select dev
 ```
 
-Now, run the following command to get the values for this stack's configuration:
+Then run the following command to see its configuration values:
 
 ```bash
 $ pulumi config
@@ -148,8 +159,7 @@ nodeEnvironment  development
 protocol         http://
 ```
 
-Let's set the configuration for the `staging` stack. We'll use the same values
-as `dev`, except the `frontendPort` will be set to `3002`.
+Now lLet's set the configuration for the `staging` stack, only this time, we'll use a different value for the `frontendPort`:
 
 ```bash
 $ pulumi stack select staging
@@ -163,10 +173,17 @@ $ pulumi config set nodeEnvironment development
 $ pulumi config set protocol http://
 ```
 
-You should have two new files in your directory now: `Pulumi.dev.yaml` and
-`Pulumi.staging.yaml`. If you take a look at them, you'll see each one has the
-value for `frontendPort` set (along with some other values we set in the
-Fundamentals tutorial):
+{{< notes >}}
+
+In addition to setting configuration values individually, you can also create a new stack and apply the settings from an existing stack in one step using `--copy-config-from`:
+
+```bash
+pulumi stack init staging --copy-config-from dev
+```
+
+{{< /notes >}}
+
+You should now have two stack-configuration files in your project folder: `Pulumi.dev.yaml` and `Pulumi.staging.yaml`. If you take a look at them, you'll see each one has the value for `frontendPort` set (along with some other values we set in the Fundamentals tutorial):
 
 ```bash
 $ cat Pulumi.staging.yaml
@@ -181,8 +198,7 @@ config:
   my-first-app:protocol: http://
 ```
 
-Now, if you run `pulumi up` while in the `staging` stack, we should see that the
-frontend port is now set to `3002`:
+Now, if you run `pulumi up` on the `staging` stack, you should see that the frontend port is set to `3002`:
 
 ```bash
 $ pulumi up
@@ -198,4 +214,4 @@ Outputs:
 
 Next up, we'll explore how to share outputs with other stacks. Let's go!
 
-{{< tutorial-stepper >}}
+{{< tutorials/stepper >}}

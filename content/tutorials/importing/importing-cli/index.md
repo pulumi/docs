@@ -166,7 +166,7 @@ Remember to capitalize the resource type! If you don't, you'll get an error simi
 $ pulumi import docker:index/container:container frontend-dev 0dcb71164c20
 Previewing import (dev)
 
-View Live: https://app.pulumi.com/<org>/learn-pulumi-import/dev/previews/a4839f10-f1b3-44f3-b8dd-1c2a0c38e8d2
+View in Browser: https://app.pulumi.com/<org>/learn-pulumi-import/dev/previews/a4839f10-f1b3-44f3-b8dd-1c2a0c38e8d2
 
      Type                       Name                     Plan       Info
  +   pulumi:pulumi:Stack        learn-pulumi-import-dev  create     1 error
@@ -190,7 +190,7 @@ The output should appear something like this:
 pulumi import docker:index/container:Container frontend-dev 0dcb71164c20edb491477f16028f34546bc7852351c442bab4998a015b41cfba
 Previewing import (dev)
 
-View Live: https://app.pulumi.com/<org>/learn-pulumi-import/dev/previews/2ebd05d0-b37c-4e24-baa8-cf1e2f45bf3a
+View in Browser: https://app.pulumi.com/<org>/learn-pulumi-import/dev/previews/2ebd05d0-b37c-4e24-baa8-cf1e2f45bf3a
 
      Type                       Name                     Plan
  +   pulumi:pulumi:Stack        learn-pulumi-import-dev  create
@@ -250,7 +250,7 @@ And when we actually say yes to the import, here's the output:
 Do you want to perform this import? yes
 Importing (dev)
 
-View Live: https://app.pulumi.com/nimbinatus/learn-pulumi-import-csharp/dev/updates/1
+View in Browser: https://app.pulumi.com/nimbinatus/learn-pulumi-import-csharp/dev/updates/1
 
      Type                       Name                            Status
  +   pulumi:pulumi:Stack        learn-pulumi-import-csharp-dev  created
@@ -321,7 +321,7 @@ class MyStack : Stack
 Do you want to perform this import? yes
 Importing (dev)
 
-View Live: https://app.pulumi.com/nimbinatus/learn-pulumi-import-go/dev/updates/1
+View in Browser: https://app.pulumi.com/nimbinatus/learn-pulumi-import-go/dev/updates/1
 
      Type                       Name                        Status
  +   pulumi:pulumi:Stack        learn-pulumi-import-go-dev  created
@@ -389,7 +389,7 @@ func main() {
 Do you want to perform this import? yes
 Importing (dev)
 
-View Live: https://app.pulumi.com/nimbinatus/learn-pulumi-import-java/dev/updates/1
+View in Browser: https://app.pulumi.com/nimbinatus/learn-pulumi-import-java/dev/updates/1
 
      Type                       Name                          Status
  +   pulumi:pulumi:Stack        learn-pulumi-import-java-dev  created
@@ -456,7 +456,7 @@ public class App {
 Do you want to perform this import? yes
 Importing (dev)
 
-View Live: https://app.pulumi.com/nimbinatus/learn-pulumi-import-python/dev/updates/1
+View in Browser: https://app.pulumi.com/nimbinatus/learn-pulumi-import-python/dev/updates/1
 
      Type                       Name                            Status
  +   pulumi:pulumi:Stack        learn-pulumi-import-python-dev  created
@@ -508,7 +508,7 @@ frontend_dev = docker.Container("frontend-dev",
 Do you want to perform this import? yes
 Importing (dev)
 
-View Live: https://app.pulumi.com/<org>/learn-pulumi-import/dev/updates/1
+View in Browser: https://app.pulumi.com/<org>/learn-pulumi-import/dev/updates/1
 
      Type                       Name                     Status
  +   pulumi:pulumi:Stack        learn-pulumi-import-dev  created
@@ -562,7 +562,7 @@ const frontend_dev = new docker.Container("frontend-dev", {
 Do you want to perform this import? yes
 Importing (dev)
 
-View Live: https://app.pulumi.com/nimbinatus/learn-pulumi-import-yaml/dev/updates/1
+View in Browser: https://app.pulumi.com/nimbinatus/learn-pulumi-import-yaml/dev/updates/1
 
      Type                       Name                          Status
  +   pulumi:pulumi:Stack        learn-pulumi-import-yaml-dev  created
@@ -852,4 +852,4 @@ Now, that's just adding one resource at a time. What's it like to add resources 
 [these directions]: https://www.pulumi.com/registry/packages/docker/installation-configuration/
 [a section in the API docs]: https://www.pulumi.com/registry/packages/docker/api-docs/container/#import
 
-{{< tutorial-stepper >}}
+{{< tutorials/stepper >}}

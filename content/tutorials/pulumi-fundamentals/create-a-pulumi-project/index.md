@@ -18,7 +18,7 @@ a project represents a Pulumi _program_ that, when run, declares the desired
 infrastructure for Pulumi to manage. The program has corresponding _stacks_, or
 isolated, independently configurable instances of your Pulumi program. We'll
 talk more about stacks later in the [Building with
-Pulumi](/learn/building-with-pulumi) pathway.
+Pulumi](/tutorials/building-with-pulumi) tutorial.
 
 ## Create a directory
 
@@ -26,8 +26,8 @@ Each Pulumi project lives in its own directory. Create one now and change into
 it by running these commands in your terminal:
 
 ```bash
-mkdir my_first_app
-cd my_first_app
+mkdir my-first-app
+cd my-first-app
 ```
 
 Pulumi will use the directory name as your project name by default. To create an
@@ -70,7 +70,7 @@ $ pulumi new go -y
 {{% choosable language java %}}
 
 ```bash
-$ pulumi new java-gradle --dir my_first_app --name my_first_app -y
+$ pulumi new java-gradle --dir my-first-app --name my-first-app -y
 ```
 
 {{% /choosable %}}
@@ -91,7 +91,7 @@ information and status as it goes:
 {{% choosable language typescript %}}
 
 ```bash
-Created project 'my_first_app'
+Created project 'my-first-app'
 # ...
 
 Installing dependencies...
@@ -109,7 +109,7 @@ To perform an initial deployment, run 'pulumi up'
 {{% choosable language python %}}
 
 ```bash
-Created project 'my_first_app'
+Created project 'my-first-app'
 # ...
 Created stack 'dev'
 
@@ -147,7 +147,7 @@ To perform an initial deployment, run 'pulumi up'
 {{% choosable language csharp %}}
 
 ```bash
-Created project 'my_first_app'
+Created project 'my-first-app'
 
 Created stack 'dev'
 
@@ -167,13 +167,13 @@ To perform an initial deployment, run 'pulumi up'
 {{% choosable language java %}}
 
 ```bash
-Created project 'my_first_app'
+Created project 'my-first-app'
 # ...
 Created stack 'dev'
 
 Your new project is ready to go! ✨
 
-To perform an initial deployment, run 'cd my_first_app', then, run 'pulumi up'
+To perform an initial deployment, run 'cd my-first-app', then, run 'pulumi up'
 ```
 
 {{% /choosable %}}
@@ -181,7 +181,7 @@ To perform an initial deployment, run 'cd my_first_app', then, run 'pulumi up'
 {{% choosable language yaml %}}
 
 ```bash
-Created project 'my_first_app'
+Created project 'my-first-app'
 # ...
 Created stack 'dev'
 
@@ -309,7 +309,7 @@ public class App {
 {{% choosable language yaml %}}
 
 ```yaml
-name: my_first_app
+name: my-first-app
 runtime: yaml
 description: A minimal Pulumi YAML program
 
@@ -330,4 +330,4 @@ some Docker images.
 <!-- [^2]: [program](https://www.pulumi.com/docs/concepts/glossary/#program) -->
 <!-- [^3]: [stack](https://www.pulumi.com/docs/concepts/glossary/#stack) -->
 
-{{< tutorial-stepper >}}
+{{< tutorials/stepper >}}
