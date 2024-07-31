@@ -162,21 +162,19 @@ $ pulumi config set mongoHost mongo
 {{% choosable language python %}}
 
 ```python
-mongo_container = docker.Container("mongo_container",
-                                   image=mongo_image.repo_digest,
-                                   name=f"mongo-{stack}",
-                                   ports=[docker.ContainerPortArgs(
-                                       internal=mongo_port,
-                                       external=mongo_port
-                                   )],
-                                   networks_advanced=[docker.ContainerNetworksAdvancedArgs(
-                                       name=network.name,
-                                       aliases=["mongo"]
-                                   )],
-                                   envs=[
-                                         f"MONGO_INITDB_ROOT_USERNAME={mongo_username}",
-                                         mongo_password.apply(lambda password: f"MONGO_INITDB_ROOT_PASSWORD={password}")
-                                   ])
+mongo_container = docker.Container(
+    "mongo_container",
+    image=mongo_image.repo_digest,
+    name=f"mongo-{stack}",
+    ports=[docker.ContainerPortArgs(internal=mongo_port, external=mongo_port)],
+    networks_advanced=[
+        docker.ContainerNetworksAdvancedArgs(name=network.name, aliases=["mongo"])
+    ],
+    envs=[
+        f"MONGO_INITDB_ROOT_USERNAME={mongo_username}",
+        mongo_password.apply(lambda password: f"MONGO_INITDB_ROOT_PASSWORD={password}"),
+    ],
+)
 ```
 
 Then, we need to update the backend container to use the new authentication. We need to slightly change the value of `mongo_host` first:
@@ -293,39 +291,35 @@ export { mongoPassword };
 {{% choosable language python %}}
 
 ```python
-backend_container = docker.Container("backend_container",
-                                     image=backend.repo_digest,
-                                     name=f"backend-{stack}",
-                                     ports=[docker.ContainerPortArgs(
-                                         internal=backend_port,
-                                         external=backend_port
-                                     )],
-                                     envs=[
-                                         Output.concat(
-                                             "DATABASE_HOST=mongodb://",
-                                             mongo_username,
-                                             ":",
-                                             config.require_secret("mongo_password"),
-                                             "@",
-                                             mongo_host,
-                                             ":",
-                                             f"{mongo_port}",
-                                         ), #Changed!
-                                         f"DATABASE_NAME={database}?authSource=admin", # Also changed!
-                                         f"NODE_ENV={node_environment}"
-                                     ],
-                                     networks_advanced=[docker.ContainerNetworksAdvancedArgs(
-                                         name=network.name
-                                     )],
-                                     opts=pulumi.ResourceOptions(depends_on=[mongo_container])
-                                     )
+backend_container = docker.Container(
+    "backend_container",
+    image=backend.repo_digest,
+    name=f"backend-{stack}",
+    ports=[docker.ContainerPortArgs(internal=backend_port, external=backend_port)],
+    envs=[
+        pulumi.Output.concat(
+            "DATABASE_HOST=mongodb://",
+            mongo_username,
+            ":",
+            mongo_password,
+            "@",
+            mongo_host,
+            ":",
+            f"{mongo_port}",
+        ),  # Changed!
+        f"DATABASE_NAME={database}?authSource=admin",  # Also changed!
+        f"NODE_ENV={node_environment}",
+    ],
+    networks_advanced=[docker.ContainerNetworksAdvancedArgs(name=network.name)],
+    opts=pulumi.ResourceOptions(depends_on=[mongo_container]),
+)
 ```
 
 And finally, add a line at the end of the program to export password as a stack output:
 
 ```python
 #...
-pulumi.export("mongo_password", mongo_password)
+pulumi.export("mongoPassword", mongo_password)
 ```
 
 {{% /choosable %}}

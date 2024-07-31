@@ -34,8 +34,8 @@ $ pulumi new typescript -y
 {{% choosable language python %}}
 
 ```bash
-$ mkdir my-second-app
-$ cd my-second-app
+$ mkdir ../my-second-app
+$ cd ../my-second-app
 $ pulumi new python -y
 ```
 
@@ -44,8 +44,8 @@ $ pulumi new python -y
 {{% choosable language go %}}
 
 ```bash
-$ mkdir my-second-app
-$ cd my-second-app
+$ mkdir ../my-second-app
+$ cd ../my-second-app
 $ pulumi new go -y
 ```
 
@@ -54,8 +54,8 @@ $ pulumi new go -y
 {{% choosable language yaml %}}
 
 ```bash
-$ mkdir my-second-app
-$ cd my-second-app
+$ mkdir ../my-second-app
+$ cd ../my-second-app
 $ pulumi new yaml -y
 ```
 
