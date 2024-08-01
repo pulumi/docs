@@ -21,6 +21,6 @@ To learn how to configure common integrations, follow the links below.
 | [Cloudflare](/docs/esc/other-integrations/cloudflare)         | Pulumi ESC can integrate with Cloudflare to source environment variables, secrets, and configuration from ESC.              |
 | [Direnv](/docs/esc/other-integrations/direnv)                 | Pulumi ESC can integrate with Direnv to source environment variables, secrets, and configuration from ESC environments.     |
 | [Docker](/docs/esc/other-integrations/docker)                 | Pulumi ESC can be used to configure environment variables, secrets, and configuration for Docker operations.                |
-| [GitHub Actions](/docs/esc/other-integrations/gha)            | Pulumi ESC can integrate with GitHub Actions to source environment variables, secrets, and configuration.                |
+| [GitHub Actions](/docs/esc/other-integrations/github-actions)            | Pulumi ESC can integrate with GitHub Actions to source environment variables, secrets, and configuration.                |
 | [Kubernetes](/docs/esc/other-integrations/kubernetes)         | Pulumi ESC can be used to connect to a Kubernetes cluster.                                                                  |
 | [Terraform](/docs/esc/other-integrations/terraform)           | Pulumi ESC can integrate with the Terraform and OpenTofu CLIs to supply cloud credentials and input variables from ESC environments. |
