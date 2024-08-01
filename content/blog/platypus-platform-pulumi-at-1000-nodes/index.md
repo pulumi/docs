@@ -1,10 +1,10 @@
 ---
-title: "The Platypus Platform: Pulumi for large-scale organizations"
-
+title: "Platypus: A Pulumi-based reference architecture for large-scale organizations"
+allow_long_title: true
 date: 2024-08-05
 draft: false
 social_media: "TBD"
-meta_desc: "The Platypus Platform is a comprehensive Pulumi-based internal platform for infrastructure management and secure deployments in a large-scale environment."
+meta_desc: "Platypus is a reference architecture of a Pulumi-based internal platform for infrastructure management and secure deployments in a large-scale environment."
 meta_image: meta.png
 authors:
     - troy-howard
@@ -15,39 +15,39 @@ tags:
     - architecture
 ---
 
-Infrastructure management is all fun and games until you find yourself scrolling through 1000+ resources in your AWS console. Worse, when one rogue product team wants to use Azure and your data team wants to be on GCP, you're ARM wrestling in Azure and watching your economies of scale tip the wrong direction as you're copy-pasting CloudFormation templates into yet another git repo... This. Needs. To. Be. A. Platform!
+Infrastructure management is all fun and games until you find yourself scrolling through 1000+ resources in your AWS console. Worse, when one rogue product team wants to use Azure and your data team wants to be on GCP, you're ARM wrestling in Azure and watching your economies of scale tip the wrong direction as you're copy-pasting CloudFormation templates into yet another git repo. This. Needs. To. Be. A. Platform!
 
 <!--more-->
 
-And in that moment of overwhelm, you will be sold to, nurture-emailed every week, and told all your problems will be solved by implementing an IDP (internal developer portal, as if you've never seen this acronym before). An IDP that costs a lot of money and a lot of time to implement beyond default settings. An IDP that really only solves half of your problems. Your internal team offers to build something... something that feels more like welding together random pieces of code into an abstract found-art sculpture built from junkyard refuse, already 5 years out of date. How long will this investment be useful before you have to start over?
+And in that moment of overwhelm, you will be sold to, nurture-emailed every week, and told all your problems will be solved by implementing an IDP (internal developer platform, as if you've never seen this acronym before). An IDP that costs a lot of money and a lot of time to implement beyond default settings. An IDP that really only solves half of your problems. Your internal team offers to build something that feels more like welding together random pieces of code into an abstract found-art sculpture built from junkyard refuse, already 5 years out of date. How long will this investment be useful before you have to start over?
 
 It's exhausting. If there was a good solution on the market, you wouldn't be reading this article. So let's talk about what you really need, and how Pulumi can help.
 
 ## An effective internal developer platform
 
-There are quite a few listicles out there professing to authoritatively tell you the 5, or 7, or 11 essential components of an internal developer platform. Personally, I trust our customers to tell us, and here's what they have said they need:
+There are quite a few [listicles](https://en.wikipedia.org/wiki/Listicle) out there professing to authoritatively tell you the 5, or 7, or 11 essential components of an internal developer platform. Personally, I trust our customers to tell us, and here's what they have said they need:
 
 **Consistency:** Bring some order to the chaos. As your company and your infrastructure grows, it gets more and more complicated to maintain consistency. You might already have established design patterns that you want to replicate, but don't have any way to encode those practices in your current tools. There's a lot of copy/paste of reusable blocks, but no way to apply [DRY principles](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) or to modularize/templatize the important parts (hint: all the parts are important!).
 
-**Reproducibility:** Repeatable behaviors, who dat? If you run your deploy twice do you get the same results each time? What if you replicate your production environment to create a test environment, are they actually identical? How much more work does it take to get them to be? Will you get the same version of the training dataset every time you run your AI workloads? It’s anyone's guess. A lack of reproducibility slows down development, makes debugging more difficult, and makes that reuse we just talked about harder to achieve.
+**Reproducibility:** Repeatable behaviors, who dat? If you run your deploy twice do you get the same results each time? What if you replicate your production environment to create a test environment, are they actually identical? How much more work does it take to get them to be? Will you get the same version of the training dataset every time you run your AI workloads? It's anyone's guess. A lack of reproducibility slows down development, makes debugging more difficult, and makes that reuse we just talked about harder to achieve.
 
 **Visibility:** When your node count, and user count starts to go beyond about 50-100 resources (computing or human) you quickly run into a problem of visibility. It can be very difficult to get a handle on what's happening, how many resources you have, where they are, and how much they cost. Any system that purports to be able to manage 1000 nodes or more must have deeply integrated analytics, dashboards, charts, and be searchable, across all your clouds, all your users, and every kind of resource.
 
-**Security and Compliance:** Good fences make good neighbors. RBAC, policy-as-code, excellent secrets management, integration with your existing identity providers... These are the things you need to build security and policy guardrails you can rely on. Without them? It's just a powder keg of liability waiting to catch a spark.
+**Security and Compliance:** Good fences make good neighbors. RBAC, policy-as-code, excellent secrets management, integration with your existing identity providers. These are the things you need to build security and policy guardrails you can rely on. Without them? It's just a powder keg of liability waiting to catch a spark.
 
 **Auditability:** What happened and who did it? This is like a high-stakes game of [Clue](https://en.wikipedia.org/wiki/Cluedo). How quickly can you figure out who ran that bad deployment? Was it *Colonel Mustard* in the *library* with the *candlestick*? Or Blake the new Front-End Developer with overly-broad permissions in AWS? Being able to answer these questions needs to happen quickly. Quickly, like minutes, not hours or days. And it might have happened 6 months ago. Oof.
 
 **Developer Experience:** In the ideal world, developers drive their own DevOps. The platform team provides self-service tools and streamlined workflows that allow your engineers to provision new resources, so your team doesn't have to. And you know, if the developers don't like the user experience, they won't use it at all, and will invent their own tools. You will have ROGUE SYSTEMS to hunt down and argue against in tedious overly-technical meetings. This is not what you want. We need to keep the developers happy to prevent this.
 
-## A holistic view of the Platypus Platform
+## A holistic view of the Platypus reference architecture
 
 Pulumi has a broad surface area of [products and features](https://www.pulumi.com/product/) that address these needs. Designed with integration in mind from the beginning, our tools orchestrate well, presenting a smooth and streamlined workflow for both operations teams and developer teams.
 
-We have an idea of how you can use all the Pulumi products together to deliver a comprehensive internal platform for security, infrastructure management, and deployments. Call it an internal platform for developer platform engineers (IPfDPE), if you want. We call it the realization of a vision we've been working hard to build for many years.
+We have an idea of how you can use all the Pulumi products together to deliver a comprehensive internal platform for security, infrastructure management, and deployments. Call it an [internal platform for developer platform engineers](https://www.pulumi.com/what-is/what-is-platform-engineering/) (IPfDPE), if you want. We call it the realization of a vision we've been working hard to build for many years.
 
-The **Platypus Platform** is a reference architecture that we will be describing, and providing code for, through this series of articles. We'll be diving deep into not just what you can do with our tools, but how to do it, and provide code for a reference implementation that you can use to jump start the process.
+**Platypus** is a reference architecture that we will be describing, and providing code for, through this series of articles. We'll be diving deep into not just what you can do with our tools, but how to do it, and provide code for a reference implementation that you can use to jump start the process.
 
-Here's a quick overview to give you an idea of how we'll be addressing those needs in the Platypus Platform.
+Here's a quick overview to give you an idea of how we'll be addressing those needs in Platypus.
 
 ### Consistency
 
@@ -64,7 +64,7 @@ Another core aspect of consistency is *[drift detection](https://www.pulumi.com/
 
 ### Reproducibility
 
-Since 2010, scientists have felt that we are in a crisis – a *[reproducibility crisis](https://en.wikipedia.org/wiki/Replication_crisis)* – wherein we cannot easily reproduce an experiment in order to verify published results. Similarly, the software industry is entering into a reproducibility crisis of its own, especially around AI training workflows, where it is increasingly difficult to recreate crucial build and prod environments. [Pulumi Stacks](https://www.pulumi.com/learn/building-with-pulumi/understanding-stacks/) make it very easy to manage both configuration and state across multiple environments, and make [reproducing a deployment](https://www.pulumi.com/blog/simple-reproducible-kubernetes-deployments/) a matter of a few clicks within Pulumi Cloud.
+Since 2010, scientists have felt that we are in a crisis – a *[reproducibility crisis](https://en.wikipedia.org/wiki/Replication_crisis)* – wherein we cannot easily reproduce an experiment in order to verify published results. Similarly, the software industry is entering into a reproducibility crisis of its own, especially around AI training workflows, where it is increasingly difficult to recreate crucial build and prod environments. [Pulumi Stacks](https://www.pulumi.com/learn/building-with-pulumi/understanding-stacks/) make it very easy to manage both configuration and state across multiple environments, and make [reproducing a deployment](https://www.pulumi.com/blog/simple-reproducible-kubernetes-deployments/) within Pulumi a matter of a few basic operations.
 
 You can use Pulumi programs to capture ***all*** of the necessary resources for an AI training workload, including things like [versioned data](https://www.pulumi.com/ai/answers/xig35anR7ibjAP5MhHDyxC/time-travel-queries-on-snowflake-dynamic-tables) using dynamic tables with time-travel functionality in [Snowflake](https://www.pulumi.com/case-studies/snowflake/). That means you can be sure that not only will your deployment be on the infrastructure you need, it will also have the exact version of data, every time, which is essential to A/B testing and debugging your models.
 
@@ -94,9 +94,9 @@ With Pulumi templates and custom internal component resources in place, develope
 
 ### More to Come
 
-So now that we’ve made a case for how Pulumi can be applied to meet the most pressing needs of a larger organization, hopefully you will realize that the Platypus Platform we will be presenting is more than just infrastructure-as-code. Pulumi is a platform for teams, where your developer portal is not just a catalog of software, but a fully functional control-plane across all your cloud environments.
+So now that we've made a case for how Pulumi can be applied to meet the most pressing needs of a larger organization, hopefully you will realize that the Platypus reference architecture we are presenting here is more than just infrastructure-as-code. Platypus is a Pulumi-powered platform for teams, where your developer portal is not just a catalog of software, but a fully functional control-plane across all your cloud environments.
 
-Stay tuned for the following series of posts where we will use Pulumi to implement the Platypus Platform reference architecture for a fully-featured internal developer portal (IDP.. or IPfDPE if you prefer).
+Stay tuned for the following series of posts where we will use Pulumi to implement the Platypus reference architecture for a fully-featured internal developer platform (IDP, or IPfDPE if you prefer). That said, you may already have invested in some popular in cloud-native tools like [Backstage](https://backstage.io/) or [Kubernetes](https://kubernetes.io/). Pulumi plays well with others, and you will be delighted to see [how you can use Pulumi to cover the gaps](https://www.pulumi.com/blog/pulumi-in-a-cloud-native-world) in the [CNCF](https://www.cncf.io/) ecosystem.
 
 And if you are already ready to get your hands on Pulumi after this introduction, feel free to [create an account](https://www.pulumi.com/signup/) and follow some of our [Getting Started](https://www.pulumi.com/docs/get-started/) guides to see how easy simple use cases are and begin to imagine how that same developer experience will scale up to your entire organization.
 
@@ -114,6 +114,6 @@ To learn more, you can watch the following video which provides a high level ove
 
 ## Pulumi Cloud
 
-The Pulumi Cloud is a fully managed service that helps you adopt Pulumi’s open source SDK with ease. It provides built-in state and secrets management, integrates with source control and CI/CD, and offers a web console and API that make it easier to visualize and manage infrastructure. It is free for individual use, with features available for teams.
+The Pulumi Cloud is a fully managed service that helps you adopt Pulumi's open source SDK with ease. It provides built-in state and secrets management, integrates with source control and CI/CD, and offers a web console and API that make it easier to visualize and manage infrastructure. It is free for individual use, with features available for teams.
 
 <a class="btn btn-secondary" href="https://app.pulumi.com/signup" target="_blank">Create an Account</a>
