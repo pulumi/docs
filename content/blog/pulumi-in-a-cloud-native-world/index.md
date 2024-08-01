@@ -42,14 +42,22 @@ IDPs are a key component of modern platform engineering strategies. An IDP is a 
 an organization's infrastructure, abstracting away complexity and providing developers with the tools and environments
 they need to build, test, and deploy applications efficiently.
 
-Key features of an effective IDP include:
+Key features of an [IDP](blog/why-switch-to-pulumi/#why-pulumi-for-internal-developer-platforms):
 
-1. Self-service capabilities: Developers can provision resources, environments, and services without relying on ops
-   teams.
-2. Standardization: IDPs enforce best practices and compliance standards across the organization.
-3. Automation: Repetitive tasks are automated, reducing manual errors and freeing up developer time.
-4. Observability: Built-in monitoring and logging provide insights into application and infrastructure performance.
-5. Integration: IDPs seamlessly integrate with existing tools and workflows in the development lifecycle.
+* Developer Control Plane. Curated experiences that empower developers by meeting them at their level of expertise,
+  whether it's an abstracted developer portal, custom CLI, or shared IaC templates.
+
+* Integration & Delivery. Automations to version control, test, trace, and deploy all infrastructure from resources,
+  configurations, environments, and secrets as well as orchestration automations to manage provisioning workflows.
+
+* Monitoring & Logging. Components to log, monitor, and observe all infrastructure for greater operational control as
+  well as optimize against unnecessary costs.
+
+* Security & Identity. Security and compliance guardrails that regulate every piece of infrastructure from policies to
+  fine-grained access controls to secrets.
+
+* Resources. Providers that support modern cloud architectures such as Kubernetes, containers, serverless, generative
+  AI, machine learning, data lakes, hybrid cloud/on-premises, and more.
 
 By implementing an IDP, organizations can significantly reduce cognitive load on developers, accelerate time-to-market,
 improve security and compliance, and foster a culture of innovation. IDPs act as a force multiplier, allowing
@@ -64,23 +72,20 @@ underlying infrastructure. This approach aims to simplify workflows, standardize
 focus on creating business value rather than grappling with intricate infrastructure details.
 
 The [Cloud Native Computing Foundation](https://www.cncf.io/) (CNCF) landscape offers a rich ecosystem of tools and
-technologies that can be
-leveraged to build these platforms. However, the sheer number of options can be overwhelming, making it difficult for
-organizations to determine the best combination of tools for their specific needs.
+technologies that can be leveraged to build these platforms. However, the sheer number of options can be overwhelming,
+making it difficult for organizations to determine the best combination of tools for their specific needs.
 
 At Pulumi's Customer Experience Team, we've observed that adopting infrastructure as code often serves as a catalyst for
 organizations to reassess their entire software delivery process. This reassessment frequently leads to the
 implementation of more streamlined, automated, and secure methodologies – the core principles of platform engineering.
 
-To address these challenges and provide guidance, we've created a reference archticture called the `KEBAP` stack.
-Demonstrating how various CNCF technologies can
-be integrated cohesively using Pulumi to create a robust, scalable internal developer platform.
+To address these challenges and provide guidance, we've created a reference architecture called the `KEBAP` stack.
+Demonstrating how various CNCF technologies can be integrated cohesively using Pulumi to create a robust, scalable
+internal developer platform.
 
-By leveraging `KEBAP` and the wider CNCF ecosystem, organizations can accelerate their journey towards effective
-platform
-engineering. This approach not only enhances operational efficiency but also positions teams to readily adopt and
-benefit from emerging Cloud Native technologies, ensuring their platforms remain future-proof and aligned with industry
-best practices.
+For organizations already utilizing the CNCF ecosystem, `KEBAP` offers a structured approach to integrate these
+technologies into an effective platform engineering solution. This method helps teams streamline their existing Cloud
+Native implementations, providing a cohesive framework that enhances operational efficiency and adaptability.
 
 ## One Reference Architecture: The `KEBAP` Stack
 
@@ -427,7 +432,8 @@ as AWS Secrets Manager, HashiCorp Vault, Google Secrets Manager, Azure Key Vault
 to configure access to the secret store once for all your required secrets, enhancing security and simplifying
 management.
 
-We even take it a step further by using ESO to manage the secrets from Pulumi ESC (External Secret Configurations) with
+We even take it a step further by using ESO to manage the secrets
+from [Pulumi ESC (Environments, Secrets, and  Configurations)](https://www.pulumi.com/product/esc/) with
 the [Pulumi Provider](https://external-secrets.io/latest/provider/pulumi/) for ESO. This way, we can manage the secrets
 in the same way as the rest of the infrastructure, ensuring that the secrets are managed in a secure and consistent
 manner across different environments.
@@ -695,10 +701,11 @@ build, test, and operate software more efficiently, accelerating innovation whil
 infrastructure.
 
 But there is also a downside: The `KEBAP` stack requires a significant investment in time and resources to set up and
-maintain as you are in full charge of the integration of the components. The CNCF landscape is not an integration map,
-and not all components are designed to work together out of the box or stay compatible with each other in the long run.
+maintain as you are in full charge of the integration of the components as well as operating them. The CNCF landscape is
+not an integration map, and not all components are designed to work together out of the box or stay compatible with each
+other in the long run.
 
-For this reason, we at Pulumi offer [Pulumi Cloud ](/product/pulumi-cloud). A fully managed service that takes care of
-the integration of different components and provides a seamless experience for managing your infrastructure across all
-of your environments and clouds. Stay tuned for an upcoming blog post where we will show how Pulumi Cloud can be used to
-as an off-the-shelf solution with zero integration effort.
+For this reason, we at Pulumi offer [Pulumi Cloud ](/product/pulumi-cloud). A fully managed Infrastructure as Code
+platform that takes care of the integration of the different components of and internal developer portal and provides a
+carefree experience of managing your infrastructure at scale. Stay tuned for an upcoming blog post where we will show
+how Pulumi Cloud can be used to as an off-the-shelf solution with zero integration effort.
