@@ -28,7 +28,7 @@ aliases:
 
 ## About Aptos Labs
 
-Aptos Labs, co-founded by Mo Shaikh and Avery Ching, is dedicated to creating better network tooling and seamless usability to bring the benefits of decentralization to the masses. Having now raised over $400M, Aptos Labs is backed by top-flight investors, including a16z, Jump Crypto, Binance Labs, Dragonfly, PayPal Ventures, Andreessen Horowitz and Franklin Templeton Investments. Learn more at: https://aptoslabs.com/
+Aptos Labs, co-founded by Mo Shaikh and Avery Ching, is dedicated to creating better network tooling and seamless usability to bring the benefits of decentralization to the masses. Having now raised over $400M, Aptos Labs is backed by top-flight investors, including a16z, Jump Crypto, Binance Labs, Dragonfly, PayPal Ventures, Andreessen Horowitz and Franklin Templeton Investments. Learn more at: [https://aptoslabs.com/](https://aptoslabs.com)
 
 ## Migrating Away from Terraform {#migration}
 
