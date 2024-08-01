@@ -17,7 +17,7 @@ aliases:
 
 Often when scaling up from an idea, an organization goes through a period of time where the engineering org is growing so fast that everyone is spinning up a lot of individual architectures in an attempt to build quickly. Eventually, the team reaches the point that someone needs to own all of the infrastructure and standard use cases have appeared. Often, once an organization understands its use cases for infrastructure, it starts to explore creating platforms for people to build on (versus everyone inventing infrastructure from scratch). And thus a platform engineering team, either only in duties or both in duties and name, is born.
 
-With all of that in mind, let's imagine that the Pulumipus Boba Tea Shop, our company from the Fundamentals learning path, has been doing so well that we can expand to jump into other markets like selling tea blends or selling its boba tea automation application to other tea shops. We're now part of a cloud engineering platform team, and we need to make it easy for developers building our applications to work with the infrastructure we manage by making it something they don't need to think much about.
+With all of that in mind, let's imagine that the Pulumipus Boba Tea Shop, our company from the Fundamentals tutorial, has been doing so well that we can expand to jump into other markets like selling tea blends or selling its boba tea automation application to other tea shops. We're now part of a cloud engineering platform team, and we need to make it easy for developers building our applications to work with the infrastructure we manage by making it something they don't need to think much about.
 
 This is exactly where Pulumi's Automation API can come in handy. The Automation API lets you embed Pulumi into applications and interfaces to empower others to get the infrastructure they need in the way you expect them to use it. You can also use it to work with CI/CD systems, chatops systems, monitoring systems, gitops systems, or anything else where you want to integrate the automation of the state of your infrastructure. For example, if you want your monitoring system to spin up additional spot instances or tear down unused spot instances based on traffic patterns without needing human interaction, you can use the Automation API to let alerts trigger infrastructure changes (perhaps with some policy as code to provide some guardrails to prevent the automation from tearing down everything or running up your bill).
 
@@ -31,7 +31,15 @@ We're going to embed Pulumi in a Python program so we can use it in pipelines, A
 
 Just like in all of our other tutorials, we're going to create a new Pulumi project to hold our code. You could keep working in whatever project that you already have set up, but it will get a bit messy if you do. Create a new directory called `learn-auto-api`. We'll use this directory name in the rest of this tutorial. If you name it something different, don't forget to change the value in the code!
 
-Add `api` and `infra` directories in your project, and run `pulumi new` with the `aws-python` template in each one. If you need a refresher on how to do so, head to [Pulumi Fundamentals](/tutorials/pulumi-fundamentals/). Add a directory called `time` inside your `api` directory to hold the actual application. Your project directory now should match this file tree:
+Add `api` and `infra` directories in your project, and run `pulumi new` with the `aws-python` template in each one, accepting the defaults:
+
+```bash
+mkdir api infra
+pulumi -C api new aws-python --yes
+pulumi -C infra new aws-python --yes
+```
+
+If you need a refresher on how to do so, head to [Pulumi Fundamentals](/tutorials/pulumi-fundamentals/). Add a directory called `time` inside your `api` directory to hold the actual application. Your project directory now should match this file tree:
 
 ```
 learn-auto-api/
@@ -52,7 +60,7 @@ learn-auto-api/
 
 ## Making a local example
 
-For our application to test the eventual API, we're going to use the a Lambda on AWS, so we'll use the AWS provider. Put the following code in a file called `time_me.py` in the `time` directory:
+For our application to test the eventual API, we're going to use a Lambda on AWS, so we'll use the AWS provider. Put the following code in a file called `time_me.py` in the `time` directory:
 
 {{< code-filename file="learn-auto-api/api/time/time_me.py" >}}
 
@@ -60,10 +68,8 @@ For our application to test the eventual API, we're going to use the a Lambda on
 from os import environ
 from time import localtime
 
-
 def timezone(event, context):
     return localtime(0).tm_zone
-
 
 def location(event, context):
     return environ['AWS_REGION']
@@ -84,8 +90,8 @@ from pulumi_aws import iam, lambda_
 
 def pulumi_program():
     config = Config()
-    request = config.require('request')
-    if request == 'timezone':
+    request = config.require("request")
+    if request == "timezone":
         # Spin up a serverless function infra with the time function in the requested zone with the right permissions
         lambda_role = iam.Role(
             "role-2",
@@ -101,32 +107,30 @@ def pulumi_program():
                 "Sid": ""
             }
         ]
-    }"""
+    }""",
         )
 
         lambda_policy = iam.RolePolicyAttachment(
             "role-policy",
             role=lambda_role.id,
-            policy_arn=iam.ManagedPolicy.AWS_LAMBDA_BASIC_EXECUTION_ROLE
+            policy_arn=iam.ManagedPolicy.AWS_LAMBDA_BASIC_EXECUTION_ROLE,
         )
 
         time_fn = lambda_.Function(
             "timezone-finder",
-            runtime='python3.9',
+            runtime="python3.9",
             role=lambda_role.arn,
             handler="time_me.timezone",
-            code=AssetArchive({
-                ".": FileArchive("./time")
-            }),
-            opts=ResourceOptions(depends_on=lambda_role)
+            code=AssetArchive({".": FileArchive("./time")}),
+            opts=ResourceOptions(depends_on=lambda_role),
         )
         invoke_me = lambda_.Invocation(
             "test-invoke",
             function_name=time_fn.name,
-            input="""{"request": "timezone"}"""
+            input="""{"request": "timezone"}""",
         )
-        export(f'{request}', invoke_me.result)
-    elif request == 'location':
+        export(f"{request}", invoke_me.result)
+    elif request == "location":
         # Spin up a serverless function infra with the location function in the requested region with the right permissions
         lambda_role = iam.Role(
             "role-2",
@@ -142,31 +146,29 @@ def pulumi_program():
                 "Sid": ""
             }
         ]
-    }"""
+    }""",
         )
 
         lambda_policy = iam.RolePolicyAttachment(
             "role-policy",
             role=lambda_role.id,
-            policy_arn=iam.ManagedPolicy.AWS_LAMBDA_BASIC_EXECUTION_ROLE
+            policy_arn=iam.ManagedPolicy.AWS_LAMBDA_BASIC_EXECUTION_ROLE,
         )
 
         location_fn = lambda_.Function(
             "location-finder",
-            runtime='python3.9',
+            runtime="python3.9",
             role=lambda_role.arn,
             handler="time_me.location",
-            code=AssetArchive({
-                ".": FileArchive("./time")
-            }),
-            opts=ResourceOptions(depends_on=lambda_role)
+            code=AssetArchive({".": FileArchive("./time")}),
+            opts=ResourceOptions(depends_on=lambda_role),
         )
         invoke_me = lambda_.Invocation(
             "test-invoke",
             function_name=location_fn.name,
-            input="""{"request": "location"}"""
+            input="""{"request": "location"}""",
         )
-        export(f'{request}', invoke_me.result)
+        export(f"{request}", invoke_me.result)
     else:
         print("Please send me something real")
 ```
@@ -223,9 +225,6 @@ learn-auto-api/
         Pulumi.yaml
         requirements.txt
 ```
-
-<br/>
-<br/>
 
 Now that we have our project initialized, let's add some Automation API code!
 

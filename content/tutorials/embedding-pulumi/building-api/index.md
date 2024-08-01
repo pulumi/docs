@@ -39,12 +39,12 @@ from pulumi import automation as auto
 
 def set_context(org, project, stackd, dirname, req):
     config_obj = {
-        'org': org,
-        'project': project,
-        'stack': stackd,
-        'stack_name': auto.fully_qualified_stack_name(org, project, stackd),
-        'dirname': dirname,
-        'request': req
+        "org": org,
+        "project": project,
+        "stack": stackd,
+        "stack_name": auto.fully_qualified_stack_name(org, project, stackd),
+        "dirname": dirname,
+        "request": req,
     }
     return config_obj
 
@@ -61,19 +61,26 @@ def spin_venv(dirname):
             ["python3", "-m", "venv", "venv"],
             check=True,
             cwd=work_dir,
-            capture_output=True
+            capture_output=True,
         )
         subprocess.run(
-            [os.path.join("venv", "bin", "python3"), "-m", "pip", "install", "--upgrade", "pip"],
+            [
+                os.path.join("venv", "bin", "python3"),
+                "-m",
+                "pip",
+                "install",
+                "--upgrade",
+                "pip",
+            ],
             check=True,
             cwd=work_dir,
-            capture_output=True
+            capture_output=True,
         )
         subprocess.run(
             [os.path.join("venv", "bin", "pip"), "install", "-r", "requirements.txt"],
             check=True,
             cwd=work_dir,
-            capture_output=True
+            capture_output=True,
         )
         log.info("Successfully prepared virtual environment")
     except Exception as e:
@@ -85,9 +92,9 @@ def set_stack(context_var):
     try:
         log.info("Initializing stack...")
         stackd = auto.create_or_select_stack(
-            stack_name=context_var['stack_name'],
-            project_name=context_var['project'],
-            work_dir=find_local(context_var['dirname'])
+            stack_name=context_var["stack_name"],
+            project_name=context_var["project"],
+            work_dir=find_local(context_var["dirname"]),
         )
         log.info("Successfully initialized stack")
         return stackd
@@ -99,7 +106,9 @@ def set_stack(context_var):
 def configure_project(stackd, context_var):
     try:
         log.info("Setting project config...")
-        stackd.set_config("request", auto.ConfigValue(value=f"{context_var['request']}"))
+        stackd.set_config(
+            "request", auto.ConfigValue(value=f"{context_var['request']}")
+        )
         log.info("Successfully set project config")
     except Exception as e:
         log.error("Failure when trying to set project configuration:")
@@ -138,7 +147,7 @@ def update_stack(stackd):
         log.info("Successfully updated stack")
         log.info(f"Summary: \n{json.dumps(up_res.summary.resource_changes, indent=4)}")
         for output in up_res.outputs:
-            val_out = up_res.outputs[f'{output}'].value
+            val_out = up_res.outputs[f"{output}"].value
             log.info(f"Output: {val_out}")
         return up_res.outputs
     except Exception as e:
@@ -153,7 +162,7 @@ if __name__ == "__main__":
         project="api",
         stackd="dev",
         dirname="api",
-        request="timezone"
+        request="timezone",
     )
     spin_venv(context["dirname"])
     stack = set_stack(context_var=context)
@@ -167,7 +176,7 @@ if __name__ == "__main__":
 
 {{< /code-filename >}}
 
-In that file, change the `<org>` value on line 122 to your own personal org on Pulumi (it should be your username).
+Near the end of that file, change the value of `<org>` to your personal org in Pulumi Cloud. (It should be your username.)
 
 We've made the most simple program you can make with the Automation API: a procedure for creating, updating, or deleting a specific stack. It's taking each step that the Pulumi CLI would take into its own function using the Automation API to define the actual actions. We'll use this scaffolding to ensure we can log at each step and raise errors properly (more on that later).
 
@@ -197,7 +206,7 @@ learn-auto-api/
 
 ### Considerations with Destroy
 
-The basics of such an API is taking the commands we call in the CLI and generalizing them to an interface that can be easily programmed. We also, however, would like to have the ability to destroy a stack locally as we'd like any future work locally to go through the API as well, but we really don't want any automation to be able to destroy a stack without human approval (unless perhaps it's an ephemeral stack for smoke testing). That's the part on lines 90 and 133 that defines a `destroy` variable, or flag, that can enable the destroy workflow.
+The basics of such an API is taking the commands we call in the CLI and generalizing them to an interface that can be easily programmed. We also, however, would like to have the ability to destroy a stack locally as we'd like any future work locally to go through the API as well, but we really don't want any automation to be able to destroy a stack without human approval (unless perhaps it's an ephemeral stack for smoke testing). That's why we use a `destroy` variable, or flag, to conditionally enable the destroy workflow.
 
 ## Automating Commands
 
@@ -292,7 +301,7 @@ if __name__ == '__main__':
 
 {{< /code-filename >}}
 
-Change the `<org>` value on line 13 to your personal org on Pulumi (it should be your username).
+As before, change the value of `<org>` (near the top of the file this time) to your personal org in Pulumi Cloud.
 
 Here's what the directory structure is now:
 

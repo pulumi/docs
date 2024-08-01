@@ -24,7 +24,7 @@ Now that we've set everything up and explored the codebase, let's run it! Well, 
 
 We need to configure everything before it can run. Almost there!
 
-Pass the following configuration values into Pulumi to the **local program** (that's `api/burner.py`, remember?).
+Pass the following configuration values into Pulumi to the **local program** (that's `api/burner.py`).
 
 * `aws:profile` (if you're using sso or have a number of configurations for AWS)
 * `aws:region`
@@ -37,7 +37,15 @@ If you don't remember how, here's a quick step-by-step:
 
 ## Running our program
 
-Now, let's run it! From the root of the repo in a terminal, run `python infra_api.py`. Notice that we're not running a `pulumi up`! Here's what you should get:
+Now, let's run it! From the root of the repo in a terminal, first install the dependencies required by the API service, then start it:
+
+```bash
+$ python3 -m venv venv
+$ venv/bin/pip install -r api/requirements.txt
+$ venv/bin/python infra_api.py
+```
+
+Notice that we're not running a `pulumi up`! Here's what you should get:
 
 ```bash
 Serving on port 8000...
@@ -53,7 +61,8 @@ $ curl localhost:8000/location
 What's happening in the terminal window where we're running the API? Flip back to the terminal window running the API, and check it out:
 
 ```bash
-$ python infra_api.py
+$ python3 infra_api.py
+
 Serving on port 8000...
 info: Preparing a virtual environment...
 info: Successfully prepared virtual environment
@@ -156,14 +165,11 @@ You'll notice that these examples don't just wrap the CLI commands as callable f
 
 What if you could migrate a database with Pulumi? It's possible! The examples in [Go](https://github.com/pulumi/automation-api-examples/blob/main/go/database_migration), [Python](https://github.com/pulumi/automation-api-examples/tree/main/python/database_migration), [TypeScript/Javascript](https://github.com/pulumi/automation-api-examples/blob/main/nodejs/databaseMigration-ts), and [C#/.NET](https://github.com/pulumi/automation-api-examples/blob/main/dotnet/DatabaseMigration) show a basic creation of a table with insertion and verification of data. If we combine this idea with the same type of idea of a web portal, we could make a plain migration tool that takes data from one table and generates a new one from that data, effectively migrating the table from one database to another.
 
-<br/>
-<br/>
-
 These examples are only a small sample of the power of the Automation API.
 
 ---
 
-Congratulations! You've now finished this pathway on embedding Pulumi in other programs, platforms, and systems! In this pathway, you've learned about wrapping the standard Pulumi commands into a program with the Automation API, considering where Pulumi could be run and building out logging and error handling accordingly, and working with the Automation API to integrate your infrastructure into other workflows.
+Congratulations! You've now finished this tutorial on embedding Pulumi in other programs, platforms, and systems! In this tutorial, you've learned about wrapping the standard Pulumi commands into a program with the Automation API, considering where Pulumi could be run and building out logging and error handling accordingly, and working with the Automation API to integrate your infrastructure into other workflows.
 
 Go build new things, and watch this space for more learning experiences with Pulumi!
 
