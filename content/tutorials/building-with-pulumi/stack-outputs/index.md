@@ -17,7 +17,7 @@ Now let's explore _stack outputs_. Stack outputs are values exported by a given 
 
 To illustrate how stack outputs work, let's set one programmatically. At the end of {{< langfile >}} in `my-first-app`, add the following line:
 
-{{< chooser language "typescript,python,go,csharp,yaml" / >}}
+{{< chooser language "typescript,python" />}}
 
 {{% choosable language typescript %}}
 
@@ -32,40 +32,6 @@ export const url = pulumi.interpolate`http://localhost:${frontendPort}`;
 ```python
 pulumi.export("url", pulumi.Output.format("http://localhost:{0}", frontend_port))
 ```
-
-{{% /choosable %}}
-
-{{% choosable language go %}}
-
-```go
-ctx.Export("url", pulumi.Sprintf("http://localhost:%v", frontendPort))
-```
-
-Note that you'll want to insert this just before the last `return nil` statement.
-
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-
-```csharp
-return new Dictionary<string, object?>
-{
-    ["url"] = Output.Format($"http://localhost:{frontendPort}")
-};
-```
-
-Add this return statement to the end of the deployment function.
-
-{{% /choosable %}}
-
-{{% choosable language yaml %}}
-
-```yaml
-outputs:
-  url: http://localhost:${frontendPort}
-```
-
-Replace the existing `outputs: {}` line with this code.
 
 {{% /choosable %}}
 

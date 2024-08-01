@@ -146,7 +146,7 @@ application {
 Back inside your Pulumi program, you're ready to pull your first Docker image. Remember that a Pulumi program is the code that defines the desired state of your
 infrastructure using a general-purpose programming language. In this case, you're using {{< langname >}}, so the program file is {{< langfile >}}. In {{< langfile >}}, use any editor to add the following code:
 
-{{< chooser language "typescript,python,go,java,yaml" / >}}
+{{< chooser language "typescript,python" />}}
 
 {{% choosable language typescript %}}
 
@@ -372,7 +372,7 @@ Now that you've provisioned the first piece of infrastructure, you can continue 
 
 The application we're building includes a frontend client and a MongoDB database. You'll add them both to the program next. Add the following code after the previous fragment:
 
-{{< chooser language "typescript,python,go,java,yaml" / >}}
+{{< chooser language "typescript,python" />}}
 
 {{% choosable language typescript %}}
 
@@ -481,7 +481,7 @@ This pulls the frontend client and the populated database images in the same way
 
 Compare your program now to the completed program below before moving forward:
 
-{{< chooser language "typescript,python,go,java,yaml" / >}}
+{{< chooser language "typescript,python" />}}
 
 {{% choosable language typescript %}}
 
@@ -537,140 +537,6 @@ frontend = docker.RemoteImage(
 mongo_image = docker.RemoteImage(
     "mongo_image", name="pulumi/tutorial-pulumi-fundamentals-database-local:latest"
 )
-```
-
-{{% /choosable %}}
-
-{{% choosable language go %}}
-
-```go
-package main
-
-import (
-	"fmt"
-
-	"github.com/pulumi/pulumi-docker/sdk/v3/go/docker"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-        // Pull the backend image
-		backendImageName := "backend"
-		backendImage, err := docker.NewRemoteImage(ctx, fmt.Sprintf("%v-image", backendImageName), &docker.RemoteImageArgs{
-			Name: pulumi.String("pulumi/tutorial-pulumi-fundamentals-backend:latest"),
-		})
-		if err != nil {
-			return err
-		}
-		ctx.Export("backendDockerImage", backendImage.Name)
-
-        // Pull the frontend image
-		frontendImageName := "frontend"
-		frontendImage, err := docker.NewRemoteImage(ctx, fmt.Sprintf("%v-image", frontendImageName), &docker.RemoteImageArgs{
-			Name: pulumi.String("pulumi/tutorial-pulumi-fundamentals-frontend:latest"),
-		})
-		if err != nil {
-			return err
-		}
-		ctx.Export("frontendDockerImage", frontendImage.Name)
-
-        // Pull the MongoDB image
-        mongoImage, err := docker.NewRemoteImage(ctx, "mongo-image", &docker.RemoteImageArgs{
-			Name: pulumi.String("pulumi/tutorial-pulumi-fundamentals-database-local:latest"),
-		})
-		if err != nil {
-			return err
-		}
-		ctx.Export("mongoDockerImage", mongoImage.Name)
-
-		return nil
-	})
-}
-```
-
-{{% /choosable %}}
-
-{{% choosable language java %}}
-
-```java
-package my_first_app;
-
-import com.pulumi.Context;
-import com.pulumi.Pulumi;
-import com.pulumi.docker.RemoteImage;
-import com.pulumi.docker.RemoteImageArgs;
-
-import java.util.List;
-
-public class App {
-    public static void main(String[] args) {
-        Pulumi.run(App::stack);
-    }
-
-    private static void stack(Context ctx) {
-
-        final var stackName = ctx.stackName();
-
-        // Pull the backend image
-        final String backendImageName = "backend";
-        final var backendImage = new RemoteImage(
-                backendImageName,
-                RemoteImageArgs.builder()
-                        .name(String.format("pulumi/tutorial-pulumi-fundamentals-%s:latest",backendImageName))
-                        .build()
-        );
-
-        // Pull the frontend image
-        final String frontendImageName = "frontend";
-        final var frontendImage = new RemoteImage(
-                frontendImageName,
-                RemoteImageArgs.builder()
-                        .name(String.format("pulumi/tutorial-pulumi-fundamentals-%s:latest",frontendImageName))
-                        .build()
-        );
-
-        // Pull the MongoDB image
-        final var mongoImage = new RemoteImage(
-                "mongoImage",
-                RemoteImageArgs.builder()
-                        .name("pulumi/tutorial-pulumi-fundamentals-database-local:latest")
-                        .build()
-        );
-    }
-}
-```
-
-{{% /choosable %}}
-
-{{% choosable language yaml %}}
-
-```yaml
-name: my-first-app
-runtime: yaml
-description: A minimal Pulumi YAML program
-
-configuration: {}
-variables:     {}
-resources:
-  # Pull the backend image
-  backend-image:
-    type: docker:index:RemoteImage
-    properties:
-      name: pulumi/tutorial-pulumi-fundamentals-backend:latest
-
-  # Pull the frontend image
-  frontend-image:
-    type: docker:index:RemoteImage
-    properties:
-      name: pulumi/tutorial-pulumi-fundamentals-frontend:latest
-
-  # Pull the MongoDB image
-  mongo-image:
-    type: docker:index:RemoteImage
-    properties:
-      name: pulumi/tutorial-pulumi-fundamentals-database-local:latest
-outputs:       {}
 ```
 
 {{% /choosable %}}

@@ -35,11 +35,9 @@ To complete this tutorial, you'll need:
 - A [Pulumi Cloud account](https://app.pulumi.com/signup) and [access token](/docs/pulumi-cloud/accounts#access-tokens)
 - The [Pulumi CLI](/docs/install/)
 - [Docker](https://docs.docker.com/get-docker/)
-- One of the following supported language runtimes, depending on your language choice:
+- One of the following supported runtimes, depending on your language choice:
     - Node.js
     - Python
-    - Java
-    - YAML
 
 You should also be able to:
 
