@@ -368,7 +368,7 @@ using Pulumi;
 using Aws = Pulumi.Aws;
 using System.IO;
 
-return await Deployment.RunAsync(() => 
+return await Deployment.RunAsync(() =>
 {
     var loggroup = new Aws.CloudWatch.LogGroup("loggroup");
 
@@ -507,9 +507,9 @@ public class App {
                             jsonProperty("height", 6),
                             jsonProperty("properties", jsonObject(
                                 jsonProperty("metrics", jsonArray(jsonArray(
-                                    "AWS/EC2", 
-                                    "CPUUtilization", 
-                                    "InstanceId", 
+                                    "AWS/EC2",
+                                    "CPUUtilization",
+                                    "InstanceId",
                                     "i-012345"
                                 ))),
                                 jsonProperty("period", 300),
@@ -517,7 +517,7 @@ public class App {
                                 jsonProperty("region", "us-east-1"),
                                 jsonProperty("title", "EC2 Instance CPU")
                             ))
-                        ), 
+                        ),
                         jsonObject(
                             jsonProperty("type", "text"),
                             jsonProperty("x", 0),
@@ -535,7 +535,7 @@ public class App {
         var database = new Cluster("database", ClusterArgs.builder()
             .clusterIdentifier("aurora-cluster-demo")
             .engine("aurora-postgresql")
-            .availabilityZones(            
+            .availabilityZones(
                 "us-west-2a",
                 "us-west-2b",
                 "us-west-2c")
