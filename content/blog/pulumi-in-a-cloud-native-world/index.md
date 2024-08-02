@@ -1,6 +1,6 @@
 ---
 title: "Pulumi in a Cloud Native World"
-date: 2024-07-28
+date: 2024-08-02
 draft: false
 allow_long_title: true
 meta_desc: "See how Pulumi fits into the Cloud Native landscape and how several CNCF projects can be combined with Pulumi to create a standardized GitOps stack."
@@ -19,21 +19,20 @@ tags:
 - gitops
 
 social:
-  twitter: "Pulumi in a Cloud Native World: See how Pulumi fits into the Cloud Native landscape and how several CNCF projects can be combined with Pulumi to create a standardized GitOps stack. #GitOps #Kubernetes #ArgoCD #Pulumi #Backstage"
+  twitter: "Pulumi in a Cloud Native World: See how Pulumi fits into the Cloud Native landscape and how several CNCF projects can be combined with Pulumi to create an internal developer platform. #GitOps #Kubernetes #ArgoCD #Pulumi #Backstage"
   linkedin: |
-    See how well Pulumi plays with other CNCF projects in a Cloud Native world. Learn how I combined following projects to create a standardized GitOps stack:
+    See how well Pulumi plays with other CNCF projects in a Cloud Native world. Learn how we combined several CNCF projects with Pulumi to create an internal developer platform.
     - Kubernetes
     - External Secrets Operator
     - Backstage
     - Argo CD
     - Pulumi
 
-    Learn how it can help you streamline your software delivery process by using standard tools and practices across your infrastructure projects. 
-
-    This helps reduce the time required to establish development and production environments from months to minutes. #GitOps #Kubernetes #ArgoCD #Pulumi #Backstage
+    Read about the benefits and challenges of this approach and how it can help you to build an internal developer platform from scratch.
 ---
 
-In today's complex digital landscape, organizations are increasingly turning to [platform engineering](https://www.pulumi.com/what-is/what-is-platform-engineering/) to optimise their
+In today's complex digital landscape, organizations are increasingly turning
+to [platform engineering](https://www.pulumi.com/what-is/what-is-platform-engineering/) to optimise their
 software delivery processes and maximize efficiency. The growing complexity of modern applications, coupled with the
 need for rapid, secure, and scalable deployments, has created a pressing demand for robust Internal Developer
 Platforms (IDPs).
@@ -98,6 +97,20 @@ Let's take a closer look at each component of the `KEBAP` stack and understand w
 in such a way that each component builds on the capabilities of the previous one. The five layers of the `KEBAP` stack
 are designed to address different capabilities of our internal developer platform:
 
+### Kubernetes
+
+<img src="k.png">
+
+{{% notes type="info" %}}
+In modern cloud computing, the [hub-and-spoke architecture](https://open-cluster-management.io/concepts/architecture/)
+pattern is widely used to manage multiple [Kubernetes](https://kubernetes.io/) clusters. In this pattern, a central
+control plane (hub) manages a set of clusters (spokes) that run applications and services. The hub provides a unified
+view of the entire infrastructure, enabling centralized management, monitoring, and security.
+{{% /notes %}}
+
+The control plane cluster in the `KEBAP` stack is the hub cluster and contains the control plane logic for the entire
+IDP.
+
 ### Pulumi
 
 <img src="p.png" >
@@ -159,20 +172,6 @@ spec:
     name: ${{values.name}}
   destroyOnFinalize: false
 ```
-
-### Kubernetes
-
-<img src="k.png">
-
-{{% notes type="info" %}}
-In modern cloud computing, the [hub-and-spoke architecture](https://open-cluster-management.io/concepts/architecture/)
-pattern is widely used to manage multiple [Kubernetes](https://kubernetes.io/) clusters. In this pattern, a central
-control plane (hub) manages a set of clusters (spokes) that run applications and services. The hub provides a unified
-view of the entire infrastructure, enabling centralized management, monitoring, and security.
-{{% /notes %}}
-
-The control plane cluster in the `KEBAP` stack is the hub cluster and contains the control plane logic for the entire
-IDP.
 
 ### Argo CD
 
@@ -448,11 +447,11 @@ on the cluster from the creation of the cluster itself.
 
 <img src="order.png" width="500px">
 
-We use Backstage to order a new development Kubernetes cluster. As we want to keep the costs low for development
-cluster, we opted here for the [vCluster](https://www.vcluster.com/) project. The vCluster project allows us to create a
-Kubernetes cluster on demand, which runs as containers on the control plane cluster. The moment the cluster is created,
-we add it to the Argo CD as spoke cluster. This way, we can roll out applications to the development cluster in the same
-way as we would do for production clusters.
+Starting point is Backstage, where we can order a new development Kubernetes cluster. As we want to keep the costs low
+for development cluster, we opted here for the [vCluster](https://www.vcluster.com/) project. The vCluster project
+allows us to create a Kubernetes cluster on demand, which runs as containers on the control plane cluster. The moment
+the cluster is created, we add it to the Argo CD as spoke cluster. This way, we can roll out applications to the
+development cluster in the same way as we would do for production clusters.
 
 See the definition of the `ClusterPolicy` object in the [Kyverno](#bonus-kyverno) section.
 
@@ -460,20 +459,19 @@ See the definition of the `ClusterPolicy` object in the [Kyverno](#bonus-kyverno
 
 <img src="order_cluster.png" width="500px">
 
-We use Backstage to order a new production Kubernetes cluster. This time, we use the Pulumi code to create the cluster
-in the cloud provider of choice. After the creation of the cluster, we add it to the Argo CD as a production cluster.
-This way, we can roll out applications to the production cluster in the same way as we would do for development
-clusters.
+The Backstage catalog is again the starting point to order a new production Kubernetes cluster. This time, we use the
+Pulumi code to create the cluster in the cloud provider of choice. After the creation of the cluster, we add it to the
+Argo CD as a production cluster. This way, we can roll out applications to the production cluster in the same way as we
+would do for development clusters.
 
 #### Ordering Other Infrastructure
 
 <img src="order_rest.png" width="500px">
 
-We use Backstage to order other infrastructure components, such as databases, message queues, and storage. We use again
-the Pulumi Kubernetes Operator to create the infrastructure components in the Kubernetes cluster. This way, we can
-manage all the infrastructure components in the same way as we manage the Kubernetes clusters.
+Any other infrastructure components such as databases, message queues, and storage will be also ordered via Backstage.
+And similar to the ordering of a new production Kubernetes cluster, we use Pulumi to create the cloud infrastructure.
 
-## Conclusion and Pulumi Cloud as an Off-the-Shelf Solution
+## Conclusion
 
 A lot of organizations are building their internal developer platforms using CNCF projects to fulfill the needs of their
 internal customers. The `KEBAP` stack provides a structured approach to integrate these technologies into an effective
@@ -494,7 +492,8 @@ under the umbrella of CNCF are not automatically implying that they are compatib
 platform engineering team will need to invest continuously time and resources to keep the stack up-to-date and running.
 This is a not negligible investment to consider for any organization.
 
-For this reason, we at Pulumi offer [Pulumi Cloud ](/product/pulumi-cloud). A fully managed Infrastructure as Code
-platform that takes care of the integration of the different components of and internal developer portal and provides a
-carefree experience of managing your infrastructure at scale. Stay tuned for an upcoming blog post where we will show
-how Pulumi Cloud can be used to as an off-the-shelf solution with zero integration effort.
+For this reason, we have another reference architecture that uses components from all of the Pulumi Platform for an end
+to end fully-managed solution. This solution takes care of the integration of the different components of and internal
+developer portal and provides a carefree experience of managing your infrastructure at scale.
+
+Stay tuned...
