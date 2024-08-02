@@ -16,7 +16,7 @@ sections:
     - label: Exec Summary
       anchor: executive-summary
     - label: Migration
-      anchor: migrations
+      anchor: migration
     - label: Benefits
       anchor: benefits
     - label: Next Steps
