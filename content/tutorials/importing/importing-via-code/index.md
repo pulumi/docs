@@ -21,114 +21,40 @@ As before, we have to get `id`s from our providers to import resources. We've do
 
 ## Coding up the import
 
-We use the `ResourceOptions` `import` key to define a key:value pair that contains the ID. Let's try importing the frontend container. Make a new directory and initialize a new Pulumi program in the language of your choice. Then update the {{< langfile >}} to include the following code (with the ID pulled from Docker):
+We use the `ResourceOptions` `import` key to define a key-value pair that contains the ID. Let's try importing the frontend container into a new project.
 
-{{< chooser language "csharp,go,java,python,typescript,yaml" >}}
+Make a new directory and initialize a new Pulumi project in your language of choice, making sure to install the Pulumi Docker provider as before. Then, referring back to the `learn-pulumi-import` project from the previous step, copy the code that was generated for the `frontend-container` resource into the new project's {{< langfile >}}. That code should look something like this:
 
-{{% choosable language csharp %}}
+{{< chooser language "typescript,python" />}}
 
-```csharp
-var frontend_dev = new Docker.Container("frontend-dev", new Docker.ContainerArgs
-    {
-        Envs =
-        {
-            $"LISTEN_PORT={FrontendPort}",
-            $"HTTP_PROXY=backend-dev:{BackendPort}",
-            $"PROXY_PROTOCOL={Protocol}"
-        }
-        Image = frontendImage.Latest,
-        Name = "frontend-dev",
-        NetworksAdvanced =
-        {
-            new Docker.Inputs.ContainerNetworksAdvancedArgs
-            {
-                Name = networkName
-            }
-        }
-        Ports =
-        {
-            new Docker.Inputs.ContainerPortArgs
-            {
-                External = FrontendPort,
-                Internal = FrontendPort,
-            },
-        },
-    },
-    new CustomResourceOptions {
-        ImportId = "08a181ba69e46b1eaa66f9806568f7158d1d9e7040770260535cbe139e6e5468"
-    }
-);
-```
+{{% choosable language typescript %}}
 
-{{% /choosable %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as docker from "@pulumi/docker";
 
-{{% choosable language go %}}
-
-```go
-container, err := docker.NewContainer(ctx, "frontend-dev", &docker.ContainerArgs{
-        Envs: [
-            pulumi.String(fmt.Sprintf("LISTEN_PORT=%d",frontendPort)),
-            pulumi.String(fmt.Sprintf("HTTP_PROXY=backend-%s:%d",stackName,backendPort)),
-            pulumi.String(fmt.Sprintf("PROXY_PROTOCOL=%s",protocol))
-        ]
-        Image:       frontendImage.Latest,
-        Name:        pulumi.String("frontend-dev"),
-        NetworksAdvanced:  &ContainerNetworksAdvancedArgs{
-            Name: Network.name
-        },
-        Ports: ContainerPortArray{
-            &ContainerPortArgs{
-                External: frontendPort,
-                Internal: frontendPort,
-            },
-        },
-    }, pulumi.Import(pulumi.ID("08a181ba69e46b1eaa66f9806568f7158d1d9e7040770260535cbe139e6e5468")),
-)
-if err != nil {
-    return err
-}
-```
-
-{{% /choosable %}}
-
-{{% choosable language java %}}
-
-```java
-/ ...
-
-import java.util.*;
-import java.io.*;
-import java.nio.*;
-// ...
-import com.pulumi.resources.CustomResourceOptions;
-
-public class App {
-    public static void main(String[] args) {
-        Pulumi.run(App::stack);
-    }
-
-    public static void stack(Context ctx) {
-        var frontend_dev = new Container("frontend-dev",
-        ContainerArgs.builder()
-            .envs(List.of(
-                    String.format("LISTEN_PORT=%d",frontendPort),
-                    String.format("HTTP_PROXY=backend-%s:%d",stackName,backendPort),
-                    String.format("PROXY_PROTOCOL=%s",protocol)
-            ))
-            .image(frontendImage.repoDigest())
-            .name("frontend-dev")
-            .networksAdvanced(ContainerNetworksAdvancedArgs.builder()
-                    .name(network.name())
-                    .build())
-            .ports(ContainerPortArgs.builder()
-                    .internal(frontendPort)
-                    .external(frontendPort)
-                    .build())
-            .build(), CustomResourceOptions.builder()
-                .importId("08a181ba69e46b1eaa66f9806568f7158d1d9e7040770260535cbe139e6e5468")
-                .build());
-    }
-}
+const frontend_container = new docker.Container("frontend-container", {
+    command: [
+        "npm",
+        "start",
+    ],
+    entrypoints: ["docker-entrypoint.sh"],
+    hostname: "bb9987909e97",
+    image: "sha256:314b485ba1247dd1e25d407c5d059a81b27c65c27a4a3b349b03041d556e5e96",
+    ipcMode: "private",
+    logDriver: "json-file",
+    name: "frontend-dev",
+    networkMode: "bridge",
+    ports: [{
+        external: 3001,
+        internal: 3001,
+    }],
+    runtime: "runc",
+    shmSize: 64,
+    workingDir: "/usr/src/app",
+}, {
+    protect: true,
+});
 ```
 
 {{% /choosable %}}
@@ -136,114 +62,139 @@ public class App {
 {{% choosable language python %}}
 
 ```python
+import pulumi
 import pulumi_docker as docker
-from pulumi import ResourceOptions
 
-frontend_dev = docker.Container(
-    "frontend-dev",
-    envs=[
-        f"LISTEN_PORT={frontend_port}",
-        f"HTTP_PROXY=backend-dev:{backend_port}",
-        f"PROXY_PROTOCOL={protocol}"
+frontend_container = docker.Container("frontend-container",
+    command=[
+        "npm",
+        "start",
     ],
-    image=frontend.repo_digest,
+    entrypoints=["docker-entrypoint.sh"],
+    hostname="bb9987909e97",
+    image="sha256:314b485ba1247dd1e25d407c5d059a81b27c65c27a4a3b349b03041d556e5e96",
+    ipc_mode="private",
+    log_driver="json-file",
     name="frontend-dev",
-    networks_advanced=[docker.ContainerNetworksAdvancedArgs(
-        name=network.name
-    )]
+    network_mode="bridge",
     ports=[docker.ContainerPortArgs(
-        internal=frontend_port,
-        external=frontend_port
+        external=3001,
+        internal=3001,
     )],
-    opts=ResourceOptions(import_='08a181ba69e46b1eaa66f9806568f7158d1d9e7040770260535cbe139e6e5468'))
+    runtime="runc",
+    shm_size=64,
+    working_dir="/usr/src/app",
+    opts = pulumi.ResourceOptions(protect=True))
 ```
-
-Note that the resource option has an underscore at the end due to the `import` keyword.
 
 {{% /choosable %}}
 
+Remove the `protect` resource option and replace it with the `import` resource option, along with the ID of your front-end container:
+
 {{% choosable language typescript %}}
 
-```typescript
+```typescript {hl_lines=[24]}
+import * as pulumi from "@pulumi/pulumi";
 import * as docker from "@pulumi/docker";
 
-const frontend_dev = new docker.Container("frontend-dev", {
-    image: frontend.repoDigest,
-    name: `frontend-dev`,
-    ports: [
-        {
-            internal: frontendPort,
-            external: frontendPort,
-        },
+const frontend_container = new docker.Container("frontend-container", {
+    command: [
+        "npm",
+        "start",
     ],
-    envs: [
-        `LISTEN_PORT=${frontendPort}`,
-        `HTTP_PROXY=backend-dev:${backendPort}`,
-        `PROXY_PROTOCOL=${protocol}`
-    ],
-    networksAdvanced: [
-        {
-            name: network.name,
-        },
-    ],
+    entrypoints: ["docker-entrypoint.sh"],
+    hostname: "bb9987909e97",
+    image: "sha256:314b485ba1247dd1e25d407c5d059a81b27c65c27a4a3b349b03041d556e5e96",
+    ipcMode: "private",
+    logDriver: "json-file",
+    name: "frontend-dev",
+    networkMode: "bridge",
+    ports: [{
+        external: 3001,
+        internal: 3001,
+    }],
+    runtime: "runc",
+    shmSize: 64,
+    workingDir: "/usr/src/app",
 }, {
-    import: "08a181ba69e46b1eaa66f9806568f7158d1d9e7040770260535cbe139e6e5468"
+    import: "0dcb71164c20edb491477f16028f34546bc7852351c442bab4998a015b41cfba",
 });
 ```
 
 {{% /choosable %}}
 
-{{% choosable language yaml %}}
+{{% choosable language python %}}
 
-```yaml
-resources:
-# ...
-  frontend-dev:
-    type: docker:index:Container
-    properties:
-      envs:
-        [
-          "LISTEN_PORT=${frontendPort}",
-          "HTTP_PROXY=backend-${pulumi.stack}:${backendPort}",
-          "PROXY_PROTOCOL=http://"
-        ]
-      image: ${frontend-image.repoDigest}
-      name: frontend-dev
-      networksAdvanced:
-        - name: ${network.name}
-          aliases: ["frontend-dev"]
-      ports:
-        - external: ${frontendPort}
-          internal: ${frontendPort}
-    options:
-      import: "08a181ba69e46b1eaa66f9806568f7158d1d9e7040770260535cbe139e6e5468"
+```python {hl_lines=[23]}
+import pulumi
+import pulumi_docker as docker
+
+frontend_container = docker.Container("frontend-container",
+    command=[
+        "npm",
+        "start",
+    ],
+    entrypoints=["docker-entrypoint.sh"],
+    hostname="bb9987909e97",
+    image="sha256:314b485ba1247dd1e25d407c5d059a81b27c65c27a4a3b349b03041d556e5e96",
+    ipc_mode="private",
+    log_driver="json-file",
+    name="frontend-dev",
+    network_mode="bridge",
+    ports=[docker.ContainerPortArgs(
+        external=3001,
+        internal=3001,
+    )],
+    runtime="runc",
+    shm_size=64,
+    working_dir="/usr/src/app",
+    opts = pulumi.ResourceOptions(import_="0dcb71164c20edb491477f16028f34546bc7852351c442bab4998a015b41cfba"))
 ```
+
+Note that in the Python SDK, the `import` option is named `import_` to avoid conflicting with the reserved `import` keyword.
 
 {{% /choosable %}}
 
-{{< /chooser >}}
-
 ## Running the import
 
-Now that you have the code, actually importing the resource is one command away: `pulumi up`. As before, you'll get an equal sign instead of a plus sign in the preview of the actions taken by Pulumi. This means nothing specifically changed with the resource; the service just set it in the stack based on the results coming from the provider.
-
-If you run `pulumi up` (or `pulumi preview`) and get an error like this, you need to check your `id` value:
+Now that you have the code, actually importing the resource is one command away:
 
 ```bash
-error: Preview failed: importing <id> <type> not found
+$ pulumi up
+
+Previewing (dev)
+
+     Type                       Name                          Plan
+ +   pulumi:pulumi:Stack        learn-pulumi-import-code-dev  create
+ =   └─ docker:index:Container  frontend-container            import
+
+Resources:
+    + 1 to create
+    = 1 to import
+    2 changes
+
+Do you want to perform this update? yes
+Updating (dev)
+
+     Type                       Name                          Status
+ +   pulumi:pulumi:Stack        learn-pulumi-import-code-dev  created (2s)
+ =   └─ docker:index:Container  frontend-container            imported (0.53s)
+
+Resources:
+    + 1 created
+    = 1 imported
+    2 changes
+
+Duration: 3s
 ```
 
-If you had any issues with the CLI command, you'll notice the slight difference in the error message. Here's the error you'd get from the CLI:
-
-```bash
-error: Preview failed: resource <id> does not exist
-```
+As before, you'll get an equals sign instead of a plus sign indicating the resource was imported without modification.
 
 One big difference to note for this method compared to the others is that this method **does not** protect the resource automatically. From here, any subsequent action by Pulumi as a result of modification of your code will apply to the resource, including destruction if you were to remove the resource from your code.
 
 ## Moving forward
 
-From here, you need to remove the `import` option to continue to update the resource. We only run that option once. And you can modify the resources as you see fit in the code with every `pulumi up` or `pulumi destroy` applying to the resource as with every other one you have in your code.
+You may now remove the `import` option from the imported resource definition, as Pulumi only recognizes that option once. And you can modify the resources as you see fit in the code with every `pulumi up` or `pulumi destroy` applying to the resource as with every other one you have in your code.
 
 {{% notes type=warning %}}
 
@@ -251,9 +202,9 @@ If you were following along, don't forget to tear down your stack and tear down 
 
 {{% /notes %}}
 
-<br/>
-<hr/>
-Congratulations! You've now finished this tutorial on importing resources and migrating to Pulumi! In this tutorial, you've learned about importing resources via a CLI command, importing resources in bulk, and importing resources in code.
+---
+
+Congratulations! You've now finished this tutorial on importing resources and migrating to Pulumi! In this tutorial, you learned about importing resources via a CLI command, importing resources in bulk, and importing resources in code.
 
 Go build new things, and watch this space for more learning experiences with Pulumi!
 
