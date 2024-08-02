@@ -102,11 +102,75 @@ Examples for adding the Stack Output `readme` to a Pulumi program:
 {{% choosable language typescript %}}
 
 ```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
 import { readFileSync } from "fs";
-export const strVar = "foo";
-export const arrVar = ["fizz", "buzz"];
-// add readme to stack outputs. must be named "readme".
-export const readme = readFileSync("./Pulumi.README.md").toString();
+
+const loggroup = new aws.cloudwatch.LogGroup("loggroup", {});
+const dashboard = new aws.cloudwatch.Dashboard("dashboard", {
+    dashboardName: "mydashboard",
+    dashboardBody: JSON.stringify({
+        widgets: [
+            {
+                type: "metric",
+                x: 0,
+                y: 0,
+                width: 12,
+                height: 6,
+                properties: {
+                    metrics: [[
+                        "AWS/EC2",
+                        "CPUUtilization",
+                        "InstanceId",
+                        "i-012345",
+                    ]],
+                    period: 300,
+                    stat: "Average",
+                    region: "us-east-1",
+                    title: "EC2 Instance CPU",
+                },
+            },
+            {
+                type: "text",
+                x: 0,
+                y: 7,
+                width: 3,
+                height: 3,
+                properties: {
+                    markdown: "Hello world",
+                },
+            },
+        ],
+    }),
+});
+const database = new aws.rds.Cluster("database", {
+    clusterIdentifier: "aurora-cluster-demo",
+    engine: aws.rds.EngineType.AuroraPostgresql,
+    availabilityZones: [
+        "us-west-2a",
+        "us-west-2b",
+        "us-west-2c",
+    ],
+    databaseName: "mydb",
+    masterUsername: "foo",
+    masterPassword: "must_be_eight_characters",
+    backupRetentionPeriod: 5,
+    preferredBackupWindow: "07:00-09:00",
+    skipFinalSnapshot: true,
+});
+const instance = new aws.rds.ClusterInstance("instance", {
+    clusterIdentifier: database.clusterIdentifier,
+    instanceClass: aws.rds.InstanceType.R5_Large,
+    engine: "aurora-postgresql",
+    engineVersion: "15.4",
+    performanceInsightsEnabled: true,
+});
+
+export const dashboardName = dashboard.dashboardName;
+export const cloudwatchLogGroup = loggroup.name;
+export const instanceId = instance.id;
+export const dbResourceId = instance.dbiResourceId;
+export const readme = readFileSync("./Pulumi.readme.md").toString();
 ```
 
 {{% /choosable %}}
@@ -115,9 +179,70 @@ export const readme = readFileSync("./Pulumi.README.md").toString();
 
 ```python
 import pulumi
-pulumi.export('strVar', 'foo')
-pulumi.export('arrVar', ['fizz', 'buzz'])
-# open template readme and read contents into stack output
+import json
+import pulumi_aws as aws
+
+loggroup = aws.cloudwatch.LogGroup("loggroup")
+dashboard = aws.cloudwatch.Dashboard("dashboard",
+    dashboard_name="mydashboard",
+    dashboard_body=json.dumps({
+        "widgets": [
+            {
+                "type": "metric",
+                "x": 0,
+                "y": 0,
+                "width": 12,
+                "height": 6,
+                "properties": {
+                    "metrics": [[
+                        "AWS/EC2",
+                        "CPUUtilization",
+                        "InstanceId",
+                        "i-012345",
+                    ]],
+                    "period": 300,
+                    "stat": "Average",
+                    "region": "us-east-1",
+                    "title": "EC2 Instance CPU",
+                },
+            },
+            {
+                "type": "text",
+                "x": 0,
+                "y": 7,
+                "width": 3,
+                "height": 3,
+                "properties": {
+                    "markdown": "Hello world",
+                },
+            },
+        ],
+    }))
+database = aws.rds.Cluster("database",
+    cluster_identifier="aurora-cluster-demo",
+    engine=aws.rds.EngineType.AURORA_POSTGRESQL,
+    availability_zones=[
+        "us-west-2a",
+        "us-west-2b",
+        "us-west-2c",
+    ],
+    database_name="mydb",
+    master_username="foo",
+    master_password="must_be_eight_characters",
+    backup_retention_period=5,
+    preferred_backup_window="07:00-09:00",
+    skip_final_snapshot=True)
+instance = aws.rds.ClusterInstance("instance",
+    cluster_identifier=database.cluster_identifier,
+    instance_class=aws.rds.InstanceType.R5_LARGE,
+    engine="aurora-postgresql",
+    engine_version="15.4",
+    performance_insights_enabled=True)
+
+pulumi.export("dashboardName", dashboard.dashboard_name)
+pulumi.export("cloudwatchLogGroup", loggroup.name)
+pulumi.export("instanceId", instance.id)
+pulumi.export("dbResourceId", instance.dbi_resource_id)
 with open('./Pulumi.README.md') as f:
     pulumi.export('readme', f.read())
 ```
@@ -127,17 +252,106 @@ with open('./Pulumi.README.md') as f:
 {{% choosable language go %}}
 
 ```go
+package main
+
+import (
+	"encoding/json"
+
+	"github.com/pulumi/pulumi-aws/sdk/v6/go/aws/cloudwatch"
+	"github.com/pulumi/pulumi-aws/sdk/v6/go/aws/rds"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
 func main() {
   pulumi.Run(func(ctx *pulumi.Context) error {
-    strVar := "foo"
-    arrVar := []string{"fizz", "buzz"}
-    readmeBytes, err := ioutil.ReadFile("./Pulumi.README.md")
+    loggroup, err := cloudwatch.NewLogGroup(ctx, "loggroup", nil)
+    if err != nil {
+      return err
+    }
+    dashboardJson, err := json.Marshal(map[string]interface{}{
+      "widgets": []interface{}{
+        map[string]interface{}{
+          "type":   "metric",
+          "x":      0,
+          "y":      0,
+          "width":  12,
+          "height": 6,
+          "properties": map[string]interface{}{
+          "metrics": [][]string{
+            []string{
+              "AWS/EC2",
+              "CPUUtilization",
+              "InstanceId",
+              "i-012345",
+            },
+          },
+            "period": 300,
+            "stat":   "Average",
+            "region": "us-east-1",
+            "title":  "EC2 Instance CPU",
+          },
+        },
+        map[string]interface{}{
+          "type":   "text",
+          "x":      0,
+          "y":      7,
+          "width":  3,
+          "height": 3,
+          "properties": map[string]interface{}{
+            "markdown": "Hello world",
+          },
+        },
+      },
+    })
+    if err != nil {
+      return err
+    }
+    json0 := string(dashboardJson)
+    dashboard, err := cloudwatch.NewDashboard(ctx, "dashboard", &cloudwatch.DashboardArgs{
+      DashboardName: pulumi.String("mydashboard"),
+      DashboardBody: pulumi.String(json0),
+    })
+    if err != nil {
+      return err
+    }
+    database, err := rds.NewCluster(ctx, "database", &rds.ClusterArgs{
+      ClusterIdentifier: pulumi.String("aurora-cluster-demo"),
+      Engine:            pulumi.String(rds.EngineTypeAuroraPostgresql),
+      AvailabilityZones: pulumi.StringArray{
+        pulumi.String("us-west-2a"),
+        pulumi.String("us-west-2b"),
+        pulumi.String("us-west-2c"),
+      },
+      DatabaseName:          pulumi.String("mydb"),
+      MasterUsername:        pulumi.String("foo"),
+      MasterPassword:        pulumi.String("must_be_eight_characters"),
+      BackupRetentionPeriod: pulumi.Int(5),
+      PreferredBackupWindow: pulumi.String("07:00-09:00"),
+      SkipFinalSnapshot:     pulumi.Bool(true),
+    })
+    if err != nil {
+      return err
+    }
+    instance, err := rds.NewClusterInstance(ctx, "instance", &rds.ClusterInstanceArgs{
+      ClusterIdentifier:          database.ClusterIdentifier,
+      InstanceClass:              pulumi.String(rds.InstanceType_R5_Large),
+      Engine:                     pulumi.String("aurora-postgresql"),
+      EngineVersion:              pulumi.String("15.4"),
+      PerformanceInsightsEnabled: pulumi.Bool(true),
+    })
+    if err != nil {
+      return err
+    }
+
+    readme, err := os.ReadFile("./Pulumi.README.md")
     if err != nil {
       return fmt.Errorf("failed to read readme: %w", err)
     }
-    ctx.Export("strVar", pulumi.String(strVar))
-    ctx.Export("arrVar", pulumi.ToStringArray(arrVar))
-    ctx.Export("readme", pulumi.String(string(readmeBytes)))
+    ctx.Export("dashboardName", dashboard.DashboardName)
+    ctx.Export("cloudwatchLogGroup", loggroup.Name)
+    ctx.Export("instanceId", instance.ID())
+    ctx.Export("dbResourceId", instance.DbiResourceId)
+    ctx.Export("readme", pulumi.String(string(readme)))
     return nil
   })
 }
@@ -148,22 +362,102 @@ func main() {
 {{% choosable language csharp %}}
 
 ```csharp
+using System.Collections.Generic;
+using System.Text.Json;
 using Pulumi;
-class MyStack : Stack
+using Aws = Pulumi.Aws;
+using System.IO;
+
+return await Deployment.RunAsync(() => 
 {
-    public MyStack()
+    var loggroup = new Aws.CloudWatch.LogGroup("loggroup");
+
+    var dashboard = new Aws.CloudWatch.Dashboard("dashboard", new()
     {
-        this.StrVar = "foo";
-        this.ArrVar = new string[] { "fizz", "buzz" };
-        this.Readme = Output.Create(System.IO.File.ReadAllText("./Pulumi.README.md"));
-    }
-    [Output]
-    public Output<string> StrVar { get; set; }
-    [Output]
-    public Output<string[]> ArrVar { get; set; }
-    [Output]
-    public Output<string> Readme { get; set; }
-}
+        DashboardName = "mydashboard",
+        DashboardBody = JsonSerializer.Serialize(new Dictionary<string, object?>
+        {
+            ["widgets"] = new[]
+            {
+                new Dictionary<string, object?>
+                {
+                    ["type"] = "metric",
+                    ["x"] = 0,
+                    ["y"] = 0,
+                    ["width"] = 12,
+                    ["height"] = 6,
+                    ["properties"] = new Dictionary<string, object?>
+                    {
+                        ["metrics"] = new[]
+                        {
+                            new[]
+                            {
+                                "AWS/EC2",
+                                "CPUUtilization",
+                                "InstanceId",
+                                "i-012345",
+                            },
+                        },
+                        ["period"] = 300,
+                        ["stat"] = "Average",
+                        ["region"] = "us-east-1",
+                        ["title"] = "EC2 Instance CPU",
+                    },
+                },
+                new Dictionary<string, object?>
+                {
+                    ["type"] = "text",
+                    ["x"] = 0,
+                    ["y"] = 7,
+                    ["width"] = 3,
+                    ["height"] = 3,
+                    ["properties"] = new Dictionary<string, object?>
+                    {
+                        ["markdown"] = "Hello world",
+                    },
+                },
+            },
+        }),
+    });
+
+    var database = new Aws.Rds.Cluster("database", new()
+    {
+        ClusterIdentifier = "aurora-cluster-demo",
+        Engine = Aws.Rds.EngineType.AuroraPostgresql,
+        AvailabilityZones = new[]
+        {
+            "us-west-2a",
+            "us-west-2b",
+            "us-west-2c",
+        },
+        DatabaseName = "mydb",
+        MasterUsername = "foo",
+        MasterPassword = "must_be_eight_characters",
+        BackupRetentionPeriod = 5,
+        PreferredBackupWindow = "07:00-09:00",
+        SkipFinalSnapshot = true,
+    });
+
+    var instance = new Aws.Rds.ClusterInstance("instance", new()
+    {
+        ClusterIdentifier = database.ClusterIdentifier,
+        InstanceClass = Aws.Rds.InstanceType.R5_Large,
+        Engine = "aurora-postgresql",
+        EngineVersion = "15.4",
+        PerformanceInsightsEnabled = true,
+    });
+
+    var readme = Output.Create(File.ReadAllText("./Pulumi.README.md"));
+
+    return new Dictionary<string, object?>
+    {
+        ["dashboardName"] = dashboard.DashboardName,
+        ["cloudwatchLogGroup"] = loggroup.Name,
+        ["instanceId"] = instance.Id,
+        ["dbResourceId"] = instance.DbiResourceId,
+        ["readme"] = readme
+    };
+});
 ```
 
 {{% /choosable %}}
@@ -171,26 +465,107 @@ class MyStack : Stack
 {{% choosable language java %}}
 
 ```java
-package stackreadme;
+package generated_program;
+
+import com.pulumi.Context;
+import com.pulumi.Pulumi;
+import com.pulumi.core.Output;
+import com.pulumi.aws.cloudwatch.LogGroup;
+import com.pulumi.aws.cloudwatch.Dashboard;
+import com.pulumi.aws.cloudwatch.DashboardArgs;
+import com.pulumi.aws.rds.Cluster;
+import com.pulumi.aws.rds.ClusterArgs;
+import com.pulumi.aws.rds.ClusterInstance;
+import com.pulumi.aws.rds.ClusterInstanceArgs;
+import static com.pulumi.codegen.internal.Serialization.*;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Map;
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import com.pulumi.Pulumi;
-import com.pulumi.core.Output;
+
 public class App {
     public static void main(String[] args) {
-        Pulumi.run(ctx -> {
-            var strVar = "foo";
-            var arrVar = new String[]{ "fizz", "buzz" };
-            try {
-                var readme = Files.readString(Paths.get("./Pulumi.README.md"));
-                ctx.export("strVar", Output.of(strVar));
-                ctx.export("arrVar", Output.of(arrVar));
-                ctx.export("readme", Output.of(readme));
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
-        });
+        Pulumi.run(App::stack);
+    }
+
+    public static void stack(Context ctx) {
+        var loggroup = new LogGroup("loggroup");
+
+        var dashboard = new Dashboard("dashboard", DashboardArgs.builder()
+            .dashboardName("mydashboard")
+            .dashboardBody(serializeJson(
+                jsonObject(
+                    jsonProperty("widgets", jsonArray(
+                        jsonObject(
+                            jsonProperty("type", "metric"),
+                            jsonProperty("x", 0),
+                            jsonProperty("y", 0),
+                            jsonProperty("width", 12),
+                            jsonProperty("height", 6),
+                            jsonProperty("properties", jsonObject(
+                                jsonProperty("metrics", jsonArray(jsonArray(
+                                    "AWS/EC2", 
+                                    "CPUUtilization", 
+                                    "InstanceId", 
+                                    "i-012345"
+                                ))),
+                                jsonProperty("period", 300),
+                                jsonProperty("stat", "Average"),
+                                jsonProperty("region", "us-east-1"),
+                                jsonProperty("title", "EC2 Instance CPU")
+                            ))
+                        ), 
+                        jsonObject(
+                            jsonProperty("type", "text"),
+                            jsonProperty("x", 0),
+                            jsonProperty("y", 7),
+                            jsonProperty("width", 3),
+                            jsonProperty("height", 3),
+                            jsonProperty("properties", jsonObject(
+                                jsonProperty("markdown", "Hello world")
+                            ))
+                        )
+                    ))
+                )))
+            .build());
+
+        var database = new Cluster("database", ClusterArgs.builder()
+            .clusterIdentifier("aurora-cluster-demo")
+            .engine("aurora-postgresql")
+            .availabilityZones(            
+                "us-west-2a",
+                "us-west-2b",
+                "us-west-2c")
+            .databaseName("mydb")
+            .masterUsername("foo")
+            .masterPassword("must_be_eight_characters")
+            .backupRetentionPeriod(5)
+            .preferredBackupWindow("07:00-09:00")
+            .skipFinalSnapshot(true)
+            .build());
+
+        var instance = new ClusterInstance("instance", ClusterInstanceArgs.builder()
+            .clusterIdentifier(database.clusterIdentifier())
+            .instanceClass("db.r5.large")
+            .engine("aurora-postgresql")
+            .engineVersion("15.4")
+            .performanceInsightsEnabled(true)
+            .build());
+
+        ctx.export("dashboardName", dashboard.dashboardName());
+        ctx.export("cloudwatchLogGroup", loggroup.name());
+        ctx.export("instanceId", instance.id());
+        ctx.export("dbResourceId", instance.dbiResourceId());
+
+        try {
+            var readme = Files.readString(Paths.get("./Pulumi.README.md"));
+            ctx.export("readme", Output.of(readme));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
 ```
@@ -209,7 +584,7 @@ An example of a README file, `Pulumi.README.md`, the template Stack README file 
 ### Monitor
 ​
 1. [Cloudwatch Metrics](https://us-west-2.console.aws.amazon.com/cloudwatch/home?region=us-west-2#dashboards:name=${outputs.dashboardName}): Monitor holistic metrics tracking overall service health
-2. [RDS Performance Metrics](https://us-west-2.console.aws.amazon.com/rds/home?region=us-west-2#performance-insights-v20206:/resourceId/${database.databaseCluster.id}/resourceName/${outputs.rdsClusterWriterInstance}): Monitor RDS performance (wait times, top queries)
+2. [RDS Performance Metrics](https://us-west-2.console.aws.amazon.com/rds/home?region=us-west-2#performance-insights-v20206:/resourceId/${outputs.dbResourceId}/resourceName/${outputs.instanceId}/presetKey/1h/presetUnit/hour/presetAmount/1): Monitor RDS performance (wait times, top queries)
 3. [Cloudwatch Logs](https://us-west-2.console.aws.amazon.com/cloudwatch/home?region=us-west-2#logStream:group=${outputs.cloudwatchLogGroup}): Search across service logs
 ```
 
