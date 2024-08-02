@@ -42,7 +42,7 @@ IDPs are a key component of modern platform engineering strategies. An IDP is a 
 an organization's infrastructure, abstracting away complexity and providing developers with the tools and environments
 they need to build, test, and deploy applications efficiently.
 
-Key features of an [IDP](blog/why-switch-to-pulumi/#why-pulumi-for-internal-developer-platforms):
+Key features of an [IDP](/blog/why-switch-to-pulumi#why-pulumi-for-internal-developer-platforms):
 
 * Developer Control Plane. Curated experiences that empower developers by meeting them at their level of expertise,
   whether it's an abstracted developer portal, custom CLI, or shared IaC templates.
@@ -64,32 +64,22 @@ improve security and compliance, and foster a culture of innovation. IDPs act as
 development teams to focus on creating business value while the platform handles the underlying complexity of
 cloud-native infrastructure.
 
-`KEBAP`, as a reference architecture, demonstrates how to construct an IDP using best-in-class CNCF technologies,
-orchestrated and managed through Pulumi's infrastructure as code capabilities.
+The [Cloud Native Computing Foundation](https://www.cncf.io/) (CNCF) landscape offers a large ecosystem of tools and
+technologies that can be leveraged to build these platforms from scratch. However, the sheer number of options can be
+overwhelming, making it difficult for organizations to determine the best combination of tools for their specific needs.
 
-Platform engineering addresses these challenges by creating a layer of abstraction between development teams and the
-underlying infrastructure. This approach aims to simplify workflows, standardize practices, and empower developers to
-focus on creating business value rather than grappling with intricate infrastructure details.
-
-The [Cloud Native Computing Foundation](https://www.cncf.io/) (CNCF) landscape offers a rich ecosystem of tools and
-technologies that can be leveraged to build these platforms. However, the sheer number of options can be overwhelming,
-making it difficult for organizations to determine the best combination of tools for their specific needs.
-
-At Pulumi's Customer Experience Team, we've observed that adopting infrastructure as code often serves as a catalyst for
+At Pulumi's Customer Experience Team, we've observed that adopting Infrastructure as Code often serves as a catalyst for
 organizations to reassess their entire software delivery process. This reassessment frequently leads to the
-implementation of more streamlined, automated, and secure methodologies – the core principles of platform engineering.
+implementation of more streamlined, automated, and secure methodologies – the core principles of platform engineering
+mentioned above.
 
-To address these challenges and provide guidance, we've created a reference architecture called the `KEBAP` stack.
-Demonstrating how various CNCF technologies can be integrated cohesively using Pulumi to create a robust, scalable
-internal developer platform.
+To provide guidance for our customers, we have created a reference architecture called the `KEBAP` stack, this stack
+offers a structured approach to integrate these technologies into an effective platform engineering solution
+using [Pulumi](/).
 
-For organizations already utilizing the CNCF ecosystem, `KEBAP` offers a structured approach to integrate these
-technologies into an effective platform engineering solution. This method helps teams streamline their existing Cloud
-Native implementations, providing a cohesive framework that enhances operational efficiency and adaptability.
+## The KEBAP Stack Reference Architecture
 
-## One Reference Architecture: The `KEBAP` Stack
-
-The `KEBAP` stack consists of the following components:
+The `KEBAP` stack consists of the following (most commonly used) CNCF projects:
 
 - **K**ubernetes (with Kyverno as a bonus)
 - **E**xternal Secrets Operator
@@ -97,288 +87,35 @@ The `KEBAP` stack consists of the following components:
 - **A**rgo CD
 - **P**ulumi
 
-This combination forms a standardized GitOps stack applicable to various infrastructure projects. By implementing the
-`KEBAP` stack, we've consistently reduced the time required for teams to establish development and production
-environments from months to minutes.
-
-To following along, we are going to use
-the [capabilities of platforms](https://tag-app-delivery.cncf.io/whitepapers/platforms/#capabilities-of-platforms)
-definition from the CNCF working group on Platforms.
+Have a look on the high-level architectural diagram of the `KEBAP` stack to get a first idea of what we are going
+to talk about in the following sections:
 
 <img src="base.png">
 
-## Let's Break It Down
+## Breaking Down the KEBAP Stack
 
-Let's take a closer look at each component of the `KEBAP` stack and understand how they work together to streamline the
-software delivery process.
-
-The five layers of the `KEBAP` stack are designed to address different aspects of the software delivery process:
-
-### Kubernetes
-
-<img src="k.png">
-
-[Kubernetes](https://kubernetes.io/) serves as the central control plane. It provides a well-defined API for managing
-containerized workloads and with the help of the Kubernetes Operator pattern, it can be extended to manage custom
-resources. In our case we extend
-the Kubernetes API with the Pulumi Kubernetes Operator to manage the infrastructure resources in the same way as the
-rest of the Kubernetes resources.
-
-Here is an example of how we can use the Pulumi Kubernetes Operator to create a new Kubernetes cluster
-in `DigitalOcean`:
-
-```yaml
----
-apiVersion: apiextensions.k8s.io/v1
-kind: CustomResourceDefinition
-metadata:
-  annotations:
-    controller-gen.kubebuilder.io/version: v0.15.0
-  name: programs.pulumi.com
-spec:
-  group: pulumi.com
-  names:
-    kind: Program
-    listKind: ProgramList
-    plural: programs
-    singular: program
-  scope: Namespaced
-  versions:
-  - additionalPrinterColumns:
-    - jsonPath: .metadata.creationTimestamp
-      name: Age
-      type: date
-    name: v1
-    schema:
-      openAPIV3Schema:
-        description: Program is the schema for the inline YAML program API.
-        properties:
-          apiVersion:
-            description: |-
-              APIVersion defines the versioned schema of this representation of an object.
-              Servers should convert recognized schemas to the latest internal value, and
-              may reject unrecognized values.
-              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
-            type: string
-          kind:
-            description: |-
-              Kind is a string value representing the REST resource this object represents.
-              Servers may infer this from the endpoint the client submits requests to.
-              Cannot be updated.
-              In CamelCase.
-              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
-            type: string
-          metadata:
-            type: object
-          program:
-            properties:
-              configuration:
-                additionalProperties:
-                  properties:
-                    default:
-                      description: default is a value of the appropriate type for
-                        the template to use if no value is specified.
-                      x-kubernetes-preserve-unknown-fields: true
-                    type:
-                      description: type is the (required) data type for the parameter.
-                      enum:
-                      - String
-                      - Number
-                      - List<Number>
-                      - List<String>
-                      type: string
-                  type: object
-                description: |-
-                  configuration specifies the Pulumi config inputs to the deployment.
-                  Either type or default is required.
-                type: object
-              outputs:
-                additionalProperties:
-                  x-kubernetes-preserve-unknown-fields: true
-                description: outputs specifies the Pulumi stack outputs of the program
-                  and how they are computed from the resources.
-                type: object
-              resources:
-                additionalProperties:
-                  properties:
-                    get:
-                      description: A getter function for the resource. Supplying get
-                        is mutually exclusive to properties.
-                      properties:
-                        id:
-                          description: The ID of the resource to import.
-                          minLength: 1
-                          type: string
-                        state:
-                          additionalProperties:
-                            x-kubernetes-preserve-unknown-fields: true
-                          description: |-
-                            state contains the known properties (input & output) of the resource. This assists
-                            the provider in figuring out the correct resource.
-                          type: object
-                      required:
-                      - id
-                      type: object
-                    options:
-                      description: options contains all resource options supported
-                        by Pulumi.
-                      properties:
-                        additionalSecretOutputs:
-                          description: additionalSecretOutputs specifies properties
-                            that must be encrypted as secrets.
-                          items:
-                            type: string
-                          type: array
-                        aliases:
-                          description: |-
-                            aliases specifies names that this resource used to have, so that renaming or refactoring
-                            doesn’t replace it.
-                          items:
-                            type: string
-                          type: array
-                        customTimeouts:
-                          description: customTimeouts overrides the default retry/timeout
-                            behavior for resource provisioning.
-                          properties:
-                            create:
-                              description: create is the custom timeout for create
-                                operations.
-                              type: string
-                            delete:
-                              description: delete is the custom timeout for delete
-                                operations.
-                              type: string
-                            update:
-                              description: update is the custom timeout for update
-                                operations.
-                              type: string
-                          type: object
-                        deleteBeforeReplace:
-                          description: deleteBeforeReplace overrides the default create-before-delete
-                            behavior when replacing.
-                          type: boolean
-                        dependsOn:
-                          description: dependsOn adds explicit dependencies in addition
-                            to the ones in the dependency graph.
-                          items:
-                            x-kubernetes-preserve-unknown-fields: true
-                          type: array
-                        ignoreChanges:
-                          description: ignoreChanges declares that changes to certain
-                            properties should be ignored when diffing.
-                          items:
-                            type: string
-                          type: array
-                        import:
-                          description: import adopts an existing resource from your
-                            cloud account under the control of Pulumi.
-                          type: string
-                        parent:
-                          description: |-
-                            parent resource option specifies a parent for a resource. It is used to associate
-                            children with the parents that encapsulate or are responsible for them.
-                          x-kubernetes-preserve-unknown-fields: true
-                        protect:
-                          description: protect prevents accidental deletion of a resource.
-                          type: boolean
-                        provider:
-                          description: provider resource option sets a provider for
-                            the resource.
-                          x-kubernetes-preserve-unknown-fields: true
-                        providers:
-                          additionalProperties:
-                            x-kubernetes-preserve-unknown-fields: true
-                          description: providers resource option sets a map of providers
-                            for the resource and its children.
-                          type: object
-                        version:
-                          description: version specifies a provider plugin version
-                            that should be used when operating on a resource.
-                          type: string
-                      type: object
-                    properties:
-                      additionalProperties:
-                        x-kubernetes-preserve-unknown-fields: true
-                      description: properties contains the primary resource-specific
-                        keys and values to initialize the resource state.
-                      type: object
-                    type:
-                      description: type is the Pulumi type token for this resource.
-                      minLength: 1
-                      type: string
-                  required:
-                  - type
-                  type: object
-                description: resources declares the Pulumi resources that will be
-                  deployed and managed by the program.
-                type: object
-              variables:
-                additionalProperties:
-                  x-kubernetes-preserve-unknown-fields: true
-                description: |-
-                  variables specifies intermediate values of the program; the values of variables are
-                  expressions that can be re-used.
-                type: object
-            type: object
-        type: object
-    served: true
-    storage: true
-    subresources: {}
-```
-
-### Argo CD
-
-<img src="a.png">
-
-[Argo CD](https://argo-cd.readthedocs.io/en/stable/) handles the deployment layer, ensuring that the current deployment
-matches what is declaratively defined in the
-source. It's emerging as the de facto standard due to its rich front-end and powerful features. Argo CD implements the
-GitOps model, continuously monitoring your Git repositories and automatically updating the deployed applications to
-match the desired state.
-
-```yaml
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: ${{values.name}}-${{values.stage}}-${{ (values.owner | parseEntityRef).name }}
-  namespace: argocd
-spec:
-  destination:
-    namespace: pulumi-operator
-    server: https://kubernetes.default.svc
-  project: ${{ (values.owner | parseEntityRef).name }}
-  source:
-    path: "gitops/teams/clusters/${{values.name}}-${{values.stage}}-cluster"
-    directory:
-      recurse: false
-      exclude: '{catalog-info.yaml}'
-    targetRevision: main
-    repoURL: https://github.com/my-backstage-demo/backstage-infrastructure-provisioning-templates-workshop.git
-  syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
-    syncOptions:
-    - ServerSideApply=true
-    - CreateNamespace=true
-```
+Let's take a closer look at each component of the `KEBAP` stack and understand what their role. The `KEBAP` is layered
+in such a way that each component builds on the capabilities of the previous one. The five layers of the `KEBAP` stack
+are designed to address different capabilities of our internal developer platform:
 
 ### Pulumi
 
 <img src="p.png" >
 
-Pulumi manages the lifecycle of all the cloud infrastructure, developers self-service. It allows you to use familiar
-programming languages to define your infrastructure as code, providing more flexibility and power than traditional YAML
-or domain-specific languages. The [Pulumi Kubernetes Operator](https://github.com/pulumi/pulumi-kubernetes-operator)
-enables you to manage your infrastructure directly from within Kubernetes, offering seamless integration with your
-existing Kubernetes workflows.
+{{% notes type="info" %}}
+Pulumi manages the lifecycle of all cloud infrastructure, providing developers with self-service capabilities. It allows
+you to use familiar programming languages to define your infrastructure as code, offering more flexibility and power
+than traditional YAML or domain-specific languages.
+{{% /notes %}}
 
-As we use GitOps to manage the infrastructure, we define the infrastructure in the Git repository let
-then [Argo CD](#argo-cd) deploy it to the cluster. As soon the definition of the infrastructure is deployed to the
-cluster, the Pulumi Kubernetes Operator will take care and create the defined resources in the selected cloud provider.
+The [Pulumi Kubernetes Operator](https://github.com/pulumi/pulumi-kubernetes-operator) enables you to manage your
+infrastructure directly from within Kubernetes, seamlessly integrating with your existing Kubernetes workflows.
 
-Here is an example of how we can use the Pulumi Kubernetes Operator to create a new Kubernetes cluster
-in `DigitalOcean`:
+Since we use GitOps as our deployment method, we define the infrastructure in a Git repository and then
+let [Argo CD](#argo-cd) deploy it to the hub cluster. As soon as the infrastructure definition is deployed, the Pulumi
+Kubernetes Operator will take over and create the defined resources in the selected cloud provider.
+
+Here is an example Pulumi definition of a new Kubernetes cluster using `DigitalOcean`:
 
 ```yaml
 apiVersion: pulumi.com/v1
@@ -423,20 +160,76 @@ spec:
   destroyOnFinalize: false
 ```
 
+### Kubernetes
+
+<img src="k.png">
+
+{{% notes type="info" %}}
+In modern cloud computing, the [hub-and-spoke architecture](https://open-cluster-management.io/concepts/architecture/)
+pattern is widely used to manage multiple [Kubernetes](https://kubernetes.io/) clusters. In this pattern, a central
+control plane (hub) manages a set of clusters (spokes) that run applications and services. The hub provides a unified
+view of the entire infrastructure, enabling centralized management, monitoring, and security.
+{{% /notes %}}
+
+The control plane cluster in the `KEBAP` stack is the hub cluster and contains the control plane logic for the entire
+IDP.
+
+### Argo CD
+
+<img src="a.png">
+
+{{% notes type="info" %}}
+[Argo CD](https://argo-cd.readthedocs.io/en/stable/) handles the deployment layer, ensuring that the current deployment
+matches what is declaratively defined in the source. It's emerging as the de facto standard due to its rich front-end
+and powerful features. Argo CD implements the GitOps model, continuously monitoring your Git repositories and
+automatically updating the deployed applications to match the desired state.
+{{% /notes %}}
+
+In the `KEBAP` stack, we use Argo CD to deploy the Pulumi infrastructure defined in the Git repository to our hub
+cluster.
+
+```yaml
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: ${{values.name}}-${{values.stage}}-${{ (values.owner | parseEntityRef).name }}
+  namespace: argocd
+spec:
+  destination:
+    namespace: pulumi-operator
+    server: https://kubernetes.default.svc
+  project: ${{ (values.owner | parseEntityRef).name }}
+  source:
+    path: "gitops/teams/clusters/${{values.name}}-${{values.stage}}-cluster"
+    directory:
+      recurse: false
+      exclude: '{catalog-info.yaml}'
+    targetRevision: main
+    repoURL: https://github.com/my-backstage-demo/backstage-infrastructure-provisioning-templates-workshop.git
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+    - ServerSideApply=true
+    - CreateNamespace=true
+```
+
 ### External Secrets Operator (ESO)
 
 <img src="e.png" >
 
-ESO addresses the challenge of securely managing secrets in Kubernetes. It integrates with various secret stores (such
-as AWS Secrets Manager, HashiCorp Vault, Google Secrets Manager, Azure Key Vault) in a consistent way. This allows you
-to configure access to the secret store once for all your required secrets, enhancing security and simplifying
-management.
+{{% notes type="info" %}}
+The External Secrets Operator (ESO) addresses the challenge of securely managing secrets in Kubernetes. It integrates
+with various secret stores (such as Pulumi ESC, AWS Secrets Manager, HashiCorp Vault, Google Secrets Manager, Azure Key
+Vault). This allows you to configure access to the secret store once for all your required secrets, enhancing security
+and simplifying management.
+{{% /notes %}}
 
 We even take it a step further by using ESO to manage the secrets
 from [Pulumi ESC (Environments, Secrets, and  Configurations)](https://www.pulumi.com/product/esc/) with
-the [Pulumi Provider](https://external-secrets.io/latest/provider/pulumi/) for ESO. This way, we can manage the secrets
-in the same way as the rest of the infrastructure, ensuring that the secrets are managed in a secure and consistent
-manner across different environments.
+the [Pulumi Provider](https://external-secrets.io/latest/provider/pulumi/) for ESO. This way, we use the Pulumi not only
+for the infrastructure but also for the secrets management reducing the number of tools we need to manage.
 
 To give the Pulumi Kubernetes Operator access to the secrets, we create following `ClusterSecretStore` object:
 
@@ -483,13 +276,16 @@ spec:
 
 <img src="b.png" >
 
+{{% notes type="info" %}}
 Backstage is an open platform for building developer portals. It provides a centralized place for managing software
 catalogs, documentation, and tooling. This layer helps in organizing microservices and infrastructure, streamlining the
 process for developers to create, manage, and explore services.
+{{% /notes %}}
 
-We also installed the [Pulumi plugin](https://github.com/pulumi/pulumi-backstage-plugin) for Backstage, which allows us
-to manage our infrastructure as code directly from the Backstage UI. There are several ways to interact with the plugin.
-If you want to use the scaffolding feature, you can add following `step` for example to your `Template` definition:
+In our `KEBAB` stack, we installed the [Pulumi plugin](https://github.com/pulumi/pulumi-backstage-plugin) for Backstage,
+which allows us to manage our infrastructure as code directly from the Backstage UI by cookie-cutting the Pulumi project
+and making the result available in our source control repository. From there, Argo CD takes over and deploys the
+definition to the hub cluster as described above.
 
 ```yaml
 apiVersion: scaffolder.backstage.io/v1beta3
@@ -522,13 +318,16 @@ spec:
 
 <img src="k2.png" >
 
-As a bonus, Kyverno can be used to enforce policies and automate security and operational best practices in Kubernetes
-clusters. Kyverno is a policy engine designed for Kubernetes that allows you to define policies as code and enforce them
-at runtime. This ensures that your Kubernetes clusters are secure and compliant with your organization's policies.
+{{% notes type="info" %}}
+[Kyverno](https://kyverno.io/) can be used to enforce policies and automate security and operational best practices in
+Kubernetes clusters. Kyverno is a policy engine designed for Kubernetes that allows you to define policies as code and
+enforce them at runtime. This ensures that your Kubernetes clusters are secure and compliant with your organization's
+policies.
+{{% /notes %}}
 
-In our case, we use Kyverno to create a `ClusterPolicy` object to automatically add `vCluster` clusters to the Argo CD
-as spoke clusters. This will generate a `Secret` object in the `argocd` namespace for each `vCluster` cluster the dev
-teams create.
+In the `KEBEP` stack, we use Kyverno to create a `ClusterPolicy` object to automatically add `vCluster` clusters to the
+Argo CD as spoke clusters. This will generate a `Secret` object in the `argocd` namespace for each `vCluster` cluster
+the dev teams create.
 
 ```yaml
 apiVersion: kyverno.io/v1
@@ -616,20 +415,15 @@ spec:
 
 ## Putting all the Pieces Together
 
-The `KEBAP` stack fulfills the requirements of a robust GitOps implementation:
+As we have seen, each component of the `KEBAP` stack plays a crucial role in the overall architecture. Let's how the
+different workflows look like when we put all the pieces together. We go through the following scenarios:
 
-1. Kubernetes provides the 'declarative infrastructure' through its use of YAML to define the cluster configuration.
-2. Applications run as immutable and versioned containers on these declaratively-defined clusters.
-3. Argo CD serves as the GitOps 'agent', ensuring deployments match the defined state.
-4. Pulumi provisions the supporting infrastructure and bootstraps the running application platform.
-5. Backstage offers a developer portal for service management and discovery.
-6. External Secrets Operator ensures secure and consistent secrets management across different environments.
+- Ignite the Control Plane Cluster With Pulumi
+- Ordering a New Development Kubernetes Cluster
+- Ordering a New Production Kubernetes Cluster
+- Ordering Other Infrastructure
 
-All components are version-controlled in Git, ensuring auditability and traceability.
-
-Let's see how we bootstrap the whole stack:
-
-##### Ignite the Control Plane cluster with Pulumi
+#### Ignite the Control Plane Cluster With Pulumi
 
 <img src="ignite.png" width="500px">
 
@@ -650,7 +444,7 @@ The idea is to let then Argo CD fetch the rest of the configuration from the Git
 And here comes the power of GitOps: It will also manage the Argo CD itself. This way, we separated the workload running
 on the cluster from the creation of the cluster itself.
 
-##### Ordering a new development Kubernetes cluster
+#### Ordering a New Development Kubernetes Cluster
 
 <img src="order.png" width="500px">
 
@@ -662,7 +456,7 @@ way as we would do for production clusters.
 
 See the definition of the `ClusterPolicy` object in the [Kyverno](#bonus-kyverno) section.
 
-##### Ordering a new production Kubernetes cluster
+#### Ordering a New Production Kubernetes Cluster
 
 <img src="order_cluster.png" width="500px">
 
@@ -671,7 +465,7 @@ in the cloud provider of choice. After the creation of the cluster, we add it to
 This way, we can roll out applications to the production cluster in the same way as we would do for development
 clusters.
 
-##### Ordering Other Infrastructure
+#### Ordering Other Infrastructure
 
 <img src="order_rest.png" width="500px">
 
@@ -681,13 +475,12 @@ manage all the infrastructure components in the same way as we manage the Kubern
 
 ## Conclusion and Pulumi Cloud as an Off-the-Shelf Solution
 
-Many organizations are adopting a CNCF-based stack for their infrastructure needs. These teams require robust platforms
-to manage complex, distributed systems, enable developer self-service, ensure security and compliance, and streamline
-operations. While CNCF projects excel in various areas, there's often a gap in managing the entire infrastructure
-lifecycle programmatically.
+A lot of organizations are building their internal developer platforms using CNCF projects to fulfill the needs of their
+internal customers. The `KEBAP` stack provides a structured approach to integrate these technologies into an effective
+platform engineering solution. We also saw that Pulumi plays a crucial role in this stack by taking care of the
+management of the cloud infrastructure.
 
-Pulumi fills this critical role by seamlessly integrating with other CNCF projects in the Cloud Native ecosystem. This
-powerful combination creates a `KEBAP` stack, providing:
+This `KEBAP` stack offers several benefits, including:
 
 1. A secure, automated, and auditable environment
 2. Reproducible and programmable infrastructure-as-code
@@ -695,15 +488,11 @@ powerful combination creates a `KEBAP` stack, providing:
 4. Faster onboarding for new team members
 5. Easier compliance with regulatory requirements due to increased auditability
 
-By leveraging Pulumi within a CNCF ecosystem, organizations can significantly reduce costs through automation,
-eliminating manual processes that previously required substantial time and effort. This approach empowers teams to
-build, test, and operate software more efficiently, accelerating innovation while maintaining robust control over their
-infrastructure.
-
 But there is also a downside: The `KEBAP` stack requires a significant investment in time and resources to set up and
-maintain as you are in full charge of the integration of the components as well as operating them. The CNCF landscape is
-not an integration map, and not all components are designed to work together out of the box or stay compatible with each
-other in the long run.
+maintain as you are in full charge of the integration of the components as well as operating them. All the projects
+under the umbrella of CNCF are not automatically implying that they are compatible with each other out of the box. Any
+platform engineering team will need to invest continuously time and resources to keep the stack up-to-date and running.
+This is a not negligible investment to consider for any organization.
 
 For this reason, we at Pulumi offer [Pulumi Cloud ](/product/pulumi-cloud). A fully managed Infrastructure as Code
 platform that takes care of the integration of the different components of and internal developer portal and provides a
