@@ -33,7 +33,7 @@ social:
     This helps reduce the time required to establish development and production environments from months to minutes. #GitOps #Kubernetes #ArgoCD #Pulumi #Backstage
 ---
 
-In today's complex digital landscape, organizations are increasingly turning to platform engineering to optimise their
+In today's complex digital landscape, organizations are increasingly turning to [platform engineering](https://www.pulumi.com/what-is/what-is-platform-engineering/) to optimise their
 software delivery processes and maximize efficiency. The growing complexity of modern applications, coupled with the
 need for rapid, secure, and scalable deployments, has created a pressing demand for robust Internal Developer
 Platforms (IDPs).
