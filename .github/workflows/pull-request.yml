@@ -52,6 +52,7 @@ jobs:
           ALGOLIA_APP_ID: ${{ vars.ALGOLIA_APP_ID }}
           ALGOLIA_APP_SEARCH_KEY: ${{ vars.ALGOLIA_APP_SEARCH_KEY }}
           ALGOLIA_APP_ADMIN_KEY: ${{  secrets.ALGOLIA_APP_ADMIN_KEY }}
+          CMS_API_TOKEN: ${{  secrets.CMS_API_TOKEN }}
           NODE_OPTIONS: "--max_old_space_size=8192"
 
       - name: Archive test results
