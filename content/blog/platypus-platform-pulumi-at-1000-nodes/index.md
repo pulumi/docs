@@ -1,18 +1,20 @@
 ---
-title: "Platypus: A Pulumi-based reference architecture for large-scale organizations"
+title: "Pulumi Patterns and Practices (P3): A Pulumi-based reference architecture for large-scale organizations"
 allow_long_title: true
 date: 2024-08-05
 draft: false
 social_media: "TBD"
-meta_desc: "Platypus is a reference architecture of a Pulumi-based internal platform for infrastructure management and secure deployments in a large-scale environment."
+meta_desc: "Pulumi Patterns and Practices (P3) is a reference architecture of a Pulumi-based internal platform for infrastructure management and secure deployments in a large-scale environment."
 meta_image: meta.png
 authors:
     - troy-howard
 tags:
     - platform-engineering
-    - platypus-platform
+    - patterns-and-practices
+    - p3
     - devsecops
     - architecture
+    - scaling
 ---
 
 Infrastructure management is all fun and games until you find yourself scrolling through 1000+ resources in your AWS console. Worse, when one rogue product team wants to use Azure and your data team wants to be on GCP, you're ARM wrestling in Azure and watching your economies of scale tip the wrong direction as you're copy-pasting CloudFormation templates into yet another git repo. This. Needs. To. Be. A. Platform!
@@ -39,15 +41,15 @@ There are quite a few [listicles](https://en.wikipedia.org/wiki/Listicle) out th
 
 **Developer Experience:** In the ideal world, developers drive their own DevOps. The platform team provides self-service tools and streamlined workflows that allow your engineers to provision new resources, so your team doesn't have to. And you know, if the developers don't like the user experience, they won't use it at all, and will invent their own tools. You will have ROGUE SYSTEMS to hunt down and argue against in tedious overly-technical meetings. This is not what you want. We need to keep the developers happy to prevent this.
 
-## A holistic view of the Platypus reference architecture
+## A holistic view of the Pulumi Patterns and Practices reference architecture
 
 Pulumi has a broad surface area of [products and features](https://www.pulumi.com/product/) that address these needs. Designed with integration in mind from the beginning, our tools orchestrate well, presenting a smooth and streamlined workflow for both operations teams and developer teams.
 
 We have an idea of how you can use all the Pulumi products together to deliver a comprehensive internal platform for security, infrastructure management, and deployments. Call it an [internal platform for developer platform engineers](https://www.pulumi.com/what-is/what-is-platform-engineering/) (IPfDPE), if you want. We call it the realization of a vision we've been working hard to build for many years.
 
-**Platypus** is a reference architecture that we will be describing, and providing code for, through this series of articles. We'll be diving deep into not just what you can do with our tools, but how to do it, and provide code for a reference implementation that you can use to jump start the process.
+**Pulumi Patterns and Practices (P3)** is a reference architecture that we will be describing, and providing code for, through this series of articles. We'll be diving deep into not just what you can do with our tools, but how to do it, and provide code for a reference implementation that you can use to jump start the process.
 
-Here's a quick overview to give you an idea of how we'll be addressing those needs in Platypus.
+Here's a quick overview to give you an idea of how we'll be addressing those needs in Pulumi Patterns and Practices (P3).
 
 ### Consistency
 
@@ -94,9 +96,9 @@ With Pulumi templates and custom internal component resources in place, develope
 
 ### More to Come
 
-So now that we've made a case for how Pulumi can be applied to meet the most pressing needs of a larger organization, hopefully you will realize that the Platypus reference architecture we are presenting here is more than just infrastructure-as-code. Platypus is a Pulumi-powered platform for teams, where your developer portal is not just a catalog of software, but a fully functional control-plane across all your cloud environments.
+So now that we've made a case for how Pulumi can be applied to meet the most pressing needs of a larger organization, hopefully you will realize that the Pulumi Patterns and Practices (P3) reference architecture we are presenting here is more than just infrastructure-as-code. P3 is a Pulumi-powered platform for teams, where your developer portal is not just a catalog of software, but a fully functional control-plane across all your cloud environments.
 
-Stay tuned for the following series of posts where we will use Pulumi to implement the Platypus reference architecture for a fully-featured internal developer platform (IDP, or IPfDPE if you prefer). That said, you may already have invested in some popular in cloud-native tools like [Backstage](https://backstage.io/) or [Kubernetes](https://kubernetes.io/). Pulumi plays well with others, and you will be delighted to see [how you can use Pulumi to cover the gaps](https://www.pulumi.com/blog/pulumi-in-a-cloud-native-world) in the [CNCF](https://www.cncf.io/) ecosystem.
+Stay tuned for the following series of posts where we will use Pulumi to implement the P3 reference architecture for a fully-featured internal developer platform (IDP, or IPfDPE if you prefer). That said, you may already have invested in some popular in cloud-native tools like [Backstage](https://backstage.io/) or [Kubernetes](https://kubernetes.io/). Pulumi plays well with others, and you will be delighted to see [how you can use Pulumi to cover the gaps](https://www.pulumi.com/blog/pulumi-in-a-cloud-native-world) in the [CNCF](https://www.cncf.io/) ecosystem.
 
 And if you are already ready to get your hands on Pulumi after this introduction, feel free to [create an account](https://www.pulumi.com/signup/) and follow some of our [Getting Started](https://www.pulumi.com/docs/get-started/) guides to see how easy simple use cases are and begin to imagine how that same developer experience will scale up to your entire organization.
 
