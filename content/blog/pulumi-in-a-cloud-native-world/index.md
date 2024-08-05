@@ -10,6 +10,8 @@ authors:
 - engin-diri
 
 tags:
+- platform-engineering
+- cloud-native
 - kubernetes
 - external-secrets-operator
 - backstage
