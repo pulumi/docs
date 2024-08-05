@@ -45,19 +45,19 @@ they need to build, test, and deploy applications efficiently.
 
 Key features of an [IDP](/blog/why-switch-to-pulumi#why-pulumi-for-internal-developer-platforms):
 
-* Developer Control Plane. Curated experiences that empower developers by meeting them at their level of expertise,
+* **Developer Control Plane**. Curated experiences that empower developers by meeting them at their level of expertise,
   whether it's an abstracted developer portal, custom CLI, or shared IaC templates.
 
-* Integration & Delivery. Automations to version control, test, trace, and deploy all infrastructure from resources,
+* **Integration & Delivery**. Automations to version control, test, trace, and deploy all infrastructure from resources,
   configurations, environments, and secrets as well as orchestration automations to manage provisioning workflows.
 
-* Monitoring & Logging. Components to log, monitor, and observe all infrastructure for greater operational control as
+* **Monitoring & Logging**. Components to log, monitor, and observe all infrastructure for greater operational control as
   well as optimize against unnecessary costs.
 
-* Security & Identity. Security and compliance guardrails that regulate every piece of infrastructure from policies to
+* **Security & Identity**. Security and compliance guardrails that regulate every piece of infrastructure from policies to
   fine-grained access controls to secrets.
 
-* Resources. Providers that support modern cloud architectures such as Kubernetes, containers, serverless, generative
+* **Resources**. Providers that support modern cloud architectures such as Kubernetes, containers, serverless, generative
   AI, machine learning, data lakes, hybrid cloud/on-premises, and more.
 
 By implementing an IDP, organizations can significantly reduce cognitive load on developers, accelerate time-to-market,
@@ -105,7 +105,7 @@ are designed to address different capabilities of our internal developer platfor
 
 {{% notes type="info" %}}
 In modern cloud computing, the [hub-and-spoke architecture](https://open-cluster-management.io/concepts/architecture/)
-pattern is widely used to manage multiple [Kubernetes](https://kubernetes.io/) clusters. In this pattern, a central
+pattern is widely used to manage multiple [Kubernetes](https://www.pulumi.com/docs/clouds/kubernetes/) clusters. In this pattern, a central
 control plane (hub) manages a set of clusters (spokes) that run applications and services. The hub provides a unified
 view of the entire infrastructure, enabling centralized management, monitoring, and security.
 {{% /notes %}}
@@ -494,8 +494,11 @@ under the umbrella of CNCF are not automatically implying that they are compatib
 platform engineering team will need to invest continuously time and resources to keep the stack up-to-date and running.
 This is a not negligible investment to consider for any organization.
 
-For this reason, we have another reference architecture that uses components from all of the Pulumi Platform for an end
-to end fully-managed solution. This solution takes care of the integration of the different components of and internal
+For this reason, we have another [reference architecture](https://www.pulumi.com/blog/pulumi-patterns-and-practices/) that uses components from all of the Pulumi Platform for an end to end fully-managed solution. This solution takes care of the integration of the different components of an internal
 developer portal and provides a carefree experience of managing your infrastructure at scale.
 
-Stay tuned...
+Continue to upskill and learn about platform engineering:
+
+- Read [Pulumi Patterns and Practices (P3): A Pulumi-based reference architecture for large-scale organizations](https://www.pulumi.com/blog/pulumi-patterns-and-practices/)
+- [Learn how to build Developer Portals with Pulumi](https://www.pulumi.com/docs/pulumi-cloud/developer-portals/).
+- Register for one of our [Platform Engineering or DevOps workshops](https://www.pulumi.com/resources/#upcoming).
