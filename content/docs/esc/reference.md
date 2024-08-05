@@ -62,7 +62,7 @@ values:
     rootEnvName: ${context.rootEnvironment.name}
     currentEnvName: ${context.currentEnvironment.name}
     currentUser: ${context.pulumi.user.login}
-    currentOrg: ${context.organization.login}
+    currentOrg: ${context.pulumi.organization.login}
 
     # ---------------------------------------------------------------------------------------
     # Functions -- configuration may be transformed with the following functions
