@@ -17,7 +17,9 @@ draft: false
 # of the content of the post, which is useful for targeting search results or
 # social-media previews. This field is required or the build will fail the
 # linter test. Max length is 160 characters.
-meta_desc:
+meta_desc: |
+  An overview of enhancements and bug fixes related to how the Pulumi Kubernetes
+  providers handles waiting for resource readiness in the v4.16.0 release.
 
 # The meta_image appears in social-media previews and on the blog home page. A
 # placeholder image representing the recommended format, dimensions and aspect
@@ -55,12 +57,13 @@ social:
 # for details, and please remove these comments before submitting for review.
 ---
 
-Kubernetes' eventual consistency model is incredibly powerful but can also pose a challenge for workflows that provision complex applications and infrastructure. 
+Kubernetes' eventual consistency model is incredibly powerful but can also pose a challenge for workflows that provision complex applications and infrastructure.
 Sometimes you really just need to know that a step has succeeded before being able to proceed.
 
 One of the advantages of using Pulumi to manage Kubernetes resources is that it natively and intuitively handles this problem of readiness and dependencies, giving you an easy way to express complex [rollout](https://kubernetes.io/docs/reference/kubectl/generated/kubectl_rollout/) relationships in the programming language of your choice.
 
 The latest v4.16.0 release of the Pulumi Kubernetes provider includes a number of bug fixes and enhancements to the way Pulumi Kubernetes handles resource readiness:
+
 * More helpful errors are surfaced when a resource doesn't become ready in time.
 * The existing `pulumi.com/skipAwait` annotation provides more flexibility when skipping readiness criteria.
 * A new `pulumi.com/waitFor` annotation allows for custom readiness criteria.
@@ -87,7 +90,7 @@ To that end we've made three improvements to the information Pulumi surfaces whe
 
 Sometimes it doesn't make sense for Pulumi to wait for a resource -- maybe you expect it to take a very long time to provision; or maybe you know it has some stuck finalizers that are safe to ignore.
 
-Previously, if you wanted to skip Pulumi's await behavior your only option was to use the `"pulumi.com/skipAwait": "true"` annotation, but that could cause other problems by always ignoring the resource's readiness. 
+Previously, if you wanted to skip Pulumi's await behavior your only option was to use the `"pulumi.com/skipAwait": "true"` annotation, but that could cause other problems by always ignoring the resource's readiness.
 
 The `pulumi.com/skipAwait` annotation now accepts two new values to accommodate situations where you might want to skip waiting for readiness or deletion, but not both:
 
@@ -115,7 +118,7 @@ The new `pulumi.com/waitFor` annotation can be applied to any non-[Patch](https:
 
         "pulumi.com/waitFor": "jsonpath={.webhooks[*].clientConfig.caBundle}"
 
-2. A string prefixed with "condition=" followed by the type of the condition and an optional status. 
+2. A string prefixed with "condition=" followed by the type of the condition and an optional status.
    This matches the behavior of `kubectl --for=condition=...` and will wait until the resource has a matching condition.
    The expected status defaults to "True" if not specified.
    For example this will wait until the resource has a "Synced=True" condition:
@@ -129,7 +132,6 @@ The new `pulumi.com/waitFor` annotation can be applied to any non-[Patch](https:
    For example, this resource will be considered ready when it simultaneously has a "Bar=True" condition and a populated "foo" field.
 
        "pulumi.com/waitFor": '["jsonpath={.foo}", "condition=Bar"]'
-
 
 ### Custom readiness example: cert-manager
 
@@ -191,6 +193,7 @@ error: resource "kubernetes:cert-manager.io/v1:ClusterIssuer::issuer" was not su
 {{% /notes %}}
 
 We see this "certificate signed by unknown authority" error because a few things need to happen before the cert-manager web hooks are usable:
+
 * At least one `cainject` pod needs to be running.
 * The `cainject` pod(s) need to have a leader elected.
 * The `cainject` leader needs to inject certificate authority data into the cert-manager web hooks.
@@ -236,15 +239,14 @@ Now the program will deploy successfully with a `Missing {.webhooks[*].clientCon
 
 ![cert-manager](cert-manager.png)
 
-
 ## Experimental: generic readiness
 
 Being able to specify custom readiness is powerful, but a lot of resources follow well-known conventions like the `Ready=True` condition.
-Rather than requiring you to specify `"pulumi.com/waitFor": "condition=Ready"` on every resource that needs it, there's now an opt-in feature to automatically apply well-known readiness criteria to all resources managed by Pulumi. 
+Rather than requiring you to specify `"pulumi.com/waitFor": "condition=Ready"` on every resource that needs it, there's now an opt-in feature to automatically apply well-known readiness criteria to all resources managed by Pulumi.
 
 Running your program with the environment variable `PULUMI_K8S_AWAIT_ALL=true` will cause Pulumi to automatically wait for _all_ resources to become ready when creating or updating them -- including custom resources.
 
-If a resource appears to follow well-known conventions (like the "Ready" condition, among others) Pulumi will wait for it to become ready. 
+If a resource appears to follow well-known conventions (like the "Ready" condition, among others) Pulumi will wait for it to become ready.
 If the resource doesn't appear to follow well-known conventions, Pulumi will maintain its existing behavior and assume the resource is ready immediately.
 
 (Generic readiness criteria are determined by the [cli-utils](https://github.com/kubernetes-sigs/cli-utils/tree/master/pkg/kstatus) SIG, and behavior is unchanged for any resources that Pulumi already waits for readiness.)
@@ -267,12 +269,11 @@ Pulumi will now wait for DaemonSets to become ready instead of always using `ski
 
 We hope you will enjoy the increased flexibility of the `pulumi.com/skipAwait` annotation; the extensibility of the `pulumi.com/waitFor` annotation; and the improved visibility into errors and events Pulumi Kubernetes now provides while managing your cluster resources.
 
-
 Check out the following links to learn more about Pulumi Kubernetes today!
 
-- [Getting Started](/docs/clouds/kubernetes/get-started/)
-- [Documentation](/docs/clouds/kubernetes/)
-- [Open Source](https://github.com/pulumi/pulumi-kubernetes)
-- [Community Slack](https://pulumi-community.slack.com/archives/CRFURDVQB)
+* [Getting Started](/docs/clouds/kubernetes/get-started/)
+* [Documentation](/docs/clouds/kubernetes/)
+* [Open Source](https://github.com/pulumi/pulumi-kubernetes)
+* [Community Slack](https://pulumi-community.slack.com/archives/CRFURDVQB)
 
 [JSONPath]: https://kubernetes.io/docs/reference/kubectl/jsonpath/
