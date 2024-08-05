@@ -1,5 +1,5 @@
 ---
-title_tag: Importing Resources with CLI | Learn Pulumi
+title_tag: Importing Resources with CLI | Pulumi Tutorials
 title: "Importing via the CLI"
 layout: topic
 date: 2022-06-03T11:33:44-05:00

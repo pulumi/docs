@@ -1,116 +1,128 @@
 {{ define "main" }}
-<div div class="docs-list-main">
-    <div class="docs-main-nav-toggle-wrapper">
-        <div class="docs-main-nav-wrapper">
-            <div id="docs-main-nav" class="docs-main-nav">
-                {{ partial "docs/tutorials-nav.html" . }}
+    <div class="flex mb-16">
+        <div class="sticky top-12 max-h-75">
+            <div class="w-56 p-4">
+                {{ partial "tutorials/nav.html" . }}
             </div>
         </div>
-        <div class="docs-nav-toggle">
-            <div class="docs-nav-toggle-icon icon icon-24-24"></div>
-        </div>
-    </div>
+        <div class="mt-8 mr-6 ml-4 flex justify-center w-full">
+            <div class="max-w-5xl">
+                <div class="">
+                    <header class="mb-6">
+                        {{ partial "tutorials/breadcrumb.html" . }}
+                    </header>
+                    <div class="inline-block">
+                        <h1>{{ .Title }}</h1>
+                        <div class="gradient-highlight"></div>
+                    </div>
+                    <div>{{ .Content }}</div>
+                    <div class="mt-8 mb-12">
+                        <ul class="flex flex-col lg:flex-row lg:flex-wrap list-none p-0">
+                            {{ $perRow := 2 }}
+                            {{ range $index, $id := (slice "aws" "azure" "gcp" "kubernetes") }}
+                                {{ $provider := index (and ((where $.Site.Data.tutorials.collections "type" "provider")) ((where $.Site.Data.tutorials.collections "id" $id))) 0 }}
 
-    <div class="docs-main-content-wrapper">
-
-        <div class="docs-main-content">
-            <div class="tutorials-main">
-                <div class="special-h1">
-                    <h1>{{ .Title }}</h1>
-                    <div class="h1-gradient"></div>
-                </div>
-
-                <div>{{ .Content }}</div>
-
-                <div class="font-display mt-8 mb-12">
-                    <ul class="flex flex-col md:flex-row md:flex-wrap list-none p-0">
-                        {{ range $slug := (slice "aws" "azure" "gcp" "kubernetes") }}
-                            {{ $provider := index (where $.Site.Data.tutorials.providers "slug" $slug) 0 }}
-                            <li class="md:w-1/2 p-4 border border-gray-200 w-full gradient-card">
-                                <div class="flex items-center justify-between">
-                                    <h3 class="flex-grow whitespace-nowrap">{{ $provider.shortname }} Tutorials</h3>
-                                    <img class="hidden lg:block h-6 flex-shrink" src="{{ $provider.logo }}" />
-                                </div>
-                                <ul class="list-none p-0">
-                                    <li class="rounded border p-2 border-gray-200 flex items-center gap-3">
-                                        <div class="icon-10-10 play-10-10 ml-2 hidden lg:block"></div>
-                                        <a class="text-gray-700 text-lg" href="/docs/clouds/{{ $slug }}/get-started/">Get started with {{ $provider.shortname }}</a>
-                                    </li>
-                                    <li class="rounded border p-2 border-gray-200 flex items-center gap-3">
-                                        <div class="icon-18-18 grad-cap-18-18 hidden lg:block"></div>
-                                        <a class="text-gray-700 text-lg" href="/tutorials/{{ $slug }}">All {{ $provider.shortname }} tutorials</a>
-                                    </li>
-                                </ul>
-                            </li>
-                        {{ end }}
-                    </ul>
-                </div>
-
-                {{ if gt (len .Site.Taxonomies.collections) 0 }}
-                    <div class="tutorials-topics">
-                        <h2>Browse by topic</h2>
-                        <ul class="flex flex-col md:flex-row md:flex-wrap list-none p-0 tutorial-cards">
-                            {{ range $taxonomy, $terms := .Site.Taxonomies.collections }}
-                                {{ $collection := index (where $.Site.Data.tutorials.collections "slug" $taxonomy) 0 }}
-                                <li class="md:w-1/2 p-4 border border-gray-200 w-full">
-                                    <div class="card-heading">
-                                        <h3><a href="/tutorials/{{ $taxonomy }}">{{ $collection.name }}</a></h3>
-                                        <hr />
-                                    </div>
-                                    <p>{{ $collection.description }}</p>
-                                    <div class="flex flex-row">
-                                        <div class="flex items-center topic-badge">
-                                            {{ len $terms }} topics
-                                            <div class="icon icon-12-12 library-books-12-12"></div>
+                                <li class="lg:w-1/{{ $perRow }} {{ if ne (mod (add $index 1) $perRow) 0 }}lg:pr-4{{ end }}">
+                                    <div class="p-6 border border-gray-300 w-full gradient-card shadow-xl rounded-md">
+                                        <div class="flex items-center justify-between">
+                                            <h3 class="flex-grow whitespace-nowrap font-display font-normal no-anchor">{{ $provider.name }} tutorials</h3>
+                                            <img class="h-6 flex-shrink" src="{{ $provider.logo }}" />
                                         </div>
-                                        <div class="flex items-center topic-badge">
-                                            {{ $collection.time_minutes }} minutes
-                                            <div class="icon icon-12-12 timer-12-12"></div>
+                                        <ul class="list-none p-0">
+                                            <li class="rounded border p-4 border-gray-300 shadow-sm flex items-center gap-3">
+                                                <i class="far fa-arrow-alt-circle-right w-4 text-gray-700"></i>
+                                                <a class="text-gray-800 font-display text-lg" href="/docs/clouds/{{ $id }}/get-started/">Get started with {{ $provider.name }}</a>
+                                            </li>
+                                            <li class="rounded border p-4 border-gray-300 shadow-sm flex items-center gap-3">
+                                                <i class="far fa-list-alt w-4 text-gray-700"></i>
+                                                <a class="text-gray-800 font-display text-lg" href="/tutorials/{{ $id }}">Browse all {{ $provider.name }} tutorials</a>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </li>
+                            {{ end }}
+                        </ul>
+                    </div>
+
+                    {{ if gt (len .Site.Taxonomies.collections) 0 }}
+                        <div class="my-12">
+                            <h2 class="text-2xl">Collections</h2>
+                            <ul class="flex flex-col lg:flex-row lg:flex-wrap list-none p-0">
+                                {{ $ordinal := 0 }}
+                                {{ $perRow = 3 }}
+                                {{ range $taxonomy, $terms := .Site.Taxonomies.collections }}
+                                    {{ $collection := index (where $.Site.Data.tutorials.collections "id" $taxonomy) 0 }}
+
+                                    {{ if $collection }}
+                                        {{ $ordinal = add $ordinal 1}}
+
+                                        <li class="lg:w-1/{{ $perRow }} {{ if ne (mod $ordinal $perRow) 0 }}lg:pr-4{{ end }}">
+                                            <div class="bg-white shadow-lg p-6 border rounded-md border-gray-200 w-full">
+                                                <div class="mb-2 pb-2 border-b border-gray-200">
+                                                    <h3 class="no-anchor font-normal text-xl flex items-center">
+                                                        <a class="text-gray-800" href="/tutorials/{{ $taxonomy }}/">
+                                                            {{ $collection.name }}
+                                                        </a>
+                                                    </h3>
+                                                </div>
+                                                <p class="text-base text-gray-700 mb-6">
+                                                    {{ $collection.description }}
+                                                </p>
+                                                <div class="inline-flex flex-wrap gap-2 text-sm">
+                                                    <div class="text-gray-700 px-2 py-1 border border-orange-400 rounded">
+                                                        <i class="fa fa-file-alt mr-0.5 text-orange-400"></i>
+                                                        <span>{{ len $terms }} tutorial{{ if ne (len $terms) 1 }}s{{ end }}</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    {{ end }}
+                                {{ end }}
+                            </ul>
+                        </div>
+                    {{ end }}
+
+                    <div>
+                        <h2 class="text-2xl">All tutorials</h2>
+                        <ul class="flex flex-col lg:flex-row lg:flex-wrap list-none p-0">
+                            {{ $perRow = 3 }}
+                            {{ range $index, $item := where .Pages ".Params.listed" "ne" false }}
+                                <li class="lg:w-1/{{ $perRow }} {{ if ne (mod (add $index 1) $perRow) 0 }}lg:pr-4{{ end }}">
+                                    <div class="bg-white shadow-lg p-6 border rounded-md border-gray-200 w-full">
+                                        <div class="mb-2 pb-2 border-b border-gray-200">
+                                            <h3 class="no-anchor font-normal text-xl flex items-center">
+                                                <a class="text-gray-800" href="{{ $item.RelPermalink }}">
+                                                    {{ $item.Title }}
+                                                </a>
+                                            </h3>
+                                        </div>
+                                        <p class="text-base text-gray-700 mb-6">
+                                            {{ $item.Description }}
+                                        </p>
+                                        <div class="inline-flex flex-wrap gap-2 text-sm">
+                                            {{ $estimated_time := 0 }}
+                                            {{ range $topic := .Pages }}
+                                                {{ $estimated_time = (add $estimated_time (int $topic.Params.estimated_time)) }}
+                                            {{ end }}
+                                            <div class="text-gray-700 px-2 py-1 border border-blue-400 rounded">
+                                                <i class="fa fa-file-alt mr-0.5 text-blue-400"></i>
+                                                <span>{{ len $item.Pages }} topics</span>
+                                            </div>
+                                            <div class="text-gray-700 px-2 py-1 border border-gray-500 rounded">
+                                                <i class="far fa-clock mr-0.5 text-gray-600"></i>
+                                                <span>{{ $estimated_time }} minutes</span>
+                                            </div>
                                         </div>
                                     </div>
                                 </li>
                             {{ end }}
                         </ul>
                     </div>
-                {{ end }}
-
-                <div class="tutorials-all">
-                    <h2>All tutorials</h2>
-                    <ul class="flex flex-col md:flex-row md:flex-wrap list-none p-0 rounded-md">
-                        {{ range (sort .Pages ".Params.index") }}
-                            <li class="md:w-1/3 p-4 border border-gray-200 w-full gradient-card">
-                                <div class="card-heading">
-                                    <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-                                </div>
-                                <p class="h-fit">{{ .Description }}</p>
-                                <p>
-                                    <span class="text-sm text-gray-600 whitespace-nowrap">
-                                        <i class="fas fa-book w-4 text-gray-500"></i>
-                                        {{ len .Pages }} topics
-                                    </span>
-                                </p>
-                                <p>
-                                    <span class="text-sm text-gray-600 whitespace-nowrap">
-                                        <i class="fas fa-stopwatch w-4 text-gray-500"></i>
-                                        {{ $estimated_time := 0 }}
-
-                                        {{ range $topic := .Pages }}
-                                            {{ $estimated_time = (add $estimated_time (int $topic.Params.estimated_time)) }}
-                                        {{ end }}
-
-                                        {{ $estimated_time }} minutes
-                                    </span>
-                                </p>
-                            </li>
-                        {{ end }}
-                    </ul>
                 </div>
             </div>
         </div>
-        <div class="w-3/12">
-        </div>
     </div>
-</div>
 {{ end }}
 
 {{ define "footer" }}

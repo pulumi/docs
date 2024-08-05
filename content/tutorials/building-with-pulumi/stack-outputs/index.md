@@ -1,14 +1,12 @@
 ---
-title_tag: Understanding Stack Outputs | Learn Pulumi
-title: "Understanding Stack Outputs"
+title_tag: Understanding Stack Outputs | Pulumi Tutorials
+title: Understanding Stack Outputs
 layout: topic
-date: 2021-09-20T08:33:26-05:00
-draft: false
 description: Learn how to share values from a stack to other places.
 meta_desc: Learn what stack outputs are, how to retrieve stack outputs using the Pulumi CLI, and how to configure a stack in this tutorial.
-index: 2
-estimated_time: 10
 meta_image: meta.png
+weight: 2
+estimated_time: 10
 aliases:
     - /learn/building-with-pulumi/stack-outputs/
 ---

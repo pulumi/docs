@@ -1,12 +1,10 @@
 ---
-title_tag: Abstraction & Encapsulation Overview | Learn Pulumi
-title: "Abstraction and Encapsulation"
+title_tag: Abstraction & Encapsulation Overview | Pulumi Tutorials
+title: Abstraction and Encapsulation
 layout: module
-date: 2021-11-17
 description: |
     Explore abstraction and encapsulation with Pulumi and component resources.
 meta_desc: In this tutorial, we will explore using Pulumi to abstract and encapsulate your resource definitions as reusable models for others to use.
-index: 2
 meta_image: meta.png
 level: intermediate
 youll_learn:
@@ -15,8 +13,11 @@ youll_learn:
     - Building your own resources
 aliases:
     - /learn/abstraction-encapsulation/
-providers:
-    - aws
+collections:
+    - components
+    - pulumi-101
+collections_weight: 3
+weight: 3
 ---
 
 ## Prerequisites

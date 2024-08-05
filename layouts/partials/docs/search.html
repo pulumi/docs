@@ -14,7 +14,7 @@
                 <img class="tab-icon" src="/icons/graduation-cap.svg" />
                 <span>Tutorials</span>
             </a>
-        {{ else if eq "tutorials" $mode }}
+        {{ else if (or (eq "tutorials" $mode) (eq "providers" $mode) (eq "collections" $mode)) }}
             <a class="tab" href="/docs/">
                 <img class="tab-icon" src="/icons/docs.svg" />
                 <span>Docs</span>

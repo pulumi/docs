@@ -1,4 +1,44 @@
-- slug: serverless
-  name: Serverless
-  description: Learn how to do all kinds of interesting things serverlessly with Pulumi.
-  time_minutes: 30
+- id: aws
+  type: provider
+  name: AWS
+  description: Here is a description of the collection.
+  logo: /logos/pkg/aws.svg
+  featured: true
+
+- id: azure
+  type: provider
+  name: Microsoft Azure
+  description: Here is a description of the collection.
+  logo: /logos/pkg/azure.svg
+  featured: true
+
+- id: gcp
+  type: provider
+  name: Google Cloud
+  description: Here is a description of the collection.
+  logo: /logos/pkg/gcp.svg
+  featured: true
+
+- id: kubernetes
+  type: provider
+  name: Kubernetes
+  description: Here is a description of the collection.
+  logo: /logos/pkg/kubernetes.svg
+  featured: true
+
+- id: docker
+  type: provider
+  name: Docker
+  description: Here is a description of the collection.
+  logo: /logos/pkg/aws.svg
+  featured: false
+
+- id: pulumi-cli
+  type: product
+  name: Pulumi CLI
+  description: Here is a description of the collection.
+
+- id: pulumi-101
+  type: level
+  name: Pulumi 101
+  description: Tutorials designed to introduce you to core Pulumi concepts.

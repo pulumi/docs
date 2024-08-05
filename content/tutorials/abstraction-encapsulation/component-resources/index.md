@@ -1,5 +1,5 @@
 ---
-title_tag: Building a Component Resource | Learn Pulumi
+title_tag: Building a Component Resource | Pulumi Tutorials
 title: "Building a Component Resource"
 layout: topic
 date: 2021-11-17

@@ -1,5 +1,5 @@
 ---
-title_tag: Migrating & Importing Resources | Learn Pulumi
+title_tag: Migrating & Importing Resources | Pulumi Tutorials
 title: "Migration and Imports"
 layout: module
 date: 2022-06-03T11:31:52-05:00

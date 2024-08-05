@@ -1,20 +1,20 @@
 ---
-title_tag: Embedding Pulumi Overview | Learn Pulumi
+title_tag: Embedding Pulumi Overview | Pulumi Tutorials
 title: "Embedding Pulumi"
 layout: module
-date: 2021-12-15
-draft: false
-description: |
-    Explore building a custom infrastructure API to embed Pulumi in other
-    contexts.
+description: Explore building a custom infrastructure API to embed Pulumi in other contexts.
 meta_desc: In this tutorial, we will explore how to use Pulumi to build an infrastructure API for deployment and maintenance.
-index: 3
 meta_image: meta.png
 level: advanced
 youll_learn:
     - Using the Automation API to build a custom API for your infrastructure
     - Automating your infrastructure
     - Integrating your infrastructure with other workflows
+prereqs:
+    - Thing 1
+    - Thing 2
+    - Thing 3
+weight: 4
 aliases:
     - /learn/embedding-pulumi/
 ---

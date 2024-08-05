@@ -1,48 +1,65 @@
 {{ define "main" }}
-{{ $slug := .Path | path.Base }}
-{{ $provider := index (where .Site.Data.tutorials.providers "slug" $slug) 0 }}
-<div div class="docs-list-main">
-    <div class="docs-main-nav-toggle-wrapper">
-        <div class="docs-main-nav-wrapper">
-            <div id="docs-main-nav" class="docs-main-nav">
-                {{ .Scratch.Set "title" $provider.shortname }}
-                {{ partial "docs/tutorials-nav.html" . }}
+    {{ $slug := .Path | path.Base }}
+    {{ $provider := index (where .Site.Data.tutorials.providers "slug" $slug) 0 }}
+
+    <div class="flex mb-16">
+        <div class="sticky top-12 max-h-75">
+            <div class="w-56 p-4">
+                {{ partial "tutorials/nav.html" . }}
             </div>
         </div>
-        <div class="docs-nav-toggle">
-            <div class="docs-nav-toggle-icon icon icon-24-24"></div>
-        </div>
-    </div>
-
-    <div class="docs-main-content-wrapper">
-
-        <div class="docs-main-content">
-            {{ partial "docs/breadcrumb.html" . }}
-
-            <div class="tutorials-main">
-                <div  class="flex flex-row">
-                    <div class="special-h1">
+        <div class="mt-8 mr-6 ml-4 flex justify-center w-full">
+            <div class="max-w-5xl">
+                <div class="">
+                    <header class="mb-6">
+                        {{ partial "tutorials/breadcrumb.html" . }}
+                    </header>
+                    <div class="inline-block">
                         <h1>{{ $provider.shortname }} tutorials</h1>
-                        <div class="h1-gradient"></div>
+                        <div class="gradient-highlight"></div>
+                    </div>
+                    <div>
+                        <p>{{ $provider.description }}</p>
+                    </div>
+                    <div class="mt-8 mb-12">
+                        <ul class="flex flex-col lg:flex-row lg:flex-wrap list-none p-0 rounded-md">
+                            {{ $perRow := 3 }}
+                            {{ range $index, $item := (sort .Pages ".Params.index") }}
+                                <li class="lg:w-1/{{ $perRow }} {{ if ne (mod (add $index 1) $perRow) 0 }}lg:pr-4{{ end }}">
+                                    <div class="bg-white shadow-lg p-6 border rounded-md border-gray-200 w-full">
+                                        <div class="mb-2 pb-2 border-b border-gray-200">
+                                            <h3 class="no-anchor font-normal text-xl flex items-center">
+                                                <a class="text-gray-800" href="{{ $item.RelPermalink }}">
+                                                    {{ $item.Title }}
+                                                </a>
+                                            </h3>
+                                        </div>
+                                        <p class="text-base text-gray-700 mb-6">
+                                            {{ $item.Description }}
+                                        </p>
+                                        <div class="inline-flex flex-wrap gap-2 text-sm">
+                                            {{ $estimated_time := 0 }}
+                                            {{ range $topic := .Pages }}
+                                                {{ $estimated_time = (add $estimated_time (int $topic.Params.estimated_time)) }}
+                                            {{ end }}
+                                            <div class="text-gray-700 px-2 py-1 border border-violet-400 rounded">
+                                                <i class="fa fa-file-alt mr-0.5 text-violet-400"></i>
+                                                <span>{{ len $item.Pages }} topics</span>
+                                            </div>
+                                            <div class="text-gray-700 px-2 py-1 border border-blue-400 rounded">
+                                                <i class="far fa-clock mr-0.5 text-blue-400"></i>
+                                                <span>{{ $estimated_time }} minutes</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            {{ end }}
+                        </ul>
                     </div>
                 </div>
-                <p>{{ $provider.description }}</p>
-                <div class="tutorials-all">
-                    <ul class="flex flex-col md:flex-row md:flex-wrap list-none tutorial-cards">
-                        {{ range .Pages }}
-                        <li class="md:w-1/3 p-4 border border-gray-200 w-full">
-                            <div class="card-heading">
-                                <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-                            </div>
-                            <p>{{ .Description }}</p>
-                        </li>
-                        {{ end }}
-                    </ul>
-                </div>
             </div>
         </div>
     </div>
-</div>
 {{ end }}
 
 {{ define "footer" }}

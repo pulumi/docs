@@ -51,13 +51,11 @@ disableKinds:
 taxonomies:
   author: authors
   tag: tags
-  provider: providers
   collection: collections
 
 permalinks:
   authors: /blog/author/:slug/
   tags: /blog/tag/:slug/
-  providers: /tutorials/:slug/
   collections: /tutorials/:slug/
 
 markup:

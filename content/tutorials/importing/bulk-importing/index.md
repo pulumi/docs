@@ -1,5 +1,5 @@
 ---
-title_tag: Importing Resources in Bulk | Learn Pulumi
+title_tag: Importing Resources in Bulk | Pulumi Tutorials
 title: "Importing in Bulk"
 layout: topic
 date: 2022-06-15T16:19:41-05:00

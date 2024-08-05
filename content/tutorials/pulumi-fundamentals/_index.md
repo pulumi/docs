@@ -1,22 +1,22 @@
 ---
-title_tag: Pulumi Fundamentals | Learn Pulumi
+title_tag: Pulumi Fundamentals | Pulumi Tutorials
 title: "Pulumi Fundamentals"
 layout: module
-date: 2021-09-10T12:00:00-05:00
-draft: false
-description: |
-    Learn how to use Pulumi to build, configure, and deploy a real-life, modern
-    application.
+description:  Learn how to use Pulumi to build, configure, and deploy a real-world application.
 meta_desc: Learn how to use Pulumi to build, configure, and deploy a real-life, modern application in this starter tutorial.
-index: 0
 meta_image: meta.png
 youll_learn:
     - Creating projects
     - Configuring and provisioning infrastructure
-tags:
-    - fundamentals
-providers:
-    - docker
+prereqs:
+    - A [Pulumi Cloud account](https://app.pulumi.com/signup) and [access token](/docs/pulumi-cloud/accounts#access-tokens)
+    - The [Pulumi CLI](/docs/install/)
+    - Familiarity with JavaScript, TypeScript, or Python
+    - A [Docker](https://docs.docker.com/get-docker/) service installed and running
+collections:
+    - pulumi-101
+collections_weight: 1
+weight: 1
 aliases:
     - /learn/pulumi-fundamentals/
 ---
@@ -27,22 +27,6 @@ application with Docker. You'll create a front-end interface, a back-end service
 For this tutorial, we will use Docker to let you learn the basics of Pulumi
 without a cloud account. We will explore creating a Pulumi Project, building
 Docker images, and configuring and provisioning containers.
-
-## Prerequisites
-
-To complete this tutorial, you'll need:
-
-- A [Pulumi Cloud account](https://app.pulumi.com/signup) and [access token](/docs/pulumi-cloud/accounts#access-tokens)
-- The [Pulumi CLI](/docs/install/)
-- [Docker](https://docs.docker.com/get-docker/)
-- One of the following supported runtimes, depending on your language choice:
-    - Node.js
-    - Python
-
-You should also be able to:
-
-- Use your local terminal
-- Read and understand Dockerfiles and basic Docker concepts.
 
 ## What you'll build
 

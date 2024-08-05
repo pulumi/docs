@@ -1,19 +1,12 @@
 ---
-title_tag: Using a Custom API | Learn Pulumi
+title_tag: Using a Custom API | Pulumi Tutorials
 title: "Using the Custom API"
 layout: topic
-date: 2021-12-15
-draft: false
-description: |
-    Explore uses of the Automation API with some working examples and possible
-    additional builds to try.
+description: Explore uses of the Automation API with some working examples and possible additional builds to try.
 meta_desc: Learn how to use the custom API you've built in the previous modules and explore other uses of the Automation API in this tutorial.
-index: 3
+weight: 4
 estimated_time: 15
 meta_image: meta.png
-links:
-    - text: Examples from Pulumi
-      url: https://github.com/pulumi/automation-api-examples
 aliases:
     - /learn/embedding-pulumi/using-the-api/
 ---

@@ -4,7 +4,7 @@
         <div class="docs-main-nav-wrapper">
             <div id="docs-main-nav" class="docs-main-nav">
                 {{ .Scratch.Set "title" .Title }}
-                {{ partial "docs/tutorials-nav.html" . }}
+                {{ partial "tutorials/nav.html" . }}
             </div>
         </div>
         <div class="docs-nav-toggle">
@@ -17,7 +17,7 @@
         <div class="docs-main-content">
             <div class="tutorials-main">
                 <header>
-                    {{ partial "templates/breadcrumb.html" . }}
+                    {{ partial "tutorials/breadcrumb.html" . }}
                 </header>
                 <div class="special-h1">
                     <h1>{{ .Title }}</h1>
@@ -28,22 +28,52 @@
 
                 <div>{{ .Content }}</div>
 
-                <h2>Topics</h2>
-                <div class="module-list">
+                <div class="flex flex-col lg:flex-row my-8">
+                    <div class="">
+                        <h4 class="mb-4">In this tutorial, you'll learn:</h4>
+                        <ul class="list-none p-0">
+                            {{ range .Params.youll_learn }}
+                                <li>
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    <span>{{ . }}</span>
+                                </li>
+                            {{ end }}
+                        </ul>
+                    </div>
+                </div>
 
-                    <ul class="p-0 border-4 border-gray-100 rounded">
-                        {{ $sorted_pages := sort .Pages ".Params.index" }}
-                        {{ range $index, $page := $sorted_pages }}
+                <div class="flex flex-col lg:flex-row my-8">
+                    <div class="">
+                        <h4 class="mb-4">Prerequisites:</h4>
+                        <ul class="list-none p-0">
+                            {{ range .Params.prereqs }}
+                                <li>
+                                    <i class="far fa-circle text-gray-600 mr-2"></i>
+                                    <span>{{ . | markdownify }}</span>
+                                </li>
+                            {{ end }}
+                        </ul>
+                    </div>
+                </div>
+
+                <h2>Topics</h2>
+                {{ $estimated_time := 0 }}
+                {{ range $topic := .Pages }}
+                    {{ $estimated_time = (add $estimated_time (int $topic.Params.estimated_time)) }}
+                {{ end }}
+                <p>
+                    This tutorial has {{ len .Pages }} topics and takes about {{ $estimated_time }} minutes to complete.
+                </p>
+                <div class="mb-12">
+                    <ul class="p-0 border border-gray-300 rounded shadow-sm">
+                        {{ range $index, $page := .Pages.ByWeight }}
                             <li
-                                class="flex items-center list-none py-3 px-4 border-gray-200
-                                {{ if lt (add $index 1) (len .Pages) }}border-b{{ end }}
-                                "
-                            >
+                                class="flex items-center list-none py-3 px-4 border-gray-200 {{ if lt (add $index 1) (len .Pages) }}border-b{{ end }}">
                                 <span class="w-full">
                                     <a href="{{ .RelPermalink }}">{{ $page.Title }}</a>
                                 </span>
                                 <span class="text-sm text-gray-600 whitespace-nowrap mx-12">
-                                    <i class="fas fa-stopwatch text-center w-6 text-gray-500"></i>
+                                    <i class="far fa-clock text-center w-6 text-gray-500"></i>
                                     {{ $page.Params.estimated_time }} minutes
                                 </span>
                                 <span>
@@ -54,9 +84,10 @@
                             </li>
                         {{ end }}
                     </ul>
+                    <div class="my-4">
+                        <a href="{{ (index .Pages 0).RelPermalink }}" class="btn btn-primary">Start the first topic &rarr;</a>
+                    </div>
                 </div>
-
-
             </div>
         </div>
         <div class="docs-table-of-contents docs-toc-desktop">

@@ -1,14 +1,12 @@
 ---
-title_tag: Understanding Stacks | Learn Pulumi
-title: "Understanding Stacks"
+title_tag: Understanding Stacks | Pulumi Tutorials
+title: Understanding Stacks
 layout: topic
-date: 2021-09-20T08:33:14-05:00
-draft: false
 description: Learn a bit more about stacks as part of using Pulumi.
 meta_desc: Learn what a stack is, how stacks work within Pulumi, and how to create, list, and select stacks in this tutorial.
-index: 1
-estimated_time: 10
 meta_image: meta.png
+weight: 1
+estimated_time: 10
 aliases:
     - /learn/building-with-pulumi/understanding-stacks/
 ---

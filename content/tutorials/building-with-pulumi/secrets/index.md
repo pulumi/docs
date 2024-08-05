@@ -1,14 +1,12 @@
 ---
-title_tag: Working with Secrets | Learn Pulumi
-title: "Working with Secrets"
+title_tag: Working with Secrets | Pulumi Tutorials
+title: Working with Secrets
 layout: topic
-date: 2021-09-20T08:33:36-05:00
-draft: false
 description: Explore how Pulumi handles secrets across all environments.
 meta_desc: Learn how secrets work within Pulumi and how to access secrets with this tutorial.
-index: 4
-estimated_time: 10
 meta_image: meta.png
+weight: 2
+estimated_time: 10
 aliases:
     - /learn/building-with-pulumi/secrets/
 ---

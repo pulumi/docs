@@ -28,18 +28,19 @@
     {{ end }}
 {{ end }}
 
+{{ .Page.Parent }}
 
 <div class="mt-6">
     {{ if ne $step $first }}
         {{ $prev := index $pages (sub $step 1) }}
         <a data-track="previous-step" class="btn btn-secondary" href="{{ $prev.RelPermalink }}">&larr; Previous Topic</a>
     {{ else }}
-        <a data-track="previous-step" class="btn btn-secondary" href="/tutorials/">&larr; Return to Tutorials</a>
+        <a data-track="previous-step" class="btn btn-secondary" href="{{ .Page.Parent.RelPermalink }}">&larr; Back to {{ .Page.Parent.Title }}</a>
     {{ end }}
     {{ if ne $step $last }}
         {{ $next := index $pages (add $step 1) }}
         <a data-track="next-step" class="btn" href="{{ $next.RelPermalink }}">Next Topic: {{ $next.LinkTitle }} &rarr;</a>
     {{ else }}
-        <a data-track="next-step" class="btn" href="/tutorials/">Return to Tutorials &rarr;</a>
+        <a data-track="next-step" class="btn" href="{{ .Page.Parent.RelPermalink }}">Return to {{ .Page.Parent.Title }} &rarr;</a>
     {{ end }}
 </div>

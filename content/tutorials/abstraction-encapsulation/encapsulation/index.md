@@ -1,5 +1,5 @@
 ---
-title_tag: Getting Started with Encapsulation | Learn Pulumi
+title_tag: Getting Started with Encapsulation | Pulumi Tutorials
 title: "Understanding Encapsulation"
 layout: topic
 date: 2021-11-17

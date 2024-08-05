@@ -1,19 +1,14 @@
 ---
-title_tag: Configuring & Provisioning Containers | Learn Pulumi
+title_tag: Configuring & Provisioning Containers | Pulumi Tutorials
 title: "Configuring and Provisioning Containers"
 layout: topic
-date: 2021-09-07T14:12:59-05:00
-draft: false
 description: Configure and provision your first containers locally with Pulumi.
 meta_desc: Learn how to configure and provision your first containers locally with Pulumi in this tutorial.
-index: 2
-estimated_time: 10
 meta_image: meta.png
+weight: 3
+estimated_time: 10
 aliases:
     - /learn/pulumi-fundamentals/configure-and-provision/
-links:
-    - text: Code Repo
-      url: https://github.com/pulumi/tutorial-pulumi-fundamentals
 ---
 
 Now that you've created the application's Docker images, you can provision the application's network and containers. You'll start by adding a few configuration settings to the Pulumi program. Pulumi has first-class support for [configuring](/docs/concepts/config/) infrastructure, and that includes being able to configure multiple stacks within the same project with different values.
