@@ -10,12 +10,12 @@ customer_name: Atlassian
 customer_logo: /logos/customers/atlassian-wordmark.svg
 customer_url: https://www.atlassian.com/
 
-quote: |
-    With the old tool, spinning up our databases meant we had 20 blocks of code and a lot of copy and pasting. With
-    Pulumi, it’s Python. It’s five lines of code. If you want to add a new database, add one line, and you’re good to go.
-
-headline_stat: 50%
-headline: Reduction in time spent on maintenance activities.
+quote_block:
+  quote: |
+      With the old tool, spinning up our databases meant we had 20 blocks of code and a lot of copy and pasting. With
+      Pulumi, it’s Python. It’s five lines of code. If you want to add a new database, add one line, and you’re good to go.
+  headline_stat: 50%
+  headline: Reduction in time spent on maintenance activities.
 
 exec_summary: |
     Atlassian’s Bitbucket DevSpeed team is responsible for improving developer productivity through better workflows

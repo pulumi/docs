@@ -10,12 +10,13 @@ customer_name: 4IR
 customer_logo: /logos/customers/4ir.png
 customer_url: https://www.4ir.cloud/
 
-quote: |
-    Pulumi has emerged as a key element in our strategy, creating tangible value for us by reducing infrastructure
-    deployment time, up-skilling our team, and accelerating our time to market.
-quote_attrib: Joseph Dolivo, CTO, 4IR Solutions
-headline_stat: $75K
-headline: Annual savings and deployments in hours instead of days.
+quote_block:
+    quote: |
+        Pulumi has emerged as a key element in our strategy, creating tangible value for us by reducing infrastructure
+        deployment time, up-skilling our team, and accelerating our time to market.
+    quote_attrib: Joseph Dolivo, CTO, 4IR Solutions
+    headline_stat: $75K
+    headline: Annual savings and deployments in hours instead of days.
 
 hide_pulumi_footer: true
 
