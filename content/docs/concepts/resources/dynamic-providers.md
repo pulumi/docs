@@ -669,17 +669,17 @@ let auth = config.requireSecret("githubToken");
 
 const githubLabelProvider = {
     async create(inputs) {
-        const octokit = new Octokit({auth});
+        const octokit = new Octokit({auth.get()});
         const label = await octokit.issues.createLabel(inputs);
         return { id: label.data.id.toString(), outs: label.data };
     },
     async update(id, olds, news) {
-        const octokit = new Octokit({auth});
+        const octokit = new Octokit({auth.get()});
         const label = await octokit.issues.updateLabel({ ...news, current_name: olds.name });
         return { outs: label.data };
     },
     async delete(id, props) {
-        const octokit = new Octokit({auth});
+        const octokit = new Octokit({auth.get()});
         await octokit.issues.deleteLabel(props);
     }
 }
@@ -722,7 +722,7 @@ interface LabelInputs {
 
 const githubLabelProvider: pulumi.dynamic.ResourceProvider = {
     async create(inputs: LabelInputs) {
-        const octokit = new Octokit({auth});
+        const octokit = new Octokit({auth.get()});
         const label = await octokit.issues.createLabel({
             owner: inputs.owner,
             repo: inputs.repo,
@@ -732,7 +732,7 @@ const githubLabelProvider: pulumi.dynamic.ResourceProvider = {
         return { id: label.data.id.toString(), outs: label.data };
     },
     async update(id: string, olds: LabelInputs, news: LabelInputs) {
-        const octokit = new Octokit({auth});
+        const octokit = new Octokit({auth.get()});
         const label = await octokit.issues.updateLabel({
             owner: news.owner,
             repo: news.repo,
@@ -744,7 +744,7 @@ const githubLabelProvider: pulumi.dynamic.ResourceProvider = {
     },
 
     async delete(id: string, props: LabelInputs) {
-        const octokit = new Octokit({auth});
+        const octokit = new Octokit({auth.get()});
         await octokit.issues.deleteLabel({owner: props.owner, repo: props.repo, name: props.name});
     }
 }
