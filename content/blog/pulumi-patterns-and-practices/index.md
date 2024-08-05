@@ -1,20 +1,21 @@
 ---
-title: "Pulumi Patterns and Practices (P3): A Pulumi-based reference architecture for large-scale organizations"
+title: "Pulumi Patterns and Practices Platform (P3): A reference architecture for large-scale organizations"
 allow_long_title: true
 date: 2024-08-05
 draft: false
 social_media: "TBD"
-meta_desc: "Pulumi Patterns and Practices (P3) is a reference architecture of a Pulumi-based internal platform for infrastructure management and secure deployments in a large-scale environment."
+meta_desc: "Pulumi Patterns and Practices Platform (P3) is a reference architecture of a Pulumi-based internal platform for infrastructure management and secure deployments in a large-scale environment."
 meta_image: meta.png
 authors:
     - troy-howard
 tags:
     - platform-engineering
-    - patterns-and-practices
-    - p3
+    - patterns-and-practices-platform
+    - developer-experience-devex
     - devsecops
     - architecture
-    - scaling
+    - enterprise
+    - devops
 ---
 
 Infrastructure management is all fun and games until you find yourself scrolling through 1000+ resources in your AWS console. Worse, when one rogue product team wants to use Azure and your data team wants to be on GCP, you're ARM wrestling in Azure and watching your economies of scale tip the wrong direction as you're copy-pasting CloudFormation templates into yet another git repo. This. Needs. To. Be. A. Platform!
@@ -29,34 +30,34 @@ It's exhausting. If there was a good solution on the market, you wouldn't be rea
 
 There are quite a few [listicles](https://en.wikipedia.org/wiki/Listicle) out there professing to authoritatively tell you the 5, or 7, or 11 essential components of an internal developer platform. Personally, I trust our customers to tell us, and here's what they have said they need:
 
-**Consistency:** Bring some order to the chaos. As your company and your infrastructure grows, it gets more and more complicated to maintain consistency. You might already have established design patterns that you want to replicate, but don't have any way to encode those practices in your current tools. There's a lot of copy/paste of reusable blocks, but no way to apply [DRY principles](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) or to modularize/templatize the important parts (hint: all the parts are important!).
+**[Consistency:](/blog/pulumi-patterns-and-practices/#consistency)** Bring some order to the chaos. As your company and your infrastructure grows, it gets more and more complicated to maintain consistency. You might already have established design patterns that you want to replicate, but don't have any way to encode those practices in your current tools. There's a lot of copy/paste of reusable blocks, but no way to apply [DRY principles](https://www.youtube.com/watch?v=5xw04T20lto&t=7s) or to modularize/templatize the important parts (hint: all the parts are important!).
 
-**Reproducibility:** Repeatable behaviors, who dat? If you run your deploy twice do you get the same results each time? What if you replicate your production environment to create a test environment, are they actually identical? How much more work does it take to get them to be? Will you get the same version of the training dataset every time you run your AI workloads? It's anyone's guess. A lack of reproducibility slows down development, makes debugging more difficult, and makes that reuse we just talked about harder to achieve.
+**[Reproducibility:](/blog/pulumi-patterns-and-practices/#reproducibility)** Repeatable behaviors, who dat? If you run your deploy twice do you get the same results each time? What if you replicate your production environment to create a test environment, are they actually identical? How much more work does it take to get them to be? Will you get the same version of the training dataset every time you run your AI workloads? It's anyone's guess. A lack of reproducibility slows down development, makes debugging more difficult, and makes that reuse we just talked about harder to achieve.
 
-**Visibility:** When your node count, and user count starts to go beyond about 50-100 resources (computing or human) you quickly run into a problem of visibility. It can be very difficult to get a handle on what's happening, how many resources you have, where they are, and how much they cost. Any system that purports to be able to manage 1000 nodes or more must have deeply integrated analytics, dashboards, charts, and be searchable, across all your clouds, all your users, and every kind of resource.
+**[Visibility:](/blog/pulumi-patterns-and-practices/#visibility)** When your node count, and user count starts to go beyond about 50-100 resources (computing or human) you quickly run into a problem of visibility. It can be very difficult to get a handle on what's happening, how many resources you have, where they are, and how much they cost. Any system that purports to be able to manage 1000 nodes or more must have deeply integrated analytics, dashboards, charts, and be searchable, across all your clouds, all your users, and every kind of resource.
 
-**Security and Compliance:** Good fences make good neighbors. RBAC, policy-as-code, excellent secrets management, integration with your existing identity providers. These are the things you need to build security and policy guardrails you can rely on. Without them? It's just a powder keg of liability waiting to catch a spark.
+**[Security and Compliance:](/blog/pulumi-patterns-and-practices/#security-and-compliance)** Good fences make good neighbors. RBAC, policy-as-code, excellent secrets management, integration with your existing identity providers. These are the things you need to build security and policy guardrails you can rely on. Without them? It's just a powder keg of liability waiting to catch a spark.
 
-**Auditability:** What happened and who did it? This is like a high-stakes game of [Clue](https://en.wikipedia.org/wiki/Cluedo). How quickly can you figure out who ran that bad deployment? Was it *Colonel Mustard* in the *library* with the *candlestick*? Or Blake the new Front-End Developer with overly-broad permissions in AWS? Being able to answer these questions needs to happen quickly. Quickly, like minutes, not hours or days. And it might have happened 6 months ago. Oof.
+**[Auditability:](https://www.pulumi.com/blog/pulumi-patterns-and-practices/#auditability)** What happened and who did it? This is like a high-stakes game of [Clue](https://en.wikipedia.org/wiki/Cluedo). How quickly can you figure out who ran that bad deployment? Was it *Colonel Mustard* in the *library* with the *candlestick*? Or Blake the new Front-End Developer with overly-broad permissions in AWS? Being able to answer these questions needs to happen quickly. Quickly, like minutes, not hours or days. And it might have happened 6 months ago. Oof.
 
-**Developer Experience:** In the ideal world, developers drive their own DevOps. The platform team provides self-service tools and streamlined workflows that allow your engineers to provision new resources, so your team doesn't have to. And you know, if the developers don't like the user experience, they won't use it at all, and will invent their own tools. You will have ROGUE SYSTEMS to hunt down and argue against in tedious overly-technical meetings. This is not what you want. We need to keep the developers happy to prevent this.
+**[Developer Experience:](https://www.pulumi.com/blog/pulumi-patterns-and-practices/#auditability)** In the ideal world, developers drive their own DevOps. The platform team provides self-service tools and streamlined workflows that allow your engineers to provision new resources, so your team doesn't have to. And you know, if the developers don't like the user experience, they won't use it at all, and will invent their own tools. You will have ROGUE SYSTEMS to hunt down and argue against in tedious overly-technical meetings. This is not what you want. We need to keep the developers happy to prevent this.
 
-## A holistic view of the Pulumi Patterns and Practices reference architecture
+## A holistic view of the Patterns and Practices Platform reference architecture
 
 Pulumi has a broad surface area of [products and features](https://www.pulumi.com/product/) that address these needs. Designed with integration in mind from the beginning, our tools orchestrate well, presenting a smooth and streamlined workflow for both operations teams and developer teams.
 
 We have an idea of how you can use all the Pulumi products together to deliver a comprehensive internal platform for security, infrastructure management, and deployments. Call it an [internal platform for developer platform engineers](https://www.pulumi.com/what-is/what-is-platform-engineering/) (IPfDPE), if you want. We call it the realization of a vision we've been working hard to build for many years.
 
-**Pulumi Patterns and Practices (P3)** is a reference architecture that we will be describing, and providing code for, through this series of articles. We'll be diving deep into not just what you can do with our tools, but how to do it, and provide code for a reference implementation that you can use to jump start the process.
+**Pulumi Patterns and Practices Platform (P3)** is a reference architecture that we will be describing, and providing code for, through this series of articles. We'll be diving deep into not just what you can do with our tools, but how to do it, and provide code for a reference implementation that you can use to jump start the process.
 
-Here's a quick overview to give you an idea of how we'll be addressing those needs in Pulumi Patterns and Practices (P3).
+Here's a quick overview to give you an idea of how we'll be addressing those needs in Pulumi Patterns and Practices Platform (P3).
 
 ### Consistency
 
 Pulumi can help bring consistency to your software catalog by encoding design patterns into reusable *[component resources](https://www.pulumi.com/learn/abstraction-encapsulation/component-resources/)* and by building custom *[organization templates](https://www.pulumi.com/docs/pulumi-cloud/developer-portals/templates/)* that provide a no-code or low-code way to start a new project. Templates help get projects off the ground faster and ensure consistent code structure, policy compliance, and best practices.
 
 <figure>
-{{< video title="The New Project Wizard in Pulumi Cloud" src="https://www.pulumi.com/uploads/npw.mp4" controls="false" autoplay="true" loop="true" >}}
+{{< video title="The New Project Wizard in Pulumi Cloud" src="npw-720p.mp4" controls="false" autoplay="true" loop="true" >}}
   <figcaption><p>Figure: An internal developer portal using custom templates in Pulumi Cloud</p></figcaption>
 </figure>
 
@@ -90,15 +91,15 @@ Every action a user takes in Pulumi can be tracked via the [audit log](https://w
 
 Probably the most compelling aspect of Pulumi is the developer experience. [Developers love Pulumi](https://www.pulumi.com/testimonials/), because they get to use their preferred tools. General purpose programming languages, visual IDEs, command-line tools, and products with an API-driven architecture are what developers want, and it's what Pulumi delivers in spades.
 
-With Pulumi templates and custom internal component resources in place, developers can drive their own DevOps, provisioning their own infrastructure resources and managing their own deployments directly, reducing bottlenecks in platform teams. Product engineering teams can self-service with a stream-lined workflow that stays compliant with company policy by default. Deep in the code of their favorite programming languages, your developers will never even know they are following the company rules.
+With Pulumi templates and custom internal component resources in place, [developers can drive their own DevOps](https://www.pulumi.com/blog/software-developer-experience-devex-devx-devops-culture/#how-does-devex-intersect-with-devops), provisioning their own infrastructure resources and managing their own deployments directly, reducing bottlenecks in platform teams. Product engineering teams can self-service with a stream-lined workflow that stays compliant with company policy by default. Deep in the code of their favorite programming languages, your developers will never even know they are following the company rules.
 
 {{< figure src="pulumi-ide.png" caption="Figure: Using C# to write a Pulumi program in VS Code">}}
 
 ### More to Come
 
-So now that we've made a case for how Pulumi can be applied to meet the most pressing needs of a larger organization, hopefully you will realize that the Pulumi Patterns and Practices (P3) reference architecture we are presenting here is more than just infrastructure-as-code. P3 is a Pulumi-powered platform for teams, where your developer portal is not just a catalog of software, but a fully functional control-plane across all your cloud environments.
+So now that we've made a case for how Pulumi can be applied to meet the most pressing needs of a larger organization, hopefully you will realize that the Pulumi Patterns and Practices Platform (P3) reference architecture we are presenting here is more than just infrastructure-as-code. P3 is a Pulumi-powered platform for teams, where your developer portal is not just a catalog of software, but a fully functional control-plane across all your cloud environments.
 
-Stay tuned for the following series of posts where we will use Pulumi to implement the P3 reference architecture for a fully-featured internal developer platform (IDP, or IPfDPE if you prefer). That said, you may already have invested in some popular in cloud-native tools like [Backstage](https://backstage.io/) or [Kubernetes](https://kubernetes.io/). Pulumi plays well with others, and you will be delighted to see [how you can use Pulumi to cover the gaps](https://www.pulumi.com/blog/pulumi-in-a-cloud-native-world) in the [CNCF](https://www.cncf.io/) ecosystem.
+Stay tuned for the following series of posts where we will use Pulumi to implement the P3 reference architecture for a fully-featured internal developer platform (IDP, or IPfDPE if you prefer). That said, you may already have invested in some popular in cloud-native tools like [Backstage](https://www.pulumi.com/blog/pulumi-in-a-cloud-native-world/#the-kebap-stack-reference-architecture) or [Kubernetes](https://www.pulumi.com/blog/kubernetes-4-0-even-more-kubernetes-native/). Pulumi plays well with others, and you will be delighted to see [how you can use Pulumi to cover the gaps](https://www.pulumi.com/blog/pulumi-in-a-cloud-native-world) in the [CNCF](https://www.cncf.io/) ecosystem.
 
 And if you are already ready to get your hands on Pulumi after this introduction, feel free to [create an account](https://www.pulumi.com/signup/) and follow some of our [Getting Started](https://www.pulumi.com/docs/get-started/) guides to see how easy simple use cases are and begin to imagine how that same developer experience will scale up to your entire organization.
 
