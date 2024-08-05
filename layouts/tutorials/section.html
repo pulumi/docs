@@ -33,11 +33,14 @@
                                                 <i class="far fa-arrow-alt-circle-right w-4 text-gray-700"></i>
                                                 <a class="text-gray-800 font-display text-lg" href="/docs/clouds/{{ $id }}/get-started/">Get started with {{ $provider.name }}</a>
                                             </li>
-                                            <li class="rounded border p-4 border-gray-300 shadow-sm flex items-center gap-3">
-                                                <i class="far fa-list-alt w-4 text-gray-700"></i>
-                                                <a class="text-gray-800 font-display text-lg" href="/tutorials/{{ $id }}">Browse all {{ $provider.name }} tutorials</a>
-                                            </li>
 
+                                            {{ $taxonomy := index $.Site.Taxonomies.collections $id }}
+                                            {{ if $taxonomy }}
+                                                <li class="rounded border p-4 border-gray-300 shadow-sm flex items-center gap-3">
+                                                    <i class="far fa-list-alt w-4 text-gray-700"></i>
+                                                    <a class="text-gray-800 font-display text-lg" href="/tutorials/{{ $id }}">Browse all {{ $provider.name }} tutorials</a>
+                                                </li>
+                                            {{ end }}
                                         </ul>
                                     </div>
                                 </li>
@@ -54,7 +57,7 @@
                                 {{ range $taxonomy, $terms := .Site.Taxonomies.collections }}
                                     {{ $collection := index (where $.Site.Data.tutorials.collections "id" $taxonomy) 0 }}
 
-                                    {{ if $collection }}
+                                    {{ if and (ne $collection.type nil) (ne $collection.type "provider") }}
                                         {{ $ordinal = add $ordinal 1}}
 
                                         <li class="lg:w-1/{{ $perRow }} {{ if ne (mod $ordinal $perRow) 0 }}lg:pr-4{{ end }}">

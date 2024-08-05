@@ -33,11 +33,6 @@
   logo: /logos/pkg/aws.svg
   featured: false
 
-- id: pulumi-cli
-  type: product
-  name: Pulumi CLI
-  description: Here is a description of the collection.
-
 - id: pulumi-101
   type: level
   name: Pulumi 101

@@ -4,17 +4,8 @@
 
 {{ $currentPage := .Page }}
 
-{{/* Get the pages in the current directory. */}}
-{{ $unsortedPages := slice $currentPage }}
-
-{{ range $index, $page := .Page.Parent.CurrentSection.Pages }}
-    {{ if (ne $page.RelPermalink $currentPage.RelPermalink) }}
-        {{ $unsortedPages = $unsortedPages | append $page }}
-    {{ end }}
-{{ end }}
-
 {{/* Sort by index number. */}}
-{{ $pages := sort $unsortedPages ".Params.index" }}
+{{ $pages := .Page.Parent.CurrentSection.Pages.ByWeight }}
 
 {{/* Set the first and last indexes. */}}
 {{ $first := 0 }}
@@ -28,18 +19,16 @@
     {{ end }}
 {{ end }}
 
-{{ .Page.Parent }}
-
 <div class="mt-6">
     {{ if ne $step $first }}
         {{ $prev := index $pages (sub $step 1) }}
-        <a data-track="previous-step" class="btn btn-secondary" href="{{ $prev.RelPermalink }}">&larr; Previous Topic</a>
+        <a data-track="previous-step" class="btn btn-secondary" href="{{ $prev.RelPermalink }}">&larr; {{ $prev.Title }}</a>
     {{ else }}
-        <a data-track="previous-step" class="btn btn-secondary" href="{{ .Page.Parent.RelPermalink }}">&larr; Back to {{ .Page.Parent.Title }}</a>
+        <a data-track="previous-step" class="btn btn-secondary" href="{{ .Page.Parent.RelPermalink }}">&larr; Return to {{ .Page.Parent.Title }}</a>
     {{ end }}
     {{ if ne $step $last }}
         {{ $next := index $pages (add $step 1) }}
-        <a data-track="next-step" class="btn" href="{{ $next.RelPermalink }}">Next Topic: {{ $next.LinkTitle }} &rarr;</a>
+        <a data-track="next-step" class="btn" href="{{ $next.RelPermalink }}">{{ $next.LinkTitle }} &rarr;</a>
     {{ else }}
         <a data-track="next-step" class="btn" href="{{ .Page.Parent.RelPermalink }}">Return to {{ .Page.Parent.Title }} &rarr;</a>
     {{ end }}

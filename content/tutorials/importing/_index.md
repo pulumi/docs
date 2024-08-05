@@ -12,9 +12,8 @@ youll_learn:
     - how to import resources
 aliases:
     - /learn/importing/
-providers:
+collections:
     - aws
-    - gcp
 tags:
     - terraform
 ---
