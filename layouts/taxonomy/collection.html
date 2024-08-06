@@ -2,7 +2,7 @@
     {{ $id := .Path | path.Base }}
     {{ $collection := index (where .Site.Data.tutorials.collections "id" $id) 0 }}
 
-    <div class="flex mb-16">
+    <div class="flex mb-8">
         <div class="sticky top-12 max-h-75">
             <div class="w-56 p-4">
                 {{ partial "tutorials/nav.html" . }}

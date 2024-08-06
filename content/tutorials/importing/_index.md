@@ -12,10 +12,6 @@ youll_learn:
     - how to import resources
 aliases:
     - /learn/importing/
-collections:
-    - aws
-tags:
-    - terraform
 ---
 
 ## Prerequisites

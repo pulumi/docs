@@ -41,9 +41,7 @@ function loadToggleStates() {
             const folderClosedIcon = $(el).find(".folder-closed-14-14");
             if (folderOpenIcon.length > 0) {
                 folderOpenIcon.addClass("folder-closed-14-14").removeClass("folder-open-14-14")
-                console.log("open")
             } else if (folderClosedIcon.length > 0) {
-                console.log("closed")
                 folderClosedIcon.addClass("folder-open-14-14").removeClass("folder-closed-14-14")
             }
         });

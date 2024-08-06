@@ -1,43 +1,63 @@
 <nav class="main-nav">
 
-
+    {{/* On the home page, show the getting-started guides and a list of collections. */}}
 
     {{ if eq .RelPermalink "/tutorials/" }}
-        {{ $toc_page := . }}
-        {{ $toc_sections := slice "Collections" }}
-        {{ $toc_menus := dict "Collections" .Site.Data.tutorials.collections }}
 
-        {{ range $index, $element := $toc_sections }}
-            {{ $sidenav_selected := "" }}
-            {{ $toc_name := . }}
-            {{ $toc_menu := (index $toc_menus $toc_name) }}
-
-            {{ $toc_section_link := "" }}
-
-            {{ $toggle_class := "toggle" }}
-            {{ if or (hasPrefix $.Page.RelPermalink $toc_section_link) (eq $toc_name "Clouds") }}
-                {{ $toggle_class = "toggleVisible " }}
-            {{ end }}
-
-            <div id="toc-menu-{{ $toc_name }}" class="{{ $sidenav_selected }} text-black toc-header toggle-topLevel {{ $toggle_class }}" id="{{ $toc_name | urlize }}-toc-header">
-                <div class="flex items-start">
-                    <div class="icon icon-14-14 folder-open-14-14"></div>
-                </div>
-                <a href="{{ $toc_section_link }}">
-                    <span class="text-black">{{ $toc_name }}</span>
-                </a>
-                <span class="toggleButton-topLevel down">
-                    <div class="icon icon-14-14 keyboard-arrow-down-gray-14-14"></div>
-                </span>
-                <span class="toggleButton-topLevel right">
-                    <div class="icon icon-14-14 keyboard-arrow-right-gray"></div>
-                </span>
+        <!-- Get started -->
+        <div id="toc-menu-get-started" class="text-black toc-header toggle-topLevel toggleVisible" id="get-started-toc-header">
+            <div class="flex items-start">
+                <div class="icon icon-14-14 folder-open-14-14"></div>
             </div>
+            <a href="/docs/get-started/">
+                <span class="text-black">Get started</span>
+            </a>
+            <span class="toggleButton-topLevel down">
+                <div class="icon icon-14-14 keyboard-arrow-down-gray-14-14"></div>
+            </span>
+            <span class="toggleButton-topLevel right">
+                <div class="icon icon-14-14 keyboard-arrow-right-gray"></div>
+            </span>
+        </div>
+        <div class="top-level-container">
+            <ul class="expanded">
+                {{ range $index, $id := (slice "aws" "azure" "gcp" "kubernetes") }}
+                    {{ $provider := index (and ((where $.Site.Data.tutorials.collections "type" "provider")) ((where $.Site.Data.tutorials.collections "id" $id))) 0 }}
+                    <li class="sidenav-topic">
+                        <a href="/docs/clouds/{{ $id }}/get-started/">{{ $provider.name }}</a>
+                    </li>
+                {{ end }}
+            </ul>
+        </div>
 
-            <div class="top-level-container">
-                {{ template "toc-tutorials" (dict "page" $toc_page "menu" $toc_menu "taxonomies" $.Site.Taxonomies) }}
+        <!-- Collections -->
+        <div id="toc-menu-collections" class="text-black toc-header toggle-topLevel toggleVisible" id="collections-toc-header">
+            <div class="flex items-start">
+                <div class="icon icon-14-14 folder-open-14-14"></div>
             </div>
-        {{ end }}
+            <a href="/docs/get-started/">
+                <span class="text-black">Collections</span>
+            </a>
+            <span class="toggleButton-topLevel down">
+                <div class="icon icon-14-14 keyboard-arrow-down-gray-14-14"></div>
+            </span>
+            <span class="toggleButton-topLevel right">
+                <div class="icon icon-14-14 keyboard-arrow-right-gray"></div>
+            </span>
+        </div>
+        <div class="top-level-container">
+            <ul class="expanded">
+                {{ range $taxonomy, $terms := .Site.Taxonomies.collections }}
+                    {{ $collection := index (where $.Site.Data.tutorials.collections "id" $taxonomy) 0 }}
+
+                    {{ if and (ne $collection.type nil) (ne $collection.type "provider") }}
+                        <li class="sidenav-topic">
+                            <a href="/tutorials/{{ $collection.id }}/">{{ $collection.name }}</a>
+                        </li>
+                    {{ end }}
+                {{ end }}
+            </ul>
+        </div>
     {{ else }}
         {{ $toc_name := .Scratch.Get "title" }}
         {{ $layout_type := .Scratch.Get "layout"}}
@@ -79,14 +99,14 @@
                 </ul>
             </div>
         {{ end }}
-
     {{ end }}
 
-
     {{ define "toc-tutorials" }}
+
         {{ $page := .page }}
-        {{ $tutorialTaxonomies := slice .taxonomies.collections }}
-        {{ $tutorialTaxonomies }}
+        {{ range $taxonomy, $terms := .collections }}
+
+        {{ end }}
 
         {{ range .menu }}
             {{ $toggle_state := "toggle" }}
@@ -95,18 +115,14 @@
             <ul id="toc-expandable-menu{{ replace $filepath "/" "-" }}" class="{{ $toggle_state }}">
                 <ul class="collapsed">
 
-                    {{ $thisGroup := index (where $tutorialTaxonomies "id" .id) 0 }}
-
-                    {{ if $thisGroup }}
-                        <li class="sidenav-topic">
-                            <a href="/tutorials/{{ .id }}" data-track="toc-{{ .shortname | urlize }}">{{ .name }}</a>
-                            {{ if .HasChildren }}
-                                <span class="toggleButton">
-                                    <div class="icon icon-14-14 keyboard-arrow-right-gray"></div>
-                                </span>
-                            {{ end }}
-                        </li>
-                    {{ end }}
+                    <li class="sidenav-topic">
+                        <a href="/tutorials/{{ .id }}" data-track="toc-{{ .shortname | urlize }}">{{ .name }}</a>
+                        {{ if .HasChildren }}
+                            <span class="toggleButton">
+                                <div class="icon icon-14-14 keyboard-arrow-right-gray"></div>
+                            </span>
+                        {{ end }}
+                    </li>
                 </ul>
                 <ul class="expanded">
                     <li class="sidenav-topic">
