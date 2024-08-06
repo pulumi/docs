@@ -13,9 +13,8 @@ featured_customer:
     Reduction in deployment times, from weeks to
     hours, significantly improving Unity's time to market.
   quote: |
-    Terraform relies on HCL and lacks support for concepts like classes, objects and inheritance.
-    An equivalent deployment would take more lines of code while yielding IaC that is less reusable.
-
+    "Terraform relies on HCL and lacks support for concepts like classes, objects and inheritance.
+    An equivalent deployment would take more lines of code while yielding IaC that is less reusable."
 
 customer_logos:
   logos:

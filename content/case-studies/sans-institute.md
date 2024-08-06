@@ -11,7 +11,7 @@ customer_url: https://www.sans.org/
 
 quote_block:
   quote: |
-      The Pulumi Automation API made [deploying the application and its infrastructure] a much cleaner process. With the old architecture, it was much more manual, stitched together with bash scripts, and then wrapped in another tool with its DSL.
+      "The Pulumi Automation API made [deploying the application and its infrastructure] a much cleaner process. With the old architecture, it was much more manual, stitched together with bash scripts, and then wrapped in another tool with its DSL."
   quote_attrib: Tyler Mulligan, Senior DevOps Engineer, SANS Institute
   headline_stat: 70%
   headline: Reduced deployment time

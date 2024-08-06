@@ -11,7 +11,7 @@ customer_url: https://greenparksports.com/
 
 quote_block:
   quote: |
-      I took a look at Pulumi and that started a much happier time in my life.
+      "I took a look at Pulumi and that started a much happier time in my life."
   quote_attrib: Jacob Foard, Tech Lead, Platform Team, Green Park Sports
   headline_stat: 70%
   headline: Increased cloud deployments

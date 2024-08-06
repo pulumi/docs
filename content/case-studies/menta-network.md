@@ -13,7 +13,7 @@ customer_url:
 
 quote_block:
   quote: |
-      At Menta Network we have a lot of experience with Ansible and Puppet but wanted to shift to more modern tools to manage our infrastructure. We tried Terraform but found that Pulumi was far easier to use given its Python support. Ultimately, Pulumi is just as robust as Terraform and has the added benefit of reducing the complexity of managing many configurations and environments.
+      "We tried Terraform but found that Pulumi was far easier to use given its Python support. Ultimately, Pulumi is just as robust as Terraform and has the added benefit of reducing the complexity of managing many configurations and environments."
   quote_attrib: Ernesto Mendoza, CTO, Menta Network
   headline_stat: 60%
   headline: Reduced operating costs

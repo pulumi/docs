@@ -11,7 +11,7 @@ customer_url: https://www.snowflake.com/
 
 quote_block:
   quote: |
-      There’s no question that, if we had gone down the traditional infrastructure automation route, it would have taken us a week or a week and a half to do one deployment of the cluster, end to end. Plus, that deployment wouldn’t be repeatable, testable or scalable. It would have been a mad scramble to meet our deadline. When we demonstrated to people that what used to take a week and a half now, with Pulumi, took under a day, they were shocked.
+      "There’s no question that, if we had gone down the traditional infrastructure automation route, it would have taken us a week or a week and a half to do one deployment of the cluster [...] When we demonstrated to people that what used to take a week and a half now, with Pulumi, took under a day, they were shocked."
   quote_attrib: Raman Hariharan, Director of Cloud Platform Engineering, Snowflake
   headline_stat: 1.5 weeks > 1 day
   headline: Reduced deployment time

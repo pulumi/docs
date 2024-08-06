@@ -26,36 +26,45 @@
 
 {{ define "main" }}
     {{ $pageContext := . }}
-
-    <script src="https://cdn.jsdelivr.net/npm/infiniteslidev2/infiniteslidev2.min.js"></script>
-
-    <script type="text/javascript">
-        $(function(){
-            $('.infiniteslide').infiniteslide({
-                'speed': 50, //speed this is px/min
-                'direction': 'left', //choose  up/down/left/right
-                'pauseonhover': false, //if true,stop onmouseover
-                'responsive': true, //width/height recalculation on window resize. child element's width/height define %/vw/vh,this set true.
-                'clone': 1 //if child elements are too few (elements can't "infinite"), set 2 or over.
-            });
-        });
-    </script>
-
     <!-- Logos carousel -->
     <section class="container mx-auto text-center overflow-hidden px-3 mt-6">
-        <h3 class="text-center mb-4 text-base">{{ .Params.customer_logos.title }}</h3>
+        <h3 class="text-center mb-4">{{ .Params.customer_logos.title }}</h3>
 
-        <a href="/case-studies">
-            <div class="w-full order-first pb-12 items-center justify-center hidden lg:block infiniteslide">
-                <ul>
-                    {{ range $logo := .Params.customer_logos.logos }}
-                        <li class="m-2 px-4 flex flex-col flex-grow items-end h-10 justify-center">
-                            {{ partial "customer-logo.html" (dict "logo" $logo.name "hoverable" true) }}
-                        </ul>
-                    {{ end }}
-                </ul>
-            </div>
-        </a>
+        <div class="w-full order-first pb-16 items-center justify-center hidden lg:block">
+            <pulumi-swiper slides="6" centered-slides="true" loop="true" autoplay="true" autoplay-delay="500" speed="2000">
+                {{ range $logo := .Params.customer_logos.logos }}
+                    <pulumi-swipeable>
+                        <div class="p-6 flex flex-col flex-grow items-end h-24 justify-center">
+                            {{ if $logo.link }}
+                                <a class="w-full h-full" href="{{ $logo.link }}" target="_blank">
+                                    {{ partial "customer-logo.html" (dict "logo" $logo.name "hoverable" true) }}
+                                </a>
+                            {{ else }}
+                                {{ partial "customer-logo.html" (dict "logo" $logo.name "hoverable" true) }}
+                            {{ end }}
+                        </div>
+                    </pulumi-swipeable>
+                {{ end }}
+            </pulumi-swiper>
+        </div>
+
+        <div class="w-full order-first pb-16 items-center justify-center block lg:hidden">
+            <pulumi-swiper slides="3" centered-slides="true" loop="true" autoplay="true" autoplay-delay="500" speed="2000">
+                {{ range $logo := .Params.customer_logos.logos }}
+                    <pulumi-swipeable>
+                        <div class="p-6 flex flex-col flex-grow items-end h-24 justify-center">
+                            {{ if $logo.link }}
+                                <a class="w-full h-full" href="{{ $logo.link }}" target="_blank">
+                                    {{ partial "customer-logo.html" (dict "logo" $logo.name "hoverable" true) }}
+                                </a>
+                            {{ else }}
+                                {{ partial "customer-logo.html" (dict "logo" $logo.name "hoverable" true) }}
+                            {{ end }}
+                        </div>
+                    </pulumi-swipeable>
+                {{ end }}
+            </pulumi-swiper>
+        </div>
     </section>
 
     <!-- Code and ship faster -->
