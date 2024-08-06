@@ -12,7 +12,7 @@ menu:
 
 ## Overview
 
-Pulumi ESC integrates with [GitHub Actions](https://docs.github.com/en/actions) (GHA) to help developers automatically manage configuration and secrets when running workflows. Additionally, Pulumi ESC works with the [Pulumi CLI Action](https://github.com/marketplace/actions/pulumi-cli-action#pulumi-github-actions) to provide secrets to workflow jobs and steps, such as AWS Credentials.
+Pulumi ESC integrates with [GitHub Actions](https://docs.github.com/en/actions) to help developers automatically manage configuration and secrets when running workflows. Additionally, Pulumi ESC works with the [Pulumi CLI Action](https://github.com/marketplace/actions/pulumi-cli-action#pulumi-github-actions) to provide secrets to workflow jobs and steps, such as AWS Credentials.
 
 {{< notes type="info" >}}
 **What is Pulumi ESC?** Pulumi ESC (Environments, Secrets, and Configuration) allows you to define collections of configuration settings and secrets, known as environments, and utilize them in any application or service. [Learn more](https://www.pulumi.com/docs/esc/)
