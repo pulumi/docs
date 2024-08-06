@@ -1,148 +1,88 @@
 <nav class="main-nav">
 
-    {{/* On the home page, show the getting-started guides and a list of collections. */}}
+    {{ $menuItems := slice }}
+    {{ $currentPath := .RelPermalink}}
 
-    {{ if eq .RelPermalink "/tutorials/" }}
+    {{/* On the home page and collection pages, show the getting-started guides and a list of non-empty collections. */}}
+    {{ if or (eq $currentPath "/tutorials/") (eq .Kind "term") }}
 
-        <!-- Get started -->
-        <div id="toc-menu-get-started" class="text-black toc-header toggle-topLevel toggleVisible" id="get-started-toc-header">
-            <div class="flex items-start">
-                <div class="icon icon-14-14 folder-open-14-14"></div>
-            </div>
-            <a href="/docs/get-started/">
-                <span class="text-black">Get started</span>
-            </a>
-            <span class="toggleButton-topLevel down">
-                <div class="icon icon-14-14 keyboard-arrow-down-gray-14-14"></div>
-            </span>
-            <span class="toggleButton-topLevel right">
-                <div class="icon icon-14-14 keyboard-arrow-right-gray"></div>
-            </span>
-        </div>
-        <div class="top-level-container">
-            <ul class="expanded">
-                {{ range $index, $id := (slice "aws" "azure" "gcp" "kubernetes") }}
-                    {{ $provider := index (and ((where $.Site.Data.tutorials.collections "type" "provider")) ((where $.Site.Data.tutorials.collections "id" $id))) 0 }}
-                    <li class="sidenav-topic">
-                        <a href="/docs/clouds/{{ $id }}/get-started/">{{ $provider.name }}</a>
-                    </li>
-                {{ end }}
-            </ul>
-        </div>
-
-        <!-- Collections -->
-        <div id="toc-menu-collections" class="text-black toc-header toggle-topLevel toggleVisible" id="collections-toc-header">
-            <div class="flex items-start">
-                <div class="icon icon-14-14 folder-open-14-14"></div>
-            </div>
-            <a href="/docs/get-started/">
-                <span class="text-black">Collections</span>
-            </a>
-            <span class="toggleButton-topLevel down">
-                <div class="icon icon-14-14 keyboard-arrow-down-gray-14-14"></div>
-            </span>
-            <span class="toggleButton-topLevel right">
-                <div class="icon icon-14-14 keyboard-arrow-right-gray"></div>
-            </span>
-        </div>
-        <div class="top-level-container">
-            <ul class="expanded">
-                {{ range $taxonomy, $terms := .Site.Taxonomies.collections }}
-                    {{ $collection := index (where $.Site.Data.tutorials.collections "id" $taxonomy) 0 }}
-
-                    {{ if and (ne $collection.type nil) (ne $collection.type "provider") }}
-                        <li class="sidenav-topic">
-                            <a href="/tutorials/{{ $collection.id }}/">{{ $collection.name }}</a>
-                        </li>
-                    {{ end }}
-                {{ end }}
-            </ul>
-        </div>
-    {{ else }}
-        {{ $toc_name := .Scratch.Get "title" }}
-        {{ $layout_type := .Scratch.Get "layout"}}
-        {{ $sidenav_selected := "" }}
-        {{ $toggle_state := "toggle" }}
-        {{ $toggle_class := "toggle" }}
-        {{ if ne $layout_type "topic" }}
-            <div id="toc-menu-{{ $toc_name }}" class="{{ $sidenav_selected }} text-black toc-header toggle-topLevel {{ $toggle_class }}" id="{{ $toc_name | urlize }}-toc-header">
-                <div class="flex items-start topic-badge">
-                    <div class="icon icon-14-14 folder-open-14-14"></div>
-                </div>
-                <a>{{ $toc_name }}</a>
-            </div>
-            <div class="sidenav-subsection">
-                <ul class="collapsed">
-                    {{ $sorted_pages := sort .Pages ".Params.index" }}
-                    {{ range $sorted_pages }}
-                    <li class="sidenav-topic">
-                        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-                    </li>
-                    {{ end }}
-                </ul>
-            </div>
-        {{ else }}
-            <div id="toc-menu-{{ $toc_name }}" class="{{ $sidenav_selected }} text-black toc-header toggle-topLevel {{ $toggle_class }}" id="{{ $toc_name | urlize }}-toc-header">
-                <div class="flex items-start topic-badge">
-                    <div class="icon icon-14-14 folder-open-14-14"></div>
-                </div>
-                <a href="{{ .Page.Parent.RelPermalink }}">{{ .Parent.Title }}</a>
-            </div>
-            <div class="sidenav-subsection">
-                <ul class="collapsed">
-                    {{ $sorted_pages := sort .Parent.Pages ".Params.index" }}
-                    {{ range $sorted_pages }}
-                        <li class="sidenav-topic">
-                            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-                        </li>
-                    {{ end }}
-                </ul>
-            </div>
+        {{ $clouds := slice }}
+        {{ range .Site.Data.tutorials.collections }}
+            {{ if and (.featured) (eq .type "provider") }}
+                {{ $clouds = $clouds | append (dict "id" .id "label" .name "href" (printf "/docs/clouds/%s/get-started/" .id) ) }}
+            {{ end }}
         {{ end }}
+
+        {{ $collections := slice }}
+        {{ range .Site.Data.tutorials.collections }}
+            {{ if and (ne .type "provider") (ne (index $.Site.Taxonomies.collections .id) nil) }}
+                {{ $collectionPath := (printf "/tutorials/%s/" .id) }}
+                {{ $collections = $collections | append (dict "id" .id "label" .name "href" $collectionPath "active" (eq $collectionPath $currentPath) ) }}
+            {{ end }}
+        {{ end }}
+
+        {{ $menuItems = slice
+            (dict "id" "get-started" "label" "Get Started" "href" "/docs/get-started/" "children" $clouds)
+            (dict "id" "collections" "label" "Collections" "href" nil "children" $collections)
+        }}
+
+    {{ else if eq .Kind "section" }}
+
+        {{ $topics := slice }}
+        {{ range .Pages.ByWeight }}
+            {{ $topics = $topics | append (dict "id" (path.Base .RelPermalink) "label" .Title "href" .RelPermalink) }}
+        {{ end }}
+
+        {{ $menuItems = slice
+            (dict "id" (path.Base .Path) "label" .Title "href" .RelPermalink "children" $topics "active" true)
+        }}
+
+    {{ else if eq .Kind "page" }}
+
+        {{ $topics := slice }}
+        {{ range .Parent.Pages.ByWeight }}
+            {{ $topics = $topics | append (dict "id" (path.Base .RelPermalink) "label" .Title "href" .RelPermalink "active" (eq .RelPermalink $currentPath)) }}
+        {{ end }}
+
+        {{ $menuItems = slice
+            (dict "id" (path.Base .Path) "label" .Parent.Title "href" .Parent.RelPermalink "children" $topics)
+        }}
+
     {{ end }}
 
-    {{ define "toc-tutorials" }}
-
-        {{ $page := .page }}
-        {{ range $taxonomy, $terms := .collections }}
-
-        {{ end }}
-
-        {{ range .menu }}
-            {{ $toggle_state := "toggle" }}
-            {{ $filepath := .menu }}
-
-            <ul id="toc-expandable-menu{{ replace $filepath "/" "-" }}" class="{{ $toggle_state }}">
-                <ul class="collapsed">
-
-                    <li class="sidenav-topic">
-                        <a href="/tutorials/{{ .id }}" data-track="toc-{{ .shortname | urlize }}">{{ .name }}</a>
-                        {{ if .HasChildren }}
-                            <span class="toggleButton">
-                                <div class="icon icon-14-14 keyboard-arrow-right-gray"></div>
-                            </span>
-                        {{ end }}
-                    </li>
-                </ul>
-                <ul class="expanded">
-                    <li class="sidenav-topic">
-
-
-
-                        <a href="{{ .URL }}" data-track="toc-{{ .shortname | urlize }}">{{ .shortname }} tutorials</a>
-                        {{ if .HasChildren }}
-                            <span class="toggleButton">
-                                <div class="icon icon-14-14 keyboard-arrow-down-gray-14-14"></div>
-                            </span>
-                        {{ end }}
-                    </li>
-                    {{ if .HasChildren }}
-                        <div class="sidenav-subsection">
-                            {{ template "toc-tutorials" (dict "page" $page "menu" .Children) }}
-                        </div>
-                    {{ end }}
-                </ul>
-            </ul>
-        {{ end }}
-    {{ end }}
+    {{ template "tutorials-menu" (dict "items" $menuItems) }}
 </nav>
+
+{{ define "tutorials-menu" }}
+    {{ range $item := .items }}
+        <div id="toc-menu-{{ $item.id }}" class="text-black toc-header toggle-topLevel toggleVisible">
+            <div class="flex items-start">
+                <div class="icon icon-14-14 folder-open-14-14"></div>
+            </div>
+            {{ if ne $item.href nil }}
+                <a href="{{ $item.href }}">
+                    <span class="text-black">{{ $item.label }}</span>
+                </a>
+            {{ else }}
+                <span class="px-2 text-black">{{ $item.label }}</span>
+            {{ end }}
+            {{ if .children }}
+                <span class="toggleButton-topLevel down">
+                    <div class="icon icon-14-14 keyboard-arrow-down-gray-14-14"></div>
+                </span>
+                <span class="toggleButton-topLevel right">
+                    <div class="icon icon-14-14 keyboard-arrow-right-gray"></div>
+                </span>
+            {{ end }}
+        </div>
+        <div class="top-level-container">
+            <ul class="expanded">
+                {{ range $child := .children }}
+                    <li class="sidenav-topic {{ if .active }}active{{ end }}">
+                        <a href="{{ $child.href }}">{{ $child.label }}</a>
+                    </li>
+                {{ end }}
+            </ul>
+        </div>
+    {{ end }}
+{{ end }}

@@ -34,6 +34,6 @@
   featured: false
 
 - id: pulumi-101
-  type: level
+  type: proficiency
   name: Pulumi 101
-  description: Tutorials designed to introduce you to core Pulumi concepts.
+  description: Tutorials designed to familiarize you with core Pulumi concepts.
