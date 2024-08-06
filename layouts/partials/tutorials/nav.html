@@ -1,59 +1,71 @@
-<nav class="main-nav">
+<div class="docs-list-main">
+    <div class="docs-main-nav-toggle-wrapper">
+        <div class="docs-main-nav-wrapper">
+            <div class="docs-main-nav">
+                <nav class="main-nav">
 
-    {{ $menuItems := slice }}
-    {{ $currentPath := .RelPermalink}}
+                    {{ $menuItems := slice }}
+                    {{ $currentPath := .RelPermalink}}
 
-    {{/* On the home page and collection pages, show the getting-started guides and a list of non-empty collections. */}}
-    {{ if or (eq $currentPath "/tutorials/") (eq .Kind "term") }}
+                    {{/* On the home page and collection pages, show the getting-started guides and a list of non-empty collections. */}}
+                    {{ if or (eq $currentPath "/tutorials/") (eq .Kind "term") }}
 
-        {{ $clouds := slice }}
-        {{ range .Site.Data.tutorials.collections }}
-            {{ if and (.featured) (eq .type "provider") }}
-                {{ $clouds = $clouds | append (dict "id" .id "label" .name "href" (printf "/docs/clouds/%s/get-started/" .id) ) }}
-            {{ end }}
-        {{ end }}
+                        {{ $clouds := slice }}
+                        {{ range .Site.Data.tutorials.collections }}
+                            {{ if and (.featured) (eq .type "provider") }}
+                                {{ $clouds = $clouds | append (dict "id" .id "label" .name "href" (printf "/docs/clouds/%s/get-started/" .id) ) }}
+                            {{ end }}
+                        {{ end }}
 
-        {{ $collections := slice }}
-        {{ range .Site.Data.tutorials.collections }}
-            {{ if and (ne .type "provider") (ne (index $.Site.Taxonomies.collections .id) nil) }}
-                {{ $collectionPath := (printf "/tutorials/%s/" .id) }}
-                {{ $collections = $collections | append (dict "id" .id "label" .name "href" $collectionPath "active" (eq $collectionPath $currentPath) ) }}
-            {{ end }}
-        {{ end }}
+                        {{ $collections := slice }}
+                        {{ range .Site.Data.tutorials.collections }}
+                            {{ if and (ne .type "provider") (ne (index $.Site.Taxonomies.collections .id) nil) }}
+                                {{ $collectionPath := (printf "/tutorials/%s/" .id) }}
+                                {{ $collections = $collections | append (dict "id" .id "label" .name "href" $collectionPath "active" (eq $collectionPath $currentPath) ) }}
+                            {{ end }}
+                        {{ end }}
 
-        {{ $menuItems = slice
-            (dict "id" "get-started" "label" "Get Started" "href" "/docs/get-started/" "children" $clouds)
-            (dict "id" "collections" "label" "Collections" "href" nil "children" $collections)
-        }}
+                        {{ $menuItems = slice
+                            (dict "id" "get-started" "label" "Get Started" "href" "/docs/get-started/" "children" $clouds)
+                            (dict "id" "collections" "label" "Collections" "href" nil "children" $collections)
+                        }}
 
-    {{ else if eq .Kind "section" }}
+                    {{ else if eq .Kind "section" }}
 
-        {{ $topics := slice }}
-        {{ range .Pages.ByWeight }}
-            {{ $topics = $topics | append (dict "id" (path.Base .RelPermalink) "label" .Title "href" .RelPermalink) }}
-        {{ end }}
+                        {{ $topics := slice }}
+                        {{ range .Pages.ByWeight }}
+                            {{ $topics = $topics | append (dict "id" (path.Base .RelPermalink) "label" .Title "href" .RelPermalink) }}
+                        {{ end }}
 
-        {{ $menuItems = slice
-            (dict "id" (path.Base .Path) "label" "All tutorials" "href" "/tutorials/" "icon" "arrow-left")
-            (dict "id" (path.Base .Path) "label" .Title "href" .RelPermalink "children" $topics "active" true)
-        }}
+                        {{ $menuItems = slice
+                            (dict "id" (path.Base .Path) "label" "All tutorials" "href" "/tutorials/" "icon" "arrow-left")
+                            (dict "id" (path.Base .Path) "label" .Title "href" .RelPermalink "children" $topics "active" true)
+                        }}
 
-    {{ else if eq .Kind "page" }}
+                    {{ else if eq .Kind "page" }}
 
-        {{ $topics := slice }}
-        {{ range .Parent.Pages.ByWeight }}
-            {{ $topics = $topics | append (dict "id" (path.Base .RelPermalink) "label" .Title "href" .RelPermalink "active" (eq .RelPermalink $currentPath)) }}
-        {{ end }}
+                        {{ $topics := slice }}
+                        {{ range .Parent.Pages.ByWeight }}
+                            {{ $topics = $topics | append (dict "id" (path.Base .RelPermalink) "label" .Title "href" .RelPermalink "active" (eq .RelPermalink $currentPath)) }}
+                        {{ end }}
 
-        {{ $menuItems = slice
-            (dict "id" (path.Base .Path) "label" "All tutorials" "href" "/tutorials/" "icon" "arrow-left")
-            (dict "id" (path.Base .Path) "label" .Parent.Title "href" .Parent.RelPermalink "children" $topics)
-        }}
+                        {{ $menuItems = slice
+                            (dict "id" (path.Base .Path) "label" "All tutorials" "href" "/tutorials/" "icon" "arrow-left")
+                            (dict "id" (path.Base .Path) "label" .Parent.Title "href" .Parent.RelPermalink "children" $topics)
+                        }}
 
-    {{ end }}
+                    {{ end }}
 
-    {{ template "tutorials-menu" (dict "items" $menuItems) }}
-</nav>
+                    {{ template "tutorials-menu" (dict "items" $menuItems) }}
+                </nav>
+            </div>
+        </div>
+        <div class="docs-nav-toggle">
+            <div class="docs-nav-toggle-icon icon icon-24-24 open-docs-main-nav"></div>
+        </div>
+    </div>
+</div>
+
 
 {{ define "tutorials-menu" }}
     {{ range $item := .items }}
