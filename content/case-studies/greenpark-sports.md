@@ -9,6 +9,13 @@ customer_name: GreenPark Sports
 customer_logo: /logos/customers/greenpark-sports-wordmark.png
 customer_url: https://greenparksports.com/
 
+quote_block:
+  quote: |
+      I took a look at Pulumi and that started a much happier time in my life.
+  quote_attrib: Jacob Foard, Tech Lead, Platform Team, Green Park Sports
+  headline_stat: 70%
+  headline: Increased cloud deployments
+
 exec_summary: |
     GreenPark Sports creates digital experiences and games for the new generation of sports and esports fans. To increase velocity, its platform team wanted to make cloud infrastructure self-service by empowering the company’s developers to build and deploy Kubernetes applications. However, GreenPark’s legacy infrastructure tool used a domain-specific language (DSL) that impeded adoption by developers. The platform team migrated to Pulumi so that it could build, deploy, and manage infrastructure with general-purpose languages (Go, Python, TypeScript/JavaScript, C#), enabling developers to easily provision and use cloud infrastructure for developing cloud applications. This increased development velocity because more developers could deploy updates faster and more frequently. Since GreenPark adopted Pulumi, every developer now uses Infrastructure as Code to deploy changes, up from only 30% before Pulumi. Developers have also increased cloud deployments by 70%.
 

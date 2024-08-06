@@ -9,6 +9,13 @@ customer_name: Snowflake
 customer_logo: /logos/customers/snowflake-logo.svg
 customer_url: https://www.snowflake.com/
 
+quote_block:
+  quote: |
+      There’s no question that, if we had gone down the traditional infrastructure automation route, it would have taken us a week or a week and a half to do one deployment of the cluster, end to end. Plus, that deployment wouldn’t be repeatable, testable or scalable. It would have been a mad scramble to meet our deadline. When we demonstrated to people that what used to take a week and a half now, with Pulumi, took under a day, they were shocked.
+  quote_attrib: Raman Hariharan, Director of Cloud Platform Engineering, Snowflake
+  headline_stat: 1.5 weeks > 1 day
+  headline: Reduced deployment time
+
 exec_summary: |
     The [Snowflake](https://www.snowflake.com/) platform powers the Data Cloud. With Snowflake, thousands of organizations have seamless access to explore, share, and unlock the true value of their data. The company is growing rapidly. To enable that growth, Snowflake made some bold decisions. The first was to shift the paradigm for the new service from VMs to containers. The second was not only to complete its new infrastructure platform itself but to move all their deployments, on multiple cloud vendors, to that platform, all in three months. The goal was to unveil the completed project at the annual company meeting. The problem was that the tools they were using didn't allow them to easily develop infrastructure that was repeatable, testable and scalable. Snowflake switched to Pulumi and met all their goals.
 

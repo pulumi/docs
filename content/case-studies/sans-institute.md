@@ -9,6 +9,13 @@ customer_name: SANS Institute
 customer_logo: /logos/customers/sans-wordmark.svg
 customer_url: https://www.sans.org/
 
+quote_block:
+  quote: |
+      The Pulumi Automation API made [deploying the application and its infrastructure] a much cleaner process. With the old architecture, it was much more manual, stitched together with bash scripts, and then wrapped in another tool with its DSL.
+  quote_attrib: Tyler Mulligan, Senior DevOps Engineer, SANS Institute
+  headline_stat: 70%
+  headline: Reduced deployment time
+
 exec_summary: |
     The DevOps team at SANS Institute, which provides cybersecurity training and certification, uses Pulumi to streamline delivering applications and infrastructure through CI/CD processes for many business units at SANS. By using Pulumi, the organization was able to adopt cloud engineering practices that enabled it to reduce deployment times by 70%. SANS increased delivery speed, quality, and consistency by using cloud engineering practices such as building infrastructure as code using general purpose languages and software tools, and deploying cloud applications with Git and automated delivery pipelines.
 

@@ -14,6 +14,7 @@ quote_block:
   quote: |
       With the old tool, spinning up our databases meant we had 20 blocks of code and a lot of copy and pasting. With
       Pulumi, it’s Python. It’s five lines of code. If you want to add a new database, add one line, and you’re good to go.
+  quote_attrib: Mike Corsaro, Senior Software Enginner, Atlassian
   headline_stat: 50%
   headline: Reduction in time spent on maintenance activities.
 

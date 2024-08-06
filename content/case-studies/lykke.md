@@ -9,6 +9,10 @@ customer_name: Lykke
 customer_logo: /logos/customers/lykke_logo.svg
 customer_url: https://lykke.com/
 
+quote_block:
+  headline_stat: 20%
+  headline: Reduction in EKS management cost
+
 exec_summary: |
     [Lykke](https://lykke.com/) is a Swiss fintech company bridging the gap between traditional finance and Blockchain. Lykke operates a commission-free exchange for digital assets and cryptocurrencies. Lykke developers rely on scalable blockchain infrastructure and leverage Pulumi to define reusable components and services and create abstractions needed to support its ecosystem of products.  Using Pulumi, Lykke has been able to rapidly lower the time-to-market for its services and deliver innovative new capabilities for the fast-growing cryptocurrency market, shipping its new product to production customers in a matter of months. Pulumi also helped Lykke adopt cloud-native architectures faster and migrate to managed services, which helped reduce costs by at least 20%.
 
