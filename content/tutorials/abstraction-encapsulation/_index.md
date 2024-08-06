@@ -8,9 +8,15 @@ meta_desc: In this tutorial, we will explore using Pulumi to abstract and encaps
 meta_image: meta.png
 level: intermediate
 youll_learn:
-    - Encapsulating Pulumi components
-    - Making reusable abstractions
-    - Building your own resources
+    - Identifying opportunities for abstraction and reuse
+    - Understanding encapsulation
+    - Building Pulumi component resources
+prereqs:
+    - The [Pulumi CLI](/docs/install/)
+    - A [Pulumi Cloud account](https://app.pulumi.com/signup) and [access token](/docs/pulumi-cloud/accounts#access-tokens)
+    - An AWS account (all resources in this tutorial are eligible for the free-tier)
+    - Familiarity with JavaScript, TypeScript, or Python
+    - A [Docker](https://docs.docker.com/get-docker/) service installed and running locally
 aliases:
     - /learn/abstraction-encapsulation/
 collections:
@@ -19,22 +25,5 @@ collections:
 collections_weight: 3
 weight: 3
 ---
-
-## Prerequisites
-
-You will need the following knowledge to complete this tutorial:
-
-- Completion of the [Pulumi Fundamentals](/tutorials/pulumi-fundamentals/) and [Building with Pulumi](/tutorials/building-with-pulumi/) tutorials, OR have experience using Pulumi for other projects
-
-Optionally, if you want to build some of the examples yourself to experiment, you'll need the following tools and skills:
-
-- A [Pulumi account and token](/docs/pulumi-cloud/accounts#access-tokens)
-    - If you don't have an account, go to the [signup page](https://app.pulumi.com/signup).
-- The [Pulumi CLI](/docs/cli/commands/)
-    - If you don't have the CLI, go to the [installation page](/docs/install/).
-- An AWS account (the free version should be fine)
-- Familiarity with either the TypeScript or Python programming language
-
-## About this tutorial
 
 In this tutorial, we will explore how you can use Pulumi as a tool to help you abstract and encapsulate your resource definitions as reusable models for others to use.

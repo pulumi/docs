@@ -7,7 +7,7 @@ draft: false
 description: |
     Learn more about abstracting Pulumi code into classes, models, and objects.
 meta_desc: In this tutorial, we'll cover the concept of abstraction and how to abstract Pulumi code into reusable classes, models, and objects.
-weight: 4
+weight: 1
 estimated_time: 5
 meta_image: meta.png
 aliases:

@@ -6,14 +6,16 @@ description: Learn how to use Pulumi for more complex configurations with multip
 meta_desc: Learn how to create multiple Pulumi programs and work with them interdependently with this tutorial.
 meta_image: meta.png
 youll_learn:
-    - Using stacks for unique configurations of different environments
-    - Sharing values from one Pulumi program or project to another
-    - Working with secrets inside of Pulumi
+    - Using multiple stacks to configure environments independently
+    - What stack outputs are and how to use them
+    - How to manage sensitive data like database passwords with encrypted secrets
+    - How to consume the outputs of another Pulumi stack with stack references
 prereqs:
     - Completion of the [Pulumi Fundamentals tutorial](/tutorials/pulumi-fundamentals/) and an existing `my-first-app` project
-    - A [Pulumi Cloud account](https://app.pulumi.com/signup) and [access token](/docs/pulumi-cloud/accounts#access-tokens)
     - The [Pulumi CLI](/docs/install/)
-    - A [Docker](https://docs.docker.com/get-docker/) service installed and running
+    - A [Pulumi Cloud account](https://app.pulumi.com/signup) and [access token](/docs/pulumi-cloud/accounts#access-tokens)
+    - Familiarity with JavaScript, TypeScript, or Python
+    - A [Docker](https://docs.docker.com/get-docker/) service installed and running locally
 collections:
     - pulumi-101
 collections_weight: 2
