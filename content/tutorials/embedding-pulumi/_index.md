@@ -11,30 +11,14 @@ youll_learn:
     - Automating your infrastructure
     - Integrating your infrastructure with other workflows
 prereqs:
-    - Thing 1
-    - Thing 2
-    - Thing 3
+    - The [Pulumi CLI](/docs/install/)
+    - A [Pulumi Cloud account](https://app.pulumi.com/signup) and [access token](/docs/pulumi-cloud/accounts#access-tokens)
+    - Familiarity with JavaScript, TypeScript, or Python
+    - Completion of the [Pulumi Fundamentals tutorial](/tutorials/pulumi-fundamentals/) and [Building with Pulumi](/tutorials/pulumi-fundamentals/) tutorials _or_ experience using Pulumi for other projects.
 weight: 4
 aliases:
     - /learn/embedding-pulumi/
 ---
-
-## Prerequisites
-
-You will need the following tools to complete this tutorial:
-
-- A [Pulumi account and token](/docs/pulumi-cloud/accounts#access-tokens)
-    - If you don't have an account, go to the [signup page](https://app.pulumi.com/signup).
-- The [Pulumi CLI](/docs/cli/)
-    - If you don't have the CLI, go to the [installation page](/docs/install/).
-
-In addition, you should be able to
-
-- code in Python
-
-We recommend that you either have completed [Pulumi Fundamentals](/tutorials/pulumi-fundamentals/) and [Building with Pulumi](/tutorials/building-with-pulumi/) OR have experience using Pulumi for other projects.
-
-## About this tutorial
 
 In this tutorial, we will explore how you could use Pulumi as an API for your infrastructure deployment and maintenance.
 

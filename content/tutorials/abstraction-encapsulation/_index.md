@@ -20,7 +20,6 @@ prereqs:
 aliases:
     - /learn/abstraction-encapsulation/
 collections:
-    - components
     - pulumi-101
 collections_weight: 3
 weight: 3
