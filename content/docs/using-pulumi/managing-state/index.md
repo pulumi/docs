@@ -62,9 +62,11 @@ For the purposes of this tutorial, we will be creating our resources in AWS in t
 
 ## Examine State with the CLI
 
-Now that you have deployed your program code, a state file has been created that tracks the resources created by Pulumi. You can view the contents of the state file by running the `pulumi stack export` command. By default, this will output the contents of the state file to the command line, but you can pipe the output to a file for easier viewing and modification (e.g. `pulumi stack export > state.json`).
+Now that you have deployed your program code, a state file has been created that tracks the resources created by Pulumi. You can view the contents of the state file with the `pulumi stack export` command. By default, this will output the contents of the state file to the command line, but you can pipe the output to a file for easier viewing and modification. Run the `pulumi stack export > state.json` to export the contents of your Pulumi state to the `state.json` file:
 
 [VIDEO]
+
+### Explore the state resources
 
 While it is not recommended to manually manage or edit your infrastructure via the state file, there may be scenarios in which this becomes necessary such as correcting inconsistencies in a stack's state due to failed deployments or if there were any manual changes made to cloud resources.
 
