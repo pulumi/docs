@@ -34,6 +34,7 @@
         {{ end }}
 
         {{ $menuItems = slice
+            (dict "id" (path.Base .Path) "label" "All tutorials" "href" "/tutorials/" "icon" "arrow-left")
             (dict "id" (path.Base .Path) "label" .Title "href" .RelPermalink "children" $topics "active" true)
         }}
 
@@ -45,6 +46,7 @@
         {{ end }}
 
         {{ $menuItems = slice
+            (dict "id" (path.Base .Path) "label" "All tutorials" "href" "/tutorials/" "icon" "arrow-left")
             (dict "id" (path.Base .Path) "label" .Parent.Title "href" .Parent.RelPermalink "children" $topics)
         }}
 
@@ -55,9 +57,9 @@
 
 {{ define "tutorials-menu" }}
     {{ range $item := .items }}
-        <div id="toc-menu-{{ $item.id }}" class="text-black toc-header toggle-topLevel toggleVisible">
+        <div id="toc-menu-{{ $item.id }}" class="text-black toc-header toggle-topLevel toggleVisible {{ if .active }}active{{ end }}">
             <div class="flex items-start">
-                <div class="icon icon-14-14 folder-open-14-14"></div>
+                <div class="icon icon-14-14 {{ default "folder-open-14-14" .icon }}"></div>
             </div>
             {{ if ne $item.href nil }}
                 <a href="{{ $item.href }}">

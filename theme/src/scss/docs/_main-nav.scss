@@ -54,14 +54,13 @@ nav.main-nav {
 
         &.active {
             background-color: map-get($blue, 100);
-            border-left: map-get($blue, 750) 3px solid;
+            border-radius: 4px;
             width: fit-content;
             text-decoration: none;
 
             &:hover {
                 background-color: map-get($blue, 250);
                 color: map-get($blue, 850);
-                border-left: map-get($blue, 850) 3px solid;
             }
         }
     }
