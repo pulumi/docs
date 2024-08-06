@@ -66,9 +66,9 @@
                 </p>
                 <div class="mb-12">
                     <ul class="p-0 border border-gray-300 rounded shadow-sm">
+                        {{ $pageCount := len .Pages }}
                         {{ range $index, $page := .Pages.ByWeight }}
-                            <li
-                                class="flex items-center list-none py-3 px-4 border-gray-200 {{ if lt (add $index 1) (len .Pages) }}border-b{{ end }}">
+                            <li class="flex items-center list-none py-3 px-4 border-gray-200 {{ if lt (add $index 1) $pageCount }}border-b{{ end }}">
                                 <span class="w-full">
                                     <a href="{{ .RelPermalink }}">{{ $page.Title }}</a>
                                 </span>
@@ -84,8 +84,8 @@
                             </li>
                         {{ end }}
                     </ul>
-                    <div class="my-4">
-                        <a href="{{ (index .Pages 0).RelPermalink }}" class="btn btn-primary">Start the first topic &rarr;</a>
+                    <div class="mt-6 mb-4">
+                        <a href="{{ (index .Pages 0).RelPermalink }}" class="btn btn-primary">Get started with {{ (index .Pages 0).Title }} &rarr;</a>
                     </div>
                 </div>
             </div>

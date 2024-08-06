@@ -30,6 +30,7 @@
                             (dict "id" "collections" "label" "Collections" "href" nil "children" $collections)
                         }}
 
+                    {{/* On module pages, show the member topics and a link back to the home page. */}}
                     {{ else if eq .Kind "section" }}
 
                         {{ $topics := slice }}
@@ -42,6 +43,7 @@
                             (dict "id" (path.Base .Path) "label" .Title "href" .RelPermalink "children" $topics "active" true)
                         }}
 
+                    {{/* On module pages, show the module, sibling topics, and a link back to the home page. */}}
                     {{ else if eq .Kind "page" }}
 
                         {{ $topics := slice }}
