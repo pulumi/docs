@@ -33,17 +33,40 @@ Additionally, you will need the following tools to complete this tutorial:
 
 Let's get started!
 
-## Create Infrastructure and State
+## [Optional] Create a New Project
 
-TBD
+{{< notes type="info" >}}
 
-## Examine the State File
+The commands found in this tutorial can be run against any projects or stacks that you may have already created. Feel free to skip this step and use your own project/stack if that is the case.
 
-TBD
+{{< /notes >}}
+
+To start, login to the [Pulumi CLI](/docs/cli/commands/pulumi_login/) and ensure it is [configured to use your AWS account](/docs/clouds/aws/get-started/begin/#configure-pulumi-to-access-your-aws-account). Next, [create a new project](/docs/clouds/aws/get-started/create-project/) and replace the default program code with the following:
+
+{{< example-program path="aws-ec2-sg-nginx-server-python" >}}
+
+This code example creates the following resources:
+
+- An EC2 instance configured with Nginx
+- A Security Group configured for public access
+
+It also includes one export that will output value of the server's IP address.
+
+Now run the `pulumi up` command to deploy your resources before moving onto the next steps.
+
+{{< notes type="warning" >}}
+
+For the purposes of this tutorial, we will be creating our resources in AWS in the `us-east-1` region. If you are deploying resources in a region other than the `us-east-1` region, make sure to replace the AMI ID value with the ID that is [specific to your region](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/finding-an-ami.html). Otherwise you may run into an `InvalidAMIID.NotFound` error.
+
+{{< /notes >}}
 
 ## Examine State with the CLI
 
-TBD
+Now that you have deployed your program code, a state file has been created that tracks the resources created by Pulumi. You can view the contents of the state file by running the `pulumi stack export` command. By default, this will output the contents of the state file to the command line, but you can pipe the output to a file for easier viewing and modification (e.g. `pulumi stack export > state.json`).
+
+[VIDEO]
+
+While it is not recommended to manually manage or edit your infrastructure via the state file, there may be scenarios in which this becomes necessary such as correcting inconsistencies in a stack's state due to failed deployments or if there were any manual changes made to cloud resources.
 
 ## Clean up
 
