@@ -119,7 +119,7 @@
 }
 
 .page-hero {
-    @apply relative w-full;
+    @apply relative w-full py-10 mb-6;
 
     .dot-overlay {
         @apply w-full h-full absolute top-0 left-0 pointer-events-none;
@@ -130,10 +130,10 @@
         @apply w-full flex flex-col items-center justify-center pointer-events-none;
 
         h1, h2, h3 {
-            @apply text-center max-w-4xl my-10;
+            @apply text-center max-w-4xl;
             @screen lg {
                 font-size: 4.5rem;
-                line-height: 1.375 !important;
+                line-height: 1.375;
             }
         }
     }
@@ -158,6 +158,11 @@
             text-shadow: -3px -3px white, 3px -3px white, -3px 3px white, 3px 3px white;
         }
     }
+}
+
+.page-hero-subtitle {
+    @apply relative;
+    @apply text-gray-700 max-w-4xl text-center text-3xl mt-0;
 }
 
 .page-hero .rainbow-text {

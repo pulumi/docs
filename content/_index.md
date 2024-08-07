@@ -44,27 +44,40 @@ secrets:
     Easy-to-use single source of truth for all configurations with guardrails. Seamlessly adopt short-lived dynamic secrets. Never have downtime over changed configurations because you can change once and have it updated everywhere. Enforce least-privileged access through role-based access controls.
 
 customer_logos:
-  title: Trusted by your peers
+  title: Trusted by 2,700+ cloud innovators
   logos:
     - name: bmw
     - name: snowflake
-      link: /case-studies/snowflake
-    - name: lemonade
-      link: /case-studies/lemonade
-    - name: cockroach-labs
-    - name: meta
-    - name: webflow
     - name: nvidia
+    - name: moderna
+    - name: docker
+    - name: unity
+    - name: rockstar
+    - name: deloitte
+    - name: crunchyroll
+    - name: xai
+    - name: stokespace
+    - name: univision
+    - name: wmg
+    - name: washington-trust
+    - name: lemonade
+    - name: pinecone
+    - name: ware2go
+    - name: nubank
+    - name: mindbody
+    - name: fenergo
+    - name: webflow
     - name: bluenile
     - name: dutchie
-      link: https://youtu.be/X1qetq7PjjY
     - name: panther-labs
-      link: /case-studies/panther-labs
-    - name: univision
-    - name: washington-trust
-      link: https://youtu.be/Q63ZaX340M4
-    - name: nubank
-    - name: docker
+    - name: materialize
+    - name: altana
+    - name: mercedes-benz
+    - name: bt
+    - name: portx
+    - name: tivityhealth
+    - name: starburst
+    - name: linktree
 
 customer_quotes:
   panther:
