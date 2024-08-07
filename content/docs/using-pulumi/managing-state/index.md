@@ -60,9 +60,7 @@ Now that you have deployed your program code, a state file has been created that
 
 [VIDEO]
 
-If you open the `state.json` file, you will see that the contents of the Pulumi state file uses a relatively easy to understand JSON format.
-
-## Edit the state file
+If you open the `state.json` file, you will see that the contents of the Pulumi state file uses a relatively easy to understand JSON format. In particular, there is a section labeled `resources`. which contains the schema for any resources you have created in your Pulumi program.
 
 While it is not recommended to manually manage or edit your infrastructure via the state file, there may be advanced use cases in which this becomes necessary, such as:
 
@@ -70,65 +68,11 @@ While it is not recommended to manually manage or edit your infrastructure via t
 - incorporating manual changes made to cloud resources into your project
 - refactoring your Pulumi code without disrupting your deployed infrastructure
 
-In this section, you will learn how to edit your state file and deploy the update.
-
-### Edit the state manually
-
-Let's say you want to update the name of one of your resources. Start by opening the `state.json` file. In this file, there is a section labeled `resources`. This section contains the schema for any resources you have created in your Pulumi program. Scroll down until you see the schema for the `webserver-secgrp` resource:
-
-```json
-{
-    ...
-    ...
-    "resources": [
-        ...
-        ...
-        {
-            "urn": "urn:pulumi:dev::python-state::aws:ec2/securityGroup:SecurityGroup::webserver-secgrp",
-            "custom": true,
-            "id": "sg-03df98d5c979f8d8e",
-            "type": "aws:ec2/securityGroup:SecurityGroup",
-            "inputs": {
-                "__defaults": [
-                    "name",
-                    "revokeRulesOnDelete"
-                ],
-                "description": "Enable HTTP access",
-                "ingress": [
-                    {
-                        "__defaults": [
-                            "self"
-                        ],
-                        "cidrBlocks": [
-                            "0.0.0.0/0"
-                        ],
-                        "fromPort": 80,
-                        "protocol": "tcp",
-                        "self": false,
-                        "toPort": 80
-                    }
-                ],
-                "name": "webserver-security-group",
-                "revokeRulesOnDelete": false
-            }
-        }
-    ]
-}
-```
-
-Under the resource's inputs, edit the value of the `name` parameter for this resource from `webserver-security-group` to `nginx-server-security-group`.
-
-#### Rename a resource via the CLI
-
-You also have the ability to rename resources via the CLI using the [`pulumi state rename` command](/docs/cli/commands/pulumi_state_rename/).
-
-### Import updated state
-
-TBD
+In addition to manually editing the state file, the [`pulumi state` command](/docs/cli/commands/pulumi_state/) includes some helpful subcommands to edit your state.
 
 ## Move resources via the CLI
 
-TBD
+The [`pulumi state move` command](/docs/cli/commands/pulumi_state_move/)... TBD
 
 ### Move a resource to a different stack
 
@@ -139,6 +83,12 @@ TBD
 [TBD]
 
 ### Move a resource to a different project
+
+TBD
+
+## Delete a resource from state
+
+The [`pulumi state delete` command](/docs/cli/commands/pulumi_state_delete/)... TBD
 
 ## Clean up
 
