@@ -1,7 +1,6 @@
 #!/bin/bash
 
 set -o errexit -o pipefail
-echo "hey girl"
 module=""
 topic=""
 

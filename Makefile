@@ -120,10 +120,6 @@ new-tutorial-topic:
 new-tutorial:
 	./scripts/content/new-tutorial.sh
 
-.PHONY: new-tutorial-topic
-new-tutorial-topic:
-	./scripts/content/new-tutorial-topic.sh
-
 .PHONY: new-template
 new-template:
 	./scripts/content/new-template.sh

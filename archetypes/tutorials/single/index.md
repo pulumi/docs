@@ -1,7 +1,7 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
 title_tag: "{{ replace .Name "-" " " | title }}"
-layout: module
+layout: single
 
 # A succinct description of the tutorial. It appears on the Tutorials home and collection pages.
 description: Here is a brief description of what this module's all about.
@@ -33,7 +33,11 @@ prereqs:
     - A [Pulumi Cloud account](https://app.pulumi.com/signup) and [access token](/docs/pulumi-cloud/accounts/#access-tokens)
     - Familiarity with JavaScript, TypeScript, or Python
 
+# The estimated time, in minutes, for new users to complete the topic.
+estimated_time: 10
+
 # An optional list of collections that should include this tutorial. Collections are defined in data/tutorials/collections.yaml.
+collections:
     - some-collection
 ---
 

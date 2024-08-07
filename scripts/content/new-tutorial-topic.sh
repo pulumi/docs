@@ -13,10 +13,6 @@ prompt_for_module_name() {
         return
     fi
 
-    if [[ -z "$module" ]]; then
-        return
-    fi
-
     echo "Couldn't find a module with that name. Make sure you're using the path as listed under content/tutorials."
     echo
     prompt_for_module_name
@@ -26,13 +22,8 @@ prompt_for_topic_name() {
     read -p "Topic name (e.g., basics): " topic
 
     if [ ! -z "$topic" ]; then
-        if [[ ! -z "$module" ]]; then
-            hugo new --kind tutorials/topic --contentDir "${content_dir}" "tutorials/${module}/${topic}"
-            return
-        else
-            hugo new --kind tutorials/topic --contentDir "${content_dir}" "tutorials/${topic}"
-            return
-        fi
+        hugo new --kind tutorials/topic --contentDir "${content_dir}" "tutorials/${module}/${topic}"
+        return
     fi
 
     echo "Please give the topic a name."
@@ -43,9 +34,7 @@ prompt_for_topic_name() {
 echo "So, you want to make a new tutorial topic? Great! 🙌"
 echo
 echo "Step 1:"
-echo "What is the path name of the module you want to write for?"
-echo "This is optional; if you want to create a single-page tutorial,"
-echo "you can leave this blank."
+echo "What is the path name of the module you want add it to?"
 echo
 prompt_for_module_name
 

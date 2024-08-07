@@ -23,42 +23,16 @@
                     <h1>{{ .Title }}</h1>
                     <div class="h1-gradient"></div>
                 </div>
-
-                <div>{{ .Params.description }}</div>
-
-                {{ if .Params.youll_learn }}
-                    <div class="flex flex-col lg:flex-row my-8">
-                        <div class="">
-                            <h4 class="mb-4">In this tutorial, you'll learn:</h4>
-                            <ul class="list-none p-0">
-                                {{ range .Params.youll_learn }}
-                                    <li>
-                                        <i class="fas fa-check text-green-500 mr-2"></i>
-                                        <span>{{ . }}</span>
-                                    </li>
-                                {{ end }}
-                            </ul>
+                {{/* Commenting this temporarily while I ponder whether showing a topic-specific image makes sense.
+                    {{ if .Params.meta_image }}
+                        <div>
+                            <img class="shadow-sm border border-gray-300 rounded" src="./{{ .Params.meta_image }}">
                         </div>
-                    </div>
-                {{ end }}
-
-                {{ if .Params.prereqs }}
-                    <div class="flex flex-col lg:flex-row my-8">
-                        <div class="">
-                            <h4 class="mb-4">Prerequisites:</h4>
-                            <ul class="list-none p-0">
-                                {{ range .Params.prereqs }}
-                                    <li>
-                                        <i class="far fa-circle text-gray-600 mr-2"></i>
-                                        <span>{{ . | markdownify }}</span>
-                                    </li>
-                                {{ end }}
-                            </ul>
-                        </div>
-                    </div>
-                {{ end }}
-
-                <div class="mb-12">{{ .Content }}</div>
+                    {{ end }}
+                */}}
+                <div class="mb-12">
+                    {{ .Content }}
+                </div>
             </div>
         </div>
         <div class="docs-table-of-contents docs-toc-desktop">

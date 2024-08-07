@@ -47,7 +47,7 @@
                     {{ else if eq .Kind "page" }}
 
                         {{ $topics := slice }}
-                        {{ range .Parent.Pages.ByWeight }}
+                        {{ range (where .Parent.Pages.ByWeight ".Params.listed" "ne" false) }}
                             {{ $topics = $topics | append (dict "id" (path.Base .RelPermalink) "label" .Title "href" .RelPermalink "active" (eq .RelPermalink $currentPath)) }}
                         {{ end }}
 

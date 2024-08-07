@@ -34,5 +34,6 @@ prereqs:
     - Familiarity with JavaScript, TypeScript, or Python
 
 # An optional list of collections that should include this tutorial. Collections are defined in data/tutorials/collections.yaml.
+collections:
     - some-collection
 ---

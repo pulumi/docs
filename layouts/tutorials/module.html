@@ -23,10 +23,12 @@
                     <h1>{{ .Title }}</h1>
                     <div class="h1-gradient"></div>
                 </div>
-                <div>
-                    <img class="shadow-sm border border-gray-300 rounded" src="./{{ .Params.meta_image }}">
-                </div>
-                <div class="my-8">
+                {{ if .Params.meta_image }}
+                    <div>
+                        <img class="shadow-sm border border-gray-300 rounded" src="./{{ .Params.meta_image }}">
+                    </div>
+                {{ end }}
+                <div class="my-4">
                     {{ .Summary }}
                 </div>
                 <div class="flex flex-col lg:flex-row my-8">
