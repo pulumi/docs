@@ -4,9 +4,9 @@ title: Importing with the CLI
 layout: topic
 description: Explore how to import resources as part of a migration with the Pulumi CLI
 meta_desc: Learn how to import resources as part of migrating to Pulumi using the Pulumi CLI approach in this tutorial.
+meta_image: meta.png
 weight: 2
 estimated_time: 10
-meta_image: meta.png
 aliases:
     - /learn/importing/importing-cli/
 ---

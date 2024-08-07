@@ -1,17 +1,14 @@
 ---
 title_tag: Creating Docker Images | Pulumi Tutorials
-title: "Creating Docker Images"
+title: Creating Docker Images
 layout: topic
 description: Use Pulumi and the Docker provider to build Docker images locally.
 meta_desc: Learn how to use Pulumi and the Docker provider to create Docker images locally in this tutorial.
+meta_image: meta.png
 weight: 2
 estimated_time: 10
-meta_image: meta.png
 aliases:
     - /learn/create-docker-images/
-links:
-    - text: Code Repo
-      url: https://github.com/pulumi/tutorial-pulumi-fundamentals
 ---
 
 In this part, you'll create your first Pulumi _resource_. Resources in Pulumi are the basic building blocks of your infrastructure, whether that's a database

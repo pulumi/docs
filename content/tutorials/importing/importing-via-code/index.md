@@ -4,9 +4,9 @@ title: Importing in code
 layout: topic
 description: Try importing resources with code via Pulumi's ResourceOptions.
 meta_desc: Learn how to import resources as part of migrating to Pulumi using code via Pulumi's ResourceOptions in this tutorial.
+meta_image: meta.png
 weight: 4
 estimated_time: 10
-meta_image: meta.png
 aliases:
     - /learn/importing/importing-via-code/
 ---

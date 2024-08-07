@@ -36,3 +36,5 @@ prereqs:
 # An optional list of collections that should include this tutorial. Collections are defined in data/tutorials/collections.yaml.
     - some-collection
 ---
+
+This is the actual content of the tutorial.

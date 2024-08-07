@@ -1,14 +1,12 @@
 ---
 title_tag: Building a Custom API | Pulumi Tutorials
-title: "Building a Custom API"
+title: Building a Custom API
 layout: topic
-description: |
-    Build your first encapsulation of the Pulumi CLI with Pulumi's Automation
-    API.
+description: Build your first encapsulation of the Pulumi CLI with Pulumi's Automation API.
 meta_desc: Learn how to use the Pulumi Automation API to create a custom API for your infrastructure in this tutorial.
+meta_image: meta.png
 weight: 2
 estimated_time: 10
-meta_image: meta.png
 aliases:
     - /learn/embedding-pulumi/building-api/
 ---

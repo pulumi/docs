@@ -4,9 +4,9 @@ title: Getting started
 layout: topic
 description: Get set up to import resources and migrate to Pulumi in this tutorial.
 meta_desc: Learn how to set up your local system to get started with bringing Pulumi into your existing ecosystem in this tutorial.
+meta_image: meta.png
 weight: 1
 estimated_time: 2
-meta_image: meta.png
 aliases:
     - /learn/importing/getting-started/
 ---

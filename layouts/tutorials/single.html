@@ -1,0 +1,79 @@
+{{ define "main" }}
+<div div class="docs-list-main">
+    <div class="docs-main-nav-toggle-wrapper">
+        <div class="docs-main-nav-wrapper">
+            <div id="docs-main-nav" class="docs-main-nav">
+                {{ .Scratch.Set "title" .Title }}
+                {{ .Scratch.Set "layout" "topic" }}
+                {{ partial "tutorials/nav.html" . }}
+            </div>
+        </div>
+        <div class="docs-nav-toggle">
+            <div class="docs-nav-toggle-icon icon icon-24-24"></div>
+        </div>
+    </div>
+
+    <div class="docs-main-content-wrapper">
+        <div class="docs-main-content">
+            <div class="tutorials-main">
+                <header>
+                    {{ partial "templates/breadcrumb.html" . }}
+                </header>
+                <div class="special-h1">
+                    <h1>{{ .Title }}</h1>
+                    <div class="h1-gradient"></div>
+                </div>
+
+                <div>{{ .Params.description }}</div>
+
+                aww yeah
+
+                {{ if .Params.youll_learn }}
+                    <div class="flex flex-col lg:flex-row my-8">
+                        <div class="">
+                            <h4 class="mb-4">In this tutorial, you'll learn:</h4>
+                            <ul class="list-none p-0">
+                                {{ range .Params.youll_learn }}
+                                    <li>
+                                        <i class="fas fa-check text-green-500 mr-2"></i>
+                                        <span>{{ . }}</span>
+                                    </li>
+                                {{ end }}
+                            </ul>
+                        </div>
+                    </div>
+                {{ end }}
+
+                {{ if .Params.prereqs }}
+                    <div class="flex flex-col lg:flex-row my-8">
+                        <div class="">
+                            <h4 class="mb-4">Prerequisites:</h4>
+                            <ul class="list-none p-0">
+                                {{ range .Params.prereqs }}
+                                    <li>
+                                        <i class="far fa-circle text-gray-600 mr-2"></i>
+                                        <span>{{ . | markdownify }}</span>
+                                    </li>
+                                {{ end }}
+                            </ul>
+                        </div>
+                    </div>
+                {{ end }}
+
+                <div class="mb-12">{{ .Content }}</div>
+            </div>
+        </div>
+        <div class="docs-table-of-contents docs-toc-desktop">
+            {{ partial "docs/table-of-contents.html" . }}
+
+            {{ partial "docs/feedback.html" . }}
+
+            {{ partial "docs/right-nav-ad.html" }}
+        </div>
+    </div>
+</div>
+{{ end }}
+
+{{ define "footer" }}
+
+{{ end }}

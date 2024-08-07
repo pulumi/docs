@@ -1,14 +1,12 @@
 ---
 title_tag: Getting Started with Embedding Pulumi | Pulumi Tutorials
-title: "Getting Started"
+title: Getting Started
 layout: topic
-description: |
-    Set up your local system to start building a working example of the
-    Automation API.
+description: Set up your local system to start building a working example of the Automation API.
 meta_desc: Learn how to set up your local system to start building a working example of the Pulumi Automation API in this tutorial.
+meta_image: meta.png
 weight: 1
 estimated_time: 5
-meta_image: meta.png
 aliases:
     - /learn/embedding-pulumi/considerations/
 ---

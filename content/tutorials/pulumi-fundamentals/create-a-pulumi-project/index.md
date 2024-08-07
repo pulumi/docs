@@ -4,9 +4,9 @@ title: Creating Pulumi Projects
 layout: topic
 description: To get started, create your first Pulumi project using the CLI.
 meta_desc: Learn how to get started with Pulumi by creating your first Pulumi project using the Pulumi CLI in this tutorial.
+meta_image: meta.png
 weight: 1
 estimated_time: 5
-meta_image: meta.png
 aliases:
     - /learn/pulumi-fundamentals/create-a-pulumi-project/
 ---

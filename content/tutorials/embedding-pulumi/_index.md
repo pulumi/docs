@@ -1,6 +1,6 @@
 ---
 title_tag: Embedding Pulumi Overview | Pulumi Tutorials
-title: "Embedding Pulumi"
+title: Embedding Pulumi
 layout: module
 description: Explore building a custom infrastructure API to embed Pulumi in other contexts.
 meta_desc: In this tutorial, we will explore how to use Pulumi to build an infrastructure API for deployment and maintenance.

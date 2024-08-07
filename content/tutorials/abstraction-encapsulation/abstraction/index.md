@@ -1,15 +1,12 @@
 ---
 title_tag: Abstracting Pulumi Code | Pulumi Tutorials
-title: "Abstracting Pulumi Code"
+title: Abstracting Pulumi Code
 layout: topic
-date: 2021-11-17
-draft: false
-description: |
-    Learn more about abstracting Pulumi code into classes, models, and objects.
+description: Learn more about abstracting Pulumi code into classes, models, and objects.
 meta_desc: In this tutorial, we'll cover the concept of abstraction and how to abstract Pulumi code into reusable classes, models, and objects.
+meta_image: meta.png
 weight: 1
 estimated_time: 5
-meta_image: meta.png
 aliases:
     - /learn/abstraction-encapsulation/abstraction/
 ---
