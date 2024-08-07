@@ -68,12 +68,15 @@
     </div>
 </div>
 
-
 {{ define "tutorials-menu" }}
     {{ range $item := .items }}
         <div id="toc-menu-{{ $item.id }}" class="text-black toc-header toggle-topLevel toggleVisible {{ if .active }}active{{ end }}">
             <div class="flex items-start">
-                <div class="icon icon-14-14 {{ default "folder-open-14-14" .icon }}"></div>
+                {{ $defaultIcon := "file" }}
+                {{ if .children }}
+                    {{ $defaultIcon = "folder-open" }}
+                {{ end }}
+                <div class="icon icon-14-14 {{ default $defaultIcon .icon }}"></div>
             </div>
             {{ if ne $item.href nil }}
                 <a href="{{ $item.href }}">

@@ -40,7 +40,7 @@ collections:
     - some-collection
 ---
 
-This is the content that will appear at the top of the module index page. It should describe the overall goal of the module and briefly summarize what the reader will know how to do by the end of it.
+This is the content that will appear at the top of the topic page. It should describe the overall goal of the module and briefly summarize what the reader will know how to do by the end of it.
 
 ## This is a heading
 

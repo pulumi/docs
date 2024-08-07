@@ -5,6 +5,9 @@ layout: module
 description: Learn how to use Pulumi for more complex configurations with multiple environments.
 meta_desc: Learn how to create multiple Pulumi programs and work with them interdependently with this tutorial.
 meta_image: meta.png
+weight: 2
+summary: |
+    This tutorial digs a little deeper into what it means to create multiple Pulumi programs and work with them interdependently. We will also cover how Pulumi uses secrets and how you can test your Pulumi programs.
 youll_learn:
     - Using multiple stacks to configure environments independently
     - What stack outputs are and how to use them
@@ -19,9 +22,6 @@ prereqs:
 collections:
     - pulumi-101
 collections_weight: 2
-weight: 2
 aliases:
     - /learn/building-with-pulumi/
 ---
-
-This tutorial digs a little deeper into what it means to create multiple Pulumi programs and work with them interdependently. We will also cover how Pulumi uses secrets and how you can test your Pulumi programs.

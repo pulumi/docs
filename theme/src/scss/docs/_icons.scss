@@ -99,6 +99,18 @@ div.arrow-left {
     background: url(/images/docs/icons/arrow-left.svg) no-repeat;
 }
 
+div.file {
+    background: url(/images/docs/icons/file.svg) no-repeat;
+}
+
+div.folder {
+    background: url(/images/docs/icons/folder.svg) no-repeat;
+}
+
+div.folder-open {
+    background: url(/images/docs/icons/folder-open.svg) no-repeat;
+}
+
 div.right-arrow-gray {
     background: url(/images/docs/icons/right-arrow-gray.svg);
 }
@@ -356,18 +368,4 @@ div.play-10-10 {
         filter: unset;
     }
     background: url(/images/docs/icons/play-10-10.svg);
-}
-
-div.folder-open-14-14 {
-    &:hover {
-        filter: unset;
-    }
-    background: url(/images/docs/icons/folder-open-14-14.svg);
-}
-
-div.folder-closed-14-14 {
-    &:hover {
-        filter: unset;
-    }
-    background: url(/images/docs/icons/folder-closed-14-14.svg);
 }

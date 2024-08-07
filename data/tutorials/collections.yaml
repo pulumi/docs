@@ -35,5 +35,5 @@
 
 - id: pulumi-101
   type: proficiency
-  name: Pulumi 101
-  description: Tutorials designed to familiarize you with core Pulumi concepts.
+  name: The Basics
+  description: A collection of tutorials to help you learn core Pulumi concepts.

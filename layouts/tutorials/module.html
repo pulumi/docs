@@ -23,14 +23,15 @@
                     <h1>{{ .Title }}</h1>
                     <div class="h1-gradient"></div>
                 </div>
-
-                <img class="my-4 shadow-sm border border-gray-300 rounded" src="./{{ .Params.meta_image }}">
-
-                <div>{{ .Content }}</div>
-
+                <div>
+                    <img class="shadow-sm border border-gray-300 rounded" src="./{{ .Params.meta_image }}">
+                </div>
+                <div class="my-8">
+                    {{ .Summary }}
+                </div>
                 <div class="flex flex-col lg:flex-row my-8">
                     <div class="">
-                        <h4 class="mb-4">In this tutorial, you'll learn:</h4>
+                        <h2 class="mb-4">In this tutorial, you'll learn:</h4>
                         <ul class="list-none p-0">
                             {{ range .Params.youll_learn }}
                                 <li>
@@ -41,10 +42,9 @@
                         </ul>
                     </div>
                 </div>
-
                 <div class="flex flex-col lg:flex-row my-8">
                     <div class="">
-                        <h4 class="mb-4">Prerequisites:</h4>
+                        <h2 class="mb-4">Prerequisites:</h4>
                         <ul class="list-none p-0">
                             {{ range .Params.prereqs }}
                                 <li>
@@ -55,7 +55,9 @@
                         </ul>
                     </div>
                 </div>
-
+                <div>
+                    {{ .Content }}
+                </div>
                 <h2>Topics</h2>
                 {{ $estimated_time := 0 }}
                 {{ range $topic := .Pages }}
@@ -85,7 +87,7 @@
                         {{ end }}
                     </ul>
                     <div class="mt-6 mb-4">
-                        <a href="{{ (index .Pages 0).RelPermalink }}" class="btn btn-primary">Get started with {{ (index .Pages 0).Title }} &rarr;</a>
+                        <a href="{{ (index .Pages 0).RelPermalink }}" class="btn btn-primary">Start the tutorial &rarr;</a>
                     </div>
                 </div>
             </div>
