@@ -26,7 +26,6 @@
 
 {{ define "main" }}
     {{ $pageContext := . }}
-
     <!-- Logos carousel -->
     <section class="container mx-auto text-center overflow-hidden px-3 mt-6">
         <h3 class="text-center mb-4">{{ .Params.customer_logos.title }}</h3>
@@ -38,10 +37,10 @@
                         <div class="p-6 flex flex-col flex-grow items-end h-24 justify-center">
                             {{ if $logo.link }}
                                 <a class="w-full h-full" href="{{ $logo.link }}" target="_blank">
-                                    {{ partial "customer-logo.html" (dict "logo" $logo.name) }}
+                                    {{ partial "customer-logo.html" (dict "logo" $logo.name "hoverable" true) }}
                                 </a>
                             {{ else }}
-                                {{ partial "customer-logo.html" (dict "logo" $logo.name) }}
+                                {{ partial "customer-logo.html" (dict "logo" $logo.name "hoverable" true) }}
                             {{ end }}
                         </div>
                     </pulumi-swipeable>
@@ -56,10 +55,10 @@
                         <div class="p-6 flex flex-col flex-grow items-end h-24 justify-center">
                             {{ if $logo.link }}
                                 <a class="w-full h-full" href="{{ $logo.link }}" target="_blank">
-                                    {{ partial "customer-logo.html" (dict "logo" $logo.name) }}
+                                    {{ partial "customer-logo.html" (dict "logo" $logo.name "hoverable" true) }}
                                 </a>
                             {{ else }}
-                                {{ partial "customer-logo.html" (dict "logo" $logo.name) }}
+                                {{ partial "customer-logo.html" (dict "logo" $logo.name "hoverable" true) }}
                             {{ end }}
                         </div>
                     </pulumi-swipeable>
