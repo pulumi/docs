@@ -4,7 +4,7 @@ title: Migration and Imports
 layout: module
 description: Explore how to import resources and migrate from other platforms to Pulumi.
 meta_desc: In this tutorial, we will explore how you can bring resources created by other tools like CDK or Terraform into Pulumi.
-index: 4
+weight: 5
 meta_image: meta.png
 youll_learn:
     - How to import individual cloud resources with the Pulumi CLI

@@ -62,7 +62,7 @@
                     {{ $estimated_time = (add $estimated_time (int $topic.Params.estimated_time)) }}
                 {{ end }}
                 <p>
-                    This tutorial has {{ len .Pages }} topics and takes about {{ $estimated_time }} minutes to complete.
+                    This tutorial has {{ len .Pages }} topic{{ if ne (len .Pages) 1 }}s{{ end }} and takes about {{ $estimated_time }} minutes to complete.
                 </p>
                 <div class="mb-12">
                     <ul class="p-0 border border-gray-300 rounded shadow-sm">

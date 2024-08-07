@@ -110,7 +110,7 @@
                                             {{ end }}
                                             <div class="text-gray-700 px-2 py-1 border border-blue-400 rounded">
                                                 <i class="fa fa-file-alt mr-0.5 text-blue-400"></i>
-                                                <span>{{ len $item.Pages }} topics</span>
+                                                <span>{{ len $item.Pages }} topic{{ if ne (len $item.Pages) 1 }}s{{ end }}</span>
                                             </div>
                                             <div class="text-gray-700 px-2 py-1 border border-gray-500 rounded">
                                                 <i class="far fa-clock mr-0.5 text-gray-600"></i>

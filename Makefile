@@ -56,17 +56,9 @@ check_search_urls:
 	$(MAKE) ensure
 	./scripts/search/check-urls.sh production "https://www.pulumi.com"
 
-.PHONY: new_learn_module
-new_learn_module:
-	./scripts/new-learn-module.sh
-
 .PHONY: copy_static_prebuilt
 copy_static_prebuilt:
 	mkdir -p public && cp -R static-prebuilt/* public/
-
-.PHONY: new_learn_topic
-new_learn_topic:
-	./scripts/new-learn-topic.sh
 
 .PHONY: ci_push
 ci_push::
@@ -116,13 +108,13 @@ test-programs:
 upgrade-programs:
 	./scripts/programs/upgrade.sh
 
-.PHONY: new-learn-module
-new-learn-module:
-	./scripts/content/new-learn-module.sh
+.PHONY: new-tutorial-module
+new-tutorial-module:
+	./scripts/content/new-tutorial-module.sh
 
-.PHONY: new-learn-topic
-new-learn-topic:
-	./scripts/content/new-learn-topic.sh
+.PHONY: new-tutorial-topic
+new-tutorial-topic:
+	./scripts/content/new-tutorial-topic.sh
 
 .PHONY: new-template
 new-template:
