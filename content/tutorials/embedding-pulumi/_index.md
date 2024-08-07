@@ -7,14 +7,14 @@ meta_desc: In this tutorial, we will explore how to use Pulumi to build an infra
 meta_image: meta.png
 level: advanced
 youll_learn:
-    - Using the Automation API to build a custom API for your infrastructure
-    - Automating your infrastructure
-    - Integrating your infrastructure with other workflows
+    - What the Pulumi Automation API is and how to use it
+    - How to embed Pulumi in a Python program to drive deployments programmatically
+    - Logging and error handling
 prereqs:
     - The [Pulumi CLI](/docs/install/)
     - A [Pulumi Cloud account](https://app.pulumi.com/signup) and [access token](/docs/pulumi-cloud/accounts#access-tokens)
-    - Familiarity with JavaScript, TypeScript, or Python
-    - Completion of the [Pulumi Fundamentals tutorial](/tutorials/pulumi-fundamentals/) and [Building with Pulumi](/tutorials/pulumi-fundamentals/) tutorials _or_ experience using Pulumi for other projects.
+    - Familiarity with Python
+    - Completion of the [Pulumi Fundamentals](/tutorials/pulumi-fundamentals/) and [Building with Pulumi](/tutorials/pulumi-fundamentals/) tutorials, or practical experience with Pulumi.
 weight: 4
 aliases:
     - /learn/embedding-pulumi/
