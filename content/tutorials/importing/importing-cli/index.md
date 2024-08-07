@@ -1,12 +1,10 @@
 ---
 title_tag: Importing Resources with CLI | Pulumi Tutorials
-title: "Importing via the CLI"
+title: Importing with the CLI
 layout: topic
-date: 2022-06-03T11:33:44-05:00
-draft: false
 description: Explore how to import resources as part of a migration with the Pulumi CLI
 meta_desc: Learn how to import resources as part of migrating to Pulumi using the Pulumi CLI approach in this tutorial.
-index: 1
+weight: 2
 estimated_time: 10
 meta_image: meta.png
 aliases:

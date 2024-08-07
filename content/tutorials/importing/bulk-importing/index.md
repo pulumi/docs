@@ -1,12 +1,10 @@
 ---
 title_tag: Importing Resources in Bulk | Pulumi Tutorials
-title: "Importing in Bulk"
+title: Importing in bulk
 layout: topic
-date: 2022-06-15T16:19:41-05:00
-draft: false
 description: Explore how to import multiple resources into Pulumi with a JSON file.
 meta_desc: Learn how to bulk import multiple resources into Pulumi with a JSON file in this tutorial.
-index: 2
+weight: 3
 estimated_time: 5
 meta_image: meta.png
 aliases:
