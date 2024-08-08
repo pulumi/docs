@@ -11,15 +11,11 @@
     }
 
     nav.main-nav {
-        div.toc-header, nav.main-nav li.sidenav-topic {
+        div.toc-header {
             @apply ml-0;
 
             + .top-level-container {
                 @apply ml-3;
-            }
-
-            li.sidenav-topic {
-                @apply mx-2 border-l-0 bg-red-300;
             }
         }
 
@@ -33,6 +29,10 @@
 
         a {
             @apply px-1 inline-block;
+
+            &:hover {
+                @apply bg-blue-100 no-underline;
+            }
         }
     }
 
