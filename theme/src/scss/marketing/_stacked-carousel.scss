@@ -1,17 +1,23 @@
 .stacked-carousel-container {
     height: 240px;
 
-    .carousel-left-primary, .carousel-left-secondary {
+    .carousel-left-initial, .carousel-left-primary, .carousel-left-secondary {
         left: 100%;
         width: 100%;
         overflow: hidden;
         position: absolute;
         white-space: nowrap;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .carousel-left-initial {
+        left: 0;
+        animation: scroll-horizontal-middle 20s linear infinite;
+        animation-fill-mode: forwards;
     }
 
     .carousel-left-primary {
-        display: flex;
-        justify-content: space-around;
         animation: scroll-horizontal 40s linear infinite;
     }
 
@@ -20,17 +26,23 @@
         animation-delay: 20s;
     }
 
-    .carousel-right-primary, .carousel-right-secondary {
+    .carousel-right-initial, .carousel-right-primary, .carousel-right-secondary {
         left: -100%;
         width: 100%;
         overflow: hidden;
         position: absolute;
         white-space: nowrap;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .carousel-right-initial {
+        left: 0;
+        animation: scroll-horizontal-reverse-middle 20s linear infinite;
+        animation-fill-mode: forwards;
     }
 
     .carousel-right-primary {
-        display: flex;
-        justify-content: space-around;
         animation: scroll-horizontal-reverse 40s linear infinite;
     }
 
@@ -46,6 +58,16 @@
 
         100% {
             left: -100%
+        }
+    }
+
+    @keyframes scroll-horizontal-middle {
+        0% {
+            left: 0;
+        }
+
+        100% {
+            left: -100%;
         }
     }
 
