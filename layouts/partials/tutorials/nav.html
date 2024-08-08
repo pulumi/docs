@@ -78,13 +78,15 @@
                 {{ end }}
                 <div class="icon icon-14-14 {{ default $defaultIcon .icon }}"></div>
             </div>
-            {{ if ne $item.href nil }}
-                <a href="{{ $item.href }}">
+            <div class="px-0.5 whitespace-nowrap">
+                {{ if ne $item.href nil }}
+                    <a href="{{ $item.href }}">
+                        <span class="text-black">{{ $item.label }}</span>
+                    </a>
+                {{ else }}
                     <span class="text-black">{{ $item.label }}</span>
-                </a>
-            {{ else }}
-                <span class="px-2 text-black">{{ $item.label }}</span>
-            {{ end }}
+                {{ end }}
+            </div>
             {{ if .children }}
                 <span class="toggleButton-topLevel down">
                     <div class="icon icon-14-14 keyboard-arrow-down-gray-14-14"></div>
@@ -97,7 +99,7 @@
         <div class="top-level-container">
             <ul class="expanded">
                 {{ range $child := .children }}
-                    <li class="sidenav-topic {{ if .active }}active{{ end }}">
+                    <li class="sidenav-topic {{ if .active }}active{{ end }} mr-2">
                         <a href="{{ $child.href }}">{{ $child.label }}</a>
                     </li>
                 {{ end }}

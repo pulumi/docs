@@ -1,6 +1,6 @@
 ---
 title_tag: Abstraction & Encapsulation Overview | Pulumi Tutorials
-title: Abstraction and Encapsulation
+title: Abstraction & Encapsulation
 layout: module
 description: Explore abstraction and encapsulation with Pulumi and component resources.
 meta_desc: In this tutorial, we will explore using Pulumi to abstract and encapsulate your resource definitions as reusable models for others to use.

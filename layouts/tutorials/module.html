@@ -67,11 +67,11 @@
                                 <span class="w-full">
                                     <a href="{{ .RelPermalink }}">{{ $page.Title }}</a>
                                 </span>
-                                <span class="text-sm text-gray-600 whitespace-nowrap mx-12">
+                                <span class="hidden md:block text-sm text-gray-600 whitespace-nowrap mx-12">
                                     <i class="far fa-clock text-center w-6 text-gray-500"></i>
                                     {{ $page.Params.estimated_time }} minutes
                                 </span>
-                                <span>
+                                <span class="hidden md:block ">
                                     <a href="{{ .RelPermalink }}">
                                         <i class="fas fa-chevron-circle-right text-blue-600 p-2"></i>
                                     </a>
