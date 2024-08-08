@@ -448,3 +448,9 @@ In order to enable [Pulumi Deployments](/docs/pulumi-cloud/deployments), the fol
     version: v0.0.5
     service_url: https://pulumiapi.acmecorp.com
     ```
+
+## Pulumi ESC
+
+In order to enable [Pulumi ESC](/docs/esc), the following must be configured:
+
+* `PULUMI_SERVICE_METADATA_BLOB_STORAGE_ENDPOINT` or `PULUMI_LOCAL_OBJECTS` [object storage](#object-storage)
