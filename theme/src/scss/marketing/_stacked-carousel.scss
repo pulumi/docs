@@ -1,0 +1,61 @@
+.stacked-carousel-container {
+    height: 240px;
+
+    .carousel-left-primary, .carousel-left-secondary {
+        left: 100%;
+        width: 100%;
+        overflow: hidden;
+        position: absolute;
+        white-space: nowrap;
+    }
+
+    .carousel-left-primary {
+        display: flex;
+        justify-content: space-around;
+        animation: scroll-horizontal 40s linear infinite;
+    }
+
+    .carousel-left-secondary {
+        animation: scroll-horizontal 40s linear infinite;
+        animation-delay: 20s;
+    }
+
+    .carousel-right-primary, .carousel-right-secondary {
+        left: -100%;
+        width: 100%;
+        overflow: hidden;
+        position: absolute;
+        white-space: nowrap;
+    }
+
+    .carousel-right-primary {
+        display: flex;
+        justify-content: space-around;
+        animation: scroll-horizontal-reverse 40s linear infinite;
+    }
+
+    .carousel-right-secondary {
+        animation: scroll-horizontal-reverse 40s linear infinite;
+        animation-delay: 20s
+    }
+
+    @keyframes scroll-horizontal {
+        0% {
+            left: 100%;
+        }
+
+        100% {
+            left: -100%
+        }
+    }
+
+    @keyframes scroll-horizontal-reverse {
+        0% {
+            left: -100%;
+        }
+
+        100% {
+            left: 100%
+        }
+    }
+}
