@@ -1,7 +1,7 @@
 entries:
   - term: Azure Kubernetes Service
     description: |
-      A managed container orchestration tool on Microsoft Azure, allowing for the 
+      A managed container orchestration tool on Microsoft Azure, allowing for the
       deployment and automated management of containerized applications.
     link: msft-aks
 
@@ -69,11 +69,11 @@ entries:
 
   - term: Database Cache
     description: |
-      A database cache is supplementary to your primary database, either built into your 
-      database itself or as an additional layer. It exists to radically speed up read 
-      access to frequently-queried data and reduce pressure on the primary database, 
-      allowing you to scale while consuming fewer resources. Caches exist for both 
-      relational and non-relational databases. These solutions frequently use a key-value 
+      A database cache is supplementary to your primary database, either built into your
+      database itself or as an additional layer. It exists to radically speed up read
+      access to frequently-queried data and reduce pressure on the primary database,
+      allowing you to scale while consuming fewer resources. Caches exist for both
+      relational and non-relational databases. These solutions frequently use a key-value
       data structure.
     link: cache-database
 
@@ -101,13 +101,13 @@ entries:
 
   - term: Elastic Container Service
     description: |
-      A managed container orchestration tool on AWS, allowing for the deployment and 
+      A managed container orchestration tool on AWS, allowing for the deployment and
       automated management of containerized applications.
     link: aws-ecs
 
   - term: Elastic Kubernetes Service
     description: |
-      A managed Kubernetes service on AWS, allowing you to run your containerized 
+      A managed Kubernetes service on AWS, allowing you to run your containerized
       workloads on Kubernetes without the overhead of managing it yourself.
     link: aws-eks
 
@@ -118,7 +118,7 @@ entries:
 
   - term: Google Kubernetes Engine
     description: |
-      A managed container orchestration tool on Google Cloud Platform (GCP), allowing for the 
+      A managed container orchestration tool on Google Cloud Platform (GCP), allowing for the
       deployment and automated management of containerized applications.
     link: gcp-gke
 
@@ -154,13 +154,13 @@ entries:
 
   - term: Lambda
     description: |
-      A serverless platform on AWS, allowing for the execution of code or containers 
+      A serverless platform on AWS, allowing for the execution of code or containers
       without the need to provision infrastructure yourself.
     link: aws-lambda
 
   - term: Managed Kubernetes Service
     description: |
-      A kubernetes platform where some or all of the responsibility for setup and 
+      A kubernetes platform where some or all of the responsibility for setup and
       maintenance lies with a third-party provider.
     link: managed-kubernetes
 
@@ -179,8 +179,8 @@ entries:
   - term: NoSQL Database
     description: |
       A type of database that does not store its data in tables. Also called
-      non-relational databases, NoSQL databases can be [document-based](/learn/glossary/document-oriented) (like MongoDB),
-      [column-based](/learn/glossary/column-oriented) (like Apache Cassandra), [graph-based](/learn/glossary/graph-oriented) (like Neo4j), or [key-value](/learn/glossary/key-value)
+      non-relational databases, NoSQL databases can be [document-based](/tutorials/glossary/document-oriented) (like MongoDB),
+      [column-based](/tutorials/glossary/column-oriented) (like Apache Cassandra), [graph-based](/tutorials/glossary/graph-oriented) (like Neo4j), or [key-value](/tutorials/glossary/key-value)
       (like DynamoDB).
     link: nosql
 

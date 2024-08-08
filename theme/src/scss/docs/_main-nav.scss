@@ -15,14 +15,13 @@ nav.main-nav {
 
         &.active {
             background-color: map-get($blue, 100);
-            border-left: map-get($blue, 750) 3px solid;
+            border-radius: 4px;
             width: fit-content;
-    
+
             &:hover {
                 text-decoration: none;
                 background-color: map-get($blue, 250);
                 color: map-get($blue, 850);
-                border-left: map-get($blue, 850) 3px solid;
             }
         }
     }
@@ -55,14 +54,13 @@ nav.main-nav {
 
         &.active {
             background-color: map-get($blue, 100);
-            border-left: map-get($blue, 750) 3px solid;
+            border-radius: 4px;
             width: fit-content;
             text-decoration: none;
 
             &:hover {
                 background-color: map-get($blue, 250);
                 color: map-get($blue, 850);
-                border-left: map-get($blue, 850) 3px solid;
             }
         }
     }
@@ -85,7 +83,7 @@ nav.main-nav {
     .top-level-container,
     div.sidenav-subsection {
         border-left: map-get($gray, 150) 1px solid;
-        margin-left: 8px;
+        margin-left: 1rem;
     }
 
     .toggleButton, .toggleButton-topLevel {
