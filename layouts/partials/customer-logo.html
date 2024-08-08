@@ -1,7 +1,7 @@
 {{ $logoClass := "customer-logo" }}
 {{ if eq .black true }}
     {{ $logoClass = "customer-logo-black" }}
-{{ else if eq .hoverable true }}
+{{ else if .hoverable }}
     {{ $logoClass = "customer-logo-hoverable" }}
 {{ end }}
 

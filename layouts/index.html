@@ -29,37 +29,8 @@
     <!-- Logos carousel -->
     <section class="container mx-auto text-center overflow-hidden px-3 mt-6">
         <h3 class="text-center mb-4">{{ .Params.customer_logos.title }}</h3>
-
-        <div class="w-full order-first pb-16 items-center justify-center hidden lg:block">
-            <pulumi-swiper slides="6" centered-slides="true" loop="true" autoplay="true" autoplay-delay="500" speed="2000">
-                {{ range $logo := .Params.customer_logos.logos }}
-                    <pulumi-swipeable>
-                        <div class="p-6 flex flex-col flex-grow items-end h-24 justify-center">
-                            <a href="/case-studies">
-                                {{ partial "customer-logo.html" (dict "logo" $logo.name "hoverable" true) }}
-                            </a>
-                        </div>
-                    </pulumi-swipeable>
-                {{ end }}
-            </pulumi-swiper>
-        </div>
-
-        <div class="w-full order-first pb-16 items-center justify-center block lg:hidden">
-            <pulumi-swiper slides="3" centered-slides="true" loop="true" autoplay="true" autoplay-delay="500" speed="2000">
-                {{ range $logo := .Params.customer_logos.logos }}
-                    <pulumi-swipeable>
-                        <div class="p-6 flex flex-col flex-grow items-end h-24 justify-center">
-                            {{ if $logo.link }}
-                                <a class="w-full h-full" href="{{ $logo.link }}" target="_blank">
-                                    {{ partial "customer-logo.html" (dict "logo" $logo.name "hoverable" true) }}
-                                </a>
-                            {{ else }}
-                                {{ partial "customer-logo.html" (dict "logo" $logo.name "hoverable" true) }}
-                            {{ end }}
-                        </div>
-                    </pulumi-swipeable>
-                {{ end }}
-            </pulumi-swiper>
+        <div class="my-12">
+            {{ partial "stacked-carousel.html" (dict "logos" .Params.customer_logos.logos "single_row" true "gray_hover" true ) }}
         </div>
     </section>
 
