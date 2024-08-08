@@ -10,6 +10,32 @@
         background: linear-gradient(90deg, map-get($brand, "yellow") 0%, map-get($brand, "salmon") 18.23%, map-get($brand, "fuchsia-darker") 38.02%, map-get($brand, "purple") 53.65%, map-get($brand, "violet") 74.48%, map-get($brand, "blue-lighter") 100%);
     }
 
+    nav.main-nav {
+        div.toc-header, nav.main-nav li.sidenav-topic {
+            @apply ml-0;
+
+            + .top-level-container {
+                @apply ml-3;
+            }
+
+            li.sidenav-topic {
+                @apply mx-2 border-l-0 bg-red-300;
+            }
+        }
+
+        li.sidenav-topic {
+            @apply mx-2 border-l-0;
+        }
+
+        ul {
+            @apply pl-1;
+        }
+
+        a {
+            @apply px-1 inline-block;
+        }
+    }
+
     h2 {
         @apply text-2xl;
     }

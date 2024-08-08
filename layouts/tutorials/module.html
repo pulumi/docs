@@ -59,16 +59,16 @@
                 <p>
                     This tutorial has {{ len .Pages }} topic{{ if ne (len .Pages) 1 }}s{{ end }} and takes about {{ $estimated_time }} minutes to complete.
                 </p>
-                <div class="mb-12">
+                <div class="mb-8">
                     <ul class="p-0 border border-gray-300 rounded shadow-sm">
                         {{ $pageCount := len .Pages }}
                         {{ range $index, $page := .Pages.ByWeight }}
-                            <li class="flex items-center list-none py-3 px-4 border-gray-200 {{ if lt (add $index 1) $pageCount }}border-b{{ end }}">
+                            <li class="flex flex-col md:flex-row md:items-center gap-2 md:gap-0 list-none py-3 px-4 border-gray-200 {{ if lt (add $index 1) $pageCount }}border-b{{ end }}">
                                 <span class="w-full">
                                     <a href="{{ .RelPermalink }}">{{ $page.Title }}</a>
                                 </span>
-                                <span class="hidden md:block text-sm text-gray-600 whitespace-nowrap mx-12">
-                                    <i class="far fa-clock text-center w-6 text-gray-500"></i>
+                                <span class="text-sm text-gray-600 whitespace-nowrap md:mx-12">
+                                    <i class="far fa-clock md:text-center w-4 md:w-6 text-gray-500"></i>
                                     {{ $page.Params.estimated_time }} minutes
                                 </span>
                                 <span class="hidden md:block ">

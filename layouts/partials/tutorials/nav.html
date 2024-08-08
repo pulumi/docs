@@ -70,7 +70,7 @@
 
 {{ define "tutorials-menu" }}
     {{ range $item := .items }}
-        <div id="toc-menu-{{ $item.id }}" class="text-black toc-header toggle-topLevel toggleVisible {{ if .active }}active{{ end }}">
+        <div id="tutorials-menu toc-menu-{{ $item.id }}" class="text-black toc-header toggle-topLevel toggleVisible p-1 {{ if .active }}active{{ end }}">
             <div class="flex items-start">
                 {{ $defaultIcon := "file" }}
                 {{ if .children }}
@@ -78,13 +78,13 @@
                 {{ end }}
                 <div class="icon icon-14-14 {{ default $defaultIcon .icon }}"></div>
             </div>
-            <div class="px-0.5 whitespace-nowrap">
+            <div class="pl-1">
                 {{ if ne $item.href nil }}
                     <a href="{{ $item.href }}">
                         <span class="text-black">{{ $item.label }}</span>
                     </a>
                 {{ else }}
-                    <span class="text-black">{{ $item.label }}</span>
+                    <span class="text-black pl-1 pr-1">{{ $item.label }}</span>
                 {{ end }}
             </div>
             {{ if .children }}
@@ -100,7 +100,7 @@
             <ul class="expanded">
                 {{ range $child := .children }}
                     <li class="sidenav-topic {{ if .active }}active{{ end }} mr-2">
-                        <a href="{{ $child.href }}">{{ $child.label }}</a>
+                        <a class="block" href="{{ $child.href }}">{{ $child.label }}</a>
                     </li>
                 {{ end }}
             </ul>
