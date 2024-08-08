@@ -13,7 +13,7 @@
 
     .carousel-left-initial {
         left: 0;
-        animation: scroll-horizontal-middle 20s linear infinite;
+        animation: scroll-horizontal-middle 20s linear;
         animation-fill-mode: forwards;
     }
 
@@ -38,7 +38,7 @@
 
     .carousel-right-initial {
         left: 0;
-        animation: scroll-horizontal-reverse-middle 20s linear infinite;
+        animation: scroll-horizontal-reverse-middle 20s linear;
         animation-fill-mode: forwards;
     }
 
