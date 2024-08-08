@@ -91,8 +91,8 @@ function setDocsMainNavPosition() {
     let docsTypeNavSearch = $(".docs-type-nav-search");
     let docsToggleOffset = 94;
 
-    if (document.getElementsByClassName("docs-list-main").length > 0) {
-        if ($(".docs-list-main").get(0).getBoundingClientRect().y <= 0) {
+    if ($(".section-docs .docs-list-main").length > 0) {
+        if ($(".section-docs .docs-list-main").get(0).getBoundingClientRect().y <= 0) {
             mainNav.css("margin-top", docsTypeNavSearch.height() - Math.max($(".top-nav-container").get(0).getBoundingClientRect().y, 0));
             mainNavToggle.css("top", docsToggleOffset + docsTypeNavSearch.height() - Math.max($(".top-nav-container").get(0).getBoundingClientRect().y, 0));
         } else {

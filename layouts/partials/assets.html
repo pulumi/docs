@@ -16,12 +16,12 @@
   Our marketing styles diverge a bit from the other parts of the website so we load
   in a different bundle on our marketing pages.
 -->
-{{ $nonMarketingSections := slice "docs" "registry" "blog" "learn" "templates" "ai" "authors" "tags" "legal" }}
+{{ $nonMarketingSections := slice "docs" "registry" "blog" "learn" "tutorials" "providers" "collections" "templates" "ai" "authors" "tags" "legal" }}
 {{ if in $nonMarketingSections .Section }}
 {{ else }}
     {{ $marketingCss := resources.Get "css/marketing.css" | fingerprint }}
-    <link rel="stylesheet" href="{{ $marketingCss.RelPermalink }}"></link>
+    <link rel="stylesheet" href="{{ $marketingCss.RelPermalink }}">
 {{ end }}
 
 {{ $css := resources.Get "css/bundle.css" | fingerprint }}
-<link rel="stylesheet" href="{{ $css.RelPermalink }}"></link>
+<link rel="stylesheet" href="{{ $css.RelPermalink }}">

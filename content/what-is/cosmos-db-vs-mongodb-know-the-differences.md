@@ -29,7 +29,7 @@ customer_logos:
       - ro
 ---
 
-Both Cosmos DB and MongoDB are [NoSQL](/learn/glossary/nosql/), or non-relational, databases. This concept means their data is stored in some format other than two-dimensional tables. Some commonly-used formats for NoSQL databases in general are documents, key-value pairs, graphs, and columns, each with different strengths and tradeoffs. Cosmos DB and MongoDB are both highly-available, scalable, globally distributed and fully-managed NoSQL databases.
+Both Cosmos DB and MongoDB are [NoSQL](/tutorials/glossary/nosql/), or non-relational, databases. This concept means their data is stored in some format other than two-dimensional tables. Some commonly-used formats for NoSQL databases in general are documents, key-value pairs, graphs, and columns, each with different strengths and tradeoffs. Cosmos DB and MongoDB are both highly-available, scalable, globally distributed and fully-managed NoSQL databases.
 
 ### Benefits and Downfalls of Cosmos DB
 

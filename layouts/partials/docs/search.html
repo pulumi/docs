@@ -1,25 +1,48 @@
 <div class="docs-type-nav-search">
     <div class="docs-type-nav">
-        {{ $mode := .Scratch.Get "mode" }}
-        {{ if eq "docs" $mode }}
-            <a class="tab-selected" href="/docs">
-                <img class="tab-icon" src="/icons/docs.svg" />
-                Docs
-            </a>
-            <a class="tab" href="/registry">
-                <img class="tab-icon" src="/icons/registry-light.svg" />
-                Packages
-            </a>
-        {{ else }}
-            <a class="tab" href="/docs">
-                <img class="tab-icon" src="/icons/docs-light.svg" />
-                Docs
-            </a>
-            <a class="tab-selected" href="/registry">
-                <img class="tab-icon" src="/icons/registry.svg" />
-                Packages
-            </a>
-        {{ end }}
+        <div class="inline-flex items-center">
+            {{ $mode := .Scratch.Get "mode" }}
+            {{ if eq "docs" $mode }}
+                <a class="tab-selected" href="/docs/">
+                    <img class="tab-icon" src="/icons/docs.svg" />
+                    <span>Docs</span>
+                </a>
+                <a class="tab" href="/registry/">
+                    <img class="tab-icon" src="/icons/registry-light.svg" />
+                    <span>Packages</span>
+                </a>
+                <a class="tab" href="/tutorials/">
+                    <img class="tab-icon" src="/icons/graduation-cap.svg" />
+                    <span>Tutorials</span>
+                </a>
+            {{ else if (or (eq "tutorials" $mode) (eq "providers" $mode) (eq "collections" $mode)) }}
+                <a class="tab" href="/docs/">
+                    <img class="tab-icon" src="/icons/docs.svg" />
+                    <span>Docs</span>
+                </a>
+                <a class="tab" href="/registry/">
+                    <img class="tab-icon" src="/icons/registry-light.svg" />
+                    <span>Packages</span>
+                </a>
+                <a class="tab-selected" href="/tutorials/">
+                    <img class="tab-icon" src="/icons/graduation-cap.svg" />
+                    <span>Tutorials</span>
+                </a>
+            {{ else }}
+                <a class="tab" href="/docs/">
+                    <img class="tab-icon" src="/icons/docs-light.svg" />
+                    <span>Docs</span>
+                </a>
+                <a class="tab-selected" href="/registry/">
+                    <img class="tab-icon" src="/icons/registry.svg" />
+                    <span>Packages</span>
+                </a>
+                <a class="tab" href="/tutorials/">
+                    <img class="tab-icon" src="/icons/graduation-cap.svg" />
+                    <span>Tutorials</span>
+                </a>
+            {{ end }}
+        </div>
     </div>
     <div class="docs-search">
         <div
