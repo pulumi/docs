@@ -97,7 +97,7 @@
         <div class="top-level-container">
             <ul class="expanded">
                 {{ range $child := .children }}
-                    <li class="sidenav-topic {{ if .active }}active{{ end }}">
+                    <li class="sidenav-topic {{ if .active }}active{{ end }} mr-2">
                         <a href="{{ $child.href }}">{{ $child.label }}</a>
                     </li>
                 {{ end }}

@@ -19,17 +19,17 @@
     {{ end }}
 {{ end }}
 
-<div class="mt-6">
+<div class="mt-6 flex flex-col sm:flex-row items-center gap-2">
     {{ if ne $step $first }}
         {{ $prev := index $pages (sub $step 1) }}
-        <a data-track="previous-step" class="btn btn-secondary" href="{{ $prev.RelPermalink }}">&larr; Previous: {{ $prev.Title }}</a>
+        <a data-track="previous-step" class="btn btn-secondary w-full md:w-auto" href="{{ $prev.RelPermalink }}">&larr; <span class="hidden md:inline">Previous: </span>{{ $prev.Title }}</a>
     {{ else }}
-        <a data-track="previous-step" class="btn btn-secondary" href="{{ .Page.Parent.RelPermalink }}">&larr; Return to {{ .Page.Parent.Title }}</a>
+        <a data-track="previous-step" class="btn btn-secondary w-full md:w-auto" href="{{ .Page.Parent.RelPermalink }}">&larr; <span class="hidden md:inline">Back to </span>{{ .Page.Parent.Title }}</a>
     {{ end }}
     {{ if ne $step $last }}
         {{ $next := index $pages (add $step 1) }}
-        <a data-track="next-step" class="btn" href="{{ $next.RelPermalink }}">Next: {{ $next.LinkTitle }} &rarr;</a>
+        <a data-track="next-step" class="btn w-full md:w-auto" href="{{ $next.RelPermalink }}"><span class="hidden md:inline">Next: </span>{{ $next.LinkTitle }} &rarr;</a>
     {{ else }}
-        <a data-track="next-step" class="btn" href="{{ .Page.Parent.RelPermalink }}">Return to {{ .Page.Parent.Title }} &rarr;</a>
+        <a data-track="next-step" class="btn w-full md:w-auto" href="{{ .Page.Parent.RelPermalink }}"><span class="hidden md:inline">Back to </span>{{ .Page.Parent.Title }} &rarr;</a>
     {{ end }}
 </div>
