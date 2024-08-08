@@ -10,6 +10,13 @@ customer_name: Learning Machine
 customer_logo: /logos/customers/learning-machine_logo.svg
 customer_url: https://www.hyland.com/
 
+quote_block:
+  quote: |
+      “Jump in with both feet — the sooner the better. The payback is immediate and the confidence you gain from having a predictable development pipeline is immeasurable. Our industry moves with incredible speed and using tools like Pulumi are absolutely essential to providing teams with the agility that they require.”
+  quote_attrib: Dan Hughes, CTO, Learning Machine
+  headline_stat: 3 weeks > 1 hour
+  headline: Reduction in new customer provisioning time
+
 exec_summary: |
     [Learning Machine](https://www.hyland.com/) provides a secure platform, using the
     blockchain, to issue records in a format that is tamperproof, recipient owned, and
