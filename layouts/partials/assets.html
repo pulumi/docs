@@ -20,8 +20,8 @@
 {{ if in $nonMarketingSections .Section }}
 {{ else }}
     {{ $marketingCss := resources.Get "css/marketing.css" | fingerprint }}
-    <link rel="stylesheet" href="{{ $marketingCss.RelPermalink }}"></link>
+    <link rel="stylesheet" href="{{ $marketingCss.RelPermalink }}">
 {{ end }}
 
 {{ $css := resources.Get "css/bundle.css" | fingerprint }}
-<link rel="stylesheet" href="{{ $css.RelPermalink }}"></link>
+<link rel="stylesheet" href="{{ $css.RelPermalink }}">

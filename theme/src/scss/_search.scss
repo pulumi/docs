@@ -5,7 +5,7 @@
     border-width: 1px;
 
     .docs-type-nav {
-        @apply inline-flex items-center;
+        @apply inline-flex items-center flex-grow;
 
         a {
             @apply flex flex-grow gap-3 items-center font-display text-base py-3 px-6 border-b-4 border-transparent text-gray-700;

@@ -85,7 +85,7 @@ The `Makefile` exposes a number of useful helpers for authoring:
 * `make new-blog-post` scaffolds a new, bare-bones blog post with placeholder content
 * `make new-tutorial` scaffolds a new single-page tutorial
 * `make new-tutorial-module` scaffolds a new multi-page tutorial
-* `make new-tutorial-topic` scaffolds a new tutorial topic and adds to an existing tutorial
+* `make new-tutorial-topic` scaffolds a new tutorial topic and adds it to an existing multi-page tutorial
 * `make new-example-program` generates a new multi-language set of examples at `./static/programs`
 * `make new-dev-stack` creates a new dev stack (in the `pulumi` organization, which you must belong to)
 * `make deploy-dev-stack` runs a build, deploys to S3, runs the tests, and deploys to the selected dev stack

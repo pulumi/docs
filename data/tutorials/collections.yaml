@@ -33,7 +33,7 @@
   logo: /logos/pkg/aws.svg
   featured: false
 
-- id: pulumi-101
+- id: learn-pulumi
   type: proficiency
-  name: The Basics
-  description: A collection of tutorials to help you learn core Pulumi concepts.
+  name: Learn Pulumi
+  description: Intro-level walkthroughs to help you learn core Pulumi infrastructure-as-code concepts.

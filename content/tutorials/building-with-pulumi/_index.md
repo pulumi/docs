@@ -20,7 +20,7 @@ prereqs:
     - Familiarity with JavaScript, TypeScript, or Python
     - A [Docker](https://docs.docker.com/get-docker/) service installed and running locally
 collections:
-    - pulumi-101
+    - learn-pulumi
 collections_weight: 2
 aliases:
     - /learn/building-with-pulumi/
