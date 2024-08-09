@@ -40,7 +40,7 @@ resource "docker_image" "frontend" {
 }
 
 resource "docker_image" "mongo" {
-  name         = "pulumi/tutorial-pulumi-fundamentals-database-local:latest"
+  name         = "pulumi/tutorial-pulumi-fundamentals-database:latest"
   keep_locally = false
 }
 
