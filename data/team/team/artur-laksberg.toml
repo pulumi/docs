@@ -1,0 +1,11 @@
+id = "artur-laksberg"
+name = "Artur Laksberg"
+title = "Software Engineer"
+company = "Pulumi"
+weight = 1
+
+status = "active"
+
+[social]
+github = "arturl"
+linkedin = "artur-laksberg"
