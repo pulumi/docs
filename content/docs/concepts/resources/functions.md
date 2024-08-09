@@ -131,8 +131,8 @@ variables:
 
 Provider functions are exposed in each language as regular functions, in two variations:
 
- 1. A function that accepts plain arguments (strings and so on) and returns a Promise, or blocks until the result is available.
- 2. A function that accepts `Input` values and returns an [Output](/docs/concepts/inputs-outputs/).
+ 1. A function that accepts plain arguments (strings and so on) and returns an asynchronous value (e.g. a `Promise` in NodeJS, or a `Task` in Python), or blocks until the result is available. This is often referred to as the _direct form_.
+ 2. A function that accepts `Input` values and returns an [Output](/docs/concepts/inputs-outputs/). This is often referred to as the _output form_.
 
 The documentation for a provider function will tell you the name and signature for each of the variations.
 
@@ -140,25 +140,161 @@ The documentation for a provider function will tell you the name and signature f
 
 Each function and method also accepts "invoke options", either as an object or as varargs depending on the host language. The options are as follows:
 
-| Option | Explanation                                                  |
-|--------|--------------------------------------------------------------|
-| parent | Supply a parent resource, which will be used to determine default providers |
-| provider | Supply the provider to use explicitly. |
-| version | Use exactly this version of the provider plugin. |
-| pluginDownloadURL | Download the provider plugin from this URL. The download URL is otherwise inferred from the provider package. |
-| _async_ | _This option is deprecated and will be removed in a future release_ |
+- `parent`: Supply a parent resource for this function call. Much like the [parent resource option](/docs/concepts/options/parent/), the parent will be consulted when determining the provider to use.
 
-The `parent` option has a similar purpose to the [parent option](/docs/concepts/options/parent/) used when creating a resource. The parent is consulted when determining the provider to use.
+- `pluginDownloadURL`: Pass a URL from which the provider plugin should be fetched. This may be necessary for third-party packages such as those not hosted at [https://get.pulumi.com](https://get.pulumi.com).
 
-The `provider` option gives an explicit provider to use when running the invoked function. This is useful, for example, if you want to invoke a function in each of a set of AWS regions.
+- `provider`: Pass an [explicitly configured provider](/docs/concepts/resources/providers/#explicit-provider-configuration) to use for this function call, instead of using the default provider. This is useful, for example, if you want to invoke a function in each of a set of AWS regions.
 
-The `version` option specifies an exact version for the provider plugin. This can be used when you need to pin to a specific version to avoid a backward-incompatible change.
+- `version`: Pass a provider plugin version that should be used when invoking the function.
 
-The `pluginDownloadURL` option gives a URL for fetching the provider plugin. It may be necessary to supply this for third-party packages (those not hosted at [https://get.pulumi.com](https://get.pulumi.com)).
+- `async`: _This option is deprecated and will be removed in a future release_.
+
+### Dependencies and ordering
+
+While the direct and output forms of a provider function are equivalent in terms of the results they produce when invoked, they differ in how they interact with the rest of the Pulumi program and the order in which they may be executed. Specifically:
+
+- Direct form invocations execute just like any other function call in the language. Since they do not accept Pulumi `Input`s nor return Pulumi `Output`s, they are not tracked by the Pulumi engine and do not participate in the dependency graph.
+
+- Output form invocations, on the other hand, are tracked by the Pulumi engine and participate in the dependency graph. This means, for example, that Pulumi will ensure that input resources are created or updated before an invocation and that the invocation is executed before its dependent resources are created or updated.
+
+If you require that dependent resources are created or updated before an invocation, you must use a provider function's output form. If you need to specify a dependency that can't be captured by passing an appropriate input (that is, if you wish to simulate something like the [`dependsOn` resource option](/docs/concepts/options/dependson/)), you can use Pulumi's [`all`](/docs/concepts/inputs-outputs/all/) function and `Output`'s [`apply`](/docs/concepts/inputs-outputs/apply/) method:
+
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{% choosable language typescript %}}
+
+ ```typescript
+import * as pulumi from "@pulumi/pulumi";
+
+const res1 = new MyResource("res1", {});
+const res2 = new MyResource("res2", {});
+
+// Assuming `myFunctionOutput` is an output-form invocation of the `myFunction`
+// provider function, this use of `all` and `apply` will ensure that it does not
+// happen until `res1` and `res2` have been processed. This will work for any
+// set of resources, even those with no explicit outputs, since the `.urn`
+// output is always available.
+pulumi.all([res1.urn, res2.urn]).apply(() => myFunctionOutput());
+```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
+```csharp
+using System.Collections.Generic;
+using System.Linq;
+using Pulumi;
+
+return await Deployment.RunAsync(() =>
+{
+    var res1 = new MyResource("res1", new MyResourceArgs());
+    var res2 = new MyResource("res2", new MyResourceArgs());
+
+    // Assuming `myFunctionOutput` is an output-form invocation of the `myFunction`
+    // provider function, this use of `Tuple` and `Apply` will ensure that it does
+    // not happen until `res1` and `res2` have been processed. This will work for
+    // any set of resources, even those with no explicit outputs, since the `.Urn`
+    // output is always available.
+    Output.Tuple(res1.Urn, res2.Urn).Apply(t => myFunctionOutput());
+});
+```
+
+{{% /choosable %}}
+{{% choosable language go %}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		res1, err := NewMyResource(ctx, "res1", nil)
+		if err != nil {
+			return err
+		}
+
+		res2, err := NewMyResource(ctx, "res2", nil)
+		if err != nil {
+			return err
+		}
+
+		// Assuming `myFunctionOutput` is an output-form invocation of the `myFunction`
+		// provider function, this use of `All` and `ApplyT` will ensure that it does not
+		// happen until `res1` and `res2` have been processed. This will work for any set
+		// of resources, even those with no explicit outputs, since the `.URN` output is
+		// always available.
+		_, err = pulumi.All(res1.URN, res2.URN).ApplyT(func(args []interface{}) (interface{}, error) {
+			return myFunctionOutput()
+		})
+		if err != nil {
+			return err
+		}
+
+		return nil
+	})
+}
+```
+
+{{% /choosable %}}
+{{% choosable language python %}}
+
+```python
+import pulumi
+
+res1 = MyResource("res1", {})
+res2 = MyResource("res2", {})
+
+# Assuming `my_function_output` is an output-form invocation of the `my_function`
+# provider function, this use of `all` and `apply` will ensure that it does not
+# happen until `res1` and `res2` have been processed. This will work for any set
+# of resources, even those with no explicit outputs, since the `.urn` output is
+# always available.
+pulumi.all(res1.urn, res2.urn).apply(lambda args: my_function_output())
+```
+
+{{% /choosable %}}
+{{% choosable language java %}}
+
+```java
+package generated_program;
+
+import com.pulumi.Context;
+import com.pulumi.Output;
+import com.pulumi.Pulumi;
+
+public class App {
+    public static void main(String[] args) {
+        Pulumi.run(App::stack);
+    }
+
+    public static void stack(Context ctx) {
+        final var res1 = new MyResource("res1", new MyResourceArgs());
+        final var res2 = new MyResource("res2", new MyResourceArgs());
+
+        // Assuming `myFunctionOutput` is an output-form invocation of the `myFunction`
+        // provider function, this use of `tuple` and `applyValue` will ensure that it does
+        // not happen until `res1` and `res2` have been processed. This will work for
+        // any set of resources, even those with no explicit outputs, since the `.urn`
+        // output is always available.
+        Output.tuple(res1.getUrn(), res2.getUrn()).applyValue(t -> myFunctionOutput());
+    }
+}
+```
+
+{{% /choosable %}}
+{{% choosable language yaml %}}
+
+Output form invocations are not yet supported in YAML
+
+{{% /choosable %}}
+{{< /chooser >}}
 
 ### Provider methods
 
-Provider SDKs may also include methods attached to a resource type. For example, in the [EKS](/registry/packages/eks/api-docs/) SDK, the `Cluster` resource has a method [.GetKubeconfig](/registry/packages/eks/api-docs/cluster/#method_GetKubeconfig):
+Provider SDKs may also include _methods_ attached to a resource type. For example, in the [EKS](/registry/packages/eks/api-docs/) SDK, the `Cluster` resource has a [.GetKubeconfig](/registry/packages/eks/api-docs/cluster/#method_GetKubeconfig) method:
 
 <div><pulumi-examples>
 <div><pulumi-chooser type="language" options="typescript,python,go,csharp,java,yaml"></pulumi-chooser></div>
@@ -203,18 +339,18 @@ def get_kubeconfig(self,
 <div>
 <pulumi-choosable type="language" values="java">
 
-(no example available for Java)
+No example available for Java
 
 </pulumi-choosable>
 </div>
 <div>
 <pulumi-choosable type="language" values="yaml">
 
-(no example available for YAML)
+No example available for YAML
 
 </pulumi-choosable>
 </div>
 
 </pulumi-examples></div>
 
-Unlike provider functions, methods always take `Input` arguments, and return an `Output`. Methods do not have invoke options.
+Unlike provider functions, methods always appear in the _output form_: they take `Input` arguments, and return an `Output`. Moreover, methods do not accept invoke options.
