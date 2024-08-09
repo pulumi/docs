@@ -121,7 +121,7 @@ Azure resources are parented by Resource Group, so you can issue parent queries 
 
 ## Generating Pulumi Code
 
-Cloud Import can also generate Pulumi IaC code for you if you would like to manage the lifecycle of these resources with Pulumi IaC. This can be useful if you are looking for a way to clean up and delete a bunch of resources in bulk, or are looking to migrate a project off of ClickOps (or another tool) and onto IaC. Generating code uses the [`pulumi import`](/docs/cli/commands/pulumi_import/) CLI command. Running import will bring the lifecycle of your resources under the management of Pulumi. After running `pulumi import` running `pulumi up` may make changes to your resources in the backing cloud provider, and running `pulumi destroy` will delete them permantently. We will need to do a few things:
+Cloud Import can also generate Pulumi IaC code for you if you would like to manage the lifecycle of these resources with Pulumi IaC. This can be useful if you are looking for a way to clean up and delete a bunch of resources in bulk, or are looking to migrate a project off of ClickOps (or another tool) and onto IaC. Generating code uses the [`pulumi import`](/docs/cli/commands/pulumi_import/) CLI command. Running import will bring the lifecycle of your resources under the management of Pulumi. After running `pulumi import` running `pulumi up` may make changes to your resources in the backing cloud provider, and running `pulumi destroy` will delete them permanently. We will need to do a few things:
 
 1. Generate an import file, which is a description of all resources, their types, and their identifiers.
 2. Create a new Pulumi project and stack to house our resources and the code we're going to generate
