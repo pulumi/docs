@@ -12,7 +12,7 @@ tags:
     - releases
 ---
 
-We are excited to announce the availability of Kubernetes-native support for Customer-Managed Agents for Pulumi Deployments, further enhancing the flexibility and control over your infrastructure deployments. This new feature allows you to self-host deployment agents within your Kubernetes environment, bringing the same power and flexibility of Pulumi-hosted deployments to isolated environments.
+We are excited to announce the availability of Kubernetes-native support for Pulumi Deployments Customer-Managed Agents, further enhancing the flexibility and control over your infrastructure deployments. This new feature allows you to self-host deployment agents within your Kubernetes environment, bringing the same power and flexibility of Pulumi-hosted deployments to isolated environments.
 
 ## Customer Managed Agents: Flexibility and Control
 
@@ -31,7 +31,7 @@ Customer Managed Agents, [announced earlier this year](/blog/customer-managed-de
 
 ### Docker and Kubernetes Support
 
-By default, Customer-Managed Agents are deployed using Docker. However, with this new release, you can now leverage Kubernetes for running these agents, enabling you to deploy it  within your existing infrastructure.
+By default, Customer-Managed Agents are deployed on Virtual Machines using Docker. However, with this new release, you can now leverage Kubernetes to run these agents, enabling you to deploy them within your existing infrastructure.  This integrates natively with Kubernetes pods and does not require Docker in Docker or privileged execution.
 
 ### Getting Started with Kubernetes
 
@@ -43,7 +43,7 @@ To use Kubernetes for running Customer-Managed Agents:
    - Create a new pool by clicking 'Add new pool'
    - You will get a new access token, copy and save the token.
 3. **Install Agents**:
-   - Follow the provided instructions to install agents within your Kubernetes environment.
+   - Follow the instructions provided on the page to install agents within your Kubernetes environment.
 4. **Configure Agents**:
    - Use `pulumi-deployment-agent.yaml` for configuration.
    - Set environment variables directly in your Kubernetes Deployment.
@@ -60,6 +60,6 @@ To increase deployment concurrency, use the same token to set up multiple agents
 
 Customer-Managed Agents with Kubernetes support empower you to manage deployments according to your specific needs. Whether it’s for security, compliance, or operational efficiency, this feature provides the flexibility and control necessary for modern infrastructure management.
 
-For more details, check out our [documentation](https://www.pulumi.com/docs/guides/continuous-delivery/customer-managed-agents/) or contact our sales team to get started with Customer-Managed Agents today.
+For more details, check out our [documentation](/docs/pulumi-cloud/deployments/customer-managed-agents/#kubernetes) or contact our sales team to get started with Customer-Managed Agents today.
 
 Feel free to reach out with feedback or questions. We’re here to support you every step of the way.
