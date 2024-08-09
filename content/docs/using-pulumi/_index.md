@@ -17,6 +17,7 @@ Learn how to adopt Pulumi, organize projects & stacks, use the Automation API, c
 ## Tutorials
 
 - [Defining and Provisioning Resources](/docs/using-pulumi/define-and-provision-resources/)
+- [Inspecting Infrastructure](/docs/using-pulumi/inspecting-infrastructure/)
 - [Stack References and Outputs](/docs/using-pulumi/stack-outputs-and-references/)
 
 ## General Guides
