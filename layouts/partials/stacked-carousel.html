@@ -46,6 +46,30 @@ optional flags:
             {{ end }}
         </div>
     </div>
+    <div class="md:hidden stacked-carousel-container stacked-carousel-container-single-mobile relative mx-auto">
+        <div class="carousel-left-primary-mobile">
+            {{ range .logos }}
+                {{ if .link }}
+                    <a href="{{ .link }}">
+                        <div class="w-24 h-12 m-4">{{ partial "customer-logo.html" (dict "logo" .name "hoverable" true) }}</div>
+                    </a>
+                {{ else }}
+                    <div class="w-24 h-12 m-4">{{ partial "customer-logo.html" (dict "logo" .name "hoverable" true) }}</div>
+                {{ end }}
+            {{ end }}
+        </div>
+        <div class="carousel-left-primary-mobile carousel-left-secondary-mobile">
+            {{ range .logos }}
+                {{ if .link }}
+                    <a href="{{ .link }}">
+                        <div class="w-24 h-12 m-4">{{ partial "customer-logo.html" (dict "logo" .name "hoverable" true) }}</div>
+                    </a>
+                {{ else }}
+                    <div class="w-24 h-12 m-4">{{ partial "customer-logo.html" (dict "logo" .name "hoverable" true) }}</div>
+                {{ end }}
+            {{ end }}
+        </div>
+    </div>
 {{ else if .static }}
     <div class="hidden md:block stacked-carousel-container relative mx-auto">
         <div class="carousel-static">
