@@ -13,6 +13,14 @@ Can be 1 row scrolling left, or 3 rows scrolling left/right offset
 optional flags:
     single_row: makes the carousel just one row, with gray hover behavior and (optional) links
 -->
+<!-- divide the list into thirds to make the 3 rows -->
+{{ $length := .logos | len }}
+{{ $row_size := div $length 3 }}
+{{ $first_row := first $row_size .logos }}
+{{ $second_row := first $row_size (after $row_size .logos) }}
+{{ $third_row := after (mul 2 $row_size) .logos }}
+
+
 {{ if .single_row }}
     <div class="hidden md:block stacked-carousel-container stacked-carousel-container-single relative mx-auto">
         <div class="carousel-left-primary">
@@ -38,13 +46,49 @@ optional flags:
             {{ end }}
         </div>
     </div>
+    <div class="md:hidden stacked-carousel-container stacked-carousel-container-single-mobile relative mx-auto">
+        <div class="carousel-left-primary-mobile">
+            {{ range .logos }}
+                {{ if .link }}
+                    <a href="{{ .link }}">
+                        <div class="w-24 h-12 m-4">{{ partial "customer-logo.html" (dict "logo" .name "hoverable" true) }}</div>
+                    </a>
+                {{ else }}
+                    <div class="w-24 h-12 m-4">{{ partial "customer-logo.html" (dict "logo" .name "hoverable" true) }}</div>
+                {{ end }}
+            {{ end }}
+        </div>
+        <div class="carousel-left-primary-mobile carousel-left-secondary-mobile">
+            {{ range .logos }}
+                {{ if .link }}
+                    <a href="{{ .link }}">
+                        <div class="w-24 h-12 m-4">{{ partial "customer-logo.html" (dict "logo" .name "hoverable" true) }}</div>
+                    </a>
+                {{ else }}
+                    <div class="w-24 h-12 m-4">{{ partial "customer-logo.html" (dict "logo" .name "hoverable" true) }}</div>
+                {{ end }}
+            {{ end }}
+        </div>
+    </div>
+{{ else if .static }}
+    <div class="hidden md:block stacked-carousel-container relative mx-auto">
+        <div class="carousel-static">
+            {{ range $first_row }}
+                <div class="w-24 h-12 m-4">{{ partial "customer-logo.html" (dict "logo" .name) }}</div>
+            {{ end }}
+        </div>
+        <div class="carousel-static top-20">
+            {{ range $second_row }}
+                <div class="w-24 h-12 m-4">{{ partial "customer-logo.html" (dict "logo" .name) }}</div>
+            {{ end }}
+        </div>
+        <div class="carousel-static top-40">
+            {{ range $third_row }}
+                <div class="w-24 h-12 m-4">{{ partial "customer-logo.html" (dict "logo" .name) }}</div>
+            {{ end }}
+        </div>
+    </div>
 {{ else }}
-    <!-- divide the list into thirds to make the 3 rows -->
-    {{ $length := .logos | len }}
-    {{ $row_size := div $length 3 }}
-    {{ $first_row := first $row_size .logos }}
-    {{ $second_row := first $row_size (after $row_size .logos) }}
-    {{ $third_row := after (mul 2 $row_size) .logos }}
     <div class="hidden md:block stacked-carousel-container relative mx-auto">
         <div class="carousel-left-initial">
             {{ range $first_row }}

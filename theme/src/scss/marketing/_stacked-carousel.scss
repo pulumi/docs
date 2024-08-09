@@ -1,6 +1,15 @@
 .stacked-carousel-container {
     height: 240px;
 
+    .carousel-static {
+        width: 100%;
+        overflow: hidden;
+        position: absolute;
+        white-space: nowrap;
+        display: flex;
+        justify-content: space-around;
+    }
+
     .carousel-left-initial, .carousel-left-primary, .carousel-left-secondary {
         left: 100%;
         width: 100%;
@@ -106,12 +115,12 @@
 
     .carousel-left-primary {
         left: 0;
-        animation: single-scroll-horizontal-middle 30s linear infinite;
+        animation: single-scroll-horizontal-middle 60s linear infinite;
     }
 
     .carousel-left-secondary {
         left: 300%;
-        animation: single-scroll-horizontal 30s linear infinite;
+        animation: single-scroll-horizontal 60s linear infinite;
     }
 
     @keyframes single-scroll-horizontal {
@@ -125,6 +134,49 @@
     }
 
     @keyframes single-scroll-horizontal-middle {
+        0% {
+            left: 0;
+        }
+
+        100% {
+            left: -300%;
+        }
+    }
+}
+
+.stacked-carousel-container-single-mobile {
+    height: 80px;
+
+    .carousel-left-primary-mobile, .carousel-left-secondary-mobile {
+        width: 300%;
+        overflow: hidden;
+        position: absolute;
+        white-space: nowrap;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .carousel-left-primary-mobile {
+        left: 0;
+        animation: single-scroll-horizontal-middle 30s linear infinite;
+    }
+
+    .carousel-left-secondary-mobile {
+        left: 300%;
+        animation: single-scroll-horizontal 30s linear infinite;
+    }
+
+    @keyframes single-scroll-horizontal-mobile {
+        0% {
+            left: 300%;
+        }
+
+        100% {
+            left: 0%
+        }
+    }
+
+    @keyframes single-scroll-horizontal-middle-mobile {
         0% {
             left: 0;
         }
