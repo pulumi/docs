@@ -79,7 +79,7 @@ const frontend = new docker.RemoteImage(`${frontendImageName}Image`, {
 
 // Pull the MongoDB image
 const mongoImage = new docker.RemoteImage("mongoImage", {
-    name: "pulumi/tutorial-pulumi-fundamentals-database-local:latest",
+    name: "pulumi/tutorial-pulumi-fundamentals-database:latest",
 });
 ```
 
@@ -115,7 +115,7 @@ frontend = docker.RemoteImage(
 
 # Pull the MongoDB image
 mongo_image = docker.RemoteImage(
-    "mongo_image", name="pulumi/tutorial-pulumi-fundamentals-database-local:latest"
+    "mongo_image", name="pulumi/tutorial-pulumi-fundamentals-database:latest"
 )
 ```
 
@@ -439,7 +439,7 @@ const frontend = new docker.RemoteImage(`${frontendImageName}Image`, {
 
 // Pull the MongoDB image
 const mongoImage = new docker.RemoteImage("mongoImage", {
-    name: "pulumi/tutorial-pulumi-fundamentals-database-local:latest",
+    name: "pulumi/tutorial-pulumi-fundamentals-database:latest",
 });
 
 // Create a Docker network
@@ -546,7 +546,7 @@ frontend = docker.RemoteImage(
 
 # Pull the MongoDB image
 mongo_image = docker.RemoteImage(
-    "mongo_image", name="pulumi/tutorial-pulumi-fundamentals-database-local:latest"
+    "mongo_image", name="pulumi/tutorial-pulumi-fundamentals-database:latest"
 )
 
 # Create a Docker network

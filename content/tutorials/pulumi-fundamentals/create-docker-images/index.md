@@ -380,7 +380,7 @@ const frontend = new docker.RemoteImage(`${frontendImageName}Image`, {
 
 // Pull the MongoDB image
 const mongoImage = new docker.RemoteImage("mongoImage", {
-    name: "pulumi/tutorial-pulumi-fundamentals-database-local:latest",
+    name: "pulumi/tutorial-pulumi-fundamentals-database:latest",
 });
 ```
 
@@ -398,7 +398,7 @@ frontend = docker.RemoteImage(
 
 # Pull the MongoDB image
 mongo_image = docker.RemoteImage(
-    "mongo_image", name="pulumi/tutorial-pulumi-fundamentals-database-local:latest"
+    "mongo_image", name="pulumi/tutorial-pulumi-fundamentals-database:latest"
 )
 ```
 
@@ -421,7 +421,7 @@ ctx.Export("frontendDockerImage", frontendImage.Name)
 
 // Pull the MongoDB image
 mongoImage, err := docker.NewRemoteImage(ctx, "mongo-image", &docker.RemoteImageArgs{
-	Name: pulumi.String("pulumi/tutorial-pulumi-fundamentals-database-local:latest"),
+	Name: pulumi.String("pulumi/tutorial-pulumi-fundamentals-database:latest"),
 })
 if err != nil {
 	return err
@@ -447,7 +447,7 @@ final var frontendImage = new RemoteImage(
 final var mongoImage = new RemoteImage(
         "mongoImage",
         RemoteImageArgs.builder()
-                .name("pulumi/tutorial-pulumi-fundamentals-database-local:latest")
+                .name("pulumi/tutorial-pulumi-fundamentals-database:latest")
                 .build()
 );
 ```
@@ -467,7 +467,7 @@ frontend-image:
 mongo-image:
     type: docker:index:RemoteImage
     properties:
-      name: pulumi/tutorial-pulumi-fundamentals-database-local:latest
+      name: pulumi/tutorial-pulumi-fundamentals-database:latest
 ```
 
 {{% /choosable %}}
@@ -500,7 +500,7 @@ const frontend = new docker.RemoteImage(`${frontendImageName}Image`, {
 
 // Pull the MongoDB image
 const mongoImage = new docker.RemoteImage("mongoImage", {
-    name: "pulumi/tutorial-pulumi-fundamentals-database-local:latest",
+    name: "pulumi/tutorial-pulumi-fundamentals-database:latest",
 });
 ```
 
@@ -530,7 +530,7 @@ frontend = docker.RemoteImage(
 
 # Pull the MongoDB image
 mongo_image = docker.RemoteImage(
-    "mongo_image", name="pulumi/tutorial-pulumi-fundamentals-database-local:latest"
+    "mongo_image", name="pulumi/tutorial-pulumi-fundamentals-database:latest"
 )
 ```
 
