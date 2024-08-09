@@ -4,7 +4,7 @@
 
 {{ define "main" }}
     <div class="my-12">
-        {{ partial "stacked-carousel.html" (dict "logos" .Params.customer_logos.logos ) }}
+        {{ partial "stacked-carousel.html" (dict "logos" .Params.customer_logos.logos "static" true ) }}
     </div>
 
     <div class="container mx-auto text-center pb-8">

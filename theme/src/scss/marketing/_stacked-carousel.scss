@@ -1,6 +1,15 @@
 .stacked-carousel-container {
     height: 240px;
 
+    .carousel-static {
+        width: 100%;
+        overflow: hidden;
+        position: absolute;
+        white-space: nowrap;
+        display: flex;
+        justify-content: space-around;
+    }
+
     .carousel-left-initial, .carousel-left-primary, .carousel-left-secondary {
         left: 100%;
         width: 100%;
