@@ -12,14 +12,18 @@ aliases:
 - /docs/intro/concepts/resources/dynamic-providers/
 ---
 
-There are three types of resource providers. The first are the standard resource providers. These resource providers are built and maintained by Pulumi. There is a second kind, called a dynamic resource provider, which we will discuss here. These resource providers run only in the context of your program. They are not shareable. The third type of resource provider is shareable. You write it yourself and then you can distribute it so that others can use it.
+There are three types of resource providers. The first type are standard resource providers. These resource providers are built and maintained by Pulumi and can be found in the [Pulumi Registry](https://www.pulumi.com/registry/). The second type are custom providers written by you using [Pulumi Packages](/docs/using-pulumi/pulumi-packages). Both the standard and custom providers can be used across all the languages Pulumi supports. The third type is the dynamic resource provider discussed on this page.
 
-Dynamic resource providers can be written in any language you choose. Because they are not shareable, dynamic resource providers do not need a plugin.
+Dynamic resource providers are only able to be used in Pulumi programs written in the same language as the dynamic resource provider. But, they are lighter weight than custom providers and for many use-cases are sufficient to leverage the Pulumi state model.
 
-There are several reasons why you might want to write a dynamic resource provider. Here are some of them:
+{{% notes type="info" %}}
+**Note:** The Pulumi registry includes the [Command Provider](https://www.pulumi.com/registry/packages/command/) as an even lighter weight solution and can be used in place of a dynamic resource provider in some cases.
+{{% /notes %}}
 
-- You want to create some new custom resource types.
-- You want to use a cloud provider that Pulumi doesn’t support. For example, you might want to write a dynamic resource provider for WordPress.
+There are several reasons why you might want to write a dynamic resource provider. For example:
+
+- You want to create some new custom resource types without all the overhead of a custom provider.
+- You want to use a cloud provider that Pulumi doesn’t support and only need a few resources to be supported. For example, you might want to write a dynamic resource provider for WordPress.
 
 All dynamic providers must conform to certain interface requirements. You must at least implement the `create` function but, in practice, you will probably also want to implement the `read`, `update`, and `delete` functions as well.
 
@@ -184,6 +188,8 @@ In fact, these two phases of execution actually run in completely separate proce
 
 Because your implementation of the resource provider interface must be used by a different process, potentially at a different point in time, dynamic providers are built on top of the same [function serialization](/docs/concepts/function-serialization/) that is used for turning callbacks into AWS Lambdas or Google Cloud Functions. Because of this serialization, there are some limits on what can be done inside the implementation of the resource provider interface. You can read more about these limitations in the function serialization documentation.
 
+Note that python implementations, by default, are encrypted as part of the serialization even if no secrets are part of the implementation. If this is a performance concern, the behavior can be avoided by setting `serialize_as_secret_always = False` as the first line of your `ResourceProvider`. However, if any secrets are used in the resource provider, the provider is encrypted automatically - regardless of how `serialize_as_secret_always` is set.
+
 ## The Resource Provider Interface
 
 Implementing the `pulumi.dynamic.ResourceProvider` interface requires implementing a subset of the methods listed further down in this section. Each of these methods can be asynchronous, and most implementations of these methods will perform network I/O to provision resources in a backing cloud provider or other resource model. There are several important contracts between a dynamic provider and the Pulumi CLI that inform when these methods are called and with what data.
@@ -257,6 +263,10 @@ class _MyResourceProviderInputs(object):
         self.my_string_prop = my_string_prop
 
 class MyResourceProvider(ResourceProvider):
+    # Optionally set serialize_as_secret_always to False to prevent the provider from being encrypted as part of the serialization.
+    # The provider will be encrypted regardless of this setting if the provider uses any secrets in it's implementation.
+    serialize_as_secret_always = False
+
     def create(self, inputs: _MyResourceProviderInputs) -> CreateResult:
         ...
         return CreateResult()
@@ -534,9 +544,9 @@ class MyResource(Resource):
 
 ## Dynamic Provider Examples
 
-### Example: Random
+### Example: Random number generator
 
-This example generates a random number using a dynamic provider. It highlights using dynamic providers to run some code only when a resource is created, and then store the results of that in the state file so that this value is maintained across deployments of the resource. Because we want our random number to be created once, and then remain stable for subsequent updates, we cannot use a random number generator in our program; we need dynamic providers. The result is a provider similar to the one provided in `@pulumi/random`, just specific to our program and language.
+This example generates a random number using a dynamic provider. It represents the simplest dynamic provider that brings together the various topics described above. It highlights using dynamic providers to run some code only when a resource is created and then stores the results in the state file so that this value is maintained across deployments of the resource. Because we want our random number to be created once, and then remain stable for subsequent updates, we cannot use a random number generator in our program; we need dynamic providers. The result is a provider similar to the one provided by the standard [Random Provider](https://www.pulumi.com/registry/packages/random/), just specific to our program and language.
 
 Implementing this example requires that we have a provider and resource type:
 
@@ -637,9 +647,13 @@ class Random(Resource):
 
 Now, with this, we can construct new `Random` resource instances, and Pulumi will drive the right calls at the right time.
 
-### Example: GitHub Labels REST API
+### Example: GitHub Labels REST API (Creds via Pulumi Config)
 
-This example highlights how to make REST API calls to a backing provider to perform CRUD operations. In this case, the backing provider is the GitHub API. Because the resource provider method implementations will be serialized and used in a different process, we keep all the work to initialize the REST client and to make calls to it, local to each function.
+This example highlights how to make REST API calls to a backing provider to perform CRUD operations. In this case, the backing provider is the GitHub API.
+
+A fundamental requirement for a dynamic provider that calls an API is managing the credentials needed for the API calls. One approach is to just pass the necessary creds as inputs when declaring resources using the dynamic resource provider. But passing provider credentials when declaring resources is an antipattern, to say the least. Therefore, other mechanisms that allow the dynamic resource provider to consume the needed credentials outside of the resource declaration are preferred. This example uses [Pulumi Config](/docs/concepts/config) to get the credential.
+
+Because the resource provider method implementations will be serialized and used in a different process, we keep all the work to initialize the REST client and to make calls to it, local to each function.
 
 {{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
 
@@ -650,22 +664,22 @@ let pulumi = require("@pulumi/pulumi");
 let Octokit = require("@octokit/rest");
 
 // Set this value before creating an instance to configure the authentication token to use for deployments
-let auth = "token invalid";
-exports.setAuth = function(token) { auth = token; }
+let config = new pulumi.Config();
+let auth = config.requireSecret("githubToken");
 
 const githubLabelProvider = {
     async create(inputs) {
-        const octokit = new Octokit({auth});
+        const octokit = new Octokit({auth.get()});
         const label = await octokit.issues.createLabel(inputs);
         return { id: label.data.id.toString(), outs: label.data };
     },
     async update(id, olds, news) {
-        const octokit = new Octokit({auth});
+        const octokit = new Octokit({auth.get()});
         const label = await octokit.issues.updateLabel({ ...news, current_name: olds.name });
         return { outs: label.data };
     },
     async delete(id, props) {
-        const octokit = new Octokit({auth});
+        const octokit = new Octokit({auth.get()});
         await octokit.issues.deleteLabel(props);
     }
 }
@@ -687,8 +701,8 @@ import * as pulumi from "@pulumi/pulumi";
 import { Octokit } from "@octokit/rest";
 
 // Set this value before creating an instance to configure the authentication token to use for deployments
-let auth = "token invalid";
-export function setAuth(token: string) { auth = token; }
+const config = new pulumi.Config()
+const auth = config.requireSecret("githubToken")
 
 export interface LabelResourceInputs {
     owner: pulumi.Input<string>;
@@ -708,7 +722,7 @@ interface LabelInputs {
 
 const githubLabelProvider: pulumi.dynamic.ResourceProvider = {
     async create(inputs: LabelInputs) {
-        const octokit = new Octokit({auth});
+        const octokit = new Octokit({auth.get()});
         const label = await octokit.issues.createLabel({
             owner: inputs.owner,
             repo: inputs.repo,
@@ -718,7 +732,7 @@ const githubLabelProvider: pulumi.dynamic.ResourceProvider = {
         return { id: label.data.id.toString(), outs: label.data };
     },
     async update(id: string, olds: LabelInputs, news: LabelInputs) {
-        const octokit = new Octokit({auth});
+        const octokit = new Octokit({auth.get()});
         const label = await octokit.issues.updateLabel({
             owner: news.owner,
             repo: news.repo,
@@ -730,7 +744,7 @@ const githubLabelProvider: pulumi.dynamic.ResourceProvider = {
     },
 
     async delete(id: string, props: LabelInputs) {
-        const octokit = new Octokit({auth});
+        const octokit = new Octokit({auth.get()});
         await octokit.issues.deleteLabel({owner: props.owner, repo: props.repo, name: props.name});
     }
 }
@@ -746,13 +760,14 @@ export class Label extends pulumi.dynamic.Resource {
 {{% choosable language python %}}
 
 ```python
+import pulumi
 from pulumi import ComponentResource, export, Input, Output
 from pulumi.dynamic import Resource, ResourceProvider, CreateResult, UpdateResult
 from typing import Optional
 from github import Github, GithubObject
 
-auth = "<auth token>"
-g = Github(auth)
+config = pulumi.Config()
+auth = config.require_secret("githubToken")
 
 class GithubLabelArgs(object):
     owner: Input[str]
@@ -769,18 +784,23 @@ class GithubLabelArgs(object):
 
 class GithubLabelProvider(ResourceProvider):
     def create(self, props):
+        auto_secret = True
+        g = Github(auth.get())
         l = g.get_user(props["owner"]).get_repo(props["repo"]).create_label(
             name=props["name"],
             color=props["color"],
             description=props.get("description", GithubObject.NotSet))
         return CreateResult(l.name, {**props, **l.raw_data})
     def update(self, id, _olds, props):
+        auto_secret = True
+        g = Github(auth.get())
         l = g.get_user(props["owner"]).get_repo(props["repo"]).get_label(id)
         l.edit(name=props["name"],
                color=props["color"],
                description=props.get("description", GithubObject.NotSet))
         return UpdateResult({**props, **l.raw_data})
     def delete(self, id, props):
+        g = Github(auth.get())
         l = g.get_user(props["owner"]).get_repo(props["repo"]).get_label(id)
         l.delete()
 
@@ -797,6 +817,274 @@ label = GithubLabel("foo", GithubLabelArgs("lukehoban", "todo", "mylabel", "d94f
 
 export("label_color", label.color)
 export("label_url", label.url)
+```
+
+{{% /choosable %}}
+{{% choosable language go %}}
+
+```go
+// Dynamic Providers are not currently supported in Go.
+```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
+```csharp
+// Dynamic Providers are currently not supported in .NET.
+```
+
+{{% /choosable %}}
+{{% choosable language yaml %}}
+
+```yaml
+# Dynamic Providers are not supported in YAML.
+```
+
+{{% /choosable %}}
+
+{{% choosable language java %}}
+
+```java
+// Dynamic Providers are currently not supported in Java.
+```
+
+{{% /choosable %}}
+{{< /chooser >}}
+
+### Example: Pulumi Cloud REST API (Creds via Environment Variables)
+
+This example highlights how to make REST API calls to a backing provider to perform CRUD operations. In this case, the backing provider is the [Pulumi Cloud API](/docs/pulumi-cloud/cloud-rest-api).
+
+A fundamental requirement for a dynamic provider that calls an API is managing the credentials needed for the API calls. One approach is to just pass the necessary creds as inputs when declaring resources using the dynamic resource provider. But passing provider credentials when declaring resources is an antipattern, to say the least. Therefore, other mechanisms that allow the dynamic resource provider to consume the needed credentials outside of the resource declaration are preferred. This example uses environment variables to pass the credentials. A big advantage of this approach is that if the credentials change before `pulumi destroy` is run, there is no need to first run a `pulumi up` to update the credentials used by the dynamic provider.
+
+Because the resource provider method implementations will be serialized and used in a different process, we keep all the work to initialize the REST client and to make calls to it, local to each function.
+
+{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
+
+{{% choosable language javascript %}}
+
+```javascript
+const pulumi = require("@pulumi/pulumi");
+const axios = require('axios');
+
+// Use user-specified API URL if provided. Otherwise, use default Pulumi cloud URL.
+const basePulumiApiUrl= process.env.PULUMI_CLOUD_API_URL || "https://api.pulumi.com"
+
+// NOTE: When Pulumi Environments is GAed, the API path will no longer include "preview".
+const basePulumiEnvApiUrl= `${basePulumiApiUrl}/api/preview/environments`
+
+const PulumiEnvironmentProvider = {
+
+  //*** CREATE ***//
+  async create(inputs) {
+  
+    // It is important to set up the headers in the action as opposed to outside of the provider so that the environment variable reference is
+    // stored in state instead of the actual credential value.
+    const headers = {
+      'Authorization': `token ${process.env.PULUMI_ACCESS_TOKEN}`,
+      'Content-Type': 'application/json'
+    }
+
+    const createEnvUrl = `${basePulumiEnvApiUrl}/${inputs.orgName}/${inputs.environmentName}`
+
+    let envId = "unassigned"
+    await axios.post(createEnvUrl, {},
+      {
+          headers: headers
+      }).then((response) => {
+        // Pulumi Cloud does not return a unique ID for an environment. So create one using the org and environment name.
+        envId = `${inputs.orgName}/${inputs.environmentName}`
+      }).catch((reason) => {
+        console.log("ERROR: ", `${reason.status} - ${reason.response?.statusText}`)
+        process.exit(10)
+      })
+
+      const envOuts = {id: envId, envName: inputs.environmentName, orgName: inputs.orgName}
+      return { id: envId, outs: envOuts }
+  },
+
+  //*** DELETE ***//
+  async delete(id, props) {
+
+    // It is important to set up the headers in the action as opposed to outside of the provider so that the environment variable reference is
+    // stored in state instead of the actual credential value.
+    const headers = {
+      'Authorization': `token ${process.env.PULUMI_ACCESS_TOKEN}`,
+      'Content-Type': 'application/json'
+    }
+
+    const deleteEnvUrl = `${basePulumiEnvApiUrl}/${id}`
+    await axios.delete(deleteEnvUrl, {
+          headers: headers
+    })
+    .then((response) => {
+    })
+    .catch((reason) => {
+      console.log("ERROR: ", `${reason.response?.status} - ${reason.response?.statusText}`)
+      process.exit(20)
+    })
+  }
+}
+
+class PulumiEnvironment extends pulumi.dynamic.Resource {
+
+  constructor(name, args, opts) {
+    super(PulumiEnvironmentProvider, name, args, opts);
+  }
+}
+
+exports.PulumiEnvironment = PulumiEnvironment;
+```
+
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import { Input, Output } from "@pulumi/pulumi";
+import { CreateResult } from "@pulumi/pulumi/dynamic";
+import axios from 'axios'
+import { AxiosResponse, AxiosError } from 'axios'
+
+export interface PulumiEnvironmentArgs {
+  orgName: string;
+  environmentName: string;
+}
+
+export interface PulumiEnvironmentProviderArgs {
+  orgName: string
+  environmentName: string;
+}
+
+// Use user-specified API URL if provided. Otherwise, use default Pulumi cloud URL.
+const basePulumiApiUrl= process.env.PULUMI_CLOUD_API_URL || "https://api.pulumi.com"
+
+// NOTE: When Pulumi Environments is GAed, the API path will no longer include "preview".
+const basePulumiEnvApiUrl= `${basePulumiApiUrl}/api/preview/environments`
+
+const PulumiEnvironmentProvider: pulumi.dynamic.ResourceProvider = {
+
+  //*** CREATE ***//
+  async create(inputs: PulumiEnvironmentProviderArgs): Promise<CreateResult> {
+  
+    // Use environment variable for authentication.
+    // This keeps the actual PULUMI_ACCESS_TOKEN value out of state and instead only the env variable reference is kept in state.
+    // Therefore, if the token is changed between the create and the destroy, the destroy will use the new creds.
+    const headers = {
+      'Authorization': `token ${process.env.PULUMI_ACCESS_TOKEN}`,
+      'Content-Type': 'application/json'
+    }
+
+    const createEnvUrl = `${basePulumiEnvApiUrl}/${inputs.orgName}/${inputs.environmentName}`
+
+    let envId:string = "unassigned"
+    await axios.post(createEnvUrl, {},
+      {
+          headers: headers
+      }).then((response: AxiosResponse) => {
+        // Pulumi Cloud does not return a unique ID for an environment. So create one using the org and environment name.
+        envId = `${inputs.orgName}/${inputs.environmentName}`
+      }).catch((reason: AxiosError) => {
+        console.log("ERROR: ", `${reason.status} - ${reason.response?.statusText}`)
+        process.exit(10)
+      })
+
+      const envOuts = {id: envId, envName: inputs.environmentName, orgName: inputs.orgName}
+      return { id: envId, outs: envOuts }
+  },
+
+  //*** DELETE ***//
+  async delete(id, props) {
+    // Use environment variable for authentication.
+    // This keeps the actual PULUMI_ACCESS_TOKEN value out of state and instead only the env variable reference is kept in state.
+    // Therefore, if the token is changed between the create and the destroy, the destroy will use the new creds.
+    const headers = {
+      'Authorization': `token ${process.env.PULUMI_ACCESS_TOKEN}`,
+      'Content-Type': 'application/json'
+    }
+
+    const deleteEnvUrl = `${basePulumiEnvApiUrl}/${id}`
+    await axios.delete(deleteEnvUrl, {
+          headers: headers
+    })
+    .then((response: AxiosResponse) => {
+    })
+    .catch((reason: AxiosError) => {
+      console.log("ERROR: ", `${reason.response?.status} - ${reason.response?.statusText}`)
+      process.exit(20)
+    })
+  }
+}
+
+export class PulumiEnvironment extends pulumi.dynamic.Resource {
+
+  constructor(name: string, args: PulumiEnvironmentArgs, opts?: pulumi.CustomResourceOptions) {
+    super(PulumiEnvironmentProvider, name, args, opts);
+  }
+}
+```
+
+{{% /choosable %}}
+{{% choosable language python %}}
+
+```python
+import pulumi
+from pulumi import Input, Output
+from pulumi.dynamic import ResourceProvider, CreateResult, Resource
+import requests
+import os
+
+class PulumiEnvironmentArgs:
+    def __init__(self, org_name: str, environment_name: str):
+        self.org_name = org_name
+        self.environment_name = environment_name
+
+class PulumiEnvironmentProviderArgs:
+    def __init__(self, org_name: str, environment_name: str):
+        self.org_name = org_name
+        self.environment_name = environment_name
+
+# Use user-specified API URL if provided. Otherwise, use default Pulumi cloud URL.
+base_pulumi_api_url = os.getenv("PULUMI_CLOUD_API_URL", "https://api.pulumi.com")
+
+# NOTE: When Pulumi Environments is GAed, the API path will no longer include "preview".
+base_pulumi_env_api_url = f"{base_pulumi_api_url}/api/preview/environments"
+
+# Set up the headers using the environment variable.
+headers = {
+    'Authorization': f"token {os.getenv('PULUMI_ACCESS_TOKEN')}",
+    'Content-Type': 'application/json'
+}
+
+class PulumiEnvironmentProvider(ResourceProvider):
+    def create(self, inputs: PulumiEnvironmentProviderArgs) -> CreateResult:
+
+        create_env_url = f"{base_pulumi_env_api_url}/{inputs['org_name']}/{inputs['environment_name']}"
+
+        env_id = "unassigned"
+        response = requests.post(create_env_url, headers=headers)
+        if response.status_code == 200 or response.status_code == 201:
+            env_id = f"{inputs['org_name']}/{inputs['environment_name']}"
+        else:
+            print(f"ERROR: {response.status_code} - {response.text}")
+            os._exit(10)
+
+        env_outs = {"id": env_id, "envName": inputs['environment_name'], "orgName": inputs['org_name']}
+        return CreateResult(id_=env_id, outs=env_outs)
+
+    def delete(self, id: str, props):
+
+        # The id provides the "org/environment-name" path for the environment
+        delete_env_url = f"{base_pulumi_env_api_url}/{id}"
+
+        response = requests.delete(delete_env_url, headers=headers)
+        if response.status_code != 200:
+            print(f"ERROR: {response.status_code} - {response.text}")
+            os._exit(20)
+
+class PulumiEnvironment(Resource):
+    def __init__(self, name, args: PulumiEnvironmentArgs, opts=None):
+        super().__init__(PulumiEnvironmentProvider(), name, vars(args), opts)
 ```
 
 {{% /choosable %}}
