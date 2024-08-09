@@ -1,10 +1,10 @@
 ---
 title_tag: Create and Manage cloud infrastructure with Pulumi Deployments  | Learn Pulumi
-title: "Create and manage cloud Infrastructure with Pulumi Deployments Click-to-deploy"
+title: "Create Infrastructure with Pulumi Deployments Click-to-..."
 layout: single
 description: |
     Create infrastructure deployments using the New Project Wizard and GitHub integration to enable push-to-deploy in the Pulumi Cloud.
-meta_desc: In this tutorial, discover how to create and manage cloud infrastructure using Pulumi Deployments, the New Project Wizard, and GitHub integration. Follow step-by-step instructions to set up a Pulumi stack, enable push-to-deploy, and automate resource management through an intuitive, browser-based interface.
+meta_desc: In this step-by-step tutorial, learn how to create and manage cloud infrastructure using Pulumi Deployments, the New Project Wizard, and GitHub integration.
 meta_image: meta.png
 weight: 50
 summary: |
@@ -25,6 +25,7 @@ estimated_time: 10
 collections:
     - deployments-fundamentals
 ---
+<!-- TODO: Adjust title tag 60 char limit? -->
 
 ## What is Pulumi Deployments
 
