@@ -590,7 +590,7 @@ The [supported secrets providers](/docs/cli/commands/pulumi_stack_init/) are:
 After the provider has been changed, you should be able to run `pulumi preview` and see no proposed changes.  Your configuration secrets
 and state files are now encrypted using the new secrets provider.
 
-## Committing configuration to source control {# search.keywords="checking version control"}
+## Committing configuration to source control { search.keywords="checking version control"}
 
 When you run `pulumi config set --secret` to generate a new Pulumi secret, the Pulumi CLI uses the stack's unique encryption key to encrypt the raw value and store the resulting ciphertext in the stack configuration file (`Pulumi.dev.yaml`, for example). If you opened this file in a text editor, you'd see that the contents would look something like this:
 
