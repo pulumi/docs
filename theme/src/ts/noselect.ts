@@ -1,4 +1,6 @@
-$(function () {
+import { onPageEvent } from "./navigation";
+
+onPageEvent("load", () => {
     // Make the prompt inside command line code snippets unselectable.
     function noselect(langs, pattern) {
         var replaceWith = '<span class="no-select">$1</span>';

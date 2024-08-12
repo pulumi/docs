@@ -1,7 +1,11 @@
 import { defineCustomElements } from "../../stencil/dist";
+import { onPageEvent } from "./navigation";
+
+defineCustomElements();
 
 import "../scss/main.scss";
 
+import "./navigation";
 import "./misc";
 import "./nav";
 import "./carousel";
@@ -14,13 +18,11 @@ import "./event-filtering";
 import "./copybutton";
 import "./code-tabbed";
 import "./resources";
-import "./packages";
 import "./pricing-trial";
 import "./developer-advocates";
 import "./toc";
 import "./docs-main";
 import "./redirects";
 import "./algolia/autocomplete";
-
-// Register all Stencil components.
-defineCustomElements();
+import "./anchors";
+import "./copilot.ts";

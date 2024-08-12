@@ -1,3 +1,5 @@
+import { onPageEvent } from "./navigation";
+
 const filterResourceItems = (filters) => {
     const events = $(".event-list").find(".event-card");
     const monthLabels = $(".event-list").find(".month-label");
@@ -70,8 +72,9 @@ $(window).on('hashchange', function() {
     filterResourceItems(selectedFilters);
 });
 
-$(function () {
+onPageEvent("load", () => {
     const resourcesEventListFilterNav = document.getElementById("event-list-filter-nav");
+
     if (resourcesEventListFilterNav) {
         // When the arrows are selected, they scroll the tertiary nav in either direction.
         $("#slideForward").on("click", function () {
