@@ -1,42 +1,41 @@
 ---
-title_tag: Create and Manage cloud infrastructure with Pulumi Deployments | Learn Pulumi
+title_tag: Create Infrastructure with Pulumi Deployments Click-to-Deploy | Learn Pulumi
 title: "Create Infrastructure with Pulumi Deployments Click-to-Deploy"
 layout: single
 description: |
-    Create infrastructure deployments using the New Project Wizard and GitHub integration to enable push-to-deploy in the Pulumi Cloud.
+    Create and deploy infrastructure in the browser with Pulumi Deployments and the New Project Wizard.
 meta_desc: In this step-by-step tutorial, learn how to create and manage cloud infrastructure using Pulumi Deployments, the New Project Wizard, and GitHub integration.
 meta_image: meta.png
 weight: 50
 summary: |
-    In this tutorial, you'll learn how to create, deploy, and manage cloud infrastructure using Pulumi Deployments with Click-to-Deploy. You'll start by using the New Project Wizard to set up and launch infrastructure from your browser, selecting a template to get started quickly. Additionally, you'll configure the Pulumi GitHub App to support additional deployment triggers, including push-to-deploy.
+    In this tutorial, you_ll learn how to create, deploy, and manage cloud infrastructure using Pulumi Deployments with click-to-deploy. You'll start by using the New Project Wizard to set up and launch infrastructure from your browser, selecting a template to get started quickly. Additionally, you'll configure the Pulumi GitHub App to support additional deployment triggers, including push-to-deploy.
 you'll_learn:
   - How to use the New Project Wizard to create and deploy a Pulumi project from your browser
   - How to install and configure the Pulumi GitHub App
   - How to trigger and manage deployments directly from the Pulumi Cloud console using click-to-deploy
 prereqs:
-    - Completion of the [Getting Started](/docs/get-started/) guide or familiarity with the basics of the Pulumi workflow.
-    - The [Pulumi CLI](/docs/install/)
+    - Completion of the AWS [Getting Started](/docs/clouds/aws/get-started/) guide or familiarity with the basics of the Pulumi workflow
     - A [Pulumi Cloud account](https://app.pulumi.com/signup)
+    - AWS credentials configured
     - An [Amazon Web Services](https://aws.amazon.com/) account
     - A [GitHub account](https://github.com/) with admin rights to a Git repository or organization
-    - Familiarity with JavaScript, TypeScript, or Python
 estimated_time: 10
 allow_long_title: true
 ---
 
-## What is Pulumi Deployments
+## What is Pulumi Deployments?
 
-[Pulumi Deployments](/docs/pulumi-cloud/deployments/) is a fully managed service designed to automate cloud infrastructure. Deployments provide the building blocks designed for scaling your cloud infrastructure, with tools to power public and private cloud platforms, APIs, and self-service infrastructure portals. These options provide flexibility to incorporate Pulumi Deployments into your existing workflows.
+[Pulumi Deployments](/docs/pulumi-cloud/deployments/) is a fully managed service designed to automate cloud infrastructure. Pulumi Deployments provides the building blocks designed for scaling your cloud infrastructure, with tools to power public and private cloud platforms, APIs, and self-service infrastructure portals. These options provide flexibility to incorporate Pulumi Deployments into your existing workflows.
 
-Deployments can be triggered through multiple methods: using the [REST API](/docs/pulumi-cloud/deployments/reference/#deployments-rest-api), integrating with GitHub via [push-to-deploy](/docs/pulumi-cloud/deployments/reference/#github-app-installation), or initiating directly from the [Pulumi Cloud Console](/docs/pulumi-cloud/deployments/reference/#pulumi-console).
+Deployments can be triggered through multiple methods: using the [REST API](/docs/pulumi-cloud/deployments/reference/#deployments-rest-api), integrating with GitHub via [push-to-deploy](/docs/pulumi-cloud/deployments/reference/#github-app-installation), or initiating directly from the [Pulumi Cloud console](/docs/pulumi-cloud/deployments/reference/#pulumi-console).
 
-## Setup a new Pulumi Deployment
+## Set up a new Pulumi Deployment
 
-First sign in to Pulumi Cloud via the [Pulumi sign in page](https://app.pulumi.com) or by running `pulumi login` via the Pulumi CLI.
+First sign in to Pulumi Cloud via the [Pulumi sign in page](https://app.pulumi.com).
 
 ## Install and configure the GitHub App
 
-Next, install and configure the [Pulumi GitHub App](/docs/using-pulumi/continuous-delivery/github-app/) to enable Pulumi Deployment's New Project Wizard and push-to-deploy functionality. Follow the GitHub app [installation instructions](/docs/pulumi-cloud/deployments/reference/#github-app-installation) to ensure your Pulumi organization is set up to work seamlessly with Pulumi Deployments.
+Next, the [Pulumi GitHub App](/docs/using-pulumi/continuous-delivery/github-app/) is required to enable Pulumi Deployment's [New Project Wizard](/docs/pulumi-cloud/developer-portals/new-project-wizard/) and push-to-deploy functionality. Follow the GitHub app [installation instructions](/docs/pulumi-cloud/deployments/reference/#github-app-installation) to ensure your Pulumi organization is set up to work seamlessly with Pulumi Deployments.
 
 ## Create a New Project with the New Project Wizard
 
@@ -51,15 +50,15 @@ If your Pulumi administrator has configured [custom templates](/docs/pulumi-clou
 If you select "Use a template" but your organization doesn't have custom templates, you can choose one of Pulumi's public templates to get started.
 {{% /notes %}}
 
-Type `aws-python` or `aws-typescript` and click **next**.
+Type `aws-python` or `aws-typescript`, choose one of the two, and click **Next**.
 
 ### Project details
 
-Provide a name for the project, along with an optional description and the stack name which will be set in the resulting `Pulumi.yaml` file and the name of `Pulumi.<stack>.yaml`.
+Provide a name for the project, an optional description, and a name for the project's first stack. The project name will be written to the project file (`Pulumi.yaml`) and the stack name will be used to name the stack-configuration file (`Pulumi.<stack>.yaml`).
 
 ### Configuration
 
-Provide any values required for the configuration declared in the [template](/docs/pulumi-cloud/developer-portals/templates), in this example, you can set the **aws:region** you would like to deploy into.
+Provide any values required for the configuration declared in the [template](/docs/pulumi-cloud/developer-portals/templates). In this example, you can set the `aws:region` you would like to deploy into.
 
 These values populate the `config` section in the `Pulumi.<stack>.yaml` file, specifying the necessary settings for your project.
 
@@ -76,30 +75,30 @@ Secret environment variables, such as `AWS_SECRET_ACCESS_KEY`, are encrypted end
 Configure the repository and optional subdirectory to use when committing your new project code.
 
 {{% notes "info" %}}
-If you granted the Pulumi GitHub app access to _all_ repositories, the New Project Wizard will allow users to create projects with Deployments enabled in new repositories.
+If the Pulumi GitHub app only has access to certain repositories, you can only create new projects with Deployments enabled in those existing repositories. Additionally, the GitHub organization must match the Pulumi organization's GitHub app installation for Deployments to work correctly.
 
-If the app only has access to _some_ repositories, users will only be able to create new projects with Deployments enabled in _existing_ repositories.
+If the GitHub organization you want to write to isn’t the one currently shown, you’ll need to switch to a different Pulumi organization that is linked to the correct GitHub organization. This is because Pulumi organizations and GitHub app installations have a 1:1 relationship, meaning each Pulumi organization is tied to a specific GitHub organization through the app installation.
 {{% /notes %}}
-
-The GitHub owner is not configurable, as that must match the Pulumi GitHub app's owner in order to work with Deployments.
 
 ### Deployment settings
 
 Configure the behavior of Deployments, including when to trigger new Deployments and any environment variables required for the Pulumi program to run.
 
-A full description of each setting is available [here](/docs/pulumi-cloud/deployments/reference/#deployment-settings).
+A full description of each setting is available on the [deployment settings](/docs/pulumi-cloud/deployments/reference/#deployment-settings) docs page.
 
 ### Deployment method
 
-Finally, select Pulumi Deployments as the deployment method and **Create project** to trigger a deployment. You will see your new deployment start within your **Stacks Deployment** tab.
+Finally, select Pulumi Deployments as the deployment method and **Create project** to finish the wizard and trigger an initial deployment. You will see the deployment start in the **Deployments** tab.
 
 ![Animation of how to create a new project in Pulumi](./pulumi-new-project-wizard.gif)
 
-When your deployment is complete, you can now manage and deploy your infrastructure from the Pulumi Cloud Console. In your stack's **Actions** tab, use the **[Click to Deploy](https://www.pulumi.com/docs/pulumi-cloud/deployments/reference/#click-to-deploy)** button to trigger a deployment.
+When your deployment is complete, you can manage and deploy your infrastructure from the Pulumi Cloud console. For example, in the stack's **Actions** tab, you can use the **[Click to Deploy](https://www.pulumi.com/docs/pulumi-cloud/deployments/reference/#click-to-deploy)** button to trigger another deployment.
 
-This feature is useful for day-to-day operational tasks, such as debugging a stuck stack or rectifying drift by performing a refresh. With Click to Deploy, you can execute these actions without needing to pull the stack and its source code onto your local machine.
+This feature is useful for day-to-day operational tasks, such as debugging a stuck stack or rectifying drift by performing a refresh. With click to deploy, you can execute these actions without needing to pull the stack and its source code onto your local machine.
 
 ![Image of the Pulumi cloud console actions](./pulumi-cloud-actions.png)
+
+<!-- TODO: show actions > destroy UI -->
 
 ## Cleanup
 
@@ -111,7 +110,7 @@ To avoid incurring any unwanted charges, clean up the resources you created:
 
 ## Next steps
 
-In this tutorial, you set up a basic push-to-deploy stack using Pulumi’s new project wizard. You configured your stack to use the GitHub app, deployed resources, and explored the fundamental Pulumi Deployment browser workflow.
+In this tutorial, you set up a basic click to deploy stack using Pulumi’s new project wizard. You configured your stack to use the GitHub app, deployed resources, and explored the fundamental Pulumi Deployment browser workflow.
 
 To learn more about creating and managing deployments with Pulumi Cloud, take a look at the following resources:
 
