@@ -14,10 +14,6 @@ menu:
 
 Pulumi ESC integrates with [GitHub Actions](https://docs.github.com/en/actions) to help developers automatically manage configuration and secrets when running workflows. Additionally, Pulumi ESC works with the [Pulumi CLI Action](https://github.com/marketplace/actions/pulumi-cli-action#pulumi-github-actions) to provide secrets to workflow jobs and steps, such as AWS Credentials.
 
-{{< notes type="info" >}}
-**What is Pulumi ESC?** Pulumi ESC (Environments, Secrets, and Configuration) allows you to define collections of configuration settings and secrets, known as environments, and utilize them in any application or service. [Learn more](https://www.pulumi.com/docs/esc/)
-{{< /notes >}}
-
 ## Prerequisites
 
 Ensure you have:
@@ -31,7 +27,7 @@ Ensure you have:
 **New to Pulumi ESC?** Complete the [Getting Started tutorial](https://www.pulumi.com/docs/esc/get-started/)
 {{< /notes >}}
 
-In addition to the Pulumi ESC and GHA integrations below, consider authenticating to your Pulumi Cloud with GitHub OIDC. [Follow the guide](https://www.pulumi.com/docs/pulumi-cloud/oidc/client/github/) to enable the [Pulumi Auth Action](https://github.com/marketplace/actions/pulumi-auth-action).
+In addition to the Pulumi ESC and GitHub Actions integrations below, consider authenticating to your Pulumi Cloud with GitHub OIDC. [Follow the guide](https://www.pulumi.com/docs/pulumi-cloud/oidc/client/github/) to enable the [Pulumi Auth Action](https://github.com/marketplace/actions/pulumi-auth-action).
 
 ## Log in to your GitHub account
 
@@ -96,7 +92,7 @@ Using Pulumi Infrastructure as Code (IaC) with GHA? See the next section to see 
 Pulumi ESC works hand-in-hand with Pulumi Infrastructure as Code (IaC) to simplify configuration and secrets management. This integration enables you to set up workflows that automatically provision cloud resources defined in your IaC, while securely accessing all necessary credentials for deployment.
 
 {{< notes type="info" >}}
-**New to Pulumi IaC?** Complete the [Getting Started tutorial](https://developers.cloudflare.com/pulumi/tutorial/hello-world/).
+**New to Pulumi IaC?** Complete a [Getting Started tutorial](https://www.pulumi.com/docs/get-started/).
 {{< /notes >}}
 
 Learn how to:
