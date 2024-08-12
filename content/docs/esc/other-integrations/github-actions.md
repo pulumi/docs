@@ -31,7 +31,9 @@ In addition to the Pulumi ESC and GitHub Actions integrations below, consider au
 
 ## Log in to your GitHub account
 
-Programmatically log in to your GitHub account from your terminal without having to locally store your token. Note, that a fine-grained GitHub personal access token is required. Follow the [GitHub instructions](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-fine-grained-personal-access-token) to create one.
+ESC enables you to log into your GitHub account using credentials stored in an ESC Environment. This allows you to programmatically log in to your GitHub account from your terminal without having to locally store your personal access token.
+
+Note, that a fine-grained GitHub personal access token is required. Follow the [GitHub instructions](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-fine-grained-personal-access-token) to create one.
 
 ### Create an ESC Environment
 
