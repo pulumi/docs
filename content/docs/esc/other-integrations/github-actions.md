@@ -85,7 +85,7 @@ $ gh auth status
 
 For additional options and details, see `esc run --help`.
 
-Using Pulumi Infrastructure as Code (IaC) with GHA? See the next section to see how to leverage Pulumi ESC alongside.
+Using Pulumi Infrastructure as Code (IaC) with GitHub Actions? The next section demonstrates Pulumi ESC alongside Pulumi IaC deployments.
 
 ## Manage credentials for the [Pulumi CLI Action](https://github.com/marketplace/actions/pulumi-cli-action#pulumi-github-actions)
 
