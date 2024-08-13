@@ -8,16 +8,15 @@ meta_desc: In this step-by-step tutorial, learn how to create and manage cloud i
 meta_image: meta.png
 weight: 50
 summary: |
-    In this tutorial, you'll learn how to create, deploy, and manage cloud infrastructure using Pulumi Deployments with click-to-deploy. You'll start by using the New Project Wizard to set up and launch infrastructure from your browser, selecting a template to get started quickly. Additionally, you'll configure the Pulumi GitHub App to support additional deployment triggers, including push-to-deploy.
+    In this tutorial, you'll learn how to create, deploy, and manage cloud infrastructure using Pulumi Deployments with click-to-deploy. You'll start by using the New Project Wizard to set up and launch infrastructure from your browser, selecting a template to get started quickly.
 youll_learn:
   - How to use the New Project Wizard to create and deploy a Pulumi project from your browser
   - How to install and configure the Pulumi GitHub App
-  - How to trigger and manage deployments directly from the Pulumi Cloud console using click-to-deploy
+  - How to trigger deployments directly from the Pulumi Cloud console using click-to-deploy
 prereqs:
     - Completion of the AWS [Getting Started](/docs/clouds/aws/get-started/) guide or familiarity with the basics of the Pulumi workflow
     - A [Pulumi Cloud account](https://app.pulumi.com/signup)
-    - AWS credentials configured
-    - An [Amazon Web Services](https://aws.amazon.com/) account
+    - An [Amazon Web Services](https://aws.amazon.com/) account, access key ID, and secret access key
     - A [GitHub account](https://github.com/) with admin rights to a Git repository or organization
 estimated_time: 10
 allow_long_title: true
@@ -102,13 +101,13 @@ This feature is useful for day-to-day operational tasks, such as debugging a stu
 
 After you are finished exploring your new stack, you can begin to clean up the resources created. In the **Actions** tab, select the **Destroy** option to remove all resources associated with the stack. Confirm by clicking the **Delete resources?** confirmation box, then click **Deploy**. Pulumi will begin tearing down the resources, and you can track the progress directly in the console.
 
-If you no longer need the stack itself, you can also delete it. In the same **Settings** tab, choose **Delete stack** to remove the stack, including all its deployment history and state files from Pulumi Cloud.
+If you no longer need the stack itself, you can also delete it. In the **Settings** tab, choose **Delete stack** to remove the stack, including all its deployment history and state files from Pulumi Cloud.
 
 ## Cleanup
 
-To avoid incurring any unwanted charges, clean up the resources you created:
+To clean up, delete any additional resources you created:
 
-1. Delete the GitHub repository you created.
+1. Delete the GitHub repository created.
 
 ## Next steps
 
