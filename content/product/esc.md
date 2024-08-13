@@ -8,6 +8,10 @@ meta_image: "/images/product/esc-how-it-works-diagram.png"
 aliases:
     - /esc
 
+overview:
+    header: Centralized environments, secrets, and configuration management for cloud applications and infrastructure
+    description: Today’s cloud environments access a multitude of configurations – including network settings, deployment options, API Keys, and other important secrets like database credentials –  from many different types of cloud infrastructure and SaaS services. Every team stores configuration settings like these in different locations, from secrets managers to plaintext files. This sprawl results in uncontrolled and untraceable configurations, causing operational bottlenecks, outages due to human error, and security breaches. Pulumi ESC enables you to centrally manage all configuration and secrets across your organization.
+
 benefits:
     title: Benefits of Pulumi ESC
     items:

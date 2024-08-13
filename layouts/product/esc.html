@@ -1,23 +1,20 @@
 {{ define "hero" }}
-    <header class="home-page-hero">
-        <div class="dot-background-container pointer-events-none">
-            <div class="dot-background"></div>
-        </div>
-        <div class="dot-overlay"></div>
-        <div class="home-page-hero-content pb-12">
-            <h1 class="flex flex-col items-center">
-                <span class="rainbow-text inline-block text-center">Pulumi ESC</span>
-            </h1>
-            <p class="text-center leading-7">Environments, Secrets, and Configuration</p>
-        </div>
-    </header>
+    {{ partial "hero.html" (dict "title" "Pulumi ESC" "subtitle" "Environments, Secrets, and Configuration") }}
 {{ end }}
 
 {{ define "main" }}
     {{ $pageContext := . }}
-    <section id="overview" class="container mx-auto my-16 lg:mt-16 lg:mb-8 px-6">
-        <div class="lg:flex">
-            <div class="lg:w-1/2 lg:order-last mb-8 lg:mb-0 relative h-full">
+    <section id="overview" class="container mx-auto my-16 flex flex-col">
+        <h3 class="hidden lg:block xl:hidden text-center mb-8">{{ .Params.overview.header }}</h3>
+        <div class="flex flex-col lg:flex-row px-8">
+            <div class="w-full lg:w-1/2 lg:pr-8 order-last lg:order-first">
+                <h3 class="block lg:hidden xl:block">{{ .Params.overview.header }}</h3>
+                <p>{{ .Params.overview.description }}</p>
+                <div class="my-8">
+                    <a class="btn-primary" href="/docs/pulumi-cloud/esc/get-started/">Get Started</a>
+                </div>
+            </div>
+            <div class="w-full lg:w-1/2 mb-8 lg:mb-0">
                 <div class="rounded-xl shadow-2xl relative h-0 overflow-hidden" style="padding-bottom: 50.25%;">
                     <iframe
                         src="https://www.youtube.com/embed/MtV_LPZKNP8?si=y2G2NXlrKBQSLGUd?rel=0"
@@ -26,15 +23,6 @@
                         title="Pulumi ESC Introduction"
                         srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img{position:absolute;width:100%;top:0;bottom:0;margin:auto}</style><a href=https://www.youtube.com/embed/MtV_LPZKNP8?si=y2G2NXlrKBQSLGUd?autoplay=1><img src='/images/video-cards/esc-intro.png' alt='Introducing Pulumi ESC: Environments, Secrets, and Configuration'></a>"
                     ></iframe>
-                </div>
-            </div>
-            <div class="lg:w-1/2 lg:pr-16">
-                <h3>Centralized environments, secrets, and configuration management for cloud applications and infrastructure</h3>
-                <p>
-                    Today’s cloud environments access a multitude of configurations – including network settings, deployment options, API Keys, and other important secrets like database credentials –  from many different types of cloud infrastructure and SaaS services. Every team stores configuration settings like these in different locations, from secrets managers to plaintext files. This sprawl results in uncontrolled and untraceable configurations, causing operational bottlenecks, outages due to human error, and security breaches. Pulumi ESC enables you to centrally manage all configuration and secrets across your organization.
-                </p>
-                <div class="my-8">
-                    <a class="btn-primary" href="/docs/pulumi-cloud/esc/get-started/">Get Started</a>
                 </div>
             </div>
         </div>
@@ -87,21 +75,21 @@
     </section>
 
     <section id="screenshot" class="container mx-auto my-16">
-        <div class="max-w-5xl mx-auto text-center py-8">
-            <h2>Centrally manage all environments</h2>
-        </div>
+        <h2 class="max-w-5xl mx-auto text-center py-8">Centrally manage all environments</h2>
         <div class="flex flex-wrap items-stretch">
-            <div class="w-full lg:w-3/4">
+            <div class="w-full xl:w-3/4">
                 <img src="/images/product/esc-screenshot.png" alt="screenshot of Pulumi ESC management console" />
             </div>
-            <div class="w-full lg:w-1/4 p-4">
+            <div class="w-full xl:w-1/4 p-4 flex flex-col lg:flex-row xl:flex-col">
                 {{ range $item := .Params.screenshot.items }}
-                    <div class="card bg-white p-4 my-4">
-                        <div>
-                            <h5>{{ $item.title }}</h5>
-                        </div>
-                        <div class="mt-6">
-                            <p>{{ $item.description }}</p>
+                    <div class="w-full lg:w-1/3 xl:w-full my-2 lg:px-2 xl:px-0">
+                        <div class="h-full card bg-white p-4">
+                            <div>
+                                <h5>{{ $item.title }}</h5>
+                            </div>
+                            <div class="mt-6">
+                                <p>{{ $item.description }}</p>
+                            </div>
                         </div>
                     </div>
                 {{ end }}
@@ -109,7 +97,7 @@
         </div>
     </section>
 
-    <section id="screenshot" class="container mx-auto my-16">
+    <section id="integration-access" class="container mx-auto my-16">
         <div class="max-w-5xl mx-auto text-center pb-4">
             <h2>Natively integrated with your infrastructure</h2>
         </div>
@@ -191,78 +179,7 @@
         </div>
     </section>
 
-    <section id="screenshot" class="container mx-auto my-16">
-        <div class="max-w-5xl mx-auto text-center">
-            <h2>Frequently asked questions</h2>
-        </div>
-        <ul class="list-none p-0 mx-5 xl:ml-12" data-faq-type="faq-pricing">
-            <li class="accordion-item text-2xl py-3">
-                {{ partial "accordian-header" (dict "text" "What is Pulumi ESC (Environments, Secrets and Configuration)?" "large_header" true) }}
-                <div class="accordion-item-body-no-animation text-base">
-                    <p>
-                        Pulumi ESC (Environments, Secrets and Configuration), is an <a href="https://github.com/pulumi/esc">open source project</a> and managed service of Pulumi Cloud that enables teams to manage hierarchical collections of configuration and secrets and consume them from a variety of different infrastructure and application services.
-                    </p>
-                    <p>
-                        {{ "Pulumi ESC integrates with Pulumi Cloud identity and RBAC to provide rich control over access to secret configuration within an organization. Pulumi ESC supports multiple configuration providers, enabling static key/value configuration as well as dynamically retrieved configuration and secrets via OIDC and additional providers like 1Password and Vault.  Pulumi ESC is available via the new `esc` CLI, Pulumi Cloud, the Pulumi Cloud REST API, and Pulumi IaC stack configuration." | markdownify }}
-                    </p>
-                </div>
-            </li>
-            <li class="accordion-item text-2xl py-3">
-                {{ partial "accordian-header" (dict "text" "What is an environment?" "large_header" true) }}
-                <div class="accordion-item-body-no-animation text-base">
-                    <p>
-                        An environment describes a collection of secrets and configuration values. It is typically intended to capture the configuration needed to work with a particular environment - for example the production environment for your key customer or line of business service.
-                    </p>
-                    <p>An environment is represented by a YAML document. This document has two top level entries:</p>
-                    <p class="ml-8">
-                        {{ "`imports`: An optional set of other environments that this environment derives from, enabling composition of environments and avoiding repetition across environments." | markdownify}}
-                    </p>
-                    <p class="ml-8">
-                        {{ "`values`: An arbitrary nested collection of key/value pairs representing top level configuration values. " | markdownify}}
-                    </p>
-                </div>
-            </li>
-            <li class="accordion-item text-2xl py-3">
-                {{ partial "accordian-header" (dict "text" "What secrets and configuration can I manage with Pulumi ESC?" "large_header" true) }}
-                <div class="accordion-item-body-no-animation text-base">
-                    <p>
-                        Pulumi ESC enables teams to manage hierarchical collections of configuration and secrets (“environments”) and consume them from a variety of different infrastructure and application services. Examples include the management of AWS configurations and secrets, API keys, database credentials, and environment-specific variables such as service endpoints and AWS regions.
-                    </p>
-                </div>
-            </li>
-            <li class="accordion-item text-2xl py-3">
-                {{ partial "accordian-header" (dict "text" "What secrets and configuration providers are supported?" "large_header" true) }}
-                <div class="accordion-item-body-no-animation text-base">
-                    <ul>
-                        <li>AWS OIDC</li>
-                        <li>AWS Secrets Manager</li>
-                        <li>Azure OIDC</li>
-                        <li>Azure KeyVault</li>
-                        <li>GCP OIDC</li>
-                        <li>GCP Secrets Manager</li>
-
-                    </ul>
-                </div>
-            </li>
-            <li class="accordion-item text-2xl py-3">
-                {{ partial "accordian-header" (dict "text" "How are secrets stored and transmitted securely?" "large_header" true) }}
-                <div class="accordion-item-body-no-animation text-base">
-                    <p>
-                        Pulumi ESC encrypts all data at rest using AWS S3 encryption. All API routes serving the Pulumi ESC API are HTTPS, and authenticated via Pulumi Access Token.
-                    </p>
-                </div>
-            </li>
-            <li class="accordion-item text-2xl py-3">
-                {{ partial "accordian-header" (dict "text" "Who can use and manage secrets in ESC and how do they authenticate?" "large_header" true) }}
-                <div class="accordion-item-body-no-animation text-base">
-                    <p>
-                        Users and automation can authenticate with a Pulumi Access Token. They can use personal, team or organization tokens.
-                    </p>
-                </div>
-            </li>
-    </section>
-
-    <section id="get-started" class="container px-6 lg:px-0 mx-auto my-28 px-6">
+    <section id="get-started" class="container lg:px-0 mx-auto my-28 px-6">
         <div class="w-full bg-violet-600 card p-6 lg:p-16 lg:pt-24 text-center">
             <div class="max-w-xl mx-auto">
                 <h2 class="text-white hidden lg:block px-0 lg:px-16">Get started today</h2>
