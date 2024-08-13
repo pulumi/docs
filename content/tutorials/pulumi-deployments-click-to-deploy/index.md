@@ -8,8 +8,8 @@ meta_desc: In this step-by-step tutorial, learn how to create and manage cloud i
 meta_image: meta.png
 weight: 50
 summary: |
-    In this tutorial, you_ll learn how to create, deploy, and manage cloud infrastructure using Pulumi Deployments with click-to-deploy. You'll start by using the New Project Wizard to set up and launch infrastructure from your browser, selecting a template to get started quickly. Additionally, you'll configure the Pulumi GitHub App to support additional deployment triggers, including push-to-deploy.
-you'll_learn:
+    In this tutorial, you'll learn how to create, deploy, and manage cloud infrastructure using Pulumi Deployments with click-to-deploy. You'll start by using the New Project Wizard to set up and launch infrastructure from your browser, selecting a template to get started quickly. Additionally, you'll configure the Pulumi GitHub App to support additional deployment triggers, including push-to-deploy.
+youll_learn:
   - How to use the New Project Wizard to create and deploy a Pulumi project from your browser
   - How to install and configure the Pulumi GitHub App
   - How to trigger and manage deployments directly from the Pulumi Cloud console using click-to-deploy
@@ -64,11 +64,7 @@ These values populate the `config` section in the `Pulumi.<stack>.yaml` file, sp
 
 ### Environment
 
-If you've configured [environments](/docs/pulumi-cloud/esc) with your organization, you can specify one to use with the resulting stack. Environments enable teams to manage hierarchical collections of configuration and secrets without needing to re-specify all of them during project creation.
-
-{{% notes type="info" %}}
-Secret environment variables, such as `AWS_SECRET_ACCESS_KEY`, are encrypted end-to-end and can be set on each stack. However, by creating an environment with Pulumi ESC, you can centralize secrets and set up OIDC for secure authentication. This allows you to manage and share sensitive configuration data across multiple stacks efficiently.
-{{% /notes %}}
+If you've configured [environments](/docs/pulumi-cloud/esc) with your organization, you can specify one to use with the resulting stack. Environments enable teams to define and share collections of configuration and secrets across multiple Pulumi projects and stacks, such as your `AWS_SECRET_ACCESS_KEY` which will be needed to configure your deployment settings. 
 
 ### Repository
 
@@ -82,7 +78,11 @@ If the GitHub organization you want to write to isn’t the one currently shown,
 
 ### Deployment settings
 
-Configure the behavior of Deployments, including when to trigger new Deployments and any environment variables required for the Pulumi program to run.
+Configure the behavior of Deployments, including when to trigger new Deployments and any environment variables required for the Pulumi program to run. Unless you have configured this project to use an Environment, you will need to add variables for `AWS_ACCESS_KEY_ID' and `AWS_SECRET_ACCESS_KEY`.
+
+{{% notes type="info" %}}
+Secret environment variables, such as `AWS_SECRET_ACCESS_KEY`, are encrypted end-to-end with Pulumi and can be set on each stack. However, by creating an [environment](/docs/pulumi-cloud/esc) with Pulumi ESC, you can centralize secrets and set up OIDC for secure authentication. This allows you to manage and share sensitive configuration data across multiple stacks efficiently.
+{{% /notes %}}
 
 A full description of each setting is available on the [deployment settings](/docs/pulumi-cloud/deployments/reference/#deployment-settings) docs page.
 
@@ -98,15 +98,17 @@ This feature is useful for day-to-day operational tasks, such as debugging a stu
 
 ![Image of the Pulumi cloud console actions](./pulumi-cloud-actions.png)
 
-<!-- TODO: show actions > destroy UI -->
+### Destroy all stack resources
+
+After you are finished exploring your new stack, you can begin to clean up the resources created. In the **Actions** tab, select the **Destroy** option to remove all resources associated with the stack. Confirm by clicking the **Delete resources?** confirmation box, then click **Deploy**. Pulumi will begin tearing down the resources, and you can track the progress directly in the console.
+
+If you no longer need the stack itself, you can also delete it. In the same **Settings** tab, choose **Delete stack** to remove the stack, including all its deployment history and state files from Pulumi Cloud.
 
 ## Cleanup
 
 To avoid incurring any unwanted charges, clean up the resources you created:
 
-1. Navigate to your stack in the Pulumi console.
-2. Delete the stack, by clicking on the **Settings** tab and the **Delete stack** button.
-3. Delete the GitHub repository you created.
+1. Delete the GitHub repository you created.
 
 ## Next steps
 
