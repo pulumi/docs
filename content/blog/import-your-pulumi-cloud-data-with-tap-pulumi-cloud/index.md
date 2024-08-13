@@ -1,5 +1,5 @@
 ---
-title: "Import your Pulumi Cloud data into your Data Warehouse with tap-pulumi-cloud"
+title: "Import Pulumi into your Data Warehouse with tap-pulumi-cloud"
 date: 2024-08-13T15:01:40-04:00
 draft: false
 meta_desc: Using the Meltano Singer SDK we have expanded the tap-pulumi-cloud connector to be able to export all the pulumi cloud data into your own Data Warehouse
@@ -35,7 +35,6 @@ This is where the [Meltano SDK shines](https://sdk.meltano.com/en/latest/index.h
 
 First of all set up your environment [by following Meltano's installation guide](https://docs.meltano.com/guide/installation-guide), when this is done, continue by adding tap-pulumi-cloud and your choice of loader into your environment, we'll use target-duckdb for this example:
 
-
 ```bash
 meltano add extractor tap-pulumi-cloud
 meltano add loader target-duckdb
@@ -64,7 +63,7 @@ plugins:
 
 And run `meltano install` to make sure the right version is installed
 
-## Configure 
+## Configure
 
 To configure all settings available for this tap, you can use Meltano's interactive config running:
 
@@ -85,4 +84,3 @@ meltano run tap-pulumi-cloud target-duckdb
 After the run finishes, you can access the exported tables and create whichever analytics you need on top of them
 
 ![Data loaded into DuckDB](schema.png)
-
