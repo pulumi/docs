@@ -71,7 +71,7 @@ To configure all settings available for this tap, you can use Meltano's interact
 meltano config tap-pulumi-cloud set --interactive
 ```
 
-The required variables are the `token` [(Get one from the Pulumi Cloud)](https://app.pulumi.com/) and organizations needs to have the org/s you want to extract data from.
+The required variables are the `token` [(Get one from the Pulumi Cloud)](https://app.pulumi.com/) and `organizations` is a list of organizations you want to extract data from.
 
 ## Load data
 
@@ -81,6 +81,6 @@ When your configuration has been finished, you can run the data pipeline like so
 meltano run tap-pulumi-cloud target-duckdb
 ```
 
-After the run finishes, you can access the exported tables and create whichever analytics you need on top of them
+After the run finishes, you can access the exported tables and create whichever analytics you need on top of them, for example, you could combine this dataset with [tap-github](https://github.com/MeltanoLabs/tap-github) in order to calculate DORA Metrics.
 
 ![Data loaded into DuckDB](schema.png)
