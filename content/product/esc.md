@@ -19,14 +19,29 @@ benefits:
           icon_color: purple
           title: Frictionless Security
           description: Easy-to-use single source of truth for all configuration and secrets with guardrails. Seamlessly adopt short-lived dynamic secrets.
+          points:
+            - Lorem ipsum odor amet, consectetuer adipiscing elit. Vel mollis vel luctus quis ex. Montes inceptos venenatis ligula dictumst magnis fringilla. Accumsan luctus neque ex eros leo fusce; mi aliquet. Laoreet laoreet potenti facilisis vehicula mi velit odio.
+            - Lorem ipsum odor amet, consectetuer adipiscing elit. Fusce magnis neque; suscipit dui metus blandit suspendisse. Luctus aliquet malesuada sapien venenatis amet velit. Est praesent commodo ullamcorper finibus fames quam augue, aliquet viverra.
+            - Lorem ipsum odor amet, consectetuer adipiscing elit. Nam at mauris lacus consequat a finibus luctus. Nisi cras ac pretium tincidunt viverra vitae volutpat. Maecenas nascetur sem habitant nec; quisque per orci. Praesent ligula malesuada finibus dolor per tincidunt lacinia.
+            - Lorem ipsum odor amet, consectetuer adipiscing elit. Vehicula quisque rhoncus dis senectus class sem natoque. Id aenean aliquet lacinia, senectus conubia eros quam?
         - icon: lightning
           icon_color: yellow
           title: Improve Developer Efficiency
-          description: Never have downtime over changed configuration. Change once and have it updated everywhere. 
+          description: Never have downtime over changed configuration. Change once and have it updated everywhere.
+          points:
+            - Lorem ipsum odor amet, consectetuer adipiscing elit. Tristique venenatis lectus condimentum massa risus massa turpis conubia commodo. Habitasse quis sollicitudin cras aliquam; nulla class odio scelerisque. Magnis ad potenti accumsan eleifend, fames etiam bibendum. At dolor dapibus non adipiscing mi aenean primis vehicula.
+            - Lorem ipsum odor amet, consectetuer adipiscing elit. Convallis luctus lacinia luctus duis facilisi ornare aliquet feugiat ligula. Libero libero elit praesent mi ultricies congue, libero tempus volutpat. Gravida metus felis purus quisque varius luctus.
+            - Lorem ipsum odor amet, consectetuer adipiscing elit. Curae nulla taciti duis tincidunt curabitur pharetra. In massa erat; fames vulputate taciti himenaeos. Luctus nam sed accumsan elementum ullamcorper, habitasse odio suspendisse.
+            - Lorem ipsum odor amet, consectetuer adipiscing elit. Nisi augue nec sociosqu placerat finibus molestie finibus eu. Gravida ex proin in facilisi ultricies amet ligula phasellus. Mauris torquent habitasse duis primis ad non.
         - icon: gavel
           icon_color: salmon
           title: Control Access and Compliance
           description: Enforce least-privileged access through role-based access controls. All changes are fully logged for auditing.
+          points:
+            - Lorem ipsum odor amet, consectetuer adipiscing elit. Ultricies ad urna tempus bibendum ullamcorper rutrum curae imperdiet odio. Et id senectus dis semper imperdiet? Cras hendrerit magna himenaeos euismod leo! Mattis torquent aptent imperdiet mollis sociosqu sed sollicitudin nostra.
+            - Lorem ipsum odor amet, consectetuer adipiscing elit. Vitae nostra nisl morbi finibus posuere. Sit mauris justo consequat dolor feugiat per torquent litora. Diam massa porttitor lectus malesuada iaculis sed rutrum.
+            - Lorem ipsum odor amet, consectetuer adipiscing elit. Nulla dui cursus massa sem sociosqu lacus. Tincidunt maecenas cubilia dictum placerat ex tellus sodales sodales. Odio magnis egestas venenatis nisl magna torquent scelerisque. Litora primis libero habitasse id leo blandit quam ipsum.
+            - Lorem ipsum odor amet, consectetuer adipiscing elit. Dui ridiculus justo dis maximus turpis quam facilisis mi lobortis. Turpis leo felis aenean nisi aliquet vehicula potenti turpis. Nec pharetra imperdiet sapien leo torquent nisi augue consectetur.
 
 diagram:
     items:
