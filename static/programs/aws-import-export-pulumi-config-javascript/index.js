@@ -4,10 +4,12 @@ const pulumi = require("@pulumi/pulumi");
 // Create a new Pulumi Config
 const config = new pulumi.Config();
 
-// Retrieve the value of "myEnvironment" from the Pulumi Config
-const myValue = config.get("myEnvironment");
+// Retrieve the values of "myEnvironment" and "myPassword"
+const environment = config.get("myEnvironment");
+const password = config.get("myPassword");
 
-// Export "myValue" as a stack output named 'value'
+// Export values as stack outputs
 module.exports = {
-    value: myValue,
+    Environment: environment,
+    Password: password,
 };

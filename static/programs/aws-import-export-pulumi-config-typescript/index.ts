@@ -3,8 +3,10 @@ import * as pulumi from "@pulumi/pulumi";
 // Create a new Pulumi Config
 const config = new pulumi.Config();
 
-// Retrieve the value of "myEnvironment" from the Pulumi Config
-const myValue = config.get("myEnvironment");
+// Retrieve the values of "myEnvironment" and "myPassword"
+const environment = config.get("myEnvironment");
+const password = config.get("myPassword");
 
-// Export "myValue" as a stack output named 'Value'
-export const value = myValue;
+// Export values as stack output
+export const Environment = environment;
+export const Password = password;

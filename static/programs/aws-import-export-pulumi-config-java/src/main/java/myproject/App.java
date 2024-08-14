@@ -9,11 +9,13 @@ public class App {
             // Create a Pulumi Config
             var config = ctx.config();
 
-            // Retrieve the value of "myEnvironment" from the Pulumi Config
-            var myValue = config.get("myEnvironment");
+            // Retrieve the values of "myEnvironment" and "myPassword"
+            var environment = config.get("myEnvironment");
+            var password = config.get("myPassword");
 
-            // Export the value as a stack output named 'Value'
-            ctx.export("Value", Output.of(myValue));
+            // Export the values as a stack outputs
+            ctx.export("Environment", Output.of(environment));
+            ctx.export("Password", Output.of(password));
         });
     }
 }

@@ -10,11 +10,13 @@ func main() {
 		// Create a Pulumi Config
 		config := config.New(ctx, "")
 
-		// Retrieve the value of "myEnvironment" from the Pulumi Config
-		myValue := config.Get("myEnvironment")
+		// Retrieve the value of "myEnvironment" and "myPassword"
+		environment := config.Get("myEnvironment")
+		password := config.GetSecret("myPassword")
 
-		// Export "myValue" as a stack output named 'value'
-		ctx.Export("value", pulumi.String(myValue))
+		// Export values
+		ctx.Export("Environment", pulumi.String(environment))
+		ctx.Export("Password", pulumi.String(password))
 		return nil
 	})
 }
