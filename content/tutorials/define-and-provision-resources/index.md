@@ -1,6 +1,6 @@
 ---
-title: "Define and Provision Resources"
-title_tag: "Define and Provision Resources"
+title: "Defining and Provisioning Resources"
+title_tag: "Defining and Provisioning Resources"
 layout: single
 
 # A succinct description of the tutorial. It appears on the Tutorials home and collection pages.
@@ -24,7 +24,7 @@ summary: |
 youll_learn:
     - How to create a new resource
     - How to update an existing resource
-    - Where to reference resource definitions in the documentation
+    - How to reference resource definitions in the Pulumi documentation
 
 # A list of tutorial prerequisites. Markdown is fine. Keep it simple; no need to be exhaustive here.
 prereqs:
@@ -32,9 +32,7 @@ prereqs:
     - The [Pulumi CLI](/docs/install/)
     - An [Amazon Web Services](https://aws.amazon.com/) account
     - The [AWS CLI](https://aws.amazon.com/cli/)
-    - One of the following languages installed:
-      - Node.js version 14 or later (for Typescript/Javascript)
-      - Python version 3.7 or later
+    - Install [NodeJS](/docs/languages-sdks/javascript/) or [Python](/docs/languages-sdks/python/)
 
 # The estimated time, in minutes, for new users to complete the topic.
 estimated_time: 10
@@ -48,9 +46,7 @@ estimated_time: 10
 
 <br>
 
-In Pulumi, [resources](/docs/concepts/resources) represent the fundamental units that make up your infrastructure, such as virtual machines, networks, storage, and databases. A resource is used to define and manage an infrastructure object in your Pulumi configuration.
-
-In this tutorial, you will create a simple Nginx web server. You will then refer to documentation in the Pulumi Registry to create a security group resource to make the application publically accessible.
+In Pulumi, [resources](/docs/concepts/resources) represent the fundamental units that make up your infrastructure, such as virtual machines, networks, storage, and databases. A resource is used to define and manage an infrastructure object in your Pulumi configuration. In this tutorial, you will learn how to create a resource by creating a simple Nginx web server. You will then refer to documentation in the Pulumi Registry to create a security group resource to make the application publically accessible.
 
 Let's get started!
 
