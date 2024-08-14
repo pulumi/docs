@@ -1,23 +1,30 @@
 ---
 title_tag: Starburst | Case Studies
-title: "Starburst *** title placeholder ****"
+title: "Starburst:  112x Deployment Acceleration"
 description: |
-    Pulumi helps to supercharge Kubernetes deployments at Sourcegraph, ensuring their team has continuous access to the latest builds.
-meta_desc: Learn how Pulumi helps Sourcegraph supercharge their Kubernetes deployments, ensuring their team has continuous access to the latest builds.
+    Snowflake transformed its infrastructure provisioning and management processes by switching from Terraform to Pulumi, resulting in a 112x faster deployment time and significant cost savings.
+meta_desc: Starburst switched from Terraform to Pulumi, achieving 112x faster deployments, enhanced developer productivity, improved security, and cost savings.
 
 customer_name: Starburst Data
 customer_logo: /logos/customers/starburst.svg
 
 exec_summary: |
-    *** Exec summary placeholder ****
+    Starburst, a leading data analytics company, transformed its infrastructure provisioning and management processes by switching from Terraform to Pulumi. The adoption of Pulumi resulted in a 112x faster deployment time, reducing infrastructure deployments from 2 weeks to just 3 hours. Pulumi's object-oriented programming support enabled the creation of abstractions for Kubernetes clusters and managed services across Azure, AWS, and Google Cloud. The transition to Pulumi Cloud provided access to deployments, dashboarding, analytics, state management, and security functionality, further enhancing Starburst's ability to innovate and grow their business rapidly. With Pulumi, Starburst achieved significant improvements in developer productivity, security, governance, and cost savings, positioning the company for continued success in the data analytics industry.
+
+quote_block:
+  quote: |
+      "When we did it with Terraform, it took two weeks to do [infrastructure deployments]. Now we do it in about three hours a day. So that's how much of an improvement Pulumi gave us on our deployment time."
+  quote_attrib: Matt Stephenson, Senior Principal Software Engineer
+  headline_stat: 112x
+  headline: Faster infrastructure deployments
 
 sections:
     - label: Exec Summary
       anchor: executive-summary
-    - label: Infrastructure as Code Scaling Challenges
+    - label: Challenges
       anchor: infrastructure-as-code-scaling-challenges
-    - label: Full Infrastructure Automation and Self-service with Pulumi
-      anchor: full-infrastructure-automation-and-self-service-with-pulumi
+    - label: Full Self-service
+      anchor: full-infrastructure-self-service
     - label: Return to Pulumi Cloud
       anchor: return-to-pulumi-cloud
     - label: Conclusion
@@ -47,7 +54,7 @@ It was hard to automate build pipelines (e.g., GitHub Actions) using Terraform, 
 
 Service team developers would file tickets to request new infrastructure from the platform team. Spinning up review and testing environments for every developer was a time consuming process that could take an hour. Developers didn’t have an easy way to self-service. While Terraform templates could handle the provisioning of the base infrastructure, there were configurations that needed to be added into each environment. There was no easy way to automate it through GitHub Actions.
 
-## Full Infrastructure Automation and Self-service with Pulumi
+## Full Infrastructure Self-service
 
 Starburst needed a way to scale and ship software faster, so they decided to replace Terraform with Pulumi. Pulumi support for object-oriented programming languages like Java made it easy for Starburst to build abstractions for K8s clusters. They were able to create base clusters that could be easily configured based on the exact needs. They were able to create abstractions across the different K8s managed services across Azure, AWS, and Google Cloud, which allowed them to build generic functions for autoscaling, cluster version upgrades, creation and deletion of node groups, etc. All Pulumi programs managing Galaxy infrastructure were placed in a monorepo. All orchestration workflows like deployments were implemented in Automation API and executed through GitHub actions. Galaxy’s multi-region blue/green deployments, which previously took two weeks with Terraform, now take only three hours with Pulumi, a 112x improvement in speed. This acceleration is attributed to the ability to fully automate the infrastructure pipeline orchestration, eliminating the need for manual execution of glue scripts for every Terraform template.
 
@@ -57,7 +64,7 @@ Starburst used Pulumi Cloud to manage the infrastructure state, however in 2023 
 
 ## Return to Pulumi Cloud
 
-The switch off of Pulumi Cloud was short lived because replacing all the rich functionality of Pulumi Cloud meant developing and maintaining another service. Managing the S3 state store and maintaining the code turned out to require more time than the platform team would have liked to prioritize. On average, it took 2 engineers one to two days a week. It came to be a tradeoff between building and maintaining all the features provided by Pulumi Cloud like state management, dashboarding, insights, deployments or working on new features for customers. The platform team adopted Pulumi Cloud because of the gains achieved in developer productivity, enhancements in security and governance, and cost savings.
+The switch off of Pulumi Cloud was shortlived because replacing all the rich functionality of Pulumi Cloud meant developing and maintaining another service. Managing the S3 state store and maintaining the code turned out to require more time than the platform team would have liked to prioritize. On average, it took 2 engineers one to two days a week. It came to be a tradeoff between building and maintaining all the features provided by Pulumi Cloud like state management, dashboarding, insights, deployments or working on new features for customers. The platform team adopted Pulumi Cloud because of the gains achieved in developer productivity, enhancements in security and governance, and cost savings.
 
 ### Developer Productivity Gains
 
