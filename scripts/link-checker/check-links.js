@@ -267,6 +267,12 @@ function getDefaultExcludedKeywords() {
         "https://www.sdxcentral.com/articles/news/pulumi-code-dev-platform-adds-premium-team-tier-scores-15m-series-a/2018/10/",
         "https://www.gartner.com/en/newsroom/press-releases/2023-11-29-gartner-says-cloud-will-become-a-business-necessity-by-2028",
         "https://www.gartner.com/en/articles/what-is-platform-engineering",
+        "https://venturebeat.com/data-infrastructure/pulumi-infrastructure-as-code-goes-universal-to-build-cloud-apps/",
+        "https://www.digitalnewsasia.com/business/idc-reveals-its-top-predictions-cloud-2023-and-beyond",
+        "https://www.gartner.com/smarterwithgartner/welcome-to-the-api-economy",
+        "https://code.visualstudio.com/",
+        "https://www.honeycomb.io/",
+        "https://wiki.osdev.org/Atomic_operation",
     ];
 }
 
@@ -367,6 +373,9 @@ async function getURLsToCheck(base) {
                 // Tack on any additional pages we'd like to check.
                 .concat([
                     "https://github.com/pulumi/pulumi",
+
+                    // Alternative version of the home page for Google ads.
+                    "https://www.pulumi.com/b/",
                 ])
 
                 // Sort everything alphabetically.

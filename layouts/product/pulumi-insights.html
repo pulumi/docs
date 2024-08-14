@@ -13,8 +13,8 @@
         {{ end }}
         <div class="flex flex-wrap justify-content items-stretch text-left mt-16">
             {{ range $item := .Params.overview.items }}
-                <div class="w-full lg:w-1/2 p-3">
-                    <div class="benefits-item-auto-h card bg-white p-12">
+                <div class="w-full lg:w-1/3 p-3">
+                    <div class="h-full card bg-white p-12">
                         <div class="icon-section my-">
                             {{ partial "color-icon.html" (dict "icon" $item.icon "icon_color" $item.icon_color) }}
                         </div>
@@ -33,8 +33,7 @@
     <section id="announcement" class="max-w-full mx-auto text-center my-8 px-6">
         <div class="flex justify-center rounded-md bg-violet-100">
             <p class="text-center">
-                ✨ <span class="font-bold">Signup for private previews:</span> <a href="/product/private-previews/#preview-assist"> AI Assist for Resource Search</a> and
-                <a href="/product/private-previews/#preview-import">Pulumi Cloud Resource Import</a> ✨
+                ✨ <span class="font-bold">New product announcement:</span> <a href="/product/copilot"> Pulumi Copilot - Intelligent Cloud Management</a> ✨
             </p>
         </div>
     </section>
@@ -49,7 +48,7 @@
                     <img class="mx-auto my-8 rounded shadow-lg" src="{{ .image }}" alt="Pulumi Insights AI" />
                     <div class="w-full flex justify-center items-center">
                         <div class="z-0">
-                            <a class="btn-primary" href="/ai">Try it Now</a>
+                            <a class="btn-primary" href="https://app.pulumi.com">Try it Now</a>
                         </div>
                     </div>
                 </div>
@@ -60,23 +59,20 @@
     <section id="search " class="my-28 mx-auto text-center px-6">
         {{ with .Params.search }}
             <div class="container mx-auto">
-                <div>
-                    <h2 class="m-0 p-0">{{ .title }}</h2>
-                    <h4 class="p-0 m-0 text-gray-800">{{ .subtitle }}</h4>
-                    <p align="center">
-                        <iframe
-                            width="560"
-                            height="315"
-                            src="https://www.youtube.com/embed/pMEIX7LmXYo"
-                            title="YouTube video player"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowfullscreen
-                        ></iframe>
-                    </p>
-                    <div class="max-w-4xl mx-auto my-8">{{ .description | markdownify }}</div>
-                    <img class="mx-auto my-8 rounded shadow-lg" src="{{ .image }}" alt="Pulumi Insights Search" />
-                </div>
+                <h2 class="m-0 p-0">{{ .title }}</h2>
+                <h4 class="p-0 m-0 text-gray-800">{{ .subtitle }}</h4>
+                <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/pMEIX7LmXYo"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                    class="mx-auto"
+                ></iframe>
+                <div class="max-w-4xl mx-auto my-8">{{ .description | markdownify }}</div>
+                <img class="mx-auto my-8 rounded shadow-lg" src="{{ .image }}" alt="Pulumi Insights Search" />
             </div>
         {{ end }}
     </section>

@@ -586,6 +586,70 @@ export const url = functionUrl.functionUrl;
 
 Stacks may only read from environments that belong to the same Pulumi organization.
 
+### With Automation API
+
+You can use ESC with [Automation API](/docs/using-pulumi/automation-api/) in [Node](/docs/reference/pkg/nodejs/pulumi/pulumi/classes/automation.Stack.html#addEnvironments), [Go](https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3@v3.117.0/go/auto#LocalWorkspace.AddEnvironments), and [Python](docs/reference/pkg/python/pulumi/#pulumi.automation.LocalWorkspace.add_environments). The following methods are supported today:
+
+* `addEnvironments(...)`: Append environments to your Pulumi stack's [import](/docs/esc/environments/#using-environments-with-pulumi-iac) list.
+* `listEnvironments()`: Retrieve a list of environments currently imported into your stack.
+* `removeEnvironment(environment)`: Remove a specific environment from your stack's import list.
+
+## Versioning Environments
+
+Every time you make changes and save an environment, a new, immutable **revision** is created. You can see the history of revisions using `esc env version history` or in the Pulumi Cloud Console.
+
+```bash
+$ esc env version history myorg/test
+revision 3 (tag: latest)
+Author: <Name> <User-ID>
+Date: 2024-04-18 12:42:18.02 -0700 PDT
+
+revision 2
+...
+```
+
+Compare revisions using `esc env diff`.
+
+```bash
+$ esc env diff myorg/test@3 myorg/test@2
+ Value
+
+    --- myorg/test@3
+    +++ myorg/test@2
+...
+```
+
+### Tagging Versions
+
+You can tag your revisions with meaningful names like `prod`, `stable`, `v1.1.2`. Each environment has a built-in `latest` tag that always points to the environment’s most recent revision. Use `esc env version tag` to tag a revision. In the following example we are assign `prod` tag to revision 3 of environment `test`.
+
+```bash
+$ esc env version tag myorg/test@prod @3
+```
+
+### Using Tagged Versions
+
+Once you tag a revision, you can use the tag to [open](/docs/esc/environments/#opening-an-environment) a specific environment version.
+
+```bash
+$ esc open myorg/test@prod
+```
+
+You can specify the tagged version when importing the environment. This helps you ensure that you are importing a stable environment version that is not affected by changes.
+
+```yaml
+# Importing in another ESC Environment
+imports:
+  - test@prod
+
+# Importing in Pulumi stack Config
+# Pulumi.dev.yaml
+environment:
+  - test@prod
+```
+
+You can find more commands and options in the [ESC CLI documentation](/docs/esc-cli/).
+
 ## Precedence rules
 
 When multiple environment sources are combined and settings overlap, values are applied successively in the order in which they're imported and defined.

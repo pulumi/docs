@@ -1,7 +1,7 @@
 ---
 title: Customer-Managed Agents
 title_tag: Get started with Customer-Managed Agents
-meta_desc: Customer-Managed Agents allows you to self-host deployment agents and get all the power and flexiblity of Pulumi Deployments in your isolated environments
+meta_desc: Customer-Managed Agents allows you to self-host deployment agents and get all the power and flexibility of Pulumi Deployments in your isolated environments
 menu:
   pulumicloud:
     parent: deployments
@@ -21,22 +21,22 @@ Customer-Managed Agents allow you to self-host deployment agents bringing the sa
 Customer-Managed Agents support all the [deployment triggers](/docs/pulumi-cloud/deployments/#deployment-triggers) currently offered by Pulumi Deployments such as click to deploy, the Pulumi Deployments REST API, git push to deploy, Review Stacks, and remote Automation API.
 
 {{% notes "info" %}}
-Customer-Managed Agents is available on the Business Critical edition of Pulumi Cloud. [Contact sales](/contact/?form=sales) if you are interested and want to enable Customer-Managed Agents. If you are a self-hosted Pulumi Cloud customer, please [get in touch](https://share.hsforms.com/1YajiJ73sSuGn5RoTkyvKxg2mxud) to be notified when it is available.
+Customer-Managed Agents is available on the Business Critical edition of Pulumi Cloud. [Contact sales](/contact/?form=sales) if you are interested and want to enable Customer-Managed Agents.
 {{% /notes %}}
 
 ## Using Customer-Managed Agents
 
-Before you begin, ensure you have installed the [Pulumi Github App](/docs/using-pulumi/continuous-delivery/github-app/) and updated the [source control settings](/docs/pulumi-cloud/deployments/get-started) of the stack you want to use Deployment agents. [Docker](https://docs.docker.com/engine/) is a requirement for running the agent.
+Before you begin, ensure you have installed the [Pulumi Github App](/docs/using-pulumi/continuous-delivery/github-app/) and updated the [source control settings](/docs/pulumi-cloud/deployments/get-started) of the stack you want to use Deployment agents. [Docker](https://docs.docker.com/engine/) or [Kubernetes](https://kubernetes.io/docs/home/) is a requirement for running the agent.
 
 1. Go to **Deployment runners** under Organization Settings
 2. Create a new pool. Ensure to copy and save the token
 3. Install the agents as per the instructions on the page
 4. Verify the agent status by refreshing the page
-5. Configure a stack to use the agent by going to the Deploy tab within Stack Settings, and selecting the pool you created under the **Deployment Runner** pool drop-down  
+5. Configure a stack to use the agent by going to the Deploy tab within Stack Settings, and selecting the pool you created under the **Deployment Runner** pool drop-down
 6. **(Optional)** Add more agents to the pool to increase concurrency by using the same token
 7. Verify setup by doing a 'pulumi refresh' through the **Actions** drop-down in your stack page
 
-![Pool Details view](../customer-managed-agents-assets/view-agent-status.png)
+![Pool Details view](../../../../blog/customer-managed-deployment-agents-launch/view-agent-status.png)
 
 Agents poll Pulumi Cloud every 30 seconds to check for pending deployments and will disappear from the Pool details page 1-2 hours after being offline. On the deployments page, you can see all the deployments including pending deployments, and which deployment agents were used in a deployment.
 
@@ -68,7 +68,7 @@ There are two methods to provide cloud provider credentials to the agents:
    VARIABLE=value customer-managed-deployment-agent run
    ```
 
-   You also need to update the `pulumi-deployment-agent.yaml` configuration file by setting `env_forward_allowlist`. The configuration file can be found in the directory where the agent is extracted. `env_forward_allowlist` expects an array of strings. Example:
+   You also need to update the `pulumi-deployment-agent.yaml` [configuration file](#configuration-reference) by setting `env_forward_allowlist`. `env_forward_allowlist` expects an array of strings. Example:
 
     ```yaml
     token: pul-d2d2….
@@ -78,3 +78,86 @@ There are two methods to provide cloud provider credentials to the agents:
         - key_two
         - key_three
     ```
+
+## Configuration Reference
+
+All configuration for customer-managed agents are done through the `pulumi-deployment-agent.yaml` file. This can be created manually or with the `customer-managed-deployment-agent configure` command.
+
+The customer-managed agent will look for `pulumi-deployment-agent.yaml` in the following directories:
+
+- Current directory
+- Home directory
+- `/etc`
+- Location of the `customer-managed-deployment-agent` binary
+
+\
+Below are available configuration parameters and their default values. In most cases, only `token` is required.
+
+```yaml
+# pulumi-deployment-agent.yaml
+
+## Required settings
+
+# Pulumi token provided when creating a new deployment runner pool
+# Environment variable override: PULUMI_AGENT_TOKEN
+token: pul-xxx
+
+## Optional settings
+
+# Location of temp directory
+# Uses the OS's preferred temporary file location (usually /tmp) by default
+# Environment variable override: PULUMI_AGENT_SHARED_VOLUME_DIRECTORY
+shared_volume_directory: ""
+
+# The base path from which to load the runners
+# This defaults to the location of the customer-managed-deployment-agent binary
+# (usually ~/.pulumi/bin/customer-managed-deployment-agent)
+# Environment variable override: PULUMI_AGENT_WORKING_DIRECTORY
+working_directory: "<location of customer-managed-deployment-agent binary>"
+
+# If using Self-Hosted Pulumi, set this to API domain of instance
+# Environment variable override: PULUMI_AGENT_SERVICE_URL
+service_url: "https://api.pulumi.com"
+
+# If true, exit immediately after completing a single job
+# Environment variable override: PULUMI_AGENT_SINGLE_RUN
+single_run: false
+
+# If true, always pull the Pulumi image from the Docker registry
+# If false, use a local image
+# Environment variable override: PULUMI_AGENT_PULL_IMAGE
+pull_image: true
+
+# If true, write errors to syslog instead of stderr
+# Environment variable override: PULUMI_AGENT_SYSLOG
+syslog: false
+
+# Values for configuring OpenID Authentication
+# Environment variable override: PULUMI_AGENT_ORGANIZATION_NAME
+organization_name: ""
+# Environment variable override: PULUMI_AGENT_RUNNER_POOL_ID
+runner_pool_id: ""
+# Environment variable override: PULUMI_AGENT_TOKEN_EXPIRATION
+token_expiration: ""
+# Environment variable override: PULUMI_AGENT_OIDC_TOKEN_FILE
+oidc_token_file: ""
+
+# List of environment variables to pass to the deployment agent
+# Environment variable override: PULUMI_AGENT_ENV_FORWARD_ALLOWLIST
+env_forward_allowlist: []
+
+# Deployment target for the agent: docker (default) or kubernetes
+# Environment variable override: PULUMI_AGENT_DEPLOY_TARGET
+deploy_target: "docker"
+```
+
+### Kubernetes
+
+For Kubernetes-native installations, configuration for customer-managed agents is set on the Kubernetes Deployment that runs the agent. Configuration values may be set as environment variables, or by mounting a configuration file in the agent Pod.
+
+The following Kubernetes-specific configuration options are available:
+
+```yaml
+# Kubernetes image pull policy https://kubernetes.io/docs/concepts/containers/images/#image-pull-policy
+PULUMI_AGENT_IMAGE_PULL_POLICY: IfNotPresent
+```

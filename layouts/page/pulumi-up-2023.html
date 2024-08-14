@@ -12,8 +12,7 @@
                     Dive into the future of cloud and Infrastructure as Code (IaC).<br/>Watch talks that demonstrate how to build and scale on the cloud, through Platform Engineering, with AI, and more
                 </p>
             </div>
-            <a class="btn-secondary" href="https://sessionize.com/pulumiup-conference-2024" target="_blank">Submit a Proposal</a>
-            <a class="btn-primary" href="#register">Register</a>
+            <a class="btn-primary" href="#register">Register Now</a>
         </div>
     </div>
 
@@ -24,7 +23,7 @@
         </p>
     </div>
 
-    <section id="countdown" class="pt-12">
+    <section id="countdown" class="pt-12 mb-8">
         <pulumi-date-countdown-circles
             date-string="{{ .Params.event_date }}"
             value-label-class="block font-normal"
@@ -34,38 +33,9 @@
         </pulumi-date-countdown-circles>
     </section>
 
-    <section id="ai-panel" class="my-12">
-        <div class="container mx-auto text-center">
-            <h2 class="text-center">Watch PulumiUP 2023 On-Demand</h2>
-            <p class="text-center mb-8">
-                Get ready for the future of cloud development! Listen to industry experts in our unfiltered panel discussion on how AI is transforming the cloud native landscape.
-                Stay ahead of the curve by hearing and learning from the best in the industry.
-            </p>
-            <div class="container justify-center flex flex-col lg:flex-row">
-                {{ range .Params.panelists }}
-                    <div class="mx-2 flex flex-row lg:flex-col my-2">
-                        <img src="{{ .image }}" class="rounded-l-md lg:rounded-b-none lg:rounded-t-md" style="height: 220px; width: 220px;" />
-                        <div class="light-blue-background w-full px-4 py-2 rounded-r-md lg:rounded-t-none lg:rounded-b-md text-left">
-                            <h6>{{ .name }}</h6>
-                            <p class="text-sm text-black my-2 flex-wrap">{{ .position }}</p>
-                            <p class="text-sm text-black my-2">{{ .company }}</p>
-                            <div class="flex flex-row my-4">
-                                {{ range .socials }}
-                                    <a href="{{ .link }}" target="_blank">
-                                        <img src="/logos/tech/{{ .site }}.svg" alt="{{ .site }}" class="mr-2" href="{{ .link }}" />
-                                    </a>
-                                {{ end }}
-                            </div>
-                        </div>
-                    </div>
-                {{ end }}
-            </div>
-            <h6 class="py-4">Be a part of shaping the future of cloud infrastructure!</h6>
-            <a class="btn-primary" href="https://www.youtube.com/playlist?list=PLyy8Vx2ZoWlqkEzXbjUvE_CoEmBkT9Xoe" target="_blank">Watch On-Demand</a>
-        </div>
-    </section>
+    {{ partial "pulumi-up/speakers.html" (dict "speakers" .Params.speakers "include_cta" "true" ) }}
 
-    <section id="personas" class="light-blue-background">
+    <section id="personas" class="my-8">
         <div class="container mx-auto px-4 py-8 text-center">
             <h2>A MUST attend for...</h2>
             <div class="mx-auto py-4 flex flex-col lg:flex-row">
@@ -82,74 +52,19 @@
                     </div>
                 {{ end }}
             </div>
-            <a class="btn-primary btn-primary-blue-bg" href="#schedule">See the Agenda</a>
         </div>
     </section>
 
-    <section id="dev-stories" style="background: linear-gradient(180deg, #cbeffe, #ddf6ff 100%);">
-        <div class="container mx-auto px-4 pb-16 text-center">
-            <h2>DevStories and Demos</h2>
-            <p class="text-lg">
-                PulumiUP isn't just another developer conference. Our brilliant speakers are engineers like you, who tackled challenges, successfully implemented solutions, and
-                some even founded their own companies. Listen to their stories, their ideas, be inspired and learn from the best.
-            </p>
-            <div class="container flex flex-wrap justify-center">
-                {{ range .Params.stories }}
-                    <div class="p-2 w-full lg:w-1/2">
-                        <div class="card mx-auto h-full bg-white p-4 flex">
-                            <div class="w-full lg:w-1/3 flex-col">
-                                <img class="w-full" src="{{ .photo }}" alt="{{ .name }}" />
-                            </div>
-                            <div class="w-full lg:w-2/3 pl-2 text-left">
-                                <p class="text-md font-semibold my-0">{{ .title }}</p>
-                                <p class="text-sm text-gray-600 my-2">{{ .description }}</p>
-                                <div class="text-md my-2">{{ .name }}</div>
-                                <div class="text-sm text-gray-700 my-2">{{ .position }}</div>
-                                <img class="h-5 my-2" src="{{ .logo }}" alt="{{ .company }}" />
-                            </div>
-                        </div>
-                    </div>
-                {{ end }}
-            </div>
-            <h6 class="py-4">Don't miss out on this opportunity to improve your knowledge and skills in cloud infrastructure.</h6>
-            <a class="btn-primary" href="https://www.youtube.com/playlist?list=PLyy8Vx2ZoWlqkEzXbjUvE_CoEmBkT9Xoe" target="_blank">Watch On-Demand</a>
-        </div>
-    </section>
+    {{ partial "event-schedule.html" (dict "schedule" .Params.schedule "bg_color" "gray-100" ) }}
 
-    <section id="workshops" style="background: linear-gradient(180deg, #ddf6ff 0%, #ddf6ff 100%);">
-        <div class="container mx-auto py-16">
-            <h2 class="px-4 pb-8">Workshops</h2>
-
-            <div class="flex flex-wrap justify-center items-stretch">
-                {{ range .Params.workshops }}
-                    <div class="w-full lg:w-1/2 p-3">
-                        <div class="card bg-white p-6 text-black h-full">
-                            <h5>{{ .title }}</h5>
-                            <span class="my-0 py-1 inline-block mr-3 text-gray-600">
-                                <i class="fas fa-calendar mr-2"></i>
-                                {{ .date }}
-                            </span>
-                            <p>{{ .description }}</p>
-                            <div class="my-8">
-                                <a href="{{ .url }}" class="btn-secondary">
-                                    <span class="text-violet-600">Watch On-Demand &#8594;</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                {{ end }}
-            </div>
-        </div>
-    </section>
-
-    <section id="why-attend" class="my-8 lg:my-16">
+    <section id="why-attend" class="my-8">
         <div class="container mx-auto">
             <h2 class="pl-8">Why Attend</h2>
             <div class="px-4 py-8 text-center flex flex-col lg:flex-row">
                 <div class="w-full lg:w-1/2 p-4 text-left">
                     {{ .Params.why_attend.description | markdownify }}
                     <div class="my-12 flex justify-center lg:justify-start">
-                        <a class="btn-primary" href="https://www.youtube.com/playlist?list=PLyy8Vx2ZoWlqkEzXbjUvE_CoEmBkT9Xoe" target="_blank">Watch On-Demand</a>
+                        <a class="btn-primary" href="#register">Register Now</a>
                     </div>
                 </div>
                 <div class="w-full lg:w-1/2 px-8">
@@ -168,36 +83,34 @@
         </div>
     </section>
 
-    {{ partial "event-schedule.html" (dict "schedule" .Params.schedule "background_color" "#cbeffe") }}
-
-
-    <section id="speakers" class="relative mb-8">
-        <div class="dot-background-container">
-            <div class="dot-background"></div>
-        </div>
-        <div class="dot-overlay"></div>
-
-        <div class="w-full py-8" style="background-color:rgba(255,255,255,.8)">
-            <div class="container mx-auto text-center">
-                <h2 class="mb-8 text-center">Speakers</h2>
-                <ul class="inline-flex flex-wrap list-none justify-center p-0 gap-x-8 gap-y-6">
-                    {{ range .Params.speakers }}
-                        <li class="about-card border-2 border-gray-300 bg-white rounded-md flex overflow-hidden relative">
-                            <div class="flex">
-                                <img class="about-card-photo" src="{{ .image }}" alt="{{ .name }}" />
-                                <div class="flex flex-col w-full justify-center text-left ml-4">
-                                    <div class="font-display font-medium text-gray-900 text-2xl mb-3">{{ .name }}</div>
-                                    <div class="text-sm text-gray-700 mb-3">{{ .title }}</div>
-                                    <img class="h-5 self-start" src="{{ .logo }}" alt="{{ .company }}" />
-                                </div>
+    <section id="ai-panel" class="my-12">
+        <div class="container mx-auto text-center">
+            <h2 class="text-center">Watch PulumiUP 2023 On-Demand</h2>
+            <p class="text-center mb-8">
+                Get ready for the future of cloud development! Listen to industry experts in our unfiltered panel discussion on how AI is transforming the cloud native landscape.
+                Stay ahead of the curve by hearing and learning from the best in the industry.
+            </p>
+            <div class="container justify-center flex flex-col lg:flex-row">
+                {{ range .Params.panelists }}
+                    <div class="mx-2 flex flex-row lg:flex-col my-2 shadow-sm">
+                        <img src="{{ .image }}" class="rounded-l-md lg:rounded-b-none lg:rounded-t-md" style="height: 220px; width: 220px;" />
+                        <div class="bg-gray-100 w-full px-4 py-2 rounded-r-md lg:rounded-t-none lg:rounded-b-md text-left">
+                            <h6>{{ .name }}</h6>
+                            <p class="text-sm text-black my-2 flex-wrap">{{ .position }}</p>
+                            <p class="text-sm text-black my-2">{{ .company }}</p>
+                            <div class="flex flex-row my-4">
+                                {{ range .socials }}
+                                    <a href="{{ .link }}" target="_blank">
+                                        <img src="/logos/tech/{{ .site }}.svg" alt="{{ .site }}" class="mr-2" href="{{ .link }}" />
+                                    </a>
+                                {{ end }}
                             </div>
-                        </li>
-                    {{ end }}
-                </ul>
+                        </div>
+                    </div>
+                {{ end }}
             </div>
-            <div class="my-16 flex justify-center">
-                <a class="btn-primary btn-primary-blue-bg" href="https://www.youtube.com/playlist?list=PLyy8Vx2ZoWlqkEzXbjUvE_CoEmBkT9Xoe" target="_blank">Watch On-Demand</a>
-            </div>
+            <h6 class="py-4">Be a part of shaping the future of cloud infrastructure!</h6>
+            <a class="btn-primary" href="https://www.youtube.com/playlist?list=PLyy8Vx2ZoWlqkEzXbjUvE_CoEmBkT9Xoe" target="_blank">Watch On-Demand</a>
         </div>
     </section>
 

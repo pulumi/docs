@@ -139,12 +139,24 @@
 <li class="toctree-l3"><a class="reference internal" href="pulumi/#pulumi.InvokeOptions.version"><code class="docutils literal notranslate"><span class="pre">InvokeOptions.version</span></code></a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="pulumi/#pulumi.InvokeTransformArgs"><code class="docutils literal notranslate"><span class="pre">InvokeTransformArgs</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pulumi/#pulumi.InvokeTransformArgs.args"><code class="docutils literal notranslate"><span class="pre">InvokeTransformArgs.args</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi/#pulumi.InvokeTransformArgs.opts"><code class="docutils literal notranslate"><span class="pre">InvokeTransformArgs.opts</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi/#pulumi.InvokeTransformArgs.token"><code class="docutils literal notranslate"><span class="pre">InvokeTransformArgs.token</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pulumi/#pulumi.InvokeTransformResult"><code class="docutils literal notranslate"><span class="pre">InvokeTransformResult</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pulumi/#pulumi.InvokeTransformResult.args"><code class="docutils literal notranslate"><span class="pre">InvokeTransformResult.args</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi/#pulumi.InvokeTransformResult.opts"><code class="docutils literal notranslate"><span class="pre">InvokeTransformResult.opts</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="pulumi/#pulumi.Output"><code class="docutils literal notranslate"><span class="pre">Output</span></code></a><ul>
 <li class="toctree-l3"><a class="reference internal" href="pulumi/#pulumi.Output.all"><code class="docutils literal notranslate"><span class="pre">Output.all()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="pulumi/#pulumi.Output.apply"><code class="docutils literal notranslate"><span class="pre">Output.apply()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="pulumi/#pulumi.Output.concat"><code class="docutils literal notranslate"><span class="pre">Output.concat()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="pulumi/#pulumi.Output.format"><code class="docutils literal notranslate"><span class="pre">Output.format()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="pulumi/#pulumi.Output.from_input"><code class="docutils literal notranslate"><span class="pre">Output.from_input()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi/#pulumi.Output.get"><code class="docutils literal notranslate"><span class="pre">Output.get()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="pulumi/#pulumi.Output.json_dumps"><code class="docutils literal notranslate"><span class="pre">Output.json_dumps()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="pulumi/#pulumi.Output.json_loads"><code class="docutils literal notranslate"><span class="pre">Output.json_loads()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="pulumi/#pulumi.Output.secret"><code class="docutils literal notranslate"><span class="pre">Output.secret()</span></code></a></li>
@@ -233,6 +245,7 @@
 <li class="toctree-l2"><a class="reference internal" href="pulumi/#pulumi.StringAsset"><code class="docutils literal notranslate"><span class="pre">StringAsset</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="pulumi/#pulumi.create_urn"><code class="docutils literal notranslate"><span class="pre">create_urn()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="pulumi/#pulumi.debug"><code class="docutils literal notranslate"><span class="pre">debug()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="pulumi/#pulumi.deprecated"><code class="docutils literal notranslate"><span class="pre">deprecated()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="pulumi/#pulumi.error"><code class="docutils literal notranslate"><span class="pre">error()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="pulumi/#pulumi.export"><code class="docutils literal notranslate"><span class="pre">export()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="pulumi/#pulumi.get"><code class="docutils literal notranslate"><span class="pre">get()</span></code></a></li>
@@ -299,9 +312,31 @@
 <li class="toctree-l3"><a class="reference internal" href="pulumi/#pulumi.automation.PolicyEvent"><code class="docutils literal notranslate"><span class="pre">PolicyEvent</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="pulumi/#pulumi.automation.PreludeEvent"><code class="docutils literal notranslate"><span class="pre">PreludeEvent</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="pulumi/#pulumi.automation.PreviewResult"><code class="docutils literal notranslate"><span class="pre">PreviewResult</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="pulumi/#pulumi.automation.ProjectBackend"><code class="docutils literal notranslate"><span class="pre">ProjectBackend</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="pulumi/#pulumi.automation.ProjectRuntimeInfo"><code class="docutils literal notranslate"><span class="pre">ProjectRuntimeInfo</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="pulumi/#pulumi.automation.ProjectSettings"><code class="docutils literal notranslate"><span class="pre">ProjectSettings</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi/#pulumi.automation.ProjectBackend"><code class="docutils literal notranslate"><span class="pre">ProjectBackend</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pulumi/#pulumi.automation.ProjectBackend.from_dict"><code class="docutils literal notranslate"><span class="pre">ProjectBackend.from_dict()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pulumi/#pulumi.automation.ProjectBackend.to_dict"><code class="docutils literal notranslate"><span class="pre">ProjectBackend.to_dict()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi/#pulumi.automation.ProjectRuntimeInfo"><code class="docutils literal notranslate"><span class="pre">ProjectRuntimeInfo</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pulumi/#pulumi.automation.ProjectRuntimeInfo.from_dict"><code class="docutils literal notranslate"><span class="pre">ProjectRuntimeInfo.from_dict()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pulumi/#pulumi.automation.ProjectRuntimeInfo.to_dict"><code class="docutils literal notranslate"><span class="pre">ProjectRuntimeInfo.to_dict()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi/#pulumi.automation.ProjectSettings"><code class="docutils literal notranslate"><span class="pre">ProjectSettings</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pulumi/#pulumi.automation.ProjectSettings.from_dict"><code class="docutils literal notranslate"><span class="pre">ProjectSettings.from_dict()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pulumi/#pulumi.automation.ProjectSettings.to_dict"><code class="docutils literal notranslate"><span class="pre">ProjectSettings.to_dict()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi/#pulumi.automation.ProjectTemplate"><code class="docutils literal notranslate"><span class="pre">ProjectTemplate</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pulumi/#pulumi.automation.ProjectTemplate.from_dict"><code class="docutils literal notranslate"><span class="pre">ProjectTemplate.from_dict()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pulumi/#pulumi.automation.ProjectTemplate.to_dict"><code class="docutils literal notranslate"><span class="pre">ProjectTemplate.to_dict()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi/#pulumi.automation.ProjectTemplateConfigValue"><code class="docutils literal notranslate"><span class="pre">ProjectTemplateConfigValue</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pulumi/#pulumi.automation.ProjectTemplateConfigValue.from_dict"><code class="docutils literal notranslate"><span class="pre">ProjectTemplateConfigValue.from_dict()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pulumi/#pulumi.automation.ProjectTemplateConfigValue.to_dict"><code class="docutils literal notranslate"><span class="pre">ProjectTemplateConfigValue.to_dict()</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="pulumi/#pulumi.automation.PropertyDiff"><code class="docutils literal notranslate"><span class="pre">PropertyDiff</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="pulumi/#pulumi.automation.PulumiCommand"><code class="docutils literal notranslate"><span class="pre">PulumiCommand</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="pulumi/#pulumi.automation.PulumiCommand.install"><code class="docutils literal notranslate"><span class="pre">PulumiCommand.install()</span></code></a></li>
@@ -432,6 +467,7 @@
 <li class="toctree-l4"><a class="reference internal" href="pulumi/#pulumi.dynamic.ResourceProvider.delete"><code class="docutils literal notranslate"><span class="pre">ResourceProvider.delete()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="pulumi/#pulumi.dynamic.ResourceProvider.diff"><code class="docutils literal notranslate"><span class="pre">ResourceProvider.diff()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="pulumi/#pulumi.dynamic.ResourceProvider.read"><code class="docutils literal notranslate"><span class="pre">ResourceProvider.read()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pulumi/#pulumi.dynamic.ResourceProvider.serialize_as_secret_always"><code class="docutils literal notranslate"><span class="pre">ResourceProvider.serialize_as_secret_always</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="pulumi/#pulumi.dynamic.ResourceProvider.update"><code class="docutils literal notranslate"><span class="pre">ResourceProvider.update()</span></code></a></li>
 </ul>
 </li>
@@ -486,6 +522,8 @@
 <li class="toctree-l3"><a class="reference internal" href="pulumi/#pulumi.runtime.invoke"><code class="docutils literal notranslate"><span class="pre">invoke()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="pulumi/#pulumi.runtime.invoke_async"><code class="docutils literal notranslate"><span class="pre">invoke_async()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="pulumi/#pulumi.runtime.is_dry_run"><code class="docutils literal notranslate"><span class="pre">is_dry_run()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi/#pulumi.runtime.register_invoke_transform"><code class="docutils literal notranslate"><span class="pre">register_invoke_transform()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi/#pulumi.runtime.register_resource_transform"><code class="docutils literal notranslate"><span class="pre">register_resource_transform()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="pulumi/#pulumi.runtime.register_stack_transform"><code class="docutils literal notranslate"><span class="pre">register_stack_transform()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="pulumi/#pulumi.runtime.register_stack_transformation"><code class="docutils literal notranslate"><span class="pre">register_stack_transformation()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="pulumi/#pulumi.runtime.reset_options"><code class="docutils literal notranslate"><span class="pre">reset_options()</span></code></a></li>

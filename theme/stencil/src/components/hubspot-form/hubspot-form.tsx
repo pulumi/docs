@@ -223,7 +223,7 @@ export class HubspotForm {
     private renderFailedToLoadForm() {
         return (
             <p>
-                There was an problem loading this form. Please try refreshing your browser, and if you continue to see this message, let us know at{" "}
+                There was a problem loading this form. Please try refreshing your browser, and if you continue to see this message, let us know at{" "}
                 <a href="mailto:support@pulumi.com">support@pulumi.com</a>.
             </p>
         );

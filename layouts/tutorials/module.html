@@ -1,0 +1,97 @@
+{{ define "main" }}
+    <div class="flex mb-16 docs-list-main">
+        <div class="sticky top-12 max-h-75 xl:w-2/12">
+            <div class="xl:w-56 xl:px-4">
+                {{ partial "tutorials/nav.html" . }}
+            </div>
+        </div>
+        <div class="mr-6 ml-4 flex justify-center xl:w-8/12 docs-main-content-wrapper">
+            <div class="max-w-3xl docs-main-content">
+                <header class="mb-6">
+                    {{ partial "tutorials/breadcrumb.html" . }}
+                </header>
+                <div class="special-h1">
+                    <h1>{{ .Title }}</h1>
+                    <div class="h1-gradient"></div>
+                </div>
+                {{ if .Params.meta_image }}
+                    <div>
+                        <img class="shadow-sm border border-gray-300 rounded" src="./{{ .Params.meta_image }}">
+                    </div>
+                {{ end }}
+                <div class="my-4">
+                    {{ .Summary }}
+                </div>
+                <div class="flex flex-col lg:flex-row my-8">
+                    <div class="">
+                        <h2 class="mb-4">In this tutorial, you'll learn:</h2>
+                        <ul class="list-none p-0">
+                            {{ range .Params.youll_learn }}
+                                <li>
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    <span>{{ . }}</span>
+                                </li>
+                            {{ end }}
+                        </ul>
+                    </div>
+                </div>
+                <div class="flex flex-col lg:flex-row my-8">
+                    <div class="">
+                        <h2 class="mb-4">Prerequisites:</h4>
+                        <ul class="list-none p-0">
+                            {{ range .Params.prereqs }}
+                                <li>
+                                    <i class="far fa-circle text-gray-600 mr-2"></i>
+                                    <span>{{ . | markdownify }}</span>
+                                </li>
+                            {{ end }}
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    {{ .Content }}
+                </div>
+                <h2>Topics</h2>
+                {{ $estimated_time := 0 }}
+                {{ range $topic := .Pages }}
+                    {{ $estimated_time = (add $estimated_time (int $topic.Params.estimated_time)) }}
+                {{ end }}
+                <p>
+                    This tutorial has {{ len .Pages }} topic{{ if ne (len .Pages) 1 }}s{{ end }} and takes about {{ $estimated_time }} minutes to complete.
+                </p>
+                <div class="mb-8">
+                    <ul class="p-0 border border-gray-300 rounded shadow-sm">
+                        {{ $pageCount := len .Pages }}
+                        {{ range $index, $page := .Pages.ByWeight }}
+                            <li class="flex flex-col md:flex-row md:items-center gap-2 md:gap-0 list-none py-3 px-4 border-gray-200 {{ if lt (add $index 1) $pageCount }}border-b{{ end }}">
+                                <span class="w-full">
+                                    <a href="{{ .RelPermalink }}">{{ $page.Title }}</a>
+                                </span>
+                                <span class="text-sm text-gray-600 whitespace-nowrap md:mx-12">
+                                    <i class="far fa-clock md:text-center w-4 md:w-6 text-gray-500"></i>
+                                    {{ $page.Params.estimated_time }} minutes
+                                </span>
+                                <span class="hidden md:block ">
+                                    <a href="{{ .RelPermalink }}">
+                                        <i class="fas fa-chevron-circle-right text-blue-600 p-2"></i>
+                                    </a>
+                                </span>
+                            </li>
+                        {{ end }}
+                    </ul>
+                    <div class="mt-6 mb-4">
+                        <a href="{{ (index .Pages 0).RelPermalink }}" class="btn btn-primary">Start the tutorial &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sticky top-10 pt-8 max-h-75 xl:w-2/12 hidden xl:block">
+            {{ partial "tutorials/feedback.html" . }}
+            {{ partial "tutorials/right-nav-ad.html" }}
+        </div>
+    </div>
+{{ end }}
+
+{{ define "footer" }}
+
+{{ end }}

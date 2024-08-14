@@ -1,0 +1,109 @@
+{{ define "hero" }}
+    {{ partial "hero" (dict "title" .Params.title) }}
+{{ end }}
+
+{{ define "main" }}
+    {{ $pageContext := . }}
+
+    <section id="overview" class="mx-auto my-16 px-6 lg:flex lg:flex-row">
+        <div class="w-full lg:w-1/2 mb-8 lg:mb-0 px-8">
+            <h2>{{ .Params.overview.title }}</h2>
+            <p class="w-full">{{ .Params.overview.description | markdownify }}</p>
+            <div class="mt-8">
+                <a href="https://app.pulumi.com/" class="btn-secondary">{{ .Params.get_started }}</a>
+            </div>
+        </div>
+        <div class="w-full lg:w-1/2 content-center mb-8 lg:mb-0 px-8">
+            <div class="rounded-xl shadow-2xl relative h-0 overflow-hidden" style="padding-bottom: 50.25%;">
+                <iframe
+                    src="https://www.youtube.com/embed/m4kb2k_chyM?si=fHDUOJ-ozZ-2b4_E?rel=0"
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;"
+                    allowfullscreen=""
+                    title="Pulumi ESC Introduction"
+                    srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img{position:absolute;width:100%;top:0;bottom:0;margin:auto}</style><a href=https://www.youtube.com/embed/m4kb2k_chyM?si=fHDUOJ-ozZ-2b4_E?autoplay=1><img src='/images/video-cards/copilot.png' alt='Pulumi Copilot Overview'></a>"
+                ></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section id="benefits" class="container mx-auto my-16 lg:mt-20 lg:mb-8 px-6">
+        <div class="lg:flex">
+            <div class="lg:w-5/12 lg:pl-8">
+                <h3>{{ .Params.benefits.title }}</h3>
+                <p class="text-sm">{{ .Params.benefits.description | markdownify }}</p>
+            </div>
+            <div class="lg:order-first lg:w-7/12 mb-8 lg:mb-0 content-center">
+                <video class="card mx-auto bg-white" controls="false" autoplay="true" loop="true" src="{{ .Params.benefits.graphic.image }}" >
+            </div>
+        </div>
+    </section>
+
+    <section id="options" class="container mx-auto text-center mt-16 px-6">
+        <div class="max-w-5xl mx-auto text-center px-6">
+            <h2>{{ .Params.options.title }}</h2>
+            <div class="text-left">{{ .Params.options.description }}</div>
+        </div>
+        <div class="flex flex-wrap justify-content items-stretch text-left my-4">
+            {{ range $item := .Params.options.items }}
+                <div class="w-full lg:w-1/2 p-3">
+                    <div class="h-full card bg-white p-8">
+                        <div class="icon-section mb-8">
+                            {{ partial "color-icon.html" (dict "icon" $item.icon "icon_color" $item.icon_color) }}
+                        </div>
+                        <div>
+                            <h5>{{ $item.title }}</h5>
+                        </div>
+                        <div class="my-6">
+                            <p>{{ $item.description | markdownify }}</p>
+                        </div>
+                        <div class="my-6">
+                            <p><i><a href="{{ $item.link }}">{{ $item.example | markdownify }}</a></i></p>
+                        </div>
+                    </div>
+                </div>
+            {{ end }}
+        </div>
+    </section>
+
+    <section id="faq" class="container mx-auto my-16">
+        <div class="max-w-5xl mx-auto text-center">
+            <h2>Frequently asked questions</h2>
+        </div>
+        <ul class="list-none p-0 mx-5 xl:ml-12" data-faq-type="faq-deployments">
+            {{ range $item := .Params.faq.items }}
+                <li class="accordion-item text-2xl py-3">
+                    {{ partial "accordian-header" (dict "text" $item.header "large_header" true) }}
+                    <div class="accordion-item-body-no-animation text-base">
+                        {{ $item.content | markdownify }}
+                    </div>
+                </li>
+            {{ end }}
+        </ul>
+    </section>
+
+    <section id="learn" class="container mx-auto text-center mt-16 px-6">
+        <div class="max-w-5xl mx-auto text-center px-6">
+            <h2>{{ .Params.learn.title }}</h2>
+            <div class="text-left">{{ .Params.learn.description }}</div>
+        </div>
+        <div class="flex flex-wrap justify-content items-stretch text-left my-4">
+            {{ range $item := .Params.learn.items }}
+                <div class="w-full lg:w-1/2 p-3">
+                    <div class=" card h-full bg-white p-12">
+                        <div>
+                            <h5>{{ $item.title }}</h5>
+                        </div>
+                        <div class="mt-6">
+                            <p>{{ $item.description | markdownify }}</p>
+                        </div>
+                        {{ range $button := $item.buttons }}
+                            <div class="my-2 py-4 z-10 relative">
+                                <a href="{{ $button.link }}" class="z-10 btn-{{ $button.type }}">{{ $button.action }}</a>
+                            </div>
+                        {{ end }}
+                    </div>
+                </div>
+            {{ end }}
+        </div>
+    </section>
+{{ end }}

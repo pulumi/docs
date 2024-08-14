@@ -32,6 +32,12 @@ To generate an update plan run `pulumi preview --save-plan=plan.json`. The plan 
 
 To use an update plan run `pulumi up --plan=plan.json`, this will constrain the update to only the operations that were saved to the plan.
 
+An update plan constrains the pulumi up operation to allow only the changes described in the plan. No other changes will be applied.
+
+It's important to note that the plan is not evaluated in an all-or-nothing fashion before changes are applied. Instead, update operations run in batches as the program execution progresses and resources resolve their input values. At any point, if any discrepancy between the plan and the actual execution is detected, the `pulumi up` operation will immediately fail, preventing any unexpected updates.
+
+This approach ensures that only planned changes are applied while allowing for the natural resolution of resource dependencies during execution.
+
 ## Limitations
 
 Update plans can only record information that is available at preview time. This means there are some program

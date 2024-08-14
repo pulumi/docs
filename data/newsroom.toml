@@ -1,3 +1,8 @@
+[[releases]]
+date = "12th June 2024"
+title = "Pulumi Copilot Delivers Unparalleled Speed with Generative AI-Powered Intelligent Cloud Management"
+summary = "Pulumi Copilot Delivers Unparalleled Speed with Generative AI-Powered Intelligent Cloud Management."
+url = "https://info.pulumi.com/press-release/announcing-pulumi-copilot"
 
 [[releases]]
 date = "24th April 2024"
@@ -166,6 +171,18 @@ date = "18th June 2018"
 title = "Pulumi Launches Cloud Development Platform to Help Teams Get Code to the Cloud Faster"
 summary = "Company funded by Madrona Venture Group and Tola Capital to help companies accelerate cloud application development and infrastructure delivery. "
 url = "https://info.pulumi.com/press-release/pulumi-launches-cloud-development-platform-to-help-teams-get-code-to-the-cloud-faster/"
+
+[[coverage]]
+date = "12 June 2024"
+title = "Pulumi Adds Generative AI CoPilot to Manage Cloud Infrastructure"
+img = "/logos/press/devops.png"
+url = "https://devops.com/pulumi-adds-generative-ao-copilot-to-manage-cloud-infrastructure/"
+
+[[coverage]]
+date = "25 April 2024"
+title = "Detecting drift and dealing with the Silicon Valley mindset"
+img = "/logos/press/theregister.png"
+url = "https://www.theregister.com/2024/04/25/detecting_driftt_and_dealng_with/"
 
 [[coverage]]
 date = "15th March 2024"

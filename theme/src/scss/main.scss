@@ -58,7 +58,9 @@
 @import "marketing/signup";
 @import "marketing/workshop-signup";
 @import "marketing/slot-machine";
+@import "marketing/stacked-carousel";
 @import "docs/registry";
+@import "docs/tutorials";
 @import "tables";
 @import "tiles";
 @import "toggle";
@@ -366,14 +368,13 @@ section.newsletter-input pulumi-hubspot-form input.hs-input {
 }
 
 #segment-consent-manager {
-    @apply fixed bottom-0 right-0 left-0 text-black;
-    z-index: 100;
 
     > div:first-child {
-        @apply w-full px-3;
+        @apply text-black fixed bottom-0 right-0 left-0 p-2 m-4 border-2 border-violet-600 rounded-lg shadow-lg;
+        z-index: 99999;
 
         @screen lg {
-            @apply w-1/3 float-right mb-2 mr-2 rounded-lg shadow-lg overflow-hidden px-4 py-2;
+            @apply w-1/3 left-auto m-4 overflow-hidden p-2;
         }
     }
 
@@ -386,7 +387,7 @@ section.newsletter-input pulumi-hubspot-form input.hs-input {
     }
 
     p {
-        @apply text-black text-left text-sm pr-8 pb-2;
+        @apply text-black text-left text-sm pr-2;
 
         a {
             text-decoration: none;
@@ -395,12 +396,15 @@ section.newsletter-input pulumi-hubspot-form input.hs-input {
     }
 
     button {
-        @apply text-black font-bold no-underline;
-        top: 10%;
+        @apply font-bold no-underline;
+    }
+
+    button[aria-label="Close"] {
+        @apply text-violet-800 mt-4 top-0 right-0 text-lg;
     }
 
     .manage-cookies-btn {
-        @apply bg-white text-violet-600 border-2 border-violet-600 no-underline p-3 rounded-md;
+        @apply mt-2 bg-violet-600 text-white font-bold border-2 border-violet-600 no-underline p-3 rounded-md;
         @include transition;
 
         &.disabled {
@@ -408,11 +412,11 @@ section.newsletter-input pulumi-hubspot-form input.hs-input {
         }
 
         &:hover {
-            @apply bg-violet-100 text-violet-600;
+            @apply bg-violet-100 text-violet-700;
         }
 
         &:focus {
-            @apply bg-violet-200 text-violet-600;
+            @apply bg-violet-100 text-violet-200;
         }
     }
 }

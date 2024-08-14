@@ -1,0 +1,188 @@
+.stacked-carousel-container {
+    height: 240px;
+
+    .carousel-static {
+        width: 100%;
+        overflow: hidden;
+        position: absolute;
+        white-space: nowrap;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .carousel-left-initial, .carousel-left-primary, .carousel-left-secondary {
+        left: 100%;
+        width: 100%;
+        overflow: hidden;
+        position: absolute;
+        white-space: nowrap;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .carousel-left-initial {
+        left: 0;
+        animation: scroll-horizontal-middle 20s linear;
+        animation-fill-mode: forwards;
+    }
+
+    .carousel-left-primary {
+        animation: scroll-horizontal 40s linear infinite;
+    }
+
+    .carousel-left-secondary {
+        animation: scroll-horizontal 40s linear infinite;
+        animation-delay: 20s;
+    }
+
+    .carousel-right-initial, .carousel-right-primary, .carousel-right-secondary {
+        left: -100%;
+        width: 100%;
+        overflow: hidden;
+        position: absolute;
+        white-space: nowrap;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .carousel-right-initial {
+        left: 0;
+        animation: scroll-horizontal-reverse-middle 20s linear;
+        animation-fill-mode: forwards;
+    }
+
+    .carousel-right-primary {
+        animation: scroll-horizontal-reverse 40s linear infinite;
+    }
+
+    .carousel-right-secondary {
+        animation: scroll-horizontal-reverse 40s linear infinite;
+        animation-delay: 20s
+    }
+
+    @keyframes scroll-horizontal {
+        0% {
+            left: 100%;
+        }
+
+        100% {
+            left: -100%
+        }
+    }
+
+    @keyframes scroll-horizontal-middle {
+        0% {
+            left: 0;
+        }
+
+        100% {
+            left: -100%;
+        }
+    }
+
+    @keyframes scroll-horizontal-reverse {
+        0% {
+            left: -100%;
+        }
+
+        100% {
+            left: 100%
+        }
+    }
+
+    @keyframes scroll-horizontal-reverse-middle {
+        0% {
+            left: 0;
+        }
+
+        100% {
+            left: 100%;
+        }
+    }
+}
+
+.stacked-carousel-container-single {
+    height: 80px;
+
+    .carousel-left-primary, .carousel-left-secondary {
+        width: 300%;
+        overflow: hidden;
+        position: absolute;
+        white-space: nowrap;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .carousel-left-primary {
+        left: 0;
+        animation: single-scroll-horizontal-middle 60s linear infinite;
+    }
+
+    .carousel-left-secondary {
+        left: 300%;
+        animation: single-scroll-horizontal 60s linear infinite;
+    }
+
+    @keyframes single-scroll-horizontal {
+        0% {
+            left: 300%;
+        }
+
+        100% {
+            left: 0%
+        }
+    }
+
+    @keyframes single-scroll-horizontal-middle {
+        0% {
+            left: 0;
+        }
+
+        100% {
+            left: -300%;
+        }
+    }
+}
+
+.stacked-carousel-container-single-mobile {
+    height: 80px;
+
+    .carousel-left-primary-mobile, .carousel-left-secondary-mobile {
+        width: 300%;
+        overflow: hidden;
+        position: absolute;
+        white-space: nowrap;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .carousel-left-primary-mobile {
+        left: 0;
+        animation: single-scroll-horizontal-middle 30s linear infinite;
+    }
+
+    .carousel-left-secondary-mobile {
+        left: 300%;
+        animation: single-scroll-horizontal 30s linear infinite;
+    }
+
+    @keyframes single-scroll-horizontal-mobile {
+        0% {
+            left: 300%;
+        }
+
+        100% {
+            left: 0%
+        }
+    }
+
+    @keyframes single-scroll-horizontal-middle-mobile {
+        0% {
+            left: 0;
+        }
+
+        100% {
+            left: -300%;
+        }
+    }
+}

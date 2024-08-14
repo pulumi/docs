@@ -39,7 +39,7 @@ main:
     youtube_url:
 
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2024-06-18T09:00:00.000-07:00
+    sortable_date: 2024-08-07T09:00:00.000-07:00
 
     # Duration of the webinar.
     duration: 90 minutes
@@ -61,13 +61,16 @@ main:
         - name: Diana Esteves
           role: Solutions Architect, Pulumi
           photo: /images/team/diana-esteves.jpg
+        - name: Lizzie Siegle
+          role: Developer Advocate, Cloudflare
+          photo: /images/people/lizzie-siegle.jpg
 
     # case-sensitive
     tags:
         level: Beginner # Beginner, Intermediate, Advanced
-        topics: []
+        topics: ["GitOps"]
         languages: ["TypeScript"]
-        clouds: ["Cloudflare", "GitOps"]
+        clouds: ["Cloudflare"]
 
 # The right hand side form section.
 form:

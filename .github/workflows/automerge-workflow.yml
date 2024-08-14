@@ -7,6 +7,7 @@ jobs:
       - if: env.GITHUB_TOKEN != null
         env:
           GITHUB_TOKEN: ${{ secrets.PULUMI_BOT_TOKEN }}
+          LOG: "TRACE"
           MERGE_COMMIT_MESSAGE: pull-request-title
           MERGE_FORKS: "false"
           MERGE_LABELS: automation/merge
@@ -14,10 +15,11 @@ jobs:
           MERGE_REMOVE_LABELS: automation/merge
           MERGE_RETRIES: "50"
           MERGE_RETRY_SLEEP: "60000"
+          MERGE_FILTER_AUTHOR: "pulumi-bot"
           UPDATE_LABELS: automation/update
           UPDATE_METHOD: rebase
         name: Automerge
-        uses: pascalgn/automerge-action@v0.13.1
+        uses: pascalgn/automerge-action@v0.16.3
   notify:
     if: failure()
     name: Send slack notification

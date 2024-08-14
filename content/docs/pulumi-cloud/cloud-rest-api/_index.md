@@ -53,6 +53,34 @@ Content-Type: application/json
 
 ## Stacks
 
+### Create Stack
+
+Creates a new stack in the Pulumi Cloud. If the project does not exist, it will also be created.
+
+```
+POST /api/stacks/{organization}/{project}
+```
+
+#### Parameters
+
+| Parameter      | Type   | In   | Description                                                                                      |
+|----------------|--------|------|--------------------------------------------------------------------------------------------------|
+| `organization` | string | path | Organization name                                                                                |
+| `project`      | string | path | Name of the project to create the stack under. If the project doesn't exist, it will be created. |
+| `stackName`    | string | body | Name of the stack being created.                                                                 |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  --request POST \
+  --data '{"stackName":"{stackName}"}' \
+  https://api.pulumi.com/api/stacks/{organization}/{project}
+```
+
 ### List Stacks
 
 Lists stacks available to the authenticated user.
@@ -455,6 +483,120 @@ Status: 204 OK
 
 ```
 EMPTY RESPONSE BODY
+```
+
+<!-- ###################################################################### -->
+
+## Stack Policy Information
+
+### Get Stack Policy Groups
+
+Get Policy Groups associated with a stack.
+
+```
+GET /api/stacks/{organization}/{project}/{stack}/policygroups
+```
+
+#### Parameters
+
+| Parameter      | Type   | In   | Description       |
+|----------------|--------|------|-------------------|
+| `organization` | string | path | organization name |
+| `project`      | string | path | project name      |
+| `stack`        | string | path | stack name        |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  https://api.pulumi.com/api/stacks/{organization}/{project}/{stack}/policygroups
+```
+
+#### Default response
+
+```
+Status: 200 OK
+```
+
+```
+{
+  "policyGroups": [
+    {
+      "name": "continuous-policy",
+      "isOrgDefault": false,
+      "numStacks": 1,
+      "numEnabledPolicyPacks": 1
+    }
+  ]
+}
+```
+
+### Get Stack Policy Packs
+
+Get Policy Packs associated with a stack.
+
+```
+GET /api/stacks/{organization}/{project}/{stack}/policypacks
+```
+
+#### Parameters
+
+| Parameter      | Type   | In   | Description       |
+|----------------|--------|------|-------------------|
+| `organization` | string | path | organization name |
+| `project`      | string | path | project name      |
+| `stack`        | string | path | stack name        |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  https://api.pulumi.com/api/stacks/{organization}/{project}/{stack}/policypacks
+```
+
+#### Default response
+
+```
+Status: 200 OK
+```
+
+```
+{
+  "requiredPolicies": [
+    {
+      "name": "continuous-policy",
+      "version": 3,
+      "versionTag": "0.0.3",
+      "displayName": "",
+      "packLocation": "REDACTED",
+      "config": {
+        "all": {
+          "enforcementLevel": "mandatory"
+        },
+        "continuous-policy": {
+          "enforcementLevel": "mandatory",
+          "policies": [
+            {
+              "assertion": {
+                "operator": "eq",
+                "value": 0
+              },
+              "label": "No node12 Lambdas",
+              "mode": "ai",
+              "query": "nodejs version 12"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
 ```
 
 <!-- ###################################################################### -->
@@ -1242,6 +1384,132 @@ Status: 200 OK
 
 <!-- ###################################################################### -->
 
+## Personal Access Tokens
+
+<!-- ###################################################################### -->
+
+### List Personal Access Tokens
+
+```
+GET /api/user/tokens
+```
+
+#### Parameters
+
+| Parameter           | Type   | In    | Description                                                                                |
+|---------------------|--------|-------|--------------------------------------------------------------------------------------------|
+| `show_expired`      | string | query | **Optional.** whether to return previously expired tokens with results. Defaults to false. |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  https://api.pulumi.com/api/user/tokens?show_expired=true
+```
+
+#### Default response
+
+```
+Status: 200 OK
+```
+
+```
+{
+  "tokens": [
+    {
+      "id": "b02514e2-ddf6-41dc-8e16-6abf3914e68f",
+      "description": "Generated by pulumi login on workstation at 20 May 21 12:04 EDT",
+      "lastUsed": 1627590233
+    },
+    {
+      "id": "ad9f7508-493a-4fbe-9918-62f1f71a53f8",
+      "description": "cicd-server",
+      "lastUsed": 1606860942
+    }
+  ]
+}
+```
+
+<!-- ###################################################################### -->
+
+### Create Personal Access Token
+
+```
+POST /api/user/tokens
+```
+
+#### Parameters
+
+| Parameter     | Type   | In   | Description                                                                                                                        |
+|---------------|--------|------|------------------------------------------------------------------------------------------------------------------------------------|
+| `description` | string | body | Description of the access token.                                                                                                   |
+| `expires`     | int    | body | **Optional.** unix epoch timestamp at which the token should expire, up to two years from present. 0 for no expiry. Defaults to 0. |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  --request POST \
+  --data '{"description":"{description}", "expires": 0}' \
+  https://api.pulumi.com/api/user/tokens
+```
+
+#### Default response
+
+```
+Status: 204 OK
+```
+
+```
+{
+  "id": "74529ccd-27c0-40f7-bc4a-589f145ba67f",
+  "tokenValue": "pul-75a564ac7f3a48079a0c448c1e1ec95c4cfed141"
+}
+```
+
+<!-- ###################################################################### -->
+
+### Delete Personal Access Token
+
+```
+DELETE /api/user/tokens/{tokenId}
+```
+
+#### Parameters
+
+| Parameter | Type   | In   | Description          |
+|-----------|--------|------|----------------------|
+| `tokenId` | string | path | the token identifier |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  --request DELETE \
+  https://api.pulumi.com/api/user/tokens/{tokenId}
+```
+
+#### Default response
+
+```
+Status: 204 OK
+```
+
+```
+EMPTY RESPONSE BODY
+```
+
+<!-- ###################################################################### -->
+
 ## Organizations
 
 <!-- ###################################################################### -->
@@ -1355,6 +1623,44 @@ EMPTY RESPONSE BODY
 
 <!-- ###################################################################### -->
 
+### Update User's Role
+
+```
+PATCH /api/orgs/{organization}/members/{username}
+```
+
+#### Parameters
+
+| Parameter      | Type   | In    | Description                                                  |
+|----------------|--------|-------|--------------------------------------------------------------|
+| `organization` | string | query | organization name to filter stacks by                        |
+| `username`     | string | path  | user name                                                    |
+| `role`         | string | body  | The role to assign - possible values are `admin` or `member` |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  --request PATCH \
+  --data '{"role":"{role}"}' \
+  https://api.pulumi.com/api/orgs/{organization}/members/{username}
+```
+
+#### Default response
+
+```
+Status: 200 OK
+```
+
+```
+EMPTY RESPONSE BODY
+```
+
+<!-- ###################################################################### -->
+
 ### Remove User from Organization
 
 ```
@@ -1391,6 +1697,133 @@ EMPTY RESPONSE BODY
 
 <!-- ###################################################################### -->
 
+### List Organization Access Tokens
+
+```
+GET /api/orgs/{org}/tokens
+```
+
+#### Parameters
+
+| Parameter           | Type   | In    | Description                                                                                |
+|---------------------|--------|-------|--------------------------------------------------------------------------------------------|
+| `show_expired`      | string | query | **Optional.** whether to return previously expired tokens with results. Defaults to false. |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  https://api.pulumi.com/api/orgs/{org}/tokens?show_expired=true
+```
+
+#### Default response
+
+```
+Status: 200 OK
+```
+
+```
+{
+  "tokens": [
+    {
+      "id": "b02514e2-ddf6-41dc-8e16-6abf3914e68f",
+      "description": "CI/CD token - Feb 2024",
+      "expires": 1719333788,
+      "lastUsed": 1627590233,
+      "name": "Feb2024CICD"
+    },
+    {
+      "id": "ad9f7508-493a-4fbe-9918-62f1f71a53f8",
+      "description": "An org token created in Feb 2023",
+      "expires": 0,
+      "lastUsed": 1606860942,
+      "name": "Feb2023CICD"
+    }
+  ]
+}
+```
+
+<!-- ###################################################################### -->
+
+### Create Organization Access Token
+
+```
+POST /api/orgs/{org}/tokens
+```
+
+#### Parameters
+
+| Parameter     | Type   | In   | Description                                                                                                                        |
+|---------------|--------|------|------------------------------------------------------------------------------------------------------------------------------------|
+| `description` | string | body | Description of the access token.                                                                                                   |
+| `name`        | string | body | Unique name of the access token, up to 40 characters. Must be unique across the org, including deleted tokens.                     |
+| `expires`     | int    | body | **Optional.** unix epoch timestamp at which the token should expire, up to two years from present. 0 for no expiry. Defaults to 0. |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  --request POST \
+  --data '{"description": "{description}", "name": "{unique_name}", "expires": 0}' \
+  https://api.pulumi.com/api/orgs/{org}/tokens
+```
+
+#### Default response
+
+```
+Status: 204 OK
+```
+
+```
+{
+  "id": "74529ccd-27c0-40f7-bc4a-589f145ba67f",
+  "tokenValue": "pul-75a564ac7f3a48079a0c448c1e1ec95c4cfed141"
+}
+```
+
+<!-- ###################################################################### -->
+
+### Delete Organization Access Token
+
+```
+DELETE /api/orgs/{org}/tokens/{tokenId}
+```
+
+#### Parameters
+
+| Parameter | Type   | In   | Description          |
+|-----------|--------|------|----------------------|
+| `tokenId` | string | path | the token identifier |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  --request DELETE \
+  https://api.pulumi.com/api/orgs/{org}/tokens/{tokenId}
+```
+
+#### Default response
+
+```
+Status: 204 OK
+```
+
+```
+EMPTY RESPONSE BODY
+```
+
+<!-- ###################################################################### -->
+
 ### List Teams
 
 ```
@@ -1402,7 +1835,6 @@ GET /api/orgs/{organization}/teams
 | Parameter           | Type   | In    | Description                                                                                                  |
 |---------------------|--------|-------|--------------------------------------------------------------------------------------------------------------|
 | `organization`      | string | path  | organization name                                                                                            |
-| `continuationToken` | string | query | **Optional.** the continuation token to use for retrieving the next set of results if results were truncated |
 
 #### Example
 
@@ -1662,19 +2094,17 @@ EMPTY RESPONSE BODY
 
 <!-- ###################################################################### -->
 
-### Update User's Role
+### List Team Access Tokens
 
 ```
-PATCH /api/orgs/{organization}/members/{username}
+GET /api/orgs/{org}/teams/{team}/tokens
 ```
 
 #### Parameters
 
-| Parameter      | Type   | In    | Description                                                  |
-|----------------|--------|-------|--------------------------------------------------------------|
-| `organization` | string | query | organization name to filter stacks by                        |
-| `username`     | string | path  | user name                                                    |
-| `role`         | string | body  | The role to assign - possible values are `admin` or `member` |
+| Parameter           | Type   | In    | Description                                                                                |
+|---------------------|--------|-------|--------------------------------------------------------------------------------------------|
+| `show_expired`      | string | query | **Optional.** whether to return previously expired tokens with results. Defaults to false. |
 
 #### Example
 
@@ -1683,41 +2113,7 @@ curl \
   -H "Accept: application/vnd.pulumi+8" \
   -H "Content-Type: application/json" \
   -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
-  --request PATCH \
-  --data '{"role":"{role}"}' \
-  https://api.pulumi.com/api/orgs/{organization}/members/{username}
-```
-
-#### Default response
-
-```
-Status: 200 OK
-```
-
-```
-EMPTY RESPONSE BODY
-```
-
-<!-- ###################################################################### -->
-
-### List User Access Tokens
-
-```
-GET /api/user/tokens
-```
-
-#### Parameters
-
-None
-
-#### Example
-
-```bash
-curl \
-  -H "Accept: application/vnd.pulumi+8" \
-  -H "Content-Type: application/json" \
-  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
-  https://api.pulumi.com/api/user/tokens
+  https://api.pulumi.com/api/orgs/{org}/teams/{team}/tokens?show_expired=true
 ```
 
 #### Default response
@@ -1731,13 +2127,17 @@ Status: 200 OK
   "tokens": [
     {
       "id": "b02514e2-ddf6-41dc-8e16-6abf3914e68f",
-      "description": "Generated by pulumi login on workstation at 20 May 21 12:04 EDT",
-      "lastUsed": 1627590233
+      "description": "CI/CD token for AI team - Feb 2024",
+      "expires": 1719333788,
+      "lastUsed": 1627590233,
+      "name": "Feb2024CICD-AI"
     },
     {
       "id": "ad9f7508-493a-4fbe-9918-62f1f71a53f8",
-      "description": "cicd-server",
-      "lastUsed": 1606860942
+      "description": "A team token for the AI team, created in Feb 2023",
+      "expires": 0,
+      "lastUsed": 1606860942,
+      "name": "Feb2023CICD-AI"
     }
   ]
 }
@@ -1745,17 +2145,19 @@ Status: 200 OK
 
 <!-- ###################################################################### -->
 
-### Create User Access Token
+### Create Team Access Token
 
 ```
-POST /api/user/tokens
+POST /api/orgs/{org}/teams/{team}/tokens
 ```
 
 #### Parameters
 
-| Parameter     | Type   | In   | Description                    |
-|---------------|--------|------|--------------------------------|
-| `description` | string | body | Descripton of the access token |
+| Parameter     | Type   | In   | Description                                                                                                                        |
+|---------------|--------|------|------------------------------------------------------------------------------------------------------------------------------------|
+| `description` | string | body | Description of the access token.                                                                                                   |
+| `name`        | string | body | Unique name of the access token, up to 40 characters. Must be unique across the org, including deleted tokens.                     |
+| `expires`     | int    | body | **Optional.** unix epoch timestamp at which the token should expire, up to two years from present. 0 for no expiry. Defaults to 0. |
 
 #### Example
 
@@ -1765,8 +2167,8 @@ curl \
   -H "Content-Type: application/json" \
   -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
   --request POST \
-  --data '{"description":"{description}"}' \
-  https://api.pulumi.com/api/stacks/{organization}/{project}/{stack}/tags
+  --data '{"description": "{description}", "name": "{unique_name}", "expires": 0}' \
+  https://api.pulumi.com/api/orgs/{org}/teams/{team}/tokens
 ```
 
 #### Default response
@@ -1784,10 +2186,10 @@ Status: 204 OK
 
 <!-- ###################################################################### -->
 
-### Delete User Access Token
+### Delete Team Access Token
 
 ```
-DELETE /api/user/tokens/{tokenId}
+DELETE /api/orgs/{org}/teams/{team}/tokens/{tokenId}
 ```
 
 #### Parameters
@@ -1804,7 +2206,7 @@ curl \
   -H "Content-Type: application/json" \
   -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
   --request DELETE \
-  https://api.pulumi.com/api/user/tokens/{tokenId}
+  https://api.pulumi.com/api/orgs/{org}/teams/{team}/tokens/{tokenId}
 ```
 
 #### Default response
@@ -1816,6 +2218,8 @@ Status: 204 OK
 ```
 EMPTY RESPONSE BODY
 ```
+
+<!-- ###################################################################### -->
 
 ### Create Webhook
 
@@ -2266,11 +2670,533 @@ curl \
   }
 ]
 ```
+<!-- ###################################################################### -->
+
+## Policy Groups
+
+### List Policy Groups
+
+List a summaries of policy groups by organization.
+
+```
+GET /api/orgs/{organization}/policygroups
+```
+
+#### Parameters
+
+| Parameter           | Type   | In    | Description                                                                                                  |
+|---------------------|--------|-------|--------------------------------------------------------------------------------------------------------------|
+| `organization`      | string | path  | organization name                                                                                            |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  https://api.pulumi.com/api/orgs/{organization}/policygroups
+```
+
+#### Default response
+
+```
+Status: 200 OK
+```
+
+```
+{
+  "policyGroups": [
+    {
+      "name": "continuous-policy",
+      "isOrgDefault": false,
+      "numStacks": 1,
+      "numEnabledPolicyPacks": 1
+    },
+    {
+      "name": "default-policy-group",
+      "isOrgDefault": true,
+      "numStacks": 2569,
+      "numEnabledPolicyPacks": 1
+    }
+  ]
+}
+```
+
+### Get Policy Group
+
+Get policy group information.
+
+```
+GET /api/orgs/{organization}/policygroups/{policyGroup}
+```
+
+#### Parameters
+
+| Parameter           | Type   | In    | Description                                                                                                  |
+|---------------------|--------|-------|--------------------------------------------------------------------------------------------------------------|
+| `organization`      | string | path  | organization name                                                                                            |
+| `policyGroup`      | string | path  | policy group name                                                                                            |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  https://api.pulumi.com/api/orgs/{organization}/policygroups/{policyGroup}
+```
+
+#### Default response
+
+```
+Status: 200 OK
+```
+
+```
+{
+  "name": "continuous-policy",
+  "isOrgDefault": false,
+  "stacks": [
+    {
+      "name": "global",
+      "routingProject": "continuous-policy"
+    }
+  ],
+  "appliedPolicyPacks": [
+    {
+      "name": "continuous-policy",
+      "displayName": "",
+      "version": 3,
+      "versionTag": "0.0.3",
+      "config": {
+        "all": {
+          "enforcementLevel": "mandatory"
+        },
+        "continuous-policy": {
+          "enforcementLevel": "mandatory",
+          "policies": [
+            {
+              "assertion": {
+                "operator": "eq",
+                "value": 0
+              },
+              "label": "No node12 Lambdas",
+              "mode": "ai",
+              "query": "nodejs version 12"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
+```
+
+<!-- ###################################################################### -->
+
+## Policy Packs
+
+### List Policy Packs
+
+List policy packs by organization.
+
+```
+GET /api/orgs/{organization}/policypacks
+```
+
+#### Parameters
+
+| Parameter           | Type   | In    | Description                                                                                                  |
+|---------------------|--------|-------|--------------------------------------------------------------------------------------------------------------|
+| `organization`      | string | path  | organization name                                                                                            |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  https://api.pulumi.com/api/orgs/{organization}/policypacks
+```
+
+#### Default response
+
+```
+Status: 200 OK
+```
+
+```
+{
+  "policyPacks": [
+    {
+      "name": "aws-iso27001-compliance-ready-policies-typescript",
+      "displayName": "",
+      "versions": [
+        1
+      ],
+      "versionTags": [
+        "0.0.1"
+      ]
+    },
+    {
+      "name": "aws-typescript",
+      "displayName": "",
+      "versions": [
+        1
+      ],
+      "versionTags": [
+        "0.0.1"
+      ]
+    },
+    {
+      "name": "continuous-policy",
+      "displayName": "",
+      "versions": [
+        3,
+        2,
+        1
+      ],
+      "versionTags": [
+        "0.0.3",
+        "0.0.2",
+        "0.0.1"
+      ]
+    },
+    {
+      "name": "pulumi-vanta-policies",
+      "displayName": "",
+      "versions": [
+        1
+      ],
+      "versionTags": [
+        "0.0.1"
+      ]
+    }
+  ]
+}
+```
+
+### Get Latest Policy Pack Version
+
+Get policy pack information including config schema for the latest version.
+
+```
+GET /api/orgs/{organization}/policypacks/{policyPack}/latest
+```
+
+#### Parameters
+
+| Parameter           | Type   | In    | Description                                                                                                  |
+|---------------------|--------|-------|--------------------------------------------------------------------------------------------------------------|
+| `organization`      | string | path  | organization name                                                                                            |
+| `policyPack`        | string | path  | policy pack name                                                                                             |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  https://api.pulumi.com/api/orgs/{organization}/policypacks/{policyPack}/latest
+```
+
+#### Default response
+
+```
+Status: 200 OK
+```
+
+```
+{
+  "name": "continuous-policy",
+  "displayName": "",
+  "version": 3,
+  "versionTag": "0.0.3",
+  "policies": [
+    {
+      "name": "continuous-policy",
+      "displayName": "",
+      "description": "Continuous global policies that can be configured dynamically across the entire org using Pulumi Resource Search.",
+      "enforcementLevel": "mandatory",
+      "message": "",
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "policies": {
+            "items": {
+              "properties": {
+                "assertion": {
+                  "properties": {
+                    "operator": {
+                      "enum": [
+                        "eq",
+                        "gt",
+                        "lt",
+                        "lte",
+                        "gte"
+                      ],
+                      "type": "string"
+                    },
+                    "value": {
+                      "type": "number"
+                    }
+                  },
+                  "type": "object"
+                },
+                "label": {
+                  "type": "string"
+                },
+                "mode": {
+                  "enum": [
+                    "query",
+                    "ai"
+                  ],
+                  "type": "string"
+                },
+                "query": {
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      }
+    }
+  ],
+  "applied": false
+}
+```
+
+### Get Policy Pack at Specific Version
+
+Get policy pack information including config schema for a specific version.
+
+```
+GET /api/orgs/{organization}/policypacks/{policyPack}/versions/{version}
+```
+
+#### Parameters
+
+| Parameter           | Type   | In    | Description                                                                                                  |
+|---------------------|--------|-------|--------------------------------------------------------------------------------------------------------------|
+| `organization`      | string | path  | organization name                                                                                            |
+| `policyPack`        | string | path  | policy pack name                                                                                             |
+| `version`           | string | path  | version identifier                                                                                           |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  https://api.pulumi.com/api/orgs/{organization}/policypacks/{policyPack}/versions/{version}
+```
+
+#### Default response
+
+```
+Status: 200 OK
+```
+
+```
+{
+  "name": "continuous-policy",
+  "displayName": "",
+  "version": 2,
+  "versionTag": "0.0.2",
+  "policies": [
+    {
+      "name": "continuous-policy",
+      "displayName": "",
+      "description": "Continuous global policies that can be configured dynamically across the entire org using Pulumi Resource Search.",
+      "enforcementLevel": "mandatory",
+      "message": "",
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "policies": {
+            "items": {
+              "properties": {
+                "assertion": {
+                  "properties": {
+                    "operator": {
+                      "enum": [
+                        "eq",
+                        "gt",
+                        "lt",
+                        "lte",
+                        "gte"
+                      ],
+                      "type": "string"
+                    },
+                    "value": {
+                      "type": "number"
+                    }
+                  },
+                  "type": "object"
+                },
+                "label": {
+                  "type": "string"
+                },
+                "mode": {
+                  "enum": [
+                    "query",
+                    "ai"
+                  ],
+                  "type": "string"
+                },
+                "query": {
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      }
+    }
+  ],
+  "applied": false
+}
+```
+
+### Get Policy Pack Schema at Specific Version
+
+Get policy pack config schema for a specific version.
+
+```
+GET /api/orgs/{organization}/policypacks/{policyPack}/versions/{version}/schema
+```
+
+#### Parameters
+
+| Parameter           | Type   | In    | Description                                                                                                  |
+|---------------------|--------|-------|--------------------------------------------------------------------------------------------------------------|
+| `organization`      | string | path  | organization name                                                                                            |
+| `policyPack`        | string | path  | policy pack name                                                                                             |
+| `version`           | string | path  | version identifier                                                                                           |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  https://api.pulumi.com/api/orgs/{organization}/policypacks/{policyPack}/versions/{version}/schema
+```
+
+#### Default response
+
+```
+Status: 200 OK
+```
+
+```
+{
+  "configSchema": {
+    "all": {
+      "properties": {
+        "enforcementLevel": {
+          "type": "string",
+          "enum": [
+            "advisory",
+            "mandatory",
+            "remediate",
+            "disabled"
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "continuous-policy": {
+      "properties": {
+        "enforcementLevel": {
+          "enum": [
+            "advisory",
+            "mandatory",
+            "remediate",
+            "disabled"
+          ],
+          "type": "string"
+        },
+        "policies": {
+          "items": {
+            "properties": {
+              "assertion": {
+                "properties": {
+                  "operator": {
+                    "enum": [
+                      "eq",
+                      "gt",
+                      "lt",
+                      "lte",
+                      "gte"
+                    ],
+                    "type": "string"
+                  },
+                  "value": {
+                    "type": "number"
+                  }
+                },
+                "type": "object"
+              },
+              "label": {
+                "type": "string"
+              },
+              "mode": {
+                "enum": [
+                  "query",
+                  "ai"
+                ],
+                "type": "string"
+              },
+              "query": {
+                "type": "string"
+              }
+            },
+            "type": "object"
+          },
+          "type": "array"
+        }
+      },
+      "type": "object"
+    }
+  }
+}
+```
+<!-- ###################################################################### -->
 
 ## Environments
 
 {{< notes >}}
-Pulumi ESC (Environments, Secrets, and Configuration) and its associated REST API endpoints are  currently in public preview.
+Pulumi ESC (Environments, Secrets, and Configuration) and its associated REST API endpoints are currently in public preview.
 {{< /notes >}}
 
 <!-- ###################################################################### -->
@@ -3256,6 +4182,547 @@ Timestamp,Name,Login,Event,Description,SourceIP,RequireOrgAdmin,RequireStackAdmi
 2021-04-11T23:09:36Z,First Last,user1,Member Role Changed,"Changed organization role for ""user2"" to admin",192.168.10.11,true,false,false
 2021-04-11T23:09:25Z,First Last,user1,Member Role Changed,"Changed organization role for ""user3"" to admin",192.168.10.11,true,false,false
 2021-04-11T21:09:52Z,First Last,user1,Secret Decrypted,"Decrypted secret value for stack ""demo-aws-ts-webserver/dev-user1"" (cipher text suffix: ""tbpiX4c="")",192.168.10.11,false,false,false
+```
+
+## Deployment runners
+
+<!-- ###################################################################### -->
+
+### Register a new pool
+
+```
+POST /api/orgs/{organization}/agent-pools
+```
+
+#### Parameters
+
+| Parameter           | Type      | In    | Description         |
+|---------------------|-----------|-------|---------------------|
+| `organization`      | string    | path  | organization name   |
+| `name`              | string    | body  | pool name           |
+| `description`       | string    | body  | pool description    |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  --request POST \
+  --data '{ "name":"Production", "description": "Pool for the production account" }' \
+  https://api.pulumi.com/api/orgs/{organization}/agent-pools
+```
+
+#### Default response
+
+```
+Status: 200 OK
+```
+
+```
+{
+  "id": "12345678-8102-447f-b246-e9ec85786e23",
+  "tokenValue": "pul-75a564ac7f3a48079a0c448c1e1ec95c4cfed141"
+}
+```
+
+### Update a pool
+
+```
+PATCH /api/orgs/{organization}/agent-pools/{poolId}
+```
+
+#### Parameters
+
+| Parameter           | Type      | In    | Description         |
+|---------------------|-----------|-------|---------------------|
+| `organization`      | string    | path  | organization name   |
+| `poolId`            | string    | path  | pool id to update   |
+| `name`              | string    | body  | pool name           |
+| `description`       | string    | body  | pool description    |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  --request PATCH \
+  --data '{ "name":"Production", "description": "Pool for the production account" }' \
+  https://api.pulumi.com/api/orgs/{organization}/agent-pools/{poolId}
+```
+
+#### Default response
+
+```
+Status: 200 OK
+```
+
+```
+{
+  "name":"Production",
+  "description": "Pool for the production account"
+}
+```
+
+### Delete a pool
+
+```
+DELETE /api/orgs/{organization}/agent-pools/{poolId}
+```
+
+#### Parameters
+
+| Parameter           | Type      | In    | Description         |
+|---------------------|-----------|-------|---------------------|
+| `organization`      | string    | path  | organization name   |
+| `poolId`            | string    | path  | pool id to delete   |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  --request DELETE \
+  https://api.pulumi.com/api/orgs/{organization}/agent-pools/{poolId}
+```
+
+#### Default response
+
+```
+Status: 204 OK
+```
+
+### Get pool details
+
+```
+GET /api/orgs/{organization}/agent-pools/{poolId}
+```
+
+#### Parameters
+
+| Parameter           | Type      | In    | Description         |
+|---------------------|-----------|-------|---------------------|
+| `organization`      | string    | path  | organization name   |
+| `poolId`            | string    | path  | pool id to fetch    |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  https://api.pulumi.com/api/orgs/{organization}/agent-pools/{poolId}
+```
+
+#### Default response
+
+```
+Status: 200 OK
+```
+
+```
+{
+  "created": 1715701863000,
+  "id": "12345678-8102-447f-b246-e9ec85786e23",
+  "name":"Production",
+  "description": "Pool for the production account",
+  "agents": [
+    {
+      "version": "v1.1.0",
+      "hostname": "private-ipv4-address.kind.internal",
+      "ip": "192.168.0.17",
+      "pid": "58188",
+      "lastSeen": 1719498194000,
+      "status": "online"
+    }
+  ]
+}
+```
+
+### List registered pools
+
+```
+GET /api/orgs/{organization}/agent-pools
+```
+
+#### Parameters
+
+| Parameter           | Type      | In    | Description         |
+|---------------------|-----------|-------|---------------------|
+| `organization`      | string    | path  | organization name   |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  https://api.pulumi.com/api/orgs/{organization}/agent-pools
+```
+
+#### Default response
+
+```
+Status: 200 OK
+```
+
+```
+{
+  "agentPools": [
+    {
+      "created": 1715701863000,
+      "id": "12345678-8102-447f-b246-e9ec85786e23",
+      "name":"Production",
+      "description": "Pool for the production account",
+      "lastSeen": 1715796999,
+      "status": "online",
+      "lastDeployment": 1715796961
+    }
+  ]
+}
+```
+
+## OIDC Issuers
+
+<!-- ###################################################################### -->
+
+### Register a new issuer
+
+```
+POST /api/orgs/{organization}/oidc/issuers
+```
+
+#### Parameters
+
+| Parameter           | Type          | In    | Description         |
+|---------------------|---------------|-------|---------------------|
+| `organization`      | string        | path  | organization name   |
+| `name`              | string        | body  | oidc issuer name    |
+| `url`               | string        | body  | issuer base url (this will be used as a base to build the OIDC configuration url, `url + /.well-known/openid-configuration`) |
+| `thumbprints`       | array[string] | body  | **Optional.** issuer TLS certificate thumbprints |
+| `maxExpiration`     | int           | body  | **Optional.** max expiration for tokens issued for this issuer in seconds    |
+| `jwks`              | json ([jwks format](https://datatracker.ietf.org/doc/html/rfc7517)) | body  | **Optional.** JWK Set from the OIDC issuer    |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  --request POST \
+  --data '{ "name":"GitHub", "url": "https://token.actions.githubusercontent.com", "maxExpiration": 3600 }' \
+  https://api.pulumi.com/api/orgs/{organization}/oidc/issuers
+```
+
+#### Default response
+
+```
+Status: 200 OK
+```
+
+```
+{
+
+  "id": "e9a13d0e-798e-4e33-bab2-dde06da317bf",
+  "name": "github",
+  "url": "https://token.actions.githubusercontent.com",
+  "issuer": "https://token.actions.githubusercontent.com",
+  "created": "2024-04-19 15:07:54.693",
+  "thumbprints": [
+      "2b6030088e8d08fcd61b8b897019f2d99f4b9a0f7b465b065c2b90e1c53bc07d"
+  ],
+  "maxExpiration": 3600,
+}
+```
+
+### Update an issuer
+
+```
+PATCH /api/orgs/{organization}/oidc/issuers/{issuerId}
+```
+
+#### Parameters
+
+| Parameter           | Type          | In    | Description         |
+|---------------------|---------------|-------|---------------------|
+| `organization`      | string        | path  | organization name   |
+| `issuerId`          | string        | path  | issuer id to update |
+| `name`              | string        | body  | oidc issuer name    |
+| `thumbprints`       | array[string] | body  | **Optional.** issuer TLS certificate thumbprints |
+| `maxExpiration`     | int           | body  | **Optional.** max expiration for tokens issued for this issuer in seconds    |
+| `jwks`              | json ([jwks format](https://datatracker.ietf.org/doc/html/rfc7517)) | body  | **Optional.** JWK Set from the OIDC issuer    |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  --request PATCH \
+  --data '{ "name":"GitHub", "maxExpiration": 3600 }' \
+  https://api.pulumi.com/api/orgs/{organization}/oidc/issuers/{issuerId}
+```
+
+#### Default response
+
+```
+Status: 200 OK
+```
+
+```
+{
+  "id": "e9a13d0e-798e-4e33-bab2-dde06da317bf",
+  "name": "github",
+  "url": "https://token.actions.githubusercontent.com",
+  "issuer": "https://token.actions.githubusercontent.com",
+  "created": "2024-04-19 15:07:54.693",
+  "modified": "2024-04-19 15:07:54.693"
+  "thumbprints": [
+      "2b6030088e8d08fcd61b8b897019f2d99f4b9a0f7b465b065c2b90e1c53bc07d"
+  ],
+  "maxExpiration": 3600,
+  "lastUsed": 1627590233
+}
+```
+
+### Delete an issuer
+
+```
+DELETE /api/orgs/{organization}/oidc/issuers/{issuerId}
+```
+
+#### Parameters
+
+| Parameter           | Type          | In    | Description         |
+|---------------------|---------------|-------|---------------------|
+| `organization`      | string        | path  | organization name   |
+| `issuerId`          | string        | path  | issuer id to update |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  --request DELETE \
+  https://api.pulumi.com/api/orgs/{organization}/oidc/issuers/{issuerId}
+```
+
+#### Default response
+
+```
+Status: 204 OK
+```
+
+### Get an issuer
+
+```
+GET /api/orgs/{organization}/oidc/issuers/{issuerId}
+```
+
+#### Parameters
+
+| Parameter           | Type          | In    | Description         |
+|---------------------|---------------|-------|---------------------|
+| `organization`      | string        | path  | organization name   |
+| `issuerId`          | string        | path  | issuer id to update |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  https://api.pulumi.com/api/orgs/{organization}/oidc/issuers/{issuerId}
+```
+
+#### Default response
+
+```
+Status: 200 OK
+```
+
+```
+{
+  "id": "e9a13d0e-798e-4e33-bab2-dde06da317bf",
+  "name": "github",
+  "url": "https://token.actions.githubusercontent.com",
+  "issuer": "https://token.actions.githubusercontent.com",
+  "created": "2024-04-19 15:07:54.693",
+  "modified": "2024-04-19 15:07:54.693"
+  "thumbprints": [
+      "2b6030088e8d08fcd61b8b897019f2d99f4b9a0f7b465b065c2b90e1c53bc07d"
+  ],
+  "maxExpiration": 3600,
+  "lastUsed": 1627590233
+}
+```
+
+### List issuers
+
+```
+GET /api/org/{organization}/oidc/issuers
+```
+
+#### Parameters
+
+| Parameter           | Type          | In    | Description         |
+|---------------------|---------------|-------|---------------------|
+| `organization`      | string        | path  | organization name   |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  https://api.pulumi.com/api/{organization}/oidc/issuers
+```
+
+#### Default response
+
+```
+Status: 200 OK
+```
+
+```
+{
+  oidcIssuers: [
+    {
+      "id": "e9a13d0e-798e-4e33-bab2-dde06da317bf",
+      "name": "github",
+      "url": "https://token.actions.githubusercontent.com",
+      "issuer": "https://token.actions.githubusercontent.com",
+      "created": "2024-04-19 15:07:54.693",
+      "modified": "2024-04-19 15:07:54.693"
+      "maxExpiration": 3600,
+      "lastUsed": "2024-04-19 15:07:00.458"
+    }
+  ]
+}
+
+```
+
+### Get the issuer's auth policies
+
+```
+GET /api/orgs/{organization}/auth/policies/oidcissuers/{issuerId}
+```
+
+#### Parameters
+
+| Parameter           | Type          | In    | Description         |
+|---------------------|---------------|-------|---------------------|
+| `organization`      | string        | path  | organization name   |
+| `issuerId`          | string        | path  | issuer id to update |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  https://api.pulumi.com/api/orgs/{organization}/auth/policies/oidcissuers/{issuerId}
+```
+
+#### Default response
+
+```
+Status: 200 OK
+```
+
+```
+{
+  "id": "e9a13d0e-798e-4e33-bab2-dde06da317bf",
+  "version": 1,
+  "created": "2024-04-19 15:07:54.707",
+  "modified": "2024-04-19 15:07:54.707",
+  "policies": [
+    {
+      "decision": "allow",
+      "tokenType": "organization",
+      "authorizedPermissions": [],
+      "rules": {
+          "aud": "urn:pulumi:org:org-name",
+          "sub": "repo:organization/repo:*"
+      }
+    }
+  ]
+}
+```
+
+### Update the issuer's auth policies
+
+```
+PATCH /api/orgs/{organization}/auth/policies/{policyId}
+```
+
+#### Parameters
+
+| Parameter           | Type          | In    | Description         |
+|---------------------|---------------|-------|---------------------|
+| `organization`      | string        | path  | organization name   |
+| `policyId`          | string        | path  | policy id to update |
+| `policies`          | array[object] | body  | array of policies   |
+| `policy.decision`   | string        | body  | `deny`/`allow`   |
+| `policy.tokenType`  | string        | body  | `organization`/`team`/`personal`/`runner`   |
+| `policy.teamName`   | string        | body  | the team name to issue tokens on behalf of, required for team token type  |
+| `policy.userLogin`  | string        | body  | the user login to issue tokens on behalf of, required for personal token type  |
+| `policy.runnerID`   | string        | body  | the runner name to issue tokens for, required for runner token type  |
+| `policy.authorizedPermissions`  | array[string] | body  | permissions allowed by the policy (only `admin` is supported for organization tokens)  |
+| `policy.rules`      | object        | body  |  rules to match the token claims |
+
+For more information about authorization rules, refer to [its documentation](../oidc/client/#configure-the-authorization-policies).
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  --request PATCH \
+  --data '{ "policies": [{ "decision": "allow", "tokenType": "organization", "rules": { "aud": "urn:pulumi:org:org-name", "sub": "repo:organization/repo:*" }}] }' \
+  https://api.pulumi.com/api/orgs/{organization}/auth/policies/{policyId}
+```
+
+#### Default response
+
+```
+Status: 200 OK
+```
+
+```
+{
+  "id": "e9a13d0e-798e-4e33-bab2-dde06da317bf",
+  "version": 1,
+  "created": "2024-04-19 15:07:54.707",
+  "modified": "2024-04-19 15:07:54.707",
+  "policies": [
+    {
+      "decision": "allow",
+      "tokenType": "organization",
+      "authorizedPermissions": [],
+      "rules": {
+          "aud": "urn:pulumi:org:org-name",
+          "sub": "repo:organization/repo:*"
+      }
+    }
+  ]
+}
 ```
 
 ## Resources Under Management (RUM)

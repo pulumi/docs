@@ -19,6 +19,11 @@ jobs:
         with:
           node-version: '18.x'
 
+      - uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.126.0'
+          extended: true
+
       - uses: algolia/setup-algolia-cli@master
 
       - name: Run make check_search_urls

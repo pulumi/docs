@@ -3,6 +3,35 @@
 {{ end }}
 
 {{ define "main" }}
+    {{ if .Params.quote_block }}
+        <div class="container mx-auto max-w-7xl px-8 pb-16 md:px-0 text-center justify-center align-middle">
+            <div class="card ready-cta w-full rounded-xl p-1 gradient flex flex-col md:flex-row">
+                <div class="w-full md:w-1/2 px-24 py-8 text-center justify-center align-middle bg-purple-100 flex">
+                    <div class="pb-4 my-auto w-full flex flex-col items-center">
+                        <div class="w-40">
+                            <img src="{{ .Params.customer_logo }}" alt=".Params.customer_name" />
+                        </div>
+                        {{ if .Params.quote_block.quote }}
+                            <p class="text-lg">
+                                {{ .Params.quote_block.quote }}
+                            </p>
+                        {{ end }}
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 bg-violet-600 p-8 flex">
+                    <div class="my-auto w-full">
+                        {{ if .Params.quote_block.headline_stat }}
+                            <div class="text-6xl text-white font-extrabold my-auto pb-4">{{ .Params.quote_block.headline_stat }}</div>
+                        {{ end }}
+                        {{ if .Params.quote_block.headline }}
+                            <div class="text-xl text-white my-auto pb-8">{{ .Params.quote_block.headline }}</div>
+                        {{ end }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    {{ end }}
+
     <nav class="nav-section-sticky shadow">
         <div class="container mx-auto">
             <ul>

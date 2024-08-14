@@ -5,13 +5,13 @@ on:
       - master
 permissions:
       id-token: write   # This is required for requesting the JWT
-      contents: read    # This is required for actions/checkout
+      contents: read   # This is required for actions/checkout
 jobs:
   buildSite:
     env:
       GOPATH: ${{ github.workspace }}/go
     name: Install deps and build site
-    runs-on: ubuntu-22.04-8core
+    runs-on: ubuntu-latest
     environment: production
     steps:
 
@@ -49,7 +49,7 @@ jobs:
           PULUMI_STACK_NAME: ${{ vars.PULUMI_STACK_NAME }}
           DEPLOYMENT_ENVIRONMENT: ${{ vars.DEPLOYMENT_ENVIRONMENT }}
           SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
-          GITHUB_TOKEN: ${{ secrets.PULUMI_BOT_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ALGOLIA_APP_ID: ${{ vars.ALGOLIA_APP_ID }}
           ALGOLIA_APP_SEARCH_KEY: ${{ vars.ALGOLIA_APP_SEARCH_KEY }}
           ALGOLIA_APP_ADMIN_KEY: ${{  secrets.ALGOLIA_APP_ADMIN_KEY }}

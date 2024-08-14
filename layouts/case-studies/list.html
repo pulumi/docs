@@ -1,12 +1,42 @@
 {{ define "hero" }}
-    {{ partial "hero.html" (dict "title" .Title) }}
+    {{ partial "hero.html" (dict "title" .Title "subtitle" .Description) }}
 {{ end }}
 
 {{ define "main" }}
-    <div class="container mx-auto text-center my-16">
-        <h5 class="mx-auto max-w-xl mb-0">
-            {{ .Description }}
-        </h5>
+    <div class="my-12">
+        {{ partial "stacked-carousel.html" (dict "logos" .Params.customer_logos.logos "static" true ) }}
+    </div>
+
+    <div class="container mx-auto text-center pb-8">
+        <h3 id="customer-stories">Customer Stories</h4>
+    </div>
+
+    <div class="container mx-auto max-w-7xl px-8 pb-16 md:px-0 text-center justify-center align-middle">
+        <div class="card ready-cta w-full rounded-xl p-1 gradient flex flex-col md:flex-row">
+            <div class="w-full md:w-1/2 px-24 py-8 text-center justify-center align-middle bg-purple-100 flex">
+                <div class="pb-4 my-auto w-full flex flex-col items-center">
+                    <div class="w-56">
+                        {{ partial "customer-logo.html" (dict "logo" .Params.featured_customer.name) }}
+                    </div>
+                    <p class="text-xl">
+                        {{ .Params.featured_customer.quote }}
+                    </p>
+                </div>
+            </div>
+            <div class="w-full md:w-1/2 bg-violet-600 p-8 flex">
+                <div class="my-auto w-full">
+                    {{ if .Params.featured_customer.headline_stat }}
+                        <div class="text-6xl text-white font-extrabold my-auto pb-4">{{ .Params.featured_customer.headline_stat }}</div>
+                    {{ end }}
+                    {{ if .Params.featured_customer.headline }}
+                        <div class="text-xl text-white my-auto pb-8">{{ .Params.featured_customer.headline }}</div>
+                    {{ end }}
+                    <a class="btn-secondary" href="{{ .Params.featured_customer.name }}">
+                        Read the Story
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div class="container mx-auto max-w-xl md:max-w-4xl px-8 md:px-0">

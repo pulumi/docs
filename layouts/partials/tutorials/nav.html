@@ -1,0 +1,109 @@
+<div class="docs-list-main">
+    <div class="docs-main-nav-toggle-wrapper">
+        <div class="docs-main-nav-wrapper">
+            <div class="docs-main-nav">
+                <nav class="main-nav">
+
+                    {{ $menuItems := slice }}
+                    {{ $currentPath := .RelPermalink}}
+
+                    {{/* On the home page and collection pages, show the getting-started guides and a list of non-empty collections. */}}
+                    {{ if or (eq $currentPath "/tutorials/") (eq .Kind "term") }}
+
+                        {{ $clouds := slice }}
+                        {{ range .Site.Data.tutorials.collections }}
+                            {{ if and (.featured) (eq .type "provider") }}
+                                {{ $clouds = $clouds | append (dict "id" .id "label" .name "href" (printf "/docs/clouds/%s/get-started/" .id) ) }}
+                            {{ end }}
+                        {{ end }}
+
+                        {{ $collections := slice }}
+                        {{ range .Site.Data.tutorials.collections }}
+                            {{ if and (ne .type "provider") (ne (index $.Site.Taxonomies.collections .id) nil) }}
+                                {{ $collectionPath := (printf "/tutorials/%s/" .id) }}
+                                {{ $collections = $collections | append (dict "id" .id "label" .name "href" $collectionPath "active" (eq $collectionPath $currentPath) ) }}
+                            {{ end }}
+                        {{ end }}
+
+                        {{ $menuItems = slice
+                            (dict "id" "get-started" "label" "Get started" "href" "/docs/get-started/" "children" $clouds)
+                            (dict "id" "collections" "label" "Collections" "href" nil "children" $collections)
+                        }}
+
+                    {{/* On module pages, show the member topics and a link back to the home page. */}}
+                    {{ else if eq .Kind "section" }}
+
+                        {{ $topics := slice }}
+                        {{ range .Pages.ByWeight }}
+                            {{ $topics = $topics | append (dict "id" (path.Base .RelPermalink) "label" .Title "href" .RelPermalink) }}
+                        {{ end }}
+
+                        {{ $menuItems = slice
+                            (dict "id" (path.Base .Path) "label" "All tutorials" "href" "/tutorials/" "icon" "arrow-left")
+                            (dict "id" (path.Base .Path) "label" .Title "href" .RelPermalink "children" $topics "active" true)
+                        }}
+
+                    {{/* On module pages, show the module, sibling topics, and a link back to the home page. */}}
+                    {{ else if eq .Kind "page" }}
+
+                        {{ $topics := slice }}
+                        {{ range (where .Parent.Pages.ByWeight ".Params.listed" "ne" false) }}
+                            {{ $topics = $topics | append (dict "id" (path.Base .RelPermalink) "label" .Title "href" .RelPermalink "active" (eq .RelPermalink $currentPath)) }}
+                        {{ end }}
+
+                        {{ $menuItems = slice
+                            (dict "id" (path.Base .Path) "label" "All tutorials" "href" "/tutorials/" "icon" "arrow-left")
+                            (dict "id" (path.Base .Path) "label" .Parent.Title "href" .Parent.RelPermalink "children" $topics)
+                        }}
+
+                    {{ end }}
+
+                    {{ template "tutorials-menu" (dict "items" $menuItems) }}
+                </nav>
+            </div>
+        </div>
+        <div class="docs-nav-toggle">
+            <div class="docs-nav-toggle-icon icon icon-24-24 open-docs-main-nav"></div>
+        </div>
+    </div>
+</div>
+
+{{ define "tutorials-menu" }}
+    {{ range $item := .items }}
+        <div id="tutorials-menu toc-menu-{{ $item.id }}" class="text-black toc-header toggle-topLevel toggleVisible p-1 {{ if .active }}active{{ end }}">
+            <div class="flex items-start">
+                {{ $defaultIcon := "file" }}
+                {{ if .children }}
+                    {{ $defaultIcon = "folder-open" }}
+                {{ end }}
+                <div class="icon icon-14-14 {{ default $defaultIcon .icon }}"></div>
+            </div>
+            <div class="pl-1">
+                {{ if ne $item.href nil }}
+                    <a href="{{ $item.href }}">
+                        <span class="text-black">{{ $item.label }}</span>
+                    </a>
+                {{ else }}
+                    <span class="text-black pl-1 pr-1">{{ $item.label }}</span>
+                {{ end }}
+            </div>
+            {{ if .children }}
+                <span class="toggleButton-topLevel down">
+                    <div class="icon icon-14-14 keyboard-arrow-down-gray-14-14"></div>
+                </span>
+                <span class="toggleButton-topLevel right">
+                    <div class="icon icon-14-14 keyboard-arrow-right-gray"></div>
+                </span>
+            {{ end }}
+        </div>
+        <div class="top-level-container">
+            <ul class="expanded">
+                {{ range $child := .children }}
+                    <li class="sidenav-topic {{ if .active }}active{{ end }} mr-2">
+                        <a class="block" href="{{ $child.href }}">{{ $child.label }}</a>
+                    </li>
+                {{ end }}
+            </ul>
+        </div>
+    {{ end }}
+{{ end }}

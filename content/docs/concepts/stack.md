@@ -152,7 +152,7 @@ Tags can be deleted by running [`pulumi stack tag rm <name>`](/docs/cli/commands
 
 ## Stack outputs {#outputs}
 
-A stack can export values as stack outputs. These outputs are shown during an update, can be easily retrieved with the Pulumi CLI, and are displayed in the Pulumi Cloud. They can be used for important values like resource IDs, computed IP addresses, and DNS names.
+A stack can export values as stack outputs. These outputs are shown during an update, can be easily retrieved with the Pulumi CLI, and are displayed in Pulumi Cloud. They can be used for important values like resource IDs, computed IP addresses, and DNS names.
 
 To export values from a stack, use the following definition in the top-level of the entrypoint for your project:
 
