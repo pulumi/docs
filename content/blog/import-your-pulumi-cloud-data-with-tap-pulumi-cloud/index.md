@@ -84,3 +84,9 @@ meltano run tap-pulumi-cloud target-duckdb
 After the run finishes, you can access the exported tables and create whichever analytics you need on top of them, for example, you could combine this dataset with [tap-github](https://github.com/MeltanoLabs/tap-github) in order to calculate DORA Metrics.
 
 ![Data loaded into DuckDB](schema.png)
+
+## Orchestration
+
+Once you have this working, you'll need to establish some way of running this regularly in an automated fashion, to keep the data fresh. A popular way to do this is to use an orchestration tool such as [Airflow](https://airflow.apache.org/), [Dagster](https://dagster.io/) or [Mage](https://www.mage.ai/) (Among others) - An easy way to set up Meltano to run in this way is to use [a Docker container with your Meltano project.](https://docs.meltano.com/guide/containerization/)
+
+Another option is to use [Arch which is based on Meltano](https://arch.dev/), which path you choose will depend on your requirements and existing stack.
