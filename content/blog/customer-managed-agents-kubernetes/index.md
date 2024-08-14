@@ -23,7 +23,9 @@ Customer Managed Agents, [announced earlier this year](/blog/customer-managed-de
 - **Scalability**: Set up multiple agent pools and scale dynamically, supporting up to 150 concurrent deployments.
 - **Versatility**: Mix and match Pulumi-hosted and self-hosted deployments to suit different infrastructure needs.
 
-## Key Features of Pulumi Deployments
+### Key Features of Pulumi Deployments
+
+Customer-Managed agents support all the capabilities of [Pulumi Deployments](/docs/pulumi-cloud/deployments/) including:
 
 1. **Multiple Deployment Triggers**: Supports all Pulumi Deployment triggers such as Drift Detection, Scheduled Deployments, click to deploy, REST API, Git push to deploy, Review Stacks, and remote Automation API.
 2. **OpenID Authentication**: Fetch tokens dynamically for increased security.
