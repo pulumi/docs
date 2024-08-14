@@ -90,3 +90,14 @@ After the run finishes, you can access the exported tables and create whichever 
 Once you have this working, you'll need to establish some way of running this regularly in an automated fashion, to keep the data fresh. A popular way to do this is to use an orchestration tool such as [Airflow](https://airflow.apache.org/), [Dagster](https://dagster.io/) or [Mage](https://www.mage.ai/) (Among others) - An easy way to set up Meltano to run in this way is to use [a Docker container with your Meltano project.](https://docs.meltano.com/guide/containerization/)
 
 Another option is to use [Arch which is based on Meltano](https://arch.dev/), which path you choose will depend on your requirements and existing stack.
+
+Since each table is created with primary keys, when the process is run again, each run will "upsert" (update+insert) new data, replacing rows which match the same primary keys; e.g. stream Stacks has a primary key by `org_name, project_name and stack_name`, so if the same combination of keys arrives in the next update, the row will be updated instead of a new row being inserted.
+
+If building a landing zone with all historical changes instead of just the current status, this behavior might not be the desired one, to ignore primary keys and only insert new data, you can add this setting to meltano.yml on the plugin configuration for tap-pulumi-cloud:
+
+```yml
+    metadata:
+      '*':
+        table-key-properties: []
+        key-properties: []
+```
