@@ -1,6 +1,6 @@
 ---
 title: "Import Pulumi into your Data Warehouse with tap-pulumi-cloud"
-date: 2024-08-13T15:01:40-04:00
+date: 2024-08-14T12:00:00-07:00
 draft: false
 meta_desc: Using the Meltano Singer SDK we have expanded the tap-pulumi-cloud connector to be able to export all the pulumi cloud data into your own Data Warehouse
 meta_image: schema.png
