@@ -117,7 +117,7 @@ Here's a detailed comparison of the two:
         <td>No</td>
     </tr>
     <tr>
-        <td>Branching / Personal configs</td>
+        <td>Branching / Personal Configs</td>
         <td>Yes, environments can be forked for testing without rewriting entire environments and overriding specific values</td>
         <td>Limited, requires careful copying since secrets need to be downloaded in plaintext locally and then uploaded</td>
     </tr>
