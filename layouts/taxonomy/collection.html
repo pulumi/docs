@@ -26,7 +26,7 @@
                             {{ $perRow := 3 }}
                             {{ range $index, $item := .Pages }}
                                 <li class="lg:w-1/{{ $perRow }} {{ if ne (mod (add $index 1) $perRow) 0 }}lg:pr-4{{ end }}">
-                                    <div class="bg-white shadow-lg p-6 border rounded-md border-gray-200 w-full">
+                                    <div class="bg-white shadow-lg p-6 border rounded-md border-gray-200 w-full h-full">
                                         <div class="mb-2 pb-2 border-b border-gray-200">
                                             <h3 class="no-anchor font-normal text-xl flex items-center">
                                                 <a class="text-gray-800" href="{{ $item.RelPermalink }}">
