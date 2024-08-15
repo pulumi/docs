@@ -101,3 +101,64 @@ If building a landing zone with all historical changes instead of just the curre
         table-key-properties: []
         key-properties: []
 ```
+
+## Generate metrics
+
+With all of the data in one place, you can generate metrics based on Pulumi data, and combine it with other data sources, for example if you wanted to look at your average Resources Under Management (RUM) monthly (Using DuckDB's SQL Flavor, adjust to your specific database):
+
+```sql
+WITH monthly_rum_average AS (
+    SELECT
+        DATE_TRUNC('month', MAKE_DATE(CAST(year AS INT), CAST(month AS INT), CAST(day AS INT))) AS rum_month,
+        org_name,
+        AVG(resources) AS monthly_avg_rum
+    FROM
+        pulumicloud.daily_rum_usage
+    GROUP BY
+        rum_month, org_name
+)
+SELECT
+    rum_month,
+    org_name,
+    monthly_avg_rum,
+    LAG(monthly_avg_rum) OVER (ORDER BY rum_month) AS previous_month_avg_rum,
+    CASE
+        WHEN LAG(monthly_avg_rum) OVER (ORDER BY rum_month) IS NULL THEN NULL
+        ELSE ((monthly_avg_rum - LAG(monthly_avg_rum) OVER (ORDER BY rum_month)) / LAG(monthly_avg_rum) OVER (ORDER BY rum_month)) * 100
+    END AS month_over_month_rum_growth_percentage
+FROM
+    monthly_rum_average
+```
+
+Or if you want to see the total updates per user:
+
+```sql
+WITH operations_by_members AS (
+    SELECT
+        org_name,
+        REPLACE(CAST(json_extract(requested_by, '$.github_login') AS STRING), '"', '') AS github_login,
+        COUNT(*) AS total_updates
+    FROM
+        pulumicloud.stack_updates
+    GROUP BY
+        org_name, github_login
+    ORDER BY
+        total_updates DESC
+)
+SELECT
+    om.org_name,
+    om.role,
+    om.user_github_login,
+    om.user_name,
+    obm.total_updates
+FROM
+    pulumicloud.organization_members om
+INNER JOIN
+    operations_by_members obm
+ON
+    om.org_name = obm.org_name
+    AND om.user_github_login = obm.github_login
+ORDER BY
+    total_updates DESC
+```
+
