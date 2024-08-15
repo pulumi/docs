@@ -45,6 +45,9 @@ estimated_time: 10
 # # An optional list of collections this tutorial should be belong to. Collections are defined in data/tutorials/collections.yaml.
 # collections:
 #     - aws
+
+aliases:
+  - /docs/using-pulumi/define-and-provision-resources/
 ---
 
 ## Create a virtual machine

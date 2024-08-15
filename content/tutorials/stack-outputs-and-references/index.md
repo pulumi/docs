@@ -45,6 +45,9 @@ estimated_time: 15
 # # An optional list of collections this tutorial should be belong to. Collections are defined in data/tutorials/collections.yaml.
 # collections:
 #     - aws
+
+aliases:
+  - /docs/using-pulumi/stack-outputs-and-references/
 ---
 
 ## Understanding stack outputs
