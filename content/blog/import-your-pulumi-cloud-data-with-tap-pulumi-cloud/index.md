@@ -161,4 +161,3 @@ ON
 ORDER BY
     total_updates DESC
 ```
-
