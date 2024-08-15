@@ -180,10 +180,10 @@ Duration: 2s
 
 ## Next Steps
 
-In this tutorial, you made an EC2 instance configured as an Nginx webserver and made it publically available by referencing the Pulumi Registry to define the security group. You also reviewed resource properties and example usage.
+In this tutorial, you created raw and secret configuration values in your project's environment. You also accessed these values via your Pulumi program code.
 
-To learn more about creating resources in Pulumi, take a look at the following resources:
+To learn more about managing and utilizing configuration and secrets in Pulumi, take a look at the following resources:
 
+- Learn more about more about how to centralize your configuration and secrets in the [Pulumi ESC](/docs/esc/) documentation.
 - Learn more about stack outputs and references in the [Stack Outputs and References](/docs/using-pulumi/stack-outputs-and-references/) tutorial.
 - Learn more about inputs and outputs in the [Inputs and Outputs](/docs/concepts/inputs-outputs/) documentation.
-- Learn more about [resource names](/docs/concepts/resources/names/), [options](/docs/concepts/options/), and [providers](/docs/concepts/resources/providers/) in the Pulumi documentation.

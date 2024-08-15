@@ -14,9 +14,9 @@ func main() {
 		environment := config.Get("myEnvironment")
 		password := config.GetSecret("myPassword")
 
-		// Export values
+		// Export values as outputs
 		ctx.Export("Environment", pulumi.String(environment))
-		ctx.Export("Password", pulumi.String(password))
+		ctx.Export("Password", pulumi.StringOutput(password))
 		return nil
 	})
 }
