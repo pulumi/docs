@@ -1,0 +1,264 @@
+
+
+{{ define "main" }}
+
+{{ partial "hero.html" (dict "title" .Title) }}
+<div class="container mx-auto">
+    <section class="mt-8 py-8 px-4 md:px-0">
+        <div class="container mx-auto max-w-4xl text-center my-16 px-6">
+            <h2>{{ .Title }} Compliance</h2>
+            <p>
+                Pulumi can assist your organization's IT infrastructure become PCI-DSS compliant…
+            </p>
+            <div class="mt-10">
+                <a href="#form" rel="noopener noreferrer" class="btn-primary">Speak with a Solutions Architect!</a>
+            </div>
+        </div>
+    </section>
+    <section class="mt-8 py-8 px-4 md:px-0">
+        <div class="container mx-auto max-w-4xl">
+            <h3>What is PCI-DSS compliance?</h3>
+            <p>
+                PCI-DSS (Payment Card Industry Data Security Standard) compliance refers to the adherence to a set of
+                security standards designed
+                to protect card information during and after a financial transaction. These standards are established by
+                the Payment Card Industry
+                Security Standards Council (PCI SSC), which was founded by major credit card companies like Visa,
+                MasterCard, American Express,
+                Discover, and JCB.
+            </p>
+        </div>
+    </section>
+    <section class="mt-8 py-8 px-4 md:px-0">
+        <div class="container mx-auto max-w-4xl">
+            <h3>Key Aspects of PCI-DSS Compliance:</h3>
+            <ol>
+                <li>
+                    <strong>Security Controls:</strong> Organizations must implement
+                    specific technical and operational security measures to safeguard
+                    cardholder data. This includes requirements like installing
+                    firewalls, encrypting cardholder data, and using antivirus software.
+                </li>
+        
+                <li>
+                    <strong>Access Control:</strong> Only authorized personnel should
+                    have access to cardholder data. This involves setting up strong
+                    access control measures, such as unique user IDs and restricting
+                    physical access to sensitive data.
+                </li>
+        
+                <li>
+                    <strong>Monitoring and Testing:</strong> Regularly monitor and test
+                    networks to ensure that security controls are functioning correctly
+                    and to identify vulnerabilities. This includes maintaining logs of
+                    all access to network resources and cardholder data.
+                </li>
+        
+                <li>
+                    <strong>Information Security Policy:</strong> Organizations must
+                    maintain a policy that addresses information security for employees
+                    and contractors. This includes regular security awareness training.
+                </li>
+        
+                <li>
+                    <strong>Regular Audits:</strong> Organizations that process, store,
+                    or transmit credit card information must undergo regular audits to
+                    ensure they are in compliance with PCI-DSS requirements. This can
+                    involve self-assessment or external assessments, depending on the
+                    size of the organization and the volume of transactions processed.
+                </li>
+            </ol>
+            <p>
+                To make your {{  .Params.full }} PCI-DSS compliant, you need to
+                implement a range of security measures and controls across your
+                environment. Here's a checklist of what you should consider:
+            </p>
+            <h4>1. Network Security</h4>
+        
+            <ul>
+                <li>
+                    <strong>Firewall Configuration:</strong> Ensure that your {{  .Params.full }}
+                    is behind a firewall. Use AWS Security Groups and Network
+                    Access Control Lists (NACLs) to restrict inbound and outbound
+                    traffic to only what is necessary.
+                </li>
+        
+                <li>
+                    <strong>Segmentation:</strong> Isolate the cardholder data
+                    environment (CDE) from other parts of your network. This can involve
+                    creating a VPC with subnets dedicated to your CDE.
+                </li>
+            </ul>
+            <h4>2. Data Protection</h4>
+        
+            <ul>
+                <li>
+                    <strong>Encryption:</strong> Encrypt cardholder data both at rest
+                    and in transit. Use AWS Key Management Service (KMS) to manage
+                    encryption keys. For data in transit, ensure that HTTPS (TLS) is
+                    used.
+                </li>
+        
+                <li>
+                    <strong>Storage:</strong> Limit the storage of cardholder data to
+                    only what is absolutely necessary, and ensure that data is securely
+                    deleted when no longer needed.
+                </li>
+            </ul>
+            <h4>3. Access Control</h4>
+        
+            <ul>
+                <li>
+                    <strong>User Access Management:</strong> Restrict access to the {{  .Params.full }}
+                    and the data it processes to only those individuals who
+                    need it. Use IAM roles with the principle of least privilege.
+                </li>
+        
+                <li>
+                    <strong>Multi-Factor Authentication (MFA):</strong> Enable MFA for
+                    all administrative access to the {{  .Params.full }} and AWS Management
+                    Console.
+                </li>
+        
+                <li>
+                    <strong>Unique IDs:</strong> Ensure that each user with access to
+                    the {{  .Params.full }} or payment processing system has a unique ID.
+                </li>
+            </ul>
+            <h4>4. Monitoring and Logging</h4>
+        
+            <ul>
+                <li>
+                    <strong>Logging:</strong> Enable CloudTrail, VPC Flow Logs, and AWS
+                    Config to monitor and log access to your {{  .Params.full }} and its
+                    network traffic. Ensure that logs are kept secure and are retained
+                    as per PCI-DSS requirements.
+                </li>
+        
+                <li>
+                    <strong>File Integrity Monitoring:</strong> Implement file integrity
+                    monitoring to alert you to any unauthorized changes to critical
+                    files or configurations.
+                </li>
+        
+                <li>
+                    <strong>Vulnerability Scanning:</strong> Regularly scan your {{  .Params.full }}
+                    for vulnerabilities using a PCI-approved scanning vendor (ASV).
+                </li>
+            </ul>
+            <h4>5. Secure Software Development</h4>
+        
+            <ul>
+                <li>
+                    <strong>Secure Coding Practices:</strong> Follow secure coding
+                    practices to avoid vulnerabilities like SQL injection, cross-site
+                    scripting (XSS), and cross-site request forgery (CSRF).
+                </li>
+        
+                <li>
+                    <strong>Patching and Updates:</strong> Regularly update your {{  .Params.full }}
+                    and any dependencies to ensure they are protected against known vulnerabilities.
+                </li>
+            </ul>
+            <h4>6. Policy and Documentation</h4>
+        
+            <ul>
+                <li>
+                    <strong>Information Security Policy:</strong> Develop and maintain
+                    an information security policy that includes processes for PCI-DSS
+                    compliance.
+                </li>
+        
+                <li>
+                    <strong>Incident Response Plan:</strong> Establish an incident
+                    response plan to address potential security breaches.
+                </li>
+            </ul>
+            <h4>7. Regular Audits</h4>
+        
+            <ul>
+                <li>
+                    <strong>Internal Audits:</strong> Perform regular internal audits of
+                    your systems and processes to ensure they align with PCI-DSS
+                    requirements.
+                </li>
+        
+                <li>
+                    <strong>External Assessments:</strong> Depending on your transaction
+                    volume, you may need to have an external Qualified Security Assessor
+                    (QSA) conduct a formal PCI-DSS assessment.
+                </li>
+            </ul>
+            <h4>8. Vendor Management</h4>
+        
+            <ul>
+                <li>
+                    <strong>Third-Party Service Providers:</strong> Ensure that any
+                    third-party service providers you use for payment processing or
+                    storage are also PCI-DSS compliant.
+                </li>
+            </ul>
+            <h4>9. Physical Security</h4>
+        
+            <ul>
+                <li>
+                    <strong>{{  .Params.full }} Physical Security:</strong> AWS data centers themselves
+                    are compliant with PCI-DSS physical security requirements, but you
+                    should be aware of how to secure any backups or data that might be
+                    stored outside of AWS.
+                </li>
+            </ul>
+            <h4>10. Documentation and Reporting</h4>
+        
+            <ul>
+                <li>
+                    <strong>Maintain Compliance Documentation:</strong> Keep records of
+                    your compliance efforts, including policies, logs, and audit
+                    reports.
+                </li>
+        
+                <li>
+                    <strong>PCI-DSS SAQ:</strong> Depending on your level of PCI
+                    compliance, complete the appropriate Self-Assessment Questionnaire
+                    (SAQ) and submit it if necessary.
+                </li>
+            </ul>
+        </div>        
+    </section>
+
+    <section class="mt-8 py-8 px-4 md:px-0">
+        <div class="container mx-auto max-w-4xl">
+            <h3>Pulumi Insights</h3>
+            <p>
+                Use Pulumi Insights to gain visibility into your IT infrastructure's configuration to assess compliance.
+            </p>
+            <img src="https://www.pulumi.com/uploads/pulumi-insights-search.gif" />
+            <p>
+                Use Copilot to assist configuring your infrastructure to make it compliance ready.
+            </p>
+            <img src="/images/compliance/co-pilot-1.png" />
+        </div>
+    </section>
+
+    <section class="mt-8 py-8 px-4 md:px-0">
+        <div class="container mx-auto max-w-4xl">
+            <h3>Compliance Ready Policies</h3>
+            <p>
+                With comprehensive coverage of AWS, Azure, Google, and Kubernetes, Pulumi Compliance Ready Policies
+                provide an enhanced level of control and governance over your cloud resources.
+            </p>
+        </div>
+    </section>
+
+    <section id="form" class="container mx-auto justify-center text-center my-16 p-4">
+        <div class="w-full flex flex-col items-center lg:w-1/2 card bg-white mx-auto p-12">
+            <h3>Talk to a Solutions Architect</h3>
+            <p>Get in touch with our Solutions Architects to get all your resources in use with Pulumi Insights</p>
+            <pulumi-hubspot-form form-id="2c0ddce4-175a-4278-8ded-ca67d615bd59" class="mt-5"></pulumi-hubspot-form>
+        </div>
+    </section>
+
+</div>
+
+{{ partial "learnmore-contactus.html" . }}
+{{ end }}

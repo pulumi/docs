@@ -1,0 +1,86 @@
+[
+    {
+        "framework": "PCI-DSS",
+        "cloud": "AWS",
+        "resources": [
+            {
+                "name": "RDS",
+                "full": "RDS instance",
+                "category": "database"
+            },
+            {
+                "name": "EC2",
+                "full": "EC2 instance",
+                "category": "server"
+            },
+            {
+                "name": "ALB",
+                "full": "ALB",
+                "category": "networking"
+            },
+            {
+                "name": "VPC",
+                "full": "VPC",
+                "category": "networking"
+            },
+            {
+                "name": "Subnet",
+                "full": "Subnet",
+                "category": "networking"
+            },
+            {
+                "name": "Cloudfront",
+                "full": "Cloudfront distribution"
+            },
+            {
+                "name": "ECS",
+                "full": "ECS Cluster"
+            },
+            {
+                "name": "EKS",
+                "full": "EKS Cluster"
+            },
+            {
+                "name": "IAM",
+                "full": "IAM Roles and Policies",
+                "category": "security"
+            },
+            {
+                "name": "KMS",
+                "full": "KMS Key",
+                "category": "security"
+            }
+        ]
+    },
+    {
+        "framework": "ISO-27001",
+        "cloud": "AWS",
+        "resources": [
+            {
+                "name": "RDS",
+                "full": "RDS instance",
+                "category": "database"
+            },
+            {
+                "name": "EC2",
+                "full": "EC2 instance",
+                "category": "server"
+            },
+            {
+                "name": "ALB",
+                "full": "ALB",
+                "category": "networking"
+            },
+            {
+                "name": "VPC",
+                "full": "VPC",
+                "category": "networking"
+            },
+            {
+                "name": "Subnet",
+                "full": "Subnet",
+                "category": "networking"
+            }
+        ]
+    }
+]

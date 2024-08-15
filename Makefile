@@ -152,3 +152,7 @@ deploy-dev-stack:
 .PHONY: destroy-dev-stack
 destroy-dev-stack:
 	./scripts/destroy-dev-stack.sh
+
+.PHONY: generate-compliance-pages
+generate-compliance-pages:
+	./scripts/content/generate-compliance-pages.sh

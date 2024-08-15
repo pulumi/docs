@@ -57,5 +57,6 @@ _vendor/
 # Ignore log files.
 /scripts/link-checker/pages-with-broken-links.txt
 
+/content/compliance
 .doctrees/
 .buildinfo
