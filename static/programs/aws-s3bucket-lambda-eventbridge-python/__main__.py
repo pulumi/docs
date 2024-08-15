@@ -1,10 +1,8 @@
 import pulumi
 import pulumi_aws as aws
 
-# [Step 1: Create an S3 bucket.]
 bucket = aws.s3.Bucket('my-bucket')
 
-# [Step 2: Create a Lambda function.]
 lambda_role = aws.iam.Role("s3-writer-role",
     assume_role_policy="""{
         "Version": "2012-10-17",
@@ -22,7 +20,6 @@ lambda_role = aws.iam.Role("s3-writer-role",
     managed_policy_arns=[
         "arn:aws:iam::aws:policy/AmazonS3FullAccess",
         "arn:aws:iam::aws:policy/CloudWatchLogsFullAccess"
-    
     ]
 )
 
@@ -50,6 +47,6 @@ lambda_event = aws.lambda_.Permission("lambda_trigger_event",
     function=lambda_function.arn
 )
 
-# [Step 3: Create an export.]
+pulumi.export("lambdaName", lambda_function.id)
 pulumi.export("bucketName", bucket.id)
 pulumi.export("lambdaArn", lambda_function.arn)

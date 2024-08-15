@@ -12,13 +12,18 @@ meta_desc: Learn more about exporting and referencing stack outputs in Pulumi.
 # An image for the tutorial. It appears on tutorial page and in social-media previews.
 meta_image: meta.png
 
+# An optional video for the tutorial. When present, it appears at the top of the page, replacing
+# the meta image. YouTube and HTML5 video sources are supported.
+video:
+    youtube: S-KfMsh78H8
+
 # The order in which the tutorial appears in most lists. Order is ascending, so higher numbers
 # mean the tutorial will appear further down the list. Positive integers only.
 weight: 999
 
 # A brief summary of the tutorial. It appears at the top of the tutorial page. Markdown is fine.
 summary: |
-    Learn more about exporting and referencing stack outputs in Pulumi.
+    In this tutorial, you will learn how to work with stack outputs, specifically how to export values from a stack and how to reference those values from another stack. You will do this by creating a simple AWS Lambda Function that will write a file to an S3 bucket. You will also create an EventBridge Scheduler resource in a new stack that will run the Lambda function from the first stack on a scheduled basis.
 
 # A list of three to five things the reader will have learned by the end of the tutorial.
 youll_learn:
@@ -35,26 +40,18 @@ prereqs:
     - Install [NodeJS](/docs/languages-sdks/javascript/) or [Python](/docs/languages-sdks/python/)
 
 # The estimated time, in minutes, for new users to complete the topic.
-estimated_time: 10
+estimated_time: 15
 
 # # An optional list of collections this tutorial should be belong to. Collections are defined in data/tutorials/collections.yaml.
 # collections:
-#     - some-non-existent-collection
+#     - aws
 ---
-
-{{< youtube S-KfMsh78H8 >}}
-
-<br>
-
-In this tutorial, you will learn how to work with stack outputs, specifically how to export values from a stack and how to reference those values from another stack. You will do this by creating a simple AWS Lambda Function that will write a file to an S3 bucket. You will also create an EventBridge Scheduler resource in a new stack that will run the Lambda function from the first stack on a scheduled basis.
-
-Let's get started!
 
 ## Understanding stack outputs
 
-Every Pulumi resource has outputs, which are properties of that resource whose values are generated during deployment. We can export these values as stack outputs, and they can be used for important values like resource IDs, computed IP addresses, and DNS names.
+Every Pulumi resource has outputs, which are properties of that resource whose values are generated during deployment. You can export these values as stack outputs, and they can be used for important values like resource IDs, computed IP addresses, and DNS names.
 
-These outputs are shown during an update, can be easily retrieved with the Pulumi CLI, and are displayed in Pulumi Cloud. For the purposes of this tutorial, we will primarily be working from the CLI.
+These outputs are shown during an update, can be easily retrieved with the Pulumi CLI, and are displayed in Pulumi Cloud. For the purposes of this tutorial, you will primarily be working from the CLI.
 
 ### Create a new project
 
@@ -65,7 +62,13 @@ These outputs are shown during an update, can be easily retrieved with the Pulum
 {{% choosable language typescript %}}
 
 ```typescript
-{{% loadcode "code/typescript/baseline.txt" %}}
+{{< example-program-snippet path="aws-s3bucket-lambda-eventbridge" language="typescript" from="1" to="2" >}}
+
+// [Step 1: Create an S3 bucket.]
+
+// [Step 2: Create a Lambda function.]
+
+// [Step 3: Create an export.]
 ```
 
 {{% /choosable %}}
@@ -73,7 +76,13 @@ These outputs are shown during an update, can be easily retrieved with the Pulum
 {{% choosable language python %}}
 
 ```python
-{{% loadcode "code/python/baseline.py" %}}
+{{< example-program-snippet path="aws-s3bucket-lambda-eventbridge" language="python" from="1" to="2" >}}
+
+# [Step 1: Create an S3 bucket.]
+
+# [Step 2: Create a Lambda function.]
+
+# [Step 3: Create an export.]
 ```
 
 {{% /choosable %}}
@@ -81,21 +90,34 @@ These outputs are shown during an update, can be easily retrieved with the Pulum
 {{% choosable language yaml %}}
 
 ```yaml
-{{% loadcode "code/yaml/baseline.yaml" %}}
+name: s3-writer
+{{< example-program-snippet path="aws-s3bucket-lambda-eventbridge" language="yaml" from="2" to="5" >}}
+  # [Step 1: Create an S3 bucket.]
+
+  # [Step 2: Create a Lambda function.]
+
+  # [Step 3: Create an export.]
 ```
 
 {{% /choosable %}}
 
 ### Create project resources
 
-The first resource we will define in our project is a simple S3 bucket as shown below.
+The first resource you will define in your project is a simple S3 bucket as shown below.
 
 {{< chooser language "typescript,python,yaml" / >}}
 
 {{% choosable language typescript %}}
 
 ```typescript
-{{% loadcode "code/typescript/create-s3-bucket.txt" %}}
+{{< example-program-snippet path="aws-s3bucket-lambda-eventbridge" language="typescript" from="1" to="2" >}}
+
+// [Step 1: Create an S3 bucket.]
+{{< example-program-snippet path="aws-s3bucket-lambda-eventbridge" language="typescript" from="4" to="4" >}}
+
+// [Step 2: Create a Lambda function.]
+
+// [Step 3: Create an export.]
 ```
 
 {{% /choosable %}}
@@ -103,7 +125,14 @@ The first resource we will define in our project is a simple S3 bucket as shown 
 {{% choosable language python %}}
 
 ```python
-{{% loadcode "code/python/create-s3-bucket.py" %}}
+{{< example-program-snippet path="aws-s3bucket-lambda-eventbridge" language="python" from="1" to="2" >}}
+
+# [Step 1: Create an S3 bucket.]
+{{< example-program-snippet path="aws-s3bucket-lambda-eventbridge" language="python" from="4" to="4" >}}
+
+# [Step 2: Create a Lambda function.]
+
+# [Step 3: Create an export.]
 ```
 
 {{% /choosable %}}
@@ -111,27 +140,62 @@ The first resource we will define in our project is a simple S3 bucket as shown 
 {{% choosable language yaml %}}
 
 ```yaml
-{{% loadcode "code/yaml/create-s3-bucket.yaml" %}}
+name: s3-writer
+{{< example-program-snippet path="aws-s3bucket-lambda-eventbridge" language="yaml" from="2" to="5" >}}
+  # [Step 1: Create an S3 bucket.]
+{{< example-program-snippet path="aws-s3bucket-lambda-eventbridge" language="yaml" from="6" to="7" >}}
+
+  # [Step 2: Create a Lambda function.]
+
+  # [Step 3: Create an export.]
 ```
 
 {{% /choosable %}}
 
-The next resource we will add is a Lambda function with function code that will write a simple `.txt` file to our S3 bucket. We will also add an IAM role that will [grant our Lambda function permission](https://docs.aws.amazon.com/lambda/latest/dg/lambda-intro-execution-role.html) to access AWS services and resources.
+The next resource you will add is a Lambda function with function code that will write a simple `.txt` file to your S3 bucket. You will also add an IAM role that will [grant your Lambda function permission](https://docs.aws.amazon.com/lambda/latest/dg/lambda-intro-execution-role.html) to access AWS services and resources.
 
-To start, let's create a new folder in our project named `s3_writer`. Inside of this folder, we'll create a file named `lambda_function.py` and populate it with code that will write a simple `.txt` file to our bucket.
+To start, let's create a new folder in your project named `s3_writer`. Inside of this folder, you'll create a file named `lambda_function.py` and populate it with code that will write a simple `.txt` file to your bucket.
 
 ```python
-{{% loadcode "code/lambda-code.py" %}}
+import json
+import os
+import boto3
+import datetime
+
+s3 = boto3.resource('s3')
+
+BUCKET_NAME = os.environ['BUCKET_NAME']
+
+def lambda_handler(event, context):
+
+    current_time = str(datetime.datetime.utcnow()).replace(" ", "")
+    data_string = "Hello Pulumi!"
+
+    object = s3.Object(
+        bucket_name=BUCKET_NAME,
+        key=f'{current_time}_test_file.txt'
+    )
+
+    object.put(Body=data_string)
 ```
 
-Now, we can add the [Lambda function resource definition](https://www.pulumi.com/registry/packages/aws/api-docs/lambda/function/) and its corresponding [IAM role](https://www.pulumi.com/registry/packages/aws/api-docs/iam/role/) to our main project file.
+Now, you can add the [Lambda function resource definition](https://www.pulumi.com/registry/packages/aws/api-docs/lambda/function/) and its corresponding [IAM role](https://www.pulumi.com/registry/packages/aws/api-docs/iam/role/) to your main project file.
 
 {{< chooser language "typescript,python,yaml" / >}}
 
 {{% choosable language typescript %}}
 
 ```typescript
-{{% loadcode "code/typescript/create-lambda-function.txt" %}}
+{{< example-program-snippet path="aws-s3bucket-lambda-eventbridge" language="typescript" from="1" to="2" >}}
+
+// [Step 1: Create an S3 bucket.]
+{{< example-program-snippet path="aws-s3bucket-lambda-eventbridge" language="typescript" from="4" to="4" >}}
+
+// [Step 2: Create a Lambda function.]
+{{< example-program-snippet path="aws-s3bucket-lambda-eventbridge" language="typescript" from="6" to="18" >}}
+{{< example-program-snippet path="aws-s3bucket-lambda-eventbridge" language="typescript" from="20" to="35" >}}
+
+// [Step 3: Create an export.]
 ```
 
 {{% /choosable %}}
@@ -139,7 +203,16 @@ Now, we can add the [Lambda function resource definition](https://www.pulumi.com
 {{% choosable language python %}}
 
 ```python
-{{% loadcode "code/python/create-lambda-function.py" %}}
+{{< example-program-snippet path="aws-s3bucket-lambda-eventbridge" language="python" from="1" to="2" >}}
+
+# [Step 1: Create an S3 bucket.]
+{{< example-program-snippet path="aws-s3bucket-lambda-eventbridge" language="python" from="4" to="4" >}}
+
+# [Step 2: Create a Lambda function.]
+{{< example-program-snippet path="aws-s3bucket-lambda-eventbridge" language="python" from="6" to="21" >}}
+{{< example-program-snippet path="aws-s3bucket-lambda-eventbridge" language="python" from="23" to="41" >}}
+
+# [Step 3: Create an export.]
 ```
 
 {{% /choosable %}}
@@ -147,30 +220,50 @@ Now, we can add the [Lambda function resource definition](https://www.pulumi.com
 {{% choosable language yaml %}}
 
 ```yaml
-{{% loadcode "code/yaml/create-lambda-function.yaml" %}}
+name: s3-writer
+{{< example-program-snippet path="aws-s3bucket-lambda-eventbridge" language="yaml" from="2" to="5" >}}
+  # [Step 1: Create an S3 bucket.]
+{{< example-program-snippet path="aws-s3bucket-lambda-eventbridge" language="yaml" from="6" to="7" >}}
+
+  # [Step 2: Create a Lambda function.]
+{{< example-program-snippet path="aws-s3bucket-lambda-eventbridge" language="yaml" from="9" to="30" >}}
+
+{{< example-program-snippet path="aws-s3bucket-lambda-eventbridge" language="yaml" from="38" to="50" >}}
+
+  # [Step 3: Create an export.]
 ```
 
 {{% /choosable %}}
 
 ### Export resource values
 
-Now that we have our project resources defined, we can [export the values](/docs/concepts/stack/#outputs) of various resource properties from our program. When defining these exports, we'll need to provide two arguments:
+Now that you have your project resources defined, you can [export the values](/docs/concepts/stack/#outputs) of various resource properties from your program. When defining these exports, you'll need to provide two arguments:
 
 | Argument | Description |
 |--------------|-------------|
-| Output name | This is the name we will use as the identifier of our output value |
-| Output value | This is the actual value of our output |
+| Output name | This is the name you will use as the identifier of your output value |
+| Output value | This is the actual value of your output |
 
-To demonstrate how this works, let's export the names of our Lambda function and S3 bucket. The [Pulumi documentation](https://www.pulumi.com/registry/packages/aws/api-docs/lambda/function/#outputs) provides more information about what properties are available to export for each resource.
+To demonstrate how this works, let's export the names of your Lambda function and S3 bucket. The [Pulumi documentation](https://www.pulumi.com/registry/packages/aws/api-docs/lambda/function/#outputs) provides more information about what properties are available to export for each resource.
 
-We can reference both our Lambda function name and bucket name via their `id` property, and we'll update our code to reflect that as shown below:
+You can reference both your Lambda function name and bucket name via their `id` property, and you'll update your code to reflect that as shown below:
 
 {{< chooser language "typescript,python,yaml" / >}}
 
 {{% choosable language typescript %}}
 
 ```typescript
-{{% loadcode "code/typescript/add-lambda-s3-export.txt" %}}
+{{< example-program-snippet path="aws-s3bucket-lambda-eventbridge" language="typescript" from="1" to="2" >}}
+
+// [Step 1: Create an S3 bucket.]
+{{< example-program-snippet path="aws-s3bucket-lambda-eventbridge" language="typescript" from="4" to="4" >}}
+
+// [Step 2: Create a Lambda function.]
+{{< example-program-snippet path="aws-s3bucket-lambda-eventbridge" language="typescript" from="6" to="18" >}}
+{{< example-program-snippet path="aws-s3bucket-lambda-eventbridge" language="typescript" from="20" to="35" >}}
+
+// [Step 3: Create an export.]
+{{< example-program-snippet path="aws-s3bucket-lambda-eventbridge" language="typescript" from="44" to="45" >}}
 ```
 
 {{% /choosable %}}
@@ -178,7 +271,17 @@ We can reference both our Lambda function name and bucket name via their `id` pr
 {{% choosable language python %}}
 
 ```python
-{{% loadcode "code/python/add-lambda-s3-export.py" %}}
+{{< example-program-snippet path="aws-s3bucket-lambda-eventbridge" language="python" from="1" to="2" >}}
+
+# [Step 1: Create an S3 bucket.]
+{{< example-program-snippet path="aws-s3bucket-lambda-eventbridge" language="python" from="4" to="4" >}}
+
+# [Step 2: Create a Lambda function.]
+{{< example-program-snippet path="aws-s3bucket-lambda-eventbridge" language="python" from="6" to="21" >}}
+{{< example-program-snippet path="aws-s3bucket-lambda-eventbridge" language="python" from="23" to="41" >}}
+
+# [Step 3: Create an export.]
+{{< example-program-snippet path="aws-s3bucket-lambda-eventbridge" language="python" from="50" to="51" >}}
 ```
 
 {{% /choosable %}}
@@ -186,14 +289,25 @@ We can reference both our Lambda function name and bucket name via their `id` pr
 {{% choosable language yaml %}}
 
 ```yaml
-{{% loadcode "code/yaml/add-lambda-s3-export.yaml" %}}
+name: s3-writer
+{{< example-program-snippet path="aws-s3bucket-lambda-eventbridge" language="yaml" from="2" to="5" >}}
+  # [Step 1: Create an S3 bucket.]
+{{< example-program-snippet path="aws-s3bucket-lambda-eventbridge" language="yaml" from="6" to="7" >}}
+
+  # [Step 2: Create a Lambda function.]
+{{< example-program-snippet path="aws-s3bucket-lambda-eventbridge" language="yaml" from="9" to="30" >}}
+
+{{< example-program-snippet path="aws-s3bucket-lambda-eventbridge" language="yaml" from="38" to="50" >}}
+
+# [Step 3: Create an export.]
+{{< example-program-snippet path="aws-s3bucket-lambda-eventbridge" language="yaml" from="60" to="62" >}}
 ```
 
 {{% /choosable %}}
 
 ### Deploy your project resources
 
-Now let’s save our file and run the `pulumi up` command to preview and deploy the resources we've just defined in our project.
+Now let’s save your file and run the `pulumi up` command to preview and deploy the resources you've just defined in your project.
 
 ```bash
 Previewing update (dev):
@@ -230,13 +344,13 @@ Resources:
 Duration: 20s
 ```
 
-We can see that the outputs we've created have been provided as a part of the update details. We'll access these outputs via the CLI in the next steps of the tutorial.
+You can see that the outputs you've created have been provided as a part of the update details. You'll access these outputs via the CLI in the next steps of the tutorial.
 
 ### Access outputs via the CLI
 
-Now that our resources are deployed, let's kick off our Lambda to S3 file writing process.
+Now that your resources are deployed, let's kick off your Lambda to S3 file writing process.
 
-The first thing we will do is validate that our S3 bucket is empty. We can use the following [AWS CLI command](https://docs.aws.amazon.com/cli/latest/reference/s3api/list-objects-v2.html) to list all of the objects in our bucket:
+The first thing you will do is validate that your S3 bucket is empty. You can use the following [AWS CLI command](https://docs.aws.amazon.com/cli/latest/reference/s3api/list-objects-v2.html) to list all of the objects in your bucket:
 
 ```bash
 aws s3api list-objects-v2 --bucket <bucket_name>
@@ -248,15 +362,15 @@ The AWS CLI will run AWS commands with the `default` profile by default. If you 
 
 {{% /notes %}}
 
-We will want to replace `<bucket_name>` with the actual name of our S3 bucket. While we can manually provide the name of our bucket, we can also programmatically reference our bucket name via the stack outputs.
+You will want to replace `<bucket_name>` with the actual name of your S3 bucket. While you can manually provide the name of your bucket, you can also programmatically reference your bucket name via the stack outputs.
 
-We'll do this by using the [`pulumi stack output`](/docs/concepts/stack/#outputs) command and provide the name of our desired output as shown below:
+You'll do this by using the [`pulumi stack output`](/docs/concepts/stack/#outputs) command and provide the name of your desired output as shown below:
 
 ```bash
 aws s3api list-objects-v2 --bucket $(pulumi stack output bucketName)
 ```
 
-Right now, our bucket is empty, so the response of this command should look like the following:
+Right now, your bucket is empty, so the response of this command should look like the following:
 
 ```bash
 {
@@ -264,7 +378,7 @@ Right now, our bucket is empty, so the response of this command should look like
 }
 ```
 
-Now, let's trigger our Lambda function so that it will write a new file to the bucket. We will use the [`aws lambda invoke`](https://docs.aws.amazon.com/cli/latest/reference/lambda/invoke.html) command and pass our Lambda function name to the `--function-name` option as shown below:
+Now, let's trigger your Lambda function so that it will write a new file to the bucket. You will use the [`aws lambda invoke`](https://docs.aws.amazon.com/cli/latest/reference/lambda/invoke.html) command and pass your Lambda function name to the `--function-name` option as shown below:
 
 ```bash
 aws lambda invoke \
@@ -275,7 +389,7 @@ aws lambda invoke \
     response.json
 ```
 
-We can verify the outcome of this function execution by running the same `list-objects-v2` command from before to check the contents of our S3 bucket. This time, we should see output similar to the following:
+You can verify the outcome of this function execution by running the same `list-objects-v2` command from before to check the contents of your S3 bucket. This time, you should see output similar to the following:
 
 ```bash
 {
@@ -292,25 +406,25 @@ We can verify the outcome of this function execution by running the same `list-o
 }
 ```
 
-The `.txt` file in the `Key` field of the response object indicates that our Lambda function ran successfully.
+The `.txt` file in the `Key` field of the response object indicates that your Lambda function ran successfully.
 
-We have seen how we can reference our output values from the CLI. Now let's take a look at how we can do the same from within another stack.
+You have seen how you can reference your output values from the CLI. Now let's take a look at how you can do the same from within another stack.
 
 ## Using stack references
 
 Stack references allow you to access the outputs of one stack from another stack. This enables developers to create resources even when there are inter-stack dependencies.
 
-For this section, we are going to create a new Pulumi program that will access the stack output values from our existing program.
+For this section, you are going to create a new Pulumi program that will access the stack output values from your existing program.
 
 ### Reference the name of the Lambda function
 
-Let's start by making a new Pulumi project in a new directory. In this new program, we need to add the code that will reference the values from our first program.
+Let's start by making a new Pulumi project in a new directory. In this new program, you need to add the code that will reference the values from your first program.
 
-This can be done using Pulumi's [Stack Reference functionality](/docs/concepts/stack/#stackreferences). We'll need to pass in the fully qualified name of the stack as an argument. This name is comprised of the [organization](/docs/pulumi-cloud/organizations/), project, and stack names in the format of `<organization>/<project>/<stack>`
+This can be done using Pulumi's [Stack Reference functionality](/docs/concepts/stack/#stackreferences). You'll need to pass in the fully qualified name of the stack as an argument. This name is comprised of the [organization](/docs/pulumi-cloud/organizations/), project, and stack names in the format of `<organization>/<project>/<stack>`
 
-For example, if the name of our organization is `my-org`, the name of our first program is `my-first-program`, and the name of our stack is `dev`, then our fully qualified name will be `my-org/my-first-program/dev`.
+For example, if the name of your organization is `my-org`, the name of your first program is `my-first-program`, and the name of your stack is `dev`, then your fully qualified name will be `my-org/my-first-program/dev`.
 
-With that being said, a stack reference will look like the following in our code:
+With that being said, a stack reference will look like the following in your code:
 
 {{< chooser language "typescript,python,yaml" / >}}
 
@@ -344,11 +458,11 @@ Make sure that the fully qualified name in the example above is populated with t
 
 {{% /notes %}}
 
-We will now create an export that will output the value of the Lambda function name from our first program. This is to demonstrate how to retrieve output values from another stack for use in your program.
+You will now create an export that will output the value of the Lambda function name from your first program. This is to demonstrate how to retrieve output values from another stack for use in your program.
 
-For the value of our export, we can retrieve it by taking our `stack_ref` variable and using a Stack Reference function called `get_output()` against it.
+For the value of your export, you can retrieve it by taking your stack reference variable and using a Stack Reference function called `getOutput()` against it.
 
-Let's update our code with the following:
+Update your code with the following:
 
 {{< chooser language "typescript,python,yaml" / >}}
 
@@ -376,7 +490,7 @@ Let's update our code with the following:
 
 {{% /choosable %}}
 
-To check that our stack reference is working, let's run `pulumi up`.
+To check that your stack reference is working, let's run `pulumi up`.
 
 ```bash
 Previewing update (dev):
@@ -405,7 +519,7 @@ Resources:
 Duration: 3s
 ```
 
-We can see the name of our Lambda function from our first program successfully outputted in the update details of our second program.
+You can see the name of your Lambda function from your first program successfully outputted in the update details of your second program.
 
 ### Run the Lambda function on a schedule
 
@@ -420,7 +534,10 @@ An updated version of the Lambda Function project code has been provided below a
 {{% choosable language typescript %}}
 
 ```typescript
-{{% loadcode "code/typescript/updated-baseline-lambda.txt" %}}
+{{< example-program-snippet path="aws-s3bucket-lambda-eventbridge" language="typescript" from="1" to="42" >}}
+
+// [Step 3: Create an export.]
+// TO-DO
 ```
 
 {{% /choosable %}}
@@ -428,7 +545,10 @@ An updated version of the Lambda Function project code has been provided below a
 {{% choosable language python %}}
 
 ```python
-{{% loadcode "code/python/updated-baseline-lambda.py" %}}
+{{< example-program-snippet path="aws-s3bucket-lambda-eventbridge" language="python" from="1" to="48" >}}
+
+# [Step 3: Create an export.]
+# TO-DO
 ```
 
 {{% /choosable %}}
@@ -436,7 +556,10 @@ An updated version of the Lambda Function project code has been provided below a
 {{% choosable language yaml %}}
 
 ```yaml
-{{% loadcode "code/yaml/updated-baseline-lambda.yaml" %}}
+name: s3-writer
+{{< example-program-snippet path="aws-s3bucket-lambda-eventbridge" language="yaml" from="2" to="60" >}}
+# [Step 3: Create an export.]
+# TO-DO
 ```
 
 {{% /choosable %}}
@@ -496,7 +619,11 @@ You should then see a number of `.txt` files in your S3 bucket.
 {{% choosable language typescript %}}
 
 ```typescript
-{{% loadcode "code/typescript/create-lambda-arn-export.txt" %}}
+{{< example-program-snippet path="aws-s3bucket-lambda-eventbridge" language="typescript" from="1" to="4" >}}
+
+{{< example-program-snippet path="aws-s3bucket-lambda-eventbridge" language="typescript" from="7" to="7" >}}
+
+{{< example-program-snippet path="aws-s3bucket-lambda-eventbridge" language="typescript" from="9" to="42" >}}
 ```
 
 {{% /choosable %}}
@@ -504,7 +631,9 @@ You should then see a number of `.txt` files in your S3 bucket.
 {{% choosable language python %}}
 
 ```python
-{{% loadcode "code/python/create-lambda-arn-export.py" %}}
+{{< example-program-snippet path="aws-s3bucket-lambda-eventbridge" language="python" from="1" to="48" >}}
+
+{{< example-program-snippet path="aws-s3bucket-lambda-eventbridge" language="python" from="52" to="52" >}}
 ```
 
 {{% /choosable %}}
@@ -512,7 +641,11 @@ You should then see a number of `.txt` files in your S3 bucket.
 {{% choosable language yaml %}}
 
 ```yaml
-{{% loadcode "code/yaml/create-lambda-arn-export.yaml" %}}
+name: s3-writer
+{{< example-program-snippet path="aws-s3bucket-lambda-eventbridge" language="yaml" from="2" to="58" >}}
+
+{{< example-program-snippet path="aws-s3bucket-lambda-eventbridge" language="yaml" from="60" to="60" >}}
+{{< example-program-snippet path="aws-s3bucket-lambda-eventbridge" language="yaml" from="63" to="63" >}}
 ```
 
 {{% /choosable %}}

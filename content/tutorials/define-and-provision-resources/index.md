@@ -12,13 +12,18 @@ meta_desc: Learn how to define and provision resources in Pulumi.
 # An image for the tutorial. It appears on tutorial page and in social-media previews.
 meta_image: meta.png
 
+# An optional video for the tutorial. When present, it appears at the top of the page, replacing
+# the meta image. YouTube and HTML5 video sources are supported.
+video:
+    youtube: 1UEkiXqxgB8
+
 # The order in which the tutorial appears in most lists. Order is ascending, so higher numbers
 # mean the tutorial will appear further down the list. Positive integers only.
 weight: 999
 
 # A brief summary of the tutorial. It appears at the top of the tutorial page. Markdown is fine.
 summary: |
-    Learn what a resource is, how resources work within Pulumi, and how to create, update, and delete resources in this tutorial.
+    In Pulumi, resources represent the fundamental units that make up your infrastructure, such as virtual machines, networks, storage, and databases. A resource is used to define and manage an infrastructure object in your Pulumi configuration. In this tutorial, you will create a simple Nginx web server. You will then refer to documentation in the Pulumi Registry to create a security group resource to make the application publically accessible.
 
 # A list of three to five things the reader will have learned by the end of the tutorial.
 youll_learn:
@@ -39,16 +44,8 @@ estimated_time: 10
 
 # # An optional list of collections this tutorial should be belong to. Collections are defined in data/tutorials/collections.yaml.
 # collections:
-#     - some-non-existent-collection
+#     - aws
 ---
-
-{{< youtube 1UEkiXqxgB8 >}}
-
-<br>
-
-In Pulumi, [resources](/docs/concepts/resources) represent the fundamental units that make up your infrastructure, such as virtual machines, networks, storage, and databases. A resource is used to define and manage an infrastructure object in your Pulumi configuration. In this tutorial, you will learn how to create a resource by creating a simple Nginx web server. You will then refer to documentation in the Pulumi Registry to create a security group resource to make the application publically accessible.
-
-Let's get started!
 
 ## Create a virtual machine
 

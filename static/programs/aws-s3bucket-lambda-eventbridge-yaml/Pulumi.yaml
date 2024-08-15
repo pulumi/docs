@@ -1,13 +1,11 @@
-name: s3-writer
+name: aws-s3bucket-lambda-eventbridge-yaml
 runtime: yaml
 description: A program to create a Lambda write to S3 workflow on AWS
 
 resources:
-  # [Step 1: Create an S3 bucket.]
   my-bucket:
     type: aws:s3:Bucket
 
-  # [Step 2: Create a Lambda function.]
   lambda-role:
     type: aws:iam:Role
     properties:
@@ -25,11 +23,17 @@ resources:
           ]
         }
 
-  role-policy-attachment:
+  s3-role-policy-attachment:
     type: aws:iam:RolePolicyAttachment
     properties:
       role: ${lambda-role}
       policyArn: "arn:aws:iam::aws:policy/AmazonS3FullAccess"
+
+  cloudwatch-role-policy-attachment:
+    type: aws:iam:RolePolicyAttachment
+    properties:
+      role: ${lambda-role}
+      policyArn: "arn:aws:iam::aws:policy/CloudWatchLogsFullAccess"
 
   lambda-function:
     type: aws:lambda:Function
@@ -45,7 +49,15 @@ resources:
         variables:
           BUCKET_NAME: ${my-bucket.id}
 
-# [Step 3: Create an export.]
+  # Gives the EventBridge service permissions to invoke the Lambda function
+  lambda-trigger-event:
+    type: aws:lambda:Permission
+    properties:
+      action: lambda:InvokeFunction
+      principal: events.amazonaws.com
+      function: ${lambda-function.id}
+
 outputs:
   lambdaName: ${lambda-function.id}
   bucketName: ${my-bucket.id}
+  lambdaArn: ${lambda-function.arn}

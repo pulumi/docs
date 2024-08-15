@@ -1,4 +1,4 @@
-name: s3-writer
+name: event-scheduler
 runtime: yaml
 description: A program to create create a Stack Reference
 
