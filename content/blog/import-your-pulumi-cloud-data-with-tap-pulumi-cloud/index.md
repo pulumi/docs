@@ -130,6 +130,29 @@ FROM
     monthly_rum_average
 ```
 
+If you want to see the average time to deploy changes, excluding console-initiated deploys (Similar to what is tracked for "Lead time for changes"):
+
+```sql
+WITH stack_deployments AS (
+    SELECT
+        CAST(json_extract(jobs, '$[0].started') AS TIMESTAMP) AS start_time,
+        CAST(json_extract(jobs, '$[0].last_updated') AS TIMESTAMP) AS end_time,
+        initiator
+    FROM
+        pulumicloud.stack_deployments
+    WHERE
+        initiator IS NOT NULL
+        AND initiator <> 'console'
+)
+SELECT
+    initiator,
+    AVG(DATE_DIFF('second', start_time, end_time)) / 60 AS avg_deploy_time_in_minutes
+FROM
+    stack_deployments
+GROUP BY
+    initiator
+```
+
 Or if you want to see the total updates per user:
 
 ```sql
