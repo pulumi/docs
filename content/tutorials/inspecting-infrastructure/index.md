@@ -18,7 +18,9 @@ weight: 999
 
 # A brief summary of the tutorial. It appears at the top of the tutorial page. Markdown is fine.
 summary: |
-    This tutorial will demonstrate the various Pulumi CLI commands you can use to inspect your infrastructure.
+    Pulumi configurations and state data include highly structured information about the resources they manage, such as dependency information, outputs, and more. The Pulumi CLI includes commands for inspecting this data. You can use these to integrate other tools with Pulumi's infrastructure data, or just to gain a deeper or more holistic understanding of your infrastructure.
+
+    In this tutorial, we'll demonstrate the various ways you can use the Pulumi CLI to inspect your infrastructure.
 
 # A list of three to five things the reader will have learned by the end of the tutorial.
 youll_learn:
@@ -43,12 +45,6 @@ estimated_time: 10
 # collections:
 #     - some-non-existent-collection
 ---
-
-Pulumi configurations and state data include highly structured information about the resources they manage, such as dependency information, [outputs](/docs/concepts/inputs-outputs/#outputs), and more. The Pulumi CLI includes commands for inspecting this data. You can use these to integrate other tools with Pulumi's infrastructure data, or just to gain a deeper or more holistic understanding of your infrastructure.
-
-In this tutorial, we'll demonstrate the various ways you can use the Pulumi CLI to inspect your infrastructure.
-
-Let's get started!
 
 ## [Optional] Create a new project
 
@@ -78,7 +74,7 @@ In this section, you will run a number of commands in the Pulumi CLI that will e
 
 ### pulumi stack
 
-The [pulumi stack](/docs/cli/commands/pulumi_stack/) command is used to provide a quick overview of the current stack's status and configuration. Running this command will list the management details, resources, and output names and values of the current stack.
+The [pulumi stack](/docs/cli/commands/pulumi_stack/) command is used to provide a quick overview of the current stack's status and configuration. Running this command will list the management details, resources, and [output](/docs/concepts/inputs-outputs/#outputs) names and values of the current stack.
 
 Run the `pulumi stack` command as shown below:
 
@@ -136,9 +132,7 @@ The [pulumi console](/docs/cli/commands/pulumi_console/) command opens the curre
 
 ## Next steps
 
-In this tutorial, you used a variety of Pulumi CLI commands to view more details about your infrastructure.
-
-To learn more about creating and managing resources in Pulumi, take a look at the following resources:
+In this tutorial, you used a variety of Pulumi CLI commands to view more details about your infrastructure. To learn more about creating and managing resources in Pulumi, take a look at the following resources:
 
 - Learn more about the available CLI commands in the [Pulumi CLI documentation](/docs/cli/commands/).
-- Learn more about stack outputs and references in the [Stack Outputs and References](/docs/using-pulumi/stack-outputs-and-references/) tutorial.
+- Learn more about stack outputs and references in the [Stack Outputs and References](/tutorials/stack-outputs-and-references/) tutorial.
