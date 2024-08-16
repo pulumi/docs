@@ -18,14 +18,16 @@ weight: 999
 
 # A brief summary of the tutorial. It appears at the top of the tutorial page. Markdown is fine.
 summary: |
-    This is the tutorial summary. It should describe the overall goal of the tutorial and briefly cover what
-    the reader will know how to do by the end of it.
+    In Pulumi, an environment is a collection of values intended to capture the configuration values needed to work with a particular environment. These can be raw values like server names, environment types, region names and so on. They can also be sensitive values such as database passwords or service tokens.
+    
+    In this tutorial, we'll demonstrate how to create and utilize configuration and secret values in Pulumi.
 
 # A list of three to five things the reader will have learned by the end of the tutorial.
 youll_learn:
-    - How to do X
-    - When to do Y
-    - Why X is more preferable than Y
+    - How to create a raw configuration value
+    - How to create a secret configuration value
+    - How to view configuration details in the CLI
+    - How to access configuration values from within Pulumi program code
 
 # A list of tutorial prerequisites. Markdown is fine. Keep it simple; no need to be exhaustive here.
 prereqs:
@@ -40,10 +42,6 @@ estimated_time: 10
 # collections:
 #     - some-non-existent-collection
 ---
-
-In Pulumi, an environment is a collection of values intended to capture the configuration values needed to work with a particular environment. These can be raw values like server names, environment types, region names and so on. They can also be sensitive values such as database passwords or service tokens.
-
-In this tutorial, we'll demonstrate how to create and utilize configuration and secret values in Pulumi.
 
 ## Create a new project
 
@@ -84,7 +82,7 @@ This will create simple Pulumi program without any resources or configuration de
 
 ## Create configuration values
 
-In a Pulumi project, you can locally [store and retrieve configuration values](/docs/concepts/config/) using the `pulumi config set <key> [value]` command. Run the following command to create a config value with a key of `myEnvironment` and a value of `development`:
+In a Pulumi project, you can locally [store and retrieve configuration values](/docs/concepts/config/) using the `pulumi config set <key> [value]` command. To demonstrate, run the following command to create a configuration value with a key of `myEnvironment` and a value of `development`:
 
 ```bash
 $ pulumi config set myEnvironment development
@@ -98,7 +96,7 @@ config:
   pulumi-dev:myEnvironment: development
 ```
 
-You can also list the configuration values for your stack in the command line by running the `pulumi config` command:
+You can also list the configuration values for your stack in the command line. To do so, run the `pulumi config` command:
 
 ```bash
 $ pulumi config
@@ -117,15 +115,15 @@ development
 
 ## Create secret values
 
-Pulumi Cloud always transmits and stores entire state files securely; however, Pulumi also supports encrypting specific values as “secrets” for extra protection. Encryption ensures that these values never appear as plain-text in your state file. By default, the encryption method uses automatic, per-stack encryption keys provided by Pulumi Cloud or you can use a [provider of your own choosing](/docs/concepts/secrets/#configuring-secrets-encryption) instead.
+Pulumi Cloud always transmits and stores entire state files securely. Additionally, Pulumi supports encrypting specific values as “secrets” for extra protection. Encryption ensures that these values never appear as plain-text in your state file. By default, the encryption method uses automatic, per-stack encryption keys provided by Pulumi Cloud, but you can also use a [provider of your own choosing](/docs/concepts/secrets/#configuring-secrets-encryption) instead.
 
-To encrypt a configuration setting before runtime, use the CLI command `pulumi config set` with the `--secret` option.
+To encrypt a configuration value before runtime, you will need to run the `pulumi config set <key> [value] --secret` command. To demonstrate how this works, you'll create a configuration value named `myPassword`. Run the CLI command `pulumi config set myPassword <value-of-password>`, making sure to pass the `--secret` flag, and also making sure to replace `<value-of-password>` with an actual value as shown below:
 
 ```bash
 pulumi config set myPassword demo-password-123 --secret
 ```
 
-If you run the `pulumi config` command again, you will see that the value for `myPassword` is hidden:
+Now run the `pulumi config` command again, and you will see that, unlike the value for `myEnvironment`, the value for `myPassword` is hidden:
 
 ```bash
 $ pulumi config get myEnvironment
@@ -136,7 +134,7 @@ myPassword     [secret]
 pulumi:tags    {"pulumi:template":"python"}
 ```
 
-Additionally, if you open your project's stack settings file (e.g. `Pulumi.<your-stack-name>.yaml`), you will notice that the password value is also encrypted there:
+If you open your project's stack settings file (e.g. `Pulumi.<your-stack-name>.yaml`), you will notice that the password value is also encrypted there:
 
 ```bash
 config:
@@ -152,7 +150,7 @@ Within your Pulumi program code, configuration values can be retrieved for a giv
 - `Config.get` or `Config.require` for raw configuration values
 - `Config.getSecret` or `Config.requireSecret` for secret values
 
- Using `Config.get | Config.getSecret` will return undefined if the configuration value was not provided, and using `Config.require | Config.requireSecret` will raise an exception with a helpful error message to prevent the deployment from continuing until the variable has been set using the CLI. To demonstrate, update your program code with the following:
+ Using `Config.get | Config.getSecret` will return undefined if the configuration value was not provided, but the deployment of your program will still continue. However, using `Config.require | Config.requireSecret` will raise an exception with a helpful error message to prevent the deployment from continuing until the variable has been set using the CLI. To demonstrate, update your Pulumi program code with the following:
 
 {{< example-program path="aws-import-export-pulumi-config" >}}
 
@@ -174,6 +172,8 @@ Resources:
 Duration: 2s
 ```
 
+You can see that the configuration values were successfully imported into the program and exported as outputs, and you can see that the value of `Password`, which comes from the secret configuration value `myPassword`, is still not visible.
+
 ## Clean Up
 
 {{< cleanup >}}
@@ -186,4 +186,3 @@ To learn more about managing and utilizing configuration and secrets in Pulumi, 
 
 - Learn more about more about how to centralize your configuration and secrets in the [Pulumi ESC](/docs/esc/) documentation.
 - Learn more about stack outputs and references in the [Stack Outputs and References](/docs/using-pulumi/stack-outputs-and-references/) tutorial.
-- Learn more about inputs and outputs in the [Inputs and Outputs](/docs/concepts/inputs-outputs/) documentation.
