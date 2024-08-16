@@ -1,24 +1,22 @@
 import * as aws from "@pulumi/aws";
 import * as pulumi from "@pulumi/pulumi";
 
-// [Step 1: Create an S3 bucket.]
 const bucket = new aws.s3.Bucket("my-bucket");
 
-// [Step 2: Create a Lambda function.]
 const lambdaRole = new aws.iam.Role("s3-writer-role", {
     assumeRolePolicy: JSON.stringify({
         Version: "2012-10-17",
-        Statement: [{
-            Action: "sts:AssumeRole",
-            Effect: "Allow",
-            Principal: {
-                Service: "lambda.amazonaws.com",
+        Statement: [
+            {
+                Action: "sts:AssumeRole",
+                Effect: "Allow",
+                Principal: {
+                    Service: "lambda.amazonaws.com",
+                },
             },
-        }],
+        ],
     }),
-    managedPolicyArns: [
-        "arn:aws:iam::aws:policy/AmazonS3FullAccess"
-    ],
+    managedPolicyArns: ["arn:aws:iam::aws:policy/AmazonS3FullAccess", "arn:aws:iam::aws:policy/CloudWatchLogsFullAccess"],
 });
 
 const lambdaFunction = new aws.lambda.Function("s3-writer-lambda-function", {
@@ -39,9 +37,9 @@ const lambdaFunction = new aws.lambda.Function("s3-writer-lambda-function", {
 const lambdaEvent = new aws.lambda.Permission("lambda-trigger-event", {
     action: "lambda:InvokeFunction",
     principal: "events.amazonaws.com",
-    "function": lambdaFunction.arn,
+    function: lambdaFunction.arn,
 });
 
-// [Step 3: Create an export.]
-export const bucketName = bucket.id
-export const lambdaArn = lambdaFunction.arn
+export const lambdaName = lambdaFunction.id;
+export const bucketName = bucket.id;
+export const lambdaArn = lambdaFunction.arn;
