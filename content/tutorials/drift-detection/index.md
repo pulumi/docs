@@ -135,9 +135,9 @@ git push -u origin main
 
 ## Configure Drift Detection
 
-Now you will return to your browser to set your deployment configuration source control settings. Navigate to your stack `Settings` and `Deploy` tab. Next, configure the required Deployment settings, including your source control. 
+Now you will return to your browser to set your deployment configuration source control settings. Navigate to your stack `Settings` and `Deploy` tab. Next, configure the required Deployment settings, including your source control.
 
-1. Add your GitHub organization/repository and branch you created. 
+1. Add your GitHub organization/repository and branch you created.
 
 2. Add your Secret environment variables, including `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`.
 
@@ -186,12 +186,13 @@ To avoid incurring any unwanted charges, clean up the resources you created:
 1. Navigate to your stack in Pulumi Cloud and open the **Actions** menu.
 2. Select the **Destroy** option to delete all resources in this stack, and click the confirmation checkbox.
 3. Delete the stack by navigating to the **Settings** tab and choose **Delete stack** to remove the stack, including all its deployment history and state files from Pulumi Cloud.
-3. Delete the GitHub repository you created.
+4. Delete the GitHub repository you created.
 
 ## Next Steps
 
 In this tutorial, you created an EC2 instance with Pulumi, including a VPC with a public subnet, an internet gateway, and a security group allowing HTTP traffic. Then, you introduced drift by manually adding a tag to your EC2 resource via the AWS console. Finally, you learned how to detect your drifted infrastructure and how to remediate the manual changes.
 
 To learn more about Drift Detection with Pulumi, take a look at the following resources:
-- Learn more about [Pulumi Drift Detection](https://www.pulumi.com/docs/guides/crossguard/drift-detection/).
-- Understand [Pulumi Deployments](https://www.pulumi.com/docs/guides/continuous-delivery/pulumi-deployments/).
+
+- Learn more about [Pulumi Drift Detection](docs/pulumi-cloud/deployments/drift/).
+- Learn more about [Pulumi Deployments](/docs/pulumi-cloud/deployments/).
