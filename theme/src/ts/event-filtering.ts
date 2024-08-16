@@ -1,6 +1,7 @@
+import { onPageEvent } from "./navigation";
 import { getQueryVariable } from "./util";
 
-$(function () {
+onPageEvent("load", () => {
     /**
      * This function creates a checkbox from a given text string.
      * It will set the label and the value to whatever the input string is.

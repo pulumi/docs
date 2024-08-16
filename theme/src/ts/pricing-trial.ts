@@ -1,4 +1,7 @@
-$(function () {
+import { onPageEvent } from "./navigation";
+
+onPageEvent("load", () => {
+
     // If the button is selected from any entry point, open the dialog.
     $("#pricingStartTrial").on("click", function () {
         $("#pricingTrialOptionsDialog").removeClass("hidden");
