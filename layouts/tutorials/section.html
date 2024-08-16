@@ -22,7 +22,7 @@
                             {{ $provider := index (and ((where $.Site.Data.tutorials.collections "type" "provider")) ((where $.Site.Data.tutorials.collections "id" $id))) 0 }}
 
                             <li class="lg:w-1/{{ $perRow }} {{ if ne (mod (add $index 1) $perRow) 0 }}lg:pr-4{{ end }}">
-                                <div class="p-6 border border-gray-300 w-full gradient-card shadow-xl rounded-md">
+                                <div class="p-6 border border-gray-300 w-full gradient-card shadow-xl rounded-md h-full">
                                     <div class="flex items-center justify-between mb-4">
                                         <h3 class="flex-grow whitespace-nowrap font-display font-normal no-anchor mb-0">{{ $provider.name }} tutorials</h3>
                                         <img class="h-6 flex-shrink hidden sm:block" src="{{ $provider.logo }}" />
@@ -60,7 +60,7 @@
                                     {{ $ordinal = add $ordinal 1}}
 
                                     <li class="lg:w-1/{{ $perRow }} {{ if ne (mod $ordinal $perRow) 0 }}lg:pr-4{{ end }}">
-                                        <div class="bg-white shadow-lg p-6 border rounded-md border-gray-200 w-full">
+                                        <div class="bg-white shadow-lg p-6 border rounded-md border-gray-200 w-full h-full">
                                             <div class="mb-2 pb-2 border-b border-gray-200">
                                                 <h3 class="no-anchor font-normal text-xl flex items-center">
                                                     <a class="text-gray-800" href="/tutorials/{{ $taxonomy }}/">
@@ -91,7 +91,7 @@
                         {{ $perRow = 3 }}
                         {{ range $index, $item := where .Pages ".Params.listed" "ne" false }}
                             <li class="lg:w-1/{{ $perRow }} {{ if ne (mod (add $index 1) $perRow) 0 }}lg:pr-4{{ end }}">
-                                <div class="bg-white shadow-lg p-6 border rounded-md border-gray-200 w-full">
+                                <div class="bg-white shadow-lg p-6 border rounded-md border-gray-200 w-full h-full">
                                     <div class="mb-2 pb-2 border-b border-gray-200">
                                         <h3 class="no-anchor font-normal text-xl flex items-center">
                                             <a class="text-gray-800" href="{{ $item.RelPermalink }}">
