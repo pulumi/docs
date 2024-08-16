@@ -32,22 +32,22 @@
         <h2 class="max-w-5xl mx-auto text-center py-8">Benefits of Pulumi ESC</h2>
         <div class="space-y-8 mx-12">
             {{ range $item := .Params.benefits.items }}
-                <div class="w-full card bg-white p-16">
+                <div class="w-full card bg-white p-4 md:p-16">
                     <div class="flex flex-row justify-center">
                         {{ partial "color-icon.html" (dict "icon" $item.icon "icon_color" $item.icon_color) }}
-                        <h5 class="ml-4">{{ $item.title }}</h5>
+                        <h5 class="ml-4 mt-2">{{ $item.title }}</h5>
                     </div>
                     <p>{{ $item.description | markdownify }}</p>
                     <div class="mt-8 flex flex-wrap">
                         {{ range $index, $point := $item.points }}
                             {{ if eq $index 0 }}
-                                <div class="w-full lg:w-1/2 p-8 border-t-2 lg:border-t-0 lg:border-b lg:border-r">{{ $point }}</div>
+                                <div class="w-full lg:w-1/2 p-4 md:p-8 border-t-2 lg:border-t-0 lg:border-b lg:border-r">{{ $point }}</div>
                             {{ else if eq $index 1 }}
-                                <div class="w-full lg:w-1/2 p-8 border-t-2 lg:border-t-0 lg:border-b lg:border-l">{{ $point }}</div>
+                                <div class="w-full lg:w-1/2 p-4 md:p-8 border-t-2 lg:border-t-0 lg:border-b lg:border-l">{{ $point }}</div>
                             {{ else if eq $index 2 }}
-                                <div class="w-full lg:w-1/2 p-8 border-t-2 lg:border-t lg:border-r">{{ $point }}</div>
+                                <div class="w-full lg:w-1/2 p-4 md:p-8 border-t-2 lg:border-t lg:border-r">{{ $point }}</div>
                             {{ else }}
-                                <div class="w-full lg:w-1/2 p-8 border-t-2 lg:border-t lg:border-l">{{ $point }}</div>
+                                <div class="w-full lg:w-1/2 p-4 md:p-8 border-t-2 lg:border-t lg:border-l">{{ $point }}</div>
                             {{ end }}
                         {{ end }}
                     </div>
