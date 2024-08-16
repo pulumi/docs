@@ -5,41 +5,41 @@
             {{ if eq "docs" $mode }}
                 <a class="tab-selected" href="/docs/">
                     <img class="tab-icon" src="/icons/docs.svg" />
-                    <span>Docs</span>
+                    Docs
                 </a>
                 <a class="tab" href="/registry/">
                     <img class="tab-icon" src="/icons/registry-light.svg" />
-                    <span>Packages</span>
+                    Packages
                 </a>
                 <a class="tab" href="/tutorials/">
                     <img class="tab-icon" src="/icons/graduation-cap.svg" />
-                    <span>Tutorials</span>
+                    Tutorials
                 </a>
             {{ else if (or (eq "tutorials" $mode) (eq "providers" $mode) (eq "collections" $mode)) }}
                 <a class="tab" href="/docs/">
                     <img class="tab-icon" src="/icons/docs.svg" />
-                    <span>Docs</span>
+                    Docs
                 </a>
                 <a class="tab" href="/registry/">
                     <img class="tab-icon" src="/icons/registry-light.svg" />
-                    <span>Packages</span>
+                    Packages
                 </a>
                 <a class="tab-selected" href="/tutorials/">
                     <img class="tab-icon" src="/icons/graduation-cap.svg" />
-                    <span>Tutorials</span>
+                    Tutorials
                 </a>
             {{ else }}
                 <a class="tab" href="/docs/">
                     <img class="tab-icon" src="/icons/docs-light.svg" />
-                    <span>Docs</span>
+                    Docs
                 </a>
                 <a class="tab-selected" href="/registry/">
                     <img class="tab-icon" src="/icons/registry.svg" />
-                    <span>Packages</span>
+                    Packages
                 </a>
                 <a class="tab" href="/tutorials/">
                     <img class="tab-icon" src="/icons/graduation-cap.svg" />
-                    <span>Tutorials</span>
+                    Tutorials
                 </a>
             {{ end }}
         </div>

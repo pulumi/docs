@@ -1,4 +1,6 @@
-$(function () {
+import { onPageEvent } from "./navigation";
+
+onPageEvent("load", () => {
     const pathTocHeaderMap = {
         "/docs/get-started/": "get-started-with-pulumi-toc-header",
         "/docs/": "intro-toc-header",
