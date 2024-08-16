@@ -39,7 +39,7 @@ prereqs:
     - The [Pulumi CLI](/docs/install/)
     - An [Amazon Web Services](https://aws.amazon.com/) account
     - The [AWS CLI](https://aws.amazon.com/cli/)
-    - [Node.js](/docs/languages-sdks/javascript/) or [Python](/docs/languages-sdks/python/) installed
+    - Install [Node.js](/docs/languages-sdks/javascript/) or [Python](/docs/languages-sdks/python/)
 
 # The estimated time, in minutes, for new users to complete the topic.
 estimated_time: 10
