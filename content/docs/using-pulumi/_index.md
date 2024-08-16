@@ -14,11 +14,6 @@ aliases:
 
 Learn how to adopt Pulumi, organize projects & stacks, use the Automation API, continuous delivery, policy as code, pulumi packages, and test Pulumi code.
 
-## Tutorials
-
-- [Defining and Provisioning Resources](/docs/using-pulumi/define-and-provision-resources/)
-- [Stack References and Outputs](/docs/using-pulumi/stack-outputs-and-references/)
-
 ## General Guides
 
 - [Adopting Pulumi](adopting-pulumi/)

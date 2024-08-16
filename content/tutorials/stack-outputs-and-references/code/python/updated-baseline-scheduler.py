@@ -6,7 +6,6 @@ stack_ref = # TO-DO
 
 lambda_arn = # TO-DO
 
-
 # Gives the EventBridge Scheduler the ability to execute the Lambda function
 scheduler_role = aws.iam.Role("scheduler_role",
     assume_role_policy="""{

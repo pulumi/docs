@@ -1,48 +1,58 @@
 ---
-title_tag: "Defining and Provisioning Resources | Tutorials"
-meta_desc: Learn what a resource is, how resources work within Pulumi, and how to create, update, and delete resources in this tutorial.
 title: "Defining and Provisioning Resources"
-h1: "Defining and Provisioning Resources"
-meta_image: /images/docs/meta-images/docs-meta.png
-menu:
-  usingpulumi:
-    identifier: define-provision-resources
-    weight: 1
-tags:
-    - resources
-    - aws
-    - python
-    - nginx
-    - fundamentals
-    - tutorial
+title_tag: "Defining and Provisioning Resources"
+layout: single
+
+# A succinct description of the tutorial. It appears on the Tutorials home and collection pages.
+description: Learn how to define and provision resources in Pulumi.
+
+# A similar description used for search results and social-media previews.
+meta_desc: Learn how to define and provision resources in Pulumi.
+
+# An image for the tutorial. It appears on tutorial page and in social-media previews.
+meta_image: meta.png
+
+# An optional video for the tutorial. When present, it appears at the top of the page, replacing
+# the meta image. YouTube and HTML5 video sources are supported.
+video:
+    youtube: 1UEkiXqxgB8
+
+# The order in which the tutorial appears in most lists. Order is ascending, so higher numbers
+# mean the tutorial will appear further down the list. Positive integers only.
+weight: 999
+
+# A brief summary of the tutorial. It appears at the top of the tutorial page. Markdown is fine.
+summary: |
+   In Pulumi, resources represent the fundamental units that make up your infrastructure, such as virtual machines, networks, storage, and databases. A resource is used to define and manage an infrastructure object in your Pulumi configuration. 
+   
+   In this tutorial, you will create a simple Nginx web server. You will then refer to documentation in the Pulumi Registry to create a security group resource to make the server publically accessible.
+
+# A list of three to five things the reader will have learned by the end of the tutorial.
+youll_learn:
+    - How to create a new resource
+    - How to update an existing resource
+    - How to reference resource definitions in the Pulumi documentation
+
+# A list of tutorial prerequisites. Markdown is fine. Keep it simple; no need to be exhaustive here.
+prereqs:
+    - A [Pulumi Cloud account](https://app.pulumi.com/signup) and [access token](/docs/pulumi-cloud/accounts/#access-tokens)
+    - The [Pulumi CLI](/docs/install/)
+    - An [Amazon Web Services](https://aws.amazon.com/) account
+    - The [AWS CLI](https://aws.amazon.com/cli/)
+    - Install [Node.js](/docs/languages-sdks/javascript/) or [Python](/docs/languages-sdks/python/)
+
+# The estimated time, in minutes, for new users to complete the topic.
+estimated_time: 10
+
+# # An optional list of collections this tutorial should be belong to. Collections are defined in data/tutorials/collections.yaml.
+# collections:
+#     - aws
+
+aliases:
+  - /docs/using-pulumi/define-and-provision-resources/
 ---
 
-{{< youtube 1UEkiXqxgB8 >}}
-
-<br>
-
-In Pulumi, [resources](/docs/concepts/resources) represent the fundamental units that make up your infrastructure, such as virtual machines, networks, storage, and databases. A resource is used to define and manage an infrastructure object in your Pulumi configuration.
-
-In this tutorial, we'll demonstrate how to create a simple Nginx web server. You will then refer to documentation in the Pulumi Registry to create a security group resource to make the application publically accessible.
-
-## Pre-Requisites
-
-This tutorial assumes that you are familiar with the basics of the Pulumi workflow. If you are new to Pulumi, complete the [Get Started series](/docs/get-started/) first.
-
-Additionally, you will need the following tools to complete this tutorial:
-
-- A [Pulumi account](https://app.pulumi.com)
-  - [Optional] Create an [access token](/docs/pulumi-cloud/access-management/access-tokens/)
-- The [Pulumi CLI](https://www.pulumi.com/docs/install/)
-- An [Amazon Web Services](https://aws.amazon.com/) account
-- The [AWS CLI](https://aws.amazon.com/cli/)
-- One of the following languages installed:
-  - Node.js version 14 or later (for Typescript/Javascript)
-  - Python version 3.7 or later
-
-Let's get started!
-
-## Create a Virtual Machine
+## Create a virtual machine
 
 The first step is to create a virtual machine resource that will be used to host the web server. The specific details of how to create your virtual machine differ by cloud provider. For the purposes of this tutorial, we will be creating our resources in AWS in the `us-east-1` region.
 
@@ -50,7 +60,7 @@ The first step is to create a virtual machine resource that will be used to host
 
 Amazon Elastic Compute Cloud (EC2) provides managed virtual server hosting that makes it straightforward to run applications in your AWS account. In AWS, a virtual server is referred to as an "instance". These instances can host a variety of operating systems, tools, and applications, each configured according to your specific requirements.
 
-#### Create a New Project
+#### Create a new project
 
 {{< tutorials/create-new-proj >}}
 
@@ -92,7 +102,7 @@ Amazon Elastic Compute Cloud (EC2) provides managed virtual server hosting that 
 
 {{% /choosable %}}
 
-### Define an EC2 Instance
+### Define an EC2 instance
 
 The Pulumi Registry provides the documentation for all of the Pulumi providers and their associated resources. Open the [`aws.ec2.Instance` documentation page](https://www.pulumi.com/registry/packages/aws/api-docs/ec2/instance/) to view a description of this resource, example usage, the resource definition, and supported properties.
 
@@ -159,7 +169,7 @@ The properties inside our `aws.ec2.Instance` resource are:
 
 **Options** let you control certain aspects of a resource (such as showing explicit dependencies or importing existing infrastructure). We do not have any options defined for this resource, but you can learn more about options in the [Pulumi documentation](/docs/concepts/options).
 
-### Deploy your EC2 Instance
+### Deploy your EC2 instance
 
 Now let's run the `pulumi up` command to preview and deploy the resource we just defined in our project.
 
@@ -191,7 +201,7 @@ Duration: 17s
 
 The public IP address of your instance has been provided for you as an output, and you can use this to access your web server. However, if you try to visit this address, your request will eventually time out. This is because we have not yet configured web traffic access for our instance. We will do this by creating our security group resource.
 
-## Create a Security Group
+## Create a security group
 
 In this section, you will use Pulumi documentation to configure the security group on your own. The security group must allow web traffic on port 80 in order for you to access your web server. An updated version of the project code has been provided below as a starting point.
 
@@ -279,11 +289,11 @@ If your web server is still timing out, make sure you are accessing your web ser
 
 {{< /details >}}
 
-## Clean Up
+## Clean up
 
 {{< cleanup >}}
 
-## Next Steps
+## Next steps
 
 In this tutorial, you made an EC2 instance configured as an Nginx webserver and made it publically available by referencing the Pulumi Registry to define the security group. You also reviewed resource properties and example usage.
 
