@@ -59,6 +59,9 @@ main:
 
     # The webinar presenters
     presenters:
+        - name: Phil Johnston
+          role: Developer Relations Manager
+          photo: /images/team/phil-johnston.jpg
         - name: Diana Esteves
           role: Solutions Architect, Pulumi
           photo: /images/team/diana-esteves.jpg
