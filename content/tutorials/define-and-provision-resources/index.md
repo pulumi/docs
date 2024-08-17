@@ -23,9 +23,9 @@ weight: 999
 
 # A brief summary of the tutorial. It appears at the top of the tutorial page. Markdown is fine.
 summary: |
-   In Pulumi, resources represent the fundamental units that make up your infrastructure, such as virtual machines, networks, storage, and databases. A resource is used to define and manage an infrastructure object in your Pulumi configuration. 
-   
-   In this tutorial, you will create a simple Nginx web server. You will then refer to documentation in the Pulumi Registry to create a security group resource to make the server publically accessible.
+   In Pulumi, resources represent the fundamental units that make up your infrastructure, such as virtual machines, networks, storage, and databases. A resource is used to define and manage an infrastructure object in your Pulumi configuration.
+
+   In this tutorial, you will create a simple Nginx web server. You will then refer to documentation in the Pulumi Registry to create a security group resource to make the server publicly accessible.
 
 # A list of three to five things the reader will have learned by the end of the tutorial.
 youll_learn:
@@ -39,7 +39,7 @@ prereqs:
     - The [Pulumi CLI](/docs/install/)
     - An [Amazon Web Services](https://aws.amazon.com/) account
     - The [AWS CLI](https://aws.amazon.com/cli/)
-    - Install [Node.js](/docs/languages-sdks/javascript/) or [Python](/docs/languages-sdks/python/)
+    - "[Node.js](/docs/languages-sdks/javascript/) or [Python](/docs/languages-sdks/python/) installed"
 
 # The estimated time, in minutes, for new users to complete the topic.
 estimated_time: 10
@@ -295,7 +295,7 @@ If your web server is still timing out, make sure you are accessing your web ser
 
 ## Next steps
 
-In this tutorial, you made an EC2 instance configured as an Nginx webserver and made it publically available by referencing the Pulumi Registry to define the security group. You also reviewed resource properties and example usage.
+In this tutorial, you made an EC2 instance configured as an Nginx webserver and made it publicly available by referencing the Pulumi Registry to define the security group. You also reviewed resource properties and example usage.
 
 To learn more about creating resources in Pulumi, take a look at the following resources:
 
