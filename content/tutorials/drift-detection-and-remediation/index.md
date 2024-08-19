@@ -197,9 +197,7 @@ After your run completes you will see a warning icon on the Drift tab, indicatin
 
 ## Remediate Drift
 
-Now that you have detected and reviewed your infrastructure drift, you can choose to remediate and overwrite the changes made in your cloud provider with the most recently specified desired state of your Pulumi program. This can be done via the **Remediate drift** option in the **Actions** menu on your stack page.
-
-Alternatively, you can accept the changes made in your cloud provider and apply them to your Pulumi state. This can be done via the **Refresh** option in the **Actions** drop down on your stack page. You will also want to update your Pulumi program to align with the changes made in the cloud provider.
+Now that you have detected and reviewed your infrastructure drift, you can choose to remediate and overwrite the changes made in your cloud provider with the most recently specified desired state of your Pulumi program.
 
 As the final step of this tutorial select the **Remediate drift** option in the Actions drop down on your stack page to remediate the manual changes. Once the deployment is complete, your infrastructure will be restored to the desired state expressed in your code.
 
