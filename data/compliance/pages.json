@@ -24,13 +24,9 @@
                 "category": "networking"
             },
             {
-                "name": "Subnet",
-                "full": "Subnet",
+                "name": "ELB",
+                "full": "ELB",
                 "category": "networking"
-            },
-            {
-                "name": "Cloudfront",
-                "full": "Cloudfront distribution"
             },
             {
                 "name": "ECS",
@@ -41,14 +37,8 @@
                 "full": "EKS Cluster"
             },
             {
-                "name": "IAM",
-                "full": "IAM Roles and Policies",
-                "category": "security"
-            },
-            {
-                "name": "KMS",
-                "full": "KMS Key",
-                "category": "security"
+                "name": "API Gateway",
+                "full": "API Gateway"
             }
         ]
     },
@@ -77,9 +67,21 @@
                 "category": "networking"
             },
             {
-                "name": "Subnet",
-                "full": "Subnet",
+                "name": "ELB",
+                "full": "ELB",
                 "category": "networking"
+            },
+            {
+                "name": "ECS",
+                "full": "ECS Cluster"
+            },
+            {
+                "name": "EKS",
+                "full": "EKS Cluster"
+            },
+            {
+                "name": "API Gateway",
+                "full": "API Gateway"
             }
         ]
     }
