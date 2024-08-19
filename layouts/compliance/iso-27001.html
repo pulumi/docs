@@ -6,7 +6,7 @@
         <div class="container mx-auto max-w-4xl text-center my-16 px-6">
             <h2>{{ .Title }}</h2>
             <p>
-                Pulumi can assist your organization's IT infrastructure with becoming ISO 27001 compliant.
+                Pulumi can assist your organization's cloud infrastructure with becoming ISO 27001 compliant.
             </p>
             <div class="mt-10">
                 <a href="#form" rel="noopener noreferrer" class="btn-primary">Speak with a Solutions Architect!</a>
@@ -28,7 +28,7 @@
         <div class="container mx-auto max-w-4xl">
             <h3>Key Aspects of ISO 27001 Compliance:</h3>
             <p>
-                To make your {{ .Params.full }} in AWS compliant with ISO 27001, you need to align
+                To make your {{ .Params.full }} compliant with ISO 27001, you need to align
                 your information security management practices with the ISO 27001 standard.
                 Below is a checklist to guide you through the necessary steps:
             </p>
@@ -36,8 +36,7 @@
             <ul>
                 <li>
                     <strong>Define the ISMS Scope:</strong> Determine the scope of your
-                    ISMS, including which parts of your infrastructure, such as your {{ .Params.resource }}
-                    instance, will be covered.
+                    ISMS, including which parts of your infrastructure will be covered.
                 </li>
 
                 <li>
@@ -227,11 +226,15 @@
         <div class="container mx-auto max-w-4xl">
             <h3>Pulumi Insights</h3>
             <p>
-                Use Pulumi Insights to gain visibility into your IT infrastructure's configuration to assess compliance.
+                Use Pulumi Insights to gain visibility into your cloud infrastructure's configuration to assess compliance.
+                Pulumi Insights is Intelligence for Infrastructure as Code. It adds advanced search, analytics, and AI to 
+                infrastructure as code.
             </p>
             <img src="https://www.pulumi.com/uploads/pulumi-insights-search.gif" />
             <p>
-                Use Copilot to assist configuring your infrastructure to make it compliance ready.
+                Use Copilot to assist configuring your infrastructure to make it compliance ready. You can tap into the Pulumi Copilot's
+                deep understanding of your organization's context to gain visibility into the configuration of resources and assess their
+                compliance.
             </p>
             <img src="/images/compliance/co-pilot-1.png" />
         </div>
@@ -241,7 +244,7 @@
         <div class="container mx-auto max-w-4xl">
             <h3>Compliance Ready Policies</h3>
             <p>
-                With comprehensive coverage of AWS, Azure, Google, and Kubernetes, Pulumi Compliance Ready Policies
+                With comprehensive coverage of {{ .Params.cloud }}, Pulumi Compliance Ready Policies
                 provide an enhanced level of control and governance over your cloud resources.
             </p>
         </div>

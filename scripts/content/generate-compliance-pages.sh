@@ -13,10 +13,12 @@ for row in $(echo "${pages}" | jq -r '.[] | @base64'); do
         }
         slug=$(echo "$(_jq '.cloud')-$(decodeResource '.name')-$(_jq '.framework')" | awk '{print tolower($0)}')
         layout=$(_jq '.framework' | awk '{print tolower($0)}')
-        title="$(_jq '.cloud') $(decodeResource '.name') $(_jq '.framework') Compliance"
+        title="$(_jq '.framework') Compliance for $(_jq '.cloud') $(decodeResource '.name')"
     # Create a new markdown file for each entry
-    cat > "content/compliance/${slug}.md" <<EOT
+    cat > "content/compliance/${slug}.md" <<EOF
 ---
+# This file is auto-generated. Any alterations made within are subject
+# to being overwritten.
 title: $title
 date: $(date +"%Y-%m-%dT%}H:%M:%S")
 cloud: $(_jq '.cloud')
@@ -28,6 +30,22 @@ full: $(decodeResource '.full')
 meta_desc: add meta desc here add meta desc here add meta desc here add meta desc here add meta desc here
 ---
 
-EOT
+EOF
     done
+    cat > "content/compliance/$(echo "$(_jq '.cloud')-$(_jq '.framework')" | awk '{print tolower($0)}').md" <<EOF
+---
+# This file is auto-generated. Any alterations made within are subject
+# to being overwritten.
+title: "$(_jq '.framework') Compliance for $(_jq '.cloud')"
+date: $(date +"%Y-%m-%dT%}H:%M:%S")
+cloud: $(_jq '.cloud')
+layout: "$layout"
+slug: $(echo "$(_jq '.cloud')-$(_jq '.framework')" | awk '{print tolower($0)}')
+framework: $(_jq '.framework')
+resource: "$(_jq '.cloud')"
+full: "$(_jq '.cloud') cloud infrastructure"
+meta_desc: add meta desc here add meta desc here add meta desc here add meta desc here add meta desc here
+---
+
+EOF
 done
