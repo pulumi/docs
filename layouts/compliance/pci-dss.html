@@ -4,21 +4,11 @@
 
 {{ partial "hero.html" (dict "title" .Title) }}
 <div class="container mx-auto">
-    <section class="mt-8 py-8 px-4 md:px-0">
+    <section class="px-4 md:px-0">
         <div class="container mx-auto max-w-4xl text-center my-16 px-6">
             <h2>{{ .Title }}</h2>
             <p>
-                Pulumi can assist your organization's cloud infrastructure with becoming PCI-DSS compliant…
-            </p>
-            <div class="mt-10">
-                <a href="#form" rel="noopener noreferrer" class="btn-primary">Speak with a Solutions Architect!</a>
-            </div>
-        </div>
-    </section>
-    <section class="mt-8 py-8 px-4 md:px-0">
-        <div class="container mx-auto max-w-4xl">
-            <h3>What is PCI-DSS compliance?</h3>
-            <p>
+                Pulumi can assist with making your organization's cloud infrastructure become PCI-DSS compliant.
                 PCI-DSS (Payment Card Industry Data Security Standard) compliance refers to the adherence to a set of
                 security standards designed
                 to protect card information during and after a financial transaction. These standards are established by
@@ -32,7 +22,7 @@
             </div>
         </div>
     </section>
-    <section class="py-4 px-4 md:px-0">
+    <section class="mt-4 py-4 px-4 md:px-0">
         <div class="container mx-auto max-w-4xl">
             <h3>Key Aspects of PCI-DSS Compliance:</h3>
             <ol>
@@ -205,7 +195,7 @@
         
             <ul>
                 <li>
-                    <strong>{{  .Params.full }} Physical Security:</strong> AWS data centers themselves
+                    <strong>Physical Security:</strong> AWS data centers themselves
                     are compliant with PCI-DSS physical security requirements, but you
                     should be aware of how to secure any backups or data that might be
                     stored outside of AWS.
