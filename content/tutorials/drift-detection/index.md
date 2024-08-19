@@ -171,6 +171,7 @@ To add a tag via the AWS CLI you will first need to retrieve the EC2 Instance ID
 ```
 
 Now, add the tag with the key `Description` and the value `Pulumi Drift Detection`:
+
 ```bash
    aws ec2 create-tags --resources <instance-id> --tags Key=Description,Value="Pulumi Drift Detection"
 ```
