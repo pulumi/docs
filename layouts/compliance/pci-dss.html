@@ -27,9 +27,12 @@
                 MasterCard, American Express,
                 Discover, and JCB.
             </p>
+            <div class="mt-10">
+                <a href="#form" rel="noopener noreferrer" class="btn-primary">Speak with a Solutions Architect!</a>
+            </div>
         </div>
     </section>
-    <section class="mt-8 py-8 px-4 md:px-0">
+    <section class="py-4 px-4 md:px-0">
         <div class="container mx-auto max-w-4xl">
             <h3>Key Aspects of PCI-DSS Compliance:</h3>
             <ol>
@@ -226,35 +229,40 @@
         </div>        
     </section>
 
-    <section class="mt-8 py-8 px-4 md:px-0">
+    <section class="mt-8 px-4 md:px-0">
         <div class="container mx-auto max-w-4xl">
             <h3>Pulumi Insights</h3>
-            <p>
+            <p class="py-4">
                 Use Pulumi Insights to gain visibility into your cloud infrastructure's configuration to assess compliance.
+                Pulumi Insights is Intelligence for Infrastructure as Code. It adds advanced search, analytics, and AI to 
+                infrastructure as code.
             </p>
             <img src="https://www.pulumi.com/uploads/pulumi-insights-search.gif" />
-            <p>
-                Use Copilot to assist configuring your infrastructure to make it compliance ready.
+            <p class="py-4">
+                Use Copilot to assist configuring your infrastructure to make it compliance ready. You can tap into the Pulumi Copilot's
+                deep understanding of your organization's context to gain visibility into the configuration of resources and assess their
+                compliance.
             </p>
             <img src="/images/compliance/co-pilot-1.png" />
         </div>
     </section>
 
-    <section class="mt-8 py-8 px-4 md:px-0">
+
+    <section class="mt-8 py-4 px-4 md:px-0">
         <div class="container mx-auto max-w-4xl">
             <h3>Compliance Ready Policies</h3>
-            <p>
-                With comprehensive coverage of AWS, Azure, Google, and Kubernetes, Pulumi Compliance Ready Policies
+            <p class="py-4">
+                With comprehensive coverage of {{ .Params.cloud }}, Pulumi Compliance Ready Policies
                 provide an enhanced level of control and governance over your cloud resources.
             </p>
         </div>
     </section>
 
-    <section id="form" class="container mx-auto justify-center text-center my-16 p-4">
-        <div class="w-full flex flex-col items-center lg:w-1/2 card bg-white mx-auto p-12">
+    <section id="form" class="container mx-auto justify-center text-center p-4">
+        <div class="w-full flex flex-col items-center lg:w-1/2 card bg-white mx-auto p-8">
             <h3>Talk to a Solutions Architect</h3>
             <p>Get in touch with our Solutions Architects to get all your resources in use with Pulumi Insights</p>
-            <pulumi-hubspot-form form-id="2c0ddce4-175a-4278-8ded-ca67d615bd59" class="mt-5"></pulumi-hubspot-form>
+            <pulumi-hubspot-form form-id="e4258f4f-359c-471b-8d2d-cdb81ad45f3d"></pulumi-hubspot-form>
         </div>
     </section>
 
