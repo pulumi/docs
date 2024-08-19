@@ -147,29 +147,52 @@ Secret environment variables, such as `AWS_SECRET_ACCESS_KEY`, are encrypted end
 
 Click **Save deployment configuration**.
 
-![Animation of how to configure drift detection in Pulumi](./pulumi-configure-drift.mp4)
+<video autoplay loop muted playsinline>
+    <source src="pulumi-configure-drift.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
 
 Once you have configured Pulumi Deployments, open the Actions menu and choose `Detect Drift`, then click `Deploy` to validate your stack, program and deployments are all running before we introduce drift.
 
 ![Screenshot of the Pulumi Cloud console to run a Drift Detection](./pulumi-detect-drift-action.png)
 
-Once the drift run is complete, you should see a new Drift check on the stack `Drift` Tab
+After the drift run is complete, you will see a new Drift run on the `Drift` tab timeline. Since this is the initial check and no deviations have been introduced, you will not receive any notifications indicating that drift has been detected, nor will you see any resources with changes.
 
 ## Introduce drift
 
 To see Drift Detection in action, you will now introduce drift by manually making changes to your newly created EC2 resource, in this case by adding a new tag.
 
-Log in to the AWS Management console with your browser and ensure you are in the correct AWS region where your Pulumi stack is deployed.
+### Add a tag to EC2 using AWS CLI
+
+To add a tag via the AWS CLI you will first need to retrieve the EC2 Instance ID before you can add a tag. Use the the following command:
+
+```bash
+   aws ec2 describe-instances --filters "Name=tag:Name,Values=webserver" --query "Reservations[*].Instances[*].InstanceId" --output text
+```
+
+Now, add the tag with the key `Description` and the value `Pulumi Drift Detection`:
+```bash
+   aws ec2 create-tags --resources <instance-id> --tags Key=Description,Value="Pulumi Drift Detection"
+```
+
+Replace `<instance-id>` with the actual instance ID of your EC2 instance.
+
+### Add a tag to EC2 using the AWS console
+
+To add a tag via the AWS console, log in with your browser and ensure you are in the correct AWS region where your Pulumi stack is deployed.
 
 Modify your EC2 Instance by going to the EC2 Dashboard, then select the EC2 instance named `webserver` and click on the **Tags** tab. Next, add a tag by clicking the **Manage tags** button. Then click the **Add new tag** button with the key `Description` and value of `Pulumi Drift Detection`. Finally, **Save** the changes.
 
-## Run a Drift Detection deployment
+## Run a Drift Detection
 
 Return to the Pulumi Cloud and your stack, and again choose the **Detect Drift** action and click **Deploy**.
 
 After your run completes you will see a warning icon on the Drift tab, indicating that drift has been detected. You can see a detailed summary of what resources have been updated or deleted, the properties that have changed, when the drift run happened and a link to the Deployment with further details.
 
-![Animation of the Pulumi Cloud console Drift tab](./pulumi-drift-detected.mp4)
+<video autoplay loop muted playsinline>
+    <source src="pulumi-drift-detected.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
 
 ## Remediate Drift
 
@@ -178,6 +201,10 @@ Now that you have detected and reviewed your infrastructure drift, you can choos
 Alternatively, you can accept the changes made in your cloud provider and apply them to your Pulumi state. This can be done via the **Refresh** option in the **Actions** drop down on your stack page. You will also want to update your Pulumi program to align with the changes made in the cloud provider.
 
 As the final step of this tutorial select the **Remediate drift** option in the Actions drop down on your stack page to remediate the manual changes. Once the deployment is complete, your infrastructure will be restored to the desired state expressed in your code.
+
+## Automate Drift Detection
+
+In addition to manually triggering drift detection, you can automate this process by scheduling regular drift detection runs using [Deployment Schedules](/docs/pulumi-cloud/deployments/schedules/). This ensures that any unexpected changes in your infrastructure are promptly identified and remediated without manual intervention.
 
 ## Clean up your resources
 
