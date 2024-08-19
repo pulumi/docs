@@ -28,57 +28,6 @@
         </div>
     </section>
 
-    <section id="benefits" class="container mx-auto text-center my-8">
-        <h2 class="max-w-5xl mx-auto text-center py-8">Benefits of Pulumi ESC</h2>
-        <div class="space-y-8 mx-12">
-            {{ range $item := .Params.benefits.items }}
-                <div class="w-full card bg-white p-4 md:p-16">
-                    <div class="flex flex-row justify-center">
-                        {{ partial "color-icon.html" (dict "icon" $item.icon "icon_color" $item.icon_color) }}
-                        <h5 class="ml-4 mt-2">{{ $item.title }}</h5>
-                    </div>
-                    <p>{{ $item.description | markdownify }}</p>
-                    <div class="mt-8 flex flex-wrap">
-                        {{ range $index, $point := $item.points }}
-                            {{ if eq $index 0 }}
-                                <div class="w-full lg:w-1/2 p-4 md:p-8 border-t-2 lg:border-t-0 lg:border-b lg:border-r">{{ $point }}</div>
-                            {{ else if eq $index 1 }}
-                                <div class="w-full lg:w-1/2 p-4 md:p-8 border-t-2 lg:border-t-0 lg:border-b lg:border-l">{{ $point }}</div>
-                            {{ else if eq $index 2 }}
-                                <div class="w-full lg:w-1/2 p-4 md:p-8 border-t-2 lg:border-t lg:border-r">{{ $point }}</div>
-                            {{ else }}
-                                <div class="w-full lg:w-1/2 p-4 md:p-8 border-t-2 lg:border-t lg:border-l">{{ $point }}</div>
-                            {{ end }}
-                        {{ end }}
-                    </div>
-                </div>
-            {{ end }}
-        </div>
-    </section>
-
-    <section id="info-graphic" class="container mx-auto my-16">
-        <div class="max-w-5xl mx-auto text-center px-6">
-            <h2>How Pulumi ESC works</h2>
-        </div>
-        <div class="rounded-xl bg-white mb-4">
-            <img class="block z-10" src="/images/product/esc-diagram.png" alt="Pulumi ESC architecture diagram" />
-        </div>
-        <div class="flex flex-wrap justify-content items-stretch text-left my-4">
-            {{ range $item := .Params.diagram.items }}
-                <div class="w-full lg:w-1/4 p-2">
-                    <div class="h-full card bg-white p-4">
-                        <div class="icon-section mb-8">
-                            <img src="/images/product/esc-legend-{{ $item.number }}.svg" alt="#{{ $item.number }}" />
-                        </div>
-                        <div class="mt-6">
-                            <p>{{ $item.description }}</p>
-                        </div>
-                    </div>
-                </div>
-            {{ end }}
-        </div>
-    </section>
-
     <section id="screenshot" class="container mx-auto my-16">
         <h2 class="max-w-5xl mx-auto text-center py-8">Centrally manage all environments</h2>
         <div class="flex flex-wrap items-stretch">
@@ -181,6 +130,57 @@
                     <img src="/images/product/esc-execution-environments.png" alt="Exectution environments examples" />
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section id="info-graphic" class="container mx-auto my-16">
+        <div class="max-w-5xl mx-auto text-center px-6">
+            <h2>How Pulumi ESC works</h2>
+        </div>
+        <div class="rounded-xl bg-white mb-4">
+            <img class="block z-10" src="/images/product/esc-diagram.png" alt="Pulumi ESC architecture diagram" />
+        </div>
+        <div class="flex flex-wrap justify-content items-stretch text-left my-4">
+            {{ range $item := .Params.diagram.items }}
+                <div class="w-full lg:w-1/4 p-2">
+                    <div class="h-full card bg-white p-4">
+                        <div class="icon-section mb-8">
+                            <img src="/images/product/esc-legend-{{ $item.number }}.svg" alt="#{{ $item.number }}" />
+                        </div>
+                        <div class="mt-6">
+                            <p>{{ $item.description }}</p>
+                        </div>
+                    </div>
+                </div>
+            {{ end }}
+        </div>
+    </section>
+
+    <section id="benefits" class="container mx-auto text-center my-8">
+        <h2 class="max-w-5xl mx-auto text-center py-8">Benefits of Pulumi ESC</h2>
+        <div class="space-y-8 mx-12">
+            {{ range $item := .Params.benefits.items }}
+                <div class="w-full card bg-white p-4 md:p-16">
+                    <div class="flex flex-row justify-center">
+                        {{ partial "color-icon.html" (dict "icon" $item.icon "icon_color" $item.icon_color) }}
+                        <h5 class="ml-4 mt-2">{{ $item.title }}</h5>
+                    </div>
+                    <p>{{ $item.description | markdownify }}</p>
+                    <div class="mt-8 flex flex-wrap">
+                        {{ range $index, $point := $item.points }}
+                            {{ if eq $index 0 }}
+                                <div class="w-full lg:w-1/2 p-4 md:p-8 border-t-2 lg:border-t-0 lg:border-b lg:border-r">{{ $point }}</div>
+                            {{ else if eq $index 1 }}
+                                <div class="w-full lg:w-1/2 p-4 md:p-8 border-t-2 lg:border-t-0 lg:border-b lg:border-l">{{ $point }}</div>
+                            {{ else if eq $index 2 }}
+                                <div class="w-full lg:w-1/2 p-4 md:p-8 border-t-2 lg:border-t lg:border-r">{{ $point }}</div>
+                            {{ else }}
+                                <div class="w-full lg:w-1/2 p-4 md:p-8 border-t-2 lg:border-t lg:border-l">{{ $point }}</div>
+                            {{ end }}
+                        {{ end }}
+                    </div>
+                </div>
+            {{ end }}
         </div>
     </section>
 
