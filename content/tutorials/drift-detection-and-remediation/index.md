@@ -1,24 +1,24 @@
 ---
-title_tag: "Manage Infrastructure Drift with Pulumi Deployments | Tutorials"
-title: "Manage Infrastructure Drift with Pulumi Deployments"
+title_tag: "Detect and Remediate Infrastructure Drift"
+title: "Detect and Remediate Infrastructure Drift"
 layout: single
 description: |
-   Learn to manage infrastructure drift with Pulumi Deployments.
+   Learn to detect and remediate infrastructure drift with Pulumi Deployments.
 meta_desc: In this tutorial, learn to detect and remediate infrastructure drift in AWS using Pulumi Deployments and GitHub integration.
 meta_image: meta.png
 weight: 71
 summary: |
-   In this tutorial, you will learn how to detect and remediate infrastructure drift in AWS using Pulumi Deployments. You'll create an EC2 instance, introduce drift by making manual changes via the AWS console, and then use Pulumi Deployments to detect and correct the drift.
+   In this tutorial, you will learn how to detect and remediate infrastructure drift in AWS using Pulumi Deployments. You'll create an EC2 instance, introduce drift by making manual changes via the AWS CLI or console, and then use Pulumi Deployments to detect and correct the drift.
 you'll_learn:
  - How to set up and configure Pulumi Deployments for drift detection
  - How to introduce and identify infrastructure drift in an AWS environment
  - How to remediate drift ensuring your cloud infrastructure matches your desired state
- - How to integrate drift detection with GitHub for continuous monitoring and updates
 prereqs:
    - Completion of the [Getting Started](/docs/get-started/) guide or familiarity with the basics of the Pulumi workflow
    - The [Pulumi CLI](/docs/install/)
    - A [Pulumi Cloud account](https://app.pulumi.com/signup) and organization subscribed to the Enterprise or Business Critical editions
    - An [Amazon Web Services](https://aws.amazon.com/) account, access key ID, and secret access key
+   - The [AWS CLI](https://aws.amazon.com/cli/)
    - Git installed and a [GitHub account](https://github.com/) with admin rights to a repository or organization
 estimated_time: 15
 ---
@@ -137,7 +137,7 @@ git push -u origin main
 
 Now you will return to your browser to set your deployment configuration source control settings. Navigate to your stack `Settings` and `Deploy` tab. Next, configure the required Deployment settings, including your source control.
 
-1. Add your GitHub organization/repository and branch you created.
+1. Add your GitHub organization/repository and the branch you created.
 
 2. Add your Secret environment variables, including `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`.
 
@@ -156,7 +156,7 @@ Once you have configured Pulumi Deployments, open the Actions menu and choose `D
 
 ![Screenshot of the Pulumi Cloud console to run a Drift Detection](./pulumi-detect-drift-action.png)
 
-After the drift run is complete, you will see a new Drift run on the `Drift` tab timeline. Since this is the initial check and no deviations have been introduced, you will not receive any notifications indicating that drift has been detected, nor will you see any resources with changes.
+After the drift detection is complete, you will see a new Drift run on the `Drift` tab timeline. Since this is the initial check and no deviations have been introduced, you will not receive any notifications indicating that drift has been detected, nor will you see any resources with changes.
 
 ## Introduce drift
 
