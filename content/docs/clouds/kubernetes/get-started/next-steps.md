@@ -6,7 +6,7 @@ title: Next steps
 h1: "Pulumi & Kubernetes: Next steps"
 weight: 9
 menu:
-  clouds:
+  pulumiiac:
     parent: kubernetes-get-started
     identifier: kubernetes-next-steps
 

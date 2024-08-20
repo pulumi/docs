@@ -5,7 +5,7 @@ title: Destroy stack
 h1: "Pulumi & Google Cloud: Destroy stack"
 weight: 8
 menu:
-  clouds:
+  pulumiiac:
     parent: google-cloud-get-started
     identifier: gcp-destroy-stack
 

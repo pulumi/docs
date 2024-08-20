@@ -5,8 +5,8 @@ title: Concepts
 h1: What is Pulumi?
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  concepts:
-    name: Overview
+  pulumiiac:
+    identifier: concepts
     weight: 4
 
 aliases:

@@ -5,7 +5,7 @@ title: Deploy changes
 h1: "Pulumi & Kubernetes: Deploy changes"
 weight: 7
 menu:
-  clouds:
+  pulumiiac:
     parent: kubernetes-get-started
     identifier: kubernetes-deploy-changes
 

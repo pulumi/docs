@@ -5,7 +5,7 @@ h1: "Pulumi & AWS: Create new project"
 meta_desc: This page provides an overview of how to create a new AWS + Pulumi project.
 weight: 3
 menu:
-  clouds:
+  pulumiiac:
     parent: aws-get-started
     identifier: aws-get-started-create-project
 

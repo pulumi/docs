@@ -5,7 +5,7 @@ title: Review project
 h1: "Pulumi & Azure: Review project"
 weight: 4
 menu:
-  clouds:
+  pulumiiac:
     parent: azure-get-started
     identifier: azure-review-project
 

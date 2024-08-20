@@ -5,9 +5,9 @@ title: Using Pulumi
 h1: Using Pulumi
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  usingpulumi:
+  pulumiiac:
     weight: 6
-    name: Overview
+    identifier: usingpulumi
 aliases:
 - /docs/guides/
 ---

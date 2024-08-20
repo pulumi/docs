@@ -5,7 +5,7 @@ h1: AWS CloudWatch
 meta_desc: Pulumi Crosswalk for AWS CloudWatch help you operationally understand and manage your AWS CloudWatch metrics, resources and applications.
 meta_image: /images/docs/meta-images/docs-clouds-aws-meta-image.png
 menu:
-  clouds:
+  pulumiiac:
     parent: aws-guides
     identifier: aws-guides-cloudwatch
     weight: 3

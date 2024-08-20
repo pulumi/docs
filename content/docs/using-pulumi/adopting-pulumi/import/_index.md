@@ -5,7 +5,7 @@ title: "Import resources"
 h1: "Importing resources"
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  usingpulumi:
+  pulumiiac:
     parent: adopting-pulumi
     weight: 3
 aliases:

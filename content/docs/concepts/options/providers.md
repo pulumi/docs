@@ -5,7 +5,7 @@ title: "providers"
 h1: "Resource option: providers"
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  concepts:
+  pulumiiac:
     identifier: providers
     parent: options
     weight: 12

@@ -6,7 +6,7 @@ title: Next steps
 h1: "Pulumi & Google Cloud: Next steps"
 weight: 9
 menu:
-  clouds:
+  pulumiiac:
     parent: google-cloud-get-started
     identifier: gcp-next-steps
 

@@ -5,7 +5,8 @@ title: "Azure"
 meta_image: /images/docs/meta-images/docs-clouds-azure-meta-image.png
 h1: Azure & Pulumi
 menu:
-  clouds:
+  pulumiiac:
+    parent: clouds
     identifier: azure
     weight: 1
 cloud_overview: true

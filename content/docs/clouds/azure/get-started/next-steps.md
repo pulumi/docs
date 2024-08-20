@@ -6,7 +6,7 @@ title: Next steps
 h1: "Pulumi & Azure: Next steps"
 weight: 9
 menu:
-  clouds:
+  pulumiiac:
     parent: azure-get-started
     identifier: azure-next-steps
 

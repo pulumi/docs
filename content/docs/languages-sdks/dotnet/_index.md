@@ -5,7 +5,8 @@ title: C#, VB, F# (.NET)
 h1: Pulumi & C#, VB, F# (.NET)
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  languages:
+  pulumiiac:
+    parent: languages
     identifier: dotnet
     weight: 3
 aliases:

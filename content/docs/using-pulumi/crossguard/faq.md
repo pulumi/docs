@@ -6,7 +6,7 @@ h1: Policy as code FAQ
 weight: 6
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  usingpulumi:
+  pulumiiac:
     parent: crossguard
 aliases:
 - /docs/guides/crossguard/faq/

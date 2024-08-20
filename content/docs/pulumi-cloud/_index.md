@@ -9,7 +9,6 @@ menu:
   pulumicloud:
     name: Overview
     identifier: pulumi-cloud
-
 aliases:
 - /docs/reference/service/
 - /docs/intro/console/accounts-and-organizations/editions/

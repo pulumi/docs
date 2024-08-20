@@ -5,7 +5,7 @@ title: "version"
 h1: "Resource option: version"
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  concepts:
+  pulumiiac:
     identifier: version
     parent: options
     weight: 15

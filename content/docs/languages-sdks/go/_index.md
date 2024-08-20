@@ -5,7 +5,8 @@ title: Go
 h1: Pulumi & Go
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    languages:
+    pulumiiac:
+        parent: languages
         identifier: go
         weight: 4
 aliases:

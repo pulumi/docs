@@ -5,7 +5,7 @@ title: Deploy changes
 h1: "Pulumi & Azure: Deploy changes"
 weight: 7
 menu:
-  clouds:
+  pulumiiac:
     parent: azure-get-started
     identifier: azure-deploy-changes
 

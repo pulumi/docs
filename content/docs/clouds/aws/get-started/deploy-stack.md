@@ -5,7 +5,7 @@ h1: "Pulumi & AWS: Deploy stack"
 meta_desc: Learn how to deploy your stack to an AWS project in this guide.
 weight: 5
 menu:
-  clouds:
+  pulumiiac:
     parent: aws-get-started
     identifier: aws-get-started-deploy-stack
 

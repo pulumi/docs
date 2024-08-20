@@ -6,8 +6,8 @@ meta_desc: This page provides an overview on how to run commands without using l
 weight: 6
 menu:
   pulumiesc:
-    parent: esc-get-started
-    identifier: esc-get-started-esc-run-command
+    parent: esc_get_started
+    identifier: esc_get_started_esc_run_command
 ---
 
 ## Overview

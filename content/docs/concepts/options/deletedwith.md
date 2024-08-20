@@ -5,7 +5,7 @@ title: "deletedWith"
 h1: "Resource option: deletedWith"
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  concepts:
+  pulumiiac:
     identifier: deletedWith
     parent: options
     weight: 5

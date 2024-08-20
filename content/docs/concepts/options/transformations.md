@@ -5,7 +5,7 @@ title: "transformations"
 h1: "Resource option: transformations"
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  concepts:
+  pulumiiac:
     identifier: transformations
     parent: options
     weight: 15

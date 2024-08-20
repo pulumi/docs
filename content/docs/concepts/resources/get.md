@@ -5,7 +5,7 @@ title: Get functions
 h1: Get functions
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  concepts:
+  pulumiiac:
     parent: resources
     weight: 7
 aliases:

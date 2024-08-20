@@ -5,7 +5,7 @@ title: Before you begin
 h1: "Pulumi & Google Cloud: Before you begin"
 weight: 2
 menu:
-  clouds:
+  pulumiiac:
     parent: google-cloud-get-started
     identifier: gcp-begin
 

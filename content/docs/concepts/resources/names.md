@@ -5,7 +5,7 @@ title: Names
 h1: Resource names
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  concepts:
+  pulumiiac:
     parent: resources
     weight: 1
 aliases:

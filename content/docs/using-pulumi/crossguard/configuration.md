@@ -6,7 +6,7 @@ h1: Configuring policy packs
 weight: 4
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  usingpulumi:
+  pulumiiac:
     parent: crossguard
 aliases:
 - /docs/guides/crossguard/configuration/

@@ -6,7 +6,7 @@ h1: Compliance Ready Policies
 weight: 3
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  usingpulumi:
+  pulumiiac:
     parent: crossguard
     identifier: crossguard-compliance-ready-policies
 ---

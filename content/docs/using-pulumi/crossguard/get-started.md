@@ -7,7 +7,7 @@ h1: Get started with Pulumi policy as code
 weight: 1
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  usingpulumi:
+  pulumiiac:
     parent: crossguard
     identifier: policy-as-code-get-started
 aliases:

@@ -6,8 +6,8 @@ meta_desc: This page provides an overview on how to create a new Pulumi ESC envi
 weight: 3
 menu:
   pulumiesc:
-    parent: esc-get-started
-    identifier: esc-get-started-create-environment
+    parent: esc_get_started
+    identifier: esc_get_started_create_environment
 
 ---
 

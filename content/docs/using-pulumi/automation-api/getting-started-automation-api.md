@@ -6,7 +6,7 @@ h1: Get started with Automation API
 weight: 1
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    usingpulumi:
+    pulumiiac:
         parent: automation-api
 aliases:
 - /docs/guides/automation-api/getting-started-automation-api/

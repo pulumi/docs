@@ -5,7 +5,7 @@ title: Accessing multiple outputs with All
 h1: Accessing multiple outputs with All
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  concepts:
+  pulumiiac:
     weight: 3
     parent: inputs-outputs
 ---

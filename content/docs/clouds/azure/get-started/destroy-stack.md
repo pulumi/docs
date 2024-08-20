@@ -5,7 +5,7 @@ title: Destroy stack
 h1: "Pulumi & Azure: Destroy stack"
 weight: 8
 menu:
-  clouds:
+  pulumiiac:
     parent: azure-get-started
     identifier: azure-destroy-stack
 

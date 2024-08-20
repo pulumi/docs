@@ -5,7 +5,7 @@ title: Before you begin
 h1: "Pulumi & Kubernetes: Before you begin"
 weight: 2
 menu:
-  clouds:
+  pulumiiac:
     parent: kubernetes-get-started
     identifier: kubernetes-begin
 

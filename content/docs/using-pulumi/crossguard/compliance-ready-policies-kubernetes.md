@@ -5,7 +5,7 @@ title: Compliance Ready Kubernetes Policies
 h1: List of Compliance Ready Policies for Kubernetes
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  usingpulumi:
+  pulumiiac:
     parent: crossguard-compliance-ready-policies
 ---
 There's a total of 237 Compliance Ready Policies for the Kubernetes provider.

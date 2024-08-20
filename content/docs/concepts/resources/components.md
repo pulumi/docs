@@ -5,7 +5,7 @@ title: Components
 h1: Component resources
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  concepts:
+  pulumiiac:
     parent: resources
     weight: 3
 aliases:

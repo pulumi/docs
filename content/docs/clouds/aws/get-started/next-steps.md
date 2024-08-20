@@ -6,7 +6,7 @@ meta_desc: This page provides a list of tutorials that take a deeper dive into
             AWS cloud resources.
 weight: 9
 menu:
-  clouds:
+  pulumiiac:
     parent: aws-get-started
     identifier: aws-get-started-next-steps
 

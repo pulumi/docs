@@ -5,7 +5,7 @@ title: Terraform vs. OpenTofu
 h1: Terraform vs. OpenTofu
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  concepts:
+  pulumiiac:
     parent: vs-terraform
     weight: 2
 ---

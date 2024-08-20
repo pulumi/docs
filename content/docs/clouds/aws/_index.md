@@ -5,7 +5,8 @@ title: "AWS"
 meta_image: /images/docs/meta-images/docs-clouds-aws-meta-image.png
 h1: AWS & Pulumi
 menu:
-  clouds:
+  pulumiiac:
+    parent: clouds
     identifier: aws
     weight: 1
 cloud_overview: true

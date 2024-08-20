@@ -5,7 +5,7 @@ h1: "Pulumi & AWS: Review project"
 meta_desc: This page provides an overview on how to a review a new AWS project.
 weight: 4
 menu:
-  clouds:
+  pulumiiac:
     parent: aws-get-started
 
 aliases:

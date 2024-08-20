@@ -5,7 +5,7 @@ title: Project file reference
 h1: Pulumi project file reference
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  concepts:
+  pulumiiac:
     parent: projects
     weight: 1
 

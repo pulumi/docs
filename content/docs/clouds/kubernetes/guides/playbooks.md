@@ -6,7 +6,7 @@ title: Playbooks
 h1: Kubernetes playbooks
 meta_image: /images/docs/meta-images/docs-clouds-kubernetes-meta-image.png
 menu:
-  clouds:
+  pulumiiac:
     parent: kubernetes-guides
     identifier: kubernetes-guides-playbooks
     weight: 1

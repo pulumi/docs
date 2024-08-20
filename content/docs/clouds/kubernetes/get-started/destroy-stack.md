@@ -5,7 +5,7 @@ title: Destroy stack
 h1: "Pulumi & Kubernetes: Destroy stack"
 weight: 8
 menu:
-  clouds:
+  pulumiiac:
     parent: kubernetes-get-started
     identifier: kubernetes-destroy-stack
 

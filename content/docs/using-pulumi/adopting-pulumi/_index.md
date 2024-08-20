@@ -5,7 +5,8 @@ title: Adopting Pulumi
 h1: Adopting Pulumi
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  usingpulumi:
+  pulumiiac:
+    parent: usingpulumi
     identifier: adopting-pulumi
     weight: 1
 ---

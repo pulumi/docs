@@ -5,7 +5,7 @@ title: Dynamic providers
 h1: Dynamic resource providers
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  concepts:
+  pulumiiac:
     parent: resources
     weight: 6
 aliases:

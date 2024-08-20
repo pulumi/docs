@@ -5,7 +5,7 @@ title: "additionalSecretOutputs"
 h1: "Resource option: additionalSecretOutputs"
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  concepts:
+  pulumiiac:
     identifier: additionalSecretOutputs
     parent: options
     weight: 1

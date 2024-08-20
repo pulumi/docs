@@ -5,7 +5,7 @@ h1: "Pulumi & AWS: Destroy stack"
 meta_desc: This page provides an overview of how to destroy a Pulumi stack of an AWS project.
 weight: 8
 menu:
-  clouds:
+  pulumiiac:
     parent: aws-get-started
     identifier: aws-get-started-destroy-stack
 

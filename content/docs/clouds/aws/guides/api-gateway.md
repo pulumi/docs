@@ -5,7 +5,7 @@ h1: Amazon API Gateway
 meta_desc: Pulumi Crosswalk for AWS provides a significantly easier way of programming API Gateway. Here is how.
 meta_image: /images/docs/meta-images/docs-clouds-aws-meta-image.png
 menu:
-  clouds:
+  pulumiiac:
     parent: aws-guides
     identifier: aws-guides-api-gateway
     weight: 1

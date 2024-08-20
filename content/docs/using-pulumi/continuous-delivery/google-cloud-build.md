@@ -5,7 +5,7 @@ title: Google Cloud Build
 h1: Pulumi CI/CD & Google Cloud Build
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    usingpulumi:
+    pulumiiac:
         parent: cont_delivery
         weight: 1
 aliases:

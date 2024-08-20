@@ -5,7 +5,8 @@ title: FAQ
 h1: Pulumi CLI & Pulumi Cloud FAQ
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  support:
+  pulumiiac:
+    parent: support
     weight: 2
     identifier: all-faqs
 

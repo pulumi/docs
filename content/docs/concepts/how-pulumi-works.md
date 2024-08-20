@@ -5,7 +5,8 @@ title: "How Pulumi works"
 h1: "How Pulumi works"
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  concepts:
+  pulumiiac:
+    parent: concepts
     weight: 1
 aliases:
 - /docs/reference/how/

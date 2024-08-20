@@ -5,7 +5,8 @@ title: Troubleshooting
 h1: Pulumi troubleshooting
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  support:
+  pulumiiac:
+    parent: support
     weight: 1
 search:
   keywords:

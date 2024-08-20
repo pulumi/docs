@@ -5,7 +5,7 @@ title: Deploy stack
 h1: "Pulumi & Azure: Deploy stack"
 weight: 5
 menu:
-  clouds:
+  pulumiiac:
     parent: azure-get-started
     identifier: azure-deploy-stack
 

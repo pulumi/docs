@@ -5,7 +5,7 @@ title: Deploy stack
 h1: "Pulumi & Google Cloud: Deploy stack"
 weight: 5
 menu:
-  clouds:
+  pulumiiac:
     parent: google-cloud-get-started
     identifier: gcp-deploy-stack
 

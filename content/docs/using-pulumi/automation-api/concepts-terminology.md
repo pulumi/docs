@@ -6,7 +6,7 @@ h1: Automation API concepts & terminology
 weight: 2
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  usingpulumi:
+  pulumiiac:
     parent: automation-api
 aliases:
 - /docs/guides/automation-api/concepts-terminology/

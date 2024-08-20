@@ -5,7 +5,7 @@ title: "import"
 h1: "Resource option: import"
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  concepts:
+  pulumiiac:
     identifier: import
     parent: options
     weight: 8

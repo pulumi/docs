@@ -5,7 +5,8 @@ title: YAML
 h1: Pulumi & YAML
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  languages:
+  pulumiiac:
+    parent: languages
     identifier: yaml-language
     weight: 6
 

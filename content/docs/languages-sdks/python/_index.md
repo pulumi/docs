@@ -5,7 +5,8 @@ title: Python
 h1: Pulumi & Python
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  languages:
+  pulumiiac:
+    parent: languages
     identifier: python
     weight: 2
 aliases:

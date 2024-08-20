@@ -5,7 +5,7 @@ title: "retainOnDelete"
 h1: "Resource option: retainOnDelete"
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  concepts:
+  pulumiiac:
     identifier: retainOnDelete
     parent: options
     weight: 14

@@ -6,7 +6,7 @@ meta_desc: Pulumi Crosswalk for AWS adds strongly typed IAM resource classes, fo
            otherwise managing AWS users, groups, and roles securely.
 meta_image: /images/docs/meta-images/docs-clouds-aws-meta-image.png
 menu:
-  clouds:
+  pulumiiac:
     parent: aws-guides
     identifier: aws-guides-iam
     weight: 8

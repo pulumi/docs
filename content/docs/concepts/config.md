@@ -5,7 +5,8 @@ title: Configuration
 h1: Configuration
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  concepts:
+  pulumiiac:
+    parent: concepts
     weight: 6
 aliases:
 - /docs/reference/config/

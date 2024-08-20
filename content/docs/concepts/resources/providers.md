@@ -5,7 +5,7 @@ title: Providers
 h1: Resource providers
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  concepts:
+  pulumiiac:
     parent: resources
     weight: 4
 aliases:

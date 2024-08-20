@@ -5,7 +5,8 @@ title: Projects
 h1: Projects
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  concepts:
+  pulumiiac:
+    parent: concepts
     identifier: projects
     weight: 1
 

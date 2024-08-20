@@ -5,7 +5,7 @@ title: "dependsOn"
 h1: "Resource option: dependsOn"
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  concepts:
+  pulumiiac:
     identifier: dependsOn
     parent: options
     weight: 6

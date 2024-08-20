@@ -5,7 +5,7 @@ h1: "Pulumi & AWS: Modify program"
 meta_desc: This page provides an overview on how to update an AWS project from a Pulumi program.
 weight: 6
 menu:
-  clouds:
+  pulumiiac:
     parent: aws-get-started
     identifier: aws-get-started-modify-program
 

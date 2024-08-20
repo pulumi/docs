@@ -5,7 +5,8 @@ title: Java
 h1: Pulumi & Java
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    languages:
+    pulumiiac:
+        parent: languages
         identifier: java
         weight: 5
 aliases:

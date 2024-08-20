@@ -5,8 +5,8 @@ title: Support
 h1: Pulumi support overview
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  support:
-    name: Overview
+  pulumiiac:
+    identifier: support
     weight: 9
 aliases:
 - /docs/troubleshooting/overview/

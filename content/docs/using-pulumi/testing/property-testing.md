@@ -6,7 +6,7 @@ h1: Property testing for Pulumi programs
 meta_image: /images/docs/meta-images/docs-meta.png
 weight: 2
 menu:
-  usingpulumi:
+  pulumiiac:
     parent: testing
 aliases:
 - /docs/guides/testing/property-testing/

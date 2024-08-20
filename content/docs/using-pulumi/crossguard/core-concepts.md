@@ -7,7 +7,7 @@ h1: Pulumi policy as code concepts
 weight: 2
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  usingpulumi:
+  pulumiiac:
     parent: crossguard
     identifier: crossguard-core-concepts
 aliases:

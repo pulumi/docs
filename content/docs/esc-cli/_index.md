@@ -6,8 +6,11 @@ h1: Pulumi ESC CLI overview
 no_on_this_page: true
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  esc_cli:
-    name: Overview
+  pulumiesc:
+    identifier: esc_cli
+    weight: 8
+    name: Pulumi ESC CLI
+
 ---
 
 Pulumi ESC is controlled primarily using the command line interface (CLI). It works in conjunction with the Pulumi Cloud

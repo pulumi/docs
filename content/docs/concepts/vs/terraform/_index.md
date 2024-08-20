@@ -5,7 +5,7 @@ title: Terraform
 h1: Terraform vs. Pulumi
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  concepts:
+  pulumiiac:
     identifier: vs-terraform
     parent: vs
     weight: 1

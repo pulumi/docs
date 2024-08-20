@@ -5,7 +5,8 @@ title: "Google Cloud"
 meta_image: /images/docs/meta-images/docs-clouds-google-cloud-meta-image.png
 h1: Google Cloud & Pulumi
 menu:
-  clouds:
+  pulumiiac:
+    parent: clouds
     identifier: google-cloud
     weight: 1
 cloud_overview: true

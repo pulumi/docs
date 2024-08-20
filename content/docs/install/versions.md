@@ -2,7 +2,8 @@
 title: Pulumi CLI versions
 meta_desc: This page provides an list of available versions of the Pulumi CLI.
 menu:
-  install:
+  pulumiiac:
+    parent: install
     weight: 1
 aliases:
 - /docs/reference/changelog/

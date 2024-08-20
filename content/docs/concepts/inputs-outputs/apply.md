@@ -5,7 +5,7 @@ title: Accessing single outputs with Apply
 h1: Accessing single outputs with Apply
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  concepts:
+  pulumiiac:
     weight: 2
     parent: inputs-outputs
 ---

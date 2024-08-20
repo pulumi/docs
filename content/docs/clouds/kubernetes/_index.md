@@ -5,7 +5,8 @@ title: "Kubernetes"
 meta_image: /images/docs/meta-images/docs-clouds-kubernetes-meta-image.png
 h1: Kubernetes & Pulumi
 menu:
-  clouds:
+  pulumiiac:
+    parent: clouds
     identifier: kube
     weight: 4
 cloud_overview: true

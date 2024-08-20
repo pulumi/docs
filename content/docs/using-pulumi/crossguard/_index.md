@@ -6,7 +6,8 @@ title: Policy as code
 h1: Pulumi policy as code
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    usingpulumi:
+    pulumiiac:
+        parent: usingpulumi
         identifier: crossguard
         weight: 6
 aliases:

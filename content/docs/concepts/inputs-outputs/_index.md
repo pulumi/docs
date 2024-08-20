@@ -5,7 +5,8 @@ title: "Inputs & outputs"
 h1: "Inputs & outputs"
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  concepts:
+  pulumiiac:
+    parent: concepts
     identifier: inputs-outputs
     weight: 5
 aliases:

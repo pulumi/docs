@@ -6,7 +6,7 @@ title: Guides
 h1: Pulumi & Kubernetes guides
 meta_image: /images/docs/meta-images/docs-clouds-kubernetes-meta-image.png
 menu:
-  clouds:
+  pulumiiac:
     parent: kube
     identifier: kubernetes-guides
     weight: 5

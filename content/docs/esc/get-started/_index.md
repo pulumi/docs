@@ -5,8 +5,8 @@ h1: Get Started with Pulumi ESC (Environments, Secrets, and Configuration)
 meta_desc: Learn how to manage secrets and hierarchical configuration with Pulumi.
 menu:
   pulumiesc:
-    identifier: esc-get-started
-    weight: 1
+    identifier: esc_get_started
+    weight: 2
 aliases:
   - /docs/pulumi-cloud/esc/get-started/
 ---

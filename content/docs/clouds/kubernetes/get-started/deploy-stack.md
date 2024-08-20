@@ -5,7 +5,7 @@ title: Deploy stack
 h1: "Pulumi & Kubernetes: Deploy stack"
 weight: 5
 menu:
-  clouds:
+  pulumiiac:
     parent: kubernetes-get-started
     identifier: kubernetes-deploy-stack
 

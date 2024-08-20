@@ -5,7 +5,7 @@ title: Before you begin
 h1: "Pulumi & Azure: Before you begin"
 weight: 2
 menu:
-  clouds:
+  pulumiiac:
     parent: azure-get-started
     identifier: azure-begin
 

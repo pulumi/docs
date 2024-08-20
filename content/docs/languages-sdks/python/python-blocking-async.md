@@ -5,7 +5,7 @@ title: Blocking and Async
 h1: Blocking and Async Python with Pulumi
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  languages:
+  pulumiiac:
     parent: python
     weight: 5
 aliases:

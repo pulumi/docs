@@ -5,7 +5,7 @@ title: Compliance Ready Googlenative Policies
 h1: List of Compliance Ready Policies for Googlenative
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  usingpulumi:
+  pulumiiac:
     parent: crossguard-compliance-ready-policies
 aliases:
 - /docs/guides/crossguard/compliance-ready-policies-googlenative/

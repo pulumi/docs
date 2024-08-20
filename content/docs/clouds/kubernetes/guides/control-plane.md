@@ -6,7 +6,7 @@ title: Control Plane
 h1: Kubernetes Control Plane
 meta_image: /images/docs/meta-images/docs-clouds-kubernetes-meta-image.png
 menu:
-  clouds:
+  pulumiiac:
     parent: kubernetes-guides
     identifier: kubernetes-guides-control-plane
     weight: 2

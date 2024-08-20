@@ -6,7 +6,7 @@ title: Schema
 h1: Pulumi package schema
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    usingpulumi:
+    pulumiiac:
         parent: pulumi-packages
         weight: 3
 aliases:

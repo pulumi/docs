@@ -5,7 +5,7 @@ title: Provider functions
 h1: Provider functions
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  concepts:
+  pulumiiac:
     parent: resources
     weight: 7
 aliases:

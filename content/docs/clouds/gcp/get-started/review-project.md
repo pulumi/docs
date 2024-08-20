@@ -5,7 +5,7 @@ title: Review project
 h1: "Pulumi & Google Cloud: Review project"
 weight: 4
 menu:
-  clouds:
+  pulumiiac:
     parent: google-cloud-get-started
     identifier: gcp-review-project
 

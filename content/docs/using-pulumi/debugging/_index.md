@@ -5,7 +5,8 @@ title: Debugging
 h1: Debugging Pulumi programs
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    usingpulumi:
+    pulumiiac:
+        parent: usingpulumi
         identifier: debugging
         weight: 9
 ---

@@ -6,7 +6,7 @@ title: Worker node creation
 h1: Creating Kubernetes worker nodes
 meta_image: /images/docs/meta-images/docs-clouds-kubernetes-meta-image.png
 menu:
-  clouds:
+  pulumiiac:
     parent: kubernetes-guides
     identifier: kubernetes-guides-worker-nodes
     weight: 3

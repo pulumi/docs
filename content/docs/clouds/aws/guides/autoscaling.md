@@ -6,7 +6,7 @@ meta_desc: Pulumi Crosswalk for AWS allows you to easily to define Auto Scaling 
            instances.
 meta_image: /images/docs/meta-images/docs-clouds-aws-meta-image.png
 menu:
-  clouds:
+  pulumiiac:
     parent: aws-guides
     identifier: aws-guides-auto-scaling
     weight: 2

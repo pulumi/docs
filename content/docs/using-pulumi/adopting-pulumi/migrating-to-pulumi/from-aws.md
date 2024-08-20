@@ -5,7 +5,7 @@ title: AWS CloudFormation
 h1: "Migrating from AWS CloudFormation to Pulumi"
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  usingpulumi:
+  pulumiiac:
     identifier: from-aws-cloudformation
     parent: migrating
     weight: 3

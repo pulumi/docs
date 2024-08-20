@@ -6,7 +6,7 @@ title: App services
 h1: Kubernetes App services
 meta_image: /images/docs/meta-images/docs-clouds-kubernetes-meta-image.png
 menu:
-  clouds:
+  pulumiiac:
     parent: kubernetes-guides
     identifier: kubernetes-guides-app-svcs
     weight: 8

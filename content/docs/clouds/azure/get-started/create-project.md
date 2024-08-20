@@ -5,7 +5,7 @@ title: Create project
 h1: "Pulumi & Azure: Create project"
 weight: 3
 menu:
-  clouds:
+  pulumiiac:
     parent: azure-get-started
     identifier: azure-create-project
 

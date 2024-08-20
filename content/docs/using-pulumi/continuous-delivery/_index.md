@@ -5,7 +5,8 @@ title: Continuous Delivery
 h1: Pulumi & Continuous delivery
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    usingpulumi:
+    pulumiiac:
+        parent: usingpulumi
         name: Continuous Delivery
         identifier: cont_delivery
         weight: 5

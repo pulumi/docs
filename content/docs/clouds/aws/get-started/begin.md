@@ -5,7 +5,7 @@ h1: "Pulumi & AWS: Before you begin"
 meta_desc: This page provides an overview on how to get started with Pulumi when starting an AWS project.
 weight: 2
 menu:
-  clouds:
+  pulumiiac:
     parent: aws-get-started
     identifier: aws-get-started-begin
 

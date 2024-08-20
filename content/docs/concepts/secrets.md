@@ -5,7 +5,8 @@ title: Secrets
 h1: Secrets
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  concepts:
+  pulumiiac:
+    parent: concepts
     weight: 7
 aliases:
 - /docs/intro/concepts/secrets/

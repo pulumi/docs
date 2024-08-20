@@ -5,7 +5,7 @@ title: Modify program
 h1: "Pulumi & Azure: Modify program"
 weight: 6
 menu:
-  clouds:
+  pulumiiac:
     parent: azure-get-started
     identifier: azure-modify-program
 

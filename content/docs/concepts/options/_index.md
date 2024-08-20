@@ -5,7 +5,8 @@ title: Resource options
 h1: Resource options
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  concepts:
+  pulumiiac:
+    parent: concepts
     identifier: options
     weight: 4
 aliases:

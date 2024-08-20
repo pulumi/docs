@@ -5,7 +5,7 @@ title: Terraform
 h1: Migrating from Terraform to Pulumi
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  usingpulumi:
+  pulumiiac:
     identifier: from-terraform
     parent: migrating
     weight: 2

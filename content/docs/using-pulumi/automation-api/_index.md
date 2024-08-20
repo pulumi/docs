@@ -5,7 +5,8 @@ title: Automation API
 h1: Automation API
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    usingpulumi:
+    pulumiiac:
+        parent: usingpulumi
         identifier: automation-api
         weight: 3
 aliases:

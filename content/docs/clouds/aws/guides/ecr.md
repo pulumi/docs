@@ -5,7 +5,7 @@ h1: AWS Elastic Container Registry (ECR)
 meta_desc: Pulumi Crosswalk for AWS ECR makes the provisioning of new ECR repositories as simple as one line of code.
 meta_image: /images/docs/meta-images/docs-clouds-aws-meta-image.png
 menu:
-  clouds:
+  pulumiiac:
     parent: aws-guides
     identifier: aws-guides-ecr
     weight: 4

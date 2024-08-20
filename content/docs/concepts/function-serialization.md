@@ -10,7 +10,8 @@ keywords:
 - function serialization
 - pulumi sdk
 menu:
-  concepts:
+  pulumiiac:
+    parent: concepts
     weight: 14
 aliases:
 - /docs/reference/serializing-functions/

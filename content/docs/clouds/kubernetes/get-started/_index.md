@@ -4,7 +4,7 @@ meta_desc: This page provides an overview and guide on how to get started with K
 title: Get started
 h1: Get Started with Kubernetes
 menu:
-  clouds:
+  pulumiiac:
     identifier: kubernetes-get-started
     parent: kube
     weight: 4

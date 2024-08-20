@@ -5,7 +5,7 @@ title: Deploy changes
 h1: "Pulumi & Google Cloud: Deploy changes"
 weight: 7
 menu:
-  clouds:
+  pulumiiac:
     parent: google-cloud-get-started
     identifier: gcp-deploy-changes
 

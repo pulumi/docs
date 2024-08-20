@@ -5,7 +5,7 @@ title: Pulumi equivalents
 h1: Pulumi terms & command equivalents
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  concepts:
+  pulumiiac:
     parent: vs-terraform
     weight: 1
 aliases:

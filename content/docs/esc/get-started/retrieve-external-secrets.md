@@ -6,8 +6,8 @@ meta_desc: This page provides an overview on how to retrieve secrets from extern
 weight: 7
 menu:
   pulumiesc:
-    parent: esc-get-started
-    identifier: esc-get-started-retrieve-external-secrets
+    parent: esc_get_started
+    identifier: esc_get_started_retrieve_external_secrets
 ---
 
 ## Overview

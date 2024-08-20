@@ -5,7 +5,7 @@ title: Reference
 h1: Pulumi YAML reference
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  languages:
+  pulumiiac:
     parent: yaml-language
     weight: 1
 aliases:

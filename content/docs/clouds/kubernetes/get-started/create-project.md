@@ -5,7 +5,7 @@ title: Create project
 h1: "Pulumi & Kubernetes: Create project"
 weight: 3
 menu:
-  clouds:
+  pulumiiac:
     parent: kubernetes-get-started
     identifier: kubernetes-get-started-create-project
 

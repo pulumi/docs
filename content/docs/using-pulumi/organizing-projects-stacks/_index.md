@@ -5,7 +5,8 @@ title: Organizing projects
 h1: Organizing Pulumi projects & stacks
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  usingpulumi:
+  pulumiiac:
+    parent: usingpulumi
     weight: 2
 
 aliases:

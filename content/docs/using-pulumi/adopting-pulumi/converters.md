@@ -5,7 +5,7 @@ title: Convert code
 h1: Convert code to Pulumi
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  usingpulumi:
+  pulumiiac:
     identifier: converters
     parent: adopting-pulumi
     weight: 4

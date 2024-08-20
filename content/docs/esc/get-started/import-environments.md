@@ -6,8 +6,8 @@ meta_desc: This page provides an overview on how to import environments in Pulum
 weight: 5
 menu:
   pulumiesc:
-    parent: esc-get-started
-    identifier: esc-get-started-import-environments
+    parent: esc_get_started
+    identifier: esc_get_started_import_environments
 ---
 
 ## Overview

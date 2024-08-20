@@ -6,7 +6,7 @@ meta_desc: Pulumi Crosswalk for AWS simplifies the creation, configuration, and 
            offering a single programming model and deployment workflow.
 meta_image: /images/docs/meta-images/docs-clouds-aws-meta-image.png
 menu:
-  clouds:
+  pulumiiac:
     parent: aws-guides
     identifier: aws-guides-eks
     weight: 6

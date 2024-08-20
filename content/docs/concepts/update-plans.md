@@ -5,7 +5,8 @@ title: Update plans
 h1: Update  plans
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  concepts:
+  pulumiiac:
+    parent: concepts
     weight: 11
 aliases:
 - /updateplans/

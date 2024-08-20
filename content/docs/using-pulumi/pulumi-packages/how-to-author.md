@@ -5,7 +5,7 @@ title: Author packages
 h1: Author packages in Pulumi Registry
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    usingpulumi:
+    pulumiiac:
         parent: pulumi-packages
         identifier: how-to-author
         weight: 2

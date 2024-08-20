@@ -5,7 +5,7 @@ title: "deleteBeforeReplace"
 h1: "Resource option: deleteBeforeReplace"
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  concepts:
+  pulumiiac:
     identifier: deleteBeforeReplace
     parent: options
     weight: 4

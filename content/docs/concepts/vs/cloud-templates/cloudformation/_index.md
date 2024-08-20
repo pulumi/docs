@@ -5,7 +5,7 @@ title: AWS CloudFormation
 h1: Pulumi vs AWS CloudFormation
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  concepts:
+  pulumiiac:
     parent: vs
     weight: 2
 aliases:

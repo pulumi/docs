@@ -5,7 +5,7 @@ title: Review project
 h1: "Pulumi & Kubernetes: Review project"
 weight: 4
 menu:
-  clouds:
+  pulumiiac:
     parent: kubernetes-get-started
     identifier: kubernetes-review-project-get-started
 

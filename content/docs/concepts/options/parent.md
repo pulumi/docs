@@ -5,7 +5,7 @@ title: "parent"
 h1: "Resource option: parent"
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  concepts:
+  pulumiiac:
     identifier: parent
     parent: options
     weight: 9

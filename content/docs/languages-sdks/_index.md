@@ -5,8 +5,8 @@ title: Languages & SDKs
 h1: Pulumi languages & SDKs
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  languages:
-    name: Overview
+  pulumiiac:
+    identifier: languages
     weight: 7
 
 aliases:

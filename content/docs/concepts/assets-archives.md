@@ -5,7 +5,8 @@ title: Assets & archives
 h1: Assets & archives
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  concepts:
+  pulumiiac:
+    parent: concepts
     weight: 13
 aliases:
 - /docs/intro/concepts/assets-archives/

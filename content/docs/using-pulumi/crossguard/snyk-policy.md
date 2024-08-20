@@ -6,7 +6,7 @@ h1: Snyk Container Scanning
 weight: 3
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  usingpulumi:
+  pulumiiac:
     parent: crossguard
 aliases:
 - /docs/guides/crossguard/snyk-container-scanning/

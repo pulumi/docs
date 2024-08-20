@@ -5,7 +5,7 @@ title: "aliases"
 h1: "Resource option: aliases"
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  concepts:
+  pulumiiac:
     identifier: aliases
     parent: options
     weight: 2

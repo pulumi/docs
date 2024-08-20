@@ -5,7 +5,8 @@ title: Stacks
 h1: Stacks
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  concepts:
+  pulumiiac:
+    parent: concepts
     weight: 2
 aliases:
 - /docs/reference/stack/

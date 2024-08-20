@@ -5,7 +5,7 @@ title: Chef & Puppet
 h1: Chef, Puppet, Ansible, & Salt vs Pulumi
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  concepts:
+  pulumiiac:
     parent: vs
     weight: 9
 aliases:

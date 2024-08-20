@@ -6,7 +6,7 @@ title: Pulumi GitHub App
 h1: Pulumi Github App
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    usingpulumi:
+    pulumiiac:
         parent: cont_delivery
         weight: 1
 

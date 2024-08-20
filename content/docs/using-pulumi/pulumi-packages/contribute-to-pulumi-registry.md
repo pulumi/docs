@@ -5,7 +5,7 @@ title: Contribute packages
 h1: Contribute packages to Pulumi Registry
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    usingpulumi:
+    pulumiiac:
         parent: pulumi-packages
         identifier: contribute-to-pulumi-registry
         weight: 1

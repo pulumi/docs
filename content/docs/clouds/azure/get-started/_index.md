@@ -4,7 +4,7 @@ meta_desc: This page provides an overview and guide on how to get started with A
 title: Get started
 h1: Get started with Pulumi & Azure
 menu:
-  clouds:
+  pulumiiac:
     parent: azure
     identifier: azure-get-started
     weight: 2

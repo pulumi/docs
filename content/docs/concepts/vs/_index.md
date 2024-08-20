@@ -5,7 +5,8 @@ title: Compare to...
 h1: Compare Pulumi to other solutions
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  concepts:
+  pulumiiac:
+    parent: concepts
     identifier: vs
     weight: 16
 aliases:

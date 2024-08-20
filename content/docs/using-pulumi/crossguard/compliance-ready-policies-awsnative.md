@@ -5,7 +5,7 @@ title: Compliance Ready Awsnative Policies
 h1: List of Compliance Ready Policies for Awsnative
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  usingpulumi:
+  pulumiiac:
     parent: crossguard-compliance-ready-policies
 ---
 There's a total of 54 Compliance Ready Policies for the Awsnative provider.

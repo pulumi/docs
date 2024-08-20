@@ -5,7 +5,7 @@ h1: More AWS examples
 meta_desc: More examples of common AWS resources to help you get the most out of Pulumi.
 meta_image: /images/docs/meta-images/docs-clouds-aws-meta-image.png
 menu:
-  clouds:
+  pulumiiac:
     parent: aws-guides
     identifier: aws-guides-more
     weight: 11

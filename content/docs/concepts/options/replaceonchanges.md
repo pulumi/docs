@@ -5,7 +5,7 @@ title: "replaceOnChanges"
 h1: "Resource option: replaceOnChanges"
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  concepts:
+  pulumiiac:
     identifier: replaceOnChanges
     parent: options
     weight: 13

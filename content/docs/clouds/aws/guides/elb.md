@@ -6,7 +6,7 @@ meta_desc: Pulumi Crosswalk for AWS ELB provides easy provisioning Application a
            integrates with functionality of AWS other services.
 meta_image: /images/docs/meta-images/docs-clouds-aws-meta-image.png
 menu:
-  clouds:
+  pulumiiac:
     parent: aws-guides
     identifier: aws-guides-elb
     weight: 7

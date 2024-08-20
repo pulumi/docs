@@ -6,9 +6,9 @@ h1: Pulumi CLI overview
 no_on_this_page: true
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  cli:
-    name: Overview
-    weight: 3
+  pulumiiac:
+    identifier: cli
+    weight: 8
 aliases:
 - /docs/reference/commands/
 - /docs/tour/basics-deploying/

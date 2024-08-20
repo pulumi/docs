@@ -6,8 +6,8 @@ meta_desc: This page provides an overview on how to store and retrieve secrets i
 weight: 4
 menu:
   pulumiesc:
-    parent: esc-get-started
-    identifier: esc-get-started-store-retrieve-secrets
+    parent: esc_get_started
+    identifier: esc_get_started_store_retrieve_secrets
 
 ---
 

@@ -5,7 +5,8 @@ title: Environment variables
 h1: Pulumi CLI environment variables
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  cli:
+  pulumiiac:
+    parent: cli
     weight: 2
 aliases:
 - /docs/reference/cli/environment-variables/

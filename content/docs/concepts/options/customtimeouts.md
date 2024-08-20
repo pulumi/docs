@@ -5,7 +5,7 @@ title: "customTimeouts"
 h1: "Resource option: customTimeouts"
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  concepts:
+  pulumiiac:
     identifier: customTimeouts
     parent: options
     weight: 3

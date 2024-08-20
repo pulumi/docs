@@ -5,7 +5,7 @@ title: IAM
 h1: Kubernetes identity and access management (IAM)
 meta_image: /images/docs/meta-images/docs-clouds-kubernetes-meta-image.png
 menu:
-  clouds:
+  pulumiiac:
     parent: kubernetes-guides
     identifier: kubernetes-guides-iam
     weight: 11

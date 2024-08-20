@@ -6,7 +6,7 @@ title: Adding CI/CD support
 h1: Adding Pulumi support for CI/CD systems
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    usingpulumi:
+    pulumiiac:
         parent: cont_delivery
         weight: 2
 aliases:

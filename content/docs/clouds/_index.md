@@ -5,8 +5,8 @@ title: "Clouds"
 no_on_this_page: true
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  clouds:
-    name: Overview
+  pulumiiac:
+    identifier: clouds
     weight: 3
 ---
 

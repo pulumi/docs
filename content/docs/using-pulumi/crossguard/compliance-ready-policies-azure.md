@@ -5,7 +5,7 @@ title: Compliance Ready Azure Policies
 h1: List of Compliance Ready Policies for Azure
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  usingpulumi:
+  pulumiiac:
     parent: crossguard-compliance-ready-policies
     identifier: crossguard-compliance-ready-policies-azure
 ---

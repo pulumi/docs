@@ -6,7 +6,7 @@ title: Infra services
 h1: Kubernetes infrastructure services
 meta_image: /images/docs/meta-images/docs-clouds-kubernetes-meta-image.png
 menu:
-  clouds:
+  pulumiiac:
     parent: kubernetes-guides
     weight: 13
 aliases:

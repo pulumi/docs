@@ -4,7 +4,7 @@ meta_desc: This page provides an overview and guide on how to get started with G
 title: Get started
 h1: Get started with Pulumi & Google Cloud
 menu:
-  clouds:
+  pulumiiac:
     parent: google-cloud
     identifier: google-cloud-get-started
     weight: 3

@@ -5,7 +5,7 @@ title: Debug provider packages
 h1: Debug Pulumi provider packages
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    usingpulumi:
+    pulumiiac:
         parent: pulumi-packages
         identifier: how-to-debug-providers
         weight: 2

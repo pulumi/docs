@@ -5,7 +5,7 @@ title: AWS CDK
 h1: Pulumi vs AWS Cloud Development Kit (CDK)
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  concepts:
+  pulumiiac:
     parent: vs
     weight: 3
 aliases:

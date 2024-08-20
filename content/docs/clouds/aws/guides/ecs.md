@@ -6,7 +6,7 @@ meta_desc: Pulumi Crosswalk for AWS ECS simplifies deploying containerized appli
             associated resources.
 meta_image: /images/docs/meta-images/docs-clouds-aws-meta-image.png
 menu:
-  clouds:
+  pulumiiac:
     parent: aws-guides
     identifier: aws-guides-ecs
     weight: 5

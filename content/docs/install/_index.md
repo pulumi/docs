@@ -5,8 +5,8 @@ title: "Download & install"
 h1: Download & install Pulumi
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  install:
-    name: Overview
+  pulumiiac:
+    identifier: install
     weight: 1
 
 aliases:

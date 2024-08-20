@@ -5,7 +5,8 @@ title: Command-line completion
 h1: Pulumi CLI command-line completion
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  cli:
+  pulumiiac:
+    parent: cli
     weight: 3
 ---
 

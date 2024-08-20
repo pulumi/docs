@@ -5,7 +5,7 @@ title: Modify program
 h1: "Pulumi & Kubernetes: Modify program"
 weight: 6
 menu:
-  clouds:
+  pulumiiac:
     parent: kubernetes-get-started
     identifier: kubernetes-modify-program
 

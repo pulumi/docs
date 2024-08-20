@@ -5,7 +5,7 @@ title: "Migrate from..."
 h1: Migrating from other solutions to Pulumi
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  usingpulumi:
+  pulumiiac:
     identifier: migrating
     parent: adopting-pulumi
     weight: 2
