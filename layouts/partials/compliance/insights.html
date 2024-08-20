@@ -2,7 +2,7 @@
     <div class="container mx-auto max-w-4xl">
         <h3>Pulumi Insights</h3>
         <p class="py-4">
-            Use Pulumi Insights to gain visibility into your cloud infrastructure's configuration to assess compliance.
+            Use Pulumi Insights to gain visibility into your cloud infrastructure's configuration to assess {{ .Params.framework }} compliance.
             Pulumi Insights is Intelligence for Infrastructure as Code. It adds advanced search, analytics, and AI to 
             infrastructure as code.
         </p>
@@ -21,8 +21,16 @@
     <div class="container mx-auto max-w-4xl">
         <h3>Compliance Ready Policies</h3>
         <p class="py-4">
-            With comprehensive coverage of {{ .Params.cloud }}, Pulumi Compliance Ready Policies
+            With comprehensive coverage of {{ .Params.cloud }}, <a href="/docs/using-pulumi/crossguard/compliance-ready-policies/">Pulumi Compliance Ready Policies</a>
             provide an enhanced level of control and governance over your cloud resources.
         </p>
+    </div>
+</section>
+
+<section id="sa-form" class="container mx-auto justify-center text-center m-4">
+    <div class="w-full flex flex-col items-center lg:w-1/2 card bg-white mx-auto p-8">
+        <h3>Talk to a Solutions Architect</h3>
+        <p>Get in touch with our Solutions Architects to get all your resources in use with Pulumi Insights</p>
+        <pulumi-hubspot-form form-id="e4258f4f-359c-471b-8d2d-cdb81ad45f3d"></pulumi-hubspot-form>
     </div>
 </section>

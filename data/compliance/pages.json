@@ -1,6 +1,6 @@
 [
     {
-        "framework": "PCI-DSS",
+        "framework": "PCI DSS",
         "cloud": "AWS",
         "resources": [
             {
@@ -43,7 +43,50 @@
         ]
     },
     {
-        "framework": "ISO-27001",
+        "framework": "ISO 27001",
+        "cloud": "AWS",
+        "resources": [
+            {
+                "name": "RDS",
+                "full": "RDS instance",
+                "category": "database"
+            },
+            {
+                "name": "EC2",
+                "full": "EC2 instance",
+                "category": "server"
+            },
+            {
+                "name": "ALB",
+                "full": "ALB",
+                "category": "networking"
+            },
+            {
+                "name": "VPC",
+                "full": "VPC",
+                "category": "networking"
+            },
+            {
+                "name": "ELB",
+                "full": "ELB",
+                "category": "networking"
+            },
+            {
+                "name": "ECS",
+                "full": "ECS Cluster"
+            },
+            {
+                "name": "EKS",
+                "full": "EKS Cluster"
+            },
+            {
+                "name": "API Gateway",
+                "full": "API Gateway"
+            }
+        ]
+    },
+    {
+        "framework": "CIS",
         "cloud": "AWS",
         "resources": [
             {

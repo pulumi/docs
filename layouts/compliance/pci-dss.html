@@ -8,8 +8,8 @@
         <div class="container mx-auto max-w-4xl text-center my-16 px-6">
             <h2>{{ .Title }}</h2>
             <p>
-                Pulumi can assist with making your organization's cloud infrastructure become PCI-DSS compliant.
-                PCI-DSS (Payment Card Industry Data Security Standard) compliance refers to the adherence to a set of
+                Pulumi can assist with making your organization's cloud infrastructure PCI DSS compliant.
+                PCI DSS (Payment Card Industry Data Security Standard) compliance refers to the adherence to a set of
                 security standards designed
                 to protect card information during and after a financial transaction. These standards are established by
                 the Payment Card Industry
@@ -18,13 +18,13 @@
                 Discover, and JCB.
             </p>
             <div class="mt-10">
-                <a href="#form" rel="noopener noreferrer" class="btn-primary">Speak with a Solutions Architect!</a>
+                <a href="#sa-form" rel="noopener noreferrer" class="btn-primary">Speak with a Solutions Architect!</a>
             </div>
         </div>
     </section>
     <section class="mt-4 py-4 px-4 md:px-0">
         <div class="container mx-auto max-w-4xl">
-            <h3>Key Aspects of PCI-DSS Compliance:</h3>
+            <h3>Key Aspects of PCI DSS Compliance:</h3>
             <ol>
                 <li>
                     <strong>Security Controls:</strong> Organizations must implement
@@ -56,13 +56,13 @@
                 <li>
                     <strong>Regular Audits:</strong> Organizations that process, store,
                     or transmit credit card information must undergo regular audits to
-                    ensure they are in compliance with PCI-DSS requirements. This can
+                    ensure they are in compliance with PCI DSS requirements. This can
                     involve self-assessment or external assessments, depending on the
                     size of the organization and the volume of transactions processed.
                 </li>
             </ol>
             <p>
-                To make your {{  .Params.full }} PCI-DSS compliant, you need to
+                To make your {{  .Params.full }} PCI DSS compliant, you need to
                 implement a range of security measures and controls across your
                 environment. Here's a checklist of what you should consider:
             </p>
@@ -220,14 +220,6 @@
     </section>
 
     {{ partial "compliance/insights.html" . }}
-
-    <section id="form" class="container mx-auto justify-center text-center p-4">
-        <div class="w-full flex flex-col items-center lg:w-1/2 card bg-white mx-auto p-8">
-            <h3>Talk to a Solutions Architect</h3>
-            <p>Get in touch with our Solutions Architects to get all your resources in use with Pulumi Insights</p>
-            <pulumi-hubspot-form form-id="e4258f4f-359c-471b-8d2d-cdb81ad45f3d"></pulumi-hubspot-form>
-        </div>
-    </section>
 
 </div>
 

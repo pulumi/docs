@@ -1,0 +1,232 @@
+{{ define "main" }}
+
+{{ partial "hero.html" (dict "title" .Title) }}
+<div class="container mx-auto">
+    <section class="px-4 md:px-0">
+        <div class="container mx-auto max-w-4xl text-center my-16 px-6">
+            <h2>{{ .Title }}</h2>
+            <p>
+                Pulumi can assist with making your organization's cloud infrastructure CIS compliant.
+                CIS compliance adheres to the security benchmarks and guidelines provided by the
+                Center for Internet Security (CIS). CIS compliance is an important step toward enhancing your organization's overall
+                security posture by providing a solid foundation of best practices and configurations. 
+                Ensuring that your {{ .Params.full }} is CIS compliant involves
+                configuring your resources according to the
+                <a href="https://docs.aws.amazon.com/securityhub/latest/userguide/cis-aws-foundations-benchmark.html">
+                    CIS AWS Foundations Benchmark.
+                </a>
+                This benchmark provides best practices for securing various AWS services,
+                focusing on identity and access management, logging, monitoring, and
+                networking. 
+            </p>
+            <div class="mt-10">
+                <a href="#sa-form" rel="noopener noreferrer" class="btn-primary">Speak with a Solutions Architect!</a>
+            </div>
+        </div>
+    </section>
+    <section class="mt-4 py-4 px-4 md:px-0">
+        <div class="container mx-auto max-w-4xl">
+            <h3>Key Components of CIS Compliance</h3>
+            <ul>
+                <li>
+                    <strong>Implementation of Controls:</strong> Start by implementing the
+                    CIS Controls relevant to your organization's size and risk profile.
+                </li>
+
+                <li>
+                    <strong>Use CIS Benchmarks:</strong> Configure your systems and
+                    applications according to CIS Benchmarks.
+                </li>
+
+                <li>
+                    <strong>Regular Audits:</strong> Continuously monitor and audit your
+                    systems to ensure ongoing compliance with CIS recommendations.
+                </li>
+
+                <li>
+                    <strong>Automation Tools:</strong> Consider using CIS-CAT (CIS
+                    Configuration Assessment Tool) or other automation tools to assess and
+                    enforce compliance across your infrastructure.
+                </li>
+            </ul>
+            <h3>Benefits of CIS Compliance</h3>
+            <ul>
+                <li>
+                    <strong>Standardized Security:</strong> Ensures that your organization
+                    follows industry-recognized security best practices.
+                </li>
+
+                <li>
+                    <strong>Risk Reduction:</strong> Helps in reducing the attack surface by
+                    implementing critical security controls.
+                </li>
+
+                <li>
+                    <strong>Compliance with Other Standards:</strong> CIS Controls and
+                    Benchmarks often overlap with other compliance frameworks like PCI-DSS,
+                    NIST, and ISO, making it easier to achieve multiple compliance goals
+                    simultaneously.
+                </li>
+
+                <li>
+                    <strong>Improved Incident Response:</strong> By implementing CIS
+                    Controls, organizations are better equipped to detect, respond to, and
+                    recover from security incidents.
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="mt-4 py-4 px-4 md:px-0">
+        <div class="container mx-auto max-w-4xl">
+            <h3>CIS compliance for your AWS infrastructure</h3>
+            <h4>1. Identity and Access Management (IAM)</h4>
+            <ul>
+                <li>
+                    <strong>Root Account Protection:</strong> Ensure that the AWS root
+                    account is not used for everyday tasks and that Multi-Factor
+                    Authentication (MFA) is enabled for the root account.
+                </li>
+
+                <li>
+                    <strong>IAM Policies:</strong> Apply the principle of least privilege by
+                    ensuring that IAM policies grant the minimum permissions required for
+                    users, roles, and services.
+                </li>
+
+                <li>
+                    <strong>MFA for IAM Users:</strong> Require MFA for all IAM users with
+                    console access.
+                </li>
+
+                <li>
+                    <strong>Password Policies:</strong> Implement strong password policies
+                    for IAM users, including complexity requirements and password
+                    expiration.
+                </li>
+            </ul>
+            <h4>2. Logging and Monitoring</h4>
+            <ul>
+                <li>
+                    <strong>CloudTrail:</strong> Enable AWS CloudTrail across all regions to
+                    log all API activity in your AWS account. Ensure logs are sent to an S3
+                    bucket with encryption and that the bucket is protected against
+                    deletion.
+                </li>
+
+                <li>
+                    <strong>CloudWatch:</strong> Set up CloudWatch to monitor critical
+                    metrics and create alarms for unusual activities or threshold breaches.
+                </li>
+
+                <li>
+                    <strong>VPC Flow Logs:</strong> Enable VPC Flow Logs to capture
+                    information about the IP traffic going to and from network interfaces in
+                    your VPC.
+                </li>
+            </ul>
+            <h4>3. Networking</h4>
+            <ul>
+                <li>
+                    <strong>Security Groups and NACLs:</strong> Ensure that your Security
+                    Groups and Network ACLs (NACLs) are configured to allow only necessary
+                    traffic. Review and restrict inbound and outbound rules.
+                </li>
+
+                <li>
+                    <strong>Public Access to Resources:</strong> Avoid public access to
+                    sensitive resources. Ensure that no security groups allow unrestricted
+                    access (e.g., 0.0.0.0/0) unless explicitly required and monitored.
+                </li>
+
+                <li>
+                    <strong>Bastion Hosts:</strong> Use bastion hosts for SSH or RDP access
+                    to instances, ensuring that they are the only publicly accessible
+                    resources and are tightly controlled.
+                </li>
+            </ul>
+            <h4>4. Encryption</h4>
+            <ul>
+                <li>
+                    <strong>S3 Bucket Encryption:</strong> Ensure that all S3 buckets use
+                    server-side encryption (SSE) to protect data at rest. Enable default
+                    encryption for all new buckets.
+                </li>
+
+                <li>
+                    <strong>RDS and EBS Encryption:</strong> Enable encryption for Amazon
+                    RDS databases and Amazon EBS volumes, both for data at rest and backups.
+                </li>
+
+                <li>
+                    <strong>Key Management Service (KMS):</strong> Use AWS KMS to manage and
+                    rotate encryption keys. Ensure that access to KMS keys is restricted and
+                    monitored.
+                </li>
+            </ul>
+            <h4>5. Auditing and Assessment Tools</h4>
+            <ul>
+                <li>
+                    <strong>AWS Config:</strong> Use AWS Config to assess, audit, and
+                    evaluate the configurations of your AWS resources. Set up rules to
+                    automatically check for compliance with CIS benchmarks and trigger
+                    alerts for non-compliance.
+                </li>
+
+                <li>
+                    <strong>AWS Security Hub:</strong> Enable AWS Security Hub to aggregate
+                    security findings and compare them against CIS Benchmarks. Security Hub
+                    can also automatically generate compliance reports.
+                </li>
+
+                <li>
+                    <strong>CIS-CAT Tool:</strong> Use the CIS Configuration Assessment Tool
+                    (CIS-CAT) to automate the assessment of your AWS environment against the
+                    CIS Benchmarks.
+                </li>
+            </ul>
+            <h4>6. Automation and Continuous Compliance</h4>
+            <ul>
+                <li>
+                    <strong>Infrastructure as Code (IaC):</strong> Use tools like AWS
+                    CloudFormation or Terraform to define your infrastructure in code. This
+                    allows you to apply CIS-compliant configurations consistently and easily
+                    across your environments.
+                </li>
+
+                <li>
+                    <strong>Automated Remediation:</strong> Implement automated remediation
+                    for non-compliant resources using AWS Lambda or AWS Config rules to
+                    enforce compliance.
+                </li>
+
+                <li>
+                    <strong>Continuous Monitoring:</strong> Regularly monitor your
+                    environment with tools like AWS Config, CloudWatch, and GuardDuty to
+                    ensure ongoing compliance with CIS benchmarks.
+                </li>
+            </ul>
+            <h4>7. Documentation and Reporting</h4>
+            <ul>
+                <li>
+                    <strong>Compliance Documentation:</strong> Maintain documentation of
+                    your CIS compliance efforts, including configurations, policies, and
+                    monitoring setups.
+                </li>
+
+                <li>
+                    <strong>Regular Audits:</strong> Schedule regular internal audits to
+                    review your configurations against the CIS benchmarks and update them as
+                    needed.
+                </li>
+            </ul>
+
+        </div>
+    </section>
+
+    {{ partial "compliance/insights.html" . }}
+
+</div>
+
+{{ partial "learnmore-contactus.html" . }}
+{{ end }}

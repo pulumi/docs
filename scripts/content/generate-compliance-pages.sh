@@ -11,8 +11,8 @@ for row in $(echo "${pages}" | jq -r '.[] | @base64'); do
         decodeResource() {
             echo ${res} | base64 --decode | jq -r ${1}
         }
-        slug=$(echo "$(_jq '.cloud')-$(decodeResource '.name')-$(_jq '.framework')" | awk '{print tolower($0)}')
-        layout=$(_jq '.framework' | awk '{print tolower($0)}')
+        slug=$(echo "$(_jq '.cloud')-$(decodeResource '.name')-$(_jq '.framework')" | awk '{print tolower($0)}' | sed 's/ /-/g')
+        layout=$(_jq '.framework' | awk '{print tolower($0)}' | sed 's/ /-/g')
         title="$(_jq '.framework') Compliance for $(_jq '.cloud') $(decodeResource '.name')"
     # Create a new markdown file for each entry
     cat > "content/compliance/${slug}.md" <<EOF
@@ -27,7 +27,7 @@ slug: $slug
 framework: $(_jq '.framework')
 resource: $(decodeResource '.name')
 full: $(decodeResource '.full')
-meta_desc: add meta desc here add meta desc here add meta desc here add meta desc here add meta desc here
+meta_desc: Pulumi can assist your organization with becoming $(_jq '.framework') compliant. Get in touch with our Solutions Architects to learn more.
 ---
 
 EOF
@@ -44,7 +44,7 @@ slug: $(echo "$(_jq '.cloud')-$(_jq '.framework')" | awk '{print tolower($0)}')
 framework: $(_jq '.framework')
 resource: "$(_jq '.cloud')"
 full: "$(_jq '.cloud') cloud infrastructure"
-meta_desc: add meta desc here add meta desc here add meta desc here add meta desc here add meta desc here
+meta_desc: Pulumi can assist your organization with becoming $(_jq '.framework') compliant. Get in touch with our Solutions Architects to learn more.
 ---
 
 EOF
