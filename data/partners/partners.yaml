@@ -17,3 +17,39 @@
 - name: Docker
   link: https://www.pulumi.com
   logo: /logos/pkg/docker.svg
+
+- name: Pinecone
+  link: https://www.pulumi.com
+  logo: /logos/pkg/pinecone.svg
+
+- name: NewRelic
+  link: https://www.pulumi.com
+  logo: /logos/tech/newrelic.svg
+
+- name: Snyk
+  link: https://www.pulumi.com
+  logo: /logos/tech/snyk.png
+
+- name: Cloudflare
+  link: https://www.pulumi.com
+  logo: /logos/pkg/cloudflare.svg
+
+- name: GitHub
+  link: https://www.pulumi.com
+  logo: /logos/pkg/github.svg
+
+- name: Snowflake
+  link: https://www.pulumi.com
+  logo: /logos/pkg/snowflake.svg
+
+- name: Zscaler
+  link: https://www.pulumi.com
+  logo: /logos/tech/zscaler.svg
+
+- name: MongoDB
+  link: https://www.pulumi.com
+  logo: /logos/tech/mongodb.png
+
+- name: Gitlab
+  link: https://www.pulumi.com
+  logo: /logos/pkg/gitlab.svg
