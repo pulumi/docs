@@ -29,13 +29,13 @@ As part of securing the storage, distribution, and protection of sensitive infor
 
 Several tools and platforms are designed specifically to facilitate secrets management. Let's explore a few notable ones.
 
-* **HashiCorp Vault**: HashiCorp Vault is a popular open-source tool that provides a centralized platform for managing and controlling access to secrets. It supports dynamic secret generation, encryption as a service, and comprehensive access policies.
-* **AWS Secrets Manager**: As part of the Amazon Web Services (AWS) ecosystem, AWS Secrets Manager is a fully managed service designed to protect and manage sensitive information used by applications.
-* **Azure Key Vault**: Microsoft's Azure Key Vault is a cloud service that safeguards cryptographic keys, secrets, and certificates used by cloud applications and services.
-* **Google Cloud Secret Manager**: Google Cloud's Secret Manager offers a secure storage system for API keys, passwords, certificates, and other sensitive data.
-* **Pulumi ESC**: Pulumi's Environments, Secrets, and Configuration (ESC) product offers a platform for storing and controlling access to secrets. Pulumi ESC can also dynamically obtain credentials via OIDC providers and manage configuration information as well as secrets.
+* **[HashiCorp Vault](/what-is/what-is-hashicorp-vault)**: HashiCorp Vault is a popular open-source tool that provides a centralized platform for managing and controlling access to secrets. It supports dynamic secret generation, encryption as a service, and comprehensive access policies.
+* **[AWS Secrets Manager](/what-is/what-is-aws-secrets-manager)**: As part of the Amazon Web Services (AWS) ecosystem, AWS Secrets Manager is a fully managed service designed to protect and manage sensitive information used by applications.
+* **[Azure Key Vault](/what-is/what-is-azure-key-vault)**: Microsoft's Azure Key Vault is a cloud service that safeguards cryptographic keys, secrets, and certificates used by cloud applications and services.
+* **[Google Cloud Secret Manager](/what-is/what-is-google-cloud-secret-manager)**: Google Cloud's Secret Manager offers a secure storage system for API keys, passwords, certificates, and other sensitive data.
+* **[Pulumi ESC](/product/esc)**: Pulumi's Environments, Secrets, and Configuration (ESC) product offers a platform for storing and controlling access to secrets. Pulumi ESC can also dynamically obtain credentials via OIDC providers and manage configuration information as well as secrets.
 
-Additionally, both Kubernetes and Docker offer limited, built-in secrets management functionality in the form of [Kubernetes Secrets](/what-is/what-are-kubernetes-secrets/) and [Docker Secrets](/what-is/what-are-docker-secrets/), respectively.
+Additionally, both Kubernetes and Docker offer limited, built-in secrets management functionality in the form of [Kubernetes Secrets](/what-is/what-are-kubernetes-secrets/) and [Docker Secrets](/what-is/what-are-docker-secrets/), respectively. See how [different secrets managers compare](/docs/esc/vs) to each other.
 
 ## What benefits does secrets management provide?
 
