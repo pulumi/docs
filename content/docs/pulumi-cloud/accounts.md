@@ -16,8 +16,7 @@ aliases:
 - /docs/intro/pulumi-cloud/accounts/
 ---
 
-To create your Pulumi account, navigate to [app.pulumi.com](https://app.pulumi.com) and sign
-up. You may use any of the following identities to sign up:
+To create your Pulumi account, navigate to [app.pulumi.com](https://app.pulumi.com) and sign up. You may use any of the following identities to sign up:
 
 * GitHub
 * GitLab
@@ -25,73 +24,69 @@ up. You may use any of the following identities to sign up:
 * [Email](https://app.pulumi.com/signin/email)
 * [Single Sign-on](https://app.pulumi.com/signin/sso)
 
-Your account lets you authenticate with the Pulumi Cloud, where you can do the
-following:
+Your account lets you authenticate with the Pulumi Cloud, where you can do the following:
 
 * Manage your profile settings, including your account password, and subscriptions
-* [Add an organization](/docs/pulumi-cloud/organizations/) backed by Atlassian, GitHub, GitLab, or a SAML
-  2.0-compatible identity provider, such as Active Directory, Okta, or Google Workspace.
+* [Add an organization](/docs/pulumi-cloud/organizations/) backed by Atlassian, GitHub, GitLab, or a SAML 2.0-compatible identity provider, such as Active Directory, Okta, or Google Workspace.
 * [Manage your projects and stacks](/docs/pulumi-cloud/projects-and-stacks/)
 
 ## Profile
 
-Your Pulumi user account profile is used to identify you in the Pulumi
-Cloud. Your account display name, avatar URL, and email address are
-obtained from the identity provider you used when signing up.
+Your Pulumi user account profile is used to identify you in the Pulumi Cloud. Your account display name, avatar URL, and email address are obtained from the identity provider you used when signing up.
 
 ### Editing Your Profile
 
 To edit your profile information:
 
-1. Select your profile picture.
-1. Select **Account settings**.
-1. Use the **Edit profile** button.
-1. Save your changes.
+1. Click on your account avatar in the top right corner.
+2. Select **Account settings**.
+3. Use the **Edit profile** button.
+4. Save your changes.
 
-### Adding New Identities{#adding-new-identities}
+### Resending Email Verification
 
-You can associate your Pulumi account with multiple identities. In addition to the one you have originally configured, you can add your identities with the following third party providers:
+If you signed up using an email address and need to resend the verification email:
+
+1. Click on your account avatar in the top right corner.
+2. Navigate to **Account settings**.
+3. Under your email address, you will see the option to resend the verification email.
+![Resend Verification Email](/images/docs/pulumi-cloud/resend-verification.png)
+
+### Adding New Identities {#adding-new-identities}
+
+You can associate your Pulumi account with multiple identities. In addition to the one you have originally configured, you can add your identities with the following third-party providers:
 
 {{< identities >}}
 
-Connecting these additional identities will enable
-you to join Pulumi organizations that are backed by those systems. Only
-organization admins can add members to a Pulumi organization.
+Connecting these additional identities will enable you to join Pulumi organizations that are backed by those systems. Only organization admins can add members to a Pulumi organization.
 
-In order to be invited as a member of a Pulumi organization, you must connect
-your account with the organization's backing identity provider. Once your
-account is linked to your third party identity, you will then show up on the
-list of users that the organization admin can invite.
+In order to be invited as a member of a Pulumi organization, you must connect your account with the organization's backing identity provider. Once your account is linked to your third-party identity, you will then show up on the list of users that the organization admin can invite.
 
 ## Password Reset
 
 For users who signed up with email, you may change your password by:
 
-1. Use the organization selector to choose your individual account.
-1. Navigate to **Settings** > **Account security**
-1. Reset your password. Your password must be at least ten characters long.
+1. Click on your account avatar in the top right corner.
+2. Navigate to **Password reset**.
+3. Reset your password. Your password must be at least ten characters long.
 
 ## Setting up MFA
 
-For users who signed up with email, you can enable multi-factor authentication (MFA) using one time passwords:
+For users who signed up with email, you can enable multi-factor authentication (MFA) using one-time passwords:
 
-1. Click on your account avatar in the top right corner
-1. Navigate to Account Settings
-1. Scroll to the MFA section
-1. Press Enroll
+1. Click on your account avatar in the top right corner.
+2. Navigate to Account Settings.
+3. Scroll to the MFA section.
+4. Press **Enroll**.
 ![MFA Enroll](/images/docs/pulumi-cloud/mfa/mfa-enroll.png)
-1. Download a TOTP authenticator app, for example, you can use Google Authenticator (available for <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2">Android</a> and <a href="https://apps.apple.com/us/app/google-authenticator/id388497605">iOS</a>)
-1. Scan the QR with your authenticator app (or copy the authentication key if you have issues scanning the QR) and complete the one time password generated by it to confirm the enrollment.
+5. Download a TOTP authenticator app, for example, you can use Google Authenticator (available for [Android](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2) and [iOS](https://apps.apple.com/us/app/google-authenticator/id388497605)).
+6. Scan the QR code with your authenticator app (or copy the authentication key if you have issues scanning the QR) and complete the one-time password generated by it to confirm the enrollment.
 ![Scan MFA QR](/images/docs/pulumi-cloud/mfa/mfa-qr.png)
-1. Copy the recovery key and store it in a secure location. This is used as a backup login method if you loose access to your authenticator app.
+7. Copy the recovery key and store it in a secure location. This is used as a backup login method if you lose access to your authenticator app.
 ![Copy the MFA recovery key](/images/docs/pulumi-cloud/mfa/mfa-recovery.png)
 
-{{% notes type="info" %}}You can un-enroll by clickling on the **Reset authentication method** button and second factor authentication will be disabled for your account.{{% /notes %}}
+{{% notes type="info" %}}You can un-enroll by clicking on the **Reset authentication method** button, and second-factor authentication will be disabled for your account.{{% /notes %}}
 
 ## Subscription
 
-Your individual account is on the Pulumi Individual Edition and this cannot be changed. To collaborate with others create an organization.
-
-## Integrations
-
-This page provides a list of Pulumi's Continuous Delivery guides. Select your favorite CI/CD platform to learn more about how to integrate it with Pulumi.
+Your individual account is on the Pulumi Individual Edition and this cannot be changed. To collaborate with others, create an organization.
