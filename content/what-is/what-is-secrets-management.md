@@ -15,7 +15,7 @@ This article addresses several questions that help more fully explain secrets ma
 * What are the different elements of secrets management?
 * What are some products that help with secrets management?
 * What benefits does secrets management provide?
-* How does secrets management relate to infrastructure as code and configuration management?
+* How does secrets management relate to [infrastructure as code](/what-is/what-is-infrastructure-as-code) and [configuration management](/what-is/what-is-configuration-management)?
 
 ## What are the different elements of secrets management?
 

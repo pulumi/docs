@@ -114,3 +114,9 @@ Pulumi's YouTube series, A Quick Bite of Cloud Engineering, tackled the topic of
 ## Learn more
 
 Pulumi offers a truly modern approach to infrastructure as code. With Pulumi, you can create, deploy, and manage infrastructure on any cloud using the programming languages and tools you already know. [Get started today](/docs/get-started/).
+
+There are many other practices related to infrastructure as code, read more:
+
+* [What is Secrets Management?](/what-is/what-is-secrets-management)
+* [What is Platform Engineering?](/what-is/what-is-platform-engineering)
+* [What is Infrastructure as Software?](/what-is/what-is-infrastructure-as-software)
