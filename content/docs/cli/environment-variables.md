@@ -14,6 +14,17 @@ aliases:
 <dl class="tabular tabular-5-col break-words">
     <dt>
         <span class="font-mono">
+            PULUMI_AI_SERVICE_ENDPOINT
+        </span>
+    </dt>
+    <dd>
+        <p>
+            Specifies the endpoint for Pulumi AI service.
+        </p>
+        <pre><code class="text-xs">PULUMI_AI_SERVICE_ENDPOINT="https://ai.pulumi.com"</code></pre>
+    </dd>
+    <dt>
+        <span class="font-mono">
             PULUMI_AUTOMATION_API_SKIP_VERSION_CHECK
         </span>
     </dt>
@@ -100,6 +111,39 @@ aliases:
     </dd>
     <dt>
         <span class="font-mono">
+            PULUMI_CONTINUE_ON_ERROR
+        </span>
+    </dt>
+    <dd>
+        <p>
+            Continues to perform the update/destroy operation despite the occurrence of errors.
+        </p>
+        <pre><code class="text-xs">PULUMI_CONTINUE_ON_ERROR=true</code></pre>
+    </dd>
+    <dt>
+        <span class="font-mono">
+            PULUMI_DEBUG_COMMANDS
+        </span>
+    </dt>
+    <dd>
+        <p>
+            List commands helpful for debugging pulumi itself.
+        </p>
+        <pre><code class="text-xs">PULUMI_DEBUG_COMMANDS=true</code></pre>
+    </dd>
+    <dt>
+        <span class="font-mono">
+            PULUMI_DEBUG_GRPC
+        </span>
+    </dt>
+    <dd>
+        <p>
+            Enables debug tracing of Pulumi gRPC internals. The variable should be set to the log file to which gRPC debug traces will be sent.
+        </p>
+        <pre><code class="text-xs">PULUMI_DEBUG_GRPC="/path/to/grpc-debug.log"</code></pre>
+    </dd>
+    <dt>
+        <span class="font-mono">
             PULUMI_DEBUG_PROMISE_LEAKS
         </span>
     </dt>
@@ -110,6 +154,127 @@ aliases:
             get more verbose error messages when debugging promise leaks.
         </p>
         <pre><code class="text-xs">PULUMI_DEBUG_PROMISE_LEAKS=true</code></pre>
+    </dd>
+    <dt>
+        <span class="font-mono">
+            PULUMI_DEV
+        </span>
+    </dt>
+    <dd>
+        <p>
+            Enable features for hacking on pulumi itself.
+        </p>
+        <pre><code class="text-xs">PULUMI_DEV=true</code></pre>
+    </dd>
+    <dt>
+        <span class="font-mono">
+            PULUMI_DISABLE_AUTOMATIC_PLUGIN_ACQUISITION
+        </span>
+    </dt>
+    <dd>
+        <p>
+            Disables the automatic installation of missing plugins.
+        </p>
+        <pre><code class="text-xs">PULUMI_DISABLE_AUTOMATIC_PLUGIN_ACQUISITION=true</code></pre>
+    </dd>
+    <dt>
+        <span class="font-mono">
+            PULUMI_DISABLE_PROVIDER_PREVIEW
+        </span>
+    </dt>
+    <dd>
+        <p>
+            Disables provider preview and enabled previous more concervative preview behavior.
+        </p>
+        <pre><code class="text-xs">PULUMI_DISABLE_PROVIDER_PREVIEW=true</code></pre>
+    </dd>
+    <dt>
+        <span class="font-mono">
+            PULUMI_DISABLE_RESOURCE_REFERENCES
+        </span>
+    </dt>
+    <dd>
+        <p>
+            Disables resource references in Invoke gRPC calls.
+        </p>
+        <pre><code class="text-xs">PULUMI_DISABLE_RESOURCE_REFERENCES=true</code></pre>
+    </dd>
+    <dt>
+        <span class="font-mono">
+            PULUMI_DISABLE_OUTPUT_VALUES
+        </span>
+    </dt>
+    <dd>
+        <p>
+            Disables output values in gRPC calls.
+        </p>
+        <pre><code class="text-xs">PULUMI_DISABLE_OUTPUT_VALUES=true</code></pre>
+    </dd>
+    <dt>
+        <span class="font-mono">
+            PULUMI_DISABLE_VALIDATION
+        </span>
+    </dt>
+    <dd>
+        <p>
+            Disables format validation of system inputs. Currently, this disables validation of stack names.
+        </p>
+        <pre><code class="text-xs">PULUMI_DISABLE_VALIDATION=true</code></pre>
+    </dd>
+    <dt>
+        <span class="font-mono">
+            PULUMI_DIY_BACKEND_DISABLE_CHECKPOINT_BACKUPS
+        </span>
+    </dt>
+    <dd>
+        <p>
+            If set, checkpoint backups will not be written to the backup folder.
+        </p>
+        <pre><code class="text-xs">PULUMI_DIY_BACKEND_DISABLE_CHECKPOINT_BACKUPS=true</code></pre>
+    </dd>
+    <dt>
+        <span class="font-mono">
+            PULUMI_DIY_BACKEND_GZIP
+        </span>
+    </dt>
+    <dd>
+        <p>
+            Enables gzip compression when writing state files.
+        </p>
+        <pre><code class="text-xs">PULUMI_DIY_BACKEND_GZIP=true</code></pre>
+    </dd>
+    <dt>
+        <span class="font-mono">
+            PULUMI_DIY_BACKEND_LEGACY_LAYOUT
+        </span>
+    </dt>
+    <dd>
+        <p>
+            Uses the legacy layout for new buckets, which currently default to project-scoped stacks.
+        </p>
+        <pre><code class="text-xs">PULUMI_DIY_BACKEND_LEGACY_LAYOUT=true</code></pre>
+    </dd>
+    <dt>
+        <span class="font-mono">
+            PULUMI_DIY_BACKEND_NO_LEGACY_WARNING
+        </span>
+    </dt>
+    <dd>
+        <p>
+            Disables the warning about legacy stack files mixed with project-scoped stack files.
+        </p>
+        <pre><code class="text-xs">PULUMI_DIY_BACKEND_NO_LEGACY_WARNING=true</code></pre>
+    </dd>
+    <dt>
+        <span class="font-mono">
+            PULUMI_DIY_BACKEND_RETAIN_CHECKPOINTS
+        </span>
+    </dt>
+    <dd>
+        <p>
+            If set, every checkpoint will be duplicated to a timestamped file.
+        </p>
+        <pre><code class="text-xs">PULUMI_DIY_BACKEND_RETAIN_CHECKPOINTS=true</code></pre>
     </dd>
     <dt>
         <span class="font-mono">
@@ -154,6 +319,40 @@ aliases:
     </dd>
     <dt>
         <span class="font-mono">
+            PULUMI_ENABLE_LEGACY_REFRESH_DIFF
+        </span>
+    </dt>
+    <dd>
+        <p>
+            Use legacy refresh diff behaviour, in which only output changes are
+            reported and changes against the desired state are not calculated.
+        </p>
+        <pre><code class="text-xs">PULUMI_ENABLE_LEGACY_REFRESH_DIFF=true</code></pre>
+    </dd>
+    <dt>
+        <span class="font-mono">
+            PULUMI_ERROR_ON_DEPENDENCY_CYCLES
+        </span>
+    </dt>
+    <dd>
+        <p>
+            Enables error reporting when dependency cycles are detected.
+        </p>
+        <pre><code class="text-xs">PULUMI_ERROR_ON_DEPENDENCY_CYCLES=true</code></pre>
+    </dd>
+    <dt>
+        <span class="font-mono">
+            PULUMI_ERROR_OUTPUT_STRING
+        </span>
+    </dt>
+    <dd>
+        <p>
+            Throws an error instead of returning a string when attempting to convert an Output to a string.
+        </p>
+        <pre><code class="text-xs">PULUMI_ERROR_OUTPUT_STRING=true</code></pre>
+    </dd>
+    <dt>
+        <span class="font-mono">
             PULUMI_EXPERIMENTAL
         </span>
     </dt>
@@ -174,6 +373,28 @@ aliases:
             credentials file. By default, artifacts are stored next to Pulumi binaries in <code>~/.pulumi</code>.
         </p>
         <pre><code class="text-xs">PULUMI_HOME="/path/to/artifacts"</code></pre>
+    </dd>
+    <dt>
+        <span class="font-mono">
+            PULUMI_IGNORE_AMBIENT_PLUGINS
+        </span>
+    </dt>
+    <dd>
+        <p>
+            Disables discovering additional plugins by examining $PATH.
+        </p>
+        <pre><code class="text-xs">PULUMI_IGNORE_AMBIENT_PLUGINS=true</code></pre>
+    </dd>
+    <dt>
+        <span class="font-mono">
+            PULUMI_PLUGIN_DOWNLOAD_URL_OVERRIDES
+        </span>
+    </dt>
+    <dd>
+        <p>
+            Specifies overrides for Plugin Download URLs. The expected format is `regexp=URL`, and multiple pairs can be specified separated by commas.
+        </p>
+        <pre><code class="text-xs">PULUMI_PLUGIN_DOWNLOAD_URL_OVERRIDES="^https://foo=https://bar,^github://=https://buzz"</code></pre>
     </dd>
     <dt>
         <span class="font-mono">
