@@ -112,8 +112,8 @@ spotlight:
       top: 5
       left: 945
       opacity: 100
-    - id: aaron-kao
-      name: Aaron Kao
+    - id: devon-grove
+      name: Devon Grove
       size: 150
       top: 48
       left: 1115
@@ -124,8 +124,8 @@ spotlight:
       top: 235
       left: 1050
       opacity: 50
-    - id: devon-grove
-      name: Devon Grove
+    - id: james-denyer
+      name: James Denyer
       size: 94
       top: 120
       left: 1317
