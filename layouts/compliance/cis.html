@@ -6,18 +6,10 @@
         <div class="container mx-auto max-w-4xl text-center my-16 px-6">
             <h2>{{ .Title }}</h2>
             <p>
-                Pulumi can assist with making your organization's cloud infrastructure CIS compliant.
-                CIS compliance adheres to the security benchmarks and guidelines provided by the
-                Center for Internet Security (CIS). CIS compliance is an important step toward enhancing your organization's overall
-                security posture by providing a solid foundation of best practices and configurations. 
-                Ensuring that your {{ .Params.full }} is CIS compliant involves
-                configuring your resources according to the
-                <a href="https://docs.aws.amazon.com/securityhub/latest/userguide/cis-aws-foundations-benchmark.html">
-                    CIS AWS Foundations Benchmark.
-                </a>
-                This benchmark provides best practices for securing various AWS services,
-                focusing on identity and access management, logging, monitoring, and
-                networking. 
+                {{ .Params.description }}
+            </p>
+            <p>
+                Pulumi can assist with making your {{ .Params.cloud }} cloud infrastructure meet CIS benchmarks.
             </p>
             <div class="mt-10">
                 <a href="#sa-form" rel="noopener noreferrer" class="btn-primary">Speak with a Solutions Architect!</a>

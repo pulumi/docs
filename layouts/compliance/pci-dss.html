@@ -1,5 +1,3 @@
-
-
 {{ define "main" }}
 
 {{ partial "hero.html" (dict "title" .Title) }}
@@ -8,14 +6,10 @@
         <div class="container mx-auto max-w-4xl text-center my-16 px-6">
             <h2>{{ .Title }}</h2>
             <p>
-                Pulumi can assist with making your organization's cloud infrastructure PCI DSS compliant.
-                PCI DSS (Payment Card Industry Data Security Standard) compliance refers to the adherence to a set of
-                security standards designed
-                to protect card information during and after a financial transaction. These standards are established by
-                the Payment Card Industry
-                Security Standards Council (PCI SSC), which was founded by major credit card companies like Visa,
-                MasterCard, American Express,
-                Discover, and JCB.
+                {{ .Params.description }}
+            </p>
+            <p>
+                Pulumi can assist with making your {{ .Params.cloud }} cloud infrastructure PCI DSS compliant.
             </p>
             <div class="mt-10">
                 <a href="#sa-form" rel="noopener noreferrer" class="btn-primary">Speak with a Solutions Architect!</a>
@@ -24,7 +18,7 @@
     </section>
     <section class="mt-4 py-4 px-4 md:px-0">
         <div class="container mx-auto max-w-4xl">
-            <h3>Key Aspects of PCI DSS Compliance:</h3>
+            <h3>Key Aspects of PCI DSS Compliance</h3>
             <ol>
                 <li>
                     <strong>Security Controls:</strong> Organizations must implement
@@ -32,27 +26,27 @@
                     cardholder data. This includes requirements like installing
                     firewalls, encrypting cardholder data, and using antivirus software.
                 </li>
-        
+
                 <li>
                     <strong>Access Control:</strong> Only authorized personnel should
                     have access to cardholder data. This involves setting up strong
                     access control measures, such as unique user IDs and restricting
                     physical access to sensitive data.
                 </li>
-        
+
                 <li>
                     <strong>Monitoring and Testing:</strong> Regularly monitor and test
                     networks to ensure that security controls are functioning correctly
                     and to identify vulnerabilities. This includes maintaining logs of
                     all access to network resources and cardholder data.
                 </li>
-        
+
                 <li>
                     <strong>Information Security Policy:</strong> Organizations must
                     maintain a policy that addresses information security for employees
                     and contractors. This includes regular security awareness training.
                 </li>
-        
+
                 <li>
                     <strong>Regular Audits:</strong> Organizations that process, store,
                     or transmit credit card information must undergo regular audits to
@@ -61,162 +55,166 @@
                     size of the organization and the volume of transactions processed.
                 </li>
             </ol>
+            <h3>12 PCI DSS Requirements</h3>
             <p>
-                To make your {{  .Params.full }} PCI DSS compliant, you need to
-                implement a range of security measures and controls across your
-                environment. Here's a checklist of what you should consider:
+                To ensure that your {{ .Params.full }} become PCI-DSS compliant, you'll need to
+                adhere to the 12 PCI-DSS requirements. Here's a breakdown of what you need
+                to do:
             </p>
-            <h4>1. Network Security</h4>
-        
+            <h4>
+                1. Install and Maintain a Firewall Configuration to Protect Cardholder Data
+            </h4>
             <ul>
                 <li>
-                    <strong>Firewall Configuration:</strong> Ensure that your {{  .Params.full }}
-                    is behind a firewall. Use AWS Security Groups and Network
-                    Access Control Lists (NACLs) to restrict inbound and outbound
-                    traffic to only what is necessary.
+                    Implement security groups and network ACLs to control inbound and
+                    outbound traffic.
                 </li>
-        
-                <li>
-                    <strong>Segmentation:</strong> Isolate the cardholder data
-                    environment (CDE) from other parts of your network. This can involve
-                    creating a VPC with subnets dedicated to your CDE.
-                </li>
+
+                <li>Use VPC (Virtual Private Cloud) to isolate and secure your network.</li>
             </ul>
-            <h4>2. Data Protection</h4>
-        
+            <h4>
+                2. Do Not Use Vendor-Supplied Defaults for System Passwords and Other
+                Security Parameters
+            </h4>
             <ul>
                 <li>
-                    <strong>Encryption:</strong> Encrypt cardholder data both at rest
-                    and in transit. Use AWS Key Management Service (KMS) to manage
-                    encryption keys. For data in transit, ensure that HTTPS (TLS) is
-                    used.
+                    Change all default passwords and settings on your servers,
+                    databases, and other components.
                 </li>
-        
+
                 <li>
-                    <strong>Storage:</strong> Limit the storage of cardholder data to
-                    only what is absolutely necessary, and ensure that data is securely
-                    deleted when no longer needed.
+                    Implement multi-factor authentication (MFA) for access to the 
+                    AWS console.
                 </li>
             </ul>
-            <h4>3. Access Control</h4>
-        
+            <h4>3. Protect Stored Cardholder Data</h4>
+            <ul>
+                <li>Encrypt cardholder data using strong encryption (e.g., AES-256).</li>
+
+                <li>
+                    Do not store sensitive authentication data after authorization (e.g.,
+                    full track data, PINs).
+                </li>
+            </ul>
+            <h4>4. Encrypt Transmission of Cardholder Data Across Open, Public Networks</h4>
+
             <ul>
                 <li>
-                    <strong>User Access Management:</strong> Restrict access to the {{  .Params.full }}
-                    and the data it processes to only those individuals who
-                    need it. Use IAM roles with the principle of least privilege.
+                    Use HTTPS/TLS to encrypt data in transit between your web app and users.
                 </li>
-        
+
                 <li>
-                    <strong>Multi-Factor Authentication (MFA):</strong> Enable MFA for
-                    all administrative access to the {{  .Params.full }} and AWS Management
-                    Console.
-                </li>
-        
-                <li>
-                    <strong>Unique IDs:</strong> Ensure that each user with access to
-                    the {{  .Params.full }} or payment processing system has a unique ID.
+                    Ensure that all payment-related data transmissions are secured with
+                    strong cryptographic protocols.
                 </li>
             </ul>
-            <h4>4. Monitoring and Logging</h4>
-        
+            <h4>5. Use and Regularly Update Anti-Virus Software or Programs</h4>
             <ul>
                 <li>
-                    <strong>Logging:</strong> Enable CloudTrail, VPC Flow Logs, and AWS
-                    Config to monitor and log access to your {{  .Params.full }} and its
-                    network traffic. Ensure that logs are kept secure and are retained
-                    as per PCI-DSS requirements.
+                    Install and maintain anti-virus/malware protection on your servers.
                 </li>
-        
+
                 <li>
-                    <strong>File Integrity Monitoring:</strong> Implement file integrity
-                    monitoring to alert you to any unauthorized changes to critical
-                    files or configurations.
-                </li>
-        
-                <li>
-                    <strong>Vulnerability Scanning:</strong> Regularly scan your {{  .Params.full }}
-                    for vulnerabilities using a PCI-approved scanning vendor (ASV).
+                    Regularly update your anti-virus software and perform scheduled scans.
                 </li>
             </ul>
-            <h4>5. Secure Software Development</h4>
-        
+            <h4>6. Develop and Maintain Secure Systems and Applications</h4>
             <ul>
                 <li>
-                    <strong>Secure Coding Practices:</strong> Follow secure coding
-                    practices to avoid vulnerabilities like SQL injection, cross-site
-                    scripting (XSS), and cross-site request forgery (CSRF).
+                    Regularly update your web app and any third-party software or libraries.
                 </li>
-        
+
                 <li>
-                    <strong>Patching and Updates:</strong> Regularly update your {{  .Params.full }}
-                    and any dependencies to ensure they are protected against known vulnerabilities.
+                    Apply security patches promptly to your operating system and application
+                    components.
                 </li>
+
+                <li>Conduct code reviews and vulnerability assessments of your web app.</li>
             </ul>
-            <h4>6. Policy and Documentation</h4>
-        
+            <h4>7. Restrict Access to Cardholder Data by Business Need to Know</h4>
+
             <ul>
                 <li>
-                    <strong>Information Security Policy:</strong> Develop and maintain
-                    an information security policy that includes processes for PCI-DSS
-                    compliance.
+                    Implement role-based access control (RBAC) to limit access to cardholder
+                    data.
                 </li>
-        
+
                 <li>
-                    <strong>Incident Response Plan:</strong> Establish an incident
-                    response plan to address potential security breaches.
+                    Ensure that only authorized personnel can access sensitive information.
                 </li>
             </ul>
-            <h4>7. Regular Audits</h4>
-        
+            <h4>8. Identify and Authenticate Access to System Components</h4>
+
             <ul>
                 <li>
-                    <strong>Internal Audits:</strong> Perform regular internal audits of
-                    your systems and processes to ensure they align with PCI-DSS
-                    requirements.
+                    Implement strong authentication methods for accessing your applications.
                 </li>
-        
-                <li>
-                    <strong>External Assessments:</strong> Depending on your transaction
-                    volume, you may need to have an external Qualified Security Assessor
-                    (QSA) conduct a formal PCI-DSS assessment.
-                </li>
+
+                <li>Enforce password complexity and expiration policies.</li>
             </ul>
-            <h4>8. Vendor Management</h4>
-        
+            <h4>9. Restrict Physical Access to Cardholder Data</h4>
             <ul>
                 <li>
-                    <strong>Third-Party Service Providers:</strong> Ensure that any
-                    third-party service providers you use for payment processing or
-                    storage are also PCI-DSS compliant.
+                    Ensure that AWS physical security controls are adequate for the infrastructure
+                    hosted in AWS.
+                </li>
+
+                <li>
+                    Review AWS's compliance with physical security requirements as part of
+                    their shared responsibility model.
                 </li>
             </ul>
-            <h4>9. Physical Security</h4>
-        
+            <h4>
+                10. Track and Monitor All Access to Network Resources and Cardholder Data
+            </h4>
             <ul>
                 <li>
-                    <strong>Physical Security:</strong> AWS data centers themselves
-                    are compliant with PCI-DSS physical security requirements, but you
-                    should be aware of how to secure any backups or data that might be
-                    stored outside of AWS.
+                    Enable CloudTrail and CloudWatch to log and monitor access to your AWS
+                    resources.
                 </li>
+
+                <li>
+                    Implement logging for your web app to track access to cardholder data.
+                </li>
+
+                <li>Regularly review logs and set up alerts for suspicious activity.</li>
             </ul>
-            <h4>10. Documentation and Reporting</h4>
-        
+            <h4>11. Regularly Test Security Systems and Processes</h4>
             <ul>
                 <li>
-                    <strong>Maintain Compliance Documentation:</strong> Keep records of
-                    your compliance efforts, including policies, logs, and audit
-                    reports.
+                    Conduct regular vulnerability scans and penetration testing on your
+                    hosted applications.
                 </li>
-        
+
                 <li>
-                    <strong>PCI-DSS SAQ:</strong> Depending on your level of PCI
-                    compliance, complete the appropriate Self-Assessment Questionnaire
-                    (SAQ) and submit it if necessary.
+                    Implement continuous monitoring and testing of your security systems.
                 </li>
             </ul>
-        </div>        
+            <h4>
+                12. Maintain a Policy That Addresses Information Security for All Personnel
+            </h4>
+            <ul>
+                <li>Develop and enforce an information security policy.</li>
+
+                <li>
+                    Train your staff on security practices and the importance of protecting
+                    cardholder data.
+                </li>
+            </ul>
+            <h4>Additional Considerations:</h4>
+            <ul>
+                <li>
+                    <strong>Segmentation:</strong> Ensure that you properly segment your
+                    environment to isolate cardholder data from other non-sensitive areas.
+                </li>
+
+                <li>
+                    <strong>Compliance Documentation:</strong> Maintain records of all
+                    compliance efforts, security measures, and audits for validation and
+                    reporting purposes.
+                </li>
+            </ul>
+        </div>
     </section>
 
     {{ partial "compliance/insights.html" . }}

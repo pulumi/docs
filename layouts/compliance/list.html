@@ -1,17 +1,54 @@
 {{ define "main" }}
-
+{{ $pagelist := .Pages }}
 {{ partial "hero.html" (dict "title" .Title) }}
 
 <div class="container mx-auto">
   <section class="px-4 md:px-0">
     <div class="container mx-auto max-w-4xl my-16 px-6">
-      <ul>
-        {{ range .Pages }}
-        <li>
-          <a href="{{ .Permalink }}">{{ .Title }}</a>
-        </li>
+      <section class="mt-4 py-4 px-4 md:px-0">
+        <div class="container mx-auto text-center max-w-4xl">
+          <p>
+            Ensuring that your cloud infrastructure is compliant with frameworks like PCI-DSS, ISO 27001, and CIS
+            is critical for safeguarding sensitive data, maintaining customer trust, and adhering to legal and
+            regulatory requirements. Compliance with these frameworks demonstrates a commitment to implementing
+            best practices in security and risk management, which helps protect against data breaches,
+            cyber threats, and operational disruptions.
+          </p>
+        </div>
+      </section>
+      {{ $frameworks := slice "PCI DSS" "ISO 27001" "CIS" }}
+
+      {{ range $framework := $frameworks }}
+      {{ $pages := where $pagelist "Params.framework" $framework }}
+
+      {{ if $pages }}
+      {{ range $grouped := $pages.GroupByParam "cloud" }}
+      {{ range $grouped.Pages }}
+      {{ if eq .Params.cloud .Params.service }}
+      <section class="mt-4 py-4 px-4 md:px-0">
+        <div class="container mx-auto max-w-4xl">
+          <h3><a class="hover:text-blue-600" href="{{ .Permalink }}">{{ $framework }} Compliance for {{ .Params.cloud
+              }}</a>
+          </h3>
+          <p>
+            {{ .Params.description }}
+          </p>
+          <p>Learn more about configuring your AWS services to meet {{ $framework }} compliance:</p>
+          <div class="flex flex-row flex-wrap">
+            {{ else }}
+            <ul class="w-1/3 list-none m-2 p-0">
+              <li class="rounded border p-4 border-gray-300 shadow-sm flex items-center gap-3">
+                <i class="far fa-arrow-alt-circle-right w-4 text-gray-700"></i>
+                <a href="{{ .Permalink }}" class="text-gray-800 font-display text-lg">{{ .Params.service }}</a>
+              </li>
+            </ul>
+            {{ end }}
+            {{ end }}
+          </div>
         {{ end }}
-      </ul>
+        {{ end }}
+        {{ end }}
+        </div>
     </div>
   </section>
 </div>
