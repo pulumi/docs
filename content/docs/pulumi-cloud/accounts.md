@@ -50,7 +50,7 @@ If you signed up using an email address and need to resend the verification emai
 1. Click on your account avatar in the top right corner.
 2. Navigate to **Account settings**.
 3. Under your email address, you will see the option to resend the verification email.
-![Resend Verification Email](/images/docs/pulumi-cloud/resend-verification.png)
+![Resend Verification Email](/images/docs/pulumi-cloud/accounts/resend-verification.png)
 
 ### Adding New Identities {#adding-new-identities}
 
@@ -75,7 +75,7 @@ For users who signed up with email, you may change your password by:
 For users who signed up with email, you can enable multi-factor authentication (MFA) using one-time passwords:
 
 1. Click on your account avatar in the top right corner.
-2. Navigate to Account Settings.
+2. Navigate to **Account settings**.
 3. Scroll to the MFA section.
 4. Press **Enroll**.
 ![MFA Enroll](/images/docs/pulumi-cloud/mfa/mfa-enroll.png)
