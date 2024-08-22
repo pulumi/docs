@@ -21,7 +21,7 @@ aliases:
         <p>
             Specifies the endpoint for Pulumi AI service.
         </p>
-        <pre><code class="text-xs">PULUMI_AI_SERVICE_ENDPOINT="https://ai.pulumi.com"</code></pre>
+        <pre><code class="text-xs">PULUMI_AI_SERVICE_ENDPOINT="https://www.pulumi.com/ai"</code></pre>
     </dd>
     <dt>
         <span class="font-mono">
@@ -127,7 +127,7 @@ aliases:
     </dt>
     <dd>
         <p>
-            List commands helpful for debugging pulumi itself.
+            List commands helpful for debugging Pulumi itself.
         </p>
         <pre><code class="text-xs">PULUMI_DEBUG_COMMANDS=true</code></pre>
     </dd>
@@ -162,7 +162,7 @@ aliases:
     </dt>
     <dd>
         <p>
-            Enable features for hacking on pulumi itself.
+            Enable features for hacking on Pulumi itself.
         </p>
         <pre><code class="text-xs">PULUMI_DEV=true</code></pre>
     </dd>
@@ -184,31 +184,9 @@ aliases:
     </dt>
     <dd>
         <p>
-            Disables provider preview and enabled previous more concervative preview behavior.
+            Disables provider preview and enables previous more conservative preview behavior.
         </p>
         <pre><code class="text-xs">PULUMI_DISABLE_PROVIDER_PREVIEW=true</code></pre>
-    </dd>
-    <dt>
-        <span class="font-mono">
-            PULUMI_DISABLE_RESOURCE_REFERENCES
-        </span>
-    </dt>
-    <dd>
-        <p>
-            Disables resource references in Invoke gRPC calls.
-        </p>
-        <pre><code class="text-xs">PULUMI_DISABLE_RESOURCE_REFERENCES=true</code></pre>
-    </dd>
-    <dt>
-        <span class="font-mono">
-            PULUMI_DISABLE_OUTPUT_VALUES
-        </span>
-    </dt>
-    <dd>
-        <p>
-            Disables output values in gRPC calls.
-        </p>
-        <pre><code class="text-xs">PULUMI_DISABLE_OUTPUT_VALUES=true</code></pre>
     </dd>
     <dt>
         <span class="font-mono">
@@ -392,7 +370,7 @@ aliases:
     </dt>
     <dd>
         <p>
-            Specifies overrides for Plugin Download URLs. The expected format is `regexp=URL`, and multiple pairs can be specified separated by commas.
+            Specifies overrides for plugin-download URLs. The expected format is <code>regexp=URL</code>, and multiple pairs can be specified separated by commas.
         </p>
         <pre><code class="text-xs">PULUMI_PLUGIN_DOWNLOAD_URL_OVERRIDES="^https://foo=https://bar,^github://=https://buzz"</code></pre>
     </dd>
