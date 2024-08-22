@@ -4,22 +4,10 @@
 {{ define "main" }}
 {{ $pageContext := . }}
 
-<section id="overview" class="container mx-auto lg:flex text-center p-8">
-    <div class="w-full lg:w-1/2 p-12 text-left">
-        <h2>{{ .Params.overview.title }}</h2>
-        <p class="text-xl my-12">{{ .Params.overview.description }}</p>
-        <a href="#form" rel="noopener noreferrer" class="btn-secondary mt-8">Co-Sell Opportunities</a>
-    </div>
-    <div class="w-full lg:w-1/2 p-12 ">
-        <div class="rounded-xl p-8 bg-gray-100">
-            <h3 class="text-left">{{ .Params.overview.form.title }}</h3>
-            <p class="text-left">{{ .Params.overview.form.description }}</p>
-            <pulumi-hubspot-form
-                form-id="{{ .Params.overview.form.form_id }}"
-                salesforce-campaign-id="{{ .Params.overview.form.campaign_id }}"
-            ></pulumi-hubspot-form>
-        </div>
-    </div>
+<section id="overview" class="container mx-auto text-center p-8 mb-8">
+    <h2>{{ .Params.overview.title }}</h2>
+    <p class="text-xl my-12">{{ .Params.overview.description }}</p>
+    <a href="#form" rel="noopener noreferrer" class="btn-secondary mt-8">Contact our Partner Team</a>
 </section>
 
 <section id="types" class="relative text-center p-8">
@@ -63,6 +51,30 @@
     </div>
 </section>
 
+<section id="case-studies" class="relative px-6 mt-28">
+    <div class="container mx-auto">
+        <h2 class="text-center">{{ .Params.case_studies.title }}</h2>
+        <div class="flex flex-wrap justify-center items-stretch">
+            {{ range .Params.case_studies.items }}
+                <div class="w-full lg:w-1/3 text-center my-8 relative">
+                    <div class="h-full p-8">
+                        <div class="h-16">{{ partial "customer-logo.html" (dict "logo" .logo) }}</div>
+                        <h5>{{ .name }}</h5>
+                        <p class="pb-8">{{ .description | markdownify }}</p>
+                        <div class="absolute bottom-0 left-0 w-full">
+                            <a href="{{ .link }}" class="btn-secondary whitespace-nowrap"
+                                >{{ .name }}
+                                Case Study</a
+                            >
+                        </div>
+                    </div>
+                </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+
+
 <section id="form" class="relative text-center my-16 p-8">
     <div class="purple-hex-background">
         <div class="purple-hex-background-image"></div>
@@ -70,14 +82,13 @@
 
     <div class="container mx-auto relative lg:flex">
         <div class="w-full lg:w-1/2 p-12 text-left">
-            <h3>{{ .Params.cosell_form.title }}</h3>
-            <p>{{ .Params.cosell_form.description }}</p>
+            <h3>{{ .Params.form.title }}</h3>
+            <p>{{ .Params.form.description }}</p>
         </div>
         <div class="rounded-xl bg-white p-8">
-            <h3 class="text-left">Register A Co-Sell Opportunity</h3>
             <pulumi-hubspot-form
-                form-id="{{ .Params.cosell_form.form_id }}"
-                salesforce-campaign-id="{{ .Params.cosell_form.campaign_id }}"
+                form-id="{{ .Params.form.form_id }}"
+                salesforce-campaign-id="{{ .Params.form.campaign_id }}"
             ></pulumi-hubspot-form>
         </div>
     </div>
