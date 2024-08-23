@@ -1,9 +1,9 @@
 ---
 title: "Introducing the Centralized Policy Violations Page: Streamlined Compliance Management"
-# allow_long_title: true
+allow_long_title: true
 date: 2024-08-26T09:00:00-07:00
 draft: false
-meta_desc: The new Centralized Policy Violations page in Pulumi offers enhanced visibility and control by consolidating all policy violations across your organization into a single view.
+meta_desc: The new Centralized Policy Violations page in Pulumi offers enhanced visibility and control by consolidating all policy violations.
 meta_image: meta.png
 authors:
     - meagan-cojocar
