@@ -53,13 +53,7 @@ function loadServices() {
         encoding: "utf8",
     });
     const complianceFrameworks = JSON.parse(contents);
-    const services = new Set();
-    complianceFrameworks.forEach(cf => {
-        cf.services.forEach(s => {
-            services.add(s.name);
-        })
-    })
-    return [...services];
+    return complianceFrameworks.services.map(svc => svc.name)
 }
 
 async function getControls() {

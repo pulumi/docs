@@ -3,13 +3,13 @@
 # Load JSON data
 pages=$(cat data/compliance/pages.json)
 
-for row in $(echo "${pages}" | jq -r '.[] | @base64'); do
-    for res in $(echo "${row}" | base64 --decode | jq -r '.services[] | @base64'); do
+for row in $(echo "${pages}" | jq -r '.frameworks[] | @base64'); do
+    for svc in $(echo "${pages}" | jq -r '.services[] | @base64'); do
         _jq() {
             echo ${row} | base64 --decode | jq -r ${1}
         }
         decodeService() {
-            echo ${res} | base64 --decode | jq -r ${1}
+            echo ${svc} | base64 --decode | jq -r ${1}
         }
         slug=$(echo "$(_jq '.framework')-$(_jq '.cloud')-$(decodeService '.name')" | awk '{print tolower($0)}' | sed 's/ /-/g')
         layout=$(_jq '.framework' | awk '{print tolower($0)}' | sed 's/ /-/g')
@@ -20,7 +20,6 @@ for row in $(echo "${pages}" | jq -r '.[] | @base64'); do
 # This file is auto-generated. Any alterations made within are subject
 # to being overwritten.
 title: $title
-date: $(date +"%Y-%m-%dT%}H:%M:%S")
 cloud: $(_jq '.cloud')
 layout: "$layout"
 slug: $slug
@@ -28,6 +27,7 @@ framework: $(_jq '.framework')
 service: $(decodeService '.name')
 full: $(decodeService '.full')
 description: "$(_jq '.description')"
+whatis: "$(decodeService '.whatis')"
 page_type: service
 meta_desc: Pulumi can assist your organization with becoming $(_jq '.framework') compliant. Get in touch with our Solutions Architects to learn more.
 ---
@@ -39,7 +39,6 @@ EOF
 # This file is auto-generated. Any alterations made within are subject
 # to being overwritten.
 title: "$(_jq '.framework') Compliance for $(_jq '.cloud')"
-date: $(date +"%Y-%m-%dT%}H:%M:%S")
 cloud: $(_jq '.cloud')
 layout: "$layout"
 slug: $(echo "$(_jq '.cloud')-$(_jq '.framework')" | awk '{print tolower($0)}')

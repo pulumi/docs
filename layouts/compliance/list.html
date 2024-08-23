@@ -17,12 +17,11 @@
         </div>
       </section>
       {{ $frameworks := index .Site.Data.compliance "pages" }}
-      {{ range $framework := $frameworks }}
+      {{ range $framework := $frameworks.frameworks }}
       {{ $pages := where $pagelist "Params.framework" $framework.framework }}
 
       {{ if $pages }}
-      {{ range $grouped := $pages.GroupByParam "cloud" }}
-      {{ range $grouped.Pages }}
+      {{ range $pages }}
       {{ if eq .Params.page_type "cloud" }}
       <section class="mt-4 py-4 px-4 md:px-0">
         <div class="container mx-auto max-w-4xl">
@@ -35,16 +34,15 @@
           <p>Learn more about configuring your AWS services to meet {{ $framework.framework }} compliance:</p>
           <div class="flex flex-row flex-wrap">
             {{ else }}
-            <ul class="w-1/3 list-none m-2 p-0">
-              <li class="rounded border p-4 border-gray-300 shadow-sm flex items-center gap-3">
+            <div class="w-1/3 m-2 p-0">
+              <div class="rounded border p-4 border-gray-300 shadow-sm flex items-center gap-3">
                 <i class="far fa-arrow-alt-circle-right w-4 text-gray-700"></i>
-                <a href="{{ .Permalink }}" class="text-gray-800 font-display text-lg">{{ .Params.service }}</a>
-              </li>
-            </ul>
+                <a href="{{ .Permalink }}" class="text-gray-800 font-display text-lg hover:text-blue-600">{{ .Params.service }}</a>
+              </div>
+            </div>
             {{ end }}
             {{ end }}
           </div>
-        {{ end }}
         {{ end }}
         {{ end }}
         </div>
