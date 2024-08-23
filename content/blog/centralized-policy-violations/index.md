@@ -7,7 +7,6 @@ meta_desc: The new Centralized Policy Violations page in Pulumi offers enhanced 
 meta_image: meta.png
 authors:
     - meagan-cojocar
-    - tyler-dunkel
 tags:
     - releases
     - policy
@@ -40,6 +39,22 @@ Grouping violations based on these fields enables you to answer critical questio
 - **Violation Date**: When are violations most likely to occur, and are there patterns over time?
 
 These insights empower you to refine your policies, address the most problematic areas, and improve your overall compliance strategy.
+
+## Accessing Policy Violations via API
+
+To further enhance your compliance management, you can leverage the Pulumi Cloud REST API to programmatically access policy violations, trigger automated workflows, and import data into your analytics systems. By using the API, you can automate the monitoring of your infrastructure’s compliance status, ensuring that policy violations are promptly detected and addressed. This capability enables you to integrate Pulumi's compliance data with your existing tools, creating a seamless and efficient compliance management process.
+
+For example, you can use the following command to retrieve a list of policy violations:
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  https://api.pulumi.com/api/orgs/{organization}/policyresults/violations
+```
+
+For more details on how to integrate this API into your workflow, visit the [Pulumi API documentation](/docs/pulumi-cloud/cloud-rest-api/#list-policy-violations).
 
 ## Streamlining Compliance with Future Enhancements
 
