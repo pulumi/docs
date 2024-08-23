@@ -1,37 +1,70 @@
-<section class="mt-8 px-4 md:px-0">
+<div class="p-4 bg-gray-200">
+    <section class="mt-8 px-4 md:px-0">
+        <div class="container mx-auto max-w-4xl">
+            <h3>Pulumi Insights</h3>
+            <p class="py-4">
+                Use <a href="/product/pulumi-insights/">Pulumi Insights</a> to gain visibility into your cloud
+                infrastructure's
+                configuration to assess {{ .Params.framework }} compliance. Pulumi Insights is Intelligence for
+                Infrastructure as Code.
+                It adds advanced search, analytics, and AI to infrastructure as code.
+            </p>
+            <img src="https://www.pulumi.com/uploads/pulumi-insights-search.gif" />
+            <h3>Pulumi Copilot</h3>
+            <p class="py-4">
+                Use Pulumi <a href="/product/copilot/">Copilot</a> to assist configuring your infrastructure
+                to make it compliance ready. You can tap into the Pulumi Copilot's deep understanding of your 
+                organization's context to gain visibility into the configuration of resources and assess
+                their compliance.
+            </p>
+            <img src="/images/compliance/co-pilot-1.png" />
+        </div>
+    </section>
+    
+    
+    <section class="mt-4 py-4 px-4 md:px-0">
+        <div class="container mx-auto max-w-4xl">
+            <h3>Compliance Ready Policies</h3>
+            <p class="py-4">
+                With comprehensive coverage of {{ .Params.cloud }},
+                <a href="/docs/using-pulumi/crossguard/compliance-ready-policies/">Pulumi Compliance Ready Policies</a>
+                provide an enhanced level of control and governance over your cloud resources. Pulumi Compliance Ready
+                Policies empower you to enforce best practices, security standards, cost control and compliance requirements
+                seamlessly within your infrastructure-as-code workflows.
+            </p>
+        </div>
+    </section>
+</div>
+
+{{ if eq .Params.page_type "service" }}
+{{ partial "compliance/controls.html" . }}
+{{ end }}
+
+{{ if eq .Params.page_type "cloud" }}
+<section class="my-4 py-4 px-4 md:px-0">
     <div class="container mx-auto max-w-4xl">
-        <h3>Pulumi Insights</h3>
-        <p class="py-4">
-            Use <a href="/product/pulumi-insights/">Pulumi Insights</a> to gain visibility into your cloud infrastructure's
-            configuration to assess {{ .Params.framework }} compliance. Pulumi Insights is Intelligence for Infrastructure as Code.
-            It adds advanced search, analytics, and AI to infrastructure as code.
-        </p>
-        <img src="https://www.pulumi.com/uploads/pulumi-insights-search.gif" />
-        <p class="py-4">
-            Use Copilot to assist configuring your infrastructure to make it compliance ready. You can tap into the Pulumi Copilot's
-            deep understanding of your organization's context to gain visibility into the configuration of resources and assess their
-            compliance.
-        </p>
-        <img src="/images/compliance/co-pilot-1.png" />
+        <h3>Compliance for AWS Services</h3>
+        {{ $pages := where .Parent.RegularPages "Params.framework" .Params.framework }}
+        <p>Learn more about compliance for the following AWS services</p>
+        <div class="flex flex-row flex-wrap">
+            {{ range $pages }}
+            {{ if ne .File.Path $.File.Path }}
+            <ul class="w-1/3 list-none m-2 p-0">
+                <li class="rounded border p-4 border-gray-300 shadow-sm flex items-center gap-3">
+                    <i class="far fa-arrow-alt-circle-right w-4 text-gray-700"></i>
+                    <a href="{{ .Permalink }}" class="text-gray-800 font-display text-lg">{{ .Params.service }}</a>
+                </li>
+            </ul>
+            {{ end }}
+            {{ end }}
+        </div>
     </div>
 </section>
+{{ end }}
 
-
-<section class="mt-8 py-4 px-4 md:px-0">
-    <div class="container mx-auto max-w-4xl">
-        <h3>Compliance Ready Policies</h3>
-        <p class="py-4">
-            With comprehensive coverage of {{ .Params.cloud }},
-            <a href="/docs/using-pulumi/crossguard/compliance-ready-policies/">Pulumi Compliance Ready Policies</a>
-            provide an enhanced level of control and governance over your cloud resources. Pulumi Compliance Ready
-            Policies empower you to enforce best practices, security standards, cost control and compliance requirements
-            seamlessly within your infrastructure-as-code workflows.
-        </p>
-    </div>
-</section>
 
 <section id="sa-form" class="container mx-auto justify-center text-center m-4">
-    <div class="w-full flex flex-col items-center lg:w-1/2 card bg-white mx-auto p-8">
+    <div class="container w-full flex flex-col items-center lg:w-1/2 card bg-white mx-auto p-8">
         <h3>Talk to a Solutions Architect</h3>
         <p>Get in touch with our Solutions Architects to get all your resources in use with Pulumi Insights</p>
         <pulumi-hubspot-form form-id="e4258f4f-359c-471b-8d2d-cdb81ad45f3d"></pulumi-hubspot-form>

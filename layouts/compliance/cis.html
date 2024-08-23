@@ -1,24 +1,33 @@
 {{ define "main" }}
-
 {{ partial "hero.html" (dict "title" .Title) }}
-<div class="container mx-auto">
     <section class="px-4 md:px-0">
         <div class="container mx-auto max-w-4xl text-center my-16 px-6">
             <h2>{{ .Title }}</h2>
             <p>
-                {{ .Params.description }}
-            </p>
-            <p>
-                Pulumi can assist with making your {{ .Params.cloud }} cloud infrastructure meet CIS benchmarks.
+                CIS compliance is crucial for establishing strong security controls and safeguarding your cloud
+                infrastructure against cyber threats.Pulumi can assist you in making your AWS cloud infrastructure
+                CIS compliant. Pulumi can help you identify existing cloud resources that do not align with CIS
+                benchmarks, and it can also enforce security policies proactively before infrastructure is deployed.
+                Get started with Pulumi to take advantage of these compliance tools, or speak with a Solutions
+                Architect to receive expert guidance on achieving CIS compliance.
             </p>
             <div class="mt-10">
-                <a href="#sa-form" rel="noopener noreferrer" class="btn-primary">Speak with a Solutions Architect!</a>
+                <a href="#sa-form" rel="noopener noreferrer" class="btn-primary">Speak with a Solutions Architect</a>
+                <a href="/get-started/" rel="noopener noreferrer" class="btn-secondary">Get Started with Pulumi</a>
             </div>
         </div>
     </section>
     <section class="mt-4 py-4 px-4 md:px-0">
         <div class="container mx-auto max-w-4xl">
-            <h3>Key Components of CIS Compliance</h3>
+            <h3>What is CIS Compliance?</h3>
+            <p>
+                {{ .Params.description }}
+            </p>
+        </div>
+    </section>
+    <section class="mt-4 py-4 px-4 md:px-0">
+        <div class="container mx-auto max-w-4xl">
+            <h3>Key Aspects of CIS Compliance</h3>
             <ul>
                 <li>
                     <strong>Implementation of Controls:</strong> Start by implementing the
@@ -68,7 +77,7 @@
             </ul>
         </div>
     </section>
-
+    {{ if eq .Params.cloud .Params.service }}
     <section class="mt-4 py-4 px-4 md:px-0">
         <div class="container mx-auto max-w-4xl">
             <h3>CIS compliance for your AWS infrastructure</h3>
@@ -215,10 +224,10 @@
 
         </div>
     </section>
+    {{ end }}
 
     {{ partial "compliance/insights.html" . }}
 
-</div>
 
 {{ partial "learnmore-contactus.html" . }}
 {{ end }}

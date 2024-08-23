@@ -1,19 +1,28 @@
 {{ define "main" }}
-
 {{ partial "hero.html" (dict "title" .Title) }}
-<div class="container mx-auto">
+{{ $cloud_page := eq .Params.page_type "cloud" }}
     <section class="px-4 md:px-0">
         <div class="container mx-auto max-w-4xl text-center my-16 px-6">
             <h2>{{ .Title }}</h2>
             <p>
-                {{ .Params.description }}
-            </p>
-            <p>
-                Pulumi can assist with making your {{ .Params.cloud }} cloud infrastructure PCI DSS compliant.
+                PCI DSS compliance is critical to protecting cardholder data that is processed, stored, and transmitted.
+                Pulumi can assist you with making your AWS cloud infrastructure PCI DSS compliant. Pulumi can help you identify
+                existing cloud resources that are not in compliance, and it can also enforce compliance policies proactively
+                before infrastructure is deployed. Get started with Pulumi to use these compliance tools or speak with a 
+                Solutions Architect to get an expert consultation.
             </p>
             <div class="mt-10">
-                <a href="#sa-form" rel="noopener noreferrer" class="btn-primary">Speak with a Solutions Architect!</a>
+                <a href="#sa-form" rel="noopener noreferrer" class="btn-primary">Speak with a Solutions Architect</a>
+                <a href="/get-started/" rel="noopener noreferrer" class="btn-secondary">Get Started with Pulumi</a>
             </div>
+        </div>
+    </section>
+    <section class="mt-4 py-4 px-4 md:px-0">
+        <div class="container mx-auto max-w-4xl">
+            <h3>What is PCI DSS Compliance?</h3>
+            <p>
+                {{ .Params.description }}
+            </p>
         </div>
     </section>
     <section class="mt-4 py-4 px-4 md:px-0">
@@ -55,6 +64,12 @@
                     size of the organization and the volume of transactions processed.
                 </li>
             </ol>
+        </div>
+    </section>
+
+    {{ if $cloud_page }}
+    <section class="mt-4 py-4 px-4 md:px-0">
+        <div class="container mx-auto max-w-4xl">
             <h3>12 PCI DSS Requirements</h3>
             <p>
                 To ensure that your {{ .Params.full }} become PCI-DSS compliant, you'll need to
@@ -83,7 +98,7 @@
                 </li>
 
                 <li>
-                    Implement multi-factor authentication (MFA) for access to the 
+                    Implement multi-factor authentication (MFA) for access to the
                     AWS console.
                 </li>
             </ul>
@@ -216,10 +231,9 @@
             </ul>
         </div>
     </section>
+    {{ end }}
 
     {{ partial "compliance/insights.html" . }}
-
-</div>
 
 {{ partial "learnmore-contactus.html" . }}
 {{ end }}

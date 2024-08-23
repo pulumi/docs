@@ -58,6 +58,10 @@
             {
                 "name": "API Gateway",
                 "full": "API Gateway"
+            },
+            {
+                "name": "IAM",
+                "full": "IAM Roles and Policies"
             }
         ]
     },

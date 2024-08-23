@@ -28,6 +28,7 @@ framework: $(_jq '.framework')
 service: $(decodeService '.name')
 full: $(decodeService '.full')
 description: "$(_jq '.description')"
+page_type: service
 meta_desc: Pulumi can assist your organization with becoming $(_jq '.framework') compliant. Get in touch with our Solutions Architects to learn more.
 ---
 
@@ -46,6 +47,7 @@ framework: $(_jq '.framework')
 service: "$(_jq '.cloud')"
 full: "$(_jq '.cloud') cloud infrastructure"
 description: "$(_jq '.description')"
+page_type: cloud
 meta_desc: Pulumi can assist your organization with becoming $(_jq '.framework') compliant. Get in touch with our Solutions Architects to learn more.
 ---
 
