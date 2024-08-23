@@ -138,7 +138,7 @@ The [Pulumi Registry](/registry) contains authoritative documentation for all pr
 
 #### Invoke options
 
-Each function and method also accepts "invoke options", similar to the way Pulumi resources accept [resource options](/docs/concepts/options/). Invoke options may be specified either as an object or as varargs depending on the language you're writing your Pulumi program in. The options are as follows:
+Functions also accept "invoke options", similar to the way Pulumi resources accept [resource options](/docs/concepts/options/). Invoke options may be specified either as an object or as a list of arguments depending on the language you're writing your Pulumi program in. The options are as follows:
 
 - `parent`: Supply a parent resource for this function call. Much like the [parent resource option](/docs/concepts/options/parent/), the parent will be consulted when determining the provider to use.
 
@@ -287,12 +287,12 @@ public class App {
 {{% /choosable %}}
 {{% choosable language yaml %}}
 
-Output form invocations are not yet supported in YAML
+Output form invocations are not yet supported in YAML.
 
 {{% /choosable %}}
 {{< /chooser >}}
 
-### Provider methods
+### Resource methods
 
 Provider SDKs may also include _methods_ attached to a resource type. For example, in the [EKS](/registry/packages/eks/api-docs/) SDK, the `Cluster` resource has a [.GetKubeconfig](/registry/packages/eks/api-docs/cluster/#method_GetKubeconfig) method:
 
