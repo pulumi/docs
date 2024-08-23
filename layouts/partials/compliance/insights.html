@@ -45,12 +45,12 @@
     <div class="container mx-auto max-w-4xl">
         <h3>Compliance for AWS Services</h3>
         {{ $pages := where .Parent.RegularPages "Params.framework" .Params.framework }}
-        <p>Learn more about compliance for the following AWS services</p>
+        <p>Learn more about how Pulumi can make your AWS services {{.Params.framework}} compliant.</p>
         <div class="flex flex-row flex-wrap">
             {{ range $pages }}
             {{ if ne .File.Path $.File.Path }}
-            <ul class="w-1/3 list-none m-2 p-0">
-                <li class="rounded border p-4 border-gray-300 shadow-sm flex items-center gap-3">
+            <ul class="w-1/3 list-none p-0">
+                <li class="rounded border p-4 border-gray-300 m-2 shadow-sm flex items-center gap-3">
                     <i class="far fa-arrow-alt-circle-right w-4 text-gray-700"></i>
                     <a href="{{ .Permalink }}" class="text-gray-800 font-display text-lg">{{ .Params.service }}</a>
                 </li>

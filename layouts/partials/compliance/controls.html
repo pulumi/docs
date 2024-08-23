@@ -8,7 +8,7 @@
 </section>
 <section class="mt-4 py-4 px-4 md:px-0">
     <div class="container mx-auto max-w-4xl">
-        <h3>What controls can I put in place to evaluate {{ .Params.full }} resources?</h3>
+        <h3>What controls can I put in place to evaluate {{ .Params.service }} resources?</h3>
         <div class="py-4">
             {{ $key := .Params.service }}
             {{ $controls := index .Site.Data.compliance "controls" }}
@@ -20,7 +20,7 @@
             </ul>
         </div>
         <div class="my-5 text-center">
-            <p>Speak to a Solutions Architect to implement policy as code to manage {{ .Params.full }} for {{ .Params.framework }} compliance.</p>
+            <p>Speak to a Solutions Architect to implement policy as code to manage {{ .Params.service }} resources for {{ .Params.framework }} compliance.</p>
             <div class="mt-8">
                 <a href="#sa-form" rel="noopener noreferrer" class="btn-primary">Speak with a Solutions Architect</a>
             </div>
