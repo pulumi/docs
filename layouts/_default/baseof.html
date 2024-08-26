@@ -2,6 +2,17 @@
 <html lang="en-US" prefix="og: http://ogp.me/ns#">
     {{ partial "head.html" . }}
     <body class="section-{{ .Section }}">
+        <div id="copilot">
+            <aside id="ai-sidebar-target" style="
+                position: fixed;
+                height: 100vh;
+                width: 100vw;
+                z-index: 9000000;
+                padding-right: 15px;
+                pointer-events: none;
+            "></aside>
+            <iframe id="ai-sidebar-host" src="/cloud-ai/sidebar" id="ai-sidebar-host" style="display: none;"></iframe>
+        </div>
         <pulumi-root></pulumi-root>
         {{ partial "header.html" . }}
         {{ block "hero" . }}
