@@ -17,7 +17,7 @@ draft: false
 # of the content of the post, which is useful for targeting search results or
 # social-media previews. This field is required or the build will fail the
 # linter test. Max length is 160 characters.
-meta_desc:SST
+meta_desc: Explore how SST evolved from AWS CDK to Pulumi, overcoming limitations to offer a flexible, provider-agnostic infrastructure management solution for developers.
 
 # The meta_image appears in social-media previews and on the blog home page. A
 # placeholder image representing the recommended format, dimensions and aspect
