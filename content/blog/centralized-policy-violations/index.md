@@ -20,7 +20,7 @@ Pulumi’s Policy as Code (PaC) feature, [CrossGuard](/docs/using-pulumi/crossgu
 
 ## Centralized Policy Violations: Why It Matters
 
-In large and complex environments, ensuring compliance across multiple projects and stacks can be challenging. The new Policy Violations page addresses this challenge by consolidating all violations into one place, allowing you to quickly assess the overall compliance of your infrastructure and separate signal from noise. This streamlined view not only saves time but also reduces the risk of missing critical issues.
+Ensuring compliance across multiple projects and stacks can be challenging in large and complex environments. The new Policy Violations page addresses this challenge by consolidating all violations into one place. This allows you to quickly assess the overall compliance of your infrastructure and separate signal from noise. This streamlined view saves time and reduces the risk of missing critical issues.
 
 By having all violations on a single page, organization admins can efficiently prioritize remediation efforts and identify patterns in non-compliance. They can triage the violations and send the critical ones to teams to resolve.
 
