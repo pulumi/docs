@@ -28,7 +28,7 @@ By having all violations on a single page, organization admins can efficiently p
 
 ## Grouping Violations: Enhanced Insights Across Multiple Dimensions
 
-One of the standout features of the new page is the ability to group violations by various fields, including Policy Pack, Policy, Project, Stack, Resource, Reason, Enforcement Level, Version, and Violation Date. This flexibility allows you to gain deeper insights into your infrastructure’s compliance landscape.
+One of the standout features of the new page is the ability to group violations by various fields, including Policy Pack, Policy, Project, Stack, Resource, and more! This flexibility allows you to gain deeper insights into your infrastructure’s compliance landscape.
 
 Grouping violations based on these fields enables you to answer critical questions such as:
 
