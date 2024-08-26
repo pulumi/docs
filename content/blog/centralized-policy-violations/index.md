@@ -14,9 +14,9 @@ tags:
 
 We’re excited to introduce a new page in Pulumi Cloud designed to simplify policy management and compliance: the centralized Policy Violations page. This powerful addition provides a single, comprehensive view of all policy violations across your organization, helping you maintain control and visibility over your infrastructure.
 
-Pulumi’s Policy as Code (PaC) feature allows you to define and enforce policies for your infrastructure using familiar programming languages. By integrating these policies directly into your infrastructure code, you can automate compliance checks, gate deployments to ensure security best practices, and maintain governance across all your providers. 
+Pulumi’s Policy as Code (PaC) feature, [CrossGuard](/docs/using-pulumi/crossguard), allows you to define and enforce policies for your infrastructure using familiar programming languages. By integrating these policies directly into your infrastructure code, you can automate compliance checks, gate deployments to ensure security best practices, and maintain governance across all your providers.
 
-**Note:** Policy as Code is a feature available in the Pulumi Business Critical edition.
+**Note:** Pulumi CrossGuard is available in the Pulumi Business Critical edition.
 
 ## Centralized Policy Violations: Why It Matters
 
@@ -64,4 +64,4 @@ Centralizing and surfacing policy violations is just the beginning. Future updat
 
 The addition of the Centralized Policy Violations Page to Pulumi is a significant step forward in simplifying policy management and enhancing compliance. By bringing all violations into a single, easily accessible view, we’re making it easier for admins to maintain control and ensure that their infrastructure remains secure and compliant.
 
-Try out this new feature today and experience the benefits of streamlined compliance management. For more information, visit our [Policy Violations documentation](/docs/guides/crossguard/policy-violations/). To use this feature, [start a trial](https://app.pulumi.com/signup) or [contact sales](/contact/).
+Try out this new feature today and experience the benefits of streamlined compliance management. For more information, visit our [Policy Violations documentation](/docs/guides/crossguard/policy-violations/). To use this feature, [start a trial](https://app.pulumi.com/signup) or [contact sales](/contact/) to get a demo or to trial Policy as Code.
