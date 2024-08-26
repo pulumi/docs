@@ -42,7 +42,7 @@ These insights empower you to refine your policies, address the most problematic
 
 ## Accessing Policy Violations via API
 
-To further enhance your compliance management, you can leverage the Pulumi Cloud REST API to programmatically access policy violations, trigger automated workflows, and import data into your analytics systems. By using the API, you can automate the monitoring of your infrastructure’s compliance status, ensuring that policy violations are promptly detected and addressed. This capability enables you to integrate Pulumi's compliance data with your existing tools, creating a seamless and efficient compliance management process.
+To further enhance your compliance management, you can leverage the Pulumi Cloud REST API to programmatically access policy violations, trigger automated workflows, and import data into your analytics systems. The API can automate the monitoring of your infrastructure’s compliance status, ensuring that policy violations are promptly detected and addressed. This capability enables you to integrate Pulumi's compliance data with your existing tools, creating a seamless and efficient compliance management process.
 
 For example, you can use the following command to retrieve a list of policy violations:
 
