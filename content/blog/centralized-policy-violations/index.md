@@ -34,7 +34,7 @@ Grouping violations based on these fields enables you to answer critical questio
 
 - **Policy Pack and Policy**: Which Policy Packs and the Policies within them are most frequently violated?
 - **Project and Stack**: Are there specific projects or stacks that are more prone to compliance issues?
-- **Resource**: Which resources are consistently failing policies?
+- **Resource**: Which resources have failed policies?
 - **Reason and Enforcement Level**: What are the common reasons for violations, and how critical are they?
 - **Violation Date**: When are violations most likely to occur, and are there patterns over time?
 
