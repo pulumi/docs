@@ -32,7 +32,7 @@ One of the standout features of the new page is the ability to group violations 
 
 Grouping violations based on these fields enables you to answer critical questions such as:
 
-- **Policy Pack and Policy**: Which Policy Packs and the Policies within them are most frequently violated?
+- **Policy Pack and Policy**: Which Policy Packs and Policies have the most frequent violations?
 - **Project and Stack**: Are there specific projects or stacks that are more prone to compliance issues?
 - **Resource**: Which resources have failed policies?
 - **Reason and Enforcement Level**: What are the common reasons for violations, and how critical are they?
