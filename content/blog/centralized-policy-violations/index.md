@@ -58,7 +58,7 @@ For more details on how to integrate this API into your workflow, visit the [Pul
 
 ## Streamlining Compliance with Future Enhancements
 
-Centralizing and surfacing policy violations is just the beginning. Future updates will include additional capabilities like advanced search and filtering, and making it even easier to manage and resolve violations. We’re committed to continuing to provide the tools you need to keep your infrastructure secure, compliant, and running smoothly.
+Centralizing and surfacing policy violations is just the beginning. Future updates will include additional capabilities like advanced search and filtering, making it even easier to manage violations. We’re committed to providing the tools you need to keep your infrastructure secure, compliant, and running smoothly.
 
 ## Wrapping It Up
 
