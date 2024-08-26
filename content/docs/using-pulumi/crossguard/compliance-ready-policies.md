@@ -3,7 +3,7 @@ title_tag: "Compliance Ready Policies | CrossGuard"
 meta_desc: This page contains the documentation for Pulumi Compliance Ready Policies.
 title: Compliance Ready Policies
 h1: Compliance Ready Policies
-weight: 3
+weight:
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   usingpulumi:
