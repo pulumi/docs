@@ -150,7 +150,13 @@ Within your Pulumi program code, configuration values can be retrieved for a giv
 - `Config.get` or `Config.require` for raw configuration values
 - `Config.getSecret` or `Config.requireSecret` for secret values
 
- Using `Config.get | Config.getSecret` will return undefined if the configuration value was not provided, but the deployment of your program will still continue. However, using `Config.require | Config.requireSecret` will raise an exception with a helpful error message to prevent the deployment from continuing until the variable has been set using the CLI. To demonstrate, update your Pulumi program code with the following:
+{{< notes type="info" >}}
+
+You can learn more about the difference between the `get` and `require` functions by referring to the [Pulumi Configuration concept documentation](/docs/concepts/config/#code).
+
+{{< /notes >}}
+
+To demonstrate, update your Pulumi program code with the following:
 
 {{< example-program path="aws-import-export-pulumi-config" >}}
 
