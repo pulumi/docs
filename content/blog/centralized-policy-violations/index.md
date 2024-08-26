@@ -12,7 +12,7 @@ tags:
     - policy
 ---
 
-We’re excited to introduce a new page in Pulumi Cloud designed to simplify policy management and compliance: the centralized Policy Violations page. This powerful addition provides a single, comprehensive view of all policy violations across your organization, helping you maintain control and visibility over your infrastructure.
+We’re excited to introduce a new centralized Policy Violations destination in Pulumi Cloud to simplify policy management and compliance. This powerful addition provides a comprehensive view of all policy violations across your organization, helping you maintain visibility and control over your infrastructure.
 
 Pulumi’s Policy as Code (PaC) feature, [CrossGuard](/docs/using-pulumi/crossguard), allows you to define and enforce policies for your infrastructure using familiar programming languages. By integrating these policies directly into your infrastructure code, you can automate compliance checks, gate deployments to ensure security best practices, and maintain governance across all your providers.
 
