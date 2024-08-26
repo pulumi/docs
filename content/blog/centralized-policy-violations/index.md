@@ -24,7 +24,7 @@ Ensuring compliance across multiple projects and stacks can be challenging in la
 
 By having all violations on a single page, organization admins can efficiently prioritize remediation efforts and identify patterns in non-compliance. They can triage the violations and send the critical ones to teams to resolve.
 
-{{< video title="Centralized Policy Violations Overview" src="policy-violations.mp4" autoplay="false" loop="false" >}}
+{{< video title="Centralized Policy Violations Overview" src="policy-violations.mp4" autoplay="true" loop="true" >}}
 
 ## Grouping Violations: Enhanced Insights Across Multiple Dimensions
 
