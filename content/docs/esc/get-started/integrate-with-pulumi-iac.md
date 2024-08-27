@@ -108,8 +108,9 @@ Loading policy packs...
 Policies:
     ✅ pulumi-internal-policies@v0.0.6
 
-Outputs:
-    Value: "development" # the outputted config value
+Outputs: # the outputted config values
+    Environment: "development"
+    Password   : [secret]
 
 Resources:
     + 1 to create
