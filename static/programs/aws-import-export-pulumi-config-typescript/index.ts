@@ -5,7 +5,7 @@ const config = new pulumi.Config();
 
 // Retrieve the values of "myEnvironment" and "myPassword"
 const environment = config.get("myEnvironment");
-const password = config.get("myPassword");
+const password = config.getSecret("myPassword");
 
 // Export values as stack output
 export const Environment = environment;

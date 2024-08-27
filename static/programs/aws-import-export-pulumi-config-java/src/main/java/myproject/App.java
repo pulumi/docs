@@ -11,7 +11,7 @@ public class App {
 
             // Retrieve the values of "myEnvironment" and "myPassword"
             var environment = config.get("myEnvironment");
-            var password = config.get("myPassword");
+            var password = config.getSecret("myPassword");
 
             // Export the values as a stack outputs
             ctx.export("Environment", Output.of(environment));
