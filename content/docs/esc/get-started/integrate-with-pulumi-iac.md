@@ -66,12 +66,20 @@ In a Pulumi project, you can locally [store and retrieve configuration values](/
 $ pulumi config set myEnvironment development
 ```
 
-This value will be stored in your project's stack settings file `Pulumi.<your-stack-name>.yaml` as shown below:
+Now run the following command to create a secret config value with a key of `myPassword` and a value of `demo-password-123`:
+
+```bash
+$ pulumi config set myPassword demo-password-123 --secret
+```
+
+These values will be stored in your project's stack settings file `Pulumi.<your-stack-name>.yaml` as shown below:
 
 ```yaml
 # Contents of Pulumi.<your-stack-name>.yaml file
 config:
   pulumi-esc-iac:myEnvironment: development
+  pulumi-esc-iac:myPassword:
+    secure: AAABADd5YzRaVuzxM08i5z2CJ3LGkQau5e5Lhk+1Gtj37qv6zKkFr8KxmN6X+w/XMg==
 ```
 
 You can retrieve the value of this configuration via the CLI by running the `pulumi config get <key>` command as shown below:
