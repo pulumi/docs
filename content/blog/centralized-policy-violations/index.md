@@ -64,4 +64,4 @@ Centralizing and surfacing policy violations is just the beginning. Future updat
 
 The Centralized Policy Violations Page to Pulumi is a significant step forward in simplifying policy management and enhancing compliance. By bringing all violations into a single, easily accessible view, we’re making it easier for admins to maintain control and ensure their infrastructure remains secure and compliant.
 
-Try out this new feature today and experience the benefits of streamlined compliance management. For more information, visit our [Policy Violations documentation](/docs/guides/crossguard/policy-violations/). To use this feature, [start a trial](https://app.pulumi.com/signup) or [contact sales](/contact/) to get a demo or to trial Policy as Code.
+Try out this new feature today and experience the benefits of streamlined compliance management. For more information, visit our [Policy Violations documentation](/docs/using-pulumi/crossguard/policy-violations/). To use this feature, [start a trial](https://app.pulumi.com/signup) or [contact sales](/contact/) to get a demo or to trial Policy as Code.
