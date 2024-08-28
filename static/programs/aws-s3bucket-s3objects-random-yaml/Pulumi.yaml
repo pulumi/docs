@@ -1,0 +1,14 @@
+name: aws-s3bucket-s3objects-random-yaml
+runtime: yaml
+description: An example that deploys an S3 bucket, S3 bucket objects, and a Pulumi random resource.
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: aws-yaml
+outputs:
+  # Export the name of the bucket
+  bucketName: ${my-bucket.id}
+resources:
+  # Create an AWS resource (S3 Bucket)
+  my-bucket:
+    type: aws:s3:Bucket

@@ -40,7 +40,7 @@ prereqs:
     - The [Pulumi CLI](/docs/install/)
     - An [Amazon Web Services](https://aws.amazon.com/) account
     - The [AWS CLI](https://aws.amazon.com/cli/)
-    - "[Node.js](/docs/languages-sdks/javascript/) or [Python](/docs/languages-sdks/python/) installed"
+    - Your desired [language runtime installed](/docs/clouds/aws/get-started/begin/#install-language-runtime)
 
 # The estimated time, in minutes, for new users to complete the topic.
 estimated_time: 10
@@ -54,23 +54,21 @@ estimated_time: 10
 
 To start, login to the [Pulumi CLI](/docs/cli/commands/pulumi_login/) and ensure it is [configured to use your AWS account](/docs/clouds/aws/get-started/begin/#configure-pulumi-to-access-your-aws-account). Next, [create a new project](/docs/clouds/aws/get-started/create-project/) and replace the default program code with the following:
 
-{{< example-program path="aws-s3bucket-bucketpolicy" >}}
+{{< example-program path="aws-s3bucket-s3objects-random" >}}
 
 This code example creates the following resources:
 
-- An S3 bucket
-- An S3 bucket policy definition
-- An S3 bucket policy attachment
+- A random object from the [Pulumi Random provider](/registry/packages/random/)
+- An S3 bucket resource
+- Two S3 bucket objects
 
-It also includes two exports that will output the name and ARN of the S3 bucket.
+It also includes one export that will output the name of the Pulumi random object.
+
+Given that this example program makes use of the Pulumi Random provider, you will also need to make sure to [install this dependency into your project](https://github.com/pulumi/pulumi-random?tab=readme-ov-file#installing).
 
 Now run the `pulumi up` command to deploy your resources before moving onto the next steps.
 
-## Retrieve a resource's URN
-
 ## Move a resource between stacks
-
-### Move within the same project
 
 The `pulumi state move` command works as follows:
 
@@ -92,11 +90,19 @@ Flags:
   -y, --yes               Automatically approve and perform the move
 ```
 
-### Move to a different project
+### Move within the same project
 
 TBD
 
+### Move to a different project
+
+To demonstrate how to move a resource between two different projects, you will need to [create a second Pulumi project](/docs/clouds/aws/get-started/create-project/).
+
+Then run the `pulumi stack ls --all` command to view your list of existing stacks:
+
 ## Add a resource alias
+
+The `pulumi state move` only modifies the state file of the source and destination stacks. It does not modify the code of your program directly. With that being said, you will need to modify both programs to match the changes you have made. This can typically be accomplished by copy/pasting source code for the resources and/or components between the two codebases. Inputs and outputs of resources that were moved may need to be adjusted as part of this process. This can be done either by using stack references, or recreating the inputs in the program.
 
 ## Clean-up
 

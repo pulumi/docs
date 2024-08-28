@@ -1,0 +1,11 @@
+name: aws-s3bucket-s3objects-random-javascript
+runtime:
+  name: nodejs
+  options:
+    packagemanager: npm
+    typescript: false
+description: An example that deploys an S3 bucket, S3 bucket objects, and a Pulumi random resource.
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: aws-javascript
