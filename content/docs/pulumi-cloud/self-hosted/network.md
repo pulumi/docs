@@ -28,7 +28,7 @@ The self-hosted Pulumi Cloud can be hosted in an air-gapped environment.
 ### Source - CLI/end user
 
 - *443*: Access to the self-hosted Pulumi Cloud application (HTTPS)
-- *80*: Redirect to port 80 (HTTP to HTTPS)
+- *80*: Redirect to port 443 (HTTP to HTTPS)
 
 ### Source - Console component
 
