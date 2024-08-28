@@ -12,7 +12,12 @@
         <h6 class="mt-2 w-2/3">{{ .text }}</h6>
     {{ end }}
     <div class="flex flex-grow justify-end items-center">
-        <span class="closed-accordion">{{ partial "icons/accordion-closed" }}</span>
-        <span class="open-accordion hidden">{{ partial "icons/accordion-open" }}</span>
+        {{ if eq .arrow_open true }}
+            <span class="closed-accordion"><i class="fas fa-angle-down"></i></span>
+            <span class="open-accordion hidden"><i class="fas fa-angle-up"></i></span>
+        {{ else }}
+            <span class="closed-accordion">{{ partial "icons/accordion-closed" }}</span>
+            <span class="open-accordion hidden">{{ partial "icons/accordion-open" }}</span>
+        {{ end }}
     </div>
 </label>
