@@ -21,8 +21,6 @@ tiers:
         secrets_note:
         primary_cta: Create a free organization
         primary_cta_link: /docs/quickstart
-        secondary_cta:
-        secondary_cta_link:
         items: |
             - 200 free IaC resources
             - Unlimited projects/stacks
@@ -40,9 +38,7 @@ tiers:
               secrets_unit: per secret/month
               secrets_note:
               primary_cta: Start free trial
-              primary_cta_link:
-              secondary_cta:
-              secondary_cta_link:
+              primary_cta_link: https://app.pulumi.com/signup
               items: |
                 Everything in **Individual**, plus:
                 - Secure team collaboration
@@ -60,9 +56,9 @@ tiers:
               secrets_unit: per secret/month
               secrets_note: (Volume discounts available)
               primary_cta: Start free trial
-              primary_cta_link:
+              primary_cta_link: https://app.pulumi.com/signup
               secondary_cta: Contact Sales
-              secondary_cta_link:
+              secondary_cta_link: /contact/?form=sales
               items: |
                   Everything in **Team**, plus:
                   - Unlimited members & teams
@@ -80,9 +76,7 @@ tiers:
               secrets_unit:
               secrets_note:
               primary_cta: Contact Sales
-              primary_cta_link:
-              secondary_cta:
-              secondary_cta_link:
+              primary_cta_link: /contact/?form=sales
               items: |
                   Everything in **Enterprise**, plus:
                   - Volume discounts and invoicing
