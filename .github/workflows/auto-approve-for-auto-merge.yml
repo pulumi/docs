@@ -7,6 +7,6 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       pull-requests: write
-    if: (github.event.pull_request.user.login == 'pulumi-bot') && (github.event.pull_request.head.repo.full_name == github.repository) && (contains(github.event.pull_request.labels.*.name, 'automation/merge')
+    if: (github.event.pull_request.user.login == 'pulumi-bot') && (github.event.pull_request.head.repo.full_name == github.repository) && (contains(github.event.pull_request.labels.*.name, 'automation/merge'))
     steps:
       - uses: hmarr/auto-approve-action@v4
