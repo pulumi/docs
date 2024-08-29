@@ -13,7 +13,7 @@ aliases:
 ---
 
 A Python Pulumi program runs an
-[`asyncio`](https://docs.python.org/3/library/asyncio.html)) event loop to
+[`asyncio`](https://docs.python.org/3/library/asyncio.html) event loop to
 create the resources that the Pulumi program describes---this isn't directly
 visible to the Python program.
 
