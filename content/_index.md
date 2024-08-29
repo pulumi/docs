@@ -62,15 +62,9 @@ customer_logos:
       link: /case-studies/
     - name: deloitte
       link: /case-studies/
-    - name: crunchyroll
-      link: /case-studies/
-    - name: xai
-      link: /case-studies/
     - name: stokespace
       link: /case-studies/
     - name: univision
-      link: /case-studies/
-    - name: wmg
       link: /case-studies/
     - name: washington-trust
       link: /case-studies/
