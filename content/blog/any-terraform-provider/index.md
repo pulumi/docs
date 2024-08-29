@@ -51,7 +51,7 @@ Let’s walk through a concrete example.  We’ll work with a Python project:
 $ pulumi new python
 ```
 
-[Planetscale](https://planetscale.com/) is an exciting new fully-managed MySQL database platform. Although there isn’t yet an official Pulumi provider for Planetscale in the Pulumi Registry, but if we want to use it from Pulumi, we can now do so easily.  First, we generate a local package using the `pulumi package add` command.
+[Planetscale](https://planetscale.com/) is an exciting new fully-managed MySQL database platform. Although there isn’t yet an official Pulumi provider for Planetscale in the Pulumi Registry, we can easly use Planetscale from Pulumi is we want to.  First, we generate a local package using the `pulumi package add` command.
 
 ```shell
 $ pulumi package add terraform-provider planetscale/planetscale
@@ -124,7 +124,7 @@ Planetscale is an exciting example, but it is just one of thousands of 3rd party
 
 ## Why Support All Terraform Providers?
 
-Pulumi has a rich and expressive Native Provider model for building providers directly against the full capabilities of the Pulumi Infrastructure as Code resource model.  Many of the most important Pulumi providers are built on this foundation, including our [Azure Native](https://www.pulumi.com/registry/packages/azure-native/) and [Kubernetes](https://www.pulumi.com/registry/packages/kubernetes/) providers.  So why are we excited to support using Terraform and OpenTofu providers from Pulumi?
+Pulumi has a rich and expressive Native Provider model for building providers directly against the full capabilities of the Pulumi Infrastructure as Code resource model.  Many of the most important Pulumi providers are built directly on this foundation, including our [Azure Native](https://www.pulumi.com/registry/packages/azure-native/) and [Kubernetes](https://www.pulumi.com/registry/packages/kubernetes/) providers.  So why are we excited to support using Terraform and OpenTofu providers from Pulumi?
 
 In short, we believe in giving Pulumi users access to every ecosystem of great providers and components available across the industry and in meeting partners where they are.  If a partner or user has built something exciting for managing infrastructure in the cloud, we want Pulumi users to benefit from it. Similarly, we want the partner or user to easily extend the value of their provider to also be able to reach the Pulumi user base, and all of the benefits that Pulumi can offer for Infrastructure as Code management, with no extra effort on their part.
 
@@ -160,7 +160,7 @@ $ pulumi package add terraform-provider /path/to/my/terraform-provider-binary
 
 Today’s release is a big step in opening up access to even more providers for Pulumi users.  But there is still a lot more we have planned to build on top of these new foundations.  
 
-First, with locally generated SDKs, the documentation is available within the language SDK you generate (and so lights up in your IDE or development environment!). Still, there is no static docs page available in the Pulumi Registry to find and link to on the web.  In the future, we plan to offer the ability to publish documentation for locally bridged providers in the Registry.  In that case, the registry entry will be only the docs - the SDKs and provider binary will not need to be published/hosted in the Registry itself.  
+First, with locally generated SDKs, the documentation is available within the language SDK you generate (and so lights up in your IDE or development environment!). Still, there is no static docs page available in the Pulumi Registry to find and link to on the web.  In the future, we plan to offer the ability to publish documentation for locally bridged providers in the Registry. (tracked in [registry#5302](https://github.com/pulumi/registry/issues/5302))  In that case, the registry entry will be only the docs - the SDKs and provider binary will not need to be published/hosted in the Registry itself.  
 
 Second, the underlying Local Packages and Parameterized Providers technologies for building different flavors of a single provider are applicable to many other use cases.  In addition to having a single provider that can be “parameterized” to act as any Terraform provider, we have plans to apply this technology to additional use cases, such as generating strongly typed providers over any Kubernetes CRD, any Helm Chart, any other Pulumi program, and many more ecosystems of exciting infrastructure components which can be deployed via Pulumi.
 
