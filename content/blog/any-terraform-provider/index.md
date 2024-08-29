@@ -12,6 +12,15 @@ tags:
   - terraform
   - features
 
+social:
+  twitter: "You can now use ANY Terraform Provider from Pulumi! The entire ecosystem of Terraform/OpenTofu providers is now available to Pulumi users. And all the benefits of Pulumi are available to partners and developers building their own Terraform Providers, with no extra work!"
+  linkedin: |
+    You can now use ANY Terraform Provider from Pulumi! 
+    
+    The entire ecosystem of Terraform/OpenTofu providers is now available to Pulumi users. And all the benefits of Pulumi are available to partners and developers building their own Terraform Providers, with no extra work!
+
+    Check it out at https://www.pulumi.com/registry/packages/terraform-provider/ today.
+
 ---
 
 One of our core goals at Pulumi is to provide access to manage any cloud infrastructure with a single unified programming model.  Whether it’s multi-cloud (AWS+Azure+Kubernetes), hybrid cloud (GCP+VMWare+Cisco), or managed services (Databricks+GitHub+Cloudflare), Pulumi makes it easy to deploy and manage infrastructure across all of your cloud environments using any of the 150+ cloud providers in the Pulumi Registry.
@@ -137,14 +146,14 @@ Two new technologies in the Pulumi open source project underpin support for usin
 
 Local packages are versioned, and parameterized providers support many different formats for their parameters.  For example, the most general form of the command to use an existing Terraform provider is:
 
-```
-pulumi package add terraform-provider [<registry>/]<author>/<name> [version]
+```shell 
+$ pulumi package add terraform-provider [<registry>/]<author>/<name> [version]
 ```
 
-Or
+Or:
 
-```
-pulumi package add terraform-provider /path/to/my/terraform-provider-binary
+```shell
+$ pulumi package add terraform-provider /path/to/my/terraform-provider-binary
 ```
 
 ## What’s Next?
