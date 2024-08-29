@@ -21,8 +21,8 @@
             </div>
         </div>
 
-        <div class="container mx-auto flex items-stretch">
-            <div class="w-1/4 pr-4 mt-10">
+        <div class="container mx-auto lg:flex items-stretch">
+            <div class="w-full lg:w-1/4 p-8 lg:pr-4 lg:mt-10">
                 <div class="w-full card bg-white h-full p-8">
                     {{ with .Params.tiers.free }}
                         <h4 class="text-center">{{ .title }}</h4>
@@ -39,18 +39,30 @@
                     {{ end }}
                 </div>
             </div>
-            <div class="w-3/4 pl-4">
-                <div class="w-full h-10">
+            <div class="w-full lg:w-3/4 p-8 lg:pl-4">
+                <div class="hidden lg:block w-full h-10">
                     <div class="h-full justify-end flex">
                         <div class="w-1/3 flex justify-center items-center rounded-t-full bg-purple-200">Most Popular</div>
-                        <div class="w-1/3 flex justify-center items-center rounded-t-full bg-gray-200">Self-Hosting Available</div>
+                        <div class="w-1/3 flex justify-center items-center rounded-t-full bg-gray-200 text-blue-600 underline"><a class="cursor-pointer" href="/product/self-hosted/">Self-Hosting Available</a></div>
                     </div>
                 </div>
-                <div class="card bg-white h-full py-8 rounded-tr-none">
-                    <div class="flex">
-                        {{ range $tier := .Params.tiers.trialed.items }}
-                            <div class="w-1/3 px-8">
-                                <h4 class="text-center">{{ $tier.title }}</h4>
+                <div class="card bg-white h-full pt-8 lg:py-8 lg:rounded-tr-none">
+                    <div class="lg:flex">
+                        {{ range $index, $tier := .Params.tiers.trialed.items }}
+                            {{ $mobileBookmarkClass := "" }}
+                            {{ if eq $index 1 }}
+                                <div class="lg:hidden absolute w-28 mx-auto left-0 right-0 text-center bg-white">
+                                    <p class="my-0 -mt-3">Most popular</p>
+                                </div>
+                                {{ $mobileBookmarkClass = "border-t-2 border-purple-300 rounded-2xl lg:border-0"}}
+                            {{ else if eq $index 2 }}
+                                <div class="lg:hidden absolute w-44 mx-auto left-0 right-0 text-center bg-white">
+                                    <p class="my-0 -mt-3"><a class="cursor-pointer underline" href="/product/self-hosted/">Self-Hosting Available</a></p>
+                                </div>
+                                {{ $mobileBookmarkClass = "border-t-2 border-gray-300 rounded-2xl lg:border-0"}}
+                            {{ end }}
+                            <div class="w-full pb-16 pt-6 lg:py-0 lg:w-1/3 px-8 {{ $mobileBookmarkClass }}">
+                                <div class=""><h4 class="text-center">{{ $tier.title }}</h4></div>
                                 <p class="text-sm">{{ $tier.subtitle }}</p>
                                 <div class="text-center text-2xl font-semibold">{{ $tier.iac_price }}</div>
                                 <div class="text-center text-sm">{{ $tier.iac_unit }}</div>
