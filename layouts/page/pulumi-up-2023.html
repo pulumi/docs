@@ -110,46 +110,16 @@
         </div>
     </section>
 
-    {{ partial "event-schedule.html" (dict "schedule" .Params.schedule "bg_color" "gray-100" ) }}
-
-    <section id="why-attend" class="my-8">
-        <div class="container mx-auto">
-            <h2 class="pl-8">Why Attend</h2>
-            <div class="px-4 py-8 text-center flex flex-col lg:flex-row">
-                <div class="w-full lg:w-1/2 p-4 text-left">
-                    {{ .Params.why_attend.description | markdownify }}
-                    <div class="my-12 flex justify-center lg:justify-start">
-                        <a class="btn-primary" href="#register">Register Now</a>
-                    </div>
-                </div>
-                <div class="w-full lg:w-1/2 px-8">
-                    {{ range .Params.why_attend.items }}
-                        <div class="flex flex-col lg:flex-row px-4">
-                            <img src="{{ .icon }}" class="hidden lg:block" />
-                            <img src="{{ .icon }}" class="block lg:hidden w-14" />
-                            <div class="flex-col lg:px-8 text-left">
-                                <p class="text-xl font-bold text-left">{{ .title }}</p>
-                                <p>{{ .description }}</p>
-                            </div>
-                        </div>
-                    {{ end }}
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="ai-panel" class="my-12">
+    {{ range .Params.panels }}
+    <section id="panel" class="mb-12">
         <div class="container mx-auto text-center">
-            <h2 class="text-center">Watch PulumiUP 2023 On-Demand</h2>
-            <p class="text-center mb-8">
-                Get ready for the future of cloud development! Listen to industry experts in our unfiltered panel discussion on how AI is transforming the cloud native landscape.
-                Stay ahead of the curve by hearing and learning from the best in the industry.
-            </p>
+            <h2 class="pl-8">{{ .title }}</h2>
+            <h3 class="pl-8">{{ .subtitle }}</h3>
             <div class="container justify-center flex flex-col lg:flex-row">
-                {{ range .Params.panelists }}
-                    <div class="mx-2 flex flex-row lg:flex-col my-2 shadow-sm">
+                {{ range .panelists }}
+                    <div class="mx-2 flex flex-row lg:flex-col my-2">
                         <img src="{{ .image }}" class="rounded-l-md lg:rounded-b-none lg:rounded-t-md" style="height: 220px; width: 220px;" />
-                        <div class="bg-gray-100 w-full px-4 py-2 rounded-r-md lg:rounded-t-none lg:rounded-b-md text-left">
+                        <div class="bg-gray-200	 w-full px-4 py-2 rounded-r-md lg:rounded-t-none lg:rounded-b-md text-left">
                             <h6>{{ .name }}</h6>
                             <p class="text-sm text-black my-2 flex-wrap">{{ .position }}</p>
                             <p class="text-sm text-black my-2">{{ .company }}</p>
@@ -165,9 +135,15 @@
                 {{ end }}
             </div>
             <h6 class="py-4">Be a part of shaping the future of cloud infrastructure!</h6>
-            <a class="btn-primary" href="https://www.youtube.com/playlist?list=PLyy8Vx2ZoWlqkEzXbjUvE_CoEmBkT9Xoe" target="_blank">Watch On-Demand</a>
+            <div class="my-8">
+                <a class="btn-primary" href="#register">Register Now</a>
+                <a class="btn-secondary" href="https://conference.pulumi.com/talks/infrastructure-as-code-can-we-do-better/?utm_source=PulumiUp&utm_medium=web&utm_campaign=FY2025Q1_Event_PulumiUP">
+                    Add to your Schedule
+                </a>
+            </div>
         </div>
     </section>
+    {{ end }}
 
     <section id="sponsors" class="my-0 mb-16 py-4 lg:py-12 overflow-hidden px-3 white-background">
         <div class="container mx-auto text-center">

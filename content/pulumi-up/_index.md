@@ -11,32 +11,133 @@ event_date: 2024-09-18T08:00:00-07:00
 aliases:
     - /pulumiup
 
-panelists:
-    - name: Luke Hoban
-      image: /images/team/luke-hoban.jpg
-      position: CTO / TypeScript Co-creator
-      company: Pulumi
-      socials:
-        - site: twitter
-          link: https://twitter.com/lukehoban
-    - name: Amanda Silver
-      image: /images/pulumiup-2023/speakers/amanda-silver.png
-      position: CVP Developer Tools
-      company: Microsoft
-      socials:
-        - site: linkedin
-          link: https://www.linkedin.com/in/amandaksilver/
-        - site: twitter
-          link: https://twitter.com/amandaksilver
-    - name: Beyang Liu
-      image: /images/pulumiup-2023/speakers/beyang-liu.png
-      position: Co-Founder / CTO
-      company: Sourcegraph
-      socials:
-        - site: linkedin
-          link: https://www.linkedin.com/in/beyang-liu
-        - site: twitter
-          link: https://twitter.com/beyang
+panels:
+  - title: Cloud and IaC Panel
+    subtitle: Infrastructure as Code - Can we do better?
+    panelists:
+      - name: Joe Duffy
+        image: /images/team/joe-duffy.jpg
+        position: Co-Founder / CEO
+        company: Pulumi
+        socials:
+          - site: linkedin
+            link: https://www.linkedin.com/in/joejduffy/
+          - site: twitter
+            link: https://x.com/funcofjoe/
+      - name: Brian Grant
+        image: /images/pulumiup-2023/speakers/amanda-silver.png
+        position: CTO
+        company: Stealth
+        socials:
+          - site: linkedin
+            link: https://www.linkedin.com/in/bgrant0607/
+      - name: Elad Ben-Israel
+        image: /images/pulumiup-2023/speakers/beyang-liu.png
+        position: Co-Founder / CEO
+        company: Winglang
+        socials:
+          - site: linkedin
+            link: https://www.linkedin.com/in/hackingonstuff/
+      - name: Adam Jacob
+        image: /images/pulumiup-2023/speakers/beyang-liu.png
+        position: Co-Founder / CEO
+        company: System Initiative
+        socials:
+          - site: linkedin
+            link: https://www.linkedin.com/in/adamjacob/
+      - name: Luke Hoban
+        image: /images/team/luke-hoban.jpg
+        position: CTO / TypeScript Co-creator
+        company: Pulumi
+        socials:
+          - site: linkedin
+            link: https://www.linkedin.com/in/lukejhoban/
+          - site: twitter
+            link: https://x.com/lukehoban/
+  - title: Platform Engineering/DevOps Panel
+    subtitle: Secrets and Policies - Automating Cybersecurity
+    panelists:
+      - name: Joe Duffy
+        image: /images/team/joe-duffy.jpg
+        position: Co-Founder / CEO
+        company: Pulumi
+        socials:
+          - site: linkedin
+            link: https://www.linkedin.com/in/joejduffy/
+          - site: twitter
+            link: https://x.com/funcofjoe/
+      - name: Brian Grant
+        image: /images/pulumiup-2023/speakers/amanda-silver.png
+        position: CTO
+        company: Stealth
+        socials:
+          - site: linkedin
+            link: https://www.linkedin.com/in/bgrant0607/
+      - name: Elad Ben-Israel
+        image: /images/pulumiup-2023/speakers/beyang-liu.png
+        position: Co-Founder / CEO
+        company: Winglang
+        socials:
+          - site: linkedin
+            link: https://www.linkedin.com/in/hackingonstuff/
+      - name: Adam Jacob
+        image: /images/pulumiup-2023/speakers/beyang-liu.png
+        position: Co-Founder / CEO
+        company: System Initiative
+        socials:
+          - site: linkedin
+            link: https://www.linkedin.com/in/adamjacob/
+      - name: Luke Hoban
+        image: /images/team/luke-hoban.jpg
+        position: CTO / TypeScript Co-creator
+        company: Pulumi
+        socials:
+          - site: linkedin
+            link: https://www.linkedin.com/in/lukejhoban/
+          - site: twitter
+            link: https://x.com/lukehoban/
+  - title: AI Panel
+    subtitle: AI in Cloud Development
+    panelists:
+      - name: Joe Duffy
+        image: /images/team/joe-duffy.jpg
+        position: Co-Founder / CEO
+        company: Pulumi
+        socials:
+          - site: linkedin
+            link: https://www.linkedin.com/in/joejduffy/
+          - site: twitter
+            link: https://x.com/funcofjoe/
+      - name: Brian Grant
+        image: /images/pulumiup-2023/speakers/amanda-silver.png
+        position: CTO
+        company: Stealth
+        socials:
+          - site: linkedin
+            link: https://www.linkedin.com/in/bgrant0607/
+      - name: Elad Ben-Israel
+        image: /images/pulumiup-2023/speakers/beyang-liu.png
+        position: Co-Founder / CEO
+        company: Winglang
+        socials:
+          - site: linkedin
+            link: https://www.linkedin.com/in/hackingonstuff/
+      - name: Adam Jacob
+        image: /images/pulumiup-2023/speakers/beyang-liu.png
+        position: Co-Founder / CEO
+        company: System Initiative
+        socials:
+          - site: linkedin
+            link: https://www.linkedin.com/in/adamjacob/
+      - name: Luke Hoban
+        image: /images/team/luke-hoban.jpg
+        position: CTO / TypeScript Co-creator
+        company: Pulumi
+        socials:
+          - site: linkedin
+            link: https://www.linkedin.com/in/lukejhoban/
+          - site: twitter
+            link: https://x.com/lukehoban/
 
 personas:
   groups:
