@@ -25,21 +25,21 @@ panels:
           - site: twitter
             link: https://x.com/funcofjoe/
       - name: Brian Grant
-        image: /images/pulumiup-2023/speakers/amanda-silver.png
+        image: /images/pulumiup-2023/2024-speakers/brian-grant.jpeg
         position: CTO
         company: Stealth
         socials:
           - site: linkedin
             link: https://www.linkedin.com/in/bgrant0607/
       - name: Elad Ben-Israel
-        image: /images/pulumiup-2023/speakers/beyang-liu.png
+        image: /images/team/elad-ben-isreal.jpg
         position: Co-Founder / CEO
         company: Winglang
         socials:
           - site: linkedin
             link: https://www.linkedin.com/in/hackingonstuff/
       - name: Adam Jacob
-        image: /images/pulumiup-2023/speakers/beyang-liu.png
+        image: /images/pulumiup-2023/2024-speakers/adam-jacob.jpeg
         position: Co-Founder / CEO
         company: System Initiative
         socials:
@@ -57,78 +57,39 @@ panels:
   - title: Platform Engineering/DevOps Panel
     subtitle: Secrets and Policies - Automating Cybersecurity
     panelists:
-      - name: Joe Duffy
-        image: /images/team/joe-duffy.jpg
-        position: Co-Founder / CEO
+      - name: Arun Loganathan
+        image: /images/team/arun-loganathan.jpg
+        position: Sr. Product Manager
         company: Pulumi
         socials:
           - site: linkedin
             link: https://www.linkedin.com/in/joejduffy/
           - site: twitter
             link: https://x.com/funcofjoe/
-      - name: Brian Grant
-        image: /images/pulumiup-2023/speakers/amanda-silver.png
-        position: CTO
-        company: Stealth
+      - name: Maya Kaczorowski
+        image: /images/pulumiup-2023/2024-speakers/maya-kaczorowski.jpeg
+        position: Chief Product Officer
+        company: Tailscale
         socials:
           - site: linkedin
             link: https://www.linkedin.com/in/bgrant0607/
-      - name: Elad Ben-Israel
-        image: /images/pulumiup-2023/speakers/beyang-liu.png
-        position: Co-Founder / CEO
-        company: Winglang
+      - name: Jason Meller
+        image: /images/pulumiup-2023/2024-speakers/jason-meller.jpg
+        position: VP, Product
+        company: 1Password
         socials:
           - site: linkedin
             link: https://www.linkedin.com/in/hackingonstuff/
-      - name: Adam Jacob
-        image: /images/pulumiup-2023/speakers/beyang-liu.png
-        position: Co-Founder / CEO
-        company: System Initiative
+      - name: Ofir Cohen
+        image: /images/pulumiup-2023/2024-speakers/ofir-cohen.jpg
+        position: CTO, Container Security
+        company: Wiz
         socials:
           - site: linkedin
             link: https://www.linkedin.com/in/adamjacob/
-      - name: Luke Hoban
-        image: /images/team/luke-hoban.jpg
-        position: CTO / TypeScript Co-creator
-        company: Pulumi
-        socials:
-          - site: linkedin
-            link: https://www.linkedin.com/in/lukejhoban/
-          - site: twitter
-            link: https://x.com/lukehoban/
   - title: AI Panel
     subtitle: AI in Cloud Development
     panelists:
-      - name: Joe Duffy
-        image: /images/team/joe-duffy.jpg
-        position: Co-Founder / CEO
-        company: Pulumi
-        socials:
-          - site: linkedin
-            link: https://www.linkedin.com/in/joejduffy/
-          - site: twitter
-            link: https://x.com/funcofjoe/
-      - name: Brian Grant
-        image: /images/pulumiup-2023/speakers/amanda-silver.png
-        position: CTO
-        company: Stealth
-        socials:
-          - site: linkedin
-            link: https://www.linkedin.com/in/bgrant0607/
-      - name: Elad Ben-Israel
-        image: /images/pulumiup-2023/speakers/beyang-liu.png
-        position: Co-Founder / CEO
-        company: Winglang
-        socials:
-          - site: linkedin
-            link: https://www.linkedin.com/in/hackingonstuff/
-      - name: Adam Jacob
-        image: /images/pulumiup-2023/speakers/beyang-liu.png
-        position: Co-Founder / CEO
-        company: System Initiative
-        socials:
-          - site: linkedin
-            link: https://www.linkedin.com/in/adamjacob/
       - name: Luke Hoban
         image: /images/team/luke-hoban.jpg
         position: CTO / TypeScript Co-creator
@@ -138,6 +99,29 @@ panels:
             link: https://www.linkedin.com/in/lukejhoban/
           - site: twitter
             link: https://x.com/lukehoban/
+      - name: Meagan Cojocar
+        image: /images/team/meagan-cojocar.jpg
+        position: Principal Product Manager
+        company: Pulumi
+        socials:
+          - site: linkedin
+            link: https://www.linkedin.com/in/joejduffy/
+          - site: twitter
+            link: https://x.com/funcofjoe/
+      - name: Phillip Carter
+        image: /images/pulumiup-2023/2024-speakers/phillip-carter.jpg
+        position: Principal Product Manager
+        company: Honeycomb
+        socials:
+          - site: linkedin
+            link: https://www.linkedin.com/in/bgrant0607/
+      - name: Giri Sreenivas
+        image: /images/pulumiup-2023/2024-speakers/giri-sreenivas.jpg
+        position: Chief Product Officer
+        company: Docker
+        socials:
+          - site: linkedin
+            link: https://www.linkedin.com/in/hackingonstuff/
 
 personas:
   groups:
@@ -290,16 +274,31 @@ speakers:
     title: Developer at Avanade
     logo: /images/pulumiup-2023/speaker-logos/avanade.png
     company: Avanade
+  - name: Jason Meller
+    image: /images/pulumiup-2023/2024-speakers/jason-meller.jpg
+    title: VP, Product
+    company: 1Password
+    logo: /images/pulumiup-2023/sponsors/1password.png
+  - name: Ofir Cohen
+    image: /images/pulumiup-2023/2024-speakers/ofir-cohen.jpg
+    title: CTO, Container Security
+    company: Wiz
+    logo: /logos/tech/wiz.png
+  - name: Phillip Carter
+    image: /images/pulumiup-2023/2024-speakers/phillip-carter.jpg
+    title: Principal Product Manager
+    company: Honeycomb
+    logo: /logos/tech/honeycomb-logo.svg
   - name: Meagan Cojocar
     image: /images/team/meagan-cojocar.jpg
     title: Principal Product Manager
     logo: /images/pulumiup-2023/speaker-logos/pulumi.svg
     company: Pulumi
-  - name: Arun Loganathan
-    image: /images/team/arun-loganathan.jpg
-    title: Sr. Product Manager
-    logo: /images/pulumiup-2023/speaker-logos/pulumi.svg
-    company: Pulumi
+  - name: Giri Sreenivas
+    image: /images/pulumiup-2023/2024-speakers/giri-sreenivas.jpg
+    title: Chief Product Officer
+    company: Docker
+    logo: /images/pulumiup-2023/speaker-logos/docker.png
   - name: Joe Duffy
     image: /images/team/joe-duffy.jpg
     title: Co-Founder and CEO
@@ -308,6 +307,11 @@ speakers:
   - name: Luke Hoban
     image: /images/team/luke-hoban.jpg
     title: CTO
+    logo: /images/pulumiup-2023/speaker-logos/pulumi.svg
+    company: Pulumi
+  - name: Arun Loganathan
+    image: /images/team/arun-loganathan.jpg
+    title: Sr. Product Manager
     logo: /images/pulumiup-2023/speaker-logos/pulumi.svg
     company: Pulumi
 
