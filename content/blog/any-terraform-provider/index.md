@@ -23,11 +23,15 @@ social:
 
 ---
 
-One of our core goals at Pulumi is to provide access to manage any cloud infrastructure with a single unified programming model.  Whether it’s multi-cloud (AWS+Azure+Kubernetes), hybrid cloud (GCP+VMWare+Cisco), or managed services (Databricks+GitHub+Cloudflare), Pulumi makes it easy to deploy and manage infrastructure across all of your cloud environments using any of the 150+ cloud providers in the Pulumi Registry.
+One of our core goals at Pulumi is to provide access to manage **any** cloud infrastructure with a single unified programming model.  Whether it’s multi-cloud (AWS+Azure+Kubernetes), hybrid cloud (GCP+VMWare+Cisco), or managed services (Databricks+GitHub+Cloudflare), Pulumi makes it easy to deploy and manage infrastructure across all of your cloud environments using any of the 150+ cloud providers in the Pulumi Registry.
 
 We’re excited to take this even further by introducing support for using [_any_ Terraform or OpenTofu provider](https://www.pulumi.com/registry/packages/terraform-provider/) from within your Pulumi programs.  If there is a long tail Cloud or SaaS platform that has a provider for those ecosystems, it now works with Pulumi as well.  And if your organization has built your own custom Terraform or OpenTofu provider to support an internal cloud platform, you can use it from Pulumi as well, without having to publish it to any registry.
 
 <!--more-->
+
+Terraform providers are the closest thing the industry has today to a "defacto standard" for describing the resource model of a cloud platform. The vast majority of these providers are implemented by cloud providers, partners, or cloud ecosystem contributors - as a way to describe what resources are available in their platform that can be managed via various kinds of infrastructure tooling. These investments become even more impactful when the work done to define the resource model can be widely leveraged by other tools for a variety of purposes - from IaC to Policy to Asset Inventory and more. There is nothing innately Terraform-specific about these providers - they are simply a standard resource model and the implementation of CRUD (Create-Read-Update-Delete) operations against that model. 
+
+At Pulumi, we've supported bridging Terraform providers for use in Pulumi from the beginnning.  Pulumi's provider model is even more expressive than Terraform's and we have a defined way to [map Terraform providers](https://github.com/pulumi/pulumi-terraform-bridge) (as well as other provider ecosystems) into the Pulumi provider model to be used by Pulumi's CLI and deployment orchestration engine.  Many of the most used providers in the Pulumi ecosystem are bridged Terraform providers. However, until now, bridging a new provider required a decent amount of up front and ongoing work, to maintain a seperate repository, build and push seperate releases, and publish resulting SDKs to every language's package manager. This meant that while the largest and most used Terraform providers were available in Pulumi, the long tail of providers were not as easily accesible. With this launch, we are now opening up easy access to *all* of these providers.
 
 Using any Terraform or OpenTofu provider takes just a few seconds using a single command:
 
