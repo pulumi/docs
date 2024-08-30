@@ -5,9 +5,9 @@ import json
 bucket = aws.s3.Bucket(
     "content-bucket",
     acl="private",
-    website=aws.s3.BucketWebsiteArgs(
-        index_document="index.html", error_document="404.html"
-    ),
+    website={
+        "index_document": "index.html", "error_document": "404.html"
+    },
 )
 
 origin_access_identity = aws.cloudfront.OriginAccessIdentity(
