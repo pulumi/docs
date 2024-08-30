@@ -94,100 +94,48 @@ comparison_table:
         ####
         - header: Products
           tables:
-            - header: IaC
+
+            # Pulumi IaC table
+            - header: Pulumi IaC
               subheader: Fully-managed IaC Platform
               rows:
-                - title: Members
+                - title: Price per resource/month
                   items:
-                    - content: 1 # "_blank" "_check" or plaintext
-                      tooltip: "test the tooltip TODO: remove"
-                    - content: Up to 10
-                    - content: Unlimited
-                    - content: Unlimited
-                - title: Admins
+                    - content: Free
+                    - content: $0.36
+                    - content: $1.08  Custom
+                    - content: $1.08  Custom
+                - title: Included resource/month
+                  items:
+                    - content: Free
+                    - content: 200
+                    - content: _blank
+                    - content: _blank
+                - title: Commitment discounts
                   items:
                     - content: _blank
-                    - content: 1
-                    - content: Unlimited
-                    - content: Unlimited
-                - title: Organizations
-                  link: /docs/pulumi-cloud/organizations
+                    - content: _blank
+                    - content: _check
+                    - content: _check
+                - title: Self-hosting
+                  link: /product/self-hosted/
                   items:
                     - content: _blank
-                    - content: 1
-                    - content: Unlimited
-                    - content: Unlimited
-            - header: ESC
-              subheader: Secrets management
-              rows:
-                - title: Members
-                  items:
-                    - content: 1 # "_blank" "_check" or plaintext
-                    - content: Up to 10
-                    - content: Unlimited
-                    - content: Unlimited
-                - title: Admins
-                  items:
                     - content: _blank
-                    - content: 1
-                    - content: Unlimited
-                    - content: Unlimited
-                - title: Organizations
-                  link: /docs/pulumi-cloud/organizations/
-                  items:
                     - content: _blank
-                    - content: 1
-                    - content: Unlimited
-                    - content: Unlimited
-            
-            ## Fundamentals table
-            - header: Fundamentals
-              rows:
-                - title: Members
+                    - content: _check
+                - title: Updates
                   items:
-                    - content: 1 # "_blank" "_check" or plaintext
-                    - content: Up to 10
                     - content: Unlimited
                     - content: Unlimited
-                - title: Admins
-                  items:
-                    - content: _blank
-                    - content: 1
                     - content: Unlimited
                     - content: Unlimited
-                - title: Organizations
-                  link: /docs/pulumi-cloud/organizations/
-                  items:
-                    - content: _blank
-                    - content: 1
-                    - content: Unlimited
-                    - content: Unlimited
-                - title: Unlimited projects & stacks
-                  link: /docs/pulumi-cloud/projects-and-stacks/
-                  items:
-                    - content: _check
-                    - content: _check
-                    - content: _check
-                    - content: _check
-                - title: Unlimited updates
-                  items:
-                    - content: _check
-                    - content: _check
-                    - content: _check
-                    - content: _check
                 - title: Concurrent updates
                   items:
                     - content: 1
                     - content: 5
                     - content: Unlimited
                     - content: Unlimited
-                - title: Pulumi web console
-                  link: /product/pulumi-cloud/
-                  items:
-                    - content: _check
-                    - content: _check
-                    - content: _check
-                    - content: _check
                 - title: Developer portal
                   items:
                     - content: Host public templates
@@ -218,20 +166,6 @@ comparison_table:
                     - content: _blank
                     - content: _check
                     - content: _check
-                - title: REST API
-                  link: /docs/pulumi-cloud/cloud-rest-api/
-                  items:
-                    - content: _check
-                    - content: _check
-                    - content: _check
-                    - content: _check
-                - title: Automation API
-                  link: /automation/
-                  items:
-                    - content: _check
-                    - content: _check
-                    - content: _check
-                    - content: _check
                 - title: Restore Deleted Stacks
                   link: /blog/restore-stacks
                   items:
@@ -239,42 +173,7 @@ comparison_table:
                     - content: _blank
                     - content: _check
                     - content: _check
-                - title: Commitment discounts
-                  items:
-                    - content: _blank
-                    - content: _blank
-                    - content: _check
-                    - content: _check
-                - title: Self-hosting
-                  link: /product/self-hosted/
-                  items:
-                    - content: _blank
-                    - content: _blank
-                    - content: _blank
-                    - content: _check
-                - title: GitHub Enterprise Server support
-                  items:
-                    - content: _blank
-                    - content: _blank
-                    - content: _blank
-                    - content: _check
-
-            ## Continuous Delivery table
-            - header: Continuous Delivery
-              rows:
-                - title: Deployment history
-                  items:
-                    - content: _check
-                    - content: _check
-                    - content: _check
-                    - content: _check
-                - title: Activity timeline
-                  items:
-                    - content: _check
-                    - content: _check
-                    - content: _check
-                    - content: _check
-                - title: GitOps workflows
+                - title: Update history
                   items:
                     - content: _check
                     - content: _check
@@ -296,14 +195,125 @@ comparison_table:
                     - content: _check
                     - content: _check
                     - content: _check
-                - title: Webhooks
-                  link: /docs/pulumi-cloud/webhooks/
+                - title: GitHub Enterprise Server support
+                  items:
+                    - content: _blank
+                    - content: _blank
+                    - content: _blank
+                    - content: _check
+            
+            ## Pulumi ESC table
+            - header: Pulumi ESC
+              rows:
+                - title: Pricer per secret/month
+                  items:
+                    - content: Free
+                    - content: $0.50
+                    - content: $0.75/Custom
+                    - content: Custom
+                - title: Price per config
+                  items:
+                    - content: Free
+                    - content: Free
+                    - content: Free
+                    - content: Free
+                - title: Price per 10k API calls
+                  items:
+                    - content: Free
+                    - content: $0.10
+                    - content: $0.10
+                    - content: $0.10
+                - title: Included secrets/month
+                  items:
+                    - content: 25
+                    - content: 25
+                    - content: 25
+                    - content: 25
+                - title: Included API calls/month
+                  items:
+                    - content: 10
+                    - content: 10
+                    - content: 10
+                    - content: 10
+                - title: Commitment discounts
+                  items:
+                    - content: _blank
+                    - content: _blank
+                    - content: _check
+                    - content: _check
+                - title: Self-hosting
+                  link: /product/self-hosted/
+                  items:
+                    - content: _blank
+                    - content: _blank
+                    - content: _blank
+                    - content: Available
+                - title: "# of secrets"
+                  items:
+                    - content: 25
+                    - content: Unlimited
+                    - content: Unlimited
+                    - content: Unlimited
+                - title: "# of projects"
+                  items:
+                    - content: 10
+                    - content: Unlimited
+                    - content: Unlimited
+                    - content: Unlimited
+                - title: "# of environments"
+                  items:
+                    - content: 10
+                    - content: Unlimited
+                    - content: Unlimited
+                    - content: Unlimited
+                - title: API call limits
+                  items:
+                    - content: 10k / month
+                    - content: Unlimited
+                    - content: Unlimited
+                    - content: Unlimited
+                - title: Version history
+                  items:
+                    - content: _blank
+                    - content: Up to 5
+                    - content: _check
+                    - content: _check
+                - title: Version tags and import by tags
+                  items:
+                    - content: _blank
+                    - content: _blank
+                    - content: _check
+                    - content: _check
+                - title: Integrations - Dynamic credentials
                   items:
                     - content: _blank
                     - content: _check
                     - content: _check
                     - content: _check
-            
+                - title: Integrations - Dynamic secrets
+                  items:
+                    - content: _check
+                    - content: _check
+                    - content: _check
+                    - content: _check
+                - title: Integrations - Sync
+                  items:
+                    - content: _check
+                    - content: _check
+                    - content: _check
+                    - content: _check
+                - title: Multi-language SDKs
+                  items:
+                    - content: _check
+                    - content: _check
+                    - content: _check
+                    - content: _check
+
+        #### 
+        # Key Capabilities
+        ####
+        - header: Key Capabilities
+          tables:
             ## Pulumi Deployments table
             - header: Pulumi Deployments
               rows:
@@ -352,8 +362,9 @@ comparison_table:
                     - content: Available
                     - content: Available
                     - content: Available
-            ## Pulumi Deployments table
-            - header: Policy as Code
+
+            ## CrossGuard table
+            - header: Pulumi CrossGuard
               rows:
                 - title: Gated deployments
                   items:
@@ -365,38 +376,95 @@ comparison_table:
                   items:
                     - content: _blank
                     - content: _blank
-                    - content: _blank
+                    - content: Available
                     - content: _check
                 - title: Compliance-ready policies
                   items:
                     - content: _blank
                     - content: _blank
-                    - content: _blank
+                    - content: Available
                     - content: _check
                 - title: Remediation policies
                   items:
                     - content: _blank
                     - content: _blank
+                    - content: Available
+                    - content: _check
+                - title: Dashboard for policy violations
+                  items:
                     - content: _blank
+                    - content: _blank
+                    - content: Available
                     - content: _check
 
-        #### 
-        # Pulumi Cloud Foundations
-        ####
-        - header: Pulumi Cloud Foundations
-          tables:
 
-            ## Security table
-            - header: Security
+        #### 
+        # Pulumi Cloud Fundamentals
+        ####
+        - header: Pulumi Cloud Fundamentals
+          tables:
+            ## Core table
+            - header: Core
               subheader: Fully-managed IaC Platform
               rows:
-                - title: Secrets and encryption
-                  link: /docs/concepts/config/
+                - title: Pulumi Co-pilot
+                  items:
+                    - content: _blank
+                    - content: _check
+                    - content: _check
+                    - content: _check
+                - title: Webhooks
+                  link:
+                  items:
+                    - content: _blank
+                    - content: _check
+                    - content: _check
+                    - content: _check
+                - title: REST API
+                  link: /docs/pulumi-cloud/cloud-rest-api/
                   items:
                     - content: _check
                     - content: _check
                     - content: _check
                     - content: _check
+                - title: Automation API
+                  link: /automation/
+                  items:
+                    - content: _check
+                    - content: _check
+                    - content: _check
+                    - content: _check
+                - title: Pulumi-service provider
+                  link: /registry/packages/pulumiservice/
+                  items:
+                    - content: _check
+                    - content: _check
+                    - content: _check
+                    - content: _check
+                - title: Members
+                  items:
+                    - content: 1
+                    - content: Up to 10
+                    - content: Unlimited
+                    - content: Unlimited
+                - title: Admins
+                  items:
+                    - content: _blank
+                    - content: 1
+                    - content: Unlimited
+                    - content: Unlimited
+                - title: Organizations
+                  link: /docs/pulumi-cloud/organizations
+                  items:
+                    - content: _blank
+                    - content: _blank
+                    - content: Multiple supported
+                    - content: Multiple supported
+
+            ## Security table
+            - header: Security
+              subheader: Fully-managed IaC Platform
+              rows:
                 - title: Identity providers
                   link: /docs/pulumi-cloud/accounts
                   items:
@@ -441,6 +509,13 @@ comparison_table:
                     - content: _blank
                     - content: _check
                     - content: _check
+                - title: Automated log export to S3
+                  link: /docs/pulumi-cloud/audit-logs#automated-export
+                  items:
+                    - content: _blank
+                    - content: _blank
+                    - content: _blank
+                    - content: _check
                 - title: Organization and Team Access Tokens
                   link: /docs/pulumi-cloud/access-management/organization-access-tokens/
                   tooltip: These are machine access tokens that are scoped to the organization or team level
@@ -448,13 +523,6 @@ comparison_table:
                     - content: _blank
                     - content: _blank
                     - content: _check
-                    - content: _check
-                - title: Automated log export to S3
-                  link: /docs/pulumi-cloud/audit-logs#automated-export
-                  items:
-                    - content: _blank
-                    - content: _blank
-                    - content: _blank
                     - content: _check
 
             ## Support table
@@ -472,56 +540,62 @@ comparison_table:
                   items:
                     - content: _blank
                     - content: _blank
-                    - content: 12 x 5
-                    - content: 24 x 7
+                    - content: Available
+                    - content: Available
                 - title: Ticketing & email support
                   items:
                     - content: _blank
                     - content: _blank
-                    - content: _check
-                    - content: _check
+                    - content: Available
+                    - content: Available
                 - title: Private Slack channel
                   items:
                     - content: _blank
                     - content: _blank
                     - content: Available
-                    - content: _check
+                    - content: Available
                 - title: Normal ticket service level objective
                   items:
                     - content: _blank
                     - content: _blank
-                    - content: 5 business days
-                    - content: 1 business day
+                    - content: Variable
+                    - content: Variable
                 - title: Urgent ticket service level objective
                   items:
                     - content: _blank
                     - content: _blank
-                    - content: 1 business day
-                    - content: 1 hour
+                    - content: Variable
+                    - content: Variable
                 - title: Advisor access
                   items:
                     - content: _blank
                     - content: _blank
-                    - content: Annually
-                    - content: Monthly
+                    - content: Available
+                    - content: Available
                 - title: Onboarding and training
                   items:
                     - content: _blank
                     - content: _blank
                     - content: Available
-                    - content: _check
+                    - content: Available
                 - title: Professional services
                   items:
                     - content: _blank
                     - content: _blank
                     - content: Available
-                    - content: _check
+                    - content: Available
                 - title: Terraform Migration
                   items:
                     - content: _blank
                     - content: _blank
                     - content: Available
-                    - content: _check
+                    - content: Available
+                - title: SLA
+                  items:
+                    - content: _blank
+                    - content: _blank
+                    - content: Available
+                    - content: Available
                       
 
 ---
