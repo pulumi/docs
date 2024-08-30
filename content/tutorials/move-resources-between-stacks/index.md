@@ -10,7 +10,7 @@ description: Learn how to move resources between stacks or projects.
 meta_desc: Learn how to move resources between stacks or projects.
 
 # An image for the tutorial. It appears on tutorial page and in social-media previews.
-meta_image: meta.png
+meta_image: move-resources.png
 
 # An optional video for the tutorial. When present, it appears at the top of the page, replacing
 # the meta image. YouTube and HTML5 video sources are supported.
