@@ -1,10 +1,21 @@
-"""An AWS Python Pulumi program"""
-
 import pulumi
-from pulumi_aws import s3
+import pulumi_random as random
+import pulumi_aws as aws
 
-# Create an AWS resource (S3 Bucket)
-bucket = s3.Bucket('my-bucket')
+pet_name = random.RandomPet('my-pet-name')
 
-# Export the name of the bucket
-pulumi.export('bucket_name', bucket.id)
+bucket = aws.s3.Bucket("b")
+
+index = aws.s3.BucketObject("index.html",
+    bucket=bucket.bucket,
+    content="Thanks for using Pulumi!",
+    opts=pulumi.ResourceOptions(parent=bucket)
+)
+
+random_site = aws.s3.BucketObject("random.html",
+    bucket=bucket.bucket,
+    content=pet_name.id,
+    opts=pulumi.ResourceOptions(parent=bucket)
+)
+
+pulumi.export('PetName', pet_name.id)
