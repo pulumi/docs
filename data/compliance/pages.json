@@ -4,16 +4,6 @@
             "framework": "PCI DSS",
             "cloud": "AWS",
             "description": "PCI DSS (Payment Card Industry Data Security Standard) compliance refers to the adherence to a set of security standards designed to protect card information during and after a financial transaction. These standards are established by the Payment Card Industry Security Standards Council (PCI SSC), which was founded by major credit card companies like Visa, MasterCard, American Express, Discover, and JCB."
-        },
-        {
-            "framework": "ISO 27001",
-            "cloud": "AWS",
-            "description": "ISO 27001 is an internationally recognized standard for managing information security. It provides a framework for establishing, implementing, maintaining, and continually improving an Information Security Management System (ISMS). The standard helps organizations manage and protect their information assets so that they remain secure, using a risk management approach."
-        },
-        {
-            "framework": "CIS",
-            "cloud": "AWS",
-            "description": "CIS compliance adheres to the security benchmarks and guidelines provided by the Center for Internet Security (CIS). CIS compliance is an important step toward enhancing your organization's overall security posture by providing a solid foundation of best practices and configurations. Ensuring that your AWS resources are CIS compliant involves configuring your resources according to the CIS AWS Foundations Benchmark. This benchmark provides best practices for securing various AWS services, focusing on identity and access management, logging, monitoring, and networking."
         }
     ],
     "services": [
