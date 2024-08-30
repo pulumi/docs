@@ -47,7 +47,7 @@ panels:
             link: https://www.linkedin.com/in/adamjacob/
       - name: Luke Hoban
         image: /images/team/luke-hoban.jpg
-        position: CTO / TypeScript Co-creator
+        position: CTO
         company: Pulumi
         socials:
           - site: linkedin
@@ -92,7 +92,7 @@ panels:
     panelists:
       - name: Luke Hoban
         image: /images/team/luke-hoban.jpg
-        position: CTO / TypeScript Co-creator
+        position: CTO
         company: Pulumi
         socials:
           - site: linkedin
