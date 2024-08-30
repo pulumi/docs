@@ -201,13 +201,13 @@ There are a few things to note about the example above:
 
 ## Update program code
 
-The `pulumi state move` only modifies the state file of the source and destination stacks. It does not modify the code of your program directly. In the case of moving resources between stacks across different programs, you will need to modify both programs to match the changes you have made. This can typically be accomplished by copy/pasting source code for the resources and/or components between the two program files. Additionally, inputs and outputs of resources that were moved may need to be adjusted as part of this process. This can be done either by using stack references or by recreating the inputs in the program.
+The `pulumi state move` only modifies the state file of the source and destination stacks. It does not modify the code of your program directly. In the case of moving resources between stacks across different programs, you will need to modify both programs to match the changes you have made. This can typically be accomplished by copy/pasting source code for the resources and/or components between the two program files.
 
-Moving stacks within the same project is a relatively rare use case, and stacks within the same project utilize same program file. As such, the rest of this tutorial only applies to the scenario of moving resources between stacks across two different projects.
+Additionally, inputs and outputs of resources that were moved may need to be adjusted as part of this process. This can be done either by using stack references or by recreating the inputs in the program.
 
 ### Update source program code
 
-Now you will need to move your S3 resources over to the second project's program file. To start, update your source program code so that it resembles the following, making sure to update the value of the fully qualified stack name with your own source stack:
+First, start by removing the AWS resources from your source program code. You can copy and paste these resource definitions safely to the side as you will be adding them to the destination program code in a later step. Update your source program code so that it resembles the following:
 
 {{< chooser language "javascript,typescript,python,go,csharp,yaml" / >}}
 
@@ -250,8 +250,8 @@ Now you will need to move your S3 resources over to the second project's program
 {{% choosable language go %}}
 
 ```go
-{{< example-program-snippet path="aws-s3bucket-s3objects-random" language="go" from="1" to="4" >}}
-{{< example-program-snippet path="aws-s3bucket-s3objects-random" language="go" from="6" to="15" >}}
+{{< example-program-snippet path="aws-s3bucket-s3objects-random" language="go" from="1" to="3" >}}
+{{< example-program-snippet path="aws-s3bucket-s3objects-random" language="go" from="5" to="15" >}}
 
 {{< example-program-snippet path="aws-s3bucket-s3objects-random" language="go" from="38" to="41" >}}
 ```
@@ -261,8 +261,8 @@ Now you will need to move your S3 resources over to the second project's program
 {{% choosable language csharp %}}
 
 ```csharp
-{{< example-program-snippet path="aws-s3bucket-s3objects-random" language="csharp" from="1" to="2" >}}
-{{< example-program-snippet path="aws-s3bucket-s3objects-random" language="csharp" from="4" to="8" >}}
+{{< example-program-snippet path="aws-s3bucket-s3objects-random" language="csharp" from="1" to="1" >}}
+{{< example-program-snippet path="aws-s3bucket-s3objects-random" language="csharp" from="3" to="8" >}}
 
 {{< example-program-snippet path="aws-s3bucket-s3objects-random" language="csharp" from="24" to="28" >}}
 ```
@@ -281,12 +281,21 @@ Now you will need to move your S3 resources over to the second project's program
 
 ### Update destination program code
 
+In your destination program code, you will need to add your AWS resource definitions. Additionally, you will need to add a stack reference to make use of the `PetName` export from the source program. Update your destination program code so that it resembles the following, making sure to replace the value of the fully qualified stack name with the name of your own source stack:
+
 {{< chooser language "javascript,typescript,python,go,csharp,yaml" / >}}
 
 {{% choosable language javascript %}}
 
 ```javascript
-TBD
+{{< example-program-snippet path="aws-s3bucket-s3objects-random" language="javascript" from="1" to="1" >}}
+{{< example-program-snippet path="aws-s3bucket-s3objects-random" language="javascript" from="3" to="3" >}}
+
+const stackRef = new pulumi.StackReference(`v-torian-pulumi-corp/pulumi-state-move-tutorial/source`)
+
+{{< example-program-snippet path="aws-s3bucket-s3objects-random" language="javascript" from="7" to="21" >}}
+        content: stackRef.getOutput("PetName"),
+{{< example-program-snippet path="aws-s3bucket-s3objects-random" language="javascript" from="23" to="25" >}}
 ```
 
 {{% /choosable %}}
@@ -294,7 +303,14 @@ TBD
 {{% choosable language typescript %}}
 
 ```typescript
-TBD
+{{< example-program-snippet path="aws-s3bucket-s3objects-random" language="typescript" from="1" to="1" >}}
+{{< example-program-snippet path="aws-s3bucket-s3objects-random" language="typescript" from="3" to="3" >}}
+
+const stackRef = new pulumi.StackReference(`v-torian-pulumi-corp/pulumi-state-move-tutorial/source`)
+
+{{< example-program-snippet path="aws-s3bucket-s3objects-random" language="typescript" from="7" to="21" >}}
+        content: stackRef.getOutput("PetName"),
+{{< example-program-snippet path="aws-s3bucket-s3objects-random" language="typescript" from="23" to="25" >}}
 ```
 
 {{% /choosable %}}
@@ -306,6 +322,10 @@ TBD
 {{< example-program-snippet path="aws-s3bucket-s3objects-random" language="python" from="3" to="3" >}}
 
 stack_ref = pulumi.StackReference("v-torian-pulumi-corp/pulumi-state-move-tutorial/source")
+
+{{< example-program-snippet path="aws-s3bucket-s3objects-random" language="python" from="7" to="16" >}}
+    content=stack_ref.get_output("PetName")
+{{< example-program-snippet path="aws-s3bucket-s3objects-random" language="python" from="18" to="19" >}}
 ```
 
 {{% /choosable %}}
@@ -313,7 +333,18 @@ stack_ref = pulumi.StackReference("v-torian-pulumi-corp/pulumi-state-move-tutori
 {{% choosable language go %}}
 
 ```go
-TBD
+{{< example-program-snippet path="aws-s3bucket-s3objects-random" language="go" from="1" to="4" >}}
+{{< example-program-snippet path="aws-s3bucket-s3objects-random" language="go" from="6" to="10" >}}
+
+        stackRef, err := pulumi.NewStackReference(ctx, "v-torian-pulumi-corp/pulumi-state-move-tutorial/source", nil)
+        if err != nil {
+            return err
+        }
+
+{{< example-program-snippet path="aws-s3bucket-s3objects-random" language="go" from="17" to="31" >}}
+            Content: stackRef.GetOutput("PetName"),
+{{< example-program-snippet path="aws-s3bucket-s3objects-random" language="go" from="33" to="36" >}}
+{{< example-program-snippet path="aws-s3bucket-s3objects-random" language="go" from="40" to="41" >}}
 ```
 
 {{% /choosable %}}
@@ -321,7 +352,14 @@ TBD
 {{% choosable language csharp %}}
 
 ```csharp
-TBD
+{{< example-program-snippet path="aws-s3bucket-s3objects-random" language="csharp" from="1" to="2" >}}
+{{< example-program-snippet path="aws-s3bucket-s3objects-random" language="csharp" from="4" to="7" >}}
+    var stackRef = new StackReference("v-torian-pulumi-corp/pulumi-state-move-tutorial/source");
+
+{{< example-program-snippet path="aws-s3bucket-s3objects-random" language="csharp" from="10" to="20" >}}
+        Content = stackRef.GetOutput("PetName")
+{{< example-program-snippet path="aws-s3bucket-s3objects-random" language="csharp" from="22" to="22" >}}
+{{< example-program-snippet path="aws-s3bucket-s3objects-random" language="csharp" from="28" to="28" >}}
 ```
 
 {{% /choosable %}}
@@ -329,7 +367,16 @@ TBD
 {{% choosable language yaml %}}
 
 ```yaml
-TBD
+{{< example-program-snippet path="aws-s3bucket-s3objects-random" language="yaml" from="1" to="2" >}}
+
+{{< example-program-snippet path="aws-s3bucket-s3objects-random" language="yaml" from="5" to="5" >}}
+  stack-ref:
+    type: pulumi:pulumi:StackReference
+    properties:
+      name: v-torian-pulumi-corp/pulumi-state-move-tutorial/source
+{{< example-program-snippet path="aws-s3bucket-s3objects-random" language="yaml" from="8" to="20" >}}
+      content: ${stack-ref.outputs["PetName"]}
+{{< example-program-snippet path="aws-s3bucket-s3objects-random" language="yaml" from="22" to="23" >}}
 ```
 
 {{% /choosable %}}
@@ -339,3 +386,12 @@ TBD
 {{< cleanup >}}
 
 ## Next steps
+
+In this tutorial, you created a Pulumi Random resource and AWS S3 resources. You used the `pulumi state move` command to migrate the AWS resources from the state file of a source project to a destination project. You also updated both the source and destination project code to match the changes made.
+
+To learn more about creating and managing resources in Pulumi, take a look a the following resources:
+
+- Learn more about Pulumi state and backends in the [Managing Pulumi State and Backend Options documentation](/docs/concepts/state/).
+- Learn more about the `pulumi state` command and its subcommands in the [Pulumi State CLI documentation](/docs/cli/commands/pulumi_state/).
+- Learn more about Pulumi stacks in the [Stacks concept documentation](/docs/concepts/stack/).
+- Learn more about the `pulumi stack` command and its subcommands in the [Pulumi Stack CLI documentation](https://www.pulumi.com/docs/cli/commands/pulumi_stack/).
