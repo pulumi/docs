@@ -14,6 +14,7 @@ aliases:
 panels:
   - title: Cloud and IaC Panel
     subtitle: Infrastructure as Code - Can we do better?
+    schedule_link: https://conference.pulumi.com/talks/infrastructure-as-code-can-we-do-better/?utm_source=PulumiUp&utm_medium=web&utm_campaign=FY2025Q1_Event_PulumiUP
     panelists:
       - name: Joe Duffy
         image: /images/team/joe-duffy.jpg
@@ -56,6 +57,7 @@ panels:
             link: https://x.com/lukehoban/
   - title: Platform Engineering/DevOps Panel
     subtitle: Secrets and Policies - Automating Cybersecurity
+    schedule_link: https://conference.pulumi.com/talks/panel-platform-engineering-security/?utm_source=PulumiUp&utm_medium=web&utm_campaign=FY2025Q1_Event_PulumiUP
     panelists:
       - name: Arun Loganathan
         image: /images/team/arun-loganathan.jpg
@@ -89,6 +91,7 @@ panels:
             link: https://www.linkedin.com/in/adamjacob/
   - title: AI Panel
     subtitle: AI in Cloud Development
+    schedule_link: https://conference.pulumi.com/talks/panel-ai-cloud-development/?utm_source=PulumiUp&utm_medium=web&utm_campaign=FY2025Q1_Event_PulumiUP
     panelists:
       - name: Luke Hoban
         image: /images/team/luke-hoban.jpg
