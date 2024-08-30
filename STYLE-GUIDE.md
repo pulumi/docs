@@ -76,13 +76,13 @@ This bit of info is serious. If you missed it, bad things could happen.
     - all on one line
 
         ```plain
-        This is a pargraph all on one line. This paragraph is easy to edit because you can suggest changes to the whole paragraph in one go. When anything in this paragraph changes, GitHub will highlight which words changed.
+        This is a paragraph all on one line. This paragraph is easy to edit because you can suggest changes to the whole paragraph in one go. When anything in this paragraph changes, GitHub will highlight which words changed.
         ```
 
     - semantic line breaks
 
         ```plain
-        This pargraph uses semantic line breaks.
+        This paragraph uses semantic line breaks.
         Line breaks are introduced between sentences,
         and where appropriate, even within sentences.
         This makes it easy to review and edit individual sentences or clauses.
@@ -93,7 +93,7 @@ This bit of info is serious. If you missed it, bad things could happen.
     - reflowed to a fixed maximum line length
 
         ```plain
-        This pargraph is split across multiple lines, but it has been run
+        This paragraph is split across multiple lines, but it has been run
         through the editor's reflow function to a maximum line length. This
         makes it difficult to review because most changes to any sentence will
         also show the following sentences as changed, and GitHub's word-diff
