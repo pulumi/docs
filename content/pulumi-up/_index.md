@@ -252,7 +252,7 @@ speakers:
     company: NCICS
   - name: Alexandre Nédélec
     image: /images/pulumiup-2023/2024-speakers/alexandre-nédélec.jpeg
-    title: Developer at Avanade
+    title: Software Engineer
     logo: /images/pulumiup-2023/speaker-logos/avanade.png
     company: Avanade
   - name: Jason Meller
