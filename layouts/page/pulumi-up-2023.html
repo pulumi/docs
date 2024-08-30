@@ -145,23 +145,6 @@
     </section>
     {{ end }}
 
-    <section id="sponsors" class="my-0 mb-16 py-4 lg:py-12 overflow-hidden px-3 white-background">
-        <div class="container mx-auto text-center">
-            <h2 class="text-center mb-10 hidden lg:block">{{ .Params.customer_logos.title }}</h2>
-            <h6 class="text-center lg:hidden">{{ .Params.customer_logos.title }}</h6>
-            {{ range $row := .Params.customer_logos.rows }}
-                <div class="flex flex-wrap items-center justify-center">
-                    {{ range $logo := $row.logos }}
-                        <div class="w-3/4 lg:w-1/6 p-4 lg:p-10">
-                            <a href="{{ $logo.link }}"><img class="w-full" src="/images/pulumiup-2023/sponsors/{{ $logo.logo }}" /></a>
-                        </div>
-                    {{ end }}
-                </div>
-            {{ end }}
-        </div>
-    </section>
-
-
     <section id="workshops" class="py-8 mb-12">
         <div class="container mx-auto">
             <h3 class="ml-4">Workshops</h3>
@@ -197,7 +180,7 @@
                                 </span>
                             </span>
                             <div class="pl-5 pb-8">
-                                <a class="btn-secondary w-4/12" href="#register">Register Now</a>
+                                <a class="btn-secondary w-4/12" href={{ .link }}>Register Now</a>
                             </div>
                                 
                         </span>
@@ -207,6 +190,22 @@
             {{ end }}
             </ul>
             
+        </div>
+    </section>
+
+    <section id="sponsors" class="my-0 mb-16 py-4 lg:py-12 overflow-hidden px-3 white-background">
+        <div class="container mx-auto text-center">
+            <h2 class="text-center mb-10 hidden lg:block">{{ .Params.customer_logos.title }}</h2>
+            <h6 class="text-center lg:hidden">{{ .Params.customer_logos.title }}</h6>
+            {{ range $row := .Params.customer_logos.rows }}
+                <div class="flex flex-wrap items-center justify-center">
+                    {{ range $logo := $row.logos }}
+                        <div class="w-3/4 lg:w-1/6 p-4 lg:p-10">
+                            <a href="{{ $logo.link }}"><img class="w-full" src="/images/pulumiup-2023/sponsors/{{ $logo.logo }}" /></a>
+                        </div>
+                    {{ end }}
+                </div>
+            {{ end }}
         </div>
     </section>
 

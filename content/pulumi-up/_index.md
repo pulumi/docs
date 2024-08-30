@@ -300,12 +300,15 @@ workshops:
   - title: Managing team secrets with 1Password & Pulumi ESC
     meta_desc: Learn Pulumi ESC + 1Password for secure, automated secret management in multi-cloud setups. Store & fetch secrets easily in our workshop
     datetime: 2024-09-25T09:00:00.000-07:00
+    link: /resources/managing-team-secrets-with-1password-pulumi-esc/
   - title: Securing IaC Pipelines in Regulated Industries
     meta_desc: Learn best practices for securing and ensuring compliance of AWS infrastructure using Pulumi ESC and Policy as Code in your IaC pipelines.
     datetime: 2024-09-26T09:00:00-07:00
+    link: /resources/securing-iac-pipelines-in-regulated-industries/
   - title: Observability as Code for AI Apps with New Relic and Pulumi
     meta_desc: Learn how to use AWS to generate secure infrastructure code for deploying an AI Chatbot app with Pulumi, leveraging New Relic's LLM dashboards.  
     datetime: 2024-10-30T09:00:00-07:00
+    link: /resources/observability-as-code-for-ai-apps-new-relic/
 
 registration:
     items:
