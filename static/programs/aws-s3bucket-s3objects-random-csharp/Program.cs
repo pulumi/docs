@@ -13,7 +13,7 @@ return await Deployment.RunAsync(() =>
     {
         Bucket = bucket.BucketName,
         Content = "Thanks for using Pulumi!"
-    }, new CustomResourceOptions { Parent = bucket })
+    }, new CustomResourceOptions { Parent = bucket });
 
     var randomSite = new BucketObject("random.html", new BucketObjectArgs
     {

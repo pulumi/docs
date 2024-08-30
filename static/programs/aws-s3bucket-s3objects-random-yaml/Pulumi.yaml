@@ -13,14 +13,14 @@ resources:
       bucket: ${my-bucket.bucket}
       content: "Thanks for using Pulumi!"
     options:
-      parent: my-bucket
+      parent: ${my-bucket}
   random-site:
     type: aws:s3:BucketObject
     properties:
       bucket: ${my-bucket.bucket}
       content: ${pet-name.id}
     options:
-      parent: my-bucket
+      parent: ${my-bucket}
 
 outputs:
   PetName: ${pet-name.id}

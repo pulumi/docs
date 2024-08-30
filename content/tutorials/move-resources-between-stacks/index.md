@@ -216,6 +216,8 @@ The `pulumi state move` only modifies the state file of the source and destinati
 
 Additionally, inputs and outputs of resources that were moved may need to be adjusted as part of this process. This can be done either by using stack references, or recreating the inputs in the program.
 
+When dealing with a scenario
+
 ### Update source program code
 
 At this stage, you want to move your S3 resources to a separate program file. To start, update your source program code so that it resembles the following, making sure to update the value of the fully qualified stack name with your own source stack:
