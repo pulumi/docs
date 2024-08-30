@@ -162,9 +162,9 @@
     </section>
 
 
-    <section id="workshops" class="my-0 mb-16 py-4 lg:py-12 overflow-hidden px-3 white-background">
+    <section id="workshops" class="py-8 mb-12">
         <div class="container mx-auto">
-            <h3>Workshops</h3>
+            <h3 class="ml-4">Workshops</h3>
             <ul class="event-list flex flex-wrap list-none p-0 mb-8 sm:p-2 resource-list">
             {{ range .Params.workshops }}
             <li class="flex event-card w-full m-0 p-2 lg:w-1/2">
@@ -196,12 +196,10 @@
                                     </p>
                                 </span>
                             </span>
-                            <span class="flex flex-row justify-between">
+                            <div class="pl-5 pb-8">
+                                <a class="btn-secondary w-4/12" href="#register">Register Now</a>
+                            </div>
                                 
-                                <span class="text-blue-600 flex flex-col justify-end">
-                                        <div class="align-bottom">Register<i class="fa fa-arrow-right ml-2"></i></div>
-                                </span>
-                            </span>
                         </span>
                     </a>
                 </article>
