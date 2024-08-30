@@ -144,25 +144,6 @@ personas:
       - image: /images/pulumiup-2023/icons/groups.svg
         name: Anyone who works with cloud infrastructure or IaC
 
-why_attend:
-  description: |
-    PulumiUP focuses on <b>engineers & developers, from individual contributors to team leaders and founders.</b> It provides a range of benefits, including:
-    - <b>Learning:</b> You can learn best practices, the latest about Pulumi, and infrastructure as code. Build new skills, gain experience, and create innovative solutions.
-    - <b>Networking:</b> meet and connect with other software engineers, cloud infrastructure experts, and industry leaders. This can lead to valuable contacts, collaborations, and opportunities.
-    - <b>Professional advancement:</b> our speakers are doers - they have tackled and overcome real situations and challenges. Learn from them, implement their techniques, and transform your organization, business, and yourself.
-
-    PulumiUP is a great way to stay informed, connected, and engaged with the field of cloud, software development, and infrastructure as code.
-  items:
-    - icon: /images/pulumiup-2023/icons/podium.svg
-      title: Amazing Speakers
-      description: Listen to their stories, from industry leaders to software engineers who became inspiring founders.
-    - icon: /images/pulumiup-2023/icons/rocket.svg
-      title: Professional Growth
-      description: Learn what’s new, best practices and trends. Hear from those who talk the talk, and walk the walk. 
-    - icon: /images/pulumiup-2023/icons/network.svg
-      title: Network and Participate
-      description: Meet peers, expand your industry and professional network. Participate in contests, share ideas and join Q&As
-
 speakers:
   - name: Dax Raad
     image: /images/pulumiup-2023/2024-speakers/dax-raad.png
@@ -315,41 +296,16 @@ speakers:
     logo: /images/pulumiup-2023/speaker-logos/pulumi.svg
     company: Pulumi
 
-schedule:
-  heading: Schedule At A Glance
-  subheading: Get inspired! Dive into the stories and experiences of innovators and experts, from Startup Founders to Industry Leaders.
-  items:
-    - title: Opening Keynote, followed by new product launches and demos
-      description:
-      time: "8:00 AM PT"
-
-    - title: AI / ML Sessions
-      description:
-      time: "9:15 AM PT"
-
-    - title: "Panel: AI / ML"
-      description:
-      time: "11:00 AM PT"
-
-    - title: Platform Engineering & DevOps Sessions
-      description:
-      time: "11:45 AM PT"
-
-    - title: "Panel: Platform Engineering"
-      description:
-      time: "1:00 PM PT"
-
-    - title: Cloud Ecosystem Sessions
-      description:
-      time: "1:45 PM PT"
-
-    - title: "Panel: Security & DevSecOps"
-      description:
-      time: "3:00 PM PT"
-
-    - title: Cloud Culture Sessions
-      description:
-      time: "3:45 PM PT"
+workshops:
+  - title: Managing team secrets with 1Password & Pulumi ESC
+    meta_desc: Learn Pulumi ESC + 1Password for secure, automated secret management in multi-cloud setups. Store & fetch secrets easily in our workshop
+    datetime: 2024-09-25T09:00:00.000-07:00
+  - title: Securing IaC Pipelines in Regulated Industries
+    meta_desc: Learn best practices for securing and ensuring compliance of AWS infrastructure using Pulumi ESC and Policy as Code in your IaC pipelines.
+    datetime: 2024-09-26T09:00:00-07:00
+  - title: Observability as Code for AI Apps with New Relic and Pulumi
+    meta_desc: Learn how to use AWS to generate secure infrastructure code for deploying an AI Chatbot app with Pulumi, leveraging New Relic's LLM dashboards.  
+    datetime: 2024-10-30T09:00:00-07:00
 
 registration:
     items:
