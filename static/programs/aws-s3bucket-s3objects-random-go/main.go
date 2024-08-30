@@ -8,7 +8,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		// Create an AWS resource (S3 Bucket)
+
 		petName, err := random.NewRandomPet(ctx, "my-pet-name", nil)
 		if err != nil {
 			return err
@@ -35,7 +35,6 @@ func main() {
 			return err
 		}
 
-		// Export the name of the bucket
 		ctx.Export("PetName", petName.ID())
 		return nil
 	})

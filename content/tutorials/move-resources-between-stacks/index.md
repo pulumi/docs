@@ -24,7 +24,7 @@ weight: 999
 
 # A brief summary of the tutorial. It appears at the top of the tutorial page. Markdown is fine.
 summary: |
-    There are certain scenarios in which you might need to move resources between different projects or stacks without recreating them, such as when refactoring a Pulumi project from a monolithic structure to micro-stacks. While it is possible to accomplish this by manually modifying Pulumi state files, doing so requires significant effort, can be error prone, and can be very time consuming.
+    There are certain scenarios in which you might need to move resources between different project stacks without recreating them, such as when refactoring a Pulumi project from a monolithic structure to micro-stacks. While it is possible to accomplish this by manually modifying Pulumi state files, doing so requires significant effort, can be error prone, and can be very time consuming.
     
     In this tutorial, you will learn how to move your resources using the `pulumi state move` command instead.
 
@@ -88,50 +88,38 @@ Flags:
   -y, --yes               Automatically approve and perform the move
 ```
 
+Both the `--dest` and `--source` flags can be either stacks in the current project, or stacks in across different projects. The resources being moved have to be specified by their full [Uniform Resource Name (URN)](/docs/concepts/resources/names/#urns), and multiple URNs can be passed at once for scenarios in which you need to move multiple resources at once.
+
 {{< notes type="info" >}}
 
 This command will only work for stacks that exist within the same backend. It is currently not possible to move a resource between different backends, but you can move stacks between backends using other existing tools. Please refer to the [Migrating Between State Backends](/docs/concepts/state/#migrating-between-state-backends) documentation for more information.
 
 {{< /notes >}}
 
-Both `dest` and `source` can be either stacks in the current project, or stacks in across different projects. The resources being moved have to be specified by their full [Uniform Resource Name (URN)](/docs/concepts/resources/names/#urns), and multiple URNs can be passed at once for scenarios in which you need to move multiple resources at once.
-
 ## Move a resource between stacks
 
-Let's say you have a situation where your program code has grown too large, and you want to group the AWS resources separately from the Random resource. This means you want to move the S3 bucket as well as its bucket objects to a separate stack. In this section, you will learn how to move these resource into the state file of a different stack.
+Let's say you have a situation where your program code has grown too large, and you want to group the AWS resources separately from the Random resource. This means you want to move the S3 bucket and its bucket objects to a separate stack. In this section, you will learn how to move these resource into the state file of a different stack.
 
-### Create additional stacks
+### Create an additional stack
 
-To start, create a new stack within your project by running the `pulumi stack init` command. For the purposes of this tutorial, we have named the new stack `destination`:
-
-```bash
-$ pulumi stack init
-Please enter your desired stack name.
-To create a stack in an organization, use the format <org-name>/<stack-name> (e.g. `acmecorp/dev`).
-stack name (dev): destination
-Created stack 'destination'
-```
-
-This will be used to demonstrate how to move a resource between **stacks in the same project**. If you want to move a resource between **stacks across two different projects**, [create a second Pulumi project](/docs/clouds/aws/get-started/create-project/) instead.
+To start, [create a second Pulumi project](/docs/clouds/aws/get-started/create-project/) to where you will move your AWS resources.
 
 From within the original project folder, run the `pulumi stack ls --all` command to verify the existence of your stacks:
 
 ```bash
 $ pulumi stack ls
+
 NAME                                                                LAST UPDATE     RESOURCE COUNT  URL
-destination*                                                        n/a             n/a             https://app.pulumi.com/v-torian-pulumi-corp/pulumi-state-move-tutorial/destination
-source                                                              37 minutes ago  7               https://app.pulumi.com/v-torian-pulumi-corp/pulumi-state-move-tutorial/source
+source*                                                             37 minutes ago  7               https://app.pulumi.com/v-torian-pulumi-corp/pulumi-state-move-tutorial/source
 v-torian-pulumi-corp/pulumi-state-move-dest/dest-project            n/a             n/a             https://app.pulumi.com/v-torian-pulumi-corp/pulumi-state-move-dest/dest-project
 ```
 
-In the above example output, the `source` and `destination` stacks are in the same project, and the `v-torian-pulumi-corp/pulumi-state-move-dest/dest-project` stack is in a different project.
-
 ### Retrieve fully qualified stack names
 
-Next, you will need to collect the fully qualified stack names of the source and destination stacks. The format of a stack's fully qualified name is `<organization>/<project>/<stack>`. In the `URL` column in the output in the above section, you can see the value of each stack's fully qualified name after the `https://app.pulumi.com/` part of the URL. An example of a fully qualified stack name is shown below:
+Next, you will need to collect the fully qualified stack names of the source and destination stacks. The format of a stack's fully qualified name is `<organization>/<project>/<stack>`. In the `URL` column of the output in the above section, you can see the value of each stack's fully qualified name after the `https://app.pulumi.com/` part of the URL. An example of a fully qualified stack name is shown below:
 
 ```bash
-v-torian-pulumi-corp/pulumi-state-move-tutorial/destination
+v-torian-pulumi-corp/pulumi-state-move-dest/dest-project
 ```
 
 ### Retrieve resource URN
@@ -184,15 +172,16 @@ Since URNs can contain characters that get interpreted by the shell, it is alway
 ```bash
 $ pulumi state move \
 --source v-torian-pulumi-corp/pulumi-state-move-tutorial/source \
---dest v-torian-pulumi-corp/pulumi-state-move-tutorial/destination \
+--dest v-torian-pulumi-corp/pulumi-state-move-dest/dest-project \
 'urn:pulumi:source::pulumi-state-move-tutorial::aws:s3/bucket:Bucket::b'
-Planning to move the following resources from v-torian-pulumi-corp/pulumi-state-move-tutorial/source to v-torian-pulumi-corp/pulumi-state-move-tutorial/destination:
+
+Planning to move the following resources from v-torian-pulumi-corp/pulumi-state-move-tutorial/source to v-torian-pulumi-corp/pulumi-state-move-dest/dest-project:
 
   - urn:pulumi:source::pulumi-state-move-tutorial::aws:s3/bucket:Bucket::b
   - urn:pulumi:source::pulumi-state-move-tutorial::aws:s3/bucket:Bucket$aws:s3/bucketObject:BucketObject::index.html
   - urn:pulumi:source::pulumi-state-move-tutorial::aws:s3/bucket:Bucket$aws:s3/bucketObject:BucketObject::random.html
 
-The following resources being moved to v-torian-pulumi-corp/pulumi-state-move-tutorial/destination have dependencies on resources in v-torian-pulumi-corp/pulumi-state-move-tutorial/source:
+The following resources being moved to v-torian-pulumi-corp/pulumi-state-move-dest/dest-project have dependencies on resources in v-torian-pulumi-corp/pulumi-state-move-tutorial/source:
 
   - urn:pulumi:source::pulumi-state-move-tutorial::aws:s3/bucket:Bucket$aws:s3/bucketObject:BucketObject::random.html has a dependency on urn:pulumi:source::pulumi-state-move-tutorial::random:index/randomPet:RandomPet::my-pet-name
   - urn:pulumi:source::pulumi-state-move-tutorial::aws:s3/bucket:Bucket$aws:s3/bucketObject:BucketObject::random.html (content) has a property dependency on urn:pulumi:source::pulumi-state-move-tutorial::random:index/randomPet:RandomPet::my-pet-name
@@ -200,27 +189,97 @@ The following resources being moved to v-torian-pulumi-corp/pulumi-state-move-tu
 If you go ahead with moving these dependencies, it will be necessary to create the appropriate inputs and outputs in the program for the stack the resources are moved to.
 
 Do you want to perform this move? yes
-Successfully moved resources from v-torian-pulumi-corp/pulumi-state-move-tutorial/source to v-torian-pulumi-corp/pulumi-state-move-tutorial/destination
+Successfully moved resources from v-torian-pulumi-corp/pulumi-state-move-tutorial/source to v-torian-pulumi-corp/pulumi-state-move-dest/dest-project
 ```
 
 There are a few things to note about the example above:
 
-- When moving resources between stacks within the same project, depending on which stack you have as your currently active stack, you can either omit the `--source` or the `--dest` flags. For example, if `source` is your currently active stack, then you can omit the `--source` flag when running this command.
-- When moving resources between stacks across different projects, both the `--source` and the `--dest` flags, along with their values, must be provided.
-- Before actually moving the resources, the command gives a list of resources that will be moved. You will notice that even though we have only provided the URN for the S3 bucket as an argument, the command indicates that both the S3 bucket resource as well as the two bucket object will be moved.
-- The output also warns you about any dependencies that will not be transferred to the destination stack. You will need to create the appropriate inputs and outputs in the program for the stack that the resources were moved to, and you will learn how to do this in the next section.
+- When moving resources from the currently selected stack, you can omit the `--source` argument and use only `--dest` argument.
+- When moving resources between stacks across different projects, you will need to use the fully qualified stack name. When moving resources between stacks within the same project, you can pass just the name of the stack.
+- Before the resources are moved, the command gives a list of resources that will be moved. You will notice that even though you have only provided the URN for the S3 bucket as an argument, the command indicates that both the S3 bucket resource as well as the two child bucket objects will be moved.
+- The output also warns you about any dependencies that will not be transferred to the destination stack. When dealing with cross-project stacks, you will need to create the appropriate inputs and outputs in the program of the destination stack, and you will learn how to do this in the next section.
 
 ## Update program code
 
-The `pulumi state move` only modifies the state file of the source and destination stacks. It does not modify the code of your program directly. With that being said, you will need to modify both programs to match the changes you have made. This can typically be accomplished by copy/pasting source code for the resources and/or components between the two program files.
+The `pulumi state move` only modifies the state file of the source and destination stacks. It does not modify the code of your program directly. In the case of moving resources between stacks across different programs, you will need to modify both programs to match the changes you have made. This can typically be accomplished by copy/pasting source code for the resources and/or components between the two program files. Additionally, inputs and outputs of resources that were moved may need to be adjusted as part of this process. This can be done either by using stack references or by recreating the inputs in the program.
 
-Additionally, inputs and outputs of resources that were moved may need to be adjusted as part of this process. This can be done either by using stack references, or recreating the inputs in the program.
-
-When dealing with a scenario
+Moving stacks within the same project is a relatively rare use case, and stacks within the same project utilize same program file. As such, the rest of this tutorial only applies to the scenario of moving resources between stacks across two different projects.
 
 ### Update source program code
 
-At this stage, you want to move your S3 resources to a separate program file. To start, update your source program code so that it resembles the following, making sure to update the value of the fully qualified stack name with your own source stack:
+Now you will need to move your S3 resources over to the second project's program file. To start, update your source program code so that it resembles the following, making sure to update the value of the fully qualified stack name with your own source stack:
+
+{{< chooser language "javascript,typescript,python,go,csharp,yaml" / >}}
+
+{{% choosable language javascript %}}
+
+```javascript
+{{< example-program-snippet path="aws-s3bucket-s3objects-random" language="javascript" from="1" to="2" >}}
+
+{{< example-program-snippet path="aws-s3bucket-s3objects-random" language="javascript" from="5" to="5" >}}
+
+{{< example-program-snippet path="aws-s3bucket-s3objects-random" language="javascript" from="27" to="27" >}}
+```
+
+{{% /choosable %}}
+
+{{% choosable language typescript %}}
+
+```typescript
+{{< example-program-snippet path="aws-s3bucket-s3objects-random" language="typescript" from="1" to="2" >}}
+
+{{< example-program-snippet path="aws-s3bucket-s3objects-random" language="typescript" from="5" to="5" >}}
+
+{{< example-program-snippet path="aws-s3bucket-s3objects-random" language="typescript" from="27" to="27" >}}
+```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+```python
+{{< example-program-snippet path="aws-s3bucket-s3objects-random" language="python" from="1" to="2" >}}
+
+{{< example-program-snippet path="aws-s3bucket-s3objects-random" language="python" from="5" to="5" >}}
+
+{{< example-program-snippet path="aws-s3bucket-s3objects-random" language="python" from="21" to="21" >}}
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```go
+{{< example-program-snippet path="aws-s3bucket-s3objects-random" language="go" from="1" to="4" >}}
+{{< example-program-snippet path="aws-s3bucket-s3objects-random" language="go" from="6" to="15" >}}
+
+{{< example-program-snippet path="aws-s3bucket-s3objects-random" language="go" from="38" to="41" >}}
+```
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+```csharp
+{{< example-program-snippet path="aws-s3bucket-s3objects-random" language="csharp" from="1" to="2" >}}
+{{< example-program-snippet path="aws-s3bucket-s3objects-random" language="csharp" from="4" to="8" >}}
+
+{{< example-program-snippet path="aws-s3bucket-s3objects-random" language="csharp" from="24" to="28" >}}
+```
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+```yaml
+{{< example-program-snippet path="aws-s3bucket-s3objects-random" language="yaml" from="1" to="7" >}}
+
+{{< example-program-snippet path="aws-s3bucket-s3objects-random" language="yaml" from="25" to="26" >}}
+```
+
+{{% /choosable %}}
+
+### Update destination program code
 
 {{< chooser language "javascript,typescript,python,go,csharp,yaml" / >}}
 
@@ -247,62 +306,6 @@ TBD
 {{< example-program-snippet path="aws-s3bucket-s3objects-random" language="python" from="3" to="3" >}}
 
 stack_ref = pulumi.StackReference("v-torian-pulumi-corp/pulumi-state-move-tutorial/source")
-```
-
-{{% /choosable %}}
-
-{{% choosable language go %}}
-
-```go
-TBD
-```
-
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-
-```csharp
-TBD
-```
-
-{{% /choosable %}}
-
-{{% choosable language yaml %}}
-
-```yaml
-TBD
-```
-
-{{% /choosable %}}
-
-### Add alias to destination
-
-{{< chooser language "javascript,typescript,python,go,csharp,yaml" / >}}
-
-{{% choosable language javascript %}}
-
-```javascript
-TBD
-```
-
-{{% /choosable %}}
-
-{{% choosable language typescript %}}
-
-```typescript
-TBD
-```
-
-{{% /choosable %}}
-
-{{% choosable language python %}}
-
-```python
-{{< example-program-snippet path="aws-s3bucket-s3objects-random" language="python" from="1" to="2" >}}
-
-{{< example-program-snippet path="aws-s3bucket-s3objects-random" language="python" from="5" to="5" >}}
-
-{{< example-program-snippet path="aws-s3bucket-s3objects-random" language="python" from="21" to="21" >}}
 ```
 
 {{% /choosable %}}

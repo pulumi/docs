@@ -21,7 +21,6 @@ return await Deployment.RunAsync(() =>
         Content = petName.Id
     }, new CustomResourceOptions { Parent = bucket });
 
-    // Export the name of the bucket
     return new Dictionary<string, object?>
     {
         ["PetName"] = petName.Id
