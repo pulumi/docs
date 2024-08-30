@@ -33,6 +33,61 @@
         </pulumi-date-countdown-circles>
     </section>
 
+    <section class="container mx-auto my-20 lg:mt-16 lg:mb-8 p-4d">
+        <div class="flex flex-row lg:justify-center">
+            <ul class="flex flex-col lg:flex-row list-none justify-center w-11/12 lg:border-b-2 lg:border-gray-200 lg:w-7/12 pb-5">
+                <li class="px-5 py-2 border-b-2 lg:border-b-0 lg:border-r-2 border-gray-600"><a href="https://conference.pulumi.com/schedule/?utm_source=PulumiUp&utm_medium=web&utm_campaign=FY2025Q1_Event_PulumiUP" target="_blank" class="text-gray-700">View Schedule</a></li>
+                <li class="px-5 py-2 border-b-2 lg:border-b-0 lg:border-r-2 border-gray-600"><a href="https://conference.pulumi.com/stage/platform-engineering-devops-stage/?utm_source=PulumiUp&utm_medium=web&utm_campaign=FY2025Q1_Event_PulumiUP" target="_blank" class="text-gray-700">Platform Engineering / DevOps</a></li>
+                <li class="px-5 py-2 border-b-2 lg:border-b-0 lg:border-r-2 border-gray-600"><a href="https://conference.pulumi.com/stage/ai-ml-stage/?utm_source=PulumiUp&utm_medium=web&utm_campaign=FY2025Q1_Event_PulumiUP" target="_blank" class="text-gray-700">AI / ML</a></li>
+                <li class="px-5 py-2 border-b-2 lg:border-b-0 lg:border-r-2 border-gray-600"><a href="https://conference.pulumi.com/stage/cloud-iac-stage/?utm_source=PulumiUp&utm_medium=web&utm_campaign=FY2025Q1_Event_PulumiUP" target="_blank" class="text-gray-700">Cloud and IaC</a></li>
+                <li class="px-5 py-2 border-b-2 border-gray-600 lg:border-b-0"><a href="https://conference.pulumi.com/stage/main-stage-3/?utm_source=PulumiUp&utm_medium=web&utm_campaign=FY2025Q1_Event_PulumiUP" target="_blank" class="text-gray-700">Cloud Culture</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="container mx-auto my-20 lg:mt-16 lg:mb-8 p-4">
+        <div class="lg:flex">
+            <div class="lg:w-1/2 lg:order-last mb-8 lg:mb-0 relative h-full">
+                <div class="rounded-xl shadow-2xl relative h-0 overflow-hidden" style="padding-bottom: 50.25%;">
+                    <iframe
+                        src="https://www.youtube.com/embed/Q8tw6YTD3ac?si=gRPPNwCsF0EBlIBU"
+                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;"
+                        allowfullscreen=""
+                        title="Pulumi in 3 minutes"
+                    ></iframe>
+                </div>
+            </div>
+            <div class="lg:w-1/2 lg:pr-16">
+                <h3>Discover. Learn. Innovate.</h3>
+                <p>
+                    Join us for a day filled with tech talks, panel discussions, demos, new product releases, and more.
+                    Learn trends, best practices and lessons learned in:
+                    <ul>
+                        <li>
+                            Platform Engineering & DevOps
+                        </li>
+                        <li>
+                            Cloud and IaC
+                        </li>
+                        <li>
+                            AI / ML
+                        </li>
+                        <li>
+                            Cloud Culture
+                        </li>
+                    </ul>
+                    <p>
+                        Hear insights from industry leaders in panel discussions about trends that impact the future of
+                        cloud and IaC, AI, platform engineering, and security.
+                    </p>
+                </p>
+                <div class="my-8">
+                    <a class="btn-primary" href="#register">Register Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     {{ partial "pulumi-up/speakers.html" (dict "speakers" .Params.speakers "include_cta" "true" ) }}
 
     <section id="personas" class="my-8">
@@ -55,46 +110,16 @@
         </div>
     </section>
 
-    {{ partial "event-schedule.html" (dict "schedule" .Params.schedule "bg_color" "gray-100" ) }}
-
-    <section id="why-attend" class="my-8">
-        <div class="container mx-auto">
-            <h2 class="pl-8">Why Attend</h2>
-            <div class="px-4 py-8 text-center flex flex-col lg:flex-row">
-                <div class="w-full lg:w-1/2 p-4 text-left">
-                    {{ .Params.why_attend.description | markdownify }}
-                    <div class="my-12 flex justify-center lg:justify-start">
-                        <a class="btn-primary" href="#register">Register Now</a>
-                    </div>
-                </div>
-                <div class="w-full lg:w-1/2 px-8">
-                    {{ range .Params.why_attend.items }}
-                        <div class="flex flex-col lg:flex-row px-4">
-                            <img src="{{ .icon }}" class="hidden lg:block" />
-                            <img src="{{ .icon }}" class="block lg:hidden w-14" />
-                            <div class="flex-col lg:px-8 text-left">
-                                <p class="text-xl font-bold text-left">{{ .title }}</p>
-                                <p>{{ .description }}</p>
-                            </div>
-                        </div>
-                    {{ end }}
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="ai-panel" class="my-12">
+    {{ range .Params.panels }}
+    <section id="panel" class="py-8 mb-12">
         <div class="container mx-auto text-center">
-            <h2 class="text-center">Watch PulumiUP 2023 On-Demand</h2>
-            <p class="text-center mb-8">
-                Get ready for the future of cloud development! Listen to industry experts in our unfiltered panel discussion on how AI is transforming the cloud native landscape.
-                Stay ahead of the curve by hearing and learning from the best in the industry.
-            </p>
+            <h2>{{ .title }}</h2>
+            <h3>{{ .subtitle }}</h3>
             <div class="container justify-center flex flex-col lg:flex-row">
-                {{ range .Params.panelists }}
-                    <div class="mx-2 flex flex-row lg:flex-col my-2 shadow-sm">
+                {{ range .panelists }}
+                    <div class="mx-2 flex flex-row lg:flex-col my-2">
                         <img src="{{ .image }}" class="rounded-l-md lg:rounded-b-none lg:rounded-t-md" style="height: 220px; width: 220px;" />
-                        <div class="bg-gray-100 w-full px-4 py-2 rounded-r-md lg:rounded-t-none lg:rounded-b-md text-left">
+                        <div class="bg-gray-200	 w-full px-4 py-2 rounded-r-md lg:rounded-t-none lg:rounded-b-md text-left">
                             <h6>{{ .name }}</h6>
                             <p class="text-sm text-black my-2 flex-wrap">{{ .position }}</p>
                             <p class="text-sm text-black my-2">{{ .company }}</p>
@@ -110,7 +135,61 @@
                 {{ end }}
             </div>
             <h6 class="py-4">Be a part of shaping the future of cloud infrastructure!</h6>
-            <a class="btn-primary" href="https://www.youtube.com/playlist?list=PLyy8Vx2ZoWlqkEzXbjUvE_CoEmBkT9Xoe" target="_blank">Watch On-Demand</a>
+            <div class="my-8 flex flex-col flex-wrap sm:flex-row justify-center">
+                <a class="m-4 sm:m-2 btn-primary" href="#register">Register Now</a>
+                <a class="m-4 sm:m-2 btn-secondary" target="_blank" href={{ .schedule_link }}>
+                    Add to your Schedule
+                </a>
+            </div>
+        </div>
+    </section>
+    {{ end }}
+
+    <section id="workshops" class="py-8 mb-12">
+        <div class="container mx-auto">
+            <h3 class="ml-4">Workshops</h3>
+            <ul class="event-list flex flex-wrap list-none p-0 mb-8 sm:p-2 resource-list">
+            {{ range .Params.workshops }}
+            <li class="flex event-card w-full m-0 p-2 lg:w-1/2">
+                <article class="card bg-white h-80 md:h-72 flex flex-col mx-2 md:mx-0 border border-gray-200 hover:border-gray-500">
+                    <a href="" rel="" target="_blank" class="w-full h-full">
+                        <span class="block w-full h-full p-4 flex flex-col justify-between">
+                            <span>
+                                <span class="flex flex-row justify-between">
+                                    <span class="w-10/12 text-left">
+                                        <span class="font-medium text-gray-800">WORKSHOP</span>
+                                        <span class="text-gray-300">&#8226;</span>
+                                            <span class="font-normal text-gray-800">VIRTUAL</span>
+                                            <h6 class="mt-2 mb-0 text-left text-xl md:text-xl">
+                                                {{ .title }}
+                                            </h6>
+                                    </span>
+                                    <span class="flex flex-col justify-between border-2 border-gray-300 rounded w-16 overflow-visible h-16">
+                                        <div class="bg-white text-center text-2xl pt-0.5 text-gray-900 font-semibold">
+                                            {{ .datetime | time.Format "2" }}
+                                        </div>
+                                        <div class="bg-gray-300 text-center text-xs md:text-sm py-0.5 text-gray-900">
+                                            {{ upper ( .datetime | time.Format "Jan 06") }}
+                                        </div>
+                                    </span>
+                                </span>
+                                <span class="flex flex-col justify-start mt-3">
+                                    <p class="m-0 mb-4 pt-0 text-gray-700 text-left">
+                                        {{ .meta_desc }}
+                                    </p>
+                                </span>
+                            </span>
+                            <div class="pl-5 pb-8">
+                                <a class="btn-secondary w-4/12" href={{ .link }}>Register Now</a>
+                            </div>
+                                
+                        </span>
+                    </a>
+                </article>
+            </li>
+            {{ end }}
+            </ul>
+            
         </div>
     </section>
 
