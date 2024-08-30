@@ -16,9 +16,9 @@ tiers:
         iac_price: $0
         iac_unit:
         iac_note:
-        secrets_price: $0
-        secrets_unit:
-        secrets_note:
+        esc_price: $0
+        esc_unit:
+        esc_note:
         primary_cta: Create a free organization
         primary_cta_link: /docs/quickstart
         items: |
@@ -34,9 +34,9 @@ tiers:
               iac_price: $0.36
               iac_unit: per resource/month
               iac_note:
-              secrets_price: $0.5
-              secrets_unit: per secret/month
-              secrets_note:
+              esc_price: $0.5
+              esc_unit: per secret/month
+              esc_note:
               primary_cta: Start free trial
               primary_cta_link: https://app.pulumi.com/signup
               items: |
@@ -52,9 +52,9 @@ tiers:
               iac_price: $1.08
               iac_unit: per resource/month
               iac_note: (Volume discounts available)
-              secrets_price: $0.75
-              secrets_unit: per secret/month
-              secrets_note: (Volume discounts available)
+              esc_price: $0.75
+              esc_unit: per secret/month
+              esc_note: (Volume discounts available)
               primary_cta: Start free trial
               primary_cta_link: https://app.pulumi.com/signup
               secondary_cta: Contact Sales
@@ -72,9 +72,9 @@ tiers:
               iac_price: Custom
               iac_unit:
               iac_note:
-              secrets_price: Custom
-              secrets_unit:
-              secrets_note:
+              esc_price: Custom
+              esc_unit:
+              esc_note:
               primary_cta: Contact Sales
               primary_cta_link: /contact/?form=sales
               items: |
@@ -596,6 +596,55 @@ comparison_table:
                     - content: _blank
                     - content: Available
                     - content: Available
-                      
 
+faq:
+    pricing:
+        - question: How are resources billed?
+          answer: |
+            Resources are billed hourly as Pulumi Credits. 1 Pulumi Credit is the price for managing one resource for one hour. The Price per credit for Team and Enterprise is $0.0005 and $0.0015 respectively,
+
+            For billing purposes, partial resource hour used is billed as a full hour and we count any resource that's declared in a Pulumi program. This includes provider resources (e.g., an Amazon S3 bucket), component resources which are groupings of resources (e.g., an Amazon EKS cluster), and stacks which contain resources (e.g., dev, test, prod stacks).
+
+            You consume one Pulumi Credit to manage each resource for an hour. For example, one stack containing one S3 bucket and one EC2 instance is three resources that are counted in your bill.
+        - question: How are secrets billed?
+          answer: |
+            Secrets are billed hourly. The price per secret of $0.5 and $0.75 for Team and Enterprise is for 730 hours (~ 1 month). If you have your secrets stored for 4 days on Pulumi Cloud Team Edition, the price you pay would be 4 x 24 x 0.5 / 730 = $.0657
+
+            Secrets include both static secrets and dynamic secrets/credentials. When using the Pulumi ESC Document Editor, each definition of fn::secret:* and fn::open::* (except Pulumi-stacks provider) is counted as a secret. The number of secrets only from the latest environment revision is counted towards your billing.
+        - question: How are secrets API call metered?
+          answer: |
+            You pay $0 for the first free 10K API calls / month to the [ReadOpen API](/docs/pulumi-cloud/cloud-rest-api/#read-open-environment) endpoint. Once you hit 10,000 API calls, you are metered at $0.1 for 10K API calls. If you use 5K API calls you will billed $0.05. 
+
+            Usage of API usage include any calls from the [CLI](/docs/esc-cli/), [SDK](/docs/esc/sdk/), [Pulumi-service provider](/registry/packages/pulumiservice/api-docs/environment/), direct [REST API](/docs/pulumi-cloud/cloud-rest-api/) call that hits the ReadOpen API endpoint
+        - question: What can I do with 200 free resources per month? 
+          answer: |
+            You could manage 200 S3 buckets or 200 EC2 instances for a month using this amount. Note that free resources translate to 150K monthly Pulumi credits. 
+
+            As another example, you could manage something more complex like a production Amazon EKS cluster with associated IAM roles, VPC, subnets, gateway route tables, and a small microservice deployed into the cluster.
+        - question: How do I find out how many resources I have?
+          answer: |
+            There are several ways you can estimate the number of resources you have managed with Pulumi.
+
+            - If using Pulumi Cloud: Navigate to the dashboard and review the resource graph titled “Resource Count over Time.”
+
+            - If using Pulumi with a self-managed backend: Export your stack state and count the number of lines with a universal resource name (URN). You can pipe the state through a grep command for "urn" to estimate the number of resources.
+
+            If you haven't deployed anything with Pulumi: See the previous FAQ for a few examples of applications and their number of resources.
+        - queston: What are some examples of how many resources are needed for my use case?
+          answer: |
+            Serverless API with Amazon API Gateway and AWS Lambda
+            Estimated resources: 9
+            This scenario is a stack with an Amazon API Gateway, an AWS Lambda event handler, and associated IAM roles. 
+
+            Amazon EKS running in a VPC
+            Estimated resources: 20
+            This scenario is a stack with an Amazon VPC (including subnets, internet gateway, security groups, and route table), Amazon EKS cluster and node group, and associated IAM roles. 
+
+            Amazon ECS cluster and RDS backend running in a VPC
+            Estimated resources: 24
+            This scenario is a stack with an Amazon VPC (including subnets, security groups, and route table associations), Amazon ECS (including cluster and service, load balancer resources, and IAM resources), and Amazon RDS (including RDS instance and subnet group). Each group of resources (VPC, ECS, RDS) is represented by a component resource.
+        - question: Can I prepay for resources, secrets, and secrets API calls?
+          answer: Yes, you can! Please contact us to discuss the Enterprise and Business Critical Editions, which include bulk discounts for buying in advance.
+    
+    product:
 ---

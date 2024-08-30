@@ -16,6 +16,7 @@ import "./code-tabbed";
 import "./resources";
 import "./packages";
 import "./pricing-trial";
+import "./pricing";
 import "./developer-advocates";
 import "./toc";
 import "./docs-main";

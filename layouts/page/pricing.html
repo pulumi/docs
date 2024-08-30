@@ -4,9 +4,16 @@
 
 {{ define "main" }}
     <section class="container mx-auto text-center mt-8 mb-16">
-        <h2 class="mt-6 text-center">Plans for teams of all sizes</h2>
-        <p class="max-w-4xl mx-auto mt-6">
+        <h2 class="mt-6 mb-12 text-center">Plans for teams of all sizes</h2>
+        <div class="flex flex-row justify-center space-x-4 my-4">
+            <div id="iac-pricing-select" class="text-2xl cursor-pointer border-b-4 border-blue-600 rainbow-text">Infrastructure as Code</div>
+            <div id="esc-pricing-select" class="text-2xl cursor-pointer">Secrets Management</div>
+        </div>
+        <p class="max-w-4xl mx-auto mt-6 iac-price">
             The easiest way to adopt Pulumi's <strong>open source</strong> infrastructure as code and more at scale.
+        </p>
+        <p class="max-w-4xl mx-auto mt-6 esc-price hidden">
+            Best in class secrets management for developers built by developers.
         </p>
     </section>
 
@@ -32,10 +39,15 @@
                         <div class="lg:h-16 mb-4">
                             <p class="text-sm">{{ .subtitle }}</p>
                         </div>
-                        <div class="lg:h-20">
+                        <div class="iac-price lg:h-20">
                             <div class="text-center text-2xl font-semibold">{{ .iac_price }}</div>
                             <div class="text-center text-sm">{{ .iac_unit }}</div>
                             <div class="text-center text-xs">{{ .iac_note }}</div>
+                        </div>
+                        <div class="esc-price lg:h-20 hidden">
+                            <div class="text-center text-2xl font-semibold">{{ .esc_price }}</div>
+                            <div class="text-center text-sm">{{ .esc_unit }}</div>
+                            <div class="text-center text-xs">{{ .esc_note }}</div>
                         </div>
                         <div class="flex flex-col justify-center align-center items-center text-center my-4 lg:h-14">
                             <a href="{{ .primary_cta_link}}" class="text-white text-xs bg-violet-600 border-2 border-violet-600 rounded-full py-2 px-2 hover:bg-violet-500">{{ .primary_cta }}</a>
@@ -75,10 +87,15 @@
                                 <div class="lg:h-16 mb-4">
                                     <p class="text-sm">{{ $tier.subtitle }}</p>
                                 </div>
-                                <div class="lg:h-20">
+                                <div class="iac-price lg:h-20">
                                     <div class="text-center text-2xl font-semibold">{{ $tier.iac_price }}</div>
                                     <div class="text-center text-sm">{{ $tier.iac_unit }}</div>
                                     <div class="text-center text-xs">{{ $tier.iac_note }}</div>
+                                </div>
+                                <div class="esc-price lg:h-20 hidden">
+                                    <div class="text-center text-2xl font-semibold">{{ $tier.esc_price }}</div>
+                                    <div class="text-center text-sm">{{ $tier.esc_unit }}</div>
+                                    <div class="text-center text-xs">{{ $tier.esc_note }}</div>
                                 </div>
                                 <div class="flex justify-center items-center text-center my-4 lg:h-14">
                                     <a href="{{ $tier.primary_cta_link}}" class="text-white text-xs bg-violet-600 border-2 border-violet-600 rounded-full py-2 px-2 hover:bg-violet-500 mr-1">{{ $tier.primary_cta }}</a>
