@@ -68,6 +68,12 @@ customer_logos:
       link: /case-studies/
     - name: washington-trust
       link: /case-studies/
+    - name: kyruus
+      link: /case-studies/
+    - name: modular-ai
+      link: /case-studies/
+    - name: korber
+      link: /case-studies/    
     - name: lemonade
       link: /case-studies/
     - name: pinecone

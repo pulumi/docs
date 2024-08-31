@@ -29,6 +29,9 @@ customer_logos:
     - name: stokespace
     - name: univision
     - name: washington-trust
+    - name: kyruus
+    - name: modular-ai
+    - name: korber
     - name: lemonade
     - name: pinecone
     - name: ware2go
