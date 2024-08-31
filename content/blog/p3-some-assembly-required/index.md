@@ -212,7 +212,7 @@ class TaggedBucket(pulumi.ComponentResource):
     def __init__(self, name, opts = None):
         super().__init__('mycorp:index:TaggedBucket', name, None, opts)
 
-        # Create a bucket and expose a website index document.
+        # Create a bucket and add a custom tag to it.
         bucket = s3.Bucket(
             f'{name}-bucket',
             tags={
@@ -288,13 +288,13 @@ environment:
   - aws-staging
 ```
 
-The `Pulumi.yaml` sets up the template and will populate the name and description from the settings provided during the template dialogue. The custom `TaggedBucket` component will create an S3 bucket, which will be tagged with `user:Stack` set to the name of the stack. Default stack configurations are provided for the `staging` and `production` environments.
+The `Pulumi.yaml` sets up the template and will populate the name and description from the settings provided during the template dialogue. The custom `TaggedBucket` component will create an S3 bucket, which will be tagged with `user:Stack` set to the name of the stack. Default stack configurations are provided for the `staging` and `production` environments which map to our two ESC environments, `aws-production` and `aws-staging`.
 
 ## How it all works together
 
 With all of that in place, from the developer’s perspective, all they need to do is create a new project from the template, answering three questions: the stack name, the name of the project, and an optional description.
 
-If the developer names the stack `staging` it will automatically apply the `aws-staging` ESC environment, which will include the AWS credentials and set the region to `us-west-2`. However, if the developer names the stack `production` it will get the `aws-production` ESc environment setting it to use the `us-east-1` region. The name of the stack will be stored in a tag on the resource.
+If the developer names the stack `staging` it will automatically apply the `aws-staging` ESC environment, which will include the AWS credentials and set the region to `us-west-2`. However, if the developer names the stack `production` it will get the `aws-production` ESC environment setting it to use the `us-east-1` region. The name of the stack will be stored in a tag on the resource.
 
 Pulumi Crossguard will apply the `bucket-tags` policy check to see if the resource has the required `user:Stack` tag set and will allow the deployment to proceed only if it has that tag. If a developer created a standard S3 Bucket instead of using our internal `TaggedBucket` component, and failed to add the required tag, they will get an error message from our custom policy when they try to deploy.
 
