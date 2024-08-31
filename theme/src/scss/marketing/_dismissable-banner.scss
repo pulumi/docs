@@ -10,7 +10,7 @@ a.dismissable-banner {
         align-items: center;
         padding: 20px 85px 22px 16px;
         position: fixed;
-        background: linear-gradient(90deg, #F6E8C4 0%, #F5D6D7 18.23%, #EFD1D9 38.02%, #DFC8DC 53.65%, #DACBE4 74.48%, #D6D8F5 100%);
+        background: linear-gradient(90deg, #f6e8c4 0%, #f5d6d7 18.23%, #efd1d9 38.02%, #dfc8dc 53.65%, #dacbe4 74.48%, #d6d8f5 100%);
         left: 0;
         bottom: 0;
         width: 100%;
@@ -21,7 +21,7 @@ a.dismissable-banner {
             justify-content: space-around;
             flex: 1;
         }
-    
+
         div.banner-content {
             display: flex;
             flex-wrap: wrap;
@@ -31,7 +31,7 @@ a.dismissable-banner {
             span.fake-link {
                 text-decoration: underline;
             }
-    
+
             p {
                 font-family: Gilroy;
                 font-size: 20px;
@@ -39,7 +39,7 @@ a.dismissable-banner {
                 color: #131314;
                 margin: 0;
             }
-    
+
             div.icon {
                 display: block;
                 text-indent: -9999px;
@@ -47,7 +47,7 @@ a.dismissable-banner {
             div.icon-88-17 {
                 width: 88px;
                 height: 17px;
-                background-size: 88px 17px;   
+                background-size: 88px 17px;
                 position: relative;
             }
             div.zelda-heart-meter {

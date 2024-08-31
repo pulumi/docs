@@ -1,5 +1,4 @@
-import {LocalStorageService} from "./state";
-
+import { LocalStorageService } from "./state";
 
 const navigationState = new LocalStorageService("navigation-toggle-state");
 loadToggleStates();
@@ -22,9 +21,9 @@ function bindToggle(el) {
 function loadToggleStates() {
     // checks whether the menu item refers to the current page the
     // user is on.
-    const isCurrentPage = (el) => {
+    const isCurrentPage = el => {
         const browserUrl = window.location.href;
-        const anchorRef = $(el).find('a').attr('href');
+        const anchorRef = $(el).find("a").attr("href");
         return browserUrl.includes(anchorRef);
     };
 
@@ -40,9 +39,9 @@ function loadToggleStates() {
             const folderOpenIcon = $(el).find(".folder-open");
             const folderClosedIcon = $(el).find(".folder");
             if (folderOpenIcon.length > 0) {
-                folderOpenIcon.addClass("folder").removeClass("folder-open")
+                folderOpenIcon.addClass("folder").removeClass("folder-open");
             } else if (folderClosedIcon.length > 0) {
-                folderClosedIcon.addClass("folder-open").removeClass("folder")
+                folderClosedIcon.addClass("folder-open").removeClass("folder");
             }
         });
     });
@@ -50,15 +49,18 @@ function loadToggleStates() {
     $(".toggleVisible, .toggleVisible-topLevel").each(function (i, el) {
         // Scroll to active item in list.
         if (isCurrentPage(el)) {
-            $("#left-nav").animate({
-                scrollTop: $(el).offset().top - 145
-            }, 0);
+            $("#left-nav").animate(
+                {
+                    scrollTop: $(el).offset().top - 145,
+                },
+                0,
+            );
         }
     });
 }
 
 function updateToggleState(el, toggleState) {
-    navigationState.updateKey(el.id, toggleState)
+    navigationState.updateKey(el.id, toggleState);
 }
 
 function bindTopLevelToggle(el) {
@@ -163,7 +165,6 @@ function generateOnThisPage() {
 
                 $(heroTitle).removeClass("hidden");
                 $(heroTitle).addClass("flex");
-
             } else {
                 $(pinnedSearchContainerEl).removeClass("hidden");
                 $(pinnedSearchContainerEl).addClass("flex");
@@ -173,7 +174,6 @@ function generateOnThisPage() {
 
                 $(heroTitle).addClass("hidden");
                 $(heroTitle).removeClass("flex");
-
             }
         },
         { threshold: [1] },
@@ -231,13 +231,12 @@ function generateOnThisPage() {
             $(this).addClass(activeClassName);
 
             const activeLink = $(this).data("filter-name");
-            const allLinks = ["who-we-are", "what-we-believe", "community", "history", "awards", "newsroom", "join-us"]
+            const allLinks = ["who-we-are", "what-we-believe", "community", "history", "awards", "newsroom", "join-us"];
             const inactiveLinks = allLinks.filter(link => link !== activeLink);
 
             inactiveLinks.forEach(link => {
                 $(`#about-nav li[data-filter-name="${link}"]`).removeClass(activeClassName);
-            })
-
+            });
         });
     });
 
@@ -245,7 +244,23 @@ function generateOnThisPage() {
     $("dl.resources-properties dt.property-required.property-replacement")
         .removeAttr("title")
         .find(".property-indicator")
-        .replaceWith(' <div class="multi-property-container"> ' + "<pulumi-tooltip>" + '    <span class="property-indicator"></span>' + '    <span slot="content">This property is required.</span>' + "</pulumi-tooltip>" + "</pulumi-tooltip>" + ' <div class="replacement-container"> ' + "<pulumi-tooltip>" + '    <span class="property-indicator-replacement">' + ' <img src="/icons/replacement-property.svg"/>' + '</span>' + '    <span slot="content">Changes to this property will trigger replacement.</span>' + "</pulumi-tooltip>" + "</div>" + "</div>");
+        .replaceWith(
+            ' <div class="multi-property-container"> ' +
+                "<pulumi-tooltip>" +
+                '    <span class="property-indicator"></span>' +
+                '    <span slot="content">This property is required.</span>' +
+                "</pulumi-tooltip>" +
+                "</pulumi-tooltip>" +
+                ' <div class="replacement-container"> ' +
+                "<pulumi-tooltip>" +
+                '    <span class="property-indicator-replacement">' +
+                ' <img src="/icons/replacement-property.svg"/>' +
+                "</span>" +
+                '    <span slot="content">Changes to this property will trigger replacement.</span>' +
+                "</pulumi-tooltip>" +
+                "</div>" +
+                "</div>",
+        );
     $("dl.resources-properties dt.property-required:not(.property-replacement)")
         .removeAttr("title")
         .find(".property-indicator")
@@ -254,5 +269,12 @@ function generateOnThisPage() {
     $("dl.resources-properties dt.property-replacement:not(.property-required)")
         .removeAttr("title")
         .find(".property-indicator")
-        .replaceWith("<pulumi-tooltip>" + '    <span class="property-indicator-replacement">' + ' <img src="/icons/replacement-property.svg"/>' + '</span>' + '    <span slot="content">Changes to this property will trigger replacement.</span>' + "</pulumi-tooltip>");
+        .replaceWith(
+            "<pulumi-tooltip>" +
+                '    <span class="property-indicator-replacement">' +
+                ' <img src="/icons/replacement-property.svg"/>' +
+                "</span>" +
+                '    <span slot="content">Changes to this property will trigger replacement.</span>' +
+                "</pulumi-tooltip>",
+        );
 })(jQuery);

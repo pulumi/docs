@@ -11,7 +11,7 @@ export class LocalStorageService {
         // load state from local storage.
         this.state = JSON.parse(window.localStorage.getItem(name) || "{}");
     }
-    
+
     getState() {
         return this.state;
     }
@@ -20,9 +20,9 @@ export class LocalStorageService {
         return this.state[key];
     }
 
-    updateKey(key: string, val:any) {
-        this.state = Object.assign(this.state, { [key]: val});
+    updateKey(key: string, val: any) {
+        this.state = Object.assign(this.state, { [key]: val });
         // persist state to local storage.
         window.localStorage.setItem(this.serviceName, JSON.stringify(this.state));
     }
-};
+}

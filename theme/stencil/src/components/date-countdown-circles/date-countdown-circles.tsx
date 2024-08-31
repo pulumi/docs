@@ -67,7 +67,7 @@ export class DateCountdownCircles {
             daysPercent,
             hoursPercent,
             minutesPercent,
-            secondsPercent
+            secondsPercent,
         };
     }
 
@@ -78,14 +78,20 @@ export class DateCountdownCircles {
     private renderNumberCircle(value: number, percent: number) {
         return (
             <div class="timer-wrapper">
-                <div class="circle" style={{"--p": `${percent}`}}>{ value }</div>
+                <div class="circle" style={{ "--p": `${percent}` }}>
+                    {value}
+                </div>
             </div>
-            
         );
     }
 
     private renderCountdownPart(value: number, label: string, percent) {
-        return <div class="mx-4 text-center">{this.renderNumberCircle(value, percent)}{this.renderValueLabel(label)}</div>
+        return (
+            <div class="mx-4 text-center">
+                {this.renderNumberCircle(value, percent)}
+                {this.renderValueLabel(label)}
+            </div>
+        );
     }
 
     private renderCountdown() {

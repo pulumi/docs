@@ -37,14 +37,14 @@ nav.actually-docs {
                 margin-left: 0;
             }
 
-            @media (min-width: 640px){
+            @media (min-width: 640px) {
                 gap: 36px;
             }
         }
 
         div.logo-get-started,
         div.logo-parent {
-            @media (min-width: 640px){
+            @media (min-width: 640px) {
                 width: auto;
             }
         }
@@ -62,7 +62,7 @@ nav.actually-docs {
 
                 &:hover {
                     color: #fff;
-                    background: linear-gradient(90deg,#be5188,#805ac3) border-box;
+                    background: linear-gradient(90deg, #be5188, #805ac3) border-box;
                 }
             }
         }
@@ -89,8 +89,7 @@ nav.actually-docs {
         div.nav-items ul {
             display: flex;
 
-            li i
-            li div.icon {
+            li i li div.icon {
                 margin-right: 4px;
             }
 
@@ -105,30 +104,30 @@ nav.actually-docs {
             li.docs,
             li.registry,
             li.ai,
-            div.get-started   {
+            div.get-started {
                 display: none;
             }
-    
+
             li.github-widget,
             li.slack {
-                @media (min-width: 900px){
+                @media (min-width: 900px) {
                     display: flex;
                 }
             }
-    
+
             li.docs,
             li.registry {
                 @media (min-width: 768px) {
-                    display: flex
+                    display: flex;
                 }
             }
-    
+
             li.ai {
                 @media (min-width: 475px) {
-                    display: flex
+                    display: flex;
                 }
             }
-    
+
             div.get-started {
                 @media (min-width: 450px) {
                     display: flex;

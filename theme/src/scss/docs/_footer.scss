@@ -1,7 +1,16 @@
 footer.docs-footer {
     padding: 24px;
     border-top: 2px solid;
-    border-image: linear-gradient(90deg, rgba(247, 191, 42, 0.3) 0%, rgba(242, 110, 126, 0.3) 18.23%, rgba(190, 81, 136, 0.3) 38.02%, rgba(138, 51, 145, 0.3) 53.65%, rgba(128, 90, 195, 0.3) 74.48%, rgba(118, 130, 244, 0.3)) 1;
+    border-image: linear-gradient(
+            90deg,
+            rgba(247, 191, 42, 0.3) 0%,
+            rgba(242, 110, 126, 0.3) 18.23%,
+            rgba(190, 81, 136, 0.3) 38.02%,
+            rgba(138, 51, 145, 0.3) 53.65%,
+            rgba(128, 90, 195, 0.3) 74.48%,
+            rgba(118, 130, 244, 0.3)
+        )
+        1;
     justify-content: space-between;
     gap: 40px;
 
@@ -18,15 +27,15 @@ footer.docs-footer {
         }
 
         p.open-source {
-            font-family: 'Inter';
+            font-family: "Inter";
             font-weight: 600;
-            font-size: 16px;       
+            font-size: 16px;
             color: #5f6065;
             margin-top: 0;
         }
 
         p.copyright {
-            font-family: 'Inter';
+            font-family: "Inter";
             font-weight: 400;
             font-size: 14px;
             color: #808080;
@@ -41,11 +50,11 @@ footer.docs-footer {
         text-align: right;
 
         li {
-            font-family: 'Inter';
+            font-family: "Inter";
             font-weight: 400;
             font-size: 14px;
             color: #5f6065;
-            
+
             &:hover {
                 text-decoration: underline;
                 text-underline-offset: 6px;

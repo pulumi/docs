@@ -9,12 +9,9 @@ export interface Tag {
 // Converts a list of tags into an Algolia filter query.
 // https://www.algolia.com/doc/guides/managing-results/refine-results/filtering/in-depth/filters-and-facetfilters/
 export function mapTagsToFilters(tagsByFacet, operator = "AND") {
-    const result = Object
-        .keys(tagsByFacet)
+    const result = Object.keys(tagsByFacet)
         .map(facet => {
-            return `(${tagsByFacet[facet]
-                .map(({ label }) => `${facet}:"${label}"`)
-                .join(' OR ')})`;
+            return `(${tagsByFacet[facet].map(({ label }) => `${facet}:"${label}"`).join(" OR ")})`;
         })
         .join(` ${operator} `);
 
@@ -76,7 +73,7 @@ function debouncePromise(fn, time): any {
             clearTimeout(timerId);
         }
 
-        return new Promise((resolve) => {
+        return new Promise(resolve => {
             timerId = setTimeout(() => resolve(fn(...args)), time);
         });
     };
@@ -88,10 +85,8 @@ export const debounce = debouncePromise(items => Promise.resolve(items), 220);
 
 // Listens for search-relevant events.
 export function listenForEvents() {
-
     // Tiny object make it easier to share data between event handlers and the autocomplete instance.
     const sharedData = {
-
         // Whether an up or down arrow key was just pressed. The control uses this to decide whether
         // to scroll the active item into view.
         upDownPressed: false,
@@ -99,7 +94,7 @@ export function listenForEvents() {
 
     // Handle command/control-k events by triggering the search button directly.
     window.addEventListener("keydown", (event: KeyboardEvent) => {
-        if ((event.key.toLowerCase() === "k" && (event.metaKey || event.ctrlKey))) {
+        if (event.key.toLowerCase() === "k" && (event.metaKey || event.ctrlKey)) {
             event.preventDefault();
 
             const searchButton = document.querySelector(`.aa-DetachedSearchButton`) as HTMLButtonElement;
@@ -113,17 +108,21 @@ export function listenForEvents() {
     // capture phase to be sure we get notified *before* the control's state changes; if we didn't,
     // we wouldn't be notified of the keypress until afterward, at which point it'd be too late to
     // know whether the state change had resulted from a keypress (and to scroll accordingly).
-    window.addEventListener("keydown", (event: KeyboardEvent) => {
-        if ((event.key === "ArrowUp" || event.key === "ArrowDown") && event.target === document.querySelector(`.aa-DetachedFormContainer .aa-Input`)) {
-            sharedData.upDownPressed = true;
-        }
-    }, { capture: true });
+    window.addEventListener(
+        "keydown",
+        (event: KeyboardEvent) => {
+            if ((event.key === "ArrowUp" || event.key === "ArrowDown") && event.target === document.querySelector(`.aa-DetachedFormContainer .aa-Input`)) {
+                sharedData.upDownPressed = true;
+            }
+        },
+        { capture: true },
+    );
 
     // When the clear button is clicked, don't close the modal; instead, clear the value and leave
     // the modal open. To do this, we have to listen for clicks on the `body` element, because the
     // modal doesn't exist when the page is rendered -- and could be created and destroyed many
     // times within a given pageview.
-    document.body.addEventListener("click", (event) => {
+    document.body.addEventListener("click", event => {
         const clickedElement = event.target as HTMLElement;
 
         // If the thing clicked was a clear button or one of its descendants, stop the event and
@@ -137,7 +136,7 @@ export function listenForEvents() {
                 input.value = "";
                 input.focus();
                 input.dispatchEvent(new Event("input"));
-            };
+            }
         }
     });
 

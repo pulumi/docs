@@ -1,6 +1,6 @@
 body.section-workshop-signup {
-
-    .top-nav-bar, .desktop-menu {
+    .top-nav-bar,
+    .desktop-menu {
         display: none;
     }
 
@@ -20,6 +20,6 @@ body.section-workshop-signup {
         @screen xl {
             @apply text-lg;
         }
-        content: "Try Pulumi"
+        content: "Try Pulumi";
     }
 }

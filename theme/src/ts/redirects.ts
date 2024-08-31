@@ -1,7 +1,6 @@
 const path = document.location.pathname;
 
 if (path === "/docs/intro/concepts/programming-model/" || path === "/docs/reference/programming-model/") {
-
     // The following list maps the headings that previously appeared on these pages to their new locations.
     // We use this list to determine whether we can redirect visitors from the old content to the new.
     let redirects = {

@@ -8,7 +8,7 @@
             @apply w-full h-full;
         }
 
-         path {
+        path {
             fill: black;
         }
     }
@@ -20,7 +20,7 @@
     }
 
     &-hoverable:not(:hover) {
-         filter: grayscale(1);
+        filter: grayscale(1);
     }
 }
 

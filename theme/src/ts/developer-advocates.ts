@@ -16,5 +16,4 @@ $(function () {
 
         $("#past-talks-select").addClass("is-selected");
     });
-
 });

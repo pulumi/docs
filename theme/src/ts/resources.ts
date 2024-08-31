@@ -1,13 +1,13 @@
-const filterResourceItems = (filters) => {
+const filterResourceItems = filters => {
     const events = $(".event-list").find(".event-card");
     const monthLabels = $(".event-list").find(".month-label");
-    $(monthLabels).css("display", "none")
+    $(monthLabels).css("display", "none");
     const noResultsMessage = $(".pulumi-event-list-container").find(".no-results");
     $(noResultsMessage).removeClass("hidden");
 
     if (filters.length > 0) {
         $(events).each((i, event) => {
-            const tags = ($(event).attr("data-filters")).split(" ");
+            const tags = $(event).attr("data-filters").split(" ");
             const dateLabel = $(event).attr("data-month-label");
 
             if (!tags.includes(location.hash.slice(1))) {
@@ -30,7 +30,7 @@ const filterResourceItems = (filters) => {
         });
     } else {
         $(events).each((i, event) => {
-            const tags = ($(event).attr("data-filters")).split(" ");
+            const tags = $(event).attr("data-filters").split(" ");
             const dateLabel = $(event).attr("data-month-label");
 
             if (!tags.includes(location.hash.slice(1))) {
@@ -43,7 +43,7 @@ const filterResourceItems = (filters) => {
             }
         });
     }
-}
+};
 
 $(".pulumi-event-list-container").on("filterSelect", event => {
     const detail: unknown = event.detail;
@@ -57,16 +57,16 @@ $(".pulumi-event-list-container").on("filterSelect", event => {
     filterResourceItems(filtersText);
 });
 
-$(window).on('hashchange', function() {
-    const options = $('pulumi-filter-select-option').toArray() as Array<any>;
+$(window).on("hashchange", function () {
+    const options = $("pulumi-filter-select-option").toArray() as Array<any>;
     let selectedFilters = [];
 
-    options.forEach((option) => {
+    options.forEach(option => {
         const shadow = option.shadowRoot;
-        if($(shadow).find('.selected').length > 0) {
+        if ($(shadow).find(".selected").length > 0) {
             selectedFilters.push(option.value);
         }
-    })
+    });
     filterResourceItems(selectedFilters);
 });
 

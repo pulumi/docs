@@ -3,9 +3,9 @@ import { store, Unsubscribe } from "@stencil/redux";
 import { AppState } from "../../store/state";
 
 @Component({
-  tag: "pulumi-user-toggle",
-  styleUrl: "user-toggle.scss",
-  shadow: false,
+    tag: "pulumi-user-toggle",
+    styleUrl: "user-toggle.scss",
+    shadow: false,
 })
 export class PulumiUserToggle {
     private storeUnsubscribe: Unsubscribe;
@@ -16,7 +16,9 @@ export class PulumiUserToggle {
     @Listen("rendered", { target: "document" })
     handleRendered(_event: CustomEvent) {
         this.storeUnsubscribe = store.mapStateToProps(this, (state: AppState) => {
-            const { user: { id } } = state;
+            const {
+                user: { id },
+            } = state;
             return {
                 userId: id,
             };
@@ -38,9 +40,11 @@ export class PulumiUserToggle {
     // }
 
     render() {
-        return <span class="signed-out">
-            <slot name="signed-in"></slot>
-            <slot name="signed-out"></slot>
-        </span>;
+        return (
+            <span class="signed-out">
+                <slot name="signed-in"></slot>
+                <slot name="signed-out"></slot>
+            </span>
+        );
     }
 }

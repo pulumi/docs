@@ -30,7 +30,7 @@ export class PulumiTertiaryNav {
         this.parsedItems = JSON.parse(this.items);
 
         // Collection of anchor tags
-        this.tabContent = this.parsedItems.map((item) => item.anchor);
+        this.tabContent = this.parsedItems.map(item => item.anchor);
 
         // The first tab is selected on initial load.
         this.selectTab(this.parsedItems[0]);
@@ -41,9 +41,9 @@ export class PulumiTertiaryNav {
 
         document.getElementById(`${item.anchor}`).classList.remove("hidden");
 
-        const unselectedTabs = this.tabContent.filter((value) => value !== item.anchor);
+        const unselectedTabs = this.tabContent.filter(value => value !== item.anchor);
 
-        unselectedTabs.forEach((tab) => {
+        unselectedTabs.forEach(tab => {
             document.getElementById(`${tab}`).classList.add("hidden");
         });
     }

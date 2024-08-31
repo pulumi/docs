@@ -1,17 +1,21 @@
 let docsMainNavToggleWrapper = $(".docs-main-nav-toggle-wrapper");
 let docsNavToggleIcon = $(".docs-nav-toggle-icon");
 
-$(window).on("resize", function () {
-    setDocsMainNavPosition();
-    setTableOfContentsVisibility();
-    setMainNavHeight();
-}).trigger('resize');
+$(window)
+    .on("resize", function () {
+        setDocsMainNavPosition();
+        setTableOfContentsVisibility();
+        setMainNavHeight();
+    })
+    .trigger("resize");
 
-$(window).on("scroll", function () {
-    setDocsMainNavPosition();
-}).trigger('resize');
+$(window)
+    .on("scroll", function () {
+        setDocsMainNavPosition();
+    })
+    .trigger("resize");
 
-$(window).on("load", function() {
+$(window).on("load", function () {
     setDocsMainNavPosition();
     setTableOfContentsVisibility();
     setMainNavHeight();
@@ -25,7 +29,7 @@ $(window).on("load", function() {
         docsMainNavToggleWrapper.toggleClass("docs-nav-hide");
         docsNavToggleIcon.toggleClass("close-docs-main-nav");
         docsNavToggleIcon.toggleClass("open-docs-main-nav");
-        setTableOfContentsVisibility()
+        setTableOfContentsVisibility();
     });
 
     let packageCardCheckbox = $("#accordion-checkbox-package-card");
@@ -34,8 +38,7 @@ $(window).on("load", function() {
     packageCardCheckbox.on("change", function () {
         if (packageCardCheckbox.is(":checked")) {
             packageCardBackground.css("background", "#fff");
-        }
-        else {
+        } else {
             packageCardBackground.css("background", "#f9f9f9");
         }
     });
@@ -49,8 +52,8 @@ $(window).on("load", function() {
         }
     }
 
-    let collapseContentButton = $("#collapse-content-button")
-    let expandContentButton = $("#expand-content-button")
+    let collapseContentButton = $("#collapse-content-button");
+    let expandContentButton = $("#expand-content-button");
 
     function expandContentWidth() {
         $(".docs-main-content").addClass("docs-content-width-expanded");
@@ -78,10 +81,10 @@ $(window).on("load", function() {
 function setDocsMainNavPosition() {
     if ($(this).width() <= 1280) {
         if (docsMainNavToggleWrapper.hasClass("docs-nav-show")) {
-            docsNavToggleIcon.removeClass("open-docs-main-nav")
+            docsNavToggleIcon.removeClass("open-docs-main-nav");
             docsNavToggleIcon.addClass("close-docs-main-nav");
         } else if (docsMainNavToggleWrapper.hasClass("docs-nav-hide")) {
-            docsNavToggleIcon.removeClass("close-docs-main-nav")
+            docsNavToggleIcon.removeClass("close-docs-main-nav");
             docsNavToggleIcon.addClass("open-docs-main-nav");
         }
     }
@@ -125,5 +128,5 @@ function setTableOfContentsVisibility() {
 }
 
 function setMainNavHeight() {
-    $(".docs-main-nav").css("height",  $(".docs-footer").height() + window.innerHeight);
+    $(".docs-main-nav").css("height", $(".docs-footer").height() + window.innerHeight);
 }

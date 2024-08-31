@@ -9,20 +9,19 @@
 const { global } = require("./tokens.json");
 const defaultTheme = require("tailwindcss/defaultTheme");
 
-const hexToRGB = (hexString) => {
+const hexToRGB = hexString => {
     let color = hexString.replace(/#/g, "");
     var r = parseInt(color.substr(0, 2), 16);
     var g = parseInt(color.substr(2, 2), 16);
     var b = parseInt(color.substr(4, 2), 16);
-    return [ r, g, b];
+    return [r, g, b];
 };
 
-const colorFamilyToRGB = (tailwindColorObject) => {
-    return Object.keys(tailwindColorObject)
-        .reduce((o, key) => {
-            o[key] = hexToRGB(tailwindColorObject[key]).join(",");
-            return o;
-        }, {});
+const colorFamilyToRGB = tailwindColorObject => {
+    return Object.keys(tailwindColorObject).reduce((o, key) => {
+        o[key] = hexToRGB(tailwindColorObject[key]).join(",");
+        return o;
+    }, {});
 };
 
 const brand = {

@@ -22,7 +22,12 @@
         width: 100%;
         height: 100%;
 
-        h2, h3, h4, h5, h6, p {
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p {
             color: black;
         }
 
@@ -125,9 +130,9 @@
 
                 li {
                     width: 50%;
-                    padding: .75rem;
+                    padding: 0.75rem;
 
-                    @media(max-width: 1024px) {
+                    @media (max-width: 1024px) {
                         width: 100%;
                     }
                 }
@@ -151,10 +156,10 @@
 
                     p {
                         font-size: 1rem;
-                        margin-top: .5rem;
+                        margin-top: 0.5rem;
                     }
 
-                    @media(max-width: 1024px) {
+                    @media (max-width: 1024px) {
                         h6 {
                             padding-left: 1rem;
                         }
@@ -180,7 +185,7 @@
 
             .registration-form-container {
                 text-align: left;
-                padding-top: .5rem;
+                padding-top: 0.5rem;
 
                 a {
                     color: black;
@@ -197,7 +202,7 @@
                 text-align: left;
 
                 form {
-                    padding: .25rem;
+                    padding: 0.25rem;
                 }
 
                 a {

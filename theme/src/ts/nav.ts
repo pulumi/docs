@@ -1,4 +1,4 @@
-import {LocalStorageService} from "./state";
+import { LocalStorageService } from "./state";
 
 (function (document, $) {
     // The main navigation bar. Binds handlers for showing and hiding
@@ -27,30 +27,42 @@ import {LocalStorageService} from "./state";
         let whyPulumiOpened = false;
         let learnOpened = false;
 
-        $("#why-pulumi-menu-label").click(function() {
+        $("#why-pulumi-menu-label").click(function () {
             $("#mobile-dropdown").scroll();
             if (whyPulumiOpened) {
-                $("#mobile-dropdown").animate({
-                    scrollTop: top
-                }, 300);
+                $("#mobile-dropdown").animate(
+                    {
+                        scrollTop: top,
+                    },
+                    300,
+                );
             } else {
-                $("#mobile-dropdown").animate({
-                    scrollTop: $("#why-pulumi-mobile-menu").position().top - 115
-                }, 300);
+                $("#mobile-dropdown").animate(
+                    {
+                        scrollTop: $("#why-pulumi-mobile-menu").position().top - 115,
+                    },
+                    300,
+                );
             }
             whyPulumiOpened = !whyPulumiOpened;
         });
-    
-        $("#learn-menu-label").click(function() {
+
+        $("#learn-menu-label").click(function () {
             $("#mobile-dropdown").scroll();
             if (learnOpened) {
-                $("#mobile-dropdown").animate({
-                    scrollTop: top
-                }, 300);
+                $("#mobile-dropdown").animate(
+                    {
+                        scrollTop: top,
+                    },
+                    300,
+                );
             } else {
-                $("#mobile-dropdown").animate({
-                    scrollTop: $("#learn-mobile-menu").position().top - 115
-                }, 300);
+                $("#mobile-dropdown").animate(
+                    {
+                        scrollTop: $("#learn-mobile-menu").position().top - 115,
+                    },
+                    300,
+                );
             }
             learnOpened = !learnOpened;
         });
@@ -64,9 +76,9 @@ import {LocalStorageService} from "./state";
     // load saved state of the banner from local storage.
     function loadBannerState() {
         if (bannerState.getKey("dismissed") !== "true") {
-            $(banner).css({"display": "block"});
+            $(banner).css({ display: "block" });
         } else {
-            $(banner).css({"display": "none"});
+            $(banner).css({ display: "none" });
         }
     }
 
@@ -74,9 +86,8 @@ import {LocalStorageService} from "./state";
     $("#dismiss-banner").on("click", function (e) {
         // intercept href event, so we don't navigate to the link.
         e.preventDefault();
-        
-        $(banner).css({"display": "none"});
-        bannerState.updateKey("dismissed", "true");
-    })
 
+        $(banner).css({ display: "none" });
+        bannerState.updateKey("dismissed", "true");
+    });
 })(document, jQuery);

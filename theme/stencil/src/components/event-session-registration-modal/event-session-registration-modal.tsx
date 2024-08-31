@@ -67,7 +67,7 @@ export class EventSessionRegistrationModal {
     private handleSkipSessionSelection(parsedEventSessions: EventSessionInfo[]) {
         if (parsedEventSessions.length === 1) {
             this.selectedSessions.push(parsedEventSessions[0].hubspot_form_id);
-            this.displayingContent = "form"
+            this.displayingContent = "form";
             this.skippedSessionSelection = true;
         }
     }
@@ -87,19 +87,19 @@ export class EventSessionRegistrationModal {
 
     private onMessage = (event: MessageEvent) => {
         // Ignore any non-HubSpot-form-related events and if the modal isn't open.
-        if ((event.data?.type !== "hsFormCallback") || (!this.isModalOpen)) {
+        if (event.data?.type !== "hsFormCallback" || !this.isModalOpen) {
             return;
         }
 
         const eventName: string = event.data.eventName;
-        if ((eventName === "onFormReady") && this.processingFormSubmissions) {
+        if (eventName === "onFormReady" && this.processingFormSubmissions) {
             this.handleFormSubmissions();
         }
 
         if (eventName === "onFormSubmit") {
             const formInputs = this.el.querySelectorAll("form input") as NodeListOf<HTMLInputElement>;
             const newSubmittedFormValues: SubmittedFormValues = {};
-            formInputs.forEach((input) => {
+            formInputs.forEach(input => {
                 if (input.type !== "checkbox") {
                     newSubmittedFormValues[input.name] = input.value;
                 }
@@ -107,7 +107,7 @@ export class EventSessionRegistrationModal {
             this.submittedFormValues = newSubmittedFormValues;
 
             setTimeout(() => {
-                this.selectedSessions = [ ...this.selectedSessions.slice(1) ];
+                this.selectedSessions = [...this.selectedSessions.slice(1)];
                 this.processingFormSubmissions = true;
 
                 if (this.selectedSessions.length === 0) {
@@ -115,13 +115,13 @@ export class EventSessionRegistrationModal {
                 }
             }, 500);
         }
-    }
+    };
 
     private handleButtonClick = (e: Event) => {
         e.preventDefault();
         this.isModalOpen = true;
         document.querySelector("body").className += " disable-scroll";
-    }
+    };
 
     private handleCloseModal = (e: Event) => {
         e.preventDefault();
@@ -131,7 +131,7 @@ export class EventSessionRegistrationModal {
             this.selectedSessions = [];
         }
         document.querySelector("body").className = document.querySelector("body").className.replace("disable-scroll", "");
-    }
+    };
 
     private handleSessionSelection = (formId: string) => {
         const formIdIndex = this.selectedSessions.indexOf(formId);
@@ -140,12 +140,12 @@ export class EventSessionRegistrationModal {
         } else {
             this.selectedSessions.splice(formIdIndex, 1);
         }
-    }
+    };
 
     private handleGotToSessionSelect = (e: Event) => {
         e.preventDefault();
         this.displayingContent = "session-select";
-    }
+    };
 
     private handleGoToForm(e: Event, content: EventSessionRegistrationModalContent) {
         e.preventDefault();
@@ -179,7 +179,7 @@ export class EventSessionRegistrationModal {
                         continue;
                     }
 
-                    const formInput = this.el.querySelector(`form input[name="${ formValueKey }"]`) as HTMLInputElement;
+                    const formInput = this.el.querySelector(`form input[name="${formValueKey}"]`) as HTMLInputElement;
                     formInput.value = this.submittedFormValues[formValueKey];
                     formInput.dispatchEvent(new Event("change"));
                 }
@@ -195,7 +195,7 @@ export class EventSessionRegistrationModal {
     private renderSessionSelectionItem(info: EventSessionInfo) {
         const isChecked = this.selectedSessions.indexOf(info.hubspot_form_id) > -1;
 
-        return(
+        return (
             <li>
                 <label class="session-selection-item">
                     <div class="checkbox-container">
@@ -203,8 +203,8 @@ export class EventSessionRegistrationModal {
                         <span class="checkmark"></span>
                     </div>
                     <div class="checkbox-label">
-                        <h6>{ info.title }</h6>
-                        <p>{ info.description }</p>
+                        <h6>{info.title}</h6>
+                        <p>{info.description}</p>
                     </div>
                 </label>
             </li>
@@ -214,74 +214,65 @@ export class EventSessionRegistrationModal {
     private renderSessionSelectContent() {
         return [
             <div class="session-select-container">
-                <p>
-                    Please select all the options you'd like to register for:
-                </p>
+                <p>Please select all the options you'd like to register for:</p>
 
-                <ul class="session-select-list">
-                    { this.parsedEventSessions.map((session) => this.renderSessionSelectionItem(session)) }
-                </ul>
+                <ul class="session-select-list">{this.parsedEventSessions.map(session => this.renderSessionSelectionItem(session))}</ul>
             </div>,
 
             <div class="next-button-container">
-                <a href="#" class={ `${this.buttonClass} modal-button` } onClick={(e: Event) => this.handleGoToForm(e, "form")}>
+                <a href="#" class={`${this.buttonClass} modal-button`} onClick={(e: Event) => this.handleGoToForm(e, "form")}>
                     Next
                 </a>
-                { this.error ? <p class="error-message">{ this.error }</p> : null}
+                {this.error ? <p class="error-message">{this.error}</p> : null}
             </div>,
         ];
     }
 
     private renderForm(formId: string) {
         if (!this.processingFormSubmissions) {
-            return(
+            return (
                 <div class="registration-form-container">
-                    { this.skippedSessionSelection ? null : <a href="#" onClick={this.handleGotToSessionSelect}>&larr; Go back to select sessions.</a>}
+                    {this.skippedSessionSelection ? null : (
+                        <a href="#" onClick={this.handleGotToSessionSelect}>
+                            &larr; Go back to select sessions.
+                        </a>
+                    )}
                     <div class="registration-form">
-                        <pulumi-hubspot-form
-                            formId={ this.selectedSessions[0] }
-                        >
-                        </pulumi-hubspot-form>
+                        <pulumi-hubspot-form formId={this.selectedSessions[0]}></pulumi-hubspot-form>
                     </div>
                 </div>
             );
         }
 
-        return(
+        return (
             <div>
                 <h4>
                     <i class="fas fa-spinner fa-spin"></i>
                 </h4>
-                <div class="invisible" ref={(el: HTMLDivElement) => this.formProcessor = el}>
-                    <pulumi-hubspot-form
-                        key={ formId }
-                        formId={ formId }
-                    >
-                    </pulumi-hubspot-form>
+                <div class="invisible" ref={(el: HTMLDivElement) => (this.formProcessor = el)}>
+                    <pulumi-hubspot-form key={formId} formId={formId}></pulumi-hubspot-form>
                 </div>
             </div>
         );
     }
 
     private renderContent() {
-        console.log("rendering content");
         switch (this.displayingContent) {
             case "session-select":
                 return this.renderSessionSelectContent();
             case "form":
-                console.log("rendering form");
                 return this.renderForm(this.selectedSessions[0]);
         }
     }
 
     private renderModal() {
-        return(
+        return (
             <div class="event-session-modal-container">
                 <div class="modal-container">
                     <div class="modal">
                         <div class="title-container">
                             <div class="title-text">
-                                <h4>{ this.modalTitle }</h4>
+                                <h4>{this.modalTitle}</h4>
                             </div>
 
                             <div class="close-icon">
@@ -289,7 +280,7 @@ export class EventSessionRegistrationModal {
                             </div>
                         </div>
 
-                        { this.renderContent() }
+                        {this.renderContent()}
                     </div>
                 </div>
             </div>
@@ -301,13 +292,14 @@ export class EventSessionRegistrationModal {
             <Host>
                 <div>
                     <div>
-                        <a class={this.buttonClass} href="#" onClick={this.handleButtonClick}>{ this.buttonText }</a>
+                        <a class={this.buttonClass} href="#" onClick={this.handleButtonClick}>
+                            {this.buttonText}
+                        </a>
                     </div>
 
-                    { this.isModalOpen ? this.renderModal() : null }
+                    {this.isModalOpen ? this.renderModal() : null}
                 </div>
             </Host>
         );
     }
-
 }

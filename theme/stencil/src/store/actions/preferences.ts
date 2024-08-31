@@ -31,40 +31,49 @@ export interface SetBackEnd {
     key: BackEndKey;
 }
 
-const dispatchAction = <T>(action: T) => (dispatch, _getState) => dispatch(action);
+const dispatchAction =
+    <T>(action: T) =>
+    (dispatch, _getState) =>
+        dispatch(action);
 
 // Set the currently selected language.
-export const setLanguage = (key: LanguageKey) => dispatchAction<SetLanguage>({
-    key,
-    type: TypeKeys.SET_LANGUAGE,
-});
+export const setLanguage = (key: LanguageKey) =>
+    dispatchAction<SetLanguage>({
+        key,
+        type: TypeKeys.SET_LANGUAGE,
+    });
 
 // Set the currently Kubernetes language.
-export const setK8sLanguage = (key: K8sLanguageKey) => dispatchAction<SetK8sLanguage>({
-    key,
-    type: TypeKeys.SET_K8S_LANGUAGE,
-});
+export const setK8sLanguage = (key: K8sLanguageKey) =>
+    dispatchAction<SetK8sLanguage>({
+        key,
+        type: TypeKeys.SET_K8S_LANGUAGE,
+    });
 
 // Set the currently OS.
-export const setOS = (key: OSKey) => dispatchAction<SetOS>({
-    key,
-    type: TypeKeys.SET_OS,
-});
+export const setOS = (key: OSKey) =>
+    dispatchAction<SetOS>({
+        key,
+        type: TypeKeys.SET_OS,
+    });
 
 // Set the currently selected cloud.
-export const setCloud = (key: CloudKey) => dispatchAction<SetCloud>({
-    key,
-    type: TypeKeys.SET_CLOUD,
-});
+export const setCloud = (key: CloudKey) =>
+    dispatchAction<SetCloud>({
+        key,
+        type: TypeKeys.SET_CLOUD,
+    });
 
 // Set the currently selected persona.
-export const setPersona = (key: PersonaKey) => dispatchAction<SetPersona>({
-    key,
-    type: TypeKeys.SET_PERSONA,
-});
+export const setPersona = (key: PersonaKey) =>
+    dispatchAction<SetPersona>({
+        key,
+        type: TypeKeys.SET_PERSONA,
+    });
 
 // Set the currently selected backend type.
-export const setBackEnd = (key: BackEndKey) => dispatchAction<SetBackEnd>({
-    key,
-    type: TypeKeys.SET_BACKEND,
-});
+export const setBackEnd = (key: BackEndKey) =>
+    dispatchAction<SetBackEnd>({
+        key,
+        type: TypeKeys.SET_BACKEND,
+    });

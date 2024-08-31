@@ -443,9 +443,7 @@ export class Convert {
     }
 
     private renderToolDescription() {
-        let tool = this.conversionTool.githubURL ?
-            <a href={this.conversionTool.githubURL}>{this.conversionTool.name}</a> :
-            this.conversionTool.name;
+        let tool = this.conversionTool.githubURL ? <a href={this.conversionTool.githubURL}>{this.conversionTool.name}</a> : this.conversionTool.name;
 
         switch (this.from) {
             case "tf":
@@ -461,10 +459,9 @@ export class Convert {
 
         return (
             <p>
-                Your code will be converted with{" "}
-                {tool}, an open-source
-                command-line tool we built to make it as easy as possible for you to migrate your existing {this.sourceLanguageName} projects to Pulumi. The
-                resulting file can be copied or downloaded for use with <a href="https://pulumi.com/start">a new Pulumi project</a>.
+                Your code will be converted with {tool}, an open-source command-line tool we built to make it as easy as possible for you to migrate your existing{" "}
+                {this.sourceLanguageName} projects to Pulumi. The resulting file can be copied or downloaded for use with{" "}
+                <a href="https://pulumi.com/start">a new Pulumi project</a>.
             </p>
         );
     }
@@ -485,12 +482,7 @@ export class Convert {
     // Render an individual editor tab.
     private renderTab(item: any, activeItem: any, label: string, title: string, handler: Function): HTMLLIElement {
         return (
-            <li
-                onClick={handler.bind(this, item)}
-                data-track={this.trackEventLabel("tab")}
-                class={this.combineClasses("tab", item === activeItem ? "active" : "")}
-                title={title}
-            >
+            <li onClick={handler.bind(this, item)} data-track={this.trackEventLabel("tab")} class={this.combineClasses("tab", item === activeItem ? "active" : "")} title={title}>
                 <span class="label">{label}</span>
                 <span class="indicator"></span>
             </li>

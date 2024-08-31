@@ -30,7 +30,7 @@ pre,
 }
 
 pre {
-    background: #1F2557;
+    background: #1f2557;
     @apply text-gray-400 py-4 px-5 pr-8 overflow-x-auto leading-normal;
 
     .code-mode-dark & {
@@ -208,13 +208,13 @@ div.highlight.line-numbers {
 }
 
 .example-program {
-
     .example-program-footer {
         @apply hidden;
     }
 
     @screen md {
-        pre, .code-max-h {
+        pre,
+        .code-max-h {
             @apply rounded-t rounded-b-none mb-0 pb-0.5;
         }
 
@@ -222,7 +222,7 @@ div.highlight.line-numbers {
             @apply block bg-blue-900 -mt-1 pb-1 px-2 rounded-b text-base mb-4 text-right;
 
             a {
-                @apply text-blue-300 ;
+                @apply text-blue-300;
 
                 &:hover {
                     @apply text-blue-200;

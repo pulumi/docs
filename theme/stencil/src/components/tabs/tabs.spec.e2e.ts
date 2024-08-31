@@ -1,7 +1,6 @@
 import { newE2EPage } from "@stencil/core/testing";
 
 describe("pulumi-tabs", () => {
-
     it("renders", async () => {
         const page = await newE2EPage();
         await page.setContent("<pulumi-tabs></pulumi-tabs>");
@@ -68,7 +67,6 @@ describe("pulumi-tabs", () => {
         });
 
         describe("when an active tab is specified", () => {
-
             beforeEach(() => {
                 tabContent = `
                     <pulumi-tab label="Label 1">
@@ -89,5 +87,5 @@ describe("pulumi-tabs", () => {
                 expect(elements[1].getAttribute("active")).toBe("true");
             });
         });
-    })
+    });
 });

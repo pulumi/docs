@@ -103,24 +103,19 @@ export class PulumiApiDocNavNode {
             const hasChildren = node.children ? node.children.length === 0 : false;
 
             return (
-                            <details
+                <details
                     open={this.isExpanded}
-                    data-expandable={
-                        node.children && node.children.length > 0
-                            ? "true"
-                            : "false"
-                    }
-                    
+                    data-expandable={node.children && node.children.length > 0 ? "true" : "false"}
                     class="nav-tree-item nested"
-                                    id={node.name}
-                title={node.name}
-                onClick={() => this.onExpansionChange(nodeHref, !hasChildren)}
+                    id={node.name}
+                    title={node.name}
+                    onClick={() => this.onExpansionChange(nodeHref, !hasChildren)}
                 >
                     <summary class={`content-container ${hasChildren ? "" : "is-link"}`} data-selected={this.shouldNodeBeSelected(nodeHref) ? "true" : "false"}>
-                     <a class={`depth-${depth}`} href={nodeHref} onClick={(e) => this.handleLinkClick(e, nodeHref)}>
-                         {this.getIcon(node.type)}
-                         <span class="link-container">{node.name}</span>
-                     </a>
+                        <a class={`depth-${depth}`} href={nodeHref} onClick={e => this.handleLinkClick(e, nodeHref)}>
+                            {this.getIcon(node.type)}
+                            <span class="link-container">{node.name}</span>
+                        </a>
                     </summary>
                     {this.getChildNodes(node.children, this.isExpanded, depth + 1, nodeHref)}
                 </details>
@@ -131,26 +126,21 @@ export class PulumiApiDocNavNode {
     render() {
         return (
             <details
-                    open={this.isExpanded}
-                    data-expandable={
-                        this.node.children && this.node.children.length > 0
-                            ? "true"
-                            : "false"
-                    }
-                    class="nav-tree-item nested"
-                                    id={this.node.name}
-                                    
+                open={this.isExpanded}
+                data-expandable={this.node.children && this.node.children.length > 0 ? "true" : "false"}
+                class="nav-tree-item nested"
+                id={this.node.name}
                 title={this.node.name}
                 onClick={() => this.onExpansionChange(this.href, this.node.children.length === 0)}
-                >
-                    <summary class="content-container" data-selected={this.shouldNodeBeSelected(this.href) ? "true" : "false"}>
-                     <a class={`depth-${this.depth}`} href={this.href} onClick={(e) => this.handleLinkClick(e, this.href)}>
-                         {this.getIcon(this.node.type)}
-                         <span class="link-container">{this.node.name}</span>
-                     </a>
-                    </summary>
-                    {this.getChildNodes(this.node.children, this.isExpanded)}
-                </details>
+            >
+                <summary class="content-container" data-selected={this.shouldNodeBeSelected(this.href) ? "true" : "false"}>
+                    <a class={`depth-${this.depth}`} href={this.href} onClick={e => this.handleLinkClick(e, this.href)}>
+                        {this.getIcon(this.node.type)}
+                        <span class="link-container">{this.node.name}</span>
+                    </a>
+                </summary>
+                {this.getChildNodes(this.node.children, this.isExpanded)}
+            </details>
         );
     }
 }

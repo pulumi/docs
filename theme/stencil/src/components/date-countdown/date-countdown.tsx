@@ -55,7 +55,12 @@ export class DateCountdown {
     }
 
     private renderCountdownPart(value: number, label: string) {
-        return <p class={this.textClass}>{ value }{this.renderValueLabel(label)}</p>
+        return (
+            <p class={this.textClass}>
+                {value}
+                {this.renderValueLabel(label)}
+            </p>
+        );
     }
 
     private renderCountdown() {
@@ -70,7 +75,7 @@ export class DateCountdown {
                         this.renderCountdownPart(seconds, "Seconds"),
                     ]
                 ) : (
-                    <p class={this.textClass}>{ this.countdownOverText }</p>
+                    <p class={this.textClass}>{this.countdownOverText}</p>
                 )}
             </div>
         );

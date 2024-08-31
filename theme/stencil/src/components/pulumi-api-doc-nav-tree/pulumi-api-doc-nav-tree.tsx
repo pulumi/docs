@@ -19,7 +19,7 @@ export class PulumiApiDocNavTree {
             // links to end in a trailing slash for SEO reasons, so we check if it already exists.
             // If so, we leave it alone, otherwise we add it.
             const nodeLinkLastChar = node.link.charAt(node.link.length - 1);
-            const nodeLink = nodeLinkLastChar === "/" ? node.link : `${node.link}/`
+            const nodeLink = nodeLinkLastChar === "/" ? node.link : `${node.link}/`;
             const nodeHref = `${this.baseDirectory}${nodeLink}`;
 
             return <pulumi-api-doc-nav-node node={node} isExpanded={node.isExpanded} href={nodeHref}></pulumi-api-doc-nav-node>;

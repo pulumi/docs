@@ -9,7 +9,7 @@ ol.docs-breadcrumb {
         margin: 0;
 
         a {
-            font-family: 'Inter';
+            font-family: "Inter";
             font-weight: 500;
             font-size: 12px;
             line-height: 1.5;
@@ -26,7 +26,7 @@ ol.docs-breadcrumb {
         &.active a {
             font-weight: 700;
         }
-        
+
         &:not(:last-child) {
             &::after {
                 display: inline-block;

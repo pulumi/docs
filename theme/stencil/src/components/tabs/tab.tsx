@@ -1,11 +1,10 @@
-import { Component, Element, h, Prop } from '@stencil/core';
+import { Component, Element, h, Prop } from "@stencil/core";
 
 @Component({
     tag: "pulumi-tab",
     shadow: true,
 })
 export class Tab {
-
     @Prop()
     label: string;
 
@@ -22,12 +21,14 @@ export class Tab {
     }
 
     render() {
-        return <div>
-            {
-                <div role="tabpanel" style={ this.styles } aria-hidden={ !this.active }>
-                    <slot></slot>
-                </div>
-            }
-        </div>;
+        return (
+            <div>
+                {
+                    <div role="tabpanel" style={this.styles} aria-hidden={!this.active}>
+                        <slot></slot>
+                    </div>
+                }
+            </div>
+        );
     }
 }

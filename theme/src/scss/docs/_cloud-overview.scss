@@ -10,12 +10,12 @@ $box-shadow: #5f606524;
     section.cloud-overview {
         div.accordion {
             overflow: hidden;
-    
+
             label {
                 padding-top: 12px;
                 border-radius: 4px;
                 display: flex;
-                font-family: 'Inter';
+                font-family: "Inter";
                 font-weight: 500;
                 font-size: 16px;
                 color: $text-color-inner-card;
@@ -24,52 +24,52 @@ $box-shadow: #5f606524;
                 justify-content: center;
                 align-items: center;
             }
-    
+
             div.icon {
                 margin-left: 8px;
             }
-        
+
             label:hover {
                 text-decoration: underline;
             }
         }
-    
+
         div#accordion-components {
             div.accordion-content,
             input,
             label.hide,
-            input:checked ~ label.show  {
+            input:checked ~ label.show {
                 display: none;
             }
-        
+
             input:checked ~ div.accordion-content,
             input:checked ~ label.hide {
                 display: flex;
             }
         }
-    
+
         div#accordion-guides {
             div.accordion-content,
             input,
             label.hide,
-            input:checked ~ label.show  {
+            input:checked ~ label.show {
                 display: none;
             }
-        
+
             input:checked ~ div.accordion-content,
             input:checked ~ label.hide {
                 display: flex;
             }
         }
-    
+
         div#accordion-templates {
             div.accordion-content,
             input,
             label.hide,
-            input:checked ~ label.show  {
+            input:checked ~ label.show {
                 display: none;
             }
-        
+
             input:checked ~ div.accordion-content,
             input:checked ~ label.hide {
                 display: flex;
@@ -80,13 +80,16 @@ $box-shadow: #5f606524;
         flex-direction: column;
         gap: 24px;
 
-        h1, h2, p {
+        h1,
+        h2,
+        p {
             color: $text-color;
             margin: 0;
         }
 
-        h1, h2 {
-            font-family: 'Gilroy';
+        h1,
+        h2 {
+            font-family: "Gilroy";
         }
 
         h1 {
@@ -119,7 +122,6 @@ $box-shadow: #5f606524;
             flex-direction: row;
             flex-wrap: wrap;
             gap: 12px;
-
         }
 
         .flex-2-col {
@@ -204,12 +206,12 @@ $box-shadow: #5f606524;
         }
 
         div.heading {
-            display:flex;
+            display: flex;
             align-items: center;
         }
 
         div.card-inner {
-            box-shadow: 0px 0px 12px rgba(95,96,101,.08);
+            box-shadow: 0px 0px 12px rgba(95, 96, 101, 0.08);
             border: 1px solid $border-color-inner-card;
             padding: 16px 24px;
             display: flex;
@@ -245,7 +247,7 @@ $box-shadow: #5f606524;
             }
 
             p.inner-card-description {
-                font-family: 'Inter';
+                font-family: "Inter";
                 font-weight: 400;
                 font-size: 14px;
                 color: $text-color;
@@ -267,23 +269,23 @@ $box-shadow: #5f606524;
         }
 
         .card-gradient {
-                background: rgb(246, 247, 253);
-                background: linear-gradient(
-                    135deg,
-                    rgba(246, 247, 253, 1) 0%,
-                    rgba(249, 247, 252, 1) 5%,
-                    rgba(249, 245, 250, 1) 10%,
-                    rgba(254, 248, 249, 1) 15%,
-                    rgba(255, 253, 247, 1) 20%,
-                    rgba(255, 255, 255, 1) 25%,
-                    rgba(255, 255, 255, 1) 75%,
-                    rgba(254, 248, 249, 1) 80%,
-                    rgba(254, 248, 249, 1) 85%,
-                    rgba(249, 245, 250, 1) 90%,
-                    rgba(249, 247, 252, 1) 95%,
-                    rgba(246, 247, 253, 1) 100%
-                );
-            }
+            background: rgb(246, 247, 253);
+            background: linear-gradient(
+                135deg,
+                rgba(246, 247, 253, 1) 0%,
+                rgba(249, 247, 252, 1) 5%,
+                rgba(249, 245, 250, 1) 10%,
+                rgba(254, 248, 249, 1) 15%,
+                rgba(255, 253, 247, 1) 20%,
+                rgba(255, 255, 255, 1) 25%,
+                rgba(255, 255, 255, 1) 75%,
+                rgba(254, 248, 249, 1) 80%,
+                rgba(254, 248, 249, 1) 85%,
+                rgba(249, 245, 250, 1) 90%,
+                rgba(249, 247, 252, 1) 95%,
+                rgba(246, 247, 253, 1) 100%
+            );
+        }
 
         section.get-started {
             display: flex;
@@ -306,7 +308,7 @@ $box-shadow: #5f606524;
                 }
 
                 p {
-                    font-family: 'Gilroy';
+                    font-family: "Gilroy";
                     font-weight: 500;
                     font-size: 21px;
                     margin: 0;
@@ -344,13 +346,13 @@ $box-shadow: #5f606524;
                 border-radius: 4px;
                 padding: 24px;
                 flex-basis: 50%;
-            
+
                 div.heading p {
-                    font-family: 'Gilroy';
+                    font-family: "Gilroy";
                     font-weight: 500;
                     font-size: 21px;
                 }
-        
+
                 div.content-link {
                     background: $white;
                     border: 1px solid $border-color-inner-card;
@@ -358,7 +360,7 @@ $box-shadow: #5f606524;
                     border-radius: 4px;
                     padding: 8px 24px;
                     flex-basis: 100%;
-        
+
                     &:hover {
                         background: $card-background;
                         border: 1px solid $border-hover;
@@ -366,11 +368,11 @@ $box-shadow: #5f606524;
 
                     div.heading div.icon {
                         top: -1px;
-                        color: $text-color-inner-card
+                        color: $text-color-inner-card;
                     }
 
                     div.heading p.content-name {
-                        font-family: 'Gilroy';
+                        font-family: "Gilroy";
                         font-weight: 500;
                         font-size: 18px;
                         color: $text-color-inner-card;
@@ -390,7 +392,7 @@ $box-shadow: #5f606524;
                     align-items: flex-start;
 
                     p.provider-label {
-                        font-family: 'Inter';
+                        font-family: "Inter";
                         font-size: 14px;
                         text-align: right;
                         margin-top: 4px;

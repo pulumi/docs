@@ -34,10 +34,11 @@ const filterByTextAndTags = (filters, filterText) => {
 
             let packageIsAMatch;
 
-            if (downcasedFilterText === AMAZON_STRING || downcasedFilterText === AWS_STRING){
+            if (downcasedFilterText === AMAZON_STRING || downcasedFilterText === AWS_STRING) {
                 packageIsAMatch = downcasedPackageTitle.includes(AMAZON_STRING) || downcasedPackageTitle.includes(AWS_STRING);
-            } else if (downcasedFilterText === GOOGLE_CLOUD_STRING || downcasedFilterText === GCP_STRING || downcasedFilterText === GOOGLE_STRING){
-                packageIsAMatch = downcasedPackageTitle.includes(GOOGLE_CLOUD_STRING) || downcasedPackageTitle.includes(GCP_STRING) || downcasedPackageTitle.includes(GOOGLE_STRING);
+            } else if (downcasedFilterText === GOOGLE_CLOUD_STRING || downcasedFilterText === GCP_STRING || downcasedFilterText === GOOGLE_STRING) {
+                packageIsAMatch =
+                    downcasedPackageTitle.includes(GOOGLE_CLOUD_STRING) || downcasedPackageTitle.includes(GCP_STRING) || downcasedPackageTitle.includes(GOOGLE_STRING);
             } else {
                 packageIsAMatch = downcasedPackageTitle.includes(downcasedFilterText);
             }
@@ -66,18 +67,17 @@ const filterByTextAndTags = (filters, filterText) => {
     } else {
         $(packages).removeClass("hidden");
     }
-}
+};
 
 $(".section-registry").on("filterSelect", event => {
     const source: any = event.target;
     const detail: unknown = event.detail;
     const filters = detail as any[];
 
-
     // We need to cross reference the search input when filter change, so that
     // users get the combined results of the two mechanisms.
     const searchElement = $("pulumi-registry-list-search").get(0) as any;
-    const inputElement = $(searchElement).find('.registry-filter-input');
+    const inputElement = $(searchElement).find(".registry-filter-input");
     const filterText = inputElement.val() as string;
 
     filterByTextAndTags(filters, filterText);
@@ -137,22 +137,22 @@ $(".section-registry .no-results .reset").on("click", event => {
 
 $(".section-registry").on("packageSearch", event => {
     const filterText = event.detail as any;
-   
+
     // We need to cross reference the filter tags when search changes, so that
     // users get the combined results of the two mechanisms.
     const filters = [];
     const activeTags = $("ul.active-tags").find("li");
 
-    if (activeTags.length > 0){
+    if (activeTags.length > 0) {
         activeTags.each((i, tag) => {
             const el = $(tag);
             const tagCategory = el.attr("data-filter-group");
             const tagValue = el.attr("data-filter-value");
             const tagLabel = el.attr("data-filter-label");
 
-            filters.push({group: tagCategory, value: tagValue, label: tagLabel})
-        })
-    };
+            filters.push({ group: tagCategory, value: tagValue, label: tagLabel });
+        });
+    }
 
     filterByTextAndTags(filters, filterText);
 
@@ -160,7 +160,6 @@ $(".section-registry").on("packageSearch", event => {
     const allCount = $(".all-packages .package:not(.hidden)").length;
     $(".all-count").text(allCount);
 });
-
 
 document.addEventListener("DOMContentLoaded", function () {
     const logoNavMenuButton = $(".logo-nav-button");
@@ -181,9 +180,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // This handles closing the menu when selecting outside for non-Registry.
     $(document).on("click", function (event) {
-        if ($(event.target).closest(logoNavMenuButton).length === 0 &&
-            $(event.target).closest(logoNavMenu).length === 0 &&
-            logoNavMenu.is(":visible")) {
+        if ($(event.target).closest(logoNavMenuButton).length === 0 && $(event.target).closest(logoNavMenu).length === 0 && logoNavMenu.is(":visible")) {
             toggleMenu();
         }
     });

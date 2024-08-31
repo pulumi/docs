@@ -18,19 +18,21 @@ export class Datetime {
     componentWillLoad() {
         const date = new Date(this.date);
 
-        const options: Intl.DateTimeFormatOptions = this.timeonly ? {
-            timeZoneName: "short",
-            hour: "numeric",
-            minute: "2-digit",
-        } : {
-            timeZoneName: "long",
-            weekday: "short",
-            year: "numeric",
-            month: "long",
-            day: "numeric",
-            hour: "numeric",
-            minute: "2-digit",
-        };
+        const options: Intl.DateTimeFormatOptions = this.timeonly
+            ? {
+                  timeZoneName: "short",
+                  hour: "numeric",
+                  minute: "2-digit",
+              }
+            : {
+                  timeZoneName: "long",
+                  weekday: "short",
+                  year: "numeric",
+                  month: "long",
+                  day: "numeric",
+                  hour: "numeric",
+                  minute: "2-digit",
+              };
 
         this.date = date.toLocaleString(undefined, options);
     }

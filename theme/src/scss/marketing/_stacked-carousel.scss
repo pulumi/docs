@@ -10,7 +10,9 @@
         justify-content: space-around;
     }
 
-    .carousel-left-initial, .carousel-left-primary, .carousel-left-secondary {
+    .carousel-left-initial,
+    .carousel-left-primary,
+    .carousel-left-secondary {
         left: 100%;
         width: 100%;
         overflow: hidden;
@@ -35,7 +37,9 @@
         animation-delay: 20s;
     }
 
-    .carousel-right-initial, .carousel-right-primary, .carousel-right-secondary {
+    .carousel-right-initial,
+    .carousel-right-primary,
+    .carousel-right-secondary {
         left: -100%;
         width: 100%;
         overflow: hidden;
@@ -57,7 +61,7 @@
 
     .carousel-right-secondary {
         animation: scroll-horizontal-reverse 40s linear infinite;
-        animation-delay: 20s
+        animation-delay: 20s;
     }
 
     @keyframes scroll-horizontal {
@@ -66,7 +70,7 @@
         }
 
         100% {
-            left: -100%
+            left: -100%;
         }
     }
 
@@ -86,7 +90,7 @@
         }
 
         100% {
-            left: 100%
+            left: 100%;
         }
     }
 
@@ -104,7 +108,8 @@
 .stacked-carousel-container-single {
     height: 80px;
 
-    .carousel-left-primary, .carousel-left-secondary {
+    .carousel-left-primary,
+    .carousel-left-secondary {
         width: 300%;
         overflow: hidden;
         position: absolute;
@@ -129,7 +134,7 @@
         }
 
         100% {
-            left: 0%
+            left: 0%;
         }
     }
 
@@ -147,7 +152,8 @@
 .stacked-carousel-container-single-mobile {
     height: 80px;
 
-    .carousel-left-primary-mobile, .carousel-left-secondary-mobile {
+    .carousel-left-primary-mobile,
+    .carousel-left-secondary-mobile {
         width: 300%;
         overflow: hidden;
         position: absolute;
@@ -172,7 +178,7 @@
         }
 
         100% {
-            left: 0%
+            left: 0%;
         }
     }
 

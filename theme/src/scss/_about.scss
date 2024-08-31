@@ -6,7 +6,7 @@
 
     #about-nav {
         @apply flex gap-x-9;
-        
+
         list-style: none !important;
 
         li {
@@ -57,7 +57,7 @@
         width: 230px;
         border-radius: 14px;
         background: linear-gradient(90deg, #f7bf2a 0%, #f26e7e 18.23%, #be5188 38.02%, #8a3391 53.65%, #805ac3 74.48%, #7682f4 100%);
-    
+
         a {
             height: 226px;
             width: 226px;
@@ -76,7 +76,7 @@
 
     .dot-overlay {
         @apply w-full h-full absolute top-0 left-0 pointer-events-none;
-        z-index: -1;;
+        z-index: -1;
     }
 
     .title {
@@ -95,7 +95,7 @@
         height: 150px;
         border-right: 4px solid;
         border-image-slice: 1;
-        border-image-source: linear-gradient(#F7BF2A 0%, #F26E7E 18.23%, #BE5188 38.02%, #8A3391 53.65%, #805AC3 74.48%, #7682F4 100%)
+        border-image-source: linear-gradient(#f7bf2a 0%, #f26e7e 18.23%, #be5188 38.02%, #8a3391 53.65%, #805ac3 74.48%, #7682f4 100%);
     }
 
     .social-overlay {
@@ -109,7 +109,14 @@
     }
 }
 
-#we-are-pulumi, #who-we-are, #what-we-believe, #community, #history, #awards, #newsroom, #join-us {
+#we-are-pulumi,
+#who-we-are,
+#what-we-believe,
+#community,
+#history,
+#awards,
+#newsroom,
+#join-us {
     scroll-margin-top: 75px;
 }
 
@@ -117,7 +124,7 @@
     img {
         border: double 6px transparent;
         border-radius: 6px;
-        background-image: linear-gradient(white, white), linear-gradient(#F7BF2A 0%, #F26E7E 18.23%, #BE5188 38.02%, #8A3391 53.65%, #805AC3 74.48%, #7682F4 100%);
+        background-image: linear-gradient(white, white), linear-gradient(#f7bf2a 0%, #f26e7e 18.23%, #be5188 38.02%, #8a3391 53.65%, #805ac3 74.48%, #7682f4 100%);
         background-origin: border-box;
         background-clip: padding-box, border-box;
     }
@@ -127,33 +134,34 @@
     max-width: 1440px;
 }
 
-
-
 .about-us-gradient-hero {
     border-top: 6px solid;
     border-bottom: 6px solid;
     border-image-slice: 1;
-    border-image-source: linear-gradient(90deg, #F7BF2A 0%, #F26E7E 18.23%, #BE5188 38.02%, #8A3391 53.65%, #805AC3 74.48%, #7682F4 100%);
+    border-image-source: linear-gradient(90deg, #f7bf2a 0%, #f26e7e 18.23%, #be5188 38.02%, #8a3391 53.65%, #805ac3 74.48%, #7682f4 100%);
     height: 20rem;
     overflow: hidden;
     position: relative;
-    background: linear-gradient(180deg, #FCC247 0%, #F06DE9 100%);
+    background: linear-gradient(180deg, #fcc247 0%, #f06de9 100%);
     z-index: 10;
-  
+
     &:before {
-        background: linear-gradient(180deg, #f1d1a0 0%, #AE6BFE 100%);
-        content: '';    
+        background: linear-gradient(180deg, #f1d1a0 0%, #ae6bfe 100%);
+        content: "";
         display: block;
         height: 100%;
         position: absolute;
-        top: 0; left: 0;
+        top: 0;
+        left: 0;
         opacity: 0;
         width: 100%;
         z-index: -150;
         animation: opacity-animation 8s infinite ease-in-out;
     }
 
-    .element-1, .element-2, .element-3 {
+    .element-1,
+    .element-2,
+    .element-3 {
         position: absolute;
     }
 
@@ -163,15 +171,16 @@
         border-radius: 50%;
         bottom: -340px;
         filter: blur(40px);
-        background: radial-gradient(#F87579, #F7BF2A);
+        background: radial-gradient(#f87579, #f7bf2a);
 
         &:before {
-            background: radial-gradient(#FCC247, #DA86D8);
-            content: '';    
+            background: radial-gradient(#fcc247, #da86d8);
+            content: "";
             display: block;
             height: 100%;
             position: absolute;
-            top: 0; left: 0;
+            top: 0;
+            left: 0;
             opacity: 0;
             width: 100%;
             z-index: -150;
@@ -189,17 +198,18 @@
         filter: blur(30px);
         transform: skew(20deg, 8deg);
         border-radius: 4% 96% 60% 40% / 61% 70% 30% 39%;
-    
+
         &:before {
-            background: radial-gradient(rgba(116, 188, 248, 0.9), #B78FA8);
+            background: radial-gradient(rgba(116, 188, 248, 0.9), #b78fa8);
             border-radius: 4% 96% 60% 40% / 61% 70% 30% 39%;
             left: 18.5%;
             bottom: 20%;
-            content: '';    
+            content: "";
             display: block;
             height: 100%;
             position: absolute;
-            top: 0; left: 0;
+            top: 0;
+            left: 0;
             opacity: 0;
             width: 100%;
             z-index: -150;
@@ -215,14 +225,15 @@
         top: -15%;
         transform: rotate(90deg);
         filter: blur(40px);
-        
+
         &:before {
-            background: radial-gradient(#47C2C0, #B78FA8);
-            content: '';    
+            background: radial-gradient(#47c2c0, #b78fa8);
+            content: "";
             display: block;
             height: 100%;
             position: absolute;
-            top: 0; left: 0;
+            top: 0;
+            left: 0;
             opacity: 0;
             width: 100%;
             z-index: -150;
@@ -231,33 +242,31 @@
     }
 }
 
-
 @keyframes opacity-animation {
-  0% {
-    opacity: 0;
-  } 
-  
-  50% {
-    opacity: 1
-  }
-  100% {
-    opacity: 0;
-  }
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
 .value-card {
-    height: 600px;   
+    height: 600px;
 
     @screen xl {
         height: 465px;
     }
     border: double 2px transparent;
     border-radius: 12px;
-    background-image: linear-gradient(white, white), linear-gradient(#F7BF2A 0%, #F26E7E 18.23%, #BE5188 38.02%, #8A3391 53.65%, #805AC3 74.48%, #7682F4 100%);
+    background-image: linear-gradient(white, white), linear-gradient(#f7bf2a 0%, #f26e7e 18.23%, #be5188 38.02%, #8a3391 53.65%, #805ac3 74.48%, #7682f4 100%);
     background-origin: border-box;
     background-clip: padding-box, border-box;
 }
-
 
 .values-flex .value-card {
     width: 90%;

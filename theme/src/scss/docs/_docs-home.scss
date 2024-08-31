@@ -3,7 +3,10 @@ section.docs-home {
     flex-direction: column;
     gap: 24px;
 
-    h1, h2, h3, p {
+    h1,
+    h2,
+    h3,
+    p {
         margin: 0 !important;
         margin-top: 0;
     }
@@ -13,7 +16,7 @@ section.docs-home {
     }
 
     h3 {
-        font-family: 'Gilroy';
+        font-family: "Gilroy";
         font-weight: 500;
         font-size: 21px;
         color: map-get($gray, 950);
@@ -61,7 +64,7 @@ section.docs-home {
                 border-radius: 4px;
                 border: 1px map-get($brand, "blue") solid;
                 background: $white;
-                font-family: 'Inter';
+                font-family: "Inter";
                 font-weight: 400;
                 font-size: 14px;
                 color: $white;
@@ -87,7 +90,7 @@ section.docs-home {
     }
 
     h2 {
-        font-family: 'Gilroy';
+        font-family: "Gilroy";
         font-weight: 500;
         font-size: 24px;
         color: map-get($gray, 950);
@@ -183,7 +186,7 @@ section.docs-home {
 
         a {
             flex: 1;
-            border: 1px solid #E5E5E9;
+            border: 1px solid #e5e5e9;
             filter: drop-shadow(0px 2px 24px rgba(95, 96, 101, 0.14));
             border-radius: 4px;
 
@@ -199,7 +202,7 @@ section.docs-home {
             div.label {
                 background: $white;
                 border-radius: 0px 0px 4px 4px;
-                font-family: 'Inter';
+                font-family: "Inter";
                 font-weight: 400;
                 font-size: 18px;
                 color: map-get($gray, 950);

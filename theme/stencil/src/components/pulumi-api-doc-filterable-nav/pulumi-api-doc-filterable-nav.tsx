@@ -72,12 +72,7 @@ export class PulumiApiDocFilterableNav {
 
     filterTreeToMatchingContent(nodesToRender: APINavNode[], nodesToSearch: APINavNode[], rootNode?: APINavNode, directParentNode?: APINavNode) {
         // call recursive helper method, only setting this.currentlyRenderedNodes once at the end to trigger re-painting the DOM.
-        const resultNodes = this.filterTreeToMatchingRecursive(
-            nodesToRender,
-            nodesToSearch,
-            rootNode,
-            directParentNode
-        );
+        const resultNodes = this.filterTreeToMatchingRecursive(nodesToRender, nodesToSearch, rootNode, directParentNode);
         this.currentlyRenderedNodes = resultNodes;
     }
 
@@ -170,14 +165,7 @@ export class PulumiApiDocFilterableNav {
                 const nodesDirectParent = rootNode ? node : null;
                 // we recurse to children passing along the cache and building up the nodePath array so we dedupe items by fully qualified name.
                 // node that this function mutates nodesToRender, accumulating child state.
-                this.filterTreeToMatchingRecursive(
-                    nodesToRender,
-                    node.children,
-                    nodesRootParent,
-                    nodesDirectParent,
-                    nodeCache,
-                    nodePath.concat([node.name])
-                );
+                this.filterTreeToMatchingRecursive(nodesToRender, node.children, nodesRootParent, nodesDirectParent, nodeCache, nodePath.concat([node.name]));
             }
         });
 
@@ -188,12 +176,10 @@ export class PulumiApiDocFilterableNav {
         reconstructedTreeOfMatches.map(root => {
             root.children = nodesToRender.filter(nodeToRender => nodeToRender.parentName === root.name);
 
-            root.children?.map((child) => {
+            root.children?.map(child => {
                 // We check that both the parent and the root match to handle the case where there are multiple parents
                 // with the same name (eg "v1").
-                child.children = nodesToRender.filter(
-                    (nodeToRender) => nodeToRender.parentName === child.name && nodeToRender.rootName === root.name
-                );
+                child.children = nodesToRender.filter(nodeToRender => nodeToRender.parentName === child.name && nodeToRender.rootName === root.name);
             });
         });
 
@@ -255,10 +241,6 @@ export class PulumiApiDocFilterableNav {
     }
 
     render() {
-        return (
-            <section class="api-doc-nav">
-                {this.isLoading ? this.getLoadingState() : this.getFilterAndNavTree()}
-            </section>
-        );
+        return <section class="api-doc-nav">{this.isLoading ? this.getLoadingState() : this.getFilterAndNavTree()}</section>;
     }
 }

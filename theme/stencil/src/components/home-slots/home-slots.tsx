@@ -120,5 +120,4 @@ export class HomeSlots {
             </Host>
         );
     }
-
 }

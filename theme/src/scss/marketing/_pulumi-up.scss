@@ -22,7 +22,7 @@ body.section-pulumi-up {
     }
 
     .yellow-header-text {
-        font-family: 'Gilroy';
+        font-family: "Gilroy";
         font-style: normal;
         font-weight: 500;
         font-size: 48px;
@@ -30,7 +30,7 @@ body.section-pulumi-up {
     }
 
     .banner-description p {
-        font-family: 'Inter';
+        font-family: "Inter";
         font-size: 18px;
         line-height: 27px;
 
@@ -45,7 +45,8 @@ body.section-pulumi-up {
 
     @media only screen and (max-width: 768px) {
         // change the banner
-        .banner-image, .banner-image-confirmation {
+        .banner-image,
+        .banner-image-confirmation {
             background-image: none;
             height: auto;
             background-color: rgb(249, 249, 250);
@@ -54,7 +55,7 @@ body.section-pulumi-up {
 
         // move text off the banner
         .banner-description {
-          display: none;
+            display: none;
         }
 
         .below-banner-description {
@@ -70,7 +71,8 @@ body.section-pulumi-up {
     }
 
     .why-attend {
-        div[class^="icon-"], div[class*=" icon-"] {
+        div[class^="icon-"],
+        div[class*=" icon-"] {
             width: 3rem;
             height: 3rem;
             padding: 0.6rem;
@@ -83,22 +85,20 @@ body.section-pulumi-up {
     }
 
     .pulumiup-bg-yellow {
-        background-color: #FF9900;
-        ;
+        background-color: #ff9900;
     }
 
     .pulumiup-bg-green {
-        background-color: #437E37;
+        background-color: #437e37;
     }
 
     .yellow-blue-gradient {
-        background: linear-gradient(180deg, #7BDEFF 0.21%, #F0F9DE 25.21%, #DBF4E4 76.77%, #85E0FC 100.21%);
+        background: linear-gradient(180deg, #7bdeff 0.21%, #f0f9de 25.21%, #dbf4e4 76.77%, #85e0fc 100.21%);
     }
 
     .btn-primary:hover {
-        background:linear-gradient(90deg, #be5188 0%, #805ac3 100%)
+        background: linear-gradient(90deg, #be5188 0%, #805ac3 100%);
     }
-    
 }
 
 // 2022 PulumiUP styles.
@@ -359,18 +359,18 @@ body.section-pulumi-up {
 //         text-shadow: none;
 //     }
 
-    // .why-attend {
-    //     div[class^="icon-"], div[class*=" icon-"] {
-    //         width: 3rem;
-    //         height: 3rem;
-    //         padding: 0.6rem;
+// .why-attend {
+//     div[class^="icon-"], div[class*=" icon-"] {
+//         width: 3rem;
+//         height: 3rem;
+//         padding: 0.6rem;
 
-    //         svg {
-    //             width: 2rem;
-    //             height: 2rem;
-    //         }
-    //     }
-    // }
+//         svg {
+//             width: 2rem;
+//             height: 2rem;
+//         }
+//     }
+// }
 // }
 
 // 2021 PulumiUP styles (can remove after page is updated).

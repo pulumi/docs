@@ -39,7 +39,7 @@ export class PulumiRegistryListSearch {
     // results for any filters/search.  No need to emit the event, because this starts
     // over with all packages.
     reset() {
-      this.filterContent = "";
+        this.filterContent = "";
     }
 
     render() {

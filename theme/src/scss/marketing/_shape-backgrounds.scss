@@ -16,7 +16,7 @@
     }
 
     &.about-awards-section {
-         .circle-top-left {
+        .circle-top-left {
             @apply rounded-full absolute bg-yellow-600;
             width: 17rem;
             height: 17rem;
@@ -32,7 +32,7 @@
             bottom: 14rem;
         }
 
-         .circle-bottom-left {
+        .circle-bottom-left {
             @apply rounded-full absolute bg-purple-600;
             width: 12rem;
             height: 12rem;
@@ -50,11 +50,11 @@
     }
 
     &.about-what-we-believe {
-         .circle-top-left {
+        .circle-top-left {
             @apply rounded-full absolute bg-fuchsia-600;
             width: 22rem;
             height: 22rem;
-            left: .75rem;
+            left: 0.75rem;
             top: -9.5rem;
         }
 
@@ -74,7 +74,7 @@
             bottom: 16rem;
         }
 
-         .circle-bottom-left {
+        .circle-bottom-left {
             @apply rounded-full absolute bg-purple-600;
             width: 5.5rem;
             height: 5.5rem;
@@ -396,7 +396,7 @@
                 @apply absolute top-0 left-0;
             }
         }
-        
+
         .circle-left {
             @apply rounded-full absolute bg-salmon-600;
             width: 20.25rem;
@@ -989,7 +989,7 @@
             right: 6rem;
             top: 20rem;
         }
-    
+
         .circle-left {
             @apply rounded-full absolute bg-salmon-600;
             width: 14rem;
@@ -1007,7 +1007,7 @@
             right: -4.5rem;
             top: 0.75rem;
         }
-    
+
         .circle-center {
             @apply rounded-full absolute bg-salmon-600;
             width: 7rem;
@@ -1015,7 +1015,7 @@
             right: 27rem;
             top: -3.5rem;
         }
-    
+
         .circle-bottom {
             @apply rounded-full absolute bg-yellow-600;
             width: 21.25rem;

@@ -18,10 +18,10 @@
 }
 
 // Use our standard rounding for the button and the modal.
-.aa-Form, .aa-DetachedSearchButton {
+.aa-Form,
+.aa-DetachedSearchButton {
     @apply rounded;
 }
-
 
 // The container of the modal, including search-box and results panel.
 .aa-DetachedFormContainer {
@@ -34,7 +34,6 @@
 
 // The container of a data source. (In our panel, we only have one.)
 .aa-Source {
-
     // By default, Algolia gives this element `relative` positioning, which causes it to act as an
     // absolute positioning container. However, because we want the header and footer to be pinned
     // to the top and bottom of the `.aa-Panel` (this element's parent), we override this setting to
@@ -54,7 +53,7 @@
     @apply bg-white z-40 m-0 absolute top-0 right-0 left-0;
 
     // We need a bit more specificity here to override the defaults set by the control.
-    .aa-DetachedContainer &  {
+    .aa-DetachedContainer & {
         @apply my-0;
     }
 
@@ -96,7 +95,8 @@
             }
 
             // When active, show a strong underline.
-            &.active, &.active:hover:not(.disabled) {
+            &.active,
+            &.active:hover:not(.disabled) {
                 @apply text-gray-900 border-violet-600;
 
                 button {
@@ -127,7 +127,6 @@
     @apply bg-gray-100 bg-opacity-80 mb-2 px-2 relative;
 
     .result {
-
         // The breadcrumb.
         .ancestors {
             @apply text-xs text-gray-700 mb-2;
@@ -197,10 +196,8 @@
 
 // The autocomplete button (i.e., the widget rendered by Algolia that opens the search dialog).
 .aa-Autocomplete {
-
     // When the dialog is open, this class gets set on the `body` tag.
     .aa-Detached & {
-
         // Lighten the text color when the dialog is open to make it less contrasty/distracting.
         .aa-DetachedSearchButtonQuery {
             @apply text-gray-600;

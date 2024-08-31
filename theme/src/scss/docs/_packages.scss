@@ -177,7 +177,7 @@ div.packages section.featured-packages {
             border-radius: 12px;
             display: flex;
             flex-direction: column;
-            flex-basis: 100%;;
+            flex-basis: 100%;
             align-items: center;
             justify-content: stretch;
             padding: 18px;
@@ -189,17 +189,17 @@ div.packages section.featured-packages {
                 text-align: center;
                 flex: 1;
             }
-        
+
             .package-logo {
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 height: 32px;
             }
-        
+
             .package-title {
                 flex-grow: 1;
-                font-family: 'Gilroy';
+                font-family: "Gilroy";
                 font-weight: 500;
                 font-size: 24px;
                 color: #131314;
@@ -207,9 +207,9 @@ div.packages section.featured-packages {
                 align-items: center;
                 justify-content: center;
             }
-        
+
             .package-version {
-                font-family: 'Gilroy';
+                font-family: "Gilroy";
                 font-weight: 500;
                 font-size: 14px;
                 text-align: center;

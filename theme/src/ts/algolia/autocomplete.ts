@@ -21,15 +21,17 @@ let baseTags: Tag[];
 
 // Initialize the autocomplete control.
 function initAutocomplete(el: HTMLElement) {
-
     // Read the index settings from the container element.
     appID = el.getAttribute("data-app-id");
     searchKey = el.getAttribute("data-search-key");
     indexName = el.getAttribute("data-index");
-    baseTags = el.getAttribute("data-facets").split(",").map(f => ({ label: f, facet: "section" }));
+    baseTags = el
+        .getAttribute("data-facets")
+        .split(",")
+        .map(f => ({ label: f, facet: "section" }));
 
-    if (!appID || !searchKey ||!indexName ||!baseTags) {
-        console.error(`Autocomplete element found, but one or more require attributes were missing.`)
+    if (!appID || !searchKey || !indexName || !baseTags) {
+        console.error(`Autocomplete element found, but one or more require attributes were missing.`);
         return;
     }
 
@@ -45,7 +47,6 @@ function initAutocomplete(el: HTMLElement) {
 
             // https://www.algolia.com/doc/ui-libraries/autocomplete/core-concepts/sources/#param-getitems
             getItems: () => {
-
                 // https://www.algolia.com/doc/ui-libraries/autocomplete/api-reference/autocomplete-js/getAlgoliaFacets/
                 return getAlgoliaFacets({
                     searchClient,
@@ -55,9 +56,7 @@ function initAutocomplete(el: HTMLElement) {
                             facet: "section",
                             params: {
                                 query,
-                                filters: mapTagsToFilters(
-                                    groupBy(baseTags, (tag: any) => tag.facet as string),
-                                ),
+                                filters: mapTagsToFilters(groupBy(baseTags, (tag: any) => tag.facet as string)),
                             },
                         },
                     ],
@@ -66,7 +65,6 @@ function initAutocomplete(el: HTMLElement) {
                     // returning an empty array) because we only care about the number of results
                     // per facet; we don't need the facets themselves because we already have them.
                     transformResponse({ facetHits }) {
-
                         // Save the item counts on the autocomplete context (its internal state).
                         setContext({
                             facetHits,
@@ -74,8 +72,8 @@ function initAutocomplete(el: HTMLElement) {
 
                         // Return an empty list.
                         return [];
-                    }
-                })
+                    },
+                });
             },
             templates: {
                 item: () => null,
@@ -96,11 +94,7 @@ function initAutocomplete(el: HTMLElement) {
                             indexName,
                             query,
                             params: {
-                                filters: mapTagsToFilters(
-                                    groupBy(
-                                        getTags(state), (tag: any) => tag.facet as string,
-                                    ),
-                                ),
+                                filters: mapTagsToFilters(groupBy(getTags(state), (tag: any) => tag.facet as string)),
                                 // The existence of these params suggests that paging actually
                                 // *does* work in autocomplete (since this is the autocomplete API).
                                 // TODO: Make use of these, either with pagination or infinite scroll.
@@ -109,7 +103,7 @@ function initAutocomplete(el: HTMLElement) {
                             },
                         },
                     ],
-                })
+                });
             },
 
             // Tells the autocomplete control which URL to use for navigation (specifically keyboard navigation).
@@ -131,13 +125,11 @@ function initAutocomplete(el: HTMLElement) {
                     if (baseTags.length === 1) {
                         return html`
                             <ul class="header">
-                                <li class="${ getTags(state).length === baseTags.length ? "active" : "" }">
+                                <li class="${getTags(state).length === baseTags.length ? "active" : ""}">
                                     <button>
-                                        <img src="${ iconForTag("all") }" />
+                                        <img src="${iconForTag("all")}" />
                                         <span class="label">All results</span>
-                                        <span class="count count-${allCount}">
-                                            ${ formatCount(allCount) }
-                                        </span>
+                                        <span class="count count-${allCount}"> ${formatCount(allCount)} </span>
                                     </button>
                                 </li>
                             </ul>
@@ -147,46 +139,45 @@ function initAutocomplete(el: HTMLElement) {
                     // Otherwise, return a list of tabs -- one "all results" tab and then one tab per facet.
                     return html`
                         <ul class="header">
-                            <li class="${ getTags(state).length === baseTags.length ? "active" : "" }">
+                            <li class="${getTags(state).length === baseTags.length ? "active" : ""}">
                                 <button
-                                    onclick="${ event => {
+                                    onclick="${event => {
                                         // When the "All results" tab is activated, reset the state
                                         // to use all facets, then reload results.
                                         event.stopPropagation();
                                         setTags(state, baseTags);
                                         refresh();
-                                    }}">
-                                    <img src="${ iconForTag("all") }" />
+                                    }}"
+                                >
+                                    <img src="${iconForTag("all")}" />
                                     <span class="label">All results</span>
-                                    <span class="count count-${allCount}">
-                                        ${ formatCount(allCount) }
-                                    </span>
+                                    <span class="count count-${allCount}"> ${formatCount(allCount)} </span>
                                 </button>
                             </li>
 
-                            ${ baseTags.map(tag => {
-
+                            ${baseTags.map(tag => {
                                 // Make a tab for each facet, including item counts. Disable tabs with zero results.
                                 const facetHit = facetHits.find(f => f.label === tag.label);
                                 const isActive = getTags(state).length === 1 && getTags(state)[0].label === tag.label;
                                 const isDisabled = !facetHit || facetHit.count === 0;
                                 const facetCount = facetHit ? facetHit.count : 0;
 
-                                return html`
-                                    <li class="${ isActive ? "active" : "" } ${ isDisabled ? "disabled" : ""}">
-                                        <button disabled="${ isDisabled }"
-                                            onclick="${ event => {
-                                                // When a regular tab is activated, reset the state
-                                                // to that facet and reload.
-                                                event.stopPropagation();
-                                                setTags(state, [ { label: tag.label, facet: "section" } ]);
-                                                refresh();
-                                            }}">
-                                            <img src="${ iconForTag(tag.label) }"/>
-                                            <span class="label">${ labelForTag(tag.label) }</span>
-                                            <span class="count count-${ facetCount }">${ formatCount(facetCount) }</span>
-                                        </button>
-                                    </li>`
+                                return html` <li class="${isActive ? "active" : ""} ${isDisabled ? "disabled" : ""}">
+                                    <button
+                                        disabled="${isDisabled}"
+                                        onclick="${event => {
+                                            // When a regular tab is activated, reset the state
+                                            // to that facet and reload.
+                                            event.stopPropagation();
+                                            setTags(state, [{ label: tag.label, facet: "section" }]);
+                                            refresh();
+                                        }}"
+                                    >
+                                        <img src="${iconForTag(tag.label)}" />
+                                        <span class="label">${labelForTag(tag.label)}</span>
+                                        <span class="count count-${facetCount}">${formatCount(facetCount)}</span>
+                                    </button>
+                                </li>`;
                             })}
                         </ul>
                     `;
@@ -194,24 +185,19 @@ function initAutocomplete(el: HTMLElement) {
                 item: ({ state, item, components, html }) => {
                     return html`
                         <div class="result my-3 px-1">
-                            <a class="container" href="${ item.href }">
-                                <div class="ancestors">${ ((item.ancestors || []) as string[]).join(" / ") }</div>
+                            <a class="container" href="${item.href}">
+                                <div class="ancestors">${((item.ancestors || []) as string[]).join(" / ")}</div>
                                 <div class="item">
                                     <div class="title">
                                         <span>
                                             <!-- When there's an h1 param present, use that; otherwise, use the title. -->
-                                            ${ item.h1
-                                                ? components.Highlight({ hit: item, attribute: "h1" })
-                                                : components.Highlight({ hit: item, attribute: "title" })
-                                            }
+                                            ${item.h1 ? components.Highlight({ hit: item, attribute: "h1" }) : components.Highlight({ hit: item, attribute: "title" })}
                                         </span>
-                                        <span class="label ${ labelForTag(item.section).toLowerCase() } ${ getTags(state).length === 1 ? "hidden" : "" }">
-                                            ${ labelForTag(item.section) }
+                                        <span class="label ${labelForTag(item.section).toLowerCase()} ${getTags(state).length === 1 ? "hidden" : ""}">
+                                            ${labelForTag(item.section)}
                                         </span>
                                     </div>
-                                    <div class="description">
-                                        ${ item.description !== "" && components.Highlight({ hit: item, attribute: "description" }) }
-                                    </div>
+                                    <div class="description">${item.description !== "" && components.Highlight({ hit: item, attribute: "description" })}</div>
                                 </div>
                             </a>
                         </div>
@@ -232,8 +218,8 @@ function initAutocomplete(el: HTMLElement) {
                     }
 
                     return html`
-                        <p><img src="/images/search/no-results.svg"/></p>
-                        <p>We couldn't find any results for <mark>${ state.query }</mark>.</p>
+                        <p><img src="/images/search/no-results.svg" /></p>
+                        <p>We couldn't find any results for <mark>${state.query}</mark>.</p>
                         <p>Try a more general term or use fewer keywords.</p>
                     `;
                 },
@@ -261,7 +247,6 @@ function initAutocomplete(el: HTMLElement) {
 
         // Handler for any change that occurs on the state of the autocomplete control.
         onStateChange: ({ state, prevState, setCollections }) => {
-
             // When a query is "cleared out" by the user, reset the list of facets to "all" and drop
             // any existing results to start fresh.
             if (prevState.query !== "" && state.query === "") {
@@ -293,7 +278,7 @@ function initAutocomplete(el: HTMLElement) {
         getSources: ({ query, state, refresh, setContext }) => {
             const sources = [];
 
-            sources.push(getFacetsSource(query, state, setContext))
+            sources.push(getFacetsSource(query, state, setContext));
             sources.push(getResultsSource(query, state, refresh));
 
             // Debounce requests to keep from sending too many queries to Algolia.
@@ -305,9 +290,7 @@ function initAutocomplete(el: HTMLElement) {
         insights: true,
 
         // https://www.algolia.com/doc/ui-libraries/autocomplete/core-concepts/plugins/
-        plugins: [
-            getTagsPlugin(baseTags),
-        ],
+        plugins: [getTagsPlugin(baseTags)],
     });
 }
 

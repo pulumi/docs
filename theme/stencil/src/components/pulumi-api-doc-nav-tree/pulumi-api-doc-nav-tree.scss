@@ -62,7 +62,6 @@ $base-ch-width-xl: 24ch;
 $base-ch-width-l: 12ch;
 
 .nav-tree-item {
-    
     a {
         height: 100%;
         display: flex;
@@ -136,7 +135,7 @@ details {
             text-decoration: underline;
         }
 
-         &[data-selected="true"] {
+        &[data-selected="true"] {
             background-color: #e0e0e0;
             font-weight: bold;
 

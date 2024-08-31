@@ -16,19 +16,36 @@ body.section-registry {
     div.h1-gradient {
         width: calc(100% - 32px);
         height: 12px;
-        background: linear-gradient(90deg, map-get($brand, "yellow") 0%, map-get($brand, "salmon") 18.23%, map-get($brand, "fuchsia-darker") 38.02%, map-get($brand, "purple") 53.65%, map-get($brand, "violet") 74.48%, map-get($brand, "blue-lighter") 100%);
+        background: linear-gradient(
+            90deg,
+            map-get($brand, "yellow") 0%,
+            map-get($brand, "salmon") 18.23%,
+            map-get($brand, "fuchsia-darker") 38.02%,
+            map-get($brand, "purple") 53.65%,
+            map-get($brand, "violet") 74.48%,
+            map-get($brand, "blue-lighter") 100%
+        );
         opacity: 0.1;
         position: relative;
         top: -34px;
     }
 
     section.docs-content {
-        h1, h2, h3, h4, h5, h6 {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
             font-family: Gilroy;
             line-height: 1.5;
         }
 
-        h2, h3, h4, h5, h6 {
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
             margin: 18px 0 !important;
         }
 
@@ -79,11 +96,10 @@ body.section-registry {
             font-weight: 600;
             font-size: 16px;
             color: map-get($gray, 600);
-
         }
 
         p {
-            font-family: 'Inter';
+            font-family: "Inter";
             font-weight: 400;
             font-size: 16px;
             color: map-get($gray, 950);
@@ -97,27 +113,27 @@ body.section-registry {
         }
 
         p a:not(.btn-secondary),
-        ul li a[href]  {
+        ul li a[href] {
             color: map-get($brand, "blue");
-            background: linear-gradient(90deg,rgba(142, 143, 151, 0),rgba(142, 143, 151, 0)),linear-gradient(90deg,map-get($gray, 450),map-get($gray, 450));
-            background-position: 100% 100%,0 100%;
+            background: linear-gradient(90deg, rgba(142, 143, 151, 0), rgba(142, 143, 151, 0)), linear-gradient(90deg, map-get($gray, 450), map-get($gray, 450));
+            background-position: 100% 100%, 0 100%;
             background-repeat: no-repeat;
-            background-size: 100% 0.1em,0 0.1em;
+            background-size: 100% 0.1em, 0 0.1em;
             padding-bottom: 0.2rem;
-            transition: background-size .3s;
+            transition: background-size 0.3s;
             transition-timing-function: ease-in;
 
             &:hover {
                 color: map-get($brand, "blue-darker");
                 text-decoration: none;
-                background-size: 0 0.1em,100% 0.1em;
+                background-size: 0 0.1em, 100% 0.1em;
             }
         }
 
         div.highlight pre,
         code,
         .font-mono {
-            font-family: 'Iosevka';
+            font-family: "Iosevka";
             font-weight: 400;
         }
     }
@@ -156,7 +172,7 @@ body.section-registry {
 
             h2,
             ul h2 {
-                font-family: 'Inter';
+                font-family: "Inter";
                 font-weight: 500;
                 font-size: 16px;
                 line-height: 14px;
@@ -189,7 +205,7 @@ body.section-registry {
 
             div.all-packages-icon-link {
                 a.all-packages {
-                    font-family: 'Inter';
+                    font-family: "Inter";
                     font-weight: 500;
                     font-size: 16px;
                     color: #2f3032;
@@ -405,7 +421,7 @@ body.section-registry {
             .content {
                 border: none;
                 margin: 0;
-                padding: 0
+                padding: 0;
             }
 
             div.expand-more-18-18 {
@@ -443,7 +459,6 @@ body.section-registry {
             display: none;
         }
 
-
         @media (min-width: 1024px) {
             flex-direction: row;
             gap: 24px;
@@ -462,7 +477,7 @@ body.section-registry {
 
             .table-of-contents-feedback,
             #docsFeedbackContainer,
-            .docs-marketing-ad  {
+            .docs-marketing-ad {
                 display: block;
             }
 
@@ -515,7 +530,7 @@ body.section-registry {
         justify-content: space-between;
         align-items: center;
         display: flex;
-        font-family: 'Inter';
+        font-family: "Inter";
         font-weight: 400;
         font-size: 12px;
         color: #5a5a5a;
@@ -557,7 +572,7 @@ body.section-registry {
 
         div.version-info,
         .note {
-            font-family: 'Inter';
+            font-family: "Inter";
             font-weight: 400;
             font-size: 12px;
             color: #131314;
@@ -570,10 +585,10 @@ body.section-registry {
             a {
                 display: flex;
                 gap: 4px;
-                font-family: 'Inter';
+                font-family: "Inter";
                 font-weight: 500;
                 font-size: 12px;
-                color: #4D5BD9;
+                color: #4d5bd9;
                 align-items: center;
 
                 span {
@@ -603,7 +618,7 @@ body.section-registry {
         div.accordion-content,
         input,
         label.hide,
-        input:checked ~ label.show  {
+        input:checked ~ label.show {
             display: none;
         }
 
@@ -635,7 +650,7 @@ body.section-registry {
 
         div.package-card {
             display: none;
-            box-shadow: 0px 4px 4px 0px #DCDCDC40;
+            box-shadow: 0px 4px 4px 0px #dcdcdc40;
 
             @media (min-width: 1024px) {
                 display: flex;
@@ -664,7 +679,7 @@ body.section-registry {
             align-items: center;
 
             h2 {
-                font-family: 'Inter';
+                font-family: "Inter";
                 font-weight: 600;
                 font-size: 12px;
                 color: #8e8f97;
@@ -684,7 +699,7 @@ body.section-registry {
             }
 
             li a {
-                font-family: 'Inter';
+                font-family: "Inter";
                 font-weight: 400;
                 font-size: 14px;
                 color: #364098;
@@ -722,7 +737,7 @@ body.section-registry {
         div.accordion-content,
         input,
         label.hide,
-        input:checked ~ label.show  {
+        input:checked ~ label.show {
             display: none;
         }
 

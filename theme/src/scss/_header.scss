@@ -39,7 +39,7 @@
 
                 .top-nav-banner-cta-text {
                     // TODO: update color
-                    color:  #505bd1; //#4d5bd9;
+                    color: #505bd1; //#4d5bd9;
                 }
             }
         }
@@ -54,7 +54,7 @@
         position: relative;
 
         &.is-pinned {
-            box-shadow: 0 1px 12px 0 rgba(0,0,0,.06),0 1px 4px 0 rgba(0,0,0,.04);
+            box-shadow: 0 1px 12px 0 rgba(0, 0, 0, 0.06), 0 1px 4px 0 rgba(0, 0, 0, 0.04);
 
             @screen md {
                 @apply shadow-none;
@@ -66,7 +66,6 @@
         }
 
         .logo-nav-menu {
-
             @apply w-full bg-gray-850 pt-2 -ml-2 text-white font-display z-50;
             top: 44px; // Height of the nav bar at screens below large.
 
@@ -130,7 +129,7 @@
 
     &.is-pinned {
         @apply sticky;
-        box-shadow: 0 1px 12px 0 rgba(0,0,0,.06),0 1px 4px 0 rgba(0,0,0,.04);
+        box-shadow: 0 1px 12px 0 rgba(0, 0, 0, 0.06), 0 1px 4px 0 rgba(0, 0, 0, 0.04);
     }
 
     .logo-container {
@@ -206,7 +205,6 @@
                                     @include gradient-border;
                                     @apply pt-1 pb-4 pr-5 text-xs;
                                 }
-
                             }
 
                             .header-nav-one-col-drop-down {
@@ -254,7 +252,7 @@
                                 color: theme("colors.gray.800");
                                 i {
                                     min-width: 1.5rem;
-                                    color:theme("colors.gray.700");
+                                    color: theme("colors.gray.700");
                                 }
                             }
                         }
@@ -440,7 +438,6 @@
             a {
                 @apply flex h-full w-full justify-center items-center;
             }
-
         }
         @screen lg {
             @apply hidden;
@@ -460,7 +457,8 @@
     }
 }
 
-.registry-hero, .docs-hero {
+.registry-hero,
+.docs-hero {
     @apply w-full flex relative flex-col justify-center;
 
     .dot-overlay {

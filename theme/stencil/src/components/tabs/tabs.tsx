@@ -31,10 +31,9 @@ import { Component, Element, Event, EventEmitter, h, State } from "@stencil/core
             text-align: center;
             white-space: nowrap;
         }
-    `
+    `,
 })
 export class Tabs {
-
     @Element()
     el: HTMLElement;
 
@@ -45,7 +44,6 @@ export class Tabs {
     tabSelect: EventEmitter<any[]>;
 
     constructor() {
-
         // Check for an explicitly defined active tab.
         const activeTab = this.tabs.find(t => t.getAttribute("active"));
 
@@ -60,7 +58,7 @@ export class Tabs {
     // Select the specified tab.
     private select(tab: HTMLElement) {
         if (tab) {
-            this.tabs.forEach(t => t.setAttribute("active", (t === tab).toString()))
+            this.tabs.forEach(t => t.setAttribute("active", (t === tab).toString()));
             this.selectedTab = tab;
 
             // Emit an event to notify listeners of selection changes.
@@ -90,23 +88,24 @@ export class Tabs {
     }
 
     render() {
-        return <div>
+        return (
+            <div>
+                {/* We assemble the clickable elements based on the labels of the pulumi-tab children. */}
+                <ul part="tabs" role="tablist">
+                    {this.tabs.map(tab => {
+                        return (
+                            <li part={this.partsFor(tab)} role="presentation">
+                                <a part="anchor" onClick={this.select.bind(this, tab)} role="tab" aria-selected={this.selectedTab === tab}>
+                                    {this.labelFor(tab)}
+                                </a>
+                            </li>
+                        );
+                    })}
+                </ul>
 
-            {/* We assemble the clickable elements based on the labels of the pulumi-tab children. */}
-            <ul part="tabs" role="tablist">
-                {
-                    this.tabs.map(tab => {
-                        return <li part={ this.partsFor(tab) } role="presentation">
-                            <a part="anchor" onClick={ this.select.bind(this, tab) } role="tab" aria-selected={ this.selectedTab === tab }>
-                                { this.labelFor(tab) }
-                            </a>
-                        </li>
-                    })
-                }
-            </ul>
-
-            {/* The tabs themselves. */}
-            <slot />
-        </div>;
+                {/* The tabs themselves. */}
+                <slot />
+            </div>
+        );
     }
 }

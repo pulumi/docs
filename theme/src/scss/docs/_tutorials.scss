@@ -1,13 +1,37 @@
-.section-tutorials, .section-collections {
-
+.section-tutorials,
+.section-collections {
     .gradient-card {
-        background: linear-gradient(121deg, #F6F7FD 0%, #F9F7FC 5.24%, #F9F5FA 9.77%, #FEF8F9 14.35%, #FFFDF7 17.83%, #FFF 22.11%, #FFF 79.52%, #FFFDF7 86.29%, #FEF8F9 89.41%, #F9F5FA 92.9%, #F9F7FC 96.56%, #F6F7FD 100%, #F6F7FD 100%), #FFF;
+        background: linear-gradient(
+                121deg,
+                #f6f7fd 0%,
+                #f9f7fc 5.24%,
+                #f9f5fa 9.77%,
+                #fef8f9 14.35%,
+                #fffdf7 17.83%,
+                #fff 22.11%,
+                #fff 79.52%,
+                #fffdf7 86.29%,
+                #fef8f9 89.41%,
+                #f9f5fa 92.9%,
+                #f9f7fc 96.56%,
+                #f6f7fd 100%,
+                #f6f7fd 100%
+            ),
+            #fff;
     }
 
     .gradient-highlight {
         @apply relative opacity-10 h-3 -top-4;
         width: calc(100% - 2rem);
-        background: linear-gradient(90deg, map-get($brand, "yellow") 0%, map-get($brand, "salmon") 18.23%, map-get($brand, "fuchsia-darker") 38.02%, map-get($brand, "purple") 53.65%, map-get($brand, "violet") 74.48%, map-get($brand, "blue-lighter") 100%);
+        background: linear-gradient(
+            90deg,
+            map-get($brand, "yellow") 0%,
+            map-get($brand, "salmon") 18.23%,
+            map-get($brand, "fuchsia-darker") 38.02%,
+            map-get($brand, "purple") 53.65%,
+            map-get($brand, "violet") 74.48%,
+            map-get($brand, "blue-lighter") 100%
+        );
     }
 
     nav.main-nav {
