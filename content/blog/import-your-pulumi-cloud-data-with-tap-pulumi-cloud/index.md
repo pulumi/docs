@@ -72,7 +72,7 @@ plugins:
 
 Then run `meltano install` to make sure the right version is installed.
 
-## Configure it 
+## Configure it
 
 To configure all settings available for this tap, you can use Meltano's interactive config running:
 
