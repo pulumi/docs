@@ -3,7 +3,7 @@
         <div class="docs-main-nav-toggle-wrapper">
             <div class="docs-main-nav-wrapper">
                 <div id="docs-main-nav" class="docs-main-nav">
-                    {{ partial "docs/main-nav.html" . }}
+                    {{ partial "docs/nav.html" (dict "ctx" . "type" "pulumi-iac") }}
                 </div>
             </div>
             <div class="docs-nav-toggle">
@@ -25,16 +25,11 @@
                     <div class="h1-gradient"></div>
                 </div>
 
-                <div class="docs-table-of-contents docs-toc-mobile">
-                    {{ partial "docs/table-of-contents.html" . }}
-                </div>
-
                 {{ if .Params.docs_home }}
                     {{ partial "docs/special-pages/docs-home.html" . }}
                 {{ else if .Params.cloud_overview }}
                     {{ partial "docs/special-pages/cloud-overview.html" . }}
                 {{ end }}
-
 
                 <section class="docs-content">
                     {{ .Content }}
@@ -42,7 +37,7 @@
             </div>
 
             <div class="docs-table-of-contents docs-toc-desktop">
-                {{ partial "docs/table-of-contents.html" . }}
+                {{ partial "docs/toc.html" }}
 
                 {{ partial "docs/feedback.html" . }}
 

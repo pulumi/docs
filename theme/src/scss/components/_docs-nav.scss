@@ -1,0 +1,43 @@
+#docs-main-nav {
+    pulumi-docs-nav {
+        @apply text-base my-8;
+
+        ol {
+            @apply bg-white pl-3;
+        }
+
+        a {
+            @apply flex items-center justify-between px-2 py-1 rounded w-full;
+
+            &:hover {
+                @apply no-underline bg-blue-100;
+            }
+
+            button {
+                @apply px-2 rounded;
+
+                &:hover {
+                    @apply bg-blue-300;
+                }
+
+                &:active {
+                    @apply bg-blue-200;
+                }
+
+                &::after {
+                    @apply text-blue-800 font-mono;
+                }
+            }
+        }
+
+        li {
+            @apply my-2;
+        }
+    }
+
+    pulumi-docs-toc {
+        h2 {
+            @apply pt-0;
+        }
+    }
+}

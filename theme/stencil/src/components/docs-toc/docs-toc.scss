@@ -1,0 +1,15 @@
+pulumi-docs-toc {
+    display: block;
+
+    ol {
+        li {
+            &.toc-level-h3 {
+                margin-left: 1rem;
+            }
+        }
+
+        :nth-child(1 of li.active) {
+            font-weight: 600;
+        }
+    }
+}

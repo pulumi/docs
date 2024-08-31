@@ -33,7 +33,7 @@
                 {{ if .Params.youll_learn }}
                     <div class="flex flex-col lg:flex-row my-8">
                         <div class="">
-                            <h2 class="mb-4">In this tutorial, you'll learn:</h2>
+                            <h2 class="mb-4 no-toc">In this tutorial, you'll learn:</h2>
                             <ul class="list-none p-0">
                                 {{ range .Params.youll_learn }}
                                     <li>
@@ -48,7 +48,7 @@
                 {{ if .Params.prereqs }}
                     <div class="flex flex-col lg:flex-row my-8">
                         <div class="">
-                            <h2 class="mb-4">Prerequisites:</h2>
+                            <h2 id="prerequisites" class="mb-4">Prerequisites:</h2>
                             <ul class="list-none p-0">
                                 {{ range .Params.prereqs }}
                                     <li>
@@ -66,6 +66,7 @@
             </div>
         </div>
         <div class="sticky top-10 pt-8 max-h-75 xl:w-2/12 hidden xl:block">
+            {{ partial "tutorials/toc.html" }}
             {{ partial "tutorials/feedback.html" . }}
             {{ partial "tutorials/right-nav-ad.html" }}
         </div>

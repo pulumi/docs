@@ -1,0 +1,23 @@
+pulumi-docs-nav {
+    display: block;
+
+    ol {
+        list-style-type: none !important;
+
+        li {
+            button:after {
+                content: "-";
+            }
+
+            &.collapsed {
+                button:after {
+                    content: "+";
+                }
+
+                ol {
+                    display: none;
+                }
+            }
+        }
+    }
+}

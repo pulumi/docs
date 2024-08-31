@@ -1,0 +1,50 @@
+{{ if eq .type "pulumi-iac"}}
+
+    <pulumi-docs-nav>
+        <ol>
+            <li><a href="/download">Download and install</a></li>
+            <li><a href="/get-started">Get started</a></li>
+            <li>
+                <a href="/get-started">Concepts</a>
+                <ol>
+                    <li>
+                        <a href="/download">How Pulumi works</a>
+                        <ol>
+                            <li><a href="/download">Download and install</a></li>
+                            <li><a href="/get-started">Get started</a></li>
+                        </ol>
+                    </li>
+                    <li><a href="/get-started">Projects</a></li>
+                </ol>
+            </li>
+        </ol>
+    </pulumi-docs-nav>
+
+{{ else if eq .type "pulumi-esc" }}
+
+    <pulumi-docs-nav>
+        <ol>
+            <li><a href="/download">Download and install</a></li>
+            <li><a href="/get-started">Get started</a></li>
+        </ol>
+    </pulumi-docs-nav>
+
+{{ else if eq .type "pulumi-cloud" }}
+
+    <pulumi-docs-nav>
+        <ol>
+            <li><a href="/download">Download and install</a></li>
+            <li><a href="/get-started">Get started</a></li>
+        </ol>
+    </pulumi-docs-nav>
+
+{{ else }}
+
+    <pulumi-docs-nav>
+        <ol>
+            <li><a href="/download">Download and install</a></li>
+            <li><a href="/get-started">Get started</a></li>
+        </ol>
+    </pulumi-docs-nav>
+
+{{ end }}

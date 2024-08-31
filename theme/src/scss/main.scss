@@ -71,6 +71,7 @@
 @import "components/chooser";
 @import "components/choosable";
 @import "components/convert";
+@import "components/docs-nav";
 @import "components/filter-select";
 @import "components/greenhouse-jobs-list";
 @import "components/install";
@@ -368,7 +369,6 @@ section.newsletter-input pulumi-hubspot-form input.hs-input {
 }
 
 #segment-consent-manager {
-
     > div:first-child {
         @apply text-black fixed bottom-0 right-0 left-0 p-2 m-4 border-2 border-violet-600 rounded-lg shadow-lg;
         z-index: 99999;
@@ -379,7 +379,7 @@ section.newsletter-input pulumi-hubspot-form input.hs-input {
     }
 
     div {
-       @apply bg-white;
+        @apply bg-white;
     }
 
     div:empty {

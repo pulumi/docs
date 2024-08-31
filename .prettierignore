@@ -18,7 +18,9 @@ cypress
 data
 docfx
 infrastructure
-theme
+theme/stencil/dist
+theme/stencil/www
+theme/stencil/src/components.d.ts
 tools
 layouts
 scripts
