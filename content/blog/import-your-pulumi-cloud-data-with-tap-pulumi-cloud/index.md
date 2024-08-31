@@ -1,9 +1,9 @@
 ---
-title: "Import Pulumi into your Data Warehouse with tap-pulumi-cloud"
-date: 2024-08-14T12:00:00-07:00
+title: "Tap-Pulumi-Cloud: Simplifying Pulumi Cloud Data Integration"
+date: 2024-09-03T09:00:00-07:00
 draft: false
-meta_desc: Using the Meltano Singer SDK we have expanded the tap-pulumi-cloud connector to be able to export all the pulumi cloud data into your own Data Warehouse
-meta_image: schema.png
+meta_desc: We have released a tap-pulumi-cloud connector to be able to export Pulumi Cloud data into your own Data Warehouse.
+meta_image: meta.png
 authors:
     - pablo-seibelt
     - lucas-crespo
@@ -14,26 +14,35 @@ tags:
     - api
     - data
 
-
 social:
-  twitter: "Your Pulumi Data in your Warehouse: See how the tap-pulumi-cloud extractor helps you export your Pulumi data into your own Data Warehouse. #DataWarehouse #Pulumi #Meltano #ELT"
+  twitter: "Your Pulumi Data in your Warehouse: See how the tap-pulumi-cloud extractor helps you export your Pulumi data into your own Data Warehouse."
   linkedin: |
     See how the tap-pulumi-cloud extractor helps you export your Pulumi data into your own Data Warehouse.
     We show how you can use this connector to download Pulumi Cloud data into any destination of your choice; helping you to track infrastructure metrics alongside the rest of your data.
 
 ---
 
-The [Pulumi Cloud REST API](https://www.pulumi.com/docs/pulumi-cloud/cloud-rest-api) allows our users to read the same data available in the [Pulumi Cloud UI](https://app.pulumi.com) and this presents an opportunity for data teams trying to integrate metrics of their Pulumi usage, by accessing said API.
+Integrating various infrastructure data sources into your data warehouse has long been a challenge for Platform Teams. Whether it’s dealing with multiple API endpoints, managing complex authentication processes, or just trying to get a consistent, reliable data feed, the process can be daunting and time-consuming. Especially when you factor in the various cloud providers, and the inconsistency in data formats across them all.
 
+These pain points can slow down your ability to get actionable insights from your infrastructure data, leaving you with more questions than answers.
+
+The [tap-pulumi-cloud connector](https://github.com/pulumi/tap-pulumi-cloud), announced today, is designed to address these challenges head-on by offering a simple solution for automating the process of accessing infrastructure data.
 <!--more-->
+Leveraging Pulumi Cloud data about your infrastructure instead of going directly to the provider eliminates the need for custom API integrations and handles the data consistency problem. And while all this data existed before today, by using the [Pulumi Cloud console](https://app.pulumi.com) or [Pulumi Cloud REST API](/docs/pulumi-cloud/cloud-rest-api) directly, the `tap-pulumi-cloud` connector handles complex interactions with the API, transforming the raw data into a structured format that’s ready for analysis as soon as it lands in your data warehouse. This means less time spent on data wrangling and more time on generating insights.
 
-However, manually integrating dozens of API endpoints into a data pipeline can be a time consuming effort, having to figure out the intricacies of each API, how each endpoint is structured, how to work with the api's paging method, etc.
+A few examples of the types of analytics you can build on top Pulumi Cloud data:
 
-This is where the [Meltano SDK shines](https://sdk.meltano.com/en/latest/index.html) - It allows anyone to build "Taps" and "Targets" that read and write data, respectively. This way, we can use [tap-pulumi-cloud](https://github.com/pulumi/tap-pulumi-cloud) with loaders such as [target-snowflake](https://hub.meltano.com/loaders/target-snowflake), [target-bigquery](https://hub.meltano.com/loaders/target-bigquery), [target-redshift](https://hub.meltano.com/loaders/target-redshift) or even [target-postgres](https://hub.meltano.com/loaders/target-postgres); allowing us to load the data into our own Data Warehouse easily.
+1. Average resources under management overtime [(code example)](#see-average-resources-under-management)
+2. The average time to deploy changes [(code example)](#see-the-average-time-to-deploy-changes)
+3. See the total updates per user [(code example)](#see-the-total-updates-per-user)
+4. Join with CI/CD provider data to generate DORA metrics and reporting
+5. Join with resource cost data to generate infrastructure cost reporting
+
+As it is built on the [Meltano SDK](https://sdk.meltano.com/en/latest/index.html), you can use [tap-pulumi-cloud](https://github.com/pulumi/tap-pulumi-cloud) with loaders such as [target-snowflake](https://hub.meltano.com/loaders/target-snowflake), [target-bigquery](https://hub.meltano.com/loaders/target-bigquery), [target-redshift](https://hub.meltano.com/loaders/target-redshift) or even [target-postgres](https://hub.meltano.com/loaders/target-postgres); allowing us to load the data into our own data warehouse easily.
 
 ## Set up
 
-First of all set up your environment [by following Meltano's installation guide](https://docs.meltano.com/guide/installation-guide), when this is done, continue by adding tap-pulumi-cloud and your choice of loader into your environment, we'll use target-duckdb for this example:
+Firstly, set up your environment [by following Meltano's installation guide](https://docs.meltano.com/guide/installation-guide). Once this is done, continue by adding `tap-pulumi-cloud` and your choice of loader into your environment, we'll use `target-duckdb` for this example:
 
 ```bash
 meltano add extractor tap-pulumi-cloud
@@ -61,9 +70,9 @@ plugins:
     pip_url: target-duckdb~=0.6
 ```
 
-And run `meltano install` to make sure the right version is installed
+Then run `meltano install` to make sure the right version is installed.
 
-## Configure
+## Configure it 
 
 To configure all settings available for this tap, you can use Meltano's interactive config running:
 
@@ -71,11 +80,11 @@ To configure all settings available for this tap, you can use Meltano's interact
 meltano config tap-pulumi-cloud set --interactive
 ```
 
-The required variables are the `token` [(Get one from the Pulumi Cloud)](https://app.pulumi.com/) and `organizations` is a list of organizations you want to extract data from.
+The required variables are the `token` [(Get one from Pulumi Cloud)](https://app.pulumi.com/) and `organizations` is a list of Pulumi Cloud organizations you want to extract data from.
 
 ## Load data
 
-When your configuration has been finished, you can run the data pipeline like so:
+When your configuration has been finished, you can run the data pipeline:
 
 ```bash
 meltano run tap-pulumi-cloud target-duckdb
@@ -87,9 +96,7 @@ After the run finishes, you can access the exported tables and create whichever 
 
 ## Orchestration
 
-Once you have this working, you'll need to establish some way of running this regularly in an automated fashion, to keep the data fresh. A popular way to do this is to use an orchestration tool such as [Airflow](https://airflow.apache.org/), [Dagster](https://dagster.io/) or [Mage](https://www.mage.ai/) (Among others) - An easy way to set up Meltano to run in this way is to use [a Docker container with your Meltano project.](https://docs.meltano.com/guide/containerization/)
-
-Another option is to use [Arch which is based on Meltano](https://arch.dev/), which path you choose will depend on your requirements and existing stack.
+Once you have this working, you'll need to establish some way of running this regularly in an automated fashion, to keep the data fresh. A popular way to do this is to use an orchestration tool such as [Airflow](https://airflow.apache.org/), [Dagster](https://dagster.io/) or [Mage](https://www.mage.ai/), among others. An easy way to set up Meltano to run in this way is to use [a Docker container with your Meltano project.](https://docs.meltano.com/guide/containerization/). Another option is to use [Arch which is based on Meltano](https://arch.dev/), which path you choose will depend on your requirements and existing stack.
 
 Since each table is created with primary keys, when the process is run again, each run will "upsert" (update+insert) new data, replacing rows which match the same primary keys; e.g. stream Stacks has a primary key by `org_name, project_name and stack_name`, so if the same combination of keys arrives in the next update, the row will be updated instead of a new row being inserted.
 
@@ -104,7 +111,9 @@ If building a landing zone with all historical changes instead of just the curre
 
 ## Generate metrics
 
-With all of the data in one place, you can generate metrics based on Pulumi data, and combine it with other data sources, for example if you wanted to look at your average Resources Under Management (RUM) monthly (Using DuckDB's SQL Flavor, adjust to your specific database):
+With all of the data in one place, you can generate metrics based on Pulumi Cloud data, and combine it with other data sources, for example if you wanted to look at your average Resources Under Management (RUM) monthly (Using DuckDB's SQL Flavor, adjust to your specific database):
+
+### See average resources under management
 
 ```sql
 WITH monthly_rum_average AS (
@@ -130,6 +139,8 @@ FROM
     monthly_rum_average
 ```
 
+### See the average time to deploy changes
+
 If you want to see the average time to deploy changes, excluding console-initiated deploys (Similar to what is tracked for "Lead time for changes"):
 
 ```sql
@@ -153,7 +164,7 @@ GROUP BY
     initiator
 ```
 
-Or if you want to see the total updates per user:
+### See the total updates per user
 
 ```sql
 WITH operations_by_members AS (
@@ -184,3 +195,7 @@ ON
 ORDER BY
     total_updates DESC
 ```
+
+## Conclusion
+
+Integrating Pulumi Cloud data into your data warehouse has never been easier with `tap-pulumi-cloud`. Whether you’re tracking costs, monitoring deployments, or improving security, the new tap connector empowers your team to make informed, data-driven decisions that drive your cloud strategy forward.
