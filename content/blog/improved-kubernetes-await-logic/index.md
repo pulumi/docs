@@ -73,7 +73,7 @@ The latest v4.18.0 release of the Pulumi Kubernetes provider includes a number o
 
 ## Better error reporting
 
-Our goal is for the Pulumi Kubernetes provider to surface as much information as possible when something fails, because we don't want you to have to manually query your cluster just to figure out what happened.
+Our goal is that Pulumi Kubernetes users should never need to manually query the cluster to figure out why an update failed, so we try to surface as much information as possible when something fails.
 
 To that end we've made three improvements to the information Pulumi surfaces when something goes wrong while it's waiting for a resource to become ready (or be deleted):
 
@@ -95,18 +95,18 @@ The new `pulumi.com/deletionPropagationPolicy` annotation allows you to customiz
 
 The annotation accepts three propagation policies, corresponding to the options supported by Kubernetes (see "[Cascading Deletion](https://kubernetes.io/docs/concepts/architecture/garbage-collection/#cascading-deletion)").
 
-1. "background": delete the owner resource and leave dependent resources to be asynchronously garbage collected.
-   This is faster than "foreground" deletion propagation, but dependent resources can remain temporarily or even indefinitely if they are not finalized.
-2. "orphan": delete the owner resource and leave dependent resources untouched.
-   This can be useful if you want to keep resources around for migration or debugging purposes.
-3. "foreground": the default behavior of deleting the resource and all of its dependents.
+1. "background": delete the owner object and leave dependent objects to be asynchronously garbage collected.
+   This is faster than "foreground" deletion propagation, but dependent objects can remain temporarily or even indefinitely if they are not finalized.
+2. "orphan": delete the owner object and leave dependent objects untouched.
+   This can be useful if you want to keep objects around for migration or debugging purposes.
+3. "foreground": the provider's default behavior of deleting an object and all of its dependents.
    This is slower but guarantees all dependents have been cleaned up if it succeeds.
 
 {{% notes type="info" %}}
 Using `skipAwait` to speed up deletion is not recommended when server-side apply is enabled because it is not respected by all resources and it can lead to race conditions during replacement.
 The current behavior is considered buggy, and future releases might change the behavior of the `skipAwait` annotation to have no effect during deletion.
 
-The `pulumi.com/deletionPropagationPolicy` annotation is the recommended way to delete something quickly and safely.
+The `pulumi.com/deletionPropagationPolicy` annotation is the recommended way to delete something quickly and safely if it has children that are slow to cleanup.
 {{% /notes %}}
 
 ## Experimental: Custom readiness with "pulumi.com/waitFor"
@@ -118,7 +118,7 @@ The `pulumi.com/waitFor` annotation is considered experimental and its syntax ma
 There is no one-size-fits-all definition for what it means for a Kubernetes resource to be "ready," so we have also introduced a new annotation, `pulumi.com/waitFor`, which allows you to specify custom readiness criteria on a per-resource basis.
 This is functionally similar to `kubectl` [wait](https://kubernetes.io/docs/reference/kubectl/generated/kubectl_wait/).
 
-The new `pulumi.com/waitFor` annotation can be applied to any non-[Patch](https://www.pulumi.com/blog/kubernetes-server-side-apply/) resource with metadata, and it accepts three possible formats:
+The new `pulumi.com/waitFor` annotation can be applied to any resource with metadata, and it accepts three possible formats:
 
 1. A `kubectl` [JSONPath] expression -- a string prefixed with "jsonpath=" followed by a path expression and an optional value.
 
