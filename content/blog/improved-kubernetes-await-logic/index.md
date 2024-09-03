@@ -19,7 +19,7 @@ draft: false
 # linter test. Max length is 160 characters.
 meta_desc: |
   An overview of enhancements and bug fixes related to how the Pulumi Kubernetes
-  providers handles waiting for resource readiness in the v4.18.0 release.
+  provider handles waiting for resource readiness in the v4.18.0 release.
 
 # The meta_image appears in social-media previews and on the blog home page. A
 # placeholder image representing the recommended format, dimensions and aspect
@@ -93,7 +93,7 @@ This is the most robust form of deletion but it is also the slowest, and until n
 
 The new `pulumi.com/deletionPropagationPolicy` annotation allows you to customize delete behavior while still allowing Pulumi to await readiness when creating or updating the resource.
 
-The annotation accepts three propagation policies:
+The annotation accepts three propagation policies, corresponding to the options supported by Kubernetes (see "[Cascading Deletion](https://kubernetes.io/docs/concepts/architecture/garbage-collection/#cascading-deletion)").
 
 1. "background": delete the owner resource and leave dependent resources to be asynchronously garbage collected.
    This is faster than "foreground" deletion propagation, but dependent resources can remain temporarily or even indefinitely if they are not finalized.
@@ -132,7 +132,7 @@ The new `pulumi.com/waitFor` annotation can be applied to any non-[Patch](https:
         "pulumi.com/waitFor": "jsonpath={.webhooks[*].clientConfig.caBundle}"
 
 2. A string prefixed with "condition=" followed by the type of the condition and an optional status.
-   This matches the behavior of `kubectl wait --for=condition=...` and will wait until the resource has a matching condition.
+   This matches the behavior of `kubectl wait --for=condition=...` and will wait until the resource has a matching status condition.
    The expected status defaults to "True" if not specified.
    For example this will wait until the resource has a "Synced=True" condition:
 
@@ -200,21 +200,21 @@ new kubernetes.apiextensions.CustomResource("certificate", {
 
 This uses a [v2 ConfigFile](https://www.pulumi.com/blog/kubernetes-yaml-v2/) to `kubectl apply` the cert-manager custom resource definitions (CRDs), and then it creates a self-signed Issuer and Certificate using those CRDs.
 
-The dependencies between resources _appear_ reasonable, however this program will likely fail when it's first run:
+The dependencies between resources _appear_ reasonable, however this program will likely fail when it is first run:
 
 {{% notes type="warning" %}}
 error: resource "kubernetes:cert-manager.io/v1:ClusterIssuer::issuer" was not successfully created by the Kubernetes API server: Internal error occurred: failed calling webhook "webhook.cert-manager.io": failed to call webhook: Post "https://cert-manager-webhook.cert-manager.svc:443/validate?timeout=30s": tls: failed to verify certificate: x509: certificate signed by unknown authority
 {{% /notes %}}
 
-We see this "certificate signed by unknown authority" error because a few things need to happen before the cert-manager web hooks are usable:
+We see this "certificate signed by unknown authority" error because a few things need to happen before the cert-manager webhooks are operational:
 
 * At least one `cainjector` pod needs to be running.
 * The `cainjector` pod(s) need to have a leader elected.
-* The `cainjector` leader needs to inject certificate authority data into the cert-manager web hooks.
+* The `cainjector` leader needs to inject certificate authority data into the cert-manager webhooks.
 
 Previously, Pulumi had no way to know whether those pre-requisite steps had taken place.
 However, now we can use the `pulumi.com/waitFor` annotation to instruct Pulumi to wait until web hooks have CA data injected before proceeding to create Certificates.
-One way to achieve this is by using the new [transforms API](https://www.pulumi.com/blog/resource-transforms/) to annotate the web hooks appropriately:
+One way to achieve this is by using the new [transforms API](https://www.pulumi.com/blog/resource-transforms/) to annotate the webhooks appropriately:
 
 ```typescript
 const install = new kubernetes.yaml.v2.ConfigFile("install",
@@ -247,7 +247,7 @@ const install = new kubernetes.yaml.v2.ConfigFile("install",
 );
 ```
 
-Here we've given the `pulumi.com/waitFor` annotation a value of `jsonpath={.webhooks[*].clientConfig.caBundle}`, which is a [JSONPath] expression that will wait until a web hook in the `webhooks` array has a `clientConfig` with a `caBundle` populated -- indicating that the web hook is usable.
+Here we've given the `pulumi.com/waitFor` annotation a value of `jsonpath={.webhooks[*].clientConfig.caBundle}`, which is a [JSONPath] expression that will wait until a webhook in the `webhooks` array has a `clientConfig` with a `caBundle` populated -- indicating that the webhook is fully operational.
 
 Now the program will deploy successfully with a `Missing {.webhooks[*].clientConfig.caBundle}` message while Pulumi waits for the field to be configured.
 
