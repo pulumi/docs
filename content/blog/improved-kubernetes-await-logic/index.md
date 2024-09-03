@@ -198,7 +198,7 @@ new kubernetes.apiextensions.CustomResource("certificate", {
 });
 ```
 
-This uses a [v2 ConfigFile](https://www.pulumi.com/blog/kubernetes-yaml-v2/) to `kubectl apply` the cert-manager custom resource definitions, and then it creates a self-signed Issuer and Certificate using those CRDs.
+This uses a [v2 ConfigFile](https://www.pulumi.com/blog/kubernetes-yaml-v2/) to `kubectl apply` the cert-manager custom resource definitions (CRDs), and then it creates a self-signed Issuer and Certificate using those CRDs.
 
 The dependencies between resources _appear_ reasonable, however this program will likely fail when it's first run:
 
@@ -263,7 +263,7 @@ Running your program with the environment variable `PULUMI_K8S_AWAIT_ALL=true` w
 If a resource appears to follow well-known conventions (like the "Ready" condition, among others) Pulumi will wait for it to become ready.
 If the resource doesn't appear to follow well-known conventions, Pulumi will maintain its existing behavior and assume the resource is ready immediately.
 
-(Generic readiness criteria are determined by the [cli-utils](https://github.com/kubernetes-sigs/cli-utils/tree/master/pkg/kstatus) SIG, and behavior is unchanged for any resources that Pulumi already waits for readiness.)
+(Generic readiness criteria are determined by [cli-utils](https://github.com/kubernetes-sigs/cli-utils/tree/master/pkg/kstatus) (a collection of Go libraries maintained by the [SIG CLI](https://github.com/kubernetes/community/blob/master/sig-cli/README.md)), and behavior is unchanged for any resources that Pulumi already waits for readiness.)
 
 Please don't hesitate to reach out on [GitHub](https://github.com/pulumi/pulumi-kubernetes/issues/new) or [Slack](https://pulumi-community.slack.com/archives/CRFURDVQB) if you're excited about this feature; if you experience any issues with it; or if you have any feedback to share!
 
