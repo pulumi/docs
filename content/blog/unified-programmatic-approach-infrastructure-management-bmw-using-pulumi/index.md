@@ -1,5 +1,6 @@
 ---
 title: "Unified and Programmatic Approach to Infrastructure Management at BMW Using Pulumi"
+allow_long_title: true
 
 # The date represents the post's publish date, and by default corresponds with
 # the date and time this file was generated. Dates are used for display and
@@ -7,7 +8,7 @@ title: "Unified and Programmatic Approach to Infrastructure Management at BMW Us
 # published. To influence the ordering of posts published on the same date, use
 # the time portion of the date value; posts are sorted in descending order by
 # date/time.
-date: 2024-10-02T21:52:10Z
+date: 2024-10-02T09:52:10Z
 
 # The draft setting determines whether a post is published. Set it to true if
 # you want to be able to merge the post without publishing it.
@@ -17,7 +18,7 @@ draft: false
 # of the content of the post, which is useful for targeting search results or
 # social-media previews. This field is required or the build will fail the
 # linter test. Max length is 160 characters.
-meta_desc: something about BMW awesomeness with Pulumi
+meta_desc: Explore how BMW leverages Pulumi for efficient infrastructure management, boosting scalability, productivity, and compliance in automotive software development
 
 # The meta_image appears in social-media previews and on the blog home page. A
 # placeholder image representing the recommended format, dimensions and aspect
@@ -35,6 +36,8 @@ tags:
     - infrastructure-as-code
     - cloud-management
     - infrastructure-lifecycle-management
+    - platform-engineering
+    - developer-experience-devex
 
 
 # The social copy used to promote this post on Twitter and Linkedin. These
@@ -84,7 +87,7 @@ However, as the demand for software-driven features grew, the complexity of mana
 
 ## The Evolution of BMW's Software Development Toolchain
 
-BMW's journey to streamline its software development process has been gradual and iterative. The company's initial approach involved using Ansible for deployment, coupled with a custom-built deployment scripting solution for its OpenShift cluster.
+BMW's journey to streamline its software development process has been gradual and iterative. The company's initial approach involved using Ansible for deployment and a custom-built deployment scripting solution for its OpenShift cluster.
 
 As the complexity of the platform increased, BMW turned to Helm and Kubernetes to manage its containerized services. However, as the company ventured into the public cloud, the limitations of these tools became apparent. The team recognized the need for a more comprehensive and scalable solution to manage their infrastructure as code.
 
