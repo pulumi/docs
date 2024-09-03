@@ -87,6 +87,18 @@ tiers:
                   - Private Slack channel
                   - Professional services and training
 
+customers:
+    - stat: "**10x** increase in development velocity"
+      logo: nvidia
+    - stat: "**50%** faster customer onboarding"
+      logo: snowflake
+    - stat: "**75%** reduction in hard-coded credentials"
+      logo: nubank
+    - stat: "**100%** increase in developer satisfaction"
+      logo: crunchyroll
+    - stat: "**80%** reduction in deployment times"
+      logo: unity
+
 comparison_table:
     sections:
         #### 
