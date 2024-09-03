@@ -19,10 +19,13 @@ module.exports = {
             return "Blog";
         } else if (href.startsWith("/registry")) {
             return "Registry";
+        } else if (href.startsWith("/tutorials")) {
+            return "Tutorials";
         } else if (href.startsWith("/templates")) {
             return "Templates";
         } else if (href.startsWith("/resources")) {
             return "Resources";
+
         }
         return "General";
     },

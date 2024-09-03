@@ -1,7 +1,7 @@
 <!-- Based on https://gohugo.io/content-management/sections/#example-breadcrumb-navigation -->
 
 <!-- Don't show the breadcrumb on the main docs landing page. -->
-{{ if ne .RelPermalink "/docs/" }}
+{{ if ne .RelPermalink "/templates/" }}
     <ol class="docs-breadcrumb">
         {{ template "breadcrumbnav" (dict "p1" . "p2" .) }}
     </ol>

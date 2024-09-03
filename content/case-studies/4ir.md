@@ -10,13 +10,19 @@ customer_name: 4IR
 customer_logo: /logos/customers/4ir.png
 customer_url: https://www.4ir.cloud/
 
+quote_block:
+    quote: |
+        "Pulumi has emerged as a key element in our strategy, creating tangible value for us by reducing infrastructure
+        deployment time, up-skilling our team, and accelerating our time to market."
+    quote_attrib: Joseph Dolivo, CTO, 4IR Solutions
+    headline_stat: $75K
+    headline: Annual savings and deployments in hours instead of days.
+
 hide_pulumi_footer: true
 
 ---
 
-> ***“Pulumi has emerged as a key element in our strategy, creating tangible value for us by reducing infrastructure deployment time, up-skilling our team, and accelerating our time to market.”*** - *Joseph Dolivo, CTO, 4IR Solutions*
-
-##### Learn how [4IR](https://www.4ir.cloud/) leveraged Pulumi to:
+#### Learn how [4IR](https://www.4ir.cloud/) leveraged Pulumi to:
 
 - Cut deployment time from days to hours
 - Bring IaC in-house, saving $75,000/year on outsourcing costs
