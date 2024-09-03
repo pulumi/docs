@@ -65,30 +65,28 @@ panels:
         company: Pulumi
         socials:
           - site: linkedin
-            link: https://www.linkedin.com/in/joejduffy/
-          - site: twitter
-            link: https://x.com/funcofjoe/
+            link: https://www.linkedin.com/in/arunkumarl/ 
       - name: Maya Kaczorowski
         image: /images/pulumiup-2023/2024-speakers/maya-kaczorowski.jpeg
         position: Chief Product Officer
         company: Tailscale
         socials:
           - site: linkedin
-            link: https://www.linkedin.com/in/bgrant0607/
+            link: https://www.linkedin.com/in/mayakaczorowski/
       - name: Jason Meller
         image: /images/pulumiup-2023/2024-speakers/jason-meller.jpg
         position: VP, Product
         company: 1Password
         socials:
           - site: linkedin
-            link: https://www.linkedin.com/in/hackingonstuff/
+            link: https://www.linkedin.com/in/jason-meller-04498230/
       - name: Ofir Cohen
         image: /images/pulumiup-2023/2024-speakers/ofir-cohen.jpg
         position: CTO, Container Security
         company: Wiz
         socials:
           - site: linkedin
-            link: https://www.linkedin.com/in/adamjacob/
+            link: https://www.linkedin.com/in/cohen-ofir/
   - title: AI Panel
     subtitle: AI in Cloud Development
     schedule_link: https://conference.pulumi.com/talks/panel-ai-cloud-development/?utm_source=PulumiUp&utm_medium=web&utm_campaign=FY2025Q1_Event_PulumiUP
@@ -108,23 +106,21 @@ panels:
         company: Pulumi
         socials:
           - site: linkedin
-            link: https://www.linkedin.com/in/joejduffy/
-          - site: twitter
-            link: https://x.com/funcofjoe/
+            link: https://www.linkedin.com/in/meagancojocar/
       - name: Phillip Carter
         image: /images/pulumiup-2023/2024-speakers/phillip-carter.jpg
         position: Principal Product Manager
         company: Honeycomb
         socials:
           - site: linkedin
-            link: https://www.linkedin.com/in/bgrant0607/
+            link: https://www.linkedin.com/in/phillip-carter-4714a135/
       - name: Giri Sreenivas
         image: /images/pulumiup-2023/2024-speakers/giri-sreenivas.jpg
         position: Chief Product Officer
         company: Docker
         socials:
           - site: linkedin
-            link: https://www.linkedin.com/in/hackingonstuff/
+            link: https://www.linkedin.com/in/gsreenivas/
 
 personas:
   groups:
