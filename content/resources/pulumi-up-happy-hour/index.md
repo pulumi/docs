@@ -1,3 +1,4 @@
+---
 # Name of the event, <= 60 characters
 title: Seattle PulumiUP Happy Hour
 meta_desc: Join us for a post-PulumiUP Happy Hour to continue the conversation, meet local Pulumi users, mingle with Pulumi’s founders, and make connections
