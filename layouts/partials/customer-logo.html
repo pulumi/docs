@@ -82,6 +82,11 @@
             {{ partial "customer-logos/greenpark-sports" }}
         {{ end }}
     </span>
+{{ else if or (eq .logo "aptos") (eq .logo "doordash") }}
+    <span class="w-full h-full flex justify-center">
+        {{ $path := .logo | printf "%s/%s" "customer-logos" | printf "%s" }}
+        {{ partial $path }}
+    </span>
 {{ else }}
     <span class="{{ $logoClass }} w-full h-full flex m-auto">
         {{ $path := .logo | printf "%s/%s" "customer-logos" | printf "%s" }}

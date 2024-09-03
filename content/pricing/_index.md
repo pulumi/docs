@@ -88,16 +88,14 @@ tiers:
                   - Professional services and training
 
 customers:
-    - stat: "**10x** increase in development velocity"
-      logo: nvidia
-    - stat: "**50%** faster customer onboarding"
-      logo: snowflake
-    - stat: "**75%** reduction in hard-coded credentials"
-      logo: nubank
-    - stat: "**100%** increase in developer satisfaction"
-      logo: crunchyroll
-    - stat: "**80%** reduction in deployment times"
+    - stat: "**10x** faster development cycles"
+      logo: aptos
+    - stat: "**80%** reduction in deployment times - from weeks to hours"
       logo: unity
+    - stat: "**99%** reduction resource creation times - from 12 hours to 5 minutes"
+      logo: doordash
+    - stat: "**1.5 weeks > 1 day** reduction in deployment time"
+      logo: snowflake
 
 comparison_table:
     sections:
