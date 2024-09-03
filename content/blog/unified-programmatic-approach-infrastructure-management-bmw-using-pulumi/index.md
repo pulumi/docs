@@ -156,5 +156,5 @@ To learn more about Pulumi and how it can transform your software development an
 
 ## Frequently Asked Questions
 
-### What is BMW Software Factory? 
+### What is BMW Software Factory?
 
