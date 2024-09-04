@@ -384,8 +384,8 @@ comparison_table:
               rows:
                 - title: Gated deployments
                   items:
-                    - content: Local enforcement
-                    - content: Local enforcement
+                    - content: "[Local enforcement](/docs/using-pulumi/crossguard/get-started/#running-locally)"
+                    - content: "[Local enforcement](/docs/using-pulumi/crossguard/get-started/#running-locally)"
                     - content: "[Local enforcement](/docs/using-pulumi/crossguard/get-started/#running-locally)"
                     - content: "[Server-side enforcement](/docs/using-pulumi/crossguard/get-started/#enforcing-a-policy-pack)"
                 - title: Organization policies
