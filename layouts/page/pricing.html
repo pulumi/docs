@@ -1,10 +1,9 @@
 {{ define "hero" }}
-    {{ partial "hero.html" (dict "title" "Pulumi Cloud Pricing") }}
+    {{ partial "hero.html" (dict "title" "Pulumi Cloud Pricing" "subtitle" "Plans for teams of all sizes" ) }}
 {{ end }}
 
 {{ define "main" }}
-    <section class="container mx-auto text-center mt-8 mb-16">
-        <h2 class="mt-6 mb-12 text-center">Plans for teams of all sizes</h2>
+    <section class="container mx-auto text-center my-16">
         <div class="flex flex-row justify-center space-x-4 my-4 border-b-1 border-gray-200">
             <div id="iac-pricing-select" class="text-2xl cursor-pointer p-2 px-4 rounded-t-lg border-b-4 border-blue-600 bg-gray-100">
                 <div id="iac-pricing-select-text" class="rainbow-text">Infrastructure as Code</div>
@@ -54,7 +53,7 @@
                             <div class="text-center text-xs">{{ .esc_note }}</div>
                         </div>
                         <div class="flex flex-col justify-center align-center items-center text-center my-4 lg:h-14">
-                            <a href="{{ .primary_cta_link}}" class="text-white text-xs bg-violet-600 border-2 border-violet-600 rounded-full py-2 px-2 hover:bg-violet-500">{{ .primary_cta }}</a>
+                            <a href="{{ .primary_cta_link}}" class="text-white text-s bg-violet-600 border-2 border-violet-600 rounded-full py-2 px-2 hover:bg-violet-500">{{ .primary_cta }}</a>
                         </div>
                         <div class="border-dotted border-2 border-gray-200 rounded-lg px-4">
                             <div class="text-sm">{{ .items | markdownify }}</div>
@@ -102,9 +101,9 @@
                                     <div class="text-center text-xs">{{ $tier.esc_note }}</div>
                                 </div>
                                 <div class="flex justify-center items-center text-center my-4 lg:h-14">
-                                    <a href="{{ $tier.primary_cta_link}}" class="text-white text-xs bg-violet-600 border-2 border-violet-600 rounded-full py-2 px-2 hover:bg-violet-500 mr-1">{{ $tier.primary_cta }}</a>
+                                    <a href="{{ $tier.primary_cta_link}}" class="text-white text-s bg-violet-600 border-2 border-violet-600 rounded-full py-2 px-2 hover:bg-violet-500 mr-1">{{ $tier.primary_cta }}</a>
                                     {{ if $tier.secondary_cta }}
-                                        <a href="{{ $tier.secondary_cta_link }}" class="text-violet-600 text-xs border-2 border-violet-600 rounded-full py-2 px-2 hover:bg-violet-100">{{ $tier.secondary_cta }}</a>
+                                        <a href="{{ $tier.secondary_cta_link }}" class="text-violet-600 text-s border-2 border-violet-600 rounded-full py-2 px-2 hover:bg-violet-100">{{ $tier.secondary_cta }}</a>
                                     {{ end }}
                                 </div>
                                 <div class="border-dotted border-2 border-gray-200 rounded-lg px-4 flex grow">

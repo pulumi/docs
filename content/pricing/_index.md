@@ -22,6 +22,7 @@ tiers:
         primary_cta: Create a free organization
         primary_cta_link: /docs/quickstart
         items: |
+            You get:
             - 200 free IaC resources
             - Unlimited projects/stacks
             - 25 free secrets
@@ -94,7 +95,7 @@ customers:
       logo: unity
     - stat: "**99%** reduction resource creation times - from 12 hours to 5 minutes"
       logo: doordash
-    - stat: "**1.5 weeks > 1 day** reduction in deployment time"
+    - stat: "**1.5 weeks to 1 day** reduction in deployment time"
       logo: snowflake
 
 comparison_table:
@@ -385,8 +386,8 @@ comparison_table:
                   items:
                     - content: Local enforcement
                     - content: Local enforcement
-                    - content: Local enforcement
-                    - content: Server-side enforcement
+                    - content: "[Local enforcement](/docs/using-pulumi/crossguard/get-started/#running-locally)"
+                    - content: "[Server-side enforcement](/docs/using-pulumi/crossguard/get-started/#enforcing-a-policy-pack)"
                 - title: Organization policies
                   items:
                     - content: _blank
