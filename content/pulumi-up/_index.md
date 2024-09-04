@@ -121,6 +121,13 @@ panels:
         socials:
           - site: linkedin
             link: https://www.linkedin.com/in/gsreenivas/
+      - name: Clare Liguori
+        image: /images/pulumiup-2023/2024-speakers/clare-liguori.jpg
+        position: Sr. Principal Software Engineer
+        company: AWS
+        socials:
+          - site: linkedin
+            link: https://www.linkedin.com/in/clareliguori/
 
 personas:
   groups:
@@ -254,6 +261,11 @@ speakers:
     title: Software Engineer
     logo: /images/pulumiup-2023/speaker-logos/avanade.png
     company: Avanade
+  - name: Clare Liguori
+    image: /images/pulumiup-2023/2024-speakers/clare-liguori.jpg
+    title: Sr. Principal Software Engineer
+    logo: /images/pulumiup-2023/speaker-logos/aws.svg
+    company: AWS
   - name: Jason Meller
     image: /images/pulumiup-2023/2024-speakers/jason-meller.jpg
     title: VP, Product
@@ -279,6 +291,11 @@ speakers:
     title: Chief Product Officer
     company: Docker
     logo: /images/pulumiup-2023/speaker-logos/docker.png
+  - name: Andy Taylor
+    image: /images/pulumiup-2023/2024-speakers/andy-taylor.jpg
+    title: Sr. Solutions Architect
+    company: AWS
+    logo: /images/pulumiup-2023/speaker-logos/aws.svg
   - name: Joe Duffy
     image: /images/team/joe-duffy.jpg
     title: Co-Founder and CEO
