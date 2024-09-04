@@ -201,6 +201,8 @@
                             div {
                                 .header-nav-drop-down-heading {
                                     @apply font-medium;
+                                    @include gradient-border;
+                                    @apply pt-1 pb-4 pr-5;
                                 }
                                 .header-nav-drop-down-sub-heading {
                                     @include gradient-border;
@@ -271,6 +273,10 @@
                     .learn {
                         @apply -right-48;
                         min-width: 69ch;
+                    }
+
+                    .company {
+                        min-width: 140px;
                     }
 
                     .dropdown-menu-caret {
