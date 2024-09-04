@@ -1,17 +1,5 @@
 {{ define "hero" }}
-    <header class="home-page-hero">
-        <div class="dot-background-container pointer-events-none">
-            <div class="dot-background"></div>
-        </div>
-        <div class="dot-overlay"></div>
-        <div class="home-page-hero-content p-20">
-            <div class="w-full flex flex-col items-center justify-center">
-                <h1 class="relative">
-                    <span class="rainbow-text" data-text="{{ .Params.heading }}">{{ .Params.heading }}</span>
-                </h1>
-            </div>
-        </div>
-    </header>
+    {{ partial "hero.html" (dict "title" .Params.heading) }}
 {{ end }}
 
 {{ define "main" }}
