@@ -113,8 +113,8 @@ comparison_table:
                   items:
                     - content: Free
                     - content: $0.36
-                    - content: $1.08  Custom
-                    - content: $1.08  Custom
+                    - content: $1.08 / Custom
+                    - content: Custom
                 - title: Included resource/month
                   items:
                     - content: Free
@@ -219,15 +219,15 @@ comparison_table:
                   items:
                     - content: Free
                     - content: $0.50
-                    - content: $0.75/Custom
+                    - content: $0.75 / Custom
                     - content: Custom
-                - title: Price per config
+                - title: Price per plaintext config
                   items:
                     - content: Free
                     - content: Free
                     - content: Free
                     - content: Free
-                - title: Price per 10k API calls
+                - title: Price per 10K API calls
                   items:
                     - content: Free
                     - content: $0.10
@@ -238,13 +238,13 @@ comparison_table:
                     - content: 25
                     - content: 25
                     - content: 25
-                    - content: 25
+                    - content: 
                 - title: Included API calls/month
                   items:
-                    - content: 10
-                    - content: 10
-                    - content: 10
-                    - content: 10
+                    - content: 10K
+                    - content: 10K
+                    - content: 10K
+                    - content: 
                 - title: Commitment discounts
                   items:
                     - content: _blank
@@ -271,6 +271,7 @@ comparison_table:
                     - content: Unlimited
                     - content: Unlimited
                 - title: "# of environments"
+                  link: /docs/esc/environments/
                   items:
                     - content: 10
                     - content: Unlimited
@@ -278,17 +279,19 @@ comparison_table:
                     - content: Unlimited
                 - title: API call limits
                   items:
-                    - content: 10k / month
+                    - content: 10K / month
                     - content: Unlimited
                     - content: Unlimited
                     - content: Unlimited
                 - title: Version history
+                  link: /docs/esc/environments/#versioning-environments
                   items:
                     - content: _blank
                     - content: Up to 5
                     - content: _check
                     - content: _check
                 - title: Version tags and import by tags
+                  link:  /docs/esc/environments/#tagging-versions
                   items:
                     - content: _blank
                     - content: _blank
@@ -296,7 +299,7 @@ comparison_table:
                     - content: _check
                 - title: Integrations - Dynamic credentials
                   items:
-                    - content: _blank
+                    - content: _check
                     - content: _check
                     - content: _check
                     - content: _check
@@ -313,6 +316,7 @@ comparison_table:
                     - content: _check
                     - content: _check
                 - title: Multi-language SDKs
+                  link: /docs/esc/sdk/
                   items:
                     - content: _check
                     - content: _check
@@ -327,18 +331,18 @@ comparison_table:
             ## Pulumi Deployments table
             - header: Pulumi Deployments
               rows:
-                - title: Minutes included
+                - title: Minutes included/month
                   items:
-                    - content: 500/month
-                    - content: 3,000/month
-                    - content: 3,000/month
-                    - content: 3,000/month
+                    - content: 500
+                    - content: 3,000
+                    - content: 3,000
+                    - content: 3,000
                 - title: Cost per minute
                   items:
                     - content: _blank
                     - content: $0.01
-                    - content: Starts at $0.01
-                    - content: Starts at $0.01
+                    - content: $0.01 / Custom
+                    - content: $0.01 / Custom
                 - title: Drift detection
                   link: /docs/pulumi-cloud/deployments/drift/
                   items:
@@ -367,6 +371,7 @@ comparison_table:
                     - content: 25
                     - content: 150
                 - title: Self-hosted deployment runners
+                  link: /docs/pulumi-cloud/deployments/customer-managed-agents/
                   items:
                     - content: Available
                     - content: Available
@@ -389,18 +394,21 @@ comparison_table:
                     - content: Available
                     - content: _check
                 - title: Compliance-ready policies
+                  link: /docs/using-pulumi/crossguard/compliance-ready-policies/
                   items:
                     - content: _blank
                     - content: _blank
                     - content: Available
                     - content: _check
                 - title: Remediation policies
+                  link: /docs/using-pulumi/crossguard/core-concepts/#enforcement-levels
                   items:
                     - content: _blank
                     - content: _blank
                     - content: Available
                     - content: _check
                 - title: Dashboard for policy violations
+                  link: /docs/using-pulumi/crossguard/policy-violations/
                   items:
                     - content: _blank
                     - content: _blank
@@ -418,13 +426,14 @@ comparison_table:
               subheader: Fully-managed IaC Platform
               rows:
                 - title: Pulumi Co-pilot
+                  link: /docs/pulumi-cloud/copilot/
                   items:
                     - content: _blank
                     - content: _check
                     - content: _check
                     - content: _check
                 - title: Webhooks
-                  link:
+                  link: /docs/pulumi-cloud/webhooks/
                   items:
                     - content: _blank
                     - content: _check
@@ -498,6 +507,13 @@ comparison_table:
                     - content: _blank
                     - content: _blank
                     - content: _check
+                - title: OIDC Support
+                  link: /docs/pulumi-cloud/oidc/
+                  items:
+                    - content: _check
+                    - content: _check
+                    - content: _check
+                    - content: _check                
                 - title: Create and manage teams
                   link: /docs/pulumi-cloud/access-management/teams/
                   items:
@@ -507,6 +523,14 @@ comparison_table:
                     - content: _check
                 - title: Role-based access control (RBAC)
                   link: /docs/pulumi-cloud/organizations#organization-roles
+                  items:
+                    - content: _blank
+                    - content: _blank
+                    - content: _check
+                    - content: _check
+                - title: Organization and Team Access Tokens
+                  link: /docs/pulumi-cloud/access-management/organization-access-tokens/
+                  tooltip: These are machine access tokens that are scoped to the organization or team level
                   items:
                     - content: _blank
                     - content: _blank
@@ -526,14 +550,6 @@ comparison_table:
                     - content: _blank
                     - content: _blank
                     - content: _check
-                - title: Organization and Team Access Tokens
-                  link: /docs/pulumi-cloud/access-management/organization-access-tokens/
-                  tooltip: These are machine access tokens that are scoped to the organization or team level
-                  items:
-                    - content: _blank
-                    - content: _blank
-                    - content: _check
-                    - content: _check
 
             ## Support table
             - header: Support
@@ -546,12 +562,6 @@ comparison_table:
                     - content: _check
                     - content: _check
                     - content: _check
-                - title: Support
-                  items:
-                    - content: _blank
-                    - content: _blank
-                    - content: Available
-                    - content: Available
                 - title: Ticketing & email support
                   items:
                     - content: _blank
@@ -564,31 +574,13 @@ comparison_table:
                     - content: _blank
                     - content: Available
                     - content: Available
-                - title: Normal ticket service level objective
-                  items:
-                    - content: _blank
-                    - content: _blank
-                    - content: Variable
-                    - content: Variable
-                - title: Urgent ticket service level objective
-                  items:
-                    - content: _blank
-                    - content: _blank
-                    - content: Variable
-                    - content: Variable
-                - title: Advisor access
+                - title: Professional services
                   items:
                     - content: _blank
                     - content: _blank
                     - content: Available
                     - content: Available
                 - title: Onboarding and training
-                  items:
-                    - content: _blank
-                    - content: _blank
-                    - content: Available
-                    - content: Available
-                - title: Professional services
                   items:
                     - content: _blank
                     - content: _blank
@@ -615,7 +607,7 @@ faq:
           answer: |
             Resources are billed hourly as Pulumi Credits. 1 Pulumi Credit is the price for managing one resource for one hour. The Price per credit for Team and Enterprise is $0.0005 and $0.0015 respectively,
 
-            For billing purposes, partial resource hour used is billed as a full hour and we count any resource that's declared in a Pulumi program. This includes provider resources (e.g., an Amazon S3 bucket), component resources which are groupings of resources (e.g., an Amazon EKS cluster), and stacks which contain resources (e.g., dev, test, prod stacks).
+            For billing purposes, partial resource hour used is billed as a full hour and we count any resource that's declared in a Pulumi program. This includes [provider resources](/docs/concepts/resources#custom-resources) (e.g., an Amazon S3 bucket), [component resources](/docs/concepts/resources#components) which are groupings of resources (e.g., an Amazon EKS cluster), and [stacks](/docs/concepts/stack) which contain resources (e.g., dev, test, prod stacks).
 
             You consume one Pulumi Credit to manage each resource for an hour. For example, one stack containing one S3 bucket and one EC2 instance is three resources that are counted in your bill.
         - question: How are secrets billed?
@@ -637,23 +629,23 @@ faq:
           answer: |
             There are several ways you can estimate the number of resources you have managed with Pulumi.
 
-            - If using Pulumi Cloud: Navigate to the dashboard and review the resource graph titled “Resource Count over Time.”
+            - <u>If using Pulumi Cloud</u>: Navigate to the dashboard and review the resource graph titled “Resource Count over Time.”
 
-            - If using Pulumi with a self-managed backend: Export your stack state and count the number of lines with a universal resource name (URN). You can pipe the state through a grep command for "urn" to estimate the number of resources.
+            - <u>If using Pulumi with a self-managed backend</u>: Export your stack state and count the number of lines with a universal resource name (URN). You can pipe the state through a grep command for "urn" to estimate the number of resources.
 
-            If you haven't deployed anything with Pulumi: See the previous FAQ for a few examples of applications and their number of resources.
+            - <u>If you haven't deployed anything with Pulumi</u>: See the previous FAQ for a few examples of applications and their number of resources.
         - question: What are some examples of how many resources are needed for my use case?
           answer: |
             [**Serverless API with Amazon API Gateway and AWS Lambda**](https://github.com/pulumi/examples/tree/master/aws-ts-apigatewayv2-http-api)  
-            - Estimated resources: 9  
+            Estimated resources: <b>9</b><br>
             This scenario is a stack with an Amazon API Gateway, an AWS Lambda event handler, and associated IAM roles. 
 
             [**Amazon EKS running in a VPC**](https://github.com/pulumi/examples/tree/master/aws-py-eks)  
-            - Estimated resources: 20  
+            Estimated resources: <b>20</b><br>
             This scenario is a stack with an Amazon VPC (including subnets, internet gateway, security groups, and route table), Amazon EKS cluster and node group, and associated IAM roles. 
 
             [**Amazon ECS cluster and RDS backend running in a VPC**](https://github.com/pulumi/examples/tree/master/aws-py-wordpress-fargate-rds)  
-            - Estimated resources: 24  
+            Estimated resources: <b>24</b><br>
             This scenario is a stack with an Amazon VPC (including subnets, security groups, and route table associations), Amazon ECS (including cluster and service, load balancer resources, and IAM resources), and Amazon RDS (including RDS instance and subnet group). Each group of resources (VPC, ECS, RDS) is represented by a component resource.
         - question: Can I prepay for resources, secrets, and secrets API calls?
           answer: Yes, you can! Please contact us to discuss the Enterprise and Business Critical Editions, which include bulk discounts for buying in advance.
@@ -732,7 +724,7 @@ faq:
         - question: What if I am not satisfied with my Pulumi purchase?
           answer: If you're not satisfied with Pulumi, we offer a 14-day money-back guarantee. No questions asked. [Contact us](/contact/).
         - question: How do I get support for Pulumi?
-          answer: 12 x 5 support is included in Enterprise Edition and 24 x 7 support (includes a private Slack channel and dedicated support) is included in Business Critical Edition. [Contact us](/contact/?form=sales) if you need help or have any questions.
+          answer: 12 x 5, 24 x 7 support, professional and advising services, private slack channel are available to purchase in the Enterprise and Business Critical Edition of Pulumi Cloud. [Contact us](/contact/?form=sales) if you need help or have any questions.
         - question: Does Pulumi charge sales tax?
           answer: You may be charged a sales tax in addition to your usage fees in certain jurisdictions. It will be a separate line item on your bill.
 ---
