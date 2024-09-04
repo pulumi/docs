@@ -5,9 +5,13 @@
 {{ define "main" }}
     <section class="container mx-auto text-center mt-8 mb-16">
         <h2 class="mt-6 mb-12 text-center">Plans for teams of all sizes</h2>
-        <div class="flex flex-row justify-center space-x-4 my-4">
-            <div id="iac-pricing-select" class="text-2xl cursor-pointer border-b-4 border-blue-600 rainbow-text">Infrastructure as Code</div>
-            <div id="esc-pricing-select" class="text-2xl cursor-pointer">Secrets Management</div>
+        <div class="flex flex-row justify-center space-x-4 my-4 border-b-1 border-gray-200">
+            <div id="iac-pricing-select" class="text-2xl cursor-pointer p-2 px-4 rounded-t-lg border-b-4 border-blue-600 bg-gray-100">
+                <div id="iac-pricing-select-text" class="rainbow-text">Infrastructure as Code</div>
+            </div>
+            <div id="esc-pricing-select" class="text-2xl cursor-pointer p-2 px-4 rounded-t-lg border-b-4 border-gray-300">
+                <div id="esc-pricing-select-text">Secrets Management</div>
+            </div>
         </div>
         <p class="max-w-4xl mx-auto mt-6 iac-price">
             The easiest way to adopt Pulumi's <strong>open source</strong> infrastructure as code and more at scale.
