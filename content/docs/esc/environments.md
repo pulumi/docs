@@ -1,12 +1,12 @@
 ---
 title: Environments
-title_tag: Pulumi ESC Environments
-h1: Pulumi ESC Environments
+title_tag: Pulumi ESC environments
+h1: Pulumi ESC environments
 meta_desc: Pulumi ESC allows you to compose and manage hierarchical collections of configuration and secrets and consume them in various ways.
 menu:
   pulumiesc:
     identifier: environments
-    weight: 2
+    weight: 4
 search:
   boost: true
   keywords:
@@ -413,243 +413,6 @@ $ echo $MY_ENV_VAR
 true
 ```
 
-## Running commands with environment variables
-
-You can also run CLI commands directly, using environment variables obtained with Pulumi ESC --- without having to export those variables into the shell first.
-
-To do this, use `esc run <environment-name> <command>`:
-
-```bash
-$ esc run myorg/test aws s3 ls
-2023-10-10 16:09:19 my-s3-bucket
-```
-
-If you need to pass one or more flags to the command, prefix the command with `--`:
-
-```bash
-$ esc run myorg/test -- aws s3 ls s3://my-s3-bucket --recursive --summarize
-...
-Total Objects: 5087
-   Total Size: 2419123156
-```
-
-For additional options and details, see `esc run --help`.
-
-## Importing other environments
-
-Environments can also be composed from other environments.
-
-Different applications are often configured in similar ways and with common values --- for example, an e-commerce site and order-management system both configured to use the same cloud account, database-connection string, and third-party API key. Managing the duplication of these values across multiple configuration files, however, can be difficult, especially when one of those values changes --- e.g., when an API key is regenerated.
-
-To address these challenges, Pulumi ESC allows you to identify common or closely related configuration settings and define them only once, as individual environments, and then _import_ those environments into other, more specialized environments as needed. Imports also allow you to expose certain environments without having to distribute any concrete values and to delegate responsibility for particular environments to other teams in your organization. Environments can import both static and dynamic values, including secrets, from any number of other environments.
-
-In the following example, two environments, `aws-dev` and `stripe-dev`, are used to compose a third environment, `myapp-dev`:
-
-```yaml
-# myorg/aws-dev
-values:
-  aws:
-    region: us-west-2
-    login:
-      fn::open::aws-login:
-        static:
-          accessKeyId:
-            fn::secret: AKIAIOSFODNN7EXAMPLE
-          secretAccessKey:
-            fn::secret: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLE
-```
-
-```yaml
-# myorg/stripe-dev
-values:
-  stripe:
-    apiURL: https://api.stripe.com
-    apiKey:
-      fn::secret: sk_XemWAl12i4x3hZhp4vBKDEXAMPLE
-```
-
-The application-specific `myapp-dev` environment then `imports` these two environments and use their settings to compose new values:
-
-```yaml
-# myorg/myapp-dev
-imports:
-  - aws-dev
-  - stripe-dev
-
-values:
-  greeting: Hello from the dev environment!
-
-  environmentVariables:
-    AWS_ACCESS_KEY_ID: ${aws.login.accessKeyId}
-    AWS_SECRET_ACCESS_KEY: ${aws.login.secretAccessKey}
-    STRIPE_API_KEY: ${stripe.apiKey}
-    STRIPE_API_URL: ${stripe.apiURL}
-    GREETING: ${greeting}
-```
-
-Finally, `esc run` renders `myapp-dev`'s environment variables for use on the command line:
-
-```bash
-$ esc run myorg/myapp-dev -- bash -c 'echo $GREETING'
-Hello from the dev environment!
-
-$ esc run myorg/myapp-dev -- bash -c 'echo $STRIPE_API_URL'
-https://api.stripe.com
-
-$ esc run myorg/myapp-dev -- bash -c 'echo $STRIPE_API_KEY'
-[secret]
-
-$ esc run myorg/myapp-dev -- bash -c 'echo $AWS_SECRET_ACCESS_KEY'
-[secret]
-
-$ echo "'$GREETING'"
-''
-```
-
-Notice in the example that the `environmentVariables` were exposed to the `bash` command, but not to the surrounding shell, and that the values marked as secrets with `fn::secret` were protected from exposure.
-
-## Using environments with Pulumi IaC
-
-With support for Pulumi ESC built into the Pulumi CLI, you can expose an environment's settings and secrets to any or all of your Pulumi stacks, bypassing the need to define and maintain individual configuration settings or secrets "locally" in Pulumi config files. The optional `pulumiConfig` key enables this.
-
-The following example updates the `myorg/myapp-dev` environment by adding a `pulumiConfig` block. This block specifies the [Pulumi configuration](/docs/concepts/config/) settings to expose to the Pulumi stack at runtime:
-
-```yaml
-# myorg/myapp-dev
-imports:
-  - aws-dev
-  - stripe-dev
-
-values:
-  greeting: Hello from the dev environment!
-
-  environmentVariables:
-    AWS_ACCESS_KEY_ID: ${aws.login.accessKeyId}
-    AWS_SECRET_ACCESS_KEY: ${aws.login.secretAccessKey}
-    STRIPE_API_KEY: ${stripe.apiKey}
-    STRIPE_API_URL: ${stripe.apiURL}
-    GREETING: ${greeting}
-
-  # Add a `pulumiConfig` block to expose these settings to your Pulumi stacks.
-  pulumiConfig:
-    aws:region: ${aws.region}
-    stripeApiKey: ${stripe.apiKey}
-    stripeApiURL: ${stripe.apiURL}
-    greeting: ${greeting}
-```
-
-Any stack belonging to the `myorg` organization can inherit these settings by adding the optional `environment` block to its stack-configuration file:
-
-```yaml
-# Pulumi.dev.yaml
-environment:
-  - myapp-dev
-```
-
-Values are accessible using the standard [configuration API](/docs/concepts/config/#code):
-
-```typescript
-// index.ts
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-// Import the values using the standard Pulumi configuration API.
-const config = new pulumi.Config();
-const greeting = config.require("greeting");
-const stripeApiKey = config.requireSecret("stripeApiKey");
-const stripeApiURL= config.requireSecret("stripeApiURL");
-
-const callbackFunction = new aws.lambda.CallbackFunction("callback", {
-    callback: async () => ({
-        statusCode: 200,
-        body: JSON.stringify({
-            greeting,
-
-            // Use them in your program as would any config value.
-            stripeApiURL: process.env.STRIPE_API_URL,
-         }),
-    }),.
-    environment: {
-        variables: {
-            STRIPE_API_URL: stripeApiURL,
-        },
-    },
-});
-
-const functionUrl = new aws.lambda.FunctionUrl("url", {
-    functionName: callbackFunction.name,
-    authorizationType: "NONE",
-});
-
-export const url = functionUrl.functionUrl;
-```
-
-Stacks may only read from environments that belong to the same Pulumi organization.
-
-### With Automation API
-
-You can use ESC with [Automation API](/docs/using-pulumi/automation-api/) in [Node](/docs/reference/pkg/nodejs/pulumi/pulumi/classes/automation.Stack.html#addEnvironments), [Go](https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3@v3.117.0/go/auto#LocalWorkspace.AddEnvironments), and [Python](docs/reference/pkg/python/pulumi/#pulumi.automation.LocalWorkspace.add_environments). The following methods are supported today:
-
-* `addEnvironments(...)`: Append environments to your Pulumi stack's [import](/docs/esc/environments/#using-environments-with-pulumi-iac) list.
-* `listEnvironments()`: Retrieve a list of environments currently imported into your stack.
-* `removeEnvironment(environment)`: Remove a specific environment from your stack's import list.
-
-## Versioning Environments
-
-Every time you make changes and save an environment, a new, immutable **revision** is created. You can see the history of revisions using `esc env version history` or in the Pulumi Cloud Console.
-
-```bash
-$ esc env version history myorg/test
-revision 3 (tag: latest)
-Author: <Name> <User-ID>
-Date: 2024-04-18 12:42:18.02 -0700 PDT
-
-revision 2
-...
-```
-
-Compare revisions using `esc env diff`.
-
-```bash
-$ esc env diff myorg/test@3 myorg/test@2
- Value
-
-    --- myorg/test@3
-    +++ myorg/test@2
-...
-```
-
-### Tagging Versions
-
-You can tag your revisions with meaningful names like `prod`, `stable`, `v1.1.2`. Each environment has a built-in `latest` tag that always points to the environment’s most recent revision. Use `esc env version tag` to tag a revision. In the following example we are assign `prod` tag to revision 3 of environment `test`.
-
-```bash
-$ esc env version tag myorg/test@prod @3
-```
-
-### Using Tagged Versions
-
-Once you tag a revision, you can use the tag to [open](/docs/esc/environments/#opening-an-environment) a specific environment version.
-
-```bash
-$ esc open myorg/test@prod
-```
-
-You can specify the tagged version when importing the environment. This helps you ensure that you are importing a stable environment version that is not affected by changes.
-
-```yaml
-# Importing in another ESC Environment
-imports:
-  - test@prod
-
-# Importing in Pulumi stack Config
-# Pulumi.dev.yaml
-environment:
-  - test@prod
-```
-
-You can find more commands and options in the [ESC CLI documentation](/docs/esc-cli/).
-
 ## Precedence rules
 
 When multiple environment sources are combined and settings overlap, values are applied successively in the order in which they're imported and defined.
@@ -725,30 +488,6 @@ Diagnostics:
 
 To unset a value inherited from another environment, overwrite it with `null`.
 
-## Setting up access to environments
-
-{{% notes "info" %}}
-Access controls and Teams are only available to organizations using Pulumi Enterprise Edition and Pulumi Business Critical Edition.To learn more about editions visit the [pricing page](/pricing/).
-{{% /notes %}}
-
-### Organization-wide permissions
-
-Go to the `Access Management` page under Settings to set Organization-wide environment permissions. Members of the organization will receive these permissions. By default, the environment permissions for the organization is set to `write`. There are four options:
-
-* `none`: Members have access to none of the environments
-* `read`: Members can view only plaintext key values (i.e., the definition of the environment). They won’t be able to see the secret values in plaintext, run any provider configurations to retrieve credentials or run any functions. They cannot perform any Pulumi IaC operations such as `refresh`, `up`, `destroy` on stacks that imports the environment
-* `open`: Members with ‘open’ permissions can decrypt secrets and see them in plaintext. Additionally, they can get dynamic credentials using provider configurations and evaluate functions defined in the environment. They can perform any Pulumi IaC operation on stacks that import an environment as long as they have ‘write’ access to the stack and ‘open’ access to the environment
-* `write`: Members will have permissions to `open` and `update` any environment
-
-### Team permissions
-
-You can grant environment-wise permissions to members of a Team. There are four roles:
-
-* `Environment reader`: Team members will have `read` permissions
-* `Environment opener`: Team members will have `open` permissions
-* `Environment editor`: Team members will have `write` permissions
-* `Environment admin`: Team members will have `write` and `delete` permissions
-
 ## Deleting an environment
 
 To remove an environment, use `esc env rm [<org-name>/]<environment-name>`:
@@ -759,5 +498,7 @@ This will permanently remove the "myorg/test" environment!
 Please confirm that this is what you'd like to do by typing `myorg/test`: myorg/test
 Environment "myorg/test" has been removed!
 ```
+
+## Renaming an environment
 
 Environments cannot be renamed.
