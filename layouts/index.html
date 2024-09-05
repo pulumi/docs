@@ -1,5 +1,5 @@
 {{ define "hero" }}
-    <header class="home-page-hero shadow">
+    <header class="home-page-hero">
         <div class="home-page-hero-background">
             <div class="flex">
                 <div class="w-full p-6 home-page-hero-text lg:pt-14">
@@ -28,8 +28,10 @@
     {{ $pageContext := . }}
     <!-- Logos carousel -->
     <section class="container mx-auto text-center overflow-hidden px-3 mt-6">
-        <h3 class="text-center mb-4">{{ .Params.customer_logos.title }}</h3>
-        <div class="my-12">
+        <h3 class="text-center text-xl">
+            <a href="/case-studies" class="hover:underline">{{ .Params.customer_logos.title }}</a>
+        </h3>
+        <div class="mb-6">
             {{ partial "stacked-carousel.html" (dict "logos" .Params.customer_logos.logos "single_row" true "gray_hover" true ) }}
         </div>
     </section>
@@ -307,7 +309,7 @@
     <!-- CTAs -->
     <section class="container mx-auto my-24 px-6">
         <div class="flex justify-center">
-            <div class="card ready-cta w-full rounded-xl p-1 gradient">
+            <div class="card ready-cta w-full rounded-xl p-0.5 gradient">
                 <div class="flex justify-center rounded-xl bg-purple-100">
                     <div class="p-8 md:p-16 lg:pt-28 lg:pb-28 inline-flex flex-col items-center">
                         <h2 class="mb-12 text-center">Ready to try Pulumi?</h2>

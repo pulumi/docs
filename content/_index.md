@@ -10,7 +10,7 @@ hero:
     Gain 10x better scale, more productivity, and faster time to market.
   cta_text: Get Started
   cta_link: /docs/get-started/
-  secondary_cta_text: Talk to a human
+  secondary_cta_text: Contact Sales
   secondary_cta_link: /contact/?form=sales
 
 code_faster:
@@ -73,7 +73,7 @@ customer_logos:
     - name: modular-ai
       link: /case-studies/
     - name: korber
-      link: /case-studies/    
+      link: /case-studies/
     - name: lemonade
       link: /case-studies/
     - name: pinecone

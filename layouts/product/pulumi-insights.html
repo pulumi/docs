@@ -6,7 +6,7 @@
     {{ $pageContext := . }}
 
 
-    <section id="overview" class="max-w-5xl mx-auto text-center mt-28 mb-16 px-6">
+    <section id="overview" class="max-w-5xl mx-auto text-center mb-16 px-6">
         {{ with .Params.overview }}
             <h2>{{ .titleTop }}<br />{{ .titleBottom }}</h2>
             <p>{{ .description | markdownify }}</p>

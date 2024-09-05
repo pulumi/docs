@@ -1,21 +1,17 @@
 {{ define "hero" }}
-    <header class="home-page-hero">
-        <div class="dot-background-container pointer-events-none">
-            <div class="dot-background"></div>
-        </div>
-        <div class="dot-overlay"></div>
-        <div class="home-page-hero-content pb-12">
+    <header class="page-hero">
+        <div class="page-hero-title">
             <h1 class="flex flex-col items-center">
                 <span class="rainbow-text inline-block text-center">Pulumi ESC</span>
             </h1>
-            <p class="text-center leading-7">Environments, Secrets, and Configuration</p>
         </div>
     </header>
 {{ end }}
 
 {{ define "main" }}
     {{ $pageContext := . }}
-    <section id="overview" class="container mx-auto my-16 lg:mt-16 lg:mb-8 px-6">
+    <section id="overview" class="container mx-auto mb-16 lg:mb-8 px-6">
+        <h2 class="text-center leading-7 pb-12">Environments, Secrets, and Configuration</h2>
         <div class="lg:flex">
             <div class="lg:w-1/2 lg:order-last mb-8 lg:mb-0 relative h-full">
                 <div class="rounded-xl shadow-2xl relative h-0 overflow-hidden" style="padding-bottom: 50.25%;">
