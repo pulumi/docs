@@ -33,9 +33,9 @@
                 <div class="hidden lg:block w-full h-10"></div>
                 <div class="w-full card bg-white h-full p-8">
                     {{ with .Params.tiers.free }}
-                    <div class="lg:h-24 xl:h-11">
-                        <h4 class="text-center">{{ .title }}</h4>
-                    </div>
+                        <div class="lg:h-24 xl:h-11">
+                            <h4 class="text-center">{{ .title }}</h4>
+                        </div>
                         <div class="lg:h-16 mb-4">
                             <p class="text-sm">{{ .subtitle }}</p>
                         </div>
@@ -50,7 +50,7 @@
                             <div class="text-center text-xs">{{ .esc_note }}</div>
                         </div>
                         <div class="flex flex-col justify-center align-center items-center text-center my-4 lg:h-14">
-                            <a href="{{ .primary_cta_link}}" class="text-white text-s bg-violet-600 border-2 border-violet-600 rounded-full py-2 px-2 hover:bg-violet-500">{{ .primary_cta }}</a>
+                            <pricing-cta button-class="text-white text-s bg-violet-600 border-2 border-violet-600 rounded-full py-2 px-2 hover:bg-violet-500"></pricing-cta>
                         </div>
                         <div class="border-dotted border-2 border-gray-200 rounded-lg px-4">
                             <div class="text-sm">{{ .items | markdownify }}</div>
