@@ -89,8 +89,6 @@ tiers:
                   - Professional services and training
 
 customers:
-    - stat: "**10x** faster development cycles"
-      logo: aptos
     - stat: "**80%** reduction in deployment times - from weeks to hours"
       logo: unity
     - stat: "**99%** reduction resource creation times - from 12 hours to 5 minutes"

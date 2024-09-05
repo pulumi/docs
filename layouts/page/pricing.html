@@ -121,7 +121,7 @@
                     <div class="card p-8 text-center h-full flex flex-col justify-between">
                         <h6>{{ $customer.stat | markdownify }}</h6>
                         {{ if eq $customer.logo "snowflake"}}
-                            <div class="h-10 mt-4">
+                            <div class="h-10 mt-4 -mb-2">
                                 {{ partial "customer-logo.html" (dict "logo" $customer.logo) }}
                             </div>
                         {{ else if eq $customer.logo "unity" }}
