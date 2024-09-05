@@ -1,5 +1,5 @@
 ---
-title: "Pulumiup Global Cloud Iac Platform Engineering Ai Conference"
+title: "PulumiUP 2024: Dive Into the Future of Cloud, Platform Engineering, and AI/ML"
 
 # The date represents the post's publish date, and by default corresponds with
 # the date and time this file was generated. Dates are used for display and
@@ -7,7 +7,7 @@ title: "Pulumiup Global Cloud Iac Platform Engineering Ai Conference"
 # published. To influence the ordering of posts published on the same date, use
 # the time portion of the date value; posts are sorted in descending order by
 # date/time.
-date: 2024-09-05T17:04:40Z
+date: 2024-09-11T09:04:40Z
 
 # The draft setting determines whether a post is published. Set it to true if
 # you want to be able to merge the post without publishing it.
@@ -17,7 +17,7 @@ draft: false
 # of the content of the post, which is useful for targeting search results or
 # social-media previews. This field is required or the build will fail the
 # linter test. Max length is 160 characters.
-meta_desc:
+meta_desc: Join 5,000+ engineers at PulumiUP 2024! Explore talks on Cloud, DevOps, Platform Engineering & AI/ML. Register now to build your schedule and level up!
 
 # The meta_image appears in social-media previews and on the blog home page. A
 # placeholder image representing the recommended format, dimensions and aspect
@@ -28,11 +28,17 @@ meta_image: meta.png
 # `id` properties of the team member files at /data/team/team. Create a file for
 # yourself if you don't already have one.
 authors:
-    - joe-duffy
+    - sara-huddleston
 
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
-    - change-me
+    - pulumi-events
+    - announcements
+    - platform-engineering
+    - ai
+    - cloud-computing
+    - infrastructure-as-code
+    - community
 
 
 # The social copy used to promote this post on Twitter and Linkedin. These
@@ -48,38 +54,90 @@ tags:
 # https://twitter.com/PulumiCorp/status/1755637618631405655
 
 social:
-    twitter:
+    twitter: Join 5,000+ engineers at PulumiUP 2024! Explore talks on Cloud, DevOps, Platform Engineering & AI/ML. Register now to build your schedule and level up!
     linkedin:
 
 # See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md
 # for details, and please remove these comments before submitting for review.
 ---
 
-What you put here will appear on the index page. In most cases, you'll also want to add a Read More link after this paragraph (though technically, that's optional. To do that, just add an HTML comment like the one below.
+PulumiUP 2024 is just around the corner, happening on September 18th, and with over 5,000 engineers from all over the world already registered, this is shaping up to be the must-attend event for cloud professionals, platform engineers, and AI/ML enthusiasts alike. From entry-level engineers to tech executives, this event brings together professionals from companies of all sizes to explore the latest innovations and best practices.
+
+If you haven’t registered yet, now’s the time! Start building your schedule today, and join us for insightful sessions across our topic tracks: **Cloud and IaC**, **Platform Engineering & DevOps**, and **AI/ML**.
 
 <!--more-->
 
-And then everything _after_ that comment will appear on the post page itself.
+## PulumiUP at Glance
 
-Either way, avoid using images or code samples [in the first 70 words](https://gohugo.io/content-management/summaries/#automatic-summary-splitting) of your post, as these may not render properly in summary contexts (e.g., on the blog home page or in social-media previews).
+- Main Track: Keynote, Cloud Culture Talks, and More
+- AI/ML Track Highlights
+- Platform Engineering & DevOps Track Highlights
+- Cloud and IaC Track Highlights
+- Workshops and Hands-On Learning
+- Amazing Partners and Sponsors
+- Build Your Schedule Now
 
-## Writing the Post
+## Main Track: Keynote, Cloud Culture Talks, and More
 
-For help assembling the content of your post, see [BLOGGING.md](https://github.com/pulumi/docs/blob/master/BLOGGING.md). For general formatting guidelines, see the [Style Guide](https://github.com/pulumi/docs/blob/master/STYLE-GUIDE.md).
+In the Main Track, you’ll hear directly from the Pulumi leadership team about exciting product innovations. Don’t miss the Cloud Culture talks focused on the human side of technology and collaboration.
 
-## Code Samples
+- **[Keynote and New Product Announcements](https://conference.pulumi.com/talks/keynote/)** with Joe Duffy (Co-founder and CEO), Luke Hoban (CTO), and other key Pulumi leaders will unveil new products and innovations shaping the next wave of cloud development. Expect to see live demos showcasing how these tools can revolutionize your workflows, from cloud infrastructure to security automation.
+- **"[Why Care About Building a Cloud Center of Excellence?](https://conference.pulumi.com/talks/why-care-about-building-a-cloud-center-of-excellence/)"** by Alex Radu (VP Product & Marketing Manager, Public Cloud, J.P. Morgan) discusses why building a Cloud Center of Excellence is essential for long-term cloud strategy success.
+- **"[What Is 'HugOps' and Why Is It Important?](https://conference.pulumi.com/talks/what-is-hugops-and-why-is-it-important/)"** by Rees Pozzi (senior platform Engineer, Kainos) explores the meaning and importance of "HugOps," a practice promoting empathy and collaboration in the tech world but also by all those impacted by it.
 
-```typescript
-let bucket = new aws.s3.Bucket("stuff");
-...
-```
+## AI/ML Track Highlights
 
-## Images
+AI is transforming how we approach development and infrastructure, and PulumiUP offers an incredible lineup of talks and panels on the topic.
 
-![Placeholder Image](meta.png)
+- **"[Data Privacy Challenges with Large Language Models](https://conference.pulumi.com/talks/data-privacy-challenges-with-large-language-models/)"** by Aditi Godbole (Data Science, AI & ML Leader, SAP) will address the critical question of managing data privacy addressing LLM basics, AI data privacy fundamentals, and specific privacy issues in LLMs.
+- **"[Pulumi Powered AI/ML on Kubernetes](https://conference.pulumi.com/talks/pulumi-powered-aiml-on-kubernetes/)"** by Jason Smith (App Modernization Specialist, Google Cloud) will show you how to serve an open-source LLM with a RAG on Kubernetes and set up a Kubernetes environment for AI/ML workloads with Pulumi.
+- **"[AI Tools for Developers](https://conference.pulumi.com/talks/AI-tools-for-developers/)"** by Jim Clark (Principal Software Engineer, Docker) will explore how Tools can enhance the capabilities of AI assistants and show how the combination of AI, Tool, and containerized runtimes, can enhance interactions between developers and their tools.
+- **"[The AI Governance Challenge](https://conference.pulumi.com/talks/the-ai-governance-challenge/)"** by Patty O'Callaghan (Technical Director, Charles River) will explore the complexities of AI governance and how to navigate them.
+- **[Panel Discussion: "AI for Cloud Development"](https://conference.pulumi.com/talks/panel-ai-cloud-development/)** featuring industry leaders like Meagan Cojocar (Pulumi), Luke Hoban (Pulumi), Phillip Carter (Honeycomb), Giri Sreenivas (Docker), and Clare Liguori (AWS) will provide diverse perspectives on how AI is shaping cloud infrastructure.
 
-## Videos
+## Platform Engineering & DevOps Track Highlights
 
-{{< youtube "kDB-YRKFfYE?rel=0" >}}
+The Platform Engineering & DevOps track at PulumiUP is perfect for anyone looking to automate infrastructure, secure their systems, and scale their environments with ease. This track features talks and panels on cutting-edge technologies and practices.
 
-Note the `?rel=0` param, which tells YouTube to suggest only videos from same channel.
+- **"[Moving Mountains: How IaC Unlocks Massive Refactoring Possibilities](https://conference.pulumi.com/talks/moving-mountains-how-iac-unlocks-massive-refactoring-possibilities/)"** by Shaun Verch (Oso) will show you how infrastructure as code can transform large-scale refactoring projects.
+- **"[Using Pulumi to Empower Kubernetes Fleet Management](https://conference.pulumi.com/talks/using-pulumi-to-empower-kubernetes-fleet-management/)"** by Blake Romano (Imagine Learning) will show you how Imagine Learning leverages Pulumi to manage a fleet of Kubernetes clusters and other platform resources quickly and reliably, and how it revolutionized their workflow.
+- **"[Streamline Your Infrastructure Deployment with GitOps and Pulumi Operator](https://conference.pulumi.com/talks/streamline-your-infrastructure-deployment-with-gitops-and-pulumi-operator/)"** by Sam Cogan (WTW) will highlight how you can define your infrastructure in Git, and have Pulumi automatically reconcile it into deployed infrastructure.
+- **"[Is This a Platform? Platform Engineering Before PMF](https://conference.pulumi.com/talks/is-this-a-platform-platform-engineering-before-pmf/)"** by Jk Jensen (Team Lead, Staff Software Engineer, MystenLabs) will share how they built their service platform around Pulumi to help engineers and researchers move from prototypes to deployed environments, enabling their teams to iterate more quickly and develop an increasing number of systems without additional complexity.
+- **"[Meet Devs Where They Are: Why IaC Must Be Real Code}(https://conference.pulumi.com/talks/meet-devs-where-they-are-why-iac-must-be-real-code/)"** by Jeremy Adams (Head of Ecosystems, Dagger) presents why real code (that teams already use for applications) is essential for both IaC and CI/CD pipelines, and to meet modern DevOps best practices.
+- **"[Security of IaC Pipelines and Infrastructure Governance With Policies-As-Code](https://conference.pulumi.com/talks/security-of-iac-pipelines-and-infrastructure-governance-with-policiesascode/)"** by Marina Novikova (senior partner Solutions Architect, AWS) and Andy Taylor (senior networking Specialist/ Solutions Architect, AWS) explores security best practices for IaC pipelines and infrastructure governance using policies-as-code, cover best practices for handling sensitive information like access keys, tokens and encryption keys, and scaling and automating your DevSecOps.
+- **[Panel Discussion: "Secrets and Policies—Automating Cybersecurity"](https://conference.pulumi.com/talks/panel-platform-engineering-security/)** with Arun Loganathan (Pulumi), Maya Kaczorowski (Tailscale), Jason Meller (1Password), and Ofir Cohen (Wiz) will explore the intersection of innovation and security, offering insights into how AI is reshaping the threat landscape and how organizations can stay ahead. 
+
+## Cloud and IaC Track Highlights
+
+The Cloud and IaC track is ideal for those wanting to deepen their understanding of infrastructure as code and its impact on modern cloud computing. Learn from industry pioneers and see where the future of IaC is headed.
+
+- **"[From CDK to Pulumi: Evolution of SST](https://conference.pulumi.com/talks/from-cdk-to-pulumi-evolution-of-sst/)"** by Dax Raad and Jay V (SST) will share insights into the early development of their product, initially built on AWS Cloud Development Kit (CDK), the challenges they encountered and the groundbreaking decision to transition to Pulumi.
+- **"[Unified Software Development at BMW Software Factory with Pulumi](https://conference.pulumi.com/talks/unified-software-development-with-pulumi/)"** by Jan-Peter Alten (BMW Group) will showcase how BMW uses Pulumi to unify its software development processes, resulting in an increase in developer productivity, streamlined infrastructure management, and enhanced scalability, security, and compliance across their complex software ecosystem.
+- **"[Stacking Accounts: Multi-Account Deployments in a Single Stack for Monitoring, Management, and More](https://conference.pulumi.com/talks/stacking-accounts-multiaccount-deployments-in-a-single-stack-for-monitoring-management-and-more/)"** by Denis Willett (Software Engineer, North Carolina Institute for Climate Studies) explains how they use Pulumi for managing 60+PB of environmental data across AWS, GCP, and Azure and leverage multi-account deployments in a single stack via the Pulumi Automation API.
+- **"[Using Automation API to Deploy a BYOC SaaS](https://conference.pulumi.com/talks/using-automation-api-to-deploy-a-byoc-saas/)"** by Abhay Bothra (Co-Founder & CTO, Fennel AI) shares insights about how Fennel has created a one-click setup for updating customer environments by leveraging Pulumi automation API.
+- **"[Industrialize the Configuration of Your GitHub Repositories With IaC](https://conference.pulumi.com/talks/industrialize-the-configuration-of-your-github-repositories-with-iac/)"** by Alexandre Nédélec (Software Engineer, Avanade) will live code using the GitHub, Azure native, and Azure AD Pulumi providers to create a GitHub repository and configure its pipeline to deploy to Azure using OpenID Connect.
+- **[Panel Discussion: "Infrastructure as Code — Can We Do Better?"](https://conference.pulumi.com/talks/infrastructure-as-code-can-we-do-better/)** featuring Joe Duffy (Pulumi), Brian Grant (Stealth), Elad Ben-Israel (Winglang), Adam Jacob (System Initiative), and Luke Hoban (Pulumi) will discuss the past, the present, and the future of Infrastructure as Code and the overall infrastructure technologies.
+
+## Workshops and Hands-On Learning
+
+Want to get hands-on experience? Our live workshops are designed to deepen your understanding of trending topics, Pulumi, and its applications.
+
+- **"[Managing Team Secrets with 1Password & Pulumi ESC](https://www.pulumi.com/resources/managing-team-secrets-with-1password-pulumi-esc/)"** on September 25, led by Phil Johnston (1Password) and Diana Esteves (Pulumi).
+- **"[Securing IaC Pipelines in Regulated Industries](https://www.pulumi.com/resources/securing-iac-pipelines-in-regulated-industries/)"** on September 26, led by Josh Kodroff (Pulumi) and Marina Novikova (AWS).
+- **"[Observability as Code for AI Apps with New Relic and Pulumi](https://www.pulumi.com/resources/observability-as-code-for-ai-apps-new-relic/)"** on October 30, led by Diana Esteves (Pulumi) and Harry Kimpel (New Relic).
+
+## Amazing Partners and Sponsors
+
+Thank you to our amazing partners for supporting PulumiUP! 
+
+- **[AWS](https://aws.amazon.com/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP)** yadda yadda?
+- **[Google Cloud](https://cloud.google.com/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP)** yadda yadda?
+- **[New Relic](https://developer.newrelic.com/pulumi/get-started-pulumi/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP)** yadda yadda?
+
+## Build Your Schedule Now
+
+With so many compelling topics across AI/ML, Platform Engineering, DevOps, and Cloud and IaC, now is the time to [build your PulumiUP schedule](https://conference.pulumi.com/schedule/?utm_source=PulumiUP&utm_medium=web&utm_campaign=FY2025Q1_Event_PulumiUP). Choose the sessions that align with your goals and interests to get the most out of this unique virtual event. Whether you're looking to sharpen your skills, discover the latest innovations, or connect with industry leaders, PulumiUP has something for everyone.
+
+Haven’t registered yet? It’s not too late! Join 5,000 engineers worldwide in this groundbreaking event and gain the insights you need to drive innovation at your company. [Register now->](https://www.pulumi.com/pulumi-up/)
+
+We can’t wait to see you there!
