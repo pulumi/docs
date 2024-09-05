@@ -1,5 +1,6 @@
 ---
 title: "PulumiUP 2024: Dive Into the Future of Cloud, Platform Engineering, and AI/ML"
+allow_long_title: true
 
 # The date represents the post's publish date, and by default corresponds with
 # the date and time this file was generated. Dates are used for display and
@@ -38,6 +39,7 @@ tags:
     - ai
     - cloud-computing
     - infrastructure-as-code
+    - devsecops
     - community
 
 
@@ -128,7 +130,7 @@ Want to get hands-on experience? Our live workshops are designed to deepen your 
 
 ## Amazing Partners and Sponsors
 
-Thank you to our amazing partners for supporting PulumiUP! 
+Thank you to our amazing partners for supporting PulumiUP!
 
 - **[AWS](https://aws.amazon.com/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP)** yadda yadda?
 - **[Google Cloud](https://cloud.google.com/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP)** yadda yadda?
