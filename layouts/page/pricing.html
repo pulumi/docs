@@ -1,9 +1,6 @@
-{{ define "hero" }}
-    {{ partial "hero.html" (dict "title" "Pulumi Cloud Pricing" "subtitle" "Plans for teams of all sizes" ) }}
-{{ end }}
-
 {{ define "main" }}
-    <section class="container mx-auto text-center my-16">
+    <h1 class="text-5xl text-center mt-4 text-gray-800">Plans for all team sizes</h1>
+    <section class="container mx-auto text-center mb-16 mt-4">
         <div class="flex flex-row justify-center space-x-4 my-4 border-b-1 border-gray-200">
             <div id="iac-pricing-select" class="text-2xl cursor-pointer p-2 px-4 rounded-t-lg border-b-4 border-blue-600 bg-violet-100">
                 <div id="iac-pricing-select-text" class="rainbow-text">Infrastructure as Code</div>

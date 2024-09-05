@@ -35,7 +35,7 @@ tiers:
               iac_price: $0.36
               iac_unit: per resource/month
               iac_note:
-              esc_price: $0.5
+              esc_price: $0.50
               esc_unit: per secret/month
               esc_note:
               primary_cta: Start free trial
@@ -153,30 +153,7 @@ comparison_table:
                     - content: Host public templates
                     - content: Host private templates
                     - content: Host private templates
-                - title: Resource Search
-                  link: /docs/pulumi-cloud/insights/search/
-                  items:
-                    - content: |
-                        2K results/query  
-                        No property search
-                    - content: |
-                        2K results/query  
-                        No property search
-                    - content: |
-                        10K results in UI,  
-                        unlimited in API,  
-                        Property search included
-                    - content: |
-                        10K results in UI,  
-                        unlimited in API,  
-                        Property search included
-                - title: Data Export
-                  link: /docs/pulumi-cloud/insights/export/
-                  items:
-                    - content: _blank
-                    - content: _blank
-                    - content: _check
-                    - content: _check
+                
                 - title: Restore Deleted Stacks
                   link: /blog/restore-stacks
                   items:
@@ -216,7 +193,7 @@ comparison_table:
             ## Pulumi ESC table
             - header: Pulumi ESC
               rows:
-                - title: Pricer per secret/month
+                - title: Price per secret/month
                   items:
                     - content: Free
                     - content: $0.50
@@ -230,7 +207,7 @@ comparison_table:
                     - content: Free
                 - title: Price per 10K API calls
                   items:
-                    - content: Free
+                    - content: 10K API calls included
                     - content: $0.10
                     - content: $0.10
                     - content: $0.10
@@ -323,7 +300,34 @@ comparison_table:
                     - content: _check
                     - content: _check
                     - content: _check
-
+            
+            ## Pulumi Insights Table
+            - header: Pulumi Insights
+              rows:
+                - title: Resource Search
+                  link: /docs/pulumi-cloud/insights/search/
+                  items:
+                    - content: |
+                        2K results/query  
+                        No property search
+                    - content: |
+                        2K results/query  
+                        No property search
+                    - content: |
+                        10K results in UI,  
+                        unlimited in API,  
+                        Property search included
+                    - content: |
+                        10K results in UI,  
+                        unlimited in API,  
+                        Property search included
+                - title: Data Export
+                  link: /docs/pulumi-cloud/insights/export/
+                  items:
+                    - content: _blank
+                    - content: _blank
+                    - content: _check
+                    - content: _check
         #### 
         # Key Capabilities
         ####
@@ -332,18 +336,18 @@ comparison_table:
             ## Pulumi Deployments table
             - header: Pulumi Deployments
               rows:
-                - title: Minutes included/month
-                  items:
-                    - content: 500
-                    - content: 3,000
-                    - content: 3,000
-                    - content: 3,000
                 - title: Cost per minute
                   items:
                     - content: _blank
                     - content: $0.01
                     - content: $0.01 / Custom
                     - content: $0.01 / Custom
+                - title: Minutes included/month
+                  items:
+                    - content: 500
+                    - content: 3,000
+                    - content: 3,000
+                    - content: 3,000
                 - title: Drift detection
                   link: /docs/pulumi-cloud/deployments/drift/
                   items:
@@ -415,6 +419,16 @@ comparison_table:
                     - content: _blank
                     - content: Available
                     - content: _check
+            ## Copilot Table
+            - header: Pulumi Copilot
+              rows:
+                - title: Pulumi Copilot
+                  link: /docs/pulumi-cloud/copilot/
+                  items:
+                    - content: _blank
+                    - content: _check
+                    - content: _check
+                    - content: _check
 
 
         #### 
@@ -424,15 +438,7 @@ comparison_table:
           tables:
             ## Core table
             - header: Core
-              subheader: Fully-managed IaC Platform
               rows:
-                - title: Pulumi Co-pilot
-                  link: /docs/pulumi-cloud/copilot/
-                  items:
-                    - content: _blank
-                    - content: _check
-                    - content: _check
-                    - content: _check
                 - title: Webhooks
                   link: /docs/pulumi-cloud/webhooks/
                   items:
@@ -563,12 +569,24 @@ comparison_table:
                     - content: _check
                     - content: _check
                     - content: _check
-                - title: Ticketing & email support
+                - title: Support
                   items:
                     - content: _blank
                     - content: _blank
-                    - content: Available
-                    - content: Available
+                    - content: Available, 12x5 / 24x7 support
+                    - content: Available, 12x5 / 24x7 support
+                - title: Normal ticket SLA
+                  items:
+                    - content: _blank
+                    - content: _blank
+                    - content: Available, 1 or 5 business days
+                    - content: Available, 1 or 5 business days
+                - title: Urgent ticket SLA
+                  items:
+                    - content: _blank
+                    - content: _blank
+                    - content: Available, 1 hour or 1 business day
+                    - content: Available, 1 hour or 1 business day
                 - title: Private Slack channel
                   items:
                     - content: _blank
