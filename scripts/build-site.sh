@@ -23,8 +23,6 @@ export REL_JS_BUNDLE="/js/bundle.min.${ASSET_BUNDLE_ID}.js"
 printf "Copying prebuilt docs...\n\n"
 make copy_static_prebuilt
 
-./scripts/content/generate-compliance-pages.sh
-
 printf "Running Hugo...\n\n"
 if [ "$1" == "preview" ]; then
     export HUGO_BASEURL="http://$(origin_bucket_prefix)-$(build_identifier).s3-website.$(aws_region).amazonaws.com"
