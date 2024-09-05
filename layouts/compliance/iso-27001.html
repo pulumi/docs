@@ -1,0 +1,278 @@
+{{ define "main" }}
+{{ partial "hero.html" (dict "title" .Title) }}
+<section class="px-4 md:px-0">
+    <div class="container mx-auto max-w-4xl text-center my-16 px-6">
+        <h2>{{ .Title }}</h2>
+        <p>
+            ISO 27001 compliance is essential for ensuring the security and management of sensitive
+            information across your organization. Pulumi can assist you in making your AWS cloud
+            infrastructure ISO 27001 compliant. Pulumi can help you identify existing cloud resources
+            that do not meet ISO 27001 standards, and it can also enforce security policies proactively
+            before infrastructure is deployed. Get started with Pulumi to leverage these compliance tools,
+            or speak with a Solutions Architect to receive expert consultation on achieving ISO 27001
+            certification.
+        </p>
+        <div class="flex flex-row flex-wrap justify-center mt-10">
+            <a href="#sa-form" rel="noopener noreferrer" class="m-2 btn-primary">Speak with a Solutions Architect</a>
+            <a href="/get-started/" rel="noopener noreferrer" class="m-2 btn-secondary">Get Started with Pulumi</a>
+        </div>
+    </div>
+</section>
+<section class="mt-4 py-4 px-4 md:px-0">
+    <div class="container mx-auto max-w-4xl">
+        <h3>What is ISO 27001 Compliance?</h3>
+        <p>
+            {{ .Params.description }}
+        </p>
+    </div>
+</section>
+<section class="mt-4 py-4 px-4 md:px-0">
+    <div class="container mx-auto max-w-4xl">
+        <h3>Key Aspects of ISO 27001 Compliance</h3>
+        <ol>
+            <li>
+                <strong>Risk Management</strong>: ISO 27001 requires organizations to
+                assess risks related to their information assets and implement controls
+                to mitigate these risks.
+            </li>
+
+            <li>
+                <strong>Security Controls</strong>: The standard includes a
+                comprehensive set of security controls (outlined in Annex A) that cover
+                areas like access control, cryptography, physical security, and incident
+                management.
+            </li>
+
+            <li>
+                <strong>ISMS Implementation</strong>: Organizations must establish an
+                ISMS, which is a systematic approach to managing sensitive company
+                information so that it remains secure. This involves setting policies,
+                procedures, and controls.
+            </li>
+
+            <li>
+                <strong>Continuous Improvement</strong>: ISO 27001 emphasizes the
+                importance of continually monitoring, reviewing, and improving the ISMS
+                to adapt to changing security risks and business needs.
+            </li>
+
+            <li>
+                <strong>Compliance and Certification</strong>: Organizations can seek
+                certification to ISO 27001 by undergoing an external audit conducted by
+                a certification body. Certification demonstrates that an organization
+                has implemented best practices for information security management.
+            </li>
+
+            <li>
+                <strong>Legal and Regulatory Requirements</strong>: ISO 27001 helps
+                organizations comply with legal, regulatory, and contractual obligations
+                related to information security.
+            </li>
+        </ol>
+    </div>
+</section>
+{{ if eq .Params.cloud .Params.service }}
+<section class="mt-4 py-4 px-4 md:px-0">
+    <div class="container mx-auto max-w-4xl">
+        <h3>ISO 27001 Compliance for your AWS infrastructure</h3>
+        <p>
+            To make your {{ .Params.full }} compliant with ISO 27001, you need to align
+            your information security management practices with the ISO 27001 standard.
+            Below is a checklist to guide you through the necessary steps:
+        </p>
+        <h4>1. Establish an Information Security Management System (ISMS)</h4>
+        <ul>
+            <li>
+                <strong>Define the ISMS Scope:</strong> Determine the scope of your
+                ISMS, including which parts of your infrastructure will be covered.
+            </li>
+
+            <li>
+                <strong>Develop Security Policies:</strong> Create and document
+                information security policies that align with ISO 27001 requirements.
+            </li>
+
+            <li>
+                <strong>Set Security Objectives:</strong> Define clear security
+                objectives and ensure they align with your organization's strategic
+                goals.
+            </li>
+        </ul>
+        <h4>2. Conduct a Risk Assessment</h4>
+        <ul>
+            <li>
+                <strong>Identify Information Assets:</strong> Identify all information
+                assets associated with your {{ .Params.full }}, such as data stored,
+                applications running, and network configurations.
+            </li>
+
+            <li>
+                <strong>Assess Risks:</strong> Perform a risk assessment to identify
+                potential threats and vulnerabilities that could impact the security of
+                your {{ .Params.full }}.
+            </li>
+
+            <li>
+                <strong>Risk Treatment Plan:</strong> Develop a risk treatment plan to
+                address identified risks, using ISO 27001's Annex A controls where
+                applicable.
+            </li>
+        </ul>
+        <h4>3. Implement Security Controls</h4>
+        <ul>
+            <li>
+                <strong>Access Control:</strong> Ensure that access to your {{ .Params.full }}
+                is restricted to authorized personnel only. Use AWS Identity and Access
+                Management (IAM) to enforce least privilege access.
+            </li>
+
+            <li>
+                <strong>Encryption:</strong> Encrypt data at rest and in transit. Use
+                AWS services like AWS Key Management Service (KMS) and enable HTTPS/TLS
+                for secure communication.
+            </li>
+
+            <li>
+                <strong>Logging and Monitoring:</strong> Enable CloudTrail, AWS Config,
+                and VPC Flow Logs to monitor access and activity on your {{ .Params.full }}.
+                Regularly review logs for any suspicious activity.
+            </li>
+
+            <li>
+                <strong>Backups and Recovery:</strong> Implement automated backups of
+                your data and ensure that recovery procedures are in place. Use services
+                like AWS Backup or snapshots.
+            </li>
+        </ul>
+        <h4>4. Leadership and Commitment</h4>
+        <ul>
+            <li>
+                <strong>Management Support:</strong> Ensure that senior management is
+                involved and supports the ISMS. They should provide the necessary
+                resources and demonstrate commitment to information security.
+            </li>
+
+            <li>
+                <strong>Define Roles and Responsibilities:</strong> Clearly define and
+                document the roles and responsibilities of personnel involved in
+                managing your infrastructure and information security.
+            </li>
+        </ul>
+        <h4>5. Awareness and Training</h4>
+        <ul>
+            <li>
+                <strong>Security Awareness Training:</strong> Provide regular training
+                to all personnel involved on information security best practices and
+                ISO 27001 requirements.
+            </li>
+
+            <li>
+                <strong>Competency Development:</strong> Ensure that personnel have the
+                necessary skills and knowledge to manage the {{ .Params.full }} securely.
+            </li>
+        </ul>
+        <h4>6. Operational Security</h4>
+        <ul>
+            <li>
+                <strong>Patch Management:</strong> Regularly update and patch the
+                operating system, applications, and any dependencies running on your
+                {{ .Params.full }}.
+            </li>
+
+            <li>
+                <strong>Configuration Management:</strong> Securely configure your
+                {{ .Params.full }}, following best practices for reducing attack
+                surfaces, such as disabling unnecessary services and restricting administrative access.
+            </li>
+
+            <li>
+                <strong>Incident Response:</strong> Develop and document an incident
+                response plan. Ensure that you can quickly detect, respond to, and
+                recover from security incidents involving your {{ .Params.full }}.
+            </li>
+        </ul>
+        <h4>7. Supplier Management</h4>
+        <ul>
+            <li>
+                <strong>Third-Party Risks:</strong> Ensure that any third-party services
+                you use (e.g., for payment processing or backups) are also compliant
+                with ISO 27001 or have robust security measures in place.
+            </li>
+
+            <li>
+                <strong>Service Level Agreements (SLAs):</strong> Establish SLAs that
+                include information security requirements with third-party providers.
+            </li>
+        </ul>
+        <h4>8. Performance Evaluation</h4>
+        <ul>
+            <li>
+                <strong>Regular Audits:</strong> Conduct internal audits to assess the
+                effectiveness of the security controls and the ISMS in relation to your
+                {{ .Params.full }} resources.
+            </li>
+
+            <li>
+                <strong>Monitoring and Review:</strong> Regularly monitor security
+                metrics, review logs, and perform security reviews to ensure ongoing
+                compliance.
+            </li>
+        </ul>
+        <h4>9. Continuous Improvement</h4>
+        <ul>
+            <li>
+                <strong>Corrective Actions:</strong> When non-conformities are
+                identified (e.g., during an audit or security incident), take corrective
+                actions to address them and prevent recurrence.
+            </li>
+
+            <li>
+                <strong>ISMS Improvement:</strong> Continuously improve the ISMS by
+                updating policies, procedures, and controls based on lessons learned and
+                changing risk landscapes.
+            </li>
+        </ul>
+        <h4>10. Certification</h4>
+        <ul>
+            <li>
+                <strong>External Audit:</strong> Engage an accredited certification body
+                to conduct an audit of your ISMS. This process typically involves a
+                documentation review (Stage 1) followed by an assessment of the
+                implementation of controls (Stage 2).
+            </li>
+
+            <li>
+                <strong>Surveillance Audits:</strong> After achieving certification, be
+                prepared for regular surveillance audits to ensure continued compliance
+                with ISO 27001.
+            </li>
+        </ul>
+        <h4>11. Documentation</h4>
+        <ul>
+            <li>
+                <strong>Maintain Documentation:</strong> Keep thorough records of your
+                security policies, risk assessments, treatment plans, audits, and any
+                changes to the ISMS.
+            </li>
+
+            <li>
+                <strong>Security Policy:</strong> Ensure that your security policy is
+                communicated to all relevant stakeholders and is reviewed regularly.
+            </li>
+        </ul>
+        <p>
+            By following these steps, you'll align your {{ .Params.full }} with ISO 27001
+            requirements and help ensure the security of your information assets.
+            Remember that achieving ISO 27001 compliance is an ongoing process,
+            requiring regular reviews and updates to your ISMS.
+        </p>
+    </div>
+</section>
+{{end}}
+
+{{ partial "compliance/insights.html" . }}
+
+<div class="p-4">
+    {{ partial "learnmore-contactus.html" . }}
+</div>
+{{ end }}
