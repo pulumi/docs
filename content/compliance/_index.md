@@ -1,4 +1,4 @@
 ---
 title: Compliance
-meta_desc: add meta desc here add meta desc here add meta desc here add meta desc here add meta desc here
+meta_desc: Pulumi helps achieve compliance by enforcing security, cost, and compliance requirements. Speak with an expert to get started.
 ---
