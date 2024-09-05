@@ -29,7 +29,7 @@ full: $(decodeService '.full')
 description: "$(_jq '.description')"
 whatis: "$(decodeService '.whatis')"
 page_type: service
-meta_desc: Pulumi can assist you with making your $(decodeService '.name') resources $(_jq '.framework') compliant. Get in touch with our Solutions Architects to learn more.
+meta_desc: Pulumi helps achieve $(_jq '.framework') compliance for $(_jq '.cloud') $(decodeService '.name') by enforcing security, cost, and compliance requirements. Speak with an expert to get started.
 ---
 
 EOF
@@ -41,13 +41,13 @@ EOF
 title: "$(_jq '.framework') Compliance for $(_jq '.cloud')"
 cloud: $(_jq '.cloud')
 layout: "$layout"
-slug: $(echo "$(_jq '.cloud')-$(_jq '.framework')" | awk '{print tolower($0)}')
+slug: $(echo "$(_jq '.framework')-$(_jq '.cloud')" | awk '{print tolower($0)}' | sed 's/ /-/g')
 framework: $(_jq '.framework')
 service: "$(_jq '.cloud')"
 full: "$(_jq '.cloud') cloud infrastructure"
 description: "$(_jq '.description')"
 page_type: cloud
-meta_desc: Pulumi can assist you with making your $(_jq '.cloud') cloud infrastructure $(_jq '.framework') compliant. Get in touch with our Solutions Architects to learn more.
+meta_desc: Pulumi helps achieve $(_jq '.framework') compliance for $(_jq '.cloud') by enforcing security, cost, and compliance requirements. Speak with an expert to get started.
 ---
 
 EOF
