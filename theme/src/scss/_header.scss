@@ -202,7 +202,6 @@
                                 .header-nav-drop-down-heading {
                                     @apply font-medium;
                                     @include gradient-border;
-                                    @apply pt-1 pb-4 pr-5;
                                 }
                             }
 
@@ -359,6 +358,11 @@
                 }
             }
 
+            .mobile-menu-sub-heading {
+                @include gradient-border;
+                border-bottom: 1px solid;
+            }
+
             [class*="mobile-menu-subitems-"] {
                 @apply mt-2 text-base hidden;
                 flex-basis: 100%;
@@ -412,6 +416,21 @@
 
             #learn-mobile-menu:checked ~ {
                 .mobile-menu-subitems-learn {
+                    @apply block;
+                }
+
+                .mobile-menu-heading {
+                    color: $brand-violet;
+                }
+
+                label > span.dropdown-menu-caret {
+                    @apply opacity-50;
+                    transform: rotate(180deg);
+                }
+            }
+
+            #company-mobile-menu:checked ~ {
+                .mobile-menu-subitems-company {
                     @apply block;
                 }
 
