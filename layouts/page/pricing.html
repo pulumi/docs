@@ -28,59 +28,34 @@
             </div>
         </div>
 
-        <div class="container mx-auto lg:flex items-stretch">
-            <div class="w-full lg:w-1/4 p-8 lg:p-0 lg:pr-4">
-                <div class="hidden lg:block w-full h-10"></div>
-                <div class="w-full card bg-white h-full p-8">
-                    {{ with .Params.tiers.free }}
-                        <div class="lg:h-24 xl:h-11">
-                            <h4 class="text-center">{{ .title }}</h4>
-                        </div>
-                        <div class="lg:h-16 mb-4">
-                            <p class="text-sm">{{ .subtitle }}</p>
-                        </div>
-                        <div class="iac-price lg:h-20">
-                            <div class="text-center text-2xl font-semibold">{{ .iac_price }}</div>
-                            <div class="text-center text-sm">{{ .iac_unit }}</div>
-                            <div class="text-center text-xs">{{ .iac_note }}</div>
-                        </div>
-                        <div class="esc-price lg:h-20 hidden">
-                            <div class="text-center text-2xl font-semibold">{{ .esc_price }}</div>
-                            <div class="text-center text-sm">{{ .esc_unit }}</div>
-                            <div class="text-center text-xs">{{ .esc_note }}</div>
-                        </div>
-                        <div class="flex flex-col justify-center align-center items-center text-center my-4 lg:h-14">
-                            <pricing-cta button-class="text-white text-s bg-violet-600 border-2 border-violet-600 rounded-full py-2 px-2 hover:bg-violet-500"></pricing-cta>
-                        </div>
-                        <div class="border-dotted border-2 border-gray-200 rounded-lg px-4">
-                            <div class="text-sm">{{ .items | markdownify }}</div>
-                        </div>
-                    {{ end }}
-                </div>
-            </div>
-            <div class="w-full lg:w-3/4 p-8 lg:p-0 lg:pl-4">
+        <div class="container mx-auto lg:flex">
+            <div class="w-full p-8 lg:p-0">
                 <div class="hidden lg:block w-full h-10">
                     <div class="h-full justify-end flex">
-                        <div class="w-1/3 flex justify-center items-center rounded-t-full bg-purple-200">Most Popular</div>
-                        <div class="w-1/3 flex justify-center items-center rounded-t-full bg-gray-200 text-blue-600 underline"><a class="cursor-pointer" href="/product/self-hosted/">Self-Hosting Available</a></div>
+                        <div class="w-1/4 flex justify-center items-center rounded-t-full bg-purple-200">Most Popular</div>
+                        <div class="w-1/4 flex justify-center items-center rounded-t-full bg-gray-200 text-blue-600 underline"><a class="cursor-pointer" href="/product/self-hosted/">Self-Hosting Available</a></div>
                     </div>
                 </div>
-                <div class="card bg-white h-full pt-8 lg:pt-8 lg:rounded-tr-none">
-                    <div class="lg:flex h-full items-stretch">
+                <div class="card bg-white p-8 lg:pt-8 lg:rounded-tr-none">
+                    <div class="lg:flex">
                         {{ range $index, $tier := .Params.tiers.trialed.items }}
                             {{ $mobileBookmarkClass := "" }}
-                            {{ if eq $index 1 }}
+                            {{ if eq $index 2 }}
                                 <div class="lg:hidden absolute w-28 mx-auto left-0 right-0 text-center bg-white">
                                     <p class="my-0 -mt-3">Most popular</p>
                                 </div>
                                 {{ $mobileBookmarkClass = "border-t-2 border-purple-300 rounded-2xl lg:border-0"}}
-                            {{ else if eq $index 2 }}
+                            {{ else if eq $index 3 }}
                                 <div class="lg:hidden absolute w-44 mx-auto left-0 right-0 text-center bg-white">
                                     <p class="my-0 -mt-3"><a class="cursor-pointer underline" href="/product/self-hosted/">Self-Hosting Available</a></p>
                                 </div>
                                 {{ $mobileBookmarkClass = "border-t-2 border-gray-300 rounded-2xl lg:border-0"}}
                             {{ end }}
-                            <div class="w-full pb-16 pt-6 lg:py-0 lg:w-1/3 px-8 {{ $mobileBookmarkClass }}">
+                            {{ $rightBorderClass := "" }}
+                            {{ if eq $index 0 }}
+                                {{ $rightBorderClass = "lg:border-r lg:border-gray-300"}}
+                            {{ end }}
+                            <div class="w-full pb-16 pt-6 lg:py-0 lg:w-1/4 px-8 {{ $mobileBookmarkClass }} {{ $rightBorderClass }}">
                                 <div class="lg:h-24 xl:h-11">
                                     <h4 class="text-center">{{ $tier.title }}</h4>
                                 </div>
@@ -97,12 +72,18 @@
                                     <div class="text-center text-sm">{{ $tier.esc_unit }}</div>
                                     <div class="text-center text-xs">{{ $tier.esc_note }}</div>
                                 </div>
+                                {{ if eq $index 0 }}
+                                    <div class="flex flex-col justify-center align-center items-center text-center my-4 lg:h-14">
+                                        <pricing-cta button-class="text-white text-s bg-violet-600 border-2 border-violet-600 rounded-full py-2 px-2 hover:bg-violet-500"></pricing-cta>
+                                    </div>
+                                {{ else }}
                                 <div class="flex justify-center items-center text-center my-4 lg:h-14">
                                     <a href="{{ $tier.primary_cta_link}}" class="text-white text-s bg-violet-600 border-2 border-violet-600 rounded-full py-2 px-2 hover:bg-violet-500 mr-1">{{ $tier.primary_cta }}</a>
                                     {{ if $tier.secondary_cta }}
                                         <a href="{{ $tier.secondary_cta_link }}" class="text-violet-600 text-s border-2 border-violet-600 rounded-full py-2 px-2 hover:bg-violet-100">{{ $tier.secondary_cta }}</a>
                                     {{ end }}
                                 </div>
+                                {{ end }}
                                 <div class="border-dotted border-2 border-gray-200 rounded-lg px-4 flex grow">
                                     <div class="text-sm">{{ $tier.items | markdownify }}</div>
                                 </div>

@@ -10,26 +10,25 @@ aliases:
     - /blog/tf-migration-offer
 
 tiers:
-    free:
-        title: Free
-        subtitle: The basics for individuals and organizations with cloud projects.
-        iac_price: $0
-        iac_unit:
-        iac_note:
-        esc_price: $0
-        esc_unit:
-        esc_note:
-        primary_cta: Create a free organization
-        primary_cta_link: /docs/quickstart
-        items: |
-            You get:
-            - 200 free IaC resources
-            - Unlimited projects/stacks
-            - 25 free secrets
-            - 3,000 free deployments minutes
-            - Community support
     trialed:
         items:
+            - title: Free
+              subtitle: The basics for individuals and organizations with cloud projects.
+              iac_price: $0
+              iac_unit:
+              iac_note:
+              esc_price: $0
+              esc_unit:
+              esc_note:
+              primary_cta: Create a free organization
+              primary_cta_link: /docs/quickstart
+              items: |
+                You get:
+                - 200 free IaC resources
+                - Unlimited projects/stacks
+                - 25 free secrets
+                - 3,000 free deployments minutes
+                - Community support
             - title: Team
               subtitle: Collaboration for growing teams and cloud projects.
               iac_price: $0.36
