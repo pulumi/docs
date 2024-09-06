@@ -1,0 +1,17 @@
+docsesc-cli/index.html|/docs/esc/cli/index.html
+docs/esc-cli/command-line-completion/.html|/docs/esc/cli/command-line-completion/
+docsesc-cli/commands/env.html|/docs/esc/cli/env.html
+docsesc-cli/commands/env-diff.html|/docs/esc/cli/env-diff.html
+docsesc-cli/commands/env-edit.html|/docs/esc/cli/env-edit.html
+docsesc-cli/commands/env-get.html|/docs/esc/cli/env-get.html
+docsesc-cli/commands/env-init.html|/docs/esc/cli/env-init.html
+docsesc-cli/commands/env-ls.html|/docs/esc/cli/env-ls.html
+docsesc-cli/commands/env-rollback.html|/docs/esc/cli/env-rollback.html
+docsesc-cli/commands/env-rm.html|/docs/esc/cli/env-rm.html
+docsesc-cli/commands/env-set.html|/docs/esc/cli/env-set.html
+docsesc-cli/commands/env-version.html|/docs/esc/cli/env-version.html
+docsesc-cli/commands/env-version-tag.html|/docs/esc/cli/env-version-tag.html
+docsesc-cli/commands/login.html|/docs/esc/cli/login.html
+docsesc-cli/commands/open.html|/docs/esc/cli/open.html
+docsesc-cli/commands/run.html|/docs/esc/cli/run.html
+docsesc-cli/commands/version.html|/docs/esc/cli/version.html
