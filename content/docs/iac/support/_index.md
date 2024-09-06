@@ -5,19 +5,25 @@ title: Support
 h1: Pulumi support overview
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  support:
-    name: Overview
-    weight: 9
+    iac:
+        name: Support
+        parent: home
+        weight: 99
+        identifier: iac-support
+    support:
+        name: Overview
+        weight: 9
 aliases:
-- /docs/troubleshooting/overview/
+    - /docs/troubleshooting/overview/
+    - /docs/support/
 ---
 
-Pulumi is here to help! Try reviewing our troubleshooting or FAQ docs, or reach out to support.
+We're here to help! Try reviewing our troubleshooting or FAQ docs, or reach out at [support@pulumi.com](mailto:support@pulumi.com).
 
 <div class="md:flex flex-row mt-6 mb-6">
     <div class="w-1/2 border-solid border-t-2 border-gray-200">
         <h3 class="no-anchor pt-4"><a href="/docs/support/troubleshooting"><i class="fas fa-user-friends pr-2"></i>Troubleshooting</a></h3>
-        <p>Pulumi tries very hard to ensure that your infrastructure is always in a known and predictable state. However, sometimes things go wrong. Learn how to handle them with Pulumi troubleshooting.</p>
+        <p>We work hard to ensure that your infrastructure is always in a known and predictable state. However, sometimes things go wrong. Learn how to handle them with Pulumi troubleshooting.</p>
     </div>
     <div class="w-1/2 border-solid ml-4 border-t-2 border-gray-200">
         <h3 class="no-anchor pt-4"><a href="/docs/support/faq"><i class="fas fa-comment-alt pr-2"></i>FAQ</a></h3>

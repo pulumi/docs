@@ -7,7 +7,7 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         parent: home
-        weight: 2
+        weight: 1
         identifier: iac-install
     install:
         name: Overview
@@ -29,13 +29,9 @@ search:
       - cli
 ---
 
-<!--
-NOTE: To update this page with a new binary release, do the following:
-- Update `static/latest-version`
-- Update `content/docs/install/versions.md`
--->
+The latest version of Pulumi is **{{< latest-version >}}**. For previous versions, see [Available versions](/docs/install/versions/). For a list of features, bug fixes, and more see the [CHANGELOG](https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md).
 
-## Select an Operating System
+## Choose an operating system
 
 {{< chooser os "macos,windows,linux" >}}
 
@@ -53,8 +49,6 @@ $ brew install pulumi/tap/pulumi
 <a class="btn btn-secondary mx-2" href="https://get.pulumi.com/releases/sdk/pulumi-v{{< latest-version >}}-darwin-arm64.tar.gz">arm64</a></p>
 
 macOS Sierra (10.12) or later is required.
-
-The latest version of Pulumi is {{< latest-version >}}. For older versions, see [Available Versions](/docs/install/versions/). For a list of features, bug fixes, and more see the [CHANGELOG](https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md).
 
 {{< get-started-note >}}
 
@@ -76,8 +70,6 @@ $ curl -fsSL https://get.pulumi.com | sh
 <p><a class="btn btn-secondary mx-2" href="https://get.pulumi.com/releases/sdk/pulumi-v{{< latest-version >}}-linux-x64.tar.gz">amd64</a></p>
 </div>
 </div>
-
-The latest version of Pulumi is {{< latest-version >}}. For older versions, see [Available Versions](/docs/install/versions/). For a list of features, bug fixes, and more see the [CHANGELOG](https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md).
 
 {{< get-started-note >}}
 
@@ -102,15 +94,13 @@ The latest version of Pulumi is {{< latest-version >}}. For older versions, see 
 
 Windows 8 and later are supported.
 
-The latest version of Pulumi is {{< latest-version >}}. For older versions, see [Available Versions](/docs/install/versions/). For a list of features, bug fixes, and more see the [CHANGELOG](https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md).
-
 {{< get-started-note >}}
 
 {{% /choosable %}}
 
 {{% /chooser %}}
 
-### Other installation methods
+## More installation methods
 
 In addition, there are many ways to install Pulumi:
 
@@ -235,7 +225,7 @@ The installer script can be rerun to subsequently install new updates.
 If you do not wish to use the previous options, you can install Pulumi manually.
 
 <!-- markdownlint-disable url -->
-1. Download [Pulumi {{< latest-version >}} for macOS](https://get.pulumi.com/releases/sdk/pulumi-v{{< latest-version >}}-darwin-x64.tar.gz). For prior versions and release notes, see the [Available Versions](/docs/install/versions/) page.
+1. Download [Pulumi {{< latest-version >}} for macOS](https://get.pulumi.com/releases/sdk/pulumi-v{{< latest-version >}}-darwin-x64.tar.gz). For prior versions and release notes, see the [Available versions](/docs/install/versions/) page.
 <!-- markdownlint-enable url -->
 
 1. Extract the tarball and move the binaries in the `pulumi` directory to a directory included in your system's `$PATH`.
@@ -285,7 +275,7 @@ See [How to permanently set $PATH on Unix](https://stackoverflow.com/questions/1
 Alternatively, you can install Pulumi manually. We provide a prebuilt binary for Linux.
 
 <!-- markdownlint-disable url -->
-1. Download [Pulumi {{< latest-version >}} for Linux x64](https://get.pulumi.com/releases/sdk/pulumi-v{{< latest-version >}}-linux-x64.tar.gz). For prior versions and release notes, see the [Available Versions](/docs/install/versions/) page.
+1. Download [Pulumi {{< latest-version >}} for Linux x64](https://get.pulumi.com/releases/sdk/pulumi-v{{< latest-version >}}-linux-x64.tar.gz). For prior versions and release notes, see the [Available versions](/docs/install/versions/) page.
 <!-- markdownlint-enable url -->
 
 1. Extract the tarball and move the binaries in the `pulumi` directory to a directory included in your system's `$PATH`.
@@ -407,7 +397,7 @@ This will install the `pulumi.exe` CLI to `%USERPROFILE%\.pulumi\bin` and add it
 Alternatively, you can install Pulumi manually using binaries built for Windows x64.
 
 <!-- markdownlint-disable url -->
-1. Download [Pulumi {{< latest-version >}} binaries for Windows x64](https://get.pulumi.com/releases/sdk/pulumi-v{{< latest-version >}}-windows-x64.zip). For prior versions and release notes, see the [Available Versions](/docs/install/versions/) page.
+1. Download [Pulumi {{< latest-version >}} binaries for Windows x64](https://get.pulumi.com/releases/sdk/pulumi-v{{< latest-version >}}-windows-x64.zip). For prior versions and release notes, see the [Available versions](/docs/install/versions/) page.
 <!-- markdownlint-enable url -->
 
 1. Unzip the file and extract the contents to a folder such as `C:\pulumi`.
@@ -510,7 +500,7 @@ If you are upgrading from Pulumi 2.0 to 3.0, please see our [migration guide](/d
 
 ## Installing betas and previous versions
 
-Most installation methods choose the latest version by default. To install a specific version, use the following commands. You can find the list of versions on the [Available Versions](/docs/install/versions/) page.
+Most installation methods choose the latest version by default. To install a specific version, use the following commands. You can find the list of versions on the [Available versions](/docs/install/versions/) page.
 
 {{% chooser os "macos,windows,linux" %}}
 

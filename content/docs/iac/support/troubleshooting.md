@@ -5,15 +5,20 @@ title: Troubleshooting
 h1: Pulumi troubleshooting
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  support:
-    weight: 1
+    iac:
+        name: Troubleshooting
+        parent: iac-support
+        weight: 2
+    support:
+        weight: 1
 search:
-  keywords:
-    - debugging pulumi programs
+    keywords:
+        - debugging pulumi programs
 
 aliases:
-  - /docs/reference/troubleshooting/
-  - /docs/troubleshooting/
+    - /docs/reference/troubleshooting/
+    - /docs/troubleshooting/
+    - /docs/support/troubleshooting/
 ---
 
 Sometimes things go wrong. If you can't update your stack, or there's another problem that is

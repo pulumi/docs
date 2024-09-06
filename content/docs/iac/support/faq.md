@@ -5,13 +5,18 @@ title: FAQ
 h1: Pulumi CLI & Pulumi Cloud FAQ
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  support:
-    weight: 2
-    identifier: all-faqs
+    iac:
+        name: FAQ
+        weight: 1
+        parent: iac-support
+    support:
+        weight: 2
+        identifier: all-faqs
 
 aliases:
-  - /docs/reference/faq/
-  - /docs/troubleshooting/faq/
+    - /docs/reference/faq/
+    - /docs/troubleshooting/faq/
+    - /docs/support/faq/
 ---
 
 ## Automatic Rollbacks

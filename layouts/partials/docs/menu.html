@@ -4,8 +4,8 @@
 {{/*  {{ site.Menus }}  */}}
 
 {{- with index site.Menus $menuID }}
-    <nav>
-        <ul>
+    <nav class="text-sm mt-8">
+        <ul class="list-none">
             {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
         </ul>
     </nav>
@@ -27,7 +27,7 @@
             {{- end }}
         {{- end }}
         <li>
-            <a
+            <a class="text-blue-700"
                 {{- range $k, $v := $attrs }}
                     {{- with $v }}
                         {{- printf " %s=%q" $k $v | safeHTMLAttr }}
@@ -35,7 +35,7 @@
                 {{- end -}}
             >{{ $name }}</a>
             {{- with .Children }}
-                <ul>
+                <ul class="list-none pl-3">
                     {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
                 </ul>
             {{- end }}

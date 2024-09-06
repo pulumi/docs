@@ -1,22 +1,26 @@
 ---
 title_tag: Get Started with Pulumi
-meta_desc: Step-by-step guides for creating, deploying, and managing infrastructure with
-           Pulumi on the cloud using your favorite language.
+meta_desc: Step-by-step guides for creating, deploying, and managing infrastructure with Pulumi on the cloud using your favorite language.
 title: Get started
 h1: Get started with Pulumi
 no_on_this_page: true
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  getstarted:
-    name: Overview
-    weight: 2
+    iac:
+        name: Get started
+        parent: home
+        weight: 2
+    getstarted:
+        name: Overview
+        weight: 2
 
 aliases:
-- /docs/quickstart/
-- /start/
-- /getting-started/
-- /get-started/
-- /docs/tour/
+    - /docs/quickstart/
+    - /start/
+    - /getting-started/
+    - /get-started/
+    - /docs/tour/
+    - /docs/get-started
 ---
 
 Pulumi is an [infrastructure as code](/what-is/what-is-infrastructure-as-code/) platform that allows you to use familiar programming languages and tools to build, deploy, and manage cloud infrastructure.

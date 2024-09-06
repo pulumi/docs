@@ -7,18 +7,19 @@ no_on_this_page: true
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   iac:
+    name: CLI
     weight: 3
     identifier: iac-cli
     parent: home
 aliases:
-- /docs/reference/commands/
-- /docs/tour/basics-deploying/
-- /docs/tour/basics-destroying/
-- /docs/tour/basics-previewing/
-- /docs/tour/basics-up/
-- /docs/tour/basics-updating/
-- /docs/reference/cli/
-- /docs/cli
+    - /docs/reference/commands/
+    - /docs/tour/basics-deploying/
+    - /docs/tour/basics-destroying/
+    - /docs/tour/basics-previewing/
+    - /docs/tour/basics-up/
+    - /docs/tour/basics-updating/
+    - /docs/reference/cli/
+    - /docs/cli
 ---
 
 Pulumi is controlled primarily using the command line interface (CLI). It works in conjunction with the Pulumi Cloud
