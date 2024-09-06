@@ -1,0 +1,1 @@
+test-redirect|/docs/languages-sdks/java/
