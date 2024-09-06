@@ -1,409 +1,163 @@
 ---
-title_tag: How Pulumi Works
-meta_desc: This page provides an overview of how Pulumi works and interacts with different Cloud Providers like AWS, Azure, Kubernetes, and more.
-title: How Pulumi works
-h1: How Pulumi works
+title_tag: What is Pulumi?
+meta_desc: Learn about what Pulumi is, how it works, and how its components work together to deliver a robust platform for creating and managing cloud infrastructure.
+title: Concepts
+h1: What is Pulumi?
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Concepts
         weight: 30
         parent: home
+        identifier: iac-concepts
     concepts:
-        weight: 1
+        name: Overview
+        weight: 4
 aliases:
-    - /docs/reference/how/
-    - /docs/tour/basics-programs/
-    - /docs/tour/programs-packages/
-    - /docs/tour/programs-properties/
-    - /docs/tour/programs-resources/
-    - /docs/tour/programs-stacks/
-    - /docs/intro/concepts/how-pulumi-works/
-    - /docs/concepts/how-pulumi-works/
+- /docs/reference/concepts/
+- /docs/intro/concepts/
+- /docs/concepts/
 ---
 
-Pulumi uses a desired state (declarative) model for orchestrating and managing infrastructure with the flexibility to author your infrastructure code using programming languages you know such as TypeScript, Javascript, Python, Go, C#, and Java. This model provides the advantages of programming structures like loops, conditionals and functions as well as your IDE with autocomplete, type checking, and documentation. When you author a Pulumi program the end result will be the state you declare, regardless of the current state of your infrastructure.
+Pulumi is a modern [infrastructure as code](/what-is/what-is-infrastructure-as-code/) platform. It leverages existing programming languages---TypeScript, JavaScript, Python, Go, .NET, Java, and markup languages like YAML---and their native ecosystems to interact with cloud resources. A [downloadable CLI](/docs/install/), runtime, libraries, and a hosted service work together to deliver a robust platform for provisioning, updating, and managing cloud infrastructure.
 
-A Pulumi program is executed by a _language host_ to compute a desired state for a stack's infrastructure. The _deployment engine_ compares this desired state with the stack's current state and determines what resources need to be created, updated or deleted. The engine uses a set of _resource providers_ (such as [AWS](/docs/clouds/aws/get-started/), [Azure](/docs/clouds/azure/get-started/), [Kubernetes](/docs/clouds/kubernetes/get-started/), and [+150 more](/registry/)) in order to manage the individual resources.  As it operates, the engine updates the _state_ of your infrastructure with information about all resources that have been provisioned as well as any pending operations.
+{{< notes >}}
+If this is your first time using Pulumi, you likely want to begin with [the Getting Started guide](/docs/get-started/) for your cloud of choice. It will walk you through an [AWS](/docs/clouds/aws/get-started/), [Azure](/docs/clouds/azure/get-started/), [Google Cloud](/docs/clouds/gcp/get-started/), or [Kubernetes](/docs/clouds/kubernetes/get-started/) deployment from start to finish.
+{{< /notes >}}
 
-The following diagram illustrates the interaction between these parts of the system:
+## What is Pulumi?
 
-<img src="/images/docs/reference/engine-block-diagram.png" alt="Pulumi IaC system architecture, the Pulumi engine and providers" width="600">
+Pulumi is an [infrastructure as code](/what-is/what-is-infrastructure-as-code/) platform that allows you to use familiar programming languages and tools to build, deploy, and manage cloud infrastructure.
 
-In the next section, we will describe each of these components and see how they all fit together during an invocation of `pulumi up`.
+Pulumi is free, [open source](https://github.com/pulumi/pulumi), and optionally pairs with the [Pulumi Cloud](https://www.pulumi.com/docs/pulumi-cloud/) to make managing infrastructure secure, reliable, and hassle-free.
 
-## Language hosts
+## Supported languages and SDKs
 
-The _language host_ is responsible for running a Pulumi program and setting up an environment where it can register resources with the _deployment engine_. The language host consists of two different pieces:
+As a multi-language infrastructure as code tool, Pulumi supports many of today's most common general-purpose programming and markup languages. Every Pulumi-supported language is equally capable of provisioning and managing infrastructure across all major clouds, though some languages may provide functionality that's not yet available in others. The following languages and runtimes are currently supported:
 
-1. A language executor, which is a binary named `pulumi-language-<language-name>`, that Pulumi uses to launch the runtime for the language your program is written in (e.g. Node or Python). This binary is distributed with the Pulumi CLI.
-2. A language SDK is responsible for preparing your program to be executed and observing its execution in order to detect resource registrations. When a resource is _registered_ (via `new Resource()` in JavaScript or `Resource(...)` in Python), the language SDK communicates the registration request back to the _deployment engine_. The language SDK is distributed as a regular package, just like any other code that might depend on your program. For example, the Node SDK is contained in the [`@pulumi/pulumi`](https://www.npmjs.com/package/@pulumi/pulumi) package available on npm, and the Python SDK is contained in the [`pulumi`](https://pypi.org/project/pulumi/) package available on PyPI.
-
-## Deployment engine
-
-The _deployment engine_ is responsible for computing the set of operations needed to drive the current state of your infrastructure into the desired state expressed by your program. When a _resource registration_ is received from the language host, the engine consults the existing state to determine if that resource has been created before. If it has not, the engine uses a _resource provider_ to create it. If it already exists, the engine works with the resource provider to determine what, if anything, has changed by comparing the old state of the resource with the new desired state of the resource as expressed by the program. If there are changes, the engine determines if it can _update_ the resource in place or if it must _replace_ it by _creating_ a new version and _deleting_ the old version. The decision depends on what properties of the resource are changing and the type of the resource itself. When the language host communicates to the engine that it has completed the execution of the Pulumi program, the engine looks for any existing resources that it did not see a new resource registration and schedules these resources for deletion.
-
-The deployment engine is embedded in the `pulumi` CLI itself.
-
-## Resource providers
-
-A resource provider is made up of two different pieces:
-
-1. A _resource plugin_ is the binary used by the deployment engine to manage a resource. These plugins are stored in the _plugin cache_ (located in `~/.pulumi/plugins`) and can be managed using the [`pulumi plugin`](/docs/cli/commands/pulumi_plugin) set of commands.
-2. An _SDK_ which provides bindings for each type of resource the provider can manage.
-
-Like the language runtime itself, the SDKs are available as regular packages. For example, there is a [`@pulumi/aws`](https://www.npmjs.com/package/@pulumi/aws) package for Node available on npm and a [`pulumi_aws`](https://pypi.org/project/pulumi-aws) package for Python available on PyPI.  When these packages are added to your project, they run [`pulumi plugin install`](/docs/cli/commands/pulumi_plugin_install) behind the scenes to download the resource plugin from Pulumi.com.
-
-## Putting it all together
-
-Let's walk through a simple example. Suppose we have the following Pulumi program, which creates two S3 buckets:
-
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
-
-{{% choosable language javascript %}}
-
-```javascript
-const mediaBucket = new aws.s3.Bucket("media-bucket");
-const contentBucket = new aws.s3.Bucket("content-bucket");
-```
-
-{{% /choosable %}}
-{{% choosable language typescript %}}
-
-```typescript
-const mediaBucket = new aws.s3.Bucket("media-bucket");
-const contentBucket = new aws.s3.Bucket("content-bucket");
-```
-
-{{% /choosable %}}
-{{% choosable language python %}}
-
-```python
-media_bucket = s3.Bucket('media-bucket')
-content_bucket = s3.Bucket('content-bucket')
-```
-
-{{% /choosable %}}
-{{% choosable language go %}}
-
-```go
-mediaBucket, _ := s3.NewBucket(ctx, "media-bucket", nil)
-contentBucket, _ := s3.NewBucket(ctx, "content-bucket", nil)
-```
-
-{{% /choosable %}}
-{{% choosable language csharp %}}
-
-```csharp
-using System.Threading.Tasks;
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class Program
-{
-    static Task<int> Main() => Deployment.RunAsync<MyStack>();
-}
-
-public MyStack : Stack
-{
-    public MyStack()
-    {
-        var mediaBucket = new Aws.S3.Bucket("media-bucket");
-        var contentBucket = new Aws.S3.Bucket("content-bucket");
-    }
-}
-```
-
-{{% /choosable %}}
-{{% choosable language java %}}
-
-```java
-package myproject;
-
-import com.pulumi.Context;
-import com.pulumi.Exports;
-import com.pulumi.Pulumi;
-import com.pulumi.aws.s3.Bucket;
-
-
-public class App {
-    public static void main(String[] args) {
-        Pulumi.run(App::stack);
-    }
-
-    public static void stack(Context ctx) {
-        var mediaBucket = new Bucket("media-bucket");
-        var contentBucket = new Bucket("content-bucket");
-    }
-}
-```
-
-{{% /choosable %}}
-{{% choosable language yaml %}}
-
-```yaml
-resources:
-    mediaBucket:
-        type: aws:s3:Bucket
-    contentBucket:
-        type: aws:s3:Bucket
-```
-
-{{% /choosable %}}
-
-{{< /chooser >}}
-
-Now, we run `pulumi stack init mystack`. Since `mystack` is a new stack, the "last deployed state" has no resources.
-
-Next, we run `pulumi up`. Since this program is written in {{% pulumi-language %}}, the Pulumi CLI launches the {{% pulumi-host %}} language host and requests that it execute the program. When the first {{% pulumi-bucket %}} object is constructed, the language host sends a _resource registration_ request to the deployment engine and then continues executing the program. This is subtle, but important: _When the call to_ {{% pulumi-new-bucket %}} _returns, it does not mean that the actual S3 bucket has been created in AWS_, it just means the language host has expressed that this bucket is part of the desired state of your infrastructure.  The language host continues to execute your program concurrently with the engine processing this request.
-
-In this case, since the last deployed state has no resources, the engine determines that it needs to create the `media-bucket` resource. It uses the AWS resource plugin in order to create the resource and the AWS resource plugin uses the AWS SDK in order to go create it.  Note that the engine does not talk directly to AWS, instead it just asks the AWS Resource Plugin to create a Bucket. As new resource types are added, you can update the version of a resource provider to gain access to these new resources without having to update the CLI itself. When the operation to create this bucket is complete, the engine records information about the newly created resource in its state file.
-
-As the engine was creating the `media-bucket` bucket, the language host continued to execute the Pulumi program. This caused another resource registration to be generated (for `content-bucket`). Since there is no dependency between these two buckets, the engine is able to process that request in parallel with the creation of `media-bucket`.
-
-After both operations have completed, the language host exits as the program has finished running. Then the engine and resource providers shutdown. The state for mystack now looks like the following:
-
-```
-stack mystack
-   - aws.s3.Bucket "media-bucket653a4"
-   - aws.s3.Bucket "content-bucket125ce"
-```
-
-Note the extra suffixes on the end of these bucket names. This is due to a process called [auto-naming](/docs/concepts/resources#autonaming), which Pulumi uses by default in order to allow you to deploy multiple copies of your infrastructure without creating name collisions for resources. This behavior can be disabled if desired.
-
-Now, let's make a change to one of resources and run `pulumi up` again.  Since Pulumi operates on a desired state model, it will use the last deployed state to compute the minimal set of changes needed to update your deployed infrastructure. For example, imagine that we wanted to make the S3 `media-bucket` publicly readable.  We change our program to express this new desired state:
-
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
-
-{{% choosable language javascript %}}
-
-```javascript
-const mediaBucket = new aws.s3.Bucket("media-bucket", {
-    acl: "public-read",   // add acl
-});
-const contentBucket = new aws.s3.Bucket("content-bucket");
-```
-
-{{% /choosable %}}
-{{% choosable language typescript %}}
-
-```typescript
-const mediaBucket = new aws.s3.Bucket("media-bucket", {
-    acl: "public-read",   // add acl
-});
-const contentBucket = new aws.s3.Bucket("content-bucket");
-```
-
-{{% /choosable %}}
-{{% choosable language python %}}
-
-```python
-media_bucket = s3.Bucket('media-bucket', acl="public-read") # add acl
-content_bucket = s3.Bucket('content-bucket')
-```
-
-{{% /choosable %}}
-{{% choosable language go %}}
-
-```go
-mediaBucket, _ := s3.NewBucket(ctx, "media-bucket", &s3.BucketArgs{Acl: "public-read"}) // add acl
-contentBucket, _ := s3.NewBucket(ctx, "content-bucket", nil)
-```
-
-{{% /choosable %}}
-{{% choosable language csharp %}}
-
-```csharp
-using System.Threading.Tasks;
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class Program
-{
-    static Task<int> Main() => Deployment.RunAsync<MyStack>();
-}
-
-public MyStack : Stack
-{
-    public MyStack()
-    {
-        var mediaBucket = new Aws.S3.Bucket("media-bucket", new Aws.S3.BucketArgs
-        {
-            Acl = "public-read",   // add acl
-        });
-        var contentBucket = new Aws.S3.Bucket("content-bucket");
-    }
-}
-```
-
-{{% /choosable %}}
-{{% choosable language java %}}
-
-```java
-package myproject;
-
-import com.pulumi.Context;
-import com.pulumi.Exports;
-import com.pulumi.Pulumi;
-import com.pulumi.aws.s3.Bucket;
-
-public class App {
-    public static void main(String[] args) {
-        Pulumi.run(App::stack);
-    }
-
-    public static void stack(Context ctx) {
-        var mediaBucket = new Bucket("media-bucket",
-            BucketArgs.builder()
-                .acl("public-read")   // add acl
-                .build());
-        var contentBucket = new Bucket("content-bucket");
-    }
-}
-```
-
-{{% /choosable %}}
-{{% choosable language yaml %}}
-
-```yaml
-resources:
-  mediaBucket:
-    type: aws:s3:Bucket
-    properties:
-      acl: public-read # add acl
-  contentBucket:
-    type: aws:s3:Bucket
-```
-
-{{% /choosable %}}
-
-{{< /chooser >}}
-
-When you run `pulumi preview` or `pulumi up`, the entire process starts over.  The language host starts running your program and the call to aws.s3.Bucket causes a new resource registration request to be sent to the engine. This time, however, our state already contains a resource named `media-bucket`, so engine asks the resource provider to compare the existing state from our previous run of `pulumi up` with the desired state expressed by the program. The process detects that the `acl` property has changed from `private` (the default value) to `public-read`. By again consulting the resource provider the engine determines that it is able to update this property without creating a new bucket, and so it tells the provider to update the acl property to `public-read`. When this operation completes, the current state is updated to reflect the change that had been made.
-
-The engine also receives a resource registration request for "content-bucket".  However, since there are no changes between the current state and the desired state, the engine does not need to make any changes to the resource.
-
-Now, suppose we rename `content-bucket` to `app-bucket`.
-
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
-
-{{% choosable language javascript %}}
-
-```javascript
-const mediaBucket = new aws.s3.Bucket("media-bucket", {
-    acl: "public-read",   // add acl
-});
-const appBucket = new aws.s3.Bucket("app-bucket");
-```
-
-{{% /choosable %}}
-{{% choosable language typescript %}}
-
-```typescript
-const mediaBucket = new aws.s3.Bucket("media-bucket", {
-    acl: "public-read",   // add acl
-});
-const appBucket = new aws.s3.Bucket("app-bucket");
-```
-
-{{% /choosable %}}
-{{% choosable language python %}}
-
-```python
-media_bucket = s3.Bucket('media-bucket', acl="public-read") # add acl
-app_bucket = s3.Bucket('app-bucket')
-```
-
-{{% /choosable %}}
-{{% choosable language go %}}
-
-```go
-mediaBucket, _ := s3.NewBucket(ctx, "media-bucket", &s3.BucketArgs{Acl: "public-read"}) // add acl
-appBucket, _ := s3.NewBucket(ctx, "app-bucket", nil)
-```
-
-{{% /choosable %}}
-{{% choosable language csharp %}}
-
-```csharp
-using System.Threading.Tasks;
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class Program
-{
-    static Task<int> Main() => Deployment.RunAsync<MyStack>();
-}
-
-public MyStack : Stack
-{
-    public MyStack()
-    {
-        var mediaBucket = new Aws.S3.Bucket("media-bucket", new Aws.S3.BucketArgs
-        {
-            Acl = "public-read",   // add acl
-        });
-        var appBucket = new Aws.S3.Bucket("app-bucket");
-    }
-}
-```
-
-{{% /choosable %}}
-{{% choosable language java %}}
-
-```java
-package myproject;
-
-import com.pulumi.Context;
-import com.pulumi.Exports;
-import com.pulumi.Pulumi;
-import com.pulumi.aws.s3.Bucket;
-
-public class App {
-    public static void main(String[] args) {
-        Pulumi.run(App::stack);
-    }
-
-    public static void stack(Context ctx) {
-        var mediaBucket = new Bucket("media-bucket", BucketArgs.builder()
-            .acl("public-read")   // add acl
-            .build());
-        var contentBucket = new Bucket("app-bucket");
-    }
-}
-```
-
-{{% /choosable %}}
-{{% choosable language yaml %}}
-
-```yaml
-resources:
-  mediaBucket:
-    type: aws:s3:Bucket
-    properties:
-      acl: public-read # add acl
-  appBucket:
-    type: aws:s3:Bucket
-```
-
-{{% /choosable %}}
-
-{{< /chooser >}}
-
-This time, the engine will not need to make any changes to `media-bucket` since its desired state matches its actual state. However, when the resource request for `app-bucket` is processed, the engine sees there's no existing resource named `app-bucket` in the current state so it must create a new S3 bucket. Once that process is complete and the language host has shut down, the engine looks for any resources in the current state which it did not see a resource registration for. In this case, since we removed the registration of `content-bucket` from our program, the engine calls the resource provider to delete the existing `content-bucket` bucket.
-
-## Creation and deletion order
-
-Pulumi executes resource operations in parallel whenever possible, but understands that some resources may have dependencies on other resources. If an [output](/docs/concepts/inputs-outputs/) of one resource is provided as an input to another, the engine records the dependency between these two resources as part of the state and uses these when scheduling operations. This list can also be augmented by using the [dependsOn](/docs/concepts/resources#dependson) resource option.
-
-By default, if a resource must be replaced, Pulumi will attempt to create a new copy of the resource before destroying the old one. This is helpful because it allows updates to infrastructure to happen without downtime. This behavior can be controlled by the [deleteBeforeReplace](/docs/concepts/resources#deletebeforereplace) option. If you have disabled [auto-naming](/docs/concepts/resources#autonaming) by providing a specific name for a resource, it will be treated as if it was marked as `deleteBeforeReplace` automatically (otherwise the create operation for the new version would fail since the name is in use).
-
-## Declarative and imperative approach
-
-With Pulumi, you author your infrastructure in your preferred programming language. When you run `pulumi up`, the Pulumi CLI starts both language host for your selected programming language as well as the required providers (via the Pulumi engine). The providers, coordinated by the Pulumi engine, are the ones that perform the actual creation, modification, or deletion of your infrastructure. The separation of language support from the engine is what makes Pulumi so powerful, providing the best of both imperative and declarative approaches for your infrastructure as code solutions.
-
-Here is a breakdown of each component of Pulumi's architecture:
-
-* Language host: `imperative` (JavaScript/TypeScript, Go, Python, C#/F#/.NET, Java) and declarative (YAML)
-* Pulumi engine: `declarative`
-* Providers: `imperative`
+- [TypeScript & JavaScript (Node.js)](https://www.pulumi.com/docs/languages-sdks/javascript/)
+- [Python](https://www.pulumi.com/docs/languages-sdks/python/)
+- [Go](https://www.pulumi.com/docs/languages-sdks/go/)
+- [C#, VB, F# (.NET)](https://www.pulumi.com/docs/languages-sdks/dotnet/)
+- [Java](https://www.pulumi.com/docs/languages-sdks/java/)
+- [Pulumi YAML](https://www.pulumi.com/docs/languages-sdks/yaml/)
+
+{{< notes >}}
+If you don't see your favorite language listed, it may be on its way soon. [Pulumi is open source](https://github.com/pulumi/pulumi), and it is possible to [add your own language](https://www.pulumi.com/docs/support/faq/#how-can-i-add-support-for-my-favorite-language). For additional language questions, visit [Pulumi's languages and SDK docs](https://www.pulumi.com/docs/languages-sdks/).
+{{< /notes >}}
+
+## How does Pulumi work?
+
+The Pulumi platform comprises several components:
+
+- **Software development kit (SDK)**: Pulumi Software Development Kit (SDK) provides bindings for each type of resource that the provider can manage. This provides the necessary tools and libraries for defining and managing cloud resources on any cloud and with any provider.
+
+- **Command-Line interface (CLI)**: Pulumi is controlled primarily using the command line interface [(CLI)](https://www.pulumi.com/docs/cli/). It works in conjunction with the [Pulumi Cloud](https://www.pulumi.com/docs/pulumi-cloud/) to deploy changes to your cloud apps and infrastructure. It keeps a history of who updated what in your team and when. This CLI has been designed for great inner loop productivity, in addition to continuous integration and delivery scenarios.
+
+- **Deployment engine** The deployment engine is responsible for computing the set of operations needed to drive the current state of your infrastructure into the desired state expressed by your program.
+
+This diagram illustrates the structure and major components of Pulumi.
+
+![Pulumi programming model diagram.](/images/docs/pulumi-programming-model-diagram.svg)
+
+Pulumi *programs*, written in general-purpose [programming languages](/docs/languages-sdks/), describe how your cloud infrastructure should be composed. To declare new infrastructure in your program, you allocate *resource* objects whose properties correspond to the desired state of your infrastructure. These properties are also used between resources to handle any necessary dependencies and can be exported outside of the stack, if needed.
+
+Programs reside in a *project*, which is a directory that contains source code for the program and metadata on how to run the program. After writing your program, you run the [Pulumi CLI](/docs/cli/) command `pulumi up` from within your project directory. This command creates an isolated and configurable instance of your program, known as a *stack*. Stacks are similar to different deployment environments that you use when testing and rolling out application updates. For instance, you can have distinct development, staging, and production stacks that you create and test against.
+
+### Example
+
+To illustrate these concepts, the following program shows how to create an AWS EC2 security group named `web-sg` with a single ingress rule and a `t2.micro`-sized EC2 instance using that security group.
+
+To use the security group, the EC2 resource requires the security group's ID. Pulumi enables this through the output property `id` on the security group resource. Pulumi understands dependencies between resources and uses the relationships between resources to maximize parallelism and ensures correct ordering when a stack is instantiated.
+
+Finally, the server's resulting IP address and DNS name are exported as stack outputs so that their values can be accessed through either a CLI command or by another stack.
+
+{{< example-program path="aws-ec2-instance-with-sg">}}
+
+## Concepts in depth
+
+The following topics provide more details on the core concepts of Pulumi and how to use it:
+
+<!-- how & projects -->
+<div class="md:flex flex-row mt-6 mb-6">
+    <div class="md:w-1/2 border-solid md:ml-4 border-t-2 border-gray-200">
+        <h3 class="no-anchor pt-4"><a href="/docs/concepts/how-pulumi-works"><i class="fas fa-laptop-code pr-2"></i>How Pulumi works</a></h3>
+        <p>Learn about how Pulumi performs deployments under the hood.</p>
+    </div>
+    <div class="md:w-1/2 border-solid border-t-2 border-gray-200">
+        <h3 class="no-anchor pt-4"><a href="/docs/concepts/projects"><i class="fas fa-folder-open pr-2"></i>Projects</a></h3>
+        <p>Learn how Pulumi projects are organized and configured.</p>
+    </div>
+</div>
+
+<!-- stacks & resources -->
+<div class="md:flex flex-row mt-6 mb-6">
+    <div class="md:w-1/2 border-solid md:ml-4 border-t-2 border-gray-200">
+        <h3 class="no-anchor pt-4"><a href="/docs/concepts/stack"><i class="fas fa-cloud pr-2"></i>Stacks</a></h3>
+        <p>Learn how to create and deploy stacks.</p>
+    </div>
+    <div class="md:w-1/2 border-solid border-t-2 border-gray-200">
+        <h3 class="no-anchor pt-4"><a href="/docs/concepts/resources"><i class="fas fa-server pr-2"></i>Resources</a></h3>
+        <p>Learn more about how to use and manage resources in your programs.</p>
+    </div>
+</div>
+
+<!-- resource options & inputs/outputs -->
+<div class="md:flex flex-row mt-6 mb-6">
+    <div class="md:w-1/2 border-solid md:ml-4 border-t-2 border-gray-200">
+        <h3 class="no-anchor pt-4"><a href="/docs/concepts/options"><i class="fas fa-swatchbook pr-2"></i>Resource options</a></h3>
+        <p>Learn more about how to use and manage resource options in your program.</p>
+    </div>
+    <div class="md:w-1/2 border-solid border-t-2 border-gray-200">
+        <h3 class="no-anchor pt-4"><a href="/docs/concepts/inputs-outputs"><i class="fas fa-file-import pr-2"></i>Inputs and outputs</a></h3>
+        <p>Learn how to use resource properties to handle dependencies between resources.</p>
+    </div>
+</div>
+
+<!-- config & secrets -->
+<div class="md:flex flex-row mt-6 mb-6">
+    <div class="md:w-1/2 border-solid md:ml-4 border-t-2 border-gray-200">
+        <h3 class="no-anchor pt-4"><a href="/docs/concepts/config"><i class="fas fa-toolbox pr-2"></i>Configuration</a></h3>
+        <p>Learn how to configure stacks for different deployment scenarios.</p>
+    </div>
+    <div class="md:w-1/2 border-solid border-t-2 border-gray-200">
+        <h3 class="no-anchor pt-4"><a href="/docs/concepts/secrets"><i class="fas fa-key pr-2"></i>Secrets</a></h3>
+        <p>Learn how to handle sensitive data and how to store secret encrypted settings in Pulumi.</p>
+    </div>
+</div>
+
+<!--  esc & state backends-->
+<div class="md:flex flex-row mt-6 mb-6">
+    <div class="md:w-1/2 border-solid md:ml-4 border-t-2 border-gray-200">
+        <h3 class="no-anchor pt-4"><a href="/docs/concepts/environments"><i class="fas fa-cubes pr-2"></i>Environments (ESC)</a></h3>
+        <p>Learn how to configure your deployment environments with Pulumi ESC.</p>
+    </div>
+     <div class="md:w-1/2 border-solid border-t-2 border-gray-200">
+        <h3 class="no-anchor pt-4"><a href="/docs/concepts/state"><i class="fas fa-file-alt pr-2"></i>State and backends</a></h3>
+        <p>Learn how Pulumi stores state and manages concurrency.</p>
+    </div>
+</div>
+
+<!-- logging & update plans -->
+<div class="md:flex flex-row mt-6 mb-6">
+    <div class="md:w-1/2 border-solid md:ml-4 border-t-2 border-gray-200">
+        <h3 class="no-anchor pt-4"><a href="/docs/concepts/logging"><i class="fas fa-clipboard-list pr-2"></i>Logging</a></h3>
+        <p>Learn about how to access log information for diagnostics and debugging.</p>
+    </div>
+    <div class="md:w-1/2 border-solid border-t-2 border-gray-200">
+        <h3 class="no-anchor pt-4"><a href="/docs/concepts/update-plans"><i class="fas fa-upload pr-2"></i>Update plans</a></h3>
+        <p>Learn about how to constrain your deployments with update plans.</p>
+    </div>
+</div>
+
+<!-- glossary & compare-->
+<div class="md:flex flex-row mt-6 mb-6">
+    <div class="md:w-1/2 border-solid md:ml-4 border-t-2 border-gray-200">
+        <h3 class="no-anchor pt-4"><a href="/docs/concepts/glossary"><i class="fas fa-book pr-2"></i>Glossary</a></h3>
+        <p>Look up definitions to commonly used terms.</p>
+    </div>
+    <div class="md:w-1/2 border-solid border-t-2 border-gray-200">
+        <h3 class="no-anchor pt-4"><a href="/docs/concepts/vs"><i class="fas fa-table pr-2"></i>Compare</a></h3>
+        <p>Learn about how Pulumi compares to other solutions.</p>
+    </div>
+</div>

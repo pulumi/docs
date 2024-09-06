@@ -5,12 +5,17 @@ title: Stacks
 h1: Stacks
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  concepts:
-    weight: 2
+    iac:
+        name: Stacks
+        parent: iac-concepts
+        weight: 2
+    concepts:
+        weight: 2
 aliases:
 - /docs/reference/stack/
 - /docs/tour/programs-exports/
 - /docs/intro/concepts/stack/
+- /docs/concepts/stack/
 ---
 
 Every Pulumi program is deployed to a _stack_. A stack is an isolated, independently [configurable](/docs/concepts/config/)

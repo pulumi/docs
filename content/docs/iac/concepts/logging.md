@@ -5,10 +5,15 @@ title: "Logging"
 h1: "Logging"
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  concepts:
-    weight: 10
+    iac:
+        name: Logging
+        parent: iac-concepts
+        weight: 10
+    concepts:
+        weight: 10
 aliases:
 - /docs/intro/concepts/logging/
+- /docs/concepts/logging/
 ---
 
 The {{< pulumi-log >}} collection of functions allow you to log diagnostics, warnings, or errors with the Pulumi engine. These are displayed, alongside all other Pulumi output, in the CLI and in the Pulumi Cloud. Events are logged and kept for historical purposes in case you want to audit or diagnose a past event.

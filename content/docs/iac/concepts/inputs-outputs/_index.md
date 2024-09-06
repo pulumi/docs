@@ -5,12 +5,18 @@ title: "Inputs & outputs"
 h1: "Inputs & outputs"
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  concepts:
-    identifier: inputs-outputs
-    weight: 5
+    iac:
+        name: Inputs & outputs
+        parent: iac-concepts
+        weight: 5
+        identifier: iac-concepts-inputs-outputs
+    concepts:
+        identifier: inputs-outputs
+        weight: 5
 aliases:
     - /docs/reference/inputs-outputs/
     - /docs/intro/concepts/inputs-outputs/
+    - /docs/concepts/inputs-outputs/
 search:
     boost: true
     keywords:

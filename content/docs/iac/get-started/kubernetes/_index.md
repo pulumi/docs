@@ -5,7 +5,7 @@ title: Get started
 h1: Get Started with Kubernetes
 menu:
     iac:
-        name: Google Cloud
+        name: Kubernetes
         parent: iac-get-started
         weight: 4
     clouds:

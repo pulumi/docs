@@ -9,12 +9,17 @@ keywords:
  - state backend
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  concepts:
-    weight: 9
+    iac:
+        name: State & backends
+        parent: iac-concepts
+        weight: 9
+    concepts:
+        weight: 9
 
 aliases:
 - /docs/reference/state/
 - /docs/intro/concepts/state/
+- /docs/concepts/state/
 ---
 
 Pulumi stores metadata about your infrastructure so that it can manage your cloud resources. This metadata is called _state_. Each [stack](/docs/concepts/stack/) has its own state, and state is how Pulumi knows when and how to create, read, delete, or update cloud resources.

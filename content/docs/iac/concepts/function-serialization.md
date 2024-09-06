@@ -10,13 +10,18 @@ keywords:
 - function serialization
 - pulumi sdk
 menu:
-  concepts:
-    weight: 14
+    iac:
+        name: Function serialization
+        parent: iac-concepts
+        weight: 14
+    concepts:
+        weight: 14
 aliases:
 - /docs/reference/serializing-functions/
 - /docs/tutorials/aws/serializing-functions/
 - /docs/intro/concepts/function-serialization/
 - /docs/concepts/inputs-outputs/function-serialization/
+- /docs/concepts/function-serialization/
 ---
 
 {{% notes "info" %}}

@@ -5,11 +5,16 @@ title: Provider functions
 h1: Provider functions
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  concepts:
-    parent: resources
-    weight: 7
+    iac:
+        name: Provider functions
+        parent: iac-concepts-resources
+        weight: 7
+    concepts:
+        parent: resources
+        weight: 7
 aliases:
 - /docs/intro/concepts/resources/functions/
+- /docs/concepts/resources/functions/
 ---
 
 A provider may make **functions** available in its SDK as well as resource types. These "provider functions" are often for calling a platform API to get a value that is not part of a resource. For example, the AWS provider includes the function [`aws.apigateway.getDomainName`](/registry/packages/aws/api-docs/apigateway/getdomainname/):

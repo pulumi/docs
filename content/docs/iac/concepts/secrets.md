@@ -5,10 +5,15 @@ title: Secrets
 h1: Secrets
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  concepts:
-    weight: 7
+    iac:
+        name: Secrets
+        parent: iac-concepts
+        weight: 7
+    concepts:
+        weight: 7
 aliases:
 - /docs/intro/concepts/secrets/
+- /docs/concepts/secrets/
 - /secrets/
 ---
 

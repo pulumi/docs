@@ -5,11 +5,17 @@ title: Resources
 h1: Resources
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  concepts:
-    identifier: resources
-    weight: 3
+    iac:
+        name: Resources
+        parent: iac-concepts
+        weight: 3
+        identifier: iac-concepts-resources
+    concepts:
+        identifier: resources
+        weight: 3
 aliases:
 - /docs/intro/concepts/resources/
+- /docs/concepts/resources/
 ---
 
 <script>
