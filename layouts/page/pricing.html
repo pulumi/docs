@@ -52,7 +52,7 @@
                                 {{ $mobileBookmarkClass = "border-t-2 border-gray-300 rounded-2xl lg:border-0"}}
                             {{ end }}
                             {{ $rightBorderClass := "" }}
-                            {{ if eq $index 0 }}
+                            {{ if not (eq $index 3) }}
                                 {{ $rightBorderClass = "lg:border-r lg:border-gray-300"}}
                             {{ end }}
                             <div class="w-full pb-16 pt-6 lg:py-0 lg:w-1/4 px-8 {{ $mobileBookmarkClass }} {{ $rightBorderClass }}">
@@ -84,7 +84,7 @@
                                     {{ end }}
                                 </div>
                                 {{ end }}
-                                <div class="border-dotted border-2 border-gray-200 rounded-lg px-4 flex grow">
+                                <div class="border-dotted border-2 border-gray-200 rounded-lg px-4">
                                     <div class="text-sm">{{ $tier.items | markdownify }}</div>
                                 </div>
                             </div>
