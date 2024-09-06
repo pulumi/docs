@@ -43,15 +43,15 @@ case_studies:
           description: |
             SST builds a new version of SST (Ion) on Pulumi instead of CDK because of its limitations around speed, error handling, leaky abstractions, non-AWS provider support, and more.
 
-        - name: Fauna
-          link: /case-studies/fauna/
-          logo: fauna
+        - name: Snowflake
+          link: /case-studies/snowflake/
+          logo: snowflake
           description: |
-            Pulumi enabled Fauna to develop a crucial new feature, Region Groups, by giving developers a way of building and deploying multi-cloud applications quickly and safely with software engineering.
+            Snowflake uses Pulumi to allow their application and infrastructure teams to truly treat their infrastructure as software.
 
 form:
     title: Contact our Partner Team
-    description: Ready to enhance your customers' cloud infrastructure with powerful automation and infrastructure-as-code capabilities? Drop our partner team a note to get started with Pulumi.
+    description: Are your customers demanding powerful automation through infrastructure as code and centralized environments, secrets and configuration? Connect with our partner team to learn more about working with Pulumi.
     form_id: d8eaf931-a94c-43cc-92d3-57557c6babf2
     campaign_id: 701PQ00000DrAWQYA3
 

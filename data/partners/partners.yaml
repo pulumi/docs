@@ -7,49 +7,81 @@
   logo: /logos/pkg/aws.svg
 
 - name: Google Cloud
-  link: https://www.pulumi.com
+  link: https://cloud.google.com/
   logo: /logos/pkg/gcp.svg
 
 - name: Azure
-  link: https://www.pulumi.com
+  link: https://azure.microsoft.com/
   logo: /logos/pkg/azure-native.svg
 
+- name: Oracle
+  link: https://www.oracle.com/cloud/
+  logo: /logos/tech/oracle.svg
+
 - name: Docker
-  link: https://www.pulumi.com
+  link: https://www.docker.com/
   logo: /logos/pkg/docker.svg
 
 - name: Pinecone
-  link: https://www.pulumi.com
+  link: https://docs.pinecone.io/integrations/pulumi
   logo: /logos/pkg/pinecone.svg
 
 - name: NewRelic
-  link: https://www.pulumi.com
+  link: https://newrelic.com/instant-observability/pulumi/
   logo: /logos/tech/newrelic.svg
 
 - name: Snyk
-  link: https://www.pulumi.com
+  link: https://docs.snyk.io/integrate-with-snyk/vulnerability-management-tools/pulumi-integration/
   logo: /logos/tech/snyk.png
 
 - name: Cloudflare
-  link: https://www.pulumi.com
+  link: https://developers.cloudflare.com/pulumi/
   logo: /logos/pkg/cloudflare.svg
 
 - name: GitHub
-  link: https://www.pulumi.com
+  link: https://github.com/
   logo: /logos/pkg/github.svg
 
 - name: Snowflake
-  link: https://www.pulumi.com
+  link: https://www.snowflake.com/
   logo: /logos/pkg/snowflake.svg
 
 - name: Zscaler
-  link: https://www.pulumi.com
+  link: https://www.zscaler.com/
   logo: /logos/tech/zscaler.svg
 
-- name: MongoDB
-  link: https://www.pulumi.com
-  logo: /logos/tech/mongodb.png
+- name: Datadog
+  link: https://www.datadoghq.com/
+  logo: /logos/tech/datadog.svg
 
 - name: Gitlab
-  link: https://www.pulumi.com
+  link: https://about.gitlab.com/
   logo: /logos/pkg/gitlab.svg
+
+- name: Wiz 
+  link: https://www.wiz.io/
+  logo: /logos/tech/wiz.svg
+
+- name: Nitric 
+  link: https://nitric.io/blog/why-nitric-chose-pulumi
+  logo: /images/pulumiup-2023/speaker-logos/nitric.svg
+
+- name: Tailscale 
+  link: https://tailscale.com/
+  logo: /logos/pkg/tailscale.svg
+
+- name: Chronosphere 
+  link: https://chronosphere.io/
+  logo: /logos/tech/chronosphere.svg
+
+- name: Nginx
+  link: https://www.f5.com/products/nginx/
+  logo: /logos/tech/nginx-f5.svg
+
+- name: 1password
+  link: https://1password.com/
+  logo: /logos/tech/1password.svg
+
+- name: Dagger
+  link: https://dagger.io/
+  logo: /logos/tech/dagger.svg
