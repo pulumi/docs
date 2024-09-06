@@ -66,7 +66,6 @@ Enter platform engineering, a strategic organizational pattern that addresses th
 
 <!--more-->
 
-
 ## On this article:
 
 - Platform Engineering Concepts
@@ -122,7 +121,7 @@ Key components of the pre-production pipeline include:
 - Artifact management: Provide a secure and versioned repository for storing and distributing the application artifacts produced by the CI process.
 - Static analysis: Integrate tools that can scan application code and dependencies for security vulnerabilities and other issues.
 - Application delivery: Automate the deployment of application artifacts to pre-production environments, such as staging or testing.
-- 
+
 By establishing a standardized pre-production pipeline, you'll ensure that all application teams follow a consistent, secure, and efficient process for getting their code into a production-ready state.
 
 ## Step 5: Embracing Infrastructure as Code
