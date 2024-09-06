@@ -8,6 +8,7 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Get started
+        identifier: iac-get-started
         parent: home
         weight: 2
     getstarted:

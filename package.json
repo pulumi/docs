@@ -23,6 +23,7 @@
     "cssnano": "^5.0.8",
     "cypress": "^13.13.1",
     "glob": "^7.2.0",
+    "gray-matter": "^4.0.3",
     "http-server": "^0.12.1",
     "js-yaml": "^3.13.1",
     "jsdom": "^22.0.0",
