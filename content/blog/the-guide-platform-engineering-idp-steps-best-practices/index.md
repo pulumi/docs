@@ -18,7 +18,7 @@ draft: false
 # of the content of the post, which is useful for targeting search results or
 # social-media previews. This field is required or the build will fail the
 # linter test. Max length is 160 characters.
-meta_desc:
+meta_desc: platform engineering guide and stuff
 
 # The meta_image appears in social-media previews and on the blog home page. A
 # placeholder image representing the recommended format, dimensions and aspect
@@ -60,26 +60,21 @@ social:
 # for details, and please remove these comments before submitting for review.
 ---
 
-What you put here will appear on the index page. In most cases, you'll also want to add a Read More link after this paragraph (though technically, that's optional. To do that, just add an HTML comment like the one below.
+Organizations increasingly turn to platform engineering to streamline their software delivery and operations in today's fast-paced digital landscape. As cloud adoption continues to soar, many enterprises grapple with a proliferation of uncoordinated application teams, each deploying their workloads in different ways across various cloud platforms. This siloed approach can lead to a lack of standardization, security vulnerabilities, and operational inefficiencies.
+
+Enter platform engineering, a strategic organizational pattern that addresses these challenges head-on. This comprehensive guide will explore the critical steps to implementing a successful platform engineering strategy, from laying the groundwork to scaling your internal developer platforms for the future.
 
 <!--more-->
 
 
-And then everything _after_ that comment will appear on the post page itself.
-
-Either way, avoid using images or code samples [in the first 70 words](https://gohugo.io/content-management/summaries/#automatic-summary-splitting) of your post, as these may not render properly in summary contexts (e.g., on the blog home page or in social-media previews).
-
-
 ## On this article:
 
-- Intro: The Rise of Platform Engineering
+- Platform Engineering Concepts
 - Step 1: Securing Executive Buy-in
 
-## Intro: The Rise of Platform Engineering
+## Platform Engineering Concepts
 
-In today's fast-paced digital landscape, organizations are increasingly turning to platform engineering to streamline their software delivery and operations. As cloud adoption continues to soar, many enterprises find themselves grappling with a proliferation of uncoordinated application teams, each deploying their workloads in different ways across various cloud platforms. This siloed approach can lead to a lack of standardization, security vulnerabilities, and operational inefficiencies.
-
-Enter platform engineering, a strategic organizational pattern that addresses these challenges head-on. By establishing a centralized platform team, organizations can create a standardized way to deploy and run applications, abstracting away the complexities of infrastructure and empowering their application teams to focus on delivering business value. In this comprehensive guide, we'll explore the key steps to implementing a successful platform engineering strategy, from laying the groundwork to scaling your platform for the future.
+stuff stuff stuff
 
 ## Step 1: Securing Executive Buy-in
 
