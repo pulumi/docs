@@ -200,8 +200,18 @@
                             min-width: fit-content;
                             div {
                                 .header-nav-drop-down-heading {
+                                    border-top: 2px solid;
+                                    border-image-slice: 1;
+                                    border-image-source: linear-gradient(90deg, #f7bf2a 0%, #f26e7e 18.23%, #be5188 38.02%, #8a3391 53.65%, #805ac3 74.48%, #7682f4 100%);
+                                }
+                                .header-nav-drop-down-heading-text {
                                     @apply font-medium;
-                                    @include gradient-border;
+                                    @apply mx-auto;
+                                    @apply w-min;
+                                    @apply px-2;
+                                    @apply bg-white;
+                                    @apply my-0;
+                                    @apply -mt-3;
                                 }
                             }
 
