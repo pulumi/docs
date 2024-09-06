@@ -63,7 +63,7 @@ social:
 # for details, and please remove these comments before submitting for review.
 ---
 
-PulumiUP 2024 is just around the corner, happening on September 18th, and with over 5,000 engineers from all over the world already registered, this is shaping up to be the must-attend event for cloud professionals, platform engineers, and AI/ML enthusiasts alike. From entry-level engineers to tech executives, this event brings together professionals from companies of all sizes to explore the latest innovations and best practices.
+PulumiUP 2024 is just around the corner! It will be held on September 18th, starting at 8 AM PT | 15:00 UTC, and with over 5,000 engineers from all over the world already registered, this is shaping up to be the must-attend event for cloud professionals, platform engineers, and AI/ML enthusiasts alike. From entry-level engineers to tech executives, this event brings together professionals from companies of all sizes to explore the latest innovations and best practices.
 
 If you haven’t registered yet, now’s the time! Start building your schedule today, and join us for insightful sessions across our topic tracks: **Cloud and IaC**, **Platform Engineering & DevOps**, and **AI/ML**.
 
@@ -138,7 +138,7 @@ Thank you to our amazing partners for supporting PulumiUP!
 
 ## Build Your Schedule Now
 
-With so many compelling topics across AI/ML, Platform Engineering, DevOps, and Cloud and IaC, now is the time to [build your PulumiUP schedule](https://conference.pulumi.com/schedule/?utm_source=PulumiUP&utm_medium=web&utm_campaign=FY2025Q1_Event_PulumiUP). Choose the sessions that align with your goals and interests to get the most out of this unique virtual event. Whether you're looking to sharpen your skills, discover the latest innovations, or connect with industry leaders, PulumiUP has something for everyone.
+With so many compelling topics across AI/ML, Platform Engineering, DevOps, and Cloud and IaC, now is the time to [build your PulumiUP schedule](https://conference.pulumi.com/schedule/?utm_source=PulumiUP&utm_medium=web&utm_campaign=FY2025Q1_Event_PulumiUP). Select the sessions that match your goals and interests to maximize your experience. Plus, you'll receive a link to watch your chosen panel discussions and tech talks on-demand!
 
 Haven’t registered yet? It’s not too late! Join 5,000 engineers worldwide in this groundbreaking event and gain the insights you need to drive innovation at your company. [Register now->](https://www.pulumi.com/pulumi-up/)
 
