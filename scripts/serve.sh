@@ -21,4 +21,4 @@ export PULUMI_CONVERT_URL="${PULUMI_CONVERT_URL:-$(pulumi stack output --stack p
 
 ./scripts/content/generate-compliance-pages.sh
 
-HUGO_BASEURL=http://localhost:1313 hugo server --renderToMemory --logLevel debug --buildDrafts --buildFuture
+HUGO_BASEURL=http://localhost:1313 hugo server --renderToMemory --disableFastRender --buildDrafts --buildFuture
