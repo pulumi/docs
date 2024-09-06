@@ -8,7 +8,7 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   iac:
     weight: 3
-    identifier: cli
+    identifier: iac-cli
     parent: home
 aliases:
 - /docs/reference/commands/

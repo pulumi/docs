@@ -7,7 +7,7 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   iac:
     weight: 3
-    parent: cli
+    parent: iac-cli
 aliases:
     - /docs/cli/command-line-completion/
 ---

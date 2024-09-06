@@ -5,137 +5,137 @@ cli:
   - name: pulumi
     url: /docs/cli/commands/pulumi/
     weight: 1
-    parent: commands
+    parent: iac-cli-commands
 
   - name: about
     url: /docs/cli/commands/pulumi_about/
     weight: 2
-    parent: commands
+    parent: iac-cli-commands
 
   - name: cancel
     url: /docs/cli/commands/pulumi_cancel/
     weight: 2
-    parent: commands
+    parent: iac-cli-commands
 
   - name: config
     url: /docs/cli/commands/pulumi_config/
     weight: 2
-    parent: commands
+    parent: iac-cli-commands
 
   - name: console
     url: /docs/cli/commands/pulumi_console/
     weight: 2
-    parent: commands
+    parent: iac-cli-commands
 
   - name: convert
     url: /docs/cli/commands/pulumi_convert/
     weight: 2
-    parent: commands
+    parent: iac-cli-commands
 
   - name: destroy
     url: /docs/cli/commands/pulumi_destroy/
     weight: 2
-    parent: commands
+    parent: iac-cli-commands
 
   - name: env
     url: /docs/cli/commands/pulumi_env/
     weight: 2
-    parent: commands
+    parent: iac-cli-commands
 
   - name: gen-completion
     url: /docs/cli/commands/pulumi_gen-completion/
     weight: 2
-    parent: commands
+    parent: iac-cli-commands
 
   - name: import
     url: /docs/cli/commands/pulumi_import/
     weight: 2
-    parent: commands
+    parent: iac-cli-commands
 
   - name: login
     url: /docs/cli/commands/pulumi_login/
     weight: 2
-    parent: commands
+    parent: iac-cli-commands
 
   - name: logout
     url: /docs/cli/commands/pulumi_logout/
     weight: 2
-    parent: commands
+    parent: iac-cli-commands
 
   - name: logs
     url: /docs/cli/commands/pulumi_logs/
     weight: 2
-    parent: commands
+    parent: iac-cli-commands
 
   - name: new
     url: /docs/cli/commands/pulumi_new/
     weight: 2
-    parent: commands
+    parent: iac-cli-commands
 
   - name: org
     url: /docs/cli/commands/pulumi_org/
     weight: 2
-    parent: commands
+    parent: iac-cli-commands
 
   - name: package
     url: /docs/cli/commands/pulumi_package/
     weight: 2
-    parent: commands
+    parent: iac-cli-commands
 
   - name: plugin
     url: /docs/cli/commands/pulumi_plugin/
     weight: 2
-    parent: commands
+    parent: iac-cli-commands
 
   - name: policy
     url: /docs/cli/commands/pulumi_policy/
     weight: 2
-    parent: commands
+    parent: iac-cli-commands
 
   - name: preview
     url: /docs/cli/commands/pulumi_preview/
     weight: 2
-    parent: commands
+    parent: iac-cli-commands
 
   - name: refresh
     url: /docs/cli/commands/pulumi_refresh/
     weight: 2
-    parent: commands
+    parent: iac-cli-commands
 
   - name: schema
     url: /docs/cli/commands/pulumi_schema/
     weight: 2
-    parent: commands
+    parent: iac-cli-commands
 
   - name: stack
     url: /docs/cli/commands/pulumi_stack/
     weight: 2
-    parent: commands
+    parent: iac-cli-commands
 
   - name: state
     url: /docs/cli/commands/pulumi_state/
     weight: 2
-    parent: commands
+    parent: iac-cli-commands
 
   - name: up
     url: /docs/cli/commands/pulumi_up/
     weight: 2
-    parent: commands
+    parent: iac-cli-commands
 
   - name: version
     url: /docs/cli/commands/pulumi_version/
     weight: 2
-    parent: commands
+    parent: iac-cli-commands
 
   - name: watch
     url: /docs/cli/commands/pulumi_watch/
     weight: 2
-    parent: commands
+    parent: iac-cli-commands
 
   - name: whoami
     url: /docs/cli/commands/pulumi_whoami/
     weight: 2
-    parent: commands
+    parent: iac-cli-commands
 
 # -------------------------------------
 # ESC Command Line Menu

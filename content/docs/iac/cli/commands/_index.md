@@ -5,9 +5,10 @@ title: Commands
 h1: Pulumi CLI commands
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  cli:
+  iac:
     weight: 1
-    identifier: commands
+    parent: iac-cli
+    identifier: iac-cli-commands
 ---
 
 ## Common Commands

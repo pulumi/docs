@@ -8,7 +8,10 @@ menu:
     iac:
         parent: home
         weight: 2
-        identifier: install
+        identifier: iac-install
+    install:
+        name: Overview
+        weight: 1
 
 aliases:
 - /get-started/install/

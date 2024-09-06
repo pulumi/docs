@@ -7,7 +7,7 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   iac:
     weight: 2
-    parent: cli
+    parent: iac-cli
 aliases:
 - /docs/reference/cli/environment-variables/
 - /docs/cli/environment-variables/
