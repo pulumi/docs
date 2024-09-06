@@ -10,7 +10,7 @@ menu:
         name: Get started
         identifier: iac-get-started
         parent: home
-        weight: 2
+        weight: 20
     getstarted:
         name: Overview
         weight: 2
