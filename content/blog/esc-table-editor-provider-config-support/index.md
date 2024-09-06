@@ -2,6 +2,7 @@
 title: "Pulumi ESC Table Editor Now Supports Dynamic Credential and Secret Integrations"
 date: 2024-09-06T00:00:00-07:00
 draft: false
+allow_long_title: true
 meta_desc: "The Key-Value Table Editor introduces a new visual interface for managing provider configuration using Pulumi ESC."
 meta_image: "meta.png"
 authors:
