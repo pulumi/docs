@@ -3,7 +3,7 @@ title: Pulumi Partners
 layout: partners
 
 meta_title: Pulumi Partners - Automate and Scale Cloud Projects 
-meta_desc: Discover how to accelerate your cloud initiatives with Pulumi Partners. Whether you're looking to automate cloud capabilities or need expert guidance on infrastructure, automation, and best practices, our partners can help
+meta_desc: Accelerate your cloud initiatives with Pulumi Partners. Automate cloud capabilities or get expert guidance on infrastructure, automation, and best practices
 
 overview:
     title: Automate and Scale Cloud Projects 
