@@ -250,6 +250,15 @@ GET /api/stacks/{organization}/{project}/{stack}/metadata
 
 #### Parameters
 
+
+| Parameter      | Type   | In   | Description       |
+|----------------|--------|------|-------------------|
+| `organization` | string | path | organization name |
+| `project`      | string | path | project name      |
+| `stack`        | string | path | stack name        |
+
+#### Example
+
 ```bash
 curl \
   -H "Accept: application/vnd.pulumi+8" \
@@ -258,7 +267,7 @@ curl \
   https://api.pulumi.com/api/stacks/{organization}/{project}/{stack}/metadata
 ```
 
-#### Example
+#### Default Response
 
 ```
 Status: 200 OK
@@ -276,8 +285,6 @@ Status: 200 OK
   }
 }
 ```
-
-#### Default Response
 
 <!-- ###################################################################### -->
 
