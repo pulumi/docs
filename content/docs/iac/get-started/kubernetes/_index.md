@@ -4,13 +4,18 @@ meta_desc: This page provides an overview and guide on how to get started with K
 title: Get started
 h1: Get Started with Kubernetes
 menu:
-  clouds:
-    identifier: kubernetes-get-started
-    parent: kube
-    weight: 4
+    iac:
+        name: Google Cloud
+        parent: iac-get-started
+        weight: 4
+    clouds:
+        identifier: kubernetes-get-started
+        parent: kube
+        weight: 4
 aliases:
-- /docs/quickstart/kubernetes/
-- /docs/get-started/kubernetes/
+    - /docs/quickstart/kubernetes/
+    - /docs/get-started/kubernetes/
+    - /docs/clouds/get-started/kubernetes/
 ---
 
 Pulumi's Cloud Native SDK makes it easy to target any Kubernetes environment to
