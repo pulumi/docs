@@ -276,7 +276,8 @@
                     }
 
                     .company {
-                        min-width: 140px;
+                        @apply -left-44;
+                        min-width: 30ch;
                     }
 
                     .dropdown-menu-caret {
