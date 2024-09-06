@@ -31,12 +31,12 @@
         <div class="container mx-auto lg:flex">
             <div class="w-full p-8 lg:p-0">
                 <div class="hidden lg:block w-full h-10">
-                    <div class="h-full justify-end flex px-8">
+                    <div class="h-full justify-end flex">
                         <div class="w-1/4 flex justify-center items-center rounded-t-full bg-purple-200">Most Popular</div>
                         <div class="w-1/4 flex justify-center items-center rounded-t-full bg-gray-200 text-blue-600 underline"><a class="cursor-pointer" href="/product/self-hosted/">Self-Hosting Available</a></div>
                     </div>
                 </div>
-                <div class="card bg-white p-8 lg:pt-8 lg:rounded-tr-none">
+                <div class="card bg-white py-8 lg:pt-8 lg:rounded-tr-none">
                     <div class="lg:flex">
                         {{ range $index, $tier := .Params.tiers.trialed.items }}
                             {{ $mobileBookmarkClass := "" }}
