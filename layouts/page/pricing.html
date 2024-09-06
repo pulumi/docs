@@ -31,7 +31,7 @@
         <div class="container mx-auto lg:flex">
             <div class="w-full p-8 lg:p-0">
                 <div class="hidden lg:block w-full h-10">
-                    <div class="h-full justify-end flex">
+                    <div class="h-full justify-end flex px-8">
                         <div class="w-1/4 flex justify-center items-center rounded-t-full bg-purple-200">Most Popular</div>
                         <div class="w-1/4 flex justify-center items-center rounded-t-full bg-gray-200 text-blue-600 underline"><a class="cursor-pointer" href="/product/self-hosted/">Self-Hosting Available</a></div>
                     </div>
@@ -44,7 +44,7 @@
                                 <div class="lg:hidden absolute w-28 mx-auto left-0 right-0 text-center bg-white">
                                     <p class="my-0 -mt-3">Most popular</p>
                                 </div>
-                                {{ $mobileBookmarkClass = "border-t-2 border-purple-300 rounded-2xl lg:border-0"}}
+                                {{ $mobileBookmarkClass = "border-t-2 border-purple-300 rounded-2xl lg:rounded-none lg:border-0"}}
                             {{ else if eq $index 3 }}
                                 <div class="lg:hidden absolute w-44 mx-auto left-0 right-0 text-center bg-white">
                                     <p class="my-0 -mt-3"><a class="cursor-pointer underline" href="/product/self-hosted/">Self-Hosting Available</a></p>
