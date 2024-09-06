@@ -250,7 +250,6 @@ GET /api/stacks/{organization}/{project}/{stack}/metadata
 
 #### Parameters
 
-
 | Parameter      | Type   | In   | Description       |
 |----------------|--------|------|-------------------|
 | `organization` | string | path | organization name |
