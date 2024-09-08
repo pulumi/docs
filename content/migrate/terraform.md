@@ -2,184 +2,236 @@
 title: Pulumi for Terraform Users
 layout: terraform
 url: /terraform
-meta_image: /images/migrate/oss-meta.png
-
-
+meta_desc: Learn more about the productivity and scalability benefits of Pulumi over Terraform.
 benefits:
-  title: The benefits of using Pulumi
-  items:
-    - title: Committed to open source
-      icon: exchange
-      icon_color: yellow
-      description: |
-        Pulumi is fully open source and is Apache 2.0 licensed. It does not and never will depend on Business Source License software in any way. 
+    scalability:
+        classes:
+            blurb: |
+                Little blurb here about why this feature is interesting. This probably shouldn't be more than
+                a sentence or two, such that it occupies two lines at desktop width. Here's how that'd look.
+            ts: |
+                import * as pulumi from "@pulumi/pulumi";
+                import * as aws from "@pulumi/aws";
 
-    - title: Tame cloud complexity
-      icon: code-window
-      icon_color: salmon
-      description: |
-        Deliver infrastructure from 100+ cloud and SaaS providers. Pulumi’s SDKs provide a complete and consistent interface that offers full access to
-        clouds and abstracts complexity.
+                /**
+                * The StaticWebsite class provisions a cloud storage bucket
+                * and a content-delivery network for it, exposing the name of
+                * the storage bucket and the CDN URL for later use.
+                */
+                export class StaticWebsite {
+                    private bucket: aws.s3.Bucket;
+                    private cdn: aws.cloudfront.Distribution;
 
-    - title: Bring the cloud closer to application development
-      icon: download-from-cloud
-      icon_color: violet
-      description: |
-        Build reusable cloud infrastructure and infrastructure platforms that empower
-        developers to build modern cloud applications faster and with less overhead.
+                    public bucketName: pulumi.Output<string>;
+                    public originURL: pulumi.Output<string>;
 
-    - title: Use engineering practices with infrastructure
-      icon: lightning
-      icon_color: blue
-      description: |
-        Use engineering practices with infrastructure to replace inefficient, manual infrastructure processes with automation.
-        Test and deliver infrastructure through CI/CD workflows or automate deployments with code at runtime.
+                    constructor(domainName: string, defaultDocument: string = "index.html") {
 
-meta_desc: How to migrate to Pulumi from Terraform for huge productivity gains, and a unified programming model for Devs and DevOps.
-hero_form:
-    hubspot_form_id: 123cfbdb-9ce4-4d33-a9b7-c30302463d7a
-    headline: Need help converting?
-contact_us_form:
-    section_id: contact-us
-    hubspot_form_id: 123cfbdb-9ce4-4d33-a9b7-c30302463d7a
-    headline: Need assistance?
-    quote:
-        title: See how top engineering teams enable developers and operators to work better together with Pulumi.
-        name: Kim Hamilton
-        name_title: CTO, Learning Machine
-        content: |
-            Pulumi has given our team the tools and framework to achieve a unified development and DevOps model,
-            boosting productivity and taking our business to any cloud environment that our customers need. We
-            retired 25,000 lines of complex code that few team members understood and replaced it with 100s of
-            lines in a familiar programming language.
-examples:
-    one:
-        ts: |
-            import * as aws from "@pulumi/aws";
-            import { readdirSync } from "fs";
-            import { join as pathjoin } from "path";
+                        // Create a storage bucket.
+                        this.bucket = new aws.s3.Bucket("website-bucket", {
+                            bucket: domainName,
+                            website: {
+                                indexDocument: defaultDocument
+                            }
+                        });
 
-            const bucket = new aws.s3.Bucket("mybucket");
-            const folder = "./files";
-            let files = readdirSync(folder);
+                        // Create a CloudFront CDN.
+                        this.cdn = new aws.cloudfront.Distribution("website-cdn", {
+                            enabled: true,
+                            origins: [
+                                {
+                                    originId: this.bucket.arn,
+                                    domainName: this.bucket.bucketRegionalDomainName
+                                }
+                            ],
+                            defaultRootObject: defaultDocument,
+                            defaultCacheBehavior: {
+                                targetOriginId: this.bucket.arn,
+                                allowedMethods: ["HEAD", "GET"],
+                                cachedMethods: ["HEAD", "GET"],
+                                viewerProtocolPolicy: "redirect-to-https",
+                                forwardedValues: {
+                                    cookies: { forward: "none" },
+                                    queryString: false
+                                }
+                            },
+                            restrictions: {
+                                geoRestriction: {
+                                    restrictionType: "none"
+                                }
+                            },
+                            viewerCertificate: {
+                                cloudfrontDefaultCertificate: true
+                            }
+                        });
 
-            for (let file of files) {
-                const object = new aws.s3.BucketObject(file, {
-                    bucket: bucket,
-                    source: new pulumi.FileAsset(pathjoin(folder, file))
+                        // Expose the bucket name and origin URL so consumers can use them.
+                        this.bucketName = this.bucket.bucket;
+                        this.originURL = pulumi.interpolate`https://${this.cdn.domainName}`;
+                    }
+                }
+
+                // Consumers of your API can provide and use only the properties they care about.
+                const { bucketName, originURL } = new StaticWebsite("www.my-domain.com");
+
+            hcl: |
+                // Some code here.
+        components:
+            blurb: |
+                Little blurb here about why this feature is interesting.
+            ts: |
+                import * as pulumi from "@pulumi/pulumi";
+                import * as aws from "@pulumi/aws";
+
+
+                interface StaticWebsiteArgs {
+                    domainName: string;
+                    defaultDocument?: string;
+                }
+
+                /**
+                * The StaticWebsite component provisions a cloud storage bucket
+                * and a content-delivery network for it. Exposes the name of
+                * the storage bucket and the CDN origin URL.
+                */
+                export class StaticWebsite extends pulumi.ComponentResource {
+                    private bucket: aws.s3.Bucket;
+                    private cdn: aws.cloudfront.Distribution;
+
+                    public bucketName: pulumi.Output<string>;
+                    public originURL: pulumi.Output<string>;
+
+                    constructor(name: string, args: StaticWebsiteArgs, opts?: pulumi.ComponentResourceOptions) {
+                        super("acmecorp:index:StaticWebsite", name, args, opts);
+
+                        if (!args.defaultDocument) {
+                            args.defaultDocument = "index.html";
+                        }
+
+                        // Create a storage bucket.
+                        this.bucket = new aws.s3.Bucket("website-bucket", {
+                            bucket: args.domainName,
+                            website: {
+                                indexDocument: args.defaultDocument
+                            }
+                        }, { parent: this });
+
+                        // Create a CloudFront CDN.
+                        this.cdn = new aws.cloudfront.Distribution("website-cdn", {
+                            enabled: true,
+                            origins: [
+                                {
+                                    originId: this.bucket.arn,
+                                    domainName: this.bucket.bucketRegionalDomainName
+                                }
+                            ],
+                            defaultRootObject: "index.html",
+                            defaultCacheBehavior: {
+                                targetOriginId: this.bucket.arn,
+                                allowedMethods: ["HEAD", "GET"],
+                                cachedMethods: ["HEAD", "GET"],
+                                viewerProtocolPolicy: "redirect-to-https",
+                                forwardedValues: {
+                                    cookies: { forward: "none" },
+                                    queryString: false
+                                }
+                            },
+                            restrictions: {
+                                geoRestriction: {
+                                    restrictionType: "none"
+                                }
+                            },
+                            viewerCertificate: {
+                                cloudfrontDefaultCertificate: true
+                            }
+                        }, { parent: this });
+
+                        // Expose the bucket name and origin URL so consumers can use them.
+                        this.bucketName = this.bucket.bucket;
+                        this.originURL = pulumi.interpolate`https://${this.cdn.domainName}`;
+
+                        // Register public properties as Pulumi outputs.
+                        this.registerOutputs({
+                            bucketName: this.bucketName,
+                            originURL: this.originURL
+                        });
+                    }
+                }
+
+                // Consumers of your API can provide and use only the properties they care about.
+                export const { bucketName, originURL } = new StaticWebsite("my-website", {
+                    domainName: "www.my-domain.com"
                 });
-            }
-
-            export const bucketname = bucket.id;
-        tf: |
-            resource "aws_s3_bucket" "mybucket" {
-                bucket_prefix = "mybucket"
-            }
-
-            resource "aws_s3_bucket_object" "data_txt" {
-                key        = "data.txt"
-                bucket     = "${aws_s3_bucket.mybucket.id}"
-                source     = "./files/data.txt"
-            }
-
-            resource "aws_s3_bucket_object" "index_html" {
-                key        = "index.html"
-                bucket     = "${aws_s3_bucket.mybucket.id}"
-                source     = "./files/index.html"
-            }
-
-            resource "aws_s3_bucket_object" "index_js" {
-                key        = "index.js"
-                bucket     = "${aws_s3_bucket.mybucket.id}"
-                source     = "./files/index.js"
-            }
-
-            resource "aws_s3_bucket_object" "main.css" {
-                key        = "main.css"
-                bucket     = "${aws_s3_bucket.mybucket.id}"
-                source     = "./files/main.css"
-            }
-
-            resource "aws_s3_bucket_object" "favicon.ico" {
-                key        = "favicon.ico"
-                bucket     = "${aws_s3_bucket.mybucket.id}"
-                source     = "./files/favicon.ico"
-            }
-    two:
-        ts: |
-            import * as aws from "@pulumi/aws";
-
-            // Create an S3 Bucket.
-            const bucket = new aws.s3.Bucket("mybucket");
-
-            // Register a Lambda to handle the Bucket notification.
-            bucket.onObjectCreated("newObj", async (ev, ctx) => {
-                // Write code inline, or use a Zip
-                console.log(JSON.stringify(ev));
-            });
-
-            // Export the bucket name for easy scripting.
-            export const bucketName = bucket.id;
-        tf: |
-            resource "aws_s3_bucket" "mybucket" {
-                bucket_prefix = "mybucket"
-            }
-
-            data "archive_file" "lambda_zip" {
-                type        = "zip"
-                output_path = "lambda.zip"
-
-                source {
-                    filename = "index.js"
-                    content = < {
-                        console.log(JSON.stringify(ev))
-                    }
-                    EOF
+            hcl: |
+                // Some code here.
+        testing:
+            blurb: |
+                Little blurb here about why this feature is interesting.
+            ts: |
+                // Some code here.
+            hcl: |
+                // Some code here.
+    productivity:
+        loops:
+            blurb: |
+                Little blurb here about why this feature is interesting.
+            ts: |
+                // Upload all files in a folder.
+                for (let file of files) {
+                    const myObject = new aws.s3.BucketObject(file, {
+                        bucket: bucket,
+                        source: new pulumi.FileAsset(pathjoin(folder, file),
+                    });
                 }
-            }
-
-            data "aws_iam_policy_document" "lambda-assume-role-policy" {
-                statement {
-                    actions = ["sts:AssumeRole"]
-
-                    principals {
-                        type        = "Service"
-                        identifiers = ["lambda.amazonaws.com"]
-                    }
+            hcl: |
+                resource "aws_s3_bucket_object" "data_txt" {
+                    key        = "data.txt"
+                    bucket     = "${aws_s3_bucket.mybucket.id}"
+                    source     = "./files/data.txt"
                 }
-            }
 
-            resource "aws_iam_role" "lambda" {
-                assume_role_policy = "${data.aws_iam_policy_document.lambda-assume-role-policy.json}"
-            }
-
-            resource "aws_lambda_function" "my_lambda" {
-                filename = "${data.archive_file.lambda_zip.output_path}"
-                source_code_hash = "${data.archive_file.lambda_zip.output_base64sha256}"
-                function_name = "my_lambda"
-                role = "${aws_iam_role.lambda.arn}"
-                handler = "index.handler"
-                runtime = "nodejs8.10"
-            }
-
-            resource "aws_lambda_permission" "allow_bucket" {
-                statement_id  = "AllowExecutionFromS3Bucket"
-                action        = "lambda:InvokeFunction"
-                function_name = "${aws_lambda_function.my_lambda.arn}"
-                principal     = "s3.amazonaws.com"
-                source_arn    = "${aws_s3_bucket.mybucket.arn}"
-            }
-
-            resource "aws_s3_bucket_notification" "bucket_notification" {
-                bucket = "${aws_s3_bucket.mybucket.id}"
-
-                lambda_function {
-                    lambda_function_arn = "${aws_lambda_function.my_lambda.arn}"
-                    events              = ["s3:ObjectCreated:*"]
+                resource "aws_s3_bucket_object" "index_html" {
+                    key        = "index.html"
+                    bucket     = "${aws_s3_bucket.mybucket.id}"
+                    source     = "./files/index.html"
                 }
-            }
 
-            output "bucket_name" {
-                value = "${aws_s3_bucket.mybucket.id}"
-            }
+                resource "aws_s3_bucket_object" "index_js" {
+                    key        = "index.js"
+                    bucket     = "${aws_s3_bucket.mybucket.id}"
+                    source     = "./files/index.js"
+                }
+
+                resource "aws_s3_bucket_object" "main.css" {
+                    key        = "main.css"
+                    bucket     = "${aws_s3_bucket.mybucket.id}"
+                    source     = "./files/main.css"
+                }
+
+                resource "aws_s3_bucket_object" "favicon.ico" {
+                    key        = "favicon.ico"
+                    bucket     = "${aws_s3_bucket.mybucket.id}"
+                    source     = "./files/favicon.ico"
+                }
+        conditionals:
+            blurb: |
+                Little blurb here about why this feature is interesting.
+            ts: |
+                // Some code here.
+            hcl: |
+                // Some code here.
+        eventHandlers:
+            blurb: |
+                Little blurb here about why this feature is interesting.
+            ts: |
+                // Some code here.
+            hcl: |
+                // Some code here.
+        statementCompletion:
+            blurb: |
+                Little blurb here about why this feature is interesting.
+            ts: |
+                // Some code here.
+            hcl: |
+                // Some code here.
 ---
