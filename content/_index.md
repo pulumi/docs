@@ -243,4 +243,7 @@ get_started:
 
   title: Built by engineers for engineers. Open source.
   description: "[Join us](/community) in the community, and let’s build together."
+outputs:
+  - html
+  - json
 ---
