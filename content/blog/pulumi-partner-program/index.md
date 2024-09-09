@@ -2,7 +2,8 @@
 title: "Announcing the New Pulumi Partner Program"
 date: 2024-09-16
 draft: true
-meta_desc: Pulumi launches its Partner Program, helping cloud and SaaS companies accelerate projects, drive innovation, and scale with seamless integrations and go-to-market strategies
+meta_desc: |
+    Pulumi launches its Partner Program, helping cloud and SaaS companies accelerate projects with seamless integrations and go-to-market strategies
 authors:
     - isaac-harris
     - tejitha-raju
@@ -24,6 +25,7 @@ Pulumi has always been committed to the open-source community and the vibrant ec
 Customers are choosing Pulumi because it enables them to manage cloud and SaaS resources using familiar general-purpose programming languages like Python, TypeScript, and Go. This approach taps into the existing skills of development teams, reducing the learning curve, and also allows for greater flexibility and reuse of code across projects. By utilizing these widely adopted languages, Pulumi increases team productivity, enables more robust automation, and significantly accelerates the path to production compared to infrastructure as code written in more restrictive, domain-specific languages. With the introduction of ["local packages”](https://www.pulumi.com/blog/any-terraform-provider/), we’re further simplifying the integration process for partners, facilitating seamless adoption and faster delivery of cloud projects.
 
 ## Key Benefits of Pulumi Partner Program
+
 * __Help your customers with the best in Infrastructure as Code (IaC) and Secure Configuration Management__: Align with Pulumi, a leader in the IaC space, to gain credibility and recognition and leverage Pulumi ESC to securely manage configurations and secrets across infrastructure and application services.
 * __Accelerated Adoption of Partner Solutions__: Boost the adoption of partner products by leveraging Pulumi’s automation capabilities, streamlining integration and enhancing your offerings.
 * __New Revenue Streams__: Create new revenue opportunities through innovative joint solutions.
@@ -33,4 +35,5 @@ Customers are choosing Pulumi because it enables them to manage cloud and SaaS r
 With 20 inaugural members, our technology partners join an elite community that benefits from Pulumi’s ongoing investment in technical, marketing, training, and business strategy support. We are excited to welcome new members such as Docker, 1Password, Pinecone, NewRelic, and many others.
 
 ## Join the Pulumi Partner Program
+
 We believe that the Pulumi Partner Program will bring together and support the growth of our entire ecosystem, leveraging the strengths of our partners and creating connections for new potential services and technologies. Prospective partners can reach out to us via our [website](www.pulumi.com/partners). We look forward to welcoming new partners and driving innovation together.
