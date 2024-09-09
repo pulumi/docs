@@ -38,7 +38,7 @@ The token contains the following claims:
 |:--------------|:------------|
 | aud           | _(Audience)_ The name of the organization associated with the environment. |
 | iss           | _(Issuer)_ The issuer of the OIDC token: `https://api.pulumi.com/oidc`. |
-| current_env   | _(Current Environment)_ The name of the environment where the [ESC OIDC provider configuration](/docs/esc/providers/) is defined. |
+| current_env   | _(Current Environment)_ The name of the environment where the [ESC OIDC provider configuration](/docs/esc/integrations/) is defined. |
 | root_env      | _(Root Environment)_ The name of the environment that is opened first. This Root Environment in turn opens other imported environments. |
 | trigger_user  | _(Trigger User)_ The user whose credentials are used to open an environment. |
 | sub           | _(Subject)_ The subject of the OIDC token. Often used for configuring trust relationships, it contains information about the associated service. Each component is also available as a custom claim. |
