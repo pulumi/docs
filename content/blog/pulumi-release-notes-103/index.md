@@ -44,7 +44,7 @@ In collaboration with 1Password, we've launched the [1Password provider](/docs/e
 
 ### Pulumi ESC Key-Value Table Editor
 
-We've rolled out the [Pulumi ESC Key-Value Table Editor](/blog/esc-key-value-table-editor-launch/), offering a novel, user-friendly interface for managing secrets and configurations. This addition complements the existing YAML-based editor, providing intuitive and familiar experiences for your workflows with secrets and configurations. Table Editor supports capabilities including CRUD operations for secrets and plaintext values, secret decryption, [environment imports](/docs/esc/environments/imports/#importing-other-environments), variable projections, and [interpolations](/docs/esc/environments/working-with-environments/#interpolating-values).
+We've rolled out the [Pulumi ESC Key-Value Table Editor](/blog/esc-key-value-table-editor-launch/), offering a novel, user-friendly interface for managing secrets and configurations. This addition complements the existing YAML-based editor, providing intuitive and familiar experiences for your workflows with secrets and configurations. Table Editor supports capabilities including CRUD operations for secrets and plaintext values, secret decryption, [environment imports](/docs/esc/environments/imports/), variable projections, and [interpolations](/docs/esc/environments/working-with-environments/#interpolating-values).
 
 ![Key-Value Table Editor](/blog/esc-key-value-table-editor-launch/esc-key-value-table-editor.png)
 

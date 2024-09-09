@@ -5,9 +5,10 @@ h1: "Pulumi ESC: Integrate with Terraform"
 meta_desc: This page provides an overview on how to use Pulumi ESC with Terraform.
 menu:
   pulumiesc:
-    identifier: esc-inf-tools-integrations-terraform
     parent: esc-inf-tools-integrations
     weight: 3
+aliases:
+  - /docs/esc/other-integrations/terraform/
 ---
 
 ## Overview

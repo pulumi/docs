@@ -6,8 +6,9 @@ meta_desc: This page provides an overview of how to use Pulumi ESC with Cloudfla
 menu:
   pulumiesc:
     parent: esc-inf-tools-integrations
-    identifier: esc-inf-tools-integrations-cloudflare
     weight: 4
+aliases:
+  - /docs/esc/other-integrations/cloudflare/
 ---
 
 ## Overview

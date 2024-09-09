@@ -1,5 +1,4 @@
 ---
-
 title: Pulumi IaC
 title_tag: Pulumi ESC and IaC integration
 h1: ESC Pulumi IaC Integration
@@ -10,8 +9,6 @@ menu:
     parent: esc-inf-tools-integrations
     weight: 1
 ---
-
-## Using environments with Pulumi IaC
 
 With support for Pulumi ESC built into the Pulumi CLI, you can expose an environment's settings and secrets to any or all of your Pulumi stacks, bypassing the need to define and maintain individual configuration settings or secrets "locally" in Pulumi config files. The optional `pulumiConfig` key enables this.
 

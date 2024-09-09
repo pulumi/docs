@@ -40,7 +40,7 @@ $ esc env diff myorg/test@3 myorg/test@2
 ...
 ```
 
-### Tagging versions
+## Tagging versions
 
 You can tag your revisions with meaningful names like `prod`, or `stable`. Each environment has a built-in `latest` tag that always points to the environment’s most recent revision. Use `esc env version tag` to tag a revision.
 

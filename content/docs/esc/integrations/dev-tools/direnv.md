@@ -5,9 +5,10 @@ h1: "Pulumi ESC: Integrate with Direnv"
 meta_desc: This page provides an overview on how to use Pulumi ESC with Direnv.
 menu:
   pulumiesc:
-    identifier: esc-dev-tools-integrations-direnv
     parent: esc-dev-tools-integrations
     weight: 1
+aliases:
+  - /docs/esc/other-integrations/direnv/
 ---
 
 ## Overview

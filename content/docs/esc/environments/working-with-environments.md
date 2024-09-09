@@ -503,4 +503,4 @@ Environment "myorg/test" has been removed!
 
 ## Renaming an environment
 
-Environments cannot be renamed.
+Environments cannot be renamed. However, you can achieve the same result by creating a new environment with the desired name, copying over all configurations and secrets from the original environment, and then deleting the old one.

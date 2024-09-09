@@ -5,7 +5,6 @@ h1: ESC access control
 meta_desc: Pulumi ESC provides granular access control to manage permissions with roles like reader, opener, and editor.
 menu:
   pulumiesc:
-    identifier: esc-access-control
     parent: esc-environments
     weight: 5
 ---
@@ -20,7 +19,7 @@ Access controls and Teams are only available to organizations using Pulumi Enter
 
 ### Organization-wide permissions
 
-Go to the `Access Management` page under Settings to set Organization-wide environment permissions. Members of the organization will receive these permissions. By default, the environment permissions for the organization is set to `write`. There are four options:
+Go to the `Access Management` page under Settings to set Organization-wide environment permissions. Members of the organization will receive these permissions. The default environment permission is `write`. There are four options:
 
 * `none`: Members have access to none of the environments
 * `read`: Members can view only plaintext key values (i.e., the definition of the environment). They won’t be able to see the secret values in plaintext, run any provider configurations to retrieve credentials or run any functions. They cannot perform any Pulumi IaC operations such as `refresh`, `up`, `destroy` on stacks that imports the environment
