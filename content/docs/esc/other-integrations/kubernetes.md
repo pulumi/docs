@@ -52,7 +52,7 @@ values:
 The Kubernetes configuration is picked up automatically by the `kubectl` command:
 
 ```bash
-$ esc run <your-environment-name> -- kubectl get namespaces
+$ esc run <your-project-name>/<your-environment-name> -- kubectl get namespaces
 ```
 
 This command opens the environment you just created, renders the kubeconfig as a temporary file, sets
@@ -105,11 +105,11 @@ In practice, your environment should define both a kubeconfig file and a provide
 
 Next, you will need to import your environment file into your Pulumi project. To do this,
 open your `Pulumi.<your-stack-name>.yaml` file and update it to import your environment as shown below,
-making sure to replace the value of `<your-environment-name>` with the name of your own environment:
+making sure to replace the value of `<your-project-name>/<your-environment-name>` with the identifier of your own environment:
 
 ```yaml
 environment:
-  - <your-environment-name>
+  - <your-project-name>/<your-environment-name>
 ```
 
 ## Authenticate to a Kubernetes Cluster
@@ -134,7 +134,7 @@ values:
         oidc:
           duration: 1h
           roleArn: arn:aws:iam::0123456789:role/cluster-admin
-          sessionName: <your-environment-name>
+          sessionName: <your-project-name>/<your-environment-name>
   environmentVariables:
     AWS_ACCESS_KEY_ID: ${aws.creds.keyId}
     AWS_SECRET_ACCESS_KEY: ${aws.creds.secretAccessKey}
@@ -150,12 +150,12 @@ This assumes that the kubeconfig is configured appropriately to use the authenti
 A good practice is to compose an environment by importing other environment(s). Consider encapsulating your cloud
 credentials in a separate environment file, and reference the environment as necessary.
 
-The following environment imports an environment named `aws-access` to incorporate credentials, and then prepares
+The following environment imports an environment named `aws-access` within the `demos` project to incorporate credentials, and then prepares
 a kubeconfig for `kubectl` and for the Pulumi Kubernetes provider.
 
 ```yaml
 imports:
-  - aws-access
+  - demos/aws-access
 values:
   stacks:
     fn::open::pulumi-stacks:

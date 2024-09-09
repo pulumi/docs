@@ -19,8 +19,8 @@ aliases:
 
 # imports is an optional top-level key
 imports:
-  - environment-a
-  - environment-b
+  - project/environment-a
+  - project/environment-b
 
 # ---------------------------------------------------------------------------------------
 # Main configuration -- set configuration values either as static values, or interpolated

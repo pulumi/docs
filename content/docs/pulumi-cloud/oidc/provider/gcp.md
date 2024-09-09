@@ -83,9 +83,17 @@ For example, to enable all of the valid operations on a stack named `dev` of the
 
 #### Pulumi ESC
 
-The below is an example of a valid subject claim for the `development` environment of the `contoso` organization:
+The below is an example of a valid subject claim for the `project/development` environment of the `contoso` organization:
 
-* `pulumi:environments:org:contoso:env:development`
+* `pulumi:environments:org:contoso:env:project/development`
+
+The default format of the subject claim when `subjectAttributes` are not used is `pulumi:environments:org:<organization name>:env:<project name>/<environment name>`
+
+{{< notes type="warning" >}}
+
+For environments within the legacy `default` project, the project will **not** be present in the subject to preserve backwards compatibility. The format of the subject claim when `subjectAttributes` are not set is `pulumi:environments:org:<organization name>:env:<environment name>`. If `currentEnvironment.name` is used as a custom subject attribute it will resolve to only the environment name (e.g. `pulumi:environments:pulumi.organization.login:contoso:currentEnvironment.name:development:pulumi.user.login:personA`). Due to this it is recommended to move your environments out of the `default` project for best security practices.
+
+{{< /notes >}}
 
 You can learn more about setting up OIDC for Pulumi ESC by referring to the [relevant Pulumi documentation](/docs/pulumi-cloud/esc/providers/#setting-up-oidc).
 
@@ -101,8 +109,8 @@ Use 'subjectAttributes' to customize the subject identifier to work with Pulumi 
 
 It is possible to customize the OIDC token subject claim by setting configuring the `subjectAttributes` setting. It expects an array of keys to include in it:
 
-* `rootEnvironment.name`: the name of the root evironment being evaluated
-* `currentEnvironment.name`: the name of the current environment being evaluated
+* `rootEnvironment.name`: the name of the environment that is opened first. This root environment in turn opens other imported environments
+* `currentEnvironment.name`: the full name (including the project) of the environment where the ESC login provider and `subjectAttributes` are defined
 * `pulumi.user.login`: the login identifier of the user opening the environment
 * `pulumi.organization.login`: the login identifier of the organization
 
@@ -120,7 +128,7 @@ values:
             - pulumi.user.login
 ```
 
-The subject will be `pulumi:environments:pulumi.organization.login:contoso:currentEnvironment.name:development:pulumi.user.login:userLogin`. Note how the keys and values are appended along with the prefix.
+The subject will be `pulumi:environments:pulumi.organization.login:contoso:currentEnvironment.name:project/development:pulumi.user.login:userLogin`. Note how the keys and values are appended along with the prefix.
 
 ## Configure OIDC in the Pulumi Console
 
@@ -148,8 +156,8 @@ To configure OIDC for Pulumi ESC, create a new environment in the [Pulumi Consol
 
 1. Click the **Environments** link.
 2. Click the **Create environment** button.
-3. Provide a name for your environment.
-    * This should be the same as the name provided in the subject claim in the previous steps.
+3. Provide a project to create your new environment in and a name for your environment.
+    * This should be the same as the identifier provided in the subject claim of your federated credentials.
 4. Click the  **Create environment** button.
   {{< video title="Creating a new Pulumi ESC environment" src="https://www.pulumi.com/uploads/create-new-environment.mp4" autoplay="true" loop="true" >}}
 5. You will be presented with a split-pane editor view. Delete the default placeholder content in the editor and replace it with the following code:
@@ -176,10 +184,10 @@ To configure OIDC for Pulumi ESC, create a new environment in the [Pulumi Consol
 
 You can validate that your configuration is working by running either of the following:
 
-* `esc open <your-org>/<your-environment>` command of the [ESC CLI](/docs/esc-cli/)
-* `pulumi env open <your-org>/<your-environment>` command of the [Pulumi CLI](/docs/install/)
+* `esc open <your-org>/<your-project>/<your-environment>` command of the [ESC CLI](/docs/esc-cli/)
+* `pulumi env open <your-org>/<your-project>/<your-environment>` command of the [Pulumi CLI](/docs/install/)
 
-Make sure to replace `<your-org>` and `<your-environment>` with the values of your Pulumi organization and environment file respectively. You should see output similar to the following:
+Make sure to replace `<your-org>`, `<your-project>`, and `<your-environment>` with the values of your Pulumi organization, project, and environment file respectively. You should see output similar to the following:
 
 ```bash
 {

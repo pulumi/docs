@@ -55,7 +55,7 @@ Before each prompt, `direnv` checks for the existence of a `.envrc` file in the 
 To open an ESC environment and export its environment variables, create a `.envrc` file with the following contents:
 
 ```bash
-eval $(esc open <your-environment-name> --format shell)
+eval $(esc open <your-project-name>/<your-environment-name> --format shell)
 ```
 
 Once you've created this file, `direnv` may warn you that it cannot load the `.direnv` file for security reasons:
