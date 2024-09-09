@@ -3,7 +3,7 @@
 {{ end }}
 
 {{ define "main" }}
-    <section id="overview" class="sm:mt-24 mb-16 relative">
+    <section id="overview" class="my-8 relative">
         <div class="shape-background product-overview-section">
             <div class="shape-container">
                 <div class="circle-right"></div>
@@ -36,7 +36,7 @@
                         </div>
                     </div>
 
-                    <div class="container mx-auto mt-16 text-center w-11/12 sm:w-9/12">
+                    <div class="container mx-auto mt-8 text-center w-11/12 sm:w-9/12">
                         <h3>{{ $feature.title }}</h3>
                         <div class="flex flex-col lg:flex-row">
                             <div class="w-full my-auto lg:w-1/2 lg:mr-32 z-10 p-8 text-left">
@@ -44,7 +44,39 @@
                                 <p class="text-lg">{{ $feature.description | markdownify }}</p>
                             </div>
                             <div class="w-full lg:w-1/2 block lg:flex lg:justify-center lg:align-center">
-                                <img src="/images/product/pulumi-iac-code.png" alt="Pulumi infrastructure as code example" />
+                                <div class="card bg-white shadow-xl p-6 block">
+                                    <div>
+                                        <pulumi-chooser type="language" options="typescript,python,go,csharp,java,yaml">
+                                            <pulumi-choosable type="language" class="highlight" value="typescript">
+                                                <img
+                                                    class="mx-auto w-full"
+                                                    src="/images/home/typescript.svg"
+                                                    alt="Pulumi code being written in TypeScript showing autocomplete for creating a new S3 bucket"
+                                                />
+                                            </pulumi-choosable>
+                
+                                            <pulumi-choosable type="language" class="highlight" value="python">
+                                                <img class="mx-auto w-full" src="/images/home/python.svg" alt="Pulumi code being written in Python showing autocomplete for creating a new S3 bucket" />
+                                            </pulumi-choosable>
+                
+                                            <pulumi-choosable type="language" class="highlight" value="go">
+                                                <img class="mx-auto w-full" src="/images/home/go.svg" alt="Pulumi code being written in GO showing autocomplete for creating a new S3 bucket" />
+                                            </pulumi-choosable>
+                
+                                            <pulumi-choosable type="language" class="highlight" value="csharp">
+                                                <img class="mx-auto w-full" src="/images/home/c-sharp.svg" alt="Pulumi code being written in C# showing autocomplete for creating a new S3 bucket" />
+                                            </pulumi-choosable>
+                
+                                            <pulumi-choosable type="language" class="highlight" value="java">
+                                                <img class="mx-auto w-full" src="/images/home/java.svg" alt="Pulumi code being written in Java showing autocomplete for creating a new S3 bucket" />
+                                            </pulumi-choosable>
+                
+                                            <pulumi-choosable type="language" class="highlight" value="yaml">
+                                                <img class="mx-auto w-full" src="/images/home/yaml.svg" alt="Pulumi code being written in YAML showing autocomplete for creating a new S3 bucket" />
+                                            </pulumi-choosable>
+                                        </pulumi-chooser>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
