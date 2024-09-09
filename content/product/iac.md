@@ -182,7 +182,7 @@ stats:
         number: "1,000s"
         description: of companies
     integration:
-        number: "70+"
+        number: "150+"
         description: Cloud and service integrations
 
 key_features_below:
