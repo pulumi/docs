@@ -1,14 +1,20 @@
 ---
 title_tag: "How to Debug Pulumi Provider Packages"
 meta_desc: "Learn the process for debugging Pulumi providers locally."
-title: Debug provider packages
-h1: Debug Pulumi provider packages
+title: Debugging provider packages
+h1: Debugging Pulumi provider packages
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
+    iac:
+        name: Debugging packages
+        parent: iac-packages-automation-packages
+        weight: 2
     usingpulumi:
         parent: pulumi-packages
         identifier: how-to-debug-providers
         weight: 2
+aliases:
+    - /docs/using-pulumi/pulumi-packages/
 ---
 
 When developing or troubleshooting Pulumi providers, you may need to debug the provider code locally. This guide walks you through starting your provider in debug mode, setting breakpoints, and running tests.

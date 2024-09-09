@@ -7,10 +7,15 @@ h1: AWSGuard policies
 weight: 3
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  usingpulumi:
-    parent: crossguard
+    iac:
+        name: AWSGuard
+        parent: iac-packages-automation-policy
+        weight: 6
+    usingpulumi:
+        parent: crossguard
 aliases:
 - /docs/guides/crossguard/awsguard/
+- /docs/using-pulumi/crossguard/awsguard/
 ---
 <!-- markdownlint-disable ul code -->
 

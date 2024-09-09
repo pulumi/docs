@@ -1,15 +1,21 @@
 ---
-title_tag: "Using Pulumi Packages"
+title_tag: Pulumi Packages
 meta_desc: Pulumi Packages enable you to write infrastructure abstractions once in TypeScript, C#, Go, or Python and make them available for use in any Pulumi language.
 title: Pulumi packages
 h1: Pulumi packages
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
+    iac:
+        name: Pulumi packages
+        parent: iac-packages-automation
+        weight: 1
+        identifier: iac-packages-automation-packages
     usingpulumi:
         identifier: pulumi-packages
         weight: 7
 aliases:
 - /docs/guides/pulumi-packages/
+- /docs/using-pulumi/pulumi-packages/
 ---
 
 Pulumi Packages are the core technology that enables cloud infrastructure resource provisioning to be defined once, and made available to users in all Pulumi languages. With Pulumi Packages, [Resources and Components](/docs/concepts/resources/) can be written once, in your preferred language, and made available in all the other languages supported by Pulumi.

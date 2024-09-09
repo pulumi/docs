@@ -6,10 +6,15 @@ h1: Snyk Container Scanning
 weight: 4
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  usingpulumi:
-    parent: crossguard
+    iac:
+        name: Snyk container scanning
+        parent: iac-packages-automation-policy
+        weight: 7
+    usingpulumi:
+        parent: crossguard
 aliases:
 - /docs/guides/crossguard/snyk-container-scanning/
+- /docs/using-pulumi/crossguard/snyk-container-scanning/
 ---
 <!-- markdownlint-disable ul code -->
 

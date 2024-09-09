@@ -6,10 +6,15 @@ h1: Policy pack best practices
 weight: 5
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  usingpulumi:
-    parent: crossguard
+    iac:
+        name: Best practices
+        parent: iac-packages-automation-policy
+        weight: 5
+    usingpulumi:
+        parent: crossguard
 aliases:
 - /docs/guides/crossguard/best-practices/
+- /docs/using-pulumi/crossguard/best-practices/
 ---
 
 ## Naming Policies

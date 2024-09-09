@@ -5,8 +5,14 @@ title: Compliance Ready Aws Policies
 h1: List of Compliance Ready Policies for Aws
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  usingpulumi:
-    parent: crossguard-compliance-ready-policies
+    iac:
+        name: Compliance-ready policies
+        parent: iac-packages-automation-policy-compliance
+        weight: 3
+    usingpulumi:
+        parent: crossguard-compliance-ready-policies
+aliases:
+    - /docs/using-pulumi/crossguard/compliance-ready-policies/aws/
 ---
 There's a total of 93 Compliance Ready Policies for the Aws provider.
 

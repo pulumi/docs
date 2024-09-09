@@ -5,9 +5,15 @@ title: Debugging
 h1: Debugging Pulumi programs
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
+    iac:
+        Name: Debugging
+        parent: iac-concepts
+        weight: 16
     usingpulumi:
         identifier: debugging
         weight: 9
+aliases:
+    - /docs/using-pulumi/debugging/
 ---
 
 Because Pulumi uses general purpose programming languages to provision cloud resources, you can take advantage of native debugging tools to troubleshoot your infrastructure definitions.

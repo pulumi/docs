@@ -7,11 +7,16 @@ h1: Pulumi policy as code concepts
 weight: 2
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  usingpulumi:
-    parent: crossguard
-    identifier: crossguard-core-concepts
+    iac:
+        name: Concepts
+        parent: iac-packages-automation-policy
+        weight: 2
+    usingpulumi:
+        parent: crossguard
+        identifier: crossguard-core-concepts
 aliases:
 - /docs/guides/crossguard/core-concepts/
+- /docs/using-pulumi/crossguard/core-concepts/
 ---
 
 Policies can be written in TypeScript/JavaScript (Node.js) or Python and can be applied to Pulumi stacks written in any language. More information on [language support for policies](/docs/using-pulumi/crossguard#languages).

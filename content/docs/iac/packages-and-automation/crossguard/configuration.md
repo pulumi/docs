@@ -6,10 +6,15 @@ h1: Configuring policy packs
 weight: 5
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  usingpulumi:
-    parent: crossguard
+    iac:
+        name: Configuration
+        parent: iac-packages-automation-policy
+        weight: 4
+    usingpulumi:
+        parent: crossguard
 aliases:
 - /docs/guides/crossguard/configuration/
+- /docs/using-pulumi/crossguard/configuration/
 ---
 
 <!-- markdownlint-disable ul code -->

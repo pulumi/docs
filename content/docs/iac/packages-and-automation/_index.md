@@ -5,9 +5,14 @@ title: Using Pulumi
 h1: Using Pulumi
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  usingpulumi:
-    weight: 6
-    name: Overview
+    iac:
+        name: Packages and automation
+        parent: home
+        weight: 50
+        identifier: iac-packages-automation
+    usingpulumi:
+        weight: 6
+        name: Overview
 aliases:
 - /docs/guides/
 ---

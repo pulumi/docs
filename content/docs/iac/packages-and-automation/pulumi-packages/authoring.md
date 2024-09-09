@@ -2,9 +2,13 @@
 title_tag: "How to Author & Publish Pulumi Packages"
 meta_desc: "Learn how to create a Pulumi Package: create a Native Provider, author a Component, or bridge a Terraform provider into the Pulumi ecosystem."
 title: Author packages
-h1: Author packages in Pulumi Registry
+h1: Creating and publishing Pulumi packages
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
+    iac:
+        name: Creating packages
+        parent: iac-packages-automation-packages
+        weight: 1
     usingpulumi:
         parent: pulumi-packages
         identifier: how-to-author
@@ -12,6 +16,7 @@ menu:
 aliases:
 - /docs/guides/pulumi-packages/how-to-author/
 - /docs/using-pulumi/pulumi-packages/contribute-to-pulumi-registry/
+- /docs/using-pulumi/pulumi-packages/how-to-author
 ---
 
 This how-to guide will take you step-by-step through the tasks required to author and publish a Pulumi Package. You can use this guide to create any [type of Pulumi Package](/docs/guides/pulumi-packages#types-of-pulumi-packages): a Native Provider, a provider bridged from an existing Terraform provider, or a Component. This guide assumes you're using GitHub to host your package's source code and GitHub Actions to publish various parts of your package.

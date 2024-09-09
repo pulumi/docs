@@ -6,10 +6,15 @@ h1: Policy as code FAQ
 weight: 7
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  usingpulumi:
-    parent: crossguard
+    iac:
+        name: FAQ
+        parent: iac-packages-automation-policy
+        weight: 8
+    usingpulumi:
+        parent: crossguard
 aliases:
 - /docs/guides/crossguard/faq/
+- /docs/using-pulumi/crossguard/faq/
 ---
 
 ## Is CrossGuard open source?

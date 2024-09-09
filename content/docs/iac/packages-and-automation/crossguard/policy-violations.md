@@ -6,8 +6,14 @@ h1: Policy Violations
 weight: 2
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  usingpulumi:
-    parent: crossguard
+    iac:
+        name: Policy violations
+        parent: iac-packages-automation-policy
+        weight: 3
+    usingpulumi:
+        parent: crossguard
+aliases:
+    - /docs/using-pulumi/crossguard/policy-violations/
 ---
 
 ## Overview
