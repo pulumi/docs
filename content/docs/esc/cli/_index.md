@@ -40,3 +40,11 @@ The most common commands in the CLI that you'll be using are as follows:
 * [esc open](/docs/esc-cli/commands/esc_open/) - Open the environment with the given name
 * [esc run](/docs/esc-cli/commands/esc_run/) - Open the environment with the given name and run a command
 * [esc version](/docs/esc-cli/commands/esc_version/) - Print esc's version number
+
+To see a full list of Pulumi ESC CLI commands, you can run the following command:
+
+```bash
+pulumi esc --help
+```
+
+For more detailed help on a specific command, you can append `--help` to any command.
