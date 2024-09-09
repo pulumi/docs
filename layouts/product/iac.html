@@ -219,32 +219,21 @@
         {{ end }}
     </section>
 
-    <section id="get-started" class="my-32 relative">
-        <div class="shape-background product-get-started-section">
-            <div class="shape-container">
-                <div class="circle-center"></div>
-                <div class="circle-right"></div>
-            </div>
-        </div>
-
-        <div class="container mx-auto">
-            <h2 class="mb-8 text-center">{{ .Params.get_started.title }}</h2>
-
-            <div class="lg:flex items-stretch">
-                <div class="w-full lg:w-1/2 px-4 py-2 lg:p-8 lg:px-4">
-                    <div class="lg:shadow-2xl bg-violet-600 p-8 lg:px-24 lg:pt-4 g:pb-12 rounded-xl">
-                        <h4 class="text-white">{{ .Params.get_started.get_started.title }}</h4>
-                        <p class="mb-24 text-white">{{ .Params.get_started.get_started.description }}</p>
-                        <a href="{{ relref . "/docs/get-started" }}" class="btn-secondary">{{ .Params.get_started.get_started.cta_text }}</a>
-                    </div>
+    <section id="get-started" class="container mx-auto my-16">
+        <h2 class="mb-8 text-center">{{ .Params.get_started.title }}</h2>
+        <div class="lg:flex lg:flex-wrap items-stretch">
+            <div class="w-full lg:w-1/2 p-3">
+                <div class="h-full bg-violet-600 p-8 lg:px-24 lg:py-16 rounded-xl">
+                    <h4 class="text-white">{{ .Params.get_started.get_started.title }}</h4>
+                    <p class="mb-24 text-white">{{ .Params.get_started.get_started.description }}</p>
+                    <a href="{{ relref . "/docs/get-started" }}" class="btn-secondary">{{ .Params.get_started.get_started.cta_text }}</a>
                 </div>
-
-                <div class="w-full lg:w-1/2 px-4 py-2 lg:p-8 lg:px-4">
-                    <div class="border lg:border-none lg:shadow-2xl p-8 lg:px-24 lg:pt-4 g:pb-12 rounded-xl bg-white">
-                        <h4>{{ .Params.get_started.migrate.title }}</h4>
-                        <p class="mb-16 pb-1">{{ .Params.get_started.migrate.description }}</p>
-                        <a href="{{ relref . "/docs/using-pulumi/adopting-pulumi/converters" }}" class="btn-secondary">{{ .Params.get_started.migrate.cta_text }}</a>
-                    </div>
+            </div>
+            <div class="w-full lg:w-1/2 p-3">
+                <div class="h-full card p-8 lg:px-24 lg:py-16">
+                    <h4>{{ .Params.get_started.migrate.title }}</h4>
+                    <p class="mb-16 pb-1">{{ .Params.get_started.migrate.description }}</p>
+                    <a href="{{ relref . "/docs/using-pulumi/adopting-pulumi/converters" }}" class="btn-secondary">{{ .Params.get_started.migrate.cta_text }}</a>
                 </div>
             </div>
         </div>
