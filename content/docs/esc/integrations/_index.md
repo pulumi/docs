@@ -39,6 +39,7 @@ ESC also integrates with tools like Direnv, Terraform, and Docker to help manage
 - [Docker](/docs/esc/integrations/dev-tools/docker)
 
 ## Infrastructure tools
+
 - [Pulumi IaC](/docs/esc/integrations/infrastructure/pulumi-iac)
 - [Terraform](/docs/esc/integrations/infrastructure/terraform)
 - [Cloudflare](/docs/esc/integrations/infrastructure/cloudflare)
