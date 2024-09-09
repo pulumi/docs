@@ -5,6 +5,10 @@ title: Google Cloud Build
 h1: Pulumi CI/CD & Google Cloud Build
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
+    iac:
+        name: Google Cloud Build
+        parent: iac-packages-automation-cicd
+        weight: 9
     usingpulumi:
         parent: cont_delivery
         weight: 1
@@ -14,6 +18,7 @@ aliases:
 - /docs/guides/continuous-delivery/google-cloud-build/
 - /docs/using-pulumi/continuous-delivery/cd-google-cloud-build/
 - /docs/guides/continuous-delivery/cd-google-cloud-build/
+- /docs/using-pulumi/continuous-delivery/google-cloud-build/
 ---
 
 ## Prerequisites

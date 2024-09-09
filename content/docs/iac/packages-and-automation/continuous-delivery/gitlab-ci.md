@@ -6,6 +6,10 @@ title: GitLab CI
 h1: Pulumi CI/CD & GitLab
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
+    iac:
+        name: GitLab CI
+        parent: iac-packages-automation-cicd
+        weight: 7
     usingpulumi:
         parent: cont_delivery
         weight: 1
@@ -16,6 +20,7 @@ aliases:
 - /docs/guides/continuous-delivery/gitlab-ci/
 - /docs/using-pulumi/continuous-delivery/cd-gitlab-ci/
 - /docs/guides/continuous-delivery/cd-gitlab-ci/
+- /docs/using-pulumi/continuous-delivery/gitlab-ci/
 ---
 
 [GitLab CI/CD](https://docs.gitlab.com/ee/topics/build_your_application.html) enables the management of deploying

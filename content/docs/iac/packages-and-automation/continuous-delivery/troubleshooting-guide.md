@@ -5,11 +5,16 @@ title: Troubleshooting
 h1: Troubleshooting Pulumi CI/CD
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
+    iac:
+        name: Troubleshooting
+        parent: iac-packages-automation-cicd
+        weight: 99
     usingpulumi:
         parent: cont_delivery
         weight: 2
 aliases:
 - /docs/guides/continuous-delivery/troubleshooting-guide/
+- /docs/using-pulumi/continuous-delivery/troubleshooting-guide/
 ---
 
 In order to understand the errors encountered during an automated pipeline execution, it is important to understand

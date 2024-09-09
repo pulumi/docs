@@ -6,11 +6,16 @@ title: Pulumi Kubernetes Operator
 h1: Pulumi Kubernetes Operator
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
+    iac:
+        name: Pulumi Kubernetes Operator
+        parent: iac-packages-automation-cicd
+        weight: 13
     usingpulumi:
         parent: cont_delivery
         weight: 1
 aliases:
 - /docs/guides/continuous-delivery/pulumi-kubernetes-operator/
+- /docs/using-pulumi/continuous-delivery/pulumi-kubernetes-operator/
 ---
 
 This page details how to use the [Pulumi Kubernetes

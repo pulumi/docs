@@ -6,6 +6,10 @@ title: Adding CI/CD support
 h1: Adding Pulumi support for CI/CD systems
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
+    iac:
+        name: Adding CI/CD support
+        parent: iac-packages-automation-cicd
+        weight: 98
     usingpulumi:
         parent: cont_delivery
         weight: 2
@@ -14,6 +18,7 @@ aliases:
 - /docs/console/continuous-delivery/other/
 - /docs/guides/continuous-delivery/other/
 - /docs/guides/continuous-delivery/add-support-for-cicd-systems/
+- /docs/using-pulumi/continuous-delivery/add-support-for-cicd-systems/
 ---
 
 If the Pulumi CLI doesn't automatically detect your CI/CD system, this guide

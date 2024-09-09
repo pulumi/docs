@@ -6,6 +6,10 @@ title: AWS Code Services
 h1: Pulumi CI/CD & AWS Code Services
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
+    iac:
+        name: AWS Code Services
+        parent: iac-packages-automation-cicd
+        weight: 1
     usingpulumi:
         parent: cont_delivery
         weight: 1
@@ -16,6 +20,7 @@ aliases:
 - /docs/guides/continuous-delivery/aws-code-services/
 - /docs/guides/continuous-delivery/cd-aws-code-services/
 - /docs/using-pulumi/continuous-delivery/cd-aws-code-services/
+- /docs/using-pulumi/continuous-delivery/aws-code-services/
 ---
 
 [Amazon Code Services](https://aws.amazon.com/products/developer-tools/) encompases a variety

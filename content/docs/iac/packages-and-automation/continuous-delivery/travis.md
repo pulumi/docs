@@ -6,6 +6,10 @@ title: Travis CI
 h1: Pulumi CI/CD & Travis CI
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
+    iac:
+        name: Travis CI
+        parent: iac-packages-automation-cicd
+        weight: 13
     usingpulumi:
         parent: cont_delivery
         weight: 1
@@ -15,6 +19,7 @@ aliases:
 - /docs/guides/continuous-delivery/travis/
 - /docs/using-pulumi/continuous-delivery/cd-travis/
 - /docs/guides/continuous-delivery/cd-travis/
+- /docs/using-pulumi/continuous-delivery/travis/
 ---
 
 This page details how to use [Travis CI](https://travis-ci.com/) to manage deploying

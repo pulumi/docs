@@ -6,6 +6,10 @@ title: GitHub Actions
 h1: GitHub Actions for Pulumi
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
+    iac:
+        name: GitHub Actions
+        parent: iac-packages-automation-cicd
+        weight: 5
     usingpulumi:
         parent: cont_delivery
         weight: 1
@@ -15,6 +19,7 @@ aliases:
 - /docs/guides/continuous-delivery/github-actions/
 - /docs/using-pulumi/continuous-delivery/cd-github-actions/
 - /docs/guides/continuous-delivery/cd-github-actions/
+- /docs/using-pulumi/continuous-delivery/github-actions/
 ---
 
 {{% notes type="info" %}}
@@ -98,7 +103,7 @@ jobs:
       - uses: pulumi/actions@v3
         with:
           command: preview
-          stack-name: org-name/stack-name # When using an individual account, only use stack-name.  
+          stack-name: org-name/stack-name # When using an individual account, only use stack-name.
         env:
           PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
 ```

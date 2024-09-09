@@ -5,11 +5,16 @@ title: JetBrains TeamCity
 h1: Pulumi CI/CD & JetBrains TeamCity
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
+    iac:
+        name: TeamCity
+        parent: iac-packages-automation-cicd
+        weight: 14
     usingpulumi:
         parent: cont_delivery
         weight: 1
 aliases:
 - /docs/guides/continuous-delivery/teamcity/
+- /docs/using-pulumi/continuous-delivery/teamcity/
 ---
 
 This page details how to use [JetBrains TeamCity](https://www.jetbrains.com/teamcity/) to deploy a sample infrastructure, using Pulumi. In the example below, we will deploy to AWS, but any cloud can be used.

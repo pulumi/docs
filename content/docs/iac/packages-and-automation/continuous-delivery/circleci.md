@@ -5,6 +5,10 @@ title: CircleCI
 h1: Pulumi CI/CD & CircleCI
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
+    iac:
+        name: CircleCI
+        parent: iac-packages-automation-cicd
+        weight: 3
     usingpulumi:
         parent: cont_delivery
         weight: 1
@@ -15,6 +19,7 @@ aliases:
 - /docs/guides/continuous-delivery/circleci/
 - /docs/using-pulumi/continuous-delivery/cd-circleci/
 - /docs/guides/continuous-delivery/cd-circleci/
+- /docs/using-pulumi/continuous-delivery/circleci/
 ---
 
 This page details how to use [CircleCI](https://circleci.com/) to deploy Pulumi stacks.

@@ -6,6 +6,10 @@ title: Pulumi GitHub App
 h1: Pulumi Github App
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
+    iac:
+        name: GitHub App
+        parent: iac-packages-automation-cicd
+        weight: 6
     usingpulumi:
         parent: cont_delivery
         weight: 1
@@ -14,6 +18,7 @@ aliases:
 - /docs/reference/cd-github/
 - /docs/console/continuous-delivery/github-app/
 - /docs/guides/continuous-delivery/github-app/
+- /docs/using-pulumi/continuous-delivery/github-app/
 ---
 
 Pulumi's GitHub app displays the results of Pulumi stack update previews in pull requests and enables automatic stack deployments via [Pulumi Deployments](/docs/pulumi-cloud/deployments/). Once installed and

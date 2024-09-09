@@ -11,6 +11,7 @@ menu:
         weight: 1
 aliases:
 - /docs/guides/continuous-delivery/gitlab-app/
+- /docs/using-pulumi/continuous-delivery/gitlab-app/
 ---
 
 With this GitLab integration, Pulumi is able to add summary notes to a GitLab Merge Request by using the merge request information

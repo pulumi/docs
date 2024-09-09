@@ -5,6 +5,11 @@ title: Continuous Delivery
 h1: Pulumi & Continuous delivery
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
+    iac:
+        name: Continuous delivery
+        parent: iac-packages-automation
+        weight: 4
+        identifier: iac-packages-automation-cicd
     usingpulumi:
         name: Continuous Delivery
         identifier: cont_delivery
@@ -13,6 +18,7 @@ aliases:
 - /docs/reference/cd/
 - /docs/console/continuous-delivery/
 - /docs/guides/continuous-delivery/
+- /docs/using-pulumi/continuous-delivery/
 ---
 
 Pulumi's approach to infrastructure as code is great for continuous delivery, because it uses source code to model
