@@ -158,7 +158,7 @@ if __name__ == "__main__":
         project="api",
         stackd="dev",
         dirname="api",
-        request="timezone",
+        req="timezone",
     )
     spin_venv(context["dirname"])
     stack = set_stack(context_var=context)
