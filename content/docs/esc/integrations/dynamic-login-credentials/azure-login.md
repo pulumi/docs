@@ -7,7 +7,7 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   pulumiesc:
     identifier: azure-login
-    parent: esc-dynamic-login-providers
+    parent: esc-dynamic-login-credentials
     weight: 2
 aliases:
 - /docs/pulumi-cloud/esc/providers/azure-login/

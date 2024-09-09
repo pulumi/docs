@@ -7,8 +7,8 @@ meta_desc: Pulumi ESC integrates with Pulumi IaC to expose environment settings 
 menu:
   pulumiesc:
     identifier: esc-pulumi-iac-integrations
-    parent: esc-integrations
-    weight: 6
+    parent: esc-inf-tools-integrations
+    weight: 1
 ---
 
 ## Using environments with Pulumi IaC

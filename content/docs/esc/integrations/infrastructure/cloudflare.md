@@ -5,8 +5,8 @@ h1: "Pulumi ESC: Integrate with Cloudflare"
 meta_desc: This page provides an overview of how to use Pulumi ESC with Cloudflare.
 menu:
   pulumiesc:
-    parent: esc-dev-tools-integrations
-    identifier: esc-dev-tools-integrations-cloudflare
+    parent: esc-inf-tools-integrations
+    identifier: esc-inf-tools-integrations-cloudflare
     weight: 4
 ---
 

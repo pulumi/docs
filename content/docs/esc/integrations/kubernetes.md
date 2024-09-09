@@ -1,7 +1,7 @@
 ---
 title: Kubernetes
 title_tag: Integrate with Kubernetes | Pulumi ESC
-h1: Integrate with Kubernetes
+h1: Kubernetes
 meta_desc: Pulumi ESC integrates with Kubernetes to manage configurations, credentials, and kubeconfig files, with kubectl and helm, and Pulumi Kubernetes provider.
 weight: 2
 menu:
@@ -63,7 +63,7 @@ the `KUBECONFIG` environment variable to refer to the file, and then runs a `kub
 ### Use stack outputs to generate a kubeconfig file
 
 Instead of hardcoding a kubeconfig, you also have the option of using ESC providers to dynamically import
-cluster information. The [`pulumi-stacks`](/docs/esc/providers/pulumi-stacks/) provider is especially useful here, if the Kubernetes cluster
+cluster information. The [`pulumi-stacks`](/docs/esc/integrations/infrastructure/pulumi-iac/pulumi-stacks/) provider is especially useful here, if the Kubernetes cluster
 was provisioned by a Pulumi program. Such programs often export the cluster's kubeconfig as a stack output.
 Check out the [Getting Started](/docs/clouds/kubernetes/) guide if you need help setting up a Kubernetes cluster.
 
@@ -117,7 +117,7 @@ environment:
 ## Authenticate to a Kubernetes Cluster
 
 ESC enables you to connect to your Kubernetes cluster using credentials obtained from an ESC provider. For example,
-to connect using AWS credentials returned by the [aws-login](/docs/esc/providers/aws-login/) provider.
+to connect using AWS credentials returned by the [aws-login](/docs/esc/integrations/dynamic-login-credentials/aws-login/) provider.
 
 Kubernetes tools typically execute an external command to obtain user credentials
 (see [documentation](https://kubernetes.io/docs/reference/access-authn-authz/authentication/#client-go-credential-plugins)).

@@ -7,7 +7,7 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   pulumiesc:
     identifier: aws-login
-    parent: esc-dynamic-login-providers
+    parent: esc-dynamic-login-credentials
     weight: 1
 aliases:
 - /docs/pulumi-cloud/esc/providers/aws-login/

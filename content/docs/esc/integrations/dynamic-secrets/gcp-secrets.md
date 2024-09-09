@@ -7,7 +7,7 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   pulumiesc:
     identifier: gcp-secrets
-    parent: esc-secrets-providers
+    parent: esc-dynamic-secrets
     weight: 3
 aliases:
     - /docs/pulumi-cloud/esc/providers/gcp-secrets/

@@ -7,7 +7,7 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   pulumiesc:
     identifier: vault-login
-    parent: esc-dynamic-login-providers
+    parent: esc-dynamic-login-credentials
     weight: 4
 aliases:
 - /docs/pulumi-cloud/esc/providers/vault-login/

@@ -6,7 +6,7 @@ h1: aws-secrets
 menu:
   pulumiesc:
     identifier: aws-secrets
-    parent: esc-secrets-providers
+    parent: esc-dynamic-secrets
     weight: 1
 aliases:
     - /docs/pulumi-cloud/esc/providers/aws-secrets/

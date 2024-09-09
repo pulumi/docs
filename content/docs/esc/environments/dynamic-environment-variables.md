@@ -6,7 +6,8 @@ meta_desc: Pulumi ESC allows you to securely run commands with managed environme
 menu:
   pulumiesc:
     identifier: esc-dynamic-environmeant-variables
-    weight: 7
+    parent: esc-environments
+    weight: 4
 ---
 
 The Pulumi ESC CLI includes a [`run` command](/docs/esc-cli/commands/esc_run/) that allows you to run commands with Pulumi ESC managed environment variables, without exporting them to your shell.

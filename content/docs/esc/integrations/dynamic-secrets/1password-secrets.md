@@ -7,7 +7,7 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   pulumiesc:
     identifier: 1password-secrets
-    parent: esc-secrets-providers
+    parent: esc-dynamic-secrets
     weight: 5
 aliases:
     - /docs/pulumi-cloud/esc/providers/1password-secrets/

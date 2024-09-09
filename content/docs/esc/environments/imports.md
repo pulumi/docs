@@ -6,7 +6,8 @@ meta_desc: Pulumi ESC allows you to import and compose configurations from multi
 menu:
   pulumiesc:
     identifier: esc-importing-environments
-    weight: 6
+    parent: esc-environments
+    weight: 2
 ---
 
 Environments can also be composed from other environments.

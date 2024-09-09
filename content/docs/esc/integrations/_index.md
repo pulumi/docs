@@ -17,21 +17,28 @@ ESC also integrates with tools like Direnv, Terraform, and Docker to help manage
 
 ## Dynamic login providers
 
-- [AWS Login Provider](/docs/esc/integrations/dynamic-login-providers/aws-login)
-- [Azure Login Provider](/docs/esc/integrations/dynamic-login-providers/azure-login)
-- [GCP Login Provider](/docs/esc/integrations/dynamic-login-providers/gcp-login)
-- [Vault Login Provider](/docs/esc/integrations/dynamic-login-providers/vault-login)
+- [AWS login provider](/docs/esc/integrations/dynamic-login-credentials/aws-login)
+- [Azure login provider](/docs/esc/integrations/dynamic-login-credentials/azure-login)
+- [GCP login provider](/docs/esc/integrations/dynamic-login-credentials/gcp-login)
+- [Vault login provider](/docs/esc/integrations/dynamic-login-credentials/vault-login)
 
-## Secrets providers
+## Dynamic secrets providers
 
-- [AWS Secrets Manager](/docs/esc/integrations/secrets-providers/aws-secrets)
-- [Azure KeyVault](/docs/esc/integrations/secrets-providers/azure-secrets)
-- [GCP Secrets Manager](/docs/esc/integrations/secrets-providers/gcp-secrets)
-- [Vault Secrets Management](/docs/esc/integrations/secrets-providers/vault-secrets)
+- [AWS Secrets Manager](/docs/esc/integrations/dynamic-secrets/aws-secrets)
+- [Azure KeyVault](/docs/esc/integrations/dynamic-secrets/azure-secrets)
+- [GCP Secrets Manager](/docs/esc/integrations/dynamic-secrets/gcp-secrets)
+- [Vault Secrets Management](/docs/esc/integrations/dynamic-secrets/vault-secrets)
 
-## Developer tool providers
+## Kubernetes
 
-- [Cloudflare](/docs/esc/integrations/dev-tools/cloudflare)
+- [Kubernetes](/docs/esc/integrations/kubernetes)
+
+## Developer tools
+
 - [Direnv](/docs/esc/integrations/dev-tools/direnv)
-- [Terraform](/docs/esc/integrations/dev-tools/terraform)
 - [Docker](/docs/esc/integrations/dev-tools/docker)
+
+## Infrastructure tools
+- [Pulumi IaC](/docs/esc/integrations/infrastructure/pulumi-iac)
+- [Terraform](/docs/esc/integrations/infrastructure/terraform)
+- [Cloudflare](/docs/esc/integrations/infrastructure/cloudflare)

@@ -14,12 +14,9 @@ aliases:
 
 Pulumi ESC's rich metadata and support for popular configuration formats enables easy integration with other developer tools.
 
-To learn how to configure common integrations, follow the links below.
+To learn how to configure common dev tool integrations, follow the links below.
 
 | Tool                                                          | Description                                                                                                                 |
 |---------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|
-| [Pulumi IaC](/docs/esc/get-started/integrate-with-pulumi-iac) | Pulumi IaC has builtin support for sourcing stack configuration from ESC environments.                                      |
-| [Cloudflare](/docs/esc/integrations/dev-tools/cloudflare)         | Pulumi ESC can integrate with Cloudflare to source environment variables, secrets, and configuration from ESC.              |
 | [Direnv](/docs/esc/integrations/dev-tools/direnv)                 | Pulumi ESC can integrate with Direnv to source environment variables, secrets, and configuration from ESC environments.     |
 | [Docker](/docs/esc/integrations/dev-tools/docker)                 | Pulumi ESC can be used to configure environment variables, secrets, and configuration for Docker operations.                |                                                             |
-| [Terraform](/docs/esc/integrations/dev-tools/terraform)           | Pulumi ESC can integrate with the Terraform and OpenTofu CLIs to supply cloud credentials and input variables from ESC environments. |

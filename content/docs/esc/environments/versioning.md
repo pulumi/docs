@@ -7,12 +7,13 @@ meta_desc: Pulumi ESC allows you to manage, track and audit changes to your secr
 menu:
   pulumiesc:
     identifier: esc-versioning
-    weight: 5
+    parent: esc-environments
+    weight: 3
 ---
 
 Each time a change is made to an environment, a new immutable revision is created. You can manage and track changes to your secrets and configuration over time with a clear history you can audit, compare, and roll back.  You can assign tags to revisions, such as `production`, `v1.2.1`, or `stable`, to help organize and identify them.
 
-When [importing an environment](/docs/esc/imports), you can choose to pin it to a specific version using a tag or revision number. This prevents automatic updates from the source environment, making it easier to test and roll out changes gradually. You can also specify which version to use when running commands with `esc run`, allowing you to target different environments for different tasks.
+When [importing an environment](/docs/esc/environments/imports/), you can choose to pin it to a specific version using a tag or revision number. This prevents automatic updates from the source environment, making it easier to test and roll out changes gradually. You can also specify which version to use when running commands with `esc run`, allowing you to target different environments for different tasks.
 
 ## View and compare version history
 
@@ -51,7 +52,7 @@ $ esc env version tag myorg/test@prod @3
 
 ### Using tagged versions
 
-Once you tag a revision, you can use the tag to [open](/docs/esc/environments/#opening-an-environment) a specific environment version.
+Once you tag a revision, you can use the tag to [open](/docs/esc/environments/working-with-environments/#opening-an-environment) a specific environment version.
 
 ```bash
 $ esc open myorg/test@prod

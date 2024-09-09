@@ -113,7 +113,7 @@ HOME=/root
 ### Create an ESC environment with your Docker registry credentials
 
 ESC integrates with `docker` by setting command-line arguments with values from an opened environment. You can store login configuration securely with an ESC environment.
-This example stores the username and encrypted password directly in the environment, but you can also reference external secrets with [ESC providers](/docs/esc/providers/).
+This example stores the username and encrypted password directly in the environment, but you can also reference external secrets with [ESC integrations](/docs/esc/integrations/).
 
 ```yaml
 values:

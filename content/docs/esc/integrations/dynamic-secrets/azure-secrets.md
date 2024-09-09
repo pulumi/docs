@@ -6,7 +6,7 @@ h1: azure-secrets
 menu:
   pulumiesc:
     identifier: azure-secrets
-    parent: esc-secrets-providers
+    parent: esc-dynamic-secrets
     weight: 2
 aliases:
     - /docs/pulumi-cloud/esc/providers/azure-secrets/

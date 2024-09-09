@@ -7,7 +7,8 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   pulumiesc:
     identifier: esc-languages-sdks
-    weight: 9
+    parent: esc-development
+    weight: 1
 aliases:
     - /docs/esc/sdk/
 ---

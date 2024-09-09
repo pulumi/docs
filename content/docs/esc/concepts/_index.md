@@ -28,7 +28,7 @@ values:
   greeting: ${salutation}, ${name}
 ```
 
-They can also contain complex [structured configuration](/docs/pulumi-cloud/esc/environments/#structured-configuration).
+They can also contain complex [structured configuration](/docs/esc/environments/working-with-environments/#structured-configuration).
 
 ## Dynamic Secret Providers
 
@@ -36,9 +36,9 @@ Pulumi ESC supports referencing secret and configuration providers, which allow 
 
 Access permissions can be set to only allow select members or teams to "open" an environment and retrieve secrets.
 
-For more detail, see [adding OIDC and Secrets providers](/docs/pulumi-cloud/esc/environments/#adding-oidc-and-secrets-providers).
+For more detail, see [adding OIDC and Secrets providers](/docs/esc/environments/working-with-environments/#adding-oidc-and-secrets-providers).
 
-Please see the [providers list](/docs/pulumi-cloud/esc/providers/) for a full list of currently supported providers.
+Please see the [providers list](/docs/esc/integrations/) for a full list of currently supported integrations and providers.
 
 ## Removing Duplication
 

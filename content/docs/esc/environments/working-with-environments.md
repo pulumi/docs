@@ -1,12 +1,13 @@
 ---
-title: Environments
+title: Working with environments
 title_tag: Pulumi ESC environments
 h1: Pulumi ESC environments
 meta_desc: Pulumi ESC allows you to compose and manage hierarchical collections of configuration and secrets and consume them in various ways.
 menu:
   pulumiesc:
-    identifier: environments
-    weight: 4
+    identifier: working-with-environments
+    parent: esc-environments
+    weight: 1
 search:
   boost: true
   keywords:
@@ -15,14 +16,15 @@ search:
     - configuration
 aliases:
   - /docs/pulumi-cloud/esc/environments/
+  - /docs/esc/environments/
 ---
 
 Pulumi ESC (Environments, Secrets, and Configuration) lets you define collections of configuration settings and secrets called _environments_ and use them in any application or service. Environments are YAML documents composed of static key-value pairs, programmatic expressions, dynamically retrieved values from supported providers including all major clouds through OpenID Connect (OIDC), and other Pulumi ESC environments.
 
-Environments are accessible with the standalone [`esc` CLI](/docs/install/esc/), the [`pulumi` CLI](/docs/install/), the [Pulumi SDK](https://github.com/pulumi/esc/issues/60), and the [Pulumi Cloud console](#editing-an-environment-as-yaml-in-the-pulumi-cloud-console) and [REST API](/docs/pulumi-cloud/cloud-rest-api/#environments), and you can have as many environments as you need. Pulumi ESC is a service of Pulumi Cloud and is currently in public preview.
+Environments are accessible with the standalone [`esc` CLI](/docs/install/esc/), the [`pulumi` CLI](/docs/install/), the [Pulumi SDK](/docs/esc/languages-sdks/), and the [Pulumi Cloud console](#in-the-pulumi-cloud-console) and [REST API](/docs/pulumi-cloud/cloud-rest-api/#environments), and you can have as many environments as you need. Pulumi ESC is a service of Pulumi Cloud and is currently in public preview.
 
 {{% notes type="info" %}}
-The examples below use the new `esc` CLI, but all `esc` subcommands are available on the `pulumi` CLI as well. The `pulumi` CLI also provides fully integrated support for configuring Pulumi stacks with Pulumi ESC. See [Using with Pulumi IaC](#using-environments-with-pulumi-iac) below for details.
+The examples below use the new `esc` CLI, but all `esc` subcommands are available on the `pulumi` CLI as well. The `pulumi` CLI also provides fully integrated support for configuring Pulumi stacks with Pulumi ESC. See [Using with Pulumi IaC](/docs/esc/integrations/infrastructure/pulumi-iac/) for details.
 {{% /notes %}}
 
 ## Creating a new environment
@@ -293,9 +295,9 @@ You can also use the Pulumi Cloud REST API to perform standard CRUD operations o
 
 ## Using secrets providers and OIDC
 
-In addition to static and interpolated values, environments can incorporate dynamically retrieved settings and secrets from many [supported providers](/docs/pulumi-cloud/esc/providers/), including cloud providers via OpenID Connect (OIDC).
+In addition to static and interpolated values, environments can incorporate dynamically retrieved settings and secrets from many [supported providers](/docs/esc/integrations/), including cloud providers via OpenID Connect (OIDC).
 
-The following example combines the [`aws-login`](/docs/pulumi-cloud/esc/providers/aws-login/) and [`aws-secrets`](/docs/pulumi-cloud/esc/providers/aws-secrets/) providers to obtain short-lived credentials from AWS to pull two secrets from AWS Secrets Manager (`api-key` and `app-secret`) into an environment:
+The following example combines the [`aws-login`](/docs/esc/integrations/dynamic-login-credentials/aws-login/) and [`aws-secrets`](/docs/esc/integrations/dynamic-secrets/aws-secrets/) providers to obtain short-lived credentials from AWS to pull two secrets from AWS Secrets Manager (`api-key` and `app-secret`) into an environment:
 
 ```yaml
 values:
@@ -371,7 +373,7 @@ secretValue
 
 Pulumi ESC can automatically project the settings of a given environment as a set of environment variables. This projection does not happen by default, however; instead, you must define which settings to project, as well as how to name and format them.
 
-Environment variables are defined under the optional `environmentVariables` key, which can accept either static or interpolated values based on settings defined within the environment or [imported](#importing-other-environments) from other environments:
+Environment variables are defined under the optional `environmentVariables` key, which can accept either static or interpolated values based on settings defined within the environment or [imported](/docs/esc/environments/imports/) from other environments:
 
 ```yaml
 values:
