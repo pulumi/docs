@@ -31,7 +31,7 @@ key_features_above:
                 color: yellow
               - title: Build on any cloud
                 description: |
-                    Access the full breadth of services in AWS, Azure, GCP, and [1760+ providers](/registry/) through
+                    Access the full breadth of services in AWS, Azure, GCP, and [170+ providers](/registry/) through
                     a complete and consistent SDK interface.
                 icon: global
                 color: yellow
