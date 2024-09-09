@@ -2,7 +2,7 @@
 title: "Announcing the New Pulumi Partner Program"
 date: 2024-09-16
 draft: true
-meta_desc: Pulumi launches its Partner Program, empowering cloud and SaaS partners to accelerate projects and drive innovation through seamless integrations and go-to-market strategies
+meta_desc: Pulumi launches its Partner Program, helping cloud and SaaS companies accelerate projects, drive innovation, and scale with seamless integrations and go-to-market strategies
 authors:
     - isaac-harris
     - tejitha-raju
