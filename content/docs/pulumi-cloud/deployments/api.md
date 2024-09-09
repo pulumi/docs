@@ -123,7 +123,7 @@ Secret types should have the following structure:
 ```json
 {
   "git": {
-    "repoURL": "https://github.com/pulumi/examples.git",
+    "repoURL": "git@github.com:pulumi/examples.git",
     "branch": "refs/heads/master",
     "repoDir": "aws-ts-s3-folder",
     "gitAuth": {
