@@ -6,10 +6,15 @@ h1: Unit testing Pulumi programs
 meta_image: /images/docs/meta-images/docs-meta.png
 weight: 1
 menu:
-  usingpulumi:
-    parent: testing
+    iac:
+        name: Unit testing
+        parent: iac-concepts-testing
+        weight: 1
+    usingpulumi:
+        parent: testing
 aliases:
-- /docs/guides/testing/unit/
+    - /docs/guides/testing/unit/
+    - /docs/using-pulumi/testing/property-testing/
 ---
 
 Pulumi programs are authored in a general-purpose language like TypeScript, Python, Go, C# or Java. The full power of each language is available, including access to tools and libraries for that runtime, including testing frameworks.

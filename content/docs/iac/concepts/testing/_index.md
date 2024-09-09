@@ -5,11 +5,17 @@ title: Testing
 h1: Testing Pulumi programs
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
+    iac:
+        name: Testing
+        parent: iac-concepts
+        weight: 15
+        identifier: iac-concepts-testing
     usingpulumi:
         identifier: testing
         weight: 8
 aliases:
 - /docs/guides/testing/
+- /docs/using-pulumi/testing/
 ---
 
 Because Pulumi uses general purpose programming languages to provision cloud resources, you can take advantage of native testing frameworks and perform **automated tests** of your infrastructure.

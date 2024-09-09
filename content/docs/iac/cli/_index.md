@@ -7,7 +7,7 @@ no_on_this_page: true
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   iac:
-    name: CLI
+    name: Pulumi CLI
     weight: 80
     identifier: iac-cli
     parent: home
