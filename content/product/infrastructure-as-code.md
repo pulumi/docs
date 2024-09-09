@@ -1,7 +1,7 @@
 ---
 title: "Pulumi IaC: Infrastructure as Code"
 meta_desc: Infrastructure as Code in any programming language. Enable your team to get code to any cloud productively, securely, and reliably.
-layout: iac
+layout: infrastructure-as-code
 
 heading: Pulumi IaC
 subheading: |
