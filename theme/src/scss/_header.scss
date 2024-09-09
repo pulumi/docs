@@ -28,14 +28,14 @@
             }
 
             .top-nav-banner-cta {
-                @apply px-3 py-2 text-left;
-
+                @apply px-3 py-2 text-left border-opacity-95 border-4 border-black;
+                // I tried to insert the border here but that didn't work 
                 @screen lg {
                     @apply rounded inline-block;
                 }
 
                 // TODO: update color
-                background-color: #edeffa; //rgba(77, 91, 217, 0.15);
+                background-color: #faedf4; //rgba(77, 91, 217, 0.15);
 
                 .top-nav-banner-cta-text {
                     // TODO: update color
