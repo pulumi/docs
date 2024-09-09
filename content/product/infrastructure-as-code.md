@@ -1,7 +1,7 @@
 ---
 title: "Pulumi IaC: Infrastructure as Code"
 meta_desc: Infrastructure as Code in any programming language. Enable your team to get code to any cloud productively, securely, and reliably.
-layout: iac
+layout: infrastructure-as-code
 
 heading: Pulumi IaC
 subheading: |
@@ -18,7 +18,7 @@ key_features_above:
         - title: "Author in any language, deploy to any cloud"
           sub_title: "Pulumi Infrastructure as Code Engine"
           description:
-            Author infrastructure as code (IaC) using programming languages you know and love – including TypeScript/JavaScript, Python, Go, C#, Java, and YAML. Deploy to 150+ providers like AWS, Azure, Google Cloud, and Kubernetes.
+            Author infrastructure as code (IaC) using programming languages you know and love – including TypeScript/JavaScript, Python, Go, C#, Java, and YAML. Deploy to 170+ providers like AWS, Azure, Google Cloud, and Kubernetes.
           image: "/images/product/pulumi-iac-code.png"
           button:
             text: "Learn more about Pulumi SDK"
@@ -31,7 +31,7 @@ key_features_above:
                 color: yellow
               - title: Build on any cloud
                 description: |
-                    Access the full breadth of services in AWS, Azure, GCP, and [150+ providers](/registry/) through
+                    Access the full breadth of services in AWS, Azure, GCP, and [1760+ providers](/registry/) through
                     a complete and consistent SDK interface.
                 icon: global
                 color: yellow
@@ -173,8 +173,8 @@ key_features:
 stats:
     title: Open source. Enterprise ready.
     description: |
-        Pulumi’s Universal Infrastructure as Code CLI and SDK is an [open-source project](https://github.com/pulumi/) that’s supported
-        by an active community. We maintain a [public roadmap](/blog/relaunching-pulumis-public-roadmap/) and welcome feedback and contributions.
+        Pulumi’s Infrastructure as Code CLI and SDK is an [open-source project](https://github.com/pulumi/) that’s supported
+        by an active community. We maintain a [public roadmap](https://github.com/orgs/pulumi/projects/44) and welcome feedback and contributions.
     community:
         number: "10,000s"
         description: of community members
@@ -182,7 +182,7 @@ stats:
         number: "1,000s"
         description: of companies
     integration:
-        number: "150+"
+        number: "170+"
         description: Cloud and service integrations
 
 key_features_below:
@@ -194,11 +194,14 @@ key_features_below:
           image: "/images/product/pulumi-cloud-dashboard.png"
           button:
             text: "Learn more about Pulumi Cloud"
-            link: "/product/pulumi-service/"
+            link: "/product/pulumi-cloud/"
           features:
               - title: Pulumi IaC
                 description: |
-                    Utilize open-source IaC in TypeScript, Python, Go, C#, Java and YAML. Build and distribute reusable components for 150+ cloud & SaaS providers.
+                    Utilize open-source IaC in TypeScript, Python, Go, C#, Java and YAML. Build and distribute reusable components for 170+ cloud & SaaS providers.
+              - title: Pulumi ESC
+                description: |
+                    Centralized secrets management & orchestration. Easily access, share, and manage secrets securely on any cloud, using your favorite programming languages.
               - title: Automate deployment workflows
                 description: |
                     Orchestrate secure deployment workflows through GitHub or an API.
@@ -211,9 +214,6 @@ key_features_below:
               - title: Developer portals
                 description: |
                     Create internal developer portals to distribute infrastructure templates using Pulumi or the Backstage-plugin.
-              - title: State & secrets
-                description: |
-                    Securely store state with built-in secrets manager or bring your own KMS.
               - title: Identity and access control
                 description: |
                     Manage teams with SCIM, SAML SSO, GitHub, GitLab, or Atlassian. Set permissions and access tokens.
