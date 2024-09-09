@@ -6,6 +6,7 @@ draft: false
 meta_desc: "ESC Projects and Environment Tags allow you to organize your environments and collaborate effectively. "
 meta_image: "meta.png"
 authors:
+  - derek-schaller
   - arun-loganathan
 tags:
   - esc
