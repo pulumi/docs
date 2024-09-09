@@ -6,9 +6,15 @@ h1: Policy Manager
 weight: 1
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  usingpulumi:
-    parent: crossguard-compliance-ready-policies
-    weight: 1
+    iac:
+        name: Policy manager
+        parent: iac-packages-automation-policy-compliance
+        weight: 1
+    usingpulumi:
+        parent: crossguard-compliance-ready-policies
+        weight: 1
+aliases:
+    - /docs/using-pulumi/crossguard/api-policy-manager/
 ---
 ## Classes
 

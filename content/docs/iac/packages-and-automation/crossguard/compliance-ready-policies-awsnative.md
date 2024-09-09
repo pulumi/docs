@@ -5,8 +5,14 @@ title: Compliance Ready Awsnative Policies
 h1: List of Compliance Ready Policies for Awsnative
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  usingpulumi:
-    parent: crossguard-compliance-ready-policies
+    iac:
+        name: AWS Native Policies
+        parent: iac-packages-automation-policy-compliance
+        weight: 3
+    usingpulumi:
+        parent: crossguard-compliance-ready-policies
+aliases:
+    - /docs/using-pulumi/crossguard/compliance-ready-policies-awsnative
 ---
 There's a total of 54 Compliance Ready Policies for the Awsnative provider.
 

@@ -6,9 +6,14 @@ h1: List of Compliance Ready Policies for Azurenative
 weight: 2
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  usingpulumi:
-    parent: crossguard-compliance-ready-policies
-    identifier: crossguard-compliance-ready-policies-azurenative
+    iac:
+        name: Azure Native Policies
+        parent: iac-packages-automation-policy-compliance
+        weight: 5
+    usingpulumi:
+        parent: crossguard-compliance-ready-policies
+aliases:
+    - /docs/using-pulumi/crossguard/compliance-ready-policies-azurenative/
 ---
 There's a total of 1914 Compliance Ready Policies for the Azurenative provider.
 
