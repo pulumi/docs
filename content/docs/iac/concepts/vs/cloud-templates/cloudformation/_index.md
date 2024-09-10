@@ -5,11 +5,16 @@ title: AWS CloudFormation
 h1: Pulumi vs AWS CloudFormation
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  concepts:
-    parent: vs
-    weight: 2
+    iac:
+        name: AWS CloudFormation
+        parent: iac-concepts-compare
+        weight: 2
+    concepts:
+        parent: vs
+        weight: 2
 aliases:
 - /docs/intro/vs/cloud-templates/cloudformation/
+- /docs/concepts/vs/cloud-templates/cloudformation/
 ---
 
 <style>

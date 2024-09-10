@@ -6,7 +6,7 @@ h1: Pulumi terms & command equivalents
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
-        name: Pulumi equivalents
+        name: Pulumi terminology
         parent: iac-concepts-compare-terraform
         weight: 2
     concepts:
