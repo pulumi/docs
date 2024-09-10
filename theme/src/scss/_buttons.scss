@@ -5,7 +5,7 @@
     @include transition;
 
     @apply cursor-pointer text-sm whitespace-nowrap py-2 px-3 rounded inline-block;
-    @apply bg-blue-600 border-2 border-blue-600 text-white text-center;
+    @apply bg-blue-600 border border-blue-600 text-white text-center;
 
     &:hover {
         @apply bg-blue-500 border-blue-500 text-white;
@@ -17,7 +17,7 @@
 }
 
 .btn-secondary {
-    @apply bg-white border-2 border-blue-500 text-blue-600;
+    @apply bg-white border border-blue-500 text-blue-600;
 
     &:hover {
         @apply bg-blue-500 text-white;

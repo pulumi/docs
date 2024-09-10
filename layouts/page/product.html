@@ -1,9 +1,9 @@
 {{ define "hero" }}
-    {{ partial "hero.html" (dict "title" .Params.heading) }}
+    {{ partial "hero" (dict "title" .Params.heading) }}
 {{ end }}
 
 {{ define "main" }}
-    <section id="overview" class="sm:mt-24 mb-16 relative">
+    <section id="overview" class="mb-16 relative">
         <div class="shape-background product-overview-section">
             <div class="shape-container">
                 <div class="circle-right"></div>
