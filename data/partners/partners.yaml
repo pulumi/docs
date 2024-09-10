@@ -57,11 +57,7 @@
 - name: Gitlab
   link: https://about.gitlab.com/
   logo: /logos/pkg/gitlab.svg
-
-- name: Wiz 
-  link: https://www.wiz.io/
-  logo: /logos/tech/wiz.svg
-
+  
 - name: Nitric 
   link: https://nitric.io/blog/why-nitric-chose-pulumi
   logo: /images/pulumiup-2023/speaker-logos/nitric.svg
@@ -73,10 +69,6 @@
 - name: Chronosphere 
   link: https://chronosphere.io/
   logo: /logos/tech/chronosphere.svg
-
-- name: Nginx
-  link: https://www.f5.com/products/nginx/
-  logo: /logos/tech/nginx-f5.svg
 
 - name: 1password
   link: https://1password.com/
