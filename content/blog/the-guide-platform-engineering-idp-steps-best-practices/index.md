@@ -30,7 +30,7 @@ meta_image: meta.png
 # yourself if you don't already have one.
 authors:
     - sara-huddleston
-    - josh-kKodroff
+    - josh-kodroff
 
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
