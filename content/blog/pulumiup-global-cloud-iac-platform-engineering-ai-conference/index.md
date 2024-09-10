@@ -23,7 +23,7 @@ meta_desc: Join 5,000+ engineers at PulumiUP 2024! Explore talks on Cloud, DevOp
 # The meta_image appears in social-media previews and on the blog home page. A
 # placeholder image representing the recommended format, dimensions and aspect
 # ratio has been provided for you.
-meta_image: meta.png
+meta_image: pulumiup-speakers-sponsors-partners.png
 
 # At least one author is required. The values in this list correspond with the
 # `id` properties of the team member files at /data/team/team. Create a file for
