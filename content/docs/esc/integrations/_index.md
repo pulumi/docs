@@ -28,6 +28,7 @@ ESC also integrates with tools like Direnv, Terraform, and Docker to help manage
 - [Azure KeyVault](/docs/esc/integrations/dynamic-secrets/azure-secrets)
 - [GCP Secrets Manager](/docs/esc/integrations/dynamic-secrets/gcp-secrets)
 - [Vault Secrets Management](/docs/esc/integrations/dynamic-secrets/vault-secrets)
+- [1Password](/docs/esc/integrations/dynamic-secrets/1password-secrets/)
 
 ## Kubernetes
 
