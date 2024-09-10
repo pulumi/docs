@@ -1,6 +1,6 @@
 ---
 title: "Pulumi ESC Table Editor Now Supports Dynamic Credential and Secret Integrations"
-date: 2024-09-06T00:00:00-07:00
+date: 2024-09-10T00:00:00-07:00
 draft: false
 allow_long_title: true
 meta_desc: "The Key-Value Table Editor introduces a new visual interface for managing provider configuration using Pulumi ESC."
@@ -33,10 +33,10 @@ In our initial launch, the Table Editor allowed you to perform CRUD operations o
 
 With the addition of provider configuration support in the Key-Value Table Editor, incorporating Pulumi ESC provider capabilities into your workflow is now more straightforward. A clean, user-friendly form provides step-by-step guidance, promoting best practices like [OIDC](/docs/pulumi-cloud/oidc/) adoption and the secure handling of sensitive data. This streamlined approach reduces the need for external documentation, making the entire process more intuitive and efficient.
 
-![Key-Value Table Editor](esc-key-value-table-editor.png)
+![Key-Value Table Editor](esc-table-editor-provider-config.png)
 
 ## Conclusion
 
-The new provider configuration support in the ESC Key-Value Table Editor marks another step in our efforts to simplify and enhance the developer experience. We’re eager to see how you’ll leverage this new capability to streamline your workflows and strengthen your infrastructure’s security. As always, your feedback is invaluable to our development process, and we’re committed to continually improving the Table Editor and other Pulumi tools based on your needs. Please share your feedback with us [here](https://github.com/pulumi/esc/issues/new/choose)
+The new provider configuration support in the ESC Key-Value Table Editor marks another step in our efforts to simplify and enhance the developer experience. We’re eager to see how you’ll leverage this new capability to streamline your workflows and strengthen your infrastructure’s security. As always, your feedback is invaluable to our development process, and we’re committed to continually improving the Table Editor and other Pulumi tools based on your needs. Please share your feedback with us [here](https://github.com/pulumi/esc/issues/new/choose).
 
 Check out our [documentation](/docs/esc) to learn more about Pulumi ESC.
