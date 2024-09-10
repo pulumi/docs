@@ -6,7 +6,7 @@ h1: Download & install Pulumi
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
-        parent: home
+        parent: iac-home
         weight: 10
         identifier: iac-install
     install:

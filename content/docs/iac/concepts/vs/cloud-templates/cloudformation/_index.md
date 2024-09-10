@@ -9,6 +9,7 @@ menu:
         name: AWS CloudFormation
         parent: iac-concepts-compare
         weight: 2
+        identifier: iac-concepts-compare-cloudformation
     concepts:
         parent: vs
         weight: 2

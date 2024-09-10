@@ -3,7 +3,7 @@ title: Pulumi IaC
 meta_desc: Here is a description of this page that's long enough to appease the linter.
 menu:
     iac:
-        identifier: home
+        identifier: iac-home
         weight: 1
 ---
 

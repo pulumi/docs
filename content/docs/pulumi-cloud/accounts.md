@@ -5,8 +5,12 @@ title: Accounts
 h1: Pulumi Cloud accounts
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  pulumicloud:
-    weight: 1
+    cloud:
+        name: Accounts
+        parent: cloud-home
+        weight: 2
+    pulumicloud:
+        weight: 1
 aliases:
 - /docs/intro/console/accounts/
 - /docs/intro/console/accounts/account/

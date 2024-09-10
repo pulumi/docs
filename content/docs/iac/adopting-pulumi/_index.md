@@ -7,7 +7,7 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Adopting Pulumi
-        parent: home
+        parent: iac-home
         weight: 75
         identifier: iac-adopting
     usingpulumi:

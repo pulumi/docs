@@ -7,7 +7,7 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Support
-        parent: home
+        parent: iac-home
         weight: 90
         identifier: iac-support
     support:

@@ -8,7 +8,7 @@ menu:
     iac:
         name: Concepts
         weight: 30
-        parent: home
+        parent: iac-home
         identifier: iac-concepts
     concepts:
         name: Overview

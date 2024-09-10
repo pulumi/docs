@@ -1,11 +1,9 @@
 {{- $page := .page }}
 {{- $menuID := .menu }}
 
-{{/*
-    If a valid menu choice was passed in, use that. Otherwise,
-    try to derive one from the path. If that doesn't work, don't
-    show a menu.
-*/}}
+{{/* If a valid menu choice was passed in, use that. Otherwise, try to derive
+one from the path. If that doesn't work, don't show a menu. (TODO: Would it be
+helpful to be able to set this somehow in the frontmatter?) */}}
 
 {{ $validMenus := slice "iac" "esc" "cloud" }}
 
@@ -18,6 +16,12 @@
 
     {{ if eq (index $segments 1) "docs" }}
         {{ $section := index $segments 2 }}
+
+        {{/* Little hack to handle prevent colliding with the existing `pulumi-cloud` menu. */}}
+        {{ if eq $section "pulumi-cloud" }}
+            {{ $section = "cloud" }}
+        {{ end }}
+
         {{ if in $validMenus $section }}
             {{ $menuID = $section }}
         {{ end }}

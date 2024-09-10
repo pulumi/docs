@@ -10,7 +10,7 @@ menu:
     name: Pulumi CLI
     weight: 80
     identifier: iac-cli
-    parent: home
+    parent: iac-home
 aliases:
     - /docs/reference/commands/
     - /docs/tour/basics-deploying/

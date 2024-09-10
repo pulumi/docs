@@ -5,8 +5,12 @@ title: "Organizations"
 h1: Pulumi Cloud organizations
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  pulumicloud:
-    weight: 2
+    cloud:
+        name: Organizations
+        parent: cloud-home
+        weight: 3
+    pulumicloud:
+        weight: 2
 aliases:
 - /docs/reference/service/orgs/
 - /docs/console/accounts/organizations/

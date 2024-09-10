@@ -6,9 +6,12 @@ h1: Pulumi Cloud overview
 no_on_this_page: true
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  pulumicloud:
-    name: Overview
-    identifier: pulumi-cloud
+    cloud:
+        name: Pulumi Cloud
+        identifier: cloud-home
+    pulumicloud:
+        name: Overview
+        identifier: pulumi-cloud
 
 aliases:
 - /docs/reference/service/
