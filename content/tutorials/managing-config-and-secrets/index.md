@@ -18,14 +18,14 @@ weight: 999
 
 # A brief summary of the tutorial. It appears at the top of the tutorial page. Markdown is fine.
 summary: |
-    In Pulumi, an environment is a collection of values intended to capture the configuration values needed to work with a particular environment. These can be raw values like server names, environment types, region names and so on. They can also be sensitive values such as database passwords or service tokens.
+    In Pulumi, each stack within your project has a settings file, and this file contains a collection of values intended to capture the configuration details needed to work with a particular environment. These can be plain-text values like server names, environment types (ex: dev, test, prod), region names and so on. They can also be sensitive values such as database passwords or service tokens.
     
     In this tutorial, we'll demonstrate how to create and utilize configuration and secret values in Pulumi.
 
 # A list of three to five things the reader will have learned by the end of the tutorial.
 youll_learn:
-    - How to create a raw configuration value
-    - How to create a secret configuration value
+    - How to create a plain-text configuration value
+    - How to create an encrypted secret configuration value
     - How to view configuration details in the CLI
     - How to access configuration values from within Pulumi program code
 
@@ -115,7 +115,7 @@ development
 
 ## Create secret values
 
-Pulumi Cloud always transmits and stores entire state files securely. Additionally, Pulumi supports encrypting specific values as “secrets” for extra protection. Encryption ensures that these values never appear as plain-text in your state file. By default, the encryption method uses automatic, per-stack encryption keys provided by Pulumi Cloud, but you can also use a [provider of your own choosing](/docs/concepts/secrets/#configuring-secrets-encryption) instead.
+Pulumi supports encrypting specific values as “secrets” for extra protection. Pulumi Cloud transmits and stores state files over a secure connection, but once received the files are viewable in plain-text. By encrypting secrets, Pulumi ensures that these values never appear as plain-text in your state file. By default, the encryption method uses automatic, per-stack encryption keys provided by Pulumi Cloud, but you can also use a [provider of your own choosing](/docs/concepts/secrets/#configuring-secrets-encryption) instead.
 
 To encrypt a configuration value before runtime, you will need to run the `pulumi config set <key> [value] --secret` command. To demonstrate how this works, you'll create a configuration value named `myPassword`. Run the CLI command `pulumi config set myPassword <value-of-password>`, making sure to pass the `--secret` flag, and also making sure to replace `<value-of-password>` with an actual value as shown below:
 
@@ -169,7 +169,7 @@ $ pulumi up -y
  +   pulumi:pulumi:Stack  python-dev  created (0.54s)
 
 Outputs:
-    Environment: "development"
+    ProjectName: "development"
     Password   : [secret]
 
 Resources:
@@ -186,7 +186,7 @@ You can see that the configuration values were successfully imported into the pr
 
 ## Next Steps
 
-In this tutorial, you created raw and secret configuration values in your project's environment. You also accessed these values via your Pulumi program code.
+In this tutorial, you created raw and secret configuration values in your project's stack. You also accessed these values via your Pulumi program code.
 
 To learn more about managing and utilizing configuration and secrets in Pulumi, take a look at the following resources:
 
