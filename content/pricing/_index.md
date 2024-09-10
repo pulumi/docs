@@ -88,12 +88,12 @@ tiers:
                   - Professional services and training
 
 customers:
-    - stat: "**80%** reduction in deployment times - from weeks to hours"
-      logo: unity
-    - stat: "**99%** reduction resource creation times - from 12 hours to 5 minutes"
-      logo: doordash
-    - stat: "**1.5 weeks to 1 day** reduction in deployment time"
+    - stat: "**1000's** of GPUs, managed effortlessly"
+      logo: nvidia
+    - stat: "Deploy **10x Faster** - from 1.5 weeks to < 1 day"
       logo: snowflake
+    - stat: "**2x** productivity on maintenance"
+      logo: atlassian
 
 comparison_table:
     sections:

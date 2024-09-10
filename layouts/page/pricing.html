@@ -105,11 +105,15 @@
                             <div class="h-10 mt-4 -mb-2">
                                 {{ partial "customer-logo.html" (dict "logo" $customer.logo) }}
                             </div>
-                        {{ else if eq $customer.logo "unity" }}
-                            <div class="h-8 mt-6">
-                                {{ partial "customer-logo.html" (dict "logo" $customer.logo) }}
+                        {{ else if eq $customer.logo "atlassian" }}
+                            <div class="h-10 -mb-2 mx-auto overflow-hidden">
+                                <img src="/logos/customers/atlassian-wordmark.svg" class="h-full object-contain mx-auto" alt="Atlassian">
                             </div>
-                        {{ else  }}
+                        {{ else if eq $customer.logo "nvidia" }}
+                            <div class="h-6 overflow-hidden">
+                                <img src="/logos/customers/nvidia.png" class="h-full object-contain mx-auto" alt="nvidia"/>
+                            </div>
+                        {{ else }}
                             <div class="h-6 mt-8">
                                 {{ partial "customer-logo.html" (dict "logo" $customer.logo) }}
                             </div>
