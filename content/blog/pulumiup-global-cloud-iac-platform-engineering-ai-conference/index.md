@@ -141,7 +141,16 @@ Thank you to our amazing partners for supporting PulumiUP!
 - **[AWS](https://aws.amazon.com/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP)** yadda yadda?
 - **[Google Cloud](https://cloud.google.com/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP)** yadda yadda?
 - **[New Relic](https://developer.newrelic.com/pulumi/get-started-pulumi/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP)** yadda yadda?
-
+- **[Docker](https://docker.com/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP)** Accelerate how you build, share, and run applications.
+- **[1Password](https://1password.com/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP)** 1Password streamlines how you manage SSH keys, API tokens, and other infrastructure secrets throughout the entire software development life cycle.
+- **[Tailscale](https://tailscale.com/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP)** Tailscale makes creating software-defined networks easy: securely connecting users, services, and devices.
+- **[Pinecone](https://pinecone.io/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP)** Build remarkable GenAI applications fast, with lower cost, better performance, and greater ease of use at any scale.
+- **[Wiz](https://wiz.io/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP)** Secure everything you build and run in the cloud.
+- **[Honeycomb](https://honeycomb.io/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP)** Observability that helps solve problems you couldn’t before.
+- **[Mysten Labs](https://mystenlabs.com/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP)** building critical infrastructure to enable a more decentralized internet.
+- **[Imagine Learning](https://imaginelearning.com/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP)** empowers educators to inspire breakthrough moments in every student’s unique learning journey with digital-first, K–12 education solutions.
+- **[Dagger](https://dagger.io/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP)** Powerful, programmable open source CI/CD engine that runs your pipelines in containers.
+- **[Oso](https://osohq.com/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP)** Authorization as a service.
 ## Build Your Schedule Now
 
 With so many compelling topics across AI/ML, Platform Engineering, DevOps, and Cloud and IaC, now is the time to [build your PulumiUP schedule](https://conference.pulumi.com/schedule/?utm_source=PulumiUP&utm_medium=web&utm_campaign=FY2025Q1_Event_PulumiUP). Select the sessions that match your goals and interests to maximize your experience. Plus, you'll receive a link to watch your chosen panel discussions and tech talks on-demand!
