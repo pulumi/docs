@@ -10,6 +10,7 @@ menu:
     weight: 2
 aliases:
     - /docs/pulumi-cloud/esc/providers/azure-secrets/
+    - /docs/esc/providers/azure-secrets/
 ---
 
 The `azure-secrets` provider enables you to dynamically import Secrets and Configuration from Azure Key Vault into your Environment. The provider will return a map of names to Secrets.

@@ -11,6 +11,7 @@ menu:
     weight: 5
 aliases:
     - /docs/pulumi-cloud/esc/providers/1password-secrets/
+    - /docs/esc/providers/1password-secrets/
 ---
 
 The `1password-secrets` provider enables you to dynamically import Secrets from 1Password into your Environment. The provider will return a map of names to Secrets.

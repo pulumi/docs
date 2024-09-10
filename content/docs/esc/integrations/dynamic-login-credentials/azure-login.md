@@ -10,7 +10,8 @@ menu:
     parent: esc-dynamic-login-credentials
     weight: 2
 aliases:
-- /docs/pulumi-cloud/esc/providers/azure-login/
+    - /docs/pulumi-cloud/esc/providers/azure-login/
+    - /docs/esc/providers/azure-login/
 ---
 
 The `azure-login` provider enables you to log in to Azure using OpenID Connect or by providing static credentials. The provider will return a set of credentials that can be used to access Azure resources or fetch secrets using the `azure-secrets` provider.

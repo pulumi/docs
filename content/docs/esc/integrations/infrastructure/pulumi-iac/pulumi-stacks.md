@@ -9,7 +9,8 @@ menu:
         parent: esc-pulumi-iac-integrations
         weight: 1
 aliases:
-  - /docs/pulumi-cloud/esc/providers/pulumi-stacks/
+    - /docs/pulumi-cloud/esc/providers/pulumi-stacks/
+    - /docs/esc/providers/pulumi-stacks/
 ---
 
 The `pulumi-stacks` provider enables you to import Stack outputs from Pulumi into your Environment.

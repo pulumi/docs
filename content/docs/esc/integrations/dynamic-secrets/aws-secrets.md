@@ -10,6 +10,7 @@ menu:
     weight: 1
 aliases:
     - /docs/pulumi-cloud/esc/providers/aws-secrets/
+    - /docs/esc/providers/aws-secrets/
 ---
 
 The `aws-secrets` provider enables you to dynamically import Secrets from AWS Secrets Manager into your Environment. The provider will return a map of names to Secrets.

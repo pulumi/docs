@@ -10,6 +10,7 @@ menu:
     weight: 4
 aliases:
     - /docs/pulumi-cloud/esc/providers/vault-secrets/
+    - /docs/esc/providers/vault-secrets/
 ---
 
 The `vault-secrets` provider enables you to dynamically import Secrets from HashiCorp Vault into your Environment. The provider will return a map of names to Secrets.

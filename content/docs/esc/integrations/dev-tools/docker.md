@@ -8,7 +8,7 @@ menu:
     parent: esc-dev-tools-integrations
     weight: 2
 aliases:
-  - /docs/esc/other-integrations/docker/
+    - /docs/esc/other-integrations/docker/
 ---
 
 ## Overview
