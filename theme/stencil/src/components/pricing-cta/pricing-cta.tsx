@@ -5,7 +5,7 @@ import { parseCookie } from "../../util/util";
     tag: "pricing-cta",
     shadow: false,
 })
-export class HeaderCta {
+export class pricingCta {
     @Prop()
     buttonClass = "";
 
