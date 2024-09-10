@@ -108,32 +108,38 @@ nav.actually-docs {
             div.get-started   {
                 display: none;
             }
-    
+
             li.github-widget,
             li.slack {
                 @media (min-width: 900px){
                     display: flex;
                 }
             }
-    
+
             li.docs,
             li.registry {
                 @media (min-width: 768px) {
                     display: flex
                 }
             }
-    
+
             li.ai {
                 @media (min-width: 475px) {
                     display: flex
                 }
             }
-    
+
             div.get-started {
                 @media (min-width: 450px) {
                     display: flex;
                 }
             }
         }
+    }
+}
+
+#docs-main-nav nav {
+    ul li ul li ul {
+        // @apply hidden;
     }
 }

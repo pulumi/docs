@@ -5,12 +5,17 @@ title: Terraform
 h1: Migrating from Terraform to Pulumi
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  usingpulumi:
-    identifier: from-terraform
-    parent: migrating
-    weight: 2
+    iac:
+        name: Terraform
+        parent: iac-adopting-migrate
+        weight: 1
+    usingpulumi:
+        identifier: from-terraform
+        parent: migrating
+        weight: 2
 aliases:
 - /docs/guides/adopting/from_terraform/
+- /docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-terraform/
 ---
 
 If your infrastructure was provisioned with Terraform, there are a number of options that will help you adopt Pulumi.

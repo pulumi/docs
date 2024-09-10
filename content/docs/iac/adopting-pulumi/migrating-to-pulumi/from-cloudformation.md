@@ -5,12 +5,17 @@ title: AWS CloudFormation
 h1: "Migrating from AWS CloudFormation to Pulumi"
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  usingpulumi:
-    identifier: from-aws-cloudformation
-    parent: migrating
-    weight: 3
+    iac:
+        name: AWS CloudFormation
+        parent: iac-adopting-migrate
+        weight: 2
+    usingpulumi:
+        identifier: from-aws-cloudformation
+        parent: migrating
+        weight: 3
 aliases:
 - /docs/guides/adopting/from_aws/
+- /docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-aws/
 ---
 
 <img src="/logos/tech/aws_cloudformation.png" align="right" class="h-32 px-8 pb-4">

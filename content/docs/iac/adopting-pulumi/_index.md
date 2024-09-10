@@ -5,9 +5,16 @@ title: Adopting Pulumi
 h1: Adopting Pulumi
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  usingpulumi:
-    identifier: adopting-pulumi
-    weight: 1
+    iac:
+        name: Adopting Pulumi
+        parent: home
+        weight: 75
+        identifier: iac-adopting
+    usingpulumi:
+        identifier: adopting-pulumi
+        weight: 1
+aliases:
+    - /docs/using-pulumi/adopting-pulumi/
 ---
 
 If you've fallen in love with Pulumi, it might not be obvious how to adopt it. For brand new projects, it's easy: start writing your infrastructure as code using Pulumi from the start. But what if you already have infrastructure stood up? And perhaps even actively serving a critical business need? In these cases, you may wonder, is it even possible to adopt Pulumi, without downtime or a major disturbance to your existing infrastructure? The answer is **yes**!
