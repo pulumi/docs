@@ -4,10 +4,10 @@ title_tag: "Managing Configuration and Secrets"
 layout: single
 
 # A succinct description of the tutorial. It appears on the Tutorials home and collection pages.
-description: Here is a brief description of what this tutorial's all about.
+description: Learn how to manage plain-text and encrypted configuration values in Pulumi.
 
 # A similar description used for search results and social-media previews.
-meta_desc: Here is a brief description of what this tutorial's all about.
+meta_desc: Learn how to manage plain-text and encrypted configuration values in Pulumi.
 
 # An image for the tutorial. It appears on tutorial page and in social-media previews.
 meta_image: config-secrets-meta.png
