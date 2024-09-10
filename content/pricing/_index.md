@@ -88,12 +88,12 @@ tiers:
                   - Professional services and training
 
 customers:
-    - stat: "**1000's** of GPUs, managed effortlessly"
-      logo: nvidia
-    - stat: "Deploy **10x Faster** - from 1.5 weeks to < 1 day"
+    - stat: "**5x faster** time to market"
+      logo: unity
+    - stat: "**>100% ROI** - eliminated custom state backend and saved time"
+      logo: starburst
+    - stat: "**10x faster deployments**, from weeks to hours"
       logo: snowflake
-    - stat: "**2x** productivity on maintenance"
-      logo: atlassian
 
 comparison_table:
     sections:
