@@ -139,7 +139,7 @@ Want to get hands-on experience? Our live workshops are designed to deepen your 
 
 Thank you to our amazing customers, sponsors and partners for supporting PulumiUP!
 
-- **[AWS](https://aws.amazon.com/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP)** yadda yadda?
+- **[AWS](https://aws.amazon.com/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP)** The world's most comprehensive and broadly adopted cloud, offering over 200 fully featured services from data centers globally.
 - **[Google Cloud](https://cloud.google.com/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP)** Google Cloud helps developers build quickly, securely, and cost effectively with the next generation of modern infrastructure designed to meet specific workload and industry needS.```
 - **[New Relic](https://developer.newrelic.com/pulumi/get-started-pulumi/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP)** Data for engineers to monitor, debug, and improve their entire stack.
 - **[Docker](https://docker.com/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP)** Accelerate how you build, share, and run applications.
