@@ -7,7 +7,7 @@ weight: 5
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
-        name: Configuration
+        name: Policy configuration
         parent: iac-packages-automation-policy
         weight: 4
     usingpulumi:

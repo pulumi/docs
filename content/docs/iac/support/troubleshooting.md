@@ -6,7 +6,7 @@ h1: Pulumi troubleshooting
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
-        name: Troubleshooting
+        name: IaC Troubleshooting
         parent: iac-support
         weight: 2
     support:
