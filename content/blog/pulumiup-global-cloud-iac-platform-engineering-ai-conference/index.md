@@ -97,6 +97,8 @@ AI is transforming how we approach development and infrastructure, and PulumiUP 
 - **"[The AI Governance Challenge](https://conference.pulumi.com/talks/the-ai-governance-challenge/)"** by Patty O'Callaghan (Technical Director, Charles River) will explore the complexities of AI governance and how to navigate them.
 - **[Panel Discussion: "AI for Cloud Development"](https://conference.pulumi.com/talks/panel-ai-cloud-development/)** featuring industry leaders like Meagan Cojocar (Pulumi), Luke Hoban (Pulumi), Phillip Carter (Honeycomb), Giri Sreenivas (Docker), and Clare Liguori (AWS) will provide diverse perspectives on how AI is shaping cloud infrastructure.
 
+{{< figure alt="Panelists of AI for Cloud Development" src="./pulumiup_2024-ai-cloud-development.png" caption="Panel: AI for Cloud Development" width=100% >}}
+
 ## Platform Engineering and DevOps Track Highlights
 
 The Platform Engineering & DevOps track at PulumiUP is perfect for anyone looking to automate infrastructure, secure their systems, and scale their environments with ease. This track features talks and panels on cutting-edge technologies and practices.
@@ -109,6 +111,8 @@ The Platform Engineering & DevOps track at PulumiUP is perfect for anyone lookin
 - **"[Security of IaC Pipelines and Infrastructure Governance With Policies-As-Code](https://conference.pulumi.com/talks/security-of-iac-pipelines-and-infrastructure-governance-with-policiesascode/)"** by Marina Novikova (senior partner Solutions Architect, AWS) and Andy Taylor (senior networking Specialist/ Solutions Architect, AWS) explores security best practices for IaC pipelines and infrastructure governance using policies-as-code, cover best practices for handling sensitive information like access keys, tokens and encryption keys, and scaling and automating your DevSecOps.
 - **[Panel Discussion: "Secrets and Policies—Automating Cybersecurity"](https://conference.pulumi.com/talks/panel-platform-engineering-security/)** with Arun Loganathan (Pulumi), Maya Kaczorowski (Tailscale), Jason Meller (1Password), and Ofir Cohen (Wiz) will explore the intersection of innovation and security, offering insights into how AI is reshaping the threat landscape and how organizations can stay ahead. 
 
+{{< figure alt="Panelists of Secrets and Policies—Automating Cybersecurity" src="./pulumiup_2024-secrets-policies-automating-cybersecurity.png" caption="Panel: Secrets and Policies—Automating Cybersecurity" width=100% >}}
+
 ## Cloud and IaC Track Highlights
 
 The Cloud and IaC track is ideal for those wanting to deepen their understanding of infrastructure as code and its impact on modern cloud computing. Learn from industry pioneers and see where the future of IaC is headed.
@@ -119,6 +123,8 @@ The Cloud and IaC track is ideal for those wanting to deepen their understanding
 - **"[Using Automation API to Deploy a BYOC SaaS](https://conference.pulumi.com/talks/using-automation-api-to-deploy-a-byoc-saas/)"** by Abhay Bothra (Co-Founder & CTO, Fennel AI) shares insights about how Fennel has created a one-click setup for updating customer environments by leveraging Pulumi automation API.
 - **"[Industrialize the Configuration of Your GitHub Repositories With IaC](https://conference.pulumi.com/talks/industrialize-the-configuration-of-your-github-repositories-with-iac/)"** by Alexandre Nédélec (Software Engineer, Avanade) will live code using the GitHub, Azure native, and Azure AD Pulumi providers to create a GitHub repository and configure its pipeline to deploy to Azure using OpenID Connect.
 - **[Panel Discussion: "Infrastructure as Code — Can We Do Better?"](https://conference.pulumi.com/talks/infrastructure-as-code-can-we-do-better/)** featuring Joe Duffy (Pulumi), Brian Grant (Stealth), Elad Ben-Israel (Winglang), Adam Jacob (System Initiative), and Luke Hoban (Pulumi) will discuss the past, the present, and the future of Infrastructure as Code and the overall infrastructure technologies.
+
+{{< figure alt="Panelists of Infrastructure as Code - Can we do better?" src="./pulumiup_2024-infrastructure-as-code.png" caption="Panel: Infrastructure as Code - Can we do better?" width=100% >}}
 
 ## Workshops and Hands-On Learning
 
