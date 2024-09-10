@@ -1,8 +1,8 @@
 {{ define "hero" }}
-    <header class="home-page-hero shadow">
-        <div class="home-page-hero-background">
+    <header class="home-page-hero">
+        <div class="home-page-hero-background border-b border-gray-300">
             <div class="flex">
-                <div class="w-full p-6 home-page-hero-text lg:pt-14">
+                <div class="w-full p-6 home-page-hero-text lg:pt-12">
                     <h1 class="flex flex-col items-center">
                         <span class="inline-block mb-3 text-center" data-text="{{ index (.Params.hero.title) 0 }}"><span class="rainbow-text">{{ index (.Params.hero.title) 0 }}</span></span>
                         <span class="inline-block text-center" data-text="{{ index (.Params.hero.title) 1 }}">{{ index (.Params.hero.title) 1 }}</span>
@@ -27,30 +27,60 @@
 {{ define "main" }}
     {{ $pageContext := . }}
     <!-- Logos carousel -->
-    <section class="container mx-auto text-center overflow-hidden px-3 mt-6">
-        <h3 class="text-center mb-4">{{ .Params.customer_logos.title }}</h3>
-        <div class="my-12">
+    <section class="container mx-auto text-center overflow-hidden px-3 mt-12" style="margin-bottom: -35px;">
+        <h3 class="text-center text-xl">
+            <a href="/case-studies" class="hover:underline">{{ .Params.customer_logos.title }}</a>
+        </h3>
+        <div class="mb-6">
             {{ partial "stacked-carousel.html" (dict "logos" .Params.customer_logos.logos "single_row" true "gray_hover" true ) }}
         </div>
     </section>
 
-    <!-- Code and ship faster -->
-    <section class="mb-8 p-6 lg:px-0 relative home-page-section">
-        <div class="home-page-build-section-background">
-            <div class="home-page-build-section-image"></div>
+    <!-- 3 pillars -->
+    <section id="benefits" 
+        class="text-center my-6">
+        <div class="container mx-auto flex flex-wrap justify-content items-stretch text-left p-8">
+            {{ range $item := .Params.pillars.items }}
+                <div class="w-full lg:w-1/3 p-3">
+                    <div class="h-full card shadow-xl border-2 border-gray-200 bg-white p-12">
+                        <div class="flex flex-row items-center justify-left">
+                            <div class="icon-section text-center">
+                                {{ partial "color-icon.html" (dict "icon" $item.icon "icon_color" $item.icon_color) }}
+                            </div>
+                            <div class="ml-4">
+                                <h5>{{ $item.title }}</h5>
+                            </div>
+                        </div>
+                        <div class="mt-6">
+                            <p>{{ $item.description | markdownify }}</p>
+                        </div>
+                    </div>
+                </div>
+            {{ end }}
         </div>
+    </section>
 
-        <div class="container mx-auto z-10 relative">
-            <div class="w-full lg:w-2/3 mx-auto">
-                <div class="text-center">
+
+    <!-- Code and ship faster -->
+    <section class="mb-8 p-6 lg:px-0 home-page-section bg-gradient-to-r from-white from-0% via-violet-200 via-50% to-white to-100%">
+        <div class="container mx-auto z-10">
+            <div class="w-full flex flex-col lg:flex-row items-center justify-center mx-auto">
+                <div class="w-full lg:w-4/12">
                     <h3>{{ .Params.code_faster.title | markdownify }}</h3>
                     <p class="text-lg">{{ .Params.code_faster.description | markdownify }}</p>
                     {{ range $item := .Params.code_faster.items }}
                         <h6>{{ $item.title }}</h6>
                         <p>{{ $item.description | markdownify }}</p>
                     {{ end }}
+                    <div class="mt-8">
+                        <span class="text-lg">Learn more: </span>
+                        <a href="/product/" class="underline text-lg">Pulumi IaC<i class="fa fa-arrow-right ml-2"></i></a>
+                    </div>
                 </div>
-                <div class="card bg-white shadow-xl p-6 block">
+                <div class="hidden lg:block w-1/12">
+                    <!-- empty div to get flex to behave -->
+                </div>
+                <div class="w-full lg:w-7/12 xl:w-6/12 xxl:w-5/12 card bg-white shadow-xl p-6 block">
                     <div>
                         <pulumi-chooser type="language" options="typescript,python,go,csharp,java,yaml">
                             <pulumi-choosable type="language" class="highlight" value="typescript">
@@ -93,27 +123,23 @@
     </section>
 
     <!-- Tame configuration and secrets sprawl -->
-    <section class="py-12 lg:my-12 px-6 lg:px-0 relative home-page-section">
-        <div class="home-page-manage-section-background">
-            <div class="home-page-manage-section-image"></div>
-        </div>
+    <section class="py-12 my-12 px-6 lg:px-0 home-page-section bg-gradient-to-r from-white from-0% via-violet-200 via-50% to-white to-100%">
+            <div class="container mx-auto z-10">
+                <div class="w-full flex flex-col lg:flex-row items-center justify-center mx-auto">
+                    <div class="w-full lg:w-1/2 z-10 px-8">
+                        <h3>{{ .Params.secrets.title }}</h3>
+                        <p class="text-lg">{{ .Params.secrets.description | markdownify }}</p>
+                        <div class="mt-8">
+                            <span class="text-lg">Learn more: </span>
+                            <a href="/product/esc" class="underline text-lg">Pulumi ESC<i class="fa fa-arrow-right ml-2"></i></a>
+                        </div>
+                    </div>
 
-        <div class="container mx-auto z-10 relative">
-            <div class="w-full lg:w-2/3 mx-auto">
-                <div class="z-10 px-8">
-                    <h3>{{ .Params.secrets.title }}</h3>
-                    <p class="text-lg">{{ .Params.secrets.description | markdownify }}</p>
-                    <div class="mt-8">
-                        <span class="text-lg">Learn more: </span>
-                        <a href="/product/esc" class="underline text-lg">Pulumi ESC<i class="fa fa-arrow-right ml-2"></i></a>
+                    <div class="flex items-center justify-center mt-8 w-full lg:w-1/2">
+                        <img src="{{ .Params.secrets.image }}" alt="{{ .Params.secrets.alt }}" />
                     </div>
                 </div>
-
-                <div class="flex items-center justify-center mt-8">
-                    <img src="{{ .Params.secrets.image }}" alt="{{ .Params.secrets.alt }}" class="card shadow-xl" />
-                </div>
             </div>
-        </div>
     </section>
 
     <!-- Starburst quote -->
@@ -121,26 +147,22 @@
         {{ partial "home/quote.html" (dict "quote" .Params.customer_quotes.starburst) }}
     </section>
 
-    <!-- Embed IaC Anywhere -->
-    <section class="py-12 lg:my-12 px-6 lg:px-0 relative home-page-section">
-        <div class="home-page-cloud-section-background">
-            <div class="home-page-cloud-section-image"></div>
-        </div>
-
+    <!-- Insights -->
+    <section class="py-12 my-12 px-6 lg:px-0 relative home-page-section bg-gradient-to-r from-white from-0% via-violet-200 via-50% to-white to-100%">
         <div class="container mx-auto z-10 relative">
-            <div class="w-full lg:w-2/3 mx-auto">
-                <div class="z-10 px-8">
-                    <h3>{{ .Params.embed.title }}</h3>
-                    <div class="text-lg text-black">{{ .Params.embed.description | markdownify }}</div>
+            <div class="w-full flex flex-col lg:flex-row items-center justify-center  mx-auto">
+                <div class="w-full lg:w-5/12 z-10 px-8">
+                    <h3>{{ .Params.insights.title }}</h3>
+                    <div class="text-lg text-black">{{ .Params.insights.description | markdownify }}</div>
                     <div class="mt-8">
                         <span class="text-lg">Learn more: </span>
-                        <a href="/blog/developer-portal-platform-teams/" class="underline text-lg">Pulumi For Platform Teams<i class="fa fa-arrow-right ml-2"></i></a>
+                        <a href="/product/pulumi-insights/" class="underline text-lg">Pulumi Insights<i class="fa fa-arrow-right ml-2"></i></a>
                     </div>
                 </div>
 
-                <div class="flex items-center justify-center mt-8 px-8">
-                    <div class="card bg-white shadow-xl p-6">
-                        <img src="{{ .Params.embed.image }}" alt="{{ .Params.embed.alt }}" />
+                <div class="flex items-center justify-center mt-8 px-8 w-full lg:w-7/12">
+                    <div class="p-6">
+                        <img src="{{ .Params.insights.image }}" alt="{{ .Params.insights.alt }}" />
                     </div>
                 </div>
             </div>
@@ -152,90 +174,15 @@
         {{ partial "home/quote.html" (dict "quote" .Params.customer_quotes.snowflake) }}
     </section>
 
-    <!-- Boost productivity with AI -->
-    <section class="py-12 lg:my-12 px-6 lg:px-0 relative home-page-section">
-        <div class="home-page-science-section-background">
-            <div class="home-page-science-section-image"></div>
-        </div>
-
-        <div class="container mx-auto z-10 relative">
-            <div class="card bg-white shadow-xl p-6 w-full lg:w-2/3 mx-auto">
-                <div class="z-10 px-8">
-                    <h3>{{ .Params.ai.title }}</h3>
-                    <p class="text-lg">{{ .Params.ai.description | markdownify }}</p>
-                    <div class="mt-8">
-                        <span class="text-lg">Try it out: </span>
-                        <a href="/ai/" class="underline text-lg">Pulumi AI<i class="fa fa-arrow-right ml-2"></i></a>
-                    </div>
-                </div>
-
-                <div class="flex items-center justify-center mt-8 w-full">
-                    <div class="w-full">
-                        <pulumi-chooser type="language" options="typescript,python,go,csharp,java,yaml">
-                            <pulumi-choosable type="language" class="highlight" value="typescript">
-                                <img
-                                    class="mx-auto w-full"
-                                    src="/images/home/ai-ts.svg"
-                                    alt="AI prompted to 'Give me an AWS static website behind a CloudFront CDN' and outputting Pulumi code in TypeScript"
-                                />
-                            </pulumi-choosable>
-
-                            <pulumi-choosable type="language" class="highlight" value="python">
-                                <img
-                                    class="mx-auto w-full"
-                                    src="/images/home/ai-python.svg"
-                                    alt="AI prompted to 'Give me an AWS static website behind a CloudFront CDN' and outputting Pulumi code in Python"
-                                />
-                            </pulumi-choosable>
-
-                            <pulumi-choosable type="language" class="highlight" value="go">
-                                <img
-                                    class="mx-auto w-full"
-                                    src="/images/home/ai-go.svg"
-                                    alt="AI prompted to 'Give me an AWS static website behind a CloudFront CDN' and outputting Pulumi code in GO"
-                                />
-                            </pulumi-choosable>
-
-                            <pulumi-choosable type="language" class="highlight" value="csharp">
-                                <img
-                                    class="mx-auto w-full"
-                                    src="/images/home/ai-csharp.svg"
-                                    alt="AI prompted to 'Give me an AWS static website behind a CloudFront CDN' and outputting Pulumi code in C#"
-                                />
-                            </pulumi-choosable>
-
-                            <pulumi-choosable type="language" class="highlight" value="java">
-                                <img
-                                    class="mx-auto w-full"
-                                    src="/images/home/ai-java.svg"
-                                    alt="AI prompted to 'Give me an AWS static website behind a CloudFront CDN' and outputting Pulumi code in Java"
-                                />
-                            </pulumi-choosable>
-
-                            <pulumi-choosable type="language" class="highlight" value="yaml">
-                                <img
-                                    class="mx-auto w-full"
-                                    src="/images/home/ai-yaml.svg"
-                                    alt="AI prompted to 'Give me an AWS static website behind a CloudFront CDN' and outputting Pulumi code in YAML"
-                                />
-                            </pulumi-choosable>
-                        </pulumi-chooser>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Built by engineers + tweets -->
     <section class="mt-16 mb-36 relative flex flex-col">
         <div class="container mx-auto px-3 overflow-hidden lg:overflow-visible">
             <div class="w-full bg-violet-600 rounded-xl shadow p-16 lg:pb-56 align-top">
-                <h2 class="text-white text-center">Built by engineers for engineers. Open source.</h2>
+                <h2 class="text-white text-center">Open source. Built by engineers for engineers.</h2>
                 <div class="flex flex-col lg:flex-row items-center justify-center mb-4">
                     <a class="text-white text-lg bold underline flex self-start lg:self-auto mt-4 lg:mt-0 mx-auto lg:mx-0 lg:pr-1" href="https://slack.pulumi.com/"
-                        >Join our community,
-                    </a>
-                    <p class="text-white text-lg mx-auto my-0 lg:mx-0 lg:my-auto">and let’s build together.</p>
+                        >Join the Pulumi community,</a>
+                    <p class="text-white text-lg mx-auto my-0 lg:mx-0 lg:my-auto"> and let’s build together.</p>
                 </div>
             </div>
 
@@ -307,7 +254,7 @@
     <!-- CTAs -->
     <section class="container mx-auto my-24 px-6">
         <div class="flex justify-center">
-            <div class="card ready-cta w-full rounded-xl p-1 gradient">
+            <div class="card ready-cta w-full rounded-xl p-0.5 gradient">
                 <div class="flex justify-center rounded-xl bg-purple-100">
                     <div class="p-8 md:p-16 lg:pt-28 lg:pb-28 inline-flex flex-col items-center">
                         <h2 class="mb-12 text-center">Ready to try Pulumi?</h2>
