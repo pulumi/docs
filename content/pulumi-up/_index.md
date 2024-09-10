@@ -353,16 +353,16 @@ customer_logos:
       - logo: new-relic.png
         link: https://developer.newrelic.com/pulumi/get-started-pulumi/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
     - logos:
-      - logo: /logos/tech/wiz.svg
+      - logo: wiz.png
         link: https://www.wiz.io/?utm_source=Pulumi&utm_medium=Website&utm_campaign=PulumiUP
-      - logo: /logos/pkg/docker.svg
+      - logo: docker.png
         link: https://docker.com/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
-      - logo: /logos/tech/honeycomb-logo.svg
+      - logo: honeycomb-logo.svg
         link: https://www.honeycomb.io/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
-      - logo: /images/pulumiup-2023/speaker-logos/oso.jpeg
+      - logo: oso.jpeg
         link: https://www.osohq.com/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
-      - logo: /images/pulumiup-2023/speaker-logos/mysten-labs.png
+      - logo: mysten-labs.png
         link: https://www.mystenlabs.com/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
-        - logo: /images/pulumiup-2023/speaker-logos/imagine-learning.png
+      - logo: imagine-learning.png
         link: https://www.imaginelearning.com/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
 ---
