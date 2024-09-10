@@ -42,6 +42,10 @@ To get started, click the link for the boilerplate repository template that you 
   - **Python:** [`pulumi/pulumi-component-provider-py-boilerplate`](https://github.com/pulumi/pulumi-component-provider-py-boilerplate)
   - **TypeScript:** [`pulumi/pulumi-component-provider-ts-boilerplate`](https://github.com/pulumi/pulumi-component-provider-ts-boilerplate)
   - **C#:** a template repository is coming soon
+  
+{{% notes type="info" %}}
+If you are considering a bridged Terraform provider, take a look at [`terraform-provider`](/registry/packages/terraform-provider) first. [`terraform-provider`](/registry/packages/terraform-provider) provides a fast turn-key experience in exchange for less customization then [`pulumi/pulumi-tf-provider-boilerplate`](https://github.com/pulumi/pulumi-tf-provider-boilerplate).
+{{% /notes %}}
 
 ### Name your repository
 

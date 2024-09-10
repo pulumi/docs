@@ -1,0 +1,43 @@
+{
+    "frameworks": [
+        {
+            "framework": "PCI DSS",
+            "cloud": "AWS",
+            "description": "PCI DSS (Payment Card Industry Data Security Standard) compliance refers to the adherence to a set of security standards designed to protect card information during and after a financial transaction. These standards are established by the Payment Card Industry Security Standards Council (PCI SSC), which was founded by major credit card companies like Visa, MasterCard, American Express, Discover, and JCB."
+        }
+    ],
+    "services": [
+        {
+            "name": "RDS",
+            "full": "RDS resources",
+            "category": "database",
+            "whatis": "Amazon RDS (Relational Database Service) is a managed service that simplifies setting up, operating, and scaling relational databases in the cloud. It supports multiple database engines and automates tasks like backups, patching, and monitoring."
+        },
+        {
+            "name": "EC2",
+            "full": "EC2 resources",
+            "category": "server",
+            "whatis": "Amazon EC2 (Elastic Compute Cloud) is a web service that provides scalable computing capacity in the cloud, allowing users to run virtual servers on-demand. It offers server instances, storage, and networking options to tailor the infrastructure to specific application needs."
+        },
+        {
+            "name": "ECS",
+            "full": "ECS Cluster",
+            "whatis": "Amazon ECS (Elastic Container Service) is a fully managed container orchestration service that allows you to run and scale containerized applications in the cloud. It simplifies the deployment and management of containers, handling tasks like load balancing, scaling, and security. ECS integrates seamlessly with other AWS services, making it easy to build and manage resilient, scalable applications."
+        },
+        {
+            "name": "EKS",
+            "full": "EKS Cluster",
+            "whatis": "Amazon EKS (Elastic Kubernetes Service) is a fully managed service that simplifies running Kubernetes on AWS, allowing you to deploy, manage, and scale containerized applications. It handles the complexity of Kubernetes operations, including patching, scaling, and managing the control plane. EKS integrates with AWS services, providing a secure and scalable platform for running Kubernetes workloads in the cloud."
+        },
+        {
+            "name": "API Gateway",
+            "full": "API Gateway",
+            "whatis": "Amazon API Gateway is a fully managed service that enables you to create, publish, and manage APIs at any scale. It simplifies building and securing REST, HTTP, and WebSocket APIs, handling tasks like authorization, throttling, and monitoring. API Gateway integrates seamlessly with AWS services, allowing you to connect backend systems, Lambda functions, and other endpoints with ease."
+        },
+        {
+            "name": "IAM",
+            "full": "IAM Roles and Policies",
+            "whatis": "AWS IAM (Identity and Access Management) is a service that enables you to securely manage access to AWS resources. It allows you to create and control user permissions, defining who can access specific resources and under what conditions. IAM helps ensure security and compliance by enforcing fine-grained access controls across your AWS environment."
+        }
+    ]
+}
