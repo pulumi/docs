@@ -325,6 +325,11 @@ workshops:
     meta_desc: Learn how to use AWS to generate secure infrastructure code for deploying an AI Chatbot app with Pulumi, leveraging New Relic's LLM dashboards.  
     datetime: 2024-10-30T09:00:00-07:00
     link: /resources/observability-as-code-for-ai-apps-new-relic/
+  - title: Deploy Tailscale infrastructure in AWS with Pulumi
+    meta_desc: Join this webinar to explore how to quickly create AWS infrastructure using Pulumi and Tailscale, showcasing advanced features in Kubernetes and AWS environments  
+    datetime: 2024-10-15T09:00:00-07:00
+    link: https://www.pulumi.com/resources/deploy-tailscale-infrastructure-with-pulumi/
+  
 
 registration:
     items:
