@@ -89,6 +89,8 @@ In the Main Track, you’ll hear directly from the Pulumi leadership team about 
 
 ## AI/ML Track Highlights
 
+{{< figure alt="Panelists of AI for Cloud Development" src="./pulumiup_2024-ai-cloud-development.png" caption="Panel: AI for Cloud Development" width=100% >}}
+
 AI is transforming how we approach development and infrastructure, and PulumiUP offers an incredible lineup of talks and panels on the topic.
 
 - **"[Data Privacy Challenges with Large Language Models](https://conference.pulumi.com/talks/data-privacy-challenges-with-large-language-models/)"** by Aditi Godbole (Data Science, AI & ML Leader, SAP) will address the critical question of managing data privacy addressing LLM basics, AI data privacy fundamentals, and specific privacy issues in LLMs.
@@ -97,9 +99,9 @@ AI is transforming how we approach development and infrastructure, and PulumiUP 
 - **"[The AI Governance Challenge](https://conference.pulumi.com/talks/the-ai-governance-challenge/)"** by Patty O'Callaghan (Technical Director, Charles River) will explore the complexities of AI governance and how to navigate them.
 - **[Panel Discussion: "AI for Cloud Development"](https://conference.pulumi.com/talks/panel-ai-cloud-development/)** featuring industry leaders like Meagan Cojocar (Pulumi), Luke Hoban (Pulumi), Phillip Carter (Honeycomb), Giri Sreenivas (Docker), and Clare Liguori (AWS) will provide diverse perspectives on how AI is shaping cloud infrastructure.
 
-{{< figure alt="Panelists of AI for Cloud Development" src="./pulumiup_2024-ai-cloud-development.png" caption="Panel: AI for Cloud Development" width=100% >}}
-
 ## Platform Engineering and DevOps Track Highlights
+
+{{< figure alt="Panelists of Secrets and Policies—Automating Cybersecurity" src="./pulumiup_2024-secrets-policies-automating-cybersecurity.png" caption="Panel: Secrets and Policies—Automating Cybersecurity" width=100% >}}
 
 The Platform Engineering & DevOps track at PulumiUP is perfect for anyone looking to automate infrastructure, secure their systems, and scale their environments with ease. This track features talks and panels on cutting-edge technologies and practices.
 
@@ -111,9 +113,9 @@ The Platform Engineering & DevOps track at PulumiUP is perfect for anyone lookin
 - **"[Security of IaC Pipelines and Infrastructure Governance With Policies-As-Code](https://conference.pulumi.com/talks/security-of-iac-pipelines-and-infrastructure-governance-with-policiesascode/)"** by Marina Novikova (senior partner Solutions Architect, AWS) and Andy Taylor (senior networking Specialist/ Solutions Architect, AWS) explores security best practices for IaC pipelines and infrastructure governance using policies-as-code, cover best practices for handling sensitive information like access keys, tokens and encryption keys, and scaling and automating your DevSecOps.
 - **[Panel Discussion: "Secrets and Policies—Automating Cybersecurity"](https://conference.pulumi.com/talks/panel-platform-engineering-security/)** with Arun Loganathan (Pulumi), Maya Kaczorowski (Tailscale), Jason Meller (1Password), and Ofir Cohen (Wiz) will explore the intersection of innovation and security, offering insights into how AI is reshaping the threat landscape and how organizations can stay ahead. 
 
-{{< figure alt="Panelists of Secrets and Policies—Automating Cybersecurity" src="./pulumiup_2024-secrets-policies-automating-cybersecurity.png" caption="Panel: Secrets and Policies—Automating Cybersecurity" width=100% >}}
-
 ## Cloud and IaC Track Highlights
+
+{{< figure alt="Panelists of Infrastructure as Code - Can we do better?" src="./pulumiup_2024-infrastructure-as-code.png" caption="Panel: Infrastructure as Code - Can we do better?" width=100% >}}
 
 The Cloud and IaC track is ideal for those wanting to deepen their understanding of infrastructure as code and its impact on modern cloud computing. Learn from industry pioneers and see where the future of IaC is headed.
 
@@ -123,8 +125,6 @@ The Cloud and IaC track is ideal for those wanting to deepen their understanding
 - **"[Using Automation API to Deploy a BYOC SaaS](https://conference.pulumi.com/talks/using-automation-api-to-deploy-a-byoc-saas/)"** by Abhay Bothra (Co-Founder & CTO, Fennel AI) shares insights about how Fennel has created a one-click setup for updating customer environments by leveraging Pulumi automation API.
 - **"[Industrialize the Configuration of Your GitHub Repositories With IaC](https://conference.pulumi.com/talks/industrialize-the-configuration-of-your-github-repositories-with-iac/)"** by Alexandre Nédélec (Software Engineer, Avanade) will live code using the GitHub, Azure native, and Azure AD Pulumi providers to create a GitHub repository and configure its pipeline to deploy to Azure using OpenID Connect.
 - **[Panel Discussion: "Infrastructure as Code — Can We Do Better?"](https://conference.pulumi.com/talks/infrastructure-as-code-can-we-do-better/)** featuring Joe Duffy (Pulumi), Brian Grant (Stealth), Elad Ben-Israel (Winglang), Adam Jacob (System Initiative), and Luke Hoban (Pulumi) will discuss the past, the present, and the future of Infrastructure as Code and the overall infrastructure technologies.
-
-{{< figure alt="Panelists of Infrastructure as Code - Can we do better?" src="./pulumiup_2024-infrastructure-as-code.png" caption="Panel: Infrastructure as Code - Can we do better?" width=100% >}}
 
 ## Workshops and Hands-On Learning
 
@@ -137,7 +137,7 @@ Want to get hands-on experience? Our live workshops are designed to deepen your 
 
 ## Amazing Partners and Sponsors
 
-Thank you to our amazing customers, sponsors and partners for supporting PulumiUP!
+Thank you to our amazing customers, sponsors, and partners for supporting PulumiUP!
 
 - **[AWS](https://aws.amazon.com/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP)** The world's most comprehensive and broadly adopted cloud, offering over 200 fully featured services from data centers globally.
 - **[Google Cloud](https://cloud.google.com/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP)** Google Cloud helps developers build quickly, securely, and cost effectively with the next generation of modern infrastructure designed to meet specific workload and industry needS.```
@@ -152,6 +152,7 @@ Thank you to our amazing customers, sponsors and partners for supporting PulumiU
 - **[Imagine Learning](https://imaginelearning.com/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP)** empowers educators to inspire breakthrough moments in every student’s unique learning journey with digital-first, K–12 education solutions.
 - **[Dagger](https://dagger.io/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP)** Powerful, programmable open source CI/CD engine that runs your pipelines in containers.
 - **[Oso](https://osohq.com/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP)** Authorization as a service.
+
 ## Build Your Schedule Now
 
 With so many compelling topics across AI/ML, Platform Engineering, DevOps, and Cloud and IaC, now is the time to [build your PulumiUP schedule](https://conference.pulumi.com/schedule/?utm_source=PulumiUP&utm_medium=web&utm_campaign=FY2025Q1_Event_PulumiUP). Select the sessions that match your goals and interests to maximize your experience. Plus, you'll receive a link to watch your chosen panel discussions and tech talks on-demand!
