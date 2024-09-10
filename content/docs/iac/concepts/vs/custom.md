@@ -5,12 +5,17 @@ title: Custom Solutions
 h1: Pulumi vs custom infra-as-code solutions
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  concepts:
-    parent: vs
-    weight: 10
+    iac:
+        name: Custom solutions
+        parent: iac-concepts-compare
+        weight: 9
+    concepts:
+        parent: vs
+        weight: 10
 aliases:
 - /docs/reference/vs/custom/
 - /docs/intro/vs/custom/
+- /docs/concepts/vs/custom/
 ---
 
 Many organizations start out by manually managing their infrastructure. This often begins by pointing and clicking in

@@ -5,12 +5,18 @@ title: Compare to...
 h1: Compare Pulumi to other solutions
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  concepts:
-    identifier: vs
-    weight: 16
+    iac:
+        name: Compare to...
+        parent: iac-concepts
+        weight: 18
+        identifier: iac-concepts-compare
+    concepts:
+        identifier: vs
+        weight: 16
 aliases:
 - /docs/reference/vs/
 - /docs/intro/vs/
+- /docs/concepts/vs/
 ---
 
 Pulumi is a cloud-native infrastructure as code project. It lets you provision and manage resources across many clouds---AWS, Azure, Google Cloud, Kubernetes, OpenStack---using your favorite language. It works great for a wide range of

@@ -5,9 +5,16 @@ title: Terraform vs. OpenTofu
 h1: Terraform vs. OpenTofu
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  concepts:
-    parent: vs-terraform
-    weight: 2
+    iac:
+        name: Terraform vs. OpenTofu
+        parent: iac-concepts-compare-terraform
+        weight: 2
+    concepts:
+        parent: vs-terraform
+        weight: 2
+aliases:
+    - /docs/intro/vs/terraform/opentofu/
+    - /docs/concepts/vs/terraform/opentofu/
 ---
 
 <style>

@@ -6,7 +6,7 @@ h1: Migrating from other solutions to Pulumi
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
-        name: Migrate from...
+        name: Migrating from...
         parent: iac-adopting
         weight: 1
         identifier: iac-adopting-migrate
@@ -16,8 +16,7 @@ menu:
         weight: 2
 aliases:
 - /docs/guides/adopting/
-- /docs/using-pulumi/adopting/
-
+- /docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/
 ---
 
 Learn how Pulumi compares to other solutions, how to migrate to Pulumi, use the converters to convert your code to Pulumi, and use import to import your resource to Pulumi.

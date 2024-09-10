@@ -5,13 +5,18 @@ title: Kubernetes YAML
 h1: Pulumi vs Kubernetes YAML, Helm Charts and DSLs
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  concepts:
-    parent: vs
-    weight: 8
+    iac:
+        name: Kubernetes YAML
+        parent: iac-concepts-compare
+        weight: 7
+    concepts:
+        parent: vs
+        weight: 8
 
 aliases:
 - /docs/reference/vs/k8s_yaml_dsls/
 - /docs/intro/vs/k8s_yaml_dsls/
+- /docs/concepts/vs/k8s-yaml-dsls/
 ---
 
 Kubernetes offers YAML configuration out of the box. This is great as an "assembly language" for configuring

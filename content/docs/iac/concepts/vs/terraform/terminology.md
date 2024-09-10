@@ -5,11 +5,16 @@ title: Pulumi equivalents
 h1: Pulumi terms & command equivalents
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  concepts:
-    parent: vs-terraform
-    weight: 1
+    iac:
+        name: Pulumi equivalents
+        parent: iac-concepts-compare-terraform
+        weight: 2
+    concepts:
+        parent: vs-terraform
+        weight: 1
 aliases:
 - /docs/intro/vs/terraform/terminology/
+- /docs/concepts/vs/terraform/terminology/
 ---
 
 <style>

@@ -5,12 +5,17 @@ title: Convert code
 h1: Convert code to Pulumi
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  usingpulumi:
-    identifier: converters
-    parent: adopting-pulumi
-    weight: 4
+    iac:
+        name: Conversion tools
+        parent: iac-adopting
+        weight: 3
+    usingpulumi:
+        identifier: converters
+        parent: adopting-pulumi
+        weight: 4
 aliases:
 - /docs/converters/
+- /docs/using-pulumi/adopting-pulumi/converters/
 ---
 
 The `pulumi convert` command allows you translate supported sources to the various [languages that Pulumi supports](/docs/languages-sdks/), such as TypeScript, JavaScript, Go, Python, C#, or Java.). Conversion sources are supported via a plugin model, and include other IaC tools like Terraform. Pulumi YAML programs can also be converted to any other supported Pulumi language.

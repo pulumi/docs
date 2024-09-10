@@ -5,13 +5,19 @@ title: Terraform
 h1: Terraform vs. Pulumi
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  concepts:
-    identifier: vs-terraform
-    parent: vs
-    weight: 1
+    iac:
+        name: Terraform
+        parent: iac-concepts-compare
+        weight: 1
+        identifier: iac-concepts-compare-terraform
+    concepts:
+        identifier: vs-terraform
+        parent: vs
+        weight: 1
 aliases:
 - /docs/reference/vs/terraform/
 - /docs/intro/vs/terraform/
+- /docs/concepts/vs/terraform/
 ---
 
 <style>

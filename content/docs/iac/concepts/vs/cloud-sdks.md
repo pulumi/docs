@@ -5,12 +5,17 @@ title: Cloud SDKs
 h1: Pulumi vs. AWS Boto and Cloud SDKs
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  concepts:
-    parent: vs
-    weight: 4
+    iac:
+        name: Cloud SDKs
+        parent: iac-concepts-compare
+        weight: 4
+    concepts:
+        parent: vs
+        weight: 4
 aliases:
 - /docs/reference/vs/cloud_sdks/
 - /docs/intro/vs/cloud_sdks/
+- /docs/concepts/vs/cloud-sdks/
 ---
 
 The cloud providers offer SDKs in multiple languages, including AWS Boto (Python), and many unnamed libraries for
