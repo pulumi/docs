@@ -2,11 +2,11 @@
 title_tag: "How to Author & Publish Pulumi Packages"
 meta_desc: "Learn how to create a Pulumi Package: create a Native Provider, author a Component, or bridge a Terraform provider into the Pulumi ecosystem."
 title: Author packages
-h1: Creating and publishing Pulumi packages
+h1: Authoring and publishing Pulumi packages
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
-        name: Creating packages
+        name: Authoring packages
         parent: iac-packages-automation-packages
         weight: 1
     usingpulumi:
@@ -19,7 +19,7 @@ aliases:
 - /docs/using-pulumi/pulumi-packages/how-to-author
 ---
 
-This how-to guide will take you step-by-step through the tasks required to author and publish a Pulumi Package. You can use this guide to create any [type of Pulumi Package](/docs/guides/pulumi-packages#types-of-pulumi-packages): a Native Provider, a provider bridged from an existing Terraform provider, or a Component. This guide assumes you're using GitHub to host your package's source code and GitHub Actions to publish various parts of your package.
+This guide will take you step-by-step through creating and publishing a Pulumi Package. You can use this guide to create any [type of Pulumi Package](/docs/guides/pulumi-packages#types-of-pulumi-packages): a Native Provider, a provider bridged from an existing Terraform provider, or a Component. This guide assumes you're using GitHub to host your package's source code and GitHub Actions to publish various parts of your package.
 
 {{% notes type="info" %}}
 If you are a cloud or SaaS provider interested in publishing a provider or component, please [contact us to start publishing to Pulumi Registry](/contact/?form=registry) to reach out partners team.
@@ -47,7 +47,7 @@ To get started, click the link for the boilerplate repository template that you 
   - **Python:** [`pulumi/pulumi-component-provider-py-boilerplate`](https://github.com/pulumi/pulumi-component-provider-py-boilerplate)
   - **TypeScript:** [`pulumi/pulumi-component-provider-ts-boilerplate`](https://github.com/pulumi/pulumi-component-provider-ts-boilerplate)
   - **C#:** a template repository is coming soon
-  
+
 {{% notes type="info" %}}
 If you are considering a bridged Terraform provider, take a look at [`terraform-provider`](/registry/packages/terraform-provider) first. [`terraform-provider`](/registry/packages/terraform-provider) provides a fast turn-key experience in exchange for less customization then [`pulumi/pulumi-tf-provider-boilerplate`](https://github.com/pulumi/pulumi-tf-provider-boilerplate).
 {{% /notes %}}

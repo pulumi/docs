@@ -1,7 +1,28 @@
-{{- $page := . }}
-{{- $menuID := "iac" }}
+{{- $page := .page }}
+{{- $menuID := .menu }}
 
-{{/*  {{ site.Menus }}  */}}
+{{/*
+    If a valid menu choice was passed in, use that. Otherwise,
+    try to derive one from the path. If that doesn't work, don't
+    show a menu.
+*/}}
+
+{{ $validMenus := slice "iac" "esc" "cloud" }}
+
+{{ if not (in $validMenus $menuID) }}
+    {{ $menuID = "" }}
+{{ end }}
+
+{{ if eq $menuID "" }}
+    {{ $segments := split $page.Path "/"}}
+
+    {{ if eq (index $segments 1) "docs" }}
+        {{ $section := index $segments 2 }}
+        {{ if in $validMenus $section }}
+            {{ $menuID = $section }}
+        {{ end }}
+    {{ end }}
+{{ end }}
 
 {{- with index site.Menus $menuID }}
     <nav class="text-sm mt-8">

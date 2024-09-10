@@ -9,7 +9,7 @@ menu:
     iac:
         name: Snyk container scanning
         parent: iac-packages-automation-policy
-        weight: 7
+        weight: 6
     usingpulumi:
         parent: crossguard
 aliases:

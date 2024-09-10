@@ -9,7 +9,7 @@ menu:
     iac:
         name: Compliance-ready policies
         parent: iac-packages-automation-policy
-        weight: 6
+        weight: 7
         identifier: iac-packages-automation-policy-compliance
     usingpulumi:
         parent: crossguard

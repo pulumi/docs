@@ -2,7 +2,7 @@
     <div class="md:flex">
         <div class="md:w-3/12">
             {{/*  {{ partial "docs/main-nav.html" . }}  */}}
-            {{ partial "docs/menu.html" . }}
+            {{ partial "docs/menu.html" (dict "page" .) }}
         </div>
 
         <div class="md:w-6/12">

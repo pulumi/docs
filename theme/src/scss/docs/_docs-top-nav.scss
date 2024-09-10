@@ -139,7 +139,19 @@ nav.actually-docs {
 }
 
 #docs-main-nav nav {
-    ul li ul li ul {
-        // @apply hidden;
+
+    // ul li ul li ul {
+    //     @apply hidden;
+    // }
+
+    > ul > li {
+
+        > a {
+            @apply hidden;
+        }
+
+        > ul {
+            @apply pl-0;
+        }
     }
 }

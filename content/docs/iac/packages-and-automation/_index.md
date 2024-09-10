@@ -6,7 +6,7 @@ h1: Using Pulumi
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
-        name: Packages and automation
+        name: Platform automation
         parent: home
         weight: 50
         identifier: iac-packages-automation
