@@ -7,51 +7,53 @@
     </div>
 {{ else }}
     <nav class="top-nav-bar transition-all">
-        <div class="top-nav-container lg:container lg:px-4 justify-end">
+        <div class="top-nav-container lg:container lg:px-4 flex-wrap justify-end">
             {{ partial "banner" . }}
-            <ul class="hidden w-full lg:flex justify-end items-center order-first lg:order-last">
-                <li class="github-widget mr-8">
-                    <a
-                        data-track="header-github-pulumi"
-                        class="github-button"
-                        href="https://github.com/pulumi/pulumi"
-                        data-size="small"
-                        data-show-count="true"
-                        aria-label="Star pulumi/pulumi on GitHub"
-                        >Star</a
-                    >
-                </li>
-                <li class="mr-8">
-                    <a data-track="header-slack" href="https://slack.pulumi.com/" target="_blank">
-                        <i class="fab fa-slack"></i>
-                        Slack
-                    </a>
-                </li>
-                <li class="mr-8">
-                    <a data-track="header-docs" href="/docs/">
-                        <i class="fas fa-book mr-0.5"></i>
-                        Docs
-                    </a>
-                </li>
-                <li class="mr-8">
-                    <a data-track="header-registry" href="/registry/">
-                        <i class="fas fa-archive mr-0.5"></i>
-                        Registry
-                    </a>
-                </li>
-                <li class="mr-8">
-                    <a data-track="header-ai" href="/ai">
-                        <i class="fas fa-robot mr-0.5"></i>
-                        Pulumi AI
-                    </a>
-                </li>
-                <li>
-                    <a data-track="header-console" href="https://app.pulumi.com/" target="_blank">
-                        <i class="fas fa-user-circle"></i>
-                        {{ partial "top-nav-user-toggle" }}
-                    </a>
-                </li>
-            </ul>
+            <div class="w-full p-4">
+                <ul class="hidden w-full lg:flex justify-end items-center order-first lg:order-last">
+                    <li class="github-widget mr-8">
+                        <a
+                            data-track="header-github-pulumi"
+                            class="github-button"
+                            href="https://github.com/pulumi/pulumi"
+                            data-size="small"
+                            data-show-count="true"
+                            aria-label="Star pulumi/pulumi on GitHub"
+                            >Star</a
+                        >
+                    </li>
+                    <li class="mr-8">
+                        <a data-track="header-slack" href="https://slack.pulumi.com/" target="_blank">
+                            <i class="fab fa-slack"></i>
+                            Slack
+                        </a>
+                    </li>
+                    <li class="mr-8">
+                        <a data-track="header-docs" href="/docs/">
+                            <i class="fas fa-book mr-0.5"></i>
+                            Docs
+                        </a>
+                    </li>
+                    <li class="mr-8">
+                        <a data-track="header-registry" href="/registry/">
+                            <i class="fas fa-archive mr-0.5"></i>
+                            Registry
+                        </a>
+                    </li>
+                    <li class="mr-8">
+                        <a data-track="header-ai" href="/ai">
+                            <i class="fas fa-robot mr-0.5"></i>
+                            Pulumi AI
+                        </a>
+                    </li>
+                    <li>
+                        <a data-track="header-console" href="https://app.pulumi.com/" target="_blank">
+                            <i class="fas fa-user-circle"></i>
+                            {{ partial "top-nav-user-toggle" }}
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
 
