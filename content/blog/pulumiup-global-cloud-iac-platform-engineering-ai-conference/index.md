@@ -132,6 +132,7 @@ Want to get hands-on experience? Our live workshops are designed to deepen your 
 
 - **"[Managing Team Secrets with 1Password & Pulumi ESC](https://www.pulumi.com/resources/managing-team-secrets-with-1password-pulumi-esc/)"** on September 25, led by Phil Johnston (1Password) and Diana Esteves (Pulumi).
 - **"[Securing IaC Pipelines in Regulated Industries](https://www.pulumi.com/resources/securing-iac-pipelines-in-regulated-industries/)"** on September 26, led by Josh Kodroff (Pulumi) and Marina Novikova (AWS).
+- **"[Deploy Tailscale infrastructure in AWS with Pulumi](https://www.pulumi.com/resources/deploy-tailscale-infrastructure-with-pulumi/)"** on October 15, led by Diana Esteves (Pulumi) and Lee Briggs (Tailscale).
 - **"[Observability as Code for AI Apps with New Relic and Pulumi](https://www.pulumi.com/resources/observability-as-code-for-ai-apps-new-relic/)"** on October 30, led by Diana Esteves (Pulumi) and Harry Kimpel (New Relic).
 
 ## Amazing Partners and Sponsors
