@@ -6,9 +6,10 @@ h1: Pulumi CLI & Pulumi Cloud FAQ
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
-        name: IaC FAQ
+        name: FAQ
         parent: iac-support
         weight: 1
+        identifier: iac-support-faq
     support:
         weight: 2
         identifier: all-faqs
