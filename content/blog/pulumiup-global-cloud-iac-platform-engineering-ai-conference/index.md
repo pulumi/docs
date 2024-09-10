@@ -141,7 +141,7 @@ Thank you to our amazing partners for supporting PulumiUP!
 
 - **[AWS](https://aws.amazon.com/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP)** yadda yadda?
 - **[Google Cloud](https://cloud.google.com/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP)** Google Cloud helps developers build quickly, securely, and cost effectively with the next generation of modern infrastructure designed to meet specific workload and industry needS.```
-- **[New Relic](https://developer.newrelic.com/pulumi/get-started-pulumi/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP)** yadda yadda?
+- **[New Relic](https://developer.newrelic.com/pulumi/get-started-pulumi/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP)** Data for engineers to monitor, debug, and improve their entire stack.
 - **[Docker](https://docker.com/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP)** Accelerate how you build, share, and run applications.
 - **[1Password](https://1password.com/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP)** 1Password streamlines how you manage SSH keys, API tokens, and other infrastructure secrets throughout the entire software development life cycle.
 - **[Tailscale](https://tailscale.com/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP)** Tailscale makes creating software-defined networks easy: securely connecting users, services, and devices.
