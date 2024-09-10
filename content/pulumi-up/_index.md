@@ -325,6 +325,11 @@ workshops:
     meta_desc: Learn how to use AWS to generate secure infrastructure code for deploying an AI Chatbot app with Pulumi, leveraging New Relic's LLM dashboards.  
     datetime: 2024-10-30T09:00:00-07:00
     link: /resources/observability-as-code-for-ai-apps-new-relic/
+  - title: Deploy Tailscale infrastructure in AWS with Pulumi
+    meta_desc: Join this webinar to explore how to quickly create AWS infrastructure using Pulumi and Tailscale, showcasing advanced features in Kubernetes and AWS environments  
+    datetime: 2024-10-15T09:00:00-07:00
+    link: /resources/deploy-tailscale-infrastructure-with-pulumi/
+  
 
 registration:
     items:
@@ -353,10 +358,16 @@ customer_logos:
       - logo: new-relic.png
         link: https://developer.newrelic.com/pulumi/get-started-pulumi/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
     - logos:
-      - logo: equinix.png
-        link: https://www.equinix.com/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
-      - logo: circleci.png
-        link: https://circleci.com/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
-      - logo: nginx.png
-        link: https://www.nginx.com/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
+      - logo: wiz.png
+        link: https://www.wiz.io/?utm_source=Pulumi&utm_medium=Website&utm_campaign=PulumiUP
+      - logo: docker.png
+        link: https://docker.com/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
+      - logo: honeycomb-logo.svg
+        link: https://www.honeycomb.io/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
+      - logo: oso.jpeg
+        link: https://www.osohq.com/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
+      - logo: mysten-labs.png
+        link: https://www.mystenlabs.com/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
+      - logo: imagine-learning.png
+        link: https://www.imaginelearning.com/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
 ---
