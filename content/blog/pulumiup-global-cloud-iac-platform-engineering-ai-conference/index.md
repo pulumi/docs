@@ -63,7 +63,7 @@ social:
 # for details, and please remove these comments before submitting for review.
 ---
 
-PulumiUP 2024 is just around the corner! It will be held on September 18th, starting at 8 AM PT | 15:00 UTC, and with over 5,000 engineers from all over the world already registered, this is shaping up to be the must-attend event for cloud professionals, platform engineers, and AI/ML enthusiasts alike. From entry-level engineers to tech executives, this event brings together professionals from companies of all sizes to explore the latest innovations and best practices.
+PulumiUP 2024 is just around the corner! It will be held on September 18th, starting at 8 AM PT | 15:00 UTC +0, and with over 5,000 engineers from all over the world already registered, this is shaping up to be the must-attend event for cloud professionals, platform engineers, and AI/ML enthusiasts alike. From entry-level engineers to tech executives, this event brings together professionals from companies of all sizes to explore the latest innovations and best practices.
 
 If you haven’t registered yet, now’s the time! Start building your schedule today, and join us for insightful sessions across our topic tracks: **Cloud and IaC**, **Platform Engineering & DevOps**, and **AI/ML**.
 
@@ -71,13 +71,13 @@ If you haven’t registered yet, now’s the time! Start building your schedule 
 
 ## PulumiUP at Glance
 
-- Main Track: Keynote, Cloud Culture Talks, and More
-- AI/ML Track Highlights
-- Platform Engineering & DevOps Track Highlights
-- Cloud and IaC Track Highlights
-- Workshops and Hands-On Learning
-- Amazing Partners and Sponsors
-- Build Your Schedule Now
+- [Main Track: Keynote, Cloud Culture Talks, and More](/blog/pulumiup-global-cloud-iac-platform-engineering-ai-conference/#main-track-keynote-cloud-culture-talks-and-more)
+- [AI/ML Track Highlights](/blog/pulumiup-global-cloud-iac-platform-engineering-ai-conference/#aiml-track-highlights)
+- [Platform Engineering and DevOps Track Highlights](/blog/pulumiup-global-cloud-iac-platform-engineering-ai-conference/#platform-engineering-and-devops-track-highlights)
+- [Cloud and IaC Track Highlights](/blog/pulumiup-global-cloud-iac-platform-engineering-ai-conference/#cloud-and-iac-track-highlights)
+- [Workshops and Hands-On Learning](/blog/pulumiup-global-cloud-iac-platform-engineering-ai-conference/#workshops-and-hands-on-learning)
+- [Amazing Partners and Sponsors](/blog/pulumiup-global-cloud-iac-platform-engineering-ai-conference/#amazing-partners-and-sponsors)
+- [Build Your Schedule Now](/blog/pulumiup-global-cloud-iac-platform-engineering-ai-conference/#build-your-schedule-now)
 
 ## Main Track: Keynote, Cloud Culture Talks, and More
 
@@ -97,7 +97,7 @@ AI is transforming how we approach development and infrastructure, and PulumiUP 
 - **"[The AI Governance Challenge](https://conference.pulumi.com/talks/the-ai-governance-challenge/)"** by Patty O'Callaghan (Technical Director, Charles River) will explore the complexities of AI governance and how to navigate them.
 - **[Panel Discussion: "AI for Cloud Development"](https://conference.pulumi.com/talks/panel-ai-cloud-development/)** featuring industry leaders like Meagan Cojocar (Pulumi), Luke Hoban (Pulumi), Phillip Carter (Honeycomb), Giri Sreenivas (Docker), and Clare Liguori (AWS) will provide diverse perspectives on how AI is shaping cloud infrastructure.
 
-## Platform Engineering & DevOps Track Highlights
+## Platform Engineering and DevOps Track Highlights
 
 The Platform Engineering & DevOps track at PulumiUP is perfect for anyone looking to automate infrastructure, secure their systems, and scale their environments with ease. This track features talks and panels on cutting-edge technologies and practices.
 
