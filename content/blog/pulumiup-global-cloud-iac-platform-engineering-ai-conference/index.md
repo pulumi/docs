@@ -89,7 +89,7 @@ In the Main Track, you’ll hear directly from the Pulumi leadership team about 
 
 ## AI/ML Track Highlights
 
-{{< figure alt="Panelists of AI for Cloud Development" src="./pulumiup_2024-ai-cloud-development.png" caption="Panel: AI for Cloud Development" width=100% >}}
+[{{< figure alt="Panelists of AI for Cloud Development" src="./pulumiup_2024-ai-cloud-development.png" caption="Panel: AI for Cloud Development" width=100% >}}](https://conference.pulumi.com/talks/panel-ai-cloud-development/)
 
 AI is transforming how we approach development and infrastructure, and PulumiUP offers an incredible lineup of talks and panels on the topic.
 
@@ -140,7 +140,7 @@ Want to get hands-on experience? Our live workshops are designed to deepen your 
 Thank you to our amazing customers, sponsors, and partners for supporting PulumiUP!
 
 - **[AWS](https://aws.amazon.com/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP)** The world's most comprehensive and broadly adopted cloud, offering over 200 fully featured services from data centers globally.
-- **[Google Cloud](https://cloud.google.com/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP)** Google Cloud helps developers build quickly, securely, and cost effectively with the next generation of modern infrastructure designed to meet specific workload and industry needS.```
+- **[Google Cloud](https://cloud.google.com/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP)** Google Cloud helps developers build quickly, securely, and cost effectively with the next generation of modern infrastructure designed to meet specific workload and industry needs.
 - **[New Relic](https://developer.newrelic.com/pulumi/get-started-pulumi/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP)** Data for engineers to monitor, debug, and improve their entire stack.
 - **[Docker](https://docker.com/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP)** Accelerate how you build, share, and run applications.
 - **[1Password](https://1password.com/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP)** 1Password streamlines how you manage SSH keys, API tokens, and other infrastructure secrets throughout the entire software development life cycle.
