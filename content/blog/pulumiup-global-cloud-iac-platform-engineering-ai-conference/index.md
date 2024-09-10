@@ -137,7 +137,7 @@ Want to get hands-on experience? Our live workshops are designed to deepen your 
 
 ## Amazing Partners and Sponsors
 
-Thank you to our amazing partners for supporting PulumiUP!
+Thank you to our amazing customers, sponsors and partners for supporting PulumiUP!
 
 - **[AWS](https://aws.amazon.com/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP)** yadda yadda?
 - **[Google Cloud](https://cloud.google.com/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP)** Google Cloud helps developers build quickly, securely, and cost effectively with the next generation of modern infrastructure designed to meet specific workload and industry needS.```
