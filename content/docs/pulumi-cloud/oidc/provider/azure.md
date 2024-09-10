@@ -76,9 +76,9 @@ Because Azure's federated credentials require that the subject identifier exactl
 
 #### Pulumi ESC
 
-The below is an example of a valid subject claim for the `development` environment of the `contoso` organization:
+The below is an example of a valid subject claim for the `project/development` environment of the `contoso` organization:
 
-* `pulumi:environments:org:contoso:env:development`
+* `pulumi:environments:org:contoso:env:project/development`
 
 {{< notes type="warning" >}}
 
@@ -110,7 +110,7 @@ values:
           - pulumi.user.login
 ```
 
-The subject will be `pulumi:environments:pulumi.organization.login:contoso:currentEnvironment.name:development:pulumi.user.login:userLogin`. Note how the keys and values are appended along with the prefix.
+The subject will be `pulumi:environments:pulumi.organization.login:contoso:currentEnvironment.name:project/development:pulumi.user.login:userLogin`. Note how the keys and values are appended along with the prefix.
 
 ## Create a Service Principal
 
@@ -150,8 +150,8 @@ To configure OIDC for Pulumi ESC, create a new environment in the [Pulumi Consol
 
 1. Click the **Environments** link.
 2. Click the **Create environment** button.
-3. Provide a name for your environment.
-    * This should be the same as the name provided in the subject claim of your federated credentials.
+3. Provide a project to create your new environment in and a name for your environment.
+    * This should be the same as the identifier provided in the subject claim of your federated credentials.
 4. Click the  **Create environment** button.
   {{< video title="Creating a new Pulumi ESC environment" src="https://www.pulumi.com/uploads/create-new-environment.mp4" autoplay="true" loop="true" >}}
 5. You will be presented with a split-pane editor view. Delete the default placeholder content in the editor and replace it with the following code:
@@ -178,10 +178,10 @@ To configure OIDC for Pulumi ESC, create a new environment in the [Pulumi Consol
 
 You can validate that your configuration is working by running either of the following:
 
-* `esc open <your-org>/<your-environment>` command of the [ESC CLI](/docs/esc-cli/)
-* `pulumi env open <your-org>/<your-environment>` command of the [Pulumi CLI](/docs/install/)
+* `esc open <your-org>/<your-project>/<your-environment>` command of the [ESC CLI](/docs/esc-cli/)
+* `pulumi env open <your-org>/<your-project>/<your-environment>` command of the [Pulumi CLI](/docs/install/)
 
-Make sure to replace `<your-org>` and `<your-environment>` with the values of your Pulumi organization and environment file respectively. You should see output similar to the following:
+Make sure to replace `<your-org>`, `<your-project>`, and `<your-environment>` with the values of your Pulumi organization, project, and environment file respectively. You should see output similar to the following:
 
 ```bash
 {
