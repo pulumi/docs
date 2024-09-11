@@ -8,9 +8,15 @@ meta_image: "/images/product/esc-how-it-works-diagram.png"
 aliases:
     - /esc
 
+subtitle: Centralized secrets management & orchestration. Easily access, share, and manage secrets securely on any cloud, using your favorite programming languages.
+
 overview:
-    header: Centralized environments, secrets, and configuration management for cloud applications and infrastructure
-    description: Today’s cloud environments access a multitude of configurations – including network settings, deployment options, API Keys, and other important secrets like database credentials –  from many different types of cloud infrastructure and SaaS services. Every team stores configuration settings like these in different locations, from secrets managers to plaintext files. This sprawl results in uncontrolled and untraceable configurations, causing operational bottlenecks, outages due to human error, and security breaches. Pulumi ESC enables you to centrally manage all configuration and secrets across your organization.
+    header: Centralized environments, secrets, and configuration management and orchestration that helps streamline operations, improve traceability, and ensure consistent security practices
+    body: |
+      - **Stop secret sprawl.** Pull and sync configuration and secrets with any secrets store – including HashiCorp Vault, AWS Secrets Manager, Azure Key Vault, GCP Secret Manager, 1Password, and more – and consume in any application, tool, or CI/CD platform.  
+      - **Trust (and prove) your secrets are secure.** Every environment can be locked down with role-based access controls (RBAC) and versioned with all changes fully logged for auditing.  
+      - **Ditch `.env` files.** No more storing secrets in plaintext on dev computers. Developers can easily access secrets via CLI, API, Kubernetes operator, the Pulumi Cloud UI, and in-code with Typescript/Javascript, Python, and Go SDKs.
+      - **Use with or without Pulumi IaC.** Use Pulumi ESC to centrally manage your configuration and secrets independently of Pulumi IaC, or use ESC and IaC together for the convenience of storing secrets in config with a higher degree of security than using plaintext.
 
 benefits:
     title: Benefits of Pulumi ESC
@@ -57,9 +63,22 @@ diagram:
 screenshot:
     items:
         - title: Composable
-          description: Environments contain collections of secrets and configuration. Compose environments together from multiple other environments to allow easy inheritance of shared configuration, eliminating “copy and paste errors”.
+          description: Secrets and configurations are organized into logical groupings called environments. Environments support importing one into another, allowing for easy composability and inheritance of shared secrets and configuration.
         - title: Traceable
-          description: Never lose track of where configurations are being used and where. Trace the downstream impact of any configuration to see if the impact matches your expectations. 
+          description: Never lose track of where configurations are being used. Trace the downstream impact of any secrets or configuration changes to see if they match expectations. 
         - title: Versionable
           description: Create different versions of environments, so you can gracefully migrate between breaking configuration changes.
+
+customer_quotes:
+  tetrate:
+    text: |
+      “With Pulumi ESC, our developers get dynamic AWS and Azure credentials on-demand. Onboarding new developers is quick and secure, with no more manually filling in .env templates.”
+    author: Liam White, Platform Lead
+    logo: tetrate
+  mysten:
+    text: |
+      “Pulumi ESC has been a lifesaver for us. It’s nice to throw everything behind an ESC environment and eliminate one-off granting IAM permissions and other issues related to static credentials.”
+    author: JK Jensen, Software Engineering Team Lead
+    logo: mysten-labs
+
 ---

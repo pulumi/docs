@@ -4,15 +4,24 @@
 
 {{ define "main" }}
     {{ $pageContext := . }}
-    <section id="overview" class="container mx-auto my-16 flex flex-col">
-        <h3 class="hidden lg:block xl:hidden text-center mb-8">{{ .Params.overview.header }}</h3>
+
+    <section id="overview" class="my-8 relative">
+        <div class="container mx-auto">
+            <p class="mx-auto text-center text-gray-600 w-6/12">
+                {{ .Params.subtitle | markdownify }}
+            </p>
+        </div>
+        <div class="container mx-auto text-center pt-8 w-9/12">
+            <a href="https://app.pulumi.com/" class="btn-primary">Get Started with Pulumi ESC</a>
+        </div>
+    </section>
+
+    <section id="description" class="container mx-auto my-16 flex flex-col">
+        <h4 class="hidden lg:block xl:hidden text-center mb-8">{{ .Params.overview.header }}</h4>
         <div class="flex flex-col lg:flex-row px-8">
             <div class="w-full lg:w-1/2 lg:pr-8 order-last lg:order-first">
-                <h3 class="block lg:hidden xl:block">{{ .Params.overview.header }}</h3>
-                <p>{{ .Params.overview.description }}</p>
-                <div class="my-8">
-                    <a class="btn-primary" href="/docs/pulumi-cloud/esc/get-started/">Get Started</a>
-                </div>
+                <h4 class="block lg:hidden xl:block">{{ .Params.overview.header }}</h4>
+                <p>{{ .Params.overview.body | markdownify }}</p>
             </div>
             <div class="w-full lg:w-1/2 mb-8 lg:mb-0">
                 <div class="rounded-xl shadow-2xl relative h-0 overflow-hidden" style="padding-bottom: 50.25%;">
@@ -26,6 +35,11 @@
                 </div>
             </div>
         </div>
+    </section>
+
+    <!-- Tetrate quote -->
+    <section class="w-full md:w-2/3 lg:w-1/2 mx-auto mt-16 px-6">
+        {{ partial "home/quote.html" (dict "quote" .Params.customer_quotes.tetrate) }}
     </section>
 
     <section id="screenshot" class="container mx-auto my-16">
@@ -49,6 +63,11 @@
                 {{ end }}
             </div>
         </div>
+    </section>
+
+    <!-- Tetrate quote -->
+    <section class="w-full md:w-2/3 lg:w-1/2 mx-auto mt-16 px-6">
+        {{ partial "home/quote.html" (dict "quote" .Params.customer_quotes.mysten) }}
     </section>
 
     <section id="integration-access" class="container mx-auto my-16">
