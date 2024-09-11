@@ -169,7 +169,7 @@ $ pulumi up -y
  +   pulumi:pulumi:Stack  python-dev  created (0.54s)
 
 Outputs:
-    ProjectName: "development"
+    myEnvironment: "development"
     Password   : [secret]
 
 Resources:
