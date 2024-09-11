@@ -42,7 +42,7 @@ esc env init [<org-name>/]<project-name>/<environment-name>
 ```
 
 Note that environment names must be unique within a project and may only contain alphanumeric characters, hyphens, underscores, and periods. If you specify
-an existing project the new environment will be created within that, otherwise a new project will be created.
+an existing project the new environment will be created within it, otherwise a new project will be created.
 
 ```bash
 $ esc env init my-project/dev-environment
