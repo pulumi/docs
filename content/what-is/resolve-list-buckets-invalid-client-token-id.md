@@ -81,10 +81,10 @@ values:
 
 ### Step 5: Run the aws CLI command
 
-With your environment set up, you can validate your configuration and verify that the error has been resolved by running the `aws s3 ls` command using `esc run` as shown below, making sure to replace `<your-pulumi-org-name>` and `<your-environment-name>` with the names of your own Pulumi organization and environment respectively:
+With your environment set up, you can validate your configuration and verify that the error has been resolved by running the `aws s3 ls` command using `esc run` as shown below, making sure to replace `<your-pulumi-org-name>`, `<your-project-name>`, and `<your-environment-name>` with the names of your own Pulumi organization and environment respectively:
 
 ```bash
-esc run <your-pulumi-org-name>/<your-environment-name> -i aws s3 ls --query "Buckets[].Name"
+esc run <your-pulumi-org-name>/<your-project-name>/<your-environment-name> -i aws s3 ls --query "Buckets[].Name"
 ```
 
 ## Conclusion
