@@ -19,7 +19,7 @@ Pulumi ESC enables teams to aggregate secrets and configuration from many source
 
 Pulumi ESC is offered as a fully managed cloud service in [Pulumi Cloud](/docs/pulumi-cloud/) (and Pulumi Cloud Self-hosted in the near future). The [pulumi/esc project](https://github.com/pulumi/esc) is open source, and contains the evaluation engine for environments, the esc CLI, and in the future, the extensible plugins for source and target integrations.
 
-![Pulumi ESC ecosystem](img/pulumi_esc.png)
+![Pulumi ESC ecosystem](assets/pulumi_esc.png)
 
 The following details corresponds to the numbered sections in the above diagram:
 
