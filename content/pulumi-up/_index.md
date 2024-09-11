@@ -357,6 +357,8 @@ customer_logos:
         link: https://www.pinecone.io/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
       - logo: new-relic.png
         link: https://developer.newrelic.com/pulumi/get-started-pulumi/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
+      - logo: tailscale.svg
+        link: https://tailscale.com/pulumi/get-started-pulumi/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
     - logos:
       - logo: wiz.png
         link: https://www.wiz.io/?utm_source=Pulumi&utm_medium=Website&utm_campaign=PulumiUP
