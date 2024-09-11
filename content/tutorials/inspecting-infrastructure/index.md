@@ -90,7 +90,7 @@ Run the `pulumi stack graph <filename>` command as shown below, making sure to r
 
 {{< notes type="info" >}}
 
-The output of the file will be in Graphviz DOT format. You can use an online viewer such as [GraphvizOnline](https://dreampuf.github.io/GraphvizOnline) to view a visual representation of the graph.
+The output of the file will be in [Graphviz DOT format](https://graphviz.org/doc/info/lang.html). You can use an online viewer such as [GraphvizOnline](https://dreampuf.github.io/GraphvizOnline) to view a visual representation of the graph.
 
 {{< /notes >}}
 
