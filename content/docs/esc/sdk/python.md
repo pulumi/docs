@@ -50,10 +50,11 @@ orgName = os.getenv("PULUMI_ORG")
 configuration = esc.Configuration(access_token=accessToken)
 client = esc.EscClient(configuration)
 
+projName = "examples"
 envName = "sdk-python-example"
 
 # Create environment
-client.create_environment(orgName, envName)
+client.create_environment(orgName, projName, envName)
 
 # create a new EnvironmentDefinition with "my_secret" as a secret in values additional_properties
 envDef = esc.EnvironmentDefinition(
@@ -68,11 +69,11 @@ envDef = esc.EnvironmentDefinition(
 )
 
 # Update environment
-client.update_environment(orgName, envName, envDef)
+client.update_environment(orgName, projName, envName, envDef)
 
 # Open and read the environment
 
-env, values, yaml = client.open_and_read_environment(orgName, envName)
+env, values, yaml = client.open_and_read_environment(orgName, projName, envName)
 
 secret = values["my_secret"]
 print(f'Secret: {secret}\n')
@@ -82,7 +83,7 @@ print(f'Secret: {secret}\n')
 environments = client.list_environments(orgName)
 
 for env in environments.environments:
-    print(f'Environment: {env.name}')
+    print(f'Environment: {env.project}/{env.name}')
 
 ```
 
@@ -108,22 +109,23 @@ orgName = os.getenv("PULUMI_ORG")
 configuration = esc.Configuration(access_token=accessToken)
 client = esc.EscClient(configuration)
 
+projName = "examples"
 envName = "sdk-python-example"
 
 # list environment revisions
 
-revisions = client.list_environment_revisions(orgName, envName)
+revisions = client.list_environment_revisions(orgName, projName, envName)
 
 # get second latest revision
 second_latest_revision = revisions[1]
 
 # create a new environment revision tag
-client.create_environment_revision_tag(orgName, envName, "stable", second_latest_revision.number)
+client.create_environment_revision_tag(orgName, projName, envName, "stable", second_latest_revision.number)
 
 print(f'Tagged revision {second_latest_revision.number} as stable')
 
 # list environment revision tags
-tags = client.list_environment_revision_tags(orgName, envName)
+tags = client.list_environment_revision_tags(orgName, projName, envName)
 
 for tag in tags.tags:
     print(f'Tag {tag.name} at revision {tag.revision}')

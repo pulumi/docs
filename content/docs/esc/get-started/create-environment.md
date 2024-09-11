@@ -14,6 +14,7 @@ menu:
 ## Overview
 
 In Pulumi ESC, an environment is a collection of configuration intended to capture the configuration values needed to work with a particular environment.
+Environments belong to a Project, which is a collection of related environments.
 
 An environment can be created one of two ways:
 
@@ -28,22 +29,23 @@ This tutorial will walk you through how to create a new environment.
 
 To create an environment via the console, navigate to [Pulumi Cloud](https://app.pulumi.com) and select the **Environments** link in the left-hand menu.
 
-You will be directed to the Environments landing page. To create a new environment, click the **Create Environment** button. Enter a name for your environment (e.g., `my-dev-environment` for a development environment) and then click **Create Environment**. You will then be directed to the environment definition page.
+You will be directed to the Environments landing page. To create a new environment, click the **Create Environment** button. Enter a name for the project your environment should belong in (e.g. `my-project`) and a name for your environment (e.g., `dev-environment` for a development environment) and then click **Create Environment**. You will then be directed to the environment definition page.
 
-{{< video title="Creating a new environment in the Pulumi ESC console" src="https://www.pulumi.com/uploads/esc-create-new-env.mp4" autoplay="true" loop="true" >}}
+{{< video title="Creating a new environment in the Pulumi ESC console" src="../assets/esc-create-new-env.mp4" autoplay="true" loop="true" >}}
 
 ### Create via the CLI
 
 To create an environment via the CLI, use the `esc env init` command as shown below, where `<org-name>` is optional and defaults to your Pulumi Cloud username.
 
 ```bash
-esc env init [<org-name>/]<environment-name>
+esc env init [<org-name>/]<project-name>/<environment-name>
 ```
 
-Note that environment names must be unique within an organization and may only contain alphanumeric characters, hyphens, underscores, and periods.
+Note that environment names must be unique within a project and may only contain alphanumeric characters, hyphens, underscores, and periods. If you specify
+an existing project the new environment will be created within it, otherwise a new project will be created.
 
 ```bash
-$ esc env init my-dev-environment
+$ esc env init my-project/dev-environment
 Environment created.
 ```
 
@@ -51,7 +53,7 @@ You can validate that your environment was created by running the `esc env ls` c
 
 ```bash
 $ esc env ls
-myorg/test
+myorg/my-project/dev-environment
 ```
 
 In the next section, you will learn how to store configuration values and secrets in your environment.
