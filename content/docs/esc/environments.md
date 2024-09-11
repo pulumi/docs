@@ -762,7 +762,7 @@ Environment "myorg/test" has been removed!
 
 ## Cloning an environment
 
-Environments cannot be renamed, however, they can be cloned into a new project/environment. This is intentional as it allows for the ability to "rename" an environment by cloning the source into a new destination project/environment and updating all the references to the source environment without breaking any references. Once all references have been updated the old environment can be deleted.
+Environments cannot be renamed, however, they can be cloned into a new project/environment. This is intentional as it allows for the ability to "rename" an environment by cloning the source into a new destination project/environment and updating all the references to the source environment without breaking any references. Once all references have been updated, the old environment can be deleted.
 
 Cloning an environment takes various options that allow for configuring what is included from the source environment when creating the new environment. These options are:
 
@@ -773,7 +773,7 @@ Cloning an environment takes various options that allow for configuring what is 
 | Preserve Revision Tags    | Preserve all revision tags on the versions being cloned                    |
 | Preserve Team Access      | Preserve any team access that he source environment had                    |
 
-An example clone command might look like
+An example clone command might look like:
 
 ```bash
 $ esc env clone default/dev my-app/dev --preserve-history --preserve-env-tags --preserve-rev-tags --preserve-access
