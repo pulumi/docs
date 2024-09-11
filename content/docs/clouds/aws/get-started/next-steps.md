@@ -19,9 +19,7 @@ Congrats! You've deployed your first project on AWS with Pulumi. Here are some n
 
 ## Try Pulumi ESC (Environments, Secrets, and Configuration)
 
-In this guide, you used [stack configuration](/docs/concepts/config/) and environment variables to configure a single project and stack. Did you know you can also configure multiple Pulumi projects, and even other applications, with [Pulumi ESC](/docs/esc/)?
-
-Pulumi ESC introduces the concept of _environments_ --- managed collections of static and dynamic settings that you can use to configure any project, stack, application, or service, including with short-lived cloud credentials through OpenID Connect.
+[Pulumi ESC](/docs/esc/) is a centralized secrets management and orchestration service. It introduces the concepts of _environments_ --- managed collections of static and dynamic settings that you can use to configure any project, stack, application, or service, including with short-lived cloud credentials through OpenID Connect.
 
 With Pulumi ESC you can:
 
