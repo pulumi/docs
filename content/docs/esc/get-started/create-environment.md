@@ -31,7 +31,7 @@ To create an environment via the console, navigate to [Pulumi Cloud](https://app
 
 You will be directed to the Environments landing page. To create a new environment, click the **Create Environment** button. Enter a name for the project your environment should belong in (e.g. `my-project`) and a name for your environment (e.g., `dev-environment` for a development environment) and then click **Create Environment**. You will then be directed to the environment definition page.
 
-{{< video title="Creating a new environment in the Pulumi ESC console" src="/docs/esc/get-started/assets/esc-create-new-env.mp4" autoplay="true" loop="true" >}}
+{{< video title="Creating a new environment in the Pulumi ESC console" src="/docs/esc/assets/esc-create-new-env.mp4" autoplay="true" loop="true" >}}
 
 ### Create via the CLI
 
