@@ -88,6 +88,12 @@ Run the `pulumi stack graph <filename>` command as shown below, making sure to r
 
 {{< video title="Running the pulumi stack graph command" src="https://www.pulumi.com/uploads/aws-cli-pulumi-stack-graph.mp4" autoplay="true" loop="true" >}}
 
+{{< notes type="info" >}}
+
+The output of the file will be in Graphviz DOT format. You can use an online viewer such as [GraphvizOnline](https://dreampuf.github.io/GraphvizOnline) to view a visual representation of the graph.
+
+{{< /notes >}}
+
 ### pulumi stack output
 
 The [pulumi stack output](/docs/cli/commands/pulumi_stack_output/) command is used to list all output names and values that are exported from a stack. This command helps to facilitate automation workflows and integration with other tools and scripts by providing easy access to important output values.
@@ -102,7 +108,7 @@ You can return the value of just a single output by adding the name of the desir
 
 ### pulumi stack export
 
-The [pulumi stack export](/docs/cli/commands/pulumi_stack_export/) command is used to export the current state of a stack to standard out. This state definition contains all the information about the resources, their states, and the configuration of the stack. The exported state can be used for things like backup, migration, or debugging purposes.
+The [pulumi stack export](/docs/cli/commands/pulumi_stack_export/) command is used to export the current state of a stack in JSON format to standard out. This state definition contains all the information about the resources, their states, and the configuration of the stack. The exported state can be used for things like backup, migration, or debugging purposes.
 
 Run the `pulumi stack export` command as shown below:
 
