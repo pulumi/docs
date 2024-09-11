@@ -90,7 +90,7 @@ tiers:
 customers:
     - stat: "**5x faster** time to market"
       logo: unity
-    - stat: "**>100% ROI** - eliminated custom state backend and saved time"
+    - stat: "**2x faster** setup for test environments with Pulumi Deployments"
       logo: starburst
     - stat: "**10x faster deployments**, from weeks to hours"
       logo: snowflake
