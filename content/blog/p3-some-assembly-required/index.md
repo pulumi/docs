@@ -1,7 +1,7 @@
 ---
 title: "Pulumi Patterns and Practices Platform (P3): Some Assembly Required"
 allow_long_title: true
-date: 2024-09-05
+date: 2024-09-11
 draft: false
 social_media: "TBD"
 meta_desc: "Assembly instructions for building the Pulumi Patterns and Practices Platform (P3) reference architecture of a Pulumi-based internal developer platform (IDP)."
@@ -18,11 +18,11 @@ tags:
     - devops
 ---
 
-Setting up an internal developer platform can be a daunting task. There are a lot of tools out there that do some of the work for you, but none of them do all of it. Pulumi P3 is no different. 
+Setting up an internal developer platform can be a daunting task. There are a lot of tools out there that do some of the work for you, but none of them do all of it. Pulumi P3 is no different. Pulumi Patterns & Practices Platform (P3) is a [reference architecture](https://www.pulumi.com/blog/pulumi-patterns-and-practices/) that we will be describing, and providing code for, through this series of articles.
 
 <!--more-->
 
-We will never try to sell you on the idea that you can simply download a package, click next a few times, and achieve transformative success. That’s because any effective system will require some customization and integration to work within your environment.
+We will never try to sell you on the idea that you can simply download a package, click next a few times, and achieve transformative success. That’s because any effective IDP will require some customization and integration to work within your environment.
 
 Tools that purport to have it all figured out have only figured out how to manipulate you into a false narrative they have constructed in a vacuum, where all your organizational needs fit neatly into a few boxes they’ve decided on for you. And also charge you for. In addition to everything else you’re being charged for. Ultimately you’ll still need to build a lot yourself and these products rarely give guidance on how to do that. 
 
@@ -40,9 +40,7 @@ Previously we identified the [essential qualities of an effective IDP](https://w
 * **Auditability**: [audit logging](https://www.pulumi.com/docs/pulumi-cloud/audit-logs/)
 * **Developer Experience**: [Python/Go/JavaScript/C#](https://www.pulumi.com/docs/languages-sdks/), [popular IDE support](https://www.pulumi.com/blog/next-level-iac-breakpoint-debugging/), [command-line tools](https://www.pulumi.com/docs/cli/), [deeply hackable](https://www.pulumi.com/automation/)
 
-That’s all great, and much of that is already built-into Pulumi without the need for you to do anything at all. But not all of it. What parts do you actually need to set up and configure? And exactly how do you do that? That’s what this and the following posts in the series will be all about. 
-
-So to answer the question of what parts do you need? Here’s the bill of materials (BOM) to set up your own instance of Pulumi P3:
+That’s all great, and much of that is already built-into Pulumi without the need for you to do anything at all. So, what parts do you actually need to set up and configure? Here’s the bill of materials (BOM) to set up your own instance of Pulumi P3:
 
 ### Bill of Materials:
 * **Authentication and Identity Management**:
@@ -61,7 +59,7 @@ Let’s go through each of those and briefly discuss what it looks like to set t
 
 ## Authentication and identity management
 
-We highly recommend using GitHub for code management. So much so that we have deeply integrated GitHub into Pulumi Cloud across a number of features. While we support alternatives, this will be the easiest and more feature-rich way to configure your platform.
+We highly recommend using GitHub for code management. So much so that we have deeply integrated GitHub into Pulumi Cloud across a number of features. While we support [alternatives such as GitLab](https://www.pulumi.com/docs/pulumi-cloud/organizations/#gitlab-identity-provider), this will be the easiest and more feature-rich way to configure your platform.
 
 In Pulumi Cloud, you have the ability to create organizations. A [Pulumi Cloud organization](https://www.pulumi.com/docs/pulumi-cloud/organizations/) can help you manage teams, roles, stacks, settings, and provide a dashboard across the entire organization. Pulumi Cloud also allows you to use a variety of identity providers to login, including GitHub.
 
@@ -133,6 +131,8 @@ environment:
 ```
 
 In this manner, you can configure separate environments for staging and production, with a complex set of configuration values and secrets, using different environments for each one. From the developer’s perspective they would only need to change `aws-staging` to `aws-production` when they go to deploy their stack.
+
+Another strong benefit of this approach is that all secrets will be encrypted both in-flight and at-rest. Pulumi waits until the last moment to decrypt secrets at runtime. By default, uses automatic, per-stack encryption keys provided by Pulumi Cloud, but you could use a [provider of your own choosing](http://www-testing-pulumi-docs-origin-pr-12530-f0b1e6aa.s3-website.us-west-2.amazonaws.com/docs/concepts/secrets/#configuring-secrets-encryption) instead.
 
 ## Pulumi Crossguard: Policy-as-Code
 
