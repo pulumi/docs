@@ -7,7 +7,7 @@ include_organization_schema: true
 hero:
   title: [ "Automate, Secure, and Manage", "Everything You Run in the Cloud" ]
   description: |
-    Modern Infrastructure as code and secrets management. <br /> Unite your development, infrastructure, and security teams.
+    Modern Infrastructure as code and secrets management <br /> Unite your development, infrastructure, and security teams
   cta_text: Get Started for Free
   cta_link: /docs/get-started/
   secondary_cta_text: Contact Sales
