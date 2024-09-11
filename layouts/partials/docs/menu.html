@@ -29,15 +29,19 @@ helpful to be able to set this somehow in the frontmatter?) */}}
 {{ end }}
 
 {{- with index site.Menus $menuID }}
-    <nav class="text-sm mt-8">
-        <ul class="list-none">
-            {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
-        </ul>
-    </nav>
+    <pulumi-docs-nav>
+        <nav class="text-sm mt-8">
+            <ul class="list-none">
+                {{- partial "inline/menu/walk.html" (dict "page" $page "rootMenuID" $menuID "menuEntries" .) }}
+            </ul>
+        </nav>
+    </pulumi-docs-nav>
 {{- end }}
 
 {{- define "partials/inline/menu/walk.html" }}
     {{- $page := .page }}
+    {{- $rootMenuID := (printf "%s-home" .rootMenuID) }}
+
     {{- range .menuEntries }}
         {{- $attrs := dict "href" .URL }}
         {{- if $page.IsMenuCurrent .Menu . }}
@@ -51,7 +55,8 @@ helpful to be able to set this somehow in the frontmatter?) */}}
                 {{- $name = . }}
             {{- end }}
         {{- end }}
-        <li>
+
+        <li {{ if (and .Children (ne .Identifier $rootMenuID)) }} class="collapsed"{{ end }}>
             <a class="text-blue-700"
                 {{- range $k, $v := $attrs }}
                     {{- with $v }}
