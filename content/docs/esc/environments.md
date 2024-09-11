@@ -767,4 +767,32 @@ Please confirm that this is what you'd like to do by typing `myorg/myproject/tes
 Environment "myorg/myproject/test" has been removed!
 ```
 
-Environments cannot be renamed.
+## Cloning an environment
+
+Environments cannot be renamed, however, they can be cloned into a new project/environment. This is intentional as it allows for the ability to "rename" an environment by cloning the source into a new destination project/environment and updating all the references to the source environment without breaking any references. Once all references have been updated, the old environment can be deleted.
+
+Cloning an environment takes various options that allow for configuring what is included from the source environment when creating the new environment. These options are:
+
+| Option                    | Description                                                                |
+|---------------------------|----------------------------------------------------------------------------|
+| Preserve History          | Preserve all prior versions of the environment up until the cloned version |
+| Preserve Environment Tags | Preserve all environment tags on the source environment                    |
+| Preserve Revision Tags    | Preserve all revision tags on the versions being cloned                    |
+| Preserve Team Access      | Preserve any team access that he source environment had                    |
+
+An example clone command might look like:
+
+```bash
+$ esc env clone default/dev my-app/dev --preserve-history --preserve-env-tags --preserve-rev-tags --preserve-access
+```
+
+## Tagging Environments
+
+Environments support the ability to add contextual information about them via Environment Tags. Tags are a collection of both user-defined and auto-generated key/value pairs that can be used to group and search for environments.
+
+```bash
+$ esc env tag myorg/myproject/test region us-east-1
+Name: region
+Value: us-east-1
+Last updated at 2024-09-11 01:45:10.738 -0700 PDT by Derek <dschaller>
+```
