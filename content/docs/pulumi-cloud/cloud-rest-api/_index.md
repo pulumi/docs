@@ -3313,7 +3313,7 @@ Status: 200 OK
 ### Create Environment
 
 ```
-POST /esc/environments/{organization}/
+POST /api/esc/environments/{organization}
 ```
 
 ### Body
@@ -3337,7 +3337,7 @@ curl \
   -H "Content-Type: application/json" \
   -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
   --request POST \
-  https://api.pulumi.com/esc/environments/{organization}/{environment}
+  https://api.pulumi.com/api/esc/environments/{organization}/{environment}
 ```
 
 #### Default response
@@ -3349,7 +3349,7 @@ Status: 200 OK
 ### Get Environment
 
 ```
-GET /esc/environments/{organization}/{project}/{environment}
+GET /api/esc/environments/{organization}/{project}/{environment}
 ```
 
 | Parameter           | Type   | In    | Description       |
@@ -3366,7 +3366,7 @@ curl \
   -H "Content-Type: application/json" \
   -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
   --request GET \
-  https://api.pulumi.com/esc/environments/{organization}/{project}/{environment}
+  https://api.pulumi.com/api/esc/environments/{organization}/{project}/{environment}
 ```
 
 #### Default response
@@ -3395,7 +3395,7 @@ Status: 200 OK
 ### Update Environment
 
 ```
-PATCH /esc/environments/{organization}/{project}/{environment}
+PATCH /api/esc/environments/{organization}/{project}/{environment}
 ```
 
 | Parameter           | Type   | In    | Description       |
@@ -3413,7 +3413,7 @@ curl \
   -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
   --request PATCH \
   --data '<yaml content>' \
-  https://api.pulumi.com/esc/environments/{organization}/{project}/{environment}
+  https://api.pulumi.com/api/esc/environments/{organization}/{project}/{environment}
 ```
 
 #### Default response
@@ -3425,7 +3425,7 @@ Status: 200 OK
 ### Delete Environment
 
 ```
-DELETE /esc/environments/{organization}/{project}/{environment}
+DELETE /api/esc/environments/{organization}/{project}/{environment}
 ```
 
 | Parameter           | Type   | In    | Description       |
@@ -3442,7 +3442,7 @@ curl \
   -H "Content-Type: application/json" \
   -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
   --request DELETE \
-  https://api.pulumi.com/esc/environments/{organization}/{project}/{environment}
+  https://api.pulumi.com/api/esc/environments/{organization}/{project}/{environment}
 ```
 
 #### Default response
@@ -3454,7 +3454,7 @@ Status: 200 OK
 ### Open Environment
 
 ```
-POST /esc/environments/{organization}/{project}/{environment}/open
+POST /api/esc/environments/{organization}/{project}/{environment}/open
 ```
 
 | Parameter           | Type   | In    | Description       |
@@ -3472,7 +3472,7 @@ curl \
   -H "Content-Type: application/json" \
   -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
   --request POST \
-  https://api.pulumi.com/esc/environments/{organization}/{project}/{environment}/open
+  https://api.pulumi.com/api/esc/environments/{organization}/{project}/{environment}/open
 ```
 
 #### Default response
@@ -3491,7 +3491,7 @@ Status: 200 OK
 ### Read Open Environment
 
 ```
-GET /esc/environments/{organization}/{project}/{environment}/open/{openSessionID}
+GET /api/esc/environments/{organization}/{project}/{environment}/open/{openSessionID}
 ```
 
 | Parameter           | Type   | In    | Description       |
@@ -3510,7 +3510,7 @@ curl \
   -H "Content-Type: application/json" \
   -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
   --request GET \
-  https://api.pulumi.com/esc/environments/{organization}/{project}/{environment}/open/{openSessionID}
+  https://api.pulumi.com/api/esc/environments/{organization}/{project}/{environment}/open/{openSessionID}
 ```
 
 #### Default response
