@@ -233,26 +233,26 @@ comparison_table:
                     - content: _blank
                     - content: _blank
                     - content: Available
-                - title: "# of secrets"
+                - title: "Max # of secrets"
                   items:
                     - content: 25
                     - content: Unlimited
                     - content: Unlimited
                     - content: Unlimited
-                - title: "# of projects"
+                - title: "Max # of projects"
                   items:
                     - content: 10
                     - content: Unlimited
                     - content: Unlimited
                     - content: Unlimited
-                - title: "# of environments"
+                - title: "Max # of environments"
                   link: /docs/esc/environments/
                   items:
                     - content: 10
                     - content: Unlimited
                     - content: Unlimited
                     - content: Unlimited
-                - title: API call limits
+                - title: "Max # of API calls"
                   items:
                     - content: 10K / month
                     - content: Unlimited
@@ -621,7 +621,7 @@ faq:
       items:
         - question: How are resources billed?
           answer: |
-            Resources are billed hourly as Pulumi Credits. 1 Pulumi Credit is the price for managing one resource for one hour. The Price per credit for Team and Enterprise is $0.0005 and $0.0015 respectively,
+            Resources are billed hourly as Pulumi Credits. 1 Pulumi Credit is the price for managing one resource for one hour. The Price per credit for Team and Enterprise is $0.0005 and $0.0015 respectively.
 
             For billing purposes, partial resource hour used is billed as a full hour and we count any resource that's declared in a Pulumi program. This includes [provider resources](/docs/concepts/resources#custom-resources) (e.g., an Amazon S3 bucket), [component resources](/docs/concepts/resources#components) which are groupings of resources (e.g., an Amazon EKS cluster), and [stacks](/docs/concepts/stack) which contain resources (e.g., dev, test, prod stacks).
 
@@ -631,11 +631,11 @@ faq:
             Secrets are billed hourly. The price per secret of $0.5 and $0.75 for Team and Enterprise is for 730 hours (~ 1 month). If you have your secrets stored for 4 days on Pulumi Cloud Team Edition, the price you pay would be 4 x 24 x 0.5 / 730 = $.0657
 
             Secrets include both static secrets and dynamic secrets/credentials. When using the Pulumi ESC Document Editor, each definition of fn::secret:* and fn::open::* (except Pulumi-stacks provider) is counted as a secret. The number of secrets only from the latest environment revision is counted towards your billing.
-        - question: How are secrets API call metered?
+        - question: How are secrets API calls metered?
           answer: |
             You pay $0 for the first free 10K API calls / month to the [ReadOpen API](/docs/pulumi-cloud/cloud-rest-api/#read-open-environment) endpoint. Once you hit 10,000 API calls, you are metered at $0.1 for 10K API calls. If you use 5K API calls you will billed $0.05. 
 
-            Usage of API usage include any calls from the [CLI](/docs/esc-cli/), [SDK](/docs/esc/sdk/), [Pulumi-service provider](/registry/packages/pulumiservice/api-docs/environment/), direct [REST API](/docs/pulumi-cloud/cloud-rest-api/) call that hits the ReadOpen API endpoint
+            API usage include any calls from the [CLI](/docs/esc-cli/), [SDK](/docs/esc/sdk/), [Pulumi-service provider](/registry/packages/pulumiservice/api-docs/environment/), direct [REST API](/docs/pulumi-cloud/cloud-rest-api/) call that hits the ReadOpen API endpoint
         - question: What can I do with 200 free resources per month? 
           answer: |
             You could manage 200 S3 buckets or 200 EC2 instances for a month using this amount. Note that free resources translate to 150K monthly Pulumi credits. 
@@ -645,7 +645,7 @@ faq:
           answer: |
             There are several ways you can estimate the number of resources you have managed with Pulumi.
 
-            - <u>If using Pulumi Cloud</u>: Navigate to the dashboard and review the resource graph titled “Resource Count over Time.”
+            - <u>If you are using Pulumi Cloud</u>: Navigate to the dashboard and review the resource graph titled “Resource Count over Time.”
 
             - <u>If using Pulumi with a self-managed backend</u>: Export your stack state and count the number of lines with a universal resource name (URN). You can pipe the state through a grep command for "urn" to estimate the number of resources.
 
@@ -687,7 +687,7 @@ faq:
           answer: |
             The Individual Edition is great for single users with private projects. However, if you are working within a team, you'll typically want to share your projects - for which you need to create an organization. The Team Edition is designed for teams to collaborate on shared infrastructure projects. The Enterprise Edition offers more sophisticated organization management facilities, including RBAC for advanced policy controls.
 
-            Pulumi [projects](/docs/concepts/projects/) and [stacks](/docs/concepts/stack/) are a way to organize Pulumi code. You can consider a Pulumi Project to be analogous to a GitHub repo: a single place for code -- and a Stack to be an instance of that code which has separate configuration. For instance, Project Foo may have multiple stacks for Dev, Test, Prod, or perhaps for different cloud configurations (e.g. geographic region).
+            Pulumi [projects](/docs/concepts/projects/) and [stacks](/docs/concepts/stack/) are a way to organize Pulumi code. You can consider a Pulumi Project to be analogous to a GitHub repo: a single place for code -- and a Stack to be an instance of that code which has a separate configuration. For instance, Project Foo may have multiple stacks for Dev, Test, Prod, or perhaps for different cloud configurations (e.g. geographic region).
         - question: How do I get started?
           answer: Follow the [Getting Started guide](/docs/quickstart/), which walks you through creating and deploying your first Pulumi project.
         - question: How do I move from Starter or Pro to the new Team Edition?
