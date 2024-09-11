@@ -60,7 +60,7 @@ main:
     presenters:
         - name: Jay Smith
           role: Google
-          photo: /images/team/engin-diri.jpg
+          photo: /images/team/jay-smith-google-jpeg.jpg
         - name: Diana Esteves
           role: Solutions Architect, Pulumi
           photo: /images/team/diana-esteves.jpg
