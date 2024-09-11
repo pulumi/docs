@@ -128,64 +128,94 @@ class PulumiServiceWebhook: Stack
 
 1. Navigate to **Settings** > **Webhooks**.
 2. Select **Create webhook**.
-3. Under Destination, choose **Webhook**, **Slack**, **Microsoft Teams**."
+3. Under Destination, choose **Webhook**, **Slack** or **Microsoft Teams**.
     1. For generic JSON webhooks, provide a display name, payload URL, and optionally a secret.
     2. For Slack webhooks, provide a Slack webhook URL and a display name.
     3. For Microsoft Teams webhooks, provide a Microsoft Teams webhook URL and a display name.
-4. Choose between receiving all events or only receiving specific events using the filters menu.
+4. Choose which events you would like to receive using groups and filters menu.
 
 #### Create a Stack Webhook
 
 1. Navigate to the stack.
 2. Navigate to **Settings** > **Webhooks**
 3. Select **Create webhook**.
-4. Under Destination, choose **Webhook**, **Slack**, **Microsoft Teams**, or **Deployment**."
+4. Under Destination, choose **Webhook**, **Slack**, **Microsoft Teams** or **Deployment**.
    1. For generic JSON webhooks, provide a display name, payload URL, and optionally a secret.
    2. For Slack webhooks, provide a Slack webhook URL and a display name.
    3. For Microsoft Teams webhooks, provide a Microsoft Teams webhook URL and a display name.
    4. For Deployment webhooks, provide the stack to deploy in the format `project/stack`.
-5. Choose between receiving all events or only specific events using the filters menu.
+5. Choose which events you would like to receive using groups and filters menu.
 
 ![Stack webhooks form](../ui-webhooks.png)
+
+#### Create an Environment Webhook
+
+1. Navigate to your environment.
+2. Navigate to **Webhooks** tab.
+3. Select **Create webhook**.
+4. Under Destination, choose **Webhook**, **Slack**, **Microsoft Teams** or **Deployment**
+   1. For generic JSON webhooks, provide a display name, payload URL, and optionally a secret.
+   2. For Slack webhooks, provide a Slack webhook URL and a display name.
+   3. For Microsoft Teams webhooks, provide a Microsoft Teams webhook URL and a display name.
+   4. For Deployment webhooks, provide the stack to deploy in the format `project/stack`.
+5. Choose which events you would like to receive using groups and filters menu.
 
 ## Event Filtering
 
 Event filtering allows you to choose which events should be delivered to each webhook. You may choose to receive
-all events, or filter to specific events (only failures, only deployment events, etc.).
+all events in a group, or filter to specific events (only failures, only deployment events, etc.).
 The following table describes the various event filters available and the context in which they are relevant.
 
-| Filter                        | Event Kind          | Webhook Type               | Triggered                                        |
-|-------------------------------|---------------------|----------------------------|--------------------------------------------------|
-| `stack_created`               | `stack`             | Organization webhooks only | When a stack is created.                         |
-| `stack_deleted`               | `stack`             | Organization webhooks only | When a stack is deleted.                         |
-| `preview_succeeded`           | `stack_preview`     | Both                       | When a stack `preview` succeeds.                 |
-| `preview_failed`              | `stack_preview`     | Both                       | When a stack `preview` fails.                    |
-| `update_succeeded`            | `stack_update`      | Both                       | When a stack `update` succeeds.                  |
-| `update_failed`               | `stack_update`      | Both                       | When a stack `update` fails.                     |
-| `destroy_succeeded`           | `stack_update`      | Both                       | When a stack `destroy` succeeds.                 |
-| `destroy_failed`              | `stack_update`      | Both                       | When a stack `destroy` fails.                    |
-| `refresh_succeeded`           | `stack_update`      | Both                       | When a stack `refresh` succeeds.                 |
-| `refresh failed`              | `stack_update`      | Both                       | When a stack `refresh` fails.                    |
-| `deployment_queued`           | `deployment`        | Both                       | When a deployment is queued.                     |
-| `deployment_started`          | `deployment`        | Both                       | When a deployment starts running.                |
-| `deployment_succeeded`        | `deployment`        | Both                       | When a deployment succeeds.                      |
-| `deployment_failed`           | `deployment`        | Both                       | When a deployment fails.                         |
-| `drift_detected`              | `drift_detection`   | Both                       | When drift is detected in a drift detection run. |
-| `drift_detection_succeeded`   | `drift_detection`   | Both                       | When a drift detection run succeeds.             |
-| `drift_detection_failed`      | `drift_detection`   | Both                       | When a drift detection run fails.                |
-| `drift_remediation_succeeded` | `drift_remediation` | Both                       | When a drift remediation run succeeds.           |
-| `drift_remediation_failed`    | `drift_remediation` | Both                       | When a drift remediation run fails.              |
+| Filter                        		| Event Kind          				| Webhook Type               | Triggered                                        |
+|---------------------------------------|-----------------------------------|----------------------------|--------------------------------------------------|
+| `stack_created`               		| `stack`             				| Organization webhooks only | When a stack is created.                         |
+| `stack_deleted`               		| `stack`             				| Organization webhooks only | When a stack is deleted.                         |
+| `preview_succeeded`           		| `stack_preview`     				| Organization or Stack      | When a stack `preview` succeeds.                 |
+| `preview_failed`              		| `stack_preview`     				| Organization or Stack      | When a stack `preview` fails.                    |
+| `update_succeeded`            		| `stack_update`      				| Organization or Stack      | When a stack `update` succeeds.                  |
+| `update_failed`               		| `stack_update`      				| Organization or Stack      | When a stack `update` fails.                     |
+| `destroy_succeeded`           		| `stack_update`      				| Organization or Stack      | When a stack `destroy` succeeds.                 |
+| `destroy_failed`              		| `stack_update`      				| Organization or Stack      | When a stack `destroy` fails.                    |
+| `refresh_succeeded`           		| `stack_update`      				| Organization or Stack      | When a stack `refresh` succeeds.                 |
+| `refresh failed`              		| `stack_update`      				| Organization or Stack      | When a stack `refresh` fails.                    |
+| `deployment_queued`           		| `deployment`        				| Organization or Stack      | When a deployment is queued.                     |
+| `deployment_started`          		| `deployment`        				| Organization or Stack      | When a deployment starts running.                |
+| `deployment_succeeded`        		| `deployment`        				| Organization or Stack      | When a deployment succeeds.                      |
+| `deployment_failed`           		| `deployment`        				| Organization or Stack      | When a deployment fails.                         |
+| `drift_detected`              		| `drift_detection`   				| Organization or Stack      | When drift is detected in a drift detection run. |
+| `drift_detection_succeeded`   		| `drift_detection`   				| Organization or Stack      | When a drift detection run succeeds.             |
+| `drift_detection_failed`      		| `drift_detection`   				| Organization or Stack      | When a drift detection run fails.                |
+| `drift_remediation_succeeded` 		| `drift_remediation` 				| Organization or Stack      | When a drift remediation run succeeds.           |
+| `drift_remediation_failed`    		| `drift_remediation` 				| Organization or Stack      | When a drift remediation run fails.              |
+| `environment_created`					| `environment`						| Organization webhooks only | When a new environment is created.               |
+| `environment_deleted`					| `environment`						| Organization webhooks only | When an environment is deleted.              	|
+| `environment_revision_created`		| `environment_revision`			| Organization or Environment| When a new revision is created on an environment.|
+| `environment_revision_retracted`		| `environment_revision`			| Organization or Environment| When a revision is retracted on an environment.  |
+| `environment_revision_tag_created`	| `environment_revision_tag`		| Organization or Environment| When a new revision tag is created.              |
+| `environment_revision_tag_deleted`	| `environment_revision_tag`		| Organization or Environment| When a revision tag is deleted.              	|
+| `environment_revision_tag_updated`	| `environment_revision_tag`		| Organization or Environment| When a revision tag is updated.              	|
+| `environment_tag_created`				| `environment_tag`					| Organization or Environment| When a new environment tag is created.           |
+| `environment_tag_deleted`				| `environment_tag`					| Organization or Environment| When an environment tag is deleted.              |
+| `environment_tag_updated`				| `environment_tag`					| Organization or Environment| When an environment tag is updated.              |
+| `imported_environment_changed`		| `imported_environment_changed`	| Organization or Environment| When an imported environment was changed.        |
+
+And this table describes the various filter groups available to easily subscribe to all events within a group.
+
+| Group			| Event Kinds Included 																									|
+|---------------|-----------------------------------------------------------------------------------------------------------------------|
+|`stacks`		|`stack`, `stack_preview`, `stack_update`																				|
+|`deployments`	|`deployment`, `drift_detection`, `drift_remediation`																	|
+|`environments`	|`environment`, `environment_revision`, `environment_revision_tag`, `environment_tag`, `imported_environment_changed`	|
 
 ## Webhook Formats
 
-When creating a webhook, you can choose between the generic JSON webhook payload or `slack`
-formatted events.
+When creating a webhook, you can choose between a generic JSON webhook payload, `slack` formatted events and `ms_teams` formatted events.
 
 ### Slack Webhooks
 
-Slack Webhooks allow you to seamlessly integrate notifications about your Pulumi stacks and organizations
+Slack Webhooks allow you to seamlessly integrate notifications about your Pulumi resources
 into your Slack workspace by simply providing a [Slack incoming webhook URL](https://api.slack.com/messaging/webhooks)
-and optionally choosing which events you want delivered using [event filters](#event-filtering).
+and optionally choosing which events you want delivered using [event groups and filters](#event-filtering).
 
 You can either create your own Slack app (or use an existing one you may already have installed in your workspace), or
 follow the link below to quickly get started with a pre-defined Slack app manifest.
@@ -196,11 +226,11 @@ follow the link below to quickly get started with a pre-defined Slack app manife
 
 Microsoft Teams Webhooks allow you to seamlessly integrate notifications about your Pulumi stacks and organizations
 into your Microsoft Teams workspace by simply providing a [Microsoft Teams incoming webhook URL](https://docs.microsoft.com/en-us/microsoftteams/platform/webhooks-and-connectors/how-to/add-incoming-webhook)
-and optionally choosing which events you want delivered using [event filters](#event-filtering).
+and optionally choosing which events you want delivered using [event groups and filters](#event-filtering).
 
 ### Deployment Webhooks
 
-The Deployment webhook destination lets you trigger updates on other stacks via [Pulumi Deployments](/docs/pulumi-cloud/deployments/), usually in response to `update_succeeded` events. This enables you to keep dependent stacks up to date automatically which is often necessary when using [stack references](/docs/concepts/stack/#stackreferences).
+The Deployment webhook destination lets you trigger updates on other stacks via [Pulumi Deployments](/docs/pulumi-cloud/deployments/), usually in response to `update_succeeded` or `environment_revision_created` events. This enables you to keep dependent stacks up to date automatically which is often necessary when using [stack references](/docs/concepts/stack/#stackreferences).
 
 Deployment webhooks require that your stacks are configured with [Deployment Settings](/docs/pulumi-cloud/deployments/reference/#deployment-settings).
 
@@ -221,7 +251,7 @@ Each webhook payload has a format specific to the payload being emitted. Every p
 and stack reference as appropriate. For examples of specific payloads, see _Payload Reference_ below.
 
 Each webhook will contain a `user` field, which is the user who requested the action, an `organization` which is
-the organization name, and a URL for the event. It will also contain the `stackName` for the stack which was modified when applicable.
+the organization name, and a URL for the event. It will also contain `projectName`, `stackName` or `environmentName` when applicable.
 
 ##### Stack Creation
 
@@ -365,6 +395,115 @@ the organization name, and a URL for the event. It will also contain the `stackN
   "status": "succeeded",
   "resourceChanges": { "update": 3, "delete": 1 },
   "referenceUrl": "https://app.pulumi.com/crazy-adventures/website/website-prod/deployments/128"
+}
+```
+
+##### Environment
+
+```json
+{
+  "user": {
+    "name": "Morty Smith",
+    "githubLogin": "morty",
+    "avatarUrl": "https://crazy-adventures.net/morty.png"
+  },
+  "organization": {
+    "name": "Crazy Adventures",
+    "githubLogin": "crazy-adventures",
+    "avatarUrl": "https://crazy-adventures.net/logo.png"
+  },
+  "projectName": "website",
+  "environmentName": "prod",
+  "action": "created",
+}
+```
+
+##### Environment Revision
+
+```json
+{
+  "user": {
+    "name": "Morty Smith",
+    "githubLogin": "morty",
+    "avatarUrl": "https://crazy-adventures.net/morty.png"
+  },
+  "organization": {
+    "name": "Crazy Adventures",
+    "githubLogin": "crazy-adventures",
+    "avatarUrl": "https://crazy-adventures.net/logo.png"
+  },
+  "projectName": "website",
+  "environmentName": "prod",
+  "action": "created",
+  "revision": 5
+}
+```
+
+##### Environment Revision Tag
+
+```json
+{
+  "user": {
+    "name": "Morty Smith",
+    "githubLogin": "morty",
+    "avatarUrl": "https://crazy-adventures.net/morty.png"
+  },
+  "organization": {
+    "name": "Crazy Adventures",
+    "githubLogin": "crazy-adventures",
+    "avatarUrl": "https://crazy-adventures.net/logo.png"
+  },
+  "projectName": "website",
+  "environmentName": "prod",
+  "tagName": "stable",
+  "action": "created",
+  "revision": 5
+}
+```
+
+##### Environment Tag
+
+```json
+{
+  "user": {
+    "name": "Morty Smith",
+    "githubLogin": "morty",
+    "avatarUrl": "https://crazy-adventures.net/morty.png"
+  },
+  "organization": {
+    "name": "Crazy Adventures",
+    "githubLogin": "crazy-adventures",
+    "avatarUrl": "https://crazy-adventures.net/logo.png"
+  },
+  "projectName": "website",
+  "environmentName": "prod",
+  "tagName": "stable",
+  "action": "created"
+}
+```
+
+##### Imported Environment Changed
+
+```json
+{
+  "user": {
+    "name": "Morty Smith",
+    "githubLogin": "morty",
+    "avatarUrl": "https://crazy-adventures.net/morty.png"
+  },
+  "organization": {
+    "name": "Crazy Adventures",
+    "githubLogin": "crazy-adventures",
+    "avatarUrl": "https://crazy-adventures.net/logo.png"
+  },
+  "projectName": "website",
+  "environmentName": "prod",
+  "affectedRevisions": [2, 5, 6, 7],
+  "importedEnvironmentReference": {
+	"projectName": "website",
+  	"environmentName": "base",
+	"revision": 10
+  }
 }
 ```
 
