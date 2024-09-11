@@ -3251,6 +3251,19 @@ Kubernetes Pods should not be used directly. Instead, you may want to use a Depl
 
 ## Environments
 
+{{< notes >}}
+Pulumi ESC (Environments, Secrets, and Configuration) and its associated REST API endpoints are currently in public preview.
+{{< /notes >}}
+
+### Migrating from the Preview API
+
+For the majority of cases, the new API is a drop-in replacement for the preview API and the main changes are that the route itself has changed (i.e. replace `/api/preview` with `/api/esc`) and where environment name is part of the path it should be prefixed with the project (i.e. replace `/{orgName}/{envName}` with `{orgName}/{projectName}/{envName}`).
+
+However, there are a few cases where the new API has changed the behavior of the preview API. These changes are as follows:
+
+- The [Create Environment](#create-Environment) endpoint no longer takes the environment name in the request path, it has been moved to the request body.
+- The Create Version Tag endpoint no longer takes the tag name in the request path, it has been moved to the request body.
+
 <!-- ###################################################################### -->
 
 ### List Environments available to the authenticated user.
