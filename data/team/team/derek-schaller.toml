@@ -1,0 +1,11 @@
+id = "derek-schaller"
+name = "Derek Schaller"
+title = "Principal Software Engineer"
+company = "Pulumi"
+weight = 1
+
+status = "active"
+
+[social]
+github = "dschaller"
+linkedin = "derekschaller"

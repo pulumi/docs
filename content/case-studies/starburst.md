@@ -5,7 +5,7 @@ description: |
     Starburst transformed its infrastructure provisioning and management processes by switching from Terraform to Pulumi, resulting in a 112x faster deployment time and significant cost savings.
 meta_desc: Starburst switched from Terraform to Pulumi, achieving 112x faster deployments, enhanced developer productivity, improved security, and cost savings.
 
-customer_name: Starburst Data
+customer_name: Starburst
 customer_logo: /logos/customers/starburst.png
 
 exec_summary: |
@@ -15,8 +15,8 @@ quote_block:
   quote: |
       "When we did it with Terraform, it took two weeks to do [infrastructure deployments]. Now we do it in about three hours a day. So that's how much of an improvement Pulumi gave us on our deployment time."
   quote_attrib: Matt Stephenson, Senior Principal Software Engineer
-  headline_stat: 112x
-  headline: Faster infrastructure deployments
+  headline_stat: Two weeks
+  headline: Reduced to three hour deployments
 
 sections:
     - label: Exec Summary
@@ -89,3 +89,10 @@ Starburst will also realize significant cost savings through Pulumi Cloud’s re
 ## Conclusion
 
 In conclusion, Starburst's adoption of Pulumi has transformed their infrastructure provisioning and management processes, significantly enhancing delivery velocity, scalability, and developer productivity. The transition from Terraform to Pulumi gave Starburst the ability to create easy to use abstractions and enabled full infrastructure automation and self-service, resulting in a remarkable 99% reduction in deployment time. The reinstatement of Pulumi Cloud gave Starburst access to deployments, dashboarding, analytics, state management, and security functionality that would have to otherwise be independently implemented and operated. Pulumi Cloud gives Starburst notable gains in developer productivity, security, and cost savings. Starburst would not be able to innovate and grow their business as fast without the Pulumi platform.
+
+### Key Stats
+
+* Previously, Terraform multi-region blue/green deployments took 2 weeks. With Pulumi, these deployments now take only 3 hours, which is 112 times faster than before. This significant improvement is because the infrastructure pipeline orchestration can be fully automated, eliminating the need for manually executing glue scripts.
+* Testing environments are expected to be spun up 2 times faster by using Pulumi Deployments' TTL (Time-to-Live) stacks and Reviews stacks, allowing individual testing environments to be created for each developer.
+* Pulumi AI accelerated development by a factor of 10. Starburst rewrote their AWS provisioning code, a task that would have taken a couple of months, in just a week or two, thanks to the power of Pulumi AI.
+* Pulumi Cloud pays for itself through the savings achieved by identifying and shutting down unused infrastructure using Pulumi Insights and the Cloud dashboard.

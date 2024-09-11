@@ -2,7 +2,7 @@
 title: "Introducing the Key-Value Table Editor for Pulumi ESC"
 date: 2024-03-26T00:00:00-07:00
 draft: false
-meta_desc: "The new enhancements to Pulumi ESC Editor streamlines the authoring experience of environments for developers"
+meta_desc: "The Key-Value Table Editor introduces a new visual interface for managing configuration and secrets using Pulumi ESC."
 meta_image: "meta.png"
 authors:
   - arun-loganathan
