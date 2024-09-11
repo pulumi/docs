@@ -115,12 +115,12 @@
 
     .carousel-left-primary {
         left: 0;
-        animation: single-scroll-horizontal-middle 60s linear infinite;
+        animation: single-scroll-horizontal-middle 90s linear infinite;
     }
 
     .carousel-left-secondary {
         left: 300%;
-        animation: single-scroll-horizontal 60s linear infinite;
+        animation: single-scroll-horizontal 90s linear infinite;
     }
 
     @keyframes single-scroll-horizontal {
@@ -158,12 +158,12 @@
 
     .carousel-left-primary-mobile {
         left: 0;
-        animation: single-scroll-horizontal-middle 30s linear infinite;
+        animation: single-scroll-horizontal-middle 45s linear infinite;
     }
 
     .carousel-left-secondary-mobile {
         left: 300%;
-        animation: single-scroll-horizontal 30s linear infinite;
+        animation: single-scroll-horizontal 45s linear infinite;
     }
 
     @keyframes single-scroll-horizontal-mobile {

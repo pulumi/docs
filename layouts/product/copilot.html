@@ -5,7 +5,7 @@
 {{ define "main" }}
     {{ $pageContext := . }}
 
-    <section id="overview" class="mx-auto my-16 px-6 lg:flex lg:flex-row">
+    <section id="overview" class="mx-auto mt-4 mb-16 px-6 lg:flex lg:flex-row">
         <div class="w-full lg:w-1/2 mb-8 lg:mb-0 px-8">
             <h2>{{ .Params.overview.title }}</h2>
             <p class="w-full">{{ .Params.overview.description | markdownify }}</p>
