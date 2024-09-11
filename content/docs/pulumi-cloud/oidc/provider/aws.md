@@ -77,7 +77,7 @@ In the following example, the role may only be assumed by stacks within the `Cor
 
 ### Pulumi ESC
 
-Consider the following ESC definition for `development` environment opened by user `personA`:
+Consider the following ESC definition for `project/development` environment opened by user `personA`:
 
 ```yaml
 values:
@@ -91,13 +91,13 @@ values:
             - pulumi.user.login
 ```
 
-The OIDC subject claim for this environment would be `pulumi:environments:pulumi.organization.login:contoso:currentEnvironment.name:development:pulumi.user.login:personA`. The role may only be assumed by `development` environment and user `personA` within the `contoso` organization:
+The OIDC subject claim for this environment would be `pulumi:environments:pulumi.organization.login:contoso:currentEnvironment.name:project/development:pulumi.user.login:personA`. The role may only be assumed by `project/development` environment and user `personA` within the `contoso` organization:
 
 ```json
 "Condition": {
   "StringEquals": {
     "api.pulumi.com/oidc:aud": "contoso",
-    "api.pulumi.com/oidc:sub": "pulumi:environments:pulumi.organization.login:contoso:currentEnvironment.name:development:pulumi.user.login:personA"
+    "api.pulumi.com/oidc:sub": "pulumi:environments:pulumi.organization.login:contoso:currentEnvironment.name:project/development:pulumi.user.login:personA"
   }
 }
 ```
@@ -111,7 +111,7 @@ The subject always contains the prefix `pulumi:environments:pulumi.organization.
 
 When importing multiple environments into Pulumi IaC Stack Config, each environment is resolved separately. For example, if you import multiple environments into your Pulumi Stack with `rootEnvironment.name` attribute defined in all of them, then each `rootEnvironment.name` will resolve to the environment name where it is defined.
 
-The default format of the subject claim when subjectAttributes are not used is `pulumi:environments:org:<organization name>:env:<environment name>`
+The default format of the subject claim when subjectAttributes are not used is `pulumi:environments:org:<organization name>:env:<project name>/<environment name>`
 
 {{< notes type="info" >}}
 
@@ -145,7 +145,7 @@ To configure OIDC for Pulumi ESC, create a new environment in the [Pulumi Consol
 
 1. Click the **Environments** link.
 2. Click the **Create environment** button.
-3. Provide a name for your environment.
+3. Provide a project to create your new environment in and a name for your environment.
 4. Click the  **Create environment** button.
   {{< video title="Creating a new Pulumi ESC environment" src="https://www.pulumi.com/uploads/create-new-environment.mp4" autoplay="true" loop="true" >}}
 5. You will be presented with a split-pane editor view. Delete the default placeholder content in the editor and replace it with the following code:
@@ -175,10 +175,10 @@ To configure OIDC for Pulumi ESC, create a new environment in the [Pulumi Consol
 
 You can validate that your configuration is working by running either of the following:
 
-* `esc open <your-org>/<your-environment>` command of the [ESC CLI](/docs/esc-cli/)
-* `pulumi env open <your-org>/<your-environment>` command of the [Pulumi CLI](/docs/install/)
+* `esc open <your-org>/<your-project>/<your-environment>` command of the [ESC CLI](/docs/esc-cli/)
+* `pulumi env open <your-org>/<your-project>/<your-environment>` command of the [Pulumi CLI](/docs/install/)
 
-Make sure to replace `<your-org>` and `<your-environment>` with the values of your Pulumi organization and environment file respectively. You should see output similar to the following:
+Make sure to replace `<your-org>`, `<your-project>`, and `<your-environment>` with the values of your Pulumi organization, project, and environment file respectively. You should see output similar to the following:
 
 ```bash
 {
