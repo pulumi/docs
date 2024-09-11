@@ -63,7 +63,7 @@ social:
 # for details, and please remove these comments before submitting for review.
 ---
 
-PulumiUP 2024 is just around the corner! It will be held on September 18th, starting at 8 AM PT | 15:00 UTC +0, and with over 5,500 engineers from all over the world already registered, this is shaping up to be the must-attend event for cloud professionals, platform engineers, and AI/ML enthusiasts alike. From entry-level engineers to tech executives, this event brings together professionals from companies of all sizes to explore the latest innovations and best practices in **Cloud and IaC**, **Platform Engineering & DevOps**, and **AI/ML**..
+PulumiUP 2024 is just around the corner! It will be held on September 18th, starting at 8 AM PT | 15:00 UTC +0, and with over 5,500 engineers from all over the world already registered, this is shaping up to be the must-attend event for cloud professionals, platform engineers, and AI/ML enthusiasts alike. From entry-level engineers to tech executives, this event brings together professionals from companies of all sizes to explore the latest innovations and best practices in **Cloud and IaC**, **Platform Engineering & DevOps**, and **AI/ML**.
 
 If you haven’t registered yet, now’s the time! [Start building your schedule today](https://conference.pulumi.com/schedule/?utm_source=PulumiUP&utm_medium=web&utm_campaign=FY2025Q1_Event_PulumiUP), select the talks you want to watch live and on-demand and add them to your schedule. All talks and panels will be immediately available on demand.
 
