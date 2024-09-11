@@ -64,6 +64,7 @@ main:
           photo: /images/team/diana-esteves.jpg
         - name: Harry Kimpel
           role: Principal Developer Relations Engineer @ New Relic
+          photo: /images/people/harry-kimpel.png
 
     # case-sensitive
     tags:
