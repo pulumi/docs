@@ -1,18 +1,6 @@
 {{ define "hero" }}
-<header class="home-page-hero">
-    <div class="dot-background-container pointer-events-none">
-        <div class="dot-background"></div>
-    </div>
-    <div class="dot-overlay"></div>
-    <div class="home-page-hero-content pb-12">
-        <h1 class="flex flex-col items-center">
-            <span class="rainbow-text inline-block text-center">{{ .Params.overview.title }}</span>
-        </h1>
-        <p class="text-center leading-7">{{ .Params.overview.description }}</p>
-    </div>
-</header>
+    {{ partial "hero" (dict "title" .Params.overview.title "subtitle" .Params.overview.description) }}
 {{ end }}
-
 
 {{ define "main" }}
 
