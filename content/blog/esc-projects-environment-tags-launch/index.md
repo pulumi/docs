@@ -48,7 +48,7 @@ Starting <b>Apr 1, 2025</b>, users will not be able to edit their environments w
 Moving environments out of the `default` project is as easy as cloning the environment into a new project and updating any references to it. An example clone command that preserves all environment history, tags, and team access looks as follows
 
 ```bash
-  $ esc env clone default/dev our-project/dev --preserve-history --preserve-env-tags --preserve-rev-tags --preserve-access
+  $ esc env clone default/dev your-project/dev --preserve-history --preserve-env-tags --preserve-rev-tags --preserve-access
 ```
 {{% /notes %}}
 
