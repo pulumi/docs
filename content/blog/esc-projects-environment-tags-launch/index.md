@@ -43,7 +43,13 @@ Environments will now need to be referenced by specifying the project as part of
 
 Users will be able to create new environments in the default project until <b>Nov 30, 2024</b>. Starting Dec 1, 2024, users will not be able to create new environments in the default project. 
 
-Starting <b>Apr 1, 2025</b>, users will not be able to edit their environments within the ‘default’ Project. We recommend customers migrate their existing environments to user-created projects at the earliest to take advantage of new Pulumi ESC capabilities. 
+Starting <b>Apr 1, 2025</b>, users will not be able to edit their environments within the ‘default’ Project. We recommend customers migrate their existing environments to user-created projects at the earliest to take advantage of new Pulumi ESC capabilities.
+
+Moving environments out of the `default` project is as easy as cloning the environment into a new project and updating any references to it. An example clone command that preserves all environment history, tags, and team access looks as follows
+
+```bash
+  $ esc env clone default/dev our-project/dev --preserve-history --preserve-env-tags --preserve-rev-tags --preserve-access
+```
 {{% /notes %}}
 
 We offer numerous ways for you to get started with Projects via the Pulumi Web Console, [SDK](/docs/esc/sdk/), [REST API](/docs/pulumi-cloud/cloud-rest-api/#environments), [CLI](/docs/esc-cli/) and [Pulumi-Service Provider](/registry/packages/pulumiservice/api-docs/environment/) - choose what best fits your workflow. Here is one example using the ESC CLI to create and list environments within a project: 
