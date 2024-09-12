@@ -28,8 +28,8 @@ With Pulumi ESC, you can import other environments into your environment file an
 
 ```yaml
 imports:
-  - environment-name-1
-  - environment-name-2
+  - project-name/environment-name-1
+  - project-name/environment-name-2
 values:
     ...
     ...
@@ -37,28 +37,28 @@ values:
 
 ## Import an environment
 
-To demonstrate how this works, you will need to create a second environment. For the purposes of this guide, we will name this new environment `app-global-config`. In this environment, replace the placeholder content with the following configuration:
+To demonstrate how this works, you will need to create a second environment. For the purposes of this guide, we will name this new environment `my-project/app-global-config`. In this environment, replace the placeholder content with the following configuration:
 
 ```yaml
 values:
   ENDPOINT_URL: "https://wordsapiv1.p.rapidapi.com/"
 ```
 
-{{< video title="Creating a global config environment in the Pulumi Console" src="https://www.pulumi.com/uploads/esc-create-global-config.mp4" autoplay="true" loop="true" >}}
+{{< video title="Creating a global config environment in the Pulumi Console" src="/docs/esc/assets/esc-create-global-config.mp4" autoplay="true" loop="true" >}}
 
-Then, open your first environment (e.g. `my-dev-environment`) via the Pulumi console or the ESC CLI and add the following configuration to the top of your file:
+Then, open your first environment (e.g. `my-project/dev-environment`) via the Pulumi console or the ESC CLI and add the following configuration to the top of your file:
 
 ```yaml
 imports:
-  - app-global-config
+  - my-project/app-global-config
 ```
 
 Your updated environment file should look similar to the following:
 
 ```yaml
-# Example contents of my-dev-environment
+# Example contents of my-project/dev-environment
 imports:
-  - app-global-config
+  - my-project/app-global-config
 values:
   myEnvironment: "development"
   myPassword:
@@ -66,9 +66,9 @@ values:
       ciphertext: ZXNjeAA....
 ```
 
-{{< video title="Importing the global config environment in the Pulumi Console" src="https://www.pulumi.com/uploads/esc-import-global-config.mp4" autoplay="true" loop="true" >}}
+{{< video title="Importing the global config environment in the Pulumi Console" src="/docs/esc/assets/esc-import-global-config.mp4" autoplay="true" loop="true" >}}
 
-You should now see `"ENDPOINT_URL": "https://wordsapiv1.p.rapidapi.com/"` in the environment preview pane. This indicates that this value was successfully imported from the `app-global-config` environment, and you can now retrieve this value in the same way as the other values that are manually defined in this environment.
+You should now see `"ENDPOINT_URL": "https://wordsapiv1.p.rapidapi.com/"` in the environment preview pane. This indicates that this value was successfully imported from the `my-project/app-global-config` environment, and you can now retrieve this value in the same way as the other values that are manually defined in this environment.
 
 {{% notes type="info" %}}
 You can test this out by retrieving the imported value via the console or the CLI. Refer to the [Store and Retrieve Secrets guide](/docs/esc/get-started/store-and-retrieve-secrets/#retrieve-environment-values) for the steps on how to do this.
@@ -78,7 +78,7 @@ You can test this out by retrieving the imported value via the console or the CL
 
 Alternatively, you can import environments using the Table view of the Pulumi console. Navigate to the **Table view** of your environment and click the **Import** button under the **Imports** section. You will be presented with a dropdown list of environments that you can import. Search for the name of the environment you want to import and select it. Then click **Import**.
 
-{{< video title="Importing the global config environment in the Pulumi Console" src="https://www.pulumi.com/uploads/esc-add-import-table-view.mp4" autoplay="true" loop="true" >}}
+{{< video title="Importing the global config environment in the Pulumi Console" src="/docs/esc/assets/esc-add-import-table-view.mp4" autoplay="true" loop="true" >}}
 
 To view the imported values, you will need to [open your environment](/docs/esc/get-started/store-and-retrieve-secrets/#retrieve-environment-values).
 

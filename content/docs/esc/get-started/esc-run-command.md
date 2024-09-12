@@ -44,10 +44,10 @@ $ echo $ENDPOINT_URL $API_KEY
 
 ```
 
- Now run the command using `esc run` as shown below, making sure to replace <your-pulumi-org-name> and <your-environment-name> with the names of your own Pulumi organization and environment respectively
+ Now run the command using `esc run` as shown below, making sure to replace <your-pulumi-org-name>, <your-project-name>, and <your-environment-name> with the names of your own Pulumi organization, project, and environment respectively
 
 ```bash
-esc run <your-pulumi-org-name>/<your-environment-name> -- bash -c "echo \$ENDPOINT_URL \$API_KEY"
+esc run <your-pulumi-org-name>/<your-project-name>/<your-environment-name> -- bash -c "echo \$ENDPOINT_URL \$API_KEY"
 ```
 
 {{< notes type="info" >}}
@@ -57,21 +57,21 @@ Commands run using `esc run` are not run in a subshell. This means that any comm
 Because you have stored the value of `API_KEY` [as a secret](/docs/esc/get-started/store-and-retrieve-secrets/), your output will resemble the following:
 
 ```bash
-$ esc run pulumi/my-dev-environment -- bash -c "echo \$ENDPOINT_URL \$API_KEY"
+$ esc run pulumi/my-project/dev-environment -- bash -c "echo \$ENDPOINT_URL \$API_KEY"
 https://wordsapiv1.p.rapidapi.com/ [secret]
 ```
 
 The CLI intentionally redacts the secret value when printing to the terminal. If you want to disable the redaction, add the `--interactive` or `-i` flag to the command as shown below:
 
 ```bash
-$ esc run pulumi/my-dev-environment -i -- bash -c "echo \$ENDPOINT_URL \$API_KEY"
+$ esc run pulumi/my-project/dev-environment -i -- bash -c "echo \$ENDPOINT_URL \$API_KEY"
 https://wordsapiv1.p.rapidapi.com/ my-api-key-1234567
 ```
 
 Alternatively, if you need to be able to run multiple commands without always having to specify the above command string each time, you can run the following command to open up a subshell that will have access to your values in your environment file:
 
 ```bash
-$ esc run pulumi/my-dev-environment -i -- bash
+$ esc run pulumi/my-project/dev-environment -i -- bash
 ```
 
 From there, try running the `echo` command individually for each example variable:
@@ -120,17 +120,17 @@ $ aws s3 ls
 Unable to locate credentials. You can configure credentials by running "aws configure".
 ```
 
-Now run the command using `esc run` as shown below, making sure to replace <your-pulumi-org-name> and <your-environment-name> with the names of your own Pulumi organization and environment respectively:
+Now run the command using `esc run` as shown below, making sure to replace <your-pulumi-org-name>, <your-project-name>, and <your-environment-name> with the names of your own Pulumi organization, project, and environment respectively:
 
 ```bash
-esc run <your-pulumi-org-name>/<your-environment-name> -- aws s3 ls
+esc run <your-pulumi-org-name>/<your-project-name>/<your-environment-name> -- aws s3 ls
 ```
 
 You should be presented with a list of S3 buckets in the account associated with your credentials.
 
 ```bash
 # example command and output
-esc run pulumi/my-dev-environment -- aws s3 ls
+esc run pulumi/my-project/dev-environment -- aws s3 ls
 
 2023-12-10 02:52:46 my-bucket-4a67543
 2023-11-16 21:37:40 my-bucket-4b1e6cb
@@ -166,17 +166,17 @@ If you have already logged in with a different account, run:
 to select an already authenticated account to use.
 ```
 
-Now run the command using `esc run` as shown below, making sure to replace <your-pulumi-org-name> and <your-environment-name> with the names of your own Pulumi organization and environment respectively:
+Now run the command using `esc run` as shown below, making sure to replace <your-pulumi-org-name>, <your-project-name>, and <your-environment-name> with the names of your own Pulumi organization, project, and environment respectively:
 
 ```bash
-esc run <your-pulumi-org-name>/<your-environment-name> -- gcloud iam service-accounts list
+esc run <your-pulumi-org-name>/<your-project-name>/<your-environment-name> -- gcloud iam service-accounts list
 ```
 
 You should be presented with a list of Service Accounts in the account associated with your credentials.
 
 ```bash
 # example command and output
-$ esc run pulumi/my-dev-environment -- gcloud iam service-accounts list
+$ esc run pulumi/my-project/dev-environment -- gcloud iam service-accounts list
 
 DISPLAY NAME                            EMAIL                                                              DISABLED
 service-account-1               service-account-1@my-project.iam.gserviceaccount.com                        False

@@ -56,9 +56,10 @@ func main() {
 	escClient := esc.NewClient(configuration)
 	authCtx := esc.NewAuthContext(accessToken)
 
+	projName := "examples"
 	envName := "sdk-go-example"
 	// Create Environment
-	err := escClient.CreateEnvironment(authCtx, orgName, envName)
+	err := escClient.CreateEnvironment(authCtx, orgName, projName, envName)
 	if err != nil {
 		log.Fatalf("Failed to create environment: %v", err)
 	}
@@ -74,20 +75,20 @@ func main() {
 		},
 	}
 
-	_, err = escClient.UpdateEnvironment(authCtx, orgName, envName, updatePayload)
+	_, err = escClient.UpdateEnvironment(authCtx, orgName, projName, envName, updatePayload)
 	if err != nil {
 		log.Fatalf("Failed to update environment: %v", err)
 	}
 
 	// Open and View Secrets
-	_, values, err := escClient.OpenAndReadEnvironment(authCtx, orgName, envName)
+	_, values, err := escClient.OpenAndReadEnvironment(authCtx, orgName, projName, envName)
 	if err != nil {
 		log.Fatalf("Failed to open environment: %v", err)
 	}
 
 	mySecret, ok := values["my_secret"]
 	if !ok {
-		log.Fatalf("Secret 'my_secret' not found in environment %s", envName)
+		log.Fatalf("Secret 'my_secret' not found in environment %s/%s", projName, envName)
 	}
 
 	log.Printf("my_secret: %v\n", mySecret)
@@ -98,7 +99,7 @@ func main() {
 	}
 
 	for _, orgEnv := range orgEnvs.Environments {
-		log.Printf("Environment: %v\n", orgEnv.Name)
+		log.Printf("Environment: %v/%v\n", orgEnv.Project, orgEnv.Name)
 	}
 
 }
@@ -133,8 +134,9 @@ func main() {
 	escClient := esc.NewClient(configuration)
 	authCtx := esc.NewAuthContext(accessToken)
 
+	projName := "examples"
 	envName := "sdk-go-example"
-	revs, err := escClient.ListEnvironmentRevisions(authCtx, orgName, envName)
+	revs, err := escClient.ListEnvironmentRevisions(authCtx, orgName, projName, envName)
 	if err != nil {
 		log.Fatalf("Failed to list environment revisions: %v", err)
 	}
@@ -145,14 +147,14 @@ func main() {
 
 	// get the second latest revision
 	secondLatestRev := revs[1]
-	err = escClient.CreateEnvironmentRevisionTag(authCtx, orgName, envName, "stable", secondLatestRev.Number)
+	err = escClient.CreateEnvironmentRevisionTag(authCtx, orgName, projName, envName, "stable", secondLatestRev.Number)
 	if err != nil {
 		log.Fatalf("Failed to tag environment revision: %v", err)
 	}
 
 	log.Printf("Tagged revision %d as 'stable'", secondLatestRev.Number)
 
-	tags, err := escClient.ListEnvironmentRevisionTags(authCtx, orgName, envName)
+	tags, err := escClient.ListEnvironmentRevisionTags(authCtx, orgName, projName, envName)
 	if err != nil {
 		log.Fatalf("Failed to list environment revision tags: %v", err)
 	}

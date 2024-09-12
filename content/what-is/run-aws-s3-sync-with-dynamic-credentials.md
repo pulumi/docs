@@ -114,10 +114,10 @@ $ mkdir my-local-dir
 $ touch my-local-dir/helloWorld.txt
 ```
 
-To sync to s3, run the command using `esc run` as shown below, making sure to replace `<your-pulumi-org-name>`, `<your-environment-name>`, `<your-s3-bucket>` and `<aws-region>` with the names of your own Pulumi organization, ESC environment, your existing S3 Bucket, and AWS Region, respectively.
+To sync to s3, run the command using `esc run` as shown below, making sure to replace `<your-pulumi-org-name>`, `<your-project-name>`, `<your-environment-name>`, `<your-s3-bucket>` and `<aws-region>` with the names of your own Pulumi organization, ESC environment, your existing S3 Bucket, and AWS Region, respectively.
 
 ```bash
-$ esc run <your-pulumi-org-name>/<your-environment-name> -- aws s3 sync ./my-local-dir/ s3://<your-s3-bucket>/ --region <aws-region>
+$ esc run <your-pulumi-org-name>/<your-project-name>/<your-environment-name> -- aws s3 sync ./my-local-dir/ s3://<your-s3-bucket>/ --region <aws-region>
 ```
 
 Then validate that your output is similar to the following:

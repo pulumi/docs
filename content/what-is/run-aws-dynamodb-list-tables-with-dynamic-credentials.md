@@ -107,10 +107,10 @@ secret_key                <not set>             None    None
     region                <not set>             None    None
 ```
 
-To get the list of tables, run the command using `esc run` as shown below, making sure to replace `<your-pulumi-org-name>`, `<your-environment-name>`, and `<aws-region>` with the names of your own Pulumi organization, ESC environment, and AWS Region, respectively.
+To get the list of tables, run the command using `esc run` as shown below, making sure to replace `<your-pulumi-org-name>`, `<your-project-name>`, `<your-environment-name>`, and `<aws-region>` with the names of your own Pulumi organization, ESC environment, and AWS Region, respectively.
 
 ```bash
-$ esc run <your-pulumi-org-name>/<your-environment-name> -- aws dynamodb list-tables --region <aws-region>
+$ esc run <your-pulumi-org-name>/<your-project-name>/<your-environment-name> -- aws dynamodb list-tables --region <aws-region>
 ```
 
 Your output will vary depending on the number of tables. Example,

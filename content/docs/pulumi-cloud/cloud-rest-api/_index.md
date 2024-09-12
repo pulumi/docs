@@ -3255,12 +3255,21 @@ Kubernetes Pods should not be used directly. Instead, you may want to use a Depl
 Pulumi ESC (Environments, Secrets, and Configuration) and its associated REST API endpoints are currently in public preview.
 {{< /notes >}}
 
+### Migrating from the Preview API
+
+For the majority of cases, the new API is a drop-in replacement for the preview API and the main changes are that the route itself has changed (i.e. replace `/api/preview` with `/api/esc`) and where environment name is part of the path it should be prefixed with the project (i.e. replace `/{orgName}/{envName}` with `{orgName}/{projectName}/{envName}`).
+
+However, there are a few cases where the new API has changed the behavior of the preview API. These changes are as follows:
+
+- The [Create Environment](#create-Environment) endpoint no longer takes the environment name in the request path, it has been moved to the request body.
+- The Create Version Tag endpoint no longer takes the tag name in the request path, it has been moved to the request body.
+
 <!-- ###################################################################### -->
 
 ### List Environments available to the authenticated user.
 
 ```
-GET /api/preview/environments/{organization}
+GET /esc/environments/{organization}
 ```
 
 #### Parameters
@@ -3277,7 +3286,7 @@ curl \
   -H "Accept: application/vnd.pulumi+8" \
   -H "Content-Type: application/json" \
   -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
-  https://api.pulumi.com/api/preview/environments/{organization}
+  https://api.pulumi.com/esc/environments/{organization}
 ```
 
 #### Default response
@@ -3291,6 +3300,7 @@ Status: 200 OK
 	"environments": [
 		{
 			"organization": "{organization}",
+      "project": "my-first-project",
 			"name": "my-first-environment",
 			"created": "2023-10-10 11:28:01",
 			"modified" :"2023-10-10 12:24:03",
@@ -3303,15 +3313,21 @@ Status: 200 OK
 ### Create Environment
 
 ```
-POST /api/preview/environments/{organization}/{environment}
+POST /api/esc/environments/{organization}
 ```
+
+### Body
+
+| Key                 | Type   | In    | Description       |
+|---------------------|--------|-------|-------------------|
+| `project`           | string | path  | project name      |
+| `name`              | string | path  | environment name  |
 
 #### Parameters
 
 | Parameter           | Type   | In    | Description       |
 |---------------------|--------|-------|-------------------|
 | `organization`      | string | path  | organization name |
-| `environment`       | string | path  | environment name  |
 
 #### Example
 
@@ -3321,7 +3337,7 @@ curl \
   -H "Content-Type: application/json" \
   -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
   --request POST \
-  https://api.pulumi.com/api/preview/environments/{organization}/{environment}
+  https://api.pulumi.com/api/esc/environments/{organization}/{environment}
 ```
 
 #### Default response
@@ -3333,12 +3349,13 @@ Status: 200 OK
 ### Get Environment
 
 ```
-GET /api/preview/environments/{organization}/{environment}
+GET /api/esc/environments/{organization}/{project}/{environment}
 ```
 
 | Parameter           | Type   | In    | Description       |
 |---------------------|--------|-------|-------------------|
 | `organization`      | string | path  | organization name |
+| `project`           | string | path  | project name      |
 | `environment`       | string | path  | environment name  |
 
 #### Example
@@ -3349,7 +3366,7 @@ curl \
   -H "Content-Type: application/json" \
   -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
   --request GET \
-  https://api.pulumi.com/api/preview/environments/{organization}/{environment}
+  https://api.pulumi.com/api/esc/environments/{organization}/{project}/{environment}
 ```
 
 #### Default response
@@ -3378,12 +3395,13 @@ Status: 200 OK
 ### Update Environment
 
 ```
-PATCH /api/preview/environments/{organization}/{environment}
+PATCH /api/esc/environments/{organization}/{project}/{environment}
 ```
 
 | Parameter           | Type   | In    | Description       |
 |---------------------|--------|-------|-------------------|
 | `organization`      | string | path  | organization name |
+| `project`           | string | path  | project name      |
 | `environment`       | string | path  | environment name  |
 
 #### Example
@@ -3395,7 +3413,7 @@ curl \
   -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
   --request PATCH \
   --data '<yaml content>' \
-  https://api.pulumi.com/api/preview/environments/{organization}/{environment}
+  https://api.pulumi.com/api/esc/environments/{organization}/{project}/{environment}
 ```
 
 #### Default response
@@ -3407,12 +3425,13 @@ Status: 200 OK
 ### Delete Environment
 
 ```
-DELETE /api/preview/environments/{organization}/{environment}
+DELETE /api/esc/environments/{organization}/{project}/{environment}
 ```
 
 | Parameter           | Type   | In    | Description       |
 |---------------------|--------|-------|-------------------|
 | `organization`      | string | path  | organization name |
+| `project`           | string | path  | project name      |
 | `environment`       | string | path  | environment name  |
 
 #### Example
@@ -3423,7 +3442,7 @@ curl \
   -H "Content-Type: application/json" \
   -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
   --request DELETE \
-  https://api.pulumi.com/api/preview/environments/{organization}/{environment}
+  https://api.pulumi.com/api/esc/environments/{organization}/{project}/{environment}
 ```
 
 #### Default response
@@ -3435,12 +3454,13 @@ Status: 200 OK
 ### Open Environment
 
 ```
-POST /api/preview/environments/{organization}/{environment}/open
+POST /api/esc/environments/{organization}/{project}/{environment}/open
 ```
 
 | Parameter           | Type   | In    | Description       |
 |---------------------|--------|-------|-------------------|
 | `organization`      | string | path  | organization name |
+| `project`           | string | path  | project name      |
 | `environment`       | string | path  | environment name  |
 | `duration`          | string | query | **Optional.** open duration - A duration string is a possibly signed sequence of decimal numbers, each with optional fraction and a unit suffix, such as "300ms", "-1.5h" or "2h45m". Valid time units are "ns", "us" (or "µs"), "ms", "s", "m", "h". |
 
@@ -3452,7 +3472,7 @@ curl \
   -H "Content-Type: application/json" \
   -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
   --request POST \
-  https://api.pulumi.com/api/preview/environments/{organization}/{environment}/open
+  https://api.pulumi.com/api/esc/environments/{organization}/{project}/{environment}/open
 ```
 
 #### Default response
@@ -3471,12 +3491,13 @@ Status: 200 OK
 ### Read Open Environment
 
 ```
-GET /api/preview/environments/{organization}/{environment}/open/{openSessionID}
+GET /api/esc/environments/{organization}/{project}/{environment}/open/{openSessionID}
 ```
 
 | Parameter           | Type   | In    | Description       |
 |---------------------|--------|-------|-------------------|
 | `organization`      | string | path  | organization name |
+| `project`           | string | path  | project name      |
 | `environment`       | string | path  | environment name  |
 | `openSessionID`     | string | path  | open session id   |
 | `property`          | string | query | **Optional.** path to a specific property |
@@ -3489,7 +3510,7 @@ curl \
   -H "Content-Type: application/json" \
   -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
   --request GET \
-  https://api.pulumi.com/api/preview/environments/{organization}/{environment}/open/{openSessionID}
+  https://api.pulumi.com/api/esc/environments/{organization}/{project}/{environment}/open/{openSessionID}
 ```
 
 #### Default response

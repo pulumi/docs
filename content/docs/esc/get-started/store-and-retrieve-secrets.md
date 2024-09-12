@@ -74,22 +74,22 @@ You will notice that the value of `myPassword` is hidden from view after saving.
 To store values or update an existing value via the CLI, use the `esc env set` command as shown below, where `<org-name>` is optional and defaults to your Pulumi Cloud username:
 
 ```bash
-esc env set [<org-name>/]<environment-name> <key> <value>
+esc env set [<org-name>/]<project-name>/<environment-name> <key> <value>
 ```
 
-To demonstrate how this works, add the following simple configuration definition to your environment using the following command, making sure to replace the value of `my-dev-environment` with the name of your own environment:
+To demonstrate how this works, add the following simple configuration definition to your environment using the following command, making sure to replace the value of `my-project/dev-environment` with the name of your own environment:
 
 ```bash
-esc env set my-dev-environment myEnvironment development
-esc env set my-dev-environment myPassword demo-password-123 --secret
+esc env set my-project/dev-environment myEnvironment development
+esc env set my-project/dev-environment myPassword demo-password-123 --secret
 ```
 
 As shown above, you can specify that a value should be stored as a secret by using the `--secret` flag.
 
-Alternatively, you can directly [edit your environment file with a code editor](/docs/pulumi-cloud/esc/environments/#with-the-pulumi-esc-cli) using the following command, making sure to replace `<environment-name>` with the name of your own environment (e.g. `my-dev-environment`):
+Alternatively, you can directly [edit your environment file with a code editor](/docs/pulumi-cloud/esc/environments/#with-the-pulumi-esc-cli) using the following command, making sure to replace `<project-name>/<environment-name>` with the identifier of your own environment (e.g. `my-project/dev-environment`):
 
 ```bash
-esc env edit <environment-name>
+esc env edit <project-name>/<environment-name>
 ```
 
 Using this method enables you to add your configuration values in the same way that you would [via the console](/docs/esc/get-started/store-and-retrieve-secrets/#store-via-the-console).
@@ -117,19 +117,19 @@ Non-secret configuration values remain visible in the Table view after their cre
 The CLI has a built-in `get` command that enables you to retrieve a single value from your environment. The format of the full command looks like the following:
 
 ```bash
-esc env get [<your-org>/]<your-environment-name> <variable-key-name>
+esc env get [<your-org>/]<your-project-name>/<your-environment-name> <variable-key-name>
 ```
 
-To retrieve the value of the `myEnvironment` variable you created earlier, the command to do so would look like the following, making sure to replace the value of `my-dev-environment` with the name of your own environment:
+To retrieve the value of the `myEnvironment` variable you created earlier, the command to do so would look like the following, making sure to replace the value of `my-project/dev-environment` with the identifier of your own environment:
 
 ```bash
-esc env get my-dev-environment myEnvironment
+esc env get my-project/dev-environment myEnvironment
 ```
 
 Running this command should return the following response:
 
 ```bash
-$ esc env get my-dev-environment myEnvironment
+$ esc env get my-project/dev-environment myEnvironment
 
    Value
 
@@ -141,19 +141,19 @@ $ esc env get my-dev-environment myEnvironment
 
    Defined at
 
-  • my-dev-environment:2:8
+  • my-project/dev-environment:2:8
 ```
 
 It is also possible to retrieve all values in an environment. To do so, run the `esc env get` command without specifying a value as shown below:
 
 ```bash
-esc env get my-dev-environment
+esc env get my-project/dev-environment
 ```
 
 Running this command should return the following response:
 
 ```bash
-$ esc env get my-dev-environment
+$ esc env get my-project/dev-environment
 
    Value
 
@@ -175,7 +175,7 @@ $ esc env get my-dev-environment
 The `esc env get` command only returns statically defined plain-text values and definitions. This means that it does not return the value of any defined secrets, nor does it resolve values that are dynamically generated from a provider. To view these values, you must run the `esc env open` command as shown below. This will open the environment and resolve any secrets or dynamically retrieved values:
 
 ```bash
-$ esc env open my-dev-environment
+$ esc env open my-project/dev-environment
 
 {
   "myEnvironment": "development",

@@ -35,7 +35,7 @@ The contents of the JWT token from Pulumi is shown below:
 ```json
 {
   "aud": "<org-name>",
-  "env": "<environment-name>",
+  "env": "<project-name>/<environment-name>",
   "exp": 1699300519,
   "iat": 1699296919,
   "iss": "https://api.pulumi.com/oidc",
@@ -48,7 +48,7 @@ The contents of the JWT token from Pulumi is shown below:
 Where:
 
 * `<org-name>` is your Pulumi Cloud organization name (or your username if not part of an organization)
-* `<environment-name>` is the Pulumi Cloud environment name
+* `<project-name>/<environment-name>` is the Pulumi Cloud environment identifier
 * `<subject-identifier>` is the subject identifier of the Pulumi service requesting access
 
 ## Configure Vault JWT OIDC Auth
@@ -119,7 +119,7 @@ $ vault write auth/jwt/role/<role-name> -<<EOF
   "bound_audiences": "<org-name>",
   "role_type": "jwt",
   "policies": "<policy-name>",
-  "bound_claims": { "env": ["<environment-name>","<another-environment-name>"] },
+  "bound_claims": { "env": ["<project-name>/<environment-name>","<project-name>/<another-environment-name>"] },
   "allowed_redirect_uris": ["<vault-url>/jwt/callback"]
 }
 EOF
@@ -140,7 +140,7 @@ To configure OIDC for Pulumi ESC, create a new environment in the [Pulumi Cloud 
 
   1. Click the **Environments** link.
   2. Click the **Create environment** button.
-  3. Provide a name for your environment.
+  3. Provide a project to create your new environment in and a name for your environment.
   4. Click the  **Create environment** button.
 
       {{< video title="Creating a new Pulumi ESC environment" src="https://www.pulumi.com/uploads/create-new-environment.mp4" autoplay="true" loop="true" >}}
@@ -175,14 +175,14 @@ If you configured the Vault JWT auth method to use a different [mount path](http
 
 You can validate that your configuration is working by running either of the following:
 
-* `esc open <your-org>/<your-environment>` command of the [ESC CLI](/docs/esc-cli/)
-* `pulumi env open <your-org>/<your-environment>` command of the [Pulumi CLI](/docs/install/)
+* `esc open <your-org>/<your-project>/<your-environment>` command of the [ESC CLI](/docs/esc-cli/)
+* `pulumi env open <your-org>/<your-project>/<your-environment>` command of the [Pulumi CLI](/docs/install/)
 
-Make sure to replace the values of `<your-org>` and `<your-environment>` with the values of your Pulumi organization and environment file respectively. You should see output similar to the following:
+Make sure to replace the values of `<your-org>`, `<your-project>`, and `<your-environment>` with the values of your Pulumi organization, project, and environment file respectively. You should see output similar to the following:
 
 ```shell
 # example output
-$ esc open <my-org>/<my-environment>
+$ esc open <my-org>/<my-project>/<my-environment>
 {
   "vault": {
     "login": {
@@ -234,4 +234,4 @@ values:
             - pulumi.user.login
 ```
 
-The subject will be `pulumi:environments:pulumi.organization.login:contoso:currentEnvironment.name:development:pulumi.user.login:userLogin`. Note how the keys and values are appended along with the prefix.
+The subject will be `pulumi:environments:pulumi.organization.login:contoso:currentEnvironment.name:project/development:pulumi.user.login:userLogin`. Note how the keys and values are appended along with the prefix.

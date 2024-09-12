@@ -82,10 +82,10 @@ You can validate this configuration by [opening the environment via the ESC cons
     Your browser does not support the video tag.
 </video>
 
-Alternatively, you can validate the configuration by [opening the environment via the ESC CLI](/docs/esc/get-started/store-and-retrieve-secrets/#retrieve-via-the-cli). Run the `esc env open <your-org>/<your-environment-name>` command, making sure to replace the values of `<your-org>` and `<your-environment-name>` with the names of your Pulumi organization and ESC environment respectively.
+Alternatively, you can validate the configuration by [opening the environment via the ESC CLI](/docs/esc/get-started/store-and-retrieve-secrets/#retrieve-via-the-cli). Run the `esc env open <your-org>/<your-project-name>/<your-environment-name>` command, making sure to replace the values of `<your-org>`, `<your-project-name>`, and `<your-environment-name>` with the names of your Pulumi organization, ESC project, and environment respectively.
 
 ```bash
-$ esc env open pulumi/aws-secrets-example
+$ esc env open pulumi/demos/aws-secrets-example
 {
   "aws": {
     "login": {
@@ -179,10 +179,10 @@ You can validate this configuration by [opening the environment via the ESC cons
     Your browser does not support the video tag.
 </video>
 
-Alternatively, you can validate the configuration by [opening the environment via the ESC CLI](/docs/esc/get-started/store-and-retrieve-secrets/#retrieve-via-the-cli). Run the `esc env open <your-org>/<your-environment-name>` command, making sure to replace the values of `<your-org>` and `<your-environment-name>` with the names of your Pulumi organization and ESC environment respectively.
+Alternatively, you can validate the configuration by [opening the environment via the ESC CLI](/docs/esc/get-started/store-and-retrieve-secrets/#retrieve-via-the-cli). Run the `esc env open <your-org>/<your-project>/<your-environment-name>` command, making sure to replace the values of `<your-org>`, `<your-project-name>`, and `<your-environment-name>` with the names of your Pulumi organization, ESC project, and environment respectively.
 
 ```bash
-$ esc env open pulumi/azure-secrets-example
+$ esc env open pulumi/demos/azure-secrets-example
 {
   "azure": {
     "login": {
@@ -275,10 +275,10 @@ You can validate this configuration by [opening the environment via the ESC cons
     Your browser does not support the video tag.
 </video>
 
-Alternatively, you can validate the configuration by [opening the environment via the ESC CLI](/docs/esc/get-started/store-and-retrieve-secrets/#retrieve-via-the-cli). Run the `esc env open <your-org>/<your-environment-name>` command, making sure to replace the values of `<your-org>` and `<your-environment-name>` with the names of your Pulumi organization and ESC environment respectively.
+Alternatively, you can validate the configuration by [opening the environment via the ESC CLI](/docs/esc/get-started/store-and-retrieve-secrets/#retrieve-via-the-cli). Run the `esc env open <your-org>/<your-project-name>/<your-environment-name>` command, making sure to replace the values of `<your-org>`, `<your-project-name>`, and `<your-environment-name>` with the names of your Pulumi organization, ESC project, and environment respectively.
 
 ```bash
-$ esc env open pulumi/gcp-secrets-example
+$ esc env open pulumi/demos/gcp-secrets-example
 {
   "gcp": {
     "login": {

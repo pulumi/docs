@@ -48,10 +48,11 @@ async function main() {
     const config = new esc.Configuration({ accessToken: PULUMI_ACCESS_TOKEN });
     const client = new esc.EscApi(config);
 
+    const projName = "examples";
     const envName = "sdk-typescript-example";
 
     // Create a new environment
-    await client.createEnvironment(orgName, envName);
+    await client.createEnvironment(orgName, projName, envName);
 
     const envDef: esc.EnvironmentDefinition = {
         values: {
@@ -62,10 +63,10 @@ async function main() {
     };
 
     // Update the environment with the new definition
-    await client.updateEnvironment(orgName, envName, envDef);
+    await client.updateEnvironment(orgName, projName, envName, envDef);
 
     // Open and read the environment
-    const openEnv = await client.openAndReadEnvironment(orgName, envName);
+    const openEnv = await client.openAndReadEnvironment(orgName, projName, envName);
 
     if (!openEnv) {
         console.error("Failed to open and read the environment");
@@ -84,7 +85,7 @@ async function main() {
     }
 
     for (const env of orgEnvs.environments) {
-        console.log(`Environment: ${env.name}`);
+        console.log(`Environment: ${env.project}/${env.name}`);
     }
 }
 
@@ -114,25 +115,26 @@ async function main() {
     const config = new esc.Configuration({ accessToken: PULUMI_ACCESS_TOKEN });
     const client = new esc.EscApi(config);
 
+    const projName = "examples";
     const envName = "sdk-typescript-example";
 
     // List environment revisions
-    const revisions = await client.listEnvironmentRevisions(orgName, envName);
+    const revisions = await client.listEnvironmentRevisions(orgName, projName, envName);
 
     if (!revisions || revisions.length < 2) {
-        throw new Error(`Expected at least 2 revisions for environment ${envName}`);
+        throw new Error(`Expected at least 2 revisions for environment ${projName}/${envName}`);
     }
 
     // Get the second latest revision
     const revision = revisions[1];
-    await client.createEnvironmentRevisionTag(orgName, envName, "stable", revision.number);
+    await client.createEnvironmentRevisionTag(orgName, projName, envName, "stable", revision.number);
 
     console.log(`Tagged revision ${revision.number} as 'stable'`);
 
     // List tags
-    const tags = await client.listEnvironmentRevisionTags(orgName, envName);
+    const tags = await client.listEnvironmentRevisionTags(orgName, projName, envName);
     if (!tags || !tags.tags) {
-        throw new Error(`Expected tags for environment ${envName}`);
+        throw new Error(`Expected tags for environment ${projName}/${envName}`);
     }
 
     for (const tag of tags?.tags) {
