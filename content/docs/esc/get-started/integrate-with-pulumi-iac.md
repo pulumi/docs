@@ -119,11 +119,11 @@ values:
     myEnvironment: development
 ```
 
-From here, you will need to import your environment file into your Pulumi project. To do this, return to your `Pulumi.<your-stack-name>.yaml` file and update it to import your environment as shown below, making sure to replace the value of `<your-environment-name>` with the name of your own environment:
+From here, you will need to import your environment file into your Pulumi project. To do this, return to your `Pulumi.<your-stack-name>.yaml` file and update it to import your environment as shown below, making sure to replace the value of `<your-project-name>/<your-environment-name>` with the identifier of your own environment:
 
 ```yaml
 environment:
-  - <your-environment-name>
+  - <your-project-name>/<your-environment-name>
 ```
 
 This will import any configuration values that you have defined under the `pulumiConfig` key in your environment file and make them accessible to your Pulumi project.

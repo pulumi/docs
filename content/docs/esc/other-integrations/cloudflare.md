@@ -47,7 +47,7 @@ Use the Pulumi ESC CLI to create and configure an Environment. Alternatively, to
 esc login # if needed
 
 ## create a new ESC Environment
-ESC_ENV=my-dev-environment
+ESC_ENV=my-project/dev-environment
 esc env init ${ESC_ENV}
 ```
 
@@ -94,7 +94,7 @@ The `.dev.vars` file is located in the root of your wrangler project to define s
 Create a new ESC Environment:
 
 ```bash
-ESC_ENV=my-dev-vars-environment
+ESC_ENV=my-project/dev-vars-environment
 esc env init ${ESC_ENV}
 ```
 
@@ -143,10 +143,10 @@ There are two options for managing the `.dev.vars` definition.
 
 With Pulumi ESC you can centralize common secrets and then use Wrangler to pass them on to your Workers and other Cloudflare resources as needed:
 
-Add a new value to your `my-dev-environment` Environment:
+Add a new value to your `my-project/dev-environment` Environment:
 
 ```bash
-ESC_ENV=my-dev-environment
+ESC_ENV=my-project/dev-environment
 esc env set ${ESC_ENV} environementVariables.TOP_SECRET "aliens are real" --secret
 ```
 
@@ -200,7 +200,7 @@ Use the Pulumi ESC CLI to create and configure an Environment. Alternatively, to
 esc login # if needed
 
 ## create a new ESC Environment
-ESC_ENV=my-pulumi-environment
+ESC_ENV=my-project/pulumi-environment
 esc env init ${ESC_ENV}
 ```
 
