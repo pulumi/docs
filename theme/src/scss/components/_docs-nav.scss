@@ -1,55 +1,32 @@
 #docs-main-nav {
 
-    > ul > li {
-
-        > a {
-            @apply hidden;
-        }
-
-        > ul {
-            @apply pl-0;
-        }
-    }
-
     pulumi-docs-nav {
-        @apply text-base my-8;
+        @apply text-sm ;
 
-        ul {
-            @apply bg-white pl-3;
+        li {
+            @apply my-0.5;
+
+            &.expanded {
+                > a {
+                    @apply text-blue-800 font-semibold;
+                }
+            }
         }
 
         a {
-            @apply flex items-center justify-between px-2 py-1 rounded w-full;
+            @apply text-gray-800 rounded no-underline transition-all;
 
             &:hover {
-                @apply no-underline bg-blue-100;
-            }
+                @apply bg-blue-100 text-blue-800;
 
-            button {
-                @apply px-2 rounded;
-
-                &:hover {
-                    @apply bg-blue-300;
-                }
-
-                &:active {
-                    @apply bg-blue-200;
-                }
-
-                &::after {
-                    @apply text-blue-800 font-mono;
+                i {
+                    @apply text-blue-900;
                 }
             }
-        }
 
-        li {
-            @apply my-1;
-        }
-    }
-
-    pulumi-docs-toc {
-        h2 {
-            @apply pt-0;
+            &.active {
+                @apply bg-blue-200 text-blue-900;
+            }
         }
     }
 }

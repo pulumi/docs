@@ -29,13 +29,13 @@ helpful to be able to set this somehow in the frontmatter?) */}}
 {{ end }}
 
 {{- with index site.Menus $menuID }}
-    <pulumi-docs-nav>
-        <nav class="text-sm mt-8">
-            <ul class="list-none">
+    <nav class="text-sm mt-7 mr-2">
+        <pulumi-docs-nav>
+            <ul class="list-none pl-0">
                 {{- partial "inline/menu/walk.html" (dict "page" $page "rootMenuID" $menuID "menuEntries" .) }}
             </ul>
-        </nav>
-    </pulumi-docs-nav>
+        </pulumi-docs-nav>
+    </nav>
 {{- end }}
 
 {{- define "partials/inline/menu/walk.html" }}
@@ -56,8 +56,8 @@ helpful to be able to set this somehow in the frontmatter?) */}}
             {{- end }}
         {{- end }}
 
-        <li {{ if (and .Children (ne .Identifier $rootMenuID)) }} class="collapsed"{{ end }}>
-            <a class="text-blue-700"
+        <li {{ if (and .Children (ne .Identifier $rootMenuID)) }} class="expandable"{{ end }}>
+            <a
                 {{- range $k, $v := $attrs }}
                     {{- with $v }}
                         {{- printf " %s=%q" $k $v | safeHTMLAttr }}
@@ -65,7 +65,7 @@ helpful to be able to set this somehow in the frontmatter?) */}}
                 {{- end -}}
             >{{ $name }}</a>
             {{- with .Children }}
-                <ul class="list-none pl-3">
+                <ul class="list-none">
                     {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
                 </ul>
             {{- end }}
