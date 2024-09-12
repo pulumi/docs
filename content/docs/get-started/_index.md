@@ -19,9 +19,9 @@ aliases:
 - /docs/tour/
 ---
 
-Pulumi is an [infrastructure as code](/what-is/what-is-infrastructure-as-code/) platform that allows you to use familiar programming languages and tools to build, deploy, and manage cloud infrastructure.
+Pulumi is a modern [infrastructure as code](/what-is/what-is-infrastructure-as-code/) and [secrets management](/what-is/what-is-secrets-management/) platform that allows you to use familiar programming languages and tools to automate, secure and manage everything you run in the cloud.
 
-Pulumi is free, [open source](https://github.com/pulumi/pulumi), and optionally pairs with the [Pulumi Cloud](/docs/pulumi-cloud/) to make managing infrastructure secure, reliable, and hassle-free.
+Pulumi IaC is free, [open source](https://github.com/pulumi/pulumi), and optionally pairs with the [Pulumi Cloud](/docs/pulumi-cloud/) to make managing infrastructure secure, reliable, and hassle-free.
 
 Select one of the following options to get started:
 
@@ -33,14 +33,25 @@ Select one of the following options to get started:
     <div class="pb-4 md:pr-4 md:w-1/2">
         <a data-track="aws-get-started" href="/docs/clouds/aws/get-started/" class="tile h-full">
             <div class="block rounded shadow border border-gray-300 p-3 h-full flex flex-col">
-                <h4 class="no-anchor"><i class="fas fa-folder text-blue-400 pr-2"></i>Starter</h4>
-                <p>If you are new to Pulumi, this guide helps you install Pulumi, configure AWS, and run your first update.</p>
+                <h4 class="no-anchor"><i class="fas fa-folder text-blue-400 pr-2"></i>Pulumi IaC</h4>
+                <p>If you are new to Pulumi, this guide helps you install Pulumi IaC, configure AWS, and run your first update.</p>
                 <div class="flex flex-grow items-end">
                     <div class="btn btn-primary">Get Started</div>
                 </div>
             </div>
         </a>
     </div>
+     <div class="pb-4 md:pr-4 md:w-1/2">
+        <a data-track="esc-get-started" href="/docs/esc/get-started/" class="tile h-full">
+            <div class="block rounded shadow border border-gray-300 p-3 h-full flex flex-col">
+                <h4 class="no-anchor"><i class="fas fa-lock text-blue-400 pr-2"></i>Pulumi ESC</h4>
+                <p>This guide helps you install Pulumi ESC, create an environment and manage your first secret.</p>
+                <div class="flex flex-grow items-end">
+                    <div class="btn btn-secondary">Get Started</div>
+                </div>
+            </div>
+        </a>
+    </div>   
     <div class="pb-4 md:pr-4 md:w-1/2">
         <a data-track="aws-container-service" href="/templates/container-service/aws/" class="tile h-full">
             <div class="block rounded shadow border border-gray-300 p-3 h-full flex flex-col">
