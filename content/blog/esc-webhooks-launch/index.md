@@ -49,7 +49,6 @@ const environmentWebhook = new service.Webhook("env-webhook", {
 })
 ```
 
-
 ## Benefits of Pulumi ESC Webhooks
 
 Pulumi ESC Webhooks offer a range of benefits designed to enhance visibility, streamline workflows, and automate key processes related to your secrets and configuration management:
