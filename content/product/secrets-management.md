@@ -1,23 +1,23 @@
 ---
-title: "Pulumi ESC: Environments, Secrets, and Configuration"
+title: "Pulumi ESC: Centralized Secrets Management & Orchestration"
 layout: secrets-management
 
-meta_title: "Pulumi ESC: Environments, Secrets, and Configuration"
-meta_desc: Centralized environments, secrets, and configuration management for cloud applications and infrastructure
+meta_title: "Pulumi ESC: Centralized Secrets Management & Orchestration"
+meta_desc: Centralized secrets management & orchestration. Easily access, share, and manage secrets securely on any cloud, using your favorite programming languages.
 meta_image: "/images/product/esc-how-it-works-diagram.png"
 aliases:
     - /esc
     - /product/esc
 
-subtitle: Centralized secrets management & orchestration. Easily access, share, and manage secrets securely on any cloud, using your favorite programming languages.
+subtitle: Easily access, share, and manage secrets securely on any cloud, using your favorite programming languages.
 
 overview:
-    header: Centralized environments, secrets, and configuration management and orchestration that helps streamline operations, improve traceability, and ensure consistent security practices
+    header: A central hub to securely manage all of your environments, secrets, and configurations
     body: |
-      - **Stop secret sprawl.** Pull and sync configuration and secrets with any secrets store – including HashiCorp Vault, AWS Secrets Manager, Azure Key Vault, GCP Secret Manager, 1Password, and more – and consume in any application, tool, or CI/CD platform.  
-      - **Trust (and prove) your secrets are secure.** Every environment can be locked down with role-based access controls (RBAC) and versioned with all changes fully logged for auditing.  
+      - **Stop secret sprawl.** Pull and sync secrets and configuration with any secrets store – HashiCorp Vault, AWS Secrets Manager, Azure Key Vault, GCP Secret Manager, 1Password, and more – and consume in any application, tool, or CI/CD platform.  
+      - **Trust (and prove) your secrets are secure.** Lock down every environment with RBAC, versioning, and a full audit log of all changes.  
       - **Ditch `.env` files.** No more storing secrets in plaintext on dev computers. Developers can easily access secrets via CLI, API, Kubernetes operator, the Pulumi Cloud UI, and in-code with Typescript/Javascript, Python, and Go SDKs.
-      - **Use with or without Pulumi IaC.** Use Pulumi ESC to centrally manage your configuration and secrets independently of Pulumi IaC, or use ESC and IaC together for the convenience of storing secrets in config with a higher degree of security than using plaintext.
+      - **Use with or without Pulumi IaC.** Use Pulumi ESC independently, or use with Pulumi IaC to support storing secrets in config in a more secure way than using plaintext.
 
 screenshot:
     items:
@@ -54,7 +54,7 @@ security:
         - icon: clock
           icon_color: salmon
           title: Dynamic Secrets
-          description: Pulumi ESC provides just-in-time, short-lived credentials, making them easy to adopt as a security best practice. 
+          description: Pulumi ESC connects to cloud providers and supporting secrets stores via OpenId Connect (OIDC), allowing it to generate dynamic, short-lived secrets on demand. This ensures secure, just-in-time access and reduces the risk of long-lived credentials being compromised.
 
 features:
   - header: Centralized secrets management
@@ -68,7 +68,7 @@ features:
   - header: RBAC
     body: Role-based access controls (RBAC) makes it easy to secure your secrets and configurations by assigning permissions to users based on their role within your organization.
   - header: Dynamic secrets
-    body: Generate just-in-time, short-lived credentials that revoke access when the lease expires.
+    body: Connects to cloud providers and supporting secrets stores via OIDC to support generating just-in-time, short-lived credentials that revoke access when the lease expires.
   - header: Audit logging
     body: All actions taken on environments, secrets, or configuration values are fully logged for auditing.
   - header: Developer-friendly
