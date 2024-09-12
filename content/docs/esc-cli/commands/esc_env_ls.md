@@ -21,8 +21,8 @@ esc env ls [flags]
 
 ```
   -h, --help                  help for ls
-  -o, --organization string   Filter returned stacks to those in a specific organization
-  -p, --project string        Filter returned stacks to those in a specific project
+  -o, --organization string   Filter returned environments to those in a specific organization
+  -p, --project string        Filter returned environments to those in a specific project
 ```
 
 ## Options inherited from parent commands
