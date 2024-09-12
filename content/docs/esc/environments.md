@@ -298,7 +298,7 @@ Click Save to apply your changes immediately or Delete to remove the environment
 
 You can also use the Pulumi Cloud REST API to perform standard CRUD operations on your environments. See the [Environments section of the REST API docs](/docs/pulumi-cloud/cloud-rest-api/#environments) for details.
 
-## Using secrets providers and OIDC
+## Using secrets providers and OIDC {#using-secrets-providers-and-oidc}
 
 In addition to static and interpolated values, environments can incorporate dynamically retrieved settings and secrets from many [supported providers](/docs/pulumi-cloud/esc/providers/), including cloud providers via OpenID Connect (OIDC).
 
