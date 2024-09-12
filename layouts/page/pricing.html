@@ -73,14 +73,14 @@
                                     <div class="text-center text-xs">{{ $tier.esc_note }}</div>
                                 </div>
                                 {{ if eq $index 0 }}
-                                    <div class="flex flex-col justify-center align-center items-center text-center my-4 lg:h-14">
-                                        <pricing-cta button-class="text-white text-s bg-violet-600 border-2 border-violet-600 rounded-full py-2 px-2 hover:bg-violet-500"></pricing-cta>
+                                    <div class="flex flex-wrap flex-col justify-center align-center items-center text-center my-4 h-14 lg:h-24 xl:h-14">
+                                        <pricing-cta button-class="text-white text-s bg-violet-600 border-2 border-violet-600 rounded-lg py-2 px-2 hover:bg-violet-500"></pricing-cta>
                                     </div>
                                 {{ else }}
-                                <div class="flex justify-center items-center text-center my-4 lg:h-14">
-                                    <a href="{{ $tier.primary_cta_link}}" class="text-white text-s bg-violet-600 border-2 border-violet-600 rounded-full py-2 px-2 hover:bg-violet-500 mr-1">{{ $tier.primary_cta }}</a>
+                                <div class="flex flex-wrap justify-center items-center text-center my-4 h-14 lg:h-24 xl:h-14">
+                                    <a href="{{ $tier.primary_cta_link}}" class="text-white text-s bg-violet-600 border-2 border-violet-600 rounded-lg py-2 px-2 hover:bg-violet-500 mr-1 mb-0 lg:mb-1 xl:mb-0">{{ $tier.primary_cta }}</a>
                                     {{ if $tier.secondary_cta }}
-                                        <a href="{{ $tier.secondary_cta_link }}" class="text-violet-600 text-s border-2 border-violet-600 rounded-full py-2 px-2 hover:bg-violet-100">{{ $tier.secondary_cta }}</a>
+                                        <a href="{{ $tier.secondary_cta_link }}" class="text-violet-600 text-s border-2 border-violet-600 rounded-lg py-2 px-2 hover:bg-violet-100">{{ $tier.secondary_cta }}</a>
                                     {{ end }}
                                 </div>
                                 {{ end }}
