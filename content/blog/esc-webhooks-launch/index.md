@@ -21,7 +21,7 @@ With Pulumi ESC Webhooks, you can now receive real-time notifications and trigge
 
 Take your automation further by creating Webhooks that trigger [Pulumi Deployments](/docs/pulumi-cloud/deployments/), automatically updating your infrastructure in response to configuration changes in Pulumi ESC—without writing custom code and all within the Pulumi Cloud Console.
 
-Hierarchical configurations where one environment [imports](/docs/esc/environments/#importing-other-environments) others are fundamental to Pulumi ESC. If an environment is importing another environment, any changes made to the imported environment are also received as a Webhook configured within the current environment. The Webhook will notify you that the environment has changed, and you can call back to open the environment using the REST API, Pulumi Service Provider, Automation API, and SDK, and get the latest secrets and configuration.
+Hierarchical configurations where one environment [imports](/docs/esc/environments/#importing-other-environments) others are fundamental to Pulumi ESC. If an environment is importing another environment, any changes made to the imported environment trigger a Webhook configured within the current environment. The Webhook will notify you that the environment has changed, and you can call back to open the environment using the REST API, Pulumi Service Provider, Automation API, and SDK, and get the latest secrets and configuration.
 
 ## Getting Started with Pulumi ESC Webhooks
 
@@ -30,7 +30,7 @@ Setting up Webhooks is straightforward. You can use the Pulumi Cloud Console, th
 ### Using Pulumi Cloud Console
 
 - Navigate to the "Webhooks" tab under settings for organization-wide Webhooks or within an individual environment's top navigation bar.
-- Select your desired integration (Slack, Microsoft Teams, or generic JSON Webhooks).
+- Select your desired integration (Slack, Microsoft Teams, Pulumi Deployments, or generic JSON Webhooks).
 - Configure the Webhook details, including the events you want to trigger notifications on.
 
 <b>(Add a video demo/image)</b>
