@@ -61,4 +61,4 @@ Pulumi ESC Webhooks offer a range of benefits designed to enhance visibility, st
 
 Webhooks for Pulumi ESC equip your team with tools to improve visibility, streamline workflows, and automate key processes related to your secrets and configuration management. By integrating seamlessly with your existing communication and development tools, Pulumi ESC Webhooks empower you to automate and streamline your infrastructure management, giving you greater control and agility.
 
-Dive into our [documentation](docs/esc/webhooks/) and explore the possibilities of Pulumi ESC Webhooks! As always, share any feedback or open new issues in our [GitHub repository](https://github.com/pulumi/esc/issues/new/choose).
+Dive into our [documentation](/docs/esc/webhooks/) and explore the possibilities of Pulumi ESC Webhooks! As always, share any feedback or open new issues in our [GitHub repository](https://github.com/pulumi/esc/issues/new/choose).
