@@ -6,7 +6,7 @@
     {{ $pageContext := . }}
 
 
-    <section id="overview" class="max-w-5xl mx-auto text-center my-6 px-6">
+    <section id="overview" class="max-w-5xl mx-auto text-center mt-6 px-6">
         {{ with .Params.overview }}
             <h2>{{ .titleTop }}<br />{{ .titleBottom }}</h2>
             <p>{{ .description | markdownify }}</p>
@@ -18,7 +18,7 @@
         </div>
     </section>
 
-    <section id="console-screenshot" class="max-w-4xl mx-auto text-center relative mb-28 px-6 lg:px-0">
+    <!--<section id="console-screenshot" class="max-w-4xl mx-auto text-center relative mb-28 px-6 lg:px-0">
         <div class="shape-background pulumi-service-screenshot">
             <div class="shape-container">
                 <div class="circle-right"></div>
@@ -27,20 +27,47 @@
         </div>
 
         <img class="card mx-auto" src="/images/home/pulumi-console.svg" alt="Pulumi Service Screenshot" />
-    </section>
+    </section>-->
 
-    <section id="capabilities" class="my-28 px-6 relative">
-        <div class="shape-background pulumi-service-capabilities">
-            <div class="shape-container">
-                <div class="circle-top"></div>
-                <div class="circle-middle"></div>
-                <div class="circle-bottom"></div>
-            </div>
-        </div>
-
+    <section id="capabilities" class="mb-28 mt-16 px-6 relative">
         <div class="container mx-auto">
             <div class="card p-6 lg:p-28 bg-white">
                 {{ with .Params.capabilities }}
+                    <h2>{{ .title }}</h2>
+
+                    {{ range .items }}
+                        <h3>{{ .title }}</h3>
+                        <img src="{{ .image }}" />
+
+                        <ul class="list-none mt-6 mb-20">
+                            {{ $listLength := len .details }}
+                            {{ range $index, $item := .details }}
+                                {{ $itemClass := "border-t-2" }}
+                                {{ if eq (add $index 1) $listLength }}
+                                    {{ $itemClass = "border-t-2 border-b-2" }}
+                                {{ end }}
+
+
+                                <li class="accordion-item {{ $itemClass }} py-6">
+                                    {{ partial "accordian-header" (dict "text" $item.title) }}
+                                    <p class="mt-6">{{ $item.description | markdownify }}</p>
+
+                                    <div class="accordion-item-body-no-animation">
+                                        <p class="mt-6">{{ $item.more_info | markdownify }}</p>
+                                    </div>
+                                </li>
+                            {{ end }}
+                        </ul>
+                    {{ end }}
+                {{ end }}
+            </div>
+        </div>
+    </section>
+
+    <section id="products" class="mb-28 mt-16 px-6 relative">
+        <div class="container mx-auto">
+            <div class="card p-6 lg:p-28 bg-white">
+                {{ range $section .Params.products }}
                     <h2>{{ .title }}</h2>
 
                     {{ range .items }}

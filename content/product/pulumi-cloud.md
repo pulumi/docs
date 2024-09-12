@@ -51,6 +51,33 @@ case_studies:
           description: |
             Built a multi-cloud, Kubernetes-based platform to standardize all deployments
 
+products:
+    - section: Products
+      content:
+        - header: Manage infrastructure state, secrets, and configuration
+          image: /images/product/console-resource-graph.svg
+          details:
+            - title: Fully-managed, single source of truth
+              description: |
+                Store your infrastructure’s state for any cloud in Pulumi's secure backend, which has built-in scaling, availability, and fault tolerance.
+
+              more_info: |
+                Allow developers to safely deploy in parallel with concurrent state-locking.
+
+                Audit changes or rollback to previous versions with a [complete history](/docs/concepts/state/#checkpoints) of your state.
+
+            - title: Manage infrastructure secrets and configuration
+              description: |
+                Use built-in secrets management for encrypted data such as credentials or tokens. Store and manage collections of config in [Pulumi ESC](/product/esc) into environment groupings.
+
+              more_info: |
+                Your infrastructure [state is encrypted](/docs/concepts/state/#state-encryption) in transit and at rest.
+
+                Sensitive configurations (e.g. database passwords, cloud tokens) are [stored as secrets](/docs/concepts/secrets/).
+
+                Use Pulumi's secrets manager or integrate with AWS KMS, Azure Key Vault, Google KMS, and HashiCorp Vault.  
+
+
 capabilities:
     title: Key capabilities
     items:
