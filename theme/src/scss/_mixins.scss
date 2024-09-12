@@ -26,7 +26,7 @@
 }
 
 @mixin gradient-button {
-    @apply relative text-white bg-violet-600 border-violet-600 border-2 rounded-full cursor-pointer z-auto;
+    @apply relative text-white bg-violet-600 border-violet-600 border-2 rounded-lg cursor-pointer z-auto;
 
     &:hover {
         @apply no-underline;
@@ -41,7 +41,7 @@
         @include transition;
 
         &::before {
-            @apply absolute rounded-full bg-opacity-100 border-opacity-100;
+            @apply absolute rounded-lg bg-opacity-100 border-opacity-100;
             @include gradient-background;
             border-image-width: 2px;
             content: "";

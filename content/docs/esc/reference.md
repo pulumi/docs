@@ -54,6 +54,12 @@ values:
     # Array elements are "app.items[0]" and "app.items[1]"
     items: [ "config-a", "config-b" ]
 
+    # Path is "app.multiline"
+    # If the value needs to be a multiline value, use YAML pipe.
+    multilineValue: |
+      The quick brown fox
+      jumped over the lazy dog
+
     # Values within the environment and its imports may be referenced
     # Path is "app.settingCopy"
     settingCopy: ${app.setting}
@@ -73,6 +79,23 @@ values:
     # Path is "app.password"
     password:
       fn::secret: YQ!r24kdF7
+
+    # Multiline private key stored as a secret using YAML multiline pipe.
+    # The value will be encrypted and
+    # stored as ciphertext when the environment is saved.
+    # Path is "app.sshKey"
+    sshKey:
+      fn::secret: |
+        -----BEGIN OPENSSH PRIVATE KEY-----
+        blahblahblahblahblahblahblabhablhablahkldfldsfjdlsfdlfjdslfjlladsklfll
+        dfdsafdsadfsadsfadshblahblabhablhablahkldfldsfjdlsfdlfjdslfjlladsklfll
+        dfdsafdsadfsadsfadshblahblabhablhablahkldfldsfjdlsfdlfjdslfjlladsklfll
+        dfdsafdsadfsadsfadshblahblabhablhablahkldfldsfjdlsfdlfjdslfjlladsklfll
+        dfdsafdsadfsadsfadshblahblabhablhablahkldfldsfjdlsfdlfjdslfjlladsklfll
+        dfdsafdsadfsadsfadshblahblabhablhablahkldfldsfjdlsfdlfjdslfjlladsklfll
+        dfdsafdsadfsadsfadshblahblabhablhablahkldfldsfjdlsfdlfjdslfjlladsklfll
+        dfdsafdsadfsadsfadshblahblabhablhablahkldfldsfjdlsfdlfjdslfjlladsklfll
+        -----END OPENSSH PRIVATE KEY-----
 
     # Join array elements with the given delimiter
     # Path is "app.url"
@@ -208,8 +231,9 @@ values:
       stacks:
         k8-cluster:
           stack: k8-cluster-1/dev
-    kubeconfig:
-      fn::toJSON: ${app.k8-cluster.kubeconfig}
+  kubeconfig:
+    # The referenced stack has a stack output named "kconfig"
+    fn::toJSON: ${app.k8-cluster.kconfig}
 
   # ---------------------------------------------------------------------------------------
   # Exports -- expose configuration values to particular consumers

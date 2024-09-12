@@ -189,7 +189,7 @@ const prSettings = new pulumiservice.DeploymentSettings("prSettings", {
 
 ### Customizing Behavior with Multiple Pulumi Programs
 
-Sometimes you want your Review Stack to differ substantially from the stack that gets deployed to production. You might want to use multi-tenant development infrastructure for Review Stacks to both reduce the cost of development infrastructure, and also speed up Review Stack deployment times. Sometimes this can be accomplished with config alone, but occassionaly it can be useful to write separate Pulumi Programs for the review stack. One common pattern for this is:
+Sometimes you want your Review Stack to differ substantially from the stack that gets deployed to production. You might want to use multi-tenant development infrastructure for Review Stacks to both reduce the cost of development infrastructure, and also speed up Review Stack deployment times. Sometimes this can be accomplished with config alone, but occasionally it can be useful to write separate Pulumi Programs for the review stack. One common pattern for this is:
 
 - Production Program and Stack: the Pulumi Program that defines your complete, stand alone production (and often dev/test/staging) environment.
 - Shared Kubernetes Stack: a Pulumi Program that deploys a Kubernetes cluster, designed to be shared by all Review Stacks.

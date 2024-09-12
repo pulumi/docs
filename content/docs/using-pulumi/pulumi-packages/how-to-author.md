@@ -11,9 +11,14 @@ menu:
         weight: 2
 aliases:
 - /docs/guides/pulumi-packages/how-to-author/
+- /docs/using-pulumi/pulumi-packages/contribute-to-pulumi-registry/
 ---
 
 This how-to guide will take you step-by-step through the tasks required to author and publish a Pulumi Package. You can use this guide to create any [type of Pulumi Package](/docs/guides/pulumi-packages#types-of-pulumi-packages): a Native Provider, a provider bridged from an existing Terraform provider, or a Component. This guide assumes you're using GitHub to host your package's source code and GitHub Actions to publish various parts of your package.
+
+{{% notes type="info" %}}
+If you are a cloud or SaaS provider interested in publishing a provider or component, please [contact us to start publishing to Pulumi Registry](/contact/?form=registry) to reach out partners team.
+{{% /notes %}}
 
 ## Prerequisites
 
@@ -37,6 +42,10 @@ To get started, click the link for the boilerplate repository template that you 
   - **Python:** [`pulumi/pulumi-component-provider-py-boilerplate`](https://github.com/pulumi/pulumi-component-provider-py-boilerplate)
   - **TypeScript:** [`pulumi/pulumi-component-provider-ts-boilerplate`](https://github.com/pulumi/pulumi-component-provider-ts-boilerplate)
   - **C#:** a template repository is coming soon
+  
+{{% notes type="info" %}}
+If you are considering a bridged Terraform provider, take a look at [`terraform-provider`](/registry/packages/terraform-provider) first. [`terraform-provider`](/registry/packages/terraform-provider) provides a fast turn-key experience in exchange for less customization then [`pulumi/pulumi-tf-provider-boilerplate`](https://github.com/pulumi/pulumi-tf-provider-boilerplate).
+{{% /notes %}}
 
 ### Name your repository
 

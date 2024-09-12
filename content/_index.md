@@ -1,50 +1,54 @@
 ---
-title: Pulumi - Infrastructure as Code in any Programming Language
-meta_desc: Pulumi's open source infrastructure as code SDK enables you to create, deploy, and manage infrastructure on any cloud, using your favorite languages.
+title: Pulumi - Infrastructure as Code, Secrets Management, and AI
+meta_desc: Pulumi is an infrastructure management platform to automate through infrastructure as code, secure with secrets management, and manage infrastructure with AI.
 
 include_organization_schema: true
 
 hero:
-  title: [ "Infrastructure as Code", "in Any Programming Language" ]
+  title: [ "Automate, Secure, and Manage", "Everything You Run in the Cloud" ]
   description: |
-    Gain 10x better scale, more productivity, and faster time to market.
-  cta_text: Get Started
+    Modern Infrastructure as code and secrets management. <br /> Unite your development, infrastructure, and security teams.
+  cta_text: Get Started for Free
   cta_link: /docs/get-started/
-  secondary_cta_text: Talk to a human
+  secondary_cta_text: Contact Sales
   secondary_cta_link: /contact/?form=sales
 
+pillars:
+    items:
+        - icon: gear
+          icon_color: purple
+          title: Automate
+          description: Infrastructure as code, powered by the industry’s best languages and AIs, helps teams provision, automate, and evolve cloud infrastructure.
+        - icon: shield
+          icon_color: yellow
+          title: Secure
+          description: Config and secrets management built for engineers by engineers to tame sprawl at scale and help teams ensure automatic security.
+        - icon: guage
+          icon_color: salmon
+          title: Manage
+          description: Gain security, compliance, and cost insights into the entirety of an organization’s cloud assets and automatically remediate issues.
+
 code_faster:
-  title: Build and ship faster using<br/>open source infrastructure as code
+  title: Ship faster with <br/> infrastructure as code in any programming language
   description: |
     Author infrastructure code using programming languages you know and love. Write statements to define infrastructure using your IDE with autocomplete, type checking, and documentation.
 
-ai:
-  title: Code on demand with Pulumi AI
-  image: /images/home/ai-graphic.svg
-  alt: AI prompted to 'Give me an AWS static website behind a CloudFront CDN' and outputting Pulumi code
+insights:
+  title: Drive security and compliance through AI
+  image: /images/solutions/ai/ai_save_cost.svg
+  alt: Diagram demonstrating how Pulumi Insights drives costs, security, and compliance.
   description: |
-    Want help writing infrastructure code? Use Pulumi AI to generate code for your desired infrastructure – all through natural language commands.
-
-    Ask Pulumi AI to iterate on your code to make changes and add new resources.
-
-embed:
-  title: Build productive platforms for both developers and operators
-  image: /blog/developer-portal-platform-teams/platform-teams.png
-  alt: a flowchart with arrows going from Automation API program to Infrasctucture as Code programs to Pulumi Engine deploys stacks
-  description: |
-    Internal developer portals (IDPs) enable your developers to quickly provision security-compliant infrastructure, boost productivity with pre-configured architectures and automate testing and deployments, adhering to organizational standards.
-
-    Pulumi’s infrastructure and policy as code engine fosters collaboration between your developers, security, and operation teams through common, popular programming languages.
+    Enforce compliance and security, understand cloud usage, and discover cost savings to drive better efficiency, security, and reliability across all cloud assets.
 
 secrets:
-  title: Manage configuration and secrets with modular Environments
-  image: /blog/environments-secrets-configurations-management/esc.gif
+  title: Centralize and secure your secrets management
+  image: /images/product/esc-diagram-octopus.svg
   alt: a screenshot of Pulumi ESC
   description: |
-    Easy-to-use single source of truth for all configurations with guardrails. Seamlessly adopt short-lived dynamic secrets. Never have downtime over changed configurations because you can change once and have it updated everywhere. Enforce least-privileged access through role-based access controls.
+    Easily access, share, and manage environments, secrets, and configurations securely on any cloud using your favorite programming languages. Pull and sync with any secrets store, and consume in any application, tool, or CI/CD platform.
 
 customer_logos:
-  title: Trusted by 2,700+ cloud innovators
+  title: Trusted by over 3,000 innovative companies
   logos:
     - name: bmw
       link: /case-studies/
@@ -62,18 +66,18 @@ customer_logos:
       link: /case-studies/
     - name: deloitte
       link: /case-studies/
-    - name: crunchyroll
-      link: /case-studies/
-    - name: xai
-      link: /case-studies/
     - name: stokespace
       link: /case-studies/
     - name: univision
       link: /case-studies/
-    - name: wmg
-      link: /case-studies/
     - name: washington-trust
       link: /case-studies/
+    - name: kyruus
+      link: /case-studies/
+    - name: modular-ai
+      link: /case-studies/
+    - name: korber
+      link: /case-studies/    
     - name: lemonade
       link: /case-studies/
     - name: pinecone
@@ -137,13 +141,6 @@ get_started:
       link: https://twitter.com/BryanMigliorisi/status/1450123026901651460
       text: |
         There is no way around the fact that devops is complicated but @PulumiCorp is a game changer for me.  Blows away CloudForamtion, TerraForm, CDK, etc.
-    -
-      source: twitter
-      username: "@krangarajan"
-      avatar: https://pbs.twimg.com/profile_images/837774934805925888/I51_kI-H_400x400.jpg
-      link: https://twitter.com/krangarajan/status/1580618068203479040
-      text: |
-        Continuing on my thread about @PulumiCorp from a while ago: holy shit I am a convert. I needed to setup a staging environment that was mostly identical to prod, and once I trued up our Pulumi stack with AWS, it took *minutes* to do this. How have I lived without this until now?
     -
       source: twitter
       username: "@Vetium"
@@ -241,6 +238,6 @@ get_started:
 
         Managed to automate deploying a website created with said builder with @PulumiCorp
 
-  title: Built by engineers for engineers. Open source.
-  description: "[Join us](/community) in the community, and let’s build together."
+  title: Open source. Built by engineers for engineers.
+  description: "[Join us](/community) in the Pulumi community, and let’s build together."
 ---

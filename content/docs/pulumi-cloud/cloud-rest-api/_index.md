@@ -3193,6 +3193,62 @@ Status: 200 OK
 ```
 <!-- ###################################################################### -->
 
+## Policy Results
+
+### List Policy Violations
+
+```
+GET /api/orgs/{organization}/policyresults/violations
+```
+
+#### Parameters
+
+| Parameter           | Type   | In    | Description                                                                                                  |
+|---------------------|--------|-------|--------------------------------------------------------------------------------------------------------------|
+| `organization`      | string | path  | organization name                                                                                            |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  https://api.pulumi.com/api/orgs/{organization}/policyresults/violations
+```
+
+#### Default response
+
+```
+Status: 200 OK
+```
+
+```
+{
+	"continuationToken": "",
+	"policyViolations": [
+		{
+			"level": "advisory",
+			"message": "Checks that Kubernetes Pods are not being used directly.
+Kubernetes Pods should not be used directly. Instead, you may want to use a Deployment, ReplicaSet or Job.
+",
+			"observedAt": "2024-08-20T20:59:41Z",
+			"policyName": "pods-are-prohibited",
+			"policyPack": "kubernetes",
+			"policyPackTag": "0.0.2",
+			"projectName": "pulumi-k8s-test",
+			"resourceName": "pod-test",
+			"resourceType": "kubernetes:core/v1:Pod",
+			"resourceURN": "urn:pulumi:dev::pulumi-k8s-test::kubernetes:core/v1:Pod::pod-test",
+			"stackName": "dev",
+			"updateVersion": 7
+		}
+	]
+}
+```
+
+<!-- ###################################################################### -->
+
 ## Environments
 
 {{< notes >}}
