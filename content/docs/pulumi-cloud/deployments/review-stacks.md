@@ -5,6 +5,11 @@ title: "Review Stacks"
 h1: "Review Stacks"
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
+  cloud:
+    name: Review Stacks
+    parent: pulumi-cloud-deployments
+    weight: 5
+    identifier: pulumi-cloud-deployments-review-stacks
   pulumicloud:
     parent: deployments
     weight: 2

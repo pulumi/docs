@@ -5,6 +5,11 @@ title: "REST API"
 h1: Pulumi Deployments REST API
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
+  cloud:
+    name: REST API
+    parent: pulumi-cloud-deployments
+    weight: 7
+    identifier: pulumi-cloud-deployments-api
   pulumicloud:
     parent: deployments
     weight: 4

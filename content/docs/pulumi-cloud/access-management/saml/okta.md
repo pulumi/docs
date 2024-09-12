@@ -6,6 +6,11 @@ title: Okta
 h1: "SAML: Configuring Okta"
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
+  cloud:
+    name: Okta
+    parent: pulumi-cloud-access-management-saml
+    weight: 5
+    identifier: pulumi-cloud-access-management-saml-okta
   pulumicloud:
     parent: saml
     weight: 2

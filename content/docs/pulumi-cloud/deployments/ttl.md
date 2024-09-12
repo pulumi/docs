@@ -5,6 +5,11 @@ title: "Time-to-Live Stacks"
 h1: "Time-to-Live Stacks"
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
+  cloud:
+    name: Time-to-Live Stacks
+    parent: pulumi-cloud-deployments
+    weight: 6
+    identifier: pulumi-cloud-deployments-ttl
   pulumicloud:
     parent: deployments
     weight: 3

@@ -5,6 +5,11 @@ title: Insights
 h1: Pulumi Insights
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
+  cloud:
+    name: Insights
+    parent: cloud-home
+    identifier: pulumi-cloud-insights
+    weight: 4
   pulumicloud:
     identifier: insights
     weight: 7

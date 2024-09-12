@@ -6,10 +6,14 @@ title: OneLogin
 h1: "SAML: Configuring OneLogin"
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
+  cloud:
+    name: OneLogin
+    parent: pulumi-cloud-access-management-saml
+    weight: 3
+    identifier: pulumi-cloud-access-management-saml-onelogin
   pulumicloud:
     parent: saml
     weight: 2
-
 aliases:
 - /docs/reference/service/saml-onelogin/
 - /docs/console/accounts/saml/onelogin/

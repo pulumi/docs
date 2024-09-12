@@ -4,6 +4,11 @@ title_tag: Get started with the Pulumi Backstage Plugin
 h1: Building Developer Portals with Pulumi and Backstage
 meta_desc: Learn how to get the Pulumi Backstage Plugin up and running!
 menu:
+  cloud:
+    name: Pulumi Backstage Plugin
+    parent: pulumi-cloud-developer-portals
+    weight: 3
+    identifier: pulumi-cloud-developer-portals-backstage
   pulumicloud:
     weight: 3
     parent: developer-portals

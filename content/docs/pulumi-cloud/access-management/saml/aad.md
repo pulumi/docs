@@ -6,10 +6,14 @@ title: Azure AD
 h1: "SAML: Configuring Azure Active Directory"
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
+  cloud:
+    name: Azure AD
+    parent: pulumi-cloud-access-management-saml
+    weight: 3
+    identifier: pulumi-cloud-access-management-saml-aad
   pulumicloud:
-      parent: saml
-      weight: 2
-
+    parent: saml
+    weight: 2
 aliases:
 - /docs/reference/service/saml-aad/
 - /docs/console/accounts/saml/aad/

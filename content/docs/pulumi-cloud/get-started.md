@@ -6,6 +6,7 @@ menu:
         name: Get started
         parent: cloud-home
         weight: 1
+        identifier: pulumi-cloud-get-started
 ---
 
 This page does not yet exist.

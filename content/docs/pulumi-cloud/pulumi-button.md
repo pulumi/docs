@@ -5,6 +5,11 @@ title: Deploy with Pulumi Button
 h1: Deploy with Pulumi Button
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
+  cloud:
+    name: Deploy with Pulumi Button
+    parent: cloud-home
+    weight: 8
+    identifier: pulumi-cloud-pulumi-button
   pulumicloud:
     weight: 10
 aliases:

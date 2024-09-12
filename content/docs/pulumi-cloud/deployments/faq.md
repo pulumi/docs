@@ -5,6 +5,11 @@ title: FAQ
 h1: Pulumi Deployments FAQ
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
+  cloud:
+    name: FAQ
+    parent: pulumi-cloud-deployments
+    weight: 9
+    identifier: pulumi-cloud-deployments-faq
   pulumicloud:
     parent: deployments
     weight: 6

@@ -3,6 +3,11 @@ title: Get started
 title_tag: Get started with Pulumi Deployments
 meta_desc: Here is a placeholder meta description of between 50 and 150 characters.
 menu:
+  cloud:
+    name: Get started
+    parent: pulumi-cloud-deployments
+    weight: 1
+    identifier: pulumi-cloud-deployments-get-started
   pulumicloud:
     parent: deployments
     weight: 1

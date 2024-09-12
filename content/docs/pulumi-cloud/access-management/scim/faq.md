@@ -5,10 +5,15 @@ title: FAQ
 h1: Pulumi Cloud SCIM FAQ
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    pulumicloud:
-        identifier: faq-scim
-        parent: scim
-        weight: 4
+  cloud:
+    name: FAQ
+    parent: pulumi-cloud-access-management-scim
+    weight: 4
+    identifier: pulumi-cloud-access-management-scim-faq
+  pulumicloud:
+    identifier: faq-scim
+    parent: scim
+    weight: 4
 aliases:
   - /docs/guides/scim/faq/
 ---

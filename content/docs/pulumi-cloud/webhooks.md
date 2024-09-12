@@ -5,6 +5,11 @@ title: "Webhooks"
 h1: Pulumi Cloud Webhooks
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
+  cloud:
+    name: Webhooks
+    parent: cloud-home
+    weight: 6
+    identifier: pulumi-cloud-webhooks
   pulumicloud:
     weight: 9
 aliases:

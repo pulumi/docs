@@ -5,10 +5,15 @@ title: Azure AD
 h1: "SCIM: Configuring Azure Active Directory"
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    pulumicloud:
-        identifier: azuread-scim
-        parent: scim
-        weight: 1
+  cloud:
+    name: Azure AD
+    parent: pulumi-cloud-access-management-scim
+    weight: 1
+    identifier: pulumi-cloud-access-management-scim-azuread
+  pulumicloud:
+    identifier: azuread-scim
+    parent: scim
+    weight: 1
 aliases:
   - /docs/guides/scim/azuread/
 ---

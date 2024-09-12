@@ -4,6 +4,11 @@ title_tag: Developer portals
 h1: Building Developer Portals with Pulumi
 meta_desc: High-level summary of how Pulumi can be used with internal developer portals.
 menu:
+  cloud:
+    name: Developer Portals
+    parent: cloud-home
+    weight: 7
+    identifier: pulumi-cloud-developer-portals
   pulumicloud:
     weight: 6
     identifier: developer-portals

@@ -5,6 +5,11 @@ h1: "Drift Detection"
 meta_desc: Track changes in your cloud infrastructure compared to your Pulumi state.
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
+  cloud:
+    name: Drift Detection
+    parent: pulumi-cloud-deployments
+    weight: 4
+    identifier: pulumi-cloud-deployments-drift
   pulumicloud:
     parent: deployments
     weight: 2
