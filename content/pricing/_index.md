@@ -66,7 +66,7 @@ tiers:
                   - SAML/SSO
                   - Secrets versioning
                   - Audit logs
-                  - Enterprise support available
+                  - 24x7 support available
             - title: Business Critical
               subtitle: Advanced security, compliance, and hosting for mission-critical needs.
               iac_price: Custom
