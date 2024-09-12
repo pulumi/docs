@@ -14,7 +14,15 @@
                     <h1>{{ .Title }}</h1>
                     <div class="h1-gradient"></div>
                 </div>
-                {{ if .Params.meta_image }}
+                {{ if .Params.video }}
+                    <div class="shadow-sm border border-gray-300 rounded overflow-hidden">
+                        {{ if .Params.video.url }}
+                            {{ partial "video" (dict "url" .Params.video.url "title" (default .Title .Params.video.title)) }}
+                        {{ else if .Params.video.youtube }}
+                            {{ partial "youtube" (dict "id" .Params.video.youtube "title" (default .Title .Params.video.title)) }}
+                        {{ end }}
+                    </div>
+                {{ else if .Params.meta_image }}
                     <div>
                         <img class="shadow-sm border border-gray-300 rounded" src="./{{ .Params.meta_image }}">
                     </div>
@@ -25,7 +33,7 @@
                 {{ if .Params.youll_learn }}
                     <div class="flex flex-col lg:flex-row my-8">
                         <div class="">
-                            <h4 class="mb-4">In this tutorial, you'll learn:</h2>
+                            <h2 class="mb-4">In this tutorial, you'll learn:</h2>
                             <ul class="list-none p-0">
                                 {{ range .Params.youll_learn }}
                                     <li>
@@ -40,7 +48,7 @@
                 {{ if .Params.prereqs }}
                     <div class="flex flex-col lg:flex-row my-8">
                         <div class="">
-                            <h4 class="mb-4">Prerequisites:</h4>
+                            <h2 class="mb-4">Prerequisites:</h2>
                             <ul class="list-none p-0">
                                 {{ range .Params.prereqs }}
                                     <li>

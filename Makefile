@@ -152,3 +152,8 @@ deploy-dev-stack:
 .PHONY: destroy-dev-stack
 destroy-dev-stack:
 	./scripts/destroy-dev-stack.sh
+
+.PHONY: generate-compliance-pages
+generate-compliance-pages:
+	node scripts/aws-compliance-scraper/scrape.js
+	./scripts/content/generate-compliance-pages.sh

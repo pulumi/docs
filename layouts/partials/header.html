@@ -7,51 +7,53 @@
     </div>
 {{ else }}
     <nav class="top-nav-bar transition-all">
-        <div class="top-nav-container lg:container lg:px-4 justify-end">
+        <div class="top-nav-container lg:container lg:px-4 flex-wrap justify-end">
             {{ partial "banner" . }}
-            <ul class="hidden w-full lg:flex justify-end items-center order-first lg:order-last">
-                <li class="github-widget mr-8">
-                    <a
-                        data-track="header-github-pulumi"
-                        class="github-button"
-                        href="https://github.com/pulumi/pulumi"
-                        data-size="small"
-                        data-show-count="true"
-                        aria-label="Star pulumi/pulumi on GitHub"
-                        >Star</a
-                    >
-                </li>
-                <li class="mr-8">
-                    <a data-track="header-slack" href="https://slack.pulumi.com/" target="_blank">
-                        <i class="fab fa-slack"></i>
-                        Slack
-                    </a>
-                </li>
-                <li class="mr-8">
-                    <a data-track="header-docs" href="/docs/">
-                        <i class="fas fa-book mr-0.5"></i>
-                        Docs
-                    </a>
-                </li>
-                <li class="mr-8">
-                    <a data-track="header-registry" href="/registry/">
-                        <i class="fas fa-archive mr-0.5"></i>
-                        Registry
-                    </a>
-                </li>
-                <li class="mr-8">
-                    <a data-track="header-ai" href="/ai">
-                        <i class="fas fa-robot mr-0.5"></i>
-                        Pulumi AI
-                    </a>
-                </li>
-                <li>
-                    <a data-track="header-console" href="https://app.pulumi.com/" target="_blank">
-                        <i class="fas fa-user-circle"></i>
-                        {{ partial "top-nav-user-toggle" }}
-                    </a>
-                </li>
-            </ul>
+            <div class="w-full p-4">
+                <ul class="hidden w-full lg:flex justify-end items-center order-first lg:order-last">
+                    <li class="github-widget mr-8">
+                        <a
+                            data-track="header-github-pulumi"
+                            class="github-button"
+                            href="https://github.com/pulumi/pulumi"
+                            data-size="small"
+                            data-show-count="true"
+                            aria-label="Star pulumi/pulumi on GitHub"
+                            >Star</a
+                        >
+                    </li>
+                    <li class="mr-8">
+                        <a data-track="header-slack" href="https://slack.pulumi.com/" target="_blank">
+                            <i class="fab fa-slack"></i>
+                            Slack
+                        </a>
+                    </li>
+                    <li class="mr-8">
+                        <a data-track="header-docs" href="/docs/">
+                            <i class="fas fa-book mr-0.5"></i>
+                            Docs
+                        </a>
+                    </li>
+                    <li class="mr-8">
+                        <a data-track="header-registry" href="/registry/">
+                            <i class="fas fa-archive mr-0.5"></i>
+                            Registry
+                        </a>
+                    </li>
+                    <li class="mr-8">
+                        <a data-track="header-ai" href="/ai">
+                            <i class="fas fa-robot mr-0.5"></i>
+                            Pulumi AI
+                        </a>
+                    </li>
+                    <li>
+                        <a data-track="header-console" href="https://app.pulumi.com/" target="_blank">
+                            <i class="fas fa-user-circle"></i>
+                            {{ partial "top-nav-user-toggle" }}
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
 
@@ -67,21 +69,30 @@
                     </div>
                     <ul class="desktop-menu">
                         <li class="header-nav-item-drop-down">
-                            <span class="dropdown-title">Product</span>
+                            <span class="dropdown-title">Products</span>
                             <span class="dropdown-menu-caret"></span>
                             <div class="header-nav-drop-down-menu product">
                                 <ul>
                                     <div>
-                                        <div class="header-nav-drop-down-heading">Product</div>
-                                        <div class="header-nav-drop-down-sub-heading ">Learn about the Pulumi platform and its features</div>
+                                        <div class="header-nav-drop-down-heading"></div>
+                                        <div class="header-nav-drop-down-heading-text w-min">Products</div>
                                     </div>
-                                    <div class="header-nav-two-col-drop-down">
+                                    <div class="header-nav-two-col-drop-down mb-4">
                                         <li>
                                             <div class="list-title">
-                                                <a href="/product/">
-                                                    <i class="fas fa-folder fa-fw"></i>
-                                                    Pulumi Overview
+                                                <a href="/product/infrastructure-as-code/">
+                                                    <i class="fas fa-code fa-fw"></i>
+                                                    Pulumi IaC
                                                     <div class="list-sub-title">Infrastructure as code for engineers in Node.js, Python, Go, .NET, Java, and YAML</div>
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="list-title">
+                                                <a href="/product/esc/">
+                                                    <i class="fas fa-key fa-fw"></i>
+                                                    Pulumi ESC
+                                                    <div class="list-sub-title">Environments, Secrets and Configuration Management</div>
                                                 </a>
                                             </div>
                                         </li>
@@ -95,56 +106,31 @@
                                             </div>
                                         </li>
                                         <li>
-                                            <div class="list-title">
-                                                <a href="/docs/languages-sdks/">
-                                                    <i class="fas fa-database fa-fw"></i>
-                                                    SDK & Engine
-                                                    <div class="list-sub-title">Provision and manage infrastructure on any cloud interactively with a CLI</div>
-                                                </a>
-                                            </div>
+                                            <!-- This empty list item is a hack to give the text of the above
+                                            item something to wrap against so it only takes up half the menu -->
                                         </li>
+                                    </div>
+                                    <div>
+                                        <div class="header-nav-drop-down-heading"></div>
+                                        <div class="header-nav-drop-down-heading-text w-min">Key Capabilities</div>
+                                    </div>
+                                    <div class="header-nav-two-col-drop-down mb-4">
                                         <li>
                                             <div class="list-title">
-                                                <a href="/product/esc/">
-                                                    <i class="fas fa-cog fa-fw"></i>
-                                                    Pulumi ESC
-                                                    <div class="list-sub-title">Environments, Secrets and Configuration Management</div>
-                                                </a>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="list-title">
-                                                <a href="/automation/">
-                                                    <i class="fas fa-cog fa-fw"></i>
-                                                    Automation API
-                                                    <div class="list-sub-title">Provision and manage cloud infrastructure on any cloud with a programmatic interface</div>
+                                                <a href="/product/copilot/">
+                                                    <i class="fas fa-robot fa-fw"></i>
+                                                    Pulumi Copilot
+                                                    <div class="list-sub-title">Generative AI-powered intelligent cloud management
+                                                    </div>
                                                 </a>
                                             </div>
                                         </li>
                                         <li>
                                             <div class="list-title">
                                                 <a href="/crossguard/">
-                                                    <i class="fas fa-file-code fa-fw"></i>
-                                                    Policy as Code
+                                                    <i class="fas fa-shield-alt fa-fw"></i>
+                                                    Pulumi CrossGuard
                                                     <div class="list-sub-title">Enforce guardrails for security and compliance using policies in standard languages</div>
-                                                </a>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="list-title">
-                                                <a href="/product/internal-developer-platforms/">
-                                                    <i class="fas fa-users fa-fw"></i>
-                                                    Pulumi for Platform Teams
-                                                    <div class="list-sub-title">Internal developer platform in a box. Accelerate productivity and enforce compliance.</div>
-                                                </a>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="list-title">
-                                                <a href="/product/pulumi-insights/">
-                                                    <i class="fas fa-eye fa-fw"></i>
-                                                    Pulumi Insights
-                                                    <div class="list-sub-title">Author infrastructure as code faster through AI. Search and analyze anything in any cloud.</div>
                                                 </a>
                                             </div>
                                         </li>
@@ -159,14 +145,20 @@
                                         </li>
                                         <li>
                                             <div class="list-title">
-                                                <a href="/product/copilot/">
-                                                    <i class="fas fa-robot fa-fw"></i>
-                                                    Pulumi Copilot
-                                                    <div class="list-sub-title">Generative AI-powered intelligent cloud management
-                                                    </div>
+                                                <a href="/product/pulumi-insights/">
+                                                    <span class="mr-2">
+                                                        <img src="/icons/magnifying-glass.svg" class="inline opacity-90" />
+                                                    </span>
+                                                    Pulumi Insights
+                                                    <div class="list-sub-title">Author infrastructure as code faster through AI. Search and analyze anything in any cloud.</div>
                                                 </a>
                                             </div>
                                         </li>
+                                    </div>
+                                    <div>
+                                        <div class="header-nav-drop-down-heading"></div>
+                                    </div>
+                                    <div class="header-nav-two-col-drop-down">
                                         <li>
                                             <div class="list-title">
                                                 <a href="/request-a-demo/">
@@ -178,21 +170,17 @@
                                         </li>
                                         <li>
                                             <!-- This empty list item is a hack to give the text of the above
-                                        item something to wrap against so it only takes up half the menu -->
+                                            item something to wrap against so it only takes up half the menu -->
                                         </li>
                                     </div>
                                 </ul>
                             </div>
                         </li>
                         <li class="header-nav-item-drop-down">
-                            <span class="dropdown-title whitespace-nowrap">Why Pulumi?</span>
+                            <span class="dropdown-title whitespace-nowrap">Solutions</span>
                             <span class="dropdown-menu-caret"></span>
                             <div class="header-nav-drop-down-menu">
                                 <ul>
-                                    <div>
-                                        <div class="header-nav-drop-down-heading">Why Pulumi?</div>
-                                        <div class="header-nav-drop-down-sub-heading ">Learn why engineers and companies prefer Pulumi</div>
-                                    </div>
                                     <div class="header-nav-one-col-drop-down">
                                         <li>
                                             <div class="list-title">
@@ -215,9 +203,18 @@
                                         <li>
                                             <div class="list-title">
                                                 <a href="/product/internal-developer-platforms/">
-                                                    <i class="fas fa-book-open fa-fw"></i>
-                                                    Platform Engineering
+                                                    <i class="fas fa-users fa-fw"></i>
+                                                    Pulumi for Platform Engineering
                                                     <div class="list-sub-title">Build and scale internal developer platforms</div>
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="list-title">
+                                                <a href="/solutions/ai/">
+                                                    <i class="fas fa-robot fa-fw"></i>
+                                                    Pulumi for AI
+                                                    <div class="list-sub-title">Discover, learn, and build infrastructure as code faster with AI</div>
                                                 </a>
                                             </div>
                                         </li>
@@ -263,10 +260,6 @@
                             <span class="dropdown-menu-caret"></span>
                             <div class="header-nav-drop-down-menu learn">
                                 <ul>
-                                    <div>
-                                        <div class="header-nav-drop-down-heading">Learn</div>
-                                        <div class="header-nav-drop-down-sub-heading">Find tutorials, how-to guides, and resources to deepen your Pulumi knowledge</div>
-                                    </div>
                                     <div class="header-nav-two-col-drop-down">
                                         <li>
                                             <div class="list-title">
@@ -320,7 +313,7 @@
                                         <li>
                                             <div class="list-title">
                                                 <a href="/resources#upcoming">
-                                                    <i class="fas fa-users fa-fw"></i>
+                                                    <i class="fas fa-calendar fa-fw"></i>
                                                     Events and Workshops
                                                     <div class="list-sub-title">Register for upcoming sessions, or watch past sessions on-demand</div>
                                                 </a>
@@ -357,6 +350,52 @@
                                 </ul>
                             </div>
                         </li>
+                        <li class="header-nav-item-drop-down">
+                            <span class="dropdown-title whitespace-nowrap">Company</span>
+                            <span class="dropdown-menu-caret"></span>
+                            <div class="header-nav-drop-down-menu company">
+                                <ul>
+                                    <div class="header-nav-one-col-drop-down min-w-40">
+                                        <li>
+                                            <div class="list-title">
+                                                <a href="/about/">
+                                                    <i class="fas fa-quote-left fa-fw"></i>
+                                                    About us
+                                                    <div class="list-sub-title">Our purpose and values</div>
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="list-title">
+                                                <a href="/careers/">
+                                                    <i class="fas fa-briefcase fa-fw"></i>
+                                                    Careers
+                                                    <div class="list-sub-title">Come work for Pulumi</div>
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="list-title">
+                                                <a href="/about/newsroom/">
+                                                    <i class="fas fa-book-open fa-fw"></i>
+                                                    Newsroom
+                                                    <div class="list-sub-title">Pulumi in the news</div>
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="list-title">
+                                                <a href="/awards/">
+                                                    <i class="fas fa-trophy fa-fw"></i>
+                                                    Awards
+                                                    <div class="list-sub-title">Recognition from press and analysts</div>
+                                                </a>
+                                            </div>
+                                        </li>
+                                    </div>
+                                </ul>
+                            </div>
+                        </li>
                     </ul>
 
                     <input class="mobile-menu-toggle" type="checkbox" id="mobile-menu" name="mobile-menu" />
@@ -376,35 +415,39 @@
                                 <label id="product-menu-label" for="product-mobile-menu" class="mobile-menu-heading">Product<span class="dropdown-menu-caret"></span></label>
                                 <hr />
                                 <div class="mobile-menu-subitems-product">
+                                    <div class="mobile-menu-sub-heading mx-5">
+                                        <div>Products</div>
+                                    </div>
                                     <li>
-                                        <a href="/product/"> <i class="fas fa-folder fa-fw"></i> Pulumi Overview </a>
+                                        <a href="/product/infrastructure-as-code/"> <i class="fas fa-code fa-fw"></i> Pulumi IaC </a>
                                     </li>
                                     <li>
-                                        <a href="/docs/languages-sdks/"> <i class="fas fa-database fa-fw"></i> SDK & Engine </a>
+                                        <a href="/product/esc/"> <i class="fas fa-key fa-fw"></i> Pulumi ESC </a>
                                     </li>
                                     <li>
-                                        <a href="/automation/"> <i class="fas fa-cog fa-fw"></i> Automation API </a>
+                                        <a href="/product/pulumi-cloud/"> <i class="fas fa-user-cog fa-fw"></i> Pulumi Cloud </a>
+                                    </li>
+                                    <div class="mobile-menu-sub-heading mx-5 mt-2">
+                                        <div>Key Capabilities</div>
+                                    </div>
+                                    <li>
+                                        <a href="/product/copilot/"> <i class="fas fa-robot fa-fw"></i> Pulumi Copilot </a>
+                                    </li>
+                                    <li>
+                                        <a href="/crossguard/"> <i class="fas fa-shield-alt fa-fw"></i> Pulumi CrossGuard </a>
                                     </li>
                                     <li>
                                         <a href="/product/pulumi-deployments/"> <i class="fas fa-rocket fa-fw"></i> Pulumi Deployments </a>
                                     </li>
                                     <li>
-                                        <a href="/product/copilot/"> <i class="fas fa-robot fa-fw"></i> Pulumi Copilot </a>
+                                        <a href="/product/pulumi-insights/"> <span class="ml-1.5 mr-1.5">
+                                            <img src="/icons/magnifying-glass.svg" class="inline opacity-90 h-5" />
+                                        </span> Pulumi Insights </a>
                                     </li>
+                                    <div class="mobile-menu-sub-heading mx-5 mt-2">
+                                    </div>
                                     <li>
-                                        <a href="/product/pulumi-cloud/"> <i class="fas fa-user-cog fa-fw"></i> Pulumi Cloud </a>
-                                    </li>
-                                    <li>
-                                        <a href="/product/pulumi-insights/"> <i class="fas fa-eye fa-fw"></i> Pulumi Insights </a>
-                                    </li>
-                                    <li>
-                                        <a href="/product/internal-developer-platforms/"> <i class="fas fa-users fa-fw"></i> Pulumi for Platform Teams </a>
-                                    </li>
-                                    <li>
-                                        <a href="/product/esc/"> <i class="fas fa-cog fa-fw"></i> Pulumi ESC </a>
-                                    </li>
-                                    <li>
-                                        <a href="/crossguard/"> <i class="fas fa-file-code fa-fw"></i> Policy as Code </a>
+                                        <a href="/request-a-demo/"> <i class="fas fa-laptop-code fa-fw"></i> Request a demo </a>
                                     </li>
                                     <hr />
                                 </div>
@@ -412,12 +455,21 @@
                             <div>
                                 <input id="why-pulumi-mobile-menu" name="nav-menu-checkbox" class="invisible-checkbox" type="checkbox" />
                                 <label id="why-pulumi-menu-label" for="why-pulumi-mobile-menu" class="mobile-menu-heading"
-                                    >Why Pulumi?<span class="dropdown-menu-caret"></span
+                                    >Solutions<span class="dropdown-menu-caret"></span
                                 ></label>
                                 <hr />
                                 <div class="mobile-menu-subitems-why-pulumi">
                                     <li>
-                                        <a href="/product/internal-developer-platforms/"> <i class="fas fa-book-open fa-fw"></i> Platform Engineering </a>
+                                        <a href="/testimonials/"> <i class="fas fa-quote-left fa-fw"></i> Engineers love Pulumi </a>
+                                    </li>
+                                    <li>
+                                        <a href="/case-studies/"> <i class="fas fa-file fa-fw"></i> Case Studies </a>
+                                    </li>
+                                    <li>
+                                        <a href="/product/internal-developer-platforms/"> <i class="fas fa-users fa-fw"></i> Pulumi for Platform Engineering </a>
+                                    </li>
+                                    <li>
+                                        <a href="/solutions/ai/"> <i class="fas fa-robot fa-fw"></i> Pulumi for AI </a>
                                     </li>
                                     <li>
                                         <a href="/solutions/"> <i class="fas fa-lightbulb fa-fw"></i> Solutions </a>
@@ -427,12 +479,6 @@
                                     </li>
                                     <li>
                                         <a href="/proserv/"> <i class="fas fa-briefcase fa-fw"></i> Professional Services </a>
-                                    </li>
-                                    <li>
-                                        <a href="/case-studies/"> <i class="fas fa-file fa-fw"></i> Case Studies </a>
-                                    </li>
-                                    <li>
-                                        <a href="/testimonials/"> <i class="fas fa-quote-left fa-fw"></i> Testimonials </a>
                                     </li>
                                     <hr />
                                 </div>
@@ -455,27 +501,51 @@
                                         <a href="/blog/"> <i class="fas fa-blog fa-fw"></i> Blog </a>
                                     </li>
                                     <li>
+                                        <a href="/templates/"><span> <img src="/icons/square-foot.svg" class="inline h-8 opacity-90" /> </span>Templates
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/learn/"> <span class="ml-1 mr-1">
+                                            <img src="/icons/graduation-cap.svg" class="inline opacity-90 h-5" />
+                                        </span> Tutorials </a>
+                                    </li>
+                                    <li>
                                         <a href="/case-studies/"> <i class="fas fa-file fa-fw"></i> Case Studies </a>
                                     </li>
                                     <li>
-                                        <a href="/resources#upcoming"> <i class="fas fa-users fa-fw"></i> Events and Workshops </a>
-                                    </li>
-                                    <li>
-                                        <a href="/templates/"><span> <img src="/icons/square-foot.svg" class="inline h-8 opacity-90" /> </span>Templates
-                                        </a>
+                                        <a href="/resources#upcoming"> <i class="fas fa-calendar fa-fw"></i> Events and Workshops </a>
                                     </li>
                                     <li>
                                         <a href="/ai/answers"> <i class="fas fa-robot mr-0.5"></i> Pulumi AI Answers </a>
                                     </li>
                                     <li>
-                                        <a href="/learn/"> <i class="fas fa-chalkboard-teacher fa-fw"></i> Tutorials </a>
+                                        <a href="/community/"> <i class="fas fa-comments fa-fw"></i> Community </a>
                                     </li>
                                     <li>
-                                        <a href="/community/"> <i class="fas fa-users fa-fw"></i> Community </a>
+                                        <a href="/what-is/"> <i class="fas fa-book-reader fa-fw"></i> What is ...? </a>
+                                    </li>
+                                </div>
+                            </div>
+                            <div>
+                                <input id="company-mobile-menu" name="nav-menu-checkbox" class="invisible-checkbox" type="checkbox" />
+                                <label id="company-menu-label" for="company-mobile-menu" class="mobile-menu-heading"
+                                    >Company<span class="dropdown-menu-caret"></span
+                                ></label>
+                                <hr />
+                                <div class="mobile-menu-subitems-company">
+                                    <li>
+                                        <a href="/about/"> <i class="fas fa-quote-left fa-fw"></i> About us </a>
                                     </li>
                                     <li>
-                                        <a href="/what-is/"> <i class="fas fa-users fa-fw"></i> What is ...? </a>
+                                        <a href="/careers/"> <i class="fas fa-briefcase fa-fw"></i> Careers </a>
                                     </li>
+                                    <li>
+                                        <a href="/about/newsroom/"> <i class="fas fa-book-open fa-fw"></i> Newsroom </a>
+                                    </li>
+                                    <li>
+                                        <a href="/awards/"> <i class="fas fa-trophy fa-fw"></i> Awards </a>
+                                    </li>
+                                    <hr />
                                 </div>
                             </div>
                         </ul>
