@@ -36,7 +36,7 @@ The token contains the following claims:
 
 | Claim         | Description |
 |:--------------|:------------|
-| aud           | _(Audience)_ The name of the organization associated with the environment. |
+| aud           | _(Audience)_ The name of the organization associated with the environment prefixed with the provider's platform name (`aws:{org}`, `azure:{org}`, `gcp:{org}`). |
 | iss           | _(Issuer)_ The issuer of the OIDC token: `https://api.pulumi.com/oidc`. |
 | current_env   | _(Current Environment)_ The name of the environment where the [ESC OIDC provider configuration](/docs/esc/providers/) is defined. |
 | root_env      | _(Root Environment)_ The name of the environment that is opened first. This Root Environment in turn opens other imported environments. |
@@ -118,7 +118,7 @@ When importing multiple environments into Pulumi IaC Stack Config, each environm
 As part of the process that exchanges your service's OIDC token for cloud provider credentials, the cloud provider must check the OIDC token's claims against the conditions configured in the provider's trust relationship. The configuration of a trust relationship varies depending on the cloud provider, but typically uses at least the Audience, Subject, and Issuer claims. These claims can be used to restrict trust to specific organizations, projects, stacks, environments etc:
 
 * The Issuer claim is typically used to validate that the token is properly signed. The issuer's public signing key is fetched and used to validate the token's signature.
-* The Audience claim contains the name of the organization associated with the deployment. You can use this claim to restrict credentials to a specific organization or organizations.
+* The Audience claim can vary between Deployment and ESC. For deployments this claim contains the name of the organization associated with the deployment. For ESC this claim contains the name of the organization, prefixed with the provider's platform (`aws`, `azure`, `gcp`). You can use this claim to restrict credentials to a specific organization or organizations.
 * The Subject claim contains a variety of information about the service. You can use this claim to restrict credentials to a specific organization/scope.
 * The various custom claims contain the same information as the Subject claim. If your cloud provider supports configuring trust relationships based on custom claims, you can use these claims for the same purposes as the Subject claim.
 
