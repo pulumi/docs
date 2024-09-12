@@ -18,48 +18,6 @@ overview:
       - **Ditch `.env` files.** No more storing secrets in plaintext on dev computers. Developers can easily access secrets via CLI, API, Kubernetes operator, the Pulumi Cloud UI, and in-code with Typescript/Javascript, Python, and Go SDKs.
       - **Use with or without Pulumi IaC.** Use Pulumi ESC to centrally manage your configuration and secrets independently of Pulumi IaC, or use ESC and IaC together for the convenience of storing secrets in config with a higher degree of security than using plaintext.
 
-benefits:
-    title: Benefits of Pulumi ESC
-    items:
-        - icon: lock
-          icon_color: purple
-          title: Frictionless Security
-          description: Easy-to-use single source of truth for all configuration and secrets with guardrails. Seamlessly adopt short-lived dynamic secrets.
-          points:
-            - Lorem ipsum odor amet, consectetuer adipiscing elit. Vel mollis vel luctus quis ex. Montes inceptos venenatis ligula dictumst magnis fringilla. Accumsan luctus neque ex eros leo fusce; mi aliquet. Laoreet laoreet potenti facilisis vehicula mi velit odio.
-            - Lorem ipsum odor amet, consectetuer adipiscing elit. Fusce magnis neque; suscipit dui metus blandit suspendisse. Luctus aliquet malesuada sapien venenatis amet velit. Est praesent commodo ullamcorper finibus fames quam augue, aliquet viverra.
-            - Lorem ipsum odor amet, consectetuer adipiscing elit. Nam at mauris lacus consequat a finibus luctus. Nisi cras ac pretium tincidunt viverra vitae volutpat. Maecenas nascetur sem habitant nec; quisque per orci. Praesent ligula malesuada finibus dolor per tincidunt lacinia.
-            - Lorem ipsum odor amet, consectetuer adipiscing elit. Vehicula quisque rhoncus dis senectus class sem natoque. Id aenean aliquet lacinia, senectus conubia eros quam?
-        - icon: lightning
-          icon_color: yellow
-          title: Improve Developer Efficiency
-          description: Never have downtime over changed configuration. Change once and have it updated everywhere.
-          points:
-            - Lorem ipsum odor amet, consectetuer adipiscing elit. Tristique venenatis lectus condimentum massa risus massa turpis conubia commodo. Habitasse quis sollicitudin cras aliquam; nulla class odio scelerisque. Magnis ad potenti accumsan eleifend, fames etiam bibendum. At dolor dapibus non adipiscing mi aenean primis vehicula.
-            - Lorem ipsum odor amet, consectetuer adipiscing elit. Convallis luctus lacinia luctus duis facilisi ornare aliquet feugiat ligula. Libero libero elit praesent mi ultricies congue, libero tempus volutpat. Gravida metus felis purus quisque varius luctus.
-            - Lorem ipsum odor amet, consectetuer adipiscing elit. Curae nulla taciti duis tincidunt curabitur pharetra. In massa erat; fames vulputate taciti himenaeos. Luctus nam sed accumsan elementum ullamcorper, habitasse odio suspendisse.
-            - Lorem ipsum odor amet, consectetuer adipiscing elit. Nisi augue nec sociosqu placerat finibus molestie finibus eu. Gravida ex proin in facilisi ultricies amet ligula phasellus. Mauris torquent habitasse duis primis ad non.
-        - icon: gavel
-          icon_color: salmon
-          title: Control Access and Compliance
-          description: Enforce least-privileged access through role-based access controls. All changes are fully logged for auditing.
-          points:
-            - Lorem ipsum odor amet, consectetuer adipiscing elit. Ultricies ad urna tempus bibendum ullamcorper rutrum curae imperdiet odio. Et id senectus dis semper imperdiet? Cras hendrerit magna himenaeos euismod leo! Mattis torquent aptent imperdiet mollis sociosqu sed sollicitudin nostra.
-            - Lorem ipsum odor amet, consectetuer adipiscing elit. Vitae nostra nisl morbi finibus posuere. Sit mauris justo consequat dolor feugiat per torquent litora. Diam massa porttitor lectus malesuada iaculis sed rutrum.
-            - Lorem ipsum odor amet, consectetuer adipiscing elit. Nulla dui cursus massa sem sociosqu lacus. Tincidunt maecenas cubilia dictum placerat ex tellus sodales sodales. Odio magnis egestas venenatis nisl magna torquent scelerisque. Litora primis libero habitasse id leo blandit quam ipsum.
-            - Lorem ipsum odor amet, consectetuer adipiscing elit. Dui ridiculus justo dis maximus turpis quam facilisis mi lobortis. Turpis leo felis aenean nisi aliquet vehicula potenti turpis. Nec pharetra imperdiet sapien leo torquent nisi augue consectetur.
-
-diagram:
-    items:
-        - number: 1
-          description: Pulumi ESC enables you to define environments, which contain collections of secrets and configuration. Each environment can be composed from multiple environments.
-        - number: 2
-          description: Pulumi ESC supports a variety of configuration and secrets sources, and it has an extensible plugin model that allows third-party sources. 
-        - number: 3
-          description: Pulumi ESC has a rich API that allows for easy integration.  Every value in an environment can be accessed from any execution environment. 
-        - number: 4
-          description: Every environment can be locked down with RBAC, versioned, and audited. 
-
 screenshot:
     items:
         - title: Composable
@@ -68,6 +26,63 @@ screenshot:
           description: Never lose track of where configurations are being used. Trace the downstream impact of any secrets or configuration changes to see if they match expectations. 
         - title: Versionable
           description: Create different versions of environments, so you can gracefully migrate between breaking configuration changes.
+
+integrate:
+    header: Natively integrated with your tools
+    cards:
+        - title: Use any secrets store
+          body: Pull and sync configuration and secrets with any secrets store – including HashiCorp Vault, AWS Secrets Manager, Azure Key Vault, GCP Secret Manager, 1Password, and more. 
+          icon: lock
+          color: salmon
+        - title: Access from anywhere
+          body: Consume configuration and secrets in any environment from any application, tool, or CI/CD platform via CLI, API, Kubernetes operator, the Pulumi Cloud UI, and in-code with Typescript/Javascript, Python, and Go SDKs.
+          icon: security
+          color: purple
+
+security:
+    header: Security you can trust (and prove)
+    items:
+        - icon: lock
+          icon_color: purple
+          title: Robust Access Controls
+          description: Pulumi ESC leverages the same Pulumi Cloud identity, RBAC, Teams, SAML/SCIM, OIDC, and scoped access tokens used for Pulumi IaC to ensure secrets management complies with enterprise security policies.
+        - icon: clipboard
+          icon_color: yellow
+          title: Fully Auditable
+          description: Every time secrets or configuration values are accessed or changed with Pulumi ESC, the action is fully logged for auditing. Logs include who accessed what, the action they took, and even a full record of showing which originating environments accessed values are inherited from.
+        - icon: clock
+          icon_color: salmon
+          title: Dynamic Secrets
+          description: Pulumi ESC provides just-in-time, short-lived credentials, making them easy to adopt as a security best practice. 
+
+features:
+  - header: Centralized secrets management
+    body: Access, share, and manage confidential information such as secrets, passwords, and API keys as well as configuration information such as network settings and deployment options.
+  - header: Secrets orchestration
+    body: Pull and sync configuration and secrets from any secrets store and consume in any application, tool, or CI/CD platform.
+  - header: Composable environments
+    body: Environments support importing one into another, allowing for easy composability and inheritance of shared secrets and configuration.
+  - header: Versionable
+    body: Every change to an environment as well as any of its secrets and configuration is versioned, so rolling back or accessing an old version is easy.
+  - header: RBAC
+    body: Role-based access controls (RBAC) makes it easy to secure your secrets and configurations by assigning permissions to users based on their role within your organization.
+  - header: Dynamic secrets
+    body: Generate just-in-time, short-lived credentials that revoke access when the lease expires.
+  - header: Audit logging
+    body: All actions taken on environments, secrets, or configuration values are fully logged for auditing.
+  - header: Developer-friendly
+    body: Developers can easily access secrets via CLI, API, Kubernetes operator, the Pulumi Cloud UI, and in-code with Typescript/Javascript, Python, and Go SDKs.
+
+diagram:
+    items:
+        - number: 1
+          description: Pulumi ESC organizes secrets and configurations into logical groupings called environments. Each environment can be composed of multiple environments allowing easy inheritance of shared secrets and configuration.
+        - number: 2
+          description: Pulumi ESC supports a variety of secrets stores as sources – including HashiCorp Vault, AWS Secrets Manager, Azure Key Vault, GCP Secret Manager, 1Password, and more – and it has an extensible plugin model that allows third-party secret stores.
+        - number: 3
+          description: Pulumi ESC makes it easy to integrate shared secrets and configurations into any application, tool, or CI/CD platform with a CLI, API, Kubernetes operator, and Typescript/Javascript, Python, and Go SDKs. Every value in an environment can be accessed from any execution environment.
+        - number: 4
+          description: Pulumi ESC leverages the same Pulumi Cloud identity, RBAC, Teams, SAML/SCIM, and scoped access tokens used for Pulumi IaC. Every environment is versioned with all changes fully logged for auditing.
 
 customer_quotes:
   tetrate:
@@ -80,5 +95,24 @@ customer_quotes:
       “Pulumi ESC has been a lifesaver for us. It’s nice to throw everything behind an ESC environment and eliminate one-off granting IAM permissions and other issues related to static credentials.”
     author: JK Jensen, Software Engineering Team Lead
     logo: mysten-labs
+
+learn:
+    title: Get Started
+    items:
+        - title: Try Pulumi ESC today
+          description: Centralize and manage secrets securely on any cloud by creating a free Pulumi account.
+          buttons:
+            - link: https://app.pulumi.com/
+              type: primary
+              action: Try Pulumi ESC
+        - title: Documentation
+          description: Review our documentation to learn more about Pulumi ESC.
+          buttons:
+            - link: /docs/esc/
+              type: secondary
+              action: Pulumi ESC Docs
+            - link: /docs/pulumi-cloud/esc/get-started/
+              type: secondary
+              action: Get Started with Pulumi ESC
 
 ---
