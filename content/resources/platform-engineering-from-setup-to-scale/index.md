@@ -36,7 +36,7 @@ main:
     event_type: workshop # workshop | event
 
     # URL for embedding a URL for ungated webinars.
-    youtube_url: https://youtu.be/t4c3NOiuhXQ?rel=0
+    youtube_url: https://www.youtube.com/embed/t4c3NOiuhXQ?si=dWlnHa0WokwiHYyP
 
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
     sortable_date: 2024-09-04T09:00:00.000-07:00
