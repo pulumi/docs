@@ -51,7 +51,7 @@ Select one of the following options to get started:
                 </div>
             </div>
         </a>
-    </div>   
+    </div>
     <div class="pb-4 md:pr-4 md:w-1/2">
         <a data-track="aws-container-service" href="/templates/container-service/aws/" class="tile h-full">
             <div class="block rounded shadow border border-gray-300 p-3 h-full flex flex-col">
