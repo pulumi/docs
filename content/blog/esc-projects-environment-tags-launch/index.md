@@ -65,7 +65,7 @@ We offer numerous ways for you to get started with Projects via the Pulumi Web C
 
 ### Breaking Changes
 
-All existing environments should continue to work with the introduction of Projects, belonging now to a `default` project. However, when moving existing environments out of the default project you may notice some differences that we have outlined below to be proactive in communicating possible actions you'll need to migrate your environments.
+With the introduction of Projects, all existing environments part of the `default` project will continue to work without requiring any changes. However, when moving existing environments out of the default project you may notice some differences that we have outlined below.```
 
 * If your environment was interpolating the `context.currentEnvironment.name` or `context.rootEnvironment.name` from [Contextual information](/docs/esc/environments/#pulumi-contextual-information) this value will now include the project for any environments outside of the `default` project.
 * If you were using any of the [secrets providers with OIDC](#using-secrets-providers-and-oidc) the subject will be either `pulumi:environments:org:<organization name>:env:<project name>/<environment name>` if no `subjectAttributes` are specified or if the `currentEnvironment.name` subject attribute is specified it will now resolve to `currentEnvironment.name:<project name>/<environment name>`. Updating this value will require manual intervention for the secrets provider in the new environment to work.
