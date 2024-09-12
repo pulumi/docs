@@ -8,7 +8,7 @@ menu:
     cloud:
         name: Self-hosting
         parent: pulumi-cloud-admin
-        weight: 1
+        weight: 2
         identifier: pulumi-cloud-admin-self-hosted
     pulumicloud:
         identifier: self-hosted

@@ -6,7 +6,7 @@ h1: Configuring OpenID Connect for Github
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   cloud:
-    name: OpenID Client
+    name: Github
     parent: pulumi-cloud-access-management-oidc-client
     weight: 1
     identifier: pulumi-cloud-access-management-oidc-client-github
