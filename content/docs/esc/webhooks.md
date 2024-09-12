@@ -1,48 +1,48 @@
 ---
-title_tag: "Pulumi Cloud Webhooks"
-meta_desc: Pulumi Cloud Webhooks allow you to notify external services of events happening within your Pulumi organization. Learn how to create and manage webhooks here.
+title_tag: "ESC Webhooks"
+meta_desc: ESC Webhooks allow you to notify external services of events happening within your Pulumi organization. Learn how to create and manage webhooks here.
 title: "Webhooks"
-h1: Pulumi Cloud Webhooks
+h1: ESC Webhooks
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  pulumicloud:
+  pulumiesc:
     weight: 9
 aliases:
-- /docs/reference/service/webhooks/
-- /docs/console/extensions/webhooks/
-- /docs/intro/console/extensions/webhooks/
-- /docs/intro/console/webhooks/
-- /docs/intro/pulumi-service/webhooks/
-- /docs/intro/pulumi-cloud/webhooks/
+- /docs/intro/environment/webhooks/
+- /docs/intro/environments/webhooks/
+- /docs/intro/esc/webhooks/
+- /docs/environment/webhooks/
+- /docs/environments/webhooks/
+- /docs/esc/webhooks/
 ---
 
 {{% notes "info" %}}
-Pulumi Webhooks is a feature available on the Pulumi Team, Enterprise and Business Critical editions.
+ESC Webhooks is a feature available on the Pulumi Team, Enterprise and Business Critical editions.
 To try it out, start a [trial](https://app.pulumi.com/site/trial) now.
 {{% /notes %}}
 
-Pulumi Webhooks allow you to notify external services of events
+ESC Webhooks allow you to notify external services of events
 happening within your Pulumi organization. For example,
-you can trigger a notification whenever a stack is updated.
+you can trigger a notification whenever a new revision of an environment is created.
 Whenever an event occurs, Pulumi will send an HTTP `POST` request to
 all registered webhooks. The webhook can then be used to emit a
-notification, start running integration tests, or even update additional stacks.
+notification, start running integration tests, or even update Pulumi stacks.
 
 Webhooks can be used for pretty much anything you want, and are the foundation
 of most _ChatOps_ workflows.
 
 ## Overview
 
-Pulumi Cloud webhooks can be attached to either a stack or an organization. Stack webhooks
-will be notified of events specific to the stack. Organization
+ESC Webhooks can be attached to either a environment or an organization. Environment webhooks
+will be notified of events specific to the environment. Organization
 webhooks will be notified for events happening within each of the organization's
-stacks.
+environments.
 
-The Webhooks page is under the Stack or Organization Settings tab.
+The Webhooks page for organization is under Organization Settings tab, and for Environments is a tab on each Environment page
 
 ![Organization webhooks](/images/docs/reference/service/webhooks/org-webhooks.png)
 
-If you are looking for Environment Webhook documentation, it's [here](/docs/esc/webhooks/).
+If you are looking for Stack and Deployment Webhook documentation, it's [here](/docs/pulumi-cloud/webhooks/).
 
 ### Create a Webhook
 
@@ -60,6 +60,7 @@ const webhook = new pulumiservice.Webhook("example-webhook", {
     active: true,
     displayName: "webhook example",
     organizationName: "example",
+    environmentName: "my-environment",
     payloadUrl: "https://example.com/webhook",
 });
 ```
@@ -74,6 +75,7 @@ webhook = pulumi_service.Webhook("example-webhook",
     active: True,
     display_name: "webhook example",
     organization_name: "example",
+    environmentName: "my-environment",
     payload_url: "https://example.com/webhook",
 )
 ```
@@ -93,6 +95,7 @@ func main() {
 			Active:           pulumi.Bool(true),
 			DisplayName:      pulumi.String("example webhook"),
 			OrganizationName: pulumi.String("example"),
+      EnvironmentName:  pulumi.String("my-environment"),
 			PayloadURL:       pulumi.String("https://example.com/webhook"),
 		}, nil)
 		if err != nil {
@@ -117,6 +120,7 @@ class PulumiServiceWebhook: Stack
             Active = true,
             DisplayName = "example webhook",
             OrganizationName = "example",
+            EnvironmentName = "my-environment",
             PayloadUrl = "https://example.com/webhook"
         })
     }
@@ -136,19 +140,17 @@ class PulumiServiceWebhook: Stack
     3. For Microsoft Teams webhooks, provide a Microsoft Teams webhook URL and a display name.
 4. Choose which events you would like to receive using groups and filters menu.
 
-#### Create a Stack Webhook
+#### Create an Environment Webhook
 
-1. Navigate to the stack.
-2. Navigate to **Settings** > **Webhooks**
+1. Navigate to your environment.
+2. Navigate to **Webhooks** tab.
 3. Select **Create webhook**.
-4. Under Destination, choose **Webhook**, **Slack**, **Microsoft Teams** or **Deployment**.
+4. Under Destination, choose **Webhook**, **Slack**, **Microsoft Teams** or **Deployment**
    1. For generic JSON webhooks, provide a display name, payload URL, and optionally a secret.
    2. For Slack webhooks, provide a Slack webhook URL and a display name.
    3. For Microsoft Teams webhooks, provide a Microsoft Teams webhook URL and a display name.
    4. For Deployment webhooks, provide the stack to deploy in the format `project/stack`.
 5. Choose which events you would like to receive using groups and filters menu.
-
-![Stack webhooks form](../ui-webhooks.png)
 
 ## Event Filtering
 
@@ -156,34 +158,25 @@ Event filtering allows you to choose which events should be delivered to each we
 all events in a group, or filter to specific events (only failures, only deployment events, etc.).
 The following table describes the various event filters available and the context in which they are relevant.
 
-| Filter                        		| Event Kind          				| Webhook Type               | Triggered                                        |
-|-----------------------------------|-----------------------------|----------------------------|--------------------------------------------------|
-| `stack_created`               		| `stack`             				| Organization webhooks only | When a stack is created.                         |
-| `stack_deleted`               		| `stack`             				| Organization webhooks only | When a stack is deleted.                         |
-| `preview_succeeded`           		| `stack_preview`     				| Organization or Stack      | When a stack `preview` succeeds.                 |
-| `preview_failed`              		| `stack_preview`     				| Organization or Stack      | When a stack `preview` fails.                    |
-| `update_succeeded`            		| `stack_update`      				| Organization or Stack      | When a stack `update` succeeds.                  |
-| `update_failed`               		| `stack_update`      				| Organization or Stack      | When a stack `update` fails.                     |
-| `destroy_succeeded`           		| `stack_update`      				| Organization or Stack      | When a stack `destroy` succeeds.                 |
-| `destroy_failed`              		| `stack_update`      				| Organization or Stack      | When a stack `destroy` fails.                    |
-| `refresh_succeeded`           		| `stack_update`      				| Organization or Stack      | When a stack `refresh` succeeds.                 |
-| `refresh failed`              		| `stack_update`      				| Organization or Stack      | When a stack `refresh` fails.                    |
-| `deployment_queued`           		| `deployment`        				| Organization or Stack      | When a deployment is queued.                     |
-| `deployment_started`          		| `deployment`        				| Organization or Stack      | When a deployment starts running.                |
-| `deployment_succeeded`        		| `deployment`        				| Organization or Stack      | When a deployment succeeds.                      |
-| `deployment_failed`           		| `deployment`        				| Organization or Stack      | When a deployment fails.                         |
-| `drift_detected`              		| `drift_detection`   				| Organization or Stack      | When drift is detected in a drift detection run. |
-| `drift_detection_succeeded`   		| `drift_detection`   				| Organization or Stack      | When a drift detection run succeeds.             |
-| `drift_detection_failed`      		| `drift_detection`   				| Organization or Stack      | When a drift detection run fails.                |
-| `drift_remediation_succeeded` 		| `drift_remediation` 				| Organization or Stack      | When a drift remediation run succeeds.           |
-| `drift_remediation_failed`    		| `drift_remediation` 				| Organization or Stack      | When a drift remediation run fails.              |
+| Filter                        		  | Event Kind          				    | Webhook Type               | Triggered                                        |
+|-------------------------------------|---------------------------------|----------------------------|--------------------------------------------------|
+| `environment_created`					      | `environment`						        | Organization webhooks only | When a new environment is created.               |
+| `environment_deleted`					      | `environment`						        | Organization webhooks only | When an environment is deleted.              	  |
+| `environment_revision_created`		  | `environment_revision`			    | Organization or Environment| When a new revision is created on an environment.|
+| `environment_revision_retracted`		| `environment_revision`			    | Organization or Environment| When a revision is retracted on an environment.  |
+| `environment_revision_tag_created`	| `environment_revision_tag`		  | Organization or Environment| When a new revision tag is created.              |
+| `environment_revision_tag_deleted`	| `environment_revision_tag`		  | Organization or Environment| When a revision tag is deleted.              	  |
+| `environment_revision_tag_updated`	| `environment_revision_tag`		  | Organization or Environment| When a revision tag is updated.              	  |
+| `environment_tag_created`				    | `environment_tag`					      | Organization or Environment| When a new environment tag is created.           |
+| `environment_tag_deleted`				    | `environment_tag`					      | Organization or Environment| When an environment tag is deleted.              |
+| `environment_tag_updated`				    | `environment_tag`					      | Organization or Environment| When an environment tag is updated.              |
+| `imported_environment_changed`		  | `imported_environment_changed`	| Organization or Environment| When an imported environment was changed.        |
 
-And this table describes the various filter groups available to easily subscribe to all events within a group.
+There is also an `environments` filter group that lets you easily subscribe to all environment events.
 
-| Group			    | Event Kinds Included 																									|
-|---------------|-----------------------------------------------------------------------|
-|`stacks`		    |`stack`, `stack_preview`, `stack_update`																|
-|`deployments`	|`deployment`, `drift_detection`, `drift_remediation`										|
+| Group			    | Event Kinds Included 																									                                              |
+|---------------|---------------------------------------------------------------------------------------------------------------------|
+|`environments`	|`environment`, `environment_revision`, `environment_revision_tag`, `environment_tag`, `imported_environment_changed`	|
 
 ## Webhook Formats
 
@@ -208,7 +201,7 @@ and optionally choosing which events you want delivered using [event groups and 
 
 ### Deployment Webhooks
 
-The Deployment webhook destination lets you trigger updates on other stacks via [Pulumi Deployments](/docs/pulumi-cloud/deployments/), usually in response to `update_succeeded` events. This enables you to keep dependent stacks up to date automatically which is often necessary when using [stack references](/docs/concepts/stack/#stackreferences).
+The Deployment webhook destination lets you trigger updates on your stacks via [Pulumi Deployments](/docs/pulumi-cloud/deployments/), usually in response to `environment_revision_created` or `imported_environment_changed` events. This enables you to keep dependent stacks up to date with your environment changes automatically.
 
 Deployment webhooks require that your stacks are configured with [Deployment Settings](/docs/pulumi-cloud/deployments/reference/#deployment-settings).
 
@@ -229,108 +222,9 @@ Each webhook payload has a format specific to the payload being emitted. Every p
 and stack reference as appropriate. For examples of specific payloads, see _Payload Reference_ below.
 
 Each webhook will contain a `user` field, which is the user who requested the action, an `organization` which is
-the organization name, and a URL for the event. It will also contain `projectName` and `stackName` when applicable.
+the organization name, and a URL for the event. It will also contain `projectName` and `environmentName` when applicable.
 
-##### Stack Creation
-
-```json
-{
-	"user": {
-		"name": "Morty Smith",
-		"githubLogin": "morty",
-		"avatarUrl": "https://crazy-adventures.net/morty.png"
-	},
-	"organization": {
-		"name": "Crazy Adventures",
-		"githubLogin": "crazy-adventures",
-		"avatarUrl": "https://crazy-adventures.net/logo.png"
-	},
-	"action": "created",
-	"projectName": "website",
-	"stackName": "website-prod"
-}
-```
-
-##### Stack Update
-
-```json
-{
-	"user": {
-		"name": "Morty Smith",
-		"githubLogin": "morty",
-		"avatarUrl": "https://crazy-adventures.net/morty.png"
-	},
-	"organization": {
-		"name": "Crazy Adventures",
-		"githubLogin": "crazy-adventures",
-		"avatarUrl": "https://crazy-adventures.net/logo.png"
-	},
-	"projectName": "website",
-	"stackName": "website-prod",
-	"updateUrl": "https://app.pulumi.com/crazy-adventures/website/website-prod/updates/42",
-	"kind": "refresh",
-	"result": "succeeded",
-	"resourceChanges": {
-		"update": 3,
-		"delete": 1,
-		"update-replace": 2
-	},
-    "isPreview": false
-}
-```
-
-##### Stack Preview
-
-```json
-{
-	"user": {
-		"name": "Morty Smith",
-		"githubLogin": "morty",
-		"avatarUrl": "https://crazy-adventures.net/morty.png"
-	},
-	"organization": {
-		"name": "Crazy Adventures",
-		"githubLogin": "crazy-adventures",
-		"avatarUrl": "https://crazy-adventures.net/logo.png"
-	},
-	"projectName": "website",
-	"stackName": "website-prod",
-	"updateUrl": "https://app.pulumi.com/crazy-adventures/website/website-prod/previews/11bf162b-d9d5-4715-8f88-20dcd0e0b167",
-	"kind": "update",
-	"result": "failed",
-	"resourceChanges": {
-		"update": 3,
-		"delete": 1,
-		"update-replace": 2
-	},
-    "isPreview": true
-}
-```
-
-##### Deployment
-
-```json
-{
-	"user": {
-		"name": "Morty Smith",
-		"githubLogin": "morty",
-		"avatarUrl": "https://crazy-adventures.net/morty.png"
-	},
-	"organization": {
-		"name": "Crazy Adventures",
-		"githubLogin": "crazy-adventures",
-		"avatarUrl": "https://crazy-adventures.net/logo.png"
-	},
-	"projectName": "website",
-	"stackName": "website-prod",
-	"deploymentUrl": "https://app.pulumi.com/crazy-adventures/website/website-prod/deployments/127",
-    "version": 127,
-	"operation": "update",
-	"status": "running"
-}
-```
-
-##### Drift detection
+##### Environment
 
 ```json
 {
@@ -345,16 +239,12 @@ the organization name, and a URL for the event. It will also contain `projectNam
     "avatarUrl": "https://crazy-adventures.net/logo.png"
   },
   "projectName": "website",
-  "stackName": "website-prod",
-  "driftDetected": true,
-  "driftRunId": "11bf162b-d9d5-4715-8f88-20dcd0e0b167",
-  "status": "succeeded",
-  "resourceChanges": { "update": 3, "delete": 1 },
-  "referenceUrl": "https://app.pulumi.com/crazy-adventures/website/website-prod/deployments/127"
+  "environmentName": "prod",
+  "action": "created",
 }
 ```
 
-##### Drift remediation
+##### Environment Revision
 
 ```json
 {
@@ -369,10 +259,77 @@ the organization name, and a URL for the event. It will also contain `projectNam
     "avatarUrl": "https://crazy-adventures.net/logo.png"
   },
   "projectName": "website",
-  "stackName": "website-prod",
-  "status": "succeeded",
-  "resourceChanges": { "update": 3, "delete": 1 },
-  "referenceUrl": "https://app.pulumi.com/crazy-adventures/website/website-prod/deployments/128"
+  "environmentName": "prod",
+  "action": "created",
+  "revision": 5
+}
+```
+
+##### Environment Revision Tag
+
+```json
+{
+  "user": {
+    "name": "Morty Smith",
+    "githubLogin": "morty",
+    "avatarUrl": "https://crazy-adventures.net/morty.png"
+  },
+  "organization": {
+    "name": "Crazy Adventures",
+    "githubLogin": "crazy-adventures",
+    "avatarUrl": "https://crazy-adventures.net/logo.png"
+  },
+  "projectName": "website",
+  "environmentName": "prod",
+  "tagName": "stable",
+  "action": "created",
+  "revision": 5
+}
+```
+
+##### Environment Tag
+
+```json
+{
+  "user": {
+    "name": "Morty Smith",
+    "githubLogin": "morty",
+    "avatarUrl": "https://crazy-adventures.net/morty.png"
+  },
+  "organization": {
+    "name": "Crazy Adventures",
+    "githubLogin": "crazy-adventures",
+    "avatarUrl": "https://crazy-adventures.net/logo.png"
+  },
+  "projectName": "website",
+  "environmentName": "prod",
+  "tagName": "stable",
+  "action": "created"
+}
+```
+
+##### Imported Environment Changed
+
+```json
+{
+  "user": {
+    "name": "Morty Smith",
+    "githubLogin": "morty",
+    "avatarUrl": "https://crazy-adventures.net/morty.png"
+  },
+  "organization": {
+    "name": "Crazy Adventures",
+    "githubLogin": "crazy-adventures",
+    "avatarUrl": "https://crazy-adventures.net/logo.png"
+  },
+  "projectName": "website",
+  "environmentName": "prod",
+  "affectedRevisions": [2, 5, 6, 7],
+  "importedEnvironmentReference": {
+	"projectName": "website",
+  	"environmentName": "base",
+	"revision": 10
+  }
 }
 ```
 
@@ -383,7 +340,7 @@ Payloads contain several headers.
 | Header                     | Description                                                                                                                                                   |
 |----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `Pulumi-Webhook-ID`        | Unique ID for each webhook sent which you can reference when looking at delivery logs in the Pulumi Cloud.                                                    |
-| `Pulumi-Webhook-Kind`      | The kind of webhook event, e.g. `stack_update`.                                                                                                               |
+| `Pulumi-Webhook-Kind`      | The kind of webhook event, e.g. `environment`.                                                                                                                |
 | `Pulumi-Webhook-Signature` | Only set if the webhook has a shared secret. HMAC hex digest of the request payload, using the `sha256` hash function and the webhook secret as the HMAC key. |
 
 The following snippets show how to compute and verify the webhook signature.
