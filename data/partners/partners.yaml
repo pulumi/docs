@@ -81,3 +81,7 @@
 - name: Twingate
   link: https://www.twingate.com/
   logo: /logos/tech/twingate.svg
+
+- name: Checkly
+  link: https://www.checklyhq.com/
+  logo: /logos/tech/checkly.svg
