@@ -1,12 +1,13 @@
 ---
 title: "Pulumi ESC: Environments, Secrets, and Configuration"
-layout: esc
+layout: secrets-management
 
 meta_title: "Pulumi ESC: Environments, Secrets, and Configuration"
 meta_desc: Centralized environments, secrets, and configuration management for cloud applications and infrastructure
 meta_image: "/images/product/esc-how-it-works-diagram.png"
 aliases:
     - /esc
+    - /product/esc
 
 subtitle: Centralized secrets management & orchestration. Easily access, share, and manage secrets securely on any cloud, using your favorite programming languages.
 
