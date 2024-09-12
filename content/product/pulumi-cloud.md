@@ -5,11 +5,13 @@ layout: pulumi-cloud
 meta_desc: Pulumi Cloud is the easiest way to use Pulumi open source at scale.
 aliases:
     - /product/pulumi-service/
+    - /product/cloud/
+    - /cloud/
 
 overview:
-    title: Intelligent Infrastructure Management Platform
+    title: Intelligent Infrastructure Management
     description: |
-        Pulumi Cloud is the easiest way to use Pulumi open source at scale. It stores infrastructure state and secrets, provides search and clear visibility into all your clouds, runs remote deployments, integrates with CI/CD pipelines, and enforces policies.
+        Pulumi Cloud is the smartest and easiest way to automate, secure, and manage everything you run in the cloud. It stores infrastructure state, centralizes secrets management, provides search and clear visibility into all your clouds, runs remote deployments, integrates with CI/CD pipelines, and enforces security and compliance policies.
 
 case_studies:
     title: Customers innovating with Pulumi Cloud
@@ -75,118 +77,210 @@ products:
                 Sensitive configurations (e.g. database passwords, cloud tokens) are [stored as secrets](/docs/concepts/secrets/).
 
                 Use Pulumi's secrets manager or integrate with AWS KMS, Azure Key Vault, Google KMS, and HashiCorp Vault.  
+
+            - title: Collaborate better within teams
+              description: |
+                Add teammates to Pulumi so you can work on projects together, ship code collaboratively, and coordinate changes to infrastructure.
+
+              more_info: |
+                Invite new team members and share projects to collaborate on infrastructure.
+
+                View [timelines](/docs/pulumi-cloud/projects-and-stacks/#stack-activity) that show diffs of changed resources and who made the changes.
+
+                [Tag stacks](/docs/concepts/stack/#stack-tags) for easier filtering and searching.
+
+            - title: Software delivery integrations
+              description: |
+                Integrate Pulumi with your software delivery pipeline so that you can version, build, test, and deploy infrastructure code like software.
+
+              more_info: |
+                Work with existing tools like IDEs, test frameworks, and package managers.
+
+                Integrate your [source control system](/docs/pulumi-cloud/deployments/ci-cd-integration-assistant/) so teams can trace changes back to commits and pull requests.
+
+                Continuously deliver infrastructure through existing pipelines with [CI/CD integrations](/docs/using-pulumi/continuous-delivery/).
+
+                Use event-based [webhooks](/docs/pulumi-cloud/webhooks/) to notify external services like Slack or continuous integration tools.
+
+                Use [the Service API](/blog/pulumi-rest-api/) to manage stacks, updates, teams, and more.
         - header: Pulumi ESC
           image: /images/product/console-resource-graph.svg
           details:
-            - title: Fully-managed, single source of truth
+            - title: Stop secrets sprawl
               description: |
-                Store your infrastructure’s state for any cloud in Pulumi's secure backend, which has built-in scaling, availability, and fault tolerance.
+                Pull and sync configuration and secrets with any secrets store – including HashiCorp Vault, AWS Secrets Manager, Azure Key Vault, GCP Secret Manager, 1Password, and more – and consume in any application, tool, or CI/CD platform.
 
               more_info: |
-                Allow developers to safely deploy in parallel with concurrent state-locking.
+                Access, share, and manage confidential information such as secrets, passwords, and API keys as well as configuration information such as network settings and deployment options.
 
-                Audit changes or rollback to previous versions with a [complete history](/docs/concepts/state/#checkpoints) of your state.
+                Environments support importing one into another, allowing for easy composability and inheritance of shared secrets and configuration.
 
-            - title: Manage infrastructure secrets and configuration
+                Every change to an environment as well as any of its secrets and configuration is versioned, so rolling back or accessing an old version is easy.
+
+            - title: Trust (and prove) your secrets are secure
               description: |
-                Use built-in secrets management for encrypted data such as credentials or tokens. Store and manage collections of config in [Pulumi ESC](/product/esc) into environment groupings.
+                 Every environment can be locked down with role-based access controls (RBAC) and versioned with all changes fully logged for auditing.
 
               more_info: |
-                Your infrastructure [state is encrypted](/docs/concepts/state/#state-encryption) in transit and at rest.
+                Pulumi ESC leverages the same Pulumi Cloud identity, RBAC, Teams, SAML/SCIM, OIDC, and scoped access tokens used for Pulumi IaC to ensure secrets management complies with enterprise security policies.
 
-                Sensitive configurations (e.g. database passwords, cloud tokens) are [stored as secrets](/docs/concepts/secrets/).
+                Every time secrets or configuration values are accessed or changed with Pulumi ESC, the action is fully logged for auditing. Logs include who accessed what, the action they took, and even a full record of showing which originating environments accessed values are inherited from.
+            
+            - title: Ditch .env files
+              description: |
+                No more storing secrets in plaintext on dev computers. Developers can easily access secrets via CLI, API, Kubernetes operator, the Pulumi Cloud UI, and in-code with Typescript/Javascript, Python, and Go SDKs. 
 
-                Use Pulumi's secrets manager or integrate with AWS KMS, Azure Key Vault, Google KMS, and HashiCorp Vault.    
+              more_info: |
+                Pulumi ESC also provides just-in-time, short-lived credentials, making them easy to adopt as a security best practice.
+
+            - title: Use with or without Pulumi IaC
+              description: |
+                Use Pulumi ESC to centrally manage your configuration and secrets independently of Pulumi IaC, or use ESC and IaC together for the convenience of storing secrets in config with a higher degree of security than using plaintext.
+
+              more_info: |
+                Developers can easily access secrets via CLI, API, Kubernetes operator, the Pulumi Cloud UI, and in-code with Typescript/Javascript, Python, and Go SDKs.
         - header: Pulumi Insights
-          image: /images/product/console-resource-graph.svg
+          image: /images/product/resource-search-diagram.svg
           details:
-            - title: Fully-managed, single source of truth
+            - title: Clear visibility across all infrastructure
               description: |
-                Store your infrastructure’s state for any cloud in Pulumi's secure backend, which has built-in scaling, availability, and fault tolerance.
+                View resources deployed in all your clouds, organized in projects and stacks, so that you know what's running and where.
 
               more_info: |
-                Allow developers to safely deploy in parallel with concurrent state-locking.
+                View dashboards for quick insights into your infrastructure, such as how many resources are running and who has made changes.
 
-                Audit changes or rollback to previous versions with a [complete history](/docs/concepts/state/#checkpoints) of your state.
+                [Tag stacks](/docs/concepts/stack/#stack-tags) for easier filtering and searching.
 
-            - title: Manage infrastructure secrets and configuration
+                Jump directly to the cloud console for each resource you've deployed with Pulumi.
+
+            - title: Search for resources across all clouds
               description: |
-                Use built-in secrets management for encrypted data such as credentials or tokens. Store and manage collections of config in [Pulumi ESC](/product/esc) into environment groupings.
+                Easily look for resources in a single cloud or across all your clouds with structured queries or natural language search.
 
               more_info: |
-                Your infrastructure [state is encrypted](/docs/concepts/state/#state-encryption) in transit and at rest.
+                Search for resources by filtering with facets like type, provider, project, and stack.
 
-                Sensitive configurations (e.g. database passwords, cloud tokens) are [stored as secrets](/docs/concepts/secrets/).
+                Use a structured query syntax or natural language search (coming soon).
 
-                Use Pulumi's secrets manager or integrate with AWS KMS, Azure Key Vault, Google KMS, and HashiCorp Vault.   
+                Share queries with your teammates.
     - header: Cross-Product Capabilities
       content:
-        - header: CrossGuard
-          image: /images/product/console-resource-graph.svg
+        - header: Pulumi CrossGuard
+          image: /images/product/console-policy-group.svg
           details:
-            - title: Fully-managed, single source of truth
+            - title: Set up identity and access controls
               description: |
-                Store your infrastructure’s state for any cloud in Pulumi's secure backend, which has built-in scaling, availability, and fault tolerance.
+                Integrate SSO and your [identity provider](/docs/pulumi-cloud/access-management/scim/) with Pulumi, set [user permissions](/docs/pulumi-cloud/access-management/teams/) for each stack, and track user activity with [audit logs](/docs/pulumi-cloud/audit-logs/).
 
               more_info: |
-                Allow developers to safely deploy in parallel with concurrent state-locking.
+                Single sign-on with any [SAML 2.0](/docs/pulumi-cloud/access-management/saml/) identity provider like Azure Active Directory, Google Workspace , Okta, and OneLogin.
 
-                Audit changes or rollback to previous versions with a [complete history](/docs/concepts/state/#checkpoints) of your state.
+                Manage Pulumi access from your central identity provider via [SCIM 2.0 integration](/docs/pulumi-cloud/access-management/scim/).
 
-            - title: Manage infrastructure secrets and configuration
+                Set [role-based access controls](/docs/pulumi-cloud/access-management/teams/) that limit who can access infrastructure.
+
+                Track the activity of users within your organization with [audit logs](/docs/pulumi-cloud/audit-logs/).
+
+            - title: Proactive compliance enforcement
               description: |
-                Use built-in secrets management for encrypted data such as credentials or tokens. Store and manage collections of config in [Pulumi ESC](/product/esc) into environment groupings.
+                Set guardrails for developers deploying with Pulumi by creating [policy packs](/docs/using-pulumi/crossguard/configuration/) that enforce your [deployment rules](/docs/using-pulumi/crossguard/).
 
               more_info: |
-                Your infrastructure [state is encrypted](/docs/concepts/state/#state-encryption) in transit and at rest.
+                Define [Policy as Code](/docs/using-pulumi/crossguard/) rules for security, best practices, and more.
 
-                Sensitive configurations (e.g. database passwords, cloud tokens) are [stored as secrets](/docs/concepts/secrets/).
+                Assign [policy packs](/docs/using-pulumi/crossguard/configuration/) that run on specific stacks (e.g., dev/test/staging rules).
 
-                Use Pulumi's secrets manager or integrate with AWS KMS, Azure Key Vault, Google KMS, and HashiCorp Vault.  
-        - header: Deployments
-          image: /images/product/console-resource-graph.svg
+                Automatically block deployments that violate your organization's policies.
+        - header: Pulumi Deployments
+          image: /images/product/pulumi-deployments.png
           details:
-            - title: Fully-managed, single source of truth
+            - title: Run cloud infrastructure operations remotely
               description: |
-                Store your infrastructure’s state for any cloud in Pulumi's secure backend, which has built-in scaling, availability, and fault tolerance.
+                [Run remote infrastructure commands](/docs/pulumi-cloud/deployments/) to provision, configure, and destroy cloud resources, all executed in a secure cloud environment.
 
               more_info: |
-                Allow developers to safely deploy in parallel with concurrent state-locking.
+                Trigger deployments via REST API, click to deploy from Pulumi Cloud's console, Git Push to Deploy, Remote Automation API, and other programmatic building blocks.
 
-                Audit changes or rollback to previous versions with a [complete history](/docs/concepts/state/#checkpoints) of your state.
+                Use a simple, centralized format for specifying everything needed to deploy your infrastructure stacks.
 
-            - title: Manage infrastructure secrets and configuration
+            - title: Manage infrastructure operations at high scale with Deployments-as-a-Service
               description: |
-                Use built-in secrets management for encrypted data such as credentials or tokens. Store and manage collections of config in [Pulumi ESC](/product/esc) into environment groupings.
+                Use the [Pulumi Deployments REST API](/docs/pulumi-cloud/deployments/api/) to programmatically trigger deployments for high volume infrastructure automation use cases.
 
               more_info: |
-                Your infrastructure [state is encrypted](/docs/concepts/state/#state-encryption) in transit and at rest.
+                Call Pulumi's [REST API endpoint](/docs/pulumi-cloud/deployments/api/) to trigger Pulumi commands that run in Pulumi Cloud (e.g., update, destroy, refresh, preview).
 
-                Sensitive configurations (e.g. database passwords, cloud tokens) are [stored as secrets](/docs/concepts/secrets/).
-
-                Use Pulumi's secrets manager or integrate with AWS KMS, Azure Key Vault, Google KMS, and HashiCorp Vault.    
-        - header: Copilot
-          image: /images/product/console-resource-graph.svg
+                Offload your local Automation API deployment workloads to Pulumi Cloud via the [Remote Automation API feature](/docs/pulumi-cloud/deployments/#deployment-triggers).
+        - header: Pulumi Copilot
+          image: /images/product/copilot-prompt.png
           details:
-            - title: Fully-managed, single source of truth
+            - title: Generate infrastructure as code
               description: |
-                Store your infrastructure’s state for any cloud in Pulumi's secure backend, which has built-in scaling, availability, and fault tolerance.
+                Generate a Pulumi program and deploy cloud infrastructure in seconds with a few simple text prompts.
 
               more_info: |
-                Allow developers to safely deploy in parallel with concurrent state-locking.
+                **Example Pulumi Copilot prompts:**
 
-                Audit changes or rollback to previous versions with a [complete history](/docs/concepts/state/#checkpoints) of your state.
+                *“Create a new serverless application on AWS”*
 
-            - title: Manage infrastructure secrets and configuration
+                *“Configure a Kubernetes cluster with best practices on Azure”*
+                
+                *“Deploy a Cloudflare worker that uses sticky load balancing to distribute traffic to my Google Cloud backend”*
+
+            - title: Understand your team's cloud usage
               description: |
-                Use built-in secrets management for encrypted data such as credentials or tokens. Store and manage collections of config in [Pulumi ESC](/product/esc) into environment groupings.
+                Pulumi Copilot has access to all of your Pulumi projects and stacks, and can relate those to your live cloud environments.
 
               more_info: |
-                Your infrastructure [state is encrypted](/docs/concepts/state/#state-encryption) in transit and at rest.
+                **Example Pulumi Copilot prompts:**
 
-                Sensitive configurations (e.g. database passwords, cloud tokens) are [stored as secrets](/docs/concepts/secrets/).
+                *“What versions of Kubernetes do I currently have deployed?”*
 
-                Use Pulumi's secrets manager or integrate with AWS KMS, Azure Key Vault, Google KMS, and HashiCorp Vault.               
+                *“What AWS account does VPC vpc-04a11 live within?”*
+
+                *“What environments do we have related to Azure?”*
+                
+                *“Describe the architecture of my www-frontend project.”*
+
+            - title: Discover cost savings opportunities
+              description: |
+                Pulumi Copilot uses a combination of Pulumi and cloud understanding to discover and reclaim cloud waste.
+
+              more_info: |
+                **Example Pulumi Copilot prompts:**
+
+                *“What are my least used, most expensive resources?”*
+
+                *“What are my top 10 most expensive cloud resources?”*
+
+                *“How much did my cloud costs increase month over month – and what team was responsible for driving them upwards?”*
+                
+            - title: Stay secure
+              description: |
+                Pulumi Copilot leverages knowledge about security best practices by combining Pulumi’s supergraph and cloud skills.
+
+              more_info: |
+                **Example Pulumi Copilot prompts:**
+
+                *“Do I have any insecure endpoints open to the Internet?”*
+
+                *“Do any of my S3 buckets have public-read access? If yes, help me make them private.”*
+
+                *“Do you see any anomalous activity within the past 48 hours?”*
+
+            - title: Debug cloud failures
+              description: |
+                Pulumi Copilot can access history, logs, and runtime metrics so you can easily get answers about what is failing and why.
+
+              more_info: |
+                **Example Pulumi Copilot prompts:**
+
+                *“Why did my deployment yesterday fail?”*
+
+                *“We had an outage Thursday evening around 11pm. Do you understand why?”*
+
+                *“I can’t access my EC2 instance i-3f8e over the Internet, why?”*
+             
 
 
 # capabilities:
