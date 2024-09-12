@@ -212,7 +212,7 @@ $ esc env get myorg/myproject/test greeting
   • test:10:15
 ```
 
-### Pulumi Contextual information
+### Pulumi Contextual information {#pulumi-contextual-information}
 
 Contextual information is available and can be used to interpolate on any environment value.
 

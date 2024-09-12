@@ -63,6 +63,13 @@ We offer numerous ways for you to get started with Projects via the Pulumi Web C
   pulumi/cloud-pe/demo
  ```
 
+### Breaking Changes
+
+All existing environments should continue to work with the introduction of Projects, belonging now to a `default` project. However, when moving existing environments out of the default project you may notice some differences that we have outlined below to be proactive in communicating possible actions you'll need to migrate your environments.
+
+* If your environment was interpolating the `context.currentEnvironment.name` or `context.rootEnvironment.name` from [Contextual information](/docs/esc/environments/#pulumi-contextual-information) this value will now include the project for any environments outside of the `default` project.
+* If you were using any of the [secrets providers with OIDC](#using-secrets-providers-and-oidc) the subject will be either `pulumi:environments:org:<organization name>:env:<project name>/<environment name>` if no `subjectAttributes` are specified or if the `currentEnvironment.name` subject attribute is specified it will now resolve to `currentEnvironment.name:<project name>/<environment name>`. Updating this value will require manual intervention for the secrets provider in the new environment to work.
+
 ## Introducing Environment Tags
 Using Environment Tags, teams can now assign any number of custom tags to each environment within Pulumi ESC. These tags serve as contextual identifiers that can streamline workflows by enabling you to group and search across environments based on specific criteria such as teams, project stages, deployment environments, compliance requirements, or geographic locations. This multi-dimensional approach provides unparalleled flexibility and control, ensuring your Pulumi ESC environments can scale seamlessly with your organizations evolving needs.
 
