@@ -25,7 +25,7 @@ Hierarchical configurations where one environment [imports](/docs/esc/environmen
 
 ## Getting Started with Pulumi ESC Webhooks
 
-Setting up Webhooks is straightforward. You can use the Pulumi Cloud Console, the ESC SDK, the Pulumi Service Provider, or REST API.
+Setting up Webhooks is straightforward. You can use the Pulumi Cloud Console, the Pulumi Service Provider, or REST API.
 
 ### Using Pulumi Cloud Console
 
@@ -33,15 +33,22 @@ Setting up Webhooks is straightforward. You can use the Pulumi Cloud Console, th
 - Select your desired integration (Slack, Microsoft Teams, Pulumi Deployments, or generic JSON Webhooks).
 - Configure the Webhook details, including the events you want to trigger notifications on.
 
-<b>(Add a video demo/image)</b>
+![Key-Value Table Editor](esc-webhooks.png)
 
 ### Using Pulumi Service Provider
 
-<b>(To be added)</b>
+```typescript
+const environmentWebhook = new service.Webhook("env-webhook", {
+  active: true,
+  displayName: "env-webhook",
+  organizationName: "my-org",
+  projectName: environment.project,
+  environmentName: environment.name,
+  payloadUrl: "https://example.com",
+  filters: [WebhookFilters.EnvironmentRevisionCreated, WebhookFilters.ImportedEnvironmentChanged],
+})
+```
 
-### Using the SDK
-
-<b>(To be added)</b>
 
 ## Benefits of Pulumi ESC Webhooks
 
