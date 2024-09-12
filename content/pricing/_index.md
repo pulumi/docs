@@ -84,7 +84,7 @@ tiers:
                   - Automatic group & user sync (SCIM)
                   - Audit logs export
                   - 24/7 support included
-                  - Private Slack channel
+                  - Private Slack channel available
                   - Professional services and training
 
 customers:
