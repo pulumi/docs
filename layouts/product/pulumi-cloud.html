@@ -8,7 +8,7 @@
 
     <section id="overview" class="max-w-5xl mx-auto text-center mt-6 px-6">
         {{ with .Params.overview }}
-            <h2>{{ .titleTop }}<br />{{ .titleBottom }}</h2>
+            <h2>{{ .title }}</h2>
             <p>{{ .description | markdownify }}</p>
         {{ end }}
         <div class="flex justify-center rounded-md bg-violet-100">
@@ -29,7 +29,7 @@
         <img class="card mx-auto" src="/images/home/pulumi-console.svg" alt="Pulumi Service Screenshot" />
     </section>-->
 
-    <section id="capabilities" class="mb-28 mt-16 px-6 relative">
+    <!--<section id="capabilities" class="mb-28 mt-16 px-6 relative">
         <div class="container mx-auto">
             <div class="card p-6 lg:p-28 bg-white">
                 {{ with .Params.capabilities }}
@@ -62,21 +62,21 @@
                 {{ end }}
             </div>
         </div>
-    </section>
+    </section>-->
 
     <section id="products" class="mb-28 mt-16 px-6 relative">
         <div class="container mx-auto">
-            <div class="card p-6 lg:p-28 bg-white">
-                {{ range $section .Params.products }}
-                    <h2>{{ .title }}</h2>
+            <div class="card p-6 lg:p-20 bg-white">
+                {{ range $section := .Params.products }}
+                    <h2 class="text-center border-b-2 rainbow-text">{{ $section.header }}</h2>
 
-                    {{ range .items }}
-                        <h3>{{ .title }}</h3>
-                        <img src="{{ .image }}" />
+                    {{ range $subsection := $section.content }}
+                        <h3>{{ $subsection.header }}</h3>
+                        <img src="{{ $subsection.image }}" />
 
                         <ul class="list-none mt-6 mb-20">
-                            {{ $listLength := len .details }}
-                            {{ range $index, $item := .details }}
+                            {{ $listLength := len $subsection.details }}
+                            {{ range $index, $item := $subsection.details }}
                                 {{ $itemClass := "border-t-2" }}
                                 {{ if eq (add $index 1) $listLength }}
                                     {{ $itemClass = "border-t-2 border-b-2" }}
@@ -108,12 +108,6 @@
     </section>
 
     <section id="security" class="mt-28 px-6 relative">
-        <div class="shape-background pulumi-service-security">
-            <div class="shape-container">
-                <div class="circle-right"></div>
-            </div>
-        </div>
-
         <div class="container mx-auto text-center">
             {{ with .Params.security }}
                 <h2>{{ .title }}</h2>
@@ -124,12 +118,6 @@
     </section>
 
     <section id="case-studies" class="relative px-6 mt-28">
-        <div class="shape-background pulumi-service-case-studies">
-            <div class="shape-container">
-                <div class="circle-right"></div>
-            </div>
-        </div>
-
         <div class="container mx-auto">
             <h2 class="text-center">{{ .Params.case_studies.title }}</h2>
             <div class="flex flex-wrap justify-center items-stretch">
