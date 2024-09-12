@@ -12,7 +12,7 @@ subheader:
 
 overview:
     description: |
-        Pulumi Insights 2.0 brings the power of Pulumi's asset management, compliance remediation, resource visualizations, and AI insights to any cloud infrastructure,  including resources not provisioned by Pulumi IaC such as AWS CloudFormation, Microsoft ARM, HashiCorp Terraform, or even cloud consoles and SDKs.
+       Pulumi Insights 2.0 brings the power of asset management, compliance remediation, resource visualizations, and AI insights to any cloud infrastructure, including resources not provisioned by Pulumi IaC such as AWS CloudFormation, Microsoft ARM, HashiCorp Terraform, or even cloud consoles and SDKs.
         
         Insights 2.0 imports and syncs all your cloud infrastructure, and it builds a comprehensive model of infrastructure relationships and tracks changes over time. Insights 2.0 enables you to gain a deep understanding of your cloud usage, discover potential cost savings opportunities, and enforce compliance and security policies across your cloud assets. Sign up today. 
 
