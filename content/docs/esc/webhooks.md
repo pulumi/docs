@@ -1,6 +1,6 @@
 ---
 title_tag: "ESC Webhooks"
-meta_desc: ESC Webhooks allow you to notify external services of events happening within your Pulumi organization. Learn how to create and manage webhooks here.
+meta_desc: ESC Webhooks allow you to notify external services of events happening within your ESC environments. Learn how to create and manage webhooks here.
 title: "Webhooks"
 h1: ESC Webhooks
 meta_image: /images/docs/meta-images/docs-meta.png
@@ -22,7 +22,7 @@ To try it out, start a [trial](https://app.pulumi.com/site/trial) now.
 {{% /notes %}}
 
 ESC Webhooks allow you to notify external services of events
-happening within your Pulumi organization. For example,
+happening within your ESC environments. For example,
 you can trigger a notification whenever a new revision of an environment is created.
 Whenever an event occurs, Pulumi will send an HTTP `POST` request to
 all registered webhooks. The webhook can then be used to emit a

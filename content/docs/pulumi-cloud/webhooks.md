@@ -180,10 +180,10 @@ The following table describes the various event filters available and the contex
 
 And this table describes the various filter groups available to easily subscribe to all events within a group.
 
-| Group			    | Event Kinds Included 																									|
-|---------------|-----------------------------------------------------------------------|
-|`stacks`		    |`stack`, `stack_preview`, `stack_update`																|
-|`deployments`	|`deployment`, `drift_detection`, `drift_remediation`										|
+| Group                | Event Kinds Included                                                       |
+|----------------|------------------------------------------------------|
+| `stacks`            | `stack`, `stack_preview`, `stack_update`                   |
+| `deployments` | `deployment`, `drift_detection`, `drift_remediation` |
 
 ## Webhook Formats
 
