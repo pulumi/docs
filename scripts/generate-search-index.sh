@@ -4,7 +4,7 @@ set -o errexit -o pipefail
 
 source ./scripts/common.sh
 
-node ./scripts/search/main.js
+node --max-old-space-size=8192 ./scripts/search/main.js
 
 # Fetch the name of the bucket from the metadata file.
 destination_bucket="$(cat "$(origin_bucket_metadata_filepath)" | jq -r ".bucket")"
