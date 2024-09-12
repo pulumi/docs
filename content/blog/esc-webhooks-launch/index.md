@@ -21,7 +21,7 @@ With Pulumi ESC Webhooks, you can now receive real-time notifications and trigge
 
 Take your automation further by creating Webhooks that trigger [Pulumi Deployments](/docs/pulumi-cloud/deployments/), automatically updating your infrastructure in response to configuration changes in Pulumi ESC—without writing custom code and all within the Pulumi Cloud Console.
 
-Hierarchical configurations where one environment [imports](/docs/esc/environments/#importing-other-environments) others are fundamental to Pulumi ESC. If an environment is importing another environment, any changes made to the imported environment trigger a Webhook configured within the current environment. The Webhook will notify you that the environment has changed, and you can call back to open the environment using the REST API, Pulumi Service Provider, Automation API, and SDK, and get the latest secrets and configuration.
+Hierarchical configurations where one environment [imports](/docs/esc/environments/#importing-other-environments) others are fundamental to Pulumi ESC. If an environment is importing another environment, any changes made to the imported environment trigger a Webhook configured within the current environment. The Webhook will notify you that the environment has changed, and you can call back to open the environment using [SDK](/docs/esc/sdk/), [REST API](/docs/pulumi-cloud/cloud-rest-api/#environments), [Pulumi Service Provider](/registry/packages/pulumiservice/api-docs/environment/), and [Automation API](/blog/esc-automation-api-pulumi-service-provider-launch/#streamline-automated-workflows-with-automation-api-enhancements), and get the latest secrets and configuration.
 
 ## Getting Started with Pulumi ESC Webhooks
 
