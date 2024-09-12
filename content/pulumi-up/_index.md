@@ -329,6 +329,10 @@ workshops:
     meta_desc: Join this webinar to explore how to quickly create AWS infrastructure using Pulumi and Tailscale, showcasing advanced features in Kubernetes and AWS environments  
     datetime: 2024-10-15T09:00:00-07:00
     link: /resources/deploy-tailscale-infrastructure-with-pulumi/
+  - title: Deploy and Manage LLMs on Google Cloud Run GPUs with Pulumi
+    meta_desc: Deploy and manage LLMs on Google Cloud Run GPUs with Pulumi. Join our workshop to explore scalable, cost-effective infrastructure for fast LLM inference  
+    datetime: 2024-10-17T09:00:00-07:00
+    link: /resources/deploying-llms-google-cloud-run-pulumi/
   
 
 registration:
