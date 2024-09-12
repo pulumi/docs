@@ -54,7 +54,7 @@
   link: https://www.datadoghq.com/
   logo: /logos/tech/datadog.svg
 
-- name: Gitlab
+- name: GitLab
   link: https://about.gitlab.com/
   logo: /logos/pkg/gitlab.svg
   
@@ -70,7 +70,7 @@
   link: https://chronosphere.io/
   logo: /logos/tech/chronosphere.svg
 
-- name: 1password
+- name: 1Password
   link: https://1password.com/
   logo: /logos/tech/1password.svg
 

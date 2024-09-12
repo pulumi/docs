@@ -8,7 +8,7 @@ meta_desc: Accelerate your cloud initiatives with Pulumi Partners. Automate clou
 overview:
     title: Automate and Scale Cloud Projects 
     description: |
-         Pulumi partners with the worlds most popular cloud and SaaS companies and leading systems integrators to enable engineers and DevOps teams to deploy and manage cloud infrastructure at global scale.
+         Pulumi partners with the world's most popular cloud and SaaS companies and leading systems integrators to enable engineers and DevOps teams to deploy and manage cloud infrastructure at global scale.
     form:
         title: Contact our Partner Team
         description:  Are your customers demanding powerful automation through infrastructure as code and centralized environments, secrets and configuration? Connect with our partner team to learn more about working with Pulumi.
