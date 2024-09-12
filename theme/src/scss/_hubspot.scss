@@ -150,3 +150,42 @@
         margin-top: 4px;
     }
 }
+
+.waitlist-form {
+    .hs-field-desc {
+        @apply opacity-75 text-xs font-normal my-1;
+    }
+
+    .hs-richtext {
+        @apply opacity-50 text-xs font-normal my-0;
+
+            a {
+                @apply underline;
+            }
+    }
+
+    .hs-form-field {
+        @apply my-3;
+    }
+
+    .hs-button, .primary, .large {
+        @apply mt-6
+    }
+
+    .input {
+        @apply mt-1;
+    }
+
+    input,
+        textarea,
+        select {
+            @apply border border-gray-300 rounded p-2 bg-white;
+            &:focus {
+                @apply outline-none ring;
+            }
+        }
+
+        select {
+            @apply py-1 px-3;
+        }
+}
