@@ -41,7 +41,7 @@ async function getURLsToCheck(base) {
 
 checkURLs().then(results => {
     console.error("New 404s were detected:\n\n")
-    console.error(results.map(item => console.log(item)));
+    console.error(results.map(item => console.log(item.replace(testURL, ""))));
     console.error("\nPlease ensure any content that's moved has an appropriate alias.");
     process.exit(1);
 });
