@@ -29,7 +29,7 @@ Customers are choosing Pulumi because it enables them to manage cloud and SaaS r
 * __Joint Marketing__: Benefit from joint marketing efforts, including co-branded campaigns and events.
 * __Pulumi Sales and Technical Training__: Access comprehensive training programs to leverage Pulumi technologies effectively.
 
-With 20 inaugural members, our technology partners join an elite community that benefits from Pulumi’s ongoing investment in technical, marketing, training, and business strategy support. We are excited to welcome new members such as Docker, 1Password, Pinecone, NewRelic, Tailscale and many others.
+With 20 inaugural members, our technology partners join an elite community that benefits from Pulumi’s ongoing investment in technical, marketing, training, and business strategy support. We are excited to welcome new members such as [Docker](https://www.docker.com/), [1Password](https://1password.com/[), [Pinecone](https://www.pinecone.io/), [NewRelic](https://newrelic.com/), [Tailscale](https://tailscale.com/), [Dagger](https://dagger.io/) and many others.
 
 ## Join the Pulumi Partner Program
 
