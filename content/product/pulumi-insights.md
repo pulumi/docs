@@ -2,16 +2,16 @@
 title: Pulumi Insights
 layout: pulumi-insights
 
-meta_desc: Pulumi Insights is Intelligence for Infrastructure as Code. It adds advanced search, analytics, and AI to infrastructure as code.
+meta_desc: Pulumi Insights is Intelligent Cloud Management. Gain security, compliance, and cost insights into your cloud, and automatically remediate issues.
 
 aliases:
 - /insights
 
 overview:
-    titleTop: Intelligence
-    titleBottom: for Infrastructure as Code
+    titleTop: Intelligent
+    titleBottom: Cloud Management
     description: |
-        Pulumi Insights is Intelligence for Infrastructure as Code. It adds advanced search, analytics, and AI to infrastructure as code. With Insights, you can gain unique insights into your company's cloud usage and trends and boost engineering productivity.
+        Pulumi Insights is an asset and compliance management service that gives search, compliance remediation, resource visualizations, and AI insights over any infrastructure, including resources not provisioned by Pulumi IaC such as AWS CloudFormation, Microsoft ARM, HashiCorp Terraform, or even cloud consoles and SDKs.
     items:
         - title: Gain Unique Insights
           icon: eye
@@ -68,5 +68,5 @@ pricing:
 get_started:
     title: Get started today
     description: |
-        Pulumi Insights is available now.
+        Gain a deep understanding of your cloud usage, discover potential cost savings opportunities, and enforce compliance and security policies across your entire cloud.
 ---
