@@ -14,6 +14,7 @@ menu:
 aliases:
   - /docs/guides/crosswalk/kubernetes/control-plane/
   - /docs/clouds/kubernetes/guides/configure-defaults/
+  - /docs/clouds/kubernetes/guides/control-plane/
 ---
 
 {{< chooser cloud "aws,azure,gcp" / >}}

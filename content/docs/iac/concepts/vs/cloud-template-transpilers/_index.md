@@ -6,6 +6,7 @@ h1: Cloud Template Transpilers
 meta_image: /images/docs/meta-images/docs-meta.png
 aliases:
 - /docs/intro/vs/cloud_template_transpilers/
+- /docs/concepts/vs/cloud-template-transpilers/
 ---
 
 Because of [the challenges of writing raw YAML/JSON by hand](/docs/concepts/vs/cloud-templates), two notable

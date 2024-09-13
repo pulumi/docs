@@ -12,6 +12,7 @@ menu:
 aliases:
 - /docs/quickstart/azure/review-project/
 - /docs/get-started/azure/review-project/
+- /docs/clouds/azure/get-started/review-project/
 ---
 
 Let's review some of the generated project files:

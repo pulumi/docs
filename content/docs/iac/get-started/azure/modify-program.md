@@ -7,7 +7,7 @@ weight: 6
 aliases:
 - /docs/quickstart/azure/modify-program/
 - /docs/get-started/azure/modify-program/
-- /docs/clouds/azure/modify-program/
+- /docs/clouds/azure/get-started/modify-program/
 ---
 
 Now that your storage account is provisioned, let's add an object to it. First, from within your project directory, create a new `index.html` file with some content in it.

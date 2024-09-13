@@ -8,6 +8,7 @@ aliases:
 - /docs/reference/vs/cloud_templates/
 - /docs/intro/vs/cloud_templates/
 - /docs/intro/vs/cloud-templates/
+- /docs/concepts/vs/cloud-templates/
 ---
 
 Several cloud providers offer their own form of infrastructure-as-code, typically by way of JSON- or YAML-based templating solutions. Examples include AWS CloudFormation for Amazon Web Services and Azure Resource Manager (ARM) for Microsoft Azure. Template files containing cloud resource configurations are usually uploaded to a hosted service in the target cloud, which then processes the files to create, update, or delete cloud infrastructure resources as necessary.

@@ -9,6 +9,7 @@ menu:
     weight: 15
 aliases:
 - /docs/reference/glossary/
+- /docs/concepts/glossary/
 ---
 
 {{< glossary >}}
