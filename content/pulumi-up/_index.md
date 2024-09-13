@@ -4,7 +4,7 @@ type: page
 layout: pulumi-up-2023
 meta_image: /images/pulumiup-2023/meta.png
 meta_desc: |
-    PulumiUP is a virtual conference with industry-recognized leaders, demos, and panel discussions about the future of IaC, Platform Engineering & DevOps and Cloud
+    PulumiUP is a virtual conference with industry-recognized leaders, demos, and panel discussions about the future of IaC, Platform Engineering & DevOps, and Cloud
 
 event_date: 2024-09-18T08:00:00-07:00
 
@@ -135,7 +135,7 @@ personas:
       - image: /images/pulumiup-2023/icons/display-code.svg
         name: Software Engineers
       - image: /images/pulumiup-2023/icons/terminal.svg
-        name: Platform Engineers
+        name: DevOps & Platform Engineers
     - items:
       - image: /images/pulumiup-2023/icons/gear.svg
         name: Infrastructure Engineers
@@ -145,7 +145,7 @@ personas:
       - image: /images/pulumiup-2023/icons/compass.svg
         name: Cloud Architects
       - image: /images/pulumiup-2023/icons/briefcase.svg
-        name: Engineering Directors
+        name: Engineering Managers
     - items:
       - image: /images/pulumiup-2023/icons/groups.svg
         name: Anyone who works with cloud infrastructure or IaC
