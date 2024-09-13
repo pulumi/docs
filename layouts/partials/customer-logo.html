@@ -83,7 +83,7 @@
         {{ end }}
     </span>
 {{ else }}
-    <span class="{{ $logoClass }} w-full h-full flex m-auto">
+    <span class="{{ $logoClass }} w-full h-full flex m-auto justify-center">
         {{ $path := .logo | printf "%s/%s" "customer-logos" | printf "%s" }}
         {{ partial $path }}
     </span>
