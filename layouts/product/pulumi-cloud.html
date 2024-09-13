@@ -111,10 +111,10 @@
 
     <section id="deployment" class="container mx-auto text-center mt-28 px-6">
         <h2>{{ .Params.deployment.title }}</h2>
-        <div class="flex flex-wrap justify-content items-stretch text-left mt-16">
+        <div class="lg:flex lg:flex-wrap items-stretch text-left mt-16">
             {{ range $item := .Params.deployment.items }}
                 <div class="w-full lg:w-1/2 p-3">
-                    <div class="benefits-item-auto-h card bg-white p-12">
+                    <div class="benefits-item-auto-h card h-full bg-white p-12">
                         <div class="icon-section mb-8">
                             {{ partial "color-icon.html" (dict "icon" $item.icon "icon_color" $item.icon_color) }}
                         </div>
