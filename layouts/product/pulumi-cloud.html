@@ -29,49 +29,18 @@
         <img class="card mx-auto" src="/images/home/pulumi-console.svg" alt="Pulumi Service Screenshot" />
     </section>-->
 
-    <!--<section id="capabilities" class="mb-28 mt-16 px-6 relative">
+    <section id="products" class="mb-16 mt-16 px-6 relative">
         <div class="container mx-auto">
-            <div class="card p-6 lg:p-28 bg-white">
-                {{ with .Params.capabilities }}
-                    <h2>{{ .title }}</h2>
-
-                    {{ range .items }}
-                        <h3>{{ .title }}</h3>
-                        <img src="{{ .image }}" />
-
-                        <ul class="list-none mt-6 mb-20">
-                            {{ $listLength := len .details }}
-                            {{ range $index, $item := .details }}
-                                {{ $itemClass := "border-t-2" }}
-                                {{ if eq (add $index 1) $listLength }}
-                                    {{ $itemClass = "border-t-2 border-b-2" }}
-                                {{ end }}
-
-
-                                <li class="accordion-item {{ $itemClass }} py-6">
-                                    {{ partial "accordian-header" (dict "text" $item.title) }}
-                                    <p class="mt-6">{{ $item.description | markdownify }}</p>
-
-                                    <div class="accordion-item-body-no-animation">
-                                        <p class="mt-6">{{ $item.more_info | markdownify }}</p>
-                                    </div>
-                                </li>
-                            {{ end }}
-                        </ul>
-                    {{ end }}
-                {{ end }}
-            </div>
-        </div>
-    </section>-->
-
-    <section id="products" class="mb-28 mt-16 px-6 relative">
-        <div class="container mx-auto">
-            <div class="card p-6 lg:p-20 bg-white">
-                {{ range $section := .Params.products }}
+            {{ range $section := .Params.products }}
+                <div class="card mb-12 p-6 lg:p-20 bg-white">
                     <h2 class="text-center border-b-2 rainbow-text">{{ $section.header }}</h2>
-
                     {{ range $subsection := $section.content }}
                         <h3>{{ $subsection.header }}</h3>
+                        {{ if $subsection.subheader }}
+                            <div class="cursor-pointer mb-4">
+                                <a href={{ $subsection.link}} class="text-lg underline group-hover:cursor-pointer">{{ $subsection.subheader }}</a>
+                            </div>
+                        {{ end }}
                         <img src="{{ $subsection.image }}" />
 
                         <ul class="list-none mt-6 mb-20">
@@ -94,8 +63,8 @@
                             {{ end }}
                         </ul>
                     {{ end }}
-                {{ end }}
-            </div>
+                </div>
+            {{ end }}
         </div>
     </section>
 
@@ -171,7 +140,7 @@
         {{ end }}
     </section>
 
-    <section id="get-started" class="container px-6 lg:px-0 mx-auto my-28 px-6">
+    <section id="get-started" class="container px-6 lg:px-0 mx-auto my-28">
         <div class="w-full bg-violet-600 card p-6 lg:p-16 lg:pt-24 text-center">
             <div class="max-w-xl mx-auto">
                 <h2 class="text-white hidden lg:block px-0 lg:px-16">{{ .Params.get_started.title }}</h2>

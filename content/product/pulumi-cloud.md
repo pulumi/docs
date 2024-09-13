@@ -56,6 +56,8 @@ products:
     - header: Products
       content:
         - header: Pulumi IaC
+          subheader: Productive cloud automation
+          link: /product/infrastructure-as-code/
           image: /images/product/console-resource-graph.svg
           details:
             - title: Fully-managed, single source of truth
@@ -78,7 +80,9 @@ products:
 
                 Use Pulumi's secrets manager or integrate with AWS KMS, Azure Key Vault, Google KMS, and HashiCorp Vault.  
         - header: Pulumi ESC
-          image: /images/product/console-resource-graph.svg
+          subheader: Automatic cloud security
+          link: /product/esc/
+          image: /images/product/esc-screenshot.png
           details:
             - title: Stop secrets sprawl
               description: |
@@ -114,6 +118,8 @@ products:
               more_info: |
                 Developers can easily access secrets via CLI, API, Kubernetes operator, the Pulumi Cloud UI, and in-code with Typescript/Javascript, Python, and Go SDKs.
         - header: Pulumi Insights
+          subheader: Intelligent cloud management
+          link: /product/pulumi-insights/
           image: /images/product/resource-search-diagram.svg
           details:
             - title: Clear visibility across all infrastructure
