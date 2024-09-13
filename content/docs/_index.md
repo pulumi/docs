@@ -3,6 +3,7 @@ title: Documentation
 linktitle: Docs
 meta_desc: Learn how to create, deploy, and manage infrastructure on any cloud using Pulumi's open source infrastructure as code SDK.
 meta_image: /images/docs/meta-images/docs-meta.png
+layout: home
 aliases:
 - /docs/reference/
 notitle: true
@@ -46,7 +47,7 @@ sections:
     secondary_button_link: https://app.pulumi.com/signup
 - type: blue-sparkle
   heading: Why Pulumi?
-  description: Pulumi can help you automate, secure, and manage everything you run in the cloud. Unite your development, infrastructure, and security teams with modern infrastructure as code and secrets management. 
+  description: Pulumi can help you automate, secure, and manage everything you run in the cloud. Unite your development, infrastructure, and security teams with modern infrastructure as code and secrets management.
   raw_html: |
     <div class="rounded-md shadow border border-gray-300 w-3/4 mx-auto my-6" style="position: relative; padding-bottom: 40.25%; height: 0; overflow: hidden;">
       <iframe
@@ -61,4 +62,3 @@ sections:
   heading: Have questions?
   description: <p>For questions or feedback, reach out on <a href="https://slack.pulumi.com" target="_blank">community Slack</a>, <a href="https://github.com/pulumi" target="_blank">GitHub</a>, or <a href="/support/">contact support</a>.</p>
 ---
-

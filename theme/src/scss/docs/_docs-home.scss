@@ -20,7 +20,7 @@ section.docs-home {
     }
 
     div.header {
-        @apply flex flex-col gap-4 p-6 rounded bg-no-repeat bg-bottom bg-cover;
+        @apply flex flex-col gap-4 p-6 rounded bg-no-repeat bg-right-bottom;
 
         background-image: url("/images/docs/docs-home-header-background-mobile.svg");
 
