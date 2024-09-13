@@ -4,7 +4,7 @@ title_tag: azure-secrets Pulumi ESC provider
 meta_desc: The azure-secrets Pulumi ESC Provider enables you to dynamically import secrets from Azure Key Vault into your environment.
 h1: azure-secrets
 menu:
-  pulumiesc:
+  esc:
     identifier: azure-secrets
     parent: esc-dynamic-secrets
     weight: 2

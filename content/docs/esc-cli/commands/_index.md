@@ -5,8 +5,9 @@ title: Commands
 h1: Pulumi ESC CLI commands
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  esc_cli:
-    weight: 1
+  esc:
+    parent: esc-home
+    weight: 7
     identifier: commands
 ---
 

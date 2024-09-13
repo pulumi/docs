@@ -4,7 +4,7 @@ title_tag: vault-secrets Pulumi ESC provider
 meta_desc: The `vault-secrets` provider enables you to dynamically import secrets from HashiCorp Vault into your environment.
 h1: vault-secrets
 menu:
-  pulumiesc:
+  esc:
     identifier: vault-secrets
     parent: esc-dynamic-secrets
     weight: 4

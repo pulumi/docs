@@ -5,7 +5,7 @@ title: aws-login
 h1: aws-login
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  pulumiesc:
+  esc:
     identifier: aws-login
     parent: esc-dynamic-login-credentials
     weight: 1

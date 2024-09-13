@@ -7,7 +7,7 @@ menu:
   esc:
     parent: esc-home
     identifier: esc-concepts
-    weight: 1
+    weight: 2
 aliases:
   - /docs/concepts/environments/
 ---
