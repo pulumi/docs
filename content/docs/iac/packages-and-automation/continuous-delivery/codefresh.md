@@ -18,6 +18,7 @@ aliases:
 - /docs/console/continuous-delivery/codefresh/
 - /docs/guides/continuous-delivery/codefresh/
 - /docs/using-pulumi/continuous-delivery/circleci/
+- /docs/using-pulumi/continuous-delivery/codefresh/
 ---
 
 [Codefresh](https://codefresh.io) is a CI/CD platform designed for containers and microservices. It has built-in support for Docker, Kubernetes and Helm.

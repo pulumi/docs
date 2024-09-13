@@ -10,6 +10,7 @@ menu:
     parent: automation-api
 aliases:
 - /docs/guides/automation-api/concepts-terminology/
+- /docs/using-pulumi/automation-api/concepts-terminology/
 ---
 
 Automation API lets you define a Pulumi program as a function within your codebase rather than in a separate project and use methods to get and set configuration parameters programmatically.

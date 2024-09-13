@@ -9,6 +9,7 @@ menu:
         name: YAML
         parent: iac-languages
         weight: 6
+        identifier: iac-languages-yaml
     languages:
         identifier: yaml-language
         weight: 6

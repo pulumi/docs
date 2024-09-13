@@ -10,6 +10,7 @@ menu:
         name: FAQ
         parent: iac-packages-automation-policy
         weight: 8
+        identifier: iac-packages-automation-policy-faq
     usingpulumi:
         parent: crossguard
 aliases:

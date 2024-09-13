@@ -5,11 +5,16 @@ title: Blocking and Async
 h1: Blocking and Async Python with Pulumi
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  languages:
-    parent: python
-    weight: 5
+    iac:
+        name: Blocking & async
+        parent: iac-languages-python
+        weight: 2
+    languages:
+        parent: python
+        weight: 5
 aliases:
 - /python/async/
+- /docs/languages-sdks/python/python-blocking-async/
 ---
 
 A Python Pulumi program runs an
@@ -19,7 +24,7 @@ visible to the Python program.
 
 A consequence of this is that blocking calls prevent progress from being made by
 the Pulumi runtime by preventing the event loop from processing asynchronous
-tasks.  
+tasks.
 
 The `pulumi.Output` object can be used to pass the output from both synchronous
 and asynchronous calls without blocking the event loop.
@@ -149,7 +154,7 @@ async def async_operation(foo: str) -> str:
     stderr=asyncio.subprocess.PIPE)
 
   stdout, stderr = await proc.communicate()
-		
+
   if proc.returncode is not 0:
     raise Error(f'my-cli returned {proc.returncode}: {stderr.decode()}')
   return stdout.decode

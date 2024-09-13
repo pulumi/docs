@@ -15,6 +15,7 @@ menu:
 aliases:
     - /docs/guides/testing/unit/
     - /docs/using-pulumi/testing/property-testing/
+    - /docs/using-pulumi/testing/unit/
 ---
 
 Pulumi programs are authored in a general-purpose language like TypeScript, Python, Go, C# or Java. The full power of each language is available, including access to tools and libraries for that runtime, including testing frameworks.

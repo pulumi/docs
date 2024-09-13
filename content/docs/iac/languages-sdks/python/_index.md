@@ -9,6 +9,7 @@ menu:
         name: Python
         parent: iac-languages
         weight: 2
+        identifier: iac-languages-python
     languages:
         identifier: python
         weight: 2

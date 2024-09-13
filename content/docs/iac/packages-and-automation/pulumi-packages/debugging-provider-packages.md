@@ -15,6 +15,7 @@ menu:
         weight: 2
 aliases:
     - /docs/using-pulumi/pulumi-packages/
+    - /docs/using-pulumi/pulumi-packages/debugging-provider-packages/
 ---
 
 When developing or troubleshooting Pulumi providers, you may need to debug the provider code locally. This guide walks you through starting your provider in debug mode, setting breakpoints, and running tests.
