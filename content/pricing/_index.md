@@ -85,7 +85,7 @@ tiers:
                   - Audit logs export
                   - 24/7 support included
                   - Private Slack channel available
-                  - Professional services and training
+                  - Professional services and training available
 
 customers:
     - stat: "**5x faster** time to market"
