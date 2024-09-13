@@ -20,7 +20,7 @@ async function checkURLs() {
         const newURL = url.replace(baseURL, testURL);
         const response = await fetch(newURL);
 
-        // console.log(response.status);
+        console.log(response.status);
 
         if (response.status !== 200) {
             badURLs.push(`${newURL}: ${response.status}`);
