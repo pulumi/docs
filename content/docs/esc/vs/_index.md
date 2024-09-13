@@ -6,7 +6,7 @@ h1: Compare Pulumi ESC to other solutions
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     pulumiesc:
-        weight: 7
+        weight: 30
         identifier: esc-vs
 aliases:
 ---

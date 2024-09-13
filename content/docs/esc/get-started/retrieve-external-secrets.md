@@ -33,7 +33,7 @@ To retrieve secret values from AWS Secrets Manager, you must first:
 - ensure that your IAM role has the [appropriate Secrets Manager permissions](https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_examples.html)
 - [create a Secrets Manager secret](https://docs.aws.amazon.com/secretsmanager/latest/userguide/create_secret.html)
 
-Once that is complete, you will need to update your environment definition to add the [`aws-secrets` provider](/docs/esc/providers/aws-secrets/) configuration. To do this, add the following configuration to your environment definition, making sure to:
+Once that is complete, you will need to update your environment definition to add the [`aws-secrets` provider](/docs/esc/integrations/dynamic-secrets/aws-secrets/) configuration. To do this, add the following configuration to your environment definition, making sure to:
 
 - nest it under the `aws` second-level key
 - replace the value of `<your-aws-region-here>` with your secret's region
@@ -130,7 +130,7 @@ To retrieve secret values from Azure Key Vault, you must first:
   - On your Key Vault's service page, follow steps 3 - 8 in the [Azure OIDC guide](/docs/pulumi-cloud/oidc/provider/azure/#create-a-service-principal), making sure to select the "Key Vault Secrets Officer" role under the **Job functions role** tab
 - [create an Azure Key Vault secret](https://learn.microsoft.com/en-us/azure/key-vault/secrets/quick-create-portal)
 
-Once that is complete, you will need to update your environment definition to add the [`azure-secrets` provider](/docs/esc/providers/azure-secrets/) configuration. To do this, add the following configuration to your environment definition, making sure to:
+Once that is complete, you will need to update your environment definition to add the [`azure-secrets` provider](/docs/esc/integrations/dynamic-secrets/azure-secrets/) configuration. To do this, add the following configuration to your environment definition, making sure to:
 
 - nest it under the `azure` second-level key
 - replace the value of `<your-vault-name-here>` with the name of your vault
@@ -228,7 +228,7 @@ To retrieve secret values from Google Secret Manager, you must first:
 - ensure that your service account has the [appropriate Secret Manager permissions](https://cloud.google.com/secret-manager/docs/access-control)
 - [create a Google secret](https://cloud.google.com/secret-manager/docs/creating-and-accessing-secrets)
 
-Once that is complete, you will need to update your environment definition to add the [`gcp-secrets` provider](/docs/esc/providers/gcp-secrets/) configuration. To do this, add the following configuration to your environment definition, making sure to:
+Once that is complete, you will need to update your environment definition to add the [`gcp-secrets` provider](/docs/esc/integrations/dynamic-secrets/gcp-secrets/) configuration. To do this, add the following configuration to your environment definition, making sure to:
 
 - nest it under the `gcp` second-level key
 - replace the value of `<your-secret-name-here>` with the name of your secret
