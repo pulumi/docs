@@ -5,12 +5,13 @@ title: "replaceOnChanges"
 h1: "Resource option: replaceOnChanges"
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  concepts:
+  iac:
     identifier: replaceOnChanges
-    parent: options
+    parent: options-concepts
     weight: 13
 aliases:
 - /docs/intro/concepts/resources/options/replaceonchanges/
+- /docs/concepts/options/replaceonchanges/
 ---
 
 The `replaceOnChanges` resource option can be used to indicate that changes to certain properties on a resource should force a replacement of the resource instead of an in-place update.  Typically users rely on the resource provider to make this decision based on whether the input property is one that the provider knows how to update in place, or if not, requires a replacement to modify.  However, there are cases where users want to replace a resource on a change to an input property even if the resource provider itself doesn't believe it has to replace the resource.

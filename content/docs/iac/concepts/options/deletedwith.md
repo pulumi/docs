@@ -5,12 +5,13 @@ title: "deletedWith"
 h1: "Resource option: deletedWith"
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  concepts:
+  iac:
     identifier: deletedWith
-    parent: options
+    parent: options-concepts
     weight: 5
 aliases:
 - /docs/intro/concepts/resources/options/deletedwith/
+- /docs/concepts/options/deletedwith/
 ---
 
 The `deletedWith` resource option allows you to skip resource deletion if a another resource is being deleted as well.

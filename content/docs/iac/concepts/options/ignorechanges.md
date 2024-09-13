@@ -5,12 +5,13 @@ title: "ignoreChanges"
 h1: "Resource option: ignoreChanges"
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  concepts:
+  iac:
     identifier: ignoreChanges
-    parent: options
+    parent: options-concepts
     weight: 7
 aliases:
 - /docs/intro/concepts/resources/options/ignorechanges/
+- /docs/concepts/options/ignorechanges/
 ---
 
 The `ignoreChanges` resource option specifies a list of properties that Pulumi will ignore when it updates existing resources. Pulumi ignores a property by using the old value from the state instead of the value provided by the Pulumi program when determining whether an update or replace is needed. Ignored properties will still be used from the program when there is no previous value in the state, most importantly when creating the resource.

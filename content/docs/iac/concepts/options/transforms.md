@@ -5,12 +5,13 @@ title: "transforms"
 h1: "Resource option: transforms"
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  concepts:
+  iac:
     identifier: transforms
-    parent: options
+    parent: options-concepts
     weight: 15
 aliases:
 - /docs/intro/concepts/resources/options/transforms/
+- /docs/concepts/options/transforms/
 ---
 
 The `transforms` resource option provides a list of transforms to apply to a resource and all of its children. This option is used to override or modify the inputs to the child resources of a component resource. One example is to use the option to add other resource options (such as `ignoreChanges` or `protect`). Another example is to modify an input property (such as adding to tags or changing a property that is not directly configurable).

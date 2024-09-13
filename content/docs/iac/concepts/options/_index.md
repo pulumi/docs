@@ -5,11 +5,13 @@ title: Resource options
 h1: Resource options
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  concepts:
-    identifier: options
+  iac:
+    parent: iac-concepts
+    identifier: options-concepts
     weight: 4
 aliases:
 - /docs/intro/concepts/resources/options/
+- /docs/concepts/options/
 ---
 
 All resource constructors accept an options argument that provide the following resource options:

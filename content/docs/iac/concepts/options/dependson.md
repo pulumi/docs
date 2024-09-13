@@ -5,12 +5,13 @@ title: "dependsOn"
 h1: "Resource option: dependsOn"
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  concepts:
+  iac:
     identifier: dependsOn
-    parent: options
+    parent: options-concepts
     weight: 6
 aliases:
 - /docs/intro/concepts/resources/options/dependson/
+- /docs/concepts/options/dependson/
 ---
 
 The `dependsOn` resource option creates a list of explicit dependencies between resources.

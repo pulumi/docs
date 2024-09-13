@@ -5,12 +5,13 @@ title: "provider"
 h1: "Resource option: provider"
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  concepts:
+  iac:
     identifier: provider
-    parent: options
+    parent: options-concepts
     weight: 11
 aliases:
 - /docs/concepts/resources/options/provider/
+- /docs/concepts/options/provider/
 ---
 
 The `provider` resource option sets a provider for the resource. For more information, see [Providers](../providers). The default is to inherit this value from the parent resource, and to use the ambient provider specified by Pulumi configuration for resources without a parent.
