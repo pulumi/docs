@@ -12,7 +12,8 @@ menu:
     identifier: kubernetes-guides-control-plane
     weight: 2
 aliases:
-- /docs/guides/crosswalk/kubernetes/control-plane/
+  - /docs/guides/crosswalk/kubernetes/control-plane/
+  - /docs/clouds/kubernetes/guides/configure-defaults/
 ---
 
 {{< chooser cloud "aws,azure,gcp" / >}}

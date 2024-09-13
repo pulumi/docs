@@ -11,7 +11,8 @@ menu:
     identifier: kubernetes-guides-cluster-svcs
     weight: 7
 aliases:
-- /docs/guides/crosswalk/kubernetes/cluster-services/
+  - /docs/guides/crosswalk/kubernetes/cluster-services/
+  - /docs/clouds/kubernetes/guides/cluster-services/
 ---
 
 {{< chooser cloud "aws,azure,gcp" / >}}

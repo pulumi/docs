@@ -17,6 +17,7 @@ aliases:
 - /docs/guides/crosswalk/
 - /docs/guides/crosswalk/aws/
 - /docs/clouds/aws/aws-guides/
+- /docs/clouds/aws/guides/
 ---
 <a href="./">
     <img src="/images/docs/reference/crosswalk/aws/logo.svg" align="right" width="280" style="margin: 0 0 32px 16px;">

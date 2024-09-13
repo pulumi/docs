@@ -12,7 +12,8 @@ menu:
     identifier: kubernetes-guides-app-svcs
     weight: 8
 aliases:
-- /docs/guides/crosswalk/kubernetes/app-services/
+    - /docs/guides/crosswalk/kubernetes/app-services/
+    - /docs/clouds/kubernetes/guides/app-services/
 ---
 
 {{< chooser cloud "aws,azure,gcp" / >}}

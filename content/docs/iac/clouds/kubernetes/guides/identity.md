@@ -11,7 +11,8 @@ menu:
     identifier: kubernetes-guides-iam
     weight: 11
 aliases:
-- /docs/guides/crosswalk/kubernetes/identity/
+  - /docs/guides/crosswalk/kubernetes/identity/
+  - /docs/clouds/kubernetes/guides/identity/
 ---
 
 {{< chooser cloud "aws,azure,gcp" / >}}

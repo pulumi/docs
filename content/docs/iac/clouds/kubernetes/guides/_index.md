@@ -15,6 +15,7 @@ aliases:
 - /docs/guides/k8s-the-prod-way/app
 - /docs/guides/k8s-the-prod-way/architecture
 - /docs/guides/crosswalk/kubernetes/
+- /docs/clouds/kubernetes/guides/
 ---
 
 <a href="./">

@@ -116,4 +116,6 @@ guides:
 policy:
   url: awsguard/
   description: Use AWSGuard to configure and enforce best practices for your Pulumi stacks.
+aliases:
+  - /docs/clouds/aws/
 ---

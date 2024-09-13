@@ -12,7 +12,8 @@ menu:
     identifier: kubernetes-guides-worker-nodes
     weight: 3
 aliases:
-- /docs/guides/crosswalk/kubernetes/worker-nodes/
+  - /docs/guides/crosswalk/kubernetes/worker-nodes/
+  - /docs/clouds/kubernetes/guides/worker-nodes/
 ---
 
 {{< chooser cloud "aws,azure,gcp" / >}}

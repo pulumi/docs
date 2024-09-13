@@ -12,7 +12,8 @@ menu:
     identifier: kubernetes-guides-playbooks
     weight: 1
 aliases:
-- /docs/guides/crosswalk/kubernetes/playbooks/
+  - /docs/guides/crosswalk/kubernetes/playbooks/
+  - /docs/clouds/kubernetes/guides/playbooks/
 ---
 
 <a href="./">

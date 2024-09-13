@@ -12,7 +12,8 @@ menu:
     identifier: kubernetes-guides-configure-authorization
     weight: 6
 aliases:
-- /docs/guides/crosswalk/kubernetes/configure-access-control/
+  - /docs/guides/crosswalk/kubernetes/configure-access-control/
+  - /docs/clouds/kubernetes/guides/configure-access-control/
 ---
 
 {{< chooser cloud "aws,azure,gcp" / >}}

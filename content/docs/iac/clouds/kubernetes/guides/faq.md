@@ -10,7 +10,8 @@ menu:
     parent: kubernetes-clouds-guides
     weight: 14
 aliases:
-- /docs/guides/crosswalk/kubernetes/faq/
+  - /docs/guides/crosswalk/kubernetes/faq/
+  - /docs/clouds/kubernetes/guides/faq/
 ---
 
 1. **What does Crosswalk for Kubernetes include?**

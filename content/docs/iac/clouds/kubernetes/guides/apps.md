@@ -11,7 +11,8 @@ menu:
     identifier: kubernetes-guides-apps
     weight: 12
 aliases:
-- /docs/guides/crosswalk/kubernetes/apps/
+  - /docs/guides/crosswalk/kubernetes/apps/
+  - /docs/clouds/kubernetes/guides/apps/
 ---
 
 The following are examples of how to create and use various types of Kubernetes

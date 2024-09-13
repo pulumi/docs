@@ -75,4 +75,6 @@ templates:
   url: virtual-machine/azure/
 - display_name: Kubernetes cluster on Azure
   url: kubernetes/azure/
+aliases:
+  - /docs/clouds/azure/
 ---

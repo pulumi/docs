@@ -12,7 +12,8 @@ menu:
     identifier: kubernetes-guides-defaults
     weight: 5
 aliases:
-- /docs/guides/crosswalk/kubernetes/configure-defaults/
+  - /docs/guides/crosswalk/kubernetes/configure-defaults/
+  - /docs/clouds/kubernetes/guides/configure-defaults/
 ---
 
 {{< chooser cloud "aws,azure,gcp" / >}}

@@ -10,6 +10,8 @@ menu:
     name: Clouds
     weight: 3
     identifier: iac-clouds
+aliases:
+  - /docs/clouds/
 ---
 
 Pulumi supports AWS, Azure, Google Cloud, Kubernetes, and over 100 other packages.

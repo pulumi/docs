@@ -11,7 +11,8 @@ menu:
     parent: kubernetes-clouds-guides
     weight: 13
 aliases:
-- /docs/guides/crosswalk/kubernetes/managed-infra/
+  - /docs/guides/crosswalk/kubernetes/managed-infra/
+  - /docs/clouds/kubernetes/guides/managed-infra/
 ---
 
 {{< chooser cloud "aws,azure,gcp" / >}}

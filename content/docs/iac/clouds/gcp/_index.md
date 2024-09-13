@@ -64,4 +64,6 @@ templates:
   url: virtual-machine/gcp/
 - display_name: Kubernetes cluster on Google Cloud
   url: kubernetes/gcp/
+aliases:
+  - /docs/clouds/gcp/
 ---

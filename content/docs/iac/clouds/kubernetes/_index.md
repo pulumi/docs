@@ -129,4 +129,6 @@ kubernetes_operator:
   - display_name: Get started with Pulumi Kubernetes Operator
     url: /docs/using-pulumi/continuous-delivery/pulumi-kubernetes-operator/
     icon: light-bulb-small-gray
+aliases:
+  - /docs/clouds/kubernetes/
 ---

@@ -11,7 +11,8 @@ menu:
     identifier: kubernetes-guides-access-cluster
     weight: 4
 aliases:
-- /docs/guides/crosswalk/kubernetes/try-out-the-cluster/
+  - /docs/guides/crosswalk/kubernetes/try-out-the-cluster/
+  - /docs/clouds/kubernetes/guides/try-out-the-cluster/
 ---
 
 {{< chooser cloud "aws,azure,gcp" / >}}
