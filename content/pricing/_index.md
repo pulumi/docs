@@ -66,7 +66,8 @@ tiers:
                   - SAML/SSO
                   - Secrets versioning
                   - Audit logs
-                  - 24x7 support available
+                  - Enterprise Support available
+                  - Private Slack and Professional Services available.
             - title: Business Critical
               subtitle: Advanced security, compliance, and hosting for mission-critical needs.
               iac_price: Custom
@@ -83,9 +84,8 @@ tiers:
                   - Policies and compliance
                   - Automatic group & user sync (SCIM)
                   - Audit logs export
-                  - 24x7 support available
-                  - Private Slack channel available
-                  - Professional services and training available
+                  - Enterprise Support available
+                  - Private Slack and Professional Services available.
 
 customers:
     - stat: "**5x faster** time to market"
@@ -582,7 +582,7 @@ comparison_table:
                   items:
                     - content: _blank
                     - content: _blank
-                    - content: Available, 4 hours to 2 business day
+                    - content: Available, 4 hours to 2 business days
                     - content: Available, 4 hours to 2 business days
                 - title: Private Slack channel
                   items:
