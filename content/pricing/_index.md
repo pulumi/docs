@@ -664,7 +664,7 @@ faq:
             Estimated resources: <b>24</b><br>
             This scenario is a stack with an Amazon VPC (including subnets, security groups, and route table associations), Amazon ECS (including cluster and service, load balancer resources, and IAM resources), and Amazon RDS (including RDS instance and subnet group). Each group of resources (VPC, ECS, RDS) is represented by a component resource.
         - question: Can I prepay for resources, secrets, and secrets API calls?
-          answer: Yes, you can! Please contact us to discuss the Enterprise and Business Critical Editions, which include bulk discounts for buying in advance.
+          answer: Yes, you can! Please contact us to discuss the Enterprise and Business Critical Editions, which include volume pricing for paying in advance.
         
     - category: Product
       id: product
