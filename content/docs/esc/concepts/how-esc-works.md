@@ -1,6 +1,6 @@
 ---
 title_tag: "How Pulumi ESC Works"
-meta_desc: An overview of how Pulumi ESC works.
+meta_desc: An overview of how Pulumi ESC works and discussion of core concepts.
 title: How Pulumi works
 h1: How Pulumi works
 meta_image: /images/docs/meta-images/docs-meta.png

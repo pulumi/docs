@@ -1,6 +1,7 @@
 ---
 title: Pulumi ESC
 linktitle: Pulumi ESC
+no_on_this_page: true
 docs_home: true
 notitle: true
 menu:
@@ -9,11 +10,7 @@ menu:
     weight: 1
 aliases:
   - /docs/pulumi-cloud/esc/
-
-no_on_this_page: true
-docs_home: true
-notitle: true
-
+  
 meta_desc: Learn how to easily access, share, and manage secrets securely on any cloud, using your favorite programming languages with Pulumi ESC.
 meta_image: /images/docs/meta-images/docs-meta.png
 h1: Pulumi ESC Docs
