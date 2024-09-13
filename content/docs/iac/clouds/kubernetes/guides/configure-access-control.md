@@ -8,7 +8,7 @@ meta_image: /images/docs/meta-images/docs-clouds-kubernetes-meta-image.png
 menu:
   iac:
     name: Access control
-    parent: kubernetes-guides
+    parent: kubernetes-clouds-guides
     identifier: kubernetes-guides-configure-authorization
     weight: 6
 aliases:
