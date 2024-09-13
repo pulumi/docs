@@ -21,7 +21,7 @@ The addition of 1Password, known for its developer-centric approach to secrets m
 
 <!--more-->
 
-Pulumi ESC's addition of the 1Password provider empowers development teams to seamlessly incorporate secrets and configurations stored within 1Password into their workflows. By using the retrieved values as [environment variables](/docs/esc/environments/#projecting-environment-variables) or within [Pulumi Config](/docs/esc/environments/#using-environments-with-pulumi-iac) at runtime, teams can bypass the manual and error-prone process of copying and pasting secrets, significantly enhancing security and efficiency.
+Pulumi ESC's addition of the 1Password provider empowers development teams to seamlessly incorporate secrets and configurations stored within 1Password into their workflows. By using the retrieved values as [environment variables](/docs/esc/environments/working-with-environments/#projecting-environment-variables) or within [Pulumi Config](/docs/esc/integrations/infrastructure/pulumi-iac/) at runtime, teams can bypass the manual and error-prone process of copying and pasting secrets, significantly enhancing security and efficiency.
 
 {{% notes type="info" %}}
 Join our upcoming workshop, ["Managing team secrets with 1Password & Pulumi ESC"](https://www.pulumi.com/resources/managing-team-secrets-1password-pulumi-esc/), to explore Pulumi ESC and the 1Password integration in detail.
@@ -97,7 +97,7 @@ Pulumi ESC's 1Password integration reiterates our commitment to providing choice
 
 Your journey towards streamlined, secure cloud infrastructure management begins here. We can't wait to see what you build with Pulumi ESC.
 
-* Visit the [1Password CI/CD Integrations page](https://developer.1password.com/docs/ci-cd/) for links to the Pulumi ESC [1Password provider docs](/docs/esc/providers/1password-secrets/)
-* Visit our [Pulumi ESC docs](/docs/esc/) to learn more about Pulumi ESC and its supported [providers](/docs/esc/providers/)
+* Visit the [1Password CI/CD Integrations page](https://developer.1password.com/docs/ci-cd/) for links to the Pulumi ESC [1Password provider docs](/docs/esc/integrations/dynamic-secrets/1password-secrets/)
+* Visit our [Pulumi ESC docs](/docs/esc/) to learn more about Pulumi ESC and its supported [integrations](/docs/esc/integrations/)
 
 As always, we deeply value your insights. Your [feedback](https://github.com/pulumi/esc/issues/new/choose) is instrumental in helping us refine and enhance our solutions to better align with your needs.
