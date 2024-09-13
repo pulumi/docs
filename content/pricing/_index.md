@@ -31,7 +31,7 @@ tiers:
                 - Community support
             - title: Team
               subtitle: Collaboration for growing teams and cloud projects.
-              iac_price: $0.36
+              iac_price: $0.37
               iac_unit: per resource/month
               iac_note:
               esc_price: $0.50
