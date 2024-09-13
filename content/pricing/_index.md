@@ -54,7 +54,7 @@ tiers:
               iac_note: (Volume pricing available)
               esc_price: $0.75
               esc_unit: per secret/month
-              esc_note: (Volume discounts available)
+              esc_note: (Volume pricing available)
               primary_cta: Start free trial
               primary_cta_link: https://app.pulumi.com/signup
               secondary_cta: Contact Sales
