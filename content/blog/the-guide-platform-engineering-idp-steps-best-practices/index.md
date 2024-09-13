@@ -79,14 +79,9 @@ Platform engineering offers a strategic solution to these issues. This guide pro
 - Step 7: Evolving Towards Self-Service
 - Frequently asked questions (Platform Engineering Concepts & Definitions) 
 
-## Platform Engineering Definitions
-
-- 
-- Platform customers: Internal teams relying on platform services, components, and tools to streamline their development and operations.
+## Step 1: Securing Executive Buy-in
 
 {{< youtube "t4c3NOiuhXQ?rel=0" >}}
-
-## Step 1: Securing Executive Buy-in
 
 The first step in your platform engineering journey is securing executive buy-in. This high-level support is essential, as platform engineering teams must create an organization-wide strategy that integrates internal developer portals (IDPs) and self-service capabilities. Leadership needs to understand how platform engineering can address inefficiencies caused by siloed application teams and uncoordinated cloud deployments.
 
