@@ -12,6 +12,7 @@ menu:
 aliases:
 - /docs/quickstart/kubernetes/destroy-stack/
 - /docs/get-started/kubernetes/destroy-stack/
+- /docs/clouds/kubernetes/get-started/destroy-stack/
 ---
 
 Now that we've seen how to deploy changes to our program, let's clean up and tear down the resources that are part of our stack.

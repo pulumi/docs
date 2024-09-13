@@ -12,6 +12,7 @@ menu:
 aliases:
 - /docs/quickstart/kubernetes/modify-program/
 - /docs/get-started/kubernetes/modify-program/
+- /docs/clouds/kubernetes/get-started/modify-program/
 ---
 
 Now that we have an instance of our Pulumi program deployed, let's update it to do something a little more interesting.

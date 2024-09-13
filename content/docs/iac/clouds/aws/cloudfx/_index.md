@@ -5,6 +5,7 @@ meta_desc: "The Pulumi Cloud Framework lets you program infrastructure and appli
 aliases:
 - /docs/quickstart/cloudfx/
 - /docs/tutorials/cloudfx
+- /docs/clouds/aws/cloudfx/
 ---
 
 <img src="/images/docs/quickstart/cloudfx-purple.png" align="right">

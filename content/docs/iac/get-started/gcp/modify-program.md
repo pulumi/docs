@@ -12,7 +12,7 @@ menu:
 aliases:
 - /docs/quickstart/gcp/modify-program/
 - /docs/get-started/gcp/modify-program/
-- /docs/clouds/azure/get-started/modify-program/
+- /docs/clouds/gcp/get-started/modify-program/
 ---
 
 Now that your storage bucket is provisioned, let's add an object to it. First, from within your project directory, create a new `index.html` file with some content in it.

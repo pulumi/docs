@@ -12,6 +12,7 @@ menu:
 aliases:
 - /docs/quickstart/kubernetes/deploy-stack/
 - /docs/get-started/kubernetes/deploy-stack/
+- /docs/clouds/kubernetes/get-started/deploy-stack/
 ---
 
 Deploy the stack:

@@ -12,6 +12,7 @@ menu:
 aliases:
 - /docs/quickstart/kubernetes/review-project/
 - /docs/get-started/kubernetes/review-project/
+- /docs/clouds/kubernetes/get-started/review-project/
 ---
 
 Let's review some of the generated project files:

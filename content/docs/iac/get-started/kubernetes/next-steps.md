@@ -13,6 +13,7 @@ menu:
 aliases:
 - /docs/quickstart/kubernetes/next-steps/
 - /docs/get-started/kubernetes/next-steps/
+- /docs/clouds/kubernetes/get-started/next-steps/
 ---
 
 Congrats! You've deployed your first project to Kubernetes with Pulumi. Here are some next steps, depending on your learning style.

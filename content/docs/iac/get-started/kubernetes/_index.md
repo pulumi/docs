@@ -16,6 +16,7 @@ aliases:
     - /docs/quickstart/kubernetes/
     - /docs/get-started/kubernetes/
     - /docs/clouds/get-started/kubernetes/
+    - /docs/clouds/kubernetes/get-started/
 ---
 
 Pulumi's Cloud Native SDK makes it easy to target any Kubernetes environment to

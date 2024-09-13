@@ -12,6 +12,7 @@ menu:
 aliases:
 - /docs/quickstart/kubernetes/create-project/
 - /docs/get-started/kubernetes/create-project/
+- /docs/clouds/kubernetes/get-started/create-project/
 ---
 Now that you have set up your environment let's create your first Pulumi program.
 
