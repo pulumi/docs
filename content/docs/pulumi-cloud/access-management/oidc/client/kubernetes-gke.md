@@ -14,7 +14,7 @@ menu:
     parent: openid-connect-client
     weight: 1
 aliases:
-- /docs/pulumi-cloud/oidc/client/github/kubernetes-gke/
+- /docs/pulumi-cloud/oidc/client/kubernetes-gke/
 ---
 
 This document outlines the steps required to configure Pulumi to accept Google Kubernetes Engine id_tokens to be exchanged for Organization access tokens. With this configuration, Kubernetes pods authenticate to Pulumi Cloud using OIDC tokens issued by GKE.
