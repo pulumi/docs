@@ -17,7 +17,7 @@ Managing secrets and configurations across multiple environments and teams can b
 
 <!--more-->
 
-With Pulumi ESC Webhooks, you can now receive real-time notifications and trigger automated actions based on specific events within your Pulumi ESC [Environments](/docs/esc/environments/).  For example, you can set up a Webhook to notify your team’s Slack channel whenever a new secret is added to an environment, or automatically trigger a deployment pipeline when configurations are changed. Webhooks can be triggered by changes to [version tags](/docs/esc/environments/#tagging-versions) and [environment tags](/blog/esc-projects-environment-tags-launch/#introducing-environment-tags), and can be configured per environment or at the organization level for all environments.
+With Pulumi ESC Webhooks, you can now receive real-time notifications and trigger automated actions based on specific events within your Pulumi ESC [Environments](/docs/esc/environments/).  For example, you can set up a Webhook to notify your team’s Slack channel or automatically trigger a deployment pipeline via a POST request when a new environment revision is created due to changes in secrets and configuration. Webhooks can be triggered by changes to [version tags](/docs/esc/environments/#tagging-versions) and [environment tags](/blog/esc-projects-environment-tags-launch/#introducing-environment-tags), and can be configured per environment or at the organization level for all environments.
 
 Take your automation further by creating Webhooks that trigger [Pulumi Deployments](/docs/pulumi-cloud/deployments/), automatically updating your infrastructure in response to configuration changes in Pulumi ESC—without writing custom code and all within the Pulumi Cloud Console.
 
