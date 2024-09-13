@@ -46,6 +46,39 @@
                     </a>
                 {{ end }}
             </div>
+        {{ else if eq .type "button-cards" }}
+        <div class="docs-home-section">
+            <h2 id="{{ anchorize .heading }}">{{ .heading }}</h2>
+
+            <div class="tiles flex-wrap justify-left items-stretch mt-4">
+                {{ range .cards }}
+                <div class="pb-4 md:pr-4 md:w-1/2">
+                    <div class="tile h-full">
+                        <div class="block rounded shadow border border-gray-300 p-3 h-full flex flex-col">
+                            <a href="{{ .link }}">
+                                <h4 class="no-anchor">
+                                    {{ .heading }}
+                            </h4>
+                            <p class="pb-4">
+                            {{ if .description }}
+                                {{ .description | safeHTML }}
+                            {{ end }}
+                            </p>
+                        </a>
+                        <div class="flex space-x-2 flex-grow items-end">
+                                {{ if .primary_button_link }}
+                                <a href="{{ .primary_button_link }}" class="btn btn-primary">{{ .primary_button_label }}</a>
+                                {{ end }}
+                                {{ if .secondary_button_link }}
+                                <a href="{{ .secondary_button_link }}" class="btn btn-secondary">{{ .secondary_button_label }}</a>
+                                {{ end }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{ end }}
+            </div>
+        </div>
         {{ else if eq .type "blue-sparkle" }}
             <div class="blue-sparkle docs-home-section">
                 <div class="heading">
@@ -53,11 +86,18 @@
                     <div class="sparkle"></div>
                 </div>
                 <p>{{ .description }}</p>
+                {{ if .raw_html }}
+                  {{ .raw_html | safeHTML }}
+                {{ end }}
             </div>
         {{ else if eq .type "flat" }}
             <div class="docs-home-section">
                 <h2 id="{{ anchorize .heading }}">{{ .heading }}</h2>
-                {{ .description | safeHTML }}
+                {{ if .description }}
+                    {{ .description | safeHTML }}
+                {{ else if .description_md }}
+                    {{ .description_md | markdownify }}
+                {{ end }}
             </div>
         {{ end }}
     {{ end }}

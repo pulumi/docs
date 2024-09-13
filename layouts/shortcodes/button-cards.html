@@ -1,0 +1,105 @@
+{{/* Button Cards shortcode
+
+    button-cards.html and button-card.html implement a shortcode 
+    version of the `button-cards` element of docs-home template
+
+    This creates a list of cards, 2 wide, with a layout roughly like:
+    +-------------------+ +-------------------+ 
+    | # Heading         | | # Heading         |
+    |                   | |                   |
+    | Description goes  | | Description goes  |
+    | here...           | | here...           |
+    |                   | |                   |
+    | [Button] [Button] | | [Button] [Button] |
+    +-------------------+ +-------------------+
+
+    This allows you to use them anywhere in the document rather than just as part 
+    of the templated front-matter prior to the free-form markdown document. 
+
+    The `button-cards` shortcode has no params, and is just a container for 
+    `button-cards` shortcodes.
+
+    Unlike the templated version, headings are handled in normal markdown instead 
+    of being part of the card list (which also makes them more flexible on how you
+    can use them).
+
+    `button-card` Parameters
+
+    - `heading`: Title of card
+    - `link`: link for the heading
+    - `primary_button_link`: link for the "primary" button (there are two styles)
+    - `primary_button_label`: label text for the "primary" button
+    - `secondary_button_link`: link for the "secondary" button
+    - `secondary_button_label`: label text for the "secondary" button
+
+    Inner contents of the shortcode block are used as the descripton text.
+
+    Here's an example of how to use them, inside of a markdown page:
+
+    {{< button-cards >}}
+        {{< button-card
+            heading="Pulumi Copilot"
+            link="/docs/pulumi-cloud/copilot/"
+            primary_button_label="Get Started"
+            primary_button_link="/docs/pulumi-cloud/copilot/"
+            secondary_button_label="Learn More"
+            secondary_button_link="/docs/pulumi-cloud/copilot/#frequently-asked-questions"
+        >}}
+            Generative AI-powered intelligent cloud management
+        {{< /button-card>}}
+        {{< button-card
+            heading="Pulumi CrossGuard"
+            link="/docs/iac/packages-and-automation/crossguard/"
+            primary_button_label="Get Started"
+            primary_button_link="/docs/iac/packages-and-automation/crossguard/get-started/"
+            secondary_button_label="Learn More"
+            secondary_button_link="/docs/iac/packages-and-automation/crossguard/core-concepts/"
+        >}}
+            Enforce guardrails for security and compliance using policies in standard languages
+        {{< /button-card>}}
+        {{< button-card
+            heading="Pulumi Deployments"
+            link="/docs/pulumi-cloud/deployments/"
+            primary_button_label="Get Started"
+            primary_button_link="/docs/pulumi-cloud/deployments/get-started/"
+            secondary_button_label="Learn More"
+            secondary_button_link="/docs/pulumi-cloud/deployments/reference/"
+        >}}
+            Automate deployment and operational workflows for cloud infrastructure
+        {{< /button-card>}}
+    {{< /button-cards>}}
+        
+    The same example above, if written in front-matter in the docs-home template would look like:
+
+    sections:
+    - type: button-cards
+    heading: Featured Capabilities
+    cards:
+    - heading: Pulumi Copilot
+        link: /docs/pulumi-cloud/copilot/
+        description: Generative AI-powered intelligent cloud management
+        primary_button_label: Get Started
+        primary_button_link: /docs/pulumi-cloud/copilot/
+        secondary_button_label: Learn More
+        secondary_button_link: /docs/pulumi-cloud/copilot/#frequently-asked-questions
+    - heading: Pulumi CrossGuard
+        description: Enforce guardrails for security and compliance using policies in standard languages
+        link: /docs/iac/packages-and-automation/crossguard/
+        primary_button_label: Get Started
+        primary_button_link: /docs/iac/packages-and-automation/crossguard/get-started/
+        secondary_button_label: Learn More
+        secondary_button_link: /docs/iac/packages-and-automation/crossguard/core-concepts/
+    - heading: Pulumi Deployments
+        description: Automate deployment and operational workflows for cloud infrastructure
+        link: /docs/pulumi-cloud/deployments/
+        primary_button_label: Get Started
+        primary_button_link: /docs/pulumi-cloud/deployments/get-started/
+        secondary_button_label: Learn More
+        secondary_button_link: /docs/pulumi-cloud/deployments/reference/
+*/}}
+
+<div class="docs-home-section">
+    <div class="tiles flex-wrap justify-left items-stretch mt-4">
+        {{ .Inner }}
+    </div>
+</div>
