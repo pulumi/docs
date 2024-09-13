@@ -57,7 +57,10 @@ Once you have created your new application registration, you will be redirected 
     * **Issuer:** `https://api.pulumi.com/oidc`
     * **Subject Identifier:** must be a valid subject claim (see examples at the end of this section).
     * **Name:** An arbitrary name for the credential, e.g. "pulumi-oidc-credentials"
-    * **Audience:** The name of your Pulumi organization.
+    * **Audience:** This is different between pulumi deployments and ESC. For Deployments this is only the name of your Pulumi organization. For ESC this is the name of your Pulumi organization prefixed with `azure:` (e.g. `azure:{org}`).
+      {{< notes type="info" >}}
+      For environments in the `default` project the audience will use just the Pulumi organization name. This is to prevent regressions for legacy environments.
+      {{< /notes >}}
 
 ### Subject claim examples
 

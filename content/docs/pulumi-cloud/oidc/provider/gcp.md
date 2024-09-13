@@ -37,7 +37,10 @@ Please note that this guide provides step-by-step instructions based on the offi
 5. In the **Add a provider to pool** dropdown, select **OpenID Connect (OIDC)**.
 6. Provide a name for the provider.
 7. In the **Issuer** field, enter `https://api.pulumi.com/oidc`.
-8. In the **Audiences** section, select the **Allowed audiences** radio button. Provide the name of your Pulumi organization as the value, then click **Continue**.
+8. In the **Audiences** section, select the **Allowed audiences** radio button. The value for this field is different between pulumi deployments and ESC. For Deployments enter just the name of your Pulumi organization. For ESC enter the name of your Pulumi organization prefixed with `gcp:` (e.g. `gcp:{org}`). Then click **Continue**.
+  {{< notes type="info" >}}
+  For environments in the `default` project the audience will use just the Pulumi organization name. This is to prevent regressions for legacy environments.
+  {{< /notes >}}
 9. In the **Configure provider attributes** section, provide the value of `assertion.sub` in the **OIDC 1** field. Then click **Save**.
 
 ## Configure a Service Account
