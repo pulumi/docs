@@ -2,8 +2,8 @@
 {{- $menuID := .menu }}
 
 {{/* If a valid menu choice was passed in, use that. Otherwise, try to derive
-one from the path. If that doesn't work, don't show a menu. (TODO: Would it be
-helpful to be able to set this somehow in the frontmatter?) */}}
+one from the current path. If that doesn't work, don't show a menu. (TODO: Would
+it be helpful to be able to set the menu somehow in the frontmatter?) */}}
 
 {{ $validMenus := slice "iac" "esc" "cloud" }}
 
@@ -63,7 +63,12 @@ helpful to be able to set this somehow in the frontmatter?) */}}
                         {{- printf " %s=%q" $k $v | safeHTMLAttr }}
                     {{- end }}
                 {{- end -}}
-            >{{ $name }}</a>
+            >
+            <button>
+                <i class="fa fa-caret-right"></i>
+            </button>
+            <span>{{ $name }}</span>
+            </a>
             {{- with .Children }}
                 <ul class="list-none">
                     {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}

@@ -1,35 +1,90 @@
 #docs-main-nav {
 
     pulumi-docs-nav {
-        @apply text-sm ;
+        @apply text-sm block;
 
-        li {
-            @apply my-0.5;
+        ul {
+            @apply list-none;
+            padding-left: 0.9rem;
 
-            &.expanded {
-                > a {
-                    @apply text-blue-800;
+            li {
+                @apply my-0.5;
 
-                    > span {
-                        @apply font-semibold;
+                a {
+                    @apply relative flex items-center text-gray-800 rounded no-underline transition-all;
+                    padding: 6px 12px;
+
+                    &:hover {
+                        @apply bg-blue-100 text-blue-800;
+
+                        i {
+                            @apply text-blue-900;
+                        }
+                    }
+
+                    &.active {
+                        @apply bg-blue-200 text-blue-900;
+                    }
+
+                    button {
+                        @apply hidden absolute text-center p-0 m-0 left-0;
+                        width: 1.2rem;
+                    }
+
+                    span {
+                        @apply pl-2;
+                    }
+                }
+
+                > ul {
+                    @apply hidden;
+                }
+
+                &.expanded {
+                    > a {
+                        @apply text-blue-800;
+
+                        > button {
+                            > i {
+                                rotate: 90deg;
+                                transition: rotate .1s;
+                            }
+                        }
+
+                        > span {
+                            @apply font-semibold;
+                        }
+                    }
+
+                    > ul {
+                        @apply block;
+                    }
+                }
+
+                &.expandable {
+                    > a {
+                        > button {
+                            @apply block;
+                        }
                     }
                 }
             }
         }
 
-        a {
-            @apply text-gray-800 rounded no-underline transition-all;
+        // Hide the root item in the list, as we don't want to show it. (We
+        // only want to show the items that belong to that menu.)
+        > ul {
+            padding-left: 0 !important;
 
-            &:hover {
-                @apply bg-blue-100 text-blue-800;
-
-                i {
-                    @apply text-blue-900;
+            > li {
+                > button, > a {
+                    display: none !important;
                 }
-            }
 
-            &.active {
-                @apply bg-blue-200 text-blue-900;
+                > ul {
+                    display: block !important;
+                    padding-left: 0 !important;
+                }
             }
         }
     }
