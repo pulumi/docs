@@ -8,7 +8,11 @@
 
             &.expanded {
                 > a {
-                    @apply text-blue-800 font-semibold;
+                    @apply text-blue-800;
+
+                    > span {
+                        @apply font-semibold;
+                    }
                 }
             }
         }
