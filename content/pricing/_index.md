@@ -119,7 +119,7 @@ comparison_table:
                     - content: 200
                     - content: _blank
                     - content: _blank
-                - title: Commitment discounts
+                - title: Commitment pricing
                   items:
                     - content: _blank
                     - content: _blank
@@ -220,7 +220,7 @@ comparison_table:
                     - content: 10K
                     - content: 10K
                     - content: 
-                - title: Commitment discounts
+                - title: Commitment pricing
                   items:
                     - content: _blank
                     - content: _blank
