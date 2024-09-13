@@ -156,34 +156,34 @@ Event filtering allows you to choose which events should be delivered to each we
 all events in a group, or filter to specific events (only failures, only deployment events, etc.).
 The following table describes the various event filters available and the context in which they are relevant.
 
-| Filter                        		| Event Kind          				| Webhook Type               | Triggered                                        |
+| Filter                            | Event Kind                  | Webhook Type               | Triggered                                        |
 |-----------------------------------|-----------------------------|----------------------------|--------------------------------------------------|
-| `stack_created`               		| `stack`             				| Organization webhooks only | When a stack is created.                         |
-| `stack_deleted`               		| `stack`             				| Organization webhooks only | When a stack is deleted.                         |
-| `preview_succeeded`           		| `stack_preview`     				| Organization or Stack      | When a stack `preview` succeeds.                 |
-| `preview_failed`              		| `stack_preview`     				| Organization or Stack      | When a stack `preview` fails.                    |
-| `update_succeeded`            		| `stack_update`      				| Organization or Stack      | When a stack `update` succeeds.                  |
-| `update_failed`               		| `stack_update`      				| Organization or Stack      | When a stack `update` fails.                     |
-| `destroy_succeeded`           		| `stack_update`      				| Organization or Stack      | When a stack `destroy` succeeds.                 |
-| `destroy_failed`              		| `stack_update`      				| Organization or Stack      | When a stack `destroy` fails.                    |
-| `refresh_succeeded`           		| `stack_update`      				| Organization or Stack      | When a stack `refresh` succeeds.                 |
-| `refresh failed`              		| `stack_update`      				| Organization or Stack      | When a stack `refresh` fails.                    |
-| `deployment_queued`           		| `deployment`        				| Organization or Stack      | When a deployment is queued.                     |
-| `deployment_started`          		| `deployment`        				| Organization or Stack      | When a deployment starts running.                |
-| `deployment_succeeded`        		| `deployment`        				| Organization or Stack      | When a deployment succeeds.                      |
-| `deployment_failed`           		| `deployment`        				| Organization or Stack      | When a deployment fails.                         |
-| `drift_detected`              		| `drift_detection`   				| Organization or Stack      | When drift is detected in a drift detection run. |
-| `drift_detection_succeeded`   		| `drift_detection`   				| Organization or Stack      | When a drift detection run succeeds.             |
-| `drift_detection_failed`      		| `drift_detection`   				| Organization or Stack      | When a drift detection run fails.                |
-| `drift_remediation_succeeded` 		| `drift_remediation` 				| Organization or Stack      | When a drift remediation run succeeds.           |
-| `drift_remediation_failed`    		| `drift_remediation` 				| Organization or Stack      | When a drift remediation run fails.              |
+| `stack_created`                   | `stack`                     | Organization webhooks only | When a stack is created.                         |
+| `stack_deleted`                   | `stack`                     | Organization webhooks only | When a stack is deleted.                         |
+| `preview_succeeded`               | `stack_preview`             | Organization or Stack      | When a stack `preview` succeeds.                 |
+| `preview_failed`                  | `stack_preview`             | Organization or Stack      | When a stack `preview` fails.                    |
+| `update_succeeded`                | `stack_update`              | Organization or Stack      | When a stack `update` succeeds.                  |
+| `update_failed`                   | `stack_update`              | Organization or Stack      | When a stack `update` fails.                     |
+| `destroy_succeeded`               | `stack_update`              | Organization or Stack      | When a stack `destroy` succeeds.                 |
+| `destroy_failed`                  | `stack_update`              | Organization or Stack      | When a stack `destroy` fails.                    |
+| `refresh_succeeded`               | `stack_update`              | Organization or Stack      | When a stack `refresh` succeeds.                 |
+| `refresh failed`                  | `stack_update`              | Organization or Stack      | When a stack `refresh` fails.                    |
+| `deployment_queued`               | `deployment`                | Organization or Stack      | When a deployment is queued.                     |
+| `deployment_started`              | `deployment`                | Organization or Stack      | When a deployment starts running.                |
+| `deployment_succeeded`            | `deployment`                | Organization or Stack      | When a deployment succeeds.                      |
+| `deployment_failed`               | `deployment`                | Organization or Stack      | When a deployment fails.                         |
+| `drift_detected`                  | `drift_detection`           | Organization or Stack      | When drift is detected in a drift detection run. |
+| `drift_detection_succeeded`       | `drift_detection`           | Organization or Stack      | When a drift detection run succeeds.             |
+| `drift_detection_failed`          | `drift_detection`           | Organization or Stack      | When a drift detection run fails.                |
+| `drift_remediation_succeeded`     | `drift_remediation`         | Organization or Stack      | When a drift remediation run succeeds.           |
+| `drift_remediation_failed`        | `drift_remediation`         | Organization or Stack      | When a drift remediation run fails.              |
 
 And this table describes the various filter groups available to easily subscribe to all events within a group.
 
-| Group                | Event Kinds Included                                                       |
+| Group          | Event Kinds Included                                 |
 |----------------|------------------------------------------------------|
-| `stacks`            | `stack`, `stack_preview`, `stack_update`                   |
-| `deployments` | `deployment`, `drift_detection`, `drift_remediation` |
+| `stacks`       | `stack`, `stack_preview`, `stack_update`             |
+| `deployments`  | `deployment`, `drift_detection`, `drift_remediation` |
 
 ## Webhook Formats
 

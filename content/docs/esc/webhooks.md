@@ -158,25 +158,25 @@ Event filtering allows you to choose which events should be delivered to each we
 all events in a group, or filter to specific events (only failures, only deployment events, etc.).
 The following table describes the various event filters available and the context in which they are relevant.
 
-| Filter                        		  | Event Kind          				    | Webhook Type               | Triggered                                        |
+| Filter                              | Event Kind                      | Webhook Type               | Triggered                                        |
 |-------------------------------------|---------------------------------|----------------------------|--------------------------------------------------|
-| `environment_created`					      | `environment`						        | Organization webhooks only | When a new environment is created.               |
-| `environment_deleted`					      | `environment`						        | Organization webhooks only | When an environment is deleted.              	  |
-| `environment_revision_created`		  | `environment_revision`			    | Organization or Environment| When a new revision is created on an environment.|
-| `environment_revision_retracted`		| `environment_revision`			    | Organization or Environment| When a revision is retracted on an environment.  |
-| `environment_revision_tag_created`	| `environment_revision_tag`		  | Organization or Environment| When a new revision tag is created.              |
-| `environment_revision_tag_deleted`	| `environment_revision_tag`		  | Organization or Environment| When a revision tag is deleted.              	  |
-| `environment_revision_tag_updated`	| `environment_revision_tag`		  | Organization or Environment| When a revision tag is updated.              	  |
-| `environment_tag_created`				    | `environment_tag`					      | Organization or Environment| When a new environment tag is created.           |
-| `environment_tag_deleted`				    | `environment_tag`					      | Organization or Environment| When an environment tag is deleted.              |
-| `environment_tag_updated`				    | `environment_tag`					      | Organization or Environment| When an environment tag is updated.              |
-| `imported_environment_changed`		  | `imported_environment_changed`	| Organization or Environment| When an imported environment was changed.        |
+| `environment_created`               | `environment`                   | Organization webhooks only | When a new environment is created.               |
+| `environment_deleted`               | `environment`                   | Organization webhooks only | When an environment is deleted.              	  |
+| `environment_revision_created`      | `environment_revision`          | Organization or Environment| When a new revision is created on an environment.|
+| `environment_revision_retracted`    | `environment_revision`          | Organization or Environment| When a revision is retracted on an environment.  |
+| `environment_revision_tag_created`  | `environment_revision_tag`      | Organization or Environment| When a new revision tag is created.              |
+| `environment_revision_tag_deleted`  | `environment_revision_tag`      | Organization or Environment| When a revision tag is deleted.                  |
+| `environment_revision_tag_updated`  | `environment_revision_tag`      | Organization or Environment| When a revision tag is updated.                  |
+| `environment_tag_created`           | `environment_tag`               | Organization or Environment| When a new environment tag is created.           |
+| `environment_tag_deleted`           | `environment_tag`               | Organization or Environment| When an environment tag is deleted.              |
+| `environment_tag_updated`           | `environment_tag`               | Organization or Environment| When an environment tag is updated.              |
+| `imported_environment_changed`      | `imported_environment_changed`  | Organization or Environment| When an imported environment was changed.        |
 
 There is also an `environments` filter group that lets you easily subscribe to all environment events.
 
-| Group			    | Event Kinds Included 																									                                              |
+| Group         | Event Kinds Included                                                                                                |
 |---------------|---------------------------------------------------------------------------------------------------------------------|
-|`environments`	|`environment`, `environment_revision`, `environment_revision_tag`, `environment_tag`, `imported_environment_changed`	|
+|`environments` |`environment`, `environment_revision`, `environment_revision_tag`, `environment_tag`, `imported_environment_changed` |
 
 ## Webhook Formats
 
