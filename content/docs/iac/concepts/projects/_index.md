@@ -9,6 +9,7 @@ menu:
         name: Projects
         parent: iac-concepts
         weight: 1
+        identifier: iac-concepts-projects
     concepts:
         identifier: projects
         weight: 1

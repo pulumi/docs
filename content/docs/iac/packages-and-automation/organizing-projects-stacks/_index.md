@@ -12,6 +12,7 @@ aliases:
 - /docs/reference/organizing-stacks-projects/
 - /docs/intro/concepts/organizing-stacks-projects/
 - /docs/guides/organizing-projects-stacks/
+- /docs/using-pulumi/organizing-projects-stacks/
 ---
 
 [Projects](/docs/concepts/projects/) and [stacks](/docs/concepts/stack/) are intentionally flexible so that they can accommodate
