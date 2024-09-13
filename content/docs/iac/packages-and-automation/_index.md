@@ -6,7 +6,7 @@ h1: Using Pulumi
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
-        name: Platform automation
+        name: Packages and automation
         parent: iac-home
         weight: 50
         identifier: iac-packages-automation
@@ -15,6 +15,7 @@ menu:
         name: Overview
 aliases:
 - /docs/guides/
+- /docs/using-pulumi/
 ---
 
 Learn how to adopt Pulumi, organize projects & stacks, use the Automation API, continuous delivery, policy as code, pulumi packages, and test Pulumi code.
