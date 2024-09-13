@@ -73,6 +73,10 @@ Begin your journey with Pulumi ESC through a hands-on, self-paced [tutorial](/do
 
 Please see [ESC CLI overview](/docs/esc-cli/) for details on interacting with environments using the command line.
 
+## Pulumi ESC Webhooks
+
+Automate your processes with [environment event webhooks](/docs/esc/webhooks/).
+
 ## Syntax Reference
 
 [The Pulumi ESC Syntax Reference documentation](reference/) shows examples of simple and complex configuration, imports, and common provider integrations.
