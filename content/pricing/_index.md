@@ -83,7 +83,7 @@ tiers:
                   - Policies and compliance
                   - Automatic group & user sync (SCIM)
                   - Audit logs export
-                  - 24/7 support included
+                  - 12/5 & 24/7 support available
                   - Private Slack channel available
                   - Professional services and training available
 
