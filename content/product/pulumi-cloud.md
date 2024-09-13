@@ -77,32 +77,6 @@ products:
                 Sensitive configurations (e.g. database passwords, cloud tokens) are [stored as secrets](/docs/concepts/secrets/).
 
                 Use Pulumi's secrets manager or integrate with AWS KMS, Azure Key Vault, Google KMS, and HashiCorp Vault.  
-
-            - title: Collaborate better within teams
-              description: |
-                Add teammates to Pulumi so you can work on projects together, ship code collaboratively, and coordinate changes to infrastructure.
-
-              more_info: |
-                Invite new team members and share projects to collaborate on infrastructure.
-
-                View [timelines](/docs/pulumi-cloud/projects-and-stacks/#stack-activity) that show diffs of changed resources and who made the changes.
-
-                [Tag stacks](/docs/concepts/stack/#stack-tags) for easier filtering and searching.
-
-            - title: Software delivery integrations
-              description: |
-                Integrate Pulumi with your software delivery pipeline so that you can version, build, test, and deploy infrastructure code like software.
-
-              more_info: |
-                Work with existing tools like IDEs, test frameworks, and package managers.
-
-                Integrate your [source control system](/docs/pulumi-cloud/deployments/ci-cd-integration-assistant/) so teams can trace changes back to commits and pull requests.
-
-                Continuously deliver infrastructure through existing pipelines with [CI/CD integrations](/docs/using-pulumi/continuous-delivery/).
-
-                Use event-based [webhooks](/docs/pulumi-cloud/webhooks/) to notify external services like Slack or continuous integration tools.
-
-                Use [the Service API](/blog/pulumi-rest-api/) to manage stacks, updates, teams, and more.
         - header: Pulumi ESC
           image: /images/product/console-resource-graph.svg
           details:
@@ -168,19 +142,6 @@ products:
         - header: Pulumi CrossGuard
           image: /images/product/console-policy-group.svg
           details:
-            - title: Set up identity and access controls
-              description: |
-                Integrate SSO and your [identity provider](/docs/pulumi-cloud/access-management/scim/) with Pulumi, set [user permissions](/docs/pulumi-cloud/access-management/teams/) for each stack, and track user activity with [audit logs](/docs/pulumi-cloud/audit-logs/).
-
-              more_info: |
-                Single sign-on with any [SAML 2.0](/docs/pulumi-cloud/access-management/saml/) identity provider like Azure Active Directory, Google Workspace , Okta, and OneLogin.
-
-                Manage Pulumi access from your central identity provider via [SCIM 2.0 integration](/docs/pulumi-cloud/access-management/scim/).
-
-                Set [role-based access controls](/docs/pulumi-cloud/access-management/teams/) that limit who can access infrastructure.
-
-                Track the activity of users within your organization with [audit logs](/docs/pulumi-cloud/audit-logs/).
-
             - title: Proactive compliance enforcement
               description: |
                 Set guardrails for developers deploying with Pulumi by creating [policy packs](/docs/using-pulumi/crossguard/configuration/) that enforce your [deployment rules](/docs/using-pulumi/crossguard/).
@@ -191,6 +152,26 @@ products:
                 Assign [policy packs](/docs/using-pulumi/crossguard/configuration/) that run on specific stacks (e.g., dev/test/staging rules).
 
                 Automatically block deployments that violate your organization's policies.
+            - title:  Enterprise compliance enforcement
+              description: |
+                Business Critical customers can enforce compliance and remediate non-compliance using Pulumi provided policies across your organization.
+
+              more_info: |
+                Choose from hundreds of policies for AWS, Azure, Google Cloud, and Kubernetes. Support for PCI DSS, ISO 27001, SOC 2, and CIS Benchmarks.
+
+                Set policy packs that block prohibited deployments across your entire organization, preventing issues.
+
+            - title:  Continuous and automatic compliance
+              description: |
+                Policies can remediate violations to fix the problems found in addition to reporting them as violations. 
+
+              more_info: |
+                Here are a few examples of the remediation policy use cases:
+
+                - Tagging resources with standard, organization-wide tags.
+                - Disabling Internet access for gateways and firewall rules.
+                - Enabling encryption on storage or buckets.
+                - Down-sizing virtual machine configuration to use less expensive machine types.
         - header: Pulumi Deployments
           image: /images/product/pulumi-deployments.png
           details:
@@ -280,6 +261,46 @@ products:
                 *“We had an outage Thursday evening around 11pm. Do you understand why?”*
 
                 *“I can’t access my EC2 instance i-3f8e over the Internet, why?”*
+        - header: Platform Features
+          image: /images/product/pulumi-cloud-access.png
+          details:
+            - title: Set up identity and access controls
+              description: |
+                Integrate SSO and your [identity provider](/docs/pulumi-cloud/access-management/scim/) with Pulumi, set [user permissions](/docs/pulumi-cloud/access-management/teams/) for each stack, and track user activity with [audit logs](/docs/pulumi-cloud/audit-logs/).
+
+              more_info: |
+                Single sign-on with any [SAML 2.0](/docs/pulumi-cloud/access-management/saml/) identity provider like Azure Active Directory, Google Workspace , Okta, and OneLogin.
+
+                Manage Pulumi access from your central identity provider via [SCIM 2.0 integration](/docs/pulumi-cloud/access-management/scim/).
+
+                Set [role-based access controls](/docs/pulumi-cloud/access-management/teams/) that limit who can access infrastructure.
+
+                Track the activity of users within your organization with [audit logs](/docs/pulumi-cloud/audit-logs/).
+            - title: Collaborate better within teams
+              description: |
+                Add teammates to Pulumi so you can work on projects together, ship code collaboratively, and coordinate changes to infrastructure.
+
+              more_info: |
+                Invite new team members and share projects to collaborate on infrastructure.
+
+                View [timelines](/docs/pulumi-cloud/projects-and-stacks/#stack-activity) that show diffs of changed resources and who made the changes.
+
+                [Tag stacks](/docs/concepts/stack/#stack-tags) for easier filtering and searching.
+
+            - title: Software delivery integrations
+              description: |
+                Integrate Pulumi with your software delivery pipeline so that you can version, build, test, and deploy infrastructure code like software.
+
+              more_info: |
+                Work with existing tools like IDEs, test frameworks, and package managers.
+
+                Integrate your [source control system](/docs/pulumi-cloud/deployments/ci-cd-integration-assistant/) so teams can trace changes back to commits and pull requests.
+
+                Continuously deliver infrastructure through existing pipelines with [CI/CD integrations](/docs/using-pulumi/continuous-delivery/).
+
+                Use event-based [webhooks](/docs/pulumi-cloud/webhooks/) to notify external services like Slack or continuous integration tools.
+
+                Use [the Service API](/blog/pulumi-rest-api/) to manage stacks, updates, teams, and more.
              
 
 
@@ -488,7 +509,7 @@ open_source:
     title: The easiest way to use Pulumi open source
     image: /images/product/service-open-source-diagram.svg
     description: |
-        Pulumi Cloud is a managed service for Pulumi's open source CLI and SDK. It tracks your [infrastructure’s state](/docs/concepts/state/) and coordinates updates with the CLI, which creates or updates resources to reach your infrastructure’s [desired state](/docs/concepts/how-pulumi-works/).
+        Pulumi Cloud is a managed service for Pulumi IaC's open source CLI and SDK. It tracks your [infrastructure’s state](/docs/concepts/state/) and coordinates updates with the CLI, which creates or updates resources to reach your infrastructure’s [desired state](/docs/concepts/how-pulumi-works/).
 
         You can also use any cloud or on-premises storage to build and [run your own backend](/docs/concepts/state/#logging-into-a-self-managed-backend).
 
