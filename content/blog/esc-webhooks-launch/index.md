@@ -37,7 +37,7 @@ Setting up Webhooks is straightforward. You can use the Pulumi Cloud Console, th
 
 ### Using Pulumi Service Provider
 
-Here is a sample code in TypeScript: 
+Here is a sample code in TypeScript:
 
 ```typescript
 const environmentWebhook = new service.Webhook("env-webhook", {
