@@ -20,10 +20,8 @@ async function checkURLs() {
         const newURL = url.replace(baseURL, testURL);
         const response = await fetch(newURL);
 
-        console.log(response.status);
-
         if (response.status !== 200) {
-            badURLs.push(`${newURL}: ${response.status}`);
+            badURLs.push(`${newURL} : ${response.status}`);
         }
     }
 
@@ -43,7 +41,7 @@ async function getURLsToCheck(base) {
 
 checkURLs().then(results => {
     console.error("New 404s were detected:\n\n")
-    console.error(results);
-    console.error("Please ensure any content that's moved has an appropriate alias.");
+    console.error(results.map(item => console.log(item)));
+    console.error("\nPlease ensure any content that's moved has an appropriate alias.");
     process.exit(1);
 });
