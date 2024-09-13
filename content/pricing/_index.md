@@ -51,7 +51,7 @@ tiers:
               subtitle: Advanced cloud engineering capabilities for large teams in production.
               iac_price: $1.08
               iac_unit: per resource/month
-              iac_note: (Volume discounts available)
+              iac_note: (Volume pricing available)
               esc_price: $0.75
               esc_unit: per secret/month
               esc_note: (Volume discounts available)
