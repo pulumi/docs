@@ -4,7 +4,7 @@ title_tag: ESC CLI commands
 meta_desc: The Pulumi ESC CLI offers many commands to execute from your command-line.
 h1: Pulumi ESC CLI commands
 menu:
-  pulumiesc:
+  esc:
     identifier: esc-cli-commands
     parent: esc-cli-overview
     weight: 1

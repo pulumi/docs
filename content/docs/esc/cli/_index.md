@@ -5,7 +5,8 @@ meta_desc: An overview of the Pulumi ESC (Environments, Secrets, and Configurati
 h1: Pulumi ESC CLI overview
 no_on_this_page: true
 menu:
-  pulumiesc:
+  esc:
+    parent: esc-home
     identifier: esc-cli-overview
     weight: 20
 aliases:

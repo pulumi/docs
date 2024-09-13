@@ -140,7 +140,7 @@ cli:
 # -------------------------------------
 # ESC Command Line Menu
 # -------------------------------------
-pulumiesc:
+esc:
 
   - name: esc
     url: /docs/esc-cli/commands/esc/

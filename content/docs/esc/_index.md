@@ -5,10 +5,9 @@ h1: Pulumi ESC (Environments, Secrets, and Configuration)
 meta_desc: Pulumi ESC allows you to compose and manage hierarchical collections of configuration and secrets and consume them in various ways.
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  pulumiesc:
-    name: Overview
-    identifier: esc
-    weight: 5
+  esc:
+    identifier: esc-home
+    weight: 1
 aliases:
   - /docs/pulumi-cloud/esc/
 ---
