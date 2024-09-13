@@ -38,7 +38,7 @@ will be notified of events specific to the environment. Organization
 webhooks will be notified for events happening within each of the organization's
 environments.
 
-The Webhooks page for organization is under Organization Settings tab, and for Environments is a tab on each Environment page
+Organization webhooks can be managed on the Organization Settings page. Environment webhooks can be managed from the webhooks tab on each Environment's detail page.
 
 ![Organization webhooks](/images/docs/reference/service/webhooks/org-webhooks.png)
 
