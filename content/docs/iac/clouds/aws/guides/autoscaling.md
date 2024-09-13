@@ -14,6 +14,7 @@ menu:
 aliases:
 - /docs/reference/crosswalk/aws/autoscaling/
 - /docs/guides/crosswalk/aws/autoscaling/
+- /docs/clouds/aws/guides/autoscaling/
 ---
 
 {{< crosswalk-header >}}
