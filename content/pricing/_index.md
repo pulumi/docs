@@ -49,7 +49,7 @@ tiers:
                 - Basic support
             - title: Enterprise
               subtitle: Advanced cloud engineering capabilities for large teams in production.
-              iac_price: $1.08
+              iac_price: $1.10
               iac_unit: per resource/month
               iac_note: (Volume pricing available)
               esc_price: $0.75
