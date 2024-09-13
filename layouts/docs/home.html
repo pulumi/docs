@@ -18,7 +18,7 @@
             {{ range .Params.sections }}
                 {{ if eq .type "cards-logo-label-link" }}
                     <div class="docs-home-section">
-                        <h2 id="{{ anchorize .heading }}">{{ .heading }}asdasdf</h2>
+                        <h2 id="{{ anchorize .heading }}">{{ .heading }}</h2>
                         {{ if .description }}
                             {{ .description | safeHTML }}
                         {{ end }}
