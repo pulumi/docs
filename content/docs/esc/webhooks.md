@@ -7,13 +7,6 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   pulumiesc:
     weight: 9
-aliases:
-- /docs/intro/environment/webhooks/
-- /docs/intro/environments/webhooks/
-- /docs/intro/esc/webhooks/
-- /docs/environment/webhooks/
-- /docs/environments/webhooks/
-- /docs/esc/webhooks/
 ---
 
 {{% notes "info" %}}
@@ -24,16 +17,16 @@ To try it out, start a [trial](https://app.pulumi.com/site/trial) now.
 ESC Webhooks allow you to notify external services of events
 happening within your ESC environments. For example,
 you can trigger a notification whenever a new revision of an environment is created.
-Whenever an event occurs, Pulumi will send an HTTP `POST` request to
-all registered webhooks. The webhook can then be used to emit a
+When an event occurs, Pulumi will notify the registered webhook listeners via a HTTP `POST`
+request with metadata about the event. The webhook can then be used to emit a
 notification, start running integration tests, or even update Pulumi stacks.
 
-Webhooks can be used for pretty much anything you want, and are the foundation
+There are large number of real life applications for webhooks including serving as the foundation
 of most _ChatOps_ workflows.
 
 ## Overview
 
-ESC Webhooks can be attached to either a environment or an organization. Environment webhooks
+ESC Webhooks can be attached to either an environment or an organization. Environment webhooks
 will be notified of events specific to the environment. Organization
 webhooks will be notified for events happening within each of the organization's
 environments.

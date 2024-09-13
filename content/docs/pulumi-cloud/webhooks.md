@@ -24,11 +24,11 @@ To try it out, start a [trial](https://app.pulumi.com/site/trial) now.
 Pulumi Webhooks allow you to notify external services of events
 happening within your Pulumi organization. For example,
 you can trigger a notification whenever a stack is updated.
-Whenever an event occurs, Pulumi will send an HTTP `POST` request to
-all registered webhooks. The webhook can then be used to emit a
+When an event occurs, Pulumi will notify the registered webhook listeners via a HTTP `POST`
+request with metadata about the event. The webhook can then be used to emit a
 notification, start running integration tests, or even update additional stacks.
 
-Webhooks can be used for pretty much anything you want, and are the foundation
+There are large number of real life applications for webhooks including serving as the foundation
 of most _ChatOps_ workflows.
 
 ## Overview
