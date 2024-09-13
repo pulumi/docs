@@ -40,8 +40,9 @@ async function getURLsToCheck(base) {
 }
 
 checkURLs().then(results => {
-    console.error("New 404s were detected:\n\n")
+    console.error("\nNew 404s were detected:\n")
     results.forEach(item => console.error(item.replace(testURL, "")));
-    console.error("\nPlease ensure any content that's moved has an appropriate alias.");
+    console.error(`\nThese are pages that exist on pulumi.com but do not exist at ${testURL}.\n`)
+    console.error("\nPlease make sure any content that's been moved has an appropriate alias or redirect.");
     process.exit(1);
 });
