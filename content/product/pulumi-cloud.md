@@ -56,6 +56,7 @@ products:
     - header: Products
       content:
         - header: Pulumi IaC
+          tabid: iac-select
           subheader: Productive cloud automation
           link: /product/infrastructure-as-code/
           image: /images/product/console-resource-graph.svg
@@ -102,6 +103,7 @@ products:
 
                 Use [the Service API](/blog/pulumi-rest-api/) to manage stacks, updates, teams, and more.
         - header: Pulumi ESC
+          tabid: esc-select
           subheader: Automatic cloud security
           link: /product/esc/
           image: /images/product/esc-screenshot.png
@@ -140,6 +142,7 @@ products:
               more_info: |
                 Developers can easily access secrets via CLI, API, Kubernetes operator, the Pulumi Cloud UI, and in-code with Typescript/Javascript, Python, and Go SDKs.
         - header: Pulumi Insights
+          tabid: insights-select
           subheader: Intelligent cloud management
           link: /product/pulumi-insights/
           image: /images/product/resource-search-diagram.svg
@@ -168,6 +171,7 @@ products:
     - header: Cross-Product Capabilities
       content:
         - header: Pulumi CrossGuard
+          tabid: crossguard-select
           subheader: Policy as code
           link: /crossguard/
           image: /images/product/console-policy-group.svg
@@ -203,6 +207,7 @@ products:
                 - Enabling encryption on storage or buckets.
                 - Down-sizing virtual machine configuration to use less expensive machine types.
         - header: Pulumi Deployments
+          tabid: deployments-select
           subheader: Infrastructure lifecycle management
           link: /product/pulumi-deployments/
           image: /images/product/pulumi-deployments.png
@@ -225,6 +230,7 @@ products:
 
                 Offload your local Automation API deployment workloads to Pulumi Cloud via the [Remote Automation API feature](/docs/pulumi-cloud/deployments/#deployment-triggers).
         - header: Pulumi Copilot
+          tabid: copilot-select
           subheader: AI-powered infrastructure management
           link: /product/copilot/
           image: /images/product/copilot-prompt.png
@@ -295,7 +301,8 @@ products:
                 *“We had an outage Thursday evening around 11pm. Do you understand why?”*
 
                 *“I can’t access my EC2 instance i-3f8e over the Internet, why?”*
-        - header: Platform Features
+        - header: Team Management
+          tabid: management-select
           image: /images/product/pulumi-cloud-access.png
           details:
             - title: Set up identity and access controls
