@@ -79,7 +79,7 @@ tiers:
               primary_cta_link: /contact/?form=sales
               items: |
                   Everything in **Enterprise**, plus:
-                  - Volume discounts and invoicing
+                  - Volume pricing and invoicing
                   - Policies and compliance
                   - Automatic group & user sync (SCIM)
                   - Audit logs export
