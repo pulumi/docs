@@ -583,7 +583,7 @@ comparison_table:
                     - content: _blank
                     - content: _blank
                     - content: Available, 4 hours to 2 business day
-                    - content: Available, 1 hour or 1 business day
+                    - content: Available, 4 hours to 2 business days
                 - title: Private Slack channel
                   items:
                     - content: _blank
