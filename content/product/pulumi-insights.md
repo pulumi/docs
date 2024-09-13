@@ -8,10 +8,10 @@ aliases:
 - /insights
 
 overview:
-    titleTop: Intelligent
-    titleBottom: Cloud Management
+    titleTop: Intelligent Cloud Management
+    titleBottom: 
     description: |
-        Pulumi Insights is an asset and compliance management service that gives search, compliance remediation, resource visualizations, and AI insights over any infrastructure, including resources not provisioned by Pulumi IaC such as AWS CloudFormation, Microsoft ARM, HashiCorp Terraform, or even cloud consoles and SDKs.
+        Pulumi Insights is an asset and compliance management service that gives search, compliance remediation, resource visualizations, and AI insights over any infrastructure, including resources not provisioned by Pulumi IaC such as AWS CloudFormation, Microsoft ARM, HashiCorp Terraform, or even manually.
     items:
         - title: Gain Unique Insights
           icon: eye

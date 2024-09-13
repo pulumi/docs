@@ -33,30 +33,10 @@
     <section id="announcement" class="max-w-full mx-auto text-center my-8 px-6">
         <div class="flex justify-center rounded-md bg-violet-100">
             <p class="text-center">
-                ✨ <span class="font-bold">New product announcement:</span> <a href="/product/copilot"> Pulumi Copilot - Intelligent Cloud Management</a> ✨
+                ✨ <span class="font-bold">New - Pulumi Insights 2.0:</span> <a href="/product/wailist"> Sign up for the waitlist</a> ✨
             </p>
         </div>
     </section>
-
-    <div class="bg-gray-100">
-        <section id="ai" class="container mt-16 mb-20 mx-auto text-center px-6 py-8 flex flex-col lg:flex-row">
-            {{ with .Params.ai }}
-                <div class="w-full lg:w-1/3 lg:content-center lg:pr-2">
-                    <h2 class="m-0 p-0">{{ .title }}</h2>
-                    <h4 class="p-0 m-0 text-gray-800">{{ .subtitle }}</h4>
-                    <div class="max-w-4xl mx-auto my-8">{{ .description | markdownify }}</div>
-                    <div class="w-full flex justify-center items-center">
-                        <div class="z-0">
-                            <a class="btn-primary" href="https://app.pulumi.com">Try it Now</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="w-full lg:w-2/3">
-                    <img class="mx-auto lg:mr-0 rounded shadow-lg" src="{{ .image }}" alt="Pulumi Insights AI" />
-                </div>
-            {{ end }}
-        </section>
-    </div>
 
     <section id="search " class="container my-20 mx-auto text-center px-6">
         {{ with .Params.search }}
@@ -90,6 +70,26 @@
             </div>
         {{ end }}
     </section>
+
+    <div class="bg-gray-100">
+        <section id="ai" class="container mt-16 mb-20 mx-auto text-center px-6 py-8 flex flex-col lg:flex-row">
+            {{ with .Params.ai }}
+                <div class="w-full lg:w-1/3 lg:content-center lg:pr-2">
+                    <h2 class="m-0 p-0">{{ .title }}</h2>
+                    <h4 class="p-0 m-0 text-gray-800">{{ .subtitle }}</h4>
+                    <div class="max-w-4xl mx-auto my-8">{{ .description | markdownify }}</div>
+                    <div class="w-full flex justify-center items-center">
+                        <div class="z-0">
+                            <a class="btn-primary" href="https://app.pulumi.com">Try it Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full lg:w-2/3">
+                    <img class="mx-auto lg:mr-0 rounded shadow-lg" src="{{ .image }}" alt="Pulumi Insights AI" />
+                </div>
+            {{ end }}
+        </section>
+    </div>
 
     <section id="pricing" class="container mx-auto text-center mt-28 px-6">
         {{ with .Params.pricing }}
