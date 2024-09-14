@@ -16,9 +16,11 @@ async function checkURLs() {
     const urls = await getURLsToCheck(baseURL);
     const badURLs = []
 
-    for (const url of urls) {
+    console.log(`Checking ${urls.length} URLs...`)
+
+    for await (const url of urls) {
         const newURL = url.replace(baseURL, testURL);
-        const response = await fetch(newURL);
+        const response = await fetch(newURL, { method: "HEAD" });
 
         if (response.status !== 200) {
             badURLs.push(`${newURL} : ${response.status}`);
@@ -41,7 +43,7 @@ async function getURLsToCheck(base) {
 
 checkURLs().then(results => {
     if (results.length >0 ) {
-        console.error("\nNew 404s were detected:\n")
+        console.error(`\n${results.length} new 404s were detected:\n`)
         results.forEach(item => console.error(item.replace(testURL, "")));
         console.error(`\nThese are pages that exist on pulumi.com but do not exist at ${testURL}.\n`)
         console.error("Please make sure any content that's been moved has been an appropriate alias or redirect in place.");
