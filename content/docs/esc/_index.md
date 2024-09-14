@@ -8,7 +8,7 @@ menu:
   esc:
     identifier: esc-home
     weight: 1
-expanded_menus:
+expanded_menu_ids:
     - esc-environments
 aliases:
   - /docs/pulumi-cloud/esc/
