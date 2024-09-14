@@ -106,6 +106,10 @@ $ export AWS_PROFILE="<YOUR_PROFILE_NAME>"
 
 For additional information on setting and using AWS credentials, see [AWS Setup](/registry/packages/aws/installation-configuration/).
 
+{{% notes type="info" %}}
+Manually exporting AWS access keys can be prone to error and a security risk, with frequent plaintext copy-pasting. With Pulumi ESC, you can dynamically retrieve short-lived AWS credentials via OpenID Connect, removing the need for manual exports and enhancing security. Learn more about [Pulumi ESC](/docs/esc/).
+{{% /notes %}}
+
 Next, you'll create a new Pulumi project.
 
 {{< get-started-stepper >}}
