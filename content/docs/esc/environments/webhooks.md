@@ -6,7 +6,8 @@ h1: ESC Webhooks
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   esc:
-    weight: 9
+    parent: esc-environments  
+    weight: 5
 ---
 
 {{% notes "info" %}}

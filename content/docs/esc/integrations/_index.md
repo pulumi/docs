@@ -7,7 +7,7 @@ menu:
   esc:
     parent: esc-home
     identifier: esc-integrations
-    weight: 4
+    weight: 6
 aliases:
     - /docs/esc/providers/
 ---

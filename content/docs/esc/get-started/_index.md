@@ -7,7 +7,7 @@ menu:
   esc:
     parent: esc-home
     identifier: esc-get-started
-    weight: 1
+    weight: 2
 aliases:
   - /docs/pulumi-cloud/esc/get-started/
 ---

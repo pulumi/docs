@@ -7,7 +7,7 @@ menu:
   esc:
     parent: esc-home
     identifier: esc-syntax-reference
-    weight: 6
+    weight: 5
 aliases:
   - /docs/pulumi-cloud/esc/reference
 ---

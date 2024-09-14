@@ -8,7 +8,7 @@ menu:
   esc:
     parent: esc-home
     identifier: esc-cli-overview
-    weight: 20
+    weight: 7
 aliases:
     - /docs/esc-cli/
 ---
