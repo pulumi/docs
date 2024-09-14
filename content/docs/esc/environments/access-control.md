@@ -4,7 +4,7 @@ title_tag: Access control | Pulumi ESC
 h1: Pulumi ESC access control
 meta_desc: Pulumi ESC provides granular access control to manage permissions with roles like reader, opener, and editor.
 menu:
-  pulumiesc:
+  esc:
     parent: esc-environments
     weight: 5
 ---

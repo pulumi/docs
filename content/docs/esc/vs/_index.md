@@ -5,9 +5,10 @@ title: Compare to...
 h1: Compare Pulumi ESC to other solutions
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    pulumiesc:
-        weight: 30
-        identifier: esc-vs
+  esc:
+    parent: esc-home
+    weight: 10
+    identifier: esc-vs
 aliases:
 ---
 
