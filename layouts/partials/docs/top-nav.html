@@ -1,26 +1,37 @@
+{{ $selection := "home" }}
+
+{{ if hasPrefix .Path "/docs/iac" }}
+    {{ $selection = "iac" }}
+{{ else if hasPrefix .Path "/docs/esc" }}
+    {{ $selection = "esc" }}
+{{ else if hasPrefix .Path "/docs/pulumi-cloud" }}
+    {{ $selection = "cloud" }}
+{{ else if hasPrefix .Path "/docs" }}
+    {{ $selection = "home" }}
+{{ else if hasPrefix .Path "/registry" }}
+    {{ $selection = "packages" }}
+{{ else if hasPrefix .Path "/tutorials" }}
+    {{ $selection = "tutorials" }}
+{{ end }}
+
 <div class="inline-flex items-center">
-    <a class="tab" href="/docs/">
+    <a class="tab {{ if eq $selection "home" }}tab-selected{{ end }}" href="/docs/">
         <img class="tab-icon" src="/icons/docs.svg" />
         <span>Docs Home</span>
     </a>
-    <a class="tab" href="/docs/iac/">
-        <img class="tab-icon" src="/icons/docs.svg" />
+    <a class="tab {{ if eq $selection "iac" }}tab-selected{{ end }}" href="/docs/iac/">
         <span>Pulumi IaC</span>
     </a>
-    <a class="tab" href="/docs/esc/">
-        <img class="tab-icon" src="/icons/docs.svg" />
+    <a class="tab {{ if eq $selection "esc" }}tab-selected{{ end }}" href="/docs/esc/">
         <span>Pulumi ESC</span>
     </a>
-    <a class="tab" href="/docs/pulumi-cloud/">
-        <img class="tab-icon" src="/icons/docs.svg" />
+    <a class="tab {{ if eq $selection "cloud" }}tab-selected{{ end }}" href="/docs/pulumi-cloud/">
         <span>Pulumi Cloud</span>
     </a>
-    <a class="tab" href="/registry/">
-        <img class="tab-icon" src="/icons/registry-light.svg" />
+    <a class="tab {{ if eq $selection "packages" }}tab-selected{{ end }}" href="/registry/">
         <span>Packages</span>
     </a>
-    <a class="tab" href="/tutorials/">
-        <img class="tab-icon" src="/icons/graduation-cap.svg" />
+    <a class="tab {{ if eq $selection "tutorials" }}tab-selected{{ end }}" href="/tutorials/">
         <span>Tutorials</span>
     </a>
 </div>
