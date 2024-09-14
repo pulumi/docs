@@ -55,8 +55,12 @@
 
     <!-- alkira quote -->
     <section class="bg-gradient-to-r from-white from-0% via-violet-100 via-50% to-white to-100% py-8">
-        <div class="w-full md:w-2/3 lg:w-1/2 mx-auto mb-4 px-6">
-            {{ partial "home/quote.html" (dict "quote" .Params.customer_quotes.alkira) }}
+        <div class="container text-center mx-auto w-full md:w-2/3 mb-4 px-6">
+            {{ with .Params.customer_quotes.alkira }}
+                <p class="text-xl description">{{ .text | markdownify }}</p>
+                <p class="text-lg font-semibold description">{{ .author }}</p>
+                <div class="h-16">{{ partial "customer-logo.html" (dict "logo" .logo) }}</div>
+            {{ end }}
         </div>
     </section>
 
