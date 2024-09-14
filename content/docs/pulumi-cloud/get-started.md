@@ -24,80 +24,41 @@ Explore the following sections to learn more about the features and benefits of 
 
 ### Identity and organizations
 
-* [Accounts](/docs/pulumi-cloud/accounts/)
-* [Organizations](/docs/pulumi-cloud/organizations/)
-* [Personal Access Tokens](/docs/pulumi-cloud/accounts/#personal-access-tokens)
-* [Organization and Team Access Tokens](/docs/pulumi-cloud/access-management/organization-access-tokens/)
-* [SAML Integrations](/docs/pulumi-cloud/access-management/saml/)
-* [OIDC Integrations](/docs/pulumi-cloud/oidc/)
+Pulumi Cloud has a rich set of features around identity, authentication, organizations, teams, roles, and user management. Pulumi Cloud integrates with many popular identity providers like [GitHub](/docs/pulumi-cloud/admin/organizations/#github-identity-provider), [GitLab](/docs/pulumi-cloud/admin/organizations/#gitlab-identity-provider). Pulumi Cloud provides RBAC (Role-based Access Control) for your organization can also do things like [import your teams directly from GitHub](/docs/pulumi-cloud/access-management/teams/#github-based-teams).
 
-### Teams and collaboration
-
-Collaborate with other developers and coordinate on updates. Provide fine-grained access to stacks and use RBAC (Role-based Access Control) for your organization.
-
-* [Organization Roles](/docs/pulumi-cloud/organizations#organization-roles)
-* [Teams](/docs/pulumi-cloud/access-management/teams/)
-* [Stack Permissions](/docs/pulumi-cloud/projects-and-stacks#stack-permissions)
+* [Organizations](/docs/pulumi-cloud/organizations/) and [Accounts](/docs/pulumi-cloud/accounts/)
+* [Teams](/docs/pulumi-cloud/access-management/teams/) and [Roles](/docs/pulumi-cloud/organizations/#organization-roles) Management
 * [Project and Stack Management](/docs/pulumi-cloud/projects-and-stacks/)
+* [SAML](/docs/pulumi-cloud/access-management/saml/) and [OIDC](/docs/pulumi-cloud/oidc/) Integrations
 
-### Pulumi ESC (Environments, Secrets, and Configuration)
+### Hosted Deployments service and CI/CD integrations
 
-Pulumi ESC Environments allow teams to tackle configuration complexity at scale, alleviating maintenance and operational burden and reducing costly mistakes, and creating a more secure by default posture.
+Pulumi Cloud offers a flexible and convenient [hosted deployment service](/docs/pulumi-cloud/deployments/). Pulumi Cloud can also integrate with your current continuous delivery pipeline, and provides tools to build your own extensions, and create reusable templates.
+
+* [Pulumi Deployments](/docs/pulumi-cloud/deployments/)
+* [Continuous Delivery](/docs/using-pulumi/continuous-delivery/) and the [CI/CD Integration Assistant](/docs/pulumi-cloud/deployments/ci-cd-integration-assistant/)
+* [Pulumi Cloud REST API](/docs/pulumi-cloud/cloud-rest-api/)
+* [Webhooks](/docs/pulumi-cloud/webhooks/)
+
+### Pulumi ESC Integration
+
+[Pulumi ESC](/docs/esc/) (Environments, Secrets, and Configuration) allows teams to tackle configuration complexity at scale, alleviating maintenance and operational burden and reducing costly mistakes, and creating a more secure by default posture.
 
 * [Pulumi ESC](/docs/esc/)
 * [Pulumi ESC Syntax Reference](/docs/esc/reference/)
 
-### CI/CD integrations and extensions
-
-Integrate Pulumi with your current continuous delivery pipeline. Build your own extensions, and create reusable templates.
-
-* [CI/CD Integration Assistant](/docs/pulumi-cloud/deployments/ci-cd-integration-assistant/)
-* [Pulumi Service Provider](/registry/packages/pulumiservice/): A Pulumi Provider To Configure Pulumi
-* [Continuous Delivery](/docs/using-pulumi/continuous-delivery/)
-* [Pulumi Cloud REST API](/docs/pulumi-cloud/cloud-rest-api/)
-* [Webhooks](/docs/pulumi-cloud/webhooks/)
-
-### Hosted Deployments service
-
-* [Pulumi Deployments](/docs/pulumi-cloud/deployments/)
-* [Deploy with Pulumi Button](/docs/pulumi-cloud/pulumi-button)
-
 ### Building developer portals
 
-* [Organization Templates](/docs/pulumi-cloud/developer-portals/templates)
-* [New Project Wizard](/docs/pulumi-cloud/developer-portals/new-project-wizard)
+Dealing with a larger organization? Pulumi Cloud offers all the features you need to build an effective internal developer portal (IDP).
+
+* [New Project Wizard](/docs/pulumi-cloud/developer-portals/new-project-wizard) and [Organization Templates](/docs/pulumi-cloud/developer-portals/templates)
 * [Pulumi Backstage Plugin](/docs/pulumi-cloud/developer-portals/backstage)
-
-### Insights and Analytics
-
 * [Pulumi Insights: Resource Search, Data Export](/docs/intro/insights)
 
 ### Security and compliance
 
+Pulumi Cloud offers powerful security and compliance tools.
+
 * [Audit Logs](/docs/pulumi-cloud/audit-logs/)
 * [Policy Packs](/docs/using-pulumi/crossguard/configuration/)
 * [Pulumi Cloud security whitepaper](/security/pulumi-cloud-security-whitepaper.pdf): Pulumi Cloud is multi-tenanted and runs within an AWS Virtual Private Cloud (VPC). All communications between Pulumi clients and the server are encrypted using TLS. Pulumi is SOC 2 Type II certified.
-
-## Upgrade editions
-
-The following editions are also available as upgrade options:
-
-* **Pulumi Team** is ideal for teams of up to 10 members and provides the basics of infrastructure as code in popular languages, enabling teams to ship faster. Includes 150K free credits each month.
-
-* **Pulumi Enterprise** is ideal for large teams and organizations in production. It offers an unlimited number of members and teams and provides full cloud engineering capabilities.
-
-* **Pulumi Business Critical** is ideal for enterprises that have specific requirements, like advanced security and compliance features, premium support, and [self-hosting options](/docs/pulumi-cloud/self-hosted/).
-
-For more information about the specific differences and capabilities offered for the
-Pulumi Team, Enterprise and Business Critical editions, refer to the [pricing page](/pricing/).
-
-## Browser support
-
-The Pulumi Cloud supports the following browsers:
-
-| Browser |
-|--------|
-| Chrome |
-| Firefox |
-| Safari |
-| Edge |
