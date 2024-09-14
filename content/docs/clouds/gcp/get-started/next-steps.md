@@ -17,6 +17,18 @@ aliases:
 
 Congrats! You've deployed your first project on Google Cloud with Pulumi. Here are some next steps, depending on your learning style.
 
+## Try Pulumi ESC (Environments, Secrets, and Configuration)
+
+[Pulumi ESC](/docs/esc/) is a centralized secrets management and orchestration service. It introduces the concepts of _environments_ --- managed collections of static and dynamic settings that you can use to configure any project, stack, application, or service, including with short-lived cloud credentials through OpenID Connect.
+
+With Pulumi ESC you can:
+
+- **Stop secret sprawl.** Pull and sync configuration and secrets with any secrets store – including HashiCorp Vault, AWS Secrets Manager, Azure Key Vault, GCP Secret Manager, 1Password, and more – and consume in any application, tool, or CI/CD platform.
+- **Trust (and prove) your secrets are secure.** Every environment can be locked down with role-based access controls (RBAC) and versioned with all changes fully logged for auditing.
+- **Ditch `.env` files.** No more storing secrets in plaintext on dev computers. Developers can easily access secrets via CLI, API, Kubernetes operator, the Pulumi Cloud UI, and in-code with Typescript/Javascript, Python, and Go SDKs.
+
+{{< get-started-next-step path="/docs/esc/get-started" label="Learn more about Pulumi ESC" ref="gs-gcp-esc" >}}
+
 ## Learn Pulumi
 
 Dive into Learn Pulumi for a comprehensive walkthrough of key Pulumi concepts in the context of a real-life application.
@@ -34,14 +46,6 @@ Easily deploy the most common cloud architectures, from [static websites](/templ
 Read more about Pulumi's architecture and foundational concepts in depth, including [projects](/docs/concepts/projects/), [stacks](/docs/concepts/stack/), [configuration](/docs/concepts/config/), [secrets](/docs/concepts/secrets/), [resources](/docs/concepts/resources/), [state](/docs/concepts/state/), and more.
 
 {{< get-started-next-step path="/docs/concepts/" label="Read the docs" ref="gs-gcp-docs" >}}
-
-## Try Pulumi ESC (Environments, Secrets, and Configuration)
-
-In this guide, you used [stack configuration](/docs/concepts/config/) and environment variables to configure a single project and stack. Did you know you can also configure multiple Pulumi projects, and even other applications, with [Pulumi ESC](/product/esc/)?
-
-Pulumi ESC introduces the concept of _environments_ --- managed collections of static and dynamic settings that you can use to configure any project, stack, application, or service, including with short-lived cloud credentials through OpenID Connect.
-
-{{< get-started-next-step path="/blog/environments-secrets-configurations-management/" label="Learn more about Pulumi ESC" ref="gs-gcp-esc" >}}
 
 ## Check out the blog
 
