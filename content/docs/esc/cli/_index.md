@@ -8,7 +8,7 @@ menu:
   esc:
     parent: esc-home
     identifier: esc-cli-overview
-    weight: 20
+    weight: 7
 aliases:
     - /docs/esc-cli/
 ---
@@ -20,7 +20,7 @@ to help your team manage environment complexity.
 
 The Pulumi ESC CLI is open source and free to use:
 
-<a class="btn btn-secondary" href="/docs/install/esc/">Install Pulumi ESC</a>
+<a class="btn btn-secondary" href="/docs/esc/download-install/">Install Pulumi ESC</a>
 
 ## Common Commands
 

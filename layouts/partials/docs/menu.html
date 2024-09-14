@@ -56,7 +56,16 @@ it be helpful to be able to set the menu somehow in the frontmatter?) */}}
             {{- end }}
         {{- end }}
 
-        <li class="{{ if (and .Children (ne .Identifier $rootMenuID)) }}expandable{{ end }}"
+        {{- $expandedItems := slice "Environments" "Integrations" "Development" }}
+        {{- $liClass := "" }}
+        {{- if and .Children (ne .Identifier $rootMenuID) }}
+            {{- $liClass = "expandable" }}
+        {{- end }}
+        {{- if and (in $expandedItems $name) (strings.HasPrefix $page.Path "/docs/esc") }}
+            {{- $liClass = printf "%s expanded" $liClass }}
+        {{- end }}
+
+        <li class="{{ $liClass }}"
             data-identifier="{{ .Identifier }}">
             <a
                 {{- range $k, $v := $attrs }}

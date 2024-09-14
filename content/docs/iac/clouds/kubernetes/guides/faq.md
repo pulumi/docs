@@ -58,6 +58,16 @@ aliases:
 
     * **Digital Ocean**: Check out [Managing DigitalOcean and Kubernetes with Pulumi][k8s-do] for more details.
 
+## More FAQ
+
+* [Pulumi IaC FAQ](/docs/iac/support/faq/)
+* [Pulumi ESC FAQ](/docs/esc/faq/)
+* [Pulumi Cloud FAQ](/docs/pulumi-cloud/faq/)
+* [Pulumi Cloud Deployments FAQ](/docs/pulumi-cloud/deployments/faq/)
+* [Pulumi Cloud SCIM FAQ](/docs/pulumi-cloud/access-management/scim/faq/)
+* [Kubernetes guides FAQ](/docs/clouds/kubernetes/guides/faq/)
+* [Pulumi CrossGuard FAQ](/docs/using-pulumi/crossguard/faq/)
+
 <!-- markdownlint-disable url -->
 [k8s-do]: https://www.digitalocean.com/community/tutorials/how-to-manage-digitalocean-and-kubernetes-infrastructure-with-pulumi
 [pulumi-slack]: https://slack.pulumi.com/
@@ -68,10 +78,3 @@ aliases:
 [pulumi-kx]: https://github.com/pulumi/pulumi-kubernetesx
 [pulumi-kq]: https://github.com/pulumi/pulumi-query
 <!-- markdownlint-enable url -->
-
-## More FAQ
-
-* [Policy as code FAQ](/docs/using-pulumi/crossguard/faq/)
-* [Pulumi Deployments FAQ](/docs/pulumi-cloud/deployments/faq/)
-* [Pulumi CLI & Pulumi Cloud FAQ](/docs/support/faq/)
-* [Pulumi Cloud SCIM FAQ](/docs/pulumi-cloud/access-management/scim/faq/)
