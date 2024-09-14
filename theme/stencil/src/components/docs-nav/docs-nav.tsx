@@ -1,4 +1,4 @@
-import { Component, h, Element, Listen } from "@stencil/core";
+import { Component, h, Element, Listen, Prop } from "@stencil/core";
 
 @Component({
     tag: "pulumi-docs-nav",
@@ -8,6 +8,9 @@ import { Component, h, Element, Listen } from "@stencil/core";
 export class DocsNav {
     @Element()
     el: HTMLElement;
+
+    @Prop({ mutable: true })
+    expand: string = "";
 
     @Listen("click")
     onClick(event: MouseEvent) {
@@ -33,6 +36,13 @@ export class DocsNav {
                 parent = parent.parentElement.closest("pulumi-docs-nav li.expandable");
             }
         }
+
+        // Expand any items marked for auto-expansion.
+        this.expand.split(",").forEach(id => {
+            this.el.querySelectorAll(`[data-identifier='${id}']`).forEach(el => {
+                el.classList.add("expanded");
+            });
+        });
     }
 
     render() {

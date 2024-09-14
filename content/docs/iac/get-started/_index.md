@@ -14,7 +14,6 @@ menu:
     getstarted:
         name: Overview
         weight: 2
-
 aliases:
     - /docs/quickstart/
     - /start/
