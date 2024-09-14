@@ -8,10 +8,8 @@ menu:
   esc:
     identifier: esc-home
     weight: 1
-# menu_open:
-#     - esc-environments
-#     - esc-integrations
-#     - esc-development
+expanded_menus:
+    - esc-environments
 aliases:
   - /docs/pulumi-cloud/esc/
 
