@@ -44,10 +44,10 @@ checkURLs().then(results => {
         console.error("\nNew 404s were detected:\n")
         results.forEach(item => console.error(item.replace(testURL, "")));
         console.error(`\nThese are pages that exist on pulumi.com but do not exist at ${testURL}.\n`)
-        console.error("\nPlease make sure any content that's been moved has an appropriate alias or redirect.");
+        console.error("Please make sure any content that's been moved has been an appropriate alias or redirect in place.");
         process.exit(1);
     } else {
-        console.log("Everything looks good!");
+        console.log("Everything looks good! ✅");
         process.exit(0);
     }
 });

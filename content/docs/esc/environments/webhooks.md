@@ -6,10 +6,11 @@ h1: ESC Webhooks
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   esc:
-    parent: esc-environments  
+    parent: esc-environments
     weight: 5
 aliases:
 - /docs/esc-cli/commands/
+- /docs/esc/webhooks/
 ---
 
 {{% notes "info" %}}
