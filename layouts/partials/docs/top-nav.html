@@ -15,23 +15,23 @@
 {{ end }}
 
 <div class="inline-flex items-center">
-    <a class="tab {{ if eq $selection "home" }}tab-selected{{ end }}" href="/docs/">
+    <a class="whitespace-nowrap tab {{ if eq $selection "home" }}tab-selected{{ end }}" href="/docs/">
         <img class="tab-icon" src="/icons/docs.svg" />
         <span>Docs Home</span>
     </a>
-    <a class="tab {{ if eq $selection "iac" }}tab-selected{{ end }}" href="/docs/iac/">
+    <a class="whitespace-nowrap tab {{ if eq $selection "iac" }}tab-selected{{ end }}" href="/docs/iac/">
         <span>Pulumi IaC</span>
     </a>
-    <a class="tab {{ if eq $selection "esc" }}tab-selected{{ end }}" href="/docs/esc/">
+    <a class="whitespace-nowrap tab {{ if eq $selection "esc" }}tab-selected{{ end }}" href="/docs/esc/">
         <span>Pulumi ESC</span>
     </a>
-    <a class="tab {{ if eq $selection "cloud" }}tab-selected{{ end }}" href="/docs/pulumi-cloud/">
+    <a class="whitespace-nowrap tab {{ if eq $selection "cloud" }}tab-selected{{ end }}" href="/docs/pulumi-cloud/">
         <span>Pulumi Cloud</span>
     </a>
-    <a class="tab {{ if eq $selection "packages" }}tab-selected{{ end }}" href="/registry/">
+    <a class="whitespace-nowrap tab {{ if eq $selection "packages" }}tab-selected{{ end }}" href="/registry/">
         <span>Packages</span>
     </a>
-    <a class="tab {{ if eq $selection "tutorials" }}tab-selected{{ end }}" href="/tutorials/">
+    <a class="whitespace-nowrap tab {{ if eq $selection "tutorials" }}tab-selected{{ end }}" href="/tutorials/">
         <span>Tutorials</span>
     </a>
 </div>
