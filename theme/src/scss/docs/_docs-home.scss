@@ -166,6 +166,18 @@ section.docs-home {
             }
         }
 
+        &.secrets-integrations a {
+            flex-basis: 100%;
+            
+            div.label {
+                padding: 12px;
+            }
+            
+            @media (min-width: 768px) {
+                max-width: 49%;
+            }
+        }
+
         &.languages a {
             flex-basis: 32%;
 
