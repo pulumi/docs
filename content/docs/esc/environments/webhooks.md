@@ -8,6 +8,8 @@ menu:
   esc:
     parent: esc-environments  
     weight: 5
+aliases:
+- /docs/esc-cli/commands/
 ---
 
 {{% notes "info" %}}

@@ -10,6 +10,7 @@ menu:
     weight: 1
 aliases:
     - /docs/esc/cli/commands/
+    - /docs/esc-cli/commands/
 ---
 
 ## Common Commands
