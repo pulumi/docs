@@ -1,12 +1,12 @@
 ---
-title: "Drift Detection"
-title_tag: "Drift Detection"
-h1: "Drift Detection"
+title: "Drift detection"
+title_tag: "Drift detection"
+h1: "Drift detection"
 meta_desc: Track changes in your cloud infrastructure compared to your Pulumi state.
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   cloud:
-    name: Drift Detection
+    name: Drift detection
     parent: pulumi-cloud-deployments
     weight: 4
     identifier: pulumi-cloud-deployments-drift
@@ -15,7 +15,7 @@ menu:
     weight: 2
 ---
 
-Drift Detection is the process of identifying changes in the actual state of your cloud environment that deviate from the expected state stored in Pulumi Cloud. This deviation can occur for various reasons, including manual adjustments made directly in the cloud provider’s console, unintended consequences of scripts, or unauthorized changes.
+Drift detection is the process of identifying changes in the actual state of your cloud environment that deviate from the expected state stored in Pulumi Cloud. This deviation can occur for various reasons, including manual adjustments made directly in the cloud provider’s console, unintended consequences of scripts, or unauthorized changes.
 
 To use drift detection and remediation with Pulumi Deployments, you must first configure the deployment settings for your stack.
 

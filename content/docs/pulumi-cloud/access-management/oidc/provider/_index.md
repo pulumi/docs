@@ -1,13 +1,13 @@
 ---
-title_tag: OpenID Connect Provider Integration for Pulumi
+title_tag: OpenID Connect provider integration for Pulumi
 meta_desc: This page provides an overview of how to configure OpenID Connect integration between
            Pulumi and supported cloud providers.
-title: OpenID Provider
-h1: OpenID Connect Provider integration
+title: OpenID provider
+h1: OpenID Connect provider integration
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   cloud:
-    name: OpenID Provider
+    name: OpenID provider
     parent: pulumi-cloud-access-management-oidc
     weight: 3
     identifier: pulumi-cloud-access-management-oidc-provider

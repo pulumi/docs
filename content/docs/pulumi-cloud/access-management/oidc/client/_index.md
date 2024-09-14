@@ -1,13 +1,13 @@
 ---
-title_tag: OpenID Connect Client Integration for Pulumi
+title_tag: OpenID Connect client integration for Pulumi
 meta_desc: This page provides an overview of how to configure OpenID Connect integration between
            third party OIDC Providers and Pulumi.
-title: OpenID Client
+title: OpenID client
 h1: OpenID Connect integration
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   cloud:
-    name: OpenID Client
+    name: OpenID client
     parent: pulumi-cloud-access-management-oidc
     weight: 1
     identifier: pulumi-cloud-access-management-oidc-client
