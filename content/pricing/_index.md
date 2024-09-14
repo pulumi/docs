@@ -25,7 +25,7 @@ tiers:
               items: |
                 You get:
                 - 200 free IaC resources
-                - Unlimited projects/stacks
+                - Unlimited IaC projects/stacks
                 - 25 free secrets
                 - 3,000 free deployments minutes
                 - Community support
@@ -67,7 +67,7 @@ tiers:
                   - Secrets versioning
                   - Audit logs
                   - Enterprise Support available
-                  - Private Slack and Professional Services available.
+                  - Private Slack and Professional Services available
             - title: Business Critical
               subtitle: Advanced security, compliance, and hosting for mission-critical needs.
               iac_price: Custom
@@ -85,7 +85,7 @@ tiers:
                   - Automatic group & user sync (SCIM)
                   - Audit logs export
                   - Enterprise Support available
-                  - Private Slack and Professional Services available.
+                  - Private Slack and Professional Services available
 
 customers:
     - stat: "**5x faster** time to market"
@@ -273,12 +273,14 @@ comparison_table:
                     - content: _check
                     - content: _check
                 - title: Integrations - Dynamic credentials
+                  link: /docs/esc/integrations/dynamic-login-credentials/
                   items:
                     - content: _check
                     - content: _check
                     - content: _check
                     - content: _check
                 - title: Integrations - Dynamic secrets
+                  link: /docs/esc/integrations/dynamic-secrets/
                   items:
                     - content: _check
                     - content: _check
@@ -301,25 +303,28 @@ comparison_table:
             ## Pulumi Insights Table
             - header: Pulumi Insights
               rows:
-                - title: Resource Search
+                - title: Resource search
                   link: /docs/pulumi-cloud/insights/search/
                   items:
-                    - content: |
-                        2K results/query  
-                        No property search
-                    - content: |
-                        2K results/query  
-                        No property search
-                    - content: |
-                        10K results in UI,  
-                        unlimited in API,  
-                        Property search included
-                    - content: |
-                        10K results in UI,  
-                        unlimited in API,  
-                        Property search included
-                - title: Data Export
-                  link: /docs/pulumi-cloud/insights/export/
+                    - content: _check
+                    - content: _check
+                    - content: _check
+                    - content: _check
+                - title: Per query limits in UI
+                  items:
+                    - content: 2K results
+                    - content: 2K results
+                    - content: 10K results
+                    - content: 10K results
+                - title: Data export
+                  link: /docs/pulumi-cloud/insights/#data-export
+                  items:
+                    - content: _blank
+                    - content: _blank
+                    - content: _check
+                    - content: _check
+                - title: Property search
+                  link: /docs/pulumi-cloud/insights/search/#property-queries
                   items:
                     - content: _blank
                     - content: _blank
