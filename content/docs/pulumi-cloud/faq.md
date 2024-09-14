@@ -89,7 +89,6 @@ or managed manually. Organization owners and administrators can manage
 access to the organization's projects with security and administrative
 features.
 
-
 ### How do I create a stack inside an Organization instead of my User account?
 
 To create a stack in a different Pulumi organization, prefix the stack's
@@ -168,11 +167,11 @@ bank transfer or check. To discuss those options in more detail, please
 
 The following editions are also available as upgrade options:
 
-* **Pulumi Team** is ideal for teams of up to 10 members and provides the basics of infrastructure as code in popular languages, enabling teams to ship faster. Includes 150K free credits each month.
+- **Pulumi Team** is ideal for teams of up to 10 members and provides the basics of infrastructure as code in popular languages, enabling teams to ship faster. Includes 150K free credits each month.
 
-* **Pulumi Enterprise** is ideal for large teams and organizations in production. It offers an unlimited number of members and teams and provides full cloud engineering capabilities.
+- **Pulumi Enterprise** is ideal for large teams and organizations in production. It offers an unlimited number of members and teams and provides full cloud engineering capabilities.
 
-* **Pulumi Business Critical** is ideal for enterprises that have specific requirements, like advanced security and compliance features, premium support, and [self-hosting options](/docs/pulumi-cloud/self-hosted/).
+- **Pulumi Business Critical** is ideal for enterprises that have specific requirements, like advanced security and compliance features, premium support, and [self-hosting options](/docs/pulumi-cloud/self-hosted/).
 
 For more information about the specific differences and capabilities offered for the
 Pulumi Team, Enterprise and Business Critical editions, refer to the [pricing page](/pricing/).
