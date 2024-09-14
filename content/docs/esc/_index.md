@@ -22,7 +22,7 @@ link_buttons:
     link: /docs/esc/get-started/
   secondary:
     label: Install
-    link: /docs/esc/install/
+    link: /docs/esc/download-install/
     
 sections:
 - type: flat
@@ -33,7 +33,7 @@ sections:
     Pulumi ESC is a new category of configuration as code product, motivated by our experience working with hundreds of Pulumi IaC customers to address their needs in managing secrets and configuration at scale within their Pulumi infrastructure and across other cloud applications and infrastructure projects.
 - type: cards-logo-label-link
   heading: Secrets Integrations
-  description: <p>Pulumi ESC integrates with all of the most popular secrets stores to pull and synchronize secrets and configuration data.</p>
+  description: <p>Pulumi ESC integrates with all of the most popular secrets stores to pull and synchronize secrets and configuration data, including <a href="/docs/esc/integrations/dynamic-secrets/aws-secrets/">AWS Secrets Manager</a>, <a href="/docs/esc/integrations/dynamic-secrets/azure-secrets/">Azure Key Vault</a>, <a href="/docs/esc/integrations/dynamic-secrets/gcp-secrets/">GCP Secret Manager</a>, <a href="/docs/esc/integrations/dynamic-secrets/vault-secrets/">HashiCorp Vault</a>, and <a href="/docs/esc/integrations/dynamic-secrets/1password-secrets/">1Password</a>.</p>
   cards:
   - label: AWS Secrets Manager
     icon: aws-40
@@ -47,9 +47,9 @@ sections:
   - label: HashiCorp Vault
     icon: vault-40
     link: /docs/esc/integrations/dynamic-secrets/vault-secrets/
-  - label: 1Password
-    icon: onepassword-40
-    link: /docs/esc/integrations/dynamic-secrets/1password-secrets/
+  # - label: 1Password
+  #   icon: onepassword-40
+  #   link: /docs/esc/integrations/dynamic-secrets/1password-secrets/
 # - type: cards-logo-label-link
 #   heading: Clouds
 #   description: <p>Pulumi ESC supports AWS, Azure, Google Cloud, Kubernetes, and <a href="/docs/esc/integrations/">more</a>.</p>
@@ -91,13 +91,13 @@ sections:
     primary_button_label: Get Started
     primary_button_link: /docs/esc/cli/
     secondary_button_label: Install
-    secondary_button_link: /docs/iac/download-install/esc/
+    secondary_button_link: /docs/esc/download-install/
   - heading: Dynamic Secrets Providers
     description: Support for dynamic configuration providers allow Pulumi ESC to integrate with secrets stored in any other provider.
     link: /docs/esc/integrations/dynamic-secrets/
   - heading: ESC Webhooks
     description: Automate your processes with environment event webhooks.
-    link: /docs/esc/webhooks/
+    link: /docs/esc/environments/webhooks/
 - type: full-width-cards
   heading: Featured docs
   cards:

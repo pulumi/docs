@@ -1,7 +1,7 @@
 ---
 title: Working with environments
 title_tag: Pulumi ESC environments
-h1: Pulumi ESC environments
+h1: Working with environments
 meta_desc: Pulumi ESC allows you to compose and manage hierarchical collections of configuration and secrets and consume them in various ways.
 menu:
   esc:
@@ -16,7 +16,7 @@ search:
     - configuration
 aliases:
   - /docs/pulumi-cloud/esc/environments/
-  - /docs/esc/environments/
+  # - /docs/esc/environments/
 ---
 
 {{% notes type="info" %}}

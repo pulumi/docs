@@ -47,7 +47,6 @@ Pulumi ESC is currently not supported for self-hosted customers. [Contact sales]
 ## More FAQ
 
 - [Pulumi IaC FAQ](/docs/iac/support/faq/)
-- [Pulumi ESC FAQ](/docs/esc/faq/)
 - [Pulumi Cloud FAQ](/docs/pulumi-cloud/faq/)
 - [Pulumi Cloud Deployments FAQ](/docs/pulumi-cloud/deployments/faq/)
 - [Pulumi Cloud SCIM FAQ](/docs/pulumi-cloud/access-management/scim/faq/)

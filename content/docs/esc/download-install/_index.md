@@ -14,6 +14,8 @@ search:
       - install
       - homebrew
       - cli
+aliases:
+- /docs/install/esc/
 ---
 
 ## Select an Operating System
