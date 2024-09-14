@@ -7,7 +7,7 @@ menu:
     iac:
         identifier: iac-home
         weight: 1
-expanded_menus:
+expanded_menu_ids:
     - iac-get-started
 meta_desc: Learn how to create, deploy, and manage infrastructure on any cloud using Pulumi's open source infrastructure as code SDK.
 meta_image: /images/docs/meta-images/docs-meta.png

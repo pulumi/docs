@@ -30,7 +30,7 @@ it be helpful to be able to set the menu somehow in the frontmatter?) */}}
 
 {{- with index site.Menus $menuID }}
     <nav class="text-sm mt-7 mr-2">
-        <pulumi-docs-nav expand="{{ delimit (default slice $page.Params.expanded_menus) "," }}">
+        <pulumi-docs-nav expanded-menu-ids="{{ delimit (default slice $page.Params.expanded_menu_ids) "," }}">
             <ul class="list-none pl-0">
                 {{- partial "inline/menu/walk.html" (dict "page" $page "rootMenuID" $menuID "menuEntries" .) }}
             </ul>
@@ -56,8 +56,9 @@ it be helpful to be able to set the menu somehow in the frontmatter?) */}}
             {{- end }}
         {{- end }}
 
-        <li class="{{ if (and .Children (ne .Identifier $rootMenuID)) }}expandable{{ end }}"
-            data-identifier="{{ .Identifier }}">
+        <li {{ if (and .Children (ne .Identifier $rootMenuID)) }} class="expandable" {{ end }}
+            {{ if .Identifier }} data-menu-id="{{ .Identifier }}" {{ end }}
+            >
             <a
                 {{- range $k, $v := $attrs }}
                     {{- with $v }}

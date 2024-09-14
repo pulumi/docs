@@ -98,7 +98,7 @@ export namespace Components {
         "quotes": string;
     }
     interface PulumiDocsNav {
-        "expand": string;
+        "expandedMenuIDs": string;
     }
     interface PulumiExample {
     }
@@ -570,7 +570,7 @@ declare namespace LocalJSX {
         "quotes"?: string;
     }
     interface PulumiDocsNav {
-        "expand"?: string;
+        "expandedMenuIDs"?: string;
     }
     interface PulumiExample {
     }

@@ -9,8 +9,8 @@ export class DocsNav {
     @Element()
     el: HTMLElement;
 
-    @Prop({ mutable: true })
-    expand: string = "";
+    @Prop({ mutable: true, attribute: "expanded-menu-ids" })
+    expandedMenuIDs: string = "";
 
     @Listen("click")
     onClick(event: MouseEvent) {
@@ -38,10 +38,12 @@ export class DocsNav {
         }
 
         // Expand any items marked for auto-expansion.
-        this.expand.split(",").forEach(id => {
-            this.el.querySelectorAll(`[data-identifier='${id}']`).forEach(el => {
-                el.classList.add("expanded");
-            });
+        this.expandedMenuIDs.split(",").forEach(id => {
+            if (id !== "") {
+                this.el.querySelectorAll(`[data-menu-id='${id}']`).forEach(el => {
+                    el.classList.add("expanded");
+                });
+            }
         });
     }
 
