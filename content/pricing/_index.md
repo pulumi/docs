@@ -110,8 +110,8 @@ comparison_table:
                 - title: Price per resource/month
                   items:
                     - content: Free
-                    - content: 200 free, $0.36 thereafter
-                    - content: $1.08 / Custom
+                    - content: 200 free, $0.37 thereafter
+                    - content: $1.10 / Custom
                     - content: Custom
                 - title: Commitment pricing
                   items:
