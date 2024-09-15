@@ -17,9 +17,9 @@ link_buttons:
   primary:
     label: Get Started
     link: /docs/get-started/
-  secondary:
-    label: Install
-    link: /docs/install/
+  # secondary:
+  #   label: Install
+  #   link: /docs/install/
 sections:
 - type: button-cards
   heading: Featured Products

@@ -10,8 +10,12 @@
                 <h1>{{ index $h1 0 }}<strong> {{ index $h1 1 }}</strong></h1>
                 {{ .Params.description | safeHTML }}
                 <div class="link-buttons">
+                    {{ if $primary_link_button }}
                     <a class="docs-primary-link-btn" href="{{ $primary_link_button.link }}">{{ $primary_link_button.label }}</a>
+                    {{ end }}                    
+                    {{ if $secondary_link_button }}
                     <a class="docs-secondary-link-btn" href="{{ $secondary_link_button.link }}">{{ $secondary_link_button.label }}</a>
+                    {{ end }}
                 </div>
             </div>
 
