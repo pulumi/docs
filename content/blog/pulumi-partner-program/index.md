@@ -23,14 +23,14 @@ Customers are choosing Pulumi because it enables them to manage cloud and SaaS r
 
 ## Key Benefits of Pulumi Partner Program
 
-* __Help your customers with the best in Infrastructure as Code (IaC) and Secure Configuration Management__: Align with Pulumi, a leader in the IaC space, to gain credibility and recognition and leverage Pulumi ESC to securely manage configurations and secrets across infrastructure and application services.
-* __Accelerated Adoption of Partner Solutions__: Boost the adoption of partner products by leveraging Pulumi’s automation capabilities, streamlining integration and enhancing your offerings.
-* __New Revenue Streams__: Create new revenue opportunities through innovative joint solutions.
-* __Joint Marketing__: Benefit from joint marketing efforts, including co-branded campaigns and events.
-* __Pulumi Sales and Technical Training__: Access comprehensive training programs to leverage Pulumi technologies effectively.
+* __Empower Your Customers__ deliver cloud initiatives faster using Pulumi’s Infrastructure as Code (IaC) and Secrets Management capabilities. By partnering with Pulumi, you gain access to secure configuration management and a platform that enhances your customers' cloud experiences.
+* __Accelerated Adoption__ of your solutions through seamless integration with Pulumi. Leverage Pulumi's support for the world's most popular programming languages and developer tools to streamline integration, making it easier for your customers to use and adopt your products.
+* __Reach More Developers__ with collaborative documentation, shared examples, and co-marketing initiatives, you can enhance visibility and engagement. Participate in joint marketing efforts, including co-branded campaigns and events, to connect with more developers and drive the adoption of your solutions.
 
 With 20 inaugural members, our technology partners join an elite community that benefits from Pulumi’s ongoing investment in technical, marketing, training, and business strategy support. We are excited to welcome new members such as [Docker](https://www.docker.com/), [1Password](https://1password.com/[), [Pinecone](https://www.pinecone.io/), [NewRelic](https://newrelic.com/), [Tailscale](https://tailscale.com/), [Dagger](https://dagger.io/) and many others.
 
 ## Join the Pulumi Partner Program
+
+Come hear from dozens of partners and customers this week at PulumiUP. Register [here](https://www.pulumi.com/pulumi-up/?utm_source=member_desktop&utm_medium=referral_pulumi&utm_campaign=FY2025Q1_Event_PulumiUP).
 
 We believe that the Pulumi Partner Program will bring together and support the growth of our entire ecosystem, leveraging the strengths of our partners and creating connections for new potential services and technologies. Prospective partners can reach out to us via our [website](www.pulumi.com/partners). We look forward to welcoming new partners and driving innovation together.
