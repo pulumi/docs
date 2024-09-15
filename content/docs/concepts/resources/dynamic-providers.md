@@ -186,6 +186,8 @@ Because your implementation of the resource provider interface must be used by a
 
 ## The Resource Provider Interface
 
+**Warning**: There are nuances to how data is passed between the core Pulumi program and your dynamic provider. Learn more here: https://github.com/pulumi/pulumi/issues/16582.
+
 Implementing the `pulumi.dynamic.ResourceProvider` interface requires implementing a subset of the methods listed further down in this section. Each of these methods can be asynchronous, and most implementations of these methods will perform network I/O to provision resources in a backing cloud provider or other resource model. There are several important contracts between a dynamic provider and the Pulumi CLI that inform when these methods are called and with what data.
 
 Though the input properties passed to a `pulumi.dynamic.Resource` instance will usually be [Input values](/docs/concepts/inputs-outputs/), the dynamic provider’s functions are invoked with the fully resolved input values in order to compose well with Pulumi resources. Strong typing for the inputs to your provider’s functions can help clarify this. You can achieve this by creating a second interface with the same properties as your resource’s inputs, but with fully unwrapped types.
