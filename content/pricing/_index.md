@@ -1,6 +1,6 @@
 ---
 title: Pricing
-meta_desc: Pulumi's open source infrastructure as code SDK and enterprise SaaS is available in various editions with a starting cost of free.
+meta_desc: Pulumi IaC and Pulumi ESC is available in various editions and is free to individuals
 type: page
 layout: pricing
 menu:
@@ -90,7 +90,7 @@ tiers:
 customers:
     - stat: "**5x faster** time to market"
       logo: unity
-    - stat: "**2x faster** setup for test environments with Pulumi Deployments"
+    - stat: "**100 days saved** each year with Pulumi Cloud instead of DIY state management"
       logo: starburst
     - stat: "**10x faster deployments**, from weeks to hours"
       logo: snowflake
@@ -110,15 +110,9 @@ comparison_table:
                 - title: Price per resource/month
                   items:
                     - content: Free
-                    - content: $0.36
+                    - content: 200 free, $0.36 thereafter
                     - content: $1.08 / Custom
                     - content: Custom
-                - title: Included resource/month
-                  items:
-                    - content: Free
-                    - content: 200
-                    - content: _blank
-                    - content: _blank
                 - title: Commitment pricing
                   items:
                     - content: _blank
@@ -192,9 +186,9 @@ comparison_table:
               rows:
                 - title: Price per secret/month
                   items:
-                    - content: Free
-                    - content: $0.50
-                    - content: $0.75 / Custom
+                    - content: 25 free
+                    - content: 25 free, $0.50 thereafter
+                    - content: 25 free, $0.75 / custom thereafter
                     - content: Custom
                 - title: Price per plaintext config
                   items:
@@ -204,21 +198,9 @@ comparison_table:
                     - content: Free
                 - title: Price per 10K API calls
                   items:
-                    - content: 10K API calls included
-                    - content: $0.10
-                    - content: $0.10
-                    - content: $0.10
-                - title: Included secrets/month
-                  items:
-                    - content: 25
-                    - content: 25
-                    - content: 25
-                    - content: 
-                - title: Included API calls/month
-                  items:
-                    - content: 10K
-                    - content: 10K
-                    - content: 10K
+                    - content: 10K free
+                    - content: 10K free, $0.10 thereafter
+                    - content: 10K free, $0.10 thereafter
                     - content: 
                 - title: Commitment pricing
                   items:
