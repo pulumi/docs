@@ -1,7 +1,6 @@
 ---
 title: Pulumi ESC
 linktitle: Pulumi ESC
-no_on_this_page: true
 docs_home: true
 notitle: true
 menu:
