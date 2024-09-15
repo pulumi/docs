@@ -13,7 +13,7 @@ aliases:
 - /docs/intro/concepts/resources/options/customtimeouts/
 ---
 
-The `customTimeouts` resource option provides a set of custom timeouts for `create`, `update`, and `delete` operations on a resource. These timeouts are specified using a duration string such as "5m" (5 minutes), "40s" (40 seconds), or "1d" (1 day). Supported duration units are "ns", "us" (or "µs"), "ms", "s", "m", and "h" (nanoseconds, microseconds, milliseconds, seconds, minutes, and hours, respectively).
+The `customTimeouts` resource option provides a set of custom timeouts for `create`, `update`, and `delete` operations on a resource. These timeouts are specified using a duration string such as "5m" (5 minutes), "40s" (40 seconds), or "12h" (12 hours). Supported duration units are "ns", "us" (or "µs"), "ms", "s", "m", and "h" (nanoseconds, microseconds, milliseconds, seconds, minutes, and hours, respectively).
 
 For the most part, Pulumi automatically waits for operations to complete and times out appropriately. In some circumstances, such as working around bugs in the infrastructure provider, custom timeouts may be necessary.
 
