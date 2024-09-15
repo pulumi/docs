@@ -5,7 +5,7 @@
 <section class="content docs-home">
     <div id="docs-home-banner" class="header">
         {{ $h1 := split .Params.h1 " " }}
-        <h1>{{ index $h1 0 }}<strong> {{ index $h1 1 }}</strong></h1>
+        <h1>{{ index $h1 0 }}<strong> {{ index $h1 1 }}</strong> docs</h1>
         {{ .Params.description | safeHTML }}
         <div class="link-buttons">
             <a class="docs-primary-link-btn" href="{{ $primary_link_button.link }}">{{ $primary_link_button.label }}</a>

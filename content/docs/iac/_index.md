@@ -11,7 +11,7 @@ expanded_menu_ids:
     - iac-get-started
 meta_desc: Learn how to create, deploy, and manage infrastructure on any cloud using Pulumi's open source infrastructure as code SDK.
 meta_image: /images/docs/meta-images/docs-meta.png
-h1: Pulumi IaC Docs
+h1: Pulumi IaC docs
 description: <p>Pulumi IaC is an <a href="https://github.com/pulumi/pulumi" target="_blank">open source</a> infrastructure as code tool for creating, deploying, and managing cloud infrastructure.</p>
 link_buttons:
   primary:
