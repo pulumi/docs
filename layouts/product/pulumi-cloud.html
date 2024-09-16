@@ -6,69 +6,73 @@
     {{ $pageContext := . }}
 
 
-    <section id="overview" class="max-w-5xl mx-auto text-center my-6 px-6">
+    <section id="overview" class="max-w-5xl mx-auto text-center mt-6 px-6">
         {{ with .Params.overview }}
-            <h2>{{ .titleTop }}<br />{{ .titleBottom }}</h2>
+            <h2>{{ .title }}</h2>
             <p>{{ .description | markdownify }}</p>
         {{ end }}
-        <div class="flex justify-center rounded-md bg-violet-100">
+        <div class="flex justify-center rounded-md ">
             <p class="text-center">
                 ✨ <a href="/blog/pulumi-copilot"><span class="font-bold">New product announcement:</span> Learn more about Pulumi Copilot</a>. ✨
             </p>
         </div>
     </section>
 
-    <section id="console-screenshot" class="max-w-4xl mx-auto text-center relative mb-28 px-6 lg:px-0">
-        <div class="shape-background pulumi-service-screenshot">
-            <div class="shape-container">
-                <div class="circle-right"></div>
-                <div class="circle-left"></div>
-            </div>
-        </div>
-
-        <img class="card mx-auto" src="/images/home/pulumi-console.svg" alt="Pulumi Service Screenshot" />
-    </section>
-
-    <section id="capabilities" class="my-28 px-6 relative">
-        <div class="shape-background pulumi-service-capabilities">
-            <div class="shape-container">
-                <div class="circle-top"></div>
-                <div class="circle-middle"></div>
-                <div class="circle-bottom"></div>
-            </div>
-        </div>
-
+    <section id="products" class="mb-16 mt-16 px-6 relative">
         <div class="container mx-auto">
-            <div class="card p-6 lg:p-28 bg-white">
-                {{ with .Params.capabilities }}
-                    <h2>{{ .title }}</h2>
-
-                    {{ range .items }}
-                        <h3>{{ .title }}</h3>
-                        <img src="{{ .image }}" />
-
-                        <ul class="list-none mt-6 mb-20">
-                            {{ $listLength := len .details }}
-                            {{ range $index, $item := .details }}
-                                {{ $itemClass := "border-t-2" }}
-                                {{ if eq (add $index 1) $listLength }}
-                                    {{ $itemClass = "border-t-2 border-b-2" }}
-                                {{ end }}
-
-
-                                <li class="accordion-item {{ $itemClass }} py-6">
-                                    {{ partial "accordian-header" (dict "text" $item.title) }}
-                                    <p class="mt-6">{{ $item.description | markdownify }}</p>
-
-                                    <div class="accordion-item-body-no-animation">
-                                        <p class="mt-6">{{ $item.more_info | markdownify }}</p>
-                                    </div>
-                                </li>
+            {{ range $section := .Params.products }}
+                <div class="card mb-12 p-6 lg:p-20 bg-white">
+                    <h2 class="text-center rainbow-text">{{ $section.header }}</h2>
+                    <div class="flex flex-row flex-wrap justify-center space-x-4 my-4 border-b-2 border-gray-200">
+                        {{ range $index, $subsection := $section.content }}
+                            {{ $tabclass := "" }}
+                            {{ $textClass := "" }}
+                            {{ if eq $index 0 }}
+                                {{ $tabclass = " border-blue-600 "}}
+                                {{ $textClass = "rainbow-text" }}
                             {{ end }}
-                        </ul>
+                            <div id="{{ $subsection.tabid }}" class="text-2xl cursor-pointer p-2 px-6 rounded-t-lg border-b-4 {{ $tabclass }}">
+                                <div id="{{ $subsection.tabid }}-text" class="{{ $textClass }}">{{ $subsection.header }}</div>
+                            </div>
+                        {{ end }}
+                    </div>
+                    {{ range $index, $subsection := $section.content }}
+                        {{ $tabclass := ""}}
+                        {{ if not (eq $index 0) }}
+                            {{ $tabclass = " hidden "}}
+                        {{ end }}
+                        <div id="{{ $subsection.tabid }}-content" class="{{ $tabclass }}">
+                            <h3>{{ $subsection.header }}</h3>
+                            {{ if $subsection.subheader }}
+                                <div class="cursor-pointer mb-4">
+                                    <a href={{ $subsection.link }} class="text-lg underline group-hover:cursor-pointer">{{ $subsection.subheader }}</a>
+                                </div>
+                            {{ end }}
+                            <img src="{{ $subsection.image }}" />
+
+                            <ul class="list-none mt-6 mb-20">
+                                {{ $listLength := len $subsection.details }}
+                                {{ range $index, $item := $subsection.details }}
+                                    {{ $itemClass := "border-t-2" }}
+                                    {{ if eq (add $index 1) $listLength }}
+                                        {{ $itemClass = "border-t-2 border-b-2" }}
+                                    {{ end }}
+
+
+                                    <li class="accordion-item {{ $itemClass }} py-6">
+                                        {{ partial "accordian-header" (dict "text" $item.title) }}
+                                        <p class="mt-6">{{ $item.description | markdownify }}</p>
+
+                                        <div class="accordion-item-body-no-animation">
+                                            <p class="mt-6">{{ $item.more_info | markdownify }}</p>
+                                        </div>
+                                    </li>
+                                {{ end }}
+                            </ul>
+                        </div>
                     {{ end }}
-                {{ end }}
-            </div>
+                </div>
+            {{ end }}
         </div>
     </section>
 
@@ -81,12 +85,6 @@
     </section>
 
     <section id="security" class="mt-28 px-6 relative">
-        <div class="shape-background pulumi-service-security">
-            <div class="shape-container">
-                <div class="circle-right"></div>
-            </div>
-        </div>
-
         <div class="container mx-auto text-center">
             {{ with .Params.security }}
                 <h2>{{ .title }}</h2>
@@ -97,12 +95,6 @@
     </section>
 
     <section id="case-studies" class="relative px-6 mt-28">
-        <div class="shape-background pulumi-service-case-studies">
-            <div class="shape-container">
-                <div class="circle-right"></div>
-            </div>
-        </div>
-
         <div class="container mx-auto">
             <h2 class="text-center">{{ .Params.case_studies.title }}</h2>
             <div class="flex flex-wrap justify-center items-stretch">
@@ -127,10 +119,10 @@
 
     <section id="deployment" class="container mx-auto text-center mt-28 px-6">
         <h2>{{ .Params.deployment.title }}</h2>
-        <div class="flex flex-wrap justify-content items-stretch text-left mt-16">
+        <div class="lg:flex lg:flex-wrap items-stretch text-left mt-16">
             {{ range $item := .Params.deployment.items }}
                 <div class="w-full lg:w-1/2 p-3">
-                    <div class="benefits-item-auto-h card bg-white p-12">
+                    <div class="benefits-item-auto-h card h-full bg-white p-12">
                         <div class="icon-section mb-8">
                             {{ partial "color-icon.html" (dict "icon" $item.icon "icon_color" $item.icon_color) }}
                         </div>
@@ -156,7 +148,7 @@
         {{ end }}
     </section>
 
-    <section id="get-started" class="container px-6 lg:px-0 mx-auto my-28 px-6">
+    <section id="get-started" class="container px-6 lg:px-0 mx-auto my-28">
         <div class="w-full bg-violet-600 card p-6 lg:p-16 lg:pt-24 text-center">
             <div class="max-w-xl mx-auto">
                 <h2 class="text-white hidden lg:block px-0 lg:px-16">{{ .Params.get_started.title }}</h2>
