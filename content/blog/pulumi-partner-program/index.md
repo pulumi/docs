@@ -31,6 +31,5 @@ With 20 inaugural members, our technology partners join an elite community that 
 
 ## Join the Pulumi Partner Program
 
-Come hear from dozens of partners and customers this week at PulumiUP. Register [here](https://www.pulumi.com/pulumi-up/?utm_source=member_desktop&utm_medium=referral_pulumi&utm_campaign=FY2025Q1_Event_PulumiUP).
 
 We believe that the Pulumi Partner Program will bring together and support the growth of our entire ecosystem, leveraging the strengths of our partners and creating connections for new potential services and technologies. Prospective partners can reach out to us via our [website](www.pulumi.com/partners). We look forward to welcoming new partners and driving innovation together.
