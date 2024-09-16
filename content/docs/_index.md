@@ -12,7 +12,7 @@ noleftnav: true
 norightnav: true
 nobreadcrumb: true
 h1: Pulumi Docs
-description: <p>Pulumi is an <a href="https://github.com/pulumi/pulumi" target="_blank">open source</a> infrastructure as code tool for creating, deploying, and managing cloud infrastructure.</p>
+description: <p>Pulumi is an <a href="https://github.com/pulumi/pulumi" target="_blank">open source</a> platform for <a href="/docs/iac">automating</a>, <a href="/docs/esc">securing</a>, and <a href="/docs/pulumi-cloud">managing</a> cloud resources, configuration, and secrets, using your favorite <a href="/docs/iac/languages-sdks/">programming languages.</a></p>
 link_buttons:
   primary:
     label: Get Started
