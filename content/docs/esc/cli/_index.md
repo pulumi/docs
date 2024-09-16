@@ -20,7 +20,7 @@ to help your team manage environment complexity.
 
 The Pulumi ESC CLI is open source and free to use:
 
-<a class="btn btn-secondary" href="/docs/esc/get-started/">Get Started</a>
+<a class="btn btn-secondary" href="/docs/esc/download-install/">Install Pulumi ESC</a>
 
 ## Common Commands
 
