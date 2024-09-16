@@ -45,7 +45,7 @@ secrets:
   image: /images/product/esc-diagram-octopus.svg
   alt: a screenshot of Pulumi ESC
   description: |
-    Easily access, share, and manage environments, secrets, and configurations securely on any cloud using your favorite programming languages. Pull and sync with any secrets store, and consume in any application, tool, or CI/CD platform.
+    Tame secrets sprawl and configuration complexity securely across all your cloud infrastructure and applications. Pull and sync with any secrets store, and consume in any application, tool, or CI/CD platform.
 
 customer_logos:
   title: Trusted by over 3,000 innovative companies
