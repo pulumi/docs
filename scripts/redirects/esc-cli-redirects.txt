@@ -29,9 +29,9 @@ docs/esc-cli/commands/esc_open/index.html|/docs/esc/cli/commands/esc_open/
 docs/esc-cli/commands/esc_run/index.html|/docs/esc/cli/commands/esc_run/
 docs/esc-cli/commands/esc_version/index.html|/docs/esc/cli/commands/esc_version/
 docs/esc-cli/commands/esc/index.html|/docs/esc/cli/commands/esc/
-/docs/esc-cli/commands/esc_env_tag/index.html|/docs/esc/cli/commands/esc_env_tag/
-/docs/esc-cli/commands/esc_env_tag_ls/index.html|/docs/esc/cli/commands/esc_env_tag_ls/
-/docs/esc-cli/commands/esc_env_tag_get/index.html|/docs/esc/cli/commands/esc_env_tag_get/
-/docs/esc-cli/commands/esc_env_tag_rm/index.html|/docs/esc/cli/commands/esc_env_tag_rm/
-/docs/esc-cli/commands/esc_env_tag_mv/index.html|/docs/esc/cli/commands/esc_env_tag_mv/
-/docs/esc-cli/commands/esc_env_clone/index.html|/docs/esc/cli/commands/esc_env_clone/
+docs/esc-cli/commands/esc_env_tag/index.html|/docs/esc/cli/commands/esc_env_tag/
+docs/esc-cli/commands/esc_env_tag_ls/index.html|/docs/esc/cli/commands/esc_env_tag_ls/
+docs/esc-cli/commands/esc_env_tag_get/index.html|/docs/esc/cli/commands/esc_env_tag_get/
+docs/esc-cli/commands/esc_env_tag_rm/index.html|/docs/esc/cli/commands/esc_env_tag_rm/
+docs/esc-cli/commands/esc_env_tag_mv/index.html|/docs/esc/cli/commands/esc_env_tag_mv/
+docs/esc-cli/commands/esc_env_clone/index.html|/docs/esc/cli/commands/esc_env_clone/
