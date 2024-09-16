@@ -9,6 +9,7 @@ menu:
         name: Go
         parent: iac-languages
         weight: 4
+        identifier: iac-languages-go
     languages:
         identifier: go
         weight: 4

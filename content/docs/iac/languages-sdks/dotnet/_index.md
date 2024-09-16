@@ -9,6 +9,7 @@ menu:
         name: C#, F#, VB (.NET)
         parent: iac-languages
         weight: 3
+        identifier: iac-languages-dotnet
     languages:
         identifier: dotnet
         weight: 3

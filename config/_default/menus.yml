@@ -208,32 +208,32 @@ esc:
     parent: esc-cli-commands
 
 # -------------------------------------
-# Languages & SDKs Menus
+# IaC Languages & SDKs Menus
 # -------------------------------------
 
-languages:
+iac:
   - name: SDK docs
-    identifier: sdk-docs-javascript
-    parent: javascript
+    parent: iac-languages-javascript
     url: https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/pulumi/
     weight: 1
+    identifier: iac-languages-javascript-sdk
   - name: SDK docs
-    identifier: sdk-docs-python
-    parent: python
+    parent: iac-languages-python
     url: https://www.pulumi.com/docs/reference/pkg/python/pulumi/
     weight: 1
+    identifier: iac-languages-python-sdk
   - name: SDK docs
-    identifier: sdk-docs-go
-    parent: go
+    parent: iac-languages-go
     url: https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi
     weight: 1
+    identifier: iac-languages-go-sdk
   - name: SDK docs
-    identifier: sdk-docs-dotnet
-    parent: dotnet
+    parent: iac-languages-dotnet
     url: https://www.pulumi.com/docs/reference/pkg/dotnet/Pulumi/Pulumi.html
     weight: 1
+    identifier: iac-languages-dotnet-sdk
   - name: SDK docs
-    identifier: sdk-docs-java
-    parent: java
+    parent: iac-languages-java
     url: https://github.com/pulumi/pulumi-java/tree/main/sdk/java
     weight: 1
+    identifier: iac-languages-java-sdk

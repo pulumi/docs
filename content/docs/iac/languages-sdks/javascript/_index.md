@@ -9,6 +9,7 @@ menu:
         name: TypeScript (Node.js)
         parent: iac-languages
         weight: 1
+        identifier: iac-languages-javascript
     languages:
         identifier: javascript
         weight: 1

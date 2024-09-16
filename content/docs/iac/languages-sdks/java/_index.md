@@ -9,6 +9,7 @@ menu:
         name: Java
         parent: iac-languages
         weight: 5
+        identifier: iac-languages-java
     languages:
         identifier: java
         weight: 5
