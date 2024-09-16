@@ -6,7 +6,6 @@
     <!-- Our CSS and JS bundles. -->
     {{ partial "assets" . }}
 
-
     <!-- Google Site Verification for Google Webmaster tools and YouTube. -->
     <meta name="google-site-verification" content="N-ezSTIu4P3bSc4TqidV4wWCkMzFiMN269ZgDYArGkk" />
 
@@ -231,7 +230,7 @@
         });
     </script>
 
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <script defer src="https://buttons.github.io/buttons.js"></script>
 
     {{- if eq hugo.Environment "production" }}
         <!-- Clearbit snippet -->
@@ -421,16 +420,8 @@
     {{- end }}
 
     <!-- Apply anchor links to headings in the docs, blog and taxonomy pages. -->
-    {{ if and (not .IsHome) (.Section) (in "docs tutorials blog authors tags registry" .Section) }}
-        <script async defer src="//cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"></script>
-        <script>
-            // Wait for the window's `load` event to ensure the deferred anchor.js script has finished loading as well.
-            window.addEventListener("load", function (event) {
-                if (anchors) {
-                    anchors.add("h1:not(.no-anchor), h2:not(.no-anchor), h3:not(.no-anchor), h4:not(.no-anchor), h5:not(.no-anchor), h6:not(.no-anchor)");
-                }
-            });
-        </script>
+    {{ if and (not .IsHome) (.Section) (in "docs tutorials blog authors tags registry pricing" .Section) }}
+        <script defer src="//cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"></script>
     {{ end }}
 
     {{/* Tests to enforce required frontmatter for certain content types. */}}

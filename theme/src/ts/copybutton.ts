@@ -1,4 +1,5 @@
 import * as clipboard from "clipboard-polyfill";
+import { onPageEvent } from "./navigation";
 
 ("use strict");
 
@@ -161,6 +162,6 @@ function addCopyButton(e) {
 }
 
 // When the DOM is ready, add copy buttons to code snippets.
-$(function () {
+onPageEvent("load", () => {
     addCopyButton($(":not(.no-copy) > div.highlight"));
 });

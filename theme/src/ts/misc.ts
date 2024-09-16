@@ -1,3 +1,4 @@
+import { onPageEvent } from "./navigation";
 import {LocalStorageService} from "./state";
 
 
@@ -5,8 +6,10 @@ const navigationState = new LocalStorageService("navigation-toggle-state");
 loadToggleStates();
 
 function bindToggle(el) {
-    $(".toggleButton", el).click(function () {
-        if ($(this).closest(".toggle, .toggleVisible")[0] != el) {
+    $(".toggleButton", el).on("click", function() {
+        const closest = $(this).closest(".toggle, .toggleVisible")[0];
+
+        if (closest !== el) {
             // Only trigger the closest toggle header.
             return;
         }
@@ -146,7 +149,7 @@ function generateOnThisPage() {
     }
 }
 
-(function ($) {
+onPageEvent("load", () => {
     const observer = new IntersectionObserver(
         ([e]) => {
             e.target.classList.toggle("is-pinned", e.intersectionRatio < 1);
@@ -255,4 +258,4 @@ function generateOnThisPage() {
         .removeAttr("title")
         .find(".property-indicator")
         .replaceWith("<pulumi-tooltip>" + '    <span class="property-indicator-replacement">' + ' <img src="/icons/replacement-property.svg"/>' + '</span>' + '    <span slot="content">Changes to this property will trigger replacement.</span>' + "</pulumi-tooltip>");
-})(jQuery);
+});

@@ -1,4 +1,6 @@
-$(function () {
+import { onPageEvent } from "./navigation";
+
+onPageEvent("load", () => {
     // Check that the analytics track function is available.
     var analyticsAvailable = window["analytics"] && window["analytics"].track && typeof window["analytics"].track === "function";
 
