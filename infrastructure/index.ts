@@ -618,7 +618,7 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
             cachedMethods: [
                 "GET", "HEAD", "OPTIONS",
             ],
-            targetOriginId: aiAppDomain,
+            targetOriginId: cloudAiAppDomain,
             pathPattern: '/_pulumi/cloud-ai/*',
             originRequestPolicyId: allViewerExceptHostHeaderId,
             cachePolicyId: cachingDisabledId,
