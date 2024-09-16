@@ -10,10 +10,10 @@ tags:
   - features
 ---
 
-The latest major release of the Pulumi Google Cloud Provider is available now! 
+The latest major release of the Pulumi Google Cloud Provider is available now!
 Our 8.0 release contains the latest upstream changes to keep you up-to-date along with the latest features and improvements from Pulumi.
 
-The Pulumi Google Cloud provider can be used to provision any of the Google Cloud resources available in the upstream provider. 
+The Pulumi Google Cloud provider can be used to provision any of the Google Cloud resources available in the upstream provider.
 The provider is open source and available on GitHub so you can always follow along with current issues and developments, or even open your first pull request.
 
 <!--more-->
@@ -26,24 +26,24 @@ Here are a few links to help you get started if you are new to Pulumi:
 - [Templates](https://www.pulumi.com/templates/serverless-application/gcp/) - Use a quickstart template to create a new project
 - [Pulumi AI](https://www.pulumi.com/ai) - Ask Pulumi AI to create a new project
 
-
 ## What’s New in 8.0
 
-### Pulumi improvements
+### Looking Back
 
-- Ever-improving quality assurance for Pulumi-managed resources, bringing the latest features to your production stack
-- Reliable diffing strategy aligned with upstream Terraform, removing insecurity and reducing false alarms
-- Continuous improvements to registry documentation
+Since the last major release of this provider, we have continuously shipped improvements to our ecosystem, bringing the latest Pulumi features to your production stack.
+We have rolled out an improved diffing strategy in the Pulumi Terraform Bridge, removing spurious diffs on preview and increasing confidence when deploying.
+Additionally we have worked hard to improve accuracy and coverage for registry documentation.
 
 ### Notable upstream features
 
 Several resources have new `deletionProtection` fields:
-[TODO] list resources
 
-A new default label, `goog-pulumi-provisioned` lets you discover your Pulumi-provisioned resources in the GCP console,
+- gcp.cloudrunv2.Service
+- gcp.cloudrunv2.Job
+- gcp.activedirectory.Domain
+- gcp.organizations.Folder
+- gcp.organizations.Project
+
+A new default label, `goog-pulumi-provisioned` lets you discover your Pulumi-provisioned resources in the GCP console
 to help you track resources and how they were created.
 This label is available as an Output only and can be disabled in your provider configuration.
-
-
-
-
