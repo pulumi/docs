@@ -337,6 +337,30 @@ $sitenav-offset: calc($sitenav-height + 16px);
     text-shadow: none;
 }
 
+.blue-star-background {
+    @apply w-full h-full overflow-hidden absolute top-0 left-0 bg-blue-200 shadow-lg;
+
+    .blue-star-background-image {
+        @apply w-full h-full;
+        background-image: url("/images/home/hero-background.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        opacity: 0.5;
+    }
+}
+
+.purple-hex-background {
+    @apply w-full h-full overflow-hidden absolute top-0 left-0 bg-violet-200 shadow-lg;
+
+    .purple-hex-background-image {
+        @apply w-full h-full;
+        background-image: url("/images/home/hexagons.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        opacity: 0.5;
+    }
+}
+
 #architectures {
     @apply text-center;
 
