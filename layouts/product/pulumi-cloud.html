@@ -18,61 +18,58 @@
         </div>
     </section>
 
-    <!--<section id="console-screenshot" class="max-w-4xl mx-auto text-center relative mb-28 px-6 lg:px-0">
-        <div class="shape-background pulumi-service-screenshot">
-            <div class="shape-container">
-                <div class="circle-right"></div>
-                <div class="circle-left"></div>
-            </div>
-        </div>
-
-        <img class="card mx-auto" src="/images/home/pulumi-console.svg" alt="Pulumi Service Screenshot" />
-    </section>-->
-
-    <section class="container mx-auto text-center mt-16">
-        <div class="flex flex-row justify-center space-x-4 my-4 border-b-1 border-gray-200">
-            <div id="cloud-panel-products-select" class="text-2xl cursor-pointer p-2 px-4 rounded-t-lg border-b-4 border-blue-600 bg-violet-100">
-                <div id="cloud-panel-products-select-text" class="rainbow-text">Products</div>
-            </div>
-            <div id="cloud-panel-capabilities-select" class="text-2xl cursor-pointer p-2 px-4 rounded-t-lg border-b-4 border-gray-300">
-                <div id="cloud-panel-capabilities-select-text">Cross-Product Capabilities</div>
-            </div>
-        </div>
-    </section>
-
-    <section id="products" class="mb-16 mt-8 px-6 relative">
+    <section id="products" class="mb-16 mt-16 px-6 relative">
         <div class="container mx-auto">
             {{ range $section := .Params.products }}
-                <div class="card mb-12 p-6 lg:p-20 bg-white {{ $section.tabclass }}">
-                    <h2 class="text-center border-b-2 rainbow-text">{{ $section.header }}</h2>
-                    {{ range $subsection := $section.content }}
-                        <h3>{{ $subsection.header }}</h3>
-                        {{ if $subsection.subheader }}
-                            <div class="cursor-pointer mb-4">
-                                <a href={{ $subsection.link }} class="text-lg underline group-hover:cursor-pointer">{{ $subsection.subheader }}</a>
+                <div class="card mb-12 p-6 lg:p-20 bg-white">
+                    <h2 class="text-center rainbow-text">{{ $section.header }}</h2>
+                    <div class="flex flex-row flex-wrap justify-center space-x-4 my-4 border-b-2 border-gray-200">
+                        {{ range $index, $subsection := $section.content }}
+                            {{ $tabclass := "" }}
+                            {{ $textClass := "" }}
+                            {{ if eq $index 0 }}
+                                {{ $tabclass = " border-blue-600 bg-violet-100 "}}
+                                {{ $textClass = "rainbow-text" }}
+                            {{ end }}
+                            <div id="{{ $subsection.tabid }}" class="text-2xl cursor-pointer p-2 px-4 rounded-t-lg border-b-4 {{ $tabclass }}">
+                                <div id="{{ $subsection.tabid }}-text" class="{{ $textClass }}">{{ $subsection.header }}</div>
                             </div>
                         {{ end }}
-                        <img src="{{ $subsection.image }}" />
-
-                        <ul class="list-none mt-6 mb-20">
-                            {{ $listLength := len $subsection.details }}
-                            {{ range $index, $item := $subsection.details }}
-                                {{ $itemClass := "border-t-2" }}
-                                {{ if eq (add $index 1) $listLength }}
-                                    {{ $itemClass = "border-t-2 border-b-2" }}
-                                {{ end }}
-
-
-                                <li class="accordion-item {{ $itemClass }} py-6">
-                                    {{ partial "accordian-header" (dict "text" $item.title) }}
-                                    <p class="mt-6">{{ $item.description | markdownify }}</p>
-
-                                    <div class="accordion-item-body-no-animation">
-                                        <p class="mt-6">{{ $item.more_info | markdownify }}</p>
-                                    </div>
-                                </li>
+                    </div>
+                    {{ range $index, $subsection := $section.content }}
+                        {{ $tabclass := ""}}
+                        {{ if not (eq $index 0) }}
+                            {{ $tabclass = " hidden "}}
+                        {{ end }}
+                        <div id="{{ $subsection.tabid }}-content" class="{{ $tabclass }}">
+                            <h3>{{ $subsection.header }}</h3>
+                            {{ if $subsection.subheader }}
+                                <div class="cursor-pointer mb-4">
+                                    <a href={{ $subsection.link }} class="text-lg underline group-hover:cursor-pointer">{{ $subsection.subheader }}</a>
+                                </div>
                             {{ end }}
-                        </ul>
+                            <img src="{{ $subsection.image }}" />
+
+                            <ul class="list-none mt-6 mb-20">
+                                {{ $listLength := len $subsection.details }}
+                                {{ range $index, $item := $subsection.details }}
+                                    {{ $itemClass := "border-t-2" }}
+                                    {{ if eq (add $index 1) $listLength }}
+                                        {{ $itemClass = "border-t-2 border-b-2" }}
+                                    {{ end }}
+
+
+                                    <li class="accordion-item {{ $itemClass }} py-6">
+                                        {{ partial "accordian-header" (dict "text" $item.title) }}
+                                        <p class="mt-6">{{ $item.description | markdownify }}</p>
+
+                                        <div class="accordion-item-body-no-animation">
+                                            <p class="mt-6">{{ $item.more_info | markdownify }}</p>
+                                        </div>
+                                    </li>
+                                {{ end }}
+                            </ul>
+                        </div>
                     {{ end }}
                 </div>
             {{ end }}

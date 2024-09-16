@@ -54,7 +54,6 @@ case_studies:
 
 products:
     - header: Products
-      tabclass: cloud-panel-products
       content:
         - header: Pulumi IaC
           tabid: iac-select
@@ -170,7 +169,6 @@ products:
 
                 Share queries with your teammates.
     - header: Cross-Product Capabilities
-      tabclass: cloud-panel-capabilities hidden
       content:
         - header: Pulumi CrossGuard
           tabid: crossguard-select
