@@ -36,8 +36,8 @@ sections:
     link: /docs/esc/
     primary_button_label: Get Started
     primary_button_link: /docs/esc/get-started/
-    secondary_button_label: Install
-    secondary_button_link: /docs/esc/download-install/
+    # secondary_button_label: Install
+    # secondary_button_link: /docs/esc/download-install/
   - heading: Pulumi Cloud
     description: "Managed service for using Pulumi open source at scale. Use SaaS or self-host"
     link: /docs/pulumi-cloud/
