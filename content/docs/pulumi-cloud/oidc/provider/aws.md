@@ -99,7 +99,7 @@ The OIDC subject claim for this environment would be `pulumi:environments:pulumi
 ```json
 "Condition": {
   "StringEquals": {
-    "api.pulumi.com/oidc:aud": "contoso",
+    "api.pulumi.com/oidc:aud": "aws:contoso",
     "api.pulumi.com/oidc:sub": "pulumi:environments:pulumi.organization.login:contoso:currentEnvironment.name:project/development:pulumi.user.login:personA"
   }
 }
