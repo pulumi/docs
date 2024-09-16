@@ -4,7 +4,8 @@ title_tag: Pulumi ESC Concepts
 h1: Pulumi ESC Concepts
 meta_desc: Pulumi ESC allows you to compose and manage hierarchical collections of configuration and secrets and consume them in various ways.
 menu:
-  pulumiesc:
+  esc:
+    parent: esc-home
     identifier: esc-concepts
     weight: 3
 aliases:

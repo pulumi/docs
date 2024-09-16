@@ -5,7 +5,7 @@ meta_desc: The gcp-secrets Pulumi ESC provider enables you to dynamically import
 h1: gcp-secrets
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  pulumiesc:
+  esc:
     identifier: gcp-secrets
     parent: esc-dynamic-secrets
     weight: 3

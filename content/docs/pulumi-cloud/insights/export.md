@@ -5,6 +5,11 @@ title: Data export
 h1: Data export
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
+  cloud:
+    name: Data export
+    parent: pulumi-cloud-insights
+    weight: 2
+    identifier: pulumi-cloud-insights-export
   pulumicloud:
     parent: insights
     weight: 2

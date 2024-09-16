@@ -5,6 +5,11 @@ title: "Billing managers"
 h1: "Billing managers"
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
+  cloud:
+    name: Billing managers
+    parent: pulumi-cloud-access-management
+    weight: 5
+    identifier: pulumi-cloud-access-management-billing-managers
   pulumicloud:
     parent: access-management
     weight: 3

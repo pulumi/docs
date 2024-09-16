@@ -5,7 +5,7 @@ title: vault-login
 h1: vault-login
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  pulumiesc:
+  esc:
     identifier: vault-login
     parent: esc-dynamic-login-credentials
     weight: 4

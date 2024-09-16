@@ -5,6 +5,11 @@ title: Access tokens
 h1: Pulumi Cloud access tokens
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
+  cloud:
+    name: Access tokens
+    parent: pulumi-cloud-access-management
+    weight: 3
+    identifier: pulumi-cloud-access-management-access-tokens
   pulumicloud:
     parent: access-management
     weight: 2

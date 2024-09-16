@@ -1,10 +1,15 @@
 ---
-title_tag: "Deploy with Pulumi Button"
+title_tag: "Deploy with Pulumi button"
 meta_desc: The “Deploy with Pulumi” button lets you easily create new Pulumi projects from the browser. Learn how to create this deployment button in this guide.
-title: Deploy with Pulumi Button
-h1: Deploy with Pulumi Button
+title: Deploy with Pulumi button
+h1: Deploy with Pulumi button
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
+  cloud:
+    name: Deploy with Pulumi button
+    parent: cloud-home
+    weight: 8
+    identifier: pulumi-cloud-pulumi-button
   pulumicloud:
     weight: 10
 aliases:

@@ -8,10 +8,10 @@
         @apply inline-flex items-center flex-grow;
 
         a {
-            @apply flex flex-grow gap-3 items-center font-display text-base py-3 px-6 border-b-4 border-transparent text-gray-700;
+            @apply flex flex-grow gap-3 items-center font-display text-base py-3 px-6 border-b-4 mt-1 border-transparent text-gray-700;
 
             &.tab-selected {
-                @apply font-bold border-violet-600 text-gray-900 bg-gray-200;
+                @apply font-bold border-violet-600 text-gray-900 bg-gray-100;
             }
 
             img {

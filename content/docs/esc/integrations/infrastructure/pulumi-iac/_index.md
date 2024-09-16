@@ -4,7 +4,7 @@ title_tag: Pulumi ESC and IaC integration
 h1: ESC Pulumi IaC Integration
 meta_desc: Pulumi ESC integrates with Pulumi IaC to expose environment settings and secrets to Pulumi stacks, simplifying configuration management.
 menu:
-  pulumiesc:
+  esc:
     identifier: esc-pulumi-iac-integrations
     parent: esc-inf-tools-integrations
     weight: 1

@@ -5,7 +5,7 @@ h1: "Pulumi ESC: Store and Retrieve Secrets"
 meta_desc: This page provides an overview on how to store and retrieve secrets in Pulumi ESC.
 weight: 4
 menu:
-  pulumiesc:
+  esc:
     parent: esc-get-started
     identifier: esc-get-started-store-retrieve-secrets
 

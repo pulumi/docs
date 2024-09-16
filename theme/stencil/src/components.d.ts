@@ -97,6 +97,9 @@ export namespace Components {
     interface PulumiDeveloperQuotes {
         "quotes": string;
     }
+    interface PulumiDocsNav {
+        "expandedMenuIDs": string;
+    }
     interface PulumiExample {
     }
     interface PulumiExamples {
@@ -293,6 +296,12 @@ declare global {
         prototype: HTMLPulumiDeveloperQuotesElement;
         new (): HTMLPulumiDeveloperQuotesElement;
     };
+    interface HTMLPulumiDocsNavElement extends Components.PulumiDocsNav, HTMLStencilElement {
+    }
+    var HTMLPulumiDocsNavElement: {
+        prototype: HTMLPulumiDocsNavElement;
+        new (): HTMLPulumiDocsNavElement;
+    };
     interface HTMLPulumiExampleElement extends Components.PulumiExample, HTMLStencilElement {
     }
     var HTMLPulumiExampleElement: {
@@ -448,6 +457,7 @@ declare global {
         "pulumi-date-countdown-circles": HTMLPulumiDateCountdownCirclesElement;
         "pulumi-datetime": HTMLPulumiDatetimeElement;
         "pulumi-developer-quotes": HTMLPulumiDeveloperQuotesElement;
+        "pulumi-docs-nav": HTMLPulumiDocsNavElement;
         "pulumi-example": HTMLPulumiExampleElement;
         "pulumi-examples": HTMLPulumiExamplesElement;
         "pulumi-filter-select": HTMLPulumiFilterSelectElement;
@@ -559,6 +569,9 @@ declare namespace LocalJSX {
     interface PulumiDeveloperQuotes {
         "quotes"?: string;
     }
+    interface PulumiDocsNav {
+        "expandedMenuIDs"?: string;
+    }
     interface PulumiExample {
     }
     interface PulumiExamples {
@@ -669,6 +682,7 @@ declare namespace LocalJSX {
         "pulumi-date-countdown-circles": PulumiDateCountdownCircles;
         "pulumi-datetime": PulumiDatetime;
         "pulumi-developer-quotes": PulumiDeveloperQuotes;
+        "pulumi-docs-nav": PulumiDocsNav;
         "pulumi-example": PulumiExample;
         "pulumi-examples": PulumiExamples;
         "pulumi-filter-select": PulumiFilterSelect;
@@ -714,6 +728,7 @@ declare module "@stencil/core" {
             "pulumi-date-countdown-circles": LocalJSX.PulumiDateCountdownCircles & JSXBase.HTMLAttributes<HTMLPulumiDateCountdownCirclesElement>;
             "pulumi-datetime": LocalJSX.PulumiDatetime & JSXBase.HTMLAttributes<HTMLPulumiDatetimeElement>;
             "pulumi-developer-quotes": LocalJSX.PulumiDeveloperQuotes & JSXBase.HTMLAttributes<HTMLPulumiDeveloperQuotesElement>;
+            "pulumi-docs-nav": LocalJSX.PulumiDocsNav & JSXBase.HTMLAttributes<HTMLPulumiDocsNavElement>;
             "pulumi-example": LocalJSX.PulumiExample & JSXBase.HTMLAttributes<HTMLPulumiExampleElement>;
             "pulumi-examples": LocalJSX.PulumiExamples & JSXBase.HTMLAttributes<HTMLPulumiExamplesElement>;
             "pulumi-filter-select": LocalJSX.PulumiFilterSelect & JSXBase.HTMLAttributes<HTMLPulumiFilterSelectElement>;

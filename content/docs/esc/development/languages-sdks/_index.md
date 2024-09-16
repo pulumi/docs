@@ -5,7 +5,7 @@ title: Languages & SDKs
 h1: Pulumi ESC SDK Languages
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  pulumiesc:
+  esc:
     identifier: esc-languages-sdks
     parent: esc-development
     weight: 1

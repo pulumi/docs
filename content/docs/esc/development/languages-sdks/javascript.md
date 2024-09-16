@@ -4,7 +4,7 @@ title: TypeScript (Node.js)
 h1: "Pulumi ESC: TypeScript/JavaScript SDK"
 meta_desc: This page provides an overview on how to use Pulumi ESC TypeScript/JavaScript SDK.
 menu:
-  pulumiesc:
+  esc:
     parent: esc-languages-sdks
     identifier: typescript-sdk
     weight: 1

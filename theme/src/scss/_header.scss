@@ -123,7 +123,7 @@
 }
 
 .header-container {
-    @apply z-40 bg-white py-0 border-b border-gray-300;
+    @apply z-40 bg-white py-0 ;
     top: -1px;
 
     @screen lg {

@@ -5,7 +5,7 @@ h1: Pulumi ESC environment versioning
 meta_desc: Pulumi ESC allows you to manage, track and audit changes to your secrets and configurations with versioning.
 
 menu:
-  pulumiesc:
+  esc:
     identifier: esc-versioning
     parent: esc-environments
     weight: 3

@@ -4,7 +4,7 @@ title: Cloudflare
 h1: "Pulumi ESC: Integrate with Cloudflare"
 meta_desc: This page provides an overview of how to use Pulumi ESC with Cloudflare.
 menu:
-  pulumiesc:
+  esc:
     parent: esc-inf-tools-integrations
     weight: 4
 aliases:
