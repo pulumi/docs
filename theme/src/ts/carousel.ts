@@ -1,4 +1,6 @@
-(function ($) {
+import { onPageEvent } from "./navigation";
+
+onPageEvent("load", () => {
     // The home-page carousel. Items cycle every four seconds. Clicking a label stops the
     // cycling and shows the selected item.
 
@@ -181,4 +183,4 @@
             }, offset);
         });
     }
-})(jQuery);
+});

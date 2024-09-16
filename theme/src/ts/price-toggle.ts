@@ -1,5 +1,7 @@
+import { onPageEvent } from "./navigation";
+
 // The first time the DOM is finished loading, wire up billing period listeners.
-$(document).on("rendered", function () {
+onPageEvent("load", () => {
     // If there's a billing period element on the page, wire up a change listener
     // so we can toggle the various pricing elements between annual/monthly.
     $("#billing-period").each(function (i, e) {
