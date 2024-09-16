@@ -206,7 +206,76 @@ Resources imported with the CLI are marked as __protected__ to guard against acc
 
 The `pulumi import` command also enables you to import resources in bulk for scenarios in which you need to bring multiple resources under management with Pulumi. To do so, you will need to create a JSON file that has all of the required information for each resource: a `type`, a desired `name`, and an `id`.
 
-To start, let's create some additional resources.
+To start, return to the AWS console and create two additional S3 buckets.
+
+![Additional S3 buckets](pulumi-import-additional-buckets.png)
+
+Next, return to your program folder and create a new file called `resources.json`. Inside of this file, copy and paste the following JSON object, making sure to replace the value of `id` with the actual names of your S3 buckets in your environment:
+
+```json
+{
+    "resources": [
+        {
+            "type": "aws:s3/bucket:Bucket",
+            "name": "second-imported-bucket",
+            "id": "pulumi-import-tutorial-bucket2"
+        },
+        {
+            "type": "aws:s3/bucket:Bucket",
+            "name": "third-imported-bucket",
+            "id": "pulumi-import-tutorial-bucket3"
+        }
+    ]
+}
+```
+
+To import these resources, save the file and then run the `pulumi import` command with the `-f` flag, passing in the path to the `resources.json` file:
+
+```bash
+$ pulumi import -f ./resources.json
+
+Previewing import (dev)
+
+     Type                 Name                    Plan
+     pulumi:pulumi:Stack  dev
+ =   ├─ aws:s3:Bucket     second-imported-bucket  import
+ =   └─ aws:s3:Bucket     third-imported-bucket   import
+
+Resources:
+    = 2 to import
+    2 unchanged
+
+Do you want to perform this import? yes
+Importing (dev)
+
+     Type                 Name                    Status
+     pulumi:pulumi:Stack  dev
+ =   ├─ aws:s3:Bucket     third-imported-bucket   imported (0.64s)
+ =   └─ aws:s3:Bucket     second-imported-bucket  imported (1s)
+
+Resources:
+    = 2 imported
+    2 unchanged
+
+Duration: 4s
+
+Please copy the following code into your Pulumi application. Not doing so
+will cause Pulumi to report that an update will happen on the next update command.
+
+Please note that the imported resources are marked as protected. To destroy them
+you will need to remove the `protect` option and run `pulumi update` *before*
+the destroy will take effect.
+
+# Code begins here...
+```
+
+Just like when running the command against a single resource, the `pulumi import` command will import the resources into your stack's state file and will generate the code snippets for all of the resources in the JSON file. Once again, copy the generated code for the two new resources into your existing program file, save the file, and run the `pulumi up` command to bring these new resources under the management of Pulumi.
+
+{{< notes type="info" >}}
+
+You only need to copy over the resource definitions of the two buckets and not the import statements again.
+
+{{< /notes >}}
 
 ### Import using code
 
