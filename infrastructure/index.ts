@@ -59,8 +59,10 @@ const config = {
     marketingPortalStack: stackConfig.get("marketingPortalStack"),
 };
 
-const aiAppStack = new pulumi.StackReference('pulumi/pulumi-ai-app-infra/prod');
+// const aiAppStack = new pulumi.StackReference('pulumi/pulumi-ai-app-infra/prod');
+const aiAppStack = new pulumi.StackReference('pulumi/pulumi-ai-app-infra/pr-pulumi-pulumi.ai-1254');
 const aiAppDomain = aiAppStack.requireOutput('aiAppDistributionDomain');
+const cloudAiAppDomain = aiAppStack.requireOutput('cloudAiAppDistributionDomain');
 
 // originBucketName is the name of the S3 bucket to use as the CloudFront origin for the
 // website. This bucket is presumed to exist prior to the Pulumi run; if it doesn't, this
@@ -421,6 +423,18 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
                 originKeepaliveTimeout: 60,
             },
         },
+        {
+            originId: cloudAiAppDomain,
+            domainName: cloudAiAppDomain,
+            customOriginConfig: {
+                originProtocolPolicy: "https-only",
+                httpPort: 80,
+                httpsPort: 443,
+                originSslProtocols: ["TLSv1.2"],
+                originReadTimeout: 60,
+                originKeepaliveTimeout: 60,
+            },
+        },
         ...registryOrigins,
     ],
 
@@ -579,6 +593,36 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
             originRequestPolicyId: allViewerExceptHostHeaderId,
             cachePolicyId: cachingDisabledId,
             lambdaFunctionAssociations: config.doAIAnswersRewrites ? [getAIAnswersRewriteAssociation()] : [],
+            forwardedValues: undefined, // forwardedValues conflicts with cachePolicyId, so we unset it.
+        },
+
+        // AI app with caching handled by the app
+        {
+            ...baseCacheBehavior,
+            // allow all methods
+            allowedMethods: ["DELETE", "GET", "HEAD", "OPTIONS", "PATCH", "POST", "PUT"],
+            cachedMethods: [
+                "GET", "HEAD", "OPTIONS",
+            ],
+            targetOriginId: cloudAiAppDomain,
+            pathPattern: '/_pulumi/cloud-ai',
+            originRequestPolicyId: allViewerExceptHostHeaderId,
+            cachePolicyId: cachingDisabledId,
+            lambdaFunctionAssociations: [],
+            forwardedValues: undefined, // forwardedValues conflicts with cachePolicyId, so we unset it.
+        },
+        {
+            ...baseCacheBehavior,
+            // allow all methods
+            allowedMethods: ["DELETE", "GET", "HEAD", "OPTIONS", "PATCH", "POST", "PUT"],
+            cachedMethods: [
+                "GET", "HEAD", "OPTIONS",
+            ],
+            targetOriginId: aiAppDomain,
+            pathPattern: '/_pulumi/cloud-ai/*',
+            originRequestPolicyId: allViewerExceptHostHeaderId,
+            cachePolicyId: cachingDisabledId,
+            lambdaFunctionAssociations: [],
             forwardedValues: undefined, // forwardedValues conflicts with cachePolicyId, so we unset it.
         }
     ],
