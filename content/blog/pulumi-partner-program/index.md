@@ -26,7 +26,7 @@ Customers are choosing Pulumi because it enables them to manage cloud resources 
 ## Key Benefits of Pulumi Partner Program
 
 * __Empower Your Customers__ to deliver cloud initiatives faster using Pulumi’s Infrastructure as Code (IaC) and Secrets Management capabilities. By partnering with Pulumi, your customers gain access to best automation for their cloud projects.
-* __Accelerated Adoption__ of your solutions through seamless integration with Pulumi. Leverage Pulumi's support for the world's most popular programming languages and developer tools to streamline integration, making it easier for your customers to use and adopt your products using familiar languages, tools and process.
+* __Accelerate Adoption__ of your solutions through seamless integration with Pulumi. Leverage Pulumi's support for the world's most popular programming languages and developer tools to streamline integration, making it easier for your customers to use and adopt your products using familiar languages, tools and process.
 * __Reach More Developers__ with collaborative documentation, shared examples, and co-marketing initiatives to raise awareness. Participate in joint marketing efforts, including co-branded campaigns and events, to connect with more developers and platform engineers.
 
 With 20 inaugural members, our technology partners join an elite community that benefits from Pulumi’s ongoing investment in technical, marketing, training, and business strategy support. We are excited to welcome new members such as [Docker](https://www.docker.com/), [1Password](https://1password.com/[), [Pinecone](https://www.pinecone.io/), [NewRelic](https://newrelic.com/), [Tailscale](https://tailscale.com/), [Dagger](https://dagger.io/) and many others.
