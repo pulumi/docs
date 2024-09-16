@@ -573,7 +573,7 @@ This means that if you want to print out the value of the VPC ID, the program ne
 
 {{< example-program-snippet path="awsx-vpc" language="javascript" from="6" to="6" >}}
 
-vpc.vpcId.apply(id => console.log(`VPC ID: {id}`));
+vpc.vpcId.apply(id => console.log(`VPC ID: ${id}`));
 ```
 
 {{% /choosable %}}
@@ -585,7 +585,7 @@ vpc.vpcId.apply(id => console.log(`VPC ID: {id}`));
 
 {{< example-program-snippet path="awsx-vpc" language="typescript" from="5" to="5" >}}
 
-vpc.vpcId.apply(id => console.log(`VPC ID: {id}`));
+vpc.vpcId.apply(id => console.log(`VPC ID: ${id}`));
 ```
 
 {{% /choosable %}}
