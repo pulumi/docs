@@ -13,7 +13,9 @@ tags:
     - pulumi-community
     - enterprise
 ---
-We are excited to announce the launch of the [Pulumi Partner Program](www.pulumi.com/partners), a strategic initiative designed to empower our partners and their customers to accelerate cloud projects and achieve faster time-to-market. This program is crafted for cloud and SaaS companies who are building, integrating, and going to market with Pulumi and empowering customers to automate, secure and manage everything in the cloud.
+We are excited to announce the launch of the [Pulumi Partner Program](www.pulumi.com/partners), a strategic initiative designed to empower our partners and their customers to accelerate cloud projects and achieve faster time-to-market. This program is crafted for cloud and SaaS companies who are building, integrating, and going to market with Pulumi.
+
+Come hear from dozens of partners and customers who automate, secure and manage everything in the cloud at PulumiUP on Wednesday, September 18. Register [here](https://www.pulumi.com/pulumi-up/?utm_source=member_desktop&utm_medium=referral_pulumi&utm_campaign=FY2025Q1_Event_PulumiUP)
 
 ## Why the Pulumi Partner Program?
 
