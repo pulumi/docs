@@ -11,3 +11,7 @@ menu:
 ---
 
 The [Pulumi ESC SDK](/docs/esc/development/languages-sdks/) provides a programmatic interface to manage environments, secrets, and configuration directly within your applications. Using the SDK, you can create, update, and delete environments, apply version tags. It also simplifies the secure handling of secrets and configurations, allowing you to retrieve sensitive data like cloud credentials, connection strings, and feature flags at runtime without long-term storage.
+
+[Pulumi Service Provider](/docs/esc/development/psp/) provides ability to create ESC resources like environments, environment permissions, tags and revision tags using a Pulumi program. Setting up configuration and secrets this way, combined with other Pulumi Service resources like Stacks makes setting up a development platform a breeze!
+
+[Pulumi Automation API](/docs/esc/development/automation-api/) allows interaction with Pulumi ESC environments in your deployment workflow. This enables you to seamlessly manage configuration and secrets to stacks, allowing more complex automation logic.
