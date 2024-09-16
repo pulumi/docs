@@ -1,6 +1,7 @@
 ---
 title: Pulumi ESC
 linktitle: Pulumi ESC
+layout: home
 docs_home: true
 notitle: true
 menu:
@@ -21,9 +22,9 @@ link_buttons:
   primary:
     label: Get Started
     link: /docs/esc/get-started/
-  secondary:
-    label: Install
-    link: /docs/esc/download-install/
+  # secondary:
+  #   label: Install
+  #   link: /docs/esc/download-install/
 
 sections:
 - type: flat
