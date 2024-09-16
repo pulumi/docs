@@ -4,7 +4,7 @@ title: Python
 h1: "Pulumi ESC: Python SDK"
 meta_desc: This page provides an overview on how to use Pulumi ESC Python SDK.
 menu:
-  pulumiesc:
+  esc:
     parent: esc-languages-sdks
     identifier: python-sdk
     weight: 2

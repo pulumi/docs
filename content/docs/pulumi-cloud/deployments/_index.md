@@ -5,6 +5,11 @@ title: "Deployments"
 h1: "Pulumi Deployments"
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
+  cloud:
+    name: Deployments
+    parent: cloud-home
+    identifier: pulumi-cloud-deployments
+    weight: 3
   pulumicloud:
     identifier: deployments
     weight: 5

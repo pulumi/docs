@@ -4,7 +4,7 @@ title: Fargate
 meta_desc: AWS Fargate is a serverless compute product from AWS, designed for use with containerized workloads.
 layout: glossary/single
 aliases:
-    - /learn/glossary/aws-fargate/
+    - /tutorials/glossary/aws-fargate/
 ---
 
 ## Definition

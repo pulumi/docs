@@ -5,7 +5,7 @@ h1: Kubernetes
 meta_desc: Pulumi ESC integrates with Kubernetes to manage configurations, credentials, and kubeconfig files, with kubectl and helm, and Pulumi Kubernetes provider.
 weight: 2
 menu:
-  pulumiesc:
+  esc:
     identifier: esc-kubernetes
     parent: esc-integrations
 aliases:

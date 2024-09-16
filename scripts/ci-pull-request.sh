@@ -16,9 +16,10 @@ source ./scripts/ci-login.sh
 ./scripts/build-site.sh preview
 ./scripts/sync-and-test-bucket.sh preview
 
-# Temporarily removing the search index generation from the process until 
+# Temporarily removing the search index generation from the process until
 # https://github.com/pulumi/docs/issues/12768 is resolved in order to unblock the pipeline.
 # ./scripts/generate-search-index.sh
 
 ./scripts/run-pulumi.sh preview
 ./scripts/make-s3-redirects.sh
+./scripts/detect-new-404s.sh

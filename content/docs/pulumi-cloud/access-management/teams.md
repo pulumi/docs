@@ -5,6 +5,11 @@ meta_desc: The Pulumi Cloud offers role-based access control (RBAC) using teams.
 h1: "Teams & Role-based access control (RBAC)"
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
+  cloud:
+    name: "Teams & RBAC"
+    parent: pulumi-cloud-access-management
+    weight: 2
+    identifier: pulumi-cloud-access-management-teams
   pulumicloud:
     weight: 1
     parent: access-management

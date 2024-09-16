@@ -5,6 +5,11 @@ title: Auth0
 h1: "SAML: Configuring Auth0"
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
+  cloud:
+    name: Auth0
+    parent: pulumi-cloud-access-management-saml
+    weight: 2
+    identifier: pulumi-cloud-access-management-saml-auth0
   pulumicloud:
     parent: saml
     weight: 2

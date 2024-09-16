@@ -4,7 +4,7 @@ title_tag: aws-secrets Pulumi ESC Provider
 meta_desc: The aws-secrets Pulumi ESC Provider enables you to dynamically import Secrets from AWS Secrets Manager.
 h1: aws-secrets
 menu:
-  pulumiesc:
+  esc:
     identifier: aws-secrets
     parent: esc-dynamic-secrets
     weight: 1

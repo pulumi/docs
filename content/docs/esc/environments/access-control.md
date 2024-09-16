@@ -4,9 +4,9 @@ title_tag: Access control | Pulumi ESC
 h1: Pulumi ESC access control
 meta_desc: Pulumi ESC provides granular access control to manage permissions with roles like reader, opener, and editor.
 menu:
-  pulumiesc:
+  esc:
     parent: esc-environments
-    weight: 5
+    weight: 6
 ---
 
 Pulumi ESC allows you to enforce least-privileged access across your environments through role-based access controls (RBAC). By assigning precise permissions at the organization and team levels, you ensure that users only have access to the environments they need. All changes, including environment updates and access modifications, are fully logged to provide complete auditing and compliance tracking, helping your organization maintain security best practices.

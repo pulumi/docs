@@ -4,7 +4,7 @@ title: Go
 h1: "Pulumi ESC: Go SDK"
 meta_desc: This page provides an overview on how to use Pulumi ESC Go SDK.
 menu:
-  pulumiesc:
+  esc:
     parent: esc-languages-sdks
     identifier: go-sdk
     weight: 3

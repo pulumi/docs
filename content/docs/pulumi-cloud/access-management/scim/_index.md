@@ -5,10 +5,15 @@ title: SCIM
 h1: Pulumi Cloud & SCIM
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    pulumicloud:
-        weight: 6
-        identifier: scim
-        parent: access-management
+  cloud:
+    name: SCIM
+    parent: pulumi-cloud-access-management
+    weight: 7
+    identifier: pulumi-cloud-access-management-scim
+  pulumicloud:
+    weight: 6
+    identifier: scim
+    parent: access-management
 aliases:
   - /docs/guides/scim/
 ---

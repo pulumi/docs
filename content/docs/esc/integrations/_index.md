@@ -4,9 +4,10 @@ title_tag: Pulumi ESC integrations and providers
 meta_desc: Explore Pulumi ESC integrations and providers that help you securely manage cloud resources, configurations, and secrets.
 h1: Pulumi ESC integrations
 menu:
-    pulumiesc:
-        weight: 8
-        identifier: esc-integrations
+  esc:
+    parent: esc-home
+    identifier: esc-integrations
+    weight: 6
 aliases:
     - /docs/esc/providers/
 ---

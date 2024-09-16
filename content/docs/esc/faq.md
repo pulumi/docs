@@ -5,8 +5,9 @@ title: FAQ
 h1: Pulumi ESC FAQs
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  pulumiesc:
-    weight: 40
+  esc:
+    parent: esc-home
+    weight: 11
     identifier: faq
 aliases:
   - /docs/pulumi-cloud/esc/faq
@@ -42,3 +43,12 @@ We encourage you to create a [feature request](https://github.com/pulumi/esc/iss
 ## Can a Self-hosted Pulumi customer use this?
 
 Pulumi ESC is currently not supported for self-hosted customers. [Contact sales](/contact/?form=sales) if you'd like to participate in our self-hosted beta for ESC when it is available.
+
+## More FAQ
+
+- [Pulumi IaC FAQ](/docs/iac/support/faq/)
+- [Pulumi Cloud FAQ](/docs/pulumi-cloud/faq/)
+- [Pulumi Cloud Deployments FAQ](/docs/pulumi-cloud/deployments/faq/)
+- [Pulumi Cloud SCIM FAQ](/docs/pulumi-cloud/access-management/scim/faq/)
+- [Kubernetes guides FAQ](/docs/clouds/kubernetes/guides/faq/)
+- [Pulumi CrossGuard FAQ](/docs/using-pulumi/crossguard/faq/)

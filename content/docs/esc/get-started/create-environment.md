@@ -5,7 +5,7 @@ h1: "Pulumi ESC: Create A New Environment"
 meta_desc: This page provides an overview on how to create a new Pulumi ESC environment.
 weight: 3
 menu:
-  pulumiesc:
+  esc:
     parent: esc-get-started
     identifier: esc-get-started-create-environment
 

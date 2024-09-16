@@ -5,6 +5,11 @@ title: "Projects & stacks"
 h1: "Projects & stacks"
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
+  cloud:
+    name: "Projects & stacks"
+    parent: cloud-home
+    weight: 2
+    identifier: pulumi-cloud-projects-and-stacks
   pulumicloud:
     weight: 3
 aliases:

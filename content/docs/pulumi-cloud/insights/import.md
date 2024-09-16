@@ -5,6 +5,11 @@ title: Cloud import
 h1: Cloud import
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
+  cloud:
+    name: Cloud import
+    parent: pulumi-cloud-insights
+    weight: 3
+    identifier: pulumi-cloud-insights-import
   pulumicloud:
     parent: insights
     weight: 3

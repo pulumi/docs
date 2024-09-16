@@ -5,7 +5,7 @@ meta_desc: Information about command-line completion while using the Pulumi CLI.
 h1: Pulumi CLI command-line completion
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  pulumiesc:
+  esc:
     identifier: esc-command-line-completion
     parent: esc-cli-overview
     weight: 2

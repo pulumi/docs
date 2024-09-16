@@ -4,7 +4,7 @@ title: Azure Kubernetes Service
 meta_desc: AKS is a managed container orchestration tool on Microsoft Azure, allowing for the deployment and automated management of containerized applications.
 layout: glossary/single
 aliases:
-    - /learn/glossary/msft-aks/
+    - /tutorials/glossary/msft-aks/
 ---
 
 ## Description

@@ -5,7 +5,7 @@ h1: "Pulumi ESC: Retrieve Secrets from External Sources"
 meta_desc: This page provides an overview on how to retrieve secrets from external sources.
 weight: 7
 menu:
-  pulumiesc:
+  esc:
     parent: esc-get-started
     identifier: esc-get-started-retrieve-external-secrets
 ---

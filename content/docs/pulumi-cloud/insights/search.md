@@ -5,6 +5,11 @@ title: Resource search
 h1: Resource search
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
+  cloud:
+    name: Resource search
+    parent: pulumi-cloud-insights
+    weight: 1
+    identifier: pulumi-cloud-insights-search
   pulumicloud:
     parent: insights
     weight: 1

@@ -7,10 +7,14 @@ title: Using SAML
 h1: "SAML: Terminology & concepts"
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
+  cloud:
+    name: Using SAML
+    parent: pulumi-cloud-access-management-saml
+    weight: 1
+    identifier: pulumi-cloud-access-management-saml-sso
   pulumicloud:
     parent: saml
     weight: 1
-
 aliases:
 - /docs/intro/pulumi-cloud/accounts/saml/
 - /docs/guides/saml/sso/

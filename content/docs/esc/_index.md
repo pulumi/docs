@@ -1,82 +1,134 @@
 ---
 title: Pulumi ESC
-title_tag: Pulumi ESC (Environments, Secrets, and Configuration)
-h1: Pulumi ESC (Environments, Secrets, and Configuration)
-meta_desc: Pulumi ESC allows you to compose and manage hierarchical collections of configuration and secrets and consume them in various ways.
-meta_image: /images/docs/meta-images/docs-meta.png
+linktitle: Pulumi ESC
+docs_home: true
+notitle: true
 menu:
-  pulumiesc:
-    name: Overview
-    identifier: esc
-    weight: 5
+  esc:
+    identifier: esc-home
+    weight: 1
+expanded_menu_ids:
+    - esc-environments
 aliases:
   - /docs/pulumi-cloud/esc/
+
+meta_desc: Learn how to easily access, share, and manage secrets securely on any cloud, using your favorite programming languages with Pulumi ESC.
+meta_image: /images/docs/meta-images/docs-meta.png
+h1: Pulumi ESC Docs
+description: <p>Pulumi ESC is a secrets management & orchestration service for environments, secrets, and configurations.</p>
+
+link_buttons:
+  primary:
+    label: Get Started
+    link: /docs/esc/get-started/
+  secondary:
+    label: Install
+    link: /docs/esc/download-install/
+
+sections:
+- type: flat
+  heading: Overview
+  description_md: |
+    Pulumi ESC (Environments, Secrets, and Configuration) allows teams to tackle secrets and configuration complexity for modern cloud environments, alleviating maintenance burden and reducing costly mistakes, and creating a “secure by default” posture.
+
+    Pulumi ESC is a new category of configuration as code product, motivated by our experience working with hundreds of Pulumi IaC customers to address their needs in managing secrets and configuration at scale within their Pulumi infrastructure and across other cloud applications and infrastructure projects.
+- type: cards-logo-label-link
+  heading: Secrets Integrations
+  description: <p>Pulumi ESC integrates with all of the most popular secrets stores to pull and synchronize secrets and configuration data, including <a href="/docs/esc/integrations/dynamic-secrets/aws-secrets/">AWS Secrets Manager</a>, <a href="/docs/esc/integrations/dynamic-secrets/azure-secrets/">Azure Key Vault</a>, <a href="/docs/esc/integrations/dynamic-secrets/gcp-secrets/">GCP Secret Manager</a>, <a href="/docs/esc/integrations/dynamic-secrets/vault-secrets/">HashiCorp Vault</a>, and <a href="/docs/esc/integrations/dynamic-secrets/1password-secrets/">1Password</a>.</p>
+  cards:
+  - label: AWS Secrets Manager
+    icon: aws-40
+    link: /docs/esc/integrations/dynamic-secrets/aws-secrets/
+  - label: Azure Key Vault
+    icon: azure-40
+    link: /docs/esc/integrations/dynamic-secrets/azure-secrets/
+  - label: GCP Secret Manager
+    icon: google-cloud-40
+    link: /docs/esc/integrations/dynamic-secrets/gcp-secrets/
+  - label: HashiCorp Vault
+    icon: vault-40
+    link: /docs/esc/integrations/dynamic-secrets/vault-secrets/
+  # - label: 1Password
+  #   icon: onepassword-40
+  #   link: /docs/esc/integrations/dynamic-secrets/1password-secrets/
+# - type: cards-logo-label-link
+#   heading: Clouds
+#   description: <p>Pulumi ESC supports AWS, Azure, Google Cloud, Kubernetes, and <a href="/docs/esc/integrations/">more</a>.</p>
+#   cards:
+#   - label: AWS & Pulumi ESC
+#     icon: aws-40
+#     link: /docs/esc/integrations/dynamic-login-credentials/aws-login/
+#   - label: Azure & Pulumi ESC
+#     icon: azure-40
+#     link: /docs/esc/integrations/dynamic-login-credentials/azure-login/
+#   - label: Google Cloud & Pulumi ESC
+#     icon: google-cloud-40
+#     link: /docs/esc/integrations/dynamic-login-credentials/gcp-login/
+#   - label: Kubernetes & Pulumi ESC
+#     icon: kubernetes-40
+#     link: /docs/esc/integrations/kubernetes/
+- type: cards-logo-label-link
+  heading: Languages
+  description: Manage configuration and secrets intuitively on any cloud using familiar languages.
+  cards:
+  - label: Node.js
+    icon: icon-32-32 node-color-32-32
+    link: /docs/esc/development/languages-sdks/javascript/
+  - label: Python
+    icon: icon-32-32 python-color-32-32
+    link: /docs/esc/development/languages-sdks/python/
+  - label: Go
+    icon: icon-32-32 go-color-32-32
+    link: /docs/esc/development/languages-sdks/go/
+  - label: YAML
+    icon: icon-32-32 yaml-color-32-32
+    link: /docs/esc/reference/
+- type: button-cards
+  heading: Featured Capabilities
+  cards:
+  - heading: ESC CLI
+    link: /docs/esc/cli/
+    description: An overview of the Pulumi ESC CLI.
+    primary_button_label: Get Started
+    primary_button_link: /docs/esc/cli/
+    secondary_button_label: Install
+    secondary_button_link: /docs/esc/download-install/
+  - heading: Dynamic Secrets Providers
+    description: Support for dynamic configuration providers allow Pulumi ESC to integrate with secrets stored in any other provider.
+    link: /docs/esc/integrations/dynamic-secrets/
+  - heading: ESC Webhooks
+    description: Automate your processes with environment event webhooks.
+    link: /docs/esc/environments/webhooks/
+- type: full-width-cards
+  heading: Featured docs
+  cards:
+  - icon: lightbulb-blue-21-21
+    heading: Detailed overview of environments
+    description: Learn more about managing environments using Pulumi ESC.
+    link: /docs/pulumi-cloud/esc/environments/
+  - icon: terminal-blue-21-21
+    heading: Integration with Docker
+    description: Pulumi ESC integrates with Docker to manage configuration and secrets while running docker commands.
+    link: /docs/esc/integrations/dev-tools/docker/
+  - icon: swap-blue-21-21
+    heading: Pulumi ESC vs HashiCorp Vault
+    description: Learn about the major differences between Pulumi ESC and HashiCorp Vault.
+    link: /docs/esc/vs/vault/
+- type: blue-sparkle
+  heading: Why Pulumi ESC?
+  description: Pulumi ESC is a centralized secrets management & orchestration service. Easily access, share, and manage secrets securely on any cloud using your favorite programming languages. Pull and sync secrets with any secrets store, and consume secrets in any application, tool, or CI/CD platform.
+# - type: full-width-cards
+#   heading: Reference
+#   cards:
+#     - icon: code-tree-blue-21-21
+#       heading: Pulumi Cloud REST API docs
+#       description: Leverage automation with the Pulumi Cloud REST API.
+#       link: /docs/pulumi-cloud/cloud-rest-api/
+#     - icon: terminal-blue-21-21
+#       heading: Pulumi CLI docs
+#       description: Browse the complete documentation of available CLI commands.
+#       link: /docs/cli/
+- type: flat
+  heading: Have questions?
+  description: <p>For questions or feedback, reach out on <a href="https://slack.pulumi.com" target="_blank">community Slack</a>, <a href="https://github.com/pulumi" target="_blank">GitHub</a>, or <a href="/support/">contact support</a>.</p>
 ---
-
-Pulumi ESC (Environments, Secrets, and Configuration) allows teams to tackle secrets and configuration complexity for modern cloud environments, alleviating maintenance burden and reducing costly mistakes, and creating a "secure by default" posture. Pulumi ESC is a new category of configuration as code product, motivated by our experience working with hundreds of Pulumi IaC customers to address their needs in managing secrets and configuration at scale within their Pulumi infrastructure and across other cloud applications and infrastructure projects.
-
-Pulumi ESC enables teams to aggregate secrets and configuration from many sources into a composable collection called an [environment](/docs/esc/concepts/). Teams can then consume those configuration and secrets from a variety of different infrastructure and application services.  Pulumi ESC works hand-in-hand with Pulumi IaC to simplify configuration management, as well as a standalone CLI and API for other use cases apart from Pulumi IaC.
-
-Pulumi ESC is offered as a fully managed cloud service in [Pulumi Cloud](/docs/pulumi-cloud/) (and Pulumi Cloud Self-hosted in the near future). The [pulumi/esc project](https://github.com/pulumi/esc) is open source, and contains the evaluation engine for environments, the esc CLI, and in the future, the extensible plugins for source and target integrations.
-
-![Pulumi ESC ecosystem](assets/pulumi_esc.png)
-
-The following details corresponds to the numbered sections in the above diagram:
-
-1. Pulumi ESC enables you to define environments, which contain collections of secrets and configuration. Each environment can be composed from multiple environments.
-
-2. Pulumi ESC supports a variety of configuration and secrets sources, and it has an extensible plugin model that allows third-party sources.
-
-3. Pulumi ESC has a rich API that allows for easy integration. Every value in an environment can be accessed from any target execution environment.
-
-4. Every environment can be locked down with RBAC, versioned, and audited.
-
-## Dynamic Secrets Providers
-
-Support for dynamic configuration providers allow Pulumi ESC to [integrate with secrets stored in any other provider](/docs/esc/integrations/dynamic-secrets/).  Organizations often use AWS OIDC, AWS Secrets Manager, Vault, Azure OIDC, Azure KeyVault, GCP OIDC, and GCP Secrets Manager plus many more sources of truth for their secrets and configuration.  Pulumi ESC supports them all, providing a single interface to your configuration and secrets, no matter where their source of truth is.  Pulumi ESC works with these tools to provide improved management of secrets and configuration.
-
-Teams can setup OIDC in their cloud providers to allow Environments to retrieve dynamic short-lived credentials. They can also pull secrets from other secrets managers and vaults.
-
-These credentials can be used with [Pulumi IaC](/docs/pulumi-cloud/esc/environments/#using-with-pulumi-iac) with `pulumi up` as well as used to [run external CLIs](/docs/pulumi-cloud/esc/environments/#running-third-party-commands-using-pulumi-esc-secrets-and-config) like `aws`, `kubectl`, and more.
-
-## Composable
-
-Platform and service teams can centralize and control common configuration and secrets by creating environments that other teams can import. They can trace what other environments or stacks are using their configuration and assess the blast radius of any changes.
-
-## Configuration as Code
-
-Environments are defined as YAML documents which can describe how to project and compose secrets and configuration, integrate dynamic configuration providers, and compute new configuration from other values (constructing a URL from a DNS name, or concatenating multiple configuration values into a derived value).  The incredible flexibility of a code-based approach over traditional point-and-click interfaces allows Pulumi ESC to offer rich expressiveness for managing complex configuration.
-
-## Authentication and RBAC
-
-Pulumi ESC brokers access to secrets and configuration that live in other systems, and so authentication and granular RBAC are critical to ensure robust access controls across your organization. Pulumi ESC leverages the same Pulumi Cloud identity, RBAC, Teams, SAML/SCIM and scoped access tokens that are used for Pulumi IaC today, extending these all to managing access to environments as well as [Stacks](/docs/concepts/stack/).
-
-Teams can create and control access to their environments. They can control who can update and preview environments, as well as who can open environments and retrieve their secrets. Audit logs let teams know who has changed or accessed configuration.
-
-## Auditable
-
-Environments must be “opened” to compute and see the set of value they provide, and this action is recorded in audit logs, including a full record of how each value was sourced from within the hierarchy of environments that contributed to it.
-
-## Consume from Anywhere
-
-The `esc` CLI and the Pulumi ESC Rest API enables environments to be accessed from any application, infrastructure provider, or automation system.  At launch, first-class integrations are available with Pulumi IaC, local environment and .env files, GitHub Actions, and more.
-
-## Detailed overview of environments
-
-Learn more about [managing environments using Pulumi ESC](/docs/pulumi-cloud/esc/environments/).
-
-## Getting Started with Pulumi ESC
-
-Begin your journey with Pulumi ESC through a hands-on, self-paced [tutorial](/docs/pulumi-cloud/esc/get-started/).
-
-## Pulumi ESC CLI overview
-
-Please see [ESC CLI overview](/docs/esc-cli/) for details on interacting with environments using the command line.
-
-## Pulumi ESC Webhooks
-
-Automate your processes with [environment event webhooks](/docs/esc/webhooks/).
-
-## Syntax Reference
-
-[The Pulumi ESC Syntax Reference documentation](reference/) shows examples of simple and complex configuration, imports, and common provider integrations.

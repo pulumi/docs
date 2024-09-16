@@ -85,7 +85,7 @@ jobs:
         working-directory: docs
       - name: generate markdown
         run: |
-          pulumi gen-markdown ./content/docs/cli/commands
+          pulumi gen-markdown ./content/docs/iac/cli/commands
         working-directory: docs
       - name: Update latest version
         run: |
@@ -99,7 +99,7 @@ jobs:
       - name: Update version lists
         run: |
           NL=$'\n'
-          sed -e "s/<tbody>/<tbody>\\${NL}        {{< changelog-table-row version=\"${{ env.PULUMI_VERSION}}\" date=\"$(date +%Y-%m-%d)\" showChecksum=\"true\" >}}/" -i ./content/docs/install/versions.md
+          sed -e "s/<tbody>/<tbody>\\${NL}        {{< changelog-table-row version=\"${{ env.PULUMI_VERSION}}\" date=\"$(date +%Y-%m-%d)\" showChecksum=\"true\" >}}/" -i ./content/docs/iac/install/versions.md
         working-directory: docs
       - name: git status
         run: git status && git diff

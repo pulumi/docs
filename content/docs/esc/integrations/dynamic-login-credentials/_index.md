@@ -1,10 +1,11 @@
 ---
-title: Dynamic Login credentials
+title: Dynamic login credentials
 title_tag: Integrate Pulumi ESC with dynamic login credential providers | Pulumi ESC
 h1: Dynamic login credentials
 meta_desc: Pulumi ESC integrates with dynamic login providers, allowing you to securely log in using OpenID Connect (OIDC) to access resources and secrets.
 menu:
-  pulumiesc:
+  esc:
+    name: Dynamic login credentials
     identifier: esc-dynamic-login-credentials
     parent: esc-integrations
     weight: 1

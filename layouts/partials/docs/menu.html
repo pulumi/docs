@@ -1,0 +1,81 @@
+{{- $page := .page }}
+{{- $menuID := .menu }}
+
+{{/* If a valid menu choice was passed in, use that. Otherwise, try to derive
+one from the current path. If that doesn't work, don't show a menu. (TODO: Would
+it be helpful to be able to set the menu somehow in the frontmatter?) */}}
+
+{{ $validMenus := slice "iac" "esc" "cloud" }}
+
+{{ if not (in $validMenus $menuID) }}
+    {{ $menuID = "" }}
+{{ end }}
+
+{{ if eq $menuID "" }}
+    {{ $segments := split $page.Path "/"}}
+
+    {{ if eq (index $segments 1) "docs" }}
+        {{ $section := index $segments 2 }}
+
+        {{/* Little hack to handle prevent colliding with the existing `pulumi-cloud` menu. */}}
+        {{ if eq $section "pulumi-cloud" }}
+            {{ $section = "cloud" }}
+        {{ end }}
+
+        {{ if in $validMenus $section }}
+            {{ $menuID = $section }}
+        {{ end }}
+    {{ end }}
+{{ end }}
+
+{{- with index site.Menus $menuID }}
+    <nav class="text-sm mt-7 mr-2">
+        <pulumi-docs-nav expanded-menu-ids="{{ delimit (default slice $page.Params.expanded_menu_ids) "," }}">
+            <ul class="list-none pl-0">
+                {{- partial "inline/menu/walk.html" (dict "page" $page "rootMenuID" $menuID "menuEntries" .) }}
+            </ul>
+        </pulumi-docs-nav>
+    </nav>
+{{- end }}
+
+{{- define "partials/inline/menu/walk.html" }}
+    {{- $page := .page }}
+    {{- $rootMenuID := (printf "%s-home" .rootMenuID) }}
+
+    {{- range .menuEntries }}
+        {{- $attrs := dict "href" .URL }}
+        {{- if $page.IsMenuCurrent .Menu . }}
+            {{- $attrs = merge $attrs (dict "class" "active" "aria-current" "page") }}
+        {{- else if $page.HasMenuCurrent .Menu .}}
+            {{- $attrs = merge $attrs (dict "class" "ancestor" "aria-current" "true") }}
+        {{- end }}
+        {{- $name := .Name }}
+        {{- with .Identifier }}
+            {{- with T . }}
+                {{- $name = . }}
+            {{- end }}
+        {{- end }}
+
+        <li {{ if (and .Children (ne .Identifier $rootMenuID)) }} class="expandable" {{ end }}
+            {{ if .Identifier }} data-menu-id="{{ .Identifier }}" {{ end }}
+            >
+            <a
+                {{- range $k, $v := $attrs }}
+                    {{- with $v }}
+                        {{- printf " %s=%q" $k $v | safeHTMLAttr }}
+                    {{- end }}
+                {{- end -}}
+            >
+            <button>
+                <i class="fa fa-caret-right"></i>
+            </button>
+            <span>{{ $name }}</span>
+            </a>
+            {{- with .Children }}
+                <ul class="list-none">
+                    {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
+                </ul>
+            {{- end }}
+        </li>
+    {{- end }}
+{{- end }}

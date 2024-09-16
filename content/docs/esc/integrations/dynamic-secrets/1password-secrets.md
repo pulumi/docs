@@ -5,7 +5,7 @@ meta_desc: The `1password-secrets` provider enables you to dynamically import Se
 h1: 1password-secrets
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  pulumiesc:
+  esc:
     identifier: 1password-secrets
     parent: esc-dynamic-secrets
     weight: 5
