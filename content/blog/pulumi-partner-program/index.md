@@ -13,9 +13,9 @@ tags:
     - pulumi-community
     - enterprise
 ---
-We are excited to announce the launch of the [Pulumi Partner Program](www.pulumi.com/partners), a strategic initiative designed to empower our partners and their customers to accelerate cloud projects and achieve faster time-to-market. This program is crafted for cloud and SaaS companies who are building, integrating, and going to market with Pulumi.
+We are excited to announce the launch of the [Pulumi Partner Program](https://www.pulumi.com/partners/), a strategic initiative designed to empower our partners and their customers to accelerate cloud projects and achieve faster time-to-market. This program is crafted for cloud and SaaS companies who are building, integrating, and going to market with Pulumi.
 
-Come hear from dozens of partners and customers who automate, secure and manage everything in the cloud at PulumiUP on Wednesday, September 18. Register [here](https://www.pulumi.com/pulumi-up/?utm_source=member_desktop&utm_medium=referral_pulumi&utm_campaign=FY2025Q1_Event_PulumiUP)
+Hear from dozens of partners and customers who automate, secure and manage everything in the cloud at PulumiUP on Wednesday, September 18. Register [here](https://www.pulumi.com/pulumi-up/?utm_source=member_desktop&utm_medium=referral_pulumi&utm_campaign=FY2025Q1_Event_PulumiUP).
 
 ## Why the Pulumi Partner Program?
 
@@ -29,8 +29,8 @@ Customers are choosing Pulumi because it enables them to manage cloud resources 
 * __Accelerate Adoption__ of your solutions through seamless integration with Pulumi. Leverage Pulumi's support for the world's most popular programming languages and developer tools to streamline integration, making it easier for your customers to use and adopt your products using familiar languages, tools and process.
 * __Reach More Developers__ with collaborative documentation, shared examples, and co-marketing initiatives to raise awareness. Participate in joint marketing efforts, including co-branded campaigns and events, to connect with more developers and platform engineers.
 
-With 20 inaugural members, our technology partners join an elite community that benefits from Pulumi’s ongoing investment in technical, marketing, training, and business strategy support. We are excited to welcome new members such as [Docker](https://www.docker.com/), [1Password](https://1password.com/[), [Pinecone](https://www.pinecone.io/), [NewRelic](https://newrelic.com/), [Tailscale](https://tailscale.com/), [Dagger](https://dagger.io/) and many others.
+With 20 inaugural members, our technology partners join an elite community that benefits from Pulumi’s ongoing investment in technical, marketing, training, and business strategy support. We are excited to welcome new members such as [Docker](https://www.docker.com/), [1Password](https://1password.com/), [Pinecone](https://www.pinecone.io/), [NewRelic](https://newrelic.com/), [Tailscale](https://tailscale.com/), [Dagger](https://dagger.io/) and many others.
 
 ## Join the Pulumi Partner Program
 
-We believe that the Pulumi Partner Program will bring together and support the growth of our entire ecosystem, leveraging the strengths of our partners and creating connections for new potential services and technologies. Prospective partners can reach out to us via our [website](www.pulumi.com/partners). We look forward to welcoming new partners and driving innovation together.
+We believe that the Pulumi Partner Program will bring together and support the growth of our entire ecosystem, leveraging the strengths of our partners and creating connections for new potential services and technologies. Prospective partners can reach out to us via our [website](https://www.pulumi.com/partners/). We look forward to welcoming new partners and driving innovation together.
