@@ -31,5 +31,4 @@ With 20 inaugural members, our technology partners join an elite community that 
 
 ## Join the Pulumi Partner Program
 
-
 We believe that the Pulumi Partner Program will bring together and support the growth of our entire ecosystem, leveraging the strengths of our partners and creating connections for new potential services and technologies. Prospective partners can reach out to us via our [website](www.pulumi.com/partners). We look forward to welcoming new partners and driving innovation together.
