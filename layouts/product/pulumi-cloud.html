@@ -11,7 +11,7 @@
             <h2>{{ .title }}</h2>
             <p>{{ .description | markdownify }}</p>
         {{ end }}
-        <div class="flex justify-center rounded-md bg-violet-100">
+        <div class="flex justify-center rounded-md ">
             <p class="text-center">
                 ✨ <a href="/blog/pulumi-copilot"><span class="font-bold">New product announcement:</span> Learn more about Pulumi Copilot</a>. ✨
             </p>
@@ -28,10 +28,10 @@
                             {{ $tabclass := "" }}
                             {{ $textClass := "" }}
                             {{ if eq $index 0 }}
-                                {{ $tabclass = " border-blue-600 bg-violet-100 "}}
+                                {{ $tabclass = " border-blue-600 "}}
                                 {{ $textClass = "rainbow-text" }}
                             {{ end }}
-                            <div id="{{ $subsection.tabid }}" class="text-2xl cursor-pointer p-2 px-4 rounded-t-lg border-b-4 {{ $tabclass }}">
+                            <div id="{{ $subsection.tabid }}" class="text-2xl cursor-pointer p-2 px-6 rounded-t-lg border-b-4 {{ $tabclass }}">
                                 <div id="{{ $subsection.tabid }}-text" class="{{ $textClass }}">{{ $subsection.header }}</div>
                             </div>
                         {{ end }}

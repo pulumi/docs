@@ -8,11 +8,11 @@ $(function () {
             productTabs.forEach(id => {
                 if (id !== tab) {
                     $(`#${id}-content`).addClass("hidden");
-                    $(`#${id}`).removeClass("border-blue-600 bg-violet-100");
+                    $(`#${id}`).removeClass("border-blue-600");
                     $(`#${id}-text`).removeClass("rainbow-text");
                 }
             });
-            $(`#${tab}`).addClass("border-blue-600 bg-violet-100");
+            $(`#${tab}`).addClass("border-blue-600");
             $(`#${tab}-text`).addClass("rainbow-text")
             $(`#${tab}-content`).removeClass("hidden")
         });
@@ -23,11 +23,11 @@ $(function () {
             capabilityTabs.forEach(id => {
                 if (id !== tab) {
                     $(`#${id}-content`).addClass("hidden");
-                    $(`#${id}`).removeClass("border-blue-600 bg-violet-100");
+                    $(`#${id}`).removeClass("border-blue-600");
                     $(`#${id}-text`).removeClass("rainbow-text");
                 }
             });
-            $(`#${tab}`).addClass("border-blue-600 bg-violet-100");
+            $(`#${tab}`).addClass("border-blue-600");
             $(`#${tab}-text`).addClass("rainbow-text")
             $(`#${tab}-content`).removeClass("hidden")
         });
