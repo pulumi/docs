@@ -4,8 +4,7 @@ meta_desc: This page provides an list of available versions of the Pulumi CLI.
 menu:
   install:
     weight: 1
-  iac:
-    parent: iac-install
+
 aliases:
 - /docs/reference/changelog/
 - /docs/get-started/install/versions/
