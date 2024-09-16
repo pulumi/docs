@@ -4,6 +4,7 @@ layout: waitlist
 meta_desc: Pulumi Insights 2.0 is intelligent cloud management. Sign up today.
 aliases:
   - /product/private-previews
+  - /waitlist
 
 subheader:
     title: Intelligent Cloud Management
