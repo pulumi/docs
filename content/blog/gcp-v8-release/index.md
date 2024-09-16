@@ -1,13 +1,14 @@
 ---
 title: "Pulumi Google Cloud Provider Version 8.0.0"
-draft: true
+date: 2024-09-16T10:08:42-07:00
+draft: false
 meta_desc: "Release of the next version of the Pulumi Provider for Google Cloud"
+meta_image: meta.png
 authors:
-  - guineveresaenger
+    - guineveresaenger
 tags:
-  - gcp
-  - release
-  - features
+    - gcp
+    - release
 ---
 
 The latest major release of the Pulumi Google Cloud Provider is available now!
