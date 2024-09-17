@@ -10,9 +10,9 @@ tags:
     - features
 ---
 
-At the heart of Pulumi's approach to Cloud infrastructure and secrets management is a deep belief in empowering engineers to use the very best software engineering tools to manage complexity at scale and to be maximally productive building amazing cloud infrastructure and applications for their business.  
+At the heart of Pulumi's approach to cloud infrastructure and secrets management is a deep belief in empowering engineers to use the very best software engineering tools to manage complexity at scale and to be maximally productive building amazing cloud infrastructure and applications for their businesses.  
 
-Today, we're exctied to announce a next big step in delivering great software engineering tools for Pulumi users, with the launch of a new **Pulumi Visual Studio Code (VSCode) Extension**.  The Pulumi VSCode Extension brings Pulumi key features for Pulumi IaC and Pulumi ESC directly into the IDE environment that many Pulumi users work in every day.  Pulumi IaC users can now debug their applications and get Pulumi YAML languge support direclty in VS Code. And Pulumi ESC users can now create and manage environments, secrets and configuration directly within the IDE with rich IDE features.
+Today, we're excited to announce a next big step in delivering great software engineering tools for Pulumi users, with the launch of a new **Pulumi Visual Studio Code (VS Code) Extension**.  The Pulumi VS Code Extension brings Pulumi key features for Pulumi IaC and Pulumi ESC directly into the IDE environment that many Pulumi users work in every day.  Pulumi IaC users can now debug their applications and get Pulumi YAML language support directly in VS Code. And Pulumi ESC users can now create and manage environments, secrets and configuration directly within the IDE with rich IDE features.
 
 <!--more-->
 
@@ -34,7 +34,7 @@ The following are a few examples of new capabilities available for Pulumi users 
 
 ## Debugging Pulumi IaC Programs
 
-For simple Pulumi programs, it's easy enough to see what will happen when you look at the IaC code.  But as teams build more complex cloud infrastructure components, fully taking advantage of Pulumi's support for all of the rich componentization and control flow features in their language of choice, it can become more challenging to diagnose why a particular input value is being used for a cloud infrastructure resource, and what set of decisions were made by the infratructure compnents to arrive at that.  The `pulumi` CLI recently added support for a new `--attach-debugger` flag, which allows attaching a debugger to any language processes that are run as part of a Pulumi operation - regardless of the language.  We've now added support for that into a native VS Code debugger extension as well, so that you can debug your Pulumi programs in any languge with just a couple of clicks.
+For simple Pulumi programs, it's easy enough to see what will happen when you look at the IaC code.  But as teams build more complex cloud infrastructure components, fully taking advantage of Pulumi's support for all of the rich componentization and control flow features in their language of choice, it can become more challenging to diagnose why a particular input value is being used for a cloud infrastructure resource, and what set of decisions were made by the infrastructure components to arrive at that.  The `pulumi` CLI recently added support for a new `--attach-debugger` flag, which allows attaching a debugger to any language processes that are run as part of a Pulumi operation - regardless of the language.  We've now added native VS Code debugger extension support for it as well, so that you can debug your Pulumi programs in any language with just a couple of clicks.
 
 ### Start Debugging
 
@@ -50,7 +50,7 @@ Pulumi automatically generates a debug configuration for the current stack, maki
 
 <img width="600" src="iac-debugging.png" alt="Debugging" />
 
-You can now step through your code, set breakpoints on resource construtors or inside `apply` callbacks, and see the callstack and the values of variables within the VS Code debugger. 
+You can now step through your code, set breakpoints on resource constructors or inside `apply` callbacks, and see the callstack and the values of variables within the VS Code debugger. 
 
 ### Create a Launch Configuration
 
@@ -65,30 +65,28 @@ You can run without debugging by selecting "Run Without Debugging" from the Run 
 
 ## Using Pulumi ESC
 
-Pulumi ESC manages secrets and configuration for your applications and infrastructure within a centralized and composable secrets store.  The environments are stored securely within Pulumi Cloud, and can be edited and opened from the Pulumi Cloud console or from the `esc` CLI or REST API.
+Pulumi ESC manages secrets and configuration for your applications and infrastructure within a centralized and composable secrets store. The environments are stored securely within Pulumi Cloud, and can be edited and opened from the Pulumi Cloud console or from the `esc` CLI or [REST API](/docs/pulumi-cloud/reference/cloud-rest-api).
 
-For developers working with both their application infrastructure code as well as their ESC environments, it is very convenient to be able to directly edit ESC environments and the secrets they contain directly within the IDE without switching contexts.
+For developers working with both their application infrastructure code as well as their Pulumi ESC environments, it is convenient to be able to edit ESC environments and the secrets they contain directly within the IDE without switching contexts.
 
-The Pulumi ESC integration in the Pulumi VS Code extenions makes this easy.  You can navigate through your environments, see all the projects and versions, and directly edit the source of the environments within VS Code.  When you save, the edit to the environment is saved directly back into Pulumi ESC as a new version.  And while you have it open in VS Code, you get all the amazing software engineering productivity feature of your IDE - colorization, completion lists, error checking, goto defintion, find references and much more!
+The Pulumi ESC integration in the Pulumi VS Code extensions makes this easy. You can navigate through your environments, see all the projects and versions, and directly edit the source of the environments within VS Code. When you save, the edit to the environment is saved directly back into Pulumi ESC as a new version. And while you have it open in VS Code, you get all the amazing software engineering productivity feature of your IDE - colorization, completion lists, error checking, goto definition, find references and much more!
 
 ### Open the ESC Explorer
 
 From the primary sidebar, open the "Pulumi ESC Explorer" view and click "Login" to authenticate to Pulumi Cloud. Once logged in, you'll see a tree of your organizations and environments.
 
-<!-- TODO: Replace with GIF that shows expanding through orgs, projects, environments and versions? -->
-<img width="400" src="explorer.png" alt="Pulumi ESC Explorer" />
+<img width="400" src="esc_demo.gif" alt="Pulumi ESC integration" />
 
 ### Key Capabilities
 
 Easily create or edit environments by clicking the plus sign on an organization or project node. The extension opens an editor where you can define and save new environment revisions. The IntelliSense functionality will guide you on various values, such as completion for setting up provider configuration.
 
-<img width="400" src="add-env.png" alt="Add ESC Environment" />
-
 You can also:
 
-<!-- TODO: Add some more screenshots and details on the items below - and linkely remove the add/delete screenshots which aren't as interesting -->
-
 - Run your application in the context of your environment by hovering over it and selecting the terminal icon
+
+<img width="400" src="run.png" alt="ESC run command in terminal" />
+
 - Delete environments by hovering over them and selecting the delete icon
 - Decrypt environments for cloning or moving
 - View environment versions over time
@@ -96,7 +94,7 @@ You can also:
 - Use the search icon to quickly find environments
 - Tag specific environment revisions for easy reference.
 
-<img width="400" src="delete-env.png" alt="Delete ESC Environment" />
+<img width="400" src="tag-revision.png" alt="Revisions and tags" />
 
 ## Pulumi YAML Support
 
