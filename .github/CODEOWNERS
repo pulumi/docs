@@ -1,3 +1,7 @@
 content/docs/ @pulumi/docs
+# Allow CLI docs PRs to be merged automatically.
+content/docs/iac/cli/commands/
+content/docs/esc/cli/commands/
+
 content/tutorials/ @pulumi/docs
 content/templates/ @pulumi/docs
