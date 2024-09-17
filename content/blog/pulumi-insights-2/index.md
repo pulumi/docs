@@ -45,7 +45,7 @@ The updated Resources page provides a customizable experience for grouping, filt
 
 **Column Resize:** You can resize the width of a column by clicking and dragging on the column boundary line on the right side of the column header. To automatically resize the column to the width of the widest cell contents, double click on the boundary line.
 
-**Copy Contents:** You can couple the contents of a cell to the clipboard by right clicking on the cell and selecting Copy. This is particularly useful for resource values you need to use in other contexts like the Name or URN.
+**Copy Contents:** You can copy the contents of a cell to the clipboard by right clicking on the cell and selecting Copy. This is particularly useful for resource values you need to use in other contexts like the Name or URN.
 
 ## Policy Violations
 
