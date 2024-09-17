@@ -3,7 +3,7 @@ title: "Announcing the General Availability of Pulumi ESC - Welcome to a New Era
 allow_long_title: true
 date: 2024-09-18T00:00:00-03:00
 draft: false
-meta_desc: "Pulumi ESC is the centralized secrets and configuration management platform that allwo you to easily access, share, and manage securely on any cloud, using your favorite programming languages."
+meta_desc: "Pulumi ESC is the centralized secrets management and orchestration service that enables taming secrets sprawl and configuration complexity securely across all your cloud infrastructure and applications."
 meta_image: "meta.png"
 authors:
   - luke-hoban
@@ -21,7 +21,7 @@ This next-generation secrets management and orchestration service is built with 
 
 <!--more-->
 
-## Challenges in Secrets management
+## Challenges in Secrets Management
 
 In today's cloud-native world, secrets are the keys to the cloud estate, but managing them effectively is a growing challenge. Modern applications rely on a complex web of secrets, but traditional approaches to secrets management are struggling to keep pace. This complexity creates major challenges for security and engineering teams:
 
@@ -40,9 +40,14 @@ Pulumi ESC is the modern secret management platform designed to streamline and s
 - **Streamline Access and Control**: Access secrets seamlessly via [CLI](/docs/esc/cli/), [API](/docs/pulumi-cloud/reference/cloud-rest-api/#environments), [Kubernetes operator](https://external-secrets.io/latest/provider/pulumi/), the intuitive Pulumi Cloud UI, or directly within your code using our TypeScript, Python, and Go [SDKs](/docs/esc/development/languages-sdks/). Robust [RBAC](/docs/esc/environments/access-control/) ensures the right people have the right access at all times.
 - **Eliminate .env File Risks**: Stop sharing secrets through insecure channels. Pulumi ESC provides a secure and centralized way to manage and access secrets, eliminating the need for risky .env files.
 
+![Pulumi ESC Integrations](esc-integrations.png)
+
 #### Boost Developer Velocity and Security:
 - **Empower Developers, Not Slow Them Down**: Pulumi ESC is designed for developer convenience without compromising security. Access secrets programmatically, integrate with your existing workflows, and leverage flexible authoring options: Pulumi Cloud Editor, VS Code Plugin, SDKs, the Pulumi Service Provider, and our REST API - the choice is yours!
 - **Gain Complete Visibility and Control**: Track all secret access and changes with detailed audit logs. Understand the downstream impact of changes and ensure your secrets are used securely and consistently across your organization.
+- **Secrets as Code**: Pulumi ESC supports flexible composition of environments by allowing [imports](/docs/esc/get-started/import-environments/) between one another. Construct hierarchical environments that avoid the need to copy/paste secrets and configurations, ensuring that changes are consistently propagated across all related environments
+
+![Pulumi ESC Editor View](esc-document-editor-view.png)
 
 #### Built for the Modern Cloud, Open by Design:
 - **Use It Your Way**: Pulumi ESC integrates seamlessly with other Pulumi products and features such as Pulumi IaC and Pulumi Deployments for a unified infrastructure management experience. But its flexibility extends to any platform or toolset, including HashiCorp Terraform.
@@ -64,6 +69,9 @@ Hear from our customers directly what they had to say about Pulumi ESC:
 “With Pulumi ESC, our developers get dynamic AWS/GCP credentials on-demand; that <b>removes the need for long-lived tokens</b> and enhances security. ESC allows for Pulumi programs to share secure credentials and access secrets in their given cloud environments. ESC is a great configuration ‘/and secrets management sharing tool to allow for a DRY (Don't Repeat Yourself) approach to development,” says <b>Richard Genthner, Lead DevOps Engineer at Boost Insurance</b>.
 </i>
 
+Watch the demo from our [PulumiUP Keynote](https://www.pulumi.com/pulumi-up/) that walks you through how to achieve all these benefits our customers have experienced.
+
+<span style="color:red">**Add Meagan's Demo video**</span>
 
 ### Beyond Preview: The Evolution of Pulumi ESC
 
@@ -71,10 +79,10 @@ Since the launch of Pulumi ESC in preview, over the last 11 months, we have laun
 
 - [**SDKs**](/blog/esc-sdk-launch/) for TypeScript, Python, and Go to leverage Pulumi ESC within all your applications
 - [**Versioning**](/blog/esc-versioning-launch/) that maintains full history of the changes you have made to your secrets and configuration and rollback to specific versions when needed
-- [**Version Tags**](/docs/esc/environments/versioning/#tagging-versions) that allow you to assign tags and import specific versions by tags within your applications such that moving tags across versions changes the configuration but requires zero changes in your application code 
-- **Syncing your secrets** to six external sources including GitHub and AWS SecretsManager
+- [**Version Tags**](/docs/esc/environments/versioning/#tagging-versions) allow you to assign tags and import specific versions by tags within your applications such that moving tags across versions changes the configuration but requires zero changes in your application code 
+- [**Syncing your secrets**](/blog/esc-sync-with-iac/) to several external sources including GitHub and AWS SecretsManager
 - [**Kubernetes secrets operator**](https://external-secrets.io/latest/provider/pulumi/) to use Pulumi ESC within your Kubernetes applications to retrieve secrets and configuration using external secrets operator during runtime
-- **VS Code Extension** to author and view your environments directly from where you code 
+- [**VS Code Extension**](/blog/pulumi-vscode-extension/) to author and view your environments directly from where you code 
 - [**Webhooks**](/blog/esc-webhooks-launch/) to trigger your automated CI/CD workflows, restart applications with the latest secrets and configuration, notify your teams 
 - [**Pulumi OIDC Trust relationship**](/blog/oidc-trust-relationships/) to get Pulumi short-term credentials using your existing Identity provider 
 - [**Projects and Environment Tags**](/blog/esc-projects-environment-tags-launch/) to help you organize your Pulumi ESC environments and allow them to scale as your organization evolves 
@@ -91,11 +99,9 @@ Starting October 1st, 2024, Pulumi ESC will be billed as follows, with the first
 
 |                     | Free            | Team           | Enterprise        | Business Critical |
 |---------------------|-----------------|----------------|-------------------|-------------------|
-| **Price per secret/month**  | Free               | $0.50            | $0.75 / Custom         | Custom            |
+| **Price per secret/month**  | 25 free              | $0.50            | $0.75 / Custom         | Custom            |
 | **Price per plaintext config** | Free            | Free           | Free              | Free              |
-| **Price per 10K API calls**    |  | $0.10          | $0.10             | $0.10             |
-| **Included secrets/month**     | 25              | 25             | 25                | 25                |
-| **Included API calls/month**   | 10K             | 10K            | 10K               | 10K               |
+| **Price per 10K API calls**    |  10K free          | $0.10             | $0.10             | $0.10             |
 | **Commitment discounts**       |                 |                | ✔                 | ✔                 |
 
 
