@@ -7,7 +7,7 @@ include_organization_schema: true
 hero:
   title: [ "Automate, Secure, and Manage", "Everything You Run in the Cloud" ]
   description: |
-    Modern Infrastructure as code and secrets management. <br /> Unite your development, infrastructure, and security teams.
+    Modern infrastructure as code and secrets management. <br /> Unite your development, infrastructure, and security teams.
   cta_text: Get Started for Free
   cta_link: /docs/get-started/
   secondary_cta_text: Contact Sales
@@ -121,16 +121,19 @@ customer_quotes:
       “Our developers needed a fast, modular, and testable platform for managing cloud infrastructure. <b>Nothing is better than having standard programming languages for building and managing infrastructure</b>”
     author: Austin Byers, Principal Platform Engineer
     logo: panther-labs
+    link: /case-studies/panther-labs/
   starburst:
     text: |
       “Pulumi let us build and <b>automate cloud infrastructure projects</b> at a scale that simply wasn’t imaginable using prior-generation infrastructure as code technologies”
     author: Matt Stephenson, Senior Principal Software Engineer
     logo: starburst
+    link: /case-studies/starburst/
   snowflake:
     text: |
       “Pulumi helped our team to ship a new product faster. We needed <b>one tool to setup and manage multi-cloud, multi-region Kubernetes clusters</b> that infrastructure and applications teams could use collaboratively”
     author: Justin Fitzhugh, VP of Cloud Platform Engineering
     logo: snowflake
+    link: /case-studies/snowflake/
 
 get_started:
   tweets:

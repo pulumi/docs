@@ -4,7 +4,7 @@ title: Managed Kubernetes Service
 meta_desc: A managed Kubernetes service is a Kubernetes platform where some or all of the responsibility for setup and maintenance lies with a third-party provider.
 layout: glossary/single
 aliases:
-    - /learn/glossary/managed-kubernetes/
+    - /tutorials/glossary/managed-kubernetes/
 ---
 
 ## Definition

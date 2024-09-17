@@ -4,7 +4,7 @@ title: Key-Value Oriented Database
 meta_desc: A key-value oriented database is a type of NoSQL database that relies on a key-value structure like a dictionary or hash table to store and retrieve data.
 layout: glossary/single
 aliases:
-    - /learn/glossary/key-value/
+    - /tutorials/glossary/key-value/
 ---
 
 ## Definition

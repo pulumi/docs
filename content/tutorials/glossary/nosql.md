@@ -4,7 +4,7 @@ title: NoSQL
 meta_desc: NoSQL is a type of database that organizes data into some data structure other than the two-dimensional tables seen in relational databases.
 layout: glossary/single
 aliases:
-    - /learn/glossary/nosql/
+    - /tutorials/glossary/nosql/
 ---
 
 ## Definition
