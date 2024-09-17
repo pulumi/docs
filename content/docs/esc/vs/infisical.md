@@ -5,7 +5,8 @@ title: Pulumi ESC vs Infisical
 h1: Pulumi ESC vs Infisical
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    pulumiesc:
+    esc:
+        Name: Infisical
         identifier: infisical
         parent: esc-vs
         weight: 2

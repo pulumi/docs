@@ -5,7 +5,7 @@ h1: "Pulumi ESC: Integrate with Pulumi IaC"
 meta_desc: This page provides an overview on how to use Pulumi ESC with Pulumi IaC.
 weight: 8
 menu:
-  pulumiesc:
+  esc:
     parent: esc-get-started
     identifier: esc-get-started-integrate-with-pulumi-iac
 ---

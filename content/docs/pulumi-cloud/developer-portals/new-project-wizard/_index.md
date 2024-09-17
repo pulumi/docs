@@ -4,6 +4,11 @@ title_tag: Get started with New Project Wizard
 h1: The Pulumi Cloud New Project Wizard
 meta_desc: Learn how to create new projects from Organization Templates, with Pulumi Deployments configured out-of-the-box.
 menu:
+  cloud:
+    name: New Project Wizard
+    parent: pulumi-cloud-developer-portals
+    weight: 2
+    identifier: pulumi-cloud-developer-portals-npw
   pulumicloud:
     weight: 2
     parent: developer-portals

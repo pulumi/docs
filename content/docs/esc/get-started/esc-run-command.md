@@ -5,7 +5,7 @@ h1: "Pulumi ESC: Run Commands Without Local Secrets"
 meta_desc: This page provides an overview on how to run commands without using local secrets using the "esc run" command.
 weight: 6
 menu:
-  pulumiesc:
+  esc:
     parent: esc-get-started
     identifier: esc-get-started-esc-run-command
 ---
