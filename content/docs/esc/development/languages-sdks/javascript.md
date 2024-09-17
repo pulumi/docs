@@ -8,6 +8,8 @@ menu:
     parent: esc-languages-sdks
     identifier: typescript-sdk
     weight: 1
+aliases:
+  - /docs/esc/sdk/javascript/
 ---
 
 The [JavaScript/TypeScript SDK](https://www.npmjs.com/package/@pulumi/esc-sdk) for [Pulumi ESC (Environments, Secrets, and Configuration)](/product/esc/) allows you to automate Pulumi ESC.
