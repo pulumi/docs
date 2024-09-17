@@ -10,7 +10,6 @@ menu:
 aliases:
 - /docs/reference/glossary/
 - /docs/concepts/glossary/
-- /learn/glossary/
 ---
 
 {{< glossary >}}
