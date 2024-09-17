@@ -27,11 +27,11 @@ Moreover, the lack of a centralized system makes it difficult to track where sec
 
 Using Pulumi building blocks like ESC and IaC, we can create a pattern where secrets and configuration can be centrally defined in ESC, and then automatically synced across the external platforms where they will be utilized.
 
-Consider the following ESC environment, which imports an environment "my-imported-env" and defines a set of secrets and configuration values to be synced:
+Consider the following ESC environment, which imports an environment "my-project/my-imported-env" and defines a set of secrets and configuration values to be synced:
 
 ```yaml
 imports:
-  - my-imported-env@stable
+  - my-project/my-imported-env@stable
 values:
   sync:
     awsSecretsManager:
@@ -165,12 +165,12 @@ const webhook = new service.Webhook("webhook", {
 })
 ```
 
-When the webhook is triggered (i.e. the "my-imported-env" environment is updated), a deployment is automatically triggered, and the secrets and configuration values are synced to AWS Secrets Manager.
+When the webhook is triggered (i.e. the "my-project/my-imported-env" environment is updated), a deployment is automatically triggered, and the secrets and configuration values are synced to AWS Secrets Manager.
 
 ## Embracing a New Era of Secret Management
 
 Using Infrastructure as Code to synchronize secrets and configuration across platform boundaries represents a significant step forward in secret management. By centralizing and automating the handling of sensitive data, it addresses the key challenges of traditional approaches. Secret sprawl becomes a thing of the past, and the risks associated with manual updates are significantly reduced.
 
-Whether you're working with AWS Secrets Manager, Azure Key Vault, GCP Secrets Manager or other platforms, Pulumi ESC provides a streamlined solution that ensures your secrets are always secure and up-to-date. It offers the convenience and security of a single source of truth for all your secrets, allowing you to focus on building and improving your applications rather than wrestling with secret management.
+Whether you're working with AWS Secrets Manager, Azure Key Vault, GCP Secrets Manager, GitHub Secrets or other platforms, Pulumi ESC provides a streamlined solution that ensures your secrets are always secure and up-to-date. It offers the convenience and security of a single source of truth for all your secrets, allowing you to focus on building and improving your applications rather than wrestling with secret management.
 
 We encourage you to explore [Pulumi's documentation](https://www.pulumi.com/docs/pulumi-cloud/esc/get-started) and dive into the [Pulumi ESC Examples repository](https://github.com/pulumi/esc-examples/tree/main/sync) to see how you can implement this powerful tool in your own projects. Join our vibrant [community on Slack](https://slack.pulumi.com/) to discuss your experiences, ask questions, and share insights. Together, we can make secret management simpler, more secure, and more efficient.
