@@ -2,7 +2,7 @@
 title: Automation API
 title_tag: Manage Pulumi ESC resources in your automation workflows
 h1: Manage Pulumi ESC resources in your automation workflows
-meta_desc: Pulumi Automation API allows you to interact with ESC resources like environments, permissions and revisions tags .
+meta_desc: Pulumi Automation API allows you to interact with ESC resources like environments, permissions and version tags.
 menu:
   esc:
     identifier: esc-automation-api
@@ -14,7 +14,7 @@ Pulumi Automation API includes methods for interacting with Pulumi ESC Environme
 
 Automation API methods for ESC include:
 
-- `addEnvironments(...)`: Append environments in order to your Pulumi stack's [import](/docs/esc/environments/#using-environments-with-pulumi-iac) list.
+- `addEnvironments(...)`: Add environments in order to your Pulumi stacks' [import](/docs/esc/environments/#using-environments-with-pulumi-iac) list.
 - `listEnvironments()`: Retrieve a list of environments currently imported into your stack.
 - `removeEnvironment(environment)`: Remove a specific environment from your stack's import list.
 

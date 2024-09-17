@@ -2,7 +2,7 @@
 title: Pulumi Service Provider
 title_tag: Manage Pulumi ESC resources using a Pulumi Program
 h1: Manage Pulumi ESC resources using a Pulumi Program
-meta_desc: Pulumi Service Provider allows you to create and manage ESC resources like environments, permissions and revisions tags using a Pulumi program.
+meta_desc: Pulumi Service Provider allows you to create and manage ESC resources like environments, permissions and version tags using a Pulumi program.
 menu:
   esc:
     identifier: esc-psp
@@ -17,7 +17,7 @@ Here's a list of ESC resources available through Pulumi Service Provider:
 - **Environment**: Define new environments and create new revisions using the normal `pulumi up` command. Learn more [here](/registry/packages/pulumiservice/api-docs/environment/).
 - **Environment Team Permission**: Control permissions to your environments. Combines with **Team** and **Environment** resources easily! Learn more [here](/registry/packages/pulumiservice/api-docs/teamenvironmentpermission/).
 - **Environment Revision Tag**: Add tags to your environment revision for flexible environment import and version control. Learn more [here](/registry/packages/pulumiservice/api-docs/environmentversiontag/).
-- **ESC Webhook**: Create webhooks to monitor or react to events on your environments, at organization level or a specific environment only. Learn more [here](/docs/esc/webhooks).
+- **ESC Webhook**: Create webhooks to monitor or react to events on your environments. This can be configured for specific environments or at the organization level. Learn more [here](/docs/esc/webhooks).
 
 If you haven't used Pulumi Service Provider before, see this [installation and configuration guide](https://www.pulumi.com/registry/packages/pulumiservice/installation-configuration/).
 
@@ -100,4 +100,4 @@ func main() {
 
 {{% /choosable %}}
 
-For more examples of Pulumi Service Provider usage, check out [examples folder](https://github.com/pulumi/pulumi-pulumiservice/tree/main/examples) of Pulumi Service Provider github repository. It is open source, and contributions are welcome!
+For more examples of Pulumi Service Provider usage, check out the [examples folder](https://github.com/pulumi/pulumi-pulumiservice/tree/main/examples) in the Pulumi Service Provider GitHub repository. It is open source, and contributions are welcome!
