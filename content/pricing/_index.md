@@ -109,8 +109,8 @@ comparison_table:
               rows:
                 - title: Price per resource/month
                   items:
-                    - content: Free
-                    - content: 200 free, $0.37 thereafter
+                    - content: 200 free
+                    - content: $0.37
                     - content: $1.10 / Custom
                     - content: Custom
                 - title: Commitment pricing
@@ -187,8 +187,8 @@ comparison_table:
                 - title: Price per secret/month
                   items:
                     - content: 25 free
-                    - content: 25 free, $0.50 thereafter
-                    - content: 25 free, $0.75 / custom thereafter
+                    - content: $0.50
+                    - content: $0.75 / Custom
                     - content: Custom
                 - title: Price per plaintext config
                   items:
@@ -199,9 +199,9 @@ comparison_table:
                 - title: Price per 10K API calls
                   items:
                     - content: 10K free
-                    - content: 10K free, $0.10 thereafter
-                    - content: 10K free, $0.10 thereafter
-                    - content: 
+                    - content: $0.10
+                    - content: $0.10
+                    - content: $0.10
                 - title: Commitment pricing
                   items:
                     - content: _blank
