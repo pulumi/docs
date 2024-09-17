@@ -105,7 +105,7 @@ Selecting this link will take you to the file and line making it easy for you to
 
 Being able to browse your entire infrastructure and find the insights needed to move your platform forward enables you to understand and build strategic plans around your infrastructure. However, leveraging Pulumi IaC for managing your resources gives you the best in class tools for creating, updating and refactoring your resources to ensure your infrastructure is delivering on your strategic goals. Insights 2.0 significantly simplifies the process of migrating your resources to IaC management by making it easy to find the resources needed and create resource queries to define those groups.
 
-The Pulumi cli import command will now support passing a Resource Query as a parameter, simplifying the process of finding, grouping and importing the resources you want. The results of this query will be used to get the resource IDs and types needed to be able to import the resources into your IaC program. The result of the command is the source code needed to construct each of the resources defined by the query.
+The Pulumi CLI import command now supports passing a Resource Query as a parameter, simplifying the process of finding, grouping and importing the resources you want. The results of this query will be used to get the resource IDs and types needed to be able to import the resources into your IaC program. The result of the command is the IaC source code needed to construct each of the resources defined by the query.
 
 ```shell
 pulumi import \-q ‘.volumeType:Standard’
