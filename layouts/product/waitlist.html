@@ -14,15 +14,15 @@
     </section>
 
     <section id="overview" class="container mx-auto my-16 flex flex-col">
-        <div class="flex flex-col lg:flex-row px-8">
-            <div class="w-full lg:w-1/2 lg:pr-8 order-last lg:order-first">
+        <div class="flex flex-col xl:flex-row px-8">
+            <div class="w-full xl:w-1/2 lg:pr-8 order-last xl:order-first">
                 <p>{{ .Params.overview.description | markdownify }}</p>
                 <div class="my-8 flex flex-row space-x-3">
                     <a class="btn-primary" href="#form">Signup for waitlist</a>
                     <a class="btn-secondary" href="/contact?form=sales">Contact Sales</a>
                 </div>
             </div>
-            <img class="w-full lg:w-1/2 rounded shadow-lg" src="{{ .Params.overview.image }}" alt="Pulumi Insights 2.0 Dashboard" />
+            <img class="w-full xl:w-1/2 max-h-full object-scale-down rounded shadow-lg p-2" src="{{ .Params.overview.image }}" alt="Pulumi Insights 2.0 Dashboard" />
         </div>
     </section>
 
