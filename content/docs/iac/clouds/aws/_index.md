@@ -13,7 +13,7 @@ menu:
 cloud_overview: true
 description: Build infrastructure on AWS using TypeScript, Python, Go, C#, Java or YAML. Pulumi supports all AWS services and stays up-to-date with all AWS features.
 get_started_guide:
-  link: get-started/
+  link: /docs/iac/get-started/aws/
   icon: aws
 providers:
   description: Provision hundreds of AWS cloud resources with either the AWS Classic or AWS Native provider. The AWS Native provider is in preview status, with same-day access to AWS resources available in the AWS Cloud Control API.  While AWS Classic remains fully supported, try AWS Native if you need AWS resources not available in the classic version.
