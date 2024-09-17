@@ -7,9 +7,9 @@ tags:
     - features
 ---
 
-The Pulumi team is thrilled to bring you the Pulumi Visual Studio (VS) Code Extension, designed to enhance your Pulumi development experience by integrating directly into the tool you already know and love. We understand that working efficiently is key, and this extension helps you do just that by reducing context switching and window juggling, making it easier to build, deploy, and manage your Pulumi applications.
+The Pulumi team is thrilled to bring you the Pulumi Visual Studio (VS) Code Extension, designed to enhance your Pulumi development experience by integrating directly into the editor you already spend time in. We understand that working efficiently is key, and this extension helps you do just that by reducing context switching and window juggling, making it easier to build, deploy, and manage your Pulumi applications.
 
-We're focused on developing tools that empower developers to work more seamlessly and efficiently with Pulumi. With this new VS Code extension, we've taken a major step towards this goal. It provides a unified environment where you can debug Infrastructure as Code (IaC) projects, create and handle Environments, Secrets, and Configuration (ESC), and leverage enhanced Pulumi YAML linting and error checking—all without leaving your IDE. Let's dive into the details for each of these.
+We're focused on developing tools that empower developers to work more seamlessly and efficiently with Pulumi. With this new VS Code extension, we've taken a major step towards this goal. It provides a unified environment where you can run and debug Infrastructure as Code (IaC) projects, create and manage Pulumi Environments, Secrets, and Configuration (ESC), and leverage enhanced Pulumi YAML linting and error checking—all without leaving your IDE. Let's dive into the details for each of these.
 
 The following are a few examples of new capabilities you can do within VS Code today:
 
@@ -62,7 +62,7 @@ From the primary sidebar, open the "Pulumi ESC Explorer" view and click "Login" 
 
 ![Pulumi ESC Explorer](/explorer.png)
 
-### Create, Edit, and Manage Environments
+### Key Capabilities
 
 Easily create or edit environments by clicking the plus sign on an organization or project node. The extension opens an editor where you can define and save new environment revisions. The IntelliSense functionality will guide you on various values, such as completion for setting up provider configuration.
 
