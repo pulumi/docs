@@ -13,8 +13,6 @@ menu:
     pulumicloud:
         weight: 7
         identifier: access-management
-aliases:
-  - /docs/pulumi-cloud/access-management/
 ---
 
 Pulumi Cloud offers a number of identity and access management controls.
