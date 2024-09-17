@@ -40,10 +40,10 @@ module.exports = {
         // Assemble the local path to the file using its href.
         const filePath = path.join("public", href, "index.html");
 
-        // Read the file
+        // Read the file and parse it into a DOM tree.
         const content = fs.readFileSync(filePath, "utf-8");
         
-        // Parse with Cheerio, using htmlparser2
+        // Parse with Cheerio, using htmlparser2.
         const $ = cheerio.load(content, {
             _useHtmlParser2: true,
             decodeEntities: true
@@ -51,9 +51,12 @@ module.exports = {
         
         const subheads = [];
 
+        // For now, only bother with H2s, as the noise level goes way up with H3s.
         $("main h2").each((index, element) => {
             const $h2 = $(element);
             const id = $h2.attr("id");
+
+            // If a heading doesn't have an ID, it can't be linked to, so exclude it.
             if (!id) return;
 
             const title = $h2.text().trim();
