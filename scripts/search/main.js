@@ -112,5 +112,5 @@ allObjects = allObjects.filter(o => !o.href.includes("azure-native-v1"));
 
 // Write the results, just so we have them.
 console.log(" ↳ Writing results...");
-fs.writeFileSync("./search-index-htmlparser.json", JSON.stringify(allObjects, null, 4));
+fs.writeFileSync("./public/search-index.json", JSON.stringify(allObjects, null, 4));
 console.log(" ↳ Done. ✨\n");
