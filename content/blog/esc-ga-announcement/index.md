@@ -71,7 +71,7 @@ Hear from our customers directly what they had to say about Pulumi ESC:
 
 Watch the snippet from our [PulumiUP Keynote](https://www.pulumi.com/pulumi-up/) that walks you through how to achieve all these benefits our customers have experienced. [Sign-up](https://conference.pulumi.com/schedule/?utm_source=PulumiUp&utm_medium=web&utm_campaign=FY2025Q1_Event_PulumiUP) here to watch the full keynote. 
 
-<span style="color:red">**Add Meagan's Demo video**</span>
+{{< youtube KDAoZ9aiwb8 >}}
 
 ### Beyond Preview: The Evolution of Pulumi ESC
 
