@@ -1,5 +1,5 @@
 ---
-title: "Announcing the General Availability of Pulumi ESC - Welcome to the new era of Secrets Management"
+title: "Announcing the General Availability of Pulumi ESC - Welcome to a New Era of Secrets Management"
 allow_long_title: true
 date: 2024-09-18T00:00:00-03:00
 draft: false
@@ -13,18 +13,22 @@ tags:
   - secrets
 ---
 
-At Pulumi, we've been at the forefront of revolutionizing infrastructure management and DevOps processes. We've built the industry's most comprehensive [secrets management solution for IaC](/docs/iac/concepts/secrets/), securing production cloud credentials and secrets for countless organizations. Now, we're taking that expertise and applying it to the broader challenges of secrets management—especially for developers working at scale—with an open ecosystem approach. Pulumi Environments, Secrets, and Configuration ([Pulumi ESC](/product/secrets-management/)), launched in [preview](/blog/environments-secrets-configurations-management/) in October 2023, is now generally available. This next-generation secrets management and orchestration service is built with a robust software engineering approach, designed to bring security and simplicity to even the most complex secrets management needs.
+At Pulumi, we've been at the forefront of revolutionizing infrastructure management and DevOps processes. We've built the industry's most comprehensive [secrets management solution for IaC](/docs/iac/concepts/secrets/), securing production cloud credentials and secrets for countless organizations. Now, we're taking that expertise and applying it to the broader challenges of managing secrets at scale with an open ecosystem approach. 
+
+Pulumi Environments, Secrets, and Configuration ([Pulumi ESC](/product/secrets-management/)), launched in [preview](/blog/environments-secrets-configurations-management/) in October 2023, is now generally available.
+
+This next-generation secrets management and orchestration service is built with a robust software engineering approach, designed to bring security and simplicity to even the most complex secrets management needs.
 
 <!--more-->
 
 ## Challenges in Secrets management
 
-In today's cloud-native world, secrets are the keys to the kingdom, but managing them effectively is a growing challenge. Modern applications rely on a complex web of secrets, but traditional approaches to secrets management are struggling to keep pace. This complexity creates major challenges for security and engineering teams:
+In today's cloud-native world, secrets are the keys to the cloud estate, but managing them effectively is a growing challenge. Modern applications rely on a complex web of secrets, but traditional approaches to secrets management are struggling to keep pace. This complexity creates major challenges for security and engineering teams:
 
 - **Secrets Sprawl**:  Secrets scattered across numerous systems and platforms make it nearly impossible to track their usage, enforce consistent security policies, and prevent unauthorized access, significantly increasing the likelihood of a breach.
 - **Long-Lived Credentials**: Storing long-lived credentials, especially locally, creates a significant security liability. If these credentials are compromised, they can grant attackers prolonged access to sensitive systems.
 - **The Trade-off Between Speed and Security**: Many security measures designed to safeguard secrets can inadvertently impede development velocity. Complex storage and retrieval processes create unnecessary friction, leading to frustration and delays.
-- **Insecure .env File Sharing**: Developers often share .env files through insecure channels (like Slack), creating blind spots for security teams and increasing the risk of data leaks.
+- **Insecure .env File Sharing**: Developers often copy/paste secrets across many different files, including formats like `.env` files stored locally on their machine or shared through insecure channels (like Slack), creating blind spots for security teams and increasing the risk of data leaks.
 
 ## Introducing Pulumi ESC: A Modern Approach to Environments, Secrets, and Configuration
 
