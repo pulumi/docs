@@ -1,0 +1,15 @@
+id = "craig-symonds"
+name = "Craig Symonds"
+title = "VP Product Development"
+company = "Pulumi"
+weight = 2
+bio = """
+<p><strong>Craig Symonds</strong> is the VP of New Product Development at Pulumi focusing on expanding Pulumi’s presence in the Intelligent Cloud Infrastructure space.</p>
+<p>Prior to joining Pulumi, he led the Software group at GoPro where he helped define the GoPro media lifecycle experience. Craig has also had experience leading product development at several mobile startups as well as leading the Microsoft Visual Studio team as General Manager where he helped introduce new languages and software development lifecycle tools like Visual Studio Team System.</p>
+"""
+
+status = "active"
+
+[social]
+github = "anuidolphin"
+linkedin = "cscoder"
