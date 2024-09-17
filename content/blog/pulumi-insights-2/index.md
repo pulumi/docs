@@ -37,7 +37,7 @@ The updated Resources page provides a customizable experience for grouping, filt
 
 ![Filtering](filtering.png)
 
-**Sorting:** To sort your resources by a particular column, you can clicking on the column header to sort in ascending order and clicking again switches it to descending order.
+**Sorting:** To sort your resources by a particular column, click once on the column header to sort in ascending order and click a second time to sort in descending order.
 
 **Column Selection:** To add or remove columns from the grid, select the ‘Choose Columns’ menu item from the column menu selector. This presents a pop up to allow you to add, remove or rearrange the order of columns in the grid.
 
