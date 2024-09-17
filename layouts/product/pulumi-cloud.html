@@ -11,11 +11,13 @@
             <h2>{{ .titleTop }}<br />{{ .titleBottom }}</h2>
             <p>{{ .description | markdownify }}</p>
         {{ end }}
-        <div class="flex justify-center rounded-md bg-violet-100">
-            <p class="text-center">
-                ✨ <a href="/blog/pulumi-copilot"><span class="font-bold">New product announcement:</span> Learn more about Pulumi Copilot</a>. ✨
-            </p>
-        </div>
+        <section id="announcement" class="max-w-full mx-auto text-center my-8 px-6">
+            <div class="flex justify-center rounded-md bg-violet-100">
+                <p class="text-center">
+                    ✨ <span class="font-bold">New - Pulumi Insights 2.0 - Import and Sync All Cloud Infrastructure:</span> <a href="/product/wailist"> Sign up for the waitlist</a> ✨
+                </p>
+            </div>
+        </section>
     </section>
 
     <section id="console-screenshot" class="max-w-4xl mx-auto text-center relative mb-28 px-6 lg:px-0">
