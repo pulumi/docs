@@ -106,7 +106,7 @@ products:
           tabid: esc-select
           subheader: Automatic cloud security
           link: /product/esc/
-          image: /images/product/esc-screenshot.png
+          image: /images/product/esc-screenshot-2.png
           details:
             - title: Stop secrets sprawl
               description: |
