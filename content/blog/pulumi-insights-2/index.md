@@ -55,7 +55,7 @@ The Policy Violations page provides a comprehensive view of all policy violation
 
 The new resource structure graph provides a visual representation of the relationships for a selected resource. This provides the additional context needed to understand the structure around the resource and what actions might need to be taken.
 
-Within this view you can navigate the relationships by clicking on the related resources. When a resource clicked, the Resource Detail view will navigate to the selected resource to give you the details needed to understand that context.
+Within this view you can navigate the relationships by clicking on the related resources. When a resource is clicked, the Resource Detail view navigates to the selected resource to give you the details needed to understand that context.
 
 Policy violations are indicated on the Resource Structure graph to quickly highlight when an insight has been detected and what related nodes are affected.
 
