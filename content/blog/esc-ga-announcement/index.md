@@ -87,7 +87,7 @@ Since the launch of Pulumi ESC in preview, over the last 11 months, we have laun
 - [**Pulumi OIDC Trust relationship**](/blog/oidc-trust-relationships/) to get Pulumi short-term credentials using your existing Identity provider 
 - [**Projects and Environment Tags**](/blog/esc-projects-environment-tags-launch/) to help you organize your Pulumi ESC environments and allow them to scale as your organization evolves 
 - [**1Password integration**](/blog/pulumi-esc-public-preview-for-1password-support/) to pull secrets stored in 1Password during runtime 
-- [**In-built Document Editor Enhancements**](blog/esc-editor-enhancements/) to ease authoring with Pulumi Cloud
+- [**In-built Document Editor Enhancements**](/blog/esc-editor-enhancements/) to ease authoring with Pulumi Cloud
 - [**Table Editor**](/blog/esc-key-value-table-editor-launch/) to support users who prefer point-and-click UI-driven method to secrets management 
 - [**Pulumi Stack reference provider**](/docs/esc/integrations/infrastructure/pulumi-iac/pulumi-stacks/) offering tighter integration with Pulumi IaC 
 - [**Files**](/blog/esc-kubernetes-cluster-and-app/) support that allows getting Kubernetes credentials dynamically 
@@ -95,7 +95,7 @@ Since the launch of Pulumi ESC in preview, over the last 11 months, we have laun
 
 ## Pricing 
 
-Starting October 1st, 2024, Pulumi ESC will be billed as follows, with the first payment due November 1st, 2024. We are offering free secrets and API calls, depending on your Pulumi Cloud Edition, to help you get started.
+Starting <b>October 1st, 2024</b>, Pulumi ESC will be billed as follows, with the first payment due November 1st, 2024. To help you get started, we are offering free secrets and API calls, depending on your Pulumi Cloud Edition.
 
 |                     | Free            | Team           | Enterprise        | Business Critical |
 |---------------------|-----------------|----------------|-------------------|-------------------|
