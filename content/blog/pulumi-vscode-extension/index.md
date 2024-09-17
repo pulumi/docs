@@ -50,7 +50,7 @@ Pulumi automatically generates a debug configuration for the current stack, maki
 
 <img width="600" src="iac-debugging.png" alt="Debugging" />
 
-You can now step through your code, set breakpoints on resource constructors or inside `apply` callbacks, and see the callstack and the values of variables within the VS Code debugger. 
+You can now step through your code, set breakpoints on resource constructors or inside `apply` callbacks, and see the callstack and the values of variables within the VS Code debugger.
 
 ### Create a Launch Configuration
 
