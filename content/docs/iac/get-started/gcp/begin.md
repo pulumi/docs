@@ -18,7 +18,7 @@ aliases:
 
 Before you get started using Pulumi, let's run through a few quick steps to ensure your environment is set up correctly.
 
-### Install Pulumi
+## Install Pulumi
 
 {{< install-pulumi >}}
 {{% notes "info" %}}
@@ -28,9 +28,9 @@ All Windows examples in this tutorial assume you are running in PowerShell.
 
 Next, install the required language runtime, if you have not already.
 
-### Install Language Runtime
+## Install Language Runtime
 
-#### Choose Your Language
+### Choose Your Language
 
 {{< chooser language "javascript,typescript,python,go,csharp,java,yaml" / >}}
 
@@ -60,7 +60,7 @@ Next, install the required language runtime, if you have not already.
 
 Finally, configure Pulumi with Google Cloud.
 
-### Configure Pulumi to access your Google Cloud account
+## Configure Pulumi to access your Google Cloud account
 
 Pulumi requires cloud credentials to manage and provision resources. You must use an IAM user or service account that has **Programmatic access** with rights to deploy and manage your Google Cloud resources.
 
