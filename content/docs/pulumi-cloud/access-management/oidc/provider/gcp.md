@@ -103,7 +103,7 @@ For environments within the legacy `default` project, the project will **not** b
 
 {{< /notes >}}
 
-You can learn more about setting up OIDC for Pulumi ESC by referring to the [relevant Pulumi documentation](/docs/pulumi-cloud/esc/providers/#setting-up-oidc).
+You can learn more about setting up OIDC for Pulumi ESC by referring to the [relevant Pulumi documentation](/docs/pulumi-cloud/access-management/oidc/).
 
 {{< notes type="warning" >}}
 

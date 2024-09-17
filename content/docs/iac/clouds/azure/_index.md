@@ -13,7 +13,7 @@ menu:
 cloud_overview: true
 description: Build infrastructure on Azure using TypeScript, Python, Go, C#, Java or YAML. The Azure Native provider is always up-to-date and covers 100% of the resources in Azure Resource Manager (ARM).
 get_started_guide:
-  link: get-started/
+  link: /docs/iac/get-started/azure/
   icon: azure
 providers:
   description: We recommend using the Azure Native provider to provision Azure infrastructure. Azure Classic has fewer resources and resource options and receives new features more slowly.
