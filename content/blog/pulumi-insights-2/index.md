@@ -31,7 +31,7 @@ The updated Resources page provides a customizable experience for grouping, filt
 
 **Grouping:** To group by a particular column, drag and drop the column header to the grouping control in the top left of the grid. You can group by multiple columns and can control the order of the grouping by reordering them in the grouping control. Grouping enables you to factor your resources in different ways to help you understand the scope and uncover issues within your infrastructure.
 
-![Grouping](grouping.mov)
+![Grouping](grouping.mp4)
 
 **Filtering:** Adding filters to each column can be done by selecting the filter icon in the column header. A filter dialog will be displayed based on the type of data present in the column. Adding a column filter will add the specific filter to the Resource Search query enabling you to use the grid as a form of query builder.
 
