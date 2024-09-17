@@ -1,42 +1,43 @@
 ---
 title: "Introducing Pulumi Insights 2.0"
-date: 2024-09-16T16:29:14-07:00
+date: 2024-09-18T9:00:00-00:00
 draft: false
-meta_desc: Insights 2.0 brings a significantly updated set of automation and visualization tools to help you quickly gain visibility and control of your infrastructure. 
+meta_desc: Pulumi Insights 2.0 brings the power of a new suite of Insights tools to all of your cloud infrastructure, not just the infrastructure managed by Pulumi IaC.
+
 meta_image: meta.png
 authors:
-    - luke-hoban
+    - craig-symonds
 tags:
     - insights
 ---
 
-Since the launch of Pulumi Cloud Insights, we have seen significant growth in usage. Customers have used each of the tools to gain valuable insights into their IaC infrastructure through both the flexibility of [Resource Search](https://www.pulumi.com/blog/resource-search/) and the power of [Pulumi CrossGuard](https://www.pulumi.com/crossguard/). With Insights 2.0 we are significantly expanding the set of automation and visualization tools to quickly gain visibility, insight and control and improve the Security, Compliance and Efficiency of your infrastructure.
+Pulumi Insights 2.0 brings the power of Insights to all of your cloud infrastructure, not just the infrastructure managed by Pulumi IaC. Insights 2.0 also brings an exciting new suite of tools that make it easy to discover your entire infrastructure, gain insights over it, assess security of it, and bring it under management of IaC if needed.
 
 <!--more-->
 
-Insights 2.0 builds on the previous generation of tools to provide a range of new capabilities:
+Today we are outling our vision for Pulumi Insights 2.0, and the features that are part of Insights 2.0 will be released over the coming weeks and months. Sign up for the [private preview](http://pulumi.com/product/waitlist) to get early access.
 
-* Expands Pulumi Providers to enable scanning and import of your entire infrastructure state into the Pulumi Data Graph  
-* Adds Explorers, Structure Graphs and Dashboards for visualizing, understanding and managing your entire infrastructure  
-* Extends CrossGuard PaC to discover and auto remediate insights into Security, Compliance and Efficiency  
-* Integrates Pulumi IaC for enterprise class remediation and management  
-* Brings CoPilot AI to your entire infrastructure for intelligent insight discovery and analysis
+Since the launch of Pulumi Insights customers have used these tools to gain valuable insights into their IaC platform through both the flexibility of [Resource Search](https://www.pulumi.com/blog/resource-search/) and the power of [Pulumi CrossGuard](https://www.pulumi.com/crossguard/). Insights 2.0 builds on this previous generation of tools to provide a range of new capabilities:
 
-![Component Summary](component-summary.png)
+* Brings visibility to your entire infrastructure by enabling you to scan and import all of your resources into Pulumi Insights
+* Adds rich new visual explorers, structure graphs and dashboards for understanding and managing your entire infrastructure
+* Extends Pulumi CrossGuard to discover and remediate insights into Security, Compliance and Efficiency  
+* Integrates Pulumi IaC to make it easy to incrementally bring your infrastructure under management with Pulumi IaC in just a few clicks
+* Brings Pulumi Copilot to your entire infrastructure for intelligent insight discovery and analysis
 
 ## Resources 2.0
 
-The updated Resources page provides a customizable experience for grouping, sorting, filtering and visualizing your resources to help you manage the scope and find insights about your infrastructure.
-
-**Sorting:** Clicking on the column header enables you to sort the selected column in ascending order. Clicking again switches it to descending order and clicking a third time removes the sorting. Multiple column sorts can be done with the sort precedence being based on the order the columns we last clicked on.  
-
-**Filtering:** Adding filters to each column can be done by selecting the first icon in the column header. A filter dialog will be displayed based on the type of data present in the column. If the data is made up of unique values, like the Name field, then a standard search text box is presented. If it is a date, then the date range selection dialog is presented. Otherwise you are presented with the list of unique values in the column where you can select multiple to filter with. Adding a column filter will add the specific filter to the Resource Search query enabling you to use the grid as a form of query builder.
-
-![Filtering](filtering.png)
+The updated Resources page provides a customizable experience for grouping, filtering, sorting and visualizing your resources to help you manage scope and find insights about your infrastructure.
 
 **Grouping:** To group by a particular column, drag and drop the column header to the grouping control in the top left of the grid. You can group by multiple columns and can control the order of the grouping by reordering them in the grouping control. Grouping enables you to factor your resources in different ways to help you understand the scope of your infrastructure and find insights for future investments.
 
 ![Grouping](grouping.mov)
+
+**Filtering:** Adding filters to each column can be done by selecting the filter icon in the column header. A filter dialog will be displayed based on the type of data present in the column. Adding a column filter will add the specific filter to the Resource Search query enabling you to use the grid as a form of query builder.
+
+![Filtering](filtering.png)
+
+**Sorting:** To sort your resources by a particular column, you can clicking on the column header to sort in ascending order and clicking again switches it to descending order.
 
 **Column Selection:** To add or remove columns from the grid, select the ‘Choose Columns’ menu item from the column menu selector. This presents a pop up to allow you to add, remove or rearrange the order of columns in the grid.
 
@@ -62,9 +63,7 @@ Policy violations are indicated on the Resource Structure graph to quickly highl
 
 ## User Customizable Dashboard
 
-***Coming Soon***
-
-Pulumi Cloud will provide a rich, user customizable dashboard that enables you to define rolled up views of any aspect of your infrastructure. This provides a powerful overview of your infrastructure and lets you easily track progress of any project.
+Pulumi Cloud will provide a rich, user customizable dashboard that enables you to define views of any aspect of your infrastructure. This provides a powerful overview of your infrastructure and lets you easily track progress of any project.
 
 The dashboard supports defining multiple pages so you can create separate dashboards for each application, each department, or any configuration that maps to your configuration.
 
@@ -73,8 +72,6 @@ Each dashboard page enables you to add, remove, rearrange and create new cards. 
 ![Dashboard](dashboard.png)
 
 ## Infrastructure Account Scanning
-
-***Coming Soon***
 
 We are excited to introduce Infrastructure Account Scanning (IAS). IAS fundamentally transforms Pulumi Cloud into a rich Asset Management and Insights platform that brings all of the Pulumi Insights capabilities to your entire infrastructure. With IAS, Pulumi can scan your entire infrastructure, even resources that are not IaC managed, and keep them up to date with any changes. This enables you to leverage all of the Insights 2.0 tools like, the Resource Explorer with Resource Structure Graphs, Pulumi CrossGruard with Auto Remediation and the Policy Violations Explorer, and the User Customizable Dashboard to manage your entire infrastructure.
 
@@ -86,8 +83,6 @@ With IAS Account management you can quickly configure how Pulumi Cloud is enable
 
 ## Auto Remediation
 
-***Coming Soon***
-
 Insights 2.0 provides you the tools needed to understand your infrastructure and find the insights needed to enable you to define the strategic projects that move your infrastructure forward. However, in addition to these tools for finding the insights, Pulumi Cloud also gives you the context and tools needed to remediate the issues.
 
 When a policy violation occurs for a given resource and that policy is an ([Auto Remediation](https://www.pulumi.com/blog/remediation-policies/)) policy, a ‘Remediate’ button will be displayed in the Resource Details page. When selected, the Remediate button will run the remediation and show a diff of the infrastructure changes that will be applied in order to remediate targeted insight. If approved, Pulumi Cloud will apply the changes defined by the diff to your infrastructure using the associated Pulumi Providers.
@@ -97,8 +92,6 @@ Any change made through the Remediation flow will be tracked and auditable using
 ![Remediation](remediation.png)
 
 ## Goto Definition
-
-***Coming Soon***
 
 For any resource that is Pulumi IaC managed, the Resource Details page will contain a link to the file and line of code in your source code provider that defines the given resource.
 
@@ -110,9 +103,9 @@ Selecting this link will take you to the file and line making it easy for you to
 
 ## Resource Query Import
 
-Being able to browse your entire infrastructure and find the insights needed to move your platform forward enables you to understand and build strategic plans around your infrastructure. However, leveraging Pulumi IaC for managing your resources gives you the best in class tools for creating, updating and refactoring your resources to ensure your infrastructure is delivering on your strategic goals. With Insights 2.0, you can levarage the Insights 2.0 tools to create queries that define a block or resources you would like to import into IaC significantly simplifying the process.
+Being able to browse your entire infrastructure and find the insights needed to move your platform forward enables you to understand and build strategic plans around your infrastructure. However, leveraging Pulumi IaC for managing your resources gives you the best in class tools for creating, updating and refactoring your resources to ensure your infrastructure is delivering on your strategic goals. Insights 2.0 significantly simplifies the process of migrating your resources to IaC management by making it easy to find the resources needed and create resource queries to define those groups.
 
-The Pulumi cli import command will now support passing a Resource Query as a parameter. The results of this query will be used to get the resource IDs and types needed to be able to import the resources into your IaC program. The result of the command is the source code needed to construct each of the resources defined by the query.
+The Pulumi cli import command will now support passing a Resource Query as a parameter, simplifying the process of finding, grouping and importing the resources you want. The results of this query will be used to get the resource IDs and types needed to be able to import the resources into your IaC program. The result of the command is the source code needed to construct each of the resources defined by the query.
 
 ```shell
 pulumi import \-q ‘.volumeType:Standard’
