@@ -16,6 +16,7 @@ menu:
 aliases:
   - /docs/guides/self-hosted/
   - /docs/pulumi-cloud/self-hosted/
+  - /docs/pulumi-cloud/admin/self-hosted/
 ---
 
 {{% notes type="info" %}}

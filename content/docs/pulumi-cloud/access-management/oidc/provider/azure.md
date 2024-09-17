@@ -221,7 +221,7 @@ Make sure to replace `<your-org>`, `<your-project>`, and `<your-environment>` wi
 }
 ```
 
-To learn more about how to set up and use the various providers in Pulumi ESC, please refer to the [relevant Pulumi documentation](/docs/pulumi-cloud/esc/providers/)
+To learn more about how to set up and use the various providers in Pulumi ESC, please refer to the [relevant Pulumi documentation](/docs/esc/integrations/)
 
 ## Automate OIDC Configuration
 
