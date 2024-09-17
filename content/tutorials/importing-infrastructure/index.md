@@ -24,11 +24,7 @@ weight: 999
 
 # A brief summary of the tutorial. It appears at the top of the tutorial page. Markdown is fine.
 summary: |
-    Most infrastructure as code projects require working with existing cloud resources, whether those resources were originally created with another Infrastructure as Code (IaC) tool or manually provisioned with a cloud provider console or CLI.
-
-    Interacting with a previously created cloud resource with Pulumi typically happens in one of two ways. The first way is by referencing the properties of the existing cloud resource in order to use those properties to configure a Pulumi-managed resource. This first scenario is sometimes called _coexistence_, and you can learn more about it in [Adopting Pulumi > Coexistence documentation](/docs/using-pulumi/adopting-pulumi/#coexistence).
-    
-    The second way is by adopting the existing resource to bring it under management by Pulumi. This second scenario is called _adoption_ or _import_, and it is this scenario that will be covered in this tutorial.
+    Most infrastructure as code projects require working with existing cloud resources, whether those resources were originally created with another Infrastructure as Code (IaC) tool or manually provisioned with a cloud provider console or CLI. In this tutorial, you will learn how to import your existing resources to bring it under the management of Pulumi.
 
 # A list of three to five things the reader will have learned by the end of the tutorial.
 youll_learn:
@@ -58,7 +54,7 @@ To start, login to the [AWS Console](https://console.aws.amazon.com/s3) and [cre
 
 {{< video title="Running the pulumi login command with access token" src="/tutorials/importing-infrastructure/aws-console-create-s3-bucket.mp4" autoplay="true" loop="true" >}}
 
-Then login to the [Pulumi CLI](/docs/cli/commands/pulumi_login/) and ensure it is [configured to use your AWS account](/docs/clouds/aws/get-started/begin/#configure-pulumi-to-access-your-aws-account). Next, [create a new project](/docs/clouds/aws/get-started/create-project/) and stack for the S3 bucket resource to live in.
+Then, login to the [Pulumi CLI](/docs/cli/commands/pulumi_login/) and ensure it is [configured to use your AWS account](/docs/clouds/aws/get-started/begin/#configure-pulumi-to-access-your-aws-account). Next, [create a new project and stack](/docs/clouds/aws/get-started/create-project/) that will be used to hold the resource definition for your imported resources.
 
 ```bash
 # Example using Python
@@ -71,11 +67,15 @@ This tutorial will define the S3 bucket resource using the AWS Classic provider,
 
 ## Importing a resource
 
-In Pulumi, there are three paths to take when importing resources. Pulumi allows you to import resources from any currently existing system with either (1) the `pulumi import` CLI command or (2) an import option in the code. Alternately, you can bulk import resources from anywhere with a special JSON file and the `pulumi import` CLI command. The CLI command also offers a resource definition that you can add to your Pulumi program to manage the resource going forward.
+In Pulumi, there are three paths to take when importing resources:
+
+- the `pulumi import` CLI command for individual resources
+- the `pulumi import` CLI command with a special JSON file for bulk import
+- an import option in your Pulumi program code.
 
 ### Import using the CLI
 
-The `pulumi import` command looks up the resource using the specified type token and resource identifier, adds the resource to the stack's current state, and emits the code required to manage the resource with Pulumi from that point forward. This option requires the least manual effort, so it is generally recommended, and is best suited to projects consisting consisting of only one stack.
+The `pulumi import` command looks up the resource using the specified type token and resource identifier, adds the resource to the stack's current state, and emits the code required to manage the resource with Pulumi from that point forward. This option requires the least manual effort, so it is generally recommended and best suited to projects consisting consisting of only one stack.
 
 To import an existing cloud resource with the Pulumi CLI, use the following syntax:
 
@@ -83,15 +83,15 @@ To import an existing cloud resource with the Pulumi CLI, use the following synt
 $ pulumi import <type> <name> <id>
 ```
 
-* The first argument, `type`, is the Pulumi type token to use for the imported resource. You can find the type token for a given resource by navigating to the Import section of the resource's API documentation in the [Pulumi Registry](/registry/). For example, the type token of an [Amazon S3 Bucket](/registry/packages/aws/api-docs/s3/bucket/#import) resource is `aws:s3/bucket:Bucket`.
+- The first argument, `type`, is the Pulumi type token to use for the imported resource. You can find the type token for a given resource by navigating to the Import section of the resource's API documentation in the [Pulumi Registry](/registry/). For example, the type token of an [Amazon S3 Bucket](/registry/packages/aws/api-docs/s3/bucket/#import) resource is `aws:s3/bucket:Bucket`.
 
-* The second argument, `name`, is the [resource name](/docs/concepts/resources/names) to apply to the resource once it's imported. The generated code will use this name for the resource declaration (the first parameter in any resource), so like all Pulumi resource names, it must be unique among all resources for this type within the scope of the containing project. (That is, you may have an S3 bucket and a VPC named `foo`, but you cannot have two S3 buckets named `foo`.)
+- The second argument, `name`, is the [resource name](/docs/concepts/resources/names) to apply to the resource once it's imported. The generated code will use this name for the resource declaration (the first parameter in any resource), so like all Pulumi resource names, it must be unique among all resources for this type within the scope of the containing project. (That is, you may have an S3 bucket and a VPC named `foo`, but you cannot have two S3 buckets named `foo`.)
 
-* The third argument, `id`, corresponds to the value you would use in Pulumi to lookup the resource in the cloud provider. This value should correspond to the designated `lookup property` specified in the Import section of the resource's API documentation in the Registry. In the case of an AWS S3 bucket, this would be the `bucket` property.
+- The third argument, `id`, corresponds to the value you would use in Pulumi to lookup the resource in the cloud provider. This value should correspond to the designated `lookup property` specified in the **Import** section of the resource's API documentation in the Registry. In the case of an AWS S3 bucket, this would be the `bucket` property.
 
   ![Import section of API documentation](pulumi-import-import-section.png)
 
-  If you scroll to the [`bucket` property](/registry/packages/aws/api-docs/s3/bucket/#bucket_python) section of the API documentation, you will see that this translates to the name of the bucket.
+  If you scroll to the [`bucket` property](/registry/packages/aws/api-docs/s3/bucket/#bucket_python) section of the API documentation, you will see that this lookup property translates to the name of the bucket.
 
   ![Bucket property in property table in API documentation](pulumi-import-bucket-property.png)
 
@@ -210,7 +210,7 @@ To start, return to the AWS console and create two additional S3 buckets.
 
 ![Additional S3 buckets](pulumi-import-additional-buckets.png)
 
-Next, return to your program folder and create a new file called `resources.json`. Inside of this file, copy and paste the following JSON object, making sure to replace the value of `id` with the actual names of your S3 buckets in your environment:
+Next, return to your program folder and create a new file called `resources.json`. Inside of this file, copy and paste the following JSON object, making sure to replace the values of the `id` parameters with the actual names of your S3 buckets in your environment:
 
 ```json
 {
@@ -279,4 +279,16 @@ You only need to copy over the resource definitions of the two buckets and not t
 
 ### Import using code
 
-TBD
+The third method to import existing cloud resources into a Pulumi project is by defining the resource code yourself and configuring the [`import` resource option](/docs/iac/concepts/options/import/) in the resource's definition. This approach may be better suited for scenarios that require importing multiple resources of the same type across multiple stacks and/or deployment environments.
+
+To demonstrate, you will start by creating a simple IAM role in the AWS Console. For the purposes of this tutorial, you can follow the steps in AWS's [Creating an execution role in the IAM console guide](https://docs.aws.amazon.com/lambda/latest/dg/lambda-intro-execution-role.html#permissions-executionrole-console) to create your IAM role resource. When doing so, select the **AWSLambdaDynamoDBExecutionRole** managed policy on the **Add permissions** page and enter **pulumi-tutorial-iam-role** for the role name.
+
+Once that is complete, you will need to identify the lookup property (e.g. the `id`) of the IAM role resource. To do so, navigate to the **Import** section of the [AWS IAM Role resource page](https://www.pulumi.com/registry/packages/aws/api-docs/iam/role/#import) in the Pulumi documentation. You will notice that the lookup property is the `name`, which corresponds to the name of the IAM role.
+
+Now, navigate to your program code file and update the code with the following resource definition:
+
+{{< example-program path="aws-import-iac-iam-role" >}}
+
+As you can see, the name of the IAM role, in this case `pulumi-tutorial-iam-role`, has been provided as the value of the `import` option in the resource definition. It is important to note than when defining resources that you want to import, the resource definition must match all properties of the existing resource.
+
+At this point, the definition for the imported resources has only been written, meaning it has not yet been imported into your project's state and is therefore not yet under management by Pulumi. To complete the import process using this method, you will need to save your file and run the `pulumi up` command.
