@@ -45,7 +45,7 @@ values:
 
 The `sync` block defines the secrets and configuration values to be synced. In this example, we are syncing values to AWS Secrets Manager. The `value` field contains the actual values to be synced, while the `name` field specifies the name of the secret in AWS Secrets Manager.
 
-To automate the synchronization process, we define a Pulumi program that creates an Pulumi ESC environment, Pulumi IaC stack, and Pulumi [deployment](/docs/pulumi-cloud/deployments/) settings for the target stack. We then define a set of pre-run commands that extract the values from the environment and set them as configuration values in the target stack. The `syncCronSchedule` variable specifies how often the synchronization process should run.
+To automate the synchronization process, we define a Pulumi program that creates a Pulumi ESC environment, Pulumi IaC stack, and Pulumi [deployment](/docs/pulumi-cloud/deployments/) settings for the target stack. We then define a set of pre-run commands that extract the values from the environment and set them as configuration values in the target stack. The `syncCronSchedule` variable specifies how often the synchronization process should run.
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
