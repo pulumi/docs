@@ -1,8 +1,8 @@
 ---
-title: "A single source of truth: Pushing ESC secrets into external platforms"
+title: "Pushing ESC secrets into external platforms"
 date: 2024-09-17T00:00:00-03:00
 draft: false
-meta_desc: "Pulumi ESC Webhooks enable you to automate workflows, trigger actions, and streamline the management of your infrastructure and applications"
+meta_desc: "Sync secrets and configuration values across external platforms using Pulumi ESC and Infrastructure as Code."
 meta_image: "meta.png"
 authors:
   - komal-ali
