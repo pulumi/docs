@@ -75,7 +75,7 @@ The Pulumi ESC integration in the Pulumi VS Code extensions makes this easy. You
 
 From the primary sidebar, open the "Pulumi ESC Explorer" view and click "Login" to authenticate to Pulumi Cloud. Once logged in, you'll see a tree of your organizations and environments.
 
-<img width="400" src="esc_demo.gif" alt="Pulumi ESC integration" />
+![Pulumi ESC extension demo](esc_demo.gif)
 
 ### Key Capabilities
 
