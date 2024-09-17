@@ -69,7 +69,7 @@ Hear from our customers directly what they had to say about Pulumi ESC:
 “With Pulumi ESC, our developers get dynamic AWS/GCP credentials on-demand; that <b>removes the need for long-lived tokens</b> and enhances security. ESC allows for Pulumi programs to share secure credentials and access secrets in their given cloud environments. ESC is a great configuration ‘/and secrets management sharing tool to allow for a DRY (Don't Repeat Yourself) approach to development,” says <b>Richard Genthner, Lead DevOps Engineer at Boost Insurance</b>.
 </i>
 
-Watch the demo from our [PulumiUP Keynote](https://www.pulumi.com/pulumi-up/) that walks you through how to achieve all these benefits our customers have experienced.
+Watch the snippet from our [PulumiUP Keynote](https://www.pulumi.com/pulumi-up/) that walks you through how to achieve all these benefits our customers have experienced. [Sign-up](https://conference.pulumi.com/schedule/?utm_source=PulumiUp&utm_medium=web&utm_campaign=FY2025Q1_Event_PulumiUP) here to watch the full keynote. 
 
 <span style="color:red">**Add Meagan's Demo video**</span>
 
