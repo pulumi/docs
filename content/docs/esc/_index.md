@@ -93,6 +93,9 @@ sections:
     primary_button_link: /docs/esc/cli/
     secondary_button_label: Install
     secondary_button_link: /docs/esc/download-install/
+  - heading: Dynamic Login Credentials
+    description: Support for short-lived OIDC login credentials for popular cloud providers.
+    link: /docs/esc/integrations/dynamic-login-credentials/
   - heading: Dynamic Secrets Providers
     description: Support for dynamic configuration providers allow Pulumi ESC to integrate with secrets stored in any other provider.
     link: /docs/esc/integrations/dynamic-secrets/
