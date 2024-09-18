@@ -53,7 +53,7 @@ Pulumi ESC is the modern secret management platform designed to streamline and s
 - **Use It Your Way**: Pulumi ESC integrates seamlessly with other Pulumi products and features such as Pulumi IaC and Pulumi Deployments for a unified infrastructure management experience. But its flexibility extends to any platform or toolset, including HashiCorp Terraform.
 - **Embrace the Open Ecosystem**: We believe in freedom of choice. That's why Pulumi ESC is built on an open-source foundation (Apache 2.0 license) and designed to retrieve and synchronize secrets with various platforms seamlessly. We empower our customers to choose the best tools for their needs and supercharge their workflows with Pulumi ESC.
 
-<span style="color:red">**Add Engin Demo video**</span>
+{{< youtube q1w9E4QnbBQ >}}
 
 ## Customer Stories
 
