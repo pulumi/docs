@@ -23,7 +23,7 @@ This next-generation secrets management and orchestration service is built with 
 
 ## Challenges in Secrets Management
 
-In today's cloud-native world, secrets are the keys to the cloud estate, but managing them effectively is a growing challenge. Modern applications rely on a complex web of secrets, but traditional approaches to secrets management are struggling to keep pace. This complexity creates major challenges for security and engineering teams:
+In today's cloud-native world, secrets are the keys to the cloud estate, but managing them effectively is a growing challenge. Modern applications rely on a complex web of secrets, but traditional approaches to [secrets management](/what-is/what-is-secrets-management/) are struggling to keep pace. This complexity creates major challenges for security and engineering teams:
 
 - **Secrets Sprawl**:  Secrets scattered across numerous systems and platforms make it nearly impossible to track their usage, enforce consistent security policies, and prevent unauthorized access, significantly increasing the likelihood of a breach.
 - **Long-Lived Credentials**: Storing long-lived credentials, especially locally, creates a significant security liability. If these credentials are compromised, they can grant attackers prolonged access to sensitive systems.
