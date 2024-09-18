@@ -15,6 +15,8 @@ tags:
 ---
 
 {{% notes type="info" %}}
+You can now get Insights capabilities on all your cloud infrastructure, even resources not managed by Pulumi IaC. [Sign up for the Insights 2.0 waitlist](/blog/pulumi-insights-2/)
+
 There are new intelligent cloud management capabilities available in **Pulumi Copilot**. [Learn More](/blog/pulumi-copilot)
 {{% /notes %}}
 
