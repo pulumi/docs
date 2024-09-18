@@ -22,4 +22,4 @@ source ./scripts/ci-login.sh
 ./scripts/make-s3-redirects.sh
 
 # temporarily disable 404 checker.
-# ./scripts/detect-new-404s.sh
+./scripts/detect-new-404s.sh
