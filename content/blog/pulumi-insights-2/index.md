@@ -15,9 +15,9 @@ Pulumi Insights 2.0 brings the power of Insights to all of your cloud infrastruc
 
 <!--more-->
 
-Today we are outlining our vision for Pulumi Insights 2.0, and the features that are part of Insights 2.0 will be released over the coming weeks and months. Sign up for the [private preview](http://pulumi.com/product/waitlist) to get early access.
+Today we are outlining our vision for Pulumi Insights 2.0, and the features that are part of Insights 2.0 will be released over the coming weeks and months. Sign up for the [private preview](/product/waitlist) to get early access.
 
-Since the initial launch of Pulumi Insights, customers have used these tools to gain valuable awareness into their IaC platform resources through the flexibility of [Resource Search](https://www.pulumi.com/blog/resource-search/) and the power of [Pulumi CrossGuard](https://www.pulumi.com/crossguard/). Insights 2.0 builds on this previous generation of tools to provide a range of new capabilities:
+Since the initial launch of Pulumi Insights, customers have used these tools to gain valuable awareness into their IaC platform resources through the flexibility of [Resource Search](/blog/resource-search/) and the power of [Pulumi CrossGuard](/crossguard/). Insights 2.0 builds on this previous generation of tools to provide a range of new capabilities:
 
 * Bring visibility to your entire infrastructure by enabling you to scan and import all of your resources
 * Add rich new visual explorers, structured graphs and dashboards for understanding and managing your entire infrastructure
@@ -49,7 +49,7 @@ The updated Resources page provides a customizable experience for grouping, filt
 
 ## Policy Violations
 
-The Policy Violations page provides a comprehensive view of all policy violations across your organization, helping you maintain visibility and control over your infrastructure. See the [Policy Violations](https://www.pulumi.com/blog/centralized-policy-violations/) blog post for more information.
+The Policy Violations page provides a comprehensive view of all policy violations across your organization, helping you maintain visibility and control over your infrastructure. See the [Policy Violations](/blog/centralized-policy-violations/) blog post for more information.
 
 ## Resource Structure Graph
 
@@ -95,7 +95,7 @@ With IAS Account management you can quickly configure how Pulumi Cloud is enable
 
 Insights 2.0 provides you the tools needed to understand your infrastructure and uncover issues to ensure you can maintain a secure and efficient cloud platform. In addition to these tools, Pulumi Cloud will also give you the context and tools needed to remediate the issues.
 
-When a policy violation occurs for a given resource and that policy is an [Auto Remediation](https://www.pulumi.com/blog/remediation-policies/) policy, a ‘Remediate’ button will be displayed in the Resource Details page. When selected, the Remediate button will run the remediation and show a diff of the infrastructure changes that will be applied in order to remediate targeted insight. If approved, Pulumi Cloud will apply the changes defined by the diff to your infrastructure using the associated Pulumi Providers.
+When a policy violation occurs for a given resource and that policy is an [Auto Remediation](/blog/remediation-policies/) policy, a ‘Remediate’ button will be displayed in the Resource Details page. When selected, the Remediate button will run the remediation and show a diff of the infrastructure changes that will be applied in order to remediate targeted insight. If approved, Pulumi Cloud will apply the changes defined by the diff to your infrastructure using the associated Pulumi Providers.
 
 Any change made through the Remediation flow will be tracked and auditable using the Pulumi Audit tools to give you confidence and tracking of the changes made to your infrastructure. In addition, this Remediation flow will provide a warning if the Resource is IaC managed as this change would cause drift with the underlying IaC code. For IaC managed resources it is recommended that you use the new Goto Definition feature to jump to the IaC code for the resource to apply the necessary remediation in the code.
 
@@ -137,4 +137,4 @@ In addition to the powerful command line tools for simplifying the process of im
 
 Insights 2.0 provides you the set of tools needed to understand the chaos of modern enterprise clouds and to bring that chaos under control. The ability to scan your entire infrastructure enables you to leverage the rich visualization, remediation, and IaC migrations tools for all aspects of your infrastructure and gives you the insights needed to enable you to deliver on your strategic objectives.
 
-Sign up now to get notified of early [private previews](http://pulumi.com/product/waitlist) of all of the upcoming Insights 2.0 features!
+Sign up now to get notified of early [private previews](/product/waitlist) of all of the upcoming Insights 2.0 features!
