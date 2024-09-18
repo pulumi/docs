@@ -231,10 +231,10 @@ package main
 import (
 	"context"
 	"fmt"
+	"log"
 	"github.com/pulumi/pulumi/sdk/v3/go/auto"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/tokens"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/workspace"
-	"log"
 )
 
 func main() {
@@ -263,35 +263,32 @@ func main() {
 
 	// Add environments to the stack's configuration.
 	// This is like adding them to the `imports` section of an ESC environment.
-	err = stack.SetAllConfig(ctx, auto.ConfigMap{
-		"env1": auto.ConfigValue{Value: "env1"},
-		"env2": auto.ConfigValue{Value: "env2"},
-	})
+	err = stack.AddEnvironments(ctx, "env1", "env2")
 	if err != nil {
 		log.Fatalf("Failed to add environments: %v", err)
 	}
 	// The stack's configuration now includes `env1` and `env2`.
 
 	// List the environments associated with the stack.
-	config, err := stack.GetAllConfig(ctx)
+	envs, err := stack.ListEnvironments(ctx)
 	if err != nil {
 		log.Fatalf("Failed to list environments: %v", err)
 	}
-	fmt.Println("Current environments:", config) // Output: map[env1:{env1} env2:{env2}]
+	fmt.Println("Current environments:", envs) // Output: map[env1:{env1} env2:{env2}]
 
 	// Remove an environment from the stack's configuration.
-	err = stack.RemoveConfig(ctx, "env1")
+	err = stack.RemoveEnvironment(ctx, "env1")
 	if err != nil {
 		log.Fatalf("Failed to remove environment: %v", err)
 	}
 	// The stack's configuration now only includes `env2`.
 
 	// List the environments again to confirm the removal.
-	updatedConfig, err := stack.GetAllConfig(ctx)
+	envs, err = stack.ListEnvironments(ctx)
 	if err != nil {
 		log.Fatalf("Failed to list environments: %v", err)
 	}
-	fmt.Println("Updated environments:", updatedConfig) // Output: map[env2:{env2}]
+	fmt.Println("Updated environments:", envs) // Output: map[env2:{env2}]
 }
 ```
 
