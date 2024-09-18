@@ -132,7 +132,7 @@ comparison_table:
                     - content: Unlimited
                     - content: Unlimited
                     - content: Unlimited
-                - title: Concurrent updates
+                - title: Concurrent stack updates
                   items:
                     - content: 1
                     - content: 5
@@ -353,7 +353,7 @@ comparison_table:
                     - content: _blank
                     - content: _check
                     - content: _check
-                - title: Concurrency limit
+                - title: Concurrent deployments limit
                   items:
                     - content: 1
                     - content: 5
