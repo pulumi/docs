@@ -95,7 +95,7 @@ Since the launch of Pulumi ESC in preview, over the last 11 months, we have laun
 
 ## Pricing 
 
-Starting <b>October 1st, 2024</b>, Pulumi ESC will be billed as follows, with the first payment due November 1st, 2024. To help you get started, we are offering free secrets and API calls, depending on your Pulumi Cloud Edition.
+Starting <b>October 1st, 2024</b>, Pulumi ESC will be billed per secret. We have heard from customers that this is a familiar pricing dimension that aligns to the value customers get out of ESC. To help you get started, we have included a generous free tier of secrets and API calls.
 
 |                     | Free            | Team           | Enterprise        | Business Critical |
 |---------------------|-----------------|----------------|-------------------|-------------------|
