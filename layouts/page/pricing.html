@@ -126,7 +126,7 @@
             <h3>{{ .header }}</h3>
             <ul class="list-none pl-0 space-y-4">
                 {{ range .tables }}
-                    <li class="accordion-item card px-8 text-2xl py-3">
+                    <li class="accordion-item card md:px-8 text-2xl py-3">
                         {{ partial "accordian-header" (dict "text" .header "subheader" .subheader "large_header" true "arrow_open" true) }}
                         <div class="accordion-item-body-no-animation text-base">
                             <div id="fundamentals" class="pricing-compare-plans-table">
