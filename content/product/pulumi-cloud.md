@@ -63,7 +63,7 @@ products:
           details:
             - title: Fully-managed, single source of truth
               description: |
-                Store your infrastructure’s state for any cloud in Pulumi's secure backend, which has built-in scaling, availability, and fault tolerance. You also get access to granular access controls, CICD integrations, SAML/SCIM, audit logging, and more. 
+                Pulumi Cloud is a fully managed service for [infrastructure as code](/what-is-infrastructure-as-code/). Store your infrastructure’s state for any cloud in Pulumi's secure backend, which has built-in scaling, availability, and fault tolerance. You also get access to granular access controls, CICD integrations, SAML/SCIM, audit logging, and more. 
 
               more_info: |
                 Allow developers to safely deploy in parallel with concurrent state-locking.
@@ -72,7 +72,7 @@ products:
 
             - title: Manage infrastructure secrets and configuration
               description: |
-                Use built-in secrets management for encrypted data such as credentials or tokens. Store and manage collections of config in [Pulumi ESC](/product/esc) into environment groupings.
+                Use built-in [secrets management](/what-is/what-is-secrets-management/) for encrypted data such as credentials or tokens. Store and manage collections of config in [Pulumi ESC](/product/esc) into environment groupings.
 
               more_info: |
                 Your infrastructure [state is encrypted](/docs/concepts/state/#state-encryption) in transit and at rest.
@@ -188,7 +188,7 @@ products:
                 Automatically block deployments that violate your organization's policies.
             - title:  Enterprise compliance enforcement
               description: |
-                Business Critical customers can enforce compliance and remediate non-compliance using Pulumi provided policies across your organization.
+                Business Critical customers can enforce [compliance](/compliance/) and remediate non-compliance using Pulumi provided policies across your organization.
 
               more_info: |
                 Choose from hundreds of policies for AWS, Azure, Google Cloud, and Kubernetes. Support for PCI DSS, ISO 27001, SOC 2, and CIS Benchmarks.
