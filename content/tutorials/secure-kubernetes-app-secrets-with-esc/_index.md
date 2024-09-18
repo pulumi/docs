@@ -1,6 +1,6 @@
 ---
-title_tag: Secure Your Kubernetes Application Secrets with Pulumi ESC | Learn Pulumi
-title: "Secure Your Kubernetes Application Secrets with Pulumi ESC"
+title_tag: Secure Kubernetes Application Secrets with Pulumi ESC | Learn Pulumi
+title: "Secure Kubernetes Application Secrets with Pulumi ESC"
 layout: single
 description: |
     Securely manage secrets and configurations in a Kubernetes app with Pulumi ESC.
@@ -16,6 +16,8 @@ youll_learn:
 prereqs:
     - Completion of the Kubernetes [Getting Started](/docs/iac/get-started/kubernetes/) guide or familiarity with the basics of the Pulumi workflow
     - A [Pulumi Cloud account](https://app.pulumi.com/signup)
+    - Install and configure [Kubectl CLI](https://kubernetes.io/docs/reference/kubectl/overview)
+    - Install and configure [Minikube](https://minikube.sigs.k8s.io/docs/start)
 estimated_time: 15
 ---
 
@@ -278,4 +280,4 @@ To dive deeper into using Pulumi ESC for advanced scenarios, check out the follo
 
 - **Environment Composition**: Learn more about to effectively compose multiple environments to manage configurations across your infrastructure. Explore the [Pulumi documentation on environment imports](/docs/esc/environments/imports/).
 
-- **Managing Secrets**: Discover more about securely managing and rotating secrets with Pulumi ESC, ensuring sensitive information is handled correctly across different environments. Read more in the [Pulumi ESC documentation](/docs/esc/).
+- **Managing Secrets**: Learn how to securely manage and adopt dynamic, short-lived secrets on demand using Pulumi ESC, ensuring sensitive information is protected across different environments. Read more in the [Pulumi ESC documentation](/docs/esc/).
