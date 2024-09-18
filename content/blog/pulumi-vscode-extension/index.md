@@ -1,6 +1,6 @@
 ---
 title: "Announcing the Pulumi Visual Studio Code Extension"
-date: 2024-09-18
+date: 2024-09-18T8:56:00-00:00
 meta_desc: "Enhance your Pulumi development experience with the new VS Code extension. Manage Pulumi IaC and Pulumi ESC directly in your editor."
 meta_image: meta.png
 authors:
