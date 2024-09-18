@@ -23,7 +23,7 @@ See our [pricing page](https://www.pulumi.com/pricing/) for details.
 
 ## What counts as a secret towards pricing?
 
-Secret includes both [static secrets](/docs/esc/get-started/store-and-retrieve-secrets/), [dynamic login credentials](/docs/esc/integrations/dynamic-login-credentials/) and [dynamic secrets](/docs/esc/integrations/dynamic-secrets/).
+Only Pulumi ESC-managed secrets count towards pricing. This includes [static secrets](/docs/esc/get-started/store-and-retrieve-secrets/), [dynamic login credentials](/docs/esc/integrations/dynamic-login-credentials/) and [dynamic secrets](/docs/esc/integrations/dynamic-secrets/).
 
 In other words,
 
@@ -36,11 +36,11 @@ The number of secrets only from the latest environment revision is counted towar
 
 Check out our [public roadmap](https://github.com/orgs/pulumi/projects/44/) page.
 
-If you are interested in a particular feature, we encourage you to create a [feature request](https://github.com/pulumi/esc/issues/new/choose) or upvote [existing open requests](https://github.com/pulumi/esc/issues).
+If you are interested in a particular feature, we encourage you to create a [feature request](https://github.com/pulumi/esc/issues/new/choose) or upvote an [existing request](https://github.com/pulumi/esc/issues).
 
-## Can I Self-host Pulumi ESC?
+## Can I self-host Pulumi ESC?
 
-Yes. [Contact sales](/contact/?form=sales) us to get a demo or trial self-hosted Pulumi ESC.
+Yes. [Contact sales](/contact/?form=sales) for a demo or trial of self-hosted Pulumi ESC.
 
 ## More FAQ
 
