@@ -20,8 +20,8 @@ prereqs:
     - Install and configure [Minikube](https://minikube.sigs.k8s.io/docs/start)
 estimated_time: 15
 collections:
-    - using-esc
-collections_weight: 1
+    - pulumi-esc
+collections_weight: 2
 ---
 
 Pulumi ESC helps you manage different environments (like development, staging, and production) while securely handling secrets and configurations. In this tutorial, you’ll create two environments: one for managing the Kubernetes infrastructure and one for application-specific configurations.

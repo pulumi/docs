@@ -1,7 +1,7 @@
 {{ define "main" }}
     {{ $id := .Path | path.Base }}
     {{ $collection := index (where .Site.Data.tutorials.collections "id" $id) 0 }}
-
+    {{ .Store.Set "collectionTitle" $collection.name }}
     <div class="flex mb-8">
         <div class="sticky top-12 max-h-75">
             <div class="xl:w-56 xl:px-4">
@@ -12,7 +12,7 @@
             <div class="max-w-5xl">
                 <div>
                     <header class="mb-6">
-                        {{ partial "tutorials/breadcrumb.html" . }}
+                        {{ partial "tutorials/breadcrumb.html" . $collection }}
                     </header>
                     <div class="inline-block">
                         <h1>{{ $collection.name }}</h1>
