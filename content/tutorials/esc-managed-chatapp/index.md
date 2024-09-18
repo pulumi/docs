@@ -54,11 +54,11 @@ estimated_time: 15
 
 ## What are we building
 
-This tutorial will walk you through making a OpenAI-based ChatGPT clone using Python.
+This tutorial will walk you through making an OpenAI-based ChatGPT clone using Python.
 
 The app will be implemented as a [Flask](https://flask.palletsprojects.com/en/3.0.x/) web app, which makes calls to the [`completions`](https://platform.openai.com/docs/guides/chat-completions) endpoint of the [OpenAI API](https://platform.openai.com/docs/overview).
 
-{{< figure src="chatapp-architecture.svg" caption="Figure: Archtecture of the chat app">}}
+{{< figure src="chatapp-architecture.svg" caption="Figure: Architecture of the chat app">}}
 
 The app has two important variables to manage: the OpenAI API Key, and the choice of model that the OpenAI backend uses.
 
