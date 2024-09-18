@@ -61,6 +61,16 @@ Policy violations are indicated on the Resource Structure graph to quickly highl
 
 ![Resources Graph](graph.png)
 
+## Goto Definition
+
+For any resource that is Pulumi IaC managed, the Resource Details page will contain a link to the file and line of code in your source code provider that defines the given resource.
+
+![Goto Definition Link](goto-definition-link.png)
+
+Selecting this link will take you to the file and line making it easy for you to quickly see and edit the IaC code for the given resource.
+
+![Goto Definition Code](goto-definition-code.png)
+
 ## User Customizable Dashboard
 
 Pulumi Cloud will provide a rich, user customizable dashboard that enables you to define views of any aspect of your infrastructure. This provides a powerful overview of your infrastructure and lets you easily track progress of any project.
@@ -91,17 +101,7 @@ Any change made through the Remediation flow will be tracked and auditable using
 
 ![Remediation](remediation.png)
 
-## Goto Definition
-
-For any resource that is Pulumi IaC managed, the Resource Details page will contain a link to the file and line of code in your source code provider that defines the given resource.
-
-![Goto Definition Link](goto-definition-link.png)
-
-Selecting this link will take you to the file and line making it easy for you to quickly see and edit the IaC code for the given resource.
-
-![Goto Definition Code](goto-definition-code.png)
-
-## Resource Query Import
+## CLI Resource Query Import
 
 Being able to browse your entire infrastructure and discover new opportunities to move your platform forward enables you to understand and build plans to move your infrastructure forward. However, leveraging Pulumi IaC for managing your resources gives you the best in class tools to ensure your infrastructure is delivering on your strategic goals. Insights 2.0 significantly simplifies the process of migrating your resources to IaC management by making it easy to find the resources needed and create resource queries to define those groups.
 
@@ -129,6 +129,12 @@ const EC2Volumevol0a789ea1874bfac61 = new aws_native.ec2.Volume("EC2Volumevol0a7
 
 ```
 
+## Visual Resource Import
+
+In addition to the powerful command line tools for simplifying the process of importing your resources into Pulumi IaC, Insights 2.0 will provide an integrated UI workflow for finding and importing resources into IaC. The workflow leverages the rich Insights explorer tools for finding and grouping your resources, then enabling you to automatically create a PR with the generated IaC code for the resource group, all with a click of a button.
+
 ## Conclusion
 
-Insights 2.0 provides you the set of tools needed to understand the chaos of modern enterprise clouds and to bring that chaos under control. The ability to scan your entire infrastructure enables you to leverage the rich visualization, remediation, and IaC migrations tools for all aspects of your infrastructure and gives you the insights needed to enable you to deliver on your strategic objectives.  
+Insights 2.0 provides you the set of tools needed to understand the chaos of modern enterprise clouds and to bring that chaos under control. The ability to scan your entire infrastructure enables you to leverage the rich visualization, remediation, and IaC migrations tools for all aspects of your infrastructure and gives you the insights needed to enable you to deliver on your strategic objectives.
+
+Sign up now to get notified of early [private previews](http://pulumi.com/product/waitlist) of all of the upcoming Insights 2.0 features!
