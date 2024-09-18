@@ -15,7 +15,7 @@ tags:
 
 At the heart of Pulumi's approach to cloud infrastructure and secrets management is a belief in empowering engineers to use the best software engineering tools to manage complexity at scale and to be maximally productive building cloud infrastructure and applications for their businesses.  
 
-Today, we're excited to announce a next big step in delivering great software engineering tools for Pulumi users, with the launch of a new **Pulumi Visual Studio Code (VS Code) Extension**.  The Pulumi VS Code Extension brings Pulumi key features for Pulumi IaC and Pulumi ESC directly into the IDE environment that many Pulumi users work in every day.  Pulumi IaC users can now debug their applications and get Pulumi YAML language support directly in VS Code. And Pulumi ESC users can now create and manage environments, secrets and configuration directly within the IDE with rich IDE features.
+Today, we're excited to announce a next big step in delivering great software engineering tools for Pulumi users, with the launch of a new **Pulumi Visual Studio Code (VS Code) Extension**.  The [Pulumi VS Code Extension](https://marketplace.visualstudio.com/items?itemName=pulumi.pulumi-vscode-tools) brings Pulumi key features for Pulumi IaC and Pulumi ESC directly into the IDE environment that many Pulumi users work in every day.  Pulumi IaC users can now debug their applications and get Pulumi YAML language support directly in VS Code. And Pulumi ESC users can now create and manage environments, secrets and configuration directly within the IDE with rich IDE features.
 
 <!--more-->
 
@@ -26,7 +26,7 @@ The following are a few examples of new capabilities available for Pulumi users 
 3. Create and explore Pulumi ESC (Environments, Secrets, and Configuration) environments
 4. Get contextual warnings and errors directly within the editor for Pulumi YAML
 
-![Pulumi VSCode Extension in Marketplace](marketplace.png)
+![Pulumi VS Code Extension in Marketplace](marketplace.png)
 
 ## Getting Started
 
@@ -88,7 +88,7 @@ You can also:
 
 - Run your application in the context of your environment by hovering over it and selecting the terminal icon
 
-<img width="400" src="run.png" alt="ESC run command in terminal" />
+<img width="600" src="run.png" alt="ESC run command in terminal" />
 
 - Delete environments by hovering over them and selecting the delete icon
 - Decrypt environments for cloning or moving
@@ -97,17 +97,19 @@ You can also:
 - Use the search icon to quickly find environments
 - Tag specific environment revisions for easy reference.
 
-<img width="400" src="tag-revision.png" alt="Revisions and tags" />
+<img width="300" src="tag-revision.png" alt="Revisions and tags" />
 
 ## Pulumi YAML Support
 
-The Pulumi VS Code Extension enhances YAML development for Pulumi, providing features that streamline the editing and validation process.
+Along with support for many popular programming languages including TypeScript, Python, Go, .NET and Java - Pulumi also supports a simple declarative YAML language for defining and managing infrastructure.  VS Code already has great support for all the other languages Pulumi supports, but for Pulumi YAML, the Pulumi VS Code Extension offers great support for working in this YAML dialect, including support for type checking, completion lists, colorization and more.
 
-### Existing Capabilities
+Building on a [Pulumi YAML Language Server Protocol (LSP)](https://github.com/pulumi/pulumi-lsp) available for use in any IDE environment, the Pulumi YAML IDE support providers a wide range of editor integrations.
 
-#### Warnings and Errors
+![Pulumi YAML VS Code](yaml.png)
 
-The Pulumi Language Server Protocol (LSP) provides contextual warnings and errors directly within the editor:
+### Type Checking
+
+The Pulumi YAML LSP provides contextual warnings and errors directly within the editor.  
 
 - Warnings: Alerts when a variable is defined but never referenced.
 - Errors:
@@ -115,11 +117,11 @@ The Pulumi Language Server Protocol (LSP) provides contextual warnings and error
   - Reference errors for non-existent variables.
   - Duplicate names for variables/resources.
 
-#### On Hover
+### Hover Tooltips
 
 Hover over a resource type token or function type token to see a popup with descriptions, helping you understand your resources and functions better.
 
-#### Completion
+### Completion Lists
 
 Experience semantic completion for:
 
