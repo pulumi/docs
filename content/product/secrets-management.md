@@ -3,20 +3,20 @@ title: "Pulumi ESC: Centralized Secrets Management & Orchestration"
 layout: secrets-management
 
 meta_title: "Pulumi ESC: Centralized Secrets Management & Orchestration"
-meta_desc: Centralized secrets management & orchestration. Easily access, share, and manage secrets securely on any cloud, using your favorite programming languages.
+meta_desc: Centralized secrets management & orchestration. Tame secrets sprawl and configuration complexity securely across all your cloud infrastructure and applications.
 meta_image: "/images/product/esc-how-it-works-diagram.png"
 aliases:
     - /esc
     - /product/esc
 
-subtitle: Easily access, share, and manage secrets securely on any cloud, using your favorite programming languages.
+subtitle: Tame secrets sprawl and configuration complexity securely across all your cloud infrastructure and applications.
 
 overview:
     header: A central hub to securely manage all of your environments, secrets, and configurations
     body: |
       - **Stop secret sprawl.** Pull and sync secrets and configuration with any secrets store – HashiCorp Vault, AWS Secrets Manager, Azure Key Vault, GCP Secret Manager, 1Password, and more – and consume in any application, tool, or CI/CD platform.  
-      - **Trust (and prove) your secrets are secure.** Lock down every environment with RBAC, versioning, and a full audit log of all changes.  
-      - **Ditch `.env` files.** No more storing secrets in plaintext on dev computers. Developers can easily access secrets via CLI, API, Kubernetes operator, the Pulumi Cloud UI, and in-code with Typescript/Javascript, Python, and Go SDKs.
+      - **Trust (and prove) your secrets are secure.** Adopt dynamic, short-lived secrets on demand as a best practice. Lock down every environment with RBAC, versioning, and a full audit log of all changes.  
+      - **Ditch `.env` files.** No more copying-and-pasting secrets or storing them in plaintext on dev computers. Developers can easily access secrets via CLI, API, Kubernetes operator, the Pulumi Cloud UI, and SDKs.
       - **Use with or without Pulumi IaC.** Use Pulumi ESC independently, or use with Pulumi IaC to support storing secrets in config in a more secure way than using plaintext.
 
 screenshot:

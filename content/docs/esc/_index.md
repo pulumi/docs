@@ -12,7 +12,7 @@ expanded_menu_ids:
 aliases:
   - /docs/pulumi-cloud/esc/
 
-meta_desc: Learn how to easily access, share, and manage secrets securely on any cloud, using your favorite programming languages with Pulumi ESC.
+meta_desc: Learn how to tame secrets sprawl and configuration complexity securely across all your cloud infrastructure and applications with Pulumi ESC.
 meta_image: /images/docs/meta-images/docs-meta.png
 h1: Pulumi ESC Docs
 description: <p>Pulumi ESC is a secrets management & orchestration service for environments, secrets, and configurations.</p>
