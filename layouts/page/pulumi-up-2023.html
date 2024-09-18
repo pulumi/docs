@@ -26,6 +26,16 @@
         </p>
     </div>
 
+    <section id="countdown" class="pt-12 mb-8">
+        <pulumi-date-countdown-circles
+            date-string="{{ .Params.event_date }}"
+            value-label-class="block font-normal"
+            container-class="flex flex-wrap justify-center items-center"
+            text-class="px-3 text-4xl m-0"
+        >
+        </pulumi-date-countdown-circles>
+    </section>
+
     <section class="container mx-auto my-20 lg:mt-16 lg:mb-8 p-4d">
         <div class="flex flex-row lg:justify-center w-full">
             <ul class="flex flex-col lg:flex-row list-none justify-center w-11/12 lg:w-max lg:border-b-2 lg:border-gray-200 pb-5">
