@@ -36,7 +36,7 @@ ai:
     subtitle: Automate infrastructure with the power of AI
     image: https://www.pulumi.com/uploads/pulumi-insights-copilot.gif
     description: |
-        Automate infrastructure management tasks through AI. You can tap into the Pulumi Copilot's deep understanding of your user and organization context to gain visibility into your team's activity, discover cost saving opportunities, get compliance, and debug cloud failures. 
+        Automate infrastructure management tasks through AI. You can tap into the Pulumi Copilot's deep understanding of your user and organization context to gain visibility into your team's activity, discover cost saving opportunities, get compliant, and debug cloud failures. 
 
 search:
     title: Search
@@ -57,7 +57,7 @@ analytics:
     subtitle: Gain deeper insights into infrastructure as code
     image: /images/product/pulumi-insights-analytics.png
     description: |
-        Identify anomalies or trends in resource usage and dig into cost, security, and compliance concerns. You can programmatically query a REST API to add automation around search results or to integrate with internal platforms and dashboards. You can export data to other data warehouses including Snowflake, Amazon Redshift, Google BigQuery and Azure Synapse. You also have built-in dashboards that give you key insights about cloud usage.
+        Identify anomalies or trends in resource usage and dig into cost, security, and [compliance](/compliance/) concerns. You can programmatically query a REST API to add automation around search results or to integrate with internal platforms and dashboards. You can export data to other data warehouses including Snowflake, Amazon Redshift, Google BigQuery and Azure Synapse. You also have built-in dashboards that give you key insights about cloud usage.
 
 pricing:
     title: Pricing
