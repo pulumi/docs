@@ -13,7 +13,7 @@
                 </p>
             </div>
             <div class="my-8 flex flex-col flex-wrap sm:flex-row justify-center">
-                <a class="m-4 sm:m-2 btn-primary" href="https://conference.pulumi.com/schedule/?utm_source=PulumiUp&utm_medium=web&utm_campaign=FY2025Q1_Event_PulumiUP">Attend PulumiUP 2024</a>
+                <a class="m-4 sm:m-2 btn-primary" href="/resources/pulumiup-2024-keynote/">Watch On Demand</a>
                 </a>
             </div>
         </div>
@@ -25,16 +25,6 @@
             Dive into the future of cloud and Infrastructure as Code (IaC).<br/>Watch expert talks on how to build and scale on the cloud, Platform Engineering, AI, and more.
         </p>
     </div>
-
-    <section id="countdown" class="pt-12 mb-8">
-        <pulumi-date-countdown-circles
-            date-string="{{ .Params.event_date }}"
-            value-label-class="block font-normal"
-            container-class="flex flex-wrap justify-center items-center"
-            text-class="px-3 text-4xl m-0"
-        >
-        </pulumi-date-countdown-circles>
-    </section>
 
     <section class="container mx-auto my-20 lg:mt-16 lg:mb-8 p-4d">
         <div class="flex flex-row lg:justify-center w-full">
@@ -85,13 +75,13 @@
                     </p>
                 </p>
                 <div class="my-8">
-                    <a class="btn-primary" href="https://conference.pulumi.com/schedule/?utm_source=PulumiUp&utm_medium=web&utm_campaign=FY2025Q1_Event_PulumiUP">Attend PulumiUP 2024</a>
+                    <a class="btn-primary" href="/resources/pulumiup-2024-keynote/">Watch On Demand</a>
                 </div>
             </div>
         </div>
     </section>
 
-    {{ partial "pulumi-up/speakers.html" (dict "speakers" .Params.speakers "include_cta" "true" ) }}
+    {{ partial "pulumi-up/speakers.html" (dict "speakers" .Params.speakers ) }}
 
     <section id="personas" class="my-8">
         <div class="container mx-auto px-4 py-8 text-center">
@@ -139,7 +129,7 @@
             </div>
             <h6 class="py-4">Be a part of shaping the future of cloud infrastructure!</h6>
             <div class="my-8 flex flex-col flex-wrap sm:flex-row justify-center">
-                <a class="m-4 sm:m-2 btn-primary" href="https://conference.pulumi.com/schedule/?utm_source=PulumiUp&utm_medium=web&utm_campaign=FY2025Q1_Event_PulumiUP">Watch This Panel</a>
+                <a class="m-4 sm:m-2 btn-primary" href="{{ .schedule_link }}">Watch On Demand</a>
                 </a>
             </div>
         </div>
