@@ -64,11 +64,11 @@ The app has two important variables to manage: the OpenAI API Key, and the choic
 
 ## Three ways of managing secrets and configuration management
 
-After we get a basic version of the app running, we'll modify the app two times, to show three different ways of managing our secrets and configurations; unmanaged, managed static configuration, and managed dynamic configuration. 
+After we get a basic version of the app running, we'll modify the app two times, to show three different ways of managing our secrets and configurations; unmanaged, managed static configuration, and managed dynamic configuration.
 
-The first version of our app will be *unmanaged* and will have hardcoded settings for the OpenAI model we're using, reading it from the default environment variable `OPENAI_API_KEY` for the API key. 
+The first version of our app will be *unmanaged* and will have hardcoded settings for the OpenAI model we're using, reading it from the default environment variable `OPENAI_API_KEY` for the API key.
 
-The second version will be *statically managed* using Pulumi ESC, providing a custom set of environment variables to the app at runtime. 
+The second version will be *statically managed* using Pulumi ESC, providing a custom set of environment variables to the app at runtime.
 
 The third version will be *dynamically managed* via the Pulumi ESC SDK to reload the configuration, so that there's no downtime required to reconfigure the web app.
 
@@ -104,7 +104,6 @@ You may need to install a similar tool for your environment to avoid pasting the
 Two such utilities are `xclip` and `xsel`, which are available in the default repositories of most Linux distributions.
 {{% /notes %}}
 
-
 ### Step 2: Install dependencies with pip.
 
 Now lets setup our working environment. Create a new directory called `chatapp`.
@@ -113,6 +112,7 @@ Now lets setup our working environment. Create a new directory called `chatapp`.
 $ mkdir chatapp
 $ cd chatapp
 ```
+
 Next create a Python virtual environment:
 
 ```bash
@@ -166,6 +166,7 @@ if __name__ == '__main__':
     app.run(debug=True)
 
 ```
+
 **Code Listing:** `templates/chatapp.html`
 
 ```html
@@ -219,13 +220,15 @@ if __name__ == '__main__':
 </body>
 </html>
 ```
+
 The Flask app sets up two routes:
+
 - `/`: serves the UI template contained in `templates/chatapp.html`
 - `/chat`: uses the function `get_openai_response` to query the OpenAI API
 
 It will read the key from the `OPENAI_API_KEY` environment variable and chose the OpenAI model based on the hardcoded  value `gpt-3.5-turbo` which is defined in the `chat` route.
 
-Finally, let's run the app and make sure it works. 
+Finally, let's run the app and make sure it works.
 
 ```bash
 $ python chatapp.py
@@ -235,14 +238,13 @@ You should see your app running on [http://127.0.0.1:5000](http://127.0.0.1:5000
 
 {{< figure src="chatapp-v1.png" caption="Figure: The chat app web UI">}}
 
-
 ## ChatApp V2: Statically managed configuration and secrets using Pulumi ESC
 
 Well that was fun! We now have a [ChatGPT](https://openai.com/chatgpt/) clone. However, there are some operational issues that we need to address. How do we manage the API key more securely? Right now we're just copying and pasting into shell environment variables. That's not great. Since we can only copy it once from OpenAI's console, if we somehow lose that environment variable (e.g. close the shell window), we will have to go generate an entirely new key.
 
 Also, what if we want to change which model we're using? We'd have to change the value hardcoded into the app... every time!
 
-What if we want to share the API key with others, or run this in some environment other than our developer laptop's shell? We really need something to manage this configuration for use. 
+What if we want to share the API key with others, or run this in some environment other than our developer laptop's shell? We really need something to manage this configuration for use.
 
 Lets get these settings under management. Pulumi ESC to the rescue!
 
@@ -289,7 +291,7 @@ Finally, let's verify the ESC environment we just created. We can view the envir
 $ esc env get default/chatapp
 ```
 
-You should see output that looks something like this: 
+You should see output that looks something like this:
 
 ```bash
 Value
@@ -326,7 +328,7 @@ To do this, we will [edit the YAML definition](/docs/esc/environments/working-wi
 $ esc env edit default/chatapp
 ```
 
-To this YAML file we'll add an `environmentVariables:` section, which defines the names of the environment variables we want to set in our program's shell environment, and which ESC configuration values those map to. 
+To this YAML file we'll add an `environmentVariables:` section, which defines the names of the environment variables we want to set in our program's shell environment, and which ESC configuration values those map to.
 
 ```yaml
 values:
@@ -339,11 +341,12 @@ values:
     environmentVariables:
         MODEL: ${model}
         API_KEY: ${api_key}
-``` 
+```
 
 Now we need to modify `chatapp.py` to use the new ESC-provided environment variables in the `/chat` route:
 
 **Code Listing:** Modify Flask `/chat` route in `chatapp.py` *(version 2)*
+
 ```python {hl_lines=[3, 4, 5]}
 @app.route('/chat', methods=['POST'])
 def chat():
@@ -371,7 +374,7 @@ This command `esc env run -- <command>` will launch the provided command in a su
 The last step worked great to get our configuration and secrets under management,
 but there still some downsides. What happens if the configuration or API key needs to change? Right now the app sets the configuration when it starts and always uses the same values the entire time it's running. The app would need to be restarted to get new settings. This would cause downtime for our service, just to update the key, or change the model we're using.
 
-We'd rather not take downtime, so let's update the app's code to use the ESC SDK to dynamically fetch settings from ESC every time the `/chat` endpoint is used. 
+We'd rather not take downtime, so let's update the app's code to use the ESC SDK to dynamically fetch settings from ESC every time the `/chat` endpoint is used.
 
 ### Step 1: Install the Pulumi ESC SDK
 
@@ -392,6 +395,7 @@ $ esc env edit default/chatapp
 ```
 
 **Code Listing:** YAML representation of `default/chatapp` environment
+
 ```yaml {hl_lines=[8, 9, 10, 12, 13, 14]}
 values:
   model: gpt-3.5-turbo
@@ -414,7 +418,7 @@ Here we have added three new ESC values `esc_org`, `esc_project`, and `esc_envir
 
 We've also removed the environment variable projections for `API_KEY` and `MODEL` since we won't be accessing them that way anymore.
 
-Next we will need to ensure that the `PULUMI_ACCESS_TOKEN` variable exists in our shell. If you're an active Pulumi user or have been going through other tutorials, you may already have this set in your shell. Let's check for that using Bash's `env` command: 
+Next we will need to ensure that the `PULUMI_ACCESS_TOKEN` variable exists in our shell. If you're an active Pulumi user or have been going through other tutorials, you may already have this set in your shell. Let's check for that using Bash's `env` command:
 
 ```bash
 $ env | grep PULUMI_ACCESS_TOKEN
@@ -433,7 +437,7 @@ $ PULUMI_ACCESS_TOKEN=`pbpaste`
 
 ### Step 3: Modify `chatapp.py` code to fetch settings dynamically
 
-Finally, let's modify the `chatapp.py` to use these new values and pull the settings dynamically. 
+Finally, let's modify the `chatapp.py` to use these new values and pull the settings dynamically.
 
 ```python {hl_lines=[2, 8, 9, 10, 11, 12, 13, 14, 33, 34, 35, 36, 37, 38, 39]}
 import os
@@ -472,7 +476,7 @@ def chat():
     esc_client = esc.EscClient(escClientConfig)
     _, values, _ = esc_client.open_and_read_environment(escOrg, escProjectName, escEnvironment)
 
-    # Access the configuration values and set the local variables 
+    # Access the configuration values and set the local variables
     model = values['model']
     api_key = values['api_key']
 
@@ -486,6 +490,7 @@ if __name__ == '__main__':
 ```
 
 This last set of changes does a few things:
+
 - imports the Pulumi ESC SDK
 - pulls the client configuration values from the ESC provided environment variables and sets up the `esc.Configuration` object
 - creates an ESC client and modifies the `/chat` endpoint to read from the ESC environment every time it is called
@@ -516,14 +521,13 @@ Try querying the chat app and you should see that the model has been updated. Th
 
 ## Conclusion
 
-Pulumi ESC and the ESC SDK can be used in many ways to manage your configurations. But this just the tip of the iceberg! 
+Pulumi ESC and the ESC SDK can be used in many ways to manage your configurations. But this just the tip of the iceberg!
 
-Check out some of our other tutorials to see how you can version your ESC environments and use environment tags to update entire sets of configuration values and secrets with a simple drag and drop interface in the Pulumi Cloud console. 
+Check out some of our other tutorials to see how you can version your ESC environments and use environment tags to update entire sets of configuration values and secrets with a simple drag and drop interface in the Pulumi Cloud console.
 
 You can also do even more complicated things like manage the configuration of Kubernetes, and apps running within a Kubernetes cluster at the same time, with a single tool.
 
 ### More ESC tutorials:
 
-- [Pulumi ESC Versions (TBD)](#)
+- [Pulumi ESC Versions (TBD)](/docs/tutorials/using-versioned-environments-in-esc/)
 - [Secure Kubernetes Application Secrets with Pulumi ESC](/docs/tutorials/secure-kubernetes-app-secrets-with-esc/)
-
