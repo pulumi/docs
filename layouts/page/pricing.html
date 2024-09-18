@@ -99,22 +99,24 @@
         <div class="flex flex-wrap justify-center mx-auto">
             {{ range $customer := .Params.customers }}
                 <div class="w-1/2 lg:w-1/4 p-2">
-                    <div class="card p-8 text-center h-full flex flex-col justify-between">
-                        <h6>{{ $customer.stat | markdownify }}</h6>
-                        {{ if eq $customer.logo "snowflake"}}
-                            <div class="h-10 mt-4 -mb-2">
-                                {{ partial "customer-logo.html" (dict "logo" $customer.logo) }}
-                            </div>
-                        {{ else if eq $customer.logo "unity" }}
-                            <div class="h-8 mt-6">
-                                {{ partial "customer-logo.html" (dict "logo" $customer.logo) }}
-                            </div>
-                        {{ else }}
-                            <div class="h-6 mt-8">
-                                {{ partial "customer-logo.html" (dict "logo" $customer.logo) }}
-                            </div>
-                        {{ end }}
-                    </div>
+                    <a href="{{ .link }}">
+                        <div class="card p-8 text-center h-full flex flex-col justify-between">
+                            <h6>{{ $customer.stat | markdownify }}</h6>
+                            {{ if eq $customer.logo "snowflake"}}
+                                <div class="h-10 mt-4 -mb-2">
+                                    {{ partial "customer-logo.html" (dict "logo" $customer.logo) }}
+                                </div>
+                            {{ else if eq $customer.logo "unity" }}
+                                <div class="h-8 mt-6">
+                                    {{ partial "customer-logo.html" (dict "logo" $customer.logo) }}
+                                </div>
+                            {{ else }}
+                                <div class="h-6 mt-8">
+                                    {{ partial "customer-logo.html" (dict "logo" $customer.logo) }}
+                                </div>
+                            {{ end }}
+                        </div>
+                    </a>
                 </div>
             {{ end }}
         </div>

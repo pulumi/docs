@@ -90,10 +90,13 @@ tiers:
 customers:
     - stat: "**5x faster** time to market"
       logo: unity
+      link: /case-studies/unity
     - stat: "**100 days saved** each year with Pulumi Cloud instead of DIY state management"
       logo: starburst
+      link: /case-studies/starburst
     - stat: "**10x faster deployments**, from weeks to hours"
       logo: snowflake
+      link: /case-studies/snowflake
 
 comparison_table:
     sections:
