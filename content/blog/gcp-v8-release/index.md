@@ -33,6 +33,27 @@ Since the last major release of this provider, we have continuously shipped impr
 We have rolled out an [improved diffing strategy](https://github.com/pulumi/pulumi-terraform-bridge/issues/1785) and [fixed state upgrades](https://github.com/pulumi/pulumi-terraform-bridge/pull/2081) in the Pulumi Terraform Bridge, removing spurious diffs on preview and increasing confidence when deploying.
 Additionally we have improved accuracy and coverage for registry documentation, via [better example conversion](https://github.com/pulumi/pulumi-gcp/pull/1266) and [general docs improvements for bridged providers](https://github.com/pulumi/pulumi-terraform-bridge/issues/1794).
 
+### New Modules
+
+Over the last year, we have added support for several new models. Among these are:
+
+- [App Hub](https://www.pulumi.com/registry/packages/gcp/api-docs/apphub/)
+- [Application Integration](https://www.pulumi.com/registry/packages/gcp/api-docs/applicationintegration/)
+- [Blockchain Node Engine](https://www.pulumi.com/registry/packages/gcp/api-docs/blockchainnodeengine/)
+- [Cloud Quota](https://www.pulumi.com/registry/packages/gcp/api-docs/cloudquota/)
+- [Discovery Engine](https://www.pulumi.com/registry/packages/gcp/api-docs/discoveryengine/)
+- [Edge Container](https://www.pulumi.com/registry/packages/gcp/api-docs/edgecontainer/)
+- [Integration Connectors](https://www.pulumi.com/registry/packages/gcp/api-docs/integrationconnectors/)
+- [Managed Kafka](https://www.pulumi.com/registry/packages/gcp/api-docs/managedkafka/)
+- [Migration Center](https://www.pulumi.com/registry/packages/gcp/api-docs/migrationcenter/)
+- [Netapp](https://www.pulumi.com/registry/packages/gcp/api-docs/netapp/)
+- [Parallelstore](https://www.pulumi.com/registry/packages/gcp/api-docs/parallelstore/)
+- [Privileged Access Manager](https://www.pulumi.com/registry/packages/gcp/api-docs/privilegedaccessmanager/)
+- [Secure Source Manager](https://www.pulumi.com/registry/packages/gcp/api-docs/securesourcemanager/)
+- [Security Posture](https://www.pulumi.com/registry/packages/gcp/api-docs/securityposture/)
+- [Site Verification](https://www.pulumi.com/registry/packages/gcp/api-docs/siteverification/)
+- [Workbench](https://www.pulumi.com/registry/packages/gcp/api-docs/workbench/)
+
 ## What’s New in 8.0
 
 ### Added Deletion Protections
