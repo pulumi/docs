@@ -62,7 +62,7 @@ The app will be implemented as a [Flask](https://flask.palletsprojects.com/en/3.
 
 The app has two important variables to manage: the OpenAI API Key, and the choice of model that the OpenAI backend uses.
 
-## Three ways of managing secrets and configuration management
+## Three ways of managing secrets and configuration
 
 After we get a basic version of the app running, we'll modify the app two times, to show three different ways of managing our secrets and configurations; unmanaged, managed static configuration, and managed dynamic configuration.
 
@@ -145,7 +145,7 @@ def get_openai_response(api_key, model, prompt):
             model=model,
             messages=[{"role": "user", "content": prompt}]
         )
-        return response.choices[0].message.content, model
+        return response.choices[0].message.content
     except Exception as e:
         return f"An error occurred: {str(e)}"
 
@@ -159,7 +159,7 @@ def chat():
     api_key = os.getenv("OPENAI_API_KEY")
 
     prompt = request.json['message']
-    response, model = get_openai_response(api_key, model, prompt)
+    response = get_openai_response(api_key, model, prompt)
     return jsonify({'response': response, 'model': model})
 
 if __name__ == '__main__':
@@ -175,7 +175,7 @@ if __name__ == '__main__':
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GPT-4 Chat App Using SDK</title>
+    <title>OpenAI Chat App</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
         body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
@@ -185,7 +185,7 @@ if __name__ == '__main__':
     </style>
 </head>
 <body>
-    <h1>OpenAI Chat App Using SDK</h1>
+    <h1>OpenAI Chat App</h1>
     <div id="chat-container"></div>
     <input type="text" id="user-input" placeholder="Type your message...">
     <button id="send-button">Send</button>
@@ -244,7 +244,7 @@ Well that was fun! We now have a [ChatGPT](https://openai.com/chatgpt/) clone. H
 
 Also, what if we want to change which model we're using? We'd have to change the value hardcoded into the app... every time!
 
-What if we want to share the API key with others, or run this in some environment other than our developer laptop's shell? We really need something to manage this configuration for use.
+What if we want to share the API key with others, or run this in some environment other than our developer's laptop? 
 
 Lets get these settings under management. Pulumi ESC to the rescue!
 
@@ -273,7 +273,11 @@ $ esc env ls
 default/chatapp
 ```
 
-Now let's create our configuration settings. First we'll create a configuration value called `model` which has the [ID of the model](https://platform.openai.com/docs/models) we want to use in the OpenAI API:
+{{% notes type="warning" %}}
+**Project Naming:** If your project name is something other than `default`, make sure these commands, and others the throughout this tutorial, are modified to use the name of your project.
+{{% /notes %}}
+
+Now let's create the configuration settings. First we'll create a configuration value called `model` which has the [ID of the model](https://platform.openai.com/docs/models) we want to use in the OpenAI API:
 
 ```bash
 $ esc env set default/chatapp model gpt-3.5-turbo
@@ -362,7 +366,7 @@ def chat():
 Now let's run the app, with ESC providing the variables, to make sure it works.
 
 ```bash
-$ esc env run default/chatapp -- python chatapp.py`
+$ esc env run default/chatapp -- python chatapp.py
 ```
 
 As before, check that the app is running at [http://127.0.0.1:5000](http://127.0.0.1:5000) and able to get responses from the OpenAI API.
@@ -416,6 +420,10 @@ values:
 
 Here we have added three new ESC values `esc_org`, `esc_project`, and `esc_environment`, with the organization and environment pulled from the [ESC execution context](/docs/esc/environments/working-with-environments/#pulumi-contextual-information) directly. These are projected into the `ESC_ORG`, `ESC_PROJECT`, and `ESC_ENVIRONMENT` environment variables respectively.
 
+{{% notes type="warning" %}}
+**Project Naming:** The project name is not able to be derived from context, so we have to use a static value here. If your project name is something other than `default`, make sure to set this value to the name of your project.
+{{% /notes %}}
+
 We've also removed the environment variable projections for `API_KEY` and `MODEL` since we won't be accessing them that way anymore.
 
 Next we will need to ensure that the `PULUMI_ACCESS_TOKEN` variable exists in our shell. If you're an active Pulumi user or have been going through other tutorials, you may already have this set in your shell. Let's check for that using Bash's `env` command:
@@ -432,7 +440,7 @@ If this returns nothing, you'll need to [create an access token](/docs/pulumi-cl
 Copy that value to the clipboard, and paste it securely into your shell:
 
 ```bash
-$ PULUMI_ACCESS_TOKEN=`pbpaste`
+$ export PULUMI_ACCESS_TOKEN=`pbpaste`
 ```
 
 ### Step 3: Modify `chatapp.py` code to fetch settings dynamically
