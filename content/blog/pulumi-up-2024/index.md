@@ -22,7 +22,7 @@ Today at our fourth annual PulumiUP conference, we unveiled a new vision for Pul
 
 The Pulumi platform solves a broad set of problems that engineering leaders face in the modern cloud era. This spans cloud automation, security, and management, which aligns to our three products: **[Pulumi IaC](/product/infrastructure-as-code/)**, **[Pulumi ESC](/product/secrets-management/)**, and **[Pulumi Insights](/product/pulumi-insights/)**. Our unified approach ensures developers, infrastructure experts, and security teams can collaborate closely and ship faster with high confidence.
 
-In addition to our three products, Pulumi’s platform incorporates three core capabilities that span the entire product suite. **Pulumi CrossGuard** is our policy as code engine which ensures security, compliance, and best practices; **Pulumi Deployments** is our deployment workflow technology that lets us orchestrate infrastructure-oriented tasks; and **Pulumi Copilot** is our generative AI technology that deeply understands the cloud and infrastructure management and operations.
+In addition to our three products, Pulumi’s platform incorporates three core capabilities that span the entire product suite. **[Pulumi CrossGuard](/crossguard/)** is our policy as code engine which ensures security, compliance, and best practices; **[Pulumi Deployments](/product/pulumi-deployments/)** is our deployment workflow technology that lets us orchestrate infrastructure-oriented tasks; and **[Pulumi Copilot](/product/copilot/)** is our generative AI technology that deeply understands the cloud and infrastructure management and operations.
 
 You can see this visually depicted here:
 
