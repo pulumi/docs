@@ -16,6 +16,7 @@ import "./code-tabbed";
 import "./resources";
 import "./packages";
 import "./pricing-trial";
+import "./pricing";
 import "./pulumi-cloud";
 import "./developer-advocates";
 import "./toc";
