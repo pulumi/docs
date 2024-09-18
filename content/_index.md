@@ -62,8 +62,6 @@ customer_logos:
       link: /case-studies/
     - name: unity
       link: /case-studies/
-    - name: rockstar
-      link: /case-studies/
     - name: deloitte
       link: /case-studies/
     - name: stokespace
