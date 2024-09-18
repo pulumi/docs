@@ -4,10 +4,10 @@ title_tag: "ChatGPT clone with Pulumi ESC managed secrets"
 layout: single
 
 # A succinct description of the tutorial. It appears on the Tutorials home and collection pages.
-description: Use Pulumi ESC CLI and SDK to manage secrets for a basic ChatGPT clone.
+description: Use Pulumi ESC CLI and ESC SDK to manage secrets for a basic OpenAI-based ChatGPT clone.
 
 # A similar description used for search results and social-media previews.
-meta_desc: Use Pulumi ESC CLI manage secrets for a basic OpenAI-based ChatGPT clone.
+meta_desc: Use Pulumi ESC CLI and ESC SDK to manage secrets for a basic OpenAI-based ChatGPT clone.
 
 # An image for the tutorial. It appears on tutorial page and in social-media previews.
 meta_image: meta.png
@@ -48,8 +48,9 @@ prereqs:
 estimated_time: 15
 
 # # An optional list of collections this tutorial should be belong to. Collections are defined in data/tutorials/collections.yaml.
-# collections:
-#     - some-non-existent-collection
+collections:
+    - using-esc
+collections_weight: 1
 ---
 
 ## What are we building
@@ -537,4 +538,4 @@ You can also do even more complicated things like manage the configuration of Ku
 
 ### More ESC tutorials:
 
-- [Secure Kubernetes Application Secrets with Pulumi ESC](/docs/tutorials/secure-kubernetes-app-secrets-with-esc/)
+- [Secure Kubernetes Application Secrets with Pulumi ESC](/tutorials/secure-kubernetes-app-secrets-with-esc/)

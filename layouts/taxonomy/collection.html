@@ -39,13 +39,17 @@
                                         </p>
                                         <div class="inline-flex flex-wrap gap-2 text-sm">
                                             {{ $estimated_time := 0 }}
-                                            {{ range $topic := .Pages }}
-                                                {{ $estimated_time = (add $estimated_time (int $topic.Params.estimated_time)) }}
+                                            {{ if .Pages }}
+                                                {{ range $topic := .Pages }}
+                                                    {{ $estimated_time = (add $estimated_time (int $topic.Params.estimated_time)) }}
+                                                {{ end }}
+                                                <div class="text-gray-700 px-2 py-1 border border-blue-400 rounded">
+                                                    <i class="fa fa-file-alt mr-0.5 text-blue-400"></i>
+                                                    <span>{{ len .Pages }} topic{{ if ne (len .Pages) 1 }}s{{ end }}</span>
+                                                </div>    
+                                            {{ else }}
+                                                {{ $estimated_time = .Params.estimated_time }}
                                             {{ end }}
-                                            <div class="text-gray-700 px-2 py-1 border border-blue-400 rounded">
-                                                <i class="fa fa-file-alt mr-0.5 text-blue-400"></i>
-                                                <span>{{ len $item.Pages }} topic{{ if ne (len $item.Pages) 1 }}s{{ end }}</span>
-                                            </div>
                                             <div class="text-gray-700 px-2 py-1 border border-gray-500 rounded">
                                                 <i class="far fa-clock mr-0.5 text-gray-600"></i>
                                                 <span>{{ $estimated_time }} minutes</span>

@@ -37,3 +37,8 @@
   type: proficiency
   name: Learn Pulumi
   description: Intro-level walkthroughs to help you learn core Pulumi infrastructure-as-code concepts.
+
+- id: using-esc
+  type: proficiency
+  name: Using ESC
+  description: Practical examples of how to use Pulumi ESC to manage secrets and configuration.     

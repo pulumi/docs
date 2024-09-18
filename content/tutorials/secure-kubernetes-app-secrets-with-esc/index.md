@@ -6,7 +6,7 @@ description: |
     Securely manage secrets and configurations in a Kubernetes app with Pulumi ESC.
 meta_desc: Learn how to securely manage application secrets and configurations in a Kubernetes environment using Pulumi ESC.
 meta_image: meta.png
-weight: 70
+weight: 999
 summary: |
     In this tutorial, you’ll use Pulumi Environments, Secrets, and Configuration (ESC) to manage secrets and configurations for a Kubernetes application. You’ll set up two environments, securely store sensitive information like database credentials, and deploy a sample web application (a voting app) to a local Kubernetes cluster using Minikube. Using ESC ensures sensitive data like database passwords are safeguarded throughout the deployment process while simplifying modular environment management.
 youll_learn:
@@ -19,6 +19,9 @@ prereqs:
     - Install and configure [Kubectl CLI](https://kubernetes.io/docs/reference/kubectl/overview)
     - Install and configure [Minikube](https://minikube.sigs.k8s.io/docs/start)
 estimated_time: 15
+collections:
+    - using-esc
+collections_weight: 1
 ---
 
 Pulumi ESC helps you manage different environments (like development, staging, and production) while securely handling secrets and configurations. In this tutorial, you’ll create two environments: one for managing the Kubernetes infrastructure and one for application-specific configurations.
