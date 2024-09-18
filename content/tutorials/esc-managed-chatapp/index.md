@@ -244,7 +244,7 @@ Well that was fun! We now have a [ChatGPT](https://openai.com/chatgpt/) clone. H
 
 Also, what if we want to change which model we're using? We'd have to change the value hardcoded into the app... every time!
 
-What if we want to share the API key with others, or run this in some environment other than our developer's laptop? 
+What if we want to share the API key with others, or run this in some environment other than our developer's laptop?
 
 Lets get these settings under management. Pulumi ESC to the rescue!
 
@@ -537,5 +537,4 @@ You can also do even more complicated things like manage the configuration of Ku
 
 ### More ESC tutorials:
 
-- [Pulumi ESC Versions (TBD)](/docs/tutorials/using-versioned-environments-in-esc/)
 - [Secure Kubernetes Application Secrets with Pulumi ESC](/docs/tutorials/secure-kubernetes-app-secrets-with-esc/)
