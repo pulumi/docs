@@ -5,6 +5,9 @@ meta_desc: "Enhance your Pulumi development experience with the new VS Code exte
 meta_image: meta.png
 authors:
     - meagan-cojocar
+    - eron-wright
+    - cleve-littlefield
+
 tags:
     - releases
     - features
@@ -99,8 +102,6 @@ You can also:
 ## Pulumi YAML Support
 
 The Pulumi VS Code Extension enhances YAML development for Pulumi, providing features that streamline the editing and validation process.
-
-<!-- TODO: Add some screenshots and flesh out prose a little -->
 
 ### Existing Capabilities
 
