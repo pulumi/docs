@@ -218,12 +218,12 @@ Next, return to your program folder and create a new file called `resources.json
         {
             "type": "aws:s3/bucket:Bucket",
             "name": "second-imported-bucket",
-            "id": "pulumi-import-tutorial-bucket2"
+            "id": "pulumi-import-tutorial-bucket2" # REPLACE
         },
         {
             "type": "aws:s3/bucket:Bucket",
             "name": "third-imported-bucket",
-            "id": "pulumi-import-tutorial-bucket3"
+            "id": "pulumi-import-tutorial-bucket3" # REPLACE
         }
     ]
 }
@@ -279,7 +279,7 @@ You only need to copy over the resource definitions of the two buckets and not t
 
 ### Import using code
 
-The third method to import existing cloud resources into a Pulumi project is by defining the resource code yourself and configuring the [`import` resource option](/docs/iac/concepts/options/import/) in the resource's definition. This approach may be better suited for scenarios that require importing multiple resources of the same type across multiple stacks and/or deployment environments.
+The third method to import existing cloud resources into a Pulumi project is by defining the resource code yourself and configuring the [`import` resource option](/docs/iac/concepts/options/import/) in the resource's definition. This approach may be better suited for scenarios that require importing multiple resources of the same type across multiple stacks and/or deployment environments as part of an automation workflow.
 
 To demonstrate, you will start by creating a simple IAM role in the AWS Console. For the purposes of this tutorial, you can follow the steps in AWS's [Creating an execution role in the IAM console guide](https://docs.aws.amazon.com/lambda/latest/dg/lambda-intro-execution-role.html#permissions-executionrole-console) to create your IAM role resource. When doing so, select the **AWSLambdaDynamoDBExecutionRole** managed policy on the **Add permissions** page and enter **pulumi-tutorial-iam-role** for the role name.
 
@@ -289,6 +289,90 @@ Now, navigate to your program code file and update the code with the following r
 
 {{< example-program path="aws-import-iac-iam-role" >}}
 
-As you can see, the name of the IAM role, in this case `pulumi-tutorial-iam-role`, has been provided as the value of the `import` option in the resource definition. It is important to note than when defining resources that you want to import, the resource definition must match all properties of the existing resource.
+As you can see, the name of the IAM role, in this case `pulumi-tutorial-iam-role`, has been provided as the value of the `import` option in the resource definition.
 
-At this point, the definition for the imported resources has only been written, meaning it has not yet been imported into your project's state and is therefore not yet under management by Pulumi. To complete the import process using this method, you will need to save your file and run the `pulumi up` command.
+At this point, the definition for the imported resources has only been written, meaning it has not yet been imported into your project's state and is therefore not yet under management by Pulumi. To complete the import process using this method, you will need to save your file and run the `pulumi up` command. You should see output resembling the following example:
+
+```bash
+$ pulumi up -y
+Previewing update (dev)
+
+     Type                 Name           Plan
+     pulumi:pulumi:Stack  dev
+ =   └─ aws:iam:Role      imported_role  import
+
+Resources:
+    = 1 to import
+    4 unchanged
+
+Updating (dev)
+
+     Type                 Name           Status
+     pulumi:pulumi:Stack  dev
+ =   └─ aws:iam:Role      imported_role  imported (0.93s)
+
+Resources:
+    = 1 imported
+    4 unchanged
+
+Duration: 8s
+```
+
+It is important to note that when defining resources that you want to import using the `import` resource option method, the resource definition must match all properties of the existing resource. If you fail to include all of the existing properties, you will run into an error similar to the following:
+
+```bash {hl_lines=[5]}
+Previewing update (dev)
+
+     Type                 Name           Plan       Info
+ +   pulumi:pulumi:Stack  dev            create
+ =   └─ aws:iam:Role      imported_role  import     [diff: -description]; 1 warning
+
+Diagnostics:
+  aws:iam:Role (imported_role):
+    warning: inputs to import do not match the existing resource; importing this resource will fail
+
+Resources:
+    + 1 to create
+    = 1 to import
+    2 changes
+
+Updating (dev)
+
+     Type                 Name           Status                       Info
+ +   pulumi:pulumi:Stack  dev            **creating failed (5s)**     1 error
+ =   └─ aws:iam:Role      imported_role  **importing failed**         1 error
+
+Diagnostics:
+  aws:iam:Role (imported_role):
+    error: inputs to import do not match the existing resource
+
+  pulumi:pulumi:Stack (dev):
+    error: update failed
+
+Resources:
+    + 1 created
+
+Duration: 7s
+```
+
+The highlighted line in the preview section of the output indicates which property of the existing resource is missing in the resource definition. You can use this to correct your resource definition before re-deploying.
+
+## Clean-up
+
+{{< cleanup >}}
+
+{{< notes type="info" >}}
+
+With the resources you imported via the CLI command, make sure to set the `protect` property to `false` in the code before running the `pulumi destroy` command. Otherwise the deletion will fail.
+
+{{< /notes >}}
+
+## Next steps
+
+In this tutorial, you imported existing cloud resources via the CLI and updated the program code to include the definition of those imported resources. You also imported existing cloud resources by manually defining the resource definition using the `import` resource option method.
+
+To learn more about creating and managing resources in Pulumi, take a look a the following resources:
+
+- Learn more about importing resources in Pulumi in the [Adopting Pulumi -> Import resources documentation](/docs/iac/adopting-pulumi/import/).
+- Learn more about migrating to Pulumi in the [Migrating from other solutions to Pulumi documentation](/docs/iac/adopting-pulumi/migrating-to-pulumi/).
+- Learn more about other useful Pulumi CLI commands in the [Pulumi CLI overview documentation](/docs/iac/cli/).
