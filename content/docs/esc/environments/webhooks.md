@@ -46,7 +46,7 @@ Pulumi Cloud also supports webhooks for events related to Pulumi IaC stacks and 
 Pulumi Webhooks may be created through any of the following methods:
 
 1. Manually, in the Pulumi Cloud UI using the steps outlined in [Create an Organization Webhook in the Pulumi Cloud UI](#create-an-organization-webhook-in-the-pulumi-cloud-ui) or [Create an Environment Webhook in Pulumi Cloud in the Pulumi Cloud UI](#create-an-environment-webhook-in-the-pulumi-cloud-ui).
-1. Declaratively, as part of a [Pulumi IaC](/docs/iac) program as shown in [Create an Webhook as Part of a Pulumi IaC Program](#create-an-webhook-as-part-of-a-pulumi-iac-program)
+1. Declaratively, as part of a [Pulumi IaC](/docs/iac) program as shown in [Create an Webhook in a Pulumi IaC Program](#create-an-webhook-in-a-pulumi-iac-program)
 1. By invoking the [Pulumi Cloud REST API](/docs/pulumi-cloud/cloud-rest-api/#create-webhook) directly.
 
 #### Create an Organization Webhook in the Pulumi Cloud UI
@@ -71,7 +71,7 @@ Pulumi Webhooks may be created through any of the following methods:
    4. For Deployment webhooks, provide the stack to deploy in the format `project/stack`.
 5. Choose which events you would like to receive using groups and filters menu.
 
-#### Create an Webhook as Part of a Pulumi IaC Program
+#### Create an Webhook in a Pulumi IaC Program
 
 The following example shows how to create an Environment webhook in a Pulumi IaC program by declaring a [Webhook resource](/registry/packages/pulumiservice/api-docs/webhook/) with the [Pulumi Cloud provider](/registry/packages/pulumiservice).
 
@@ -112,24 +112,24 @@ webhook = pulumi_service.Webhook("example-webhook",
 
 ```go
 import (
- "fmt"
- "github.com/pulumi/pulumi-pulumiservice/sdk/go/pulumiservice"
- "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"fmt"
+	"github.com/pulumi/pulumi-pulumiservice/sdk/go/pulumiservice"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 func main() {
- pulumi.Run(func(ctx *pulumi.Context) error {
-  webhook, err := pulumiservice.NewWebhook(ctx, "example-webhook", &pulumiservice.WebhookArgs{
-   Active:           pulumi.Bool(true),
-   DisplayName:      pulumi.String("example webhook"),
-   OrganizationName: pulumi.String("example"),
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		webhook, err := pulumiservice.NewWebhook(ctx, "example-webhook", &pulumiservice.WebhookArgs{
+			Active:           pulumi.Bool(true),
+			DisplayName:      pulumi.String("example webhook"),
+			OrganizationName: pulumi.String("example"),
       EnvironmentName:  pulumi.String("my-environment"),
-   PayloadURL:       pulumi.String("https://example.com/webhook"),
-  }, nil)
-  if err != nil {
-   return fmt.Errorf("error creating webhook: %v", err)
-  }
-  return nil
- })
+			PayloadURL:       pulumi.String("https://example.com/webhook"),
+		}, nil)
+		if err != nil {
+			return fmt.Errorf("error creating webhook: %v", err)
+		}
+		return nil
+	})
 }
 ```
 
