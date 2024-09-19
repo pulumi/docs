@@ -279,8 +279,8 @@ const allViewerExceptHostHeaderId = "b689b0a8-53d0-40ab-baf2-68738e2966ac";
 // https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-cache-policies.html
 const cachingDisabledId = "4135ea2d-6df8-44a3-9df3-4b5a84be39ad";
 
-function newSecurityHeadersPolicy(frameOption: string) {
-    return new aws.cloudfront.ResponseHeadersPolicy('security-headers', {
+function newSecurityHeadersPolicy(name: string, frameOption: string) {
+    return new aws.cloudfront.ResponseHeadersPolicy(name, {
         securityHeadersConfig: {
             frameOptions: {
                 frameOption,
@@ -310,9 +310,9 @@ function newSecurityHeadersPolicy(frameOption: string) {
 }
 
 // Most of the site
-const SecurityHeadersPolicy = newSecurityHeadersPolicy(config.addSecurityHeaders ? 'DENY' : 'SAMEORIGIN');
+const SecurityHeadersPolicy = newSecurityHeadersPolicy('security-headers', config.addSecurityHeaders ? 'DENY' : 'SAMEORIGIN');
 // Copilot lives in an iframe
-const CopilotSecurityHeadersPolicy = newSecurityHeadersPolicy('SAMEORIGIN');
+const CopilotSecurityHeadersPolicy = newSecurityHeadersPolicy('copilot-security-headers', 'SAMEORIGIN');
 
 const baseCacheBehavior: aws.types.input.cloudfront.DistributionDefaultCacheBehavior = {
     targetOriginId: originBucket.arn,
