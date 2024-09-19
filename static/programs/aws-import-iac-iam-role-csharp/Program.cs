@@ -14,10 +14,6 @@ return await Deployment.RunAsync(() =>
             "arn:aws:iam::aws:policy/service-role/AWSLambdaDynamoDBExecutionRole",
         },
         Name = "pulumi-tutorial-iam-role",
-        Tags = 
-        {
-            { "owner", "docs-team" },
-        },
     }, new CustomResourceOptions
     {
         ImportId = "pulumi-tutorial-iam-role"

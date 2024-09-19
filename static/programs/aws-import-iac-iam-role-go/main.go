@@ -31,7 +31,7 @@ func main() {
 		_, err = iam.NewRole(ctx, "imported_role", &iam.RoleArgs{
 			Name:             pulumi.String("pulumi-tutorial-iam-role"),
 			AssumeRolePolicy: pulumi.String(json0),
-			Description: "Allows Lambda functions to call AWS services on your behalf.",
+			Description: pulumi.String("Allows Lambda functions to call AWS services on your behalf."),
 		}, pulumi.Import(pulumi.ID("pulumi-tutorial-iam-role")))
 		if err != nil {
 			return err
