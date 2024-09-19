@@ -75,7 +75,7 @@ Pulumi Webhooks may be created through any of the following methods:
 
 The following example shows how to create an Environment webhook in a Pulumi IaC program by declaring a [Webhook resource](/registry/packages/pulumiservice/api-docs/webhook/) with the [Pulumi Cloud provider](/registry/packages/pulumiservice).
 
-To create an Organization webhook instead of an environment webhook, the code is virtually identical - just omit the `environmentName` value when declaring the webhook resource.
+To create an Organization webhook instead of an Environment webhook, the code is virtually identical - just omit the `environmentName` value when declaring the webhook resource.
 
 {{< chooser language "typescript,python,go,csharp" >}}
 {{% choosable language typescript %}}
