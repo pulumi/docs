@@ -1,15 +1,26 @@
-﻿using Pulumi;
-using Pulumi.Aws.S3;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System.Linq;
+using Pulumi;
+using Aws = Pulumi.Aws;
 
-return await Deployment.RunAsync(() =>
+return await Deployment.RunAsync(() => 
 {
-    // Create an AWS resource (S3 Bucket)
-    var bucket = new Bucket("my-bucket");
-
-    // Export the name of the bucket
-    return new Dictionary<string, object?>
+    var imported_iam_role = new Aws.Iam.Role("imported-role", new()
     {
-        ["bucketName"] = bucket.Id
-    };
+        AssumeRolePolicy = "{\"Statement\":[{\"Action\":\"sts:AssumeRole\",\"Effect\":\"Allow\",\"Principal\":{\"Service\":\"lambda.amazonaws.com\"}}],\"Version\":\"2012-10-17\"}",
+        Description = "Allows Lambda functions to call AWS services on your behalf.",
+        ManagedPolicyArns = new[]
+        {
+            "arn:aws:iam::aws:policy/service-role/AWSLambdaDynamoDBExecutionRole",
+        },
+        Name = "pulumi-tutorial-iam-role",
+        Tags = 
+        {
+            { "owner", "docs-team" },
+        },
+    }, new CustomResourceOptions
+    {
+        ImportId = "pulumi-tutorial-iam-role"
+    });
+
 });

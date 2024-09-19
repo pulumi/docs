@@ -10,7 +10,7 @@ description: Learn how to import existing cloud resources into your Pulumi progr
 meta_desc: Learn how to import existing cloud resources into your Pulumi programs in this tutorial.
 
 # An image for the tutorial. It appears on tutorial page and in social-media previews.
-meta_image: meta.png
+meta_image: importing-infra-meta.png
 
 # An optional video for the tutorial. When present, it appears at the top of the page, replacing
 # the meta image. YouTube and HTML5 video sources are supported.
@@ -46,6 +46,12 @@ estimated_time: 10
 # An optional list of collections this tutorial should be belong to. Collections are defined in data/tutorials/collections.yaml.
 # collections:
 #     - some-non-existent-collection
+
+aliases:
+- /tutorials/importing/getting-started/
+- /tutorials/importing/importing-cli/
+- /tutorials/importing/bulk-importing/
+- /tutorials/importing/importing-via-code/
 ---
 
 ## Create initial resources
@@ -85,9 +91,9 @@ $ pulumi import <type> <name> <id>
 
 - The first argument, `type`, is the Pulumi type token to use for the imported resource. You can find the type token for a given resource by navigating to the Import section of the resource's API documentation in the [Pulumi Registry](/registry/). For example, the type token of an [Amazon S3 Bucket](/registry/packages/aws/api-docs/s3/bucket/#import) resource is `aws:s3/bucket:Bucket`.
 
-- The second argument, `name`, is the [resource name](/docs/concepts/resources/names) to apply to the resource once it's imported. The generated code will use this name for the resource declaration (the first parameter in any resource), so like all Pulumi resource names, it must be unique among all resources for this type within the scope of the containing project. (That is, you may have an S3 bucket and a VPC named `foo`, but you cannot have two S3 buckets named `foo`.)
+- The second argument, `name`, is the [resource name](/docs/concepts/resources/names) to apply to the resource once it's imported.
 
-- The third argument, `id`, corresponds to the value you would use in Pulumi to lookup the resource in the cloud provider. This value should correspond to the designated `lookup property` specified in the **Import** section of the resource's API documentation in the Registry. In the case of an AWS S3 bucket, this would be the `bucket` property.
+- The third argument, `id`, corresponds to the value you would use in Pulumi to lookup the resource in the cloud provider. This value should correspond to the designated `lookup property` specified in the **Import** section of the resource's API documentation in the Registry. In the case of an [AWS S3 bucket](/registry/packages/aws/api-docs/s3/bucket/#import), this would be the `bucket` property.
 
   ![Import section of API documentation](pulumi-import-import-section.png)
 
@@ -363,7 +369,7 @@ The highlighted line in the preview section of the output indicates which proper
 
 {{< notes type="info" >}}
 
-With the resources you imported via the CLI command, make sure to set the `protect` property to `false` in the code before running the `pulumi destroy` command. Otherwise the deletion will fail.
+With the resources you imported via the CLI command, make sure to set the `protect` property to `false` in the code and run `pulumi up` to make the change before running the `pulumi destroy` command. Otherwise the deletion will fail.
 
 {{< /notes >}}
 

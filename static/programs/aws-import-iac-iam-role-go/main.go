@@ -1,20 +1,41 @@
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v6/go/aws/s3"
+	"encoding/json"
+
+	"github.com/pulumi/pulumi-aws/sdk/v6/go/aws/iam"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		// Create an AWS resource (S3 Bucket)
-		bucket, err := s3.NewBucket(ctx, "my-bucket", nil)
+		tmpJSON0, err := json.Marshal(map[string]interface{}{
+			"Version": "2012-10-17",
+			"Statement": []map[string]interface{}{
+				map[string]interface{}{
+					"Action": "sts:AssumeRole",
+					"Effect": "Allow",
+					"Sid":    "",
+					"Principal": map[string]interface{}{
+						"Service": "lambda.amazonaws.com",
+					},
+				},
+			},
+		})
 		if err != nil {
 			return err
 		}
 
-		// Export the name of the bucket
-		ctx.Export("bucketName", bucket.ID())
+		json0 := string(tmpJSON0)
+
+		_, err = iam.NewRole(ctx, "imported_role", &iam.RoleArgs{
+			Name:             pulumi.String("pulumi-tutorial-iam-role"),
+			AssumeRolePolicy: pulumi.String(json0),
+			Description: "Allows Lambda functions to call AWS services on your behalf.",
+		}, pulumi.Import(pulumi.ID("pulumi-tutorial-iam-role")))
+		if err != nil {
+			return err
+		}
 		return nil
 	})
 }
