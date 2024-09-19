@@ -20,6 +20,8 @@ export JS_BUNDLE="static/js/bundle.min.${ASSET_BUNDLE_ID}.js"
 export REL_CSS_BUNDLE="/css/styles.${ASSET_BUNDLE_ID}.css"
 export REL_JS_BUNDLE="/js/bundle.min.${ASSET_BUNDLE_ID}.js"
 
+./scripts/content/generate-compliance-pages.sh
+
 printf "Copying prebuilt docs...\n\n"
 make copy_static_prebuilt
 
