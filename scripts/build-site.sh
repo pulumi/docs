@@ -8,6 +8,10 @@ source ./scripts/common.sh
 export PULUMI_CONVERT_URL="${PULUMI_CONVERT_URL:-$(pulumi stack output --stack pulumi/tf2pulumi-service/production url)}"
 export PULUMI_AI_WS_URL=${PULUMI_AI_WS_URL:-$(pulumi stack output --stack pulumi/pulumigpt-api/corp websocketUri)}
 
+# Read Copilot API URL from Pulumi config, ignoring any errors.
+# If the config value is not set Copilot will not be available.
+export PULUMI_COPILOT_URL=${PULUMI_COPILOT_URL:-$(pulumi config get copilotUrl 2>/dev/null || echo "")}
+
 printf "Compiling theme JavaScript and CSS...\n\n"
 export ASSET_BUNDLE_ID="$(build_identifier)"
 
