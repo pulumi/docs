@@ -112,24 +112,24 @@ webhook = pulumi_service.Webhook("example-webhook",
 
 ```go
 import (
-	"fmt"
-	"github.com/pulumi/pulumi-pulumiservice/sdk/go/pulumiservice"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ "fmt"
+ "github.com/pulumi/pulumi-pulumiservice/sdk/go/pulumiservice"
+ "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		webhook, err := pulumiservice.NewWebhook(ctx, "example-webhook", &pulumiservice.WebhookArgs{
-			Active:           pulumi.Bool(true),
-			DisplayName:      pulumi.String("example webhook"),
-			OrganizationName: pulumi.String("example"),
+ pulumi.Run(func(ctx *pulumi.Context) error {
+  webhook, err := pulumiservice.NewWebhook(ctx, "example-webhook", &pulumiservice.WebhookArgs{
+   Active:           pulumi.Bool(true),
+   DisplayName:      pulumi.String("example webhook"),
+   OrganizationName: pulumi.String("example"),
       EnvironmentName:  pulumi.String("my-environment"),
-			PayloadURL:       pulumi.String("https://example.com/webhook"),
-		}, nil)
-		if err != nil {
-			return fmt.Errorf("error creating webhook: %v", err)
-		}
-		return nil
-	})
+   PayloadURL:       pulumi.String("https://example.com/webhook"),
+  }, nil)
+  if err != nil {
+   return fmt.Errorf("error creating webhook: %v", err)
+  }
+  return nil
+ })
 }
 ```
 
@@ -402,10 +402,10 @@ expected_signature = base64.b64encode(hash.digest())
 
 ```go
 func computeSignature(payload []byte, secret string) string {
- mac := hmac.New(sha256.New, []byte(secret))
- _, err := mac.Write(payload)
- contract.AssertNoErrorf(err, "computing HMAC digest")
- return fmt.Sprintf("%x", mac.Sum(nil))
+	mac := hmac.New(sha256.New, []byte(secret))
+	_, err := mac.Write(payload)
+	contract.AssertNoErrorf(err, "computing HMAC digest")
+	return fmt.Sprintf("%x", mac.Sum(nil))
 }
 ```
 
