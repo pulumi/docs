@@ -5,6 +5,11 @@ title: "Using Deployments"
 h1: "Using Pulumi Deployments"
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
+  cloud:
+    name: Using Deployments
+    parent: pulumi-cloud-deployments
+    weight: 2
+    identifier: pulumi-cloud-deployments-reference
   pulumicloud:
     parent: deployments
     weight: 1

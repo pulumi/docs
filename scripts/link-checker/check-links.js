@@ -272,6 +272,7 @@ function getDefaultExcludedKeywords() {
         "https://www.gartner.com/smarterwithgartner/welcome-to-the-api-economy",
         "https://code.visualstudio.com/",
         "https://www.honeycomb.io/",
+        "https://wiki.osdev.org/Atomic_operation",
     ];
 }
 

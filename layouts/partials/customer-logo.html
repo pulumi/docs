@@ -1,7 +1,7 @@
 {{ $logoClass := "customer-logo" }}
 {{ if eq .black true }}
     {{ $logoClass = "customer-logo-black" }}
-{{ else if eq .hoverable true }}
+{{ else if .hoverable }}
     {{ $logoClass = "customer-logo-hoverable" }}
 {{ end }}
 
@@ -82,8 +82,13 @@
             {{ partial "customer-logos/greenpark-sports" }}
         {{ end }}
     </span>
+{{ else if or (eq .logo "aptos") (eq .logo "doordash") }}
+    <span class="w-full h-full flex justify-center">
+        {{ $path := .logo | printf "%s/%s" "customer-logos" | printf "%s" }}
+        {{ partial $path }}
+    </span>
 {{ else }}
-    <span class="{{ $logoClass }} w-full h-full flex m-auto">
+    <span class="{{ $logoClass }} w-full h-full flex m-auto justify-center">
         {{ $path := .logo | printf "%s/%s" "customer-logos" | printf "%s" }}
         {{ partial $path }}
     </span>

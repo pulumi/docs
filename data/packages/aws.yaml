@@ -1,0 +1,15 @@
+category: Cloud
+component: false
+description: A Pulumi package for creating and managing Amazon Web Services (AWS)
+  cloud resources.
+featured: true
+logo_url: ""
+name: aws
+native: false
+package_status: ga
+publisher: Pulumi
+repo_url: https://github.com/pulumi/pulumi-aws
+schema_file_path: provider/cmd/pulumi-resource-aws/schema.json
+title: AWS Classic
+updated_on: 1717514665
+version: v6.38.1

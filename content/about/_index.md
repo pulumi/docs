@@ -46,14 +46,14 @@ values:
       icon: user-tie
       color: violet
 spotlight:
-    - id: travis-perkins
-      name: Travis Perkins
+    - id: jonelle-boyd
+      name: Jonelle Boyd
       size: 150
       top: 25
       left: 0
       opacity: 100
-    - id: liz-mccall
-      name: Liz McCall
+    - id: sara-huddleston
+      name: Sara Huddleston
       size: 94
       top: -28
       left: 175
@@ -64,14 +64,14 @@ spotlight:
       top: 205
       left: 90
       opacity: 50
-    - id: tim-carter
-      name: Tim Carter
+    - id: engin-diri
+      name: Engin Diri
       size: 150
       top: 196
       left: 240
       opacity: 100
-    - id: evan-boyle
-      name: Evan Boyle
+    - id: casey-huang
+      name: Casey Huang
       size: 150
       top: 20
       left: 345
@@ -82,8 +82,8 @@ spotlight:
       top: 240
       left: 445
       opacity: 50
-    - id: kyle-dixler
-      name: Kyle Dixler
+    - id: sean-holung
+      name: Sean Holung
       size: 94
       top: 30
       left: 580
@@ -103,49 +103,31 @@ spotlight:
     - id: zaid-ajaj
       name: Zaid Ajaj
       size: 150
-      top: 120
-      left: 850
-      opacity: 100
+      top: 125
+      left: 830
+      opacity: 50
     - id: sarah-hughes
       name: Sarah Hughes
       size: 94
-      top: -40
-      left: 900
+      top: 5
+      left: 945
       opacity: 100
-    - id: george-huang
-      name: George Huang
-      size: 94
-      top: 20
-      left: 1025
-      opacity: 50
-    - id: jonelle-boyd
-      name: Jonelle Boyd
-      size: 94
-      top: 255
-      left: 1025
-      opacity: 100
-    - id: casey-huang
-      name: Casey Huang
+    - id: devon-grove
+      name: Devon Grove
       size: 150
       top: 48
-      left: 1135
+      left: 1115
       opacity: 100
     - id: christian-nunciato
       name: Christian Nunciato
       size: 150
       top: 235
-      left: 1190
+      left: 1050
       opacity: 50
-    - id: devon-grove
-      name: Devon Grove
+    - id: james-denyer
+      name: James Denyer
       size: 94
-      top: 20
-      left: 1337
+      top: 120
+      left: 1317
       opacity: 50
-    - id: sara-huddleston
-      name: Sara Huddleston
-      size: 94
-      top: 175
-      left: 1365
-      opacity: 100
 ---

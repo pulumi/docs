@@ -9,6 +9,13 @@ customer_name: Panther Labs
 customer_logo: /logos/customers/panther-labs-wordmark.svg
 customer_url: https://runpanther.io/
 
+quote_block:
+  quote: |
+      "We are now in the best position to deliver new innovative solutions to our customers and to do so quickly, which is huge for a startup such as ours that needs to accelerate our efforts and to do so efficiently and seamlessly."
+  quote_attrib: Joren McReynolds, Vice President of Engineering, Panther Labs
+  headline_stat: 10x
+  headline: Faster for simple code changes
+
 exec_summary: |
     Panther Labs helps modern security teams build world-class detection and response pipelines using code and automation, developer-friendly workflows, and big data primitives. Its Platform Team is responsible for a large, complex serverless architecture on AWS. Because of the limitations of its legacy Infrastructure-as-Code (IaC) tool, the team was unable to manage and scale its cloud infrastructure with the speed and automation that the company needed to support its fast-growing business. After comparing different alternatives, Panther Labs decided to migrate to the Pulumi Cloud Engineering Platform. Pulumi increased the company’s deployment speeds by up to 10X, reduced the size of its infrastructure codebase by >50%, and enabled its developers to adopt cloud engineering best practices to deliver its cloud applications faster and more reliably.
 

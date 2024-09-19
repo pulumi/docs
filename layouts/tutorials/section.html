@@ -1,0 +1,139 @@
+{{ define "main" }}
+    <div class="flex mb-16">
+        <div class="sticky top-12 max-h-75">
+            <div class="xl:w-56 xl:px-4">
+                {{ partial "tutorials/nav.html" . }}
+            </div>
+        </div>
+        <div class="mt-8 mr-6 ml-4 flex justify-center w-full">
+            <div class="max-w-5xl">
+                <header class="mb-6">
+                    {{ partial "tutorials/breadcrumb.html" . }}
+                </header>
+                <div class="inline-block">
+                    <h1>{{ .Title }}</h1>
+                    <div class="gradient-highlight"></div>
+                </div>
+                <div>{{ .Content }}</div>
+                <div class="mt-8 mb-12">
+                    <ul class="flex flex-col lg:flex-row lg:flex-wrap list-none p-0">
+                        {{ $perRow := 2 }}
+                        {{ range $index, $id := (slice "aws" "azure" "gcp" "kubernetes") }}
+                            {{ $provider := index (and ((where $.Site.Data.tutorials.collections "type" "provider")) ((where $.Site.Data.tutorials.collections "id" $id))) 0 }}
+
+                            <li class="lg:w-1/{{ $perRow }} {{ if ne (mod (add $index 1) $perRow) 0 }}lg:pr-4{{ end }}">
+                                <div class="p-6 border border-gray-300 w-full gradient-card shadow-xl rounded-md h-full">
+                                    <div class="flex items-center justify-between mb-4">
+                                        <h3 class="flex-grow whitespace-nowrap font-display font-normal no-anchor mb-0">{{ $provider.name }} tutorials</h3>
+                                        <img class="h-6 flex-shrink hidden sm:block" src="{{ $provider.logo }}" />
+                                    </div>
+                                    <ul class="list-none p-0">
+                                        <li class="rounded border p-4 border-gray-300 shadow-sm flex items-center gap-3">
+                                            <i class="far fa-arrow-alt-circle-right w-4 text-gray-700"></i>
+                                            <a class="text-gray-800 font-display text-lg" href="/docs/clouds/{{ $id }}/get-started/">Get started with {{ $provider.name }}</a>
+                                        </li>
+
+                                        {{ $taxonomy := index $.Site.Taxonomies.collections $id }}
+                                        {{ if $taxonomy }}
+                                            <li class="rounded border p-4 border-gray-300 shadow-sm flex items-center gap-3">
+                                                <i class="far fa-list-alt w-4 text-gray-700"></i>
+                                                <a class="text-gray-800 font-display text-lg" href="/tutorials/{{ $id }}">Browse all {{ $provider.name }} tutorials</a>
+                                            </li>
+                                        {{ end }}
+                                    </ul>
+                                </div>
+                            </li>
+                        {{ end }}
+                    </ul>
+                </div>
+
+                {{ if gt (len .Site.Taxonomies.collections) 0 }}
+                    <div class="my-12">
+                        <h2>Collections</h2>
+                        <ul class="flex flex-col lg:flex-row lg:flex-wrap list-none p-0">
+                            {{ $ordinal := 0 }}
+                            {{ $perRow = 3 }}
+                            {{ range $taxonomy, $terms := .Site.Taxonomies.collections }}
+                                {{ $collection := index (where $.Site.Data.tutorials.collections "id" $taxonomy) 0 }}
+
+                                {{ if and (ne $collection.type nil) (ne $collection.type "provider") }}
+                                    {{ $ordinal = add $ordinal 1}}
+
+                                    <li class="lg:w-1/{{ $perRow }} {{ if ne (mod $ordinal $perRow) 0 }}lg:pr-4{{ end }}">
+                                        <div class="bg-white shadow-lg p-6 border rounded-md border-gray-200 w-full h-full">
+                                            <div class="mb-2 pb-2 border-b border-gray-200">
+                                                <h3 class="no-anchor font-normal text-xl flex items-center">
+                                                    <a class="text-gray-800" href="/tutorials/{{ $taxonomy }}/">
+                                                        {{ $collection.name }}
+                                                    </a>
+                                                </h3>
+                                            </div>
+                                            <p class="text-base text-gray-700 mb-6">
+                                                {{ $collection.description }}
+                                            </p>
+                                            <div class="inline-flex flex-wrap gap-2 text-sm">
+                                                <div class="text-gray-700 px-2 py-1 border border-orange-400 rounded">
+                                                    <i class="fa fa-file-alt mr-0.5 text-orange-400"></i>
+                                                    <span>{{ len $terms }} tutorial{{ if ne (len $terms) 1 }}s{{ end }}</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                {{ end }}
+                            {{ end }}
+                        </ul>
+                    </div>
+                {{ end }}
+
+                <div>
+                    <h2>All tutorials</h2>
+                    <ul class="flex flex-col lg:flex-row lg:flex-wrap list-none p-0">
+                        {{ $perRow = 3 }}
+                        {{ range $index, $item := where .Pages ".Params.listed" "ne" false }}
+                            <li class="lg:w-1/{{ $perRow }} {{ if ne (mod (add $index 1) $perRow) 0 }}lg:pr-4{{ end }}">
+                                <div class="bg-white shadow-lg p-6 border rounded-md border-gray-200 w-full h-full">
+                                    <div class="mb-2 pb-2 border-b border-gray-200">
+                                        <h3 class="no-anchor font-normal text-xl flex items-center">
+                                            <a class="text-gray-800" href="{{ $item.RelPermalink }}">
+                                                {{ $item.Title }}
+                                            </a>
+                                        </h3>
+                                    </div>
+                                    <p class="text-base text-gray-700 mb-6">
+                                        {{ $item.Description }}
+                                    </p>
+                                    <div class="inline-flex flex-wrap gap-2 text-sm">
+
+                                        {{ if .Pages }}
+                                        <div class="text-gray-700 px-2 py-1 border border-blue-400 rounded">
+                                            <i class="fa fa-file-alt mr-0.5 text-blue-400"></i>
+                                            <span>{{ len $item.Pages }} topic{{ if ne (len $item.Pages) 1 }}s{{ end }}</span>
+                                        </div>
+                                    {{ end }}
+
+                                        {{ $estimated_time := 0 }}
+                                        {{ if .Pages }}
+                                            {{ range $topic := .Pages }}
+                                                {{ $estimated_time = (add $estimated_time (int $topic.Params.estimated_time)) }}
+                                            {{ end }}
+                                        {{ else }}
+                                            {{ $estimated_time = .Params.estimated_time }}
+                                        {{ end }}
+                                        <div class="text-gray-700 px-2 py-1 border border-gray-500 rounded">
+                                            <i class="far fa-clock mr-0.5 text-gray-600"></i>
+                                            <span>{{ $estimated_time }} minutes</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        {{ end }}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+{{ end }}
+
+{{ define "footer" }}
+
+{{ end }}

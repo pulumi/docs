@@ -1,0 +1,38 @@
+{{ define "main" }}
+    <div class="flex mb-16 docs-list-main">
+        <div class="sticky top-12 max-h-75 xl:w-2/12">
+            <div class="xl:w-56 xl:px-4">
+                {{ partial "tutorials/nav.html" . }}
+            </div>
+        </div>
+        <div class="mr-6 ml-4 flex justify-center xl:w-8/12 docs-main-content-wrapper">
+            <div class="max-w-3xl docs-main-content">
+                <header class="mb-6">
+                    {{ partial "tutorials/breadcrumb.html" . }}
+                </header>
+                <div class="special-h1">
+                    <h1>{{ .Title }}</h1>
+                    <div class="h1-gradient"></div>
+                </div>
+                {{/* Commenting this temporarily while I ponder whether showing a topic-specific image makes sense.
+                    {{ if .Params.meta_image }}
+                        <div>
+                            <img class="shadow-sm border border-gray-300 rounded" src="./{{ .Params.meta_image }}">
+                        </div>
+                    {{ end }}
+                */}}
+                <div class="mb-12">
+                    {{ .Content }}
+                </div>
+            </div>
+        </div>
+        <div class="sticky top-10 pt-8 max-h-75 xl:w-2/12 hidden xl:block">
+            {{ partial "tutorials/feedback.html" . }}
+            {{ partial "tutorials/right-nav-ad.html" }}
+        </div>
+    </div>
+{{ end }}
+
+{{ define "footer" }}
+
+{{ end }}

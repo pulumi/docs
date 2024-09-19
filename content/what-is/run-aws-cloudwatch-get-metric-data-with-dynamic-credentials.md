@@ -107,13 +107,13 @@ secret_key                <not set>             None    None
     region                <not set>             None    None
 ```
 
-To add the metrics, run the command using `esc run` as shown below, making sure to replace `<your-pulumi-org-name>`, `<your-environment-name>`, and `<aws-region>` with the names of your own Pulumi organization, ESC environment, and AWS Region, respectively.
+To add the metrics, run the command using `esc run` as shown below, making sure to replace `<your-pulumi-org-name>`, `<your-project-name>`, `<your-environment-name>`, and `<aws-region>` with the names of your own Pulumi organization, ESC environment, and AWS Region, respectively.
 
 ```bash
-$  esc run <your-pulumi-org-name>/<your-environment-name> -- aws cloudwatch put-metric-data --namespace pulumiDemo --metric-name Invocations --dimensions FunctionName=helloWorld --value 10 --unit Count --timestamp 2023-12-12T04:00:10Z --region <aws-region>
-$  esc run <your-pulumi-org-name>/<your-environment-name> -- aws cloudwatch put-metric-data --namespace pulumiDemo --metric-name Invocations --dimensions FunctionName=helloWorld --value 10 --unit Count --timestamp 2023-12-12T04:03:00Z --region <aws-region>
-$  esc run <your-pulumi-org-name>/<your-environment-name> -- aws cloudwatch put-metric-data --namespace pulumiDemo --metric-name Errors --dimensions FunctionName=helloWorld --value 9 --unit Count --timestamp 2023-12-12T04:02:00Z --region <aws-region>
-$  esc run <your-pulumi-org-name>/<your-environment-name> -- aws cloudwatch put-metric-data --namespace pulumiDemo --metric-name Errors --dimensions FunctionName=helloWorld --value 1 --unit Count --timestamp 2023-12-12T04:20:00Z --region <aws-region>
+$  esc run <your-pulumi-org-name>/<your-project-name>/<your-environment-name> -- aws cloudwatch put-metric-data --namespace pulumiDemo --metric-name Invocations --dimensions FunctionName=helloWorld --value 10 --unit Count --timestamp 2023-12-12T04:00:10Z --region <aws-region>
+$  esc run <your-pulumi-org-name>/<your-project-name>/<your-environment-name> -- aws cloudwatch put-metric-data --namespace pulumiDemo --metric-name Invocations --dimensions FunctionName=helloWorld --value 10 --unit Count --timestamp 2023-12-12T04:03:00Z --region <aws-region>
+$  esc run <your-pulumi-org-name>/<your-project-name>/<your-environment-name> -- aws cloudwatch put-metric-data --namespace pulumiDemo --metric-name Errors --dimensions FunctionName=helloWorld --value 9 --unit Count --timestamp 2023-12-12T04:02:00Z --region <aws-region>
+$  esc run <your-pulumi-org-name>/<your-project-name>/<your-environment-name> -- aws cloudwatch put-metric-data --namespace pulumiDemo --metric-name Errors --dimensions FunctionName=helloWorld --value 1 --unit Count --timestamp 2023-12-12T04:20:00Z --region <aws-region>
 ```
 
 ### Step 6: Create a sample metric data query file
@@ -174,10 +174,10 @@ EOF
 
 At this point, you have validated your environment, added sample data, and added queries.
 
-To get the metrics, run the command using `esc run` as shown below, making sure to replace `<your-pulumi-org-name>`, `<your-environment-name>`, and `<aws-region>` with the names of your own Pulumi organization, ESC environment, and AWS Region, respectively.
+To get the metrics, run the command using `esc run` as shown below, making sure to replace `<your-pulumi-org-name>`, `<your-project-name>`, `<your-environment-name>`, and `<aws-region>` with the names of your own Pulumi organization, ESC environment, and AWS Region, respectively.
 
 ```bash
-$ esc run <your-pulumi-org-name>/<your-environment-name> -- aws cloudwatch get-metric-data --metric-data-queries file://./sampleQuery.json --start-time 2023-12-12T04:00:00Z --end-time 2023-12-12T04:30:00Z  --region <aws-region>
+$ esc run <your-pulumi-org-name>/<your-project-name>/<your-environment-name> -- aws cloudwatch get-metric-data --metric-data-queries file://./sampleQuery.json --start-time 2023-12-12T04:00:00Z --end-time 2023-12-12T04:30:00Z  --region <aws-region>
 ```
 
 Then validate that your output is similar to the following:

@@ -85,7 +85,7 @@ backend_image = awsx.ecr.Image(
     path="./app/backend")
 ```
 
-Next, let's create an Application Load Balancer (ALB) to receive traffic and an [Amazon Elastic Container Service (ECS)](https://www.pulumi.com/learn/glossary/aws-ecs/) cluster in which the containers will run.
+Next, let's create an Application Load Balancer (ALB) to receive traffic and an [Amazon Elastic Container Service (ECS)](https://www.pulumi.com/tutorials/glossary/aws-ecs/) cluster in which the containers will run.
 
 ```python
 # An ECS cluster to deploy into
@@ -95,7 +95,7 @@ cluster = aws.ecs.Cluster("cluster")
 lb = awsx.lb.ApplicationLoadBalancer("grocery-lb")
 ```
 
-Now, create an [AWS Fargate](https://www.pulumi.com/learn/glossary/aws-fargate/) service that will run the containers. There are some configuration values for the Fargate service that you can set via Pulumi config, but for this example, you can just use the default values. This code creates a Fargate service that runs a task with two containers, a front and back. The front container is using the frontend image created in Step 1 and is wired to receive traffic from the ALB. The back container is using the backend image and listens on port 8000.
+Now, create an [AWS Fargate](https://www.pulumi.com/tutorials/glossary/aws-fargate/) service that will run the containers. There are some configuration values for the Fargate service that you can set via Pulumi config, but for this example, you can just use the default values. This code creates a Fargate service that runs a task with two containers, a front and back. The front container is using the frontend image created in Step 1 and is wired to receive traffic from the ALB. The back container is using the backend image and listens on port 8000.
 
 ```python
 # AWS configs

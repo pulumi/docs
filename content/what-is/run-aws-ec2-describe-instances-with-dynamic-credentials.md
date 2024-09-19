@@ -95,10 +95,10 @@ secret_key                <not set>             None    None
     region                <not set>             None    None
 ```
 
-To get details about an instance, run the command using `esc run` as shown below, making sure to replace `<your-pulumi-org-name>`, `<your-environment-name>`, and `<your-aws-region>` with the names of your own Pulumi organization, environment, and desired AWS region respectively:
+To get details about an instance, run the command using `esc run` as shown below, making sure to replace `<your-pulumi-org-name>`, `<your-project-name>`, `<your-environment-name>`, and `<your-aws-region>` with the names of your own Pulumi organization, environment, and desired AWS region respectively:
 
 ```bash
-esc run <your-pulumi-org-name>/<your-environment-name> -- aws ec2 describe-instances --region <your-aws-region>
+esc run <your-pulumi-org-name>/<your-project-name>/<your-environment-name> -- aws ec2 describe-instances --region <your-aws-region>
 ```
 
 ## Conclusion
