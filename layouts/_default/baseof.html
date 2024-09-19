@@ -2,6 +2,7 @@
 <html lang="en-US" prefix="og: http://ogp.me/ns#">
     {{ partial "head.html" . }}
     <body class="section-{{ .Section }}">
+        <iframe style="display: none" src="/_pulumi/cloud-ai/sidebar?hostApp=docs&apiHost=https://app.simon.pulumi-dev.io/_pulumi/cloud-ai"></iframe>
         <pulumi-root></pulumi-root>
         {{ partial "header.html" . }}
         {{ block "hero" . }}
@@ -9,6 +10,19 @@
         <main>
             {{ block "main" . }}
             {{ end }}
+
+            <style>
+                #ai-sidebar-target {
+                    z-index: 900;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+
+                    height: 100%;
+                    position: fixed;
+                }
+            </style>
+            <aside id="ai-sidebar-target"></aside>
         </main>
 
         {{ block "footer" . }}

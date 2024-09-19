@@ -60,7 +60,7 @@ const config = {
 };
 
 // const aiAppStack = new pulumi.StackReference('pulumi/pulumi-ai-app-infra/prod');
-const aiAppStack = new pulumi.StackReference('pulumi/pulumi-ai-app-infra/pr-pulumi-pulumi.ai-1254');
+const aiAppStack = new pulumi.StackReference('pulumi/pulumi-ai-app-infra/pr-pulumi-pulumi.ai-1242');
 const aiAppDomain = aiAppStack.requireOutput('aiAppDistributionDomain');
 const cloudAiAppDomain = aiAppStack.requireOutput('cloudAiAppDistributionDomain');
 
@@ -279,33 +279,40 @@ const allViewerExceptHostHeaderId = "b689b0a8-53d0-40ab-baf2-68738e2966ac";
 // https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-cache-policies.html
 const cachingDisabledId = "4135ea2d-6df8-44a3-9df3-4b5a84be39ad";
 
-const SecurityHeadersPolicy = new aws.cloudfront.ResponseHeadersPolicy('security-headers', {
-    securityHeadersConfig: {
-        frameOptions: {
-            frameOption: config.addSecurityHeaders ? 'DENY' : 'SAMEORIGIN',
-            override: false,
-        },
-        // These remaining options are derived from:
-        // https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-response-headers-policies.html#managed-response-headers-policies-security
-        // "SecurityHeadersPolicy" with ID "67f7725c-6f97-4210-82d7-5512b31e9d03"
-        referrerPolicy: {
-            referrerPolicy: 'strict-origin-when-cross-origin',
-            override: false,
-        },
-        contentTypeOptions: {
-            override: true,
-        },
-        strictTransportSecurity: {
-            accessControlMaxAgeSec: 31536000,
-            override: false,
-        },
-        xssProtection: {
-            protection: true,
-            modeBlock: true,
-            override: false,
+function newSecurityHeadersPolicy(frameOption: string) {
+    return new aws.cloudfront.ResponseHeadersPolicy('security-headers', {
+        securityHeadersConfig: {
+            frameOptions: {
+                frameOption,
+                override: false,
+            },
+            // These remaining options are derived from:
+            // https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-response-headers-policies.html#managed-response-headers-policies-security
+            // "SecurityHeadersPolicy" with ID "67f7725c-6f97-4210-82d7-5512b31e9d03"
+            referrerPolicy: {
+                referrerPolicy: 'strict-origin-when-cross-origin',
+                override: false,
+            },
+            contentTypeOptions: {
+                override: true,
+            },
+            strictTransportSecurity: {
+                accessControlMaxAgeSec: 31536000,
+                override: false,
+            },
+            xssProtection: {
+                protection: true,
+                modeBlock: true,
+                override: false,
+            }
         }
-    }
-})
+    });
+}
+
+// Most of the site
+const SecurityHeadersPolicy = newSecurityHeadersPolicy(config.addSecurityHeaders ? 'DENY' : 'SAMEORIGIN');
+// Copilot lives in an iframe
+const CopilotSecurityHeadersPolicy = newSecurityHeadersPolicy('SAMEORIGIN');
 
 const baseCacheBehavior: aws.types.input.cloudfront.DistributionDefaultCacheBehavior = {
     targetOriginId: originBucket.arn,
@@ -596,7 +603,7 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
             forwardedValues: undefined, // forwardedValues conflicts with cachePolicyId, so we unset it.
         },
 
-        // AI app with caching handled by the app
+        // Copilot app
         {
             ...baseCacheBehavior,
             // allow all methods
@@ -610,6 +617,7 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
             cachePolicyId: cachingDisabledId,
             lambdaFunctionAssociations: [],
             forwardedValues: undefined, // forwardedValues conflicts with cachePolicyId, so we unset it.
+            responseHeadersPolicyId: CopilotSecurityHeadersPolicy.id,
         },
         {
             ...baseCacheBehavior,
@@ -624,6 +632,7 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
             cachePolicyId: cachingDisabledId,
             lambdaFunctionAssociations: [],
             forwardedValues: undefined, // forwardedValues conflicts with cachePolicyId, so we unset it.
+            responseHeadersPolicyId: CopilotSecurityHeadersPolicy.id,
         }
     ],
 
