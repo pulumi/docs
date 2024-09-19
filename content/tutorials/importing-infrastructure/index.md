@@ -48,6 +48,7 @@ estimated_time: 10
 #     - some-non-existent-collection
 
 aliases:
+- /tutorials/importing/
 - /tutorials/importing/getting-started/
 - /tutorials/importing/importing-cli/
 - /tutorials/importing/bulk-importing/
