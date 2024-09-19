@@ -39,15 +39,16 @@ Pulumi programs are run (with or without debugging) using a [launch configuratio
 
 The extension automatically generates a debug configuration to run `pulumi up` or `pulumi preview` for the current Pulumi stack. To use an automatic debug configuration, do the following:
 
-1. Select the __Run and Debug__ icon.
-2. Choose __Show all automatic debug configurations__.
-3. Select "Pulumi..." then "pulumi preview" or "pulumi up".  Debugging will start automatically.
+1. Open your program file in Code and set a breakpoint.
+2. Select the __Run and Debug__ icon.
+3. Choose __Show all automatic debug configurations__.
+4. Select "Pulumi..." then "pulumi preview" or "pulumi up".  Debugging will start automatically.
 
     ![Automatic Debug Configuration](./automatic-1.png)
 
     ![Automatic Debug Configuration](./automatic-2.png)
 
-4. Select or create a stack if prompted to do so.
+5. Select or create a stack if prompted to do so.
 
     ![Stack Selection](./stack-selection-1.png)
 
@@ -66,7 +67,7 @@ Access the CLI output via the Debug Console view.
 
 ## Debugging with other IDEs
 
-You can use any other IDE or editor that supports attaching to running programs. The tools differ depending on your preference and the language you are using, but the process stays similar:
+You can use any other IDE or editor that supports attaching to running programs using the [Debug Adapter Protocol](https://microsoft.github.io/debug-adapter-protocol/)). The tools differ depending on your preference and the language you are using, but the process is similar:
 
 1. Start with an existing Pulumi project that contains `Pulumi.yaml` and your program.
 2. Open your IDE and set a breakpoint in your program.
