@@ -35,7 +35,7 @@ Additionally we have improved accuracy and coverage for registry documentation, 
 
 ### New Modules
 
-Over the last year, we have added support for several new models. Among these are:
+Over the last year, we have added support for several new modules. Among these are:
 
 - [App Hub](https://www.pulumi.com/registry/packages/gcp/api-docs/apphub/)
 - [Application Integration](https://www.pulumi.com/registry/packages/gcp/api-docs/applicationintegration/)
@@ -53,6 +53,12 @@ Over the last year, we have added support for several new models. Among these ar
 - [Security Posture](https://www.pulumi.com/registry/packages/gcp/api-docs/securityposture/)
 - [Site Verification](https://www.pulumi.com/registry/packages/gcp/api-docs/siteverification/)
 - [Workbench](https://www.pulumi.com/registry/packages/gcp/api-docs/workbench/)
+
+### API Coverage Growth
+
+The below chart shows the growth of this provider by resource, function, and supporting types since Version 7.
+
+![google-cloud-coverage](./gcp-api-coverage.png)
 
 ## What’s New in 8.0
 
