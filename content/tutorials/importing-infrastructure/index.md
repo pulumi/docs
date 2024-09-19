@@ -368,7 +368,7 @@ The highlighted line in the preview section of the output indicates which proper
 
 {{< cleanup >}}
 
-{{< notes type="info" >}}
+{{< notes type="warning" >}}
 
 With the resources you imported via the CLI command, make sure to set the `protect` property to `false` in the code and run `pulumi up` to make the change before running the `pulumi destroy` command. Otherwise the deletion will fail.
 
