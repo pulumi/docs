@@ -39,13 +39,43 @@ Organization webhooks can be managed on the Organization Settings page. Environm
 
 ![Organization webhooks](/images/docs/reference/service/webhooks/org-webhooks.png)
 
-If you are looking for Stack and Deployment Webhook documentation, it's [here](/docs/pulumi-cloud/webhooks/).
+Pulumi Cloud also supports webhooks for events related to Pulumi IaC stacks and [Pulumi Deployments](/docs/pulumi-cloud/deployments). For additional information on these types of webhooks, see [Pulumi Cloud Webhooks](/docs/pulumi-cloud/webhooks).
 
 ### Create a Webhook
 
-Pulumi Webhooks may be created through the UI using the steps outlined below, by using the
-[Webhook resource](https://www.pulumi.com/registry/packages/pulumiservice/api-docs/webhook/) from the Pulumi provider
-or by [using the API](/docs/pulumi-cloud/cloud-rest-api/#create-webhook) directly.
+Pulumi Webhooks may be created through any of the following methods:
+
+1. Manually, in the Pulumi Cloud UI using the steps outlined in [Create an Organization Webhook in the Pulumi Cloud UI](#create-an-organization-webhook-in-the-pulumi-cloud-ui) or [Create an Environment Webhook in Pulumi Cloud in the Pulumi Cloud UI](#create-an-environment-webhook-in-the-pulumi-cloud-ui).
+1. Declaratively, as part of a [Pulumi IaC](/docs/iac) program as shown in [Create an Webhook in a Pulumi IaC Program](#create-an-webhook-in-a-pulumi-iac-program)
+1. By invoking the [Pulumi Cloud REST API](/docs/pulumi-cloud/cloud-rest-api/#create-webhook) directly.
+
+#### Create an Organization Webhook in the Pulumi Cloud UI
+
+1. Navigate to **Settings** > **Webhooks**.
+2. Select **Create webhook**.
+3. Under Destination, choose **Webhook**, **Slack** or **Microsoft Teams**.
+    1. For generic JSON webhooks, provide a display name, payload URL, and optionally a secret.
+    2. For Slack webhooks, provide a Slack webhook URL and a display name.
+    3. For Microsoft Teams webhooks, provide a Microsoft Teams webhook URL and a display name.
+4. Choose which events you would like to receive using groups and filters menu.
+
+#### Create an Environment Webhook in the Pulumi Cloud UI
+
+1. Navigate to your environment.
+2. Navigate to **Webhooks** tab.
+3. Select **Create webhook**.
+4. Under Destination, choose **Webhook**, **Slack**, **Microsoft Teams** or **Deployment**
+   1. For generic JSON webhooks, provide a display name, payload URL, and optionally a secret.
+   2. For Slack webhooks, provide a Slack webhook URL and a display name.
+   3. For Microsoft Teams webhooks, provide a Microsoft Teams webhook URL and a display name.
+   4. For Deployment webhooks, provide the stack to deploy in the format `project/stack`.
+5. Choose which events you would like to receive using groups and filters menu.
+
+#### Create an Webhook in a Pulumi IaC Program
+
+The following example shows how to create an Environment webhook in a Pulumi IaC program by declaring a [Webhook resource](/registry/packages/pulumiservice/api-docs/webhook/) with the [Pulumi Cloud provider](/registry/packages/pulumiservice).
+
+To create an Organization webhook instead of an Environment webhook, the code is virtually identical - just omit the `environmentName` value when declaring the webhook resource.
 
 {{< chooser language "typescript,python,go,csharp" >}}
 {{% choosable language typescript %}}
@@ -82,24 +112,24 @@ webhook = pulumi_service.Webhook("example-webhook",
 
 ```go
 import (
-	"fmt"
-	"github.com/pulumi/pulumi-pulumiservice/sdk/go/pulumiservice"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ "fmt"
+ "github.com/pulumi/pulumi-pulumiservice/sdk/go/pulumiservice"
+ "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		webhook, err := pulumiservice.NewWebhook(ctx, "example-webhook", &pulumiservice.WebhookArgs{
-			Active:           pulumi.Bool(true),
-			DisplayName:      pulumi.String("example webhook"),
-			OrganizationName: pulumi.String("example"),
+ pulumi.Run(func(ctx *pulumi.Context) error {
+  webhook, err := pulumiservice.NewWebhook(ctx, "example-webhook", &pulumiservice.WebhookArgs{
+   Active:           pulumi.Bool(true),
+   DisplayName:      pulumi.String("example webhook"),
+   OrganizationName: pulumi.String("example"),
       EnvironmentName:  pulumi.String("my-environment"),
-			PayloadURL:       pulumi.String("https://example.com/webhook"),
-		}, nil)
-		if err != nil {
-			return fmt.Errorf("error creating webhook: %v", err)
-		}
-		return nil
-	})
+   PayloadURL:       pulumi.String("https://example.com/webhook"),
+  }, nil)
+  if err != nil {
+   return fmt.Errorf("error creating webhook: %v", err)
+  }
+  return nil
+ })
 }
 ```
 
@@ -127,28 +157,6 @@ class PulumiServiceWebhook: Stack
 {{% /choosable %}}
 {{< /chooser >}}
 
-#### Create an Organization Webhook
-
-1. Navigate to **Settings** > **Webhooks**.
-2. Select **Create webhook**.
-3. Under Destination, choose **Webhook**, **Slack** or **Microsoft Teams**.
-    1. For generic JSON webhooks, provide a display name, payload URL, and optionally a secret.
-    2. For Slack webhooks, provide a Slack webhook URL and a display name.
-    3. For Microsoft Teams webhooks, provide a Microsoft Teams webhook URL and a display name.
-4. Choose which events you would like to receive using groups and filters menu.
-
-#### Create an Environment Webhook
-
-1. Navigate to your environment.
-2. Navigate to **Webhooks** tab.
-3. Select **Create webhook**.
-4. Under Destination, choose **Webhook**, **Slack**, **Microsoft Teams** or **Deployment**
-   1. For generic JSON webhooks, provide a display name, payload URL, and optionally a secret.
-   2. For Slack webhooks, provide a Slack webhook URL and a display name.
-   3. For Microsoft Teams webhooks, provide a Microsoft Teams webhook URL and a display name.
-   4. For Deployment webhooks, provide the stack to deploy in the format `project/stack`.
-5. Choose which events you would like to receive using groups and filters menu.
-
 ## Event Filtering
 
 Event filtering allows you to choose which events should be delivered to each webhook. You may choose to receive
@@ -158,7 +166,7 @@ The following table describes the various event filters available and the contex
 | Filter                              | Event Kind                      | Webhook Type               | Triggered                                        |
 |-------------------------------------|---------------------------------|----------------------------|--------------------------------------------------|
 | `environment_created`               | `environment`                   | Organization webhooks only | When a new environment is created.               |
-| `environment_deleted`               | `environment`                   | Organization webhooks only | When an environment is deleted.              	  |
+| `environment_deleted`               | `environment`                   | Organization webhooks only | When an environment is deleted.                 |
 | `environment_revision_created`      | `environment_revision`          | Organization or Environment| When a new revision is created on an environment.|
 | `environment_revision_retracted`    | `environment_revision`          | Organization or Environment| When a revision is retracted on an environment.  |
 | `environment_revision_tag_created`  | `environment_revision_tag`      | Organization or Environment| When a new revision tag is created.              |
@@ -323,9 +331,9 @@ the organization name, and a URL for the event. It will also contain `projectNam
   "environmentName": "prod",
   "affectedRevisions": [2, 5, 6, 7],
   "importedEnvironmentReference": {
-	"projectName": "website",
-  	"environmentName": "base",
-	"revision": 10
+ "projectName": "website",
+   "environmentName": "base",
+ "revision": 10
   }
 }
 ```
