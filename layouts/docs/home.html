@@ -31,8 +31,19 @@
                                 <a href="{{ .link }}">
                                     <div>
                                         <div class="card-icon">
+                                            {{ if .image }}
+                                            <div style="
+                                                display: block;
+                                                position: relative;
+                                                text-indent: -9999px;
+                                                background: url({{ .image }});
+                                                width: {{ .image_x }};
+                                                height: {{ .image_y }};
+                                                background-size: {{ .image_x }} {{ .image_y }};"></div>
+                                            {{ else if .icon }}
                                             <div class="icon {{ .icon }}"></div>
-                                        </div>
+                                            {{ end }}
+                                                </div>
                                         <div class="label">{{ .label }}</div>
                                     </div>
                                 </a>
@@ -55,6 +66,11 @@
                 {{ else if eq .type "button-cards" }}
                 <div class="docs-home-section">
                     <h2 id="{{ anchorize .heading }}">{{ .heading }}</h2>
+                    {{ if .description }}
+                        {{ .description | safeHTML }}
+                    {{ else if .description_md }}
+                        {{ .description_md | markdownify }}
+                    {{ end }}
 
                     <div class="tiles flex-wrap justify-left items-stretch mt-4">
                         {{ range .cards }}
