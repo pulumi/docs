@@ -55,4 +55,10 @@
     h6 {
         @apply text-sm;
     }
+
+    .docs-main-content {
+        a {
+            @apply text-blue-500;
+        }
+    }
 }
