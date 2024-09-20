@@ -1,8 +1,8 @@
----
-title: "Announcing 6.0 of the Pulumi AWS Classic Provider"
+-
+title: "Announcing 6.0 of the Pulumi AWS Provider"
 date: 2023-08-29T09:00:00-04:00
 draft: false
-meta_desc: "Announcing 6.0 of the Pulumi AWS Classic Provider, including SDK size optimization, TF plugin framework support, new resources, and more."
+meta_desc: "Announcing 6.0 of the Pulumi AWS Provider, including SDK size optimization, TF plugin framework support, new resources, and more."
 meta_image: meta.png
 authors:
     - mikhail-shilkov
@@ -13,7 +13,7 @@ tags:
 
 ---
 
-We are excited to announce 6.0 of the [Pulumi AWS Classic provider](https://www.pulumi.com/registry/packages/aws/). The AWS Classic provider is the most heavily used provider across the entire Pulumi ecosystem, and offers access to the full surface area of the upstream Terraform AWS Provider in Pulumi projects in all supported languages. The [6.0 release](https://github.com/pulumi/pulumi-aws/releases/tag/v6.0.2) brings a substantial set of fixes and improvements to the provider, including a number of breaking changes as part of the major version release.
+We are excited to announce 6.0 of the [Pulumi AWS provider](https://www.pulumi.com/registry/packages/aws/). The AWS provider is the most heavily used provider across the entire Pulumi ecosystem, and offers access to the full surface area of the upstream Terraform AWS Provider in Pulumi projects in all supported languages. The [6.0 release](https://github.com/pulumi/pulumi-aws/releases/tag/v6.0.2) brings a substantial set of fixes and improvements to the provider, including a number of breaking changes as part of the major version release.
 
 This blog post walks you through the list of notable changes in the new major version.
 
@@ -31,13 +31,13 @@ More and more Terraform resources are migrating to the [Terraform Plugin Framewo
 
 ![aws_api](aws_api.png)
 
-Since the previous major release of 5.0, we have shipped 57 additional minor and patch releases, enabling you to keep up with the latest and greatest enhancements. The new major version of the AWS Classic provider brings 56 new resources and 23 new functions. Additions include resources for Audit Manager, Chime, Fin Space, Global Accelerator, Open Search, Quicksight, Resource Explorer, Route53, Transfer, and many other AWS services.
+Since the previous major release of 5.0, we have shipped 57 additional minor and patch releases, enabling you to keep up with the latest and greatest enhancements. The new major version of the AWS provider brings 56 new resources and 23 new functions. Additions include resources for Audit Manager, Chime, Fin Space, Global Accelerator, Open Search, Quicksight, Resource Explorer, Route53, Transfer, and many other AWS services.
 
 You can see a full list of new resources and functions in [Release Notes](https://github.com/pulumi/pulumi-aws/releases/tag/v6.0.2).
 
 ### SDK Size Optimization
 
-The AWS Classic provider contains more than 1,200 resources with over 12,000 properties between them. As a result, it’s expected that the SDK size of the provider has grown to be fairly large. With that in mind, we invested in some key areas to reduce the size of generated files. Depending on the runtime, the SDK is now up to 90% smaller than it used to be in v5 of the provider!
+The AWS provider contains more than 1,200 resources with over 12,000 properties between them. As a result, it’s expected that the SDK size of the provider has grown to be fairly large. With that in mind, we invested in some key areas to reduce the size of generated files. Depending on the runtime, the SDK is now up to 90% smaller than it used to be in v5 of the provider!
 
 ![aws_sdk](aws_sdk.png)
 
@@ -47,7 +47,7 @@ Smaller SDK sizes mean faster downloads, snappier experience with editors and co
 
 ### Upstream Breaking Changes
 
-Pulumi AWS Classic 6.0 ships all improvements and bug fixes of upstream versions from 5.0.0 to 5.11.0. It also contains a number of upstream breaking changes. Please refer to the [changelog](https://github.com/hashicorp/terraform-provider-aws/blob/main/CHANGELOG.md) to navigate the entire list.
+Pulumi AWS 6.0 ships all improvements and bug fixes of upstream versions from 5.0.0 to 5.11.0. It also contains a number of upstream breaking changes. Please refer to the [changelog](https://github.com/hashicorp/terraform-provider-aws/blob/main/CHANGELOG.md) to navigate the entire list.
 
 ### Fixes for Highly Upvoted Issues
 
@@ -65,4 +65,4 @@ You can see a full list of changes and learn more about migrating your existing 
 
 ### Get Started Today
 
-You can browse our [API reference docs](https://www.pulumi.com/registry/packages/aws/) with inline examples or explore the [Pulumi AWS Classic Provider](https://github.com/pulumi/pulumi-aws) repository to get started today! And don't forget [to register for the live workshop](/resources/getting-started-with-iac-pulumi-aws/) on September 7, 2023 to see AWS 6.0 in action!
+You can browse our [API reference docs](https://www.pulumi.com/registry/packages/aws/) with inline examples or explore the [Pulumi AWS Provider](https://github.com/pulumi/pulumi-aws) repository to get started today! And don't forget [to register for the live workshop](/resources/getting-started-with-iac-pulumi-aws/) on September 7, 2023 to see AWS 6.0 in action!
