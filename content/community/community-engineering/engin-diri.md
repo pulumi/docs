@@ -11,7 +11,7 @@ talks:
 - event: "CD Mini Summit"
   title: "Progressive Infrastructure Delivery using Kargo and Argo CD"
   url: "https://cd.foundation/cd-mini-summit-vienna/program/"
-  date: 024-09-19T18:00:00.000-07:00
+  date: 2024-09-19T18:00:00.000-07:00
   slides: null
 - event: "Civo Navigate EU"
   title: "Serverless LLM Inference for Everyone: Learnings from an AI Beginner!"
