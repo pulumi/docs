@@ -14,7 +14,7 @@ tags:
     - insights
 ---
 
-Today at our fourth annual PulumiUP conference, we unveiled a new vision for Pulumi, going beyond infrastructure as code to a comprehensive product suite. Pulumi’s platform now consists of three core products: Pulumi IaC is open source infrastructure as code in any programming language; Pulumi ESC is centralized secrets management that scales; and Pulumi Insights delivers instant visibility, intelligence, and control over all of your infrastructure. Each product can be adopted independently but is better together. In this post, we will share more about how Pulumi is your trusted partner to automate, secure, and manage everything you run in the cloud.
+At our fourth annual PulumiUP conference, we unveiled a new vision for Pulumi, going beyond infrastructure as code to a comprehensive product suite. Pulumi’s platform now consists of three core products: Pulumi IaC is open source infrastructure as code in any programming language; Pulumi ESC is centralized secrets management that scales; and Pulumi Insights delivers instant visibility, intelligence, and control over all of your infrastructure. Each product can be adopted independently but is better together. In this post, we will share more about how Pulumi is your trusted partner to automate, secure, and manage everything you run in the cloud.
 
 <!--more-->
 
@@ -30,7 +30,9 @@ You can see this visually depicted here:
 
 We’ve now worked with 3,000 customers to help with their cloud journey and have listened to and solved the problems we regularly hear about. That includes Nvidia who is at the forefront of the AI revolution as well as [BMW](/case-studies/bmw) who is reimagining their entire engineering mindset in a cloud-first world, both leveraging Pulumi. [Unity Games](/case-studies/unity) now ships **5x faster** from code to cloud, and Tivity Health **saved 71%** of their cloud spend, automating everything and saving $6.5M annually.
 
-Now let’s dive into the three products and what we announced today at PulumiUP:
+Now let’s dive into the three products and what we announced at PulumiUP:
+
+{{< youtube "AepHQaXeNX0?rel=0" >}}
 
 ## Pulumi IaC - Infrastructure as Code in Any Programming Language
 
@@ -42,7 +44,7 @@ We are always improving Pulumi IaC and today is no different. We launched a numb
 
 ## Pulumi ESC - Centralized Secrets Management and Orchestration that Scales
 
-[Pulumi ESC](/product/secrets-management) is a new approach to secrets and configuration management that is scalable, secure automatically with easy dynamic credentials, and tames sprawl with engineering best practices. ESC is not just a feature of our IaC product --- it can be adopted entirely independently of it for application and infrastructure secrets. We initially launched ESC in preview nearly a year ago, and since then have had hundreds of customers and thousands of users try it out – many at production scale – who have given us amazing feedback. We are excited to announce today that **ESC is generally available**.
+[Pulumi ESC](/product/secrets-management) is a new approach to secrets and configuration management that is scalable, secure automatically with easy dynamic credentials, and tames sprawl with engineering best practices. ESC is not just a feature of our IaC product --- it can be adopted entirely independently of it for application and infrastructure secrets. We initially launched ESC in preview nearly a year ago, and since then have had hundreds of customers and thousands of users try it out – many at production scale – who have given us amazing feedback. We are excited to announce that **ESC is generally available**.
 
 Being generally available is a big deal to us, and means it is ready for robust and secure enterprise-grade workloads. New capabilities available at GA include a new projects system which lets you group your environments into familiar hierarchies. We have added versioning, tagging, and pinning, so that you can institute more robust change management practices. ESC can manage encrypted secrets directly, but we have always supported pulling secrets from other secret stores, like AWS Secrets Manager, Azure KeyVault, Google Secret Manager, and HashiCorp Vault. We have now added 1Password to the list. We now also support secrets sync, which lets you still edit your secrets straight from Pulumi ESC, but have them automatically mirrored back to the backing secrets store. Flexible webhooks now support custom workflows triggered by environment changes. The new Pulumi VS Code Extension helps you edit your environments in code. We’ve launched application SDKs for Node.js, Python, and Go, as well as a Kubernetes Operator to inject secrets into Kubernetes workloads.
 
@@ -52,17 +54,17 @@ We aim for you to “fall into the pit of success” with security, so that it i
 
 Pulumi Insights already delivers visibility, intelligence, and controls over your infrastructure resources. We began with Insights a year and a half ago as a collection of IaC features. We added resource search with structured and natural language search syntax, to help you find your IaC infrastructure no matter where it is running. We added the ability to export your infrastructure data and slice and dice it from data tools like Snowflake. We also added new dashboards to help visualize your infrastructure at scale.
 
-The big news with Pulumi Insights 2.0, announced today, is that *we’re bringing these capabilities to **all of your cloud infrastructure***, no matter where it is, and no matter how it was created. You point Pulumi at your cloud accounts for any of nearly 200 supported clouds, and you get an instant asset inventory of everything you have. This is true even for resources created by Terraform, CloudFormation, Azure Resource Manager, cloud CLIs and SDKs, or even by clicking in your cloud console. An improved resource view gives you pivot-table-like capabilities so you can understand everything you have, and new graph visualizations with inferred dependencies help you to make sense of how things relate. Search and Pulumi Copilot work over discovered cloud resources, letting you explore and ask questions interactively. Pulumi Insights leverages Pulumi CrossGuard, our policy as code technology, and can tap into any existing IaC policies to find issues pertaining to security, compliance, cost, and best practices. Pulumi’s compliance-ready policy packs just work. Insights can also leverage CrossGuard’s ability to automate remediations so that Insights not only tells you about your issues, but helps you fix them with the click of a button. Finally, Insights is better together with Pulumi IaC, and enables you to migrate any resources in the cloud to Pulumi IaC – improving the robustness and built-in security of your operations – with a fully interactive import experience.
+The big news with Pulumi Insights 2.0 is that *we’re bringing these capabilities to **all of your cloud infrastructure***, no matter where it is, and no matter how it was created. You point Pulumi at your cloud accounts for any of nearly 200 supported clouds, and you get an instant asset inventory of everything you have. This is true even for resources created by Terraform, CloudFormation, Azure Resource Manager, cloud CLIs and SDKs, or even by clicking in your cloud console. An improved resource view gives you pivot-table-like capabilities so you can understand everything you have, and new graph visualizations with inferred dependencies help you to make sense of how things relate. Search and Pulumi Copilot work over discovered cloud resources, letting you explore and ask questions interactively. Pulumi Insights leverages Pulumi CrossGuard, our policy as code technology, and can tap into any existing IaC policies to find issues pertaining to security, compliance, cost, and best practices. Pulumi’s compliance-ready policy packs just work. Insights can also leverage CrossGuard’s ability to automate remediations so that Insights not only tells you about your issues, but helps you fix them with the click of a button. Finally, Insights is better together with Pulumi IaC, and enables you to migrate any resources in the cloud to Pulumi IaC – improving the robustness and built-in security of your operations – with a fully interactive import experience.
 
-Today marks the start of an ambitious long-term vision for Pulumi Insights. Some of what was announced is actively shipping while other pieces will ship in the coming weeks. [Learn more in the launch blog](/blog/pulumi-insights-2) and, if you'd like to gain early access, [sign up for the waitlist](/product/waitlist).
+This marks the start of an ambitious long-term vision for Pulumi Insights. Some of what was announced is actively shipping while other pieces will ship in the coming weeks. [Learn more in the launch blog](/blog/pulumi-insights-2) and, if you'd like to gain early access, [sign up for the waitlist](/product/waitlist).
 
 ## Thank You
 
-Today, I am incredibly thankful to our community, 3,000 customers, and the partners and speakers who made PulumiUP 2024 a reality. Your feedback and continued belief in Pulumi has fueled the innovations we’re shipping today and into the future.
+I am incredibly thankful to our community, 3,000 customers, and the partners and speakers who made PulumiUP 2024 a reality. Your feedback and continued belief in Pulumi has fueled the innovations we’re shipping today and into the future.
 
 All of the talks are [streaming live here](/pulumi-up) and will be up on YouTube afterwards.
 
-We can’t wait to hear what you think about the new vision for Pulumi’s platform as well as the new IaC, ESC, and Insights capabilities announced today. As always, you can [try Pulumi for free here](/start).
+We can’t wait to hear what you think about the new vision for Pulumi’s platform as well as the new IaC, ESC, and Insights capabilities announced at PulumiUP 2024. As always, you can [try Pulumi for free here](/start).
 
 Happy cloud spelunking.
 
