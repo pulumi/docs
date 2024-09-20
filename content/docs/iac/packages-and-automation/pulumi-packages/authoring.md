@@ -56,7 +56,7 @@ If you are considering a bridged Terraform provider, take a look at [`terraform-
 
 You should name your repository (and thus, your Pulumi Package) using the following guidelines:
 
-- The name should start with `pulumi-`, like our [`pulumi-aws-native`](/registry/packages/aws-native) AWS Native Provider and our [`pulumi-eks`](/registry/packages/eks) Component for AWS Elastic Kubernetes Service (EKS)
+- The name should start with `pulumi-`, like our [`pulumi-azure-native`](/registry/packages/azure-native) Azure Native Provider and our [`pulumi-eks`](/registry/packages/eks) Component for AWS Elastic Kubernetes Service (EKS)
 - If you're naming a **native provider**, use the cloud provider's name, like our [`pulumi-kubernetes`](/registry/packages/kubernetes) Kubernetes Provider
 - If you're naming a **bridged provider**, re-use the Terraform provider's name but replace the `terraform-provider-` prefix with `pulumi-`
 - If you're naming a **component**, name your package using both the cloud provider whose resources you're building on top of and the resources, like our [`pulumi-aws-apigateway`](/registry/packages/aws-apigateway) Component for AWS API Gateway
@@ -67,7 +67,7 @@ See the instructions in your new repository's `README.md` file for specific inst
 
 ## Write documentation
 
-We recommend authoring documentation to help others in the Pulumi community use your package. In your repository, there should be a `docs/` folder with a few template pages you can use that correspond to the various tabs on a package page in Pulumi Registry (like the [AWS Native](/registry/packages/aws-native/) package). Use the guidance in the following sections to author content in these pages.
+We recommend authoring documentation to help others in the Pulumi community use your package. In your repository, there should be a `docs/` folder with a few template pages you can use that correspond to the various tabs on a package page in Pulumi Registry (like the [Azure Native](/registry/packages/azure-native/) package). Use the guidance in the following sections to author content in these pages.
 
 ### Overview, installation, & configuration
 
