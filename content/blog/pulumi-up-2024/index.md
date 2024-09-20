@@ -32,6 +32,8 @@ We’ve now worked with 3,000 customers to help with their cloud journey and hav
 
 Now let’s dive into the three products and what we announced at PulumiUP:
 
+{{< youtube "AepHQaXeNX0?rel=0" >}}
+
 ## Pulumi IaC - Infrastructure as Code in Any Programming Language
 
 [Pulumi IaC](/product/infrastructure-as-code) is our flagship open source technology, and it powers virtually everything we do, even the new products. We have seen accelerated adoption of Pulumi IaC. We’ve had over 100M downloads, are about to crack 21K GitHub stars ([give us a star](https://github.com/pulumi/pulumi/stargazers) and bump us over!), and have seen 167% the contributions of Terraform this past month and 300% of OpenTofu. Not only is Pulumi the most powerful IaC technology, it is becoming more popular and vibrant too.
