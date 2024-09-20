@@ -24,7 +24,7 @@ if [[ "$GITHUB_EVENT_NAME" == "pull_request" && ! -z "$GITHUB_EVENT_PATH" ]]; th
         pr_comment_api_url="$(echo $event | jq -r ".pull_request._links.comments.href")"
 
         # List s3 buckets and filter all buckets associated with this PR. 
-        buckets=$(aws s3 ls | grep "$(origin_bucket_prefix)-pr-${pr_number}" | awk '{print $3}')
+        buckets=$(aws s3 ls | grep "$(origin_bucket_prefix)-pr-${pr_number}-" | awk '{print $3}')
 
         if [ ! -z "$buckets" ]; then
             for bucket in $buckets; do
