@@ -10,7 +10,7 @@ Show a preview of updates to a stack's resources
 
 ## Synopsis
 
-Show a preview of updates a stack's resources.
+Show a preview of updates to a stack's resources.
 
 This command displays a preview of the updates to an existing stack whose state is
 represented by an existing state file. The new desired state is computed by running
