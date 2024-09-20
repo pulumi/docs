@@ -7,14 +7,14 @@ meta_desc: Use immutable versioning and dynamic tagging to configure multiple ap
 meta_image: meta.png
 weight: 999
 summary: |
-    As a managed service of Pulumi Cloud, [Pulumi ESC](https://pulumi.com/esc) makes it easy to store and retrieve static and dynamic configuration settings (including encrypted secrets), manage them securely and flexibly, and use them in your applications. In this tutorial, you'll use ESC's version-tagging feature to configure and reconfigure multiple running Node.js applications with a single shared configuration value referenced by tag name.
+    As a hosted service of Pulumi Cloud, [Pulumi ESC](https://pulumi.com/esc) makes it easy to store and retrieve static and dynamic configuration settings --- including encrypted secrets --- manage them securely and flexibly, and use them in your applications in various ways. In this tutorial, you'll use ESC's [version tagging](/docs/esc/environments/versioning/) features to configure multiple running Node.js applications with a single shared configuration value referenced by tag name.
 youll_learn:
-    - How to store and retrieve configuration settings with Pulumi ESC
+    - How to store and retrieve configuration values with Pulumi ESC
     - How to use environment versions to pin applications to specific config values
     - How to use version tagging to make configuring applications safer and more flexible
-    - How to embed and use Pulumi ESC in your applications using the Node.js SDK
+    - How to embed and use Pulumi ESC in your applications with the ESC SDK for Node.js
 prereqs:
-    - Either the standalone [Pulumi ESC CLI](/docs/esc/install/) or [Pulumi CLI](/docs/iac/install/) installed
+    - Either the standalone [Pulumi ESC CLI](/docs/esc/install/) or the [Pulumi CLI](/docs/iac/install/)
     - A [Pulumi Cloud account](https://app.pulumi.com/signup) and [access token](/docs/pulumi-cloud/accounts/#access-tokens)
     - A Pulumi Cloud organization with a subscription to the [Enterprise edition](https://pulumi.com/pricing) (or above)
     - Familiarity with Bash scripting, JavaScript, and Node.js
@@ -24,12 +24,12 @@ collections:
 ---
 
 {{% notes %}}
-The examples in this tutorial use `esc`, the standalone Pulumi ESC CLI. However, if you've already installed the Pulumi CLI, you can use that as well --- just substitute `pulumi` wherever you see `esc`.
+The examples in this tutorial use `esc`, the standalone Pulumi ESC CLI. However, if you've already installed the Pulumi CLI, you can use that as well; all ESC CLI functionality is also built into the Pulumi CLI. Just substitute `pulumi` wherever you see `esc` below.
 {{% /notes %}}
 
 ## Log into Pulumi Cloud
 
-Before you begin, make sure you've [signed into Pulumi Cloud](https://app.pulumi.com/) with an account that has access to an organization with a Pulumi Enterprise Edition subscription. Once you've done so, you can log in with the ESC CLI:
+Before you begin, make sure you've [signed into Pulumi Cloud](https://app.pulumi.com/) with an account that has access to a Pulumi organization with an Enterprise Edition subscription. Once you've done so, you can log in with the ESC CLI and be prompted to :
 
 ```bash
 $ esc login
@@ -42,7 +42,7 @@ Enter your access token from https://app.pulumi.com/account/tokens
 
 ## Obtain a personal access token
 
-To complete the tutorial, you'll also need a Pulumi Cloud [personal access token](/docs/pulumi-cloud/access-management/access-tokens/#personal-access-tokens). Create a short-lived token for this tutorial and copy it into your current shell as an environment variable:
+To complete the application-configurationi portion of the tutorial, you'll also need a Pulumi Cloud [personal access token](/docs/pulumi-cloud/access-management/access-tokens/#personal-access-tokens). Create a short-lived access token for this tutorial, copy it into your current shell, an apply it as an environment variable as follows:
 
 ```bash
 export PULUMI_ACCESS_TOKEN="${YOUR_TOKEN_VALUE}"
@@ -52,15 +52,15 @@ export PULUMI_ACCESS_TOKEN="${YOUR_TOKEN_VALUE}"
 
 The application you're building is a simple Node.js web service designed to return a dynamically configurable [message of the day](https://en.wikipedia.org/wiki/Message_of_the_day) (MOTD). In ESC, configuration settings belong to collections called [_environments_](/docs/esc/environments/working-with-environments/), and environments in turn belong to _projects_. Projects and environments may be created either with the Pulumi Cloud console or with the ESC CLI.
 
-Use the ESC CLI now to create a new project and environment in the organization of your choice. (We'll use `zephyr` throughout this tutorial as an example.) Name the new project `messages` and the environment `dev`:
+To get started, use the ESC CLI to create a new project and environment in the organization of your choice. (We'll use the `tutorials` organization in this tutorial as an example.) Name the new project `messages` and the environment `dev`:
 
 ```bash
-$ esc env init zephyr/messages/dev
+$ esc env init tutorials/messages/dev
 
-Environment created: zephyr/messages/dev
+Environment created: tutorials/messages/dev
 ```
 
-You can see the new project in Pulumi Cloud as well by navigating to Pulumi ESC &gt; Environments:
+Once it's created, you'll be able to see the new project in Pulumi Cloud as well by navigating to Pulumi ESC &gt; Environments:
 
 ![A screenshow showing a newly created ESC environment](./new-env.png)
 
@@ -68,41 +68,42 @@ Next, you'll create your first setting.
 
 ## Create a new configuration setting
 
-Use `esc env set` to create a new setting for the message of the day, adding it to the `dev` environment. Name the setting `motd`:
+Use `esc env set` to create a new setting for the message of the day and add it to the `dev` environment. Name the setting `motd`:
 
 ```bash
-$ esc env set zephyr/messages/dev motd 'Hello, world!'
+$ esc env set tutorials/messages/dev motd 'Hello, world!'
 ```
 
-You're now able to use this setting in any way you like. Try using `esc env get`, for example, with `echo` to fetch the message and print it to the terminal:
+You're now able to use this setting in any way you like. Try using `esc env get`, for example, in combination with `echo` to fetch the message and print it to the terminal:
 
 ```bash
-$ echo "$(esc env get zephyr/messages/dev motd --value json)"
+$ echo "$(esc env get tutorials/messages/dev motd --value json)"
 
 "Hello, world!"
 ```
 
 ## Change the setting's value, produce a new version
 
-Every change to a configuration value in an environment produces a new, immutable snapshot of the environment. These snapshots are called [_versions_](/docs/esc/environments/versioning/) and they're indexed numerically.
+Every change to a configuration value in an ESC environment produces a new, immutable snapshot of the environment. These snapshots are called [_versions_](/docs/esc/environments/versioning/) and they're indexed numerically.
 
-As of now, the `dev` environment has two versions:  version `1`, which is empty (every environment starts out this way) and version `2`, which contains a single setting (for `motd`). You can see this reflected in the Pulumi Cloud console as well on the Versions tab:
+As of now, your `dev` environment has two versions:  version `1`, which is empty (every environment starts out this way) and version `2`, which contains a single setting (for `motd`). You can see this reflected in the Pulumi Cloud console as well after clicking into the `dev` environment and navigating to the Versions tab:
 
 ![A screenshot showing two revisions of the MOTD setting](./two-revisions.png)
 
 Now let's produce a third version by setting the value of `motd` again:
 
 ```bash
-$ esc env set zephyr/messages/dev motd 'Good day, world!'
-$ echo "$(esc env get zephyr/messages/dev motd --value json)"
+$ esc env set tutorials/messages/dev motd 'Good day, world!'
+
+$ echo "$(esc env get tutorials/messages/dev motd --value json)"
 
 "Good day, world!"
 ```
 
-With `esc env version history`, you can confirm version `3`'s existence:
+With `esc env version history`, you can confirm that version `3` now exists:
 
 ```bash
-$ esc env version history zephyr/messages/dev
+$ esc env version history tutorials/messages/dev
 
 revision 3 (tag: latest)
 Author: Christian Nunciato <cnunciato>
@@ -119,45 +120,49 @@ Date:   2024-09-18 15:04:20.07 -0700 PDT
 
 ## Version tagging
 
-In the output above, you may also have noticed that version `3` is now [_tagged_](https://www.pulumi.com/docs/esc/environments/versioning/#tagging-versions) with a label of `latest`. Every environment has a built-in `latest` that always points to the most recent version of the environment. You can fetch an environment by tag by passing an `@` symbol followed by the tag name --- for example:
+In the output above, you may also have noticed that version `3` is now [_tagged_](https://www.pulumi.com/docs/esc/environments/versioning/#tagging-versions) with a label of `latest`. Every environment has a built-in `latest` that always points to the most recent version of the environment. You can fetch an environment by tag by passing an `@` symbol followed by the tag name --- for example, to pull the `latest` version explicitly:
 
 ```bash
-$ esc env get zephyr/messages/dev@latest motd --value json
+$ esc env get tutorials/messages/dev@latest motd --value json
 
 "Good day, world!"
 ```
 
-In addition to using the built-in `latest` tag, you can also create version tags of your own --- as well as change the environment version a given tag points to. This additional layer of flexibility allows you not only to pin your configurations to a tag rather than to an explicit version --- for example, `production`, whose underlying value may change --- but also to apply broad configuration changes easily and instantaneously.
+In addition to using the built-in `latest` tag, you can also create version tags of your own --- as well as change the environment version that a given tag points to. This additional layer of manageability lets you not only pin your configurations to a tag instead of to an explicit version --- to a `production` tag, for example, whose underlying value may change --- but also to apply broad configuration changes easily and instantaneously.
 
-## Using version tagging to configure multiple applications
+## Using tagging to configure multiple applications
 
-To demonstrate how version tagging works in practice, let's stand up a set of web applications configured to respond with the same message of the day.
+To demonstrate how version tagging works in practice, let's stand up a set of web applications configured to respond with the same, shared message of the day.
 
-First, create a new version tag called `active` and point it at version `3` of the environment:
+First, create a new version tag called `active` and apply it to version `3` of the environment:
 
 ```bash
-$ esc env version tag zephyr/messages/dev@active @3
+$ esc env version tag tutorials/messages/dev@active @3
 ```
 
-The `active` identifies the message that all applications should deliver.
+The `active` tag identifies the message that all applications should deliver.
 
 Verify the currently tagged version with the CLI:
 
 ```bash
-$ esc env get zephyr/messages/dev@active motd --value json
+$ esc env get tutorials/messages/dev@active motd --value json
 
 "Good day, world!"
 ```
 
-Now try setting a new message, and notice that while the `latest` tag immediately reflects the new value, the `active` tag's value remains unchanged:
+The Versions tab should also reflect this:
+
+![A screenshot showing the active tag pointing to revision 3](./active.png)
+
+Now try setting a new `motd` value, and notice that while the `latest` tag immediately reflects the new value, the `active` tag's value remains unchanged at version `3`:
 
 ```bash
-$ esc env set zephyr/messages/dev motd 'Lovely to see you, world!'
+$ esc env set tutorials/messages/dev motd 'Lovely to see you, world!'
 
-$ esc env get zephyr/messages/dev@latest motd --value json
+$ esc env get tutorials/messages/dev@latest motd --value json
 "Lovely to see you, world!"
 
-$ esc env get zephyr/messages/dev@active motd --value json
+$ esc env get tutorials/messages/dev@active motd --value json
 "Good day, world!"
 ```
 
@@ -169,7 +174,7 @@ $ npm install @pulumi/esc-sdk
 $ touch index.js
 ```
 
-Copy the following script into `index.js` and save the file, substituting your Pulumi organization for `zephyr`. The script starts five Node.js web servers (to simulate multiple running applications) that handle requests by fetching and returning the `active` greeting:
+Copy the following script into `index.js` and save the file, substituting your Pulumi organization for `tutorials`. The script starts five Node.js web servers (to simulate multiple running applications) that handle requests by fetching and returning the `active` greeting:
 
 ```javascript
 const http = require("http");
@@ -189,7 +194,7 @@ const startServers = () => {
 
             // Fetch and return the `active` message of the day.
             const result = await client.openAndReadEnvironmentAtVersion(
-                "zephyr", "messages", "dev", "active"
+                "tutorials", "messages", "dev", "active"
             );
 
             res.end(result.values.motd);
@@ -202,7 +207,7 @@ const startServers = () => {
 startServers();
 ```
 
-Making sure you're in the same shell in which you exported your `PULUMI_ACCESS_TOKEN` earlier, run the script, and see that five servers are listening on five local ports:
+Making sure you're in the same shell into which you exported your `PULUMI_ACCESS_TOKEN` earlier, run the script with Node.js, and see that five HTTP servers are now listening on five different local ports:
 
 ```bash
 $ node index.js
@@ -214,7 +219,7 @@ Listening on http://localhost:8083
 Listening on http://localhost:8084
 ```
 
-With a Bash `for` loop, `curl` each endpoint to see that the active message is returned:
+In a new terminal session, run the following Bash `for` loop, which `curl`s each endpoint and shows that the active MOTD is returned:
 
 ```bash
 $ for i in {0..4}; do curl "http://localhost:$((8080 + i))"; done
@@ -226,10 +231,10 @@ Good day, world!
 Good day, world!
 ```
 
-And finally, update the `active` tag to point to the latest version of the environment, then run the loop again to see that all applications have inherited it:
+Finally, update the `active` tag (either with the CLI as below or in the Pulumi Cloud console) to point to the latest version of the environment, then run the loop again to see that all applications have now been reconfigured:
 
 ```bash
-$ esc env version tag zephyr/messages/dev@active @4
+$ esc env version tag tutorials/messages/dev@active @4
 
 $ for i in {0..4}; do curl "http://localhost:$((8080 + i))"; done
 
@@ -244,6 +249,6 @@ You can stop the server with `Control-C`.
 
 ## Wrapping up
 
-In this tutorial, you learned how to use Pulumi ESC's version-tagging features and Node.js SDK to apply real-time configuration changes to multiple applications simultaneously --- without having to touch the source code of those applications or redeploy them.
+In this tutorial, you learned how to use Pulumi ESC's version-tagging features and the ESC SDK for Node.js to apply real-time configuration changes to multiple running applications simultaneously --- without having to touch the source code of any of those applications or redeploy them.
 
 To learn more about working with Pulumi ESC environments --- versions, tagging, dynamic credentials, third-party providers, and more --- [see the ESC documentation](/docs/esc/).
