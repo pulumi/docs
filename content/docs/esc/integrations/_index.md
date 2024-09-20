@@ -40,6 +40,7 @@ ESC also integrates with tools like Direnv, Terraform, and Docker to help manage
 
 - [Direnv](/docs/esc/integrations/dev-tools/direnv)
 - [Docker](/docs/esc/integrations/dev-tools/docker)
+- [GitHub](/docs/esc/integrations/dev-tools/github)
 
 ## Infrastructure tools
 
