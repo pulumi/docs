@@ -113,6 +113,6 @@ sections:
   description: |
     <p>Pulumi provides a range of support options such as dedicated 24x7 support, premium training, onboarding, and professional services. Please see our <a href="https://www.pulumi.com/pricing/">pricing page</a> for the support options available.</p>
 
-    <p>Generally, e-mail support is offered Monday - Friday during normal business hours. To open a support ticket or view service status, please visit our <a href="https://support.pulumi.com/hc/en-us">enterprise support portal</a>.
+    <p>To open a support ticket or view service status, please visit our <a href="https://support.pulumi.com/hc/en-us">enterprise support portal</a>.
 
 ---
