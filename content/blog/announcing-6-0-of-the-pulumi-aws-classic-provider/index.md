@@ -1,4 +1,4 @@
--
+---
 title: "Announcing 6.0 of the Pulumi AWS Provider"
 date: 2023-08-29T09:00:00-04:00
 draft: false

@@ -64,18 +64,18 @@ components:
 
 aws-native:
   heading: AWS Native
-    public_preview: true
-    description: Manage and provision resources defined in the AWS CloudFormation Registry.
-    content_links:
-    - display_name: Overview
-      icon: page-small-black
-      url: aws-native/
-    - display_name: Install & config
-      icon: gear-small-black
-      url: aws-native/installation-configuration/
-    - display_name: API docs
-      icon: book-small-black
-      url: aws-native/api-docs/
+  public_preview: true
+  description: Manage and provision resources defined in the AWS CloudFormation Registry.
+  content_links:
+  - display_name: Overview
+    icon: page-small-black
+    url: aws-native/
+  - display_name: Install & config
+    icon: gear-small-black
+    url: aws-native/installation-configuration/
+  - display_name: API docs
+    icon: book-small-black
+    url: aws-native/api-docs/
 convert:
 - heading: Convert CloudFormation to Pulumi
   url: /cf2pulumi/
