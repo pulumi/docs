@@ -202,6 +202,8 @@ The operation context describes any context required for Pulumi operations to ex
 `OperationContextOptions` has the following structure:
 
 * **skipInstallDependencies**: Allows you to skip the automated dependency installation. You can then customize your dependency installation step in `preRunCommands`.
+* **skipIntermediateDeployments**: Allows you to skip intermediate deployments and only run the latest deployment if multiple deployments with the same Pulumi operation (i.e. up/destroy/preview/refresh) are in the queue for a stack.
+* **deleteAfterDestroy**: Allows you to delete the stack after a `pulumi destroy` operation. This will add an extra deployment step that runs `pulumi stack rm` at the end of the `destroy` deployment and is useful for ephemeral stacks that are only used for testing or development.
 
 `EnvironmentVariable` types can have either of the following structures:
 
