@@ -8,7 +8,7 @@ menu:
   esc:
     identifier: esc-languages-sdks
     parent: esc-development
-    weight: 1
+    weight: 3
 aliases:
     - /docs/esc/sdk/
 ---

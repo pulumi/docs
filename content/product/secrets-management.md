@@ -46,7 +46,7 @@ security:
         - icon: lock
           icon_color: purple
           title: Robust Access Controls
-          description: Pulumi ESC leverages the same Pulumi Cloud identity, RBAC, Teams, SAML/SCIM, OIDC, and scoped access tokens used for Pulumi IaC to ensure secrets management complies with enterprise security policies.
+          description: Pulumi ESC leverages the same Pulumi Cloud identity, RBAC, Teams, SAML/SCIM, OIDC, and scoped access tokens used for Pulumi IaC to ensure [secrets management](https://www.pulumi.com/what-is/what-is-secrets-management/) complies with enterprise security policies.
         - icon: clipboard
           icon_color: yellow
           title: Fully Auditable

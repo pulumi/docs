@@ -24,7 +24,6 @@ customer_logos:
     - name: moderna
     - name: docker
     - name: unity
-    - name: rockstar
     - name: deloitte
     - name: stokespace
     - name: univision

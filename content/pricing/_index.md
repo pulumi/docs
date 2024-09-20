@@ -27,7 +27,7 @@ tiers:
                 - 200 free IaC resources
                 - Unlimited IaC projects/stacks
                 - 25 free secrets
-                - 3,000 free deployments minutes
+                - 500 free deployments minutes
                 - Community support
             - title: Team
               subtitle: Collaboration for growing teams and cloud projects.
@@ -40,7 +40,7 @@ tiers:
               primary_cta: Start free trial
               primary_cta_link: https://app.pulumi.com/signup
               items: |
-                Everything in **Individual**, plus:
+                Everything in **Free**, plus:
                 - Secure team collaboration
                 - Up to 10 team members
                 - Automatic CI/CD
@@ -90,10 +90,13 @@ tiers:
 customers:
     - stat: "**5x faster** time to market"
       logo: unity
+      link: /case-studies/unity
     - stat: "**100 days saved** each year with Pulumi Cloud instead of DIY state management"
       logo: starburst
+      link: /case-studies/starburst
     - stat: "**10x faster deployments**, from weeks to hours"
       logo: snowflake
+      link: /case-studies/snowflake
 
 comparison_table:
     sections:
@@ -467,7 +470,7 @@ comparison_table:
                   link: /docs/pulumi-cloud/organizations
                   items:
                     - content: _blank
-                    - content: _blank
+                    - content: 1
                     - content: Multiple supported
                     - content: Multiple supported
 
