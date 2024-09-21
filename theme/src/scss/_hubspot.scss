@@ -95,14 +95,14 @@
         }
 
         input {
-            @apply block py-3 px-4 rounded-full border;
+            @apply block py-3 px-4 rounded-lg border;
 
             @screen md {
                 @apply w-56;
             }
 
             &.hs-button {
-                @apply block btn btn-lg btn border-none py-3 px-6 rounded-full w-auto bg-violet-600 ml-2;
+                @apply block btn btn-lg btn border-none py-3 px-6 rounded-lg w-auto bg-violet-600 ml-2;
             }
 
             &:focus {
