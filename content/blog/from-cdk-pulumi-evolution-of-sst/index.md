@@ -7,7 +7,7 @@ title: "From CDK to Pulumi: The Evolution of SST"
 # published. To influence the ordering of posts published on the same date, use
 # the time portion of the date value; posts are sorted in descending order by
 # date/time.
-date: 2024-09-25T13:32:40Z
+date: 2024-09-25T07:32:40Z
 
 # The draft setting determines whether a post is published. Set it to true if
 # you want to be able to merge the post without publishing it.
@@ -66,12 +66,12 @@ Explore SST's journey from its origins with CDK to its transition to Pulumi, a m
 
 ## On this article:
 
-- The Beginnings of SST
-- CDK and CloudFormation Limitations
-- A Provider-agnostic Solution: Discovering Pulumi
-- Transitioning to Pulumi
-- The Benefits of Pulumi
-- The Future of SST with Pulumi
+- [The Beginnings of SST](/blog/from-cdk-pulumi-evolution-of-sst/#the-beginnings-of-sst)
+- [CDK and CloudFormation Limitations](/blog/from-cdk-pulumi-evolution-of-sst/#cdk-and-cloudformation-limitations)
+- [A Provider-agnostic Solution: Discovering Pulumi](/blog/from-cdk-pulumi-evolution-of-sst/#a-provider--agnostic-solution-discovering-pulumi)
+- [Transitioning to Pulumi](/blog/from-cdk-pulumi-evolution-of-sst/#transitioning-to-pulumi)
+- [The Benefits of Pulumi](/blog/from-cdk-pulumi-evolution-of-sst/#the-benefits-of-pulumi)
+- [The Future of SST with Pulumi](/blog/from-cdk-pulumi-evolution-of-sst/#the-future-of-sst-with-pulumi)
 
 ## The Beginnings of SST
 
@@ -85,15 +85,15 @@ This was the driving force behind the creation of SST (Serverless Stack), a fram
 
 As SST's team continued to work with CDK and CloudFormation, they encountered several challenges that led them to reevaluate their approach. One key issue was the disconnect between application developers' thinking and working and traditional IaC tools' operating methods.
 
-With CDK and CloudFormation, the infrastructure code is essentially a code generator, producing an intermediary format (such as YAML or JSON) that is then executed to deploy the resources. This means that the actual code you write as a developer is not the same as the code running during the deployment process. This can lead to a number of problems, such as difficulty debugging, lack of visibility into the deployment process, and challenges in extending or customizing the deployment workflow.
+With CDK and [CloudFormation](https://www.pulumi.com/docs/iac/concepts/vs/cloud-templates/cloudformation/#what-is-cloudformation), the infrastructure code is essentially a code generator, producing an intermediary format (such as YAML or JSON) that is then executed to deploy the resources. This means that the actual code you write as a developer is not the same as the code running during the deployment process. This can lead to several problems, such as difficulty debugging, lack of visibility into the deployment process, and challenges in extending or customizing the deployment workflow.
 
-Additionally, as SST's team expanded its focus beyond the AWS ecosystem and started exploring other cloud providers and even on-premises infrastructure, it found that the AWS-centric nature of CDK and CloudFormation was becoming a limitation. It needed a more flexible and provider-agnostic solution that would allow it to deploy and manage infrastructure across a wide range of platforms.
+Additionally, as SST's team expanded its focus beyond the AWS ecosystem and started exploring other cloud providers and even on-premises infrastructure, it found that the [AWS-centric nature of CDK](https://www.pulumi.com/docs/iac/concepts/vs/cloud-template-transpilers/aws-cdk/#what-is-aws-cdk) and CloudFormation was becoming a limitation. It needed a more flexible and provider-agnostic solution that would allow it to deploy and manage infrastructure across a wide range of platforms.
 
 ## A Provider-agnostic Solution: Discovering Pulumi
 
 It was during this time that the SST team discovered Pulumi, a modern IaC platform that takes a fundamentally different approach to infrastructure management. Instead of generating an intermediary format, Pulumi treats the infrastructure code as a first-class program executed directly during deployment.
 
-This shift in paradigm had several important implications for SST and its users:
+This paradigm shift had several important implications for SST and its users:
 
 - **Visibility and Extensibility**: With Pulumi, the infrastructure code is the same code that is running during deployment, which means there is much greater visibility into the deployment process and the ability to extend or customize it as needed.
 - **Multi-Cloud Capabilities**: Pulumi's provider-agnostic approach allows SST's team to easily work with a wide range of cloud and on-premises platforms, giving their users the flexibility to deploy their infrastructure wherever it makes the most sense for their application.
@@ -101,7 +101,7 @@ This shift in paradigm had several important implications for SST and its users:
 
 ## Transitioning to Pulumi
 
-Transitioning SST from CDK to Pulumi was not a trivial undertaking. Still, they knew it was a necessary step to truly fulfill our mission of empowering application developers with powerful infrastructure management capabilities.
+Transitioning SST [from CDK to Pulumi](https://www.pulumi.com/tutorials/importing/) was not a trivial undertaking. Still, they knew it was a necessary step to truly fulfill our mission of empowering application developers with powerful infrastructure management capabilities.
 
 One key challenge they faced was re-implementing the higher-level components and abstractions they had built on top of CDK. These components were designed to simplify the infrastructure management experience for their users, and they wanted to ensure that they could provide a similar level of abstraction and ease of use with Pulumi.
 
@@ -131,7 +131,7 @@ This flexibility has been particularly valuable for their users, who may have wo
 
 ### Simplified Mental Model
 
-Perhaps one of Pulumi's most significant benefits for SST users is the simplified mental model it provides. By treating the infrastructure code as a first-class program, Pulumi aligns much more closely with how application developers think and work.
+One of Pulumi's most significant benefits for SST users is the simplified mental model it provides. By treating the infrastructure code as a first-class program, Pulumi aligns much more closely with how application developers think and work.
 
 Instead of having to navigate the complexities of intermediary formats, deployment pipelines, and the separation between infrastructure code and deployment code, SST users can now focus on writing their infrastructure logic in the same programming languages they use for their application code. This makes it much easier for them to understand, maintain, and extend their infrastructure as their needs evolve.
 
@@ -141,10 +141,10 @@ With Pulumi's foundation in place, they can now focus on further enhancing the d
 
 - **Deeper Integration with Application Frameworks**: By leveraging Pulumi's flexibility, they can create even tighter integrations between SST and the application frameworks and libraries that their users rely on, making managing infrastructure seamless alongside their application code.
 - **Expanded Provider Support**: the SST team will continue to add support for a wide range of cloud and on-premises providers, ensuring that their users can deploy and manage their infrastructure wherever it makes the most sense for their needs.
-- **Improved Deployment Workflows**: Building on Pulumi's extensibility, they can create more advanced deployment workflows that address the specific needs of application developers, such as faster deployment times, better rollback capabilities, and more granular control over the deployment process.
-- **Enhanced Observability and Monitoring**: By treating the infrastructure code as a first-class program, they can provide their users with better visibility into the deployment process and more robust monitoring and observability capabilities, helping them to identify and resolve issues quickly.
+- **Improved Deployment Workflows**: Building on Pulumi's extensibility, they can create [more advanced deployment workflows](https://www.pulumi.com/docs/pulumi-cloud/deployments/) that address the specific needs of application developers, such as faster deployment times, better rollback capabilities, and more granular control over the deployment process.
+- **Enhanced Observability and Monitoring**: By treating the infrastructure code as a first-class program, they can provide their users with [better visibility](https://www.pulumi.com/product/pulumi-insights/) into the deployment process and more robust monitoring and observability capabilities, helping them to identify and resolve issues quickly.
 
-As they continue to evolve SST with Pulumi at its core, the SST team is confident that they can deliver an even more powerful and user-friendly infrastructure management experience for application developers, empowering them to focus on building great applications while seamlessly managing the underlying infrastructure.
+As they continue to evolve SST with Pulumi at its core, the SST team is confident they can deliver an even more powerful and user-friendly infrastructure management experience for application developers, empowering them to focus on building great applications while seamlessly managing the underlying infrastructure.
 
 ## Conclusion
 
