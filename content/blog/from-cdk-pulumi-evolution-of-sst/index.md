@@ -68,7 +68,7 @@ Explore SST's journey from its origins with CDK to its transition to Pulumi, a m
 
 - [The Beginnings of SST](/blog/from-cdk-pulumi-evolution-of-sst/#the-beginnings-of-sst)
 - [CDK and CloudFormation Limitations](/blog/from-cdk-pulumi-evolution-of-sst/#cdk-and-cloudformation-limitations)
-- [A Provider-agnostic Solution: Discovering Pulumi](/blog/from-cdk-pulumi-evolution-of-sst/#a-provider--agnostic-solution-discovering-pulumi)
+- [A Provider-agnostic Solution: Discovering Pulumi](/blog/from-cdk-pulumi-evolution-of-sst/#a-provider-agnostic-solution-discovering-pulumi)
 - [Transitioning to Pulumi](/blog/from-cdk-pulumi-evolution-of-sst/#transitioning-to-pulumi)
 - [The Benefits of Pulumi](/blog/from-cdk-pulumi-evolution-of-sst/#the-benefits-of-pulumi)
 - [The Future of SST with Pulumi](/blog/from-cdk-pulumi-evolution-of-sst/#the-future-of-sst-with-pulumi)
@@ -113,7 +113,7 @@ As they worked through the transition to Pulumi, they realized the significant b
 
 ### Improved Visibility and Debugging
 
-One of Pulumi's most immediate and tangible benefits was the improved visibility and debugging capabilities it provided. With the infrastructure code being the same as the deployment code, they could easily trace issues back to the source and understand exactly what was happening during the deployment process.
+One of Pulumi's most immediate and tangible benefits was the [improved visibility and debugging capabilities]((https://www.pulumi.com/product/pulumi-insights/)) it provided. With the infrastructure code being the same as the deployment code, they could easily trace issues back to the source and understand exactly what was happening during the deployment process.
 
 This starkly contrasted the CDK/CloudFormation approach, where the intermediary format (CloudFormation templates) often obscured the underlying logic and made it much more difficult to diagnose and resolve problems.
 
