@@ -1,29 +1,7 @@
 {{ define "hero" }}
-    <div class="about-us-gradient-hero h-80 w-full relative">
-        <div class="element-1"></div>
-        <div class="element-2"></div>
-        <div class="element-3">
-            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                <path
-                    fill="#47C2C0"
-                    d="M20.3,-18.9C35.8,-4.7,64.7,-2.3,72.7,8C80.7,18.3,67.8,36.7,52.3,49.1C36.7,61.5,18.3,67.9,6.4,61.5C-5.5,55.1,-11.1,35.8,-19.1,23.5C-27.2,11.1,-37.7,5.5,-43.5,-5.8C-49.3,-17.2,-50.5,-34.4,-42.4,-48.6C-34.4,-62.8,-17.2,-74,-7.4,-66.6C2.3,-59.1,4.7,-33.1,20.3,-18.9Z"
-                    transform="translate(100 100)"
-                />
-            </svg>
-        </div>
-        <div class="photo-background w-full h-full overflow-hidden pointer-events-none mx-auto">
-            <div class="photo-container absolute h-full w-full overflow-hidden">
-                {{ range $item := .Params.spotlight }}
-                    <img
-                        class="absolute"
-                        src="/images/team/{{ .id }}.jpg"
-                        alt="{{ .name }}"
-                        height="{{ .size }}"
-                        width="{{ .size }}"
-                        style="top: {{ .top }}px; left: {{ .left }}px; opacity: {{ .opacity }}%"
-                    />
-                {{ end }}
-            </div>
+    <div class="about-us-gradient-hero h-96 w-full relative">
+        <div class="photo-background w-full h-full overflow-hidden content-center pointer-events-none mx-auto">
+            <img src="/images/about-us/team.png" alt="Pulumi team photo"/>
         </div>
     </div>
 {{ end }}
