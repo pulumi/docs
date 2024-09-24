@@ -5,7 +5,7 @@ title: Project file reference
 h1: Pulumi project file reference
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iad:
+    iac:
         name: Project file reference
         parent: iac-concepts-projects
         weight: 1
