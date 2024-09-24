@@ -58,7 +58,7 @@ social:
 # See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md
 # for details, and please remove these comments before submitting for review.
 ---
-As cloud computing continues to evolve, so do the tools and frameworks that developers rely on to manage their infrastructure. For Serverless Stack (SST), a framework built to empower application developers, the journey began with AWS's CDK. While CDK offered a way to define infrastructure using familiar programming languages, it soon became clear that more was needed to meet developers' growing needs.
+As cloud computing continues to evolve, so do the tools and frameworks that developers rely on to manage their infrastructure. For the team building Serverless Stack (SST), a framework built to empower application developers, the journey began with AWS's CDK. While CDK offered a way to define infrastructure using familiar programming languages, it soon became clear that more was needed to meet developers' growing needs.
 
 Explore SST's journey from its origins with CDK to its transition to Pulumi, a modern IaC platform that addresses many of the limitations faced by application developers.
 
@@ -75,19 +75,19 @@ Explore SST's journey from its origins with CDK to its transition to Pulumi, a m
 
 ## The Beginnings of SST
 
-As application developers, we've witnessed the rapid evolution of cloud computing and the growing need for developers to have direct access to powerful cloud resources. However, the traditional tools and approaches to Infrastructure as Code (IaC) have often been geared more toward DevOps teams, leaving application developers feeling disconnected from the infrastructure side of their projects.
+Application developers have witnessed the rapid evolution of cloud computing and the growing need for developers to have direct access to powerful cloud resources. However, the traditional tools and approaches to Infrastructure as Code (IaC) have often been geared more toward DevOps teams, leaving application developers feeling disconnected from the infrastructure side of their projects.
 
-This was the driving force behind the creation of SST (Serverless Stack), a framework that aims to bridge the gap between application developers and infrastructure management. In the early days, SST was built on top of AWS's Cloud Development Kit (CDK), which allowed developers to define their infrastructure using TypeScript or Python. While this was a step in the right direction, they soon realized that the limitations of CDK and the underlying AWS CloudFormation were holding them back from truly empowering application developers.
+This was the driving force behind the creation of [SST (Serverless Stack)](https://sst.dev/), a framework that aims to bridge the gap between application developers and infrastructure management. In the early days, SST was built on top of AWS's Cloud Development Kit (CDK), which allowed developers to define their infrastructure using TypeScript or Python. While this was a step in the right direction, they soon realized that the limitations of CDK and the underlying AWS CloudFormation were holding them back from truly empowering application developers.
 
 ## CDK and CloudFormation Limitations
 
 {{< youtube "LXxJ9XMXC6o?rel=0" >}}
 
-As SST's team continued to work with CDK and CloudFormation, they encountered several challenges that led them to reevaluate their approach. One key issue was the disconnect between application developers' thinking and working and traditional IaC tools' operating methods.
+As the SST's team continued to work with CDK and CloudFormation, they encountered several challenges that led them to reevaluate their approach. One key issue was the disconnect between application developers' thinking and working and traditional IaC tools' operating methods.
 
 With CDK and [CloudFormation](https://www.pulumi.com/docs/iac/concepts/vs/cloud-templates/cloudformation/#what-is-cloudformation), the infrastructure code is essentially a code generator, producing an intermediary format (such as YAML or JSON) that is then executed to deploy the resources. This means that the actual code you write as a developer is not the same as the code running during the deployment process. This can lead to several problems, such as difficulty debugging, lack of visibility into the deployment process, and challenges in extending or customizing the deployment workflow.
 
-Additionally, as SST's team expanded its focus beyond the AWS ecosystem and started exploring other cloud providers and even on-premises infrastructure, it found that the [AWS-centric nature of CDK](https://www.pulumi.com/docs/iac/concepts/vs/cloud-template-transpilers/aws-cdk/#what-is-aws-cdk) and CloudFormation was becoming a limitation. It needed a more flexible and provider-agnostic solution that would allow it to deploy and manage infrastructure across a wide range of platforms.
+Additionally, as the SST's team expanded its focus beyond the AWS ecosystem and started exploring other cloud providers and even on-premises infrastructure, it found that the [AWS-centric nature of CDK](https://www.pulumi.com/docs/iac/concepts/vs/cloud-template-transpilers/aws-cdk/#what-is-aws-cdk) and CloudFormation was becoming a limitation. It needed a more flexible and provider-agnostic solution that would allow it to deploy and manage infrastructure across a wide range of platforms.
 
 ## A Provider-agnostic Solution: Discovering Pulumi
 
@@ -101,7 +101,7 @@ This paradigm shift had several important implications for SST and its users:
 
 ## Transitioning to Pulumi
 
-Transitioning SST [from CDK to Pulumi](https://www.pulumi.com/tutorials/importing/) was not a trivial undertaking. Still, they knew it was a necessary step to truly fulfill our mission of empowering application developers with powerful infrastructure management capabilities.
+Transitioning SST [from CDK to Pulumi](https://www.pulumi.com/tutorials/importing/) was not a trivial undertaking. Still, they knew it was a necessary step to truly fulfill their mission of empowering application developers with powerful infrastructure management capabilities.
 
 One key challenge they faced was re-implementing the higher-level components and abstractions they had built on top of CDK. These components were designed to simplify the infrastructure management experience for their users, and they wanted to ensure that they could provide a similar level of abstraction and ease of use with Pulumi.
 
@@ -113,7 +113,7 @@ As they worked through the transition to Pulumi, they realized the significant b
 
 ### Improved Visibility and Debugging
 
-One of Pulumi's most immediate and tangible benefits was the [improved visibility and debugging capabilities]((https://www.pulumi.com/product/pulumi-insights/)) it provided. With the infrastructure code being the same as the deployment code, they could easily trace issues back to the source and understand exactly what was happening during the deployment process.
+One of Pulumi's most immediate and tangible benefits was the [improved visibility and debugging capabilities](https://www.pulumi.com/product/pulumi-insights/) it provided. With the infrastructure code being the same as the deployment code, they could easily trace issues back to the source and understand exactly what was happening during the deployment process.
 
 This starkly contrasted the CDK/CloudFormation approach, where the intermediary format (CloudFormation templates) often obscured the underlying logic and made it much more difficult to diagnose and resolve problems.
 
@@ -137,22 +137,23 @@ Instead of having to navigate the complexities of intermediary formats, deployme
 
 ## The Future of SST with Pulumi
 
-With Pulumi's foundation in place, they can now focus on further enhancing the developer experience and expanding the capabilities of our framework. Some of the key areas they are exploring include:
+With Pulumi's foundation in place, they can now focus on further enhancing the developer experience and expanding the capabilities of their framework. Some of the key areas they are exploring include:
 
 - **Deeper Integration with Application Frameworks**: By leveraging Pulumi's flexibility, they can create even tighter integrations between SST and the application frameworks and libraries that their users rely on, making managing infrastructure seamless alongside their application code.
 - **Expanded Provider Support**: the SST team will continue to add support for a wide range of cloud and on-premises providers, ensuring that their users can deploy and manage their infrastructure wherever it makes the most sense for their needs.
 - **Improved Deployment Workflows**: Building on Pulumi's extensibility, they can create [more advanced deployment workflows](https://www.pulumi.com/docs/pulumi-cloud/deployments/) that address the specific needs of application developers, such as faster deployment times, better rollback capabilities, and more granular control over the deployment process.
 - **Enhanced Observability and Monitoring**: By treating the infrastructure code as a first-class program, they can provide their users with [better visibility](https://www.pulumi.com/product/pulumi-insights/) into the deployment process and more robust monitoring and observability capabilities, helping them to identify and resolve issues quickly.
 
-As they continue to evolve SST with Pulumi at its core, the SST team is confident they can deliver an even more powerful and user-friendly infrastructure management experience for application developers, empowering them to focus on building great applications while seamlessly managing the underlying infrastructure.
+As the SST team continues to evolve with Pulumi at its core, they aim to deliver an even more powerful and user-friendly infrastructure management experience for developers. This will empower teams to focus on building great applications while effortlessly managing the underlying infrastructure.
 
 ## Conclusion
 
-If you're interested in learning more about platform engineering and getting involved in CNCF's initiatives, there are several ways to participate:
+If you're interested in exploring Pulumi further, here are several ways to get involved:
 
-- Learn more about Pulumi Crosswalk for AWS, which supports “day one” tasks in our [AWS guide](https://www.pulumi.com/docs/clouds/aws/guides/).
-- Attend a Platform Engineering & DevOps in-person meetup, [find a location near you](https://info.pulumi.com/platform-engineering-devops-series).
-- Register for one of our [Platform Engineering or DevOps workshops](https://www.pulumi.com/resources/#upcoming).
+- Discover how Pulumi Crosswalk for AWS simplifies “day one” tasks in our [AWS guide](https://www.pulumi.com/docs/clouds/aws/guides/).
+- Join an upcoming Platform Engineering & DevOps in-person meetup, [find a location near you](https://info.pulumi.com/platform-engineering-devops-series)
+- Watch our on-demand workshop [Getting Stated with Infrastructure as Code on AWS](https://www.pulumi.com/resources/getting-started-with-iac-pulumi-aws/)
+- Register for one of our upcoming [Platform Engineering or DevOps workshops](https://www.pulumi.com/resources/#upcoming).
   
 ---
 
@@ -172,4 +173,4 @@ SST leverages Pulumi behind the scenes as the deployment engine and for provider
 
 ### How does SST make money?
 
-Although SST is open-source and free, it also offers the Console, a SaaS service that can automatically deploy your apps and monitor for issues. The Console is optional and includes a free tier.
+Although SST is open-sce and free, it also offers the Console, a SaaS service that can automatically deploy y apps and monitor for issues. The Console is optional and includes a free tier.
