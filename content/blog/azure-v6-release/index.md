@@ -14,7 +14,8 @@ tags:
 The latest major release of the Azure Classic Pulumi Provider is available now!
 Our 6.0 release contains the [latest upstream changes](https://github.com/hashicorp/terraform-provider-azurerm/releases/tag/v4.0.1) to keep you up-to-date along with the latest features and improvements from Pulumi.
 
-The Azure Classic provider can be used to provision any of the Azure resources available in the upstream provider.
+The Pulumi Azure Native provider is our recommended approach for building on Azure which is generated directly from the API specifications so has amazing resource coverage.
+The Azure Classic provider is derived from the upstream Terraform AzureRM provider and can also be used to provision most resources on Azure, and can be used in conjunction with the Native Provider where needed as a useful alternative.
 The provider is open source and available on GitHub so you can always follow along with current issues and developments, or even open your first pull request.
 
 <!--more-->
@@ -29,7 +30,7 @@ Here are a few links to help you get started if you are new to Pulumi:
 ## Looking Back
 
 Since the last major release of this provider, we have continuously shipped improvements to our ecosystem, bringing the latest Pulumi features to your production stack.
-We have rolled out an [improved diffing strategy](https://github.com/pulumi/pulumi-terraform-bridge/issues/1785) and [fixed state upgrades](https://github.com/pulumi/pulumi-terraform-bridge/pull/2081) in the Pulumi Terraform Bridge, removing spurious diffs on preview and increasing confidence when deploying.
+We have rolled out an [improved diffing strategy](https://github.com/pulumi/pulumi-terraform-bridge/issues/1785) and [fixed state upgrades](https://github.com/pulumi/pulumi-terraform-bridge/pull/2081) in the Pulumi Terraform Bridge, removing spurious diffs on preview and increasing confidence when deploying. Additionally we have improved accuracy and coverage for registry documentation, via better example conversion and [general docs improvements](https://github.com/pulumi/pulumi-terraform-bridge/issues/1794) for bridged providers.
 
 ### New Modules
 
