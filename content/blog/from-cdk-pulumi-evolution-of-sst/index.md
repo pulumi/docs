@@ -169,7 +169,7 @@ Ion is the code name for a new engine for deploying SST applications. The constr
 
 ### Does SST use mostly Terraform or Pulumi?
 
-SST leverages Pulumi behind the scenes as the deployment engine and for provider integrations. Terraform’s providers are bridged through Pulumi.
+SST leverages Pulumi behind the scenes for its providers and deployment engine while also bridging Terraform providers through Pulumi. It only depends on the open-source components of both Pulumi and Terraform.
 
 ### How does SST make money?
 
