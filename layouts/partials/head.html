@@ -420,6 +420,12 @@
         </script>
     {{- end }}
 
+    <script async
+        data-api-host="https://cdn.growthbook.io"
+        data-client-key="sdk-0aUDa6bDbQqms3aJ"
+        src="https://cdn.jsdelivr.net/npm/@growthbook/growthbook/dist/bundles/auto.min.js"
+        ></script>
+
     <!-- Apply anchor links to headings in the docs, blog and taxonomy pages. -->
     {{ if and (not .IsHome) (.Section) (in "docs tutorials blog authors tags registry" .Section) }}
         <script async defer src="//cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"></script>
