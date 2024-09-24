@@ -173,4 +173,4 @@ SST leverages Pulumi behind the scenes as the deployment engine and for provider
 
 ### How does SST make money?
 
-Although SST is open-sce and free, it also offers the Console, a SaaS service that can automatically deploy y apps and monitor for issues. The Console is optional and includes a free tier.
+SST (Serverless Stack) makes money primarily through its managed service, called SST Console. The Console is optional and includes a free tier. In short, SST primarily relies on SaaS (Software as a Service) revenue through its managed platform and potentially supplemental income streams like enterprise services and consulting.
