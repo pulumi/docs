@@ -165,7 +165,7 @@ SST is a framework that makes building modern full-stack applications on your in
 
 ### What is SST's Ion?
 
-Ion is the code name for a new engine for deploying SST applications. The constructs (or components) are defined using Terraform providers and deployed using Pulumi instead of CDK and CloudFormation (CFN). Once Ion is stable, it will be released as SST v3.
+Ion is the code name for a new engine for deploying SST applications. The constructs (or components) are deployed using Pulumi instead of CDK and CloudFormation (CFN). Once Ion is stable, it will be released as SST v3.
 
 ### Does SST use mostly Terraform or Pulumi?
 
