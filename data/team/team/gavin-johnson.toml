@@ -1,0 +1,11 @@
+id = "gavin-johnson"
+name = "Gavin Johnson"
+title = "Director of Technical Product Marketing"
+weight = 1
+
+status = "active"
+
+[social]
+github = "thtmnisamnstr"
+linkedin = "gavin-johnson"
+twitter = "gavinjtech"

@@ -660,13 +660,11 @@ body .description a.btn-primary, body a.link.btn-primary {
 }
 
 body a[class^=btn-], body a[class*=" btn-"] {
-  border-radius: 9999px;
+  border-radius: 0.5rem;
   padding-left: 2rem;
   padding-right: 2rem;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-  font-size: 1.125rem;
-  line-height: 1.75rem;
 }
 
 body a[class^=btn-]:hover, body a[class*=" btn-"]:hover {
@@ -686,7 +684,7 @@ body .btn-primary{
   position: relative;
   z-index: auto;
   cursor: pointer;
-  border-radius: 9999px;
+  border-radius: 0.5rem;
   border-width: 2px;
   --tw-border-opacity: 1;
   border-color: rgba(128, 90, 195, var(--tw-border-opacity));
@@ -712,7 +710,7 @@ body .btn-primary:not(input){
 
 body .btn-primary:not(input)::before{
   position: absolute;
-  border-radius: 9999px;
+  border-radius: 0.5rem;
   --tw-border-opacity: 1;
   --tw-bg-opacity: 1;
   background:linear-gradient(90deg, #be5188 0%, #805ac3 100%);
@@ -849,10 +847,6 @@ body .btn-secondary-home-action:focus{
   }
 }
 
-.home-page-section p{
-  color:#000 !important
-}
-
 .home-page-build-section-background{
   position: absolute;
   top: 0px;
@@ -860,18 +854,13 @@ body .btn-secondary-home-action:focus{
   height: 100%;
   width: 100%;
   overflow: hidden;
-  --tw-bg-opacity: 1;
-  background-color: rgba(230, 222, 243, var(--tw-bg-opacity));
-  --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
+  --tw-border-opacity: 1;
+  border-color: rgba(229, 229, 233, var(--tw-border-opacity))
 }
 
 .home-page-build-section-background .home-page-build-section-image{
   height: 100%;
   width: 100%;
-  background-image:url("/images/home/hexagons.svg");
-  background-repeat:no-repeat;
-  background-size:cover;
   opacity:.5
 }
 
@@ -882,18 +871,13 @@ body .btn-secondary-home-action:focus{
   height: 100%;
   width: 100%;
   overflow: hidden;
-  --tw-bg-opacity: 1;
-  background-color: rgba(253, 242, 212, var(--tw-bg-opacity));
-  --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
+  --tw-border-opacity: 1;
+  border-color: rgba(229, 229, 233, var(--tw-border-opacity))
 }
 
 .home-page-manage-section-background .home-page-manage-section-image{
   height: 100%;
   width: 100%;
-  background-image:url("/images/home/circuits.svg");
-  background-repeat:no-repeat;
-  background-size:cover;
   opacity:.5
 }
 
@@ -904,18 +888,13 @@ body .btn-secondary-home-action:focus{
   height: 100%;
   width: 100%;
   overflow: hidden;
-  --tw-bg-opacity: 1;
-  background-color: rgba(219, 222, 247, var(--tw-bg-opacity));
-  --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
+  --tw-border-opacity: 1;
+  border-color: rgba(229, 229, 233, var(--tw-border-opacity))
 }
 
 .home-page-cloud-section-background .home-page-cloud-section-image{
   height: 100%;
   width: 100%;
-  background-image:url("/images/home/ship-wheel.svg");
-  background-repeat:no-repeat;
-  background-size:cover;
   opacity:.6
 }
 
@@ -926,18 +905,13 @@ body .btn-secondary-home-action:focus{
   height: 100%;
   width: 100%;
   overflow: hidden;
-  --tw-bg-opacity: 1;
-  background-color: rgba(47, 48, 50, var(--tw-bg-opacity));
-  --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
+  --tw-border-opacity: 1;
+  border-color: rgba(229, 229, 233, var(--tw-border-opacity))
 }
 
 .home-page-science-section-background .home-page-science-section-image{
   height: 100%;
   width: 100%;
-  background-image:url("/images/home/science.svg");
-  background-repeat:no-repeat;
-  background-size:cover;
   opacity:.2
 }
 

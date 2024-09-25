@@ -211,5 +211,5 @@ You're now well on your way to managing a production-grade $THING on $CLOUD with
 
 * Discover more architecture templates in [Templates &rarr;](/templates/)
 * Dive into the $CLOUD package by exploring the [API docs in the Registry &rarr;](/registry/packages/$CLOUD/)
-* Expand your understanding of how Pulumi works in [Learn Pulumi &rarr;](/learn/)
+* Expand your understanding of how Pulumi works in [Learn Pulumi &rarr;](/tutorials/)
 * Read up on the latest new features [in the Pulumi Blog &rarr;](/blog/)

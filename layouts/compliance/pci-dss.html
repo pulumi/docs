@@ -1,0 +1,241 @@
+{{ define "main" }}
+{{ partial "hero.html" (dict "title" .Title) }}
+{{ $cloud_page := eq .Params.page_type "cloud" }}
+    <section class="px-4 md:px-0">
+        <div class="container mx-auto max-w-4xl text-center my-16 px-6">
+            <h2>{{ .Title }}</h2>
+            <p>
+                PCI DSS compliance is critical to protecting cardholder data that is processed, stored, and transmitted.
+                Pulumi can assist you with making your AWS cloud infrastructure PCI DSS compliant. Pulumi can help you identify
+                existing cloud resources that are not in compliance, and it can also enforce compliance policies proactively
+                before infrastructure is deployed. Get started with Pulumi to use these compliance tools or speak with a 
+                Solutions Architect to get an expert consultation.
+            </p>
+            <div class="flex flex-row flex-wrap justify-center mt-10">
+                <a href="#sa-form" rel="noopener noreferrer" class="mx-2 my-2 btn-primary">Speak with a Solutions Architect</a>
+                <a href="/get-started/" rel="noopener noreferrer" class="mx-2 my-2 btn-secondary">Get Started with Pulumi</a>
+            </div>
+        </div>
+    </section>
+    <section class="mt-4 py-4 px-4 md:px-0">
+        <div class="container mx-auto max-w-4xl">
+            <h3>What is PCI DSS Compliance?</h3>
+            <p>
+                {{ .Params.description }}
+            </p>
+        </div>
+    </section>
+    <section class="mt-4 py-4 px-4 md:px-0">
+        <div class="container mx-auto max-w-4xl">
+            <h3>Key Aspects of PCI DSS Compliance</h3>
+            <ol>
+                <li>
+                    <strong>Security Controls:</strong> Organizations must implement
+                    specific technical and operational security measures to safeguard
+                    cardholder data. This includes requirements like installing
+                    firewalls, encrypting cardholder data, and using antivirus software.
+                </li>
+
+                <li>
+                    <strong>Access Control:</strong> Only authorized personnel should
+                    have access to cardholder data. This involves setting up strong
+                    access control measures, such as unique user IDs and restricting
+                    physical access to sensitive data.
+                </li>
+
+                <li>
+                    <strong>Monitoring and Testing:</strong> Regularly monitor and test
+                    networks to ensure that security controls are functioning correctly
+                    and to identify vulnerabilities. This includes maintaining logs of
+                    all access to network resources and cardholder data.
+                </li>
+
+                <li>
+                    <strong>Information Security Policy:</strong> Organizations must
+                    maintain a policy that addresses information security for employees
+                    and contractors. This includes regular security awareness training.
+                </li>
+
+                <li>
+                    <strong>Regular Audits:</strong> Organizations that process, store,
+                    or transmit credit card information must undergo regular audits to
+                    ensure they are in compliance with PCI DSS requirements. This can
+                    involve self-assessment or external assessments, depending on the
+                    size of the organization and the volume of transactions processed.
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    {{ if $cloud_page }}
+    <section class="mt-4 py-4 px-4 md:px-0">
+        <div class="container mx-auto max-w-4xl">
+            <h3>12 PCI DSS Requirements</h3>
+            <p>
+                To ensure that your {{ .Params.full }} become PCI-DSS compliant, you'll need to
+                adhere to the 12 PCI-DSS requirements. Here's a breakdown of what you need
+                to do:
+            </p>
+            <h4>
+                1. Install and Maintain a Firewall Configuration to Protect Cardholder Data
+            </h4>
+            <ul>
+                <li>
+                    Implement security groups and network ACLs to control inbound and
+                    outbound traffic.
+                </li>
+
+                <li>Use VPC (Virtual Private Cloud) to isolate and secure your network.</li>
+            </ul>
+            <h4>
+                2. Do Not Use Vendor-Supplied Defaults for System Passwords and Other
+                Security Parameters
+            </h4>
+            <ul>
+                <li>
+                    Change all default passwords and settings on your servers,
+                    databases, and other components.
+                </li>
+
+                <li>
+                    Implement multi-factor authentication (MFA) for access to the
+                    AWS console.
+                </li>
+            </ul>
+            <h4>3. Protect Stored Cardholder Data</h4>
+            <ul>
+                <li>Encrypt cardholder data using strong encryption (e.g., AES-256).</li>
+
+                <li>
+                    Do not store sensitive authentication data after authorization (e.g.,
+                    full track data, PINs).
+                </li>
+            </ul>
+            <h4>4. Encrypt Transmission of Cardholder Data Across Open, Public Networks</h4>
+
+            <ul>
+                <li>
+                    Use HTTPS/TLS to encrypt data in transit between your web app and users.
+                </li>
+
+                <li>
+                    Ensure that all payment-related data transmissions are secured with
+                    strong cryptographic protocols.
+                </li>
+            </ul>
+            <h4>5. Use and Regularly Update Anti-Virus Software or Programs</h4>
+            <ul>
+                <li>
+                    Install and maintain anti-virus/malware protection on your servers.
+                </li>
+
+                <li>
+                    Regularly update your anti-virus software and perform scheduled scans.
+                </li>
+            </ul>
+            <h4>6. Develop and Maintain Secure Systems and Applications</h4>
+            <ul>
+                <li>
+                    Regularly update your web app and any third-party software or libraries.
+                </li>
+
+                <li>
+                    Apply security patches promptly to your operating system and application
+                    components.
+                </li>
+
+                <li>Conduct code reviews and vulnerability assessments of your web app.</li>
+            </ul>
+            <h4>7. Restrict Access to Cardholder Data by Business Need to Know</h4>
+
+            <ul>
+                <li>
+                    Implement role-based access control (RBAC) to limit access to cardholder
+                    data.
+                </li>
+
+                <li>
+                    Ensure that only authorized personnel can access sensitive information.
+                </li>
+            </ul>
+            <h4>8. Identify and Authenticate Access to System Components</h4>
+
+            <ul>
+                <li>
+                    Implement strong authentication methods for accessing your applications.
+                </li>
+
+                <li>Enforce password complexity and expiration policies.</li>
+            </ul>
+            <h4>9. Restrict Physical Access to Cardholder Data</h4>
+            <ul>
+                <li>
+                    Ensure that AWS physical security controls are adequate for the infrastructure
+                    hosted in AWS.
+                </li>
+
+                <li>
+                    Review AWS's compliance with physical security requirements as part of
+                    their shared responsibility model.
+                </li>
+            </ul>
+            <h4>
+                10. Track and Monitor All Access to Network Resources and Cardholder Data
+            </h4>
+            <ul>
+                <li>
+                    Enable CloudTrail and CloudWatch to log and monitor access to your AWS
+                    resources.
+                </li>
+
+                <li>
+                    Implement logging for your web app to track access to cardholder data.
+                </li>
+
+                <li>Regularly review logs and set up alerts for suspicious activity.</li>
+            </ul>
+            <h4>11. Regularly Test Security Systems and Processes</h4>
+            <ul>
+                <li>
+                    Conduct regular vulnerability scans and penetration testing on your
+                    hosted applications.
+                </li>
+
+                <li>
+                    Implement continuous monitoring and testing of your security systems.
+                </li>
+            </ul>
+            <h4>
+                12. Maintain a Policy That Addresses Information Security for All Personnel
+            </h4>
+            <ul>
+                <li>Develop and enforce an information security policy.</li>
+
+                <li>
+                    Train your staff on security practices and the importance of protecting
+                    cardholder data.
+                </li>
+            </ul>
+            <h4>Additional Considerations:</h4>
+            <ul>
+                <li>
+                    <strong>Segmentation:</strong> Ensure that you properly segment your
+                    environment to isolate cardholder data from other non-sensitive areas.
+                </li>
+
+                <li>
+                    <strong>Compliance Documentation:</strong> Maintain records of all
+                    compliance efforts, security measures, and audits for validation and
+                    reporting purposes.
+                </li>
+            </ul>
+        </div>
+    </section>
+    {{ end }}
+
+    {{ partial "compliance/insights.html" . }}
+
+    <div class="p-4">
+        {{ partial "learnmore-contactus.html" . }}
+    </div>
+{{ end }}

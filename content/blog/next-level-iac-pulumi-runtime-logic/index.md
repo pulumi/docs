@@ -363,7 +363,7 @@ Techniques like these are a great way to eliminate unnecessary scripts, glue cod
 
 ## Wrapping up
 
-Hopefully this first post has given you a few new ways to think about how to do more with Pulumi and your language of choice. Over the next few weeks, as this series unfolds, we'll share a lot more, so keep an eye on this space --- and of course, if you haven't already, [consider giving Pulumi a try](/start).
+Hopefully this first post has given you a few new ways to think about how to do more with Pulumi and your language of choice. Over the next few weeks, as this series unfolds, we'll share a lot more, so keep an eye on this space!
 
 You'll find the full source for the examples above on GitHub:
 
@@ -371,3 +371,28 @@ You'll find the full source for the examples above on GitHub:
 * [Python version](https://github.com/pulumi/docs/tree/master/static/programs/aws-static-website-with-runtime-logic-python)
 
 Happy coding!
+
+## Next Steps
+
+If you haven't already, [install Pulumi][pulumi-install] today, and follow our self-directed [Getting Started guides][pulumi-start] to learn more about making the most of Pulumi's next-level infrastructure management features at your organization.
+
+To learn more, you can watch the following video which provides a high level overview of how Pulumi works:
+
+<div class="rounded-md shadow border border-gray-300 w-3/4 mx-auto my-4" style="position: relative; padding-bottom: 40.25%; height: 0; overflow: hidden;">
+    <iframe
+        src="//www.youtube.com/embed/Q8tw6YTD3ac?rel=0"
+        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;"
+        allowfullscreen=""
+        title="Introduction to Pulumi in Three Minutes"
+        srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img{position:absolute;width:100%;top:0;bottom:0;margin:auto}</style><a href=https://www.youtube.com/embed/Q8tw6YTD3ac?autoplay=1><img src='/images/home/youtube-getting-started.png' alt='Introduction to Pulumi in Three Minutes'></a>">
+    </iframe>
+</div>
+
+## Pulumi Cloud
+
+The Pulumi Cloud is a fully managed service that helps you adopt Pulumi’s open source SDK with ease. It provides built-in state and secrets management, integrates with source control and CI/CD, and offers a web console and API that make it easier to visualize and manage infrastructure. It is free for individual use, with features available for teams.
+
+<a class="btn btn-secondary" href="https://app.pulumi.com/signup" target="_blank">Create an Account</a>
+
+[pulumi-install]: https://www.pulumi.com/docs/install/
+[pulumi-start]: https://www.pulumi.com/start

@@ -1,0 +1,12 @@
+{{ $src := .url }}
+{{ $title := .title }}
+{{ $controls := default true .controls }}
+{{ $autoplay := default false .autoplay }}
+{{ $loop := default false .loop }}
+
+<video class="flex outline-none rounded w-full" title="{{ $title }}"
+    {{ if $controls }} controls {{ end }}
+    {{ if $autoplay }} autoplay muted playsinline {{ end }}
+    {{ if $loop }} loop {{ end }}>
+    <source src="{{ $src }}" />
+</video>

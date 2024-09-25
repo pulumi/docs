@@ -31,7 +31,7 @@ customer_logos:
 
 ## Biggest Similarities and Differences Between Google Cloud Bigtable and AWS DynamoDB
 
-Both Google Cloud Bigtable and DynamoDB are [NoSQL](/learn/glossary/nosql/), or non-relational, databases. This concept means their data is stored in some format other than two-dimensional tables. Some commonly-used formats for NoSQL databases in general are documents, key-value pairs, graphs, and columns, each with different strengths and tradeoffs.
+Both Google Cloud Bigtable and DynamoDB are [NoSQL](/tutorials/glossary/nosql/), or non-relational, databases. This concept means their data is stored in some format other than two-dimensional tables. Some commonly-used formats for NoSQL databases in general are documents, key-value pairs, graphs, and columns, each with different strengths and tradeoffs.
 
 Google Cloud Bigtable and AWS DynamoDB are both highly-available, scalable, globally distributed and fully-managed serverless NoSQL databases. Both can function as a key-value store, however DynamoDB additionally supports a document model and Bigtable additionally supports a wide-column store. Both offer two consistency levels: eventual consistency, and immediate consistency.
 

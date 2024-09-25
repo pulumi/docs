@@ -5,6 +5,11 @@ title: Pulumi Copilot
 h1: Pulumi Copilot Overview
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
+  cloud:
+    name: Pulumi Copilot
+    parent: cloud-home
+    weight: 5
+    identifier: pulumi-cloud-copilot
   pulumicloud:
     weight: 2
 aliases:

@@ -61,6 +61,9 @@ main:
         - name: Diana Esteves
           role: Solutions Architect, Pulumi
           photo: /images/team/diana-esteves.jpg
+        - name: Lizzie Siegle
+          role: Developer Advocate, Cloudflare
+          photo: /images/people/lizzie-siegle.jpg
 
     # case-sensitive
     tags:

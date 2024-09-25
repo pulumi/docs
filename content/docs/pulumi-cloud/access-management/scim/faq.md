@@ -5,10 +5,15 @@ title: FAQ
 h1: Pulumi Cloud SCIM FAQ
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    pulumicloud:
-        identifier: faq-scim
-        parent: scim
-        weight: 4
+  cloud:
+    name: FAQ
+    parent: pulumi-cloud-access-management-scim
+    weight: 4
+    identifier: pulumi-cloud-access-management-scim-faq
+  pulumicloud:
+    identifier: faq-scim
+    parent: scim
+    weight: 4
 aliases:
   - /docs/guides/scim/faq/
 ---
@@ -37,7 +42,9 @@ Yes. In addition to the SCIM-managed teams, one can also configure and manage Pu
 
 ## More FAQ
 
-* [Kubernetes guides FAQ](/docs/clouds/kubernetes/guides/faq/)
-* [Policy as code FAQ](/docs/using-pulumi/crossguard/faq/)
-* [Pulumi Deployments FAQ](/docs/pulumi-cloud/deployments/faq/)
-* [Pulumi CLI & Pulumi Cloud FAQ](/docs/support/faq/)
+- [Pulumi IaC FAQ](/docs/iac/support/faq/)
+- [Pulumi ESC FAQ](/docs/esc/faq/)
+- [Pulumi Cloud FAQ](/docs/pulumi-cloud/faq/)
+- [Pulumi Cloud Deployments FAQ](/docs/pulumi-cloud/deployments/faq/)
+- [Pulumi CrossGuard FAQ](/docs/using-pulumi/crossguard/faq/)
+- [Kubernetes guides FAQ](/docs/clouds/kubernetes/guides/faq/)

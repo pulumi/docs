@@ -9,6 +9,13 @@ customer_name: WhyLabs
 customer_logo: /logos/customers/whylabs-wordmark.svg
 customer_url: https://whylabs.ai/
 
+quote_block:
+  quote: |
+      “I was blown away by the multi-language experience as well as the various innovations, such as its best-in-class support for Kubernetes. Those qualities, as well as support for multiple cloud providers made me decide to go with Pulumi.”
+  quote_attrib: Andy Dang, Lead Engineer & Co-founder, WhyLabs
+  headline_stat: Accelerate time to market
+  headline:
+
 exec_summary: |
     WhyLabs helps organizations run their AI applications with certainty by monitoring them for problems such as data drift and model degradation. Founded by alumni of AWS, the company began building their platform on AWS and used AWS-provided tools to manage their infrastructure. However, the WhyLabs team needed a platform that could handle the complexity of their modern cloud architectures and would set them up for success when they’re ready to adopt multi-cloud deployments. The team also wanted a platform that integrated with the modern development workflows used by WhyLabs’ developers, who have a software engineering-driven culture of tight collaboration and shared responsibility for infrastructure. By migrating to the Pulumi Cloud Engineering Platform, WhyLabs engineers can continuously and reliably ship new features faster than before for improved time-to-market. Pulumi enabled WhyLabs to adopt cloud engineering best practices out-of-the-box, including building infrastructure as code with general-purpose languages like TypeScript, versioning and reviewing infrastructure code through a code review process, and delivering infrastructure through its existing GitLab CI/CD pipeline using Pulumi’s integrations.
 

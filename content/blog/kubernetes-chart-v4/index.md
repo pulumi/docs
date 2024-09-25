@@ -418,7 +418,7 @@ For resources in the “core” group, the empty string is used instead (for exa
 
 Pulumi has a new way to transform component resources and their children, the `transforms`  options. The older
 `transformations` option doesn't work with multi-language components like Chart v4. See
-[Resource Option: transforms](/docs/concepts/options/transforms.md) for more details.
+[Resource Option: transforms](/docs/concepts/options/transforms/) for more details.
 
 Note: you cannot change an object's namespace or name using a Pulumi transformation, and you cannot add or discard
 an object.
@@ -426,7 +426,7 @@ an object.
 Here's an example of using the `transforms` option to add the `pulumi.com/patchForce` annotation
 to a chart's resources.
 
-{{< chooser language "typescript,python" >}}
+{{< chooser language "typescript,python,go" >}}
 
 {{% choosable language "javascript,typescript" %}}
 
@@ -484,6 +484,51 @@ ingresscontroller = kubernetes.helm.v4.Chart(
     version="0.14.1",
     opts=pulumi.ResourceOptions(transforms=[apply_patchforce_annotation])
 )
+```
+
+{{% /choosable %}}
+
+{{% choosable language "go" %}}
+
+```go
+applyPatchForceAnnotation := func(ctx context.Context, rta *pulumi.ResourceTransformArgs) *pulumi.ResourceTransformResult {
+	transform := func(applier interface{}) {
+		o := rta.Props.ToMapOutputWithContext(ctx).ApplyT(applier)
+		r, err := internals.UnsafeAwaitOutput(ctx, o)
+		if err != nil {
+			panic(err)
+		}
+		rta.Props = r.Value.(pulumi.Map)
+	}
+
+	switch rta.Type {
+	case "kubernetes:helm.sh/v4:Chart":
+		// Do nothing for Helm charts
+	default:
+		transform(func(obj map[string]any) pulumi.Map {
+			// note: obj is an ordinary Unstructured object at this point.
+			unstructured.SetNestedField(obj, "true", "metadata", "annotations", "pulumi.com/patchForce")
+			return pulumi.ToMap(obj)
+		})
+	}
+	return &pulumi.ResourceTransformResult{
+		Props: rta.Props,
+		Opts:  rta.Opts,
+	}
+}
+
+// Use Helm to install the Nginx ingress controller
+_, err = helmv4.NewChart(ctx, "ingresscontroller", &helmv4.ChartArgs{
+	Chart:     pulumi.String("nginx-ingress"),
+	Namespace: ingressNs.Metadata.Name(),
+	RepositoryOpts: &helmv4.RepositoryOptsArgs{
+		Repo: pulumi.String("https://helm.nginx.com/stable"),
+	},
+	Version: pulumi.String("0.14.1"),
+}, pulumi.Transforms([]pulumi.ResourceTransform{applyPatchForceAnnotation}))
+if err != nil {
+	return err
+}
 ```
 
 {{% /choosable %}}

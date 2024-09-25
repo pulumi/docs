@@ -7,6 +7,11 @@ title: SAML(SSO)
 h1: Pulumi Cloud SAML(SSO)
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
+  cloud:
+    name: SAML(SSO)
+    parent: pulumi-cloud-access-management
+    weight: 6
+    identifier: pulumi-cloud-access-management-saml
   pulumicloud:
     weight: 4
     identifier: saml

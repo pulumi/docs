@@ -102,10 +102,11 @@ You can then use the following command to create the bucket, making sure to repl
 - `<your-bucket-name>` with a [globally unique name](https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html) for your bucket
 - `<your-aws-region>` with your desired AWS region
 - `<your-pulumi-org-name>` with the name of your own Pulumi organization
+- `<your-project-name>` with the name of your project
 - `<your-environment-name>` with the name of your environment
 
 ```bash
-esc run <your-pulumi-org-name>/<your-environment-name> -i aws s3api create-bucket --bucket <your-bucket-name> --region <your-aws-region>
+esc run <your-pulumi-org-name>/<your-project-name>/<your-environment-name> -i aws s3api create-bucket --bucket <your-bucket-name> --region <your-aws-region>
 ```
 
 ### Step 6: Create a sample file
@@ -121,16 +122,16 @@ In the next step, you will use the `aws s3 cp` command to copy this file into yo
 
 ### Step 7: Run the aws s3 cp command
 
-To copy the local file to your S3 bucket, run the command using `esc run` as shown below, making sure to replace `<your-pulumi-org-name>` and `<your-environment-name>` with the names of your own Pulumi organization and environment respectively:
+To copy the local file to your S3 bucket, run the command using `esc run` as shown below, making sure to replace `<your-pulumi-org-name>`, `<your-project-name>`, and `<your-environment-name>` with the names of your own Pulumi organization and environment respectively:
 
 ```bash
-esc run <your-pulumi-org-name>/<your-environment-name> -i aws s3 cp test.txt s3://<your-bucket-name>/copied-file.txt
+esc run <your-pulumi-org-name>/<your-project-name>/<your-environment-name> -i aws s3 cp test.txt s3://<your-bucket-name>/copied-file.txt
 ```
 
 Then validate that your file was successfully uploaded by running the following command, making sure to replace the value of `<your-bucket-name>` with the name of your S3 bucket:
 
 ```bash
-esc run <your-pulumi-org-name>/<your-environment-name> -i aws s3api list-objects-v2 --bucket <your-bucket-name>
+esc run <your-pulumi-org-name>/<your-project-name>/<your-environment-name> -i aws s3api list-objects-v2 --bucket <your-bucket-name>
 ```
 
 ## Conclusion
