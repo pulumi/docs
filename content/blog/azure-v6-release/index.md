@@ -14,8 +14,7 @@ tags:
 The latest major release of the Azure Classic Pulumi Provider is available now!
 Our 6.0 release contains the [latest upstream changes](https://github.com/hashicorp/terraform-provider-azurerm/releases/tag/v4.0.1) to keep you up-to-date along with the latest features and improvements from Pulumi.
 
-The Pulumi Azure Native provider is our recommended approach for building on Azure which is generated directly from the API specifications so has amazing resource coverage.
-The Azure Classic provider is derived from the upstream Terraform AzureRM provider and can also be used to provision most resources on Azure, and can be used in conjunction with the Native Provider where needed as a useful alternative.
+The Azure Classic provider is derived from the upstream Terraform AzureRM provider and can also be used to provision most resources on Azure, and can be used to complement the [Pulumi Azure Native provider](https://www.pulumi.com/registry/packages/azure-native/) - our recommended provider which has amazing resource coverage due to being derived directly from the official specifications.
 The provider is open source and available on GitHub so you can always follow along with current issues and developments, or even open your first pull request.
 
 <!--more-->
@@ -59,7 +58,7 @@ Over the last two years, we have added support for several new modules. Among th
 
 ### API Coverage Growth
 
-The below chart shows the growth of this provider by resource, function, and supporting types since Version 7.
+The below chart shows the growth of this provider by resource, function, and supporting types since Version 5.
 
 ![azure-coverage](./azure-coverage.png)
 
