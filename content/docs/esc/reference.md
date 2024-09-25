@@ -4,9 +4,10 @@ title_tag: Syntax Reference
 h1: Pulumi ESC Syntax Reference
 meta_desc: Pulumi ESC allows you to compose and manage hierarchical collections of configuration and secrets and consume them in various ways.
 menu:
-  pulumiesc:
-    identifier: reference
-    weight: 4
+  esc:
+    parent: esc-home
+    identifier: esc-syntax-reference
+    weight: 5
 aliases:
   - /docs/pulumi-cloud/esc/reference
 ---
@@ -19,8 +20,8 @@ aliases:
 
 # imports is an optional top-level key
 imports:
-  - environment-a
-  - environment-b
+  - project/environment-a
+  - project/environment-b
 
 # ---------------------------------------------------------------------------------------
 # Main configuration -- set configuration values either as static values, or interpolated

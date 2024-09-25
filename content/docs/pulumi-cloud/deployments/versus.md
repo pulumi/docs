@@ -2,9 +2,14 @@
 title_tag: "Pulumi Deployments vs Traditional CI/CD Systems"
 meta_desc: How does Pulumi deployments compare to traditional CI/CD systems?
 title: "Vs. Traditional CI/CD"
-h1: "Pulumi Deployments vs. traditional CI/CD"
+h1: "Pulumi Deployments vs. Traditional CI/CD"
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
+  cloud:
+    name: Vs. Traditional CI/CD
+    parent: pulumi-cloud-deployments
+    weight: 10
+    identifier: pulumi-cloud-deployments-versus
   pulumicloud:
     parent: deployments
     weight: 7

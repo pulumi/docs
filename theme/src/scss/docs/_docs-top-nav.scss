@@ -51,6 +51,8 @@ nav.actually-docs {
 
         div.get-started {
             a.get-started-header-button {
+                @apply rounded-lg;
+
                 width: auto;
                 height: auto;
                 display: flex;
@@ -58,7 +60,6 @@ nav.actually-docs {
                 color: #131314;
                 padding: 8px 16px;
                 border: 1px solid #805ac3;
-                border-radius: 20px;
 
                 &:hover {
                     color: #fff;
@@ -108,27 +109,27 @@ nav.actually-docs {
             div.get-started   {
                 display: none;
             }
-    
+
             li.github-widget,
             li.slack {
                 @media (min-width: 900px){
                     display: flex;
                 }
             }
-    
+
             li.docs,
             li.registry {
                 @media (min-width: 768px) {
                     display: flex
                 }
             }
-    
+
             li.ai {
                 @media (min-width: 475px) {
                     display: flex
                 }
             }
-    
+
             div.get-started {
                 @media (min-width: 450px) {
                     display: flex;

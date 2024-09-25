@@ -1,10 +1,15 @@
 ---
 title_tag: "Pulumi Cloud Webhooks"
-meta_desc: Pulumi Webhooks allow you to notify external services of events happening within your Pulumi organization. Learn how to create and manage webhooks here.
+meta_desc: Pulumi Cloud Webhooks allow you to notify external services of events happening within your Pulumi organization. Learn how to create and manage webhooks here.
 title: "Webhooks"
-h1: Pulumi Cloud webhooks
+h1: Pulumi Cloud Webhooks
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
+  cloud:
+    name: Webhooks
+    parent: cloud-home
+    weight: 6
+    identifier: pulumi-cloud-webhooks
   pulumicloud:
     weight: 9
 aliases:
@@ -24,16 +29,16 @@ To try it out, start a [trial](https://app.pulumi.com/site/trial) now.
 Pulumi Webhooks allow you to notify external services of events
 happening within your Pulumi organization. For example,
 you can trigger a notification whenever a stack is updated.
-Whenever an event occurs, Pulumi will send an HTTP `POST` request to
-all registered webhooks. The webhook can then be used to emit a
+When an event occurs, Pulumi will notify the registered webhook listeners via a HTTP `POST`
+request with metadata about the event. The webhook can then be used to emit a
 notification, start running integration tests, or even update additional stacks.
 
-Webhooks can be used for pretty much anything you want, and are the foundation
+There are large number of real life applications for webhooks including serving as the foundation
 of most _ChatOps_ workflows.
 
 ## Overview
 
-Webhooks can be attached to either a stack or an organization. Stack webhooks
+Pulumi Cloud webhooks can be attached to either a stack or an organization. Stack webhooks
 will be notified of events specific to the stack. Organization
 webhooks will be notified for events happening within each of the organization's
 stacks.
@@ -41,6 +46,8 @@ stacks.
 The Webhooks page is under the Stack or Organization Settings tab.
 
 ![Organization webhooks](/images/docs/reference/service/webhooks/org-webhooks.png)
+
+If you are looking for Environment Webhook documentation, it's [here](/docs/esc/webhooks/).
 
 ### Create a Webhook
 
@@ -128,64 +135,70 @@ class PulumiServiceWebhook: Stack
 
 1. Navigate to **Settings** > **Webhooks**.
 2. Select **Create webhook**.
-3. Under Destination, choose **Webhook**, **Slack**, **Microsoft Teams**."
+3. Under Destination, choose **Webhook**, **Slack** or **Microsoft Teams**.
     1. For generic JSON webhooks, provide a display name, payload URL, and optionally a secret.
     2. For Slack webhooks, provide a Slack webhook URL and a display name.
     3. For Microsoft Teams webhooks, provide a Microsoft Teams webhook URL and a display name.
-4. Choose between receiving all events or only receiving specific events using the filters menu.
+4. Choose which events you would like to receive using groups and filters menu.
 
 #### Create a Stack Webhook
 
 1. Navigate to the stack.
 2. Navigate to **Settings** > **Webhooks**
 3. Select **Create webhook**.
-4. Under Destination, choose **Webhook**, **Slack**, **Microsoft Teams**, or **Deployment**."
+4. Under Destination, choose **Webhook**, **Slack**, **Microsoft Teams** or **Deployment**.
    1. For generic JSON webhooks, provide a display name, payload URL, and optionally a secret.
    2. For Slack webhooks, provide a Slack webhook URL and a display name.
    3. For Microsoft Teams webhooks, provide a Microsoft Teams webhook URL and a display name.
    4. For Deployment webhooks, provide the stack to deploy in the format `project/stack`.
-5. Choose between receiving all events or only specific events using the filters menu.
+5. Choose which events you would like to receive using groups and filters menu.
 
 ![Stack webhooks form](../ui-webhooks.png)
 
 ## Event Filtering
 
 Event filtering allows you to choose which events should be delivered to each webhook. You may choose to receive
-all events, or filter to specific events (only failures, only deployment events, etc.).
+all events in a group, or filter to specific events (only failures, only deployment events, etc.).
 The following table describes the various event filters available and the context in which they are relevant.
 
-| Filter                        | Event Kind          | Webhook Type               | Triggered                                        |
-|-------------------------------|---------------------|----------------------------|--------------------------------------------------|
-| `stack_created`               | `stack`             | Organization webhooks only | When a stack is created.                         |
-| `stack_deleted`               | `stack`             | Organization webhooks only | When a stack is deleted.                         |
-| `preview_succeeded`           | `stack_preview`     | Both                       | When a stack `preview` succeeds.                 |
-| `preview_failed`              | `stack_preview`     | Both                       | When a stack `preview` fails.                    |
-| `update_succeeded`            | `stack_update`      | Both                       | When a stack `update` succeeds.                  |
-| `update_failed`               | `stack_update`      | Both                       | When a stack `update` fails.                     |
-| `destroy_succeeded`           | `stack_update`      | Both                       | When a stack `destroy` succeeds.                 |
-| `destroy_failed`              | `stack_update`      | Both                       | When a stack `destroy` fails.                    |
-| `refresh_succeeded`           | `stack_update`      | Both                       | When a stack `refresh` succeeds.                 |
-| `refresh failed`              | `stack_update`      | Both                       | When a stack `refresh` fails.                    |
-| `deployment_queued`           | `deployment`        | Both                       | When a deployment is queued.                     |
-| `deployment_started`          | `deployment`        | Both                       | When a deployment starts running.                |
-| `deployment_succeeded`        | `deployment`        | Both                       | When a deployment succeeds.                      |
-| `deployment_failed`           | `deployment`        | Both                       | When a deployment fails.                         |
-| `drift_detected`              | `drift_detection`   | Both                       | When drift is detected in a drift detection run. |
-| `drift_detection_succeeded`   | `drift_detection`   | Both                       | When a drift detection run succeeds.             |
-| `drift_detection_failed`      | `drift_detection`   | Both                       | When a drift detection run fails.                |
-| `drift_remediation_succeeded` | `drift_remediation` | Both                       | When a drift remediation run succeeds.           |
-| `drift_remediation_failed`    | `drift_remediation` | Both                       | When a drift remediation run fails.              |
+| Filter                            | Event Kind                  | Webhook Type               | Triggered                                        |
+|-----------------------------------|-----------------------------|----------------------------|--------------------------------------------------|
+| `stack_created`                   | `stack`                     | Organization webhooks only | When a stack is created.                         |
+| `stack_deleted`                   | `stack`                     | Organization webhooks only | When a stack is deleted.                         |
+| `preview_succeeded`               | `stack_preview`             | Organization or Stack      | When a stack `preview` succeeds.                 |
+| `preview_failed`                  | `stack_preview`             | Organization or Stack      | When a stack `preview` fails.                    |
+| `update_succeeded`                | `stack_update`              | Organization or Stack      | When a stack `update` succeeds.                  |
+| `update_failed`                   | `stack_update`              | Organization or Stack      | When a stack `update` fails.                     |
+| `destroy_succeeded`               | `stack_update`              | Organization or Stack      | When a stack `destroy` succeeds.                 |
+| `destroy_failed`                  | `stack_update`              | Organization or Stack      | When a stack `destroy` fails.                    |
+| `refresh_succeeded`               | `stack_update`              | Organization or Stack      | When a stack `refresh` succeeds.                 |
+| `refresh failed`                  | `stack_update`              | Organization or Stack      | When a stack `refresh` fails.                    |
+| `deployment_queued`               | `deployment`                | Organization or Stack      | When a deployment is queued.                     |
+| `deployment_started`              | `deployment`                | Organization or Stack      | When a deployment starts running.                |
+| `deployment_succeeded`            | `deployment`                | Organization or Stack      | When a deployment succeeds.                      |
+| `deployment_failed`               | `deployment`                | Organization or Stack      | When a deployment fails.                         |
+| `drift_detected`                  | `drift_detection`           | Organization or Stack      | When drift is detected in a drift detection run. |
+| `drift_detection_succeeded`       | `drift_detection`           | Organization or Stack      | When a drift detection run succeeds.             |
+| `drift_detection_failed`          | `drift_detection`           | Organization or Stack      | When a drift detection run fails.                |
+| `drift_remediation_succeeded`     | `drift_remediation`         | Organization or Stack      | When a drift remediation run succeeds.           |
+| `drift_remediation_failed`        | `drift_remediation`         | Organization or Stack      | When a drift remediation run fails.              |
+
+And this table describes the various filter groups available to easily subscribe to all events within a group.
+
+| Group          | Event Kinds Included                                 |
+|----------------|------------------------------------------------------|
+| `stacks`       | `stack`, `stack_preview`, `stack_update`             |
+| `deployments`  | `deployment`, `drift_detection`, `drift_remediation` |
 
 ## Webhook Formats
 
-When creating a webhook, you can choose between the generic JSON webhook payload or `slack`
-formatted events.
+When creating a webhook, you can choose between a generic JSON webhook payload, `slack` formatted events and `ms_teams` formatted events.
 
 ### Slack Webhooks
 
-Slack Webhooks allow you to seamlessly integrate notifications about your Pulumi stacks and organizations
+Slack Webhooks allow you to seamlessly integrate notifications about your Pulumi resources
 into your Slack workspace by simply providing a [Slack incoming webhook URL](https://api.slack.com/messaging/webhooks)
-and optionally choosing which events you want delivered using [event filters](#event-filtering).
+and optionally choosing which events you want delivered using [event groups and filters](#event-filtering).
 
 You can either create your own Slack app (or use an existing one you may already have installed in your workspace), or
 follow the link below to quickly get started with a pre-defined Slack app manifest.
@@ -196,7 +209,7 @@ follow the link below to quickly get started with a pre-defined Slack app manife
 
 Microsoft Teams Webhooks allow you to seamlessly integrate notifications about your Pulumi stacks and organizations
 into your Microsoft Teams workspace by simply providing a [Microsoft Teams incoming webhook URL](https://docs.microsoft.com/en-us/microsoftteams/platform/webhooks-and-connectors/how-to/add-incoming-webhook)
-and optionally choosing which events you want delivered using [event filters](#event-filtering).
+and optionally choosing which events you want delivered using [event groups and filters](#event-filtering).
 
 ### Deployment Webhooks
 
@@ -221,7 +234,7 @@ Each webhook payload has a format specific to the payload being emitted. Every p
 and stack reference as appropriate. For examples of specific payloads, see _Payload Reference_ below.
 
 Each webhook will contain a `user` field, which is the user who requested the action, an `organization` which is
-the organization name, and a URL for the event. It will also contain the `stackName` for the stack which was modified when applicable.
+the organization name, and a URL for the event. It will also contain `projectName` and `stackName` when applicable.
 
 ##### Stack Creation
 

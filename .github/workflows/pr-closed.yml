@@ -12,6 +12,7 @@ jobs:
     if: github.event.pull_request.head.repo.full_name == github.repository
     name: Do cleanup
     runs-on: ubuntu-latest
+    environment: testing
     env:
       GOPATH: ${{ github.workspace }}/go
     steps:
@@ -28,7 +29,7 @@ jobs:
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v2
         with:
-          role-to-assume: arn:aws:iam::388588623842:role/ContinuousDelivery
+          role-to-assume: arn:aws:iam::571684982431:role/ContinuousDelivery
           role-session-name: docs-cleanup
           role-duration-seconds: 7200
           aws-region: us-west-2
@@ -38,3 +39,5 @@ jobs:
         env:
           PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DEPLOYMENT_ENVIRONMENT: ${{ vars.DEPLOYMENT_ENVIRONMENT }}
+          PULUMI_STACK_NAME: ${{ vars.PULUMI_STACK_NAME }}

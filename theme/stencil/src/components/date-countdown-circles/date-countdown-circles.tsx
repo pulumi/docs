@@ -76,6 +76,10 @@ export class DateCountdownCircles {
     }
 
     private renderNumberCircle(value: number, percent: number) {
+        if (percent <= 0) {
+            percent = 0;
+            value = 0;
+        }
         return (
             <div class="timer-wrapper">
                 <div class="circle" style={{"--p": `${percent}`}}>{ value }</div>
