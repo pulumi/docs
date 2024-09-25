@@ -16,7 +16,7 @@ get_started_guide:
   link: /docs/iac/get-started/kubernetes/
   icon: kubernetes
 providers:
-  description: The Kubernetes provider can provision any resources available in the Kubernetes API. 
+  description: The Kubernetes provider can provision any resources available in the Kubernetes API.
   provider_list:
   - display_name: Kubernetes
     content_links:
