@@ -365,10 +365,10 @@ comparison_table:
                 - title: Self-hosted deployment runners
                   link: /docs/pulumi-cloud/deployments/customer-managed-agents/
                   items:
+                    - content: _blank
+                    - content: _blank
                     - content: Available
-                    - content: Available
-                    - content: Available
-                    - content: Available
+                    - content: _check
 
             ## CrossGuard table
             - header: Pulumi CrossGuard
