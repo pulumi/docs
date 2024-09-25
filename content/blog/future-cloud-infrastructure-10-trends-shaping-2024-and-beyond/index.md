@@ -1,5 +1,5 @@
 ---
-title: "Future of the Cloud: 10 Trends Shaping 2024 and Beyond"
+title: "Future of the Cloud: 10 Trends Shaping 2025 and Beyond"
 
 # The date represents the post's publish date, and by default corresponds with
 # the date and time this file was generated. Dates are used for display and
