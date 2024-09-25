@@ -147,7 +147,7 @@ The "growing pains" will also increase with rising concerns in security, network
 
 As cloud environments become more complex, ensuring cost transparency and governance will be a priority. In 2025, businesses will continue to invest in cloud optimization and/or cost management tools and processes to monitor and control cloud spending effectively. This includes implementing policies, [managing resource allocation](https://www.pulumi.com/blog/property-search/), and utilizing cost analytics to make informed decisions about resource utilization.
 
-As a result, [IDC](https://www.netapp.com/media/93564-operationalize-fin-ops-for-continuous-cloud-and-cost-efficiency.pdf) predicts that complexities and IT budget pressures will drive **70% of Global 1000 companies to [increase FinOps maturity](https://www.pulumi.com/blog/finops-with-pulumi/)** with granular chargebacks, benchmarking, and multiple-cloud optimization by 2024.
+As a result, [IDC](https://www.netapp.com/media/93564-operationalize-fin-ops-for-continuous-cloud-and-cost-efficiency.pdf) predicts that complexities and IT budget pressures will drive **70% of Global 1000 companies to [increase FinOps maturity](https://www.pulumi.com/blog/finops-with-pulumi/)** with granular chargebacks, benchmarking, and multiple-cloud optimization.
 
 ## 10. Enterprises Will allow the Use of AI Code Assistants
 
