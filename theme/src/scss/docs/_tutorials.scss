@@ -55,4 +55,11 @@
     h6 {
         @apply text-sm;
     }
+
+    // All main-content links following the header should be styled.
+    .docs-main-content header + .special-h1 ~ div {
+        a {
+            @apply text-blue-500;
+        }
+    }
 }
