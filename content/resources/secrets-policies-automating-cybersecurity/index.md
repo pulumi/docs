@@ -76,7 +76,7 @@ main:
     # case-sensitive
     tags:
         level: # Beginner, Intermediate, Advanced
-        topics: ["Secrets Management", "Security", "DevOps", "Pulumi ESC", "Automation"]
+        topics: ["Secrets Management", "Security", "DevOps", "DevSecOps", "Pulumi ESC", "Automation"]
         languages: []
 
 # The right hand side form section.
