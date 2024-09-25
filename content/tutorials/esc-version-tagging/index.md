@@ -7,7 +7,7 @@ meta_desc: Use immutable versioning and dynamic tagging to configure multiple ap
 meta_image: meta.png
 weight: 999
 summary: |
-    As a hosted service of Pulumi Cloud, [Pulumi ESC](https://pulumi.com/esc) makes it easy to store and retrieve static and dynamic configuration settings --- including encrypted secrets --- manage them securely and flexibly, and use them in your applications in various ways. In this tutorial, you'll use ESC's [version tagging](/docs/esc/environments/versioning/) features to configure multiple running Node.js applications with a single shared configuration value referenced by tag name.
+    [Pulumi ESC](https://pulumi.com/esc) makes it easy to store and retrieve static and dynamic configuration settings, manage them securely and flexibly, and use them in your applications. In this tutorial, you'll use ESC's [version tagging](/docs/esc/environments/versioning/) features to configure multiple running Node.js applications with a single shared configuration value referenced by tag name.
 youll_learn:
     - How to store and retrieve configuration values with Pulumi ESC
     - How to use environment versions to pin applications to specific config values
@@ -29,7 +29,7 @@ The examples in this tutorial use `esc`, the standalone Pulumi ESC CLI. However,
 
 ## Log into Pulumi Cloud
 
-Before you begin, make sure you've [signed into Pulumi Cloud](https://app.pulumi.com/) with an account that has access to a Pulumi organization with an Enterprise Edition subscription. Once you've done so, you can log in with the ESC CLI and be prompted to :
+Before you begin, make sure you've [signed into Pulumi Cloud](https://app.pulumi.com/) with an account that has access to a Pulumi organization with an [Enterprise edition](https://pulumi.com/pricing) subscription. Once you've done so, you can log in with the ESC CLI and be prompted to :
 
 ```bash
 $ esc login
@@ -42,7 +42,7 @@ Enter your access token from https://app.pulumi.com/account/tokens
 
 ## Obtain a personal access token
 
-To complete the application-configurationi portion of the tutorial, you'll also need a Pulumi Cloud [personal access token](/docs/pulumi-cloud/access-management/access-tokens/#personal-access-tokens). Create a short-lived access token for this tutorial, copy it into your current shell, an apply it as an environment variable as follows:
+To complete the application-configuration portion of the tutorial, you'll also need a Pulumi Cloud [personal access token](/docs/pulumi-cloud/access-management/access-tokens/#personal-access-tokens). Create a short-lived access token for this tutorial, copy it into your current shell, an apply it as an environment variable as follows:
 
 ```bash
 export PULUMI_ACCESS_TOKEN="${YOUR_TOKEN_VALUE}"
@@ -50,9 +50,9 @@ export PULUMI_ACCESS_TOKEN="${YOUR_TOKEN_VALUE}"
 
 ## Create a new ESC project and environment
 
-The application you're building is a simple Node.js web service designed to return a dynamically configurable [message of the day](https://en.wikipedia.org/wiki/Message_of_the_day) (MOTD). In ESC, configuration settings belong to collections called [_environments_](/docs/esc/environments/working-with-environments/), and environments in turn belong to _projects_. Projects and environments may be created either with the Pulumi Cloud console or with the ESC CLI.
+The application you're building is a Node.js web service designed to return a dynamically configurable [message of the day](https://en.wikipedia.org/wiki/Message_of_the_day) (MOTD). In ESC, configuration settings belong to collections called [_environments_](/docs/esc/environments/working-with-environments/), and environments in turn belong to _projects_. Projects and environments may be created either with the Pulumi Cloud console or with the ESC CLI.
 
-To get started, use the ESC CLI to create a new project and environment in the organization of your choice. (We'll use the `tutorials` organization in this tutorial as an example.) Name the new project `messages` and the environment `dev`:
+To get started, use the ESC CLI to create a new project and environment in the organization of your choice. We'll use the `tutorials` organization in this tutorial as an example. Name the new project `messages` and the environment `dev`:
 
 ```bash
 $ esc env init tutorials/messages/dev
@@ -62,9 +62,7 @@ Environment created: tutorials/messages/dev
 
 Once it's created, you'll be able to see the new project in Pulumi Cloud as well by navigating to Pulumi ESC &gt; Environments:
 
-![A screenshow showing a newly created ESC environment](./new-env.png)
-
-Next, you'll create your first setting.
+![A screenshot showing a newly created ESC environment](./new-env.png)
 
 ## Create a new configuration setting
 
@@ -84,9 +82,9 @@ $ echo "$(esc env get tutorials/messages/dev motd --value json)"
 
 ## Change the setting's value, produce a new version
 
-Every change to a configuration value in an ESC environment produces a new, immutable snapshot of the environment. These snapshots are called [_versions_](/docs/esc/environments/versioning/) and they're indexed numerically.
+Every change to a configuration value in an ESC environment produces a new, immutable snapshot of the environment. These snapshots are called [_versions_](/docs/esc/environments/versioning/) and are indexed numerically.
 
-As of now, your `dev` environment has two versions:  version `1`, which is empty (every environment starts out this way) and version `2`, which contains a single setting (for `motd`). You can see this reflected in the Pulumi Cloud console as well after clicking into the `dev` environment and navigating to the Versions tab:
+As of now, your `dev` environment has two versions:  version `1`, the empty starting point, and version `2`, which contains a single setting (for `motd`). You can see this in the Pulumi Cloud console by clicking into the `dev` environment and navigating to the Versions tab:
 
 ![A screenshot showing two revisions of the MOTD setting](./two-revisions.png)
 
@@ -120,7 +118,7 @@ Date:   2024-09-18 15:04:20.07 -0700 PDT
 
 ## Version tagging
 
-In the output above, you may also have noticed that version `3` is now [_tagged_](https://www.pulumi.com/docs/esc/environments/versioning/#tagging-versions) with a label of `latest`. Every environment has a built-in `latest` that always points to the most recent version of the environment. You can fetch an environment by tag by passing an `@` symbol followed by the tag name --- for example, to pull the `latest` version explicitly:
+In the output above, you may also have noticed that version `3` is now [_tagged_](https://www.pulumi.com/docs/esc/environments/versioning/#tagging-versions) with a label of `latest`. Every environment has a built-in `latest` that always points to the most recent version of the environment. You can fetch an environment by tag by adding an `@` symbol with the tag name to the end of the environment name. For example, to pull the `latest` version explicitly:
 
 ```bash
 $ esc env get tutorials/messages/dev@latest motd --value json
@@ -128,7 +126,7 @@ $ esc env get tutorials/messages/dev@latest motd --value json
 "Good day, world!"
 ```
 
-In addition to using the built-in `latest` tag, you can also create version tags of your own --- as well as change the environment version that a given tag points to. This additional layer of manageability lets you not only pin your configurations to a tag instead of to an explicit version --- to a `production` tag, for example, whose underlying value may change --- but also to apply broad configuration changes easily and instantaneously.
+In addition to using the built-in `latest` tag, you can also create version tags of your own, as well as change the environment version that a given tag points to. This additional layer of manageability lets you not only pin your configurations to a tag instead of to an explicit version --- to a `production` tag, for example, whose underlying value may change --- but also to apply broad configuration changes easily and instantaneously.
 
 ## Using tagging to configure multiple applications
 
