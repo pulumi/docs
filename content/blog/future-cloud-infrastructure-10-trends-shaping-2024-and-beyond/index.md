@@ -153,11 +153,11 @@ As a result, [IDC](https://www.netapp.com/media/93564-operationalize-fin-ops-for
 
 Developers worldwide have explored or are currently using AI-powered coding assistants. However, many enterprises have shown resistance to allowing them to be part of their AI tools in software development. Still, software engineering leaders are beginning to recognize that these coding assistants can enhance team productivity, improve code quality, and maintain a competitive advantage.
 
-**By 2027, AI will dramatically increase developer velocity by automatically generating code** to meet functional business requirements for 70% of new digital solutions in production (source: [IDC](https://www.digitalnewsasia.com/business/idc-reveals-its-top-predictions-cloud-2023-and-beyond)).
+**By 2027, the use of [AI assistants](https://www.pulumi.com/product/copilot/) will dramatically increase developer velocity** to meet functional business requirements for 70% of new digital solutions in production (source: [IDC](https://www.digitalnewsasia.com/business/idc-reveals-its-top-predictions-cloud-2023-and-beyond)).
 
 {{< figure alt="The value of AI code assistants. Credit: Gartner" src="/blog/future-cloud-infrastructure-10-trends-shaping-2024-and-beyond/ai_code_assistants_value.png" caption="The value of AI code assistants. Credit: Gartner" width=100% >}}
 
-According to [Gartner](https://www.gartner.com/en/newsroom/press-releases/2024-04-11-gartner-says-75-percent-of-enterprise-software-engineers-will-use-ai-code-assistants-by-2028), **by 2028, 75% of enterprise software engineers will use dedicated AI code assistants**, and 63% of organizations are currently piloting, deploying or beginning to use AI code assistants.
+According to [Gartner](https://www.gartner.com/en/newsroom/press-releases/2024-04-11-gartner-says-75-percent-of-enterprise-software-engineers-will-use-ai-code-assistants-by-2028), **by 2028, 75% of enterprise software engineers will use dedicated AI code assistants**, and 63% of organizations are currently piloting, deploying or beginning to [use AI code assistants, just like Pulumi AI](https://www.pulumi.com/ai).
 
 ## Keeping up with the Future Cloud Trends
 
