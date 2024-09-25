@@ -1,4 +1,7 @@
 ---
+######################################################################################################
+#                    This is a PPC landing page, exclusively for paid ads                            #
+######################################################################################################
 title: Pulumi - Universal Infrastructure as Code
 meta_desc: Pulumi's open source infrastructure as code SDK enables you to create, deploy, and manage infrastructure on any cloud, using your favorite languages.
 
