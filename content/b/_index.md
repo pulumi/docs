@@ -9,9 +9,8 @@ block_external_search_index: true
 
 type: page
 layout: home-b
-
-aliases:
-    - /b
+aliases: ['/b']
+url: /b/iac-platform-engineering-idp
 
 hero:
   title: [ "Automate your infrastructure at any scale", "Your Code, Your Cloud, Your Success" ]
