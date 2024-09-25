@@ -1,0 +1,41 @@
+{{/*
+    see button-cards.html for docs on how to use this
+*/}}
+    
+{{- $link := .Get "link" -}}
+{{- $heading := .Get "heading" -}}
+
+<div class="pb-4 md:pr-4 md:w-1/2">
+    <div class="tile h-full">
+        <div class="block rounded shadow border border-gray-300 p-3 h-full flex flex-col">
+            <a href="{{ $link }}">
+                {{/* simulating a h4 w/ a div because content block h4 styling is different from what
+                    what we get in the docs-home style (which looks better in this context).
+                    this also removes the cards from the content ToC structure, which is good.
+                    hardcoded inline styles aren't good though, so this should be moved to 
+                    CSS at some point.
+                */}}
+                <div style="font-size: 1.25rem;
+                    line-height: 1.75rem;
+                    margin-bottom: 0.5rem;
+                    font-family: Gilroy, ui-sans-serif, system-ui, -apple-system, 
+                        BlinkMacSystemFont, Roboto, Arial;
+                    --tw-text-opacity: 1;
+                    color: rgba(47, 48, 50, var(--tw-text-opacity));">
+                    {{ $heading }}
+                </div>
+                <p class="pb-4">
+                    {{ .Inner }}
+                </p>
+            </a>
+            <div class="flex space-x-2 flex-grow items-end">
+                {{ if .Get "primary_button_link" }}
+                <a href="{{ .Get "primary_button_link" }}" class="btn btn-primary">{{ .Get "primary_button_label" }}</a>
+                {{ end }}
+                {{ if .Get "secondary_button_link" }}
+                <a href="{{ .Get "secondary_button_link" }}" class="btn btn-secondary">{{ .Get "secondary_button_label" }}</a>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</div>

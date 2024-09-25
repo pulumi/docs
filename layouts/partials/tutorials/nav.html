@@ -17,6 +17,14 @@
                             {{ end }}
                         {{ end }}
 
+                        {{ $providers := slice }}
+                        {{ range .Site.Data.tutorials.collections }}
+                            {{ if and (.featured) (eq .type "provider") (ne (index $.Site.Taxonomies.collections .id) nil) }}
+                                {{ $collectionPath := (printf "/tutorials/%s/" .id) }}
+                                {{ $providers = $providers | append (dict "id" .id "label" .name "href" $collectionPath "active" (eq $collectionPath $currentPath)) }}
+                            {{ end }}
+                        {{ end }}
+
                         {{ $collections := slice }}
                         {{ range .Site.Data.tutorials.collections }}
                             {{ if and (ne .type "provider") (ne (index $.Site.Taxonomies.collections .id) nil) }}
@@ -25,10 +33,12 @@
                             {{ end }}
                         {{ end }}
 
-                        {{ $menuItems = slice
-                            (dict "id" "get-started" "label" "Get started" "href" "/docs/get-started/" "children" $clouds)
-                            (dict "id" "collections" "label" "Collections" "href" nil "children" $collections)
-                        }}
+                        {{ $menuItems = slice }}
+                        {{ $menuItems = $menuItems | append (dict "id" "get-started" "label" "Get started" "href" "/docs/get-started/" "children" $clouds) }}
+                        {{ if gt (len $providers) 0 }}
+                            {{ $menuItems = $menuItems | append (dict "id" "providers" "label" "Browse by cloud" "href" nil "children" $providers) }}
+                        {{ end }}
+                        {{ $menuItems = $menuItems | append (dict "id" "collections" "label" "Collections" "href" nil "children" $collections) }}
 
                     {{/* On module pages, show the member topics and a link back to the home page. */}}
                     {{ else if eq .Kind "section" }}

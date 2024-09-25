@@ -24,14 +24,13 @@ customer_logos:
     - name: moderna
     - name: docker
     - name: unity
-    - name: rockstar
     - name: deloitte
-    - name: crunchyroll
-    - name: xai
     - name: stokespace
     - name: univision
-    - name: wmg
     - name: washington-trust
+    - name: kyruus
+    - name: modular-ai
+    - name: korber
     - name: lemonade
     - name: pinecone
     - name: ware2go

@@ -5,6 +5,11 @@ h1: "Schedules"
 meta_desc: Schedule any Pulumi operation to occur at any time.
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
+  cloud:
+    name: Schedules
+    parent: pulumi-cloud-deployments
+    weight: 8
+    identifier: pulumi-cloud-deployments-schedules
   pulumicloud:
     parent: deployments
     weight: 4

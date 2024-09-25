@@ -1,0 +1,11 @@
+id = "lucas-crespo"
+name = "Lucas Crespo"
+title = "Data Engineer"
+company = "Pulumi"
+weight = 1
+
+status = "active"
+
+[social]
+github = "lucascrespo88"
+linkedin = "lucas-crespo-85461356"

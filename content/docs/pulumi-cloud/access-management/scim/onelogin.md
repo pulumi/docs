@@ -5,10 +5,15 @@ title: OneLogin
 h1: "SCIM: Configuring OneLogin"
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    pulumicloud:
-        identifier: onelogin-scim
-        parent: scim
-        weight: 3
+  cloud:
+    name: OneLogin
+    parent: pulumi-cloud-access-management-scim
+    weight: 3
+    identifier: pulumi-cloud-access-management-scim-onelogin
+  pulumicloud:
+    identifier: onelogin-scim
+    parent: scim
+    weight: 3
 aliases:
   - /docs/guides/scim/onelogin/
 ---

@@ -12,6 +12,12 @@ meta_desc: Here is a brief description of what this tutorial's all about.
 # An image for the tutorial. It appears on tutorial page and in social-media previews.
 meta_image: meta.png
 
+# An optional video for the tutorial. When present, it appears at the top of the page, replacing
+# the meta image. YouTube and HTML5 video sources are supported.
+# video:
+#     url: /blog/drift-detection/drift.mp4
+#     youtube: Q8tw6YTD3ac
+
 # The order in which the tutorial appears in most lists. Order is ascending, so higher numbers
 # mean the tutorial will appear further down the list. Positive integers only.
 weight: 999
