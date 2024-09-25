@@ -1,7 +1,7 @@
 ---
 # Name of the event, <= 60 characters
-title: PulumiUP 2024 Keynote
-meta_desc: Watch PulumiUP 2024's keynote. Pulumi's co-founder and CEO shared insights into the company's current landscape and future direction
+title: Security Automation—Faster. Cheaper. Better.
+meta_desc: Join us for an insightful fireside chat, with by Joe Duffy, co-founder/CEO of Pulumi, featuring David Giambruno, VP of Engineering and DevOps at Tivity Health.
 meta_image:
 
 # A featured webinar will display first in the list.
@@ -26,48 +26,48 @@ block_external_search_index: false
 
 # The url slug for the webinar landing page. If this is an external
 # webinar, use the external URL as the value here.
-url_slug: pulumiup-2024-keynote
+url_slug: security-automation-faster-cheaper-better
 
 # Content for the left hand side section of the page.
 main:
     # Webinar title.
-    title: PulumiUP 2024 Keynote
+    title: Security Automation—Faster. Cheaper. Better.
 
     event_type: event # workshop | event
 
     # URL for embedding a URL for ungated webinars.
-    youtube_url: https://www.youtube.com/embed/AepHQaXeNX0
+    youtube_url: https://www.youtube.com/embed/35vAiKdDux4
 
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
     sortable_date: 2024-09-18T09:00:00-00:00
 
     # Duration of the webinar.
-    duration: 1 hour
+    duration: 30 minutes
 
     # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
     location: virtual
 
     # Description of the webinar.
     description: |
-        Watch PulumiUP 2024's keynote. Pulumi's co-founder and CEO shared insights into the company's current landscape and future direction, offering a glimpse into how the company is shaping the future of cloud engineering.
+        Join us for an insightful fireside chat, "Security Automation—Faster. Cheaper. Better." Moderated by Joe Duffy, co-founder and CEO of Pulumi, and featuring David Giambruno, VP of Engineering and DevOps at Tivity Health.
 
-        This keynote also featured presentations and demos from key members of the Pulumi team, unveiling the latest product launches designed to elevate your infrastructure management experience.
-        
-        Learn more about the new product launches:
-        - [Pulumi - One Unified Platform For All Your Infrastructure Needs](/blog/pulumi-up-2024/)
-        - Visibility, intelligence, and controls over all infrastructure with [Pulumi Insights 2.0](/blog/pulumi-insights-2/)
-        - Centralized secrets management and orchestration that scales with [Pulumi ESC](/blog/pulumi-esc-ga/)
+        In this session, David G. shared his expertise on how DevOps and DevSecOps teams are automating security processes to achieve higher quality and scalability. Learn how these efforts drive tangible business outcomes, accelerating development speed while creating a competitive edge.
+
+        Explore the intersection of security automation and business impact with an industry leader who's driving real-world results.
 
     # The webinar presenters
     presenters:
         - name: Joe Duffy
           role: CEO, Pulumi
           photo: /images/team/joe-duffy.jpg
+        - name: David Giambruno
+          role: VP Engineering and DevOps, Tivity Health
+          photo: /images/people/david-giambruno.jpg
 
     # case-sensitive
     tags:
         level: # Beginner, Intermediate, Advanced
-        topics: ["DevOps", "Security", "AI", "Pulumi ESC", "Platform Engineering"]
+        topics: ["Automation", "DevOps", "DevSecOps", "Security", "GitOps"]
         languages: []
 
 # The right hand side form section.
