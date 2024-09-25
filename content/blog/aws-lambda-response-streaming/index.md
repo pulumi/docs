@@ -93,7 +93,7 @@ For this simple text-based example, there is little need to worry about overall 
 
 ## Packaging and deploying your Lambda Function for streaming with Pulumi
 
-We can package our Lambda function for streaming with just a few dozen lines of code using Pulumi. First, we’ll need to import some libraries that will allow us to package our Lambda and create the necessary resources in AWS. For this exercise, we’ll be using both the [AWS Native](https://www.pulumi.com/registry/packages/aws-native/) provider and the [AWS Classic](https://www.pulumi.com/registry/packages/aws/) provider. The AWS Native provider works with the [AWS Cloud Control API](https://aws.amazon.com/cloudcontrolapi/) to enable same-day support for new AWS features like Lambda response streaming.
+We can package our Lambda function for streaming with just a few dozen lines of code using Pulumi. First, we’ll need to import some libraries that will allow us to package our Lambda and create the necessary resources in AWS. For this exercise, we’ll be using both the [AWS Native](https://www.pulumi.com/registry/packages/aws-native/) provider and the [AWS](https://www.pulumi.com/registry/packages/aws/) provider. The AWS Native provider works with the [AWS Cloud Control API](https://aws.amazon.com/cloudcontrolapi/) to enable same-day support for new AWS features like Lambda response streaming.
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";

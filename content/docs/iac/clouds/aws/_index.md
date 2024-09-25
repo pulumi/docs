@@ -16,10 +16,9 @@ get_started_guide:
   link: /docs/iac/get-started/aws/
   icon: aws
 providers:
-  description: Provision hundreds of AWS cloud resources with either the AWS Classic or AWS Native provider. The AWS Native provider is in preview status, with same-day access to AWS resources available in the AWS Cloud Control API.  While AWS Classic remains fully supported, try AWS Native if you need AWS resources not available in the classic version.
+  description: Provision hundreds of AWS cloud resources with the AWS provider.
   provider_list:
-  - display_name: AWS Classic
-    recommended: true
+  - display_name: AWS
     content_links:
     - display_name: Overview
       icon: page-small-black
@@ -33,18 +32,7 @@ providers:
     - display_name: How-to guides
       icon: question-small-black
       url: aws/how-to-guides/
-  - display_name: AWS Native
-    public_preview: true
-    content_links:
-    - display_name: Overview
-      icon: page-small-black
-      url: aws-native/
-    - display_name: Install & config
-      icon: gear-small-black
-      url: aws-native/installation-configuration/
-    - display_name: API docs
-      icon: book-small-black
-      url: aws-native/api-docs/
+
 components:
 - display_name: AWSx
   url: awsx/
@@ -73,6 +61,21 @@ components:
 - display_name: Metabase (AWS)
   url: metabase/
   description:
+
+aws-native:
+  heading: AWS Native
+  public_preview: true
+  description: Manage and provision resources defined in the AWS CloudFormation Registry.
+  content_links:
+  - display_name: Overview
+    icon: page-small-black
+    url: aws-native/
+  - display_name: Install & config
+    icon: gear-small-black
+    url: aws-native/installation-configuration/
+  - display_name: API docs
+    icon: book-small-black
+    url: aws-native/api-docs/
 convert:
 - heading: Convert CloudFormation to Pulumi
   url: /cf2pulumi/
