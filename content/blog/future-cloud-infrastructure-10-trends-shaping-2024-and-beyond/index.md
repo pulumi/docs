@@ -78,7 +78,7 @@ IaC in general-purpose languages is gaining prominence as organizations seek to 
 [Infrastructure as Code](https://www.pulumi.com/what-is/what-is-infrastructure-as-code/) is maturing beyond taming the complexity of the cloud:
 
 - Facilitating the adoption and configuration standardization of multi-cloud and hybrid strategies
-- Better integration with multiple cloud providers, like [AWS](https://www.pulumi.com/docs/iac/clouds/aws/), [Azure](https://www.pulumi.com/docs/iac/clouds/azure/), and [Google Cloud](https://www.pulumi.com/docs/iac/clouds/gcp/), data stores, and third-party services like [Cockroach Labs db](https://www.pulumi.com/registry/packages/cockroach/), [Confluent cloud](https://www.pulumi.com/registry/packages/confluentcloud/), [Kafka](https://www.pulumi.com/registry/packages/kafka/), and more.
+- Better integration with multiple cloud providers, like [AWS](https://www.pulumi.com/docs/iac/clouds/aws/), [Azure](https://www.pulumi.com/docs/iac/clouds/azure/), and [Google Cloud](https://www.pulumi.com/docs/iac/clouds/gcp/), data stores, and third-party services like [Cockroach Labs db](https://www.pulumi.com/registry/packages/cockroach/), [Confluent cloud](https://www.pulumi.com/registry/packages/confluentcloud/), [Kafka](https://www.pulumi.com/registry/packages/kafka/), and more
 - Deeper validation on parameters that people are passing in, checking all critical components, ensuring they are configured correctly before deployment
 - More [efficient resource management](https://www.pulumi.com/docs/pulumi-cloud/insights/)
 - Robust security and [Policy as Code]([https://www.pulumi.com/docs/using-pulumi/crossguard/core-concepts/](https://www.pulumi.com/docs/iac/packages-and-automation/crossguard/core-concepts/)) to enforce security practices, guardrails, compliance, cost policies, and more
@@ -91,7 +91,7 @@ Security is no longer a separate consideration but a top priority in the cloud l
 
 1. **AI-Driven Security**: AI and machine learning (ML) will be instrumental in automating security and in [providing real-time insights](https://www.pulumi.com/blog/pulumi-insights-2/), enabling proactive and predictive security measures.
 2. **More Focus on Secrets Management**: Organizations will prioritize [robust secrets management](https://www.pulumi.com/product/secrets-management/) within their DevSecOps processes as data privacy concerns escalate. It will be essential to secure sensitive data such as API keys, credentials, and other secrets to ensure compliance and avoid unauthorized access.
-3. **Collaboration as a Key Factor**: Collaboration between development, security, and operations teams will be crutial for the success of DevSecOps efforts.
+3. **Collaboration as a Key Factor**: Collaboration between development, security, and operations teams will be crucial for the success of DevSecOps efforts.
 
 | Trend   | Impact |
 | -------- | ------- |
@@ -120,7 +120,7 @@ Mid-size to large companies will begin or [continue to invest in implementing pl
 
 In 2025, AIOps will gain further relevancy in the IT operations landscape, becoming integral to DevOps practices. As AI and automation continue to evolve, the fusion of these technologies will enable organizations to achieve unprecedented levels of efficiency and scalability.
 
-- **Proactive Operations**: AI-powered tools will assist teams in foreseeing issues with greater accuracy, minimizing downtime, and reducing the firefighting nature of incident management. These tools will automatically detect anomalies, optimize performance, and trigger remediation actions
+- **Proactive Operations**: AI-powered tools will assist teams in foreseeing issues with greater accuracy, minimizing downtime, and reducing the firefighting nature of incident management. These tools will automatically detect anomalies, optimize performance, and trigger remediation actions.
 - **[Intelligent Automation](https://www.pulumi.com/docs/iac/packages-and-automation/automation-api/)**: Routine operational tasks like patching, monitoring, and resource scaling will be fully automated. AI-driven decision-making will allow for smarter resource allocation and optimization, dynamically adjusting infrastructure and workloads in response to real-time demands and predictions.
 - **[Data-Driven Insights](https://www.pulumi.com/docs/pulumi-cloud/insights/)**: AIOps will analyze vast amounts of operational data and provide actionable insights, enabling teams to focus on high-impact tasks such as improving system architecture and user experience. The AI-powered insights will also inform better strategic decisions, helping teams to continuously evolve their DevOps practices.
 - **Collaboration Across Teams**: AIOps will bridge the gap between DevOps, SecOps, and IT operations by bridging monitoring and automation. Cross-team collaboration will improve as AI systems consolidate and interpret data from various departments, allowing for a more cohesive approach to system management.
