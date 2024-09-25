@@ -1,16 +1,5 @@
 {{ $copilotApiUrl := getenv "PULUMI_COPILOT_URL" }}
 {{ if $copilotApiUrl }}
-<style>
-    #ai-sidebar-target {
-        z-index: 900;
-        top: 0;
-        right: 0;
-        bottom: 0;
-
-        height: 100%;
-        position: fixed;
-    }
-</style>
 <aside id="ai-sidebar-target"></aside>
-<iframe style="display: none" src="/_pulumi/cloud-ai/sidebar?hostApp=docs&apiHost={{ $copilotApiUrl | urlquery }}"></iframe>
+<iframe id="ai-sidebar-host" src="/_pulumi/cloud-ai/sidebar?hostApp=docs&apiHost={{ $copilotApiUrl | urlquery }}"></iframe>
 {{ end }}
