@@ -127,7 +127,7 @@ const database = new rediscloud.SubscriptionDatabase("redis-db", {
 
 ## AWS Networking Resources
 
-Now you are ready to add your AWS resources. First, you'll need to add some reference to your Pulumi program. Add the Pulumi [AWS Classic Provider](https://www.pulumi.com/registry/packages/aws/), which provides basic AWS resources, and the [AWSX package](https://www.pulumi.com/registry/packages/awsx/), which provides a convenient [VPC component](https://www.pulumi.com/registry/packages/awsx/api-docs/ec2/vpc/):
+Now you are ready to add your AWS resources. First, you'll need to add some reference to your Pulumi program. Add the Pulumi [AWS Provider](https://www.pulumi.com/registry/packages/aws/), which provides basic AWS resources, and the [AWSX package](https://www.pulumi.com/registry/packages/awsx/), which provides a convenient [VPC component](https://www.pulumi.com/registry/packages/awsx/api-docs/ec2/vpc/):
 
 ```bash
 npm i @pulumi/awsx @pulumi/aws

@@ -67,7 +67,7 @@ Access the CLI output via the Debug Console view.
 
 ## Debugging with other IDEs
 
-You can use any other IDE or editor that supports attaching to running programs using the [Debug Adapter Protocol](https://microsoft.github.io/debug-adapter-protocol/)). The tools differ depending on your preference and the language you are using, but the process is similar:
+You can use any other IDE or editor that supports attaching to running programs using the [Debug Adapter Protocol](https://microsoft.github.io/debug-adapter-protocol/). The tools differ depending on your preference and the language you are using, but the process is similar:
 
 1. Start with an existing Pulumi project that contains `Pulumi.yaml` and your program.
 2. Open your IDE and set a breakpoint in your program.

@@ -30,14 +30,14 @@ This new storage class is not universally available in all regions and AZs yet, 
 
 You can create a new Amazon S3 Express One Zone bucket using the `aws s3api create-bucket` CLI command or in the AWS console. For this blog post, however, you'll use infrastructure as code instead, so that provisioning, updating, and managing our buckets is automated, reliable, and easy to scale.
 
-To do this, you will use Pulumi's new [`aws.s3.DirectoryBucket` resource type](/registry/packages/aws/api-docs/s3/directorybucket/) in the AWS Classic package. It takes a few parameters:
+To do this, you will use Pulumi's new [`aws.s3.DirectoryBucket` resource type](/registry/packages/aws/api-docs/s3/directorybucket/) in the AWS package. It takes a few parameters:
 
 * `bucket`, which is the name (conforming to the above-mentioned `[name]--[az]--x-s3` convention)
 * `dataRedundancy`, which currently just accepts the sole value `"SingleAvailabilityZone"`
 * `location`, which specifies the AZ ID to use
 * `forceDestroy`, an optional boolean which, when set to true, allows deleting buckets that still have data in them (by default, only empty buckets can be deleted, to prevent accidental data loss)
 
-> Pulumi's AWS Native package also supports Amazon S3 Express One Zone through the [`aws-native.s3express.DirectoryBucket` type](/registry/packages/aws-native/api-docs/s3express/directorybucket/). Its usage is very similar to the AWS Classic package.
+> Pulumi's AWS Native package also supports Amazon S3 Express One Zone through the [`aws-native.s3express.DirectoryBucket` type](/registry/packages/aws-native/api-docs/s3express/directorybucket/). Its usage is very similar to the AWS package.
 
 Here is a simple program that declares a new Amazon S3 Express One Zone bucket:
 
