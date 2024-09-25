@@ -22,7 +22,7 @@ meta_desc: "The year of Cloud Optimization is here! Explore the top 10 trends, i
 # The meta_image appears in social-media previews and on the blog home page. A
 # placeholder image representing the recommended format, dimensions and aspect
 # ratio has been provided for you.
-meta_image: cloud-computing-forecast.png
+meta_image: "cloud-computing-forecast.png.png"
 
 # At least one author is required. The values in this list correspond with the
 # `id` properties of the team member files at /data/team/team. Create a file for
