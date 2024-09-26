@@ -1,4 +1,7 @@
 ---
+######################################################################################################
+#                    This is a PPC landing page, exclusively for paid ads                            #
+######################################################################################################
 title: Pulumi - Universal Infrastructure as Code
 meta_desc: Pulumi's open source infrastructure as code SDK enables you to create, deploy, and manage infrastructure on any cloud, using your favorite languages.
 
@@ -6,13 +9,15 @@ block_external_search_index: true
 
 type: page
 layout: home-b
+aliases: ['/b']
+url: /b/iac-platform-engineering-idp
 
 hero:
   title: [ "Automate your infrastructure at any scale", "Your Code, Your Cloud, Your Success" ]
   description: |
     Build, manage, and scale your infrastructure, secrets, and configurations in one place.
   cta_text: Get Started
-  cta_link: /docs/get-started/
+  cta_link: /docs/iac/get-started/
   secondary_cta_text: Talk to a human
   secondary_cta_link: /contact/?form=sales
 
@@ -20,6 +25,12 @@ code_faster:
   title: Build and ship faster with infrastructure as code
   description: |
     Author infrastructure code using programming languages you know and love. Write statements to define infrastructure using your IDE with autocomplete, type checking, and documentation.
+
+security:
+  title: Drive security and compliance
+  image: /images/solutions/ai/ai_save_cost.svg
+  description: |
+    Enforce compliance and security, understand cloud usage, and discover cost savings to drive better efficiency, security, and reliability across all cloud assets.
 
 ai:
   title: Code on demand with Pulumi AI
@@ -49,13 +60,14 @@ secrets:
 customer_logos:
   title: Trusted by your peers
   logos:
+    - name: bmw
+      link: /case-studies/bmw
     - name: mercedes-benz
       link: /case-studies/mercedes-benz
     - name: snowflake
       link: /case-studies/snowflake
     - name: lemonade
       link: /case-studies/lemonade
-    - name: cockroach-labs
     - name: meta
     - name: webflow
     - name: bluenile
@@ -68,6 +80,17 @@ customer_logos:
       link: https://youtu.be/Q63ZaX340M4
     - name: nubank
     - name: docker
+    - name: modular-ai
+    - name: nvidia
+    - name: tivityhealth
+    - name: linktree
+    - name: moderna
+    - name: unity
+      link: /case-studies/unity
+    - name: deloitte
+    - name: korber
+    - name: mindbody
+    - name: bt
 
 customer_quotes:
   panther:
