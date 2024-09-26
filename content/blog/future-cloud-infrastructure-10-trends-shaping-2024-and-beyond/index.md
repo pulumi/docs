@@ -93,20 +93,12 @@ Security is no longer a separate consideration but a top priority in the cloud l
 2. **More Focus on Secrets Management**: Organizations will prioritize [robust secrets management](https://www.pulumi.com/product/secrets-management/) within their DevSecOps processes as data privacy concerns escalate. It will be essential to secure sensitive data such as API keys, credentials, and other secrets to ensure compliance and avoid unauthorized access.
 3. **Collaboration as a Key Factor**: Collaboration between development, security, and operations teams will be crucial for the success of DevSecOps efforts.
 
-| Trend   | Impact |
-| -------- | ------- |
-| Increased Automation | Enhanced speed, efficiency, and scalability in security processes |
-| AI and ML Integration | Proactive detection and rapid response to security threats |
-| Evolving Security Threats | New, advanced measures to address emerging threats |
-| Compliance Integration | Continuous monitoring and adherence to regulatory requirements |
-
 [Policy as Code](https://www.pulumi.com/docs/iac/packages-and-automation/crossguard/) will also be an indispensable pillar in many security aspects:
 
-- Use off-the-shelf rules or define your best practices for security, cost, compliance, and reliability
-- Maintain security across all cloud infrastructure assets
-- Ensure cost-conscious deployments requiring specific cost allocation tags.
-- Catch policy violations before they escape using CI/CD.
-- Automate governance using programmable libraries and REST APIs, easily integrating with external services such as web services, asset tracking databases, pricing lists, and more.
+1. Use off-the-shelf rules or define your best practices for security, cost, compliance, and reliability
+2. Maintain security across all cloud infrastructure assets
+3. Catch policy violations before they escape using CI/CD
+4. Automate governance using programmable libraries and REST APIs, easily integrating with external services such as web services, asset tracking databases, pricing lists, and more
 
 ## 5. Platform Engineering – Internal Developer Portals (IDP) for Better Developer Experience
 
