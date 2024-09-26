@@ -8,12 +8,12 @@
         {
             "framework": "CIS",
             "cloud": "AWS",
-            "description": "PCI DSS (Payment Card Industry Data Security Standard) compliance refers to the adherence to a set of security standards designed to protect card information during and after a financial transaction. These standards are established by the Payment Card Industry Security Standards Council (PCI SSC), which was founded by major credit card companies like Visa, MasterCard, American Express, Discover, and JCB."
+            "description": "CIS (Center for Internet Security) Compliance refers to the adherence to security best practices outlined by the CIS, a nonprofit organization that develops globally recognized security standards. These best practices are known as CIS Controls and CIS Benchmarks, which provide guidelines for securing various technologies and systems, including operating systems, cloud services, network devices, and software."
         },
         {
             "framework": "ISO 27001",
             "cloud": "AWS",
-            "description": "PCI DSS (Payment Card Industry Data Security Standard) compliance refers to the adherence to a set of security standards designed to protect card information during and after a financial transaction. These standards are established by the Payment Card Industry Security Standards Council (PCI SSC), which was founded by major credit card companies like Visa, MasterCard, American Express, Discover, and JCB."
+            "description": "ISO 27001 is an internationally recognized standard for establishing, implementing, maintaining, and continually improving an information security management system (ISMS). It helps organizations protect sensitive data by providing a risk-based approach, ensuring that security measures are proportionate to the risks faced. ISO 27001 is based around the following 3 pillars: confidentiality, integrity, and availability. By achieving ISO 27001 certification, organizations demonstrate their commitment to robust information security practices and regulatory compliance."
         }
     ],
     "services": [
