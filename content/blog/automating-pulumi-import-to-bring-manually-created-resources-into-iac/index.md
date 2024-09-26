@@ -23,7 +23,7 @@ Bringing resources under IaC (and Pulumi specifically) gives an organization an 
 
 ## About Pulumi Import
 
-The `pulumi import` command is executed within the context of a Pulumi stack. The user supplies the type of resource to be imported, a name with which to identify the resource in the Pulumi program and state file, and a resource-dependent ID. For example, we might run the following command to import an AWS VPC (this command is sourced from [the API docs for the AWS Classic provider in the Pulumi Registry](/registry/packages/aws/api-docs/ec2/vpc/#import)):
+The `pulumi import` command is executed within the context of a Pulumi stack. The user supplies the type of resource to be imported, a name with which to identify the resource in the Pulumi program and state file, and a resource-dependent ID. For example, we might run the following command to import an AWS VPC (this command is sourced from [the API docs for the AWS provider in the Pulumi Registry](/registry/packages/aws/api-docs/ec2/vpc/#import)):
 
 ```bash
 pulumi import aws:ec2/vpc:Vpc imported-vpc vpc-0b0a6ad0766eccf3b
