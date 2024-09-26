@@ -17,10 +17,10 @@ describe("www.pulumi.com", () => {
         it("loads and applies JavaScript", () => {
             // Checking the carousel validates that the JS bundle was loaded and applied
             // (excluding Stencil components, which are bundled separately).
-            cy.get(".header-container", {timeout: 30000})
+            cy.get(".header-container")
                 .should("not.have.class", "is-pinned");
 
-            cy.wait(10000)
+            cy.wait(6000)
             cy.scrollTo(0, 250);
 
             cy.get(".header-container")
