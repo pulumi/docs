@@ -13,6 +13,10 @@ aliases:
     - /docs/esc-cli/commands/
 ---
 
+{{% notes type="info" %}}
+In order to use ESC Projects you will need to be on version ESC CLI >= 0.10.0.
+{{% /notes %}}
+
 ## Common Commands
 
 The most common commands in the CLI that you'll be using are as follows:
