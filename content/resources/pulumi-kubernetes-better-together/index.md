@@ -70,7 +70,7 @@ main:
     # case-sensitive
     tags:
         level: Intermediate # Beginner, Intermediate, Advanced
-        topics: ["Kubernetes"]
+        topics: ["Kubernetes", "Docker", "GitOps"]
         languages: []
         clouds: []
 
