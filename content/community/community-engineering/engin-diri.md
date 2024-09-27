@@ -8,6 +8,11 @@ layout: community-engineering/single
 aliases:
   - /engin
 talks:
+- event: "KCD Washington DC 2024"
+  title: "External Secrets Operator Is the Best Thing Ever, Cap or Slap?"
+  url: "https://kcd-washington-dc-2024.sessionize.com/session/700146"
+  date: 2024-09-24T18:00:00.000-07:00
+  slides: null
 - event: "CD Mini Summit"
   title: "Progressive Infrastructure Delivery using Kargo and Argo CD"
   url: "https://cd.foundation/cd-mini-summit-vienna/program/"
