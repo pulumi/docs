@@ -177,7 +177,7 @@ If unspecified, this VPC will use the following defaults:
 * The first `3` availability zones inside of your region.
 * A public and private subnet per availability zone.
 * Equally partitioned CIDR address spaces per subnet (per availability zone).
-* A NAT Gateway and EIP per private subnet.
+* A NAT Gateway and EIP per public subnet.
 * A single Internet Gateway for all public subnets to use.
 
 The following sections show how to explicitly manage any or all of these settings.

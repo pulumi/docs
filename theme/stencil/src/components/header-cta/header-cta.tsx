@@ -39,7 +39,7 @@ export class HeaderCta {
 
         if (this.isLoggedIn) {
             return(
-                <a class={this.buttonClass} data-track="header-get-started-mobile" href="https://app.pulumi.com/signup/" target="_blank" rel="noopener noreferrer" title="Dashboard">Dashboard</a>
+                <a class={this.buttonClass} data-track="header-get-started" href="https://app.pulumi.com/signup/" target="_blank" rel="noopener noreferrer" title="Dashboard">Dashboard</a>
             );
         }
 
