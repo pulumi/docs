@@ -59,8 +59,7 @@ const config = {
     marketingPortalStack: stackConfig.get("marketingPortalStack"),
 };
 
-// const aiAppStack = new pulumi.StackReference('pulumi/pulumi-ai-app-infra/prod');
-const aiAppStack = new pulumi.StackReference('pulumi/pulumi-ai-app-infra/pr-pulumi-pulumi.ai-1297');
+const aiAppStack = new pulumi.StackReference('pulumi/pulumi-ai-app-infra/prod');
 const aiAppDomain = aiAppStack.requireOutput('aiAppDistributionDomain');
 const cloudAiAppDomain = aiAppStack.requireOutput('cloudAiAppDistributionDomain');
 
