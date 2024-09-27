@@ -1,6 +1,6 @@
 ---
-title: "Docker Container Updates & Language Runtime Versions"
-date: 2024-09-27T13:31:26+02:00
+title: "Improving Pulumi’s Docker Images"
+date: 2024-09-27
 draft: false
 meta_desc: New versioned images for Pulumi Docker Containers and support for setting Node.js and Python versions in Pulumi Deployments.
 meta_image: meta.png
@@ -8,9 +8,6 @@ authors:
   - julien-poissonnier
 tags:
     - docker
-social:
-    twitter:
-    linkedin:
 ---
 
 The [Pulumi Docker Containers](https://github.com/pulumi/pulumi-docker-containers) provide a convenient way for running Pulumi in CI/CD pipelines, or for running Pulumi in environments where you don't want to install the Pulumi CLI directly. These images also power [Pulumi Deployments](/product/pulumi-deployments/). We provide several flavors of images, including the [pulumi/pulumi](https://hub.docker.com/r/pulumi/pulumi/tags) image that includes all supported language runtimes in a single image, as well as slim images for each language runtime, for example [pulumi/pulumi-python](https://hub.docker.com/r/pulumi/pulumi-python/tags) or [pulumi/pulumi-nodejs](https://hub.docker.com/r/pulumi/pulumi-nodejs/tags).
@@ -37,13 +34,13 @@ In **November 2024** the images without a version suffix, like [pulumi/pulumi-py
 | Python           | 3.9             | 3.13        |
 | Java             | 17              | 21          |
 
-The default versions will be updated as new versions of the language runtimes are released, matching the [versions supported by the Pulumi CLI](https://github.com/pulumi/pulumi?tab=readme-ov-file#languages).
+The default versions will be updated as new versions of the language runtimes are released, matching the [versions supported by the Pulumi CLI](https://github.com/pulumi/pulumi?tab=readme-ov-file#languages).  This will enable the unversioned [pulumi/pulumi](https://hub.docker.com/r/pulumi/pulumi/tags) image to stay evergreen as new runtimes come into and out of support.  
 
 If you require a specific version of a language runtime, you can use the versioned images. If you want to use the latest versions of the language runtimes, you can use the images without a version suffix.
 
 ### Setting the Language Version in Pulumi Deployments
 
-When developing Node.js and Python programs, it is common to use a tool like [pyenv](https://github.com/pyenv/pyenv) or [nvm](https://github.com/nvm-sh/nvm) to manage the version of the runtime used in your development environment. These tools use a `.python-version` or `.node-version` file to specify the version of the runtime to use in the current directory.
+When developing Node.js and Python programs, it is common to use a tool like [nvm](https://github.com/nvm-sh/nvm) or [pyenv](https://github.com/pyenv/pyenv) to manage the version of the runtime used in your development environment. These tools use a `.node-version` or `.python-version` file to specify the version of the runtime to use in the current directory.
 
 Using the latest version of the [pulumi/pulumi](https://hub.docker.com/r/pulumi/pulumi/tags) image, Pulumi Deployments now supports these files to set the version of the Node.js and Python runtimes used in the Deployment environment. For example, to use Node.js 22 in a Deployment, you can add a `.node-version` file to your project with the content `22`. The Deployment will then use Node.js 22 to run your Pulumi program.
 
@@ -51,7 +48,7 @@ Using the latest version of the [pulumi/pulumi](https://hub.docker.com/r/pulumi/
 The [pulumi/pulumi](https://hub.docker.com/r/pulumi/pulumi/tags) image ships with Node.js 18, 20 and 22 pre-installed, as well as Python 3.9, 3.10, 3.11 and 3.12. Only the latest patch release of these versions is pre-installed, and it is therefore recommended you only specify the major version in the `.node-version` and `.python-version` files. If you provide a more specific version that does not match any of the pre-installed versions, it will be downloaded and installed on demand for each Deployment run.
 {{% /notes %}}
 
-To support more flexibility for dotnet versions, the default image now also ships both .NET 6.0 and 8.0, allowing you to specify the version of dotnet used in a deployment in the `TargetFramework` property in your project's `.csproj` or `.fsproj` file.
+To support more flexibility for .NET versions, the default image now also ships both .NET 6.0 and 8.0, allowing you to specify the version of .NET used in a deployment in the `TargetFramework` property in your project's `.csproj` or `.fsproj` file.
 
 ```xml
 ﻿<Project Sdk="Microsoft.NET.Sdk">
@@ -66,7 +63,7 @@ If you want to use one of the language specific images, or your own custom built
 
 We recently added [native Poetry support](/blog/pulumi-loves-python/#native-support-for-poetry) to Pulumi, and all of our images that include Python now ship with Poetry pre-installed. Images that include Node.js now ship with pnpm pre-installed.
 
-To use Poetry set the [toolchain runtime option](/docs/iac/concepts/projects/project-file/#runtime-options) to `poetry`:
+To use Poetry set the [`toolchain` runtime option](/docs/iac/concepts/projects/project-file/#runtime-options) to `poetry`:
 
 ```yaml
 name: pulumi-and-poetry-are-best-friends
@@ -76,7 +73,7 @@ runtime:
     toolchain: poetry
 ```
 
-To use Pnpm set the [packagemanager runtime option](/docs/iac/concepts/projects/project-file/#runtime-options) to `pnpm`:
+To use pnpm set the [packagemanager runtime option](/docs/iac/concepts/projects/project-file/#runtime-options) to `pnpm`:
 
 ```yaml
 name: pulumi-and-pnpm-sitting-in-a-tree
