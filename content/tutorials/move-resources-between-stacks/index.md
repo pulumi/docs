@@ -52,7 +52,7 @@ estimated_time: 15
 
 ## Create a new project
 
-To start, login to the [Pulumi CLI](/docs/cli/commands/pulumi_login/) and ensure it is [configured to use your AWS account](/docs/clouds/aws/get-started/begin/#configure-pulumi-to-access-your-aws-account). Next, [create a new project](/docs/clouds/aws/get-started/create-project/) and replace the default program code with the following:
+To start, login to the [Pulumi CLI](/tutorials/cli-authentication) and ensure it is [configured to use your AWS account](/docs/clouds/aws/get-started/begin/#configure-pulumi-to-access-your-aws-account). Next, [create a new project](/docs/clouds/aws/get-started/create-project/) and replace the default program code with the following:
 
 {{< example-program path="aws-s3bucket-s3objects-random" >}}
 
