@@ -20,6 +20,7 @@ describe("www.pulumi.com", () => {
             cy.get(".header-container")
                 .should("not.have.class", "is-pinned");
 
+            cy.wait(6000)
             cy.scrollTo(0, 250);
 
             cy.get(".header-container")
