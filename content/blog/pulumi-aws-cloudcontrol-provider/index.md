@@ -14,11 +14,9 @@ tags:
     - cloudcontrol 
 ---
 
-We're excited to announce the general availability of the new [AWS Cloud Control provider] for Pulumi, previously AWS Native. AWS is one of the most-used cloud providers across the Pulumi ecosystem. With the new AWS Cloud Control provider, we are focused on delivering Day 1 availability and faster access to new AWS capabilities to all Pulumi users.
+We're excited to announce the general availability of the new [AWS Cloud Control Provider] for Pulumi, previously AWS Native. AWS is one of the most-used cloud providers across the Pulumi ecosystem, and with this launch, we are focused on delivering Day 1 availability and faster access to new AWS capabilities to all Pulumi users. As part of this launch, we are also renaming the provider from “AWS Native” to "AWS Cloud Control Provider," based on customer feedback during the preview phase, to provide users with a broader range of advanced cloud management tools exposed by the AWS Cloud Control API. This provider includes the following features and benefits, 
 
-With this launch, we are also renaming the provider name from “AWS Native” to "AWS Cloud Control Provider" based on customer feedback during the preview phase. This move aims to provide users with a broader range of advanced cloud management tools exposed by the AWS Cloud Control API. This provider includes the following features and benefits, 
-
-* __Day 1 support for AWS Resources__: Provides full coverage of the AWS Cloud Control API, typically on the day of the launch, ensuring users can adopt new features immediately. 
+* __Day 1 support for AWS Resources__: Provides full coverage of the [AWS Cloud Control API], typically on the day of the launch, ensuring users can adopt new features immediately. 
 * __Complementary Pulumi Experience__: Works alongside Pulumi’s AWS Provider, enhancing Infrastructure as Code (IaC) projects with the latest AWS capabilities without requiring significant changes to existing setups. 
 * __Extended support for third-party resources__: Our platform offers enhanced flexibility and interoperability by supporting third-party resources available in the CloudFormation Registry, such as Atlassian, MongoDB, Datadog, and more.
 * __Easy CloudFormation to Pulumi Migration__: This release also includes a new tool, cf2pulumi, for migrating existing CloudFormation templates into Pulumi programs in your favorite language. The new AWS Cloud Control provider and AWS Cloud Control API power this new capability.
@@ -27,7 +25,7 @@ At Pulumi, we're dedicated to empowering our customers with the tools they need 
 
 ## Using Pulumi AWS Cloud Control Provider with the Pulumi AWS Provider
 
-Let’s walk through an example of using Pulumi AWS Cloud Control Provider alongside the standard AWS Provider. Here, we can see how the new AWS S3 Object Lambda feature can be used via the AWS Cloud Control provider, with access to the full API defined by the S3 team at AWS,
+Let’s walk through an example of using Pulumi AWS Cloud Control Provider alongside the [standard AWS Provider]. Here, we can see how the new AWS S3 Object Lambda feature can be used via the AWS Cloud Control provider, with access to the full API defined by the S3 team at AWS,
 
 {{< chooser language "typescript,python,csharp,go,yaml,java" / >}}
 {{% choosable language typescript %}}
@@ -106,7 +104,7 @@ export const s3BucketName = bucket.bucket;
 
 ## Leveraging AWS Cloud Control Provider for Advanced WAFv2 Configurations
 
-The Cloud Control Provider offers greater flexibility for handling complex configurations that may be challenging or impossible with the standard AWS Provider. For example, when configuring WAFv2, you can define arbitrary nested rules, which enables more advanced and customized security logic. With the Cloud Control Provider, you can compose these rules with reusable building blocks, creating configurations that are more modular and scalable. This level of granularity allows for more precise control over web traffic filtering, such as combining multiple rule sets, applying conditions across different layers of the request, and creating highly tailored security policies. This flexibility is particularly useful for organizations with complex security requirements that need to go beyond what the standard AWS Provider can offer.
+[The Cloud Control Provider] offers greater flexibility for handling complex configurations that may be challenging or impossible with the [standard AWS Provider]. For example, when configuring WAFv2, you can define arbitrary nested rules, which enables more advanced and customized security logic. With the Cloud Control Provider, you can compose these rules with reusable building blocks, creating configurations that are more modular and scalable. This level of granularity allows for more precise control over web traffic filtering, such as combining multiple rule sets, applying conditions across different layers of the request, and creating highly tailored security policies. This flexibility is particularly useful for organizations with complex security requirements that need to go beyond what the standard AWS Provider can offer.
 
 For example, this configuration involves six levels of nesting rules but can be composed from reusable building blocks:
 
@@ -304,7 +302,7 @@ const exampleWebACL = new aws_native.wafv2.WebAcl("exampleWebACL", {
 
 ## Conclusion
 
-The AWS Cloud Control Provider for Pulumi is a major step forward in delivering faster, more flexible access to AWS services. By closely collaborating with AWS, we’ve created a provider that enables Pulumi users to leverage the latest AWS features as soon as they are released - without waiting for upstream provider changes to arrive in the standard Pulumi AWS Provider.
+The [AWS Cloud Control Provider] for Pulumi is a major step forward in delivering faster, more flexible access to AWS services. By closely collaborating with AWS, we’ve created a provider that enables Pulumi users to leverage the latest AWS features as soon as they are released - without waiting for upstream provider changes to arrive in the standard Pulumi AWS Provider.
 
 Our goal is to continually improve and simplify the Pulumi experience, empowering developers with the tools they need to manage cloud infrastructure seamlessly. This new provider represents our commitment to delivering cutting-edge capabilities as quickly as possible. 
 
@@ -312,5 +310,6 @@ We look forward to your feedback and encourage you to explore the full potential
 
 [AWS Cloud Control Provider]: https://www.pulumi.com/registry/packages/aws-native/
 [Pulumi AWS Provider]: https://www.pulumi.com/registry/packages/aws/
+[standard AWS Provider]: https://www.pulumi.com/registry/packages/aws/
 [AWS Cloud Control API]: https://aws.amazon.com/cloudcontrolapi/
 
