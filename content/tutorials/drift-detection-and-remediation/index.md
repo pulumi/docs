@@ -114,7 +114,7 @@ Resources:
    + 8 created
 ```
 
-Now you can view your new stack in Pulumi Cloud by following the **View in Browser** link. Click on the **Drift** tab, and you will see that Drift is unavailable as your stack's deployments are not yet configured. Click on the **Configure deployments setting** to see your Deployments source control settings.
+Now you can view your new stack in Pulumi Cloud by following the **View in Browser** link. Click on the **Drift** tab, and you will see that Drift is unavailable as your stack's deployments are not yet configured. Click **Configure deployment settings** to see your Deployments source control settings.
 
 To use drift detection with Deployments you will first need to create a new GitHub repository.
 
