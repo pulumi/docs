@@ -59,7 +59,6 @@ const lambdaFunction = new awsx.lambda.Function("myLambdaFunction", {
 // Export the Lambda function ARN and the S3 bucket name
 export const lambdaFunctionArn = lambdaFunction.arn;
 export const s3BucketName = bucket.bucket;
-
 ```
 
 ## Leveraging AWS Cloud Control Provider for Advanced WAFv2 Configurations
@@ -67,9 +66,6 @@ export const s3BucketName = bucket.bucket;
 [The Cloud Control Provider] offers greater flexibility for handling complex configurations that may be challenging or impossible with the [standard AWS Provider]. For example, when configuring WAFv2, you can define arbitrary nested rules, which enables more advanced and customized security logic. With the Cloud Control Provider, you can compose these rules with reusable building blocks, creating configurations that are more modular and scalable. This level of granularity allows for more precise control over web traffic filtering, such as combining multiple rule sets, applying conditions across different layers of the request, and creating highly tailored security policies. This flexibility is particularly useful for organizations with complex security requirements that need to go beyond what the standard AWS Provider can offer.
 
 For example, this configuration involves six levels of nesting rules but can be composed from reusable building blocks:
-
-{{< chooser language "typescript,python,csharp,go,yaml,java" / >}}
-{{% choosable language typescript %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -222,43 +218,6 @@ const exampleWebACL = new aws_native.wafv2.WebAcl("exampleWebACL", {
 });
 
 ```
-
-{{% /choosable %}}
-{{% choosable language python %}}
-
-```python
-
-```
-
-{{% /choosable %}}
-{{% choosable language csharp %}}
-
-```csharp
-
-```
-
-{{% /choosable %}}
-{{% choosable language go %}}
-
-```go
-
-```
-
-{{% /choosable %}}
-{{% choosable language yaml %}}
-
-```yaml
-
-```
-
-{{% /choosable %}}
-{{% choosable language java %}}
-
-```java
-
-```
-
-{{% /choosable %}}
 
 ## Conclusion
 
