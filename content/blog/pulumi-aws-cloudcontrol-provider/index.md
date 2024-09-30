@@ -27,9 +27,6 @@ At Pulumi, we're dedicated to empowering our customers with the tools they need 
 
 Let’s walk through an example of using Pulumi AWS Cloud Control Provider alongside the [standard AWS Provider]. Here, we can see how the new AWS S3 Object Lambda feature can be used via the AWS Cloud Control provider, with access to the full API defined by the S3 team at AWS,
 
-{{< chooser language "typescript,python,csharp,go,yaml,java" / >}}
-{{% choosable language typescript %}}
-
 ```typescript
 import * as pulumi from "@Pulumi Service (isabel)/pulumi";
 import * as aws from "@Pulumi Service (isabel)/aws";
@@ -64,43 +61,6 @@ export const lambdaFunctionArn = lambdaFunction.arn;
 export const s3BucketName = bucket.bucket;
 
 ```
-
-{{% /choosable %}}
-{{% choosable language python %}}
-
-```python
-
-```
-
-{{% /choosable %}}
-{{% choosable language csharp %}}
-
-```csharp
-
-```
-
-{{% /choosable %}}
-{{% choosable language go %}}
-
-```go
-
-```
-
-{{% /choosable %}}
-{{% choosable language yaml %}}
-
-```yaml
-
-```
-
-{{% /choosable %}}
-{{% choosable language java %}}
-
-```java
-
-```
-
-{{% /choosable %}}
 
 ## Leveraging AWS Cloud Control Provider for Advanced WAFv2 Configurations
 
