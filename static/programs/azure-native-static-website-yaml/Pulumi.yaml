@@ -1,0 +1,27 @@
+name: azure-native-static-website-yaml
+runtime: yaml
+description: An example that deploys all of the resources for a static website on Azure.
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: azure-yaml
+outputs:
+  # Export the primary key of the Storage Account
+  primaryStorageKey: ${storageAccountKeys.keys[0].value}
+resources:
+  # Create an Azure Resource Group
+  resourceGroup:
+    type: azure-native:resources:ResourceGroup
+  # Create an Azure resource (Storage Account)
+  sa:
+    properties:
+      kind: StorageV2
+      resourceGroupName: ${resourceGroup.name}
+      sku:
+        name: Standard_LRS
+    type: azure-native:storage:StorageAccount
+variables:
+  storageAccountKeys:
+    fn::azure-native:storage:listStorageAccountKeys:
+      accountName: ${sa.name}
+      resourceGroupName: ${resourceGroup.name}
