@@ -1,7 +1,7 @@
 ---
 title: Accelerate, Scale and Secure AI Innovation with Platform Engineering
 allow_long_title: true
-date: 2024-09-28
+date: 2024-09-30
 meta_desc: Learn more about how innovators are changing the rules of the AI game with platform engineering.
 meta_image: meta.png
 authors:
