@@ -11,7 +11,7 @@ tags:
 ---
 
 {{% notes type="info" %}}
-The AWS Native Provider was renamed as the "AWS Cloud Control Provider" in October 2024.
+The AWS Native Provider was [renamed as the "AWS Cloud Control Provider"](/blog/pulumi-aws-cloudcontrol-provider/) in October 2024.
 {{% /notes %}}
 
 We are excited to announce the release of the new [AWS Native](/registry/packages/aws-native/) provider for Pulumi, which is available today in preview. AWS is the most-used cloud provider across the Pulumi ecosystem, and with the new AWS Native provider, we are focused on delivering the best possible support for the AWS platform to all Pulumi users.
