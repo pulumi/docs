@@ -86,7 +86,7 @@ Run `pulumi preview` to see the changes that will be made.
 pulumi preview
 ```
 
-Now you can deploy the stack to see the outputs of your EC2 instance, in this case `hostname`, `ip` and `url` which you will use to introduce manual changes via the AWS console.
+Now you can deploy the stack to see the outputs of your EC2 instance, which in this case will be `hostname`, `ip` and `url`.
 
 ```bash
 pulumi up
@@ -120,7 +120,7 @@ To use drift detection with Deployments you will first need to create a new GitH
 
 ## Create a new repository on GitHub
 
-1. Go to [GitHub](https://github.com/new) and create a new repository manually.
+1. Go to [GitHub](https://github.com/new) and create a new repository named `learn-pulumi-drift-detection`.
 2. Copy the repository URL provided by GitHub.
 3. Replace the origin with your new GitHub repo using the following commands:
 
@@ -139,7 +139,7 @@ Now return to your browser to set your deployment configuration source control s
 
 1. Choose your GitHub organization/repository and the branch you created.
 
-2. Add your Secret environment variables, including `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`.
+2. Add your `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` as environment variables, making sure to check the **Secret** option for both.
 
 {{% notes type="info" %}}
 Secret environment variables, such as `AWS_SECRET_ACCESS_KEY`, are encrypted end-to-end with Pulumi and can be set on each stack. However, by creating an [environment](/docs/pulumi-cloud/esc) with Pulumi ESC, you can centralize secrets and set up OIDC for secure authentication. This allows you to manage and share sensitive configuration data across multiple stacks efficiently.
@@ -147,16 +147,13 @@ Secret environment variables, such as `AWS_SECRET_ACCESS_KEY`, are encrypted end
 
 Click **Save deployment configuration**.
 
-<video autoplay loop muted playsinline>
-    <source src="pulumi-configure-drift.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-</video>
+{{< video title="Your description" src="pulumi-configure-drift.mp4" autoplay="true" loop="true" >}}
 
 Once you have configured Pulumi Deployments, open the Actions menu and choose `Detect Drift`, then click `Deploy` to validate your stack, program and deployments are all running before you introduce drift.
 
 ![Screenshot of the Pulumi Cloud console to run a drift detection](./pulumi-detect-drift-action.png)
 
-After the drift detection is complete, you will see a new Drift run on the `Drift` tab timeline. Since this is the initial check and no deviations have been introduced, you will not receive any notifications indicating that drift has been detected, nor will you see any resources with changes.
+After the drift detection is complete, you will see a new drift run on the **Drift** tab timeline. Since this is the initial check and no deviations have been introduced, you will not receive any notifications indicating that drift has been detected, nor will you see any resources with changes.
 
 ## Introduce drift
 
@@ -164,10 +161,10 @@ To see drift detection in action, you will now manually introduce drift by makin
 
 ### Add a tag to the EC2 instance using the AWS CLI
 
-To add a tag via the AWS CLI you will first need to retrieve the EC2 Instance ID before you can add a tag. Use the the following command:
+To add a tag via the AWS CLI, you'll first need to retrieve the EC2 instance ID. Use the the following command:
 
 ```bash
-   aws ec2 describe-instances --filters "Name=tag:Name,Values=webserver" --query "Reservations[*].Instances[*].InstanceId" --output text
+aws ec2 describe-instances --filters "Name=tag:Name,Values=webserver" --query "Reservations[*].Instances[*].InstanceId" --output text
 ```
 
 Now, add the tag with the key `Description` and the value `Pulumi drift detection`:
@@ -180,24 +177,21 @@ Replace `<instance-id>` with the actual instance ID of your EC2 instance.
 
 ## Run drift detection
 
-Return to the Pulumi Cloud and your stack, and again choose the **Detect Drift** action and click **Deploy**.
+Return to the Pulumi Cloud console and your stack, and again choose the **Detect drift** action and click **Deploy**.
 
-After your run completes you will see a warning icon on the Drift tab, indicating that drift has been detected. You can see a detailed summary of what resources have been updated or deleted, the properties that have changed, when the drift run happened and a link to the Deployment with further details.
+After your run completes you will see a warning icon on the Drift tab indicating that drift has been detected. You can see a detailed summary of what resources have been updated or deleted, the properties that have changed, when the drift run happened, and a link to the deployment with further details.
 
-<video autoplay loop muted playsinline>
-    <source src="pulumi-drift-detected.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-</video>
+{{< video title="Your description" src="pulumi-drift-detected.mp4" autoplay="true" loop="true" >}}
 
 ## Remediate drift
 
 Now that you have detected and reviewed your infrastructure drift, you can choose to remediate and overwrite the changes made in your cloud provider with the most recently specified desired state of your Pulumi program.
 
-As the final step of this tutorial select the **Remediate drift** option in the Actions drop down on your stack page to remediate the manual changes. Once the deployment is complete, your infrastructure will be restored to the desired state expressed in your code.
+To do so, open the **Actions** menu, select the **Remediate drift** option, and click **Deploy**. Once the deployment is complete, your infrastructure will be restored to the desired state expressed in your code.
 
 ## Automate drift detection
 
-In addition to manually triggering drift detection, you can automate this process by scheduling regular drift detection runs using [Deployment Schedules](/docs/pulumi-cloud/deployments/schedules/). This ensures that any unexpected changes in your infrastructure are promptly identified and remediated without manual intervention.
+In addition to manually triggering drift detection, you can automate this process by scheduling regular drift detection runs using [deployment schedules](/docs/pulumi-cloud/deployments/schedules/). This ensures that any unexpected changes in your infrastructure are promptly identified and remediated without manual intervention.
 
 ## Clean up your resources
 
