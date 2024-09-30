@@ -39,7 +39,7 @@ Pulumi Registry’s packages come in two categories: Providers and Components. P
 
 For the largest and most popular clouds, we’ve created a special type of Provider that’s unique to Pulumi: Native Providers. Native Providers are the most advanced infrastructure-as-code packages available in the market. Each Native Provider is built directly from the underlying API of the cloud provider, so you get complete access to the full resource model of all of the provider’s services: every resource, every property, every method. We update Native Providers within 24 hours of the underlying API being updated, so you never have to wait to try out the latest improvements and new services.
 
-Just a few weeks ago, we launched the [AWS Native Provider](/registry/packages/aws-native/), which is built directly from the new [AWS Cloud Control APIs](https://aws.amazon.com/blogs/aws/announcing-aws-cloud-control-api/) and gives you same-day access to every new AWS service. AWS Native joins our existing [Azure Native Provider](/registry/packages/azure-native/), [Google Native Provider](/registry/packages/google-native/), and [Kubernetes Native Provider](/registry/packages/kubernetes/).
+Just a few weeks ago, we launched the [AWS Cloud Control Provider](/registry/packages/aws-native/), which is built directly from the new [AWS Cloud Control APIs](https://aws.amazon.com/blogs/aws/announcing-aws-cloud-control-api/) and gives you same-day access to every new AWS service. AWS Cloud Control joins our existing [Azure Native Provider](/registry/packages/azure-native/), [Google Native Provider](/registry/packages/google-native/), and [Kubernetes Native Provider](/registry/packages/kubernetes/).
 
 ![A screenshot showing the Native Providers in Pulumi Registry](native-providers.png)
 
@@ -61,7 +61,7 @@ Components are higher-level building blocks that come with best practices and se
 
 ### Example: Production-ready EKS cluster in 15 lines of code
 
-Amazon’s Elastic Kubernetes Service (EKS) is a great example of a powerful but complex service. With Pulumi’s AWS Native Provider, you can define a production-ready EKS cluster, but you need to know a fair amount about EKS. If you’re a platform team building out a custom Kubernetes shared services platform for a big organization, that’s OK, as you’ll likely want (and expect) full control over every setting on your cluster. For many other scenarios, you just want a well-configured EKS cluster with minimal configuration. Pulumi’s [EKS Component](/registry/packages/eks/) gives you just that, with just 15 lines of code:
+Amazon’s Elastic Kubernetes Service (EKS) is a great example of a powerful but complex service. With Pulumi’s AWS Cloud Control Provider, you can define a production-ready EKS cluster, but you need to know a fair amount about EKS. If you’re a platform team building out a custom Kubernetes shared services platform for a big organization, that’s OK, as you’ll likely want (and expect) full control over every setting on your cluster. For many other scenarios, you just want a well-configured EKS cluster with minimal configuration. Pulumi’s [EKS Component](/registry/packages/eks/) gives you just that, with just 15 lines of code:
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 

@@ -1,12 +1,12 @@
 ---
-title_tag: "Compliance Ready Policies (Awsnative) | CrossGuard"
-meta_desc: This page contains the list of Compliance Ready Policies for Awsnative.
-title: Compliance Ready Awsnative Policies
-h1: List of Compliance Ready Policies for Awsnative
+title_tag: "Compliance Ready Policies (AWS Cloud Control) | CrossGuard"
+meta_desc: This page contains the list of Compliance Ready Policies for AWS Cloud Control.
+title: Compliance Ready AWS Cloud Control Policies
+h1: List of Compliance Ready Policies for AWS Cloud Control
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
-        name: AWS Native Policies
+        name: AWS Cloud Control Policies
         parent: iac-packages-automation-policy-compliance
         weight: 3
     usingpulumi:
@@ -14,7 +14,7 @@ menu:
 aliases:
     - /docs/using-pulumi/crossguard/compliance-ready-policies-awsnative
 ---
-There's a total of 54 Compliance Ready Policies for the Awsnative provider.
+There's a total of 54 Compliance Ready Policies for the AWS Cloud Control provider.
 
 All those policies are available in the `@pulumi/aws-compliance-policies` package.
 

@@ -63,7 +63,7 @@ components:
   description:
 
 aws-native:
-  heading: AWS Native
+  heading: AWS Cloud Control
   public_preview: true
   description: Manage and provision resources defined in the AWS CloudFormation Registry.
   content_links:
