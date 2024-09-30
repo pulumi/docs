@@ -2,7 +2,7 @@
 title: Accelerate, Scale and Secure AI Innovation with Platform Engineering
 allow_long_title: true
 date: 2024-09-28
-meta_desc: As innovation and ROI pressures mount, how are savvy tech organizations using Platform Engineering to get more competitive advantage - and perhaps a quantum leap - from their AI investments?
+meta_desc: Learn more about how innovators are changing the rules of the AI game with platform engineering.
 meta_image: meta.png
 authors:
     - marlowe-fenne
