@@ -214,6 +214,6 @@ In this tutorial, you learned how to set up automated drift detection and remedi
 
 To learn more about drift detection with Pulumi, take a look at the following resources:
 
-- Learn more about [Pulumi drift detection](docs/pulumi-cloud/deployments/drift/).
-- Learn more about [Pulumi Deployments](/docs/pulumi-cloud/deployments/).
-- Learn more about [Pulumi refresh](/docs/iac/cli/commands/pulumi_refresh/)
+- [Pulumi drift detection](/docs/pulumi-cloud/deployments/drift/)
+- [Pulumi Deployments](/docs/pulumi-cloud/deployments/)
+- [Pulumi refresh](/docs/iac/cli/commands/pulumi_refresh/)
