@@ -13,7 +13,7 @@ for row in $(echo "${pages}" | jq -r '.frameworks[] | @base64'); do
         }
         slug=$(echo "$(_jq '.framework')-$(_jq '.cloud')-$(decodeService '.name')" | awk '{print tolower($0)}' | sed 's/ /-/g')
         layout=$(_jq '.framework' | awk '{print tolower($0)}' | sed 's/ /-/g')
-        title="$(_jq '.framework') Compliance for $(_jq '.cloud') $(decodeService '.name')"
+        title="How to Achieve $(_jq '.framework') Compliance for $(_jq '.cloud') $(decodeService '.name')"
     # Create a new markdown file for each entry
     cat > "content/compliance/${slug}.md" <<EOF
 ---
