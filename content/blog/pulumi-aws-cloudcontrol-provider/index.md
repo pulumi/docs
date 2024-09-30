@@ -19,7 +19,8 @@ We're excited to announce the general availability of the new [AWS Cloud Control
 * __Day 1 support for AWS Resources__: Provides full coverage of the [AWS Cloud Control API], typically on the day of the launch, ensuring users can adopt new features immediately. 
 * __Complementary Pulumi Experience__: Works alongside Pulumi’s AWS Provider, enhancing Infrastructure as Code (IaC) projects with the latest AWS capabilities without requiring significant changes to existing setups. 
 * __Extended support for third-party resources__: Our platform offers enhanced flexibility and interoperability by supporting third-party resources available in the CloudFormation Registry, such as Atlassian, MongoDB, Datadog, and more.
-* __Easy CloudFormation to Pulumi Migration__: This release also includes a new tool, cf2pulumi, for migrating existing CloudFormation templates into Pulumi programs in your favorite language. The new AWS Cloud Control provider and AWS Cloud Control API power this new capability.
+* __Easy CloudFormation to Pulumi Migration__: [cf2pulumi](https://www.pulumi.com/cf2pulumi/) provides the ability to migrate existing CloudFormation templates into Pulumi programs in your favorite language. 
+
 
 At Pulumi, we're dedicated to empowering our customers with the tools they need to innovate and thrive in the cloud. The launch of the AWS Cloud Control Provider represents our unwavering commitment to providing best-in-class solutions that simplify cloud management, streamline operations, and drive business success. The Pulumi AWS Cloud Control Provider can be used side-by-side with the standard  Pulumi AWS provider and nearly 200  additional Pulumi resource providers that cover a wide variety of cloud and SaaS platforms.  
 
