@@ -1,5 +1,5 @@
 ---
-title: Accelerate, Scale and Secure AI Innovation with Platform Engineering
+title: Accelerate, Scale and Secure AI Innovation with Pulumi Platform Engineering
 allow_long_title: true
 date: 2024-09-30
 meta_desc: Learn more about how innovators are changing the rules of the AI game with platform engineering.
@@ -29,8 +29,6 @@ social:
 ---
 
 As leadership teams continue to bet big on AI, the tradeoffs between how much to invest and when to expect a reasonable return are ever-present. While exploring scenarios for accelerating this return on investment, organizations are discovering some unique ways to accelerate their AI payback with Platform Engineering.
-
-In [a recent Inc. article](https://www.inc.com/peter-cohan/is-generative-ai-worth-investment-what-leaders-are-saying.html) questioning whether Gen AI is worth the investment, Peter Cohan, Founder of Cohan and Associates summarized it this way: “The answer is complicated, and depends on whether the technology can deliver customers a quantum value leap that rivals can't copy.”
 
 As innovation and ROI pressures mount, how are savvy tech organizations using Platform Engineering to get more competitive advantage - and perhaps a quantum leap - from their AI investments?
 
