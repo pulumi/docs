@@ -59,9 +59,9 @@ main:
 
     # The webinar presenters
     presenters:
-        - name: Diana Esteves
-          role: Solutions Architect, Pulumi
-          photo: /images/team/diana-esteves.jpg
+        - name: Piers Karsenbarg
+          role: Senior Solutions Engineer, Pulumi
+          photo: /images/team/piers-karsenbarg.jpg
         - name: Harry Kimpel
           role: Principal Developer Relations Engineer @ New Relic
           photo: /images/people/harry-kimpel.png
