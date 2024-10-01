@@ -8,7 +8,7 @@ allow_long_title: true
 # published. To influence the ordering of posts published on the same date, use
 # the time portion of the date value; posts are sorted in descending order by
 # date/time.
-date: 2024-09-20T07:47:03Z
+date: 2024-09-02T07:47:03Z
 
 # The draft setting determines whether a post is published. Set it to true if
 # you want to be able to merge the post without publishing it.
@@ -30,7 +30,6 @@ meta_image: meta.png
 # yourself if you don't already have one.
 authors:
     - sara-huddleston
-    - josh-kodroff
 
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
@@ -109,7 +108,7 @@ The platform mandate should serve as a central reference point for the platform 
 
 - **Introduction**: A high-level overview of the platform team's purpose and the organizational outcomes it aims to achieve.
 - **Supported systems**: A list of the infrastructure, services, and tools that the platform team is responsible for managing and supporting.
-- **Support model**: Details on how application teams can access platform services, including any self-service capabilities, and the team's response times for different types of requests.
+- **Support model**: Details on how application teams can access platform services, including any self-service capabilities and the team's response times for different types of requests.
 - **Team structure**: An overview of the platform team's members and their areas of expertise, making it easy for application teams to identify the right point of contact.
 
 A well-defined mandate aligns the team and its customers with the platform’s value and purpose.
@@ -130,28 +129,28 @@ By establishing a standardized pre-production pipeline, you'll ensure that all a
 
 ## Step 5: Embracing Infrastructure as Code
 
-Leveraging infrastructure as code (IaC) is crucial for managing the platform’s infrastructure.It enables consistent, scalable, and secure operations by automating the provisioning of resources, monitoring, and enforcing security policies.
+Leveraging infrastructure as code (IaC) is crucial for managing the platform’s infrastructure. It enables consistent, scalable, and secure operations by automating the provisioning of resources, monitoring, and enforcing security policies.
 
 Key areas where IaC can be applied within the platform include:
 
 - **Foundational infrastructure**: Provision and manage the underlying cloud resources, such as virtual networks, storage, and compute, that form the platform's foundation.
 - **Runtime platforms**: Deploy and configure the runtime environments where application workloads will be executed, such as Kubernetes clusters or serverless functions.
 - **Observability and monitoring**: Set up the logging, metrics, and alerting systems that provide visibility into the platform's health and performance.
-- **Security and compliance**: Implement security controls, such as [secrets management](https://www.pulumi.com/docs/esc/) and [access policies](https://www.pulumi.com/docs/using-pulumi/crossguard/get-started/), to ensure the platform meets regulatory and organizational requirements.
-- **Pipelines and [automation](https://www.pulumi.com/docs/using-pulumi/automation-api/)**: Use IaC to define and version-control the platform's own deployment and management pipelines, ensuring consistency and repeatability.
+- **Security and compliance**: Implement security controls, such as [secrets management](https://www.pulumi.com/docs/esc/) and [access policies](https://www.pulumi.com/docs/iac/packages-and-automation/crossguard/get-started/), to ensure the platform meets regulatory and organizational requirements.
+- **Pipelines and [automation](https://www.pulumi.com/docs/iac/packages-and-automation/automation-api/)**: Use IaC to define and version-control the platform's own deployment and management pipelines, ensuring consistency and repeatability.
 
 With [infrastructure as code](https://www.pulumi.com/docs/pulumi-cloud/), the platform engineering team can ensure reliable, scalable, and secure infrastructure across the organization.
 
 ## Step 6: Implementing Policy as Code
 
-Alongside your IaC efforts, it's crucial to establish a robust policy-as-code framework within your platform. Policy-as-code allows you to enforce security, compliance, and operational policies programmatically. This provides governance at scale, ensuring all teams follow the same rules.
+Alongside your IaC efforts, it's important to set up a robust policy-as-code framework within your platform. Policy-as-code allows you to enforce security, compliance, and operational policies programmatically. This provides governance at scale, ensuring all teams follow the same rules.
 
 Policy as code can be applied in two key ways:
 
 - **Preventative controls**: Implement policies that proactively validate and reject non-compliant infrastructure changes before they are provisioned, providing fast feedback to application teams.
 - **Detective controls**: Establish policies that continuously monitor the deployed infrastructure, triggering alerts or remediation actions when deviations from the desired state are detected.
 
-By combining [IaC and policy as code](https://www.pulumi.com/docs/using-pulumi/crossguard/) with self-service provisioning, you maintain security and compliance while giving teams autonomy.
+By combining [IaC and policy as code](https://www.pulumi.com/docs/iac/packages-and-automation/crossguard/) with self-service provisioning, you maintain security and compliance while giving teams autonomy.
 
 ## Step 7: Evolving Towards Self-Service 
 
@@ -208,7 +207,7 @@ For a more in-depth explanation, see the [What is Infrastructure as Code? page](
 
 ### What is Policy as Code (PaC)?
 
-Policy as Code (PaC) defines security, compliance, and operational policies in code to automate their enforcement across infrastructure and application deployments.
+Policy as Code (PaC) defines security, compliance, and [operational policies](https://www.pulumi.com/docs/iac/packages-and-automation/crossguard/core-concepts/) in code to automate their enforcement across infrastructure and application deployments.
 
 ### What is Developer Experience (DevEx)? 
 
