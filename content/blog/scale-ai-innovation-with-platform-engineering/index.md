@@ -28,7 +28,7 @@ social:
     linkedin:
 ---
 
-As leadership teams continue to bet big on AI, the tradeoffs between how much to invest and when to expect a reasonable return are ever-present. While exploring scenarios for accelerating this return on investment, resourceful organizations are discovering some unique ways to accelerate their AI payback with Platform Engineering.
+As leadership teams continue to bet big on AI, the tradeoffs between how much to invest and when to expect a reasonable return are ever-present. While exploring scenarios for accelerating this return on investment, organizations are discovering some unique ways to accelerate their AI payback with Platform Engineering.
 
 In [a recent Inc. article](https://www.inc.com/peter-cohan/is-generative-ai-worth-investment-what-leaders-are-saying.html) questioning whether Gen AI is worth the investment, Peter Cohan, Founder of Cohan and Associates summarized it this way: “The answer is complicated, and depends on whether the technology can deliver customers a quantum value leap that rivals can't copy.”
 
