@@ -87,9 +87,11 @@ Selecting the **"X" in the search bar** will remove all previously selected filt
 
 ### Resource Search Favoriting
 
-The **Favorites Button** allows you to save a particular view of the resources page which includes any filters, grouping, column changes, and search queries made for quick navigation from the left nav.
+The **Favorites Button** allows you to save a particular view of the resources page which includes any filters, grouping, column changes, and search queries made.
 
 ![Resource Search Favorites left nav](favorites-left-nav.png)
+
+All your saved favorites can be seen as quick links on the **left nav**.
 
 ![Resource Search Favorites button](favorites-button.png)
 
