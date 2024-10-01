@@ -30,26 +30,33 @@ Let’s walk through an example of using Pulumi AWS Cloud Control Provider along
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-import * as awsx from "@pulumi/aws-native";
+import * as aws from "@pulumi/aws";  
+import * as awscc from "@pulumi/aws-native"; 
+
+// ARN of the IAM role that the Lambda function will assume
+const roleArn = "arn:aws:iam::YOUR_ACCOUNT_ID:role/cloudcontrol-test";
 
 // Create an S3 bucket using the AWS provider
 const bucket = new aws.s3.Bucket("myBucket");
 
-// Define the Lambda function code
-const lambdaCode = `
-exports.handler = async (event) => {
-    console.log("Processing new S3 object:", event.Records[0].s3.object.key);
-    // Add your processing logic here
-};
-`;
-
 // Create the AWS Lambda function using the AWS Cloud Control provider
-const lambdaFunction = new awsx.lambda.Function("myLambdaFunction", {
+const lambdaFunction = new awscc.lambda.Function("myLambdaFunction", {
     functionName: "my-lambda-function",
-    runtime: "nodejs14.x",
+    role: "arn:aws:iam::YOUR_ACCOUNT_ID:role/cloudcontrol-test",
+    runtime: "nodejs18.x",
     handler: "index.handler",
-    code: new pulumi.asset.StringAsset(lambdaCode),
+      code: {
+        zipFile: `
+            exports.handler = async function(event) {
+                const bucketName = process.env.BUCKET_NAME;
+                console.log("Event triggered: ", JSON.stringify(event, null, 2));
+                return {
+                    statusCode: 200,
+                    body: JSON.stringify('Hello from Lambda!'),
+                };
+            };
+        `,
+    },
     environment: {
         variables: {
             BUCKET_NAME: bucket.bucket,
