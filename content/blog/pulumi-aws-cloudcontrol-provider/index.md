@@ -30,7 +30,7 @@ Let’s walk through an example of using Pulumi AWS Cloud Control Provider along
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@Pulumi Service (isabel)/aws";
+import * as aws from "@pulumi/aws";
 import * as awsx from "@pulumi/aws-native";
 
 // Create an S3 bucket using the AWS provider
