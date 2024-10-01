@@ -242,7 +242,7 @@ resources:
                   body: JSON.stringify('Hello from Lambda!'),
               };
           };
-	# Lambda environment variables are set here.
+# Lambda environment variables are set here.
       environment:
         variables:
           BUCKET_NAME: ${myBucket.bucket}
@@ -264,12 +264,12 @@ For example, this configuration involves six levels of nesting rules but can be 
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as aws_native from "@pulumi/aws-native";
+import * as awscc from "@pulumi/aws-native";
 
-type RuleGroupStatement = aws_native.types.input.wafv2.RuleGroupStatementArgs;
+type RuleGroupStatement = awscc.types.input.wafv2.RuleGroupStatementArgs;
 
 // Create an AWS WAFv2 IP Set
-const exampleIPSet = new aws_native.wafv2.IpSet("exampleIPSet", {
+const exampleIPSet = new awscc.wafv2.IpSet("exampleIPSet", {
   addresses: ["1.2.3.4/32", "5.6.7.8/32"],
   ipAddressVersion: "IPV4",
   scope: "REGIONAL",
@@ -348,7 +348,7 @@ function matchAny(statements: RuleGroupStatement[]): RuleGroupStatement {
 }
 
 // Create an AWS WAFv2 Rule Group
-const exampleRuleGroup = new aws_native.wafv2.RuleGroup("exampleRuleGroup", {
+const exampleRuleGroup = new awscc.wafv2.RuleGroup("exampleRuleGroup", {
   capacity: 2000,
 
   rules: [
@@ -385,7 +385,7 @@ const exampleRuleGroup = new aws_native.wafv2.RuleGroup("exampleRuleGroup", {
 });
 
 // Create an AWS WAFv2 WebACL
-const exampleWebACL = new aws_native.wafv2.WebAcl("exampleWebACL", {
+const exampleWebACL = new awscc.wafv2.WebAcl("exampleWebACL", {
   defaultAction: { allow: {} },
   rules: [
 	{
