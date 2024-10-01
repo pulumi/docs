@@ -26,7 +26,7 @@ At Pulumi, we're dedicated to empowering our customers with the tools they need 
 
 ## Using Pulumi AWS Cloud Control Provider with the Pulumi AWS Provider
 
-Let’s walk through an example of using Pulumi AWS Cloud Control Provider alongside the [standard AWS Provider]. Here, we can see how the new AWS S3 Object Lambda feature can be used via the AWS Cloud Control provider, with access to the full API defined by the S3 team at AWS,
+Let’s walk through an example of using Pulumi AWS Cloud Control Provider alongside the [standard AWS Provider]. Here, we can see how the new AWS S3 Object Lambda feature can be used via the AWS Cloud Control provider, with access to the full API defined by the S3 team at AWS.
 
 ```typescript
 import * as pulumi from "@Pulumi Service (isabel)/pulumi";
