@@ -22,10 +22,10 @@ Pulumi Insights provides advanced search, analytics, and AI for your infrastruct
 It provides:
 
 - **Resource Search**: Explore all of your resources under management.
-  Filter resources by stack, project, or a number of other dimensions.
+  Filter, group, search, and sort resources by stack, project, or a number of other dimensions.
 
 - **Resource Search Aggregates**: See aggregates at a glance for your resources under management.
-  Start with a birds-eye view of your infrastructure, and leverage search to dig deeper.
+  Start with a birds-eye view of your infrastructure, and leverage features like search, grouping, and filtering to dig deeper.
 
 - **Cloud Import**: Bring your own cloud provider account and import all your existing resources into Pulumi to see how things break down. Zero code required.
 
@@ -41,43 +41,46 @@ Resource Search can be accessed directly from the Pulumi Cloud dashboard or from
 
 By default, you will see a table with the resources you have access to, ordered by most recently updated.
 
-A count is shown the upper-right corner with the total number of resources matched by this query -- in this case, we have 70 resources.
+A count is shown the upper-right corner with the total number of resources matched by this query -- in this case, we have 24 resources.
 
-![Resource Search Table](search-table.png)
+![Resource Search Table](search-table-v2.png)
 
-You can control how many resources are displayed per page and paginate through your resources by using controls on the bottom of the page:
-
-![Resource Search Pagination](search-pagination.png)
+The table of resources is paginated using infinite scroll so you are able to view up to **10,000** resources without needing to go page by page:
 
 {{% notes "info" %}}
 If you need access to more resources, you can use the [Data Export](export) feature or access them programmatically via the [Pulumi Cloud Rest API](/docs/pulumi-cloud/cloud-rest-api#resource-search).
 {{% /notes %}}
 
-Use the search bar to refine the resources displayed on the page.
+Use the **search bar**, **row grouping**, or **column filters** to refine the resources displayed on the page.
 
 Selecting **project** will pre-populate a query with `project:` which we can then extend to `project:production` to return resources with "production" in their project name.
 
-Selecting the **Filters** menu to augments or pre-populate queries with helpful date ranges.
+![Resource Search Filter Helper](search-filter-helper.png)
 
-![Resource Search Filters](search-filters.png)
+The columns displayed on results can be modified to show or hide information by selecting the **gear icon**.
 
-The columns displayed on results can be modified to show or hide information by selecting the gear icon.
+![Resource Search Options Gear](gear-icon-dropdown.png)
 
-![Resource Search Columns](search-columns.png)
+![Resource Search Column Chooser](column-chooser.png)
 
 Selecting a column header will modify the query to sort by that column.
 
 ### Resource Search Aggregates
 
-The **Advanced filtering** menu can be expanded to apply additional filters to your query and to view finer-grained resource counts.
+The **Column Filter** menu can be expanded to apply additional filters to each column and to view finer-grained resource sets.
 
-![Resource Search Advanced Filters](search-advanced.png)
+![Resource Search Column Filter](column-filter.png)
 
-In this example, the query has been restricted to the "my-stack" stack.
+In this example, the query has been restricted to the "dev" stack.
 
-The counts next to each value show that this stack has 18 subnets, and 366 AWS resources in total.
+### Resource Search Grouping
+The **Row Groups Header** allows you to drag columns from the table to enable grouping by that column. You can group by multiple columns at once. In this example, we have grouped by stack and modified so that we can see a breakdown of resources by stack and when they were last modified.
 
-Selecting **Clear filters** will remove all previously selected filters.
+![Resource Search Grouping](resource-search-grouping.png)
+
+Selecting the **"X" in the search bar** will remove all previously selected filters.
+
+![Resource Search Clear Filters](clear-search.png)
 
 ## Data Export
 
