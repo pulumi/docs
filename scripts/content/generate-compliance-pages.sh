@@ -11,6 +11,8 @@ for row in $(echo "${pages}" | jq -r '.frameworks[] | @base64'); do
         decodeService() {
             echo ${svc} | base64 --decode | jq -r ${1}
         }
+        # Check if the cloud from the framework matches the cloud from the service
+        if [ "$(_jq '.cloud')" = "$(decodeService '.cloud')" ]; then
         slug=$(echo "$(_jq '.framework')-$(_jq '.cloud')-$(decodeService '.name')" | awk '{print tolower($0)}' | sed 's/ /-/g')
         layout=$(_jq '.framework' | awk '{print tolower($0)}' | sed 's/ /-/g')
         title="How to Achieve $(_jq '.framework') Compliance for $(_jq '.cloud') $(decodeService '.name')"
@@ -33,6 +35,7 @@ meta_desc: Pulumi helps achieve $(_jq '.framework') compliance for $(_jq '.cloud
 ---
 
 EOF
+fi
     done
     cat > "content/compliance/$(echo "$(_jq '.cloud')-$(_jq '.framework')" | awk '{print tolower($0)}').md" <<EOF
 ---
