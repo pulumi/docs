@@ -56,8 +56,9 @@
         @apply text-sm;
     }
 
-    // All main-content links following the header should be styled.
-    .docs-main-content header + .special-h1 ~ div {
+    // Summaries may not end up in `p` tags (which would style them automatically), so
+    // we target the directly just in case. (Otherwise they wouldn't appear as links.)
+    main .summary {
         a {
             @apply text-blue-500;
         }
