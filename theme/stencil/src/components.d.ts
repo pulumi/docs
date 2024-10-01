@@ -30,6 +30,8 @@ export namespace Components {
     }
     interface PricingCta {
         "buttonClass": string;
+        "signedInText": string;
+        "signedOutText": string;
     }
     interface PulumiApiDocFilterableNav {
         "baseDirectory": string;
@@ -512,6 +514,8 @@ declare namespace LocalJSX {
     }
     interface PricingCta {
         "buttonClass"?: string;
+        "signedInText"?: string;
+        "signedOutText"?: string;
     }
     interface PulumiApiDocFilterableNav {
         "baseDirectory"?: string;
