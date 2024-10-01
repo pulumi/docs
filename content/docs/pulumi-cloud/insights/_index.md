@@ -74,6 +74,7 @@ The **Column Filter** menu can be expanded to apply additional filters to each c
 In this example, the query has been restricted to the "dev" stack.
 
 ### Resource Search Grouping
+
 The **Row Groups Header** allows you to drag columns from the table to enable grouping by that column. You can group by multiple columns at once. In this example, we have grouped by stack and modified so that we can see a breakdown of resources by stack and when they were last modified.
 
 ![Resource Search Grouping](resource-search-grouping.png)
