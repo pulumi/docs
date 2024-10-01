@@ -1,7 +1,7 @@
 ---
 title: "Announcing the General Availability of Pulumi’s AWS Cloud Control Provider (formerly AWS Native) "
 allow_long_title: true
-date: 2024-04-25T09:00:00-07:00
+date: 2024-10-01T09:00:00-07:00
 draft: false
 meta_desc: >-
     Pulumi announces the GA of its AWS Cloud Control Provider, offering Day 1 support for new AWS features and enhancing cloud management tools.
