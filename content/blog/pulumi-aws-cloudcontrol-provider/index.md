@@ -27,6 +27,10 @@ At Pulumi, we're dedicated to empowering our customers with the tools they need 
 ## Using Pulumi AWS Cloud Control Provider with the Pulumi AWS Provider
 
 Let’s walk through an example of using the AWS Cloud Control Provider alongside the Pulumi's [standard AWS Provider]. In this example, we demonstrate how an S3 bucket can be created using the AWS Classic provider, while a Lambda function is deployed using the AWS Cloud Control provider. The Lambda function is configured to access the S3 bucket's name, which was created using AWS Classic, and process events accordingly. This example showcases how both providers can work together, leveraging AWS Classic for widely supported resources, while using AWS Cloud Control for the latest features and APIs provided by AWS.
+
+{{< chooser language "typescript,python,csharp,go,yaml" / >}}
+{{% choosable language typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";  
@@ -66,6 +70,185 @@ const lambdaFunction = new awscc.lambda.Function("myLambdaFunction", {
 // Export the Lambda function ARN and the S3 bucket name
 export const lambdaFunctionArn = lambdaFunction.arn;
 export const s3BucketName = bucket.bucket;
+```
+
+{{% /choosable %}}
+{{% choosable language python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+import pulumi_aws_native as aws_native
+
+my_bucket = aws.s3.Bucket("myBucket")
+my_lambda_function = aws_native.lambda_.Function("myLambdaFunction",
+    function_name="my-lambda-function",
+    role="arn:aws:iam::YOUR_ACCOUNT_ID:role/cloudcontrol-test",
+    runtime="nodejs18.x",
+    handler="index.handler",
+    code={
+        "zip_file": """exports.handler = async function(event) {
+    const bucketName = process.env.BUCKET_NAME;
+    console.log("Event triggered: ", JSON.stringify(event, null, 2));
+    return {
+        statusCode: 200,
+        body: JSON.stringify('Hello from Lambda!'),
+    };
+};
+""",
+    },
+    environment={
+        "variables": {
+            "BUCKET__NAME": my_bucket.bucket,
+        },
+    })
+pulumi.export("lambdaFunctionArn", {
+    "value": my_lambda_function.arn,
+})
+pulumi.export("s3BucketName", {
+    "value": my_bucket.bucket,
+})
+```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
+```csharp
+using System.Collections.Generic;
+using System.Linq;
+using Pulumi;
+using Aws = Pulumi.Aws;
+using AwsNative = Pulumi.AwsNative;
+
+return await Deployment.RunAsync(() => 
+{
+    // Create an S3 bucket
+    var myBucket = new Aws.S3.Bucket("myBucket");
+ 
+   // Create a Lambda function using AWS Native
+    var myLambdaFunction = new AwsNative.Lambda.Function("myLambdaFunction", new()
+    {
+        FunctionName = "my-lambda-function",
+        Role = "arn:aws:iam::YOUR_ACCOUNT_ID:role/cloudcontrol-test",
+        Runtime = "nodejs18.x",
+        Handler = "index.handler",
+        Code = new AwsNative.Lambda.Inputs.FunctionCodeArgs
+        {
+            ZipFile = @"exports.handler = async function(event) {
+    const bucketName = process.env.BUCKET_NAME;
+    console.log(""Event triggered: "", JSON.stringify(event, null, 2));
+    return {
+        statusCode: 200,
+        body: JSON.stringify('Hello from Lambda!'),
+    };
+};
+",
+        },
+        Environment = new AwsNative.Lambda.Inputs.FunctionEnvironmentArgs
+        {
+            Variables = 
+            {
+                { "BUCKET_NAME", myBucket.BucketName },
+            },
+        },
+    });
+
+    // Export the Lambda function ARN and the S3 bucket name directly
+    return new Dictionary<string, object?>
+    {
+        ["lambdaFunctionArn"] =  myLambdaFunction.Arn,
+        ["s3BucketName"] = myBucket.BucketName,
+        };
+});
+```
+
+{{% /choosable %}}
+{{% choosable language go %}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/lambda"
+	"github.com/pulumi/pulumi-aws/sdk/v6/go/aws/s3"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		myBucket, err := s3.NewBucket(ctx, "myBucket", nil)
+		if err != nil {
+			return err
+		}
+		myLambdaFunction, err := lambda.NewFunction(ctx, "myLambdaFunction", &lambda.FunctionArgs{
+			FunctionName: pulumi.String("my-lambda-function"),
+			Role:         pulumi.String("arn:aws:iam::YOUR_ACCOUNT_ID:role/cloudcontrol-test"),
+			Runtime:      pulumi.String("nodejs18.x"),
+			Handler:      pulumi.String("index.handler"),
+			Code: &lambda.FunctionCodeArgs{
+ZipFile: pulumi.String(`exports.handler = async function(event) {
+    const bucketName = process.env.BUCKET_NAME;
+    console.log("Event triggered: ", JSON.stringify(event, null, 2));
+    return {
+        statusCode: 200,
+        body: JSON.stringify('Hello from Lambda!'),
+    };
+};
+`),
+			},
+			Environment: &lambda.FunctionEnvironmentArgs{
+				Variables: pulumi.StringMap{
+					"BUCKET_NAME": myBucket.Bucket,
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		ctx.Export("lambdaFunctionArn",myLambdaFunction.Arn)
+		ctx.Export("s3BucketName", myBucket.Bucket)
+		return nil
+	})
+}
+```
+
+{{% /choosable %}}
+{{% choosable language yaml %}}
+
+```yaml
+name: your-project-name   # Replace with your project name
+runtime: yaml
+
+resources:
+  myBucket:
+    type: aws:s3/bucket:Bucket
+    properties: {}
+
+  myLambdaFunction:
+    type: aws-native:lambda:Function
+    properties:
+      functionName: my-lambda-function
+      role: arn:aws:iam::YOUR_ACCOUNT_ID:role/cloudcontrol-test
+      runtime: nodejs18.x
+      handler: index.handler
+      code:
+        zipFile: |
+          exports.handler = async function(event) {
+              const bucketName = process.env.BUCKET_NAME;
+              console.log("Event triggered: ", JSON.stringify(event, null, 2));
+              return {
+                  statusCode: 200,
+                  body: JSON.stringify('Hello from Lambda!'),
+              };
+          };
+      environment:
+        variables:
+          BUCKET_NAME: ${myBucket.bucket}
+
+outputs:
+  lambdaFunctionArn:
+    value: ${myLambdaFunction.arn}
+  s3BucketName:
+    value: ${myBucket.bucket}
 ```
 
 ## Leveraging AWS Cloud Control Provider for Advanced WAFv2 Configurations
