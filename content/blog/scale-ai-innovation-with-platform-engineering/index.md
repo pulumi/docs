@@ -1,7 +1,7 @@
 ---
 title: Accelerate, Scale and Secure AI Innovation with Pulumi Platform Engineering
 allow_long_title: true
-date: 2024-09-30
+date: 2024-10-01
 meta_desc: Learn more about how innovators are changing the rules of the AI game with platform engineering.
 meta_image: meta.png
 authors:
