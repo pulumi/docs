@@ -27,11 +27,13 @@ It provides:
 - **Resource Search Aggregates**: See aggregates at a glance for your resources under management.
   Start with a birds-eye view of your infrastructure, and leverage features like search, grouping, and filtering to dig deeper.
 
-- **Cloud Import**: Bring your own cloud provider account and import all your existing resources into Pulumi to see how things break down. Zero code required.
+- **Resource Search Favoriting and Sharing**: Save your updated view as a favorite in the left nav like stacks or share it with your teammates.
+
+- **Resource Search AI Assist**: (experimental) Use natural language processing to help craft search queries to explore your data.
 
 - **Data Export**: Export your Pulumi resources into your business intelligence tool of choice to go even further.
 
-- **Resource Search AI Assist**: (experimental) Use natural language processing to help craft search queries to explore your data.
+- **Cloud Import**: Bring your own cloud provider account and import all your existing resources into Pulumi to see how things break down. Zero code required.
 
 ## Resource Search
 
@@ -82,6 +84,14 @@ The **Row Groups Header** allows you to drag columns from the table to enable gr
 Selecting the **"X" in the search bar** will remove all previously selected filters.
 
 ![Resource Search Clear Filters](clear-search.png)
+
+### Resource Search Favoriting
+
+The **Favorites Button** allows you to save a particular view of the resources page which includes any filters, grouping, column changes, and search queries made for quick navigation from the left nav.
+
+![Resource Search Favorites left nav](favorites-left-nav.png)
+
+![Resource Search Favorites button](favorites-button.png)
 
 ## Data Export
 
