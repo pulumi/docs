@@ -26,8 +26,7 @@ At Pulumi, we're dedicated to empowering our customers with the tools they need 
 
 ## Using Pulumi AWS Cloud Control Provider with the Pulumi AWS Provider
 
-Let’s walk through an example of using Pulumi AWS Cloud Control Provider alongside the [standard AWS Provider]. Here, we can see how the new AWS S3 Object Lambda feature can be used via the AWS Cloud Control provider, with access to the full API defined by the S3 team at AWS.
-
+Let’s walk through an example of using the AWS Cloud Control Provider alongside the Pulumi's [standard AWS Provider]. In this example, we demonstrate how an S3 bucket can be created using the AWS Classic provider, while a Lambda function is deployed using the AWS Cloud Control provider. The Lambda function is configured to access the S3 bucket's name, which was created using AWS Classic, and process events accordingly. This example showcases how both providers can work together, leveraging AWS Classic for widely supported resources, while using AWS Cloud Control for the latest features and APIs provided by AWS.
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";  
