@@ -222,7 +222,7 @@ const exampleWebACL = new aws_native.wafv2.WebAcl("exampleWebACL", {
 
 ## Conclusion
 
-The [AWS Cloud Control Provider] for Pulumi is a major step forward in delivering faster, more flexible access to AWS services. By closely collaborating with AWS, we’ve created a provider that enables Pulumi users to leverage the latest AWS features as soon as they are released - without waiting for upstream provider changes to arrive in the standard Pulumi AWS Provider.
+The [AWS Cloud Control Provider] for Pulumi is a major step forward in fully and faithfully supporting the AWS Cloud Control API and its ecosystem in Pulumi. By closely collaborating with AWS, we’ve created a provider that enables Pulumi users to leverage the latest AWS features as soon as they are released - without waiting for upstream provider changes to arrive in the standard Pulumi AWS Provider.
 
 Our goal is to continually improve and simplify the Pulumi experience, empowering developers with the tools they need to manage cloud infrastructure seamlessly. This new provider represents our commitment to delivering cutting-edge capabilities as quickly as possible. 
 
