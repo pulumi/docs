@@ -26,9 +26,9 @@ At Pulumi, we're dedicated to empowering our customers with the tools they need 
 
 ## Using Pulumi AWS Cloud Control Provider with the Pulumi AWS Provider
 
-Let’s walk through an example of using the AWS Cloud Control Provider alongside the Pulumi's [standard AWS Provider]. In this example, we demonstrate how an S3 bucket can be created using the AWS Classic provider, while a Lambda function is deployed using the AWS Cloud Control provider. The Lambda function is configured to access the S3 bucket's name, which was created using AWS Classic, and process events accordingly. This example showcases how both providers can work together, leveraging AWS Classic for widely supported resources, while using AWS Cloud Control for the latest features and APIs provided by AWS.
+Let’s walk through an example of using the AWS Cloud Control Provider alongside the Pulumi's [standard AWS Provider]. This example shows how to create an S3 bucket with the standard AWS provider and deploy a Lambda function using the AWS Cloud Control provider. The Lambda function is set up to use the S3 bucket's name and process events accordingly. This example showcases how both providers can work together, leveraging the standard AWS Provider for widely supported resources, while using AWS Cloud Control for the latest features and APIs provided by AWS.
 
-:{{< chooser language "typescript,python,csharp,go,yaml" / >}}
+{{< chooser language "typescript,python,csharp,go,yaml" / >}}
 {{% choosable language typescript %}}
 
 ```typescript
@@ -72,15 +72,17 @@ export const lambdaFunctionArn = lambdaFunction.arn;
 export const s3BucketName = bucket.bucket;
 ```
 {{% /choosable %}}
-
 {{% choosable language python %}}
+
 ```python
 import pulumi
 import pulumi_aws as aws
-import pulumi_aws_native as aws_native
-
+import pulumi_aws_native as aws_cloudcontrol
+# Create an S3 bucket using the standard AWS provider
 my_bucket = aws.s3.Bucket("myBucket")
-my_lambda_function = aws_native.lambda_.Function("myLambdaFunction",
+
+# Create the Lambda function using the AWS Cloud Control provider
+my_lambda_function = aws_cloudcontrol.lambda_.Function("myLambdaFunction",
     function_name="my-lambda-function",
     role="arn:aws:iam::YOUR_ACCOUNT_ID:role/cloudcontrol-test",
     runtime="nodejs18.x",
@@ -98,18 +100,13 @@ my_lambda_function = aws_native.lambda_.Function("myLambdaFunction",
     },
     environment={
         "variables": {
-            "BUCKET__NAME": my_bucket.bucket,
+            "BUCKET_NAME": my_bucket.bucket,
         },
     })
-pulumi.export("lambdaFunctionArn", {
-    "value": my_lambda_function.arn,
-})
-pulumi.export("s3BucketName", {
-    "value": my_bucket.bucket,
-})
+pulumi.export("lambdaFunctionArn", my_lambda_function.arn)  # Directly export the value, no need for a dictionary
+pulumi.export("s3BucketName", my_bucket.bucket)
 ```
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 
 ```csharp
@@ -117,21 +114,21 @@ using System.Collections.Generic;
 using System.Linq;
 using Pulumi;
 using Aws = Pulumi.Aws;
-using AwsNative = Pulumi.AwsNative;
+using AwsCloudControl = Pulumi.AwsNative;
 
 return await Deployment.RunAsync(() => 
 {
     // Create an S3 bucket
     var myBucket = new Aws.S3.Bucket("myBucket");
  
-   // Create a Lambda function using AWS Native
-    var myLambdaFunction = new AwsNative.Lambda.Function("myLambdaFunction", new()
+   // Create a Lambda function using AWS Cloud Control
+    var myLambdaFunction = new AwsCloudControl.Lambda.Function("myLambdaFunction", new()
     {
         FunctionName = "my-lambda-function",
         Role = "arn:aws:iam::YOUR_ACCOUNT_ID:role/cloudcontrol-test",
         Runtime = "nodejs18.x",
         Handler = "index.handler",
-        Code = new AwsNative.Lambda.Inputs.FunctionCodeArgs
+        Code = new AwsCloudControl.Lambda.Inputs.FunctionCodeArgs
         {
             ZipFile = @"exports.handler = async function(event) {
     const bucketName = process.env.BUCKET_NAME;
@@ -143,7 +140,7 @@ return await Deployment.RunAsync(() =>
 };
 ",
         },
-        Environment = new AwsNative.Lambda.Inputs.FunctionEnvironmentArgs
+        Environment = new AwsCloudControl.Lambda.Inputs.FunctionEnvironmentArgs
         {
             Variables = 
             {
@@ -161,10 +158,10 @@ return await Deployment.RunAsync(() =>
 });
 ```
 {{% /choosable %}}
-
 {{% choosable language go %}}
 
 ```go
+
 package main
 
 import (
@@ -175,10 +172,12 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
+		// Create an S3 bucket using the standard AWS provider
 		myBucket, err := s3.NewBucket(ctx, "myBucket", nil)
 		if err != nil {
 			return err
 		}
+		// Create a Lambda function using AWS Cloud Control provider
 		myLambdaFunction, err := lambda.NewFunction(ctx, "myLambdaFunction", &lambda.FunctionArgs{
 			FunctionName: pulumi.String("my-lambda-function"),
 			Role:         pulumi.String("arn:aws:iam::YOUR_ACCOUNT_ID:role/cloudcontrol-test"),
@@ -204,14 +203,15 @@ ZipFile: pulumi.String(`exports.handler = async function(event) {
 		if err != nil {
 			return err
 		}
+		// Export the Lambda function's ARN so that it can be referenced later
 		ctx.Export("lambdaFunctionArn",myLambdaFunction.Arn)
+		// Export the S3 bucket name so it can be used in other parts of the infrastructure
 		ctx.Export("s3BucketName", myBucket.Bucket)
 		return nil
 	})
 }
 ```
 {{% /choosable %}}
-
 {{% choosable language yaml %}}
 
 ```yaml
@@ -219,10 +219,12 @@ name: your-project-name   # Replace with your project name
 runtime: yaml
 
 resources:
+# Creating an S3 bucket using the standard AWS provider.
   myBucket:
     type: aws:s3/bucket:Bucket
     properties: {}
 
+# Creating a Lambda function using the AWS Cloud Control provider.
   myLambdaFunction:
     type: aws-native:lambda:Function
     properties:
@@ -240,10 +242,12 @@ resources:
                   body: JSON.stringify('Hello from Lambda!'),
               };
           };
+	# Lambda environment variables are set here.
       environment:
         variables:
           BUCKET_NAME: ${myBucket.bucket}
 
+# Outputs section - Pulumi will output these values after deployment.
 outputs:
   lambdaFunctionArn:
     value: ${myLambdaFunction.arn}
