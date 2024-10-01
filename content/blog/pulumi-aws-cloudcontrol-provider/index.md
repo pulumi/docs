@@ -28,7 +28,7 @@ At Pulumi, we're dedicated to empowering our customers with the tools they need 
 
 Let’s walk through an example of using the AWS Cloud Control Provider alongside the Pulumi's [standard AWS Provider]. In this example, we demonstrate how an S3 bucket can be created using the AWS Classic provider, while a Lambda function is deployed using the AWS Cloud Control provider. The Lambda function is configured to access the S3 bucket's name, which was created using AWS Classic, and process events accordingly. This example showcases how both providers can work together, leveraging AWS Classic for widely supported resources, while using AWS Cloud Control for the latest features and APIs provided by AWS.
 
-{{< chooser language "typescript,python,csharp,go,yaml" / >}}
+:{{< chooser language "typescript,python,csharp,go,yaml" / >}}
 {{% choosable language typescript %}}
 
 ```typescript
@@ -71,8 +71,8 @@ const lambdaFunction = new awscc.lambda.Function("myLambdaFunction", {
 export const lambdaFunctionArn = lambdaFunction.arn;
 export const s3BucketName = bucket.bucket;
 ```
-
 {{% /choosable %}}
+
 {{% choosable language python %}}
 ```python
 import pulumi
@@ -108,8 +108,8 @@ pulumi.export("s3BucketName", {
     "value": my_bucket.bucket,
 })
 ```
-
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 
 ```csharp
@@ -160,8 +160,8 @@ return await Deployment.RunAsync(() =>
         };
 });
 ```
-
 {{% /choosable %}}
+
 {{% choosable language go %}}
 
 ```go
@@ -210,8 +210,8 @@ ZipFile: pulumi.String(`exports.handler = async function(event) {
 	})
 }
 ```
-
 {{% /choosable %}}
+
 {{% choosable language yaml %}}
 
 ```yaml
@@ -250,6 +250,7 @@ outputs:
   s3BucketName:
     value: ${myBucket.bucket}
 ```
+{{% /choosable %}}
 
 ## Leveraging AWS Cloud Control Provider for Advanced WAFv2 Configurations
 
