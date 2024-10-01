@@ -71,7 +71,7 @@
             "whatis": "AWS IAM (Identity and Access Management) is a service that enables you to securely manage access to AWS resources. It allows you to create and control user permissions, defining who can access specific resources and under what conditions. IAM helps ensure security and compliance by enforcing fine-grained access controls across your AWS environment."
         },
         {
-            "name": "Azure Database",
+            "name": "Database",
             "cloud": "Azure",
             "full": "Azure Database",
             "category": "database",
@@ -85,19 +85,19 @@
             "whatis": "Azure Virtual Machines provide scalable, on-demand compute resources in the cloud, enabling users to run applications, deploy workloads, and manage operating systems without maintaining physical hardware. With support for various operating systems like Windows and Linux, users can configure and scale VMs to meet their performance and cost requirements. Azure Virtual Machines offer features like auto-scaling, high availability, and seamless integration with other Azure services for enhanced cloud-based computing."
         },
         {
-            "name": "Azure Container Instances (ACI)",
+            "name": "ACI",
             "cloud": "Azure",
             "full": "Azure Container Instances (ACI)",
             "whatis": "Azure Container Instances (ACI) allows developers to quickly run containers in a serverless environment without managing underlying infrastructure. It provides a simple, scalable platform for running containerized applications on demand, supporting both Linux and Windows containers. ACI is ideal for scenarios requiring fast deployment and flexible scaling, similar to AWS ECS"
         },
         {
-            "name": "Azure Kubernetes Service (AKS)",
+            "name": "AKS",
             "cloud": "Azure",
             "full": "Azure Kubernetes Service (AKS)",
             "whatis": "Azure Kubernetes Service (AKS) is a fully managed Kubernetes service that simplifies the deployment, scaling, and operation of containerized applications using Kubernetes. It automates tasks like patching, scaling, and node provisioning, allowing developers to focus on application development rather than managing Kubernetes infrastructure. AKS offers seamless integration with Azure services for secure, efficient, and scalable container management, similar to AWS EKS."
         },
         {
-            "name": "Azure API Management",
+            "name": "API Management",
             "cloud": "Azure",
             "full": "Azure API Management",
             "whatis": "Azure API Management is a comprehensive service that allows organizations to create, secure, manage, and scale APIs with ease. It provides features like traffic management, security, and API versioning, ensuring that APIs are protected and accessible to developers and users. With built-in analytics, developer portals, and policy enforcement, Azure API Management helps streamline the API lifecycle for seamless integration across services and applications."
