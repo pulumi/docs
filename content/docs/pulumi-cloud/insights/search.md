@@ -220,7 +220,7 @@ Examples:
 - storage
 - data
 
-### Exact Matching
+### Exact matching
 
 Surrounding terms with `"double quotes"` produces an exact match query.
 
@@ -327,15 +327,14 @@ If we want to refine this to resources with _some_ tags but no `"stack"` tag spe
 
 Existence queries do not return resources where the property is an empty object (`{}`), array (`[]`), or `null`. A resource with an output of `{"tags": {}}` would not be captured by an existence query for `.tags:`.
 
-## Column Filtering
+## Column filtering
 
 Expanding the "Column Filter" menu shows you the set of values found for that column along with a count for each value.
 You can then select a specific value or collection of values to filter your result set.
 
-TODO: change image
-![Resource Search Advanced Filters](../search-advanced.png)
+![Resource Search Column Filter](column-filter.png)
 
-In the example above, the query has been restricted to the "my-stack" stack.
+In the example above, the query has been restricted to the "dev" stack.
 
 Clicking the "X" within the search bar will remove all previously selected filters.
 

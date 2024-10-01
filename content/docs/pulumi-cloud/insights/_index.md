@@ -35,7 +35,7 @@ It provides:
 
 - **Cloud Import**: Bring your own cloud provider account and import all your existing resources into Pulumi to see how things break down. Zero code required.
 
-## Resource Search
+## Resource search
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/pMEIX7LmXYo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -43,7 +43,7 @@ Resource Search can be accessed directly from the Pulumi Cloud dashboard or from
 
 By default, you will see a table with the resources you have access to, ordered by most recently updated.
 
-A count is shown the upper-right corner with the total number of resources matched by this query -- in this case, we have 24 resources.
+A count is shown in the upper-right corner with the total number of resources matched by this query -- in this case, we have 13 resources.
 
 ![Resource Search Table](search-table-v2.png)
 
@@ -67,7 +67,7 @@ The columns displayed on results can be modified to show or hide information by 
 
 Selecting a column header will modify the query to sort by that column.
 
-### Resource Search Aggregates
+### Resource search aggregates
 
 The **Column Filter** menu can be expanded to apply additional filters to each column and to view finer-grained resource sets.
 
@@ -75,7 +75,7 @@ The **Column Filter** menu can be expanded to apply additional filters to each c
 
 In this example, the query has been restricted to the "dev" stack.
 
-### Resource Search Grouping
+### Resource search grouping
 
 The **Row Groups Header** allows you to drag columns from the table to enable grouping by that column. You can group by multiple columns at once. In this example, we have grouped by stack and modified so that we can see a breakdown of resources by stack and when they were last modified.
 
@@ -85,7 +85,7 @@ Selecting the **"X" in the search bar** will remove all previously selected filt
 
 ![Resource Search Clear Filters](clear-search.png)
 
-### Resource Search Favoriting
+### Resource search favoriting
 
 The **Favorites Button** allows you to save a particular view of the resources page which includes any filters, grouping, column changes, and search queries made.
 
@@ -95,7 +95,7 @@ All your saved favorites can be seen as quick links on the **left nav**.
 
 ![Resource Search Favorites button](favorites-button.png)
 
-## Data Export
+## Data export
 
 {{% notes "info" %}}
 This feature is only available to organizations using the Enterprise and Business Critical editions.
