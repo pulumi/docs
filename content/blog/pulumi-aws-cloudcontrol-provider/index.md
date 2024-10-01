@@ -10,19 +10,19 @@ authors:
     - tejitha-raju
     - matt-jeffryes
 tags:
-    - aws 
-    - provider 
-    - cloudcontrol 
+    - aws
+    - provider
+    - cloudcontrol
 ---
-We're excited to announce the general availability of the new [AWS Cloud Control Provider] for Pulumi (previously "AWS Native"). AWS is one of the most-used cloud providers across the Pulumi ecosystem, and we are committed to providing the fastest possible access to new AWS capabilities to all Pulumi users. This provider delivers on that promise by providing native support for all resources in the AWS Cloud Control APIs. As part of this launch, we are also renaming the provider from “AWS Native” to "AWS Cloud Control Provider," based on customer feedback during the preview phase, to provide users with a broader range of advanced cloud management tools exposed by the AWS Cloud Control API. This provider includes the following features and benefits, 
+We're excited to announce the general availability of the new [AWS Cloud Control Provider] for Pulumi (previously "AWS Native"). AWS is one of the most-used cloud providers across the Pulumi ecosystem, and we are committed to providing the fastest possible access to new AWS capabilities to all Pulumi users. This provider delivers on that promise by providing native support for all resources in the AWS Cloud Control APIs. As part of this launch, we are also renaming the provider from “AWS Native” to "AWS Cloud Control Provider," based on customer feedback during the preview phase, to provide users with a broader range of advanced cloud management tools exposed by the AWS Cloud Control API. This provider includes the following features and benefits,
 
-* __Day 1 support for AWS Resources__: Provides full coverage of the [AWS Cloud Control API], typically on the day of the launch, ensuring users can adopt new features immediately. 
-* __Complementary Pulumi Experience__: Works alongside Pulumi’s AWS Provider, enhancing Infrastructure as Code (IaC) projects with the latest AWS capabilities without requiring significant changes to existing setups. 
+* __Day 1 support for AWS Resources__: Provides full coverage of the [AWS Cloud Control API], typically on the day of the launch, ensuring users can adopt new features immediately.
+* __Complementary Pulumi Experience__: Works alongside Pulumi’s AWS Provider, enhancing Infrastructure as Code (IaC) projects with the latest AWS capabilities without requiring significant changes to existing setups.
 * __Extended support for third-party resources__: Our platform offers enhanced flexibility and interoperability by supporting third-party resources available in the CloudFormation Registry, such as Atlassian, MongoDB, Datadog, and more.
-* __Easy CloudFormation to Pulumi Migration__: [cf2pulumi](https://www.pulumi.com/cf2pulumi/) provides the ability to migrate existing CloudFormation templates into Pulumi programs in your favorite language. 
+* __Easy CloudFormation to Pulumi Migration__: [cf2pulumi](https://www.pulumi.com/cf2pulumi/) provides the ability to migrate existing CloudFormation templates into Pulumi programs in your favorite language.
 
 
-At Pulumi, we're dedicated to empowering our customers with the tools they need to innovate and thrive in the cloud. The launch of the AWS Cloud Control Provider represents our unwavering commitment to providing best-in-class solutions that simplify cloud management, streamline operations, and drive business success. The Pulumi AWS Cloud Control Provider can be used side-by-side with the standard  Pulumi AWS provider and nearly 200  additional Pulumi resource providers that cover a wide variety of cloud and SaaS platforms.  
+At Pulumi, we're dedicated to empowering our customers with the tools they need to innovate and thrive in the cloud. The launch of the AWS Cloud Control Provider represents our unwavering commitment to providing best-in-class solutions that simplify cloud management, streamline operations, and drive business success. The Pulumi AWS Cloud Control Provider can be used side-by-side with the standard  Pulumi AWS provider and nearly 200  additional Pulumi resource providers that cover a wide variety of cloud and SaaS platforms.
 
 ## Using Pulumi AWS Cloud Control Provider with the Pulumi AWS Provider
 
@@ -33,8 +33,8 @@ Let’s walk through an example of using the AWS Cloud Control Provider alongsid
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";  
-import * as awscc from "@pulumi/aws-native"; 
+import * as aws from "@pulumi/aws";
+import * as awscc from "@pulumi/aws-native";
 
 // ARN of the IAM role that the Lambda function will assume
 const roleArn = "arn:aws:iam::YOUR_ACCOUNT_ID:role/cloudcontrol-test";
@@ -116,11 +116,11 @@ using Pulumi;
 using Aws = Pulumi.Aws;
 using AwsCloudControl = Pulumi.AwsNative;
 
-return await Deployment.RunAsync(() => 
+return await Deployment.RunAsync(() =>
 {
     // Create an S3 bucket
     var myBucket = new Aws.S3.Bucket("myBucket");
- 
+
    // Create a Lambda function using AWS Cloud Control
     var myLambdaFunction = new AwsCloudControl.Lambda.Function("myLambdaFunction", new()
     {
@@ -142,7 +142,7 @@ return await Deployment.RunAsync(() =>
         },
         Environment = new AwsCloudControl.Lambda.Inputs.FunctionEnvironmentArgs
         {
-            Variables = 
+            Variables =
             {
                 { "BUCKET_NAME", myBucket.BucketName },
             },
@@ -277,61 +277,61 @@ const exampleIPSet = new awscc.wafv2.IpSet("exampleIPSet", {
 
 const ipMatch: RuleGroupStatement = {
   ipSetReferenceStatement: {
-	arn: exampleIPSet.arn,
+    arn: exampleIPSet.arn,
   },
 };
 
 const testURIMatch: RuleGroupStatement = {
   byteMatchStatement: {
-	searchString: "/test",
-	fieldToMatch: {
-  	uriPath: {},
-	},
-	textTransformations: [
-  	{
-    	priority: 0,
-    	type: "NONE",
-  	},
-	],
-	positionalConstraint: "EXACTLY",
+    searchString: "/test",
+    fieldToMatch: {
+      uriPath: {},
+    },
+    textTransformations: [
+      {
+        priority: 0,
+        type: "NONE",
+      },
+    ],
+    positionalConstraint: "EXACTLY",
   },
 };
 
 const hostMatch: RuleGroupStatement = {
   byteMatchStatement: {
-	fieldToMatch: {
-  	singleHeader: {
-    	name: "host",
-  	},
-	},
-	positionalConstraint: "EXACTLY",
-	searchString: "example.com",
-	textTransformations: [
-  	{
-    	type: "NONE",
-    	priority: 0,
-  	},
-	],
+    fieldToMatch: {
+      singleHeader: {
+        name: "host",
+      },
+    },
+    positionalConstraint: "EXACTLY",
+    searchString: "example.com",
+    textTransformations: [
+      {
+        type: "NONE",
+        priority: 0,
+      },
+    ],
   },
 };
 
 const internalLabelMatch: RuleGroupStatement = {
   labelMatchStatement: {
-	scope: "LABEL",
-	key: "internal",
+    scope: "LABEL",
+    key: "internal",
   },
 };
 const xssMatch: RuleGroupStatement = {
   xssMatchStatement: {
-	fieldToMatch: {
-  	body: {},
-	},
-	textTransformations: [
-  	{
-    	priority: 0,
-    	type: "NONE",
-  	},
-	],
+    fieldToMatch: {
+      body: {},
+    },
+    textTransformations: [
+      {
+        priority: 0,
+        type: "NONE",
+      },
+    ],
   },
 };
 
@@ -352,35 +352,35 @@ const exampleRuleGroup = new awscc.wafv2.RuleGroup("exampleRuleGroup", {
   capacity: 2000,
 
   rules: [
-	{
-  	action: { allow: {} },
-  	name: "rule-1",
-  	priority: 1,
-  	statement: matchAny([
-    	  matchAll([ipMatch, xssMatch]),
-    	  matchNot(
-      	  matchAny([
-        	testURIMatch,
-        	matchAll([
-          	  internalLabelMatch,
-          	  matchNot(matchAll([ipMatch, hostMatch])),
-        	]),
-      	  ]),
-    	  ),
-  	]),
+    {
+      action: { allow: {} },
+      name: "rule-1",
+      priority: 1,
+      statement: matchAny([
+        matchAll([ipMatch, xssMatch]),
+        matchNot(
+          matchAny([
+            testURIMatch,
+            matchAll([
+              internalLabelMatch,
+              matchNot(matchAll([ipMatch, hostMatch])),
+            ]),
+          ]),
+        ),
+      ]),
 
-  	visibilityConfig: {
-    	cloudWatchMetricsEnabled: true,
-    	metricName: "friendly-rule-metric-name",
-    	sampledRequestsEnabled: true,
-  	},
-	},
+      visibilityConfig: {
+        cloudWatchMetricsEnabled: true,
+        metricName: "friendly-rule-metric-name",
+        sampledRequestsEnabled: true,
+      },
+    },
   ],
   scope: "REGIONAL",
   visibilityConfig: {
-	cloudWatchMetricsEnabled: true,
-	metricName: "friendly-metric-name",
-	sampledRequestsEnabled: true,
+    cloudWatchMetricsEnabled: true,
+    metricName: "friendly-metric-name",
+    sampledRequestsEnabled: true,
   },
 });
 
@@ -388,37 +388,36 @@ const exampleRuleGroup = new awscc.wafv2.RuleGroup("exampleRuleGroup", {
 const exampleWebACL = new awscc.wafv2.WebAcl("exampleWebACL", {
   defaultAction: { allow: {} },
   rules: [
-	{
-  	name: "example-rule-1",
-  	overrideAction: { count: {} },
-  	priority: 1,
-  	statement: {
-    	ruleGroupReferenceStatement: {
-      	arn: exampleRuleGroup.arn,
-    	},
-  	},
-  	visibilityConfig: {
-    	cloudWatchMetricsEnabled: true,
-    	metricName: "friendly-rule-metric-name",
-    	sampledRequestsEnabled: true,
-  	},
-	},
+    {
+      name: "example-rule-1",
+      overrideAction: { count: {} },
+      priority: 1,
+      statement: {
+        ruleGroupReferenceStatement: {
+          arn: exampleRuleGroup.arn,
+        },
+      },
+      visibilityConfig: {
+        cloudWatchMetricsEnabled: true,
+        metricName: "friendly-rule-metric-name",
+        sampledRequestsEnabled: true,
+      },
+    },
   ],
   scope: "REGIONAL",
   visibilityConfig: {
-	cloudWatchMetricsEnabled: true,
-	metricName: "friendly-metric-name",
-	sampledRequestsEnabled: true,
+    cloudWatchMetricsEnabled: true,
+    metricName: "friendly-metric-name",
+    sampledRequestsEnabled: true,
   },
 });
-
 ```
 
 ## Conclusion
 
 The [AWS Cloud Control Provider] for Pulumi is a major step forward in fully and faithfully supporting the AWS Cloud Control API and its ecosystem in Pulumi. By closely collaborating with AWS, we’ve created a provider that enables Pulumi users to leverage the latest AWS features as soon as they are released - without waiting for upstream provider changes to arrive in the standard Pulumi AWS Provider.
 
-Our goal is to continually improve and simplify the Pulumi experience, empowering developers with the tools they need to manage cloud infrastructure seamlessly. This new provider represents our commitment to delivering cutting-edge capabilities as quickly as possible. 
+Our goal is to continually improve and simplify the Pulumi experience, empowering developers with the tools they need to manage cloud infrastructure seamlessly. This new provider represents our commitment to delivering cutting-edge capabilities as quickly as possible.
 
 We look forward to your feedback and encourage you to explore the full potential of the Pulumi AWS Cloud Control Provider. Don’t hesitate to reach out via our [GitHub repository](https://github.com/pulumi/pulumi-aws-native) with any questions or suggestions as we continue to refine and enhance this experience.
 
@@ -426,3 +425,4 @@ We look forward to your feedback and encourage you to explore the full potential
 [Pulumi AWS Provider]: https://www.pulumi.com/registry/packages/aws/
 [standard AWS Provider]: https://www.pulumi.com/registry/packages/aws/
 [AWS Cloud Control API]: https://aws.amazon.com/cloudcontrolapi/
+
