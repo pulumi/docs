@@ -355,7 +355,10 @@ Status: 200 OK
 ```
 
 ```
-
+{
+  "resourceCount": 2,
+  "version": 5
+}
 ```
 
 <!-- ###################################################################### -->
@@ -391,7 +394,96 @@ Status: 200 OK
 ```
 
 ```
-
+{
+  "resources": [
+    {
+      "resource": {
+        "type": "pulumi:pulumi:Stack",
+        "urn": "urn:pulumi:dev::prog-aws-typescript::pulumi:pulumi:Stack::prog-aws-typescript-dev",
+        "custom": false,
+        "delete": false,
+        "dependencies": [],
+        "outputs": {}
+      }
+    },
+    {
+      "resource": {
+        "id": "my-bucket-a4a3a07",
+        "type": "aws:s3/bucket:Bucket",
+        "urn": "urn:pulumi:dev::prog-aws-typescript::aws:s3/bucket:Bucket::my-bucket",
+        "custom": true,
+        "delete": false,
+        "dependencies": [],
+        "parent": "urn:pulumi:dev::prog-aws-typescript::pulumi:pulumi:Stack::prog-aws-typescript-dev",
+        "additionalSecretOutputs": [
+          "tags"
+        ],
+        "inputs": {
+          "__defaults": [
+            "acl",
+            "bucket",
+            "forceDestroy"
+          ],
+          "acl": "private",
+          "bucket": "my-bucket-a4a3a07",
+          "forceDestroy": false,
+          "tags": {
+            "__defaults": [],
+            "anyone-can-delete-me": "true",
+            "owner": "my-pulumi-login"
+          }
+        },
+        "outputs": {
+          "accelerationStatus": "",
+          "acl": "private",
+          "arn": "arn:aws:s3:::my-bucket-a4a3a07",
+          "bucket": "my-bucket-a4a3a07",
+          "bucketDomainName": "my-bucket-a4a3a07.s3.amazonaws.com",
+          "bucketRegionalDomainName": "my-bucket-a4a3a07.s3.amazonaws.com",
+          "corsRules": [],
+          "forceDestroy": false,
+          "grants": [],
+          "hostedZoneId": "Z3AQBSTGFYJSTF",
+          "id": "my-bucket-a4a3a07",
+          "lifecycleRules": [],
+          "loggings": [],
+          "objectLockConfiguration": null,
+          "region": "us-east-1",
+          "replicationConfiguration": null,
+          "requestPayer": "BucketOwner",
+          "serverSideEncryptionConfiguration": {
+            "rule": {
+              "applyServerSideEncryptionByDefault": {
+                "kmsMasterKeyId": "",
+                "sseAlgorithm": "AES256"
+              },
+              "bucketKeyEnabled": false
+            }
+          },
+          "tags": {
+            "4dabf18193072939515e22adb298388d": "1b47061264138c4ac30d75fd1eb44270",
+            "ciphertext": "v1:4MBM2acrauXVfXK0:N6Bv7P+Zt27+pP+N9z+VHWllSYtqi9/K9HXQ7lkGRjGfdReLz5lW8QBpF3sLRFK8jvqf11SUy2ueBNBGd2MIgq8j6//305ZM1l0="
+          },
+          "tagsAll": {
+            "anyone-can-delete-me": "true",
+            "owner": "my-pulumi-login"
+          },
+          "versioning": {
+            "enabled": false,
+            "mfaDelete": false
+          },
+          "website": null
+        },
+        "providerInputs": {
+          "region": "us-east-1",
+          "version": "5.31.0"
+        }
+      }
+    }
+  ],
+  "region": "us-east-1",
+  "version": 5
+}
 ```
 
 <!-- ###################################################################### -->
@@ -428,7 +520,96 @@ Status: 200 OK
 ```
 
 ```
-
+{
+  "resources": [
+    {
+      "resource": {
+        "type": "pulumi:pulumi:Stack",
+        "urn": "urn:pulumi:dev::prog-aws-typescript::pulumi:pulumi:Stack::prog-aws-typescript-dev",
+        "custom": false,
+        "delete": false,
+        "dependencies": [],
+        "outputs": {}
+      }
+    },
+    {
+      "resource": {
+        "id": "my-bucket-a4a3a07",
+        "type": "aws:s3/bucket:Bucket",
+        "urn": "urn:pulumi:dev::prog-aws-typescript::aws:s3/bucket:Bucket::my-bucket",
+        "custom": true,
+        "delete": false,
+        "dependencies": [],
+        "parent": "urn:pulumi:dev::prog-aws-typescript::pulumi:pulumi:Stack::prog-aws-typescript-dev",
+        "additionalSecretOutputs": [
+          "tags"
+        ],
+        "inputs": {
+          "__defaults": [
+            "acl",
+            "bucket",
+            "forceDestroy"
+          ],
+          "acl": "private",
+          "bucket": "my-bucket-a4a3a07",
+          "forceDestroy": false,
+          "tags": {
+            "__defaults": [],
+            "anyone-can-delete-me": "true",
+            "owner": "my-pulumi-login"
+          }
+        },
+        "outputs": {
+          "accelerationStatus": "",
+          "acl": "private",
+          "arn": "arn:aws:s3:::my-bucket-a4a3a07",
+          "bucket": "my-bucket-a4a3a07",
+          "bucketDomainName": "my-bucket-a4a3a07.s3.amazonaws.com",
+          "bucketRegionalDomainName": "my-bucket-a4a3a07.s3.amazonaws.com",
+          "corsRules": [],
+          "forceDestroy": false,
+          "grants": [],
+          "hostedZoneId": "Z3AQBSTGFYJSTF",
+          "id": "my-bucket-a4a3a07",
+          "lifecycleRules": [],
+          "loggings": [],
+          "objectLockConfiguration": null,
+          "region": "us-east-1",
+          "replicationConfiguration": null,
+          "requestPayer": "BucketOwner",
+          "serverSideEncryptionConfiguration": {
+            "rule": {
+              "applyServerSideEncryptionByDefault": {
+                "kmsMasterKeyId": "",
+                "sseAlgorithm": "AES256"
+              },
+              "bucketKeyEnabled": false
+            }
+          },
+          "tags": {
+            "4dabf18193072939515e22adb298388d": "1b47061264138c4ac30d75fd1eb44270",
+            "ciphertext": "v1:4MBM2acrauXVfXK0:N6Bv7P+Zt27+pP+N9z+VHWllSYtqi9/K9HXQ7lkGRjGfdReLz5lW8QBpF3sLRFK8jvqf11SUy2ueBNBGd2MIgq8j6//305ZM1l0="
+          },
+          "tagsAll": {
+            "anyone-can-delete-me": "true",
+            "owner": "my-pulumi-login"
+          },
+          "versioning": {
+            "enabled": false,
+            "mfaDelete": false
+          },
+          "website": null
+        },
+        "providerInputs": {
+          "region": "us-east-1",
+          "version": "5.31.0"
+        }
+      }
+    }
+  ],
+  "region": "us-east-1",
+  "version": 2
+}
 ```
 <!-- ###################################################################### -->
 
