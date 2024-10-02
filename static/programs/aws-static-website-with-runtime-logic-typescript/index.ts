@@ -14,10 +14,11 @@ const result = childProcess.execSync("hugo --destination ./public", { stdio: "pi
 console.log(result.toString());
 
 // Provision a storage bucket for the website.
-const bucket = new aws.s3.Bucket("bucket", {
-    website: {
-        indexDocument: "index.html",
-    },
+const bucket = new aws.s3.BucketV2("bucket");
+
+const bucketWebsite = new aws.s3.BucketWebsiteConfigurationV2("bucket", {
+    bucket: bucket.id,
+    indexDocument: {suffix: "index.html"},
 });
 
 // Apply some ownership controls and public-access privileges.
@@ -72,7 +73,7 @@ const cdn = new aws.cloudfront.Distribution("cdn", {
     origins: [
         {
             originId: bucket.arn,
-            domainName: bucket.websiteEndpoint,
+            domainName: bucketWebsite.websiteEndpoint,
             customOriginConfig: {
                 originProtocolPolicy: "http-only",
                 httpPort: 80,
