@@ -16,7 +16,7 @@ Today we are excited to release an updated version of the Pulumi Insights Resour
 
 <!--more-->
 
-* **Grouping** provides a rich model for factoring your resources into logical groupings to help you gain insights over your infrastructure and plan actions in incremental groupings. To create a group, drag the column header to the grouping control. Note that you can create hierarchical groups by adding multiple columns and even rearrange the order of the groups.
+* **Groups** - Resources can be grouped into logical categories, including nested groups. Group resources by properties like stack, modified time, or category to explore your infrastructure from different angles. Relevant aggregations are included for each grouping to help you understand the information at a glance.
 * **Filters** - Columns provide type-specific filters to narrow your search. Filters work in conjunction with the free-form search bar, giving you the control to build focused views for different aspects of your infrastructure.
 * **Sorting** - Each column supports sorting, and multi-sort support allows multiple columns to be included in the ordering.
 * **Favorites** - Once you find a view that you like, save it as a favorite to give you quick access to it in the future. The explorer state is persisted to the URL, so you can share the view with other users in your organization.
