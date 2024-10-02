@@ -12,13 +12,13 @@ tags:
     - resources
 ---
 
-Pulumi Insights gives you the tools to stay informed about your cloud infrastructure. Our Resource explorer provides advanced search and filtering to [find what you need](/blog/resource-search). Today, we are excited to release an update that adds new ways to factor your resource data, and share those views with other users in your organization!
+Pulumi Insights gives you the tools to stay informed about your cloud infrastructure. Our Resource explorer provides advanced search and filtering too [find what you need](/blog/resource-search). Today, we are excited to release an update that adds new ways to factor your resource data, and share those views with other users in your organization!
 
 <!--more-->
 
 ### Factoring the Data
 
-Being able find and group your resources using diffent fields and properties is the key to gaining the insights needed to understand the status of your infrastructure and determine any future projects needed. The new Resources view provides several updated tools for doing this factoring.
+Being able find and group your resources using different fields and properties is the key to gaining the insights needed to understand the status of your infrastructure and determine any future projects needed. The new Resources view provides several updated tools for doing this factoring.
 
 * **Groups** - Resources can be grouped into logical categories, including nested groups. Group resources by properties like stack, modified time, or category to explore your infrastructure from different angles. Relevant aggregations are included for each grouping to help you understand the information at a glance.
 * **Filters** - Columns provide type-specific filters to narrow your search. Filters work in conjunction with the free-form search bar, giving you the control to build focused views for different aspects of your infrastructure.
