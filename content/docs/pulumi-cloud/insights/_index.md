@@ -57,9 +57,11 @@ Selecting **project** will pre-populate a query with `project:` which we can the
 
 ![Resource Search Filter Helper](search-filter-helper.png)
 
-The columns displayed on results can be modified to show or hide information by selecting the **gear icon**.
+The columns displayed on results can be modified to show or hide information by selecting the **gear icon** and clicking the **Choose columns**.
 
 ![Resource Search Options Gear](gear-icon-dropdown.png)
+
+You will then see the **Column menu** appear, where you can choose the columns to display.
 
 ![Resource Search Column Chooser](column-chooser.png)
 
