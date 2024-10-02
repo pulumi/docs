@@ -139,7 +139,7 @@ resources:
     options:
       version: 6.45.0
   my-bucket:
-    type: aws:s3:Bucket
+    type: aws:s3:BucketV2
 ```
 
 In this example the `my-bucket` resource, and any other AWS resources, uses the default AWS provider version 6.45.0.
@@ -183,7 +183,7 @@ To declare a resource with a specific provider version use the `version` option 
 ```yaml
 resources:
   something:
-    type: aws:s3:Bucket
+    type: aws:s3:BucketV2
     properties:
       ...
     options:
@@ -207,7 +207,7 @@ resources:
       version: 6.45.0
       pluginDownloadURL: github://api.github.com/pulumi
   my-bucket:
-    type: aws:s3:Bucket
+    type: aws:s3:BucketV2
 ```
 
 ### Outputs and Stack References
