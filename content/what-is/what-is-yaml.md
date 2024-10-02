@@ -110,10 +110,32 @@ name: simple-yaml
 runtime: yaml
 resources:
   my-bucket:
-    type: aws:s3:Bucket
+    type: aws:s3:BucketV2
+  my-bucket-ownership-controls:
+    type: aws:s3:BucketOwnershipControls
     properties:
-      website:
-        indexDocument: index.html
+      bucket: ${my-bucket.id}
+      rule:
+        objectOwnership: ObjectWriter
+  my-bucket-acl:
+    type: aws:s3:BucketAclV2
+    properties:
+      bucket: ${my-bucket.bucket}
+      acl: public-read
+    options:
+      dependsOn:
+        - ${my-bucket-ownership-controls}
+  my-bucket-public-access-block:
+    type: aws:s3:BucketPublicAccessBlock
+    properties:
+      bucket: ${my-bucket.id}
+      blockPublicAcls: false
+  my-bucket-website:
+    type: aws:s3:BucketWebsiteConfigurationV2
+    properties:
+      bucket: ${my-bucket.bucket}
+      indexDocument:
+        suffix: index.html
   index.html:
     type: aws:s3:BucketObject
     properties:
@@ -123,7 +145,7 @@ resources:
       acl: public-read
       contentType: text/html
 outputs:
-  bucketEndpoint: http://${my-bucket.websiteEndpoint}
+  bucketEndpoint: http://${my-bucket-website.websiteEndpoint}
 ```
 
 There are a few Pulumi-specific things happening in this YAML. Let's take a closer look.
@@ -138,10 +160,13 @@ To begin with, we're naming our program `simple-yaml`, and defining the runtime 
 ```yaml
 resources:
   my-bucket:
-    type: aws:s3:Bucket
+    type: aws:s3:BucketV2
+  my-bucket-website:
+    type: aws:s3:BucketWebsiteConfigurationV2
     properties:
-      website:
-        indexDocument: index.html
+      bucket: ${my-bucket.bucket}
+      indexDocument:
+        suffix: index.html
   index.html:
     type: aws:s3:BucketObject
     properties:
@@ -150,9 +175,32 @@ resources:
         fn::stringAsset: <h1>Hello, world!</h1>
       acl: public-read
       contentType: text/html
+  my-bucket-ownership-controls:
+    type: aws:s3:BucketOwnershipControls
+    properties:
+      bucket: ${my-bucket.id}
+      rule:
+        objectOwnership: ObjectWriter
+  my-bucket-acl:
+    type: aws:s3:BucketAclV2
+    properties:
+      bucket: ${my-bucket.bucket}
+      acl: public-read
+    options:
+      dependsOn:
+        - ${my-bucket-ownership-controls}
+  my-bucket-public-access-block:
+    type: aws:s3:BucketPublicAccessBlock
+    properties:
+      bucket: ${my-bucket.id}
+      blockPublicAcls: false
 ```
 
-Next, we're defining the resources Pulumi should create for you. In this case, with the name `my-bucket`, an AWS S3 bucket that we want to act like a website. Its should expect to serve an index document called `index.html`, to be publicly readable and contain a simple "Hello, world!" message.
+Next, we are defining the resources Pulumi should create for you. First, `my-bucket` creates an AWS S3 bucket and
+`my-bucket-website` makes it act like a website. Then `index.html` resource uploads a document containing a simple
+"Hello, world!" message to serve as the main page to the bucket. Finally `my-bucket-ownership-controls`,
+`my-bucket-acl`, and `my-bucket-public-access-block` configure AWS networking to allow the public Internet traffic to
+flow to the bucket.
 
 ```yaml
 outputs:
