@@ -64,7 +64,7 @@ const aws = require("@pulumi/aws");
 const awsx = require("@pulumi/awsx");
 
 // Create an AWS resource (S3 Bucket)
-const bucket = new aws.s3.Bucket("my-bucket");
+const bucket = new aws.s3.BucketV2("my-bucket");
 
 // Export the name of the bucket
 exports.bucketName = bucket.id;
@@ -80,7 +80,7 @@ import * as aws from "@pulumi/aws";
 import * as awsx from "@pulumi/awsx";
 
 // Create an AWS resource (S3 Bucket)
-const bucket = new aws.s3.Bucket("my-bucket");
+const bucket = new aws.s3.BucketV2("my-bucket");
 
 // Export the name of the bucket
 export const bucketName = bucket.id;
@@ -95,7 +95,7 @@ import pulumi
 from pulumi_aws import s3
 
 # Create an AWS resource (S3 Bucket)
-bucket = s3.Bucket('my-bucket')
+bucket = s3.BucketV2('my-bucket')
 
 # Export the name of the bucket
 pulumi.export('bucket_name', bucket.id)
@@ -116,13 +116,13 @@ import (
 func main() {
     pulumi.Run(func(ctx *pulumi.Context) error {
         // Create an AWS resource (S3 Bucket)
-        bucket, err := s3.NewBucket(ctx, "my-bucket", nil)
+        bucket, err := s3.NewBucketV2(ctx, "my-bucket", nil)
         if err != nil {
             return err
         }
 
         // Export the name of the bucket
-        ctx.Export("bucketName", bucket.ID())
+        ctx.Export("bucketName", bucket.Bucket())
         return nil
 	  })
 }
@@ -140,7 +140,7 @@ using System.Collections.Generic;
 return await Deployment.RunAsync(() =>
 {
    // Create an AWS resource (S3 Bucket)
-   var bucket = new Bucket("my-bucket");
+   var bucket = new BucketV2("my-bucket");
 
    // Export the name of the bucket
    return new Dictionary<string, object?>
@@ -158,14 +158,14 @@ return await Deployment.RunAsync(() =>
 package myproject;
 
 import com.pulumi.Pulumi;
-import com.pulumi.aws.s3.Bucket;
+import com.pulumi.aws.s3.BucketV2;
 
 public class App {
     public static void main(String[] args) {
         Pulumi.run(ctx -> {
 
             // Create an AWS resource (S3 Bucket)
-            var bucket = new Bucket("my-bucket");
+            var bucket = new BucketV2("my-bucket");
 
             // Export the name of the bucket
             ctx.export("bucketName", bucket.bucket());
@@ -186,7 +186,7 @@ description: A minimal AWS Pulumi YAML program
 resources:
   # Create an AWS resource (S3 Bucket)
   my-bucket:
-    type: aws:s3:Bucket
+    type: aws:s3:BucketV2
 
 outputs:
   # Export the name of the bucket
