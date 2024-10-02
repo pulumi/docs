@@ -71,9 +71,9 @@
             "whatis": "AWS IAM (Identity and Access Management) is a service that enables you to securely manage access to AWS resources. It allows you to create and control user permissions, defining who can access specific resources and under what conditions. IAM helps ensure security and compliance by enforcing fine-grained access controls across your AWS environment."
         },
         {
-            "name": "Database",
+            "name": "SQL Database",
             "cloud": "Azure",
-            "full": "Azure Database",
+            "full": "Azure SQL Database",
             "category": "database",
             "whatis": "Azure Database is a suite of fully managed, scalable, and secure relational database services designed for various database engines, including SQL Server, MySQL, PostgreSQL, and MariaDB. These services handle tasks like backups, patching, and high availability, allowing developers to focus on building applications rather than managing infrastructure. With features like built-in security, automated scaling, and integration with Azure ecosystem tools, Azure Database ensures seamless data management for enterprise and cloud-native applications."
         },
