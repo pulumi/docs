@@ -101,6 +101,12 @@
             "cloud": "Azure",
             "full": "Azure API Management",
             "whatis": "Azure API Management is a comprehensive service that allows organizations to create, secure, manage, and scale APIs with ease. It provides features like traffic management, security, and API versioning, ensuring that APIs are protected and accessible to developers and users. With built-in analytics, developer portals, and policy enforcement, Azure API Management helps streamline the API lifecycle for seamless integration across services and applications."
+        },
+        {
+            "name": "Azure AD",
+            "cloud": "Azure",
+            "full": "Azure AD",
+            "whatis": "AWS IAM (Identity and Access Management) is a service that enables you to securely manage access to AWS resources. It allows you to create and control user permissions, defining who can access specific resources and under what conditions. IAM helps ensure security and compliance by enforcing fine-grained access controls across your AWS environment."
         }
     ]
 }

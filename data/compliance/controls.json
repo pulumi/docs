@@ -239,12 +239,41 @@
     "Azure SQL Database instances should have automatic minor version upgrades enabled"
   ],
   "API Management": [
-    "Azure API Management (APIM) logging should be enabled.",
-    "Azure API Management should be configured to use SSL certificates for backend authentication.",
-    "Azure API Management should have Azure Monitor tracing enabled.",
-    "Azure API Management should be associated with an Azure Web Application Firewall (WAF) policy.",
-    "Azure API Management cache data should be encrypted at rest.",
-    "Azure API Management routes should specify an authorization type, such as OAuth 2.0 or API key.",
-    "Access logging should be configured for Azure API Management instances using Azure Monitor or Log Analytics."
+    "Azure API Management (APIM) logging should be enabled",
+    "Azure API Management should be configured to use SSL certificates for backend authentication",
+    "Azure API Management should have Azure Monitor tracing enabled",
+    "Azure API Management should be associated with an Azure Web Application Firewall (WAF) policy",
+    "Azure API Management cache data should be encrypted at rest",
+    "Azure API Management routes should specify an authorization type, such as OAuth 2.0 or API key",
+    "Access logging should be configured for Azure API Management instances using Azure Monitor or Log Analytics"
+  ],
+  "Azure AD": [
+    "Azure AD roles should not allow full administrative privileges with wildcard actions (*)",
+    "Azure AD users should not have custom roles or policies attached that grant excessive permissions",
+    "Azure AD users' credentials should be rotated every 90 days or less",
+    "Azure AD tenant administrator accounts should not have direct access keys",
+    "Multi-Factor Authentication (MFA) should be enabled for all Azure AD users with access to the Azure portal",
+    "Hardware MFA should be enabled for global administrator accounts",
+    "Password policies for Azure AD users should enforce strong configurations, including complexity requirements",
+    "Unused Azure AD user credentials should be removed after a specified period",
+    "MFA should be enabled for all Azure AD users with administrative access",
+    "Password policies for Azure AD users should have strong configurations",
+    "Ensure Azure AD password policy requires at least one uppercase letter",
+    "Ensure Azure AD password policy requires at least one lowercase letter",
+    "Ensure Azure AD password policy requires at least one symbol",
+    "Ensure Azure AD password policy requires at least one number",
+    "Ensure Azure AD password policy requires a minimum password length of 14 or greater",
+    "Ensure Azure AD password policy prevents password reuse",
+    "Ensure Azure AD password policy expires passwords within 90 days or less",
+    "Ensure a support role has been created for incident management and Azure support",
+    "MFA should be enabled for all Azure AD users",
+    "Azure AD custom roles created should not allow wildcard actions",
+    "Azure AD user credentials that have been unused for 45 days or more should be removed",
+    "Azure AD Privileged Identity Management (PIM) analyzers should be tagged for audit purposes",
+    "Azure AD roles should be tagged for governance",
+    "Azure AD users should be tagged for better access control and auditing",
+    "Expired SSL/TLS certificates managed in Azure AD should be removed",
+    "Azure AD identities should not have excessive permissions like Azure Cloud Shell Full Access policy attached",
+    "Azure AD Access Reviews and Conditional Access analyzers should be enabled for security monitoring"
   ]
 }
