@@ -45,26 +45,22 @@ In Python, inputs that are objects, that is inputs that group multiple values to
 The types with the suffix `ArgsDict` for dictionary literals were introduced in July 2024. You can still use dictionary literals with [providers](/docs/concepts/how-pulumi-works/#resource-providers) that have not been updated yet with this change, but you will not benefit from the type checking that the new types provide.
 {{% /notes %}}
 
-This example shows two ways to create an `s3.Bucket` resource in Python, once using a dictionary literal and once using a class:
+This example shows two ways to create an `ecr.Repository` resource in Python, once using a dictionary literal and once using a class:
 
 ```python
 import pulumi_aws as aws
 
-bucket1 = aws.s3.Bucket(
-    "my-bucket-with-dictionary-literals",
-    website={
-        "error_document": "error.html",
-        "index_document": "index.html",
-    },
-)
+repo1 = aws.ecr.Repository("repo1-with-dictionary-literals",
+    image_tag_mutability="MUTABLE",
+    image_scanning_configuration={
+        "scan_on_push": True,
+    })
 
-bucket2 = aws.s3.Bucket(
-    "my-bucket-with-args",
-    website=aws.s3.BucketWebsiteArgs(
-        error_document="error.html",
-        index_document="index.html",
-    ),
-)
+repo2 = aws.ecr.Repository("repo2-with-args",
+    image_tag_mutability="MUTABLE",
+    image_scanning_configuration=aws.ecr.RepositoryImageScanningConfigurationArgs(
+        scan_on_push=True
+    ))
 ```
 
 ### Blocking and Asynchronous Code
