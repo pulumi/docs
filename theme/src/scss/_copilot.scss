@@ -13,8 +13,8 @@
     // Popovers on site use z-index: 20
     z-index: 10;
 
-    // Default use up the full height of the viewport
-    top: 0;
+    // Default, make space for the navbar
+    top: calc(38px + 8px + 8px + 54px);
     right: 0;
     bottom: 0;
 }
@@ -28,11 +28,4 @@
 /* FIXME: no section suffix? */
 .section- #ai-sidebar-target {
     top: 200px;
-}
-
-// Docs pages
-// ---
-
-.section-docs #ai-sidebar-target {
-    top: calc(38px + 8px + 8px + 54px);
 }
