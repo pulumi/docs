@@ -324,6 +324,114 @@ Status: 200 OK
 
 <!-- ###################################################################### -->
 
+### Get Stack Resource Count
+
+```
+GET /api/stacks/{organization}/{project}/{stack}/resources/count
+```
+
+#### Parameters
+
+| Parameter      | Type   | In   | Description       |
+|----------------|--------|------|-------------------|
+| `organization` | string | path | organization name |
+| `project`      | string | path | project name      |
+| `stack`        | string | path | stack name        |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  https://api.pulumi.com/api/stacks/{organization}/{project}/{stack}/resources/count
+```
+
+#### Default response
+
+```
+Status: 200 OK
+```
+
+```
+
+```
+
+<!-- ###################################################################### -->
+
+### Get (Latest) Current Stack Resources
+
+```
+GET /api/stacks/{organization}/{project}/{stack}/resources/latest
+```
+
+#### Parameters
+
+| Parameter      | Type   | In   | Description       |
+|----------------|--------|------|-------------------|
+| `organization` | string | path | organization name |
+| `project`      | string | path | project name      |
+| `stack`        | string | path | stack name        |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  https://api.pulumi.com/api/stacks/{organization}/{project}/{stack}/resources/latest
+```
+
+#### Default response
+
+```
+Status: 200 OK
+```
+
+```
+
+```
+
+<!-- ###################################################################### -->
+
+### Get Stack Resources For Version
+
+```
+GET /api/stacks/{organization}/{project}/{stack}/resources/{version}
+```
+
+#### Parameters
+
+| Parameter      | Type   | In   | Description          |
+|----------------|--------|------|----------------------|
+| `organization` | string | path | organization name    |
+| `project`      | string | path | project name         |
+| `stack`        | string | path | stack name           |
+| `version`      | number | path | stack update version |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  https://api.pulumi.com/api/stacks/{organization}/{project}/{stack}/resources/{version}
+```
+
+#### Default response
+
+```
+Status: 200 OK
+```
+
+```
+
+```
+<!-- ###################################################################### -->
+
 ### Transfer Stack
 
 Transfers the stack from one organization in the Pulumi Cloud to a different organization. The user calling this operation must have the necessary [stack permissions](/docs/pulumi-cloud/projects-and-stacks#stack-permissions) for this operation to be successful.
