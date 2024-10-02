@@ -206,7 +206,7 @@
     "Azure Client VPN endpoints should have client connection logging enabled",
     "Azure Virtual Network Gateways should be tagged"
   ],
-  "Database": [
+  "SQL Database": [
     "Azure SQL Database backups should be private",
     "Azure SQL Database instances should prohibit public access, as determined by the Public Network Access configuration",
     "Azure SQL Database instances should have encryption at-rest enabled",
