@@ -8,7 +8,7 @@ allow_long_title: true
 # published. To influence the ordering of posts published on the same date, use
 # the time portion of the date value; posts are sorted in descending order by
 # date/time.
-date: 2024-10-02T09:52:10Z
+date: 2024-10-03T09:52:10Z
 
 # The draft setting determines whether a post is published. Set it to true if
 # you want to be able to merge the post without publishing it.
