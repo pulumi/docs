@@ -89,7 +89,7 @@ However, as the demand for software-driven features grew, the complexity of mana
 
 ## The Evolution of BMW's Software Development Toolchain
 
-BMW's journey to streamline its software development process has been gradual and iterative. The company's initial approach involved using Ansible for deployment and a custom-built deployment scripting solution for its OpenShift cluster.
+BMW's journey to streamline its software development process has been gradual and iterative. The company's initial approach involved using [Ansible](https://www.pulumi.com/docs/iac/concepts/vs/chef-puppet-etc/) for deployment and a custom-built deployment scripting solution for its OpenShift cluster.
 
 As the complexity of the platform increased, BMW turned to Helm and Kubernetes to manage its containerized services. However, as the company ventured into the public cloud, the limitations of these tools became apparent. The team recognized the need for a more comprehensive and scalable solution to manage their infrastructure as code.
 
@@ -103,7 +103,7 @@ At this critical juncture, BMW discovered Pulumi. This modern IaC solution offer
 
 One of BMW's key initiatives was developing a shared modules library, which allowed the team to abstract the complexity of various infrastructure components, such as databases, and provide a consistent and user-friendly interface for their developers.
 - By leveraging [Pulumi's Python](https://www.pulumi.com/docs/iac/languages-sdks/python/) bindings, BMW was able to create reusable modules that encapsulated best practices and sensible defaults, making it easier for developers to provision and manage infrastructure resources.
-The use of Pydantic, a powerful data validation library, enabled BMW to define schema-based configurations for their infrastructure. These were then integrated into their IDEs, providing developers with auto-completion and validation support.
+BMW used Pydantic, a powerful data validation library, to define schema-based configurations for its infrastructure. These were then integrated into its IDEs, providing developers with auto-completion and validation support.
 - This approach not only accelerated the development process but also ensured that the infrastructure deployed across the organization adhered to consistent security and compliance standards.
 
 ### Transformation Features: Protecting Legacy Services
@@ -115,8 +115,8 @@ The use of Pydantic, a powerful data validation library, enabled BMW to define s
 ### Policy Enforcement: Ensuring Compliance and Security
 
 One key benefit of [Pulumi's IaC approach](https://www.pulumi.com/product/infrastructure-as-code/) is the ability to define and enforce policies across the organization, ensuring that infrastructure deployments adhere to security and compliance standards.
-BMW has leveraged [Pulumi's policy-as-code](https://www.pulumi.com/docs/iac/packages-and-automation/crossguard/) capabilities to implement mandatory checks, such as ensuring that all S3 buckets are encrypted at rest, preventing the deployment of non-compliant resces.
-- By integrating these policy checks into their deployment workflows, BMW has shifted security and compliance concerns to the left, addressing issues early in the development process and reducing the risk of costly post-deployment remediations
+BMW has leveraged [Pulumi's policy-as-code](https://www.pulumi.com/docs/iac/packages-and-automation/crossguard/) capabilities to implement mandatory checks, such as ensuring that all S3 buckets are encrypted at rest, preventing the deployment of non-compliant resources.
+- By integrating these policy checks into their deployment workflows, BMW has shifted security and compliance concerns to the left, addressing issues early in the development process and reducing the risk of costly post-deployment [remediations](https://www.pulumi.com/blog/remediation-policies/).
 
 ## The Benefits of Pulumi: Accelerating Development and Improving Maintainability
 
@@ -144,7 +144,7 @@ Looking ahead, BMW's Software Factory is poised to take the next step in its evo
 
 By leveraging the expertise and reliability of cloud service providers, BMW can focus on delivering innovative software features to their customers while the cloud providers handle the operational aspects of running the necessary services.
 
-As BMW continues to push the boundaries of automotive software, Pulumi's role in its Software Factory will only become more crucial. By providing a scalable and flexible IaC solution, Pulumi empowers BMW's developers to innovate with confidence and be secure in the knowledge that their infrastructure is managed consistently and in alignment with the company's security and compliance standards.
+As BMW continues to push the boundaries of automotive software, Pulumi's role in its Software Factory will only become more crucial. By providing a scalable and flexible IaC solution, Pulumi empowers BMW's developers to innovate with confidence and be secure in the knowledge that their infrastructure is managed consistently and in alignment with the company's [security and compliance standards](https://www.pulumi.com/resources/security-automation-faster-cheaper-better/).
 
 ## Conclusion: Unlocking the Future of Automotive Software
 
