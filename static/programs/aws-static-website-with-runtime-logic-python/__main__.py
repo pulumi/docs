@@ -80,7 +80,7 @@ cdn = aws.cloudfront.Distribution(
     origins=[
         aws.cloudfront.DistributionOriginArgs(
             origin_id=bucket.arn,
-            domain_name=bucket.website_endpoint,
+            domain_name=bucket_website.website_endpoint,
             custom_origin_config=aws.cloudfront.DistributionOriginCustomOriginConfigArgs(
                 origin_protocol_policy="http-only",
                 http_port=80,
