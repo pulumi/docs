@@ -77,13 +77,13 @@ For help identifying a resource's type token and lookup property, see [Where to 
 In this example, a previously provisioned Amazon S3 bucket named `company-infra-logs` is imported into a Pulumi stack named `dev` (the currently [selected](/docs/cli/commands/pulumi_stack_select/) stack) and given a resource name of `infra-logs`:
 
 ```bash
-$ pulumi import aws:s3/bucket:Bucket infra-logs company-infra-logs
+$ pulumi import aws:s3/bucket:BucketV2 infra-logs company-infra-logs
 
 Previewing import (dev)
 
      Type                 Name        Plan
  +   pulumi:pulumi:Stack  dev         create
- =   └─ aws:s3:Bucket     my-bucket   import
+ =   └─ aws:s3:BucketV2   my-bucket   import
 
 Resources:
     + 1 to create
@@ -105,7 +105,7 @@ Importing (dev)
 
      Type                 Name        Status
  +   pulumi:pulumi:Stack  dev         created (3s)
- =   └─ aws:s3:Bucket     my-bucket   imported (1s)
+ =   └─ aws:s3:BucketV2   my-bucket   imported (1s)
 
 Resources:
     + 1 created
@@ -124,18 +124,11 @@ the destroy will take effect.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const my_bucket = new aws.s3.Bucket("infra-logs", {
+const my_bucket = new aws.s3.BucketV2("infra-logs", {
     arn: "arn:aws:s3:::company-infra-logs",
     bucket: "company-infra-logs",
     hostedZoneId: "Z3BJ4Q6RFIQJ6N",
     requestPayer: "BucketOwner",
-    serverSideEncryptionConfiguration: {
-        rule: {
-            applyServerSideEncryptionByDefault: {
-                sseAlgorithm: "AES256",
-            },
-        },
-    },
 }, {
     protect: true,
 });
