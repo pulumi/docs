@@ -18,7 +18,7 @@ Pulumi Insights gives you the tools to stay informed about your cloud infrastruc
 
 ### Factoring the Data
 
-Being able find and group your resources using diffent fields and propoerties is the key to gaining the insights needed to understand the status of your infrastructure and determine any future projects needed. The new Resources view provides several updated tools for doing this factoring.
+Being able find and group your resources using diffent fields and properties is the key to gaining the insights needed to understand the status of your infrastructure and determine any future projects needed. The new Resources view provides several updated tools for doing this factoring.
 
 * **Groups** - Resources can be grouped into logical categories, including nested groups. Group resources by properties like stack, modified time, or category to explore your infrastructure from different angles. Relevant aggregations are included for each grouping to help you understand the information at a glance.
 * **Filters** - Columns provide type-specific filters to narrow your search. Filters work in conjunction with the free-form search bar, giving you the control to build focused views for different aspects of your infrastructure.
@@ -34,7 +34,7 @@ The updated Resources page enables you to customize the view of your resources b
 
 ### Pinning Favorite Views
 
-Once you have configured the resources view to provide the insights needed, you can now save that view as a pinned view under the Resource tab in the left navigation panel. These pinned views enable the Resources page to act as a dashboard to the most important views and insights into your infrastructure. The views are also defined in the url for the page which means you can freely copy the url and send it to collegue for them to have a look at, or add the URL to a work tracking system to provide context in the task definition.
+Once you have configured the resources view to provide the insights needed, you can now save that view as a pinned view under the Resource tab in the left navigation panel. These pinned views enable the Resources page to act as a dashboard to the most important views and insights into your infrastructure. The views are also defined in the url for the page which means you can freely copy the url and send it to a collegue, or add the URL to a work tracking system to provide context in the task definition.
 
 {{< video title="Favorites" src="favorites.mp4" autoplay="true" loop="true" >}}
 
