@@ -17,7 +17,7 @@ Today we are excited to release an updated version of the Pulumi Insights Resour
 <!--more-->
 
 * **Grouping** provides a rich model for factoring your resources into logical groupings to help you gain insights over your infrastructure and plan actions in incremental groupings. To create a group, drag the column header to the grouping control. Note that you can create hierarchical groups by adding multiple columns and even rearrange the order of the groups.
-* **Filtering** allows you to quickly find specific resources or groups of resources based on different attributes of the resource. Filtering can be done by selecting the filter icon in the column header for the column you want to filter by. This will present a drop down that enables you to select, or enter, the values to filter by. Adding column filters updates the Resource Search field to reflect the filters selected, in this way, the column filtering can be used to help create Resource Queries that can be reused in other contexts.
+* **Filters** - Columns provide type-specific filters to narrow your search. Filters work in conjunction with the free-form search bar, giving you the control to build focused views for different aspects of your infrastructure.
 * **Sorting** - Each column supports sorting, and multi-sort support allows multiple columns to be included in the ordering.
 * **Favorites** - Once you find a view that you like, save it as a favorite to give you quick access to it in the future. The explorer state is persisted to the URL, so you can share the view with other users in your organization.
 
