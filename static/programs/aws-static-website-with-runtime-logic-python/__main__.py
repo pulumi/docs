@@ -21,8 +21,12 @@ result = subprocess.run(
 print(result.stdout.decode())
 
 # Provision a storage bucket for the website.
-bucket = aws.s3.Bucket(
-    "bucket", website=aws.s3.BucketWebsiteArgs(index_document="index.html")
+bucket = aws.s3.BucketV2("bucket")
+
+bucket_website = aws.s3.BucketWebsiteConfigurationV2(
+    "bucket",
+    bucket=bucket.bucket,
+    index_document={"suffix": "index.html"},
 )
 
 # Apply some ownership controls and public-access privileges.
