@@ -12,7 +12,7 @@ tags:
     - resources
 ---
 
-Today we are excited to release an updated version of the Pulumi Insights Resources page that provides a new user experience for grouping, filtering and sorting, and enables you to create custom views to help you gain additional understanding and insights of your infrastructure.
+Pulumi Insights gives you the tools to stay informed about your cloud infrastructure. Our Resource explorer provides advanced search and filtering to [find what you need](/blog/resource-search). Today, we are excited to release an update that adds new ways to factor your resource data, and share those views with other users in your organization!
 
 <!--more-->
 
