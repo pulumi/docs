@@ -40,6 +40,7 @@ tags:
     - developer-experience-devex
     - ansible
     - containers
+    - pulumi-deployments
 
 
 # The social copy used to promote this post on Twitter and Linkedin. These
@@ -103,7 +104,7 @@ At this critical juncture, BMW discovered Pulumi. This modern IaC solution offer
 
 One of BMW's key initiatives was developing a shared modules library, which allowed the team to abstract the complexity of various infrastructure components, such as databases, and provide a consistent and user-friendly interface for their developers.
 - By leveraging [Pulumi's Python](https://www.pulumi.com/docs/iac/languages-sdks/python/) bindings, BMW was able to create reusable modules that encapsulated best practices and sensible defaults, making it easier for developers to provision and manage infrastructure resources.
-BMW used Pydantic, a powerful data validation library, to define schema-based configurations for its infrastructure. These were then integrated into its IDEs, providing developers with auto-completion and validation support.
+BMW used Pydantic, a data validation library, to define schema-based configurations for its infrastructure. These were then integrated into its IDEs, providing developers with auto-completion and validation support.
 - This approach not only accelerated the development process but also ensured that the infrastructure deployed across the organization adhered to consistent security and compliance standards.
 
 ### Transformation Features: Protecting Legacy Services
@@ -136,7 +137,7 @@ BMW's decision to leverage Pulumi's Python bindings has been a strategic advanta
 
 ### Streamlined Cloud Migration
 
-As BMW continues to expand its use of public cloud services, Pulumi has played a crucial role in simplifying the migration process. By providing a consistent IaC approach across on-premises and cloud environments, Pulumi has enabled BMW to manage its infrastructure in a unified manner, reducing the complexity and overhead associated with multi-cloud deployments.
+As BMW continues to expand its use of public cloud services, Pulumi has played a crucial role in simplifying the [migration process](https://www.pulumi.com/migrate/). By providing a consistent IaC approach across on-premises and cloud environments, Pulumi has enabled BMW to manage its infrastructure in a unified manner, reducing the complexity and overhead associated with [multi-cloud deployments](https://www.pulumi.com/docs/pulumi-cloud/deployments/).
 
 ## The Future of BMW's Software Factory: Embracing the Cloud
 
