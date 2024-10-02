@@ -16,13 +16,41 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		bucket, err := s3.NewBucket(ctx, "content-bucket", &s3.BucketArgs{
-			Acl: pulumi.String("private"),
-			Website: &s3.BucketWebsiteArgs{
-				IndexDocument: pulumi.String("index.html"),
-				ErrorDocument: pulumi.String("404.html"),
-			},
-		})
+		bucket, err := s3.NewBucket(ctx, "content-bucket", nil)
+		if err != nil {
+			return err
+		}
+
+		bucketOwnership, err := s3.NewBucketOwnershipControls(ctx, "content-bucket",
+			&s3.BucketOwnershipControlsArgs{
+				Bucket: bucket.Bucket,
+				Rule: s3.BucketOwnershipControlsRuleArgs{
+					ObjectOwnership: pulumi.String("BucketOwnerPreferred"),
+				},
+			})
+		if err != nil {
+			return err
+		}
+
+		_, err = s3.NewBucketAclV2(ctx, "content-bucket",
+			&s3.BucketAclV2Args{
+				Bucket: bucket.Bucket,
+				Acl:    pulumi.String("private"),
+			}, pulumi.DependsOn([]pulumi.Resource{bucketOwnership}))
+		if err != nil {
+			return err
+		}
+
+		_, err = s3.NewBucketWebsiteConfigurationV2(ctx, "content-bucket",
+			&s3.BucketWebsiteConfigurationV2Args{
+				Bucket: bucket.Bucket,
+				IndexDocument: s3.BucketWebsiteConfigurationV2IndexDocumentArgs{
+					Suffix: pulumi.String("index.html"),
+				},
+				ErrorDocument: s3.BucketWebsiteConfigurationV2ErrorDocumentArgs{
+					Key: pulumi.String("404.html"),
+				},
+			})
 		if err != nil {
 			return err
 		}
