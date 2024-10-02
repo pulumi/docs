@@ -318,7 +318,7 @@ Previewing update (dev):
      Type                      Name                     Plan
  +   pulumi:pulumi:Stack     my-first-app-dev           create
  +   ├─ aws:iam:Role         s3-writer-role             create
- +   ├─ aws:s3:Bucket        my-bucket                  create
+ +   ├─ aws:s3:BucketV2      my-bucket                  create
  +   └─ aws:lambda:Function  s3-writer-lambda-function  create
 
 Outputs:
@@ -334,7 +334,7 @@ Updating (dev):
      Type                      Name                     Status
  +   pulumi:pulumi:Stack     my-first-app-dev           created (18s)
  +   ├─ aws:iam:Role         s3-writer-role             created (1s)
- +   ├─ aws:s3:Bucket        my-bucket                  created (1s)
+ +   ├─ aws:s3:BucketV2      my-bucket                  created (1s)
  +   └─ aws:lambda:Function  s3-writer-lambda-function  created (13s)
 
 Outputs:
