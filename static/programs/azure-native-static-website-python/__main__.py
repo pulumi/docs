@@ -35,7 +35,7 @@ website = azure_native.storage.StorageAccountStaticWebsite(
     error404_document=error_document,
 )
 
-# Use a synced folder to manage the files of the website.
+# Upload the website files.
 synced_folder = synced_folder.AzureBlobFolder(
     "synced-folder",
     path=path,
@@ -44,5 +44,5 @@ synced_folder = synced_folder.AzureBlobFolder(
     container_name=website.container_name,
 )
 
-# xport the URL of the website.
+# Export the URL of the website.
 pulumi.export("staticEndpoint", storage_account.primary_endpoints.web)

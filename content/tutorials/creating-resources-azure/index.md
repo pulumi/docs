@@ -75,7 +75,7 @@ Then use the following code snippet to scaffold your project with the required i
 {{% choosable language typescript %}}
 
 ```typescript
-{{< example-program-snippet path="azure-native-static-website" language="typescript" from="1" to="2" >}}
+{{< example-program-snippet path="azure-native-static-website" language="typescript" from="1" to="12" >}}
 ```
 
 {{% /choosable %}}
@@ -91,7 +91,8 @@ Then use the following code snippet to scaffold your project with the required i
 {{% choosable language go %}}
 
 ```go
-{{< example-program-snippet path="azure-native-static-website" language="go" from="1" to="2" >}}
+{{< example-program-snippet path="azure-native-static-website" language="go" from="1" to="18" >}}
+{{< example-program-snippet path="azure-native-static-website" language="go" from="75" to="76" >}}
 ```
 
 {{% /choosable %}}
@@ -99,7 +100,8 @@ Then use the following code snippet to scaffold your project with the required i
 {{% choosable language csharp %}}
 
 ```csharp
-{{< example-program-snippet path="azure-native-static-website" language="csharp" from="1" to="2" >}}
+{{< example-program-snippet path="azure-native-static-website" language="csharp" from="1" to="15" >}}
+{{< example-program-snippet path="azure-native-static-website" language="csharp" from="69" to="69" >}}
 ```
 
 {{% /choosable %}}
@@ -107,7 +109,7 @@ Then use the following code snippet to scaffold your project with the required i
 {{% choosable language yaml %}}
 
 ```yaml
-{{< example-program-snippet path="azure-native-static-website" language="csharp" from="1" to="2" >}}
+{{< example-program-snippet path="azure-native-static-website" language="yaml" from="1" to="8" >}}
 ```
 
 {{% /choosable %}}
@@ -131,7 +133,7 @@ The [Pulumi Registry](/registry/) provides the documentation for all of the Pulu
 ```javascript
 {{< example-program-snippet path="azure-native-static-website" language="javascript" from="1" to="8" >}}
 
-{{< example-program-snippet path="azure-native-static-website" language="javascript" from="15" to="16" >}}
+{{< example-program-snippet path="azure-native-static-website" language="javascript" from="15" to="18" >}}
 ```
 
 {{% /choosable %}}
@@ -139,7 +141,9 @@ The [Pulumi Registry](/registry/) provides the documentation for all of the Pulu
 {{% choosable language typescript %}}
 
 ```typescript
-{{< example-program-snippet path="azure-native-static-website" language="typescript" from="1" to="2" >}}
+{{< example-program-snippet path="azure-native-static-website" language="typescript" from="1" to="7" >}}
+
+{{< example-program-snippet path="azure-native-static-website" language="typescript" from="14" to="17" >}}
 ```
 
 {{% /choosable %}}
@@ -157,7 +161,11 @@ The [Pulumi Registry](/registry/) provides the documentation for all of the Pulu
 {{% choosable language go %}}
 
 ```go
-{{< example-program-snippet path="azure-native-static-website" language="go" from="1" to="2" >}}
+{{< example-program-snippet path="azure-native-static-website" language="go" from="1" to="13" >}}
+
+{{< example-program-snippet path="azure-native-static-website" language="go" from="20" to="26" >}}
+
+{{< example-program-snippet path="azure-native-static-website" language="go" from="75" to="76" >}}
 ```
 
 {{% /choosable %}}
@@ -165,7 +173,11 @@ The [Pulumi Registry](/registry/) provides the documentation for all of the Pulu
 {{% choosable language csharp %}}
 
 ```csharp
-{{< example-program-snippet path="azure-native-static-website" language="csharp" from="1" to="2" >}}
+{{< example-program-snippet path="azure-native-static-website" language="csharp" from="1" to="10" >}}
+
+{{< example-program-snippet path="azure-native-static-website" language="csharp" from="17" to="21" >}}
+
+{{< example-program-snippet path="azure-native-static-website" language="csharp" from="69" to="69" >}}
 ```
 
 {{% /choosable %}}
@@ -173,7 +185,9 @@ The [Pulumi Registry](/registry/) provides the documentation for all of the Pulu
 {{% choosable language yaml %}}
 
 ```yaml
-{{< example-program-snippet path="azure-native-static-website" language="csharp" from="1" to="2" >}}
+{{< example-program-snippet path="azure-native-static-website" language="yaml" from="1" to="3" >}}
+
+{{< example-program-snippet path="azure-native-static-website" language="yaml" from="10" to="15" >}}
 ```
 
 {{% /choosable %}}
@@ -193,7 +207,7 @@ The next step will be to create an [Azure Blob Storage account](https://azure.mi
 ```javascript
 {{< example-program-snippet path="azure-native-static-website" language="javascript" from="1" to="8" >}}
 
-{{< example-program-snippet path="azure-native-static-website" language="javascript" from="15" to="25" >}}
+{{< example-program-snippet path="azure-native-static-website" language="javascript" from="15" to="27" >}}
 ```
 
 {{% /choosable %}}
@@ -201,7 +215,9 @@ The next step will be to create an [Azure Blob Storage account](https://azure.mi
 {{% choosable language typescript %}}
 
 ```typescript
-{{< example-program-snippet path="azure-native-static-website" language="typescript" from="1" to="2" >}}
+{{< example-program-snippet path="azure-native-static-website" language="typescript" from="1" to="7" >}}
+
+{{< example-program-snippet path="azure-native-static-website" language="typescript" from="14" to="26" >}}
 ```
 
 {{% /choosable %}}
@@ -219,7 +235,11 @@ The next step will be to create an [Azure Blob Storage account](https://azure.mi
 {{% choosable language go %}}
 
 ```go
-{{< example-program-snippet path="azure-native-static-website" language="go" from="1" to="2" >}}
+{{< example-program-snippet path="azure-native-static-website" language="go" from="1" to="13" >}}
+
+{{< example-program-snippet path="azure-native-static-website" language="go" from="20" to="38" >}}
+
+{{< example-program-snippet path="azure-native-static-website" language="go" from="75" to="76" >}}
 ```
 
 {{% /choosable %}}
@@ -227,7 +247,11 @@ The next step will be to create an [Azure Blob Storage account](https://azure.mi
 {{% choosable language csharp %}}
 
 ```csharp
-{{< example-program-snippet path="azure-native-static-website" language="csharp" from="1" to="2" >}}
+{{< example-program-snippet path="azure-native-static-website" language="csharp" from="1" to="10" >}}
+
+{{< example-program-snippet path="azure-native-static-website" language="csharp" from="17" to="32" >}}
+
+{{< example-program-snippet path="azure-native-static-website" language="csharp" from="69" to="69" >}}
 ```
 
 {{% /choosable %}}
@@ -235,7 +259,9 @@ The next step will be to create an [Azure Blob Storage account](https://azure.mi
 {{% choosable language yaml %}}
 
 ```yaml
-{{< example-program-snippet path="azure-native-static-website" language="csharp" from="1" to="2" >}}
+{{< example-program-snippet path="azure-native-static-website" language="yaml" from="1" to="3" >}}
+
+{{< example-program-snippet path="azure-native-static-website" language="yaml" from="10" to="23" >}}
 ```
 
 {{% /choosable %}}
@@ -325,10 +351,10 @@ An updated version of the project code has been provided below as a starting poi
 ```javascript
 {{< example-program-snippet path="azure-native-static-website" language="javascript" from="1" to="8" >}}
 
-{{< example-program-snippet path="azure-native-static-website" language="javascript" from="15" to="27" >}}
+{{< example-program-snippet path="azure-native-static-website" language="javascript" from="15" to="29" >}}
 // TO-DO
 
-{{< example-program-snippet path="azure-native-static-website" language="javascript" from="1" to="8" >}}
+{{< example-program-snippet path="azure-native-static-website" language="javascript" from="37" to="50" >}}
 ```
 
 {{% /choosable %}}
@@ -336,7 +362,12 @@ An updated version of the project code has been provided below as a starting poi
 {{% choosable language typescript %}}
 
 ```typescript
-{{< example-program-snippet path="azure-native-static-website" language="typescript" from="1" to="2" >}}
+{{< example-program-snippet path="azure-native-static-website" language="typescript" from="1" to="7" >}}
+
+{{< example-program-snippet path="azure-native-static-website" language="typescript" from="14" to="28" >}}
+// TO-DO
+
+{{< example-program-snippet path="azure-native-static-website" language="typescript" from="36" to="49" >}}
 ```
 
 {{% /choosable %}}
@@ -357,7 +388,12 @@ An updated version of the project code has been provided below as a starting poi
 {{% choosable language go %}}
 
 ```go
-{{< example-program-snippet path="azure-native-static-website" language="go" from="1" to="2" >}}
+{{< example-program-snippet path="azure-native-static-website" language="go" from="1" to="13" >}}
+
+{{< example-program-snippet path="azure-native-static-website" language="go" from="20" to="40" >}}
+        // TO-DO
+
+{{< example-program-snippet path="azure-native-static-website" language="go" from="51" to="76" >}}
 ```
 
 {{% /choosable %}}
@@ -365,7 +401,12 @@ An updated version of the project code has been provided below as a starting poi
 {{% choosable language csharp %}}
 
 ```csharp
-{{< example-program-snippet path="azure-native-static-website" language="csharp" from="1" to="2" >}}
+{{< example-program-snippet path="azure-native-static-website" language="csharp" from="1" to="10" >}}
+
+{{< example-program-snippet path="azure-native-static-website" language="csharp" from="17" to="34" >}}
+    // TO-DO
+
+{{< example-program-snippet path="azure-native-static-website" language="csharp" from="43" to="69" >}}
 ```
 
 {{% /choosable %}}
@@ -373,7 +414,12 @@ An updated version of the project code has been provided below as a starting poi
 {{% choosable language yaml %}}
 
 ```yaml
-{{< example-program-snippet path="azure-native-static-website" language="csharp" from="1" to="2" >}}
+{{< example-program-snippet path="azure-native-static-website" language="yaml" from="1" to="3" >}}
+
+{{< example-program-snippet path="azure-native-static-website" language="yaml" from="10" to="25" >}}
+  # TO-DO
+
+{{< example-program-snippet path="azure-native-static-website" language="yaml" from="34" to="58" >}}
 ```
 
 {{% /choosable %}}
@@ -382,12 +428,7 @@ Use the following steps as a guide for adding the storage :
 
 - Navigate to the [Azure Native Registry](/registry/packages/azure-native/)
 - Search for the `StorageAccountStaticWebsite` resource
-- Define the `StorageAccountStaticWebsite` in your project code
-- Configure the following properties:
-  - `resource_group_name`
-  - `account_name`
-  - `index_document`
-  - `error404_document`
+- Define the `StorageAccountStaticWebsite` resource in your project code
 - Preview and deploy your updated project code
 
 The website URL has been provided for you as an output, and you can use this to access your static website once the deployment has completed. You should be greeted with a "Hello, world!" homepage message that indicates your static website has been successfully created.
@@ -401,7 +442,9 @@ You can view the complete project code below:
 {{% choosable language javascript %}}
 
 ```javascript
-{{< example-program-snippet path="azure-native-static-website" language="javascript" from="1" to="2" >}}
+{{< example-program-snippet path="azure-native-static-website" language="javascript" from="1" to="8" >}}
+
+{{< example-program-snippet path="azure-native-static-website" language="javascript" from="15" to="50" >}}
 ```
 
 {{% /choosable %}}
@@ -409,7 +452,9 @@ You can view the complete project code below:
 {{% choosable language typescript %}}
 
 ```typescript
-{{< example-program-snippet path="azure-native-static-website" language="typescript" from="1" to="2" >}}
+{{< example-program-snippet path="azure-native-static-website" language="typescript" from="1" to="7" >}}
+
+{{< example-program-snippet path="azure-native-static-website" language="typescript" from="14" to="49" >}}
 ```
 
 {{% /choosable %}}
@@ -427,7 +472,9 @@ You can view the complete project code below:
 {{% choosable language go %}}
 
 ```go
-{{< example-program-snippet path="azure-native-static-website" language="go" from="1" to="2" >}}
+{{< example-program-snippet path="azure-native-static-website" language="go" from="1" to="13" >}}
+
+{{< example-program-snippet path="azure-native-static-website" language="go" from="20" to="76" >}}
 ```
 
 {{% /choosable %}}
@@ -435,7 +482,9 @@ You can view the complete project code below:
 {{% choosable language csharp %}}
 
 ```csharp
-{{< example-program-snippet path="azure-native-static-website" language="csharp" from="1" to="2" >}}
+{{< example-program-snippet path="azure-native-static-website" language="csharp" from="1" to="10" >}}
+
+{{< example-program-snippet path="azure-native-static-website" language="csharp" from="17" to="69" >}}
 ```
 
 {{% /choosable %}}
@@ -443,7 +492,9 @@ You can view the complete project code below:
 {{% choosable language yaml %}}
 
 ```yaml
-{{< example-program-snippet path="azure-native-static-website" language="csharp" from="1" to="2" >}}
+{{< example-program-snippet path="azure-native-static-website" language="yaml" from="1" to="3" >}}
+
+{{< example-program-snippet path="azure-native-static-website" language="yaml" from="10" to="58" >}}
 ```
 
 {{% /choosable %}}
