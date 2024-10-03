@@ -36,7 +36,7 @@ You can also [get started][get-started] with Pulumi and create a new [managed Ku
 [aws-eks]: https://aws.amazon.com/eks/
 [gcp-gke]: https://cloud.google.com/kubernetes-engine/
 [azure-aks]: https://azure.microsoft.com/en-us/services/kubernetes-service/
-[get-started]: https://www.pulumi.com/docs/iac/get-started/kubernetes//
+[get-started]: https://www.pulumi.com/docs/iac/get-started/kubernetes/
 [k8s-ext-pattern]: https://kubernetes.io/docs/concepts/extend-kubernetes/operator/
 [deploy-op]: https://github.com/pulumi/pulumi-kubernetes-operator#deploy-the-operator/
 
@@ -653,7 +653,7 @@ containers, serverless, and Kubernetes across cloud providers and cloud native s
 Check out the [GitHub repo][pulumi-k8s-op] to experiment deploying the operator
 and some test Stacks.
 
-Learn more about how [Pulumi works with Kubernetes](https://www.pulumi.com/registry/packages/kubernetes/), and [Get Started](https://www.pulumi.com/docs/iac/get-started/kubernetes//) if you're new.
+Learn more about how [Pulumi works with Kubernetes](https://www.pulumi.com/registry/packages/kubernetes/), and [Get Started](https://www.pulumi.com/docs/iac/get-started/kubernetes/) if you're new.
 
 You can help to shape this experience directly by
 providing feedback on [GitHub](https://github.com/pulumi/pulumi-kubernetes-operator/). We love to hear from our users!

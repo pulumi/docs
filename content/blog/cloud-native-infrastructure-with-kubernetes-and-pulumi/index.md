@@ -20,7 +20,7 @@ a way to create, deploy, and manage Kubernetes applications using your
 favorite programming languages.
 that works across AWS, Azure, Google Cloud, OpenStack, and other clouds,
 now to Kubernetes and cloud native architectures. You can
-[dive right in here](/docs/iac/get-started/kubernetes//) and
+[dive right in here](/docs/iac/get-started/kubernetes/) and
 look at some
 [powerful things Pulumi enables here](/blog/program-kubernetes-with-11-cloud-native-pulumi-pearls/).
 <!--more-->
