@@ -88,13 +88,13 @@
             "name": "ACI",
             "cloud": "Azure",
             "full": "Azure Container Instances (ACI)",
-            "whatis": "Azure Container Instances (ACI) allows developers to quickly run containers in a serverless environment without managing underlying infrastructure. It provides a simple, scalable platform for running containerized applications on demand, supporting both Linux and Windows containers. ACI is ideal for scenarios requiring fast deployment and flexible scaling, similar to AWS ECS"
+            "whatis": "Azure Container Instances (ACI) allows developers to quickly run containers in a serverless environment without managing underlying infrastructure. It provides a simple, scalable platform for running containerized applications on demand, supporting both Linux and Windows containers."
         },
         {
             "name": "AKS",
             "cloud": "Azure",
             "full": "Azure Kubernetes Service (AKS)",
-            "whatis": "Azure Kubernetes Service (AKS) is a fully managed Kubernetes service that simplifies the deployment, scaling, and operation of containerized applications using Kubernetes. It automates tasks like patching, scaling, and node provisioning, allowing developers to focus on application development rather than managing Kubernetes infrastructure. AKS offers seamless integration with Azure services for secure, efficient, and scalable container management, similar to AWS EKS."
+            "whatis": "Azure Kubernetes Service (AKS) is a fully managed Kubernetes service that simplifies the deployment, scaling, and operation of containerized applications using Kubernetes. It automates tasks like patching, scaling, and node provisioning, allowing developers to focus on application development rather than managing Kubernetes infrastructure. AKS offers seamless integration with Azure services for secure, efficient, and scalable container management."
         },
         {
             "name": "API Management",
@@ -106,7 +106,7 @@
             "name": "Azure AD",
             "cloud": "Azure",
             "full": "Azure AD",
-            "whatis": "AWS IAM (Identity and Access Management) is a service that enables you to securely manage access to AWS resources. It allows you to create and control user permissions, defining who can access specific resources and under what conditions. IAM helps ensure security and compliance by enforcing fine-grained access controls across your AWS environment."
+            "whatis": "Azure Active Directory (Azure AD) is Microsoft's cloud-based identity and access management service that helps organizations manage users and control access to resources. It enables secure single sign-on (SSO), multifactor authentication (MFA), and conditional access policies, providing enhanced security and user experience across applications. Azure AD integrates with on-premises Active Directory, other Microsoft services, and third-party apps to centralize identity management in hybrid and cloud environments."
         }
     ]
 }
