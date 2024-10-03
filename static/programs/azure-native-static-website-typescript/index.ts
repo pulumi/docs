@@ -12,7 +12,9 @@ const errorDocument = "error.html";
 // [3] Configure the storage account as a website.
 
 // [1] Create a resource group.
-const resourceGroup = new resources.ResourceGroup("website-resource-group");
+const resourceGroup = new resources.ResourceGroup("website-resource-group", {
+    location: "eastus",
+});
 
 // [2] Create a blob storage account.
 const storageAccount = new storage.StorageAccount("websiteblob", {

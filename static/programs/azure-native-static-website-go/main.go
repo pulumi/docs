@@ -8,9 +8,9 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		path = "./wwwroot";
-		indexDocument = "index.html";
-		errorDocument = "error.html";
+		path := "./wwwroot";
+		indexDocument := "index.html";
+		errorDocument := "error.html";
 	
 		// Steps:
 		// [1] Create a resource group.
@@ -18,7 +18,9 @@ func main() {
 		// [3] Configure the storage account as a website.
 	
 		// [1] Create a resource group.
-		resourceGroup, err := resources.NewResourceGroup(ctx, "website-resource-group", nil)
+		resourceGroup, err := resources.NewResourceGroup(ctx, "website-resource-group", &resources.ResourceGroupArgs{
+			Location:          pulumi.String("eastus"),
+		})
 		if err != nil {
 			return err
 		}

@@ -1,7 +1,7 @@
 "use strict";
 const pulumi = require("@pulumi/pulumi");
 const resources = require("@pulumi/azure-native/resources");
-const storage = require("@pulumi/synced-resources");
+const storage = require("@pulumi/azure-native/storage");
 
 const path = "./wwwroot";
 const indexDocument = "index.html";
@@ -13,7 +13,9 @@ const errorDocument = "error.html";
 // [3] Configure the storage account as a website.
 
 // [1] Create a resource group.
-const resourceGroup = new resources.ResourceGroup("website-resource-group");
+const resourceGroup = new resources.ResourceGroup("website-resource-group", {
+    location: "eastus",
+});
 
 // [2] Create a blob storage account.
 const storageAccount = new storage.StorageAccount("websiteblob", {
@@ -45,4 +47,4 @@ const website = new storage.StorageAccountStaticWebsite("website", {
 );
 
 // Export the URL of the website.
-export const staticEndpoint = storageAccount.primaryEndpoints.web;
+exports.staticEndpoint = storageAccount.primaryEndpoints.web;

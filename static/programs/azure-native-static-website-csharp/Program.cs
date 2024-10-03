@@ -1,7 +1,6 @@
 ﻿using Pulumi;
-using Pulumi.AzureNative.Resources;
-using Pulumi.AzureNative.Storage;
-using Pulumi.AzureNative.Storage.Inputs;
+using Resources = Pulumi.AzureNative.Resources;
+using Storage = Pulumi.AzureNative.Storage;
 using System.Collections.Generic;
 
 return await Pulumi.Deployment.RunAsync(() =>
@@ -16,17 +15,20 @@ return await Pulumi.Deployment.RunAsync(() =>
     // [3] Configure the storage account as a website.
 
     // [1] Create a resource group.
-    var resourceGroup = new ResourceGroup("website-resource-group");
+    var resourceGroup = new Resources.ResourceGroup("website-resource-group", new()
+    {
+        Location = "eastus",
+    });
 
     // [2] Create a blob storage account.
-    var storageAccount = new StorageAccount("websiteblob", new StorageAccountArgs
+    var storageAccount = new Storage.StorageAccount("websiteblob", new()
     {
         ResourceGroupName = resourceGroup.Name,
-        Sku = new SkuArgs
+        Sku = new Storage.Inputs.SkuArgs
         {
-            Name = SkuName.Standard_LRS
+            Name = Storage.SkuName.Standard_LRS
         },
-        Kind = Kind.StorageV2
+        Kind = Storage.Kind.StorageV2
     });
 
     // [3] Configure the storage account as a website.
@@ -57,7 +59,7 @@ return await Pulumi.Deployment.RunAsync(() =>
         ContentType = "text/html",
     });
 
-    staticEndpoint = storageAccount.PrimaryEndpoints.Apply(primaryEndpoints => primaryEndpoints.Web);
+    var staticEndpoint = storageAccount.PrimaryEndpoints.Apply(primaryEndpoints => primaryEndpoints.Web);
 
     // Export the URL of the website.
     return new Dictionary<string, object?>

@@ -12,8 +12,8 @@ error_document = "error.html"
 # [3] Configure the storage account as a website.
 
 # [1] Create a resource group.
-resource_group = azure_native.resources.ResourceGroup(
-    "website-resource-group"
+resource_group = azure_native.resources.ResourceGroup( "website-resource-group",
+    location="eastus"
 )
 
 # [2] Create a blob storage account.
