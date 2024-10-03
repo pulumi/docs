@@ -7,7 +7,7 @@ weight: 4
 aliases:
 - /docs/quickstart/aws/review-project/
 - /docs/get-started/aws/review-project/
-- /docs/clouds/aws/get-started/review-project/
+- /docs/iac/get-started/aws/review-project/
 ---
 
 Let's review some of the generated project files:

@@ -12,7 +12,7 @@ menu:
 aliases:
 - /docs/quickstart/gcp/deploy-changes/
 - /docs/get-started/gcp/deploy-changes/
-- /docs/clouds/gcp/get-started/deploy-changes/
+- /docs/iac/get-started/gcp/deploy-changes/
 ---
 
 Now let's deploy your changes.

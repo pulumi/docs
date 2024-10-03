@@ -15,7 +15,7 @@ menu:
         parent: crossguard
 aliases:
 - /docs/guides/crossguard/awsguard/
-- /docs/using-pulumi/crossguard/awsguard/
+- /docs/iac/packages-and-automation/crossguard/awsguard/
 ---
 <!-- markdownlint-disable ul code -->
 
@@ -23,7 +23,7 @@ aliases:
 
 [AWSGuard](https://github.com/pulumi/pulumi-policy-aws) codifies best practices for AWS. It is an [open source](https://github.com/pulumi/pulumi-policy-aws) library that you can configure and use to enforce these best practices for your own Pulumi stacks or organization.
 
-For more information on Pulumi's Policy as Code solution, visit our [docs](/docs/using-pulumi/crossguard/get-started/).
+For more information on Pulumi's Policy as Code solution, visit our [docs](/docs/iac/packages-and-automation/crossguard/get-started/).
 
 ## Trying AWSGuard
 
@@ -184,6 +184,6 @@ aws:s3:Bucket (my-bucket):
 
 ## Next Steps
 
-Once you've validated the behavior of the AWSGuard policies you've configured in your Policy Pack, an organization administrator can publish the Policy Pack to the Pulumi Cloud to be enforced across your organization. To learn more see [Enforcing a Policy Pack Across an Organization](/docs/using-pulumi/crossguard/get-started#enforcing-a-policy-pack).
+Once you've validated the behavior of the AWSGuard policies you've configured in your Policy Pack, an organization administrator can publish the Policy Pack to the Pulumi Cloud to be enforced across your organization. To learn more see [Enforcing a Policy Pack Across an Organization](/docs/iac/packages-and-automation/crossguard/get-started#enforcing-a-policy-pack).
 
-Now that you've seen how to configure and use AWSGuard policies, you may want to write your own policies. See the [Getting Started tutorial](/docs/using-pulumi/crossguard/get-started/) to get started.
+Now that you've seen how to configure and use AWSGuard policies, you may want to write your own policies. See the [Getting Started tutorial](/docs/iac/packages-and-automation/crossguard/get-started/) to get started.

@@ -75,7 +75,7 @@ So, the search began, and soon enough, we discovered Pulumi. And as it turned ou
 
 - different options when it comes to storing cloud infrastructure state files: a managed SaaS ([pulumi.com](https://app.pulumi.com/signin)) with a console and self-hosted, (for example [Amazon S3](https://aws.amazon.com/s3/))
 - ability to deploy cloud infrastructure into multiple environments using its concept of [stacks](/docs/concepts/stack/)
-- advanced features like [Policy as Code](/docs/using-pulumi/crossguard/get-started/) and [watch mode](/docs/cli/commands/pulumi_watch/)
+- advanced features like [Policy as Code](/docs/iac/packages-and-automation/crossguard/get-started/) and [watch mode](/docs/cli/commands/pulumi_watch/)
 - great documentation
 - a vibrant community of developers and a responsive team behind the product
 
@@ -145,9 +145,9 @@ Note the `--env` argument appended to each command. With it and Pulumi’s conce
 
 The last piece of the puzzle was storing cloud infrastructure state files. Here we went with the following approach.
 
-For local development, users’ cloud infrastructure state files are stored locally within their Webiny project using the [Local Filesystem Backend](/docs/concepts/state/#logging-into-the-local-filesystem-backend), which we’ve seen worked great for developers.
+For local development, users’ cloud infrastructure state files are stored locally within their Webiny project using the [Local Filesystem Backend](/docs/iac/concepts/state-and-backends/#logging-into-the-local-filesystem-backend), which we’ve seen worked great for developers.
 
-On the other hand, for ephemeral environments spawned in CI/CD or long-lived environments like staging or production, through our [documentation](https://www.webiny.com/docs/key-topics/ci-cd/cloud-infrastructure-state-files#using-different-backends), we advise our users to use centralized and remote storage by using backends like [Amazon S3](/docs/concepts/state/#aws-s3) and even [Pulumi Cloud (pulumi.com)](/docs/concepts/state/#logging-into-the-pulumi-service-backend). Both backends have their pros and cons, and we let the users choose the one they want to use.
+On the other hand, for ephemeral environments spawned in CI/CD or long-lived environments like staging or production, through our [documentation](https://www.webiny.com/docs/key-topics/ci-cd/cloud-infrastructure-state-files#using-different-backends), we advise our users to use centralized and remote storage by using backends like [Amazon S3](/docs/iac/concepts/state-and-backends/#aws-s3) and even [Pulumi Cloud (pulumi.com)](/docs/iac/concepts/state-and-backends/#logging-into-the-pulumi-service-backend). Both backends have their pros and cons, and we let the users choose the one they want to use.
 
 ## Show Me the Code
 

@@ -12,7 +12,7 @@ menu:
 aliases:
 - /docs/quickstart/gcp/review-project/
 - /docs/get-started/gcp/review-project/
-- /docs/clouds/gcp/get-started/review-project/
+- /docs/iac/get-started/gcp/review-project/
 ---
 
 Let's review some of the generated project files:

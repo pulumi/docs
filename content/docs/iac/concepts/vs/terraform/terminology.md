@@ -43,9 +43,9 @@ If you're already familiar with Terraform, learning Pulumi terminology and comma
 | Interpolation | [Interpolation](/docs/concepts/inputs-outputs#outputs-and-strings) |
 | Run | [Up](/docs/cli/commands/pulumi_up/) |
 | Output Values | [Outputs](/docs/concepts/inputs-outputs/) |
-| State | [State](/docs/concepts/state/) |
+| State | [State](/docs/iac/concepts/state-and-backends/) |
 | State Version | [Update Events](/docs/reference/service-rest-api#list-update-events) |
-| Backend | [Backend](/docs/concepts/state/) |
+| Backend | [Backend](/docs/iac/concepts/state-and-backends/) |
 | Deposed | [Pending Operations](/docs/support/troubleshooting#interrupted-update-recovery) |
 
 ## Commands

@@ -107,7 +107,7 @@ Both CDK and Pulumi are licensed under [Apache License 2.0](https://github.com/p
 
 Both CDK and Pulumi support reusability through the built-in capabilities of the languages they support, such as functions, classes, modules, and packages. Both support the concept of higher-level abstractions as well --- CDK through constructs and Pulumi through Component Resources --- and both are supported by public registries that index these abstractions.
 
-The main advantage Pulumi has over CDK in this regard is its ability to create multi-language, reusable packages encapsulating higher-level abstractions and architectural patterns. With Pulumi, you can write a package in your language of choice and then generate equivalent packages in any language Pulumi supports. To learn more, see [Pulumi Packages](/docs/using-pulumi/pulumi-packages/).
+The main advantage Pulumi has over CDK in this regard is its ability to create multi-language, reusable packages encapsulating higher-level abstractions and architectural patterns. With Pulumi, you can write a package in your language of choice and then generate equivalent packages in any language Pulumi supports. To learn more, see [Pulumi Packages](/docs/iac/packages-and-automation/pulumi-packages/).
 
 ### Testing and Validation {#testing}
 
@@ -115,7 +115,7 @@ Unit tests in CDK assert on the synthesized CloudFormation template content rath
 
 Pulumi also supports property tests (Policy as Code), which run resource-level assertions while infrastructure is being deployed, and integration tests, which deploy ephemeral infrastructure and run external tests against it.
 
-To learn more about how Pulumi enables testing and test-driven development tools and methodologies, see [Testing](/docs/using-pulumi/testing/).
+To learn more about how Pulumi enables testing and test-driven development tools and methodologies, see [Testing](/docs/iac/concepts/testing/).
 
 ### Modes of Execution {#modes}
 

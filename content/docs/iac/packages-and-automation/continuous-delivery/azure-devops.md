@@ -19,8 +19,8 @@ aliases:
 - /docs/console/continuous-delivery/azure-devops/
 - /docs/guides/continuous-delivery/azure-devops/
 - /docs/guides/continuous-delivery/cd-azure-devops/
-- /docs/using-pulumi/continuous-delivery/cd-azure-devops/
-- /docs/using-pulumi/continuous-delivery/azure-devops/
+- /docs/iac/packages-and-automation/continuous-delivery/cd-azure-devops/
+- /docs/iac/packages-and-automation/continuous-delivery/azure-devops/
 ---
 
 This page details how to use [Azure DevOps](https://azure.microsoft.com/en-us/services/devops/) to manage deploying
@@ -167,7 +167,7 @@ You can set [job-scoped output variables](https://docs.microsoft.com/en-us/azure
 
 `pulumi` requires a few environment variables in order to work in a CI/CD environment. More specifically, `PULUMI_ACCESS_TOKEN` is required
 to allow the `pulumi` CLI to perform an unattended login. In addition to this, you will also need to set the cloud provider-specific
-variables. [Azure environment variables](/docs/clouds/azure/get-started/).
+variables. [Azure environment variables](/docs/iac/get-started/azure/).
 
 > If you are using the [Pulumi task extension](https://marketplace.visualstudio.com/items?itemName=pulumi.build-and-release-task) for Azure Pipelines, you don't need to manually configure the environment variables in your pipeline builds. You can use [Service Connections](https://docs.microsoft.com/en-us/azure/devops/pipelines/library/service-endpoints?view=azure-devops) to centralize access to your Azure subscription(s).
 

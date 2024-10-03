@@ -41,7 +41,7 @@ search:
 aliases:
 - /docs/reference/crosswalk/aws/lambda/
 - /docs/guides/crosswalk/aws/lambda/
-- /docs/clouds/aws/guides/lambda/
+- /docs/iac/clouds/aws/guides/lambda/
 ---
 
 {{< crosswalk-header >}}
@@ -64,7 +64,7 @@ configuration of the associated AWS resources for you. This lets you focus on yo
 worry about boilerplate, and with confidence that the resulting infrastructure automatically uses AWS best practices.
 
 With Pulumi Crosswalk for AWS, event sources are available on all native resource types, including AWS S3, SQS,
-DynamoDB, CloudWatch, Kinesis, and more, in addition to full support for [API Gateway](/docs/clouds/aws/guides/api-gateway/).
+DynamoDB, CloudWatch, Kinesis, and more, in addition to full support for [API Gateway](/docs/iac/clouds/aws/guides/api-gateway/).
 This improves discoverability of event sources in addition to adding strong typing to the event handler
 inputs and outputs that AWS Lambda will deliver to your code.
 
@@ -134,7 +134,7 @@ defined) or even use functions that already exist, and glue them together with r
 Because Pulumi provisions and manages resources, updating your functions after creating them is easy. Just edit your
 code, run `pulumi up`, and Pulumi will diff and compute the minimal set of changes it can make to upgrade your code,
 without any downtime required. This is as easy to do by hand as it is in
-[CI/CD](/docs/using-pulumi/continuous-delivery/).
+[CI/CD](/docs/iac/packages-and-automation/continuous-delivery/).
 
 ### Using magic Lambda functions
 
@@ -548,7 +548,7 @@ authors and manages the serverless functions attached to them. For more informat
 
 ## Easy Lambda log consumption
 
-[Pulumi Crosswalk for AWS CloudWatch](/docs/clouds/aws/guides/cloudwatch/) ensures that resources have built-in
+[Pulumi Crosswalk for AWS CloudWatch](/docs/iac/clouds/aws/guides/cloudwatch/) ensures that resources have built-in
 logging, with easy ways to customize associated policies. Additionally, the [`pulumi logs`](/docs/cli/commands/pulumi_logs/) CLI command allows
 you to monitor your infrastructure's CloudWatch logs in real time. For Lambda functions, this means
 you can run `pulumi logs -f` (`--force`) to stream all of the logs from all of the Lambdas that belong to the current stack.

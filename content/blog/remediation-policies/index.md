@@ -18,7 +18,7 @@ Pulumi’s policy as code engine, [CrossGuard](/crossguard), is already very fle
 
 ## A Refresher on CrossGuard
 
-CrossGuard policies are rules that run during `pulumi preview` and `up` to check that resource state conforms to some set of criteria. You can use off-the-shelf policies like [AWSGuard](/docs/using-pulumi/crossguard/awsguard) and the new [Pulumi Compliance-Ready Policies](https://github.com/pulumi/compliance-policies/) or write your own.
+CrossGuard policies are rules that run during `pulumi preview` and `up` to check that resource state conforms to some set of criteria. You can use off-the-shelf policies like [AWSGuard](/docs/iac/packages-and-automation/crossguard/awsguard) and the new [Pulumi Compliance-Ready Policies](https://github.com/pulumi/compliance-policies/) or write your own.
 
 To roll your own, you create a "policy pack" in one of the supported languages (currently JavaScript, Python, TypeScript, or Open Policy Agent (OPA) Rego). A policy pack is a collection of policies which are just objects and functions that are given an opportunity to inspect the resource graph and report whether any policy violations have been detected. They're packaged natively (such as NPM, PyPI, etc) and Pulumi runs the policies at the right time with the right data to enforce them.
 
@@ -284,7 +284,7 @@ For instance, in some settings we may prefer to issue an error to the developer 
 
 In the above example, we hard-coded the set of tags we want to check for. For a simple policy for a very targeted use case, that may be ok. However, if we are writing a more general purpose policy, or one that needs to run across many organizations, this hard-coding can be unfortunate.
 
-[Policy configuration](/docs/using-pulumi/crossguard/configuration), on the other hand, enables us to write rules that are parameterized. If we used policy configuration for this example, we could configure the set of tags to check for independent of the policy itself. This would mean that we could write a single tagging policy, once, and then enable/configure it many times. This is useful for enforcement in different organizations and also within the same organization if, say, if our production tags were different than development.
+[Policy configuration](/docs/iac/packages-and-automation/crossguard/configuration), on the other hand, enables us to write rules that are parameterized. If we used policy configuration for this example, we could configure the set of tags to check for independent of the policy itself. This would mean that we could write a single tagging policy, once, and then enable/configure it many times. This is useful for enforcement in different organizations and also within the same organization if, say, if our production tags were different than development.
 
 Here’s a rewritten variant of that policy above which uses policy configuration:
 
@@ -447,6 +447,6 @@ Finally, Pulumi has always had [transformations](https://www.pulumi.com/docs/con
 
 Remediation policies take Pulumi’s very powerful policy engine, CrossGuard, to the next level. Using them you can not just detect incompliant resources but actually fix them automatically.
 
-Everything described in this post, except for organizational enforcement, is available in the free Pulumi open source SDK. To get started, just run `pulumi policy new` in a directory to begin creating your new policy pack. Also, [check out the CrossGuard get started guide](https://www.pulumi.com/docs/using-pulumi/crossguard/get-started/), which walks through the entire process of creating a new policy pack from scratch and running it. You can [read more details about policies and remediations](https://www.pulumi.com/docs/using-pulumi/crossguard/core-concepts/#resource-remediation) in the documentation.
+Everything described in this post, except for organizational enforcement, is available in the free Pulumi open source SDK. To get started, just run `pulumi policy new` in a directory to begin creating your new policy pack. Also, [check out the CrossGuard get started guide](https://www.pulumi.com/docs/iac/packages-and-automation/crossguard/get-started/), which walks through the entire process of creating a new policy pack from scratch and running it. You can [read more details about policies and remediations](https://www.pulumi.com/docs/iac/packages-and-automation/crossguard/core-concepts/#resource-remediation) in the documentation.
 
 Check it out and let us know what you think!

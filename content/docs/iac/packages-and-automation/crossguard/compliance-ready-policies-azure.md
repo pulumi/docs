@@ -12,7 +12,7 @@ menu:
     usingpulumi:
         parent: crossguard-compliance-ready-policies
 aliases:
-    - /docs/using-pulumi/crossguard/compliance-ready-policies-azure/
+    - /docs/iac/packages-and-automation/crossguard/compliance-ready-policies-azure/
 ---
 There's a total of 3 Compliance Ready Policies for the Azure provider.
 

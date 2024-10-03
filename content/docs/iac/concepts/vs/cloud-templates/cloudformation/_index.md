@@ -91,7 +91,7 @@ Many high-quality plugins are available to assist you with authoring CloudFormat
 
 Both Pulumi and CloudFormation provide built-in support for keeping track of the state of your infrastructure. By default, Pulumi uses the free Pulumi Cloud, which handles state management automatically, but you can also choose to manage your infrastructure state on your own, either by bringing your own storage mechanism (e.g., an S3 bucket, S3-compatible service, third-party blob storage, or just a flat file) or even self-hosting the Pulumi Cloud within your enterprise network. CloudFormation state is managed entirely within the CloudFormation service.
 
-For more information on how Pulumi manages state, or using alternative backends, see [State and Backends](/docs/concepts/state/).
+For more information on how Pulumi manages state, or using alternative backends, see [State and Backends](/docs/iac/concepts/state-and-backends/).
 
 ### Provider Support {#providers}
 
@@ -99,7 +99,7 @@ As an AWS product, CloudFormation offers limited support for third-party cloud p
 
 Pulumi also has [native providers](/blog/pulumiup-native-providers/) for AWS, Azure, Google, and Kubernetes. Native providers are packages generated from cloud-provider API schemas that provide same-day support for new features as they're released.
 
-For a full list of the providers we currently support, visit the [Pulumi Registry](/registry/). To learn more about how you can build providers of your own, see [Pulumi Packages](/docs/using-pulumi/pulumi-packages/) or [Dynamic Providers](/docs/concepts/resources/dynamic-providers/).
+For a full list of the providers we currently support, visit the [Pulumi Registry](/registry/). To learn more about how you can build providers of your own, see [Pulumi Packages](/docs/iac/packages-and-automation/pulumi-packages/) or [Dynamic Providers](/docs/concepts/resources/dynamic-providers/).
 
 #### Extending Pulumi with Terraform Providers {#providers-terraform}
 
@@ -115,7 +115,7 @@ We also offer a tool called [cf2pulumi](/cf2pulumi/) that converts CloudFormatio
 
 ### Cloud Native Support {#cloud-native}
 
-Pulumi supports the full cloud native ecosystem: you can use Pulumi to manage any cloud or SaaS provider, including Kubernetes, with a single, unified programming model. Additionally, Pulumi's native Kubernetes provider offers 100% API coverage in all Pulumi-supported languages, as well as support for Helm charts, strongly typed CustomResourceDefinitions (CRDs), and Kubernetes YAML and Kustomize templates. Pulumi also offers a [Kubernetes operator](/docs/using-pulumi/continuous-delivery/pulumi-kubernetes-operator/) that enables continuous delivery through GitOps. CloudFormation has no support for these capabilities.
+Pulumi supports the full cloud native ecosystem: you can use Pulumi to manage any cloud or SaaS provider, including Kubernetes, with a single, unified programming model. Additionally, Pulumi's native Kubernetes provider offers 100% API coverage in all Pulumi-supported languages, as well as support for Helm charts, strongly typed CustomResourceDefinitions (CRDs), and Kubernetes YAML and Kustomize templates. Pulumi also offers a [Kubernetes operator](/docs/iac/packages-and-automation/continuous-delivery/pulumi-kubernetes-operator/) that enables continuous delivery through GitOps. CloudFormation has no support for these capabilities.
 
 To learn more about Pulumi's support for the cloud native ecosystem, see our whitepaper, [Delivering Cloud Native Infrastructure as Code](/whitepapers/delivering-cloud-native-infrastructure-as-code/).
 
@@ -135,13 +135,13 @@ With CloudFormation, you can codify and reuse infrastructure configuration by us
 
 Pulumi also allows you to create modular and reusable infrastructure building blocks, but it does so by building onto the capabilities of your programming language and its ecosystem. With Pulumi [_components_](/docs/concepts/resources/components/), you can abstract and encapsulate complexity into higher-level software resources that have their own trackable state, appear in diffs, and use a logical name that identifies its resources across deployments. Moreover, with Pulumi Packages, you can author components in one language and make them accessible in any language Pulumi supports, and then list those packages on the public Pulumi Registry, a searchable collection of resource providers published by Pulumi, our partners, and the community.
 
-To learn more, see [Components](/docs/concepts/resources/components/), [Pulumi Packages](/docs/using-pulumi/pulumi-packages/), and [Pulumi Registry](/registry/).
+To learn more, see [Components](/docs/concepts/resources/components/), [Pulumi Packages](/docs/iac/packages-and-automation/pulumi-packages/), and [Pulumi Registry](/registry/).
 
 ### Testing and Validation {#testing}
 
 Testing is an important component of the software-development lifecycle, and Pulumi supports testing in many forms, including unit tests (fast in-memory tests that mock external calls to cloud-provider APIs), property tests (resource-level assertions that can run while infrastructure is being deployed), and integration tests (external tests run against deployed or ephemeral infrastructure). Popular testing libraries and frameworks are also supported. CloudFormation supports only document-level syntax checking and validation.
 
-To learn more about how Pulumi enables testing and test-driven development tools and workflows, see [Testing](/docs/using-pulumi/testing/).
+To learn more about how Pulumi enables testing and test-driven development tools and workflows, see [Testing](/docs/iac/concepts/testing/).
 
 ### Modes of Execution {#modes}
 
@@ -161,13 +161,13 @@ With Automation API, you can import Pulumi into another application and drive st
 
 Pulumi integrates with many popular CI/CD providers including AWS Code Services, Azure DevOps, CircleCI, CodeFresh, GitHub Actions, GitLab Pipelines, Google Cloud Build, Jenkins, Octopus Deploy, Jetbrains TeamCity, Spinnaker, and Travis CI. As well, Pulumi has a number of built-in features that facilitate CI/CD workflows including support for unit testing, rich deployment previews with resource-level diffing, drift detection and correction, Git commit tracking, and blocking CLI behavior with standard exit codes. While CloudFormation deployments can generally be triggered from within any CI/CD provider, and are well supported in AWS CodePipeline, CloudFormation itself has no support for these additional CI/CD features.
 
-For more information on how to integrate Pulumi with your CI/CD provider of choice, see our [Continuous Delivery guides](/docs/using-pulumi/continuous-delivery/).
+For more information on how to integrate Pulumi with your CI/CD provider of choice, see our [Continuous Delivery guides](/docs/iac/packages-and-automation/continuous-delivery/).
 
 ### Policy as Code {#policy}
 
 Pulumi CrossGuard gives you the ability to set guardrails that enforce best practices and security compliance, allowing developers to provision infrastructure easily while at the same time adhering to the standards defined by their teams and organizations. Using Policy as Code, you can write flexible business or security policies in any Pulumi-supported language as well as Open Policy Agent (OPA) Rego, and administrators can apply these policies either to individual stacks or to all of the stacks in an organization. CrossGuard is open source and free to use. Comparable functionality is possible through the use of CloudFormation hooks, though the process of building, testing, and using CloudFormation hooks is considerably different.
 
-To learn more about policy as code with Pulumi, see [Policy as Code ("CrossGuard")](/docs/using-pulumi/crossguard/).
+To learn more about policy as code with Pulumi, see [Policy as Code ("CrossGuard")](/docs/iac/packages-and-automation/crossguard/).
 
 ### Secrets Management {#secrets}
 

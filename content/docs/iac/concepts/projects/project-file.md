@@ -35,7 +35,7 @@ For Pulumi programs specifically written in Pulumi YAML, the project file not on
 | `config` | optional | Project level config (Added in v3.44). | [config options](#config-options) |
 | `main` | optional | Path to the Pulumi program, relative to the location of `Pulumi.yaml`. The default is the current working directory. | None |
 | `stackConfigDir` | optional | Config directory location relative to the location of `Pulumi.yaml`. | None |
-| `backend` | optional | [Backend](/docs/concepts/state/) of the project. | [backend options](#backend-options) |
+| `backend` | optional | [Backend](/docs/iac/concepts/state-and-backends/) of the project. | [backend options](#backend-options) |
 | `options` | optional | Additional project options. | [options options](#options-options) |
 | `template` | optional | Config to be used when creating new stacks in the project. | [template options](#template-options) |
 | `plugins` | optional | Override for the plugin selection. Intended for use in developing pulumi plugins.  | [plugins options](#plugins-options) |

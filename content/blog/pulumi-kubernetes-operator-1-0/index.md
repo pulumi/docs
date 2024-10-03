@@ -127,4 +127,4 @@ The 1.0 release of the Pulumi Kubernetes Operator is an important milestone, but
 
 ## Conclusion
 
-The Pulumi Kubernetes Operator is a great way to deploy and manage cloud infrastructure from within your Kubernetes environment. With the 1.0 release, we’ve added many significant enhancements, as well as scalability, performance and quality improvements. You can [get started with the Pulumi Kubernetes Operator today](/docs/using-pulumi/continuous-delivery/pulumi-kubernetes-operator/). Enjoy!
+The Pulumi Kubernetes Operator is a great way to deploy and manage cloud infrastructure from within your Kubernetes environment. With the 1.0 release, we’ve added many significant enhancements, as well as scalability, performance and quality improvements. You can [get started with the Pulumi Kubernetes Operator today](/docs/iac/packages-and-automation/continuous-delivery/pulumi-kubernetes-operator/). Enjoy!

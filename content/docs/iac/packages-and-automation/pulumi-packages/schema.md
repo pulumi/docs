@@ -15,7 +15,7 @@ menu:
         weight: 3
 aliases:
 - /docs/guides/pulumi-packages/schema/
-- /docs/using-pulumi/pulumi-packages/schema/
+- /docs/iac/packages-and-automation/pulumi-packages/schema/
 ---
 
 Pulumi Packages are described by a package schema, which is used to drive code generation for SDKs in each supported Pulumi language, as well as generation of language-agnostic package documentation.  This schema can be manually authored (for component packages) or generated from some other source (such as a cloud provider's API specifications for a native Pulumi resource provider).  Packages can expose resources and functions, define types used by these resources and functions, and provide packaging metadata for language-specific SDKs.
@@ -122,7 +122,7 @@ Complete schema examples that include a much wider range of schema configuration
 | `attribution`       | `string`                                   | No       | Attribution allows freeform text attribution of derived work, if needed.                                                          |
 | `repository`        | `string`                                   | No       | Repository is the URL at which the source for the package can be found.                                                           |
 | `logoUrl`           | `string`                                   | No       | LogoURL is the URL for the package's logo, if any.                                                                                |
-| `pluginDownloadURL` | `string`                                   | No       | PluginDownloadURL is the URL to use to acquire the provider plugin binary, if any. See [Authoring & Publishing](/docs/using-pulumi/pulumi-packages/how-to-author#publish-your-package) for more details. |
+| `pluginDownloadURL` | `string`                                   | No       | PluginDownloadURL is the URL to use to acquire the provider plugin binary, if any. See [Authoring & Publishing](/docs/iac/packages-and-automation/pulumi-packages/how-to-author#publish-your-package) for more details. |
 | `publisher`         | `string`                                   | No       | The name of the person or organization that authored and published the package.                                                   |
 | `meta`              | [`Metadata`](#metadata)                    | No       | Meta contains information for the importer about this package.                                                                    |
 | `config`            | [`Config`](#config)                        | No       | Config describes the set of configuration variables defined by this package.                                                      |

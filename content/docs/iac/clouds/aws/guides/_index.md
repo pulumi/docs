@@ -17,7 +17,7 @@ aliases:
 - /docs/guides/crosswalk/
 - /docs/guides/crosswalk/aws/
 - /docs/clouds/aws/aws-guides/
-- /docs/clouds/aws/guides/
+- /docs/iac/clouds/aws/guides/
 ---
 <a href="./">
     <img src="/images/docs/reference/crosswalk/aws/logo.svg" align="right" width="280" style="margin: 0 0 32px 16px;">
@@ -30,12 +30,12 @@ Pulumi Crosswalk for AWS is a collection of libraries that use automatic well-ar
 ## Overview
 
 Pulumi Crosswalk for AWS supports "day one" tasks, such as creating your initial container-based workloads using
-[Amazon Elastic Container Service (ECS)](/docs/clouds/aws/guides/ecs)---including Fargate or [Kubernetes (EKS)](
-eks)---and creating serverless workloads using [Amazon API Gateway](/docs/clouds/aws/guides/api-gateway/) and [AWS Lambda](/docs/clouds/aws/guides/lambda/). Secure and cost-conscious defaults are chosen so that simple programs automatically use best practices for the underlying infrastructure, enabling better productivity with confidence.
+[Amazon Elastic Container Service (ECS)](/docs/iac/clouds/aws/guides/ecs)---including Fargate or [Kubernetes (EKS)](
+eks)---and creating serverless workloads using [Amazon API Gateway](/docs/iac/clouds/aws/guides/api-gateway/) and [AWS Lambda](/docs/iac/clouds/aws/guides/lambda/). Secure and cost-conscious defaults are chosen so that simple programs automatically use best practices for the underlying infrastructure, enabling better productivity with confidence.
 
 Pulumi Crosswalk for AWS also supports "day two and beyond" tasks, such as scaling your workload, securing and
-integrating it with your existing infrastructure, or going to production in multiple complex environments. This includes [Amazon Virtual Private Cloud (VPC)](/docs/clouds/aws/guides/vpc) for network isolation, [AWS Auto Scaling](
-autoscaling) for dynamic scaling, and [AWS Identity and Access Management (IAM)](/docs/clouds/aws/guides/iam) for
+integrating it with your existing infrastructure, or going to production in multiple complex environments. This includes [Amazon Virtual Private Cloud (VPC)](/docs/iac/clouds/aws/guides/vpc) for network isolation, [AWS Auto Scaling](
+autoscaling) for dynamic scaling, and [AWS Identity and Access Management (IAM)](/docs/iac/clouds/aws/guides/iam) for
 securing your infrastructure.
 
 For example, this program builds and publishes a Dockerized application to a private [Elastic Container Registry (ECR)](
@@ -82,7 +82,7 @@ relevant User Guides to get started:
 
 ### Continuous Deployment
 
-* [Using Pulumi from AWS Code Services](/docs/using-pulumi/continuous-delivery/aws-code-services/)
+* [Using Pulumi from AWS Code Services](/docs/iac/packages-and-automation/continuous-delivery/aws-code-services/)
 
 ### Other AWS Services
 

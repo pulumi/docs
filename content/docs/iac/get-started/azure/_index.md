@@ -15,7 +15,7 @@ menu:
 aliases:
     - /docs/quickstart/azure/
     - /docs/get-started/azure/
-    - /docs/clouds/azure/get-started/
+    - /docs/iac/get-started/azure/
 ---
 
 {{< cloud-intro "Microsoft Azure" >}}

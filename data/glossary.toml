@@ -21,7 +21,7 @@ link = "/docs/concepts/how-pulumi-works/"
 [[entries]]
 term = "Self-hosted"
 description = "Self-hosted in Pulumi applies to on-premise \"behind a firewall\" scenarios, as well as environments hosted within your own AWS, Azure, or Google Cloud account."
-link = "/docs/concepts/state/#deciding-on-a-state-backend"
+link = "/docs/iac/concepts/state-and-backends/#deciding-on-a-state-backend"
 
 [[entries]]
 term = "Pulumi Cloud"
@@ -46,7 +46,7 @@ link = "https://en.wikipedia.org/wiki/SAML_Metadata#Introduction_to_SAML_Metadat
 [[entries]]
 term = "Organization"
 description = "An organization is the primary grouping unit for stacks within the Pulumi Cloud."
-link = "/docs/pulumi-cloud/organizations/"
+link = "/docs/pulumi-cloud/admin/organizations//"
 
 [[entries]]
 term = "Language Host"
@@ -161,13 +161,13 @@ link = "/docs/concepts/projects/#project-relative-paths"
 [[entries]]
 term = "State"
 description = "Pulumi stores its own copy of the current state of your infrastructure. This is often called state, and is stored in transactional snapshots we call checkpoints."
-link = "/docs/concepts/state/"
+link = "/docs/iac/concepts/state-and-backends/"
 
 
 [[entries]]
 term = "Checkpoint"
 description = "A checkpoint is recorded by Pulumi at various points so that it can operate reliably—whether that means diffing goal state versus current state during an update, recovering from failure, or destroying resources accurately to clean up afterwards."
-link = "/docs/concepts/state/"
+link = "/docs/iac/concepts/state-and-backends/"
 
 [[entries]]
 term = "Secrets Encryption"

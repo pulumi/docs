@@ -13,7 +13,7 @@ menu:
     weight: 8
 aliases:
     - /docs/guides/crosswalk/kubernetes/app-services/
-    - /docs/clouds/kubernetes/guides/app-services/
+    - /docs/iac/clouds/kubernetes/guides/app-services/
 ---
 
 {{< chooser cloud "aws,azure,gcp" / >}}
@@ -63,7 +63,7 @@ $ aws sts assume-role --role-arn `pulumi stack output adminsIamRoleArn` --role-s
 $ export KUBECONFIG=`pwd`/kubeconfig-admin.json
 ```
 
-[aws-admin-identity-stack]: /docs/clouds/kubernetes/guides/identity#create-an-iam-role-for-admins/
+[aws-admin-identity-stack]: /docs/iac/clouds/kubernetes/guides/identity#create-an-iam-role-for-admins/
 
 {{% /choosable %}}
 
@@ -76,7 +76,7 @@ $ az login --service-principal --username $ARM_CLIENT_ID --password $ARM_CLIENT_
 $ export KUBECONFIG=`pwd`/kubeconfig-admin.json
 ```
 
-[azure-identity-stack]: /docs/clouds/kubernetes/guides/identity/
+[azure-identity-stack]: /docs/iac/clouds/kubernetes/guides/identity/
 {{% /choosable %}}
 
 {{% choosable cloud gcp %}}
@@ -88,7 +88,7 @@ $ gcloud auth activate-service-account --key-file k8s-admin-sa-key.json
 $ export KUBECONFIG=`pwd`/kubeconfig.json
 ```
 
-[gcp-admin-identity-stack]: /docs/clouds/kubernetes/guides/identity/#create-an-iam-role-for-admins
+[gcp-admin-identity-stack]: /docs/iac/clouds/kubernetes/guides/identity/#create-an-iam-role-for-admins
 
 {{% /choosable %}}
 
@@ -425,7 +425,7 @@ const nginx = new k8s.helm.v3.Chart("nginx",
 [nginx-priv-use]: https://github.com/helm/charts/blob/master/stable/nginx-ingress/values.yaml#L12
 [k8s-lb-svc]: https://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer
 [nginx-helm]: https://github.com/helm/charts/tree/master/stable/nginx-ingress
-[crosswalk-k8s-defaults]: /docs/clouds/kubernetes/guides/configure-defaults/#namespaces
+[crosswalk-k8s-defaults]: /docs/iac/clouds/kubernetes/guides/configure-defaults/#namespaces
 <!-- markdownlint-enable url -->
 
 {{% /choosable %}}

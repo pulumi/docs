@@ -117,7 +117,7 @@ We shipped an improvement where Pulumi CLI will ignore .git, .hg, and .bzr files
 
 Pulumi comes with a wealth of packages but users can also create and use custom providers and components. By default, Pulumi expects the binaries to be hosted on GitHub. On top of that, the CLI now supports GitLab as a first-class source of package downloads.
 
-If your package binary is hosted on GitLab, you can now set its `pluginDownloadURL` property (see [Publish your package](https://www.pulumi.com/docs/using-pulumi/pulumi-packages/how-to-author/#publish-your-package)) to point to your GitLab project, e.g. to `gitlab://gitlab.com/43429536`.
+If your package binary is hosted on GitLab, you can now set its `pluginDownloadURL` property (see [Publish your package](https://www.pulumi.com/docs/iac/packages-and-automation/pulumi-packages/how-to-author/#publish-your-package)) to point to your GitLab project, e.g. to `gitlab://gitlab.com/43429536`.
 
 👉  Learn more in the [Support custom plugins from other sources issue](https://github.com/pulumi/pulumi/issues/9007).
 

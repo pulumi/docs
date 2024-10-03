@@ -16,7 +16,7 @@ aliases:
     - /docs/quickstart/gcp/
     - /docs/get-started/gcp/
     - /docs/clouds/get-started/gcp
-    - /docs/clouds/gcp/get-started/
+    - /docs/iac/get-started/gcp/
 ---
 
 {{< cloud-intro "Google Cloud" >}}

@@ -17,7 +17,7 @@ aliases:
 - /secrets/
 ---
 
-All resource input and output values are recorded as stack [_state_](/docs/concepts/state) and stored in Pulumi Cloud, in a state file, or in your self-managed [backend](/docs/concepts/state/) of choice. These values are usually just plain-text strings, such as configuration settings, computed URLs, or resource identifiers. Sometimes, however, these values contain sensitive data, such as database passwords or service tokens, that must be handled carefully and protected from exposure.
+All resource input and output values are recorded as stack [_state_](/docs/iac/concepts/state-and-backends) and stored in Pulumi Cloud, in a state file, or in your self-managed [backend](/docs/iac/concepts/state-and-backends/) of choice. These values are usually just plain-text strings, such as configuration settings, computed URLs, or resource identifiers. Sometimes, however, these values contain sensitive data, such as database passwords or service tokens, that must be handled carefully and protected from exposure.
 
 Pulumi Cloud transmits and stores entire state files securely, but Pulumi also supports encrypting individual values as _secrets_ for additional protection. Encryption ensures that these values never appear as plain text in your state file. By default, the encryption method uses automatic, per-stack encryption keys provided by Pulumi Cloud, but you can also use a [provider of your own choosing](#configuring-secrets-encryption) instead.
 
@@ -469,7 +469,7 @@ Secret values are decrypted and made available in plain text to the program at r
 
 ## Configuring secrets encryption
 
-Pulumi Cloud automatically manages per-stack encryption keys on your behalf. Anytime you encrypt a value using `--secret` or by programmatically wrapping it as a secret at runtime, a secure protocol is used between the CLI and Pulumi Cloud that ensures secret data is encrypted in transit, at rest, and physically anywhere it gets stored. For more details about the concept of state files and backends, refer to [State and Backends](/docs/concepts/state/).
+Pulumi Cloud automatically manages per-stack encryption keys on your behalf. Anytime you encrypt a value using `--secret` or by programmatically wrapping it as a secret at runtime, a secure protocol is used between the CLI and Pulumi Cloud that ensures secret data is encrypted in transit, at rest, and physically anywhere it gets stored. For more details about the concept of state files and backends, refer to [State and Backends](/docs/iac/concepts/state-and-backends/).
 
 The default encryption mechanism may be insufficient in the following scenarios:
 

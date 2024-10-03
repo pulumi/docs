@@ -22,7 +22,7 @@ aliases:
 Pulumi is a modern [infrastructure as code](/what-is/what-is-infrastructure-as-code/) platform. It leverages existing programming languages---TypeScript, JavaScript, Python, Go, .NET, Java, and markup languages like YAML---and their native ecosystems to interact with cloud resources. A [downloadable CLI](/docs/install/), runtime, libraries, and a hosted service work together to deliver a robust platform for provisioning, updating, and managing cloud infrastructure.
 
 {{< notes >}}
-If this is your first time using Pulumi, you likely want to begin with [the Getting Started guide](/docs/get-started/) for your cloud of choice. It will walk you through an [AWS](/docs/clouds/aws/get-started/), [Azure](/docs/clouds/azure/get-started/), [Google Cloud](/docs/clouds/gcp/get-started/), or [Kubernetes](/docs/iac/get-started/kubernetes/) deployment from start to finish.
+If this is your first time using Pulumi, you likely want to begin with [the Getting Started guide](/docs/get-started/) for your cloud of choice. It will walk you through an [AWS](/docs/iac/get-started/aws/), [Azure](/docs/iac/get-started/azure/), [Google Cloud](/docs/iac/get-started/gcp/), or [Kubernetes](/docs/iac/get-started/kubernetes/) deployment from start to finish.
 {{< /notes >}}
 
 Pulumi is an [infrastructure as code](/what-is/what-is-infrastructure-as-code/) platform that allows you to use familiar programming languages and tools to build, deploy, and manage cloud infrastructure.
@@ -131,7 +131,7 @@ The following topics provide more details on the core concepts of Pulumi and how
         <p>Learn how to configure your deployment environments with Pulumi ESC.</p>
     </div>
      <div class="md:w-1/2 border-solid border-t-2 border-gray-200">
-        <h3 class="no-anchor pt-4"><a href="/docs/concepts/state"><i class="fas fa-file-alt pr-2"></i>State and backends</a></h3>
+        <h3 class="no-anchor pt-4"><a href="/docs/iac/concepts/state-and-backends"><i class="fas fa-file-alt pr-2"></i>State and backends</a></h3>
         <p>Learn how Pulumi stores state and manages concurrency.</p>
     </div>
 </div>

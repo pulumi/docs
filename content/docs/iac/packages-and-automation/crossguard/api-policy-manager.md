@@ -14,7 +14,7 @@ menu:
         parent: crossguard-compliance-ready-policies
         weight: 1
 aliases:
-    - /docs/using-pulumi/crossguard/api-policy-manager/
+    - /docs/iac/packages-and-automation/crossguard/api-policy-manager/
 ---
 ## Classes
 

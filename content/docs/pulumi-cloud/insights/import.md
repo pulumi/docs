@@ -40,7 +40,7 @@ Cloud Import programs are written in Go and require and Go 1.19+ to be installed
 
 ### AWS
 
-If you've never used Pulumi with AWS before we recommend you start first with the [Get Started with AWS](/docs/clouds/aws/get-started/) guide that helps you configure credentials and install dependencies.
+If you've never used Pulumi with AWS before we recommend you start first with the [Get Started with AWS](/docs/iac/get-started/aws/) guide that helps you configure credentials and install dependencies.
 
 The AWS Cloud Import program requires the Pulumi `aws-native` plugin with version >= `v0.57.0`. We recommend reinstalling aws-native plugins to be sure you pick up the latest version:
 
@@ -64,7 +64,7 @@ The program uses 3 concurrent workers by default due to rate limits on the AWS c
 
 ### Azure
 
-If you've never used Pulumi with Azure before we recommend you start first with the [Get Started with Azure](/docs/clouds/azure/get-started/) guide that helps you configure credentials and install dependencies.
+If you've never used Pulumi with Azure before we recommend you start first with the [Get Started with Azure](/docs/iac/get-started/azure/) guide that helps you configure credentials and install dependencies.
 
 Once you have your environment configured with Azure credentials, run the following to get started:
 
@@ -157,7 +157,7 @@ In an empty directory create a new Pulumi program in your language of choice. Yo
 - `pulumi new go`
 - `pulumi new yaml`
 
-At this point, you will need to authenticate with your cloud provider of choice. See guides on cloud authentication in [AWS](/docs/clouds/aws/get-started/) and [Azure](/docs/clouds/azure/get-started/) for more details.
+At this point, you will need to authenticate with your cloud provider of choice. See guides on cloud authentication in [AWS](/docs/iac/get-started/aws/) and [Azure](/docs/iac/get-started/azure/) for more details.
 
 ### Running `pulumi import`
 

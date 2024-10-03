@@ -15,7 +15,7 @@ aliases:
 - /docs/reference/crosswalk/aws/iam/
 - /docs/guides/crosswalk/aws/iam/
 - /docs/clouds/aws/aws-guides/iam/
-- /docs/clouds/aws/guides/iam/
+- /docs/iac/clouds/aws/guides/iam/
 ---
 
 <a href="./">

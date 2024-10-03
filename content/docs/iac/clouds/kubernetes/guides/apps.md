@@ -12,7 +12,7 @@ menu:
     weight: 12
 aliases:
   - /docs/guides/crosswalk/kubernetes/apps/
-  - /docs/clouds/kubernetes/guides/apps/
+  - /docs/iac/clouds/kubernetes/guides/apps/
 ---
 
 The following are examples of how to create and use various types of Kubernetes
@@ -509,7 +509,7 @@ const nginx = new k8s.helm.v3.Chart("nginx",
 [nginx-priv-use]: https://github.com/helm/charts/blob/master/stable/nginx-ingress/values.yaml#L12
 [k8s-lb-svc]: https://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer
 [nginx-helm]: https://github.com/helm/charts/tree/master/stable/nginx-ingress
-[crosswalk-k8s-defaults]: /docs/clouds/kubernetes/guides/configure-defaults/#namespaces
+[crosswalk-k8s-defaults]: /docs/iac/clouds/kubernetes/guides/configure-defaults/#namespaces
 <!-- markdownlint-enable url -->
 
 ## Deploy Wordpress

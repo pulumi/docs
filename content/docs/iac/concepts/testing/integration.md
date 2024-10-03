@@ -14,7 +14,7 @@ menu:
         parent: testing
 aliases:
     - /docs/guides/testing/integration/
-    - /docs/using-pulumi/testing/integration/
+    - /docs/iac/concepts/testing/integration/
 ---
 
 Integration testing focuses on black-box testing of Pulumi programs. An integration test runs the program in combination with the Pulumi CLI to deploy infrastructure to an ephemeral environment. It verifies the properties of the created resources and then destroys the infrastructure again.
@@ -147,7 +147,7 @@ Like our previous runtime validation checks, this will run in the harness right 
 
 A very powerful capability is the ability to spin up ephemeral environments solely for purposes of acceptance testing. Pulumi's concept of [projects and stacks](/docs/using-pulumi/organizing-projects-stacks/) is designed to make it easy to stand up entirely isolated and independent environments and to tear them down, including by using the integration testing framework.
 
-If you are using GitHub, Pulumi offers a [GitHub App](/docs/using-pulumi/continuous-delivery/github-app/) that helps to glue together your Pull Request workflow with this sort of acceptance testing run inside of your CI pipelines. Install the App into your GitHub repos, and Pulumi in your CI, and your Pull Requests will light up with infrastructure previews, updates, and test results:
+If you are using GitHub, Pulumi offers a [GitHub App](/docs/iac/packages-and-automation/continuous-delivery/github-app/) that helps to glue together your Pull Request workflow with this sort of acceptance testing run inside of your CI pipelines. Install the App into your GitHub repos, and Pulumi in your CI, and your Pull Requests will light up with infrastructure previews, updates, and test results:
 
 ![pr-comment](../pr-comment.png)
 

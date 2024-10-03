@@ -12,7 +12,7 @@ menu:
     usingpulumi:
         parent: crossguard-compliance-ready-policies
 aliases:
-    - /docs/using-pulumi/crossguard/compliance-ready-policies-gcp/
+    - /docs/iac/packages-and-automation/crossguard/compliance-ready-policies-gcp/
 ---
 There's a total of 1 Compliance Ready Policies for the Gcp provider.
 

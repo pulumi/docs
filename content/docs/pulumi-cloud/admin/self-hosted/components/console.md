@@ -21,7 +21,7 @@ aliases:
 {{% notes type="info" %}}
 Self-hosting is only available with **Pulumi Business Critical**. If you would like to evaluate the Self-Hosted Pulumi Cloud, sign up for the [30 day trial](/product/self-hosted#self-hosted-trial) or [contact us](/contact/).
 
-To manage your state with a self-managed backend, such as a cloud storage bucket, see [State and Backends](/docs/concepts/state/).
+To manage your state with a self-managed backend, such as a cloud storage bucket, see [State and Backends](/docs/iac/concepts/state-and-backends/).
 {{% /notes %}}
 
 The Pulumi Cloud allows users to view the stacks they have created and see any past activities recorded for those stacks. It also allows you to manage RBAC for your users.

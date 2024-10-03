@@ -25,7 +25,7 @@ weight: 999
 # A brief summary of the tutorial. It appears at the top of the tutorial page. Markdown is fine.
 summary: |
     There are certain scenarios in which you might need to move resources between different project stacks without recreating them, such as when refactoring a Pulumi project from a monolithic structure to micro-stacks. While it is possible to accomplish this by manually modifying Pulumi state files, doing so requires significant effort, can be error prone, and can be very time consuming.
-    
+
     In this tutorial, you will learn how to move your resources using the `pulumi state move` command instead.
 
 # A list of three to five things the reader will have learned by the end of the tutorial.
@@ -40,7 +40,7 @@ prereqs:
     - The [Pulumi CLI](/docs/install/)
     - An [Amazon Web Services](https://aws.amazon.com/) account
     - The [AWS CLI](https://aws.amazon.com/cli/)
-    - Your desired [language runtime installed](/docs/clouds/aws/get-started/begin/#install-language-runtime)
+    - Your desired [language runtime installed](/docs/iac/get-started/aws/begin/#install-language-runtime)
 
 # The estimated time, in minutes, for new users to complete the topic.
 estimated_time: 15
@@ -52,7 +52,7 @@ estimated_time: 15
 
 ## Create a new project
 
-To start, login to the [Pulumi CLI](/tutorials/cli-authentication) and ensure it is [configured to use your AWS account](/docs/clouds/aws/get-started/begin/#configure-pulumi-to-access-your-aws-account). Next, [create a new project](/docs/clouds/aws/get-started/create-project/) and replace the default program code with the following:
+To start, login to the [Pulumi CLI](/tutorials/cli-authentication) and ensure it is [configured to use your AWS account](/docs/iac/get-started/aws/begin/#configure-pulumi-to-access-your-aws-account). Next, [create a new project](/docs/iac/get-started/aws/create-project/) and replace the default program code with the following:
 
 {{< example-program path="aws-s3bucket-s3objects-random" >}}
 
@@ -92,7 +92,7 @@ Both the `--dest` and `--source` flags can be either stacks in the current proje
 
 {{< notes type="info" >}}
 
-This command will only work for stacks that exist within the same backend. It is currently not possible to move a resource between different backends, but you can move stacks between backends using other existing tools. Please refer to the [Migrating Between State Backends](/docs/concepts/state/#migrating-between-state-backends) documentation for more information.
+This command will only work for stacks that exist within the same backend. It is currently not possible to move a resource between different backends, but you can move stacks between backends using other existing tools. Please refer to the [Migrating Between State Backends](/docs/iac/concepts/state-and-backends/#migrating-between-state-backends) documentation for more information.
 
 {{< /notes >}}
 
@@ -102,7 +102,7 @@ Let's say you have a situation where your program code has grown too large, and 
 
 ### Create an additional stack
 
-To start, [create a second Pulumi project](/docs/clouds/aws/get-started/create-project/) to where you will move your AWS resources.
+To start, [create a second Pulumi project](/docs/iac/get-started/aws/create-project/) to where you will move your AWS resources.
 
 From within the original project folder, run the `pulumi stack ls --all` command to verify the existence of your stacks:
 
@@ -391,7 +391,7 @@ In this tutorial, you created a Pulumi Random resource and AWS S3 resources. You
 
 To learn more about creating and managing resources in Pulumi, take a look a the following resources:
 
-- Learn more about Pulumi state and backends in the [Managing Pulumi State and Backend Options documentation](/docs/concepts/state/).
+- Learn more about Pulumi state and backends in the [Managing Pulumi State and Backend Options documentation](/docs/iac/concepts/state-and-backends/).
 - Learn more about the `pulumi state` command and its subcommands in the [Pulumi State CLI documentation](/docs/cli/commands/pulumi_state/).
 - Learn more about Pulumi stacks in the [Stacks concept documentation](/docs/concepts/stack/).
 - Learn more about the `pulumi stack` command and its subcommands in the [Pulumi Stack CLI documentation](https://www.pulumi.com/docs/cli/commands/pulumi_stack/).

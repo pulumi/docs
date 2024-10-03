@@ -55,7 +55,7 @@ aliases:
     </dt>
     <dd>
         <p>
-            Set this environment variable to use a specified backend instead of the default backend.  See <a href="/docs/concepts/state">State and Backends</a> for details on valid backend URLs.
+            Set this environment variable to use a specified backend instead of the default backend.  See <a href="/docs/iac/concepts/state-and-backends">State and Backends</a> for details on valid backend URLs.
         </p>
         <pre><code class="text-xs">PULUMI_BACKEND_URL="s3://your-pulumi-state-bucket"</code></pre>
     </dd>
@@ -66,7 +66,7 @@ aliases:
     </dt>
     <dd>
         <p>
-            Sets <a href="/docs/concepts/config">configuration</a> for <a href="/docs/using-pulumi/testing/unit">unit testing</a>. Must be in JSON format.
+            Sets <a href="/docs/concepts/config">configuration</a> for <a href="/docs/iac/concepts/testing/unit">unit testing</a>. Must be in JSON format.
         </p>
         <p>
             <strong>This environment variable is ignored during normal Pulumi operations -- e.g., <code>up</code>, <code>preview</code>, etc.</strong>

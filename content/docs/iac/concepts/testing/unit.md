@@ -14,8 +14,8 @@ menu:
         parent: testing
 aliases:
     - /docs/guides/testing/unit/
-    - /docs/using-pulumi/testing/property-testing/
-    - /docs/using-pulumi/testing/unit/
+    - /docs/iac/concepts/testing/property-testing/
+    - /docs/iac/concepts/testing/unit/
 ---
 
 Pulumi programs are authored in a general-purpose language like TypeScript, Python, Go, C# or Java. The full power of each language is available, including access to tools and libraries for that runtime, including testing frameworks.
@@ -26,7 +26,7 @@ Because mocks don't execute any real work, unit tests run very fast. Also, they 
 
 ## Get Started
 
-Let's build a sample test suite. The example uses AWS resources, but the same capabilities and workflow apply to any Pulumi provider. To follow along, complete the [Get Started with AWS](/docs/clouds/aws/get-started/) guide to set up a basic Pulumi program in your language of choice.
+Let's build a sample test suite. The example uses AWS resources, but the same capabilities and workflow apply to any Pulumi provider. To follow along, complete the [Get Started with AWS](/docs/iac/get-started/aws/) guide to set up a basic Pulumi program in your language of choice.
 
 Note that unit tests are supported in all [existing Pulumi runtimes](https://www.pulumi.com/docs/languages-sdks/).
 

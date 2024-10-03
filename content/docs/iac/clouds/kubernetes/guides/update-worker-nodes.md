@@ -13,7 +13,7 @@ menu:
     weight: 10
 aliases:
   - /docs/guides/crosswalk/kubernetes/update-worker-nodes/
-  - /docs/clouds/kubernetes/guides/update-worker-nodes/
+  - /docs/iac/clouds/kubernetes/guides/update-worker-nodes/
 ---
 
 {{< chooser cloud "aws,azure,gcp" / >}}

@@ -40,9 +40,9 @@ The stack name is specified in one of the following formats:
 1. `orgName/projectName/stackName`: Identifies the stack `stackName` in the organization `orgName` and the project `projectName`.  `projectName` must match the project specified by the nearest `Pulumi.yaml` project file.
 
 {{% notes type="info" %}}
-For [self-managed backends](/docs/concepts/state#using-a-self-managed-backend), the `orgName` portion of the stack name must always be the constant value `organization`.
+For [self-managed backends](/docs/iac/concepts/state-and-backends#using-a-self-managed-backend), the `orgName` portion of the stack name must always be the constant value `organization`.
 
-Additionally, backends initialized with a Pulumi CLI older than v3.61.0 support only the first format (`stackName`). You can upgrade these to support the other formats with the `pulumi state upgrade` command. See [*State > Scoping*](/docs/concepts/state/#scoping) for more details.
+Additionally, backends initialized with a Pulumi CLI older than v3.61.0 support only the first format (`stackName`). You can upgrade these to support the other formats with the `pulumi state upgrade` command. See [*State > Scoping*](/docs/iac/concepts/state-and-backends/#scoping) for more details.
 {{% /notes %}}
 
 Given the stack `my-org/my-project/dev`, the following are  all equivalent if the current organization is `my-org` and the current project is `my-project`:
@@ -146,7 +146,7 @@ Use `pulumi stack select` to change stack; `pulumi stack ls` lists known ones
 Stacks have associated metadata in the form of tags, with each tag consisting of a name and value. A set of built-in tags are automatically assigned and updated each time a stack is updated (such as `pulumi:project`, `pulumi:runtime`, `pulumi:description`, `gitHub:owner`, `gitHub:repo`, `vcs:owner`, `vcs:repo`, and `vcs:kind`). To view a stack's tags, run [`pulumi stack tag ls`](/docs/cli/commands/pulumi_stack_tag_ls).
 
 {{% notes "info" %}}
-Stack tags are only supported with the [Pulumi Cloud backend](/docs/concepts/state/).
+Stack tags are only supported with the [Pulumi Cloud backend](/docs/iac/concepts/state-and-backends/).
 {{% /notes %}}
 
 Custom tags can be assigned to a stack by running [`pulumi stack tag set <name> <value>`](/docs/cli/commands/pulumi_stack_tag_set) and can be used to customize the grouping of stacks in the [Pulumi Cloud](https://app.pulumi.com). For example, if you have many projects with separate stacks for production, staging, and testing environments, it may be useful to group stacks by environment instead of by project. To do this, you could assign a custom tag named `environment` to each stack. For example, running `pulumi stack tag set environment production` assigns a custom `environment` tag with a value of `production` to the active stack. Once you've assigned an `environment` tag to each stack, you'll be able to group by `Tag: environment` in the Pulumi Cloud.

@@ -79,8 +79,8 @@ IaC in general-purpose languages is gaining prominence as organizations seek to 
 - Better integration with multiple cloud providers, like [AWS](https://www.pulumi.com/docs/clouds/aws/), [Azure](https://www.pulumi.com/docs/clouds/azure/), and [Google Cloud](https://www.pulumi.com/docs/clouds/gcp/), data stores, and third-party services like [Cockroach Labs db](https://www.pulumi.com/registry/packages/cockroach/), [Confluent cloud](https://www.pulumi.com/registry/packages/confluentcloud/), [Kafka](https://www.pulumi.com/registry/packages/kafka/), and more.
 - Deeper validation on parameters that people are passing in, checking all critical components, ensuring they are configured correctly before deployment
 - More [efficient resource management](https://www.pulumi.com/docs/pulumi-cloud/insights/)
-- Robust security and [Policy as Code](https://www.pulumi.com/docs/using-pulumi/crossguard/core-concepts/) to enforce security practices, guardrails, compliance, cost policies, and more
-- Intelligent automation, including [automated tests](https://www.pulumi.com/docs/using-pulumi/testing/) and [remediation policies](https://www.pulumi.com/blog/remediation-policies/)
+- Robust security and [Policy as Code](https://www.pulumi.com/docs/iac/packages-and-automation/crossguard/core-concepts/) to enforce security practices, guardrails, compliance, cost policies, and more
+- Intelligent automation, including [automated tests](https://www.pulumi.com/docs/iac/concepts/testing/) and [remediation policies](https://www.pulumi.com/blog/remediation-policies/)
 - [AI-driven automation and insights](https://www.pulumi.com/blog/pulumi-insights/)
 
 ## 4. Rise of Security-First (DevSecOps)

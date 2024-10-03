@@ -8,7 +8,7 @@ weight: 9
 aliases:
 - /docs/quickstart/azure/next-steps/
 - /docs/get-started/azure/next-steps/
-- /docs/clouds/azure/get-started/next-steps/
+- /docs/iac/get-started/azure/next-steps/
 ---
 
 Congrats! You've deployed your first project on Microsoft Azure with Pulumi. Here are some next steps, depending on your learning style.
@@ -39,7 +39,7 @@ Easily deploy the most common cloud architectures, from [static websites](/templ
 
 ## Dive into the docs
 
-Read more about Pulumi's architecture and foundational concepts in depth, including [projects](/docs/concepts/projects/), [stacks](/docs/concepts/stack/), [configuration](/docs/concepts/config/), [secrets](/docs/concepts/secrets/), [resources](/docs/concepts/resources/), [state](/docs/concepts/state/), and more.
+Read more about Pulumi's architecture and foundational concepts in depth, including [projects](/docs/concepts/projects/), [stacks](/docs/concepts/stack/), [configuration](/docs/concepts/config/), [secrets](/docs/concepts/secrets/), [resources](/docs/concepts/resources/), [state](/docs/iac/concepts/state-and-backends/), and more.
 
 {{< get-started-next-step path="/docs/concepts/" label="Read the docs" ref="gs-azure-docs" >}}
 

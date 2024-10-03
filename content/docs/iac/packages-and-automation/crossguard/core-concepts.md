@@ -16,10 +16,10 @@ menu:
         identifier: crossguard-core-concepts
 aliases:
 - /docs/guides/crossguard/core-concepts/
-- /docs/using-pulumi/crossguard/core-concepts/
+- /docs/iac/packages-and-automation/crossguard/core-concepts/
 ---
 
-Policies can be written in TypeScript/JavaScript (Node.js) or Python and can be applied to Pulumi stacks written in any language. More information on [language support for policies](/docs/using-pulumi/crossguard#languages).
+Policies can be written in TypeScript/JavaScript (Node.js) or Python and can be applied to Pulumi stacks written in any language. More information on [language support for policies](/docs/iac/packages-and-automation/crossguard#languages).
 
 {{< chooser language "typescript,python" />}}
 
@@ -101,7 +101,7 @@ A policy has one of the following *enforcement levels*:
 - {{< policy-enforcementlevel-remediate >}} is stricter than mandatory and enables policy remediations where available.
 - {{< policy-enforcementlevel-disabled >}} prevents the policy from running.
 
-The enforcement level can be specified in multiple ways: on the definition of a policy, on the Policy Pack as a whole, or through [*Policy Configuration*](/docs/using-pulumi/crossguard/configuration/) for either. If the enforcement is set in multiple places, the most granular setting for any given policy is used (so, policy-specific configuration overrides the Policy Pack-wide configuration). The default enforcement level is {{< policy-enforcementlevel-advisory >}} if no enforcement level is specified on either the policy pack or policy.
+The enforcement level can be specified in multiple ways: on the definition of a policy, on the Policy Pack as a whole, or through [*Policy Configuration*](/docs/iac/packages-and-automation/crossguard/configuration/) for either. If the enforcement is set in multiple places, the most granular setting for any given policy is used (so, policy-specific configuration overrides the Policy Pack-wide configuration). The default enforcement level is {{< policy-enforcementlevel-advisory >}} if no enforcement level is specified on either the policy pack or policy.
 
 ### Resource Policies
 

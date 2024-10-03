@@ -20,7 +20,7 @@ aliases:
 - /docs/get-started/crossguard/authoring-a-policy-pack
 - /docs/get-started/crossguard/enforcing-a-policy-pack
 - /docs/guides/crossguard/get-started/
-- /docs/using-pulumi/crossguard/get-started/
+- /docs/iac/packages-and-automation/crossguard/get-started/
 ---
 
 Pulumi CrossGuard is a product that provides gated deployments via Policy as Code.
@@ -37,13 +37,13 @@ Policies can be written in TypeScript/JavaScript (Node.js) or Python and can be 
 * **Policy** - an individual policy - i.e. “prohibit use of instances larger than t3.medium”.
 * **Enforcement Level** - the impact of a policy violation - i.e. “mandatory” or “advisory”.
 
-Learn more about [Policy as Code core concepts](/docs/using-pulumi/crossguard/core-concepts/).
+Learn more about [Policy as Code core concepts](/docs/iac/packages-and-automation/crossguard/core-concepts/).
 
 ## Creating a Policy Pack
 
 Let's start with authoring your first Policy Pack.
 
-Policies can be written in TypeScript/JavaScript (Node.js) or Python and can be applied to Pulumi stacks written in any language. [More information on language support for policies](/docs/using-pulumi/crossguard#languages).
+Policies can be written in TypeScript/JavaScript (Node.js) or Python and can be applied to Pulumi stacks written in any language. [More information on language support for policies](/docs/iac/packages-and-automation/crossguard#languages).
 
 {{< chooser language "typescript,python" >}}
 
@@ -165,7 +165,7 @@ Policies can be written in TypeScript/JavaScript (Node.js) or Python and can be 
 
 {{< /chooser >}}
 
-You can find more example Policy Packs in the [examples repo](https://github.com/pulumi/examples/tree/master/policy-packs). [Policy Pack best practices](/docs/using-pulumi/crossguard/best-practices/) details the best practices for writing a Policy Pack.
+You can find more example Policy Packs in the [examples repo](https://github.com/pulumi/examples/tree/master/policy-packs). [Policy Pack best practices](/docs/iac/packages-and-automation/crossguard/best-practices/) details the best practices for writing a Policy Pack.
 
 ### Running Locally {#running-locally}
 
@@ -331,4 +331,4 @@ Once you’ve validated the behavior of your policies, an organization administr
 
 ## Next Steps
 
-Now that you have published your first Policy Pack, you now have all the tools needed to enforce compliance amongst your organization. For more example Policy Packs, you can check out the [examples repo](https://github.com/pulumi/examples/tree/master/policy-packs). You can also find more documentation in the [CrossGuard guide](/docs/using-pulumi/crossguard/).
+Now that you have published your first Policy Pack, you now have all the tools needed to enforce compliance amongst your organization. For more example Policy Packs, you can check out the [examples repo](https://github.com/pulumi/examples/tree/master/policy-packs). You can also find more documentation in the [CrossGuard guide](/docs/iac/packages-and-automation/crossguard/).

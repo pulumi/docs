@@ -13,7 +13,7 @@ menu:
     usingpulumi:
         parent: crossguard
 aliases:
-    - /docs/using-pulumi/crossguard/policy-violations/
+    - /docs/iac/packages-and-automation/crossguard/policy-violations/
 ---
 
 ## Overview

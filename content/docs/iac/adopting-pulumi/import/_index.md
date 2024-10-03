@@ -455,7 +455,7 @@ A `Resource` has the following schema:
 | `version`    | `string`        | No       | The [version](/docs/concepts/options/version/) of the provider to use.                                                        |
 | `properties` | `array[string]` | No       | The list of properties to include in the generated code. If unspecified all properties will be included.                                                       |
 | `component`  | `boolean`       | No       | This import should create an empty component resource. `id` must not be set if this is `true`.                                                                 |
-| `remote`     | `boolean`       | No       | This is a component in a [component package](/docs/using-pulumi/pulumi-packages/#types-of-pulumi-packages). `component` must be `true` if this is `true`.      |
+| `remote`     | `boolean`       | No       | This is a component in a [component package](/docs/iac/packages-and-automation/pulumi-packages/#types-of-pulumi-packages). `component` must be `true` if this is `true`.      |
 
 To make it easier to import resources into complex programs, you can run `pulumi preview --import-file <file>` to generate a placeholder import file for every resource that would be created. The generated file will contain all the names, URNs, and types already filled in, with blank `id` fields that need to be filled in.
 

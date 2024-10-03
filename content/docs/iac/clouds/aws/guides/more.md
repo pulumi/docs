@@ -32,10 +32,10 @@ aliases:
   - /docs/clouds/aws/aws-guides/s3/
   - /docs/clouds/aws/aws-guides/sns/
   - /docs/clouds/aws/aws-guides/sqs/
-  - /docs/clouds/aws/guides/more/
+  - /docs/iac/clouds/aws/guides/more/
 ---
 
-In addition to the higher-level abstractions in [Pulumi Crosswalk](/docs/clouds/aws/guides/), the [`@pulumi/aws`](/registry/packages/aws/) library offers complete, fine-grained control over all available AWS resources. The snippets below are designed to help you address some of the most common scenarios.
+In addition to the higher-level abstractions in [Pulumi Crosswalk](/docs/iac/clouds/aws/guides/), the [`@pulumi/aws`](/registry/packages/aws/) library offers complete, fine-grained control over all available AWS resources. The snippets below are designed to help you address some of the most common scenarios.
 
 ## Create an Athena Database and NamedQuery
 

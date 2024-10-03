@@ -13,7 +13,7 @@ aliases:
     - /docs/get-started/azure/install-language-runtime/
     - /docs/get-started/azure/configure/
     - /docs/get-started/azure/begin/
-    - /docs/clouds/azure/get-started/begin/
+    - /docs/iac/get-started/azure/begin/
 ---
 
 Before you get started using Pulumi, let's run through a few quick steps to ensure your environment is set up correctly.

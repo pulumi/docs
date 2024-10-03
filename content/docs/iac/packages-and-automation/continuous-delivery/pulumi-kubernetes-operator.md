@@ -15,7 +15,7 @@ menu:
         weight: 1
 aliases:
 - /docs/guides/continuous-delivery/pulumi-kubernetes-operator/
-- /docs/using-pulumi/continuous-delivery/pulumi-kubernetes-operator/
+- /docs/iac/packages-and-automation/continuous-delivery/pulumi-kubernetes-operator/
 ---
 
 This page details how to use the [Pulumi Kubernetes

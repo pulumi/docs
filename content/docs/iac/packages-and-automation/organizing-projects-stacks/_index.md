@@ -112,11 +112,11 @@ structure enables seamless continuous deployment.
 
 In this model, there is a rough correspondence between a Git repo and a Pulumi project, and a Git branch and
 its associated Pulumi stack. Read more about
-[Continuous Delivery](/docs/using-pulumi/continuous-delivery/).
+[Continuous Delivery](/docs/iac/packages-and-automation/continuous-delivery/).
 
 ## Tagging Stacks
 
-Stacks have associated metadata in the form of name/value [stack tags](/docs/concepts/stack#stack-tags). You can assign custom tags to stacks (when logged into the [Pulumi Cloud backend](/docs/concepts/state/) to enable grouping stacks in the [Pulumi Cloud](https://app.pulumi.com). For example, if you have many projects with separate stacks for production, staging, and testing environments, it may be useful to group stacks by environment instead of by project. To do this, you could assign a custom `environment` tag to each stack, assigning a value of `production` to each production stack, `staging` to each staging stack, etc. Then in the Pulumi Cloud, you'll be able to group stacks by `Tag: environment`.
+Stacks have associated metadata in the form of name/value [stack tags](/docs/concepts/stack#stack-tags). You can assign custom tags to stacks (when logged into the [Pulumi Cloud backend](/docs/iac/concepts/state-and-backends/) to enable grouping stacks in the [Pulumi Cloud](https://app.pulumi.com). For example, if you have many projects with separate stacks for production, staging, and testing environments, it may be useful to group stacks by environment instead of by project. To do this, you could assign a custom `environment` tag to each stack, assigning a value of `production` to each production stack, `staging` to each staging stack, etc. Then in the Pulumi Cloud, you'll be able to group stacks by `Tag: environment`.
 
 ## Examples
 
@@ -287,7 +287,7 @@ To be clear, each of the applications/services inside our monorepo (including th
 
 ### Other examples
 
-See also the use of multiple projects and stacks in [Crosswalk for Kubernetes](/docs/clouds/kubernetes/guides/), which contains a tutorial, reference architecture, and collection of prod-first code examples that demonstrate industry best-practices for using Kubernetes in contexts where an organization of people must ship production applications.
+See also the use of multiple projects and stacks in [Crosswalk for Kubernetes](/docs/iac/clouds/kubernetes/guides/), which contains a tutorial, reference architecture, and collection of prod-first code examples that demonstrate industry best-practices for using Kubernetes in contexts where an organization of people must ship production applications.
 
 ## Organizing your project code
 

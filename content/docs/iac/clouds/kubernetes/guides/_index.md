@@ -15,7 +15,7 @@ aliases:
 - /docs/guides/k8s-the-prod-way/app
 - /docs/guides/k8s-the-prod-way/architecture
 - /docs/guides/crosswalk/kubernetes/
-- /docs/clouds/kubernetes/guides/
+- /docs/iac/clouds/kubernetes/guides/
 ---
 
 <a href="./">
@@ -75,7 +75,7 @@ out CI/CD and automation systems into your clusters, creating native support to 
 [k8s-operator]: https://github.com/pulumi/pulumi-kubernetes-operator
 [k8s-ext-pattern]: https://kubernetes.io/docs/concepts/extend-kubernetes/operator/
 [stack]: /docs/concepts/stack/
-[k8s-operator-cicd]: /docs/using-pulumi/continuous-delivery/pulumi-kubernetes-operator/
+[k8s-operator-cicd]: /docs/iac/packages-and-automation/continuous-delivery/pulumi-kubernetes-operator/
 
 ## Join the Community
 
@@ -94,9 +94,9 @@ Join the Pulumi team and thousands of practioners in our
 See the [FAQ][crosswalk-faq] for more details.
 
 <!-- markdownlint-disable url -->
-[crosswalk-faq]: /docs/clouds/kubernetes/guides/faq/
-[cw-index]: /docs/clouds/kubernetes/guides/
-[cw-playbooks]: /docs/clouds/kubernetes/guides/playbooks/
+[crosswalk-faq]: /docs/iac/clouds/kubernetes/guides/faq/
+[cw-index]: /docs/iac/clouds/kubernetes/guides/
+[cw-playbooks]: /docs/iac/clouds/kubernetes/guides/playbooks/
 [k8s-get-started]: /docs/iac/get-started/kubernetes/
 [eks]: https://aws.amazon.com/eks/
 [aks]: https://azure.microsoft.com/en-us/services/kubernetes-service/
@@ -108,7 +108,7 @@ See the [FAQ][crosswalk-faq] for more details.
 [gh-pulumi]: https://github.com/pulumi
 [pulumi-cloud-k8s]: /registry/packages/kubernetes
 [pulumi-cloud-k8s]: /registry/packages/kubernetes/
-[pulumi-cd]: /docs/using-pulumi/continuous-delivery/
+[pulumi-cd]: /docs/iac/packages-and-automation/continuous-delivery/
 [pulumi-slack]: https://slack.pulumi.com/
 [pulumi-twitter]: https://twitter.com/pulumicorp
 [pulumi-yt]: https://www.youtube.com/channel/UC2Dhyn4Ev52YSbcpfnfP0Mw

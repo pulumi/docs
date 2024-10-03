@@ -12,7 +12,7 @@ menu:
 aliases:
 - /docs/quickstart/gcp/deploy-stack/
 - /docs/get-started/gcp/deploy-stack/
-- /docs/clouds/gcp/get-started/deploy-stack/
+- /docs/iac/get-started/gcp/deploy-stack/
 ---
 
 Let's go ahead and deploy your stack:

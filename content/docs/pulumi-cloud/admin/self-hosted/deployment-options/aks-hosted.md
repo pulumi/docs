@@ -36,7 +36,7 @@ This installer uses Pulumi to deploy the Pulumi Cloud. In this case, one uses th
 To this end, you need to set up the following:
 
 * [Download and install the Pulumi CLI](/docs/install/) on your workstation
-* [Login to Azure Blob Storage Backend](/docs/concepts/state#azure-blob-storage)
+* [Login to Azure Blob Storage Backend](/docs/iac/concepts/state-and-backends#azure-blob-storage)
 
 ### Deployment Steps
 

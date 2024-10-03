@@ -72,7 +72,7 @@ We launched a new template gallery in the [New Project Wizard](/docs/pulumi-clou
 
 ### Deployments GA
 
-[Pulumi Deployments](/docs/pulumi-cloud/deployments) was made [generally available](/blog/deployments-ga) with new improvements such as support for [GitHub Enterprise](/docs/using-pulumi/continuous-delivery/github-app/#github-enterprise-server-support). Since launch, Pulumi Deployments has made infrastructure management at scale seamless for our customers, offering out of the box features such as [Review Stacks](/docs/pulumi-cloud/deployments/review-stacks) and multiple deployment triggers.
+[Pulumi Deployments](/docs/pulumi-cloud/deployments) was made [generally available](/blog/deployments-ga) with new improvements such as support for [GitHub Enterprise](/docs/iac/packages-and-automation/continuous-delivery/github-app/#github-enterprise-server-support). Since launch, Pulumi Deployments has made infrastructure management at scale seamless for our customers, offering out of the box features such as [Review Stacks](/docs/pulumi-cloud/deployments/review-stacks) and multiple deployment triggers.
 
 ### Customer Managed Agents
 

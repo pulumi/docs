@@ -7,7 +7,7 @@ weight: 6
 aliases:
 - /docs/quickstart/aws/modify-program/
 - /docs/get-started/aws/modify-program/
-- /docs/clouds/aws/get-started/modify-program/
+- /docs/iac/get-started/aws/modify-program/
 ---
 
 Now that your S3 bucket is provisioned, let's add a file to it. First, from within your project directory, create a new file called `index.html` file along with some content:

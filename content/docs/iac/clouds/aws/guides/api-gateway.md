@@ -14,7 +14,7 @@ menu:
 aliases:
 - /docs/reference/crosswalk/aws/api-gateway/
 - /docs/guides/crosswalk/aws/api-gateway/
-- /docs/clouds/aws/guides/api-gateway/
+- /docs/iac/clouds/aws/guides/api-gateway/
 ---
 
 {{< crosswalk-header >}}
@@ -123,7 +123,7 @@ $ curl $(pulumi stack output url)
 {"message":"Hello from API Gateway!"}%
 ```
 
-For more complete information about creating Lambda Functions, see the [Pulumi Crosswalk for AWS Lambda documentation](/docs/clouds/aws/guides/lambda/).
+For more complete information about creating Lambda Functions, see the [Pulumi Crosswalk for AWS Lambda documentation](/docs/iac/clouds/aws/guides/lambda/).
 
 ### Serving static files from S3 {#s3}
 
@@ -210,7 +210,7 @@ You can define a Lambda Authorizer for an event-handler route or a static route.
 
 - Token authorizers use an authorization token (i.e., a header of the form `Authorization: token <token>`)
 
-To define an Authorizer, you provide a Lambda that receives an [authorizer event](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-lambda-authorizer-input.html) and responds with a valid [authorizer response](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-lambda-authorizer-output.html). See [Pulumi Crosswalk for AWS Lambda](/docs/clouds/aws/guides/lambda/) for other ways you can define your Lambda for the Authorizer.
+To define an Authorizer, you provide a Lambda that receives an [authorizer event](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-lambda-authorizer-input.html) and responds with a valid [authorizer response](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-lambda-authorizer-output.html). See [Pulumi Crosswalk for AWS Lambda](/docs/iac/clouds/aws/guides/lambda/) for other ways you can define your Lambda for the Authorizer.
 
 Below is an example of a custom `request` authorizer. Because the authorizer has access to the content of the HTTP request, it can use any of the request's properties to determine whether to grant access to the resource requested. For demonstration, this authorizer validates the request using a single, hard-coded token. (In practice, you'd more likely have the authorizer query a database or contact another service for this purpose.)
 

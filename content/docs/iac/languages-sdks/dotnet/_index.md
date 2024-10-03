@@ -245,19 +245,19 @@ In addition to the CLI-driven workflows shown above, you can continuously deploy
 
 Pulumi can deploy infrastructure changes from your Azure DevOps Pipelines. This enables easy integration with your existing automation while using .NET for your infrastructure as code, leveraging the Pulumi task in the Visual Studio Marketplace.
 
-To learn more, [see the Pulumi Azure DevOps user guide](/docs/using-pulumi/continuous-delivery/azure-devops/).
+To learn more, [see the Pulumi Azure DevOps user guide](/docs/iac/packages-and-automation/continuous-delivery/azure-devops/).
 
 ### GitHub Actions
 
 <img src="/logos/tech/githubactions.png" align="right" width="120" style="padding:0 0 16px 32px">
 
-Pulumi can deploy infrastructure using GitHub Actions, making Git-driven deployments of your infrastructure as code straightforward. To learn more, [see the Pulumi GitHub Actions user guide](/docs/using-pulumi/continuous-delivery/github-actions/).
+Pulumi can deploy infrastructure using GitHub Actions, making Git-driven deployments of your infrastructure as code straightforward. To learn more, [see the Pulumi GitHub Actions user guide](/docs/iac/packages-and-automation/continuous-delivery/github-actions/).
 
-There is also a [Pulumi GitHub App](/docs/using-pulumi/continuous-delivery/github-app/) that integrates with Pull Requests so that you get previews of deployments before they are merged inline in your PRs where it's easy to comment and collaborate.
+There is also a [Pulumi GitHub App](/docs/iac/packages-and-automation/continuous-delivery/github-app/) that integrates with Pull Requests so that you get previews of deployments before they are merged inline in your PRs where it's easy to comment and collaborate.
 
 ### Other CI/CD Integrations
 
-If you don't use Azure DevOps or GitHub Actions, Pulumi also supports a number of other [CI/CD integrations](/docs/using-pulumi/continuous-delivery/).
+If you don't use Azure DevOps or GitHub Actions, Pulumi also supports a number of other [CI/CD integrations](/docs/iac/packages-and-automation/continuous-delivery/).
 
 ## Package Documentation
 

@@ -18,9 +18,9 @@ aliases:
 - /docs/reference/cd-gitlab-ci/
 - /docs/console/continuous-delivery/gitlab-ci/
 - /docs/guides/continuous-delivery/gitlab-ci/
-- /docs/using-pulumi/continuous-delivery/cd-gitlab-ci/
+- /docs/iac/packages-and-automation/continuous-delivery/cd-gitlab-ci/
 - /docs/guides/continuous-delivery/cd-gitlab-ci/
-- /docs/using-pulumi/continuous-delivery/gitlab-ci/
+- /docs/iac/packages-and-automation/continuous-delivery/gitlab-ci/
 ---
 
 [GitLab CI/CD](https://docs.gitlab.com/ee/topics/build_your_application.html) enables the management of deploying
@@ -210,6 +210,6 @@ pulumi up --yes # this line will be the pulumi preview command in pulumi-preview
 
 Pulumi now supports enhancing your merge requests with insights into changes to your infrastructure.
 Never miss another unintended change with the infrastructure change summary shown inline with the rest of your
-merge request notes. Learn how to [configure](/docs/using-pulumi/continuous-delivery/gitlab-app/) the integration with Pulumi.
+merge request notes. Learn how to [configure](/docs/iac/packages-and-automation/continuous-delivery/gitlab-app/) the integration with Pulumi.
 
 ![Merge Request Note](/images/docs/guides/continuous-delivery/gitlab-app/merge_request_note.png)

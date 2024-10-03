@@ -12,7 +12,7 @@ menu:
     weight: 4
 aliases:
   - /docs/guides/crosswalk/kubernetes/try-out-the-cluster/
-  - /docs/clouds/kubernetes/guides/try-out-the-cluster/
+  - /docs/iac/clouds/kubernetes/guides/try-out-the-cluster/
 ---
 
 {{< chooser cloud "aws,azure,gcp" / >}}
@@ -189,10 +189,10 @@ Edit `kubeconfig-devs.json` to use a role for authentication in the
 
 <!-- markdownlint-disable url -->
 [aws-iam-auth]: https://docs.aws.amazon.com/eks/latest/userguide/install-aws-iam-authenticator.html
-[aws-admin-identity-stack]: /docs/clouds/kubernetes/guides/identity/#create-an-iam-role-for-admins
-[aws-devs-identity-stack]: /docs/clouds/kubernetes/guides/identity/#create-an-iam-role-for-developers
+[aws-admin-identity-stack]: /docs/iac/clouds/kubernetes/guides/identity/#create-an-iam-role-for-admins
+[aws-devs-identity-stack]: /docs/iac/clouds/kubernetes/guides/identity/#create-an-iam-role-for-developers
 [aws-cluster-config-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/aws/03-cluster-configuration
-[crosswalk-configure-access]: /docs/clouds/kubernetes/guides/configure-access-control
+[crosswalk-configure-access]: /docs/iac/clouds/kubernetes/guides/configure-access-control
 <!-- markdownlint-enable url -->
 
 {{% /choosable %}}
@@ -235,9 +235,9 @@ $ export KUBECONFIG=`pwd`/kubeconfig-devs.json
 ```
 
 <!-- markdownlint-disable url -->
-[azure-identity-stack]: /docs/clouds/kubernetes/guides/identity/#prerequisites
+[azure-identity-stack]: /docs/iac/clouds/kubernetes/guides/identity/#prerequisites
 [aks-cluster-roles]: https://docs.microsoft.com/en-us/azure/aks/control-kubeconfig-access#available-cluster-roles-permissions
-[crosswalk-configure-access]: /docs/clouds/kubernetes/guides/configure-access-control/
+[crosswalk-configure-access]: /docs/iac/clouds/kubernetes/guides/configure-access-control/
 <!-- markdownlint-enable url -->
 
 {{% /choosable %}}
@@ -279,9 +279,9 @@ $ pulumi stack output --show-secrets kubeconfig > kubeconfig.json
 $ export KUBECONFIG=`pwd`/kubeconfig.json
 ```
 
-[gcp-admin-identity-stack]: /docs/clouds/kubernetes/guides/identity/#create-an-iam-role-and-serviceaccount-for-admins
-[gcp-devs-identity-stack]: /docs/clouds/kubernetes/guides/identity/#create-an-iam-role-and-serviceaccount-for-developers
-[crosswalk-configure-access]: /docs/clouds/kubernetes/guides/configure-access-control
+[gcp-admin-identity-stack]: /docs/iac/clouds/kubernetes/guides/identity/#create-an-iam-role-and-serviceaccount-for-admins
+[gcp-devs-identity-stack]: /docs/iac/clouds/kubernetes/guides/identity/#create-an-iam-role-and-serviceaccount-for-developers
+[crosswalk-configure-access]: /docs/iac/clouds/kubernetes/guides/configure-access-control
 
 {{% /choosable %}}
 

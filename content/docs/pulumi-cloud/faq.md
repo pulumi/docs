@@ -44,7 +44,7 @@ Using the Pulumi Cloud with Pulumi provide a good combination of usability, safe
 
 When you use Pulumi without the Pulumi Cloud, the checkpoint for your stack is stored locally or in your own external self-managed state storage. If that file is lost or outdated, Pulumi can no longer operate on your stack. To collaborate with others on your stack, you must host this file yourself and protect against conflicting updates to it. If you use your own checkpoint file, the Pulumi Cloud features, such as the deployment history and resource view, will not be available.
 
-To use Pulumi without the Pulumi Cloud, log in using `pulumi login --local` or by logging in to an alternative backend. For more information, read more at [State and Backends](/docs/concepts/state/).
+To use Pulumi without the Pulumi Cloud, log in using `pulumi login --local` or by logging in to an alternative backend. For more information, read more at [State and Backends](/docs/iac/concepts/state-and-backends/).
 
 ### How can I go back to using the Pulumi Cloud?
 
@@ -220,5 +220,5 @@ used.
 - [Pulumi ESC FAQ](/docs/esc/faq/)
 - [Pulumi Cloud Deployments FAQ](/docs/pulumi-cloud/deployments/faq/)
 - [Pulumi Cloud SCIM FAQ](/docs/pulumi-cloud/access-management/scim/faq/)
-- [Pulumi CrossGuard FAQ](/docs/using-pulumi/crossguard/faq/)
-- [Kubernetes guides FAQ](/docs/clouds/kubernetes/guides/faq/)
+- [Pulumi CrossGuard FAQ](/docs/iac/packages-and-automation/crossguard/faq/)
+- [Kubernetes guides FAQ](/docs/iac/clouds/kubernetes/guides/faq/)

@@ -114,9 +114,9 @@ Use these guardrails to enforce Tag Policies, for example that every tag for “
 
 ## CrossGuard
 
-[CrossGuard Policy as Code](/docs/using-pulumi/crossguard/) allows an Organization to define global rules for how resources may be provisioned and prevent resources from being provisioned by Pulumi in any other configuration.  Pulumi Stacks that do not meet the Organization’s financial, security, data protection, or other pre-defined standards are prevented from provisioning any resources, and the developer is instructed to correct their desired configuration or program in accordance with the Organization-wide policies.
+[CrossGuard Policy as Code](/docs/iac/packages-and-automation/crossguard/) allows an Organization to define global rules for how resources may be provisioned and prevent resources from being provisioned by Pulumi in any other configuration.  Pulumi Stacks that do not meet the Organization’s financial, security, data protection, or other pre-defined standards are prevented from provisioning any resources, and the developer is instructed to correct their desired configuration or program in accordance with the Organization-wide policies.
 
-[Policy as code](/docs/using-pulumi/crossguard/) ensures that any Pulumi code written and run meets an organization’s stated policies. It is the ultimate preventative weapon to prevent financial, security, or other placement and provisioning decisions that may lead to exposure or overrun.
+[Policy as code](/docs/iac/packages-and-automation/crossguard/) ensures that any Pulumi code written and run meets an organization’s stated policies. It is the ultimate preventative weapon to prevent financial, security, or other placement and provisioning decisions that may lead to exposure or overrun.
 
 Go here for [examples of FinOps policies](https://github.com/pulumi/examples/tree/master/policy-packs/aws-ts-finops) to get you started!
 

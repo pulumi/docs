@@ -7,7 +7,7 @@ weight: 7
 aliases:
 - /docs/quickstart/aws/deploy-changes/
 - /docs/get-started/aws/deploy-changes/
-- /docs/clouds/aws/get-started/deploy-changes/
+- /docs/iac/get-started/aws/deploy-changes/
 ---
 
 Now let's deploy your changes.

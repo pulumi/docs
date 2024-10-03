@@ -13,7 +13,7 @@ menu:
     weight: 3
 aliases:
   - /docs/guides/crosswalk/kubernetes/worker-nodes/
-  - /docs/clouds/kubernetes/guides/worker-nodes/
+  - /docs/iac/clouds/kubernetes/guides/worker-nodes/
 ---
 
 {{< chooser cloud "aws,azure,gcp" / >}}
@@ -108,7 +108,7 @@ const ng2xlarge = new eks.NodeGroup(`${projectName}-ng-2xlarge`, {
 ```
 
 [aws-instance-profile]: https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2_instance-profiles.html
-[crosswalk-aws-identity]: /docs/clouds/kubernetes/guides/identity/
+[crosswalk-aws-identity]: /docs/iac/clouds/kubernetes/guides/identity/
 
 {{% /choosable %}}
 
@@ -170,7 +170,7 @@ const ng2xlarge = new eks.NodeGroup(`${projectName}-ng-2xlarge`, {
 });
 ```
 
-[crosswalk-sgs]: /docs/clouds/aws/guides/vpc/#configuring-security-groups-for-a-vpc
+[crosswalk-sgs]: /docs/iac/clouds/aws/guides/vpc/#configuring-security-groups-for-a-vpc
 
 {{% /choosable %}}
 

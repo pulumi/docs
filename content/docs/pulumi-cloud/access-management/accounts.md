@@ -33,7 +33,7 @@ To create your Pulumi account, navigate to [app.pulumi.com](https://app.pulumi.c
 Your account lets you authenticate with the Pulumi Cloud, where you can do the following:
 
 * Manage your profile settings, including your account password, and subscriptions
-* [Add an organization](/docs/pulumi-cloud/organizations/) backed by Atlassian, GitHub, GitLab, or a SAML 2.0-compatible identity provider, such as Active Directory, Okta, or Google Workspace.
+* [Add an organization](/docs/pulumi-cloud/admin/organizations//) backed by Atlassian, GitHub, GitLab, or a SAML 2.0-compatible identity provider, such as Active Directory, Okta, or Google Workspace.
 * [Manage your projects and stacks](/docs/pulumi-cloud/projects-and-stacks/)
 
 ## Profile

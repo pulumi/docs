@@ -423,7 +423,7 @@ Thanks [@orionstudt](https://github.com/orionstudt) for contributing this change
 
 ### Schema checker for Pulumi Packages
 
-When authoring a Pulumi Package, it can be helpful to validate that your [schema](/docs/using-pulumi/pulumi-packages/schema/) is correct. Now, you can validate your schema by running the [`pulumi schema check` command](/docs/cli/commands/pulumi_schema_check).
+When authoring a Pulumi Package, it can be helpful to validate that your [schema](/docs/iac/packages-and-automation/pulumi-packages/schema/) is correct. Now, you can validate your schema by running the [`pulumi schema check` command](/docs/cli/commands/pulumi_schema_check).
 
 [Learn more in this GitHub PR](https://github.com/pulumi/pulumi/pull/7865)
 

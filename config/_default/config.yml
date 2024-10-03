@@ -1,7 +1,6 @@
 languageCode: en-us
 title: Pulumi - Infrastructure as Code in Any Programming Language
 
-refLinksErrorLevel: WARNING
 security:
   funcs:
     getenv:

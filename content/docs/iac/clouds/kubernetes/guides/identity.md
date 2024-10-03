@@ -12,7 +12,7 @@ menu:
     weight: 11
 aliases:
   - /docs/guides/crosswalk/kubernetes/identity/
-  - /docs/clouds/kubernetes/guides/identity/
+  - /docs/iac/clouds/kubernetes/guides/identity/
 ---
 
 {{< chooser cloud "aws,azure,gcp" / >}}
@@ -41,11 +41,11 @@ The full code for this stack is on [GitHub][gh-repo-stack].
 [groups]: https://docs.aws.amazon.com/IAM/latest/UserGuide/id_groups.html
 [roles]: https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html
 [policies]: https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html
-[crosswalk-aws]: /docs/clouds/aws/guides/
-[iam-users]: /docs/clouds/aws/guides/iam/#iam-users
-[iam-groups]: /docs/clouds/aws/guides/iam/#iam-groups
-[iam-roles]: /docs/clouds/aws/guides/iam/#iam-roles
-[iam-policies]: /docs/clouds/aws/guides/iam/#using-the-policydocument-interface
+[crosswalk-aws]: /docs/iac/clouds/aws/guides/
+[iam-users]: /docs/iac/clouds/aws/guides/iam/#iam-users
+[iam-groups]: /docs/iac/clouds/aws/guides/iam/#iam-groups
+[iam-roles]: /docs/iac/clouds/aws/guides/iam/#iam-roles
+[iam-policies]: /docs/iac/clouds/aws/guides/iam/#using-the-policydocument-interface
 [gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/aws/01-identity
 <!-- markdownlint-enable url -->
 

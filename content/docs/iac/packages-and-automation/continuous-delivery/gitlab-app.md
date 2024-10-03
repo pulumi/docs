@@ -11,7 +11,7 @@ menu:
         weight: 1
 aliases:
 - /docs/guides/continuous-delivery/gitlab-app/
-- /docs/using-pulumi/continuous-delivery/gitlab-app/
+- /docs/iac/packages-and-automation/continuous-delivery/gitlab-app/
 ---
 
 With this GitLab integration, Pulumi is able to add summary notes to a GitLab Merge Request by using the merge request information
@@ -25,9 +25,9 @@ To enable the integration with your GitLab project, you will need to ensure you 
 ## Prerequisites
 
 * You must have a GitLab identity associated with your Pulumi account.
-* If you are integrating a GitLab project that is under a group, [add an organization](/docs/pulumi-cloud/organizations#creating-an-organization)
+* If you are integrating a GitLab project that is under a group, [add an organization](/docs/pulumi-cloud/admin/organizations/#creating-an-organization)
   in Pulumi.
-  * After you add the organization, ensure that it uses GitLab [as its identity provider](/docs/pulumi-cloud/organizations#changing-identity-providers).
+  * After you add the organization, ensure that it uses GitLab [as its identity provider](/docs/pulumi-cloud/admin/organizations/#changing-identity-providers).
 
 {{% notes type="warning" %}}
 This feature is currently not compatible with GitLab's [pipelines for merged results](https://docs.gitlab.com/ee/ci/pipelines/merged_results_pipelines.html).
@@ -52,7 +52,7 @@ If you only want to configure a webhook for a certain project, then you may do t
 
 ![Group Hook Setup 2](/images/docs/guides/continuous-delivery/gitlab-app/group_hook_2.png)
 
-That's it! Now when you create a merge request and run Pulumi in a merge request pipeline, you should see notes in the MR that show a summary of the Pulumi preview. Learn how to run [Pulumi in GitLab CI/CD](/docs/using-pulumi/continuous-delivery/gitlab-ci/).
+That's it! Now when you create a merge request and run Pulumi in a merge request pipeline, you should see notes in the MR that show a summary of the Pulumi preview. Learn how to run [Pulumi in GitLab CI/CD](/docs/iac/packages-and-automation/continuous-delivery/gitlab-ci/).
 
 Here's a preview of what it looks like.
 

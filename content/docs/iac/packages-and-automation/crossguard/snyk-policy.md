@@ -14,8 +14,8 @@ menu:
         parent: crossguard
 aliases:
 - /docs/guides/crossguard/snyk-container-scanning/
-- /docs/using-pulumi/crossguard/snyk-container-scanning/
-- /docs/using-pulumi/crossguard/snyk-policy/
+- /docs/iac/packages-and-automation/crossguard/snyk-container-scanning/
+- /docs/iac/packages-and-automation/crossguard/snyk-policy/
 ---
 <!-- markdownlint-disable ul code -->
 
@@ -23,7 +23,7 @@ aliases:
 
 [Snyk container scanning](https://github.com/pulumi/templates-policy/tree/master/snyk-typescript) is a Pulumi policy as code template that allows you to uses the [Snyk CLI](https://docs.snyk.io/scan-using-snyk/snyk-container/scan-container-images) to scan [`docker.Image`](/registry/packages/docker/api-docs/image/) resources for vulnerabilities.
 
-For more information on Pulumi's Policy as Code solution, see [Get started with Pulumi policy as code](/docs/using-pulumi/crossguard/get-started/).
+For more information on Pulumi's Policy as Code solution, see [Get started with Pulumi policy as code](/docs/iac/packages-and-automation/crossguard/get-started/).
 
 ## Using Snyk Container Scanning
 
@@ -218,7 +218,7 @@ pulumi preview --policy-pack ../infra
 ```
 
 {{< notes type="info" >}}
-Note that the Snyk container policy is a [stack policy](/docs/using-pulumi/crossguard/core-concepts/#stack-policies). This means that in order to have containers correctly scanned during a `pulumi preview`, your `docker.Image` resources must have the `buildOnPreview` set to `true`. If you run the policy pack during a `pulumi update`, the policy will execute _after_ your containers have been built, _and after they have been pushed_ if you have not explicitly specified the `skipPush` input to be `true`.
+Note that the Snyk container policy is a [stack policy](/docs/iac/packages-and-automation/crossguard/core-concepts/#stack-policies). This means that in order to have containers correctly scanned during a `pulumi preview`, your `docker.Image` resources must have the `buildOnPreview` set to `true`. If you run the policy pack during a `pulumi update`, the policy will execute _after_ your containers have been built, _and after they have been pushed_ if you have not explicitly specified the `skipPush` input to be `true`.
 {{< /notes >}}
 
 ## Configuration options
@@ -257,8 +257,8 @@ To set the configuration, you can do one of the following:
     ```
 
     (Relative paths in the above command will also work.)
-1. If using Pulumi Cloud's server-side enforcement, policy pack configuration can be set centrally managed in the Pulumi Cloud UI. For details, see [Configuring policy packs](/docs/using-pulumi/crossguard/configuration/#using-the-pulumi-cloud).
+1. If using Pulumi Cloud's server-side enforcement, policy pack configuration can be set centrally managed in the Pulumi Cloud UI. For details, see [Configuring policy packs](/docs/iac/packages-and-automation/crossguard/configuration/#using-the-pulumi-cloud).
 
 ## Next Steps
 
-Once you've tested the Policy Pack, an organization administrator can publish the Policy Pack to Pulumi Cloud to be enforced across your organization. To learn more,see [Enforcing a Policy Pack Across an Organization](/docs/using-pulumi/crossguard/get-started#enforcing-a-policy-pack).
+Once you've tested the Policy Pack, an organization administrator can publish the Policy Pack to Pulumi Cloud to be enforced across your organization. To learn more,see [Enforcing a Policy Pack Across an Organization](/docs/iac/packages-and-automation/crossguard/get-started#enforcing-a-policy-pack).

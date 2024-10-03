@@ -18,7 +18,7 @@ aliases:
 - /docs/reference/cd-github/
 - /docs/console/continuous-delivery/github-app/
 - /docs/guides/continuous-delivery/github-app/
-- /docs/using-pulumi/continuous-delivery/github-app/
+- /docs/iac/packages-and-automation/continuous-delivery/github-app/
 ---
 
 Pulumi's GitHub app displays the results of Pulumi stack update previews in pull requests and enables automatic stack deployments via [Pulumi Deployments](/docs/pulumi-cloud/deployments/). Once installed and
@@ -68,7 +68,7 @@ To set up a `git push`-to-deploy workflow using Pulumi Deployments, consult the 
 ## CI Integration
 
 The Pulumi GitHub application will work with any CI/CD system. See our
-[Continuous Delivery](/docs/using-pulumi/continuous-delivery/) guide for information on how to
+[Continuous Delivery](/docs/iac/packages-and-automation/continuous-delivery/) guide for information on how to
 integration Pulumi with whatever system you currently use.
 
 Once installed in your organization, any `pulumi preview` or `pulumi up` that is run in your CI

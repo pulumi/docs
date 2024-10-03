@@ -3,7 +3,7 @@ title: "Simplify OIDC Trust with the New Pulumi GitHub Action"
 
 date: 2024-05-20T21:45:13Z
 
-meta_desc: Introducing Pulumi GitHub Action for OIDC Trust Relationships 
+meta_desc: Introducing Pulumi GitHub Action for OIDC Trust Relationships
 
 # The meta_image appears in social-media previews and on the blog home page. A
 # placeholder image representing the recommended format, dimensions and aspect
@@ -16,7 +16,7 @@ meta_image: meta.png
 authors:
     - german-lena
     - arun-loganathan
-    
+
 
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
@@ -38,7 +38,7 @@ The OIDC Trust feature allows you to configure trusted OIDC identity providers, 
 
 ## Streamlining OIDC Trust with GitHub Actions
 
-Our new GitHub Action makes using OIDC Trust even easier. It automates the secure retrieval of Pulumi access tokens directly within your [GitHub workflows](/docs/using-pulumi/continuous-delivery/github-actions/), streamlining the authentication process and eliminating manual steps. This automation reduces errors, enhances security by reducing potential token leakage, and improves the maintainability of your workflows, making them cleaner, more readable, and easier to update.
+Our new GitHub Action makes using OIDC Trust even easier. It automates the secure retrieval of Pulumi access tokens directly within your [GitHub workflows](/docs/iac/packages-and-automation/continuous-delivery/github-actions/), streamlining the authentication process and eliminating manual steps. This automation reduces errors, enhances security by reducing potential token leakage, and improves the maintainability of your workflows, making them cleaner, more readable, and easier to update.
 
 ## Example Usage
 

@@ -89,7 +89,7 @@ If we are thinking about removing some infrastructure we may want to know what o
 
 ![Check stack references](./stack-references.png)
 
-If we’re getting started on compliance with a new compliance framework, we can get guidance on areas to focus on for compliance review, ahead of applying more formal compliance tools like [Pulumi Crossguard Compliance Ready Policies](/docs/using-pulumi/crossguard/compliance-ready-policies/).
+If we’re getting started on compliance with a new compliance framework, we can get guidance on areas to focus on for compliance review, ahead of applying more formal compliance tools like [Pulumi Crossguard Compliance Ready Policies](/docs/iac/packages-and-automation/crossguard/compliance-ready-policies/).
 
 <p align="center"><img src="./fedramp.png" alt="FedRAMP" width="600" /></p>
 

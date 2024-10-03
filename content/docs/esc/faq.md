@@ -45,5 +45,5 @@ Yes. [Contact sales](/contact/?form=sales) for a demo or trial of self-hosted Pu
 - [Pulumi Cloud FAQ](/docs/pulumi-cloud/faq/)
 - [Pulumi Cloud Deployments FAQ](/docs/pulumi-cloud/deployments/faq/)
 - [Pulumi Cloud SCIM FAQ](/docs/pulumi-cloud/access-management/scim/faq/)
-- [Kubernetes guides FAQ](/docs/clouds/kubernetes/guides/faq/)
-- [Pulumi CrossGuard FAQ](/docs/using-pulumi/crossguard/faq/)
+- [Kubernetes guides FAQ](/docs/iac/clouds/kubernetes/guides/faq/)
+- [Pulumi CrossGuard FAQ](/docs/iac/packages-and-automation/crossguard/faq/)

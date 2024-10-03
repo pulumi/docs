@@ -86,7 +86,7 @@ As always, please feel free to submit feature requests and bug reports to the [P
 
 ### Add local Policy Packs to Automation API
 
-The Pulumi [Automation API](/docs/using-pulumi/automation-api/) is a programmatic interface for running Pulumi programs without the Pulumi CLI. Conceptually, this can be thought of as encapsulating the functionality of the CLI (`pulumi up`, `pulumi preview`, `pulumi destroy`, `pulumi stack init`, and so on.) but with more flexibility. We have now added support for Pulumi [Policy Packs](/docs/using-pulumi/crossguard/get-started#creating-a-policy-pack) can now be run with Automation API by specifying `--policy-pack`.
+The Pulumi [Automation API](/docs/using-pulumi/automation-api/) is a programmatic interface for running Pulumi programs without the Pulumi CLI. Conceptually, this can be thought of as encapsulating the functionality of the CLI (`pulumi up`, `pulumi preview`, `pulumi destroy`, `pulumi stack init`, and so on.) but with more flexibility. We have now added support for Pulumi [Policy Packs](/docs/iac/packages-and-automation/crossguard/get-started#creating-a-policy-pack) can now be run with Automation API by specifying `--policy-pack`.
 
 ### Add --stack to `pulumi about`
 

@@ -22,7 +22,7 @@ Cloud computing’s greatest strength and weakness is the proliferation of a mas
 
 ## Cloud Security Posture
 
-AWS likes to talk about a [Shared Responsibility Model](https://aws.amazon.com/compliance/shared-responsibility-model/), their friendly way of saying, “we’ve got our stuff covered, and if you’re compromised, it’s almost certainly your fault.”  They have built up practices and recommendations, like the AWS Well-Architected Framework. Their pillars of architecture philosophy give you your best chances to securely use their resources (following these recommendations is easy with [Crosswalk for AWS](/docs/clouds/aws/guides/) from Pulumi). Increasing high-profile attacks against private and open-source software supply chains have developers increasingly on high alert and conscious of incorporating more security into their DevOps.
+AWS likes to talk about a [Shared Responsibility Model](https://aws.amazon.com/compliance/shared-responsibility-model/), their friendly way of saying, “we’ve got our stuff covered, and if you’re compromised, it’s almost certainly your fault.”  They have built up practices and recommendations, like the AWS Well-Architected Framework. Their pillars of architecture philosophy give you your best chances to securely use their resources (following these recommendations is easy with [Crosswalk for AWS](/docs/iac/clouds/aws/guides/) from Pulumi). Increasing high-profile attacks against private and open-source software supply chains have developers increasingly on high alert and conscious of incorporating more security into their DevOps.
 
 Risks associated with maintaining a good cloud security posture extend to your infrastructure as code with Pulumi and it’s important to leverage the features and capabilities of the Pulumi platform along with good industry practices to secure your code, configuration and secrets.
 
@@ -30,7 +30,7 @@ Risks associated with maintaining a good cloud security posture extend to your i
 
 Pulumi has three levels to consider access for: users, teams and organizations.
 
-[Organizations](/docs/pulumi-cloud/organizations/) are a space for you to collaborate on shared projects and stacks.  You may have multiple cloud accounts from a single cloud provider or multiple cloud provider accounts tied to an organization in any combination.  It’s recommended that you segment organizations and cloud accounts to limit access and the “blast radius” of security or financial events that may occur within them.
+[Organizations](/docs/pulumi-cloud/admin/organizations//) are a space for you to collaborate on shared projects and stacks.  You may have multiple cloud accounts from a single cloud provider or multiple cloud provider accounts tied to an organization in any combination.  It’s recommended that you segment organizations and cloud accounts to limit access and the “blast radius” of security or financial events that may occur within them.
 
 [Teams](/docs/pulumi-cloud/access-management/teams/) are groups of users within an organization with specific permissions to stacks.  Consider using these to break up access to environments such as dev, staging and production.  You should look to mirror your code repository or IAM teams/groups as much as possible.
 
@@ -42,7 +42,7 @@ The following recommendations should help you get started and prepare you to sca
 
 ### Manage Federated Identity
 
-Connect your user and Pulumi organization with an [Identity Provider](/docs/pulumi-cloud/organizations#organization-identity-providers) such as [Github](/docs/pulumi-cloud/organizations#github-identity-provider), [Gitlab](/docs/pulumi-cloud/organizations#gitlab-identity-provider) or [BitBucket](/docs/pulumi-cloud/organizations#bitbucket-identity-provider), your [Single Sign On (SSO)](/docs/pulumi-cloud/organizations#saml-single-sign-on-sso) system and/or another [System for Cross-Domain Identity Management](/docs/pulumi-cloud/access-management/scim/) (SCIM).  Your code repositories hold your Infrastructure as Code, and most organizations are motivated to keep access tightly controlled.  SSO improves this process across tools and puts more control into your organization’s hands.  SCIM enables you to manage your users and groups centrally in your Identity Provider (IdP) and then synchronize those users and groups to the Pulumi Service.  Leveraging your existing onboarding and offboarding process will help limit the risk of bad actors in Pulumi itself.
+Connect your user and Pulumi organization with an [Identity Provider](/docs/pulumi-cloud/admin/organizations/#organization-identity-providers) such as [Github](/docs/pulumi-cloud/admin/organizations/#github-identity-provider), [Gitlab](/docs/pulumi-cloud/admin/organizations/#gitlab-identity-provider) or [BitBucket](/docs/pulumi-cloud/admin/organizations/#bitbucket-identity-provider), your [Single Sign On (SSO)](/docs/pulumi-cloud/admin/organizations/#saml-single-sign-on-sso) system and/or another [System for Cross-Domain Identity Management](/docs/pulumi-cloud/access-management/scim/) (SCIM).  Your code repositories hold your Infrastructure as Code, and most organizations are motivated to keep access tightly controlled.  SSO improves this process across tools and puts more control into your organization’s hands.  SCIM enables you to manage your users and groups centrally in your Identity Provider (IdP) and then synchronize those users and groups to the Pulumi Service.  Leveraging your existing onboarding and offboarding process will help limit the risk of bad actors in Pulumi itself.
 
 ### Build Pulumi Teams
 
@@ -58,7 +58,7 @@ We have previously covered [Tag Policies](/blog/automatically-enforcing-aws-reso
 
 ### Deploy from Pipelines
 
-Automate every step of your deployment process for anything beyond local development by creating CI/CD pipelines. Manual approval steps in your pipeline should be avoided. Consider creating automated checks to ensure your infrastructure is created only with approved [Pulumi Packages](/docs/using-pulumi/pulumi-packages/) and automatically ensure your infrastructure is in compliance by using [CrossGuard](/docs/using-pulumi/crossguard/).
+Automate every step of your deployment process for anything beyond local development by creating CI/CD pipelines. Manual approval steps in your pipeline should be avoided. Consider creating automated checks to ensure your infrastructure is created only with approved [Pulumi Packages](/docs/iac/packages-and-automation/pulumi-packages/) and automatically ensure your infrastructure is in compliance by using [CrossGuard](/docs/iac/packages-and-automation/crossguard/).
 
 Leveraging [Automation API](/docs/using-pulumi/automation-api/) as the programmatic interface for running Pulumi programs without the Pulumi CLI is a strongly typed and safe way to use Pulumi in embedded contexts such as web servers without having to shell out to a CLI. For example, [Elkjop Nordic uses Automation API to provide a self-service portal](/blog/how-elkjop-nordic-enables-developers-to-self-serve-infrastructure/) that serves as a secure IT vending machine full of their application and infrastructure building blocks.
 

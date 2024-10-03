@@ -46,5 +46,5 @@ Yes. In addition to the SCIM-managed teams, one can also configure and manage Pu
 - [Pulumi ESC FAQ](/docs/esc/faq/)
 - [Pulumi Cloud FAQ](/docs/pulumi-cloud/faq/)
 - [Pulumi Cloud Deployments FAQ](/docs/pulumi-cloud/deployments/faq/)
-- [Pulumi CrossGuard FAQ](/docs/using-pulumi/crossguard/faq/)
-- [Kubernetes guides FAQ](/docs/clouds/kubernetes/guides/faq/)
+- [Pulumi CrossGuard FAQ](/docs/iac/packages-and-automation/crossguard/faq/)
+- [Kubernetes guides FAQ](/docs/iac/clouds/kubernetes/guides/faq/)

@@ -12,7 +12,7 @@ menu:
     weight: 7
 aliases:
   - /docs/guides/crosswalk/kubernetes/cluster-services/
-  - /docs/clouds/kubernetes/guides/cluster-services/
+  - /docs/iac/clouds/kubernetes/guides/cluster-services/
 ---
 
 {{< chooser cloud "aws,azure,gcp" / >}}
@@ -82,7 +82,7 @@ $ aws sts assume-role --role-arn `pulumi stack output adminsIamRoleArn` --role-s
 $ export KUBECONFIG=`pwd`/kubeconfig-admin.json
 ```
 
-[aws-admin-identity-stack]: /docs/clouds/kubernetes/guides/identity/#create-an-iam-role-for-admins
+[aws-admin-identity-stack]: /docs/iac/clouds/kubernetes/guides/identity/#create-an-iam-role-for-admins
 
 ## AWS Logging
 
@@ -148,9 +148,9 @@ attachLogPolicies("perfRpa", perfNodegroupIamRoleName);
 ```
 
 <!-- markdownlint-disable url -->
-[crosswalk-control-plane]: /docs/clouds/kubernetes/guides/control-plane/
-[crosswalk-control-plane-recommended]: /docs/clouds/kubernetes/guides/control-plane/#recommended-settings
-[crosswalk-k8s-identity]: /docs/clouds/kubernetes/guides/identity/#create-iam-roles-for-eks-node-groups
+[crosswalk-control-plane]: /docs/iac/clouds/kubernetes/guides/control-plane/
+[crosswalk-control-plane-recommended]: /docs/iac/clouds/kubernetes/guides/control-plane/#recommended-settings
+[crosswalk-k8s-identity]: /docs/iac/clouds/kubernetes/guides/identity/#create-iam-roles-for-eks-node-groups
 [aws-cw-console]: https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/GettingSetup.html#ConsoleSignIn
 [aws-cw-logs]: https://aws.amazon.com/cloudwatch/features/
 <!-- markdownlint-enable url -->
@@ -211,11 +211,11 @@ $ kubectl delete ns amazon-cloudwatch
 ```
 
 <!-- markdownlint-disable url -->
-[crosswalk-control-plane]: /docs/clouds/kubernetes/guides/control-plane/
+[crosswalk-control-plane]: /docs/iac/clouds/kubernetes/guides/control-plane/
 [k8s-ds]: https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/
 [k8s-logs-samples]: https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Container-Insights-setup-logs.html
 [aws-cw-console]: https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/GettingSetup.html#ConsoleSignIn
-[crosswalk-k8s-identity]: /docs/clouds/kubernetes/guides/identity/#create-iam-roles-for-eks-node-groups
+[crosswalk-k8s-identity]: /docs/iac/clouds/kubernetes/guides/identity/#create-iam-roles-for-eks-node-groups
 [aws-cw-logs]: https://aws.amazon.com/cloudwatch/features/
 <!-- markdownlint-enable url -->
 
@@ -284,9 +284,9 @@ $ pulumi stack output fluentdCloudWatchLogGroupName
 ```
 
 <!-- markdownlint-disable url -->
-[crosswalk-k8s-identity]: /docs/clouds/kubernetes/guides/identity/#create-iam-roles-for-eks-node-groups
+[crosswalk-k8s-identity]: /docs/iac/clouds/kubernetes/guides/identity/#create-iam-roles-for-eks-node-groups
 [aws-cw-console]: https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/GettingSetup.html#ConsoleSignIn
-[crosswalk-k8s-defaults]: /docs/clouds/kubernetes/guides/configure-defaults/#namespaces
+[crosswalk-k8s-defaults]: /docs/iac/clouds/kubernetes/guides/configure-defaults/#namespaces
 [aws-cw-logs]: https://aws.amazon.com/cloudwatch/features/
 [k8s-ds]: https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/
 [fluentd-helm]: https://github.com/helm/charts/tree/master/incubator/fluentd-cloudwatch
@@ -533,7 +533,7 @@ Clean Up.
 $ kubectl delete ns amazon-cloudwatch
 ```
 
-[crosswalk-control-plane]: /docs/clouds/kubernetes/guides/control-plane/
+[crosswalk-control-plane]: /docs/iac/clouds/kubernetes/guides/control-plane/
 
 <!-- markdownlint-disable url -->
 [aws-cw-console]: https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/GettingSetup.html#ConsoleSignIn

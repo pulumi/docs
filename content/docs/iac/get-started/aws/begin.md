@@ -13,7 +13,7 @@ aliases:
 - /docs/get-started/aws/install-language-runtime/
 - /docs/get-started/aws/configure/
 - /docs/get-started/aws/begin/
-- /docs/clouds/aws/get-started/begin/
+- /docs/iac/get-started/aws/begin/
 ---
 
 Before you get started using Pulumi, let's run through a few quick steps to ensure your environment is set up correctly.

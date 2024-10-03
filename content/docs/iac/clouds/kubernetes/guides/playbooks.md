@@ -13,7 +13,7 @@ menu:
     weight: 1
 aliases:
   - /docs/guides/crosswalk/kubernetes/playbooks/
-  - /docs/clouds/kubernetes/guides/playbooks/
+  - /docs/iac/clouds/kubernetes/guides/playbooks/
 ---
 
 <a href="./">
@@ -149,15 +149,15 @@ Deploy applications and workloads into the cluster.
 [k8s-get-started]: /docs/iac/get-started/kubernetes/
 [k8s-api-resources]: https://kubernetes.io/docs/reference/kubernetes-api/
 [aws-sqs]: https://aws.amazon.com/sqs/
-[crosswalk-control-plane]: /docs/clouds/kubernetes/guides/control-plane/
-[crosswalk-worker-nodes]: /docs/clouds/kubernetes/guides/worker-nodes/
-[crosswalk-try-out-the-cluster]: /docs/clouds/kubernetes/guides/try-out-the-cluster/
-[crosswalk-configure-defaults]: /docs/clouds/kubernetes/guides/configure-defaults/
-[crosswalk-configure-access]: /docs/clouds/kubernetes/guides/configure-access-control/
-[crosswalk-cluster-svcs]: /docs/clouds/kubernetes/guides/cluster-services/
-[crosswalk-app-svcs]: /docs/clouds/kubernetes/guides/app-services/
-[crosswalk-apps]: /docs/clouds/kubernetes/guides/apps/
-[crosswalk-update-worker-nodes]: /docs/clouds/kubernetes/guides/update-worker-nodes/
+[crosswalk-control-plane]: /docs/iac/clouds/kubernetes/guides/control-plane/
+[crosswalk-worker-nodes]: /docs/iac/clouds/kubernetes/guides/worker-nodes/
+[crosswalk-try-out-the-cluster]: /docs/iac/clouds/kubernetes/guides/try-out-the-cluster/
+[crosswalk-configure-defaults]: /docs/iac/clouds/kubernetes/guides/configure-defaults/
+[crosswalk-configure-access]: /docs/iac/clouds/kubernetes/guides/configure-access-control/
+[crosswalk-cluster-svcs]: /docs/iac/clouds/kubernetes/guides/cluster-services/
+[crosswalk-app-svcs]: /docs/iac/clouds/kubernetes/guides/app-services/
+[crosswalk-apps]: /docs/iac/clouds/kubernetes/guides/apps/
+[crosswalk-update-worker-nodes]: /docs/iac/clouds/kubernetes/guides/update-worker-nodes/
 [least-privileged]: https://en.wikipedia.org/wiki/Principle_of_least_privilege
-[cw-guides]: /docs/clouds/kubernetes/guides/playbooks/
+[cw-guides]: /docs/iac/clouds/kubernetes/guides/playbooks/
 <!-- markdownlint-enable url -->

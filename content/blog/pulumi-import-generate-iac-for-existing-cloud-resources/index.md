@@ -29,7 +29,7 @@ part of your infrastructure project. The `pulumi import` command is made of the 
 pulumi import [type] [name] [id]
 ```
 
-When Pulumi performs an import, the resource is added to the Pulumi [state](https://www.pulumi.com/docs/concepts/state/#state),
+When Pulumi performs an import, the resource is added to the Pulumi [state](https://www.pulumi.com/docs/iac/concepts/state-and-backends/#state),
 it is marked as a [protected](/docs/concepts/resources#protect) resource (by default),
 and it will emit the generated code that the user can add to their program before running a `pulumi up`. The resources are
 marked as protected to ensure that imported infrastructure is not accidentally deleted if the user forgets to include

@@ -14,10 +14,10 @@ menu:
         parent: testing
 aliases:
     - /docs/guides/testing/property-testing/
-    - /docs/using-pulumi/testing/property-testing/
+    - /docs/iac/concepts/testing/property-testing/
 ---
 
-[Policy as Code](/docs/using-pulumi/crossguard/) (also known as "CrossGuard") is Pulumi's offering to set guardrails and enforce compliance for cloud resources. Typically, policy packs would run across multiple projects and stacks to apply organization-wide rules.
+[Policy as Code](/docs/iac/packages-and-automation/crossguard/) (also known as "CrossGuard") is Pulumi's offering to set guardrails and enforce compliance for cloud resources. Typically, policy packs would run across multiple projects and stacks to apply organization-wide rules.
 
 **Property Testing** repurposes the power of policy definitions for developers to define invariants, or properties, that must hold for a specific stack they are working on. While Policy as Code and Property Testing both use the same technology, the goals and workflows are different.
 
@@ -73,7 +73,7 @@ const tests = new policy.PolicyPack("tests-pack", {
 
 This code does a few things worth describing. First, it imports all the packages that we're going to use. Notably, this includes the Policy SDK package for testing, and the AWS and Pulumi SDK packages. Note that it does **not** import the Pulumi program with the EKS cluster definition. The tests are going to run against any program that satisfies its invariants.
 
-Then, the code creates a single [stack policy](https://pulumi.com/docs/using-pulumi/crossguard/core-concepts/#stack-validation-policy) to describe the properties of the EKS cluster. The first implicit property is the fact that there is an EKS cluster in the stack at all. If the cluster is not found, or several clusters are found, the test reports a violation (failure).
+Then, the code creates a single [stack policy](https://pulumi.com/docs/iac/packages-and-automation/crossguard/core-concepts/#stack-validation-policy) to describe the properties of the EKS cluster. The first implicit property is the fact that there is an EKS cluster in the stack at all. If the cluster is not found, or several clusters are found, the test reports a violation (failure).
 
 Now, we can add the tests for our two properties. Add the following code in place of the first TODO item:
 

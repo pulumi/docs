@@ -14,7 +14,7 @@ menu:
         weight: 1
 aliases:
 - /docs/guides/continuous-delivery/teamcity/
-- /docs/using-pulumi/continuous-delivery/teamcity/
+- /docs/iac/packages-and-automation/continuous-delivery/teamcity/
 ---
 
 This page details how to use [JetBrains TeamCity](https://www.jetbrains.com/teamcity/) to deploy a sample infrastructure, using Pulumi. In the example below, we will deploy to AWS, but any cloud can be used.

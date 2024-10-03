@@ -17,9 +17,9 @@ aliases:
 - /docs/reference/cd-travis/
 - /docs/console/continuous-delivery/travis/
 - /docs/guides/continuous-delivery/travis/
-- /docs/using-pulumi/continuous-delivery/cd-travis/
+- /docs/iac/packages-and-automation/continuous-delivery/cd-travis/
 - /docs/guides/continuous-delivery/cd-travis/
-- /docs/using-pulumi/continuous-delivery/travis/
+- /docs/iac/packages-and-automation/continuous-delivery/travis/
 ---
 
 This page details how to use [Travis CI](https://travis-ci.com/) to manage deploying

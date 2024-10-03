@@ -39,11 +39,11 @@ We’re excited to be launch partners for the new [Enterprise Container Manageme
 
 ### Provisioning Container Infrastructure
 
-Pulumi manages multi-region, multi-account, multi-cluster Kubernetes deployments with ease on any cloud.  With [Pulumi Crosswalk for Kubernetes](/docs/clouds/kubernetes/guides/) we’ve provided a set of [Day 0 and Day 1 playbooks](/docs/clouds/kubernetes/guides/playbooks/) that take the guesswork out of the provisioning process from creating a control plane to [deploying your apps](/docs/clouds/kubernetes/guides/apps/) and updating workers.
+Pulumi manages multi-region, multi-account, multi-cluster Kubernetes deployments with ease on any cloud.  With [Pulumi Crosswalk for Kubernetes](/docs/iac/clouds/kubernetes/guides/) we’ve provided a set of [Day 0 and Day 1 playbooks](/docs/iac/clouds/kubernetes/guides/playbooks/) that take the guesswork out of the provisioning process from creating a control plane to [deploying your apps](/docs/iac/clouds/kubernetes/guides/apps/) and updating workers.
 
 ### Managing AWS Container Services
 
-Pulumi gives you the flexibility to pick the container services that meet the needs of your workloads and the requirements of your organization. Choosing the right services can be a challenge, so we’ve assembled a short overview to help you [get started managing AWS containers](/blog/managing-containers-on-aws-with-pulumi/). Once you’ve chosen your scheduler, Pulumi has a host of examples to guide you through [deploying Amazon ECS](/docs/clouds/aws/guides/ecs/) and [Amazon EKS](/docs/clouds/aws/guides/eks/). There is also a [Pulumi EKS component](/registry/packages/eks/) that provides multi-language convenience functions and boilerplate to simplify EKS deployments.
+Pulumi gives you the flexibility to pick the container services that meet the needs of your workloads and the requirements of your organization. Choosing the right services can be a challenge, so we’ve assembled a short overview to help you [get started managing AWS containers](/blog/managing-containers-on-aws-with-pulumi/). Once you’ve chosen your scheduler, Pulumi has a host of examples to guide you through [deploying Amazon ECS](/docs/iac/clouds/aws/guides/ecs/) and [Amazon EKS](/docs/iac/clouds/aws/guides/eks/). There is also a [Pulumi EKS component](/registry/packages/eks/) that provides multi-language convenience functions and boilerplate to simplify EKS deployments.
 
 ### Support for the Entire Kubernetes API
 
@@ -59,7 +59,7 @@ Adhering to the principle of least privilege for users and roles is an important
 
 ### Centralized Governance and Compliance Controls
 
-Many customers are using Pulumi and Kubernetes to stand up shared services platforms (SSP) to empower their developers to self-service new infrastructure environments. To keep these environments compliant with internal policies, Pulumi Business Critical Edition includes [CrossGuard](/docs/using-pulumi/crossguard/) policy-as-code capabilities built-in.  This helps operators to ensure that configuration mistakes won’t reach production with policies that are enforced organization-wide.
+Many customers are using Pulumi and Kubernetes to stand up shared services platforms (SSP) to empower their developers to self-service new infrastructure environments. To keep these environments compliant with internal policies, Pulumi Business Critical Edition includes [CrossGuard](/docs/iac/packages-and-automation/crossguard/) policy-as-code capabilities built-in.  This helps operators to ensure that configuration mistakes won’t reach production with policies that are enforced organization-wide.
 
 ### Support for Hybrid Deployments
 
@@ -67,9 +67,9 @@ Many users need to manage container-based workloads on AWS as well as on-prem an
 
 ### Automated Deployment of Infrastructure and Applications
 
-One of the benefits of Pulumi is that it enables infrastructure and application development to leverage the same tooling and processes familiar to software engineers. Adding infrastructure to your CI/CD workflow is easy with Pulumi because it supports a wide variety of [test frameworks](/docs/using-pulumi/testing/unit/), simplifies the process of integration testing using ephemeral environments, and includes a [CI/CD Integration Assistant](/docs/pulumi-cloud/deployments/ci-cd-integration-assistant/) to guide you through the process of connecting Pulumi to popular platforms such as [GitHub Actions](/docs/using-pulumi/continuous-delivery/github-actions/), [AWS Code Services](/docs/using-pulumi/continuous-delivery/aws-code-services/) and many more.
+One of the benefits of Pulumi is that it enables infrastructure and application development to leverage the same tooling and processes familiar to software engineers. Adding infrastructure to your CI/CD workflow is easy with Pulumi because it supports a wide variety of [test frameworks](/docs/iac/concepts/testing/unit/), simplifies the process of integration testing using ephemeral environments, and includes a [CI/CD Integration Assistant](/docs/pulumi-cloud/deployments/ci-cd-integration-assistant/) to guide you through the process of connecting Pulumi to popular platforms such as [GitHub Actions](/docs/iac/packages-and-automation/continuous-delivery/github-actions/), [AWS Code Services](/docs/iac/packages-and-automation/continuous-delivery/aws-code-services/) and many more.
 
-Once you have your cluster provisioned, you can also deploy workloads into your cluster with GitOps style workflows using the [Pulumi Kubernetes Operator](/docs/using-pulumi/continuous-delivery/pulumi-kubernetes-operator/).
+Once you have your cluster provisioned, you can also deploy workloads into your cluster with GitOps style workflows using the [Pulumi Kubernetes Operator](/docs/iac/packages-and-automation/continuous-delivery/pulumi-kubernetes-operator/).
 
 ### Conclusion
 

@@ -43,7 +43,7 @@ key_features_above:
                     [integration tests](/docs/guides/testing/integration/). Preview changes before deploying.
                 icon: eye
                 color: yellow
-        
+
 key_features:
     title: Key features
     items:
@@ -148,7 +148,7 @@ key_features:
                     Full API coverage for AWS, Azure, Google Cloud, and Kubernetes with same-day updates.
               - title: Crosswalk for AWS
                 description: |
-                    Adopt well-architected best practices for your infrastructure easily with the [Crosswalk library](/docs/clouds/aws/guides/).
+                    Adopt well-architected best practices for your infrastructure easily with the [Crosswalk library](/docs/iac/clouds/aws/guides/).
               - title: Cloud Native support
                 description: |
                     Use a single workflow to manage both [Kubernetes](/kubernetes/) resources and infrastructure.
@@ -160,17 +160,17 @@ key_features:
           image: "/images/product/pulumi-cicd.png"
           button:
             text: "Learn more about CI/CD Integrations"
-            link: "/docs/using-pulumi/continuous-delivery/"
+            link: "/docs/iac/packages-and-automation/continuous-delivery/"
           features:
               - title: Version and review
                 description: |
                     Manage infrastructure code in Git and approve changes through pull requests.
               - title: Shift left
                 description: |
-                    Get rapid feedback on your code with fast [unit tests](/docs/using-pulumi/testing/unit/), and run [integration tests](/docs/using-pulumi/testing/integration/) against ephemeral infrastructure.
+                    Get rapid feedback on your code with fast [unit tests](/docs/iac/concepts/testing/unit/), and run [integration tests](/docs/iac/concepts/testing/integration/) against ephemeral infrastructure.
               - title: Continuous delivery
                 description: |
-                    [Integrate your CI/CD provider](/docs/using-pulumi/continuous-delivery/) with Pulumi or use GitOps to [manage Kubernetes clusters](/docs/using-pulumi/continuous-delivery/pulumi-kubernetes-operator/).
+                    [Integrate your CI/CD provider](/docs/iac/packages-and-automation/continuous-delivery/) with Pulumi or use GitOps to [manage Kubernetes clusters](/docs/iac/packages-and-automation/continuous-delivery/pulumi-kubernetes-operator/).
 
 stats:
     title: Open source. Enterprise ready.

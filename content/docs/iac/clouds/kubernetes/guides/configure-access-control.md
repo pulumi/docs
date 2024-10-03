@@ -13,7 +13,7 @@ menu:
     weight: 6
 aliases:
   - /docs/guides/crosswalk/kubernetes/configure-access-control/
-  - /docs/clouds/kubernetes/guides/configure-access-control/
+  - /docs/iac/clouds/kubernetes/guides/configure-access-control/
 ---
 
 {{< chooser cloud "aws,azure,gcp" / >}}
@@ -107,8 +107,8 @@ $ export KUBECONFIG=`pwd`/kubeconfig-admin.json
 ```
 
 <!-- markdownlint-disable url -->
-[crosswalk-configure-defaults]: /docs/clouds/kubernetes/guides/configure-defaults/
-[crosswalk-identity]: /docs/clouds/kubernetes/guides/identity/
+[crosswalk-configure-defaults]: /docs/iac/clouds/kubernetes/guides/configure-defaults/
+[crosswalk-identity]: /docs/iac/clouds/kubernetes/guides/identity/
 <!-- markdownlint-enable url -->
 
 {{% /choosable %}}
@@ -143,8 +143,8 @@ $ export KUBECONFIG=`pwd`/kubeconfig-admin.json
 ```
 
 <!-- markdownlint-disable url -->
-[crosswalk-configure-defaults]: /docs/clouds/kubernetes/guides/configure-defaults/
-[crosswalk-identity]: /docs/clouds/kubernetes/guides/identity/
+[crosswalk-configure-defaults]: /docs/iac/clouds/kubernetes/guides/configure-defaults/
+[crosswalk-identity]: /docs/iac/clouds/kubernetes/guides/identity/
 <!-- markdownlint-enable url -->
 
 {{% /choosable %}}
@@ -177,10 +177,10 @@ workloads in the `apps` namespace (created in [cluster defaults][crosswalk-confi
 the Kubernetes `Role` to the IAM `devs` role.
 
 <!-- markdownlint-disable url -->
-[crosswalk-configure-defaults]: /docs/clouds/kubernetes/guides/configure-defaults/
+[crosswalk-configure-defaults]: /docs/iac/clouds/kubernetes/guides/configure-defaults/
 [k8s-rbac-docs]: https://kubernetes.io/docs/reference/access-authn-authz/rbac/
 [gke-predefined-roles]: https://cloud.google.com/kubernetes-engine/docs/how-to/iam#predefined
-[crosswalk-identity]: /docs/clouds/kubernetes/guides/identity/
+[crosswalk-identity]: /docs/iac/clouds/kubernetes/guides/identity/
 <!-- markdownlint-enable url -->
 
 Assume the `admin` user.
@@ -295,7 +295,7 @@ RBAC in Amazon EKS][simplify-rbac].
 See the [official Kubernetes RBAC docs][k8s-rbac-docs] for more details.
 
 <!-- markdownlint-disable url -->
-[crosswalk-identity]: /docs/clouds/kubernetes/guides/identity/
+[crosswalk-identity]: /docs/iac/clouds/kubernetes/guides/identity/
 [k8s-rbac-docs]: https://kubernetes.io/docs/reference/access-authn-authz/rbac/
-[crosswalk-configure-defaults]: /docs/clouds/kubernetes/guides/configure-defaults/
+[crosswalk-configure-defaults]: /docs/iac/clouds/kubernetes/guides/configure-defaults/
 <!-- markdownlint-enable url -->

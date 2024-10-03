@@ -14,7 +14,7 @@ menu:
 aliases:
 - /docs/reference/crosswalk/aws/cloudwatch/
 - /docs/guides/crosswalk/aws/cloudwatch/
-- /docs/clouds/aws/guides/cloudwatch/
+- /docs/iac/clouds/aws/guides/cloudwatch/
 ---
 
 {{< crosswalk-header >}}
@@ -68,7 +68,7 @@ Pulumi Crosswalk for AWS supports configuring CloudWatch logging in the followin
 
 * _Forwarding to Log Groups_: From any of the supported services, a CloudWatch log group may be supplied to configure
   said service to forward logs to that log group. Many services support doing so. For example,
-  [ECS tasks and services](/docs/clouds/aws/guides/ecs/) offer a `logGroup` property that, when set, forwards all logs
+  [ECS tasks and services](/docs/iac/clouds/aws/guides/ecs/) offer a `logGroup` property that, when set, forwards all logs
   from your container instances.
 
 * _Automatic Smart Defaults_: In many cases, using Pulumi Crosswalk for AWS uses smart defaults for whatever service
@@ -276,10 +276,10 @@ const alarm = funcMetric.createAlarm("alarm", {
 });
 ```
 
-Such an approach can be combined with [Pulumi Crosswalk for AWS Lambda](/docs/clouds/aws/guides/lambda/) to define and run
+Such an approach can be combined with [Pulumi Crosswalk for AWS Lambda](/docs/iac/clouds/aws/guides/lambda/) to define and run
 custom code in response to metric alarms being triggered.
 
-CloudWatch metrics may also be used to trigger changes to [Autoscaling Scaling Policies](/docs/clouds/aws/guides/autoscaling#scaling-policies) in response to events indicating that more or less capacity is desired.
+CloudWatch metrics may also be used to trigger changes to [Autoscaling Scaling Policies](/docs/iac/clouds/aws/guides/autoscaling#scaling-policies) in response to events indicating that more or less capacity is desired.
 
 ## Defining CloudWatch Dashboards in Code
 
@@ -416,4 +416,4 @@ For more information about Amazon CloudWatch, see the following:
 
 * [Amazon CloudWatch homepage](https://aws.amazon.com/cloudwatch/)
 
-Or [get started with Pulumi](/docs/clouds/aws/get-started/).
+Or [get started with Pulumi](/docs/iac/get-started/aws/).

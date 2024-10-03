@@ -29,7 +29,7 @@ Team Editions of the Pulumi Cloud are limited to 1 Billing Manager at a time. En
 Billing Manager invitations work much the same way member invitations do, but they are managed on the Billing and Usage page.
 
 {{% notes "info" %}}
-Billing Managers, like members, must be members of the [organization identity provider](/docs/pulumi-cloud/organizations#organization-identity-providers) in order to gain access to the Pulumi organization.
+Billing Managers, like members, must be members of the [organization identity provider](/docs/pulumi-cloud/admin/organizations/#organization-identity-providers) in order to gain access to the Pulumi organization.
 {{% /notes %}}
 
 To invite a new Billing Manager:

@@ -11,7 +11,7 @@ menu:
     weight: 14
 aliases:
   - /docs/guides/crosswalk/kubernetes/faq/
-  - /docs/clouds/kubernetes/guides/faq/
+  - /docs/iac/clouds/kubernetes/guides/faq/
 ---
 
 1. **What does Crosswalk for Kubernetes include?**
@@ -65,15 +65,15 @@ aliases:
 * [Pulumi Cloud FAQ](/docs/pulumi-cloud/faq/)
 * [Pulumi Cloud Deployments FAQ](/docs/pulumi-cloud/deployments/faq/)
 * [Pulumi Cloud SCIM FAQ](/docs/pulumi-cloud/access-management/scim/faq/)
-* [Kubernetes guides FAQ](/docs/clouds/kubernetes/guides/faq/)
-* [Pulumi CrossGuard FAQ](/docs/using-pulumi/crossguard/faq/)
+* [Kubernetes guides FAQ](/docs/iac/clouds/kubernetes/guides/faq/)
+* [Pulumi CrossGuard FAQ](/docs/iac/packages-and-automation/crossguard/faq/)
 
 <!-- markdownlint-disable url -->
 [k8s-do]: https://www.digitalocean.com/community/tutorials/how-to-manage-digitalocean-and-kubernetes-infrastructure-with-pulumi
 [pulumi-slack]: https://slack.pulumi.com/
 [pulumi-docs]: https://github.com/pulumi/docs
 [pulumi-guides]: https://github.com/pulumi/kubernetes-guides
-[cw-playbooks]: /docs/clouds/kubernetes/guides/playbooks/
+[cw-playbooks]: /docs/iac/clouds/kubernetes/guides/playbooks/
 [pulumi-k8s]: https://github.com/pulumi/pulumi-kubernetes
 [pulumi-kx]: https://github.com/pulumi/pulumi-kubernetesx
 [pulumi-kq]: https://github.com/pulumi/pulumi-query

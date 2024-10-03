@@ -94,7 +94,7 @@ The OpenTofu engine takes care of provisioning and updating resources. With Pulu
 
 By default, OpenTofu requires that you manage concurrency and state manually, by way of its “state files.” Pulumi, in contrast, uses the free [Pulumi Cloud](https://app.pulumi.com/) to eliminate these concerns. This makes getting started with Pulumi, and operationalizing it in a team setting, much easier. For advanced use cases, it is possible to [use Pulumi without the Pulumi Cloud](/docs/support/faq#can-i-use-pulumi-without-depending-on-the-/pulumi-cloud/), which works a lot more like OpenTofu, but requires you to manage state and concurrency issues. Pulumi errs on the side of ease-of-use.
 
-For more information on how Pulumi manages state or how to use different backends, see [State and Backends](/docs/concepts/state/).
+For more information on how Pulumi manages state or how to use different backends, see [State and Backends](/docs/iac/concepts/state-and-backends/).
 
 ### Provider Support {#providers}
 
@@ -144,7 +144,7 @@ Pulumi also provides the [Pulumi Registry](/registry/) which is a searchable col
 
 ### Testing and Validation {#testing}
 
-OpenTofu supports integration testing. With Pulumi, you can take advantage of native testing frameworks and perform automated tests of your infrastructure because Pulumi uses general purpose programming languages to provision cloud resources. Pulumi provides unit tests (fast in-memory tests that mock all external calls), property tests (run resource-level assertions while infrastructure is being deployed), and integration tests (deploy ephemeral infrastructure and run external tests against it). For more information on how to run tests with Pulumi, see [Testing](/docs/using-pulumi/testing/).
+OpenTofu supports integration testing. With Pulumi, you can take advantage of native testing frameworks and perform automated tests of your infrastructure because Pulumi uses general purpose programming languages to provision cloud resources. Pulumi provides unit tests (fast in-memory tests that mock all external calls), property tests (run resource-level assertions while infrastructure is being deployed), and integration tests (deploy ephemeral infrastructure and run external tests against it). For more information on how to run tests with Pulumi, see [Testing](/docs/iac/concepts/testing/).
 
 ### Modes of Execution {#modes}
 
@@ -158,11 +158,11 @@ Pulumi has the ability to embed Pulumi programs directly into your application c
 
 Pulumi integrates with existing CI/CD providers including AWS Code Services, Azure DevOps, CircleCI, CodeFresh, GitHub Actions, GitLab Pipelines, Google Cloud Build, Jenkins, Octopus Deploy, Jetbrains TeamCity, Spinnaker, and Travis. Pulumi allows you to use the same CI/CD system for your infrastructure as your application code. OpenTofu does not have support with existing CI/CD providers.
 
-For more information on how to integrate your CI/CD system with Pulumi, see [Continuous Delivery](/docs/using-pulumi/continuous-delivery/).
+For more information on how to integrate your CI/CD system with Pulumi, see [Continuous Delivery](/docs/iac/packages-and-automation/continuous-delivery/).
 
 ### Policy as Code {#policy}
 
-OpenTofu does not have support for policy as code. Pulumi, however, provides policy as code through CrossGuard which acts as programmable guardrails to enforce security, best practices, and cost across all infrastructure. CrossGuard is open source, free to use, and lets you write rules in Python, JavaScript, or Open Policy Agent (OPA) Rego. For more information on how to implement policy as code using Pulumi, see [Policy as Code ("CrossGuard")](/docs/using-pulumi/crossguard/).
+OpenTofu does not have support for policy as code. Pulumi, however, provides policy as code through CrossGuard which acts as programmable guardrails to enforce security, best practices, and cost across all infrastructure. CrossGuard is open source, free to use, and lets you write rules in Python, JavaScript, or Open Policy Agent (OPA) Rego. For more information on how to implement policy as code using Pulumi, see [Policy as Code ("CrossGuard")](/docs/iac/packages-and-automation/crossguard/).
 
 ### Secrets Management {#secrets}
 

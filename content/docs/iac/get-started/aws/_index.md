@@ -17,7 +17,7 @@ aliases:
     - /docs/quickstart/aws/
     - /docs/get-started/aws/
     - /docs/aws/
-    - /docs/clouds/aws/get-started/
+    - /docs/iac/get-started/aws/
 ---
 
 {{< cloud-intro "AWS" >}}

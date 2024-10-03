@@ -8,7 +8,7 @@ meta_image: "meta.png"
 ---
 
 {{% notes type="warning" %}}
-Some parts of this blog post are out-of-date. Please refer to our [Testing Guide](/docs/using-pulumi/testing/) for the updated overview and tutorials.
+Some parts of this blog post are out-of-date. Please refer to our [Testing Guide](/docs/iac/concepts/testing/) for the updated overview and tutorials.
 {{% /notes %}}
 
 Testing your infrastructure using familiar tools like Node.js's Mocha
@@ -454,7 +454,7 @@ And if we select it, we'll see the complete Mocha test output:
 
 We could even [use webhooks](/docs/pulumi-cloud/webhooks/) to
 fire off a Slack alarm so that nobody misses the issue. This is often very helpful in
-unattended scenarios, like [continuous deployment](/docs/using-pulumi/continuous-delivery/).
+unattended scenarios, like [continuous deployment](/docs/iac/packages-and-automation/continuous-delivery/).
 
 Better to catch these things late than never!
 

@@ -22,7 +22,7 @@ aliases:
 - /docs/intro/console/organizations/
 - /docs/intro/pulumi-service/organizations/
 - /docs/intro/pulumi-cloud/organizations/
-- /docs/pulumi-cloud/organizations/
+- /docs/pulumi-cloud/admin/organizations//
 ---
 
 Organizations are a space for you to collaborate on shared projects and stacks.
@@ -34,7 +34,7 @@ Organizations are a space for you to collaborate on shared projects and stacks.
 | Dashboard | An overview of the organization including recently updated stacks, recent activity, and a resource count graph. |
 | All stacks | A searchable list of organization stacks that you can group by project and tag. For more information, see [Project and Stack Management](/docs/pulumi-cloud/projects-and-stacks/). |
 | Policies | Lists of organization policies and policy groups. Policies allow you to set guardrails to enforce best practices and compliance. |
-| Settings | Organization settings including subscription and payment information and history, Billing Managers, stack permissions, and links to Pulumi's [continuous delivery guides](/docs/using-pulumi/continuous-delivery/). |
+| Settings | Organization settings including subscription and payment information and history, Billing Managers, stack permissions, and links to Pulumi's [continuous delivery guides](/docs/iac/packages-and-automation/continuous-delivery/). |
 
 ## Creating an Organization
 

@@ -168,7 +168,7 @@ The `pulumi preview` on Pull Request capability requires that the Github user cr
 
 ### GitHub App Installation
 
-You'll need to install and configure the [Pulumi GitHub App](/docs/using-pulumi/continuous-delivery/github-app/#installation-and-configuration) to use push-to-deploy functionality. The app requires read access to your repos so it can clone your Pulumi programs and listen to merge commits to automatically trigger deployments on `git push`.
+You'll need to install and configure the [Pulumi GitHub App](/docs/iac/packages-and-automation/continuous-delivery/github-app/#installation-and-configuration) to use push-to-deploy functionality. The app requires read access to your repos so it can clone your Pulumi programs and listen to merge commits to automatically trigger deployments on `git push`.
 
 {{% notes type="warning" %}}
 

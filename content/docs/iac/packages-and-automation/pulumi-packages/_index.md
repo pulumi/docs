@@ -15,7 +15,7 @@ menu:
         weight: 7
 aliases:
 - /docs/guides/pulumi-packages/
-- /docs/using-pulumi/pulumi-packages/
+- /docs/iac/packages-and-automation/pulumi-packages/
 ---
 
 Pulumi Packages are the core technology that enables cloud infrastructure resource provisioning to be defined once, and made available to users in all Pulumi languages. With Pulumi Packages, [Resources and Components](/docs/concepts/resources/) can be written once, in your preferred language, and made available in all the other languages supported by Pulumi.
@@ -28,7 +28,7 @@ Pulumi Packages are the core technology that enables cloud infrastructure resour
 
 ## Author a Pulumi Package
 
-To create your own Pulumi Package, use the [guide](/docs/using-pulumi/pulumi-packages/how-to-author/).
+To create your own Pulumi Package, use the [guide](/docs/iac/packages-and-automation/pulumi-packages/how-to-author/).
 
 ### Overview of authoring a package
 
@@ -42,7 +42,7 @@ Regardless of the type of Pulumi Package you want to author, there are a few key
 
 ![A graphic representation of the steps listed above](img/pulumi-package-concepts.png)
 
-All Pulumi Packages must include a [schema](/docs/using-pulumi/pulumi-packages/schema/), which defines the resources and functions exposed by the package, and is used to drive the generation of language-specific SDKs and documentation.
+All Pulumi Packages must include a [schema](/docs/iac/packages-and-automation/pulumi-packages/schema/), which defines the resources and functions exposed by the package, and is used to drive the generation of language-specific SDKs and documentation.
 
 ### Types of Pulumi Packages
 

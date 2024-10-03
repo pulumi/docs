@@ -14,7 +14,7 @@ menu:
         weight: 1
 aliases:
 - /docs/guides/continuous-delivery/spinnaker/
-- /docs/using-pulumi/continuous-delivery/spinnaker/
+- /docs/iac/packages-and-automation/continuous-delivery/spinnaker/
 ---
 
 This page provides an overview of how to use the Pulumi Plugin for Spinnaker to run Pulumi apps. Pulumi doesn't require
@@ -40,7 +40,7 @@ method (i.e. Kubernetes).
 
 ### Pulumi
 
-This guide assumes you are using the default Pulumi Cloud [managed backend](/docs/concepts/state/#backends).
+This guide assumes you are using the default Pulumi Cloud [managed backend](/docs/iac/concepts/state-and-backends/#backends).
 To sign-up for a new Pulumi account, head over to the [Pulumi Cloud](https://app.pulumi.com/signup).
 The Pulumi Plugin for Spinnaker referenced in this guide supports specifying alternate backend URLs.
 
@@ -92,7 +92,7 @@ The `Secret` resource must be in the same namespace as the Pulumi stage input wh
 Sensitive secrets such as the [Pulumi Access Token](/docs/pulumi-cloud/accounts#access-tokens), the cloud provider credentials, or even your VCS credentials
 (eg. GitHub, Bitbucket, GitLab), should be defined as key/value pairs in the `Secret` resource.
 
-If you are using either the Pulumi-managed or the self-hosted [service backend](/docs/concepts/state/), get a
+If you are using either the Pulumi-managed or the self-hosted [service backend](/docs/iac/concepts/state-and-backends/), get a
 [Pulumi Access Token](https://app.pulumi.com/account/tokens) for the Pulumi account that you will use in your pipeline.
 Save the value of the token with the key `PULUMI_ACCESS_TOKEN` in your Kubernetes `Secret` resource.
 

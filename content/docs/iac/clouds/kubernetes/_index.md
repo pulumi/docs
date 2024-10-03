@@ -127,7 +127,7 @@ kubernetes_operator:
     icon: github-small
     external_link: true
   - display_name: Get started with Pulumi Kubernetes Operator
-    url: /docs/using-pulumi/continuous-delivery/pulumi-kubernetes-operator/
+    url: /docs/iac/packages-and-automation/continuous-delivery/pulumi-kubernetes-operator/
     icon: light-bulb-small-gray
 aliases:
   - /docs/clouds/kubernetes/

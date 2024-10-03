@@ -14,7 +14,7 @@ menu:
         weight: 1
 aliases:
 - /docs/guides/continuous-delivery/octopus-deploy/
-- /docs/using-pulumi/continuous-delivery/octopus-deploy/
+- /docs/iac/packages-and-automation/continuous-delivery/octopus-deploy/
 ---
 
 [Octopus Deploy](https://octopus.com) is a deployment automation server, designed to make it easy to orchestrate releases and deploy applications, whether on-premises or in the cloud. It can integrate with your existing build pipeline such as Jenkins, TeamCity, Azure DevOps etc.

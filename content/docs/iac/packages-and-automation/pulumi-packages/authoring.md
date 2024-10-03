@@ -15,8 +15,8 @@ menu:
         weight: 2
 aliases:
 - /docs/guides/pulumi-packages/how-to-author/
-- /docs/using-pulumi/pulumi-packages/contribute-to-pulumi-registry/
-- /docs/using-pulumi/pulumi-packages/how-to-author
+- /docs/iac/packages-and-automation/pulumi-packages/contribute-to-pulumi-registry/
+- /docs/iac/packages-and-automation/pulumi-packages/how-to-author
 ---
 
 This guide will take you step-by-step through creating and publishing a Pulumi Package. You can use this guide to create any [type of Pulumi Package](/docs/guides/pulumi-packages#types-of-pulumi-packages): a Native Provider, a provider bridged from an existing Terraform provider, or a Component. This guide assumes you're using GitHub to host your package's source code and GitHub Actions to publish various parts of your package.
@@ -77,7 +77,7 @@ We recommend keeping the contents of `README.md` and `_index.md` similar or the 
 
 ### Package metadata
 
-Metadata for your package is generated from the [`schema.json`](/docs/using-pulumi/pulumi-packages/schema) in your repository. To make sure your package looks great in Pulumi Registry, ensure you add metadata like:
+Metadata for your package is generated from the [`schema.json`](/docs/iac/packages-and-automation/pulumi-packages/schema) in your repository. To make sure your package looks great in Pulumi Registry, ensure you add metadata like:
 
 - `displayName`: the friendly name for your package displayed on the Registry's browse page; this name should match the title of the `_index.md` file.
 - `description`: a short description of your package; it should include the package name

@@ -44,7 +44,7 @@ Explore our how-to guides if you're looking for examples of specific architectur
 
 ## How Pulumi Works
 
-Learn how Pulumi works from its architecture to key concepts, including [stacks](/docs/concepts/stack/), [state](/docs/concepts/state/), [configuration](/docs/concepts/config/), and [secrets](/docs/concepts/secrets/).
+Learn how Pulumi works from its architecture to key concepts, including [stacks](/docs/concepts/stack/), [state](/docs/iac/concepts/state-and-backends/), [configuration](/docs/concepts/config/), and [secrets](/docs/concepts/secrets/).
 
 {{< get-started-next-step path="/docs/concepts/" label="Read Documentation" ref="gs-k8s-docs" >}}
 

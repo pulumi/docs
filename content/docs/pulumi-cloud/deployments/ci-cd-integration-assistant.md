@@ -23,7 +23,7 @@ aliases:
 
 {{% notes "info" %}}
 The CI/CD integration assistant helps you integrate Pulumi into CI/CD systems for automatically deploying stacks and is only available
-to [Organizations](/docs/pulumi-cloud/organizations/), not personal accounts.
+to [Organizations](/docs/pulumi-cloud/admin/organizations//), not personal accounts.
 {{% /notes %}}
 
 <!--more-->
@@ -115,7 +115,7 @@ that will run the `pulumi preview` command. Select the **Next** button to valida
 Congratulations on configuring a version control system and an automated pipeline for your stack! 🎉
 
 {{% notes "info" %}}
-If your pull request build failed, use the [CI/CD troubleshooting guide](/docs/using-pulumi/continuous-delivery/troubleshooting-guide) to diagnose the issue.
+If your pull request build failed, use the [CI/CD troubleshooting guide](/docs/iac/packages-and-automation/continuous-delivery/troubleshooting-guide) to diagnose the issue.
 {{% /notes %}}
 
 ## Skip the line and get the workflow directly

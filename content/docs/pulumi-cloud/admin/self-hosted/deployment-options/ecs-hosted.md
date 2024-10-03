@@ -56,7 +56,7 @@ This installer uses Pulumi to deploy the Pulumi Cloud. In this case, one uses th
 To this end, you need to set up the following:
 
 * [Download and install the Pulumi CLI](/docs/install/) on your workstation
-* [Login to S3-compatible backend](/docs/concepts/state#aws-s3)
+* [Login to S3-compatible backend](/docs/iac/concepts/state-and-backends#aws-s3)
 
 ### Deployment Steps
 

@@ -64,7 +64,7 @@ The bank decided to adopt IaC to create reliable and rapid deployments while ens
 
 ## Why Washington Trust Bank Chose Pulumi
 
-The bank evaluated several options, including [Terraform](/docs/concepts/vs/terraform/) and Azure Bicep. However, Pulumi stood out due to its versatility, support for multiple clouds and [native Azure support](/blog/introducing-azure-native-v2/), and the ability to write IaC in the bank's preferred language, TypeScript. The ease of using Pulumi with GitHub, its ability to be used in conjunction with Azure CLI, and its comprehensive [support for CI/CD](/docs/using-pulumi/continuous-delivery/) through GitHub Actions were also compelling factors.
+The bank evaluated several options, including [Terraform](/docs/concepts/vs/terraform/) and Azure Bicep. However, Pulumi stood out due to its versatility, support for multiple clouds and [native Azure support](/blog/introducing-azure-native-v2/), and the ability to write IaC in the bank's preferred language, TypeScript. The ease of using Pulumi with GitHub, its ability to be used in conjunction with Azure CLI, and its comprehensive [support for CI/CD](/docs/iac/packages-and-automation/continuous-delivery/) through GitHub Actions were also compelling factors.
 
 Dennis praised Pulumi, saying, "_Pulumi was exactly the Swiss Army Knife versatility we were looking for. We've only uncovered more of what we love about Pulumi as our relationship has evolved._"
 
@@ -86,9 +86,9 @@ Pulumi also gave the bank total confidence in being able to rapidly recover its 
 
 ###  Policy as Code Guardrails with Pulumi CrossGuard
 
-[Pulumi CrossGuard](/docs/using-pulumi/crossguard/) adds an extra layer of security and control and is used in conjunction with Azure Policies, which are used for auditing purposes. CrossGuard prevents the deployment of undesired, insecure, or expensive resources during the preview and deployment stage, thus preventing developers from even reaching Azure to provision resources. Custom error messages give developers context on why their deployment was not allowed.
+[Pulumi CrossGuard](/docs/iac/packages-and-automation/crossguard/) adds an extra layer of security and control and is used in conjunction with Azure Policies, which are used for auditing purposes. CrossGuard prevents the deployment of undesired, insecure, or expensive resources during the preview and deployment stage, thus preventing developers from even reaching Azure to provision resources. Custom error messages give developers context on why their deployment was not allowed.
 
-[Pulumi Cloud Policy Packs](/docs/using-pulumi/crossguard/configuration/) allow them to group and deploy many policies simultaneously. The Policy Packs prevent specified resources from being deployed into staging and live environments. For example, one policy requires all SQL databases to use TLS 1.2 by default and another ensures all storage buckets have public access disabled by default. These capabilities helped bolster the security of the bank's cloud infrastructure.
+[Pulumi Cloud Policy Packs](/docs/iac/packages-and-automation/crossguard/configuration/) allow them to group and deploy many policies simultaneously. The Policy Packs prevent specified resources from being deployed into staging and live environments. For example, one policy requires all SQL databases to use TLS 1.2 by default and another ensures all storage buckets have public access disabled by default. These capabilities helped bolster the security of the bank's cloud infrastructure.
 
 ## Financial services cloud modernization with Pulumi
 

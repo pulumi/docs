@@ -53,14 +53,14 @@ There are two major approaches to this challenge.
 
 Pulumi offers many tools and techniques should you want to perform a migration on your own.
 
-In the most general form, Pulumi provides [an import command]({{< relref "/docs/using-pulumi/adopting-pulumi/import" >}})
+In the most general form, Pulumi provides [an import command](/docs/using-pulumi/adopting-pulumi/import/)
 which can import any existing infrastructure no matter how it was originally created, click-ops included.
 
 Pulumi also offers conversion tools for other popular infrastructure as code solutions, including
-[HashiCorp Terraform]({{< relref "/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-terraform" >}}),
-[AWS CloudFormation]({{< relref "/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-aws" >}}),
-[Azure Resource Manager (ARM)]({{< relref "/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-azure" >}}), or
-[Kubernetes YAML]({{< relref "/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-kubernetes" >}}).
+[HashiCorp Terraform](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-terraform/),
+[AWS CloudFormation](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-aws/),
+[Azure Resource Manager (ARM)](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-azure/), or
+[Kubernetes YAML](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-kubernetes/).
 
 Although the time to migrate existing infrastructure varies wildly based on the size and complexity of your scenario,
 migrating a single cloud environment can often take as little as a few hours. And thanks to Pulumi being multi-language
@@ -68,7 +68,7 @@ at its core, these tools will support you the same no matter which language you 
 Go, C#, Java, and YAML alike.
 
 To learn more about performing your own migration, please
-[read this user guide]({{< relref "/docs/using-pulumi/adopting-pulumi" >}}).
+[read this user guide](/docs/using-pulumi/adopting-pulumi/).
 
 ### Let Us Help You Out with Expert Services!
 
@@ -89,7 +89,7 @@ training, and other services efforts. No project is too small: we are currently 
 
 _Today we are also announcing an extension to
 [our **Terraform Migration Offer**](/blog/tf-migration-offer/)_, in which we will bundle migration of
-your Terraform projects with your [Pulumi Enterprise or Business Critical]({{< relref "/pricing" >}}) subscription.
+your Terraform projects with your [Pulumi Enterprise or Business Critical](/pricing/) subscription.
 Today we are excited to announce that this same package is now available for all migration efforts, including AWS
 CloudFormation, Azure Resource Manager (ARM), ..., or even infrastructure that was manually provisioned. We are also prepared
 to scale up from there depending on your needs.
@@ -97,30 +97,28 @@ to scale up from there depending on your needs.
 ## Success Stories
 
 Over time, Pulumi is becoming a more comprehensive platform, with new services like
-[Pulumi Deployments]({{< relref "/blog/pulumi-deployments" >}}) for multi-cloud deployment workflows and
-[Pulumi Insights]({{< relref "/blog/pulumi-insights" >}}) for search, analytics, and AI for your cloud infrastructure.
-Pulumi also offers [policies]({{< relref "/crossguard" >}}) and [secrets]({{< relref "/docs/concepts/secrets" >}}) as
-core features of the platform. [Enterprises]({{< relref "/enterprise" >}}) are increasingly betting on Pulumi for
+[Pulumi Deployments](/blog/pulumi-deployments/) for multi-cloud deployment workflows and
+[Pulumi Insights](/blog/pulumi-insights/) for search, analytics, and AI for your cloud infrastructure.
+Pulumi also offers [policies](/crossguard/) and [secrets](/docs/concepts/secrets/) as
+core features of the platform. [Enterprises](/enterprise/) are increasingly betting on Pulumi for
 their entire cloud management and platform needs.
 
 By moving to Pulumi's platform, many customers have seen considerable benefits:
 
-_[Atlassian **significantly increased developer velocity**]({{< relref "/case-studies/atlassian" >}})_, increasing
+_[Atlassian **significantly increased developer velocity**](/case-studies/atlassian/)_, increasing
 productivity by more than 2X and substantially decreasing the amount of time spent on maintenance tasks.
 
-_[Mercedes-Benz **got the whole team shipping faster and with more confidence**]({{<
-relref "/case-studies/mercedes-benz" >}})_ by building a platform that helped developers be self-serve with
+_[Mercedes-Benz **got the whole team shipping faster and with more confidence**](/case-studies/mercedes-benz/)_ by building a platform that helped developers be self-serve with
 infrastructure while scaling up to 100s of Kubernetes clusters worldwide.
 
-_[Snowflake **rapidly improved time to market**]({{< relref "/case-studies/snowflake" >}})_ by betting on Pulumi,
+_[Snowflake **rapidly improved time to market**](/case-studies/snowflake/)_ by betting on Pulumi,
 empowering their engineers, and delivering the Data Cloud. Snowflake ultimately beat their IPO deadlines and knew legacy
 infrastructure as code wouldn't do it.
 
-_[Washington Trust Bank **modernized their cloud infrastructure and practices**](
-{{< relref "/blog/how-a-bank-modernized-its-software-engineering-with-infrastructure-as-code-automation" >}})_,
+_[Washington Trust Bank **modernized their cloud infrastructure and practices**](/blog/how-a-bank-modernized-its-software-engineering-with-infrastructure-as-code-automation/)_,
 speeding up internal delivery, while also increasing their confidence thanks to policy as code guardrails.
 
-_[Fauna **adopted a born in the cloud mindset**]({{< relref "/case-studies/fauna" >}})_ and was able to build a
+_[Fauna **adopted a born in the cloud mindset**](/case-studies/fauna/)_ and was able to build a
 multi-cloud, highly scalable, modern SaaS application, actually increasing reliability even in the face of growing
 complexity.
 
@@ -145,11 +143,11 @@ part of your own customers' needs. That includes ISV product integrations, globa
 consultants, and more. Note that Pulumi is already available in the
 [AWS](https://aws.amazon.com/marketplace/pp/prodview-dwn22batkhsyg) and
 [Azure](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/pulumicorporation1618431130005.pulumi_e1)
-marketplaces. If you are interested in discussing a partnership, please [contact us]({{< relref "/contact" >}}).
+marketplaces. If you are interested in discussing a partnership, please [contact us](/contact/).
 
 ## Get Started Today
 
 Migrating from an existing solution can seem like a daunting task, but with Pulumi's new Migration Hub and Expert
 Services, it has never been easier to adopt Pulumi than it is today. To learn more, visit the
-[Migration Hub]({{< relref "/migrate" >}}) or simply [contact us]({{< relref "/contact" >}}) -- we would love to hear
+[Migration Hub](/migrate/) or simply [contact us](/contact/) -- we would love to hear
 from you.

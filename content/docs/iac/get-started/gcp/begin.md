@@ -13,7 +13,7 @@ aliases:
 - /docs/get-started/gcp/install-language-runtime/
 - /docs/get-started/gcp/configure
 - /docs/get-started/gcp/begin/
-- /docs/clouds/gcp/get-started/begin/
+- /docs/iac/get-started/gcp/begin/
 ---
 
 Before you get started using Pulumi, let's run through a few quick steps to ensure your environment is set up correctly.

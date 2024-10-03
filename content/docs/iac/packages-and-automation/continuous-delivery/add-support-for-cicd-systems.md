@@ -18,7 +18,7 @@ aliases:
 - /docs/console/continuous-delivery/other/
 - /docs/guides/continuous-delivery/other/
 - /docs/guides/continuous-delivery/add-support-for-cicd-systems/
-- /docs/using-pulumi/continuous-delivery/add-support-for-cicd-systems/
+- /docs/iac/packages-and-automation/continuous-delivery/add-support-for-cicd-systems/
 ---
 
 If the Pulumi CLI doesn't automatically detect your CI/CD system, this guide

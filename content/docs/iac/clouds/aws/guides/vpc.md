@@ -15,7 +15,7 @@ menu:
 aliases:
 - /docs/reference/crosswalk/aws/vpc/
 - /docs/guides/crosswalk/aws/vpc/
-- /docs/clouds/aws/guides/vpc/
+- /docs/iac/clouds/aws/guides/vpc/
 ---
 
 {{< crosswalk-header >}}

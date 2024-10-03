@@ -7,7 +7,7 @@ weight: 5
 aliases:
 - /docs/quickstart/aws/deploy-stack/
 - /docs/get-started/aws/deploy-stack/
-- /docs/clouds/aws/get-started/deploy-stack/
+- /docs/iac/get-started/aws/deploy-stack/
 ---
 
 Let's go ahead and deploy your stack:

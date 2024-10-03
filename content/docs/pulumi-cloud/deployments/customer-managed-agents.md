@@ -31,7 +31,7 @@ Customer-Managed Agents is available on the Business Critical edition of Pulumi 
 
 ## Using Customer-Managed Agents
 
-Before you begin, ensure you have installed the [Pulumi Github App](/docs/using-pulumi/continuous-delivery/github-app/) and updated the [source control settings](/docs/pulumi-cloud/deployments/get-started) of the stack you want to use Deployment agents. [Docker](https://docs.docker.com/engine/) or [Kubernetes](https://kubernetes.io/docs/home/) is a requirement for running the agent.
+Before you begin, ensure you have installed the [Pulumi Github App](/docs/iac/packages-and-automation/continuous-delivery/github-app/) and updated the [source control settings](/docs/pulumi-cloud/deployments/get-started) of the stack you want to use Deployment agents. [Docker](https://docs.docker.com/engine/) or [Kubernetes](https://kubernetes.io/docs/home/) is a requirement for running the agent.
 
 1. Go to **Deployment runners** under Organization Settings
 2. Create a new pool. Ensure to copy and save the token
