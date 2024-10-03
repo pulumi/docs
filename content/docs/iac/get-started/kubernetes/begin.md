@@ -18,7 +18,7 @@ aliases:
 - /docs/get-started/kubernetes/install-language-runtime/
 - /docs/get-started/kubernetes/configure/
 - /get-started/kubernetes/begin/
-- /docs/clouds/kubernetes/get-started/begin/
+- /docs/iac/get-started/kubernetes//begin/
 ---
 
 Before we get started using Pulumi, let's run through a few quick steps to ensure our environment is setup correctly.

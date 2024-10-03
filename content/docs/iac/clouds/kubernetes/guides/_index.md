@@ -97,7 +97,7 @@ See the [FAQ][crosswalk-faq] for more details.
 [crosswalk-faq]: /docs/clouds/kubernetes/guides/faq/
 [cw-index]: /docs/clouds/kubernetes/guides/
 [cw-playbooks]: /docs/clouds/kubernetes/guides/playbooks/
-[k8s-get-started]: /docs/clouds/kubernetes/get-started/
+[k8s-get-started]: /docs/iac/get-started/kubernetes//
 [eks]: https://aws.amazon.com/eks/
 [aks]: https://azure.microsoft.com/en-us/services/kubernetes-service/
 [gke]: https://cloud.google.com/kubernetes-engine/

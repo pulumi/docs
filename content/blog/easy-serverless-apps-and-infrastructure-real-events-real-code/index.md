@@ -379,7 +379,7 @@ available --
 [AWS](/docs/clouds/aws/get-started/),
 [Azure](/docs/clouds/azure/get-started/),
 [GCP](/docs/clouds/gcp/get-started/),
-[Kubernetes](/docs/clouds/kubernetes/get-started/), etc. When
+[Kubernetes](/docs/iac/get-started/kubernetes//), etc. When
 you `new` one up, Pulumi understands how to provision and manage it.
 
 We saw simple examples of this earlier:

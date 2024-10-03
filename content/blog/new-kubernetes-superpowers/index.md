@@ -321,7 +321,7 @@ Over the last few months, we've extended this support in two key ways. We added 
 
 We’re incredibly excited about today’s new features and the opportunity to deepen Pulumi’s support for Kubernetes and the Cloud Native ecosystem. The Pulumi Kubernetes Operator unlocks exciting new approaches to cloud native infrastructure delivery. The `kube2pulumi` tool makes it easier than ever to migrate from cumbersome YAML to expressive code. Strongly-typed CRDs bring the richness of Pulumi to the entire Cloud Native ecosystem of extensions to the Kubernetes platform. And OPA support in Pulumi policy-as-code brings cloud native policy authoring with OPA into the Pulumi Modern Infrastructure-as-Code world.
 
-It’s never been a more exciting time to get started with Pulumi and Kubernetes for your next modern cloud project.  Check out the new features or the Pulumi Kubernetes [Getting Started](/docs/clouds/kubernetes/get-started/) today.
+It’s never been a more exciting time to get started with Pulumi and Kubernetes for your next modern cloud project.  Check out the new features or the Pulumi Kubernetes [Getting Started](/docs/iac/get-started/kubernetes//) today.
 
 You can learn more about each of the new capabilities in their corresponding project documentation:
 

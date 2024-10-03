@@ -234,6 +234,6 @@ CQL also supports live streaming queries, which the CLI will display results fro
 
 Everything above is [open source](https://github.com/pulumi) and has been battle-tested with many end users and organizations over the last year &mdash; all the way from startups to ISVs to the largest enterprises in the world. We are excited to share these best practices in reusable forms, leveraging the foundation uniquely provided by Pulumi’s infrastructure as code platform using familiar languages.
 
-To get started, check out the [documentation](/docs/clouds/kubernetes/guides/), or [get started with the open source SDK now](/docs/clouds/kubernetes/get-started/).
+To get started, check out the [documentation](/docs/clouds/kubernetes/guides/), or [get started with the open source SDK now](/docs/iac/get-started/kubernetes//).
 
 We sincerely hope that your team can be successful in your Kubernetes journey as a result of these lessons learned from others. Additionally, Pulumi offers training and services, so if we can help in any way, please [join our entire team and thousands of practitioners on our Community Slack](https://slack.pulumi.com) &mdash; or simply [contact us](/contact/) and we’ll be in touch.

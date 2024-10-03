@@ -227,6 +227,6 @@ The magic doesn’t stop here. There’s a [wealth of examples](https://github.c
 - [AWS](/docs/clouds/aws/get-started/)
 - [Azure](/docs/clouds/azure/get-started/)
 - [Google Cloud](/docs/clouds/gcp/get-started/)
-- [Kubernetes](/docs/clouds/kubernetes/get-started/)
+- [Kubernetes](/docs/iac/get-started/kubernetes//)
 
 We’d love to hear what you think. We look forward to hanging out on [Pulumi Slack](https://slack.pulumi.com/) or hearing from your thoughts in a [GitHub issue](https://github.com/pulumi/pulumi/issues/new).

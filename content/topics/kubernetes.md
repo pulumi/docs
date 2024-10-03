@@ -217,7 +217,7 @@ kubernetes_overview:
 superpowers:
     - title: Run On Any Cloud
       cta: Learn more
-      cta_url: "/docs/clouds/kubernetes/get-started/"
+      cta_url: "/docs/iac/get-started/kubernetes//"
       icon_type: cloud
       description: |
         Support for all clouds including Amazon Elastic Kubernetes Service (EKS), Azure
@@ -227,7 +227,7 @@ superpowers:
 
     - title: Reduce Provisioning Time
       cta: Learn more
-      cta_url: "/docs/clouds/kubernetes/get-started/"
+      cta_url: "/docs/iac/get-started/kubernetes//"
       icon_type: provisioning
       description: |
         With Pulumi you are able to take advantage of the features of programming languages,

@@ -380,5 +380,5 @@ DigitalOcean's Managed Kubernetes, and custom clusters (including Minikube).
 
 For more information:
 
-- [Get started with Pulumi and Kubernetes](/docs/clouds/kubernetes/get-started/)
+- [Get started with Pulumi and Kubernetes](/docs/iac/get-started/kubernetes//)
 - [Get started with Pulumi and AWS](/docs/clouds/aws/get-started/)

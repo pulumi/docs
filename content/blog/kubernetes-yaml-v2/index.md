@@ -245,7 +245,7 @@ across the Pulumi SDKs. See [pulumi-kubernetes#1971](https://github.com/pulumi/p
 
 Check out the following links to learn more about Pulumi Kubernetes today!
 
-* [Getting Started](/docs/clouds/kubernetes/get-started/)
+* [Getting Started](/docs/iac/get-started/kubernetes//)
 * [Documentation](/docs/clouds/kubernetes/)
 * [Open Source](https://github.com/pulumi/pulumi-kubernetes)
 * [Community Slack](https://slack.pulumi.com/)
