@@ -11,6 +11,13 @@ form:
     - key: sales
       label: I want to talk to someone in Sales
       hubspot_form_id: 8381e562-5fdf-4736-bb10-86096705e4ee
+    
+    - key: support
+      label: I want help with support
+      hubspot_form_id: cta1
+      cta:
+        label: Submit a Request
+        url: https://support.pulumi.com/hc/en-us/requests/new
       
     - key: onboarding
       label: I need help getting started
