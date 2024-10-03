@@ -6,11 +6,20 @@ using System.Collections.Generic;
 
 return await Pulumi.Deployment.RunAsync(() =>
 {
-    // Create an Azure Resource Group
-    var resourceGroup = new ResourceGroup("resourceGroup");
+    var path = "./wwwroot";
+    var indexDocument = "index.html";
+    var errorDocument = "error.html";
 
-    // Create an Azure resource (Storage Account)
-    var storageAccount = new StorageAccount("sa", new StorageAccountArgs
+    // Steps:
+    // [1] Create a resource group.
+    // [2] Create a blob storage account.
+    // [3] Configure the storage account as a website.
+
+    // [1] Create a resource group.
+    var resourceGroup = new ResourceGroup("website-resource-group");
+
+    // [2] Create a blob storage account.
+    var storageAccount = new StorageAccount("websiteblob", new StorageAccountArgs
     {
         ResourceGroupName = resourceGroup.Name,
         Sku = new SkuArgs
@@ -20,21 +29,39 @@ return await Pulumi.Deployment.RunAsync(() =>
         Kind = Kind.StorageV2
     });
 
-    var storageAccountKeys = ListStorageAccountKeys.Invoke(new ListStorageAccountKeysInvokeArgs
+    // [3] Configure the storage account as a website.
+    var website = new Storage.StorageAccountStaticWebsite("website", new Storage.StorageAccountStaticWebsiteArgs
+    {
+        AccountName = storageAccount.Name,
+        ResourceGroupName = resourceGroup.Name,
+        IndexDocument = indexDocument,
+        Error404Document = errorDocument,
+    });
+
+    // Upload the website files
+    var index_html = new Storage.Blob("index.html", new Storage.BlobArgs
     {
         ResourceGroupName = resourceGroup.Name,
-        AccountName = storageAccount.Name
+        AccountName = storageAccount.Name,
+        ContainerName = website.ContainerName,
+        Source = new FileAsset($"./{path}/{indexDocument}"),
+        ContentType = "text/html",
     });
 
-    var primaryStorageKey = storageAccountKeys.Apply(accountKeys =>
+    var notfound_html = new Storage.Blob("404.html", new Storage.BlobArgs
     {
-        var firstKey = accountKeys.Keys[0].Value;
-        return Output.CreateSecret(firstKey);
+        ResourceGroupName = resourceGroup.Name,
+        AccountName = storageAccount.Name,
+        ContainerName = website.ContainerName,
+        Source = new FileAsset($"./{path}/{errorDocument}"),
+        ContentType = "text/html",
     });
 
-    // Export the primary key of the Storage Account
+    staticEndpoint = storageAccount.PrimaryEndpoints.Apply(primaryEndpoints => primaryEndpoints.Web);
+
+    // Export the URL of the website.
     return new Dictionary<string, object?>
     {
-        ["primaryStorageKey"] = primaryStorageKey
+        ["staticEndpoint"] = staticEndpoint
     };
 });

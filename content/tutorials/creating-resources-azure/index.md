@@ -26,12 +26,11 @@ weight: 999
 summary: |
    In Pulumi, resources represent the fundamental units that make up your infrastructure, such as virtual machines, networks, storage, and databases. A resource is used to define and manage an infrastructure object in your Pulumi configuration.
 
-   In this tutorial, you will create a simple Nginx web server. You will then refer to documentation in the Pulumi Registry to create a TBD to make the server publicly accessible.
+   In this tutorial, you will create a simple static website hosted on an Azure Blob Storage account. You will then refer to documentation in the Pulumi Registry to configure the storage account as a website.
 
 # A list of three to five things the reader will have learned by the end of the tutorial.
 youll_learn:
     - How to create a new resource
-    - How to update an existing resource
     - How to reference resource definitions in the Pulumi documentation
 
 # A list of tutorial prerequisites. Markdown is fine. Keep it simple; no need to be exhaustive here.
@@ -50,4 +49,415 @@ estimated_time: 10
 #     - some-non-existent-collection
 ---
 
-This is the actual content of the tutorial.
+## Create a new project
+
+To start, [login to the Pulumi CLI](/tutorials/cli-authentication/) and [ensure it is configured to use your Azure account](/docs/iac/get-started/azure/begin/#configure-pulumi-to-access-your-microsoft-azure-account). Next, [create a new project and stack](/docs/iac/get-started/azure/create-project/).
+
+```bash
+# Example using Python
+$ mkdir pulumi-tutorial-azure
+$ cd pulumi-tutorial-azure
+$ pulumi new azure-python
+```
+
+Then use the following code snippet to scaffold your project with the required imports and overall program structure that you will fill in as you go along:
+
+{{< chooser language "javascript,typescript,python,go,csharp,yaml" / >}}
+
+{{% choosable language javascript %}}
+
+```javascript
+{{< example-program-snippet path="azure-native-static-website" language="javascript" from="1" to="13" >}}
+```
+
+{{% /choosable %}}
+
+{{% choosable language typescript %}}
+
+```typescript
+{{< example-program-snippet path="azure-native-static-website" language="typescript" from="1" to="2" >}}
+```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+```python
+{{< example-program-snippet path="azure-native-static-website" language="python" from="1" to="12" >}}
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```go
+{{< example-program-snippet path="azure-native-static-website" language="go" from="1" to="2" >}}
+```
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+```csharp
+{{< example-program-snippet path="azure-native-static-website" language="csharp" from="1" to="2" >}}
+```
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+```yaml
+{{< example-program-snippet path="azure-native-static-website" language="csharp" from="1" to="2" >}}
+```
+
+{{% /choosable %}}
+
+{{< notes type="info" >}}
+
+If you are deploying your resources using Pulumi Python, this tutorial will make use of the [Pulumi Synced Folder](/registry/packages/synced-folder/) package, so you will also need to make sure to [install this dependency into your project](https://github.com/pulumi/pulumi-synced-folder?tab=readme-ov-file#installing).
+
+{{< /notes >}}
+
+## Create a resource group
+
+The first resource you will create will be an [Azure Resource Group](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups-portal). Azure Resource Groups provide a logical container to organize and manage resources in your Azure account. In Azure, resources like virtual machines, storage accounts, and databases are grouped together within a resource group.
+
+The [Pulumi Registry](/registry/) provides the documentation for all of the Pulumi providers and their associated resources. Open the [azure-native.resources.ResourceGroup documentation page](/registry/packages/azure-native/api-docs/resources/resourcegroup/) to view a description of this resource, example usage, the resource definition, and supported properties. You will now define your resource group resource as shown below:
+
+{{< chooser language "javascript,typescript,python,go,csharp,yaml" / >}}
+
+{{% choosable language javascript %}}
+
+```javascript
+{{< example-program-snippet path="azure-native-static-website" language="javascript" from="1" to="8" >}}
+
+{{< example-program-snippet path="azure-native-static-website" language="javascript" from="15" to="16" >}}
+```
+
+{{% /choosable %}}
+
+{{% choosable language typescript %}}
+
+```typescript
+{{< example-program-snippet path="azure-native-static-website" language="typescript" from="1" to="2" >}}
+```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+```python
+{{< example-program-snippet path="azure-native-static-website" language="python" from="1" to="7" >}}
+
+{{< example-program-snippet path="azure-native-static-website" language="python" from="14" to="17" >}}
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```go
+{{< example-program-snippet path="azure-native-static-website" language="go" from="1" to="2" >}}
+```
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+```csharp
+{{< example-program-snippet path="azure-native-static-website" language="csharp" from="1" to="2" >}}
+```
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+```yaml
+{{< example-program-snippet path="azure-native-static-website" language="csharp" from="1" to="2" >}}
+```
+
+{{% /choosable %}}
+
+All resources have a required [`name`](https://www.pulumi.com/docs/concepts/resources/names/) argument. Each resource has both a [logical name](https://www.pulumi.com/docs/concepts/resources/names/#logicalname) and a [physical name](https://www.pulumi.com/docs/concepts/resources/names/#autonaming). The **logical name** is how the resource is known inside Pulumi. This is the value provided to the required `name` argument. The **physical name** is the name used for the resource in the cloud provider that a Pulumi program is deploying to. It is a combination of the logical name plus a random suffix which helps to prevent resource naming collisions.
+
+In the above example, the logical name for our `ResourceGroup` resource is **"website-resource-group"**, and the physical name might typically look something like **"website-resource-group-d7c2fa0"**.
+
+## Create a storage account
+
+The next step will be to create an [Azure Blob Storage account](https://azure.microsoft.com/en-us/products/storage/blobs) that will be used to host the website. Once again, you can refer to the Pulumi registry, specificaly the [`azure-native.storage.StorageAccount` resource page](/registry/packages/azure-native/api-docs/storage/storageaccount/), to define your storage account as shown below:
+
+{{< chooser language "javascript,typescript,python,go,csharp,yaml" / >}}
+
+{{% choosable language javascript %}}
+
+```javascript
+{{< example-program-snippet path="azure-native-static-website" language="javascript" from="1" to="8" >}}
+
+{{< example-program-snippet path="azure-native-static-website" language="javascript" from="15" to="25" >}}
+```
+
+{{% /choosable %}}
+
+{{% choosable language typescript %}}
+
+```typescript
+{{< example-program-snippet path="azure-native-static-website" language="typescript" from="1" to="2" >}}
+```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+```python
+{{< example-program-snippet path="azure-native-static-website" language="python" from="1" to="7" >}}
+
+{{< example-program-snippet path="azure-native-static-website" language="python" from="14" to="27" >}}
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```go
+{{< example-program-snippet path="azure-native-static-website" language="go" from="1" to="2" >}}
+```
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+```csharp
+{{< example-program-snippet path="azure-native-static-website" language="csharp" from="1" to="2" >}}
+```
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+```yaml
+{{< example-program-snippet path="azure-native-static-website" language="csharp" from="1" to="2" >}}
+```
+
+{{% /choosable %}}
+
+In addition to names, resources have properties and options. **Properties** are used to specify what type of resource to create. Properties are often resource-specific, and they can be required or optional depending on the specifications of the provider.
+
+The properties inside your `StorageAccount` resource are:
+
+| Property | Description |
+|--------------|-------------|
+| **resource group name** | tells the Azure Native what resource group to associate this resource with |
+| **kind** | tells the provider the type of storage account to create, e.g. `StorageV2` |
+| **sku** | tells the provider the SKU to use when creating the resource, e.g. `Standard_LRS` |
+
+**Options** let you control certain aspects of a resource (such as showing explicit dependencies or importing existing infrastructure). We do not have any options defined for this resource, but you can learn more about options in the [Pulumi documentation](/docs/concepts/options).
+
+## Deploy your storage account
+
+Now run the `pulumi up` command to preview and deploy the resouces you've just defined in your project.
+
+```bash
+$ pulumi up -y
+Previewing update (static-website)
+
+     Type                                     Name                    Plan
+ +   pulumi:pulumi:Stack                      azure-static-website    create
+ +   ├─ azure-native:resources:ResourceGroup  website-resource-group  create
+ +   └─ azure-native:storage:StorageAccount   websiteblob             create
+
+Resources:
+    + 3 to create
+
+Updating (static-website)
+
+     Type                                     Name                    Status
+ +   pulumi:pulumi:Stack                      azure-static-website    created (39s)
+ +   ├─ azure-native:resources:ResourceGroup  website-resource-group  created (4s)
+ +   └─ azure-native:storage:StorageAccount   websiteblob             created (30s)
+
+Resources:
+    + 3 created
+
+Duration: 41s
+```
+
+## Configure the static website
+
+In this section, you will use the Pulumi documentation to configure the storage account as a static website on your own. To prepare for the configuration of the storage account, you will need to create a folder labeled `www` in your project. Inside this project, you will need to create an `index.html` file and an `error.html` file with the content as shown below.
+
+Contents of the `index.html` file:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Hello, world!</title>
+</head>
+<body>
+    <h1>Hello, world! 👋</h1>
+    <p>Deployed with 💜 by <a href="https://pulumi.com/">Pulumi</a>.</p>
+</body>
+</html>
+```
+
+Content of the `error.html` file:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page not found</title>
+</head>
+<body>
+    Oops! That page wasn't found. Try our <a href="/">home page</a> instead.
+</body>
+</html>
+```
+
+An updated version of the project code has been provided below as a starting point:
+
+{{< chooser language "javascript,typescript,python,go,csharp,yaml" / >}}
+
+{{% choosable language javascript %}}
+
+```javascript
+{{< example-program-snippet path="azure-native-static-website" language="javascript" from="1" to="8" >}}
+
+{{< example-program-snippet path="azure-native-static-website" language="javascript" from="15" to="27" >}}
+// TO-DO
+
+{{< example-program-snippet path="azure-native-static-website" language="javascript" from="1" to="8" >}}
+```
+
+{{% /choosable %}}
+
+{{% choosable language typescript %}}
+
+```typescript
+{{< example-program-snippet path="azure-native-static-website" language="typescript" from="1" to="2" >}}
+```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+```python
+{{< example-program-snippet path="azure-native-static-website" language="python" from="1" to="7" >}}
+
+{{< example-program-snippet path="azure-native-static-website" language="python" from="14" to="29" >}}
+# TO-DO
+
+{{< example-program-snippet path="azure-native-static-website" language="python" from="38" to="48" >}}
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```go
+{{< example-program-snippet path="azure-native-static-website" language="go" from="1" to="2" >}}
+```
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+```csharp
+{{< example-program-snippet path="azure-native-static-website" language="csharp" from="1" to="2" >}}
+```
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+```yaml
+{{< example-program-snippet path="azure-native-static-website" language="csharp" from="1" to="2" >}}
+```
+
+{{% /choosable %}}
+
+Use the following steps as a guide for adding the storage :
+
+- Navigate to the [Azure Native Registry](/registry/packages/azure-native/)
+- Search for the `StorageAccountStaticWebsite` resource
+- Define the `StorageAccountStaticWebsite` in your project code
+- Configure the following properties:
+  - `resource_group_name`
+  - `account_name`
+  - `index_document`
+  - `error404_document`
+- Preview and deploy your updated project code
+
+The website URL has been provided for you as an output, and you can use this to access your static website once the deployment has completed. You should be greeted with a "Hello, world!" homepage message that indicates your static website has been successfully created.
+
+### View complete solution
+
+You can view the complete project code below:
+
+{{< chooser language "javascript,typescript,python,go,csharp,yaml" / >}}
+
+{{% choosable language javascript %}}
+
+```javascript
+{{< example-program-snippet path="azure-native-static-website" language="javascript" from="1" to="2" >}}
+```
+
+{{% /choosable %}}
+
+{{% choosable language typescript %}}
+
+```typescript
+{{< example-program-snippet path="azure-native-static-website" language="typescript" from="1" to="2" >}}
+```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+```python
+{{< example-program-snippet path="azure-native-static-website" language="python" from="1" to="7" >}}
+
+{{< example-program-snippet path="azure-native-static-website" language="python" from="14" to="48" >}}
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```go
+{{< example-program-snippet path="azure-native-static-website" language="go" from="1" to="2" >}}
+```
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+```csharp
+{{< example-program-snippet path="azure-native-static-website" language="csharp" from="1" to="2" >}}
+```
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+```yaml
+{{< example-program-snippet path="azure-native-static-website" language="csharp" from="1" to="2" >}}
+```
+
+{{% /choosable %}}
+
+## Clean up
+
+{{< cleanup >}}
+
+## Next steps
+
+In this tutorial, you made a resource group and a storage account, and you configured your storage account as a static website by referencing the Pulumi Registry. You also reviewed resource properties and example usage of various resources.
+
+To learn more about creating resources in Pulumi, take a look at the following resources:
+
+- Learn more about stack outputs and references in the [Stack Outputs and References](/tutorials/stack-outputs-and-references/) tutorial.
+- Learn more about inputs and outputs in the [Inputs and Outputs](/docs/concepts/inputs-outputs/) documentation.
+- Learn more about [resource names](/docs/concepts/resources/names/), [options](/docs/concepts/options/), and [providers](/docs/concepts/resources/providers/) in the Pulumi documentation.

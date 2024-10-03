@@ -8,14 +8,23 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		// Create an Azure Resource Group
-		resourceGroup, err := resources.NewResourceGroup(ctx, "resourceGroup", nil)
+		path = "./wwwroot";
+		indexDocument = "index.html";
+		errorDocument = "error.html";
+	
+		// Steps:
+		// [1] Create a resource group.
+		// [2] Create a blob storage account.
+		// [3] Configure the storage account as a website.
+	
+		// [1] Create a resource group.
+		resourceGroup, err := resources.NewResourceGroup(ctx, "website-resource-group", nil)
 		if err != nil {
 			return err
 		}
 
-		// Create an Azure resource (Storage Account)
-		account, err := storage.NewStorageAccount(ctx, "sa", &storage.StorageAccountArgs{
+		// [2] Create a blob storage account.
+		storageAccount, err := storage.NewStorageAccount(ctx, "websiteblob", &storage.StorageAccountArgs{
 			ResourceGroupName: resourceGroup.Name,
 			Sku: &storage.SkuArgs{
 				Name: pulumi.String("Standard_LRS"),
@@ -26,23 +35,40 @@ func main() {
 			return err
 		}
 
-		// Export the primary key of the Storage Account
-		ctx.Export("primaryStorageKey", pulumi.All(resourceGroup.Name, account.Name).ApplyT(
-			func(args []interface{}) (string, error) {
-				resourceGroupName := args[0].(string)
-				accountName := args[1].(string)
-				accountKeys, err := storage.ListStorageAccountKeys(ctx, &storage.ListStorageAccountKeysArgs{
-					ResourceGroupName: resourceGroupName,
-					AccountName:       accountName,
-				})
-				if err != nil {
-					return "", err
-				}
+		//[3] Configure the storage account as a website.
+		website, err := storage.NewStorageAccountStaticWebsite(ctx, "staticWebsite", &storage.StorageAccountStaticWebsiteArgs{
+			AccountName:       storageAccount.Name,
+			ResourceGroupName: resourceGroup.Name,
+			IndexDocument:     pulumi.String("index.html"),
+			Error404Document:  pulumi.String("404.html"),
+		})
+		if err != nil {
+			return err
+		}
 
-				return accountKeys.Keys[0].Value, nil
-			},
-		))
+		_, err = storage.NewBlob(ctx, "index.html", &storage.BlobArgs{
+			ResourceGroupName: resourceGroup.Name,
+			AccountName:       storageAccount.Name,
+			ContainerName:     website.ContainerName,
+			Source:            pulumi.NewFileAsset("./" + path + "/" + indexDocument),
+			ContentType:       pulumi.String("text/html"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = storage.NewBlob(ctx, "404.html", &storage.BlobArgs{
+			ResourceGroupName: resourceGroup.Name,
+			AccountName:       storageAccount.Name,
+			ContainerName:     website.ContainerName,
+			Source:            pulumi.NewFileAsset("./" + path + "/" + errorDocument),
+			ContentType:       pulumi.String("text/html"),
+		})
+		if err != nil {
+			return err
+		}
 
+		// Export the URL of the website.
+		ctx.Export("staticEndpoint", storageAccount.PrimaryEndpoints.Web())
 		return nil
 	})
 }

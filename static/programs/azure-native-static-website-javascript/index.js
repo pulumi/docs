@@ -1,25 +1,48 @@
 "use strict";
 const pulumi = require("@pulumi/pulumi");
 const resources = require("@pulumi/azure-native/resources");
-const storage = require("@pulumi/azure-native/storage");
+const storage = require("@pulumi/synced-resources");
 
-// Create an Azure Resource Group
-const resourceGroup = new resources.ResourceGroup("resourceGroup");
+const path = "./wwwroot";
+const indexDocument = "index.html";
+const errorDocument = "error.html";
 
-// Create an Azure resource (Storage Account)
-const storageAccount = new storage.StorageAccount("sa", {
+// Steps:
+// [1] Create a resource group.
+// [2] Create a blob storage account.
+// [3] Configure the storage account as a website.
+
+// [1] Create a resource group.
+const resourceGroup = new resources.ResourceGroup("website-resource-group");
+
+// [2] Create a blob storage account.
+const storageAccount = new storage.StorageAccount("websiteblob", {
     resourceGroupName: resourceGroup.name,
+    kind: "StorageV2",
     sku: {
         name: "Standard_LRS",
     },
-    kind: "StorageV2",
 });
 
-// Export the primary key of the Storage Account
-const storageAccountKeys = storage.listStorageAccountKeysOutput({
-    resourceGroupName: resourceGroup.name,
+// [3] Configure the storage account as a website.
+const website = new storage.StorageAccountStaticWebsite("website", {
     accountName: storageAccount.name,
+    resourceGroupName: resourceGroup.name,
+    indexDocument: indexDocument,
+    error404Document: errorDocument,
 });
 
-// Export the primary storage key for the storage account
-exports.primaryStorageKey = storageAccountKeys.keys[0].value;
+// Upload the website files
+[indexDocument, errorDocument].map(
+    name =>
+        new storage.Blob(name, {
+            resourceGroupName: resourceGroup.name,
+            accountName: storageAccount.name,
+            containerName: website.containerName,
+            source: new pulumi.asset.FileAsset(`./${path}/${name}`),
+            contentType: "text/html",
+        }),
+);
+
+// Export the URL of the website.
+export const staticEndpoint = storageAccount.primaryEndpoints.web;

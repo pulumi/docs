@@ -1,31 +1,48 @@
-"""An Azure RM Python Pulumi program"""
-
 import pulumi
-from pulumi_azure_native import storage
-from pulumi_azure_native import resources
+import pulumi_azure_native as azure_native
+import pulumi_synced_folder as synced_folder
 
-# Create an Azure Resource Group
-resource_group = resources.ResourceGroup("resource_group")
+path = "./wwwroot"
+index_document = "index.html"
+error_document = "error.html"
 
-# Create an Azure resource (Storage Account)
-account = storage.StorageAccount(
-    "sa",
+#### Steps:
+# [1] Create a resource group.
+# [2] Create a blob storage account.
+# [3] Configure the storage account as a website.
+
+# [1] Create a resource group.
+resource_group = azure_native.resources.ResourceGroup(
+    "website-resource-group"
+)
+
+# [2] Create a blob storage account.
+storage_account = azure_native.storage.StorageAccount(
+    "websiteblob",
     resource_group_name=resource_group.name,
+    kind="StorageV2",
     sku={
-        "name": storage.SkuName.STANDARD_LRS,
-    },
-    kind=storage.Kind.STORAGE_V2,
+        "name": "Standard_LRS",
+    }
 )
 
-# Export the primary key of the Storage Account
-primary_key = (
-    pulumi.Output.all(resource_group.name, account.name)
-    .apply(
-        lambda args: storage.list_storage_account_keys(
-            resource_group_name=args[0], account_name=args[1]
-        )
-    )
-    .apply(lambda accountKeys: accountKeys.keys[0].value)
+# [3] Configure the storage account as a website.
+website = azure_native.storage.StorageAccountStaticWebsite(
+    "website",
+    account_name=storage_account.name,
+    resource_group_name=resource_group.name,
+    index_document=index_document,
+    error404_document=error_document,
 )
 
-pulumi.export("primary_storage_key", primary_key)
+# Use a synced folder to manage the files of the website.
+synced_folder = synced_folder.AzureBlobFolder(
+    "synced-folder",
+    path=path,
+    resource_group_name=resource_group.name,
+    storage_account_name=storage_account.name,
+    container_name=website.container_name,
+)
+
+# xport the URL of the website.
+pulumi.export("staticEndpoint", storage_account.primary_endpoints.web)
