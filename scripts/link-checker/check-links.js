@@ -7,7 +7,7 @@ const path = require("path");
 const fs = require("fs");
 
 
-// Additional routes to check that  not included in the sitemap.
+// Additional routes to check that are not included in the sitemap.
 const additionalRoutes = [
     "https://github.com/pulumi/pulumi",
     // Alternative version of the home page for Google ads.
