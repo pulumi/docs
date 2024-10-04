@@ -15,7 +15,7 @@ meta_desc: Learn how to define and provision resources on AWS using Pulumi.
 # An optional video for the tutorial. When present, it appears at the top of the page, replacing
 # the meta image. YouTube and HTML5 video sources are supported.
 video:
-    youtube: 1UEkiXqxgB8
+    youtube: Q1pL30ifeZ8
 
 # The order in which the tutorial appears in most lists. Order is ascending, so higher numbers
 # mean the tutorial will appear further down the list. Positive integers only.
