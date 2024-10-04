@@ -5,7 +5,7 @@ $(function () {
         "/docs/using-pulumi/": "user-guides-toc-header",
         "/docs/concepts/": "reference-toc-header",
         "/docs/support/": "support-toc-header",
-        "/docs/using-pulumi/adopting-pulumi/converters/": "converters-toc-header",
+        "/docs/iac/adopting-pulumi/converters/": "converters-toc-header",
     };
 
     Object.keys(pathTocHeaderMap).map(key => {

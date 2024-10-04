@@ -67,7 +67,7 @@ If you have truly large amounts of data that you will require very fast access t
 
 ## Conclusion
 
-Regardless of which database suits your needs, standing them up shouldn't be a chore. With Pulumi, provisioning either one is a breeze in the programming language of your choce. Try deploying an [AWS Data Service with DynamoDB](/docs/aws/dynamodb/) or get started with [Google Cloud](/docs/clouds/gcp/get-started/)
+Regardless of which database suits your needs, standing them up shouldn't be a chore. With Pulumi, provisioning either one is a breeze in the programming language of your choce. Try deploying an [AWS Data Service with DynamoDB](/docs/aws/dynamodb/) or get started with [Google Cloud](/docs/iac/get-started/gcp/)
 
 ## Pulumi Corporation
 

@@ -14,7 +14,7 @@ youll_learn:
   - How to install and configure the Pulumi GitHub App
   - How to trigger deployments directly from the Pulumi Cloud console using click-to-deploy
 prereqs:
-    - Completion of the AWS [Getting Started](/docs/clouds/aws/get-started/) guide or familiarity with the basics of the Pulumi workflow
+    - Completion of the AWS [Getting Started](/docs/iac/get-started/aws/) guide or familiarity with the basics of the Pulumi workflow
     - A [Pulumi Cloud account](https://app.pulumi.com/signup)
     - An [Amazon Web Services](https://aws.amazon.com/) account, access key ID, and secret access key
     - A [GitHub account](https://github.com/) with admin rights to a Git repository or organization
@@ -34,7 +34,7 @@ First sign in to Pulumi Cloud via the [Pulumi sign in page](https://app.pulumi.c
 
 ## Install and configure the GitHub App
 
-Next, the [Pulumi GitHub App](/docs/using-pulumi/continuous-delivery/github-app/) is required to enable Pulumi Deployment's [New Project Wizard](/docs/pulumi-cloud/developer-portals/new-project-wizard/) and push-to-deploy functionality. Follow the GitHub app [installation instructions](/docs/pulumi-cloud/deployments/reference/#github-app-installation) to ensure your Pulumi organization is set up to work seamlessly with Pulumi Deployments.
+Next, the [Pulumi GitHub App](/docs/iac/packages-and-automation/continuous-delivery/github-app/) is required to enable Pulumi Deployment's [New Project Wizard](/docs/pulumi-cloud/developer-portals/new-project-wizard/) and push-to-deploy functionality. Follow the GitHub app [installation instructions](/docs/pulumi-cloud/deployments/reference/#github-app-installation) to ensure your Pulumi organization is set up to work seamlessly with Pulumi Deployments.
 
 ## Create a New Project with the New Project Wizard
 

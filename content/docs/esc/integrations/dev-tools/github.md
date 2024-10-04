@@ -165,7 +165,7 @@ jobs:
           PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
 ```
 
-For more examples, see the [GitHub Actions for Pulumi](https://www.pulumi.com/docs/using-pulumi/continuous-delivery/github-actions/) page.
+For more examples, see the [GitHub Actions for Pulumi](https://www.pulumi.com/docs/iac/packages-and-automation/continuous-delivery/github-actions/) page.
 
 ## GitHub CLI Integration
 

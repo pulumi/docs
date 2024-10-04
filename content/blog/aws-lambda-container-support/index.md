@@ -13,7 +13,7 @@ tags:
 ---
 
 {{% notes type="warning" %}}
-Some of the code in this post is out of date. See the [AWS guides](/docs/clouds/aws/guides/) for an updated overview and examples.
+Some of the code in this post is out of date. See the [AWS guides](/docs/iac/clouds/aws/guides/) for an updated overview and examples.
 {{% /notes %}}
 
 When AWS Lambda launched in 2014, it pioneered the concept of Function-as-a-Service. Developers could write a function in one of the supported programming languages, upload it to AWS, and Lambda executes the function on every invocation.
@@ -116,7 +116,7 @@ const bucket = new aws.s3.Bucket("bucket");
 
 ### Build the container image and publish it to ECR
 
-We can use [Pulumi Crosswalk for AWS](https://www.pulumi.com/docs/clouds/aws/guides/) to build the Docker image and publish it to a new ECR repository with just three lines of code.
+We can use [Pulumi Crosswalk for AWS](https://www.pulumi.com/docs/iac/clouds/aws/guides/) to build the Docker image and publish it to a new ECR repository with just three lines of code.
 
 ```ts
 import * as awsx from "@pulumi/awsx";
@@ -185,4 +185,4 @@ Check out the video below for a demo of packaging AWS Lambda functions as contai
 Further steps:
 
 - Check out the full [Lambda + Docker example](https://github.com/pulumi/examples/tree/master/aws-ts-lambda-thumbnailer) in the Pulumi Examples.
-- [Get Started](https://www.pulumi.com/docs/clouds/aws/get-started/) with Pulumi for AWS today.
+- [Get Started](https://www.pulumi.com/docs/iac/get-started/aws/) with Pulumi for AWS today.

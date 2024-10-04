@@ -1589,7 +1589,7 @@ Status: 200 OK
 
 ### Add User to Organization
 
-User must have already signed up for a Pulumi account and meet the [organization membership requirements](/docs/pulumi-cloud/organizations#organization-types) to be added to the organization, otherwise a 4xx error will occur.
+User must have already signed up for a Pulumi account and meet the [organization membership requirements](/docs/pulumi-cloud/admin/organizations/#organization-types) to be added to the organization, otherwise a 4xx error will occur.
 
 If you want to provision SSO/SAML users, please refer to the [SCIM 2.0 Integration](/docs/pulumi-cloud/access-management/scim/) documentation.
 

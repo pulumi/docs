@@ -224,9 +224,9 @@ eksCluster, err := eks.NewCluster(ctx, "eks-cluster", &eks.ClusterArgs{
 
 The magic doesn’t stop here. There’s a [wealth of examples](https://github.com/pulumi/examples), and we’re excited to see where the community takes it. If you’d like to try out Pulumi today, you can get started with your favorite cloud here:
 
-- [AWS](/docs/clouds/aws/get-started/)
-- [Azure](/docs/clouds/azure/get-started/)
-- [Google Cloud](/docs/clouds/gcp/get-started/)
+- [AWS](/docs/iac/get-started/aws/)
+- [Azure](/docs/iac/get-started/azure/)
+- [Google Cloud](/docs/iac/get-started/gcp/)
 - [Kubernetes](/docs/iac/get-started/kubernetes/)
 
 We’d love to hear what you think. We look forward to hanging out on [Pulumi Slack](https://slack.pulumi.com/) or hearing from your thoughts in a [GitHub issue](https://github.com/pulumi/pulumi/issues/new).
