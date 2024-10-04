@@ -41,7 +41,6 @@ Here are a few links to help you get started if you are new to Pulumi:
 
 We've expanded the operating system options for node groups in EKS v3 to address the upcoming deprecation of Amazon Linux 2 (AL2). You can now choose between Amazon Linux 2 (deprecated), Amazon Linux 2023 and Bottlerocket for your EKS nodes. This flexibility allows you to select the OS that best fits your workloads, security requirements, and compliance needs, while ensuring you're using a supported and actively maintained operating system. We've introduced a new `operatingSystem` property for node groups to facilitate this choice.
 
-
 ### Access Entries for IAM Integration
 
 AWS has introduced Access Entries as a new method for granting IAM principals access to Kubernetes resources. This approach relies solely on AWS resources for managing Kubernetes auth, replacing the deprecated `aws-auth` ConfigMap. You can now leverage Access Entries by setting the `authenticationMode` to `API` in your cluster configuration.
