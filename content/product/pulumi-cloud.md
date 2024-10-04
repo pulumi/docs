@@ -68,14 +68,14 @@ products:
               more_info: |
                 Allow developers to safely deploy in parallel with concurrent state-locking.
 
-                Audit changes or rollback to previous versions with a [complete history](/docs/concepts/state/#checkpoints) of your state.
+                Audit changes or rollback to previous versions with a [complete history](/docs/iac/concepts/state-and-backends/#checkpoints) of your state.
 
             - title: Manage infrastructure secrets and configuration
               description: |
                 Use built-in [secrets management](/what-is/what-is-secrets-management/) for encrypted data such as credentials or tokens. Store and manage collections of config in [Pulumi ESC](/product/esc) into environment groupings.
 
               more_info: |
-                Your infrastructure [state is encrypted](/docs/concepts/state/#state-encryption) in transit and at rest.
+                Your infrastructure [state is encrypted](/docs/iac/concepts/state-and-backends/#state-encryption) in transit and at rest.
 
                 Sensitive configurations (e.g. database passwords, cloud tokens) are [stored as secrets](/docs/concepts/secrets/).
 
@@ -97,7 +97,7 @@ products:
 
                 Integrate your [source control system](/docs/pulumi-cloud/deployments/ci-cd-integration-assistant/) so teams can trace changes back to commits and pull requests.
 
-                Continuously deliver infrastructure through existing pipelines with [CI/CD integrations](/docs/using-pulumi/continuous-delivery/).
+                Continuously deliver infrastructure through existing pipelines with [CI/CD integrations](/docs/iac/packages-and-automation/continuous-delivery/).
 
                 Use event-based [webhooks](/docs/pulumi-cloud/webhooks/) to notify external services like Slack or continuous integration tools.
 
@@ -332,9 +332,9 @@ open_source:
     title: The easiest way to use Pulumi open source
     image: /images/product/service-open-source-diagram.svg
     description: |
-        Pulumi Cloud is a managed service for Pulumi IaC's open source CLI and SDK. It tracks your [infrastructure’s state](/docs/concepts/state/) and coordinates updates with the CLI, which creates or updates resources to reach your infrastructure’s [desired state](/docs/concepts/how-pulumi-works/).
+        Pulumi Cloud is a managed service for Pulumi IaC's open source CLI and SDK. It tracks your [infrastructure’s state](/docs/iac/concepts/state-and-backends/) and coordinates updates with the CLI, which creates or updates resources to reach your infrastructure’s [desired state](/docs/concepts/how-pulumi-works/).
 
-        You can also use any cloud or on-premises storage to build and [run your own backend](/docs/concepts/state/#logging-into-a-self-managed-backend).
+        You can also use any cloud or on-premises storage to build and [run your own backend](/docs/iac/concepts/state-and-backends/#logging-into-a-self-managed-backend).
 
 security:
     title: Pulumi takes security seriously

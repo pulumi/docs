@@ -83,7 +83,7 @@ To sign up for the Customer-managed Deployment Agents preview, submit [the form]
 
 We've expanded our support to include GitHub Enterprise, making it easier for more organizations who use GitHub Enterprise to integrate Pulumi Deployments into their existing infrastructure. The GitHub Enterprise integration is available on the Business Critical edition.
 
-To learn more about setting up Deployments with GitHub Enterprise [read the documentation](/docs/using-pulumi/continuous-delivery/github-app/#github-enterprise-server-support).
+To learn more about setting up Deployments with GitHub Enterprise [read the documentation](/docs/iac/packages-and-automation/continuous-delivery/github-app/#github-enterprise-server-support).
 
 ![GitHub Enterprise option in Pulumi Cloud](gh-ent.png)
 

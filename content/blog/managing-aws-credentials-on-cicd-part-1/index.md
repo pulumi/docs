@@ -24,7 +24,7 @@ You’ve heard about *Infrastructure as Code* and decided to try your hand at us
 in a series going in-depth on how to do just that.
 
 The goal of this article series is to give you a clear understanding of AWS credential management and how that relates to using Pulumi within a CI/CD environment.
-Once you have the AWS credentials in-place, you can then follow our [Continuous Delivery](https://www.pulumi.com/docs/using-pulumi/continuous-delivery/) guide for
+Once you have the AWS credentials in-place, you can then follow our [Continuous Delivery](https://www.pulumi.com/docs/iac/packages-and-automation/continuous-delivery/) guide for
 configuring your specific CI/CD service, whether you want to use [CircleCI](https://circleci.com), [GitLab CI](https://docs.gitlab.com/ee/topics/build_your_application.html), or
 [Travis CI](https://travis-ci.org).
 
