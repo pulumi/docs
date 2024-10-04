@@ -1,13 +1,13 @@
 ---
 title: Kubernetes
 title_tag: Integrate with Kubernetes | Pulumi ESC
-h1: Kubernetes
+h1: "Pulumi ESC: Integrate with Kubernetes"
 meta_desc: Pulumi ESC integrates with Kubernetes to manage configurations, credentials, and kubeconfig files, with kubectl and helm, and Pulumi Kubernetes provider.
 weight: 2
 menu:
   esc:
     identifier: esc-kubernetes
-    parent: esc-integrations
+    parent: esc-kubernetes-integrations
 aliases:
     - /docs/esc/other-integrations/kubernetes/
 ---
