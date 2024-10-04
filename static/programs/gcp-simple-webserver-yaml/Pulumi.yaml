@@ -1,0 +1,16 @@
+name: gcp-simple-webserver-yaml
+runtime: yaml
+description: An example that deploys the configuration for a simple web server on Google Cloud.
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: gcp-yaml
+outputs:
+  # Export the DNS name of the bucket
+  bucketName: ${my-bucket.url}
+resources:
+  # Create a GCP resource (Storage Bucket)
+  my-bucket:
+    properties:
+      location: US
+    type: gcp:storage:Bucket
