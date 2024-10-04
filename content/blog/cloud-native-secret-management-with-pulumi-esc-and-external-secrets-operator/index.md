@@ -1,7 +1,7 @@
 ---
 title: "Pulumi ESC and External Secrets Operator: The Perfect Solution for Today's Cloud-Native Secret Management"
 allow_long_title: true
-date: "2024-10-01"
+date: "2024-10-04"
 meta_desc: "Learn how to manage Kubernetes secrets with Pulumi ESC and External Secrets Operator"
 meta_image: meta.png
 authors:
@@ -19,7 +19,7 @@ tags:
 
 Managing secrets in a cloud-native environment can be challenging, but it is crucial for ensuring the security and integrity of any application or infrastructure. We encounter a lot of different types of secrets, from API keys, database passwords, and certificates to tokens and passwords. These secrets need to be stored securely and accessed by different services in a secure way without exposing any sensitive information to unauthorized users.
 
-Here is where Pulumi ESC and External Secrets Operator come into play by providing a secure and efficient solution for cloud-native secret management.
+Here is where [Pulumi ESC](/product/secrets-management/) and External Secrets Operator come into play [by providing a secure and efficient solution](/docs/esc/integrations/kubernetes/external-secrets-operator/) for cloud-native secret management.
 
 ## Pulumi ESC (Environments, Secrets, and Configuration)
 
@@ -56,14 +56,14 @@ or using `kubectl`:
 kubectl create secret generic mysecret --from-literal=username=admin --from-literal=password=admin
 ```
 
-But [Kubernetes secrets](https://kubernetes.io/docs/concepts/configuration/secret/) have some limitations:
+But [Kubernetes secrets](https://kubernetes.io/docs/concepts/configuration/secret/) several limitations. Here are the top ones:
 
 - They are stored by default in etcd in base64 encoded format, which is not secure.
 - They are created either manually by using `kubectl` commands or by using a manifest file, making them hart to manage at scale.
 - Hard to manage and synchronize secrets across different environments and clusters.
 - There is no default way to rotate secrets automatically.
 
-I am sure there are some more limitations, but these are the most common ones that I have encountered. This is where ESO shines by providing a way to manage secrets in a more secure and efficient way:
+ESO shines by tackling all the challenges listed and providing a way to manage secrets in a more secure and efficient manner. Benefits include:
 
 - Mitigate security risks as secrets are stored in a secure external secret management system like Pulumi ESC, which provides more robust security features like encryption, access control, and auditing.
 
@@ -73,7 +73,7 @@ I am sure there are some more limitations, but these are the most common ones th
 
 - ESO integrates with external secret management systems which ensure that access to secrets is tracked and an audit trail is maintained. This is crucial for security compliance and adhering to regulatory standards.
 
-- Can automate secrets rotation when the external secret management system has support it.
+- Automate secrets rotation when the external secret management system has support it.
 
 ## External Secrets Operator architecture
 
@@ -81,7 +81,7 @@ The central part of the [ESO architecture](https://external-secrets.io/latest/in
 
 ![ESO Architecture](arch1.png)
 
-## Core resources of ESO at a Glance
+### Core resources of ESO
 
 - `(Cluster)SecretStore`: Defines the external secret management system where the secrets are stored. It contains the necessary information to connect to the external secret management system, such as the endpoint, authentication credentials, and other configuration options. The `SecretStore` is namespaced while the `ClusterSecretStore` is cluster wide, which allows you cross-namespaced access to the secrets.
 
@@ -97,7 +97,7 @@ To follow along, you'll need the following prerequisites:
 
 - A Kubernetes cluster (I will be using a local [KinD](https://kind.sigs.k8s.io/) cluster, but you can use any
   Kubernetes cluster)
-- [Pulumi CLI](/docs/iac/download-install/) installed
+- [Pulumi CLI](/docs/iac/download-install/) installed. You can also use the standalone [ESC CLI](/docs/esc/download-install/) to manage secrets and configurations.
 - `kubectl` [CLI installed](https://kubernetes.io/docs/tasks/tools/) for some debugging
 
 ### Step 1: Install ESO and Link to Pulumi ESC
