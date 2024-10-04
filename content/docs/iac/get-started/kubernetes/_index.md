@@ -15,7 +15,7 @@ menu:
 aliases:
     - /docs/quickstart/kubernetes/
     - /docs/get-started/kubernetes/
-    - /docs/clouds/get-started/kubernetes/
+    - /docs/clouds/kubernetes/get-started/
     - /docs/iac/get-started/kubernetes/
 ---
 
