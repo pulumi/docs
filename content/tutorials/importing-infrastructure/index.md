@@ -38,7 +38,7 @@ prereqs:
     - A [Pulumi Cloud account](https://app.pulumi.com/signup) and [access token](/docs/pulumi-cloud/accounts/#access-tokens)
     - An [Amazon Web Services](https://aws.amazon.com/) account
     - The [AWS CLI](https://aws.amazon.com/cli/)
-    - Your desired [language runtime installed](/docs/clouds/aws/get-started/begin/#install-language-runtime)
+    - Your desired [language runtime installed](/docs/iac/get-started/aws/begin/#install-language-runtime)
 
 # The estimated time, in minutes, for new users to complete the topic.
 estimated_time: 15
@@ -61,7 +61,7 @@ To start, login to the [AWS Console](https://console.aws.amazon.com/s3) and [cre
 
 {{< video title="Running the pulumi login command with access token" src="/tutorials/importing-infrastructure/aws-console-create-s3-bucket.mp4" autoplay="true" loop="true" >}}
 
-Then, login to the [Pulumi CLI](/docs/cli/commands/pulumi_login/) and ensure it is [configured to use your AWS account](/docs/clouds/aws/get-started/begin/#configure-pulumi-to-access-your-aws-account). Next, [create a new project and stack](/docs/clouds/aws/get-started/create-project/) that will be used to hold the resource definition for your imported resources.
+Then, login to the [Pulumi CLI](/docs/cli/commands/pulumi_login/) and ensure it is [configured to use your AWS account](/docs/iac/get-started/aws/begin/#configure-pulumi-to-access-your-aws-account). Next, [create a new project and stack](/docs/iac/get-started/aws/create-project/) that will be used to hold the resource definition for your imported resources.
 
 ```bash
 # Example using Python

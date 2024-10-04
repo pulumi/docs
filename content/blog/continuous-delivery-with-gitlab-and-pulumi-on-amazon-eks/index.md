@@ -61,7 +61,7 @@ please refer to our [organizaing documentation](/docs/using-pulumi/organizing-pr
 - Pulumi Stacks have associated metadata in the form of key/value
     tags.
 - You can assign custom tags to stacks (when logged into the
-  [Pulumi Service backend](/docs/concepts/state/) to customize how
+  [Pulumi Service backend](/docs/iac/concepts/state-and-backends/) to customize how
   stacks are listed in the [Pulumi Service](https://app.pulumi.com/).
     - In our example below we have two environments _prod_ and _dev_.
     - To group stacks by environment we assign custom tags

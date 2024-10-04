@@ -21,7 +21,7 @@ The provider is open source and available on GitHub so you can always follow alo
 
 Here are a few links to help you get started if you are new to Pulumi:
 
-- [Getting Started](https://www.pulumi.com/docs/clouds/gcp/get-started/) - A guided walkthrough for creating your first project
+- [Getting Started](https://www.pulumi.com/docs/iac/get-started/gcp/) - A guided walkthrough for creating your first project
 - [Setup & Install](https://www.pulumi.com/registry/packages/gcp/installation-configuration/) - Instructions on installing the Google Cloud provider
 - [How-to guides](https://www.pulumi.com/registry/packages/gcp/how-to-guides/) - Learn how to use the Google Cloud provider to provision specific resources
 - [Templates](https://www.pulumi.com/templates/serverless-application/gcp/) - Use a quickstart template to create a new project

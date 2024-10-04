@@ -186,7 +186,7 @@ arm2pulumi:
     If you can deploy a resource with ARM templates, you can deploy it with the Pulumi Azure provider!
 
   cta: Learn More
-  cta_url: "/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-azure/"
+  cta_url: "/docs/iac/adopting-pulumi/migrating-to-pulumi/from-azure/"
 
 detail_sections:
   - title: 100% API Coverage
@@ -249,7 +249,7 @@ detail_sections:
 superpowers:
   - title: Multi Cloud
     cta: Learn more
-    cta_url: "/docs/clouds/azure/get-started/"
+    cta_url: "/docs/iac/get-started/azure/"
     icon_type: cloud
     description: |
         Pulumi allows you to use top programming languages across all public clouds with support
@@ -258,7 +258,7 @@ superpowers:
 
   - title: Reduce Provisioning Time
     cta: Learn more
-    cta_url: "/docs/clouds/azure/get-started/"
+    cta_url: "/docs/iac/get-started/azure/"
     icon_type: provisioning
     description: |
         With Pulumi you are able to take advantage of the features of programming languages,
@@ -267,7 +267,7 @@ superpowers:
 
   - title: Automate Delivery
     cta: Learn more
-    cta_url: "/docs/using-pulumi/continuous-delivery/"
+    cta_url: "/docs/iac/packages-and-automation/continuous-delivery/"
     icon_type: delivery
     description: |
         You can integrate Pulumi directly with your favorite CI/CD and SCM systems to
@@ -294,7 +294,7 @@ superpowers:
 
   - title: Reduce Deployment Complexity
     cta: Learn more
-    cta_url: "/docs/using-pulumi/testing/"
+    cta_url: "/docs/iac/concepts/testing/"
     icon_type: testing
     description: |
         Deploying untested code can lead to some unexpected results. Pulumi lets you take advantage

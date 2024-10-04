@@ -31,7 +31,7 @@ Let's look at what's new with Chart v4.
 
 ### New language support - Java SDK & YAML SDK
 
-The Chart v4 resource is a [Pulumi Component](/docs/using-pulumi/pulumi-packages/#types-of-pulumi-packages) that works
+The Chart v4 resource is a [Pulumi Component](/docs/iac/packages-and-automation/pulumi-packages/debugging-provider-packages/#types-of-pulumi-packages) that works
 consistently across all Pulumi SDKs. Earlier versions were implemented separately for each SDK, leading to various
 inconsistencies and limited SDK support.
 

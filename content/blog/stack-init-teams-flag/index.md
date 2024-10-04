@@ -24,7 +24,7 @@ to grant access permissions at the organization or Pulumi Teams levels. Pulumi T
 
 Stacks are often created via the CLI with the [`pulumi stack init` command](https://www.pulumi.com/docs/cli/commands/pulumi_stack_init/#options).
 This command initializes a new stack. If you're using the
-[Pulumi Service](https://www.pulumi.com/docs/concepts/state/#pulumi-service-backend) as your backend, you can view your newly created stack in the Pulumi Service console. If your organization uses teams, you will want to give your teammates access to the stack.
+[Pulumi Service](https://www.pulumi.com/docs/iac/concepts/state-and-backends/#pulumi-service-backend) as your backend, you can view your newly created stack in the Pulumi Service console. If your organization uses teams, you will want to give your teammates access to the stack.
 
 With the release of Pulumi v3.59.0, developers can assign Pulumi Team access during stack creation. To do this, pass in the `--teams` flag followed by the team's name. For instance:
 

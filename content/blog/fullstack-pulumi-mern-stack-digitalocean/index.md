@@ -672,6 +672,6 @@ From here, you might think about:
 
 * Creating a second stack with [`pulumi stack init`](/docs/cli/commands/pulumi_stack_init) and adjusting the program to make the source `branch` configurable---a `production` stack, say, designed to deploy in response to commits to a `release` branch.
 
-* Using Pulumi's [GitHub Action](/docs/using-pulumi/continuous-delivery/github-actions/) to run previews and updates as part of a pull-request based workflow.
+* Using Pulumi's [GitHub Action](/docs/iac/packages-and-automation/continuous-delivery/github-actions/) to run previews and updates as part of a pull-request based workflow.
 
 Happy coding!
