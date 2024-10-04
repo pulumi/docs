@@ -24,7 +24,7 @@ Since version `0.10.0` External Secrets Operator supports Pulumi ESC as a secret
 
 ## Prerequisites
 
-In this tutorial, you will learn how to deploy the External Secrets Operator and use it to manage secrets stored in Pulumi ESC. Before you start, make sure you have the following prerequisites:
+In this guide, you will learn how to deploy the External Secrets Operator and use it to manage secrets stored in Pulumi ESC. Before you start, make sure you have the following prerequisites:
 
 - the [Pulumi ESC CLI](/docs/esc-cli/)
 - a Kubernetes cluster
