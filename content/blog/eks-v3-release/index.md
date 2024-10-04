@@ -15,7 +15,7 @@ tags:
 The latest major release of the Pulumi EKS Provider is available now!
 
 AWS recently announced the deprecation of two features used by default in Pulumi EKS: the aws-auth ConfigMap and the AL2 operating system. Pulumi EKS v3 addresses these deprecations, enhances the maintainability of the provider, and aligns it with EKS best practices.
-This release brings significant improvements in flexibility and security, introducing new features to enhance your Kubernetes experience on AWS.
+This release delivers significant improvements in flexibility and security, introducing new features to enhance your Kubernetes experience on AWS.
 
 <!--more-->
 
@@ -29,7 +29,7 @@ Here are a few links to help you get started if you are new to Pulumi:
 
 1. **Support for Amazon Linux 2023 (AL2023) and Bottlerocket Operating Systems**: Enhanced operating system options for node groups, allowing you to choose the OS that best fits your workloads and compliance needs. This addresses the upcoming deprecation of Amazon Linux 2 (AL2).
 
-2. **Access Entries for IAM Integration**: Allows replacing the deprecated `aws-auth` ConfigMap with Access Entries for managing Kubernetes authentication.
+2. **Access Entries for IAM Integration**: Enables replacement of the deprecated aws-auth ConfigMap with Access Entries for managing Kubernetes authentication.
 
 3. **EKS Managed Addons**: Simplified management of `vpc-cni`, `coredns`, and `kube-proxy` as EKS managed addons.
 
@@ -37,14 +37,14 @@ Here are a few links to help you get started if you are new to Pulumi:
 
 ## New Features and Improvements
 
-### Support for Amazon Linux 2023 (AL2023) and Bottlerocket
+### Support for Amazon Linux 2023 and Bottlerocket
 
-We've expanded the operating system options for node groups in EKS v3 to address the upcoming deprecation of Amazon Linux 2 (AL2). You can now choose between Amazon Linux 2023 (AL2023) and Bottlerocket for your EKS nodes. This flexibility allows you to select the OS that best fits your workloads, security requirements, and compliance needs, while ensuring you're using a supported and actively maintained operating system. We've introduced a new `operatingSystem` property for node groups to facilitate this choice.
+We've expanded the operating system options for node groups in EKS v3 to address the upcoming deprecation of Amazon Linux 2 (AL2). You can now choose between Amazon Linux 2 (deprecated), Amazon Linux 2023 and Bottlerocket for your EKS nodes. This flexibility allows you to select the OS that best fits your workloads, security requirements, and compliance needs, while ensuring you're using a supported and actively maintained operating system. We've introduced a new `operatingSystem` property for node groups to facilitate this choice.
 
 
 ### Access Entries for IAM Integration
 
-AWS has introduced Access Entries as a new method for granting IAM principals access to Kubernetes resources. This approach relies solely on AWS resources for managing Kubernetes auth, replacing the deprecated `aws-auth` ConfigMap. You can now use Access Entries by setting the `authenticationMode` to `API` in your cluster configuration.
+AWS has introduced Access Entries as a new method for granting IAM principals access to Kubernetes resources. This approach relies solely on AWS resources for managing Kubernetes auth, replacing the deprecated `aws-auth` ConfigMap. You can now leverage Access Entries by setting the `authenticationMode` to `API` in your cluster configuration.
 
 ### EKS Managed Addons
 
@@ -60,18 +60,18 @@ We've added support for EKS security groups for pods and EKS Network Policies, p
 
 ## Migration Guide
 
-Upgrading to Pulumi EKS v3 involves several important changes. Here's a quick overview of the key migration steps:
+To help you transition smoothly, we've prepared a migration guide with these key steps:
 
 1. Update node groups to use AL2023 or explicitly configure AL2 if needed.
 2. Replace the deprecated `NodeGroup` component with `NodeGroupV2`.
 3. Update your code to handle new output types for certain properties.
 4. Review and update your use of default security groups, which can now be disabled.
 
-For a detailed migration guide, please refer to our [EKS v3 Migration Documentation](https://github.com/pulumi/pulumi-eks/blob/release-3.x.x/docs/eks-v3-migration.md).
+Please refer to our [EKS v3 Migration Documentation](https://github.com/pulumi/pulumi-eks/blob/release-3.x.x/docs/eks-v3-migration.md) for a detailed guide.
 
 ## Conclusion
 
-Pulumi EKS v3 represents a significant step forward in managing Kubernetes clusters on AWS, this release empowers you to build and manage more robust and efficient EKS clusters.
+Pulumi EKS v3 represents a significant step forward in managing Kubernetes clusters on AWS, empowering you to build and manage more robust and efficient EKS clusters.
 
 We encourage all users to upgrade to this latest version to take advantage of these improvements and ensure your EKS deployments remain secure and up-to-date.
 
