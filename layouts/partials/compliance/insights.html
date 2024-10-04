@@ -46,7 +46,7 @@
         <h3>Compliance for {{ .Params.cloud }} Services</h3>
         {{ $currCloud :=  .Params.Cloud}}
         {{ $pages := where .Parent.RegularPages "Params.framework" .Params.framework }}
-        <p>Learn more about how Pulumi can make your AWS services {{.Params.framework}} compliant.</p>
+        <p>Learn more about how Pulumi can make your {{ .Params.cloud }} services {{.Params.framework}} compliant.</p>
         <div class="flex flex-row flex-wrap">
             {{ range $pages }}
             {{ if and (ne .File.Path $.File.Path) (eq .Params.cloud $currCloud) }}
