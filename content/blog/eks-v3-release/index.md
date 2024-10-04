@@ -1,5 +1,5 @@
 ---
-title: "Eks V3 Release"
+title: "Pulumi EKS Provider Version 3.0.0"
 date: 2024-10-04T17:32:03+02:00
 draft: true
 meta_desc: "Release of the next version of the Pulumi Provider for AWS EKS"
