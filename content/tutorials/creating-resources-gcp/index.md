@@ -1,6 +1,6 @@
 ---
-title: "Create Resources on Google Cloud"
-title_tag: "Create Resources on Google Cloud"
+title: "Creating Resources on Google Cloud"
+title_tag: "Creating Resources on Google Cloud"
 layout: single
 
 # A succinct description of the tutorial. It appears on the Tutorials home and collection pages.
