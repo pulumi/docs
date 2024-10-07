@@ -1,5 +1,5 @@
 ---
-title: "Accelerating Security Automation for Faster, Cheaper, and Better"
+title: "Accelerating Security Automation for Faster, Cheaper, and Better Results"
 allow_long_title: true
 
 # The date represents the post's publish date, and by default corresponds with
