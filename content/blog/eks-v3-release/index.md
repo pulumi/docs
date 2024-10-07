@@ -14,8 +14,8 @@ tags:
 
 The latest major release of the Pulumi EKS Provider is available now!
 
+This release delivers significant improvements in flexibility, security and introduces new features to enhance your Kubernetes experience on AWS.
 AWS recently announced the deprecation of two features used by default in Pulumi EKS: the aws-auth ConfigMap and the AL2 operating system. Pulumi EKS v3 addresses these deprecations, enhances the maintainability of the provider, and aligns it with EKS best practices.
-This release delivers significant improvements in flexibility and security, introducing new features to enhance your Kubernetes experience on AWS.
 
 <!--more-->
 
@@ -43,7 +43,7 @@ We have expanded the operating system options for node groups in EKS v3 to addre
 
 ### Access Entries for IAM Integration
 
-AWS has introduced Access Entries as a new method for granting IAM principals access to Kubernetes resources. This approach relies solely on AWS resources for managing Kubernetes auth, replacing the deprecated `aws-auth` ConfigMap. You can now leverage Access Entries by setting the `authenticationMode` to `API` in your cluster configuration.
+AWS has introduced [Access Entries](https://docs.aws.amazon.com/eks/latest/userguide/access-entries.html) as a new method for granting IAM principals access to Kubernetes resources. This approach relies solely on AWS resources for managing Kubernetes auth, replacing the deprecated `aws-auth` ConfigMap. You can now leverage Access Entries by setting the `authenticationMode` to `API` in your cluster configuration.
 
 ### EKS Managed Addons
 
