@@ -18,6 +18,8 @@ I have to make a confession. I've been storing secrets in environment variables 
 
 Here is an example of how I usually connect to a database in my `Go` application:
 
+<!--more-->
+
 ```go
 package main
 
