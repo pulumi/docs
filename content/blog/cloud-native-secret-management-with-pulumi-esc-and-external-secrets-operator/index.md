@@ -56,10 +56,10 @@ or using `kubectl`:
 kubectl create secret generic mysecret --from-literal=username=admin --from-literal=password=admin
 ```
 
-But [Kubernetes secrets](https://kubernetes.io/docs/concepts/configuration/secret/) several limitations. Here are the top ones:
+[Kubernetes secrets](https://kubernetes.io/docs/concepts/configuration/secret/) have several limitations. Here are the top ones:
 
-- They are stored by default in etcd in base64 encoded format, which is not secure.
-- They are created either manually by using `kubectl` commands or by using a manifest file, making them hart to manage at scale.
+- They are stored by default in `etcd` in base64 encoded format, which is not secure.
+- They are created either manually by using `kubectl` commands or by using a manifest file, making them hard to manage at scale.
 - Hard to manage and synchronize secrets across different environments and clusters.
 - There is no default way to rotate secrets automatically.
 
