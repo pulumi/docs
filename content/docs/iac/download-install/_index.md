@@ -39,9 +39,9 @@ The latest version of Pulumi is **{{< latest-version >}}**. For previous version
 
 <h3 class="no-anchor pt-4"><i class="fas fa-box pr-2"></i>Homebrew Package Manager</h3>
 
-```bash
-$ brew install pulumi/tap/pulumi
-```
+<div class="highlight">
+   <pre class="chroma"><code class="language-bash" data-lang="bash" data-track="install-pulumi-macos">$ brew install pulumi/tap/pulumi</code></pre>
+</div>
 
 <h3 class="no-anchor pt-4"><i class="fas fa-download pr-2"></i>macOS Binary Download</h3>
 
@@ -60,9 +60,9 @@ macOS Sierra (10.12) or later is required.
 <div class="w-full md:w-3/4">
 <h3 class="no-anchor pt-4"><i class="fas fa-box pr-2"></i>Install Script</h3>
 
-```bash
-$ curl -fsSL https://get.pulumi.com | sh
-```
+<div class="highlight">
+   <pre class="chroma"><code class="language-bash" data-lang="bash" data-track="install-pulumi-linux">$ curl -fsSL https://get.pulumi.com | sh</code></pre>
+</div>
 
 </div>
 <div class="w-full">
@@ -121,17 +121,17 @@ In addition, there are many ways to install Pulumi:
 You can install Pulumi through the [Homebrew package manager](https://brew.sh/) and using our official
 [Pulumi Homebrew Tap](https://github.com/pulumi/homebrew-tap/)
 
-```bash
-$ brew install pulumi/tap/pulumi
-```
+<div class="highlight">
+   <pre class="chroma"><code class="language-bash" data-lang="bash" data-track="install-pulumi-macos-brew-official">$ brew install pulumi/tap/pulumi</code></pre>
+</div>
 
 This will install the `pulumi` CLI to the usual place (often `/usr/local/bin/pulumi`) and add it to your path.
 
 Subsequent updates can be installed in the usual way:
 
-```bash
-$ brew upgrade pulumi
-```
+<div class="highlight">
+   <pre class="chroma"><code class="language-bash" data-lang="bash" data-track="install-pulumi-macos-brew-upgrade">$ brew upgrade pulumi</code></pre>
+</div>
 
 </div>
 </div>
@@ -150,9 +150,9 @@ $ brew upgrade pulumi
 A Pulumi formula is available on the Community Homebrew. If you do not have the Pulumi tap installed, then you can
 still install Pulumi from homebrew using the command:
 
-```bash
-$ brew install pulumi
-```
+<div class="highlight">
+   <pre class="chroma"><code class="language-bash" data-lang="bash" data-track="install-pulumi-macos-brew-community">$ brew install pulumi</code></pre>
+</div>
 
 </div>
 </div>
@@ -170,17 +170,17 @@ $ brew install pulumi
 
 You can install Pulumi through the [MacPorts package manager](https://www.macports.org/):
 
-```bash
-$ sudo port install pulumi
-```
+<div class="highlight">
+   <pre class="chroma"><code class="language-bash" data-lang="bash" data-track="install-pulumi-macos-port">$ sudo port install pulumi</code></pre>
+</div>
 
 This will install the `pulumi` CLI to `/opt/local/bin/pulumi` and add it to your path.
 
 Subsequent updates can be installed through the `upgrade outdated` command:
 
-```bash
-$ sudo port upgrade outdated
-```
+<div class="highlight">
+   <pre class="chroma"><code class="language-bash" data-lang="bash" data-track="install-pulumi-macos-port-update">$ sudo port upgrade outdated</code></pre>
+</div>
 
 </div>
 </div>
@@ -198,9 +198,9 @@ $ sudo port upgrade outdated
 
 Alternatively, you can run our installation script.
 
-```bash
-$ curl -fsSL https://get.pulumi.com | sh
-```
+<div class="highlight">
+   <pre class="chroma"><code class="language-bash" data-lang="bash" data-track="install-pulumi-macos-install-script">$ curl -fsSL https://get.pulumi.com | sh</code></pre>
+</div>
 
 This will install the `pulumi` CLI to `~/.pulumi/bin` and add it to your path. When it can't automatically add `pulumi` to your path, you will be prompted to add it manually.
 
@@ -250,9 +250,9 @@ If you do not wish to use the previous options, you can install Pulumi manually.
 
 To install, run our installation script:
 
-```bash
-$ curl -fsSL https://get.pulumi.com | sh
-```
+<div class="highlight">
+   <pre class="chroma"><code class="language-bash" data-lang="bash" data-track="install-pulumi-linux-install-script">$ curl -fsSL https://get.pulumi.com | sh</code></pre>
+</div>
 
 This will install the `pulumi` CLI to `~/.pulumi/bin` and add it to your path. When it can't automatically add `pulumi` to your path, you will be prompted to add it manually.
 
@@ -300,17 +300,17 @@ Alternatively, you can install Pulumi manually. We provide a prebuilt binary for
 
 You can install Pulumi using elevated permissions through the [Chocolatey package manager](https://chocolatey.org):
 
-```powershell
-> choco install pulumi
-```
+<div class="highlight">
+   <pre class="chroma"><code class="language-bash" data-lang="powershell" data-track="install-pulumi-windows-choco">&gt; choco install pulumi</code></pre>
+</div>
 
 This will install the `pulumi` CLI to the usual place (often `$($env:ChocolateyInstall)\lib\pulumi`) and generate the [shims](https://docs.chocolatey.org/en-us/features/shim) (usually `$($env:ChocolateyInstall)\bin`) to add Pulumi your path.
 
 Subsequent updates can be installed in the usual way:
 
-```powershell
-> choco upgrade pulumi
-```
+<div class="highlight">
+   <pre class="chroma"><code class="language-bash" data-lang="powershell" data-track="install-pulumi-windows-choco-upgrade">&gt; choco upgrade pulumi</code></pre>
+</div>
 
 </div>
 </div>
@@ -328,15 +328,15 @@ Subsequent updates can be installed in the usual way:
 
 Install Pulumi using the Windows Package Manager [`winget`](https://github.com/microsoft/winget-cli/) CLI. This is built-in on Windows 11 and later.
 
-```powershell
-> winget install pulumi
-```
+<div class="highlight">
+   <pre class="chroma"><code class="language-bash" data-lang="powershell" data-track="install-pulumi-windows-winget">&gt; winget install pulumi</code></pre>
+</div>
 
 To update Pulumi to a more recent version:
 
-```powershell
-> winget upgrade pulumi
-```
+<div class="highlight">
+   <pre class="chroma"><code class="language-bash" data-lang="powershell" data-track="install-pulumi-windows-winget-upgrade">&gt; winget upgrade pulumi</code></pre>
+</div>
 
 </div>
 </div>
@@ -374,9 +374,9 @@ Download the latest [Pulumi Installer for Windows x64](https://github.com/pulumi
 
 1. Run our installation script:
 
-```bat
-> @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; iex ((New-Object System.Net.WebClient).DownloadString('https://get.pulumi.com/install.ps1'))" && SET "PATH=%PATH%;%USERPROFILE%\.pulumi\bin"
-```
+<div class="highlight">
+   <pre class="chroma"><code class="language-bash" data-lang="bat" data-track="install-pulumi-windows-install-script">&gt; @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; iex ((New-Object System.Net.WebClient).DownloadString('https://get.pulumi.com/install.ps1'))" && SET "PATH=%PATH%;%USERPROFILE%\.pulumi\bin"</code></pre>
+</div>
 
 This will install the `pulumi.exe` CLI to `%USERPROFILE%\.pulumi\bin` and add it to your path.
 
@@ -419,28 +419,25 @@ After installing Pulumi, verify everything is in working order by running the `p
 
 {{% choosable os macos %}}
 
-```bash
-$ pulumi version
-v{{< latest-version >}}
-```
+<div class="highlight">
+   <pre class="chroma"><code class="language-bash" data-lang="bash" data-track="install-pulumi-macos-version">$ pulumi version</code></pre>
+</div>
 
 {{% /choosable %}}
 
 {{% choosable os linux %}}
 
-```bash
-$ pulumi version
-v{{< latest-version >}}
-```
+<div class="highlight">
+   <pre class="chroma"><code class="language-bash" data-lang="bash" data-track="install-pulumi-linux-version">$ pulumi version</code></pre>
+</div>
 
 {{% /choosable %}}
 
 {{% choosable os windows %}}
 
-```bash
-> pulumi version
-v{{< latest-version >}}
-```
+<div class="highlight">
+   <pre class="chroma"><code class="language-bash" data-lang="bash" data-track="install-pulumi-windows-version">&gt; pulumi version</code></pre>
+</div>
 
 {{% /choosable %}}
 
@@ -508,9 +505,9 @@ Most installation methods choose the latest version by default. To install a spe
 
 <h3 class="no-anchor pt-4">macOS Installation Script</h3>
 
-```bash
-$ curl -fsSL https://get.pulumi.com | sh -s -- --version <version>
-```
+<div class="highlight">
+   <pre class="chroma"><code class="language-bash" data-lang="bash" data-track="install-pulumi-macos-install-script">$ curl -fsSL https://get.pulumi.com | sh -s -- --version <version></code></pre>
+</div>
 
 {{% /choosable %}}
 
@@ -520,9 +517,9 @@ $ curl -fsSL https://get.pulumi.com | sh -s -- --version <version>
 
 To install, run our installation script:
 
-```bash
-$ curl -fsSL https://get.pulumi.com | sh -s -- --version <version>
-```
+<div class="highlight">
+   <pre class="chroma"><code class="language-bash" data-lang="bash" data-track="install-pulumi-linux-install-script">$ curl -fsSL https://get.pulumi.com | sh -s -- --version <version></code></pre>
+</div>
 
 {{% /choosable %}}
 
@@ -532,9 +529,9 @@ $ curl -fsSL https://get.pulumi.com | sh -s -- --version <version>
 
 You can specify a specific version with [Chocolatey package manager](https://chocolatey.org):
 
-```powershell
-> choco install pulumi --version <version>
-```
+<div class="highlight">
+   <pre class="chroma"><code class="language-bash" data-lang="powershell" data-track="install-pulumi-windows-choco">&gt; choco install pulumi --version</code></pre>
+</div>
 
 <h3 class="no-anchor pt-4">Windows Installation Script</h3>
 
@@ -542,9 +539,9 @@ You can specify a specific version with [Chocolatey package manager](https://cho
 
 1. Run our installation script (replace `<version>` with the version number):
 
-```powershell
-> @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; $version = '<version>'; iex ((New-Object System.Net.WebClient).DownloadString('https://get.pulumi.com/install.ps1')).Replace('${Version}', $version)" && SET "PATH=%PATH%;%USERPROFILE%\.pulumi\bin"
-```
+<div class="highlight">
+   <pre class="chroma"><code class="language-bash" data-lang="powershell" data-track="install-pulumi-windows-install-script">&gt; @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; $version = '<version>'; iex ((New-Object System.Net.WebClient).DownloadString('https://get.pulumi.com/install.ps1')).Replace('${Version}', $version)" && SET "PATH=%PATH%;%USERPROFILE%\.pulumi\bin"</code></pre>
+</div>
 
 {{% /choosable %}}
 
@@ -560,9 +557,9 @@ In addition to installing a specific version, the latest dev version can also be
 
 ### macOS Installation Script
 
-```bash
-$ curl -fsSL https://get.pulumi.com | sh -s -- --version dev
-```
+<div class="highlight">
+   <pre class="chroma"><code class="language-bash" data-lang="bash" data-track="install-pulumi-macos-install-script">$ curl -fsSL https://get.pulumi.com | sh -s -- --version dev</code></pre>
+</div>
 
 {{% /choosable %}}
 
@@ -572,9 +569,9 @@ $ curl -fsSL https://get.pulumi.com | sh -s -- --version dev
 
 To install, run our installation script:
 
-```bash
-$ curl -fsSL https://get.pulumi.com | sh -s -- --version dev
-```
+<div class="highlight">
+   <pre class="chroma"><code class="language-bash" data-lang="bash" data-track="install-pulumi-linux-install-script">$ curl -fsSL https://get.pulumi.com | sh -s -- --version dev</code></pre>
+</div>
 
 {{% /choosable %}}
 
@@ -586,9 +583,9 @@ $ curl -fsSL https://get.pulumi.com | sh -s -- --version dev
 
 1. Run our installation script:
 
-```powershell
-> @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; iex ((New-Object System.Net.WebClient).DownloadString('https://get.pulumi.com/install.ps1')) -version dev" && SET "PATH=%PATH%;%USERPROFILE%\.pulumi\bin"
-```
+<div class="highlight">
+   <pre class="chroma"><code class="language-bash" data-lang="powershell" data-track="install-pulumi-windows-install-script">&gt; @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; iex ((New-Object System.Net.WebClient).DownloadString</code></pre>
+</div>
 
 {{% /choosable %}}
 
