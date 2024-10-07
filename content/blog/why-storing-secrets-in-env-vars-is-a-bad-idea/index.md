@@ -180,7 +180,7 @@ When you have a lot of secrets, managing them in environment variables becomes a
 
 ## How to Store Secrets Securely: Runtime secret injection with Pulumi ESC SDK
 
-The best way to store secrets is to use a secret management system. Using a secret management system that offers an SDK that you can integrate into your application code. Pulumi ESC is provider-agnostic so you only need to define one secret manager and in the backend Pulumi ESC [dynamically import secrets](/docs/esc/integrations/dynamic-secrets/) and configuration from the other provider (AWS, Azure, GCP, Vault, etc.).
+The best way to store secrets is to use a [secret management system](/what-is/what-is-secrets-management/). Using a secret management system that offers an SDK that you can integrate into your application code. Pulumi ESC is provider-agnostic so you only need to define one secret manager and in the backend Pulumi ESC [dynamically import secrets](/docs/esc/integrations/dynamic-secrets/) and configuration from the other provider (AWS, Azure, GCP, Vault, etc.).
 
 This is how it works with [Pulumi ESC SDK](/docs/esc/development/languages-sdks/):
 
