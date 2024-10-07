@@ -1,6 +1,10 @@
 import pulumi
 from pulumi_gcp import compute
 
+#### Steps:
+# [1] Create a compute instance.
+# [2] Create and configure a firewall.
+
 region = "us-central1"
 zone = "us-central1-a"
 project = "pulumi-devrel"
@@ -8,10 +12,6 @@ project = "pulumi-devrel"
 startup_script = """#!/bin/bash
 echo "Hello, World!" > index.html
 nohup python -m SimpleHTTPServer 80 &"""
-
-#### Steps:
-# [1] Create a compute instance.
-# [2] Create and configure a firewall.
 
 # Create a VPC network.
 vpc_network = compute.Network("vpc-network",

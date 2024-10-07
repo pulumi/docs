@@ -5,6 +5,9 @@ using System.Collections.Generic;
 
 return await Deployment.RunAsync(() =>
 {
+    // Steps:
+    // [1] Create a compute instance.
+    // [2] Create and configure a firewall.
 
     var region = "us-central1";
     var zone = "us-central1-a";
@@ -13,10 +16,6 @@ return await Deployment.RunAsync(() =>
     var startupScript = @"#!/bin/bash
     echo ""Hello, World!"" > index.html
     nohup python -m SimpleHTTPServer 80 &";
-
-    // Steps:
-    // [1] Create a compute instance.
-    // [2] Create and configure a firewall.
 
     // Create a VPC network.
     var vpcNetwork = new Gcp.Compute.Network("vpc-network", new()

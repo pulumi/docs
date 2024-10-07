@@ -7,6 +7,10 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
+		// Steps:
+		// [1] Create a compute instance.
+		// [2] Create and configure a firewall.
+		
 		region := "us-central1"
 		zone := "us-central1-a"
 		project := "pulumi-devrel"
@@ -14,10 +18,6 @@ func main() {
 		startupScript := `#!/bin/bash
 		echo "Hello, World!" > index.html
 		nohup python -m SimpleHTTPServer 80 &`
-	
-		// Steps:
-		// [1] Create a compute instance.
-		// [2] Create and configure a firewall.
 	
 		// Create a VPC network.
 		vpcNetwork, err := compute.NewNetwork(ctx, "vpc-network", &compute.NetworkArgs{
