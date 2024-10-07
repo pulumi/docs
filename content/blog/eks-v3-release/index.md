@@ -1,7 +1,7 @@
 ---
 title: "Pulumi EKS Provider Version 3.0.0"
 date: 2024-10-04T17:32:03+02:00
-draft: true
+draft: false
 meta_desc: "Release of the next version of the Pulumi Provider for AWS EKS"
 meta_image: meta.png
 authors:
@@ -39,7 +39,7 @@ Here are a few links to help you get started if you are new to Pulumi:
 
 ### Support for Amazon Linux 2023 and Bottlerocket
 
-We've expanded the operating system options for node groups in EKS v3 to address the upcoming deprecation of Amazon Linux 2 (AL2). You can now choose between Amazon Linux 2 (deprecated), Amazon Linux 2023 and Bottlerocket for your EKS nodes. This flexibility allows you to select the OS that best fits your workloads, security requirements, and compliance needs, while ensuring you're using a supported and actively maintained operating system. We've introduced a new `operatingSystem` property for node groups to facilitate this choice.
+We have expanded the operating system options for node groups in EKS v3 to address the upcoming deprecation of Amazon Linux 2 (AL2). You can now choose between Amazon Linux 2 (deprecated), Amazon Linux 2023 and Bottlerocket for your EKS nodes. This flexibility allows you to select the OS that best fits your workloads, security requirements, and compliance needs, while ensuring you are using a supported and actively maintained operating system. We've introduced a new `operatingSystem` property for node groups to facilitate this choice.
 
 ### Access Entries for IAM Integration
 
