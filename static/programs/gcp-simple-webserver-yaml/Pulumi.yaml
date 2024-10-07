@@ -2,14 +2,10 @@ name: gcp-simple-webserver-yaml
 runtime: yaml
 description: An example that deploys the configuration for a simple web server on Google Cloud.
 
-#### Steps:
-# [1] Create a compute instance.
-# [2] Create and configure a firewall.
-
 config:
   gcp:region: us-central1
   gcp:zone: us-central1-a
-  gcp:project: pulumi-devrel
+  gcp:project: pulumi-devrel # REPLACE
 
 resources:
   # Create a VPC network.
@@ -24,6 +20,10 @@ resources:
     type: gcp:compute:Address
     properties:
       name: ipaddress
+
+  #### Steps:
+  # [1] Create a compute instance.
+  # [2] Create and configure a firewall.
 
   # [1] Create a compute instance.
   computeInstance:

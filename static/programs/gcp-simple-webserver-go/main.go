@@ -7,13 +7,10 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		// Steps:
-		// [1] Create a compute instance.
-		// [2] Create and configure a firewall.
-		
+
 		region := "us-central1"
 		zone := "us-central1-a"
-		project := "pulumi-devrel"
+		project := "pulumi-devrel" // REPLACE
 	
 		startupScript := `#!/bin/bash
 		echo "Hello, World!" > index.html
@@ -36,6 +33,10 @@ func main() {
 		if err != nil {
 			return err
 		}
+		
+		// Steps:
+		// [1] Create a compute instance.
+		// [2] Create and configure a firewall.
 
 		// [1] Create a compute instance.
 		_, err = compute.NewInstance(ctx, "webserver-instance", &compute.InstanceArgs{

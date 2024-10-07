@@ -5,13 +5,10 @@ using System.Collections.Generic;
 
 return await Deployment.RunAsync(() =>
 {
-    // Steps:
-    // [1] Create a compute instance.
-    // [2] Create and configure a firewall.
 
     var region = "us-central1";
     var zone = "us-central1-a";
-    var project = "pulumi-devrel";
+    var project = "pulumi-devrel"; // REPLACE
 
     var startupScript = @"#!/bin/bash
     echo ""Hello, World!"" > index.html
@@ -29,6 +26,10 @@ return await Deployment.RunAsync(() =>
         Project = project,
         Region = region,
     });
+
+    // Steps:
+    // [1] Create a compute instance.
+    // [2] Create and configure a firewall.
 
     // [1] Create a compute instance.
     var computeInstance = new Gcp.Compute.Instance("webserver-instance", new()

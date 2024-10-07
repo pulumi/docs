@@ -1,13 +1,9 @@
 import pulumi
 from pulumi_gcp import compute
 
-#### Steps:
-# [1] Create a compute instance.
-# [2] Create and configure a firewall.
-
 region = "us-central1"
 zone = "us-central1-a"
-project = "pulumi-devrel"
+project = "pulumi-devrel" # REPLACE
 
 startup_script = """#!/bin/bash
 echo "Hello, World!" > index.html
@@ -24,6 +20,10 @@ ip_address = compute.address.Address("ip-address",
     project=project,
     region=region
 )
+
+#### Steps:
+# [1] Create a compute instance.
+# [2] Create and configure a firewall.
 
 # [1] Create a compute instance.
 compute_instance = compute.Instance(

@@ -1,13 +1,9 @@
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-// Steps:
-// [1] Create a compute instance.
-// [2] Create and configure a firewall.
-
 const region = "us-central1";
 const zone = "us-central1-a";
-const project = "pulumi-devrel";
+const project = "pulumi-devrel"; // REPLACE
 
 const startupScript = `#!/bin/bash
 echo "Hello, World!" > index.html
@@ -24,6 +20,10 @@ const ipAddress = new gcp.compute.Address("ip-address", {
     project: project,
     region: region,
 });
+
+// Steps:
+// [1] Create a compute instance.
+// [2] Create and configure a firewall.
 
 // [1] Create a compute instance.
 const computeInstance = new gcp.compute.Instance("webserver-instance", {
