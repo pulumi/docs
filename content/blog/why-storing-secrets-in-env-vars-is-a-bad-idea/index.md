@@ -182,7 +182,7 @@ When you have a lot of secrets, managing them in environment variables becomes a
 
 The best way to store secrets is to use a secret management system. Using a secret management system that offers an SDK that you can integrate into your application code. Pulumi ESC is provider-agnostic so you only need to define one secret manager and in the backend Pulumi ESC [dynamically import secrets](/docs/esc/integrations/dynamic-secrets/) and configuration from the other provider (AWS, Azure, GCP, Vault, etc.).
 
-Here is how it works with [Pulumi ESC SDK](/docs/esc/development/languages-sdks/):
+This is how it works with [Pulumi ESC SDK](/docs/esc/development/languages-sdks/):
 
 - Permissions are managed by [Pulumi ESC](/product/secrets-management/), so you can control who has access to the secrets and audit who accessed them.
 - With the help of the Pulumi ESC SDK, you can fetch the secrets at startup time or when they are needed.
