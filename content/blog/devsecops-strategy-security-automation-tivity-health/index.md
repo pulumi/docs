@@ -85,7 +85,7 @@ Tivity Health's journey began with a strategic decision to transition from a tra
 
 {{< youtube "35vAiKdDux4?rel=0" >}}
 
-The need to automate infrastructure deployment and management was at the heart of this transformation. Giambruno explained, "If you can't automate it, we don't need it." This philosophy drove the team to seek out a solution that would not only streamline their operations but also empower their developers to focus on building innovative products for their customers.
+The need to automate infrastructure deployment and management was fundamental. Giambruno explained, "If you can't automate it, we don't need it." This philosophy drove the team to seek out a solution that would not only streamline their operations but also empower their developers to focus on building innovative products for their customers.
 
 ## Embracing Pulumi: The Power of Automation, Productivity, and Security
 
@@ -102,7 +102,7 @@ Giambruno describes Pulumi as a "three-dimensional" tool, offering a versatile s
 
 By adopting Pulumi and DevSecOps automation, Tivity Health realized significant business benefits:
 
-- **Speed and Agility**: By automating its infrastructure deployment and management processes, Tivity Health has dramatically reduced the time required to spin up new environments or change existing ones. "We run it through automation and boom, it's out, it's done," Giambruno says. This newfound speed and agility have empowered Tivity Health's developers to focus on building innovative products and features rather than getting bogged down in infrastructure-related tasks.
+- **Speed and Agility**: By automating its infrastructure deployment and management processes, Tivity Health has dramatically reduced the time required to spin up new environments or change existing ones. "We run it through automation and boom, it's out, it's done," Giambruno says. This newfound speed and agility have empowered Tivity Health's developers to focus on building products and features rather than getting bogged down in infrastructure-related tasks.
 - **Cost Optimization**: Tivity Health's cloud-native approach and Pulumi's automation capabilities have resulted in significant cost savings. The company estimates that its annual cloud spend has decreased from $9.5 million in its data center days to just $2 million—a staggering 79% reduction. These cost savings have allowed Tivity Health to redirect resources towards more strategic initiatives that drive business growth.
 - **Improved Security and Compliance**: Tivity Health's DevSecOps strategy, anchored by Pulumi, has strengthened its security posture and compliance efforts. By integrating security directly into its infrastructure workflows, Tivity Health has improved its security posture. Automation ensures that security measures are enforced consistently across their cloud environments, reducing risks and improving compliance.
 
@@ -115,9 +115,9 @@ Using Pulumi provided more than technical benefits. It also enabled better colla
 Transitioning to DevSecOps and cloud-native practices required a cultural shift at Tivity Health. Giambrono acknowledges that this cultural shift was not without its challenges. He emphasizes the importance of addressing the human element of change, offering the following advice for organizations embarking on a similar journey:
 
 - **Start with a proof of concepts**: Giambruno recommends beginning with a small-scale proof of concepts to demonstrate the capabilities and benefits of the new technologies and processes to help alleviate fears and build confidence among team members.
-- **Empower developers and make them feel safe**: By involving developers in the process and ensuring they feel comfortable with the new tools and workflows, Tivity Health gained their buy-in and support for the DevSecOps transformation.
-- **Secure buy-in from business and financial stakeholders**: Addressing the concerns of business and financial stakeholders, such as the impact on costs and the ability to deliver tangible results, is crucial for securing the necessary support and resources for the transformation.
-- **Celebrate successes and build momentum**: Giambruno emphasizes the importance of highlighting and celebrating the team's achievements along the way, even when there are bumps on the road, as this helps build enthusiasm and keep the momentum going.
+- **Empower developers and make them feel safe**: By involving developers in the process and ensuring they feel comfortable with the new tools and workflows, Tivity Health gained user buy-in and overall support for the new DevSecOps approach.
+- **Secure buy-in from business and financial stakeholders**: Address the concerns of business and financial stakeholders early on, such as the impact on costs and the ability to deliver tangible results. This is crucial for securing the necessary support and resources.
+- **Celebrate successes and build momentum**: Giambruno highlights the importance of celebrating the team's achievements along the way, even when there are bumps on the road, as this helps build enthusiasm and keep the momentum going.
 
 ## The Future of DevSecOps and Pulumi at Tivity Health
 
