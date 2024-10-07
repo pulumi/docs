@@ -59,18 +59,14 @@ $ cd pulumi-tutorial-gcp
 $ pulumi new gcp-python
 ```
 
-Then use the following code snippet to scaffold your project with the required imports and overall program structure that you will fill in as you go along:
+Then use the following code snippet to scaffold your project with the required imports and overall program structure that you will fill in as you go along, making sure to replace the value of `project` with the name/ID of your own Google Cloud project:
 
 {{< chooser language "javascript,typescript,python,go,csharp,yaml" / >}}
 
 {{% choosable language javascript %}}
 
 ```javascript
-{{< example-program-snippet path="gcp-simple-webserver" language="javascript" from="1" to="3" >}}
-
-{{< example-program-snippet path="gcp-simple-webserver" language="javascript" from="9" to="27" >}}
-
-{{< example-program-snippet path="gcp-simple-webserver" language="javascript" from="5" to="7" >}}
+{{< example-program-snippet path="gcp-simple-webserver" language="javascript" from="1" to="27" >}}
 
 {{< example-program-snippet path="gcp-simple-webserver" language="javascript" from="68" to="71" >}}
 ```
@@ -80,11 +76,7 @@ Then use the following code snippet to scaffold your project with the required i
 {{% choosable language typescript %}}
 
 ```typescript
-{{< example-program-snippet path="gcp-simple-webserver" language="typescript" from="1" to="2" >}}
-
-{{< example-program-snippet path="gcp-simple-webserver" language="typescript" from="8" to="26" >}}
-
-{{< example-program-snippet path="gcp-simple-webserver" language="typescript" from="4" to="6" >}}
+{{< example-program-snippet path="gcp-simple-webserver" language="typescript" from="1" to="26" >}}
 
 {{< example-program-snippet path="gcp-simple-webserver" language="typescript" from="67" to="70" >}}
 ```
@@ -94,11 +86,7 @@ Then use the following code snippet to scaffold your project with the required i
 {{% choosable language python %}}
 
 ```python
-{{< example-program-snippet path="gcp-simple-webserver" language="python" from="1" to="2" >}}
-
-{{< example-program-snippet path="gcp-simple-webserver" language="python" from="12" to="26" >}}
-
-{{< example-program-snippet path="gcp-simple-webserver" language="python" from="4" to="6" >}}
+{{< example-program-snippet path="gcp-simple-webserver" language="python" from="1" to="26" >}}
 
 {{< example-program-snippet path="gcp-simple-webserver" language="python" from="63" to="68" >}}
 ```
@@ -108,12 +96,9 @@ Then use the following code snippet to scaffold your project with the required i
 {{% choosable language go %}}
 
 ```go
-{{< example-program-snippet path="gcp-simple-webserver" language="go" from="1" to="9" >}}
-{{< example-program-snippet path="gcp-simple-webserver" language="go" from="18" to="38" >}}
+{{< example-program-snippet path="gcp-simple-webserver" language="go" from="1" to="39" >}}
 
-{{< example-program-snippet path="gcp-simple-webserver" language="go" from="10" to="12" >}}
-
-{{< example-program-snippet path="gcp-simple-webserver" language="go" from="91" to="99" >}}
+{{< example-program-snippet path="gcp-simple-webserver" language="go" from="92" to="100" >}}
 ```
 
 {{% /choosable %}}
@@ -121,12 +106,9 @@ Then use the following code snippet to scaffold your project with the required i
 {{% choosable language csharp %}}
 
 ```csharp
-{{< example-program-snippet path="gcp-simple-webserver" language="csharp" from="1" to="7" >}}
-{{< example-program-snippet path="gcp-simple-webserver" language="csharp" from="16" to="31" >}}
+{{< example-program-snippet path="gcp-simple-webserver" language="csharp" from="1" to="32" >}}
 
-{{< example-program-snippet path="gcp-simple-webserver" language="csharp" from="8" to="10" >}}
-
-{{< example-program-snippet path="gcp-simple-webserver" language="csharp" from="92" to="99" >}}
+{{< example-program-snippet path="gcp-simple-webserver" language="csharp" from="93" to="100" >}}
 ```
 
 {{% /choosable %}}
@@ -134,11 +116,7 @@ Then use the following code snippet to scaffold your project with the required i
 {{% choosable language yaml %}}
 
 ```yaml
-{{< example-program-snippet path="gcp-simple-webserver" language="yaml" from="1" to="3" >}}
-
-{{< example-program-snippet path="gcp-simple-webserver" language="yaml" from="14" to="26" >}}
-
-{{< example-program-snippet path="gcp-simple-webserver" language="yaml" from="5" to="7" >}}
+{{< example-program-snippet path="gcp-simple-webserver" language="yaml" from="1" to="26" >}}
 
 {{< example-program-snippet path="gcp-simple-webserver" language="yaml" from="59" to="62" >}}
 ```
@@ -153,16 +131,16 @@ The above code creates the following on your behalf:
 
 ## Create a virtual machine
 
-The first resource you will create will be virtual machine that will host the web server. The specific details of how to create your virtual machine differ by cloud provider, and in the case of Google Cloud, you will be creating a [virtual machine instance](https://cloud.google.com/compute/docs/instances). The [Pulumi Registry](/registry/) provides the documentation for all of the Pulumi providers and their associated resources. Open the [gcp.compute.Instance documentation page](/registry/packages/gcp/api-docs/compute/instance/) to view a description of this resource, example usage, the resource definition, and supported properties. You will now define your instance resource as shown below:
+The first resource you will create will be virtual machine that will host the web server. The specific details of how to create your virtual machine differ by cloud provider. In the case of Google Cloud, you will be creating a [virtual machine instance](https://cloud.google.com/compute/docs/instances). The [Pulumi Registry](/registry/) provides the documentation for all of the Pulumi providers and their associated resources. Open the [gcp.compute.Instance documentation page](/registry/packages/gcp/api-docs/compute/instance/) to view a description of this resource, example usage, the resource definition, and supported properties. You will now define your instance resource as shown below:
 
 {{< chooser language "javascript,typescript,python,go,csharp,yaml" / >}}
 
 {{% choosable language javascript %}}
 
 ```javascript
-{{< example-program-snippet path="gcp-simple-webserver" language="javascript" from="1" to="3" >}}
+{{< example-program-snippet path="gcp-simple-webserver" language="javascript" from="1" to="23" >}}
 
-{{< example-program-snippet path="gcp-simple-webserver" language="javascript" from="13" to="55" >}}
+{{< example-program-snippet path="gcp-simple-webserver" language="javascript" from="29" to="55" >}}
 // TO-DO
 
 {{< example-program-snippet path="gcp-simple-webserver" language="javascript" from="68" to="71" >}}
@@ -173,10 +151,10 @@ The first resource you will create will be virtual machine that will host the we
 {{% choosable language typescript %}}
 
 ```typescript
-{{< example-program-snippet path="gcp-simple-webserver" language="typescript" from="1" to="2" >}}
+{{< example-program-snippet path="gcp-simple-webserver" language="typescript" from="1" to="22" >}}
 
-{{< example-program-snippet path="gcp-simple-webserver" language="typescript" from="12" to="54" >}}
-// TO-DO
+{{< example-program-snippet path="gcp-simple-webserver" language="typescript" from="28" to="54" >}}
+// TO- DO
 
 {{< example-program-snippet path="gcp-simple-webserver" language="typescript" from="67" to="70" >}}
 ```
@@ -186,9 +164,9 @@ The first resource you will create will be virtual machine that will host the we
 {{% choosable language python %}}
 
 ```python
-{{< example-program-snippet path="gcp-simple-webserver" language="python" from="1" to="2" >}}
+{{< example-program-snippet path="gcp-simple-webserver" language="python" from="1" to="22" >}}
 
-{{< example-program-snippet path="gcp-simple-webserver" language="python" from="12" to="51" >}}
+{{< example-program-snippet path="gcp-simple-webserver" language="python" from="28" to="51" >}}
 # TO-DO
 
 {{< example-program-snippet path="gcp-simple-webserver" language="python" from="63" to="68" >}}
@@ -199,12 +177,12 @@ The first resource you will create will be virtual machine that will host the we
 {{% choosable language go %}}
 
 ```go
-{{< example-program-snippet path="gcp-simple-webserver" language="go" from="1" to="9" >}}
-{{< example-program-snippet path="gcp-simple-webserver" language="go" from="18" to="38" >}}
+{{< example-program-snippet path="gcp-simple-webserver" language="go" from="1" to="35" >}}
 
-{{< example-program-snippet path="gcp-simple-webserver" language="go" from="10" to="12" >}}
+{{< example-program-snippet path="gcp-simple-webserver" language="go" from="41" to="72" >}}
+        // TO-DO
 
-{{< example-program-snippet path="gcp-simple-webserver" language="go" from="91" to="99" >}}
+{{< example-program-snippet path="gcp-simple-webserver" language="go" from="92" to="100" >}}
 ```
 
 {{% /choosable %}}
@@ -212,12 +190,12 @@ The first resource you will create will be virtual machine that will host the we
 {{% choosable language csharp %}}
 
 ```csharp
-{{< example-program-snippet path="gcp-simple-webserver" language="csharp" from="1" to="7" >}}
-{{< example-program-snippet path="gcp-simple-webserver" language="csharp" from="16" to="31" >}}
+{{< example-program-snippet path="gcp-simple-webserver" language="csharp" from="1" to="28" >}}
 
-{{< example-program-snippet path="gcp-simple-webserver" language="csharp" from="8" to="10" >}}
+{{< example-program-snippet path="gcp-simple-webserver" language="csharp" from="34" to="71" >}}
+    // TO-DO
 
-{{< example-program-snippet path="gcp-simple-webserver" language="csharp" from="92" to="99" >}}
+{{< example-program-snippet path="gcp-simple-webserver" language="csharp" from="95" to="100" >}}
 ```
 
 {{% /choosable %}}
@@ -225,16 +203,33 @@ The first resource you will create will be virtual machine that will host the we
 {{% choosable language yaml %}}
 
 ```yaml
-{{< example-program-snippet path="gcp-simple-webserver" language="yaml" from="1" to="3" >}}
+{{< example-program-snippet path="gcp-simple-webserver" language="yaml" from="1" to="22" >}}
 
-{{< example-program-snippet path="gcp-simple-webserver" language="yaml" from="14" to="26" >}}
-
-{{< example-program-snippet path="gcp-simple-webserver" language="yaml" from="5" to="7" >}}
+{{< example-program-snippet path="gcp-simple-webserver" language="yaml" from="28" to="49" >}}
+  # TO-DO
 
 {{< example-program-snippet path="gcp-simple-webserver" language="yaml" from="59" to="62" >}}
 ```
 
 {{% /choosable %}}
+
+All resources have a required [`name`](https://www.pulumi.com/docs/concepts/resources/names/) argument. Each resource has both a [logical name](https://www.pulumi.com/docs/concepts/resources/names/#logicalname) and a [physical name](https://www.pulumi.com/docs/concepts/resources/names/#autonaming). The **logical name** is how the resource is known inside Pulumi. This is the value provided to the required `name` argument. The **physical name** is the name used for the resource in the cloud provider that a Pulumi program is deploying to. It is a combination of the logical name plus a random suffix which helps to prevent resource naming collisions.
+
+In the above example, the logical name for our `instance` resource is **"website-server"**, and the physical name might typically look something like **"website-server-d7c2fa0"**.
+
+In addition to names, resources have properties and options.
+
+**Properties** are used to specify what type of resource to create. Properties are often resource-specific, and they can be required or optional depending on the specifications of the provider.
+
+Some of the properties inside of your `gcp.compute.Instance` resource include:
+
+| Property | Description |
+|--------------|-------------|
+| **machine type** | tells the Google Cloud provider what type of machine to create |
+| **boot disk** | tells the provider the configuration for the instance's boot disk |
+| **network interfaces** | tells the provider what networks to attach to the instance |
+
+**Options** let you control certain aspects of a resource (such as showing explicit dependencies or importing existing infrastructure). You do not have any options defined for this resource, but you can learn more about how it works in the [Resource options documentation](/docs/iac/concepts/options/).
 
 ## Deploy your resources
 
@@ -242,33 +237,117 @@ Now run the `pulumi up` command to preview and deploy the resouces you've just d
 
 ```bash
 $ pulumi up -y
-TBD
+
+Previewing update (web-server)
+
+     Type                     Name                Plan
+ +   pulumi:pulumi:Stack      gcp-web-server      create
+ +   ├─ gcp:compute:Network   vpc-network         create
+ +   ├─ gcp:compute:Address   ip-address          create
+ +   └─ gcp:compute:Instance  webserver-instance  create
+
+Outputs:
+    instanceURL: output<string>
+
+Resources:
+    + 4 to create
+
+Updating (web-server)
+
+     Type                     Name                Status
+ +   pulumi:pulumi:Stack      gcp-web-server      created (73s)
+ +   ├─ gcp:compute:Address   ip-address          created (3s)
+ +   ├─ gcp:compute:Network   vpc-network         created (53s)
+ +   └─ gcp:compute:Instance  webserver-instance  created (15s)
+
+Outputs:
+    instanceURL: "http://34.171.149.220"
+
+Resources:
+    + 4 created
+
+Duration: 1m15s
 ```
 
 The public IP address of your instance has been provided for you as an output, and you can use this to access your web server. However, if you try to visit this address, your request will eventually time out. This is because you have not yet configured web traffic access for your instance. You will do this by creating your firewall resource.
 
 ## Create a firewall
 
-In this section, you will use Pulumi documentation to configure the firewall on your own. The firewall must allow web traffic on port 80 in order for you to access your web server. An updated version of the project code has been provided below as a starting point.
+In this section, you will use Pulumi documentation to configure the firewall on your own. The firewall must allow web traffic on port 80 in order for you to access your web server. Use the following steps as a guide for adding the firewall resource:
 
-TBD
+- Navigate to the [Google Cloud Registry documentation page](/registry/packages/gcp/)
+- Search for the `gcp.compute.Firewall` resource
+- Define the firewall resource in your project code
+- Configure the firewall to allow traffic on port 80
+- Preview and deploy your updated project code
 
-Use the following steps as a guide for adding the Security Group resource:
-
-Navigate to the AWS Registry documentation page
-Search for the EC2 Security Group resource
-Define the EC2 Security Group resource in your project code
-Configure the security group to allow traffic on port 80
-Update the EC2 instance resource to use the security group
-Preview and deploy your updated project code
-
-Once you have completed these steps, navigate to your instance IP address again. You should now be greeted with a “Welcome to nginx!” home page message that indicates your web server is running and publically accessible.
+Once you have completed these steps, navigate to your instance IP address again. You should now be greeted with a "Hello world!" home page message that indicates your web server is running and publically accessible.
 
 ### View complete solution
 
 You can view the complete project code below:
 
-TBD
+{{< chooser language "javascript,typescript,python,go,csharp,yaml" / >}}
+
+{{% choosable language javascript %}}
+
+```javascript
+{{< example-program-snippet path="gcp-simple-webserver" language="javascript" from="1" to="23" >}}
+
+{{< example-program-snippet path="gcp-simple-webserver" language="javascript" from="29" to="71" >}}
+```
+
+{{% /choosable %}}
+
+{{% choosable language typescript %}}
+
+```typescript
+{{< example-program-snippet path="gcp-simple-webserver" language="typescript" from="1" to="22" >}}
+
+{{< example-program-snippet path="gcp-simple-webserver" language="typescript" from="28" to="70" >}}
+```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+```python
+{{< example-program-snippet path="gcp-simple-webserver" language="python" from="1" to="22" >}}
+
+{{< example-program-snippet path="gcp-simple-webserver" language="python" from="28" to="68" >}}
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```go
+{{< example-program-snippet path="gcp-simple-webserver" language="go" from="1" to="35" >}}
+
+{{< example-program-snippet path="gcp-simple-webserver" language="go" from="41" to="100" >}}
+```
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+```csharp
+{{< example-program-snippet path="gcp-simple-webserver" language="csharp" from="1" to="28" >}}
+
+{{< example-program-snippet path="gcp-simple-webserver" language="csharp" from="34" to="100" >}}
+```
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+```yaml
+{{< example-program-snippet path="gcp-simple-webserver" language="yaml" from="1" to="22" >}}
+
+{{< example-program-snippet path="gcp-simple-webserver" language="yaml" from="28" to="62" >}}
+```
+
+{{% /choosable %}}
 
 ## Clean up
 
@@ -276,7 +355,7 @@ TBD
 
 ## Next steps
 
-In this tutorial, you made a resource group and a storage account, and you configured your storage account as a static website by referencing the Pulumi Registry. You also reviewed resource properties and example usage of various resources.
+In this tutorial, you create a virtual machine instance configured as a web server, and you created a firewall resource configured for public web access by referencing the Pulumi Registry. You also reviewed resource properties and example usage of various resources.
 
 To learn more about creating resources in Pulumi, take a look at the following resources:
 
