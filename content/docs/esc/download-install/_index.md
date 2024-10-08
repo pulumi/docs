@@ -16,6 +16,7 @@ search:
       - cli
 aliases:
 - /docs/install/esc/
+- /docs/esc/install
 ---
 
 ## Select an Operating System
