@@ -9,6 +9,7 @@ aliases:
 - /docs/quickstart/aws/create-project/
 - /docs/get-started/aws/create-project/
 - /docs/clouds/aws/get-started/create-project/
+- /tutorials/pulumi-fundamentals/create-a-pulumi-project/
 ---
 
 Now that you have set up your environment by installing Pulumi, installing your preferred language runtime,

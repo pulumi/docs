@@ -51,6 +51,7 @@ estimated_time: 10
 aliases:
   - /docs/using-pulumi/define-and-provision-resources/
   - /tutorials/define-and-provision-resources/
+  - /tutorials/pulumi-fundamentals/configure-and-provision/
 ---
 
 ## Create a virtual machine
