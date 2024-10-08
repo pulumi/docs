@@ -373,7 +373,7 @@
       "Cloud SQL clusters should log audit events to Cloud Logging",
       "Cloud SQL instances should have automatic minor version upgrades enabled"
     ],
-    "Cloud Endpoints and API Gateway": [
+    "API Gateway": [
       "API Gateway logging should be enabled",
       "API Gateway should be configured to use SSL certificates for backend authentication",
       "API Gateway should have Cloud Trace enabled",
