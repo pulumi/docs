@@ -40,26 +40,21 @@ To get started, create a repository for your Pulumi Package. We recommend hostin
 
 To get started, click the link for the boilerplate repository template that you want to use, then click "Use this template" to make a copy of it.
 
-- Author a **Native Provider** with [`pulumi/pulumi-provider-boilerplate`](https://github.com/pulumi/pulumi-provider-boilerplate)
-- Author a **Bridged Provider** with [`pulumi/pulumi-tf-provider-boilerplate`](https://github.com/pulumi/pulumi-tf-provider-boilerplate)
-- Author a **Component** with:
-  - **Go:** [`pulumi/pulumi-component-provider-go-boilerplate`](https://github.com/pulumi/pulumi-component-provider-go-boilerplate)
-  - **Python:** [`pulumi/pulumi-component-provider-py-boilerplate`](https://github.com/pulumi/pulumi-component-provider-py-boilerplate)
-  - **TypeScript:** [`pulumi/pulumi-component-provider-ts-boilerplate`](https://github.com/pulumi/pulumi-component-provider-ts-boilerplate)
-  - **C#:** a template repository is coming soon
+- Author a **Native Pulumi Provider** for resources or components: [`pulumi/pulumi-provider-boilerplate`](https://github.com/pulumi/pulumi-provider-boilerplate)
+- Bridge an existing Terraform Provider to use with Pulumi: [`pulumi/pulumi-tf-provider-boilerplate`](https://github.com/pulumi/pulumi-tf-provider-boilerplate)
 
 {{% notes type="info" %}}
-If you are considering a bridged Terraform provider, take a look at [`terraform-provider`](/registry/packages/terraform-provider) first. [`terraform-provider`](/registry/packages/terraform-provider) provides a fast turn-key experience in exchange for less customization then [`pulumi/pulumi-tf-provider-boilerplate`](https://github.com/pulumi/pulumi-tf-provider-boilerplate).
+If you need access to a terraform provider, but don't need the full customisation of a published provider, the ["Any Terraform Provider" Pulumi Provider](/registry/packages/terraform-provider) can provide instant access via locally generating SDKs.
 {{% /notes %}}
 
-### Name your repository
+### Name your provider and repository
 
-You should name your repository (and thus, your Pulumi Package) using the following guidelines:
+If publishing to the [Pulumi Package Registry](https://www.pulumi.com/registry/), you will need to pick a unique name. This is normally named after the cloud provider or service the provider configures.
 
-- The name should start with `pulumi-`, like our [`pulumi-aws-native`](/registry/packages/aws-native) AWS Native Provider and our [`pulumi-eks`](/registry/packages/eks) Component for AWS Elastic Kubernetes Service (EKS)
-- If you're naming a **native provider**, use the cloud provider's name, like our [`pulumi-kubernetes`](/registry/packages/kubernetes) Kubernetes Provider
-- If you're naming a **bridged provider**, re-use the Terraform provider's name but replace the `terraform-provider-` prefix with `pulumi-`
-- If you're naming a **component**, name your package using both the cloud provider whose resources you're building on top of and the resources, like our [`pulumi-aws-apigateway`](/registry/packages/aws-apigateway) Component for AWS API Gateway
+Your repository name should start with `pulumi-` followed by the name of your provider e.g. [`pulumi-aws`](https://github.com/pulumi/pulumi-aws) for AWS, or [`pulumi-kubernetes`](https://github.com/pulumi/pulumi-kubernetes) for the Kubernetes provider.
+
+- If you're bridging a terraform provider, re-use the Terraform provider's name - replacing `terraform-provider-` with `pulumi-` e.g. use `pulumi-auth0` for bridging `terraform-provider-auth0`.
+- If you're building a component for an existing provider, consider using the provider name followed by the component name. For example, if building an API Gateway component using the AWS provider, name your project `pulumi-aws-apigateway`.
 
 ## Author your resources or components
 
@@ -67,7 +62,7 @@ See the instructions in your new repository's `README.md` file for specific inst
 
 ## Write documentation
 
-We recommend authoring documentation to help others in the Pulumi community use your package. In your repository, there should be a `docs/` folder with a few template pages you can use that correspond to the various tabs on a package page in Pulumi Registry (like the [AWS Native](/registry/packages/aws-native/) package). Use the guidance in the following sections to author content in these pages.
+We recommend authoring documentation to help others in the Pulumi community use your package. In your repository, there should be a `docs/` folder with a few template pages you can use that correspond to the various tabs on a package page in Pulumi Registry (like the [Azure Native](/registry/packages/azure-native/) package). Use the guidance in the following sections to author content in these pages.
 
 ### Overview, installation, & configuration
 

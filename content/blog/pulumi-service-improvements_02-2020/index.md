@@ -34,14 +34,14 @@ added by Pulumi's first (and extremely awesome) intern, Tasia (👋)!
 
 ## Deep Linking into CI/CD Systems
 
-Many people practice [continuous delivery using Pulumi](/docs/using-pulumi/continuous-delivery/), automatically
+Many people practice [continuous delivery using Pulumi](/docs/iac/packages-and-automation/continuous-delivery/), automatically
 updating stacks in response to code check-ins or merges. We've now added support for deep links from the Pulumi Service back
 into your CI/CD tool of choice. So, for example, you'll now see links to the [Circle CI job](https://circleci.com) or
 [Travis CI build](https://travis-ci.com) from the Pulumi Service.
 
 {{< figure alt="Link to the Travis CI Build from the Pulumi Service" src="./deep-linking-cicd-providers.png" class="md:max-w-lg" >}}
 
-> Pulumi supports a variety of CI/CD providers, but if yours isn't listed in [our CI/CD guide](/docs/using-pulumi/continuous-delivery/)
+> Pulumi supports a variety of CI/CD providers, but if yours isn't listed in [our CI/CD guide](/docs/iac/packages-and-automation/continuous-delivery/)
 > [let us know](https://slack.pulumi.com) or [contribute it](https://github.com/pulumi/pulumi/blob/master/sdk/go/common/util/ciutil)
 > on your own.
 
@@ -54,7 +54,7 @@ We now pretty print JSON configuration values and have much better support for v
 ## Download Earlier Checkpoints
 
 The most important job of the Pulumi Service is to maintain a durable, accurate snapshot of your cloud resource data.
-While in most cases your [stack's checkpoint data](/docs/concepts/state) is a low-level detail
+While in most cases your [stack's checkpoint data](/docs/iac/concepts/state-and-backends) is a low-level detail
 you don't need to worry about; in some advanced scenarios, you may need to inspect or edit it manually.
 
 You can now download a stack’s checkpoint file directly from the Pulumi Service. You can get the

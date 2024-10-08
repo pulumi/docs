@@ -137,7 +137,7 @@ We now support cloning Pulumi templates (`pulumi new`) from Azure DevOps reposit
 
 ### Skip Checkpoints Experimental Flag
 
-We have added a new experimental flag to improve performance for certain use cases. This flag makes Pulumi skip saving [state checkpoints](/docs/concepts/state/#checkpoints) as it modifies resources and instead only save the final state of a deployment. This is an experimental feature that also requires an PULUMI_EXPERIMENTAL=true environment variable to be set. Using the feature introduces risk that in the case of network disconnect or crash state edits will be lost and may require manual recovery. When this risk is acceptable, using the feature can speed up Pulumi deployment times. As it is in experimental we may make changes to how it has been implemented down the track.
+We have added a new experimental flag to improve performance for certain use cases. This flag makes Pulumi skip saving [state checkpoints](/docs/iac/concepts/state-and-backends/#checkpoints) as it modifies resources and instead only save the final state of a deployment. This is an experimental feature that also requires an PULUMI_EXPERIMENTAL=true environment variable to be set. Using the feature introduces risk that in the case of network disconnect or crash state edits will be lost and may require manual recovery. When this risk is acceptable, using the feature can speed up Pulumi deployment times. As it is in experimental we may make changes to how it has been implemented down the track.
 
 👉 Learn more by reviewing the [Skip checkpoints pull request](https://github.com/pulumi/pulumi/pull/10750).
 

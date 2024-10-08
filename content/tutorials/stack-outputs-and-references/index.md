@@ -423,7 +423,7 @@ For this section, you are going to create a new Pulumi program that will access 
 
 Let's start by making a new Pulumi project in a new directory. In this new program, you need to add the code that will reference the values from your first program.
 
-This can be done using Pulumi's [Stack Reference functionality](/docs/concepts/stack/#stackreferences). You'll need to pass in the fully qualified name of the stack as an argument. This name is comprised of the [organization](/docs/pulumi-cloud/organizations/), project, and stack names in the format of `<organization>/<project>/<stack>`
+This can be done using Pulumi's [Stack Reference functionality](/docs/concepts/stack/#stackreferences). You'll need to pass in the fully qualified name of the stack as an argument. This name is comprised of the [organization](/docs/pulumi-cloud/admin/organizations/), project, and stack names in the format of `<organization>/<project>/<stack>`
 
 For example, if the name of your organization is `my-org`, the name of your first program is `my-first-program`, and the name of your stack is `dev`, then your fully qualified name will be `my-org/my-first-program/dev`.
 

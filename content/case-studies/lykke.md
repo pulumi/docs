@@ -63,7 +63,7 @@ Pulumi’s cloud engineering platform brings infrastructure, developer, and secu
 
 Check out the following articles to get started:
 
-- [AWS Identity and Access Management with Pulumi](/docs/clouds/aws/guides/iam/)
-- [AWS Lambda with Pulumi](/docs/clouds/aws/guides/lambda/)
+- [AWS Identity and Access Management with Pulumi](/docs/iac/clouds/aws/guides/iam/)
+- [AWS Lambda with Pulumi](/docs/iac/clouds/aws/guides/lambda/)
 - [Get Started with Pulumi Policy as Code](/docs/using-pulumi/crossguard/get-started/)
-- [Get Started with Kubernetes with Pulumi](/docs/clouds/kubernetes/guides/)
+- [Get Started with Kubernetes with Pulumi](/docs/iac/clouds/kubernetes/guides/)

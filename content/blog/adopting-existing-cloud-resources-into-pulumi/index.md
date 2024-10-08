@@ -8,7 +8,7 @@ tags: ["migration"]
 ---
 
 {{% notes %}}
-See [Migrating From Terraform to Pulumi](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-terraform/) for updated documentation on migrating from Terraform.
+See [Migrating From Terraform to Pulumi](/docs/iac/adopting-pulumi/migrating-to-pulumi/from-terraform/) for updated documentation on migrating from Terraform.
 {{% /notes %}}
 
 Most cloud infrastructure projects involve working with existing cloud resources &mdash; either building on top of existing resources or adopting existing resources under management with a new and more robust infrastructure provisioning solution.

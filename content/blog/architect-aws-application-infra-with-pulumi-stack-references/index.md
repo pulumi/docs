@@ -453,4 +453,4 @@ information between these projects. You can find a runable version of this infra
 This demonstrates the suggested way of architecting Pulumi applications both for operability and collaboration.
 
 You can try this code today get started with Pulumi today at [https://www.pulumi.com](/) and
-following the [Getting Started](/docs/clouds/aws/get-started/) for managing AWS resources with Pulumi.
+following the [Getting Started](/docs/iac/get-started/aws/) for managing AWS resources with Pulumi.

@@ -171,6 +171,7 @@ async function onComplete(brokenLinks) {
             .join("\n");
 
         // Post the results to Slack.
+        console.warn("Posting to slack: " + list);
         await postToSlack("docs-ops", list);
     }
 }
@@ -273,6 +274,9 @@ function getDefaultExcludedKeywords() {
         "https://code.visualstudio.com/",
         "https://www.honeycomb.io/",
         "https://wiki.osdev.org/Atomic_operation",
+        "https://conference.pulumi.com/replays/",
+        "https://wallaroo.ai/",
+        "https://conference.pulumi.com/schedule/",
     ];
 }
 

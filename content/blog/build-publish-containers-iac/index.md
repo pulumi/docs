@@ -391,7 +391,7 @@ var imageName = repo.RepositoryUrl;
 
 #### Learn More About ECR
 
-ECR offers many additional options not shown here. This includes configuring advanced IAM permissions, enabling image vulnerability scanning, managing the lifetime of images so that older, unused images are deleted based on configured policies, encrypting images, and more. For details on these advanced capabilities and more, refer to [Pulumi's ECR user guide](https://www.pulumi.com/docs/clouds/aws/guides/ecr/), [Pulumi's ECR API reference](/registry/packages/aws/api-docs/ecr/repository/), or [Amazon's product documentation](https://aws.amazon.com/ecr/).
+ECR offers many additional options not shown here. This includes configuring advanced IAM permissions, enabling image vulnerability scanning, managing the lifetime of images so that older, unused images are deleted based on configured policies, encrypting images, and more. For details on these advanced capabilities and more, refer to [Pulumi's ECR user guide](https://www.pulumi.com/docs/iac/clouds/aws/guides/ecr/), [Pulumi's ECR API reference](/registry/packages/aws/api-docs/ecr/repository/), or [Amazon's product documentation](https://aws.amazon.com/ecr/).
 
 > To view another cloud provider's registry details, [select a new cloud in the switcher above](#prepare-a-container-registry).
 
@@ -1917,8 +1917,8 @@ The same container image URLs exported above can be used as inputs to other reso
 
 > This article assumes you already have a containerized environment to deploy to, like a Kubernetes cluster, and have [configured your project accordingly](/registry/packages/kubernetes/installation-configuration/). If not, you can provision one using Pulumi first. Pulumi supports many clouds and infrastructure resources, but here are a few starting points to get up and running with:
 
-- [AWS Elastic Container Service ECS](/docs/clouds/aws/guides/ecs/),
-- [AWS Elastic Kubernetes Service (EKS)](/docs/clouds/aws/guides/eks),
+- [AWS Elastic Container Service ECS](/docs/iac/clouds/aws/guides/ecs/),
+- [AWS Elastic Kubernetes Service (EKS)](/docs/iac/clouds/aws/guides/eks),
 - [Azure Kubernetes Service (AKS)](/registry/packages/kubernetes/how-to-guides/aks),
 - [Google Cloud Kubernetes Engine (GKE)](/registry/packages/kubernetes/how-to-guides/gke),
 - [DigitalOcean Kubernetes](https://www.digitalocean.com/community/tutorials/how-to-manage-digitalocean-and-kubernetes-infrastructure-with-pulumi).
@@ -2251,7 +2251,7 @@ And there we go: we have gone from a `Dockerfile` to a published container image
 
 In this article, we've seen how easy it is to build, publish, and use container images in many popular public and private container registry options. We have seen how to provision new registries using infrastructure as code and how easy it is to trigger deployments of application updates by running a single `pulumi up` command.
 
-All of these steps were manually run from a CLI; however, a natural next step is to [wire the entire process up to a CI/CD system](/docs/using-pulumi/continuous-delivery/) such as [GitHub Actions](/docs/using-pulumi/continuous-delivery/github-actions/), [GitLab Pipelines](/docs/using-pulumi/continuous-delivery/gitlab-ci/), [Jenkins](/docs/using-pulumi/continuous-delivery/jenkins/), [Spinnaker](/docs/using-pulumi/continuous-delivery/spinnaker/), or [one of the many available options](/docs/using-pulumi/continuous-delivery/), so that you can deploy continuously as you merge code. For even more advanced scenarios, we might want to build a custom program such as a CLI that uses the [Automation API](/blog/automation-api/) to perform these actions behind a simpler, purpose-built interface.
+All of these steps were manually run from a CLI; however, a natural next step is to [wire the entire process up to a CI/CD system](/docs/iac/packages-and-automation/continuous-delivery/) such as [GitHub Actions](/docs/iac/packages-and-automation/continuous-delivery/github-actions/), [GitLab Pipelines](/docs/iac/packages-and-automation/continuous-delivery/gitlab-ci/), [Jenkins](/docs/iac/packages-and-automation/continuous-delivery/jenkins/), [Spinnaker](/docs/iac/packages-and-automation/continuous-delivery/spinnaker/), or [one of the many available options](/docs/iac/packages-and-automation/continuous-delivery/), so that you can deploy continuously as you merge code. For even more advanced scenarios, we might want to build a custom program such as a CLI that uses the [Automation API](/blog/automation-api/) to perform these actions behind a simpler, purpose-built interface.
 
 Although we've shown a very simple set of infrastructure resources, it would be natural to extend these examples by provisioning other ancillary services that your application needs, including databases, pub/sub topics, queues, metrics and dashboards, and more. Using an infrastructure as code approach to building, publishing, and consuming your container images means you can incrementally add on such infrastructure to the base code shown above and reference them from your containers easily with automatic dependency tracking.
 

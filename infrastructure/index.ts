@@ -61,6 +61,7 @@ const config = {
 
 const aiAppStack = new pulumi.StackReference('pulumi/pulumi-ai-app-infra/prod');
 const aiAppDomain = aiAppStack.requireOutput('aiAppDistributionDomain');
+const cloudAiAppDomain = aiAppStack.requireOutput('cloudAiAppDistributionDomain');
 
 // originBucketName is the name of the S3 bucket to use as the CloudFront origin for the
 // website. This bucket is presumed to exist prior to the Pulumi run; if it doesn't, this
@@ -277,33 +278,40 @@ const allViewerExceptHostHeaderId = "b689b0a8-53d0-40ab-baf2-68738e2966ac";
 // https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-cache-policies.html
 const cachingDisabledId = "4135ea2d-6df8-44a3-9df3-4b5a84be39ad";
 
-const SecurityHeadersPolicy = new aws.cloudfront.ResponseHeadersPolicy('security-headers', {
-    securityHeadersConfig: {
-        frameOptions: {
-            frameOption: config.addSecurityHeaders ? 'DENY' : 'SAMEORIGIN',
-            override: false,
-        },
-        // These remaining options are derived from:
-        // https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-response-headers-policies.html#managed-response-headers-policies-security
-        // "SecurityHeadersPolicy" with ID "67f7725c-6f97-4210-82d7-5512b31e9d03"
-        referrerPolicy: {
-            referrerPolicy: 'strict-origin-when-cross-origin',
-            override: false,
-        },
-        contentTypeOptions: {
-            override: true,
-        },
-        strictTransportSecurity: {
-            accessControlMaxAgeSec: 31536000,
-            override: false,
-        },
-        xssProtection: {
-            protection: true,
-            modeBlock: true,
-            override: false,
+function newSecurityHeadersPolicy(name: string, frameOption: string) {
+    return new aws.cloudfront.ResponseHeadersPolicy(name, {
+        securityHeadersConfig: {
+            frameOptions: {
+                frameOption,
+                override: false,
+            },
+            // These remaining options are derived from:
+            // https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-response-headers-policies.html#managed-response-headers-policies-security
+            // "SecurityHeadersPolicy" with ID "67f7725c-6f97-4210-82d7-5512b31e9d03"
+            referrerPolicy: {
+                referrerPolicy: 'strict-origin-when-cross-origin',
+                override: false,
+            },
+            contentTypeOptions: {
+                override: true,
+            },
+            strictTransportSecurity: {
+                accessControlMaxAgeSec: 31536000,
+                override: false,
+            },
+            xssProtection: {
+                protection: true,
+                modeBlock: true,
+                override: false,
+            }
         }
-    }
-})
+    });
+}
+
+// Most of the site
+const SecurityHeadersPolicy = newSecurityHeadersPolicy('security-headers', config.addSecurityHeaders ? 'DENY' : 'SAMEORIGIN');
+// Copilot lives in an iframe
+const CopilotSecurityHeadersPolicy = newSecurityHeadersPolicy('copilot-security-headers', 'SAMEORIGIN');
 
 const baseCacheBehavior: aws.types.input.cloudfront.DistributionDefaultCacheBehavior = {
     targetOriginId: originBucket.arn,
@@ -412,6 +420,18 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
         {
             originId: aiAppDomain,
             domainName: aiAppDomain,
+            customOriginConfig: {
+                originProtocolPolicy: "https-only",
+                httpPort: 80,
+                httpsPort: 443,
+                originSslProtocols: ["TLSv1.2"],
+                originReadTimeout: 60,
+                originKeepaliveTimeout: 60,
+            },
+        },
+        {
+            originId: cloudAiAppDomain,
+            domainName: cloudAiAppDomain,
             customOriginConfig: {
                 originProtocolPolicy: "https-only",
                 httpPort: 80,
@@ -580,6 +600,38 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
             cachePolicyId: cachingDisabledId,
             lambdaFunctionAssociations: config.doAIAnswersRewrites ? [getAIAnswersRewriteAssociation()] : [],
             forwardedValues: undefined, // forwardedValues conflicts with cachePolicyId, so we unset it.
+        },
+
+        // Copilot app
+        {
+            ...baseCacheBehavior,
+            // allow all methods
+            allowedMethods: ["DELETE", "GET", "HEAD", "OPTIONS", "PATCH", "POST", "PUT"],
+            cachedMethods: [
+                "GET", "HEAD", "OPTIONS",
+            ],
+            targetOriginId: cloudAiAppDomain,
+            pathPattern: '/_pulumi/cloud-ai',
+            originRequestPolicyId: allViewerExceptHostHeaderId,
+            cachePolicyId: cachingDisabledId,
+            lambdaFunctionAssociations: [],
+            forwardedValues: undefined, // forwardedValues conflicts with cachePolicyId, so we unset it.
+            responseHeadersPolicyId: CopilotSecurityHeadersPolicy.id,
+        },
+        {
+            ...baseCacheBehavior,
+            // allow all methods
+            allowedMethods: ["DELETE", "GET", "HEAD", "OPTIONS", "PATCH", "POST", "PUT"],
+            cachedMethods: [
+                "GET", "HEAD", "OPTIONS",
+            ],
+            targetOriginId: cloudAiAppDomain,
+            pathPattern: '/_pulumi/cloud-ai/*',
+            originRequestPolicyId: allViewerExceptHostHeaderId,
+            cachePolicyId: cachingDisabledId,
+            lambdaFunctionAssociations: [],
+            forwardedValues: undefined, // forwardedValues conflicts with cachePolicyId, so we unset it.
+            responseHeadersPolicyId: CopilotSecurityHeadersPolicy.id,
         }
     ],
 

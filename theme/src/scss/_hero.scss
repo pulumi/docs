@@ -84,11 +84,11 @@
 
     .home-hero-btn-primary {
         @include gradient-button;
-        @apply py-4 px-12 text-lg;
+        @apply py-4 px-8;
     }
 
     .home-hero-btn-secondary {
-        @apply py-4 px-12 text-lg;
+        @apply py-4 px-8;
     }
 
     .home-page-hero-content {

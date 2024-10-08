@@ -8,7 +8,7 @@ tags: ["JavaScript","AWS","containers","TypeScript"]
 ---
 
 {{% notes type="warning" %}}
-Some of the code in this post is out of date. See the [AWS guides](/docs/clouds/aws/guides/) for an updated overview and examples.
+Some of the code in this post is out of date. See the [AWS guides](/docs/iac/clouds/aws/guides/) for an updated overview and examples.
 {{% /notes %}}
 
 > Update: Check out the [Learning Machine Case Study](/case-studies/learning-machine/) where provisioning went from 3 weeks to 1 hour with Pulumi and AWS.
@@ -240,7 +240,7 @@ Pulumi's "everything is code" approach means deploying everything can be
 done with a CLI command, unlocking the power of the entire Docker
 platform with a great inner development loop, that works from the
 desktop all the way to production. This entire flow can be
-[easily integrated into your favorite CI/CD pipeline](/docs/using-pulumi/continuous-delivery/),
+[easily integrated into your favorite CI/CD pipeline](/docs/iac/packages-and-automation/continuous-delivery/),
 including GitOps workflows.
 
 If we want to augment our service with other AWS resources -- like S3

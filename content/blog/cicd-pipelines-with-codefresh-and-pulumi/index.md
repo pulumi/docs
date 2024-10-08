@@ -43,7 +43,7 @@ Every Codefresh account comes with a built-in graphical dashboard that allows yo
 
 A deployment that starts from a Git commit can be monitored with Codefresh from beginning to end, following all pipeline stages from application compilation/packaging to security scanning and infrastructure deployment.
 
-See our dedicated documentation page on how to use [Pulumi and Codefresh together](https://www.pulumi.com/docs/using-pulumi/continuous-delivery/codefresh/).
+See our dedicated documentation page on how to use [Pulumi and Codefresh together](https://www.pulumi.com/docs/iac/packages-and-automation/continuous-delivery/codefresh/).
 
 ## Building Modern Infrastructure
 

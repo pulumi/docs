@@ -8,6 +8,8 @@ menu:
     parent: esc-languages-sdks
     identifier: python-sdk
     weight: 2
+aliases:
+  - /docs/esc/sdk/python/
 ---
 
 The [Python SDK](https://pypi.org/project/pulumi-esc-sdk/) for [Pulumi ESC (Environments, Secrets, and Configuration)](/product/esc/) allows you to automate Pulumi ESC.

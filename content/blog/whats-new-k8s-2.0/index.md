@@ -133,7 +133,7 @@ As our community continues to grow, we’re committed to improving our Kubernete
 experience even further. You can help to shape this experience directly by
 providing feedback on [GitHub](https://github.com/pulumi/pulumi-kubernetes/). We love to hear from our users!
 
-Learn more about how [Pulumi works with Kubernetes](https://www.pulumi.com/registry/packages/kubernetes/), and [Get Started](https://www.pulumi.com/docs/clouds/kubernetes/get-started/) if you're
+Learn more about how [Pulumi works with Kubernetes](https://www.pulumi.com/registry/packages/kubernetes/), and [Get Started](https://www.pulumi.com/docs/iac/get-started/kubernetes/) if you're
 new.
 
 You can explore more content by checking out [PulumiTV on YouTube](https://www.youtube.com/pulumitv), work through

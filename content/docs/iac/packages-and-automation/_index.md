@@ -22,11 +22,11 @@ Learn how to adopt Pulumi, organize projects & stacks, use the Automation API, c
 
 ## General Guides
 
-- [Adopting Pulumi](adopting-pulumi/)
-- [Organizing projects & stacks](organizing-projects-stacks/)
-- [Automation API](automation-api/)
-- [Continuous delivery](continuous-delivery/)
-- [Policy as code](crossguard/)
-- [Pulumi packages](pulumi-packages/)
-- [Testing](testing/)
-- [Debugging](debugging/)
+- [Adopting Pulumi](/docs/iac/adopting-pulumi/)
+- [Organizing projects & stacks](/docs/iac/packages-and-automation/organizing-projects-stacks/)
+- [Automation API](/docs/iac/packages-and-automation/automation-api/)
+- [Continuous delivery](/docs/iac/packages-and-automation/continuous-delivery/)
+- [Policy as code](/docs/iac/packages-and-automation/crossguard/)
+- [Pulumi packages](/docs/iac/packages-and-automation/pulumi-packages/)
+- [Testing](/docs/iac/concepts/testing/)
+- [Debugging](/docs/iac/concepts/debugging/)

@@ -750,7 +750,7 @@ resources:
 
 {{% /choosable %}}
 
-> Note: All of the AWS building blocks are declared one at a time here to make it entirely transparent what's going on. Once you've set up a VPC a handful of times, however, this can get tedious. The [Pulumi Crosswalk for AWS package](/docs/clouds/aws/guides/) offers standard VPC configurations out-of-the-box with fewer lines of code, and built-in best practices. Check it out!
+> Note: All of the AWS building blocks are declared one at a time here to make it entirely transparent what's going on. Once you've set up a VPC a handful of times, however, this can get tedious. The [Pulumi Crosswalk for AWS package](/docs/iac/clouds/aws/guides/) offers standard VPC configurations out-of-the-box with fewer lines of code, and built-in best practices. Check it out!
 
 Next, to accomplish the stated connectivity goals --- EC2 instance available over HTTP(S) and SSH on the Internet, and the RDS database available only to MySQL traffic originating from the EC2 instance itself -- you'll now create two security groups, one each for the public and private subnets respectively:
 

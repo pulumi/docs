@@ -197,7 +197,7 @@ In some scenarios, you may want to retain certain resources even while destroyin
 
 ### Pulumi Package plugins can now be hosted on GitHub Releases
 
-To [publish a Pulumi Package](/docs/using-pulumi/pulumi-packages/how-to-author/), you need to publish the resource provided plugin that contains the implementation of your package. Previously, you couldn't use popular release services like GitHub Releases because the `pluginDownloadUrl` format in the Pulumi Packages [schema](/docs/using-pulumi/pulumi-packages/schema/) was too strict.
+To [publish a Pulumi Package](/docs/iac/packages-and-automation/pulumi-packages/debugging-provider-packages/how-to-author/), you need to publish the resource provided plugin that contains the implementation of your package. Previously, you couldn't use popular release services like GitHub Releases because the `pluginDownloadUrl` format in the Pulumi Packages [schema](/docs/iac/packages-and-automation/pulumi-packages/debugging-provider-packages/schema/) was too strict.
 
 Now, you can construct a `pluginDownloadUrl` with placeholders for `${VERSION}`, `${OS}`, and/or `${ARCH}` (case-sensitive) and these values will be interpolated whenever the Pulumi CLI attempts to download a Pulumi Package's plugin.
 

@@ -224,6 +224,6 @@ For users migrating to 4.0, check out the [v4 Provider Migration Guide](https://
 
 ## Getting Started
 
-Try Infrastructure as Code for Kubernetes by following this quick [getting started guide](/docs/clouds/kubernetes/get-started/).
+Try Infrastructure as Code for Kubernetes by following this quick [getting started guide](/docs/iac/get-started/kubernetes/).
 
 Join us for a free, [on-demand webinar with Pulumi and the CNCF](https://community.cncf.io/events/details/cncf-cncf-online-programs-presents-cncf-on-demand-webinar-how-to-start-building-a-self-service-infrastructure-platform-on-kubernetes/) to learn how to use Pulumi's Kubernetes Provider and other open-source tools to build internal developer platforms.[Register &rarr;](https://community.cncf.io/events/details/cncf-cncf-online-programs-presents-cncf-on-demand-webinar-how-to-start-building-a-self-service-infrastructure-platform-on-kubernetes/)

@@ -402,7 +402,7 @@ That’s pretty great so far! While there are many org chart tools, what makes t
 
 ## Add CI
 
-In order for this tool to be used by everyone, we keep code and configuration in a GitHub repository. We can use [Pulumi’s GitHub Action](/docs/using-pulumi/continuous-delivery/github-actions) to run a `pulumi preview` on a pull request, and a `pulumi up` on merge to main.
+In order for this tool to be used by everyone, we keep code and configuration in a GitHub repository. We can use [Pulumi’s GitHub Action](/docs/iac/packages-and-automation/continuous-delivery/github-actions) to run a `pulumi preview` on a pull request, and a `pulumi up` on merge to main.
 
 Here’s what that looks like on the pull request:
 

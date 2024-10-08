@@ -12,7 +12,7 @@ tags:
 ---
 
 {{% notes type="warning" %}}
-Some of the code in this post is out of date. See the [AWS guides](/docs/clouds/aws/guides/) for an updated overview and examples.
+Some of the code in this post is out of date. See the [AWS guides](/docs/iac/clouds/aws/guides/) for an updated overview and examples.
 {{% /notes %}}
 
 Over the last year since the launch of Pulumi 3.0, we’ve seen incredible growth in adoption and usage of the Pulumi open source project and Cloud Engineering platform, with more than a thousand new open source contributors, tens of thousands of new users, and millions of new cloud infrastructure resources being managed by Pulumi. Pulumi’s infrastructure as code tools are enabling teams to scale up their cloud infrastructure with robust software engineering tools and practices to get the most value out of their cloud platform investments.
@@ -93,7 +93,7 @@ You can get started with Pulumi YAML today in the [Pulumi Getting Started](/docs
 
 ## Crosswalk for AWS in All Pulumi Languages
 
-[Crosswalk for AWS](/docs/clouds/aws/guides/) is a collection of libraries that use automatic well-architected best practices to make common infrastructure as code tasks in AWS easier and more secure. This includes libraries for EKS and API Gateway as well as the AWSX library that provides VPC, ECS, LoadBalancing and more.  All of these libraries are now available in the Pulumi Registry for all Pulumi languages.  The AWSX library, which was previously only available for Pulumi TypeScript users has become one of the most used libraries in the Pulumi ecosystem.  With today’s release, it is now available to the entirety of the Pulumi language ecosystem - including Java and YAML!
+[Crosswalk for AWS](/docs/iac/clouds/aws/guides/) is a collection of libraries that use automatic well-architected best practices to make common infrastructure as code tasks in AWS easier and more secure. This includes libraries for EKS and API Gateway as well as the AWSX library that provides VPC, ECS, LoadBalancing and more.  All of these libraries are now available in the Pulumi Registry for all Pulumi languages.  The AWSX library, which was previously only available for Pulumi TypeScript users has become one of the most used libraries in the Pulumi ecosystem.  With today’s release, it is now available to the entirety of the Pulumi language ecosystem - including Java and YAML!
 
 For example - to run a Docker container in ECS using default network and cluster settings, users can use the `awsx.ecs.FargateService` class along with an Application Load Balancer listening on port 80 at a stable address - with just a few lines of code:
 
@@ -278,7 +278,7 @@ outputs:
 
 {{% /choosable %}}
 
-You can get started with Crosswalk for AWS in the [Pulumi Crosswalk for AWS Guides](/docs/clouds/aws/guides/), now available with examples in all languages.
+You can get started with Crosswalk for AWS in the [Pulumi Crosswalk for AWS Guides](/docs/iac/clouds/aws/guides/), now available with examples in all languages.
 
 👉 Read more in the [Pulumi Crosswalk for AWS support for all Pulumi Languages](/blog/crosswalk-for-aws-all-languages/)  blog post.
 
@@ -375,7 +375,7 @@ Since launching the [Pulumi Registry](/registry/) last fall, we’ve added more 
 
 ![New Packages in the Pulumi Registry](new-packages.png)
 
-Every package in the Pulumi Registry supports all Pulumi programming languages, including Java and YAML. Documentation and getting started guides for every package are available from the Registry. Contributions to the Registry are now simpler than ever, with enhanced guides for [authoring and publishing](/docs/using-pulumi/pulumi-packages/how-to-author/) your own package in the Pulumi Registry.
+Every package in the Pulumi Registry supports all Pulumi programming languages, including Java and YAML. Documentation and getting started guides for every package are available from the Registry. Contributions to the Registry are now simpler than ever, with enhanced guides for [authoring and publishing](/docs/iac/packages-and-automation/pulumi-packages/debugging-provider-packages/how-to-author/) your own package in the Pulumi Registry.
 
 ## New Provider for the Pulumi Service
 

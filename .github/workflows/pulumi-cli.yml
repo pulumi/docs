@@ -56,7 +56,7 @@ jobs:
       - name: Install Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: '0.126.0'
+          hugo-version: '0.135.0'
           extended: true
       - name: Install node
         uses: actions/setup-node@v2
@@ -99,7 +99,7 @@ jobs:
       - name: Update version lists
         run: |
           NL=$'\n'
-          sed -e "s/<tbody>/<tbody>\\${NL}        {{< changelog-table-row version=\"${{ env.PULUMI_VERSION}}\" date=\"$(date +%Y-%m-%d)\" showChecksum=\"true\" >}}/" -i ./content/docs/iac/install/versions.md
+          sed -e "s/<tbody>/<tbody>\\${NL}        {{< changelog-table-row version=\"${{ env.PULUMI_VERSION}}\" date=\"$(date +%Y-%m-%d)\" showChecksum=\"true\" >}}/" -i ./content/docs/iac/download-install/versions.md
         working-directory: docs
       - name: git status
         run: git status && git diff

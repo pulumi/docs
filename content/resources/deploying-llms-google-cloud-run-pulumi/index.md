@@ -61,9 +61,9 @@ main:
         - name: Jay Smith
           role: Sr. Cloud Customer Engineer, Google
           photo: /images/team/jay-smith-google-jpeg.jpg
-        - name: Diana Esteves
+        - name: Mitch Gerdisch
           role: Solutions Architect, Pulumi
-          photo: /images/team/diana-esteves.jpg
+          photo: /images/team/mitch-gerdisch.jpg
 
     # case-sensitive
     tags:

@@ -147,7 +147,7 @@ Learn more at [pulumi/pulumi#7062](https://github.com/pulumi/pulumi/issues/7062)
 
 ### Pulumi Packages: schema documentation and enhancements
 
-[Pulumi Packages](/docs/using-pulumi/pulumi-packages/), released at [PulumiUP earlier this year](/blog/pulumiup-pulumi-packages-multi-language-components/) enable cloud infrastructure resource provisioning to be defined once, in your language of choice, and made available to users in all Pulumi languages. A key part of Pulumi Packages is the Pulumi schema that defines each resource in a package.  We have now introduced new [documentation for Pulumi Package Schema](/docs/using-pulumi/pulumi-packages/).
+[Pulumi Packages](/docs/iac/packages-and-automation/pulumi-packages/debugging-provider-packages/), released at [PulumiUP earlier this year](/blog/pulumiup-pulumi-packages-multi-language-components/) enable cloud infrastructure resource provisioning to be defined once, in your language of choice, and made available to users in all Pulumi languages. A key part of Pulumi Packages is the Pulumi schema that defines each resource in a package.  We have now introduced new [documentation for Pulumi Package Schema](/docs/iac/packages-and-automation/pulumi-packages/debugging-provider-packages/).
 
 We've also updated the Pulumi Package schema to make it more powerful. For more complex Pulumi Package scenarios, you may want to be able to reference the types in one Pulumi Package from another Pulumi Package. Previously, this was only possible if you authored your Pulumi Package in Go; now, it's possible in all Pulumi Languages.
 

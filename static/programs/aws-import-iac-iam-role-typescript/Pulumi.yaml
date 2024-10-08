@@ -1,0 +1,10 @@
+name: aws-import-iac-iam-role-typescript
+runtime:
+  name: nodejs
+  options:
+    packagemanager: npm
+description: An example that deploys the resource definition for an imported IAM role on AWS.
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: aws-typescript

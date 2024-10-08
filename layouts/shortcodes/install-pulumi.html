@@ -1,18 +1,18 @@
 <pulumi-chooser type="os" options="macos,linux,windows">
     <pulumi-choosable type="os" value="macos">
         <div class="highlight">
-            <pre class="chroma"><code class="language-bash" data-lang="bash">$ brew install pulumi/tap/pulumi</code></pre>
+            <pre class="chroma"><code class="language-bash" data-lang="bash" data-track="install-pulumi-macos">$ brew install pulumi/tap/pulumi</code></pre>
         </div>
     </pulumi-choosable>
     <pulumi-choosable type="os" value="linux">
         <div class="highlight">
-            <pre class="chroma"><code class="language-bash" data-lang="bash">$ curl -fsSL https://get.pulumi.com | sh</code></pre>
+            <pre class="chroma"><code class="language-bash" data-lang="bash" data-track="install-pulumi-linux">$ curl -fsSL https://get.pulumi.com | sh</code></pre>
         </div>
     </pulumi-choosable>
     <pulumi-choosable type="os" value="windows">
         {{- .Inner -}}
         <div class="highlight">
-            <pre class="chroma"><code class="language-bat" data-lang="bat"><span class="p">&gt;</span> choco install pulumi</code></pre>
+            <pre class="chroma"><code class="language-bat" data-lang="bat" data-track="install-pulumi-windows"><span class="p">&gt;</span> choco install pulumi</code></pre>
         </div>
     </pulumi-choosable>
 </pulumi-chooser>

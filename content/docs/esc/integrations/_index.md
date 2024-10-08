@@ -10,6 +10,7 @@ menu:
     weight: 6
 aliases:
     - /docs/esc/providers/
+    - /docs/pulumi-cloud/esc/providers/ 
 ---
 
 Pulumi ESC's support for dynamic configuration providers allows ESC to integrate with secrets stored in any other provider. Organizations often use AWS OIDC, AWS Secrets Manager, Vault, Azure OIDC, Azure KeyVault, GCP OIDC, and GCP Secrets Manager plus many more sources of truth for their secrets and configuration. Pulumi ESC supports them all, providing a single interface to your configuration and secrets, no matter where their source of truth is. Pulumi ESC works with these tools to provide improved management of secrets and configuration.
@@ -33,12 +34,14 @@ ESC also integrates with tools like Direnv, Terraform, and Docker to help manage
 
 ## Kubernetes
 
-- [Kubernetes](/docs/esc/integrations/kubernetes)
+- [Kubernetes](/docs/esc/integrations/kubernetes/kubernetes)
+- [External Secrets Operator (ESO)](/docs/esc/integrations/kubernetes/external-secrets-operator)
 
 ## Developer tools
 
 - [Direnv](/docs/esc/integrations/dev-tools/direnv)
 - [Docker](/docs/esc/integrations/dev-tools/docker)
+- [GitHub](/docs/esc/integrations/dev-tools/github)
 
 ## Infrastructure tools
 

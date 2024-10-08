@@ -17,7 +17,7 @@ This is why we built and run the [Pulumi Service](/product/pulumi-service/), a r
 
 Over the last few years, we've continued to expand the features of the Pulumi Service - with [Deployments](/blog/pulumi-deployments/),  [Audit Logs](/docs/pulumi-cloud/audit-logs/), [SAML SSO](/docs/pulumi-cloud/access-management/saml/) and [SCIM](/docs/pulumi-cloud/access-management/scim/), [Teams](/docs/pulumi-cloud/access-management/teams/), [Stack Transfers](/blog/stack-transfers/), [Favorites](/blog/new-improved-pulumi-service-console/), [Organization](/docs/pulumi-cloud/access-management/organization-access-tokens/) and [Team Access Tokens](/docs/pulumi-cloud/access-management/team-access-tokens/) and much more.
 
-While the majority of Pulumi users do choose to use the Pulumi Service, we also know that there are good reasons why some organizations would prefer to use Pulumi IaC alone without the Pulumi Service.  And so we support and continue to invest in enabling a variety of additional [backends](/docs/concepts/state/) that allow the Pulumi CLI to be used with state stored in the local filesystem or in cloud storage like S3, Azure Blob Storage, or Google Cloud Storage.
+While the majority of Pulumi users do choose to use the Pulumi Service, we also know that there are good reasons why some organizations would prefer to use Pulumi IaC alone without the Pulumi Service.  And so we support and continue to invest in enabling a variety of additional [backends](/docs/iac/concepts/state-and-backends/) that allow the Pulumi CLI to be used with state stored in the local filesystem or in cloud storage like S3, Azure Blob Storage, or Google Cloud Storage.
 
 Historically the Pulumi Service backend and the self-managed file storage backends have differed in their handling of "projects". The Pulumi Service stores state for a Pulumi stack in a seperate namespace per project. The self-managed backends have historically stored all stacks in a single namespace across all projects.  This inconsistency has been a common source of confusion for users getting started with Pulumi when using the file storage backends.
 
@@ -48,7 +48,7 @@ deploying to the "test" and "prod" stacks.
 
 Each stack tracks metadata about your infrastructure
 so it can manage your cloud resources.
-This metadata is called [*state*](/docs/concepts/state/)
+This metadata is called [*state*](/docs/iac/concepts/state-and-backends/)
 and it is stored in a *backend* of your choosing:
 **Service** or **Self-Managed**.
 
@@ -67,7 +67,7 @@ for additional control over where the information is stored.
 ![What's a state backend](whats-a-backend.png)
 
 If you're unsure of which backend to use,
-see [Deciding On a State Backend](/docs/concepts/state/#deciding-on-a-state-backend).
+see [Deciding On a State Backend](/docs/iac/concepts/state-and-backends/#deciding-on-a-state-backend).
 
 ### Project-scoped stacks
 

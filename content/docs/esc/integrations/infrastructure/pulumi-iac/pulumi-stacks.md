@@ -18,13 +18,16 @@ The `pulumi-stacks` provider enables you to import Stack outputs from Pulumi int
 ## Example
 
 ```yaml
-stack-outputs:
-  fn::open::pulumi-stacks:
-    stacks:
-      myNetworkingStack:
-        stack: myNetworkingProject/prod
-      myDataStack:
-        stack: myDataProject/prod
+values:
+  stackRefs:
+    fn::open::pulumi-stacks:
+      stacks:
+        vpcInfra:
+          stack: vpc-infra/dev
+  pulumiConfig:
+    vpcId: ${stackRefs.vpcInfra.vpcId}
+    publicSubnetIds: ${stackRefs.vpcInfra.publicSubnetIds}
+    privateSubnetIds: ${stackRefs.vpcInfra.privateSubnetIds}
 ```
 
 ## Inputs

@@ -739,7 +739,7 @@ In this post, we've seen some ways to enforce AWS tagging best practices. This i
 
 Check out these resources to get started with Pulumi's open source platform:
 
-* [AWS getting started guide](/docs/clouds/aws/get-started/)
+* [AWS getting started guide](/docs/iac/get-started/aws/)
 * [Policy as Code getting started guide](/docs/using-pulumi/crossguard/get-started/)
 * [Full example code used in this post](https://github.com/joeduffy/aws-tags-example)
 

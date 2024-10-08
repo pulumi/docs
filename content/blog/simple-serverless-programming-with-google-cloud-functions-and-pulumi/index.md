@@ -179,7 +179,7 @@ takes care of that you would normally be responsible for. This includes:
     encrypt and manage secrets for your Cloud Function code.
 
 Not to mention that by doing all of that, you can achieve continuous deployment
-[Pulumi and Google Cloud Build](/docs/using-pulumi/continuous-delivery/google-cloud-build/).
+[Pulumi and Google Cloud Build](/docs/iac/packages-and-automation/continuous-delivery/google-cloud-build/).
 
 ## Updating Your Google Functions Code
 
@@ -226,7 +226,7 @@ create, update, and maintain.
 
 To check things out, get started today:
 
-- [Get Started with Pulumi on GCP](/docs/clouds/gcp/get-started/)
+- [Get Started with Pulumi on GCP](/docs/iac/get-started/gcp/)
 - [Deploy a Minimal Google Cloud Function Application](https://github.com/pulumi/examples/tree/master/gcp-ts-functions)
 
 PS: If you're interested in how Pulumi manages to take a

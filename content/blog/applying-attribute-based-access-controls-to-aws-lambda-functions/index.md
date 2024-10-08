@@ -40,7 +40,7 @@ For this example, we’ll define a new role 'abac-test' as well as a team attrib
 
 ![Controlling access to creating an AWS Lambda function via IAM Roles and Attributes](./figure1.png)
 
-To get started, let's first install the Pulumi AWS Classic provider:
+To get started, let's first install the Pulumi AWS provider:
 
 {{< chooser language "typescript,csharp,python,go" >}}
 {{% choosable language typescript %}}

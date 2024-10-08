@@ -288,7 +288,7 @@ is safe to check into your source tree, since it cannot be copied/decrypted for 
 
 ### Secrets in Checkpoint Files
 
-Pulumi keeps track of your cloud resources in a something called a [checkpoint file](/docs/concepts/state/),
+Pulumi keeps track of your cloud resources in a something called a [checkpoint file](/docs/iac/concepts/state-and-backends/),
 and that too might contain sensitive information. For example, a Pulumi resource might have a `"password"` output property.
 
 Pulumi [has support](/docs/concepts/resources#additionalsecretoutputs) to mark that resource

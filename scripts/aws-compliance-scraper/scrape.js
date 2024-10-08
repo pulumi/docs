@@ -53,7 +53,7 @@ function loadServices() {
         encoding: "utf8",
     });
     const complianceFrameworks = JSON.parse(contents);
-    return complianceFrameworks.services.map(svc => svc.name)
+    return complianceFrameworks.services.filter(svc => svc.cloud === "AWS").map(svc => svc.name)
 }
 
 async function getControls() {

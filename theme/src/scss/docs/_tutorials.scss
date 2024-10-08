@@ -55,4 +55,12 @@
     h6 {
         @apply text-sm;
     }
+
+    // Summaries may not end up in `p` tags (which would style them automatically), so
+    // we target the directly just in case. (Otherwise they wouldn't appear as links.)
+    main .summary {
+        a {
+            @apply text-blue-500;
+        }
+    }
 }

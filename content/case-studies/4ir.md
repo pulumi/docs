@@ -3,7 +3,7 @@ title_tag: Modernizing Manufacturing with 4IR and Pulumi | Case Studies
 title: "Case Study: Modernizing Manufacturing with 4IR and Pulumi"
 description: |
     4IR uses Pulumi to reduce infrastructure deployment times, up-skill its team, and accelerate time to market.
-    
+
 meta_desc: Learn how 4IR worked with Pulumi to cut deployment time from days to hours and saved $75k annually on outsourcing costs.
 
 customer_name: 4IR
@@ -64,7 +64,7 @@ Adopting Kubernetes was not an easy decision. Although cloud provider-managed of
 4IR created three projects. The first project provides the Kubernetes application layer, which uses Pulumi's Kubernetes provider and is written to be cloud agnostic. The second project is an AWS-specific layer which operates resources such as VPCs, EKS, and PostgreSQL on RDS. The third project is similar to the second, except that it is specific to Azure, and runs similar services, such as VNETs, AKS, and Azure Database for PostgreSQL. In short, both the AWS and Azure projects run the core compute, database, and networking infrastructure primitives, while the Kubernetes layer deploys Kubernetes applications across either cloud.
 
 <img class="block mx-auto md:max-w-4xl my-8"
-src="/images/case-studies/4ir-multicloud.png" alt="Multi-cloud architecture diagram with Apps on Azure Native and AWS Classic">
+src="/images/case-studies/4ir-multicloud.png" alt="Multi-cloud architecture diagram with Apps on Azure Native and AWS">
 
 ### Supporting Hybrid Cloud with Components
 

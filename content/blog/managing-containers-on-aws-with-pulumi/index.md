@@ -14,7 +14,7 @@ tags:
 ---
 
 {{% notes type="warning" %}}
-Some of the code in this post is out of date. See the [AWS guides](/docs/clouds/aws/guides/) for an updated overview and examples.
+Some of the code in this post is out of date. See the [AWS guides](/docs/iac/clouds/aws/guides/) for an updated overview and examples.
 {{% /notes %}}
 
 The Amazon Web Services (AWS) Cloud ecosystem is large and vibrant, so vast and vibrant that at times, it can be challenging to know where best to start! In the case of [containers](https://www.pulumi.com/containers/), [Abby Fuller](https://twitter.com/abbyfuller) tweeted a descriptive summary about using AWS container services.
@@ -27,7 +27,7 @@ It looks straightforward, but it's easy to get lost in the details when configur
 
 The AWS Elastic Container Registry (ECR) is a container registry that supports private container registries. ECR makes it easy to store, build, manage, and deploy container images and eliminates the need to operate your registry or use public registries, all in a highly available and scalable architecture.
 
-In this example, we use Pulumi’s [Crosswalk for AWS](/docs/clouds/aws/guides/). Crosswalk for AWS is a collection of frequent tasks and best practices that simplify deploying infrastructure on AWS. We first declare a repository; this creates the AWS Container Repository resource. The last line of the code exports the URL so that we can access the repository after we have updated our Pulumi stack. After we’ve run `pulumi up`, the repository is ready to go, and you can use the Docker CLI to push, pull, and manage images.
+In this example, we use Pulumi’s [Crosswalk for AWS](/docs/iac/clouds/aws/guides/). Crosswalk for AWS is a collection of frequent tasks and best practices that simplify deploying infrastructure on AWS. We first declare a repository; this creates the AWS Container Repository resource. The last line of the code exports the URL so that we can access the repository after we have updated our Pulumi stack. After we’ve run `pulumi up`, the repository is ready to go, and you can use the Docker CLI to push, pull, and manage images.
 
 ```typescript
 import * as awsx from "@pulumi/awsx";
@@ -148,7 +148,7 @@ export const kubeconfig = cluster.kubeconfig;
 
 ## Build!
 
-Let’s put it all together for both ECS and EKS. To get started, follow the [Pulumi AWS documentation](/docs/clouds/aws/get-started/) to install Pulumi, [install AWS Client](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv1.html) set your [AWS environment variables](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html), and [create a new project](/docs/clouds/aws/get-started/) in Typescript.
+Let’s put it all together for both ECS and EKS. To get started, follow the [Pulumi AWS documentation](/docs/iac/get-started/aws/) to install Pulumi, [install AWS Client](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv1.html) set your [AWS environment variables](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html), and [create a new project](/docs/iac/get-started/aws/) in Typescript.
 
 ```bash
 $ mkdir get-started && cd get-started
@@ -346,4 +346,4 @@ As with the ECS example, run `pulumi up` to deploy the application. To check the
 
 ## Want to know more?
 
-Although these examples are simple, they demonstrate the basic building blocks for building, storing, and managing AWS Containers. They also show how to create ECS or EKS clusters for deploying apps. To get started with AWS and Pulumi check out the [AWS Guide](/docs/clouds/aws/get-started/) for core services and the [Crosswalk for AWS guide](/docs/clouds/aws/guides/) for convenience APIs that simplify deploying infrastructure as code. For a deeper dive into managing containers on AWS, check out our blogs on [ECS vs Fargate vs EKS: The Lowdown on Containers in AWS](https://www.pulumi.com/blog/running-containers-in-aws-the-lowdown-ecs-fargate-and-eks/) and [How to Scale Your Amazon EKS Cluster: EC2, Managed Node Groups, and Fargate](/blog/aws-eks-managed-nodes-fargate).
+Although these examples are simple, they demonstrate the basic building blocks for building, storing, and managing AWS Containers. They also show how to create ECS or EKS clusters for deploying apps. To get started with AWS and Pulumi check out the [AWS Guide](/docs/iac/get-started/aws/) for core services and the [Crosswalk for AWS guide](/docs/iac/clouds/aws/guides/) for convenience APIs that simplify deploying infrastructure as code. For a deeper dive into managing containers on AWS, check out our blogs on [ECS vs Fargate vs EKS: The Lowdown on Containers in AWS](https://www.pulumi.com/blog/running-containers-in-aws-the-lowdown-ecs-fargate-and-eks/) and [How to Scale Your Amazon EKS Cluster: EC2, Managed Node Groups, and Fargate](/blog/aws-eks-managed-nodes-fargate).

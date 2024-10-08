@@ -128,7 +128,7 @@ export const clickInputStream = clicksInputStream.name;
 
 In a dozen lines of code, we’ve provisioned two of our desired tables, “clicks” and “impressions”, using our serverless streaming input architecture. It takes care of everything, including implicitly creating an arrival time [partition scheme](https://docs.aws.amazon.com/athena/latest/ug/partitions.html) with the key “inserted_at”. We export our Kinesis input streams as [stack outputs](/docs/concepts/stack#outputs) that can be referenced in other projects, such as the instrumentation within our ad server or consumer-facing web app.
 
-While on the surface this Pulumi component is described imperatively, it produces a declarative output in the form of a [state file](/docs/concepts/state/) that can be managed locally, in an object store like S3, or by the Pulumi Service backend. Running a ‘pulumi up’ shows that we’ve created 45 AWS resources, and lists our stack outputs to the console.
+While on the surface this Pulumi component is described imperatively, it produces a declarative output in the form of a [state file](/docs/iac/concepts/state-and-backends/) that can be managed locally, in an object store like S3, or by the Pulumi Service backend. Running a ‘pulumi up’ shows that we’ve created 45 AWS resources, and lists our stack outputs to the console.
 
 ![Pulumi Up Result](./PulumiUpOutput.png)
 

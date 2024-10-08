@@ -1,7 +1,7 @@
 ---
 # This file is auto-generated. Any alterations made within are subject
 # to being overwritten.
-title: PCI DSS Compliance for AWS API Gateway
+title: How to Achieve PCI DSS Compliance for AWS API Gateway
 cloud: AWS
 layout: "pci-dss"
 slug: pci-dss-aws-api-gateway

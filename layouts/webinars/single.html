@@ -19,7 +19,7 @@
                 {{ else }}
                     <a href="/resources/#upcoming"><div class="text-blue-600 mb-4"><i class="fa fa-arrow-left mr-2"></i>All upcoming events</div></a>
                 {{ end }}
-                <span class="font-medium">WORKSHOP</span>
+                <span class="font-medium">{{ .Params.main.event_type | upper }}</span>
                 <span class="text-gray-300">&#8226;</span>
                 {{ if .Params.main.youtube_url }}
                     <span class="font-normal">ON-DEMAND</span>
@@ -33,7 +33,11 @@
                         {{ if not .Params.main.youtube_url }}
                             {{ partial "events/timing-info.html" (dict "datetime" .Params.main.sortable_date "duration" .Params.main.duration) }}
                         {{ end }}
-                        {{ partial "events/summary.html" (dict "description" .Params.main.description "learn" .Params.main.learn) }}
+                        {{ $show_cloud := true }}
+                        {{ if eq .Params.main.event_type "event" }}
+                            {{ $show_cloud = false }}
+                        {{ end }}
+                        {{ partial "events/summary.html" (dict "description" .Params.main.description "learn" .Params.main.learn "show_cloud" $show_cloud ) }}
                     </div>
 
                     <div class="w-full lg:w-1/2 lg:pl-4 mb-4">

@@ -76,7 +76,7 @@ Fauna could also easily integrate its secrets manager tool, HashiCorp Vault, wit
 
 ### Future plans
 
-Fauna is using Pulumi's [Automation API](/automation/) to manage its quality assurance clusters and plans to extend its use in production clusters to further automate its infrastructure deployment process by running changes through a CI/CD pipeline. Automation API enables Fauna to use the Pulumi engine as an SDK and build applications that dynamically manage infrastructure. Fauna also plans to adopt Pulumi’s [AWS Native Provider](/blog/announcing-aws-native/), which provides 100% coverage of resources in the AWS Cloud Control API and has same-day access to new AWS launches.
+Fauna is using Pulumi's [Automation API](/automation/) to manage its quality assurance clusters and plans to extend its use in production clusters to further automate its infrastructure deployment process by running changes through a CI/CD pipeline. Automation API enables Fauna to use the Pulumi engine as an SDK and build applications that dynamically manage infrastructure. Fauna also plans to adopt Pulumi’s [AWS Cloud Control Provider](/registry/packages/aws-native/), which provides 100% coverage of resources in the AWS Cloud Control API and has same-day access to new AWS launches.
 
 ### How Pulumi Benefits Fauna
 

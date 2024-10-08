@@ -11,7 +11,7 @@ tags:
 ---
 
 {{% notes type="warning" %}}
-Some of the code in this post is out of date. See the [AWS guides](/docs/clouds/aws/guides/) for an updated overview and examples.
+Some of the code in this post is out of date. See the [AWS guides](/docs/iac/clouds/aws/guides/) for an updated overview and examples.
 {{% /notes %}}
 
 Our mission at Pulumi is to enable teams to scale up what they can build in the cloud.  Scale up the sophistication and value of their cloud infrastructure investments through software engineering practices.  Scale up the automation around delivering cloud infrastructure with software instead of just humans.  And scale up the number of developers who can directly benefit from the rich cloud platform capabilities being built by central platform teams in every organization today.

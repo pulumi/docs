@@ -19,12 +19,18 @@ The `aws-login` provider enables you to log in to your AWS account using OpenID 
 ## Example
 
 ```yaml
-aws:
-  login:
-    fn::open::aws-login:
-      oidc:
-        roleArn: arn:aws:iam::123456789:role/esc-oidc
-        sessionName: pulumi-environments-session
+values:
+  aws:
+    login:
+      fn::open::aws-login:
+        oidc:
+          duration: 1h
+          roleArn: arn:aws:iam::012345678912:role/role-abcd123
+          sessionName: pulumi-esc
+  environmentVariables:
+    AWS_ACCESS_KEY_ID: ${aws.login.accessKeyId}
+    AWS_SECRET_ACCESS_KEY: ${aws.login.secretAccessKey}
+    AWS_SESSION_TOKEN: ${aws.login.sessionToken}
 ```
 
 ## Configuring OIDC

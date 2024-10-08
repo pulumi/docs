@@ -13,7 +13,7 @@ menu:
 cloud_overview: true
 description: Build infrastructure on Google Cloud using TypeScript, Python, Go, C#, Java or YAML. Pulumi supports all Google Cloud APIs and stays up-to-date with all Google Cloud features.
 get_started_guide:
-  link: get-started/
+  link: /docs/iac/get-started/gcp/
   icon: google-cloud
 providers:
   description: The Google Cloud Classic provider can provision many Google Cloud resources. Use the Google Cloud Native provider for same-day access to Google Cloud resources.

@@ -8,6 +8,8 @@ menu:
     parent: esc-languages-sdks
     identifier: typescript-sdk
     weight: 1
+aliases:
+  - /docs/esc/sdk/javascript/
 ---
 
 The [JavaScript/TypeScript SDK](https://www.npmjs.com/package/@pulumi/esc-sdk) for [Pulumi ESC (Environments, Secrets, and Configuration)](/product/esc/) allows you to automate Pulumi ESC.
@@ -29,7 +31,7 @@ Run `npm install @pulumi/esc-sdk` or `yarn add @pulumi/esc-sdk` to install the S
 
 These samples show how to create an `EscApi` client with an access token and use it to perform varias ESC tasks.
 
-All of these example expects a `PULUMI_ACCESS_TOKEN` and `PULUMI_ORG` environment variable to be set.
+All of these examples expect a `PULUMI_ACCESS_TOKEN` and `PULUMI_ORG` environment variable to be set.
 
 ### Manage environment example
 

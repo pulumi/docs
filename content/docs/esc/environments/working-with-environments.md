@@ -298,7 +298,7 @@ You can also use the Pulumi Cloud REST API to perform standard CRUD operations o
 
 ## Using secrets providers and OIDC {#using-secrets-providers-and-oidc}
 
-In addition to static and interpolated values, environments can incorporate dynamically retrieved settings and secrets from many [supported providers](/docs/pulumi-cloud/esc/providers/), including cloud providers via OpenID Connect (OIDC).
+In addition to static and interpolated values, environments can incorporate dynamically retrieved settings and secrets from many [supported providers](/docs/esc/integrations/), including cloud providers via OpenID Connect (OIDC).
 
 The following example combines the [`aws-login`](/docs/pulumi-cloud/esc/providers/aws-login/) and [`aws-secrets`](/docs/pulumi-cloud/esc/providers/aws-secrets/) providers to obtain short-lived credentials from AWS to pull two secrets from AWS Secrets Manager (`api-key` and `app-secret`) into an environment:
 

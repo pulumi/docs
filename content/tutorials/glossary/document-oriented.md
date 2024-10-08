@@ -4,7 +4,7 @@ title: Document Oriented Database
 meta_desc: A documented-oriented database is a class of NoSQL database that stores and queries data in the form of documents, usually JSON.
 layout: glossary/single
 aliases:
-    - /tutorials/glossary/document-oriented/
+    - /learn/glossary/document-oriented/
 ---
 
 ## Definition

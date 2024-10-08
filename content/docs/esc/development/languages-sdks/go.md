@@ -8,6 +8,8 @@ menu:
     parent: esc-languages-sdks
     identifier: go-sdk
     weight: 3
+aliases:
+  - /docs/esc/sdk/go/
 ---
 
 The [Go SDK](https://github.com/pulumi/esc-sdk) for [Pulumi ESC (Environments, Secrets, and Configuration)](/product/esc/) allows you to automate Pulumi ESC.

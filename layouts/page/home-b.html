@@ -186,6 +186,25 @@
         {{ partial "home/quote.html" (dict "quote" .Params.customer_quotes.snowflake) }}
     </section>
 
+    <section class="my-4 lg:my-12 px-6 lg:px-0 relative home-page-section">
+        <div class="container mx-auto z-10 relative">
+            <div class="w-full lg:w-2/3 mx-auto">
+                <div class="z-10 px-8">
+                    <h3>{{ .Params.security.title }}</h3>
+                    <p class="text-lg">{{ .Params.security.description | markdownify }}</p>
+                    <div class="mt-8">
+                        <span class="text-lg">Learn more: </span>
+                        <a href="/product/pulumi-insights" class="underline text-lg">Pulumi Insights<i class="fa fa-arrow-right ml-2"></i></a>
+                    </div>
+                </div>
+
+                <div class="flex items-center justify-center mt-8">
+                    <img src="{{ .Params.security.image }}" class="card shadow-xl" />
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Boost productivity with AI -->
     <section class="py-12 lg:my-12 px-6 lg:px-0 relative home-page-section">
         <div class="home-page-science-section-background">

@@ -36,7 +36,7 @@ prereqs:
     - The [Pulumi CLI](https://www.pulumi.com/docs/install/)
     - An [Amazon Web Services](https://aws.amazon.com/) account
     - The [AWS CLI](https://aws.amazon.com/cli/)
-    - Your desired [language runtime installed](/docs/clouds/aws/get-started/begin/#install-language-runtime)
+    - Your desired [language runtime installed](/docs/iac/get-started/aws/begin/#install-language-runtime)
 
 # The estimated time, in minutes, for new users to complete the topic.
 estimated_time: 10
@@ -54,7 +54,7 @@ The commands found in this tutorial can be run against any projects or stacks th
 
 {{< /notes >}}
 
-To start, login to the [Pulumi CLI](/docs/cli/commands/pulumi_login/) and ensure it is [configured to use your AWS account](/docs/clouds/aws/get-started/begin/#configure-pulumi-to-access-your-aws-account). Next, [create a new project](/docs/clouds/aws/get-started/create-project/) and replace the default program code with the following:
+To start, login to the [Pulumi CLI](/docs/cli/commands/pulumi_login/) and ensure it is [configured to use your AWS account](/docs/iac/get-started/aws/begin/#configure-pulumi-to-access-your-aws-account). Next, [create a new project](/docs/iac/get-started/aws/create-project/) and replace the default program code with the following:
 
 {{< example-program path="aws-s3bucket-bucketpolicy" >}}
 

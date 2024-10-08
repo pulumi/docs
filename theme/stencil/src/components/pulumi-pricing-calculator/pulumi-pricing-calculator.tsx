@@ -113,7 +113,7 @@ export class PulumiPricingCalculator {
   render() {
     return (
       <div class="calculator">
-        <h3>Cost estimator</h3>
+        <h3>IaC Cost estimator</h3>
         <div class="edition">Team Edition</div>
         <div class="content">
           <div class="inputs">

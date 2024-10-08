@@ -12,7 +12,7 @@ expanded_menu_ids:
 aliases:
   - /docs/pulumi-cloud/esc/
 
-meta_desc: Learn how to easily access, share, and manage secrets securely on any cloud, using your favorite programming languages with Pulumi ESC.
+meta_desc: Learn how to tame secrets sprawl and configuration complexity securely across all your cloud infrastructure and applications with Pulumi ESC.
 meta_image: /images/docs/meta-images/docs-meta.png
 h1: Pulumi ESC Docs
 description: <p>Pulumi ESC is a secrets management & orchestration service for environments, secrets, and configurations.</p>
@@ -93,6 +93,9 @@ sections:
     primary_button_link: /docs/esc/cli/
     secondary_button_label: Install
     secondary_button_link: /docs/esc/download-install/
+  - heading: Dynamic Login Credentials
+    description: Support for short-lived OIDC login credentials for popular cloud providers.
+    link: /docs/esc/integrations/dynamic-login-credentials/
   - heading: Dynamic Secrets Providers
     description: Support for dynamic configuration providers allow Pulumi ESC to integrate with secrets stored in any other provider.
     link: /docs/esc/integrations/dynamic-secrets/

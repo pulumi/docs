@@ -1,7 +1,7 @@
 ---
 title_tag: "Snyk Container Scanning | CrossGuard"
 meta_desc: Snyk container scanning helps you ensure that your Docker images are secure.
-title: Synk Container Scanning
+title: Snyk Container Scanning
 h1: Snyk Container Scanning
 weight: 4
 meta_image: /images/docs/meta-images/docs-meta.png
@@ -225,7 +225,7 @@ Note that the Snyk container policy is a [stack policy](/docs/using-pulumi/cross
 
 ### Configuration parameters
 
-The Synk policy template supports the following configurable options:
+The Snyk policy template supports the following configurable options:
 
 - `dockerfileScanning` (boolean): If set to `true`, Snyk will also scan your image's Dockerfile for additional remediation suggestions. If this value is set, `pulumiProgramAbsPath` must also be set. Default value is `false`.
 - `excludeBaseImageVulns` (boolean): If set to `true`, Snyk will exclude vulnerabilities in the base image for your Dockerfile as defined in the `FROM` directive, and limit its results to layers added on top of the base image. Default value is `false`.

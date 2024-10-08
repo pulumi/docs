@@ -105,7 +105,7 @@ There's also the fact that I can use the Pulumi Console (web interface) to check
 
 ### How I went about the migration
 
-After reading the [migration guide](https://www.pulumi.com/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-terraform//) I immediately tried out what seemed to be the obvious option - [tf2pulumi](https://www.pulumi.com/tf2pulumi/). This is supposed to be able to convert Terraform code directly to Pulumi. In my case it simply errored out and was not able to convert my Terraform code. To be fair my TF code was using slightly more "advanced" features like custom written modules, so it wasn't the easiest thing to handle for tf2pulumi. I recommend you try it out, because it sounds great in theory. However it wasn't an option for me, so I had to go for a more manual approach. In retrospect I'm actually quite happy I did, because it gave me the opportunity to organise my code in a way that I preferred.
+After reading the [migration guide](https://www.pulumi.com/docs/iac/adopting-pulumi/migrating-to-pulumi/from-terraform/) I immediately tried out what seemed to be the obvious option - [tf2pulumi](https://www.pulumi.com/tf2pulumi/). This is supposed to be able to convert Terraform code directly to Pulumi. In my case it simply errored out and was not able to convert my Terraform code. To be fair my TF code was using slightly more "advanced" features like custom written modules, so it wasn't the easiest thing to handle for tf2pulumi. I recommend you try it out, because it sounds great in theory. However it wasn't an option for me, so I had to go for a more manual approach. In retrospect I'm actually quite happy I did, because it gave me the opportunity to organise my code in a way that I preferred.
 
 {{% notes type="info" %}}
 As of Pulumi CLI v3.71.0, `tf2pulumi` has been replaced with `pulumi convert --from terraform`. [Converting Full Terraform Programs to Pulumi blog](/blog/converting-full-terraform-programs-to-pulumi/) has more details.
@@ -113,7 +113,7 @@ As of Pulumi CLI v3.71.0, `tf2pulumi` has been replaced with `pulumi convert --f
 
 Don't worry though - "manual" imports using Pulumi is still rather easy to perform, albeit a bit time consuming. Here's how I did it.
 
-I started by testing out the [AWS getting started guide](https://www.pulumi.com/docs/clouds/aws/get-started/) to get a feel for how Pulumi worked. This was a great move and I recommend everyone else to do the same.
+I started by testing out the [AWS getting started guide](https://www.pulumi.com/docs/iac/get-started/aws/) to get a feel for how Pulumi worked. This was a great move and I recommend everyone else to do the same.
 
 I was then ready to start importing my existing resources. The general workflow was to look at my existing Terraform code, rewrite it using Pulumi, and then import the existing resources. It was a bit time consuming in the beginning, but I got a lot faster at it after a few hours.
 
@@ -375,13 +375,13 @@ update:
 
 As you can see my pipeline is very simple for this little project which is still in an Alpha phase. There's just the "production" environment, and changes are automatically applied once the MR is merged.
 
-You'll have to make use of your gitlab-fu (or other-ci-cd-fu) to adapt this to your own needs. Read the [docs from Pulumi](https://www.pulumi.com/docs/using-pulumi/continuous-delivery/) to get started. It's usually very simple and straight forward!
+You'll have to make use of your gitlab-fu (or other-ci-cd-fu) to adapt this to your own needs. Read the [docs from Pulumi](https://www.pulumi.com/docs/iac/packages-and-automation/continuous-delivery/) to get started. It's usually very simple and straight forward!
 
 I did things quite differently from what's described in the Pulumi docs. I used the ready made image from Docker Hub, while they build their own. I did this to make the whole pipeline quicker. It seems to work really well so far, and I haven't found any downsides to my approach (yet).
 
 ### I couldn't get the Gitlab integration webhooks to work
 
-You are normally able to have Pulumi post a report of the planned changes [attached to your merge request](https://www.pulumi.com/docs/using-pulumi/continuous-delivery/gitlab-app/) .
+You are normally able to have Pulumi post a report of the planned changes [attached to your merge request](https://www.pulumi.com/docs/iac/packages-and-automation/continuous-delivery/gitlab-app/) .
 
 ![image.png](./preview.jpeg)
 

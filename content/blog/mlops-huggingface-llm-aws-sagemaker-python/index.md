@@ -36,7 +36,7 @@ tags:
 [CloudWatch alarms]:/registry/packages/aws/api-docs/cloudwatch/metricalarm
 [Pulumi project and stack]:/docs/using-pulumi/organizing-projects-stacks/
 [Pulumi Cloud]:https://www.pulumi.com/product/pulumi-cloud
-[Pulumi state]:https://www.pulumi.com/docs/concepts/state
+[Pulumi state]:https://www.pulumi.com/docs/iac/concepts/state-and-backends
 [Python Virtual Environment]:/docs/languages-sdks/python/#virtual-environments
 [venv]:/docs/languages-sdks/python/#virtual-environments
 

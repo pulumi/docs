@@ -34,7 +34,7 @@ Learn more in the [Announcing AWS Native](/blog/announcing-aws-native/) blog pos
 
 ### Using AWS Graviton2 processors in AWS Lambda functions
 
-Last week, AWS launched the ability to use Graviton2 processors with AWS Lambda functions. Using Graviton2 processors gives you access to the improved price performance of that architecture. Pulumi's AWS Classic provider shipped with same-day support for this new functionality.
+Last week, AWS launched the ability to use Graviton2 processors with AWS Lambda functions. Using Graviton2 processors gives you access to the improved price performance of that architecture. Pulumi's AWS provider shipped with same-day support for this new functionality.
 
 Learn more in the [AWS Lambda functions blog post](/blog/aws-lambda-functions-powered-by-graviton2/)
 

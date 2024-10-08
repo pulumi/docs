@@ -56,7 +56,7 @@ The following table summarizes some additional similarities and differences betw
 | ------- | ------ | -------------- |
 | [Language Support](#language) | TypeScript, JavaScript, Python, Go, C#, F#, VB.NET, Java, YAML | Python, TypeScript, JavaScript, Go (developer preview), C#, Java |
 | [State Management](#state) | Managed by Pulumi Cloud or with self-managed options | Managed by the AWS CloudFormation service |
-| [Provider Support](#providers) | Supports all major cloud providers, including 100% same-day coverage of new resources with AWS Native | AWS only |
+| [Provider Support](#providers) | Supports all major cloud providers, including 100% same-day coverage of new resources with AWS Cloud Control | AWS only |
 | [Cloud Native Support](#cloud-native) | Richly typed support for the full cloud-native ecosystem and Kubernetes | AWS only |
 | [Dynamic Provider Support](#dynamic-providers) | Yes | Limited |
 | [OSS License](#license) | Apache License 2.0 | Apache License 2.0 (only applies to the CDK framework, and not the deployment engine) |

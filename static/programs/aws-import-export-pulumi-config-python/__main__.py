@@ -3,8 +3,10 @@ import pulumi
 # Import the configuration values
 config = pulumi.Config()
 
-# Retrieve the value of "myEnvironment"
-myValue = config.get("myEnvironment")
+# Retrieve the values of "myEnvironment" and "myPassword"
+environment = config.get("myEnvironment")
+password = config.get_secret("myPassword")
 
-# Export the value as an output
-pulumi.export('Value', myValue)
+# Export the values as an output
+pulumi.export('Environment', environment)
+pulumi.export("Password", password)

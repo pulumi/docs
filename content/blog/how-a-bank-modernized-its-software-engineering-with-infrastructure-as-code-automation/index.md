@@ -64,7 +64,7 @@ The bank decided to adopt IaC to create reliable and rapid deployments while ens
 
 ## Why Washington Trust Bank Chose Pulumi
 
-The bank evaluated several options, including [Terraform](/docs/concepts/vs/terraform/) and Azure Bicep. However, Pulumi stood out due to its versatility, support for multiple clouds and [native Azure support](/blog/introducing-azure-native-v2/), and the ability to write IaC in the bank's preferred language, TypeScript. The ease of using Pulumi with GitHub, its ability to be used in conjunction with Azure CLI, and its comprehensive [support for CI/CD](/docs/using-pulumi/continuous-delivery/) through GitHub Actions were also compelling factors.
+The bank evaluated several options, including [Terraform](/docs/concepts/vs/terraform/) and Azure Bicep. However, Pulumi stood out due to its versatility, support for multiple clouds and [native Azure support](/blog/introducing-azure-native-v2/), and the ability to write IaC in the bank's preferred language, TypeScript. The ease of using Pulumi with GitHub, its ability to be used in conjunction with Azure CLI, and its comprehensive [support for CI/CD](/docs/iac/packages-and-automation/continuous-delivery/) through GitHub Actions were also compelling factors.
 
 Dennis praised Pulumi, saying, "_Pulumi was exactly the Swiss Army Knife versatility we were looking for. We've only uncovered more of what we love about Pulumi as our relationship has evolved._"
 

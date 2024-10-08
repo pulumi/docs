@@ -93,7 +93,7 @@ of the system.
 I hope this short introduction to how state works, especially with
 infrastructure-as-code platforms, helps get you on your way! If you want to read
 more about state with Pulumi (and get some nifty diagrams), head to
-[State and Backends](/docs/concepts/state/). Until
+[State and Backends](/docs/iac/concepts/state-and-backends/). Until
 next time!
 
 ---

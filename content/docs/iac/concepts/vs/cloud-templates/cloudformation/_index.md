@@ -56,7 +56,7 @@ The following table summarizes some additional similarities and differences betw
 | [Language Support](#language) | TypeScript, JavaScript, Python, Go, C#, F#, VB.NET, Java, YAML | YAML or JSON only |
 | [IDE Support](#ide) | IntelliSense, code completion, strong typing, error squiggles, rich documentation, interactive debugging, and more | Plugin-based |
 | [State Management](#state) | Managed by Pulumi Cloud or with self-managed options | Managed by the AWS CloudFormation service |
-| [Provider Support](#providers) | All major cloud providers supported, including 100% same-day coverage of new resources with [AWS Native](/registry/packages/aws-native/) | Third-party providers supported through CloudFormation Registry extensions |
+| [Provider Support](#providers) | All major cloud providers supported, including 100% same-day coverage of new resources with [AWS Cloud Control](/registry/packages/aws-native/) | Third-party providers supported through CloudFormation Registry extensions |
 | [Cloud Native Support](#cloud-native) | Richly typed support for the full cloud-native ecosystem and Kubernetes | AWS only |
 | [Dynamic Provider Support](#dynamic-providers) | Yes | Limited |
 | [OSS License](#license) | Apache License 2.0 | None |

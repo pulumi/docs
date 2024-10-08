@@ -183,7 +183,7 @@ The converter has saved us a ton of time, converting over 1,000 lines of Terrafo
 
 It's great that the new converter can migrate Terraform projects to Pulumi for new deployments, but what if you want to import existing resource states from a `.tfstate` file to avoid unnecessarily recreating your infrastructure?
 
-If you're using TypeScript or Go, there is some additional code that can be added to your converted Pulumi program to import resource states from a `.tfstate` file. See the [Importing Resources](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-terraform/#importing-resources) reference documentation for more details.
+If you're using TypeScript or Go, there is some additional code that can be added to your converted Pulumi program to import resource states from a `.tfstate` file. See the [Importing Resources](/docs/iac/adopting-pulumi/migrating-to-pulumi/from-terraform/#importing-resources) reference documentation for more details.
 
 We're working to make this even more seamless with built-in support for importing state from `.tfstate` files in a future update coming soon.
 

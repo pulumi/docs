@@ -56,7 +56,7 @@ Supported Compliance Ready Policy packages are:
 
 * `@pulumi/compliance-policy-manager` (**Required**) Policy Manager is used to manage Compliance Ready Policies.
 * `@pulumi/aws-compliance-policies` Set of Compliance Ready Policies for Amazon Web Services, for both
-  AWS Native and AWS Classic providers.
+  AWS Cloud Control and AWS providers.
 * `@pulumi/azure-compliance-policies` Set of Compliance Ready Policies for Microsoft Azure, for both Azure
   Native and Azure Classic providers.
 * `@pulumi/google-compliance-policies` Set of Compliance Ready Policies for Google Cloud Platform, for
@@ -111,7 +111,7 @@ select and use policies based on areas of focus.
 Policies have 5 metadata fields:
 
 * The `vendor` field holds the vendor's name to which the policy belongs to. For example `aws` is for
-Amazon Web Services. If a vendor has more than one Pulumi provider (ie, AWS Classic and AWS Native),
+Amazon Web Services. If a vendor has more than one Pulumi provider (ie, AWS and AWS Cloud Control),
 then policies are grouped under the same vendor name. This is done so organizations have a complete
 control over resource creation regardless of the Pulumi provider used.
 
@@ -299,8 +299,8 @@ npm install --save @pulumi/aws-compliance-policies
 
 The list of policies contained in each NPM policy package can be found below:
 
-* [AWS Classic](../compliance-ready-policies-aws/)
-* [AWS Native](../compliance-ready-policies-awsnative/)
+* [AWS](../compliance-ready-policies-aws/)
+* [AWS Cloud Control](../compliance-ready-policies-awsnative/)
 * [Azure Classic](../compliance-ready-policies-azure/)
 * [Azure Native](../compliance-ready-policies-azurenative/)
 * [GCP](../compliance-ready-policies-gcp/)

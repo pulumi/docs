@@ -9,7 +9,7 @@ meta_image: "pulumi-crosswalk-for-aws.png"
 ---
 
 {{% notes type="warning" %}}
-Some of the code in this post is out of date. See the [AWS guides](/docs/clouds/aws/guides/) for an updated overview and examples.
+Some of the code in this post is out of date. See the [AWS guides](/docs/iac/clouds/aws/guides/) for an updated overview and examples.
 {{% /notes %}}
 
 Amazon Elastic Container Registry ([ECR](https://aws.amazon.com/ecr/))
@@ -221,10 +221,10 @@ sync.
 Pulumi is open source and free to use. For more information on Getting
 Started, check out:
 
-1. [AWS QuickStart](/docs/clouds/aws/get-started/)
+1. [AWS QuickStart](/docs/iac/get-started/aws/)
 2. [Pulumi Crosswalk for AWS Announcement](/blog/introducing-pulumi-crosswalk-for-aws-the-easiest-way-to-aws/)
 3. [Mapbox IOT-as-Code with Pulumi Crosswalk for AWS](/blog/mapbox-iot-as-code-with-pulumi-crosswalk-for-aws/)
-4. [Pulumi Crosswalk for AWS Documentation for ECS, EKS, ELB, and more](/docs/clouds/aws/guides/)
+4. [Pulumi Crosswalk for AWS Documentation for ECS, EKS, ELB, and more](/docs/iac/clouds/aws/guides/)
 
 We think there's no easier way to do containers in a tight inner
 development loop, and we hope you agree!

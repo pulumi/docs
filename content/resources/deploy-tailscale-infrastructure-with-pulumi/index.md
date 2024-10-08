@@ -61,9 +61,9 @@ main:
         - name: Lee Briggs
           role: Sales Engineering Manager, Tailscale
           photo: /images/team/lee-briggs.jpg
-        - name: Diana Esteves
-          role: Solutions Architect, Pulumi
-          photo: /images/team/diana-esteves.jpg
+        - name: Josh Kodroff 
+          role: Sr Solutions Architect, Pulumi
+          photo: /images/team/josh-kodroff.jpg
 
     # case-sensitive
     tags:

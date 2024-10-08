@@ -80,7 +80,7 @@ IaC in general-purpose languages is gaining prominence as organizations seek to 
 - Deeper validation on parameters that people are passing in, checking all critical components, ensuring they are configured correctly before deployment
 - More [efficient resource management](https://www.pulumi.com/docs/pulumi-cloud/insights/)
 - Robust security and [Policy as Code](https://www.pulumi.com/docs/using-pulumi/crossguard/core-concepts/) to enforce security practices, guardrails, compliance, cost policies, and more
-- Intelligent automation, including [automated tests](https://www.pulumi.com/docs/using-pulumi/testing/) and [remediation policies](https://www.pulumi.com/blog/remediation-policies/)
+- Intelligent automation, including [automated tests](https://www.pulumi.com/docs/iac/concepts/testing/) and [remediation policies](https://www.pulumi.com/blog/remediation-policies/)
 - [AI-driven automation and insights](https://www.pulumi.com/blog/pulumi-insights/)
 
 ## 4. Rise of Security-First (DevSecOps)

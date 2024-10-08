@@ -1,0 +1,10 @@
+name: aws-s3bucket-s3objects-random-typescript
+runtime:
+  name: nodejs
+  options:
+    packagemanager: npm
+description: An example that deploys an S3 bucket, S3 bucket objects, and a Pulumi random resource.
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: aws-typescript
