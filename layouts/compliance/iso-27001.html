@@ -77,6 +77,8 @@
         {{ partial "compliance/iso-27001/aws.html" . }}
     {{ else if eq .Params.cloud "Azure" }}
         {{ partial "compliance/iso-27001/azure.html" . }}
+    {{ else if eq .Params.cloud "Google Cloud" }}
+        {{ partial "compliance/iso-27001/google-cloud.html" . }}
     {{ end }}
 </section>
 {{end}}

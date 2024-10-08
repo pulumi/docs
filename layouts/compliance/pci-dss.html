@@ -74,6 +74,8 @@
             {{ partial "compliance/pci-dss/aws.html" . }}
         {{ else if eq .Params.cloud "Azure" }}
             {{ partial "compliance/pci-dss/azure.html" . }}
+        {{ else if eq .Params.cloud "Google Cloud" }}
+            {{ partial "compliance/pci-dss/google-cloud.html" . }}
         {{ end }}
     </section>
     {{ end }}
