@@ -41,6 +41,9 @@ estimated_time: 10
 # # An optional list of collections this tutorial should be belong to. Collections are defined in data/tutorials/collections.yaml.
 # collections:
 #     - some-non-existent-collection
+
+aliases:
+- /tutorials/building-with-pulumi/secrets/
 ---
 
 ## Create a new project

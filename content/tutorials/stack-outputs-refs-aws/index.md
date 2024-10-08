@@ -1,6 +1,6 @@
 ---
-title: "Stack Outputs and References"
-title_tag: "Stack Outputs and References"
+title: "Reference AWS Resources Across Stacks"
+title_tag: "Reference AWS Resources Across Stacks"
 layout: single
 
 # A succinct description of the tutorial. It appears on the Tutorials home and collection pages.
@@ -48,6 +48,8 @@ estimated_time: 15
 
 aliases:
   - /docs/using-pulumi/stack-outputs-and-references/
+  - /tutorials/building-with-pulumi/stack-outputs/
+  - /tutorials/building-with-pulumi/stack-references/
 ---
 
 ## Understanding stack outputs
