@@ -50,6 +50,7 @@ aliases:
   - /docs/using-pulumi/stack-outputs-and-references/
   - /tutorials/building-with-pulumi/stack-outputs/
   - /tutorials/building-with-pulumi/stack-references/
+  - /tutorials/stack-outputs-and-references/
 ---
 
 ## Understanding stack outputs
