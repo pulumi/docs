@@ -43,7 +43,7 @@ This is enabled by our new Local Packages feature, which lets you generate Pulum
 
   {{< video title="Using Planetscale with Pulumi" src="anytfplanetscale.mp4" autoplay="true" loop="true" >}}
 
-Local packages are available as a convenient alternative to the existing support for authoring Native or Bridged Pulumi Packages. You can read more about all of the options available to authoring and using Pulumi Packages in the [Pulumi Packages documentation](https://www.pulumi.com/docs/using-pulumi/pulumi-packages/), or about how to generate a local package for a Terraform or OpenTofu provider in the [Any Terraform Provider](https://www.pulumi.com/registry/packages/terraform-provider/) docs.
+Local packages are available as a convenient alternative to the existing support for authoring Native or Bridged Pulumi Packages. You can read more about all of the options available to authoring and using Pulumi Packages in the [Pulumi Packages documentation](https://www.pulumi.com/docs/iac/packages-and-automation/pulumi-packages/debugging-provider-packages/), or about how to generate a local package for a Terraform or OpenTofu provider in the [Any Terraform Provider](https://www.pulumi.com/registry/packages/terraform-provider/) docs.
 
 ## Walkthrough
 
@@ -172,4 +172,4 @@ Take the new support for using any Terraform or OpenTofu provider from Pulumi fo
 
 * [Getting Started](https://www.pulumi.com/registry/packages/terraform-provider/)
 * [Installation and Configuration](https://www.pulumi.com/registry/packages/terraform-provider/installation-configuration/)
-* [Overview of Pulumi Packages](https://www.pulumi.com/docs/using-pulumi/pulumi-packages/)
+* [Overview of Pulumi Packages](https://www.pulumi.com/docs/iac/packages-and-automation/pulumi-packages/debugging-provider-packages/)

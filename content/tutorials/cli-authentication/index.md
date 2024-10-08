@@ -58,7 +58,7 @@ Enter your access token from https://app.pulumi.com/account/tokens
 
 {{< notes type="info" >}}
 
-By default, logging into the Pulumi CLI will log you into the managed Pulumi Cloud backend, but it is also possible to use this command to login to a self-hosted Pulumi Cloud backend. This is out of the scope of this tutorial, but you can learn more by visiting the [Managing state & backend options documentation](/docs/concepts/state/#logging-into-and-out-of-state-backends).
+By default, logging into the Pulumi CLI will log you into the managed Pulumi Cloud backend, but it is also possible to use this command to login to a self-hosted Pulumi Cloud backend. This is out of the scope of this tutorial, but you can learn more by visiting the [Managing state & backend options documentation](/docs/iac/concepts/state-and-backends/#logging-into-and-out-of-state-backends).
 
 {{< /notes >}}
 
@@ -97,8 +97,8 @@ In this tutorial, you learned how to authenticate to the Pulumi CLI using the br
 
 - Learn more about the available CLI commands in the [Pulumi CLI documentation](/docs/cli/commands/).
 - Learn more about configuring Pulumi providers to work with Pulumi in the following resources:
-  - [AWS Configuration](/docs/clouds/aws/get-started/begin/#configure-pulumi-to-access-your-aws-account)
-  - [Azure Configuration](/docs/clouds/azure/get-started/begin/#configure-pulumi-to-access-your-microsoft-azure-account)
-  - [Google Cloud Configuration](/docs/clouds/gcp/get-started/begin/#configure-pulumi-to-access-your-google-cloud-account)
-  - [Kubernetes Configuration](/docs/clouds/kubernetes/get-started/begin/#configure-kubernetes)
+  - [AWS Configuration](/docs/iac/get-started/aws/begin/#configure-pulumi-to-access-your-aws-account)
+  - [Azure Configuration](/docs/iac/get-started/azure/begin/#configure-pulumi-to-access-your-microsoft-azure-account)
+  - [Google Cloud Configuration](/docs/iac/get-started/gcp/begin/#configure-pulumi-to-access-your-google-cloud-account)
+  - [Kubernetes Configuration](/docs/iac/get-started/kubernetes/begin/#configure-kubernetes)
 - Learn more about the different Pulumi Cloud hosting options in the [Managed Pulumi Cloud vs Self-Hosted Pulumi Cloud documentation](/docs/pulumi-cloud/self-hosted/)

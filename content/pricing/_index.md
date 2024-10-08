@@ -162,7 +162,7 @@ comparison_table:
                     - content: _check
                     - content: _check
                 - title: CI/CD integrations
-                  link: /docs/using-pulumi/continuous-delivery/
+                  link: /docs/iac/packages-and-automation/continuous-delivery/
                   items:
                     - content: Many
                       tooltip: AWS Code Services, Azure DevOps, Codeship, CircleCI, GitHub, GitLab, Google Cloud Build, Jenkins, Travis, and more
@@ -467,7 +467,7 @@ comparison_table:
                     - content: Unlimited
                     - content: Unlimited
                 - title: Organizations
-                  link: /docs/pulumi-cloud/organizations
+                  link: /docs/pulumi-cloud/admin/organizations/
                   items:
                     - content: _blank
                     - content: 1
@@ -516,7 +516,7 @@ comparison_table:
                     - content: _check
                     - content: _check
                 - title: Role-based access control (RBAC)
-                  link: /docs/pulumi-cloud/organizations#organization-roles
+                  link: /docs/pulumi-cloud/admin/organizations/#organization-roles
                   items:
                     - content: _blank
                     - content: _blank
@@ -670,7 +670,7 @@ faq:
 
             First, Pulumi Cloud is free to use, now and forever, for individuals. You get all of the convenience of automatic state management, unlimited updates, and many other great features without needing to pay anything at all for it.
 
-            Second, Pulumi is an [open-source project](https://github.com/pulumi/pulumi). You can [run Pulumi entirely offline](/docs/concepts/state#using-a-self-managed-backend) without the online service’s features, and manage state yourself, instead of using the online service. There are no restrictions — it's all there in the open for you to use freely as you'd like.
+            Second, Pulumi is an [open-source project](https://github.com/pulumi/pulumi). You can [run Pulumi entirely offline](/docs/iac/concepts/state-and-backends#using-a-self-managed-backend) without the online service’s features, and manage state yourself, instead of using the online service. There are no restrictions — it's all there in the open for you to use freely as you'd like.
 
             Finally, we offer a 14-day free trial for the Business-critical Edition. Once the trial is over, you can continue to use the Business-critical Edition by chatting with sales or changing to Team or Enterprise Edition. After your trial expires, no data will be lost, and there is a grace period.
         - question: What is an organization? What are projects and stacks?
