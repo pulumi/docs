@@ -1,21 +1,21 @@
 ---
-title: "Defining and Provisioning Resources"
-title_tag: "Defining and Provisioning Resources"
+title: "Creating Resources on AWS"
+title_tag: "Creating Resources on AWS"
 layout: single
 
 # A succinct description of the tutorial. It appears on the Tutorials home and collection pages.
-description: Learn how to define and provision resources in Pulumi.
+description: Learn how to define and provision resources on AWS using Pulumi.
 
 # A similar description used for search results and social-media previews.
-meta_desc: Learn how to define and provision resources in Pulumi.
+meta_desc: Learn how to define and provision resources on AWS using Pulumi.
 
-# An image for the tutorial. It appears on tutorial page and in social-media previews.
-meta_image: meta.png
+# # An image for the tutorial. It appears on tutorial page and in social-media previews.
+# meta_image: meta.png
 
 # An optional video for the tutorial. When present, it appears at the top of the page, replacing
 # the meta image. YouTube and HTML5 video sources are supported.
 video:
-    youtube: 1UEkiXqxgB8
+    youtube: Q1pL30ifeZ8
 
 # The order in which the tutorial appears in most lists. Order is ascending, so higher numbers
 # mean the tutorial will appear further down the list. Positive integers only.
@@ -50,6 +50,7 @@ estimated_time: 10
 
 aliases:
   - /docs/using-pulumi/define-and-provision-resources/
+  - /tutorials/define-and-provision-resources/
 ---
 
 ## Create a virtual machine
