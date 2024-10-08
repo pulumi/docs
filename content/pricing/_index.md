@@ -100,7 +100,7 @@ customers:
 
 comparison_table:
     sections:
-        #### 
+        ####
         # Products
         ####
         - header: Products
@@ -147,7 +147,7 @@ comparison_table:
                     - content: Host public templates
                     - content: Host private templates
                     - content: Host private templates
-                
+
                 - title: Restore Deleted Stacks
                   link: /blog/restore-stacks
                   items:
@@ -183,7 +183,7 @@ comparison_table:
                     - content: _blank
                     - content: _blank
                     - content: _check
-            
+
             ## Pulumi ESC table
             - header: Pulumi ESC
               rows:
@@ -284,7 +284,7 @@ comparison_table:
                     - content: _check
                     - content: _check
                     - content: _check
-            
+
             ## Pulumi Insights Table
             - header: Pulumi Insights
               rows:
@@ -315,7 +315,7 @@ comparison_table:
                     - content: _blank
                     - content: _check
                     - content: _check
-        #### 
+        ####
         # Key Capabilities
         ####
         - header: Key Capabilities
@@ -418,7 +418,7 @@ comparison_table:
                     - content: _check
 
 
-        #### 
+        ####
         # Pulumi Cloud Fundamentals
         ####
         - header: Pulumi Cloud Fundamentals
@@ -507,7 +507,7 @@ comparison_table:
                     - content: _check
                     - content: _check
                     - content: _check
-                    - content: _check                
+                    - content: _check
                 - title: Create and manage teams
                   link: /docs/pulumi-cloud/access-management/teams/
                   items:
@@ -623,12 +623,12 @@ faq:
             Secrets include both static secrets and dynamic secrets/credentials. When using the Pulumi ESC Document Editor, each definition of fn::secret:* and fn::open::* (except Pulumi-stacks provider) is counted as a secret. The number of secrets only from the latest environment revision is counted towards your billing.
         - question: How are secrets API calls metered?
           answer: |
-            You pay $0 for the first free 10K API calls / month to the [ReadOpen API](/docs/pulumi-cloud/cloud-rest-api/#read-open-environment) endpoint. Once you hit 10,000 API calls, you are metered at $0.1 for 10K API calls. If you use 5K API calls you will billed $0.05. 
+            You pay $0 for the first free 10K API calls / month to the [ReadOpen API](/docs/pulumi-cloud/cloud-rest-api/#read-open-environment) endpoint. Once you hit 10,000 API calls, you are metered at $0.1 for 10K API calls. If you use 5K API calls you will billed $0.05.
 
             API usage include any calls from the [CLI](/docs/esc-cli/), [SDK](/docs/esc/sdk/), [Pulumi-service provider](/registry/packages/pulumiservice/api-docs/environment/), direct [REST API](/docs/pulumi-cloud/cloud-rest-api/) call that hits the ReadOpen API endpoint
-        - question: What can I do with 200 free resources per month? 
+        - question: What can I do with 200 free resources per month?
           answer: |
-            You could manage 200 S3 buckets or 200 EC2 instances for a month using this amount. Note that free resources translate to 150K monthly Pulumi credits. 
+            You could manage 200 S3 buckets or 200 EC2 instances for a month using this amount. Note that free resources translate to 150K monthly Pulumi credits.
 
             As another example, you could manage something more complex like a production Amazon EKS cluster with associated IAM roles, VPC, subnets, gateway route tables, and a small microservice deployed into the cluster.
         - question: How do I find out how many resources I have?
@@ -642,20 +642,20 @@ faq:
             - <u>If you haven't deployed anything with Pulumi</u>: See the previous FAQ for a few examples of applications and their number of resources.
         - question: What are some examples of how many resources are needed for my use case?
           answer: |
-            [**Serverless API with Amazon API Gateway and AWS Lambda**](https://github.com/pulumi/examples/tree/master/aws-ts-apigatewayv2-http-api)  
+            [**Serverless API with Amazon API Gateway and AWS Lambda**](https://github.com/pulumi/examples/tree/master/aws-ts-apigatewayv2-http-api)
             Estimated resources: <b>9</b><br>
-            This scenario is a stack with an Amazon API Gateway, an AWS Lambda event handler, and associated IAM roles. 
+            This scenario is a stack with an Amazon API Gateway, an AWS Lambda event handler, and associated IAM roles.
 
-            [**Amazon EKS running in a VPC**](https://github.com/pulumi/examples/tree/master/aws-py-eks)  
+            [**Amazon EKS running in a VPC**](https://github.com/pulumi/examples/tree/master/aws-py-eks)
             Estimated resources: <b>20</b><br>
-            This scenario is a stack with an Amazon VPC (including subnets, internet gateway, security groups, and route table), Amazon EKS cluster and node group, and associated IAM roles. 
+            This scenario is a stack with an Amazon VPC (including subnets, internet gateway, security groups, and route table), Amazon EKS cluster and node group, and associated IAM roles.
 
-            [**Amazon ECS cluster and RDS backend running in a VPC**](https://github.com/pulumi/examples/tree/master/aws-py-wordpress-fargate-rds)  
+            [**Amazon ECS cluster and RDS backend running in a VPC**](https://github.com/pulumi/examples/tree/master/aws-py-wordpress-fargate-rds)
             Estimated resources: <b>24</b><br>
             This scenario is a stack with an Amazon VPC (including subnets, security groups, and route table associations), Amazon ECS (including cluster and service, load balancer resources, and IAM resources), and Amazon RDS (including RDS instance and subnet group). Each group of resources (VPC, ECS, RDS) is represented by a component resource.
         - question: Can I prepay for resources, secrets, and secrets API calls?
           answer: Yes, you can! Please contact us to discuss the Enterprise and Business Critical Editions, which include volume pricing for paying in advance.
-        
+
     - category: Product
       id: product
       items:
@@ -690,7 +690,7 @@ faq:
           answer: |
             Do you want to use Pulumi in your organization, but aren't sure how to bring it up with your boss? We've created a sample email to help you explain its benefits. Feel free to use the full letter or pieces of it. We are always happy to meet to learn more about your needs and explain these benefits in person — just [contact us](/contact/?form=sales).
 
-            **Sample Email**  
+            **Sample Email**
             Dear {Name},
 
             I'd like to propose that we use Pulumi for our cloud infrastructure needs. I've researched the top infrastructure as code platforms, and Pulumi stands out because of its maturity, strong open source community, support for many clouds, and mix of productivity and enterprise controls, meaning it works great for developers and infrastructure teams alike.
@@ -700,7 +700,7 @@ faq:
             Here are some examples of their customers to give you an idea of who is using it and why:
 
             - Tableau and Fenergo can now release new features faster by empowering their developers to deploy cloud infrastructure easily.
-            - [Snowflake migrated to](case-studies/snowflake/) Kubernetes across multiple clouds in three months.
+            - [Snowflake migrated to](/case-studies/snowflake/) Kubernetes across multiple clouds in three months.
             - [Mercedes-Benz](/case-studies/mercedes-benz/) Research & Development North America improved collaboration between its infrastructure and application development teams.
             - [Skai](/blog/kenshoo-migrates-to-aws-with-pulumi/) managed a complex public cloud migration project.
             - Cockroach Labs, [Sourcegraph](/case-studies/sourcegraph/), and [Lemonade](/case-studies/lemonade/) created innovative engineering cultures.
@@ -711,7 +711,7 @@ faq:
 
             I have many ideas on how Pulumi would deliver immediate value to our team. Should I write a more detailed proposal and share it with you or other members of the team for feedback? The Pulumi team has also offered to have a meeting with us to learn more about our use cases, and discuss potential ways we can work together. Should I set that up?
 
-            Thanks,  
+            Thanks,
             {Your Name}
 
     - category: Billing and Support

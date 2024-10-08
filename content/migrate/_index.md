@@ -36,12 +36,12 @@ migrations:
       comparisonUrl: /docs/concepts/vs/terraform
     - title: AWS CloudFormation
       image: /logos/tech/aws.svg
-      selfServeUrl: /docs/iac/adopting-pulumi/migrating-to-pulumi/from-aws
+      selfServeUrl: /docs/iac/adopting-pulumi/migrating-to-pulumi/from-cloudformation
       selfServeWebUrl: /migrate/cf2pulumi
       comparisonUrl: /docs/concepts/vs/cloud-templates/cloudformation
     - title: Azure Resource Manager (ARM)
       image: /logos/tech/azure.svg
-      selfServeUrl: /docs/iac/adopting-pulumi/migrating-to-pulumi/from-azure
+      selfServeUrl: /docs/iac/adopting-pulumi/migrating-to-pulumi/from-arm
       selfServeWebUrl: /migrate/arm2pulumi
       comparisonUrl: /docs/concepts/vs/cloud-templates
     - title: Infrastructure source not listed?

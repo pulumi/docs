@@ -30,13 +30,13 @@ For referencing existing resources, Pulumi offers several tools.
 
 * The `.get` methods available on every resource let you [get all the details for a resource](/registry/packages/aws/api-docs/ec2/vpc#look-up) from the cloud provider based just on its `id`.
 * The `StackReference` resource lets you reference outputs of another stack for use as inputs to a stack, which is very useful for [organizing projects and stacks](/docs/using-pulumi/organizing-projects-stacks/).
-* [`terraform.state.RemoteStateReference()`](/blog/using-terraform-remote-state-with-pulumi), [`aws.cloudformation.getStack()`](/registry/packages/aws/api-docs/cloudformation/getstack) and [`azure.core.TemplateDeployment.get()`](/registry/packages/azure/api-docs/core/templatedeployment#look-up) let you reference outputs from existing Terraform, CloudFormation and ARM deployments respectively.
+* [`terraform.state.RemoteStateReference()`](/blog/using-terraform-remote-state-with-pulumi), [`aws.cloudformation.getStack()`](/registry/packages/aws/api-docs/cloudformation/getstack) and [`azure.core.SubscriptionTemplateDeployment.get()`](/registry/packages/azure/api-docs/core/subscriptiontemplatedeployment#look-up) let you reference outputs from existing Terraform, CloudFormation and ARM deployments respectively.
 
 Together, these make it easy to reference existing infrastructure regardless of how it was provisioned.
 
 ## Adopting Existing Resources
 
-For adopting existing resources, Pulumi offers the [`import`](/registry/packages/azure/api-docs/core/templatedeployment#look-up) resource option to request that a resource defined in your Pulumi program adopt an existing resource in the cloud provider instead of creating a new one.  In keeping with its focus on infrastructure as *code*, Pulumi lets you specify this `import` behavior inside the Pulumi code for your infrastructure deployment, instead of outside of it in some manual workflow.  In its simplest form, it looks like this:
+For adopting existing resources, Pulumi offers the [`import`](/registry/packages/azure/api-docs/core/subscriptiontemplatedeployment#look-up) resource option to request that a resource defined in your Pulumi program adopt an existing resource in the cloud provider instead of creating a new one.  In keeping with its focus on infrastructure as *code*, Pulumi lets you specify this `import` behavior inside the Pulumi code for your infrastructure deployment, instead of outside of it in some manual workflow.  In its simplest form, it looks like this:
 
 ```ts
 const myVpc = new aws.ec2.Vpc("my-vpc", {

@@ -14,7 +14,7 @@ youll_learn:
     - How to use version tagging to make configuring applications safer and more flexible
     - How to embed and use Pulumi ESC in your applications with the ESC SDK for Node.js
 prereqs:
-    - Either the standalone [Pulumi ESC CLI](/docs/esc/install/) or the [Pulumi CLI](/docs/iac/install/)
+    - Either the standalone [Pulumi ESC CLI](/docs/esc/download-install/) or the [Pulumi CLI](/docs/iac/download-install/)
     - A [Pulumi Cloud account](https://app.pulumi.com/signup) and [access token](/docs/pulumi-cloud/accounts/#access-tokens)
     - A Pulumi Cloud organization with a subscription to the [Enterprise edition](https://pulumi.com/pricing) (or above)
     - Familiarity with Bash scripting, JavaScript, and Node.js

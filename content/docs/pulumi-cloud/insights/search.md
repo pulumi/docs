@@ -332,7 +332,7 @@ Existence queries do not return resources where the property is an empty object 
 Expanding the "Column Filter" menu shows you the set of values found for that column along with a count for each value.
 You can then select a specific value or collection of values to filter your result set.
 
-![Resource Search Column Filter](column-filter.png)
+![Resource Search Column Filter](/docs/pulumi-cloud/insights/column-filter.png)
 
 In the example above, the query has been restricted to the "dev" stack.
 

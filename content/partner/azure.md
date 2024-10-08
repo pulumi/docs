@@ -186,7 +186,7 @@ arm2pulumi:
     If you can deploy a resource with ARM templates, you can deploy it with the Pulumi Azure provider!
 
   cta: Learn More
-  cta_url: "/docs/iac/adopting-pulumi/migrating-to-pulumi/from-azure/"
+  cta_url: "/docs/iac/adopting-pulumi/migrating-to-pulumi/from-arm/"
 
 detail_sections:
   - title: 100% API Coverage

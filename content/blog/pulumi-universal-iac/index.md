@@ -375,7 +375,7 @@ Since launching the [Pulumi Registry](/registry/) last fall, we’ve added more 
 
 ![New Packages in the Pulumi Registry](new-packages.png)
 
-Every package in the Pulumi Registry supports all Pulumi programming languages, including Java and YAML. Documentation and getting started guides for every package are available from the Registry. Contributions to the Registry are now simpler than ever, with enhanced guides for [authoring and publishing](/docs/iac/packages-and-automation/pulumi-packages/debugging-provider-packages/how-to-author/) your own package in the Pulumi Registry.
+Every package in the Pulumi Registry supports all Pulumi programming languages, including Java and YAML. Documentation and getting started guides for every package are available from the Registry. Contributions to the Registry are now simpler than ever, with enhanced guides for [authoring and publishing](/docs/iac/packages-and-automation/pulumi-packages/authoring/) your own package in the Pulumi Registry.
 
 ## New Provider for the Pulumi Service
 
