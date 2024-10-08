@@ -12,15 +12,17 @@ Infrastructure as Code tools (IaC tools) let you automate the setup of your clou
 
 But which tool should you use choose? We obviously have our own preferences and biases 😉 but let's go through the most popular, and some ess popular IaC tools to give you a lay of the land.
 
-We'll be covering modern multi-cloud tools, vendor and cloud specific solutions, and some less common options. To effectively judge each tool, we consider their ability to flexibly abstract and manage infrastructure configurations and to support multi-cloud environments. Additionally, we assess how each tool handles state tracking and management, its compatibility with existing development workflows, and the strength and activity of its community, ecosystem and documentation.
+We'll assess each tool based on the following criteria:
 
-| Short Name  | Long Name                             | Description                                                                 |
-|-------------|---------------------------------------|-----------------------------------------------------------------------------|
-| Flexibility | Versatility                           | The ability to flexibly abstract things as well as create reusable components. |
-| Multicloud  | Multi-Cloud Support                   | Capability to manage resources across various cloud providers.              |
-| State       | State Management                      | How the tool handles state tracking and management.                         |
-| Integration | Integration with Development Workflows| Compatibility with existing development workflows and CI/CD pipelines.      |
-| Ecosystem   | Support Ecosystem                     | Community strength, activity, documentation quality, and support resource comprehensiveness. |
+| Criteria    | Description                                                                 |
+|-------------|-----------------------------------------------------------------------------|
+| Flexibility | Ability to abstract and create reusable components                          |
+| Multicloud  | Capability to manage resources across various cloud providers               |
+| State       | How the tool handles state tracking and management                          |
+| Integration | Compatibility with existing development workflows and CI/CD pipelines       |
+| Ecosystem   | Community strength, documentation quality, and support resources            |
+
+We'll be covering modern multi-cloud tools, vendor and cloud specific solutions, and some less common options.
 
 ## Modern Multi-Cloud Infrastructure as Code Tools
 
@@ -60,11 +62,11 @@ One of the key differences between OpenTofu and Terraform is their licensing mod
 
 ## Cloud-Specific IaC Tools
 
-The next type of Iac Tool, in terms of popularity is the cloud or vendor specific tool. These tools are popular amoung those who prefer a native tool.
+While multi-cloud tools offer flexibility and prevent vendor lock-in, many organizations still opt for cloud-specific IaC tools.
 
-Multi-cloud solutions offer several strategic advantages over vendor specific tools. By preventing vendor lock-in, organizations maintain flexibility and negotiating power, avoiding over-reliance on a single provider. They also promotes skill portability, creating a versatile workforce capable of managing diverse cloud infrastructures. Never the less, its important to review this category of tools.
+These native solutions may provide deeper integration with their respective cloud platforms. However,  Multi-cloud solutions offer several strategic advantages over vendor specific tools. By preventing vendor lock-in, organizations maintain flexibility and negotiating power, avoiding over-reliance on a single provider. They also promotes skill portability. Learn one tool and become capable of managing diverse cloud infrastructures. Never the less, its important to review this category of tools.
 
-For cloud-specific IaC tools, we focus on Flexibility, Integration, and Ecosystem. We omit multi-cloud support and State management. In all these tools, State management is handled internally by the cloud provider, using a desired state model.
+Let's explore some of the most prominent cloud-specific IaC tools and how they compare to their multi-cloud counterparts in terms of flexibility, integration, and ecosystem support.
 
 ## AWS CloudFormation
 
@@ -108,7 +110,7 @@ Tools that have significantly influenced IaC evolution and offer unique capabili
 - SaltStack: Provides event-driven IT automation and configuration management.
 - CFEngine: A lightweight configuration management tool for large-scale environments.
 
-## Ansible Evaluation
+## Ansible
 
 Ansible is an agentless tool for configuration management, application deployment, and task automation. Ansible's stateless nature means it does not maintain a persistent state file, relying instead on checking the current state during each run, which can limit its ability to track changes over time.
 
@@ -116,7 +118,7 @@ Ansible is an agentless tool for configuration management, application deploymen
 - **Integration**: Ansible integrates well with various cloud platforms like AWS, GCP, and Azure, and supports a wide range of modules for different automation tasks. Its agentless architecture simplifies integration with existing systems.
 - **Ecosystem**: Ansible has a large community and extensive library of modules (Ansible Galaxy), providing strong support and resources for users.
 
-## Chef Evaluation
+## Chef
 
 Chef automates configuration, deployment, and management using a Ruby-based DSL. It uses "recipes" and "cookbooks" rather than a described end state. Its client-server model focuses on individual node configurations, and ensuring consistency through idempotency, but lacks a comprehensive state file for tracking changes across all resources.
 
@@ -124,7 +126,7 @@ Chef automates configuration, deployment, and management using a Ruby-based DSL.
 - **Integration**: Chef integrates well with CI/CD pipelines and supports major cloud providers, making it suitable for complex infrastructure needs.
 - **Ecosystem**: Chef has a vibrant community and a wide range of resources, including cookbooks and documentation, supporting its users.
 
-## Puppet Evaluation
+## Puppet
 
 Puppet does use a declarative language to define the desired state of systems. t sPuppet's master-agent architecture focuses on individual node configurations, ensuring consistency through idempotency, but lacks a comprehensive state file for tracking changes across all resources.
 
@@ -132,7 +134,7 @@ Puppet does use a declarative language to define the desired state of systems. t
 - **Integration**: Puppet integrates with various cloud providers and DevOps tools, offering robust support for configuration management.
 - **Ecosystem**: Puppet has a mature ecosystem with a wide range of modules available through Puppet Forge, providing strong community support.
 
-## SaltStack Evaluation
+## SaltStack
 
 SaltStack, also known as Salt, is a versatile Infrastructure as Code (IaC) tool that excels in real-time automation and orchestration, making it ideal for dynamic and large-scale environments. It supports both agent-based and agentless modes, providing flexibility in managing and configuring systems. SaltStack's master-minion architecture allows for centralized control and efficient communication across managed systems. It integrates well with various systems and supports complex orchestration and configuration management. SaltStack's unique approach to state handling allows it to operate in both stateful and stateless modes, using "states" to define desired configurations, but lacks a comprehensive state file like Terraform or Pulumi.
 
@@ -140,7 +142,7 @@ SaltStack, also known as Salt, is a versatile Infrastructure as Code (IaC) tool 
 - **Integration**: SaltStack integrates with various systems and supports complex orchestration and configuration management across diverse environments.
 - **Ecosystem**: SaltStack has a strong community and extensive documentation, providing resources for learning and troubleshooting.
 
-## CFEngine Evaluation
+## CFEngine
 
 CFEngine is a pioneering Infrastructure as Code (IaC) tool known for its lightweight and efficient management of large-scale environments. It provides a holistic view of IT infrastructure, ensuring consistency and reliability. CFEngine integrates with various systems and offers API support for third-party integrations. Its unique approach to state handling focuses on continuous convergence, automatically correcting configurations to align with defined policies, without maintaining a comprehensive state file.
 
@@ -148,31 +150,10 @@ CFEngine is a pioneering Infrastructure as Code (IaC) tool known for its lightwe
 - **Integration**: CFEngine integrates with various systems and offers API support for third-party integrations.
 - **Ecosystem**: CFEngine has a smaller community compared to other tools, which may limit the availability of resources and support.
 
-## Supplementary IaC Tools
+## Conclusion
 
-In addition to the primary Infrastructure as Code (IaC) tools, there are several supplementary tools that enhance and complement existing IaC practices. These tools provide additional functionalities, improve efficiency, and address specific challenges in infrastructure management. They are designed to work alongside core IaC tools, offering specialized capabilities that can optimize workflows and support diverse infrastructure needs. Here are some notable supplementary IaC tools:
+Choosing the right Infrastructure as Code tool is crucial in today's complex cloud landscape. We've explored options ranging from multi-cloud solutions to cloud-specific and historical tools, each with unique strengths. The ideal choice depends on your specific needs, considering flexibility, multi-cloud support, state management, workflow integration, and ecosystem robustness.
 
-- Crossplane: Extends Kubernetes to manage cloud resources and services. It acts as a universal control plane, allowing management of cloud services directly from Kubernetes using Custom Resource Definitions (CRDs). Crossplane supports multi-cloud and hybrid cloud deployments, enabling complex architectures across different providers. It integrates seamlessly with Kubernetes, enhancing workflows and aligning infrastructure operations with Kubernetes-centric strategies. Backed by a strong open-source community, Crossplane offers a robust ecosystem for cloud-native infrastructure management.
-- Spacelift: A management platform for Infrastructure as Code, supporting multiple IaC tools.
-- Otter: A tool for server configuration and management with a visual interface.
-- Packer: Automates the creation of machine images for multiple platforms from a single source configuration.
-- Terragrunt: A thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
+We've shown you the options, now let us make our case for Pulumi. Pulumi stands out by leveraging general-purpose programming languages for infrastructure definition. This approach offers familiar syntax, powerful abstractions, and seamless integration with existing workflows. It's really something you need to experience to understand its power.
 
-## Crossplane Evaluation
-
-Crossplane is an open-source Kubernetes add-on that turns your cluster into a universal control plane, managing cloud services and infrastructure from kubectl. It works with almost any cloud provider, and if you are using a Kubernetes cluster to manage everything, Crossplane can help with your infrastructure resources.
-
-This integration not only streamlines the management process but also aligns infrastructure operations with Kubernetes-centric workflows, making it an ideal solution for teams looking to unify their application and infrastructure management strategies under the Kubernetes ecosystem.
-
-Key Features:
-
-- **Universal Control Plane**: Crossplane makes Kubernetes a universal control plane with CRDs for cloud resources, simplifying multi-cloud infrastructure provisioning and management.
-- **Multi-cloud and Hybrid Cloud Support**: Crossplane supports multiple cloud providers (AWS, GCP, Azure, Alibaba Cloud, and more), enabling you to deploy workloads and services across different clouds, facilitating complex multi-cloud and hybrid cloud architectures.
-
-## Spacelift Evaluation
-
-## Checkov Evaluation
-
-## Infracost Evaluation
-
-## Env0 Evaluation
+While we acknowledge our bias, we believe Pulumi empowers teams to innovate faster and more confidently. We invite you to explore how it can enhance your development process and accelerate your cloud journey.
