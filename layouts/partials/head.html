@@ -234,11 +234,12 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
 
     <script>
-        var segmentWriteKey;
         {{- if eq hugo.Environment "production" }}
-            segmentWriteKey = "UK90Ofwacetj5VCPJ7cUgkbNcKLSHO3u";
+            var segmentWriteKey = "UK90Ofwacetj5VCPJ7cUgkbNcKLSHO3u";
+            var snippetName = "C8Y429BDEy/06ujkUhzfL.min.js";
         {{- else }}
-            segmentWriteKey = "bATvhu6XKpwi7Cs258MGsELkDpVOzvdY";
+            var segmentWriteKey = "bATvhu6XKpwi7Cs258MGsELkDpVOzvdY";
+            var snippetName = "C8Y429BDEy/hpBKpR8Nx1yVCjKPB2nJWg.min.js";
         {{- end }}
     </script>
 
@@ -306,12 +307,13 @@
                         t.type = "text/javascript";
                         t.async = !0;
                         t.setAttribute("data-global-segment-analytics-key", i);
-                        t.src = "https://cdn.segment.com/analytics.js/v1/" + key + "/analytics.min.js";
+                        t.src = "https://evs.analytics.pulumi.com/" + snippetName;
                         var r = document.getElementsByTagName("script")[0];
                         r.parentNode.insertBefore(t, r);
                         analytics._loadOptions = n;
                     };
                     analytics._writeKey = segmentWriteKey;
+                    analytics._cdn = "https://evs.analytics.pulumi.com";
                     analytics.SNIPPET_VERSION = "5.2.0";
                     analytics.load(segmentWriteKey);
                     analytics.page();
@@ -362,6 +364,7 @@
                 shouldRequireConsent: () => true,
                 closeBehavior: exports.inEU() ? "dismiss" : "accept",
                 bannerTextColor: "black",
+                cdnHost: "evs.analytics.pulumi.com",
             }
         }
     </script>
@@ -373,7 +376,11 @@
 
     <script async
         data-api-host="https://cdn.growthbook.io"
+        {{- if eq hugo.Environment "production" }}
         data-client-key="sdk-0aUDa6bDbQqms3aJ"
+        {{- else }}
+        data-client-key="sdk-ut2foRRgupXGuPj3"
+        {{- end }}
         src="https://cdn.jsdelivr.net/npm/@growthbook/growthbook/dist/bundles/auto.min.js"
         ></script>
 
