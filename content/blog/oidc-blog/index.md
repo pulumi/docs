@@ -34,7 +34,7 @@ tags:
 # for additional details, and please remove these comments before submitting for review.
 ---
 
-After [launching Pulumi Deployments](/blog/pulumi-deployments) a few months ago and receiving a ton of community feedback (thank you!) today we are launching an integration with OpenID Connect (OIDC) to enable temporary credentials and granular access controls. We would like to thank GitHub user [eriklz](https://github.com/eriklz) for creating the [original request](https://github.com/pulumi/service-requests/issues/144) for this functionality.
+After [launching Pulumi Deployments](/blog/pulumi-deployments) a few months ago and receiving a ton of community feedback (thank you!) today we are launching an integration with OpenID Connect (OIDC) to enable temporary credentials and granular access controls. We would like to thank GitHub user [eriklz](https://github.com/eriklz) for creating the [original request](https://github.com/pulumi/pulumi-cloud-requests/issues/144) for this functionality.
 
 <!--more-->
 
@@ -85,6 +85,6 @@ Pulumi Deployments is available in preview today. Deployments are free during th
 - [Pulumi Deployments REST API documentation](/docs/pulumi-cloud/deployments/api/)
 - [Automation API examples](https://github.com/pulumi/automation-api-examples)
 
-Please submit an issue in the [Pulumi Service Requests repo](https://github.com/pulumi/service-requests) if you have feature requests for the Pulumi Service or join our [Slack channel](https://pulumi-community.slack.com)(#pulumi-deployments) if you have questions.
+Please submit an issue in the [Pulumi Service Requests repo](https://github.com/pulumi/pulumi-cloud-requests) if you have feature requests for the Pulumi Service or join our [Slack channel](https://pulumi-community.slack.com)(#pulumi-deployments) if you have questions.
 
 🚀🚀🚀 Happy building! 🚀🚀🚀
