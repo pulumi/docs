@@ -156,6 +156,8 @@ func main() {
 }
 ```
 
+With the Pulumi ESC SDK, we can fetch the secrets at runtime when they are needed. This way, we avoid storing secrets in environment variables and reduce any of the risks I mentioned above.
+
 ## Conclusion
 
 Storing secrets in environment variables is a bad idea. It may be convenient, but it is definitely not secure. Don't
