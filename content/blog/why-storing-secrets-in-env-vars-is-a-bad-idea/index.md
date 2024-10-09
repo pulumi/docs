@@ -160,11 +160,9 @@ With the Pulumi ESC SDK, we can fetch the secrets at runtime when they are neede
 
 ## Conclusion
 
-Storing secrets in environment variables is a bad idea. It may be convenient, but it is definitely not secure. Don't
-make it easy for attackers to compromise your system:
+Storing secrets in environment variables is a bad idea. It may be convenient, but it is definitely not secure. Don't make it easy for attackers to compromise your system:
 
-- Use a secret management system, like [Pulumi ESC](/product/secrets-management/). It provides a secure and compliant way to store and access secrets,
-  which you will never get with environment variables.
+- Use a secret management system, like [Pulumi ESC](/product/secrets-management/). It provides a secure and compliant way to store and access secrets, which you will never get with environment variables.
 - Fetch secrets only at runtime when they are needed.
 - Don't expose secrets in logs or process dumps.
 
