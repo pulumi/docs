@@ -40,6 +40,10 @@ Pulumi Copilot enables these use cases via the following:
 
 * Through the use of new skills, Pulumi Copilot can access cloud metadata in real time in AWS, Azure, Kubernetes, and more, allowing it to join Pulumi’s IaC world view with information about usage, costs, and more – as well as infrastructure not yet under the management of Pulumi.
 
+#### Customization via system prompts
+
+* System Prompts allow organization administrators to set default preferences and guidelines for Pulumi Copilot. By configuring these prompts, you can tailor Pulumi Copilot’s behavior to better suit your team’s needs and policies.
+
 ## Frequently Asked Questions
 
 ### What model does Pulumi Copilot use?
@@ -75,6 +79,18 @@ We store conversation data, similar to all other product metrics logging in Pulu
 ### Can I turn Pulumi Copilot off for my organization?
 
 Pulumi Copilot is off by default at public beta launch. Organization admins can turn it on by navigating to organization __Settings > Access Management > Pulumi Copilot__. You can make it available for all members, just admins or no one in your organization. It can be turned off at any point.
+
+### How to author Organization system prompts
+
+1. Log in to Pulumi Cloud and navigate to your organization’s settings in the left hand navigation.
+2. Under the settings menu, select "Access Management".
+3. In the Copilot section, you’ll find the edit box titled "Organization system prompts".
+
+The best way to author the prompts is to specify your organization's rules and preferences in a conversational style. For example, if you want Copilot to generate code in Python, you can write it like this:
+
+`Our organization prefers Python.`
+
+You can add other prompts to specify the default cloud provider, compliance guidelines and so on.
 
 ### How can I report bugs or provide feedback about Pulumi Copilot?
 
