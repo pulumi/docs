@@ -7,7 +7,7 @@
             <h2>{{ .Title }}</h2>
             <p>
                 PCI DSS compliance is critical to protecting cardholder data that is processed, stored, and transmitted.
-                Pulumi can assist you with making your {{ .Params.cloud }} cloud infrastructure PCI DSS compliant. Pulumi can help you identify
+                Pulumi can assist you with making your {{ .Params.cloud }} infrastructure PCI DSS compliant. Pulumi can help you identify
                 existing cloud resources that are not in compliance, and it can also enforce compliance policies proactively
                 before infrastructure is deployed. Get started with Pulumi to use these compliance tools or speak with a 
                 Solutions Architect to get an expert consultation.
@@ -74,6 +74,8 @@
             {{ partial "compliance/pci-dss/aws.html" . }}
         {{ else if eq .Params.cloud "Azure" }}
             {{ partial "compliance/pci-dss/azure.html" . }}
+        {{ else if eq .Params.cloud "Google Cloud" }}
+            {{ partial "compliance/pci-dss/google-cloud.html" . }}
         {{ end }}
     </section>
     {{ end }}
