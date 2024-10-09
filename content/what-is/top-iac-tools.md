@@ -110,7 +110,7 @@ Google Cloud Deployment Manager (CDM) focuses on managing Google Cloud Platform 
 While Google Cloud Deployment Manager's deep GCP integration is a strength, it faces challenges, including intricate template management and steep learning curves. Like other provider-specific solutions, CDM is ideal for teams with a strong focus on and investment in the Google Cloud ecosystem.
 
 - **Flexibility**: YAML or Jinja2 templating.
-- **Integration**: Integrates deeply with Google Cloud Platform (GCP) services. Additional features for integration with CI/CD pipelines.
+- **Integration**: Integrates deeply with Google Cloud services. Additional features for integration with CI/CD pipelines.
 - **Ecosystem**: Supported by documentation and a smaller GCP-focused community.
 
 ## Conclusion
