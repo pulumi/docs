@@ -72,10 +72,10 @@ Tivity Health, a leading health and fitness solutions provider, has embraced thi
 
 ## On this article:
 
-- [The Beginning: From Data Center to the Cloud](/blog/devsecops-strategy-security-automation-tivity-health/#the-beginning-from-data-center-to-the-cloud]
+- [The Beginning: From Data Center to the Cloud](/blog/devsecops-strategy-security-automation-tivity-health/#the-beginning-from-data-center-to-the-cloud)
 - [Embracing Pulumi: The Power of Automation, Productivity, and Security](/blog/devsecops-strategy-security-automation-tivity-health/#embracing-pulumi-the-power-of-automation-productivity-and-security)
-- [Driving Business Impact Through Security Automation]((/blog/devsecops-strategy-security-automation-tivity-health/#driving-business-impact-through-security-automation)
-- [Fostering DevOps Culture Through Cross-Functional Collaboration](/blog/devsecops-strategy-security-automation-tivity-health/fostering-devops-culture-through-cross-functional-collaboration)
+- [Driving Business Impact Through Security Automation](/blog/devsecops-strategy-security-automation-tivity-health/#driving-business-impact-through-security-automation)
+- [Fostering DevOps Culture Through Cross-Functional Collaboration](/blog/devsecops-strategy-security-automation-tivity-health/fostering-devops-culture-through-cross--functional-collaboration)
 - [Lessons Learned: Navigating the Cultural Shift](/blog/devsecops-strategy-security-automation-tivity-health/#lessons-learned-navigating-the-cultural-shift)
 - [The Future of DevSecOps and Pulumi at Tivity Health](/blog/devsecops-strategy-security-automation-tivity-health/#the-future-of-devsecops-and-pulumi-at-tivity-health)
 
