@@ -64,7 +64,7 @@ This post will show how you can provide resource methods from your [component pa
 
 ## Authoring Methods
 
-It's always been possible to provide module-level functions from Pulumi Packages. For example, the [`aws`](/registry/packages/aws) package provides many module-level functions, such as the [`getAmi`](/registry/packages/aws/api-docs/ec2/getami) function, which can be used to get the ID of an existing Amazon Machine Image (AMI). Functions are declared in the package's [schema](/docs/iac/packages-and-automation/pulumi-packages/debugging-provider-packages/schema/), and their functionality is implemented in the provider through the `Invoke` remote procedure call (RPC).
+It's always been possible to provide module-level functions from Pulumi Packages. For example, the [`aws`](/registry/packages/aws) package provides many module-level functions, such as the [`getAmi`](/registry/packages/aws/api-docs/ec2/getami) function, which can be used to get the ID of an existing Amazon Machine Image (AMI). Functions are declared in the package's [schema](/docs/iac/packages-and-automation/pulumi-packages/schema/), and their functionality is implemented in the provider through the `Invoke` remote procedure call (RPC).
 
 Methods are authored in a similar manner to functions. Methods are declared in the schema and implemented in the provider's `Call` RPC (similar to `Invoke`).
 
@@ -72,7 +72,7 @@ Let's walk through an example. We'll author a `Message` component that accepts a
 
 ### Schema
 
-We'll start with declaring the method and component in the [Pulumi schema](/docs/iac/packages-and-automation/pulumi-packages/debugging-provider-packages/schema/). First, define the function representing the method:
+We'll start with declaring the method and component in the [Pulumi schema](/docs/iac/packages-and-automation/pulumi-packages/schema/). First, define the function representing the method:
 
 ```json
   "functions": {

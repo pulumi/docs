@@ -10,6 +10,7 @@ aliases:
 - /docs/get-started/install/migrating-2.0/
 - /docs/install/migrating-2.0
 - /docs/install/migrating-3.0
+- /docs/iac/install
 ---
 
 Pulumi 3.0 is generally available. It’s simple to upgrade:

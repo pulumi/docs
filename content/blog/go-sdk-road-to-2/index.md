@@ -69,7 +69,7 @@ Although Pulumi for Go is in “preview” status until 2.0 is released, it supp
 - Deploy a web server on a virtual machine with [AWS](https://github.com/pulumi/examples/tree/master/aws-go-webserver) or [Azure](https://github.com/pulumi/examples/tree/master/classic-azure-go-webserver-component).
 - Deploy a Kubernetes cluster using [Azure Kubernetes Service](https://github.com/pulumi/examples/tree/master/azure-go-aks).
 
-To keep up with our progress, follow our [Go project on Github](https://github.com/orgs/pulumi/projects/7), and feel free to [open a new issue](https://github.com/pulumi/pulumi/issues/new) with ideas, feedback, and bugs. [Join the community in Slack](https://slack.pulumi.com/) to discuss your scenarios, and to get any needed assistance from the team and other end users.
+To keep up with our progress, follow [Pulumi on Github](https://github.com/pulumi/pulumi/), and feel free to [open a new issue](https://github.com/pulumi/pulumi/issues/new) with ideas, feedback, and bugs. [Join the community in Slack](https://slack.pulumi.com/) to discuss your scenarios, and to get any needed assistance from the team and other end users.
 
 ### Coming Soon
 

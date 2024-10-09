@@ -83,6 +83,8 @@
             {{ partial "compliance/cis/aws.html" . }}
         {{ else if eq .Params.cloud "Azure" }}
             {{ partial "compliance/cis/azure.html" . }}
+        {{ else if eq .Params.cloud "Google Cloud" }}
+            {{ partial "compliance/cis/google-cloud.html" . }}
         {{ end }}
     </section>
     {{ end }}

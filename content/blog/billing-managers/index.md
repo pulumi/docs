@@ -63,4 +63,4 @@ To add a Billing Manager, make sure you are an Organization Administrator and th
 3. In the 'Billing Managers' section either invite a Billing Manager by entering their email or copy the Billing Manager invite link and send it to them directly
 4. Once signed up, the Billing Manager will be able to see usage metrics on the *Dashboard* and navigate to the *Billing and Usage* page to perform actions and view billing information
 
-This feature is available to all Pulumi Organizations today. Please let us know if you have any feedback on this feature, either by raising an issue in our [Pulumi Service GitHub repository](https://github.com/pulumi/service-requests) or by posting it in our [Community Slack](https://slack.pulumi.com). We hope it solves some friction for your organization!
+This feature is available to all Pulumi Organizations today. Please let us know if you have any feedback on this feature, either by raising an issue in our [Pulumi Service GitHub repository](https://github.com/pulumi/pulumi-cloud-requests) or by posting it in our [Community Slack](https://slack.pulumi.com). We hope it solves some friction for your organization!

@@ -10,11 +10,13 @@
     <div class="container mx-auto max-w-4xl">
         <h3>What controls can I put in place to evaluate {{ .Params.full }} resources?</h3>
         <div class="py-4">
-            {{ $key := .Params.service }}
+            {{ $cloud := .Params.cloud }}
+            {{ $svc := .Params.service }}
             {{ $controls := index .Site.Data.compliance "controls" }}
-            {{ $array := index $controls $key }}
+            {{ $cloudSvcs := index $controls $cloud }}
+            {{ $controls = index $cloudSvcs $svc }}
             <ul>
-                {{ range $array }}
+                {{ range $controls }}
                 <li class="text-lg">{{ . }}</li>
                 {{ end }}
             </ul>

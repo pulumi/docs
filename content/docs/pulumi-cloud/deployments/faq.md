@@ -21,10 +21,10 @@ aliases:
 
 We track open feature requests for Deployments in the [Pulumi Cloud requests repo](https://github.com/pulumi/pulumi-cloud-requests). Here are a few that have been requested by customers that are on our roadmap:
 
-- [Built-in drift detection](https://github.com/pulumi/service-requests/issues/173)
-- [Built-in temporary infrastructure and TTL stacks](https://github.com/pulumi/service-requests/issues/149)
-- [User-hosted deployment runners](https://github.com/pulumi/service-requests/issues/207)
-- [Add `git push` support for other VCS providers such as Bitbucket](https://github.com/pulumi/service-requests/issues/162)
+- [Built-in drift detection](https://github.com/pulumi/pulumi-cloud-requests/issues/173)
+- [Built-in temporary infrastructure and TTL stacks](https://github.com/pulumi/pulumi-cloud-requests/issues/149)
+- [User-hosted deployment runners](https://github.com/pulumi/pulumi-cloud-requests/issues/207)
+- [Add `git push` support for other VCS providers such as Bitbucket](https://github.com/pulumi/pulumi-cloud-requests/issues/162)
 
 ## Security and Isolation
 

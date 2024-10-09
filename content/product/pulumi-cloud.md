@@ -63,7 +63,7 @@ products:
           details:
             - title: Fully-managed, single source of truth
               description: |
-                Pulumi Cloud is a fully managed service for [infrastructure as code](/what-is-infrastructure-as-code/). Store your infrastructure’s state for any cloud in Pulumi's secure backend, which has built-in scaling, availability, and fault tolerance. You also get access to granular access controls, CICD integrations, SAML/SCIM, audit logging, and more. 
+                Pulumi Cloud is a fully managed service for [infrastructure as code](/what-is/what-is-infrastructure-as-code/). Store your infrastructure’s state for any cloud in Pulumi's secure backend, which has built-in scaling, availability, and fault tolerance. You also get access to granular access controls, CICD integrations, SAML/SCIM, audit logging, and more.
 
               more_info: |
                 Allow developers to safely deploy in parallel with concurrent state-locking.
@@ -127,10 +127,10 @@ products:
                 Pulumi ESC leverages the same Pulumi Cloud identity, RBAC, Teams, SAML/SCIM, OIDC, and scoped access tokens used for Pulumi IaC to ensure secrets management complies with enterprise security policies.
 
                 Every time secrets or configuration values are accessed or changed with Pulumi ESC, the action is fully logged for auditing. Logs include who accessed what, the action they took, and even a full record of showing which originating environments accessed values are inherited from.
-            
+
             - title: Ditch .env files
               description: |
-                No more storing secrets in plaintext on dev computers. Developers can easily access secrets via CLI, API, Kubernetes operator, the Pulumi Cloud UI, and in-code with Typescript/Javascript, Python, and Go SDKs. 
+                No more storing secrets in plaintext on dev computers. Developers can easily access secrets via CLI, API, Kubernetes operator, the Pulumi Cloud UI, and in-code with Typescript/Javascript, Python, and Go SDKs.
 
               more_info: |
                 Pulumi ESC also provides just-in-time, short-lived credentials, making them easy to adopt as a security best practice.
@@ -197,7 +197,7 @@ products:
 
             - title:  Continuous and automatic compliance
               description: |
-                Policies can remediate violations to fix the problems found in addition to reporting them as violations. 
+                Policies can remediate violations to fix the problems found in addition to reporting them as violations.
 
               more_info: |
                 Here are a few examples of the remediation policy use cases:
@@ -245,7 +245,7 @@ products:
                 *“Create a new serverless application on AWS”*
 
                 *“Configure a Kubernetes cluster with best practices on Azure”*
-                
+
                 *“Deploy a Cloudflare worker that uses sticky load balancing to distribute traffic to my Google Cloud backend”*
 
             - title: Understand your team's cloud usage
@@ -260,7 +260,7 @@ products:
                 *“What AWS account does VPC vpc-04a11 live within?”*
 
                 *“What environments do we have related to Azure?”*
-                
+
                 *“Describe the architecture of my www-frontend project.”*
 
             - title: Discover cost savings opportunities
@@ -275,7 +275,7 @@ products:
                 *“What are my top 10 most expensive cloud resources?”*
 
                 *“How much did my cloud costs increase month over month – and what team was responsible for driving them upwards?”*
-                
+
             - title: Stay secure
               description: |
                 Pulumi Copilot leverages knowledge about security best practices by combining Pulumi’s supergraph and cloud skills.
