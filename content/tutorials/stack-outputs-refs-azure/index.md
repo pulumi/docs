@@ -96,7 +96,7 @@ Then replace the default code with the following code snippet to scaffold your p
 ```go
 {{< example-program-snippet path="azure-native-storage-account-blob" language="go" from="1" to="33" >}}
 
-{{< example-program-snippet path="azure-native-storage-account-blob" language="go" from="48" to="50" >}}
+{{< example-program-snippet path="azure-native-storage-account-blob" language="go" from="52" to="54" >}}
 ```
 
 {{% /choosable %}}
@@ -106,7 +106,7 @@ Then replace the default code with the following code snippet to scaffold your p
 ```csharp
 {{< example-program-snippet path="azure-native-storage-account-blob" language="csharp" from="1" to="25" >}}
 
-{{< example-program-snippet path="azure-native-storage-account-blob" language="csharp" from="43" to="43" >}}
+{{< example-program-snippet path="azure-native-storage-account-blob" language="csharp" from="47" to="47" >}}
 ```
 
 {{% /choosable %}}
@@ -204,7 +204,7 @@ To demonstrate how this works, let's export the name of your resource group. By 
 ```javascript
 {{< example-program-snippet path="azure-native-storage-account-blob" language="javascript" from="1" to="19" >}}
 
-{{< example-program-snippet path="azure-native-storage-account-blob" language="javascript" from="30" to="30" >}}
+{{< example-program-snippet path="azure-native-storage-account-blob" language="javascript" from="34" to="34" >}}
 ```
 
 {{% /choosable %}}
@@ -214,7 +214,7 @@ To demonstrate how this works, let's export the name of your resource group. By 
 ```typescript
 {{< example-program-snippet path="azure-native-storage-account-blob" language="typescript" from="1" to="18" >}}
 
-{{< example-program-snippet path="azure-native-storage-account-blob" language="typescript" from="29" to="29" >}}
+{{< example-program-snippet path="azure-native-storage-account-blob" language="typescript" from="33" to="33" >}}
 ```
 
 {{% /choosable %}}
@@ -224,7 +224,7 @@ To demonstrate how this works, let's export the name of your resource group. By 
 ```python
 {{< example-program-snippet path="azure-native-storage-account-blob" language="python" from="1" to="18" >}}
 
-{{< example-program-snippet path="azure-native-storage-account-blob" language="python" from="29" to="29" >}}
+{{< example-program-snippet path="azure-native-storage-account-blob" language="python" from="33" to="33" >}}
 ```
 
 {{% /choosable %}}
@@ -234,9 +234,9 @@ To demonstrate how this works, let's export the name of your resource group. By 
 ```go
 {{< example-program-snippet path="azure-native-storage-account-blob" language="go" from="1" to="33" >}}
 
-{{< example-program-snippet path="azure-native-storage-account-blob" language="go" from="44" to="44" >}}
+{{< example-program-snippet path="azure-native-storage-account-blob" language="go" from="48" to="48" >}}
 
-{{< example-program-snippet path="azure-native-storage-account-blob" language="go" from="48" to="50" >}}
+{{< example-program-snippet path="azure-native-storage-account-blob" language="go" from="52" to="54" >}}
 ```
 
 {{% /choosable %}}
@@ -246,9 +246,9 @@ To demonstrate how this works, let's export the name of your resource group. By 
 ```csharp
 {{< example-program-snippet path="azure-native-storage-account-blob" language="csharp" from="1" to="25" >}}
 
-{{< example-program-snippet path="azure-native-storage-account-blob" language="csharp" from="37" to="39" >}}
+{{< example-program-snippet path="azure-native-storage-account-blob" language="csharp" from="41" to="43" >}}
 
-{{< example-program-snippet path="azure-native-storage-account-blob" language="csharp" from="42" to="43" >}}
+{{< example-program-snippet path="azure-native-storage-account-blob" language="csharp" from="46" to="47" >}}
 ```
 
 {{% /choosable %}}
@@ -258,7 +258,7 @@ To demonstrate how this works, let's export the name of your resource group. By 
 ```yaml
 {{< example-program-snippet path="azure-native-storage-account-blob" language="yaml" from="1" to="19" >}}
 
-{{< example-program-snippet path="azure-native-storage-account-blob" language="yaml" from="31" to="32" >}}
+{{< example-program-snippet path="azure-native-storage-account-blob" language="yaml" from="36" to="37" >}}
 ```
 
 {{% /choosable %}}
@@ -308,6 +308,7 @@ Now that your resources are deployed, you can access its value either via the CL
 
 ```bash
 $ pulumi stack output
+
 Current stack outputs (1):
     OUTPUT             VALUE
     resourceGroupName  resource-group0e6ebba3
@@ -317,6 +318,7 @@ If you want to retrieve a specific output value, you will need to provide the na
 
 ```bash
 $ pulumi stack output resourceGroupName
+
 resource-group0e6ebba3
 ```
 
@@ -324,6 +326,7 @@ This can be especially useful if you have any workflow scripts that depend on th
 
 ```bash
 $ az group show --resource-group $(pulumi stack output resourceGroupName)
+
 {
   "id": "/subscriptions/0282681f-7a9e-424b-80b2-96babd57a8a1/resourceGroups/resource-group0e6ebba3",
   "location": "westus2",
@@ -423,7 +426,7 @@ return await Pulumi.Deployment.RunAsync(() =>
 {{% choosable language yaml %}}
 
 ```yaml
-name: infra
+name: my-second-app-dev
 runtime: yaml
 description: A program to create a Stack Reference
 
@@ -539,7 +542,7 @@ return await Pulumi.Deployment.RunAsync(() =>
 
     // Retrieve resource group name from the first stack
     // using the stack reference above
-    var resourceGroupName = other.GetOutput("resourceGroupName");
+    var resourceGroupName = stackRef.GetOutput("resourceGroupName");
 
     return new Dictionary<string, object?>
     {
@@ -554,7 +557,7 @@ return await Pulumi.Deployment.RunAsync(() =>
 {{% choosable language yaml %}}
 
 ```yaml
-name: infra
+name: my-second-app-dev
 runtime: yaml
 description: A program to create a Stack Reference
 
@@ -564,8 +567,11 @@ resources:
     properties:
       name: acmecorp/infra/dev
 
-outputs:
+variables:
   resourceGroupName: ${stack-ref.outputs["resourceGroupName"]}
+
+outputs:
+  resourceGroupName: ${resourceGroupName}
 ```
 
 {{% /choosable %}}
@@ -573,6 +579,8 @@ outputs:
 To verify that your stack reference is working, run `pulumi up`.
 
 ```bash
+$ pulumi up -y
+
 Previewing update (dev):
 
      Type                      Name                     Plan
@@ -628,7 +636,7 @@ You can view the code for the complete solution below.
 ```javascript
 {{< example-program-snippet path="azure-native-storage-account-blob" language="javascript" from="1" to="19" >}}
 
-{{< example-program-snippet path="azure-native-storage-account-blob" language="javascript" from="30" to="32" >}}
+{{< example-program-snippet path="azure-native-storage-account-blob" language="javascript" from="34" to="36" >}}
 ```
 
 {{% /choosable %}}
@@ -638,7 +646,7 @@ You can view the code for the complete solution below.
 ```typescript
 {{< example-program-snippet path="azure-native-storage-account-blob" language="typescript" from="1" to="18" >}}
 
-{{< example-program-snippet path="azure-native-storage-account-blob" language="typescript" from="29" to="31" >}}
+{{< example-program-snippet path="azure-native-storage-account-blob" language="typescript" from="33" to="35" >}}
 ```
 
 {{% /choosable %}}
@@ -648,7 +656,7 @@ You can view the code for the complete solution below.
 ```python
 {{< example-program-snippet path="azure-native-storage-account-blob" language="python" from="1" to="18" >}}
 
-{{< example-program-snippet path="azure-native-storage-account-blob" language="python" from="29" to="31" >}}
+{{< example-program-snippet path="azure-native-storage-account-blob" language="python" from="23" to="35" >}}
 ```
 
 {{% /choosable %}}
@@ -658,7 +666,7 @@ You can view the code for the complete solution below.
 ```go
 {{< example-program-snippet path="azure-native-storage-account-blob" language="go" from="1" to="33" >}}
 
-{{< example-program-snippet path="azure-native-storage-account-blob" language="go" from="44" to="50" >}}
+{{< example-program-snippet path="azure-native-storage-account-blob" language="go" from="48" to="54" >}}
 ```
 
 {{% /choosable %}}
@@ -668,7 +676,7 @@ You can view the code for the complete solution below.
 ```csharp
 {{< example-program-snippet path="azure-native-storage-account-blob" language="csharp" from="1" to="25" >}}
 
-{{< example-program-snippet path="azure-native-storage-account-blob" language="csharp" from="37" to="43" >}}
+{{< example-program-snippet path="azure-native-storage-account-blob" language="csharp" from="41" to="47" >}}
 ```
 
 {{% /choosable %}}
@@ -678,7 +686,7 @@ You can view the code for the complete solution below.
 ```yaml
 {{< example-program-snippet path="azure-native-storage-account-blob" language="yaml" from="1" to="19" >}}
 
-{{< example-program-snippet path="azure-native-storage-account-blob" language="yaml" from="31" to="34" >}}
+{{< example-program-snippet path="azure-native-storage-account-blob" language="yaml" from="36" to="39" >}}
 ```
 
 {{% /choosable %}}
@@ -699,7 +707,7 @@ const resourceGroupName = stackRef.getOutput("resourceGroupName");
 const storageAccountName = stackRef.getOutput("storageAccountName");
 const blobContainerName = stackRef.getOutput("blobContainerName");
 
-exports.resourceGroupName = resourceGroupName;
+{{< example-program-snippet path="azure-native-storage-account-blob" language="javascript" from="25" to="32" >}}
 ```
 
 {{% /choosable %}}
@@ -711,11 +719,11 @@ import * as pulumi from "@pulumi/pulumi";
 
 const stackRef = new pulumi.StackReference("acmecorp/infra/dev");
 
-// Retrieve resource group name from the first stack
-// using the stack reference above
-const resourceGroupName = stackRef.getOutput("resourceGroupName");
+const resourceGroupName2 = stackRef.getOutput("resourceGroupName");
+const storageAccountName2 = stackRef.getOutput("storageAccountName");
+const blobContainerName2 = stackRef.getOutput("blobContainerName");
 
-export const resourceGroupName = resourceGroupName;
+{{< example-program-snippet path="azure-native-storage-account-blob" language="typescript" from="24" to="31" >}}
 ```
 
 {{% /choosable %}}
@@ -727,11 +735,11 @@ import pulumi
 
 stack_ref = pulumi.StackReference("acmecorp/infra/dev")
 
-# Retrieve resource group name from the first stack
-# using the stack reference above
 resource_group_name = stack_ref.get_output("resourceGroupName")
+storage_account_name = stack_ref.get_output("storageAccountName")
+blob_container_name = stack_ref.get_output("blobContainerName")
 
-pulumi.export("resourceGroupName", resource_group_name)
+{{< example-program-snippet path="azure-native-storage-account-blob" language="python" from="24" to="31" >}}
 ```
 
 {{% /choosable %}}
@@ -752,11 +760,12 @@ func main() {
             return err
         }
 
-        // Retrieve resource group name from the first stack
-        // using the stack reference above
         resourceGroupName := stackRef.GetOutput(pulumi.String("resourceGroupName"))
+        storageAccountName := stackRef.GetOutput(pulumi.String("storageAccountName"))
+        blobContainerName := stackRef.GetOutput(pulumi.String("blobContainerName"))
 
-        ctx.Export("resourceGroupName", resourceGroupName)
+{{< example-program-snippet path="azure-native-storage-account-blob" language="go" from="39" to="46" >}}
+
 		return nil
 	})
 }
@@ -774,14 +783,11 @@ return await Pulumi.Deployment.RunAsync(() =>
 
     var stackRef = new StackReference("acmecorp/infra/dev");
 
-    // Retrieve resource group name from the first stack
-    // using the stack reference above
-    var resourceGroupName = other.GetOutput("resourceGroupName");
+    var resourceGroupName = stackRef.GetOutput("resourceGroupName");
+    var storageAccountName = stackRef.GetOutput("storageAccountName");
+    var blobContainerName = stackRef.GetOutput("blobContainerName");
 
-    return new Dictionary<string, object?>
-    {
-        ["resourceGroupName"] = resourceGroupName
-    };
+{{< example-program-snippet path="azure-native-storage-account-blob" language="csharp" from="31" to="39" >}}
 
 });
 ```
@@ -801,8 +807,12 @@ resources:
     properties:
       name: acmecorp/infra/dev
 
-outputs:
+{{< example-program-snippet path="azure-native-storage-account-blob" language="yaml" from="20" to="29" >}}
+
+variables:
   resourceGroupName: ${stack-ref.outputs["resourceGroupName"]}
+  storageAccountName: ${stack-ref.outputs["storageAccountName"]}
+  blobContainerName: ${stack-ref.outputs["blobContainerName"]}
 ```
 
 {{% /choosable %}}
