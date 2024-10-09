@@ -31,7 +31,7 @@ This is the Pulumi website, so it's not an unbiased source of information. Still
 
 This flexibility allows developers to define infrastructure with real programming constructs, such as loops and functions, simplifying the process of handling complex logic. Pulumi excels in multi-cloud support, integrating with major cloud providers such as AWS, Azure, Google Cloud, and many others.
 
-Pulumi's state management is easy to use, automatically handling infrastructure state and storing it in the Pulumi Service by default. This approach simplifies collaboration and reduces the risk of state corruption, with built-in state locking and encryption ensuring secure and consistent state management. For those who prefer more control, Pulumi also supports self-managed backends.
+Pulumi's state management is easy to use as it automatically handles your infrastructure state and stores it in the Pulumi Cloud backend by default. With built-in state locking and encryption, this approach simplifies collaboration and reduces the risk of state corruption, ensuring secure and consistent state management. For those who prefer more control over their state, Pulumi also supports self-managed backends.
 
 Pulumi integrates with existing development workflows, allowing developers to use familiar tools and practices. Pulumi's ecosystem is growing rapidly, with many resources and integrations available. Comprehensive documentation and support, including tutorials and an active community forum, further bolster its appeal.
 
