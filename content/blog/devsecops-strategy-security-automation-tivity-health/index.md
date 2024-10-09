@@ -72,39 +72,39 @@ Tivity Health, a leading health and fitness solutions provider, has embraced thi
 
 ## On this article:
 
-- From Data Center to the Cloud: Tivity Health's Transformation
-- Embracing Pulumi: The Power of Automation, Productivity, and Security
-- Driving Business Impact Through Security Automation
-- Fostering DevOps Culture Through Cross-Functional Collaboration
-- Lessons Learned: Navigating the Cultural Shift
-- The Future of DevSecOps and Pulumi at Tivity Health
+- [The Beginning: From Data Center to the Cloud](/blog/devsecops-strategy-security-automation-tivity-health/#the-beginning-from-data-center-to-the-cloud]
+- [Embracing Pulumi: The Power of Automation, Productivity, and Security](/blog/devsecops-strategy-security-automation-tivity-health/#embracing-pulumi-the-power-of-automation-productivity-and-security)
+- [Driving Business Impact Through Security Automation]((/blog/devsecops-strategy-security-automation-tivity-health/#driving-business-impact-through-security-automation)
+- [Fostering DevOps Culture Through Cross-Functional Collaboration](/blog/devsecops-strategy-security-automation-tivity-health/fostering-devops-culture-through-cross-functional-collaboration)
+- [Lessons Learned: Navigating the Cultural Shift](/blog/devsecops-strategy-security-automation-tivity-health/#lessons-learned-navigating-the-cultural-shift)
+- [The Future of DevSecOps and Pulumi at Tivity Health](/blog/devsecops-strategy-security-automation-tivity-health/#the-future-of-devsecops-and-pulumi-at-tivity-health)
 
-## From Data Center to the Cloud: Tivity Health's Transformation
+## The Beginning: From Data Center to the Cloud
 
-Tivity Health's journey began with a strategic decision to transition from a traditional data center environment to a cloud-native architecture. Rather than opting for a "lift and shift" approach, they made the bold choice to go directly to a cloud-native model, embracing the principles of DevSecOps along the way.
+[Tivity Health](https://www.tivityhealth.com/)'s journey began with a strategic decision to transition from a traditional data center environment to a cloud-native architecture. Rather than opting for a "lift and shift" approach, they made the bold choice to go directly to a cloud-native model, embracing the principles of DevSecOps along the way.
 
 {{< youtube "35vAiKdDux4?rel=0" >}}
 
-The need to automate infrastructure deployment and management was fundamental. Giambruno explained, "If you can't automate it, we don't need it." This philosophy drove the team to seek out a solution that would not only streamline their operations but also empower their developers to focus on building innovative products for their customers.
+The need to [automate infrastructure deployment](https://www.pulumi.com/docs/pulumi-cloud/deployments/) and management was fundamental. Giambruno explained, "*If you can't automate it, we don't need it.*" This philosophy drove the team to seek out a solution that would not only streamline their operations but also empower their developers to focus on building innovative products for their customers.
 
 ## Embracing Pulumi: The Power of Automation, Productivity, and Security
 
 Tivity Health's search for the right tool led them to Pulumi, a unified platform for all the infrastructure needs that allows teams to use general programming languages, such as TypeScript, Python, Java, and Go, to define and manage their cloud infrastructure. Giambruno and his team immediately recognized Pulumi's ability to deliver on their key requirements:
 
-- **Automation**: Pulumi's infrastructure as code (IaC) approach enabled Tivity Health to automate the deployment and management of its cloud environments, reducing the time and effort required for these tasks.
+- **Automation**: [Pulumi's infrastructure as code (IaC)](https://www.pulumi.com/docs/iac/) approach enabled Tivity Health to automate the deployment and management of its cloud environments, reducing the time and effort required for these tasks.
 - **Productivity**: using Pulumi's general-purpose programming languages allowed developers to define, deploy, and manage infrastructure within their existing tools.
-- **Security**: Pulumi's security features allowed Tivity Health to integrate security practices into its infrastructure deployment processes, reducing the risk of security breaches and ensuring compliance.
+- **Security**: Pulumi's security features allowed Tivity Health to integrate [security practices](https://www.pulumi.com/docs/iac/packages-and-automation/crossguard/) into its infrastructure deployment processes, reducing the risk of security breaches and ensuring compliance.
 - **Cost Optimization**: Pulumi's ability to automate the spin-up and teardown of cloud environments on demand has led to significant cost reductions for Tivity Health.
 
-Giambruno describes Pulumi as a "three-dimensional" tool, offering a versatile set of capabilities that have been instrumental in transforming Tivity Health's operations. "The ability to use those dimensions in lots of different ways to do the automation is what really makes a difference to the teams," he says.
+Giambruno describes Pulumi as a "three-dimensional" tool, offering a versatile set of capabilities that have been instrumental in transforming Tivity Health's operations. "*The ability to use those dimensions in lots of different ways to do the automation is what really makes a difference to the teams*," he says.
 
 ## Driving Business Impact Through Security Automation
 
 By adopting Pulumi and DevSecOps automation, Tivity Health realized significant business benefits:
 
-- **Speed and Agility**: By automating its infrastructure deployment and management processes, Tivity Health has dramatically reduced the time required to spin up new environments or change existing ones. "We run it through automation and boom, it's out, it's done," Giambruno says. This newfound speed and agility have empowered Tivity Health's developers to focus on building products and features rather than getting bogged down in infrastructure-related tasks.
-- **Cost Optimization**: Tivity Health's cloud-native approach and Pulumi's automation capabilities have resulted in significant cost savings. The company estimates that its annual cloud spend has decreased from $9.5 million in its data center days to just $2 million—a staggering 79% reduction. These cost savings have allowed Tivity Health to redirect resources towards more strategic initiatives that drive business growth.
-- **Improved Security and Compliance**: Tivity Health's DevSecOps strategy, anchored by Pulumi, has strengthened its security posture and compliance efforts. By integrating security directly into its infrastructure workflows, Tivity Health has improved its security posture. Automation ensures that security measures are enforced consistently across their cloud environments, reducing risks and improving compliance.
+- **Speed and Agility**: By automating its infrastructure deployment and management processes, Tivity Health has dramatically [reduced the time](https://www.pulumi.com/case-studies/unity/) required to spin up new environments or change existing ones. "*We run it through automation and boom, it's out, it's done*," Giambruno says. This newfound speed and agility have empowered Tivity Health's developers to focus on building products and features rather than getting bogged down in infrastructure-related tasks.
+- **Cost Optimization**: Tivity Health's cloud-native approach and Pulumi's automation capabilities have resulted in [significant cost savings](https://www.pulumi.com/case-studies/lemonade/). The company estimates that its annual cloud spend has decreased from $9.5 million in its data center days to just $2 million—a staggering 79% reduction. These cost savings have allowed Tivity Health to redirect resources towards more strategic initiatives that drive business growth.
+- **Improved Security and Compliance**: Tivity Health's DevSecOps strategy, anchored by Pulumi, has strengthened its security posture and [compliance efforts](https://www.pulumi.com/docs/iac/packages-and-automation/crossguard/compliance-ready-policies/). By integrating security directly into its infrastructure workflows, Tivity Health has improved its security posture. Automation ensures that security measures are enforced consistently across their cloud environments, reducing risks and improving compliance.
 
 ## Fostering DevOps Culture Through Cross-Functional Collaboration
 
@@ -123,7 +123,7 @@ Transitioning to DevSecOps and cloud-native practices required a cultural shift 
 
 As Tivity Health continues to refine its DevSecOps strategy, Giambruno is optimistic about the future. He envisions a world where the company's ability to deploy new products and features rapidly will give Tivity Health a significant competitive edge, allowing it to better serve its customers and drive business growth.
 
-Looking ahead, Giambruno is particularly enthusiastic about the potential of Pulumi's AI-powered capabilities, which he believes will further streamline and optimize the company's infrastructure management processes. "I'm super looking forward to the tests we're going to do, like when we acquire someone and then taking them in, 'Borg-ing' them into our automation and seeing how much we can take out of their operating cost as fast as possible," he says.
+Looking ahead, Giambruno is particularly enthusiastic about the potential of Pulumi's AI-powered capabilities, which he believes will further streamline and optimize the company's infrastructure management processes. "*I'm super looking forward to the tests we're going to do, like when we acquire someone and then taking them in, 'Borg-ing' them into our automation and seeing how much we can take out of their operating cost as fast as possible*," he says.
 
 Tivity Health's journey with Pulumi is a powerful example of how the right tool, DevSecOps strategy, and automation can drive tangible business results. By focusing on automation, security, and collaboration, organizations can achieve faster, cheaper, and better cloud deployments—putting them on the path to long-term success in an increasingly competitive, cloud-native world.
 
