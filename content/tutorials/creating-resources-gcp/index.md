@@ -25,7 +25,7 @@ weight: 999
 # A brief summary of the tutorial. It appears at the top of the tutorial page. Markdown is fine.
 summary: |
    In Pulumi, resources represent the fundamental units that make up your infrastructure, such as virtual machines, networks, storage, and databases. A resource is used to define and manage an infrastructure object in your Pulumi configuration.
-   In this tutorial, you will create a simple static website hosted on an Azure Blob Storage account. You will then refer to documentation in the Pulumi Registry to configure the storage account as a website.
+   In this tutorial, you will create a simple static website hosted on an Google Cloud virtual instance. You will then refer to documentation in the Pulumi Registry to configure the storage account as a website.
 
 # A list of three to five things the reader will have learned by the end of the tutorial.
 youll_learn:
