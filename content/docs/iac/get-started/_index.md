@@ -21,6 +21,7 @@ aliases:
     - /get-started/
     - /docs/tour/
     - /docs/get-started
+    - /tutorials/pulumi-fundamentals/
 ---
 
 Pulumi is a modern [infrastructure as code](/what-is/what-is-infrastructure-as-code/) and [secrets management](/what-is/what-is-secrets-management/) platform that allows you to use familiar programming languages and tools to automate, secure and manage everything you run in the cloud.

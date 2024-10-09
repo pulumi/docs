@@ -16,6 +16,7 @@ aliases:
 - /docs/tour/programs-exports/
 - /docs/intro/concepts/stack/
 - /docs/concepts/stack/
+- /tutorials/building-with-pulumi/understanding-stacks/
 ---
 
 Every Pulumi program is deployed to a _stack_. A stack is an isolated, independently [configurable](/docs/concepts/config/)
