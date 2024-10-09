@@ -29,7 +29,7 @@ First up, IaC tools that manage infrastructure across multiple cloud providers. 
 
 This is the Pulumi website, so it's not an unbiased source of information. Still, Pulumi stands out as a versatile Infrastructure as Code (IaC) tool, offering the flexibility to manage infrastructure using a variety of programming languages.
 
-This flexibility allows developers to define infrastructure with real programming constructs, such as loops and functions, simplifying handling complex logic. Pulumi excels in multi-cloud support, integrating with major cloud providers such as AWS, Azure, Google Cloud, and many others.
+This flexibility allows developers to define infrastructure with real programming constructs, such as loops and functions, simplifying the process of handling complex logic. Pulumi excels in multi-cloud support, integrating with major cloud providers such as AWS, Azure, Google Cloud, and many others.
 
 Pulumi's state management is easy to use, automatically handling infrastructure state and storing it in the Pulumi Service by default. This approach simplifies collaboration and reduces the risk of state corruption, with built-in state locking and encryption ensuring secure and consistent state management. For those who prefer more control, Pulumi also supports self-managed backends.
 
