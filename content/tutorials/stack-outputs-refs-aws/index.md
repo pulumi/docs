@@ -243,7 +243,68 @@ name: s3-writer
 
 ### Export resource values
 
-Now that you have your project resources defined, you can [export the values](/docs/concepts/stack/#outputs) of various resource properties from your program. When defining these exports, you'll need to provide two arguments:
+Now that you have your project resources defined, you can [export the values](/docs/concepts/stack/#outputs) of various resource properties from your program. The `export` syntax is as follows:
+
+{{< chooser language "javascript,typescript,python,go,csharp,yaml" / >}}
+
+{{% choosable language javascript %}}
+
+```javascript
+exports.<output-name> = <output-value>;
+```
+
+{{% /choosable %}}
+
+{{% choosable language typescript %}}
+
+```typescript
+export const <output-name> = <output-value>;
+```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+```python
+pulumi.export("<output-name>", <output-value>)
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```go
+ctx.Export("<output-name>", <output-value>)
+```
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+```csharp
+return await Pulumi.Deployment.RunAsync(() =>
+{
+
+    return new Dictionary<string, object?>
+    {
+        ["<output-name>"] = <output-value>
+    };
+
+});
+```
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+```yaml
+outputs:
+  <output-name>: ${<output-value>}
+```
+
+{{% /choosable %}}
+
+When defining these exports, you'll need to provide two arguments:
 
 | Argument | Description |
 |--------------|-------------|
@@ -708,5 +769,6 @@ You exported Lambda properties into stack outputs, and referenced those outputs 
 
 To learn more about creating and managing resources in Pulumi, take a look at the following resources:
 
+- Learn more about creating resources in the [Creating Resources on AWS tutorial](/tutorials/creating-resources-aws/).
 - Learn more about [stack outputs and references](/docs/concepts/stack/#stackreferences) in the Pulumi documentation.
 - Learn more about [Pulumi inputs and outputs](/docs/concepts/inputs-outputs/) in the Pulumi documentation.
