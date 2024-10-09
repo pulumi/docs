@@ -28,7 +28,7 @@ Multi-cloud solutions prevent vendor lock-in, maintain flexibility, and promote 
 
 ### [Pulumi](https://www.pulumi.com/)
 
-This is the Pulumi website, so it's not an unbiased source of information. Still, Pulumi stands out as a versatile Infrastructure as Code (IaC) tool, offering the flexibility to manage infrastructure using a variety of programming languages.
+This is the Pulumi website, so it's not an unbiased source of information. Still, Pulumi stands out as a versatile Infrastructure as Code tool, offering the flexibility to manage infrastructure using a variety of programming languages.
 
 This flexibility allows developers to define infrastructure with real programming constructs, such as loops and functions, simplifying the process of handling complex logic. Pulumi excels in multi-cloud support, integrating with major cloud providers such as AWS, Azure, Google Cloud, and many others.
 
@@ -112,6 +112,16 @@ Additionally, Google Cloud's Config Connector allows for managing Google Cloud r
 - **Integration**: Deeply integrates with Google Cloud services, supports GKE, and facilitates CI/CD pipeline integration.
 - **Ecosystem**: Supported by documentation and a smaller GCP-focused community.
 
+### [AWS-CDK](https://aws.amazon.com/cdk/)
+
+AWS Cloud Development Kit (CDK) brings some of the power of multi-cloud tools like Pulumi to AWS specific tools. CDK allows you to define cloud infrastructure using familiar programming languages such as TypeScript, Python, Java, or C#. This approach provides a more developer-friendly experience compared to traditional JSON or YAML-based templates.
+
+CDK supports unit testing of infrastructure code, allowing you to validate your configurations before deploymente. Because CDK code will be compiled down to CloudFormation JSON or YAML templates and deployed with CloudFormation, it shares many of the same benefits and limitations as CloudFormation. AWS CDK is an ideal choice for teams deeply invested in the AWS ecosystem who want the benefits of using familiar programming languages for infrastructure definition.
+
+- **Flexibility**: Define infrastructure using your preferred programming language.
+- **Integration**: Integrates well with AWS-native CI/CD and supports Amazon EKS for Kubernetes cluster management.
+- **Ecosystem**: Supported by AWS ecosystem, providing resources for learning and troubleshooting.
+
 ## Conclusion
 
 Choosing the right Infrastructure as Code tool is crucial in today's complex cloud landscape. We've explored options ranging from multi-cloud solutions to cloud-specific tools, each with unique strengths and weaknesses. The ideal choice depends on your needs, considering flexibility, multi-cloud support, state management, workflow integration, and ecosystem robustness.
@@ -122,6 +132,6 @@ Each tool offers unique strengths and potential trade-offs:
 
 2. Cloud-specific tools like AWS CloudFormation, Azure Resource Manager, and Google Cloud Deployment Manager offer deep integration with their respective platforms. They provide tight integration with native services. The trade-off is that they lock you into a single cloud ecosystem, and limit portability of skills and infrastructure definitions.
 
-We've shown you the options – now let us make our case for Pulumi. Pulumi's use of general-purpose programming languages for infrastructure definition provides familiar syntax, powerful abstractions, and seamless integration with existing development workflows. It's really something you need to experience. Don't take our word for it – [try it yourself](https://www.pulumi.com/product/infrastructure-as-code/).
+We've shown you the options – now let us make our case for Pulumi. Pulumi's use of general-purpose programming languages for infrastructure definition provides familiar syntax, powerful abstractions, and seamless integration with existing development workflows. Its multi-cloud support allows you to manage resources across AWS, Azure, Google Cloud, and many other providers using a single tool and consistent approach. This combination of language flexibility and multi-cloud capability offers a uniquely powerful and adaptable IaC solution. It's really something you need to experience. Don't take our word for it – [try it yourself](https://www.pulumi.com/product/infrastructure-as-code/).
 
 But regardless of the tool you choose, the benefits of embracing Infrastructure as Code are clear. IaC brings consistency to deployments, enables version control for infrastructure, increases automation, and improves scalability. If you're new to IaC, the most important step is to start now. If you're already using it, focus on refining your approach. IaC continues to deliver value as your needs evolve.
