@@ -20,12 +20,13 @@ We'll assess each tool based on the following criteria:
 | Integration | Compatibility with existing development workflows and CI/CD pipelines       |
 | Ecosystem   | Community strength, documentation quality, and support resources            |
 
-
 ## Multi-Cloud Infrastructure as Code Tools
 
-First up, IaC tools that manage infrastructure across multiple cloud providers. You should pick one of these if you don't have any unusual requirements or legacy investments.
+First up, IaC tools that manage infrastructure across multiple cloud providers.
 
-### Pulumi
+Multi-cloud solutions prevent vendor lock-in, maintain flexibility, and promote skill portability across different cloud environments. You should choose one of these tools if you are starting fresh with IaC and don't have migration costs associated with investment in a legacy tool.
+
+### [Pulumi](https://www.pulumi.com/)
 
 This is the Pulumi website, so it's not an unbiased source of information. Still, Pulumi stands out as a versatile Infrastructure as Code (IaC) tool, offering the flexibility to manage infrastructure using a variety of programming languages.
 
@@ -41,21 +42,21 @@ Pulumi integrates with existing development workflows, allowing developers to us
 - **Integration**: Integrates with existing development workflows, enhancing productivity and collaboration.
 - **Ecosystem**: Growing community and ecosystem. Comprehensive documentation and support, including tutorials and an active community.
 
-### Terraform
+### [Terraform](https://www.terraform.io/)
 
 Terraform is a multi-cloud Infrastructure as Code (IaC) tool that utilizes the HashiCorp Configuration Language (HCL). HCL is designed to be both human-readable and machine-friendly, striking a balance between simplicity and power. While it lacks some of the advanced programming constructs of general-purpose languages, HCL offers a declarative approach that many find intuitive for infrastructure definition. HCL lacks full programming constructs, which may necessitate workarounds for handling complex logic.
 
 For state management, Terraform uses a state file to track the current state of your infrastructure. While this approach requires manual configuration, including setting up remote backends and state locking, it does offer fine-grained control over state.
 
-Terraform integrates well with existing development workflows and CI/CD pipelines, although additional scripting may be needed for complex scenarios. Terraform also has a wide range of plugins, integrations, and comprehensive documentation.
+Terraform integrates well with existing development workflows and CI/CD pipelines. It includes support for the Kubernetes Core APIs and some support for CRDs. Terraform also has a wide range of plugins, integrations, and comprehensive documentation.
 
 - **Flexibility**: Utilizes HCL. Lacks full programming constructs.
 - **Multi-cloud**: Offers support for AWS, Azure, GCP, Oracle cloud and many others.
 - **State**: Provides fine-grained control over state management, but requires manual configuration including remote backends and state locking, which can add complexity to collaboration.
-- **Integration**: Integrates well with existing development workflows and CI/CD pipelines, though additional scripting may be needed for complex scenarios.
+- **Integration**: Integrates well with existing development workflows and CI/CD pipelines. though additional scripting may be needed for complex scenarios.
 - **Ecosystem**: A large and active community. A wide range of plugins and integrations.
 
-### OpenTofu
+### [OpenTofu](https://opentofu.org/)
 
 OpenTofu is a recent fork of Terraform 1.6.x. It shares many core functionalities with Terraform, including using HCL to define infrastructure.
 
@@ -79,11 +80,9 @@ Cloud-specific tools can offer:
 2. Potentially simpler setup for teams already familiar with a particular cloud ecosystem
 3. Access to platform-specific features that might not be available in multi-cloud tools
 
-However, it's important to note that multi-cloud solutions offer more strategic advantages. They prevent vendor lock-in, maintain flexibility, and promote skill portability across different cloud environments. Despite these benefits of multi-cloud tools, understanding cloud-specific options is crucial for a comprehensive view of the IaC tooling landscape.
+Let's explore some of the most prominent cloud-specific IaC tools and how they compare to their multi-cloud counterparts in terms of flexibility, integration, and ecosystem support. All single provider tools covered here leverage platform native state tracking, eliminating the need for multi-cloud state management.
 
-Let's explore some of the most prominent cloud-specific IaC tools and how they compare to their multi-cloud counterparts in terms of flexibility, integration, and ecosystem support.
-
-### AWS CloudFormation
+### [AWS CloudFormation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/Welcome.html)
 
 AWS CloudFormation supports JSON or YAML. Like Pulumi and Terraform, it has a declarative, desired state approach.
 
@@ -95,7 +94,7 @@ CloudFormation supports cross-account and cross-region deployments. Despite thes
 - **Integration**: Integrates well with AWS-native CI/CD. Broader integration to non-AWS environments is possible but more challenging.
 - **Ecosystem**: Supported by extensive documentation, providing resources for learning and troubleshooting.
 
-### Azure Resource Manager
+### [Azure Resource Manager](https://azure.microsoft.com/fr-fr/get-started/azure-portal/resource-manager)
 
 Azure Resource Manager (ARM) supports JSON-based configuration or using Bicep - a ARM-specific DSL. JSON-based templating is also possible. ARM integrates deeply with Azure services including Azure DevOps, however, integration with non-Azure workflows can be more challenging. The ecosystem is supported by a large community and extensive documentation. The complexity of managing dependencies between resources with ARM can increase with scale. Potential performance issues with large deployments have been a challenge with ARM. However, Azure Resource Manager is preferred by those who want a native Azure tool and are deeply invested in the Azure ecosystem.
 
@@ -103,7 +102,7 @@ Azure Resource Manager (ARM) supports JSON-based configuration or using Bicep - 
 - **Integration**: Integrates well with Azure services. Broader integration to non-Azure CI/CD is more challenging.
 - **Ecosystem**: Supported by documentation, tutorials and troubleshooting advice and by the greater Azure ecosystem.
 
-### Google Cloud Deployment Manager
+### [Google Cloud Deployment Manager](https://cloud.google.com/deployment-manager/docs)
 
 Google Cloud Deployment Manager (CDM) focuses on managing Google Cloud Platform (GCP) resources using YAML and Python Jinja2 templates. CDM integrates deeply with Google Cloud and, like other native cloud tools, manages state internally. CDM offers resource grouping for enhanced resource management and cost management tools for expense tracking.
 
