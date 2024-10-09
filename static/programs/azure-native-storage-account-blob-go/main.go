@@ -32,10 +32,14 @@ func main() {
 			return err
 		}
 
+		resourceGroupName := resourceGroup.Name
+		storageAccountName := storageAccount.Name
+		blobContainerName := blobContainer.Name
+
 		_, err = storage.NewBlob(ctx, "blobResource", &storage.BlobArgs{
-			AccountName:       storageAccount.Name,
-			ContainerName:     blobContainer.Name,
-			ResourceGroupName: resourceGroup.Name,
+			AccountName:       storageAccountName,
+			ContainerName:     blobContainerName,
+			ResourceGroupName: resourceGroupName,
 			AccessTier:        storage.BlobAccessTierHot,
 			Source: pulumi.NewStringAsset("content"),
 			Type:   storage.BlobTypeBlock,

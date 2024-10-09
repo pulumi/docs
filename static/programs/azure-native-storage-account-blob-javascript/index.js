@@ -18,10 +18,14 @@ const blobContainer = new storage.BlobContainer("blobContainer", {
     resourceGroupName: resourceGroup.name,
 });
 
+const resourceGroupName = resourceGroup.name;
+const storageAccountName = storageAccount.name;
+const blobContainerName = blobContainer.name;
+
 const blobResource = new storage.Blob("blobResource", {
-    accountName: storageAccount.name,
-    containerName: blobContainer.name,
-    resourceGroupName: resourceGroup.name,
+    accountName: storageAccountName,
+    containerName: blobContainerName,
+    resourceGroupName: resourceGroupName,
     accessTier: storage.BlobAccessTier.Hot,
     source: new pulumi.asset.StringAsset("content"),
     type: storage.BlobType.Block,

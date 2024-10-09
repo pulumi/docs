@@ -65,7 +65,59 @@ $ pulumi new azure-python
 
 Then replace the default code with the following code snippet to scaffold your project with the required imports and overall program structure:
 
-TBD
+{{< chooser language "javascript,typescript,python,go,csharp,yaml" / >}}
+
+{{% choosable language javascript %}}
+
+```javascript
+{{< example-program-snippet path="azure-native-storage-account-blob" language="javascript" from="1" to="19" >}}
+```
+
+{{% /choosable %}}
+
+{{% choosable language typescript %}}
+
+```typescript
+{{< example-program-snippet path="azure-native-storage-account-blob" language="typescript" from="1" to="18" >}}
+```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+```python
+{{< example-program-snippet path="azure-native-storage-account-blob" language="python" from="1" to="18" >}}
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```go
+{{< example-program-snippet path="azure-native-storage-account-blob" language="go" from="1" to="33" >}}
+
+{{< example-program-snippet path="azure-native-storage-account-blob" language="go" from="48" to="50" >}}
+```
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+```csharp
+{{< example-program-snippet path="azure-native-storage-account-blob" language="csharp" from="1" to="25" >}}
+
+{{< example-program-snippet path="azure-native-storage-account-blob" language="csharp" from="43" to="43" >}}
+```
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+```yaml
+{{< example-program-snippet path="azure-native-storage-account-blob" language="yaml" from="1" to="19" >}}
+```
+
+{{% /choosable %}}
 
 This baseline code defines the following on your behalf:
 
@@ -145,13 +197,108 @@ When defining these exports, you'll need to provide two arguments:
 
 To demonstrate how this works, let's export the name of your resource group. By referring to the documentation, you can see that the name of the resource group can be referenced via its `name` property, so update your code to reflect that as shown below:
 
-TBD
+{{< chooser language "javascript,typescript,python,go,csharp,yaml" / >}}
+
+{{% choosable language javascript %}}
+
+```javascript
+{{< example-program-snippet path="azure-native-storage-account-blob" language="javascript" from="1" to="19" >}}
+
+{{< example-program-snippet path="azure-native-storage-account-blob" language="javascript" from="30" to="30" >}}
+```
+
+{{% /choosable %}}
+
+{{% choosable language typescript %}}
+
+```typescript
+{{< example-program-snippet path="azure-native-storage-account-blob" language="typescript" from="1" to="18" >}}
+
+{{< example-program-snippet path="azure-native-storage-account-blob" language="typescript" from="29" to="29" >}}
+```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+```python
+{{< example-program-snippet path="azure-native-storage-account-blob" language="python" from="1" to="18" >}}
+
+{{< example-program-snippet path="azure-native-storage-account-blob" language="python" from="29" to="29" >}}
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```go
+{{< example-program-snippet path="azure-native-storage-account-blob" language="go" from="1" to="33" >}}
+
+{{< example-program-snippet path="azure-native-storage-account-blob" language="go" from="44" to="44" >}}
+
+{{< example-program-snippet path="azure-native-storage-account-blob" language="go" from="48" to="50" >}}
+```
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+```csharp
+{{< example-program-snippet path="azure-native-storage-account-blob" language="csharp" from="1" to="25" >}}
+
+{{< example-program-snippet path="azure-native-storage-account-blob" language="csharp" from="37" to="39" >}}
+
+{{< example-program-snippet path="azure-native-storage-account-blob" language="csharp" from="42" to="43" >}}
+```
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+```yaml
+{{< example-program-snippet path="azure-native-storage-account-blob" language="yaml" from="1" to="19" >}}
+
+{{< example-program-snippet path="azure-native-storage-account-blob" language="yaml" from="31" to="32" >}}
+```
+
+{{% /choosable %}}
 
 ## Deploy your resources
 
 Now save your file and run the `pulumi up` command to preview and deploy the resources you've just defined in your project.
 
-TBD
+```bash
+$ pulumi up -y
+Previewing update (infra)
+
+     Type                                     Name                  Plan
+ +   pulumi:pulumi:Stack                      infra                 create
+ +   ├─ azure-native:resources:ResourceGroup  resource-group        create
+ +   ├─ azure-native:storage:StorageAccount   storageaccount        create
+ +   └─ azure-native:storage:BlobContainer    blobcontainer         create
+
+Outputs:
+    resourceGroupName: output<string>
+
+Resources:
+    + 4 to create
+
+Updating (infra)
+
+     Type                                     Name                  Status
+ +   pulumi:pulumi:Stack                      infra                 created (40s)
+ +   ├─ azure-native:resources:ResourceGroup  resource-group        created (3s)
+ +   ├─ azure-native:storage:StorageAccount   storageaccount        created (27s)
+ +   └─ azure-native:storage:BlobContainer    blobcontainer         created (3s)
+
+Outputs:
+    resourceGroupName: "resource-group0e6ebba3"
+
+Resources:
+    + 4 created
+
+Duration: 42s
+```
 
 You can see that the output you've created has been provided as a part of the update details. You will learn the different ways you can access this output in the next steps of the tutorial.
 
@@ -173,7 +320,7 @@ $ pulumi stack output resourceGroupName
 resource-group0e6ebba3
 ```
 
-This can be especially useful if you have any workflow scripts that depend on the outputs of your program. Let's say you want to view the details of your resource group. You can do so by running the [`az group show` command](https://learn.microsoft.com/en-us/cli/azure/group?view=azure-cli-latest#az-group-show) and passing the output of `resourceGroupName` to the `--resource-group` flag:
+This can be especially useful if you have any workflow scripts that depend on the outputs of your program. For example, if you wanted to view the details of your resource group using the Azure CLI, you can do so by running the [`az group show` command](https://learn.microsoft.com/en-us/cli/azure/group?view=azure-cli-latest#az-group-show) and passing the output of `resourceGroupName` to the `--resource-group` flag:
 
 ```bash
 $ az group show --resource-group $(pulumi stack output resourceGroupName)
@@ -313,9 +460,9 @@ const stackRef = new pulumi.StackReference("acmecorp/infra/dev");
 
 // Retrieve resource group name from the first stack
 // using the stack reference above
-const firstStackRGName = stackRef.getOutput("resourceGroupName");
+const resourceGroupName = stackRef.getOutput("resourceGroupName");
 
-exports.firstStackRGName = firstStackRGName;
+exports.resourceGroupName = resourceGroupName;
 ```
 
 {{% /choosable %}}
@@ -329,9 +476,9 @@ const stackRef = new pulumi.StackReference("acmecorp/infra/dev");
 
 // Retrieve resource group name from the first stack
 // using the stack reference above
-const firstStackRGName = stackRef.getOutput("resourceGroupName");
+const resourceGroupName = stackRef.getOutput("resourceGroupName");
 
-export const firstStackRGName = firstStackRGName;
+export const resourceGroupName = resourceGroupName;
 ```
 
 {{% /choosable %}}
@@ -345,9 +492,9 @@ stack_ref = pulumi.StackReference("acmecorp/infra/dev")
 
 # Retrieve resource group name from the first stack
 # using the stack reference above
-first_stack_rg_name = stack_ref.get_output("resourceGroupName")
+resource_group_name = stack_ref.get_output("resourceGroupName")
 
-pulumi.export("firstStackRGName", first_stack_rg_name)
+pulumi.export("resourceGroupName", resource_group_name)
 ```
 
 {{% /choosable %}}
@@ -370,9 +517,9 @@ func main() {
 
         // Retrieve resource group name from the first stack
         // using the stack reference above
-        firstStackRGName := stackRef.GetOutput(pulumi.String("resourceGroupName"))
+        resourceGroupName := stackRef.GetOutput(pulumi.String("resourceGroupName"))
 
-        ctx.Export("firstStackRGName", firstStackRGName)
+        ctx.Export("resourceGroupName", resourceGroupName)
 		return nil
 	})
 }
@@ -392,11 +539,11 @@ return await Pulumi.Deployment.RunAsync(() =>
 
     // Retrieve resource group name from the first stack
     // using the stack reference above
-    var firstStackRGName = other.GetOutput("resourceGroupName");
+    var resourceGroupName = other.GetOutput("resourceGroupName");
 
     return new Dictionary<string, object?>
     {
-        ["firstStackRGName"] = firstStackRGName
+        ["resourceGroupName"] = resourceGroupName
     };
 
 });
@@ -418,7 +565,7 @@ resources:
       name: acmecorp/infra/dev
 
 outputs:
-  firstStackRGName: ${stack-ref.outputs["resourceGroupName"]}
+  resourceGroupName: ${stack-ref.outputs["resourceGroupName"]}
 ```
 
 {{% /choosable %}}
@@ -432,7 +579,7 @@ Previewing update (dev):
  +   pulumi:pulumi:Stack  my-second-app-dev             create
 
 Outputs:
-    firstStackRGName: output<string>
+    resourceGroupName: output<string>
 
 Resources:
     + 4 to create
@@ -444,7 +591,7 @@ Updating (dev):
  +   pulumi:pulumi:Stack  my-second-app-dev             created (2s)
 
 Outputs:
-    firstStackRGName: "resource-group0e6ebba3"
+    resourceGroupName: "resource-group0e6ebba3"
 
 Resources:
     + 1 created
@@ -470,15 +617,195 @@ Once you have completed these steps, you can verify that the Blob was successful
 
 ## View complete solution
 
-You can view the complete project code below.
+You can view the code for the complete solution below.
 
 ### First program code
 
-TBD
+{{< chooser language "javascript,typescript,python,go,csharp,yaml" / >}}
+
+{{% choosable language javascript %}}
+
+```javascript
+{{< example-program-snippet path="azure-native-storage-account-blob" language="javascript" from="1" to="19" >}}
+
+{{< example-program-snippet path="azure-native-storage-account-blob" language="javascript" from="30" to="32" >}}
+```
+
+{{% /choosable %}}
+
+{{% choosable language typescript %}}
+
+```typescript
+{{< example-program-snippet path="azure-native-storage-account-blob" language="typescript" from="1" to="18" >}}
+
+{{< example-program-snippet path="azure-native-storage-account-blob" language="typescript" from="29" to="31" >}}
+```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+```python
+{{< example-program-snippet path="azure-native-storage-account-blob" language="python" from="1" to="18" >}}
+
+{{< example-program-snippet path="azure-native-storage-account-blob" language="python" from="29" to="31" >}}
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```go
+{{< example-program-snippet path="azure-native-storage-account-blob" language="go" from="1" to="33" >}}
+
+{{< example-program-snippet path="azure-native-storage-account-blob" language="go" from="44" to="50" >}}
+```
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+```csharp
+{{< example-program-snippet path="azure-native-storage-account-blob" language="csharp" from="1" to="25" >}}
+
+{{< example-program-snippet path="azure-native-storage-account-blob" language="csharp" from="37" to="43" >}}
+```
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+```yaml
+{{< example-program-snippet path="azure-native-storage-account-blob" language="yaml" from="1" to="19" >}}
+
+{{< example-program-snippet path="azure-native-storage-account-blob" language="yaml" from="31" to="34" >}}
+```
+
+{{% /choosable %}}
 
 ### Second program code
 
-TBD
+{{< chooser language "javascript,typescript,python,go,csharp,yaml" / >}}
+
+{{% choosable language javascript %}}
+
+```javascript
+"use strict";
+const pulumi = require("@pulumi/pulumi");
+
+const stackRef = new pulumi.StackReference("acmecorp/infra/dev");
+
+const resourceGroupName = stackRef.getOutput("resourceGroupName");
+const storageAccountName = stackRef.getOutput("storageAccountName");
+const blobContainerName = stackRef.getOutput("blobContainerName");
+
+exports.resourceGroupName = resourceGroupName;
+```
+
+{{% /choosable %}}
+
+{{% choosable language typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+
+const stackRef = new pulumi.StackReference("acmecorp/infra/dev");
+
+// Retrieve resource group name from the first stack
+// using the stack reference above
+const resourceGroupName = stackRef.getOutput("resourceGroupName");
+
+export const resourceGroupName = resourceGroupName;
+```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+```python
+import pulumi
+
+stack_ref = pulumi.StackReference("acmecorp/infra/dev")
+
+# Retrieve resource group name from the first stack
+# using the stack reference above
+resource_group_name = stack_ref.get_output("resourceGroupName")
+
+pulumi.export("resourceGroupName", resource_group_name)
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+        stackRef, err := pulumi.NewStackReference(ctx, "acmecorp/infra/dev", nil)
+        if err != nil {
+            return err
+        }
+
+        // Retrieve resource group name from the first stack
+        // using the stack reference above
+        resourceGroupName := stackRef.GetOutput(pulumi.String("resourceGroupName"))
+
+        ctx.Export("resourceGroupName", resourceGroupName)
+		return nil
+	})
+}
+```
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+```csharp
+using Pulumi;
+
+return await Pulumi.Deployment.RunAsync(() =>
+{
+
+    var stackRef = new StackReference("acmecorp/infra/dev");
+
+    // Retrieve resource group name from the first stack
+    // using the stack reference above
+    var resourceGroupName = other.GetOutput("resourceGroupName");
+
+    return new Dictionary<string, object?>
+    {
+        ["resourceGroupName"] = resourceGroupName
+    };
+
+});
+```
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+```yaml
+name: infra
+runtime: yaml
+description: A program to create a Stack Reference
+
+resources:
+  stack-ref:
+    type: pulumi:pulumi:StackReference
+    properties:
+      name: acmecorp/infra/dev
+
+outputs:
+  resourceGroupName: ${stack-ref.outputs["resourceGroupName"]}
+```
+
+{{% /choosable %}}
 
 ## Clean up
 

@@ -17,6 +17,10 @@ blob_container = azure_native.storage.BlobContainer("blobcontainer",
     resource_group_name=resource_group.name
 )
 
+resource_group_name = resource_group.name
+storage_account_name = storage_account.name
+blob_container_name = blob_container.name
+
 blob_resource = azure_native.storage.Blob("blobresource",
     account_name=storage_account.name,
     container_name=blob_container.name,
@@ -26,7 +30,6 @@ blob_resource = azure_native.storage.Blob("blobresource",
     type=azure_native.storage.BlobType.BLOCK
 )
 
-### Define exports
 pulumi.export("resourceGroupName", resource_group.name)
 pulumi.export("storageName", storage_account.name)
 pulumi.export("containerName", blob_container.name)

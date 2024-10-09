@@ -24,11 +24,15 @@ return await Pulumi.Deployment.RunAsync(() =>
         ResourceGroupName = storageAccount.Name,
     });
 
+    var resourceGroupName = resourceGroup.Name;
+    var storageAccountName = storageAccount.Name;
+    var blobContainerName = blobContainer.Name;
+
     var blobResource = new Blob("blobResource", new()
     {
-        AccountName = storageAccount.Name,
-        ContainerName = blobContainer.Name,
-        ResourceGroupName = resourceGroup.Name,
+        AccountName = storageAccountName,
+        ContainerName = blobContainerName,
+        ResourceGroupName = resourceGroupName,
         AccessTier = BlobAccessTier.Hot,
         Source = new StringAsset("content"),
         Type = BlobType.Block,

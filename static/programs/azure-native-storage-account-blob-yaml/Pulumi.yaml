@@ -21,12 +21,17 @@ resources:
     type: azure-native:storage:Blob
     properties:
       accessTier: Hot
-      accountName: ${storageAccount.name}
-      containerName: ${blobContainer.name}
-      resourceGroupName: ${resourceGroup.name}
+      accountName: ${storageAccountName}
+      containerName: ${blobContainerName}
+      resourceGroupName: ${resourceGroupName}
       source:
         fn::StringAsset: content
       type: Block
+
+variables:
+  resourceGroupName: ${resourceGroup.name}
+  storageAccountName: ${storageAccount.name}
+  blobContainerName: ${blobContainer.name}
 
 outputs:
   resourceGroupName: ${resourceGroup.name}
