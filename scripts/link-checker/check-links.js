@@ -279,7 +279,8 @@ function getDefaultExcludedKeywords() {
         "http://127.0.0.1:5000/",
         "https://platform.openai.com",
         "https://openai.com/",
-        "https://github.com/marketplace"
+        "https://github.com/marketplace",
+        "https://bard.google.com/",
     ];
 }
 
