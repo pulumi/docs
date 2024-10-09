@@ -93,7 +93,7 @@ CloudFormation supports cross-account and cross-region deployments. Despite thes
 
 - **Flexibility**: Some support for abstraction and modularity through nested stacks and reusable templates.
 - **Integration**: Integrates well with AWS-native CI/CD. Broader integration to non-AWS environments is possible but more challenging.
-- **Ecosystem**: Supported by documentation, providing resources for learning and troubleshooting.
+- **Ecosystem**: Supported by extensive documentation, providing resources for learning and troubleshooting.
 
 ### Azure Resource Manager
 
