@@ -44,7 +44,7 @@ meta_desc: $metadesc
 EOF
 fi
     done
-    cat > "content/compliance/$(echo "$(_jq '.cloud')-$(_jq '.framework')" | awk '{print tolower($0)}').md" <<EOF
+    cat > "content/compliance/$(echo "$(_jq '.cloud')-$(_jq '.framework')" | sed 's/ /-/g' | awk '{print tolower($0)}').md" <<EOF
 ---
 # This file is auto-generated. Any alterations made within are subject
 # to being overwritten.
