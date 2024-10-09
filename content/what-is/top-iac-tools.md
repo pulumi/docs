@@ -51,7 +51,7 @@ Terraform integrates well with existing development workflows and CI/CD pipeline
 
 - **Flexibility**: Utilizes HCL. Lacks full programming constructs.
 - **Multi-cloud**: Offers support for AWS, Azure, GCP, Oracle cloud and many others.
-- **State**: Requires manual configuration for state management, including remote backends and state locking, which can add complexity to collaboration.
+- **State**: Provides fine-grained control over state management, but requires manual configuration including remote backends and state locking, which can add complexity to collaboration.
 - **Integration**: Integrates well with existing development workflows and CI/CD pipelines, though additional scripting may be needed for complex scenarios.
 - **Ecosystem**: A large and active community. A wide range of plugins and integrations.
 
