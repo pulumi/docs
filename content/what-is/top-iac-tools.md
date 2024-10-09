@@ -17,7 +17,7 @@ We'll assess each tool based on the following criteria:
 | Flexibility | Ability to abstract and create reusable components                          |
 | Multi-cloud  | Capability to manage resources across various cloud providers               |
 | State       | How the tool handles state tracking and management                          |
-| Integration | Compatibility with existing development workflows and CI/CD pipelines       |
+| Integration | Compatibility with existing development workflows, CI/CD pipelines, and cloud-native technologies                          |
 | Ecosystem   | Community strength, documentation quality, and support resources            |
 
 ## Multi-Cloud Infrastructure as Code Tools
@@ -34,12 +34,12 @@ This flexibility allows developers to define infrastructure with real programmin
 
 Pulumi's state management is easy to use as it automatically handles your infrastructure state and stores it in the Pulumi Cloud backend by default. With built-in state locking and encryption, this approach simplifies collaboration and reduces the risk of state corruption, ensuring secure and consistent state management. For those who prefer more control over their state, Pulumi also supports self-managed backends.
 
-Pulumi integrates with existing development workflows, allowing developers to use familiar tools and practices. Pulumi's ecosystem is growing rapidly, with many resources and integrations available. Comprehensive documentation and support, including tutorials and an active community forum, further bolster its appeal.
+Pulumi integrates with existing development workflows, allowing developers to use familiar tools and practices. It offers extensive support for cloud-native technologies, particularly Kubernetes, with strongly-typed CustomResourceDefinitions (CRDs), and support for Helm charts. Pulumi's ecosystem is growing rapidly, with many resources and integrations available. Comprehensive documentation and support, including tutorials and an active community forum, further bolster its appeal.
 
 - **Flexibility**: Define infrastructure using your preferred programming language, which can simplify complex logic handling compared to some other IaC tools.
 - **Multi-cloud**: Offers support for AWS, Azure, Google Cloud, Oracle cloud and many others.
 - **State**: Automatically manages infrastructure state, storing it in the Pulumi Cloud with built-in state locking and encryption.
-- **Integration**: Integrates with existing development workflows, enhancing productivity and collaboration.
+- **Integration**: Seamlessly integrates with existing development workflows, CI/CD pipelines, and cloud-native technologies like Kubernetes.
 - **Ecosystem**: Growing community and ecosystem. Comprehensive documentation and support, including tutorials and an active community.
 
 ### [Terraform](https://www.terraform.io/)
@@ -48,12 +48,12 @@ Terraform is a multi-cloud Infrastructure as Code (IaC) tool that utilizes the H
 
 For state management, Terraform uses a state file to track the current state of your infrastructure. While this approach requires manual configuration, including setting up remote backends and state locking, it does offer fine-grained control over state.
 
-Terraform integrates well with existing development workflows and CI/CD pipelines. It includes support for the Kubernetes Core APIs and some support for CRDs. Terraform also has a wide range of plugins, integrations, and comprehensive documentation.
+Terraform integrates well with existing development workflows and CI/CD pipelines. It provides a Kubernetes provider that supports the Kubernetes Core APIs and offers some support for Custom Resource Definitions (CRDs).  Terraform also has a wide range of plugins, integrations, and comprehensive documentation.
 
 - **Flexibility**: Utilizes HCL. Lacks full programming constructs.
 - **Multi-cloud**: Offers support for AWS, Azure, GCP, Oracle cloud and many others.
 - **State**: Provides fine-grained control over state management, but requires manual configuration including remote backends and state locking, which can add complexity to collaboration.
-- **Integration**: Integrates well with existing development workflows and CI/CD pipelines. though additional scripting may be needed for complex scenarios.
+- **Integration**: Integrates well with existing development workflows and CI/CD pipelines. Provides a Kubernetes provider for basic cluster management.
 - **Ecosystem**: A large and active community. A wide range of plugins and integrations.
 
 ### [OpenTofu](https://opentofu.org/)
