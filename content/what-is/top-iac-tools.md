@@ -115,7 +115,7 @@ While Google Cloud Deployment Manager's deep GCP integration is a strength, it f
 
 ## Conclusion
 
-Choosing the right Infrastructure as Code tool is crucial in today's complex cloud landscape. We've explored options ranging from multi-cloud solutions to cloud-specific tools, each with unique strengths. The ideal choice depends on your needs, considering flexibility, multi-cloud support, state management, workflow integration, and ecosystem robustness.
+Choosing the right Infrastructure as Code tool is crucial in today's complex cloud landscape. We've explored options ranging from multi-cloud solutions to cloud-specific tools, each with unique strengths and weaknesses. The ideal choice depends on your needs, considering flexibility, multi-cloud support, state management, workflow integration, and ecosystem robustness.
 
 Each tool offers unique strengths and potential trade-offs:
 
