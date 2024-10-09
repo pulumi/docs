@@ -30,6 +30,7 @@ aws:
       login: ${aws.login}
       get:
         api-key:
+          # Secret name as shown in the AWS Console, or secret ARN:
           secretId: api-key
         app-secret:
           secretId: app-secret
@@ -37,7 +38,7 @@ aws:
 
 ## Configuring OIDC
 
-To learn how to configure OpenID Connect (OIDC) between Pulumi Cloud and AWS, see the [OpenID Connect integration](/docs/pulumi-cloud/oidc/provider/aws/) documentation. Once you have completed these steps, you can validate that your configuration is working by running either of the following:
+To learn how to configure OpenID Connect (OIDC) between Pulumi Cloud and AWS, see [Configuring OpenID Connect for AWS](/docs/pulumi-cloud/oidc/provider/aws/). Once you have completed these steps, you can validate that your configuration is working by running either of the following:
 
 * `esc open <your-org>/<your-environment>` command of the [Pulumi ESC CLI](/docs/esc-cli/)
 * `pulumi env open <your-org>/<your-environment>` command of the [Pulumi CLI](/docs/install/)
