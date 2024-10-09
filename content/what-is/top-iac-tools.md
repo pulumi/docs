@@ -37,7 +37,7 @@ Pulumi integrates with existing development workflows, allowing developers to us
 
 - **Flexibility**: Define infrastructure using your preferred programming language, which can simplify complex logic handling compared to some other IaC tools.
 - **Multi-cloud**: Offers support for AWS, Azure, GCP, Oracle cloud and many others.
-- **State**: Automatically manages infrastructure state, storing it in the Pulumi Service with built-in state locking.
+- **State**: Automatically manages infrastructure state, storing it in the Pulumi Cloud with built-in state locking and encryption.
 - **Integration**: Integrates with existing development workflows, enhancing productivity and collaboration.
 - **Ecosystem**: Growing community and ecosystem. Comprehensive documentation and support, including tutorials and an active community.
 
