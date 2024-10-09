@@ -20,7 +20,6 @@ We'll assess each tool based on the following criteria:
 | Integration | Compatibility with existing development workflows and CI/CD pipelines       |
 | Ecosystem   | Community strength, documentation quality, and support resources            |
 
-We'll cover modern multi-cloud tools, vendor and cloud-specific solutions, and some less common options.
 
 ## Multi-Cloud Infrastructure as Code Tools
 
