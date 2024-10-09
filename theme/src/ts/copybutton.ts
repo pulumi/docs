@@ -157,6 +157,19 @@ function addCopyButton(e) {
                 tooltipEl.hide().then(() => $tooltipContent.text(tooltipText));
             }, 1000);
         });
+
+        // Track analytics if data-track is present
+        const analytics = (window as any).analytics;
+        const analyticsAvailable = analytics && analytics.track && typeof analytics.track === "function";
+        var codeBlockName = $code.attr("data-track");
+
+        if (analyticsAvailable && codeBlockName) { // Don't track empty email addresses
+            const trackData = {
+                codeBlockName: codeBlockName
+            };
+            analytics.track("copy-code-block", trackData);
+        }
+
     });
 }
 

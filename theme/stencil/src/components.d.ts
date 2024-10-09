@@ -28,6 +28,9 @@ export namespace Components {
         "leftItems": string;
         "rightItems": string;
     }
+    interface PricingCta {
+        "buttonClass": string;
+    }
     interface PulumiApiDocFilterableNav {
         "baseDirectory": string;
         "packageName": string;
@@ -96,6 +99,9 @@ export namespace Components {
     }
     interface PulumiDeveloperQuotes {
         "quotes": string;
+    }
+    interface PulumiDocsNav {
+        "expandedMenuIDs": string;
     }
     interface PulumiExample {
     }
@@ -215,6 +221,12 @@ declare global {
         prototype: HTMLHomeSlotsElement;
         new (): HTMLHomeSlotsElement;
     };
+    interface HTMLPricingCtaElement extends Components.PricingCta, HTMLStencilElement {
+    }
+    var HTMLPricingCtaElement: {
+        prototype: HTMLPricingCtaElement;
+        new (): HTMLPricingCtaElement;
+    };
     interface HTMLPulumiApiDocFilterableNavElement extends Components.PulumiApiDocFilterableNav, HTMLStencilElement {
     }
     var HTMLPulumiApiDocFilterableNavElement: {
@@ -292,6 +304,12 @@ declare global {
     var HTMLPulumiDeveloperQuotesElement: {
         prototype: HTMLPulumiDeveloperQuotesElement;
         new (): HTMLPulumiDeveloperQuotesElement;
+    };
+    interface HTMLPulumiDocsNavElement extends Components.PulumiDocsNav, HTMLStencilElement {
+    }
+    var HTMLPulumiDocsNavElement: {
+        prototype: HTMLPulumiDocsNavElement;
+        new (): HTMLPulumiDocsNavElement;
     };
     interface HTMLPulumiExampleElement extends Components.PulumiExample, HTMLStencilElement {
     }
@@ -435,6 +453,7 @@ declare global {
         "event-session-registration-modal": HTMLEventSessionRegistrationModalElement;
         "header-cta": HTMLHeaderCtaElement;
         "home-slots": HTMLHomeSlotsElement;
+        "pricing-cta": HTMLPricingCtaElement;
         "pulumi-api-doc-filterable-nav": HTMLPulumiApiDocFilterableNavElement;
         "pulumi-api-doc-nav-node": HTMLPulumiApiDocNavNodeElement;
         "pulumi-api-doc-nav-tree": HTMLPulumiApiDocNavTreeElement;
@@ -448,6 +467,7 @@ declare global {
         "pulumi-date-countdown-circles": HTMLPulumiDateCountdownCirclesElement;
         "pulumi-datetime": HTMLPulumiDatetimeElement;
         "pulumi-developer-quotes": HTMLPulumiDeveloperQuotesElement;
+        "pulumi-docs-nav": HTMLPulumiDocsNavElement;
         "pulumi-example": HTMLPulumiExampleElement;
         "pulumi-examples": HTMLPulumiExamplesElement;
         "pulumi-filter-select": HTMLPulumiFilterSelectElement;
@@ -489,6 +509,9 @@ declare namespace LocalJSX {
         "imageClass"?: string;
         "leftItems"?: string;
         "rightItems"?: string;
+    }
+    interface PricingCta {
+        "buttonClass"?: string;
     }
     interface PulumiApiDocFilterableNav {
         "baseDirectory"?: string;
@@ -558,6 +581,9 @@ declare namespace LocalJSX {
     }
     interface PulumiDeveloperQuotes {
         "quotes"?: string;
+    }
+    interface PulumiDocsNav {
+        "expandedMenuIDs"?: string;
     }
     interface PulumiExample {
     }
@@ -656,6 +682,7 @@ declare namespace LocalJSX {
         "event-session-registration-modal": EventSessionRegistrationModal;
         "header-cta": HeaderCta;
         "home-slots": HomeSlots;
+        "pricing-cta": PricingCta;
         "pulumi-api-doc-filterable-nav": PulumiApiDocFilterableNav;
         "pulumi-api-doc-nav-node": PulumiApiDocNavNode;
         "pulumi-api-doc-nav-tree": PulumiApiDocNavTree;
@@ -669,6 +696,7 @@ declare namespace LocalJSX {
         "pulumi-date-countdown-circles": PulumiDateCountdownCircles;
         "pulumi-datetime": PulumiDatetime;
         "pulumi-developer-quotes": PulumiDeveloperQuotes;
+        "pulumi-docs-nav": PulumiDocsNav;
         "pulumi-example": PulumiExample;
         "pulumi-examples": PulumiExamples;
         "pulumi-filter-select": PulumiFilterSelect;
@@ -701,6 +729,7 @@ declare module "@stencil/core" {
             "event-session-registration-modal": LocalJSX.EventSessionRegistrationModal & JSXBase.HTMLAttributes<HTMLEventSessionRegistrationModalElement>;
             "header-cta": LocalJSX.HeaderCta & JSXBase.HTMLAttributes<HTMLHeaderCtaElement>;
             "home-slots": LocalJSX.HomeSlots & JSXBase.HTMLAttributes<HTMLHomeSlotsElement>;
+            "pricing-cta": LocalJSX.PricingCta & JSXBase.HTMLAttributes<HTMLPricingCtaElement>;
             "pulumi-api-doc-filterable-nav": LocalJSX.PulumiApiDocFilterableNav & JSXBase.HTMLAttributes<HTMLPulumiApiDocFilterableNavElement>;
             "pulumi-api-doc-nav-node": LocalJSX.PulumiApiDocNavNode & JSXBase.HTMLAttributes<HTMLPulumiApiDocNavNodeElement>;
             "pulumi-api-doc-nav-tree": LocalJSX.PulumiApiDocNavTree & JSXBase.HTMLAttributes<HTMLPulumiApiDocNavTreeElement>;
@@ -714,6 +743,7 @@ declare module "@stencil/core" {
             "pulumi-date-countdown-circles": LocalJSX.PulumiDateCountdownCircles & JSXBase.HTMLAttributes<HTMLPulumiDateCountdownCirclesElement>;
             "pulumi-datetime": LocalJSX.PulumiDatetime & JSXBase.HTMLAttributes<HTMLPulumiDatetimeElement>;
             "pulumi-developer-quotes": LocalJSX.PulumiDeveloperQuotes & JSXBase.HTMLAttributes<HTMLPulumiDeveloperQuotesElement>;
+            "pulumi-docs-nav": LocalJSX.PulumiDocsNav & JSXBase.HTMLAttributes<HTMLPulumiDocsNavElement>;
             "pulumi-example": LocalJSX.PulumiExample & JSXBase.HTMLAttributes<HTMLPulumiExampleElement>;
             "pulumi-examples": LocalJSX.PulumiExamples & JSXBase.HTMLAttributes<HTMLPulumiExamplesElement>;
             "pulumi-filter-select": LocalJSX.PulumiFilterSelect & JSXBase.HTMLAttributes<HTMLPulumiFilterSelectElement>;

@@ -37,7 +37,7 @@ main:
     event_type: workshop # workshop | event
 
     # URL for embedding a URL for ungated webinars.
-    youtube_url:
+    youtube_url: https://www.youtube.com/embed/5GuPPEP6uxU
 
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
     sortable_date: 2024-03-29T09:00:00-07:00
@@ -50,7 +50,9 @@ main:
 
     # Description of the webinar.
     description: |
-        This workshop introduces new users to DevOps best practices. You will become familiar with the core concepts needed to deploy cloud resources continuously. Walk through configuring Pulumi GitHub Actions to deploy AWS resources programmatically and accelerate your cloud projects with the skeleton code provided.
+        This workshop introduces new users to DevOps best practices. You will become familiar with the core concepts needed to deploy cloud resources continuously. Walk through configuring Pulumi GitHub Actions to deploy AWS resources programmatically and accelerate your cloud projects with the skeleton [code provided](https://github.com/pulumi/workshops/tree/main/github-aws-cicd-getting-started).
+
+        This is Part 1 of our DevOps workshop series! Ready to take it further? [Continue to Part 2, Advanced CI/CD for AWS using Pulumi and GitHub Actions.](/resources/advanced-cicd-aws-pulumi-github-actions)
 
     learn:
         - The basics of the Pulumi programming model

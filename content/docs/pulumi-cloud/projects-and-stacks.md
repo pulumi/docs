@@ -5,6 +5,11 @@ title: "Projects & stacks"
 h1: "Projects & stacks"
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
+  cloud:
+    name: "Projects & stacks"
+    parent: cloud-home
+    weight: 2
+    identifier: pulumi-cloud-projects-and-stacks
   pulumicloud:
     weight: 3
 aliases:
@@ -85,11 +90,11 @@ Stack favorites allow you to label specific stacks for quick and easy access. St
 1. Navigate to the stack.
 1. Select the star icon next to the stack name.
 
-### Stack README
+## Stack README
 
 To add a README to a stack:
 
-1. Export a [Stack output](/learn/building-with-pulumi/stack-outputs) named `readme` that contains your templated Stack README markdown, commonly by reading a file, i.e. `Pulumi.README.md`.
+1. Export a [Stack output](/tutorials/building-with-pulumi/stack-outputs) named `readme` that contains your templated Stack README markdown, commonly by reading a file, i.e. `Pulumi.README.md`.
 2. Create a README template for the Stack.
 3. Run `pulumi up` on that Stack.
 4. Navigate to **All stacks** and then select the stack.
@@ -592,7 +597,7 @@ Here is how it looks rendered in the [Pulumi Cloud UI](https://app.pulumi.com):
 
 ![Stack READMEs](/images/docs/reference/service/stack-readme.png)
 
-### Stack Detailed View
+## Stack Detailed View
 
 To view a stack's details:
 
@@ -604,7 +609,7 @@ To view a stack's details:
 
 You can see other details, such as who applied the update, when, and counts of added, updated, and unchanged resources. If your stack is integrated with a CI/CD pipeline, such as [GitHub Actions](/docs/using-pulumi/continuous-delivery/github-actions/), you also see useful links to data like your Git commit hash, mapped branch, and pull request ID.
 
-#### Custom Stack Tags
+### Custom Stack Tags
 
 Custom stack tags can help you group and filter your stacks.
 
@@ -619,7 +624,7 @@ To modify or delete a custom tag:
 1. To modify a custom tag, use the pencil icon.
 1. To delete a custom tag, use the trash can icon.
 
-#### Stack Activity
+### Stack Activity
 
 To view stack activity:
 
@@ -642,7 +647,7 @@ The **Timeline** section provides a detailed timeline of changes to individual c
 
 The **Configuration** section displays the same configuration details found in the Stack view for your update.
 
-#### Stack Resources
+### Stack Resources
 
 To view a stack's resources:
 

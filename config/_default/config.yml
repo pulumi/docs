@@ -1,19 +1,18 @@
 languageCode: en-us
 title: Pulumi - Infrastructure as Code in Any Programming Language
 
-refLinksErrorLevel: WARNING
+refLinksErrorLevel: ERROR
 security:
   funcs:
     getenv:
       - ASSET_BUNDLE_ID
       - PULUMI_CONVERT_URL
       - PULUMI_AI_WS_URL
+      - PULUMI_COPILOT_URL
+      - DEV_PULUMI_COPILOT_BASE_PATH
       - GITHUB_TOKEN
       - ALGOLIA_APP_ID
       - ALGOLIA_APP_SEARCH_KEY
-
-disableKinds:
-  - taxonomy
 
 sectionPagesMenu: main
 pygmentsCodeFences: true
@@ -48,13 +47,18 @@ outputs:
   section:
     - HTML
 
+disableKinds:
+  - taxonomy
+
 taxonomies:
   author: authors
   tag: tags
+  collection: collections
 
 permalinks:
   authors: /blog/author/:slug/
   tags: /blog/tag/:slug/
+  collections: /tutorials/:slug/
 
 markup:
   goldmark:

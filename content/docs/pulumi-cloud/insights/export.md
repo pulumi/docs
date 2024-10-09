@@ -5,6 +5,11 @@ title: Data export
 h1: Data export
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
+  cloud:
+    name: Data export
+    parent: pulumi-cloud-insights
+    weight: 2
+    identifier: pulumi-cloud-insights-export
   pulumicloud:
     parent: insights
     weight: 2
@@ -17,7 +22,7 @@ aliases:
 The CSV (comma separated values) format is composed of the following fields:
 
 ```
-created, custom, delete, id, modified, module, name, package, parent_urn, pending, project, protected, provider_urn, stack, type, urn
+created, custom, delete, id, modified, module, name, package, parent_urn, pending, project, protected, provider_urn, stack, type, urn, teams, properties, category
 ```
 
 | Field        | Description                                                                                                        |
@@ -38,5 +43,8 @@ created, custom, delete, id, modified, module, name, package, parent_urn, pendin
 | stack        | The stack the resource belongs to.                                                                                 |
 | type         | The type of the resource.                                                                                          |
 | urn          | The URN of the resource.                                                                                           |
+| teams        | The teams that have access to this resource                                                                       |
+| properties   | The metadata properties of this resource                                                                    |
+| category     | The category this resource is a part of                                                                        |
 
 See the [API specification](/docs/pulumi-cloud/cloud-rest-api/#data-export) for a more complete description of what these fields represent.

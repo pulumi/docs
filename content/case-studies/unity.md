@@ -9,6 +9,16 @@ customer_name: Unity
 customer_logo: /logos/customers/unity.png
 customer_url: https://unity.com/
 
+quote_block:
+    quote: |
+        "Terraform relies on HCL and lacks support for concepts like classes, objects and inheritance.
+        An equivalent deployment would take more lines of code while yielding IaC that is less reusable."
+    quote_attrib:
+    headline_stat: 80%
+    headline: |
+        Reduction in deployment times, from weeks to
+        hours, significantly improving Unity's time to market.
+
 exec_summary: |
     Unity Technologies' Aura division faced challenges with their legacy Jenkins service, causing deployment delays and inefficiencies in CI/CD processes. To enhance performance and developer autonomy, Aura adopted Pulumi's Platform Engineering Capabilities and Automation API. Transitioning from Amazon ECS to Amazon EKS and further replacing Jenkins with GitHub Actions and self-hosted runners, they streamlined infrastructure management, reducing provisioning times and costs. Pulumi's TypeScript support and automation features empowered developers to self-serve cloud infrastructure, improving productivity and ensuring infrastructure integrity. This modernization accelerated development cycles and strengthened Aura's competitive edge in the market.
 

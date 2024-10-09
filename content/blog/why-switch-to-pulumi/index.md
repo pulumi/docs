@@ -441,7 +441,7 @@ CloudFormation, Azure Resource Manager (ARM) templates, or Kubernetes
 YAML.
 
 [Self-service Tool
-Guide](https://www.pulumi.com/docs/using-pulumi/adopting-pulumi/)
+Guide](https://www.pulumi.com/docs/iac/adopting-pulumi/)
 
 If you need help, we have a team of cloud experts who can answer your
 questions, give you a demo, or roll up their sleeves to get your

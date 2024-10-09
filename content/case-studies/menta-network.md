@@ -11,6 +11,13 @@ customer_name: Menta Network
 customer_logo: /logos/customers/menta_logo.svg
 customer_url:
 
+quote_block:
+  quote: |
+      "We tried Terraform but found that Pulumi was far easier to use given its Python support. Ultimately, Pulumi is just as robust as Terraform and has the added benefit of reducing the complexity of managing many configurations and environments."
+  quote_attrib: Ernesto Mendoza, CTO, Menta Network
+  headline_stat: 60%
+  headline: Reduced operating costs
+
 exec_summary: |
     Menta Network was looking for the right tools to build a
     robust, scalable, and cost-effective load testing service for their clients in the
@@ -87,7 +94,7 @@ entire development lifecycle, container registry and continuous integration / co
 deployment (CI/CD) process. Pulumi provided a unique alternative that allowed engineers to
 define both their load testing application and associated infrastructure in the same
 language and tooling --- perfectly fitting infrastructure into their existing [GitLab CI/CD
-pipeline](/docs/using-pulumi/continuous-delivery/gitlab-ci). [Support for
+pipeline](/docs/iac/packages-and-automation/continuous-delivery/gitlab-ci). [Support for
 GitLab login](/blog/welcoming-gitlab-users-to-pulumi) further simplified
 engineering workflows.
 

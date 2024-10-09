@@ -1,0 +1,6 @@
+{{ $copilotApiUrl := getenv "PULUMI_COPILOT_URL" }}
+{{ if $copilotApiUrl }}
+{{ $copilotBasePath := or (getenv "DEV_PULUMI_COPILOT_BASE_PATH") "/_pulumi/cloud-ai" }}
+<aside id="ai-sidebar-target"></aside>
+<iframe id="ai-sidebar-host" src="{{ $copilotBasePath }}/sidebar?hostApp=docs&apiHost={{ $copilotApiUrl | urlquery }}"></iframe>
+{{ end }}
