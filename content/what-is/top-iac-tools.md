@@ -84,14 +84,14 @@ Let's explore some of the most prominent cloud-specific IaC tools and how they c
 
 ### [AWS CloudFormation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/Welcome.html)
 
-AWS CloudFormation supports JSON or YAML. Like Pulumi and Terraform, it has a declarative, desired state approach.
+AWS CloudFormation supports JSON or YAML. Like Pulumi and Terraform, it has a declarative, desired state approach. CloudFormation is supported by extensive documentation and supports cross-account and cross-region deployments.
 
-CloudFormation is supported by extensive documentation. However, managing complex templates can be challenging, and there is a steep learning curve associated with CloudFormation's syntax and AWS services. Performance issues may arise with large deployments, but rollback triggers can revert to a previous state if a deployment fails.
+CloudFormation can be used to create and manage Amazon EKS (Elastic Kubernetes Service) clusters, although it has limited direct support for managing individual Kubernetes resources within a cluster. For more granular Kubernetes resource management, AWS offers AWS Controllers for Kubernetes (ACK), which allows managing AWS resources using Kubernetes custom resources.
 
-CloudFormation supports cross-account and cross-region deployments. Despite these strengths, CloudFormation has limitations. Template size limitations and cryptic error messages complicating error handling are among the most common online complaints. Managing dependencies between resources can become complex past a certain scale, and testing capabilities for templates are limited.
+Managing complex templates can be challenging, and template size limitations and cryptic error messages are among the most common online complaints. Managing dependencies between resources can become complex past a certain scale, and testing capabilities for templates are limited. Despite its limitations, AWS CloudFormation is favored by those deeply invested in the AWS ecosystem who want a platform native tool.  
 
 - **Flexibility**: Some support for abstraction and modularity through nested stacks and reusable templates.
-- **Integration**: Integrates well with AWS-native CI/CD. Broader integration to non-AWS environments is possible but more challenging.
+- **Integration**:  Integrates well with AWS-native CI/CD and supports Amazon EKS for Kubernetes cluster management, though it has limited direct support for managing individual Kubernetes resources.
 - **Ecosystem**: Supported by extensive documentation, providing resources for learning and troubleshooting.
 
 ### [Azure Resource Manager](https://azure.microsoft.com/fr-fr/get-started/azure-portal/resource-manager)
