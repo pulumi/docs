@@ -6,7 +6,7 @@ type: what-is
 page_title: "Top Infrastructure as Code Tools"
 ---
 
-Infrastructure as Code tools (IaC tools) let you automate the setup of your cloud resources without manually clicking around in your cloud web console. Instead of manually configuring resources, you write a script that specifies what you need, and the cloud provider sets it up for you. It's a great way to make infrastructure setup consistent and repeatable.
+Infrastructure as Code tools (IaC tools) let you automate the setup of your cloud resources. Instead of manually configuring resources in your cloud web console, you can write a script that specifies what you need, and the cloud provider sets it up for you. It's a great way to make infrastructure setup consistent and repeatable.
 
 But which tool should you use choose? We have our preferences and biases 😉 but let's go through the most popular and some less popular IaC tools to give you a lay of the land.
 
