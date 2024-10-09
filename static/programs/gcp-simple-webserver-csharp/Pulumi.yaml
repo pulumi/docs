@@ -1,7 +1,0 @@
-name: gcp-simple-webserver-csharp
-runtime: dotnet
-description: An example that deploys the configuration for a simple web server on Google Cloud.
-config:
-  pulumi:tags:
-    value:
-      pulumi:template: gcp-csharp
