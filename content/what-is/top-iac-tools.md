@@ -107,7 +107,7 @@ Azure Resource Manager (ARM) supports JSON-based configuration or using Bicep - 
 
 Google Cloud Deployment Manager (CDM) focuses on managing Google Cloud Platform (GCP) resources using YAML and Python Jinja2 templates. CDM integrates deeply with Google Cloud and, like other native cloud tools, manages state internally. CDM offers resource grouping for enhanced resource management and cost management tools for expense tracking.
 
-While Google Cloud Deployment Manager's deep GCP integration is a strength, it faces challenges, including intricate template management and steep learning curves. Like other provider-specific solutions, CDM is ideal for teams with a strong focus on and investment in the Google Cloud ecosystem.
+While Google Cloud Deployment Manager's deep Google Cloud integration is a strength, it does face certain challenges such as intricate template management and steep learning curves. Like other provider-specific solutions, CDM is ideal for teams with a strong focus on and investment in the Google Cloud ecosystem.
 
 - **Flexibility**: YAML or Jinja2 templating.
 - **Integration**: Integrates deeply with Google Cloud services. Additional features for integration with CI/CD pipelines.
