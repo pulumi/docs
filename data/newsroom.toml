@@ -1,4 +1,10 @@
 [[releases]]
+date = "18th September 2024"
+title = "Pulumi Launches New Security Products, Building On Its Infrastructure as Code Momentum"
+summary = "Pulumi Launches New Security Products, Building On Its Infrastructure as Code Momentum."
+url = "https://info.pulumi.com/press-release/new-security-products"
+
+[[releases]]
 date = "12th June 2024"
 title = "Pulumi Copilot Delivers Unparalleled Speed with Generative AI-Powered Intelligent Cloud Management"
 summary = "Pulumi Copilot Delivers Unparalleled Speed with Generative AI-Powered Intelligent Cloud Management."
@@ -171,6 +177,30 @@ date = "18th June 2018"
 title = "Pulumi Launches Cloud Development Platform to Help Teams Get Code to the Cloud Faster"
 summary = "Company funded by Madrona Venture Group and Tola Capital to help companies accelerate cloud application development and infrastructure delivery. "
 url = "https://info.pulumi.com/press-release/pulumi-launches-cloud-development-platform-to-help-teams-get-code-to-the-cloud-faster/"
+
+[[coverage]]
+date = "30 September 2024"
+title = "Pulumi, System Initiative Step Up To Challenge IBM’s HashiCorp"
+img = "/logos/press/forbes.png"
+url = "https://www.forbes.com/sites/rscottraynovich/2024/09/30/pulumi-system-initiative-step-up-to-challenge-ibms-hashicorp/"
+
+[[coverage]]
+date = "19 September 2024"
+title = "Platform engineers embrace secrets management tool"
+img = "/logos/press/techtarget.png"
+url = "https://www.techtarget.com/searchitoperations/news/366611494/Platform-engineers-embrace-secrets-management-tool"
+
+[[coverage]]
+date = "18 September 2024"
+title = "Pulumi expands cloud automation platform with two new security products"
+img = "/logos/press/siliconangle.png"
+url = "https://siliconangle.com/2024/09/18/pulumi-expands-cloud-automation-platform-two-new-security-products/"
+
+[[coverage]]
+date = "18 September 2024"
+title = "Pulumi Adds Cloud Security Intelligence Tool to Portfolio"
+img = "/logos/press/securityboulevard.png"
+url = "https://securityboulevard.com/2024/09/pulumi-adds-cloud-security-intelligence-tool-to-portfolio/"
 
 [[coverage]]
 date = "12 June 2024"
