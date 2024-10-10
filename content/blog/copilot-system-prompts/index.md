@@ -28,6 +28,8 @@ System prompts allow organization administrators to set default preferences and 
 
 ## How to Set Organization System Prompts
 
+![Access Management Copilot section in the UI](org-system-prompts.png)
+
 Setting up system prompts is straightforward:
 
 1. Log in to Pulumi Cloud and go to your organization's settings in the left hand navigation
