@@ -80,7 +80,7 @@ We store conversation data, similar to all other product metrics logging in Pulu
 
 Pulumi Copilot is off by default at public beta launch. Organization admins can turn it on by navigating to organization __Settings > Access Management > Pulumi Copilot__. You can make it available for all members, just admins or no one in your organization. It can be turned off at any point.
 
-### How to author Organization system prompts
+### How do I use organization system prompts?
 
 1. Log in to Pulumi Cloud and navigate to your organization’s settings in the left hand navigation.
 2. Under the settings menu, select "Access Management".
