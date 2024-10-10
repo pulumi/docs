@@ -460,3 +460,5 @@ In order to enable [Pulumi Deployments](/docs/pulumi-cloud/deployments), the fol
 In order to enable [Pulumi ESC](/docs/esc), the following must be configured:
 
 * `PULUMI_SERVICE_METADATA_BLOB_STORAGE_ENDPOINT` or `PULUMI_LOCAL_OBJECTS` [object storage](#object-storage)
+
+* One of the [encryption services](#encryption-services)
