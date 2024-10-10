@@ -29,9 +29,9 @@ days:
   function can be used to obtain the outputs from a CloudFormation
   Stack.
 
-- The [`get`](/registry/packages/azure/api-docs/core/templatedeployment#look-up)
+- The [`get`](/registry/packages/azure/api-docs/core/subscriptiontemplatedeployment#look-up)
   method of the
-  [`azure.core.TemplateDeployment`](/registry/packages/azure/api-docs/core/templatedeployment)
+  [`azure.core.SubscriptionTemplateDeployment`](/registry/packages/azure/api-docs/core/subscriptiontemplatedeployment)
   class can be used to obtain the outputs of an ARM Template Deployment.
 
 We recently added similar support for reading the outputs of a Terraform
