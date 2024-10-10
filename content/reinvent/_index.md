@@ -5,6 +5,9 @@ meta_image: /images/reinvent/reinvent-meta.png
 type: page
 layout: reinvent
 
+aliases:
+  - aws-reinvent-2021
+
 
 links:
     items:
