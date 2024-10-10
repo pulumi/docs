@@ -165,4 +165,5 @@ The following Kubernetes-specific configuration options are available:
 ```yaml
 # Kubernetes image pull policy https://kubernetes.io/docs/concepts/containers/images/#image-pull-policy
 PULUMI_AGENT_IMAGE_PULL_POLICY: IfNotPresent
+PULUMI_DEPLOY_DEFAULT_IMAGE_REFERENCE: pulumi/pulumi
 ```
