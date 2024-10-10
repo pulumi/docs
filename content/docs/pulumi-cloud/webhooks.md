@@ -182,6 +182,8 @@ The following table describes the various event filters available and the contex
 | `drift_detection_failed`          | `drift_detection`           | Organization or Stack      | When a drift detection run fails.                |
 | `drift_remediation_succeeded`     | `drift_remediation`         | Organization or Stack      | When a drift remediation run succeeds.           |
 | `drift_remediation_failed`        | `drift_remediation`         | Organization or Stack      | When a drift remediation run fails.              |
+| `policy_violation_mandatory`      | `policy_violation`          | Organization or Stack      | When a mandatory policy violation is detected.   |
+| `policy_violation_advisory`       | `policy_violation`          | Organization or Stack      | When an advisory policy violation is detected.   |
 
 And this table describes the various filter groups available to easily subscribe to all events within a group.
 
