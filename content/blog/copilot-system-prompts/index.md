@@ -1,5 +1,6 @@
 ---
 title: "Enhancing Pulumi Copilot: Introducing System Prompts for Your Organization"
+allow_long_title: true
 date: 2024-10-10T00:00:00-07:00
 draft: false
 meta_desc: Pulumi Copilot now supports System Prompts, allowing organizations to customize Copilot responses for more personalized and efficient interactions.
