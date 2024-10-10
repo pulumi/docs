@@ -1,6 +1,6 @@
 ---
 title: Pulumi + AWS re:Invent 2023
-meta_desc: Join Pulumi at AWS re:Invent 2023 to learn about the latest developments in infrastructure as code. Meet us at booth 779, November 27-December 1.
+meta_desc: "Automate, secure and manage AWS infrastructure with IaC, secrets management, and cloud insights. Book 1:1s, join workshops, and transform your cloud strategy."
 meta_image: /images/reinvent/reinvent-meta.png
 type: page
 layout: reinvent
