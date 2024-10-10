@@ -7,6 +7,7 @@ meta_desc: Pulumi Copilot now supports System Prompts, allowing organizations to
 meta_image: meta.png
 authors:
     - meagan-cojocar
+    - artur-laksberg
 tags:
     - features
     - releases
