@@ -12,7 +12,7 @@ menu:
 aliases:
 - /docs/quickstart/kubernetes/deploy-changes/
 - /docs/get-started/kubernetes/deploy-changes/
-- /docs/clouds/kubernetes/get-started/deploy-changes/
+- /docs/iac/get-started/kubernetes/deploy-changes/
 ---
 
 Deploy the stack changes.

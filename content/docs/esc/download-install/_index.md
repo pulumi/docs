@@ -16,6 +16,7 @@ search:
       - cli
 aliases:
 - /docs/install/esc/
+- /docs/esc/install
 ---
 
 ## Select an Operating System
@@ -26,9 +27,9 @@ aliases:
 
 <h3 class="no-anchor pt-4"><i class="fas fa-box pr-2"></i>Homebrew Package Manager</h3>
 
-```bash
-$ brew update && brew install pulumi/tap/esc
-```
+<div class="highlight">
+    <pre class="chroma"><code class="language-bash" data-lang="bash" data-track="install-esc-macos">$ brew update && brew install pulumi/tap/esc</code></pre>
+</div>
 
 <h3 class="no-anchor pt-4"><i class="fas fa-download pr-2"></i>macOS Binary Download</h3>
 
@@ -49,9 +50,9 @@ The latest version of Pulumi ESC is {{< latest-version-esc >}}.
 <div class="w-full md:w-3/4">
 <h3 class="no-anchor pt-4"><i class="fas fa-box pr-2"></i>Install Script</h3>
 
-```bash
-$ curl -fsSL https://get.pulumi.com/esc/install.sh | sh
-```
+<div class="highlight">
+    <pre class="chroma"><code class="language-bash" data-lang="bash" data-track="install-esc-linux">$ curl -fsSL https://get.pulumi.com/esc/install.sh | sh</code></pre>
+</div>
 
 </div>
 <div class="w-full">
@@ -108,17 +109,17 @@ In addition, there are many ways to install Pulumi ESC:
 You can install Pulumi ESC through the [Homebrew package manager](https://brew.sh/) and using our official
 [Pulumi Homebrew Tap](https://github.com/pulumi/homebrew-tap/)
 
-```bash
-$ brew update && brew install pulumi/tap/esc
-```
+<div class="highlight">
+    <pre class="chroma"><code class="language-bash" data-lang="bash" data-track="install-esc-macos-brew-official">$ brew update && brew install pulumi/tap/esc</code></pre>
+</div>
 
 This will install the `esc` CLI to the usual place (often `/usr/local/bin/esc`) and add it to your path.
 
 Subsequent updates can be installed in the usual way:
 
-```bash
-$ brew upgrade esc
-```
+<div class="highlight">
+    <pre class="chroma"><code class="language-bash" data-lang="bash" data-track="install-esc-macos-upgrade">$ brew upgrade esc</code></pre>
+</div>
 
 </div>
 </div>
@@ -137,9 +138,9 @@ $ brew upgrade esc
 A Pulumi formula is available on the Community Homebrew. If you do not have the Pulumi tap installed, then you can
 still install Pulumi ESC from homebrew using the command:
 
-```bash
-$ brew install esc
-```
+<div class="highlight">
+    <pre class="chroma"><code class="language-bash" data-lang="bash" data-track="install-esc-macos-brew-community">$ brew install esc</code></pre>
+</div>
 
 </div>
 </div>
@@ -157,9 +158,9 @@ $ brew install esc
 
 To install, run our installation script:
 
-```bash
-$ curl -fsSL https://get.pulumi.com/esc/install.sh | sh
-```
+<div class="highlight">
+    <pre class="chroma"><code class="language-bash" data-lang="bash" data-track="install-esc-macos-install-script">$ curl -fsSL https://get.pulumi.com/esc/install.sh | sh</code></pre>
+</div>
 
 This will install the `esc` CLI to `~/.pulumi/bin` and add it to your path. When it can't automatically add `esc` to your path, you will be prompted to add it manually.
 
@@ -209,9 +210,9 @@ If you do not wish to use the previous options, you can install Pulumi manually.
 
 To install, run our installation script:
 
-```bash
-$ curl -fsSL https://get.pulumi.com/esc/install.sh | sh
-```
+<div class="highlight">
+    <pre class="chroma"><code class="language-bash" data-lang="bash" data-track="install-esc-linux-install-script">$ curl -fsSL https://get.pulumi.com/esc/install.sh | sh</code></pre>
+</div>
 
 This will install the `esc` CLI to `~/.pulumi/bin` and add it to your path. When it can't automatically add `esc` to your path, you will be prompted to add it manually.
 
@@ -261,9 +262,9 @@ Alternatively, you can install Pulumi ESC manually. We provide a prebuilt binary
 
 1. Run our installation script:
 
-```bat
-> @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; iex ((New-Object System.Net.WebClient).DownloadString('https://get.pulumi.com/esc/install.ps1'))" && SET "PATH=%PATH%;%USERPROFILE%\.pulumi\bin"
-```
+<div class="highlight">
+    <pre class="chroma"><code class="language-bash" data-lang="bat" data-track="install-esc-windows-install-script">&gt; @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; iex ((New-Object System.Net.WebClient).DownloadString('https://get.pulumi.com/esc/install.ps1'))" && SET "PATH=%PATH%;%USERPROFILE%\.pulumi\bin"</code></pre>
+</div>
 
 This will install the `esc.exe` CLI to `%USERPROFILE%\.pulumi\bin` and add it to your path.
 
@@ -306,28 +307,25 @@ After installing Pulumi ESC, verify everything is in working order by running th
 
 {{% choosable os macos %}}
 
-```bash
-$ esc version
-v{{< latest-version-esc >}}
-```
+<div class="highlight">
+    <pre class="chroma"><code class="language-bash" data-lang="bash" data-track="install-esc-version">$ esc version</code></pre>
+</div>
 
 {{% /choosable %}}
 
 {{% choosable os linux %}}
 
-```bash
-$ esc version
-v{{< latest-version-esc >}}
-```
+<div class="highlight">
+    <pre class="chroma"><code class="language-bash" data-lang="bash" data-track="install-esc-version">$ esc version</code></pre>
+</div>
 
 {{% /choosable %}}
 
 {{% choosable os windows %}}
 
-```bash
-> esc version
-v{{< latest-version-esc >}}
-```
+<div class="highlight">
+    <pre class="chroma"><code class="language-bash" data-lang="bash" data-track="install-esc-version">> esc version</code></pre>
+</div>
 
 {{% /choosable %}}
 

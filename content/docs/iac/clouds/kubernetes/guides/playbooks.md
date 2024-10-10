@@ -146,7 +146,7 @@ Deploy applications and workloads into the cluster.
 [aws-rds]: https://aws.amazon.com/rds
 [cloud-sql]: https://cloud.google.com/sql/
 [cosmos-db]: https://azure.microsoft.com/en-us/services/cosmos-db/
-[k8s-get-started]: /docs/clouds/kubernetes/get-started/
+[k8s-get-started]: /docs/iac/get-started/kubernetes/
 [k8s-api-resources]: https://kubernetes.io/docs/reference/kubernetes-api/
 [aws-sqs]: https://aws.amazon.com/sqs/
 [crosswalk-control-plane]: /docs/clouds/kubernetes/guides/control-plane/

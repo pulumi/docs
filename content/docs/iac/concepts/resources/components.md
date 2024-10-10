@@ -39,7 +39,7 @@ Here’s a simple component example:
 
 ```javascript
 class MyComponent extends pulumi.ComponentResource {
-    constructor(name, opts) {
+    constructor(name, myComponentArgs, opts) {
         super("pkg:index:MyComponent", name, {}, opts);
     }
 }
@@ -50,7 +50,7 @@ class MyComponent extends pulumi.ComponentResource {
 
 ```typescript
 class MyComponent extends pulumi.ComponentResource {
-    constructor(name: string, opts: pulumi.ComponentResourceOptions) {
+    constructor(name: string, myComponentArgs: MyComponentArgs, opts: pulumi.ComponentResourceOptions) {
         super("pkg:index:MyComponent", name, {}, opts);
     }
 }
@@ -61,7 +61,7 @@ class MyComponent extends pulumi.ComponentResource {
 
 ```python
 class MyComponent(pulumi.ComponentResource):
-    def __init__(self, name, opts = None):
+    def __init__(self, name, my_component_args, opts = None):
         super().__init__('pkg:index:MyComponent', name, None, opts)
 ```
 
@@ -73,7 +73,7 @@ type MyComponent struct {
     pulumi.ResourceState
 }
 
-func NewMyComponent(ctx *pulumi.Context, name string, opts ...pulumi.ResourceOption) (*MyComponent, error) {
+func NewMyComponent(ctx *pulumi.Context, name string, myComponentArgs MyComponentArgs, opts ...pulumi.ResourceOption) (*MyComponent, error) {
     myComponent := &MyComponent{}
     err := ctx.RegisterComponentResource("pkg:index:MyComponent", name, myComponent, opts...)
     if err != nil {
@@ -90,7 +90,7 @@ func NewMyComponent(ctx *pulumi.Context, name string, opts ...pulumi.ResourceOpt
 ```csharp
 class MyComponent : Pulumi.ComponentResource
 {
-    public MyComponent(string name, ComponentResourceOptions opts)
+    public MyComponent(string name, MyComponentArgs myComponentArgs, ComponentResourceOptions opts)
         : base("pkg:index:MyComponent", name, opts)
     {
         // initialization logic.
@@ -109,7 +109,7 @@ import com.pulumi.resources.ComponentResource;
 import com.pulumi.resources.ComponentResourceOptions;
 
 class MyComponent extends ComponentResource {
-    public MyComponent(String name, ComponentResourceOptions opts) {
+    public MyComponent(String name, MyComponentArgs myComponentArgs, ComponentResourceOptions opts) {
         super("pkg:index:MyComponent", name, null, opts);
         // initialization logic.
 

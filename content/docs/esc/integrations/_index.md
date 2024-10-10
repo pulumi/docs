@@ -34,7 +34,8 @@ ESC also integrates with tools like Direnv, Terraform, and Docker to help manage
 
 ## Kubernetes
 
-- [Kubernetes](/docs/esc/integrations/kubernetes)
+- [Kubernetes](/docs/esc/integrations/kubernetes/kubernetes)
+- [External Secrets Operator (ESO)](/docs/esc/integrations/kubernetes/external-secrets-operator)
 
 ## Developer tools
 

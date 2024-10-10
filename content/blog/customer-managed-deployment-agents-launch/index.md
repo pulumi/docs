@@ -75,7 +75,7 @@ Customer-Managed Agents is available on the Business Critical edition of Pulumi 
 
 ## How to get started
 
-Before you begin, ensure you have installed the [Pulumi Github App](/docs/using-pulumi/continuous-delivery/github-app/) and update the [source control settings](/docs/pulumi-cloud/deployments/get-started). [Docker](https://docs.docker.com/engine/) is a requirement for the agent.
+Before you begin, ensure you have installed the [Pulumi Github App](/docs/iac/packages-and-automation/continuous-delivery/github-app/) and update the [source control settings](/docs/pulumi-cloud/deployments/get-started). [Docker](https://docs.docker.com/engine/) is a requirement for the agent.
 
 ### Install and configure the agent
 

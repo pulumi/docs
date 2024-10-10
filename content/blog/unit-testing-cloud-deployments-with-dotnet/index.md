@@ -26,7 +26,7 @@ Whenever a new resource is instantiated in code, the program makes a remote call
 
 The remote calls may be slow, unreliable, and non-deterministic, which makes testing of these interactions hard.
 
-Our [testing guide](/docs/using-pulumi/testing/) outlines several testing methods, but today I want to focus on unit testing.
+Our [testing guide](/docs/iac/concepts/testing/) outlines several testing methods, but today I want to focus on unit testing.
 
 The Pulumi SDK provides a hook to replace all the remote calls with mocks. Mocks run in the same process and can respond immediately with hard-coded or calculated on-the-fly data.
 
@@ -965,6 +965,6 @@ The tests above cover the basics of unit testing with Pulumi .NET SDK. You can t
 
 Here are several useful pointers to get started with testing in Pulumi:
 
-- [Testing Guide](/docs/using-pulumi/testing/)
+- [Testing Guide](/docs/iac/concepts/testing/)
 - Full code for this blog post: [C#](https://github.com/pulumi/examples/tree/72c9480f4c1240f795f6020f50801733fbef37f2/testing-unit-cs-mocks), [F#](https://github.com/pulumi/examples/tree/72c9480f4c1240f795f6020f50801733fbef37f2/testing-unit-fs-mocks).
 - [Another example of unit testing in C#](https://github.com/pulumi/examples/tree/de060e659e1bb4af15d895fe4de7a3f10218b669/testing-unit-cs)

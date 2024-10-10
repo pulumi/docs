@@ -34,7 +34,11 @@ In **November 2024** the images without a version suffix, like [pulumi/pulumi-py
 | Python           | 3.9             | 3.13        |
 | Java             | 17              | 21          |
 
-The default versions will be updated as new versions of the language runtimes are released, matching the [versions supported by the Pulumi CLI](https://github.com/pulumi/pulumi?tab=readme-ov-file#languages).  This will enable the unversioned [pulumi/pulumi](https://hub.docker.com/r/pulumi/pulumi/tags) image to stay evergreen as new runtimes come into and out of support.  
+The default versions will be updated as new versions of the language runtimes are released, matching the [versions supported by the Pulumi CLI](https://github.com/pulumi/pulumi?tab=readme-ov-file#languages).  This will enable the unversioned [pulumi/pulumi](https://hub.docker.com/r/pulumi/pulumi/tags) image to stay evergreen as new runtimes come into and out of support.
+
+{{% notes type="info" %}}
+The [pulumi-provider-build-environment](https://hub.docker.com/r/pulumi/pulumi-provider-build-environment/tags) image, which is useful for building Pulumi providers, will also be updated with the latest language runtimes, as well as upgrading [GoReleaser](https://github.com/goreleaser/goreleaser) from v1 to v2. See the [upgrade instructions](https://goreleaser.com/blog/goreleaser-v2/#upgrading) on how to migrate your configuration to v2.
+{{% /notes %}}
 
 If you require a specific version of a language runtime, you can use the versioned images. If you want to use the latest versions of the language runtimes, you can use the images without a version suffix.
 
@@ -73,7 +77,7 @@ runtime:
     toolchain: poetry
 ```
 
-To use pnpm set the [packagemanager runtime option](/docs/iac/concepts/projects/project-file/#runtime-options) to `pnpm`:
+To use pnpm set the [`packagemanager` runtime option](/docs/iac/concepts/projects/project-file/#runtime-options) to `pnpm`:
 
 ```yaml
 name: pulumi-and-pnpm-sitting-in-a-tree

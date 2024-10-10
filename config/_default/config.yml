@@ -1,7 +1,7 @@
 languageCode: en-us
 title: Pulumi - Infrastructure as Code in Any Programming Language
 
-refLinksErrorLevel: WARNING
+refLinksErrorLevel: ERROR
 security:
   funcs:
     getenv:
@@ -9,6 +9,7 @@ security:
       - PULUMI_CONVERT_URL
       - PULUMI_AI_WS_URL
       - PULUMI_COPILOT_URL
+      - DEV_PULUMI_COPILOT_BASE_PATH
       - GITHUB_TOKEN
       - ALGOLIA_APP_ID
       - ALGOLIA_APP_SEARCH_KEY

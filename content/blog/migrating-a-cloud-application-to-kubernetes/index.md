@@ -8,7 +8,7 @@ tags: ["aws", "typescript", "containers", "kubernetes", "docker"]
 ---
 
 {{% notes type="warning" %}}
-This post is outdated and contains references to a pre-release version of Pulumi Crosswalk (`@pulumi/awsx`). For updated AWSx documentation and examples, [see the AWS Guides](/docs/clouds/aws/guides/).
+This post is outdated and contains references to a pre-release version of Pulumi Crosswalk (`@pulumi/awsx`). For updated AWSx documentation and examples, [see the AWS Guides](/docs/iac/clouds/aws/guides/).
 {{% /notes %}}
 
 In this blog post, we will explore and demonstrate the advantages of Kubernetes by converting and deploying our [PERN application](/blog/deploying-a-pern-stack-application-to-aws/) to Amazon EKS. With the help of Pulumi, the process becomes greatly simplified and allows us to focus more on the big picture of designing our cloud architecture.
