@@ -369,16 +369,17 @@
                 preferencesDialogContent: preferencesDialogContent,
                 cancelDialogTitle: cancelDialogTitle,
                 cancelDialogContent: cancelDialogContent,
-                shouldRequireConsent: () => true,
+                shouldRequireConsent: exports.inEU,
                 closeBehavior: exports.inEU() ? "dismiss" : "accept",
                 bannerTextColor: "black",
                 cdnHost: "evs.analytics.pulumi.com",
+                shouldReload: false
             }
         }
     </script>
 
     <script
-        src="https://unpkg.com/@segment/consent-manager@5.3.0/standalone/consent-manager.js"
+        src="https://unpkg.com/@segment/consent-manager@5.8.1/standalone/consent-manager.js"
         defer
     ></script>
 
