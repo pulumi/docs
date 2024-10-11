@@ -8,7 +8,7 @@ menu:
     cloud:
         name: Network reqs
         parent: pulumi-cloud-admin-self-hosted
-        weight: 3
+        weight: 4
         identifier: pulumi-cloud-admin-self-hosted-network
     pulumicloud:
         parent: self-hosted
