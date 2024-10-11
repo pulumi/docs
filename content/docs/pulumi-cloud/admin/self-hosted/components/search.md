@@ -8,7 +8,7 @@ menu:
     cloud:
         name: OpenSearch cluster
         parent: pulumi-cloud-admin-self-hosted-components
-        weight: 1
+        weight: 3
         identifier: pulumi-cloud-admin-self-hosted-components-search
     pulumicloud:
         parent: self-hosted-components

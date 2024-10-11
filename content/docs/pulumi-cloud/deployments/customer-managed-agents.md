@@ -156,7 +156,7 @@ env_forward_allowlist: []
 deploy_target: "docker"
 ```
 
-### Kubernetes
+### Kubernetes-Managed Agents
 
 For Kubernetes-native installations, configuration for customer-managed agents is set on the Kubernetes Deployment that runs the agent. Configuration values may be set as environment variables, or by mounting a configuration file in the agent Pod.
 
@@ -165,5 +165,4 @@ The following Kubernetes-specific configuration options are available:
 ```yaml
 # Kubernetes image pull policy https://kubernetes.io/docs/concepts/containers/images/#image-pull-policy
 PULUMI_AGENT_IMAGE_PULL_POLICY: IfNotPresent
-PULUMI_DEPLOY_DEFAULT_IMAGE_REFERENCE: pulumi/pulumi
 ```

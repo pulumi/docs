@@ -6,9 +6,9 @@ h1: Pulumi Cloud self-hosted Deployments
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     cloud:
-        name: Deployments
+        name: Pulumi Deployments
         parent: pulumi-cloud-admin-self-hosted-components
-        weight: 1
+        weight: 4
         identifier: pulumi-cloud-admin-self-hosted-components-deployments
     pulumicloud:
         parent: self-hosted-components
@@ -24,25 +24,20 @@ Self-hosting is only available with **Pulumi Business Critical**. If you would l
 To manage your state with a self-managed backend, such as a cloud storage bucket, see [State and Backends](/docs/concepts/state/).
 {{% /notes %}}
 
-Pulumi Cloud provides deployments features that require an agnent. Self-hosted installations allow you to run the agent in the same kubernetes cluster using the Pulumi program located [here](https://github.com/pulumi/customer-managed-deployment-agent/tree/main/kubernetes).
+[Pulumi Deployments](/docs/pulumi-cloud/deployments/) is fully supported in Kubernetes-managed self-hosted environments. If you're using Kubernetes to manage your self-hosted Pulumi Cloud installation, you can enable Pulumi Deployments features by configuring a Kubernetes-native deployment pool in Pulumi Cloud and installing one or more [customer-managed agents](/docs/pulumi-cloud/deployments/customer-managed-agents/) into your installation's Kubernetes cluster.
 
-For Google Cloud Service Accounts are supported with the Pulumi worker pods.
+To do so, follow these steps:
 
-<!-- ## Prerequisites
+1. [Install the Pulumi GitHub app](https://www.pulumi.com/docs/iac/packages-and-automation/continuous-delivery/github-app) and ensure that it's integrated with your source control.
 
-* Provide a compatible OpenSearch cluster (see Minimum System Requirements below).
-* Update the API container to set environment variables for the OpenSearch cluster.
+1. Create a new deployment pool. Navigate to **Settings > Deployment runners** in the left-hand menu of your Pulumi Cloud organization, click **Add new pool**, and copy the generated access token.
 
-## Minimum System Requirements
+1. Select the **Kubernetes** tab and follow the on-screen instructions to install and configure your Kubernetes-native deployment agent.
 
-| Type       | Properties   | Notes                                                                                                                                                                                                                                                                 |
-|------------|--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| OpenSearch | v2.x cluster | Pulumi Cloud has been tested with OpenSearch v2.9 and v2.11                                                                                                                                                                                                           | -->
+1. Set any environment variables directly on your Kubernetes deployment. The following environment variables are supported and may be set on the container running the Pulumi Cloud API service:
 
-## API Environment Variables
+    | Variable Name                           | Description                            | Default         |
+    |-----------------------------------------|-----------------------------------------| --------------- |
+    | `PULUMI_DEPLOY_DEFAULT_IMAGE_REFERENCE` | The Docker image to use for the runner. | `pulumi/pulumi` |
 
-The following environment variables can be set on the API container for Pulumi Cloud.
-
-| Variable Name                           | Description                                |
-|-----------------------------------------|--------------------------------------------|
-| PULUMI_DEPLOY_DEFAULT_IMAGE_REFERENCE   | The custom image for the pulumi worker     |
+1. Configure your stacks individually to use the deployment pool by navigating to **Settings > Deploy** and choosing the pool from the **Deployment runner pools** list. Click **Save deployment configuration** to apply your settings.

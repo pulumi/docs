@@ -8,7 +8,7 @@ menu:
     cloud:
         name: Components
         parent: pulumi-cloud-admin-self-hosted
-        weight: 5
+        weight: 2
         identifier: pulumi-cloud-admin-self-hosted-components
     pulumicloud:
         parent: self-hosted
