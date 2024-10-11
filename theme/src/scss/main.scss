@@ -73,6 +73,7 @@
 @import "components/choosable";
 @import "components/convert";
 @import "components/docs-nav";
+@import "components/docs-toc";
 @import "components/filter-select";
 @import "components/greenhouse-jobs-list";
 @import "components/install";
@@ -271,7 +272,7 @@ main {
     }
 }
 
-$sitenav-height: 90px;
+$sitenav-height: 58px;
 
 // A 16px offset makes it easier to position elements below the nav when it's pinned.
 $sitenav-offset: calc($sitenav-height + 16px);

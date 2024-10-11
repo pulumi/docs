@@ -1,0 +1,32 @@
+pulumi-docs-toc {
+    @apply sticky top-0;
+
+    ul {
+        li {
+            &.toc-level-h3 {
+                @apply ml-4;
+            }
+
+            a {
+                @apply text-gray-800;
+
+                &:hover {
+                    @apply text-blue-800;
+                    text-decoration: none !important;
+                }
+            }
+
+            &.active {
+                a {
+                    @apply text-blue-800;
+                }
+            }
+        }
+
+        // Select the first item in the list. (There will often be multiple --
+        // e.g., when more than one heading is visible on the page.
+        :nth-child(1 of li.active) {
+            @apply font-semibold;
+        }
+    }
+}

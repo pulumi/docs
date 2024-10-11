@@ -141,9 +141,7 @@ body.section-registry {
             flex-basis: 32px;
             overflow-y: auto;
             height: calc(100vh - 38px);
-            position: sticky;
             left: 0;
-            top: 0;
 
             nav.main-nav div:first-of-type {
                 margin-top: 0;
@@ -730,6 +728,10 @@ body.section-registry {
         input:checked ~ label.hide {
             margin-bottom: 24px;
             display: flex;
+
+            .icon {
+                rotate: 180deg;
+            }
         }
 
         .heading:hover {

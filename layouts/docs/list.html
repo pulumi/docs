@@ -3,7 +3,7 @@
         {{ if not .Params.noleftnav }}
         <div class="docs-main-nav-toggle-wrapper">
             <div class="docs-main-nav-wrapper">
-                <div id="docs-main-nav" class="docs-main-nav">
+                <div id="docs-main-nav" class="docs-main-nav sticky top-10">
                     {{ partial "docs/menu.html" (dict "page" .) }}
                 </div>
             </div>
@@ -44,8 +44,8 @@
                 </section>
             </div>
             {{ if not .Params.norightnav }}
-            <div class="docs-table-of-contents docs-toc-desktop">
-                {{ partial "docs/table-of-contents.html" . }}
+            <div class="docs-toc mx-4 sticky top-10 h-full">
+                {{ partial "docs/toc.html" . }}
 
                 {{ partial "docs/feedback.html" . }}
 

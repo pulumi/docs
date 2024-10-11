@@ -26,24 +26,7 @@
                 </label>
                 <div class="accordion-content flex">
                     <div class="content">
-                        <ul class="table-of-contents-list">
-                            {{/* This will be populated dynamically with all H2s and H3s on the page; see ts/misc.ts */}}
-                        </ul>
-                        {{ if strings.Contains $.Page.Permalink "registry/packages" }}
-                            {{ $path := (split .Page.Params.title_tag ".") }}
-                            {{- if eq (len $path) 3 -}}
-                                {{ $packageName := index $path 0 }}
-                                {{ $moduleName := index $path 1 }}
-                                {{ $resourceName := index $path 2 }}
-                                <div class="mt-6">
-                                    <pulumi-resource-links
-                                        package-name="{{ $packageName }}"
-                                        module-name="{{ $moduleName }}"
-                                        resource-name="{{ $resourceName }}"
-                                    ></pulumi-resource-links>
-                                </div>
-                            {{ end }}
-                        {{ end }}
+                        <pulumi-docs-toc></pulumi-docs-toc>
                     </div>
                 </div>
             </div>
