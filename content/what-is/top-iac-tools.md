@@ -26,35 +26,33 @@ First up, IaC tools that manage infrastructure across multiple cloud providers.
 
 Multi-cloud solutions prevent vendor lock-in, maintain flexibility, and promote skill portability across different cloud environments. You should choose one of these tools if you are starting fresh with IaC and don't have migration costs associated with investment in a legacy tool.
 
-### [Pulumi](https://www.pulumi.com/)
-
-This is the Pulumi website, so it's not an unbiased source of information. Still, Pulumi stands out as a versatile Infrastructure as Code tool, offering the flexibility to manage infrastructure using a variety of programming languages.
-
-This flexibility allows developers to define infrastructure with real programming constructs, such as loops and functions, simplifying the process of handling complex logic. Pulumi excels in multi-cloud support, integrating with major cloud providers such as AWS, Azure, Google Cloud, and many others.
-
-Pulumi's state management is easy to use as it automatically handles your infrastructure state and stores it in the Pulumi Cloud backend by default. With built-in state locking and encryption, this approach simplifies collaboration and reduces the risk of state corruption, ensuring secure and consistent state management. For those who prefer more control over their state, Pulumi also supports self-managed backends.
-
-Pulumi supports supporting popular programming languages complete with IDE based code completion. It integrates with various CI/CD systems and offers extensive support for cloud-native technologies, particularly Kubernetes, with strongly-typed CustomResourceDefinitions (CRDs), and support for Helm charts. Pulumi's ecosystem is growing rapidly, with many resources and integrations available. Comprehensive documentation and support, including tutorials and an active community forum, further bolster its appeal.
-
-- **Flexibility**: Define infrastructure using your preferred programming language, which can simplify complex logic handling compared to some other IaC tools.
-- **Multi-cloud**: Offers support for AWS, Azure, Google Cloud, Oracle cloud and many others.
-- **State**: Automatically manages infrastructure state, storing it in the Pulumi Cloud with built-in state locking and encryption.
-- **Integration**: Seamlessly integrates with existing development workflows, CI/CD pipelines, and cloud-native technologies like Kubernetes.
-- **Ecosystem**: Growing community and ecosystem. Comprehensive documentation and support, including tutorials and an active community.
-
 ### [Terraform](https://www.terraform.io/)
 
 Terraform is a multi-cloud Infrastructure as Code (IaC) tool that utilizes the HashiCorp Configuration Language (HCL). HCL is designed to be both human-readable and machine-friendly, striking a balance between simplicity and power. While it lacks some of the advanced programming constructs of general-purpose languages, HCL offers a declarative approach that many find intuitive for infrastructure definition. HCL lacks full programming constructs, which may necessitate workarounds for handling complex logic.
 
 For state management, Terraform uses a state file to track the current state of your infrastructure. While this approach requires manual configuration, including setting up remote backends and state locking, it does offer fine-grained control over state.
 
-Terraform integrates well with existing development workflows and CI/CD pipelines. A Kubernetes provider exists that supports the Kubernetes Core APIs and offers some support for Custom Resource Definitions (CRDs).  Terraform also has a wide range of plugins, integrations, and comprehensive documentation.
+Terraform integrates well with existing development workflows and CI/CD pipelines. A Kubernetes provider exists that supports the Kubernetes Core APIs and offers some support for Custom Resource Definitions (CRDs).  Terraform is popular, with a large ecosystem and also has a wide range of plugins, integrations, and comprehensive documentation.
 
 - **Flexibility**: Utilizes HCL. Lacks full programming constructs.
 - **Multi-cloud**: Offers support for AWS, Azure, GCP, Oracle cloud and many others.
 - **State**: Provides fine-grained control over state management, but requires manual configuration including remote backends and state locking, which can add complexity to collaboration.
 - **Integration**: Integrates well with existing development workflows and CI/CD pipelines. Provides a Kubernetes provider for basic cluster management.
 - **Ecosystem**: A large and active community. A wide range of plugins and integrations.
+
+### [Pulumi](https://www.pulumi.com/)
+
+Pulumi is another popular IaC tool that let's you define infrastructure in your programming lanaguage of choice and using real programming constructs, such as loops and functions. Pulumi excels in multi-cloud support, integrating with major cloud providers such as AWS, Azure, Google Cloud, and many others.
+
+Pulumi's state management is easy to use as it automatically handles your infrastructure state and stores it in the Pulumi Cloud backend by default. With built-in state locking and encryption, this approach simplifies collaboration and reduces the risk of state corruption, ensuring secure and consistent state management. For those who prefer more control over their state, Pulumi also supports self-managed backends.
+
+Pulumi integrates with various CI/CD systems and offers extensive support for cloud-native technologies, particularly Kubernetes, with strongly-typed CustomResourceDefinitions (CRDs), and support for Helm charts. Pulumi's ecosystem is growing rapidly, with many resources and integrations available. Comprehensive documentation and support, including tutorials and an active community forum, further bolster its appeal.
+
+- **Flexibility**: Define infrastructure using your preferred programming language, which can simplify complex logic handling compared to some other IaC tools.
+- **Multi-cloud**: Offers support for AWS, Azure, Google Cloud, Oracle cloud and many others.
+- **State**: Automatically manages infrastructure state, storing it in the Pulumi Cloud with built-in state locking and encryption.
+- **Integration**: Seamlessly integrates with existing development workflows, CI/CD pipelines, and cloud-native technologies like Kubernetes.
+- **Ecosystem**: Growing community and ecosystem. Comprehensive documentation and support, including tutorials and an active community.
 
 ### [OpenTofu](https://opentofu.org/)
 
@@ -99,7 +97,7 @@ Managing complex templates can be challenging, and template size limitations and
 Azure Resource Manager (ARM) supports JSON-based configuration or using Bicep - a ARM-specific DSL. ARM integrates deeply with Azure services including Azure DevOps, and can be integrated with other CI/CD workflows using its `az` cli tool. ARM provides comprehensive support for Kubernetes features through Azure Kubernetes Service (AKS), Self-managed Kubernetes clusters on Azure are not included, however. Azure Resource Manager is preferred by those who want a native Azure tool and are deeply invested in the Azure ecosystem.
 
 - **Flexibility**: Uses JSON-based templates or Bicep - a DSL. Lacks some of the abstraction and modularity of other tools.
-- **Integration**: offers deep integration with Azure services, including Azure DevOps and Azure Kubernetes Service. Broader integration to non-Azure CI/CD is possible, while native Kubernetes cluster support is not.
+- **Integration**: Offers deep integration with Azure services, including Azure DevOps and Azure Kubernetes Service. Broader integration to non-Azure CI/CD is possible, while native Kubernetes cluster support is not.
 - **Ecosystem**: Supported by documentation, tutorials and troubleshooting advice and by the greater Azure ecosystem.
 
 ### [Google Cloud Deployment Manager](https://cloud.google.com/deployment-manager/docs)
