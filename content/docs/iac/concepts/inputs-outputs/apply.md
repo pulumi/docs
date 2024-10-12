@@ -933,6 +933,10 @@ resources:
 
 This approach is easier to read and write and does not lose any important dependency information that is needed to properly create and maintain the stack. This approach doesn’t work in all cases, but when it does, it can be a great help.
 
+{{< notes type="warning" >}}
+In Python, output lifting is implemented by overriding the special `__getattr__` method on resources so that the expression `resource.output` (which results in a call to `resource.__getattr__("output")`) becomes `resource.apply(lambda r: r.output)`. This means that using `hasattr`, which calls `__getattr__` under the hood and looks for an `AttributeError` to determine whether or not a property exists, which not work as expected on resource outputs.
+{{< /notes >}}
+
 ## Creating new output values
 
 ### Outputs and Strings
