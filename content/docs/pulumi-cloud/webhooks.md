@@ -235,7 +235,7 @@ to authenticate messages as coming from the Pulumi Cloud.
 Each webhook payload has a format specific to the payload being emitted. Every payload will contain a sender, organization,
 and stack reference as appropriate. For examples of specific payloads, see _Payload Reference_ below.
 
-Each webhook will contain an `organization` field, which is the organization name, and a URL for the event. It may  also contain the `user` who requested the action, `projectName`, and `stackName` when applicable.
+Each webhook will contain an `organization` field, which is the organization name, and a URL for the event. It may also contain the `user` who requested the action, as well as the `projectName` and `stackName` when applicable.
 
 ##### Stack Creation
 
