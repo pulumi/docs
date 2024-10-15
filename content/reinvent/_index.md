@@ -4,6 +4,8 @@ meta_desc: "Automate, secure and manage AWS infrastructure with IaC, secrets man
 meta_image: /images/reinvent/reinvent-meta-24.png
 type: page
 layout: reinvent
+aliases:
+  - aws-reinvent-2021
 
 awsx:
     yaml: |
