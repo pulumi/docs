@@ -1,112 +1,136 @@
 {{ define "hero" }}
     <header class="page-hero">
-        <img class="mx-auto mb-6 w-full" src="/images/reinvent/reinvent-hero.png" />
+        <img class="mx-auto w-full" src="/images/reinvent/reinvent-hero-24.png" />
     </header>
 {{ end }}
 
 {{ define "main" }}
-    <section class="w-full text-center mt-8">
+    <section class="w-full text-center mb-16">
         <h2>Automate, Secure, and Manage Everything You Run in AWS with Pulumi</h2>
         <h4 class="w-10/12 mx-auto mt-0">Experience the Future of Cloud Infrastructure Management</h4>
         <p class="text-center w-full p-5 lg:w-1/2 lg:p-0 mx-auto">
-            Welcome to the Pulumi <b>booth #370</b> at AWS re:Invent! Discover how Pulumi and AWS are revolutionizing cloud infrastructure automation, security, and management for businesses like yours.
+            <b>Welcome to the Pulumi booth #370 at AWS re:Invent!</b> Discover how Pulumi and AWS are revolutionizing cloud infrastructure automation, security, and management for businesses like yours.
         </p>
     </section>
 
-    <section class="container flex justify-center mx-auto my-16 px-8 lg:px-0">
-        <div class="w-full lg:w-2/3 px-8">
-            <h3>Pulumi + AWS: Better Together</h3>
-            <p>{{"Ship faster, secure your secrets, and enforce cloud compliance and security with [Pulumi IaC](/product/infrastructure-as-code/) (infrastructure as code), [ESC](/product/secrets-management/) (secrets management and orchestration), and [Insights](/product/pulumi-insights/) (cloud asset and compliance management). Our partnership with AWS offers a robust solution for complex cloud deployments, enabling you to:" | markdownify}}</p>
-            <h5>Automate your AWS infrastructure with Pulumi IaC.</h5>
-            <p class="mt-0">
-                Build and ship infrastructure faster using languages you know and love, like TypeScript, Python, Go, C#, and Java.
-            </p>
-            <h5>Secure your cloud secrets with Pulumi ESC.</h5>
-            <p>
-                Centrally manage all your secrets and configurations. Pull and sync secrets with any secrets store. Consume in any application, tool, or CI/CD platform.
-            </p>
-            <h5>Manage your AWS resources with Pulumi Insights.</h5>
-            <p>
-                Search, compliance remediation, resource visualizations, cost optimization, and AI insights over all your AWS infrastructure.
-            </p>
-        </div>
-    </section>
-
-    <section class="w-full text-center mt-16">
+    <section class="container mx-auto my-16 text-center">
         <h2>Engage with Pulumi at re:Invent</h2>
         <p class="text-center w-full p-5 lg:w-1/2 lg:p-0 mx-auto">
             Don't miss these exciting opportunities to learn more and connect with our team.  Visit <b>booth #370</b> to see Pulumi in action, grab some swag, and discover how Pulumi and AWS together can turn your cloud into a powerful competitive advantage!
         </p>
+        <div class="lg:flex lg:flex-wrap justify-center items-stretch">
+            <div class="lg:w-1/2 px-3 py-6">
+                <div class="card text-center p-6 relative h-full">
+                    <div class="icon-section">
+                        {{ partial "color-icon.html" (dict "icon" "pen" "icon_color" "yellow") }}
+                    </div>
+                    <div>
+                        <h5>Schedule a 1:1 with Pulumi Leadership </h5>
+                    </div>
+                    <div class="description">
+                        <p>Secure a private meeting with our Founder and top executives to gain exclusive insights on cloud strategy and innovation.</p>
+                    </div>
+                    <div class="card-cta-btn">
+                        <a href="/contact/" target="_blank" class="btn-primary">Request a Meeting</a>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:w-1/2 px-3 py-6">
+                <div class="card text-center p-6 relative h-full">
+                    <div class="icon-section">
+                        {{ partial "color-icon.html" (dict "icon" "team" "icon_color" "violet") }}
+                    </div>
+                    <div>
+                        <h5>Schedule a 1:1 Pulumi Deep Dive </h5>
+                    </div>
+                    <div class="description">
+                        <p>Get a personalized walkthrough on how to take your AWS infrastructure management to the next level with Pulumi.</p>
+                    </div>
+                    <div class="card-cta-btn">
+                        <a href="/request-a-demo/" target="_blank" class="btn-primary">Request a demo</a>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:w-1/2 px-3 py-6">
+                <div class="card text-center p-6 relative h-full">
+                    <div class="icon-section">
+                        {{ partial "color-icon.html" (dict "icon" "pen" "icon_color" "yellow") }}
+                    </div>
+                    <div>
+                        <h5>Attend our AWS  Workshop</h5>
+                    </div>
+                    <div class="description">
+                        <p><b>Mastering AWS Infrastructure with Pulumi</b><br/> Learn hands-on techniques to supercharge your AWS deployments using Pulumi.</p>
+                    </div>
+                    <!--TODO: uncomment this when the workshop is in /resources (with updated url)<div class="card-cta-btn">
+                        <a href="/resources/" target="_blank" class="btn-primary">Register</a>
+                    </div>-->
+                </div>
+            </div>
+            <div class="lg:w-1/2 px-3 py-6">
+                <div class="card text-center p-6 relative h-full">
+                    <div class="icon-section">
+                        {{ partial "color-icon.html" (dict "icon" "nodes" "icon_color" "salmon") }}
+                    </div>
+                    <div>
+                        <h5>RSVP to 1923 at re:Invent</h5>
+                    </div>
+                    <div class="description">
+                        <p>Join Pulumi Partners Honeycomb, BuildKite and observeIQ <br/>Wednesday, November 4 <br/>8:00 - 11:00 pm
+                        </p>
+                    </div>
+                    <!--TODO: uncomment when we get the honeycomb link <div class="card-cta-btn">
+                        <a href="/" target="_blank" class="btn-primary">RSVP to 1923</a>
+                    </div>-->
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="ctas" class="container mx-auto my-16 text-center">
-        <div class="my-16">
-            <div class="lg:flex lg:flex-wrap justify-center items-stretch">
-                <div class="lg:w-1/2 px-3 py-6">
-                    <div class="card text-center p-6 relative h-full">
-                        <div class="icon-section">
-                            {{ partial "color-icon.html" (dict "icon" "nodes" "icon_color" "salmon") }}
-                        </div>
-                        <div>
-                            <h5>RSVP to 1923 at re:Invent</h5>
-                        </div>
-                        <div class="description">
-                            <p>with Pulumi partners Honeycomb, BuildKite and observeIQ <br/>Wednesday, November 4 <br/>8:00 - 11:00 pm
-                            </p>
-                        </div>
-                        <div class="card-cta-btn">
-                            <a href="/" target="_blank" class="btn-primary">RSVP to 1923</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="lg:w-1/2 px-3 py-6">
-                    <div class="card text-center p-6 relative h-full">
-                        <div class="icon-section">
-                            {{ partial "color-icon.html" (dict "icon" "pen" "icon_color" "yellow") }}
-                        </div>
-                        <div>
-                            <h5>Schedule a 1:1 with Pulumi Leadership </h5>
-                        </div>
-                        <div class="description">
-                            <p>Secure a private meeting with our Founder and top executives to gain exclusive insights on cloud strategy and innovation.</p>
-                        </div>
-                        <div class="card-cta-btn">
-                            <a href="/contact/" target="_blank" class="btn-primary">Request a Meeting</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="lg:w-1/2 px-3 py-6">
-                    <div class="card text-center p-6 relative h-full">
-                        <div class="icon-section">
-                            {{ partial "color-icon.html" (dict "icon" "team" "icon_color" "violet") }}
-                        </div>
-                        <div>
-                            <h5>Schedule a 1:1 Pulumi Deep Dive </h5>
-                        </div>
-                        <div class="description">
-                            <p>Get a personalized walkthrough on how to take your AWS infrastructure management to the next level with Pulumi.</p>
-                        </div>
-                        <div class="card-cta-btn">
-                            <a href="/request-a-demo/" target="_blank" class="btn-primary">Request a demo</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="lg:w-1/2 px-3 py-6">
-                    <div class="card text-center p-6 relative h-full">
-                        <div class="icon-section">
-                            {{ partial "color-icon.html" (dict "icon" "pen" "icon_color" "yellow") }}
-                        </div>
-                        <div>
-                            <h5>Attend our AWS  Workshop</h5>
-                        </div>
-                        <div class="description">
-                            <p><b>Mastering AWS Infrastructure with Pulumi</b><br/> Learn hands-on techniques to supercharge your AWS deployments using Pulumi.</p>
-                        </div>
-                        <div class="card-cta-btn">
-                            <a href="/resources/" target="_blank" class="btn-primary">Register</a>
-                        </div>
-                    </div>
-                </div>
+    <section class="container flex justify-center mx-auto my-16 px-8 lg:px-0">
+        <div class="flex flex-col lg:flex-row"></div>
+            <div class="w-full order-last mt-8 lg:mt-0 lg:order-first lg:w-1/2">
+                <pulumi-chooser type="language" options="typescript,python,go,csharp,java,yaml">
+                    <pulumi-choosable type="language" class="highlight" value="typescript">
+                        {{ partial "code" (dict "code" .Params.awsx.ts "lang" "ts") }}
+                    </pulumi-choosable>
+
+                    <pulumi-choosable type="language" class="highlight" value="python">
+                        {{ partial "code" (dict "code" .Params.awsx.py "lang" "go") }}
+                    </pulumi-choosable>
+
+                    <pulumi-choosable type="language" class="highlight" value="go">
+                        {{ partial "code" (dict "code" .Params.awsx.go "lang" "go") }}
+                    </pulumi-choosable>
+
+                    <pulumi-choosable type="language" class="highlight" value="csharp">
+                        {{ partial "code" (dict "code" .Params.awsx.csharp "lang" "csharp") }}
+                    </pulumi-choosable>
+
+                    <pulumi-choosable type="language" class="highlight" value="java">
+                        {{ partial "code" (dict "code" .Params.awsx.java "lang" "java") }}
+                    </pulumi-choosable>
+
+                    <pulumi-choosable type="language" class="highlight" value="yaml">
+                        {{ partial "code" (dict "code" .Params.awsx.yaml "lang" "yaml") }}
+                    </pulumi-choosable>
+                </pulumi-chooser>
+            </div>
+            <div class="w-full lg:w-1/2 px-8">
+                <h3>Pulumi + AWS: Better Together</h3>
+                <p>{{"Ship faster, secure your secrets, and enforce cloud compliance and security with [Pulumi IaC](/product/infrastructure-as-code/) (infrastructure as code), [ESC](/product/secrets-management/) (secrets management and orchestration), and [Insights](/product/pulumi-insights/) (cloud asset and compliance management). Our partnership with AWS offers a robust solution for complex cloud deployments, enabling you to:" | markdownify}}</p>
+                <h5>Automate your AWS infrastructure with Pulumi IaC.</h5>
+                <p class="mt-0">
+                    Build and ship infrastructure faster using languages you know and love, like TypeScript, Python, Go, C#, and Java.
+                </p>
+                <h5>Secure your cloud secrets with Pulumi ESC.</h5>
+                <p>
+                    Centrally manage all your secrets and configurations. Pull and sync secrets with any secrets store. Consume in any application, tool, or CI/CD platform.
+                </p>
+                <h5>Manage your AWS resources with Pulumi Insights.</h5>
+                <p>
+                    Search, compliance remediation, resource visualizations, cost optimization, and AI insights over all your AWS infrastructure.
+                </p>
             </div>
         </div>
     </section>
