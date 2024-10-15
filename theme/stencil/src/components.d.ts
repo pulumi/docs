@@ -106,6 +106,8 @@ export namespace Components {
     interface PulumiDocsNav {
         "expandedMenuIDs": string;
     }
+    interface PulumiDocsToc {
+    }
     interface PulumiExample {
     }
     interface PulumiExamples {
@@ -320,6 +322,12 @@ declare global {
         prototype: HTMLPulumiDocsNavElement;
         new (): HTMLPulumiDocsNavElement;
     };
+    interface HTMLPulumiDocsTocElement extends Components.PulumiDocsToc, HTMLStencilElement {
+    }
+    var HTMLPulumiDocsTocElement: {
+        prototype: HTMLPulumiDocsTocElement;
+        new (): HTMLPulumiDocsTocElement;
+    };
     interface HTMLPulumiExampleElement extends Components.PulumiExample, HTMLStencilElement {
     }
     var HTMLPulumiExampleElement: {
@@ -478,6 +486,7 @@ declare global {
         "pulumi-datetime": HTMLPulumiDatetimeElement;
         "pulumi-developer-quotes": HTMLPulumiDeveloperQuotesElement;
         "pulumi-docs-nav": HTMLPulumiDocsNavElement;
+        "pulumi-docs-toc": HTMLPulumiDocsTocElement;
         "pulumi-example": HTMLPulumiExampleElement;
         "pulumi-examples": HTMLPulumiExamplesElement;
         "pulumi-filter-select": HTMLPulumiFilterSelectElement;
@@ -598,6 +607,8 @@ declare namespace LocalJSX {
     interface PulumiDocsNav {
         "expandedMenuIDs"?: string;
     }
+    interface PulumiDocsToc {
+    }
     interface PulumiExample {
     }
     interface PulumiExamples {
@@ -711,6 +722,7 @@ declare namespace LocalJSX {
         "pulumi-datetime": PulumiDatetime;
         "pulumi-developer-quotes": PulumiDeveloperQuotes;
         "pulumi-docs-nav": PulumiDocsNav;
+        "pulumi-docs-toc": PulumiDocsToc;
         "pulumi-example": PulumiExample;
         "pulumi-examples": PulumiExamples;
         "pulumi-filter-select": PulumiFilterSelect;
@@ -759,6 +771,7 @@ declare module "@stencil/core" {
             "pulumi-datetime": LocalJSX.PulumiDatetime & JSXBase.HTMLAttributes<HTMLPulumiDatetimeElement>;
             "pulumi-developer-quotes": LocalJSX.PulumiDeveloperQuotes & JSXBase.HTMLAttributes<HTMLPulumiDeveloperQuotesElement>;
             "pulumi-docs-nav": LocalJSX.PulumiDocsNav & JSXBase.HTMLAttributes<HTMLPulumiDocsNavElement>;
+            "pulumi-docs-toc": LocalJSX.PulumiDocsToc & JSXBase.HTMLAttributes<HTMLPulumiDocsTocElement>;
             "pulumi-example": LocalJSX.PulumiExample & JSXBase.HTMLAttributes<HTMLPulumiExampleElement>;
             "pulumi-examples": LocalJSX.PulumiExamples & JSXBase.HTMLAttributes<HTMLPulumiExamplesElement>;
             "pulumi-filter-select": LocalJSX.PulumiFilterSelect & JSXBase.HTMLAttributes<HTMLPulumiFilterSelectElement>;
