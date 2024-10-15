@@ -1,0 +1,62 @@
+name: gcp-simple-webserver-yaml
+runtime: yaml
+description: An example that deploys the configuration for a simple web server on Google Cloud.
+
+config:
+  gcp:region: us-central1
+  gcp:zone: us-central1-a
+  gcp:project: pulumi-devrel # REPLACE
+
+resources:
+  # Create a VPC network.
+  vpcNetwork:
+    type: gcp:compute:Network
+    name: vpcNetwork
+    properties:
+      autoCreateSubnetworks: true
+
+  # Create an IP address.
+  ipAddress:
+    type: gcp:compute:Address
+    properties:
+      name: ipaddress
+
+  #### Steps:
+  # [1] Create a compute instance.
+  # [2] Create and configure a firewall.
+
+  # [1] Create a compute instance.
+  computeInstance:
+    type: gcp:compute:Instance
+    name: webserverInstance
+    properties:
+      machineType: f1-micro
+      metadataStartupScript: |
+        #!/bin/bash
+        echo "Hello, World!" > index.html
+        nohup python -m SimpleHTTPServer 80 &
+      bootDisk:
+        initializeParams:
+          image: debian-cloud/debian-9-stretch-v20181210
+      networkInterfaces:
+        - accessConfigs:
+            - natIp: ${ipAddress.address}
+          network: ${vpcNetwork.id}
+      serviceAccount:
+        scopes:
+          - https://www.googleapis.com/auth/cloud-platform
+
+  # [2] Create and configure a firewall.
+  firewall:
+    type: gcp:compute:Firewall
+    properties:
+      network: ${vpcNetwork.selfLink}
+      allows:
+        - protocol: tcp
+          ports: ["80"]
+      sourceRanges: ["0.0.0.0/0"]
+
+# Export the URL of the server
+outputs:
+  instanceURL:
+    value: "http://${ipAddress.address}"
