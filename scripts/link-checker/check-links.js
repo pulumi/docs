@@ -6,6 +6,16 @@ const sitemap = new Sitemapper();
 const path = require("path");
 const fs = require("fs");
 
+
+// Additional routes to check that are not included in the sitemap.
+const additionalRoutes = [
+    "https://github.com/pulumi/pulumi",
+    // Alternative version of the home page for Google ads.
+    "https://www.pulumi.com/b/",
+    "https://www.pulumi.com/registry/sitemap.xml",
+]
+
+
 /**
  *  This script uses the programmatic API of https://github.com/stevenvachon/broken-link-checker
     to check the links (including images, iframes, and client-side redirects) for either an individual page
@@ -279,7 +289,8 @@ function getDefaultExcludedKeywords() {
         "http://127.0.0.1:5000/",
         "https://platform.openai.com",
         "https://openai.com/",
-        "https://github.com/marketplace"
+        "https://github.com/marketplace",
+        "https://bard.google.com/",
     ];
 }
 
@@ -378,12 +389,7 @@ async function getURLsToCheck(base) {
                 })
 
                 // Tack on any additional pages we'd like to check.
-                .concat([
-                    "https://github.com/pulumi/pulumi",
-
-                    // Alternative version of the home page for Google ads.
-                    "https://www.pulumi.com/b/",
-                ])
+                .concat(additionalRoutes)
 
                 // Sort everything alphabetically.
                 .sort();

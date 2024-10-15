@@ -3,6 +3,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 
+    <!-- GrowthBook / Segment keys -->
+    <script>
+        {{- if eq hugo.Environment "production" }}
+            var segmentWriteKey = "UK90Ofwacetj5VCPJ7cUgkbNcKLSHO3u";
+            var snippetName = "C8Y429BDEy/06ujkUhzfL.min.js";
+            window.growthbook_sdk_key="sdk-psPofGr6jFV2ja9O";
+            window.growthbook_decrypt_key="9NsAVMNWaDS+Oky3rhLQ+A==";
+            window.growthbook_dev_mode=false;
+        {{- else }}
+            var segmentWriteKey = "bATvhu6XKpwi7Cs258MGsELkDpVOzvdY";
+            var snippetName = "C8Y429BDEy/hpBKpR8Nx1yVCjKPB2nJWg.min.js";
+            window.growthbook_sdk_key="sdk-BwIkZCqXQ9pZyp0P";
+            window.growthbook_decrypt_key="SSWIMld/D7pGr+Mnibv5DA==";
+            window.growthbook_dev_mode=true;
+        {{- end }}
+    </script>
+
     <!-- Our CSS and JS bundles. -->
     {{ partial "assets" . }}
 
@@ -233,15 +250,6 @@
 
     <script async defer src="https://buttons.github.io/buttons.js"></script>
 
-    <script>
-        {{- if eq hugo.Environment "production" }}
-            var segmentWriteKey = "UK90Ofwacetj5VCPJ7cUgkbNcKLSHO3u";
-            var snippetName = "C8Y429BDEy/06ujkUhzfL.min.js";
-        {{- else }}
-            var segmentWriteKey = "bATvhu6XKpwi7Cs258MGsELkDpVOzvdY";
-            var snippetName = "C8Y429BDEy/hpBKpR8Nx1yVCjKPB2nJWg.min.js";
-        {{- end }}
-    </script>
 
     <!--Segment tracking-->
     <script>
@@ -361,28 +369,19 @@
                 preferencesDialogContent: preferencesDialogContent,
                 cancelDialogTitle: cancelDialogTitle,
                 cancelDialogContent: cancelDialogContent,
-                shouldRequireConsent: () => true,
+                shouldRequireConsent: exports.inEU,
                 closeBehavior: exports.inEU() ? "dismiss" : "accept",
                 bannerTextColor: "black",
                 cdnHost: "evs.analytics.pulumi.com",
+                shouldReload: false
             }
         }
     </script>
 
     <script
-        src="https://unpkg.com/@segment/consent-manager@5.3.0/standalone/consent-manager.js"
+        src="https://unpkg.com/@segment/consent-manager@5.8.1/standalone/consent-manager.js"
         defer
     ></script>
-
-    <script async
-        data-api-host="https://cdn.growthbook.io"
-        {{- if eq hugo.Environment "production" }}
-        data-client-key="sdk-0aUDa6bDbQqms3aJ"
-        {{- else }}
-        data-client-key="sdk-ut2foRRgupXGuPj3"
-        {{- end }}
-        src="https://cdn.jsdelivr.net/npm/@growthbook/growthbook/dist/bundles/auto.min.js"
-        ></script>
 
     {{- if eq hugo.Environment "production" }}
         <!-- Clearbit snippet -->

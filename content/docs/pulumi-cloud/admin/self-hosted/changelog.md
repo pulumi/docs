@@ -1,14 +1,14 @@
 ---
-title_tag: Changelog | 
+title_tag: Changelog |
 meta_desc: Changes related to the self-hosted version of Pulumi Cloud.
 title: Changelog
-h1: Self-Hosted Changelog 
+h1: Self-Hosted Changelog
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     cloud:
         name: Changelog
         parent: pulumi-cloud-admin-self-hosted
-        weight: 4
+        weight: 5
         identifier: pulumi-cloud-admin-self-hosted-changelog
     pulumicloud:
         parent: self-hosted
