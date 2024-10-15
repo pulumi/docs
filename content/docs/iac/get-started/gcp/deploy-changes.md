@@ -187,7 +187,9 @@ To do that, update the bucket definition to configure its `website` property. Th
 bucket = storage.Bucket(
     "my-bucket",
     location="US",
-    website=storage.BucketWebsiteArgs(main_page_suffix="index.html"),
+    website={
+        "main_page_suffix": "index.html"
+    },
     uniform_bucket_level_access=True,
 )
 ```

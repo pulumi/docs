@@ -144,9 +144,9 @@ const bucket = new aws.s3.Bucket("my-bucket", {
 
 ```python
 bucket = s3.Bucket("my-bucket",
-    website=s3.BucketWebsiteArgs(
-        index_document="index.html",
-    ),
+    website={
+        "index_document": "index.html",
+    },
 )
 ```
 
@@ -249,9 +249,9 @@ const bucketObject = new aws.s3.BucketObject("index.html", {
 ownership_controls = s3.BucketOwnershipControls(
     'ownership-controls',
     bucket=bucket.id,
-    rule=s3.BucketOwnershipControlsRuleArgs(
-        object_ownership='ObjectWriter',
-    ),
+    rule={
+        "object_ownership": 'ObjectWriter',
+    },
 )
 
 public_access_block = s3.BucketPublicAccessBlock(
