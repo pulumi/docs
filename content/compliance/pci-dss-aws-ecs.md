@@ -1,7 +1,7 @@
 ---
 # This file is auto-generated. Any alterations made within are subject
 # to being overwritten.
-title: PCI DSS Compliance for AWS ECS
+title: How to Achieve PCI DSS Compliance for AWS ECS
 cloud: AWS
 layout: "pci-dss"
 slug: pci-dss-aws-ecs

@@ -71,7 +71,7 @@ There’s several advantages to this architecture:
 
 ## Creating the first Transit Gateway resources
 
-After initializing your Pulumi project and adding the necessary references to the [AWS Classic](https://www.pulumi.com/registry/packages/aws/) and [AWSX](https://www.pulumi.com/registry/packages/awsx/), you can add the resources relating to your Transit Gateway.
+After initializing your Pulumi project and adding the necessary references to the [AWS](https://www.pulumi.com/registry/packages/aws/) and [AWSX](https://www.pulumi.com/registry/packages/awsx/), you can add the resources relating to your Transit Gateway.
 
 You'll need to configure a CIDR block for your network's supernet. All spoke VPCs in this codebase must fall under the supernet CIDR block. You will use the supernet CIDR to create a route in the inspection VPC that will route traffic returning from the internet to the Transit Gateway. The Transit Gateway will, in turn, route the traffic back to the specific originating spoke VPC.
 

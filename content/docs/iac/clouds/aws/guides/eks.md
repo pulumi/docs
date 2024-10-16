@@ -1678,7 +1678,7 @@ variables:
       Statement:
         - Action: sts:AssumeRole
           Effect: Allow
-          Sid:
+          Sid: ""
           Principal:
             Service: ec2.amazonaws.com
 resources:
@@ -1707,8 +1707,8 @@ resources:
     properties:
       skipDefaultNodeGroup: true
       instanceRoles:
-        - role1
-        - role2
+        - ${role1}
+        - ${role2}
   # Create a node group for fixed compute.
   fixedNodeGroup:
     type: eks:NodeGroupV2

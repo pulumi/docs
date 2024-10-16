@@ -53,7 +53,7 @@ takes care of everything required to run and scale your code with high availabil
 automatically trigger from other AWS services or call it directly from any web or mobile app.
 
 {{% notes type="info" %}}
-The features described on this page are extensions of the [AWS Classic provider](/registry/packages/aws/) and are only available in JavaScript and TypeScript.
+The features described on this page are extensions of the [AWS provider](/registry/packages/aws/) and are only available in JavaScript and TypeScript.
 {{% /notes %}}
 
 ## Overview
@@ -113,7 +113,7 @@ tbody tr td:first-child {
 | SQS         | [aws.sqs.Queue.onEvent](https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sqs/sqsMixins.ts) | fire SQS Queue events when new messages are enqueued (or on DLQ events, etc) |
 
 {{< notes >}}
-The resources above belong to the [AWS Classic provider](/registry/packages/aws/), but they aren't yet included in the provider's API documentation. Issue [pulumi/pulumi#13231](https://github.com/pulumi/pulumi/issues/13231) tracks adding these resources to the Pulumi Registry. In the meantime, links to their source code are provided for reference.
+The resources above belong to the [AWS provider](/registry/packages/aws/), but they aren't yet included in the provider's API documentation. Issue [pulumi/pulumi#13231](https://github.com/pulumi/pulumi/issues/13231) tracks adding these resources to the Pulumi Registry. In the meantime, links to their source code are provided for reference.
 {{< /notes >}}
 
 There are multiple approaches to creating a Lambda function. The examples below trigger a Lambda

@@ -6,6 +6,16 @@ const sitemap = new Sitemapper();
 const path = require("path");
 const fs = require("fs");
 
+
+// Additional routes to check that are not included in the sitemap.
+const additionalRoutes = [
+    "https://github.com/pulumi/pulumi",
+    // Alternative version of the home page for Google ads.
+    "https://www.pulumi.com/b/",
+    "https://www.pulumi.com/registry/sitemap.xml",
+]
+
+
 /**
  *  This script uses the programmatic API of https://github.com/stevenvachon/broken-link-checker
     to check the links (including images, iframes, and client-side redirects) for either an individual page
@@ -171,6 +181,7 @@ async function onComplete(brokenLinks) {
             .join("\n");
 
         // Post the results to Slack.
+        console.warn("Posting to slack: " + list);
         await postToSlack("docs-ops", list);
     }
 }
@@ -261,7 +272,6 @@ function getDefaultExcludedKeywords() {
         "https://www.weforum.org/press/2020/10/recession-and-automation-changes-our-future-of-work-but-there-are-jobs-coming-report-says-52c5162fce/",
         "https://www.reuters.com/technology/chatgpt-sets-record-fastest-growing-user-base-analyst-note-2023-02-01/",
         "https://www.reddit.com/r/pulumi/comments/130b4rn/ama_with_luke_hoban_cto_on_pulumi_insightsai_at/",
-        "https://platform.openai.com/account/api-keys",
         "https://dash.cloudflare.com/sign-up/",
         "https://www.sdxcentral.com/articles/news/pulumi-wants-to-piece-together-aws-lego-blocks/2019/06/",
         "https://www.sdxcentral.com/articles/news/pulumi-code-dev-platform-adds-premium-team-tier-scores-15m-series-a/2018/10/",
@@ -273,9 +283,14 @@ function getDefaultExcludedKeywords() {
         "https://code.visualstudio.com/",
         "https://www.honeycomb.io/",
         "https://wiki.osdev.org/Atomic_operation",
-        "https://conference.pulumi.com/replays/",
+        "https://conference.pulumi.com/",
         "https://wallaroo.ai/",
-        "https://conference.pulumi.com/schedule/",
+        "https://www.gartner.com/en/infrastructure-and-it-operations-leaders/topics/platform-engineering",
+        "http://127.0.0.1:5000/",
+        "https://platform.openai.com",
+        "https://openai.com/",
+        "https://github.com/marketplace",
+        "https://bard.google.com/",
     ];
 }
 
@@ -374,12 +389,7 @@ async function getURLsToCheck(base) {
                 })
 
                 // Tack on any additional pages we'd like to check.
-                .concat([
-                    "https://github.com/pulumi/pulumi",
-
-                    // Alternative version of the home page for Google ads.
-                    "https://www.pulumi.com/b/",
-                ])
+                .concat(additionalRoutes)
 
                 // Sort everything alphabetically.
                 .sort();

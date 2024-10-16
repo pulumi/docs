@@ -104,7 +104,7 @@ are designed to address different capabilities of our internal developer platfor
 <img src="k.png">
 
 {{% notes type="info" %}}
-In modern cloud computing, the [hub-and-spoke architecture](https://open-cluster-management.io/concepts/architecture/)
+In modern cloud computing, the [hub-and-spoke architecture](https://open-cluster-management.io/docs/concepts/architecture/)
 pattern is widely used to manage multiple [Kubernetes](https://www.pulumi.com/docs/clouds/kubernetes/) clusters. In this pattern, a central
 control plane (hub) manages a set of clusters (spokes) that run applications and services. The hub provides a unified
 view of the entire infrastructure, enabling centralized management, monitoring, and security.

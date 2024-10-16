@@ -1,7 +1,7 @@
 ---
 # This file is auto-generated. Any alterations made within are subject
 # to being overwritten.
-title: PCI DSS Compliance for AWS IAM
+title: How to Achieve PCI DSS Compliance for AWS IAM
 cloud: AWS
 layout: "pci-dss"
 slug: pci-dss-aws-iam

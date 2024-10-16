@@ -36,7 +36,7 @@ We've had an exciting quarter at Pulumi, shipping all kinds of improvements from
   - [Pulumi New support for SSH-style Git URLs](#pulumi-new-support-for-ssh-style-git-urls)
   - [New Community Supported Pulumi Language - __Scala__](#new-community-supported-pulumi-language---scala)
 - [Providers and Packages](#providers-and-packages)
-  - [AWS Classic 6.0](#aws-classic-60)
+  - [AWS 6.0](#aws-classic-60)
   - [Azure Native 2.0](#azure-native-20)
   - [Kubernetes 4.0](#kubernetes-40)
   - [OIDC Support for Azure](#oidc-support-for-azure)
@@ -191,7 +191,7 @@ The team at [Virtus Lab](https://virtuslab.com/) released support for Scala in P
 
 >  __Besom Scala SDK for Pulumi__ lets you leverage the full power of Pulumi Infrastructure as Code Platform using the Scala programming language. Scala support is currently in __Public Beta__.
 
-The Scala language support builds on Pulumi's existing Java and JVM support, but with an SDK custom designed to target idiomatic Scala API design patterns.  
+The Scala language support builds on Pulumi's existing Java and JVM support, but with an SDK custom designed to target idiomatic Scala API design patterns.
 
 ```scala
   // For each file in the directory, create an S3 object stored in `siteBucket`
@@ -215,9 +215,9 @@ The Scala language support builds on Pulumi's existing Java and JVM support, but
 
 ## Providers and Packages
 
-### AWS Classic 6.0
+### AWS 6.0
 
-The 6.0 release of the [Pulumi AWS Classic](/registry/packages/aws/) provider introduces essential enhancements and updates to one of the most extensively used providers in the Pulumi ecosystem. These improvements encompass TF Plugin Framework support, the inclusion of new resources and functions, significant SDK size optimizations for faster downloads and improved developer experiences, resolutions to top-upvoted issues, and removal of deprecated resources. To dig deeper into these changes, check out the [migration guide](/registry/packages/aws/how-to-guides/6-0-migration/) and [blog post](/blog/announcing-6-0-of-the-pulumi-aws-classic-provider/).
+The 6.0 release of the [Pulumi AWS](/registry/packages/aws/) provider introduces essential enhancements and updates to one of the most extensively used providers in the Pulumi ecosystem. These improvements encompass TF Plugin Framework support, the inclusion of new resources and functions, significant SDK size optimizations for faster downloads and improved developer experiences, resolutions to top-upvoted issues, and removal of deprecated resources. To dig deeper into these changes, check out the [migration guide](/registry/packages/aws/how-to-guides/6-0-migration/) and [blog post](/blog/announcing-6-0-of-the-pulumi-aws-classic-provider/).
 
 ![](aws_api.png)
 

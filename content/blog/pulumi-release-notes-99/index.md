@@ -72,7 +72,7 @@ We launched a new template gallery in the [New Project Wizard](/docs/pulumi-clou
 
 ### Deployments GA
 
-[Pulumi Deployments](/docs/pulumi-cloud/deployments) was made [generally available](/blog/deployments-ga) with new improvements such as support for [GitHub Enterprise](/docs/using-pulumi/continuous-delivery/github-app/#github-enterprise-server-support). Since launch, Pulumi Deployments has made infrastructure management at scale seamless for our customers, offering out of the box features such as [Review Stacks](/docs/pulumi-cloud/deployments/review-stacks) and multiple deployment triggers.
+[Pulumi Deployments](/docs/pulumi-cloud/deployments) was made [generally available](/blog/deployments-ga) with new improvements such as support for [GitHub Enterprise](/docs/iac/packages-and-automation/continuous-delivery/github-app/#github-enterprise-server-support). Since launch, Pulumi Deployments has made infrastructure management at scale seamless for our customers, offering out of the box features such as [Review Stacks](/docs/pulumi-cloud/deployments/review-stacks) and multiple deployment triggers.
 
 ### Customer Managed Agents
 
@@ -102,7 +102,7 @@ The Pulumi Cloud stack update page now contains the historical resources in the 
 
 ### Import Improvements
 
-We have made several improvements to the [`pulumi import`](/docs/using-pulumi/adopting-pulumi/import/#pulumi-import-command) command to make it easier to [bulk import](/docs/using-pulumi/adopting-pulumi/import/#bulk-import-operations) resources into complex programs and [components](/docs/concepts/resources/components/). You can now:
+We have made several improvements to the [`pulumi import`](/docs/iac/adopting-pulumi/import/#pulumi-import-command) command to make it easier to [bulk import](/docs/iac/adopting-pulumi/import/#bulk-import-operations) resources into complex programs and [components](/docs/concepts/resources/components/). You can now:
 
 - Import one resource and then use that resource as the parent for another imported resource. Previously, parents could only refer to resources that already existed; i.e., you would have had to do two imports
 - Specify that a resource is a component to be used as the parent of other imported resources via a new `component` property in the import file
@@ -116,7 +116,7 @@ Additionally, the import system no longer renames resources to try and make uniq
 
 ### AWSX now uses AWS 6.0
 
-We have launched [AWSx](https://www.pulumi.com/registry/packages/awsx/) 2.0, bringing all the benefits [AWS Classic 6.0](/blog/announcing-6-0-of-the-pulumi-aws-classic-provider/) to Pulumi Crosswalk for AWS (AWSx). The new versions offer several fixes and improvements, including support for the latest Terraform Plugin Framework, 56 new resources and 23 new functions for various AWS services.
+We have launched [AWSx](https://www.pulumi.com/registry/packages/awsx/) 2.0, bringing all the benefits [AWS 6.0](/blog/announcing-6-0-of-the-pulumi-aws-classic-provider/) to Pulumi Crosswalk for AWS (AWSx). The new versions offer several fixes and improvements, including support for the latest Terraform Plugin Framework, 56 new resources and 23 new functions for various AWS services.
 
 ![AWS 6.0 vs 5.0 provider coverage](/blog/announcing-6-0-of-the-pulumi-aws-classic-provider/aws_api.png)
 

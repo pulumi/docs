@@ -99,9 +99,9 @@ resource_group = resources.ResourceGroup("resource_group")
 account = storage.StorageAccount(
     "sa",
     resource_group_name=resource_group.name,
-    sku=storage.SkuArgs(
-        name=storage.SkuName.STANDARD_LRS,
-    ),
+    sku={
+        "name": storage.SkuName.STANDARD_LRS,
+    },
     kind=storage.Kind.STORAGE_V2,
 )
 

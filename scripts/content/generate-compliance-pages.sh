@@ -11,9 +11,18 @@ for row in $(echo "${pages}" | jq -r '.frameworks[] | @base64'); do
         decodeService() {
             echo ${svc} | base64 --decode | jq -r ${1}
         }
+        # Check if the cloud from the framework matches the cloud from the service
+        if [ "$(_jq '.cloud')" = "$(decodeService '.cloud')" ]; then
         slug=$(echo "$(_jq '.framework')-$(_jq '.cloud')-$(decodeService '.name')" | awk '{print tolower($0)}' | sed 's/ /-/g')
         layout=$(_jq '.framework' | awk '{print tolower($0)}' | sed 's/ /-/g')
-        title="$(_jq '.framework') Compliance for $(_jq '.cloud') $(decodeService '.name')"
+        title="How to Achieve $(_jq '.framework') Compliance for $(_jq '.cloud' ) $(decodeService '.name' | sed 's/Cloud //')"
+        if [ ${#title} -gt 60 ]; then
+            title="Achieve $(_jq '.framework') Compliance for $(_jq '.cloud' ) $(decodeService '.name' | sed 's/Cloud //')"
+        fi
+        metadesc="Pulumi helps achieve $(_jq '.framework') compliance for $(_jq '.cloud') $(decodeService '.name' | sed 's/Cloud //') by enforcing security, cost, and compliance requirements. Speak with an expert to get started."
+        if [ ${#metadesc} -gt 160 ]; then
+            metadesc="Pulumi helps achieve $(_jq '.framework') compliance for $(_jq '.cloud') $(decodeService '.name' | sed 's/Cloud //') by enforcing security, cost, and compliance requirements."
+        fi
     # Create a new markdown file for each entry
     cat > "content/compliance/${slug}.md" <<EOF
 ---
@@ -29,12 +38,13 @@ full: $(decodeService '.full')
 description: "$(_jq '.description')"
 whatis: "$(decodeService '.whatis')"
 page_type: service
-meta_desc: Pulumi helps achieve $(_jq '.framework') compliance for $(_jq '.cloud') $(decodeService '.name') by enforcing security, cost, and compliance requirements. Speak with an expert to get started.
+meta_desc: $metadesc
 ---
 
 EOF
+fi
     done
-    cat > "content/compliance/$(echo "$(_jq '.cloud')-$(_jq '.framework')" | awk '{print tolower($0)}').md" <<EOF
+    cat > "content/compliance/$(echo "$(_jq '.cloud')-$(_jq '.framework')" | sed 's/ /-/g' | awk '{print tolower($0)}').md" <<EOF
 ---
 # This file is auto-generated. Any alterations made within are subject
 # to being overwritten.
