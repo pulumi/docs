@@ -1,6 +1,6 @@
 ---
-title: "Stack Outputs and References"
-title_tag: "Stack Outputs and References"
+title: "Reference AWS Resources Across Stacks"
+title_tag: "Reference AWS Resources Across Stacks"
 layout: single
 
 # A succinct description of the tutorial. It appears on the Tutorials home and collection pages.
@@ -48,6 +48,9 @@ estimated_time: 15
 
 aliases:
   - /docs/using-pulumi/stack-outputs-and-references/
+  - /tutorials/building-with-pulumi/stack-outputs/
+  - /tutorials/building-with-pulumi/stack-references/
+  - /tutorials/stack-outputs-and-references/
 ---
 
 ## Understanding stack outputs
@@ -157,7 +160,7 @@ name: s3-writer
 
 The next resource you will add is a Lambda function with function code that will write a simple `.txt` file to your S3 bucket. You will also add an IAM role that will [grant your Lambda function permission](https://docs.aws.amazon.com/lambda/latest/dg/lambda-intro-execution-role.html) to access AWS services and resources.
 
-To start, let's create a new folder in your project named `s3_writer`. Inside of this folder, you'll create a file named `lambda_function.py` and populate it with code that will write a simple `.txt` file to your bucket.
+Create a new folder in your project named `s3_writer`. Inside of this folder, you'll create a file named `lambda_function.py` and populate it with code that will write a simple `.txt` file to your bucket.
 
 ```python
 import json
@@ -240,7 +243,68 @@ name: s3-writer
 
 ### Export resource values
 
-Now that you have your project resources defined, you can [export the values](/docs/concepts/stack/#outputs) of various resource properties from your program. When defining these exports, you'll need to provide two arguments:
+Now that you have your project resources defined, you can [export the values](/docs/concepts/stack/#outputs) of various resource properties from your program. The `export` syntax is as follows:
+
+{{< chooser language "javascript,typescript,python,go,csharp,yaml" / >}}
+
+{{% choosable language javascript %}}
+
+```javascript
+exports.<output-name> = <output-value>;
+```
+
+{{% /choosable %}}
+
+{{% choosable language typescript %}}
+
+```typescript
+export const <output-name> = <output-value>;
+```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+```python
+pulumi.export("<output-name>", <output-value>)
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```go
+ctx.Export("<output-name>", <output-value>)
+```
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+```csharp
+return await Pulumi.Deployment.RunAsync(() =>
+{
+
+    return new Dictionary<string, object?>
+    {
+        ["<output-name>"] = <output-value>
+    };
+
+});
+```
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+```yaml
+outputs:
+  <output-name>: ${<output-value>}
+```
+
+{{% /choosable %}}
+
+When defining these exports, you'll need to provide two arguments:
 
 | Argument | Description |
 |--------------|-------------|
@@ -705,5 +769,6 @@ You exported Lambda properties into stack outputs, and referenced those outputs 
 
 To learn more about creating and managing resources in Pulumi, take a look at the following resources:
 
+- Learn more about creating resources in the [Creating Resources on AWS tutorial](/tutorials/creating-resources-aws/).
 - Learn more about [stack outputs and references](/docs/concepts/stack/#stackreferences) in the Pulumi documentation.
 - Learn more about [Pulumi inputs and outputs](/docs/concepts/inputs-outputs/) in the Pulumi documentation.
