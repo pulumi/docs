@@ -24,14 +24,14 @@ As our customers scaled, the previous Stacks page faced some limitations that im
 
 - **Performance Issues**: The page became sluggish with large numbers of stacks, making it difficult to scroll smoothly when you had thousands of stacks.
 - **Limited Grouping and Sorting Options**: Users had limited customization options for organizing their stacks, with minimal control over grouping and sorting.
-- **Tag-Based Grouping Limitations**: Grouping by tags wasn’t as reliable as we wanted—it often failed to load completely.
+- **Tag-Based Grouping Limitations**: Grouping by tags wasn’t as reliable as we wanted—it sometimes failed to load completely.
 
 ## What’s New?
 
 The new Stacks page features a modernized UI that provides more information at a glance while tackling these challenges head-on, offering a streamlined and powerful experience:
 
 - **Flexible Grouping**: Group your stacks by repository, project, and tags simultaneously—up to three levels deep. Or opt for no grouping at all! The choice is yours. Expand and collapse groups as needed for a more organized and focused browsing experience.
-- **Enhanced Sorting**: Sort your stacks by last update or name (ascending/descending) to quickly find what you need.
+- **Enhanced Sorting**: Sort your stacks by last update or group name (ascending/descending) to quickly find what you need.
 - **Personalized Experience**: The page remembers your last selected groups and sorting preferences, so you can pick up right where you left off.
 - **Effortless Scalability**: Manage thousands of stacks with ease. The new page is optimized for performance, ensuring smooth scrolling and interaction regardless of scale.
 - **Dynamic Loading**: Enjoy instantaneous loading as you scroll, eliminating wait times and boosting efficiency.
