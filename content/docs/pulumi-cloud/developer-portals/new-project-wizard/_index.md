@@ -35,3 +35,15 @@ If you've configured your Pulumi organization to work with [Pulumi Deployments](
 ![New Project Wizard Deployment Method](/docs/pulumi-cloud/developer-portals/new-project-wizard/npw-deploy-method.png)
 
 For more detailed instructions on how to use the New Project Wizard with Pulumi Deployments, see [Get Started with Deployments](/docs/pulumi-cloud/deployments/get-started/#new-project-wizard).
+
+## GitHub OAuth Application
+
+In order to use the New Project Wizard with [Pulumi Deployments](/docs/pulumi-cloud/deployments), users will be prompted to authorize an additional GitHub OAuth application.
+
+![New Project Wizard OAuth Prompt](/docs/pulumi-cloud/developer-portals/new-project-wizard/npw-github-oauth-prompt.png)
+
+The GitHub authorization will require permissions to manage public and private repositories and workflows.
+
+![New Project Wizard GitHub Permissions Prompt](/docs/pulumi-cloud/developer-portals/new-project-wizard/npw-github-permissions.png)
+
+As part of the New Project Wizard, Pulumi must be able to read template sources, write template source content into repositories, and optionally create new repositories. While the GitHub authorization request will include additional permissions against repositories, Pulumi does not use these. This is due to GitHub lacking fine-grained repository permissions as part of the [OAuth application scopes](https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/scopes-for-oauth-apps#available-scopes).
