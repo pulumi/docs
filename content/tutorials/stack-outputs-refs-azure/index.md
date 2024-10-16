@@ -41,7 +41,7 @@ prereqs:
     - Familiarity with one of [Pulumi's supported languages](/docs/iac/languages-sdks/)
 
 # The estimated time, in minutes, for new users to complete the topic.
-estimated_time: 10
+estimated_time: 15
 
 # # An optional list of collections this tutorial should be belong to. Collections are defined in data/tutorials/collections.yaml.
 # collections:
