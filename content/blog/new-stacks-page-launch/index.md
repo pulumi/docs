@@ -1,0 +1,48 @@
+---
+title: "Introducing the Newly Redesigned Pulumi Stacks Page"
+date: 2024-10-18T00:00:00-07:00
+draft: false
+allow_long_title: true
+meta_desc: "The Key-Value Table Editor introduces a new visual interface for managing provider configuration using Pulumi ESC."
+meta_image: "meta.png"
+authors:
+- german-lena
+- kimberley-mackenzie
+- arun-loganathan
+tags:
+  - features
+  - releases
+---
+
+We're thrilled to unveil the redesigned [Pulumi IaC](/product/infrastructure-as-code/) Stacks page within Pulumi Cloud console, addressing one of the [most upvoted](https://github.com/pulumi/pulumi-cloud-requests/issues/56) issues in our cloud repositories! This revamped experience delivers a significant boost in performance and usability, empowering even the most complex organizations to manage their infrastructure with ease.
+
+<!--more-->
+
+## Why a New Stacks Page?
+
+As our customers scaled, the previous Stacks page faced some limitations that impacted its effectiveness. Here were some of the primary challenges:
+
+- **Performance Issues**: The page became sluggish with large numbers of stacks, making it difficult to scroll smoothly when you had thousands of stacks.
+- **Limited Grouping and Sorting Options**: Users had limited customization options for organizing their stacks, with minimal control over grouping and sorting.
+- **Tag-Based Grouping Limitations**: Grouping by tags wasn’t as reliable as we wanted—it often failed to load completely.
+
+## What’s New?
+
+The new Stacks page features a modernized UI that provides more information at a glance while tackling these challenges head-on, offering a streamlined and powerful experience:
+
+- **Flexible Grouping**: Group your stacks by repository, project, and tags simultaneously—up to three levels deep. Or opt for no grouping at all! The choice is yours. Expand and collapse groups as needed for a more organized and focused browsing experience.
+- **Enhanced Sorting**: Sort your stacks by last update or name (ascending/descending) to quickly find what you need.
+- **Personalized Experience**: The page remembers your last selected groups and sorting preferences, so you can pick up right where you left off.
+- **Effortless Scalability**: Manage thousands of stacks with ease. The new page is optimized for performance, ensuring smooth scrolling and interaction regardless of scale.
+- **Dynamic Loading**: Enjoy instantaneous loading as you scroll, eliminating wait times and boosting efficiency.
+- **Time-Saving Shortcuts**: Use quick options to get the default grouping and sorting with one click.
+
+**Placeholder for video**
+
+### Classic View: Still Available
+
+For users who prefer the familiar grouping by repository and project, and sorting by last updated, we've got you covered! Simply click the "Classic View" shortcut in the top right-corner to switch to the classic grouping and sorting option instantaneously. 
+
+## Your Feedback Matters
+
+We're excited for you to experience the power and flexibility of the new Pulumi Stacks page! Share your feedback and suggestions through our [Pulumi Cloud requests](https://github.com/pulumi/pulumi-cloud-requests/issues) GitHub repository—we're always listening and striving to improve.
