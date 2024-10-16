@@ -3,7 +3,7 @@ title: "Introducing the Newly Redesigned Pulumi Stacks Page"
 date: 2024-10-18T00:00:00-07:00
 draft: false
 allow_long_title: true
-meta_desc: "The Key-Value Table Editor introduces a new visual interface for managing provider configuration using Pulumi ESC."
+meta_desc: "The new stacks page is optimized for performance and flexibility with rich grouping and sorting options."
 meta_image: "meta.png"
 authors:
 - german-lena
