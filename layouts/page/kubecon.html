@@ -40,7 +40,13 @@
                                     <span class="align-middle">{{ $item.title }}</span>
                                 </a>
                             </h4>
-                            <p class="leading-relaxed md:px-24 lg:px-0">{{ $item.description | markdownify }}</p>
+                            <ul class="leading-relaxed md:px-24 lg:px-0">
+                                {{ range $point := $item.description }}
+                                    <li class="ml-5">
+                                        <p>{{ $point }}</p>
+                                    </li>
+                                {{ end }}
+                            </ul>
                             {{ $borderBottom := "border-b" }}
                             {{ if eq $i (sub (len $powers) 2) }}
                                 {{ $borderBottom = "border-b md:border-none" }}

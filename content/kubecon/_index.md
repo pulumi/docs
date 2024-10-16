@@ -17,25 +17,25 @@ kubernetes_overview:
 superpowers:
     - title: Powerful Native Kubernetes Provider
       icon_type: provisioning
-      description: |
+      description:
         - Pulumi IaC offers a native Kubernetes provider more powerful and flexible than any Terraform alternative
         - Full support for CustomResourceDefinitions, ConfigGroups, and ConfigFiles, enabling complex K8s setups
 
     - title: Faster Updates and Deployment
       icon_type: delivery
-      description: |
+      description:
         - Aims for same-day support of new Kubernetes releases, keeping you on the cutting edge
         - Server-Side Apply (SSA) by default, allowing for more efficient and conflict-free updates
 
     - title: Enhanced Security and Ease of Use
       icon_type: policy
-      description: |
+      description:
         - Pulumi ESC auto-generates kubeconfig files and enables easy authentication with cloud providers using just-in-time, short-lived credentials
         - Seamlessly integrate kubeconfig from cloud-provisioned clusters, simplifying multi-cloud setups
 
     - title: Comprehensive Insights and Management
       icon_type: cloud
-      description: |
+      description:
         - Pulumi Insights offers full support for searching, filtering, and importing resources across Kubernetes clusters
         - Brings Kubernetes support to the same level as major cloud providers, enabling unified management and visibility
 
