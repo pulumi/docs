@@ -160,7 +160,7 @@ name: s3-writer
 
 The next resource you will add is a Lambda function with function code that will write a simple `.txt` file to your S3 bucket. You will also add an IAM role that will [grant your Lambda function permission](https://docs.aws.amazon.com/lambda/latest/dg/lambda-intro-execution-role.html) to access AWS services and resources.
 
-To start, let's create a new folder in your project named `s3_writer`. Inside of this folder, you'll create a file named `lambda_function.py` and populate it with code that will write a simple `.txt` file to your bucket.
+Create a new folder in your project named `s3_writer`. Inside of this folder, you'll create a file named `lambda_function.py` and populate it with code that will write a simple `.txt` file to your bucket.
 
 ```python
 import json
