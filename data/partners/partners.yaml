@@ -85,3 +85,7 @@
 - name: Checkly
   link: https://www.checklyhq.com/
   logo: /logos/tech/checkly.svg
+
+- name: Civo
+  link: https://www.civo.com/
+  logo: /logos/pkg/civo2.svg

@@ -9,6 +9,12 @@ export class pricingCta {
     @Prop()
     buttonClass = "";
 
+    @Prop()
+    signedInText: string;
+
+    @Prop()
+    signedOutText: string;
+
     @State()
     loading = true;
 
@@ -38,12 +44,12 @@ export class pricingCta {
 
         if (this.isLoggedIn) {
             return(
-                <a class={this.buttonClass} href="https://app.pulumi.com/?create-organization=1" target="_blank">Create an Organization</a>
+                <a class={this.buttonClass} href="https://app.pulumi.com/?create-organization=1" target="_blank">{this.signedInText}</a>
             );
         }
 
         return (
-            <a class={this.buttonClass} href="https://app.pulumi.com/signup/" target="_blank">Sign Up</a>
+            <a class={this.buttonClass} href="https://app.pulumi.com/signup/" target="_blank">{this.signedOutText}</a>
         );
     }
 

@@ -51,12 +51,11 @@ estimated_time: 10
 aliases:
   - /docs/using-pulumi/define-and-provision-resources/
   - /tutorials/define-and-provision-resources/
-  - /tutorials/pulumi-fundamentals/configure-and-provision/
 ---
 
 ## Create a virtual machine
 
-The first step is to create a virtual machine resource that will be used to host the web server. The specific details of how to create your virtual machine differ by cloud provider. For the purposes of this tutorial, you will be creating your resources on AWS in the `us-east-1` region.
+The first step is to create a virtual machine resource that will be used to host the web server. The specific details of how to create your virtual machine differ by cloud provider. For the purposes of this tutorial, we will be creating our resources in AWS in the `us-east-1` region.
 
 ### Amazon Elastic Compute Cloud (EC2)
 
@@ -108,7 +107,7 @@ Amazon Elastic Compute Cloud (EC2) provides managed virtual server hosting that 
 
 The Pulumi Registry provides the documentation for all of the Pulumi providers and their associated resources. Open the [`aws.ec2.Instance` documentation page](https://www.pulumi.com/registry/packages/aws/api-docs/ec2/instance/) to view a description of this resource, example usage, the resource definition, and supported properties.
 
-You will now define your EC2 instance resource below.
+We will now define our EC2 instance resource below.
 
 {{< chooser language "typescript,python,yaml" / >}}
 
@@ -155,25 +154,25 @@ The logical name is how the resource is known inside Pulumi. This is the value p
 
 The physical name is the name used for the resource in the cloud provider that a Pulumi program is deploying to. It is a combination of the logical name plus a random suffix which helps to prevent resource naming collisions.
 
-In the above example, the logical name for your `aws.ec2.Instance` resource is **"webserver-www"**, and the physical name might typically look something like **"webserver-www-d7c2fa0"**.
+In the above example, the logical name for our `aws.ec2.Instance` resource is **"webserver-www"**, and the physical name might typically look something like **"webserver-www-d7c2fa0"**.
 
 In addition to names, resources have properties and options.
 
 **Properties** are used to specify what type of resource to create. Properties are often resource-specific, and they can be required or optional depending on the specifications of the provider.
 
-The properties inside your `aws.ec2.Instance` resource are:
+The properties inside our `aws.ec2.Instance` resource are:
 
 | Property | Description |
 |--------------|-------------|
 | **instance_type** | tells the AWS provider to create an EC2 instance of type/size `t2.micro` |
 | **ami** | tells the provider to create the instance using the `ami-09538990a0c4fe9be` machine image |
-| **user_data** | tells the provider to initialize the instance with the script you have defined |
+| **user_data** | tells the provider to initialize the instance with the script we have defined |
 
-**Options** let you control certain aspects of a resource (such as showing explicit dependencies or importing existing infrastructure). You do not have any options defined for this resource, but you can learn more about options in the [Pulumi documentation](/docs/concepts/options).
+**Options** let you control certain aspects of a resource (such as showing explicit dependencies or importing existing infrastructure). We do not have any options defined for this resource, but you can learn more about options in the [Pulumi documentation](/docs/concepts/options).
 
 ### Deploy your EC2 instance
 
-Now let's run the `pulumi up` command to preview and deploy the resource you just defined in your project.
+Now let's run the `pulumi up` command to preview and deploy the resource we just defined in our project.
 
 ```bash
 Previewing update (webserver-dev):
@@ -201,7 +200,7 @@ Resources:
 Duration: 17s
 ```
 
-The public IP address of your instance has been provided for you as an output, and you can use this to access your web server. However, if you try to visit this address, your request will eventually time out. This is because you have not yet configured web traffic access for your instance. You will do this by creating your security group resource.
+The public IP address of your instance has been provided for you as an output, and you can use this to access your web server. However, if you try to visit this address, your request will eventually time out. This is because we have not yet configured web traffic access for our instance. We will do this by creating our security group resource.
 
 ## Create a security group
 
@@ -242,9 +241,9 @@ security_group = # TO-DO
 
 {{% /choosable %}}
 
-You may have noticed that the placeholder code for the security group resource has been moved above the code for the EC2 instance resource. This was done intentionally to accommodate for variable declaration and usage order in your code.
+You may have noticed that the placeholder code for the security group resource has been moved above the code for the EC2 instance resource. This was done intentionally to accommodate for variable declaration and usage order in our code.
 
-If you place the security group resource definition after the EC2 instance and try to deploy your program, it will fail. This is because the security group variable must be declared before you can tell your EC2 instance resource to use it.
+If we place the security group resource definition after the EC2 instance and try to deploy our program, it will fail. This is because the security group variable must be declared before we can tell our EC2 instance resource to use it.
 
 Use the following steps as a guide for adding the Security Group resource:
 

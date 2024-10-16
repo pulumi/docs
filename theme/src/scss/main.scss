@@ -393,25 +393,22 @@ section.newsletter-input pulumi-hubspot-form input.hs-input {
     @apply rounded;
 }
 
+#segment-consent-manager:empty {
+    @apply hidden;
+}
 #segment-consent-manager {
 
-    > div:first-child {
-        @apply text-black fixed bottom-0 right-0 left-0 p-2 m-4 border-2 border-violet-600 rounded-lg shadow-lg;
-        z-index: 99999;
+    @apply text-black fixed bottom-0 right-0 left-0 m-4 border-2 border-violet-600 rounded-lg shadow-lg;
+    z-index: 99999;
 
-        @screen lg {
-            @apply w-1/3 left-auto m-4 overflow-hidden p-2;
-        }
+    @screen lg {
+        @apply w-1/3 left-auto m-4 overflow-hidden;
     }
 
     div {
        @apply bg-white;
     }
-
-    div:empty {
-        @apply hidden;
-    }
-
+    
     p {
         @apply text-black text-left text-sm pr-2;
 
