@@ -212,7 +212,7 @@ main {
     @apply text-blue-700;
 }
 
-.section-blog {
+.section-blog, .section-tags, .section-authors {
     .tags {
         .tag {
             @apply lowercase border border-blue-200 rounded py-1 px-2 mr-1;
