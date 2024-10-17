@@ -36,6 +36,7 @@ The new Stacks page features a modernized UI that provides more information at a
 - **Effortless Scalability**: Manage thousands of stacks with ease. The new page is optimized for performance, ensuring smooth scrolling and interaction regardless of scale.
 - **Dynamic Loading**: Enjoy instantaneous loading as you scroll, eliminating wait times and boosting efficiency.
 - **Time-Saving Shortcuts**: Use quick options to get the default grouping and sorting with one click.
+- **Shareable Views**: The page now includes query parameters in the URL, allowing you to save and share your exact view with team members effortlessly.
 
 **Placeholder for video**
 
