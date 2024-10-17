@@ -117,7 +117,7 @@ There are a couple of ways to do [syntax highlighing](https://gohugo.io/content-
 
 <pre>
 ```typescript
-let bucket = new aws.s3.Bucket("stuff");
+let bucket = new aws.s3.BucketV2("stuff");
 ...
 ```
 </pre>

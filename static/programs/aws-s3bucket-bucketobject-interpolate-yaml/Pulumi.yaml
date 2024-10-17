@@ -4,7 +4,7 @@ description: An example that creates an S3 bucket and bucket object
 
 resources:
   bucket:
-    type: aws:s3/bucket:Bucket
+    type: aws:s3/bucketv2:BucketV2
     name: bucket
 
   bucketObject:

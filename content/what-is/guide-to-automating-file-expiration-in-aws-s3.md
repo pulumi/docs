@@ -26,7 +26,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 // Create an S3 bucket
-const bucket = new aws.s3.Bucket("my-automated-bucket", {
+const bucket = new aws.s3.BucketV2("my-automated-bucket", {
     // Bucket settings can be added here
 });
 

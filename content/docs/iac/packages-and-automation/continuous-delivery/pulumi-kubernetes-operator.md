@@ -397,20 +397,43 @@ metadata:
   name: staticwebsite
 program:
   resources:
-    bucket:
-      type: aws:s3:Bucket
+    my-bucket:
+      type: aws:s3:BucketV2
+    my-bucket-ownership-controls:
+      type: aws:s3:BucketOwnershipControls
       properties:
-        website:
-          indexDocument: index.html
+        bucket: ${my-bucket.id}
+        rule:
+          objectOwnership: ObjectWriter
+    my-bucket-acl:
+      type: aws:s3:BucketAclV2
+      properties:
+        bucket: ${my-bucket.bucket}
+        acl: public-read
+      options:
+        dependsOn:
+          - ${my-bucket-ownership-controls}
+    my-bucket-public-access-block:
+      type: aws:s3:BucketPublicAccessBlock
+      properties:
+        bucket: ${my-bucket.id}
+        blockPublicAcls: false
+    my-bucket-website:
+      type: aws:s3:BucketWebsiteConfigurationV2
+      properties:
+        bucket: ${my-bucket.bucket}
+        indexDocument:
+          suffix: index.html
     index.html:
       type: aws:s3:BucketObject
       properties:
-        bucket: ${bucket.id}
-        content: <h1>Hello, world!</h1>
-        contentType: text/html
+        bucket: ${my-bucket}
+        source:
+          fn::stringAsset: <h1>Hello, world!</h1>
         acl: public-read
+        contentType: text/html
   outputs:
-    url: http://${bucket.websiteEndpoint}
+    bucketEndpoint: http://${my-bucket-website.websiteEndpoint}
 ```
 
 You can then create a Stack object to deploy the program, by referring to it in the field

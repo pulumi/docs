@@ -4,13 +4,34 @@ runtime: yaml
 description: An example that creates a website S3 bucket, a CloudFront Origin Access Identity, and a bucket policy.
 resources:
   content-bucket:
-    type: aws:s3:Bucket
+    type: aws:s3:BucketV2
     properties:
-      acl: private
-      website:
-        indexDocument: index.html
-        errorDocument: index.html
       forceDestroy: true
+
+  content-bucket-ownership:
+    type: aws:s3:BucketOwnershipControls
+    properties:
+      bucket: ${content-bucket.bucket}
+      rule:
+        objectOwnership: BucketOwnerPreferred
+
+  content-bucket-acl:
+    type: aws:s3:BucketAclV2
+    properties:
+      bucket: ${content-bucket.bucket}
+      acl: private
+    options:
+      dependsOn:
+        - ${content-bucket-ownership}
+
+  content-bucket-website:
+    type: aws:s3:BucketWebsiteConfigurationV2
+    properties:
+      bucket: ${content-bucket.bucket}
+      indexDocument:
+        suffix: index.html
+      errorDocument:
+        key: 404.html
 
   cloudfront-origin-access-identity:
     type: aws:cloudfront:OriginAccessIdentity
@@ -26,8 +47,8 @@ resources:
 variables:
   cloudfrontAccessPolicy:
     fn::invoke:
-      Function: aws:iam:getPolicyDocument
-      Arguments:
+      function: aws:iam:getPolicyDocument
+      arguments:
         statements:
           - principals:
               - type: AWS

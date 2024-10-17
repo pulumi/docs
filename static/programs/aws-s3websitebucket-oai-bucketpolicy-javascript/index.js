@@ -3,12 +3,31 @@ const pulumi = require("@pulumi/pulumi");
 const aws = require("@pulumi/aws");
 
 const contentBucket = new aws.s3.Bucket("content-bucket", {
-    acl: "private",
-    website: {
-        indexDocument: "index.html",
-        errorDocument: "index.html",
-    },
     forceDestroy: true,
+});
+
+const contentBucketOwnershipControls = new aws.s3.BucketOwnershipControls("content-bucket", {
+    bucket: contentBucket.id,
+    rule: {
+        objectOwnership: "BucketOwnerPreferred",
+    },
+});
+
+const contentBucketAclV2 = new aws.s3.BucketAclV2(
+    "content-bucket",
+    {
+        bucket: contentBucket.id,
+        acl: "private",
+    },
+    {
+        dependsOn: [contentBucketOwnershipControls],
+    },
+);
+
+const contentBucketWebsite = new aws.s3.BucketWebsiteConfigurationV2("content-bucket", {
+    bucket: contentBucket.id,
+    indexDocument: { suffix: "index.html" },
+    errorDocument: { key: "index.html" },
 });
 
 const originAccessIdentity = new aws.cloudfront.OriginAccessIdentity("cloudfront", {

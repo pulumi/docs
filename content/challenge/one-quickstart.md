@@ -86,7 +86,7 @@ Run `pulumi up`. You will first be presented with a preview of the changes to oc
  +   ├─ aws:lambda:Function              fn                      create
  +   └─ aws-apigateway:index:RestAPI     api                     create
  +      ├─ aws:iam:Role                  api4c238266             create
- +      ├─ aws:s3:Bucket                 api                     create
+ +      ├─ aws:s3:BucketV2               api                     create
  +      ├─ aws:iam:RolePolicyAttachment  api4c238266             create
  +      ├─ aws:apigateway:RestApi        api                     create
  +      ├─ aws:s3:BucketObject           api4c238266/index.html  create

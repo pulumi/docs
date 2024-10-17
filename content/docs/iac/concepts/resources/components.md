@@ -142,7 +142,7 @@ This example demonstrates both the naming convention and how to designate the co
 {{% choosable language javascript %}}
 
 ```javascript
-let bucket = new aws.s3.Bucket(`${name}-bucket`,
+let bucket = new aws.s3.BucketV2(`${name}-bucket`,
     {/*...*/}, { parent: this });
 ```
 
@@ -150,7 +150,7 @@ let bucket = new aws.s3.Bucket(`${name}-bucket`,
 {{% choosable language typescript %}}
 
 ```typescript
-let bucket = new aws.s3.Bucket(`${name}-bucket`,
+let bucket = new aws.s3.BucketV2(`${name}-bucket`,
     {/*...*/}, { parent: this });
 ```
 
@@ -158,7 +158,7 @@ let bucket = new aws.s3.Bucket(`${name}-bucket`,
 {{% choosable language python %}}
 
 ```python
-bucket = s3.Bucket(f"{name}-bucket",
+bucket = s3.BucketV2(f"{name}-bucket",
     opts=pulumi.ResourceOptions(parent=self))
 ```
 
@@ -166,24 +166,24 @@ bucket = s3.Bucket(f"{name}-bucket",
 {{% choosable language go %}}
 
 ```go
-bucket, err := s3.NewBucket(ctx, fmt.Sprintf("%s-bucket", name),
-    &s3.BucketArgs{ /*...*/ }, pulumi.Parent(myComponent))
+bucket, err := s3.NewBucketV2(ctx, fmt.Sprintf("%s-bucket", name),
+    &s3.BucketV2Args{ /*...*/ }, pulumi.Parent(myComponent))
 ```
 
 {{% /choosable %}}
 {{% choosable language csharp %}}
 
 ```csharp
-var bucket = new Aws.S3.Bucket($"{name}-bucket",
-    new Aws.S3.BucketArgs(/*...*/), new CustomResourceOptions { Parent = this });
+var bucket = new Aws.S3.BucketV2($"{name}-bucket",
+    new Aws.S3.BucketV2Args(/*...*/), new CustomResourceOptions { Parent = this });
 ```
 
 {{% /choosable %}}
 {{% choosable language java %}}
 
 ```java
-var bucket = new Bucket(String.format("%s-bucket", name),
-    BucketArgs.builder()
+var bucket = new BucketV2(String.format("%s-bucket", name),
+    BucketV2Args.builder()
     ...
     .build(),
     CustomResourceOptions.builder()

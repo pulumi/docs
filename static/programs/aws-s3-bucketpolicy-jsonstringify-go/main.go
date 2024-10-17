@@ -17,7 +17,7 @@ func main() {
 		accountID := callerIdentity.AccountId
 
 		// Create an AWS resource (S3 Bucket)
-		bucket, err := s3.NewBucket(ctx, "my-bucket", nil)
+		bucket, err := s3.NewBucketV2(ctx, "my-bucket", nil)
 		if err != nil {
 			return err
 		}

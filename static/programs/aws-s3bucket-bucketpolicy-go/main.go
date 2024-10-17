@@ -10,7 +10,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		// Create an S3 bucket
-		s3Bucket, err := s3.NewBucket(ctx, "myBucket", nil)
+		s3Bucket, err := s3.NewBucketV2(ctx, "myBucket", nil)
 		if err != nil {
 			return err
 		}
