@@ -1,5 +1,5 @@
 ---
-date: "2024-10-17"
+date: "2024-10-18"
 title: "Pulumi Kubernetes Operator 2.0"
 authors: ["eron-wright"]
 tags: ["Kubernetes", "Continuous-Delivery", "operators"]
@@ -180,7 +180,7 @@ spec:
 
 Since each stack has its own long-running pod, you may inspect the console output for a given stack by accessing
 the pod logs. The pod's name is based on the stack name; for example, given a stack named `my-stack`, look for
-a pod named `my-stack-workspace-0`. We recommend the [stern](/opt/homebrew/bin/stern) tool to access pod logs.
+a pod named `my-stack-workspace-0`. We recommend the [stern](https://github.com/stern/stern) tool to access pod logs.
 See ["Pod and container logs"](https://kubernetes.io/docs/concepts/cluster-administration/logging/#basic-logging-in-kubernetes) for more information.
 
 If you need to run an interactive Pulumi command for your stack, e.g. `pulumi import`, exec into the workspace pod. Navigate to the
@@ -289,7 +289,7 @@ This stack is configured to deploy immediately and to resync every five minutes.
 
 ### Observe the Workspace
 
-To deploy the stack, the system automatically creates a `Workspace` object named `random-yaml` to provision an execution environment.
+The system automatically creates a `Workspace` object named `random-yaml` to provision an execution environment.
 Let's watch as the workspace's status progresses towards readiness. For this demonstration, we'll use the `--watch` flag
 to observe the status updates:
 
@@ -305,7 +305,7 @@ random-yaml   pulumi/pulumi:3.134.1-nonroot   True    random-yaml-workspace.defa
 
 ### Observe the Updates
 
-Once the workspace is ready, the system proceeeds to run a periodic update. Each update is represented by
+Once the workspace is ready, the system proceeds to run a periodic update. Each update is represented by
 an `Update` object. Let's watch the progression across three updates:
 
 ```sh
