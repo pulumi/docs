@@ -47,32 +47,32 @@ For more information, please visit the project page: https://www.pulumi.com/docs
 
 ## SEE ALSO
 
-* [pulumi about](/docs/cli/commands/pulumi_about/)	 - Print information about the Pulumi environment.
-* [pulumi cancel](/docs/cli/commands/pulumi_cancel/)	 - Cancel a stack's currently running update, if any
-* [pulumi config](/docs/cli/commands/pulumi_config/)	 - Manage configuration
-* [pulumi console](/docs/cli/commands/pulumi_console/)	 - Opens the current stack in the Pulumi Console
-* [pulumi convert](/docs/cli/commands/pulumi_convert/)	 - Convert Pulumi programs from a supported source program into other supported languages
-* [pulumi destroy](/docs/cli/commands/pulumi_destroy/)	 - Destroy all existing resources in the stack
-* [pulumi env](/docs/cli/commands/pulumi_env/)	 - Manage environments
-* [pulumi gen-completion](/docs/cli/commands/pulumi_gen-completion/)	 - Generate completion scripts for the Pulumi CLI
-* [pulumi import](/docs/cli/commands/pulumi_import/)	 - Import resources into an existing stack
-* [pulumi install](/docs/cli/commands/pulumi_install/)	 - Install packages and plugins for the current program or policy pack.
-* [pulumi login](/docs/cli/commands/pulumi_login/)	 - Log in to the Pulumi Cloud
-* [pulumi logout](/docs/cli/commands/pulumi_logout/)	 - Log out of the Pulumi Cloud
-* [pulumi logs](/docs/cli/commands/pulumi_logs/)	 - Show aggregated resource logs for a stack
-* [pulumi new](/docs/cli/commands/pulumi_new/)	 - Create a new Pulumi project
-* [pulumi org](/docs/cli/commands/pulumi_org/)	 - Manage Organization configuration
-* [pulumi package](/docs/cli/commands/pulumi_package/)	 - Work with Pulumi packages
-* [pulumi plugin](/docs/cli/commands/pulumi_plugin/)	 - Manage language and resource provider plugins
-* [pulumi policy](/docs/cli/commands/pulumi_policy/)	 - Manage resource policies
-* [pulumi preview](/docs/cli/commands/pulumi_preview/)	 - Show a preview of updates to a stack's resources
-* [pulumi refresh](/docs/cli/commands/pulumi_refresh/)	 - Refresh the resources in a stack
-* [pulumi schema](/docs/cli/commands/pulumi_schema/)	 - Analyze package schemas
-* [pulumi stack](/docs/cli/commands/pulumi_stack/)	 - Manage stacks and view stack state
-* [pulumi state](/docs/cli/commands/pulumi_state/)	 - Edit the current stack's state
-* [pulumi up](/docs/cli/commands/pulumi_up/)	 - Create or update the resources in a stack
-* [pulumi version](/docs/cli/commands/pulumi_version/)	 - Print Pulumi's version number
-* [pulumi watch](/docs/cli/commands/pulumi_watch/)	 - Continuously update the resources in a stack
-* [pulumi whoami](/docs/cli/commands/pulumi_whoami/)	 - Display the current logged-in user
+* [pulumi about](/docs/iac/cli/commands/pulumi_about/)	 - Print information about the Pulumi environment.
+* [pulumi cancel](/docs/iac/cli/commands/pulumi_cancel/)	 - Cancel a stack's currently running update, if any
+* [pulumi config](/docs/iac/cli/commands/pulumi_config/)	 - Manage configuration
+* [pulumi console](/docs/iac/cli/commands/pulumi_console/)	 - Opens the current stack in the Pulumi Console
+* [pulumi convert](/docs/iac/cli/commands/pulumi_convert/)	 - Convert Pulumi programs from a supported source program into other supported languages
+* [pulumi destroy](/docs/iac/cli/commands/pulumi_destroy/)	 - Destroy all existing resources in the stack
+* [pulumi env](/docs/iac/cli/commands/pulumi_env/)	 - Manage environments
+* [pulumi gen-completion](/docs/iac/cli/commands/pulumi_gen-completion/)	 - Generate completion scripts for the Pulumi CLI
+* [pulumi import](/docs/iac/cli/commands/pulumi_import/)	 - Import resources into an existing stack
+* [pulumi install](/docs/iac/cli/commands/pulumi_install/)	 - Install packages and plugins for the current program or policy pack.
+* [pulumi login](/docs/iac/cli/commands/pulumi_login/)	 - Log in to the Pulumi Cloud
+* [pulumi logout](/docs/iac/cli/commands/pulumi_logout/)	 - Log out of the Pulumi Cloud
+* [pulumi logs](/docs/iac/cli/commands/pulumi_logs/)	 - Show aggregated resource logs for a stack
+* [pulumi new](/docs/iac/cli/commands/pulumi_new/)	 - Create a new Pulumi project
+* [pulumi org](/docs/iac/cli/commands/pulumi_org/)	 - Manage Organization configuration
+* [pulumi package](/docs/iac/cli/commands/pulumi_package/)	 - Work with Pulumi packages
+* [pulumi plugin](/docs/iac/cli/commands/pulumi_plugin/)	 - Manage language and resource provider plugins
+* [pulumi policy](/docs/iac/cli/commands/pulumi_policy/)	 - Manage resource policies
+* [pulumi preview](/docs/iac/cli/commands/pulumi_preview/)	 - Show a preview of updates to a stack's resources
+* [pulumi refresh](/docs/iac/cli/commands/pulumi_refresh/)	 - Refresh the resources in a stack
+* [pulumi schema](/docs/iac/cli/commands/pulumi_schema/)	 - Analyze package schemas
+* [pulumi stack](/docs/iac/cli/commands/pulumi_stack/)	 - Manage stacks and view stack state
+* [pulumi state](/docs/iac/cli/commands/pulumi_state/)	 - Edit the current stack's state
+* [pulumi up](/docs/iac/cli/commands/pulumi_up/)	 - Create or update the resources in a stack
+* [pulumi version](/docs/iac/cli/commands/pulumi_version/)	 - Print Pulumi's version number
+* [pulumi watch](/docs/iac/cli/commands/pulumi_watch/)	 - Continuously update the resources in a stack
+* [pulumi whoami](/docs/iac/cli/commands/pulumi_whoami/)	 - Display the current logged-in user
 
-###### Auto generated by spf13/cobra on 8-Oct-2024
+###### Auto generated by spf13/cobra on 17-Oct-2024
