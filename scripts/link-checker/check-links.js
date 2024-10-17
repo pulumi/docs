@@ -291,6 +291,7 @@ function getDefaultExcludedKeywords() {
         "https://openai.com/",
         "https://github.com/marketplace",
         "https://bard.google.com/",
+        "https://cloud.getdbt.com/api",
     ];
 }
 
