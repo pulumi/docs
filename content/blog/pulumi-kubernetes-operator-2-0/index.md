@@ -80,40 +80,6 @@ The workspace pod has a RPC endpoint that is used by the operator to run stack o
 RPC endpoint using Kubernetes RBAC, and for that reason you must bind the `ClusterRole` named `system:auth-delegator` to the
 stack's service account.
 
-<!--more-->
-
-Here's an example of a service account and associated role binding for use by a given stack:
-
-```yaml
-apiVersion: v1
-kind: ServiceAccount
-metadata:
-  name: my-program
-  namespace: default
----
-apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRoleBinding
-metadata:
-  name: my-program:system:auth-delegator
-roleRef:
-  apiGroup: rbac.authorization.k8s.io
-  kind: ClusterRole
-  name: system:auth-delegator
-subjects:
-- kind: ServiceAccount
-  name: my-program
-  namespace: default
----
-apiVersion: pulumi.com/v1
-kind: Stack
-metadata:
-  name: my-program
-  namespace: default
-spec:
-  serviceAccountName: my-program
-  ...
-```
-
 ### Scalability
 
 Each stack is run in its own "workspace" pod, and so the system scales horizontally to support many stacks.
@@ -166,6 +132,7 @@ kind: Stack
 metadata:
   name: my-stack
 spec:
+  ...
   workspaceTemplate:
     spec:
       image: example/pulumi-with-dependencies:v3.334
@@ -218,7 +185,194 @@ See ["Pod and container logs"](https://kubernetes.io/docs/concepts/cluster-admin
 If you need to run an interactive Pulumi command for your stack, e.g. `pulumi import`, exec into the workspace pod. Navigate to the
 `/share/workspace` directory and you should find your program there.
 
-### Migration
+## Walkthrough
+
+Here's a quick demonstration of the new system. Let's deploy the [random-yaml](https://github.com/pulumi/examples/tree/master/random-yaml) program from the [pulumi/examples](https://github.com/pulumi/examples) repository.
+
+We'll be using Flux for this demonstration; to follow along, install Flux (see ["Installation"](https://fluxcd.io/flux/installation/#dev-install)).
+
+### Setup the GitRepository Source
+
+For this demonstration, we'll use Flux to clone and cache the [pulumi/examples](https://github.com/pulumi/examples) repository, since it is a large
+repository and the Flux cache provides a big performance improvement. The system works well without Flux too.
+
+```yaml
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: GitRepository
+metadata:
+  name: pulumi-examples
+  namespace: default
+spec:
+  interval: 24h
+  ref:
+    branch: master
+  url: https://github.com/pulumi/examples
+```
+
+### Install a Pulumi Access Token
+
+Create a `Secret` containing a Pulumi access token to be used by the stack to authenticate to Pulumi Cloud.
+Follow [these instructions](https://www.pulumi.com/docs/pulumi-cloud/access-management/access-tokens/) to create a
+personal, organization, or team access token.
+
+Store the access token into a Kubernetes Secret. Here's an easy way to create a Secret named `pulumi-api-secret`.
+Replace `TOKEN` with the token that you created.
+
+```sh
+$ kubectl create secret generic pulumi-api-secret -n default --from-literal=accessToken=TOKEN
+```
+
+### Create a Service Account
+
+The stack requires a Kubernetes service account with a binding to the `system:auth-delegator` cluster role.
+
+If you don't have admin permissions in your Kubernetes cluster, ask your administrator to create the service account for you.
+The Pulumi Kubernetes Operator installer also pre-creates a usable ServiceAccount named `pulumi` in the `default` namespace.
+
+```yaml
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: random-yaml
+  namespace: default
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: random-yaml:system:auth-delegator
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: system:auth-delegator
+subjects:
+- kind: ServiceAccount
+  name: random-yaml
+  namespace: default
+```
+
+### Create the Stack
+
+Let's apply a `Stack` object to deploy the program. Note that the specification makes reference to
+the `GitRepository` (`pulumi-examples`), the `Secret` (`pulumi-api-secret`), and the `ServiceAccount` (`random-yaml`) created earlier.
+
+```yaml
+apiVersion: pulumi.com/v1
+kind: Stack
+metadata:
+  name: random-yaml
+  namespace: default
+spec:
+  serviceAccountName: random-yaml
+  fluxSource:
+    sourceRef:
+      apiVersion: source.toolkit.fluxcd.io/v1
+      kind: GitRepository
+      name: pulumi-examples
+    dir: random-yaml/
+  stack: dev
+  refresh: true
+  continueResyncOnCommitMatch: true
+  resyncFrequencySeconds: 300
+  destroyOnFinalize: true
+  envRefs:
+    PULUMI_ACCESS_TOKEN:
+      type: Secret
+      secret:
+        name: pulumi-api-secret
+        key: accessToken
+```
+
+This stack is configured to deploy immediately and to resync every five minutes. The term "resync" means to execute
+`pulumi up`, which is useful for stacks that produce resources or outputs that require a periodic update. Without resync,
+`pulumi up` runs whenever a new commit is pushed to the repository.
+
+### Observe the Workspace
+
+To deploy the stack, the system automatically creates a `Workspace` object named `random-yaml` to provision an execution environment.
+Let's watch as the workspace's status progresses towards readiness. For this demonstration, we'll use the `--watch` flag
+to observe the status updates:
+
+```sh
+$ kubectl get workspace --watch
+NAME          IMAGE                           READY   ADDRESS
+random-yaml   pulumi/pulumi:3.134.1-nonroot
+random-yaml   pulumi/pulumi:3.134.1-nonroot   False
+random-yaml   pulumi/pulumi:3.134.1-nonroot   False   random-yaml-workspace.default.svc.cluster.local:50051
+random-yaml   pulumi/pulumi:3.134.1-nonroot   False   random-yaml-workspace.default.svc.cluster.local:50051
+random-yaml   pulumi/pulumi:3.134.1-nonroot   True    random-yaml-workspace.default.svc.cluster.local:50051
+```
+
+### Observe the Updates
+
+Once the workspace is ready, the system proceeeds to run a periodic update. Each update is represented by
+an `Update` object. Let's watch the progression across three updates:
+
+```sh
+$ kubectl get update --watch
+NAME                   WORKSPACE     PROGRESSING   FAILED   COMPLETE   URL
+random-yaml-5kmn7dcm   random-yaml
+random-yaml-5kmn7dcm   random-yaml   True          False    False
+random-yaml-5kmn7dcm   random-yaml   False         False    True       https://app.pulumi.com/eron-pulumi-corp/random/dev/updates/1
+random-yaml-rftp8gj8   random-yaml
+random-yaml-rftp8gj8   random-yaml   True          False    False
+random-yaml-rftp8gj8   random-yaml   False         False    True       https://app.pulumi.com/eron-pulumi-corp/random/dev/updates/2
+random-yaml-sjpw5hm8   random-yaml
+random-yaml-sjpw5hm8   random-yaml   True          False    False
+random-yaml-sjpw5hm8   random-yaml   False         False    True       https://app.pulumi.com/eron-pulumi-corp/random/dev/updates/3
+```
+
+### Observe the Stack
+
+The `Stack` object maintains a status block showing the result of the latest attempt and whether an update
+is currently running. Taking a look, we see a successful outcome.
+
+```sh
+$ kubectl get stack random-yaml -oyaml
+```
+
+```yaml
+apiVersion: pulumi.com/v1
+kind: Stack
+...
+status:
+  conditions:
+  - lastTransitionTime: "2024-10-17T20:41:49Z"
+    message: the stack has been processed and is up to date
+    reason: ProcessingCompleted
+    status: "True"
+    type: Ready
+  lastUpdate:
+    failures: 0
+    generation: 2
+    lastAttemptedCommit: sha256:44d554df090dcdeb9bae908cd38155c8c93db05f64dc72982027e8e1294af0d3
+    lastResyncTime: "2024-10-17T20:41:49Z"
+    lastSuccessfulCommit: sha256:44d554df090dcdeb9bae908cd38155c8c93db05f64dc72982027e8e1294af0d3
+    name: random-yaml-sjpw5hm8
+    permalink: https://app.pulumi.com/eron-pulumi-corp/random/dev/updates/3
+    state: succeeded
+    type: up
+  observedGeneration: 2
+  outputs:
+    password: '[secret]'
+```
+
+### Delete the Stack
+
+To complete the demonstration, let's delete the `Stack` object. Because `spec.destroyOnFinalize` is enabled,
+deleting the object causes the Pulumi stack to be destroyed. That is, the stack resources are deleted.
+
+```sh
+$ kubectl delete stack random-yaml
+stack.pulumi.com "random-yaml" deleted
+
+$ kubectl get workspace
+No resources found in default namespace.
+
+$ kubectl get update
+No resources found in default namespace.
+```
+
+## Migration
 
 The `Stack` custom resource continues to be the primary way to use the Pulumi Kubernetes Operator, and your existing
 stack definitions should continue to work after you follow a simple migration procedure:
