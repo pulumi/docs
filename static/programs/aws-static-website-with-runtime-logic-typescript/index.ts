@@ -18,7 +18,7 @@ const bucket = new aws.s3.BucketV2("bucket");
 
 const bucketWebsite = new aws.s3.BucketWebsiteConfigurationV2("bucket", {
     bucket: bucket.id,
-    indexDocument: {suffix: "index.html"},
+    indexDocument: { suffix: "index.html" },
 });
 
 // Apply some ownership controls and public-access privileges.

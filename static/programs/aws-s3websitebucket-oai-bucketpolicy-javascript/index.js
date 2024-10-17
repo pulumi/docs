@@ -13,17 +13,21 @@ const contentBucketOwnershipControls = new aws.s3.BucketOwnershipControls("conte
     },
 });
 
-const contentBucketAclV2 = new aws.s3.BucketAclV2("content-bucket", {
-    bucket: contentBucket.id,
-    acl: "private",
-}, {
-    dependsOn: [contentBucketOwnershipControls],
-});
+const contentBucketAclV2 = new aws.s3.BucketAclV2(
+    "content-bucket",
+    {
+        bucket: contentBucket.id,
+        acl: "private",
+    },
+    {
+        dependsOn: [contentBucketOwnershipControls],
+    },
+);
 
 const contentBucketWebsite = new aws.s3.BucketWebsiteConfigurationV2("content-bucket", {
     bucket: contentBucket.id,
-    indexDocument: {suffix: "index.html"},
-    errorDocument: {key: "index.html"},
+    indexDocument: { suffix: "index.html" },
+    errorDocument: { key: "index.html" },
 });
 
 const originAccessIdentity = new aws.cloudfront.OriginAccessIdentity("cloudfront", {
