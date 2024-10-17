@@ -8,18 +8,18 @@ meta_image: operator.png
 ---
 
 A few years ago we released the [Pulumi Kubernetes Operator](/blog/pulumi-kubernetes-operator-1-0/), a cloud-native way to manage and deploy cloud infrastructure using Pulumi from within your Kubernetes environment. We've heard your feedback about limitations related to scalability and isolation.
-Today, we're excited to make [2.0 beta 1](https://github.com/pulumi/pulumi-kubernetes-operator/releases/tag/v2.0-beta.1) of the Pulumi Kubernetes Operator available.
-We've put a new architecture in place to address these limitations and to provide new customization options. Let's dig in!
+Today, we're excited to announce version [2.0 beta 1](https://github.com/pulumi/pulumi-kubernetes-operator/releases/tag/v2.0-beta.1) of the Pulumi Kubernetes Operator.
+We've put a new, horizontally scalable architecture in place along with a variety of new security features and customization options. Let's dig in!
 
 ## What is the Pulumi Kubernetes Operator?
 
 The Pulumi Kubernetes Operator defines a Kubernetes Custom Resource called `pulumi.com/v1/Stack`, which represents a Pulumi [stack](/docs/concepts/stack/). The Pulumi stack can be authored in any supported Pulumi language (TypeScript, Python, Go, .NET, Java, YAML) and can deploy and manage cloud infrastructure in any supported cloud (AWS, Azure, GCP, Kubernetes and 60+ additional cloud and SaaS providers). The Pulumi Kubernetes Operator triggers cloud deployments based on changes to the `Stack` Custom Resource or the resources it uses.
 
-As a result, the Pulumi Kubernetes Operator enables users to specify the desired state of their cloud infrastructure using resources managed directly in their Kubernetes cluster, which trigger creation, update and deletion of the detailed cloud infrastructure they need.
+As a result, the Pulumi Kubernetes Operator enables users to specify the desired state of their cloud infrastructure by using resources managed directly in their Kubernetes cluster. Modifying those Kubernetes resources will trigger creation, updates, and deletion of the underlying cloud infrastructure that they manage.
 
 <!--more-->
 
-For example, the following Kubernetes resource can be created to deploy a Pulumi program which provisions cloud infrastructure to manage NGINX provided in the target Git repo and commit, and future updates to the commit or config settings will deploy updates to the infrastructure.
+For example, the Operator can use the `Stack` resource below to run a Pulumi program, as defined in a GitHub repository, to deploy NGINX. Subsequent commits to the repository, or changes to the stack's configuration, will cause the Operator to re-deploy the infrastructure.
 
 ```yaml
 apiVersion: pulumi.com/v1
@@ -32,13 +32,13 @@ spec:
   commit: 2b0889718d3e63feeb6079ccd5e4488d8601e353
 ```
 
-The Pulumi Kubernetes Operator can also be used along with Pulumi’s [Kubernetes provider](/registry/packages/kubernetes/), which allows Pulumi programs to deploy resources to Kubernetes, either in the same cluster as the operator, or in another cluster. This can be used to package up complex Kubernetes infrastructure into more abstracted units, to mix Kubernetes and cloud infrastructure into a single unit of deployment, to define how application workloads are deployed into a cluster, or for a wide variety of additional use cases. The Pulumi Kubernetes provider has full support for the Kubernetes API available in every Pulumi language, including support for [Helm](/blog/full-access-to-helm-features-through-new-helm-release-resource-for-kubernetes/).
+The Pulumi Kubernetes Operator can also be used along with Pulumi’s [Kubernetes Provider](/registry/packages/kubernetes/), which allows Pulumi programs to deploy resources to Kubernetes -- either in the same cluster as the Operator, or in another cluster. This can be used to package up complex Kubernetes infrastructure into more abstracted units, to mix Kubernetes and cloud infrastructure into a single unit of deployment, to define how application workloads are deployed into a cluster, or for a wide variety of other use cases. The Pulumi Kubernetes Provider has full support for the Kubernetes API available in every Pulumi language, including support for [Helm](/blog/full-access-to-helm-features-through-new-helm-release-resource-for-kubernetes/).
 
 ## What’s New in Pulumi Kubernetes Operator 2.0?
 
 The 2.0 release is based on a whole new architecture for running Pulumi programs in your Kubernetes cluster.
-The operator now allocates a dedicated pod for each `Stack` to serve as the execution environment for Pulumi stack operations.
-Previously, all stack operations took place within the operator's own pod. This new approach effectively isolates
+The Operator now allocates a dedicated pod for each `Stack` to serve as the execution environment for Pulumi stack operations.
+Previously, all stack operations took place within the Operator's own pod. This new approach effectively isolates
 each stack's compute and memory resources, improves the isolation of secrets, and opens up new customization options.
 
 These pods are referred to as *workspace pods*.  Under the hood, a new `Workspace` Custom Resource handles the lifecycle
@@ -53,9 +53,9 @@ to a `Secret` in another namespace.
 ### Installation
 
 With the 2.0 release, the supported installation modes are limited to a cluster-wide installation. You'll need to be
-a cluster admin to install the operator. The operator is able to handle stacks across all the namespaces of your cluster.
+a cluster admin to install the Operator. The Operator is able to handle stacks across all the namespaces of your cluster.
 
-We provide three ways to install the operator:
+We provide three ways to install the Operator:
 
 1. a Pulumi program (see: `deploy/pulumi-operator-yaml/`)
 2. a Helm chart (see: `deploy/helm/pulumi-operator/`)
@@ -76,27 +76,28 @@ a service account for your stack rather than using the `default` account. If you
 Kubernetes provider to manage resources within the cluster, the stack's service account will need permissions, e.g.
 a `RoleBinding` to the `ClusterRole` named `cluster-admin`. See ["Service Accounts"](https://kubernetes.io/docs/concepts/security/service-accounts/) for more information.
 
-The workspace pod has a RPC endpoint that is used by the operator to run stack operations. The pod protects the
-RPC endpoint using Kubernetes RBAC, and for that reason you must bind the `ClusterRole` named `system:auth-delegator` to the
-stack's service account.
+The workspace pod has a RPC endpoint that is used by the Operator to run stack operations. The pod protects the
+RPC endpoint using [Kubernetes RBAC](https://kubernetes.io/docs/reference/access-authn-authz/rbac/), and for that reason
+you must bind the `ClusterRole` named `system:auth-delegator` to the stack's service account.
 
 ### Scalability
 
 Each stack is run in its own "workspace" pod, and so the system scales horizontally to support many stacks.
 The workspace pod is, by default, configured to use minimal resources when idle, and to 'burst' into the unused
 memory and compute resources of the node during a stack operation. You may customize the resource constraints to
-fit the needs of your stack. If your Kubernetes cluster has high utilization, we recommend increasing the resource requests
-and limits. See ["Pod Quality of Service Classes"](https://kubernetes.io/docs/concepts/workloads/pods/pod-qos/) for more information.
+fit the needs of your stack by using the `workspaceTemplate` field. If your Kubernetes cluster has high utilization,
+we recommend increasing the resource requests and limits.
+See ["Pod Quality of Service Classes"](https://kubernetes.io/docs/concepts/workloads/pods/pod-qos/) for more information.
 
-The pod is not discarded at the end of a stack operation, it remains in-place unless the stack is deleted.
-We're considering introducing the option to clean up the workspace pod after each operation, to enable you to make a trade-off
-decision between performance and efficiency.
+The pod is not discarded at the end of a stack operation, instead it remains in-place unless the stack is deleted.
+We're considering introducing the option to clean up the workspace pod after each operation to enable you to make a trade-off
+decision between performance and efficiency. Please [let us know](https://slack.pulumi.com) if this is something you'd like to see!
 
-### Robustness
+### Stability
 
 A Kubernetes cluster is a dynamic environment where a given pod may be terminated at any time, e.g. due to maintenance operations,
 unplanned node events, or resource pressure. This can cause problems for ongoing stack operations, and historically
-may cause a stack to become "locked" (thus necessitating the use of `pulumi cancel`).
+may cause a stack to become "locked", necessitating manual intervention with the use of `pulumi cancel`.
 
 The new system has been made more resilient by being responsive to pod termination requests. It responds by
 proactively sending CTRL-C to the ongoing stack operation, to gracefully wind down the operation.
@@ -374,6 +375,8 @@ No resources found in default namespace.
 
 ## Migration
 
+Ready to leverage these new features? Let's quickly cover how to migrate your existing setup to Pulumi Kubernetes Operator 2.0.
+
 The `Stack` custom resource continues to be the primary way to use the Pulumi Kubernetes Operator, and your existing
 stack definitions should continue to work after you follow a simple migration procedure:
 
@@ -383,7 +386,7 @@ stack definitions should continue to work after you follow a simple migration pr
 4. Double-check that your `Stack` objects do not make use of cross-namespace references.
 
 If you're using a private Git repository as your program source, use the Stack's `secretRefs` field to reference Git credentials.
-SSH-based access to the repository isn't fully supported; contact us to learn more.
+SSH-based access to the repository may require a custom image with your host's public key(s) baked in. Contact us to learn more.
 
 If you're using Flux integration, there's an additional step to be performed by your cluster administrator.
 Please create a `NetworkPolicy` to allow the workspace pods to access the Flux source controller. Here's the manifest
