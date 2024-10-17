@@ -101,6 +101,9 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#pulumi.FileArchive"><code class="docutils literal notranslate"><span class="pre">FileArchive</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="#pulumi.FileAsset"><code class="docutils literal notranslate"><span class="pre">FileAsset</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pulumi.InputPropertiesError"><code class="docutils literal notranslate"><span class="pre">InputPropertiesError</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pulumi.InputPropertyError"><code class="docutils literal notranslate"><span class="pre">InputPropertyError</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pulumi.InputPropertyErrorDetails"><code class="docutils literal notranslate"><span class="pre">InputPropertyErrorDetails</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="#pulumi.InvokeOptions"><code class="docutils literal notranslate"><span class="pre">InvokeOptions</span></code></a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#pulumi.InvokeOptions.merge"><code class="docutils literal notranslate"><span class="pre">InvokeOptions.merge()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#pulumi.InvokeOptions.parent"><code class="docutils literal notranslate"><span class="pre">InvokeOptions.parent</span></code></a></li>
@@ -1258,6 +1261,24 @@ a raw directory or a single archive file in one of the supported formats (.tar, 
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pulumi.</span></span><span class="sig-name descname"><span class="pre">FileAsset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">PathLike</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi.FileAsset" title="Permalink to this definition"></a></dt>
 <dd><p>A FileAsset is a kind of asset produced from a given path to a file on
 the local filesystem.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="pulumi.InputPropertiesError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pulumi.</span></span><span class="sig-name descname"><span class="pre">InputPropertiesError</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">errors</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pulumi.InputPropertyErrorDetails" title="pulumi.errors.InputPropertyErrorDetails"><span class="pre">InputPropertyErrorDetails</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi.InputPropertiesError" title="Permalink to this definition"></a></dt>
+<dd><p>Can be used to indicate that the client has made a request with bad input properties.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="pulumi.InputPropertyError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pulumi.</span></span><span class="sig-name descname"><span class="pre">InputPropertyError</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">property_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reason</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi.InputPropertyError" title="Permalink to this definition"></a></dt>
+<dd><p>Can be used to indicate that the client has made a request with a bad input property.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pulumi.InputPropertyErrorDetails">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pulumi.</span></span><span class="sig-name descname"><span class="pre">InputPropertyErrorDetails</span></span><a class="headerlink" href="#pulumi.InputPropertyErrorDetails" title="Permalink to this definition"></a></dt>
+<dd><p>Represents an error in a property value.</p>
 </dd></dl>
 
 <dl class="py class">
