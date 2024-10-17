@@ -1,6 +1,6 @@
 ---
 title: "Pulumi EKS Provider Version 3.0.0"
-date: 2024-10-04T17:32:03+02:00
+date: 2024-10-17T17:32:03+02:00
 draft: false
 meta_desc: "Release of the next version of the Pulumi Provider for AWS EKS"
 meta_image: meta.png
@@ -55,7 +55,7 @@ Pulumi EKS v3 introduces better support for the Kubernetes Cluster Autoscaler. A
 
 ### EKS Security Groups for Pods and Network Policies
 
-We've added support for EKS security groups for pods and EKS Network Policies, providing more granular control over pod-to-pod and pod-to-external network communication within your EKS clusters.
+We've added support for EKS security groups for pods ([example](https://github.com/pulumi/pulumi-eks/tree/master/examples/pod-security-groups)) and EKS Network Policies ([example](https://github.com/pulumi/pulumi-eks/tree/master/examples/network-policies)), providing more granular control over pod-to-pod and pod-to-external network communication within your EKS clusters.
 
 ## Migration Guide
 
@@ -66,7 +66,7 @@ To help you transition smoothly, we've prepared a migration guide with these key
 3. Update your code to handle new output types for certain properties.
 4. Review and update your use of default security groups, which can now be disabled.
 
-Please refer to our [EKS v3 Migration Documentation](https://github.com/pulumi/pulumi-eks/blob/release-3.x.x/docs/eks-v3-migration.md) for a detailed guide.
+Please refer to our [EKS v3 Migration Documentation](https://www.pulumi.com/registry/packages/eks/how-to-guides/v3-migration/) for a detailed guide.
 
 ## Conclusion
 
