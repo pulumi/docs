@@ -1,6 +1,6 @@
 ---
 # Name of the event, <= 60 characters
-title: AWS Immersion Day: Accelerating Platform Engineering with Pulumi
+title: "AWS Immersion Day: Accelerating Platform Engineering with Pulumi"
 meta_desc: Discover how Pulumi empowers platform engineers to build scalable, efficient cloud infrastructure while boosting developer productivity and operational agility.
 meta_image:
 
