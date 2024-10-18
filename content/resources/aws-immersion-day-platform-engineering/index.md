@@ -31,7 +31,7 @@ url_slug: aws-immersion-day-platform-engineering
 # Content for the left hand side section of the page.
 main:
     # Webinar title.
-    title: AWS Immersion Day: Accelerating Platform Engineering with Pulumi
+    title: "AWS Immersion Day: Accelerating Platform Engineering with Pulumi"
 
     event_type: workshop # workshop | event
 
