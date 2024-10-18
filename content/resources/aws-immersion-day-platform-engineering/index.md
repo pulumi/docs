@@ -32,7 +32,7 @@ url_slug: aws-immersion-day-platform-engineering
 main:
     # Webinar title.
     title: "AWS Immersion Day: Accelerating Platform Engineering with Pulumi"
-
+    allow_long_title: true
     event_type: workshop # workshop | event
 
     # URL for embedding a URL for ungated webinars.
