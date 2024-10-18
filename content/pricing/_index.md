@@ -82,7 +82,7 @@ tiers:
                   - Policies and compliance
                   - Automatic group & user sync (SCIM)
                   - Audit logs export
-                  - 24x7 Enterprise Support
+                  - 24x7 Enterprise Support available
                   - Private Slack and Professional Services
 
 customers:
