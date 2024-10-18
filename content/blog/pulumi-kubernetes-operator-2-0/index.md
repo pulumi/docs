@@ -11,13 +11,13 @@ A few years ago we released the [Pulumi Kubernetes Operator](/blog/pulumi-kubern
 Today, we're excited to announce version [2.0 beta 1](https://github.com/pulumi/pulumi-kubernetes-operator/releases/tag/v2.0.0-beta.1) of the Pulumi Kubernetes Operator.
 We've put a new, horizontally scalable architecture in place along with a variety of new security features and customization options. Let's dig in!
 
+<!--more-->
+
 ## What is the Pulumi Kubernetes Operator?
 
 The Pulumi Kubernetes Operator defines a Kubernetes Custom Resource called `pulumi.com/v1/Stack`, which represents a Pulumi [stack](/docs/concepts/stack/). The Pulumi stack can be authored in any supported Pulumi language (TypeScript, Python, Go, .NET, Java, YAML) and can deploy and manage cloud infrastructure in any supported cloud (AWS, Azure, GCP, Kubernetes and 60+ additional cloud and SaaS providers). The Pulumi Kubernetes Operator triggers cloud deployments based on changes to the `Stack` Custom Resource or the resources it uses.
 
 As a result, the Pulumi Kubernetes Operator enables users to specify the desired state of their cloud infrastructure by using resources managed directly in their Kubernetes cluster. Modifying those Kubernetes resources will trigger creation, updates, and deletion of the underlying cloud infrastructure that they manage.
-
-<!--more-->
 
 For example, the Operator can use the `Stack` resource below to run a Pulumi program, as defined in a GitHub repository, to deploy NGINX. Subsequent commits to the repository, or changes to the stack's configuration, will cause the Operator to re-deploy the infrastructure.
 
