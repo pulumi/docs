@@ -8,7 +8,7 @@ meta_image: operator.png
 ---
 
 A few years ago we released the [Pulumi Kubernetes Operator](/blog/pulumi-kubernetes-operator-1-0/), a cloud-native way to manage and deploy cloud infrastructure using Pulumi from within your Kubernetes environment. We've heard your feedback about limitations related to scalability and isolation.
-Today, we're excited to announce version [2.0 beta 1](https://github.com/pulumi/pulumi-kubernetes-operator/releases/tag/v2.0-beta.1) of the Pulumi Kubernetes Operator.
+Today, we're excited to announce version [2.0 beta 1](https://github.com/pulumi/pulumi-kubernetes-operator/releases/tag/v2.0.0-beta.1) of the Pulumi Kubernetes Operator.
 We've put a new, horizontally scalable architecture in place along with a variety of new security features and customization options. Let's dig in!
 
 ## What is the Pulumi Kubernetes Operator?
