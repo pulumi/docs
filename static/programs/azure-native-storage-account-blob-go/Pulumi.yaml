@@ -1,0 +1,7 @@
+name: azure-native-storage-account-blob-go
+description: An example that deploys a blob into a blob storage account on Azure.
+runtime: go
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: azure-go
