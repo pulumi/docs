@@ -473,8 +473,8 @@ class MyResourceProvider implements pulumi.dynamic.ResourceProvider {
 }
 
 export class MyResource extends pulumi.dynamic.Resource {
-    public readonly myStringOutput!: pulumi.Output<string>;
-    public readonly myNumberOutput!: pulumi.Output<number>;
+    declare readonly myStringOutput!: pulumi.Output<string>;
+    declare readonly myNumberOutput!: pulumi.Output<number>;
 
     constructor(name: string, props: MyResourceInputs, opts?: pulumi.CustomResourceOptions) {
         super(new MyResourceProvider(), name, { myStringOutput: undefined, myNumberOutput: undefined, ...props }, opts);
