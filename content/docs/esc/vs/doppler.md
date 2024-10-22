@@ -1,6 +1,6 @@
 ---
 title_tag: "Pulumi ESC vs Doppler"
-meta_desc: Learn about the major differences between Pulumi ESC and InfiDopplersical.
+meta_desc: Learn about the major differences between Pulumi ESC and Doppler.
 title: Pulumi ESC vs Doppler
 h1: Pulumi ESC vs Doppler
 meta_image: /images/docs/meta-images/docs-meta.png
@@ -80,12 +80,12 @@ Here's a detailed comparison of the two:
     </tr>
     <tr>
         <td>Editing and Authoring</td>
-        <td>Yes, supports both GUI and powerful Document Editor with autocomplete, docs hover, and error checking</td>
+        <td>Yes, supports both CLI and GUI editing, with a powerful Document Editor with autocomplete, docs hover, and error checking</td>
         <td>Limited, has GUI editor with multiple import formats</td>
     </tr>
     <tr>
         <td>CLI</td>
-        <td>Yes, available as <code>esc</code> CLI or <code>pulumi</code> CLI</td>
+        <td>Yes, available via <code>esc</code> CLI and <code>pulumi</code> CLI</td>
         <td>Yes</td>
     </tr>
     <tr>
@@ -95,7 +95,7 @@ Here's a detailed comparison of the two:
     </tr>
       <tr>
         <td>Declarative Provider</td>
-        <td>Yes, support via the Pulumi Service Provider, which allows management (create, update, delete) of collections of secrets and configuration as a resource through infrastructure as code.</td>
+        <td>Yes, support via the Pulumi Service Provider, which allows management (create, update, delete) of collections of secrets and configuration as a resource through infrastructure as code</td>
         <td>No</td>
     </tr>
     <tr>
@@ -158,7 +158,7 @@ Here's a detailed comparison of the two:
     </tr>
     <tr>
         <td>Secure Dynamic Cloud Provider Credentials</td>
-        <td>Yes, uses OIDC flows to generate dynamic credentials. Available for AWS, Azure, and Google Cloud.</td>
+        <td>Yes, uses OIDC flows to generate dynamic credentials. Available for AWS, Azure, and Google Cloud</td>
         <td>Limited, OIDC not used to generate dynamic credentials. TTL based leases are used to generate dynamic secrets</td>
     </tr>
     <tr>
@@ -172,7 +172,7 @@ Here's a detailed comparison of the two:
         <td>No, all values are available as environment variables</td>
     </tr>
         <td>Plaintext Read Only Mode</td>
-        <td>Yes, ESC offers a <code>read</code> mode that allows reading only plaintext values while not being able to decrypt secrets or  access dynamic credentials</td>
+        <td>Yes, ESC offers a <code>read</code> mode that allows reading only plaintext values while not being able to decrypt secrets or access dynamic credentials</td>
         <td>No</td>
     </tr>
 </table>
