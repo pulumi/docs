@@ -76,7 +76,7 @@ Platform engineering offers a strategic solution to these issues. This guide pro
 - [Step 5: Embracing Infrastructure as Code](/blog/the-guide-platform-engineering-idp-steps-best-practices#step-5-embracing-infrastructure-as-code)
 - [Step 6: Implementing Policy as Code](/blog/the-guide-platform-engineering-idp-steps-best-practices#step-6-implementing-policy-as-code)
 - [Step 7: Evolving Towards Self-Service](/blog/the-guide-platform-engineering-idp-steps-best-practices#step-7-evolving-towards-self-service)
-- [Frequently Asked Questions (Platform Engineering Concepts & Definitions)](/blog/the-guide-platform-engineering-idp-steps-best-practices#frequently-asked-questions-platform-engineering-concepts-definitions)
+- [Frequently Asked Questions (Platform Engineering Concepts & Definitions)](/blog/the-guide-platform-engineering-idp-steps-best-practices#frequently-asked-questions)
 
 ## Step 1: Securing Executive Buy-in
 
@@ -175,7 +175,7 @@ Check out [Pulumi's upcoming workshops](https://www.pulumi.com/resources/#upcomi
 
 ---
 
-## Frequently Asked Questions | Platform Engineering Concepts & Definitions
+## Frequently Asked Questions
 
 ### What is Platform Engineering?
 
