@@ -12,7 +12,6 @@
 
     fieldset {
         @apply block;
-        margin: 1rem 0 !important;
 
         &:not(.form-columns-1) > .field:first-child {
             @apply pr-2;
@@ -20,6 +19,7 @@
 
         label {
             @apply block mb-2 font-normal;
+            margin: 1rem 0 !important;
         }
 
         .hs-input {

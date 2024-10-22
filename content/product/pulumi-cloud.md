@@ -63,19 +63,19 @@ products:
           details:
             - title: Fully-managed, single source of truth
               description: |
-                Pulumi Cloud is a fully managed service for [infrastructure as code](/what-is-infrastructure-as-code/). Store your infrastructure’s state for any cloud in Pulumi's secure backend, which has built-in scaling, availability, and fault tolerance. You also get access to granular access controls, CICD integrations, SAML/SCIM, audit logging, and more. 
+                Pulumi Cloud is a fully managed service for [infrastructure as code](/what-is/what-is-infrastructure-as-code/). Store your infrastructure’s state for any cloud in Pulumi's secure backend, which has built-in scaling, availability, and fault tolerance. You also get access to granular access controls, CICD integrations, SAML/SCIM, audit logging, and more.
 
               more_info: |
                 Allow developers to safely deploy in parallel with concurrent state-locking.
 
-                Audit changes or rollback to previous versions with a [complete history](/docs/concepts/state/#checkpoints) of your state.
+                Audit changes or rollback to previous versions with a [complete history](/docs/iac/concepts/state-and-backends/#checkpoints) of your state.
 
             - title: Manage infrastructure secrets and configuration
               description: |
                 Use built-in [secrets management](/what-is/what-is-secrets-management/) for encrypted data such as credentials or tokens. Store and manage collections of config in [Pulumi ESC](/product/esc) into environment groupings.
 
               more_info: |
-                Your infrastructure [state is encrypted](/docs/concepts/state/#state-encryption) in transit and at rest.
+                Your infrastructure [state is encrypted](/docs/iac/concepts/state-and-backends/#state-encryption) in transit and at rest.
 
                 Sensitive configurations (e.g. database passwords, cloud tokens) are [stored as secrets](/docs/concepts/secrets/).
 
@@ -97,7 +97,7 @@ products:
 
                 Integrate your [source control system](/docs/pulumi-cloud/deployments/ci-cd-integration-assistant/) so teams can trace changes back to commits and pull requests.
 
-                Continuously deliver infrastructure through existing pipelines with [CI/CD integrations](/docs/using-pulumi/continuous-delivery/).
+                Continuously deliver infrastructure through existing pipelines with [CI/CD integrations](/docs/iac/packages-and-automation/continuous-delivery/).
 
                 Use event-based [webhooks](/docs/pulumi-cloud/webhooks/) to notify external services like Slack or continuous integration tools.
 
@@ -127,10 +127,10 @@ products:
                 Pulumi ESC leverages the same Pulumi Cloud identity, RBAC, Teams, SAML/SCIM, OIDC, and scoped access tokens used for Pulumi IaC to ensure secrets management complies with enterprise security policies.
 
                 Every time secrets or configuration values are accessed or changed with Pulumi ESC, the action is fully logged for auditing. Logs include who accessed what, the action they took, and even a full record of showing which originating environments accessed values are inherited from.
-            
+
             - title: Ditch .env files
               description: |
-                No more storing secrets in plaintext on dev computers. Developers can easily access secrets via CLI, API, Kubernetes operator, the Pulumi Cloud UI, and in-code with Typescript/Javascript, Python, and Go SDKs. 
+                No more storing secrets in plaintext on dev computers. Developers can easily access secrets via CLI, API, Kubernetes operator, the Pulumi Cloud UI, and in-code with Typescript/Javascript, Python, and Go SDKs.
 
               more_info: |
                 Pulumi ESC also provides just-in-time, short-lived credentials, making them easy to adopt as a security best practice.
@@ -197,7 +197,7 @@ products:
 
             - title:  Continuous and automatic compliance
               description: |
-                Policies can remediate violations to fix the problems found in addition to reporting them as violations. 
+                Policies can remediate violations to fix the problems found in addition to reporting them as violations.
 
               more_info: |
                 Here are a few examples of the remediation policy use cases:
@@ -245,7 +245,7 @@ products:
                 *“Create a new serverless application on AWS”*
 
                 *“Configure a Kubernetes cluster with best practices on Azure”*
-                
+
                 *“Deploy a Cloudflare worker that uses sticky load balancing to distribute traffic to my Google Cloud backend”*
 
             - title: Understand your team's cloud usage
@@ -260,7 +260,7 @@ products:
                 *“What AWS account does VPC vpc-04a11 live within?”*
 
                 *“What environments do we have related to Azure?”*
-                
+
                 *“Describe the architecture of my www-frontend project.”*
 
             - title: Discover cost savings opportunities
@@ -275,7 +275,7 @@ products:
                 *“What are my top 10 most expensive cloud resources?”*
 
                 *“How much did my cloud costs increase month over month – and what team was responsible for driving them upwards?”*
-                
+
             - title: Stay secure
               description: |
                 Pulumi Copilot leverages knowledge about security best practices by combining Pulumi’s supergraph and cloud skills.
@@ -332,9 +332,9 @@ open_source:
     title: The easiest way to use Pulumi open source
     image: /images/product/service-open-source-diagram.svg
     description: |
-        Pulumi Cloud is a managed service for Pulumi IaC's open source CLI and SDK. It tracks your [infrastructure’s state](/docs/concepts/state/) and coordinates updates with the CLI, which creates or updates resources to reach your infrastructure’s [desired state](/docs/concepts/how-pulumi-works/).
+        Pulumi Cloud is a managed service for Pulumi IaC's open source CLI and SDK. It tracks your [infrastructure’s state](/docs/iac/concepts/state-and-backends/) and coordinates updates with the CLI, which creates or updates resources to reach your infrastructure’s [desired state](/docs/concepts/how-pulumi-works/).
 
-        You can also use any cloud or on-premises storage to build and [run your own backend](/docs/concepts/state/#logging-into-a-self-managed-backend).
+        You can also use any cloud or on-premises storage to build and [run your own backend](/docs/iac/concepts/state-and-backends/#logging-into-a-self-managed-backend).
 
 security:
     title: Pulumi takes security seriously

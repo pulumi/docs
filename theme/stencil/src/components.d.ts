@@ -12,6 +12,9 @@ import { SourceKind } from "./components/convert/convert";
 import { Filter } from "./components/filter-select/filter-select-option";
 import { MultiSelectFormItem } from "./components/pulumi-multi-select-form/pulumi-multi-select-form";
 export namespace Components {
+    interface CopilotSidebar {
+        "copilotSrc": string;
+    }
     interface EventSessionRegistrationModal {
         "buttonClass": string;
         "buttonText": string;
@@ -30,6 +33,8 @@ export namespace Components {
     }
     interface PricingCta {
         "buttonClass": string;
+        "signedInText": string;
+        "signedOutText": string;
     }
     interface PulumiApiDocFilterableNav {
         "baseDirectory": string;
@@ -203,6 +208,12 @@ export namespace Components {
     }
 }
 declare global {
+    interface HTMLCopilotSidebarElement extends Components.CopilotSidebar, HTMLStencilElement {
+    }
+    var HTMLCopilotSidebarElement: {
+        prototype: HTMLCopilotSidebarElement;
+        new (): HTMLCopilotSidebarElement;
+    };
     interface HTMLEventSessionRegistrationModalElement extends Components.EventSessionRegistrationModal, HTMLStencilElement {
     }
     var HTMLEventSessionRegistrationModalElement: {
@@ -450,6 +461,7 @@ declare global {
         new (): HTMLPulumiWebinarFormSelectElement;
     };
     interface HTMLElementTagNameMap {
+        "copilot-sidebar": HTMLCopilotSidebarElement;
         "event-session-registration-modal": HTMLEventSessionRegistrationModalElement;
         "header-cta": HTMLHeaderCtaElement;
         "home-slots": HTMLHomeSlotsElement;
@@ -494,6 +506,9 @@ declare global {
     }
 }
 declare namespace LocalJSX {
+    interface CopilotSidebar {
+        "copilotSrc"?: string;
+    }
     interface EventSessionRegistrationModal {
         "buttonClass"?: string;
         "buttonText"?: string;
@@ -512,6 +527,8 @@ declare namespace LocalJSX {
     }
     interface PricingCta {
         "buttonClass"?: string;
+        "signedInText"?: string;
+        "signedOutText"?: string;
     }
     interface PulumiApiDocFilterableNav {
         "baseDirectory"?: string;
@@ -679,6 +696,7 @@ declare namespace LocalJSX {
         "sessions"?: string;
     }
     interface IntrinsicElements {
+        "copilot-sidebar": CopilotSidebar;
         "event-session-registration-modal": EventSessionRegistrationModal;
         "header-cta": HeaderCta;
         "home-slots": HomeSlots;
@@ -726,6 +744,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "copilot-sidebar": LocalJSX.CopilotSidebar & JSXBase.HTMLAttributes<HTMLCopilotSidebarElement>;
             "event-session-registration-modal": LocalJSX.EventSessionRegistrationModal & JSXBase.HTMLAttributes<HTMLEventSessionRegistrationModalElement>;
             "header-cta": LocalJSX.HeaderCta & JSXBase.HTMLAttributes<HTMLHeaderCtaElement>;
             "home-slots": LocalJSX.HomeSlots & JSXBase.HTMLAttributes<HTMLHomeSlotsElement>;

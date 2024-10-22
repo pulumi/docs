@@ -14,17 +14,31 @@ if (!testURL) {
 
 async function checkURLs() {
     const urls = await getURLsToCheck(baseURL);
-    const badURLs = []
+    const badURLs = [];
 
-    console.log(`Checking ${urls.length} URLs...`)
+    const batchSize = 50;
+    console.log(`Checking ${urls.length} URLs...`);
 
-    for await (const url of urls) {
-        const newURL = url.replace(baseURL, testURL);
-        const response = await fetch(newURL, { method: "HEAD" });
+    for (let i = 0; i < urls.length; i += batchSize) {
+        const batch = urls.slice(i, i + batchSize);
+        const requests = batch.map(async (url) => {
+            const newURL = url.replace(baseURL, testURL);
+            let response;
+            let attempts = 0;
+            const maxAttempts = 2;
 
-        if (response.status !== 200) {
-            badURLs.push(`${newURL} : ${response.status}`);
-        }
+            while (attempts <= maxAttempts) {
+                response = await fetch(newURL, { method: "HEAD" });
+                if (response.status === 200) break;
+                attempts++;
+            }
+
+            if (response.status !== 200) {
+                badURLs.push(`${newURL} : ${response.status}`);
+            }
+        });
+
+        await Promise.all(requests);
     }
 
     return badURLs;

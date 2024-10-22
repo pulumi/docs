@@ -2,10 +2,16 @@ import { Component, Prop, State, h } from "@stencil/core";
 import { MultiSelectFormItem } from "../pulumi-multi-select-form/pulumi-multi-select-form";
 import { getQueryVariable } from "../../util/util";
 
+interface ContactUsCta {
+    label: string;
+    url: string;
+}
+
 interface ContactUsItem {
     key: string;
     label?: string;
     hubspot_form_id: string;
+    cta?: ContactUsCta;
 }
 
 @Component({
@@ -39,6 +45,7 @@ export class ContactUsForm {
                 key: item.key,
                 label: item.label ? item.label : item.key.charAt(0).toUpperCase() + item.key.slice(1),
                 hubspotFormId: item.hubspot_form_id,
+                cta: item.cta
             };
         });
 

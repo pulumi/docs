@@ -29,7 +29,7 @@ Run `go get github.com/pulumi/esc-sdk/sdk` to install the SDK package.
 
 ## Examples
 
-These samples show how to create an `EscClient` with an access token and use it to perform varias ESC tasks.
+These samples show how to create an `EscClient` with an access token and use it to perform various ESC tasks.
 
 All of these example expects a `PULUMI_ACCESS_TOKEN` and `PULUMI_ORG` environment variable to be set.
 

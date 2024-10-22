@@ -173,7 +173,7 @@ module.exports = {
                         {
                             position: 0,
                             objectIDs: [
-                                page.getObjectID({ href: "/docs/clouds/aws/guides/" }),
+                                page.getObjectID({ href: "/docs/iac/clouds/aws/guides/" }),
                             ],
                         },
                     ],
@@ -198,7 +198,7 @@ module.exports = {
                         {
                             position: 0,
                             objectIDs: [
-                                page.getObjectID({ href: "/docs/clouds/aws/guides/" }),
+                                page.getObjectID({ href: "/docs/iac/clouds/aws/guides/" }),
                                 page.getObjectID({ href: "/registry/packages/awsx/" }),
                                 page.getObjectID({ href: "/registry/packages/aws-apigateway/" }),
                                 page.getObjectID({ href: "/registry/packages/eks/" }),

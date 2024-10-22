@@ -67,7 +67,7 @@ main:
     # case-sensitive
     tags:
         level: Intermediate # Beginner, Intermediate, Advanced
-        topics: ["Automation", "CI/CD", "DevOPs", "Pulumi ESC"]
+        topics: ["Automation", "CI/CD", "DevOps", "Pulumi ESC"]
         languages: []
         clouds: ["AWS"]
 

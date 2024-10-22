@@ -37,8 +37,6 @@ To do this, you will use Pulumi's new [`aws.s3.DirectoryBucket` resource type](/
 * `location`, which specifies the AZ ID to use
 * `forceDestroy`, an optional boolean which, when set to true, allows deleting buckets that still have data in them (by default, only empty buckets can be deleted, to prevent accidental data loss)
 
-> Pulumi's AWS Native package also supports Amazon S3 Express One Zone through the [`aws-native.s3express.DirectoryBucket` type](/registry/packages/aws-native/api-docs/s3express/directorybucket/). Its usage is very similar to the AWS package.
-
 Here is a simple program that declares a new Amazon S3 Express One Zone bucket:
 
 {{< chooser language "typescript,python" >}}

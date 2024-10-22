@@ -49,7 +49,9 @@ main:
 
     # Description of the webinar.
     description: |
-        Watch industry leaders discuss the past, present, and future of Infrastructure as Code (IaC) and overall infrastructure technologies.
+        Dive into the fascinating journey of infrastructure management, from the early days of manual server provisioning to today’s cutting-edge practices. This panel discussion explores the evolution of Infrastructure as Code (IaC), featuring insights from industry leaders like Adam Jacob, Brian Grant, Elad Ben-Israel, and Luke Hoban.
+
+        Together, they unravel key milestones, discuss ongoing challenges like complexity and standardization, and envision future innovations like AI-driven automation. This panel provides a comprehensive look at the past, present, and future of managing modern cloud environments.
 
     # The webinar presenters
     presenters:

@@ -45,7 +45,7 @@ In this milestone, we shipped Pulumi versions [3.9.0](https://github.com/pulumi/
 
 ### Methods for Pulumi Component Packages
 
-[Pulumi Components](/docs/concepts/resources#components) often have methods that provide additional functionality associated with an instance of a component. Previously, when [authoring a Pulumi Component Package](/docs/using-pulumi/pulumi-packages/), you couldn't make a component's methods available in all languages. Now, with updates to the [Pulumi Packages schema](/docs/using-pulumi/pulumi-packages/schema/) and `Provider` interface, you can! We'll have a dedicated blog post out soon with more details on how to use methods in your Pulumi Component Package.
+[Pulumi Components](/docs/concepts/resources#components) often have methods that provide additional functionality associated with an instance of a component. Previously, when [authoring a Pulumi Component Package](/docs/iac/packages-and-automation/pulumi-packages/debugging-provider-packages/), you couldn't make a component's methods available in all languages. Now, with updates to the [Pulumi Packages schema](/docs/iac/packages-and-automation/pulumi-packages/schema/) and `Provider` interface, you can! We'll have a dedicated blog post out soon with more details on how to use methods in your Pulumi Component Package.
 
 [Learn more in this GitHub issue](https://github.com/pulumi/pulumi/issues/7072)
 

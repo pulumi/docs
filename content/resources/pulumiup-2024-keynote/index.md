@@ -52,6 +52,11 @@ main:
         Watch PulumiUP 2024's keynote. Pulumi's co-founder and CEO shared insights into the company's current landscape and future direction, offering a glimpse into how the company is shaping the future of cloud engineering.
 
         This keynote also featured presentations and demos from key members of the Pulumi team, unveiling the latest product launches designed to elevate your infrastructure management experience.
+        
+        Learn more about the new product launches:
+        - [Pulumi - One Unified Platform For All Your Infrastructure Needs](/blog/pulumi-up-2024/)
+        - Visibility, intelligence, and controls over all infrastructure with [Pulumi Insights 2.0](/blog/pulumi-insights-2/)
+        - Centralized secrets management and orchestration that scales with [Pulumi ESC](/blog/pulumi-esc-ga/)
 
     # The webinar presenters
     presenters:
