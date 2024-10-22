@@ -32,17 +32,11 @@ Doppler is a secrets management tool that provides a centralized platform for ma
 
 ## Pulumi ESC vs. Doppler: Similarities {#similarities}
 
-Like Doppler, Pulumi ESC is a secrets manager for cloud applications and infrastructure. In both ESC and Doppler, secrets can be stored and accessed through a CLI, SDK, or Web editor interface. Granular access controls can be implemented across all secrets.
+Like Doppler, Pulumi ESC is a secrets manager for cloud applications and infrastructure. In both ESC and Doppler, secrets can be stored and accessed through a CLI, SDK, or Web editor interface. Secrets can also be pulled from other secrets and password managers. Granular access controls can be implemented across all secrets.
 
 ## Pulumi ESC vs. Doppler: Key Differences {#differences}
 
-There are a couple of fundamental differences between Doppler and Pulumi ESC
-
-<!-- First, ESC and Doppler differ in that Doppler can only add and manage secrets stored in Doppler. ESC adopts an open ecosystem approach, allowing you to pull secrets stored in most secrets and password managers during runtime and use them anywhere. This allows teams to use the best secrets management solution according their purposes and needs. Second, Infisical lacks the composability and hierarchical nature of ESC, which increases getting started speed and duplication of secrets. Third, ESC takes a software engineering approach to versioning with ability to add tags and import specific collections of secrets and configuration via those tags, similar to Docker. Fourth, ESC takes a more secure limited privilege path to provisioning dynamic short-term credentials as compared to Infisical. 
-
-Probably something around Dynamic Secrets
-
--->
+There are a couple of fundamental differences between Doppler and Pulumi ESC. Doppler has basic per secret inheritance as opposed to fully composable and hierarchical environments of ESC. Second, ESC environments can be managed (create, update, delete) through infrastructure as code. Third, ESC takes a more secure limited privilege path to provisioning dynamic short-term credentials as compared to Doppler.
 
 Here's a detailed comparison of the two:
 
@@ -80,7 +74,7 @@ Here's a detailed comparison of the two:
     </tr>
     <tr>
         <td>Editing and Authoring</td>
-        <td>Yes, supports both CLI and GUI editing, with a powerful Document Editor with autocomplete, docs hover, and error checking</td>
+        <td>Yes, supports both GUI and IDE editing, with a powerful Document Editor with autocomplete, docs hover, and error checking</td>
         <td>Limited, has GUI editor with multiple import formats</td>
     </tr>
     <tr>
