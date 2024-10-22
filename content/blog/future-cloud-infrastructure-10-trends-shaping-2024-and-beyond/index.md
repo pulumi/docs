@@ -141,7 +141,7 @@ As cloud environments become more complex, ensuring cost transparency and govern
 
 As a result, [IDC](https://www.netapp.com/media/93564-operationalize-fin-ops-for-continuous-cloud-and-cost-efficiency.pdf) predicts that complexities and IT budget pressures will drive **70% of Global 1000 companies to [increase FinOps maturity](https://www.pulumi.com/blog/finops-with-pulumi/)** with granular chargebacks, benchmarking, and multiple-cloud optimization.
 
-## 10. Enterprises Will allow the Use of AI Code Assistants
+## 10. Enterprises Will Allow the Use of AI Code Assistants
 
 Developers worldwide have explored or are currently using AI-powered coding assistants. However, many enterprises have shown resistance to allowing them to be part of their AI tools in software development. Still, software engineering leaders are beginning to recognize that these coding assistants can enhance team productivity, improve code quality, and maintain a competitive advantage.
 
