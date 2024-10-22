@@ -1,5 +1,5 @@
 ---
-title: "Introducing the Newly Redesigned Pulumi Stacks Page"
+title: "Unveiling the New Stacks Page"
 date: 2024-10-18T00:00:00-07:00
 draft: false
 allow_long_title: true
