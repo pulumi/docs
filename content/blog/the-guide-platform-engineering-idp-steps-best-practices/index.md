@@ -23,7 +23,7 @@ meta_desc: Learn platform engineering best practices in this 7-step guide, cover
 # The meta_image appears in social-media previews and on the blog home page. A
 # placeholder image representing the recommended format, dimensions and aspect
 # ratio has been provided for you.
-meta_image: meta.png
+meta_image: platform-engineering-guide.png
 
 # At least one author is required. The values in this list correspond with the
 # `id` properties of the team member files at /data/team/team. Create a file for
@@ -69,14 +69,14 @@ Platform engineering offers a strategic solution to these issues. This guide pro
 
 ## On this article:
 
-- Step 1: Securing Executive Buy-in
-- Step 2: Staffing the Platform Engineering Team
-- Step 3: Defining the Platform Mandate
-- Step 4: Implementing the Pre-Production Pipeline
-- Step 5: Embracing Infrastructure as Code
-- Step 6: Implementing Policy as Code
-- Step 7: Evolving Towards Self-Service
-- Frequently asked questions (Platform Engineering Concepts & Definitions) 
+- [Step 1: Securing Executive Buy-in](/blog/the-guide-platform-engineering-idp-steps-best-practices#step-1-securing-executive-buy-in)
+- [Step 2: Staffing the Platform Engineering Team](/blog/the-guide-platform-engineering-idp-steps-best-practices#step-2-staffing-the-platform-engineering-team)
+- [Step 3: Defining the Platform Mandate](/blog/the-guide-platform-engineering-idp-steps-best-practices#step-3-defining-the-platform-mandate)
+- [Step 4: Implementing the Pre-Production Pipeline](/blog/the-guide-platform-engineering-idp-steps-best-practices#step-4-implementing-the-pre-production-pipeline)
+- [Step 5: Embracing Infrastructure as Code](/blog/the-guide-platform-engineering-idp-steps-best-practices#step-5-embracing-infrastructure-as-code)
+- [Step 6: Implementing Policy as Code](/blog/the-guide-platform-engineering-idp-steps-best-practices#step-6-implementing-policy-as-code)
+- [Step 7: Evolving Towards Self-Service](/blog/the-guide-platform-engineering-idp-steps-best-practices#step-7-evolving-towards-self-service)
+- [Frequently Asked Questions (Platform Engineering Concepts & Definitions)](/blog/the-guide-platform-engineering-idp-steps-best-practices#frequency-asked-questions-platform-engineering-concepts-definitions)
 
 ## Step 1: Securing Executive Buy-in
 
