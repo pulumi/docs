@@ -30,6 +30,7 @@ meta_image: platform-engineering-guide.png
 # yourself if you don't already have one.
 authors:
     - sara-huddleston
+    - josh-kodroff
 
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
