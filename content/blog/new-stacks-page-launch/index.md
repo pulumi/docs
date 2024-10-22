@@ -30,13 +30,13 @@ As our customers scaled, the previous Stacks page faced some limitations that im
 
 The new Stacks page provides more information at a glance, offering a streamlined and powerful experience:
 
+- **Effortless Scalability**: Manage thousands of stacks with ease. The new page is optimized for performance, ensuring smooth scrolling and interaction regardless of scale.
 - **Flexible Grouping**: Group your stacks by repository, project, and tags simultaneously—up to three levels of grouping. Or opt for no grouping at all! The choice is yours. Expand and collapse groups as needed for a more organized and focused browsing experience.
 - **Enhanced Sorting**: Sort your stacks by last update or group name (ascending/descending) to quickly find what you need.
-- **Personalized Experience**: The page remembers your last selected groups and sorting preferences, so you can pick up right where you left off.
-- **Effortless Scalability**: Manage thousands of stacks with ease. The new page is optimized for performance, ensuring smooth scrolling and interaction regardless of scale.
-- **Dynamic Loading**: Enjoy instantaneous loading as you scroll, eliminating wait times and boosting efficiency.
-- **Time-Saving Shortcuts**: Use quick options to get the default grouping and sorting with one click.
 - **Shareable Views**: The page now includes query parameters in the URL, allowing you to save and share your exact view with team members effortlessly.
+- **Personalized Experience**: The page remembers your last selected groups and sorting preferences, so you can pick up right where you left off.
+- **Dynamic Loading**: Enjoy instantaneous loading as you scroll, eliminating wait times and boosting efficiency.
+- **Time-Saving Shortcuts**: Use quick option to make group and sort selections or to reset them.
 
 **Placeholder for video**
 
