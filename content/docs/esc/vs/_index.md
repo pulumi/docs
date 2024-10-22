@@ -21,3 +21,4 @@ Here are several useful comparisons that will help you understand Pulumi's place
 
 * [HashiCorp Vault](/docs/esc/vs/vault/)
 * [Infisical](/docs/esc/vs/infisical/)
+* [Doppler](/docs/esc/vs/doppler/)
