@@ -75,7 +75,7 @@
                                 {{ partial "color-icon.html" (dict "icon" $row.icon "icon_color" $row.icon_color) }}
                                 <h5>{{ $row.title }}</h5>
                                 <p>{{ $row.description | markdownify }}</p>
-                                <a class="text-blue-600" href="{{ $row.link }}">{{ $row.cta }} &rarr;</a>
+                                <a class="btn-primary" href="{{ $row.link }}">{{ $row.cta }} &rarr;</a>
                             </div>
                         </div>
                     {{ end }}
@@ -84,7 +84,4 @@
         </section>
     {{ end }}
 
-    {{ partial "virtual-communities" . }}
-
-    {{ partial "help-links" . }}
 {{ end }}
