@@ -44,7 +44,7 @@ detail_sections:
       description: |
         Pulumi streamlines Kubernetes cluster configuration, management, and app workload deployments to your clusters.
       items:
-          - title: RSVP to “Down the Rabbit Hole” 
+          - title: RSVP to “Down the Rabbit Hole” Happy Hour
             icon: security
             icon_color: violet
             description: with Pulumi, Oso and Apollo GraphGL for an evening of mountain magic Wednesday, November 13, 8-10pm MT at Lake Effect, 155 W 200 S, Salt Lake City
@@ -58,13 +58,11 @@ detail_sections:
             link: https://info.pulumi.com/kubecon-na?hs_preview=KRDQSZjg-181026154277
             cta: Schedule a Meeting
 
-          - title: "Pulumi and Kubernetes:  Better Together"
+          - title: "Workshop - Pulumi and Kubernetes:  Better Together"
             icon: team
             icon_color: salmon
             description: |
               Nov 18, 2024 9 am PT/Noon ET
-
-              Presented by:  Josh Kodroff
 
               Learn how to use Pulumi's integrations with Kubernetes to ensure that your clusters and containerized workloads are managed with maximum ease and efficiency!
             link: /resources/pulumi-kubernetes-better-together/
