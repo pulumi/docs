@@ -30,7 +30,7 @@ aliases:
 
 The automobile is becoming increasingly more connected over time and software is now central to the operation of nearly every component. This necessitates a development platform that is designed for the continuous evolution of technology in vehicles and the additional complexity it brings. CodeCraft is BMW’s integrated toolchain for the software-defined-vehicle that is managed and deployed by Pulumi.
 
-{{< youtube "MKklVdn0LwE?rel=0" >}}
+{{< youtube "HIliBBo4c-g?rel=0" >}}
 
 ## Designed for Scale
 
