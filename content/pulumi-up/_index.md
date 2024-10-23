@@ -14,7 +14,7 @@ aliases:
 panels:
   - title: Cloud and IaC Panel
     subtitle: Infrastructure as Code - Can we do better?
-    schedule_link: https://conference.pulumi.com/talks/infrastructure-as-code-can-we-do-better/?utm_source=PulumiUp&utm_medium=web&utm_campaign=FY2025Q1_Event_PulumiUP
+    schedule_link: /resources/panel-infrastructure-as-code-can-we-do-better/
     panelists:
       - name: Joe Duffy
         image: /images/team/joe-duffy.jpg
@@ -57,7 +57,7 @@ panels:
             link: https://x.com/lukehoban/
   - title: Platform Engineering/DevOps Panel
     subtitle: Secrets and Policies - Automating Cybersecurity
-    schedule_link: https://conference.pulumi.com/talks/panel-platform-engineering-security/?utm_source=PulumiUp&utm_medium=web&utm_campaign=FY2025Q1_Event_PulumiUP
+    schedule_link: /resources/secrets-policies-automating-cybersecurity/
     panelists:
       - name: Arun Loganathan
         image: /images/team/arun-loganathan.jpg
@@ -89,7 +89,7 @@ panels:
             link: https://www.linkedin.com/in/cohen-ofir/
   - title: AI Panel
     subtitle: AI in Cloud Development
-    schedule_link: https://conference.pulumi.com/talks/panel-ai-cloud-development/?utm_source=PulumiUp&utm_medium=web&utm_campaign=FY2025Q1_Event_PulumiUP
+    schedule_link: /resources/panel-ai-in-cloud-development/
     panelists:
       - name: Luke Hoban
         image: /images/team/luke-hoban.jpg
@@ -135,7 +135,7 @@ personas:
       - image: /images/pulumiup-2023/icons/display-code.svg
         name: Software Engineers
       - image: /images/pulumiup-2023/icons/terminal.svg
-        name: Platform Engineers
+        name: DevOps & Platform Engineers
     - items:
       - image: /images/pulumiup-2023/icons/gear.svg
         name: Infrastructure Engineers
@@ -145,7 +145,7 @@ personas:
       - image: /images/pulumiup-2023/icons/compass.svg
         name: Cloud Architects
       - image: /images/pulumiup-2023/icons/briefcase.svg
-        name: Engineering Directors
+        name: Engineering Managers
     - items:
       - image: /images/pulumiup-2023/icons/groups.svg
         name: Anyone who works with cloud infrastructure or IaC
@@ -329,6 +329,10 @@ workshops:
     meta_desc: Join this webinar to explore how to quickly create AWS infrastructure using Pulumi and Tailscale, showcasing advanced features in Kubernetes and AWS environments  
     datetime: 2024-10-15T09:00:00-07:00
     link: /resources/deploy-tailscale-infrastructure-with-pulumi/
+  - title: Deploy and Manage LLMs on Google Cloud Run GPUs with Pulumi
+    meta_desc: Deploy and manage LLMs on Google Cloud Run GPUs with Pulumi. Join our workshop to explore scalable, cost-effective infrastructure for fast LLM inference  
+    datetime: 2024-10-17T09:00:00-07:00
+    link: /resources/deploying-llms-google-cloud-run-pulumi/
   
 
 registration:
@@ -357,6 +361,8 @@ customer_logos:
         link: https://www.pinecone.io/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
       - logo: new-relic.png
         link: https://developer.newrelic.com/pulumi/get-started-pulumi/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
+      - logo: tailscale.svg
+        link: https://tailscale.com/pulumi/get-started-pulumi/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
     - logos:
       - logo: wiz.png
         link: https://www.wiz.io/?utm_source=Pulumi&utm_medium=Website&utm_campaign=PulumiUP

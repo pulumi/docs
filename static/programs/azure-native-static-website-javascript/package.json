@@ -1,0 +1,9 @@
+{
+    "name": "azure-native-static-website-javascript",
+    "main": "index.js",
+    "dependencies": {
+        "@pulumi/azure-native": "^2.0.0",
+        "@pulumi/pulumi": "^3.0.0",
+        "@pulumi/synced-folder": "^0.11.1"
+    }
+}

@@ -1,90 +1,139 @@
 {{ define "hero" }}
     <header class="page-hero">
-        <img class="mx-auto mb-6 w-full" src="/images/reinvent/reinvent-hero.png" />
+        <img class="mx-auto w-full" src="/images/reinvent/reinvent-hero-24.png" />
     </header>
 {{ end }}
 
 {{ define "main" }}
-    <div class="container w-2/3 mt-16 text-center mx-auto relative">
-        <img src="/images/mascot/backpack-pulumipus.svg" alt="" style="transform:scale(-0.5,0.5); top:-128px; left:-280px" class="absolute hidden lg:block" />
-        <h5>We will be at AWS re:Invent, November 27-December 1: <b>Booth #779</b></h5>
-        <h5>Join us to find out how Pulumi’s Infrastructure as Code reduces cloud complexity, accelerates development velocity and helps companies scale and innovate.</h5>
-    </div>
+    <section class="w-full text-center mb-16">
+        <h2>Automate, Secure, and Manage Everything You Run in AWS with Pulumi</h2>
+        <h4 class="w-10/12 mx-auto mt-0">Experience the Future of Cloud Infrastructure Management</h4>
+        <p class="text-center w-full p-5 lg:w-1/2 lg:p-0 mx-auto">
+            <b>Welcome to the Pulumi booth #370 at AWS re:Invent!</b> Discover how Pulumi and AWS are revolutionizing cloud infrastructure automation, security, and management for businesses like yours.
+        </p>
+    </section>
 
-    <section id="links" class="container mx-auto my-16 text-center">
-        <div class="container mx-auto">
-            <div class="flex flex-wrap items-stretch justify-center">
-                {{ range $item := .Params.links.items }}
-                    <div class="w-full lg:w-1/2 p-4 my-2">
-                        <div class="card h-full relative flex flex-col bg-white p-8">
-                            <h5>{{ $item.heading }}</h5>
-                            <p class="flex-1">{{ $item.description | markdownify }}</p>
-                            <div class="mt-4">
-                                <a href="{{ $item.link }}" target="_blank" class="btn-secondary" style="white-space: nowrap;">{{ $item.action }}</a>
-                            </div>
-                        </div>
+    <section class="container mx-auto my-16 text-center">
+        <h2>Engage with Pulumi at re:Invent</h2>
+        <p class="text-center w-full p-5 lg:w-1/2 lg:p-0 mx-auto">
+            Don't miss these exciting opportunities to learn more and connect with our team.  Visit <b>booth #370</b> to see Pulumi in action, grab some swag, and discover how Pulumi and AWS together can turn your cloud into a powerful competitive advantage!
+        </p>
+        <div class="lg:flex lg:flex-wrap justify-center items-stretch">
+            <div class="lg:w-1/2 px-3 py-6">
+                <div class="card text-center p-6 relative h-full">
+                    <div class="icon-section">
+                        {{ partial "color-icon.html" (dict "icon" "pen" "icon_color" "yellow") }}
                     </div>
-                {{ end }}
+                    <div>
+                        <h5>Schedule a 1:1 with Pulumi Leadership </h5>
+                    </div>
+                    <div class="description">
+                        <p>Secure a private meeting with our Founder and top executives to gain exclusive insights on cloud strategy and innovation.</p>
+                    </div>
+                    <div class="card-cta-btn">
+                        <a href="https://calendar.google.com/calendar/embed?src=c_1dcb84daf27d4795624f54cfeca5ee0959d452dac3e85bf6f99c0ef709bedad1%40group.calendar.google.com&ctz=America%2FDenver" target="_blank" class="btn-primary">Request a Meeting</a>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:w-1/2 px-3 py-6">
+                <div class="card text-center p-6 relative h-full">
+                    <div class="icon-section">
+                        {{ partial "color-icon.html" (dict "icon" "team" "icon_color" "violet") }}
+                    </div>
+                    <div>
+                        <h5>Schedule a 1:1 Pulumi Deep Dive </h5>
+                    </div>
+                    <div class="description">
+                        <p>Get a personalized walkthrough on how to take your AWS infrastructure management to the next level with Pulumi.</p>
+                    </div>
+                    <div class="card-cta-btn">
+                        <a href="https://calendar.google.com/calendar/embed?src=c_1dcb84daf27d4795624f54cfeca5ee0959d452dac3e85bf6f99c0ef709bedad1%40group.calendar.google.com&ctz=America%2FDenver" target="_blank" class="btn-primary">Request a demo</a>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:w-1/2 px-3 py-6">
+                <div class="card text-center p-6 relative h-full">
+                    <div class="icon-section">
+                        {{ partial "color-icon.html" (dict "icon" "pen" "icon_color" "yellow") }}
+                    </div>
+                    <div>
+                        <h5>Attend our AWS  Workshop</h5>
+                    </div>
+                    <div class="description">
+                        <p><b>Mastering AWS Infrastructure with Pulumi</b><br/> Learn hands-on techniques to supercharge your AWS deployments using Pulumi.</p>
+                    </div>
+                    <div class="card-cta-btn">
+                        <a href="/resources/aws-immersion-day-platform-engineering/" target="_blank" class="btn-primary">REGISTER</a>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:w-1/2 px-3 py-6">
+                <div class="card text-center p-6 relative h-full">
+                    <div class="icon-section">
+                        {{ partial "color-icon.html" (dict "icon" "nodes" "icon_color" "salmon") }}
+                    </div>
+                    <div>
+                        <h5>RSVP to 1923 at re:Invent</h5>
+                    </div>
+                    <div class="description">
+                        <p>Join Pulumi Partners Honeycomb, BuildKite and observeIQ <br/>Wednesday, November 4 <br/>8:00 - 11:00 pm
+                        </p>
+                    </div>
+                    <div class="card-cta-btn">
+                        <a target="_blank" class="btn-primary">Coming Soon</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="workshops" style="background-color: #805AC3;">
-        <div class="container mx-auto py-12">
-            <h3 class="px-4 text-white">Workshops</h3>
-            <div class="flex flex-wrap items-stretch justify-center">
-                {{ range $item := .Params.workshops.items }}
-                    <div class="w-full lg:w-1/2 p-4 my-2">
-                        <div class="card h-full relative flex flex-col bg-white p-8">
-                            <h6>{{ $item.title }}</h6>
-                            {{ if $item.date }}
-                                <div class="my-0 py-1 inline-block mr-3 text-gray-600">
-                                    <i class="fas fa-calendar mr-2"></i>
-                                    {{ $item.date }}
-                                </div>
-                            {{ end }}
-                            <div class="flex-grow flex flex-col justify-start mt-3">
-                                <p class="text-gray-700">
-                                    {{ $item.description }}
-                                </p>
-                            </div>
-                            <div class="mt-8">
-                                <a href="{{ $item.link }}" target="_blank" class="btn-secondary btn-disabled">{{ $item.action }}<i class="fa fa-arrow-right ml-2"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                {{ end }}
-            </div>
-        </div>
-    </section>
+    <section class="container flex flex-col justify-center lg:flex-row mx-auto my-16 px-8 lg:px-0">
+        <div class="flex flex-col lg:flex-row"></div>
+            <div class="w-full order-last mt-8 lg:mt-0 lg:order-first lg:w-1/2">
+                <pulumi-chooser type="language" options="typescript,python,go,csharp,java,yaml">
+                    <pulumi-choosable type="language" class="highlight" value="typescript">
+                        {{ partial "code" (dict "code" .Params.awsx.ts "lang" "ts") }}
+                    </pulumi-choosable>
 
-    <section id="templates" class="container mx-auto my-16 text-center">
-        <div class=" text-center mx-auto my-8">
-            <h3>Pulumi Templates for Common Use Cases</h3>
-            <p>
-                Pulumi templates are the fastest way to deploy infrastructure. Templates come with predefined infrastructure as code so you can get started instantly. Find some of
-                our templates below, and Happy Templating!
-            </p>
-        </div>
-        <div class="container mx-auto">
-            <div class="flex flex-wrap items-stretch justify-center">
-                {{ range $item := .Params.templates.items }}
-                    <div class="lg:w-1/3 md:w-1/2 w-full my-4">
-                        <div class="card h-full relative flex flex-col bg-white pb-8 mx-4">
-                            <img class="rounded h-40 mx-auto" src="{{ $item.image }}" />
-                            <h5 class="mt-4">{{ $item.heading }}</h5>
-                            <p class="flex-1 px-8 pb-4">{{ $item.description }}</p>
-                            <div>
-                                <a href="{{ $item.link }}" target="_blank" style="font-size: 0.9rem" class="btn-secondary">{{ $item.action }}</a>
-                            </div>
-                        </div>
-                    </div>
-                {{ end }}
+                    <pulumi-choosable type="language" class="highlight" value="python">
+                        {{ partial "code" (dict "code" .Params.awsx.py "lang" "go") }}
+                    </pulumi-choosable>
+
+                    <pulumi-choosable type="language" class="highlight" value="go">
+                        {{ partial "code" (dict "code" .Params.awsx.go "lang" "go") }}
+                    </pulumi-choosable>
+
+                    <pulumi-choosable type="language" class="highlight" value="csharp">
+                        {{ partial "code" (dict "code" .Params.awsx.csharp "lang" "csharp") }}
+                    </pulumi-choosable>
+
+                    <pulumi-choosable type="language" class="highlight" value="java">
+                        {{ partial "code" (dict "code" .Params.awsx.java "lang" "java") }}
+                    </pulumi-choosable>
+
+                    <pulumi-choosable type="language" class="highlight" value="yaml">
+                        {{ partial "code" (dict "code" .Params.awsx.yaml "lang" "yaml") }}
+                    </pulumi-choosable>
+                </pulumi-chooser>
+            </div>
+            <div class="w-full lg:w-1/2 px-8">
+                <h3>Pulumi + AWS: Better Together</h3>
+                <p>{{"Ship faster, secure your secrets, and enforce cloud compliance and security with [Pulumi IaC](/product/infrastructure-as-code/) (infrastructure as code), [ESC](/product/secrets-management/) (secrets management and orchestration), and [Insights](/product/pulumi-insights/) (cloud asset and compliance management). Our partnership with AWS offers a robust solution for complex cloud deployments, enabling you to:" | markdownify}}</p>
+                <h5>Automate your AWS infrastructure with Pulumi IaC.</h5>
+                <p class="mt-0">
+                    Build and ship infrastructure faster using languages you know and love, like TypeScript, Python, Go, C#, and Java.
+                </p>
+                <h5>Secure your cloud secrets with Pulumi ESC.</h5>
+                <p>
+                    Centrally manage all your secrets and configurations. Pull and sync secrets with any secrets store. Consume in any application, tool, or CI/CD platform.
+                </p>
+                <h5>Manage your AWS resources with Pulumi Insights.</h5>
+                <p>
+                    Search, compliance remediation, resource visualizations, cost optimization, and AI insights over all your AWS infrastructure.
+                </p>
             </div>
         </div>
     </section>
 
     {{ partial "virtual-communities" . }}
-
-    {{ partial "help-links" . }}
 {{ end }}

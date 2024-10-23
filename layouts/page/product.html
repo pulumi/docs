@@ -1,9 +1,9 @@
 {{ define "hero" }}
-    {{ partial "hero.html" (dict "title" .Params.heading) }}
+    {{ partial "hero" (dict "title" .Params.heading) }}
 {{ end }}
 
 {{ define "main" }}
-    <section id="overview" class="sm:mt-24 mb-16 relative">
+    <section id="overview" class="mb-16 relative">
         <div class="shape-background product-overview-section">
             <div class="shape-container">
                 <div class="circle-right"></div>
@@ -165,7 +165,7 @@
                     <div class="lg:shadow-2xl bg-violet-600 p-8 lg:px-24 lg:pt-4 g:pb-12 rounded-xl">
                         <h4 class="text-white">{{ .Params.get_started.get_started.title }}</h4>
                         <p class="mb-24 text-white">{{ .Params.get_started.get_started.description }}</p>
-                        <a href="{{ relref . "/docs/get-started" }}" class="btn-secondary">{{ .Params.get_started.get_started.cta_text }}</a>
+                        <a href="{{ relref . "/docs/iac/get-started" }}" class="btn-secondary">{{ .Params.get_started.get_started.cta_text }}</a>
                     </div>
                 </div>
 
@@ -173,7 +173,7 @@
                     <div class="border lg:border-none lg:shadow-2xl p-8 lg:px-24 lg:pt-4 g:pb-12 rounded-xl bg-white">
                         <h4>{{ .Params.get_started.migrate.title }}</h4>
                         <p class="mb-16 pb-1">{{ .Params.get_started.migrate.description }}</p>
-                        <a href="{{ relref . "/docs/using-pulumi/adopting-pulumi/converters" }}" class="btn-secondary">{{ .Params.get_started.migrate.cta_text }}</a>
+                        <a href="{{ relref . "/docs/iac/adopting-pulumi/converters/" }}" class="btn-secondary">{{ .Params.get_started.migrate.cta_text }}</a>
                     </div>
                 </div>
             </div>

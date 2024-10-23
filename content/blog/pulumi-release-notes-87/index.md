@@ -12,7 +12,7 @@ tags:
    - pulumi-releases
 ---
 
-We have been busy shipping improvements in the last 2 months. Let's walk through the release highlights across Pulumi engineering areas from March and April. If you want to learn more between release blogs, follow the CLI improvements in the [pulumi/pulumi repo changelog](https://github.com/pulumi/pulumi-aws-native/releases) and Pulumi Cloud features in the [new features blogs](/blog/tag/features).
+We have been busy shipping improvements in the last 2 months. Let's walk through the release highlights across Pulumi engineering areas from March and April. If you want to learn more between release blogs, follow the CLI improvements in the [pulumi/pulumi repo changelog](https://github.com/pulumi/pulumi/releases) and Pulumi Cloud features in the [new features blogs](/blog/tag/features).
 
 <!--more-->
 
@@ -67,8 +67,8 @@ Previewing update (dev)
 
 View in Browser (Ctrl+O): https://app.pulumi.com/mikhailshilkov/dev-ts/dev/previews/01234567-ec03-4ccc-9b44-02ec864e14ee
 
-     Type                                  Name    Plan       
- +   pulumi:pulumi:Stack                   ts-dev  create...      
+     Type                                  Name    Plan
+ +   pulumi:pulumi:Stack                   ts-dev  create...
 ```
 
 👉  Learn more in the [Open in Web Browser shortcut pull request](https://github.com/pulumi/pulumi/pull/12380).
@@ -127,7 +127,7 @@ Every week we keep shipping provider updates. A few highlights on our native pro
 - Azure Native shipped six new resources for `containerstorage`, `guestconfiguration`, and `hybridcloud` ([releases](https://github.com/pulumi/pulumi-azure-native/releases))
 - AWS Native shipped 33 new resources in `apigatewayv2`, `appconfig`, `chatbot`, `comprehend`, `connect`, `datasync`, `devopsguru`, `ec2`, `frauddetector`, `lambda`, `msk`, `neptune`, `quicksight`, `ram`, `sagemaker`, `ssmcontacts`, and `vpclattice` modules ([changelog](https://github.com/pulumi/pulumi-aws-native/releases))
 
-Two new community packages were added to the Registry: 
+Two new community packages were added to the Registry:
 
 - [AzAPI](https://www.pulumi.com/registry/packages/azapi/) - shoutout to [Engin Diri](https://github.com/dirien)
 - [StrongDM](https://www.pulumi.com/registry/packages/sdm/) - shoutout to [Piers Karsenbarg](https://github.com/pierskarsenbarg)

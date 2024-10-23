@@ -20,6 +20,7 @@ describe("www.pulumi.com", () => {
             cy.get(".header-container")
                 .should("not.have.class", "is-pinned");
 
+            cy.wait(6000)
             cy.scrollTo(0, 250);
 
             cy.get(".header-container")
@@ -30,7 +31,7 @@ describe("www.pulumi.com", () => {
     describe("getting started", () => {
 
         beforeEach(() => {
-            cy.visit("/docs/clouds/aws/get-started/begin");
+            cy.visit("/docs/iac/get-started/aws/begin");
         });
 
         describe("when an OS is selected", () => {

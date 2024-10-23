@@ -1,0 +1,58 @@
+name: azure-native-static-website-yaml
+runtime: yaml
+description: An example that deploys all of the resources for a static website on Azure.
+
+#### Steps:
+# [1] Create a resource group.
+# [2] Create a blob storage account.
+# [3] Configure the storage account as a website.
+
+resources:
+  # [1] Create a resource group.
+  resourceGroup:
+    type: azure-native:resources:ResourceGroup
+    properties:
+      location: eastus
+
+  # [2] Create a blob storage account.
+  storageAccount:
+    type: azure-native:storage:StorageAccount
+    properties:
+      resourceGroupName: ${resourceGroup.name}
+      kind: "StorageV2"
+      sku: { name: "Standard_LRS" }
+
+  # [3] Configure the storage account as a website.
+  staticWebsite:
+    type: azure-native:storage:StorageAccountStaticWebsite
+    properties:
+      resourceGroupName: ${resourceGroup.name}
+      accountName: ${storageAccount.name}
+      indexDocument: index.html
+      error404Document: 404.html
+
+  # Upload the website files
+  index.html:
+    type: azure-native:storage:Blob
+    properties:
+      resourceGroupName: ${resourceGroup.name}
+      accountName: ${storageAccount.name}
+      containerName: ${staticWebsite.containerName}
+      contentType: text/html
+      type: "Block"
+      source:
+        fn::fileAsset: ./wwwroot/index.html
+  error.html:
+    type: azure-native:storage:Blob
+    properties:
+      resourceGroupName: ${resourceGroup.name}
+      accountName: ${storageAccount.name}
+      containerName: ${staticWebsite.containerName}
+      contentType: text/html
+      type: "Block"
+      source:
+        fn::fileAsset: ./wwwroot/error.html
+
+# Export the URL of the website.
+outputs:
+  staticEndpoint: ${storageAccount.primaryEndpoints.web}

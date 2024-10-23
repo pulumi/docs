@@ -4,9 +4,10 @@ title_tag: Syntax Reference
 h1: Pulumi ESC Syntax Reference
 meta_desc: Pulumi ESC allows you to compose and manage hierarchical collections of configuration and secrets and consume them in various ways.
 menu:
-  pulumiesc:
-    identifier: reference
-    weight: 4
+  esc:
+    parent: esc-home
+    identifier: esc-syntax-reference
+    weight: 5
 aliases:
   - /docs/pulumi-cloud/esc/reference
 ---
@@ -19,8 +20,8 @@ aliases:
 
 # imports is an optional top-level key
 imports:
-  - environment-a
-  - environment-b
+  - project/environment-a
+  - project/environment-b
 
 # ---------------------------------------------------------------------------------------
 # Main configuration -- set configuration values either as static values, or interpolated
@@ -240,7 +241,7 @@ values:
   # ---------------------------------------------------------------------------------------
 
   # Configuration nested under the "environmentVariables" key is used to export environment
-  # variables when using `esc open --shell`, `esc run`, or `pulumi up/preview/refresh/destroy`
+  # variables when using `esc open --format=shell`, `esc run`, or `pulumi up/preview/refresh/destroy`
   environmentVariables:
     AWS_ACCESS_KEY_ID: ${aws.login.accessKeyId}
     AWS_SECRET_ACCESS_KEY: ${aws.login.secretAccessKey}
@@ -252,7 +253,7 @@ values:
     aws:region: us-west-2
 
   # Configuration nested under the 'files' key is used to export as files to the environment
-  # when using 'esc open --shell', 'esc run', or `pulumi up/preview/refresh/destroy`
+  # when using 'esc open --format=shell', 'esc run', or `pulumi up/preview/refresh/destroy`
   files:
     KUBECONFIG: ${kubeconfig}
 ```

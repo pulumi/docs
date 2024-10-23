@@ -1,7 +1,7 @@
 ---
 # Name of the event, <= 60 characters
-title: "Platform Engineering: Zero to Scale"
-meta_desc: Attend this session to learn how to successfully adopt platform engineering practices for your organization.
+title: "Platform Engineering: From Setup to Scale"
+meta_desc: Watch the webinar with a 7-step guide to plan, implement, and support your organization's adoption of platform engineering best practices.
 meta_image:
 
 # A featured webinar will display first in the list.
@@ -36,7 +36,7 @@ main:
     event_type: workshop # workshop | event
 
     # URL for embedding a URL for ungated webinars.
-    youtube_url:
+    youtube_url: https://www.youtube.com/embed/t4c3NOiuhXQ?si=dWlnHa0WokwiHYyP
 
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
     sortable_date: 2024-09-04T09:00:00.000-07:00
@@ -58,7 +58,7 @@ main:
     learn:
         - A [step-by-step guide](https://www.pulumi.com/blog/the-guide-platform-engineering-idp-steps-best-practices/) to successfully implement platform engineering in all kinds of organizations.
         - How infrastructure as code, automated controls, reporting, and self-service infrastructure fit into platform engineering efforts.
-        - How to handle common pitfalls to successfully implementing platform engineering in IT organizations.
+        - How to handle common pitfalls to implement platform engineering in IT organizations successfully.
 
     # The webinar presenters
     presenters:

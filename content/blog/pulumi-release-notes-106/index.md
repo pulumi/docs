@@ -85,7 +85,7 @@ We unleashed a wave of powerful new features for [Pulumi Environments, Secrets, 
 
 #### Pulumi ESC SDK
 
-[Pulumi ESC SDKs](/blog/esc-sdk-launch/) are now available for [Python](/docs/esc/sdk/python/), [TypeScript/JavaScript](/docs/esc/sdk/javascript/), and [Go](/docs/esc/sdk/go/), making it easier than ever to harness the power of ESC directly within your applications using your favorite programming languages. The SDKs provide a simple and intuitive programmatic interface to manage your ESC environments, securely access secrets and configurations at runtime, and eliminate the need for hardcoded credentials. This streamlines your development process, enhances security, and promotes best practices for handling sensitive data. Check out our [docs](/docs/esc/sdk/).
+[Pulumi ESC SDKs](/blog/esc-sdk-launch/) are now available for [Python](/docs/esc/development/languages-sdks/python/), [TypeScript/JavaScript](/docs/esc/development/languages-sdks/javascript/), and [Go](/docs/esc/development/languages-sdks/go/), making it easier than ever to harness the power of ESC directly within your applications using your favorite programming languages. The SDKs provide a simple and intuitive programmatic interface to manage your ESC environments, securely access secrets and configurations at runtime, and eliminate the need for hardcoded credentials. This streamlines your development process, enhances security, and promotes best practices for handling sensitive data. Check out our [docs](/docs/esc/development/languages-sdks/).
 
 #### Pulumi Service Provider for ESC
 

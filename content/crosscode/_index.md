@@ -39,7 +39,7 @@ capabilities:
             CrossCode can import existing infrastructure and generate the infrastructure as code in any supported Pulumi language. This works for any infrastructure no matter if it was provisioned manually or by another infrastructure as code system.
           more:
             label: Read more
-            href: "/docs/using-pulumi/adopting-pulumi/import/"
+            href: "/docs/iac/adopting-pulumi/import/"
 
         - title: Enforce policy in all popular programming languages
           icon: shield

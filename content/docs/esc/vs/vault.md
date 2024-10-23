@@ -5,7 +5,8 @@ title: Pulumi ESC vs HashiCorp Vault
 h1: Pulumi ESC vs HashiCorp Vault
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    pulumiesc:
+    esc:
+        name: HashiCorp Vault
         identifier: vault
         parent: esc-vs
         weight: 1

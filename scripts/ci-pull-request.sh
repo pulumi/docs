@@ -15,6 +15,10 @@ source ./scripts/ci-login.sh
 
 ./scripts/build-site.sh preview
 ./scripts/sync-and-test-bucket.sh preview
+
 ./scripts/generate-search-index.sh
+
 ./scripts/run-pulumi.sh preview
 ./scripts/make-s3-redirects.sh
+
+./scripts/detect-new-404s.sh
