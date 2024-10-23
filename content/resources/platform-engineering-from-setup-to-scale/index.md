@@ -31,7 +31,7 @@ url_slug: platform-engineering-from-setup-to-scale
 # Content for the left hand side section of the page.
 main:
     # Webinar title.
-    title: "Platform Engineering: From Setup to Scale"
+    title: "Platform Engineering: Zero to Scale"
 
     event_type: workshop # workshop | event
 
@@ -56,7 +56,7 @@ main:
         This workshop is suitable for Platform team contributors, DevOps engineers, IT management, and leadership.
 
     learn:
-        - A step-by-step guide to successfully implementing platform engineering in all kinds of organizations.
+        - A [step-by-step guide](https://www.pulumi.com/blog/the-guide-platform-engineering-idp-steps-best-practices/) to successfully implement platform engineering in all kinds of organizations.
         - How infrastructure as code, automated controls, reporting, and self-service infrastructure fit into platform engineering efforts.
         - How to handle common pitfalls to implement platform engineering in IT organizations successfully.
 
