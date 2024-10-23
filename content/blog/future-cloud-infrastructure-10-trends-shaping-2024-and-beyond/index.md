@@ -1,5 +1,5 @@
 ---
-title: "Future of the Cloud: 10 Trends Shaping 2024 and Beyond"
+title: "Future of the Cloud: 10 Trends Shaping 2025 and Beyond"
 
 # The date represents the post's publish date, and by default corresponds with
 # the date and time this file was generated. Dates are used for display and
@@ -7,7 +7,7 @@ title: "Future of the Cloud: 10 Trends Shaping 2024 and Beyond"
 # published. To influence the ordering of posts published on the same date, use
 # the time portion of the date value; posts are sorted in descending order by
 # date/time.
-date: 2023-12-19T15:56:40Z
+date: 2024-11-06T07:56:40Z
 
 # The draft setting determines whether a post is published. Set it to true if
 # you want to be able to merge the post without publishing it.
@@ -22,7 +22,7 @@ meta_desc: "The year of Cloud Optimization is here! Explore the top 10 trends, i
 # The meta_image appears in social-media previews and on the blog home page. A
 # placeholder image representing the recommended format, dimensions and aspect
 # ratio has been provided for you.
-meta_image: cloud-computing-forecast-2024.png
+meta_image: "cloud-computing-forecast.png.png"
 
 # At least one author is required. The values in this list correspond with the
 # `id` properties of the team member files at /data/team/team. Create a file for
@@ -33,24 +33,26 @@ authors:
 tags:
     - ai
     - cloud-native
-    - iac
+    - infrastructure-as-code
     - cloud-computing
     - multi-cloud
     - finops
     - platform-engineering
     - devops
+    - devsecops
+    - security
 
 # See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md
 # for details, and please remove these comments before submitting for review.
 ---
 
-In 2024, several trends will dominate cloud computing, driving innovation, efficiency, and scalability. From Infrastructure as Code (IaC) to AI/ML, platform engineering to multi-cloud and hybrid strategies, and security practices, let's explore the 10 biggest emerging trends.
+In 2025, several trends will dominate cloud computing, driving innovation, efficiency, and scalability. From Infrastructure as Code (IaC) to AI/ML, platform engineering to multi-cloud and hybrid strategies, and security practices, let's explore the 10 biggest emerging trends.
 
 <!--more-->
 
 ## 1. Cloud Will Become a Business Necessity by 2028
 
-According to [Gartner](https://www.gartner.com/en/newsroom/press-releases/2023-11-29-gartner-says-cloud-will-become-a-business-necessity-by-2028), cloud adoption will move from being a technology disruptor to a necessity for maintaining business competitiveness. In 2024, worldwide end-user spending on public cloud services is forecast to total $679 billion and is projected to **exceed $1 trillion in 2027**.
+According to [Gartner](https://www.gartner.com/en/webinar/445864/1051166), by 2025 the cloud will be the key driver for business innovation, and estimates that over 95% of new digital workloads will be deployed on cloud-native platforms.
 
 {{< figure alt="The future of cloud computing. Credit: Gartner" src="/blog/future-cloud-infrastructure-10-trends-shaping-2024-and-beyond/gartner-cloud-2028.png" caption="The future of cloud computing. Credit: Gartner" width=100% >}}
 
@@ -63,9 +65,9 @@ According to McKinsey & Company's "[In search of cloud value](https://www.mckins
 
 ## 2. Large Organizations with Multi-Cloud and Hybrid Environments
 
-Multi-cloud and Hybrid (mixing cloud and on-premise infrastructure) environments are a trend that is here to stay. According to Forbes, by **2024, 85% of large-sized companies will have a multi-cloud strategy**. Organizations recognize the importance of leveraging multiple cloud providers and on-premises infrastructure to optimize performance, enhance redundancy, and mitigate risks.
+Multi-cloud and Hybrid (mixing cloud and on-premise infrastructure) environments are a trend that is here to stay. According to Forbes and Gartner, by **2025, 85% of large-sized companies will have a multi-cloud strategy**. Organizations recognize the importance of leveraging multiple cloud providers and on-premises infrastructure to optimize performance, enhance redundancy, and mitigate risks.
 
-{{< figure alt="Why organizations are using multiple clouds chart. Credit: Cisco Systems" src="/blog/future-cloud-infrastructure-10-trends-shaping-2024-and-beyond/why-organizations-are-using-multiple-clouds-cisco.png" caption="Credit: Cisco Systems" width=100% >}}
+{{< figure alt="Most popular cloud computing infrastructure by industry. Credit: Cloud Worldwide Service, Forbes" src="/blog/future-cloud-infrastructure-10-trends-shaping-2024-and-beyond/most-popular-cloud-computing-infrastructure-by-industry.png" caption="Credit: Cloud Worldwide Service, Forbes" width=100% >}}
 
 The following trends also relate to this multi-cloud and hybrid approach as companies seek ways to balance flexibility and cost while increasing overall productivity with security and compliance in mind.
 
@@ -76,24 +78,27 @@ IaC in general-purpose languages is gaining prominence as organizations seek to 
 [Infrastructure as Code](https://www.pulumi.com/what-is/what-is-infrastructure-as-code/) is maturing beyond taming the complexity of the cloud:
 
 - Facilitating the adoption and configuration standardization of multi-cloud and hybrid strategies
-- Better integration with multiple cloud providers, like [AWS](https://www.pulumi.com/docs/clouds/aws/), [Azure](https://www.pulumi.com/docs/clouds/azure/), and [Google Cloud](https://www.pulumi.com/docs/clouds/gcp/), data stores, and third-party services like [Cockroach Labs db](https://www.pulumi.com/registry/packages/cockroach/), [Confluent cloud](https://www.pulumi.com/registry/packages/confluentcloud/), [Kafka](https://www.pulumi.com/registry/packages/kafka/), and more.
+- Better integration with multiple cloud providers, like [AWS](https://www.pulumi.com/docs/iac/clouds/aws/), [Azure](https://www.pulumi.com/docs/iac/clouds/azure/), and [Google Cloud](https://www.pulumi.com/docs/iac/clouds/gcp/), data stores, and third-party services like [Cockroach Labs db](https://www.pulumi.com/registry/packages/cockroach/), [Confluent cloud](https://www.pulumi.com/registry/packages/confluentcloud/), [Kafka](https://www.pulumi.com/registry/packages/kafka/), and more
 - Deeper validation on parameters that people are passing in, checking all critical components, ensuring they are configured correctly before deployment
 - More [efficient resource management](https://www.pulumi.com/docs/pulumi-cloud/insights/)
-- Robust security and [Policy as Code](https://www.pulumi.com/docs/using-pulumi/crossguard/core-concepts/) to enforce security practices, guardrails, compliance, cost policies, and more
+- Robust security and [Policy as Code](https://www.pulumi.com/docs/iac/packages-and-automation/crossguard/core-concepts/) to enforce security practices, guardrails, compliance, cost policies, and more
 - Intelligent automation, including [automated tests](https://www.pulumi.com/docs/iac/concepts/testing/) and [remediation policies](https://www.pulumi.com/blog/remediation-policies/)
-- [AI-driven automation and insights](https://www.pulumi.com/blog/pulumi-insights/)
+- [AI-driven automation and insights](https://www.pulumi.com/product/pulumi-insights/)
 
-## 4. Rise of Security-First (DevSecOps)
+## 4. Increased Focus and Budgets for Security (DevSecOps)
 
-Security is no longer a separate consideration but a top priority in the cloud landscape - **integrating security into the DevOps process, known as DevSecOps, will be a key trend in 2024**. Organizations will emphasize building security measures in every development lifecycle stage. [Policy as Code](https://www.pulumi.com/crossguard/) will be an indispensable pillar in many security aspects:
+Security is no longer a separate consideration but a top priority in the cloud landscape. **By 2025, security practices are expected to be seamlessly embedded into every stage of the DevOps lifecyle.** Below are the 3 key predictions for the future of DevSecOps:
 
-- Use off-the-shelf rules or define your best practices for security, cost, compliance, and reliability
-- Maintain security across all cloud infrastructure assets
-- Ensure cost-conscious deployments requiring specific cost allocation tags.
-- Catch policy violations before they escape using CI/CD.
-- Automate governance using programmable libraries and REST APIs, easily integrating with external services such as web services, asset tracking databases, pricing lists, and more.
+1. **AI-Driven Security**: AI and machine learning (ML) will be instrumental in automating security and in [providing real-time insights](https://www.pulumi.com/blog/pulumi-insights-2/), enabling proactive and predictive security measures.
+2. **More Focus on Secrets Management**: Organizations will prioritize [robust secrets management](https://www.pulumi.com/product/secrets-management/) within their DevSecOps processes as data privacy concerns escalate. It will be essential to secure sensitive data such as API keys, credentials, and other secrets to ensure compliance and avoid unauthorized access.
+3. **Collaboration as a Key Factor**: Collaboration between development, security, and operations teams will be crucial for the success of DevSecOps efforts.
 
-{{< figure alt="A live dashboard of organizational violations in Pulumi Cloud." src="https://www.pulumi.com/images/screens/pac-in-action.png" caption="A live dashboard of organizational violations in Pulumi Cloud. Credit: Pulumi" width=100% >}}
+[Policy as Code](https://www.pulumi.com/docs/iac/packages-and-automation/crossguard/) will also be an indispensable pillar in many security aspects:
+
+1. Use off-the-shelf rules or define your best practices for security, cost, compliance, and reliability
+2. Maintain security across all cloud infrastructure assets
+3. Catch policy violations before they escape using CI/CD
+4. Automate governance using programmable libraries and REST APIs, easily integrating with external services such as web services, asset tracking databases, pricing lists, and more
 
 ## 5. Platform Engineering – Internal Developer Portals (IDP) for Better Developer Experience
 
@@ -103,17 +108,14 @@ Mid-size to large companies will begin or [continue to invest in implementing pl
 
 {{< figure alt="Internal developer platform-in-a-box. Credit: Pulumi" src="https://www.pulumi.com/blog/developer-portal-platform-teams/platform-teams.png" caption="Internal developer platform-in-a-box. Credit: Pulumi" width=100% >}}
 
-## 6. AI/ML Continues to Rise
+## 6. The Rise of AIOps Through the Combination of AI and Automation
 
-Many AI-based systems are built around cloud-native tools, practices, and managed services. The extensive use of cloud-native primitives means that AI is fundamentally a cloud adoption story, and Cloud and AI are consequently interconnected.
+In 2025, AIOps will gain further relevancy in the IT operations landscape, becoming integral to DevOps practices. As AI and automation continue to evolve, the fusion of these technologies will enable organizations to achieve unprecedented levels of efficiency and scalability.
 
-[Artificial Intelligence (AI) and Machine Learning (ML)](https://www.pulumi.com/blog/tag/ml/) applications will continue to drive innovation across various industries. This trend will increase the focus on machine learning algorithms, data collection, and preprocessing, inference and deployment.
-
-{{< youtube "i09F14yc0l4?rel=0" >}}
-
-**By 2027, AI will dramatically increase developer velocity by automatically generating code** to meet functional business requirements for 70% of new digital solutions in production (source: [IDC](https://www.digitalnewsasia.com/business/idc-reveals-its-top-predictions-cloud-2023-and-beyond)). Despite the concerns regarding AI and job security, AI job posts on the global work marketplace Upwork increased more than 1,000% in the second quarter of 2023 compared to the same period last year, showing a significant increase in new employment opportunities related to AI and ML.
-
-In fact, [BizReport](https://www.bizreport.com/business/ai-influence-on-us-workforce-salaries) estimates that **by 2024, there will be an additional 131,000 AI-related jobs within computer science**. This figure currently stands at 30.3% of roles, supporting the [World Economic Forum’s prediction](https://www.weforum.org/press/2020/10/recession-and-automation-changes-our-future-of-work-but-there-are-jobs-coming-report-says-52c5162fce/) that **by 2025, 97 million new jobs will have been established thanks to AI**.
+- **Proactive Operations**: AI-powered tools will assist teams in foreseeing issues with greater accuracy, minimizing downtime, and reducing the firefighting nature of incident management. These tools will automatically detect anomalies, optimize performance, and trigger remediation actions.
+- **[Intelligent Automation](https://www.pulumi.com/docs/iac/packages-and-automation/automation-api/)**: Routine operational tasks like patching, monitoring, and resource scaling will be fully automated. AI-driven decision-making will allow for smarter resource allocation and optimization, dynamically adjusting infrastructure and workloads in response to real-time demands and predictions.
+- **[Data-Driven Insights](https://www.pulumi.com/docs/pulumi-cloud/insights/)**: AIOps will analyze vast amounts of operational data and provide actionable insights, enabling teams to focus on high-impact tasks such as improving system architecture and user experience. The AI-powered insights will also inform better strategic decisions, helping teams to continuously evolve their DevOps practices.
+- **Collaboration Across Teams**: AIOps will bridge the gap between DevOps, SecOps, and IT operations by bridging monitoring and automation. Cross-team collaboration will improve as AI systems consolidate and interpret data from various departments, allowing for a more cohesive approach to system management.
 
 ## 7. Investment in Data and Data Streaming
 
@@ -129,28 +131,26 @@ Event streaming technology can be transformative but often difficult to adopt. W
 
 ## 8. Kubernetes Dominance and Increased Complexity
 
-Kubernetes, the open-source container orchestration platform, will continue its ascent in 2024. According to [Markets N Research](https://marketsnresearch.com/report/1649/global-kubernetes-market), the global Kubernetes market size was valued at USD 1.8 billion in 2022 and is projected to be **USD 7.8 billion by 2030, exhibiting a CAGR of 23.40%** during the forecast period.
+Kubernetes, the open-source container orchestration platform, will continue its ascent in 2025. According to [Markets N Research](https://marketsnresearch.com/report/1649/global-kubernetes-market), the global Kubernetes market size was valued at USD 1.8 billion in 2022 and is projected to be **USD 7.8 billion by 2030, exhibiting a CAGR of 23.40%** during the forecast period.
 
 The "growing pains" will also increase with rising concerns in security, networking, deployment, scalability, cost, and impact on developer productivity. Read the previous LinkedIn Newsletter article [From Complexity to Simplicity: Streamlining Kubernetes with Infrastructure as Code](https://www.linkedin.com/pulse/from-complexity-simplicity-streamlining-kubernetes-infrastructure?lipi=urn%3Ali%3Apage%3Ad_flagship3_pulse_read%3BHF6x7jyoRWSmk9POeHy0TA%3D%3D).
 
 ## 9. Cost Transparency and Governance
 
-As cloud environments become more complex, ensuring cost transparency and governance will be a priority. In 2024, businesses will invest in Cloud Optimization and/or cost management tools and processes to monitor and control cloud spending effectively. This includes implementing policies, [managing resource allocation](https://www.pulumi.com/blog/property-search/), and utilizing cost analytics to make informed decisions about resource utilization.
+As cloud environments become more complex, ensuring cost transparency and governance will be a priority. In 2025, businesses will continue to invest in cloud optimization and/or cost management tools and processes to monitor and control cloud spending effectively. This includes implementing policies, [managing resource allocation](https://www.pulumi.com/blog/property-search/), and utilizing cost analytics to make informed decisions about resource utilization.
 
-As a result, [IDC](https://www.netapp.com/media/93564-operationalize-fin-ops-for-continuous-cloud-and-cost-efficiency.pdf) predicts that complexities and IT budget pressures will drive **70% of Global 1000 companies to [increase FinOps maturity](https://www.pulumi.com/blog/finops-with-pulumi/)** with granular chargebacks, benchmarking, and multiple-cloud optimization by 2024.
+As a result, [IDC](https://www.netapp.com/media/93564-operationalize-fin-ops-for-continuous-cloud-and-cost-efficiency.pdf) predicts that complexities and IT budget pressures will drive **70% of Global 1000 companies to [increase FinOps maturity](https://www.pulumi.com/blog/finops-with-pulumi/)** with granular chargebacks, benchmarking, and multiple-cloud optimization.
 
-## 10. Talent Shortage
+## 10. Enterprises Will Allow the Use of AI Code Assistants
 
-Over 150,000 technology industry workers have been laid off in the US since the beginning of 2023, and yet the Korn Ferry report finds that **by 2030, more than 6 million jobs could go unfilled** because there aren't enough skilled people to take them.
+Developers worldwide have explored or are currently using AI-powered coding assistants. However, many enterprises have shown resistance to allowing them to be part of their AI tools in software development. Still, software engineering leaders are beginning to recognize that these coding assistants can enhance team productivity, improve code quality, and maintain a competitive advantage.
 
-Previous research by [McKinsey Global Institute](https://www.mckinsey.com/featured-insights/future-of-work/jobs-lost-jobs-gained-what-the-future-of-work-will-mean-for-jobs-skills-and-wages) has shown that **as many as 375 million tech workers globally might have to change occupations** and skills in the next decade to meet companies' needs and that automation could free employees to spend as much as 30% of their time on new work-acquiring new work experience.
+**By 2027, the use of [AI assistants](https://www.pulumi.com/product/copilot/) will dramatically increase developer velocity** to meet functional business requirements for 70% of new digital solutions in production (source: [IDC](https://www.digitalnewsasia.com/business/idc-reveals-its-top-predictions-cloud-2023-and-beyond)).
 
-{{< figure alt="AI Influence on US workforce salaries Credit: Bizreport" src="./Bizreport.png" caption="AI Influence on US workforce salaries Credit: Bizreport" width=100% >}}
+{{< figure alt="The value of AI code assistants. Credit: Gartner" src="/blog/future-cloud-infrastructure-10-trends-shaping-2024-and-beyond/ai_code_assistants_value.png" caption="The value of AI code assistants. Credit: Gartner" width=100% >}}
 
-The skill gaps have appeared in many of the previously stated trends. For organizations, it means that they need to look closer at their existing knowledge and prioritize skill-building, reskilling, and upskilling efforts. These programs face other obstacles, most at the cultural level.
-
-Since 72% of US companies struggle to find tech talent, now’s a great time to upskill for the cloud. [Check out our upcoming workshops](https://www.pulumi.com/resources/#upcoming) - topics range from introduction level to IaC, taking AI apps to production, and more.
+According to [Gartner](https://www.gartner.com/en/newsroom/press-releases/2024-04-11-gartner-says-75-percent-of-enterprise-software-engineers-will-use-ai-code-assistants-by-2028), **by 2028, 75% of enterprise software engineers will use dedicated AI code assistants**, and 63% of organizations are currently piloting, deploying or beginning to [use AI code assistants, just like Pulumi AI](https://www.pulumi.com/ai).
 
 ## Keeping up with the Future Cloud Trends
 
-From advanced technologies like AI/ML and Kubernetes to practices like FinOps and Security, the cloud of 2024 is set to redefine best practices for enhanced efficiency, security, and scalability. You may have noticed that many trends overlap, and a holistic view will be crucial for organizations aiming to stay ahead.
+From advanced technologies like AI/ML and Kubernetes to practices like FinOps and Security, the cloud of 2025 is set to redefine best practices for enhanced efficiency, security, and scalability. You may have noticed that many trends overlap, and a holistic view will be crucial for organizations aiming to stay ahead.
