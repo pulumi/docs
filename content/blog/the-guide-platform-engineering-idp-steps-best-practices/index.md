@@ -96,7 +96,7 @@ Successful platform engineering teams are characterized by a strong customer foc
 - **Customer-facing roles**: Serve as the primary point of contact for application teams, understanding their needs and advocating for their requirements within the platform.
 - **Infrastructure expertise**: Possess deep knowledge of the underlying infrastructure, whether on-premises or in the cloud, to ensure the platform is reliable and scalable.
 - **DevOps and automation skills**: Leverage infrastructure as code (IaC) tools and techniques to automate the provisioning and management of the platform.
-- **FinOps](https://www.pulumi.com/blog/finops-with-pulumi/) and cost optimization expertise**: Understand the organization's financial systems and processes to ensure the platform is cost-effective and aligned with budgetary constraints.
+- **[FinOps](https://www.pulumi.com/blog/finops-with-pulumi/) and cost optimization expertise**: Understand the organization's financial systems and processes to ensure the platform is cost-effective and aligned with budgetary constraints.
 - **Software development capabilities**: Develop the platform's core components, including self-service interfaces and reusable infrastructure modules, using best practices in software engineering.
 
 By assembling a team with this diverse set of skills and a customer-centric mindset, you'll be well-positioned to build a platform that truly meets the needs of your application teams.
