@@ -38,7 +38,7 @@ The new Stacks page provides more information at a glance, offering a streamline
 - **Dynamic Loading**: Enjoy instantaneous loading as you scroll, eliminating wait times and boosting efficiency.
 - **Time-Saving Shortcuts**: Use quick option to make group and sort selections or to reset them.
 
-**Placeholder for video**
+{{< video title="New Stacks Page Demo" src="./new-stacks-page-demo.mp4" width=600 height=420 autoplay="true" loop="true" >}}
 
 ### Classic View: Still Available
 
