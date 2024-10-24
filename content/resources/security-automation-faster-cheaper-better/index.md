@@ -53,7 +53,7 @@ main:
 
         In this session, David G. shared his expertise on how DevOps and DevSecOps teams are automating security processes to achieve higher quality and scalability. Learn how these efforts drive tangible business outcomes, accelerating development speed while creating a competitive edge.
 
-        Explore the intersection of security automation and business impact with an industry leader who's driving real-world results.
+        [Explore the intersection of security automation and business impact](https://www.pulumi.com/blog/devsecops-strategy-security-automation-tivity-health/) with an industry leader who's driving real-world results.
 
     # The webinar presenters
     presenters:
