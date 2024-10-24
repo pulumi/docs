@@ -1,6 +1,6 @@
 ---
 title: "Unveiling the New Stacks Page"
-date: 2024-10-18T00:00:00-07:00
+date: 2024-10-24T00:00:00-07:00
 draft: false
 allow_long_title: true
 meta_desc: "The new Stacks page is optimized for performance and flexibility with rich grouping and sorting options."
