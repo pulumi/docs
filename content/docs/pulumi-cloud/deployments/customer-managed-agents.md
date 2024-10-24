@@ -149,6 +149,7 @@ oidc_token_file: ""
 
 # List of environment variables to pass to the deployment agent
 # Environment variable override: PULUMI_AGENT_ENV_FORWARD_ALLOWLIST
+# Environment variable format is: PULUMI_AGENT_ENV_FORWARD_ALLOWLIST="VAR1 VAR2"
 env_forward_allowlist: []
 
 # Deployment target for the agent: docker (default) or kubernetes
