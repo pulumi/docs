@@ -356,12 +356,6 @@ Resources can also be queried programmatically. See the [Pulumi Cloud REST API](
 
 ## AI Assist
 
-{{% notes "info" %}}
-AI Assist is an experimental feature that lets you use natural-language prompts to generate queries for use with Resource Search.
-
-If you don't see it in your organization, [contact us](/contact?form=sales).
-{{% /notes %}}
-
 Organizations with AI Assist enabled will see an "AI Assist" button to the right of their search bar.
 
 After clicking "AI Assist" you can input a natural language query, for example:
