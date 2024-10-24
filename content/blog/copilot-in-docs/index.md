@@ -19,7 +19,7 @@ social:
 [Pulumi Copilot](/docs/pulumi-cloud/copilot/) has been making our customers' day-to-day tasks easier since its release, and today we’re excited to expand its capabilities—Pulumi Copilot is now available across Pulumi Documentation, our website, and comes equipped with a powerful new Documentation Skill!
 
 <!--more-->
-{{< video title="Copilot in Docs" src="copilot-in-docs.mp4" autoplay="false" loop="false" >}}
+{{< video title="Copilot in Docs" src="./copilot-in-docs.mp4" width=600 height=420 autoplay="true" loop="true" >}}
 
 These additions make learning about Pulumi more interactive and intuitive by allowing users to explore cloud infrastructure concepts directly within the documentation through a conversational interface. Whether you’re a seasoned Pulumi user or just starting out, Pulumi Copilot is here to help you when you need it most, where you need it most.
 
