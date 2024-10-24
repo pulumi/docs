@@ -4,13 +4,14 @@ description: "Pulumi Copilot is now available across Pulumi Documentation, equip
 date: 2024-10-24
 allow_long_title: true
 draft: false
-meta_desc: "Pulumi Copilot integrates with Pulumi Documentation, offering a conversational interface to make learning cloud infrastructure easier and more intuitive."
-meta_image: "copilot_docs_integration.png"
+meta_desc: Pulumi Copilot integrates with Pulumi Documentation, offering a conversational interface to make learning cloud infrastructure easier and more intuitive.
+meta_image: meta.png
 authors:
     - meagan-cojocar
     - artur-laksberg
 tags:
     - releases
+    - features
 social:
     twitter: "Pulumi Copilot is now available across Pulumi Documentation, our website, and comes equipped with a powerful new Documentation Skill! Learn more by reading our blog:"
 ---
