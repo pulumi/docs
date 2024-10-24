@@ -1,7 +1,7 @@
 ---
 title: "Pulumi Copilot is Now Integrated with Pulumi Docs: A New Way to Learn and Explore"
 description: "Pulumi Copilot is now available across Pulumi Documentation, equipped with a new Documentation Skill, making learning Pulumi more interactive and intuitive."
-date: 2024-10-24
+date: 2024-10-24T23:59:00-07:00
 allow_long_title: true
 draft: false
 meta_desc: Pulumi Copilot integrates with Pulumi Documentation, offering a conversational interface to make learning cloud infrastructure easier and more intuitive.
