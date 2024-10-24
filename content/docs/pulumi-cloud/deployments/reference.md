@@ -223,6 +223,22 @@ These can be overridden or extended by configuring custom environment variables:
 
 ![Pulumi UI - Environment Variables](../ui-custom-env-variables.png)
 
+#### PULUMI_ENV
+
+Environment variables can be persisted between pre-run commands and the final pulumi deployment by appending them to the file on the file system named `PULUMI_ENV`.
+
+Example Usage:
+
+```bash
+export GOOGLE_OAUTH_ACCESS_TOKEN=$(gcloud auth print-access-token)
+echo GOOGLE_OAUTH_ACCESS_TOKEN=$GOOGLE_OAUTH_ACCESS_TOKEN >> /PULUMI_ENV
+```
+
+Running `env` in a subsequent pre-run command will show the environment variable and it should be usable by scripts or your pulumi program.
+{{% notes type="info" %}}
+If `/PULUMI_ENV` does not work, and you are on self hosted, you can look for the following message in the logs to get the location: `Loading PULUMI_ENV from`.
+{{% /notes %}}
+
 ### Deployment permissions
 
 By default, the permissions that are granted to a deployment depend on how the deployment is being invoked. If the
