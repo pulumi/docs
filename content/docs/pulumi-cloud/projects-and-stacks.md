@@ -70,7 +70,7 @@ Stack permissions allow users to perform the following actions:
 
 ## Viewing Stacks
 
-![Organization projects and stacks](/images/docs/reference/service/organization-stacks.png)
+![Organization projects and stacks](/images/docs/reference/service/stacks-page.png)
 
 To view an organization's stacks:
 
