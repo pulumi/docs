@@ -1,0 +1,10 @@
+name: managing-aws-secrets-with-pulumi-esc
+runtime:
+  name: nodejs
+  options:
+    packagemanager: npm
+description: Learn to secure configuration using Pulumi's Encrypted Secrets Configuration (ESC) with AWS Secrets Manager, using TypeScript.
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: /home/runner/work/ai-content-generation/ai-content-generation/generated/managing-aws-secrets-with-pulumi-esc/e2be5f2d-6635-4950-bf4e-e5bfed6efb74

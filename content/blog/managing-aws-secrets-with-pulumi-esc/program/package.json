@@ -1,0 +1,13 @@
+{
+  "name": "managing-aws-secrets-with-pulumi-esc",
+  "description": "Learn to secure configuration using Pulumi's Encrypted Secrets Configuration (ESC) with AWS Secrets Manager, using TypeScript.",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "dependencies": {
+    "@pulumi/pulumi": "*",
+    "@pulumi/aws": "6.13.3"
+  }
+}
