@@ -70,14 +70,14 @@ Stack permissions allow users to perform the following actions:
 
 ## Viewing Stacks
 
-![Organization projects and stacks](/images/docs/reference/service/organization-stacks.png)
+![Organization projects and stacks](/images/docs/reference/service/stacks-page.png)
 
 To view an organization's stacks:
 
 1. Navigate to **All stacks**.
-1. Optionally, adjust the grouping by selecting the **Group By** and **Sort By** controls.
-1. To view a stack's details, select the stack's name.
-1. To view a specific stack update, navigate to **Activity** and select it from the list.
+2. Optionally, adjust the grouping by selecting the **Group By** and **Sort By** controls.
+3. To view a stack's details, select the stack's name.
+4. To view a specific stack update, navigate to **Activity** and select it from the list.
 
 ## Stack Favorites
 
