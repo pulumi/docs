@@ -1,7 +1,7 @@
 ---
 title: "How Secrets Sprawl is Slowing You Down—And What to Do About It."
 allow_long_title: true
-date: 2024-10-10T12:40:10+02:00
+date: 2024-10-28T12:40:10+02:00
 draft: false
 
 meta_desc: "Secrets sprawl is a real problem that can slow down our teams and impact our productivity. But it also affects how fast an organization can scale its development and operations teams. Learn how to overcome secrets sprawl and regain your productivity."
