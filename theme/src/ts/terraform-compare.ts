@@ -1,6 +1,6 @@
 import { gb } from "../../stencil/src/util/util";
 
-function initTerraformCompare() {
+function runTerraformExperiment() {
 
     // Elements for both variants
     const controlElements = document.querySelectorAll('[data-tf-variant="control"]');
@@ -18,5 +18,8 @@ function initTerraformCompare() {
     });
 }
 
-// Run when DOM is ready
-document.addEventListener('DOMContentLoaded', initTerraformCompare);
+document.addEventListener("DOMContentLoaded", () => {
+    if (window.location.pathname === "/docs/iac/concepts/vs/terraform/") {
+        runTerraformExperiment();
+    }
+});
