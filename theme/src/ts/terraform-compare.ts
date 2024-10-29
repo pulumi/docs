@@ -1,4 +1,13 @@
 import { gb } from "../../stencil/src/util/util";
+import { generateOnThisPage } from "./misc";
+
+ // Add type declarations for global functions we'll use
+declare global {
+    interface Window {
+        jQuery: any;
+        generateOnThisPage: () => void;
+    }
+}
 
 function runTerraformExperiment() {
 
@@ -8,6 +17,7 @@ function runTerraformExperiment() {
 
     // Check feature flag
     const showNewVariant = gb.isOn('20241028-vs-terraform-new');
+    // const showNewVariant = true;
 
     // Toggle visibility
     controlElements.forEach(element => {
@@ -16,6 +26,10 @@ function runTerraformExperiment() {
     newElements.forEach(element => {
         element.classList.toggle('hidden', !showNewVariant);
     });
+
+    // Clear and regenerate the "On This Page" navigation
+    window.jQuery(".table-of-contents .content ul.table-of-contents-list").empty();
+    generateOnThisPage();
 }
 
 document.addEventListener("DOMContentLoaded", () => {

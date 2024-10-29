@@ -90,7 +90,7 @@ function bindToggles(selector) {
     });
 }
 
-function generateOnThisPage() {
+export function generateOnThisPage() {
     // Hide the table of contents by default. We explicitly decide when to show it
     // below based on if elements exist to display.
     $(".table-of-contents").hide();
@@ -102,6 +102,10 @@ function generateOnThisPage() {
 
         $("h2, h3").each(function () {
             var $el = $(this);
+            // Skip if this heading is inside a hidden element
+            if ($el.closest('.hidden').length > 0) {
+                return;
+            }
             var id = $el.attr("id");
             var text = $el.text();
             var linkTitle = $el.data("link-title");
