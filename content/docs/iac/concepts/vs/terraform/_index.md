@@ -43,7 +43,7 @@ aliases:
     ></iframe>
 </div>
 
-## Your Infrastructure, Your Programming Language, Your Waysdfsdf
+## Your Infrastructure, Your Programming Language, Your Way
 
 Infrastructure as code shouldn't force you to learn yet another language. While Terraform requires learning HCL and is not open source (using the Business Source License), Pulumi takes an open-source, developer-first approach with Apache 2.0 licensing. With Pulumi, you can:
 
