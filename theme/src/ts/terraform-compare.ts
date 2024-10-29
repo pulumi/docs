@@ -1,5 +1,6 @@
 import { gb } from "../../stencil/src/util/util";
 import { generateOnThisPage } from "./misc";
+import { getQueryVariable } from "./util";
 
  // Add type declarations for global functions we'll use
 declare global {
@@ -15,8 +16,8 @@ function runTerraformExperiment() {
     const newElements = document.querySelectorAll('[data-tf-variant="new"]');
 
     // Check feature flag
-    const showNewVariant = gb.isOn('20241028-vs-terraform-new');
-    // const showNewVariant = true;
+    const urlVariant = getQueryVariable('variant-vs-terraform-docs-page');
+    const showNewVariant = urlVariant ? urlVariant === '1' : gb.isOn('20241028-vs-terraform-new');
 
     // Toggle visibility
     controlElements.forEach(element => {
