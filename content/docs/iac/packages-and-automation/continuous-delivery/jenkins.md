@@ -36,7 +36,7 @@ and choosing one of the many templates that are available.
 
 ## Sample Project
 
-You can download an [example project](https://github.com/pulumi/examples/tree/master/classic-azure-ts-appservice-springboot) and upload it to your own repo to avoid having to clone the entire Pulumi Examples repo into your Jenkins workspace.
+You can download an [example project](https://github.com/pulumi/examples/tree/846811de2c7faa4694454c64edc9bbcdb31d533e/classic-azure-ts-appservice-springboot) and upload it to your own repo to avoid having to clone the entire Pulumi Examples repo into your Jenkins workspace.
 
 ## Stack and Branch Mappings
 
