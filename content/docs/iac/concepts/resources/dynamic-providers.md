@@ -838,5 +838,5 @@ export("label_url", label.url)
 
 ### Additional Examples
 
-- [Add a Custom Domain to an Azure CDN endpoint](https://github.com/pulumi/examples/tree/master/classic-azure-ts-dynamicresource)
+- [Add a Custom Domain to an Azure CDN endpoint](https://github.com/pulumi/examples/tree/846811de2c7faa4694454c64edc9bbcdb31d533e/classic-azure-ts-dynamicresource)
     Similar to the previous example, this is another example of a shortcoming of the regular Azure resource provider available in Pulumi. However, due to the availability of a REST API, we can easily add a custom domain to an Azure CDN resource using a dynamic provider.

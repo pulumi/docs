@@ -154,7 +154,7 @@ const azMonitoringDiagnostic = new azure.monitoring.DiagnosticSetting("aks", {
 ```
 
 If you run `pulumi up` with the entire `index.ts` file as defined
-[here](https://github.com/pulumi/examples/tree/master/classic-azure-ts-aks-with-diagnostics/index.ts)
+[here](https://github.com/pulumi/examples/tree/846811de2c7faa4694454c64edc9bbcdb31d533e/classic-azure-ts-aks-with-diagnostics/index.ts)
 you will see an AKS cluster get created with monitoring and logging
 enabled.
 
@@ -184,7 +184,7 @@ metrics (Insights) and logs (Logs) show up as follows:
 We discussed how to set up AKS clusters with monitoring
 and logging in simple steps with Pulumi packages. You can find the
 complete pulumi code for our example
-[*here*](https://github.com/pulumi/examples/tree/master/classic-azure-ts-aks-with-diagnostics).
+[*here*](https://github.com/pulumi/examples/tree/846811de2c7faa4694454c64edc9bbcdb31d533e/classic-azure-ts-aks-with-diagnostics).
 For more examples visit our [GitHub examples](https://github.com/pulumi/examples) repo.
 
 If you want to additionally look at how to integrate Azure DevOps with
