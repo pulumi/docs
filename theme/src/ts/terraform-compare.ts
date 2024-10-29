@@ -32,7 +32,7 @@ function runTerraformExperiment() {
     generateOnThisPage();
 }
 
-document.addEventListener("DOMContentLoaded", () => {
+gb.setRenderer(() => {
     if (window.location.pathname === "/docs/iac/concepts/vs/terraform/") {
         runTerraformExperiment();
     }
