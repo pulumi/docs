@@ -25,6 +25,15 @@ gb.init({ streaming: true });
     ...gb.getAttributes(),
         id: (window as any).analytics.user().anonymousId(),
         userId: (window as any).analytics.user().id(),
+        url: (window as any).location.href,
+        path: (window as any).location.pathname,
+        query: (window as any).location.search,
+        referrer: document.referrer,
+        utmCampaign: getQueryVariable("utm_campaign"),
+        utmSource: getQueryVariable("utm_source"),
+        utmMedium: getQueryVariable("utm_medium"),
+        utmTerm: getQueryVariable("utm_term"),
+        utmContent: getQueryVariable("utm_content"),
     })
 })
     
