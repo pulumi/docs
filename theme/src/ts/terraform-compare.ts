@@ -5,7 +5,6 @@ import { generateOnThisPage } from "./misc";
 declare global {
     interface Window {
         jQuery: any;
-        generateOnThisPage: () => void;
     }
 }
 
