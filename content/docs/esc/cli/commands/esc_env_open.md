@@ -11,7 +11,8 @@ Open the environment with the given name.
 Open the environment with the given name and return the result
 
 This command opens the environment with the given name. The result is written to
-stdout as JSON. If a property path is specified, only retrieves that property.
+stdout as JSON. If a [property path](/docs/iac/concepts/miscellaneous/property-paths/)
+is specified, only retrieves that property.
 
 
 ```
