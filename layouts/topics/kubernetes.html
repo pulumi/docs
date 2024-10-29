@@ -23,7 +23,15 @@
             <div class="w-full order-first lg:order-last mt-8 lg:mt-0 lg:w-1/2 lg:mt-0">
                 <div>
                     <div>
-                        {{ partial "code-tabbed" (dict "tabs" .Params.kubernetes_overview.ide.tabs "chrome" "true" "mode" "dark") }}
+                        <div class="max-w-4xl container text-left card bg-white p-6 mx-auto">
+                            <pulumi-chooser type="language" options="typescript,python,go,csharp,java,yaml">
+                                {{ range $lang := .Params.kubernetes_overview.ide.tabs }}
+                                    <pulumi-choosable type="language" class="highlight" value="{{ $lang.language }}">
+                                        {{ partial "code" (dict "lang" $lang.language "code" $lang.code "mode" "light") }}
+                                    </pulumi-choosable>
+                                {{ end }}
+                            </pulumi-chooser>
+                        </div>
                     </div>
                     <div class="flex justify-center items-center mt-8 h-8">
                         <span title="TypeScript">
@@ -165,11 +173,17 @@
                 <a data-track="customer-logo" href="https://www.sourcegraph.com/" target="_blank">
                     <img class="mx-auto my-4 lg:my-2 lg:mx-8 h-6" src="/logos/customers/sourcegraph-logo.svg" alt="Sourcegraph" title="Sourcegraph" />
                 </a>
-                <a data-track="customer-logo" href="https://www.snopes.com/" target="_blank">
-                    <img class="mx-auto my-6 lg:my-2 lg:mx-8 h-10" src="/logos/customers/snopes_logo.png" alt="Snopes" title="Snopes" />
-                </a>
                 <a data-track="customer-logo" href="{{ relref . "/case-studies/lemonade" }}">
                     <img class="mx-auto my-8 lg:my-2 lg:mx-8 h-8" src="/logos/customers/lemonade.svg" alt="Lemonade" title="Lemonade" />
+                </a>
+                <a data-track="customer-logo" href="{{ relref . "/case-studies/bmw" }}">
+                    <img class="mx-auto my-8 lg:my-2 lg:mx-8 h-8" src="/logos/customers/bmw.svg" alt="BMW Group" title="BMW Group" />
+                </a>
+                <a data-track="customer-logo" href="{{ relref . "/case-studies/unity" }}">
+                    <img class="mx-auto my-8 lg:my-2 lg:mx-8 h-8" src="/logos/customers/unity.png" alt="Unity" title="Unity" />
+                </a>
+                <a data-track="customer-logo" href="{{ relref . "/case-studies/starburst" }}">
+                    <img class="mx-auto my-8 lg:my-2 lg:mx-8 h-8" src="/logos/customers/starburst.png" alt="Starburst" title="Starburst" />
                 </a>
             </div>
         </div>
