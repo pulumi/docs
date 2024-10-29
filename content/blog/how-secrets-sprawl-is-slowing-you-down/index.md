@@ -28,7 +28,7 @@ social:
     Learn how to overcome secrets sprawl and regain your productivity.
 ---
 
-There are several things in the lives of developers and DevOps engineers: taxes, yearly performance reviews, and secret sprawl. While the first two are inevitable, the last one is something that can be managed.
+Only a few things are certain in the lives of developers and DevOps engineers: taxes, yearly performance reviews, and secret sprawl. While the first two are inevitable, the last one is something that can be managed.
 
 As we keep adding new cloud resources and releasing new applications, the number of secrets we need to manage keeps growing: passwords, API keys, certificates, and more. And as this is not enough, we need to manage secrets across different systems and environments with different teams that need to access them; we end up with duplicates.
 
