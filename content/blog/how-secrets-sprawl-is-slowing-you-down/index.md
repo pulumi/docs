@@ -30,7 +30,7 @@ social:
 
 Only a few things are certain in the lives of developers and DevOps engineers: taxes, yearly performance reviews, and secret sprawl. While the first two are inevitable, the last one is something that can be managed.
 
-As we keep adding new cloud resources and releasing new applications, the number of secrets we need to manage keeps growing: passwords, API keys, certificates, and more. And as this is not enough, we need to manage secrets across different systems and environments with different teams that need to access them; we end up with duplicates.
+As we keep adding new cloud resources and releasing new applications, the number of secrets we need to manage keeps growing: passwords, API keys, certificates, and more. And as if this isn't enough, we need to manage secrets across different systems and environments with different teams that need to access them; we end up with duplicates.
 
 Let's have a look at a typical environment and see what teams use: Everything container-related may use Docker secrets or Kubernetes secrets. There is also a high chance that they might use cloud-specific secrets managers like Azure Key Vault, AWS Secrets Manager, or Google Secret Manager. In addition to these, there is a high chance that they might use HashiCorp Vault or some enterprise-grade secrets manager like CyberArk.
 
