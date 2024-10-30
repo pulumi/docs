@@ -16,13 +16,15 @@
 
 {{ $showChecksum  := .Get "showChecksum" }}
 
+<!-- 2.23.0 (2021-03-17) is first arm64 build -->
+{{ $armBuildsStartDate := time.AsTime "2021-03-17" }}
 
 <tr>
     <td><a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#{{ $flatVersion }}-{{ $date }}">{{ $version }}</a></td>
     <td>{{ $date }}</td>
-    <td>{{ template "dl" (dict "exclude" $exclude "version" $version "platform" "linux" "ext" "tar.gz" "display" "Linux") }}</td>
-    <td>{{ template "dl" (dict "exclude" $exclude "version" $version "platform" "darwin" "ext" "tar.gz" "display" "macOS") }}</td>
-    <td>{{ template "dl" (dict "exclude" $exclude "version" $version "platform" "windows" "ext" "zip" "display" "Windows") }}</td>
+    <td>{{ template "dl" (dict "exclude" $exclude "version" $version "date" $date "armDate" $armBuildsStartDate "platform" "linux" "ext" "tar.gz" "display" "Linux") }}</td>
+    <td>{{ template "dl" (dict "exclude" $exclude "version" $version "date" $date "armDate" $armBuildsStartDate "platform" "darwin" "ext" "tar.gz" "display" "macOS") }}</td>
+    <td>{{ template "dl" (dict "exclude" $exclude "version" $version "date" $date "armDate" $armBuildsStartDate "platform" "windows" "ext" "zip" "display" "Windows") }}</td>
     <td>{{ template "checksum" (dict "showChecksum" $showChecksum "version" $version) }}</td>
 </tr>
 
@@ -30,7 +32,12 @@
     {{ if in .exclude .platform }}
         <span class="text-sm text-gray-500">unavailable</span>
     {{ else }}
-        <a href="https://get.pulumi.com/releases/sdk/pulumi-v{{ .version }}-{{ .platform }}-x64.{{ .ext }}">{{ .display }}</a>
+        {{ if ge (time.AsTime .date) .armDate }}
+            <span class="text-sm">{{ .display}}</span>
+            <a href="https://get.pulumi.com/releases/sdk/pulumi-v{{ .version }}-{{ .platform }}-x64.{{ .ext }}" class="text-xs">x64</a>/<a href="https://get.pulumi.com/releases/sdk/pulumi-v{{ .version }}-{{ .platform }}-arm64.{{ .ext }}" class="text-xs">arm64</a>
+        {{ else }}
+            <a href="https://get.pulumi.com/releases/sdk/pulumi-v{{ .version }}-{{ .platform }}-x64.{{ .ext }}">{{ .display }}</a>
+        {{ end }}
     {{ end }}
 {{ end }}
 
