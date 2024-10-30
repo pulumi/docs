@@ -219,6 +219,7 @@ superpowers:
       cta: Learn more
       cta_url: "/docs/iac/get-started/kubernetes/"
       icon_type: cloud
+      icon_color: salmon
       description: |
         Support for all clouds including Amazon Elastic Kubernetes Service (EKS), Azure
         Kubernetes Service (AKS), Google Kubernetes Engine (GKE), DigitalOcean Kubernetes
@@ -228,7 +229,8 @@ superpowers:
     - title: Reduce Provisioning Time
       cta: Learn more
       cta_url: "/docs/iac/get-started/kubernetes/"
-      icon_type: provisioning
+      icon_type: rocketship
+      icon_color: purple
       description: |
         With Pulumi you are able to take advantage of the features of programming languages,
         helping you reduce boilerplate code and ultimately ship Kubernetes infrastructure and
@@ -238,6 +240,7 @@ superpowers:
       cta: Learn more
       cta_url: "/docs/iac/packages-and-automation/continuous-delivery/"
       icon_type: delivery
+      icon_color: blue
       description: |
         You can integrate Pulumi directly with your favorite CI/CD and SCM systems to
         continuously deliver Kubernetes infrastructure and applications. Improve the velocity
@@ -247,6 +250,7 @@ superpowers:
       cta: Learn more
       cta_url: "/docs/iac/concepts/"
       icon_type: architecture
+      icon_color: fuchsia
       description: |
         YAML and templated DSLs force you to write the same boilerplate code over and over.
         Pulumi’s Kubernetes library allows you to codify those patterns and best practices so
@@ -255,7 +259,8 @@ superpowers:
     - title: Be Proactive, Not Reactive
       cta: Learn more
       cta_url: "/docs/iac/packages-and-automation/crossguard/"
-      icon_type: policy
+      icon_type: shield
+      icon_color: yellow
       description: |
         When you enable Pulumi's Policy as Code feature, you instantly gain the power to
         prevent mistakes from being deployed. Enforce security, compliance, cost controls,
@@ -265,6 +270,7 @@ superpowers:
       cta: Learn more
       cta_url: "/docs/iac/concepts/testing/"
       icon_type: testing
+      icon_color: violet
       description: |
         Deploying untested code can lead to some unexpected results. Pulumi lets you take advantage
         of common tools, frameworks, and techniques to unit, integration, and property test your

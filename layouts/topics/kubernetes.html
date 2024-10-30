@@ -214,41 +214,27 @@
         </div>
     </section>
 
-    <section id="superpowers" class="bg-white pt-24 px-4 justify-center" id="editions">
-        <div class="container mx-auto lg:flex justify-center">
-            <ul class="flex flex-col lg:flex-row lg:flex-wrap items-start list-none p-0">
-                {{ $powers := .Params.superpowers }}
-                {{ range $i, $item := $powers }}
-                    <li class="lg:w-1/2 lg:flex items-start mt-0">
-                        <div class="text-center lg:text-left mb-4 lg:mb-0">
-                            <div class="inline-block bg-blue-100 border-4 border-blue-200 rounded-full p-6" style="fill: #4387c7;">
-                                {{ partial "superpower-icon" (dict "type" $item.icon_type) }}
-                            </div>
+    <section id="superpowers" class="container mx-auto text-center mt-16">
+        <div class="flex flex-wrap justify-content items-stretch text-left my-4">
+            {{ range $item := .Params.superpowers }}
+                <div class="w-full lg:w-1/2 p-3">
+                    <div class="h-full card bg-white p-8">
+                        <div class="icon-section mb-8">
+                            {{ partial "color-icon.html" (dict "icon" $item.icon_type "icon_color" $item.icon_color) }}
                         </div>
-                        <div class="lg:pl-6 lg:pr-12">
-                            <h4 class="text-center lg:text-left mt-0">
-                                <a class="link" href="{{ relref $pageContext $item.cta_url }}">
-                                    <span class="align-middle">{{ $item.title }}</span>
-                                </a>
-                            </h4>
-                            <p class="leading-relaxed md:px-24 lg:px-0">{{ $item.description }}</p>
-                            <p class="m-0 text-lg text-center lg:text-left">
-                                <a class="link" href="{{ relref $pageContext $item.cta_url }}">
-                                    <span class="transition-all hover:mr-1">{{ $item.cta }}</span>
-                                    <span>&rarr;</span>
-                                </a>
-                            </p>
-                            {{ $borderBottom := "border-b" }}
-                            {{ if eq $i (sub (len $powers) 2) }}
-                                {{ $borderBottom = "border-b md:border-none" }}
-                            {{ else if eq $i (sub (len $powers) 1) }}
-                                {{ $borderBottom = "border-none" }}
-                            {{ end }}
-                            <div class="mb-12 pb-12 border-gray-300 {{ $borderBottom }}"></div>
+                        <div>
+                            <h5>{{ $item.title }}</h5>
                         </div>
-                    </li>
-                {{ end }}
-            </ul>
+                        <div class="mt-6">
+                            <p>{{ $item.description | markdownify }}</p>
+                        </div>
+                            <a href="{{ relref $pageContext $item.cta_url }}" class="underline text-blue-700 text-lg">
+                                <span class="transition-all hover:mr-1">{{ $item.cta }}</span>
+                                <span>&rarr;</span>
+                            </a>
+                    </div>
+                </div>
+            {{ end }}
         </div>
     </section>
 
