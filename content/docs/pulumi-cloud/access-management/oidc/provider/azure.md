@@ -33,7 +33,7 @@ This document outlines the steps required to configure Pulumi to use OpenID Conn
 Please note that this guide provides step-by-step instructions based on the official provider documentation which is subject to change. For the most current and precise information, always refer to the [official Azure documentation](https://learn.microsoft.com/en-us/entra/identity-platform/howto-create-service-principal-portal).
 {{< /notes >}}
 
-## Create a Microsoft Entra Application
+## Create a Microsoft Entra application
 
 In the navigation pane of the [Microsoft Entra console](https://portal.azure.com/#view/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/~/Overview):
 
@@ -42,7 +42,7 @@ In the navigation pane of the [Microsoft Entra console](https://portal.azure.com
 3. In the **Supported account types** section, select **Accounts in this organizational directory only**.
 4. Click **Register**.
 
-After the Microsoft Entra App has been created, take note of the following details:
+After the Microsoft Entra application has been created, take note of the following details:
 
 * Subscription ID
 * Application (client) ID
@@ -50,7 +50,7 @@ After the Microsoft Entra App has been created, take note of the following detai
 
 These values will be necessary when enabling OIDC for your service.
 
-## Add Federated Credentials
+## Add federated credentials
 
 Once you have created your new application registration, you will be redirected to the application's **Overview** page. In the left navigation menu:
 
@@ -151,12 +151,12 @@ In addition to the Pulumi Console, deployment settings including OIDC can be con
 {{% /notes %}}
 
 1. Navigate to your stack in the [Pulumi Console](https://app.pulumi.com/).
-2. Open the stack's "Settings" tab.
-3. Choose the "Deploy" panel.
-4. Under the "OpenID Connect" header, toggle "Enable Azure Integration".
-5. Enter the client and tenant IDs for the app registration created above in the "Client ID" and "Tenant ID" fields, repsectively.
-6. Enter the ID of the subscription you want to use in the "Subscription ID" field.
-7. Click the "Save deployment configuration" button.
+2. Open the stack's **Settings** tab.
+3. Choose the **Deploy** panel.
+4. Under the **OpenID Connect** header, toggle **Enable Azure Integration**.
+5. Enter the client and tenant IDs for the app registration created above in the **Client ID** and **Tenant ID** fields, repsectively.
+6. Enter the ID of the subscription you want to use in the **Subscription ID** field.
+7. Click the **Save deployment configuration** button.
 
 With this configuration, each deployment of this stack will attempt to exchange the deployment's OIDC token for Azure credentials using the specified AAD App prior to running any pre-commands or Pulumi operations. The fetched credentials are published in the `ARM_CLIENT_ID`, `ARM_TENANT_ID`,  and `ARM_SUBSCRIPTION_ID` environment variables. The raw OIDC token is also available for advanced scenarios in the `PULUMI_OIDC_TOKEN` environment variable and the `/mnt/pulumi/pulumi.oidc` file.
 
@@ -223,7 +223,7 @@ Make sure to replace `<your-org>`, `<your-project>`, and `<your-environment>` wi
 
 To learn more about how to set up and use the various providers in Pulumi ESC, please refer to the [relevant Pulumi documentation](/docs/esc/integrations/)
 
-## Automate OIDC Configuration
+## Automate OIDC configuration
 
 Our [Examples](https://github.com/pulumi/examples) repository provides a wide variety of automations using Pulumi Infrastructure as Code (IaC). If you want to automate the configuration and deployment of OIDC between Pulumi and Azure, take a look at the following examples to help you get started:
 
