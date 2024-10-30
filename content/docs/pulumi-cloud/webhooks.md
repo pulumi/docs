@@ -210,7 +210,7 @@ follow the link below to quickly get started with a pre-defined Slack app manife
 ### Microsoft Teams Webhooks
 
 Microsoft Teams Webhooks allow you to seamlessly integrate notifications about your Pulumi stacks and organizations
-into your Microsoft Teams workspace by simply providing a [Microsoft Teams incoming webhook workflow URL](https://prod.support.services.microsoft.com/en-us/office/create-incoming-webhooks-with-workflows-for-microsoft-teams-8ae491c7-0394-4861-ba59-055e33f75498)
+into your Microsoft Teams workspace by simply providing a [Microsoft Teams incoming webhook workflow URL](https://support.microsoft.com/en-us/office/create-incoming-webhooks-with-workflows-for-microsoft-teams-8ae491c7-0394-4861-ba59-055e33f75498)
 and optionally choosing which events you want delivered using [event groups and filters](#event-filtering).
 
 ### Deployment Webhooks
