@@ -17,18 +17,13 @@ aliases:
   - /docs/intro/deployments/faq/
 ---
 
-## Roadmap
-
-We track open feature requests for Deployments in the [Pulumi Cloud requests repo](https://github.com/pulumi/pulumi-cloud-requests). Here are a few that have been requested by customers that are on our roadmap:
-
-- [Built-in drift detection](https://github.com/pulumi/pulumi-cloud-requests/issues/173)
-- [Built-in temporary infrastructure and TTL stacks](https://github.com/pulumi/pulumi-cloud-requests/issues/149)
-- [User-hosted deployment runners](https://github.com/pulumi/pulumi-cloud-requests/issues/207)
-- [Add `git push` support for other VCS providers such as Bitbucket](https://github.com/pulumi/pulumi-cloud-requests/issues/162)
-
 ## Security and Isolation
 
-Deployments run on single-use virtual machines and compute and storage are never shared across runs. We designed our architecture to maximize isolation. In addition, security features like OIDC allow you to fine tune credential scope, lifetime, and expiration policies at a per-deployment level. Self-hosted deployment runners are on our roadmap.
+Deployments run on single-use virtual machines and compute and storage are never shared across runs. We designed our architecture to maximize isolation. In addition, security features like OIDC allow you to fine tune credential scope, lifetime, and expiration policies at a per-deployment level. It is also possible to use [self-hosted runners](/docs/pulumi-cloud/deployments/customer-managed-agents/) if you require additional isolation.
+
+## Common recipes
+
+See [Using Deployments](/docs/pulumi-cloud/deployments/reference/) for common recipes and best practices.
 
 ## More FAQ
 
