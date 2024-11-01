@@ -5,37 +5,26 @@
     <div class="banner-image flex justify-center">
         <div class="text-center py-16">
             <img src="/images/pulumiup-2023/logo.svg" alt="Pulumi UP, virtual, free" class="mx-auto mt-16 h-40" />
-            <h3 class="yellow-header-text">September 18, 2024</h3>
+            <h3 class="yellow-header-text">Europe 2024</h3>
             <div class="banner-description mx-auto mb-12 w-2/3">
-                <h4>The Global Cloud and IaC Conference</h4>
+                <h4>November 20 | 9:00 AM (UTC +0)</h4>
                 <p>
-                    Dive into the future of cloud and Infrastructure as Code (IaC).<br/>Watch expert talks on how to build and scale on the cloud, Platform Engineering, AI, and more
+                    A half-day virtual event where industry leaders and community experts will share practical insights, lessons learned, and best practices.
                 </p>
             </div>
             <div class="my-8 flex flex-col flex-wrap sm:flex-row justify-center">
-                <a class="m-4 sm:m-2 btn-primary" href="https://conference.pulumi.com/talks/keynote/">Watch On Demand</a>
-                </a>
+                <a class="m-4 sm:m-2 btn-primary" href="https://info.pulumi.com/pulumiup-2024-europe">Register Now</a>
+                <a class="m-4 sm:m-2 btn-primary" href="https://info.pulumi.com/pulumiup-2024-europe#pulumiup-agenda">See Agenda</a>
             </div>
         </div>
     </div>
 
     <div class="below-banner-description mx-auto px-8 my-10 w-full flex-col">
-        <h4>The Global Cloud and IaC Conference</h4>
+        <h4>November 20 | 9:00 AM (UTC +0)</h4>
         <p>
-            Dive into the future of cloud and Infrastructure as Code (IaC).<br/>Watch expert talks on how to build and scale on the cloud, Platform Engineering, AI, and more.
+            A half-day virtual event where industry leaders and community experts will share practical insights, lessons learned, and best practices.
         </p>
     </div>
-
-    <section class="container mx-auto my-20 lg:mt-16 lg:mb-8 p-4d">
-        <div class="flex flex-row lg:justify-center w-full">
-            <ul class="flex flex-col lg:flex-row list-none justify-center w-11/12 lg:w-max lg:border-b-2 lg:border-gray-200 pb-5">
-                <li class="px-5 py-2 border-b-2 lg:border-b-0 lg:border-r-2 border-gray-600"><a href="https://conference.pulumi.com/stage/platform-engineering-devops-stage/?utm_source=PulumiUp&utm_medium=web&utm_campaign=FY2025Q1_Event_PulumiUP" target="_blank" class="text-gray-700">Platform Engineering / DevOps</a></li>
-                <li class="px-5 py-2 border-b-2 lg:border-b-0 lg:border-r-2 border-gray-600"><a href="https://conference.pulumi.com/stage/ai-ml-stage/?utm_source=PulumiUp&utm_medium=web&utm_campaign=FY2025Q1_Event_PulumiUP" target="_blank" class="text-gray-700">AI / ML</a></li>
-                <li class="px-5 py-2 border-b-2 lg:border-b-0 lg:border-r-2 border-gray-600"><a href="https://conference.pulumi.com/stage/cloud-iac-stage/?utm_source=PulumiUp&utm_medium=web&utm_campaign=FY2025Q1_Event_PulumiUP" target="_blank" class="text-gray-700">Cloud and IaC</a></li>
-                <li class="px-5 py-2 border-b-2 border-gray-600 lg:border-b-0"><a href="https://conference.pulumi.com/stage/main-stage-3/?utm_source=PulumiUp&utm_medium=web&utm_campaign=FY2025Q1_Event_PulumiUP" target="_blank" class="text-gray-700">Cloud Culture</a></li>
-            </ul>
-        </div>
-    </section>
 
     <section class="container mx-auto my-20 lg:mt-16 lg:mb-8 p-4">
         <div class="lg:flex">
@@ -50,7 +39,7 @@
                 </div>
             </div>
             <div class="lg:w-1/2 lg:pr-16">
-                <h3>Discover. Learn. Innovate.</h3>
+                <h3>Past PulumiUP Global</h3>
                 <p>
                     Join us for a day filled with tech talks, panel discussions, demos, new product releases, and more.
                     Learn trends, best practices, and lessons learned in:
@@ -134,54 +123,6 @@
         </div>
     </section>
     {{ end }}
-
-    <section id="workshops" class="py-8 mb-12">
-        <div class="container mx-auto">
-            <h3 class="ml-4">Workshops</h3>
-            <ul class="event-list flex flex-wrap list-none p-0 mb-8 sm:p-2 resource-list">
-            {{ range .Params.workshops }}
-            <li class="flex event-card w-full m-0 p-2 lg:w-1/2">
-                <article class="card bg-white h-80 md:h-72 flex flex-col mx-2 md:mx-0 border border-gray-200 hover:border-gray-500">
-                    <a href="" rel="" target="_blank" class="w-full h-full">
-                        <span class="block w-full h-full p-4 flex flex-col justify-between">
-                            <span>
-                                <span class="flex flex-row justify-between">
-                                    <span class="w-10/12 text-left">
-                                        <span class="font-medium text-gray-800">WORKSHOP</span>
-                                        <span class="text-gray-300">&#8226;</span>
-                                            <span class="font-normal text-gray-800">VIRTUAL</span>
-                                            <h6 class="mt-2 mb-0 text-left text-xl md:text-xl">
-                                                {{ .title }}
-                                            </h6>
-                                    </span>
-                                    <span class="flex flex-col justify-between border-2 border-gray-300 rounded w-16 overflow-visible h-16">
-                                        <div class="bg-white text-center text-2xl pt-0.5 text-gray-900 font-semibold">
-                                            {{ .datetime | time.Format "2" }}
-                                        </div>
-                                        <div class="bg-gray-300 text-center text-xs md:text-sm py-0.5 text-gray-900">
-                                            {{ upper ( .datetime | time.Format "Jan 06") }}
-                                        </div>
-                                    </span>
-                                </span>
-                                <span class="flex flex-col justify-start mt-3">
-                                    <p class="m-0 mb-4 pt-0 text-gray-700 text-left">
-                                        {{ .meta_desc }}
-                                    </p>
-                                </span>
-                            </span>
-                            <div class="pl-5 pb-8">
-                                <a class="btn-secondary w-4/12" href={{ .link }}>Register Now</a>
-                            </div>
-                                
-                        </span>
-                    </a>
-                </article>
-            </li>
-            {{ end }}
-            </ul>
-            
-        </div>
-    </section>
 
     <section id="sponsors" class="my-0 mb-16 py-4 lg:py-12 overflow-hidden px-3 white-background">
         <div class="container mx-auto text-center">
