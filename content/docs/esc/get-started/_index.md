@@ -18,4 +18,16 @@ Hardcoding these values or keeping them inside source code is a security risk an
 
 In this tutorial, we’ll demonstrate how to use Pulumi ESC as well as the power of this service in managing configuration and secrets.
 
+Before you begin, you can watch the following video which provides a high level overview of how Pulumi ESC works:
+
+<div class="rounded-md shadow border border-gray-300 w-3/4 mx-auto my-4" style="position: relative; padding-bottom: 40.25%; height: 0; overflow: hidden;">
+    <iframe
+        src="//www.youtube.com/embed/JY3Cm1UUIY?rel=0"h
+        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;"
+        allowfullscreen=""
+        title="Introduction to Pulumi in Three Minutes"
+        srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img{position:absolute;width:100%;top:0;bottom:0;margin:auto}</style><a href=https://www.youtube.com/embed/JY3Cm1UUIY?autoplay=1><img src='/images/home/youtube-getting-started.png' alt='Introduction to Pulumi in Three Minutes'></a>">
+    </iframe>
+</div>
+
 {{< get-started-stepper >}}
