@@ -1,3 +1,0 @@
-name: awsx-elb-private-subnet-typescript
-runtime: nodejs
-description: An example that deploys an ApplicationLoadBalancer listening on a private subnet.

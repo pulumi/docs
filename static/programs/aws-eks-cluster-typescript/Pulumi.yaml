@@ -1,3 +1,0 @@
-name: aws-eks-cluster-typescript
-runtime: nodejs
-description: An example that deploys a Kubernetes cluster on AWS.

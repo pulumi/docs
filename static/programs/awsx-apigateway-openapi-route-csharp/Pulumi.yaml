@@ -1,3 +1,0 @@
-name: awsx-apigateway-openapi-route-csharp
-runtime: dotnet
-description: n example of configuring an API Gateway route with an OpenAPI/Swagger definition.

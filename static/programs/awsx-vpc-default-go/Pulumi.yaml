@@ -1,3 +1,0 @@
-name: awsx-vpc-default-go
-runtime: go
-description: An example of fetching the default AWS VPC for the current region.

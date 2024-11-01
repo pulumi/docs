@@ -1,3 +1,0 @@
-name: awsx-vpc-default-typescript
-runtime: nodejs
-description: An example of fetching the default AWS VPC for the current region.
