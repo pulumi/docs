@@ -13,4 +13,5 @@ menu:
 
 Learn more about miscellaneous Pulumi concepts.
 
+- [Function Serialization](/docs/iac/concepts/miscellaneous/function-serialization/)
 - [Property Paths](/docs/iac/concepts/miscellaneous/property-paths/)
