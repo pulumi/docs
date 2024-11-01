@@ -4,8 +4,7 @@ description: An example that deploys an S3 bucket and bucket policy on AWS.
 
 resources:
   myBucket:
-    type: aws:s3/bucket:BucketV2
-
+    type: aws:s3:BucketV2
   myBucketPolicy:
     type: aws:s3/bucketPolicy:BucketPolicy
     properties:

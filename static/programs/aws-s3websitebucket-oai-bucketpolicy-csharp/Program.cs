@@ -42,7 +42,7 @@ return await Deployment.RunAsync(() =>
 
     var bucketPolicy = new BucketPolicy("cloudfront-bucket-policy", new BucketPolicyArgs
     {
-        Bucket = bucket.BucketName,
+        Bucket = bucket.Id,
         Policy = Output.Tuple(bucket.Arn, originAccessIdentity.IamArn)
         .Apply(t =>
         {
