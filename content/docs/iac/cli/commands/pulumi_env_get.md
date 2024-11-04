@@ -13,8 +13,9 @@ Get a value within an environment.
 Get a value within an environment
 
 This command fetches the current definition for the named environment and gets a
-value within it. The path to the value to set is a Pulumi property path. The value
-is printed to stdout as YAML.
+value within it. The path to the value to set is a Pulumi
+[property path](/docs/iac/concepts/miscellaneous/property-paths/).
+The value is printed to stdout as YAML.
 
 
 ```
