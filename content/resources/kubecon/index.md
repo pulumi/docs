@@ -45,7 +45,7 @@ main:
     duration: 1 hour
 
     # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
-    location: Salt Lake City
+    location: Salt Lake City, UT
 
     # Description of the webinar.
     description:
