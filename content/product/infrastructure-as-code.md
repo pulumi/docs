@@ -193,7 +193,7 @@ key_features_below:
           sub_title: "Pulumi Cloud"
           description: |
              A fully-managed service for Pulumi IaC plus so much more. Manage and store infrastructure state & secrets, collaborate within teams, view and search infrastructure, and manage security and compliance using Pulumi Cloud.
-          image: "/images/product/pulumi-cloud-dashboard.png"
+          image: "/images/product/pulumi-cloud-iac-stylized-01.png"
           button:
             text: "Learn more about Pulumi Cloud"
             link: "/product/pulumi-cloud/"
