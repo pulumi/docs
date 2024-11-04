@@ -103,53 +103,9 @@ The `ignoreChanges` option only applies to resource inputs, not outputs.
 The `ignoreChanges` resource option does not apply to inputs to component resources.  If `ignoreChanges` is passed to a component resource, it is up to that component's implementation to decide what if anything it will do.
 {{% /notes %}}
 
-In addition to passing simple property names, nested properties can also be supplied to ignore changes to a more targeted nested part of the resource's inputs. Here are examples of legal paths that can be passed to specify nested properties of objects and arrays, as well as to escape object keys that contain special characters:
-
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
-
-{{% choosable language python %}}
+In addition to passing simple property names, nested properties can also be supplied to ignore changes to a more targeted nested part of the resource's inputs. See [property paths](/docs/iac/concepts/miscellaneous/property-paths/) for examples of legal paths that can be passed to specify nested properties of objects and arrays.
 
 {{% notes "info" %}}
 The property names passed to `ignoreChanges` should always be the "camelCase" version of the property name, as used in the core Pulumi resource model.
 For example, a property named `nested_resource` would turn into `nestedResource`.
 {{% /notes %}}
-
-{{% /choosable %}}
-
-{{% choosable language go %}}
-
-{{% notes "info" %}}
-The property names passed to `ignoreChanges` should always be the "camelCase" version of the property name, as used in the core Pulumi resource model.
-For example, a property named `NestedResource` would turn into `nestedResource`.
-{{% /notes %}}
-
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-
-{{% notes "info" %}}
-The property names passed to `ignoreChanges` should always be the "camelCase" version of the property name, as used in the core Pulumi resource model.
-For example, a property named `NestedResource` would turn into `nestedResource`.
-{{% /notes %}}
-
-{{% /choosable %}}
-
-{{< /chooser >}}
-
-- `root`
-- `root.nested`
-- `root["nested"]`
-- `root.double.nest`
-- `root["double"].nest`
-- `root["double"]["nest"]`
-- `root.array[0]`
-- `root.array[100]`
-- `root.array[0].nested`
-- `root.array[0][1].nested`
-- `root.nested.array[0].double[1]`
-- `root["key with \"escaped\" quotes"]`
-- `root["key with a ."]`
-- `["root key with \"escaped\" quotes"].nested`
-- `["root key with a ."][100]`
-- `root.array[*].field`
-- `root.array["*"].field`

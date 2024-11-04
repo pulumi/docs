@@ -107,7 +107,7 @@ esc env edit ${ESC_ENV}
 
 There are two options for managing the `.dev.vars` definition.
 
-- Option 1: Utilize the `--format` export flag for flexibility. A dedicated Environment is required as the format flag does not support property paths Paste the contents below in the editor:
+- Option 1: Utilize the `--format` export flag for flexibility. A dedicated Environment is required as the format flag does not support property paths. Paste the contents below in the editor:
 
   ```yaml
   values:
