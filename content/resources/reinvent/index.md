@@ -1,7 +1,7 @@
 ---
 # Name of the event, <= 60 characters
-title: KubeCon North America
-meta_desc: Ready to streamline your Kubernetes setup? Visit Pulumi in booth R1 to hear about universal infrastructure as code for Kubernetes.
+title: AWS re:Invent
+meta_desc: "Visit Pulumi booth #370 to learn how to automate, secure and manage everything you run in AWS."
 meta_image:
 
 # A featured webinar will display first in the list.
@@ -26,7 +26,7 @@ block_external_search_index: true
 
 # The url slug for the webinar landing page. If this is an external
 # webinar, use the external URL as the value here.
-url_slug: /kubecon
+url_slug: /reinvent
 
 # Content for the left hand side section of the page.
 main:
@@ -39,14 +39,13 @@ main:
     youtube_url:
 
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2024-11-12T09:00:00-07:00
+    sortable_date: 2024-12-02T09:00:00-08:00
 
     # Duration of the webinar.
-    duration: 1 hour
+    duration: 
 
     # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
-    location: Salt Lake City
-
+    location: Las Vegas
     # Description of the webinar.
     description:
 
@@ -56,8 +55,9 @@ main:
     # case-sensitive
     tags:
         level: # Beginner, Intermediate, Advanced
-        topics: ["Kubernetes"]
+        topics: []
         languages: []
+        clouds: ["AWS"]
 
 # The right hand side form section.
 form:
