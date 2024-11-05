@@ -11,8 +11,7 @@ aliases:
 hero:
     title: Kubernetes Superpowers
     body: >
-        Pulumi lets you use a single infrastructure as code workflow for managing cloud native resources and infrastructure with software engineering. Eliminate complex YAML, JSON, and DSLs by using your favorite programming languages and automate deployments to AWS, Azure, Google Coud,
-        and 100+ providers.
+        Pulumi empowers organizations to automate Kubernetes applications, clusters, and entire cloud environments through code, tame secrets sprawl through centralized secrets management, and manage cloud assets and compliance with the help of AI. Pulumi encourages infrastructure, platform, development, DevOps, and security teams to collaborate and accelerates time to market with greater control and minimized risk.
     cta_text: See what's new
 
 video_section:
@@ -282,7 +281,7 @@ detail_sections:
         Pulumi has first-class support for popular Kubernetes tools, such as Helm, Kustomize,
         YAML, Secret Managers, Open Policy Agent (OPA), Custom Resource Definitions (CRDs), and Server-Side Apply (SSA).
       cta: Learn More
-      cta_url: "/blog/new-kubernetes-superpowers"
+      cta_url: "/blog/"
       items:
           - title: Everything In One Place
             icon: cloud-with-nodes
@@ -304,31 +303,31 @@ detail_sections:
             icon_color: fuchsia
             description: Deploy both Kubernetes resources and cloud infrastructure from within the Kubernetes resource model using a GitOps workflow. Use Pulumi's Flux integration and many other CI/CD integrations.
 
-    - title: Kubernetes Best Practices with Pulumi Crosswalk
+    - title: AI-powered Kubernetes Management
       description: |
-        Create, deploy, and manage production-ready infrastructure leveraging hosted Kubernetes offerings such as Amazon Elastic Kubernetes Service (EKS), Azure Kubernetes Service (AKS), or Google Kubernetes Engine (GKE).
+        Pulumi Copilot, an AI-powered assistant, makes discovering cost savings, running compliance checks, and debugging deployments across your Kubernetes resources as easy as typing a question.
       cta: Learn More
       cta_url: "/docs/iac/clouds/kubernetes/guides/"
       items:
-          - title: Day 2 and Beyond
-            icon: cycle
+          - title: Discover Cost Savings
+            icon: guage
             icon_color: blue
-            description: By using Pulumi Crosswalk for Kubernetes, you can benefit from tried-and-true “Day Two and beyond” integrations and playbooks, improving your infrastructure security, manageability, and cost effectiveness.
+            description: Lorem ipsum odor amet, consectetuer adipiscing elit. Facilisi metus rutrum aptent fusce, egestas etiam hac. Felis dictum sodales vitae interdum integer.
 
-          - title: Accessible Kubernetes
-            icon: collab
+          - title: Run Compliance Checks
+            icon: testing
             icon_color: purple
-            description: Through Pulumi's Crosswalk for Kubernetes library extensions, the authorship experience has improved to make the Kubernetes API more accessible and approachable to operators and developers of all backgrounds.
+            description: Lorem ipsum odor amet, consectetuer adipiscing elit. Nibh diam et iaculis porttitor eget arcu.
 
-          - title: Focus on Delivering Value
-            icon: nodes
+          - title: Debug Cloud Failures
+            icon: cloud-with-nodes
             icon_color: salmon
-            description: With Pulumi you'll focus more on functionality and business logic of your Kubernetes infrastructure and applications, and less on low-level implementation details.
+            description: Lorem ipsum odor amet, consectetuer adipiscing elit. Dui facilisi molestie quam euismod consequat rhoncus taciti condimentum. Leo fermentum lacus sem; auctor cubilia aliquam iaculis.
 
-          - title: Avoid Pitfalls
-            icon: code
+          - title: Stay Secure
+            icon: shield
             icon_color: yellow
-            description: Discover solutions to the hardest Kubernetes problems to avoid mitigating pitfalls around infrastructure, security, governance, reliability, and maintainability of the K8s cluster, its workloads, and underlying resources.
+            description: Lorem ipsum odor amet, consectetuer adipiscing elit. Donec facilisi tincidunt lectus ultrices enim class suscipit. Magnis cursus ornare; tellus sollicitudin tincidunt natoque. Nec sagittis nulla facilisis odio consequat eleifend erat.
 
 contact_us_form:
     section_id: contact

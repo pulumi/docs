@@ -1,5 +1,12 @@
 {{ define "hero" }}
-    {{ partial "hero" (dict "title" "Universal Infrastructure as Code for Kubernetes") }}
+    <header class="page-hero bg-gradient-to-r from-white from-0% via-violet-100 via-50% to-white to-100% border-b border-gray-300">
+        <div class="page-hero-title">
+            <h1>
+                <span class="rainbow-text text-6xl leading-normal" data-text="Universal Infrastructure as Code for Kubernetes">Infrastructure Management for Kubernetes</span>
+            </h1>
+            
+        </div>
+    </header>
 {{ end }}
 
 {{ define "main" }}
@@ -244,7 +251,7 @@
                 <div class="w-full max-w-2xl mx-auto text-center">
                     <h3>{{ $item.title }}</h3>
                     <p class="md:px-24 lg:px-0">{{ $item.description | markdownify }}</p>
-                    <a class="hidden btn-secondary lg:inline-block my-4" href="{{ relref $pageContext $item.cta_url }}">
+                    <a class="hidden btn-secondary lg:inline-block my-4" href="{{ $item.cta_url }}">
                         {{ $item.cta }}
                     </a>
                 </div>
@@ -261,7 +268,7 @@
                 </div>
             </div>
             <div class="container mx-auto md:px-24 lg:hidden lg:px-0 text-center">
-                <a class="btn-secondary my-4" href="{{ relref $pageContext $item.cta_url }}">
+                <a class="btn-secondary my-4" href="{{ $item.cta_url }}">
                     {{ $item.cta }}
                 </a>
             </div>
@@ -278,7 +285,7 @@
             </div>
 
             <!-- Rendered with Hugo's YouTube shortcode: https://gohugo.io/content-management/shortcodes/#youtube -->
-            <div class="rounded shadow-md" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+            <div class="rounded shadow-md" style="position: relative; padding-bottom: 56.25%; overflow: hidden;">
                 <iframe
                     src="//www.youtube.com/embed/{{ .youtube_video_id }}?rel=0"
                     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;"
