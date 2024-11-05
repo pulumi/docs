@@ -2383,20 +2383,81 @@ class MyStack : Stack
 
 {{% /choosable %}}
 {{% choosable language java %}}
-{{% notes type="info" %}}
-This functionality is currently not available in Java.
-{{% /notes %}}
+
+```java
+import com.pulumi.Context;
+import com.pulumi.Pulumi;
+import com.pulumi.core.Output;
+import com.pulumi.eks.Cluster;
+import com.pulumi.kubernetes.Provider;
+import com.pulumi.kubernetes.ProviderArgs;
+import com.pulumi.kubernetes.yaml.v2.ConfigGroup;
+import com.pulumi.kubernetes.yaml.v2.ConfigGroupArgs;
+import com.pulumi.resources.CustomResourceOptions;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Map;
+import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
+public class App {
+    public static void main(String[] args) {
+        Pulumi.run(App::stack);
+    }
+
+    public static void stack(Context ctx) {
+        var cluster = new Cluster("cluster");
+
+        var eksProvider = new Provider("eksProvider", ProviderArgs.builder()
+            .kubeconfig(cluster.kubeconfigJson())
+            .build());
+
+        var guestbook = new ConfigGroup("guestbook", ConfigGroupArgs.builder()
+            .files("yaml/*.yaml")
+            .build(), CustomResourceOptions.builder()
+                .provider(eksProvider)
+                .build());
+
+        ctx.export("kubeconfig", cluster.kubeconfig());
+    }
+}
+```
+
 {{% /choosable %}}
 {{% choosable language yaml %}}
-{{% notes type="info" %}}
-This functionality is currently not available in YAML.
-{{% /notes %}}
+
+```yaml
+resources:
+  eks-provider:
+    type: pulumi:providers:kubernetes
+    properties:
+      kubeconfig: ${cluster.kubeconfigJson}
+  cluster:
+    type: eks:Cluster
+  guestbook:
+    type: kubernetes:yaml/v2:ConfigGroup
+    properties:
+      files:
+      - "yaml/*.yaml"
+    options:
+      provider: ${eks-provider}
+outputs:
+  kubeconfig: ${cluster.kubeconfig}
+```
+
 {{% /choosable %}}
 
 The `ConfigFile` and `ConfigGroup` classes both support a [`transformations` property](
 /registry/packages/kubernetes#transformations_nodejs) which can be used to ['monkey patch'](
 https://en.wikipedia.org/wiki/Monkey_patch) Kubernetes configuration on the fly. This can be used to rewrite
 configuration to include additional services (like Envoy sidecars), inject tags, and so on.
+
+{{% notes type="info" %}}
+Note that the `transformations` property is available only with the "v1" version
+of `ConfigFile` and `ConfigGroup`; for the "v2" version, use the
+`transforms` option.
+{{% /notes %}}
 
 For example, a transformation like the following can make all services private to a cluster, by
 changing `LoadBalancer` specs into `ClusterIPs`, in addition to placing objects into a desired namespace:
