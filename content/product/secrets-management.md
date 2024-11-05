@@ -4,7 +4,7 @@ layout: secrets-management
 
 meta_title: "Pulumi ESC: Centralized Secrets Management & Orchestration"
 meta_desc: Centralized secrets management & orchestration. Tame secrets sprawl and configuration complexity securely across all your cloud infrastructure and applications.
-meta_image: "/images/product/esc-how-it-works-diagram.png"
+meta_image: "/images/product/esc-octopus-diagram.png"
 aliases:
     - /esc
     - /product/esc
