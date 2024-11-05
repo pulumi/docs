@@ -54,6 +54,10 @@ pushd "$programs_dir"
         if [[ "$project" == "awsx-apigateway-auth-cognito-java" ]]; then
             continue
         fi
+        # Skipping - for now this code is not consumed anywhere and needs some updates.
+        if [[ "$project" == "aws-import-iac-iam-role-csharp" ]]; then
+            continue
+        fi
 
         echo
         echo "***"
