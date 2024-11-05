@@ -77,7 +77,7 @@ For help identifying a resource's type token and lookup property, see [Where to 
 In this example, a previously provisioned Amazon S3 bucket named `company-infra-logs` is imported into a Pulumi stack named `dev` (the currently [selected](/docs/cli/commands/pulumi_stack_select/) stack) and given a resource name of `infra-logs`:
 
 ```bash
-$ pulumi import aws:s3/bucket:BucketV2 infra-logs company-infra-logs
+$ pulumi import aws:s3/bucketv2:BucketV2 infra-logs company-infra-logs
 
 Previewing import (dev)
 
