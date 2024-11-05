@@ -55,7 +55,7 @@ pushd "$programs_dir"
             continue
         fi
         # Skipping - for now this code is not consumed anywhere and needs some updates.
-        if [[ "$project" == "aws-import-iac-iam-role-csharp" ]]; then
+        if [[ "$project" == "aws-import-iac-iam-role-"* ]]; then
             continue
         fi
 
