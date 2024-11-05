@@ -124,7 +124,7 @@ In `Program.cs`, create a new `BucketObject` right after creating the bucket its
 // Create an S3 Bucket object
 var bucketObject = new BucketObject("index.html", new BucketObjectArgs
 {
-    Bucket = bucket.Bucket,
+    Bucket = bucket.Id,
     Source = new FileAsset("./index.html")
 });
 ```
