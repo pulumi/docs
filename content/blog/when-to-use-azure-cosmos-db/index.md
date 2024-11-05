@@ -2,7 +2,7 @@
 title: "When to Use Cosmos DB"
 date: 2024-11-04T17:39:54-05:00
 draft: false
-meta_desc:
+meta_desc: A practical guide comparing Azure Cosmos DB with PostgreSQL, MongoDB,Cassandra, and DynamoDB, helping you decide when to use—or avoid—each database option.
 meta_image: meta.png
 authors:
     - adam-gordon-bell
@@ -107,8 +107,7 @@ So don't be fooled by the SQL usage in the API. Cosmos DB is not a relational da
 
 - **Schema Evolution and Migrations**: As shown, relational databases enforce a schema and support migration tools. Cosmos DB's schemaless design offers flexibility but requires custom logic for data migrations, which can increase operational overhead with frequent schema changes.
 
-- **Query Optimization and Indexing**: Postgres, SQL Server, and any relational database will have a query optimization layer with a sophisticated planner and manual indexing control. Cosmos DB auto-indexes all fields, simplifying queries but potentially increasing costs. Custom indexing policies offer less control than you 
-would see in SQL Server or Postgres.
+- **Query Optimization and Indexing**: Postgres, SQL Server, and any relational database will have a query optimization layer with a sophisticated planner and manual indexing control. Cosmos DB auto-indexes all fields, simplifying queries but potentially increasing costs. Custom indexing policies offer less control than you would see in SQL Server or Postgres.
 
 - **Cost Structure**: Relational database costs are tied to compute and storage resources. Scaling might be a challenge past some point, but costs are fixed. Cosmos DB uses Request Units (RUs) for billing and charging per read, write, and query. This can lead to unpredictable costs if not carefully tuned.
 
@@ -266,7 +265,7 @@ OK, I think all these comparisons give us a solid grounding to talk about trade-
 
 2. **Hands-Off Scalability**: This came up again and again. When you want to focus more on development and less on database administration, Cosmos DB offers hands-off scalability. It automatically handles partitioning, indexing, and replication, which is great for teams that prefer highly managed services.
 
-3. **Schema Flexibility**: When your data structure is not fixed and might evolve over time, Cosmos DB's schema-less nature is an advantage. This flexibility is helpful in cases where your application data needs to adapt frequently without the constraints of a rigid schema. Also, there is a taste aspect to this. While I like schemas and structure, some teams have extensive experience working with document-based NoSQL solutions, and they will find CosmosDB a great fit. 
+3. **Schema Flexibility**: When your data structure is not fixed and might evolve over time, Cosmos DB's schema-less nature is an advantage. This flexibility is helpful in cases where your application data needs to adapt frequently without the constraints of a rigid schema. Also, there is a taste aspect to this. While I like schemas and structure, some teams have extensive experience working with document-based NoSQL solutions, and they will find CosmosDB a great fit.
 
 ## When to Avoid Cosmos DB
 
