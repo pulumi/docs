@@ -18,11 +18,12 @@ social:
 
 When to use Cosmos DB? It's a hard question to answer.
 
-Cosmos DB tries to do it all - which makes it both powerful and, honestly, kind of confusing. The marketing doesn't help either. Yeah, it's flexible, but before you jump in, you need to understand how it actually works under the hood, what it'll cost you, and what trade-offs you're making by choosing it.
+Azure Cosmos DB tries to do it all - which makes it both powerful and, honestly, kind of confusing. The marketing doesn't help either. Yeah, it's flexible, but before you jump in, you need to understand how it actually works under the hood, what it'll cost you, and what trade-offs you're making by choosing it.
 
 I'm going to break all that down.
 
 <!--more-->
+![Artcle Roadmpa](roadmap.png)
 
 But the short version is: you should use it on Azure when you'd use DynamoDB on AWS. That is when you are OK with being cloud-specific, when you want hands-off scalability, and when you know the query pattern and potential cost ramifications ahead of time. Also, cost is a big caveat because Cosmos DB will likely cost more than an equivalent DynamoDB workload.
 
@@ -56,9 +57,11 @@ This is a personal opinion, but if you have a use case that is well served by a 
 
 If you grab our [CosmoDB how to](https://www.pulumi.com/registry/packages/azure-native/how-to-guides/azure-cs-cosmosdb-logicapp/) and `pulumi up` and provision a database, you'll see from that, the first hint of its document roots in that the pulumi namespace is `documentDB`, but it goes deeper because although I can insert and select with sql in Cosmos DB, there is no schema.
 
+### Cosmos DB NoSQL Inserting and Querying
+
 If I insert this customer:
 
-"`csharp
+```csharp
 CosmosDatabase database = await client.
     CreateDatabaseIfNotExistsAsync(databaseId);
 CosmosContainer container = await database.
@@ -68,7 +71,7 @@ CosmosContainer container = await database.
 var customer = new Customer
 {
     Id = Guid.NewGuid().ToString(),
-    CustomerId = "12345", // Partition key
+    CustomerId = "12345", // Cosmos DB Partition key
     Name = "John Doe",
     Email = "john.doe@example.com"
 };
@@ -76,9 +79,9 @@ var customer = new Customer
 await InsertCustomer(container, customer);
 ```
 
-I can do selects against it like `SELECT * FROM c WHERE c.customerId = '12345" but when I look in that container in Azure Data Explorer, I see something like this:
+I can do selects against it like `SELECT * FROM c WHERE c.customerId = '12345"` but when I look in that container in Azure Data Explorer, I see something like this:
 
-"`csharp
+```csharp
 {
     "id": "1d4e26b3-7a02-4e97-8a9d-eccc0b2fd537",
     "customerId": "12345",
@@ -92,12 +95,11 @@ I can do selects against it like `SELECT * FROM c WHERE c.customerId = '12345" b
 }
 ```
 
-
 It's a JSON document. That's all good, but because there is no schema, as with any document database, if I need to migrate `name` to `fullname` how do I do it? Well, there are a bunch of strategies, but they all involve writing some application code to record by record and move the value from `name` to `full name`.
 
 So don't be fooled by the SQL usage in the API. Cosmos DB is not a relational database; before you use a document database, you should be clear of the trade-offs.
 
-## Document Database Trade-Offs
+## Document Database / NoSQL Trade-Offs
 
 - **Joins and Relationships**: Cosmos DB lacks support for complex joins and foreign key constraints. Cosmos DB typically requires denormalization or application-level management of relationships.
 
@@ -118,7 +120,23 @@ Cosmos DB is best for other use cases, so on we go to 'NoSQL' document databases
 
 ## Cosmos DB Vs MongoDB
 
-So, let's talk MongoDB then. Cosmos DB is multi-model in a specific way. It has a single storage layer, the DocumentDB, and then various APIs. One of these is a MongoDB interface. This Mongo interface, on top of Cosmos DB, might be a great choice if you are used to Mongo, but it has some trade-offs. If you are doing non-trivial stuff, you will quickly need to understand Cosmos-specific things, even if you can query it like Mongo using MQL.
+So, let's talk MongoDB then. Cosmos DB is multi-model in a specific way. It has a single storage layer, the DocumentDB, and then various APIs. One of these is a MongoDB interface. This Mongo interface, on top of Cosmos DB, might be a great choice if you are used to Mongo, because you can often just change your query string on your existing mongodb code and start using cosmos.
+
+```csharp
+using MongoDB.Driver;
+using MongoDB.Bson;
+
+// Connect to Cosmos DB using MongoDB API
+var client = new MongoClient("mongodb://<account>:<key>@<account>.mongo.cosmos.azure.com:10255/?ssl=true");
+var db = client.GetDatabase("customersdb");
+var collection = db.GetCollection<BsonDocument>("customers");
+
+var docs = await collection.Find(
+    new BsonDocument("customerId", "12345")
+).ToListAsync();
+```
+
+That will totally work, if you stay away from mongo advanced features but you will quickly need to understand Cosmos-specific things, like RUs, even if you can query it like Mongo using MQL.
 
 {{% notes type="info" %}}
 Reddit Azure users report some challenges with using the Mongo API, and Microsoft also recommends using the SQL-based "API for NoSQL" if you can. So Mongo fans may want to consider not choosing Cosmos' Mongo API.
@@ -164,11 +182,11 @@ Your exact numbers may vary, but by my back-of-the-napkin math, Cosmos DB is sig
 
 ## Cosmos DB Vs Cassandra
 
-![Cassandra Mapping](cassandra.png)
+{{< figure alt="" src="cassandra.png" width=75% >}}
 
 After learning about partitioning and seeing the Cassandra API, you might think Cosmos DB is basically managed by Cassandra. And there are some key similarities. In many ways, Cosmos DB is Cassandra-inspired, but there are key differences.
 
-### How Cosmos DB and Cassandra relate:
+### How Cosmos DB and Cassandra Relate
 
 1. **Partitioning**: Both use logical partition keys for scalability to distribute data across nodes. Cassandra requires manual management, while Cosmos DB automates partitioning and scaling, reducing operational burdens, though at the cost of flexibility.
 2. **Tunable Consistency**: Like Cassandra, Cosmos DB offers tunable consistency but expands on it with five levels: Strong, Bounded Staleness, Session, Consistent Prefix, and Eventual—allowing finer control over consistency vs. performance.
@@ -178,6 +196,35 @@ After learning about partitioning and seeing the Cassandra API, you might think 
 1. **Cassandra API**: Though Cosmos DB offers a Cassandra API, it's not running Cassandra under the hood. So, while the API is familiar, the system behaves differently, especially in terms of performance.
 
 2. **Operational Complexity**: Cassandra gives complete control over nodes and replication but requires hands-on management. Cosmos DB automates these tasks, offering hands-off operations while maintaining high availability, making it easier to manage at scale.
+
+### API for Apache Cassandra
+
+If you have existing Apache Cassandra usage, in theory, the  API for Apache Cassandra lets you use CosmosDB equivalently, by just changing the query string. As with the Mongo API above, if possible you are probably better to use Core NoSQL API, but that will required rewriting dataaccess code.
+
+### Cosmos DB CQL Querying
+
+```csharp
+using Cassandra;
+
+// Connect to Cosmos DB's Cassandra API
+var cluster = Cluster.Builder()
+    .WithCredentials("<username>", "<password>")  // From Azure Portal
+    .WithPort(10350)
+    .AddContactPoint("<account>.cassandra.cosmos.azure.com")
+    .WithSSL()
+    .Build();
+
+var session = await cluster.ConnectAsync();
+
+var cql = "SELECT * FROM customersdb.customers WHERE customer_id = ?";
+var results = await session.ExecuteAsync(cql, "12345");
+
+foreach (var row in results)
+{
+    Console.WriteLine($"Customer: {row["name"]}");
+}
+
+```
 
 ### When to Use
 
@@ -190,17 +237,17 @@ So use Cassandra when you need complete control over partitioning and scaling an
 
 After comparing Cosmos DB to Cassandra, it's natural to think of DynamoDB next. Like Cosmos DB, DynamoDB is fully managed and Dynamo-inspired, but being part of AWS, it operates differently from both Cassandra and Cosmos DB, especially in terms of operational simplicity and pricing.
 
-## Managed Operations
+### Managed Operations
 
 DynamoDB and Cosmos DB remove the ops overhead you'd get with Cassandra. If Cassandra gives you full control over nodes and partitioning, DynamoDB and Cosmos DB automate much of the complexity behind the scenes. With DynamoDB, you don't have to manually manage shards or replication—AWS handles that for you, just like Cosmos DB on Azure.
 
 Both databases also rely heavily on partition keys for data distribution. In DynamoDB, choosing the right partition key is critical to avoid hot spots, just like you need a well-thought-out partition key in Cosmos DB to balance the load across physical partitions. But where DynamoDB allows you to toggle between on-demand and provisioned capacity to manage scaling, Cosmos DB simply auto-scales as your traffic grows, offering a more seamless experience if you're willing to pay for it.
 
-## Consistency Models: Simple vs Flexible
+### Cosmos DB Consistency Levels
 
-While Cassandra offers tunable consistency, DynamoDB simplifies this down to just two options: eventual consistency (default) or strong consistency. It's enough for many use cases, but Cosmos DB follows Cassandra in covering many levels of consistency ranging from strong to eventual. One level, Session level consistency, seems both unique to Cosmos and valuable. This makes Cosmos DB more attractive if you need to fine-tune consistency for globally distributed applications.
+While Cassandra offers tunable consistency, DynamoDB simplifies this down to just two options: eventual consistency (default) or strong consistency. It's enough for many use cases, but Cosmos DB follows Cassandra in covering many levels of consistency ranging from strong to eventual. One level, Session level consistency, seems both unique to Cosmos and valuable. It ensures you are always able to read your writes in the same session without impacting performance as much as higher consistency levels can. This makes Cosmos DB pretty unique if you to fine-tune consistency for globally distributed applications.
 
-## Cosmos DB vs Dynamo DB Costs
+### Cosmos DB vs Dynamo DB Costs
 
 Again, using some back-of-the-napkin math, DynamoDB in provisioned Mode is significantly more cost-effective than Cosmos DB for the same workload with 10 kb document sizes. For a scenario with 500 reads/sec, 50 writes/sec, and 10 KB document size, DynamoDB costs about $392.10/month compared to Cosmos DB's $1,567.70/month. With smaller document sizes, the cost difference is less, but still, Dynamo has the edge. On the pro-Cosmos side, Cosmos DB adjusts throughput and partitions as your data and traffic grow, ensuring seamless scaling without manual intervention; it just costs more.
 
@@ -209,7 +256,9 @@ Again, using some back-of-the-napkin math, DynamoDB in provisioned Mode is signi
 | **DynamoDB**         | 500 reads/sec, 50 writes/sec               | $131.13/month           | $392.10/month            | Lower cost, ideal for predictable workloads |
 | **Cosmos DB**        | 500 reads/sec, 50 writes/sec               | $479.06/month           | $1,567.70/month          | Higher cost, scales automatically    |
 
-### When Cosmos DB Makes Sense
+## When Cosmos DB Makes Sense
+
+![Pros And Cons](pro-con.png)
 
 OK, I think all these comparisons give us a solid grounding to talk about trade-offs. So, with all this in mind, when should you use Cosmos DB?
 
@@ -219,7 +268,7 @@ OK, I think all these comparisons give us a solid grounding to talk about trade-
 
 3. **Schema Flexibility**: When your data structure is not fixed and might evolve over time, Cosmos DB's schema-less nature is an advantage. This flexibility is helpful in cases where your application data needs to adapt frequently without the constraints of a rigid schema. Also, there is a taste aspect to this. While I like schemas and structure, some teams have extensive experience working with document-based NoSQL solutions, and they will find CosmosDB a great fit. 
 
-### When to Avoid Cosmos DB
+## When to Avoid Cosmos DB
 
 1. **Cost Sensitivity**: Cosmos DB can be significantly more expensive compared to other databases like DynamoDB or MongoDB, especially for high read/write workloads. If cost is a primary concern, especially for smaller projects, it might be better to consider alternatives.
 
@@ -239,4 +288,4 @@ Many times, that cost is not the variable being optimized for. Data is paramount
 
 > We've been using Cosmos DB as a document database since it was called DocumentDB, and it's been fast, reliable, and straightforward for our needs. We store large, arbitrarily structured JSON documents, and Cosmos DB's full indexing has handled that effortlessly. For us, the simplicity works—we don't need to scale to millions of users, and with auto-scaling, each customer's database runs smoothly without any partitioning.
 
-For help provisioning Cosmos DB, check out our Azure Cosmos DB How to guide: https://www.pulumi.com/registry/packages/azure-native/how-to-guides/azure-cs-cosmosdb-logicapp/, and if you decide to go with Azure Tables instead, our Azure Native provider is there to help you all the same.
+For help provisioning Cosmos DB, check out our [Azure Cosmos DB How to guide](https://www.pulumi.com/registry/packages/azure-native/how-to-guides/azure-cs-cosmosdb-logicapp/) and if you decide to go with Azure Tables instead, our [Azure Native provider](https://www.pulumi.com/registry/packages/azure-native/) is there to help you all the same.
