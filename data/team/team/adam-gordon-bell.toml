@@ -1,0 +1,8 @@
+id = "adam-gordon-bell"
+name = "Adam Gordon Bell"
+status = "active"
+title = "Community Engineer"
+weight = 1
+[social]
+github = "adamgordonbell"
+twitter = "adamgordonbell"
