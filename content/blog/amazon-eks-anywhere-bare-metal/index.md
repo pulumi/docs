@@ -15,6 +15,9 @@ tags:
 # See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md.
 # for additional details, and please remove these comments before submitting for review.
 ---
+{{% notes type="info" %}}
+Check out version 3.0 of the [Pulumi EKS Provider](/blog/eks-v3-release/).
+{{% /notes %}}
 
 Some of the largest and most complex deployments that teams manage are hybrid and multi-cloud deployments. Kubernetes is a common component in these deployments because it enables platform teams to provide a common set of services across cloud and on-premises infrastructure and simplifies the process of migrating and scaling workloads as demand fluctuates. Pulumi simplifies these deployment scenarios but teams often need to manage different flavors of Kubernetes for on-premises deployments versus cloud deployments.
 
