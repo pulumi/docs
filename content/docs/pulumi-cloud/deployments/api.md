@@ -60,6 +60,7 @@ Several endpoints accept or return deployment settings. Deployment settings are 
 * A [SourceContext](#sourcecontext) that defines where the source code for your project is located. Currently, only git repos are supported.
 * An [OperationContext](#operationcontext) that defines how the Pulumi project is to be executed (i.e. the Pulumi operation to execute and any associated context it requires).
 * An optional [GitHub block](#github) that contains information for GitHub integration.
+* An optional [CacheOptions](#cacheoptions) that contains cache-related settings.
 
 ### ExecutorContext
 
@@ -377,6 +378,24 @@ The GitHub block describes settings for Pulumi Deployments' GitHub integration.
 ```json
 {
   "repository": "pulumi/deploy-demos"
+}
+```
+
+### CacheOptions
+
+Cache Options block defines settings related to dependency caching during Deployments. Reading dependencies from cache makes deployments significantly faster. Learn more about dependency caching on the [FAQ page](/docs/pulumi-cloud/deployments/faq/#dependencycaching).
+
+This option is only available for Pulumi-managed deployment agents.
+
+* **enable** (boolean): Whether to use Dependency Caching.
+
+#### Example
+
+```json
+{
+  "cacheOptions": {
+    "enable": "true"
+  }
 }
 ```
 
