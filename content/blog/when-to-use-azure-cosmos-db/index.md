@@ -29,6 +29,10 @@ But the short version is: you should use it on Azure when you'd use DynamoDB on 
 
 But let's start at the beginning.
 
+## What is Cosmos DB
+
+Cosmos DB is Microsoft high availability distributed database. First released as DocumentDB in 2014 and rebranded to Cosmos DB in 2017, its used interally at MS for Bing and Office 365 and available on Azure in all regions.
+
 ## Types Of Databases
 
 Different databases are good at different things. Relational databases focus on strong consistency and complex relationships. Key-value stores are optimized for speed and simplicity. Document databases trade schema rigidity for flexibility. NewSQL systems attempt to combine consistency and scale.
@@ -176,7 +180,7 @@ Your exact numbers may vary, but by my back-of-the-napkin math, Cosmos DB is sig
 
 | **Service**      | **Cost (500 reads/sec, 50 writes/sec, 10 KB document)** | **Pricing Model**                                       |
 |------------------|--------------------------------------------------------|---------------------------------------------------------|
-| **MongoDB Atlas**| ~$205/month                                             | Based on instance size (M30), fixed pricing              |
+| **MongoDB Atlas**| ~$746.79/month                                             | Based on instance size (M40), fixed pricing              |
 | **Cosmos DB**    | ~$1,567.70/month                                        | Request Units (RUs) based, scales with document size and operations |
 
 ## Cosmos DB Vs Cassandra
