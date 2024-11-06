@@ -58,6 +58,10 @@ pushd "$programs_dir"
         if [[ "$project" == "aws-import-iac-iam-role-"* ]]; then
             continue
         fi
+        # Skipping the 6 azure examples temporarily until we get azure creds configured.
+        if [[ "$project" == "azure-"* ]]; then
+            continue
+        fi
 
         echo
         echo "***"
