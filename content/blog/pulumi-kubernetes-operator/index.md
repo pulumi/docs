@@ -7,7 +7,7 @@ meta_desc: "Introducing the Pulumi Kubernetes Operator: Deploy infrastructure in
 meta_image: operator.png
 ---
 {{% notes type="info" %}}
-Check out the version 2.0 beta of the [Pulumi Kubernetes Operator](/blog/pulumi-kubernetes-operator-2-0/).
+Check out version 2.0 of the [Pulumi Kubernetes Operator](/blog/pulumi-kubernetes-operator-2-0/).
 {{% /notes %}}
 
 Kubernetes developers and operators work together to manage workloads
