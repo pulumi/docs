@@ -106,7 +106,7 @@ their entire cloud management and platform needs.
 By moving to Pulumi's platform, many customers have seen considerable benefits:
 
 _[Atlassian **significantly increased developer velocity**]({{< relref "/case-studies/atlassian" >}})_, increasing
-productivity by more than 2X and substantially decreasing the amount of time spent on maintenance tasks.
+productivity by more than 2x and substantially decreasing the amount of time spent on maintenance tasks.
 
 _[Mercedes-Benz **got the whole team shipping faster and with more confidence**]({{<
 relref "/case-studies/mercedes-benz" >}})_ by building a platform that helped developers be self-serve with
