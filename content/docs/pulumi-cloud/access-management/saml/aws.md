@@ -101,3 +101,18 @@ name of your Pulumi organization.
 AWS SAML troubleshooting page: [Troubleshooting SAML 2.0 Federation with AWS](https://docs.aws.amazon.com/IAM/latest/UserGuide/troubleshoot_saml.html)
 
 If you need additional assistance, [contact us](/about#contact-us).
+
+## Additional Resources
+
+For more information on configuring SAML identity providers and understanding SAML in AWS, refer to the following resources:
+
+- **AWS Documentation:**
+  - [Create a SAML Identity Provider in IAM](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_create_saml.html)
+  - [About SAML 2.0-based Federation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_saml.html)
+  - [Configure Relying Party Trust and Claims](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_create_saml_relying-party.html)
+  - [Integrate Third-Party SAML Solution Providers with AWS](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_saml_3rd-party.html)
+  - [Troubleshooting SAML 2.0 Federation with AWS](https://docs.aws.amazon.com/IAM/latest/UserGuide/troubleshoot_saml.html)
+
+- **Understanding SAML:**
+  - [SAML Technical Overview](https://wiki.oasis-open.org/security)
+  - [SAML 2.0 Specifications](https://docs.oasis-open.org/security/saml/v2.0/)
