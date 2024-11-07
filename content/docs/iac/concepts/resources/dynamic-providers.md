@@ -309,7 +309,7 @@ class MyResource(Resource):
 
 ### configure(ConfigureRequest)
 
-The `configure` method is invoked after a dynamic resource provider is loaded. This method is optional and is called exactly for each provider. The `configure` method receives a `ConfigureRequest` object as argument, which contains the configuration of the current stack. This method can be used to perform any necessary setup for the provider, and allows you to read configuration values and store them for later use in the other provider methods.
+The `configure` method is invoked after a dynamic resource provider is loaded. This method is optional and is called exactly once for each provider instance. The `configure` method receives a `ConfigureRequest` object as its argument, which contains the configuration of the current stack. This method can be used to perform any necessary setup for the provider, and allows you to read configuration values and store them for later use in other provider methods.
 
 ### check(olds, news)
 
