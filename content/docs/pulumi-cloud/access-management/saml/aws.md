@@ -31,17 +31,21 @@ This guide walks you through configuring your AWS account as a SAML SSO identity
 
 1. In the AWS Management Console, navigate to the **IAM (Identity and Access Management)** service.
 
-1. Select **Identity providers** from the sidebar and click **Add provider**.
+1. In the navigation pane, choose **Identity providers**, then choose **Add provider**.
 
-1. For **Provider Type**, select **SAML**.
+1. For **Configure provider**, choose **SAML**.
 
-1. Enter a descriptive name for **Provider Name** (e.g., `PulumiSAMLProvider`).
+1. Enter a **Provider name** (e.g., `PulumiSAMLProvider`).
 
-1. Upload the metadata document provided by Pulumi or paste the metadata URL.
+1. For **Metadata document**, choose **Choose file** and select the SAML metadata document provided by Pulumi.
+
+1. (Optional) For **Add tags**, you can add key-value pairs to help identify and organize your identity providers.
+
+1. Review the information you've entered. When you're ready, choose **Add provider** to create the new SAML identity provider.
+
+1. Proceed to [Creating an IAM Role for SAML Access](#creating-an-iam-role-for-saml-access).
 
     ![AWS IAM Add Identity Provider](/images/docs/reference/service/saml-aws/aws-add-identity-provider.png)
-
-1. Click **Add provider** to save the new SAML identity provider.
 
 ## Creating an IAM Role for SAML Access
 
