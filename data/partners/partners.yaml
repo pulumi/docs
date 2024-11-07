@@ -31,7 +31,7 @@
   logo: /logos/tech/newrelic.svg
 
 - name: Snyk
-  link: https://docs.snyk.io/integrate-with-snyk/vulnerability-management-tools/pulumi-integration/
+  link: https://partners.snyk.io/English/solutions/solution/2908/pulumi
   logo: /logos/tech/snyk.png
 
 - name: Cloudflare
