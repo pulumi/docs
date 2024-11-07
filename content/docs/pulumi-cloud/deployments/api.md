@@ -29,7 +29,7 @@ We have created new routes for the Pulumi Deployments REST API, which are docume
 
 ## Migrating from the Preview API
 
-For the majority of cases, the new API is a drop-in replacement for the preview API and the only change is that the route itself has changed (i.e. replace with `/api/preview` with `/api/stacks`).
+For most cases, the new API is a drop-in replacement for the preview API; the only change is that the route itself has changed (i.e. replace with `/api/preview` with `/api/stacks`).
 
 However, there are a few cases where the new API has changed the behavior of the preview API. These changes are as follows:
 
@@ -52,7 +52,7 @@ To view your access tokens, or create a new one, view the <a href="https://app.p
 
 The Pulumi Deployments REST API will return a 401 status code if the token is missing or invalid.
 
-## Deployment Settings
+## Deployment settings
 
 Several endpoints accept or return deployment settings. Deployment settings are composed of several parts:
 
@@ -188,7 +188,7 @@ Secret types should have the following structure:
 
 ### OperationContext
 
-The operation context describes any context required for Pulumi operations to execute such as pre-run commands and environment variables.
+The operation context describes any context required for Pulumi operations to execute, such as pre-run commands and environment variables.
 
 * **preRunCommands** (Optional[list[string]]): A list of commands to run before the Pulumi command is executed. Each command is run in a separate subshell. A command may export environment variables by writing
   them as `NAME=value` pairs to a file named `PULUMI_ENV`. For example, a pre-run command could set the `HELLO` environment variable to `world` as follows:
@@ -198,7 +198,7 @@ The operation context describes any context required for Pulumi operations to ex
   ```
 
 * **environmentVariables** (Optional[map[string]EnvironmentVariable]): A list of environment variables to set for the operation.
-* **options** (Optional[OperationContextOptions]): Options is a bag of settings that allows you to set or override default behavior.
+* **options** (Optional[OperationContextOptions]): Options is a bag of settings that allows you to set or override the default behavior.
 
 `OperationContextOptions` has the following structure:
 
@@ -336,7 +336,7 @@ Environment variables may be automatically marked `secret` by the API even if th
 
 ### GitHub
 
-The GitHub block describes settings for Pulumi Deployments' GitHub integration.
+The GitHub block describes the settings for Pulumi Deployments' GitHub integration.
 
 * **repository** (string): The GitHub repository that contains the Pulumi program to deploy.
 * **deployCommits** (boolean): True to run `update` deployments for each commit pushed to the configured branch.
@@ -344,7 +344,7 @@ The GitHub block describes settings for Pulumi Deployments' GitHub integration.
 * **pullRequestTemplate** (boolean): True to enable [Review Stacks](/docs/pulumi-cloud/deployments/review-stacks) for this branch, and use this stack as a template.
 * **paths** (Optional[list[string]]): A list of path filters that determine whether a commit or pull request should trigger a deployment based on the paths affected by the commit or pull request. Path
   filters may use the `*` and `**` elements to match a single path component or any number of path components, respectively. If a path filter begins with a `!`, it excludes matching paths rather than including
-  matching paths. If all filters are excludes, there is an implicit `**` filter. A deployment will run if any non-excluded file is modified. Note that the list of changed paths returned by GitHub is limited to
+  matching paths. If all filters are excluded, there is an implicit `**` filter. A deployment will run if any non-excluded file is modified. Note that the list of changed paths returned by GitHub is limited to
   300 files. If there are files changed that aren't matched in the first 300 files returned by the filter, a deployment will not run. You may need to create additional filters so that a deployment will run.
 
 #### Examples
@@ -444,7 +444,7 @@ curl -XGET -H "Content-Type: application/json" \
 }
 ```
 
-### Patch Settings
+### Patch settings
 
 Patches the [deployment settings](#deployment-settings) associated with a stack.
 
@@ -550,7 +550,7 @@ Then the new settings for the stack are:
 }
 ```
 
-### Clear Settings
+### Clear settings
 
 Clears the [deployment settings](#deployment-settings) associated with a stack.
 
@@ -566,7 +566,7 @@ curl -i -XDELETE -H "Content-Type: application/json" \
 --location "https://api.pulumi.com/api/stacks/my-org/aws-ts-s3/dev/deployments/settings"
 ```
 
-### Create Deployment
+### Create deployment
 
 Creates a new deployment to execute a Pulumi program via the Pulumi Cloud.
 
@@ -651,7 +651,7 @@ curl -i -XPOST -H "Content-Type: application/json" \
 }'
 ```
 
-### Get Deployment
+### Get deployment
 
 Gets details for a specific deployment.
 
@@ -784,7 +784,7 @@ curl -XGET -H "Content-Type: application/json" \
 }
 ```
 
-### List Stack Deployments
+### List stack deployments
 
 Gets a list of deployments for a stack.
 
@@ -974,7 +974,7 @@ curl -XGET -H "Content-Type: application/json" \
 }
 ```
 
-### List Organization Deployments
+### List organization deployments
 
 Gets a list of deployments for the entire organization. Only deployments belonging to stacks that the user has access to will be returned.
 
@@ -1164,7 +1164,7 @@ curl -XGET -H "Content-Type: application/json" \
 }
 ```
 
-### Get Deployment Logs
+### Get deployment logs
 
 Gets logs for a specific deployment.
 
@@ -1338,7 +1338,7 @@ Response
 }
 ```
 
-### Pause Deployments
+### Pause deployments
 
 Pauses all queued deployments for a stack or organization. Deployments that are already running are allowed to complete and are not paused. New deployments are queued, and will run when the stack or organization's deployments are resumed.
 
@@ -1362,7 +1362,7 @@ curl -i -XPOST -H "Content-Type: application/json" \
 --location "https://api.pulumi.com/api/stacks/my-org/aws-ts-s3-folder/dev/deployments/pause"
 ```
 
-### Resume Deployments
+### Resume deployments
 
 Resumes deployments for a stack or organization. This will cause queued deployments to start being processed.
 
@@ -1382,7 +1382,7 @@ curl -i -XPOST -H "Content-Type: application/json" \
 --location "https://api.pulumi.com/api/stack/my-org/aws-ts-s3-folder/dev/deployments/resume"
 ```
 
-### Get Deployments Metadata
+### Get deployments metadata
 
 Get metadata related to deployments for a stack or organization. This includes information such as
 if deployments are paused, and why they're paused.
@@ -1442,7 +1442,7 @@ curl -XGET -H "Content-Type: application/json" \
 }
 ```
 
-### Cancel Deployment
+### Cancel deployment
 
 Cancels an in-progress deployment.
 
