@@ -381,13 +381,13 @@ The GitHub block describes settings for Pulumi Deployments' GitHub integration.
 }
 ```
 
-### CacheOptions
+### Cache options
 
-The Cache Options block defines settings related to dependency caching during Deployments. Using dependencies from the cache makes deployments significantly faster. Learn more about dependency caching on the [FAQ page](/docs/pulumi-cloud/deployments/faq/#dependency-caching).
+The cache options block defines settings related to dependency caching during deployments. Using dependencies from the cache makes deployments significantly faster. Learn more about dependency caching on the [FAQ page](/docs/pulumi-cloud/deployments/faq/#dependency-caching).
 
 This option is only available for Pulumi-managed deployment agents.
 
-* **enable** (boolean): Whether to use Dependency Caching.
+* **enable** (boolean): Whether to use [Dependency Caching](/docs/pulumi-cloud/deployments/faq/#dependency-caching).
 
 #### Example
 
