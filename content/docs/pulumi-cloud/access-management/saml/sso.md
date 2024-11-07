@@ -25,10 +25,11 @@ with the [Pulumi Cloud](/docs/pulumi-cloud/).
 
 > For a specific example, refer to one of our integration guides:
 >
+> - [AWS](/docs/pulumi-cloud/access-management/saml/aws/)
+> - [Auth0](/docs/pulumi-cloud/access-management/saml/auth0/)
 > - [Azure Active Directory](/docs/pulumi-cloud/access-management/saml/aad/)
 > - [Google Workspace](/docs/pulumi-cloud/access-management/saml/gsuite/)
 > - [Okta](/docs/pulumi-cloud/access-management/saml/okta/)
-> - [Auth0](/docs/pulumi-cloud/access-management/saml/auth0/)
 > - [OneLogin](/docs/pulumi-cloud/access-management/saml/onelogin/)
 
 ## Terminology
