@@ -307,6 +307,10 @@ class MyResource(Resource):
 
 {{< /chooser >}}
 
+### configure(ConfigureRequest)
+
+The `configure` method is invoked after a dynamic resource provider is loaded. This method is optional and is called exactly for each provider. The `configure` method receives a `ConfigureRequest` object as argument, which contains the configuration of the current stack. This method can be used to perform any necessary setup for the provider, and allows you to read configuration values and store them for later use in the other provider methods.
+
 ### check(olds, news)
 
 The `check` method is invoked before any other methods. The resolved input properties that were originally provided to the resource constructor by the user are passed to it. The operation is passed both the old input properties that were stored in the *state file* after the previous update to the resource, as well as the new inputs from the current deployment. It has two jobs:
@@ -834,6 +838,96 @@ export("label_url", label.url)
 ```
 
 {{% /choosable %}}
+{{< /chooser >}}
+
+### Example: Using Stack Configuration
+
+The `configure` method allows dynamic providers to access the current stack's configuration and use it to configure the provider.
+
+{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
+
+{{% choosable language typescript %}}
+
+```typescript
+class ProviderWithConfigure implements pulumi.dynamic.ResourceProvider {
+    private accessToken: string;
+
+    async configure(req: pulumi.dynamic.ConfigureRequest): Promise<void> {
+        this.accessToken = req.config.require("access-token");
+    }
+
+    async create(props: any): Promise<pulumi.dynamic.CreateResult> {
+        const res = await fetch(`https://api.example.com/v1/resources?token=${this.accessToken}`);
+        ...
+    }
+}
+```
+
+{{% /choosable %}}
+
+{{% choosable language javascript %}}
+
+```javascript
+class ProviderWithConfigure {
+    async configure(req) {
+        this.accessToken = req.config.require("access-token");
+    }
+
+    async create(props)
+        const res = await fetch(`https://api.example.com/v1/resources?token=${this.accessToken}`);
+        ...
+    }
+}
+```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+```python
+class ProviderWithConfigure(ResourceProvider):
+    access_token: str
+
+    def configure(self, req: ConfigureRequest):
+        self.access_token = req.config.require("access-token")
+
+    def create(self, props):
+        res = http.get(f"https://api.example.com/v1/resources?token={self.access_token}")
+        ...
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```go
+// Dynamic Providers are not currently supported in Go.
+```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
+```csharp
+// Dynamic Providers are currently not supported in .NET.
+```
+
+{{% /choosable %}}
+{{% choosable language yaml %}}
+
+```yaml
+# Dynamic Providers are not supported in YAML.
+```
+
+{{% /choosable %}}
+
+{{% choosable language java %}}
+
+```java
+// Dynamic Providers are currently not supported in Java.
+```
+
+{{% /choosable %}}
+
 {{< /chooser >}}
 
 ### Additional Examples
