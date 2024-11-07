@@ -18,7 +18,7 @@ aliases:
   - /docs/guides/scim/okta/
 ---
 
-This document outlines the steps required to help you configure automatic provisioning/deprovisioning of your users and groups in Pulumi using SCIM 2.0.
+This document outlines the steps required to help you configure automatic provisioning/deprovisioning of your users and groups in Pulumi using SCIM 2.0..
 
 Please note that some advanced SCIM features aren't supported yet. For more information, see [Known Limitations](#known-limitations).
 
