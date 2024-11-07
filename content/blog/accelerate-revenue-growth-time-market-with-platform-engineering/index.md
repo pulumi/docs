@@ -55,7 +55,7 @@ Platform engineering results also vary widely by company due to multiple factors
 
 To find out more about how platform engineering can help you, take a look at these case studies:
 
-- [Aptos Labs](https://www.pulumi.com/case-studies/aptos/) uses Pulumi to transform development, increasing velocity by up to 10X while improving security, compliance, and cost control.
+- [Aptos Labs](https://www.pulumi.com/case-studies/aptos/) uses Pulumi to transform development, increasing velocity by up to 10x while improving security, compliance, and cost control.
 - [4IR](https://www.pulumi.com/case-studies/aptos/) uses Pulumi to reduce infrastructure deployment times, up-skill its team, and accelerate time to market.
 - [Starburst Data](https://www.pulumi.com/case-studies/starburst/) uses Pulumi to reduce infrastructure deployments from 2 weeks to just 3 hours.
 
