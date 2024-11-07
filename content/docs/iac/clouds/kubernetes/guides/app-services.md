@@ -596,7 +596,7 @@ Delete the pod, service, and ingress controller.
 
 ```bash
 $ kubectl delete pod/kuard svc/kuard ingress/kuard
-$ kubectl delete -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/f1f90ef4954effb122412d9cd2d48e02063038a4/deploy/static/mandatory.yaml -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/f1f90ef4954effb122412d9cd2d48e02063038a4/deploy/static/provider/cloud-generic.yaml 
+$ kubectl delete -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/f1f90ef4954effb122412d9cd2d48e02063038a4/deploy/static/mandatory.yaml -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/f1f90ef4954effb122412d9cd2d48e02063038a4/deploy/static/provider/cloud-generic.yaml
 ```
 
 {{% /choosable %}}
