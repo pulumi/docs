@@ -15,7 +15,7 @@
   logo: /logos/pkg/azure-native.svg
 
 - name: Oracle
-  link: https://www.oracle.com/cloud/
+  link: https://docs.oracle.com/en/learn/oci-pulumi-iac/index.html
   logo: /logos/tech/oracle.svg
 
 - name: Docker
