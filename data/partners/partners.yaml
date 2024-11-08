@@ -39,7 +39,7 @@
   logo: /logos/tech/dagger.svg
 
 - name: Datadog
-  link: https://www.datadoghq.com/
+  link: https://docs.datadoghq.com/integrations/pulumi/
   logo: /logos/tech/datadog.svg
 
 - name: Docker
