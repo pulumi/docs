@@ -41,7 +41,7 @@ db_instance = rds.Instance('my-database-instance',
     allocated_storage=20, # define the allocated storage in gigabytes
     engine_version='11', # define the engine version
     name='mydatabase', # instance name
-    username='admin', username
+    username='admin', # username
     password='adminpassword', # password. Make sure to use a strong password in production.
     skip_final_snapshot=True) # set to False in production
 
