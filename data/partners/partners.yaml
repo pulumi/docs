@@ -19,7 +19,7 @@
   logo: /logos/tech/1password.svg
 
 - name: Checkly
-  link: https://www.checklyhq.com/
+  link: https://www.checklyhq.com/docs/integrations/pulumi/
   logo: /logos/tech/checkly.svg
 
 - name: Chronosphere
