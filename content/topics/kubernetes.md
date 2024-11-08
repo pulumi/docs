@@ -228,7 +228,7 @@ superpowers:
     - title: Intelligent Cloud Management
       cta: Learn more
       cta_url: "/docs/pulumi-cloud/insights/"
-      icon_type: rocketship
+      icon_type: cloud-with-nodes
       icon_color: purple
       description: |
         Gain security, compliance, and cost insights into the entirety of an organization’s Kubernetes applications and cloud assets and automatically remediate issues through AI-powered workflows.
@@ -265,7 +265,7 @@ superpowers:
     - title: Centralize Secrets
       cta: Learn more
       cta_url: "/docs/esc/"
-      icon_type: testing
+      icon_type: security
       icon_color: violet
       description: |
          Pulumi ESC is integrated with External Secrets Operator (ESO), enabling the passing of secrets from ESC directly as environment variables of applications running in Kubernetes.
@@ -276,7 +276,7 @@ detail_sections:
         Pulumi has first-class support for popular Kubernetes tools, such as Helm, Kustomize,
         YAML, Secret Managers, Open Policy Agent (OPA), Custom Resource Definitions (CRDs), and Server-Side Apply (SSA).
       cta: Learn More
-      cta_url: "/blog/"
+      cta_url: "/blog/kubecon-2024-launches/"
       items:
           - title: Everything In One Place
             icon: cloud-with-nodes
