@@ -7,6 +7,10 @@ date: "2019-04-24"
 meta_desc: "This post contrasts the traditional approach with Pulumi's modern method for simplifying Kubernetes RBAC in Amazon EKS."
 ---
 
+{{% notes type="info" %}}
+Check out version 3.0 of the [Pulumi EKS Provider](/blog/eks-v3-release/).
+{{% /notes %}}
+
 One of the most common areas Kubernetes operators struggle with in
 production involves creating and managing role-based access control
 (RBAC). This is so daunting that RBAC is often not implemented, or
