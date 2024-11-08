@@ -22,7 +22,7 @@ package](https://github.com/pulumi/pulumi-eks). Let's see how.
 <!--more-->
 
 {{% notes type="info" %}}
-Updated January 2021 to include Python, .NET, and Go support.
+Updated October 2024 to [version 3.0](/blog/eks-v3-release/)
 {{% /notes %}}
 
 To get started, download the free and open source
