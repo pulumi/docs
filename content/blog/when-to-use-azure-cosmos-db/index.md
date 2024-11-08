@@ -95,7 +95,7 @@ I can do selects against it like `SELECT * FROM c WHERE c.customerId = '12345"` 
 }
 ```
 
-It's a JSON document. That's all good, but because there is no schema, as with any document database, if I need to migrate `name` to `fullname` how do I do it? Well, there are a bunch of strategies, but they all involve writing some application code to record by record and move the value from `name` to `full name`.
+As with any document database, rather than a schema, it's just a JSON document. That's all good, but because there is no schema, if I needed to do something like migrate `name` to `fullname`, how do I do it? Well, there are a bunch of strategies, but they all involve writing some application code to go record by record and move the value from `name` to `full name`.
 
 So don't be fooled by the SQL usage in the API. Cosmos DB is not a relational database; before you use a document database, you should be clear of the trade-offs.
 
