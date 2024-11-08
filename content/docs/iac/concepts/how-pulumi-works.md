@@ -63,55 +63,73 @@ Let's walk through a simple example. Suppose we have the following Pulumi progra
 {{% choosable language javascript %}}
 
 ```javascript
-const mediaBucket = new aws.s3.Bucket("media-bucket");
-const contentBucket = new aws.s3.Bucket("content-bucket");
+"use strict";
+const aws = require("@pulumi/aws");
+
+const mediaBucket = new aws.s3.BucketV2("media-bucket");
+const contentBucket = new aws.s3.BucketV2("content-bucket");
 ```
 
 {{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript
-const mediaBucket = new aws.s3.Bucket("media-bucket");
-const contentBucket = new aws.s3.Bucket("content-bucket");
+import * as aws from "@pulumi/aws";
+
+const mediaBucket = new aws.s3.BucketV2("media-bucket");
+const contentBucket = new aws.s3.BucketV2("content-bucket");
 ```
 
 {{% /choosable %}}
 {{% choosable language python %}}
 
 ```python
-media_bucket = s3.Bucket('media-bucket')
-content_bucket = s3.Bucket('content-bucket')
+from pulumi_aws import s3
+
+media_bucket = s3.BucketV2('media-bucket')
+content_bucket = s3.BucketV2('content-bucket')
 ```
 
 {{% /choosable %}}
 {{% choosable language go %}}
 
 ```go
-mediaBucket, _ := s3.NewBucket(ctx, "media-bucket", nil)
-contentBucket, _ := s3.NewBucket(ctx, "content-bucket", nil)
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v6/go/aws/s3"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		mediaBucket, err := s3.NewBucketV2(ctx, "media-bucket", nil)
+		if err != nil {
+			return err
+		}
+		contentBucket, err := s3.NewBucketV2(ctx, "content-bucket", nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("contentBucket", contentBucket.ID())
+		ctx.Export("mediaBucket", mediaBucket.ID())
+		return nil
+	})
+}
 ```
 
 {{% /choosable %}}
 {{% choosable language csharp %}}
 
 ```csharp
-using System.Threading.Tasks;
 using Pulumi;
 using Aws = Pulumi.Aws;
 
-class Program
+return await Deployment.RunAsync(() =>
 {
-    static Task<int> Main() => Deployment.RunAsync<MyStack>();
-}
-
-public MyStack : Stack
-{
-    public MyStack()
-    {
-        var mediaBucket = new Aws.S3.Bucket("media-bucket");
-        var contentBucket = new Aws.S3.Bucket("content-bucket");
-    }
-}
+    var mediaBucket = new Aws.S3.BucketV2("media-bucket");
+    var contentBucket = new Aws.S3.BucketV2("content-bucket");
+});
 ```
 
 {{% /choosable %}}
@@ -120,20 +138,15 @@ public MyStack : Stack
 ```java
 package myproject;
 
-import com.pulumi.Context;
-import com.pulumi.Exports;
 import com.pulumi.Pulumi;
-import com.pulumi.aws.s3.Bucket;
-
+import com.pulumi.aws.s3.BucketV2;
 
 public class App {
     public static void main(String[] args) {
-        Pulumi.run(App::stack);
-    }
-
-    public static void stack(Context ctx) {
-        var mediaBucket = new Bucket("media-bucket");
-        var contentBucket = new Bucket("content-bucket");
+        Pulumi.run(ctx -> {
+            var mediaBucket = new BucketV2("media-bucket");
+            var contentBucket = new BucketV2("content-bucket");
+        });
     }
 }
 ```
@@ -142,11 +155,13 @@ public class App {
 {{% choosable language yaml %}}
 
 ```yaml
+name: my-yaml-project
+runtime: yaml
 resources:
     mediaBucket:
-        type: aws:s3:Bucket
+        type: aws:s3:BucketV2
     contentBucket:
-        type: aws:s3:Bucket
+        type: aws:s3:BucketV2
 ```
 
 {{% /choosable %}}
@@ -165,75 +180,100 @@ After both operations have completed, the language host exits as the program has
 
 ```
 stack mystack
-   - aws.s3.Bucket "media-bucket653a4"
-   - aws.s3.Bucket "content-bucket125ce"
+   - aws.s3.BucketV2 "media-bucket653a4"
+   - aws.s3.BucketV2 "content-bucket125ce"
 ```
 
 Note the extra suffixes on the end of these bucket names. This is due to a process called [auto-naming](/docs/concepts/resources#autonaming), which Pulumi uses by default in order to allow you to deploy multiple copies of your infrastructure without creating name collisions for resources. This behavior can be disabled if desired.
 
-Now, let's make a change to one of resources and run `pulumi up` again.  Since Pulumi operates on a desired state model, it will use the last deployed state to compute the minimal set of changes needed to update your deployed infrastructure. For example, imagine that we wanted to make the S3 `media-bucket` publicly readable.  We change our program to express this new desired state:
+Now, let's make a change to one of resources and run `pulumi up` again.  Since Pulumi operates on a desired state model, it will use the last deployed state to compute the minimal set of changes needed to update your deployed infrastructure. For example, imagine that we wanted to add tags to the S3 `media-bucket`.  We change our program to express this new desired state:
 
 {{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
 
 {{% choosable language javascript %}}
 
 ```javascript
-const mediaBucket = new aws.s3.Bucket("media-bucket", {
-    acl: "public-read",   // add acl
+"use strict";
+const aws = require("@pulumi/aws");
+
+const mediaBucket = new aws.s3.BucketV2("media-bucket", {
+    tags: {"owner": "media-team"},
 });
-const contentBucket = new aws.s3.Bucket("content-bucket");
+const contentBucket = new aws.s3.BucketV2("content-bucket");
 ```
 
 {{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript
-const mediaBucket = new aws.s3.Bucket("media-bucket", {
-    acl: "public-read",   // add acl
+import * as aws from "@pulumi/aws";
+
+const mediaBucket = new aws.s3.BucketV2("media-bucket", {
+    tags: {"owner": "media-team"},
 });
-const contentBucket = new aws.s3.Bucket("content-bucket");
+const contentBucket = new aws.s3.BucketV2("content-bucket");
 ```
 
 {{% /choosable %}}
 {{% choosable language python %}}
 
 ```python
-media_bucket = s3.Bucket('media-bucket', acl="public-read") # add acl
-content_bucket = s3.Bucket('content-bucket')
+from pulumi_aws import s3
+
+media_bucket = s3.BucketV2('media-bucket', tags={'owner': 'media-team'})
+content_bucket = s3.BucketV2('content-bucket')
 ```
 
 {{% /choosable %}}
 {{% choosable language go %}}
 
 ```go
-mediaBucket, _ := s3.NewBucket(ctx, "media-bucket", &s3.BucketArgs{Acl: "public-read"}) // add acl
-contentBucket, _ := s3.NewBucket(ctx, "content-bucket", nil)
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v6/go/aws/s3"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		mediaBucket, err := s3.NewBucketV2(ctx, "mediaBucket", &s3.BucketV2Args{
+			Tags: pulumi.StringMap{
+				"owner": pulumi.String("media-team"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		contentBucket, err := s3.NewBucketV2(ctx, "contentBucket", nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("contentBucket", contentBucket.ID())
+		ctx.Export("mediaBucket", mediaBucket.ID())
+		return nil
+	})
+}
 ```
 
 {{% /choosable %}}
 {{% choosable language csharp %}}
 
 ```csharp
-using System.Threading.Tasks;
 using Pulumi;
 using Aws = Pulumi.Aws;
 
-class Program
+return await Deployment.RunAsync(() =>
 {
-    static Task<int> Main() => Deployment.RunAsync<MyStack>();
-}
-
-public MyStack : Stack
-{
-    public MyStack()
+    var mediaBucket = new Aws.S3.BucketV2("media-bucket", new()
     {
-        var mediaBucket = new Aws.S3.Bucket("media-bucket", new Aws.S3.BucketArgs
+        Tags =
         {
-            Acl = "public-read",   // add acl
-        });
-        var contentBucket = new Aws.S3.Bucket("content-bucket");
-    }
-}
+            { "owner", "media-team" },
+        },
+    }););
+    var contentBucket = new Aws.S3.BucketV2("content-bucket");
+});
 ```
 
 {{% /choosable %}}
@@ -242,22 +282,19 @@ public MyStack : Stack
 ```java
 package myproject;
 
-import com.pulumi.Context;
-import com.pulumi.Exports;
+import java.util.Map;
 import com.pulumi.Pulumi;
-import com.pulumi.aws.s3.Bucket;
+import com.pulumi.aws.s3.BucketV2;
+import com.pulumi.aws.s3.BucketV2Args;
 
 public class App {
     public static void main(String[] args) {
-        Pulumi.run(App::stack);
-    }
-
-    public static void stack(Context ctx) {
-        var mediaBucket = new Bucket("media-bucket",
-            BucketArgs.builder()
-                .acl("public-read")   // add acl
+        Pulumi.run(ctx -> {
+            var mediaBucket = new BucketV2("mediaBucket", BucketV2Args.builder()
+                .tags(Map.of("owner", "media-team"))
                 .build());
-        var contentBucket = new Bucket("content-bucket");
+            var contentBucket = new BucketV2("content-bucket");
+        });
     }
 }
 ```
@@ -266,20 +303,23 @@ public class App {
 {{% choosable language yaml %}}
 
 ```yaml
+name: my-yaml-project
+runtime: yaml
 resources:
   mediaBucket:
-    type: aws:s3:Bucket
+    type: aws:s3:BucketV2
     properties:
-      acl: public-read # add acl
+      tags:
+        owner: media-team
   contentBucket:
-    type: aws:s3:Bucket
+    type: aws:s3:BucketV2
 ```
 
 {{% /choosable %}}
 
 {{< /chooser >}}
 
-When you run `pulumi preview` or `pulumi up`, the entire process starts over.  The language host starts running your program and the call to aws.s3.Bucket causes a new resource registration request to be sent to the engine. This time, however, our state already contains a resource named `media-bucket`, so engine asks the resource provider to compare the existing state from our previous run of `pulumi up` with the desired state expressed by the program. The process detects that the `acl` property has changed from `private` (the default value) to `public-read`. By again consulting the resource provider the engine determines that it is able to update this property without creating a new bucket, and so it tells the provider to update the acl property to `public-read`. When this operation completes, the current state is updated to reflect the change that had been made.
+When you run `pulumi preview` or `pulumi up`, the entire process starts over.  The language host starts running your program and the call to aws.s3.BucketV2 causes a new resource registration request to be sent to the engine. This time, however, our state already contains a resource named `media-bucket`, so engine asks the resource provider to compare the existing state from our previous run of `pulumi up` with the desired state expressed by the program. The process detects that the `tags` property has changed from empty to a map assigning the `owner` tag. By again consulting the resource provider the engine determines that it is able to update this property without creating a new bucket, and so it tells the provider to update the `tags` property to set the `owner` tag. When this operation completes, the current state is updated to reflect the change that had been made.
 
 The engine also receives a resource registration request for "content-bucket".  However, since there are no changes between the current state and the desired state, the engine does not need to make any changes to the resource.
 
@@ -290,62 +330,86 @@ Now, suppose we rename `content-bucket` to `app-bucket`.
 {{% choosable language javascript %}}
 
 ```javascript
-const mediaBucket = new aws.s3.Bucket("media-bucket", {
-    acl: "public-read",   // add acl
+"use strict";
+const aws = require("@pulumi/aws");
+const mediaBucket = new aws.s3.BucketV2("media-bucket", {
+    tags: {"owner": "media-team"},
 });
-const appBucket = new aws.s3.Bucket("app-bucket");
+const appBucket = new aws.s3.BucketV2("app-bucket");
 ```
 
 {{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript
-const mediaBucket = new aws.s3.Bucket("media-bucket", {
-    acl: "public-read",   // add acl
+import * as aws from "@pulumi/aws";
+
+const mediaBucket = new aws.s3.BucketV2("media-bucket", {
+    tags: {"owner": "media-team"},
 });
-const appBucket = new aws.s3.Bucket("app-bucket");
+const appBucket = new aws.s3.BucketV2("app-bucket");
 ```
 
 {{% /choosable %}}
 {{% choosable language python %}}
 
 ```python
-media_bucket = s3.Bucket('media-bucket', acl="public-read") # add acl
-app_bucket = s3.Bucket('app-bucket')
+from pulumi_aws import s3
+
+media_bucket = s3.BucketV2('media-bucket', tags={'owner': 'media-team'})
+app_bucket = s3.BucketV2('app-bucket')
 ```
 
 {{% /choosable %}}
 {{% choosable language go %}}
 
 ```go
-mediaBucket, _ := s3.NewBucket(ctx, "media-bucket", &s3.BucketArgs{Acl: "public-read"}) // add acl
-appBucket, _ := s3.NewBucket(ctx, "app-bucket", nil)
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v6/go/aws/s3"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		mediaBucket, err := s3.NewBucketV2(ctx, "mediaBucket", &s3.BucketV2Args{
+			Tags: pulumi.StringMap{
+				"owner": pulumi.String("media-team"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		appBucket, err := s3.NewBucketV2(ctx, "appBucket", nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("appBucket", appBucket.ID())
+		ctx.Export("mediaBucket", mediaBucket.ID())
+		return nil
+	})
+}
 ```
 
 {{% /choosable %}}
 {{% choosable language csharp %}}
 
 ```csharp
-using System.Threading.Tasks;
 using Pulumi;
 using Aws = Pulumi.Aws;
 
-class Program
+return await Deployment.RunAsync(() =>
 {
-    static Task<int> Main() => Deployment.RunAsync<MyStack>();
-}
-
-public MyStack : Stack
-{
-    public MyStack()
+    var mediaBucket = new Aws.S3.BucketV2("media-bucket", new()
     {
-        var mediaBucket = new Aws.S3.Bucket("media-bucket", new Aws.S3.BucketArgs
+        Tags =
         {
-            Acl = "public-read",   // add acl
-        });
-        var appBucket = new Aws.S3.Bucket("app-bucket");
-    }
-}
+            { "owner", "media-team" },
+        },
+    }););
+    var appBucket = new Aws.S3.BucketV2("app-bucket");
+});
 ```
 
 {{% /choosable %}}
@@ -354,21 +418,19 @@ public MyStack : Stack
 ```java
 package myproject;
 
-import com.pulumi.Context;
-import com.pulumi.Exports;
+import java.util.Map;
 import com.pulumi.Pulumi;
-import com.pulumi.aws.s3.Bucket;
+import com.pulumi.aws.s3.BucketV2;
+import com.pulumi.aws.s3.BucketV2Args;
 
 public class App {
     public static void main(String[] args) {
-        Pulumi.run(App::stack);
-    }
-
-    public static void stack(Context ctx) {
-        var mediaBucket = new Bucket("media-bucket", BucketArgs.builder()
-            .acl("public-read")   // add acl
-            .build());
-        var contentBucket = new Bucket("app-bucket");
+        Pulumi.run(ctx -> {
+            var mediaBucket = new BucketV2("mediaBucket", BucketV2Args.builder()
+                .tags(Map.of("owner", "media-team"))
+                .build());
+            var appBucket = new BucketV2("appBucket");
+        });
     }
 }
 ```
@@ -377,13 +439,16 @@ public class App {
 {{% choosable language yaml %}}
 
 ```yaml
+name: my-yaml-project
+runtime: yaml
 resources:
   mediaBucket:
-    type: aws:s3:Bucket
+    type: aws:s3:BucketV2
     properties:
-      acl: public-read # add acl
+      tags:
+        owner: media-team
   appBucket:
-    type: aws:s3:Bucket
+    type: aws:s3:BucketV2
 ```
 
 {{% /choosable %}}
