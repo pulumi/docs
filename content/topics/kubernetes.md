@@ -222,18 +222,16 @@ superpowers:
       description: |
         Support for all clouds including Amazon Elastic Kubernetes Service (EKS), Azure
         Kubernetes Service (AKS), Google Kubernetes Engine (GKE), DigitalOcean Kubernetes
-        (DOKS), and more, with dozens of integrations with popular infrastructure service
+        (DOKS), and more, with hundreds of integrations with popular infrastructure service
         providers.
 
-    - title: Reduce Provisioning Time
+    - title: Intelligent Cloud Management
       cta: Learn more
-      cta_url: "/docs/iac/get-started/kubernetes/"
+      cta_url: "/docs/pulumi-cloud/insights/"
       icon_type: rocketship
       icon_color: purple
       description: |
-        With Pulumi you are able to take advantage of the features of programming languages,
-        helping you reduce boilerplate code and ultimately ship Kubernetes infrastructure and
-        applications faster with greater consistency.
+        Gain security, compliance, and cost insights into the entirety of an organization’s Kubernetes applications and cloud assets and automatically remediate issues through AI-powered workflows.
 
     - title: Automate Delivery
       cta: Learn more
@@ -241,8 +239,7 @@ superpowers:
       icon_type: delivery
       icon_color: blue
       description: |
-        You can integrate Pulumi directly with your favorite CI/CD and SCM systems to
-        continuously deliver Kubernetes infrastructure and applications. Improve the velocity
+        You can integrate Pulumi directly with your favorite CI/CD systems and testing frameworks to continuously deliver Kubernetes infrastructure and applications. Improve the velocity
         and visibility into your deployments from simple to complex global environments.
 
     - title: Smart Architecture
@@ -265,15 +262,13 @@ superpowers:
         prevent mistakes from being deployed. Enforce security, compliance, cost controls,
         and best practices using policies defined in modern languages.
 
-    - title: Reduce Deployment Complexity
+    - title: Centralize Secrets
       cta: Learn more
-      cta_url: "/docs/iac/concepts/testing/"
+      cta_url: "/docs/esc/"
       icon_type: testing
       icon_color: violet
       description: |
-        Deploying untested code can lead to some unexpected results. Pulumi lets you take advantage
-        of common tools, frameworks, and techniques to unit, integration, and property test your
-        Kubernetes infrastructure. Ensure your infrastructure is correct before and after deployment.
+         Pulumi ESC is integrated with External Secrets Operator (ESO), enabling the passing of secrets from ESC directly as environment variables of applications running in Kubernetes.
 
 detail_sections:
     - title: Continue using the tools you love
@@ -307,27 +302,27 @@ detail_sections:
       description: |
         Pulumi Copilot, an AI-powered assistant, makes discovering cost savings, running compliance checks, and debugging deployments across your Kubernetes resources as easy as typing a question.
       cta: Learn More
-      cta_url: "/docs/iac/clouds/kubernetes/guides/"
+      cta_url: "/product/copilot/"
       items:
           - title: Discover Cost Savings
             icon: guage
             icon_color: blue
-            description: Lorem ipsum odor amet, consectetuer adipiscing elit. Facilisi metus rutrum aptent fusce, egestas etiam hac. Felis dictum sodales vitae interdum integer.
+            description: Pulumi Copilot can access infrastructure stack and resource data, so you can analyze the cost of your infrastructure and reclaim cloud waste.
 
           - title: Run Compliance Checks
             icon: testing
             icon_color: purple
-            description: Lorem ipsum odor amet, consectetuer adipiscing elit. Nibh diam et iaculis porttitor eget arcu.
+            description: Pulumi Copilot leverages knowledge about compliance frameworks to analyze your infrastructure and check for policy compliance. 
 
           - title: Debug Cloud Failures
             icon: cloud-with-nodes
             icon_color: salmon
-            description: Lorem ipsum odor amet, consectetuer adipiscing elit. Dui facilisi molestie quam euismod consequat rhoncus taciti condimentum. Leo fermentum lacus sem; auctor cubilia aliquam iaculis.
+            description: Pulumi Copilot can access update and deployment logs of your stacks as well as access history, logs, and runtime metrics, so you can easily debug deployment and infrastructure failures. 
 
           - title: Stay Secure
             icon: shield
             icon_color: yellow
-            description: Lorem ipsum odor amet, consectetuer adipiscing elit. Donec facilisi tincidunt lectus ultrices enim class suscipit. Magnis cursus ornare; tellus sollicitudin tincidunt natoque. Nec sagittis nulla facilisis odio consequat eleifend erat.
+            description: Pulumi Copilot combines Pulumi's supergraph of your cloud infrastructure and knowledge about security best practices to identify security violations and and detect anomalous activity. 
 
 contact_us_form:
     section_id: contact
