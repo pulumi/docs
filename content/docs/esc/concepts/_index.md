@@ -12,7 +12,7 @@ aliases:
   - /docs/concepts/environments/
 ---
 
-Pulumi ESC (Environments, Secrets, and Configuration) is a tool that simplifies how organizations manage secrets and configurations across multiple environments. It enables teams to compose collections of configuration and secrets, which can be consumed by various infrastructure and application services. ESC helps ensure security, consistency, and efficiency in handling secrets and configuration.
+Pulumi ESC (Environments, Secrets, and Configuration) simplifies how organizations manage secrets and configurations across multiple environments. It enables teams to compose collections of configuration and secrets called `environments`, which can be consumed by various infrastructure and application services. ESC helps ensure security, consistency, and efficiency in handling secrets and configuration.
 
 Pulumi ESC is offered as a fully managed cloud service in [Pulumi Cloud](/docs/pulumi-cloud/). ESC is a standalone tool that can be applied to many uses cases. It has native integration with our other products, including Pulumi Infrastructure as Code (IaC). The [pulumi/esc project](https://github.com/pulumi/esc) is open source, and contains the evaluation engine for environments, the `esc` CLI.
 
