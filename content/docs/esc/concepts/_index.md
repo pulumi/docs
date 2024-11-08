@@ -26,7 +26,7 @@ The diagram above shows four key concepts:
 
 3. ***Targets***: ESC *outputs* configuration and secrets to a variety of popular targets. Pulumi ESC has a rich API that allows for easy integration, and provides standard output mechanisms like environment variables and key files.
 
-4. ***Management***: ESC environments are centrally managed in Pulumi Cloud, and can be locked down with RBAC, versioned, tagged, and audited. ESC secrets are encrypted in flight and at rest.
+4. ***Management***: ESC environments are centrally managed in Pulumi Cloud, and can be permissioned with RBAC, versioned, tagged, and audited. ESC secrets are encrypted in flight and at rest.
 
 ## The ESC Approach
 
