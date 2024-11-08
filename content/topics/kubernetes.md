@@ -276,7 +276,7 @@ detail_sections:
         Pulumi has first-class support for popular Kubernetes tools, such as Helm, Kustomize,
         YAML, Secret Managers, Open Policy Agent (OPA), Custom Resource Definitions (CRDs), and Server-Side Apply (SSA).
       cta: Learn More
-      cta_url: "/blog/kubecon-2024-launches/"
+      cta_url: "/blog/new-kubernetes-superpowers"
       items:
           - title: Everything In One Place
             icon: cloud-with-nodes
