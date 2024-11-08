@@ -42,7 +42,7 @@ Yes. In addition to the SCIM-managed teams, one can also configure and manage Pu
 
 ### A failure occurred when attempting to provision group members.
 
-The creation (POST), update (PATCH) or replacement (PUT) of a group performs member validation prior running the operation. If any of the members provided is not provisioned into your Pulumi organization or is not active, the request will fail with the following response:
+The creation (POST), update (PATCH) or replacement (PUT) of a group performs member validation prior running the operation. If any of the members provided are not provisioned into your Pulumi organization or is not active, the request will fail with the following response:
 
 ```
 Status: 400 BAD REQUEST
