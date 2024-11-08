@@ -75,4 +75,12 @@ form:
     # HubSpot form id.
     hubspot_form_id: 4fb91f62-2ba9-442d-a980-e92018742cfa
     salesforce_campaign_id: 701PQ00000LsJUhYAN
+
+event_data:
+  name: "AWS Immersion Day: Accelerating Platform Engineering with Pulumi"
+  start_date: 2024-12-11T09:00:00-07:00
+  end_date: 2024-12-11T10:30:00-07:00
+  url: "https://www.pulumi.com/resources/aws-immersion-day-platform-engineering/"
+  description: |
+    Join us for an exclusive post-re:Invent webinar where we'll explore how Pulumi can revolutionize your platform engineering efforts. Learn how to streamline infrastructure management, enhance developer productivity, and accelerate your cloud-native initiatives using Pulumi's powerful infrastructure-as-code capabilities.
 ---
