@@ -23,7 +23,7 @@
   logo: /logos/tech/checkly.svg
 
 - name: Chronosphere
-  link: https://chronosphere.io/
+  link: https://docs.chronosphere.io/administer/infrastructure/pulumi
   logo: /logos/tech/chronosphere.svg
 
 - name: Civo
