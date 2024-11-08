@@ -14,7 +14,7 @@
   link: https://cloud.google.com/
   logo: /logos/pkg/gcp.svg
 
-  - name: 1Password
+- name: 1Password
   link: https://1password.com/
   logo: /logos/tech/1password.svg
 
