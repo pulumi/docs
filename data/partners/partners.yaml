@@ -6,86 +6,86 @@
   link: https://aws.amazon.com
   logo: /logos/pkg/aws.svg
 
-- name: Google Cloud
-  link: https://cloud.google.com/
-  logo: /logos/pkg/gcp.svg
-
 - name: Azure
   link: https://azure.microsoft.com/
   logo: /logos/pkg/azure-native.svg
 
-- name: Oracle
-  link: https://docs.oracle.com/en/learn/oci-pulumi-iac/index.html
-  logo: /logos/tech/oracle.svg
+- name: Google Cloud
+  link: https://cloud.google.com/
+  logo: /logos/pkg/gcp.svg
 
-- name: Docker
-  link: https://www.docker.com/
-  logo: /logos/pkg/docker.svg
-
-- name: Pinecone
-  link: https://docs.pinecone.io/integrations/pulumi
-  logo: /logos/pkg/pinecone.svg
-
-- name: NewRelic
-  link: https://newrelic.com/instant-observability/pulumi/
-  logo: /logos/tech/newrelic.svg
-
-- name: Snyk
-  link: https://partners.snyk.io/English/solutions/solution/2908/pulumi
-  logo: /logos/tech/snyk.png
-
-- name: Cloudflare
-  link: https://developers.cloudflare.com/pulumi/
-  logo: /logos/pkg/cloudflare.svg
-
-- name: GitHub
-  link: https://github.com/
-  logo: /logos/pkg/github.svg
-
-- name: Snowflake
-  link: https://www.snowflake.com/
-  logo: /logos/pkg/snowflake.svg
-
-- name: Zscaler
-  link: https://www.zscaler.com/
-  logo: /logos/tech/zscaler.svg
-
-- name: Datadog
-  link: https://www.datadoghq.com/
-  logo: /logos/tech/datadog.svg
-
-- name: GitLab
-  link: https://about.gitlab.com/
-  logo: /logos/pkg/gitlab.svg
-  
-- name: Nitric 
-  link: https://nitric.io/blog/why-nitric-chose-pulumi
-  logo: /images/pulumiup-2023/speaker-logos/nitric.svg
-
-- name: Tailscale 
-  link: https://tailscale.com/
-  logo: /logos/pkg/tailscale.svg
-
-- name: Chronosphere 
-  link: https://chronosphere.io/
-  logo: /logos/tech/chronosphere.svg
-
-- name: 1Password
+  - name: 1Password
   link: https://1password.com/
   logo: /logos/tech/1password.svg
-
-- name: Dagger
-  link: https://dagger.io/
-  logo: /logos/tech/dagger.svg
-
-- name: Twingate
-  link: https://www.twingate.com/
-  logo: /logos/tech/twingate.svg
 
 - name: Checkly
   link: https://www.checklyhq.com/
   logo: /logos/tech/checkly.svg
 
+- name: Chronosphere
+  link: https://chronosphere.io/
+  logo: /logos/tech/chronosphere.svg
+
 - name: Civo
   link: https://www.civo.com/
   logo: /logos/pkg/civo2.svg
+
+- name: Cloudflare
+  link: https://developers.cloudflare.com/pulumi/
+  logo: /logos/pkg/cloudflare.svg
+
+- name: Dagger
+  link: https://dagger.io/
+  logo: /logos/tech/dagger.svg
+
+- name: Datadog
+  link: https://www.datadoghq.com/
+  logo: /logos/tech/datadog.svg
+
+- name: Docker
+  link: https://www.docker.com/
+  logo: /logos/pkg/docker.svg
+
+- name: GitHub
+  link: https://github.com/
+  logo: /logos/pkg/github.svg
+
+- name: GitLab
+  link: https://about.gitlab.com/
+  logo: /logos/pkg/gitlab.svg
+
+- name: NewRelic
+  link: https://newrelic.com/instant-observability/pulumi/
+  logo: /logos/tech/newrelic.svg
+
+- name: Nitric
+  link: https://nitric.io/blog/why-nitric-chose-pulumi
+  logo: /images/pulumiup-2023/speaker-logos/nitric.svg
+
+- name: Oracle
+  link: https://docs.oracle.com/en/learn/oci-pulumi-iac/index.html
+  logo: /logos/tech/oracle.svg
+
+- name: Pinecone
+  link: https://docs.pinecone.io/integrations/pulumi
+  logo: /logos/pkg/pinecone.svg
+
+- name: Snowflake
+  link: https://www.snowflake.com/
+  logo: /logos/pkg/snowflake.svg
+
+- name: Snyk
+  link: https://partners.snyk.io/English/solutions/solution/2908/pulumi
+  logo: /logos/tech/snyk.png
+
+- name: Tailscale
+  link: https://tailscale.com/
+  logo: /logos/pkg/tailscale.svg
+
+- name: Twingate
+  link: https://www.twingate.com/
+  logo: /logos/tech/twingate.svg
+
+- name: Zscaler
+  link: https://www.zscaler.com/
+  logo: /logos/tech/zscaler.svg
