@@ -15,7 +15,7 @@ This article details how Pulumi ESC works, including its architecture, supported
 
 ## Architecture
 
-Pulumi ESC is a hosted service provided as part of [Pulumi Cloud](/docs/pulumi-cloud/). ESC stores your secrets and configuration and proxies access to other secret stores through provider plugins.
+Pulumi ESC is available as a hosted service provided as part of [Pulumi Cloud](/docs/pulumi-cloud/) or can be [self-hosted](/docs/esc/faq/#can-i-self-host-pulumi-esc) on your own infrastructure. ESC stores your secrets and configuration and proxies access to other secret stores through provider plugins.
 
 Using configuration-as-code, these secrets and configuration values are composed into *environments* which are defined in YAML. ESC then makes these environments available to targets via common mechanisms like environment variables, configuration files, and directly via the ESC API and multi-language SDKs.
 
@@ -27,9 +27,9 @@ By default, Pulumi ESC stores your configuration and secrets in Pulumi Cloud. Ho
 
 By aggregating secrets from these providers, Pulumi ESC provides a unified interface for retrieving, using, and managing secrets, regardless of their source.
 
-### Supported secret providers
+### Supported login and secret providers
 
-Pulumi ESC integrates with many popular cloud providers and secrets managers, including:
+Pulumi ESC integrates with many popular cloud login providers and secrets managers, including:
 
 * [AWS OIDC](/docs/esc/integrations/dynamic-login-credentials/aws-login/) and [AWS Secrets Manager](/docs/esc/integrations/dynamic-secrets/aws-secrets/)
 * [Azure OIDC](/docs/esc/integrations/dynamic-login-credentials/azure-login) and [Azure KeyVault](/docs/esc/integrations/dynamic-secrets/azure-secrets/)
