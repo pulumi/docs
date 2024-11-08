@@ -198,7 +198,7 @@ After learning about partitioning and seeing the Cassandra API, you might think 
 
 ### API for Apache Cassandra
 
-If you have existing Apache Cassandra usage, in theory, the  API for Apache Cassandra lets you use CosmosDB equivalently, by just changing the query string. As with the Mongo API above, if possible you are probably better to use Core NoSQL API, but that will required rewriting dataaccess code.
+If you have existing Apache Cassandra usage, in theory, the  API for Apache Cassandra lets you use CosmosDB equivalently by just changing the query string. As with the Mongo API above, if possible you are probably better to use Core NoSQL API, but that will required rewriting dataaccess code.
 
 ### Cosmos DB CQL Querying
 
