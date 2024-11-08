@@ -62,9 +62,11 @@ class OurBucketComponent extends pulumi.ComponentResource {
             ],
         },
         locked: {
+            Effect: "Allow",
             /* ... */
         },
         permissive: {
+            Effect: "Allow",
             /* ... */
         },
     };
@@ -115,22 +117,36 @@ export const bucketName = bucket.bucket.id;
 {{% choosable language python %}}
 
 ```python
-import ...
+import pulumi
+import pulumi_aws as aws
+import pulumi_aws_native as aws_native
 
 # Create a class that encapsulates the functionality while subclassing the ComponentResource class (using the ComponentResource class as a template).
 class OurBucketComponent(pulumi.ComponentResource):
     def __init__(self, name_me, policy_name='default', opts=None):
         # By calling super(), we ensure any instantiation of this class inherits from the ComponentResource class so we don't have to declare all the same things all over again.
-        super().__init__('pkg:index:OurBucketComponent', name, None, opts)
+        super().__init__('pkg:index:OurBucketComponent', name_me, None, opts)
         # This definition ensures the new component resource acts like anything else in the Pulumi ecosystem when being called in code.
         child_opts = pulumi.ResourceOptions(parent=self)
         self.name_me = name_me
         self.policy_name = policy_name
         self.bucket = aws_native.s3.Bucket(f"{self.name_me}")
         self.policy_list = {
-            'default': default,
-            'locked': '{...}',
-            'permissive': '{...}'
+            'default': {
+                'Effect': 'Allow',
+                'Principal': "*",
+                'Action': [
+                    "s3:GetObject"
+                ],
+            },
+            'locked': {
+                'Effect': 'Allow',
+                # ...
+            },
+            'permissive': {
+                'Effect': 'Allow',
+                # ...
+            },
         }
         # We also need to register all the expected outputs for this component resource that will get returned by default.
         self.register_outputs({
@@ -149,7 +165,7 @@ class OurBucketComponent(pulumi.ComponentResource):
             raise
 
     def set_policy(self):
-        bucket_policy = aws_classic.s3.BucketPolicy(
+        bucket_policy = aws.s3.BucketPolicy(
             f"{self.name_me}-policy",
             bucket=self.bucket.id,
             policy=self.define_policy(),
@@ -157,7 +173,8 @@ class OurBucketComponent(pulumi.ComponentResource):
         )
         return bucket_policy
 
-bucket1 = OurBucketClass('laura-bucket-1', 'default')
+
+bucket1 = OurBucketComponent('laura-bucket-1', 'default')
 bucket1.set_policy()
 
 pulumi.export("bucket_name", bucket1.bucket.id)
