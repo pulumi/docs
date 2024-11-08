@@ -163,7 +163,8 @@ class OurBucketClass {
 
 ```python
 import json
-# ...
+import pulumi_aws_native as aws_native
+import pulumi_aws as aws_classic
 
 class OurBucketClass:
     def __init__(self, name: str, policy_name: str):
@@ -205,7 +206,7 @@ But that JSON blob of the policy is also an object which we can encapsulate, mak
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-// ...
+import * as aws from "@pulumi/aws";
 
 type PolicyType = "default" | "locked" | "permissive";
 
@@ -222,9 +223,11 @@ class OurBucketClass {
             ],
         },
         locked: {
+            Effect: "Allow",
             /* ... */
         },
         permissive: {
+            Effect: "Allow",
             /* ... */
         },
     };
@@ -259,7 +262,10 @@ const bucket = new OurBucketClass("laura-bucket-1", "default");
 
 ```python
 import json
-# ...
+import pulumi
+import pulumi_aws as aws_classic
+import pulumi_aws_native as aws_native
+
 
 class OurBucketClass:
     _POLICIES = {
@@ -269,9 +275,11 @@ class OurBucketClass:
             "Action": ["s3:GetObject"],
         },
         "locked": {
+            "Effect": "Allow",
             # ...
         },
         "permissive": {
+            "Effect": "Allow",
             # ...
         },
     }
