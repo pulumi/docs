@@ -80,6 +80,7 @@ values:
         oidc:
           roleArn: arn:aws:iam::01234567891011:role/some-role
           sessionName: some-session
+          duration: 1h
 
   environmentVariables:
     AWS_ACCESS_KEY_ID: ${aws.login.accessKeyId}
