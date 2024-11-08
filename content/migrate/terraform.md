@@ -55,18 +55,19 @@ contact_us_form:
 examples:
     one:
         ts: |
+            import * as pulumi from "@pulumi/pulumi";
             import * as aws from "@pulumi/aws";
             import { readdirSync } from "fs";
             import { join as pathjoin } from "path";
 
-            const bucket = new aws.s3.BucketV2("mybucket");
+            const bucket = new aws.s3.Bucket("mybucket");
             const folder = "./files";
             let files = readdirSync(folder);
 
             for (let file of files) {
                 const object = new aws.s3.BucketObject(file, {
                     bucket: bucket,
-                    source: new pulumi.FileAsset(pathjoin(folder, file))
+                    source: new pulumi.asset.FileAsset(pathjoin(folder, file))
                 });
             }
 
