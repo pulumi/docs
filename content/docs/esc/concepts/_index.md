@@ -12,7 +12,7 @@ aliases:
   - /docs/concepts/environments/
 ---
 
-Pulumi ESC (Environments, Secrets, and Configuration) simplifies how organizations manage secrets and configurations across multiple environments. It enables teams to compose collections of configuration and secrets called `environments`, which can be consumed by various infrastructure and application services. ESC helps ensure security, consistency, and efficiency in handling secrets and configuration.
+Pulumi ESC (Environments, Secrets, and Configuration) simplifies how organizations manage secrets and configurations across multiple environments. It enables teams to compose collections of configuration and secrets called *environments*, which can be consumed by various infrastructure and application services. ESC helps ensure security, consistency, and efficiency in handling secrets and configuration.
 
 Pulumi ESC is offered both as a fully managed cloud service in [Pulumi Cloud](/docs/pulumi-cloud/) and self-hosted for scenarios that require isolated environments. ESC has native integration with several products and other Pulumi products, including Pulumi Infrastructure as Code (IaC). The [pulumi/esc project](https://github.com/pulumi/esc) is open source, and contains the evaluation engine for environments, the `esc` CLI.
 
@@ -40,7 +40,7 @@ Pulumi ESC provides fine-grained **Role-Based Access Control (RBAC)**, ensuring 
 
 {{< figure src="team_environments.png" caption="Figure: Composable ESC environments facilitate team-based organization.">}}
 
-Pulumi ESC environments can be structured to reflect an organization’s team structure, security boundaries, or deployment targets.
+Pulumi ESC environments can be structured to reflect an organization’s team structure, security boundaries, or deployment targets. The above diagram shows an example of how a customer might organize and compose different security environments.
 
 Imagine a hypothetical development organization comprised of a few teams:
 
@@ -48,9 +48,7 @@ Imagine a hypothetical development organization comprised of a few teams:
 * The *communications* team, that manages secrets/config for the mailing service and texting service.
 * The *central platform* team, that owns most common config, including OIDC config and the keys/config for the feature flag system.
 
-Permissions to these environments can be defined separately to minimize security exposure.
-
-The above diagram shows an example of how a customer might organize their environments.
+Permissions to these environments can be defined separately to minimize security exposure. They can be reused indepedently or composed into more complex application scenarios.
 
 ### Dynamic vs static configurations
 
@@ -62,7 +60,7 @@ More detail on dynamic secret providers is available in [Adding OIDC and secrets
 
 ### Configuration-as-Code, automation, and integration everywhere
 
-Like our other products, Pulumi ESC uses an "as-code" approach to configuration and secrets. ESC environments can be composed, managed, and accessed using code written in TypeScript, JavaScript, Go, Python, or YAML. The `esc` CLI and our full-featured API allows for scripted use in automated environments like CI/CD. ESC is already deeply integrated into Pulumi IaC and Pulumi Cloud, and its plugin AP makes it easy to integrate ESC with any third-party product either as a provider or consumer.
+Like our other products, Pulumi ESC uses an "as-code" approach to configuration and secrets. ESC environments can be composed, managed, and accessed using code written in TypeScript, JavaScript, Go, Python, or YAML. The `esc` CLI and our full-featured API allows for scripted use in automated environments like CI/CD. This reduces copy/paste style duplication of credentials and allows for management from a single source of truth. ESC is already deeply integrated into Pulumi IaC and Pulumi Cloud, and provides a number of third-party product integrations both as secrets providers and consumers.
 
 ## Learn More
 
