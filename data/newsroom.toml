@@ -179,6 +179,12 @@ summary = "Company funded by Madrona Venture Group and Tola Capital to help comp
 url = "https://info.pulumi.com/press-release/pulumi-launches-cloud-development-platform-to-help-teams-get-code-to-the-cloud-faster/"
 
 [[coverage]]
+date = "30 October 2024"
+title = "From IaC to Cloud Management: Pulumi’s Evolution Story"
+img = "/logos/press/newstack.png"
+url = "https://thenewstack.io/from-iac-to-cloud-management-pulumis-evolution-story/"
+
+[[coverage]]
 date = "30 September 2024"
 title = "Pulumi, System Initiative Step Up To Challenge IBM’s HashiCorp"
 img = "/logos/press/forbes.png"
