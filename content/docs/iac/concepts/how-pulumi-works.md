@@ -63,6 +63,9 @@ Let's walk through a simple example. Suppose we have the following Pulumi progra
 {{% choosable language javascript %}}
 
 ```javascript
+"use strict";
+const aws = require("@pulumi/aws");
+
 const mediaBucket = new aws.s3.BucketV2("media-bucket");
 const contentBucket = new aws.s3.BucketV2("content-bucket");
 ```
@@ -71,6 +74,8 @@ const contentBucket = new aws.s3.BucketV2("content-bucket");
 {{% choosable language typescript %}}
 
 ```typescript
+import * as aws from "@pulumi/aws";
+
 const mediaBucket = new aws.s3.BucketV2("media-bucket");
 const contentBucket = new aws.s3.BucketV2("content-bucket");
 ```
@@ -79,6 +84,8 @@ const contentBucket = new aws.s3.BucketV2("content-bucket");
 {{% choosable language python %}}
 
 ```python
+from pulumi_aws import s3
+
 media_bucket = s3.BucketV2('media-bucket')
 content_bucket = s3.BucketV2('content-bucket')
 ```
@@ -87,31 +94,42 @@ content_bucket = s3.BucketV2('content-bucket')
 {{% choosable language go %}}
 
 ```go
-mediaBucket, _ := s3.NewBucketV2(ctx, "media-bucket", nil)
-contentBucket, _ := s3.NewBucketV2(ctx, "content-bucket", nil)
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v6/go/aws/s3"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		mediaBucket, err := s3.NewBucketV2(ctx, "media-bucket", nil)
+		if err != nil {
+			return err
+		}
+		contentBucket, err := s3.NewBucketV2(ctx, "content-bucket", nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("contentBucket", contentBucket.ID())
+		ctx.Export("mediaBucket", mediaBucket.ID())
+		return nil
+	})
+}
 ```
 
 {{% /choosable %}}
 {{% choosable language csharp %}}
 
 ```csharp
-using System.Threading.Tasks;
 using Pulumi;
 using Aws = Pulumi.Aws;
 
-class Program
+return await Deployment.RunAsync(() =>
 {
-    static Task<int> Main() => Deployment.RunAsync<MyStack>();
-}
-
-public MyStack : Stack
-{
-    public MyStack()
-    {
-        var mediaBucket = new Aws.S3.BucketV2("media-bucket");
-        var contentBucket = new Aws.S3.BucketV2("content-bucket");
-    }
-}
+    var mediaBucket = new Aws.S3.BucketV2("media-bucket");
+    var contentBucket = new Aws.S3.BucketV2("content-bucket");
+});
 ```
 
 {{% /choosable %}}
@@ -120,20 +138,15 @@ public MyStack : Stack
 ```java
 package myproject;
 
-import com.pulumi.Context;
-import com.pulumi.Exports;
 import com.pulumi.Pulumi;
-import com.pulumi.aws.s3.Bucket;
-
+import com.pulumi.aws.s3.BucketV2;
 
 public class App {
     public static void main(String[] args) {
-        Pulumi.run(App::stack);
-    }
-
-    public static void stack(Context ctx) {
-        var mediaBucket = new BucketV2("media-bucket");
-        var contentBucket = new BucketV2("content-bucket");
+        Pulumi.run(ctx -> {
+            var mediaBucket = new BucketV2("media-bucket");
+            var contentBucket = new BucketV2("content-bucket");
+        });
     }
 }
 ```
@@ -142,6 +155,8 @@ public class App {
 {{% choosable language yaml %}}
 
 ```yaml
+name: my-yaml-project
+runtime: yaml
 resources:
     mediaBucket:
         type: aws:s3:BucketV2
@@ -178,6 +193,9 @@ Now, let's make a change to one of resources and run `pulumi up` again.  Since P
 {{% choosable language javascript %}}
 
 ```javascript
+"use strict";
+const aws = require("@pulumi/aws");
+
 const mediaBucket = new aws.s3.BucketV2("media-bucket", {
     tags: {"owner": "media-team"},
 });
@@ -188,6 +206,8 @@ const contentBucket = new aws.s3.BucketV2("content-bucket");
 {{% choosable language typescript %}}
 
 ```typescript
+import * as aws from "@pulumi/aws";
+
 const mediaBucket = new aws.s3.BucketV2("media-bucket", {
     tags: {"owner": "media-team"},
 });
@@ -198,6 +218,8 @@ const contentBucket = new aws.s3.BucketV2("content-bucket");
 {{% choosable language python %}}
 
 ```python
+from pulumi_aws import s3
+
 media_bucket = s3.BucketV2('media-bucket', tags={'owner': 'media-team'})
 content_bucket = s3.BucketV2('content-bucket')
 ```
@@ -206,36 +228,51 @@ content_bucket = s3.BucketV2('content-bucket')
 {{% choosable language go %}}
 
 ```go
-mediaBucket, _ := s3.NewBucketV2(ctx, "mediaBucket", &s3.BucketV2Args{
-        Tags: pulumi.StringMap{
-                "owner": pulumi.String("media-team"),
-        },
-})
-contentBucket, _ := s3.NewBucketV2(ctx, "contentBucket", nil)
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v6/go/aws/s3"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		mediaBucket, err := s3.NewBucketV2(ctx, "mediaBucket", &s3.BucketV2Args{
+			Tags: pulumi.StringMap{
+				"owner": pulumi.String("media-team"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		contentBucket, err := s3.NewBucketV2(ctx, "contentBucket", nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("contentBucket", contentBucket.ID())
+		ctx.Export("mediaBucket", mediaBucket.ID())
+		return nil
+	})
+}
 ```
 
 {{% /choosable %}}
 {{% choosable language csharp %}}
 
 ```csharp
-
-using System.Collections.Generic;
-using System.Linq;
 using Pulumi;
 using Aws = Pulumi.Aws;
 
 return await Deployment.RunAsync(() =>
 {
-    var mediaBucket = new Aws.S3.BucketV2("mediaBucket", new()
+    var mediaBucket = new Aws.S3.BucketV2("media-bucket", new()
     {
         Tags =
         {
             { "owner", "media-team" },
         },
-    });
-
-    var contentBucket = new Aws.S3.BucketV2("contentBucket");
-
+    }););
+    var contentBucket = new Aws.S3.BucketV2("content-bucket");
 });
 ```
 
@@ -243,33 +280,21 @@ return await Deployment.RunAsync(() =>
 {{% choosable language java %}}
 
 ```java
-
 package myproject;
 
-import com.pulumi.Context;
+import java.util.Map;
 import com.pulumi.Pulumi;
-import com.pulumi.core.Output;
 import com.pulumi.aws.s3.BucketV2;
 import com.pulumi.aws.s3.BucketV2Args;
-import java.util.List;
-import java.util.ArrayList;
-import java.util.Map;
-import java.io.File;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 
 public class App {
     public static void main(String[] args) {
-        Pulumi.run(App::stack);
-    }
-
-    public static void stack(Context ctx) {
-        var mediaBucket = new BucketV2("mediaBucket", BucketV2Args.builder()
-            .tags(Map.of("owner", "media-team"))
-            .build());
-
-        var contentBucket = new BucketV2("contentBucket");
-
+        Pulumi.run(ctx -> {
+            var mediaBucket = new BucketV2("mediaBucket", BucketV2Args.builder()
+                .tags(Map.of("owner", "media-team"))
+                .build());
+            var contentBucket = new BucketV2("content-bucket");
+        });
     }
 }
 ```
@@ -278,6 +303,8 @@ public class App {
 {{% choosable language yaml %}}
 
 ```yaml
+name: my-yaml-project
+runtime: yaml
 resources:
   mediaBucket:
     type: aws:s3:BucketV2
@@ -285,7 +312,7 @@ resources:
       tags:
         owner: media-team
   contentBucket:
-    type: aws:s3:Bucket
+    type: aws:s3:BucketV2
 ```
 
 {{% /choosable %}}
@@ -303,6 +330,8 @@ Now, suppose we rename `content-bucket` to `app-bucket`.
 {{% choosable language javascript %}}
 
 ```javascript
+"use strict";
+const aws = require("@pulumi/aws");
 const mediaBucket = new aws.s3.BucketV2("media-bucket", {
     tags: {"owner": "media-team"},
 });
@@ -313,6 +342,8 @@ const appBucket = new aws.s3.BucketV2("app-bucket");
 {{% choosable language typescript %}}
 
 ```typescript
+import * as aws from "@pulumi/aws";
+
 const mediaBucket = new aws.s3.BucketV2("media-bucket", {
     tags: {"owner": "media-team"},
 });
@@ -323,6 +354,8 @@ const appBucket = new aws.s3.BucketV2("app-bucket");
 {{% choosable language python %}}
 
 ```python
+from pulumi_aws import s3
+
 media_bucket = s3.BucketV2('media-bucket', tags={'owner': 'media-team'})
 app_bucket = s3.BucketV2('app-bucket')
 ```
@@ -331,36 +364,51 @@ app_bucket = s3.BucketV2('app-bucket')
 {{% choosable language go %}}
 
 ```go
-mediaBucket, _ := s3.NewBucketV2(ctx, "mediaBucket", &s3.BucketV2Args{
-        Tags: pulumi.StringMap{
-                "owner": pulumi.String("media-team"),
-        },
-})
-appBucket, _ := s3.NewBucketV2(ctx, "appBucket", nil)
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v6/go/aws/s3"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		mediaBucket, err := s3.NewBucketV2(ctx, "mediaBucket", &s3.BucketV2Args{
+			Tags: pulumi.StringMap{
+				"owner": pulumi.String("media-team"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		appBucket, err := s3.NewBucketV2(ctx, "appBucket", nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("appBucket", appBucket.ID())
+		ctx.Export("mediaBucket", mediaBucket.ID())
+		return nil
+	})
+}
 ```
 
 {{% /choosable %}}
 {{% choosable language csharp %}}
 
 ```csharp
-
-using System.Collections.Generic;
-using System.Linq;
 using Pulumi;
 using Aws = Pulumi.Aws;
 
 return await Deployment.RunAsync(() =>
 {
-    var mediaBucket = new Aws.S3.BucketV2("mediaBucket", new()
+    var mediaBucket = new Aws.S3.BucketV2("media-bucket", new()
     {
         Tags =
         {
             { "owner", "media-team" },
         },
-    });
-
-    var appBucket = new Aws.S3.BucketV2("appBucket");
-
+    }););
+    var appBucket = new Aws.S3.BucketV2("app-bucket");
 });
 ```
 
@@ -368,33 +416,21 @@ return await Deployment.RunAsync(() =>
 {{% choosable language java %}}
 
 ```java
-
 package myproject;
 
-import com.pulumi.Context;
+import java.util.Map;
 import com.pulumi.Pulumi;
-import com.pulumi.core.Output;
 import com.pulumi.aws.s3.BucketV2;
 import com.pulumi.aws.s3.BucketV2Args;
-import java.util.List;
-import java.util.ArrayList;
-import java.util.Map;
-import java.io.File;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 
 public class App {
     public static void main(String[] args) {
-        Pulumi.run(App::stack);
-    }
-
-    public static void stack(Context ctx) {
-        var mediaBucket = new BucketV2("mediaBucket", BucketV2Args.builder()
-            .tags(Map.of("owner", "media-team"))
-            .build());
-
-        var appBucket = new BucketV2("appBucket");
-
+        Pulumi.run(ctx -> {
+            var mediaBucket = new BucketV2("mediaBucket", BucketV2Args.builder()
+                .tags(Map.of("owner", "media-team"))
+                .build());
+            var appBucket = new BucketV2("appBucket");
+        });
     }
 }
 ```
@@ -403,6 +439,8 @@ public class App {
 {{% choosable language yaml %}}
 
 ```yaml
+name: my-yaml-project
+runtime: yaml
 resources:
   mediaBucket:
     type: aws:s3:BucketV2
@@ -410,7 +448,7 @@ resources:
       tags:
         owner: media-team
   appBucket:
-    type: aws:s3:Bucket
+    type: aws:s3:BucketV2
 ```
 
 {{% /choosable %}}
