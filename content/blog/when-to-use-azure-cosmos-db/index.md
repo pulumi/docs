@@ -1,6 +1,6 @@
 ---
 title: "When to Use Cosmos DB"
-date: 2024-11-04T17:39:54-05:00
+date: 2024-11-11T17:39:54-05:00
 draft: false
 meta_desc: A practical guide comparing Azure Cosmos DB with PostgreSQL, MongoDB, Cassandra, and DynamoDB, helping you decide when to use—or avoid—each database option.
 meta_image: meta.png
