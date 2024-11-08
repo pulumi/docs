@@ -15,7 +15,7 @@
   logo: /logos/pkg/gcp.svg
 
 - name: 1Password
-  link: https://1password.com/
+  link: https://developer.1password.com/docs/pulumi/
   logo: /logos/tech/1password.svg
 
 - name: Checkly
