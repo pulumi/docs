@@ -79,7 +79,7 @@
   logo: /logos/tech/snyk.png
 
 - name: Tailscale
-  link: https://tailscale.com/
+  link: https://tailscale.com/kb/1211/pulumi-provider
   logo: /logos/pkg/tailscale.svg
 
 - name: Twingate
