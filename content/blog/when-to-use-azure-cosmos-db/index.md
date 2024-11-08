@@ -47,7 +47,7 @@ Different databases are good at different things. Relational databases focus on 
 | NewSQL | Spanner, CockroachDB | Global applications requiring both scale and consistency      |
 | Dynamo-Inspired | DynamoDB, Cassandra | High write throughput, eventually consistent applications                        |
 
-Cosmos DB can look like each of those categories. This is because it's a multi-model DB, with a number of APIs, but fundamentally, it's backed by a document-based storage layer.
+Cosmos DB can look like each of those categories. This is because it's a multi-model DB, with a number of APIs that correspond to each model type. Despite it having a SQL interface (often recognized as the most used and recommended interface), and despite it purporting to be multi-model, at its lowest layer, it is actually backed by a document-based storage layer. It is a powerful document database, one with tunable consistency, distribution by logical and physical partition, and more, but it's helpful to know how the storage layer works to understand everything else. I'm going to show some examples, but first let's clear up what Cosmos DB is not.
 
 ![Cosmos DB APIs](apis.png)
 
@@ -55,13 +55,11 @@ Cosmos DB can look like each of those categories. This is because it's a multi-m
 If you are going to use Cosmos DB, you should probably be using the Core API, also called the "API for NoSQL". It's the quickest to get new features. Confusingly, despite being called a NoSQL API, data is queried and added using SQL.
 {{% /notes %}}
 
-So even while it has a SQL interface, that is the most used and recommended interface, and it purports to be multi-model, at its lowest layer, it's based on DocumentDB, which is a document database. It is a powerful document database, one with tunable consistency, distribution by logical and physical partition, and more, but it's helpful to know how the storage layer works to understand everything else. I'm going to show some examples, but first let's clear up what Cosmos DB is not.
+## Cosmos DB Vs. SQL Server ( Azure SQL Database ) or Postgres
 
-## Cosmos DB Vs. Postgres And SQL Server ( Azure Table Storage )
+This is a personal opinion, but if you have a use case that is well served by a traditional relational database, you should choose that. Postgres and SQL Server are both great and both available on Azure ( Postgres as Azure Database for PostgreSQL ). They both have great query planners; they have great tooling for migration and backups, as well as schema management. The SQL API from Cosmos should **not** be considered an alternative to a relational database unless you have specific needs because it's a different type of beast designed for different use cases. But let me show you.
 
-This is a personal opinion, but if you have a use case that is well served by a traditional relational database, you should choose that. Postgres and SQL Server are both great. They have great query planners; they have great tooling for migration and backups, as well as schema management. The SQL API from Cosmos should **not** be considered an alternative to a relational database unless you have specific needs because it's a different type of beast designed for different use cases. But let me show you.
-
-If you grab our [CosmoDB how to](https://www.pulumi.com/registry/packages/azure-native/how-to-guides/azure-cs-cosmosdb-logicapp/) and `pulumi up` and provision a database, you'll see from that, the first hint of its document roots in that the pulumi namespace is `documentDB`, but it goes deeper because although I can insert and select with sql in Cosmos DB, there is no schema.
+If you grab our [CosmoDB how to guide](https://www.pulumi.com/registry/packages/azure-native/how-to-guides/azure-cs-cosmosdb-logicapp/) and `pulumi up`, you'll see from that, the first hint of its [document roots](https://github.com/pulumi/examples/blob/master/azure-cs-cosmosdb-logicapp/MyStack.cs#L6) in that the pulumi namespace is `Pulumi.AzureNative.DocumentDB`, but it goes deeper because although I can insert and select with sql in Cosmos DB, there is no schema.
 
 ### Cosmos DB NoSQL Inserting and Querying
 
@@ -111,7 +109,7 @@ So don't be fooled by the SQL usage in the API. Cosmos DB is not a relational da
 
 - **ACID Transactions and Consistency**: Cosmos DB supports ACID transactions but only within single partitions (more on partitions soon). Cross-partition operations in Cosmos DB may require manual consistency handling.
 
-- **Schema Evolution and Migrations**: As shown, relational databases enforce a schema and support migration tools. Cosmos DB's schemaless design offers flexibility but requires custom logic for data migrations, which can increase operational overhead with frequent schema changes.
+- **Schema Evolution and Migrations**: Relational databases enforce a schema and support migration tools. Cosmos DB's schemaless design offers flexibility but requires custom logic for data migrations, which can increase operational overhead with frequent schema changes.
 
 - **Query Optimization and Indexing**: Postgres, SQL Server, and any relational database will have a query optimization layer with a sophisticated planner and manual indexing control. Cosmos DB auto-indexes all fields, simplifying queries but potentially increasing costs. Custom indexing policies offer less control than you would see in SQL Server or Postgres.
 
@@ -269,6 +267,12 @@ Again, using some back-of-the-napkin math, DynamoDB in provisioned Mode is signi
 See also [Cosmos DB vs DynamoDB, Know The Differences](/what-is/database-comparison-cosmos-db-vs-dynamodb/)
 {{% /notes %}}
 
+## Tangent: Azure Table Storage vs. Cosmos DB
+
+Cosmos DB also has a Azure Table API and marketing material saying it's a better choice than Azure Table Storage. My take is Azure Table and Cosmos DB's Table API both provide key-value storage with distinct trade-offs. Azure Table Storage is cost-effective and ideal for simpler, predictable workloads, requiring minimal complexity. Cosmos DB's Table API adds flexibility, optional global distribution, and tunable consistency, but also brings more complexity and cost.
+
+While both offer similar functionality, Cosmos DB's advanced features will cost you. If you know you aren't going to need scale read and writes or need multi-region writes or other features, Azure Table Storage's simpler, predictable pricing is the way to go.
+
 ## When Cosmos DB Makes Sense
 
 ![Pros And Cons](pro-con.png)
@@ -302,3 +306,7 @@ Many times, that cost is not the variable being optimized for. Data is paramount
 > We've been using Cosmos DB as a document database since it was called DocumentDB, and it's been fast, reliable, and straightforward for our needs. We store large, arbitrarily structured JSON documents, and Cosmos DB's full indexing has handled that effortlessly. For us, the simplicity works—we don't need to scale to millions of users, and with auto-scaling, each customer's database runs smoothly without any partitioning.
 
 For help provisioning Cosmos DB, check out our [Azure Cosmos DB How to guide](https://www.pulumi.com/registry/packages/azure-native/how-to-guides/azure-cs-cosmosdb-logicapp/) and if you decide to go with Azure Tables instead, our [Azure Native provider](https://www.pulumi.com/registry/packages/azure-native/) is there to help you all the same.
+
+Pulumi’s Infrastructure as Code platform supports the widest range of builders, clouds, programming languages, and cloud architectures available today.
+
+{{< get-started >}}
