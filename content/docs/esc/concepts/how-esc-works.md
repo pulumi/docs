@@ -45,7 +45,7 @@ Teams can setup [OpenID Connect integration](/docs/pulumi-cloud/oidc/) in their 
 
 Pulumi ESC uses a configuration-as-code approach. ESC environments are defined in YAML, which contain named configuration values, encrypted secrets, and provider references.
 
-A simple static environment can be thought of as a collection of key/value pairs. They can also contain interpolated values and complex [structured configuration](/docs/esc/environments/working-with-environments/#structured-configuration). Static secrets are also defined in YAML, but the static values are encrypted.
+A simple static environment can be thought of as a collection of key/value pairs. They can also contain interpolated values and complex [structured configuration](/docs/esc/environments/working-with-environments/#structured-configuration). Static secrets are also defined in YAML and are encrypted before they are stored to ensure security. 
 
 **Example:** *Defining configuration values, structured data, and encrypted secrets in YAML.*
 
