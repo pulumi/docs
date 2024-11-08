@@ -58,7 +58,7 @@ Pulumi ESC supports both **static** configurations (e.g. simple key-value pairs)
 
 Pulumi ESC also supports **dynamic secret providers**, such as AWS OIDC, Azure KeyVault, GCP Secrets Manager, and more. This allows teams to pull short-lived credentials or other secrets dynamically from external sources.
 
-More detail on dynamic secret providers is available in [Adding OIDC and secrets providers](/docs/esc/environments/working-with-environments/#adding-oidc-and-secrets-providers). The [providers list](/docs/esc/integrations/) details the currently supported integrations.
+More detail on dynamic secret providers is available in [Adding OIDC and secrets providers](/docs/esc/environments/working-with-environments/#using-secrets-providers-and-oidc). The [providers list](/docs/esc/integrations/) details the currently supported integrations.
 
 ### Configuration-as-Code, automation, and integration everywhere
 
