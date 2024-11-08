@@ -2,7 +2,7 @@
 title: "When to Use Cosmos DB"
 date: 2024-11-04T17:39:54-05:00
 draft: false
-meta_desc: A practical guide comparing Azure Cosmos DB with PostgreSQL, MongoDB,Cassandra, and DynamoDB, helping you decide when to use—or avoid—each database option.
+meta_desc: A practical guide comparing Azure Cosmos DB with PostgreSQL, MongoDB, Cassandra, and DynamoDB, helping you decide when to use—or avoid—each database option.
 meta_image: meta.png
 authors:
     - adam-gordon-bell
@@ -20,12 +20,14 @@ When to use Cosmos DB? It's a hard question to answer.
 
 Azure Cosmos DB tries to do it all - which makes it both powerful and, honestly, kind of confusing. The marketing doesn't help either. Yeah, it's flexible, but before you jump in, you need to understand how it actually works under the hood, what it'll cost you, and what trade-offs you're making by choosing it.
 
-I'm going to break all that down.
+I'm going to break all that down. Here's a roadmap:
 
 <!--more-->
-![Artcle Roadmpa](roadmap.png)
+![Artcle Roadmap](roadmap.png)
 
-But the short version is: you should use it on Azure when you'd use DynamoDB on AWS. That is when you are OK with being cloud-specific, when you want hands-off scalability, and when you know the query pattern and potential cost ramifications ahead of time. Also, cost is a big caveat because Cosmos DB will likely cost more than an equivalent DynamoDB workload.
+## TLDR
+
+The short version is: **you should use it on Azure when you'd use DynamoDB on AWS.** That's to say, you should use it when you're OK with being cloud-specific, when you want hands-off scalability, and when you know the query pattern and potential cost ramifications ahead of time. Also, cost is a big caveat because Cosmos DB will likely cost more than an equivalent DynamoDB workload.
 
 But let's start at the beginning.
 
@@ -50,12 +52,12 @@ Cosmos DB can look like each of those categories. This is because it's a multi-m
 ![Cosmos DB APIs](apis.png)
 
 {{% notes type="info" %}}
-If you are going to use Cosmos DB, you should probably be using the Core API, also called the "API for NoSQL". It's the quickest to get new features. Confusingly, the API for NoSQL is queried and inserted into using SQL.
+If you are going to use Cosmos DB, you should probably be using the Core API, also called the "API for NoSQL". It's the quickest to get new features. Confusingly, despite being called a NoSQL API, data is queried and added using SQL.
 {{% /notes %}}
 
 So even while it has a SQL interface, that is the most used and recommended interface, and it purports to be multi-model, at its lowest layer, it's based on DocumentDB, which is a document database. It is a powerful document database, one with tunable consistency, distribution by logical and physical partition, and more, but it's helpful to know how the storage layer works to understand everything else. I'm going to show some examples, but first let's clear up what Cosmos DB is not.
 
-## Cosmos DB Vs. Postgres And SQL Server
+## Cosmos DB Vs. Postgres And SQL Server ( Azure Table Storage )
 
 This is a personal opinion, but if you have a use case that is well served by a traditional relational database, you should choose that. Postgres and SQL Server are both great. They have great query planners; they have great tooling for migration and backups, as well as schema management. The SQL API from Cosmos should **not** be considered an alternative to a relational database unless you have specific needs because it's a different type of beast designed for different use cases. But let me show you.
 
@@ -139,7 +141,7 @@ var docs = await collection.Find(
 ).ToListAsync();
 ```
 
-That will totally work, if you stay away from mongo advanced features but you will quickly need to understand Cosmos-specific things, like RUs, even if you can query it like Mongo using MQL.
+That will totally work. You can query using MQL, assuming you avoid Mongo's advanced features. Still, you will quickly need to understand Cosmos-specific things, like RUs and partitions, or else you might end up with unexpected performance or costs.
 
 {{% notes type="info" %}}
 Reddit Azure users report some challenges with using the Mongo API, and Microsoft also recommends using the SQL-based "API for NoSQL" if you can. So Mongo fans may want to consider not choosing Cosmos' Mongo API.
@@ -182,6 +184,10 @@ Your exact numbers may vary, but by my back-of-the-napkin math, Cosmos DB is sig
 |------------------|--------------------------------------------------------|---------------------------------------------------------|
 | **MongoDB Atlas**| ~$746.79/month                                             | Based on instance size (M40), fixed pricing              |
 | **Cosmos DB**    | ~$1,567.70/month                                        | Request Units (RUs) based, scales with document size and operations |
+
+{{% notes type="info" %}}
+See also [Cosmos DB vs MongoDB, Know The Differences](what-is/cosmos-db-vs-mongodb-know-the-differences/)
+{{% /notes %}}
 
 ## Cosmos DB Vs Cassandra
 
@@ -258,6 +264,10 @@ Again, using some back-of-the-napkin math, DynamoDB in provisioned Mode is signi
 |---------------------|--------------------------------------------|-------------------------|--------------------------|---------------------------------------|
 | **DynamoDB**         | 500 reads/sec, 50 writes/sec               | $131.13/month           | $392.10/month            | Lower cost, ideal for predictable workloads |
 | **Cosmos DB**        | 500 reads/sec, 50 writes/sec               | $479.06/month           | $1,567.70/month          | Higher cost, scales automatically    |
+
+{{% notes type="info" %}}
+See also [Cosmos DB vs DynamoDB, Know The Differences](/what-is/database-comparison-cosmos-db-vs-dynamodb/)
+{{% /notes %}}
 
 ## When Cosmos DB Makes Sense
 
