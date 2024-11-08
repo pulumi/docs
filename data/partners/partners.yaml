@@ -83,7 +83,7 @@
   logo: /logos/pkg/tailscale.svg
 
 - name: Twingate
-  link: https://www.twingate.com/
+  link: https://www.twingate.com/integrations/pulumi
   logo: /logos/tech/twingate.svg
 
 - name: Zscaler
