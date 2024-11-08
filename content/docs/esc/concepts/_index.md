@@ -30,7 +30,7 @@ The diagram above shows four key concepts:
 
 ## The ESC Approach
 
-Pulumi ESC takes a distinct approach to managing secrets and configuration that is different from other secret managers. ESC emphasizes flexiblity and integration, and is specifically designed for managing secrets and configurations across complex multi-cloud environments. Whether used in conjunction with [Pulumi IaC](/docs/iac/) or as a standalone tool, ESC helps streamline operations, reduce duplication, and enhance security for teams across a wide range of use cases.
+Pulumi ESC takes a distinct approach to managing secrets and configuration that is different from other secret managers. ESC emphasizes flexibility and an open-ecosystem approach to integrations and is specifically designed for managing secrets and configurations across complex multi-cloud environments. Whether used in conjunction with [Pulumi IaC](/docs/iac/) or as a standalone tool, ESC helps streamline operations, reduce duplication, and enhance security for teams across a wide range of use cases.
 
 ### Centralized management, composability, and reusability
 
