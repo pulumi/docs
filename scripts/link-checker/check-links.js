@@ -292,6 +292,9 @@ function getDefaultExcludedKeywords() {
         "https://github.com/marketplace",
         "https://bard.google.com/",
         "https://cloud.getdbt.com/api",
+        "https://dutchie.com/",
+        "https://www.gartner.com/en/newsroom/press-releases/2024-04-11-gartner-says-75-percent-of-enterprise-software-engineers-will-use-ai-code-assistants-by-2028",
+        "https://www.gartner.com/en/webinar/445864/1051166",
     ];
 }
 
