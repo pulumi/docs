@@ -66,6 +66,6 @@ detail_sections:
 
               Learn how to use Pulumi's integrations with Kubernetes to ensure that your clusters and containerized workloads are managed with maximum ease and efficiency!
             link: /resources/pulumi-kubernetes-better-together/
-            cta: RSVP for Kubernetes Workshop
+            cta: RSVP for Workshop
 
 ---
