@@ -122,7 +122,7 @@ func main() {
         }
 
         // Export the name of the bucket
-        ctx.Export("bucketName", bucket.Bucket())
+        ctx.Export("bucketName", bucket.ID())
         return nil
 	  })
 }
