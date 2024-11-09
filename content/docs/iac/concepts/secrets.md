@@ -313,7 +313,7 @@ Password: [secret]
 
 By default, configuration values are saved in plain text. Given this, there may be times where you need to explictly denote a value as plain text or unencrypted. For example, for security purposes, the Pulumi CLI tries to detect when something that looks like an API token or password is supplied to as a Pulumi configuration value. There are some scenarios where it will incorrectly assume a string is a secret and will alert you in the command line while aborting the task.
 
-To circumnavigate this, you can pass the `--plaintext` flag when creating your configuration value. This flag can be used to indicate that you did not want an encrypted secret.
+To avoid this, you can pass the `--plaintext` flag when creating your configuration value. This flag can be used to indicate that you did not want an encrypted secret.
 
 ```bash
 $ pulumi config set --plaintext aws:region us-west-2
