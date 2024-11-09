@@ -5,6 +5,11 @@ title: Resource search
 h1: Resource search
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
+  cloud:
+    name: Resource search
+    parent: pulumi-cloud-insights
+    weight: 1
+    identifier: pulumi-cloud-insights-search
   pulumicloud:
     parent: insights
     weight: 1
@@ -26,7 +31,7 @@ For example, a query like
 
 > bucket
 
-will return resources having [types][types] like `aws:s3/bucket:Bucket` or `aws:s3/bucketobject:BucketObject`. It will also return resources in stacks named "bucket" or projects named "my-cool-bucket".
+will return resources having [types][types] like `aws:s3/bucketv2:BucketV2` or `aws:s3/bucketobject:BucketObject`. It will also return resources in stacks named "bucket" or projects named "my-cool-bucket".
 
 Similarly, a query for
 
@@ -205,7 +210,17 @@ Examples:
 - _urn:my-log-group_
 - _urn:my-org:my-stack::my-project::aws:cloudwatch/logGroup:LogGroup::my-log-group_
 
-### Exact Matching
+#### Category
+
+The category the resource belongs to.
+
+Examples:
+
+- compute
+- storage
+- data
+
+### Exact matching
 
 Surrounding terms with `"double quotes"` produces an exact match query.
 
@@ -258,7 +273,8 @@ If you would like to use it, [contact us](/contact?form=sales) to upgrade.
 
 Property search allows you to query resources by their inputs and outputs.
 
-A property query is similar to a field query but it is triggered by a leading `.` followed by a _property path_:
+A property query is similar to a field query but it is triggered by a leading `.` followed by a
+[property path](/docs/iac/concepts/miscellaneous/property-paths/):
 
 > .\<property path>:<value?>
 
@@ -312,18 +328,16 @@ If we want to refine this to resources with _some_ tags but no `"stack"` tag spe
 
 Existence queries do not return resources where the property is an empty object (`{}`), array (`[]`), or `null`. A resource with an output of `{"tags": {}}` would not be captured by an existence query for `.tags:`.
 
-## Advanced Filtering
+## Column filtering
 
-Expanding the "Advanced filtering" menu shows your results broken down by type, package, stack, and project.
-The values shown in each column and the top values for that particular dimension, along with a count of how many resources share that value.
+Expanding the "Column Filter" menu shows you the set of values found for that column along with a count for each value.
+You can then select a specific value or collection of values to filter your result set.
 
-![Resource Search Advanced Filters](../search-advanced.png)
+![Resource Search Column Filter](/docs/pulumi-cloud/insights/column-filter.png)
 
-In the example above, the query has been restricted to the "my-stack" stack.
+In the example above, the query has been restricted to the "dev" stack.
 
-The counts next to each value show that this stack has 18 subnets, and 366 AWS resources in total.
-
-Clicking "Clear filters" will remove all previously selected filters.
+Clicking the "X" within the search bar will remove all previously selected filters.
 
 ## Download a CSV
 
@@ -333,7 +347,7 @@ The CSV Export feature is only available to organizations using the Enterprise a
 If you don't see it in your organization, [contact us](/contact?form=sales).
 {{% /notes %}}
 
-You can download a CSV with all resources matching your query by clicking the "Download CSV" button.
+You can download a CSV with all resources matching your query by clicking the "Export CSV" button within dropdown opened by clicking the gear icon.
 
 For a complete description of the CSV format returned, see the [Data Export](/docs/pulumi-cloud/insights/export/) documentation.
 
@@ -342,12 +356,6 @@ For a complete description of the CSV format returned, see the [Data Export](/do
 Resources can also be queried programmatically. See the [Pulumi Cloud REST API](/docs/pulumi-cloud/cloud-rest-api#resource-search) for full details of the API endpoint to query resources.
 
 ## AI Assist
-
-{{% notes "info" %}}
-AI Assist is an experimental feature that lets you use natural-language prompts to generate queries for use with Resource Search.
-
-If you don't see it in your organization, [contact us](/contact?form=sales).
-{{% /notes %}}
 
 Organizations with AI Assist enabled will see an "AI Assist" button to the right of their search bar.
 

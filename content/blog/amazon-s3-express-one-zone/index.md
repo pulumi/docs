@@ -1,14 +1,14 @@
 ---
-title: "10X Your Storage Performance with Amazon S3 Express One Zone and Infrastructure as Code"
+title: "10x Your Storage Performance with Amazon S3 Express One Zone and Infrastructure as Code"
 allow_long_title: True
 authors: ["joe-duffy"]
 tags: ["aws", "s3"]
-meta_desc: "Amazon S3 Express One Zone is a new storage class with up to 10X better performance. See how to use it with infrastructure as code."
+meta_desc: "Amazon S3 Express One Zone is a new storage class with up to 10x better performance. See how to use it with infrastructure as code."
 date: "2023-12-04"
 meta_image: "aws-s3-express-one-zone.png"
 ---
 
-At AWS re:Invent 2023, AWS announced the new [Amazon S3 Express One Zone](https://aws.amazon.com/s3/storage-classes/express-one-zone/) storage class. This new service provides incredible performance by collocating your S3 buckets closer to the workloads that use the data. Compared to the S3 Standard storage class, the Express One Zone storage class is up to 10X faster, handles 100,000s of requests per second, offers single-digit millisecond latency, and can reduce request costs by 50%. This can be extremely beneficial for data-intensive workloads such as AI/ML, media, finance, realtime, and high-performance computing scenarios. This blog post shows how to get started with Amazon S3 Express One Zone using Pulumi infrastructure as code.
+At AWS re:Invent 2023, AWS announced the new [Amazon S3 Express One Zone](https://aws.amazon.com/s3/storage-classes/express-one-zone/) storage class. This new service provides incredible performance by collocating your S3 buckets closer to the workloads that use the data. Compared to the S3 Standard storage class, the Express One Zone storage class is up to 10x faster, handles 100,000s of requests per second, offers single-digit millisecond latency, and can reduce request costs by 50%. This can be extremely beneficial for data-intensive workloads such as AI/ML, media, finance, realtime, and high-performance computing scenarios. This blog post shows how to get started with Amazon S3 Express One Zone using Pulumi infrastructure as code.
 
 <!--more-->
 
@@ -30,14 +30,12 @@ This new storage class is not universally available in all regions and AZs yet, 
 
 You can create a new Amazon S3 Express One Zone bucket using the `aws s3api create-bucket` CLI command or in the AWS console. For this blog post, however, you'll use infrastructure as code instead, so that provisioning, updating, and managing our buckets is automated, reliable, and easy to scale.
 
-To do this, you will use Pulumi's new [`aws.s3.DirectoryBucket` resource type](/registry/packages/aws/api-docs/s3/directorybucket/) in the AWS Classic package. It takes a few parameters:
+To do this, you will use Pulumi's new [`aws.s3.DirectoryBucket` resource type](/registry/packages/aws/api-docs/s3/directorybucket/) in the AWS package. It takes a few parameters:
 
 * `bucket`, which is the name (conforming to the above-mentioned `[name]--[az]--x-s3` convention)
 * `dataRedundancy`, which currently just accepts the sole value `"SingleAvailabilityZone"`
 * `location`, which specifies the AZ ID to use
 * `forceDestroy`, an optional boolean which, when set to true, allows deleting buckets that still have data in them (by default, only empty buckets can be deleted, to prevent accidental data loss)
-
-> Pulumi's AWS Native package also supports Amazon S3 Express One Zone through the [`aws-native.s3express.DirectoryBucket` type](/registry/packages/aws-native/api-docs/s3express/directorybucket/). Its usage is very similar to the AWS Classic package.
 
 Here is a simple program that declares a new Amazon S3 Express One Zone bucket:
 

@@ -68,7 +68,7 @@ For the record, I'm currently using [Cloudflare](https://cloudflare.com); though
 
 ## How Does it Work?
 
-We're going to dive into this `Controller` class in a bit more detail, but if you'd prefer to see my real-world code, [check it out here](https://github.com/rawkode/rawkode/tree/main/infrastructure/src/dns).
+We're going to dive into this `Controller` class in a bit more detail, but if you'd prefer to see my real-world code, [check it out here](https://github.com/rawkode/rawkode/tree/0c781a99c918aaf1b8be08d8d43a5a7c9647603c/infrastructure/src/dns/controller.ts).
 
 The first thing we need for our `Controller` is a skeleton of a `ComponentResource`.
 

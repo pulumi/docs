@@ -2,12 +2,25 @@ import pulumi
 import pulumi_aws as aws
 import json
 
-bucket = aws.s3.Bucket(
+bucket = aws.s3.BucketV2("content-bucket")
+
+bucket_ownership = aws.s3.BucketOwnershipControls(
     "content-bucket",
+    bucket=bucket.bucket,
+    rule={"objectOwnership": "BucketOwnerPreferred"}
+)
+
+bucket_acl = aws.s3.BucketAclV2("content-bucket",
+    bucket=bucket.bucket,
     acl="private",
-    website=aws.s3.BucketWebsiteArgs(
-        index_document="index.html", error_document="404.html"
-    ),
+    opts=pulumi.ResourceOptions(depends_on=[bucket_ownership]),
+)
+
+bucket_website = aws.s3.BucketWebsiteConfigurationV2(
+    "content-bucket",
+    bucket=bucket.id,
+    index_document={"suffix": "index.html"},
+    error_document={"key": "404.html"},
 )
 
 origin_access_identity = aws.cloudfront.OriginAccessIdentity(

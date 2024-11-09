@@ -1,10 +1,8 @@
 const fs = require("fs");
 const path = require("path");
 const crypto = require("crypto");
-const jsdom = require("jsdom");
+const cheerio = require("cheerio");
 const rank = require("./rank");
-
-const { JSDOM } = jsdom;
 
 module.exports = {
 
@@ -19,10 +17,13 @@ module.exports = {
             return "Blog";
         } else if (href.startsWith("/registry")) {
             return "Registry";
+        } else if (href.startsWith("/tutorials")) {
+            return "Tutorials";
         } else if (href.startsWith("/templates")) {
             return "Templates";
         } else if (href.startsWith("/resources")) {
             return "Resources";
+
         }
         return "General";
     },
@@ -36,39 +37,47 @@ module.exports = {
     // following paragraphs, and any of their explicitly provided keywords (as we also support this
     // also) are included.
     getDOMContent({ href }) {
-
         // Assemble the local path to the file using its href.
         const filePath = path.join("public", href, "index.html");
 
         // Read the file and parse it into a DOM tree.
         const content = fs.readFileSync(filePath, "utf-8");
-        const { document } = new JSDOM(content).window;
+        
+        // Parse with Cheerio, using htmlparser2.
+        const $ = cheerio.load(content, {
+            _useHtmlParser2: true,
+            decodeEntities: true
+        });
+        
         const subheads = [];
 
         // For now, only bother with H2s, as the noise level goes way up with H3s.
-        [2].forEach(level => {
-            const headings = document.querySelectorAll(`main h${level}`);
-            headings.forEach(h => {
+        $("main h2").each((index, element) => {
+            const $h2 = $(element);
+            const id = $h2.attr("id");
 
-                // If a heading doesn't have an ID, it can't be linked to, so exclude it.
-                if (!h.getAttribute("id")) {
-                    return;
-                }
+            // If a heading doesn't have an ID, it can't be linked to, so exclude it.
+            if (!id) return;
 
-                subheads.push(
-                    {
-                        title : h.textContent,
-                        anchor: h.getAttribute("id") || undefined,
-                        keywords: h.getAttribute("search.keywords") || undefined,
-                        content: h.nextElementSibling?.nodeName === "P" ? h.nextElementSibling.textContent : undefined,
-                    },
-                );
+            const title = $h2.text().trim();
+            const keywords = $h2.attr("search.keywords");
+            
+            let content = "";
+            let $next = $h2.next();
+            if ($next.is("p")) {
+                content = $next.text();
+            }
+            content = content.trim();
+
+            subheads.push({
+                title,
+                anchor: id,
+                keywords: keywords || undefined,
+                content: content || undefined,
             });
-        })
+        });
 
-        return {
-            subheads,
-        };
+        return { subheads };
     },
 
     // Return the page's (explicit or implicit) ranking.

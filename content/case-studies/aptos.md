@@ -2,15 +2,22 @@
 title_tag: Aptos Labs | Case Studies
 title: "Aptos Labs Transforms Development Process"
 description: |
-    Aptos Labs used Pulumi to transform development, increasing velocity by up to 10X while improving security, compliance, and cost control.
-meta_desc: Aptos Labs used Pulumi to transform development, increasing velocity by up to 10X while improving security, compliance, and cost control.
+    Aptos Labs used Pulumi to transform development, increasing velocity by up to 10x while improving security, compliance, and cost control.
+meta_desc: Aptos Labs used Pulumi to transform development, increasing velocity by up to 10x while improving security, compliance, and cost control.
 
 customer_name: Aptos Labs
 customer_logo: /logos/customers/aptos.png
 customer_url: https://aptoslabs.com/
 
+quote_block:
+  quote: |
+      “Terraform was slowing down our growing team of engineers. Switching to Pulumi for our IaC needs helped us massively accelerate development velocity, while upgrading the security, compliance, and cost control policies.”
+  quote_attrib: Christian Theilemann, Staff Software Engineer, Aptos Labs
+  headline_stat: 10x
+  headline: Faster development cycles
+
 exec_summary: |
-   Aptos Labs, the creator of the Aptos blockchain, partnered with Pulumi in 2022 to transform their development process and replace Terraform. By adopting Pulumi's cloud engineering platform, Aptos Labs increased development velocity by up to 10X, improved security, compliance, and cost control, and empowered developers to use their preferred programming languages. Pulumi's professional services team migrated Aptos Labs' existing Terraform code, configured the Aptos landing zones for AWS and Google Cloud, and set up Kubernetes clusters and serverless functions. Aptos Labs is now positioned for greater efficiency and scalability, with plans to further modularize projects using Pulumi to reduce complexity, increase code reuse, and enhance flexibility across different cloud environments.
+   Aptos Labs, the creator of the Aptos blockchain, partnered with Pulumi in 2022 to transform their development process and replace Terraform. By adopting Pulumi's cloud engineering platform, Aptos Labs increased development velocity by up to 10x, improved security, compliance, and cost control, and empowered developers to use their preferred programming languages. Pulumi's professional services team migrated Aptos Labs' existing Terraform code, configured the Aptos landing zones for AWS and Google Cloud, and set up Kubernetes clusters and serverless functions. Aptos Labs is now positioned for greater efficiency and scalability, with plans to further modularize projects using Pulumi to reduce complexity, increase code reuse, and enhance flexibility across different cloud environments.
 
 sections:
     - label: Exec Summary
@@ -32,7 +39,7 @@ Aptos Labs, co-founded by Mo Shaikh and Avery Ching, is dedicated to creating be
 
 ## Migrating Away from Terraform {#migration}
 
-> **By making the switch from Terraform, Aptos Labs increased the pace of development by as much as 10X**
+> **By making the switch from Terraform, Aptos Labs increased the pace of development by as much as 10x**
 
 Pulumi's partnership with Aptos Labs began in 2022 with a small initial deployment in an otherwise Terraform-enabled environment. With Pulumi, the Aptos Labs infrastructure team was able to support a rapidly growing team of engineers and projects as they delivered critical services to their retail customers around the globe.
 

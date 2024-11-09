@@ -27,6 +27,8 @@
                 @apply flex-grow justify-start mt-0 text-left mr-4;
             }
 
+            background: linear-gradient(90deg, #f7bf2a 0%, #f26e7e 18.23%, #be5188 38.02%, #8a3391 53.65%, #805ac3 74.48%, #7682f4 100%) !important;
+
             .top-nav-banner-cta {
                 @apply px-3 py-2 text-left;
 
@@ -95,21 +97,19 @@
             @apply hidden;
 
             @screen lg {
-                @apply flex items-center justify-center;
+                @apply flex items-center justify-center rounded-lg;
                 margin-left: 30px;
                 width: 136px;
                 height: 33px;
                 padding: 8px 16px;
 
                 border: 1px solid theme("colors.violet.600");
-                border-radius: 20px;
                 box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px rgba(0, 0, 0, 0.14), 0px 1px 5px rgba(0, 0, 0, 0.12);
 
                 &:hover,
                 &:active {
                     background: linear-gradient(90deg, #be5188 0%, #805ac3 100%) border-box;
                     border-color: transparent;
-                    border-radius: 20px;
                 }
             }
         }
@@ -121,7 +121,7 @@
 }
 
 .header-container {
-    @apply z-40 bg-white py-0;
+    @apply z-40 bg-white py-0 ;
     top: -1px;
 
     @screen lg {
@@ -151,10 +151,6 @@
         .header-btn-primary {
             @include gradient-button;
             @apply py-3 px-6;
-
-            @screen xl {
-                @apply text-lg;
-            }
         }
     }
 
@@ -200,13 +196,19 @@
                             min-width: fit-content;
                             div {
                                 .header-nav-drop-down-heading {
+                                    border-top: 2px solid;
+                                    border-image-slice: 1;
+                                    border-image-source: linear-gradient(90deg, #f7bf2a 0%, #f26e7e 18.23%, #be5188 38.02%, #8a3391 53.65%, #805ac3 74.48%, #7682f4 100%);
+                                }
+                                .header-nav-drop-down-heading-text {
                                     @apply font-medium;
+                                    @apply mx-auto;
+                                    @apply w-min;
+                                    @apply px-2;
+                                    @apply bg-white;
+                                    @apply my-0;
+                                    @apply -mt-3;
                                 }
-                                .header-nav-drop-down-sub-heading {
-                                    @include gradient-border;
-                                    @apply pt-1 pb-4 pr-5 text-xs;
-                                }
-
                             }
 
                             .header-nav-one-col-drop-down {
@@ -271,6 +273,11 @@
                     .learn {
                         @apply -right-48;
                         min-width: 69ch;
+                    }
+
+                    .company {
+                        @apply -left-44;
+                        min-width: 30ch;
                     }
 
                     .dropdown-menu-caret {
@@ -357,6 +364,11 @@
                 }
             }
 
+            .mobile-menu-sub-heading {
+                @include gradient-border;
+                border-bottom: 1px solid;
+            }
+
             [class*="mobile-menu-subitems-"] {
                 @apply mt-2 text-base hidden;
                 flex-basis: 100%;
@@ -410,6 +422,21 @@
 
             #learn-mobile-menu:checked ~ {
                 .mobile-menu-subitems-learn {
+                    @apply block;
+                }
+
+                .mobile-menu-heading {
+                    color: $brand-violet;
+                }
+
+                label > span.dropdown-menu-caret {
+                    @apply opacity-50;
+                    transform: rotate(180deg);
+                }
+            }
+
+            #company-mobile-menu:checked ~ {
+                .mobile-menu-subitems-company {
                     @apply block;
                 }
 

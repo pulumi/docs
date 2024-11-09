@@ -83,6 +83,9 @@ The `Makefile` exposes a number of useful helpers for authoring:
 * `make test` tests all of the programs in `./static/programs` (see `./scripts/programs/test.sh` for options)
 * `make generate` builds the TypeScript, Python, and Pulumi CLI documentation
 * `make new-blog-post` scaffolds a new, bare-bones blog post with placeholder content
+* `make new-tutorial` scaffolds a new single-page tutorial
+* `make new-tutorial-module` scaffolds a new multi-page tutorial
+* `make new-tutorial-topic` scaffolds a new tutorial topic and adds it to an existing multi-page tutorial
 * `make new-example-program` generates a new multi-language set of examples at `./static/programs`
 * `make new-dev-stack` creates a new dev stack (in the `pulumi` organization, which you must belong to)
 * `make deploy-dev-stack` runs a build, deploys to S3, runs the tests, and deploys to the selected dev stack
@@ -180,22 +183,46 @@ With `make serve-static` running, you can browse to the docs by navigating to ht
 
 All generated docs, including all Node.js, Python, and .NET SDK docs and all Pulumi and Pulumi ESC CLI docs, get checked into this repository.
 
-## Migrating from pulumi-hugo
+## Search
 
-The pulumi-hugo repository was archived on May 16, 2024. This repository previously housed most of our website content. This content has now moved to this repository. There is a slight directory structure change in this repo compared to pulumi-hugo. For the most part, everything that was located under the `themes/default` directory in pulumi-hugo now lives under the root directory of this repository, i.e. `themes/default/content/blog` is now under `/content/blog`. Everything still functions the same way it did previously when it comes to local devleopment, e.g. `make ensure`, `make serve`, `make build-assets`, etc.
+We use [Algolia](https://www.algolia.com/) for search, and we update the Algolia search index [on every deployment](https://github.com/pulumi/docs/blob/master/scripts/ci-push.sh#L13) of the website. Whether you're adding a new page or updating an existing one, your changes will be reflected in search results within a few seconds of release.
 
-### How to migrate PRs from the pulumi-hugo repo
+### Creating findable content
 
-If you have open pull requests in the pulumi-hugo repo, here are the steps to follow in order to move them over to the docs repository. You will need to copy over your files to the docs repo and place them in the new directory location.
+We currently index every page of the website, including the blog and the Registry. However, we do not index all of the content of every page &mdash; we only index certain properties of the page. These include:
 
-#### Steps:
-1. Clone the docs repo if you haven't done so already.
-2. Create a new branch in the docs repository.
-3. Copy the files you changed/added to the docs repo. The directory structure is similar to how this repo was configured, except everything under themes/default has been moved to the root. For example, if you have a blog under `themes/default/content/blog/my-cool-blog`, you will need to relocate it under `content/blog/my-cool-blog` in the docs repo.
-4. Run make ensure in the docs repo and then a make serve to verify the files have been moved correctly.
-5. Push changes to the docs repo.
-6. Open a PR in the docs repo to add the changes there.
+* Page titles (specifically the `title` and `h1` frontmatter params)
+* Page descriptions (specifically the `meta_desc` param)
+* Second-level headings (e.g., those prefixed with `##` in Markdown files)
+* Keywords, if any (via the `search.keywords` param)
+* Authors, if any (via the `authors` param)
+* Tags, if any (via the `tags` param)
 
+Because of this, it's important to be thoughtful about the terms you use for these fields, especially titles, keywords, descriptions, and H2 headings. If you want your content to be findable by specific terms, you must make sure those terms exist in one or more of the fields listed above.
+
+For example, if you were writing a guide to building an ETL pipeline with Redshift, and you wanted to make sure the page would be surfaced for queries like `redshift data warehouse etl`, you might construct the page's frontmatter in the following way:
+
+```yaml
+title: Build an ETL pipeline with Redshift and AWS Glue
+meta_desc: Learn how to combine AWS Glue and Amazon Redshift to build a fully-automated ETL pipeline with Pulumi.
+search:
+    keywords:
+        - data warehouse
+```
+
+In this case, the optional `search.keywords` field is included to cover the terms `data warehouse`, as those terms don't exist in the page's title or description. If it weren't, queries for `data warehouse` would fail to match this particular page.
+
+Certain fields also rank higher than others in terms of their overall relevance. (Titles and keywords, for example, are considered more relevant than descriptions.) For a full list of these rankings, along with all of the rules we apply to the search index, see the [search app in pulumi/docs](https://github.com/pulumi/docs/blob/master/scripts/search/settings.js).
+
+### Keeping pages out of search results
+
+To keep a page from showing up in search results (including on Google, etc.), use the `block_external_search_index` frontmatter parameter:
+
+```yaml
+title: My page
+...
+block_external_search_index: true
+```
 ## Community
 
 Engage with our community to elevate your developer experience:

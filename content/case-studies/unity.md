@@ -9,8 +9,18 @@ customer_name: Unity
 customer_logo: /logos/customers/unity.png
 customer_url: https://unity.com/
 
+quote_block:
+    quote: |
+        "Terraform relies on HCL and lacks support for concepts like classes, objects and inheritance.
+        An equivalent deployment would take more lines of code while yielding IaC that is less reusable."
+    quote_attrib:
+    headline_stat: 80%
+    headline: |
+        Reduction in deployment times, from weeks to
+        hours, significantly improving Unity's time to market.
+
 exec_summary: |
-    Unity Technologies' Aura division faced challenges with their legacy Jenkins service, causing deployment delays and inefficiencies in CI/CD processes. To enhance performance and developer autonomy, Aura adopted Pulumi's Platform Engineering Capabilities and Automation API. Transitioning from Amazon ECS to Amazon EKS and further replacing Jenkins with GitHub Actions and self-hosted runners, they streamlined infrastructure management, reducing provisioning times and costs. Pulumi's TypeScript support and automation features empowered developers to self-serve cloud infrastructure, improving productivity and ensuring infrastructure integrity. This modernization accelerated development cycles and strengthened Aura's competitive edge in the market.
+    Unity Technologies' Aura division transformed their infrastructure by leveraging Pulumi's comprehensive Kubernetes support to overcome challenges with their legacy Jenkins service. To enhance performance and developer autonomy, Aura adopted Pulumi's Platform Engineering Capabilities and Automation API. Transitioning from Amazon ECS to Amazon EKS and further replacing Jenkins with GitHub Actions and self-hosted runners, they streamlined infrastructure management, reducing provisioning times and costs. Pulumi's TypeScript support and automation features empowered developers to self-serve cloud infrastructure, improving productivity and ensuring infrastructure integrity. This modernization accelerated development cycles and strengthened Aura's competitive edge in the market.
 
 sections:
     - label: Executive Summary
@@ -47,9 +57,9 @@ Aura turned to Pulumi to automate infrastructure management, reduce deployment t
 
 ## Migrating Jenkins to Amazon EKS {#migration}
 
-The Aura DevOps team’s journey with Pulumi began with the migration of their Amazon ECS services to [Amazon Elastic Kubernetes Service](https://aws.amazon.com/eks/) (EKS) and one of those services was their aging [Jenkins](https://www.jenkins.io/) service. The original service relied on ECS with a lot of manual Jenkins configuration required.  The team wanted to manage Jenkins configuration using source control and follow the release process used for all other software development. They also wanted better performance and cost improvements made possible by moving to EKS. Using Pulumi's infrastructure as code (IaC) capabilities, the DevOps team was able to quickly provision a new Jenkins instance along with associated service accounts, networking, and IAM roles. The team also configured Cloudfront and WAF to enable Jenkins to connect with GitHub. Finally, they utilized the Karpenter provisioner Custom Resource Definition (CRD) to automate the process of provisioning and deprovisioning nodes, depending on the scheduling requirements of the pods that served as Jenkins agents. The configuration for Jenkins was maintained as Pulumi stack configuration. This approach simplified the application of source control, made tracking changes more straightforward, and facilitated the deployment of updates to Jenkins.
+The Aura DevOps team leveraged Pulumi's extensive Kubernetes support to orchestrate their migration from Amazon Elastic Container Service (ECS) to [Amazon Elastic Kubernetes Service](https://aws.amazon.com/eks/) (EKS), with a key focus on modernizing their [Jenkins](https://www.jenkins.io/) service. The original service relied on ECS with a lot of manual Jenkins configuration required.  The team wanted to manage Jenkins configuration using source control and follow the release process used for all other software development. They also wanted better performance and cost improvements made possible by moving to EKS. Using Pulumi's infrastructure as code (IaC) capabilities, the DevOps team was able to quickly provision a new Jenkins instance along with associated service accounts, networking, and IAM roles. The team also configured Cloudfront and WAF to enable Jenkins to connect with GitHub. Finally, they utilized the Karpenter provisioner Custom Resource Definition (CRD) to automate the process of provisioning and deprovisioning nodes, depending on the scheduling requirements of the pods that served as Jenkins agents. The configuration for Jenkins was maintained as Pulumi stack configuration. This approach simplified the application of source control, made tracking changes more straightforward, and facilitated the deployment of updates to Jenkins.
 
-The new EKS-based architecture improved execution time and made it easier for the team to upgrade Jenkins versions faster to take advantage of new features. The team also used Pulumi to implement AWS resource tagging – making it easier for their FinOps team to track costs at a more granular level.
+The new Kubernetes architecture improved execution time and made it easier for the team to upgrade Jenkins versions faster to take advantage of new features. The team also used Pulumi to implement AWS resource tagging – making it easier for their FinOps team to track costs at a more granular level.
 
 ## Adopting GitHub Actions Self-Hosted Runners for CI/CD {#adopting-github-actions}
 
@@ -91,4 +101,4 @@ The team has had early success using Pulumi Copilot to augment their efforts. Fo
 
 ## Conclusion
 
-By leveraging Pulumi, the Unity Aura team successfully modernized their CI/CD & infrastructure management, resulting in faster deployments, increased developer autonomy, and enhanced infrastructure integrity. The partnership with Pulumi has positioned Aura from Unity for continued success and innovation in the competitive gaming and mobile industries.
+By leveraging Pulumi's comprehensive Kubernetes ecosystem support and infrastructure automation capabilities, the Unity Aura team successfully modernized their CI/CD pipeline and container orchestration platform, resulting in faster deployments, increased developer autonomy, and enhanced infrastructure integrity. The partnership with Pulumi has positioned Aura from Unity for continued success and innovation in the competitive gaming and mobile industries.

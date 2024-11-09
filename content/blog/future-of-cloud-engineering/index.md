@@ -39,7 +39,7 @@ More cloud infrastructure capabilities have moved into application land, while a
 
 ### Cloud Engineering Architectures
 
-Infrastructure used to be a tax, and IT a cost center, but cloud infrastructure is increasingly a competitive advantage that can transform entire business models. Just think of the many cloud era companies that are enabling new experiences thanks to the cloud &mdash; AirBnB, Amazon, Lyft, Spotify, and others. Zoom experienced a 20X increase in usage when COVID started and, because they architected their application for the cloud, they were able to scale and meet demand. Five to ten years ago, without cloud engineering, that wouldn't have been possible.
+Infrastructure used to be a tax, and IT a cost center, but cloud infrastructure is increasingly a competitive advantage that can transform entire business models. Just think of the many cloud era companies that are enabling new experiences thanks to the cloud &mdash; AirBnB, Amazon, Lyft, Spotify, and others. Zoom experienced a 20x increase in usage when COVID started and, because they architected their application for the cloud, they were able to scale and meet demand. Five to ten years ago, without cloud engineering, that wouldn't have been possible.
 
 Zoom massively scaling is a great example of the difference between just tossing a traditional application into a virtual machine, versus fully embracing cloud capabilities as a foundational piece of the application's design. The ability to scale up elastically, and pay as you go, is an immense competitive advantage when designing applications to run on the cloud's planet-scale supercomputer.
 
