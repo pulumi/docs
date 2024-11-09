@@ -1,7 +1,7 @@
 ---
 # Name of the event, <= 60 characters
 title: Policy as Code on AWS
-meta_desc: Learn how to write policies for AWS resources with Pulumi using Python and TypeScript!
+meta_desc: Discover how to write policies for any AWS resource using TypeScript.
 meta_image: /images/resources/policy-as-code-on-aws-marina.png
 # A featured webinar will display first in the list.
 featured: false
@@ -11,7 +11,7 @@ unlisted: false
 
 # Gated webinars will have a registration form and the user will need
 # to fill out the form before viewing.
-gated: false
+gated: true
 
 # The layout of the landing page.
 type: webinars
@@ -38,7 +38,7 @@ main:
     youtube_url:
 
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2024-06-13T09:00:00-07:00
+    sortable_date: 2024-08-28T09:00:00-07:00
 
     # Duration of the webinar.
     duration: 90 minutes
@@ -48,12 +48,12 @@ main:
 
     # Description of the webinar.
     description: |
-        Poorly configured cloud infrastructure can be an unwelcome source of security, reliability, and cost issues. In this session, the Pulumi team will show you how to enforce best practices by creating policies that scale from a single infrastructure stack to your entire organization. And you can do all of this in TypeScript and/or Python!
+        Improperly configured cloud resources can lead to security, reliability, and cost issues. In this workshop, you will learn how to implement best practices by creating policies that can be applied to a subset of AWS resources or an entire organization. TypeScript will be used in this session.
 
     learn:
-        - How to write Pulumi policies in TypeScript and Python
+        - How to use Pulumi-provided AWS policy packs
+        - How to write policies in TypeScript
         - Best practices for implementing and enforcing policies at scale
-        - How to use policy packs from AWS to implement best practices for your infrastructure
 
     # The webinar presenters
     presenters:
@@ -65,11 +65,11 @@ main:
     tags:
         level: Beginner # Beginner, Intermediate, Advanced
         topics: []
-        languages: ["Python", "TypeScript"]
+        languages: ["TypeScript"]
         clouds: ["AWS"]
 
 # The right hand side form section.
 form:
-    hubspot_form_id: 2683c422-a64a-433c-a1c5-120bbd7bab02
-    salesforce_campaign_id: 701PQ00000CyelHYAR
+    hubspot_form_id: 063472d2-d3f6-4d9c-85eb-423488c3ff01
+    salesforce_campaign_id: 701PQ00000FCyvpYAD
 ---

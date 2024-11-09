@@ -28,7 +28,7 @@ tags:
     - features
     - pulumi-enterprise
 
-# See the blogging docs at https://github.com/pulumi/pulumi-hugo/blob/master/BLOGGING.md.
+# See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md.
 # for additional details, and please remove these comments before submitting for review.
 ---
 As enterprise adoption of the Pulumi Service has grown 350% over the last year, we've seen a strong customer demand for tools to manage automated Pulumi use cases such as CI/CD and Automation API at scale. Today we are launching Organization Access Tokens to empower our largest customers to manage automated workloads in a secure and collaborative manner.
@@ -38,7 +38,7 @@ Enterprise and Business Critical customers of the Pulumi Service can now create 
   1. Enterprise customers using SSO/SAML/SCIM, as it enables them to create Pulumi Service tokens not tied to identities within their identity provider (IdP)
   2. Garnering programmatic access for continuous integration and continuous delivery (CI/CD) tools and other automated processes
 
-We're excited to deliver one of the most [requested features from the community](https://github.com/pulumi/service-requests/issues/16) and a top ask from some of the largest customers using the Pulumi Service. The need to use Personal Access Tokens to manage automation and organization-specific resources can lead to some friction. When a user is deprovisioned or otherwise leaves the organization, their tokens in use no longer grant access and pipelines can become broken. Additionally, since Personal Access Tokens grant access to all resources and organizations they have access to, using personal tokens in organization automation pipelines leads to the pipeline having more privileged access than is necessary. We want to enable our customers to use the principle of least privilege. At launch, Organization Access Tokens will have write permissions to stacks in an Organization. We plan to continue to expand options for scoping this access based on feedback from our customers.
+We're excited to deliver one of the most [requested features from the community](https://github.com/pulumi/pulumi-cloud-requests/issues/16) and a top ask from some of the largest customers using the Pulumi Service. The need to use Personal Access Tokens to manage automation and organization-specific resources can lead to some friction. When a user is deprovisioned or otherwise leaves the organization, their tokens in use no longer grant access and pipelines can become broken. Additionally, since Personal Access Tokens grant access to all resources and organizations they have access to, using personal tokens in organization automation pipelines leads to the pipeline having more privileged access than is necessary. We want to enable our customers to use the principle of least privilege. At launch, Organization Access Tokens will have write permissions to stacks in an Organization. We plan to continue to expand options for scoping this access based on feedback from our customers.
 
 See below what the experience looks like in the Pulumi Service:
 

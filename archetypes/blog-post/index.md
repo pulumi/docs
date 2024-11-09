@@ -34,7 +34,24 @@ authors:
 tags:
     - change-me
 
-# See the blogging docs at https://github.com/pulumi/pulumi-hugo/blob/master/BLOGGING.md
+
+# The social copy used to promote this post on Twitter and Linkedin. These
+# properties do not actually create the post and have no effect on the
+# generated blog page. They are here strictly for reference.
+
+# Here are some examples of posts we have made in the past for inspiration:
+# https://www.linkedin.com/feed/update/urn:li:activity:7171191945841561601
+# https://www.linkedin.com/feed/update/urn:li:activity:7169021002394296320
+# https://www.linkedin.com/feed/update/urn:li:activity:7155606616455737345
+# https://twitter.com/PulumiCorp/status/1763265391042654623
+# https://twitter.com/PulumiCorp/status/1762900472489185492
+# https://twitter.com/PulumiCorp/status/1755637618631405655
+
+social:
+    twitter:
+    linkedin:
+
+# See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md
 # for details, and please remove these comments before submitting for review.
 ---
 
@@ -48,7 +65,7 @@ Either way, avoid using images or code samples [in the first 70 words](https://g
 
 ## Writing the Post
 
-For help assembling the content of your post, see [BLOGGING.md](https://github.com/pulumi/pulumi-hugo/blob/master/BLOGGING.md). For general formatting guidelines, see the [Style Guide](https://github.com/pulumi/pulumi-hugo/blob/master/STYLE-GUIDE.md).
+For help assembling the content of your post, see [BLOGGING.md](https://github.com/pulumi/docs/blob/master/BLOGGING.md). For general formatting guidelines, see the [Style Guide](https://github.com/pulumi/docs/blob/master/STYLE-GUIDE.md).
 
 ## Code Samples
 

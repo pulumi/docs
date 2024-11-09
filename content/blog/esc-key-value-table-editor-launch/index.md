@@ -2,7 +2,7 @@
 title: "Introducing the Key-Value Table Editor for Pulumi ESC"
 date: 2024-03-26T00:00:00-07:00
 draft: false
-meta_desc: "The new enhancements to Pulumi ESC Editor streamlines the authoring experience of environments for developers"
+meta_desc: "The Key-Value Table Editor introduces a new visual interface for managing configuration and secrets using Pulumi ESC."
 meta_image: "meta.png"
 authors:
   - arun-loganathan
@@ -11,6 +11,7 @@ tags:
   - esc
   - secrets
   - config management
+  - features
 ---
 
 
@@ -30,7 +31,7 @@ The Key-Value Table Editor we are launching today introduces an alternate visual
 
 ![Key-Value Table Editor](esc-key-value-table-editor.png)
 
-In the current release of the Table view, [provider configurations](/docs/esc/providers) and functions are set to read-only.  
+In the current release of the Table view, [provider configurations](/docs/esc/integrations) and functions are set to read-only.  
 
 ## What’s Next?
 

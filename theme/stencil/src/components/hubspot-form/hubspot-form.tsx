@@ -140,7 +140,7 @@ export class HubspotForm {
         const analytics = (window as any).analytics;
         const analyticsAvailable = analytics && analytics.track && typeof analytics.track === "function";
 
-        if (analyticsAvailable) {
+        if (analyticsAvailable && emailAddress !== "") { // Don't track empty email addresses
             const submissionData = {
                 formId: this.formId,
                 email: emailAddress,
@@ -148,7 +148,6 @@ export class HubspotForm {
                 utmSource: utmData.source,
                 utmMedium: utmData.medium,
             };
-
             analytics.track("form-submission", submissionData);
         }
     }
@@ -223,7 +222,7 @@ export class HubspotForm {
     private renderFailedToLoadForm() {
         return (
             <p>
-                There was an problem loading this form. Please try refreshing your browser, and if you continue to see this message, let us know at{" "}
+                There was a problem loading this form. Please try refreshing your browser, and if you continue to see this message, let us know at{" "}
                 <a href="mailto:support@pulumi.com">support@pulumi.com</a>.
             </p>
         );

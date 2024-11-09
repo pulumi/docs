@@ -34,7 +34,7 @@ authors:
 tags:
     - features
 
-# See the blogging docs at https://github.com/pulumi/pulumi-hugo/blob/master/BLOGGING.md.
+# See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md.
 # for additional details,
 # and please remove these comments before submitting for review.
 ---
@@ -49,7 +49,7 @@ Customers often use `pulumi destroy` to delete the resources in a stack but leav
 
 ![Walking through the restore stacks experience](https://www.pulumi.com/uploads/restore-stacks.gif)
 
-And tada 🎉, you how have a trash bin for your stacks! To recover a deleted stack, organization admins should navigate to the Stacks page. Next to the Create Project button there is a three dot menu to transfer stacks and restore stacks. Click on restore stacks to navigate to your recently deleted stacks. The last 10 deleted stacks in an organization can be restored, if you need a stack restored that is older, contact support.
+And tada 🎉, you how have a trash bin for your stacks! To recover a deleted stack, organization admins should navigate to the Stacks page. Next to the Create Project button there is a three dot menu to transfer stacks and restore stacks. Click on restore stacks to navigate to your recently deleted stacks. The last 25 deleted stacks in an organization can be restored, if you need a stack restored that is older, contact support.
 
 ### Keep the feedback coming
 

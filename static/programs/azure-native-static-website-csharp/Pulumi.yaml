@@ -1,0 +1,7 @@
+name: azure-native-static-website-csharp
+runtime: dotnet
+description: An example that deploys all of the resources for a static website on Azure.
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: azure-csharp

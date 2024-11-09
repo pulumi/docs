@@ -22,30 +22,32 @@ Effect:
 {{ if not .button_type }} {{ $button_type := "offset" }} {{ end }}
 {{ $button_type := .button_type }}
 
-    <div class="h-full card bg-white p-4">
-        {{ if .icon_name }}
-        <div class="icon-div mb-8">
-            {{ partial "color-icon.html" (dict "icon" .icon_name "icon_color" .icon_color) }}
-        </div>
-        {{ end }}
-        {{if .title }}
-        <div>
-            <h5>{{ .title }}</h5>
-        </div>
-        {{ end }}
-        {{if .description }}
-        <div class="mt-6">
-            <p>{{ .description }}</p>
-        </div>
-        {{ end }}
-
-        {{ if .button_text }}
-            {{ if eq $button_type "download" }}
-                {{ partial "card-button-download.html" (dict "text" .button_text "ref" .button_ref) }}
-            {{ else if eq $button_type "offset" }}
-                <!-- TODO implement the offset button here-->
-            {{ else if eq $button_type "contained" }}
-                <!-- TODO implement the contained button here-->
+    <div class="w-full {{ .width }} p-3">
+        <div class="h-full card bg-white p-4">
+            {{ if .icon_name }}
+            <div class="icon-div mb-8">
+                {{ partial "color-icon.html" (dict "icon" .icon_name "icon_color" .icon_color) }}
+            </div>
             {{ end }}
-        {{ end }}
+            {{if .title }}
+            <div>
+                <h5>{{ .title }}</h5>
+            </div>
+            {{ end }}
+            {{if .description }}
+            <div class="mt-6">
+                <p>{{ .description }}</p>
+            </div>
+            {{ end }}
+
+            {{ if .button_text }}
+                {{ if eq $button_type "download" }}
+                    {{ partial "card-button-download.html" (dict "text" .button_text "ref" .button_ref) }}
+                {{ else if eq $button_type "offset" }}
+                    <!-- TODO implement the offset button here-->
+                {{ else if eq $button_type "contained" }}
+                    <!-- TODO implement the contained button here-->
+                {{ end }}
+            {{ end }}
+        </div>
     </div>

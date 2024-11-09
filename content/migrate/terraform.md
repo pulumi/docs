@@ -12,7 +12,7 @@ benefits:
       icon: exchange
       icon_color: yellow
       description: |
-        Pulumi is fully open source and is Apache 2.0 licensed. It does not and never will depend on Business Source License software in any way. 
+        Pulumi is fully open source and is Apache 2.0 licensed. It does not and never will depend on Business Source License software in any way.
 
     - title: Tame cloud complexity
       icon: code-window
@@ -55,6 +55,7 @@ contact_us_form:
 examples:
     one:
         ts: |
+            import * as pulumi from "@pulumi/pulumi";
             import * as aws from "@pulumi/aws";
             import { readdirSync } from "fs";
             import { join as pathjoin } from "path";
@@ -66,7 +67,7 @@ examples:
             for (let file of files) {
                 const object = new aws.s3.BucketObject(file, {
                     bucket: bucket,
-                    source: new pulumi.FileAsset(pathjoin(folder, file))
+                    source: new pulumi.asset.FileAsset(pathjoin(folder, file))
                 });
             }
 
@@ -110,7 +111,7 @@ examples:
             import * as aws from "@pulumi/aws";
 
             // Create an S3 Bucket.
-            const bucket = new aws.s3.Bucket("mybucket");
+            const bucket = new aws.s3.BucketV2("mybucket");
 
             // Register a Lambda to handle the Bucket notification.
             bucket.onObjectCreated("newObj", async (ev, ctx) => {

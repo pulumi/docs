@@ -1,7 +1,0 @@
-config:
-  aws:region: us-west-2
-  www.pulumi.com:certificateArn: arn:aws:acm:us-east-1:372027080554:certificate/54d0431c-2cf9-4c40-bd3c-324cfb8b7d32
-  www.pulumi.com:originBucketNameOverride: ""
-  www.pulumi.com:pathToOriginBucketMetadata: ../origin-bucket-metadata.json
-  www.pulumi.com:websiteDomain: www-zack.pulumi-dev.io
-  www.pulumi.com:websiteLogsBucketName: www-zack.pulumi-dev.io-logs

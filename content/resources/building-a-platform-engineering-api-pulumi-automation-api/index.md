@@ -1,6 +1,6 @@
 ---
 # Name of the event, <= 60 characters
-title: Build a Platform Engineering API using Pulumi Automation API
+title: Build a Platform using Pulumi Automation API
 meta_desc: Learn how to build a robust Platform Engineering API using Pulumi's Automation API for streamlined infrastructure management.
 meta_image:
 
@@ -31,7 +31,7 @@ url_slug: building-a-platform-engineering-api-pulumi-automation-api
 # Content for the left hand side section of the page.
 main:
     # Webinar title.
-    title: Building a Platform Engineering API using the Pulumi Automation API
+    title: Build a Platform using Pulumi Automation API
 
     event_type: workshop # workshop | event
 

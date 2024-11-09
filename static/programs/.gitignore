@@ -360,8 +360,8 @@ MigrationBackup/
 maven-status
 target/
 
-# Nested .gitignores.
-*/**/.gitignore
+# Generated .gitignores.
+*/.gitignore
 
 # Stack config files.
 Pulumi.*.yaml

@@ -2,7 +2,6 @@ package myproject;
 
 import com.pulumi.Pulumi;
 import com.pulumi.core.Output;
-import com.pulumi.aws.s3.Bucket;
 import com.pulumi.awsapigateway.RestAPI;
 import com.pulumi.awsapigateway.RestAPIArgs;
 import static com.pulumi.codegen.internal.Serialization.*;

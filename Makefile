@@ -19,6 +19,10 @@ ensure: clean
 	./scripts/ensure.sh
 	$(MAKE) build-assets
 
+.PHONY: update-repos
+update-repos:
+	./scripts/update_repos.sh
+
 .PHONY: serve
 serve:
 	./scripts/serve.sh
@@ -30,13 +34,14 @@ serve-static:
 .PHONY: generate
 generate:
 	@echo -e "\033[0;32mGENERATE:\033[0m"
-	./scripts/run_typedoc.sh
+	NOBUILD=true ./scripts/run_typedoc.sh
 	./scripts/generate_python_docs.sh
 	pulumi gen-markdown ./content/docs/cli/commands
 
 .PHONY: build
 build:
 	@echo -e "\033[0;32mBUILD:\033[0m"
+	$(MAKE) build-assets
 	./scripts/build-site.sh
 
 .PHONY: check_links
@@ -51,17 +56,9 @@ check_search_urls:
 	$(MAKE) ensure
 	./scripts/search/check-urls.sh production "https://www.pulumi.com"
 
-.PHONY: new_learn_module
-new_learn_module:
-	./scripts/new-learn-module.sh
-
 .PHONY: copy_static_prebuilt
 copy_static_prebuilt:
 	mkdir -p public && cp -R static-prebuilt/* public/
-
-.PHONY: new_learn_topic
-new_learn_topic:
-	./scripts/new-learn-topic.sh
 
 .PHONY: ci_push
 ci_push::
@@ -73,6 +70,7 @@ ci_push::
 ci_pull_request:
 	$(MAKE) banner
 	$(MAKE) ensure
+	$(MAKE) lint
 	./scripts/ci-pull-request.sh
 
 .PHONY: ci_pull_request_closed
@@ -110,13 +108,17 @@ test-programs:
 upgrade-programs:
 	./scripts/programs/upgrade.sh
 
-.PHONY: new-learn-module
-new-learn-module:
-	./scripts/content/new-learn-module.sh
+.PHONY: new-tutorial-module
+new-tutorial-module:
+	./scripts/content/new-tutorial-module.sh
 
-.PHONY: new-learn-topic
-new-learn-topic:
-	./scripts/content/new-learn-topic.sh
+.PHONY: new-tutorial-topic
+new-tutorial-topic:
+	./scripts/content/new-tutorial-topic.sh
+
+.PHONY: new-tutorial
+new-tutorial:
+	./scripts/content/new-tutorial.sh
 
 .PHONY: new-template
 new-template:
@@ -134,3 +136,24 @@ new-blog-post:
 .PHONY: lint
 lint:
 	./scripts/lint.sh
+
+.PHONY: format
+format:
+	./scripts/format.sh
+
+.PHONY: new-dev-stack
+new-dev-stack:
+	./scripts/create-dev-stack.sh
+
+.PHONY: deploy-dev-stack
+deploy-dev-stack:
+	./scripts/deploy-dev-stack.sh
+
+.PHONY: destroy-dev-stack
+destroy-dev-stack:
+	./scripts/destroy-dev-stack.sh
+
+.PHONY: generate-compliance-pages
+generate-compliance-pages:
+	node scripts/aws-compliance-scraper/scrape.js
+	./scripts/content/generate-compliance-pages.sh

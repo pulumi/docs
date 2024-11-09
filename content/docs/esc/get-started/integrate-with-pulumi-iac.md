@@ -5,7 +5,7 @@ h1: "Pulumi ESC: Integrate with Pulumi IaC"
 meta_desc: This page provides an overview on how to use Pulumi ESC with Pulumi IaC.
 weight: 8
 menu:
-  pulumiesc:
+  esc:
     parent: esc-get-started
     identifier: esc-get-started-integrate-with-pulumi-iac
 ---
@@ -66,12 +66,20 @@ In a Pulumi project, you can locally [store and retrieve configuration values](/
 $ pulumi config set myEnvironment development
 ```
 
-This value will be stored in your project's stack settings file `Pulumi.<your-stack-name>.yaml` as shown below:
+Now run the following command to create a secret config value with a key of `myPassword` and a value of `demo-password-123`:
+
+```bash
+$ pulumi config set myPassword demo-password-123 --secret
+```
+
+These values will be stored in your project's stack settings file `Pulumi.<your-stack-name>.yaml` as shown below:
 
 ```yaml
 # Contents of Pulumi.<your-stack-name>.yaml file
 config:
   pulumi-esc-iac:myEnvironment: development
+  pulumi-esc-iac:myPassword:
+    secure: AAABADd5YzRaVuzxM08i5z2CJ3LGkQau5e5Lhk+1Gtj37qv6zKkFr8KxmN6X+w/XMg==
 ```
 
 You can retrieve the value of this configuration via the CLI by running the `pulumi config get <key>` command as shown below:
@@ -100,8 +108,9 @@ Loading policy packs...
 Policies:
     ✅ pulumi-internal-policies@v0.0.6
 
-Outputs:
-    Value: "development" # the outputted config value
+Outputs: # the outputted config values
+    Environment: "development"
+    Password   : [secret]
 
 Resources:
     + 1 to create
@@ -119,11 +128,11 @@ values:
     myEnvironment: development
 ```
 
-From here, you will need to import your environment file into your Pulumi project. To do this, return to your `Pulumi.<your-stack-name>.yaml` file and update it to import your environment as shown below, making sure to replace the value of `<your-environment-name>` with the name of your own environment:
+From here, you will need to import your environment file into your Pulumi project. To do this, return to your `Pulumi.<your-stack-name>.yaml` file and update it to import your environment as shown below, making sure to replace the value of `<your-project-name>/<your-environment-name>` with the identifier of your own environment:
 
 ```yaml
 environment:
-  - <your-environment-name>
+  - <your-project-name>/<your-environment-name>
 ```
 
 This will import any configuration values that you have defined under the `pulumiConfig` key in your environment file and make them accessible to your Pulumi project.

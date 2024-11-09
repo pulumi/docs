@@ -11,6 +11,7 @@ authors:
 tags:
   - esc
   - secrets
+  - features
 ---
 
 With [Pulumi ESC](/product/esc), our goal is to not only create a tool that simplifies the development process but also one that developers love. In pursuit of this goal, we're excited to announce enhancements to the Pulumi ESC environment editor. These enhancements are focused on addressing common challenges encountered when authoring environments: syntax errors, type errors, frequent context switches to and from documentation, and more. Our aim is to make the process of authoring environments as straightforward as possible by removing common hurdles.

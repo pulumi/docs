@@ -21,9 +21,9 @@ since launching:
     [Getting Started guide](/docs/get-started/).
 - [A native Kubernetes provider with 100% Kubernetes API/version coverage.](/blog/pulumi-a-better-way-to-kubernetes)
 - A steady stream of improvements across
-    [AWS](/docs/clouds/aws/get-started/),
-    [Azure](/docs/clouds/azure/get-started/), and
-    [Google Cloud](/docs/clouds/gcp/get-started/) providers.
+    [AWS](/docs/iac/get-started/aws/),
+    [Azure](/docs/iac/get-started/azure/), and
+    [Google Cloud](/docs/iac/get-started/gcp/) providers.
 - [Pulumi Crosswalk for AWS, a framework with built-in AWS infrastructure best practices.](/crosswalk/aws/)
 - Over 20 additional providers, including
     [CloudFlare](https://github.com/pulumi/pulumi-cloudflare),
@@ -33,10 +33,10 @@ since launching:
     to parity with our
     [Node.js-based JavaScript and TypeScript SDKs](/docs/reference/pkg/nodejs/).
 - [Team and Enterprise SaaS editions for teams managing infrastructure in production](/pricing/).
-- [GitHub, GitLab, Atlassian, and SAML/SSO identity providers](/docs/pulumi-cloud/organizations/).
-- [CI/CD integrations with GitHub, GitLab, Codefresh, CircleCI, major clouds, and more](/docs/using-pulumi/continuous-delivery/).
+- [GitHub, GitLab, Atlassian, and SAML/SSO identity providers](/docs/pulumi-cloud/admin/organizations/).
+- [CI/CD integrations with GitHub, GitLab, Codefresh, CircleCI, major clouds, and more](/docs/iac/packages-and-automation/continuous-delivery/).
 - [Pluggable secrets management and transitive state encryption](/blog/managing-secrets-with-pulumi/).
-- [Pluggable state backends for AWS S3, Azure Blob Store, and Google Cloud Store](/docs/concepts/state/).
+- [Pluggable state backends for AWS S3, Azure Blob Store, and Google Cloud Store](/docs/iac/concepts/state-and-backends/).
 - [Tools for managing complex, multi-stack environments, including Terraform integration](/blog/using-terraform-remote-state-with-pulumi/).
 - Numerous engine reliability and performance improvements, including parallelism.
 - [75 blogs, increasingly focused on end to end solutions we see working with customers](/blog/).

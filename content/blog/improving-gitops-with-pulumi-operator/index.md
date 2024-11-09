@@ -8,6 +8,10 @@ authors: ["david-flanagan"]
 tags: ["continuous-delivery", "gitops", "kubernetes"]
 ---
 
+{{% notes type="info" %}}
+Check out version 2.0 of the [Pulumi Kubernetes Operator](/blog/pulumi-kubernetes-operator-2-0/).
+{{% /notes %}}
+
 This time last year, I presented [Applying the Law of Demeter to GitOps](https://www.youtube.com/watch?v=gLZpt8a9YuA) at [GitOps Days 2020](https://www.gitopsdays.com/). The [Law of Demeter](https://en.wikipedia.org/wiki/Law_of_Demeter) is a design principle, proposed in 1988, which encourages loose coupling between systems. During this session, I wanted the audience to understand and be able to identify when their applications and continuous delivery pipelines have too much knowledge of the platform in which they're going to run. As an industry, we're seeing a great deal of momentum towards Platform Engineering and with this comes a Broca divide, a strict division of responsibilities: to build a platform and to consume a platform.
 
 Instead, the platform will provide everything the application needs to function. We've seen a lot of this before, notably via the [12-factor manifesto](https://12factor.net/).

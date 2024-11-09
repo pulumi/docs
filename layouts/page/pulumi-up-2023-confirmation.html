@@ -10,6 +10,8 @@
         </div>
     </div>
 
+    {{ partial "pulumi-up/speakers.html" (dict "speakers" .Params.speakers ) }}
+
     <section id="templates" class="container mx-auto my-16 text-center">
         <div class=" text-center mx-auto my-8">
             <h3>Pulumi Templates for Common Use Cases</h3>
@@ -38,7 +40,7 @@
         </div>
     </section>
 
-    <section id="workshops" style="background: linear-gradient(180deg, #cbeffe, #ddf6ff 100%);">
+    <!--<section id="workshops" style="background: linear-gradient(180deg, #cbeffe, #ddf6ff 100%);">
         <div class="container mx-auto py-16">
             <h2 class="px-4 pb-8">Workshops</h2>
 
@@ -62,7 +64,7 @@
                 {{ end }}
             </div>
         </div>
-    </section>
+    </section>-->
 
     <section id="automation-features" class="relative mt-12">
         <div class="container mx-auto mb-16">

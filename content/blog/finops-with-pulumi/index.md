@@ -32,7 +32,7 @@ tags:
     - cloud-engineering
     - automation-api
 
-# See the blogging docs at https://github.com/pulumi/pulumi-hugo/blob/master/BLOGGING.md.
+# See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md.
 # for additional details, and please remove these comments before submitting for review.
 ---
 
@@ -68,13 +68,13 @@ Financial optimization can also come in the form of strategic sourcing; most clo
 
 Using cloud engineering practices with Pulumi, you have the opportunity to implement both proactive and reactive models to control your cloud spend.
 
-As an [infrastructure as code platform](/product/), **Pulumi is in the unique position to be proactive about managing your costs**.  
+As an [infrastructure as code platform](/product/), **Pulumi is in the unique position to be proactive about managing your costs**.
 
 - You can design guardrails on your provisioning to limit expensive resource types or quantities,
 - Direct resources to reserved allocations,
 - Ensure resources are tagged and traceable to the correct cost center,
 - Connect resources to your observability and dedicated FinOps platforms,
-- Provide preventative visibility and control.  
+- Provide preventative visibility and control.
 
 Consider uses for CrossGuard Policy as Code, multi-language components for defining resource abstractions, and Automation API to package up orchestration into web service endpoints, as described in Pulumi Features below.
 

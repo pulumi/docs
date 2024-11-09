@@ -215,7 +215,6 @@ export class Chooser {
     }
 
     render() {
-        console.log(this.currentOptions);
         return (
             <Host selection={this.selection}>
                 <ul>

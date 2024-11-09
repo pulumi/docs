@@ -103,7 +103,7 @@ First, it creates a new access key and pushes the new value out. On the next ite
 
 ### Periodically Invoking an AWS Lambda
 
-The heart of the application is triggering it to execute on a fixed interval. Thankfully this is super-easy to do using Pulumi since it allows you to seamlessly blend your "cloud infrastructure" with "code" in a natural way. The user guide for Pulumi Crosswalk for AWS has more information on [serverless eventing](/docs/clouds/aws/guides/lambda/)
+The heart of the application is triggering it to execute on a fixed interval. Thankfully this is super-easy to do using Pulumi since it allows you to seamlessly blend your "cloud infrastructure" with "code" in a natural way. The user guide for Pulumi Crosswalk for AWS has more information on [serverless eventing](/docs/iac/clouds/aws/guides/lambda/)
 if you would like to learn more.
 
 The following snippet is the core part of the credential rotator app. We define a function to handle the logic of key rotation in `rotateIAMUserKeys`. Then we create an AWS Lambda resource

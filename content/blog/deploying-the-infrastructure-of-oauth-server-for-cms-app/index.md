@@ -9,7 +9,7 @@ tags: ["aws","github-actions", "netlify", "oauth", "ecs", "fargate"]
 ---
 
 {{% notes type="warning" %}}
-Some of the code in this post is out of date. See the [AWS guides](/docs/clouds/aws/guides/) for an updated overview and examples.
+Some of the code in this post is out of date. See the [AWS guides](/docs/iac/clouds/aws/guides/) for an updated overview and examples.
 {{% /notes %}}
 
 In our [previous post](/blog/deploying-netlify-cms-on-aws/), we deployed our CMS app on AWS instead of Netlify. We couldn't use [Netlify's Identity Service](https://docs.netlify.com/visitor-access/identity/#enable-identity-in-the-ui), which manages GitHub access to Netlify CMS, because we deployed on AWS. As a result, we needed to implement an external [OAuth Server](https://docs.netlify.com/security/secure-access-to-sites/identity/registration-login/#external-provider-authentication).

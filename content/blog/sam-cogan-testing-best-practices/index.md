@@ -39,7 +39,7 @@ tags:
     - azure
     - testing
 
-# See the blogging docs at https://github.com/pulumi/pulumi-hugo/blob/master/BLOGGING.md
+# See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md
 # for details, and please remove these comments before submitting for review.
 ---
 
@@ -99,4 +99,4 @@ Sam and his team orchestrates integration tests through an Azure DevOps Pipeline
 
 [Sign up for a free account](https://app.pulumi.com/signup) to try deploying infrastructure on any cloud, or [register for an upcoming workshop](https://www.pulumi.com/resources/#upcoming) to learn more about how Pulumi can help you ship cloud infrastructure faster and more safely.
 
-Learn more about testing infrastructure code in the [documentation](/docs/using-pulumi/testing/).
+Learn more about testing infrastructure code in the [documentation](/docs/iac/concepts/testing/).

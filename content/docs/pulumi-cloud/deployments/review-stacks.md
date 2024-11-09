@@ -1,10 +1,15 @@
 ---
-title_tag: "Review Stacks"
+title_tag: "Review stacks"
 meta_desc: Pull request environments that deploy application and infrastructure code changes.
-title: "Review Stacks"
-h1: "Review Stacks"
+title: "Review stacks"
+h1: "Review stacks"
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
+  cloud:
+    name: Review stacks
+    parent: pulumi-cloud-deployments
+    weight: 5
+    identifier: pulumi-cloud-deployments-review-stacks
   pulumicloud:
     parent: deployments
     weight: 2
@@ -12,11 +17,11 @@ menu:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/VvQcx51YL4g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-Review Stacks are dedicated cloud environments that get created automatically every time a pull request is opened, all powered by Pulumi Deployments. Open a pull request, and Pulumi Deployments will stand up a stack with your changes and the Pulumi GitHub App will add a PR comment with the outputs from your deployment. Merge the PR and Pulumi Deployments will destroy the stack and free up the associated resources. It has never been simpler to pick up an unfamiliar codebase, make changes to both application and infrastructure code, and share a live environment for review with your teammates.
+Review stacks are dedicated cloud environments that get created automatically every time a pull request is opened, all powered by Pulumi Deployments. Open a pull request, and Pulumi Deployments will stand up a stack with your changes and the Pulumi GitHub App will add a PR comment with the outputs from your deployment. Merge the PR and Pulumi Deployments will destroy the stack and free up the associated resources. It has never been simpler to pick up an unfamiliar codebase, make changes to both application and infrastructure code, and share a live environment for review with your teammates.
 
 ![Review Stack Pull Request Comment](../comment.png)
 
-Review Stacks enable you to iterate on both application code changes and infrastructure code changes at the same time. Just open a pull request and you can start testing changes against everything from simple static websites to API servers, microservices, data pipelines, Kubernetes clusters, and any other piece of infrastructure across Pulumi’s 100+ cloud providers. Review Stacks manage the full lifecycle of your cloud development environment including creating it when the PR is opened, updating it every time a new commit is pushed, and destroying and cleaning up all cloud resources when the pull request is merged or closed.
+Review stacks enable you to iterate on both application code changes and infrastructure code changes at the same time. Just open a pull request and you can start testing changes against everything from simple static websites to API servers, microservices, data pipelines, Kubernetes clusters, and any other piece of infrastructure across Pulumi’s 100+ cloud providers. Review Stacks manage the full lifecycle of your cloud development environment including creating it when the PR is opened, updating it every time a new commit is pushed, and destroying and cleaning up all cloud resources when the pull request is merged or closed.
 
 ## Configuring Review Stacks
 
@@ -189,7 +194,7 @@ const prSettings = new pulumiservice.DeploymentSettings("prSettings", {
 
 ### Customizing Behavior with Multiple Pulumi Programs
 
-Sometimes you want your Review Stack to differ substantially from the stack that gets deployed to production. You might want to use multi-tenant development infrastructure for Review Stacks to both reduce the cost of development infrastructure, and also speed up Review Stack deployment times. Sometimes this can be accomplished with config alone, but occassionaly it can be useful to write separate Pulumi Programs for the review stack. One common pattern for this is:
+Sometimes you want your Review Stack to differ substantially from the stack that gets deployed to production. You might want to use multi-tenant development infrastructure for Review Stacks to both reduce the cost of development infrastructure, and also speed up Review Stack deployment times. Sometimes this can be accomplished with config alone, but occasionally it can be useful to write separate Pulumi Programs for the review stack. One common pattern for this is:
 
 - Production Program and Stack: the Pulumi Program that defines your complete, stand alone production (and often dev/test/staging) environment.
 - Shared Kubernetes Stack: a Pulumi Program that deploys a Kubernetes cluster, designed to be shared by all Review Stacks.

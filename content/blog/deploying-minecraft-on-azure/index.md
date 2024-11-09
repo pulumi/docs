@@ -193,6 +193,6 @@ You can download the [code](https://github.com/pulumi/examples/tree/master/azure
 
 See these resources to learn more about deploying infrastructure on Azure.
 
-- [Get Started with Azure](/docs/clouds/azure/get-started/)
+- [Get Started with Azure](/docs/iac/get-started/azure/)
 - [Azure-Native Provider](/registry/packages/azure-native/api-docs/)
 - [Dynamic Providers](/blog/dynamic-providers/)

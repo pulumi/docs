@@ -29,7 +29,7 @@ tags:
     - features
     - pulumi-releases
 
-# See the blogging docs at https://github.com/pulumi/pulumi-hugo/blob/master/BLOGGING.md.
+# See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md.
 # for additional details, and please remove these comments before submitting for review.
 ---
 
@@ -56,7 +56,7 @@ The team has been busy releasing new features and improvements in the last month
 
 ### Pulumi AWS Provider v5.0.0
 
-We are excited to announce v5.0.0 of the Pulumi AWS Classic provider. The AWS Classic provider is one of the most heavily used providers across the Pulumi ecosystem, and offers access to the full surface area of the upstream Terraform AWS Provider from within Pulumi projects in all supported Pulumi languages. The v5.0.0 release brings a substantial set of fixes and improvements to the provider, including a number of breaking changes as part of the major version release.
+We are excited to announce v5.0.0 of the Pulumi AWS provider. The AWS provider is one of the most heavily used providers across the Pulumi ecosystem, and offers access to the full surface area of the upstream Terraform AWS Provider from within Pulumi projects in all supported Pulumi languages. The v5.0.0 release brings a substantial set of fixes and improvements to the provider, including a number of breaking changes as part of the major version release.
 
 Read more in the [Pulumi AWS Provider v5.0.0 blog post](/blog/announcing-v5.0.0-of-the-pulumi-aws-provider).
 

@@ -29,7 +29,7 @@ tags:
    - features
    - pulumi-releases
 
-# See the blogging docs at https://github.com/pulumi/pulumi-hugo/blob/master/BLOGGING.md.
+# See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md.
 # for additional details, and please remove these comments before submitting for review.
 ---
 
@@ -71,7 +71,7 @@ Learn more in the [Google Native v0.25.0 release notes](https://github.com/pulum
 
 ### Kubernetes Operator v1.8.0
 
-In the latest release of the [Pulumi Kubernetes Operator](/docs/using-pulumi/continuous-delivery/pulumi-kubernetes-operator/) we have added improvements to metrics collection and better branch detection in branch specifications.
+In the latest release of the [Pulumi Kubernetes Operator](/docs/iac/packages-and-automation/continuous-delivery/pulumi-kubernetes-operator/) we have added improvements to metrics collection and better branch detection in branch specifications.
 
 Learn more in the [Kubernetes Operator v1.8.0 release notes](https://github.com/pulumi/pulumi-kubernetes-operator/releases/tag/v1.8.0).
 

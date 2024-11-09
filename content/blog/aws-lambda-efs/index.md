@@ -13,7 +13,7 @@ tags:
 ---
 
 {{% notes type="warning" %}}
-Some of the code in this post is out of date. See the [AWS guides](/docs/clouds/aws/guides/) for an updated overview and examples.
+Some of the code in this post is out of date. See the [AWS guides](/docs/iac/clouds/aws/guides/) for an updated overview and examples.
 {{% /notes %}}
 
 Ever since AWS Lambda was released in 2015, users have wanted persistent file storage beyond the small 512MB `/tmp` disk allocated to each Lambda function.  The following year, Amazon launched EFS,  offering a simple managed file system service for AWS, but initially only available to mount onto Amazon EC2 instances. Over the last few months, AWS has been extending access to EFS to all of the modern compute offerings.  First [EKS](https://aws.amazon.com/about-aws/whats-new/2019/09/amazon-eks-announces-beta-release-of-amazon-efs-csi-driver/) for Kubernetes, then [ECS and Fargate](https://aws.amazon.com/about-aws/whats-new/2020/04/amazon-ecs-aws-fargate-support-amazon-efs-filesystems-generally-available/) for containers.  Today, AWS announced that [EFS is now also supported in Lambda](https://aws.amazon.com/blogs/aws/new-a-shared-file-system-for-your-lambda-functions/), providing easy access to network file systems from your serverless functions.
@@ -224,6 +224,6 @@ Support for EFS in Lambda opens up a lot of new options for managing persistent 
 
 In this post, we've shown how you can use Pulumi to manage Lambda + EFS. Pulumi makes it easy to provision and manage cloud infrastructure on any cloud, using programming languages you are familiar with, including TypeScript, Python, Go and .NET.  This is a great fit for EFS and Lambda, which combine managed infrastructure with small serverless function code.
 
-Check out the [full Lambda + EFS example above](https://github.com/pulumi/examples/tree/master/aws-ts-lambda-efs) in the Pulumi Examples, learn more about [Lambda support for EFS in the AWS docs](https://docs.aws.amazon.com/lambda/latest/dg/configuration-filesystem.html), and [get started with Pulumi for AWS](https://www.pulumi.com/docs/clouds/aws/get-started/) today.
+Check out the [full Lambda + EFS example above](https://github.com/pulumi/examples/tree/master/aws-ts-lambda-efs) in the Pulumi Examples, learn more about [Lambda support for EFS in the AWS docs](https://docs.aws.amazon.com/lambda/latest/dg/configuration-filesystem.html), and [get started with Pulumi for AWS](https://www.pulumi.com/docs/iac/get-started/aws/) today.
 
 {{< youtube "zPj_JxaRJyE?rel=0" >}}

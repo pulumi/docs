@@ -8,6 +8,13 @@ source ./scripts/common.sh
 export PULUMI_CONVERT_URL="${PULUMI_CONVERT_URL:-$(pulumi stack output --stack pulumi/tf2pulumi-service/production url)}"
 export PULUMI_AI_WS_URL=${PULUMI_AI_WS_URL:-$(pulumi stack output --stack pulumi/pulumigpt-api/corp websocketUri)}
 
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+INFRA_PATH="$SCRIPT_DIR/../infrastructure"
+# Read Copilot API URL from Pulumi config, ignoring any errors.
+# If the config value is not set Copilot will not be available.
+export PULUMI_COPILOT_URL=${PULUMI_COPILOT_URL:-$(pulumi --cwd "$INFRA_PATH" config get copilotUrl 2>/dev/null || echo "")}
+printf "Copilot URL: $PULUMI_COPILOT_URL\n"
+
 printf "Compiling theme JavaScript and CSS...\n\n"
 export ASSET_BUNDLE_ID="$(build_identifier)"
 
@@ -19,7 +26,6 @@ export JS_BUNDLE="static/js/bundle.min.${ASSET_BUNDLE_ID}.js"
 # Relative paths to those same files, read by Hugo templates.
 export REL_CSS_BUNDLE="/css/styles.${ASSET_BUNDLE_ID}.css"
 export REL_JS_BUNDLE="/js/bundle.min.${ASSET_BUNDLE_ID}.js"
-export REPO_THEME_PATH="themes/default/"
 
 printf "Copying prebuilt docs...\n\n"
 make copy_static_prebuilt
@@ -36,6 +42,9 @@ else
         GOGC=3 hugo --minify --buildFuture --templateMetrics -e "production"
     fi
 fi
+
+# Generate docs JSON.
+node scripts/content/generate-docs-content.js
 
 # Purge unused CSS.
 yarn run minify-css

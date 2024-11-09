@@ -31,7 +31,7 @@ async function checkSearchURLs(baseURL) {
         console.log(` ↳ Checking group ${chunk.chunk + 1} of ${chunks.length} (${chunk.objects.length} URLs)...`);
 
         const result = await Promise.allSettled(chunk.objects.map(obj => {
-            const url = `${baseURL}${obj.href}`;
+            const url = obj.href.startsWith("http") ? obj.href : `${baseURL}${obj.href}`;
 
             return new Promise(async (resolve, reject) => {
                 try {

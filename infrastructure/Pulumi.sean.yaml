@@ -1,0 +1,13 @@
+config:
+  aws:region: us-west-2
+  www.pulumi.com:addSecurityHeaders: "true"
+  www.pulumi.com:certificateArn: arn:aws:acm:us-east-1:616138583583:certificate/8482f3dc-d8dd-4e98-8596-e2ce1422f53a
+  www.pulumi.com:doEdgeRedirects: "true"
+  www.pulumi.com:makeFallbackBucket: "false"
+  www.pulumi.com:newAccountRollout: "true"
+  www.pulumi.com:originBucketNameOverride: marketingbuildtest1
+  www.pulumi.com:pathToOriginBucketMetadata: ../origin-bucket-metadata.json
+  www.pulumi.com:websiteDomain: sean-build.test
+  www.pulumi.com:websiteLogsBucketName: www-sean-build.pulumi-dev.io-logs
+environment:
+  - dev-stacks

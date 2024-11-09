@@ -11,7 +11,7 @@ date: 2023-04-06
 # of the content of the post, which is useful for targeting search results or social-media
 # previews. This field is required or the build will fail the linter test.
 # Max length is 160 characters.
-meta_desc: Pulumi support for the newly announced Lambda Response Streaming from AWS 
+meta_desc: Pulumi support for the newly announced Lambda Response Streaming from AWS
 
 # The meta_image appears in social-media previews and on the blog home page.
 # A placeholder image representing the recommended format, dimensions and aspect
@@ -30,7 +30,7 @@ tags:
     - aws
     - lambda
 
-# See the blogging docs at https://github.com/pulumi/pulumi-hugo/blob/master/BLOGGING.md.
+# See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md.
 # for additional details, and please remove these comments before submitting for review.
 ---
 
@@ -93,7 +93,7 @@ For this simple text-based example, there is little need to worry about overall 
 
 ## Packaging and deploying your Lambda Function for streaming with Pulumi
 
-We can package our Lambda function for streaming with just a few dozen lines of code using Pulumi. First, we’ll need to import some libraries that will allow us to package our Lambda and create the necessary resources in AWS. For this exercise, we’ll be using both the [AWS Native](https://www.pulumi.com/registry/packages/aws-native/) provider and the [AWS Classic](https://www.pulumi.com/registry/packages/aws/) provider. The AWS Native provider works with the [AWS Cloud Control API](https://aws.amazon.com/cloudcontrolapi/) to enable same-day support for new AWS features like Lambda response streaming.
+We can package our Lambda function for streaming with just a few dozen lines of code using Pulumi. First, we’ll need to import some libraries that will allow us to package our Lambda and create the necessary resources in AWS. For this exercise, we’ll be using both the [AWS Cloud Control](https://www.pulumi.com/registry/packages/aws-native/) provider and the [AWS](https://www.pulumi.com/registry/packages/aws/) provider. The AWS Cloud Control provider works with the [AWS Cloud Control API](https://aws.amazon.com/cloudcontrolapi/) to enable same-day support for new AWS features like Lambda response streaming.
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";

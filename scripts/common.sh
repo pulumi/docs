@@ -30,7 +30,7 @@ post_github_pr_comment() {
 
     curl -s \
          -X POST \
-         -H "Authorization: token ${GITHUB_TOKEN}" \
+         -H "Authorization: token ${PULUMI_BOT_TOKEN}" \
          -d "$pr_comment_body" \
          $pr_comment_api_url > /dev/null
 }
@@ -95,38 +95,6 @@ build_identifier() {
     fi
 
     echo "$identifier"
-}
-
-# Get the AWS SSM Parameter Store key for the specified commit SHA. Used for mapping a
-# commit to a previously created bucket.
-ssm_parameter_key_for_commit() {
-    echo "/docs/commits/$1/bucket"
-}
-
-# Get the S3 bucket associated with a specific commit.
-get_bucket_for_commit() {
-    aws ssm get-parameter \
-        --name "$(ssm_parameter_key_for_commit $1)" \
-        --query Parameter.Value \
-        --region "$(aws_region)" \
-        --output text || echo ""
-}
-
-# Set the S3 bucket associated with a specific commit.
-set_bucket_for_commit() {
-    aws ssm put-parameter \
-        --name "$(ssm_parameter_key_for_commit $1)" \
-        --value "$2" \
-        --type String \
-        --region $3 \
-        --overwrite
-}
-
-# Remove the parameter key associated with a specific commit.
-remove_param_for_commit() {
-    aws ssm delete-parameter \
-        --name "$(ssm_parameter_key_for_commit $1)" \
-        --region $2
 }
 
 # List the 100 most recent bucket in the current account, sorted descendingly by

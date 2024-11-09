@@ -6,17 +6,19 @@
         {{ $ancestors = $ancestors | append $a.LinkTitle }}
     {{- end -}}
 
-    {{-
-        $index = $index | append (
-            dict
-                "objectID" $page.File.UniqueID
-                "title" $page.Title
-                "section" $page.Section
-                "href" $page.RelPermalink
-                "params" $page.Params
-                "kind" $page.Kind
-                "ancestors" (after 1 $ancestors)
-        )
-    -}}
+    {{- if ne $page.File nil -}}
+        {{-
+            $index = $index | append (
+                dict
+                    "objectID" $page.File.UniqueID
+                    "title" $page.Title
+                    "section" $page.Section
+                    "href" $page.RelPermalink
+                    "params" $page.Params
+                    "kind" $page.Kind
+                    "ancestors" (after 1 $ancestors)
+            )
+        -}}
+    {{- end -}}
 {{- end -}}
 {{- $index | jsonify (dict "indent" "    ") -}}

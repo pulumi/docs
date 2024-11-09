@@ -39,7 +39,7 @@ main:
     youtube_url: 
 
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2024-06-11T09:00:00.000-07:00
+    sortable_date: 2024-09-11T09:00:00.000-07:00
 
     # Duration of the webinar.
     duration: 90 minutes
@@ -61,9 +61,12 @@ main:
 
     # The webinar presenters
     presenters:
-        - name: Josh Kodroff
-          role: Sr Solutions Architect, Pulumi
-          photo: /images/team/josh-kodroff.jpg
+        - name: Diana Esteves
+          role: Solutions Architect, Pulumi
+          photo: /images/team/diana-esteves.jpg
+        - name: Marina Novikova
+          role: Sr. Partner Solution Architect, AWS
+          photo: /images/team/marina-novikova.jpg        
 
     # case-sensitive
     tags:
@@ -75,6 +78,6 @@ main:
 # The right hand side form section.
 form:
     # HubSpot form id.
-    hubspot_form_id: a1baea91-cf37-4ee7-b45f-3a643e20f305
-    salesforce_campaign_id: 701PQ00000CydsSYAR
+    hubspot_form_id: 2a8c274a-cf81-430b-a56b-3bb167b2af58
+    salesforce_campaign_id: 701PQ00000HVrmUYAT
 ---

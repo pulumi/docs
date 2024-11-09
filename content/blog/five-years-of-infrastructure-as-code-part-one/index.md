@@ -27,7 +27,7 @@ authors:
 tags:
     - infrastructure-as-code
 
-# See the blogging docs at https://github.com/pulumi/pulumi-hugo/blob/master/BLOGGING.md.
+# See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md.
 # for additional details, and please remove these comments before submitting for review.
 ---
 
@@ -130,7 +130,7 @@ In summary, here is what modern provisioning-based infrastructure as code tools 
 
 - [They typically offer facilities for managing multiple instances of the same program](/docs/concepts/stack/) (frequently called something like stacks, environments, or workspaces). This makes it easier to spin up and scale multiple environments over time.
 
-- [They track last-known deployment state](/docs/concepts/state/). This is required for the tool to be able to determine a plan to alter reality to match the desired state when it changes. In some cases, the tool lets users interact with this state directly (Pulumi and Terraform), and in other cases, the state is abstracted away from the user behind a service (AWS CloudFormation). In other cases still, the user can pick between these two experiences based on power/convenience (Pulumi). In all cases, it exists in some form.
+- [They track last-known deployment state](/docs/iac/concepts/state-and-backends/). This is required for the tool to be able to determine a plan to alter reality to match the desired state when it changes. In some cases, the tool lets users interact with this state directly (Pulumi and Terraform), and in other cases, the state is abstracted away from the user behind a service (AWS CloudFormation). In other cases still, the user can pick between these two experiences based on power/convenience (Pulumi). In all cases, it exists in some form.
 
 - [They have an engine](/docs/concepts/how-pulumi-works/) which understands how to evaluate this expression language to create a desired state, map logical resources to physical ones, track dependencies for purposes of correct operation order and parallelism, diff declared state against the last-known state, and to devise a plan consisting of a specific sequence of create, read, update, and delete (CRUD) operations which will converge the actual real-world state with the desired state.
 
@@ -150,7 +150,7 @@ I should note that most tools operate in one of two modes:
 
 - **Continuous control-loop**: the tool simply runs regularly, sometimes reactively (such as when an event like a Git commit occurs), constantly producing new desired-states, comparing to the last-known state, and updating things as needed. Typically, a human is not involved in deciding to review and/or apply the changes.
 
-Some tools, like Pulumi, offer both models, as each can be useful for different purposes: you can run the CLI at discrete times, trigger deployments from a [CI/CD pipeline](/docs/using-pulumi/continuous-delivery/) or [Kubernetes Operator](/docs/using-pulumi/continuous-delivery/pulumi-kubernetes-operator/), or using [arbitrary automation program logic](/automation/) with ultimate flexibility.
+Some tools, like Pulumi, offer both models, as each can be useful for different purposes: you can run the CLI at discrete times, trigger deployments from a [CI/CD pipeline](/docs/iac/packages-and-automation/continuous-delivery/) or [Kubernetes Operator](/docs/iac/packages-and-automation/continuous-delivery/pulumi-kubernetes-operator/), or using [arbitrary automation program logic](/automation/) with ultimate flexibility.
 
 ## Cloud Resources as Building Blocks
 
@@ -178,7 +178,7 @@ That’s what leads to the discrete provisioning and configuring. Not all is los
 
 But this is the very opportunity that excites us about Pulumi's approach to infrastructure as code. Every new platform starts with foundational building blocks. Infrastructure as code gives us a solution to the automation maturity problems above, sure, which is terribly important. But even more excitingly, by leveraging great programming languages, it also gives us the missing programming, application, and resource models needed to unlock immense innovation at higher layers in the stack. In short, infrastructure as code lets us program the cloud.
 
-You can see that in action with normal Pulumi programs, where you get the full expressiveness of a language, in cases where you need for loops, conditionals, or abstraction by way of functions, methods, classes, or entire packages. This especially begins to shine with our [Automation API](/automation/), which began with the question of, “What if infrastructure as code was just a library and extension of my code, rather than being an entirely separate CLI tool?” You can see some of the power of bringing application and infrastructure code closer together with features like [Magic Functions](/blog/lambdas-as-lambdas-the-magic-of-simple-serverless-functions/), which let you just write serverless lambdas as lambdas in your language. And, of course, the ability to abstract and encapsulate common patterns eliminates copy-and-paste, delivers built-in best practices, and lets us move beyond endlessly stitching together building blocks, and towards real reusable architectures like our [Crosswalk for AWS](/docs/clouds/aws/guides/).
+You can see that in action with normal Pulumi programs, where you get the full expressiveness of a language, in cases where you need for loops, conditionals, or abstraction by way of functions, methods, classes, or entire packages. This especially begins to shine with our [Automation API](/automation/), which began with the question of, “What if infrastructure as code was just a library and extension of my code, rather than being an entirely separate CLI tool?” You can see some of the power of bringing application and infrastructure code closer together with features like [Magic Functions](/blog/lambdas-as-lambdas-the-magic-of-simple-serverless-functions/), which let you just write serverless lambdas as lambdas in your language. And, of course, the ability to abstract and encapsulate common patterns eliminates copy-and-paste, delivers built-in best practices, and lets us move beyond endlessly stitching together building blocks, and towards real reusable architectures like our [Crosswalk for AWS](/docs/iac/clouds/aws/guides/).
 
 And from here we can build bigger things atop smaller things, the secret to the progress we have made in computer science for decades. And we think that’s enormously exciting.
 

@@ -1,7 +1,7 @@
 ---
-title: Pulumi + AWS Summit London
-meta_desc: Join Pulumi at AWS Summit London to learn about the latest developments in infrastructure as code. Meet us at booth B14, April 24, 2024
-meta_image:
+title: Pulumi + AWS Summit NYC
+meta_desc: Join Pulumi at AWS Summit NYC to learn about the latest developments in infrastructure as code. Meet us at booth 563.
+meta_image: /images/aws-summit-meta.png
 type: page
 layout: aws-summit
 
@@ -9,19 +9,24 @@ layout: aws-summit
 links:
     items:
         - heading: Request a Demo
-          description: See how Pulumi can help you ship infrastructure faster, and manage your AWS resources at scale. Ready for a change?
+          description: See how Pulumi can help you ship infrastructure faster and manage your AWS resources at scale. Ready for a change?
           action: Talk with an Engineer
           link: https://info.pulumi.com/aws-summit/
 
 workshops:
     items:
-      - title: Getting Started with Infrastructure as Code on AWS
-        date: May 9, 2024
-        description: In this workshop, you will learn the fundamentals of Infrastructure as Code through a series of guided exercises using the Pulumi Cloud Engineering platform.
-        link: /resources/getting-started-with-iac-on-aws/
+      - title: Getting started with CI/CD for AWS using GitHub Actions
+        date: July 17, 2024
+        description: In this workshop, you will learn the fundamentals of an infrastructure CI/CD pipeline through guided exercises. You will use GitHub Actions and Pulumi.
+        link: /resources/getting-started-with-ci-cd-aws-pulumi-github-actions/
+        action: Register Now
+      - title: From Zero to Production in Kubernetes
+        date: July 25, 2024
+        description: We’ll explore how to leverage the power of Python with Pulumi, an infrastructure as code platform to define and manage your Kubernetes deployments.
+        link: /resources/from-zero-to-production-in-kubernetes/
         action: Register Now
       - title: Advanced CI/CD for AWS using Pulumi and GitHub Actions
-        date: May 16, 2024
+        date: August 14, 2024
         description: Learn advanced topics that make up a robust infrastructure CI/CD pipeline through guided exercises.
         link: /resources/advanced-cicd-aws-pulumi-github-actions/
         action: Register Now
@@ -55,8 +60,6 @@ knowledge:
 customer_logos:
   title: Trusted by your peers
   logos:
-    - name: mercedes-benz
-      link: /case-studies/mercedes-benz
     - name: snowflake
       link: /case-studies/snowflake
     - name: lemonade

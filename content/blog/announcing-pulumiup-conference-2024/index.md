@@ -34,7 +34,7 @@ authors:
 tags:
     - pulumi-events
 
-# See the blogging docs at https://github.com/pulumi/pulumi-hugo/blob/master/BLOGGING.md
+# See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md
 # for details, and please remove these comments before submitting for review.
 ---
 
@@ -57,7 +57,7 @@ One exciting addition to this year's event is the call for speakers. We invite y
 - CFP opens: Thursday, April 25, 2024.
 - CFP closes: Monday, June 17, 2024.
 - CFP Notifications: Monday, July 22, 2024.
-  
+
 ### Selection Criteria
 
 At PulumiUP, diversity and originality are celebrated. We welcome proposals from all corners of the tech community and prioritize fresh perspectives and solutions. Regardless of where you are in the world, we want to hear from you. Whether you're a seasoned speaker or a first-timer, we encourage you to submit your ideas. Just remember, no vendor pitches allowed!

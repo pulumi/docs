@@ -40,7 +40,7 @@ tags:
     - community
     - pulumi-events
 
-# See the blogging docs at https://github.com/pulumi/pulumi-hugo/blob/master/BLOGGING.md
+# See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md
 # for details, and please remove these comments before submitting for review.
 ---
 {{% notes type="info" %}}
@@ -67,7 +67,7 @@ Adopting Pulumi and its Automation API provided several benefits that made Starb
 
 **Unified cluster and infrastructure management:** Rather than juggling multiple tools for managing Kubernetes and infrastructure, Starburst engineers use a single tool to manage over 50 [Kubernetes clusters](https://www.pulumi.com/templates/kubernetes/) and [deploy Helm charts](https://www.pulumi.com/templates/kubernetes-application/helm-chart/) into the clusters, spanning multiple regions. They also use Pulumi to manage SaaS platforms like Cloudflare, Confluent, and DataDog.
 
-**Consistent deployment lifecycles:** Using Pulumi’s [integration with GitHub Actions](/docs/using-pulumi/continuous-delivery/github-actions/), Starburst engineers built a streamlined CI/CD process where infrastructure and application code builds within the same pipelines with automated test environments. They accomplished this using Pulumi Automation API to abstract the underlying runtime environments, circumventing the need for additional layers and wrappers.
+**Consistent deployment lifecycles:** Using Pulumi’s [integration with GitHub Actions](/docs/iac/packages-and-automation/continuous-delivery/github-actions/), Starburst engineers built a streamlined CI/CD process where infrastructure and application code builds within the same pipelines with automated test environments. They accomplished this using Pulumi Automation API to abstract the underlying runtime environments, circumventing the need for additional layers and wrappers.
 
 ![Infrastructure automation code](https://www.pulumi.com/uploads/content/blog/how-starburst-data-creates-infrastructure-automation-magic-with-code/starburst-code.png)
 

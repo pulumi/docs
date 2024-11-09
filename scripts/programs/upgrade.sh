@@ -6,7 +6,7 @@ source ./scripts/programs/common.sh
 
 programs_dir="static/programs"
 
-# Delete install artifacts, but leave existing go.mod files.
+# Delete install artifacts.
 git clean -fdX "${programs_dir}/*"
 
 # Fix up go.mod files.

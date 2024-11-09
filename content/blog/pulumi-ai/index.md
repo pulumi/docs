@@ -11,6 +11,10 @@ tags:
     - llm
 ---
 
+{{% notes type="info" %}}
+There are new intelligent cloud management capabilities available in **Pulumi Copilot**. [Learn More](/blog/pulumi-copilot)
+{{% /notes %}}
+
 We recently released [Pulumi AI](/ai/), a purpose-built AI Assistant that can create cloud infrastructure using Pulumi. It builds on the power of Large Language Models (LLMs) and GPT to dramatically reduce the time it takes to discover, learn and use new cloud infrastructure APIs.
 
 We’ve seen amazing engagement and stories from Pulumi users about the impact this tool has had for them over the past few weeks. In this post, we’ll dive deeper into this new technology, and share why we and so many other Pulumi users are so excited about [Pulumi AI](https://www.pulumi.com/ai/).

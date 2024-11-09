@@ -1,8 +1,8 @@
 ---
 # Name of the event, <= 60 characters
 title: From Zero to Production in Kubernetes
-meta_desc: Explore how to leverage the power of Python with Pulumi, an infrastructure as code platform to define and manage your Kubernetes deployments.
-meta_image: /images/resources/zero-production-k8s-javier-nginx.png
+meta_desc: We’ll explore how to leverage the power of Python with Pulumi, an infrastructure as code platform to define and manage your Kubernetes deployments.
+meta_image:
 
 # A featured webinar will display first in the list.
 featured: false
@@ -12,7 +12,7 @@ unlisted: false
 
 # Gated webinars will have a registration form and the user will need
 # to fill out the form before viewing.
-gated: false
+gated: true
 
 # The layout of the landing page.
 type: webinars
@@ -36,13 +36,13 @@ main:
     event_type: workshop # workshop | event
 
     # URL for embedding a URL for ungated webinars.
-    youtube_url: https://www.youtube.com/embed/l8Ha60IJ6m8?si=AiKU_4MK3w3aAE_l?rel=0
+    youtube_url: #https://www.youtube.com/embed/l8Ha60IJ6m8?si=AiKU_4MK3w3aAE_l?rel=0
 
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2023-11-15T09:00:00-08:00
+    sortable_date: 2024-07-25T09:00:00-07:00
 
     # Duration of the webinar.
-    duration: 1 hour
+    duration: 90 minutes
 
     # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
     location: virtual
@@ -60,22 +60,22 @@ main:
 
     # The webinar presenters
     presenters:
-        - name: Josh Kodroff
-          role: Solutions Architect, Pulumi
-          photo: /images/team/josh-kodroff.jpg
-        - name: Javier Evans
-          role: Solutions Engineer, NGINX
-          photo: /images/people/javier-evans.jpg
+        - name: Engin Diri
+          role: Customer Experience Architect, Pulumi
+          photo: /images/team/engin-diri.jpg
+        - name: Damian Curry
+          role: Business Development Technical Director, F5/NGINX
 
     # case-sensitive
     tags:
-        level: Beginner # Beginner, Intermediate, Advanced
+        level: Intermediate # Beginner, Intermediate, Advanced
         topics: ["NGINX", "Kubernetes"]
         languages: ["Python"]
+        clouds: ["AWS"]
 
 # The right hand side form section.
 form:
     # HubSpot form id.
-    hubspot_form_id: 998984aa-03fc-4d5e-9ce3-9b96578c75b4
-    salesforce_campaign_id: 701Du000000BKYJIA4
+    hubspot_form_id: d448f8b6-c1a8-420d-8f9f-9975507e6d1e
+    salesforce_campaign_id: 701PQ00000FCwsQYAT
 ---
