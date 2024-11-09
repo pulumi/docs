@@ -26,7 +26,7 @@ tags:
 - hcl
 ---
 
-The Java Language Architect at Oracle, Brian Goetz, author of Java Concurrency in Practice, has this to how declarative
+The Java Language Architect at Oracle, Brian Goetz, author of Java Concurrency in Practice, has commented how declarative
 languages can be a double-edged sword:
 
 ![brian-goetz-tweet](brian-goetz-tweet.png)

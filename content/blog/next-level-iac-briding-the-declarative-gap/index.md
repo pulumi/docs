@@ -149,7 +149,7 @@ Our example shows how to do Base64 encoding, but this technique can be used for 
 
 While Pulumi's asynchronous semantics may seem somewhat complex for basic use cases, they unlock abilities in more complex use cases, which is when you really need your IaC tooling to show up for you. Because real life is never as simple as demo code.
 
-## Next Steps
+## Next steps
 
 If you haven't already, [install Pulumi][pulumi-install] today, and follow our self-directed [Getting Started guides][pulumi-start] to learn more about making the most of Pulumi's next-level infrastructure management features at your organization.
 

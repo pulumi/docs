@@ -1,0 +1,31 @@
+// Host iframe
+// Should not be shown, when loaded it will portal the content to the sidebar target
+#ai-sidebar-host {
+    display: none
+}
+
+// Element that will be the target of the portal
+// If empty it will have a width of 0 and will not be visible.
+#ai-sidebar-target {
+    // Relative to the viewport so copilot moves w/ the scrolling
+    position: fixed;
+
+    // Popovers on site use z-index: 20
+    z-index: 10;
+
+    // Default, make space for the navbar
+    top: 108px;
+    right: 0;
+    bottom: 0;
+}
+
+// Per page positions
+// ------------------
+
+// Main page
+// ---
+
+/* FIXME: no section suffix? */
+.section- #ai-sidebar-target {
+    top: 200px;
+}

@@ -95,10 +95,10 @@ secret_key                <not set>             None    None
     region                <not set>             None    None
 ```
 
-To get a list of S3 buckets, run the command using `esc run` as shown below, making sure to replace `<your-pulumi-org-name>` and `<your-environment-name>` with the names of your own Pulumi organization and environment respectively:
+To get a list of S3 buckets, run the command using `esc run` as shown below, making sure to replace `<your-pulumi-org-name>`, `<your-project-name>`, and `<your-environment-name>` with the names of your own Pulumi organization and environment respectively:
 
 ```bash
-esc run <your-pulumi-org-name>/<your-environment-name> -- aws s3 ls
+esc run <your-pulumi-org-name>/<your-project-name>/<your-environment-name> -- aws s3 ls
 ```
 
 ## Conclusion

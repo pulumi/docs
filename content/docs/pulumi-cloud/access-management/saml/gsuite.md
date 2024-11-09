@@ -6,6 +6,11 @@ title: Google Workspace
 h1: "SAML: Configuring Google Workspace"
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
+  cloud:
+    name: Google Workspace
+    parent: pulumi-cloud-access-management-saml
+    weight: 4
+    identifier: pulumi-cloud-access-management-saml-gsuite
   pulumicloud:
     parent: saml
     weight: 2

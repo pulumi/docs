@@ -1,0 +1,11 @@
+name: aws-import-iac-iam-role-python
+runtime:
+  name: python
+  options:
+    toolchain: pip
+    virtualenv: venv
+description: An example that deploys the resource definition for an imported IAM role on AWS.
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: aws-python
