@@ -36,7 +36,7 @@ generate:
 	@echo -e "\033[0;32mGENERATE:\033[0m"
 	NOBUILD=true ./scripts/run_typedoc.sh
 	./scripts/generate_python_docs.sh
-	pulumi gen-markdown ./content/docs/cli/commands
+	PULUMI_EXPERIMENTAL=true pulumi gen-markdown ./content/docs/cli/commands
 
 .PHONY: build
 build:
