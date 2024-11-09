@@ -5,9 +5,10 @@ title: Compare to...
 h1: Compare Pulumi ESC to other solutions
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    pulumiesc:
-        weight: 7
-        identifier: esc-vs
+  esc:
+    parent: esc-home
+    weight: 10
+    identifier: esc-vs
 aliases:
 ---
 
@@ -20,3 +21,4 @@ Here are several useful comparisons that will help you understand Pulumi's place
 
 * [HashiCorp Vault](/docs/esc/vs/vault/)
 * [Infisical](/docs/esc/vs/infisical/)
+* [Doppler](/docs/esc/vs/doppler/)

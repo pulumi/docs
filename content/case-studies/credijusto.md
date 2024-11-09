@@ -163,5 +163,5 @@ followed across the organization.
 Pulumi makes it easy to configure AWS VPCs and Amazon EKS. Check out the following
 articles to get started:
 
-* [AWS Virtual Private Cloud with Pulumi](https://www.pulumi.com/docs/clouds/aws/guides/vpc/):
-* [Amazon EKS with Pulumi](https://www.pulumi.com/docs/clouds/aws/guides/eks/):
+* [AWS Virtual Private Cloud with Pulumi](https://www.pulumi.com/docs/iac/clouds/aws/guides/vpc/):
+* [Amazon EKS with Pulumi](https://www.pulumi.com/docs/iac/clouds/aws/guides/eks/):

@@ -4,9 +4,10 @@ title_tag: Syntax Reference
 h1: Pulumi ESC Syntax Reference
 meta_desc: Pulumi ESC allows you to compose and manage hierarchical collections of configuration and secrets and consume them in various ways.
 menu:
-  pulumiesc:
-    identifier: reference
-    weight: 4
+  esc:
+    parent: esc-home
+    identifier: esc-syntax-reference
+    weight: 5
 aliases:
   - /docs/pulumi-cloud/esc/reference
 ---
@@ -19,8 +20,8 @@ aliases:
 
 # imports is an optional top-level key
 imports:
-  - environment-a
-  - environment-b
+  - project/environment-a
+  - project/environment-b
 
 # ---------------------------------------------------------------------------------------
 # Main configuration -- set configuration values either as static values, or interpolated
@@ -54,6 +55,12 @@ values:
     # Array elements are "app.items[0]" and "app.items[1]"
     items: [ "config-a", "config-b" ]
 
+    # Path is "app.multiline"
+    # If the value needs to be a multiline value, use YAML pipe.
+    multilineValue: |
+      The quick brown fox
+      jumped over the lazy dog
+
     # Values within the environment and its imports may be referenced
     # Path is "app.settingCopy"
     settingCopy: ${app.setting}
@@ -73,6 +80,23 @@ values:
     # Path is "app.password"
     password:
       fn::secret: YQ!r24kdF7
+
+    # Multiline private key stored as a secret using YAML multiline pipe.
+    # The value will be encrypted and
+    # stored as ciphertext when the environment is saved.
+    # Path is "app.sshKey"
+    sshKey:
+      fn::secret: |
+        -----BEGIN OPENSSH PRIVATE KEY-----
+        blahblahblahblahblahblahblabhablhablahkldfldsfjdlsfdlfjdslfjlladsklfll
+        dfdsafdsadfsadsfadshblahblabhablhablahkldfldsfjdlsfdlfjdslfjlladsklfll
+        dfdsafdsadfsadsfadshblahblabhablhablahkldfldsfjdlsfdlfjdslfjlladsklfll
+        dfdsafdsadfsadsfadshblahblabhablhablahkldfldsfjdlsfdlfjdslfjlladsklfll
+        dfdsafdsadfsadsfadshblahblabhablhablahkldfldsfjdlsfdlfjdslfjlladsklfll
+        dfdsafdsadfsadsfadshblahblabhablhablahkldfldsfjdlsfdlfjdslfjlladsklfll
+        dfdsafdsadfsadsfadshblahblabhablhablahkldfldsfjdlsfdlfjdslfjlladsklfll
+        dfdsafdsadfsadsfadshblahblabhablhablahkldfldsfjdlsfdlfjdslfjlladsklfll
+        -----END OPENSSH PRIVATE KEY-----
 
     # Join array elements with the given delimiter
     # Path is "app.url"
@@ -208,15 +232,16 @@ values:
       stacks:
         k8-cluster:
           stack: k8-cluster-1/dev
-    kubeconfig:
-      fn::toJSON: ${app.k8-cluster.kubeconfig}
+  kubeconfig:
+    # The referenced stack has a stack output named "kconfig"
+    fn::toJSON: ${app.k8-cluster.kconfig}
 
   # ---------------------------------------------------------------------------------------
   # Exports -- expose configuration values to particular consumers
   # ---------------------------------------------------------------------------------------
 
   # Configuration nested under the "environmentVariables" key is used to export environment
-  # variables when using `esc open --shell`, `esc run`, or `pulumi up/preview/refresh/destroy`
+  # variables when using `esc open --format=shell`, `esc run`, or `pulumi up/preview/refresh/destroy`
   environmentVariables:
     AWS_ACCESS_KEY_ID: ${aws.login.accessKeyId}
     AWS_SECRET_ACCESS_KEY: ${aws.login.secretAccessKey}
@@ -228,7 +253,7 @@ values:
     aws:region: us-west-2
 
   # Configuration nested under the 'files' key is used to export as files to the environment
-  # when using 'esc open --shell', 'esc run', or `pulumi up/preview/refresh/destroy`
+  # when using 'esc open --format=shell', 'esc run', or `pulumi up/preview/refresh/destroy`
   files:
     KUBECONFIG: ${kubeconfig}
 ```

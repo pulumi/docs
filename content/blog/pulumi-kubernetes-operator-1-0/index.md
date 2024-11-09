@@ -6,6 +6,9 @@ tags: ["Kubernetes", "Continuous-Delivery", "operators"]
 meta_desc: "Pulumi Kubernetes Operator 1.0: GitOps, Automation API, State Backends, Safe Upgrades and Metrics"
 meta_image: operator.png
 ---
+{{% notes type="info" %}}
+Check out version 2.0 of the [Pulumi Kubernetes Operator](/blog/pulumi-kubernetes-operator-2-0/).
+{{% /notes %}}
 
 Last year we released the [Pulumi Kubernetes Operator](/blog/pulumi-kubernetes-operator/), a new cloud-native way to manage and deploy cloud infrastructure using Pulumi from within your Kubernetes environment. Since then, we’ve worked with many Pulumi users who have adopted the Pulumi Kubernetes Operator at increasingly larger scales and for a wide variety of use cases. Today, we’re excited to make the [1.0 release](https://github.com/pulumi/pulumi-kubernetes-operator/releases/tag/v1.0.0) of the Pulumi Kubernetes Operator available.
 
@@ -127,4 +130,4 @@ The 1.0 release of the Pulumi Kubernetes Operator is an important milestone, but
 
 ## Conclusion
 
-The Pulumi Kubernetes Operator is a great way to deploy and manage cloud infrastructure from within your Kubernetes environment. With the 1.0 release, we’ve added many significant enhancements, as well as scalability, performance and quality improvements. You can [get started with the Pulumi Kubernetes Operator today](/docs/using-pulumi/continuous-delivery/pulumi-kubernetes-operator/). Enjoy!
+The Pulumi Kubernetes Operator is a great way to deploy and manage cloud infrastructure from within your Kubernetes environment. With the 1.0 release, we’ve added many significant enhancements, as well as scalability, performance and quality improvements. You can [get started with the Pulumi Kubernetes Operator today](/docs/iac/packages-and-automation/continuous-delivery/pulumi-kubernetes-operator/). Enjoy!

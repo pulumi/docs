@@ -37,7 +37,7 @@ Flags:
   -y, --yes               Automatically approve and perform the move
 ```
 
-Both `dest` and `source` can be either stacks in the current project, or stacks in a different project, using the fully qualified stack names.  Note that this works only for stacks within the same backend, it is currently not possible to move a resource between different backends (though you can [move stacks between backends](/docs/concepts/state/#migrating-between-state-backends) using other existing tools).
+Both `dest` and `source` can be either stacks in the current project, or stacks in a different project, using the fully qualified stack names.  Note that this works only for stacks within the same backend, it is currently not possible to move a resource between different backends (though you can [move stacks between backends](/docs/iac/concepts/state-and-backends/#migrating-between-state-backends) using other existing tools).
 
 The resources being moved have to be specified by their full [URN](/docs/concepts/resources/names/#urns), and multiple URNs can be passed at once.  For each resource being moved, all the children of that resource will also be moved, and the relationships between all resources being moved is preserved.  Resources with other types of dependencies will however not be moved to the target stack by default.  The easiest way to get the full URN of the resources is to use `pulumi stack --show-urns`.  Note that URNs can contain characters that get interpreted by the shell, so it is always a good idea to wrap them in single quotes (`'`) when passing them as arguments.
 

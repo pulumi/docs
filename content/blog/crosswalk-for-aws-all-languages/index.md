@@ -33,7 +33,7 @@ tags:
 ---
 
 {{% notes type="warning" %}}
-Portions of this blog post are out of date. See the [AWS guides](/docs/clouds/aws/guides/) for an updated overview and examples.
+Portions of this blog post are out of date. See the [AWS guides](/docs/iac/clouds/aws/guides/) for an updated overview and examples.
 {{% /notes %}}
 
 Crosswalk for AWS is a collection of libraries that make it easy to work with AWS using Pulumi Infrastructure as Code.  The Crosswalk for AWS libraries are some of the most widely used higher-level components in the Pulumi ecosystem, with hundreds of organizations building their infrastructure on the simple abstractions over key AWS services like ECS, API Gateway, VPC, Load Balancing, CloudTrail, EC2, ECR, and more.
@@ -851,13 +851,13 @@ export const vpcId = vpc.Id;
 
 ## What’s Next?
 
-Crosswalk for AWS is free and open source, and you can [get started](https://www.pulumi.com/docs/clouds/aws/guides/) today.
+Crosswalk for AWS is free and open source, and you can [get started](https://www.pulumi.com/docs/iac/clouds/aws/guides/) today.
 
 For more on Crosswalk for AWS see:
 
-- [Pulumi Crosswalk for AWS API Gateway documentation](/docs/clouds/aws/guides/api-gateway/)
-- [Pulumi Crosswalk for AWS Auto Scaling documentation](/docs/clouds/aws/guides/autoscaling/)
-- [Pulumi Crosswalk for AWS Elastic Container Registry (ECR) documentation](/docs/clouds/aws/guides/ecr)
-- [Pulumi Crosswalk for AWS Elastic Kubernetes Service (EKS)](/docs/clouds/aws/guides/eks)
-- [Pulumi Crosswalk for AWS Elastic Load Balancing (ELB)](/docs/clouds/aws/guides/elb)
-- [Pulumi Crosswalk for AWS Virtual Private Cloud (VPC)](/docs/clouds/aws/guides/vpc)
+- [Pulumi Crosswalk for AWS API Gateway documentation](/docs/iac/clouds/aws/guides/api-gateway/)
+- [Pulumi Crosswalk for AWS Auto Scaling documentation](/docs/iac/clouds/aws/guides/autoscaling/)
+- [Pulumi Crosswalk for AWS Elastic Container Registry (ECR) documentation](/docs/iac/clouds/aws/guides/ecr)
+- [Pulumi Crosswalk for AWS Elastic Kubernetes Service (EKS)](/docs/iac/clouds/aws/guides/eks)
+- [Pulumi Crosswalk for AWS Elastic Load Balancing (ELB)](/docs/iac/clouds/aws/guides/elb)
+- [Pulumi Crosswalk for AWS Virtual Private Cloud (VPC)](/docs/iac/clouds/aws/guides/vpc)

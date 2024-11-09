@@ -2,9 +2,14 @@
 title_tag: "Pulumi Deployments vs Traditional CI/CD Systems"
 meta_desc: How does Pulumi deployments compare to traditional CI/CD systems?
 title: "Vs. Traditional CI/CD"
-h1: "Pulumi Deployments vs. traditional CI/CD"
+h1: "Pulumi Deployments vs. Traditional CI/CD"
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
+  cloud:
+    name: Vs. Traditional CI/CD
+    parent: pulumi-cloud-deployments
+    weight: 10
+    identifier: pulumi-cloud-deployments-versus
   pulumicloud:
     parent: deployments
     weight: 7
@@ -22,6 +27,6 @@ The Deployments Platform offers a combination of Deployment Settings that descri
 
 ## Using Deployments with your Existing CI/CD System
 
-Many teams are at the stage where CI/CD is more than enough. They are happy with GitHub Actions, and wonder why they might consider migrating from GitHub Actions to Deployments. You don’t have to make that choice, as the two are better together. Teams often configure Pulumi Deployments on their stacks, and then trigger deployments via the REST API from within a GitHub Actions workflow. This gives you access to Deployments Platform tools such as Click to Deploy from the Pulumi Cloud UI, while keeping the familiarity of your existing CI/CD workflow. As Pulumi adds more built-in capabilities to the Deployments Platform like [Drift Detection](https://github.com/pulumi/service-requests/issues/173), [TTL stacks](https://github.com/pulumi/service-requests/issues/149), and [Ephemeral Environments](https://github.com/pulumi/service-requests/issues/206), you’ll automatically accrue the productivity benefits.
+Many teams are at the stage where CI/CD is more than enough. They are happy with GitHub Actions, and wonder why they might consider migrating from GitHub Actions to Deployments. You don’t have to make that choice, as the two are better together. Teams often configure Pulumi Deployments on their stacks, and then trigger deployments via the REST API from within a GitHub Actions workflow. This gives you access to Deployments Platform tools such as Click to Deploy from the Pulumi Cloud UI, while keeping the familiarity of your existing CI/CD workflow. As Pulumi adds more built-in capabilities to the Deployments Platform like [Drift Detection](https://github.com/pulumi/pulumi-cloud-requests/issues/173), [TTL stacks](https://github.com/pulumi/pulumi-cloud-requests/issues/149), and [Ephemeral Environments](https://github.com/pulumi/pulumi-cloud-requests/issues/206), you’ll automatically accrue the productivity benefits.
 
 ![Pulumi Deployments Platform Architecture](../deployments.png)

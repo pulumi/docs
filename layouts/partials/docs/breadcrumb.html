@@ -4,6 +4,8 @@
     {{ template "breadcrumbnav" (dict "p1" . "p2" .) }}
 </ol>
 
+{{/*  TODO: Can we modify this to use the existing menus temporarily instead?  */}}
+
 {{ define "breadcrumbnav" }}
     <!-- Don't include the website home page in the breadcrumb. -->
     {{ if and .p1.Parent (ne .p1.Parent .p1.Site.Home) }}

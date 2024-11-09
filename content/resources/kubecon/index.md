@@ -1,7 +1,7 @@
 ---
 # Name of the event, <= 60 characters
-title: KubeCon + CloudNativeCon Europe 2024
-meta_desc: Join Pulumi at Kubecon Paris 2024 to learn about the latest developments in Infrastructure as Code, Kubernetes, platform engineering, and more.
+title: KubeCon North America
+meta_desc: Ready to streamline your Kubernetes setup? Visit Pulumi in booth R1 to hear about universal infrastructure as code for Kubernetes.
 meta_image:
 
 # A featured webinar will display first in the list.
@@ -26,12 +26,12 @@ block_external_search_index: true
 
 # The url slug for the webinar landing page. If this is an external
 # webinar, use the external URL as the value here.
-url_slug: https://pulumi.com/kubecon/
+url_slug: /kubecon
 
 # Content for the left hand side section of the page.
 main:
     # Webinar title.
-    title: KubeCon + CloudNativeCon Europe 2024
+    title: KubeCon North America
 
     event_type: event # workshop | event
 
@@ -39,13 +39,13 @@ main:
     youtube_url:
 
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2024-03-19T09:00:00-00:00
+    sortable_date: 2024-11-12T09:00:00-07:00
 
     # Duration of the webinar.
     duration: 1 hour
 
     # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
-    location: Paris, France
+    location: Salt Lake City, UT
 
     # Description of the webinar.
     description:
