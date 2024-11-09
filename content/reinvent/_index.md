@@ -1,68 +1,143 @@
 ---
-title: Pulumi + AWS re:Invent 2023
-meta_desc: Join Pulumi at AWS re:Invent 2023 to learn about the latest developments in infrastructure as code. Meet us at booth 779, November 27-December 1.
-meta_image: /images/reinvent/reinvent-meta.png
+title: Pulumi + AWS re:Invent 2024
+meta_desc: "Automate, secure and manage AWS infrastructure with IaC, secrets management, and cloud insights. Book 1:1s, join workshops, and transform your cloud strategy."
+meta_image: /images/reinvent/reinvent-meta-24.png
 type: page
 layout: reinvent
+aliases:
+  - aws-reinvent-2021
 
+awsx:
+    yaml: |
+        name: aws-eks
+        runtime: yaml
+        description: An EKS cluster
+        resources:
+            cluster:
+                type: eks:Cluster
+                properties:
+                    instanceType: "t2.medium"
+                    desiredCapacity: 2
+                    minSize: 1
+                    maxSize: 2
+        outputs:
+            kubeconfig: ${cluster.kubeconfig}
+    java: |
+        package com.pulumi.example.eks;
 
-links:
-    items:
-        - heading: RSVP to re:Invent Happy Hour
-          description: Join Pulumi, Honeycomb, and Jeli for an evening of light fare, libations, and conversations.<br><b>Limited Spots Remaining</b><br/>November 29, 7:00pm PT at minus5 ICEBAR.
-          action: Reserve your spot
-          link: https://www.eventbrite.com/e/aws-reinvent-happy-hour-tickets-748706831287?aff=AWSPulumi
-        - heading: Request a Demo
-          description: See how Pulumi can help you ship infrastructure faster, and manage your AWS resources at scale. Ready for a change?
-          action: Talk with an Engineer
-          link: https://info.pulumi.com/aws-reinvent-meeting/
+        import com.pulumi.Context;
+        import com.pulumi.Exports;
+        import com.pulumi.Pulumi;
+        import com.pulumi.core.Output;
+        import com.pulumi.eks.Cluster;
+        import com.pulumi.eks.ClusterArgs;
 
-workshops:
-    items:
-      - title: Introduction to AWS in TypeScript
-        date: December 5, 2023
-        description: Join this workshop to learn how to set up a successful Infrastructure as Code in TypeScript to provision and manage AWS at scale, using Pulumi.
-        link: /resources/intro-to-aws-typescript
-        action: Register Now
-      - title: Getting Started with Secrets Management on AWS
-        date: December 13, 2023
-        description: Learn how to manage configuration and secrets across all of your AWS environments with Pulumi ESC and AWS Secrets Manager.
-        link: /resources/getting-started-with-secrets-management-aws/
-        action: Register Now
-      - title: Taking AI Apps to Production
-        date: December 14, 2023
-        description: The Pinecone and Pulumi teams will explore the infrastructure and service architecture you need to scale AI apps in production.
-        link: /resources/ai-apps-to-production/
-        action: Register Now
-      - title: Scaling AI Apps
-        date: January 24, 2024
-        description: How do you build and scale the infrastructure and service architectures for AI apps?
-        link: /resources/scaling-ai-apps/
-        action: Register Now
+        import java.util.stream.Collectors;
 
-templates:
-    items:
-        - heading: Container Service Templates
-          description: Pulumi program templates are the fastest way to deploy container services on AWS, Azure, or Google Cloud Platform.
-          image: /images/kubecon/templates-container-service-aws.png
-          action: Try it
-          link: /templates/container-service
-        - heading: Kubernetes Application Templates
-          description: Build and deploy applications with programming languages and deploying them to your Kubernetes clusters.
-          image: /images/kubecon/templates-kubernetes-application.png
-          action: Try it
-          link: /templates/kubernetes-application
-        - heading: Serverless Templates
-          description: Easily deploy serverless applications on AWS, Azure, or Google Cloud Platform with Pulumi Serverless Application templates.
-          image: /images/kubecon/templates-serverless-application.png
-          action: Try it
-          link: /templates/serverless-application
+        public class App {
+            public static void main(String[] args) {
+                Pulumi.run(App::stack);
+            }
 
-knowledge:
-    items:
-        - link: /resources/infrastructure-as-software-best-practices/
-          image: /images/video-thumbnails/infrastructure-as-software-best-practices-thumbnail.png
-        - link: /resources/ci-cd-pipelines-for-kubernetes-apps-with-codefresh/
-          image: /images/video-thumbnails/gitops-with-pulumi-codefresh-thumbnail.png
+            private static Exports stack(Context ctx) {
+                var cluster = new Cluster("my-cluster", ClusterArgs.builder()
+                        .instanceType("t2.micro")
+                        .desiredCapacity(2)
+                        .minSize(1)
+                        .maxSize(2)
+                        .build());
+
+                ctx.export("kubeconfig", cluster.kubeconfig());
+                return ctx.exports();
+            }
+        }
+    csharp: |
+        using System;
+        using System.Threading.Tasks;
+        using Pulumi;
+        using Pulumi.Eks.Cluster;
+
+        class EksStack : Stack
+        {
+            public EksStack()
+            {
+                // Create an EKS cluster.
+                var cluster = new Cluster("cluster", new ClusterArgs
+                {
+                    InstanceType = "t2.medium",
+                    DesiredCapacity = 2,
+                    MinSize = 1,
+                    MaxSize = 2,
+                });
+
+                // Export the cluster's kubeconfig.
+                this.Kubeconfig = cluster.Kubeconfig;
+            }
+
+            [Output("kubeconfig")]
+            public Output<string> Kubeconfig { get; set; }
+        }
+
+        class Program
+        {
+            static Task<int> Main(string[] args) => Deployment.RunAsync<EksStack>();
+        }
+    go: |
+        package main
+
+        import (
+            "github.com/pulumi/pulumi-eks/sdk/go/eks/cluster"
+            "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+        )
+
+        func main() {
+            pulumi.Run(func(ctx *pulumi.Context) error {
+            // Create an EKS cluster.
+            cluster, err := cluster.NewCluster(ctx, "cluster",
+                cluster.ClusterArgs{
+                    InstanceType:    pulumi.String("t2.medium"),
+                    DesiredCapacity: pulumi.Int(2),
+                    MinSize:         pulumi.Int(1),
+                    MaxSize:         pulumi.Int(2),
+                },
+            )
+            if err != nil {
+                return err
+            }
+
+            // Export the cluster's kubeconfig.
+            ctx.Export("kubeconfig", cluster.Kubeconfig)
+
+            return nil
+            })
+        }
+    py: |
+        import pulumi
+        import pulumi_eks as eks
+
+        # Create an EKS cluster.
+        cluster = eks.Cluster(
+            "cluster",
+            instance_type="t2.medium",
+            desired_capacity=2,
+            min_size=1,
+            max_size=2,
+        )
+
+        # Export the cluster's kubeconfig.
+        pulumi.export("kubeconfig", cluster.kubeconfig)
+    ts: |
+       import * as eks from "@pulumi/eks";
+
+        // Create an EKS cluster.
+        const cluster = new eks.Cluster("cluster", {
+            instanceType: "t2.medium",
+            desiredCapacity: 2,
+            minSize: 1,
+            maxSize: 2,
+        });
+
+        // Export the cluster's kubeconfig.
+        export const kubeconfig = cluster.kubeconfig;
 
 ---

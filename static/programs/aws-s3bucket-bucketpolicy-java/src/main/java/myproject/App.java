@@ -1,7 +1,7 @@
 package myproject;
 
 import com.pulumi.Pulumi;
-import com.pulumi.aws.s3.Bucket;
+import com.pulumi.aws.s3.BucketV2;
 import com.pulumi.aws.s3.BucketPolicy;
 import com.pulumi.aws.s3.BucketPolicyArgs;
 import static com.pulumi.codegen.internal.Serialization.*;
@@ -9,7 +9,7 @@ import static com.pulumi.codegen.internal.Serialization.*;
 public class App {
     public static void main(String[] args) {
         Pulumi.run(ctx -> {
-            var bucket = new Bucket("myBucket");
+            var bucket = new BucketV2("myBucket");
 
             var policyDocument = bucket.arn().applyValue(arn -> serializeJson(
                 jsonObject(

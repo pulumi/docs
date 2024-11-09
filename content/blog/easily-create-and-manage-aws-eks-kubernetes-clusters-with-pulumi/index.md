@@ -23,6 +23,8 @@ package](https://github.com/pulumi/pulumi-eks). Let's see how.
 
 {{% notes type="info" %}}
 Updated January 2021 to include Python, .NET, and Go support.
+
+Updated October 2024 to [Version 3.0](/blog/eks-v3-release/)
 {{% /notes %}}
 
 To get started, download the free and open source
@@ -380,5 +382,5 @@ DigitalOcean's Managed Kubernetes, and custom clusters (including Minikube).
 
 For more information:
 
-- [Get started with Pulumi and Kubernetes](/docs/clouds/kubernetes/get-started/)
-- [Get started with Pulumi and AWS](/docs/clouds/aws/get-started/)
+- [Get started with Pulumi and Kubernetes](/docs/iac/get-started/kubernetes/)
+- [Get started with Pulumi and AWS](/docs/iac/get-started/aws/)

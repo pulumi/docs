@@ -1,0 +1,34 @@
+{{ $collectionTitle := (.Store.Get "collectionTitle") }}
+
+<ol class="docs-breadcrumb">
+    {{ if and (ne $collectionTitle "") $collectionTitle }}
+        {{ template "breadcrumbnav" (dict "p1" . "p2" . "collectionTitle" $collectionTitle) }}
+    {{ else }}
+        {{ template "breadcrumbnav" (dict "p1" . "p2" .) }}
+    {{ end }}
+</ol>
+
+{{ define "breadcrumbnav" }}
+    <!-- Don't include the website home page in the breadcrumb. -->
+    {{ if and .p1.Parent (ne .p1.Parent .p1.Site.Home) }}
+        {{ if (isset . "collectionTitle") }}
+            {{ template "breadcrumbnav" (dict "p1" .p1.Parent "p2" .p2 "collectionTitle" .collectionTitle) }}
+        {{ else }}
+            {{ template "breadcrumbnav" (dict "p1" .p1.Parent "p2" .p2) }}
+        {{ end }}
+    {{ end }}
+    <!-- If the page is a redirect page, don't include it in the breadcrumb. -->
+    {{ if not (isset .p1.Params "redirect_to") }}
+        {{ $linkTitle := .p1.LinkTitle }}
+        {{ $href := .p1.RelPermalink }}
+
+        {{ if or (eq $linkTitle "Providers") (eq $linkTitle "Collections") }}
+            {{ $linkTitle = "Tutorials"}}
+            {{ $href = "/tutorials/" }}
+        {{ else if (isset . "collectionTitle") }}
+            {{ $linkTitle = .collectionTitle }}
+        {{ end }}
+
+        <li {{ if eq .p1 .p2 }}class="active"{{ end }}><a data-track="breadcrumb" href="{{ $href }}">{{ $linkTitle }}</a></li>
+    {{ end }}
+{{ end }}

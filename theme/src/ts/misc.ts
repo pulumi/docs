@@ -34,6 +34,17 @@ function loadToggleStates() {
         } else if (navigationState.getKey(el.id) == "collapsed") {
             $(el).addClass("toggle").removeClass("toggleVisible");
         }
+
+        // Control open/closed folder icons if they exist as a subelement of the parent toggle-able item.
+        $(el).click(function () {
+            const folderOpenIcon = $(el).find(".folder-open");
+            const folderClosedIcon = $(el).find(".folder");
+            if (folderOpenIcon.length > 0) {
+                folderOpenIcon.addClass("folder").removeClass("folder-open")
+            } else if (folderClosedIcon.length > 0) {
+                folderClosedIcon.addClass("folder-open").removeClass("folder")
+            }
+        });
     });
 
     $(".toggleVisible, .toggleVisible-topLevel").each(function (i, el) {
@@ -79,7 +90,7 @@ function bindToggles(selector) {
     });
 }
 
-function generateOnThisPage() {
+export function generateOnThisPage() {
     // Hide the table of contents by default. We explicitly decide when to show it
     // below based on if elements exist to display.
     $(".table-of-contents").hide();
@@ -91,6 +102,10 @@ function generateOnThisPage() {
 
         $("h2, h3").each(function () {
             var $el = $(this);
+            // Skip if this heading is inside a hidden element
+            if ($el.closest('.hidden').length > 0) {
+                return;
+            }
             var id = $el.attr("id");
             var text = $el.text();
             var linkTitle = $el.data("link-title");

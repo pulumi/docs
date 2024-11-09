@@ -5,6 +5,11 @@ title: "REST API"
 h1: Pulumi Deployments REST API
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
+  cloud:
+    name: REST API
+    parent: pulumi-cloud-deployments
+    weight: 7
+    identifier: pulumi-cloud-deployments-api
   pulumicloud:
     parent: deployments
     weight: 4
@@ -55,6 +60,7 @@ Several endpoints accept or return deployment settings. Deployment settings are 
 * A [SourceContext](#sourcecontext) that defines where the source code for your project is located. Currently, only git repos are supported.
 * An [OperationContext](#operationcontext) that defines how the Pulumi project is to be executed (i.e. the Pulumi operation to execute and any associated context it requires).
 * An optional [GitHub block](#github) that contains information for GitHub integration.
+* An optional [CacheOptions](#cacheoptions) that contains cache-related settings.
 
 ### ExecutorContext
 
@@ -123,7 +129,7 @@ Secret types should have the following structure:
 ```json
 {
   "git": {
-    "repoURL": "https://github.com/pulumi/examples.git",
+    "repoURL": "git@github.com:pulumi/examples.git",
     "branch": "refs/heads/master",
     "repoDir": "aws-ts-s3-folder",
     "gitAuth": {
@@ -197,6 +203,8 @@ The operation context describes any context required for Pulumi operations to ex
 `OperationContextOptions` has the following structure:
 
 * **skipInstallDependencies**: Allows you to skip the automated dependency installation. You can then customize your dependency installation step in `preRunCommands`.
+* **skipIntermediateDeployments**: Allows you to skip intermediate deployments and only run the latest deployment if multiple deployments with the same Pulumi operation (i.e. up/destroy/preview/refresh) are in the queue for a stack.
+* **deleteAfterDestroy**: Allows you to delete the stack after a `pulumi destroy` operation. This will add an extra deployment step that runs `pulumi stack rm` at the end of the `destroy` deployment and is useful for ephemeral stacks that are only used for testing or development.
 
 `EnvironmentVariable` types can have either of the following structures:
 
@@ -370,6 +378,24 @@ The GitHub block describes settings for Pulumi Deployments' GitHub integration.
 ```json
 {
   "repository": "pulumi/deploy-demos"
+}
+```
+
+### Cache options
+
+The cache options block defines settings related to dependency caching during deployments. Using dependencies from the cache makes deployments significantly faster. Learn more about dependency caching on the [FAQ page](/docs/pulumi-cloud/deployments/faq/#dependency-caching).
+
+This option is only available for Pulumi-managed deployment agents.
+
+* **enable** (boolean): Whether to use [Dependency Caching](/docs/pulumi-cloud/deployments/faq/#dependency-caching).
+
+#### Example
+
+```json
+{
+  "cacheOptions": {
+    "enable": "true"
+  }
 }
 ```
 
@@ -1316,7 +1342,7 @@ Response
 
 Pauses all queued deployments for a stack or organization. Deployments that are already running are allowed to complete and are not paused. New deployments are queued, and will run when the stack or organization's deployments are resumed.
 
-Only [organization administrators]({{< ref "/docs/pulumi-cloud/organizations#organization-roles" >}}) can pause deployments for an organization.
+Only [organization administrators]({{< ref "/docs/pulumi-cloud/admin/organizations/#organization-roles" >}}) can pause deployments for an organization.
 
 Note that you can only pause deployments for a stack that has [deployment settings](#deployment-settings) configured.
 

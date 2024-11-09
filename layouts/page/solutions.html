@@ -3,7 +3,7 @@
 {{ end }}
 
 {{ define "main" }}
-    <section id="overview" class="container mx-auto my-32 p-6 md:p-0">
+    <section id="overview" class="container mx-auto mb-32 p-6 md:p-0">
         <h2 class="max-w-2xl px-8 mx-auto text-center">{{ .Params.overview.title }}</h2>
         <p class="text-center text-lg">{{ .Params.overview.description }}</p>
     </section>
@@ -185,7 +185,7 @@
             <h2 class="text-white">{{ .Params.get_started.title }}</h2>
             <p class="text-white">{{ .Params.get_started.description }}</p>
             <div class="mt-16">
-                <a class="btn-secondary" href="{{ relref . "/docs/get-started" }}">{{ .Params.get_started.cta_text }}</a>
+                <a class="btn-secondary" href="{{ relref . "/docs/iac/get-started" }}">{{ .Params.get_started.cta_text }}</a>
             </div>
         </div>
     </section>

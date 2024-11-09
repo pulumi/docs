@@ -19,7 +19,7 @@ Today, we’re excited to launch [Pulumi Registry](/registry/), the one place to
 
 Pulumi Registry is launching with support for 64 of the leading cloud providers and modern cloud SaaS offerings, including Amazon Web Services, Microsoft Azure, Google Cloud, Kubernetes, Auth0, CloudFlare, Confluent Cloud, Datadog, DigitalOcean, Docker, GitHub, Kong, MinIO, MongoDB Atlas, PagerDuty, Snowflake, Spot by NetApp, and SumoLogic. Pulumi Registry also features some of the most popular Helm charts wrapped as Pulumi Components so you can take advantage of the most popular cloud native technologies.
 
-We’re excited to enable any developer to take advantage of the power of these offerings, and we can’t wait to see what you achieve with them and Pulumi. If you’d like to enable your customers with the power of the Pulumi cloud engineering platform, [get in touch](/docs/using-pulumi/pulumi-packages/contribute-to-pulumi-registry/). We’re eager to work with you!
+We’re excited to enable any developer to take advantage of the power of these offerings, and we can’t wait to see what you achieve with them and Pulumi.
 
 ## Everything you need to build for the modern cloud
 
@@ -39,7 +39,7 @@ Pulumi Registry’s packages come in two categories: Providers and Components. P
 
 For the largest and most popular clouds, we’ve created a special type of Provider that’s unique to Pulumi: Native Providers. Native Providers are the most advanced infrastructure-as-code packages available in the market. Each Native Provider is built directly from the underlying API of the cloud provider, so you get complete access to the full resource model of all of the provider’s services: every resource, every property, every method. We update Native Providers within 24 hours of the underlying API being updated, so you never have to wait to try out the latest improvements and new services.
 
-Just a few weeks ago, we launched the [AWS Native Provider](/registry/packages/aws-native/), which is built directly from the new [AWS Cloud Control APIs](https://aws.amazon.com/blogs/aws/announcing-aws-cloud-control-api/) and gives you same-day access to every new AWS service. AWS Native joins our existing [Azure Native Provider](/registry/packages/azure-native/), [Google Native Provider](/registry/packages/google-native/), and [Kubernetes Native Provider](/registry/packages/kubernetes/).
+Just a few weeks ago, we launched the [AWS Cloud Control Provider](/registry/packages/aws-native/), which is built directly from the new [AWS Cloud Control APIs](https://aws.amazon.com/blogs/aws/announcing-aws-cloud-control-api/) and gives you same-day access to every new AWS service. AWS Cloud Control joins our existing [Azure Native Provider](/registry/packages/azure-native/), [Google Native Provider](/registry/packages/google-native/), and [Kubernetes Native Provider](/registry/packages/kubernetes/).
 
 ![A screenshot showing the Native Providers in Pulumi Registry](native-providers.png)
 
@@ -51,7 +51,7 @@ If Pulumi Registry doesn’t yet have a native provider for your preferred cloud
 
 We also invite the entire Pulumi community to contribute new Providers to Pulumi Registry. You can enable your customers to manage your cloud service or cloud resources using Pulumi’s modern infrastructure-as-code by authoring a Native Provider, or by bridging an existing Terraform provider into the Pulumi ecosystem, and publishing it to the Pulumi Registry. We’ve also seen passionate customers and community members author Native Providers for cloud services with public, well-known APIs! Pulumi Registry will enable fully self-service publishing in 2022, but until then, we’re happy to work with you to publish your Provider.
 
-👉 [Build and publish a Pulumi Provider](/docs/using-pulumi/pulumi-packages/contribute-to-pulumi-registry/)
+👉 [Build and publish a Pulumi Provider](/docs/iac/packages-and-automation/pulumi-packages/authoring/)
 
 ## Components: from new to production, faster than ever
 
@@ -61,7 +61,7 @@ Components are higher-level building blocks that come with best practices and se
 
 ### Example: Production-ready EKS cluster in 15 lines of code
 
-Amazon’s Elastic Kubernetes Service (EKS) is a great example of a powerful but complex service. With Pulumi’s AWS Native Provider, you can define a production-ready EKS cluster, but you need to know a fair amount about EKS. If you’re a platform team building out a custom Kubernetes shared services platform for a big organization, that’s OK, as you’ll likely want (and expect) full control over every setting on your cluster. For many other scenarios, you just want a well-configured EKS cluster with minimal configuration. Pulumi’s [EKS Component](/registry/packages/eks/) gives you just that, with just 15 lines of code:
+Amazon’s Elastic Kubernetes Service (EKS) is a great example of a powerful but complex service. With Pulumi’s AWS Cloud Control Provider, you can define a production-ready EKS cluster, but you need to know a fair amount about EKS. If you’re a platform team building out a custom Kubernetes shared services platform for a big organization, that’s OK, as you’ll likely want (and expect) full control over every setting on your cluster. For many other scenarios, you just want a well-configured EKS cluster with minimal configuration. Pulumi’s [EKS Component](/registry/packages/eks/) gives you just that, with just 15 lines of code:
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -322,7 +322,7 @@ class MyStack : Stack
 
 Want to share your own best practices and cloud configurations with the Pulumi community? You can author a Pulumi Component and publish it to Pulumi Registry. We’ll have fully self-service publishing in 2022, but until then, we’re happy to work with you to publish your Component. You can get started using the link below.
 
-👉 [Build and publish a Pulumi Component](/docs/using-pulumi/pulumi-packages/contribute-to-pulumi-registry/)
+👉 [Build and publish a Pulumi Component](/docs/iac/packages-and-automation/pulumi-packages/authoring/)
 
 ## What’s next
 

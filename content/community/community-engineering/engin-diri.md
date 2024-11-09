@@ -8,6 +8,46 @@ layout: community-engineering/single
 aliases:
   - /engin
 talks:
+- event: "DevOpsDays Tel Aviv 2024"
+  title: "Workshop: Build Your Developer Platform in 90 Minutes - Backstage + ArgoCD + K8s"
+  url: "https://tlvcommunity.dev/devopsdays/agenda-2024#calendar-e0e8b4b4-54d8-4a8a-ab08-a15509b32a9d-event-m2bkpv13"
+  date: 2024-10-31T18:00:00.000-07:00
+  slides: null
+- event: "AWS User Group 3city"
+  title: "Pulumi ❤️ AI: Modern Infrastructure for Your Next Gen AI Project"
+  url: "https://wearecommunity.io/events/aws-user-group-3city-meetup-9"
+  date: 2024-10-17T18:00:00.000-07:00
+  slides: null
+- event: "KCD Washington DC 2024"
+  title: "External Secrets Operator Is the Best Thing Ever, Cap or Slap?"
+  url: "https://kcd-washington-dc-2024.sessionize.com/session/700146"
+  date: 2024-09-24T18:00:00.000-07:00
+  slides: null
+- event: "CD Mini Summit"
+  title: "Progressive Infrastructure Delivery using Kargo and Argo CD"
+  url: "https://cd.foundation/cd-mini-summit-vienna/program/"
+  date: 2024-09-19T18:00:00.000-07:00
+  slides: null
+- event: "Civo Navigate EU"
+  title: "Serverless LLM Inference for Everyone: Learnings from an AI Beginner!"
+  url: "https://www.civo.com/navigate/europe"
+  date: 2024-09-11T18:00:00.000-07:00
+  slides: null
+- event: "Equinix Demo Day"
+  title: "Deploy Bare Metal Kubernetes with Pulumi on Equinix Metal"
+  url: "https://deploy.equinix.com/events/demo-day-the-infrastructure-as-code-edition/"
+  date: 2024-09-10T18:00:00.000-07:00
+  slides: null
+- event: "The Platformers"
+  title: "The Power of the KEBAP Stack"
+  url: "https://www.linkedin.com/posts/platformers-community_engin-diri-customer-experience-architect-activity-7212732472592142336-Dd_R"
+  date: 2024-07-10T18:00:00.000-07:00
+  slides: null  
+- event: "KCD Munich"
+  title: "Pulumi ❤️ Kubernetes: Different Ways to Deploy Your Workload to Kubernetes"
+  url: "https://www.kcdmunich.de"
+  date: 2024-07-02T18:00:00.000-07:00
+  slides: null
 - event: "Meetup MTG:Bordeaux #3"
   title: "Pulumi ❤️ Azure: Getting Started with Modern Infrastructure as Code"
   url: https://www.meetup.com/mtg-bordeaux/events/300232411/

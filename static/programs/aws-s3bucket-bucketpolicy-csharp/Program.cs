@@ -6,7 +6,7 @@ using System.Text.Json;
 
 return await Deployment.RunAsync(() =>
 {
-    var bucket = new Bucket("myBucket");
+    var bucket = new BucketV2("myBucket");
 
     var s3BucketPolicyDocument = bucket.Arn.Apply(arn => JsonSerializer.Serialize(new
     {

@@ -10,6 +10,10 @@ tags:
    - aws
 ---
 
+{{% notes type="info" %}}
+The AWS Native Provider was [renamed as the "AWS Cloud Control Provider"](/blog/pulumi-aws-cloudcontrol-provider/) in October 2024.
+{{% /notes %}}
+
 We are excited to announce the release of the new [AWS Native](/registry/packages/aws-native/) provider for Pulumi, which is available today in preview. AWS is the most-used cloud provider across the Pulumi ecosystem, and with the new AWS Native provider, we are focused on delivering the best possible support for the AWS platform to all Pulumi users.
 
 Pulumi Native Providers like AWS Native are a new type of Pulumi Package that give you the most complete and consistent interface for the modern cloud. Pulumi native providers bring the full power of the top cloud providers to the Pulumi Cloud Engineering Platform, with faster updates and more complete coverage than any other infrastructure as code offering.

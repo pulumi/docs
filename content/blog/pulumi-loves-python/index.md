@@ -122,7 +122,7 @@ deployment = Deployment(
 )
 ```
 
-The new Pythonic input types are available in the latest release of the Pulumi SDKs for [Kubernetes](https://www.pulumi.com/registry/packages/kubernetes/) and [AWS](https://www.pulumi.com/registry/packages/aws/), with more provider SDKs to follow soon.
+The new Pythonic input types are available in the latest release of the Pulumi SDKs for [Kubernetes](https://www.pulumi.com/registry/packages/kubernetes/), [AWS](https://www.pulumi.com/registry/packages/aws/) and [GCP](https://www.pulumi.com/registry/packages/gcp/), with more provider SDKs to follow soon.
 
 {{% notes type="info" %}}
 Due to a performance issue in MyPy, type checking of TypedDict-based inputs is currently disabled when using MyPy as a type checker.  We are working on helping resolve [this issue](https://github.com/python/mypy/issues/17231). In the meantime, we recommend using Pyright as a type checker to get the most complete type checking possible for Dict-based Pulumi Python programs.

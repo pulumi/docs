@@ -1,0 +1,33 @@
+<section id="speakers" class="relative">
+    <div class="dot-background-container">
+        <div class="dot-background"></div>
+    </div>
+    <div class="dot-overlay"></div>
+
+    <div class="w-full py-8" style="background-color:rgba(255,255,255,.8)">
+        <div class="container mx-auto text-center">
+            <h2 class="mb-8 text-center">Past Speakers</h2>
+            <ul class="w-10/12 inline-flex flex-wrap list-none justify-center p-0 gap-x-8 gap-y-6">
+                {{ range .speakers }}
+                    <li class="about-card border-2 border-gray-300 bg-white rounded-md flex overflow-hidden relative">
+                        <div class="flex">
+                            <img class="about-card-photo" src="{{ .image }}" alt="{{ .name }}" />
+                            <div class="flex flex-col w-full justify-center text-left ml-4">
+                                <div class="font-display font-medium text-gray-900 text-2xl mb-3">{{ .name }}</div>
+                                <div class="text-sm text-gray-700 mb-3">{{ .title }}</div>
+                                <img class="h-5 self-start" src="{{ .logo }}" alt="{{ .company }}" />
+                            </div>
+                        </div>
+                    </li>
+                {{ end }}
+            </ul>
+        </div>
+        {{ if .include_cta }}
+            <div class="my-16 flex flex-col flex-wrap sm:flex-row justify-center">
+                <a class="m-4 sm:m-2 btn-primary text-center" target="_blank" href="https://conference.pulumi.com/schedule/?utm_source=PulumiUp&utm_medium=web&utm_campaign=FY2025Q1_Event_PulumiUP">
+                    Attend PulumiUP 2024
+                </a>
+            </div>
+        {{ end }}
+    </div>
+</section>

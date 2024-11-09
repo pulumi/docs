@@ -2,9 +2,9 @@ using System.Collections.Generic;
 using Pulumi;
 using Pulumi.Aws.S3;
 
-return await Deployment.RunAsync(() => 
+return await Deployment.RunAsync(() =>
 {
-    var bucket = new Bucket("bucket");
+    var bucket = new BucketV2("bucket");
 
     var file = new BucketObject("bucket-object", new BucketObjectArgs
     {
