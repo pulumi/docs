@@ -27,7 +27,7 @@ Let's take a fairly uncomplicated piece of Pulumi code: the definition of an S3 
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const bucket = new aws.s3.Bucket("my-bucket");
+const bucket = new aws.s3.BucketV2("my-bucket");
 
 export const bucketName = bucket.id;
 ```
@@ -40,7 +40,7 @@ export const bucketName = bucket.id;
 import pulumi
 import pulumi_aws_native as aws_native
 
-bucket = aws_native.s3.Bucket("my-bucket")
+bucket = aws_native.s3.BucketV2("my-bucket")
 
 pulumi.export("bucket", bucket.bucket_name)
 ```
@@ -57,7 +57,7 @@ Here, we're creating one resource and exporting the output from that resource. I
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const bucket = new aws.s3.Bucket("my-bucket");
+const bucket = new aws.s3.BucketV2("my-bucket");
 const bucketPolicy = new aws.s3.BucketPolicy("my-bucket-policy", {
     bucket: bucket.id,
     policy: {
@@ -131,11 +131,11 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 class OurBucketClass {
-    private bucket: aws.s3.Bucket;
+    private bucket: aws.s3.BucketV2;
     private bucketPolicy: aws.s3.BucketPolicy;
 
     constructor(name: string, policyName: string) {
-        this.bucket = new aws.s3.Bucket(name);
+        this.bucket = new aws.s3.BucketV2(name);
 
         this.bucketPolicy = new aws.s3.BucketPolicy(policyName, {
             bucket: this.bucket.id,
@@ -163,7 +163,8 @@ class OurBucketClass {
 
 ```python
 import json
-# ...
+import pulumi_aws_native as aws_native
+import pulumi_aws as aws_classic
 
 class OurBucketClass:
     def __init__(self, name: str, policy_name: str):
@@ -205,12 +206,12 @@ But that JSON blob of the policy is also an object which we can encapsulate, mak
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-// ...
+import * as aws from "@pulumi/aws";
 
 type PolicyType = "default" | "locked" | "permissive";
 
 class OurBucketClass {
-    private bucket: aws.s3.Bucket;
+    private bucket: aws.s3.BucketV2;
     private bucketPolicy: aws.s3.BucketPolicy;
 
     private policies: { [K in PolicyType]: aws.iam.PolicyStatement } = {
@@ -222,9 +223,11 @@ class OurBucketClass {
             ],
         },
         locked: {
+            Effect: "Allow",
             /* ... */
         },
         permissive: {
+            Effect: "Allow",
             /* ... */
         },
     };
@@ -242,7 +245,7 @@ class OurBucketClass {
     };
 
     constructor(name: string, policy: PolicyType) {
-        this.bucket = new aws.s3.Bucket(name);
+        this.bucket = new aws.s3.BucketV2(name);
         this.bucketPolicy = new aws.s3.BucketPolicy(`${name}-policy`, {
             bucket: this.bucket.id,
             policy: this.getBucketPolicy(policy),
@@ -259,7 +262,10 @@ const bucket = new OurBucketClass("laura-bucket-1", "default");
 
 ```python
 import json
-# ...
+import pulumi
+import pulumi_aws as aws_classic
+import pulumi_aws_native as aws_native
+
 
 class OurBucketClass:
     _POLICIES = {
@@ -269,9 +275,11 @@ class OurBucketClass:
             "Action": ["s3:GetObject"],
         },
         "locked": {
+            "Effect": "Allow",
             # ...
         },
         "permissive": {
+            "Effect": "Allow",
             # ...
         },
     }
