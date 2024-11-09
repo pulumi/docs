@@ -16,7 +16,7 @@ social:
 # for details, and please remove these comments before submitting for review.
 ---
 
-When to use Cosmos DB? It's a hard question to answer.
+When should you use Cosmos DB on Azure? It's a hard question to answer.
 
 Azure Cosmos DB tries to do it all - which makes it both powerful and, honestly, kind of confusing. The marketing doesn't help either. Yeah, it's flexible, but before you jump in, you need to understand how it actually works under the hood, what it'll cost you, and what trade-offs you're making by choosing it.
 
