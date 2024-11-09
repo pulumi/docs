@@ -96,7 +96,7 @@ You can use ESC with [Automation API](/docs/using-pulumi/automation-api/) in [No
 
 ### Accessing Pulumi Stack outputs
 
-You can also access [outputs](/docs/iac/concepts/inputs-outputs/#outputs) from [Pulumi IaC stacks](/docs/iac/concepts/stacks/) within an ESC environment using the [`pulumi-stacks` provider](/docs/esc/integrations/infrastructure/pulumi-iac/pulumi-stacks/). 
+You can also access [outputs](/docs/iac/concepts/inputs-outputs/#outputs) from [Pulumi IaC stacks](/docs/iac/concepts/stacks/) within an ESC environment using the [`pulumi-stacks` provider](/docs/esc/integrations/infrastructure/pulumi-iac/pulumi-stacks/).
 
 ```yaml
 values:
