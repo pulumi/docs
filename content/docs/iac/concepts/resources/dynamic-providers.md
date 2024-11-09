@@ -195,6 +195,10 @@ Implementing the `pulumi.dynamic.ResourceProvider` interface requires implementi
 
 Though the input properties passed to a `pulumi.dynamic.Resource` instance will usually be [Input values](/docs/concepts/inputs-outputs/), the dynamic provider’s functions are invoked with the fully resolved input values in order to compose well with Pulumi resources. Strong typing for the inputs to your provider’s functions can help clarify this. You can achieve this by creating a second interface with the same properties as your resource’s inputs, but with fully unwrapped types.
 
+{{% notes type="warning" %}}
+There are nuances to how data is passed between the core Pulumi program and your dynamic provider. Learn more here: https://github.com/pulumi/pulumi/issues/16582.
+{{% /notes %}}
+
 {{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
 {{% choosable language typescript %}}
