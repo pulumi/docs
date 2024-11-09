@@ -48,16 +48,14 @@ import os
 from pulumi import export, FileAsset
 from pulumi_aws import s3
 
-web_bucket = s3.Bucket('s3-website-bucket', website={
-    "index_document": "index.html"
-})
+bucket = s3.BucketV2('s3-bucket')
 
 content_dir = "www"
 for file in os.listdir(content_dir):
     filepath = os.path.join(content_dir, file)
     mime_type, _ = mimetypes.guess_type(filepath)
     obj = s3.BucketObject(file,
-        bucket=web_bucket.id,
+        bucket=bucket.id,
         source=FileAsset(filepath),
         content_type=mime_type)
 ```
