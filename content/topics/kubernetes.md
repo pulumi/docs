@@ -264,11 +264,11 @@ superpowers:
 
     - title: Centralize Secrets
       cta: Learn more
-      cta_url: "/docs/esc/"
+      cta_url: "/docs/esc/integrations/kubernetes/external-secrets-operator/"
       icon_type: security
       icon_color: violet
       description: |
-         Pulumi ESC is integrated with External Secrets Operator (ESO), enabling the passing of secrets from ESC directly as environment variables of applications running in Kubernetes.
+         [Pulumi ESC](/product/secrets-management/) is integrated with External Secrets Operator (ESO), enabling the passing of secrets from ESC directly as environment variables of applications running in Kubernetes.
 
 detail_sections:
     - title: Continue using the tools you love
