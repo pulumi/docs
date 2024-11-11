@@ -182,59 +182,66 @@ This tutorial is based on the [`inline_program` example](https://github.com/pulu
 
 ```go
 deployFunc := func(ctx *pulumi.Context) error {
-  // Similar go git_repo_program, our program defines a s3 website.
-  // Here we create the bucket.
-  siteBucket, err := s3.NewBucket(ctx, "s3-website-bucket", &s3.BucketArgs{
-    Website: s3.BucketWebsiteArgs{
-      IndexDocument: pulumi.String("index.html"),
-    },
-  })
-  if err != nil {
-    return err
-  }
+    // Similar go git_repo_program, our program defines a s3 website.
+    // Here we create the bucket.
+    siteBucket, err := s3.NewBucketV2(ctx, "s3-website-bucket", nil)
+    if err != nil {
+        return err
+    }
 
-  // We define and upload our HTML inline.
-  indexContent := `<html><head>
-  <title>Hello S3</title><meta charset="UTF-8">
+    // We define and upload our HTML inline.
+    indexContent := `<html><head>
+<title>Hello S3</title><meta charset="UTF-8">
 </head>
 <body><p>Hello, world!</p><p>Made with ❤️ with <a href="https://pulumi.com">Pulumi</a></p>
 </body></html>
 `
-  // Upload our index.html.
-  if _, err := s3.NewBucketObject(ctx, "index", &s3.BucketObjectArgs{
-    Bucket:      siteBucket.ID(), // Reference to the s3.Bucket object.
-    Content:     pulumi.String(indexContent),
-    Key:         pulumi.String("index.html"),               // Set the key of the object.
-    ContentType: pulumi.String("text/html; charset=utf-8"), // Set the MIME type of the file.
-  }); err != nil {
-    return err
-  }
 
-  // Set the access policy for the bucket so all objects are readable.
-  if _, err := s3.NewBucketPolicy(ctx, "bucketPolicy", &s3.BucketPolicyArgs{
-    Bucket: siteBucket.ID(), // Refer to the bucket created earlier.
-    Policy: pulumi.Any(map[string]interface{}{
-      "Version": "2012-10-17",
-      "Statement": []map[string]interface{}{
-        {
-          "Effect":    "Allow",
-          "Principal": "*",
-          "Action": []interface{}{
-            "s3:GetObject",
-          },
-          "Resource": []interface{}{
-            pulumi.Sprintf("arn:aws:s3:::%s/*", siteBucket.ID()), // Policy refers to bucket name explicitly.
-          },
+    ownershipControls, err := s3.NewBucketOwnershipControls(ctx, "ownership-controls", &s3.BucketOwnershipControlsArgs{
+        Bucket: siteBucket.ID(),
+        Rule: &s3.BucketOwnershipControlsRuleArgs{
+            ObjectOwnership: pulumi.String("ObjectWriter"),
         },
-      },
-    }),
-  }); err != nil {
-    return err
-  }
+    })
+    if err != nil {
+        return err
+    }
 
-  // Export the website URL.
-  ctx.Export("websiteUrl", siteBucket.WebsiteEndpoint)
-  return nil
+    publicAccessBlock, err := s3.NewBucketPublicAccessBlock(ctx, "public-access-block", &s3.BucketPublicAccessBlockArgs{
+        Bucket:          siteBucket.ID(),
+        BlockPublicAcls: pulumi.Bool(false),
+    })
+    if err != nil {
+        return err
+    }
+
+    website, err := s3.NewBucketWebsiteConfigurationV2(ctx, "website", &s3.BucketWebsiteConfigurationV2Args{
+        Bucket: siteBucket.ID(),
+        IndexDocument: &s3.BucketWebsiteConfigurationV2IndexDocumentArgs{
+            Suffix: pulumi.String("index.html"),
+        },
+    })
+    if err != nil {
+        return err
+    }
+    // Upload our index.html.
+    if _, err := s3.NewBucketObject(ctx, "index", &s3.BucketObjectArgs{
+        Bucket:      siteBucket.ID(), // Reference to the s3.Bucket object.
+        Content:     pulumi.String(indexContent),
+        Acl:         pulumi.String("public-read"),
+        Key:         pulumi.String("index.html"),               // Set the key of the object.
+        ContentType: pulumi.String("text/html; charset=utf-8"), // Set the MIME type of the file.
+    }, pulumi.DependsOn([]pulumi.Resource{
+        publicAccessBlock,
+        ownershipControls,
+        website,
+    })); err != nil {
+        return err
+    }
+
+    // Export the website URL.
+    ctx.Export("websiteUrl", website.WebsiteEndpoint)
+    return nil
 }
 ```
 
