@@ -55,44 +55,10 @@ While both Pulumi and Crossplane help teams manage cloud infrastructure, they ta
 | **Learning Curve** | Requires programming knowledge | Requires Kubernetes expertise |
 | **Testing Approach** | Standard testing frameworks | Kubernetes-based testing |
 | **Secret Management** | Built-in encryption | Kubernetes secrets |
-| **Target Users** | Software developers and DevOps teams | Platform engineers and K8s experts |
-
-
-## What is Pulumi?
-
-Pulumi is a modern infrastructure as code platform that lets you use familiar programming languages like Python, TypeScript, Go, .NET, and Java to define cloud infrastructure. It brings software engineering best practices to infrastructure code:
-
-- Full programming language support with IDE integration
-- Package management and dependency handling
-- Testing frameworks and debugging tools
-- Code reuse through standard programming patterns
-- YAML support for those who prefer it
-
-## What is Crossplane?
-
-| Feature | Pulumi | Crossplane |
-| ------- | ------ | -------------- |
-| [State Management](#state) | Uses state file to manage resources. | State stored as custom Kubernetes resources in the ETCO of a cluster. |
-| [Multi-Language Support](#language) | supports multiple general purpose languages. | YAML only |
-| [Drift Protection](#drift-detection) | Can automatically detect and remediate with the use of Deployments | Can do automatic drift detection and remediation |
-| [Preview Changes](#preview-changes) | Yes | No |
-| [Platform Flexibility](#platform-flexibility) | Platform agnostic | Kubernetes only |
-
-{{< get-started >}}
-
-### State Management {#state}
-
-For more information on how Pulumi manages state, or using alternative backends, see [State and Backends](/docs/concepts/state/).
-
-### Multi-Language Support {#language}
-
-With Pulumi, you're able to use general-purpose programming languages like Python, Go, TypeScript, and C#, which not only allows you to manage complexity by using familiar programming constructs like loops, conditionals, functions, and classes, but also simplifies common configuration tasks like string interpolation or array manipulation that are awkward to express with CloudFormation intrinsic functions. First-class support for languages also means you can take full advantage of the entire ecosystem of your language of choice. For more information, see [Languages](/docs/languages-sdks/).
-
-### Drift Detection {#drift-detection}
-
-### Preview Changes {#preview-changes}
+| **Target Users** | Software developers, Platform engineers and DevOps teams |  K8s experts |
 
 ### Platform Flexibility {#platform-flexibility}
+
 Crossplane is a Kubernetes-based control plane for infrastructure management. It extends Kubernetes' API model to handle cloud resources by:
 
 - Using Custom Resource Definitions (CRDs) to represent infrastructure
