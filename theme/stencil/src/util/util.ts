@@ -2,6 +2,7 @@ import * as uuid from "uuid";
 import { GrowthBook } from "@growthbook/growthbook";
 
 // Initialize GrowthBook
+
 export const gb = new GrowthBook({
     apiHost: "https://cdn.growthbook.io",
     clientKey: (window as any).growthbook_sdk_key,
