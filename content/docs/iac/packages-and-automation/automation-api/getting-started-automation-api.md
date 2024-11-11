@@ -258,75 +258,63 @@ This tutorial is based on the [`InlineProgram` example](https://github.com/pulum
 var program = PulumiFn.Create(() =>
 {
     // Create a bucket and expose a website index document.
-    var siteBucket = new Pulumi.Aws.S3.Bucket(
-        "s3-website-bucket",
-        new Pulumi.Aws.S3.BucketArgs
-        {
-            Website = new Pulumi.Aws.S3.Inputs.BucketWebsiteArgs
-            {
-                IndexDocument = "index.html",
-            },
-        });
+    var siteBucket = new Pulumi.Aws.S3.Bucket("s3-website-bucket");
 
-                const string indexContent = @"
+    const string indexContent = @"
 <html>
-    <head><titl>Hello S3</title><meta charset=""UTF-8""></head>
+    <head><title>Hello S3</title><meta charset=""UTF-8""></head>
     <body>
         <p>Hello, world!</p>
         <p>Made with ❤️ with <a href=""https://pulumi.com"">Pulumi</a></p>
     </body>
-</html>
-";
+</html>";
 
-    // Write our index.html into the site bucket.
-    var @object = new Pulumi.Aws.S3.BucketObject(
-        "index",
-        new Pulumi.Aws.S3.BucketObjectArgs
-        {
-            Bucket = siteBucket.BucketName, // Reference to the s3 bucket object.
-            Content = indexContent,
-            Key = "index.html", // Set the key of the object.
-            ContentType = "text/html; charset=utf-8", // Set the MIME type of the file.
-        });
-
-    var bucketPolicyDocument = siteBucket.Arn.Apply(bucketArn =>
+    var ownershipControls = new Aws.S3.BucketOwnershipControls("ownership-controls", new()
     {
-        return Output.Create(Pulumi.Aws.Iam.GetPolicyDocument.InvokeAsync(
-            new Pulumi.Aws.Iam.GetPolicyDocumentArgs
-            {
-                Statements = new List<Pulumi.Aws.Iam.Inputs.GetPolicyDocumentStatementArgs>
-                {
-                    new Pulumi.Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
-                    {
-                        Effect = "Allow",
-                        Principals = new List<Pulumi.Aws.Iam.Inputs.GetPolicyDocumentStatementPrincipalArgs>
-                        {
-                            new Pulumi.Aws.Iam.Inputs.GetPolicyDocumentStatementPrincipalArgs
-                            {
-                                Identifiers = new List<string> { "*" },
-                                Type = "AWS",
-                            },
-                        },
-                        Actions = new List<string> { "s3:GetObject" },
-                        Resources = new List<string> { $"{bucketArn}/*" },
-                    },
-                },
-            }));
+        Bucket = siteBucket.Id,
+        Rule = new Aws.S3.Inputs.BucketOwnershipControlsRuleArgs
+        {
+            ObjectOwnership = "ObjectWriter",
+        },
     });
 
-    // Set the access policy for the bucket so all objects are readable.
-    new Pulumi.Aws.S3.BucketPolicy(
-        "bucket-policy",
-        new Pulumi.Aws.S3.BucketPolicyArgs
+    var publicAccessBlock = new Aws.S3.BucketPublicAccessBlock("public-access-block", new()
+    {
+        Bucket = siteBucket.Id,
+        BlockPublicAcls = false,
+    });
+
+    var website = new Aws.S3.BucketWebsiteConfigurationV2("website", new()
+    {
+        Bucket = siteBucket.Id,
+        IndexDocument = new Aws.S3.Inputs.BucketWebsiteConfigurationV2IndexDocumentArgs
         {
-            Bucket = siteBucket.BucketName,
-            Policy = bucketPolicyDocument.Apply(x => x.Json),
-        });
+            Suffix = "index.html",
+        },
+    });
+
+    // Write our index.html into the site bucket.
+    var @object = new Pulumi.Aws.S3.BucketObject("index", new Pulumi.Aws.S3.BucketObjectArgs
+    {
+        Bucket = siteBucket.BucketName, // Reference to the s3 bucket object.
+        Content = indexContent,
+        Acl = "public-read",
+        Key = "index.html", // Set the key of the object.
+        ContentType = "text/html; charset=utf-8", // Set the MIME type of the file.
+    }, new CustomResourceOptions
+    {
+        DependsOn =
+        {
+            publicAccessBlock,
+            ownershipControls,
+            website,
+        },
+    });
 
     // Export the website url.
     return new Dictionary<string, object?>
     {
-        ["website_url"] = siteBucket.WebsiteEndpoint,
+        ["website_url"] = website.WebsiteEndpoint
     };
 });
 ```
