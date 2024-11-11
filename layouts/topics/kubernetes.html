@@ -1,5 +1,12 @@
 {{ define "hero" }}
-    {{ partial "hero" (dict "title" "Universal Infrastructure as Code for Kubernetes") }}
+    <header class="page-hero bg-gradient-to-r from-white from-0% via-violet-100 via-50% to-white to-100% border-b border-gray-300">
+        <div class="page-hero-title">
+            <h1>
+                <span class="rainbow-text text-6xl leading-normal" data-text="Universal Infrastructure as Code for Kubernetes">Infrastructure Management for Kubernetes</span>
+            </h1>
+            
+        </div>
+    </header>
 {{ end }}
 
 {{ define "main" }}
@@ -23,7 +30,15 @@
             <div class="w-full order-first lg:order-last mt-8 lg:mt-0 lg:w-1/2 lg:mt-0">
                 <div>
                     <div>
-                        {{ partial "code-tabbed" (dict "tabs" .Params.kubernetes_overview.ide.tabs "chrome" "true" "mode" "dark") }}
+                        <div class="max-w-4xl container text-left card bg-white p-6 mx-auto">
+                            <pulumi-chooser type="language" options="typescript,python,go,csharp,java,yaml">
+                                {{ range $lang := .Params.kubernetes_overview.ide.tabs }}
+                                    <pulumi-choosable type="language" class="highlight" value="{{ $lang.language }}">
+                                        {{ partial "code" (dict "lang" $lang.language "code" $lang.code "mode" "light") }}
+                                    </pulumi-choosable>
+                                {{ end }}
+                            </pulumi-chooser>
+                        </div>
                     </div>
                     <div class="flex justify-center items-center mt-8 h-8">
                         <span title="TypeScript">
@@ -143,9 +158,6 @@
                 <a data-track="customer-logo" href="https://www.snowflake.com/" target="_blank">
                     <img class="mx-auto my-4 lg:my-2 lg:mx-8 h-12" src="/logos/customers/snowflake-logo.svg" alt="Snowflake" title="Snowflake" />
                 </a>
-                <a data-track="customer-logo" href="https://www.tableau.com/" target="_blank">
-                    <img class="mx-auto my-4 lg:my-2 lg:mx-8 h-12" src="/logos/customers/tableau_logo.png" alt="Tableau Software" title="Tableau Software" />
-                </a>
                 <a data-track="customer-logo" href="{{ relref . "/case-studies/mercedes-benz" }}">
                     <img
                         class="mx-auto my-4 lg:my-2 lg:mx-8 h-12"
@@ -165,11 +177,17 @@
                 <a data-track="customer-logo" href="https://www.sourcegraph.com/" target="_blank">
                     <img class="mx-auto my-4 lg:my-2 lg:mx-8 h-6" src="/logos/customers/sourcegraph-logo.svg" alt="Sourcegraph" title="Sourcegraph" />
                 </a>
-                <a data-track="customer-logo" href="https://www.snopes.com/" target="_blank">
-                    <img class="mx-auto my-6 lg:my-2 lg:mx-8 h-10" src="/logos/customers/snopes_logo.png" alt="Snopes" title="Snopes" />
-                </a>
                 <a data-track="customer-logo" href="{{ relref . "/case-studies/lemonade" }}">
                     <img class="mx-auto my-8 lg:my-2 lg:mx-8 h-8" src="/logos/customers/lemonade.svg" alt="Lemonade" title="Lemonade" />
+                </a>
+                <a data-track="customer-logo" href="{{ relref . "/case-studies/bmw" }}">
+                    <img class="mx-auto my-8 lg:my-2 lg:mx-8 h-8" src="/logos/customers/bmw.svg" alt="BMW Group" title="BMW Group" />
+                </a>
+                <a data-track="customer-logo" href="{{ relref . "/case-studies/unity" }}">
+                    <img class="mx-auto my-8 lg:my-2 lg:mx-8 h-8" src="/logos/customers/unity.png" alt="Unity" title="Unity" />
+                </a>
+                <a data-track="customer-logo" href="{{ relref . "/case-studies/starburst" }}">
+                    <img class="mx-auto my-8 lg:my-2 lg:mx-8 h-8" src="/logos/customers/starburst.png" alt="Starburst" title="Starburst" />
                 </a>
             </div>
         </div>
@@ -179,8 +197,8 @@
         <div class="container mx-auto flex flex-col lg:mx-auto lg:flex lg:flex-row lg:items-center lg:justify-center">
             {{ with .Params.kubernetes_overview }}
                 <div class="lg:w-1/2">
-                    <div class="w-2/3 pb-16 mx-auto">
-                        {{ partial "pulumipus" (dict "type" "rocket") }}
+                    <div class="mx-auto">
+                        <img src="/images/topics/kubernetes/k8s-diagram.png"/>
                     </div>
                 </div>
                 <div class="lg:w-1/2">
@@ -203,41 +221,27 @@
         </div>
     </section>
 
-    <section id="superpowers" class="bg-white pt-24 px-4 justify-center" id="editions">
-        <div class="container mx-auto lg:flex justify-center">
-            <ul class="flex flex-col lg:flex-row lg:flex-wrap items-start list-none p-0">
-                {{ $powers := .Params.superpowers }}
-                {{ range $i, $item := $powers }}
-                    <li class="lg:w-1/2 lg:flex items-start mt-0">
-                        <div class="text-center lg:text-left mb-4 lg:mb-0">
-                            <div class="inline-block bg-blue-100 border-4 border-blue-200 rounded-full p-6" style="fill: #4387c7;">
-                                {{ partial "superpower-icon" (dict "type" $item.icon_type) }}
-                            </div>
+    <section id="superpowers" class="container mx-auto text-center mt-16">
+        <div class="flex flex-wrap justify-content items-stretch text-left my-4">
+            {{ range $item := .Params.superpowers }}
+                <div class="w-full lg:w-1/2 p-3">
+                    <div class="h-full card bg-white p-8">
+                        <div class="icon-section mb-8">
+                            {{ partial "color-icon.html" (dict "icon" $item.icon_type "icon_color" $item.icon_color) }}
                         </div>
-                        <div class="lg:pl-6 lg:pr-12">
-                            <h4 class="text-center lg:text-left mt-0">
-                                <a class="link" href="{{ relref $pageContext $item.cta_url }}">
-                                    <span class="align-middle">{{ $item.title }}</span>
-                                </a>
-                            </h4>
-                            <p class="leading-relaxed md:px-24 lg:px-0">{{ $item.description }}</p>
-                            <p class="m-0 text-lg text-center lg:text-left">
-                                <a class="link" href="{{ relref $pageContext $item.cta_url }}">
-                                    <span class="transition-all hover:mr-1">{{ $item.cta }}</span>
-                                    <span>&rarr;</span>
-                                </a>
-                            </p>
-                            {{ $borderBottom := "border-b" }}
-                            {{ if eq $i (sub (len $powers) 2) }}
-                                {{ $borderBottom = "border-b md:border-none" }}
-                            {{ else if eq $i (sub (len $powers) 1) }}
-                                {{ $borderBottom = "border-none" }}
-                            {{ end }}
-                            <div class="mb-12 pb-12 border-gray-300 {{ $borderBottom }}"></div>
+                        <div>
+                            <h5>{{ $item.title }}</h5>
                         </div>
-                    </li>
-                {{ end }}
-            </ul>
+                        <div class="mt-6">
+                            <p>{{ $item.description | markdownify }}</p>
+                        </div>
+                            <a href="{{ relref $pageContext $item.cta_url }}" class="underline text-blue-700 text-lg">
+                                <span class="transition-all hover:mr-1">{{ $item.cta }}</span>
+                                <span>&rarr;</span>
+                            </a>
+                    </div>
+                </div>
+            {{ end }}
         </div>
     </section>
 
@@ -247,7 +251,7 @@
                 <div class="w-full max-w-2xl mx-auto text-center">
                     <h3>{{ $item.title }}</h3>
                     <p class="md:px-24 lg:px-0">{{ $item.description | markdownify }}</p>
-                    <a class="hidden btn-secondary lg:inline-block my-4" href="{{ relref $pageContext $item.cta_url }}">
+                    <a class="hidden btn-secondary lg:inline-block my-4" href="{{ $item.cta_url }}">
                         {{ $item.cta }}
                     </a>
                 </div>
@@ -264,7 +268,7 @@
                 </div>
             </div>
             <div class="container mx-auto md:px-24 lg:hidden lg:px-0 text-center">
-                <a class="btn-secondary my-4" href="{{ relref $pageContext $item.cta_url }}">
+                <a class="btn-secondary my-4" href="{{ $item.cta_url }}">
                     {{ $item.cta }}
                 </a>
             </div>
@@ -281,7 +285,7 @@
             </div>
 
             <!-- Rendered with Hugo's YouTube shortcode: https://gohugo.io/content-management/shortcodes/#youtube -->
-            <div class="rounded shadow-md" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+            <div class="rounded shadow-md" style="position: relative; padding-bottom: 56.25%; overflow: hidden;">
                 <iframe
                     src="//www.youtube.com/embed/{{ .youtube_video_id }}?rel=0"
                     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;"
