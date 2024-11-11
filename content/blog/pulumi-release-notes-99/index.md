@@ -126,7 +126,7 @@ We have updated the [Pulumi Google Cloud Classic Provider](/registry/packages/gc
 
 ### AWS S3 Express One Zone Support
 
-We [added support](/blog/amazon-s3-express-one-zone/) for [Amazon S3 Express One Zone](https://aws.amazon.com/s3/storage-classes/express-one-zone/), a new storage class offering up to 10X faster performance and reduced request costs by 50%. S3 Express One Zone is ideal for data-intensive applications such as AI/ML, HPC, etc. This update is part of our commitment to provide timely and effective support for the latest AWS offerings.
+We [added support](/blog/amazon-s3-express-one-zone/) for [Amazon S3 Express One Zone](https://aws.amazon.com/s3/storage-classes/express-one-zone/), a new storage class offering up to 10x faster performance and reduced request costs by 50%. S3 Express One Zone is ideal for data-intensive applications such as AI/ML, HPC, etc. This update is part of our commitment to provide timely and effective support for the latest AWS offerings.
 
 ### New Provider Resources
 

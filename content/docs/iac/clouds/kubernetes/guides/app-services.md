@@ -100,7 +100,7 @@ running and managing their lifecycles.
 
 {{% choosable cloud aws %}}
 
-### Postgres Database
+### Postgres database
 
 Create a Postgres database instance in [AWS RDS][aws-rds], and store its
 connection information in a Kubernetes [Secret][k8s-secret] for apps to refer
@@ -148,7 +148,7 @@ const dbConn = new k8s.core.v1.Secret("postgres-db-conn",
 );
 ```
 
-### Redis Datastore
+### Redis datastore
 
 Create a Redis datastore instance in [AWS ElastiCache][aws-ec], and store its
 connection information in a Kubernetes [ConfigMap][k8s-cm] for apps to refer
@@ -247,7 +247,7 @@ const mongoConnStrings = new k8s.core.v1.Secret(
 
 {{% choosable cloud gcp %}}
 
-### Postgres Database
+### Postgres database
 
 Create a Postgres database instance in [CloudSQL][gcp-cloudsql], and store its
 connection information in a Kubernetes [Secret][k8s-secret] for apps to refer
@@ -303,7 +303,7 @@ const dbConn = new k8s.core.v1.Secret(
 );
 ```
 
-### Redis Datastore
+### Redis datastore
 
 Create a Redis datastore instance in [Google Cloud MemoryStore][gcp-redis], and store its
 connection information in a Kubernetes [ConfigMap][k8s-cm] for apps to refer
@@ -367,10 +367,8 @@ between external clients, and the servers in the cluster's apps.
 Deploy the [example YAML manifests][nginx-yaml] into the `ingress-nginx` namespace, and publicly expose it to the
 Internet using a [load balanced Service][k8s-lb-svc].
 
-> Note: NGINX requires a privileged PSP given its [use][nginx-priv-use] of `allowPrivilegeEscalation: true`.
-
 ```bash
-$ kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/nginx-0.30.0/deploy/static/mandatory.yaml -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/nginx-0.30.0/deploy/static/provider/cloud-generic.yaml
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.12.0-beta.0/deploy/static/provider/cloud/deploy.yaml
 ```
 
 Check that the NGINX deployment is running.
@@ -382,7 +380,7 @@ nginx-ingress-controller-7dcc95dfbf-k99k6   1/1     Running   0          21s
 ```
 
 <!-- markdownlint-disable url -->
-[nginx-priv-use]: https://github.com/kubernetes/ingress-nginx/blob/nginx-0.30.0/deploy/static/mandatory.yaml#L229
+[nginx-priv-use]: https://github.com/kubernetes/ingress-nginx/blob/f1f90ef4954effb122412d9cd2d48e02063038a4/deploy/static/mandatory.yaml#L229
 [nginx-yaml]: https://github.com/kubernetes/ingress-nginx/blob/master/docs/deploy/index.md#prerequisite-generic-deployment-command
 [k8s-lb-svc]: https://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer
 <!-- markdownlint-enable url -->
@@ -432,7 +430,7 @@ const nginx = new k8s.helm.v3.Chart("nginx",
 
 {{< /chooser >}}
 
-#### Deploy a Workload
+#### Deploy a workload
 
 Deploy a [kuard][k8s-kuard] Pod, service, and ingress resources to
 test the NGINX ingress controller.
@@ -457,7 +455,7 @@ $ kubectl run --generator=run-pod/v1 kuard --namespace=`pulumi stack output apps
 
 ```bash
 $ cat > ingress.yaml << EOF
-apiVersion: networking.k8s.io/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: kuard
@@ -586,7 +584,7 @@ hosts & paths. We simulate the headers using `curl`.
 $ curl -Lv -H 'Host: apps.example.com' <INGRESS_ADDRESS>
 ```
 
-#### Clean Up
+#### Clean up
 
 {{< chooser k8s-language "typescript,yaml" >}}
 
@@ -596,7 +594,7 @@ Delete the pod, service, and ingress controller.
 
 ```bash
 $ kubectl delete pod/kuard svc/kuard ingress/kuard
-$ kubectl delete -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/nginx-0.30.0/deploy/static/mandatory.yaml -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/nginx-0.30.0/deploy/static/provider/cloud-generic.yaml
+$ kubectl delete -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/f1f90ef4954effb122412d9cd2d48e02063038a4/deploy/static/mandatory.yaml -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/f1f90ef4954effb122412d9cd2d48e02063038a4/deploy/static/provider/cloud-generic.yaml
 ```
 
 {{% /choosable %}}

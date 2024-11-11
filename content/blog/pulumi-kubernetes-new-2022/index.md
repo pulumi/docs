@@ -13,6 +13,10 @@ Kubernetes is one of the most used platforms in Pulumi, second only to AWS, with
 
 <!--more-->
 
+{{% notes type="info" %}}
+Check out version 2.0 of the [Pulumi Kubernetes Operator](/blog/pulumi-kubernetes-operator-2-0/).
+{{% /notes %}}
+
 Today we are announcing a set of major updates which deepen and extend Pulumi’s support for Kubernetes and the Kubernetes ecosystem. In this post, we’ll highlight a few of these exciting enhancements:
 
 * [Pulumi Kubernetes Operator v1.10](https://github.com/pulumi/pulumi-kubernetes-operator/#readme): New integration with Flux for richer GitOps support, and ability to deploy Pulumi stacks from directly within the Kubernetes resource model

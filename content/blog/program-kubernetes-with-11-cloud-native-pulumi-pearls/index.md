@@ -507,7 +507,7 @@ functioning GKE cluster with a canary deployment up and running:
 
 In addition to the GKE example, our examples repo also has fully
 functioning examples for doing the same thing with
-[Azure's AKS](https://github.com/pulumi/examples/tree/master/classic-azure-ts-aks-helm)
+[Azure's AKS](https://github.com/pulumi/examples/tree/846811de2c7faa4694454c64edc9bbcdb31d533e/classic-azure-ts-aks-helm)
 and [AWS's EKS](https://github.com/pulumi/examples/tree/master/aws-ts-eks). A
 Kubernetes cluster for everybody!
 

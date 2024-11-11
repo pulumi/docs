@@ -212,7 +212,7 @@ main {
     @apply text-blue-700;
 }
 
-.section-blog {
+.section-blog, .section-tags, .section-authors {
     .tags {
         .tag {
             @apply lowercase border border-blue-200 rounded py-1 px-2 mr-1;
@@ -402,7 +402,7 @@ section.newsletter-input pulumi-hubspot-form input.hs-input {
     z-index: 99999;
 
     @screen lg {
-        @apply w-1/3 left-auto m-4 overflow-hidden;
+        @apply w-1/3 right-auto m-4 overflow-hidden;
     }
 
     div {

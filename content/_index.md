@@ -62,6 +62,8 @@ customer_logos:
       link: /case-studies/
     - name: unity
       link: /case-studies/
+    - name: ae-networks
+      link: /case-studies/
     - name: deloitte
       link: /case-studies/
     - name: stokespace
@@ -75,7 +77,7 @@ customer_logos:
     - name: modular-ai
       link: /case-studies/
     - name: korber
-      link: /case-studies/    
+      link: /case-studies/
     - name: lemonade
       link: /case-studies/
     - name: pinecone

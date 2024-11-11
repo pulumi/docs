@@ -24,6 +24,7 @@ customer_logos:
     - name: moderna
     - name: docker
     - name: unity
+    - name: ae-networks
     - name: deloitte
     - name: stokespace
     - name: univision

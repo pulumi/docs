@@ -41,10 +41,13 @@ config:
     type: string
 resources:
   my-bucket:
-    type: aws:s3:Bucket
+    type: aws:s3:BucketV2
+  my-bucket-website:
+    type: aws:s3:BucketWebsiteConfigurationV2
     properties:
-      website:
-        indexDocument: index.html
+      bucket: ${my-bucket.bucket}
+      indexDocument:
+        suffix: index.html
   ownership-controls:
     type: aws:s3:BucketOwnershipControls
     properties:

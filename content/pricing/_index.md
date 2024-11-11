@@ -28,7 +28,6 @@ tiers:
                 - Unlimited IaC projects/stacks
                 - 25 free secrets
                 - 500 free deployments minutes
-                - Community support
             - title: Team
               subtitle: Collaboration for growing teams and cloud projects.
               iac_price: $0.37
@@ -46,7 +45,7 @@ tiers:
                 - Automatic CI/CD
                 - Unlimited ESC configuration
                 - Full deployment history
-                - Basic support
+                - Community support
             - title: Enterprise
               subtitle: Advanced cloud engineering capabilities for large teams in production.
               iac_price: $1.10
@@ -66,8 +65,7 @@ tiers:
                   - SAML/SSO
                   - Secrets versioning
                   - Audit logs
-                  - Enterprise Support available
-                  - Private Slack and Professional Services available
+                  - 12x5 Enterprise Support available
             - title: Business Critical
               subtitle: Advanced security, compliance, and hosting for mission-critical needs.
               iac_price: Custom
@@ -84,8 +82,8 @@ tiers:
                   - Policies and compliance
                   - Automatic group & user sync (SCIM)
                   - Audit logs export
-                  - Enterprise Support available
-                  - Private Slack and Professional Services available
+                  - 24x7 Enterprise Support available
+                  - Private Slack and Professional Services
 
 customers:
     - stat: "**5x faster** time to market"

@@ -124,7 +124,7 @@ In `Program.cs`, create a new `BucketObject` right after creating the bucket its
 // Create an S3 Bucket object
 var bucketObject = new BucketObject("index.html", new BucketObjectArgs
 {
-    Bucket = bucket.BucketName,
+    Bucket = bucket.Id,
     Source = new FileAsset("./index.html")
 });
 ```
@@ -140,7 +140,7 @@ package myproject;
 
 import com.pulumi.Pulumi;
 import com.pulumi.core.Output;
-import com.pulumi.aws.s3.Bucket;
+import com.pulumi.aws.s3.BucketV2;
 import com.pulumi.aws.s3.BucketObject;
 import com.pulumi.aws.s3.BucketObjectArgs;
 import com.pulumi.asset.FileAsset;
@@ -150,11 +150,11 @@ public class App {
         Pulumi.run(ctx -> {
 
             // Create an AWS resource (S3 Bucket)
-            var bucket = new Bucket("my-bucket");
+            var bucket = new BucketV2("my-bucket");
 
             // Create an S3 Bucket object
             new BucketObject("index.html", BucketObjectArgs.builder()
-                .bucket(bucket.id())
+                .bucket(bucket.bucket())
                 .source(new FileAsset("./index.html"))
                 .build()
             );
@@ -180,19 +180,19 @@ description: A minimal AWS Pulumi YAML program
 resources:
   # Create an AWS resource (S3 Bucket)
   my-bucket:
-    type: aws:s3:Bucket
+    type: aws:s3:BucketV2
 
   # Create an S3 Bucket object
   index.html:
     type: aws:s3:BucketObject
     properties:
-      bucket: ${my-bucket}
+      bucket: ${my-bucket.bucket}
       source:
         fn::fileAsset: ./index.html
 
 outputs:
   # Export the name of the bucket
-  bucketName: ${my-bucket.id}
+  bucketName: ${my-bucket.bucket}
 ```
 
 {{% /choosable %}}

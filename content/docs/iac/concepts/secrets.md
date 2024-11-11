@@ -25,21 +25,6 @@ Pulumi Cloud transmits and stores entire state files securely, but Pulumi also s
 The Pulumi CLI **never** transmits your cloud credentials to Pulumi Cloud.
 {{% /notes %}}
 
-To encrypt a configuration setting before runtime, use the [`pulumi config set`](/docs/concepts/config#configuration) CLI command with a [`--secret`](#secrets) flag. You can also declare secrets at runtime; any [output](/docs/concepts/inputs-outputs/#outputs) value can also be marked secret. If an output is a secret, any computed values derived from it, such as those derived from a call to [`apply`](/docs/concepts/inputs-outputs/#apply), will also be marked secret. All these of encrypted values are stored as ciphertext in your state file.
-
-An output can be marked secret in a number of ways:
-
-- By reading a secret from configuration using {{< pulumi-config-getsecret >}} or {{< pulumi-config-requiresecret >}}.
-- By creating a new secret value with {{< pulumi-secret-new >}}, such as when generating a new random password.
-- By marking a resource as having secret properties using [`additionalSecretOutputs`](/docs/concepts/inputs-outputs).
-- By computing a secret value by using [`apply`](/docs/concepts/inputs-outputs/#apply) or {{< pulumi-all >}} with another secret value.
-
-As soon as an output is marked secret, the Pulumi engine will encrypt it wherever it is stored.
-
-{{% notes "info" %}}
-Note that when using `apply` or `Output.all`, secrets are decrypted into plain text for use within the callback handler. It is up to your program to treat this value sensitively and only pass the plain-text value to code that you trust.
-{{% /notes %}}
-
 ## Creating secrets programmatically
 
 There are two ways to programmatically create secret values:
@@ -207,11 +192,20 @@ Secrets have the same type, `Output<T>`, as unencrypted resource outputs. The di
 
 An `apply`’s callback is given the plain-text value of the underlying secret. Although Pulumi ensures that the value returned from an `apply` on a secret is also marked as secret, Pulumi cannot guarantee that the `apply` callback itself will not expose the secret value —for instance, by explicitly printing the value to the console or saving it to a file.
 
+An output can be marked secret in a number of ways:
+
+- By reading a secret from configuration using {{< pulumi-config-getsecret >}} or {{< pulumi-config-requiresecret >}}.
+- By creating a new secret value with {{< pulumi-secret-new >}}, such as when generating a new random password.
+- By marking a resource as having secret properties using [`additionalSecretOutputs`](/docs/concepts/inputs-outputs).
+- By computing a secret value by using [`apply`](/docs/concepts/inputs-outputs/#apply) or {{< pulumi-all >}} with another secret value.
+
+As soon as an output is marked secret, the Pulumi engine will encrypt it wherever it is stored.
+
 {{% notes "warning" %}}
-Be careful that you do not pass this plain-text value to code that might expose it.
+Be careful that you do not pass this plain-text value to code that might expose it. Note that when using `apply` or `Output.all`, secrets are decrypted into plain text for use within the callback handler. It is up to your program to treat this value sensitively and only pass the plain-text value to code that you trust.
 {{% /notes %}}
 
-## Explicitly marking resource outputs as secrets
+### Explicitly marking resource outputs as secrets
 
 It is possible to mark resource outputs as containing secrets. In this case, Pulumi will automatically treat those outputs as secrets and encrypt them in the state file and anywhere they flow to. To do so, use the [`additional secret outputs`](/docs/concepts/resources#additionalsecretoutputs) option.
 
@@ -315,7 +309,11 @@ $ pulumi up
 Password: [secret]
 ```
 
-By default, configuration values are saved in plain text. To explicitly denote a plain text or unencrypted configuration value, pass the `--plaintext` flag. This flag can be used to indicate that you did not want an encrypted secret.
+### Explicitly denote unencrypted values
+
+By default, configuration values are saved in plain text. Given this, there may be times where you need to explictly denote a value as plain text or unencrypted. For example, for security purposes, the Pulumi CLI tries to detect when something that looks like an API token or password is supplied to as a Pulumi configuration value. There are some scenarios where it will incorrectly assume a string is a secret and will alert you in the command line while aborting the task.
+
+To avoid this, you can pass the `--plaintext` flag when creating your configuration value. This flag can be used to indicate that you did not want an encrypted secret.
 
 ```bash
 $ pulumi config set --plaintext aws:region us-west-2
@@ -325,8 +323,6 @@ $ pulumi config set --plaintext aws:region us-west-2
 
 To access configuration or secret values for your package, project, or component, use the `pulumi.Config` type. This type offers a collection of getters and setters for retrieving configuration values of various types by their key.
 
-To begin, allocate an instance of the `pulumi.Config` object. Its constructor takes an optional namespace for all configuration keys being read back. Similar rules to the CLI usage apply here, in that if you omit the namespace argument, the current project is used. This is the common case for project configuration but is not what you want for packages and components which need their own isolated configuration.
-
 For example, assume the following configuration values have been set:
 
 ```bash
@@ -334,7 +330,9 @@ $ pulumi config set name BroomeLLC             # set a plain-text value
 $ pulumi config set --secret dbPassword S3cr37 # set an encrypted secret value
 ```
 
-Use the following code to access these configuration values in your Pulumi program:
+To begin, allocate an instance of the `pulumi.Config` object as shown in the code below. Its constructor takes an optional namespace for all configuration keys being read back. Similar rules to the CLI usage apply here, in that if you omit the namespace argument, the current project is used. This is the common case for project configuration but is not what you want for packages and components which need their own isolated configuration.
+
+The remainder of the code example demonstrates how to access these configuration values in your Pulumi program:
 
 {{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
 
@@ -454,13 +452,27 @@ config:
 
 In this example, we have read back the `name` and `dbPassword` configuration variables programmatically. The `name` is just the string `BroomeLLC`, while the `dbPassword` is a secret output value that is encrypted.
 
+### Explicitly set config namespace
+
 Notice the keys used above have no namespaces, both in the CLI gestures and in the `pulumi.Config` constructor. This means they have taken our project name as the default namespace. We could have specified this explicitly, as in `pulumi config set broome-proj:name BroomeLLC` and `new pulumi.Config("broome-proj")`.
+
+### Create secrets within structured config
 
 Secrets within structured config are also supported. Consider a list of endpoints, each having a `url` and `token` property. The `token` value could be stored as a secret:
 
 ```bash
 $ pulumi config set --path endpoints[0].url https://example.com
 $ pulumi config set --path --secret endpoints[0].token accesstokenvalue
+```
+
+The above configuration would look like the following in your `Pulumi.<project-name>.yaml` file:
+
+```yaml
+config:
+  project-name:endpoints:
+    - token:
+        secure: AAABALsgfFnV0KbGLybu5f+oTqUFmPl2l7oer5EACw15g7rE6GMYQqGgMoZ07QgT
+      url: https://example.com
 ```
 
 {{% notes type="warning" %}}
@@ -518,17 +530,18 @@ $ pulumi stack init my-stack \
     --secrets-provider="awskms://1234abcd-12ab-34cd-56ef-1234567890ab?region=us-east-1"
 ```
 
-If you have previously configured the AWS CLI, the same credentials will be used. These can also be overridden using the standard `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` environment variables. For more options, refer to the [AWS Go SDK documentation](https://docs.aws.amazon.com/sdk-for-go/api/aws/session/).
+If you have previously configured the AWS CLI, the same credentials will be used to encrypt/decrypt secrets using the specified KMS key. For this reason, it is important to ensure that the credentials have the appropriate permissions to interact with the key accordingly. If needed, your AWS CLI credentials can be overridden using the standard `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` environment variables. For more options, refer to the [AWS Go SDK documentation](https://docs.aws.amazon.com/sdk-for-go/api/aws/session/).
 
-{{% notes "info" %}}
 As of Pulumi CLI v3.33.1, instead of specifying the AWS Profile using the `AWS_PROFILE` environment variable, add `awssdk=v2` and `profile=` followed by the profile name to the query string.
 
 1. By ID: `awskms://1234abcd-12ab-34cd-56ef-1234567890ab?region=us-east-1&awssdk=v2&profile=dev`.
 1. By alias: `awskms://alias/ExampleAlias?region=us-east-1&awssdk=v2&profile=qa`.
 1. By ARN: `awskms:///arn:aws:kms:us-east-1:111122223333:key/1234abcd-12ab-34bc-56ef-1234567890ab?region=us-east-1&awssdk=v2&profile=prod`.
-{{% /notes %}}
+
 {{% notes "info" %}}
+
 As of Pulumi CLI v3.41.1, this secrets backend supports [encryption context](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#encrypt_context) by setting `context_{key}={value}` in the query string.
+
 Encryption context can be used in [IAM policies conditions](https://docs.aws.amazon.com/kms/latest/developerguide/policy-conditions.html#conditions-kms-encryption-context) and it appears in Cloudtrail logs.
 
 For example, take a look at `awskms://1234abcd-12ab-34cd-56ef-1234567890ab?region=us-east-1&awssdk=v2&profile=dev&context_project=myproject&context_environment=staging`.
@@ -612,7 +625,7 @@ It's therefore considered safe and good practice to check these files into sourc
 
 ## Managing secrets with Pulumi ESC environments
 
-With Pulumi ESC, you can manage secrets wherever they live. Pulumi ESC provides a centralized abstraction in front of the most common secrets manager/vaults while providing security through RBAC and audit controls.
+With [Pulumi ESC](/docs/esc/), you can manage secrets wherever they live. Pulumi ESC provides a centralized abstraction in front of the most common secrets manager/vaults while providing security through RBAC and audit controls.
 
 ### Sharing secrets across multiple teams
 
