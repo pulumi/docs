@@ -127,7 +127,8 @@ This tutorial is based on the [`inline_program` example](https://github.com/pulu
 ```python
 def pulumi_program():
     # Create a bucket and expose a website index document.
-    site_bucket = s3.Bucket("s3-website-bucket", website=s3.BucketWebsiteArgs(index_document="index.html"))
+    site_bucket = s3.BucketV2("s3-website-bucket")
+
     index_content = """
     <html>
         <head><title>Hello S3</title><meta charset="UTF-8"></head>
@@ -138,29 +139,38 @@ def pulumi_program():
     </html>
     """
 
+    ownership_controls = s3.BucketOwnershipControls("ownership-controls",
+        bucket=site_bucket.id,
+        rule={
+            "object_ownership": "ObjectWriter",
+        })
+
+    public_access_block = s3.BucketPublicAccessBlock("public-access-block",
+        bucket=site_bucket.id,
+        block_public_acls=False)
+
+    website = aws.s3.BucketWebsiteConfigurationV2("website",
+        bucket=site_bucket.id,
+        index_document={
+            "suffix": "index.html",
+        })
+
     # Write our index.html into the site bucket.
     s3.BucketObject("index",
                     bucket=site_bucket.id,  # Reference to the s3.Bucket object.
                     content=index_content,
+                    acl="public-read",
                     key="index.html",  # Set the key of the object.
-                    content_type="text/html; charset=utf-8")  # Set the MIME type of the file.
-
-    # Set the access policy for the bucket so all objects are readable.
-    s3.BucketPolicy("bucket-policy", bucket=site_bucket.id, policy={
-        "Version": "2012-10-17",
-        "Statement": {
-            "Effect": "Allow",
-            "Principal": "*",
-            "Action": ["s3:GetObject"],
-            # Policy refers to bucket explicitly.
-            "Resource": [pulumi.Output.concat("arn:aws:s3:::", site_bucket.id, "/*")]
-        },
-    })
+                    content_type="text/html; charset=utf-8", # Set the MIME type of the file.
+                    opts=pulumi.ResourceOptions(depends_on=[
+                        public_access_block,
+                        ownership_controls,
+                        website,
+                    ]))
 
     # Export the website URL.
-    pulumi.export("website_url", site_bucket.website_endpoint)
+    pulumi.export("website_url", website.website_endpoint)
 ```
-
 {{% /choosable %}}
 
 {{% choosable language go %}}
