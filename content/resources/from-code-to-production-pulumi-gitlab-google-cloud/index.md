@@ -64,8 +64,10 @@ main:
     presenters:
         - name: Tom Weston
           role: Customer Success Architect, Pulumi
+          photo: /images/team/tom-weston.jpeg
         - name: Regnard Raquedan
           role: Senior Partner Solutions Architect, GitLab
+          photo: /images/people/regnard-raquedan.jpeg
         - name: Jason Smith
           role: Sr Cloud Customer Engineer, Google
           photo: /images/people/jay-smith.png
