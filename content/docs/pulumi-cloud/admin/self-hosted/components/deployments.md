@@ -28,7 +28,7 @@ To manage your state with a self-managed backend, such as a cloud storage bucket
 
 To do so, follow these steps:
 
-1. Create a new deployment pool. Navigate to **Settings > Deployment runners** in the left-hand menu of your Pulumi Cloud organization, click **Add new pool**, and copy the generated access token.
+1. Create a new deployment pool. Navigate to **Settings** then **Deployment runners** in the left-hand menu of your Pulumi Cloud organization, click **Add new pool**, and copy the generated access token.
 
 1. Select the **Kubernetes** tab and follow the on-screen instructions to install and configure your Kubernetes-native deployment agent.
 
