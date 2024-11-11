@@ -29,7 +29,7 @@ aliases:
     }
 </style>
 
-Crossplane brings Kubernetes-native infrastructure management, while Pulumi offers language-flexible infrastructure as code. 
+Crossplane brings Kubernetes-native infrastructure management, while Pulumi offers language-flexible infrastructure as code.
 
 Here's what sets them apart:
 
@@ -70,21 +70,25 @@ Crossplane is a Kubernetes-based control plane for infrastructure management. It
 ## Head-to-Head Comparison
 
 ### 🏗️ Platform Foundation
+
 | **Pulumi** | **Crossplane** |
 |---------|------------|
 | • Language-agnostic design<br>• Uses familiar programming tools<br>• No infrastructure dependencies | • Built on Kubernetes<br>• Uses CRDs and controllers<br>• Requires K8s cluster |
 
 ### 👩‍💻 Development Experience
+
 | **Pulumi** | **Crossplane** |
 |---------|------------|
 | • Multiple programming languages<br>• Standard development tools<br>• Rich testing capabilities<br>• Full IDE support | • YAML-based configuration<br>• Kubernetes expertise required<br>• Strong GitOps integration<br>• K8s-native tooling |
 
 ### 💪 Core Strengths
+
 | **Pulumi** | **Crossplane** |
 |---------|------------|
 | • Language flexibility<br>• Preview capabilities<br>• Platform independence<br>• Simpler learning curve<br>• Built-in testing | • Native K8s integration<br>• Automatic drift detection<br>• Strong multi-cloud abstractions<br>• GitOps-friendly workflows |
 
 ### 🏢 Enterprise Features
+
 | **Pulumi** | **Crossplane** |
 |---------|------------|
 | • Robust state management<br>• Cross-cloud support<br>• Package management<br>• IDE integration<br>• Testing frameworks | • Resource Composition<br>• Provider-based architecture<br>• Kubernetes-native controls<br>• GitOps workflows<br>• Custom resources |
