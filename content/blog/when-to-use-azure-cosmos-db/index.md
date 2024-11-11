@@ -18,7 +18,7 @@ social:
 
 When should you use Cosmos DB on Azure? It's a hard question to answer.
 
-Azure Cosmos DB tries to do it all - which makes it both powerful and, honestly, kind of confusing. The marketing doesn't help either. Yeah, it's flexible, but before you jump in, you need to understand how it actually works under the hood, what it'll cost you, and what trade-offs you're making by choosing it.
+Azure Cosmos DB tries to do it all - which makes it both powerful and, honestly, kind of confusing. The marketing doesn't help either. Yeah, it's a flexible database, but before you jump in, you need to understand how it actually works under the hood, what it'll cost you, and what trade-offs you're making by choosing it.
 
 I'm going to break all that down. Here's a roadmap:
 
@@ -307,6 +307,6 @@ Many times, that cost is not the variable being optimized for. Data is paramount
 
 For help provisioning Cosmos DB, check out our [Azure Cosmos DB How to guide](https://www.pulumi.com/registry/packages/azure-native/how-to-guides/azure-cs-cosmosdb-logicapp/) and if you decide to go with Azure Tables instead, our [Azure Native provider](https://www.pulumi.com/registry/packages/azure-native/) is there to help you all the same.
 
-Pulumi’s Infrastructure as Code platform supports the widest range of builders, clouds, programming languages, and cloud architectures available today.
+And if you have a Cosmos DB experience to share ( or I got something wrong ): [reach out](/blog/author/adam-gordon-bell/). And, if you haven't already, give Pulumi IaC a try:
 
 {{< get-started >}}
