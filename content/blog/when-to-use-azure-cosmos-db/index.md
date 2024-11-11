@@ -184,7 +184,7 @@ Your exact numbers may vary, but by my back-of-the-napkin math, Cosmos DB is sig
 | **Cosmos DB**    | ~$1,567.70/month                                        | Request Units (RUs) based, scales with document size and operations |
 
 {{% notes type="info" %}}
-See also [Cosmos DB vs MongoDB, Know The Differences](what-is/cosmos-db-vs-mongodb-know-the-differences/)
+See also [Cosmos DB vs MongoDB, Know The Differences](/what-is/cosmos-db-vs-mongodb-know-the-differences/)
 {{% /notes %}}
 
 ## Cosmos DB Vs Cassandra
