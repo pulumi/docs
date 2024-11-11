@@ -1,10 +1,42 @@
-"""A Google Cloud Python Pulumi program"""
-
 import pulumi
-from pulumi_gcp import storage
+from pulumi_gcp import storage, projects
 
-# Create a GCP resource (Storage Bucket)
-bucket = storage.Bucket('my-bucket', location="US")
+role = projects.IAMCustomRole(
+    "bucketViewerRole",
+    role_id="bucketViewerRole",
+    title="Bucket Viewer Role",
+    permissions=[
+        "storage.objects.get",
+        "storage.objects.list"
+    ],
+    stage="GA"
+)
 
-# Export the DNS name of the bucket
-pulumi.export('bucket_name', bucket.url)
+bucket = storage.Bucket(
+    "my-bucket",
+    location="US",
+    force_destroy=True
+)
+
+bucket_iam_member = storage.BucketIAMMember(
+    "bucketViewerRoleAssignment",
+    bucket=bucket.name,
+    role=role.name,
+    member="allAuthenticatedUsers"
+)
+
+bucket_name = bucket.name
+role_name = role.name
+
+file_content = f"My bucket role name is: {role_name}"
+
+bucket_object = storage.BucketObject(
+    "my-object",
+    bucket=bucket_name,
+    source=pulumi.StringAsset(file_content),
+    content_type="text/plain"
+)
+
+# Export the bucket URL and object URL
+pulumi.export("bucketName", bucket.name)
+pulumi.export("roleName", role.name)
