@@ -13,11 +13,11 @@ tags:
     - conferences
 ---
 
-Pulumi is excited to be at KubeCon North America this week, the premier event for all things Kubernetes and cloud-native (come visit us at booth R1). KubeCon is the gathering place for developers, enterprises, and cloud native experts to meet and further the education and advancement of Kubernetes and cloud native computing. At Pulumi, we are strongly committed to Kubernetes and continue to support the ecosystem with infrastructure management solutions that empower teams to automate, secure, and manage Kubernetes at scale.
+Pulumi is excited to be at KubeCon North America this week, the premier event for all things Kubernetes and cloud-native. KubeCon is the gathering place for developers, enterprises, and cloud native experts to meet and further the education and advancement of Kubernetes and cloud native computing. At Pulumi, we are strongly committed to Kubernetes and continue to support the ecosystem with infrastructure management solutions that empower teams to automate, secure, and manage Kubernetes at scale.
 
 ## Come See Us at KubeCon
 
-Stop by the Pulumi KubeCon booth, R1, this week to chat with experts on the Pulumi team. If you can't make it to KubeCon, [join our workshop](https://www.pulumi.com/resources/pulumi-kubernetes-better-together/) on November 18, 2024, to see how easy it is to manage Kubernetes with Pulumi.
+Stop by the Pulumi KubeCon booth R1 this week to chat with experts on the Pulumi team. If you can't make it to KubeCon, [join our workshop](https://www.pulumi.com/resources/pulumi-kubernetes-better-together/) on November 18, 2024, to see how easy it is to manage Kubernetes with Pulumi.
 
 
 ## Recent Pulumi Kubernetes Updates
