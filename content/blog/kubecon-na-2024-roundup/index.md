@@ -13,13 +13,12 @@ tags:
     - conferences
 ---
 
-Pulumi is excited to be at KubeCon North America this week, the premier event for all things Kubernetes and cloud-native. Kubecon is the gathering place for developers, enterprises, and cloud native experts to meet and further the education and advancement of Kubernetes and cloud native computing. At Pulumi, we have a strong commitment to Kubernetes and continue to support the ecosystem with infrastructure management solutions that empower teams to automate, secure, and manage Kubernetes at scale.
+Pulumi is excited to be at KubeCon North America this week, the premier event for all things Kubernetes and cloud-native (*come visit us at booth R1*). KubeCon is the gathering place for developers, enterprises, and cloud native experts to meet and further the education and advancement of Kubernetes and cloud native computing. At Pulumi, we are strongly committed to Kubernetes and continue to support the ecosystem with infrastructure management solutions that empower teams to automate, secure, and manage Kubernetes at scale.
 
-In this post, we’ll share some of the updates and improvements we've rolled out recently to better serve Kubernetes users.
+We've launched several new and improved capabilities recently to serve Kubernetes users and to make it easier than ever to automate, secure, manage, and scale clusters and workloads.
 
 
 ## Recent Pulumi Kubernetes Updates
-
 
 ### Pulumi Kubernetes Operator 2.0
 
@@ -70,6 +69,6 @@ The **Helm Chart v4 resource in the Pulumi Kubernetes provider** introduces seve
 [Learn about the crd2pulumi and its recent updates](https://github.com/pulumi/crd2pulumi/pull/143)
 
 
-## Conclusion
+## Come Visi8t Us at KubeCon
 
-These updates continue to make it easier to automate, secure, and manage Kubernetes at scale with Pulumi. These new features and updates are helping teams work more efficiently and securely and making their Kubernetes workflows smoother.
+Stop by the Pulumi KubeCon booth, R1, this week to chat with experts on the Pulumi team. If you can't make it to KubeCon, [join our workshop](https://www.pulumi.com/resources/pulumi-kubernetes-better-together/) on November 18, 2024, to see how easy it is to manage Kubernetes with Pulumi.
