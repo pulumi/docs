@@ -1,6 +1,6 @@
 ---
 title: "Announcing dependency caching for Pulumi Deployments"
-date: 2024-11-11
+date: 2024-11-11T18:39:54-05:00
 meta_desc: "Dependency caching for Pulumi Deployments is now available, speeding up your deployments by reusing dependencies across runs."
 meta_image: meta.png
 authors:
@@ -12,7 +12,7 @@ tags:
 - caching
 ---
 
-We’re excited to announce dependency caching for Pulumi Deployments! This new feature is designed to significantly speed up deployment times by caching dependencies between runs, ensuring faster and more efficient workflows for every Pulumi user.
+We’re excited to announce dependency caching for [Pulumi Deployments](/docs/pulumi-cloud/deployments/)! This new feature is designed to significantly speed up deployment times by reducing dependency installation time by up to 80%, ensuring faster and more efficient workflows for every Pulumi user.
 
 When using Pulumi Deployments, installing dependencies can be a time-consuming part of a deployment. With dependency caching, Pulumi can reuse previously installed dependencies, allowing your deployments to skip redundant installation steps and focus on the task at hand. This optimization is especially helpful for frequent deployments, reducing both time and compute resources.
 
@@ -83,6 +83,6 @@ For more information on how dependency caching works with Pulumi Cloud Deploymen
 
 ## What’s next?
 
-We’re continually working to enhance Pulumi Deployments and optimize the developer experience. Dependency caching is just one of the many ways we’re committed to improving this experience, and we’re excited to hear your feedback. Give it a try, and let us know how it improves your deployments!
+We’re continually working to enhance Pulumi Deployments and optimize the developer experience. Dependency caching is just one of the many ways we’re committed to improving this experience, and we’re excited to hear [your feedback](https://github.com/pulumi/pulumi-cloud-requests/issues/new/choose). Give it a try, and let us know how it improves your deployments!
 
-Ready to get started? Sign in to Pulumi Cloud and experience faster deployments today!
+Ready to get started? [Sign in to Pulumi Cloud](https://app.pulumi.com) and experience faster deployments today!
