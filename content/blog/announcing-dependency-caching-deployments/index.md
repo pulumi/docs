@@ -23,8 +23,8 @@ When using Pulumi Deployments, installing dependencies can be a time-consuming p
 Pulumi Deployments now automatically caches dependencies for popular package managers, such as npm, pip, and go modules. When a deployment is triggered, Pulumi will:
 
 1.	Check for an existing cache of your dependencies.
-2.	If a cache is available and relevant to your project, Pulumi will reuse those dependencies, bypassing the need to install them from scratch.
-3.	If dependencies have changed, Pulumi will update the cache to reflect these changes, ensuring it remains accurate for subsequent deployments.
+2.	If a cache already exists, Pulumi will reuse those dependencies, bypassing the need to install them from scratch.
+3.	If a cache does not exist, or if dependencies have changed, Pulumi will create a new cache to be used for subsequent deployments.
 
 The end result? Faster, more efficient deployments that get your infrastructure changes live more quickly.
 
