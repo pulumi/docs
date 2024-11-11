@@ -22,9 +22,9 @@ storage_account_name = storage_account.name
 blob_container_name = blob_container.name
 
 blob_resource = azure_native.storage.Blob("blobresource",
-    account_name=storage_account.name,
-    container_name=blob_container.name,
-    resource_group_name=resource_group.name,
+    account_name=storage_account_name,
+    container_name=blob_container_name,
+    resource_group_name=resource_group_name,
     access_tier=azure_native.storage.BlobAccessTier.HOT,
     source=pulumi.StringAsset("content"),
     type=azure_native.storage.BlobType.BLOCK
