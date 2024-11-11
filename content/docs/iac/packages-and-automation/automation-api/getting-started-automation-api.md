@@ -67,11 +67,7 @@ This tutorial is based on the [`inlineProgram-ts` example](https://github.com/pu
 ```typescript
 const pulumiProgram = async () => {
     // Create a bucket and expose a website index document.
-    const siteBucket = new s3.Bucket("s3-website-bucket", {
-        website: {
-            indexDocument: "index.html",
-        },
-    });
+    const siteBucket = new s3.BucketV2("s3-website-bucket", {});
 
     const indexContent = `<html><head>
 <title>Hello S3</title><meta charset="UTF-8">
@@ -80,39 +76,42 @@ const pulumiProgram = async () => {
 </body></html>
 `
 
-    // Write our index.html into the site bucket.
-    let object = new s3.BucketObject("index", {
-        bucket: siteBucket,
-        content: indexContent,
-        contentType: "text/html; charset=utf-8",
-        key: "index.html"
+    const ownershipControls = new aws.s3.BucketOwnershipControls("ownership-controls", {
+        bucket: siteBucket.id,
+        rule: {
+            objectOwnership: "ObjectWriter",
+        },
     });
 
-    // Create an S3 Bucket Policy to allow public read of all objects in bucket.
-    function publicReadPolicyForBucket(bucketName): PolicyDocument {
-        return {
-            Version: "2012-10-17",
-            Statement: [{
-                Effect: "Allow",
-                Principal: "*",
-                Action: [
-                    "s3:GetObject"
-                ],
-                Resource: [
-                    `arn:aws:s3:::${bucketName}/*` // Policy refers to bucket name explicitly.
-                ]
-            }]
-        };
-    }
+    const publicAccessBlock = new aws.s3.BucketPublicAccessBlock("public-access-block", {
+        bucket: siteBucket.id,
+        blockPublicAcls: false,
+    });
 
-    // Set the access policy for the bucket so all objects are readable.
-    let bucketPolicy = new s3.BucketPolicy("bucketPolicy", {
-        bucket: siteBucket.bucket, // Refer to the bucket created earlier.
-        policy: siteBucket.bucket.apply(publicReadPolicyForBucket) // Use output property `siteBucket.bucket`.
+    const website = new aws.s3.BucketWebsiteConfigurationV2("website", {
+        bucket: siteBucket.id,
+        indexDocument: {
+            suffix: "index.html",
+        },
+    });
+
+    // Write our index.html into the site bucket.
+    const object = new s3.BucketObject("index", {
+        bucket: siteBucket.id,
+        content: indexContent,
+        contentType: "text/html; charset=utf-8",
+        key: "index.html",
+        acl: "public-read"
+    }, {
+        dependsOn: [
+            publicAccessBlock,
+            ownershipControls,
+            website,
+        ],
     });
 
     return {
-        websiteUrl: siteBucket.websiteEndpoint,
+        websiteUrl: website.websiteEndpoint,
     };
 };
 ```
