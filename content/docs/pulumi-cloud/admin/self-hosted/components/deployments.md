@@ -28,8 +28,6 @@ To manage your state with a self-managed backend, such as a cloud storage bucket
 
 To do so, follow these steps:
 
-1. [Install the Pulumi GitHub app](https://www.pulumi.com/docs/iac/packages-and-automation/continuous-delivery/github-app) and ensure that it's integrated with your source control.
-
 1. Create a new deployment pool. Navigate to **Settings > Deployment runners** in the left-hand menu of your Pulumi Cloud organization, click **Add new pool**, and copy the generated access token.
 
 1. Select the **Kubernetes** tab and follow the on-screen instructions to install and configure your Kubernetes-native deployment agent.
