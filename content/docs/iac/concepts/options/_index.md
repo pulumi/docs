@@ -14,7 +14,9 @@ aliases:
 - /docs/concepts/options/
 ---
 
-All resource constructors accept an options argument that provide the following resource options:
+All Pulumi IaC resources support a common set of options that allow you to customize how your resources are managed. Resource options allow you to do things like protect resources from being deleted, express more fine-grained control to the order in which resources are changed, or apply custom code that will allow you to change the properties of your resources.
+
+Resource constructors accept the following resource options:
 
 - [additionalSecretOutputs](/docs/concepts/options/additionalsecretoutputs/): specify properties that must be encrypted as secrets.
 - [aliases](/docs/concepts/options/aliases/): specify aliases for this resource, so that renaming or refactoring doesn’t replace it.
