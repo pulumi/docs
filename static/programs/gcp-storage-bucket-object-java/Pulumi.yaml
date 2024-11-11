@@ -1,0 +1,7 @@
+name: gcp-storage-bucket-object-java
+description: An example that deploys a storage bucket and uploads a file on Google Cloud.
+runtime: java
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: gcp-java

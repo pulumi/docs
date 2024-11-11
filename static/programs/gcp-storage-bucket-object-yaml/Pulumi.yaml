@@ -1,0 +1,16 @@
+name: gcp-storage-bucket-object-yaml
+description: An example that deploys a storage bucket and uploads a file on Google Cloud.
+runtime: yaml
+resources:
+  # Create a GCP resource (Storage Bucket)
+  my-bucket:
+    type: gcp:storage:Bucket
+    properties:
+      location: US
+outputs:
+  # Export the DNS name of the bucket
+  bucketName: ${my-bucket.url}
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: gcp-yaml
