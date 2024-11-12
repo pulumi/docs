@@ -108,11 +108,11 @@ Both Pulumi and Crossplane offer modern infrastructure as code solutions, but wi
 |---------|:------:|:----------:|
 | **Multi-language Support** | ✓ | ✕ |
 | **State Management** | ✓ | ✓ |
-| **Automatic Drift Detection** | ✕ | ✓ |
+| **Automatic Drift Detection** | ✓ | ✓ |
 | **Preview Changes** | ✓ | ✕ |
 | **Platform Independence** | ✓ | ✕ |
 
-Pulumi leads in developer experience and flexibility, with robust multi-language support and platform independence. Crossplane's strength lies in automatic drift detection through Kubernetes, though this requires running Kubernetes as a dependency. Pulumi's drift detection requires using the CLI.
+Pulumi leads in developer experience and flexibility, with robust multi-language support and platform independence. Crossplane's strength lies in automatic drift detection through Kubernetes, though this requires running Kubernetes as a dependency. Pulumi doesn't have this Kubernetes dependency.
 
 Here's a revised version of the final section, emphasizing DevOps and platform engineers:
 
