@@ -42,7 +42,7 @@ Dependency caching can be enabled through deployment settings, however you choos
 
 ### Using the REST API
 
-You can also enable dependency caching using the Pulumi REST API. See the [API documentation](docs/pulumi-cloud/deployments/api/#cache-options) for more information.
+You can also enable dependency caching using the Pulumi REST API. See the [API documentation](/docs/pulumi-cloud/deployments/api/#cache-options) for more information.
 
 ### Defined as code with the Pulumi Cloud Service provider
 
