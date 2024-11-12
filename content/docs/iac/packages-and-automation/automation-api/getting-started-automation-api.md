@@ -67,11 +67,7 @@ This tutorial is based on the [`inlineProgram-ts` example](https://github.com/pu
 ```typescript
 const pulumiProgram = async () => {
     // Create a bucket and expose a website index document.
-    const siteBucket = new s3.Bucket("s3-website-bucket", {
-        website: {
-            indexDocument: "index.html",
-        },
-    });
+    const siteBucket = new s3.BucketV2("s3-website-bucket", {});
 
     const indexContent = `<html><head>
 <title>Hello S3</title><meta charset="UTF-8">
@@ -80,39 +76,42 @@ const pulumiProgram = async () => {
 </body></html>
 `
 
-    // Write our index.html into the site bucket.
-    let object = new s3.BucketObject("index", {
-        bucket: siteBucket,
-        content: indexContent,
-        contentType: "text/html; charset=utf-8",
-        key: "index.html"
+    const ownershipControls = new aws.s3.BucketOwnershipControls("ownership-controls", {
+        bucket: siteBucket.id,
+        rule: {
+            objectOwnership: "ObjectWriter",
+        },
     });
 
-    // Create an S3 Bucket Policy to allow public read of all objects in bucket.
-    function publicReadPolicyForBucket(bucketName): PolicyDocument {
-        return {
-            Version: "2012-10-17",
-            Statement: [{
-                Effect: "Allow",
-                Principal: "*",
-                Action: [
-                    "s3:GetObject"
-                ],
-                Resource: [
-                    `arn:aws:s3:::${bucketName}/*` // Policy refers to bucket name explicitly.
-                ]
-            }]
-        };
-    }
+    const publicAccessBlock = new aws.s3.BucketPublicAccessBlock("public-access-block", {
+        bucket: siteBucket.id,
+        blockPublicAcls: false,
+    });
 
-    // Set the access policy for the bucket so all objects are readable.
-    let bucketPolicy = new s3.BucketPolicy("bucketPolicy", {
-        bucket: siteBucket.bucket, // Refer to the bucket created earlier.
-        policy: siteBucket.bucket.apply(publicReadPolicyForBucket) // Use output property `siteBucket.bucket`.
+    const website = new aws.s3.BucketWebsiteConfigurationV2("website", {
+        bucket: siteBucket.id,
+        indexDocument: {
+            suffix: "index.html",
+        },
+    });
+
+    // Write our index.html into the site bucket.
+    const object = new s3.BucketObject("index", {
+        bucket: siteBucket.id,
+        content: indexContent,
+        contentType: "text/html; charset=utf-8",
+        key: "index.html",
+        acl: "public-read"
+    }, {
+        dependsOn: [
+            publicAccessBlock,
+            ownershipControls,
+            website,
+        ],
     });
 
     return {
-        websiteUrl: siteBucket.websiteEndpoint,
+        websiteUrl: website.websiteEndpoint,
     };
 };
 ```
@@ -128,7 +127,8 @@ This tutorial is based on the [`inline_program` example](https://github.com/pulu
 ```python
 def pulumi_program():
     # Create a bucket and expose a website index document.
-    site_bucket = s3.Bucket("s3-website-bucket", website=s3.BucketWebsiteArgs(index_document="index.html"))
+    site_bucket = s3.BucketV2("s3-website-bucket")
+
     index_content = """
     <html>
         <head><title>Hello S3</title><meta charset="UTF-8"></head>
@@ -139,27 +139,37 @@ def pulumi_program():
     </html>
     """
 
+    ownership_controls = s3.BucketOwnershipControls("ownership-controls",
+        bucket=site_bucket.id,
+        rule={
+            "object_ownership": "ObjectWriter",
+        })
+
+    public_access_block = s3.BucketPublicAccessBlock("public-access-block",
+        bucket=site_bucket.id,
+        block_public_acls=False)
+
+    website = aws.s3.BucketWebsiteConfigurationV2("website",
+        bucket=site_bucket.id,
+        index_document={
+            "suffix": "index.html",
+        })
+
     # Write our index.html into the site bucket.
     s3.BucketObject("index",
                     bucket=site_bucket.id,  # Reference to the s3.Bucket object.
                     content=index_content,
+                    acl="public-read",
                     key="index.html",  # Set the key of the object.
-                    content_type="text/html; charset=utf-8")  # Set the MIME type of the file.
-
-    # Set the access policy for the bucket so all objects are readable.
-    s3.BucketPolicy("bucket-policy", bucket=site_bucket.id, policy={
-        "Version": "2012-10-17",
-        "Statement": {
-            "Effect": "Allow",
-            "Principal": "*",
-            "Action": ["s3:GetObject"],
-            # Policy refers to bucket explicitly.
-            "Resource": [pulumi.Output.concat("arn:aws:s3:::", site_bucket.id, "/*")]
-        },
-    })
+                    content_type="text/html; charset=utf-8", # Set the MIME type of the file.
+                    opts=pulumi.ResourceOptions(depends_on=[
+                        public_access_block,
+                        ownership_controls,
+                        website,
+                    ]))
 
     # Export the website URL.
-    pulumi.export("website_url", site_bucket.website_endpoint)
+    pulumi.export("website_url", website.website_endpoint)
 ```
 
 {{% /choosable %}}
@@ -172,59 +182,66 @@ This tutorial is based on the [`inline_program` example](https://github.com/pulu
 
 ```go
 deployFunc := func(ctx *pulumi.Context) error {
-  // Similar go git_repo_program, our program defines a s3 website.
-  // Here we create the bucket.
-  siteBucket, err := s3.NewBucket(ctx, "s3-website-bucket", &s3.BucketArgs{
-    Website: s3.BucketWebsiteArgs{
-      IndexDocument: pulumi.String("index.html"),
-    },
-  })
-  if err != nil {
-    return err
-  }
+    // Similar go git_repo_program, our program defines a s3 website.
+    // Here we create the bucket.
+    siteBucket, err := s3.NewBucketV2(ctx, "s3-website-bucket", nil)
+    if err != nil {
+        return err
+    }
 
-  // We define and upload our HTML inline.
-  indexContent := `<html><head>
-  <title>Hello S3</title><meta charset="UTF-8">
+    // We define and upload our HTML inline.
+    indexContent := `<html><head>
+<title>Hello S3</title><meta charset="UTF-8">
 </head>
 <body><p>Hello, world!</p><p>Made with ❤️ with <a href="https://pulumi.com">Pulumi</a></p>
 </body></html>
 `
-  // Upload our index.html.
-  if _, err := s3.NewBucketObject(ctx, "index", &s3.BucketObjectArgs{
-    Bucket:      siteBucket.ID(), // Reference to the s3.Bucket object.
-    Content:     pulumi.String(indexContent),
-    Key:         pulumi.String("index.html"),               // Set the key of the object.
-    ContentType: pulumi.String("text/html; charset=utf-8"), // Set the MIME type of the file.
-  }); err != nil {
-    return err
-  }
 
-  // Set the access policy for the bucket so all objects are readable.
-  if _, err := s3.NewBucketPolicy(ctx, "bucketPolicy", &s3.BucketPolicyArgs{
-    Bucket: siteBucket.ID(), // Refer to the bucket created earlier.
-    Policy: pulumi.Any(map[string]interface{}{
-      "Version": "2012-10-17",
-      "Statement": []map[string]interface{}{
-        {
-          "Effect":    "Allow",
-          "Principal": "*",
-          "Action": []interface{}{
-            "s3:GetObject",
-          },
-          "Resource": []interface{}{
-            pulumi.Sprintf("arn:aws:s3:::%s/*", siteBucket.ID()), // Policy refers to bucket name explicitly.
-          },
+    ownershipControls, err := s3.NewBucketOwnershipControls(ctx, "ownership-controls", &s3.BucketOwnershipControlsArgs{
+        Bucket: siteBucket.ID(),
+        Rule: &s3.BucketOwnershipControlsRuleArgs{
+            ObjectOwnership: pulumi.String("ObjectWriter"),
         },
-      },
-    }),
-  }); err != nil {
-    return err
-  }
+    })
+    if err != nil {
+        return err
+    }
 
-  // Export the website URL.
-  ctx.Export("websiteUrl", siteBucket.WebsiteEndpoint)
-  return nil
+    publicAccessBlock, err := s3.NewBucketPublicAccessBlock(ctx, "public-access-block", &s3.BucketPublicAccessBlockArgs{
+        Bucket:          siteBucket.ID(),
+        BlockPublicAcls: pulumi.Bool(false),
+    })
+    if err != nil {
+        return err
+    }
+
+    website, err := s3.NewBucketWebsiteConfigurationV2(ctx, "website", &s3.BucketWebsiteConfigurationV2Args{
+        Bucket: siteBucket.ID(),
+        IndexDocument: &s3.BucketWebsiteConfigurationV2IndexDocumentArgs{
+            Suffix: pulumi.String("index.html"),
+        },
+    })
+    if err != nil {
+        return err
+    }
+    // Upload our index.html.
+    if _, err := s3.NewBucketObject(ctx, "index", &s3.BucketObjectArgs{
+        Bucket:      siteBucket.ID(), // Reference to the s3.Bucket object.
+        Content:     pulumi.String(indexContent),
+        Acl:         pulumi.String("public-read"),
+        Key:         pulumi.String("index.html"),               // Set the key of the object.
+        ContentType: pulumi.String("text/html; charset=utf-8"), // Set the MIME type of the file.
+    }, pulumi.DependsOn([]pulumi.Resource{
+        publicAccessBlock,
+        ownershipControls,
+        website,
+    })); err != nil {
+        return err
+    }
+
+    // Export the website URL.
+    ctx.Export("websiteUrl", website.WebsiteEndpoint)
+    return nil
 }
 ```
 
@@ -241,75 +258,63 @@ This tutorial is based on the [`InlineProgram` example](https://github.com/pulum
 var program = PulumiFn.Create(() =>
 {
     // Create a bucket and expose a website index document.
-    var siteBucket = new Pulumi.Aws.S3.Bucket(
-        "s3-website-bucket",
-        new Pulumi.Aws.S3.BucketArgs
-        {
-            Website = new Pulumi.Aws.S3.Inputs.BucketWebsiteArgs
-            {
-                IndexDocument = "index.html",
-            },
-        });
+    var siteBucket = new Pulumi.Aws.S3.Bucket("s3-website-bucket");
 
-                const string indexContent = @"
+    const string indexContent = @"
 <html>
-    <head><titl>Hello S3</title><meta charset=""UTF-8""></head>
+    <head><title>Hello S3</title><meta charset=""UTF-8""></head>
     <body>
         <p>Hello, world!</p>
         <p>Made with ❤️ with <a href=""https://pulumi.com"">Pulumi</a></p>
     </body>
-</html>
-";
+</html>";
 
-    // Write our index.html into the site bucket.
-    var @object = new Pulumi.Aws.S3.BucketObject(
-        "index",
-        new Pulumi.Aws.S3.BucketObjectArgs
-        {
-            Bucket = siteBucket.BucketName, // Reference to the s3 bucket object.
-            Content = indexContent,
-            Key = "index.html", // Set the key of the object.
-            ContentType = "text/html; charset=utf-8", // Set the MIME type of the file.
-        });
-
-    var bucketPolicyDocument = siteBucket.Arn.Apply(bucketArn =>
+    var ownershipControls = new Aws.S3.BucketOwnershipControls("ownership-controls", new()
     {
-        return Output.Create(Pulumi.Aws.Iam.GetPolicyDocument.InvokeAsync(
-            new Pulumi.Aws.Iam.GetPolicyDocumentArgs
-            {
-                Statements = new List<Pulumi.Aws.Iam.Inputs.GetPolicyDocumentStatementArgs>
-                {
-                    new Pulumi.Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
-                    {
-                        Effect = "Allow",
-                        Principals = new List<Pulumi.Aws.Iam.Inputs.GetPolicyDocumentStatementPrincipalArgs>
-                        {
-                            new Pulumi.Aws.Iam.Inputs.GetPolicyDocumentStatementPrincipalArgs
-                            {
-                                Identifiers = new List<string> { "*" },
-                                Type = "AWS",
-                            },
-                        },
-                        Actions = new List<string> { "s3:GetObject" },
-                        Resources = new List<string> { $"{bucketArn}/*" },
-                    },
-                },
-            }));
+        Bucket = siteBucket.Id,
+        Rule = new Aws.S3.Inputs.BucketOwnershipControlsRuleArgs
+        {
+            ObjectOwnership = "ObjectWriter",
+        },
     });
 
-    // Set the access policy for the bucket so all objects are readable.
-    new Pulumi.Aws.S3.BucketPolicy(
-        "bucket-policy",
-        new Pulumi.Aws.S3.BucketPolicyArgs
+    var publicAccessBlock = new Aws.S3.BucketPublicAccessBlock("public-access-block", new()
+    {
+        Bucket = siteBucket.Id,
+        BlockPublicAcls = false,
+    });
+
+    var website = new Aws.S3.BucketWebsiteConfigurationV2("website", new()
+    {
+        Bucket = siteBucket.Id,
+        IndexDocument = new Aws.S3.Inputs.BucketWebsiteConfigurationV2IndexDocumentArgs
         {
-            Bucket = siteBucket.BucketName,
-            Policy = bucketPolicyDocument.Apply(x => x.Json),
-        });
+            Suffix = "index.html",
+        },
+    });
+
+    // Write our index.html into the site bucket.
+    var @object = new Pulumi.Aws.S3.BucketObject("index", new Pulumi.Aws.S3.BucketObjectArgs
+    {
+        Bucket = siteBucket.BucketName, // Reference to the s3 bucket object.
+        Content = indexContent,
+        Acl = "public-read",
+        Key = "index.html", // Set the key of the object.
+        ContentType = "text/html; charset=utf-8", // Set the MIME type of the file.
+    }, new CustomResourceOptions
+    {
+        DependsOn =
+        {
+            publicAccessBlock,
+            ownershipControls,
+            website,
+        },
+    });
 
     // Export the website url.
     return new Dictionary<string, object?>
     {
-        ["website_url"] = siteBucket.WebsiteEndpoint,
+        ["website_url"] = website.WebsiteEndpoint
     };
 });
 ```
