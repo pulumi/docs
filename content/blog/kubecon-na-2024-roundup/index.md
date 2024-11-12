@@ -11,6 +11,8 @@ tags:
     - kubecon
     - kubernetes
     - conferences
+aliases:
+    - /blog/kubecon-2024-launches
 ---
 
 Pulumi is excited to be at KubeCon North America this week, the premier event for all things Kubernetes and cloud-native. KubeCon is the gathering place for developers, enterprises, and cloud native experts to meet and further the education and advancement of Kubernetes and cloud native computing. At Pulumi, we are strongly committed to Kubernetes and continue to support the ecosystem with infrastructure management solutions that empower teams to automate, secure, and manage Kubernetes at scale.
