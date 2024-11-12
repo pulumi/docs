@@ -1,6 +1,6 @@
 ---
 title: "Announcing dependency caching for Pulumi Deployments"
-date: 2024-11-11T18:39:54-05:00
+date: 2024-11-12T11:30:00-07:00
 meta_desc: "Dependency caching for Pulumi Deployments is now available, speeding up your deployments by reusing dependencies across runs."
 meta_image: meta.png
 authors:
