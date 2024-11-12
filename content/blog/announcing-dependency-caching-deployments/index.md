@@ -26,7 +26,7 @@ Pulumi Deployments now automatically caches dependencies for popular package man
 2.	If a cache already exists, Pulumi will reuse those dependencies, bypassing the need to install them from scratch.
 3.	If a cache does not exist, or if dependencies have changed, Pulumi will manage the cache to be used for subsequent deployments.
 
-The end result? Faster, more efficient deployments that get your infrastructure changes deployed more quickly.
+The end result? Faster, more efficient deployments to push out infrastructure changes quickly.
 
 ## How to enable dependency caching
 
@@ -77,9 +77,7 @@ const settings = new service.DeploymentSettings("deployment_settings", {
 });
 ```
 
-If your project uses a supported package manager, Pulumi will automatically detect and manage dependency caching for you.
-
-For more information on how dependency caching works with Pulumi Cloud Deployments, check out the [FAQ](/docs/pulumi-cloud/deployments/faq/#dependency-caching) on dependency caching.
+For more information on how dependency caching works with Pulumi Cloud Deployments and the list of supported package managers, check out the [FAQ](/docs/pulumi-cloud/deployments/faq/#dependency-caching) on dependency caching.
 
 ## What’s next?
 
