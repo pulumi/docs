@@ -20,7 +20,7 @@
     :last-child {
         margin-bottom: 0;
     }
-
+    
     a {
         &:hover {
             text-decoration: underline;
@@ -116,5 +116,11 @@
 
     div.highlight div.copy-button-container button.copy-button i {
         color: #fff;
+    }
+}
+
+section.docs-content div.note { 
+    :last-child {
+        padding-bottom: 0;
     }
 }
