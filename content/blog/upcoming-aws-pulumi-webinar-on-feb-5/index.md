@@ -9,7 +9,7 @@ meta_image: code-comparison.png
 
 Pulumi is hosting a webinar with AWS Fargate **on
 February 5th, 10AM PST** (register
-[here](https://pages.awscloud.com/acq_NAMER_IPC-Pulumi-February-2019-Registration-Page.html?sc_channel=el&sc_campaign=ContainersPulumiFebruary2019&sc_country=US&sc_geo=NAMER&sc_category=mult&sc_outcome=acq%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20&trk=Partner_Website_Landing_Page)).
+[here](https://www.pulumi.com/resources/#upcoming)).
 We'll be chatting about how to implement cloud native infrastructure
 across your organization using [AWS and Pulumi](/crosswalk/aws/): general purpose programming
 languages to deliver everything from VMs to Kubernetes to Serverless.
@@ -17,7 +17,7 @@ languages to deliver everything from VMs to Kubernetes to Serverless.
 
 ## Register Now
 
-[Registration link](https://pages.awscloud.com/acq_NAMER_IPC-Pulumi-February-2019-Registration-Page.html?sc_channel=el&sc_campaign=ContainersPulumiFebruary2019).
+[Registration link](https://www.pulumi.com/resources/#upcoming).
 Specifically, you will learn:
 
 - How using general-purpose programming languages provides familiar
@@ -43,7 +43,7 @@ techniques.
 
 This webinar will be useful to developers, System Architects, IT
 managers and DevOps managers. (register
-[here](https://pages.awscloud.com/acq_NAMER_IPC-Pulumi-February-2019-Registration-Page.html?sc_channel=el&sc_campaign=ContainersPulumiFebruary2019)).
+[here](https://www.pulumi.com/resources/#upcoming)).
 
 Ask any questions you have to our speakers, Trevor Hansen (Startup
 Partner Solutions Architect), Luke Hoban (CTO, Pulumi), and Kim Hamilton
