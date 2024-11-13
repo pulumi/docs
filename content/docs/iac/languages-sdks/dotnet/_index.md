@@ -279,3 +279,93 @@ In addition to the standard packages the [Pulumi Registry](/registry/) houses 10
     <dt>Pulumi Automation API</dt>
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Automation/Pulumi.Automation.html">Pulumi.Automation</a></dd>
 </dl>
+
+## Troubleshooting
+
+### What .NET framework do I need to have installed?
+
+While we will always officially support the [current set of .NET Frameworks that are supported by Microsoft](https://dotnet.microsoft.com/en-us/platform/support/policy/dotnet-core#lifecycle), that isn't what is always in use at the moment. Pulumi supports multiple side-by-side versions of the .NET runtime at once. You might be supporting multiple programs that depend on different runtimes. Luckily, Pulumi actually is able to use a wide range of .NET runtime versions side-by-side.
+
+This can get confusing. You may encounter an error like this:
+
+```
+It was not possible to find any compatible framework version
+The framework 'Microsoft.NETCore.App', version '3.1.0' was not found.
+      - The following frameworks were found:
+          5.0.0 at [/usr/local/share/dotnet/shared/Microsoft.NETCore.App]
+You can resolve the problem by installing the specified framework and/or SDK.
+The specified framework can be found at:
+      - https://aka.ms/dotnet-core-applaunch?framework=Microsoft.NETCore.App&framework_version=3.1.0&arch=x64&rid=osx.11.0-x64
+
+error: an unhandled error occurred: Program exited with non-zero exit code: 150
+```
+
+What this error is telling you is that the Pulumi program you're trying to run was defined as a .NET 3 app but the installed version of .NET you have is .NET 5. There are two ways to resolve that, either you can install the version of .NET that the program expects, or you can update the program to use the version you have. The framework version is defined in your `.csproj`/`.fsproj` file like this:
+
+```
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+</Project>
+```
+
+Here the `<TargetFramework>` value is set to `net8.0` indicating that this code requires the .NET 8 framework to run. Depending on the code you're using, this could be any version of the .NET runtime from .NET 3 to .NET 9. You need to have the version installed that matches the project file.
+
+To see the versions you have installed, run `dotnet --info`:
+
+```
+$ dotnet --info
+
+.NET SDK:
+ Version:   7.0.101
+ Commit:    bb24aafa11
+
+Runtime Environment:
+ OS Name:     Mac OS X
+ OS Version:  13.2
+ OS Platform: Darwin
+ RID:         osx.13-x64
+ Base Path:   /usr/local/share/dotnet/sdk/7.0.101/
+
+Host:
+  Version:      7.0.1
+  Architecture: x64
+  Commit:       97203d38ba
+
+.NET SDKs installed:
+  3.1.424 [/usr/local/share/dotnet/sdk]
+  6.0.201 [/usr/local/share/dotnet/sdk]
+  6.0.202 [/usr/local/share/dotnet/sdk]
+  6.0.402 [/usr/local/share/dotnet/sdk]
+  6.0.404 [/usr/local/share/dotnet/sdk]
+  7.0.101 [/usr/local/share/dotnet/sdk]
+
+.NET runtimes installed:
+  Microsoft.AspNetCore.App 3.1.25 [/usr/local/share/dotnet/shared/Microsoft.AspNetCore.App]
+  Microsoft.AspNetCore.App 3.1.30 [/usr/local/share/dotnet/shared/Microsoft.AspNetCore.App]
+  Microsoft.AspNetCore.App 5.0.15 [/usr/local/share/dotnet/shared/Microsoft.AspNetCore.App]
+  Microsoft.AspNetCore.App 6.0.3 [/usr/local/share/dotnet/shared/Microsoft.AspNetCore.App]
+  Microsoft.AspNetCore.App 6.0.4 [/usr/local/share/dotnet/shared/Microsoft.AspNetCore.App]
+  Microsoft.AspNetCore.App 6.0.10 [/usr/local/share/dotnet/shared/Microsoft.AspNetCore.App]
+  Microsoft.AspNetCore.App 6.0.12 [/usr/local/share/dotnet/shared/Microsoft.AspNetCore.App]
+  Microsoft.AspNetCore.App 7.0.1 [/usr/local/share/dotnet/shared/Microsoft.AspNetCore.App]
+  Microsoft.NETCore.App 2.0.9 [/usr/local/share/dotnet/shared/Microsoft.NETCore.App]
+  Microsoft.NETCore.App 3.1.30 [/usr/local/share/dotnet/shared/Microsoft.NETCore.App]
+  Microsoft.NETCore.App 5.0.15 [/usr/local/share/dotnet/shared/Microsoft.NETCore.App]
+  Microsoft.NETCore.App 6.0.3 [/usr/local/share/dotnet/shared/Microsoft.NETCore.App]
+  Microsoft.NETCore.App 6.0.4 [/usr/local/share/dotnet/shared/Microsoft.NETCore.App]
+  Microsoft.NETCore.App 6.0.10 [/usr/local/share/dotnet/shared/Microsoft.NETCore.App]
+  Microsoft.NETCore.App 6.0.12 [/usr/local/share/dotnet/shared/Microsoft.NETCore.App]
+  Microsoft.NETCore.App 7.0.1 [/usr/local/share/dotnet/shared/Microsoft.NETCore.App]
+```
+
+Notice that the `SDKs`, `NETCore.App`, and `AspNetCore.App` runtimes are all listed separately. Look closely at the error message Pulumi gave you and try to determine exactly which one of those you are missing, then download and install the correct version. For example, some installers don't install the ASP.net runtime, which can leave you scratching your head if your project depends on it, and you have the right SDK version installed, but not the ASP.net runtime!
+
+At the time of this writing, .NET 8 is the current long-term support version, and all of our built-in .NET templates have been upgraded to require .NET 8. If you have an older version like .NET 6 installed, you might need to upgrade your runtime before using a template, or it could give you an error. Always check the project file first! You can also try setting the project file back to .NET 6. We currently test on .NET 6 and .NET 8 so rolling it back to .NET 6 is likely to be fine and would be a simple edit to the project file's `<TargetFramework>` property.
+
+When in doubt, reach out! We have an active [Community Slack channel](https://slack.pulumi.com/) and are happy to help you get unblocked if you're running into an issue like this.
