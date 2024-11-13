@@ -132,7 +132,7 @@ environment:
 
 In this manner, you can configure separate environments for staging and production, with a complex set of configuration values and secrets, using different environments for each one. From the developer’s perspective they would only need to change `aws-staging` to `aws-production` when they go to deploy their stack.
 
-Another strong benefit of this approach is that all secrets will be encrypted both in-flight and at-rest. Pulumi waits until the last moment to decrypt secrets at runtime. By default, uses automatic, per-stack encryption keys provided by Pulumi Cloud, but you could use a [provider of your own choosing](http://www-testing-pulumi-docs-origin-pr-12530-f0b1e6aa.s3-website.us-west-2.amazonaws.com/docs/concepts/secrets/#configuring-secrets-encryption) instead.
+Another strong benefit of this approach is that all secrets will be encrypted both in-flight and at-rest. Pulumi waits until the last moment to decrypt secrets at runtime. By default, uses automatic, per-stack encryption keys provided by Pulumi Cloud, but you could use a [provider of your own choosing](/docs/concepts/secrets/#configuring-secrets-encryption) instead.
 
 ## Pulumi Crossguard: Policy-as-Code
 
