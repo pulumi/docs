@@ -282,9 +282,9 @@ In addition to the standard packages the [Pulumi Registry](/registry/) houses 10
 
 ## Troubleshooting
 
-### What .NET framework do I need to have installed? 
+### What .NET framework do I need to have installed?
 
-While we will always officially support the [current set of .NET Frameworks that are supported by Microsoft](https://dotnet.microsoft.com/en-us/platform/support/policy/dotnet-core#lifecycle), that isn't what is always in use at the moment. Pulumi supports multiple side-by-side versions of the .NET runtime at once. You might be supporting multiple programs that depend on different runtimes. Luckily, Pulumi actually is able to use a wide range of .NET runtime versions side-by-side. 
+While we will always officially support the [current set of .NET Frameworks that are supported by Microsoft](https://dotnet.microsoft.com/en-us/platform/support/policy/dotnet-core#lifecycle), that isn't what is always in use at the moment. Pulumi supports multiple side-by-side versions of the .NET runtime at once. You might be supporting multiple programs that depend on different runtimes. Luckily, Pulumi actually is able to use a wide range of .NET runtime versions side-by-side.
 
 This can get confusing. You may encounter an error like this:
 
@@ -296,7 +296,7 @@ The framework 'Microsoft.NETCore.App', version '3.1.0' was not found.
 You can resolve the problem by installing the specified framework and/or SDK.
 The specified framework can be found at:
       - https://aka.ms/dotnet-core-applaunch?framework=Microsoft.NETCore.App&framework_version=3.1.0&arch=x64&rid=osx.11.0-x64
- 
+
 error: an unhandled error occurred: Program exited with non-zero exit code: 150
 ```
 
@@ -317,6 +317,7 @@ What this error is telling you is that the Pulumi program you're trying to run w
 Here the `<TargetFramework>` value is set to `net8.0` indicating that this code requires the .NET 8 framework to run. Depending on the code you're using, this could be any version of the .NET runtime from .NET 3 to .NET 9. You need to have the version installed that matches the project file.
 
 To see the versions you have installed, run `dotnet --info`:
+
 ```
 $ dotnet --info
 
@@ -363,7 +364,7 @@ Host:
   Microsoft.NETCore.App 7.0.1 [/usr/local/share/dotnet/shared/Microsoft.NETCore.App]
 ```
 
-Notice that the `SDKs`, `NETCore.App`, and `AspNetCore.App` runtimes are all listed separately. Look closely at the error message Pulumi gave you and try to determine exactly which one of those you are missing, then download and install the correct version. For example, some installers don't install the ASP.net runtime, which can leave you scratching your head if your project depends on it, and you have the right SDK version installed, but not the ASP.net runtime! 
+Notice that the `SDKs`, `NETCore.App`, and `AspNetCore.App` runtimes are all listed separately. Look closely at the error message Pulumi gave you and try to determine exactly which one of those you are missing, then download and install the correct version. For example, some installers don't install the ASP.net runtime, which can leave you scratching your head if your project depends on it, and you have the right SDK version installed, but not the ASP.net runtime!
 
 At the time of this writing, .NET 8 is the current long-term support version, and all of our built-in .NET templates have been upgraded to require .NET 8. If you have an older version like .NET 6 installed, you might need to upgrade your runtime before using a template, or it could give you an error. Always check the project file first! You can also try setting the project file back to .NET 6. We currently test on .NET 6 and .NET 8 so rolling it back to .NET 6 is likely to be fine and would be a simple edit to the project file's `<TargetFramework>` property.
 
