@@ -51,8 +51,9 @@ module.exports = {
         
         const subheads = [];
 
-        // For now, only bother with H2s, as the noise level goes way up with H3s.
-        $("main h2").each((index, element) => {
+        // Updated to include H2, H3, and H4 to expand search range.
+        // If this becomes too noisy, reduce scope back to H2s only.
+        $("main h2, main h3, main h4").each((index, element) => {
             const $h2 = $(element);
             const id = $h2.attr("id");
 
