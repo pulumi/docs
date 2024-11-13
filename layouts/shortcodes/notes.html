@@ -1,6 +1,10 @@
 {{ $type := default "info" (.Get "type") }}
 {{ $icon := "info-circle" }}
 
+{{ if eq $type "tip" }}
+    {{ $icon = "lightbulb" }}
+{{ end }}
+
 {{ if eq $type "warning" }}
     {{ $icon = "exclamation-triangle" }}
 {{ end }}
