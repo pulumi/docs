@@ -66,6 +66,7 @@ tiers:
                   - Secrets versioning
                   - Audit logs
                   - 12x5 Enterprise Support available
+                  - Priority feature requests
             - title: Business Critical
               subtitle: Advanced security, compliance, and hosting for mission-critical needs.
               iac_price: Custom
