@@ -74,6 +74,26 @@
         }
     }
 
+    &.note-tip {
+        background: #f1feea;
+
+        a {
+            color: #338d72;
+        }
+
+        i {
+            color: #25a78b;
+        }
+
+        div.line {
+            background-color: #4ce1b4;
+        }
+
+        code {
+            background-color: #b2fbe0;
+        }
+    }
+
     &.note-warning {
         background: #fcf2e9;
 

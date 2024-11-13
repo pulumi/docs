@@ -36,6 +36,7 @@ Our docs currently support two kinds of note: `info`-level and `warning`-level.
 * Use notes in general to communicate important information.
 * Try to limit the number of notes within a single page.
 * Use `info`-level notes to convey general information.
+* Use `tip`-level notes to convey helpful ideas.
 * Use `warning`-level notes for information that, if missed, could lead to negative or unexpected consequences.
 
 ### Examples
@@ -43,6 +44,10 @@ Our docs currently support two kinds of note: `info`-level and `warning`-level.
 ```go
 {{% notes type="info" %}}
 This bit of info is important enough to call out, but not critical.
+{{% /notes %}}
+
+{{% notes type="tip" %}}
+This bit of info is a great idea, that might be really helpful.
 {{% /notes %}}
 
 {{% notes type="warning" %}}
