@@ -24,7 +24,7 @@ weight: 999
 
 # A brief summary of the tutorial. It appears at the top of the tutorial page. Markdown is fine.
 summary: |
-    In this tutorial, you will learn how to work with stack outputs, specifically how to export values from a stack and how to reference those values from another stack. You will do this by creating simple Google Cloud TBD resources in one stack. You will then create a TBD resource in a second project/stack that will TBD.
+    In this tutorial, you will learn how to work with stack outputs, specifically how to export values from a stack and how to reference those values from another stack. You will do this by creating simple Google Cloud Storage Bucket and custom IAM Role resources in one stack. You will then create a Bucket Object resource in a second project/stack that will upload a file to the bucket created in the first stack.
 
 # A list of three to five things the reader will have learned by the end of the tutorial.
 youll_learn:
