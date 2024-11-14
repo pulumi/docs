@@ -48,13 +48,7 @@ estimated_time: 15
 
 aliases:
   - /docs/using-pulumi/stack-outputs-and-references/
-<<<<<<< HEAD
-  - /tutorials/stack-outputs-and-references
-=======
-  - /tutorials/building-with-pulumi/stack-outputs/
-  - /tutorials/building-with-pulumi/stack-references/
   - /tutorials/stack-outputs-and-references/
->>>>>>> 6e07aaaf650ef0679e36a89e1d732622dbc3fb62
 ---
 
 ## Understanding stack outputs
