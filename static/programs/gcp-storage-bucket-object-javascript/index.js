@@ -21,7 +21,7 @@ const bucketViewerRoleAssignment = new gcp.storage.BucketIAMMember("bucketViewer
 });
 
 const bucketName = bucket.name;
-const roleName = role.name;
+const roleName = role.roleId;
 
 const bucketObject = new gcp.storage.BucketObject("bucketObject", {
     bucket: bucketName,
@@ -29,5 +29,5 @@ const bucketObject = new gcp.storage.BucketObject("bucketObject", {
     contentType: "text/plain",
 });
 
-exports.roleName = role.name;
+exports.roleName = role.roleId;
 exports.bucketName = bucket.name;

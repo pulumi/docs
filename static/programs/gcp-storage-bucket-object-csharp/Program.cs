@@ -31,7 +31,7 @@ return await Deployment.RunAsync(() =>
     });
 
     var bucketName = bucket.Name;
-    var roleName = role.Name;
+    var roleName = role.RoleId;
 
     var bucketObject = new Gcp.Storage.BucketObject("bucketObject", new()
     {
@@ -42,7 +42,7 @@ return await Deployment.RunAsync(() =>
 
     return new Dictionary<string, object?>
     {
-        ["roleName"] = role.Name,
+        ["roleName"] = role.RoleId,
         ["bucketName"] = bucket.Name,
     };
 });

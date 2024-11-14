@@ -26,7 +26,7 @@ bucket_iam_member = storage.BucketIAMMember(
 )
 
 bucket_name = bucket.name
-role_name = role.name
+role_name = role.role_id
 
 file_content = f"My bucket role name is: {role_name}"
 
@@ -37,5 +37,5 @@ bucket_object = storage.BucketObject(
     content_type="text/plain"
 )
 
-pulumi.export("roleName", role.name)
+pulumi.export("roleName", role.role_id)
 pulumi.export("bucketName", bucket.name)

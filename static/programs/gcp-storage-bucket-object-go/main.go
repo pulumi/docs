@@ -44,7 +44,7 @@ func main() {
 			return name
 		}).(pulumi.StringOutput)
 
-		roleName := role.Name.ApplyT(func(name string) string {
+		roleName := role.RoleId.ApplyT(func(name string) string {
 			return name
 		}).(pulumi.StringOutput)
 
@@ -59,7 +59,7 @@ func main() {
 			return err
 		}
 		
-		ctx.Export("roleName", role.Name)
+		ctx.Export("roleName", role.RoleId)
 		ctx.Export("bucketName", bucket.Name)
 		return nil
 	})
