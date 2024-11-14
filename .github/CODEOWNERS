@@ -7,3 +7,6 @@ content/docs/iac/download-install/versions.md
 
 content/tutorials/ @pulumi/docs
 content/templates/ @pulumi/docs
+
+# Require approval from docs team for edits to robots.txt (see issue #9885)
+layouts/robots.txt @pulumi/docs

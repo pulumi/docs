@@ -1,0 +1,39 @@
+name: azure-native-storage-account-blob-yaml
+description: An example that deploys a blob into a blob storage account on Azure.
+runtime: yaml
+
+resources:
+  resourceGroup:
+    type: azure-native:resources:ResourceGroup
+  storageAccount:
+    type: azure-native:storage:StorageAccount
+    properties:
+      resourceGroupName: ${resourceGroup.name}
+      sku:
+        name: Standard_LRS
+      kind: StorageV2
+  blobContainer:
+    type: azure-native:storage:BlobContainer
+    properties:
+      accountName: ${storageAccount.name}
+      resourceGroupName: ${resourceGroup.name}
+  blobResource:
+    type: azure-native:storage:Blob
+    properties:
+      accessTier: Hot
+      accountName: ${storageAccountName}
+      containerName: ${blobContainerName}
+      resourceGroupName: ${resourceGroupName}
+      source:
+        fn::StringAsset: content
+      type: Block
+
+variables:
+  resourceGroupName: ${resourceGroup.name}
+  storageAccountName: ${storageAccount.name}
+  blobContainerName: ${blobContainer.name}
+
+outputs:
+  resourceGroupName: ${resourceGroup.name}
+  storageAccountName: ${storageAccount.name}
+  blobContainerName: ${blobContainer.name}

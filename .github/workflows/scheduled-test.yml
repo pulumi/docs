@@ -19,7 +19,7 @@ jobs:
     strategy:
       matrix:
         platform:
-          - ubuntu-latest
+          - pulumi-service-ubuntu-22.04-16core
         go-version:
           - 1.21.x
         node-version:
