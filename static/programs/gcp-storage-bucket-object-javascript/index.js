@@ -29,6 +29,5 @@ const bucketObject = new gcp.storage.BucketObject("bucketObject", {
     contentType: "text/plain",
 });
 
-// Export the DNS name of the bucket
-exports.bucketName = bucket.name;
 exports.roleName = role.name;
+exports.bucketName = bucket.name;

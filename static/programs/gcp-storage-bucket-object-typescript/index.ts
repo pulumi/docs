@@ -28,5 +28,5 @@ const bucketObject = new gcp.storage.BucketObject("bucketObject", {
     contentType: "text/plain",
 });
 
-export const bucketName1 = bucket.name;
 export const roleName1 = role.name;
+export const bucketName1 = bucket.name;

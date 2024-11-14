@@ -38,5 +38,5 @@ variables:
   roleName: ${role.name}
 
 outputs:
-  bucketName: ${bucket.name}
   roleName: ${role.name}
+  bucketName: ${bucket.name}

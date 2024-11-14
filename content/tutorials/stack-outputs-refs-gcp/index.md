@@ -70,7 +70,7 @@ Then replace the default code with the following code snippet to scaffold your p
 {{% choosable language javascript %}}
 
 ```javascript
-{{< example-program-snippet path="azure-native-storage-account-blob" language="javascript" from="1" to="21" >}}
+{{< example-program-snippet path="gcp-storage-bucket-object" language="javascript" from="1" to="21" >}}
 ```
 
 {{% /choosable %}}
@@ -78,7 +78,7 @@ Then replace the default code with the following code snippet to scaffold your p
 {{% choosable language typescript %}}
 
 ```typescript
-{{< example-program-snippet path="azure-native-storage-account-blob" language="typescript" from="1" to="20" >}}
+{{< example-program-snippet path="gcp-storage-bucket-object" language="typescript" from="1" to="20" >}}
 ```
 
 {{% /choosable %}}
@@ -86,7 +86,7 @@ Then replace the default code with the following code snippet to scaffold your p
 {{% choosable language python %}}
 
 ```python
-{{< example-program-snippet path="azure-native-storage-account-blob" language="python" from="1" to="26" >}}
+{{< example-program-snippet path="gcp-storage-bucket-object" language="python" from="1" to="26" >}}
 ```
 
 {{% /choosable %}}
@@ -94,9 +94,9 @@ Then replace the default code with the following code snippet to scaffold your p
 {{% choosable language go %}}
 
 ```go
-{{< example-program-snippet path="azure-native-storage-account-blob" language="go" from="1" to="41" >}}
+{{< example-program-snippet path="gcp-storage-bucket-object" language="go" from="1" to="41" >}}
 
-{{< example-program-snippet path="azure-native-storage-account-blob" language="go" from="51" to="66" >}}
+{{< example-program-snippet path="gcp-storage-bucket-object" language="go" from="65" to="66" >}}
 ```
 
 {{% /choosable %}}
@@ -104,9 +104,9 @@ Then replace the default code with the following code snippet to scaffold your p
 {{% choosable language csharp %}}
 
 ```csharp
-{{< example-program-snippet path="azure-native-storage-account-blob" language="csharp" from="1" to="31" >}}
+{{< example-program-snippet path="gcp-storage-bucket-object" language="csharp" from="1" to="31" >}}
 
-{{< example-program-snippet path="azure-native-storage-account-blob" language="csharp" from="48" to="48" >}}
+{{< example-program-snippet path="gcp-storage-bucket-object" language="csharp" from="48" to="48" >}}
 ```
 
 {{% /choosable %}}
@@ -114,20 +114,20 @@ Then replace the default code with the following code snippet to scaffold your p
 {{% choosable language yaml %}}
 
 ```yaml
-{{< example-program-snippet path="azure-native-storage-account-blob" language="yaml" from="1" to="19" >}}
+{{< example-program-snippet path="gcp-storage-bucket-object" language="yaml" from="1" to="27" >}}
 ```
 
 {{% /choosable %}}
 
 This baseline code defines the following on your behalf:
 
-- a [Resource Group](/registry/packages/azure-native/api-docs/resources/resourcegroup/)
-- a [Storage Account](/registry/packages/azure-native/api-docs/storage/storageaccount/)
-- a [Blob Container](/registry/packages/azure-native/api-docs/storage/blobcontainer/)
+- an [IAM Custom Role](/registry/packages/gcp/api-docs/projects/iamcustomrole/)
+- a [Storage Bucket](/registry/packages/gcp/api-docs/storage/bucket/)
+- an [IAM Role Assignment](/registry/packages/gcp/api-docs/projects/iammember/)
 
 ## Export resource values
 
-As mentioned in the [Creating Resources on Azure tutorial](/tutorials/creating-resources-azure/), every resource has various properties. For any resources that you define in your Pulumi projects, you can [export the values](/docs/iac/concepts/stacks/#outputs) of its properties from your program as outputs. You can view a list of available properties that can be exported by referring to the resource properties section of a particular resource's API documentation (e.g. [Resource Group resource properties](/registry/packages/azure-native/api-docs/resources/resourcegroup/#properties)). The `export` syntax is as follows:
+As mentioned in the [Creating Resources on Google Cloud tutorial](/tutorials/creating-resources-gcp/), every resource has various properties. For any resources that you define in your Pulumi projects, you can [export the values](/docs/iac/concepts/stacks/#outputs) of its properties from your program as outputs. You can view a list of available properties that can be exported by referring to the resource properties section of a particular resource's API documentation (e.g. [Bucket properties](https://www.pulumi.com/registry/packages/gcp/api-docs/storage/bucket/#properties)). The `export` syntax is as follows:
 
 {{< chooser language "javascript,typescript,python,go,csharp,yaml" / >}}
 
@@ -195,16 +195,16 @@ When defining these exports, you'll need to provide two arguments:
 | Output name | This is the name you will use as the identifier of your output value |
 | Output value | This is the actual value of your output |
 
-To demonstrate how this works, let's export the name of your resource group. By referring to the documentation, you can see that the name of the resource group can be referenced via its `name` property, so update your code to reflect that as shown below:
+To demonstrate how this works, let's export the name of your IAM Role. By referring to the documentation, you can see that the name of the IAM Role can be referenced via its `name` property, so update your code to reflect that as shown below:
 
 {{< chooser language "javascript,typescript,python,go,csharp,yaml" / >}}
 
 {{% choosable language javascript %}}
 
 ```javascript
-{{< example-program-snippet path="azure-native-storage-account-blob" language="javascript" from="1" to="19" >}}
+{{< example-program-snippet path="gcp-storage-bucket-object" language="javascript" from="1" to="19" >}}
 
-{{< example-program-snippet path="azure-native-storage-account-blob" language="javascript" from="34" to="34" >}}
+{{< example-program-snippet path="gcp-storage-bucket-object" language="javascript" from="34" to="34" >}}
 ```
 
 {{% /choosable %}}
@@ -212,9 +212,9 @@ To demonstrate how this works, let's export the name of your resource group. By 
 {{% choosable language typescript %}}
 
 ```typescript
-{{< example-program-snippet path="azure-native-storage-account-blob" language="typescript" from="1" to="18" >}}
+{{< example-program-snippet path="gcp-storage-bucket-object" language="typescript" from="1" to="18" >}}
 
-{{< example-program-snippet path="azure-native-storage-account-blob" language="typescript" from="33" to="33" >}}
+{{< example-program-snippet path="gcp-storage-bucket-object" language="typescript" from="33" to="33" >}}
 ```
 
 {{% /choosable %}}
@@ -222,9 +222,9 @@ To demonstrate how this works, let's export the name of your resource group. By 
 {{% choosable language python %}}
 
 ```python
-{{< example-program-snippet path="azure-native-storage-account-blob" language="python" from="1" to="18" >}}
+{{< example-program-snippet path="gcp-storage-bucket-object" language="python" from="1" to="18" >}}
 
-{{< example-program-snippet path="azure-native-storage-account-blob" language="python" from="33" to="33" >}}
+{{< example-program-snippet path="gcp-storage-bucket-object" language="python" from="33" to="33" >}}
 ```
 
 {{% /choosable %}}
@@ -232,11 +232,11 @@ To demonstrate how this works, let's export the name of your resource group. By 
 {{% choosable language go %}}
 
 ```go
-{{< example-program-snippet path="azure-native-storage-account-blob" language="go" from="1" to="33" >}}
+{{< example-program-snippet path="gcp-storage-bucket-object" language="go" from="1" to="33" >}}
 
-{{< example-program-snippet path="azure-native-storage-account-blob" language="go" from="48" to="48" >}}
+{{< example-program-snippet path="gcp-storage-bucket-object" language="go" from="48" to="48" >}}
 
-{{< example-program-snippet path="azure-native-storage-account-blob" language="go" from="52" to="54" >}}
+{{< example-program-snippet path="gcp-storage-bucket-object" language="go" from="52" to="54" >}}
 ```
 
 {{% /choosable %}}
@@ -244,11 +244,11 @@ To demonstrate how this works, let's export the name of your resource group. By 
 {{% choosable language csharp %}}
 
 ```csharp
-{{< example-program-snippet path="azure-native-storage-account-blob" language="csharp" from="1" to="25" >}}
+{{< example-program-snippet path="gcp-storage-bucket-object" language="csharp" from="1" to="25" >}}
 
-{{< example-program-snippet path="azure-native-storage-account-blob" language="csharp" from="41" to="43" >}}
+{{< example-program-snippet path="gcp-storage-bucket-object" language="csharp" from="41" to="43" >}}
 
-{{< example-program-snippet path="azure-native-storage-account-blob" language="csharp" from="46" to="47" >}}
+{{< example-program-snippet path="gcp-storage-bucket-object" language="csharp" from="46" to="47" >}}
 ```
 
 {{% /choosable %}}
@@ -256,9 +256,9 @@ To demonstrate how this works, let's export the name of your resource group. By 
 {{% choosable language yaml %}}
 
 ```yaml
-{{< example-program-snippet path="azure-native-storage-account-blob" language="yaml" from="1" to="19" >}}
+{{< example-program-snippet path="gcp-storage-bucket-object" language="yaml" from="1" to="19" >}}
 
-{{< example-program-snippet path="azure-native-storage-account-blob" language="yaml" from="36" to="37" >}}
+{{< example-program-snippet path="gcp-storage-bucket-object" language="yaml" from="36" to="37" >}}
 ```
 
 {{% /choosable %}}
@@ -634,9 +634,9 @@ You can view the code for the complete solution below.
 {{% choosable language javascript %}}
 
 ```javascript
-{{< example-program-snippet path="azure-native-storage-account-blob" language="javascript" from="1" to="19" >}}
+{{< example-program-snippet path="gcp-storage-bucket-object" language="javascript" from="1" to="19" >}}
 
-{{< example-program-snippet path="azure-native-storage-account-blob" language="javascript" from="34" to="36" >}}
+{{< example-program-snippet path="gcp-storage-bucket-object" language="javascript" from="34" to="36" >}}
 ```
 
 {{% /choosable %}}
@@ -644,9 +644,9 @@ You can view the code for the complete solution below.
 {{% choosable language typescript %}}
 
 ```typescript
-{{< example-program-snippet path="azure-native-storage-account-blob" language="typescript" from="1" to="18" >}}
+{{< example-program-snippet path="gcp-storage-bucket-object" language="typescript" from="1" to="18" >}}
 
-{{< example-program-snippet path="azure-native-storage-account-blob" language="typescript" from="33" to="35" >}}
+{{< example-program-snippet path="gcp-storage-bucket-object" language="typescript" from="33" to="35" >}}
 ```
 
 {{% /choosable %}}
@@ -654,9 +654,9 @@ You can view the code for the complete solution below.
 {{% choosable language python %}}
 
 ```python
-{{< example-program-snippet path="azure-native-storage-account-blob" language="python" from="1" to="18" >}}
+{{< example-program-snippet path="gcp-storage-bucket-object" language="python" from="1" to="18" >}}
 
-{{< example-program-snippet path="azure-native-storage-account-blob" language="python" from="23" to="35" >}}
+{{< example-program-snippet path="gcp-storage-bucket-object" language="python" from="23" to="35" >}}
 ```
 
 {{% /choosable %}}
@@ -664,9 +664,9 @@ You can view the code for the complete solution below.
 {{% choosable language go %}}
 
 ```go
-{{< example-program-snippet path="azure-native-storage-account-blob" language="go" from="1" to="33" >}}
+{{< example-program-snippet path="gcp-storage-bucket-object" language="go" from="1" to="33" >}}
 
-{{< example-program-snippet path="azure-native-storage-account-blob" language="go" from="48" to="54" >}}
+{{< example-program-snippet path="gcp-storage-bucket-object" language="go" from="48" to="54" >}}
 ```
 
 {{% /choosable %}}
@@ -674,9 +674,9 @@ You can view the code for the complete solution below.
 {{% choosable language csharp %}}
 
 ```csharp
-{{< example-program-snippet path="azure-native-storage-account-blob" language="csharp" from="1" to="25" >}}
+{{< example-program-snippet path="gcp-storage-bucket-object" language="csharp" from="1" to="25" >}}
 
-{{< example-program-snippet path="azure-native-storage-account-blob" language="csharp" from="41" to="47" >}}
+{{< example-program-snippet path="gcp-storage-bucket-object" language="csharp" from="41" to="47" >}}
 ```
 
 {{% /choosable %}}
@@ -684,9 +684,9 @@ You can view the code for the complete solution below.
 {{% choosable language yaml %}}
 
 ```yaml
-{{< example-program-snippet path="azure-native-storage-account-blob" language="yaml" from="1" to="19" >}}
+{{< example-program-snippet path="gcp-storage-bucket-object" language="yaml" from="1" to="19" >}}
 
-{{< example-program-snippet path="azure-native-storage-account-blob" language="yaml" from="36" to="39" >}}
+{{< example-program-snippet path="gcp-storage-bucket-object" language="yaml" from="36" to="39" >}}
 ```
 
 {{% /choosable %}}
@@ -707,7 +707,7 @@ const resourceGroupName = stackRef.getOutput("resourceGroupName");
 const storageAccountName = stackRef.getOutput("storageAccountName");
 const blobContainerName = stackRef.getOutput("blobContainerName");
 
-{{< example-program-snippet path="azure-native-storage-account-blob" language="javascript" from="25" to="32" >}}
+{{< example-program-snippet path="gcp-storage-bucket-object" language="javascript" from="25" to="32" >}}
 ```
 
 {{% /choosable %}}
@@ -723,7 +723,7 @@ const resourceGroupName2 = stackRef.getOutput("resourceGroupName");
 const storageAccountName2 = stackRef.getOutput("storageAccountName");
 const blobContainerName2 = stackRef.getOutput("blobContainerName");
 
-{{< example-program-snippet path="azure-native-storage-account-blob" language="typescript" from="24" to="31" >}}
+{{< example-program-snippet path="gcp-storage-bucket-object" language="typescript" from="24" to="31" >}}
 ```
 
 {{% /choosable %}}
@@ -739,7 +739,7 @@ resource_group_name = stack_ref.get_output("resourceGroupName")
 storage_account_name = stack_ref.get_output("storageAccountName")
 blob_container_name = stack_ref.get_output("blobContainerName")
 
-{{< example-program-snippet path="azure-native-storage-account-blob" language="python" from="24" to="31" >}}
+{{< example-program-snippet path="gcp-storage-bucket-object" language="python" from="24" to="31" >}}
 ```
 
 {{% /choosable %}}
@@ -764,7 +764,7 @@ func main() {
         storageAccountName := stackRef.GetOutput(pulumi.String("storageAccountName"))
         blobContainerName := stackRef.GetOutput(pulumi.String("blobContainerName"))
 
-{{< example-program-snippet path="azure-native-storage-account-blob" language="go" from="39" to="46" >}}
+{{< example-program-snippet path="gcp-storage-bucket-object" language="go" from="39" to="46" >}}
 
 		return nil
 	})
@@ -787,7 +787,7 @@ return await Pulumi.Deployment.RunAsync(() =>
     var storageAccountName = stackRef.GetOutput("storageAccountName");
     var blobContainerName = stackRef.GetOutput("blobContainerName");
 
-{{< example-program-snippet path="azure-native-storage-account-blob" language="csharp" from="31" to="39" >}}
+{{< example-program-snippet path="gcp-storage-bucket-object" language="csharp" from="31" to="39" >}}
 
 });
 ```
@@ -807,7 +807,7 @@ resources:
     properties:
       name: acmecorp/infra/dev
 
-{{< example-program-snippet path="azure-native-storage-account-blob" language="yaml" from="20" to="29" >}}
+{{< example-program-snippet path="gcp-storage-bucket-object" language="yaml" from="20" to="29" >}}
 
 variables:
   resourceGroupName: ${stack-ref.outputs["resourceGroupName"]}

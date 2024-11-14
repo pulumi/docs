@@ -42,7 +42,7 @@ return await Deployment.RunAsync(() =>
 
     return new Dictionary<string, object?>
     {
-        ["bucketName"] = bucket.Name,
         ["roleName"] = role.Name,
+        ["bucketName"] = bucket.Name,
     };
 });

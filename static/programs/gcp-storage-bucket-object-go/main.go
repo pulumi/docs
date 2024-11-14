@@ -59,8 +59,8 @@ func main() {
 			return err
 		}
 		
-		ctx.Export("bucketName", bucket.Name)
 		ctx.Export("roleName", role.Name)
+		ctx.Export("bucketName", bucket.Name)
 		return nil
 	})
 }

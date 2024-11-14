@@ -37,6 +37,5 @@ bucket_object = storage.BucketObject(
     content_type="text/plain"
 )
 
-# Export the bucket URL and object URL
-pulumi.export("bucketName", bucket.name)
 pulumi.export("roleName", role.name)
+pulumi.export("bucketName", bucket.name)
