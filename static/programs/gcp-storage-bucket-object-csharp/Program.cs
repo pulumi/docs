@@ -30,13 +30,13 @@ return await Deployment.RunAsync(() =>
         Member = "allAuthenticatedUsers",
     });
 
-    var bucketNameVar = bucket.Name;
-    var roleNameVar = role.Name;
+    var bucketName = bucket.Name;
+    var roleName = role.Name;
 
     var bucketObject = new Gcp.Storage.BucketObject("bucketObject", new()
     {
-        Bucket = bucketNameVar,
-        Content = roleNameVar.Apply(roleNameVar => $"My bucket role name is: {roleNameVar}"),
+        Bucket = bucketName,
+        Content = roleName.Apply(roleName => $"My bucket role name is: {roleName}"),
         ContentType = "text/plain",
     });
 

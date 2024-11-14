@@ -40,13 +40,13 @@ func main() {
 			return err
 		}
 
-		bucketNameVar := bucket.Name
-		roleNameVar := role.Name
+		bucketName := bucket.Name
+		roleName := role.Name
 
 		_, err = storage.NewBucketObject(ctx, "bucketObject", &storage.BucketObjectArgs{
-			Bucket: pulumi.String(bucketNameVar),
-			Content: roleNameVar.ApplyT(func(roleNameVar string) (string, error) {
-				return fmt.Sprintf("My bucket role name is: %v", roleNameVar), nil
+			Bucket: pulumi.String(bucketName),
+			Content: roleName.ApplyT(func(roleName string) (string, error) {
+				return fmt.Sprintf("My bucket role name is: %v", roleName), nil
 			}).(pulumi.StringOutput),
 			ContentType: pulumi.String("text/plain"),
 		})

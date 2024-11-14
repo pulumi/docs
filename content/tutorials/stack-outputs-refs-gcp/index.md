@@ -70,7 +70,7 @@ Then replace the default code with the following code snippet to scaffold your p
 {{% choosable language javascript %}}
 
 ```javascript
-{{< example-program-snippet path="azure-native-storage-account-blob" language="javascript" from="1" to="19" >}}
+{{< example-program-snippet path="azure-native-storage-account-blob" language="javascript" from="1" to="21" >}}
 ```
 
 {{% /choosable %}}
@@ -78,7 +78,7 @@ Then replace the default code with the following code snippet to scaffold your p
 {{% choosable language typescript %}}
 
 ```typescript
-{{< example-program-snippet path="azure-native-storage-account-blob" language="typescript" from="1" to="18" >}}
+{{< example-program-snippet path="azure-native-storage-account-blob" language="typescript" from="1" to="20" >}}
 ```
 
 {{% /choosable %}}
@@ -86,7 +86,7 @@ Then replace the default code with the following code snippet to scaffold your p
 {{% choosable language python %}}
 
 ```python
-{{< example-program-snippet path="azure-native-storage-account-blob" language="python" from="1" to="18" >}}
+{{< example-program-snippet path="azure-native-storage-account-blob" language="python" from="1" to="26" >}}
 ```
 
 {{% /choosable %}}
@@ -94,9 +94,9 @@ Then replace the default code with the following code snippet to scaffold your p
 {{% choosable language go %}}
 
 ```go
-{{< example-program-snippet path="azure-native-storage-account-blob" language="go" from="1" to="33" >}}
+{{< example-program-snippet path="azure-native-storage-account-blob" language="go" from="1" to="41" >}}
 
-{{< example-program-snippet path="azure-native-storage-account-blob" language="go" from="52" to="54" >}}
+{{< example-program-snippet path="azure-native-storage-account-blob" language="go" from="59" to="61" >}}
 ```
 
 {{% /choosable %}}
@@ -104,9 +104,9 @@ Then replace the default code with the following code snippet to scaffold your p
 {{% choosable language csharp %}}
 
 ```csharp
-{{< example-program-snippet path="azure-native-storage-account-blob" language="csharp" from="1" to="25" >}}
+{{< example-program-snippet path="azure-native-storage-account-blob" language="csharp" from="1" to="31" >}}
 
-{{< example-program-snippet path="azure-native-storage-account-blob" language="csharp" from="47" to="47" >}}
+{{< example-program-snippet path="azure-native-storage-account-blob" language="csharp" from="48" to="48" >}}
 ```
 
 {{% /choosable %}}
