@@ -1,22 +1,61 @@
 package main
 
 import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-gcp/sdk/v8/go/gcp/projects"
 	"github.com/pulumi/pulumi-gcp/sdk/v8/go/gcp/storage"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		// Create a GCP resource (Storage Bucket)
-		bucket, err := storage.NewBucket(ctx, "my-bucket", &storage.BucketArgs{
-			Location: pulumi.String("US"),
+		bucket, err := storage.NewBucket(ctx, "bucket", &storage.BucketArgs{
+			Location:     pulumi.String("US"),
+			ForceDestroy: pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		
+		role, err := projects.NewIAMCustomRole(ctx, "role", &projects.IAMCustomRoleArgs{
+			RoleId: pulumi.String("bucketViewerRole"),
+			Title:  pulumi.String("Bucket Viewer Role"),
+			Permissions: pulumi.StringArray{
+				pulumi.String("storage.objects.get"),
+				pulumi.String("storage.objects.list"),
+			},
+			Stage: pulumi.String("GA"),
+		})
+		if err != nil {
+			return err
+		}
+		
+		_, err = storage.NewBucketIAMMember(ctx, "bucketViewerRoleAssignment", &storage.BucketIAMMemberArgs{
+			Bucket: bucket.Name,
+			Role:   role.Name,
+			Member: pulumi.String("allAuthenticatedUsers"),
 		})
 		if err != nil {
 			return err
 		}
 
-		// Export the DNS name of the bucket
-		ctx.Export("bucketName", bucket.Url)
+		bucketNameVar := bucket.Name
+		roleNameVar := role.Name
+
+		_, err = storage.NewBucketObject(ctx, "bucketObject", &storage.BucketObjectArgs{
+			Bucket: pulumi.String(bucketNameVar),
+			Content: roleNameVar.ApplyT(func(roleNameVar string) (string, error) {
+				return fmt.Sprintf("My bucket role name is: %v", roleNameVar), nil
+			}).(pulumi.StringOutput),
+			ContentType: pulumi.String("text/plain"),
+		})
+		if err != nil {
+			return err
+		}
+		
+		ctx.Export("bucketName", bucket.Name)
+		ctx.Export("roleName", role.Name)
 		return nil
 	})
 }
