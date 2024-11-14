@@ -96,7 +96,7 @@ Then replace the default code with the following code snippet to scaffold your p
 ```go
 {{< example-program-snippet path="azure-native-storage-account-blob" language="go" from="1" to="41" >}}
 
-{{< example-program-snippet path="azure-native-storage-account-blob" language="go" from="59" to="61" >}}
+{{< example-program-snippet path="azure-native-storage-account-blob" language="go" from="51" to="66" >}}
 ```
 
 {{% /choosable %}}

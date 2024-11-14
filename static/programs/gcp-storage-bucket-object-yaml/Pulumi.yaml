@@ -2,10 +2,6 @@ name: gcp-storage-bucket-object-yaml
 description: An example that deploys a storage bucket and uploads a file on Google Cloud.
 runtime: yaml
 
-variables:
-  bucketName: ${bucket.name}
-  roleName: ${role.name}
-
 resources:
   role:
     type: gcp:projects:IAMCustomRole
@@ -36,6 +32,10 @@ resources:
       bucket: ${bucketName}
       content: "My bucket role name is: ${roleName}"
       contentType: text/plain
+
+variables:
+  bucketName: ${bucket.name}
+  roleName: ${role.name}
 
 outputs:
   bucketName: ${bucket.name}
