@@ -4,10 +4,10 @@ title_tag: "Reference Google Cloud Resources Across Stacks"
 layout: single
 
 # A succinct description of the tutorial. It appears on the Tutorials home and collection pages.
-description: Here is a brief description of what this tutorial's all about.
+description: Learn more about exporting and referencing stack outputs in Pulumi.
 
 # A similar description used for search results and social-media previews.
-meta_desc: Here is a brief description of what this tutorial's all about.
+meta_desc: Learn more about exporting and referencing stack outputs in Pulumi.
 
 # An image for the tutorial. It appears on tutorial page and in social-media previews.
 meta_image: stack-ref-gcp-meta.png
@@ -45,7 +45,7 @@ estimated_time: 15
 
 # # An optional list of collections this tutorial should be belong to. Collections are defined in data/tutorials/collections.yaml.
 # collections:
-#     - some-non-existent-collection
+#     - gcp
 ---
 
 ## Understanding stack outputs
