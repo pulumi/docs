@@ -93,3 +93,20 @@ You can use ESC with [Automation API](/docs/using-pulumi/automation-api/) in [No
 * `addEnvironments(...)`: Append environments to your Pulumi stack's [import](/docs/esc/environments/#using-environments-with-pulumi-iac) list.
 * `listEnvironments()`: Retrieve a list of environments currently imported into your stack.
 * `removeEnvironment(environment)`: Remove a specific environment from your stack's import list.
+
+### Accessing Pulumi Stack outputs
+
+You can also access [outputs](/docs/iac/concepts/inputs-outputs/#outputs) from [Pulumi IaC stacks](/docs/iac/concepts/stacks/) within an ESC environment using the [`pulumi-stacks` provider](/docs/esc/integrations/infrastructure/pulumi-iac/pulumi-stacks/).
+
+```yaml
+values:
+  stackRefs:
+    fn::open::pulumi-stacks:
+      stacks:
+        vpcInfra:
+          stack: vpc-infra/dev
+  pulumiConfig:
+    vpcId: ${stackRefs.vpcInfra.vpcId}
+    publicSubnetIds: ${stackRefs.vpcInfra.publicSubnetIds}
+    privateSubnetIds: ${stackRefs.vpcInfra.privateSubnetIds}
+```

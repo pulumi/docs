@@ -1,8 +1,8 @@
 package myproject;
 
 import com.pulumi.Pulumi;
-import com.pulumi.aws.s3.Bucket;
-import com.pulumi.aws.s3.BucketArgs;
+import com.pulumi.aws.s3.BucketV2;
+import com.pulumi.aws.s3.BucketV2Args;
 import com.pulumi.aws.s3.BucketMetric;
 import com.pulumi.aws.s3.BucketMetricArgs;
 import com.pulumi.aws.s3.BucketNotification;
@@ -22,7 +22,7 @@ import static com.pulumi.codegen.internal.Serialization.*;
 public class App {
     public static void main(String[] args) {
         Pulumi.run(ctx -> {
-            var bucket = new Bucket("my-bucket", BucketArgs.builder().build());
+            var bucket = new BucketV2("my-bucket", BucketV2Args.builder().build());
 
             var ownershipControls = new BucketOwnershipControls("ownership-controls", BucketOwnershipControlsArgs.builder()
                 .bucket(bucket.id())

@@ -9,8 +9,6 @@ block_external_search_index: true
 
 type: page
 layout: home-b
-aliases: ['/b']
-url: /b/iac-platform-engineering-idp
 
 hero:
   title: [ "Automate your infrastructure at any scale", "Your Code, Your Cloud, Your Success" ]
@@ -61,36 +59,67 @@ customer_logos:
   title: Trusted by your peers
   logos:
     - name: bmw
-      link: /case-studies/bmw
-    - name: mercedes-benz
-      link: /case-studies/mercedes-benz
+      link: /case-studies/
     - name: snowflake
-      link: /case-studies/snowflake
-    - name: lemonade
-      link: /case-studies/lemonade
-    - name: meta
-    - name: webflow
-    - name: bluenile
-    - name: dutchie
-      link: https://youtu.be/X1qetq7PjjY
-    - name: panther-labs
-      link: /case-studies/panther-labs
-    - name: univision
-    - name: washington-trust
-      link: https://youtu.be/Q63ZaX340M4
-    - name: nubank
-    - name: docker
-    - name: modular-ai
+      link: /case-studies/
     - name: nvidia
-    - name: tivityhealth
-    - name: linktree
+      link: /case-studies/
     - name: moderna
+      link: /case-studies/
+    - name: docker
+      link: /case-studies/
     - name: unity
-      link: /case-studies/unity
+      link: /case-studies/
     - name: deloitte
+      link: /case-studies/
+    - name: stokespace
+      link: /case-studies/
+    - name: univision
+      link: /case-studies/
+    - name: washington-trust
+      link: /case-studies/
+    - name: kyruus
+      link: /case-studies/
+    - name: modular-ai
+      link: /case-studies/
     - name: korber
+      link: /case-studies/    
+    - name: lemonade
+      link: /case-studies/
+    - name: pinecone
+      link: /case-studies/
+    - name: ware2go
+      link: /case-studies/
+    - name: nubank
+      link: /case-studies/
     - name: mindbody
+      link: /case-studies/
+    - name: fenergo
+      link: /case-studies/
+    - name: webflow
+      link: /case-studies/
+    - name: bluenile
+      link: /case-studies/
+    - name: dutchie
+      link: /case-studies/
+    - name: panther-labs
+      link: /case-studies/
+    - name: materialize
+      link: /case-studies/
+    - name: altana
+      link: /case-studies/
+    - name: mercedes-benz
+      link: /case-studies/
     - name: bt
+      link: /case-studies/
+    - name: portx
+      link: /case-studies/
+    - name: tivityhealth
+      link: /case-studies/
+    - name: starburst
+      link: /case-studies/
+    - name: linktree
+      link: /case-studies/
 
 customer_quotes:
   panther:

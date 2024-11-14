@@ -54,6 +54,10 @@ pushd "$programs_dir"
         if [[ "$project" == "awsx-apigateway-auth-cognito-java" ]]; then
             continue
         fi
+        # Skipping - for now this code is not consumed anywhere and needs some updates.
+        if [[ "$project" == "aws-import-iac-iam-role-"* ]]; then
+            continue
+        fi
 
         echo
         echo "***"
@@ -92,6 +96,11 @@ pushd "$programs_dir"
         # Create a new stack.
         pulumi -C "$project" stack select $fqsn || pulumi -C "$project" stack init $fqsn
         pulumi -C "$project" config set aws:region us-west-2 || true
+        pulumi -C "$project" config set azure:location eastus || true
+        pulumi -C "$project" config set azure-native:location eastus || true
+        pulumi -C "$project" config set gcp:region us-central1 || true
+        pulumi -C "$project" config set gcp:zone us-central1-a || true
+        pulumi -C "$project" config set gcp:project pulumi-devrel || true
 
         # Preview or deploy.
         if [[ "$mode" == "update" ]]; then

@@ -8,6 +8,16 @@ layout: community-engineering/single
 aliases:
   - /engin
 talks:
+- event: "DevOpsDays Tel Aviv 2024"
+  title: "Workshop: Build Your Developer Platform in 90 Minutes - Backstage + ArgoCD + K8s"
+  url: "https://tlvcommunity.dev/devopsdays/agenda-2024#calendar-e0e8b4b4-54d8-4a8a-ab08-a15509b32a9d-event-m2bkpv13"
+  date: 2024-10-31T18:00:00.000-07:00
+  slides: null
+- event: "AWS User Group 3city"
+  title: "Pulumi ❤️ AI: Modern Infrastructure for Your Next Gen AI Project"
+  url: "https://wearecommunity.io/events/aws-user-group-3city-meetup-9"
+  date: 2024-10-17T18:00:00.000-07:00
+  slides: null
 - event: "KCD Washington DC 2024"
   title: "External Secrets Operator Is the Best Thing Ever, Cap or Slap?"
   url: "https://kcd-washington-dc-2024.sessionize.com/session/700146"

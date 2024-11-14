@@ -182,6 +182,8 @@ The following table describes the various event filters available and the contex
 | `drift_detection_failed`          | `drift_detection`           | Organization or Stack      | When a drift detection run fails.                |
 | `drift_remediation_succeeded`     | `drift_remediation`         | Organization or Stack      | When a drift remediation run succeeds.           |
 | `drift_remediation_failed`        | `drift_remediation`         | Organization or Stack      | When a drift remediation run fails.              |
+| `policy_violation_mandatory`      | `policy_violation`          | Organization or Stack      | When a mandatory policy violation is detected.   |
+| `policy_violation_advisory`       | `policy_violation`          | Organization or Stack      | When an advisory policy violation is detected.   |
 
 And this table describes the various filter groups available to easily subscribe to all events within a group.
 
@@ -208,7 +210,7 @@ follow the link below to quickly get started with a pre-defined Slack app manife
 ### Microsoft Teams Webhooks
 
 Microsoft Teams Webhooks allow you to seamlessly integrate notifications about your Pulumi stacks and organizations
-into your Microsoft Teams workspace by simply providing a [Microsoft Teams incoming webhook workflow URL](https://prod.support.services.microsoft.com/en-us/office/create-incoming-webhooks-with-workflows-for-microsoft-teams-8ae491c7-0394-4861-ba59-055e33f75498)
+into your Microsoft Teams workspace by simply providing a [Microsoft Teams incoming webhook workflow URL](https://support.microsoft.com/en-us/office/create-incoming-webhooks-with-workflows-for-microsoft-teams-8ae491c7-0394-4861-ba59-055e33f75498)
 and optionally choosing which events you want delivered using [event groups and filters](#event-filtering).
 
 ### Deployment Webhooks
@@ -233,8 +235,7 @@ to authenticate messages as coming from the Pulumi Cloud.
 Each webhook payload has a format specific to the payload being emitted. Every payload will contain a sender, organization,
 and stack reference as appropriate. For examples of specific payloads, see _Payload Reference_ below.
 
-Each webhook will contain a `user` field, which is the user who requested the action, an `organization` which is
-the organization name, and a URL for the event. It will also contain `projectName` and `stackName` when applicable.
+Each webhook will contain an `organization` field, which is the organization name, and a URL for the event. It may also contain the `user` who requested the action, as well as the `projectName` and `stackName` when applicable.
 
 ##### Stack Creation
 

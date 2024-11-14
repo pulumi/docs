@@ -15,6 +15,10 @@ tags:
     - typescript
 ---
 
+{{% notes type="info" %}}
+Check out version 3.0 of the [Pulumi EKS Provider](/blog/eks-v3-release/).
+{{% /notes %}}
+
 Pulumi's [infrastructure as code](/what-is/what-is-infrastructure-as-code/) tooling combines the programming languages and tools you already know with the full power of cloud
 infrastructure. But until now, some Pulumi components for cloud infrastructure, like our popular [EKS package] for Amazon's Elastic
 Kubernetes Service, were only available in a subset of the languages supported by Pulumi.

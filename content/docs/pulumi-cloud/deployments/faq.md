@@ -17,18 +17,32 @@ aliases:
   - /docs/intro/deployments/faq/
 ---
 
-## Roadmap
-
-We track open feature requests for Deployments in the [Pulumi Cloud requests repo](https://github.com/pulumi/pulumi-cloud-requests). Here are a few that have been requested by customers that are on our roadmap:
-
-- [Built-in drift detection](https://github.com/pulumi/pulumi-cloud-requests/issues/173)
-- [Built-in temporary infrastructure and TTL stacks](https://github.com/pulumi/pulumi-cloud-requests/issues/149)
-- [User-hosted deployment runners](https://github.com/pulumi/pulumi-cloud-requests/issues/207)
-- [Add `git push` support for other VCS providers such as Bitbucket](https://github.com/pulumi/pulumi-cloud-requests/issues/162)
-
 ## Security and Isolation
 
-Deployments run on single-use virtual machines and compute and storage are never shared across runs. We designed our architecture to maximize isolation. In addition, security features like OIDC allow you to fine tune credential scope, lifetime, and expiration policies at a per-deployment level. Self-hosted deployment runners are on our roadmap.
+Deployments run on single-use virtual machines and compute and storage are never shared across runs. We designed our architecture to maximize isolation. In addition, security features like OIDC allow you to fine tune credential scope, lifetime, and expiration policies at a per-deployment level. It is also possible to use [self-hosted runners](/docs/pulumi-cloud/deployments/customer-managed-agents/) if you require additional isolation.
+
+## Dependency caching
+
+When using Pulumi-managed deployment agents, you have the option to speed up deployments using *dependency caching*.
+
+The caching method is simple: during the first deployment, the deployment agent will automatically detect downloaded dependencies using lock files, zip them up and store the archive in blob storage. During all subsequent deployments, agents will pull such an archive down and unpack it, saving time it would normally take to redownload those dependencies. When your dependencies change, deployment agents will automatically invalidate the old cache and create a new one.
+
+Caches are shared on the project level, so all stacks within a project can share the same cache. However, caches are fully isolated and never shared between customers.
+
+Dependency caching is supported for the following runtimes:
+
+- `.NET` - no special configuration required
+- `Python` - ensure that you have `requirements.txt` in the root of your source code.
+- `Go` - ensure that you have `go.mod` and `go.sum` in the root of your source code.
+- `NodeJS` - ensure that you have `packageManager` field specified in `package.json`. For now, only `npm` and `yarn` are supported.
+  - For `npm`, ensure that you have `package-lock.json` in the root of your source code.
+  - For `yarn`, ensure that you have `yarn.lock` in the root of your source code.
+
+To confirm dependency caching is working and/or to troubleshoot, check out logs of your deployments, specifically the `Restore Cache` and `Save Cache` steps.
+
+## Common recipes
+
+See [Using Deployments](/docs/pulumi-cloud/deployments/reference/) for common recipes and best practices.
 
 ## More FAQ
 

@@ -31,6 +31,97 @@ aliases:
     }
 </style>
 
+<!-- New variant -->
+<div data-tf-variant="new" class="hidden">
+
+<div class="rounded shadow-md" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+    <iframe
+        src="//www.youtube.com/embed/PqAP4BunQZU?rel=0"
+        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;"
+        allowfullscreen=""
+        title="Pulumi + AWS: Universal Infrastructure as Code"
+    ></iframe>
+</div>
+
+## Your Infrastructure, Your Programming Language, Your Way
+
+Infrastructure as code shouldn't force you to learn yet another language. While Terraform requires learning HCL and is not open source (using the Business Source License), Pulumi takes an open-source, developer-first approach with Apache 2.0 licensing. With Pulumi, you can:
+
+- **Use Existing Skills**: Write infrastructure code in Python, TypeScript, Java, .NET, or Go
+- **Leverage Modern Tools**: Get full IDE support with code completion and error checking
+- **Build with Confidence**: Access your language's entire ecosystem of libraries and tools
+- **Work Your Way**: Choose between CLI, APIs, or embedding in your applications
+
+## At a Glance
+
+- 🔧 **Terraform**: Proprietary HCL language, Business Source License, community-supported providers
+- 💻 **Pulumi**: Open source (Apache 2.0), mainstream languages, native cloud provider integration
+- **Key Differences**:
+  - Write infrastructure code in your team's preferred language
+  - Full IDE support with code completion and type checking
+  - Enhanced security with built-in secret encryption
+  - Same-day support for new cloud features
+  - Built-in testing frameworks
+  - Advanced automation capabilities
+
+## Get Started with Pulumi
+
+If you would like to see how other Pulumi customers have migrated from Terraform to Pulumi, see the [Atlassian case study](/case-studies/atlassian/) and the [Green Park Sports case study](/case-studies/greenpark-sports/). If you would like to deploy a simple program, follow our Get Started guide:
+
+{{< get-started >}}
+
+## True Programming Language Freedom
+
+Pulumi's deep integration with mainstream programming languages isn't just about syntax preferences – it's about unlocking the full power of modern development:
+
+- **Python**: Leverage NumPy for calculations, Pandas for data processing
+- **TypeScript/JavaScript**: Use npm packages, async/await for complex orchestration
+- **Java**: Utilize enterprise-grade frameworks and tools
+- **Go**: Access powerful concurrency features and standard library
+- **.NET**: Integrate with existing enterprise .NET ecosystems
+- **YAML**: Available for teams preferring simpler configurations
+
+## Developer-First Features
+
+Pulumi brings modern development practices to infrastructure:
+
+### Advanced Development Experience
+
+- Full IDE support with code completion and error detection
+- Integrated testing framework (unit, property, and integration tests)
+- Dynamic Providers for custom resource types
+- Transformations for programmatic resource customization
+
+### Cloud Native Power
+
+- 100% Kubernetes API coverage with type checking
+- Native Helm 2/3 support
+- Built-in YAML-to-Pulumi conversion
+- Kubernetes operator for GitOps workflows
+
+### Enterprise-Ready
+
+- Audit logs for tracking user activity
+- Team collaboration features
+- Robust secret management with encryption
+- CrossGuard for policy enforcement in your preferred language
+
+## Migration and Integration
+
+Making the switch is easier than you think:
+
+- **Migration Tools**: Built-in converters from Terraform HCL to Pulumi
+- **Side-by-Side Usage**: Reference existing Terraform state
+- **Expert Support**: Access to migration services and training
+- **Enterprise Support**: Bundled Terraform workspace migrations
+- **Success Stories**: Major companies like Atlassian have successfully migrated
+
+</div>
+
+<!-- Control variant (current content) -->
+<!-- markdownlint-disable MD033 -->
+<div data-tf-variant="control">
+
 Pulumi and Terraform are both infrastructure as code technologies that have similarities but many fundamental differences. For example, Pulumi is open source and offers the flexibility to use any programming language for managing infrastructure. This makes Pulumi widely accessible to developers and DevOps engineers from any background. However, Terraform requires a proprietary domain-specific language (DSL) and is not open source. In this comprehensive guide, we'll explore their key differences, similarities, and real-world scenarios, mapping Terraform concepts to Pulumi to help you choose the right infrastructure as code platform to meet your needs.
 
 ## What is Pulumi?
@@ -88,6 +179,8 @@ Terraform provides infrastructure as code software for cloud service management 
 
 Similarities between Terraform and Pulumi include the ability to create, deploy, and manage infrastructure as code on any cloud. Both Terraform and Pulumi follow a desired state infrastructure as code model, where the IaC code represents the desired state of the infrastructure. The deployment engine compares this desired state with the current state of the stack and determines the necessary actions, such as creating, updating, or deleting resources. Both Terraform and Pulumi support many cloud providers, including [AWS](/aws/), [Azure](/azure/), and [Google Cloud](/gcp/), plus other services like CloudFlare, Digital Ocean, and more. Finally, with Pulumi you get access to all Pulumi providers as well as support for [all Terraform providers](/blog/any-terraform-provider/ "Blog: Introducing: Support For Using Any Terraform Provider with Pulumi").
 
+</div>
+
 ## Pulumi vs. Terraform: Key Differences {#differences}
 
 Pulumi and Terraform differ in that Terraform is not open source, using the [Business Source License](https://github.com/HashiCorp/terraform/blob/main/LICENSE) model and requires the use of a domain-specific language: HashiCorp Configuration Language (HCL). In contrast, Pulumi is fully open source [Apache 2.0 licensed](https://github.com/pulumi/pulumi) and allows you to use familiar general purpose languages like [Python](/docs/languages-sdks/python/), [TypeScript](/docs/languages-sdks/javascript/), [JavaScript](/docs/languages-sdks/javascript/), [Go](/docs/languages-sdks/go/), [.NET](/docs/languages-sdks/dotnet/), [Java](/docs/languages-sdks/java/), and markup languages like [YAML](/docs/languages-sdks/yaml/), with the tools you already use to accomplish the same goals. Terraform recently released the beta of a development kit that allows you to use programming languages that compile to HCL.
@@ -118,9 +211,14 @@ Here is a summary of the key differences between Pulumi and Terraform:
 
 Getting started with Pulumi is easy. If you have experience with Terraform and already have HCL, you can convert it to Pulumi. Follow our comprehensive guides in our [Migration Hub](/blog/migration-hub/) to use our [self-service migration tools](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-terraform/) or work with our [Expert Services teams](/contact?form=tf-migration) that can help you with migration and training. As part of Pulumi Enterprise and Business Critical Editions, [Terraform workspace migrations](/blog/tf-migration-offer) are bundled as part of the onboarding process.
 
+<!-- Control variant (current content) -->
+<div data-tf-variant="control">
+
 If you would like to see how other Pulumi customers have migrated from Terraform to Pulumi, see the [Atlassian case study](/case-studies/atlassian/) and the [Green Park Sports case study](/case-studies/greenpark-sports/). If you would like to deploy a simple program, follow our Get Started guide:
 
 {{< get-started >}}
+
+</div>
 
 The following sections go into further detail on the differences between Pulumi and Terraform.
 
@@ -241,3 +339,4 @@ Pulumi allows you to convert templates by Terraform HCL , Kubernetes YAML, and A
 ## Get Started with Pulumi
 
 Pulumi’s Infrastructure as Code platform supports the widest range of builders, clouds, programming languages, and cloud architectures available today. [Get started today](/docs/get-started/).
+<!-- markdownlint-enable MD033 -->

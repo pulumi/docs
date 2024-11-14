@@ -109,14 +109,14 @@ app_labels = { "app": "nginx" }
 
 deployment = Deployment(
     "nginx",
-    spec=DeploymentSpecArgs(
-        selector=LabelSelectorArgs(match_labels=app_labels),
-        replicas=1,
-        template=PodTemplateSpecArgs(
-            metadata=ObjectMetaArgs(labels=app_labels),
-            spec=PodSpecArgs(containers=[ContainerArgs(name="nginx", image="nginx")])
-        ),
-    ))
+    spec={
+        "selector": { "match_labels": app_labels },
+        "replicas": 1,
+        "template": {
+            "metadata": { "labels": app_labels },
+            "spec": { "containers": [{ "name": "nginx", "image": "nginx" }] }
+        },
+    })
 
 pulumi.export("name", deployment.metadata["name"])
 ```

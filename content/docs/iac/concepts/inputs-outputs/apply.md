@@ -579,7 +579,7 @@ This means that if you want to print out the value of the VPC ID, the program ne
 
 {{< example-program-snippet path="awsx-vpc" language="javascript" from="6" to="6" >}}
 
-vpc.vpcId.apply(id => console.log(`VPC ID: {id}`));
+vpc.vpcId.apply(id => console.log(`VPC ID: ${id}`));
 ```
 
 {{% /choosable %}}
@@ -591,7 +591,7 @@ vpc.vpcId.apply(id => console.log(`VPC ID: {id}`));
 
 {{< example-program-snippet path="awsx-vpc" language="typescript" from="5" to="5" >}}
 
-vpc.vpcId.apply(id => console.log(`VPC ID: {id}`));
+vpc.vpcId.apply(id => console.log(`VPC ID: ${id}`));
 ```
 
 {{% /choosable %}}
@@ -864,6 +864,10 @@ record = aws.route53.Record('validation',
     ],
 ...
 ```
+
+{{< notes type="warning" >}}
+Note that in Python, output lifting is implemented by overriding the special `__getattr__` method on resources so that the expression `resource.output` (which results in a call to `resource.__getattr__("output")`) becomes `resource.apply(lambda r: r.output)`. This means that using `hasattr`, which calls `__getattr__` under the hood and looks for an `AttributeError` to determine whether or not a property exists, will not work as expected on resource outputs.
+{{< /notes >}}
 
 {{% /choosable %}}
 

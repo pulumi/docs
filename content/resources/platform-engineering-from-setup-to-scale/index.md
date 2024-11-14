@@ -1,6 +1,6 @@
 ---
 # Name of the event, <= 60 characters
-title: "Platform Engineering: From Setup to Scale"
+title: "Platform Engineering: Zero to Scale"
 meta_desc: Watch the webinar with a 7-step guide to plan, implement, and support your organization's adoption of platform engineering best practices.
 meta_image:
 
@@ -31,7 +31,7 @@ url_slug: platform-engineering-from-setup-to-scale
 # Content for the left hand side section of the page.
 main:
     # Webinar title.
-    title: "Platform Engineering: From Setup to Scale"
+    title: "Platform Engineering: Zero to Scale"
 
     event_type: workshop # workshop | event
 
@@ -53,10 +53,10 @@ main:
 
         In this session, you’ll learn when organizations need a platform and how to adopt the practice of platform engineering successfully. You’ll also learn from experienced practitioners how to judge whether your org’s platform efforts are going in the right direction and how to avoid some common and expensive mistakes.
 
-        This workshop is suitable for Platform team contributors, DevOps engineers, IT management, and leadership.
+        This workshop is suitable for Platform team contributors, DevOps engineers, IT management, and leadership. You can also read the breakdown in [The Guide to Platform Engineering: 7 Steps to Get It Right](https://www.pulumi.com/blog/the-guide-platform-engineering-idp-steps-best-practices/).
 
     learn:
-        - A step-by-step guide to successfully implementing platform engineering in all kinds of organizations.
+        - A step-by-step guide to successfully implement platform engineering in all kinds of organizations.
         - How infrastructure as code, automated controls, reporting, and self-service infrastructure fit into platform engineering efforts.
         - How to handle common pitfalls to implement platform engineering in IT organizations successfully.
 

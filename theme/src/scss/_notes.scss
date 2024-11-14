@@ -20,7 +20,7 @@
     :last-child {
         margin-bottom: 0;
     }
-
+    
     a {
         &:hover {
             text-decoration: underline;
@@ -74,6 +74,26 @@
         }
     }
 
+    &.note-tip {
+        background: #f1feea;
+
+        a {
+            color: #338d72;
+        }
+
+        i {
+            color: #25a78b;
+        }
+
+        div.line {
+            background-color: #4ce1b4;
+        }
+
+        code {
+            background-color: #b2fbe0;
+        }
+    }
+
     &.note-warning {
         background: #fcf2e9;
 
@@ -96,5 +116,11 @@
 
     div.highlight div.copy-button-container button.copy-button i {
         color: #fff;
+    }
+}
+
+section.docs-content div.note { 
+    :last-child {
+        padding-bottom: 0;
     }
 }

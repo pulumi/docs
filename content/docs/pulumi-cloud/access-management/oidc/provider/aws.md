@@ -38,13 +38,9 @@ Please note that this guide provides step-by-step instructions based on the offi
   {{< video title="Starting the Create Identity Provider wizard" src="https://www.pulumi.com/uploads/create-idp-start.mp4" autoplay="true" loop="true" >}}
 2. In the **Provider type** section, click the radio button next to **OpenID Connect**.
 3. For the **Provider URL**, provide the following URL: `https://api.pulumi.com/oidc`
-4. Click the **Get thumbprint** button.
+4. For the **Audience** field, the value will differ between pulumi deployments and ESC. For Deployments the value is only the name of your Pulumi organization. For ESC the value is the name of your Pulumi organization prefixed with `aws:` (e.g. `aws:{org}`). Then click **Add provider**.
   {{< notes type="info" >}}
-  The AWS console generates the thumbprint value on your behalf. However, if you are creating the OIDC provider programmatically, you will need to generate this value yourself and provide the thumbprint value as a part of your resource definition. You can learn more about what a thumbprint is and how to generate/verify it by referring to the [relevant AWS documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_create_oidc_verify-thumbprint.html).
-  {{< /notes >}}
-5. For the **Audience** field, the value will differ between pulumi deployments and ESC. For Deployments the value is only the name of your Pulumi organization. For ESC the value is the name of your Pulumi organization prefixed with `aws:` (e.g. `aws:{org}`). Then click **Add provider**.
-  {{< notes type="info" >}}
-  For environments in the `default` project the audience will use just the Pulumi organization name. This is to prevent regressions for legacy environments.
+  For environments in the `default` project, the audience will use just the Pulumi organization name. This is to prevent regressions for legacy environments.
   {{< /notes >}}
 
 ## Configure the IAM Role and Trust Policy

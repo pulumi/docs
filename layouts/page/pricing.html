@@ -74,15 +74,26 @@
                                 </div>
                                 {{ if eq $index 0 }}
                                     <div class="flex flex-wrap flex-col justify-center align-center items-center text-center my-4 h-14 lg:h-24 xl:h-14">
-                                        <pricing-cta button-class="text-white text-s bg-violet-600 border-2 border-violet-600 rounded-lg py-2 px-2 hover:bg-violet-500"></pricing-cta>
+                                        <pricing-cta button-class="text-white text-s bg-violet-600 border-2 border-violet-600 rounded-lg py-2 px-2 hover:bg-violet-500 text-nowrap" signed-in-text="Create an Organization" signed-out-text="Sign Up"></pricing-cta>
+                                    </div>
+                                {{ else if eq $index 1 }}
+                                    <div class="flex flex-wrap justify-center items-center text-center my-4 h-14 lg:h-24 xl:h-14">
+                                        <pricing-cta button-class="text-white text-s bg-violet-600 border-2 border-violet-600 rounded-lg py-2 px-2 hover:bg-violet-500 text-nowrap" signed-in-text="{{ $tier.primary_cta }}" signed-out-text="{{ $tier.primary_cta }}"></pricing-cta>
+                                    </div>
+                                {{ else if eq $index 2 }}
+                                    <div class="flex flex-wrap justify-center items-center text-center my-4 h-14 lg:h-24 xl:h-14">
+                                        <pricing-cta button-class="text-white text-s bg-violet-600 border-2 border-violet-600 rounded-lg py-2 px-2 hover:bg-violet-500 text-nowrap mr-1 mb-0 lg:mb-1 xl:mb-0" signed-in-text="{{ $tier.primary_cta }}" signed-out-text="{{ $tier.primary_cta }}"></pricing-cta>
+                                        {{ if $tier.secondary_cta }}
+                                            <a href="{{ $tier.secondary_cta_link }}" class="text-violet-600 text-s border-2 border-violet-600 rounded-lg py-2 px-2 hover:bg-violet-100">{{ $tier.secondary_cta }}</a>
+                                        {{ end }}
                                     </div>
                                 {{ else }}
-                                <div class="flex flex-wrap justify-center items-center text-center my-4 h-14 lg:h-24 xl:h-14">
-                                    <a href="{{ $tier.primary_cta_link}}" class="text-white text-s bg-violet-600 border-2 border-violet-600 rounded-lg py-2 px-2 hover:bg-violet-500 mr-1 mb-0 lg:mb-1 xl:mb-0">{{ $tier.primary_cta }}</a>
-                                    {{ if $tier.secondary_cta }}
-                                        <a href="{{ $tier.secondary_cta_link }}" class="text-violet-600 text-s border-2 border-violet-600 rounded-lg py-2 px-2 hover:bg-violet-100">{{ $tier.secondary_cta }}</a>
-                                    {{ end }}
-                                </div>
+                                    <div class="flex flex-wrap justify-center items-center text-center my-4 h-14 lg:h-24 xl:h-14">
+                                        <a href="{{ $tier.primary_cta_link}}" class="text-white text-s bg-violet-600 border-2 border-violet-600 rounded-lg py-2 px-2 hover:bg-violet-500 mr-1 mb-0 lg:mb-1 xl:mb-0">{{ $tier.primary_cta }}</a>
+                                        {{ if $tier.secondary_cta }}
+                                            <a href="{{ $tier.secondary_cta_link }}" class="text-violet-600 text-s border-2 border-violet-600 rounded-lg py-2 px-2 hover:bg-violet-100">{{ $tier.secondary_cta }}</a>
+                                        {{ end }}
+                                    </div>
                                 {{ end }}
                                 <div class="border-dotted border-2 border-gray-200 rounded-lg px-4">
                                     <div class="text-sm">{{ $tier.items | markdownify }}</div>
@@ -252,7 +263,7 @@
                             <h2 class="mb-12 text-center">Ready to try Pulumi Cloud?</h2>
                             <div class="flex flex-col lg:flex-row self-stretch items-center lg:justify-between">
                                 <div class="flex flex-col justify-center align-center text-center w-full md:w-2/4 lg:ml-14 lg:mr-4 mb-14 lg:mb-0 z-0">
-                                    <a id="pricingStartTrialBottomCTA" class="btn-primary py-3">Start trial</a>
+                                    <a href="https://app.pulumi.com/?create-organization=1" id="pricingStartTrialBottomCTA" class="btn-primary py-3">Start trial</a>
                                     <p class="text-xs pt-1 my-0">14-day trial. No credit card needed.</p>
                                 </div>
                                 <div class="flex flex-col justify-center align-center text-center w-full md:w-2/4 lg:mr-14 lg:ml-4">

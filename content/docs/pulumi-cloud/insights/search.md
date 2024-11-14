@@ -31,7 +31,7 @@ For example, a query like
 
 > bucket
 
-will return resources having [types][types] like `aws:s3/bucket:Bucket` or `aws:s3/bucketobject:BucketObject`. It will also return resources in stacks named "bucket" or projects named "my-cool-bucket".
+will return resources having [types][types] like `aws:s3/bucketv2:BucketV2` or `aws:s3/bucketobject:BucketObject`. It will also return resources in stacks named "bucket" or projects named "my-cool-bucket".
 
 Similarly, a query for
 
@@ -273,7 +273,8 @@ If you would like to use it, [contact us](/contact?form=sales) to upgrade.
 
 Property search allows you to query resources by their inputs and outputs.
 
-A property query is similar to a field query but it is triggered by a leading `.` followed by a _property path_:
+A property query is similar to a field query but it is triggered by a leading `.` followed by a
+[property path](/docs/iac/concepts/miscellaneous/property-paths/):
 
 > .\<property path>:<value?>
 
@@ -355,12 +356,6 @@ For a complete description of the CSV format returned, see the [Data Export](/do
 Resources can also be queried programmatically. See the [Pulumi Cloud REST API](/docs/pulumi-cloud/cloud-rest-api#resource-search) for full details of the API endpoint to query resources.
 
 ## AI Assist
-
-{{% notes "info" %}}
-AI Assist is an experimental feature that lets you use natural-language prompts to generate queries for use with Resource Search.
-
-If you don't see it in your organization, [contact us](/contact?form=sales).
-{{% /notes %}}
 
 Organizations with AI Assist enabled will see an "AI Assist" button to the right of their search bar.
 

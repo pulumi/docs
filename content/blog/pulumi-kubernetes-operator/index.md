@@ -6,6 +6,9 @@ tags: ["Kubernetes", "Continuous-Delivery", "operators"]
 meta_desc: "Introducing the Pulumi Kubernetes Operator: Deploy infrastructure in Pulumi Stacks"
 meta_image: operator.png
 ---
+{{% notes type="info" %}}
+Check out version 2.0 of the [Pulumi Kubernetes Operator](/blog/pulumi-kubernetes-operator-2-0/).
+{{% /notes %}}
 
 Kubernetes developers and operators work together to manage workloads
 and to continuously ship software through CI/CD. These users
