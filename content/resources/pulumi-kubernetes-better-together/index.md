@@ -78,4 +78,18 @@ main:
 form:
   hubspot_form_id: 7fa54625-9e6e-4133-8ea6-4e82df69c767
   salesforce_campaign_id: 701PQ00000JthRBYAZ
+
+event_data:
+  name: "Pulumi and Kubernetes - Better Together"
+  start_date: 2024-11-18T13:00:00-04:00
+  end_date: 2024-11-18T14:00:00-04:00
+  url: "https://www.pulumi.com/resources/pulumi-kubernetes-better-together/"
+  description: |
+    Explore the powerful combination of Kubernetes and Pulumi for modern cloud-native application deployment and management.
+        
+    Kubernetes has become the de facto standard for container orchestration, offering scalability, portability, and efficient resource utilization. However, organizations often face challenges in managing complex Kubernetes configurations and integrating with various cloud services. This is where Pulumi steps in, providing a revolutionary approach to infrastructure as code.
+        
+    Pulumi empowers developers to define and manage Kubernetes resources using familiar general-purpose programming languages, eliminating the need for lengthy YAML configurations. This workshop demonstrates how Pulumi's unified platform enables teams to manage not only Kubernetes resources but also cloud provider services and SaaS offerings through a single, consistent toolchain.
+        
+    Participants will gain hands-on experience using Pulumi to deploy and manage Kubernetes applications and learn best practices for creating maintainable and scalable infrastructure code. You will learn how, by using Pulumi, organizations can streamline their infrastructure management, improve collaboration between development and operations teams, and accelerate their cloud-native journey.
 ---
