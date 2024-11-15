@@ -81,4 +81,12 @@ form:
     # HubSpot form id.
     hubspot_form_id: f7e56bad-4772-45cc-8e56-a49c4be45764
     salesforce_campaign_id: 701PQ00000N7ODGYA3
+
+event_data:
+  name: "Getting started with CI/CD for AWS using GitHub Actions"
+  start_date: 2024-11-27T11:00:00.000+11:00
+  end_date: 2024-11-27T12:30:00.000+11:00
+  url: "https://www.pulumi.com/resources/getting-started-with-ci-cd-for-aws-pulumi-github-actions/"
+  description: |
+    In this workshop, you will become familiar with the core concepts needed to deploy cloud resources continuously. You'll define Infrastructure as Code (IaC), and configure Pulumi GitHub Actions to deploy AWS resources after a commit and merge.
 ---

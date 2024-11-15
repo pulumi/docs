@@ -53,8 +53,6 @@ main:
         
         The session will dive into GitLab’s enterprise collaboration and CI/CD pipelines, including automated security checks for infrastructure. Attendees will gain hands-on experience with secrets management and automated deployments, using ESC secrets for enhanced security. By the end, you’ll be equipped to streamline infrastructure and application delivery across teams, reducing complexity and risk while maximizing flexibility and control.
 
-
-
     learn:
         - How to create GitLab pipelines for your infrastructure as code on Google Cloud (GCP).
         - How to use the GitLab security scanning and Pulumi provider to manage your GitLab resources.
@@ -84,4 +82,14 @@ form:
     # HubSpot form id.
     hubspot_form_id: 722fb75e-1716-43a0-bd04-6229b86ed256
     salesforce_campaign_id: 701PQ00000Me8GkYAJ
+
+event_data:
+  name: "From Code to Production with Pulumi, GitLab and Google Cloud"
+  start_date: 2024-12-16T09:00:00-08:00
+  end_date: 2024-12-16T10:30:00-08:00
+  url: "https://www.pulumi.com/resources/from-code-to-production-pulumi-gitlab-google-cloud/"
+  description: |
+    In this workshop, explore how Pulumi’s integration with GitLab empowers teams to create robust CI/CD pipelines for managing cloud infrastructure on Google Cloud. You’ll learn to leverage Pulumi’s declarative Infrastructure as Code (IaC) for provisioning and scaling resources, along with GitLab's DevSecOps platform..
+        
+    The session will dive into GitLab’s enterprise collaboration and CI/CD pipelines, including automated security checks for infrastructure. Attendees will gain hands-on experience with secrets management and automated deployments, using ESC secrets for enhanced security. By the end, you’ll be equipped to streamline infrastructure and application delivery across teams, reducing complexity and risk while maximizing flexibility and control.
 ---

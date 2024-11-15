@@ -78,4 +78,14 @@ form:
     # HubSpot form id.
     hubspot_form_id: fdd052d2-75b7-41a1-8d58-a9dd726177b4
     salesforce_campaign_id: 701PQ00000N0Hd9YAF
+
+event_data:
+  name: "Platform Engineering: Best Practices for Managing Secrets"
+  start_date: 2024-12-18T09:00:00-08:00
+  end_date: 2024-12-18T10:00:00-08:00
+  url: "https://www.pulumi.com/resources/securing-and-managing-secrets-best-practices/"
+  description: |
+    Secrets sprawl is a huge challenge in IT organizations. When you have secrets stored in many places, how do you ensure that practitioners only have access to what they need, and how do you manage and view that access in a single place?
+
+    In this session you'll learn about Pulumi ESC, a centralized secrets management solution that helps solve the problem of secrets sprawl in a thoughtful way that keeps your secrets safe while helping your teams deliver.
 ---
