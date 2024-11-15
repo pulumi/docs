@@ -65,8 +65,8 @@ The runtime attribute has an additional property called `options` where you can 
 | `packagemanager` | Only applies to the `nodejs` runtime | Packagemanager to use for installing dependencies, `npm` (default), `pnpm` or `yarn`. |
 | `buildTarget` | Only applies to the `go` runtime | Path to save the compiled go binary to. |
 | `binary` | applies to the `go`, `dotnet`, and `java` runtimes | Path to a pre-built executable. |
-| `toolchain` | Only applies to the `python` runtime | Toolchain to use for managing virtual environments, `pip` (default) or `poetry`. |
-| `virtualenv` | Only applies to the `python` runtime with the `pip` toolchain. | Virtual environment path. |
+| `toolchain` | Only applies to the `python` runtime | Toolchain to use for managing virtual environments, `pip` (default), `poetry` or `uv` |
+| `virtualenv` | Only applies to the `python` runtime with the `pip` or `uv` toolchain. | Virtual environment path. |
 | `typechecker` | Only applies to the `python` runtime | Type checker library to use. |
 | `compiler` | Only applies to the `yaml` runtime | Executable and arguments issued to standard out. |
 
