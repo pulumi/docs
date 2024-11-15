@@ -8,6 +8,16 @@ layout: community-engineering/single
 aliases:
   - /engin
 talks:
+- event: "ArgoCon NA 2025"
+  title: "⚡ Lightning Talk: Progressive Infrastructure Delivery Using Kargo and Argo CD"
+  url: "https://colocatedeventsna2024.sched.com/event/1izrk/cl-lightning-talk-progressive-infrastructure-delivery-using-kargo-and-argo-cd-engin-diri-pulumi"
+  date: 2024-11-12T18:00:00.000-07:00
+  slides: "https://static.sched.com/hosted_files/colocatedeventsna2024/a3/kubecon-2024-na-progressive-infrastructure-delivery-using-kargo-and-argo-cd.pdf"
+- event: "WasmCon 2025"
+  title: "Next-Level Powers: Enhance Your IDP with the WASM and Dapr Hero Team-Up!"
+  url: "https://wasmcon24.sched.com/event/1qZpA/next-level-powers-enhance-your-idp-with-the-wasm-and-dapr-hero-team-up-engin-diri-pulumi"
+  date: 2024-11-11T18:00:00.000-07:00
+  slides: "https://static.sched.com/hosted_files/wasmcon24/83/next-level-powers-enhance-your-idp-with-the-wasm-and-dapr-hero-team-up.pdf"
 - event: "DevOpsDays Tel Aviv 2024"
   title: "Workshop: Build Your Developer Platform in 90 Minutes - Backstage + ArgoCD + K8s"
   url: "https://tlvcommunity.dev/devopsdays/agenda-2024#calendar-e0e8b4b4-54d8-4a8a-ab08-a15509b32a9d-event-m2bkpv13"
