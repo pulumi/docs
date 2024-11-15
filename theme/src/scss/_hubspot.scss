@@ -94,6 +94,14 @@
             @apply hidden;
         }
 
+        .hs-email {
+            @apply pt-0.5;
+            
+            input {
+                @apply h-10;
+            }
+        }
+
         input {
             @apply block py-3 px-4 rounded-lg border;
 
