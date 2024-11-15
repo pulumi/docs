@@ -5371,7 +5371,7 @@ POST /api/oauth/token
 | `subject_token_type`   | string | body  | OAuth subject token type (only `urn:ietf:params:oauth:token-type:id_token` is supported)                         |
 | `requested_token_type` | string | body  | OAuth requested token type (prefix of `urn:pulumi:token-type:access_token:TOKEN_TYPE` where TOKEN_TYPE is `organization`, `team`, `personal`, or `runner`) |
 | `expiration`           | number | body  | OAuth token expiration in seconds                                                                                |
-| `scope`                | string | body  | OAuth scope as a comma-separated array. This depends on the requested token type. For requested token type `organization`, scopes must be empty or `admin`. For `team`, the scope must be `team:TEAM_NAME`. For `personal`, it must be `user:USER_NAME`. For `runner`, it must be `runner:RUNNER_NAME`. |
+| `scope`                | string | body  | OAuth scope as a comma-separated array. This depends on the requested token type. For requested token type `organization`, scopes must be empty or `admin`. For `team`, the scope must be `team:TEAM_NAME`. For `personal`, it must be `user:USER_LOGIN`. For `runner`, it must be `runner:RUNNER_NAME`. |
 
 #### Example
 
