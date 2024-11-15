@@ -21,6 +21,7 @@
 @import "marketing/dismissable-banner";
 @import "code";
 @import "container";
+@import "copilot";
 @import "copy-button";
 @import "docs/cloud-overview";
 @import "docs/continuous-delivery";
@@ -71,6 +72,7 @@
 @import "components/chooser";
 @import "components/choosable";
 @import "components/convert";
+@import "components/docs-nav";
 @import "components/filter-select";
 @import "components/greenhouse-jobs-list";
 @import "components/install";
@@ -210,7 +212,7 @@ main {
     @apply text-blue-700;
 }
 
-.section-blog {
+.section-blog, .section-tags, .section-authors {
     .tags {
         .tag {
             @apply lowercase border border-blue-200 rounded py-1 px-2 mr-1;
@@ -337,6 +339,30 @@ $sitenav-offset: calc($sitenav-height + 16px);
     text-shadow: none;
 }
 
+.blue-star-background {
+    @apply w-full h-full overflow-hidden absolute top-0 left-0 bg-blue-200 shadow-lg;
+
+    .blue-star-background-image {
+        @apply w-full h-full;
+        background-image: url("/images/home/hero-background.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        opacity: 0.5;
+    }
+}
+
+.purple-hex-background {
+    @apply w-full h-full overflow-hidden absolute top-0 left-0 bg-violet-200 shadow-lg;
+
+    .purple-hex-background-image {
+        @apply w-full h-full;
+        background-image: url("/images/home/hexagons.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        opacity: 0.5;
+    }
+}
+
 #architectures {
     @apply text-center;
 
@@ -367,25 +393,22 @@ section.newsletter-input pulumi-hubspot-form input.hs-input {
     @apply rounded;
 }
 
+#segment-consent-manager:empty {
+    @apply hidden;
+}
 #segment-consent-manager {
 
-    > div:first-child {
-        @apply text-black fixed bottom-0 right-0 left-0 p-2 m-4 border-2 border-violet-600 rounded-lg shadow-lg;
-        z-index: 99999;
+    @apply text-black fixed bottom-0 right-0 left-0 m-4 border-2 border-violet-600 rounded-lg shadow-lg;
+    z-index: 99999;
 
-        @screen lg {
-            @apply w-1/3 left-auto m-4 overflow-hidden p-2;
-        }
+    @screen lg {
+        @apply w-1/3 right-auto m-4 overflow-hidden;
     }
 
     div {
        @apply bg-white;
     }
-
-    div:empty {
-        @apply hidden;
-    }
-
+    
     p {
         @apply text-black text-left text-sm pr-2;
 

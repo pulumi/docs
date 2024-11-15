@@ -204,7 +204,7 @@ it would fail with a validation error.
 
 The final step is to point our custom domain to the CDN endpoint and
 provision a TLS certificate to enable HTTPS support. Once again, these
-operations are not parts of the ARM API surface, so another [dynamic resource](https://github.com/pulumi/examples/blob/master/classic-azure-ts-dynamicresource/cdnCustomDomain.ts)
+operations are not parts of the ARM API surface, so another [dynamic resource](https://github.com/pulumi/examples/tree/846811de2c7faa4694454c64edc9bbcdb31d533e/classic-azure-ts-dynamicresource/cdnCustomDomain.ts)
 was created to support them.
 
 The usage is quite straightforward, just make sure to use your own

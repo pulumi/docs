@@ -230,4 +230,4 @@ Ta da! 🎉
 
 We now have a README on the Stack.
 
-Refer to the [Stack README documentation page](https://www.pulumi.com/docs/pulumi-cloud/projects-and-stacks/#stack-readme) for more details on how to use this feature. As always, please feel free to submit feature requests and bug reports to the [Pulumi Service GitHub Repo](https://github.com/pulumi/service-requests). We love hearing feedback from users about ways we can improve your productivity when using Pulumi. We look forward to seeing how you make Stack READMEs fit your needs!
+Refer to the [Stack README documentation page](https://www.pulumi.com/docs/pulumi-cloud/projects-and-stacks/#stack-readme) for more details on how to use this feature. As always, please feel free to submit feature requests and bug reports to the [Pulumi Service GitHub Repo](https://github.com/pulumi/pulumi-cloud-requests). We love hearing feedback from users about ways we can improve your productivity when using Pulumi. We look forward to seeing how you make Stack READMEs fit your needs!

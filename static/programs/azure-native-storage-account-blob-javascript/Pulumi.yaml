@@ -1,0 +1,11 @@
+name: azure-native-storage-account-blob-javascript
+description: An example that deploys a blob into a blob storage account on Azure.
+runtime:
+  name: nodejs
+  options:
+    typescript: false
+    packagemanager: npm
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: azure-javascript

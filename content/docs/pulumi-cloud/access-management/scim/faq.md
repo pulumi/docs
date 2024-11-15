@@ -5,10 +5,15 @@ title: FAQ
 h1: Pulumi Cloud SCIM FAQ
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    pulumicloud:
-        identifier: faq-scim
-        parent: scim
-        weight: 4
+  cloud:
+    name: FAQ
+    parent: pulumi-cloud-access-management-scim
+    weight: 4
+    identifier: pulumi-cloud-access-management-scim-faq
+  pulumicloud:
+    identifier: faq-scim
+    parent: scim
+    weight: 4
 aliases:
   - /docs/guides/scim/faq/
 ---
@@ -35,9 +40,22 @@ If your identity provider doesn't allow you to control the username attribute's 
 
 Yes. In addition to the SCIM-managed teams, one can also configure and manage Pulumi-local teams in the Pulumi Cloud. See [Teams](/docs/pulumi-cloud/access-management/teams/) for how to configure teams in the Pulumi Cloud.
 
+### A failure occurred when attempting to provision group members.
+
+The creation (POST), update (PATCH) or replacement (PUT) of a group performs member validation prior running the operation. If any of the members provided are not provisioned into your Pulumi organization or is not active, the request will fail with the following response:
+
+```
+Status: 400 BAD REQUEST
+Bad Request: invalid member ids: [comma separated list of invalid member ids]
+```
+
+The suggested way to resolve this conflict would be to synchronize all the group members to guarantee every member is successfully provisioned and update the user's status. _This action must be done by an admin on the identity provider side (e.g. Okta)_.
+
 ## More FAQ
 
-* [Kubernetes guides FAQ](/docs/clouds/kubernetes/guides/faq/)
-* [Policy as code FAQ](/docs/using-pulumi/crossguard/faq/)
-* [Pulumi Deployments FAQ](/docs/pulumi-cloud/deployments/faq/)
-* [Pulumi CLI & Pulumi Cloud FAQ](/docs/support/faq/)
+- [Pulumi IaC FAQ](/docs/iac/support/faq/)
+- [Pulumi ESC FAQ](/docs/esc/faq/)
+- [Pulumi Cloud FAQ](/docs/pulumi-cloud/faq/)
+- [Pulumi Cloud Deployments FAQ](/docs/pulumi-cloud/deployments/faq/)
+- [Pulumi CrossGuard FAQ](/docs/using-pulumi/crossguard/faq/)
+- [Kubernetes guides FAQ](/docs/clouds/kubernetes/guides/faq/)

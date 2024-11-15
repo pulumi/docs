@@ -14,7 +14,7 @@ youll_learn:
   - How to install and configure the Pulumi GitHub App
   - How to trigger deployments directly from the Pulumi Cloud console using click-to-deploy
 prereqs:
-    - Completion of the AWS [Getting Started](/docs/clouds/aws/get-started/) guide or familiarity with the basics of the Pulumi workflow
+    - Completion of the AWS [Getting Started](/docs/iac/get-started/aws/) guide or familiarity with the basics of the Pulumi workflow
     - A [Pulumi Cloud account](https://app.pulumi.com/signup)
     - An [Amazon Web Services](https://aws.amazon.com/) account, access key ID, and secret access key
     - A [GitHub account](https://github.com/) with admin rights to a Git repository or organization
@@ -34,11 +34,11 @@ First sign in to Pulumi Cloud via the [Pulumi sign in page](https://app.pulumi.c
 
 ## Install and configure the GitHub App
 
-Next, the [Pulumi GitHub App](/docs/using-pulumi/continuous-delivery/github-app/) is required to enable Pulumi Deployment's [New Project Wizard](/docs/pulumi-cloud/developer-portals/new-project-wizard/) and push-to-deploy functionality. Follow the GitHub app [installation instructions](/docs/pulumi-cloud/deployments/reference/#github-app-installation) to ensure your Pulumi organization is set up to work seamlessly with Pulumi Deployments.
+Next, the [Pulumi GitHub App](/docs/iac/packages-and-automation/continuous-delivery/github-app/) is required to enable Pulumi Deployment's [New Project Wizard](/docs/pulumi-cloud/developer-portals/new-project-wizard/) and push-to-deploy functionality. Follow the GitHub app [installation instructions](/docs/pulumi-cloud/deployments/reference/#github-app-installation) to ensure your Pulumi organization is set up to work seamlessly with Pulumi Deployments.
 
 ## Create a New Project with the New Project Wizard
 
-To create a new Pulumi project, commit its code, and deploy it entirely from your browser, you will use the [New Project Wizard](/docs/pulumi-cloud/developer-portals/new-project-wizard/). The wizard allows you to start from one of Pulumi’s public templates, your [Organization Templates](/docs/pulumi-cloud/developer-portals/templates), or even generate a custom project using the cloud resources and your preferred language of choice with [Pulumi AI](link).
+To create a new Pulumi project, commit its code, and deploy it entirely from your browser, you will use the [New Project Wizard](/docs/pulumi-cloud/developer-portals/new-project-wizard/). The wizard allows you to start from one of Pulumi’s public templates, your [Organization Templates](/docs/pulumi-cloud/developer-portals/templates), or even generate a custom project using the cloud resources and your preferred language of choice with [Pulumi AI](/ai).
 
 First, navigate to the **New Project** tab in the Pulumi Cloud console. Choose your source template from Pulumi, then you can optionally choose your cloud and language to filter the results or search all templates.
 
@@ -63,7 +63,7 @@ These values populate the `config` section in the `Pulumi.<stack>.yaml` file, sp
 
 ### Environment
 
-If you've configured [environments](/docs/pulumi-cloud/esc) with your organization, you can specify one to use with the resulting stack. Environments enable teams to define and share collections of configuration and secrets across multiple Pulumi projects and stacks, such as your `AWS_SECRET_ACCESS_KEY` which will be needed to configure your deployment settings. 
+If you've configured [environments](/docs/pulumi-cloud/esc) with your organization, you can specify one to use with the resulting stack. Environments enable teams to define and share collections of configuration and secrets across multiple Pulumi projects and stacks, such as your `AWS_SECRET_ACCESS_KEY` which will be needed to configure your deployment settings.
 
 ### Repository
 

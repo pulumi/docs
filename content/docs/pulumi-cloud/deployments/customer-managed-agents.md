@@ -1,8 +1,13 @@
 ---
-title: Customer-Managed Agents
-title_tag: Get started with Customer-Managed Agents
-meta_desc: Customer-Managed Agents allows you to self-host deployment agents and get all the power and flexibility of Pulumi Deployments in your isolated environments
+title: Customer-managed agents
+title_tag: Get started with customer-managed agents
+meta_desc: Customer-managed agents allows you to self-host deployment agents and get all the power and flexibility of Pulumi Deployments in your isolated environments
 menu:
+  cloud:
+    name: Customer-managed agents
+    parent: pulumi-cloud-deployments
+    weight: 3
+    identifier: pulumi-cloud-deployments-customer-managed-agents
   pulumicloud:
     parent: deployments
     weight: 2
@@ -144,6 +149,7 @@ oidc_token_file: ""
 
 # List of environment variables to pass to the deployment agent
 # Environment variable override: PULUMI_AGENT_ENV_FORWARD_ALLOWLIST
+# Environment variable format is: PULUMI_AGENT_ENV_FORWARD_ALLOWLIST="VAR1 VAR2"
 env_forward_allowlist: []
 
 # Deployment target for the agent: docker (default) or kubernetes
@@ -151,7 +157,7 @@ env_forward_allowlist: []
 deploy_target: "docker"
 ```
 
-### Kubernetes
+### Kubernetes-Managed Agents
 
 For Kubernetes-native installations, configuration for customer-managed agents is set on the Kubernetes Deployment that runs the agent. Configuration values may be set as environment variables, or by mounting a configuration file in the agent Pod.
 

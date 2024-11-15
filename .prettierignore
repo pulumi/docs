@@ -37,3 +37,9 @@ content/docs/reference/pkg
 tsconfig.json
 package.json
 typedoc.json
+
+# Ignore the files we generate during the build and deployment process.
+origin-bucket-metadata.json
+
+# Ignore js scripts added to the static folder
+static/js

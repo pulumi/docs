@@ -11,8 +11,7 @@ aliases:
 hero:
     title: Kubernetes Superpowers
     body: >
-        Pulumi lets you use a single infrastructure as code workflow for managing cloud native resources and infrastructure with software engineering. Eliminate complex YAML, JSON, and DSLs by using your favorite programming languages and automate deployments to AWS, Azure, Google Coud,
-        and 100+ providers.
+        Pulumi empowers organizations to automate Kubernetes applications, clusters, and entire cloud environments through code, tame secrets sprawl through centralized secrets management, and manage cloud assets and compliance with the help of AI. Pulumi encourages infrastructure, platform, development, DevOps, and security teams to collaborate and accelerates time to market with greater control and minimized risk.
     cta_text: See what's new
 
 video_section:
@@ -208,8 +207,8 @@ kubernetes_overview:
     list:
         - Manage Kubernetes clusters on all major cloud providers.
         - Increase productivity using the full ecosystem of dev tools such as IDE auto-completion, type & error checking, linting, refactoring, and test frameworks to validate Kubernetes clusters, app workloads, or both.
-        - Automate Kubernetes deployments with CI/CD integrations for [Flux](/blog/pulumi-kubernetes-new-2022/#integration-with-flux-sources), [Spinnaker](/blog/unlocking-spinnaker-with-pulumi/), [Octopus](/blog/deploying-with-octopus-and-pulumi/), [GitHub Actions](/blog/continuous-delivery-to-any-cloud-using-github-actions-and-pulumi/), [GitLab](/blog/continuous-delivery-with-gitlab-and-pulumi-on-amazon-eks/), [Azure DevOps](/blog/cd-made-easy-with-pulumi-and-azure-pipelines/) and [more](/docs/using-pulumi/continuous-delivery/).
-        - Seamlessly manage both Kubernetes and cloud resources using GitOps with the [Pulumi Kubernetes Operator](/docs/using-pulumi/continuous-delivery/pulumi-kubernetes-operator/).
+        - Automate Kubernetes deployments with CI/CD integrations for [Flux](/blog/pulumi-kubernetes-new-2022/#integration-with-flux-sources), [Spinnaker](/blog/unlocking-spinnaker-with-pulumi/), [Octopus](/blog/deploying-with-octopus-and-pulumi/), [GitHub Actions](/blog/continuous-delivery-to-any-cloud-using-github-actions-and-pulumi/), [GitLab](/blog/continuous-delivery-with-gitlab-and-pulumi-on-amazon-eks/), [Azure DevOps](/blog/cd-made-easy-with-pulumi-and-azure-pipelines/) and [more](/docs/iac/packages-and-automation/continuous-delivery/).
+        - Seamlessly manage both Kubernetes and cloud resources using GitOps with the [Pulumi Kubernetes Operator](/docs/iac/packages-and-automation/continuous-delivery/pulumi-kubernetes-operator/).
         - Use Kubernetes [Server-Side Apply](/registry/packages/kubernetes/how-to-guides/managing-resources-with-server-side-apply/) to safely manage shared Kubernetes resources with Pulumi and your existing controllers.
     cta: Learn More
     cta_url: "/blog/new-kubernetes-superpowers"
@@ -217,36 +216,37 @@ kubernetes_overview:
 superpowers:
     - title: Run On Any Cloud
       cta: Learn more
-      cta_url: "/docs/clouds/kubernetes/get-started/"
+      cta_url: "/docs/iac/get-started/kubernetes/"
       icon_type: cloud
+      icon_color: salmon
       description: |
         Support for all clouds including Amazon Elastic Kubernetes Service (EKS), Azure
         Kubernetes Service (AKS), Google Kubernetes Engine (GKE), DigitalOcean Kubernetes
-        (DOKS), and more, with dozens of integrations with popular infrastructure service
+        (DOKS), and more, with hundreds of integrations with popular infrastructure service
         providers.
 
-    - title: Reduce Provisioning Time
+    - title: Intelligent Cloud Management
       cta: Learn more
-      cta_url: "/docs/clouds/kubernetes/get-started/"
-      icon_type: provisioning
+      cta_url: "/docs/pulumi-cloud/insights/"
+      icon_type: cloud-with-nodes
+      icon_color: purple
       description: |
-        With Pulumi you are able to take advantage of the features of programming languages,
-        helping you reduce boilerplate code and ultimately ship Kubernetes infrastructure and
-        applications faster with greater consistency.
+        Gain security, compliance, and cost insights into the entirety of an organization’s Kubernetes applications and cloud assets and automatically remediate issues through AI-powered workflows.
 
     - title: Automate Delivery
       cta: Learn more
-      cta_url: "/docs/using-pulumi/continuous-delivery/"
+      cta_url: "/docs/iac/packages-and-automation/continuous-delivery/"
       icon_type: delivery
+      icon_color: blue
       description: |
-        You can integrate Pulumi directly with your favorite CI/CD and SCM systems to
-        continuously deliver Kubernetes infrastructure and applications. Improve the velocity
+        You can integrate Pulumi directly with your favorite CI/CD systems and testing frameworks to continuously deliver Kubernetes infrastructure and applications. Improve the velocity
         and visibility into your deployments from simple to complex global environments.
 
     - title: Smart Architecture
       cta: Learn more
-      cta_url: "/docs/concepts/"
+      cta_url: "/docs/iac/concepts/"
       icon_type: architecture
+      icon_color: fuchsia
       description: |
         YAML and templated DSLs force you to write the same boilerplate code over and over.
         Pulumi’s Kubernetes library allows you to codify those patterns and best practices so
@@ -254,21 +254,21 @@ superpowers:
 
     - title: Be Proactive, Not Reactive
       cta: Learn more
-      cta_url: "/docs/using-pulumi/crossguard"
-      icon_type: policy
+      cta_url: "/docs/iac/packages-and-automation/crossguard/"
+      icon_type: shield
+      icon_color: yellow
       description: |
         When you enable Pulumi's Policy as Code feature, you instantly gain the power to
         prevent mistakes from being deployed. Enforce security, compliance, cost controls,
         and best practices using policies defined in modern languages.
 
-    - title: Reduce Deployment Complexity
+    - title: Centralize Secrets
       cta: Learn more
-      cta_url: "/docs/using-pulumi/testing"
-      icon_type: testing
+      cta_url: "/docs/esc/integrations/kubernetes/external-secrets-operator/"
+      icon_type: security
+      icon_color: violet
       description: |
-        Deploying untested code can lead to some unexpected results. Pulumi lets you take advantage
-        of common tools, frameworks, and techniques to unit, integration, and property test your
-        Kubernetes infrastructure. Ensure your infrastructure is correct before and after deployment.
+         [Pulumi ESC](/product/secrets-management/) is integrated with External Secrets Operator (ESO), enabling the passing of secrets from ESC directly as environment variables of applications running in Kubernetes.
 
 detail_sections:
     - title: Continue using the tools you love
@@ -276,7 +276,7 @@ detail_sections:
         Pulumi has first-class support for popular Kubernetes tools, such as Helm, Kustomize,
         YAML, Secret Managers, Open Policy Agent (OPA), Custom Resource Definitions (CRDs), and Server-Side Apply (SSA).
       cta: Learn More
-      cta_url: "/blog/new-kubernetes-superpowers"
+      cta_url: "/blog/kubecon-na-2024-roundup/"
       items:
           - title: Everything In One Place
             icon: cloud-with-nodes
@@ -298,31 +298,31 @@ detail_sections:
             icon_color: fuchsia
             description: Deploy both Kubernetes resources and cloud infrastructure from within the Kubernetes resource model using a GitOps workflow. Use Pulumi's Flux integration and many other CI/CD integrations.
 
-    - title: Kubernetes Best Practices with Pulumi Crosswalk
+    - title: AI-powered Kubernetes Management
       description: |
-        Create, deploy, and manage production-ready infrastructure leveraging hosted Kubernetes offerings such as Amazon Elastic Kubernetes Service (EKS), Azure Kubernetes Service (AKS), or Google Kubernetes Engine (GKE).
+        Pulumi Copilot, an AI-powered assistant, makes discovering cost savings, running compliance checks, and debugging deployments across your Kubernetes resources as easy as typing a question.
       cta: Learn More
-      cta_url: "/docs/clouds/kubernetes/guides/"
+      cta_url: "/product/copilot/"
       items:
-          - title: Day 2 and Beyond
-            icon: cycle
+          - title: Discover Cost Savings
+            icon: guage
             icon_color: blue
-            description: By using Pulumi Crosswalk for Kubernetes, you can benefit from tried-and-true “Day Two and beyond” integrations and playbooks, improving your infrastructure security, manageability, and cost effectiveness.
+            description: Pulumi Copilot can access infrastructure stack and resource data, so you can analyze the cost of your infrastructure and reclaim cloud waste.
 
-          - title: Accessible Kubernetes
-            icon: collab
+          - title: Run Compliance Checks
+            icon: testing
             icon_color: purple
-            description: Through Pulumi's Crosswalk for Kubernetes library extensions, the authorship experience has improved to make the Kubernetes API more accessible and approachable to operators and developers of all backgrounds.
+            description: Pulumi Copilot leverages knowledge about compliance frameworks to analyze your infrastructure and check for policy compliance. 
 
-          - title: Focus on Delivering Value
-            icon: nodes
+          - title: Debug Cloud Failures
+            icon: cloud-with-nodes
             icon_color: salmon
-            description: With Pulumi you'll focus more on functionality and business logic of your Kubernetes infrastructure and applications, and less on low-level implementation details.
+            description: Pulumi Copilot can access update and deployment logs of your stacks as well as access history, logs, and runtime metrics, so you can easily debug deployment and infrastructure failures. 
 
-          - title: Avoid Pitfalls
-            icon: code
+          - title: Stay Secure
+            icon: shield
             icon_color: yellow
-            description: Discover solutions to the hardest Kubernetes problems to avoid mitigating pitfalls around infrastructure, security, governance, reliability, and maintainability of the K8s cluster, its workloads, and underlying resources.
+            description: Pulumi Copilot combines Pulumi's supergraph of your cloud infrastructure and knowledge about security best practices to identify security violations and and detect anomalous activity. 
 
 contact_us_form:
     section_id: contact

@@ -3,7 +3,7 @@ title_tag: Panther Labs | Case Studies
 title: "Panther Labs: Increasing Velocity & Innovation"
 description: |
     With Pulumi, Panther Labs was able to provide innovative solutions to their customers quickly, which is a clear advantage for a startup.
-meta_desc: Learn how Panther Labs worked with Pulumi to increase deployment speeds by 10X and reduce the size of its infrastructure codebase by over 50%.
+meta_desc: Learn how Panther Labs worked with Pulumi to increase deployment speeds by 10x and reduce the size of its infrastructure codebase by over 50%.
 
 customer_name: Panther Labs
 customer_logo: /logos/customers/panther-labs-wordmark.svg
@@ -17,7 +17,7 @@ quote_block:
   headline: Faster for simple code changes
 
 exec_summary: |
-    Panther Labs helps modern security teams build world-class detection and response pipelines using code and automation, developer-friendly workflows, and big data primitives. Its Platform Team is responsible for a large, complex serverless architecture on AWS. Because of the limitations of its legacy Infrastructure-as-Code (IaC) tool, the team was unable to manage and scale its cloud infrastructure with the speed and automation that the company needed to support its fast-growing business. After comparing different alternatives, Panther Labs decided to migrate to the Pulumi Cloud Engineering Platform. Pulumi increased the company’s deployment speeds by up to 10X, reduced the size of its infrastructure codebase by >50%, and enabled its developers to adopt cloud engineering best practices to deliver its cloud applications faster and more reliably.
+    Panther Labs helps modern security teams build world-class detection and response pipelines using code and automation, developer-friendly workflows, and big data primitives. Its Platform Team is responsible for a large, complex serverless architecture on AWS. Because of the limitations of its legacy Infrastructure-as-Code (IaC) tool, the team was unable to manage and scale its cloud infrastructure with the speed and automation that the company needed to support its fast-growing business. After comparing different alternatives, Panther Labs decided to migrate to the Pulumi Cloud Engineering Platform. Pulumi increased the company’s deployment speeds by up to 10x, reduced the size of its infrastructure codebase by >50%, and enabled its developers to adopt cloud engineering best practices to deliver its cloud applications faster and more reliably.
 
 sections:
     - label: Exec Summary

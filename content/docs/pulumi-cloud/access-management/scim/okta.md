@@ -5,10 +5,15 @@ title: Okta
 h1: "SCIM: Configuring Okta"
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    pulumicloud:
-        identifier: okta-scim
-        parent: scim
-        weight: 2
+  cloud:
+    name: Okta
+    parent: pulumi-cloud-access-management-scim
+    weight: 2
+    identifier: pulumi-cloud-access-management-scim-okta
+  pulumicloud:
+    identifier: okta-scim
+    parent: scim
+    weight: 2
 aliases:
   - /docs/guides/scim/okta/
 ---
@@ -25,9 +30,11 @@ Please note that some advanced SCIM features aren't supported yet. For more info
 
 ## Enabling SCIM For Your Okta Org
 
-In order to configure SCIM for your Okta organization, you may need to email [support@okta.com](mailto:support@okta.com) and request that they enable `SCIM_PROVISIONING` for the organization.
+In order to enable SCIM provisioning in Okta, navigate to the Pulumi application configured in your Okta org. Under the **General** tab, in the **App Settings** dialog box, locate the **Provisioning** section and select **SCIM** by clicking **Edit** in the top right corner of the dialog box. Click **Save** to save your changes.
 
-Once the feature is enabled, navigate to the Pulumi application configured in your Okta org. Under the **General** tab, in the **App Settings** dialog box, locate the **Provisioning** section and select **SCIM**. Click **Save** to save your changes and close the **App Settings** dialog box.
+    {{% notes type="warning" %}}
+> **Important:** If you do not see the SCIM option in the **App Settings** under the **General** tab, you may need to email **Okta support** at [support@okta.com](mailto:support@okta.com) and request that they enable `SCIM_PROVISIONING` for your Okta account.
+    {{% /notes %}}
 
 ![Okta Enabling SCIM](/images/docs/reference/service/scim/okta/general-enable-scim.png)
 
@@ -57,7 +64,7 @@ To configure the SCIM connector, click the **Provisioning** tab, and then select
 1. SCIM connector base URL: `https://api.pulumi.com/scim/v2/<orgName>`, where `<orgName>` must be replaced with your organization’s login name (not display name). If you do not know this, navigate to your SAML settings and look at the SSO URL. It will have your organization’s login name in the URL.
 2. Supported provisioning actions: Check **Push New Users** and **Push Profile Updates**.
     {{% notes type="info" %}}
-If you also want to support pushing existing Okta groups, the steps in [Setting up Group Provisioning](#groupprovisioning) describe how to set that up.
+If you also want to support pushing existing Okta groups, the steps in [Enabling Group Provisioning](#enablegroupprovisioning) describe how to set that up.
     {{% /notes %}}
 
 3. Unique identifier field for users: Set to `userName`.
@@ -116,11 +123,11 @@ Pulumi usernames are immutable and should not be changed after a user is associa
 
 ![Okta Usernames Set on Create Only](/images/docs/reference/service/scim/okta/usernames-set-on-create-only.png)
 
-## Setting up Group Provisioning {#groupprovisioning}
+## Enabling Group Provisioning {#enablegroupprovisioning}
 
 The Pulumi Cloud supports the provisioning of teams within your organization using SCIM. This is done by mapping the groups you have created using SCIM to create teams within your organization in the Pulumi Cloud. Setting this up allows you to manage your teams' memberships solely in Okta.
 
-To set this up, you need to enable Push Groups as a supported provisioning action under the **Provisioning** settings and then specify which groups you would like to push. To do that, perform the following steps:
+To set this up, you need to enable Push Groups as a supported provisioning action under the **Provisioning** settings. To do that, perform the following steps:
 
 1. Navigate to the application that you created above by clicking the on the **Applications** tab and then selecting the application.
 
@@ -128,20 +135,24 @@ To set this up, you need to enable Push Groups as a supported provisioning actio
 
 2. Click on **Provisioning** tab, then click on the integrations menu option located on the left side navigation.
 3. Check the **Push Groups** box under **Supported provisioning actions**.
-4. Select the **Push Groups** tab.
-5. Select the **Push Groups** drop down menu. Here you will have the option to find groups either by name or rule.
+
+## Setting up Group Provisioning {#setupgroupprovisioning}
+
+    {{% notes type="warning" %}}
+ >**Important:** If there are members in a group that are not yet assigned to the Pulumi Cloud application in Okta, they will not be added to the team in the Pulumi Cloud. Ensure that all members in the group have been assigned to the application before pushing the group.
+    {{% /notes %}}
+
+To specify which groups you would like to push with group provisioning, select the **Push Groups** tab in your Pulumi Cloud application in Okta and complete the following steps.
+
+1. Select the **Push Groups** drop down menu. Here you will have the option to find groups either by name or rule.
 
     ![Push Groups drop down menu in Okta](/images/docs/reference/service/scim/okta/push-groups-menu.png)
 
-6. Select **Find groups by name**. This will take you to a screen where you can search groups by the group name. Once you find the group(s) that you are looking for, click **Save**.
+2. Select **Find groups by name**. This will take you to a screen where you can search groups by the group name. Once you find the group(s) that you are looking for, click **Save**.
 
     You will notice there is a checkbox labeled **Push group memberships immediately**. This will also add all the members that are part of your group to the Pulumi team after your selection has been saved.
 
-7. After clicking **Save**, you should see that your group was pushed and it should say **Active**.
-
-    {{% notes type="info" %}}
-If there are members in a group that are not yet assigned to the Pulumi Cloud application in Okta, they will not be added to the team in the Pulumi Cloud. Ensure that all members in the group have been assigned to the application before pushing the group.
-    {{% /notes %}}
+3. After clicking **Save**, you should see that your group was pushed and it should say **Active**.
 
 ## Verifying Group Provisioning
 

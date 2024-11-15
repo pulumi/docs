@@ -1,0 +1,11 @@
+id = "matt-jeffryes"
+name = "Matt Jeffryes"
+title = "Software Engineering Manager"
+weight = 1
+
+status = "active"
+
+[social]
+github = "mjeffryes"
+linkedin = "matthewjeffryes"
+twitter = "mjeffryes"

@@ -1,9 +1,15 @@
 import { Component, Prop, State, Element, h } from "@stencil/core";
 
+interface MultiSelectFormCta {
+    label: string;
+    url: string;
+}
+
 export interface MultiSelectFormItem {
     key: string | Date;
     label?: string;
     hubspotFormId: string;
+    cta?: MultiSelectFormCta;
 }
 
 @Component({
@@ -107,7 +113,11 @@ export class PulumiMultiSelectForm {
                         </select>
                     </span>
                 )}
-                <pulumi-hubspot-form key={selectedFormId} form-id={selectedFormId}></pulumi-hubspot-form>
+                {this.selectedItem.cta ? (
+                    <div class="mt-8"><a class="btn-secondary" href={this.selectedItem.cta.url}>{this.selectedItem.cta.label}</a></div>
+                ) : (
+                    <pulumi-hubspot-form key={selectedFormId} form-id={selectedFormId}></pulumi-hubspot-form>
+                )}
             </div>
         );
     }
