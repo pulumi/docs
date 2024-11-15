@@ -416,6 +416,15 @@
 <li class="toctree-l4"><a class="reference internal" href="#pulumi.dynamic.CheckResult.inputs"><code class="docutils literal notranslate"><span class="pre">CheckResult.inputs</span></code></a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="#pulumi.dynamic.Config"><code class="docutils literal notranslate"><span class="pre">Config</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pulumi.dynamic.Config.get"><code class="docutils literal notranslate"><span class="pre">Config.get()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pulumi.dynamic.Config.require"><code class="docutils literal notranslate"><span class="pre">Config.require()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#pulumi.dynamic.ConfigureRequest"><code class="docutils literal notranslate"><span class="pre">ConfigureRequest</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pulumi.dynamic.ConfigureRequest.config"><code class="docutils literal notranslate"><span class="pre">ConfigureRequest.config</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="#pulumi.dynamic.CreateResult"><code class="docutils literal notranslate"><span class="pre">CreateResult</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#pulumi.dynamic.CreateResult.id"><code class="docutils literal notranslate"><span class="pre">CreateResult.id</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#pulumi.dynamic.CreateResult.outs"><code class="docutils literal notranslate"><span class="pre">CreateResult.outs</span></code></a></li>
@@ -436,6 +445,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#pulumi.dynamic.Resource"><code class="docutils literal notranslate"><span class="pre">Resource</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#pulumi.dynamic.ResourceProvider"><code class="docutils literal notranslate"><span class="pre">ResourceProvider</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#pulumi.dynamic.ResourceProvider.check"><code class="docutils literal notranslate"><span class="pre">ResourceProvider.check()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pulumi.dynamic.ResourceProvider.configure"><code class="docutils literal notranslate"><span class="pre">ResourceProvider.configure()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#pulumi.dynamic.ResourceProvider.create"><code class="docutils literal notranslate"><span class="pre">ResourceProvider.create()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#pulumi.dynamic.ResourceProvider.delete"><code class="docutils literal notranslate"><span class="pre">ResourceProvider.delete()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#pulumi.dynamic.ResourceProvider.diff"><code class="docutils literal notranslate"><span class="pre">ResourceProvider.diff()</span></code></a></li>
@@ -4324,6 +4334,40 @@ variables to pass through to every command.</p></li>
 </dd></dl>
 
 <dl class="py class">
+<dt class="sig sig-object py" id="pulumi.dynamic.Config">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pulumi.dynamic.</span></span><span class="sig-name descname"><span class="pre">Config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">project_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi.dynamic.Config" title="Permalink to this definition"></a></dt>
+<dd><p>Config is a bag of configuration values that can be passed to a provider’s configure method.</p>
+<p>Use the Config.get and Config.require methods to retrieve a configuration value by key.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pulumi.dynamic.Config.get">
+<span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Any</span></span></span><a class="headerlink" href="#pulumi.dynamic.Config.get" title="Permalink to this definition"></a></dt>
+<dd><p>get retrieves a configuration value by key. Returns None if the key is not present.
+If no namespace is provided in the key, the project name will be used as the namespace.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pulumi.dynamic.Config.require">
+<span class="sig-name descname"><span class="pre">require</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Any</span></span></span><a class="headerlink" href="#pulumi.dynamic.Config.require" title="Permalink to this definition"></a></dt>
+<dd><p>require retrieves a configuration value by key. Returns an error if the key is not present.
+If no namespace is provided in the key, the project name will be used as the namespace.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pulumi.dynamic.ConfigureRequest">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pulumi.dynamic.</span></span><span class="sig-name descname"><span class="pre">ConfigureRequest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pulumi.dynamic.Config" title="pulumi.dynamic.config.Config"><span class="pre">Config</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi.dynamic.ConfigureRequest" title="Permalink to this definition"></a></dt>
+<dd><p>ConfigureRequest is the shape of the configuration data passed to a
+provider’s configure method.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pulumi.dynamic.ConfigureRequest.config">
+<span class="sig-name descname"><span class="pre">config</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#pulumi.dynamic.Config" title="pulumi.dynamic.config.Config"><span class="pre">Config</span></a></em><a class="headerlink" href="#pulumi.dynamic.ConfigureRequest.config" title="Permalink to this definition"></a></dt>
+<dd><p>The stack’s configuration.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt class="sig sig-object py" id="pulumi.dynamic.CreateResult">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pulumi.dynamic.</span></span><span class="sig-name descname"><span class="pre">CreateResult</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id_</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi.dynamic.CreateResult" title="Permalink to this definition"></a></dt>
 <dd><p>CreateResult represents the results of a call to <cite>ResourceProvider.create</cite>.</p>
@@ -4416,6 +4460,13 @@ whose CRUD operations are implemented inside your Python program.</p>
 <dt class="sig sig-object py" id="pulumi.dynamic.ResourceProvider.check">
 <span class="sig-name descname"><span class="pre">check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">_olds</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">news</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pulumi.dynamic.CheckResult" title="pulumi.dynamic.dynamic.CheckResult"><span class="pre">CheckResult</span></a></span></span><a class="headerlink" href="#pulumi.dynamic.ResourceProvider.check" title="Permalink to this definition"></a></dt>
 <dd><p>Check validates that the given property bag is valid for a resource of the given type.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pulumi.dynamic.ResourceProvider.configure">
+<span class="sig-name descname"><span class="pre">configure</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">req</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pulumi.dynamic.ConfigureRequest" title="pulumi.dynamic.dynamic.ConfigureRequest"><span class="pre">ConfigureRequest</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pulumi.dynamic.ResourceProvider.configure" title="Permalink to this definition"></a></dt>
+<dd><p>Configure sets up the resource provider. Use this to initialize the
+provider and store configuration.</p>
 </dd></dl>
 
 <dl class="py method">
