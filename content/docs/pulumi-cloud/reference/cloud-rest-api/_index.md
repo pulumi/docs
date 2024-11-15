@@ -3031,7 +3031,7 @@ GET /api/orgs/{organization}/policygroups/{policyGroup}
 | Parameter           | Type   | In    | Description                                                                                                  |
 |---------------------|--------|-------|--------------------------------------------------------------------------------------------------------------|
 | `organization`      | string | path  | organization name                                                                                            |
-| `policyGroup`      | string | path  | policy group name                                                                                            |
+| `policyGroup`       | string | path  | policy group name                                                                                            |
 
 #### Example
 
@@ -3087,6 +3087,115 @@ Status: 200 OK
     }
   ]
 }
+```
+
+### Create Policy Group
+
+Create policy group.
+
+```
+POST /api/orgs/{organization}/policygroups
+```
+
+#### Parameters
+
+| Parameter           | Type   | In    | Description        |
+|---------------------|--------|-------|--------------------|
+| `organization`      | string | path  | organization name  |
+| `name`              | string | body  | policy group name  |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  --request POST \
+  --data '{"name":"myPolicyGroup"}' \
+  https://api.pulumi.com/api/orgs/{organization}/policygroups
+```
+
+#### Default response
+
+```
+Status: 204 OK
+```
+
+### Update Policy Group
+
+Update policy group, rename, add/remove stacks, add/remove policy packs.
+
+```
+PATCH /api/orgs/{organization}/policygroups/{policyGroup}
+```
+
+| Parameter                     | Type       | In     | Description                                       |
+|-------------------------------|------------|--------|---------------------------------------------------|
+| `organization`                | string     | path   | organization name                                 |
+| `policyGroup`                 | string     | path   | policy group name                                 |
+| `newName`                     | string     | body   | new policy group name                             |
+| `addStack`                    | object     | body   | add stack reference - see following parameters    |
+| `addStack.name`               | string     | object | stack name                                        |
+| `addStack.routingProject`     | string     | object | stack project                                     |
+| `removeStack`                 | object     | body   | remove stack reference - see following parameters |
+| `removeStack.name`            | string     | object | stack name                                        |
+| `removeStack.routingProject`  | string     | object | stack project                                     |
+| `addPolicyPack`               | object     | body   | add policy pack - see following parameters        |
+| `addPolicyPack.name`          | string     | object | policy pack name                                  |
+| `addPolicyPack.displayName`   | string     | object | policy pack display name                          |
+| `addPolicyPack.version`       | number     | object | policy pack version                               |
+| `addPolicyPack.versionTag`    | string     | object | policy pack version tag                           |
+| `addPolicyPack.config`        | key/value  | object | policy pack config                                |
+| `removePolicyPack`            | object     | body   | remove policy pack - see following parameters     |
+| `removePolicyPack.name`       | string     | object | policy pack name                                  |
+| `removePolicyPack.version`    | int        | object | policy pack version                               |
+| `removePolicyPack.versionTag` | string     | object | policy pack version tag                           |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  --request PATCH \
+  --data '{"newName":"myRenamedPolicyGroup"}' \
+  https://api.pulumi.com/orgs/{organization}/policygroups/{policyGroup}
+```
+
+#### Default response
+
+```
+Status: 204 OK
+```
+
+### Delete Policy Group
+
+```
+DELETE /api/orgs/{organization}/policygroups/{policyGroup}
+```
+
+| Parameter                     | Type       | In     | Description                                       |
+|-------------------------------|------------|--------|---------------------------------------------------|
+| `organization`                | string     | path   | organization name                                 |
+| `policyGroup`                 | string     | path   | policy group name                                 |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  --request DELETE \
+  https://api.pulumi.com/api/orgs/{organization}/policygroups/{policyGroup}
+```
+
+#### Default response
+
+```
+Status: 204 OK
 ```
 
 <!-- ###################################################################### -->
@@ -3486,6 +3595,150 @@ Status: 200 OK
   }
 }
 ```
+
+### Create Policy Pack
+
+Create policy pack.
+
+```
+POST /api/orgs/{organization}/policypacks
+```
+
+#### Parameters
+
+| Parameter                            | Type          | In     | Description                                                                                     |
+|--------------------------------------|---------------|--------|-------------------------------------------------------------------------------------------------|
+| `organization`                       | string        | path   | organization name                                                                               |
+| `name`                               | string        | body   | policy pack name                                                                                |
+| `displayName`                        | string        | body   | policy pack display name                                                                        |
+| `versionTag`                         | string        | body   | policy pack version tag name                                                                    |
+| `policies`                           | array         | body   | policy pack policies - see following parameters                                                 |
+| `policies[].name`                    | string        | object | policy name                                                                                     |
+| `policies[].displayName`             | string        | object | policy display name                                                                             |
+| `policies[].description`             | string        | object | policy description                                                                              |
+| `policies[].enforcementLevel`        | string        | object | policy enforcement level - possible values are `advisory`, `mandatory`, `remediate`, `disabled` |
+| `policies[].message`                 | string        | object | policy message                                                                                  |
+| `policies[].configSchema`            | object        | object | policy config schema                                                                            |
+| `policies[].configSchema.properties` | key/value     | object | config schema properties                                                                        |
+| `policies[].configSchema.required`   | string array  | object | config schema required properties                                                               |
+| `policies[].configSchema.type`       | string        | object | config schema type                                                                              |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  --request POST \
+  --data '{"name":"myPolicyPack", "displayName": "My policy pack", "versionTag":"stable", "policies":[{"name": "myPolicy", "displayName": "My policy", "description": "awesome policy", "enforcementLevel": "mandatory","message":"my policy violation", "configSchema":{"properties": {"foo": "bar}, "required": "foo", "type": "object"}}]}' \
+  https://api.pulumi.com/api/orgs/{organization}/policypacks
+```
+
+#### Default response
+
+```
+Status: 201 OK
+```
+
+```
+{
+	"version": 1,
+  "uploadURI": "https://s3.aws.amazon.com/...",
+  "requiredHeaders": {},
+}
+
+```
+
+### Apply Policy Pack
+
+Applies the latest version of a policy pack using the organization's default policy group.
+
+```
+POST /api/orgs/{organization}/policypacks/{policyPack}/latest
+```
+
+#### Parameters
+
+| Parameter                            | Type          | In     | Description                                                                                     |
+|--------------------------------------|---------------|--------|-------------------------------------------------------------------------------------------------|
+| `organization`                       | string        | path   | organization name                                                                               |
+| `policyPack`                         | string        | path   | policy pack name                                                                                |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  --request POST \
+  https://api.pulumi.com/api/orgs/{organization}/policypacks/{policyPack}/latest
+```
+
+#### Default response
+
+```
+Status: 204 OK
+```
+
+### Delete Policy Pack
+
+```
+DELETE /api/orgs/{organization}/policypacks/{policyPack}
+```
+
+| Parameter                     | Type       | In     | Description                                       |
+|-------------------------------|------------|--------|---------------------------------------------------|
+| `organization`                | string     | path   | organization name                                 |
+| `policyPack`                  | string     | path   | policy pack name                                  |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  --request DELETE \
+  https://api.pulumi.com/api/orgs/{organization}/policypacks/{policyPack}
+```
+
+#### Default response
+
+```
+Status: 200 OK
+```
+
+### Delete Policy Pack Version
+
+```
+DELETE /api/orgs/{organization}/policypacks/{policyPack}/versions/{version}
+```
+
+| Parameter                     | Type       | In     | Description                                       |
+|-------------------------------|------------|--------|---------------------------------------------------|
+| `organization`                | string     | path   | organization name                                 |
+| `policyPack`                  | string     | path   | policy pack name                                  |
+| `version`                     | number     | path   | policy pack version                               |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  --request DELETE \
+  https://api.pulumi.com/api/orgs/{organization}/policypacks/{policyPack}/versions/{version}
+```
+
+#### Default response
+
+```
+Status: 200 OK
+```
+
 <!-- ###################################################################### -->
 
 ## Policy Results
@@ -5094,6 +5347,57 @@ Status: 200 OK
       }
     }
   ]
+}
+```
+
+## OAuth Token Exchange
+
+<!-- ###################################################################### -->
+
+### Exchange Token
+
+Exchange an external token for a Pulumi token via an OIDC issuer trust relationship.
+
+```
+POST /api/oauth/token
+```
+
+#### Parameters
+
+| Parameter              | Type   | In    | Description                                                                                                      |
+|------------------------|--------|-------|------------------------------------------------------------------------------------------------------------------|
+| `audience`             | string | body  | OAuth audience in the form `urn:pulumi:org:ORG_NAME`                                                             |
+| `grant_type`           | string | body  | OAuth grant type (only `urn:ietf:params:oauth:grant-type:token-exchange` is supported)                           |
+| `subject_token_type`   | string | body  | OAuth subject token type (only `urn:ietf:params:oauth:token-type:id_token` is supported)                         |
+| `requested_token_type` | string | body  | OAuth requested token type (prefix of `urn:pulumi:token-type:access_token:TOKEN_TYPE` where TOKEN_TYPE is `organization`, `team`, `personal`, or `runner`) |
+| `expiration`           | number | body  | OAuth token expiration in seconds                                                                                |
+| `scope`                | string | body  | OAuth scope as a comma-separated array. This depends on the requested token type. For requested token type `organization`, scopes must be empty or `admin`. For `team`, the scope must be `team:TEAM_NAME`. For `personal`, it must be `user:USER_NAME`. For `runner`, it must be `runner:RUNNER_NAME`. |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  --request POST \
+  --data '{"audience":"urn:pulumi:org:ORG_NAME","grant_type":"urn:ietf:params:oauth:grant-type:token-exchange","subject_token_type":"urn:ietf:params:oauth:token-type:id_token","requested_token_type":"urn:pulumi:token-type:access_token:organization","expiration":7200,"scope":"","subject_token":"$SOURCE_TOKEN"}' \
+  https://api.pulumi.com/api/oauth/token
+```
+
+#### Default response
+
+```
+Status: 200 OK
+```
+
+```json
+{
+  "access_token": "redacted",
+  "issued_token_type": "urn:pulumi:token-type:access_token:organization",
+  "token_type": "token",
+  "expires_in": 7200,
+  "scope": "",
+  "refresh_token": ""
 }
 ```
 
