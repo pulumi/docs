@@ -17,6 +17,8 @@ social:
 
 So, I'm setting up an EKS cluster for a video demo, and my simplified Pulumi code is this:
 
+<!--more-->
+
 ```python
 import pulumi
 import pulumi_awsx as awsx
@@ -36,7 +38,6 @@ eks_cluster = eks.Cluster("eks-cluster",
 
 pulumi.export("kubeconfig", eks_cluster.kubeconfig)
 ```
-<!--more-->
 
 And look in k9s I get this:
 
@@ -70,29 +71,37 @@ Let me explain.
 
 Normally, the Kubernetes scheduler has to solve a bin-packing problem—fitting M pods across N nodes based on available resources. This is a straight-up resource optimization problem of balancing CPU, memory, and other resource demands across the cluster.
 
+This can be surprisingly complex in practice. Teams must balance selecting the right instance types for different workload needs while managing multiple node groups. Adding to this complexity are scheduling rules and resource quotas that need careful configuration. Perhaps most challenging is striking the right balance between high resource utilization and maintaining enough headroom for spikes in demand.
+
+![ec2 pods](ec2-pods.png)
+
 With Fargate, AWS sidesteps this challenge by providing a "just-in-time" bin for each pod. Each Fargate pod runs on its own dynamically provisioned, right-sized mini-environment, where the "bin" (the Fargate instance) is exactly sized to match the pod's requested resources. This means there's no need for Kubernetes to optimize resource usage across a pool of shared nodes, as each pod effectively has its own "container" provided by Fargate that fits it precisely.
 
-In other words, AWS effectively pushes this bin-packing responsibility to itself, so you don't have to worry about it.
+In other words, AWS effectively pushes this bin-packing responsibility to itself, so you don't have to worry ( as much ) about it.
+
+![Fargate pods](faregate-pods.png)
 
 {{% notes type="info" %}}
 While Fargate abstracts away node management, it's important to understand that Fargate pods [still run on EC2 instances](https://justingarrison.com/blog/2024-02-08-fargate-is-not-firecracker/) behind the scenes. And each Fargate pod gets its own ENI (Elastic Network Interface) that can sometimes limit your scaling because pods aren't sharing a network namespace.
 {{% /notes %}}
 
-## Pros of Fargate
+## Pros and Cons
 
-Fargate abstracts away the complexity of managing nodes and scaling clusters by shifting bin-packing to AWS. With its extensive infrastructure, AWS is arguably better positioned to optimize placements at scale. They can monitor their entire cloud landscape, placing Fargate instances dynamically across available resources. This allows them to potentially leverage underutilized resources in ways that would be challenging or impractical at an individual account's scale.
+So yeah, Fargate abstracts away the complexity of managing nodes and scaling clusters by shifting bin-packing to AWS. With its extensive infrastructure, AWS is arguably better positioned to optimize placements at scale. They can monitor their entire cloud landscape, placing Fargate instances dynamically across available resources. This allows them to potentially leverage underutilized resources in ways that would be challenging or impractical at an individual account's scale.
 
-This can mean simplified operations and scaling, and there is no need to manage node pools or worry about scheduling pods efficiently on shared instances. Ideally, this frees you to focus on the services rather than on the underlying infrastructure.
+Ideally, this frees you to focus on the services rather than on the underlying infrastructure but in practise it's a bit more complex.
 
-## Cons of Fargate
-
-Ok, but there's downsides though. Since each task is treated as a standalone instance, you lose out on the cost efficiencies of co-locating multiple pods on a single node. Even though AWS is "solving" the bin-packing problem globally, to do so, they need to introduce hard barriers, and while noisy neighbors, therefore, aren't a problem, sharing resources is now impossible. In a way, you are throwing away the run time benefit of containers, the shared kernel virtualization, for something more like VMs. And just like VMs, Fargate pods take longer to start than pods on existing EC2 nodes (typically 30-60 seconds vs near-immediate starts).
+Since each pod is treated as a standalone instance, you lose out on the cost efficiencies of co-locating multiple pods on a single node. Even though AWS is "solving" the bin-packing problem globally, to do so, they need to introduce hard barriers, and while noisy neighbors, therefore, aren't a problem, sharing resources is now impossible. In a way, you are throwing away the run time benefit of containers, the shared kernel virtualization, for something more like VMs. And just like VMs, Fargate pods take longer to start than pods on existing EC2 nodes (typically 30-60 seconds vs near-immediate starts).
 
 Maybe this will make more sense with an example.
 
 ## Workload Example: Static Analysis
 
-Have you ever had to run CPU-intensive batch jobs alongside lighter web services? In a previous role, when my team and I were tasked with putting our static container image analyzer into production, we went the typical Kubernetes route, throwing it into an EC2-backed K8s cluster. The analyzer was built in Scala, running on the JVM, and was designed to take in work from a Kafka topic. Each analysis ultimately led to the results being sent to a database. We also had scheduled daily rescans of existing images whenever vulnerability lists were updated.
+<img src="noisy.webp" alt="sketch of sleeping while noisy neighbour" style="width: 50%; float: left; margin-right: 10px;">
+
+Have you ever had to run CPU-intensive batch jobs alongside lighter web services?
+
+In a previous role, when my team and I were tasked with putting our static container image analyzer into production, we went the typical Kubernetes route, throwing it into an EC2-backed K8s cluster. The analyzer was built in Scala, running on the JVM, and was designed to take in work from a Kafka topic. Each analysis ultimately led to the results being sent to a database. We also had scheduled daily rescans of existing images whenever vulnerability lists were updated.
 
 Then, a web app connected to this database and showed all your results. It was stateless and did far less work per request, mainly just answering an HTTP request by talking to a database.
 
@@ -108,46 +117,51 @@ But there are lots of situations where Fargate is less of a fit.
 
 ## Example: Go Services for E-commerce
 
+<img src="cash-register.webp" alt="sketch of fog clearing" style="width: 30%; float: right; margin-left: 10px;">
+
 Ok, another workload that comes to mind is this one from a friend - He worked on an e-commerce backend with many lightweight Go services, each handling specific tasks—user profiles, catalog browsing, order processing, and notifications. These services were network-heavy, handling gRPC calls and database requests, but they didn't need much CPU or memory per instance.
 
 Fargate wouldn't have made sense here—it would have isolated each pod, preventing resource sharing and driving up costs without real benefit. For lightweight services like these, EC2-backed Kubernetes is perfect, keeping costs low and maximizing resources by sharing nodes across small, efficient services.
 
 So, for lightweight micro-services that can share resources, EC2 nodes with many pods each are probably the way to go.
 
-## Other Fargate Cases
+### Other Fargate Cases
 
-There are lots of other cases for using Fargate, though. Building demos is one. Another is short-lived or bursty workloads, where things run briefly or unpredictably. In that case, Fargate's on-demand scaling could be a win.
-
-Event-driven architectures can be fit. Systems that respond to specific events, like file uploads or new data processing, work well with Fargate's scale-up and tear-down flexibility, assuming the start-up time isn't an issue.
-
-And the big reason is simplified DevOps. For teams that want to avoid managing EC2 instances and focus on deploying apps, Fargate simplifies scaling and infrastructure management.
-
-Of course, there are lots of limitations to watch out for. Fargate isn't ideal for applications requiring persistent storage, privileged mode, custom networking, GPU access, DaemonSets, or shared memory, all of which benefit from the flexibility and host-level access provided by EC2-backed Kubernetes.
+Fargate can excel with long-running event-driven and bursty workloads, where you need compute resources briefly or unpredictably. Think file processing jobs that trigger on uploads, or batch processing that runs sporadically. When jobs are intermittent, Fargate's ability to scale from zero and its isolated resources can outweigh its higher per-pod cost and startup delay. Just ensure your workload can tolerate the 30-60 second cold start.
 
 {{% notes type="info" %}}
 Fargate has some hard limitations that might rule it out for your use case:
 
 - No DaemonSets
 - Maximum of 4 vCPU and 30GB memory per pod
-- No persistent volumes for stateful workloads
+- Storage limitations: Only ephemeral storage up to 20GB per pod, no persistent volumes
 - No GPU support
 
 {{% /notes %}}
 
-Also, Fargate only offers ephemeral storage, which is capped at 20 GB per task or pod. Applications needing larger or persistent file systems may find this limiting, especially if they require data to persist beyond the task lifecycle. If you have constant, predictable workloads, then EC2-backed clusters with optimized nodes are generally cheaper than paying per pod.
-
 ## Fargate vs EC2 Pricing
 
-Ok, EC2 costs less than Fargate on a pure cost-of-compute basis. If my t3.medium ($0.0416/hr) can typically run 6-8 pods reliably, and this works out to under $0.01/hr per pod. Comparable Fargate pods (0.5 vCPU/1GB) cost about $0.025/hr each, so 2.5x. But we need headroom on EC2 and these pure compute comparisons don't account for the operational overhead of managing EC2 nodes. Also, maybe you are scaling up and down, or maybe the isolation and simplified management is what you need.
+Ok, EC2 costs less than Fargate on a pure cost-of-compute basis. If my t3.medium ($0.0416/hr) can typically run 6-8 pods reliably, and this works out to under $0.01/hr per pod. Comparable Fargate pods (0.5 vCPU/1GB) cost about $0.025/hr each, so 2.5x. But we need headroom on EC2 and these pure compute comparisons don't account for the operational overhead of managing EC2 nodes. Also, maybe you are scaling up and down, or maybe the isolation is what you need.
 
 Really, pure compute cost calculations are an insufficient metric for making this decision - you need to factor in your team's operational capacity, scaling patterns, and isolation requirements.
 
-As they say *It Depends*.
-
 Also, if Fargate makes sense because of your workload but the cost is a concern, then look into Fargate Spot instances, which can be up to 70% cheaper, but be aware that AWS can terminate them at any point to reclaim capacity.
+
+## Misconceptions About Fargate
+
+<img src="insight.webp" alt="sketch of fog clearing" style="width: 50%; float: right; margin-left: 10px;">
+
+- **Fargate saves you from managing servers**
+   With containerized workloads and immutable infrastructure, your EC2 nodes are minimal, standardized, and automatically replaced. You're not logging in, installing packages, or managing configuration - everything runs in containers. When a node needs updates, you replace it entirely.
+- **Fargate handles all scaling challenges**
+   While it handles node scaling, you still face ENI limits, longer pod startup times (30-60s), and potential networking bottlenecks.
+- **It's simpler and more reliable**
+  It may be, but it may not be. The complexity shifts to networking, pod configuration, and working within Fargate's constraints. You trade node management for new operational challenges like slower startups and possible networking complexity.
 
 ## Conclusions
 
-I hope my examples point to a straightforward approach: use Fargate when you need isolation and/or the scaling trade-offs it makes. Just make sure you can fit into its constraints. Also, use it when you don't want to worry about EC2 nodes. Use EC2 when you have efficient microservices that share resources, like our Go e-commerce setup. Fargate trades potentially higher costs for operational simplicity, and sometimes you want that. It's less flexible but the more important point is this: it's easy to get started with — which is why I'm using it in the example I shared at the top.
+I hope my examples point to a straightforward approach: use Fargate when you need isolation and/or the scaling trade-offs it makes. Just make sure you can fit into its constraints. Use EC2 when you have efficient microservices that share resources, like our Go e-commerce setup. Fargate trades potentially higher costs for isolation, and sometimes you want that. It's less flexible but the more important point is this: it's easy to get started with — which is why I'm using it in the example I shared at the top.
 
-If you're interested in trying this out yourself, here's a [practical EKS setup guide](/docs/iac/clouds/aws/guides/eks/). Now, back to getting this demo working!
+If you're interested in using Pulumi to manage EKS infra, here's a [practical EKS setup guide](/docs/iac/clouds/aws/guides/eks/) guide to get your started.
+
+Now, back to getting this demo working!
