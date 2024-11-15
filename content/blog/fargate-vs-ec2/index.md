@@ -1,5 +1,5 @@
 ---
-title: "EKS Fargate vs EC2"
+title: "AWS Fargate vs EC2 for Elastic Kubernetes Service (EKS)"
 date: 2024-11-18T08:42:34-05:00
 # you want to be able to merge the post without publishing it.
 draft: false
@@ -9,6 +9,9 @@ authors:
     - adam-gordon-bell
 tags:
     - aws
+    - eks
+    - ec2
+    - k8s
 social:
     twitter:
     linkedin:
@@ -89,9 +92,17 @@ While Fargate abstracts away node management, it's important to understand that 
 
 So yeah, Fargate abstracts away the complexity of managing nodes and scaling clusters by shifting bin-packing to AWS. With its extensive infrastructure, AWS is arguably better positioned to optimize placements at scale. They can monitor their entire cloud landscape, placing Fargate instances dynamically across available resources. This allows them to potentially leverage underutilized resources in ways that would be challenging or impractical at an individual account's scale.
 
-Ideally, this frees you to focus on the services rather than on the underlying infrastructure but in practise it's a bit more complex.
+Ideally, this frees you to focus on the services rather than on the underlying infrastructure, but in practice, it's a bit more complex.
 
 Since each pod is treated as a standalone instance, you lose out on the cost efficiencies of co-locating multiple pods on a single node. Even though AWS is "solving" the bin-packing problem globally, to do so, they need to introduce hard barriers, and while noisy neighbors, therefore, aren't a problem, sharing resources is now impossible. In a way, you are throwing away the run time benefit of containers, the shared kernel virtualization, for something more like VMs. And just like VMs, Fargate pods take longer to start than pods on existing EC2 nodes (typically 30-60 seconds vs near-immediate starts).
+
+Feature | Fargate | EC2
+--- | --- | ---
+Cost | Higher per pod, but no node management | Lower cost per pod, requires node management
+Scalability | Scales on-demand, isolated resources | Requires manual node scaling
+Resource Sharing | Not possible | Efficient resource sharing among pods
+Startup Time | 30-60 seconds | Near instant on existing nodes
+Use Cases | Burst workloads, isolated pods | Lightweight microservices, cost-sensitive workloads
 
 Maybe this will make more sense with an example.
 
