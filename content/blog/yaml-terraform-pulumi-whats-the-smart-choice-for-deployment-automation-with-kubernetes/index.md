@@ -29,17 +29,18 @@ social:
     For years, YAML has been the go-to choice for managing Kubernetes resources. But as our deployments grow more complex, is it still the smart choice?
     
     I've done a deep dive comparing three approaches to Kubernetes deployment automation:
-      ✅ YAML
+    
+    ✅ YAML
     
     Pros: Simple, standard approach
     Cons: Manual updates, no DRY principle, limited abstraction
     
-      ✅ Terraform
+    ✅ Terraform
     
     Pros: Dynamic configuration, better environment management
     Cons: Complex DSL, limited IDE support
     
-      ✅ Pulumi
+    ✅ Pulumi
     
     Pros: Use familiar programming languages, full IDE support, superior testing
     Cons: Runtime dependencies, language lock-in
