@@ -94,9 +94,9 @@ A Kubernetes object is a "record of intent". It represents the desired state of 
 
 ## YAML Manifests
 
-If you are long enough exposed to Kubernetes, you will have seen a lot of YAML files. You can define many Kubernetes objects in a YAML file. These include [`Deployments`](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/), [`Services`](https://kubernetes.io/docs/concepts/services-networking/service/), [`ConfigMaps`](https://kubernetes.io/docs/concepts/configuration/configmap/), and [`Secrets`](https://kubernetes.io/docs/concepts/configuration/secret/).
+If you are long enough exposed to Kubernetes, you will have seen a lot of YAML files. You can define many Kubernetes objects in a YAML file. These include [`Deployments`](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/), [`Services`](https://kubernetes.io/docs/concepts/services-networking/service/), [`ConfigMaps`](https://kubernetes.io/docs/concepts/configuration/configmap/), [`Secrets`](https://kubernetes.io/docs/concepts/configuration/secret/), and more.
 
-Let's have a look at an example of a `Deployment` object in YAML for an Nginx web server:
+Let's have a look at an example of a `Deployment` object in YAML for an `Nginx` web server:
 
 ### Example
 
@@ -145,7 +145,7 @@ Or to rephrase it: Friends don't let friends manage Kubernetes resources with YA
 
 [Terraform](https://www.terraform.io/) is an Infrastructure as Code tool. It lets you define and manage your infrastructure in a declarative way. It uses a high-level configuration language called HashiCorp Configuration Language (HCL). To manage Kubernetes objects with Terraform, use the Kubernetes provider. It allows you to define Kubernetes objects in Terraform HCL.
 
-The [Kubernetes provider](https://registry.terraform.io/providers/hashicorp/kubernetes/latest) allows you to define Kubernetes objects like `kubernetes_deployment`, `kubernetes_service`, `kubernetes_config_map`, and `kubernetes_secret` in code, leveraging the language features of Terraform. You can use, to a certain extent, loops, conditions, and variables in a way that is not possible with plain YAML files.
+The [Kubernetes provider](https://registry.terraform.io/providers/hashicorp/kubernetes/latest) allows you to define Kubernetes objects like `kubernetes_deployment`, `kubernetes_service`, `kubernetes_config_map`, `kubernetes_secret`, and more in code, leveraging the language features of Terraform. You can use, to a certain extent, loops, conditions, and variables in a way that is not possible with plain YAML files.
 
 Let's have a look at an example of a `Deployment` object in Terraform HCL for an `Nginx` web server:
 
@@ -254,7 +254,7 @@ resource "kubernetes_deployment" "nginx" {
 }
 ```
 
-In this example, we can already see the advantage of Terraform over plain YAML files. We can use variables and loops to define multiple `Deployment` objects in a more dynamic way.
+In this example, we can already see the advantage of Terraform over plain YAML files. We can use variables and loops to define multiple `kubernetes_deployment` objects in a more dynamic way.
 
 ### Pros and Cons of Terraform
 
