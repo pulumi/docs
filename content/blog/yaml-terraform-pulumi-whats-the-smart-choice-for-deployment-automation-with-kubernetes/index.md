@@ -370,32 +370,32 @@ import pulumi_kubernetes as k8s
 
 nginx_deployment = k8s.apps.v1.Deployment(
     "nginx-deployment",
-    metadata={
-        "name": "nginx-deployment",
-    },
-    spec={
-        "replicas": 1,
-        "selector": {
-            "matchLabels": {
+    metadata=k8s.meta.v1.ObjectMetaArgs(
+        name="nginx-deployment",
+    ),
+    spec=k8s.apps.v1.DeploymentSpecArgs(
+        replicas=1,
+        selector=k8s.meta.v1.LabelSelectorArgs(
+            match_labels={
                 "app": "nginx",
             },
-        },
-        "template": {
-            "metadata": {
-                "labels": {
+        ),
+        template=k8s.core.v1.PodTemplateSpecArgs(
+            metadata=k8s.meta.v1.ObjectMetaArgs(
+                labels={
                     "app": "nginx",
                 },
-            },
-            "spec": {
-                "containers": [
-                    {
-                        "name": "nginx",
-                        "image": "nginx:latest",
-                    },
+            ),
+            spec=k8s.core.v1.PodSpecArgs(
+                containers=[
+                    k8s.core.v1.ContainerArgs(
+                        name="nginx",
+                        image="nginx:latest",
+                    ),
                 ],
-            },
-        },
-    },
+            ),
+        ),
+    ),
 )
 ```
 
@@ -457,15 +457,17 @@ func main() {
 
 ```csharp
 using Pulumi;
-using Pulumi.Kubernetes.Apps.V1;
-using Pulumi.Kubernetes.Core.V1;
-using Pulumi.Kubernetes.Meta.V1;
+using Pulumi.Kubernetes.Types.Inputs.Core.V1;
+using Pulumi.Kubernetes.Types.Inputs.Apps.V1;
+using Pulumi.Kubernetes.Types.Inputs.Meta.V1;
+using System.Threading.Tasks;
+using Deployment = Pulumi.Deployment;
 
 class MyStack : Stack
 {
     public MyStack()
     {
-        var nginxDeployment = new Deployment("nginxDeployment", new DeploymentArgs
+        var nginxDeployment = new Pulumi.Kubernetes.Apps.V1.Deployment("nginxDeployment", new DeploymentArgs
         {
             Metadata = new ObjectMetaArgs
             {
