@@ -289,7 +289,7 @@ Let's have a look at an example of what a `Deployment` object would look like in
 {{% choosable language typescript %}}
 
 ```typescript
-{{< example-program-snippet path="kubernetes-deployments-typescript" language="typescript" from="1" to="31" >}}
+{{< example-program-snippet path="kubernetes-deployments" language="typescript" from="1" to="31" >}}
 ```
 
 {{% /choosable %}}
@@ -297,7 +297,7 @@ Let's have a look at an example of what a `Deployment` object would look like in
 {{% choosable language javascript %}}
 
 ```javascript
-{{< example-program-snippet path="kubernetes-deployments-javascript" language="javascript" from="1" to="31" >}}
+{{< example-program-snippet path="kubernetes-deployments" language="javascript" from="1" to="31" >}}
 ```
 
 {{% /choosable %}}
@@ -305,7 +305,7 @@ Let's have a look at an example of what a `Deployment` object would look like in
 {{% choosable language python %}}
 
 ```python
-{{< example-program-snippet path="kubernetes-deployments-python" language="python" from="2" to="34" >}}
+{{< example-program-snippet path="kubernetes-deployments" language="python" from="2" to="34" >}}
 ```
 
 {{% /choosable %}}
@@ -313,7 +313,7 @@ Let's have a look at an example of what a `Deployment` object would look like in
 {{% choosable language go %}}
 
 ```go
-{{< example-program-snippet path="kubernetes-deployments-go" language="go" from="1" to="46" >}}
+{{< example-program-snippet path="kubernetes-deployments" language="go" from="1" to="46" >}}
 ```
 
 {{% /choosable %}}
@@ -321,7 +321,7 @@ Let's have a look at an example of what a `Deployment` object would look like in
 {{% choosable language csharp %}}
 
 ```csharp
-{{< example-program-snippet path="kubernetes-deployments-csharp" language="csharp" from="1" to="58" >}}
+{{< example-program-snippet path="kubernetes-deployments" language="csharp" from="1" to="58" >}}
 ```
 
 {{% /choosable %}}
@@ -329,7 +329,7 @@ Let's have a look at an example of what a `Deployment` object would look like in
 {{% choosable language java %}}
 
 ```java
-{{< example-program-snippet path="kubernetes-deployments-java" language="java" from="1" to="41" >}}
+{{< example-program-snippet path="kubernetes-deployments" language="java" from="1" to="41" >}}
 ```
 
 {{% /choosable %}}
@@ -339,11 +339,17 @@ but you can of course use any of the Pulumi supported languages.
 
 ### Example with Variables and Loops
 
-```typescript
-{{< example-program-snippet path="kubernetes-deployments-typescript" language="typescript" from="1" to="2" >}}
+{{< chooser language "typescript" />}}
 
-{{< example-program-snippet path="kubernetes-deployments-typescript" language="typescript" from="35" to="73" >}}
+{{% choosable language typescript %}}
+
+```typescript
+{{< example-program-snippet path="kubernetes-deployments" language="typescript" from="1" to="2" >}}
+
+{{< example-program-snippet path="kubernetes-deployments" language="typescript" from="35" to="72" >}}
 ```
+
+{{% /choosable %}}
 
 In this example, you can see how easy it is to define multiple `Deployment` objects with variables and loops syntax provided by `TypeScript`. This is a big advantage over plain YAML files and Terraform HCL. Blending the full power of a general-purpose programming language with the Kubernetes API is a natural process. Consider the possibilities of creating reusable functions, classes, and modules. You could share them across multiple projects and teams.
 
