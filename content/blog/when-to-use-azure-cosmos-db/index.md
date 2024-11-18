@@ -27,7 +27,7 @@ I'm going to break all that down. Here's a roadmap:
 
 ## TLDR
 
-The short version is: **you should use it on Azure when you'd use DynamoDB on AWS.** That's to say, you should use it when you're OK with being cloud-specific, when you want hands-off scalability, and when you know the query pattern and potential cost ramifications ahead of time. Also, cost is a big caveat because Cosmos DB will likely cost more than an equivalent DynamoDB workload.
+The short version is: **you should use it on Azure when you'd use DynamoDB on AWS.** That's to say, you should use it when you're OK with being cloud-specific, when you want hands-off scalability, and when you know the query pattern and potential cost ramifications ahead of time.
 
 But let's start at the beginning.
 
@@ -256,16 +256,18 @@ While Cassandra offers tunable consistency, DynamoDB simplifies this down to jus
 
 ### Cosmos DB vs Dynamo DB Costs
 
-Again, using some back-of-the-napkin math, DynamoDB in provisioned Mode is significantly more cost-effective than Cosmos DB for the same workload with 10 kb document sizes. For a scenario with 500 reads/sec, 50 writes/sec, and 10 KB document size, DynamoDB costs about $392.10/month compared to Cosmos DB's $1,567.70/month. With smaller document sizes, the cost difference is less, but still, Dynamo has the edge. On the pro-Cosmos side, Cosmos DB adjusts throughput and partitions as your data and traffic grow, ensuring seamless scaling without manual intervention; it just costs more.
+Again, using some back-of-the-napkin math, DynamoDB in provisioned Mode is more cost-effective than Cosmos DB for the same workload with 10 kb document sizes. Estimating 500 reads ( 400 point reads or get-time, 100 more complex queries). With smaller document sizes, the cost difference is less, but the numbers are close enough that . On the pro-Cosmos side, Cosmos DB adjusts throughput and partitions as your data and traffic grow, ensuring seamless scaling without manual intervention; it just costs more.
 
 | **Service**         | **Workload** (500 reads/sec, 50 writes/sec) | **3 KB Document Size**  | **10 KB Document Size**  | **Key Difference**                   |
 |---------------------|--------------------------------------------|-------------------------|--------------------------|---------------------------------------|
-| **DynamoDB**         | 500 reads/sec, 50 writes/sec               | $131.13/month           | $392.10/month            | Lower cost, ideal for predictable workloads |
-| **Cosmos DB**        | 500 reads/sec, 50 writes/sec               | $479.06/month           | $1,567.70/month          | Higher cost, scales automatically    |
+| **DynamoDB**         | 500 reads/sec, 50 writes/sec               | $137.67/month           | $54.84/month            |  |
+| **Cosmos DB**        | 500 reads/sec, 50 writes/sec               | $227.28/month           | $212.92/month     |     |
 
 {{% notes type="info" %}}
 See also [Cosmos DB vs DynamoDB, Know The Differences](/what-is/database-comparison-cosmos-db-vs-dynamodb/)
 {{% /notes %}}
+
+https://cosmos.azure.com/capacitycalculator/
 
 ## Tangent: Azure Table Storage vs. Cosmos DB
 
