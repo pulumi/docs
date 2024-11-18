@@ -12,16 +12,16 @@ menu:
 
 With support for Pulumi ESC built into the Pulumi CLI, you can expose an environment's settings and secrets to any or all of your Pulumi stacks, bypassing the need to define and maintain individual configuration settings or secrets "locally" in Pulumi config files. The optional `pulumiConfig` key enables this.
 
-The following example updates the `myorg/myapp-dev` environment by adding a `pulumiConfig` block. This block specifies the [Pulumi configuration](/docs/concepts/config/) settings to expose to the Pulumi stack at runtime:
+The following example updates the `myorg/myapp/dev` environment by adding a `pulumiConfig` block. This block specifies the [Pulumi configuration](/docs/concepts/config/) settings to expose to the Pulumi stack at runtime:
 
 ```yaml
-# myorg/myapp-dev
+# myorg/myproject/dev
 imports:
-  - aws-dev
-  - stripe-dev
+  - aws/dev
+  - stripe/dev
 
 values:
-  greeting: Hello from the dev environment!
+  greeting: Hello from the myapp/dev environment!
 
   environmentVariables:
     AWS_ACCESS_KEY_ID: ${aws.login.accessKeyId}
@@ -43,7 +43,7 @@ Any stack belonging to the `myorg` organization can inherit these settings by ad
 ```yaml
 # Pulumi.dev.yaml
 environment:
-  - myapp-dev
+  - myapp/dev
 ```
 
 Values are accessible using the standard [configuration API](/docs/concepts/config/#code):
