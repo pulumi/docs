@@ -1,0 +1,7 @@
+name: kubernetes-deployments-go
+description: An example that creates a Kubernetes Deployment
+runtime: go
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: kubernetes-go
