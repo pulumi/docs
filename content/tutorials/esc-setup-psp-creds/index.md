@@ -22,7 +22,7 @@ collections:
 ---
 
 {{% notes %}}
-This tutorial is all about using ESC with Pulumi Service Provider (PSP for short!). However, using ESC is an encouragement rather than a requirement. If you *don't* want to use ESC, refer to [PSP setup docs](/registry/packages/pulumiservice/installation-configuration/) instead.
+This tutorial is all about using ESC with Pulumi Service Provider (PSP). However, using ESC is an encouragement rather than a requirement. If you *don't* want to use ESC, refer to [PSP setup docs](/registry/packages/pulumiservice/installation-configuration/) instead.
 {{% /notes %}}
 
 ## Log into Pulumi Cloud
@@ -33,24 +33,24 @@ Before you begin, make sure you've [signed into Pulumi Cloud](https://app.pulumi
 $ pulumi login
 
 Manage your Pulumi stacks by logging in.
-Run `esc login --help` for alternative login options.
+Run `pulumi login --help` for alternative login options.
 Enter your access token from https://app.pulumi.com/account/tokens
     or hit <ENTER> to log in using your browser
 ```
 
 ## Obtain a personal access token
 
-Next, you'll also need a Pulumi Cloud [personal access token](/docs/pulumi-cloud/access-management/access-tokens/#personal-access-tokens). Create a short-lived access token for this tutorial, copy it into your current shell to login into Pulumi Cloud. Keep the token creation page open in a separate tab, or paste it somewhere temporarily to use in the next step of the tutorial.
+Next, you'll also need a Pulumi Cloud [personal access token](/docs/pulumi-cloud/access-management/access-tokens/#personal-access-tokens). Create a short-lived access token for this tutorial and copy it into your current shell to login into Pulumi Cloud. Be sure to keep track of this token as you will need it for the next step of the tutorial.
 
 ## Brief Explanation
 
-Pulumi Service Provider is used to create Pulumi Cloud resources using Pulumi IaC Programs. Just like an S3 bucket is created using an AWS provider, PSP allows creation of things like Environments, Environment Version Tags, Environment Webhooks, and much more. In order to authenticate with Pulumi Cloud, PSP uses the same personal access token (PAT for short!) as Pulumi CLI. This is where ESC comes in!
+Pulumi Service Provider (PSP) is a Pulumi provider for creating and configuring Pulumi Cloud resources using Pulumi IaC Programs. Just like an S3 bucket is created using an AWS provider, PSP allows creation of things like Environments, Environment Version Tags, Environment Webhooks, and much more. In order to authenticate with Pulumi Cloud, PSP uses the same personal access token (PAT) as Pulumi CLI. This is where ESC comes in!
 
-Instead of providing PAT as an environment variable, risking losing or leaking it, we will create an ESC Environment and store the PAT there. We will then import this environment into the configuration of a new stack, in which we will create Pulumi Cloud resources
+Instead of providing the PAT as an environment variable, risking losing or leaking it, we will create an ESC Environment and store the PAT there. We will then import this environment into the configuration of a new stack, in which we will create Pulumi Cloud resources
 
-## Create a new ESC project and environment
+## Create a new ESC environment
 
-In ESC, configuration settings belong to collections called [_environments_](/docs/esc/environments/working-with-environments/), and environments in turn belong to _projects_. Projects and environments may be created either with the Pulumi Cloud console or with the CLI.
+ESC [_Environments_](/docs/esc/environments/working-with-environments/) are a great way to store configuration settings and secrets. Environments can be created in the Pulumi Cloud console or with the CLI.
 
 To get started, navigate to the Environments page using Pulumi Cloud console's navigation bar on the left. Then click `Create Environment` button, fill in `creds` for project name and `psp` for environment name and click `Create`. You will now see a blank new environment with some default commented-out explanations.
 
@@ -61,20 +61,21 @@ Select everything in the Environment definition pane and replace it with this:
 ```bash
 values:
   pulumiConfig:
-    "pulumiservice:apiUrl": % FILL IN CUSTOM BACKEND API HERE %
     "pulumiservice:accessToken":
       fn::secret: % FILL IN PAT HERE %
 ```
 
-If you are *not* using Pulumi Self-hosted, just remove the line containing `apiUrl`. This optional field configures custom Pulumi Cloud backend, and is not needed for most users.
+{{% notes %}}
+If you are using *Pulumi Self-hosted*, you will also need to add a field `"pulumiservice:apiUrl"` next to the `accessToken` one. Fill it with your Pulumi Cloud backend URL. This is *not* needed for most users.
+{{% /notes %}}
 
-Once you fill in your previously created PAT, click `Save` on the top right. This will update your new environment's definition with the values you just added. Note how the plain text PAT value you pasted in was converted into a secret. It is now securely stored within Pulumi Cloud, removing the risk of losing or leaking the PAT, while your stacks are still able to decrypt and use it. Feel free to close the token creation page now, we won't need it again!
+Once you fill in your previously created PAT, click `Save` on the top right. This will update your new environment's definition with the values you just added. Note that the plaintext PAT was converted into a secret value. It is now securely stored within Pulumi Cloud, removing the risk of losing or leaking the PAT, while your stacks are still able to decrypt and use it. Feel free to erase the plaintext PAT, we won't need it again!
 
 ## Create a new Pulumi Program
 
 Now it's time to create a new Pulumi Program that will use the new Environment and PSP to create more Pulumi Cloud resources!
 
-Create a new folder in your shell (for example `esc-psp-tutorial`) and navigate into it. Then, run `pulumi new`, and navigate the menu to create a new stack from a template called `typescript`. Fill in the project name as `esc-psp-tutorial`, and the stack name as `%ORG NAME%/dev`, filling in your actual organization name (for the rest of the tutorial, `tutorials` will be used), and `dev` is the name of the new stack.
+Create a new folder in your shell (for example `esc-psp-tutorial`) and navigate into it. Then, run `pulumi new`, and navigate the menu to create a new stack from a template called `typescript`. Fill in the project name as `esc-psp-tutorial`, and the stack name as `%ORG NAME%/dev`, filling in your actual organization name (for the rest of the tutorial, `tutorials` will be used), and `dev` as the name of the new stack.
 
 Once Pulumi CLI finishes installing dependencies, you should see the following files in your tutorial folder:
 
@@ -91,7 +92,7 @@ environment:
   - creds/psp
 ```
 
-In the config files, `environment` field lets you specify an array of ESC Environments to import. In this case, we only want to import the Environment we created above, `creds/psp`, where `creds` is the ESC project name and `psp` is the Environment name.
+Here, `environment` field lets you specify an array of ESC Environments to import. In this case, we only want to import the Environment we created above, `creds/psp`, where `creds` is the ESC project name and `psp` is the Environment name.
 
 ## Write the Pulumi program
 
@@ -125,4 +126,4 @@ You are now all set! Run `pulumi up`, and your Pulumi program will create a new 
 
 ### Wrapping up
 
-You have learned how to create ESC environments in the Pulumi Cloud console, import them into IaC stacks and even create Environments using the Pulumi Service Provider. The environment you created, `creds/psp` can now be easily re-used between your stacks, or used to compose more complicated environments, using [Environment imports](https://www.pulumi.com/docs/esc/environments/imports/). Using what you know now, you can easily create other `creds` Environments for ther providers. For example, `creds/aws` or `creds/azure`!
+You have learned how to create ESC environments in the Pulumi Cloud console, import them into IaC stacks and even create Environments using the Pulumi Service Provider. The environment you created, `creds/psp` can now be easily re-used between your stacks, or used to compose more complex environments, using [Environment imports](https://www.pulumi.com/docs/esc/environments/imports/). Using what you know now, you can easily create other Environments under the `creds` project to store credentials for other providers. For example, `creds/aws` or `creds/azure`!
