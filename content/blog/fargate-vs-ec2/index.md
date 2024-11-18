@@ -1,6 +1,6 @@
 ---
 # title: "AWS Fargate vs EC2 for Elastic Kubernetes Service (EKS)"
-title: "EKS Fargate vs EC2"
+title: "Fargate vs EC2"
 date: 2024-11-18T08:42:34-05:00
 # you want to be able to merge the post without publishing it.
 draft: false
@@ -173,11 +173,13 @@ Fargate has some hard limitations that might rule it out for your use case:
 
 ## Fargate vs EC2 Pricing
 
-Ok, EC2 costs less than Fargate on a pure cost-of-compute basis. If my t3.medium ($0.0416/hr) can typically run 6-8 pods reliably, and this works out to under $0.01/hr per pod. Comparable Fargate pods (0.5 vCPU/1GB) cost about $0.025/hr each, so 2.5x. But we need headroom on EC2 and these pure compute comparisons don't account for the operational overhead of managing EC2 nodes. Also, maybe you are scaling up and down, or maybe the isolation is what you need.
+Ok, EC2 costs less than Fargate on a pure cost-of-compute basis. If my t3.medium ($0.0416/hr) can typically run 6-8 pods reliably, and this works out to under $0.01/hr per pod. Comparable Fargate pods (0.5 vCPU/1GB) cost about $0.025/hr each, so 2.5x.
 
-Really, pure compute cost calculations are an insufficient metric for making this decision - you need to factor in your team's operational capacity, scaling patterns, and isolation requirements.
+These calculations can change, based on how much headroom you need on EC2 and how many containers you can run on a give EC2 instance, but Fargate is just more expensive. Having that compute sitting around warm and ready to spin up fargate pods into likely costs AWS money and so it should be suprizing that Fargate is more expensive.
 
-Also, if Fargate makes sense because of your workload but the cost is a concern, then look into Fargate Spot instances, which can be up to 70% cheaper, but be aware that AWS can terminate them at any point to reclaim capacity.
+But really, pure compute cost calculations are an insufficient metric for making this decision - you need to factor in your team's operational capacity, scaling patterns, and isolation requirements.
+
+( Also, if Fargate makes sense because of your workload but the cost is a concern, then look into Fargate Spot instances, which can be up to 70% cheaper, but be aware that AWS can terminate them at any point to reclaim capacity. )
 
 ## Misconceptions About Fargate
 
