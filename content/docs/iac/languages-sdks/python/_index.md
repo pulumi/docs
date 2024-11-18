@@ -115,7 +115,7 @@ When using `uv` Pulumi will create a virtual environment in the `.venv` director
 runtime:
   name: python
   options:
-    toolchain: pip
+    toolchain: uv
     virtualenv: .venv
 ```
 
