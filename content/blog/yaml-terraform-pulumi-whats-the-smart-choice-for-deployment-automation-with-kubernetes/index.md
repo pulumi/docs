@@ -54,7 +54,10 @@ YAML and [Kubernetes](https://kubernetes.io/) go together like peanut butter and
 
 It's often the first tool developers encounter when diving into Kubernetes, and for good reason - its human-readable format makes it the preferred choice in most tutorials, documentation, and even production deployments.
 <!--more-->
-![yaml.png](yaml.png)
+
+<div style="display: flex; align-items: center; justify-content: center; height: 600px;">
+    <img src="yaml.png" alt="Description of image" style="width: 60%;">
+</div>
 
 **But is it the best way to manage your Kubernetes resources?** Let's compare YAML, Terraform, and Pulumi and see which is best for managing your Kubernetes resources.
 
