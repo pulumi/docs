@@ -342,7 +342,7 @@ but you can of course use any of the Pulumi supported languages.
 ```typescript
 {{< example-program-snippet path="kubernetes-deployments-typescript" language="typescript" from="1" to="2" >}}
 
-{{< example-program-snippet path="kubernetes-deployments-typescript" language="typescript" from="33" to="68" >}}
+{{< example-program-snippet path="kubernetes-deployments-typescript" language="typescript" from="35" to="73" >}}
 ```
 
 In this example, you can see how easy it is to define multiple `Deployment` objects with variables and loops syntax provided by `TypeScript`. This is a big advantage over plain YAML files and Terraform HCL. Blending the full power of a general-purpose programming language with the Kubernetes API is a natural process. Consider the possibilities of creating reusable functions, classes, and modules. You could share them across multiple projects and teams.

@@ -30,6 +30,8 @@ const nginxDeployment = new k8s.apps.v1.Deployment("nginx-deployment", {
     },
 });
 
+export const _ = nginxDeployment.metadata.name;
+
 let config = new pulumi.Config();
 
 const namespace = config.require("namespace");
@@ -57,10 +59,12 @@ for (let i = 0; i < numberOfDeployments; i++) {
                     },
                 },
                 spec: {
-                    containers: [{
-                        name: "nginx",
-                        image: nginxImage,
-                    }],
+                    containers: [
+                        {
+                            name: "nginx",
+                            image: nginxImage,
+                        },
+                    ],
                 },
             },
         },
