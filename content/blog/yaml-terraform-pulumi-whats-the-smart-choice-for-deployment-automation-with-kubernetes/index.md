@@ -56,7 +56,7 @@ It's often the first tool developers encounter when diving into Kubernetes, and 
 <!--more-->
 
 <div style="display: flex; align-items: center; justify-content: center; height: 600px;">
-    <img src="yaml.png" alt="Description of image" style="width: 60%;">
+    <img src="yaml.png" alt="Description of image" style="width: 60%; height: 100%">
 </div>
 
 **But is it the best way to manage your Kubernetes resources?** Let's compare YAML, Terraform, and Pulumi and see which is best for managing your Kubernetes resources.
