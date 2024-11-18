@@ -1,0 +1,7 @@
+name: kubernetes-deployments-csharp
+description: An example that creates a Kubernetes Deployment
+runtime: dotnet
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: kubernetes-csharp
