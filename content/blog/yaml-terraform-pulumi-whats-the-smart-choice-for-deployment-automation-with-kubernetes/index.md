@@ -289,37 +289,7 @@ Let's have a look at an example of what a `Deployment` object would look like in
 {{% choosable language typescript %}}
 
 ```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as k8s from "@pulumi/kubernetes";
-
-const nginxDeployment = new k8s.apps.v1.Deployment("nginx-deployment", {
-    metadata: {
-        name: "nginx-deployment",
-    },
-    spec: {
-        replicas: 1,
-        selector: {
-            matchLabels: {
-                app: "nginx",
-            },
-        },
-        template: {
-            metadata: {
-                labels: {
-                    app: "nginx",
-                },
-            },
-            spec: {
-                containers: [
-                    {
-                        name: "nginx",
-                        image: "nginx:latest",
-                    },
-                ],
-            },
-        },
-    },
-});
+{{< example-program-snippet path="kubernetes-deployments-typescript" language="typescript" from="1" to="31" >}}
 ```
 
 {{% /choosable %}}
@@ -327,37 +297,7 @@ const nginxDeployment = new k8s.apps.v1.Deployment("nginx-deployment", {
 {{% choosable language javascript %}}
 
 ```javascript
-const pulumi = require("@pulumi/pulumi");
-const k8s = require("@pulumi/kubernetes");
-
-const nginxDeployment = new k8s.apps.v1.Deployment("nginx-deployment", {
-    metadata: {
-        name: "nginx-deployment",
-    },
-    spec: {
-        replicas: 1,
-        selector: {
-            matchLabels: {
-                app: "nginx",
-            },
-        },
-        template: {
-            metadata: {
-                labels: {
-                    app: "nginx",
-                },
-            },
-            spec: {
-                containers: [
-                    {
-                        name: "nginx",
-                        image: "nginx:latest",
-                    },
-                ],
-            },
-        },
-    },
-});
+{{< example-program-snippet path="kubernetes-deployments-javascript" language="javascript" from="1" to="31" >}}
 ```
 
 {{% /choosable %}}
@@ -365,38 +305,7 @@ const nginxDeployment = new k8s.apps.v1.Deployment("nginx-deployment", {
 {{% choosable language python %}}
 
 ```python
-import pulumi
-import pulumi_kubernetes as k8s
-
-nginx_deployment = k8s.apps.v1.Deployment(
-    "nginx-deployment",
-    metadata=k8s.meta.v1.ObjectMetaArgs(
-        name="nginx-deployment",
-    ),
-    spec=k8s.apps.v1.DeploymentSpecArgs(
-        replicas=1,
-        selector=k8s.meta.v1.LabelSelectorArgs(
-            match_labels={
-                "app": "nginx",
-            },
-        ),
-        template=k8s.core.v1.PodTemplateSpecArgs(
-            metadata=k8s.meta.v1.ObjectMetaArgs(
-                labels={
-                    "app": "nginx",
-                },
-            ),
-            spec=k8s.core.v1.PodSpecArgs(
-                containers=[
-                    k8s.core.v1.ContainerArgs(
-                        name="nginx",
-                        image="nginx:latest",
-                    ),
-                ],
-            ),
-        ),
-    ),
-)
+{{< example-program-snippet path="kubernetes-deployments-python" language="python" from="2" to="34" >}}
 ```
 
 {{% /choosable %}}
@@ -404,51 +313,7 @@ nginx_deployment = k8s.apps.v1.Deployment(
 {{% choosable language go %}}
 
 ```go
-package main
-
-import (
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-	"github.com/pulumi/pulumi-kubernetes/sdk/v4/go/kubernetes/apps/v1"
-	metav1 "github.com/pulumi/pulumi-kubernetes/sdk/v4/go/kubernetes/meta/v1"
-	corev1 "github.com/pulumi/pulumi-kubernetes/sdk/v4/go/kubernetes/core/v1"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := v1.NewDeployment(ctx, "nginxDeployment", &v1.DeploymentArgs{
-			Metadata: &metav1.ObjectMetaArgs{
-				Name: pulumi.String("nginx-deployment"),
-			},
-			Spec: &v1.DeploymentSpecArgs{
-				Replicas: pulumi.Int(1),
-				Selector: &metav1.LabelSelectorArgs{
-					MatchLabels: pulumi.StringMap{
-						"app": pulumi.String("nginx"),
-					},
-				},
-				Template: &corev1.PodTemplateSpecArgs{
-					Metadata: &metav1.ObjectMetaArgs{
-						Labels: pulumi.StringMap{
-							"app": pulumi.String("nginx"),
-						},
-					},
-					Spec: &corev1.PodSpecArgs{
-						Containers: corev1.ContainerArray{
-							&corev1.ContainerArgs{
-								Name:  pulumi.String("nginx"),
-								Image: pulumi.String("nginx:latest"),
-							},
-						},
-					},
-				},
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
+{{< example-program-snippet path="kubernetes-deployments-go" language="go" from="1" to="46" >}}
 ```
 
 {{% /choosable %}}
@@ -456,63 +321,7 @@ func main() {
 {{% choosable language csharp %}}
 
 ```csharp
-using Pulumi;
-using Pulumi.Kubernetes.Types.Inputs.Core.V1;
-using Pulumi.Kubernetes.Types.Inputs.Apps.V1;
-using Pulumi.Kubernetes.Types.Inputs.Meta.V1;
-using System.Threading.Tasks;
-using Deployment = Pulumi.Deployment;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var nginxDeployment = new Pulumi.Kubernetes.Apps.V1.Deployment("nginxDeployment", new DeploymentArgs
-        {
-            Metadata = new ObjectMetaArgs
-            {
-                Name = "nginx-deployment",
-            },
-            Spec = new DeploymentSpecArgs
-            {
-                Replicas = 1,
-                Selector = new LabelSelectorArgs
-                {
-                    MatchLabels =
-                    {
-                        { "app", "nginx" }
-                    }
-                },
-                Template = new PodTemplateSpecArgs
-                {
-                    Metadata = new ObjectMetaArgs
-                    {
-                        Labels =
-                        {
-                            { "app", "nginx" }
-                        }
-                    },
-                    Spec = new PodSpecArgs
-                    {
-                        Containers =
-                        {
-                            new ContainerArgs
-                            {
-                                Name = "nginx",
-                                Image = "nginx:latest",
-                            }
-                        }
-                    }
-                }
-            }
-        });
-    }
-}
-
-class Program
-{
-    static Task<int> Main() => Deployment.RunAsync<MyStack>();
-}
+{{< example-program-snippet path="kubernetes-deployments-csharp" language="csharp" from="1" to="58" >}}
 ```
 
 {{% /choosable %}}
@@ -520,47 +329,7 @@ class Program
 {{% choosable language java %}}
 
 ```java
-import com.pulumi.Context;
-import com.pulumi.Pulumi;
-import com.pulumi.kubernetes.apps.v1.Deployment;
-import com.pulumi.kubernetes.apps.v1.DeploymentArgs;
-import com.pulumi.kubernetes.core.v1.inputs.ContainerArgs;
-import com.pulumi.kubernetes.core.v1.inputs.PodSpecArgs;
-import com.pulumi.kubernetes.core.v1.inputs.PodTemplateSpecArgs;
-import com.pulumi.kubernetes.meta.v1.inputs.LabelSelectorArgs;
-import com.pulumi.kubernetes.meta.v1.inputs.ObjectMetaArgs;
-import com.pulumi.kubernetes.meta.v1.inputs.LabelSelectorRequirementArgs;
-
-import java.util.Map;
-
-public class MyStack {
-    public static void main(String[] args) {
-        Pulumi.run(ctx -> {
-            var nginxDeployment = new Deployment("nginxDeployment", DeploymentArgs.builder()
-                    .metadata(ObjectMetaArgs.builder()
-                            .name("nginx-deployment")
-                            .build())
-                    .spec(DeploymentArgs.builder()
-                            .replicas(1)
-                            .selector(LabelSelectorArgs.builder()
-                                    .matchLabels(Map.of("app", "nginx"))
-                                    .build())
-                            .template(PodTemplateSpecArgs.builder()
-                                    .metadata(ObjectMetaArgs.builder()
-                                            .labels(Map.of("app", "nginx"))
-                                            .build())
-                                    .spec(PodSpecArgs.builder()
-                                            .containers(ContainerArgs.builder()
-                                                    .name("nginx")
-                                                    .image("nginx:latest")
-                                                    .build())
-                                            .build())
-                                    .build())
-                            .build())
-                    .build());
-        });
-    }
-}
+{{< example-program-snippet path="kubernetes-deployments-java" language="java" from="1" to="41" >}}
 ```
 
 {{% /choosable %}}
@@ -571,46 +340,9 @@ but you can of course use any of the Pulumi supported languages.
 ### Example with Variables and Loops
 
 ```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as k8s from "@pulumi/kubernetes";
+{{< example-program-snippet path="kubernetes-deployments-typescript" language="typescript" from="1" to="2" >}}
 
-
-let config = new pulumi.Config();
-
-const namespace = config.require("namespace");
-const nginxImage = config.require("nginxImage");
-const replicas = config.requireNumber("replicas");
-const numberOfDeployments = config.requireNumber("numberOfDeployments");
-
-for (let i = 0; i < numberOfDeployments; i++) {
-    new k8s.apps.v1.Deployment(`nginxDeployment-${i}`, {
-        metadata: {
-            name: `nginx-deployment-${i}`,
-            namespace: namespace,
-        },
-        spec: {
-            replicas: replicas,
-            selector: {
-                matchLabels: {
-                    app: `nginx-${i}`,
-                },
-            },
-            template: {
-                metadata: {
-                    labels: {
-                        app: `nginx-${i}`,
-                    },
-                },
-                spec: {
-                    containers: [{
-                        name: "nginx",
-                        image: nginxImage,
-                    }],
-                },
-            },
-        },
-    });
-}
+{{< example-program-snippet path="kubernetes-deployments-typescript" language="typescript" from="33" to="68" >}}
 ```
 
 In this example, you can see how easy it is to define multiple `Deployment` objects with variables and loops syntax provided by `TypeScript`. This is a big advantage over plain YAML files and Terraform HCL. Blending the full power of a general-purpose programming language with the Kubernetes API is a natural process. Consider the possibilities of creating reusable functions, classes, and modules. You could share them across multiple projects and teams.
