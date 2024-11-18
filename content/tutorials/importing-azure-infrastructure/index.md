@@ -1,6 +1,6 @@
 ---
-title: "Importing Infrastructure"
-title_tag: "Importing Infrastructure"
+title: "Importing Azure Infrastructure"
+title_tag: "Importing Azure Infrastructure"
 layout: single
 
 # A succinct description of the tutorial. It appears on the Tutorials home and collection pages.
@@ -10,7 +10,7 @@ description: Learn how to import existing cloud resources into your Pulumi progr
 meta_desc: Learn how to import existing cloud resources into your Pulumi programs in this tutorial.
 
 # An image for the tutorial. It appears on tutorial page and in social-media previews.
-meta_image: importing-infra-meta.png
+meta_image: meta.png
 
 # An optional video for the tutorial. When present, it appears at the top of the page, replacing
 # the meta image. YouTube and HTML5 video sources are supported.
@@ -24,7 +24,7 @@ weight: 999
 
 # A brief summary of the tutorial. It appears at the top of the tutorial page. Markdown is fine.
 summary: |
-    Most infrastructure as code projects require working with existing cloud resources, whether those resources were originally created with another Infrastructure as Code (IaC) tool or manually provisioned with a cloud provider console or CLI. In this tutorial, you will learn how to import your existing resources to bring it under the management of Pulumi.
+    Most infrastructure as code projects require working with existing cloud resources, whether those resources were originally created with another Infrastructure as Code (IaC) tool or manually provisioned with a cloud provider console or CLI. In this tutorial, you will learn how to import your existing Azure resources to bring it under the management of Pulumi.
 
 # A list of three to five things the reader will have learned by the end of the tutorial.
 youll_learn:
@@ -36,9 +36,9 @@ youll_learn:
 prereqs:
     - The [Pulumi CLI](/docs/install/)
     - A [Pulumi Cloud account](https://app.pulumi.com/signup) and [access token](/docs/pulumi-cloud/accounts/#access-tokens)
-    - An [Amazon Web Services](https://aws.amazon.com/) account
-    - The [AWS CLI](https://aws.amazon.com/cli/)
-    - Your desired [language runtime installed](/docs/iac/get-started/aws/begin/#install-language-runtime)
+    - An [Azure account](https://azure.microsoft.com/en-us/pricing/purchase-options/azure-account)
+    - The [Azure CLI](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli)
+    - Your desired [language runtime installed](/docs/iac/get-started/azure/begin/#install-language-runtime)
 
 # The estimated time, in minutes, for new users to complete the topic.
 estimated_time: 15
@@ -46,22 +46,13 @@ estimated_time: 15
 # An optional list of collections this tutorial should be belong to. Collections are defined in data/tutorials/collections.yaml.
 # collections:
 #     - some-non-existent-collection
-
-aliases:
-- /tutorials/importing/
-- /tutorials/importing/getting-started/
-- /tutorials/importing/importing-cli/
-- /tutorials/importing/bulk-importing/
-- /tutorials/importing/importing-via-code/
 ---
 
 ## Create initial resources
 
-To start, login to the [AWS Console](https://console.aws.amazon.com/s3) and [create a new S3 bucket](https://docs.aws.amazon.com/AmazonS3/latest/userguide/creating-bucket.html). You can create the bucket using default settings, making sure to provide a globally unique name for the bucket. For the purposes of this tutorial, we have created an S3 bucket named `pulumi-import-tutorial-bucket`.
+To start, login to the [Azure Console](https://portal.azure.com/) and follow the instructions in the official Microsoft documentation to [create a new Storage Account](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-create?tabs=azure-portal).
 
-{{< video title="Running the pulumi login command with access token" src="/tutorials/importing-infrastructure/aws-console-create-s3-bucket.mp4" autoplay="true" loop="true" >}}
-
-Then, login to the [Pulumi CLI](/docs/cli/commands/pulumi_login/) and ensure it is [configured to use your AWS account](/docs/iac/get-started/aws/begin/#configure-pulumi-to-access-your-aws-account). Next, [create a new project and stack](/docs/iac/get-started/aws/create-project/) that will be used to hold the resource definition for your imported resources.
+Then, login to the [Pulumi CLI](/docs/cli/commands/pulumi_login/) and ensure it is [configured to use your Azure account](/docs/iac/get-started/azure/begin/#configure-pulumi-to-access-your-microsoft-azure-account). Next, [create a new project and stack](/docs/iac/get-started/azure/create-project/) that will be used to hold the resource definition for your imported resources.
 
 ```bash
 # Example using Python
