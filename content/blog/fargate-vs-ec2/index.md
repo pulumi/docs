@@ -1,5 +1,6 @@
 ---
-title: "AWS Fargate vs EC2 for Elastic Kubernetes Service (EKS)"
+# title: "AWS Fargate vs EC2 for Elastic Kubernetes Service (EKS)"
+title: "EKS Fargate vs EC2"
 date: 2024-11-18T08:42:34-05:00
 # you want to be able to merge the post without publishing it.
 draft: false
@@ -17,10 +18,11 @@ social:
     linkedin:
 
 ---
-
-So, I'm setting up an EKS cluster for a video demo, and my simplified Pulumi code is this:
+Building an EKS cluster requires choosing how your containers will actually run - either on EC2 instances you manage or through AWS Fargate's pod-by-pod approach. The differences can be pretty dramatic in practice. I'm setting up a demo cluster right now using Pulumi, so let me show you what I mean:
 
 <!--more-->
+
+Here is my Fargate cluster:
 
 ```python
 import pulumi
@@ -42,11 +44,11 @@ eks_cluster = eks.Cluster("eks-cluster",
 pulumi.export("kubeconfig", eks_cluster.kubeconfig)
 ```
 
-And look in k9s I get this:
+And when I look in k9s I see this:
 
 ![k9s fargate demo](k9s-fargate.gif)
 
-You can see that each pod is on its own node. Even the core-dns pods in the system namespace are each on their own nodes.
+You can see that each pod is on its own node. Even the core-dns pods in the system namespace are each on their own nodes. That is a lot of nodes, and it's going to keep growing with my cluster.
 
 If I change my cluster to be backed by EC2 nodes, I get something different.
 
@@ -62,11 +64,11 @@ eks_cluster = eks.Cluster("eks-cluster",
 )
 ```
 
-Now there are only two nodes, with the pods distributed among them. Those are my two `t3.medium`s.
+Now, there are only two nodes, with the pods distributed among them. Those are my two `t3.medium`s.
 
 ![k9s eks demo](k9s-eks.gif)
 
-So when should you use Fargate, and when EC2 for EKS? Well, it really all relates to what we are seeing here with the nodes.
+So when should you use Fargate, and when EC2 for EKS? Well, it really all relates to what we are seeing here with the number and size of nodes.
 
 Let me explain.
 
@@ -78,7 +80,7 @@ This can be surprisingly complex in practice. Teams must balance selecting the r
 
 ![ec2 pods](ec2-pods.png)
 
-With Fargate, AWS sidesteps this challenge by providing a "just-in-time" bin for each pod. Each Fargate pod runs on its own dynamically provisioned, right-sized mini-environment, where the "bin" (the Fargate instance) is exactly sized to match the pod's requested resources. This means there's no need for Kubernetes to optimize resource usage across a pool of shared nodes, as each pod effectively has its own "container" provided by Fargate that fits it precisely.
+With Fargate, AWS sidesteps this challenge by providing a correctly sized bin for each pod. Each Fargate pod runs on its own dynamically provisioned, right-sized mini-environment, where the "bin" (the Fargate instance) is sized to match the pod's requested resources. This means there's no need for Kubernetes to optimize resource usage across a pool of shared nodes, as each pod effectively has its own "container" provided by Fargate that fits it's needs precisely.
 
 In other words, AWS effectively pushes this bin-packing responsibility to itself, so you don't have to worry ( as much ) about it.
 
@@ -92,17 +94,36 @@ While Fargate abstracts away node management, it's important to understand that 
 
 So yeah, Fargate abstracts away the complexity of managing nodes and scaling clusters by shifting bin-packing to AWS. With its extensive infrastructure, AWS is arguably better positioned to optimize placements at scale. They can monitor their entire cloud landscape, placing Fargate instances dynamically across available resources. This allows them to potentially leverage underutilized resources in ways that would be challenging or impractical at an individual account's scale.
 
+<div>
+
+| Responsibility | EC2 | Fargate |
+|----------------|-----|---------|
+| Instance Types | You pick size and provision nodes | AWS provisions per pod request|
+| Pod Isolation | You prevent noisy neighbors | AWS isolates each pod |
+| Resource Allocation | You find space on nodes | AWS creates dedicated space |
+
+<span style="text-align:center">
+    <figcaption>
+    <i>Customer vs AWS Responsibility EC2 vs Fargate</i>
+    </figcaption>
+</span>
+</div>
+
 Ideally, this frees you to focus on the services rather than on the underlying infrastructure, but in practice, it's a bit more complex.
 
 Since each pod is treated as a standalone instance, you lose out on the cost efficiencies of co-locating multiple pods on a single node. Even though AWS is "solving" the bin-packing problem globally, to do so, they need to introduce hard barriers, and while noisy neighbors, therefore, aren't a problem, sharing resources is now impossible. In a way, you are throwing away the run time benefit of containers, the shared kernel virtualization, for something more like VMs. And just like VMs, Fargate pods take longer to start than pods on existing EC2 nodes (typically 30-60 seconds vs near-immediate starts).
 
+### A Note on Scaling
+
+Both EC2 and Fargate work with Kubernetes' Horizontal Pod Autoscaling (HPA), which adds or removes pods based on metrics like CPU usage. The difference? With EC2, you need enough nodes available to handle new pods. With Fargate, AWS automatically provisions resources for each new pod - though you'll face that 30-60 second startup delay and potential VPC limits since each pod needs its own network interface.
+
 Feature | Fargate | EC2
 --- | --- | ---
-Cost | Higher per pod, but no node management | Lower cost per pod, requires node management
+Cost | Higher per pod | Lower cost per pod
 Scalability | Scales on-demand, isolated resources | Requires manual node scaling
 Resource Sharing | Not possible | Efficient resource sharing among pods
 Startup Time | 30-60 seconds | Near instant on existing nodes
-Use Cases | Burst workloads, isolated pods | Lightweight microservices, cost-sensitive workloads
+Use Cases | Burst workloads, isolated pods | Cost-sensitive workloads, Resource sharing workloads
 
 Maybe this will make more sense with an example.
 
@@ -169,10 +190,10 @@ Also, if Fargate makes sense because of your workload but the cost is a concern,
 - **It's simpler and more reliable**
   It may be, but it may not be. The complexity shifts to networking, pod configuration, and working within Fargate's constraints. You trade node management for new operational challenges like slower startups and possible networking complexity.
 
-## Conclusions
+## Why Not Both
 
-I hope my examples point to a straightforward approach: use Fargate when you need isolation and/or the scaling trade-offs it makes. Just make sure you can fit into its constraints. Use EC2 when you have efficient microservices that share resources, like our Go e-commerce setup. Fargate trades potentially higher costs for isolation, and sometimes you want that. It's less flexible but the more important point is this: it's easy to get started with — which is why I'm using it in the example I shared at the top.
+I hope my examples point to a pragmatic approach: use EC2 as your foundation for efficient microservices that can share resources, like our Go e-commerce setup. Add Fargate when you need isolation or flexible scaling - like for the static analysis workload. Better yet, combine both approaches in the same cluster, for cost-efficency and isolation where needed.
 
 If you're interested in using Pulumi to manage EKS infra, here's a [practical EKS setup guide](/docs/iac/clouds/aws/guides/eks/) guide to get your started.
 
-Now, back to getting this demo working!
+Now, back to getting this demo cluster up and working!
