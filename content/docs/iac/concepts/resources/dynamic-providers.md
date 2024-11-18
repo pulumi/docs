@@ -768,9 +768,6 @@ from pulumi.dynamic import Resource, ResourceProvider, CreateResult, UpdateResul
 from typing import Optional
 from github import Github, GithubObject
 
-config = pulumi.Config()
-auth = config.require_secret("githubToken")
-
 class GithubLabelArgs(object):
     owner: Input[str]
     repo: Input[str]
