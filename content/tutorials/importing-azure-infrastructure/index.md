@@ -61,7 +61,7 @@ $ cd pulumi-tutorial-import
 $ pulumi new python
 ```
 
-This tutorial will define the S3 bucket resource using the AWS Classic provider, so you will also need to make sure to [install this dependency into your project](https://www.pulumi.com/registry/packages/aws/installation-configuration/).
+This tutorial will define the Storage Account resource using the Azure Native provider, so you will also need to make sure to [install this dependency into your project](/registry/packages/azure-native/installation-configuration/).
 
 ## Importing a resource
 
@@ -81,41 +81,47 @@ To import an existing cloud resource with the Pulumi CLI, use the following synt
 $ pulumi import <type> <name> <id>
 ```
 
-- The first argument, `type`, is the Pulumi type token to use for the imported resource. You can find the type token for a given resource by navigating to the Import section of the resource's API documentation in the [Pulumi Registry](/registry/). For example, the type token of an [Amazon S3 Bucket](/registry/packages/aws/api-docs/s3/bucket/#import) resource is `aws:s3/bucket:Bucket`.
+- The first argument, `type`, is the Pulumi type token to use for the imported resource. You can find the type token for a given resource by navigating to the Import section of the resource's API documentation in the [Pulumi Registry](/registry/). For example, the type token of an [Azure Storage Account](/registry/packages/azure-native/api-docs/storage/storageaccount/#import) resource is `azure-native:storage:StorageAccount`.
+
+  ![Import section of API documentation](pulumi-storage-account-import-section.png)
 
 - The second argument, `name`, is the [resource name](/docs/concepts/resources/names) to apply to the resource once it's imported.
 
-- The third argument, `id`, corresponds to the value you would use in Pulumi to lookup the resource in the cloud provider. This value should correspond to the designated `lookup property` specified in the **Import** section of the resource's API documentation in the Registry. In the case of an [AWS S3 bucket](/registry/packages/aws/api-docs/s3/bucket/#import), this would be the `bucket` property.
+- The third argument, `id`, corresponds to the value you would use in Pulumi to lookup the resource in the cloud provider. This value should correspond to the designated `lookup property` specified in the **Import** section of the resource's API documentation in the Registry. In the case of an Azure Storage Account, this would be:
 
-  ![Import section of API documentation](pulumi-import-import-section.png)
+  ```
+  /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}
+  ```
+  
+  The `subscriptionId` parameter refers to your Azure subscription ID, the `resourceGroupName` parameter refers to the name of the resource group that the Storage Account lives in, and the `accountName` parameter refers to the name of your Storage Account.
 
-  If you scroll to the [`bucket` property](/registry/packages/aws/api-docs/s3/bucket/#bucket_python) section of the API documentation, you will see that this lookup property translates to the name of the bucket.
-
-  ![Bucket property in property table in API documentation](pulumi-import-bucket-property.png)
-
-When put all together, the `import` command should look something like the following example, where `imported-s3-bucket` is the resource name that will be applied to the S3 bucket once imported, and `pulumi-import-tutorial-bucket` corresponds to the existing name of the S3 bucket you want to import:
+When put all together, the `import` command should look something like the following example, where `imported-storage-account` is the resource name that will be applied to the Storage Account once imported.
 
 ```bash
-$ pulumi import aws:s3/bucket:Bucket imported-s3-bucket pulumi-import-tutorial-bucket
+$ pulumi import azure-native:storage:StorageAccount \
+imported-storage-account \
+/subscriptions/0282681f.../resourceGroups/pulumi-tutorials/providers/Microsoft.Storage/storageAccounts/tutorialstorageacct
 ```
 
 The output should look something like the following:
 
 ```bash
-$ pulumi import aws:s3/bucket:Bucket imported-s3-bucket pulumi-import-tutorial-bucket
+$ pulumi import azure-native:storage:StorageAccount \
+imported-storage-account \
+/subscriptions/0282681f..../resourceGroups/pulumi-tutorials/providers/Microsoft.Storage/storageAccounts/tutorialstorageacct
 
 Previewing import (dev)
 
-     Type                 Name        Plan
- +   pulumi:pulumi:Stack  dev         create
- =   └─ aws:s3:Bucket     my-bucket   import
+     Type                                    Name                      Plan
+ +   pulumi:pulumi:Stack                     dev                       create
+ =   └─ azure-native:storage:StorageAccount  imported-storage-account  import
 
 Resources:
     + 1 to create
     = 1 to import
     2 changes
 
-Do you want to perform this import?
+Do you want to perform this import?  [Use arrows to move, type to filter]
 > yes
   no
   details
@@ -129,9 +135,9 @@ Choose `yes` to complete the import. This will immediately add the resource to t
 ...
 Importing (dev)
 
-     Type                 Name                Status
- +   pulumi:pulumi:Stack  dev                 created
- =   └─ aws:s3:Bucket     imported-s3-bucket  imported (0.65s)
+     Type                                    Name                      Status
+ +   pulumi:pulumi:Stack                     dev                       created
+ =   └─ azure-native:storage:StorageAccount  imported-storage-account  imported (2s)
 
 Resources:
     + 1 created
@@ -148,20 +154,43 @@ you will need to remove the `protect` option and run `pulumi update` *before*
 the destroy will take effect.
 
 import pulumi
-import pulumi_aws as aws
+import pulumi_azure_native as azure_native
 
-imported_s3_bucket = aws.s3.Bucket("imported-s3-bucket",
-    arn="arn:aws:s3:::pulumi-import-tutorial-bucket",
-    bucket="pulumi-import-tutorial-bucket",
-    hosted_zone_id="Z21DNDUVLTQW6Q",
-    request_payer="BucketOwner",
-    server_side_encryption_configuration={
-        "rule": {
-            "apply_server_side_encryption_by_default": {
-                "sse_algorithm": "AES256",
+imported_storage_account = azure_native.storage.StorageAccount("imported-storage-account",
+    access_tier=azure_native.storage.AccessTier.HOT,
+    account_name="tutorialstorageacct",
+    allow_blob_public_access=False,
+    allow_cross_tenant_replication=False,
+    allow_shared_key_access=True,
+    default_to_o_auth_authentication=False,
+    dns_endpoint_type=azure_native.storage.DnsEndpointType.STANDARD,
+    enable_https_traffic_only=True,
+    encryption={
+        "key_source": azure_native.storage.KeySource.MICROSOFT_STORAGE,
+        "require_infrastructure_encryption": False,
+        "services": {
+            "blob": {
+                "enabled": True,
+                "key_type": azure_native.storage.KeyType.ACCOUNT,
             },
-            "bucket_key_enabled": True,
+            "file": {
+                "enabled": True,
+                "key_type": azure_native.storage.KeyType.ACCOUNT,
+            },
         },
+    },
+    kind=azure_native.storage.Kind.STORAGE_V2,
+    large_file_shares_state=azure_native.storage.LargeFileSharesState.ENABLED,
+    location="northcentralus",
+    minimum_tls_version=azure_native.storage.MinimumTlsVersion.TLS1_2,
+    network_rule_set={
+        "bypass": azure_native.storage.Bypass.AZURE_SERVICES,
+        "default_action": azure_native.storage.DefaultAction.ALLOW,
+    },
+    public_network_access=azure_native.storage.PublicNetworkAccess.ENABLED,
+    resource_group_name="pulumi-tutorials",
+    sku={
+        "name": azure_native.storage.SkuName.STANDARD_RAGRS,
     },
     opts = pulumi.ResourceOptions(protect=True))
 ```
@@ -204,24 +233,20 @@ Resources imported with the CLI are marked as __protected__ to guard against acc
 
 The `pulumi import` command also enables you to import resources in bulk for scenarios in which you need to bring multiple resources under management with Pulumi. To do so, you will need to create a JSON file that has all of the required information for each resource: a `type`, a desired `name`, and an `id`.
 
-To start, return to the AWS console and create two additional S3 buckets.
-
-![Additional S3 buckets](pulumi-import-additional-buckets.png)
-
-Next, return to your program folder and create a new file called `resources.json`. Inside of this file, copy and paste the following JSON object, making sure to replace the values of the `id` parameters with the actual names of your S3 buckets in your environment:
+To start, return to the Azure console and create two additional Storage Accounts. Next, return to your program folder and create a new file called `resources.json`. Inside of this file, copy and paste the following JSON object, making sure to replace the values of the `id` parameters with the actual values for your environment:
 
 ```json
 {
     "resources": [
         {
             "type": "aws:s3/bucket:Bucket",
-            "name": "second-imported-bucket",
-            "id": "pulumi-import-tutorial-bucket2" # REPLACE
+            "name": "second-imported-storage-account",
+            "id": "/subscriptions/0282681f..../resourceGroups/pulumi-tutorials/providers/Microsoft.Storage/storageAccounts/tutorialstorageacct2" # REPLACE
         },
         {
             "type": "aws:s3/bucket:Bucket",
-            "name": "third-imported-bucket",
-            "id": "pulumi-import-tutorial-bucket3" # REPLACE
+            "name": "third-imported-storage-account",
+            "id": "/subscriptions/0282681f..../resourceGroups/pulumi-tutorials/providers/Microsoft.Storage/storageAccounts/tutorialstorageacct3" # REPLACE
         }
     ]
 }
@@ -234,28 +259,29 @@ $ pulumi import -f ./resources.json
 
 Previewing import (dev)
 
-     Type                 Name                    Plan
-     pulumi:pulumi:Stack  dev
- =   ├─ aws:s3:Bucket     second-imported-bucket  import
- =   └─ aws:s3:Bucket     third-imported-bucket   import
+     Type                                    Name                             Plan
+ +   pulumi:pulumi:Stack                     dev                              create
+ =   ├─ azure-native:storage:StorageAccount  second-imported-storage-account  import
+ =   └─ azure-native:storage:StorageAccount  third-imported-storage-account   import
 
 Resources:
     = 2 to import
     2 unchanged
 
 Do you want to perform this import? yes
+
 Importing (dev)
 
-     Type                 Name                    Status
-     pulumi:pulumi:Stack  dev
- =   ├─ aws:s3:Bucket     third-imported-bucket   imported (0.64s)
- =   └─ aws:s3:Bucket     second-imported-bucket  imported (1s)
+     Type                                    Name                               Status
+     pulumi:pulumi:Stack                     dev
+ =   ├─ azure-native:storage:StorageAccount  second-imported-storage-account    imported (1s)
+ =   └─ azure-native:storage:StorageAccount  third-imported-storage-account     imported (2s)
 
 Resources:
     = 2 imported
     2 unchanged
 
-Duration: 4s
+Duration: 6s
 
 Please copy the following code into your Pulumi application. Not doing so
 will cause Pulumi to report that an update will happen on the next update command.
@@ -271,7 +297,7 @@ Just like when running the command against a single resource, the `pulumi import
 
 {{< notes type="info" >}}
 
-You only need to copy over the resource definitions of the two buckets and not the import statements again.
+You only need to copy over the resource definitions of the two Storage Accounts and not the import statements again.
 
 {{< /notes >}}
 
@@ -279,15 +305,17 @@ You only need to copy over the resource definitions of the two buckets and not t
 
 The third method to import existing cloud resources into a Pulumi project is by defining the resource code yourself and configuring the [`import` resource option](/docs/iac/concepts/options/import/) in the resource's definition. This approach may be better suited for scenarios that require importing multiple resources of the same type across multiple stacks and/or deployment environments as part of an automation workflow.
 
-To demonstrate, you will start by creating a simple IAM role in the AWS Console. For the purposes of this tutorial, you can follow the steps in AWS's [Creating an execution role in the IAM console guide](https://docs.aws.amazon.com/lambda/latest/dg/lambda-intro-execution-role.html#permissions-executionrole-console) to create your IAM role resource. When doing so, select the **AWSLambdaDynamoDBExecutionRole** managed policy on the **Add permissions** page and enter **pulumi-tutorial-iam-role** for the role name.
+To demonstrate, you will start by creating a simple Resource Group in the Azure portal. Once that is complete, you will need to identify the lookup property of the Resource Group resource. To do so, navigate to the **Import** section of the [Azure Native Resource Group resource page](/registry/packages/azure-native/api-docs/resources/resourcegroup/#import) in the Pulumi documentation. You will notice that the lookup property is the following:
 
-Once that is complete, you will need to identify the lookup property (e.g. the `id`) of the IAM role resource. To do so, navigate to the **Import** section of the [AWS IAM Role resource page](https://www.pulumi.com/registry/packages/aws/api-docs/iam/role/#import) in the Pulumi documentation. You will notice that the lookup property is the `name`, which corresponds to the name of the IAM role.
+```
+/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}
+```
 
-Now, navigate to your program code file and update the code with the following resource definition:
+Now, navigate to your program code file and update the code with the following resource definition, making sure to provide the variable values that correspond to your own Azure environment:
 
-{{< example-program path="aws-import-iac-iam-role" >}}
+{{< example-program path="azure-native-import-resource-group" >}}
 
-As you can see, the name of the IAM role, in this case `pulumi-tutorial-iam-role`, has been provided as the value of the `import` option in the resource definition.
+As you can see, the lookup property of the Virtual Machine resource has been provided as the value of the `import` option in the resource definition.
 
 At this point, the definition for the imported resources has only been written, meaning it has not yet been imported into your project's state and is therefore not yet under management by Pulumi. To complete the import process using this method, you will need to save your file and run the `pulumi up` command. You should see output resembling the following example:
 
@@ -295,25 +323,27 @@ At this point, the definition for the imported resources has only been written, 
 $ pulumi up -y
 Previewing update (dev)
 
-     Type                 Name           Plan
-     pulumi:pulumi:Stack  dev
- =   └─ aws:iam:Role      imported_role  import
+     Type                                     Name                  Plan
+ +   pulumi:pulumi:Stack                      dev                   create
+ =   └─ azure-native:resources:ResourceGroup  imported-rg           import
 
 Resources:
+    + 1 to create
     = 1 to import
-    4 unchanged
+    2 changes
 
-Updating (dev)
+Updating (zephyr/static-website)
 
-     Type                 Name           Status
-     pulumi:pulumi:Stack  dev
- =   └─ aws:iam:Role      imported_role  imported (0.93s)
+     Type                                     Name                  Status
+ +   pulumi:pulumi:Stack                      dev                   created (4s)
+ =   └─ azure-native:resources:ResourceGroup  imported-rg           imported (2s)
 
 Resources:
+    + 1 created
     = 1 imported
-    4 unchanged
+    2 changes
 
-Duration: 8s
+Duration: 6s
 ```
 
 It is important to note that when defining resources that you want to import using the `import` resource option method, the resource definition must match all properties of the existing resource. If you fail to include all of the existing properties, you will run into an error similar to the following:
@@ -321,12 +351,12 @@ It is important to note that when defining resources that you want to import usi
 ```bash {hl_lines=[5]}
 Previewing update (dev)
 
-     Type                 Name           Plan       Info
- +   pulumi:pulumi:Stack  dev            create
- =   └─ aws:iam:Role      imported_role  import     [diff: -description]; 1 warning
+     Type                                     Name           Plan       Info
+ +   pulumi:pulumi:Stack                      dev            create
+ =   └─ azure-native:resources:ResourceGroup  imported-rg    import     [diff: -tags]; 1 warning
 
 Diagnostics:
-  aws:iam:Role (imported_role):
+  azure-native:resources:ResourceGroup (imported-rg):
     warning: inputs to import do not match the existing resource; importing this resource will fail
 
 Resources:
@@ -336,12 +366,12 @@ Resources:
 
 Updating (dev)
 
-     Type                 Name           Status                       Info
- +   pulumi:pulumi:Stack  dev            **creating failed (5s)**     1 error
- =   └─ aws:iam:Role      imported_role  **importing failed**         1 error
+     Type                                        Name           Status                       Info
+ +   pulumi:pulumi:Stack                         dev            **creating failed (5s)**     1 error
+ =   └─ azure-native:resources:ResourceGroup     imported-rg    **importing failed**         1 error
 
 Diagnostics:
-  aws:iam:Role (imported_role):
+  azure-native:resources:ResourceGroup (imported-rg):
     error: inputs to import do not match the existing resource
 
   pulumi:pulumi:Stack (dev):

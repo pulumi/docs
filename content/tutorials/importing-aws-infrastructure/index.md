@@ -10,7 +10,7 @@ description: Learn how to import existing cloud resources into your Pulumi progr
 meta_desc: Learn how to import existing cloud resources into your Pulumi programs in this tutorial.
 
 # An image for the tutorial. It appears on tutorial page and in social-media previews.
-meta_image: importing-infra-meta.png
+meta_image: meta.png
 
 # An optional video for the tutorial. When present, it appears at the top of the page, replacing
 # the meta image. YouTube and HTML5 video sources are supported.

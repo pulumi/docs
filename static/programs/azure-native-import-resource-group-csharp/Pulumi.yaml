@@ -1,0 +1,7 @@
+name: azure-native-import-resource-group-csharp
+description: An example that provides the code to import an existing resource group from Azure.
+runtime: dotnet
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: azure-csharp
