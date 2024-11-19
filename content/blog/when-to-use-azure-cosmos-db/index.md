@@ -184,7 +184,7 @@ Your exact numbers may vary, but by my back-of-the-napkin math, Cosmos DB is che
 
 | **Service**      | **Cost (500 reads/sec, 50 writes/sec, 10 KB document)** | **Pricing Model**                                       |
 |------------------|--------------------------------------------------------|---------------------------------------------------------|
-| **MongoDB Atlas**| ~$387.62/month                                             | Based on instance size (M40), fixed pricing              |
+| **MongoDB Atlas**| ~$387.62/month                                             | Based on instance size (M30), fixed pricing              |
 | **Cosmos DB**    | ~$227.28/month                                        | Request Units (RUs) based, scales with document size and operations |
 
 {{% notes type="info" %}}
