@@ -27,7 +27,7 @@ I'm going to break all that down. Here's a roadmap:
 
 ## TLDR
 
-The short version is: **you should use it on Azure when you'd use DynamoDB on AWS.** That's to say, you should use it when you're OK with being cloud-specific, when you want hands-off scalability, and when you know the query pattern and potential cost ramifications ahead of time. Also, cost is a big caveat because Cosmos DB will likely cost more than an equivalent DynamoDB workload.
+The short version is: **you should use it on Azure when you'd use DynamoDB on AWS.** That's to say, you should use it when you're OK with being cloud-specific, when you want hands-off scalability, and when you know the query pattern and potential cost ramifications ahead of time.
 
 But let's start at the beginning.
 
@@ -121,6 +121,10 @@ If your use case aligns well with relational databases, consider using PostgreSQ
 
 Cosmos DB is best for other use cases, so on we go to 'NoSQL' document databases.
 
+{{% notes type="info" %}}
+Azure offers various services under the "Cosmos DB" brand like Azure Cosmos DB for PostgreSQL, Azure Cosmos DB for MongoDB (VCore), and a managed instance for Cassandra.  These are *not* based on the core Cosmos DB engine, they are not an API into Cosmos, they are a whole diffent things - hosted instances of specific database types.
+{{% /notes %}}
+
 ## Cosmos DB Vs MongoDB
 
 So, let's talk MongoDB then. Cosmos DB is multi-model in a specific way. It has a single storage layer, the DocumentDB, and then various APIs. One of these is a MongoDB interface. This Mongo interface, on top of Cosmos DB, might be a great choice if you are used to Mongo, because you can often just change your query string on your existing mongodb code and start using cosmos.
@@ -176,12 +180,12 @@ In MongoDB, a shard is a collection of data stored on a specific server, used to
 
 ## MongoDB Vs. Cosmos DB Cost Comparison
 
-Your exact numbers may vary, but by my back-of-the-napkin math, Cosmos DB is significantly more expensive than MongoDB Atlas for similar workloads. This is mainly because Cosmos DB's throughput-based pricing model (RUs) can lead to higher costs as operation volume or document size increases. That's a trade-off you might want to make, though, as scaling is easier, and the operational overhead is low.
+Your exact numbers may vary, but by my back-of-the-napkin math, Cosmos DB is cheaper more than MongoDB Atlas for similar workloads. It also has SLAs on read speed and scaling is much easier.
 
 | **Service**      | **Cost (500 reads/sec, 50 writes/sec, 10 KB document)** | **Pricing Model**                                       |
 |------------------|--------------------------------------------------------|---------------------------------------------------------|
-| **MongoDB Atlas**| ~$746.79/month                                             | Based on instance size (M40), fixed pricing              |
-| **Cosmos DB**    | ~$1,567.70/month                                        | Request Units (RUs) based, scales with document size and operations |
+| **MongoDB Atlas**| ~$387.62/month                                             | Based on instance size (M30), fixed pricing              |
+| **Cosmos DB**    | ~$227.28/month                                        | Request Units (RUs) based, scales with document size and operations |
 
 {{% notes type="info" %}}
 See also [Cosmos DB vs MongoDB, Know The Differences](/what-is/cosmos-db-vs-mongodb-know-the-differences/)
@@ -256,16 +260,18 @@ While Cassandra offers tunable consistency, DynamoDB simplifies this down to jus
 
 ### Cosmos DB vs Dynamo DB Costs
 
-Again, using some back-of-the-napkin math, DynamoDB in provisioned Mode is significantly more cost-effective than Cosmos DB for the same workload with 10 kb document sizes. For a scenario with 500 reads/sec, 50 writes/sec, and 10 KB document size, DynamoDB costs about $392.10/month compared to Cosmos DB's $1,567.70/month. With smaller document sizes, the cost difference is less, but still, Dynamo has the edge. On the pro-Cosmos side, Cosmos DB adjusts throughput and partitions as your data and traffic grow, ensuring seamless scaling without manual intervention; it just costs more.
+Again, using some back-of-the-napkin math, DynamoDB in provisioned Mode is more cost-effective than Cosmos DB for the same workload with 10 kb document sizes, but the numbers could swing the other way based on your use case. This is with estimating 500 reads / second ( 400 point reads or get-time, 100 more complex queries) and 50 writes.
 
 | **Service**         | **Workload** (500 reads/sec, 50 writes/sec) | **3 KB Document Size**  | **10 KB Document Size**  | **Key Difference**                   |
 |---------------------|--------------------------------------------|-------------------------|--------------------------|---------------------------------------|
-| **DynamoDB**         | 500 reads/sec, 50 writes/sec               | $131.13/month           | $392.10/month            | Lower cost, ideal for predictable workloads |
-| **Cosmos DB**        | 500 reads/sec, 50 writes/sec               | $479.06/month           | $1,567.70/month          | Higher cost, scales automatically    |
+| **DynamoDB**         | 500 reads/sec, 50 writes/sec               | $137.67/month           | $54.84/month            |  |
+| **Cosmos DB**        | 500 reads/sec, 50 writes/sec               | $227.28/month           | $212.92/month     |     |
 
 {{% notes type="info" %}}
 See also [Cosmos DB vs DynamoDB, Know The Differences](/what-is/database-comparison-cosmos-db-vs-dynamodb/)
 {{% /notes %}}
+
+https://cosmos.azure.com/capacitycalculator/
 
 ## Tangent: Azure Table Storage vs. Cosmos DB
 
@@ -287,7 +293,7 @@ OK, I think all these comparisons give us a solid grounding to talk about trade-
 
 ## When to Avoid Cosmos DB
 
-1. **Cost Sensitivity**: Cosmos DB can be significantly more expensive compared to other databases like DynamoDB or MongoDB, especially for high read/write workloads. If cost is a primary concern, especially for smaller projects, it might be better to consider alternatives.
+1. **Cost Sensitivity**: Cosmos DB can be expensive, when you start working multi-region or start writing a lot of data per partition. If cost is a primary concern, especially for smaller projects, it might be better to consider alternatives.
 
 2. **Complex Joins and Transactions**: If your application requires complex joins, foreign key relationships, or cross-partition transactions, Cosmos DB might not be the best fit. A relational database like PostgreSQL or SQL Server would serve these requirements more effectively.
 
@@ -296,6 +302,17 @@ OK, I think all these comparisons give us a solid grounding to talk about trade-
 4. **Need for Strong Schema Enforcement**: Long-term, there is a lot to be said for having a scheme and an easy way to evolve your data. If your application benefits from strict schema enforcement to ensure data integrity and reduce developer errors, a relational database like PostgreSQL or SQL Server will be a better choice than Cosmos DB. Cosmos DB's schema-less nature can introduce challenges if your data model needs strict consistency and structure.
 
 5. **Avoiding Vendor Lock-In**: If you want to maintain portability and avoid vendor lock-in, Cosmos DB might not be ideal for you. A highly managed database service, whether CosmosDB, Dynamo, or Spanner, will be hard to replace on another cloud vendor. A more portable database like PostgreSQL or Cassandra might be preferable for multi-cloud or cloud-agnostic strategies.
+
+{{% notes type="info" %}}
+
+## More Reasons for Cosmos DB ( Update )
+
+Since this article came out, I've had a chance to talk to several Cosmos DB users inside and outside Microsoft. I spoke with Mark Brown on the Cosmos DB team, and he highlighted two additional reasons why teams choose Cosmos DB, that I had originally under emphasized:
+
+- **High Availability:**  Cosmos DB is designed for mission-critical applications requiring always-on availability. It's the only Azure database with five 9s availability and active-active multi-region writes.  This high availability is why services like Azure Active Directory and Teams use it.
+
+- **Guaranteed Low Latency:** Cosmos DB offers SLAs on read and write latency (<10ms P99), a guarantee few other databases can match.  This speed is achieved by co-locating compute and storage on the same cluster, minimizing data access times.
+{{% /notes %}}
 
 ## Summary
 
