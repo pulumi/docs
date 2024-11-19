@@ -303,6 +303,8 @@ OK, I think all these comparisons give us a solid grounding to talk about trade-
 
 5. **Avoiding Vendor Lock-In**: If you want to maintain portability and avoid vendor lock-in, Cosmos DB might not be ideal for you. A highly managed database service, whether CosmosDB, Dynamo, or Spanner, will be hard to replace on another cloud vendor. A more portable database like PostgreSQL or Cassandra might be preferable for multi-cloud or cloud-agnostic strategies.
 
+{{% notes type="info" %}}
+
 ## More Reasons for Cosmos DB ( Update )
 
 Since this article came out, I've had a chance to talk to several Cosmos DB users inside and outside Microsoft. I spoke with Mark Brown on the Cosmos DB team, and he highlighted two additional reasons why teams choose Cosmos DB, that I had originally under emphasized:
@@ -310,6 +312,7 @@ Since this article came out, I've had a chance to talk to several Cosmos DB user
 - **High Availability:**  Cosmos DB is designed for mission-critical applications requiring always-on availability. It's the only Azure database with five 9s availability and active-active multi-region writes.  This high availability is why services like Azure Active Directory and Teams use it.
 
 - **Guaranteed Low Latency:** Cosmos DB offers SLAs on read and write latency (<10ms P99), a guarantee few other databases can match.  This speed is achieved by co-locating compute and storage on the same cluster, minimizing data access times.
+{{% /notes %}}
 
 ## Summary
 
