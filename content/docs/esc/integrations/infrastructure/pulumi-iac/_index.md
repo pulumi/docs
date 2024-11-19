@@ -13,7 +13,7 @@ menu:
 With support for Pulumi ESC built into the Pulumi CLI, you can expose an environment's settings and secrets to any or all of your Pulumi stacks, bypassing the need to define and maintain individual configuration settings or secrets "locally" in Pulumi config files. The optional `pulumiConfig` key enables this.
 
 {{% notes type="info" %}}
-The [pulumi](/docs/iac/cli/) CLI (as of v3.139.0) now tracks ESC environments used in stack updates. You can now view which ESC environments were used in your updates on the Stack Overview page within the Pulumi Cloud Console.
+The [pulumi](/docs/iac/cli/) CLI (as of v3.139.0) now tracks ESC environments used in stack updates. You can view which ESC environments were used in your updates on the Stack Overview page within the Pulumi Cloud Console.
 {{% /notes %}}
 
 The following example updates the `myorg/myapp/dev` environment by adding a `pulumiConfig` block. This block specifies the [Pulumi configuration](/docs/concepts/config/) settings to expose to the Pulumi stack at runtime:
