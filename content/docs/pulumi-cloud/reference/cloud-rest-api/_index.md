@@ -5197,7 +5197,7 @@ Status: 200 OK
 ### List issuers
 
 ```
-GET /api/org/{organization}/oidc/issuers
+GET /api/orgs/{organization}/oidc/issuers
 ```
 
 #### Parameters
@@ -5213,7 +5213,7 @@ curl \
   -H "Accept: application/vnd.pulumi+8" \
   -H "Content-Type: application/json" \
   -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
-  https://api.pulumi.com/api/{organization}/oidc/issuers
+  https://api.pulumi.com/api/orgs/{organization}/oidc/issuers
 ```
 
 #### Default response
