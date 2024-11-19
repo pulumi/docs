@@ -55,9 +55,11 @@ aliases:
 
 To start, login to the [AWS Console](https://console.aws.amazon.com/s3) and [create a new S3 bucket](https://docs.aws.amazon.com/AmazonS3/latest/userguide/creating-bucket.html). You can create the bucket using default settings, making sure to provide a globally unique name for the bucket. For the purposes of this tutorial, we have created an S3 bucket named `pulumi-import-tutorial-bucket`.
 
-{{< video title="Running the pulumi login command with access token" src="/tutorials/importing-infrastructure/aws-console-create-s3-bucket.mp4" autoplay="true" loop="true" >}}
+{{< video title="Creating S3 Bucket in AWS" src="/tutorials/importing-infrastructure/aws-console-create-s3-bucket.mp4" autoplay="true" loop="true" >}}
 
-Then, login to the [Pulumi CLI](/docs/cli/commands/pulumi_login/) and ensure it is [configured to use your AWS account](/docs/iac/get-started/aws/begin/#configure-pulumi-to-access-your-aws-account). Next, [create a new project and stack](/docs/iac/get-started/aws/create-project/) that will be used to hold the resource definition for your imported resources.
+Then, login to the [Pulumi CLI](/tutorials/cli-authentication/) and ensure it is [configured to use your AWS account](/docs/iac/get-started/aws/begin/#configure-pulumi-to-access-your-aws-account).
+
+Next, [create a new project and stack](/docs/iac/get-started/aws/create-project/) that will be used to hold the resource definition for your imported resources.
 
 ```bash
 # Example using Python
@@ -66,7 +68,7 @@ $ cd pulumi-tutorial-import
 $ pulumi new python
 ```
 
-This tutorial will define the S3 bucket resource using the AWS Classic provider, so you will also need to make sure to [install this dependency into your project](https://www.pulumi.com/registry/packages/aws/installation-configuration/).
+This tutorial will define the S3 bucket resource using the AWS Classic provider, so you will also need to make sure to [install the AWS Classic dependency into your project](https://www.pulumi.com/registry/packages/aws/installation-configuration/).
 
 ## Importing a resource
 
@@ -358,7 +360,7 @@ Resources:
 Duration: 7s
 ```
 
-The highlighted line in the preview section of the output indicates which property of the existing resource is missing in the resource definition. You can use this to correct your resource definition before re-deploying.
+The highlighted line in the preview section of the output indicates which property of the existing resource is missing in the resource definition. You can use this to correct your resource definition before re-deploying. Once a resource is successfully imported, make sure to remove the `import` option from your code because Pulumi is now managing the resource.
 
 ## Clean-up
 

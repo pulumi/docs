@@ -50,9 +50,9 @@ estimated_time: 15
 
 ## Create initial resources
 
-To start, login to the [Azure Console](https://portal.azure.com/) and follow the instructions in the official Microsoft documentation to [create a new Storage Account](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-create?tabs=azure-portal).
+To start, login to the [Azure Console](https://portal.azure.com/) and follow the instructions in the official Microsoft documentation to [create a new Storage Account](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-create?tabs=azure-portal). Then, login to the [Pulumi CLI](/tutorials/cli-authentication/) and ensure it is [configured to use your Azure account](/docs/iac/get-started/azure/begin/#configure-pulumi-to-access-your-microsoft-azure-account).
 
-Then, login to the [Pulumi CLI](/docs/cli/commands/pulumi_login/) and ensure it is [configured to use your Azure account](/docs/iac/get-started/azure/begin/#configure-pulumi-to-access-your-microsoft-azure-account). Next, [create a new project and stack](/docs/iac/get-started/azure/create-project/) that will be used to hold the resource definition for your imported resources.
+Next, [create a new project and stack](/docs/iac/get-started/azure/create-project/) that will be used to hold the resource definition for your imported resources.
 
 ```bash
 # Example using Python
@@ -61,7 +61,7 @@ $ cd pulumi-tutorial-import
 $ pulumi new python
 ```
 
-This tutorial will define the Storage Account resource using the Azure Native provider, so you will also need to make sure to [install this dependency into your project](/registry/packages/azure-native/installation-configuration/).
+This tutorial will define the Storage Account resource using the Azure Native provider, so you will also need to make sure to [install the Azure Native dependency into your project](/registry/packages/azure-native/installation-configuration/).
 
 ## Importing a resource
 
@@ -311,11 +311,11 @@ To demonstrate, you will start by creating a simple Resource Group in the Azure 
 /subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}
 ```
 
-Now, navigate to your program code file and update the code with the following resource definition, making sure to provide the variable values that correspond to your own Azure environment:
+Now, navigate to your program code file and update the code with the following resource definition, making sure to replace the value of the `resource group name` variable with the name of your own resource group:
 
 {{< example-program path="azure-native-import-resource-group" >}}
 
-As you can see, the lookup property of the Virtual Machine resource has been provided as the value of the `import` option in the resource definition.
+As you can see, the lookup property of the Resource Goup resource has been provided as the value of the `import` option in the resource definition.
 
 At this point, the definition for the imported resources has only been written, meaning it has not yet been imported into your project's state and is therefore not yet under management by Pulumi. To complete the import process using this method, you will need to save your file and run the `pulumi up` command. You should see output resembling the following example:
 
@@ -383,7 +383,7 @@ Resources:
 Duration: 7s
 ```
 
-The highlighted line in the preview section of the output indicates which property of the existing resource is missing in the resource definition. You can use this to correct your resource definition before re-deploying.
+The highlighted line in the preview section of the output indicates which property of the existing resource is missing in the resource definition. You can use this to correct your resource definition before re-deploying. Once a resource is successfully imported, make sure to remove the `import` option from your code because Pulumi is now managing the resource.
 
 ## Clean-up
 
