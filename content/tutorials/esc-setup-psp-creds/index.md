@@ -13,7 +13,8 @@ youll_learn:
     - How to configure Pulumi Service Provider
     - How to use Pulumi Service Provider to create more ESC Environments
 prereqs:
-    - Basic understanding of Pulumi IaC the [Pulumi CLI](/docs/iac/download-install/) installed
+    - Basic understanding of Pulumi IaC
+    - The [Pulumi CLI](/docs/iac/download-install/) installed
     - A [Pulumi Cloud account](https://app.pulumi.com/signup) and [access token](/docs/pulumi-cloud/accounts/#access-tokens)
     - Familiarity with TypeScript and Node.js
 estimated_time: 10
