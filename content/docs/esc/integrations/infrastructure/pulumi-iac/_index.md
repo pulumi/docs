@@ -12,16 +12,20 @@ menu:
 
 With support for Pulumi ESC built into the Pulumi CLI, you can expose an environment's settings and secrets to any or all of your Pulumi stacks, bypassing the need to define and maintain individual configuration settings or secrets "locally" in Pulumi config files. The optional `pulumiConfig` key enables this.
 
-The following example updates the `myorg/myapp-dev` environment by adding a `pulumiConfig` block. This block specifies the [Pulumi configuration](/docs/concepts/config/) settings to expose to the Pulumi stack at runtime:
+{{% notes type="info" %}}
+The [pulumi](/docs/iac/cli/) CLI (as of v3.139.0) now tracks ESC environments used in stack updates. You can view which ESC environments were used in your updates on the Stack Overview page within the Pulumi Cloud Console.
+{{% /notes %}}
+
+The following example updates the `myorg/myapp/dev` environment by adding a `pulumiConfig` block. This block specifies the [Pulumi configuration](/docs/concepts/config/) settings to expose to the Pulumi stack at runtime:
 
 ```yaml
-# myorg/myapp-dev
+# myorg/myapp/dev
 imports:
-  - aws-dev
-  - stripe-dev
+  - aws/dev
+  - stripe/dev
 
 values:
-  greeting: Hello from the dev environment!
+  greeting: Hello from the myapp/dev environment!
 
   environmentVariables:
     AWS_ACCESS_KEY_ID: ${aws.login.accessKeyId}
@@ -43,7 +47,7 @@ Any stack belonging to the `myorg` organization can inherit these settings by ad
 ```yaml
 # Pulumi.dev.yaml
 environment:
-  - myapp-dev
+  - myapp/dev
 ```
 
 Values are accessible using the standard [configuration API](/docs/concepts/config/#code):
@@ -85,6 +89,16 @@ export const url = functionUrl.functionUrl;
 ```
 
 Stacks may only read from environments that belong to the same Pulumi organization.
+
+### Convert existing Stack Config to an ESC Environment
+
+To convert your existing stack config to a new ESC Environment, you can use the pulumi CLI to run the following:
+
+```shell
+pulumi config env init
+```
+
+See [here](/docs/iac/cli/commands/pulumi_config_env_init/) for more information.
 
 ### Automation API integration
 
