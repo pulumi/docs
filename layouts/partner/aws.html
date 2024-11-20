@@ -9,7 +9,7 @@
     <section id="overview" class="my-16">
         <div class="flex flex-wrap container mx-auto">
             <div class="w-full order-first lg:mt-0 lg:order-first lg:w-1/2 px-5">
-                <h2>Universal Infrastructure as Code for AWS</h2>
+                <h2>{{ .Params.hero.subtitle }}</h2>
                 <p class="mr-4">{{ .Params.hero.description | markdownify }}</p>
                 <div>
                     <div class="flex justify-start items-start mt-8">
@@ -88,24 +88,16 @@
     <section class="my-16 px-4">
         <h3 class="mt-12 mb-8 text-center">Trusted by top engineering teams</h3>
         <div class="container mx-auto">
-            <div class="lg:flex items-center justify-center my-4">
-                <a data-track="customer-logo" href="https://www.snowflake.com/" target="_blank" rel="noreferrer noopener">
-                    <img class="mx-auto my-8 md:my-0 lg:mx-8 h-12 mx-8" src="/logos/customers/snowflake-logo.svg" alt="Snowflake" title="Snowflake" />
-                </a>
-                <a data-track="customer-logo" href="https://www.mbusa.com/" target="_blank" rel="noreferrer noopener">
-                    <img
-                        class="mx-auto my-8 lg:my-2 lg:mx-8 h-12 mx-8"
-                        src="/logos/customers/mercedes-benz-RDNA_logo.png"
-                        title="Mercedes-Benz Research and Development"
-                        alt="Mercedes-Benz Research and Development"
-                    />
-                </a>
-                <a data-track="customer-logo" href="https://www.mindbodyonline.com/" target="_blank" rel="noreferrer noopener">
-                    <img class="mx-auto my-8 lg:my-2 lg:mx-8 h-6 mx-8" src="/logos/customers/mindbody_logo.svg" alt="MindBody" title="MindBody" />
-                </a>
-                <a data-track="customer-logo" href="https://www.nih.gov/" target="_blank" rel="noreferrer noopener">
-                    <img class="mx-auto my-8 lg:my-2 lg:mx-8 h-10 mx-8" src="/logos/customers/nih.png" alt="National Institutes of Health" title="National Institutes of Health" />
-                </a>
+            <div class="flex items-center flex-wrap justify-center my-4">
+                {{ range .Params.customers }}
+                    {{ if .link }}
+                        <a data-track="customer-logo" href="{{ .link }}" target="_blank" rel="noreferrer noopener">
+                            <img class="m-4 h-12" src="{{ .logo }}" alt="{{ .name }}" title="{{ .name }}" />
+                        </a>
+                    {{ else }}
+                        <img class="m-4 h-12" src="{{ .logo }}" alt="{{ .name }}" title="{{ .name }}" />
+                    {{ end }}
+                {{ end }}
             </div>
         </div>
         <p class="text-blue-500 text-center font-bold mt-10">

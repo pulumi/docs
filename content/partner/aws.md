@@ -7,6 +7,7 @@ meta_desc: Build, deploy & manage infrastructure as code on AWS with TypeScript,
 
 hero:
     title: Infrastructure Management for AWS
+    subtitle: Universal Infrastructure as Code for AWS
     description: |
         Pulumi’s [infrastructure as code](/what-is/what-is-infrastructure-as-code/)
         SDK enables you to build, deploy, and manage your AWS infrastructure faster
@@ -55,6 +56,27 @@ sections:
           body: Enable [Policy as Code](/docs/iac/packages-and-automation/crossguard/) within your organization so that you can define guardrails for your infrastructure, ensuring engineers are following best practices and putting security first. This helps you prevent mistakes before they occur and respond rapidly to any incidents.
         - header: Clear visibility across AWS resources
           body: The Pulumi Service gives you full visibility into your cloud infrastructure’s current and past states. See every resource running in each stack with deep links to the AWS Console, actions performed by team members, Git-like diffs for infrastructure changes, and much more.
+
+customers:
+    - name: Snowflake
+      link: /case-studies/snowflake
+      logo: /logos/customers/snowflake-logo.svg
+    - name: Mercedes-Benz Research and Development
+      link: /case-studies/mercedes-benz/
+      logo: /logos/customers/mercedes-benz-RDNA_logo.png
+    - name: MindBody
+      logo: /logos/customers/mindbody_logo.svg
+    - name: National Institutes of Health
+      logo: /logos/customers/nih.png
+    - name: BMW
+      link: /case-studies/bmw
+      logo: /logos/customers/bmw.svg
+    - name: Unity
+      link: /case-studies/unity
+      logo: /logos/customers/unity.png
+    - name: Starburst
+      link: /case-studies/starburst
+      logo: /logos/customers/starburst.png
 
 automation_api:
     header: Programmatic Infrastructure as Code
