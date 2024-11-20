@@ -3,15 +3,15 @@
 # pertaining to that parner.
 
 - name: AWS
-  link: https://aws.amazon.com
+  link: https://aws.amazon.com/marketplace/seller-profile?id=b3d56f96-ff1e-4284-9585-5ef58df12266
   logo: /logos/pkg/aws.svg
 
 - name: Azure
-  link: https://azure.microsoft.com/
+  link: https://azuremarketplace.microsoft.com/en-us/marketplace/apps/pulumicorporation1618431130005.pulumi_enterprise_edition?tab=Overview
   logo: /logos/pkg/azure-native.svg
 
 - name: Google Cloud
-  link: https://cloud.google.com/
+  link: https://cloud.google.com/find-a-partner/partner/pulumi
   logo: /logos/pkg/gcp.svg
 
 - name: 1Password
@@ -43,15 +43,15 @@
   logo: /logos/tech/datadog.svg
 
 - name: Docker
-  link: https://www.docker.com/
+  link: https://www.docker.com/blog/pulumi-and-docker-build-cloud/
   logo: /logos/pkg/docker.svg
 
 - name: GitHub
-  link: https://github.com/
+  link: https://github.com/marketplace/actions/pulumi-cli-action
   logo: /logos/pkg/github.svg
 
 - name: GitLab
-  link: https://about.gitlab.com/
+  link: https://about.gitlab.com/blog/2024/01/10/managing-gitlab-resources-with-pulumi/
   logo: /logos/pkg/gitlab.svg
 
 - name: NewRelic
@@ -87,5 +87,5 @@
   logo: /logos/tech/twingate.svg
 
 - name: Zscaler
-  link: https://www.zscaler.com/
+  link: https://www.zscaler.com/partners/technology/cloud#devops
   logo: /logos/tech/zscaler.svg
