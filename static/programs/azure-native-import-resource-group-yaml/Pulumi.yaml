@@ -16,5 +16,5 @@ resources:
     type: azure-native:resources:ResourceGroup
     properties:
       location: eastus
-    # options:
-    #   import: ${importPath}
+    options:
+      import: ${importPath}
