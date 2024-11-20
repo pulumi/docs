@@ -11,12 +11,12 @@ hero:
     description: |
         Pulumi empowers organizations to automate AWS cloud infrastructure through code, tame secrets sprawl through centralized secrets management, and manage cloud assets and compliance with the help of AI. Pulumi encourages infrastructure, platform, development, DevOps, and security teams to collaborate and accelerates time to market with greater control and minimized risk.
 
-        # Pulumi’s [infrastructure as code](/what-is/what-is-infrastructure-as-code/)
-        # SDK enables you to build, deploy, and manage your AWS infrastructure faster
-        # and with more confidence, using modern programming languages and software engineering
-        # practices. Leverage the full expressivity of general-purpose languages ([TypeScript/JavaScript](/docs/languages-sdks/javascript/),
-        # [Python](/docs/languages-sdks/python/), [Go](/docs/languages-sdks/go/), [C#](/docs/languages-sdks/dotnet/), [Java](/docs/languages-sdks/java/)
-        # or use markup languages (e.g., [YAML](/docs/languages-sdks/yaml/), CUE) to build any cloud architecture including containers, serverless, and server-based.
+# Pulumi’s [infrastructure as code](/what-is/what-is-infrastructure-as-code/)
+# SDK enables you to build, deploy, and manage your AWS infrastructure faster
+# and with more confidence, using modern programming languages and software engineering
+# practices. Leverage the full expressivity of general-purpose languages ([TypeScript/JavaScript](/docs/languages-sdks/javascript/),
+# [Python](/docs/languages-sdks/python/), [Go](/docs/languages-sdks/go/), [C#](/docs/languages-sdks/dotnet/), [Java](/docs/languages-sdks/java/)
+# or use markup languages (e.g., [YAML](/docs/languages-sdks/yaml/), CUE) to build any cloud architecture including containers, serverless, and server-based.
 
 sections:
     - title: Build
