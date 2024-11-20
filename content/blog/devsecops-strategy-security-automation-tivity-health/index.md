@@ -23,7 +23,7 @@ meta_desc: Accelerate security automation to achieve faster, cheaper, and more s
 # The meta_image appears in social-media previews and on the blog home page. A
 # placeholder image representing the recommended format, dimensions and aspect
 # ratio has been provided for you.
-meta_image: meta.png
+meta_image: david-tivity-healthy-quote.png
 
 # At least one author is required. The values in this list correspond with the
 # `id` properties of the team member files at /data/team/team. Create a file for
