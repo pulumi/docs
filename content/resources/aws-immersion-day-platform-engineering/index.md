@@ -60,7 +60,7 @@ main:
     # The webinar presenters
     presenters:
         - name: Josh Kodroff 
-          role: Sr Solutions Architect, Pulumi
+          role: Principal Solutions Architect, Pulumi
           photo: /images/team/josh-kodroff.jpg
 
     # case-sensitive
