@@ -61,7 +61,7 @@ $ cd pulumi-tutorial-import
 $ pulumi new python
 ```
 
-This tutorial will define the Storage Account resource using the Azure Native provider, so you will also need to make sure to [install the Azure Native dependency into your project](/registry/packages/azure-native/installation-configuration/).
+This tutorial will define resources using the Azure Native provider, so you will also need to make sure to [install the Azure Native dependency into your project](/registry/packages/azure-native/installation-configuration/).
 
 ## Importing a resource
 
