@@ -20,7 +20,7 @@ hero:
 
 sections:
     - title: Build
-      icon: nodes
+      icon: architecture
       color: violet
       subtitle: Use familiar software practices and tools to build cloud infrastructure.
       description: Build cloud applications and infrastructure by combining the safety and reliability of [infrastructure as code](/what-is/what-is-infrastructure-as-code/) with the power of familiar programming languages and tools.

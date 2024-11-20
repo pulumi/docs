@@ -17,7 +17,6 @@
                             <a class="btn-primary mr-4" href="/docs/iac/get-started/aws/">Get Started</a>
                             <a class="btn-secondary" href="/request-a-demo">Request a Demo</a>
                         </div>
-                        <img class="w-32 mr-4" src="/images/partners/aws-devops-badge.png" alt="AWS Devops Badge" />
                     </div>
                 </div>
             </div>
@@ -74,10 +73,14 @@
                     </div>
 
                     <div class="w-full xl:w-1/2 text-left px-10">
-                        {{ range $point := .points }}
-                            <h5>{{ $point.header }}</h5>
-                            <p>{{ $point.body | markdownify }}</p>
-                        {{ end }}
+                        <div class="flex flex-row xl:flex-col w-full">
+                            {{ range $point := .points }}
+                                <div class="w-1/3 xl:w-full px-4">
+                                    <h5>{{ $point.header }}</h5>
+                                    <p>{{ $point.body | markdownify }}</p>
+                                </div>
+                            {{ end }}
+                        </div>
                     </div>
                 </div>
             </section>
@@ -103,6 +106,7 @@
         <p class="text-blue-500 text-center font-bold mt-10">
             <a class="link" data-track="logos-case-study" href="/case-studies/">Read our customer use cases</a> &rarr;
         </p>
+        <img class="w-32 mx-auto" src="/images/partners/aws-devops-badge.png" alt="AWS Devops Badge" />
     </section>
 
     <!-- Automation API -->
@@ -171,14 +175,14 @@
         <h2 class="mb-8 text-center">{{ .Params.get_started.title }}</h2>
         <div class="lg:flex lg:flex-wrap items-stretch">
             <div class="w-full lg:w-1/2 p-3">
-                <div class="h-full bg-violet-600 p-8 lg:px-24 lg:py-16 rounded-xl">
+                <div class="h-full bg-violet-600 p-8 lg:p-12 rounded-xl">
                     <h4 class="text-white">{{ .Params.get_started.get_started.title }}</h4>
                     <p class="mb-24 text-white">{{ .Params.get_started.get_started.description }}</p>
                     <a href="/docs/iac/get-started" class="btn-secondary">{{ .Params.get_started.get_started.cta_text }}</a>
                 </div>
             </div>
             <div class="w-full lg:w-1/2 p-3">
-                <div class="h-full card p-8 lg:px-24 lg:py-16">
+                <div class="h-full card p-8 lg:p-12">
                     <h4>{{ .Params.get_started.migrate.title }}</h4>
                     <p class="mb-16 pb-1">{{ .Params.get_started.migrate.description }}</p>
                     <a href="/docs/iac/adopting-pulumi/converters" class="btn-secondary">{{ .Params.get_started.migrate.cta_text }}</a>
