@@ -1,27 +1,29 @@
 ---
-title: Universal Infrastructure as Code for AWS
+title: AWS with Pulumi
 layout: aws
 url: /aws
 
-meta_desc: Build, deploy & manage infrastructure as code on AWS with TypeScript, Python, Go, C#, Java & YAML. Use existing software engineering tools & practices.
+meta_desc: Automate, secure, and manage everything you run on AWS with Pulumi. Modern infrastructure as code and secrets management.
 
 hero:
     title: Infrastructure Management for AWS
     subtitle: Universal Infrastructure as Code for AWS
     description: |
-        Pulumi’s [infrastructure as code](/what-is/what-is-infrastructure-as-code/)
-        SDK enables you to build, deploy, and manage your AWS infrastructure faster
-        and with more confidence, using modern programming languages and software engineering
-        practices. Leverage the full expressivity of general-purpose languages ([TypeScript/JavaScript](/docs/languages-sdks/javascript/),
-        [Python](/docs/languages-sdks/python/), [Go](/docs/languages-sdks/go/), [C#](/docs/languages-sdks/dotnet/), [Java](/docs/languages-sdks/java/)
-        or use markup languages (e.g., [YAML](/docs/languages-sdks/yaml/), CUE) to build any cloud architecture including containers, serverless, and server-based.
+        Pulumi empowers organizations to automate AWS cloud infrastructure through code, tame secrets sprawl through centralized secrets management, and manage cloud assets and compliance with the help of AI. Pulumi encourages infrastructure, platform, development, DevOps, and security teams to collaborate and accelerates time to market with greater control and minimized risk.
+
+        # Pulumi’s [infrastructure as code](/what-is/what-is-infrastructure-as-code/)
+        # SDK enables you to build, deploy, and manage your AWS infrastructure faster
+        # and with more confidence, using modern programming languages and software engineering
+        # practices. Leverage the full expressivity of general-purpose languages ([TypeScript/JavaScript](/docs/languages-sdks/javascript/),
+        # [Python](/docs/languages-sdks/python/), [Go](/docs/languages-sdks/go/), [C#](/docs/languages-sdks/dotnet/), [Java](/docs/languages-sdks/java/)
+        # or use markup languages (e.g., [YAML](/docs/languages-sdks/yaml/), CUE) to build any cloud architecture including containers, serverless, and server-based.
 
 sections:
     - title: Build
       icon: nodes
       color: violet
       subtitle: Use familiar software practices and tools to build cloud infrastructure.
-      description: Build cloud applications and infrastructure by combining the safety and reliability of infrastructure as code with the power of familiar programming languages and tools.
+      description: Build cloud applications and infrastructure by combining the safety and reliability of [infrastructure as code](/what-is/what-is-infrastructure-as-code/) with the power of familiar programming languages and tools.
       image: home/ide
       points:
         - header: IDE Autocomplete
