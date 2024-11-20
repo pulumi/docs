@@ -17,10 +17,10 @@ Different applications are often configured in similar ways and with common valu
 
 To address these challenges, Pulumi ESC allows you to identify common or closely related configuration settings and define them only once, as individual environments, and then _import_ those environments into other, more specialized environments as needed. Imports also allow you to expose certain environments without having to distribute any concrete values and to delegate responsibility for particular environments to other teams in your organization. Environments can import both static and dynamic values, including secrets, from any number of other environments.
 
-In the following example, two environments, `aws-dev` and `stripe-dev`, are used to compose a third environment, `myapp-dev`:
+In the following example, two environments, `aws/dev` and `stripe/dev`, are used to compose a third environment, `myapp/dev`:
 
 ```yaml
-# myorg/aws-dev
+# myorg/aws/dev
 values:
   aws:
     region: us-west-2
@@ -34,7 +34,7 @@ values:
 ```
 
 ```yaml
-# myorg/stripe-dev
+# myorg/stripe/dev
 values:
   stripe:
     apiURL: https://api.stripe.com
@@ -42,16 +42,16 @@ values:
       fn::secret: sk_XemWAl12i4x3hZhp4vBKDEXAMPLE
 ```
 
-The application-specific `myapp-dev` environment then `imports` these two environments and use their settings to compose new values:
+The application-specific `myapp/dev` environment then `imports` these two environments and use their settings to compose new values:
 
 ```yaml
-# myorg/myapp-dev
+# myorg/myapp/dev
 imports:
-  - aws-dev
-  - stripe-dev
+  - aws/dev
+  - stripe/dev
 
 values:
-  greeting: Hello from the dev environment!
+  greeting: Hello from the myapp/dev environment!
 
   environmentVariables:
     AWS_ACCESS_KEY_ID: ${aws.login.accessKeyId}
@@ -61,19 +61,19 @@ values:
     GREETING: ${greeting}
 ```
 
-Finally, `esc run` renders `myapp-dev`'s environment variables for use on the command line:
+Finally, `esc run` renders `myapp/dev`'s environment variables for use on the command line:
 
 ```bash
-$ esc run myorg/myapp-dev -- bash -c 'echo $GREETING'
+$ esc run myorg/myapp/dev -- bash -c 'echo $GREETING'
 Hello from the dev environment!
 
-$ esc run myorg/myapp-dev -- bash -c 'echo $STRIPE_API_URL'
+$ esc run myorg/myapp/dev -- bash -c 'echo $STRIPE_API_URL'
 https://api.stripe.com
 
-$ esc run myorg/myapp-dev -- bash -c 'echo $STRIPE_API_KEY'
+$ esc run myorg/myapp/dev -- bash -c 'echo $STRIPE_API_KEY'
 [secret]
 
-$ esc run myorg/myapp-dev -- bash -c 'echo $AWS_SECRET_ACCESS_KEY'
+$ esc run myorg/myapp/dev -- bash -c 'echo $AWS_SECRET_ACCESS_KEY'
 [secret]
 
 $ echo "'$GREETING'"
