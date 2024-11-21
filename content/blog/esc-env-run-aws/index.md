@@ -27,7 +27,7 @@ Dealing with cloud credentials can be a major headache, especially when you're t
 
 then this post has got you covered. The `esc run` command was made to solve exactly these kinds of problems.
 
-If we take a look at the [Pulumi documentation for the `esc run` command](/docs/esc-cli/commands/esc_run/), it states the following:
+If we take a look at the [Pulumi documentation for the `esc run` command](/docs/esc/cli/commands/esc_run/), it states the following:
 
 > This command opens the environment with the given name and runs the given command. If the opened environment contains a top-level ’environmentVariables’ object, each key-value pair in the object is made available to the command as an environment variable.
 
@@ -52,7 +52,7 @@ Logged in to pulumi.com as …
 
 ### Step 2: Create the OIDC configuration
 
-Pulumi ESC offers you the ability to [manually set your credentials as secrets](/docs/esc-cli/commands/esc_env_set/) in your Pulumi ESC environment files. When it comes to something like OIDC configuration, a more secure and efficient alternative is to leverage yet another great feature of Pulumi ESC: dynamic credentials.
+Pulumi ESC offers you the ability to [manually set your credentials as secrets](/docs/esc/cli/commands/esc_env_set/) in your Pulumi ESC environment files. When it comes to something like OIDC configuration, a more secure and efficient alternative is to leverage yet another great feature of Pulumi ESC: dynamic credentials.
 
 This service can dynamically generate credentials on your behalf each time you need to interact with your AWS environments. To do so, you'll need to [configure OIDC between Pulumi and AWS](/docs/pulumi-cloud/esc/providers/#setting-up-oidc). On the AWS side, there are two resources you'll need to create:
 

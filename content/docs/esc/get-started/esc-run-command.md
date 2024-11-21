@@ -12,7 +12,7 @@ menu:
 
 ## Overview
 
-The Pulumi ESC CLI also has a [`run` command](/docs/esc-cli/commands/esc_run/) that enables you to run other commands using environment variables without having to locally set the environment variables first. For example, let's say that you have a CI/CD pipeline that will automatically push blog post updates to a content-management system (CMS). Instead of storing the values of the CMS endpoint and the corresponding environment's API key locally, you can configure your pipeline to retrieve these values from your environment file before running the command to update the post.
+The Pulumi ESC CLI also has a [`run` command](/docs/esc/cli/commands/esc_run/) that enables you to run other commands using environment variables without having to locally set the environment variables first. For example, let's say that you have a CI/CD pipeline that will automatically push blog post updates to a content-management system (CMS). Instead of storing the values of the CMS endpoint and the corresponding environment's API key locally, you can configure your pipeline to retrieve these values from your environment file before running the command to update the post.
 
 ## Expose environment variables
 
@@ -51,7 +51,7 @@ esc run <your-pulumi-org-name>/<your-project-name>/<your-environment-name> -- ba
 ```
 
 {{< notes type="info" >}}
-Commands run using `esc run` are not run in a subshell. This means that any commands that reference an environment variable like in the example shown above are not expanded by default. The `bash -c` portion of the command is what invokes the command inside a shell with environment variable expansion. See the [`esc run` documentation for the ESC CLI](/docs/esc-cli/commands/esc_run/) for more information.
+Commands run using `esc run` are not run in a subshell. This means that any commands that reference an environment variable like in the example shown above are not expanded by default. The `bash -c` portion of the command is what invokes the command inside a shell with environment variable expansion. See the [`esc run` documentation for the ESC CLI](/docs/esc/cli/commands/esc_run/) for more information.
 {{< /notes >}}
 
 Because you have stored the value of `API_KEY` [as a secret](/docs/esc/get-started/store-and-retrieve-secrets/), your output will resemble the following:
