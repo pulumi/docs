@@ -1,5 +1,4 @@
 ---
-# title: "AWS Fargate vs EC2 for Elastic Kubernetes Service (EKS)"
 title: "Fargate vs EC2"
 date: 2024-11-18T08:42:34-05:00
 # you want to be able to merge the post without publishing it.
@@ -14,8 +13,8 @@ tags:
     - ec2
     - k8s
 social:
-    twitter:
-    linkedin:
+    twitter: Discover the key differences between AWS EKS Fargate and EC2-backed clusters! Fargate offers easy scaling and resource isolation, while EC2 provides cost efficiency and faster pod startup. Learn how to choose the right approach for your Kubernetes workloads.
+    linkedin: Discover the key differences between AWS EKS Fargate and EC2-backed clusters! Fargate offers easy scaling and resource isolation, while EC2 provides cost efficiency and faster pod startup. Learn how to choose the right approach for your Kubernetes workloads.
 
 ---
 Building an EKS cluster requires choosing how your containers will actually run - either on EC2 instances you manage or through AWS Fargate's pod-by-pod approach. The differences can be pretty dramatic in practice. I'm setting up a demo cluster right now using Pulumi, so let me show you what I mean:
