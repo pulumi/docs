@@ -185,6 +185,24 @@ summary = "Company funded by Madrona Venture Group and Tola Capital to help comp
 url = "https://info.pulumi.com/press-release/pulumi-launches-cloud-development-platform-to-help-teams-get-code-to-the-cloud-faster/"
 
 [[coverage]]
+date = "20 November 2024"
+title = "The 10 Coolest Cloud Computing Startup Companies Of 2024"
+img = "/logos/press/crn.png"
+url = "https://www.crn.com/news/cloud/2024/the-10-coolest-cloud-computing-startup-companies-of-2024"
+
+[[coverage]]
+date = "20 November 2024"
+title = "More than half of organizations think their cloud security is inadequate"
+img = "/logos/press/betanews.png"
+url = "https://betanews.com/2024/11/20/more-than-half-of-organizations-think-their-cloud-security-is-inadequate/"
+
+[[coverage]]
+date = "12 November 2024"
+title = "Pulumi Extends Ability to Manage Kubernetes Infrastructure"
+img = "/logos/press/cloudnativenow.png"
+url = "https://cloudnativenow.com/topics/cloudnativedevelopment/kubernetes/pulumi-extends-ability-to-manage-kubernetes-infrastructure/"
+
+[[coverage]]
 date = "12 November 2024"
 title = "Pulumi Centralizes Kubernetes Management with Native Tools"
 img = "/logos/press/newstack.png"
