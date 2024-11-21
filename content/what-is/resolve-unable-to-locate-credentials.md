@@ -21,7 +21,7 @@ The error message "Unable to locate credentials" typically occurs in AWS (Amazon
 
 ## What is the esc run command?
 
-The [Pulumi documentation for the `esc run` command](https://www.pulumi.com/docs/esc-cli/commands/esc_run/) states the following:
+The [Pulumi documentation for the `esc run` command](/docs/esc/cli/commands/esc_run/) states the following:
 
 > This command opens the environment with the given name and runs the given command. If the opened environment contains a top-level ’environmentVariables’ object, each key-value pair in the object is made available to the command as an environment variable.
 
