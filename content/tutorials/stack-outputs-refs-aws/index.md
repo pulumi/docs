@@ -675,9 +675,11 @@ aws s3api list-objects-v2 --bucket $(pulumi stack output bucketName)
 
 You should then see a number of `.txt` files in your S3 bucket.
 
-{{< details "Click here to view the complete project code" >}}
+## View complete solution
 
-{{< details "Here is the complete code for exporting the Lambda function ARN." >}}
+You can view the code for the complete solution below.
+
+### First program code
 
 {{< chooser language "typescript,python,yaml" / >}}
 
@@ -715,9 +717,7 @@ name: s3-writer
 
 {{% /choosable %}}
 
-{{< /details >}}
-
-{{< details "Here is the complete code for creating the EventBridge Scheduler." >}}
+### Second program code
 
 {{< chooser language "typescript,python,yaml" / >}}
 
@@ -744,10 +744,6 @@ name: s3-writer
 ```
 
 {{% /choosable %}}
-
-{{< /details >}}
-
-{{< /details >}}
 
 ## Clean up
 
