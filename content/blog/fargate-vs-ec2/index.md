@@ -175,7 +175,7 @@ Fargate has some hard limitations that might rule it out for your use case:
 
 Ok, EC2 costs less than Fargate on a pure cost-of-compute basis. If my t3.medium ($0.0416/hr) can typically run 6-8 pods reliably, and this works out to under $0.01/hr per pod. Comparable Fargate pods (0.5 vCPU/1GB) cost about $0.025/hr each, so 2.5x.
 
-These calculations can change, based on how much headroom you need on EC2 and how many containers you can run on a give EC2 instance, but Fargate is just more expensive unless all your containers exactly fit into the compute sizes offered by Fargate. And having that compute sitting around warm and ready to spin up fargate pods into likely costs AWS money and so it shouldn't be suprizing that Fargate is more expensive.
+These calculations can change, based on how much headroom you need on EC2 and how many containers you can run on a give EC2 instance, but Fargate is just more expensive unless all your containers exactly fit into the compute sizes offered by Fargate. And AWS is likely incuring costs maintaining warm compute capacity for launching Fargate pods, so it shouldn't be suprizing that Fargate is more expensive.
 
 But really, pure compute cost calculations are an insufficient metric for making this decision - you need to factor in your team's operational capacity, scaling patterns, and isolation requirements.
 
