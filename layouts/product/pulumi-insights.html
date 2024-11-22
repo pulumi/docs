@@ -1,16 +1,39 @@
 {{ define "hero" }}
-    {{ partial "hero" (dict "title" .Params.title) }}
+    {{ partial "hero" (dict "title" .Params.title "subtitle" .Params.overview.header) }}
 {{ end }}
 
 {{ define "main" }}
     {{ $pageContext := . }}
+    <section id="overview" class="my-8 relative"></section>
+        <div class="container mx-auto">
+            <p class="mx-auto text-center w-3/4">
+                {{ .Params.overview.description | markdownify }}
+            </p>
+        </div>
+        <div class="container mx-auto text-center pt-8 w-9/12">
+            <a href="/docs/pulumi-cloud/insights/" class="btn-primary">Get Started with Pulumi Insights</a>
+        </div>
+    </section>
 
-
-    <section id="overview" class="max-w-5xl mx-auto text-center mb-16 mt-2 px-6">
-        {{ with .Params.overview }}
-            <h2>{{ .titleTop }}<br />{{ .titleBottom }}</h2>
-            <p>{{ .description | markdownify }}</p>
-        {{ end }}
+    <section id="description" class="container mx-auto my-16 flex flex-col">
+        <h4 class="hidden lg:block xl:hidden text-center mb-8">{{ .Params.overview.title }}</h4>
+        <div class="flex flex-col lg:flex-row px-8">
+            <div class="w-full lg:w-1/2 lg:pr-8 order-last lg:order-first">
+                <h4 class="block lg:hidden xl:block">{{ .Params.overview.title }}</h4>
+                <p>{{ .Params.overview.body | markdownify }}</p>
+            </div>
+            <div class="w-full lg:w-1/2 mb-8 lg:mb-0">
+                <div class="rounded-xl shadow-2xl relative h-0 overflow-hidden" style="padding-bottom: 50.25%;">
+                    <iframe
+                        src="https://www.youtube.com/embed/JY3Cm1UUIYE?rel=0"
+                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;"
+                        allowfullscreen=""
+                        title="Pulumi ESC Introduction"
+                        srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img{position:absolute;width:100%;top:0;bottom:0;margin:auto}</style><a href=https://www.youtube.com/embed/JY3Cm1UUIYE?autoplay=1><img src='/images/video-cards/esc-thumbnail.png' alt='Pulumi ESC Overview - Revolutionizing Secrets Management'></a>"
+                    ></iframe>
+                </div>
+            </div>
+        </div>
         <div class="flex flex-wrap justify-content items-stretch text-left mt-8">
             {{ range $item := .Params.overview.items }}
                 <div class="w-full lg:w-1/3 p-3">
@@ -30,6 +53,24 @@
         </div>
     </section>
 
+    <section id="workflow" class="my-20 px-4">
+        <div class="container mx-auto">
+            <h2 class="text-center mb-4">Workflow</h2>
+            <div class="p-0.5 rounded-lg" style="background: linear-gradient(90deg, #f7bf2a 0%, #f26e7e 18.23%, #be5188 38.02%, #8a3391 53.65%, #805ac3 74.48%, #7682f4 100%);">
+                <div class="rounded-lg bg-white flex flex-wrap mx-auto p-4">
+                    {{ range $feature := .Params.workflow }}
+                        <div class="w-1/2 md:w-1/3 lg:w-1/4 p-4">
+                            <div class="text-center h-full">
+                                <h5>{{ $feature.header }}</h5>
+                                <p>{{ $feature.body }}</p>
+                            </div>
+                        </div>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="announcement" class="max-w-full mx-auto text-center my-8 px-6">
         <div class="flex justify-center rounded-md bg-violet-100">
             <p class="text-center">
@@ -39,15 +80,22 @@
     </section>
 
     <section id="search " class="container my-20 mx-auto text-center px-6">
-        {{ with .Params.search }}
-            <div class="container mx-auto flex flex-col lg:flex-row">
-                <div class="w-full lg:w-1/2 lg:content-center lg:pl-16">
-                    <h2 class="m-0 p-0">{{ .title }}</h2>
-                    <h4 class="p-0 m-0 text-gray-800">{{ .subtitle }}</h4>
-                    <div class="max-w-4xl mx-auto my-8">{{ .description | markdownify }}</div>
+        <h2 class="text-center">Key Features</h2>
+        {{ range $index, $feature := .Params.features }}
+            {{ $order := "lg:order-first lg:pr-4" }}
+            {{ $padding := "lg:pl-16" }}
+            {{ if eq (mod $index 2) 0 }}
+                {{ $order = "lg:order-last lg:pl-4"}}
+                {{ $padding = "lg:pr-16" }}
+            {{ end }}
+            <div class="container mx-auto flex flex-col text-center lg:flex-row my-16">
+                <div class="w-full lg:w-1/2 lg:content-center {{ $padding }}">
+                    <h3 class="m-0 p-0">{{ $feature.header }}</h3>
+                    <h4 class="p-0 m-0 text-gray-800">{{ $feature.subheader }}</h4>
+                    <div class="max-w-4xl mx-auto my-8">{{ $feature.body | markdownify }}</div>
                 </div>
-                <div class="w-full lg:w-1/2 lg:order-first">
-                    <img class="mx-auto lg:ml-0 rounded shadow-lg" src="{{ .image }}" alt="Pulumi Insights Search" />
+                <div class="w-full lg:w-1/2 {{ $order }}">
+                    <img class="mx-auto rounded shadow-lg" src="{{ $feature.graphic }}" />
                 </div>
             </div>
         {{ end }}
