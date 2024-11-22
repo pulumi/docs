@@ -1,7 +1,7 @@
 ---
 title: aws-parameter-store
 title_tag: aws-parameter-store Pulumi ESC Provider
-meta_desc: The aws-parameter-store Pulumi ESC Provider enables you to dynamically import values from AWS Parameter Store.
+meta_desc: The aws-parameter-store Pulumi ESC Provider enables you to dynamically import parameters from AWS Systems Manager - Parameter Store.
 h1: aws-parameter-store
 menu:
   esc:
@@ -13,7 +13,7 @@ aliases:
     - /docs/esc/providers/aws-parameter-store/
 ---
 
-The `aws-parameter-store` provider enables you to dynamically import values of all types (`String`, `SecureString`, `StringList`) from AWS Parameter Store into your Environment. The provider supports all types and will return a map of names to values.
+The `aws-parameter-store` provider enables you to dynamically import parameters from AWS Systems Manager - Parameter Store into your Environment. The provider will return a map of names to parameters.
 
 ## Example
 
@@ -26,23 +26,26 @@ aws:
         sessionName: pulumi-environments-session
   params:
     fn::open::aws-parameter-store:
-      region: us-west-2
+      region: us-west-1
       login: ${aws.login}
       get:
-        parameter:
-          name: /parameter/name
-        versioned_parameter:
-          name: /parameter/name:2
-        labeled_parameter:
-          name: /parameter/name:labelname
-        secure_string_parameter:
-          name: /parameter/secret
+        myKey:
+          name: /myNamespace/myKey
+        myKeyByVersion:
+          name: /myNamespace/myKey:1
+        myKeyByVersionLabel:
+          name: /myNamespace/myKey:stable
+        secureKey:
+          name: /myNamespace/secureKey
           decrypt: true
+        myList:
+          name: /myNamespace/myList
+
 ```
 
 ## Configuring OIDC
 
-To learn how to configure OpenID Connect (OIDC) between Pulumi Cloud and AWS, see [Configuring OpenID Connect for AWS](/docs/pulumi-cloud/oidc/provider/aws/). Once you have completed these steps, you can validate that your configuration is working by running either of the following:
+To learn how to configure OpenID Connect (OIDC) between Pulumi Cloud and AWS, see the [OpenID Connect integration](/docs/pulumi-cloud/oidc/provider/aws/) documentation. Once you have completed these steps, you can validate that your configuration is working by running either of the following:
 
 * `esc open <your-org>/<your-environment>` command of the [Pulumi ESC CLI](/docs/esc-cli/)
 * `pulumi env open <your-org>/<your-environment>` command of the [Pulumi CLI](/docs/install/)
@@ -58,10 +61,14 @@ Make sure to replace `<your-org>` and `<your-environment>` with the values of yo
       "sessionToken": "Fwo...."
     },
     "params": {
-      "parameter": "value1",
-      "versioned_parameter": "value2",
-      "labeled_parameter": "value3",
-      "secure_string_parameter": "my-secret"
+      "myKey": "latest value",
+      "myKeyByVersion": "old value",
+      "myKeyByVersionLabel": "stable value",
+      "secureKey": "secret value",
+      "myList": [
+        "value 1",
+        "value 2"
+      ]
     }
   }
 }
@@ -69,11 +76,11 @@ Make sure to replace `<your-org>` and `<your-environment>` with the values of yo
 
 ## Inputs
 
-| Property | Type                                                     | Description                                                                                                                  |
-|----------|----------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
-| `region` | string                                                   | The AWS region to use.                                                                                                       |
-| `login`  | [AWSParameterStoreLogin](#awsparameterstorelogin)        | Credentials to use to log in to AWS.                                                                                         |
-| `get`    | map[string][AWSParameterStoreGet](#awsparameterstoreget) | A map from names to parameter names to read from AWS Parameter Store. The outputs will map each name to the data.            |
+| Property | Type                                       | Description                                                                                                                             |
+|----------|--------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
+| `region` | string                                                   | The AWS region to use.                                                                                                    |
+| `login`  | [AWSParameterStoreLogin](#awsparameterstorelogin)        | Credentials to use to log in to AWS.                                                                                      |
+| `get`    | map[string][AWSParameterStoreGet](#awsparameterstoreget) | A map from names to parameters to read from AWS Parameter Store. The outputs will map each name to the parameters's data. |
 
 ### AWSParameterStoreLogin
 
@@ -85,13 +92,13 @@ Make sure to replace `<your-org>` and `<your-environment>` with the values of yo
 
 ### AWSParameterStoreGet
 
-| Property  | Type    | Description                                                                                                                              |
-|-----------|---------|------------------------------------------------------------------------------------------------------------------------------------------|
-| `name`    | string  | The name of the parameter. A version or label can be optionally specified by appending `:` to the name, e.g. `name:123` or `name:label`. |
-| `decrypt` | boolean | [Optional] - Whether or not to decrypt (when the parameter is a SecureString). Defaults to `false`.
+| Property  | Type    | Description                                                                                                                                                |
+|-----------|---------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `name`    | string  | The name of the parameter to import. To query by parameter label, use `"name": "name:label"`. To query by parameter version, use `"name": "name:version"`. |
+| `decrypt` | boolean | [Optional] - Whether to decrypt the value.  Only affects values of type SecureString.                                                                      |
 
 ## Outputs
 
-| Property | Type   | Description                                        |
-|----------|--------|----------------------------------------------------|
-| N/A      | object | A map of names to imported Parameters.             |
+| Property | Type   | Description                            |
+|----------|--------|----------------------------------------|
+| N/A      | object | A map of names to imported parameters. |
