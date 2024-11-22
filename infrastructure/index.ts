@@ -54,6 +54,9 @@ const config = {
     // the registry stack to reference to route traffic to for `/registry` routes.
     registryStack: stackConfig.get("registryStack"),
 
+    answersStack: stackConfig.get("answersStack"),
+
+
     // the marketing portal stack to reference to allow the marketing portal
     // to add items to the uploads bucket.
     marketingPortalStack: stackConfig.get("marketingPortalStack"),
@@ -340,6 +343,53 @@ const baseCacheBehavior: aws.types.input.cloudfront.DistributionDefaultCacheBeha
 const registryOrigins: aws.types.input.cloudfront.DistributionOrigin[] = [];
 const registryBehaviors: aws.types.input.cloudfront.DistributionOrderedCacheBehavior[] = [];
 
+const answersOrigins: aws.types.input.cloudfront.DistributionOrigin[] = [];
+const answersBehaviors: aws.types.input.cloudfront.DistributionOrderedCacheBehavior[] = [];
+
+if (config.answersStack) {
+    const answersStack = new pulumi.StackReference(config.answersStack);
+    const answersCDN = answersStack.getOutput("cloudFrontDomain");
+
+    answersOrigins.push(
+        {
+            originId: answersCDN,
+            domainName: answersCDN,
+            customOriginConfig: {
+                originProtocolPolicy: "https-only",
+                httpPort: 80,
+                httpsPort: 443,
+                originSslProtocols: ["TLSv1.2"],
+            }
+        }
+    );
+    answersBehaviors.push(
+        {
+            ...baseCacheBehavior,
+            targetOriginId: answersCDN,
+            pathPattern: "/answers",
+            defaultTtl: 0,
+            minTtl: 0,
+            maxTtl: 0,
+            originRequestPolicyId: allViewerExceptHostHeaderId,
+            cachePolicyId: cachingDisabledId,
+            forwardedValues: undefined, // forwardedValues conflicts with cachePolicyId, so we unset it.
+        },
+    );
+    answersBehaviors.push(
+        {
+            ...baseCacheBehavior,
+            targetOriginId: answersCDN,
+            pathPattern: "/answers/*",
+            defaultTtl: 0,
+            minTtl: 0,
+            maxTtl: 0,
+            originRequestPolicyId: allViewerExceptHostHeaderId,
+            cachePolicyId: cachingDisabledId,
+            forwardedValues: undefined, // forwardedValues conflicts with cachePolicyId, so we unset it.
+        },
+    );
+}
+
 if (config.registryStack) {
     const registryStack = new pulumi.StackReference(config.registryStack);
     const registryCDN = registryStack.getOutput("cloudFrontDomain");
@@ -442,6 +492,7 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
             },
         },
         ...registryOrigins,
+        ...answersOrigins,
     ],
 
     // Default object to serve when no path is given.
@@ -454,6 +505,7 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
 
     orderedCacheBehaviors: [
         ...registryBehaviors,
+        ...answersBehaviors,
         {
             ...baseCacheBehavior,
             targetOriginId: uploadsBucket.arn,

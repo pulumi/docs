@@ -13,3 +13,4 @@ config:
   www.pulumi.com:setRootRecord: "true"
   www.pulumi.com:websiteDomain: www.pulumi.com
   www.pulumi.com:websiteLogsBucketName: www-prod.pulumi.com-website-logs
+  www.pulumi.com:answersStack: "pulumi/answers/production"
