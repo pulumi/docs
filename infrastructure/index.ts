@@ -366,6 +366,19 @@ if (config.answersStack) {
         {
             ...baseCacheBehavior,
             targetOriginId: answersCDN,
+            pathPattern: "/answers",
+            defaultTtl: 0,
+            minTtl: 0,
+            maxTtl: 0,
+            originRequestPolicyId: allViewerExceptHostHeaderId,
+            cachePolicyId: cachingDisabledId,
+            forwardedValues: undefined, // forwardedValues conflicts with cachePolicyId, so we unset it.
+        },
+    );
+    answersBehaviors.push(
+        {
+            ...baseCacheBehavior,
+            targetOriginId: answersCDN,
             pathPattern: "/answers/*",
             defaultTtl: 0,
             minTtl: 0,
@@ -374,7 +387,7 @@ if (config.answersStack) {
             cachePolicyId: cachingDisabledId,
             forwardedValues: undefined, // forwardedValues conflicts with cachePolicyId, so we unset it.
         },
-    )
+    );
 }
 
 if (config.registryStack) {
