@@ -6,7 +6,6 @@ config:
   www.pulumi.com:doEdgeRedirects: "true"
   www.pulumi.com:hostedZone: www.pulumi-test.io
   www.pulumi.com:makeFallbackBucket: "false"
-  www.pulumi.com:originBucketNameOverride: www-testing-pulumi-docs-origin-push-3f478529
   www.pulumi.com:pathToOriginBucketMetadata: ../origin-bucket-metadata.json
   www.pulumi.com:registryStack: "pulumi/registry/testing"
   www.pulumi.com:answersStack: "pulumi/answers/testing"
