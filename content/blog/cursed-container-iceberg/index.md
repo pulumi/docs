@@ -1,5 +1,5 @@
 ---
-title: "Cursed Container Iceberg"
+title: "The Cursed Container Iceberg"
 date: 2024-11-22T10:29:54-05:00
 draft: false
 meta_desc: Discover unique and unconventional ways to run OCI containers. Explore beyond traditional platforms like Kubernetes and AWS.
@@ -13,7 +13,6 @@ social:
     linkedin:
 
 ---
-
 In the world of cloud computing, running containers has become a staple for deploying applications efficiently. While most developers are familiar with standard practices like using Docker on AWS or Kubernetes clusters, there's an entire world of methods lurking beneath the surface. What are the unexpected, and ingenious ways you can run OCI (Open Container Initiative) containers today on the cloud.
 
 <!--more-->
@@ -31,7 +30,7 @@ Before diving in, clarify the criteria that each method meets:
 **Doable from Your Computer Today:** You can set up these methods now, from your computer, possibly with just a credit card and some ingenuity.
 And then everything _after_ that comment will appear on the post page itself.
 
-![The Cursed Container Iceberg](iceberg.png)
+![The Cursed Container Iceberg](iceberg2.png)
 
 ## Above the Iceberg
 
@@ -81,7 +80,6 @@ And then everything _after_ that comment will appear on the post page itself.
 
 - AWS Proton – Container Deployment with Best Practices  
 - AWS App Runner – Single Container Workloads  
-- AWS Copilot – CLI for Container Deployment  
 - Azure Container Instances (ACI) – Serverless Containers  
 - AWS CodeBuild – Container-Based CI/CD  
 - Azure Virtual Machines + Docker – Custom Container Hosting  
