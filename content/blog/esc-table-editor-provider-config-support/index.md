@@ -27,7 +27,7 @@ In our initial launch, the Table Editor allowed you to perform CRUD operations o
 [Pulumi ESC’s provider ecosystem](/docs/esc/providers/) is one of its most powerful features. It supports two categories of providers:
 
 - **Dynamic Cloud Provider Credentials**:  Dynamically acquire credentials from cloud providers like [AWS](/docs/esc/providers/aws-login/), [Azure](/docs/esc/providers/azure-login/), [GCP](/docs/esc/providers/gcp-login/), and [Vault](/docs/esc/providers/vault-login/) at runtime, eliminating the need for static, long-lived credentials. This enhances security by removing the reliance on dotenv files, locally stored secrets, or long-lived credentials in CI/CD environments, strengthening your workflows’ overall security.
-- **Dynamic Secret Retrieval**: ESC retrieves secrets from external secrets managers, such as [AWS Secrets Manager](/docs/esc/providers/aws-secrets/), [1Password](/docs/esc/providers/1password-secrets/), and [HashiCorp Vault](/docs/esc/providers/vault-login/), securely pulling them directly into your environments. Whether you are migrating or utilizing Pulumi ESC’s rich toolset, you can retrieve sensitive information at runtime and apply it seamlessly to your applications.
+- **Dynamic Secret Retrieval**: ESC retrieves secrets from external secrets managers, such as [AWS Secrets Manager](/docs/esc/providers/aws-secrets/), [1Password](/docs/esc/providers/1password-secrets/), and [HashiCorp Vault](/docs/esc/providers/vault-secrets/), securely pulling them directly into your environments. Whether you are migrating or utilizing Pulumi ESC’s rich toolset, you can retrieve sensitive information at runtime and apply it seamlessly to your applications.
 
 ## Enhancing the Table Editor: Provider Configuration Support
 

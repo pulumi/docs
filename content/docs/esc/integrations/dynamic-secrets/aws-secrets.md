@@ -7,7 +7,7 @@ menu:
   esc:
     identifier: aws-secrets
     parent: esc-dynamic-secrets
-    weight: 1
+    weight: 2
 aliases:
     - /docs/pulumi-cloud/esc/providers/aws-secrets/
     - /docs/esc/providers/aws-secrets/
@@ -40,10 +40,10 @@ aws:
 
 To learn how to configure OpenID Connect (OIDC) between Pulumi Cloud and AWS, see [Configuring OpenID Connect for AWS](/docs/pulumi-cloud/oidc/provider/aws/). Once you have completed these steps, you can validate that your configuration is working by running either of the following:
 
-* `esc open <your-org>/<your-environment>` command of the [Pulumi ESC CLI](/docs/esc-cli/)
-* `pulumi env open <your-org>/<your-environment>` command of the [Pulumi CLI](/docs/install/)
+* `esc open <org>/<project>/<environment>` command of the [Pulumi ESC CLI](/docs/esc-cli/)
+* `pulumi env open <org>/<project>/<environment>` command of the [Pulumi CLI](/docs/install/)
 
-Make sure to replace `<your-org>` and `<your-environment>` with the values of your Pulumi organization and environment file respectively. You should see output similar to the following:
+Make sure to replace `<org>`, `<project>`, and `<environment>` with the values of your Pulumi organization and environment identifier respectively. You should see output similar to the following:
 
 ```json
 {
