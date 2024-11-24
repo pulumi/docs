@@ -10,7 +10,7 @@
   referrerpolicy="no-referrer"></script>
 
 {{ $js := resources.Get "js/bundle.js" | fingerprint }}
-<script src="{{ $js.RelPermalink }}" defer></script>
+<script src="{{ $js.RelPermalink }}"></script>
 
 <!--
   Our marketing styles diverge a bit from the other parts of the website so we load
