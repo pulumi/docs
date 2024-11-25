@@ -12,7 +12,10 @@
 
 - [ ] Only use a single H1 with the primary keyword intact
 - [ ] Use descriptive H2s and H3s along with the secondary keywords for logical flow
-- [ ] 
+- [ ] Break up long text into paragraphs (<5 sentences)
+- [ ] Use bullet points and numbered lists where applicable
+- [ ] Include a concise summary that states the intent by addressing the readers needs
+- [ ] Make sure the content is H.E.E.A.T. (Helpful, Experted, Experienced, Authoritative, Trustworthy)
 
 ### Publish
 
