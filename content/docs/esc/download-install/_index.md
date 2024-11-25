@@ -36,7 +36,7 @@ aliases:
 <a class="btn btn-secondary mx-2" href="https://get.pulumi.com/esc/releases/esc-v{{< latest-version-esc >}}-darwin-x64.tar.gz">amd64</a>
 <a class="btn btn-secondary mx-2" href="https://get.pulumi.com/esc/releases/esc-v{{< latest-version-esc >}}-darwin-arm64.tar.gz">arm64</a></p>
 
-macOS Sierra (10.12) or later is required.
+macOS Ventura (13) or later is required.
 
 The latest version of Pulumi ESC is {{< latest-version-esc >}}.
 

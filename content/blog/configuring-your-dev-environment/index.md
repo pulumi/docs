@@ -568,7 +568,7 @@ $ brew install --cask goland
 
 {{% choosable os macos %}}
 
-macOS Sierra (10.12) or later is required.
+macOS Ventura (13) or later is required.
 
 ### Homebrew
 
