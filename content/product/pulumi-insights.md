@@ -12,8 +12,6 @@ overview:
     title: A central hub to securely manage all of your environments, secrets, and configurations
     body: |
       Pulumi Insights is an intelligent infrastructure management service to discover, understand, manage, and improve any cloud infrastructure, including resources not provisioned by Pulumi IaC such as AWS CloudFormation, Microsoft ARM, HashiCorp Terraform, or even manually. Insights improves security, compliance, and efficiency through AI-powered asset and compliance management. 
-    description: |
-        Pulumi Insights is an asset and compliance management service that gives search, compliance remediation, resource visualizations, and AI insights over any infrastructure, including resources not provisioned by Pulumi IaC such as AWS CloudFormation, Microsoft ARM, HashiCorp Terraform, or even manually.
     items:
         - title: Stay Secure
           icon: shield
@@ -34,14 +32,17 @@ overview:
             Analyze and dig into your organization’s cloud usage and trends to optimize costs and improve productivity. 
 
 workflow:
-  - header: Discover
-    body: Scan and sync all of your infrastructure to bring it under a single pane of glass, so you can understand the structure and status of your cloud footprint. 
-  - header: Understand
-    body: Find important insights about your cloud infrastructure so you can reach your business objectives faster. 
-  - header: Manage
-    body: Refactor and structure your infrastructure into logical resource groups that map key insights with business needs. 
-  - header: Improve
-    body: Execute improvement plans for each logical resource group to support business priorities. 
+  description: |
+      Making sense of the millions of cloud resources and resource updates per month, across hundreds of clouds, regions, and accounts is hard. Pulumi Insights provides you with the tools to to navigate all four phases of infrastructure management
+  items:
+    - header: Discover
+      body: Scan and sync all of your infrastructure to bring it under a single pane of glass, so you can understand the structure and status of your cloud footprint. 
+    - header: Understand
+      body: Find important insights about your cloud infrastructure so you can reach your business objectives faster. 
+    - header: Manage
+      body: Refactor and structure your infrastructure into logical resource groups that map key insights with business needs. 
+    - header: Improve
+      body: Execute improvement plans for each logical resource group to support business priorities. 
 
 features:
   - header: Resource Search
