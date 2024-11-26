@@ -35,11 +35,11 @@ sections:
 
 ## About Materialize
 
-[Materialize](https://materialize.com) is a cloud operational data store that can be queried using SQL. It's designed to make trustworthy, transformed data available throughout an organization, while that data is still fresh.. Loan providers, fraud prevention services, and logistics and manufacturing firms use Materialize to ensure they're acting on the freshest data available.
+[Materialize](https://materialize.com) is a cloud operational data store that can be queried using SQL. It's designed to make trustworthy, transformed data available throughout an organization, while that data is still fresh. Loan providers, fraud prevention services, and logistics and manufacturing firms use Materialize to ensure they're acting on the freshest data available.
 
 Materialize’s cloud team operates the database as a SaaS service. The team is responsible for provisioning, orchestrating, and managing the cloud resources that run Materialize. The key operational priorities are security, reliability, and performance, as customers demand low-latency queries that are always ready to run.
 
-Materialize runs all its deployments in Kubernetes, using Amazon EKS. A multi-cluster architecture enables regional operations, but this increases complexity. It's critical that consistent configuration is applied across different clusters and regions, along with clear visibility into what's running and where.
+Materialize runs all its deployments in Kubernetes using Amazon EKS. A multi-cluster architecture enables regional operations, but this increases complexity. It's critical that consistent configuration is applied across different clusters and regions, along with clear visibility into what's running and where.
 
 ## Database-as-a-Service Infrastructure Challenges {#infrastructure-challenges}
 
