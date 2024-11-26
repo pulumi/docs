@@ -15,7 +15,7 @@
 - [ ] Optimize images with descriptive alt text and compressed file sizes
 - [ ] Title tag should be 51-60 characters and include primary keyword
 - [ ] Meta description should be 50-160 characters
-- [ ] URL slugs shuold be short, descriptive, exclude underscores, and avoid dynamic parameters unless necessary
+- [ ] URL slugs should be short, descriptive, exclude underscores, and avoid dynamic parameters unless necessary
 - [ ] Content should link to at least 3-5 internal links using keyword-rich anchor text
 - [ ] Run page through [Google Search Console](https://search.google.com/search-console?resource_id=sc-domain%3Apulumi.com) to submit / verify that it has been indexed
 - [ ] Make sure [PageSpeed Insights](https://pagespeed.web.dev/) renders page load speed <2 seconds, interaction delay <100ms, and layout shift is minimal
