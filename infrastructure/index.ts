@@ -650,7 +650,10 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
             pathPattern: '/ai/*',
             originRequestPolicyId: allViewerExceptHostHeaderId,
             cachePolicyId: cachingDisabledId,
-            lambdaFunctionAssociations: config.doAIAnswersRewrites ? [getAnswersEdgeRedirectAssociation(),getAIAnswersRewriteAssociation()] : [],
+            lambdaFunctionAssociations: [
+                ...config.doAIAnswersRewrites ? [getAIAnswersRewriteAssociation()] : [],
+                getAnswersEdgeRedirectAssociation(config.websiteDomain),
+            ],
             forwardedValues: undefined, // forwardedValues conflicts with cachePolicyId, so we unset it.
         },
 

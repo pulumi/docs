@@ -30,8 +30,8 @@ export function getEdgeRedirectAssociation(): aws.types.input.cloudfront.Distrib
     };
 }
 
-export async function getAnswersEdgeRedirectAssociation(): Promise<aws.types.input.cloudfront.DistributionDefaultCacheBehaviorLambdaFunctionAssociation> {    
-    const response = await axios.get("https://www.pulumi-test.io/answers/redirects.json")
+export async function getAnswersEdgeRedirectAssociation(websiteDomain: string): Promise<aws.types.input.cloudfront.DistributionDefaultCacheBehaviorLambdaFunctionAssociation> {    
+    const response = await axios.get(`https://${websiteDomain}/answers/redirects.json`)
     const redirects = response.data;
     const edgeRedirectsLambda = new LambdaEdge("redirects-answers", {
         func: getAnswersRedirectsLambdaCallback(redirects),
