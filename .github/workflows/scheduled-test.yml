@@ -16,6 +16,7 @@ env:
 jobs:
   test:
     runs-on: ${{ matrix.platform }}
+    environment: "testing"
     strategy:
       matrix:
         platform:
@@ -80,5 +81,12 @@ jobs:
           role-session-name: pulumi-docs-examples@githubActions
           role-to-assume: ${{ secrets.AWS_CI_ROLE_ARN }}
 
+      - name: Authenticate to Google Cloud
+        uses: google-github-actions/auth@v2
+        with:
+          workload_identity_provider: projects/${{ vars.GOOGLE_PROJECT_NUMBER }}/locations/global/workloadIdentityPools/${{ vars.GOOGLE_CI_WORKLOAD_IDENTITY_POOL }}/providers/${{ vars.GOOGLE_CI_WORKLOAD_IDENTITY_PROVIDER }}
+          service_account: ${{ vars.GOOGLE_CI_SERVICE_ACCOUNT_EMAIL }}
+
       - name: Run the tests
         run: make test
+        
