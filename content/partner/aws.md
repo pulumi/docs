@@ -42,7 +42,8 @@ sections:
       icon: rocketship
       color: salmon
       subtitle: Tame secrets sprawl and configuration complexity
-      description: [Secrets](/docs/iac/concepts/secrets/) sprawl can lead to security breaches. Pulumi ESC provides centralized environments, secrets, and configuration management and orchestration that helps streamline operations, improve traceability, and ensure consistent security practices.
+      description: |
+        [Secrets](/docs/iac/concepts/secrets/) sprawl can lead to security breaches. Pulumi ESC provides centralized environments, secrets, and configuration management and orchestration that helps streamline operations, improve traceability, and ensure consistent security practices.
       image: home/cli
       points:
         - header: Stop secrets sprawl
@@ -59,7 +60,8 @@ sections:
       image: service
       points:
         - header: Converse about your infrastructure
-          body: [Pulumi Copilot](/product/copilot/) makes discovering cost savings, running compliance checks, and debugging deployments across your Kubernetes resources as easy as typing a question.
+          body: |
+            [Pulumi Copilot](/product/copilot/) makes discovering cost savings, running compliance checks, and debugging deployments across your Kubernetes resources as easy as typing a question.
         - header: Enforce compliance
           body: Enable [Policy as Code](/docs/iac/packages-and-automation/crossguard/) within your organization so that you can define guardrails for your infrastructure, ensuring engineers are following best practices and putting security first. This helps you prevent mistakes before they occur and respond rapidly to any incidents.
         - header: Clear visibility across AWS resources
