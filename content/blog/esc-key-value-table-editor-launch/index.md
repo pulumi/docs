@@ -1,5 +1,5 @@
 ---
-title: "Introducing the Table view for Pulumi ESC"
+title: "Introducing the Table Editor for Pulumi ESC"
 date: 2024-03-26T00:00:00-07:00
 draft: false
 meta_desc: "The Table view introduces a new visual interface for managing configuration and secrets using Pulumi ESC."
