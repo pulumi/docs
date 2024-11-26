@@ -52,7 +52,7 @@
 
 - name: GitLab
   link: https://about.gitlab.com/blog/2024/01/10/managing-gitlab-resources-with-pulumi/
-  logo: /logos/pkg/gitlab.svg
+  logo: /logos/tech/gitlab-text.png
 
 - name: NewRelic
   link: https://newrelic.com/instant-observability/pulumi/
@@ -80,7 +80,7 @@
 
 - name: Spot
   link: https://docs.spot.io/spot-connect/integrations/pulumi
-  logo: /logos/tech/spotnetapp.svg
+  logo: /logos/tech/spotnetapp.png
 
 - name: Tailscale
   link: https://tailscale.com/kb/1211/pulumi-provider
