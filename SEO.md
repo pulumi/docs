@@ -4,7 +4,7 @@
 - [ ] Select one primary keyword (high-volume, relevant) and several semantically-relevant secondary keywords (long-tail)
 - [ ] Note whether the primary and secondary keyword searches trigger AI summaries, FAQs, or carousels in SERPs
 - [ ] Note if top resulting content types are videos, listicles, etc and what makes it engaging (headings, visuals, depth, etc)
-- [ ] Identify gaps that can be filled among the top performing results (new data, better exampples, etc)
+- [ ] Identify gaps that can be filled among the top performing results (new data, better examples, etc)
 - [ ] Only use a single H1 with the primary keyword intact; it should be unique to the entire website
 - [ ] Use descriptive H2s and H3s along with the secondary keywords for logical flow
 - [ ] Break up long text into paragraphs (<5 sentences)
