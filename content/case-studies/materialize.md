@@ -14,8 +14,8 @@ quote_block:
   quote: |
       "Pulumi lets us manage multi-cluster Kubernetes infrastructure efficiently, all in one stack. It has hugely benefited productivity and our service's reliability. Without Pulumi, we know that scaling and maintaining Materialize would be much harder for the team."
   quote_attrib: Paul Hemberger, Engineering Manager, Materialize
-  headline_stat: 75% faster
-  headline: onboarding of new engineers
+  headline_stat: 1 month > 1 week
+  headline: 3 weeks faster per engineer onboarding
 
 exec_summary: |
     Materialize, a cloud operational data store provider, implemented Pulumi's Infrastructure as Code platform to manage their multi-region Amazon EKS Kubernetes clusters, addressing key challenges in configuration consistency and developer accessibility. The solution enables developers to use familiar programming languages like Python for infrastructure management, while providing a custom CLI for self-service deployments and automated workflows through GitHub Actions. The implementation dramatically improved operational efficiency by reducing developer onboarding time from one month to one week, ensuring standardized cluster configurations across regions, and maintaining robust security governance through centralized control and pre-deployment validation.
@@ -87,3 +87,10 @@ Pulumi has become integral to Materialize's infrastructure strategy, enabling co
 The adoption of standard programming languages for infrastructure management has significantly enhanced developer efficiency compared to traditional IaC solutions. New team members can immediately comprehend and contribute to infrastructure code, minimizing the learning curve typically associated with specialized configuration languages.
 
 Overall, using Pulumi for Kubernetes IaC has substantially optimized Materialize’s operating efficiency. Pulumi simplifies infrastructure management and ensures all resources run reliably, improving the customer experience for Materialize's enterprise database users.
+
+### Key Points
+
+* Pulumi lets Materialize onboard new cloud team members 75% faster—within one week, instead of an estimated month without Pulumi.
+* Pulumi supports Materialize in operating multi-cluster Kubernetes environments at scale. It ensures cluster configurations are reproducible and simplifies the rollout of changes across the entire Amazon EKS fleet.
+* Using Pulumi makes it clear which clusters and resources are going to be affected by a change, making Kubernetes operations safer and more reliable.
+* Materialize especially values the ability to write infrastructure code in familiar programming languages like Python, making its IaC more readable and easier to understand.
