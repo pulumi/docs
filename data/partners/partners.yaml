@@ -78,6 +78,10 @@
   link: https://partners.snyk.io/English/solutions/solution/2908/pulumi
   logo: /logos/tech/snyk.png
 
+- name: Spot
+  link: https://docs.spot.io/spot-connect/integrations/pulumi
+  logo: /logos/tech/spotnetapp.svg
+
 - name: Tailscale
   link: https://tailscale.com/kb/1211/pulumi-provider
   logo: /logos/pkg/tailscale.svg
