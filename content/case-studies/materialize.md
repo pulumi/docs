@@ -3,7 +3,7 @@ title_tag: Materialize | Case Studies
 title: Materialize Streamlines Multi-Region Kubernetes Operations
 layout: case-studies
 description: |
-    Learn how Pulumi supports Materialize in operating multi-cluster Kubernetes environments at scale. 
+    Materialize uses Pulumi to manage multi-region Kubernetes, leading to better developer self-service and deployment consistency. 
 meta_desc: Learn how Pulumi supports Materialize in operating multi-cluster Kubernetes environments at scale. 
 
 customer_name: Materialize
