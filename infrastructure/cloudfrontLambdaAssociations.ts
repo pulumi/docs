@@ -10,6 +10,7 @@ import {
 } from "aws-lambda";
 import * as URLPattern from "url-pattern";
 import { LambdaEdge } from "./lambdaEdge";
+import axios from "axios";
 
 // Edge functions must be defined in us-east-1.
 const usEast1Provider = new aws.Provider("usEast1", {
@@ -26,6 +27,58 @@ export function getEdgeRedirectAssociation(): aws.types.input.cloudfront.Distrib
         includeBody: false,
         lambdaArn: edgeRedirectsLambda.getLambdaEdgeArn(),
         eventType: "origin-request",
+    };
+}
+
+export async function getAnswersEdgeRedirectAssociation(): Promise<aws.types.input.cloudfront.DistributionDefaultCacheBehaviorLambdaFunctionAssociation> {    
+    const response = await axios.get("https://www.pulumi-test.io/answers/redirects.json")
+    const redirects = response.data;
+    const edgeRedirectsLambda = new LambdaEdge("redirects-answers", {
+        func: getAnswersRedirectsLambdaCallback(redirects),
+        funcDescription: "Lambda function that conditionally redirects based on a path-matching expression.",
+    }, { provider: usEast1Provider });
+    return {
+        includeBody: false,
+        lambdaArn: edgeRedirectsLambda.getLambdaEdgeArn(),
+        eventType: "origin-request",
+    };
+
+}
+
+function getAnswersRedirectsLambdaCallback(redirects: Record<string, string>): aws.lambda.Callback<CloudFrontRequestEvent, CloudFrontRequest | CloudFrontResponse> {
+    
+    return (event: CloudFrontRequestEvent, context, callback) => {
+        const request = event.Records[0].cf.request;
+        // Check for a redirect that matches the request URL.
+        // const redirect = answersRedirects[request.uri];
+        const redirect = redirects[request.uri];
+
+        // If there isn't one, just return with the original request.
+        if (!redirect) {
+            callback(null, request);
+            return;
+        }
+
+        // Return with a redirect.
+        const modifiedResponse = {
+            status: "301",
+            statusDescription: "Moved Permanently",
+            headers: {
+                "location": [
+                    {
+                        key: "Location",
+                        value: redirect,
+                    },
+                ],
+                "cache-control": [
+                    {
+                        key: "Cache-Control",
+                        value: "max-age=1800", /* half hour in seconds */
+                    },
+                ],
+            },
+        };
+        callback(null, modifiedResponse);
     };
 }
 
