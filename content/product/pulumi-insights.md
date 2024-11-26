@@ -6,6 +6,7 @@ meta_desc: Pulumi Insights is Intelligent Cloud Management. Gain security, compl
 
 aliases:
 - /insights
+- /product/waitlist/
 
 overview:
     header: Intelligent Cloud Management
@@ -48,15 +49,15 @@ features:
   - header: Resource Search
     subheader: Find anything in any cloud
     body: Ask any questions about your infrastructure across more than 100 clouds, using either structured search queries or natural language prompts. Search helps you find that needle in the haystack – locating a single resource across many clouds and environments – as well as running sophisticated queries such as tracking down untagged or expensive resources across the whole organization.
-    graphic: https://www.pulumi.com/uploads/pulumi-insights-search.gif
+    graphic: /images/product/insights-resource-search.png
   - header: Policy Violations
     subheader: Discover violations and enforce compliance
     body: Pulumi Insights provides a comprehensive view of all policy violations across your organization, helping you maintain visibility and control over your infrastructure.
-    graphic: https://www.pulumi.com/uploads/pulumi-insights-search.gif
+    graphic: /images/product/insights-policy.png
   - header: AI Copilot
     subheader: Have a conversation about your infrastructure
     body: Pulumi Copilot makes discovering cost savings, running compliance checks, and debugging deployments across your Kubernetes resources as easy as typing a question. 
-    graphic: https://www.pulumi.com/uploads/pulumi-insights-copilot.gif
+    graphic: /images/product/insights-copilot.png
 
 ai:
     title: AI

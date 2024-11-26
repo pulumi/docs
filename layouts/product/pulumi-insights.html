@@ -81,7 +81,7 @@
                     <div class="max-w-4xl mx-auto my-8">{{ $feature.body | markdownify }}</div>
                 </div>
                 <div class="w-full lg:w-1/2 {{ $order }}">
-                    <img class="mx-auto rounded shadow-lg" src="{{ $feature.graphic }}" />
+                    <img class="mx-auto" src="{{ $feature.graphic }}" />
                 </div>
             </div>
         {{ end }}
@@ -98,7 +98,7 @@
         </div>
     </section>
 
-    <section id="pricing" class="container my-20 mx-auto text-center px-6">
+    <section id="pricing" class="container my-20 mx-auto text-center">
         {{ with .Params.pricing }}
             <div class="card p-6 lg:p-16 bg-white">
                 <h2 class="m-0 p-0">{{ .title }}</h2>
