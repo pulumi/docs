@@ -1,4 +1,4 @@
-## SEO Check List
+## SEO Checklist
 
 - [ ] Identify whether the intent of the piece is informational, preferential, navigational, or transactional
 - [ ] Select one primary keyword (high-volume, relevant) and severaly sementically-relevant secondary keywords (long-tail)
