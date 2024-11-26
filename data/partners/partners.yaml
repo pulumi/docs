@@ -27,7 +27,7 @@
   logo: /logos/tech/chronosphere.svg
 
 - name: Civo
-  link: https://www.civo.com/
+  link: https://www.civo.com/learn/automate-iac-pulumi-python-github-actions
   logo: /logos/pkg/civo2.svg
 
 - name: Cloudflare
