@@ -64,18 +64,18 @@
                 <div class="flex flex-col xl:flex-row xl:mt-12">
                     <div class="w-full p-5 xl:p-0 xl:w-1/2">
                         <div class="carousel-item opacity-1 transition-all-200 text-xs shadow-xl">
-                            {{ if eq .image "service" }}
-                                <img src="/images/home/pulumi-console.svg" alt="Pulumi Cloud console" />
+                            {{ if eq .image "home/ide" }}
+                                {{ partial .image .}}
                             {{ else }}
-                                {{ partial .image . }}
+                                <img class="rounded-lg" src="{{ .image }}"/>
                             {{ end }}
                         </div>
                     </div>
 
                     <div class="w-full xl:w-1/2 text-left px-10">
-                        <div class="flex flex-row xl:flex-col w-full">
+                        <div class="flex flex-row flex-wrap xl:flex-col w-full">
                             {{ range $point := .points }}
-                                <div class="w-1/3 xl:w-full px-4">
+                                <div class="w-1/3 xl:w-full mt-4 xl:mt-0 px-4">
                                     <h5>{{ $point.header }}</h5>
                                     <p>{{ $point.body | markdownify }}</p>
                                 </div>
@@ -106,11 +106,11 @@
         <p class="text-blue-500 text-center font-bold mt-10">
             <a class="link" data-track="logos-case-study" href="/case-studies/">Read our customer use cases</a> &rarr;
         </p>
-        <img class="w-32 mx-auto" src="/images/partners/aws-devops-badge.png" alt="AWS Devops Badge" />
+        <img class="w-40 mt-16 mx-auto" src="/images/partners/aws-devops-badge.png" alt="AWS Devops Badge" />
     </section>
 
     <!-- Automation API -->
-    <section id="automation-api" class="container mx-auto mb-12 px-8 lg:px-0">
+    <section id="automation-api" class="container mx-auto mt-24 mb-12 px-8 lg:px-0">
         {{ with .Params.automation_api }}
             <div class="flex flex-col lg:flex-row">
                 <div class="w-full lg:w-5/12 px-8">
@@ -121,16 +121,17 @@
 
                 <div class="w-full mt-8 lg:mt-0 lg:w-7/12">
                     <img class="shadow-xl rounded" src="https://www.pulumi.com/uploads/content/blog/automation-api/http.gif" alt="Pulumi over HTTP" />
-                    <!-- {{ partial "code" (dict "code" .Params.automation_api_code "lang" "js" "mode" "dark" "chrome" true) }} -->
                 </div>
             </div>
         {{ end }}
     </section>
 
     <!-- AWSX -->
-    <section id="awsx" class="container mx-auto mt-32 mb-12 px-8 lg:px-0">
-        <div class="flex flex-col lg:flex-row">
-            <div class="w-full order-last mt-8 lg:mt-0 lg:order-first lg:w-1/2">
+    <section id="awsx" class="container mx-auto text-center mt-24 mb-12 px-8 xl:px-0">
+        <h3>{{ .Params.crosswalk.header }}</h3>
+        <p class="mt-0 mb-0 xl:mb-12">{{ .Params.crosswalk.body | markdownify }}</p>
+        <div class="flex flex-col xl:flex-row">
+            <div class="w-full mt-8 xl:mt-0 xl:w-1/2">
                 <pulumi-chooser type="language" options="typescript,python,go,csharp,java,yaml">
                     <pulumi-choosable type="language" class="highlight" value="typescript">
                         {{ partial "code" (dict "code" .Params.awsx.ts "lang" "ts") }}
@@ -158,9 +159,7 @@
                 </pulumi-chooser>
             </div>
             {{ with .Params.crosswalk }}
-                <div class="w-full order-first lg:order-last lg:w-1/2 px-8">
-                    <h3>{{ .header }}</h3>
-                    <p class="mt-0">{{ .body | markdownify }}</p>
+                <div class="w-full pt-3 text-left xl:order-last xl:w-1/2 px-8">
                     {{ range .points }}
                         <h5>{{ .header }}</h5>
                         <p>{{ .body | markdownify }}</p>

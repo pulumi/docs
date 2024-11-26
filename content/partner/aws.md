@@ -44,7 +44,7 @@ sections:
       subtitle: Tame secrets sprawl and configuration complexity
       description: |
         [Secrets](/docs/iac/concepts/secrets/) sprawl can lead to security breaches. Pulumi ESC provides centralized environments, secrets, and configuration management and orchestration that helps streamline operations, improve traceability, and ensure consistent security practices.
-      image: home/cli
+      image: /images/product/esc-screenshot-2.png
       points:
         - header: Stop secrets sprawl
           body: Pull and sync secrets and configuration with any secrets store – HashiCorp Vault, AWS Secrets Manager, and more – and consume in any application, tool, or CI/CD platform.
@@ -57,7 +57,7 @@ sections:
       color: blue
       subtitle: Gain full auditability and visibility into all your environments to tame complexity and put security first.
       description: Manage cloud infrastructure with dashboards that provide visibility into your infrastructure and any changes, [role-based access controls](/docs/pulumi-cloud/admin/organizations/#organization-roles), and [Policy as Code](/docs/iac/packages-and-automation/crossguard/) enforcement across your organization.
-      image: service
+      image: /images/product/insights-resource-search.png
       points:
         - header: Converse about your infrastructure
           body: |
