@@ -29,7 +29,7 @@ The Table Editor we are launching today introduces an alternate visual interface
 - **Variables Projections**: Make variables available as [Pulumi Config](/docs/esc/environments/#using-environments-with-pulumi-iac), [environment variables](/docs/esc/environments/#projecting-environment-variables), and files, streamlining your deployment and runtime configuration.
 - **Interpolations and References**: Add references to existing path-values, or add [interpolations](/docs/esc/environments/#interpolating-values) to dynamically generate values
 
-![Table view](esc-key-value-table-editor.png)
+![Table Editor](esc-key-value-table-editor.png)
 
 In the current release of the Table view, [provider configurations](/docs/esc/integrations) and functions are set to read-only.  
 
