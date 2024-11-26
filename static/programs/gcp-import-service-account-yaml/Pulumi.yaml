@@ -1,0 +1,18 @@
+name: gcp-import-service-account-yaml
+description: An example that deploys the configuration necessary to import a Service Account resource in Google Cloud.
+runtime: yaml
+
+variables:
+  serviceAcctEmailSuffix: "@${gcp:project}.iam.gserviceaccount.com"
+  serviceAcctDisplayName: pulumi-tutorial-service-account # REPLACE
+  serviceAcctEmailPrefix: pulumi-tutorial-service-accoun # REPLACE
+
+resources:
+  imported-tutorial-service-account:
+    type: gcp:serviceaccount:Account
+    properties:
+      accountId: ${serviceAcctEmailPrefix}
+      displayName: ${serviceAcctDisplayName}
+      project: ${gcp:project}
+    options:
+      import: ${serviceAcctEmailPrefix}${serviceAcctEmailSuffix}
