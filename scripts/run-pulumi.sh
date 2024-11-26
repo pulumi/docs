@@ -16,6 +16,10 @@ export PULUMI_ACTION=${1}
 
 case ${PULUMI_ACTION} in
     preview)
+        # Run previews against the production stack. On PR workflows we provision the bucket in the testing account
+        # but infrastructure previews should always run against the production stack since that is the stack
+        # they will get deployed to when merged(not the www-testing stack).
+        pulumi stack select pulumi/www-production
         pulumi -C infrastructure preview
         ;;
     update)
