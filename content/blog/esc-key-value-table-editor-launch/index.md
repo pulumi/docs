@@ -21,7 +21,7 @@ Pulumi ESC simplifies the management of secrets and configurations by reducing d
 
 <!--more-->
 
-The Table view we are launching today introduces an alternate visual interface for handling configuration tasks, enabling the direct input of plaintext and secret values.  Key capabilities of the Table Editor include:
+The Table Editor we are launching today introduces an alternate visual interface for handling configuration tasks, enabling the direct input of plaintext and secret values.  Key capabilities of the Table Editor include:
 
 - **CRUD Operations**: Perform Create, Read, Update, and Delete (CRUD) operations on your secrets and  plaintext values
 - **Decrypting Secrets**: Safely decrypt secrets one at a time, directly within the editor
