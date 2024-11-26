@@ -31,7 +31,10 @@ export function getEdgeRedirectAssociation(): aws.types.input.cloudfront.Distrib
 }
 
 export async function getAnswersEdgeRedirectAssociation(websiteDomain: string): Promise<aws.types.input.cloudfront.DistributionDefaultCacheBehaviorLambdaFunctionAssociation> {    
-    const response = await axios.get(`https://${websiteDomain}/answers/redirects.json`)
+    const response = await axios.get(`https://${websiteDomain}/answers/redirects.json`);
+    if (response.status !== 200) {
+        throw new pulumi.RunError(`Failed to fetch answers redirects: HTTP ${response.status}`);
+    }
     const redirects = response.data;
     const edgeRedirectsLambda = new LambdaEdge("redirects-answers", {
         func: getAnswersRedirectsLambdaCallback(redirects),
