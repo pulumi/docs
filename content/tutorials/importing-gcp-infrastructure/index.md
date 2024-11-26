@@ -54,7 +54,7 @@ To start, login to the [Google Cloud Console](https://console.cloud.google.com/)
 
 ![Example Storage Bucket](storage-bucket.png)
 
-Then, login to the [Pulumi CLI](/tutorials/cli-authentication/) and ensure it is [configured to use your Google Cloud account](/docs/iac/get-started/gcp/begin/#configure-pulumi-to-access-your-google-cloud-account). Next, [create a new project and stack](/docs/iac/get-started/azure/create-project/) that will be used to hold the resource definition for your imported resources.
+Then, login to the [Pulumi CLI](/tutorials/cli-authentication/) and ensure it is [configured to use your Google Cloud account](/docs/iac/get-started/gcp/begin/#configure-pulumi-to-access-your-google-cloud-account). Next, [create a new project and stack](/docs/iac/get-started/gcp/create-project/) that will be used to hold the resource definition for your imported resources.
 
 ```bash
 # Example using Python
