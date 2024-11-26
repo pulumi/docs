@@ -15,7 +15,7 @@ tags:
 ---
 
 
-We're excited to announce the launch of the Pulumi Environments, Secrets, and Configurations ([ESC](/product/esc)) Table view. At Pulumi, we're committed to providing flexible solutions that cater to diverse development needs and practices. This latest addition underscores our dedication to this principle by offering a user-friendly interface for managing complex configurations and secrets.
+We're excited to announce the launch of the Pulumi Environments, Secrets, and Configurations ([ESC](/product/esc)) Table Editor. At Pulumi, we're committed to providing flexible solutions that cater to diverse development needs and practices. This latest addition underscores our dedication to this principle by offering a user-friendly interface for managing complex configurations and secrets.
 
 Pulumi ESC simplifies the management of secrets and configurations by reducing duplication and drift, empowering development teams to focus on building and deploying. The existing YAML-based code editor offers a native way for developers to author and manage configurations.
 
