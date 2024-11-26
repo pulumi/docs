@@ -9,7 +9,7 @@ aliases:
 
 overview:
     header: Intelligent Cloud Management
-    title: A central hub to securely manage all of your environments, secrets, and configurations
+    title: Asset management, compliance remediation, resource visualizations, and AI insights over the cloud
     body: |
       Pulumi Insights is an intelligent infrastructure management service to discover, understand, manage, and improve any cloud infrastructure, including resources not provisioned by Pulumi IaC such as AWS CloudFormation, Microsoft ARM, HashiCorp Terraform, or even manually. Insights improves security, compliance, and efficiency through AI-powered asset and compliance management. 
     description: |
@@ -19,13 +19,13 @@ overview:
           icon: shield
           icon_color: purple
           description: |
-            Analyze and dig into your organization’s cloud usage and trends.
+            Detect security violations and remediate using security best practices.  
 
         - title: Enforce Compliance
           icon: gavel
           icon_color: yellow
           description: |
-            Reduce lead time from ideation to delivery through Pulumi AI and Pulumi Copilot.
+            Gain a comprehensive view of compliance policy violations across your organization and automate remediation. 
 
         - title: Improve Efficiency
           icon: cycle
@@ -49,11 +49,11 @@ features:
     body: Ask any questions about your infrastructure across more than 100 clouds, using either structured search queries or natural language prompts. Search helps you find that needle in the haystack – locating a single resource across many clouds and environments – as well as running sophisticated queries such as tracking down untagged or expensive resources across the whole organization.
     graphic: https://www.pulumi.com/uploads/pulumi-insights-search.gif
   - header: Policy Violations
-    subheader: Lorem ipsum odor amet
+    subheader: Discover violations and enforce compliance
     body: Pulumi Insights provides a comprehensive view of all policy violations across your organization, helping you maintain visibility and control over your infrastructure.
     graphic: https://www.pulumi.com/uploads/pulumi-insights-search.gif
   - header: AI Copilot
-    subheader: Automate infrastructure with the power of AI
+    subheader: Have a conversation about your infrastructure
     body: Pulumi Copilot makes discovering cost savings, running compliance checks, and debugging deployments across your Kubernetes resources as easy as typing a question. 
     graphic: https://www.pulumi.com/uploads/pulumi-insights-copilot.gif
 
