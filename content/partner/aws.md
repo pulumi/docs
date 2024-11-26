@@ -7,7 +7,7 @@ meta_desc: Automate, secure, and manage everything you run on AWS with Pulumi. M
 
 hero:
     title: Infrastructure Management for AWS
-    subtitle: Universal Infrastructure as Code for AWS
+    subtitle: Modern IaC and secrets management
     description: |
         Pulumi empowers organizations to automate AWS cloud infrastructure through code, tame secrets sprawl through centralized secrets management, and manage cloud assets and compliance with the help of AI. Pulumi encourages infrastructure, platform, development, DevOps, and security teams to collaborate and accelerates time to market with greater control and minimized risk.
 
@@ -19,7 +19,7 @@ hero:
 # or use markup languages (e.g., [YAML](/docs/languages-sdks/yaml/), CUE) to build any cloud architecture including containers, serverless, and server-based.
 
 sections:
-    - title: Build
+    - title: Automate
       icon: architecture
       color: violet
       subtitle: Use familiar software practices and tools to build cloud infrastructure.
@@ -32,19 +32,25 @@ sections:
           body: Use your favorite programming languages and popular testing frameworks to validate your infrastructure and applications through their entire lifecycle. Pulumi can also mock cloud resources for you so that you can perform offline testing that’s faster and cheaper.
         - header: Sharing and Reuse
           body: Sharing and reusing your infrastructure code is available right out of the box with [Pulumi Packages](/product/packages/). You can use your preferred programming language's native package managers to share and distribute infrastructure code within your organization. Or, browse publicly available packages in [Pulumi Registry](/registry/).
-    - title: Deploy
-      icon: rocketship
-      color: salmon
-      subtitle: Increase automation and collaboration to ship faster.
-      description: Getting an application into production can be an overwhelming process. Pulumi empowers you and your team to work together to reduce obstacles and increase collaboration across your entire software delivery pipeline.
-      image: home/cli
-      points:
         - header: Full Coverage of AWS
           body: You can deploy the entire breadth of AWS services with Pulumi’s AWS Provider and AWS Cloud Control Provider SDKs.
         - header: Architect for self-service
           body: Pulumi's unique approach to [Infrastructure as Code](/what-is/what-is-infrastructure-as-code/) allows you to build self-service infrastructure platforms. You can abstract away complexity for your teammates, allowing folks to focus on what's important.
         - header: Continuous delivery for infrastructure
           body: Pulumi gives you the power to continuously test and deliver your cloud infrastructure by [integrating](/docs/iac/packages-and-automation/continuous-delivery/) with your favorite CI/CD platforms. By automating your testing and delivery you can focus more on delivering value to your customers.
+    - title: Secure
+      icon: rocketship
+      color: salmon
+      subtitle: Tame secrets sprawl and configuration complexity
+      description: [Secrets](/docs/iac/concepts/secrets/) sprawl can lead to security breaches. Pulumi ESC provides centralized environments, secrets, and configuration management and orchestration that helps streamline operations, improve traceability, and ensure consistent security practices.
+      image: home/cli
+      points:
+        - header: Stop secrets sprawl
+          body: Pull and sync secrets and configuration with any secrets store – HashiCorp Vault, AWS Secrets Manager, and more – and consume in any application, tool, or CI/CD platform.
+        - header: Trust (and prove) your secrets are secure
+          body: Adopt dynamic, short-lived secrets on demand as a best practice. Lock down every environment with [role-based access controls](/docs/pulumi-cloud/admin/organizations/#organization-roles), [versioning](/docs/esc/environments/versioning/), and a full audit log of all changes.
+        - header: Ditch .env files
+          body: No more copying-and-pasting secrets or storing them in plaintext on dev computers. Easily access secrets via CLI, API, Kubernetes operator, the Pulumi Cloud UI, and SDKs.
     - title: Manage
       icon: testing
       color: blue
@@ -52,12 +58,12 @@ sections:
       description: Manage cloud infrastructure with dashboards that provide visibility into your infrastructure and any changes, [role-based access controls](/docs/pulumi-cloud/admin/organizations/#organization-roles), and [Policy as Code](/docs/iac/packages-and-automation/crossguard/) enforcement across your organization.
       image: service
       points:
-        - header: Secrets management made easy
-          body: Pulumi provides you with any easy way to ensure secrets are kept safe during the entire software development lifecycle. You can have Pulumi manage your [secrets](/docs/iac/concepts/secrets/) for you or bring your own secrets management provider.
-        - header: Keep your workflows secure
+        - header: Converse about your infrastructure
+          body: [Pulumi Copilot](/product/copilot/) makes discovering cost savings, running compliance checks, and debugging deployments across your Kubernetes resources as easy as typing a question.
+        - header: Enforce compliance
           body: Enable [Policy as Code](/docs/iac/packages-and-automation/crossguard/) within your organization so that you can define guardrails for your infrastructure, ensuring engineers are following best practices and putting security first. This helps you prevent mistakes before they occur and respond rapidly to any incidents.
         - header: Clear visibility across AWS resources
-          body: The Pulumi Service gives you full visibility into your cloud infrastructure’s current and past states. See every resource running in each stack with deep links to the AWS Console, actions performed by team members, Git-like diffs for infrastructure changes, and much more.
+          body: Ask any questions about your AWS infrastructure. Pulumi Insights helps you find that needle in the haystack – locating a single resource across regions and accounts. See every resource running in each stack with deep links to the AWS Console, actions performed by team members, Git-like diffs for infrastructure changes, and much more.
 
 customers:
     - name: Snowflake
