@@ -190,7 +190,7 @@ Pulumi let's you read and create any resource type across thousands of different
 
 ## Expanded Features in pulumi-cdk 1.0
 
-The 1.0 version of pulumi-cdk adds support for key CDK features such as: assets, custom resources, nested stacks, and aspects, so most existing CDK constructs will work with Pulumi without any modification. We've also eliminated the need to call `cdk bootstrap` before running `pulumi up` by integrating AppStagingSynthesizer. 
+The 1.0 version of pulumi-cdk adds support for key CDK features such as: assets, custom resources, nested stacks, and aspects, so most existing CDK constructs will work with Pulumi without any modification. We've also eliminated the need to call `cdk bootstrap` before running `pulumi up` by integrating a custom Pulumi Synthesizer. 
 
 ### Using CDK Aspects
 
