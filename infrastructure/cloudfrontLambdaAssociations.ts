@@ -45,43 +45,6 @@ export async function getAnswersEdgeRedirectAssociation(websiteDomain: string): 
 
 }
 
-function getAnswersRedirectsLambdaCallback(redirects: Record<string, string>): aws.lambda.Callback<CloudFrontRequestEvent, CloudFrontRequest | CloudFrontResponse> {
-    
-    return (event: CloudFrontRequestEvent, context, callback) => {
-        const request = event.Records[0].cf.request;
-        // Check for a redirect that matches the request URL.
-        // const redirect = answersRedirects[request.uri];
-        const redirect = redirects[request.uri];
-
-        // If there isn't one, just return with the original request.
-        if (!redirect) {
-            callback(null, request);
-            return;
-        }
-
-        // Return with a redirect.
-        const modifiedResponse = {
-            status: "301",
-            statusDescription: "Moved Permanently",
-            headers: {
-                "location": [
-                    {
-                        key: "Location",
-                        value: redirect,
-                    },
-                ],
-                "cache-control": [
-                    {
-                        key: "Cache-Control",
-                        value: "max-age=1800", /* half hour in seconds */
-                    },
-                ],
-            },
-        };
-        callback(null, modifiedResponse);
-    };
-}
-
 export function getAIAnswersRewriteAssociation(): aws.types.input.cloudfront.DistributionDefaultCacheBehaviorLambdaFunctionAssociation {
     const aiAnswersRewritesLambda = new LambdaEdge("answers-rewrites", {
         func: getAIAnswersRewritesLambdaCallback(),
@@ -151,6 +114,42 @@ function getAIAnswersRewritesLambdaCallback(): aws.lambda.Callback<CloudFrontReq
 
         callback(null, response);
         return;
+    };
+}
+
+function getAnswersRedirectsLambdaCallback(redirects: Record<string, string>): aws.lambda.Callback<CloudFrontRequestEvent, CloudFrontRequest | CloudFrontResponse> {
+    
+    return (event: CloudFrontRequestEvent, context, callback) => {
+        const request = event.Records[0].cf.request;
+        // Check for a redirect that matches the request URL.
+        const redirect = redirects[request.uri];
+
+        // If there isn't one, just return with the original request.
+        if (!redirect) {
+            callback(null, request);
+            return;
+        }
+
+        // Return with a redirect.
+        const modifiedResponse = {
+            status: "301",
+            statusDescription: "Moved Permanently",
+            headers: {
+                "location": [
+                    {
+                        key: "Location",
+                        value: redirect,
+                    },
+                ],
+                "cache-control": [
+                    {
+                        key: "Cache-Control",
+                        value: "max-age=1800", /* half hour in seconds */
+                    },
+                ],
+            },
+        };
+        callback(null, modifiedResponse);
     };
 }
 
