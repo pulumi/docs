@@ -4,7 +4,7 @@ This README documents the infrastructure for the Pulumi Website which encompasse
 
 - Marketing Site
   - URL:  [pulumi.com/](https://www.pulumi.com)
-  - Repo: [github.com/pulumi/docs](https://github.com/pulumi/pulumi)
+  - Repo: [github.com/pulumi/docs](https://github.com/pulumi/docs)
 - Docs Site
   - URL: [pulumi.com/docs](https://www.pulumi.com/docs) 
   - Repo: [github.com/pulumi/docs](https://github.com/pulumi/docs)
