@@ -6,30 +6,62 @@ meta_desc: Pulumi Insights is Intelligent Cloud Management. Gain security, compl
 
 aliases:
 - /insights
+- /product/waitlist/
 
 overview:
-    titleTop: Intelligent Cloud Management
-    titleBottom: 
-    description: |
-        Pulumi Insights is an asset and compliance management service that gives search, compliance remediation, resource visualizations, and AI insights over any infrastructure, including resources not provisioned by Pulumi IaC such as AWS CloudFormation, Microsoft ARM, HashiCorp Terraform, or even manually.
+    header: Intelligent Cloud Management
+    title: Asset management, compliance remediation, and AI insights over the cloud
+    body: |
+      Pulumi Insights is an intelligent infrastructure management service to discover, understand, manage, and improve any cloud infrastructure, including resources not provisioned by Pulumi IaC such as AWS CloudFormation, Microsoft ARM, HashiCorp Terraform, or even manually. Insights improves security, compliance, and efficiency through AI-powered asset and compliance management. 
     items:
-        - title: Gain Unique Insights
-          icon: eye
+        - title: Stay Secure
+          icon: shield
           icon_color: purple
           description: |
-            Analyze and dig into your organization’s cloud usage and trends.
+            Detect security violations and remediate using security best practices.  
 
-        - title: Increase Productivity
-          icon: nodes
+        - title: Enforce Compliance
+          icon: gavel
           icon_color: yellow
           description: |
-            Reduce lead time from ideation to delivery through Pulumi AI and Pulumi Copilot.
+            Gain a comprehensive view of compliance policy violations across your organization and automate remediation. 
 
-        - title: Improve Operations
-          icon: shield
+        - title: Improve Efficiency
+          icon: cycle
           icon_color: blue
           description: |
-            Analyze and update infrastructure to optimize costs, enhance security, and ensure compliance. 
+            Analyze and dig into your organization’s cloud usage and trends to optimize costs and improve productivity. 
+
+workflow:
+  description: |
+      Making sense of the millions of cloud resources and resource updates per month, across hundreds of clouds, regions, and accounts is hard. Pulumi Insights provides you with the tools to to navigate all four phases of infrastructure management
+  items:
+    - header: Discover
+      body: Scan and sync all of your infrastructure to bring it under a single pane of glass, so you can understand the structure and status of your cloud footprint. 
+    - header: Understand
+      body: Find important insights about your cloud infrastructure so you can reach your business objectives faster. 
+    - header: Manage
+      body: Refactor and structure your infrastructure into logical resource groups that map key insights with business needs. 
+    - header: Improve
+      body: Execute improvement plans for each logical resource group to support business priorities. 
+
+features:
+  - header: Resource Search
+    subheader: Find anything in any cloud
+    body: Ask any questions about your infrastructure across more than 100 clouds, using either structured search queries or natural language prompts. Search helps you find that needle in the haystack – locating a single resource across many clouds and environments – as well as running sophisticated queries such as tracking down untagged or expensive resources across the whole organization.
+    graphic: /images/product/insights-resource-search.png
+  - header: Policy Violations
+    subheader: Discover violations and enforce compliance
+    body: Pulumi Insights provides a comprehensive view of all policy violations across your organization, helping you maintain visibility and control over your infrastructure.
+    graphic: /images/product/insights-policy.png
+  - header: AI Copilot
+    subheader: Converse about your infrastructure
+    body: Pulumi Copilot makes discovering cost savings, running compliance checks, and debugging deployments across your Kubernetes resources as easy as typing a question. 
+    graphic: /images/product/insights-copilot.png
+  - header: Scan & Sync AWS Resources
+    subheader: Gain Visibility Across All Your AWS Resources
+    body: Pulumi Insights scans and syncs your entire AWS infrastructure, including resources not managed Pulumi IaC. This brings all the features of Pulumi Insights to all your organization’s cloud infrastructure.
+    graphic: /images/product/insights-scan-sync.png
 
 ai:
     title: AI
@@ -37,13 +69,6 @@ ai:
     image: https://www.pulumi.com/uploads/pulumi-insights-copilot.gif
     description: |
         Automate infrastructure management tasks through AI. You can tap into the Pulumi Copilot's deep understanding of your user and organization context to gain visibility into your team's activity, discover cost saving opportunities, get compliant, and debug cloud failures. 
-
-search:
-    title: Search
-    subtitle: Find anything in any cloud
-    image: https://www.pulumi.com/uploads/pulumi-insights-search.gif
-    description: |
-        Ask any questions about your infrastructure across more than 100 clouds, using either structured search queries or natural language prompts. Search helps you find that needle in the haystack – locating a single resource across many clouds and environments – as well as running sophisticated queries such as tracking down untagged or expensive resources across the whole organization.
 
 customer_quotes:
   alkira:
