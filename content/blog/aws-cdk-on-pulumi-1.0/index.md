@@ -115,7 +115,7 @@ Read the docs at https://docs.aws.amazon.com/apprunner
 
 Combine CDK constructs with any of the features of Pulumi programs to deploy faster, easier and to any cloud. Use Pulumi functions and stack references to connect to pre-existing infrastructure and mix in resources from any provider to bring *all* of your infrastructure under management. 
 
-For example, we can use a Pulumi function to look up AMIs to use when creating an EC2 instance in CDK. Then, we connect a cloudfront distribution over the public IP to provide caching and DDOS protection. 
+For example, we can use a Pulumi function to look up AMIs for creating an EC2 instance. Then, we connect a CloudFront distribution over the public IP to provide caching and DDOS protection. 
 
 ```typescript
 import * as pulumicdk from '@pulumi/cdk';
