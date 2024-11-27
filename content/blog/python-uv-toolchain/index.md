@@ -2,7 +2,7 @@
 title: "Pulumi + uv: Fast Python Package and Project Management"
 date: 2024-11-27T12:43:45+01:00
 draft: false
-meta_desc: Uv is an extremely fast Python package and project manager that is now fully integrated into Pulumi
+meta_desc: uv is an extremely fast Python package and project manager that is now fully integrated into Pulumi
 meta_image: meta.png
 authors:
     - adam-gordon-bell
