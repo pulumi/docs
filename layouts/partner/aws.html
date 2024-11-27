@@ -68,7 +68,9 @@
                                     {{ partial .image .}}
                                 </div>
                             {{ else }}
-                                <img class="rounded-lg" src="{{ .image }}"/>
+                                <div class="flex justify-center">
+                                    <img class="rounded-lg" src="{{ .image }}"/>
+                                </div>
                             {{ end }}
                     </div>
 
