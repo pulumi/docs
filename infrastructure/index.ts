@@ -788,3 +788,4 @@ export const originBucketWebsiteEndpoint = originBucket.websiteEndpoint;
 export const cloudFrontDomain = cdn.domainName;
 export const websiteDomain = config.websiteDomain;
 export const originS3BucketName = originBucket.bucket;
+export const readme = fs.readFileSync("./Pulumi.README.md").toString();
