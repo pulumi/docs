@@ -63,13 +63,13 @@
                 </p>
                 <div class="flex flex-col xl:flex-row xl:mt-12">
                     <div class="w-full p-5 xl:p-0 xl:w-1/2">
-                        <div class="carousel-item opacity-1 transition-all-200 text-xs shadow-xl">
                             {{ if eq .image "home/ide" }}
-                                {{ partial .image .}}
+                                <div class="carousel-item opacity-1 transition-all-200 text-xs shadow-xl">
+                                    {{ partial .image .}}
+                                </div>
                             {{ else }}
                                 <img class="rounded-lg" src="{{ .image }}"/>
                             {{ end }}
-                        </div>
                     </div>
 
                     <div class="w-full xl:w-1/2 text-left px-10">

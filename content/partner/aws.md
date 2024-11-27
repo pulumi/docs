@@ -22,7 +22,7 @@ sections:
     - title: Automate
       icon: architecture
       color: violet
-      subtitle: Use familiar software practices and tools to build cloud infrastructure.
+      subtitle: Use familiar software practices and tools to build cloud infrastructure
       description: Build cloud applications and infrastructure by combining the safety and reliability of [infrastructure as code](/what-is/what-is-infrastructure-as-code/) with the power of familiar programming languages and tools.
       image: home/ide
       points:
@@ -32,12 +32,12 @@ sections:
           body: Use your favorite programming languages and popular testing frameworks to validate your infrastructure and applications through their entire lifecycle. Pulumi can also mock cloud resources for you so that you can perform offline testing that’s faster and cheaper.
         - header: Sharing and Reuse
           body: Sharing and reusing your infrastructure code is available right out of the box with [Pulumi Packages](/product/packages/). You can use your preferred programming language's native package managers to share and distribute infrastructure code within your organization. Or, browse publicly available packages in [Pulumi Registry](/registry/).
-        - header: Full Coverage of AWS
-          body: You can deploy the entire breadth of AWS services with Pulumi’s AWS Provider and AWS Cloud Control Provider SDKs.
-        - header: Architect for self-service
-          body: Pulumi's unique approach to [Infrastructure as Code](/what-is/what-is-infrastructure-as-code/) allows you to build self-service infrastructure platforms. You can abstract away complexity for your teammates, allowing folks to focus on what's important.
         - header: Continuous delivery for infrastructure
           body: Pulumi gives you the power to continuously test and deliver your cloud infrastructure by [integrating](/docs/iac/packages-and-automation/continuous-delivery/) with your favorite CI/CD platforms. By automating your testing and delivery you can focus more on delivering value to your customers.
+        - header: Architect for self-service
+          body: Pulumi's unique approach to [Infrastructure as Code](/what-is/what-is-infrastructure-as-code/) allows you to build self-service infrastructure platforms. You can abstract away complexity for your teammates, allowing folks to focus on what's important.
+        - header: Full Coverage of AWS
+          body: You can deploy the entire breadth of AWS services with Pulumi’s AWS Provider and AWS Cloud Control Provider SDKs.
     - title: Secure
       icon: rocketship
       color: salmon
@@ -47,7 +47,7 @@ sections:
       image: /images/product/esc-screenshot-2.png
       points:
         - header: Stop secrets sprawl
-          body: Pull and sync secrets and configuration with any secrets store – HashiCorp Vault, AWS Secrets Manager, and more – and consume in any application, tool, or CI/CD platform.
+          body: Pull and sync secrets and configuration with any secrets store – AWS Secrets Manager, HashiCorp Vault, and more – and consume in any application, tool, or CI/CD platform.
         - header: Trust (and prove) your secrets are secure
           body: Adopt dynamic, short-lived secrets on demand as a best practice. Lock down every environment with [role-based access controls](/docs/pulumi-cloud/admin/organizations/#organization-roles), [versioning](/docs/esc/environments/versioning/), and a full audit log of all changes.
         - header: Ditch .env files
@@ -55,7 +55,7 @@ sections:
     - title: Manage
       icon: testing
       color: blue
-      subtitle: Gain full auditability and visibility into all your environments to tame complexity and put security first.
+      subtitle: Gain full auditability and visibility into all your environments to tame complexity and put security first
       description: Manage cloud infrastructure with dashboards that provide visibility into your infrastructure and any changes, [role-based access controls](/docs/pulumi-cloud/admin/organizations/#organization-roles), and [Policy as Code](/docs/iac/packages-and-automation/crossguard/) enforcement across your organization.
       image: /images/product/insights-resource-search.png
       points:
