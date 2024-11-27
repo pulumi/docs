@@ -2,7 +2,8 @@
 title: "Anouncing the 1.0 release of AWS CDK on Pulumi"
 date: 2024-12-02T08:00:00-07:00
 draft: true
-meta_desc: "Enhanced support of AWS CDK constructs from within Pulumi. Combind Pulumi and AWS CDK resources and leverage the power, speed and verisitlity of the Pulumi Cloud Platform with CDK"
+meta_desc: "Enhanced support of AWS CDK constructs from within Pulumi. Combine Pulumi and AWS CDK
+resources amd use Pulumi Cloud Platform to manage CDK"
 meta_image: todo.png
 authors:
     - matt-jeffryes
@@ -13,25 +14,25 @@ tags:
     - aws-cdk
 ---
 
-At Pulumi, we're committed to delivering the widest range of cloud infrastructure building blocks for use in your cloud engineering projects. 
-In 2022, we introduced [preview](https://www.pulumi.com/blog/aws-cdk-on-pulumi/) support for integrating AWS CDK constructs into Pulumi programs 
-and today we're happy to announce the 1.0 release of our pulumi-cdk library for typescript. This first stable version completes support for common CDK features 
+At Pulumi, we're committed to delivering the widest range of cloud infrastructure building blocks for use in your cloud engineering projects.
+In 2022, we introduced [preview](https://www.pulumi.com/blog/aws-cdk-on-pulumi/) support for integrating AWS CDK constructs into Pulumi programs
+and today we're happy to announce the 1.0 release of our pulumi-cdk library for typescript. This first stable version completes support for common CDK features
 enabling you to deploy almost any CDK construct with Pulumi.
 
 <!--more-->
 
 The pulumi-cdk library provides access to the many high-level libraries ('constructs') built by service teams at AWS and by the AWS CDK community. However, there were some limitations in the preview version of the library that prevented using some constructs and complicating migration of existing CDK stacks. Uncertainty about which constructs were supported has limited adoption of this rich ecosystem by Pulumi users.
 
-With the new 1.0 release, pulumi-cdk has greatly expanded compatibility with all CDK features. Users can now confidently use Pulumi to deploy constructs they have written themselves or any of the 1600+ constructs in AWS's [construct hub](https://constructs.dev/search?cdk=aws-cdk&sort=downloadsDesc&offset=0). We're excited to bring Pulumi users access to all the high level interfaces curated by AWS and the CDK community. 
+With the new 1.0 release, pulumi-cdk has greatly expanded compatibility with all CDK features. Users can now confidently use Pulumi to deploy constructs they have written themselves or any of the 1600+ constructs in AWS's [construct hub](https://constructs.dev/search?cdk=aws-cdk&sort=downloadsDesc&offset=0). We're excited to bring Pulumi users access to all the high level interfaces curated by AWS and the CDK community.
 
-Additionally, existing AWS CDK users now have an easier path to transition from CloudFormation to Pulumi, unlocking faster deployments, integration with Pulumi's vast provider ecosystem and all of the features of Pulumi's Cloud Engineering Platform (like [Policy as Code](https://www.pulumi.com/docs/using-pulumi/crossguard/), [Audit Logs](https://www.pulumi.com/docs/pulumi-cloud/audit-logs/), [Drift detection](https://www.pulumi.com/docs/pulumi-cloud/deployments/drift/), [Secrets](https://www.pulumi.com/docs/esc/get-started/), and much more). 
+Additionally, existing AWS CDK users now have an easier path to transition from CloudFormation to Pulumi, unlocking faster deployments, integration with Pulumi's vast provider ecosystem and all of the features of Pulumi's Cloud Engineering Platform (like [Policy as Code](https://www.pulumi.com/docs/using-pulumi/crossguard/), [Audit Logs](https://www.pulumi.com/docs/pulumi-cloud/audit-logs/), [Drift detection](https://www.pulumi.com/docs/pulumi-cloud/deployments/drift/), [Secrets](https://www.pulumi.com/docs/esc/get-started/), and much more).
 
 ## Deploying CDK Constructs with Pulumi
 
 To deploy existing AWS CDK Constructs using Pulumi:
 
-1. Create a class that derives from `pulumicdk.Stack` (which itself is derived from `awscdk.Stack`).  
-2. In the constructor, use any AWS CDK constructs from existing libraries such as [`aws-cdk-lib`](https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib-readme.html)  
+1. Create a class that derives from `pulumicdk.Stack` (which itself is derived from `awscdk.Stack`).
+2. In the constructor, use any AWS CDK constructs from existing libraries such as [`aws-cdk-lib`](https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib-readme.html)
 3. Create a `pulumicdk.App` instance that constructs an instance of your stack.
 
 For example, the following program deploys an AWS Apprunner CDK Construct using Pulumi:
@@ -68,6 +69,7 @@ export const url = app.outputs['url'];
 ```
 
 Deploy with a `pulumi up`:
+
 ```console
 > pulumi up
 
@@ -89,6 +91,7 @@ Resources:
 ```
 
 And curl the endpoint:
+
 ```console
 > curl https://$(pulumi stack output url)
 
@@ -99,10 +102,7 @@ And curl the endpoint:
 \____/\____/_/ /_/\__, /_/   \__,_/\__/\__,_/_/\__,_/\__/_/\____/_/ /_/____(_)
                  /____/
 
-
         Congratulations, your service has successfully deployed on AWS App Runner.
-
-
 
 Open it in your browser at https://2ez3iazupm.us-west-2.awsapprunner.com/
 
@@ -110,12 +110,11 @@ Try the workshop at https://apprunnerworkshop.com
 Read the docs at https://docs.aws.amazon.com/apprunner
 ```
 
-
 ## Pulumi takes CDK apps to the next level
 
-Combine CDK constructs with any of the features of Pulumi programs to deploy faster, easier and to any cloud. Use Pulumi functions and stack references to connect to pre-existing infrastructure and mix in resources from any provider to bring *all* of your infrastructure under management. 
+Combine CDK constructs with any of the features of Pulumi programs to deploy faster, easier and to any cloud. Use Pulumi functions and stack references to connect to pre-existing infrastructure and mix in resources from any provider to bring *all* of your infrastructure under management.
 
-For example, we can use a Pulumi function to look up AMIs for creating an EC2 instance. Then, we connect a CloudFront distribution over the public IP to provide caching and DDOS protection. 
+For example, we can use a Pulumi function to look up AMIs for creating an EC2 instance. Then, we connect a CloudFront distribution over the public IP to provide caching and DDOS protection.
 
 ```typescript
 import * as pulumicdk from '@pulumi/cdk';
@@ -181,20 +180,22 @@ const distribution = new aws.cloudfront.Distribution("my-cdn-distribution", {
 export const cdnUrl = distribution.domainName;
 
 ```
+
 Pulumi let's you read and create any resource type across thousands of different cloud service providers and integrate them with your CDK stacks.  Building CDK apps on Pulumi brings a host of other benefits too, including:
 
-- Customize [resource options](https://www.pulumi.com/docs/iac/concepts/options/) (eg. to protect a database against accidental deletion or deploy to multiple regions in the same program)  
+- Customize [resource options](https://www.pulumi.com/docs/iac/concepts/options/) (eg. to protect a database against accidental deletion or deploy to multiple regions in the same program)
 - [Detect and manage drift](https://www.pulumi.com/docs/pulumi-cloud/deployments/drift/) with Pulumi deployments
 - Track and store user actions and change history with [Audit Logs](https://www.pulumi.com/docs/pulumi-cloud/audit-logs/)
 - And a host of other benefits from [Pulumi Cloud](https://www.pulumi.com/product/pulumi-cloud/)
 
 ## Expanded Features in pulumi-cdk 1.0
 
-The 1.0 version of pulumi-cdk adds support for key CDK features such as: assets, custom resources, nested stacks, and aspects, so most existing CDK constructs will work with Pulumi without any modification. We've also eliminated the need to call `cdk bootstrap` before running `pulumi up` by integrating a custom Pulumi Synthesizer. 
+The 1.0 version of pulumi-cdk adds support for key CDK features such as: assets, custom resources, nested stacks, and aspects, so most existing CDK constructs will work with Pulumi without any modification. We've also eliminated the need to call `cdk bootstrap` before running `pulumi up` by integrating a custom Pulumi Synthesizer.
 
 ### Using CDK Aspects
 
 Pulumi CDK now supports CDK aspects. For example, you can add the [cdk-nag](https://github.com/cdklabs/cdk-nag) aspect to your stack to enforce best practices:
+
 ```ts
 import * as pulumicdk from '@pulumi/cdk';
 import * as s3 from 'aws-cdk-lib/aws-s3';
@@ -208,13 +209,15 @@ const app = new pulumicdk.App('app', (scope: pulumicdk.App): pulumicdk.AppOutput
 });
 ```
 
-**Example Output**
+#### Example Output
+
 ```console
 [Error at /test-stack/bucket/Resource] AwsSolutions-S1: The S3 Bucket has server access logs disabled. The bucket should have server access logging enabled to provide detailed records for the requests that are made to the bucket.
 [Error at /test-stack/bucket/Resource] AwsSolutions-S10: The S3 Bucket or bucket policy does not require requests to use SSL. You can use HTTPS (TLS) to help prevent potential attackers from eavesdropping on or manipulating network traffic using person-in-the-middle or similar attacks. You should allow only encrypted connections over HTTPS (TLS) using the aws:SecureTransport condition on Amazon S3 bucket policies.
 ```
 
 ### CDK assets
+
 CDK's assets make it super easy to bundle code and other files your application needs into an S3 bucket or a Docker container, eliminating extra steps from your build pipeline. For example you can use Docker container asset to deploy an Fargate service from local directory. (CDK will build the container image and push to ECR on `pulumi up`.):
 
 ```ts
@@ -243,12 +246,11 @@ const app = new pulumicdk.App('app', (scope: pulumicdk.App) => {
 });
 ```
 
-
 ## Future direction
 
 Currently AWS CDK on Pulumi is supported only for TypeScript users, but we're eager to bring the benefits of the CDK ecosystem to all Pulumi languages in the future. In the meantime, AWS CDK on Pulumi can be used within Component Packages implemented in TypeScript, and exposed to any Pulumi language.
 
-We're also exploring options for importing state from CDK applications that are already deployed with CloudFormation to enable seamless migration for existing CDK users. Please let us know if this is something you would be interested in in testing with us. 
+We're also exploring options for importing state from CDK applications that are already deployed with CloudFormation to enable seamless migration for existing CDK users. Please let us know if this is something you would be interested in in testing with us.
 
 ## Summary
 
