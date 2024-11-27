@@ -24,10 +24,10 @@ This document outlines the steps required to create and manage a Pulumi insights
 ## Account creation
 
 1. After logging into the Pulumi cloud console, you should see a tab titled "accounts", navigate to that page.
-    ![Accounts tab](../accounts-tab.png)
+    ![Accounts tab](../account-left-tab-button.png)
 2. On this page, you should see a create buton that will take you to the account creation screen.
     ![Create accounts button](../create-accounts-button.png)
-    ![Accounts tab](../accounts-tab.png)
+    ![Accounts creation screen](../accounts-creation-screen.png)
 3. Here you can pick your provider (we currently support AWS, Azure, Oracle Cloud, and Kubernetes) and provide the required authentication details for pulumi cloud to scan it.
 4. Select or create an ESC enviornment that has the right credentials to scan the provider you selected.
 {{< notes type="info" >}}
