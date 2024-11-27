@@ -14,8 +14,8 @@ quote_block:
   quote: |
       "Pulumi lets us manage multi-cluster Kubernetes infrastructure efficiently, all in one stack. It has hugely benefited productivity and our service's reliability. Without Pulumi, we know that scaling and maintaining Materialize would be much harder for the team."
   quote_attrib: Paul Hemberger, Engineering Manager, Materialize
-  headline_stat: 1 month > 1 week
-  headline: 3 weeks faster per engineer onboarding
+  headline_stat: 75% more productivity
+  headline: for new engineers; faster release cycles and growth
 
 exec_summary: |
     Materialize, a cloud operational data store provider, implemented Pulumi's Infrastructure as Code platform to manage their multi-region Amazon EKS Kubernetes clusters, addressing key challenges in configuration consistency and developer accessibility. The solution enables developers to use familiar programming languages like Python for infrastructure management, while providing a custom CLI for self-service deployments and automated workflows through GitHub Actions. The implementation dramatically improved operational efficiency by reducing developer onboarding time from one month to one week, ensuring standardized cluster configurations across regions, and maintaining robust security governance through centralized control and pre-deployment validation.
@@ -51,7 +51,7 @@ Infrastructure reliability is paramount given Materialize's responsibility for m
 
 ## Automated Infrastructure Management with Pulumi {#automated-infratructure-management}
 
-Materialize implemented Pulumi as its infrastructure management solution from day one, driven by previous challenges with traditional Infrastructure as Code tools. The team had found that tools like Terraform required developers to learn proprietary configuration languages and unfamiliar concepts, creating unnecessary friction in their development process.
+Materialize implemented Pulumi as its infrastructure management solution from day one, driven by previous challenges with traditional Infrastructure as Code tools. The team had found that tools like Terraform required developers to learn proprietary configuration languages and unfamiliar concepts, creating unnecessary friction, delays and complexity in their development process.
 
 The organization now runs its infrastructure management through a GitHub Actions workflow, utilizing a centralized monorepo overseen by the cloud team. This pipeline automates the provisioning and management of Amazon EKS clusters through Pulumi, ensuring the Materialize database service deploys into properly configured environments. To support developer productivity, the cloud team maintains a custom CLI tool that enables developers to launch staging deployments of their code changes. This CLI integrates with the standard Pulumi workflow to deploy releases into isolated Kubernetes clusters, replicating production-like configurations in development environments.
 
@@ -61,10 +61,11 @@ Materialize maintains a strict "no ClickOps" policy, relying on Pulumi to manage
 
 Using Pulumi to manage Kubernetes infrastructure has unlocked far-reaching benefits for Materialize. The company has been able to standardize its cluster configuration so it's easy for developers to maintain and is reliable in production.
 
-> "Pulumi lets us manage multi-cluster Kubernetes infrastructure efficiently, all in one stack. It's hugely benefited productivity and our service’s reliability. Without Pulumi, we know that scaling and maintaining Materialize would be much harder for the team."  
+> "Pulumi lets us manage multi-cluster Kubernetes infrastructure efficiently, all in one stack. It's hugely benefited productivity and our service’s reliability,"  
+> "Without Pulumi, we know that scaling and maintaining Materialize would be much harder for the team."  
 > --- Paul Hemberger, Engineering Manager for Materialize's cloud team
 
-The decision to use Python as their infrastructure programming language has proven particularly beneficial. Developers leverage familiar tools within the Python ecosystem, including formatters, linters, and code quality scanners—capabilities that would be unavailable with traditional domain-specific language solutions. This familiarity accelerates the onboarding process for new engineers, who can typically begin contributing meaningful work within their first week.
+The decision to use Python as their infrastructure programming language has proven particularly beneficial. Developers leverage familiar tools within the Python ecosystem, including formatters, linters, and code quality scanners—capabilities that would be unavailable with traditional domain-specific language solutions. This familiarity accelerates the onboarding process for new engineers, who can typically begin contributing meaningful work within their first week. By ramping up new developers more quickly, Materialize has also improved engineer productivity, agility and time to market for its new product releases.
 
 Pulumi effectively addresses Materialize's multi-cluster Kubernetes requirements through centralized configuration management. This approach eliminates environment discrepancies and ensures consistency between staging and production deployments.
 
