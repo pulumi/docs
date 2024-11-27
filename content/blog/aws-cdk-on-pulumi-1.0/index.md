@@ -15,7 +15,7 @@ tags:
 
 At Pulumi, we're committed to delivering the widest range of cloud infrastructure building blocks for use in your cloud engineering projects. 
 In 2022, we introduced [preview](https://www.pulumi.com/blog/aws-cdk-on-pulumi/) support for integrating AWS CDK constructs into Pulumi programs 
-and today we're happy to announce the 1.0 release of our pulumi-cdk library. This first stable version completes support for common CDK features 
+and today we're happy to announce the 1.0 release of our pulumi-cdk library for typescript. This first stable version completes support for common CDK features 
 enabling you to deploy almost any CDK construct with Pulumi.
 
 <!--more-->
