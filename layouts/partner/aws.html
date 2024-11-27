@@ -64,8 +64,13 @@
                 <div class="flex flex-col xl:flex-row xl:mt-12">
                     <div class="w-full p-5 xl:p-0 xl:w-1/2">
                             {{ if eq .image "home/ide" }}
-                                <div class="carousel-item opacity-1 transition-all-200 text-xs shadow-xl">
-                                    {{ partial .image .}}
+                                <div class="flex flex-row xl:flex-col">
+                                    <div class="carousel-item opacity-1 transition-all-200 text-xs shadow-xl w-1/2 xl:w-full mr-1 xl:mr-0">
+                                        {{ partial .image .}}
+                                    </div>
+                                    <div class="carousel-item opacity-1 transition-all-200 text-xs shadow-xl w-1/2 xl:w-full">
+                                        {{ partial "home/cli"}}
+                                    </div>
                                 </div>
                             {{ else }}
                                 <div class="flex justify-center">
