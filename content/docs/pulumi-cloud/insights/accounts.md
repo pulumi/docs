@@ -8,11 +8,11 @@ menu:
   cloud:
     name: Accounts
     parent: pulumi-cloud-insights
-    weight: 2
+    weight: 3
     identifier: pulumi-cloud-insights-accounts
   pulumicloud:
     parent: insights
-    weight: 2
+    weight: 3
 ---
 
 This document outlines the steps required to create and manage a Pulumi insights account used for scanning provider resources.
