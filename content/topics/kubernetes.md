@@ -23,7 +23,7 @@ video_section:
 kubernetes_overview:
     title: Cloud Native Engineering with Pulumi
     description: |
-        Pulumi streamlines Kubernetes cluster configuration, management, and app workload deployments to your clusters.
+        Pulumi Infrastructure as Code (IaC) streamlines Kubernetes cluster configuration, management, and app workload deployments to your clusters.
 
         With Pulumi for Kubernetes you can:
     ide:
@@ -300,7 +300,7 @@ detail_sections:
 
     - title: AI-powered Kubernetes Management
       description: |
-        Pulumi Copilot, an AI-powered assistant, makes discovering cost savings, running compliance checks, and debugging deployments across your Kubernetes resources as easy as typing a question.
+        [Pulumi Copilot](/product/copilot/), an AI-powered assistant, makes discovering cost savings, running compliance checks, and debugging deployments across your Kubernetes resources as easy as typing a question.
       cta: Learn More
       cta_url: "/product/copilot/"
       items:
