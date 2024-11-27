@@ -64,11 +64,11 @@
                 <div class="flex flex-col xl:flex-row xl:mt-12">
                     <div class="w-full p-5 xl:p-0 xl:w-1/2">
                             {{ if eq .image "home/ide" }}
-                                <div class="flex flex-row xl:flex-col">
-                                    <div class="carousel-item opacity-1 transition-all-200 text-xs shadow-xl w-1/2 xl:w-full mr-1 xl:mr-0">
+                                <div class="flex flex-col sm:flex-row xl:flex-col">
+                                    <div class="carousel-item opacity-1 transition-all-200 text-xs shadow-xl w-full sm:w-1/2 xl:w-full mr-1 xl:mr-0">
                                         {{ partial .image .}}
                                     </div>
-                                    <div class="carousel-item opacity-1 transition-all-200 text-xs shadow-xl w-1/2 xl:w-full">
+                                    <div class="carousel-item opacity-1 transition-all-200 text-xs shadow-xl w-full sm:w-1/2 xl:w-full">
                                         {{ partial "home/cli"}}
                                     </div>
                                 </div>
@@ -82,7 +82,7 @@
                     <div class="w-full xl:w-1/2 text-left px-10">
                         <div class="flex flex-row flex-wrap xl:flex-col w-full">
                             {{ range $point := .points }}
-                                <div class="w-1/3 xl:w-full mt-4 xl:mt-0 px-4">
+                                <div class="xs:w-full sm:w-1/3 xl:w-full mt-4 xl:mt-0 px-4">
                                     <h5>{{ $point.header }}</h5>
                                     <p>{{ $point.body | markdownify }}</p>
                                 </div>
