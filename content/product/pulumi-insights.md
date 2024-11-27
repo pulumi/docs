@@ -10,7 +10,7 @@ aliases:
 
 overview:
     header: Intelligent Cloud Management
-    title: Asset management, compliance remediation, resource visualizations, and AI insights over the cloud
+    title: Asset management, compliance remediation, and AI insights over the cloud
     body: |
       Pulumi Insights is an intelligent infrastructure management service to discover, understand, manage, and improve any cloud infrastructure, including resources not provisioned by Pulumi IaC such as AWS CloudFormation, Microsoft ARM, HashiCorp Terraform, or even manually. Insights improves security, compliance, and efficiency through AI-powered asset and compliance management. 
     items:
@@ -55,9 +55,13 @@ features:
     body: Pulumi Insights provides a comprehensive view of all policy violations across your organization, helping you maintain visibility and control over your infrastructure.
     graphic: /images/product/insights-policy.png
   - header: AI Copilot
-    subheader: Have a conversation about your infrastructure
+    subheader: Converse about your infrastructure
     body: Pulumi Copilot makes discovering cost savings, running compliance checks, and debugging deployments across your Kubernetes resources as easy as typing a question. 
     graphic: /images/product/insights-copilot.png
+  - header: Scan & Sync AWS Resources
+    subheader: Gain Visibility Across All Your AWS Resources
+    body: Pulumi Insights scans and syncs your entire AWS infrastructure, including resources not managed Pulumi IaC. This brings all the features of Pulumi Insights to all your organization’s cloud infrastructure.
+    graphic: /images/product/insights-scan-sync.png
 
 ai:
     title: AI
