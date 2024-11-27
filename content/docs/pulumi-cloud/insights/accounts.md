@@ -4,15 +4,15 @@ meta_desc: This page describes how to create insights accounts for scanning prov
 title: Accounts
 h1: Create and manage insights accounts
 meta_image: /images/docs/meta-images/docs-meta.png
-# menu:
-#   cloud:
-#     name: AWS
-#     parent: pulumi-cloud-access-management-oidc-provider
-#     weight: 1
-#     identifier: pulumi-cloud-access-management-oidc-provider-aws
-#   pulumicloud:
-#     parent: openid-connect-provider
-#     weight: 1
+menu:
+  cloud:
+    name: Accounts
+    parent: pulumi-cloud-insights
+    weight: 2
+    identifier: pulumi-cloud-insights-accounts
+  pulumicloud:
+    parent: insights
+    weight: 2
 ---
 
 This document outlines the steps required to create and manage a Pulumi insights account used for scanning provider resources.
