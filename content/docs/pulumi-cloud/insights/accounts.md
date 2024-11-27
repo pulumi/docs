@@ -31,17 +31,17 @@ This document outlines the steps required to create and manage a Pulumi insights
 3. Here you can pick your provider (we currently support AWS, Azure, Oracle Cloud, and Kubernetes) and provide the required authentication details for pulumi cloud to scan it.
 4. Select or create an ESC enviornment that has the right credentials to scan the provider you selected.
 {{< notes type="info" >}}
-    See below for details on how to setup the ESC environment for each provider
+  See below for details on how to setup the ESC environment for each provider
 {{< /notes >}}
 5. Enter a name for the account. The name must be unique and can not contain any '/'.
 {{< notes type="info" >}}
-    The reason the name can not contain any '/' is because Pulumi automatically names child accounts using '/'.
-    For more information on child accounts, see below.
+  The reason the name can not contain any '/' is because Pulumi automatically names child accounts using '/'.
+  For more information on child accounts, see below.
 {{< /notes >}}
 6. Add any specific configuration required for your selected provider such as the regions you want to scan for AWS.
-![Account configuration tab for aws](../account_configuration_aws.png)
+![Account configuration tab for aws](../account-configuration-aws.png)
 7. To finish, select if you would like Pulumi to automatically run a new scan against this account on a schedule or if you would like to fire all scans manually.
-![Accounts scheduled scans](../accounts_scheduled_scan.png)
+![Accounts scheduled scans](../accounts-scheduled-scan.png)
 {{< notes type="info" >}}
   When scheduled scans are enabled, Pulumi will scan the account every 24 hours.
 {{< /notes >}}
