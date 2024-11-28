@@ -7,11 +7,9 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   cloud:
     name: Pulumi Copilot API
-    parent: cloud-home
-    weight: 5
+    parent: pulumi-cloud-copilot
+    weight: 1
     identifier: pulumi-cloud-copilot-api
-  pulumicloud:
-    weight: 2
 ---
 
 The Pulumi Copilot REST API provides a ...
