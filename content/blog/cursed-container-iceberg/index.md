@@ -1,5 +1,5 @@
 ---
-title: "Cursed Container Iceberg"
+title: "The Cloud Container Iceberg"
 date: 2024-12-04T10:29:54-05:00
 draft: false
 meta_desc: Discover unique and unconventional ways to run OCI containers. Explore beyond the traditional platforms.
