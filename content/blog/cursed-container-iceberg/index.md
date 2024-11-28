@@ -13,7 +13,7 @@ social:
     linkedin:
 
 ---
-If a computer can be connected to the internet, someone has tried to run a container on it. After diving deep into the Fargate vs EC2 debate for EKS deployments, I discovered this isn't just a joke - it's practically a law of nature. From quantum computers to smart toasters, from phones in AWS racks to CI pipelines, there are many ways to deploy containers.
+If a computer can be connected to the internet, someone has tried to run a container on it. After diving deep into the [Fargate vs EC2](/) debate for EKS deployments, I discovered this isn't just a joke - it's practically a law of nature. From quantum computers to smart toasters, from phones in AWS racks to CI pipelines, there are many ways to deploy containers.
 
 So here's my guide to the container deployment iceberg - from the familiar EKS and ECS at the surface – down to the dark depths where containers run in places they probably shouldn't.
 
@@ -54,7 +54,7 @@ As we dip just below the surface, we find services like a rare B-side acoustic r
 - **Google App Engine Flexible Environment** – PaaS for Containerized Apps
 - **Azure Container Instances (ACI)** – Kubernetes without the chaos
 
-## **The Kubernetes Multiverse – Because One Universe of K8s Wasn't Enough**
+## The Kubernetes Multiverse – Because One Universe of K8s Wasn't Enough
 
 Diving deeper, we discover there's an entire multiverse of regional and specialty K8s providers, helpfully cataloged [by the CNCF](https://landscape.cncf.io/guide#platform--certified-kubernetes-hosted
 ). Think parallel universes, but instead of evil twins, you get slightly different container runtime implementations.
@@ -100,7 +100,7 @@ As we descend to the depths, we find containers with commitment issues. They app
 - **Google Cloud Functions** – Containers pretending to be functions, but now on Google Cloud.
 - **Alibaba Function Compute** – You get the idea.
 
-## **Bottom of the Iceberg – Specialized and Hybrid Platforms – The Swiss Army Knife of Container Hosting**
+## Bottom of the Iceberg – Specialized and Hybrid Platforms – The Swiss Army Knife of Container Hosting
 
 Down here, containers run in ways that make people question your life choices. These platforms let you host containers in environments many fear to tread.
 
@@ -150,4 +150,6 @@ There you have it, the container iceberg. And I didn't even have room to add the
 
 ## The Final Word
 
-At this point, you might wonder: "Has container technology gone too far?" The answer is clearly "not far enough." At Pulumi, we've got providers for all the usual suspects and, surprisingly, many more in this container circus. And if you've figured out how to run containers on a quantum computer inside a data pipeline in New Zealand, you can write a provider for that, too (though perhaps don't actually use it in production).
+At this point, you might wonder: "Has container technology gone too far?" The answer is clearly "not far enough." At Pulumi, we've got providers for [all](/) [the](/) [usual](/) [suspects](/) and, surprisingly, many more in this container circus. And if you've figured out how to run containers on a quantum computer inside a data pipeline in New Zealand, you can write [a provider](/) for that, too (though perhaps don't actually use it in production).
+
+So, use Pulumi and have a sane interface over all this container chaos.
