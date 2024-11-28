@@ -13,9 +13,9 @@ social:
     linkedin:
 
 ---
-If a computer can be connected to the internet, someone has tried to run a container on it. After diving deep into the [Fargate vs EC2](/) debate for EKS deployments, I discovered this isn't just a joke - it's practically a law of nature. From quantum computers to smart toasters, from phones in AWS racks to CI pipelines, there are many ways to deploy containers.
+If a computer can be connected to the internet, someone has tried to run a container on it. From quantum computers to smart toasters, from phones in AWS racks to CI pipelines, there's many ways to deploy containers. While most people only know about the mainstream cloud providers at the surface, there's actually a vast world of increasingly unusual and specialized options beneath.
 
-So here's my guide to the container deployment iceberg - from the familiar EKS and ECS at the surface – down to the dark depths where containers run in places they probably shouldn't.
+So here's a guide to the cloud container deployment obscurity - from the familiar EKS and ECS at the surface – down to the dark depths where containers run in places they probably shouldn't.
 
 <!--more-->
 
