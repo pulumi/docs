@@ -152,6 +152,6 @@ There you have it, the container iceberg. And I didn't even have room to add the
 
 At this point, **105** options in, you might wonder: "Has cloud container hosting gone too far?" Well, I've a solution to propose:
 
-At Pulumi, we've got providers for [all](/) [the](/) [usual](/) [suspects](/) and, surprisingly, many more in this container circus. And if you've figured out how to run containers on a quantum computer inside a data pipeline in New Zealand, you can write [a provider](/) for that, too (though perhaps don't actually use it in production).
+At Pulumi, we've got providers for [all](/) [the](/) [usual](/) [suspects](/) and, surprisingly, many more in this container circus. And if you've figured out how to run containers on a quantum computer inside a data pipeline in New Zealand, you can write [a provider](/) for that, too.
 
 So, use Pulumi and we will figure out how *RedHat-Tanzu-Greengrass-Icecore-Device-Farm* works and provide you a sane interface to it. You've got other things to worry about.
