@@ -34,7 +34,7 @@ authors:
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
     - insights
-
+    - resources
 
 # The social copy used to promote this post on Twitter and Linkedin. These
 # properties do not actually create the post and have no effect on the
@@ -72,10 +72,10 @@ Account Discovery starts with the new Accounts page to provide a list of all acc
 
 ### Account Creation
 
-From this page you can create new Accounts to provide the configuration and credentials needed for Insights to regularly scan and manage your infrastructure. Once you create a new top level Account, Insights will automatically create child accounts for each region you specified to enable you to control the discovery behavior for each region separately.
+From this page you can create new Accounts to provide the configuration and credentials needed for Insights to regularly scan and manage your infrastructure. Once you create a new top level Account, Insights will automatically create child accounts, based on the underlying platform model, for each group you enabled. These child accounts enable you to control the discovery behavior for each group separately. For example, AWS enables you to divide you infrastructure into regions and Insights will create separate child accounts for each region you specify.
 
 {{% notes type="info" %}}
-Account Discovery leverages Pulumi ESC to enter and manage the credentials needed for the Discovery process to find and read all of the infrastructure resources. By using ESC to manage the credentials, it enables Insights to leverage the enterprise best practices for creating and managing applicaiton secrets that Pulumi ESC provides.
+Account Discovery leverages Pulumi ESC to enter and manage the credentials needed for the Discovery process to find and read all of the infrastructure resources. By relying on ESC, Insights aligns with enterprise best practices for creating and handling application secrets.
 {{% /notes %}}
 
 {{< video title="Create Account" src="create-account.mp4" autoplay="true" loop="true" >}}
@@ -89,5 +89,7 @@ Once each of your Accounts have started scanning, your resources will be display
 ### Conclusion
 
 The addition of Account Discovery significantly expands the scope of Pulumi Insights. You can now leverage the capabilities of Insights 2.0, not just for your Pulumi IaC managed resources, but for all resources in your infrastructure regardless of how it is managed. With Pulumi Copilot and Resource Search, you are able to gain insights and ask questions about your infrastructure that would otherwise be challenging to answer, saving time and providing the critical information needed.
+
+For additional information about Pulumi Insights please refer to: [Pulumi Insights](https://www.pulumi.com/product/pulumi-insights/)
 
 We are excited about the potential of Pulumi Insights and are working hard to bring additional capabilities to continue to simplify the experience of managing today's complex cloud environments. Watch for additional features like Pulumi Crossguard for Discovered resources along with additional platform support coming soon.
