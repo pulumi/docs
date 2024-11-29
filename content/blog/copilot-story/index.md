@@ -17,13 +17,15 @@ social:
 
 ## When Your LLM Hallucinates Missing Features: Engineering Lessons from Building Pulumi Copilot
 
-Since joining Pulumi back in June, I've spend my mornings reviewing user feedback for Copilot, our AI assistant. Recently, one message caught my eye: "Your tool doesn't know anything!", except with some spicing langauge in the mix. Having just updated our code database and refined our prompts, I braced for the worst. But the evals we run were still looking strong so what was going on?
+Since joining Pulumi back in June, I've spend my mornings reviewing user feedback for Copilot, our AI assistant. Recently, one message caught my eye: "Your tool doesn't know anything!". Having just updated our code database and refined our prompts, I braced for the worst. But the evals we run were still looking strong, so what was going on?
 
 <!--more-->
 
 The user was trying to force-delete a stack that still had resources. Copilot confidently suggested using a "--force" flag - a perfectly logical solution, except this flag doesn't exist in Pulumi.
 
-After years in conversational AI, I thought I understood the challenges of chat interfaces but confidently wrong information still gets me every time. This is a day in the life of building on LLMs. Dealing with hallicinations to the user is just a fact of life but this one, this is a specific type of hallicination that I now have a solution to and now that we've launched our REST API and Copilot has been running in production, I want to share how we're handling that particular hallucination, along with key engineering lessons we've learned building with LLMs. Let's start with the fundamental tension between software engineering and prompt engineering...
+After years in conversational AI, I thought I understood the challenges of chat interfaces but confidently wrong information still gets me every time. This is a day in the life of building on LLMs – allicinations are a fact of life.
+
+But this particular error, this is a specific type of hallicination that I now have a solution for and now that we've launched our REST API and Copilot has been running in production, I want to share how the key engineering lessons we've learned building with LLMs. Let's start with the fundamental tension between software engineering and prompt engineering...
 
 ## Engineering for Reality: Software vs Prompt Engineering
 
@@ -143,8 +145,8 @@ But yeah, back to that angry user feedback about the "--force" flag. Well that l
 
 We're implementing the "--force" flag for stack deletion because our LLM accidentally showed us what was missing. When you think about it, it makes perfect sense: force deletion is a common pattern across developer tools. The LLM, trained on vast amounts of documentation and code, was simply reflecting established conventions.
 
-This has fundamentally changed how we view hallucinations. While we constantly work to minimize them – a frustrated user is something we take very seriously – some of them are clearly potential product signals. When our LLM consistently hallucinates a feature, especially one that exists in similar tools, it's worth investigating. The LLM becomes an unexpected source of user research, drawing on its training across thousands of developer tools and experiences.
+This has fundamentally changed how we view hallucinations. While we constantly work to minimize them – a frustrated user is something we take very seriously – some of them are clearly potential product signals. The LLM, in this light, becomes an unexpected source of user research, drawing on its training across thousands of developer tools and experiences.
 
-Today, we're launching the Pulumi Copilot REST API in preview, built with these lessons in mind. You can now integrate these same capabilities into your own tools and workflows. Whether you're building CLI extensions, chat integrations, or automated deployment checks, the API provides the contextual understanding we've engineered into Copilot.
+Today, we're launching the Pulumi Copilot REST API in preview, built with these lessons in mind. You can now integrate these same capabilities and skills into your own tools and workflows. Whether you're building CLI extensions, chat integrations, or automated deployment checks, the API provides the contextual understanding we've engineered into Copilot.
 
 Try it out at docs.pulumi.com/copilot-api.
