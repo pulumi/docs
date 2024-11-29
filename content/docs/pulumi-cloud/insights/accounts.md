@@ -198,9 +198,6 @@ values:
 ```
 
 Once the ESC environment is set up with the proper credentials, assign it to your insights account during the account creation phase.
-{{< notes type="info" >}}
-  The OCI scanner supports both API Key and token-based authentication, though token-based authentication has not been tested yet.
-{{< /notes >}}
 
 ### Kubernetes (K8s)
 
