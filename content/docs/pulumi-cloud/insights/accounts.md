@@ -178,18 +178,18 @@ The OCI scanner for Pulumi Cloud requires access to your Oracle Cloud account. T
 
 1. Set up API Key authentication by providing the following credentials:
 
-* OCI_TENANCY_OCID: OCID of the tenancy. To get the value, see [Where to Get the Tenancy's OCID and User's OCID](https://docs.oracle.com/iaas/Content/API/Concepts/apisigningkey.htm#five).
-* OCI_USER_OCID: The OCID of the user calling the API. See [Where to Get the Tenancy's OCID and User's OCID](https://docs.oracle.com/iaas/Content/API/Concepts/apisigningkey.htm#five).
-* OCI_PRIVATE_KEY_PASSWORD: (Optional) Passphrase used for the key, if it's encrypted.
-* OCI_FINGERPRINT: Fingerprint for the key pair being used. See [How to Get the Key's Fingerprint](https://docs.oracle.com/iaas/Content/API/Concepts/apisigningkey.htm#four).
-* OCI_REGION: The OCI region where your resources are located. See [Regions and Availability Domains](https://docs.oracle.com/iaas/Content/General/Concepts/regions.htm).
-* OCI_PRIVATE_KEY_PATH: The private key is required to be listed as an ESC file. To create a private key and integrate it with ESC, see [How to Generate an API Signing Key](https://docs.oracle.com/iaas/Content/API/Concepts/apisigningkey.htm#two) and [how to upload the public key](https://docs.oracle.com/iaas/Content/API/Concepts/apisigningkey.htm#three)
+* **OCI_TENANCY_OCID**: OCID of the tenancy. To get the value, see [Where to Get the Tenancy's OCID and User's OCID](https://docs.oracle.com/iaas/Content/API/Concepts/apisigningkey.htm#five).
+* **OCI_USER_OCID**: The OCID of the user calling the API. See [Where to Get the Tenancy's OCID and User's OCID](https://docs.oracle.com/iaas/Content/API/Concepts/apisigningkey.htm#five).
+* **OCI_PRIVATE_KEY_PASSWORD**: (Optional) Passphrase used for the key, if it's encrypted.
+* **OCI_FINGERPRINT**: Fingerprint for the key pair being used. See [How to Get the Key's Fingerprint](https://docs.oracle.com/iaas/Content/API/Concepts/apisigningkey.htm#four).
+* **OCI_REGION**: The OCI region where your resources are located. See [Regions and Availability Domains](https://docs.oracle.com/iaas/Content/General/Concepts/regions.htm).
+* **OCI_PRIVATE_KEY_PATH**: The private key is required to be listed as an ESC file. To create a private key and integrate it with ESC, see [How to Generate an API Signing Key](https://docs.oracle.com/iaas/Content/API/Concepts/apisigningkey.htm#two) and [how to upload the public key](https://docs.oracle.com/iaas/Content/API/Concepts/apisigningkey.htm#three)
 Use the following ESC configuration to provide the required credentials:
 
 ```yaml
 values:
   environmentVariables:
-    OCI_FINGERPRINT: "25:ad:34:89:e0:36:78:33:61:bf:cd:05:05:08:02:a7"
+    OCI_FINGERPRINT: "25:ad:34:****************:cd:05:05:08:02:a7"
     OCI_REGION: "us-phoenix-1"
     OCI_TENANCY_OCID: "ocid1.tenancy.oc1..tenancyidnumbers"
     OCI_USER_OCID: "user_ocid"
