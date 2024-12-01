@@ -86,10 +86,15 @@ Once each of your Accounts have started scanning, your resources will be display
 
 {{< video title="Discovered Resources" src="resources.mp4" autoplay="true" loop="true" >}}
 
+### More to Come
+
+We are excited about the potential of Pulumi Insights and are working hard to bring additional capabilities to continue to simplify the experience of managing today's complex cloud environments. Watch for additional features like Pulumi Crossguard Policy support for Discovered resources, along with additional platform support, and more, coming soon.
+
+Insights Account Discovery is free while in public preview, with per-resource pricing for Team, Enterprise and Business Critical tiers coming in Q1 2025.
+
 ### Conclusion
 
-The addition of Account Discovery significantly expands the scope of Pulumi Insights. You can now leverage the capabilities of Insights 2.0, not just for your Pulumi IaC managed resources, but for all resources in your infrastructure regardless of how it is managed. With Pulumi Copilot and Resource Search, you are able to gain insights and ask questions about your infrastructure that would otherwise be challenging to answer, saving time and providing the critical information needed.
+The addition of Account Discovery significantly expands the scope of Pulumi Insights. You can now leverage the capabilities of Insights 2.0, not just for your Pulumi IaC managed resources, but for all resources in your infrastructure regardless of how they are managed. With Pulumi Copilot and Resource Search, you are able to gain insights and ask questions about your infrastructure that would otherwise be challenging to answer, saving time and providing the critical information needed.
 
 For additional information about Pulumi Insights please refer to: [Pulumi Insights](https://www.pulumi.com/product/pulumi-insights/)
 
-We are excited about the potential of Pulumi Insights and are working hard to bring additional capabilities to continue to simplify the experience of managing today's complex cloud environments. Watch for additional features like Pulumi Crossguard for Discovered resources along with additional platform support coming soon.
