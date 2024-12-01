@@ -97,4 +97,3 @@ Insights Account Discovery is free while in public preview, with per-resource pr
 The addition of Account Discovery significantly expands the scope of Pulumi Insights. You can now leverage the capabilities of Insights 2.0, not just for your Pulumi IaC managed resources, but for all resources in your infrastructure regardless of how they are managed. With Pulumi Copilot and Resource Search, you are able to gain insights and ask questions about your infrastructure that would otherwise be challenging to answer, saving time and providing the critical information needed.
 
 For additional information about Pulumi Insights please refer to: [Pulumi Insights](https://www.pulumi.com/product/pulumi-insights/)
-
