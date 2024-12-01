@@ -114,71 +114,86 @@ Read the docs at https://docs.aws.amazon.com/apprunner
 
 Combine CDK constructs with any of the features of Pulumi programs to deploy faster, easier and to any cloud. Use Pulumi functions and stack references to connect to pre-existing infrastructure and mix in resources from any provider to bring *all* of your infrastructure under management.
 
-For example, we can use a Pulumi function to look up AMIs for creating an EC2 instance. Then, we connect a CloudFront distribution over the public IP to provide caching and DDOS protection.
+For example, we can use CDK's `ecs_patterns` to quickly create a loadbalanced Fargate service, but route it with a record in an exisiting CloudFlare DNS zone.
 
 ```typescript
-import * as pulumicdk from '@pulumi/cdk';
+import * as path from 'path';
+import * as acm from 'aws-cdk-lib/aws-certificatemanager';
 import * as aws from '@pulumi/aws';
+import * as pulumi from '@pulumi/pulumi';
+import * as pulumicdk from '@pulumi/cdk';
+import * as cloudflare from '@pulumi/cloudflare';
+import * as ecs from 'aws-cdk-lib/aws-ecs';
+import * as ecsPatterns from 'aws-cdk-lib/aws-ecs-patterns';
 
-const app = new pulumicdk.App('app', (scope: pulumicdk.App): pulumicdk.AppOutputs => {
-    const stack = new pulumicdk.Stack('example-stack');
-    // use getAmiOutput to lookup the AMI instead of ec2.LookupMachineImage
-    const ami = aws.ec2.getAmiOutput({
-        owners: ['amazon'],
-        mostRecent: true,
-        filters: [
-            {
-                name: 'name',
-                values: ['al2023-ami-2023.*.*.*.*-arm64'],
-            },
-        ],
-    });
+let config = new pulumi.Config();
+let accountId = config.requireSecret("cloudflare_account_id");
+let zoneName = config.require("cloudflare_zone_name");
+let certificateId = config.require("certificate_id");
+let certificateKey = config.requireSecret("certificate_key");
 
-    const region = aws.config.requireRegion();
-    const machineImage = ec2.MachineImage.genericLinux({
-        [region]: pulumicdk.asString(ami.imageId),
-    });
+class CloudFlareStack extends pulumicdk.Stack {
+    constructor(app: pulumicdk.App, id: string) {
+        super(app, id);
 
-    const instance = new ec2.Instance(this, 'Instance', {
-        vpc,
-        instanceType: ec2.InstanceType.of(ec2.InstanceClass.T4G, ec2.InstanceSize.MICRO),
-        machineImage,
-    });
+        // First Load the zone and certificate from CloudFlare
+        ///////////////////////////////////////////////////////
 
-   // Return the public IP of the instance
-   this.publicIp = this.asOutput(ec2Instance.publicIp);
-});
+        // Read the CloudFlare zone for the domain
+        const zone = cloudflare.getZoneOutput({
+            accountId,
+            name: zoneName,
+        });
 
-// Pulumi's abstraction to create a CloudFront distribution
-const distribution = new aws.cloudfront.Distribution("my-cdn-distribution", {
-    enabled: true,
-    origins: [{
-        originId: ec2Instance.urn,
-        domainName: ec2PublicIp.apply(ip => `${app.publicIp}.compute-1.amazonaws.com`), // Constructed domain name
-        customOriginConfig: {
-            originProtocolPolicy: "http-only",
-            httpPort: 80,
-            httpsPort: 80,
-            originSslProtocols: ["TLSv1.2"],
-        },
-    }],
-    defaultCacheBehavior: {
-        targetOriginId: ec2Instance.urn,
-        viewerProtocolPolicy: "allow-all",
-        allowedMethods: ["GET", "HEAD", "OPTIONS"],
-        cachedMethods: ["GET", "HEAD"],
-        // Define cache behavior settings...
-    },
-    // Additional settings like price class, custom error responses, etc.
-    // ...
-    viewerCertificate: {
-        cloudfrontDefaultCertificate: true,
-    },
-});
+        // read the certificate from CloudFlare
+        const caCertificate = cloudflare.getOriginCaCertificateOutput({
+          id: certificateId,
+        });
 
-// Export the distribution's domain name so it can be accessed easily after deployment
-export const cdnUrl = distribution.domainName;
+        // Import the certificate in ACM
+        const cert = new aws.acm.Certificate('import', {
+            privateKey: certificateKey,
+            certificateBody: caCertificate.certificate,
+        });
 
+        // Create a L2 reference from the cert arn
+        const acmCert = acm.Certificate.fromCertificateArn(this, 'cert', pulumicdk.asString(cert.arn));
+
+        // Next, use ECS Patterns to create a loadbalanced fargate service with the correct certificate
+        ///////////////////////////////////////////////////////////////////////////////////////////////
+
+        const loadBalancedFargateService = new ecsPatterns.ApplicationLoadBalancedFargateService(this, 'Service', {
+          certificate: acmCert,
+          redirectHTTP: true,
+          taskImageOptions: {
+            image: ecs.ContainerImage.fromRegistry("amazon/amazon-ecs-sample"),
+          },
+        });
+
+        const alb = loadBalancedFargateService.loadBalancer;
+
+        // Finally, Create a record in CloudFlare that directs to the service's loadbalancer
+        ////////////////////////////////////////////////////////////////////////////////////
+
+        new cloudflare.Record('alb', {
+            name: 'cdk-alb',
+            type: 'CNAME',
+            zoneId: zone.zoneId,
+            content: this.asOutput(alb.loadBalancerDnsName),
+            proxied: true,
+        });
+    }
+}
+
+class MyApp extends pulumicdk.App {
+    constructor() {
+        super('app', (scope: pulumicdk.App) => {
+            new CloudFlareStack(scope, 'cloudflare');
+        });
+    }
+}
+
+new MyApp();
 ```
 
 Pulumi let's you read and create any resource type across thousands of different cloud service providers and integrate them with your CDK stacks.  Building CDK apps on Pulumi brings a host of other benefits too, including:
