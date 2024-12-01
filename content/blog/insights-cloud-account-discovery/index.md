@@ -64,7 +64,7 @@ We are excited to announce the public preview of Insights Account Discovery that
 
 ### Account Management
 
-To get started, Insights Account Discovery provides a simple UI approach to setting up all of your infrastructure accounts to be scanned and read into the Insights supergraph. Once discovered, all of your infrastructure resources can then be seen in the Resource Explorer and accessed by Pulumi CoPilot and Resource Search, providing you the tools needed to deliver on your strategic infrastructure goals.
+To get started, Insights Account Discovery provides a simple UI approach to setting up all of your infrastructure accounts to be scanned and read into the Insights supergraph. Once discovered, all of your infrastructure resources can then be seen in the Resource Explorer and accessed by Pulumi Copilot and Resource Search, providing you the tools needed to deliver on your strategic infrastructure goals.
 
 Account Discovery starts with the new Accounts page to provide a list of all accounts created along with the current status of the latest account scans. The Accounts page is the single place to go to manage all aspects of the Insights Account Discovery process.
 
