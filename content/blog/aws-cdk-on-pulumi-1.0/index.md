@@ -4,7 +4,7 @@ date: 2024-12-02T08:00:00-07:00
 draft: true
 meta_desc: "Enhanced support of AWS CDK constructs from within Pulumi. Combine Pulumi and AWS CDK
 resources amd use Pulumi Cloud Platform to manage CDK"
-meta_image: todo.png
+meta_image: meta.png
 authors:
     - matt-jeffryes
     - cory-hall
