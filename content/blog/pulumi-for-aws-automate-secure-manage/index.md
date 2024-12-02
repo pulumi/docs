@@ -88,4 +88,4 @@ Cloud complexity creates significant challenges in managing sensitive credential
 
 [Check out the Pulumi roadmap](https://github.com/orgs/pulumi/projects/44/views/1) for upcoming features, let us know your feature requests by [creating an issue on GitHub](https://github.com/pulumi/pulumi/issues), connect with the [Pulumi community on Slack](https://slack.pulumi.com/), and if you haven’t yet, [sign-up for Pulumi Cloud](https://app.pulumi.com/signup) to get access to our full suite of products – Pulumi IaC, Pulumi ESC, and Pulumi Insights – so you can automate, secure, and manage everything you run in the cloud.
 
-Meta image credit:  [ESO/M. Zamani](https://www.eso.org/public/images/potw2229a/)
+_Meta image credit:_  [ESO/M. Zamani](https://www.eso.org/public/images/potw2229a/)
