@@ -1,6 +1,6 @@
 ---
 title: Pulumi + AWS re:Invent 2024
-meta_desc: "Automate, secure and manage AWS infrastructure with IaC, secrets management, and cloud insights. Book 1:1s, join workshops, and transform your cloud strategy."
+meta_desc: "Visit us at Booth 370 to book 1:1s, join workshops, and transform your cloud strategy. AWS re:Invent 2024 | December 2–6, 2024"
 meta_image: /images/reinvent/reinvent-meta-24.png
 type: page
 layout: reinvent
