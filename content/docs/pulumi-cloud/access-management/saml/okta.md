@@ -43,9 +43,9 @@ give it a name---Pulumi Cloud for example---and an [icon](https://www.pulumi.com
 
 The next step is to configure the SAML application's settings.
 
-    {{% notes type="info" %}}
+{{% notes type="info" %}}
 The values you need to use are dependent upon your Pulumi organization name. Be sure to replace `<orgName>` with your actual organization name.
-    {{% /notes %}}
+{{% /notes %}}
 
 | SAML Setting | Value |
 | --------------- | ----- |
@@ -55,9 +55,9 @@ The values you need to use are dependent upon your Pulumi organization name. Be 
 | Name ID Format | `Persistent` |
 | App username | `Email` |
 
-    {{% notes type="warning" %}}
-> **Important:** Do not change the value of the Name ID Format once your users have started using Pulumi. Once a given SAML identity has been associated with a user, any change to the username sent by Okta will result in login failures for that user.
-    {{% /notes %}}
+{{% notes type="warning" %}}
+**Important:** Do not change the value of the Name ID Format once your users have started using Pulumi. Once a given SAML identity has been associated with a user, any change to the username sent by Okta will result in login failures for that user.
+{{% /notes %}}
 
 In addition, you can optionally provide two attribute statements so that users
 who sign in with their Okta credentials will have proper user names.
