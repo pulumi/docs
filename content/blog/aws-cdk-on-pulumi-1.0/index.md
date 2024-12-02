@@ -113,7 +113,7 @@ Read the docs at https://docs.aws.amazon.com/apprunner
 
 Combine CDK constructs with any of the features of Pulumi programs to deploy faster, easier and to any cloud. Use Pulumi functions and stack references to connect to pre-existing infrastructure and mix in resources from any provider to bring *all* of your infrastructure under management.
 
-For example, we can use CDK's `ecs_patterns` to quickly create a loadbalanced Fargate service, but route it with a record in an exisiting CloudFlare DNS zone.
+For example, we can use CDK's `ecs_patterns` to quickly create a loadbalanced Fargate service, but route traffic to it with a record in an exisiting CloudFlare DNS zone.
 
 ```typescript
 import * as path from 'path';
@@ -232,7 +232,7 @@ const app = new pulumicdk.App('app', (scope: pulumicdk.App): pulumicdk.AppOutput
 
 ### CDK assets
 
-CDK's assets make it super easy to bundle code and other files your application needs into an S3 bucket or a Docker container, eliminating extra steps from your build pipeline. For example you can use Docker container asset to deploy an Fargate service from local directory. (CDK will build the container image and push to ECR on `pulumi up`.):
+CDK's assets make it easy to bundle code and other files your application needs into an S3 bucket or a Docker container, eliminating extra steps from your build pipeline. For example you can use Docker container asset to deploy a Fargate service from local directory. CDK will build the container image and push to ECR on `pulumi up`.
 
 ```ts
 import * as pulumicdk from '@pulumi/cdk';
@@ -262,9 +262,9 @@ const app = new pulumicdk.App('app', (scope: pulumicdk.App) => {
 
 ## Future direction
 
-Currently AWS CDK on Pulumi is supported only for TypeScript users, but we're eager to bring the benefits of the CDK ecosystem to all Pulumi languages in the future. In the meantime, AWS CDK on Pulumi can be used within Component Packages implemented in TypeScript, and exposed to any Pulumi language.
+Currently AWS CDK on Pulumi is supported only for TypeScript users, but we're eager to bring the benefits of the CDK ecosystem to all Pulumi languages in the future. You can comment and upvote on [this tracking issue](https://github.com/pulumi/pulumi-cdk/issues/49), to let us know this is important to you. 
 
-We're also exploring options for importing state from CDK applications that are already deployed with CloudFormation to enable seamless migration for existing CDK users. Please let us know if this is something you would be interested in in testing with us.
+We're also exploring options for importing state from CDK applications that are already deployed with CloudFormation to enable seamless migration for existing CDK users. Please let us know on [this tracking issue pulumi-cdk/271](https://github.com/pulumi/pulumi-cdk/issues/271) you would be interested in testing this with us.
 
 ## Summary
 
