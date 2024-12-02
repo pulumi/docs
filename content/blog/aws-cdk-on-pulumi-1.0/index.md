@@ -264,7 +264,7 @@ const app = new pulumicdk.App('app', (scope: pulumicdk.App) => {
 
 Currently AWS CDK on Pulumi is supported only for TypeScript users, but we're eager to bring the benefits of the CDK ecosystem to all Pulumi languages in the future. You can comment and upvote on [this tracking issue](https://github.com/pulumi/pulumi-cdk/issues/49), to let us know this is important to you.
 
-We're also exploring options for importing state from CDK applications that are already deployed with CloudFormation to enable seamless migration for existing CDK users. Please let us know on [this tracking issue pulumi-cdk/271](https://github.com/pulumi/pulumi-cdk/issues/271) you would be interested in testing this with us.
+We're also exploring options for importing state from CDK applications that are already deployed with CloudFormation to enable seamless migration for existing CDK users. Please let us know on [this tracking issue](https://github.com/pulumi/pulumi-cdk/issues/271) if you would be interested in testing this with us.
 
 ## Summary
 
