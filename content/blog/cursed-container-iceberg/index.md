@@ -1,6 +1,6 @@
 ---
 title: "The Cloud Container Iceberg"
-date: 2024-12-04T10:29:54-05:00
+date: 2024-12-03T10:29:54-05:00
 draft: false
 meta_desc: Discover unique and unconventional ways to run OCI containers. Explore beyond the traditional platforms.
 meta_image: meta.png
@@ -9,8 +9,8 @@ authors:
 tags:
     - k8s
 social:
-    twitter:
-    linkedin:
+    twitter: There are 105+ ways to run containers in production! From familiar cloud providers to quantum computers, smart toasters, and even phone farms. 
+    linkedin: There are 105+ ways to run containers in production! From familiar cloud providers to quantum computers, smart toasters, and even phone farms. 
 
 ---
 If a computer can be connected to the internet, someone has tried to run a container on it. From quantum computers to smart toasters, from phones in AWS racks to CI pipelines, there's many ways to deploy containers. While most people only know about the mainstream cloud providers at the surface, there's actually a vast world of increasingly unusual and specialized options beneath.
@@ -152,6 +152,6 @@ There you have it, the container iceberg. And I didn't even have room to add the
 
 At this point, **105** options in, you might wonder: "Has cloud container hosting gone too far?" Well, I've a solution to propose:
 
-At Pulumi, we've got providers for [all](/) [the](/) [usual](/) [suspects](/) and, surprisingly, many more in this container circus. And if you've figured out how to run containers on a quantum computer inside a data pipeline in New Zealand, you can write [a provider](/) for that, too.
+At Pulumi, we've got providers for [all](https://www.pulumi.com/registry/packages/aws/api-docs/provider/) [the](https://www.pulumi.com/registry/packages/azure-native/) [usual](https://www.pulumi.com/registry/packages/gcp/) [suspects](https://www.pulumi.com/registry/packages/kubernetes/) and, surprisingly, many more in this container circus. And if you've figured out how to run containers on a quantum computer inside a data pipeline in New Zealand, you can write [a provider](https://github.com/pulumi/pulumi-provider-boilerplate/) for that, too.
 
 So, use Pulumi and we will figure out how *RedHat-Tanzu-Greengrass-Icecore-Device-Farm* works and provide you a sane interface to it. You've got other things to worry about.
