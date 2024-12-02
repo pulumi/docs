@@ -12,6 +12,10 @@ menu:
         identifier: pulumi-cloud-copilot-api
 ---
 
+{{% notes "info" %}}
+Pulumi Copilot's API is currently in preview and subject to change. It is not currently suitable for production use.
+{{% /notes %}}
+
 The Pulumi Copilot REST API (currently in Preview) is part of the [Pulumi Cloud REST API](https://www.pulumi.com/docs/pulumi-cloud/reference/cloud-rest-api) that is used to integrate Pulumi Copilot capabilities with other applications or tools.
 
 ## Endpoint URL
@@ -40,13 +44,15 @@ The Pulumi Copilot REST API will return a 401 status code if the token is missin
 
 ## Required request headers
 
-The following headers are required for all operations except where explicitly noted:
+The following header is required:
 
 ```
 Content-Type: application/json
 ```
 
 ## Start conversation
+
+Starts a new conversation with Pulumi Copilot with a query.
 
 ```
 POST /api/ai/chat/preview
@@ -160,7 +166,7 @@ curl -L https://api.pulumi.com/api/ai/chat/preview \
 
 ## Post message to conversation
 
-To post a new message to an existing conversation, use the "Start Conversation" API with the addition of the `conversationId` field returned from that API.
+Posts a new message to an existing conversation. The request format is identical to the "Start Conversation", with the addition of the `conversationId` field returned from that call.
 
 ```
 POST /api/ai/chat/preview
@@ -235,7 +241,3 @@ curl -L https://api.pulumi.com/api/ai/chat/preview \
   ]
 }
 ````
-
-{{% notes "info" %}}
-Pulumi Copilot's API is in ... (details)
-{{% /notes %}}
