@@ -177,7 +177,7 @@ values:
   For more details on configuring Azure credentials with ESC, refer to [ESC Azure provider documentation](/docs/pulumi-cloud/access-management/oidc/provider/azure/).
 {{< /notes >}}
 
-1. Once the ESC environment is set up with the proper credentials, assign it to your insights account during the account creation phase.
+3. Once the ESC environment is set up with the proper credentials, assign it to your insights account during the account creation phase.
 
 ### OCI
 
