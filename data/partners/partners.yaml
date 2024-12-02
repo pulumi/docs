@@ -3,89 +3,93 @@
 # pertaining to that parner.
 
 - name: AWS
-  link: https://aws.amazon.com
+  link: https://aws.amazon.com/marketplace/seller-profile?id=b3d56f96-ff1e-4284-9585-5ef58df12266
   logo: /logos/pkg/aws.svg
 
-- name: Google Cloud
-  link: https://cloud.google.com/
-  logo: /logos/pkg/gcp.svg
-
 - name: Azure
-  link: https://azure.microsoft.com/
+  link: https://azuremarketplace.microsoft.com/en-us/marketplace/apps/pulumicorporation1618431130005.pulumi_enterprise_edition?tab=Overview
   logo: /logos/pkg/azure-native.svg
 
-- name: Oracle
-  link: https://www.oracle.com/cloud/
-  logo: /logos/tech/oracle.svg
+- name: Google Cloud
+  link: https://cloud.google.com/find-a-partner/partner/pulumi
+  logo: /logos/pkg/gcp.svg
 
-- name: Docker
-  link: https://www.docker.com/
-  logo: /logos/pkg/docker.svg
+- name: 1Password
+  link: https://developer.1password.com/docs/pulumi/
+  logo: /logos/tech/1password.svg
 
-- name: Pinecone
-  link: https://docs.pinecone.io/integrations/pulumi
-  logo: /logos/pkg/pinecone.svg
+- name: Checkly
+  link: https://www.checklyhq.com/docs/integrations/pulumi/
+  logo: /logos/tech/checkly.svg
 
-- name: NewRelic
-  link: https://newrelic.com/instant-observability/pulumi/
-  logo: /logos/tech/newrelic.svg
+- name: Chronosphere
+  link: https://docs.chronosphere.io/administer/infrastructure/pulumi
+  logo: /logos/tech/chronosphere.svg
 
-- name: Snyk
-  link: https://docs.snyk.io/integrate-with-snyk/vulnerability-management-tools/pulumi-integration/
-  logo: /logos/tech/snyk.png
+- name: Civo
+  link: https://www.civo.com/learn/automate-iac-pulumi-python-github-actions
+  logo: /logos/pkg/civo2.svg
 
 - name: Cloudflare
   link: https://developers.cloudflare.com/pulumi/
   logo: /logos/pkg/cloudflare.svg
 
+- name: Dagger
+  link: https://dagger.io/
+  logo: /logos/tech/dagger.svg
+
+- name: Datadog
+  link: https://docs.datadoghq.com/integrations/pulumi/
+  logo: /logos/tech/datadog.svg
+
+- name: Docker
+  link: https://www.docker.com/blog/pulumi-and-docker-build-cloud/
+  logo: /logos/pkg/docker.svg
+
 - name: GitHub
-  link: https://github.com/
+  link: https://github.com/marketplace/actions/pulumi-cli-action
   logo: /logos/pkg/github.svg
+
+- name: GitLab
+  link: https://about.gitlab.com/blog/2024/01/10/managing-gitlab-resources-with-pulumi/
+  logo: /logos/tech/gitlab-text.png
+
+- name: NewRelic
+  link: https://newrelic.com/instant-observability/pulumi/
+  logo: /logos/tech/newrelic.svg
+
+- name: Nitric
+  link: https://nitric.io/blog/why-nitric-chose-pulumi
+  logo: /images/pulumiup-2023/speaker-logos/nitric.svg
+
+- name: Oracle
+  link: https://docs.oracle.com/en/learn/oci-pulumi-iac/index.html
+  logo: /logos/tech/oracle.svg
+
+- name: Pinecone
+  link: https://docs.pinecone.io/integrations/pulumi
+  logo: /logos/pkg/pinecone.svg
 
 - name: Snowflake
   link: https://www.snowflake.com/
   logo: /logos/pkg/snowflake.svg
 
-- name: Zscaler
-  link: https://www.zscaler.com/
-  logo: /logos/tech/zscaler.svg
+- name: Snyk
+  link: https://partners.snyk.io/English/solutions/solution/2908/pulumi
+  logo: /logos/tech/snyk.png
 
-- name: Datadog
-  link: https://www.datadoghq.com/
-  logo: /logos/tech/datadog.svg
+- name: Spot
+  link: https://docs.spot.io/spot-connect/integrations/pulumi
+  logo: /logos/tech/spotnetapp.png
 
-- name: GitLab
-  link: https://about.gitlab.com/
-  logo: /logos/pkg/gitlab.svg
-  
-- name: Nitric 
-  link: https://nitric.io/blog/why-nitric-chose-pulumi
-  logo: /images/pulumiup-2023/speaker-logos/nitric.svg
-
-- name: Tailscale 
-  link: https://tailscale.com/
+- name: Tailscale
+  link: https://tailscale.com/kb/1211/pulumi-provider
   logo: /logos/pkg/tailscale.svg
 
-- name: Chronosphere 
-  link: https://chronosphere.io/
-  logo: /logos/tech/chronosphere.svg
-
-- name: 1Password
-  link: https://1password.com/
-  logo: /logos/tech/1password.svg
-
-- name: Dagger
-  link: https://dagger.io/
-  logo: /logos/tech/dagger.svg
-
 - name: Twingate
-  link: https://www.twingate.com/
+  link: https://www.twingate.com/integrations/pulumi
   logo: /logos/tech/twingate.svg
 
-- name: Checkly
-  link: https://www.checklyhq.com/
-  logo: /logos/tech/checkly.svg
-
-- name: Civo
-  link: https://www.civo.com/
-  logo: /logos/pkg/civo2.svg
+- name: Zscaler
+  link: https://www.zscaler.com/partners/technology/cloud#devops
+  logo: /logos/tech/zscaler.svg
