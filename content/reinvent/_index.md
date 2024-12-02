@@ -7,40 +7,23 @@ layout: reinvent
 aliases:
   - aws-reinvent-2021
 
-{
-  "@context": "https://schema.org",
-  "@type": "ExhibitionEvent",
-  "name": "AWS re:Invent 2024",
-  "description": "Visit Pulumi at booth #370 to book 1:1s, join workshops, and transform your cloud strategy.",
-  "startDate": "2024-12-02",
-  "endDate": "2024-12-06",
-  "location": {
-    "@type": "Place",
-    "name": "The Venetian Convention and Expo Center",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "3355 S Las Vegas Blvd",
-      "addressLocality": "Las Vegas",
-      "addressRegion": "NV",
-      "postalCode": "89109",
-      "addressCountry": "US"
-    }
-  },
-  "organizer": {
-    "@type": "Organization",
-    "name": "Amazon Web Services",
-    "url": "https://reinvent.awsevents.com/"
-  },
-  "exhibitor": {
-    "@type": "Organization",
-    "name": "Pulumi",
-    "url": "https://pulumi.com",
-    "description": "Pulumi helps teams create, deploy, and manage modern cloud applications using infrastructure as code."
-  },
-  "boothNumber": "370",
-  "eventStatus": "https://schema.org/EventScheduled",
-  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode"
-}
+exhibition_data:
+    name: "AWS re:Invent 2024"
+    description: "Visit Pulumi at booth #370 to book 1:1s, join workshops, and transform your cloud strategy."
+    start_date: "2024-12-02"
+    end_date: "2024-12-06"
+    location:
+        name: "The Venetian Convention and Expo Center"
+        address:
+            street: "3355 S Las Vegas Blvd"
+            locality: "Las Vegas"
+            region: "NV"
+            postal_code: "89109"
+            country: "US"
+    organizer:
+        name: "Amazon Web Services"
+        url: https://reinvent.awsevents.com/
+    booth: "370"
 
 awsx:
     yaml: |
