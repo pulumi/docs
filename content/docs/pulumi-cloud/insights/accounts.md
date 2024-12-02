@@ -63,7 +63,7 @@ This document outlines the steps required to create and manage a Pulumi insights
 
 ## Account hierarchies
 
-Account hierarchies allow you to organize and manage insights accounts in a structured way. Currently, child accounts can only be created automatically by Pulumi and is only done so in the case of AWS regions. In the future, this feature will be expanded to support creating custom hierarchies, providing more flexibility for structuring accounts, such as for organizing Kubernetes clusters within an Azure subscripiton.
+Account hierarchies allow you to organize and manage insights accounts in a structured way. Currently, child accounts can only be created automatically by Pulumi and is only done so in the case of AWS regions. In the future, this feature will be expanded to support creating custom hierarchies, providing more flexibility for structuring accounts, such as for organizing Kubernetes clusters within an Azure subscription.
 
 ### How child accounts work
 
