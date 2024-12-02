@@ -1,11 +1,46 @@
 ---
 title: Pulumi + AWS re:Invent 2024
-meta_desc: "Visit us at Booth 370 to book 1:1s, join workshops, and transform your cloud strategy. AWS re:Invent 2024 | December 2–6, 2024"
+meta_desc: "Visit Pulumi at booth 370 to book 1:1s, join workshops, and transform your cloud strategy. AWS re:Invent 2024 | December 2–6, 2024"
 meta_image: /images/reinvent/reinvent-meta-24.png
 type: page
 layout: reinvent
 aliases:
   - aws-reinvent-2021
+
+{
+  "@context": "https://schema.org",
+  "@type": "ExhibitionEvent",
+  "name": "AWS re:Invent 2024",
+  "description": "Visit Pulumi at booth #370 to book 1:1s, join workshops, and transform your cloud strategy.",
+  "startDate": "2024-12-02",
+  "endDate": "2024-12-06",
+  "location": {
+    "@type": "Place",
+    "name": "The Venetian Convention and Expo Center",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "3355 S Las Vegas Blvd",
+      "addressLocality": "Las Vegas",
+      "addressRegion": "NV",
+      "postalCode": "89109",
+      "addressCountry": "US"
+    }
+  },
+  "organizer": {
+    "@type": "Organization",
+    "name": "Amazon Web Services",
+    "url": "https://reinvent.awsevents.com/"
+  },
+  "exhibitor": {
+    "@type": "Organization",
+    "name": "Pulumi",
+    "url": "https://pulumi.com",
+    "description": "Pulumi helps teams create, deploy, and manage modern cloud applications using infrastructure as code."
+  },
+  "boothNumber": "370",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode"
+}
 
 awsx:
     yaml: |
