@@ -208,4 +208,158 @@ Once the ESC environment is set up with the proper credentials, assign it to you
 
 ### Kubernetes (K8s)
 
-Details for setting up ESC credentials for Kubernetes are coming soon.
+By default, the Kubernetes scanner uses **kubeconfig** for authentication. You can provide the contents of the kubeconfig file using a file-based environment variable. The authenticated user must have **`get`** and **`list`** permissions at the cluster scope to discover all resources.
+
+An example ESC configuration would look like:
+
+```yaml
+values:
+  files:
+    KUBECONFIG: <INSERT_KUBECONFIG_CONTENTS>  # Provide the kubeconfig contents here
+```
+
+This configuration projects the kubeconfig file contents to a temporary file that the ESC scanner uses for authentication.
+{{< notes type="warning" >}}
+  The scanner agent does not have access to external binaries (e.g., `aws`, `gcloud`), so kubeconfig files relying on [client-go credential plugins](https://kubernetes.io/docs/reference/access-authn-authz/authentication/#client-go-credential-plugins) are not supported. We recommend creating a service account with the necessary cluster-scoped permissions (**`get`** and **`list`**) and using its token for authentication.
+{{< /notes >}}
+
+#### Creating a Service Account with Cluster-Scoped View/List Permissions
+
+Follow these steps to create a service account, ClusterRole, and ClusterRoleBinding with the required permissions.
+
+1. Apply the YAML Manifest
+
+```yaml
+# Create a service account
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: my-service-account  # Replace with your service account name
+  namespace: default  # Replace with your namespace
+---
+# Create a long-lived token for authentication by Pulumi Insights
+apiVersion: v1
+kind: Secret
+metadata:
+  name: my-service-account-secret  # Replace with your secret name
+  annotations:
+    kubernetes.io/service-account.name: my-service-account
+type: kubernetes.io/service-account-token
+---
+# Create a ClusterRole which allows view/list permissions on all objects
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: read-only-cluster-role
+rules:
+  - apiGroups: ["*"]
+    resources: ["*"]
+    verbs: ["get", "list"]
+---
+# Create a ClusterRoleBinding to allow access
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: read-only-clusterrolebinding
+subjects:
+  - kind: ServiceAccount
+    name: my-service-account  # Replace with your service account name
+    namespace: default  # Replace with your namespace
+roleRef:
+  kind: ClusterRole
+  name: read-only-cluster-role
+  apiGroup: rbac.authorization.k8s.io
+```
+
+2. Verify Service Account Access
+
+Use the following command to verify the service account's permissions:
+
+```bash
+kubectl auth can-i list pods --as=system:serviceaccount:default:my-service-account
+```
+
+For more details, see the Kubernetes documentation: [kubectl auth can-i](https://kubernetes.io/docs/reference/access-authn-authz/rbac/#checking-api-access).
+
+3. Retrieve Service Account Details
+
+Fetch the details required for creating a kubeconfig:
+
+- **Token**:
+  ```bash
+  kubectl get secret my-service-account-secret -n default -o jsonpath='{.data.token}' | base64 --decode
+  ```
+- **CA Certificate**:
+  ```bash
+  kubectl get secret my-service-account-secret -n default -o jsonpath='{.data.ca\.crt}'
+  ```
+- **Cluster Server URL**:
+  ```bash
+  kubectl config view --minify --flatten -o jsonpath='{.clusters[0].cluster.server}'
+  ```
+
+4. Create Kubeconfig
+
+Using the retrieved details, create the following kubeconfig:
+
+```yaml
+apiVersion: v1
+kind: Config
+clusters:
+- name: my-cluster
+  cluster:
+    server: https://<CLUSTER_SERVER_URL>  # Replace with the cluster server URL
+    certificate-authority-data: <BASE64_ENCODED_CA_CERT>  # Replace with base64-encoded CA cert
+contexts:
+- name: my-service-account-context
+  context:
+    cluster: my-cluster
+    namespace: default  # Replace with your namespace
+    user: my-service-account
+current-context: my-service-account-context
+users:
+- name: my-service-account
+  user:
+    token: <SERVICE_ACCOUNT_TOKEN>  # Replace with the decoded service account token
+```
+
+5. (Optional) Streamline the Process with a Script
+
+Use the following script to automate the creation of the kubeconfig file:
+
+```bash
+SERVICE_ACCOUNT_NAME="my-service-account"  # Replace with your service account name
+NAMESPACE="default"  # Replace with your namespace
+KUBECONFIG_PATH="kubeconfig.yaml"  # Path to save the kubeconfig file
+SECRET_NAME="my-service-account-secret"  # Replace with your secret name
+
+# Fetch details
+TOKEN=$(kubectl get secret $SECRET_NAME -n $NAMESPACE -o jsonpath='{.data.token}' | base64 --decode)
+CA_CERT=$(kubectl get secret $SECRET_NAME -n $NAMESPACE -o jsonpath='{.data.ca\.crt}')
+CLUSTER_SERVER=$(kubectl config view --minify --flatten -o jsonpath='{.clusters[0].cluster.server}')
+
+# Create kubeconfig
+cat <<EOF > $KUBECONFIG_PATH
+apiVersion: v1
+kind: Config
+clusters:
+- name: my-cluster
+  cluster:
+    server: $CLUSTER_SERVER
+    certificate-authority-data: $CA_CERT
+contexts:
+- name: my-service-account-context
+  context:
+    cluster: my-cluster
+    namespace: $NAMESPACE
+    user: $SERVICE_ACCOUNT_NAME
+current-context: my-service-account-context
+users:
+- name: $SERVICE_ACCOUNT_NAME
+  user:
+    token: $TOKEN
+EOF
+
+echo "Kubeconfig written to $KUBECONFIG_PATH"
+```
+
