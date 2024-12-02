@@ -271,7 +271,7 @@ roleRef:
   apiGroup: rbac.authorization.k8s.io
 ```
 
-2. Verify Service Account Access
+1. Verify Service Account Access
 
 Use the following command to verify the service account's permissions:
 
@@ -281,24 +281,29 @@ kubectl auth can-i list pods --as=system:serviceaccount:default:my-service-accou
 
 For more details, see the Kubernetes documentation: [kubectl auth can-i](https://kubernetes.io/docs/reference/access-authn-authz/rbac/#checking-api-access).
 
-3. Retrieve Service Account Details
+1. Retrieve Service Account Details
 
 Fetch the details required for creating a kubeconfig:
 
-- **Token**:
+* **Token**:
+
   ```bash
   kubectl get secret my-service-account-secret -n default -o jsonpath='{.data.token}' | base64 --decode
   ```
-- **CA Certificate**:
+
+* **CA Certificate**:
+
   ```bash
   kubectl get secret my-service-account-secret -n default -o jsonpath='{.data.ca\.crt}'
   ```
-- **Cluster Server URL**:
+
+* **Cluster Server URL**:
+
   ```bash
   kubectl config view --minify --flatten -o jsonpath='{.clusters[0].cluster.server}'
   ```
 
-4. Create Kubeconfig
+1. Create Kubeconfig
 
 Using the retrieved details, create the following kubeconfig:
 
@@ -323,7 +328,7 @@ users:
     token: <SERVICE_ACCOUNT_TOKEN>  # Replace with the decoded service account token
 ```
 
-5. (Optional) Streamline the Process with a Script
+1. (Optional) Streamline the Process with a Script
 
 Use the following script to automate the creation of the kubeconfig file:
 
@@ -362,4 +367,3 @@ EOF
 
 echo "Kubeconfig written to $KUBECONFIG_PATH"
 ```
-
