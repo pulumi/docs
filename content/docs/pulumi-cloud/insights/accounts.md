@@ -16,7 +16,7 @@ menu:
 ---
 
 This document outlines the steps required to create and manage a Pulumi insights account used for scanning provider resources.
-
+<!-- markdownlint-disable MD029 -->
 ## Prerequisites
 
 * You must be an admin of your Pulumi organization.
@@ -271,7 +271,7 @@ roleRef:
   apiGroup: rbac.authorization.k8s.io
 ```
 
-1. Verify Service Account Access
+2. Verify Service Account Access
 
 Use the following command to verify the service account's permissions:
 
@@ -281,7 +281,7 @@ kubectl auth can-i list pods --as=system:serviceaccount:default:my-service-accou
 
 For more details, see the Kubernetes documentation: [kubectl auth can-i](https://kubernetes.io/docs/reference/access-authn-authz/rbac/#checking-api-access).
 
-1. Retrieve Service Account Details
+3. Retrieve Service Account Details
 
 Fetch the details required for creating a kubeconfig:
 
@@ -303,7 +303,7 @@ Fetch the details required for creating a kubeconfig:
   kubectl config view --minify --flatten -o jsonpath='{.clusters[0].cluster.server}'
   ```
 
-1. Create Kubeconfig
+4. Create Kubeconfig
 
 Using the retrieved details, create the following kubeconfig:
 
@@ -328,7 +328,7 @@ users:
     token: <SERVICE_ACCOUNT_TOKEN>  # Replace with the decoded service account token
 ```
 
-1. (Optional) Streamline the Process with a Script
+5. (Optional) Streamline the Process with a Script
 
 Use the following script to automate the creation of the kubeconfig file:
 
@@ -367,3 +367,4 @@ EOF
 
 echo "Kubeconfig written to $KUBECONFIG_PATH"
 ```
+<!-- markdownlint-enable MD029 -->
