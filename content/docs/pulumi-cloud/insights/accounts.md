@@ -201,7 +201,7 @@ values:
     OCI_TENANCY_OCID: "ocid1.tenancy.oc1..tenancyidnumbers"
     OCI_USER_OCID: "user_ocid"
   files:
-    OCI_PRIVATE_KEY: "PRIVATE_KEY_CONTENT"
+    OCI_PRIVATE_KEY_PATH: "<PRIVATE_KEY_CONTENT>"
 ```
 
 Once the ESC environment is set up with the proper credentials, assign it to your insights account during the account creation phase.
