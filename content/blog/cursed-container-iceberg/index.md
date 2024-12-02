@@ -7,15 +7,15 @@ meta_image: meta.png
 authors:
     - adam-gordon-bell
 tags:
-    - k8s
+    - k8s, containers, cloud-native, docker
 social:
     twitter: There are 105+ ways to run containers in production! From familiar cloud providers to quantum computers, smart toasters, and even phone farms. 
     linkedin: There are 105+ ways to run containers in production! From familiar cloud providers to quantum computers, smart toasters, and even phone farms. 
 
 ---
-If a computer can be connected to the internet, someone has tried to run a container on it. From quantum computers to smart toasters, from phones in AWS racks to CI pipelines, there's many ways to deploy containers. While most people only know about the mainstream cloud providers at the surface, there's actually a vast world of increasingly unusual and specialized options beneath.
+If a computer can be connected to the internet, someone has tried to run a [container](https://www.pulumi.com/containers) on it. From quantum computers to smart toasters, from phones in AWS racks to CI pipelines, there's many ways to deploy containers. While most people only know about the mainstream cloud providers at the surface, there's actually a vast world of increasingly unusual and specialized options beneath.
 
-So here's a guide to the cloud container deployment obscurity - from the familiar EKS and ECS at the surface – down to the dark depths where containers run in places they probably shouldn't.
+This guide serves two purposes: to showcase the surprising breadth of container options available today, and to help you understand the full spectrum of choices – from practical to very experimental. Whether you're looking for production-ready solutions or just curious about what's out there in the dark depths, you'll find something interesting here.
 
 <!--more-->
 
@@ -71,14 +71,14 @@ Diving deeper, we discover there's an entire multiverse of regional and specialt
 
 Let's plunge deeper. Because one Kubernetes cluster is never enough, why not sprinkle them everywhere? On-premises, in the cloud, under your desk—there's a K8s solution for all that.
 
-- **Amazon EKS Anywhere** – AWS errors in your own data center
+- **Amazon EKS Anywhere** – AWS container but in your own data center
 - **Amazon ECS Anywhere** – Like EKS Anywhere but ECS
 - **Azure Arc** – Hybrid cloud for masochists
-- **Google Anthos** – No idea
+- **Google Anthos** – Hybrid cloud something something
 - **AWS Outposts** – AWS, now with hardware shipping delays
-- **Azure Red Hat OpenShift** – No idea but with a fedora
+- **Azure Red Hat OpenShift** – Azure but with a fedora
 - **VMware Tanzu** – Because VMware heard you like Kubernetes
-- **Red Hat OpenShift** – More fedoras
+- **Red Hat OpenShift** – Fedoras on AWS
 - **IBM Cloud Kubernetes Service** – Kubernetes with a touch of enterprise nostalgia
 - **Oracle Container Engine for Kubernetes (OKE)** – For the brave souls trusting Oracle
 - **Alibaba Cloud Elastic Container Service (ACK)** – K8s with Chinese characteristics
