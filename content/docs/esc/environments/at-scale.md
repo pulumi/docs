@@ -180,7 +180,7 @@ Jane attempts to update the `common/aws` environment, adding a new value for the
 
 <img src="/images/docs/guides/esc/common-env-save-fail.png"><br>
 
-This is because our admin set the access policy to this environment on Jane's team as open only. In order to achieve what Jane wants they create a new environment, `identity/common`, which imports the `common/aws` environemnt and specifies their additional configuration.
+This is because our admin set the access policy to this environment on Jane's team as open only. In order to achieve what Jane wants they create a new environment, `identity/common`, which imports the `common/aws` environment and specifies their additional configuration.
 
 ```yaml
 imports:
