@@ -20,7 +20,7 @@ This document outlines the steps required to create and manage a Pulumi insights
 ## Prerequisites
 
 * You must be an admin of your Pulumi organization.
-* permissions required to create credentials within the provider account you want to scan
+* Permissions required to create credentials within the provider account you want to scan
 
 ## Account creation
 
