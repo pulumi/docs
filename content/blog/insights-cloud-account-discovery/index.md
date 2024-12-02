@@ -8,7 +8,7 @@ title: "Announcing Public Preview of Insights Account Discovery"
 # the time portion of the date value; posts are sorted in descending order by
 # date/time.
 #date: 2024-12-2T11:00:00-08:00
-date: 2024-11-27T11:00:00-08:00
+date: 2024-12-02T9:10:00-00:00
 
 # The draft setting determines whether a post is published. Set it to true if
 # you want to be able to merge the post without publishing it.
