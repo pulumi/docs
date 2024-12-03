@@ -1,0 +1,11 @@
+name: azure-native-import-resource-group-javascript
+description: An example that provides the code to import an existing resource group from Azure.
+runtime:
+  name: nodejs
+  options:
+    typescript: false
+    packagemanager: npm
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: azure-javascript
