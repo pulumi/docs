@@ -79,8 +79,8 @@ This discussion centered on the core pillars of platform engineering, strategies
 - Aligning DevOps and Security for Secure Platform Engineering
 - Shift Left Security
 - Embrace Automation and Standardization
-- Prioritize Observability and Monitoring 
-- Foster a Culture of Collaboration 
+- Prioritize Observability and Monitoring
+- Foster a Culture of Collaboration
 - Challenges of Integrating Security in Platform Engineering
 - Balancing Autonomy and Control
 - Driving Adoption and Changing Mindsets
@@ -188,7 +188,7 @@ As Jess Mink emphasizes, it's important to not just collect these metrics, but t
 
 ## The Future of Secure Platform Engineering
 
-Software development and infrastructure management are evolving, and the role of platform engineering will only become more critical to support it. By integrating DevOps and security practices, platform engineering teams can create scalable, secure platforms that empower developers to be more productive and innovate, delivering business value. 
+Software development and infrastructure management are evolving, and the role of platform engineering will only become more critical to support it. By integrating DevOps and security practices, platform engineering teams can create scalable, secure platforms that empower developers to be more productive and innovate, delivering business value.
 
 To learn more about building secure, scalable platforms with Pulumi and how our customers are doing it:
 
