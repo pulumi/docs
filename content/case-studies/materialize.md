@@ -25,7 +25,7 @@ sections:
       anchor: executive-summary
     - label: Challenges
       anchor: infrastructure-challenges
-    - label: Automated Infrastructure with Pulumi
+    - label: Automation with Pulumi
       anchor: automated-infratructure-management
     - label: Benefits of Using Pulumi
       anchor: benefits
