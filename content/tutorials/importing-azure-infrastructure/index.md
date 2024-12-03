@@ -239,12 +239,12 @@ To start, return to the Azure console and create two additional Storage Accounts
 {
     "resources": [
         {
-            "type": "aws:s3/bucket:Bucket",
+            "type": "azure-native:storage:StorageAccount",
             "name": "second-imported-storage-account",
             "id": "/subscriptions/0282681f..../resourceGroups/pulumi-tutorials/providers/Microsoft.Storage/storageAccounts/tutorialstorageacct2" # REPLACE
         },
         {
-            "type": "aws:s3/bucket:Bucket",
+            "type": "azure-native:storage:StorageAccount",
             "name": "third-imported-storage-account",
             "id": "/subscriptions/0282681f..../resourceGroups/pulumi-tutorials/providers/Microsoft.Storage/storageAccounts/tutorialstorageacct3" # REPLACE
         }
