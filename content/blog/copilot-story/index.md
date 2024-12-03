@@ -13,19 +13,21 @@ social:
     twitter: 🚀 Building Pulumi Copilot taught us key AI engineering insights – Minimize LLM workload, validate outputs rigorously & use "skills" for modular tasks. Plus, sometimes when AI hallucinates features, it reveals exactly what users want! 
     linkedin: 🚀 Building Pulumi Copilot taught us key AI engineering insights – Minimize LLM workload, validate outputs rigorously & use "skills" for modular tasks. Plus, sometimes when AI hallucinates features (like a "--force" flag), it reveals exactly what users want! 
 ---
-*Artur Laksberg and others have been working hard on Pulumi Copilot, an AI assistant for cloud engineeinfrastructure. Having worked extensively with conversational AIs at Microsoft before Pulumi, he brings unique insights into building with LLMs. Today he shares his lessons and an unexpected discovery he's learned along the way.*
+**Artur Laksberg and others have been working hard on Pulumi Copilot, an AI assistant for cloud engineeinfrastructure. Having worked extensively with conversational AIs at Microsoft before Pulumi, he brings unique insights into building with LLMs. Today he shares his lessons and an unexpected discovery he's learned along the way.**
 
 Since joining Pulumi back in June, I've spend my mornings reviewing user feedback for Copilot, our AI assistant. Recently, one message caught my eye: "Your tool doesn't know anything!". Having just updated our code database and refined our prompts, I braced for the worst. But the evals we run were still looking strong, so what was going on?
 
 <!--more-->
 
-The user was trying to force-delete a stack that still had resources. Copilot confidently suggested using a "--force" flag - a perfectly logical solution, except this flag doesn't exist in Pulumi. This is a day in the life of building on LLMs – hallicinations are a fact of life.
+The user was trying to force-delete a stack that still had resources. Copilot confidently suggested using a `--force` flag - a perfectly logical solution, except this flag doesn't exist in Pulumi. This is a day in the life of building on LLMs – hallicinations are a fact of life.
 
 But this particular error, this is a specific type of hallicination,  I now have a solution for and now that we've launched our REST API and Copilot has been running in production for a bit, I want to share some lessons we've learned building with LLMs.
 
 Let's start with the fundamental tension between software engineering and prompt engineering.
 
-## Engineering for Reality: Software vs Prompt Engineering
+## Engineering for Reality: Software Engineering vs Prompt Engineering
+
+![Software Engineering vs Prompt Engineering](soft-eng.png)
 
 When building LLM-powered applications, the temptation is to throw every task at the model. After all, modern LLMs are remarkably capable - they can generate code, format text, and even create clickable links. But this approach comes with hidden costs.
 
@@ -65,6 +67,8 @@ This structured approach enabled us to develop a more robust and nuanced system 
 
 ## Debug Dispatch
 
+![Before and After](optimize.png)
+
 Originally, when a user clicks "Debug with Copilot" on a failed update, we would send a text query to CoPilot like "Analyze this update and explain any errors." The LLM then:
 
 1. Determines the user wants to analyze an update
@@ -77,6 +81,8 @@ But we already know the user's intent - they clicked a debug button. Having the 
 This is another small win for our "Software Engineering over Prompt Engineering" approach. Traditional code handles the predictable parts, while AI focuses on the human-facing explanations. But while minimizing LLM workload helped with efficiency, we soon faced an even trickier challenge: the deceptive polish of AI-generated outputs.
 
 ## The Illusion of Correctness
+
+![Before and After](false-info.png)
 
 Large language models excel at generating well-structured, grammatically correct output. They can format tables, craft compelling narratives, and even mimic human conversational styles. But this polished presentation can mask underlying flaws in the information itself, creating a false sense of confidence for users.
 
@@ -94,18 +100,7 @@ This worked for basic validation, but quickly showed its limitations.  For insta
 
 These early failures highlighted the brittleness of keyword checking and the need for a more nuanced approach. Inspired by platforms like LangSmith, we started leveraging LLMs themselves for validation.  We adopted Promptfoo for automated testing.  Our test suite now runs against every code change, validating both response content and format.
 
-Here's a concrete example from our test suite, evaluating the same "How many Lambdas?" query:
-
-```python
-def validate_lambda_count(response):
-    prompt = f"""
-    Does this response accurately report the number of AWS Lambda functions?
-    Response to evaluate: {response}
-    Return YES if accurate, NO otherwise.
-    """
-    result = evaluate_with_llm(prompt, model="gpt-4")
-    return result.strip() == "YES"
-```
+![Example PromptFoo Eval](promptfoo.png)
 
 This LLM-as-judge approach provides more flexible validation. After implementing this approach, we saw a significant improvement in our ability to catch subtle errors that keyword checking missed.
 
