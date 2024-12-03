@@ -39,7 +39,19 @@ The solution was straightforward: generate the full links in the backend service
 
 This pattern - identifying deterministic components and moving them out of the LLM - has become central to our engineering approach. When you find yourself writing elaborate prompts to handle structured data transformations, stop and ask: could traditional code do this better? Could this be decomposed so that the LLM did less?
 
-One of the ways we decompose this is through what we call skills.
+To validate this approach and understand real user needs, we began extensive internal testing.
+
+## Copilot in Action: Real-World Dog-Fooding
+
+The internal testing phase was invaluable for uncovering bugs, refining our prompts, and, most importantly, understanding how real users would interact with the tool. Here are a few examples of how Copilot proved helpful, even in these early days:
+
+**Debugging Deployments:** One of the first questions our internal users asked was, 'Why did my latest infrastructure deployment fail?' Even before the refinements to this sysetem mentioend above, LLMs clearly succeed at summarization and extracting a clear natural langauge explanation from stack traces and logs is a clear win. This early success demonstrated Copilot's potential to streamline debugging workflows.
+
+**Understanding Complex Infrastructure:** Copilot helped our engineers gain insights into our own infrastructure. Asking 'How many resources are in production?'  or 'What expensive compute is running' or 'What version is the EKS cluters in EU" show that is an advantage to allow users to express infrastructure questions in natural langauge.
+
+**Generating Code:** Even internally, the demand for code generation was strong. One of the first queries logged was, 'I want a static website on AWS behind a CloudFront CDN.' Another was a Solutions Engineers, tasked with demonstrating Pulumi's CrossGuard policy engine to a prospect, asked Copilot to generate a policy. This shows the helpfulness of LLMs in getting you started with things you aren't intimately familair with.
+
+These early experiences revealed the need for a systematic approach to handling diverse user queries. This led us to develop what we call skills.
 
 ## Skillful Slicing: Modular Mastery
 
@@ -76,66 +88,47 @@ However, a closer inspection revealed the numbers were way off. Copilot had aske
 
 When testing traditional code, we expect deterministic outputs. With LLMs, even successful outcomes can vary significantly. Here's how we tackle this challenge.
 
-Our initial approach focused on keyword checking. For example, when testing our update analysis feature, we have a specific test case where a security error occurs. Our test validates that the LLM's response mentions "security" and describes the specific error condition.
+Our initial approach focused on keyword checking. For example, when testing our update analysis feature, we initiall had a specific test case where a security error occurs. Our test validates that the LLM's response mentions "security" and describes the specific error condition.
 
-This approach works well for basic validation but becomes brittle with complex responses. An LLM might correctly analyze the problem without using our expected keywords.  Furthermore, simply knowing *what* to test is a challenge in itself.
+This worked for basic validation, but quickly showed its limitations.  For instance, when a user asked, "How many Lambdas am I running?", the LLM correctly identified the AWS Lambda resources but didn't use the word "running." failing the eval.
 
-### Learning from Real Users
+These early failures highlighted the brittleness of keyword checking and the need for a more nuanced approach. Inspired by platforms like LangSmith, we started leveraging LLMs themselves for validation.  We adopted Promptfoo for automated testing.  Our test suite now runs against every code change, validating both response content and format.
 
-Early internal dogfooding, where we analyzed logs of real user queries, was crucial for shaping our initial test suite and for understanding what questions users were actually asking. And sometimes user-testing highlighted areas we needed to improve in our documentation.
-
-### Using LLMs to Test LLMs
-
-We evolved to using LLMs themselves for validation. We use Promptfoo for automated testing and LangSmith for monitoring. Our test suite runs against every code change, validating both response content and format.
-
-For streaming responses, we collect chunks into a complete response before validation. While this doesn't test the streaming itself, it ensures content quality.
-
-Here's a concrete example from our test suite:
+Here's a concrete example from our test suite, evaluating the same "How many Lambdas?" query:
 
 ```python
-def validate_update_analysis(response):
+def validate_lambda_count(response):
     prompt = f"""
-    Does this response contain:
-    1. Reference to security system error
-    2. Explanation of cause
-    3. Suggested solution
+    Does this response accurately report the number of AWS Lambda functions?
     Response to evaluate: {response}
-    Return YES only if all criteria met.
+    Return YES if accurate, NO otherwise.
     """
-    result = evaluate_with_llm(prompt)
+    result = evaluate_with_llm(prompt, model="gpt-4")
     return result.strip() == "YES"
 ```
 
-This approach provides more flexible validation while maintaining reliability. We've found that LLMs are remarkably consistent at this type of evaluation, even when their original outputs vary.
+This LLM-as-judge approach provides more flexible validation. After implementing this approach, we saw a significant improvement in our ability to catch subtle errors that keyword checking missed.
 
-The key is keeping validation criteria specific and responses binary.
+Early internal dogfooding, where we analyzed logs of real user queries, was crucial.  Questions like, "How do I use update plans?" and "Show me my untagged EC2 instances" were turned into evals, ensuring our tests reflected real-world usage. This iterative process, starting with a small set of evals and expanding it based on user data, allowed us to continually refine our prompts and models.  We weren't just testing in the abstract—we were testing against the questions our users were actually asking.  This approach, combined with the flexibility of LLM-as-judge, allowed us to significantly improve the quality and reliability of Pulumi Copilot's responses.
 
-## Copilot in Action: Real-World Dog-Fooding
+CoPilot is getting better all the time, as we continue to build evals and when models change and get better, evals help us validate we have no regressions. In a quick moving space like generative AI, lots of our code may turn over and change as we continually refine things, but our evals wil contiue to stength our position, reduce our hallicinations and keep our users happy.
 
-Before launching Copilot publicly, we extensively tested it internally at Pulumi. This phase was invaluable for uncovering bugs, refining our prompts, and, most importantly, understanding how real users would interact with the tool. Here are a few examples of how Copilot proved helpful, even in these early days:
+While our testing caught many hallucinations, that early user feedback about the '--force' flag still sticks with me today, because it revealed something unexpected about these errors.
 
-**Debugging Deployments:** One of the first questions our internal users asked was, 'Why did my latest infrastructure deployment fail?' Even before the refinements to this sysetem mentioend above, LLMs clearly succeed at summarization and extracting a clear natural langauge explanation from stack traces and logs is a clear win. This early success demonstrated Copilot's potential to streamline debugging workflows.
+## Errors Point the Way
 
-**Understanding Complex Infrastructure:** Copilot helped our engineers gain insights into our own infrastructure. Asking 'How many resources are in production?'  or 'What expensive compute is running' or 'What version is the EKS cluters in EU" show that is an advantage to allow users to express infrastructure questions in natural langauge.
+The `--force` hallucination wasn't totally wrong - it was revealing what users intuitively expect from our CLI. We're planning on implementing the "--force" flag for stack deletion because our LLM accidentally showed us what was missing. Force deletion is a common pattern across developer tools, and the LLM, trained on vast amounts of documentation and code, was simply reflecting these established conventions.
 
-**Generating Code:** Even internally, the demand for code generation was strong. One of the first queries logged was, 'I want a static website on AWS behind a CloudFront CDN.' Another was a Solutions Engineers, tasked with demonstrating Pulumi's CrossGuard policy engine to a prospect, asked Copilot to generate a policy. This shows the helpfulness of LLMs in getting you started with things you aren't intimately familair with.
+This has fundamentally changed how I view hallucinations. While we constantly work to minimize them – and our eval works means they happen way less frequently – some of them are clearly product signals. The LLM, in this light, becomes an unexpected source of user research, drawing on its training across thousands of developer tools and experiences.
 
-These early successes showed Copilot's potential, but not every early interaction went smoothly. Remember that angry user feedback about the "--force" flag? It led to an unexpected insight about product development.
+This insight, combined with our journey building Copilot, revealed five key principles for AI engineering:
 
-## Reality is Broken
-
-The hallucination wasn't wrong - it was revealing what users intuitively expect from our CLI. We're implementing the "--force" flag for stack deletion because our LLM accidentally showed us what was missing. Force deletion is a common pattern across developer tools, and the LLM, trained on vast amounts of documentation and code, was simply reflecting these established conventions.
-
-This has fundamentally changed how we view hallucinations. While we constantly work to minimize them – our eval works means they happen way less frequently – some of them are clearly product signals. The LLM, in this light, becomes an unexpected source of user research, drawing on its training across thousands of developer tools and experiences.
-
-These insights about hallucinations, combined with our journey building Copilot, revealed five key principles for AI engineering:
-
-1. Minimize LLM Usage: Let traditional code handle deterministic tasks, reserve LLMs for natural language work
-2. Decompose into Skills: Break complex tasks into modular units that combine LLM and traditional code appropriately
-3. Test Rigorously: Use multiple validation approaches, including LLMs testing LLMs
-4. Learn from Hallucinations: Sometimes incorrect outputs reveal user expectations
-5. Validate with Real Users: Early dogfooding shapes both product and testing
+1. **Minimize LLM Usage:** Let traditional code handle deterministic tasks, reserve LLMs for natural language work
+2. **Decompose into Skills:** Break complex tasks into modular units that combine LLM and traditional code appropriately
+3. **Test Rigorously:** Use multiple validation approaches, including LLMs testing LLMs
+4. **Learn from Hallucinations:** Sometimes incorrect outputs reveal user expectations
+5. **Learn from Users Continuously:** User interactions improve our AI systems - from training better skills to catching hallucinations and revealing product opportunities.
 
 We've built these lessons into our latest release: the Pulumi Copilot REST API, now available in preview. You can integrate these same capabilities and skills into your own tools and workflows. Whether you're building CLI extensions, chat integrations, or automated deployment checks, the API provides the contextual understanding we've engineered into Copilot.
 
-Try it out at docs.pulumi.com/copilot-api.
+[Try it out](docs.pulumi.com/copilot-api).
