@@ -1,6 +1,6 @@
 ---
 title: "Announcing the Pulumi Copilot REST API Preview"
-date: 2024-12-03T15:15:42-05:00
+date: 2024-12-12T15:15:42-05:00
 draft: false
 meta_desc: Explore Pulumi Copilot's new REST API preview for IaC.
 meta_image: meta.png

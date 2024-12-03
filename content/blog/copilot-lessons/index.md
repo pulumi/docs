@@ -1,6 +1,6 @@
 ---
 title: "Engineering Lessons from Building Pulumi Copilot"
-date: 2024-11-29T13:56:13-05:00
+date: 2024-12-12T13:56:13-05:00
 draft: false
 meta_desc: Learn key engineering lessons from building Pulumi Copilot, including how to minimize LLM workload, validate outputs, and deal with hallucination.
 meta_image: meta.png
