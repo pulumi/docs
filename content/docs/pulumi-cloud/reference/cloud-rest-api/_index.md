@@ -3817,7 +3817,7 @@ However, there are a few cases where the new API has changed the behavior of the
 ### List Environments available to the authenticated user.
 
 ```
-GET /esc/environments/{organization}
+GET /api/esc/environments/{organization}
 ```
 
 #### Parameters
@@ -3834,7 +3834,7 @@ curl \
   -H "Accept: application/vnd.pulumi+8" \
   -H "Content-Type: application/json" \
   -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
-  https://api.pulumi.com/esc/environments/{organization}
+  https://api.pulumi.com/api/esc/environments/{organization}
 ```
 
 #### Default response

@@ -40,7 +40,7 @@ main:
     youtube_url: 
 
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2024-12-11T09:00:00-07:00
+    sortable_date: 2024-12-11T10:00:00-07:00
 
     # Duration of the webinar.
     duration: 90 minutes
@@ -60,7 +60,7 @@ main:
     # The webinar presenters
     presenters:
         - name: Josh Kodroff 
-          role: Sr Solutions Architect, Pulumi
+          role: Principal Solutions Architect, Pulumi
           photo: /images/team/josh-kodroff.jpg
 
     # case-sensitive
@@ -78,8 +78,8 @@ form:
 
 event_data:
   name: "AWS Immersion Day: Accelerating Platform Engineering with Pulumi"
-  start_date: 2024-12-11T09:00:00-07:00
-  end_date: 2024-12-11T10:30:00-07:00
+  start_date: 2024-12-11T10:00:00-07:00
+  end_date: 2024-12-11T11:30:00-07:00
   url: "https://www.pulumi.com/resources/aws-immersion-day-platform-engineering/"
   description: |
     Join us for an exclusive post-re:Invent webinar where we'll explore how Pulumi can revolutionize your platform engineering efforts. Learn how to streamline infrastructure management, enhance developer productivity, and accelerate your cloud-native initiatives using Pulumi's powerful infrastructure-as-code capabilities.

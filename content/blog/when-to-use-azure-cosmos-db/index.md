@@ -271,8 +271,6 @@ Again, using some back-of-the-napkin math, DynamoDB in provisioned Mode is more 
 See also [Cosmos DB vs DynamoDB, Know The Differences](/what-is/database-comparison-cosmos-db-vs-dynamodb/)
 {{% /notes %}}
 
-https://cosmos.azure.com/capacitycalculator/
-
 ## Tangent: Azure Table Storage vs. Cosmos DB
 
 Cosmos DB also has a Azure Table API and marketing material saying it's a better choice than Azure Table Storage. My take is Azure Table and Cosmos DB's Table API both provide key-value storage with distinct trade-offs. Azure Table Storage is cost-effective and ideal for simpler, predictable workloads, requiring minimal complexity. Cosmos DB's Table API adds flexibility, optional global distribution, and tunable consistency, but also brings more complexity and cost.

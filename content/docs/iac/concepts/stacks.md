@@ -203,7 +203,7 @@ public class MyStack : Stack
     }
 
     // 'url' is the output name. By default, it would take the property name 'Url'.
-    [Output("url")] Output<string> Url { get; set; }
+    [Output("url")] public Output<string> Url { get; set; }
 }
  ```
 

@@ -48,7 +48,7 @@ The latest version of Pulumi is **{{< latest-version >}}**. For previous version
 <a class="btn btn-secondary mx-2" href="https://get.pulumi.com/releases/sdk/pulumi-v{{< latest-version >}}-darwin-x64.tar.gz">amd64</a>
 <a class="btn btn-secondary mx-2" href="https://get.pulumi.com/releases/sdk/pulumi-v{{< latest-version >}}-darwin-arm64.tar.gz">arm64</a></p>
 
-macOS Sierra (10.12) or later is required.
+macOS Ventura (13) or later is required.
 
 {{< get-started-note >}}
 

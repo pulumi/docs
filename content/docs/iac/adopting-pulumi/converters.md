@@ -37,6 +37,7 @@ For the detailed usage of this command and options, refer to the [pulumi convert
 * [Python](/docs/languages-sdks/python/)
 * [C#](/docs/languages-sdks/dotnet/)
 * [Java](/docs/languages-sdks/java/)
+* [YAML](/docs/languages-sdks/yaml/)
 
 ### Use cases for using pulumi convert
 
