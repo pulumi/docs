@@ -1,11 +1,29 @@
 ---
 title: Pulumi + AWS re:Invent 2024
-meta_desc: "Automate, secure and manage AWS infrastructure with IaC, secrets management, and cloud insights. Book 1:1s, join workshops, and transform your cloud strategy."
+meta_desc: "Visit Pulumi at booth 370 to book 1:1s, join workshops, and transform your cloud strategy. AWS re:Invent 2024 | December 2–6, 2024"
 meta_image: /images/reinvent/reinvent-meta-24.png
 type: page
 layout: reinvent
 aliases:
   - aws-reinvent-2021
+
+exhibition_data:
+    name: "AWS re:Invent 2024"
+    description: "Visit Pulumi at booth #370 to book 1:1s, join workshops, and transform your cloud strategy."
+    start_date: "2024-12-02"
+    end_date: "2024-12-06"
+    location:
+        name: "The Venetian Convention and Expo Center"
+        address:
+            street: "3355 S Las Vegas Blvd"
+            locality: "Las Vegas"
+            region: "NV"
+            postal_code: "89109"
+            country: "US"
+    organizer:
+        name: "Amazon Web Services"
+        url: https://reinvent.awsevents.com/
+    booth: "370"
 
 awsx:
     yaml: |
