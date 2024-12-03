@@ -1,6 +1,6 @@
 ---
-title: "Reference Azure Resources Across Stacks"
-title_tag: "Reference Azure Resources Across Stacks"
+title: "Reference Google Cloud Resources Across Stacks"
+title_tag: "Reference Google Cloud Resources Across Stacks"
 layout: single
 
 # A succinct description of the tutorial. It appears on the Tutorials home and collection pages.
@@ -10,7 +10,7 @@ description: Learn more about exporting and referencing stack outputs in Pulumi.
 meta_desc: Learn more about exporting and referencing stack outputs in Pulumi.
 
 # An image for the tutorial. It appears on tutorial page and in social-media previews.
-meta_image: stack-ref-az-meta.png
+meta_image: stack-ref-gcp-meta.png
 
 # An optional video for the tutorial. When present, it appears at the top of the page, replacing
 # the meta image. YouTube and HTML5 video sources are supported.
@@ -24,7 +24,7 @@ weight: 999
 
 # A brief summary of the tutorial. It appears at the top of the tutorial page. Markdown is fine.
 summary: |
-    In this tutorial, you will learn how to work with stack outputs, specifically how to export values from a stack and how to reference those values from another stack. You will do this by creating simple Azure Resource Group, Storage Account, and Blob Container resources in one stack. You will then create a Blob resource in a second project/stack that will upload a file to the Blob Storage defined in the first stack.
+    In this tutorial, you will learn how to work with stack outputs, specifically how to export values from a stack and how to reference those values from another stack. You will do this by creating simple Google Cloud Storage Bucket and custom IAM Role resources in one stack. You will then create a Bucket Object resource in a second project/stack that will upload a file to the bucket created in the first stack.
 
 # A list of three to five things the reader will have learned by the end of the tutorial.
 youll_learn:
@@ -36,8 +36,8 @@ youll_learn:
 prereqs:
     - The [Pulumi CLI](/docs/install/)
     - A [Pulumi Cloud account](https://app.pulumi.com/signup) and [access token](/docs/pulumi-cloud/accounts/#access-tokens)
-    - An [Azure account](https://azure.microsoft.com/en-us/pricing/purchase-options/azure-account)
-    - The [Azure CLI](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli)
+    - A [Google Cloud account](https://cloud.google.com/cloud-console)
+    - The [Google Cloud CLI](https://cloud.google.com/sdk/docs/install)
     - Familiarity with one of [Pulumi's supported languages](/docs/iac/languages-sdks/)
 
 # The estimated time, in minutes, for new users to complete the topic.
@@ -45,7 +45,7 @@ estimated_time: 15
 
 # # An optional list of collections this tutorial should be belong to. Collections are defined in data/tutorials/collections.yaml.
 # collections:
-#     - azure
+#     - gcp
 ---
 
 ## Understanding stack outputs
@@ -58,9 +58,9 @@ These outputs are shown during an update, can be easily retrieved with the Pulum
 
 ```bash
 # Example using Python
-$ mkdir pulumi-tutorial-azure
-$ cd pulumi-tutorial-azure
-$ pulumi new azure-python
+$ mkdir pulumi-tutorial-gcp
+$ cd pulumi-tutorial-gcp
+$ pulumi new gcp-python
 ```
 
 Then replace the default code with the following code snippet to scaffold your project with the required imports and overall program structure:
@@ -70,7 +70,7 @@ Then replace the default code with the following code snippet to scaffold your p
 {{% choosable language javascript %}}
 
 ```javascript
-{{< example-program-snippet path="azure-native-storage-account-blob" language="javascript" from="1" to="19" >}}
+{{< example-program-snippet path="gcp-storage-bucket-object" language="javascript" from="1" to="21" >}}
 ```
 
 {{% /choosable %}}
@@ -78,7 +78,7 @@ Then replace the default code with the following code snippet to scaffold your p
 {{% choosable language typescript %}}
 
 ```typescript
-{{< example-program-snippet path="azure-native-storage-account-blob" language="typescript" from="1" to="18" >}}
+{{< example-program-snippet path="gcp-storage-bucket-object" language="typescript" from="1" to="20" >}}
 ```
 
 {{% /choosable %}}
@@ -86,7 +86,7 @@ Then replace the default code with the following code snippet to scaffold your p
 {{% choosable language python %}}
 
 ```python
-{{< example-program-snippet path="azure-native-storage-account-blob" language="python" from="1" to="18" >}}
+{{< example-program-snippet path="gcp-storage-bucket-object" language="python" from="1" to="26" >}}
 ```
 
 {{% /choosable %}}
@@ -94,9 +94,9 @@ Then replace the default code with the following code snippet to scaffold your p
 {{% choosable language go %}}
 
 ```go
-{{< example-program-snippet path="azure-native-storage-account-blob" language="go" from="1" to="33" >}}
+{{< example-program-snippet path="gcp-storage-bucket-object" language="go" from="1" to="41" >}}
 
-{{< example-program-snippet path="azure-native-storage-account-blob" language="go" from="52" to="54" >}}
+{{< example-program-snippet path="gcp-storage-bucket-object" language="go" from="64" to="66" >}}
 ```
 
 {{% /choosable %}}
@@ -104,9 +104,9 @@ Then replace the default code with the following code snippet to scaffold your p
 {{% choosable language csharp %}}
 
 ```csharp
-{{< example-program-snippet path="azure-native-storage-account-blob" language="csharp" from="1" to="25" >}}
+{{< example-program-snippet path="gcp-storage-bucket-object" language="csharp" from="1" to="31" >}}
 
-{{< example-program-snippet path="azure-native-storage-account-blob" language="csharp" from="47" to="47" >}}
+{{< example-program-snippet path="gcp-storage-bucket-object" language="csharp" from="48" to="48" >}}
 ```
 
 {{% /choosable %}}
@@ -114,20 +114,20 @@ Then replace the default code with the following code snippet to scaffold your p
 {{% choosable language yaml %}}
 
 ```yaml
-{{< example-program-snippet path="azure-native-storage-account-blob" language="yaml" from="1" to="19" >}}
+{{< example-program-snippet path="gcp-storage-bucket-object" language="yaml" from="1" to="27" >}}
 ```
 
 {{% /choosable %}}
 
 This baseline code defines the following on your behalf:
 
-- a [Resource Group](/registry/packages/azure-native/api-docs/resources/resourcegroup/)
-- a [Storage Account](/registry/packages/azure-native/api-docs/storage/storageaccount/)
-- a [Blob Container](/registry/packages/azure-native/api-docs/storage/blobcontainer/)
+- an [IAM Custom Role](/registry/packages/gcp/api-docs/projects/iamcustomrole/)
+- a [Storage Bucket](/registry/packages/gcp/api-docs/storage/bucket/)
+- an [IAM Role Assignment](/registry/packages/gcp/api-docs/projects/iammember/)
 
 ## Export resource values
 
-As mentioned in the [Creating Resources on Azure tutorial](/tutorials/creating-resources-azure/), every resource has various properties. For any resources that you define in your Pulumi projects, you can [export the values](/docs/iac/concepts/stacks/#outputs) of its properties from your program as outputs. You can view a list of available properties that can be exported by referring to the resource properties section of a particular resource's API documentation (e.g. [Resource Group resource properties](/registry/packages/azure-native/api-docs/resources/resourcegroup/#properties)). The `export` syntax is as follows:
+As mentioned in the [Creating Resources on Google Cloud tutorial](/tutorials/creating-resources-gcp/), every resource has various properties. For any resources that you define in your Pulumi projects, you can [export the values](/docs/iac/concepts/stacks/#outputs) of its properties from your program as outputs. You can view a list of available properties that can be exported by referring to the resource properties section of a particular resource's API documentation (e.g. [Bucket properties](https://www.pulumi.com/registry/packages/gcp/api-docs/storage/bucket/#properties)). The `export` syntax is as follows:
 
 {{< chooser language "javascript,typescript,python,go,csharp,yaml" / >}}
 
@@ -195,16 +195,16 @@ When defining these exports, you'll need to provide two arguments:
 | Output name | This is the name you will use as the identifier of your output value |
 | Output value | This is the actual value of your output |
 
-To demonstrate how this works, let's export the name of your resource group. By referring to the documentation, you can see that the name of the resource group can be referenced via its `name` property, so update your code to reflect that as shown below:
+To demonstrate how this works, let's export the name of your IAM Role. By referring to the documentation, you can see that the name of the IAM Role can be referenced via its `role ID` property, so update your code to reflect that as shown below:
 
 {{< chooser language "javascript,typescript,python,go,csharp,yaml" / >}}
 
 {{% choosable language javascript %}}
 
 ```javascript
-{{< example-program-snippet path="azure-native-storage-account-blob" language="javascript" from="1" to="19" >}}
+{{< example-program-snippet path="gcp-storage-bucket-object" language="javascript" from="1" to="21" >}}
 
-{{< example-program-snippet path="azure-native-storage-account-blob" language="javascript" from="34" to="34" >}}
+{{< example-program-snippet path="gcp-storage-bucket-object" language="javascript" from="32" to="32" >}}
 ```
 
 {{% /choosable %}}
@@ -212,9 +212,9 @@ To demonstrate how this works, let's export the name of your resource group. By 
 {{% choosable language typescript %}}
 
 ```typescript
-{{< example-program-snippet path="azure-native-storage-account-blob" language="typescript" from="1" to="18" >}}
+{{< example-program-snippet path="gcp-storage-bucket-object" language="typescript" from="1" to="20" >}}
 
-{{< example-program-snippet path="azure-native-storage-account-blob" language="typescript" from="33" to="33" >}}
+{{< example-program-snippet path="gcp-storage-bucket-object" language="typescript" from="31" to="31" >}}
 ```
 
 {{% /choosable %}}
@@ -222,9 +222,9 @@ To demonstrate how this works, let's export the name of your resource group. By 
 {{% choosable language python %}}
 
 ```python
-{{< example-program-snippet path="azure-native-storage-account-blob" language="python" from="1" to="18" >}}
+{{< example-program-snippet path="gcp-storage-bucket-object" language="python" from="1" to="26" >}}
 
-{{< example-program-snippet path="azure-native-storage-account-blob" language="python" from="33" to="33" >}}
+{{< example-program-snippet path="gcp-storage-bucket-object" language="python" from="40" to="40" >}}
 ```
 
 {{% /choosable %}}
@@ -232,11 +232,11 @@ To demonstrate how this works, let's export the name of your resource group. By 
 {{% choosable language go %}}
 
 ```go
-{{< example-program-snippet path="azure-native-storage-account-blob" language="go" from="1" to="33" >}}
+{{< example-program-snippet path="gcp-storage-bucket-object" language="go" from="1" to="41" >}}
 
-{{< example-program-snippet path="azure-native-storage-account-blob" language="go" from="48" to="48" >}}
+{{< example-program-snippet path="gcp-storage-bucket-object" language="go" from="62" to="62" >}}
 
-{{< example-program-snippet path="azure-native-storage-account-blob" language="go" from="52" to="54" >}}
+{{< example-program-snippet path="gcp-storage-bucket-object" language="go" from="64" to="66" >}}
 ```
 
 {{% /choosable %}}
@@ -244,11 +244,10 @@ To demonstrate how this works, let's export the name of your resource group. By 
 {{% choosable language csharp %}}
 
 ```csharp
-{{< example-program-snippet path="azure-native-storage-account-blob" language="csharp" from="1" to="25" >}}
+{{< example-program-snippet path="gcp-storage-bucket-object" language="csharp" from="1" to="31" >}}
 
-{{< example-program-snippet path="azure-native-storage-account-blob" language="csharp" from="41" to="43" >}}
-
-{{< example-program-snippet path="azure-native-storage-account-blob" language="csharp" from="46" to="47" >}}
+{{< example-program-snippet path="gcp-storage-bucket-object" language="csharp" from="43" to="45" >}}
+{{< example-program-snippet path="gcp-storage-bucket-object" language="csharp" from="47" to="48" >}}
 ```
 
 {{% /choosable %}}
@@ -256,9 +255,9 @@ To demonstrate how this works, let's export the name of your resource group. By 
 {{% choosable language yaml %}}
 
 ```yaml
-{{< example-program-snippet path="azure-native-storage-account-blob" language="yaml" from="1" to="19" >}}
+{{< example-program-snippet path="gcp-storage-bucket-object" language="yaml" from="1" to="27" >}}
 
-{{< example-program-snippet path="azure-native-storage-account-blob" language="yaml" from="36" to="37" >}}
+{{< example-program-snippet path="gcp-storage-bucket-object" language="yaml" from="40" to="41" >}}
 ```
 
 {{% /choosable %}}
@@ -269,35 +268,33 @@ Now save your file and run the `pulumi up` command to preview and deploy the res
 
 ```bash
 $ pulumi up -y
-Previewing update (infra)
+Previewing update (stack-outputs)
 
-     Type                                     Name                  Plan
- +   pulumi:pulumi:Stack                      infra                 create
- +   ├─ azure-native:resources:ResourceGroup  resource-group        create
- +   ├─ azure-native:storage:StorageAccount   storageaccount        create
- +   └─ azure-native:storage:BlobContainer    blobcontainer         create
-
-Outputs:
-    resourceGroupName: output<string>
-
-Resources:
-    + 4 to create
-
-Updating (infra)
-
-     Type                                     Name                  Status
- +   pulumi:pulumi:Stack                      infra                 created (40s)
- +   ├─ azure-native:resources:ResourceGroup  resource-group        created (3s)
- +   ├─ azure-native:storage:StorageAccount   storageaccount        created (27s)
- +   └─ azure-native:storage:BlobContainer    blobcontainer         created (3s)
+     Type                           Name               Plan
+ +   pulumi:pulumi:Stack            gcp-stack-outputs  create
+ +   ├─ gcp:projects:IAMCustomRole  bucketViewerRole   create
+ +   └─ gcp:storage:Bucket          my-bucket          create
 
 Outputs:
-    resourceGroupName: "resource-group0e6ebba3"
+    roleName: output<string>
 
 Resources:
-    + 4 created
+    + 3 to create
 
-Duration: 42s
+Updating (stack-outputs)
+
+     Type                           Name               Status
+ +   pulumi:pulumi:Stack            gcp-stack-outputs  created (6s)
+ +   ├─ gcp:storage:Bucket          my-bucket          created (1s)
+ +   └─ gcp:projects:IAMCustomRole  bucketViewerRole   created (2s)
+
+Outputs:
+    roleName: "bucketViewerRole"
+
+Resources:
+    + 3 created
+
+Duration: 8s
 ```
 
 You can see that the output you've created has been provided as a part of the update details. You will learn the different ways you can access this output in the next steps of the tutorial.
@@ -310,32 +307,30 @@ Now that your resources are deployed, you can access its value either via the CL
 $ pulumi stack output
 
 Current stack outputs (1):
-    OUTPUT             VALUE
-    resourceGroupName  resource-group0e6ebba3
+    OUTPUT    VALUE
+    roleName  bucketViewerRole
 ```
 
 If you want to retrieve a specific output value, you will need to provide the name of your desired output as shown below:
 
 ```bash
-$ pulumi stack output resourceGroupName
+$ pulumi stack output roleName
 
-resource-group0e6ebba3
+bucketViewerRole
 ```
 
-This can be especially useful if you have any workflow scripts that depend on the outputs of your program. For example, if you wanted to view the details of your resource group using the Azure CLI, you can do so by running the [`az group show` command](https://learn.microsoft.com/en-us/cli/azure/group?view=azure-cli-latest#az-group-show) and passing the output of `resourceGroupName` to the `--resource-group` flag:
+This can be especially useful if you have any workflow scripts that depend on the outputs of your program. For example, if you wanted to view the details of your IAM Role using the Google Cloud CLI, you can do so by running the [`gcloud iam roles describe` command](https://cloud.google.com/sdk/gcloud/reference/iam/roles/describe) and passing the output of `roleName` to the command, making sure to replace the value of `<YOUR_PROJECT_NAME>` with the name of your Google Cloud project:
 
 ```bash
-$ az group show --resource-group $(pulumi stack output resourceGroupName)
+$ gcloud iam roles describe --project=<YOUR_PROJECT_NAME> $(pulumi stack output roleName)
 
-{
-  "id": "/subscriptions/0282681f-7a9e-424b-80b2-96babd57a8a1/resourceGroups/resource-group0e6ebba3",
-  "location": "westus2",
-  "managedBy": null,
-  "name": "resource-group0e6ebba3",
-  "properties": { "provisioningState": "Succeeded" },
-  "tags": null,
-  "type": "Microsoft.Resources/resourceGroups"
-}
+etag: BwYm3xAUufQ=
+includedPermissions:
+- storage.objects.get
+- storage.objects.list
+name: projects/pulumi-devrel/roles/bucketViewerRole
+stage: GA
+title: Bucket Viewer Role
 ```
 
 You have seen how you can reference your output values from the CLI. Now let’s take a look at how you can do the same from within another Pulumi program stack.
@@ -445,7 +440,7 @@ Make sure that the fully qualified name in the example above is populated with t
 
 {{% /notes %}}
 
-You will now create an export in your second program that will output the value of the resource group name from your first program. This is to demonstrate how to retrieve output values from another stack for use in your program.
+You will now create an export in your second program that will output the value of the role name from your first program. This is to demonstrate how to retrieve output values from another stack for use in your program.
 
 For the value of your export, you can retrieve it by taking your stack reference variable and using a Stack Reference function called getOutput() against it.
 
@@ -459,13 +454,13 @@ Update your code with the following:
 "use strict";
 const pulumi = require("@pulumi/pulumi");
 
+// Retrieve the output values from the first stack
 const stackRef = new pulumi.StackReference("acmecorp/infra/dev");
 
-// Retrieve resource group name from the first stack
-// using the stack reference above
-const resourceGroupName = stackRef.getOutput("resourceGroupName");
+// Retrieve the role name from the output values
+const roleName = stackRef.getOutput("roleName");
 
-exports.resourceGroupName = resourceGroupName;
+exports.roleName = roleName;
 ```
 
 {{% /choosable %}}
@@ -475,13 +470,13 @@ exports.resourceGroupName = resourceGroupName;
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 
+// Retrieve the output values from the first stack
 const stackRef = new pulumi.StackReference("acmecorp/infra/dev");
 
-// Retrieve resource group name from the first stack
-// using the stack reference above
-const resourceGroupName = stackRef.getOutput("resourceGroupName");
+// Retrieve the role name from the output values
+const roleName = stackRef.getOutput("roleName");
 
-export const resourceGroupName = resourceGroupName;
+export const roleName = roleName;
 ```
 
 {{% /choosable %}}
@@ -491,13 +486,13 @@ export const resourceGroupName = resourceGroupName;
 ```python
 import pulumi
 
+# Retrieve the output values from the first stack
 stack_ref = pulumi.StackReference("acmecorp/infra/dev")
 
-# Retrieve resource group name from the first stack
-# using the stack reference above
-resource_group_name = stack_ref.get_output("resourceGroupName")
+# Retrieve the role name from the output values
+role_name = stack_ref.get_output("roleName")
 
-pulumi.export("resourceGroupName", resource_group_name)
+pulumi.export("roleName", role_name)
 ```
 
 {{% /choosable %}}
@@ -513,16 +508,16 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
+        // Retrieve the output values from the first stack
         stackRef, err := pulumi.NewStackReference(ctx, "acmecorp/infra/dev", nil)
         if err != nil {
             return err
         }
 
-        // Retrieve resource group name from the first stack
-        // using the stack reference above
-        resourceGroupName := stackRef.GetOutput(pulumi.String("resourceGroupName"))
+        // Retrieve the role name from the output values
+        roleName := stackRef.GetOutput(pulumi.String("roleName"))
 
-        ctx.Export("resourceGroupName", resourceGroupName)
+        ctx.Export("roleName", roleName)
 		return nil
 	})
 }
@@ -537,16 +532,15 @@ using Pulumi;
 
 return await Pulumi.Deployment.RunAsync(() =>
 {
-
+    // Retrieve the output values from the first stack
     var stackRef = new StackReference("acmecorp/infra/dev");
 
-    // Retrieve resource group name from the first stack
-    // using the stack reference above
-    var resourceGroupName = stackRef.GetOutput("resourceGroupName");
+    // Retrieve the role name from the output values
+    var roleName = stackRef.GetOutput("roleName");
 
     return new Dictionary<string, object?>
     {
-        ["resourceGroupName"] = resourceGroupName
+        ["roleName"] = roleName
     };
 
 });
@@ -562,16 +556,18 @@ runtime: yaml
 description: A program to create a Stack Reference
 
 resources:
+  # Retrieve the output values from the first stack
   stack-ref:
     type: pulumi:pulumi:StackReference
     properties:
       name: acmecorp/infra/dev
 
 variables:
-  resourceGroupName: ${stack-ref.outputs["resourceGroupName"]}
+  # Retrieve the role name from the output values
+  roleName: ${stack-ref.outputs["roleName"]}
 
 outputs:
-  resourceGroupName: ${resourceGroupName}
+  roleName: ${roleName}
 ```
 
 {{% /choosable %}}
@@ -587,7 +583,7 @@ Previewing update (dev):
  +   pulumi:pulumi:Stack  my-second-app-dev             create
 
 Outputs:
-    resourceGroupName: output<string>
+    roleName: output<string>
 
 Resources:
     + 4 to create
@@ -599,29 +595,29 @@ Updating (dev):
  +   pulumi:pulumi:Stack  my-second-app-dev             created (2s)
 
 Outputs:
-    resourceGroupName: "resource-group0e6ebba3"
+    roleName: "bucketViewerRole"
 
 Resources:
-    + 1 created
+    + 4 created
 
 Duration: 3s
 ```
 
-You should see the name of your resource group from your first program successfully outputted in the update details of your second program.
+You should see the name of your IAM role from your first program successfully outputted in the update details of your second program.
 
 ## Use stack reference in resource definition
 
-In this section, you will use everything you have learned in this tutorial to define a resource that uses a stack reference in the resource definition. In your second program, you will be defining a Blob resource that will upload a file to the Blob container that was created in your first program. Use the following steps as a guide for adding the Blob resource:
+In this section, you will use everything you have learned in this tutorial to define a resource that uses a stack reference in the resource definition. In your second program, you will be defining a bucket object resource that will upload a file to the Storage Bucket that was created in your first program. Use the following steps as a guide for adding the Blob resource:
 
-- Navigate to the [Azure Native Registry documentation page](/registry/packages/azure-native/)
-- Search for the `azure-native.storage.Blob` resource
-- Define the Blob resource in your second program code
+- Navigate to the [Google Cloud Registry documentation page](/registry/packages/gcp/)
+- Search for the `gcp.storage.BucketObject` resource
+- Define the Bucket Object resource in your second program code
 - Export required property values in your first program code
 - Import required property values in your second program
 - Save and deploy your first program code
 - Then save and deploy your second program code
 
-Once you have completed these steps, you can verify that the Blob was successfully created and uploaded to the container by navigating to `Storage Accounts -> Your Storage Account -> Storage browser -> Blob containers -> blobcontainer` in the Azure Portal.
+Once you have completed these steps, you can verify that the object was successfully created and uploaded to the conbuckettainer by navigating to `Cloud Storage -> Buckets -> <YOUR_PROJECT_NAME> -> <YOUR_BUCKET_NAME>` in the Google Cloud Portal.
 
 ## View complete solution
 
@@ -634,9 +630,9 @@ You can view the code for the complete solution below.
 {{% choosable language javascript %}}
 
 ```javascript
-{{< example-program-snippet path="azure-native-storage-account-blob" language="javascript" from="1" to="19" >}}
+{{< example-program-snippet path="gcp-storage-bucket-object" language="javascript" from="1" to="21" >}}
 
-{{< example-program-snippet path="azure-native-storage-account-blob" language="javascript" from="34" to="36" >}}
+{{< example-program-snippet path="gcp-storage-bucket-object" language="javascript" from="32" to="33" >}}
 ```
 
 {{% /choosable %}}
@@ -644,9 +640,9 @@ You can view the code for the complete solution below.
 {{% choosable language typescript %}}
 
 ```typescript
-{{< example-program-snippet path="azure-native-storage-account-blob" language="typescript" from="1" to="18" >}}
+{{< example-program-snippet path="gcp-storage-bucket-object" language="typescript" from="1" to="20" >}}
 
-{{< example-program-snippet path="azure-native-storage-account-blob" language="typescript" from="33" to="35" >}}
+{{< example-program-snippet path="gcp-storage-bucket-object" language="typescript" from="31" to="32" >}}
 ```
 
 {{% /choosable %}}
@@ -654,9 +650,9 @@ You can view the code for the complete solution below.
 {{% choosable language python %}}
 
 ```python
-{{< example-program-snippet path="azure-native-storage-account-blob" language="python" from="1" to="18" >}}
+{{< example-program-snippet path="gcp-storage-bucket-object" language="python" from="1" to="26" >}}
 
-{{< example-program-snippet path="azure-native-storage-account-blob" language="python" from="23" to="35" >}}
+{{< example-program-snippet path="gcp-storage-bucket-object" language="python" from="40" to="41" >}}
 ```
 
 {{% /choosable %}}
@@ -664,9 +660,10 @@ You can view the code for the complete solution below.
 {{% choosable language go %}}
 
 ```go
-{{< example-program-snippet path="azure-native-storage-account-blob" language="go" from="1" to="33" >}}
+{{< example-program-snippet path="gcp-storage-bucket-object" language="go" from="1" to="41" >}}
 
-{{< example-program-snippet path="azure-native-storage-account-blob" language="go" from="48" to="54" >}}
+{{< example-program-snippet path="gcp-storage-bucket-object" language="go" from="62" to="66" >}}
+
 ```
 
 {{% /choosable %}}
@@ -674,9 +671,9 @@ You can view the code for the complete solution below.
 {{% choosable language csharp %}}
 
 ```csharp
-{{< example-program-snippet path="azure-native-storage-account-blob" language="csharp" from="1" to="25" >}}
+{{< example-program-snippet path="gcp-storage-bucket-object" language="csharp" from="1" to="31" >}}
 
-{{< example-program-snippet path="azure-native-storage-account-blob" language="csharp" from="41" to="47" >}}
+{{< example-program-snippet path="gcp-storage-bucket-object" language="csharp" from="43" to="48" >}}
 ```
 
 {{% /choosable %}}
@@ -684,9 +681,9 @@ You can view the code for the complete solution below.
 {{% choosable language yaml %}}
 
 ```yaml
-{{< example-program-snippet path="azure-native-storage-account-blob" language="yaml" from="1" to="19" >}}
+{{< example-program-snippet path="gcp-storage-bucket-object" language="yaml" from="1" to="27" >}}
 
-{{< example-program-snippet path="azure-native-storage-account-blob" language="yaml" from="36" to="39" >}}
+{{< example-program-snippet path="gcp-storage-bucket-object" language="yaml" from="40" to="42" >}}
 ```
 
 {{% /choosable %}}
@@ -703,11 +700,10 @@ const pulumi = require("@pulumi/pulumi");
 
 const stackRef = new pulumi.StackReference("acmecorp/infra/dev");
 
-const resourceGroupName = stackRef.getOutput("resourceGroupName");
-const storageAccountName = stackRef.getOutput("storageAccountName");
-const blobContainerName = stackRef.getOutput("blobContainerName");
+const roleName = stackRef.getOutput("roleName");
+const bucketName = stackRef.getOutput("bucketName");
 
-{{< example-program-snippet path="azure-native-storage-account-blob" language="javascript" from="25" to="32" >}}
+{{< example-program-snippet path="gcp-storage-bucket-object" language="javascript" from="26" to="30" >}}
 ```
 
 {{% /choosable %}}
@@ -719,11 +715,10 @@ import * as pulumi from "@pulumi/pulumi";
 
 const stackRef = new pulumi.StackReference("acmecorp/infra/dev");
 
-const resourceGroupName2 = stackRef.getOutput("resourceGroupName");
-const storageAccountName2 = stackRef.getOutput("storageAccountName");
-const blobContainerName2 = stackRef.getOutput("blobContainerName");
+const roleName2 = stackRef.getOutput("roleName");
+const bucketName2 = stackRef.getOutput("bucketName");
 
-{{< example-program-snippet path="azure-native-storage-account-blob" language="typescript" from="24" to="31" >}}
+{{< example-program-snippet path="gcp-storage-bucket-object" language="typescript" from="25" to="29" >}}
 ```
 
 {{% /choosable %}}
@@ -735,11 +730,10 @@ import pulumi
 
 stack_ref = pulumi.StackReference("acmecorp/infra/dev")
 
-resource_group_name = stack_ref.get_output("resourceGroupName")
-storage_account_name = stack_ref.get_output("storageAccountName")
-blob_container_name = stack_ref.get_output("blobContainerName")
+role_name = stack_ref.get_output("roleName")
+bucket_name = stack_ref.get_output("bucketName")
 
-{{< example-program-snippet path="azure-native-storage-account-blob" language="python" from="24" to="31" >}}
+{{< example-program-snippet path="gcp-storage-bucket-object" language="python" from="33" to="38" >}}
 ```
 
 {{% /choosable %}}
@@ -760,11 +754,11 @@ func main() {
             return err
         }
 
-        resourceGroupName := stackRef.GetOutput(pulumi.String("resourceGroupName"))
-        storageAccountName := stackRef.GetOutput(pulumi.String("storageAccountName"))
-        blobContainerName := stackRef.GetOutput(pulumi.String("blobContainerName"))
+        roleName := stackRef.GetOutput(pulumi.String("roleName"))
+        bucketName := stackRef.GetOutput(pulumi.String("bucketName"))
 
-{{< example-program-snippet path="azure-native-storage-account-blob" language="go" from="39" to="46" >}}
+
+{{< example-program-snippet path="gcp-storage-bucket-object" language="go" from="51" to="60" >}}
 
 		return nil
 	})
@@ -783,11 +777,10 @@ return await Pulumi.Deployment.RunAsync(() =>
 
     var stackRef = new StackReference("acmecorp/infra/dev");
 
-    var resourceGroupName = stackRef.GetOutput("resourceGroupName");
-    var storageAccountName = stackRef.GetOutput("storageAccountName");
-    var blobContainerName = stackRef.GetOutput("blobContainerName");
+    var roleName = stackRef.GetOutput("roleName");
+    var bucketName = stackRef.GetOutput("bucketName");
 
-{{< example-program-snippet path="azure-native-storage-account-blob" language="csharp" from="31" to="39" >}}
+{{< example-program-snippet path="gcp-storage-bucket-object" language="csharp" from="36" to="41" >}}
 
 });
 ```
@@ -807,12 +800,11 @@ resources:
     properties:
       name: acmecorp/infra/dev
 
-{{< example-program-snippet path="azure-native-storage-account-blob" language="yaml" from="20" to="29" >}}
+{{< example-program-snippet path="gcp-storage-bucket-object" language="yaml" from="29" to="34" >}}
 
 variables:
-  resourceGroupName: ${stack-ref.outputs["resourceGroupName"]}
-  storageAccountName: ${stack-ref.outputs["storageAccountName"]}
-  blobContainerName: ${stack-ref.outputs["blobContainerName"]}
+  roleName: ${stack-ref.outputs["roleName"]}
+  bucketName: ${stack-ref.outputs["bucketName"]}
 ```
 
 {{% /choosable %}}
@@ -823,10 +815,10 @@ variables:
 
 ## Next steps
 
-In this tutorial, you created an Azure Blob Storage and Container resource. You also referenced the documentation to create a Blob object that would upload a file to the container. You exported resource properties into stack outputs, and referenced those outputs across stacks using stack references.
+In this tutorial, you created a Google Cloud Storage Bucket and custom IAM role. You also referenced the documentation to create a storage object that would upload a file to the bucket. You exported resource properties into stack outputs, and referenced those outputs across stacks using stack references.
 
 To learn more about creating and managing resources in Pulumi, take a look at the following resources:
 
-- Learn more about creating resources in the [Creating Resources on Azure tutorial](/tutorials/creating-resources-azure/).
+- Learn more about creating resources in the [Creating Resources on Google Cloud tutorial](/tutorials/creating-resources-gcp/).
 - Learn more about [stack outputs and references](/docs/concepts/stack/#stackreferences) in the Pulumi documentation.
 - Learn more about [Pulumi inputs and outputs](/docs/concepts/inputs-outputs/) in the Pulumi documentation.
