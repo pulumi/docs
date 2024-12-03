@@ -98,6 +98,7 @@ pushd "$programs_dir"
         pulumi -C "$project" config set aws:region us-west-2 || true
         pulumi -C "$project" config set azure:location eastus || true
         pulumi -C "$project" config set azure-native:location eastus || true
+        pulumi -C "$project" config set resourceGroupName pulumi-tutorials || true
         pulumi -C "$project" config set gcp:region us-central1 || true
         pulumi -C "$project" config set gcp:zone us-central1-a || true
         pulumi -C "$project" config set gcp:project pulumi-devrel || true
