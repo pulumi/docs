@@ -8,14 +8,14 @@ authors:
     - artur-laksberg
     - adam-gordon-bell
 tags:
-    - copilot
+    - Copilot
     - ai
     - iac
 social:
     twitter: 🚀 Building Pulumi Copilot taught us key AI engineering insights – Minimize LLM workload, validate outputs rigorously & use "skills" for modular tasks. Plus, sometimes when AI hallucinates features, it reveals exactly what users want! 
     linkedin: 🚀 Building Pulumi Copilot taught us key AI engineering insights – Minimize LLM workload, validate outputs rigorously & use "skills" for modular tasks. Plus, sometimes when AI hallucinates features (like a "--force" flag), it reveals exactly what users want! 
 ---
-**Artur Laksberg is on the Copilot team here at Pulumi. CoPilot is an AI assistant for cloud infrastructure. Today he shares key lessons from bringing Copilot to production—including an unexpected discovery about AI hallucinations.**
+**Artur Laksberg is on the Copilot team here at Pulumi. Copilot is an AI assistant for cloud infrastructure. Today he shares key lessons from bringing Copilot to production—including an unexpected discovery about AI hallucinations.**
 
 While reviewing user feedback for Pulumi Copilot, our AI assistant for cloud infrastructure, one message caught my eye: "Your tool doesn't know anything!". Having just made some changes, I braced for the worst. But the evals were still looking strong, so what was going on?
 
@@ -23,7 +23,7 @@ While reviewing user feedback for Pulumi Copilot, our AI assistant for cloud inf
 
 The user was trying to force-delete a stack that still had resources. Copilot confidently suggested using a `--force` flag, which is a perfectly logical solution, except this flag doesn't exist in Pulumi. This was pure hallucination!
 
-Welcome to a day in the life of building with LLMs. But this particular error, this is a specific type of hallucination that I now have a solution for. And now that [we've launched our REST API](/blog/pulumi-copilot-rest/) and Copilot has been running in production for a bit, **I want to share some lessons we've learned building with LLMs**.
+Welcome to a day in the life of building with LLMs. But this particular error, this is a specific type of hallucination that I now have a solution for. And now that [we've launched our REST API](/blog/pulumi-Copilot-rest/) and Copilot has been running in production for a bit, **I want to share some lessons we've learned building with LLMs**.
 
 Let's start with the fundamental tension between software engineering and prompt engineering.
 
@@ -45,7 +45,7 @@ When you find yourself writing elaborate prompts to handle structured data trans
 
 To validate this approach, we tested Copilot ourselves to see what worked.
 
-## Copilot in Action: Real-World Dog-Fooding
+## Copilot in Action: Real-World DogFooding
 
 The internal testing phase was invaluable for uncovering bugs, refining our prompts, and, most importantly, understanding how real users would interact with the tool. Here are a few examples of how Copilot proved helpful, even in these early days:
 
@@ -55,11 +55,11 @@ The internal testing phase was invaluable for uncovering bugs, refining our prom
 
 **Generating Code:** One of the first queries logged was, 'I want a static website on AWS behind a CloudFront CDN.' Another was a Solutions Engineers, tasked with demonstrating Pulumi's CrossGuard policy engine to a prospect, asking Copilot to generate policy code.
 
-These early experiences showed the value of CoPilot. But they also revealed the need for a systematic approach to handling diverse user queries. This led us to develop what we call skills.
+These early experiences showed the value of Copilot. But they also revealed the need for a systematic approach to handling diverse user queries. This led us to develop what we call skills.
 
 ## Skillful Slicing: Modular Mastery
 
-As Copilot grew, we broke it into smaller pieces we call skills. Each skill does one specific job. The Insights skill handles queries about resource usage and configuration ("How many S3 buckets do I have?"), the Cloud Skill interacts with the Pulumi Service API to manage infrastructure ("Create a new project."), the Code Skill generates Pulumi code snippets ("Write a Typescript program..."), and the Docs Skill retrieves information from Pulumi documentation ("How do I use [update plans](https://www.pulumi.com/docs/iac/concepts/update-plans/)?").  
+As Copilot grew, we broke it into smaller pieces we call skills. Each skill does one specific job. The Insights skill handles queries about resource usage and configuration ("How many S3 buckets do I have?"), the Cloud Skill interacts with the Pulumi Service API to manage infrastructure ("Show me my stacks."), the Code Skill generates Pulumi code snippets ("Write a Typescript program..."), and the Docs Skill retrieves information from Pulumi documentation ("How do I use [update plans](https://www.pulumi.com/docs/iac/concepts/update-plans/)?").  
 
 When you ask Copilot something, it figures out what you need and picks the right skill for the job – like a manager deciding which expert to send your question to. This function-calling approach, orchestrated by a component we call the "outer loop," allows Copilot to access and process information beyond its internal knowledge base.
 
@@ -71,14 +71,14 @@ Refining this routing system revealed another opportunity: streamlining the Debu
 
 ![Before and After](optimize.png)
 
-Originally, when a user clicks "Debug with Copilot" on a failed update, we would send a text query to CoPilot like "Analyze this update and explain any errors." The LLM then:
+Originally, when a user clicks "Debug with Copilot" on a failed update, we would send a text query to Copilot like "Analyze this update and explain any errors." Copilot then:
 
 1. Determines the user wants to analyze an update
 2. Identifies which API to call
 3. Calls the API
 4. Summarizes the results
 
-But we already know the user's intent - they clicked a debug button. Having the LLM  figure out what the user wants wastes time and money when we already know. So, we directly call the analysis API to get the results and use the LLM solely for what it does best: summarizing technical output into clear, actionable explanations.
+But we already know the user's intent - they clicked a debug button. Having the LLM  figure out what the user wants wastes time and money when we already know. So, we can directly call the analysis API to get the results and use the LLM solely for what it does best: summarizing technical output into clear, actionable explanations.
 
 This is another small win for our "Software Engineering over Prompt Engineering" approach. Traditional code handles the predictable parts, while AI focuses on the human-facing explanations.
 
@@ -96,31 +96,29 @@ However, a closer inspection revealed the numbers were way off. Copilot had aske
 
 ## Testing the Untestable: Validating LLM Outputs
 
-When testing traditional code, we expect deterministic outputs. With LLMs, even successful outcomes can vary significantly. Here's how we tackle this challenge.
+When testing traditional code, we expect consistent, predictable outputs. With LLMs, even correct answers can vary. Here's how we tackle this challenge.
 
-Our initial approach focused on keyword checking. For example, when testing our update analysis feature, we initially had a specific test case where a security error occurred. Our test validates that the LLM's response mentions "security" and describes the specific error condition.
+Our first approach was simple: keyword checks. For example, when testing the update analysis feature, we checked if the LLM’s response included the word “security” and described the error. This worked for straightforward cases but broke down quickly. Take a question like, “How many Lambdas am I running?” The LLM might give the right numbers but skip the word “running,” failing the test even though the answer was correct.
 
-This worked for basic validation but quickly showed its limitations. For instance, when a user asked, "How many Lambdas am I running?" the LLM correctly identified the AWS Lambda resources but didn't use the word "running." failing the eval.
-
-These early failures highlighted the brittleness of keyword checking and the need for a more nuanced approach. Inspired by platforms like LangSmith, we started leveraging LLMs themselves for validation. We adopted Promptfoo for automated testing. Our test suite now runs against every code change, validating both response content and format.
+These early failures revealed the limitations of keyword-based validation and underscored the need for a more nuanced approach. Inspired by platforms like LangSmith and Promptfoo, we began leveraging LLMs themselves as evaluators. For deterministic tasks, simple keyword checks suffice, but for more complex scenarios—like assessing whether a response answers a specific question—we rely on an "LLM Judge." This approach balances efficiency and flexibility, reserving LLM evaluation for cases where it truly adds value. Our test suite now integrates both methods, running against every code change to validate response content, accuracy, and format.
 
 ![Example PromptFoo Eval](promptfoo.png)
 
 This LLM-as-judge approach significantly improved in our ability to catch subtle errors that keyword checking had missed.
 
-Early internal dogfooding, where we analyzed logs of real user queries, was crucial. Questions like "How do I use update plans?" and "Show me my untagged EC2 instances" were turned into evals, ensuring our tests reflected real-world usage. This iterative process, starting with a small set of evals and expanding it based on user data, allowed us to continually refine our prompts and models. We weren't just testing in the abstract—we were testing against the questions our users were actually asking. This approach, combined with the flexibility of LLM-as-judge, allowed us to significantly improve the quality and reliability of Pulumi Copilot's responses.
+These early failures showed the limits of keyword-based validation and the need for a better approach. Inspired by tools like LangSmith and Promptfoo, we started using LLMs for validation. Simple checks work well for straightforward cases, but for harder questions—like whether a response answers what the user asked—we use an LLM Judge. This way, we only rely on LLMs when they’re really needed. Our test suite now uses both methods to check every code change, making sure responses are accurate and high quality.
 
-Our eval suite keeps getting more robust, which means Copilot keeps getting smarter. When new AI models drop, our evals help us catch any weirdness before it hits production. The generative AI space moves crazy fast and our code changes a lot, but our evals are our safety net - catching hallucinations, maintaining quality, and making sure we don't ship anything that'll annoy our users.
+Our eval suite keeps getting more robust, whic means that when new AI models drop, we can quickly catch any weirdness before it hits production. The generative AI space moves crazy fast and our code changes a lot, but our evals are our safety net - catching hallucinations, maintaining quality, and making sure we don't ship anything that'll annoy our users.
 
 So while hallucinations are now much more rare, there is that one I can't stop thinking about - that `--force` flag incident. Not because it was a bug, but because it taught us something fascinating about these AI errors.
 
 ## Errors Point the Way
 
-The `--force` hallucination wasn't totally wrong - it was revealing what users intuitively expect from our CLI. We're planning on implementing the `--force` flag for stack deletion because our LLM accidentally showed us what was missing. Force deletion is a common pattern across developer tools, and the LLM, trained on vast amounts of documentation and code, simply reflects these established conventions.
+The `--force` hallucination wasn't totally wrong - it was revealing what users intuitively expect from our CLI. Now I'm pushing for getting that flag added, and all because our LLM accidentally showed us what was missing. Force deletion is a common pattern across developer tools, and the LLM, trained on vast amounts of documentation and code, simply reflects these established conventions.
 
 This has fundamentally changed how I view hallucinations. While we constantly work to minimize them – and our eval work mean they happen way less frequently – some of them are clearly product signals. The LLM, in this light, becomes an unexpected source of user research, drawing on its training across thousands of developer tools and experiences.
 
-This insight is one of the things we learned building CoPilot:
+This insight is one of the things we learned building Copilot:
 
 1. **Minimize LLM Usage:** Let traditional code handle deterministic tasks, reserve LLMs for natural language work
 2. **Decompose into Skills:** Break complex tasks into modular units that combine LLM and traditional code appropriately
@@ -128,4 +126,4 @@ This insight is one of the things we learned building CoPilot:
 4. **Learn from Hallucinations:** Sometimes incorrect outputs reveal user expectations
 5. **Learn from Users Continuously:** User interactions improve our AI systems - from training better skills to catching hallucinations and revealing product opportunities.
 
-We've used these lessons in our latest release: the Pulumi Copilot REST API, now available in preview. You can integrate these same capabilities and skills into your own tools and workflows. Whether you're building CLI extensions, chat integrations, or automated deployment checks, the API provides the contextual understanding we've engineered into Copilot. [Try it out](docs.pulumi.com/copilot-api). We can't wait to see what you can build with Pulumi Copilot REST API.
+We've used these lessons in our latest release: the Pulumi Copilot REST API, now available in preview. You can integrate these same capabilities and skills into your own tools and workflows. Whether you're building CLI extensions, chat integrations, or automated deployment checks, the API provides the contextual understanding we've engineered into Copilot. [Try it out](docs.pulumi.com/Copilot-api). We can't wait to see what you can build with Pulumi Copilot REST API.
