@@ -41,7 +41,7 @@ It worked - almost all of the time. But we were seeing occasional malformed URLs
 
 The solution was straightforward: generate the full links in the backend service and include them directly in the context. The LLM then needs no instructions on how to create them. Simple stuff, but it gave us faster responses, perfect URLs, and lower costs.
 
-When you find yourself writing elaborate prompts to handle structured data transformations, stop and ask: Could traditional code do this better? Could this be decomposed so that the LLM did less?
+When you find yourself writing elaborate prompts to handle structured data transformations, stop and ask: Could traditional code do this better? Could this be decomposed so that the LLM does less?
 
 To validate this approach, we tested Copilot ourselves to see what worked.
 
