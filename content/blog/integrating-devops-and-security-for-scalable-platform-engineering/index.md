@@ -1,5 +1,6 @@
 ---
 title: "Integrating DevOps and Security for Scalable Platform Engineering"
+allow_long_title: true
 
 # The date represents the post's publish date, and by default corresponds with
 # the date and time this file was generated. Dates are used for display and
