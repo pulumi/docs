@@ -104,7 +104,7 @@ curl -L "$PULUMI_COPILOT_URL" \
 
 ## Moving Forward
 
-As we work towards moving this API to production, your feedback is essential. We are particularly interested in hearing about your implementation experiences, including features that work well, areas that need improvement, or capabilities you'd like to see added. Please submit any feedback by opening an [issue](https://github.com/pulumi/copilot-api-samples/issues) or reaching out to us via our [Community Slack](https://pulumi-community.slack.com/archives/C055KGGFB1N)
+As we continue to evole our AI efforts, your feedback is essential. We are particularly interested in hearing about your implementation experiences, including features that work well, areas that need improvement, or capabilities you'd like to see added. Please submit any feedback by opening an [issue](https://github.com/pulumi/copilot-api-samples/issues) or reaching out to us via our [Community Slack](https://pulumi-community.slack.com/archives/C055KGGFB1N)
 
 For additional implementation examples, please refer to the [samples](https://github.com/pulumi/copilot-api-samples/tree/main/samples) directory in our samples repo.
 
