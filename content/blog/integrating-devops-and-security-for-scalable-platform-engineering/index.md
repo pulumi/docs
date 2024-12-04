@@ -1,5 +1,5 @@
 ---
-title: "Integrating DevOps and Security for Scalable Platform Engineering"
+title: "Integrating DevOps and Security for Platform Engineering"
 allow_long_title: true
 
 # The date represents the post's publish date, and by default corresponds with
@@ -98,7 +98,7 @@ Platform engineering teams comprise multiple professionals with many responsibil
 - **Developer Experience (DevEx)**: Provide developers with the tools, frameworks, and abstractions they need to be productive and proactive without getting stuck in infrastructure or operational concerns.
 - **Reliability and Scalability**: Ensure that the platform and infrastructure can support the organization's needs, with the ability to scale up or down as required.
 - **Security and Compliance**: Embed robust, accessible security and compliance frameworks into the development lifecycle while making it easy for developers to adhere to these policies.
-- **Automation and Tooling**: Leverage Infrastructure as Code (IaC) and automation to enforce standardized processes and consistency and reduce cognitive load and manual effort.
+- **Automation and Tooling**: Leverage [Infrastructure as Code (IaC)](https://www.pulumi.com/product/infrastructure-as-code/) and automation to enforce standardized processes and consistency and reduce cognitive load and manual effort.
 - **Observability and Monitoring**: Provide visibility into the platform's health and performance, delivering actionable insights that allow teams to identify and resolve issues quickly.
 
 These pillars work together to create a platform that empowers developers to innovate and deliver value to the organization and customers while maintaining the necessary controls and safeguards.
