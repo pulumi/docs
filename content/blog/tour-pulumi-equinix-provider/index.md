@@ -33,11 +33,8 @@ Detailed documentation for the Equinix provider can be found in the [Pulumi Regi
 
 In order to demonstrate the power and utility of Pulumi and the Equinix provider, Equinix Labs has produced a codebase that [creates a Kubernetes cluster on Equinix Metal](https://github.com/equinix-labs/pulumi-equinix-kubernetes-cluster/). The codebase is available in both [TypeScript](https://github.com/equinix-labs/pulumi-equinix-kubernetes-cluster/tree/main/nodejs) and [Python](https://github.com/equinix-labs/pulumi-equinix-kubernetes-cluster/tree/main/python).
 
-{{% notes type="info" %}}
-For an overview of how Pulumi works along with a guided tour of the codebase and deploying a workload onto the Kubernetes cluster, check out [Pulumi's presentation at Equinix Demo Day 2023](https://youtu.be/-siv1ga0l_o). (Pulumi's presentation begins at 3:30:00 below, or click the preceding link to jump directly to Pulumi's presentation on YouTube.):
-
-{{< youtube "-siv1ga0l_o?t=12576&rel=0" >}}
-{{% /notes %}}
+> **NOTE**: For an overview of how Pulumi works along with a guided tour of the codebase and deploying a workload onto the Kubernetes cluster, check out [Pulumi's presentation at Equinix Demo Day 2023](https://youtu.be/-siv1ga0l_o). (Pulumi's presentation begins at 3:30:00 below, or click the preceding link to jump directly to Pulumi's presentation on YouTube.):
+> {{< youtube id=-siv1ga0l_o start=12576 >}}
 
 The codebase gives an excellent example of one of Pulumi's most compelling features: the ability to manage and orchestrate many different kinds of resources in real programming languages with a single tool. In addition to the Equinix provider which is used to manage the bare metal compute resources, the codebase also uses the following providers:
 
