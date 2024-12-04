@@ -104,10 +104,6 @@ These early failures revealed the limitations of keyword-based validation and un
 
 ![Example PromptFoo Eval](promptfoo.png)
 
-This LLM-as-judge approach significantly improved in our ability to catch subtle errors that keyword checking had missed.
-
-These early failures showed the limits of keyword-based validation and the need for a better approach. Inspired by tools like LangSmith and Promptfoo, we started using LLMs for validation. Simple checks work well for straightforward cases, but for harder questions—like whether a response answers what the user asked—we use an LLM Judge. This way, we only rely on LLMs when they’re really needed. Our test suite now uses both methods to check every code change, making sure responses are accurate and high quality.
-
 Our eval suite keeps getting more robust, whic means that when new AI models drop, we can quickly catch any weirdness before it hits production. The generative AI space moves crazy fast and our code changes a lot, but our evals are our safety net - catching hallucinations, maintaining quality, and making sure we don't ship anything that'll annoy our users.
 
 So while hallucinations are now much more rare, there is that one I can't stop thinking about - that `--force` flag incident. Not because it was a bug, but because it taught us something fascinating about these AI errors.
