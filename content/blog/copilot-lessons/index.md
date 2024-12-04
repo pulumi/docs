@@ -118,7 +118,7 @@ So while hallucinations are now much more rare, there is that one I can't stop t
 
 The `--force` hallucination wasn't totally wrong - it was revealing what users intuitively expect from our CLI. We're planning on implementing the `--force` flag for stack deletion because our LLM accidentally showed us what was missing. Force deletion is a common pattern across developer tools, and the LLM, trained on vast amounts of documentation and code, simply reflects these established conventions.
 
-This has fundamentally changed how I view hallucinations. While we constantly work to minimize them – and our eval works mean they happen way less frequently – some of them are clearly product signals. The LLM, in this light, becomes an unexpected source of user research, drawing on its training across thousands of developer tools and experiences.
+This has fundamentally changed how I view hallucinations. While we constantly work to minimize them – and our eval work mean they happen way less frequently – some of them are clearly product signals. The LLM, in this light, becomes an unexpected source of user research, drawing on its training across thousands of developer tools and experiences.
 
 This insight is one of the things we learned building CoPilot:
 
