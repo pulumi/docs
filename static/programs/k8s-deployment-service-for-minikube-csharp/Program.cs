@@ -70,11 +70,4 @@ return await Deployment.RunAsync(() =>
             },
         }
     });
-
-    var ip = frontend.Spec.Apply(spec => spec.ClusterIP)
-
-    return new Dictionary<string, object?>
-    {
-        ["ip"] = ip
-    };
 });

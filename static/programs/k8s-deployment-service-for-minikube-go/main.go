@@ -60,15 +60,7 @@ func main() {
 				Selector: appLabels,
 			},
 		})
-
-		var ip = frontend.Spec.ApplyT(func(val corev1.ServiceSpec) string {
-				if val.ClusterIP != nil {
-					return *val.ClusterIP
-				}
-				return ""
-			}).(pulumi.StringOutput)
-
-		ctx.Export("ip", ip)
+		
 		return nil
 	})
 }

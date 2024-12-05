@@ -33,6 +33,3 @@ resources:
           - port: 80
             targetPort: 80
             protocol: TCP
-
-outputs:
-  ip: ${service.spec.clusterIP}

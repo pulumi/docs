@@ -77,7 +77,11 @@ Then replace the default code with the following code snippet to scaffold your p
 {{% choosable language javascript %}}
 
 ```javascript
-{{< example-program-snippet path="k8s-deployment-service-for-minikube" language="javascript" from="1" to="21" >}}
+{{< example-program-snippet path="k8s-deployment-service-for-minikube" language="javascript" from="1" to="6" >}}
+
+// Create a deployment
+
+// Create a service
 ```
 
 {{% /choosable %}}
@@ -85,7 +89,11 @@ Then replace the default code with the following code snippet to scaffold your p
 {{% choosable language typescript %}}
 
 ```typescript
-{{< example-program-snippet path="k8s-deployment-service-for-minikube" language="typescript" from="1" to="20" >}}
+{{< example-program-snippet path="k8s-deployment-service-for-minikube" language="typescript" from="1" to="6" >}}
+
+// Create a deployment
+
+// Create a service
 ```
 
 {{% /choosable %}}
@@ -93,7 +101,7 @@ Then replace the default code with the following code snippet to scaffold your p
 {{% choosable language python %}}
 
 ```python
-{{< example-program-snippet path="k8s-deployment-service-for-minikube" language="python" from="1" to="3" >}}
+{{< example-program-snippet path="k8s-deployment-service-for-minikube" language="python" from="1" to="6" >}}
 
 # Create a deployment
 
@@ -105,9 +113,13 @@ Then replace the default code with the following code snippet to scaffold your p
 {{% choosable language go %}}
 
 ```go
-{{< example-program-snippet path="k8s-deployment-service-for-minikube" language="go" from="1" to="41" >}}
+{{< example-program-snippet path="k8s-deployment-service-for-minikube" language="go" from="1" to="16" >}}
 
-{{< example-program-snippet path="k8s-deployment-service-for-minikube" language="go" from="64" to="66" >}}
+        // Create a deployment
+
+        // Create a service
+
+{{< example-program-snippet path="k8s-deployment-service-for-minikube" language="go" from="72" to="74" >}}  
 ```
 
 {{% /choosable %}}
@@ -115,9 +127,13 @@ Then replace the default code with the following code snippet to scaffold your p
 {{% choosable language csharp %}}
 
 ```csharp
-{{< example-program-snippet path="k8s-deployment-service-for-minikube" language="csharp" from="1" to="31" >}}
+{{< example-program-snippet path="k8s-deployment-service-for-minikube" language="csharp" from="1" to="14" >}}
 
-{{< example-program-snippet path="k8s-deployment-service-for-minikube" language="csharp" from="48" to="48" >}}
+    // Create a deployment
+
+    // Create a service
+
+{{< example-program-snippet path="k8s-deployment-service-for-minikube" language="csharp" from="80" to="80" >}}
 ```
 
 {{% /choosable %}}
@@ -125,7 +141,11 @@ Then replace the default code with the following code snippet to scaffold your p
 {{% choosable language yaml %}}
 
 ```yaml
-{{< example-program-snippet path="k8s-deployment-service-for-minikube" language="yaml" from="1" to="27" >}}
+{{< example-program-snippet path="k8s-deployment-service-for-minikube" language="yaml" from="1" to="9" >}}
+
+# Create a deployment
+
+# Create a service
 ```
 
 {{% /choosable %}}
@@ -168,8 +188,9 @@ The first resource you will create will be a Kubernetes deployment. The [Pulumi 
 {{% choosable language javascript %}}
 
 ```javascript
-{{< example-program-snippet path="k8s-deployment-service" language="javascript" from="1" to="23" >}}
+{{< example-program-snippet path="k8s-deployment-service-for-minikube" language="javascript" from="1" to="16" >}}
 
+// Create a service
 ```
 
 {{% /choosable %}}
@@ -177,8 +198,9 @@ The first resource you will create will be a Kubernetes deployment. The [Pulumi 
 {{% choosable language typescript %}}
 
 ```typescript
-{{< example-program-snippet path="k8s-deployment-service" language="typescript" from="1" to="22" >}}
+{{< example-program-snippet path="k8s-deployment-service-for-minikube" language="typescript" from="1" to="16" >}}
 
+// Create a service
 ```
 
 {{% /choosable %}}
@@ -186,7 +208,9 @@ The first resource you will create will be a Kubernetes deployment. The [Pulumi 
 {{% choosable language python %}}
 
 ```python
-{{< example-program-snippet path="k8s-deployment-service" language="python" from="1" to="22" >}}
+{{< example-program-snippet path="k8s-deployment-service-for-minikube" language="python" from="1" to="17" >}}
+
+# Create a service
 ```
 
 {{% /choosable %}}
@@ -194,8 +218,11 @@ The first resource you will create will be a Kubernetes deployment. The [Pulumi 
 {{% choosable language go %}}
 
 ```go
-{{< example-program-snippet path="k8s-deployment-service" language="go" from="1" to="35" >}}
+{{< example-program-snippet path="k8s-deployment-service-for-minikube" language="go" from="1" to="39" >}}
 
+        // Create a service
+
+{{< example-program-snippet path="k8s-deployment-service-for-minikube" language="go" from="72" to="74" >}}  
 ```
 
 {{% /choosable %}}
@@ -203,7 +230,11 @@ The first resource you will create will be a Kubernetes deployment. The [Pulumi 
 {{% choosable language csharp %}}
 
 ```csharp
-{{< example-program-snippet path="k8s-deployment-service" language="csharp" from="1" to="28" >}}
+{{< example-program-snippet path="k8s-deployment-service-for-minikube" language="csharp" from="1" to="51" >}}
+
+    // Create a service
+
+{{< example-program-snippet path="k8s-deployment-service-for-minikube" language="csharp" from="80" to="80" >}}
 ```
 
 {{% /choosable %}}
@@ -211,26 +242,26 @@ The first resource you will create will be a Kubernetes deployment. The [Pulumi 
 {{% choosable language yaml %}}
 
 ```yaml
-{{< example-program-snippet path="k8s-deployment-service" language="yaml" from="1" to="22" >}}
+{{< example-program-snippet path="k8s-deployment-service-for-minikube" language="yaml" from="1" to="23" >}}
+
+# Create a service
 ```
 
 {{% /choosable %}}
 
 All resources have a required [`name`](https://www.pulumi.com/docs/concepts/resources/names/) argument. Each resource has both a [logical name](https://www.pulumi.com/docs/concepts/resources/names/#logicalname) and a [physical name](https://www.pulumi.com/docs/concepts/resources/names/#autonaming). The **logical name** is how the resource is known inside Pulumi. This is the value provided to the required `name` argument. The **physical name** is the name used for the resource in the cloud provider that a Pulumi program is deploying to. It is a combination of the logical name plus a random suffix which helps to prevent resource naming collisions.
 
-In the above example, the logical name for our `instance` resource is **"website-server"**, and the physical name might typically look something like **"website-server-d7c2fa0"**.
+In the above example, the logical name for our `deployment` resource is **"nginx"**, and the physical name might typically look something like **"nginx-d7c2fa0"**.
 
 In addition to names, resources have properties and options.
 
 **Properties** are used to specify what type of resource to create. Properties are often resource-specific, and they can be required or optional depending on the specifications of the provider.
 
-Some of the properties inside of your `gcp.compute.Instance` resource include:
+The property defined in your `kubernetes.apps/v1.Deployment` resource is:
 
 | Property | Description |
 |--------------|-------------|
-| **machine type** | tells the Google Cloud provider what type of machine to create |
-| **boot disk** | tells the provider the configuration for the instance's boot disk |
-| **network interfaces** | tells the provider what networks to attach to the instance |
+| **spec** | tells the Kubernetes provider the specification of the desired behavior of the deployment |
 
 **Options** let you control certain aspects of a resource (such as showing explicit dependencies or importing existing infrastructure). You do not have any options defined for this resource, but you can learn more about how it works in the [Resource options documentation](/docs/iac/concepts/options/).
 
@@ -241,48 +272,37 @@ Now run the `pulumi up` command to preview and deploy the resouces you've just d
 ```bash
 $ pulumi up -y
 
-Previewing update (web-server)
+Previewing update (k8s-tutorial)
 
-     Type                     Name                Plan
- +   pulumi:pulumi:Stack      gcp-web-server      create
- +   ├─ gcp:compute:Network   vpc-network         create
- +   ├─ gcp:compute:Address   ip-address          create
- +   └─ gcp:compute:Instance  webserver-instance  create
-
-Outputs:
-    instanceURL: output<string>
+     Type                              Name              Plan
+ +   pulumi:pulumi:Stack               k8s-tutorial      create
+ +   └─ kubernetes:apps/v1:Deployment  nginx             create
 
 Resources:
-    + 4 to create
+    + 2 to create
 
-Updating (web-server)
+Updating (k8s-tutorial)
 
-     Type                     Name                Status
- +   pulumi:pulumi:Stack      gcp-web-server      created (73s)
- +   ├─ gcp:compute:Address   ip-address          created (3s)
- +   ├─ gcp:compute:Network   vpc-network         created (53s)
- +   └─ gcp:compute:Instance  webserver-instance  created (15s)
-
-Outputs:
-    instanceURL: "http://34.171.149.220"
+     Type                              Name              Status
+ +   pulumi:pulumi:Stack               k8s-tutorial      created (14s)
+ +   └─ kubernetes:apps/v1:Deployment  nginx             created (12s)
 
 Resources:
-    + 4 created
+    + 2 created
 
-Duration: 1m15s
+Duration: 16s
 ```
 
 ## Create a service
 
-In this section, you will use Pulumi documentation to configure the firewall on your own. The firewall must allow web traffic on port 80 in order for you to access your web server. Use the following steps as a guide for adding the firewall resource:
+In this section, you will use Pulumi documentation to configure a Kubernetes Service. Use the following steps as a guide for adding the Service resource:
 
-- Navigate to the [Google Cloud Registry documentation page](/registry/packages/gcp/)
-- Search for the `gcp.compute.Firewall` resource
-- Define the firewall resource in your project code
-- Configure the firewall to allow traffic on port 80
+- Navigate to the [Kubernetes Registry documentation page](/registry/packages/kubernetes/)
+- Search for the `kubernetes.core/v1.Service` resource
+- Define the Service resource in your project code
 - Preview and deploy your updated project code
 
-Once you have completed these steps, forward the Nginx service to make it accessible from localhost. First, retrieve the name of your service using the following command:
+Once you have completed these steps, forward the Nginx service to make it accessible from localhost. First, retrieve the name and port of your service using the following command:
 
 ```bash
 $ kubectl get service
@@ -291,7 +311,7 @@ kubernetes       ClusterIP   10.96.0.1        <none>        443/TCP   44h
 nginx-9e5d5cd4   ClusterIP   10.103.199.118   <none>        80/TCP    6m47s
 ```
 
-In the example above, the name of the service is `nginx-9e5d5cd4`. Then run the following command to perform the forwarding, making sure to provide the name of your own Nginx service in your own environment:
+In the example above, the name of the service is `nginx-9e5d5cd4`. Then run the following command to perform the forwarding, making sure to provide the name and port of your own Nginx service in your own environment:
 
 ```bash
 $ kubectl port-forward service/nginx-9e5d5cd4 8080:80
@@ -343,7 +363,7 @@ You can view the complete project code below:
 
 ## Next steps
 
-In this tutorial, you create a virtual machine instance configured as a web server, and you created a firewall resource configured for public web access by referencing the Pulumi Registry. You also reviewed resource properties and example usage of various resources.
+In this tutorial, you created a Kubernetes deployment resource, and you created a Service resource by referencing the Pulumi registry. You also reviewed resource properties and example usage of various resources.
 
 To learn more about creating resources in Pulumi, take a look at the following resources:
 

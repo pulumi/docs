@@ -3,7 +3,6 @@ from pulumi_kubernetes.apps.v1 import Deployment
 from pulumi_kubernetes.core.v1 import Service
 
 app_labels = { "app": "nginx" }
-
 app_name = "nginx"
 
 deployment = Deployment(
@@ -27,7 +26,3 @@ frontend = Service(
         "ports": [{ "port": 80, "target_port": 80, "protocol": "TCP" }],
         "selector": app_labels,
     })
-
-result = frontend.spec.apply(lambda v: v["cluster_ip"] if "cluster_ip" in v else None)
-
-pulumi.export("ipAddress", result)

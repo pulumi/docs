@@ -23,5 +23,3 @@ const frontend = new k8s.core.v1.Service(appName, {
         selector: appLabels,
     },
 });
-
-exports.ip = frontend.spec.clusterIP;
