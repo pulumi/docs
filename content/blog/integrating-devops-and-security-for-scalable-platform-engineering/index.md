@@ -61,7 +61,7 @@ social:
 ---
 
 Platform engineering has transitioned from an emerging trend in DevOps and infrastructure to a critical function for mid-to-large organizations. By 2026, Gartner predicts that 80% of software development companies will have internal platform services and dedicated teams to streamline development processes.
-One of the main goals in Platform engineering is to empower developers by providing self-service and autonomy while maintaining guardrails for security, compliance, and reliability. Achieving this balance requires integrating DevOps and security practices, referred to as DevSecOps best practices.
+One of the main goals of Platform engineering is to empower developers by providing self-service and autonomy while maintaining guardrails for security, compliance, and reliability. Achieving this balance requires integrating DevOps and security practices, referred to as DevSecOps best practices.
 During PulumiUP Europe 2024, the panel of industry experts explored this integration, including:
 
 - Jess Mink, Sr. Director of Platform Engineering at Honeycomb
@@ -76,18 +76,18 @@ This discussion centered on the core pillars of platform engineering, strategies
 
 ## In this article:
 
-- The Core Pillars of Platform Engineering
-- Aligning DevOps and Security for Secure Platform Engineering
-- Shift Left Security
-- Embrace Automation and Standardization
-- Prioritize Observability and Monitoring
-- Foster a Culture of Collaboration
-- Challenges of Integrating Security in Platform Engineering
-- Balancing Autonomy and Control
-- Driving Adoption and Changing Mindsets
-- Adapting to Evolving Needs and Technologies
-- Measuring Success in Secure Platform Engineering
-- The Future of Secure Platform Engineering
+- [The Core Pillars of Platform Engineering](/blog/integrating-devops-and-security-for-scalable-platform-engineering/the-core-pillars-of-platform-engineering)
+- [Aligning DevOps and Security for Secure Platform Engineering](blog/integrating-devops-and-security-for-scalable-platform-engineering/aligning-devops-and-security-for-secure-platform-engineering)
+- [Shift Left Security](blog/integrating-devops-and-security-for-scalable-platform-engineering/shift-left-security)
+- [Embrace Automation and Standardization](blog/integrating-devops-and-security-for-scalable-platform-engineering/embrace-automation-and-standardization)
+- [Prioritize Observability and Monitoring](blog/integrating-devops-and-security-for-scalable-platform-engineering/prioritize-observability-and-monitoring)
+- [Foster a Culture of Collaboration](blog/integrating-devops-and-security-for-scalable-platform-engineering/foster-a-culturecof-collaboration)
+- [Challenges of Integrating Security in Platform Engineering](blog/integrating-devops-and-security-for-scalable-platform-engineering/challenges-of-integrating-security-in-platform-engineering)
+- [Balancing Autonomy and Control](blog/integrating-devops-and-security-for-scalable-platform-engineering/balancing-autonomy-and-control)
+- [Driving Adoption and Changing Mindsets](blog/integrating-devops-and-security-for-scalable-platform-engineering/driving-adoption-and-changing-mindsets)
+- [Adapting to Evolving Needs and Technologies](blog/integrating-devops-and-security-for-scalable-platform-engineering/adapting-to-evolving-needs-and-technologies)
+- [Measuring Success in Secure Platform Engineering](blog/integrating-devops-and-security-for-scalable-platform-engineering/measuring-success-in-secure-platform Engineering)
+- [The Future of Secure Platform Engineering](blog/integrating-devops-and-security-for-scalable-platform-engineering/the-future-of-secure-platform-engineering)
 
 ## The Core Pillars of Platform Engineering
 
@@ -115,7 +115,7 @@ One of the fundamental principles of DevSecOps is to "shift left" - that is, to 
 
 - Incorporating security requirements and threat modeling into the initial design phase
 - Automating security scans and tests as part of the continuous integration (CI) pipeline
-- Providing developers with secure coding guidelines and tools to identify and remediate vulnerabilities
+- Providing developers with secure coding guidelines and tools to [identify and remediate vulnerabilities](https://www.pulumi.com/blog/drift-detection/#why-pulumi-cloud-drift-detection-and-remediation)
 
 By addressing security concerns upfront, organizations can reduce the time and cost of remediating issues later in the development lifecycle.
 
@@ -157,13 +157,13 @@ While the benefits of integrating DevOps and security in platform engineering ar
 
 The primary goal is to empower developers to be more productive and proactive. However, this autonomy needs to be balanced with necessary security controls and governance measures.
 
-As Jess Mink, Director of Platform Engineering at [Honeycomb](https://www.pulumi.com/blog/observability-with-infrastructure-as-code/), explains: "It's a delicate balance - you want to make things easy for developers, but you also need to maintain the right level of control and security. It's about finding the right abstractions and interfaces that give developers the freedom they need while still ensuring the platform remains secure and compliant."
+As Jess Mink, Director of Platform Engineering at [Honeycomb](https://www.pulumi.com/blog/observability-with-infrastructure-as-code/), explains: "*It's a delicate balance - you want to make things easy for developers, but you also need to maintain the right level of control and security. It's about finding the right abstractions and interfaces that give developers the freedom they need while still ensuring the platform remains secure and compliant.*"
 
 ### Driving Adoption and Changing Mindsets
 
 Integrating security into the platform engineering workflow can often be met with resistance from developers accustomed to moving quickly and may view security as an obstacle to their productivity.
 
-As Nariman, a Software Security Architect, notes: "The challenge is not just about the tools or the technology - it's about changing the mindset and getting people to understand the importance of security. You need to find ways to motivate developers and make them feel like they're part of the solution rather than just imposing more rules and processes."
+As Nariman, a Software Security Architect, notes: "*The challenge is not just about the tools or the technology - it's about changing the mindset and getting people to understand the importance of security. You need to find ways to motivate developers and make them feel like they're part of the solution rather than just imposing more rules and processes.*"
 
 Effective communication, education, and a focus on the business value of security are key to driving adoption and fostering a culture of shared responsibility.
 
@@ -171,7 +171,7 @@ Effective communication, education, and a focus on the business value of securit
 
 As organizations grow and their technology stacks evolve, the demands on the platform engineering team can shift rapidly. Keeping up with these changes, while maintaining a secure and reliable platform, can be a significant challenge.
 
-Lindsay Jack, VP of Engineering for the Platform Division at [Snyk](https://partners.snyk.io/English/solutions/solution/2908/pulumi), explains: "You might have a platform team that's really good at a certain set of technologies, but then the organization starts moving in a new direction, and suddenly those skills don't match up anymore. It's about being agile and adaptable and making sure you have the right mix of skills and expertise to support the organization's evolving needs."
+Lindsay Jack, VP of Engineering for the Platform Division at [Snyk](https://partners.snyk.io/English/solutions/solution/2908/pulumi), explains: "*You might have a platform team that's really good at a certain set of technologies, but then the organization starts moving in a new direction, and suddenly those skills don't match up anymore. It's about being agile and adaptable and making sure you have the right mix of skills and expertise to support the organization's evolving needs*."
 
 Fostering internal mobility, continuous learning, and a flexible, modular platform architecture can help platform engineering teams navigate these changes more effectively.
 
@@ -185,13 +185,13 @@ Measuring the success of a platform engineering initiative can be a complex as i
 - **Automation and Tooling**: Metrics like the percentage of infrastructure provisioned through code, the frequency of platform updates, and the time saved through automation can demonstrate the platform's operational efficiency.
 - **Observability and Monitoring**: Measuring the effectiveness of observability tools, the time to detect and resolve issues, and the quality of incident reports can [provide insights into the platform's overall health](https://www.pulumi.com/blog/insights-cloud-account-discovery/) and performance.
 
-As Jess Mink emphasizes, it's important to not just collect these metrics, but to use them to drive meaningful action and improvement: "We actually look at all of those [metric categories] every quarter and write summaries that go up to the executive level. This creates that visibility and shared understanding of problems, so that there's room for movement and change in the right ways."
+As Jess Mink emphasizes, it's important to not just collect these metrics, but to use them to drive meaningful action and improvement: "*We actually look at all of those [metric categories] every quarter and write summaries that go up to the executive level. This creates that visibility and shared understanding of problems, so that there's room for movement and change in the right ways.*"
 
 ## The Future of Secure Platform Engineering
 
 Software development and infrastructure management are evolving, and the role of platform engineering will only become more critical to support it. By integrating DevOps and security practices, platform engineering teams can create scalable, secure platforms that empower developers to be more productive and innovate, delivering business value.
 
-To learn more about building secure, scalable platforms with Pulumi and how our customers are doing it:
+Learn how Pulumi customers build secure, scalable platforms and empower their development teams:
 
 - **Tivity Health**: [DevSecOps Game-Changer: Security Automation That Delivers Business Results](https://www.pulumi.com/blog/devsecops-strategy-security-automation-tivity-health/)
 - **BMW Group**: [Unified and Programmatic Approach to Infrastructure Management at BMW Using Pulumi](https://www.pulumi.com/blog/unified-programmatic-approach-infrastructure-management-bmw-using-pulumi/)
