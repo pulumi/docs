@@ -108,9 +108,10 @@ Each message in the messages array contains:
 
 - `role`: The sender of the message ("assistant" or "user").
 - `kind`: The type of message:
-    - `trace`: Debug or system information.
+    - `trace`: Debug or system information (this data is not sent to the LLM and it only used to debugging).
     - `response`: User queries or assistant responses.
     - `status`: Status updates about operations being performed.
+    - `program`: Generated code when requested by the user.
     - `content`: The actual message content.
 
 Messages returned by the "assistant" of type "response" represent the responses from the Copilot to the user query.
