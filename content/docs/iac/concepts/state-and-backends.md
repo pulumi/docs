@@ -154,7 +154,7 @@ To learn more about self-host options, see [Self-Hosted Pulumi Cloud](/docs/pulu
 
 ## Using a Self-Managed Backend
 
-The filesystem and cloud storage backends allow you to store state locally on your machine or remotely within a cloud object store. For self-managed backends, state management including backup, sharing, and team access synchronization is custom and implemented manually.
+The filesystem and cloud storage backends allow you to store state locally on your machine or remotely within a cloud object store. For self-managed backends, state management including backup, sharing, and team access synchronization is custom and implemented manually. A basic file-based locking system is enabled by default for all self-managed backends.
 
 > **Note**: The Pulumi Cloud backend was designed to be robust and easy to use. If you decide to use a self-managed backend, you will need to be more aware of how state works (see [Advanced State](#advanced-state)). If you lose the checkpoint for your stack, or it drifts from reality, Pulumi will not behave as you might expect &mdash; for instance, if your state file is empty, Pulumi will think your stack is empty, and will attempt to recreate all of the resources. Some commands may also behave slightly differently between backends. For example, the Pulumi Cloud ensures there are no other updates in flight for a given stack, and in general, reliability, security, and collaboration is automatic with the Pulumi Cloud.
 
@@ -164,7 +164,7 @@ Inside the `.pulumi` folder, we access the following subdirectories:
 
 1. `meta.yaml`: This is the metadata file. It does not hold information about the stacks but rather information about the backend itself.
 1. `stacks/`: Active state files for each stack (e.g. `dev.json` or `proj/dev.json` if the stack is scoped to a project).
-1. `locks/`: Optional lock files for each stack if the stack is currently being operated on by a Pulumi operation (e.g. `dev/$lock.json` or `proj/dev/$lock.json` where `$lock` is a unique identifier for the lock).
+1. `locks/`: Lock files for each stack if the stack is currently being operated on by a Pulumi operation (e.g. `dev/$lock.json` or `proj/dev/$lock.json` where `$lock` is a unique identifier for the lock).
 1. `history/`: History for each stack (e.g. `dev/dev-$timestamp.history.json` or `proj/dev/dev-$timestamp.history.json` where `$timestamp` records the time the history file was created).
 
 The detailed format of the `<backend-url>` differs by backend and each has different options such as how to authenticate, as described below.

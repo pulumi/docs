@@ -45,7 +45,7 @@ estimated_time: 15
 
 # # An optional list of collections this tutorial should be belong to. Collections are defined in data/tutorials/collections.yaml.
 # collections:
-#     - some-non-existent-collection
+#     - azure
 ---
 
 ## Understanding stack outputs
@@ -823,9 +823,7 @@ variables:
 
 ## Next steps
 
-In this tutorial, you created a Lambda function that writes a file to an S3 bucket. You also referenced the documentation to create an EventBridge Scheduler that would run the Lambda function on a scheduled basis.
-
-You exported Lambda properties into stack outputs, and referenced those outputs across stacks using stack references.
+In this tutorial, you created an Azure Blob Storage and Container resource. You also referenced the documentation to create a Blob object that would upload a file to the container. You exported resource properties into stack outputs, and referenced those outputs across stacks using stack references.
 
 To learn more about creating and managing resources in Pulumi, take a look at the following resources:
 

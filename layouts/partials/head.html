@@ -84,7 +84,7 @@
     {{ end }}
 
 
-    <!-- Events info for Google events. -->
+    <!-- Workshop info for Google events. -->
     {{ if .Params.event_data }}
         <script type="application/ld+json">
             {
@@ -107,6 +107,48 @@
                 }
               }
         </script>
+    {{ end }}
+
+    <!-- Event info for Google events (in-person exhibitions)-->
+    {{ if .Params.exhibition_data }}
+        {{ with .Params.exhibition_data }}
+            <script type="application/ld+json">
+                {
+                    "@context": "https://schema.org",
+                    "@type": "ExhibitionEvent",
+                    "name": "{{ .name }}",
+                    "description": "{{ .description }}",
+                    "startDate": "{{ .start_date }}",
+                    "endDate": "{{ .end_date }}",
+                    "location": {
+                      "@type": "Place",
+                      "name": "{{ .location.name }}",
+                      "address": {
+                        "@type": "PostalAddress",
+                        "streetAddress": "{{ .location.address.street }}",
+                        "addressLocality": "{{ .location.address.locality }}",
+                        "addressRegion": "{{ .location.address.region }}",
+                        "postalCode": "{{ .location.address.postal_code }}",
+                        "addressCountry": "{{ .location.address.country }}"
+                      }
+                    },
+                    "organizer": {
+                      "@type": "Organization",
+                      "name": "{{ .organizer.name }}",
+                      "url": {{ .organizer.url }}
+                    },
+                    "exhibitor": {
+                      "@type": "Organization",
+                      "name": "Pulumi",
+                      "url": "https://pulumi.com",
+                      "description": "Pulumi helps teams create, deploy, and manage modern cloud applications using infrastructure as code."
+                    },
+                    "boothNumber": "{{ .booth }}",
+                    "eventStatus": "https://schema.org/EventScheduled",
+                    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode"
+                }
+            </script>
+        {{ end }}
     {{ end }}
 
 
@@ -250,6 +292,10 @@
 
     <script async defer src="https://buttons.github.io/buttons.js"></script>
 
+    {{- if eq hugo.Environment "production" }}
+        <!-- 6sense -->
+        <script async defer id="6senseWebTag" src="https://j.6sc.co/j/a4dca4b3-351c-4764-bda9-03c5caf5fedf.js"></script>
+    {{- end }}
 
     <!--Segment tracking-->
     <script>

@@ -1,0 +1,11 @@
+name: gcp-import-service-account-python
+description: An example that deploys the configuration necessary to import a Service Account resource in Google Cloud.
+runtime:
+  name: python
+  options:
+    toolchain: pip
+    virtualenv: venv
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: gcp-python

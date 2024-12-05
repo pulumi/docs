@@ -1,0 +1,8 @@
+{
+    "name": "gcp-storage-bucket-object-javascript",
+    "main": "index.js",
+    "dependencies": {
+        "@pulumi/pulumi": "^3.0.0",
+        "@pulumi/gcp": "^8.0.0"
+    }
+}

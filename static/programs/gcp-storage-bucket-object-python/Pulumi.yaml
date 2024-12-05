@@ -1,0 +1,11 @@
+name: gcp-storage-bucket-object-python
+description: An example that deploys a storage bucket and uploads a file on Google Cloud.
+runtime:
+  name: python
+  options:
+    toolchain: pip
+    virtualenv: venv
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: gcp-python
