@@ -1,7 +1,8 @@
 ---
 # Name of the event, <= 60 characters
 title: "Automating Deployments with Infrastructure as Code and GitHub Actions"
-meta_desc: Learn how to leverage TypeScript's flexibility and ecosystem to simplify your infrastructure code and streamline cloud operations.
+meta_desc: Level up your Infrastructure as Code practices with secure, automated deployment pipelines and enterprise-grade security controls.
+
 meta_image:
 
 # A featured webinar will display first in the list.
