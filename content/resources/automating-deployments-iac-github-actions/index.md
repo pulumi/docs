@@ -1,6 +1,6 @@
 ---
 # Name of the event, <= 60 characters
-title: "Automating Deployments with Infrastructure as Code and GitHub Actions"
+title: "Automating Deployments with IaC & GitHub Actions"
 meta_desc: Level up your Infrastructure as Code practices with secure, automated deployment pipelines and enterprise-grade security controls.
 
 meta_image:
@@ -32,7 +32,7 @@ url_slug: automating-deployments-iac-github-actions
 # Content for the left hand side section of the page.
 main:
     # Webinar title.
-    title: "Automating Deployments with Infrastructure as Code and GitHub Actions"
+    title: "Automating Deployments with IaC & GitHub Actions"
 
     event_type: workshop # workshop | event
 
@@ -80,7 +80,7 @@ form:
     Salesforce Campaign ID: 701PQ00000ObSHGYA3
 
 event_data:
-  name: "Automating Deployments with Infrastructure as Code and GitHub Actions"
+  name: "Automating Deployments with IaC & GitHub Actions"
   start_date: 2025-02-05T09:00:00-08:00
   end_date: 2025-02-05T10:00:00-08:00
   url: "https://www.pulumi.com/resources/automating-deployments-iac-github-actions/"
