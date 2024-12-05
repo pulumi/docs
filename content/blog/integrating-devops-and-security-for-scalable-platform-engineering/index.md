@@ -77,17 +77,17 @@ This discussion centered on the core pillars of platform engineering, strategies
 ## In this article:
 
 - [The Core Pillars of Platform Engineering](/blog/integrating-devops-and-security-for-scalable-platform-engineering/the-core-pillars-of-platform-engineering)
-- [Aligning DevOps and Security for Secure Platform Engineering](blog/integrating-devops-and-security-for-scalable-platform-engineering/aligning-devops-and-security-for-secure-platform-engineering)
-- [Shift Left Security](blog/integrating-devops-and-security-for-scalable-platform-engineering/shift-left-security)
-- [Embrace Automation and Standardization](blog/integrating-devops-and-security-for-scalable-platform-engineering/embrace-automation-and-standardization)
-- [Prioritize Observability and Monitoring](blog/integrating-devops-and-security-for-scalable-platform-engineering/prioritize-observability-and-monitoring)
-- [Foster a Culture of Collaboration](blog/integrating-devops-and-security-for-scalable-platform-engineering/foster-a-culturecof-collaboration)
-- [Challenges of Integrating Security in Platform Engineering](blog/integrating-devops-and-security-for-scalable-platform-engineering/challenges-of-integrating-security-in-platform-engineering)
-- [Balancing Autonomy and Control](blog/integrating-devops-and-security-for-scalable-platform-engineering/balancing-autonomy-and-control)
-- [Driving Adoption and Changing Mindsets](blog/integrating-devops-and-security-for-scalable-platform-engineering/driving-adoption-and-changing-mindsets)
-- [Adapting to Evolving Needs and Technologies](blog/integrating-devops-and-security-for-scalable-platform-engineering/adapting-to-evolving-needs-and-technologies)
-- [Measuring Success in Secure Platform Engineering](blog/integrating-devops-and-security-for-scalable-platform-engineering/measuring-success-in-secure-platform Engineering)
-- [The Future of Secure Platform Engineering](blog/integrating-devops-and-security-for-scalable-platform-engineering/the-future-of-secure-platform-engineering)
+- [Aligning DevOps and Security for Secure Platform Engineering](/blog/integrating-devops-and-security-for-scalable-platform-engineering/aligning-devops-and-security-for-secure-platform-engineering)
+- [Shift Left Security](/blog/integrating-devops-and-security-for-scalable-platform-engineering/shift-left-security)
+- [Embrace Automation and Standardization](/blog/integrating-devops-and-security-for-scalable-platform-engineering/embrace-automation-and-standardization)
+- [Prioritize Observability and Monitoring](/blog/integrating-devops-and-security-for-scalable-platform-engineering/prioritize-observability-and-monitoring)
+- [Foster a Culture of Collaboration](/blog/integrating-devops-and-security-for-scalable-platform-engineering/foster-a-culturecof-collaboration)
+- [Challenges of Integrating Security in Platform Engineering](/blog/integrating-devops-and-security-for-scalable-platform-engineering/#challenges-of-integrating-security-in-platform-engineering)
+- [Balancing Autonomy and Control](/blog/integrating-devops-and-security-for-scalable-platform-engineering/#balancing-autonomy-and-control)
+- [Driving Adoption and Changing Mindsets](/blog/integrating-devops-and-security-for-scalable-platform-engineering/#driving-adoption-and-changing-mindsets)
+- [Adapting to Evolving Needs and Technologies](/blog/integrating-devops-and-security-for-scalable-platform-engineering/#adapting-to-evolving-needs-and-technologies)
+- [Measuring Success in Secure Platform Engineering](/blog/integrating-devops-and-security-for-scalable-platform-engineering/#measuring-success-in-secure-platform-engineering)
+- [The Future of Secure Platform Engineering](/blog/integrating-devops-and-security-for-scalable-platform-engineering/#the-future-of-secure-platform-engineering)
 
 ## The Core Pillars of Platform Engineering
 
@@ -124,7 +124,7 @@ By addressing security concerns upfront, organizations can reduce the time and c
 Consistency is key. Platform engineering teams should leverage automation and built-in safeguards and security processes. This may include:
 
 - Automating the provisioning of secure infrastructure and application environments
-- Implementing Infrastructure as Code (IaC) to define and manage infrastructure in a declarative, version-controlled manner
+- Implementing Infrastructure as Code (IaC) to define and [manage infrastructure in a declarative](https://www.pulumi.com/blog/pulumi-is-imperative-declarative-imperative/), version-controlled manner
 - Standardizing security controls, policies, and configurations across the platform
 
 By automating these tasks, platform engineering teams can reduce the risk of human error, improve visibility and auditability, and free up developers to focus on building features rather than managing infrastructure.
