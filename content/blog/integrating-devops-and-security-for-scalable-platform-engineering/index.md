@@ -1,5 +1,5 @@
 ---
-title: "Integrating DevOps and Security for Platform Engineering"
+title: "Integrating DevOps and Security in Platform Engineering"
 allow_long_title: true
 
 # The date represents the post's publish date, and by default corresponds with
