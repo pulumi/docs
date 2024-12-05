@@ -31,7 +31,7 @@ url_slug: migrating-iac-terraform-to-typescript
 # Content for the left hand side section of the page.
 main:
     # Webinar title.
-    title: "Migrating from Console Deployments to Infrastructure as Code"
+    title: "Migrating IaC from Terraform to TypeScript"
 
     event_type: workshop # workshop | event
 
