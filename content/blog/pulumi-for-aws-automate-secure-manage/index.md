@@ -52,11 +52,7 @@ Many AWS customers build [internal developer platforms](/product/internal-develo
 
 In 2022, Pulumi brought the ability to use AWS Cloud Development Kit (CDK) constructs from within a Pulumi deployment. For users already using AWS CDK, this provides Pulumi as a new option for orchestrating deployments in place of CloudFormation, offering improved deployment speed and integration with the full set of features of the Pulumi Platform. Even better, you can also now combine AWS CDK and Pulumi resources in a single Pulumi infrastructure as code project - passing outputs from Pulumi resources into AWS CDK constructs, and outputs from AWS CDK constructs into Pulumi resources.
 
-AWS Cloud Development Kit (CDK) on Pulumi is now generally available. This powerful integration includes:
-
-* Full support for CDK features like assets, custom resources, aspects, and context values/methods.
-* Access to the full ecosystem of over 1,200 CDK Construct libraries.
-* Support for all 180+ Pulumi providers allowing for CDK applications to include resources outside of AWS.
+AWS Cloud Development Kit (CDK) on Pulumi is now generally available. This powerful integration includes full support for CDK features like assets, custom resources, aspects, and context values/methods. It provides access to the full ecosystem of over 1,200 CDK Construct libraries, and it also supports all 180+ Pulumi providers, allowing for CDK applications to include resources outside of AWS.
 
 [Read more about AWS CDK on Pulumi](/blog/aws-cdk-on-pulumi-1.0/)
 
@@ -76,7 +72,9 @@ Over the last few years, our customers have shared a clear message:  IaC alone i
 
 The complexities of modern cloud environments create significant challenges in making sense of the millions of resources and resource updates per month, across hundreds of clouds, regions, and accounts. Identifying cost saving opportunities is difficult amidst soaring cloud expenditures, and maintaining compliance and security is mission critical because errors can cause catastrophic damage.
 
-[Pulumi Insights](/product/pulumi-insights/) empowers organizations to tackle cloud complexity by delivering visibility, actionable insights, and AI-assisted optimization for their infrastructure. With Pulumi Insights, companies can scan and sync their entire AWS resource inventory – including resources not managed with Pulumi IaC – ensuring a complete picture of their cloud assets. Compliance checks can be run against standards such as PCI DSS, ISO 27001, and CIS benchmarks, helping maintain regulatory compliance and mitigate risks. The AI-powered [Pulumi Copilot](/product/copilot/) provides an interactive assistant to gain visibility into a team's activity, discover cost saving opportunities, get compliant, and debug cloud failures. Pulumi Insights enables companies to discover, understand, manage, and improve their cloud infrastructure on their journey towards intelligent infrastructure management.
+[Pulumi Insights](/product/pulumi-insights/) empowers organizations to tackle cloud complexity by delivering visibility, actionable insights, and AI-assisted optimization for their infrastructure. With Pulumi Insights, companies can scan and sync their entire AWS resource inventory – including resources not managed with Pulumi IaC – ensuring a complete picture of their cloud assets. This Account Discovery capability is [now in public preview](/blog/insights-cloud-account-discovery/).
+
+Compliance checks can also be run against standards such as PCI DSS, ISO 27001, and CIS benchmarks, helping maintain regulatory compliance and mitigate risks. The AI-powered [Pulumi Copilot](/product/copilot/) provides an interactive assistant to gain visibility into a team's activity, discover cost saving opportunities, get compliant, and debug cloud failures. Pulumi Insights enables companies to discover, understand, manage, and improve their cloud infrastructure on their journey towards intelligent infrastructure management.
 
 ### Pulumi ESC: Centralized Secrets Management
 
@@ -88,4 +86,4 @@ Cloud complexity creates significant challenges in managing sensitive credential
 
 [Check out the Pulumi roadmap](https://github.com/orgs/pulumi/projects/44/views/1) for upcoming features, let us know your feature requests by [creating an issue on GitHub](https://github.com/pulumi/pulumi/issues), connect with the [Pulumi community on Slack](https://slack.pulumi.com/), and if you haven’t yet, [sign-up for Pulumi Cloud](https://app.pulumi.com/signup) to get access to our full suite of products – Pulumi IaC, Pulumi ESC, and Pulumi Insights – so you can automate, secure, and manage everything you run in the cloud.
 
-_Meta image credit:_  [ESO/M. Zamani](https://www.eso.org/public/images/potw2229a/)
+_Meta image credit:  [ESO/M. Zamani](https://www.eso.org/public/images/potw2229a/)_

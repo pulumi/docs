@@ -1,0 +1,42 @@
+name: gcp-storage-bucket-object-yaml
+description: An example that deploys a storage bucket and uploads a file on Google Cloud.
+runtime: yaml
+
+resources:
+  role:
+    type: gcp:projects:IAMCustomRole
+    properties:
+      roleId: bucketViewerRole
+      title: Bucket Viewer Role
+      permissions:
+        - storage.objects.get
+        - storage.objects.list
+      stage: GA
+
+  bucket:
+    type: gcp:storage:Bucket
+    properties:
+      location: US
+      forceDestroy: true
+
+  bucketViewerRoleAssignment:
+    type: gcp:storage:BucketIAMMember
+    properties:
+      bucket: ${bucket.name}
+      role: ${role.name}
+      member: allAuthenticatedUsers
+
+  bucketObject:
+    type: gcp:storage:BucketObject
+    properties:
+      bucket: ${bucketName}
+      content: "My bucket role name is: ${roleName}"
+      contentType: text/plain
+
+variables:
+  bucketName: ${bucket.name}
+  roleName: ${role.name}
+
+outputs:
+  roleName: ${role.name}
+  bucketName: ${bucket.name}

@@ -36,6 +36,7 @@ When using tokens, be mindful of the following security best practices:
 
 * Organization and team access tokens are machine tokens that are not connected to a user account, and therefore should only be used in scenarios like CI/CD pipelines, where the Pulumi actions are not being performed directly by a particular user.
 * Tokens can optionally be assigned an expiration period of up to two years, at which point the token will no longer be valid for any Pulumi operation. Expired tokens cannot be refreshed or reactivated. It's strongly recommended that you assign an expiration to your token to encourage token rotation and improve your organization's security posture.
+* All access tokens can create stacks. The stack creator will automatically become its owner and will have all stack permissions, including deletion.
 
 ## Access token permissions
 
