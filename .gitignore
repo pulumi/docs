@@ -62,3 +62,10 @@ _vendor/
 
 # VScode solution files.
 *.sln
+
+# Aider specific
+.aider*
+.env
+
+# Devbox specific
+.devbox
