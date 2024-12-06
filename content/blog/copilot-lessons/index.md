@@ -87,7 +87,7 @@ But while minimizing the LLM workload helped with efficiency, we soon faced an e
 
 ![Before and After](false-info.png)
 
-Large language models excel at generating well-structured, grammatically correct output. They makes neat tables, tell good stories, and generally sound confident. That's what makes them dangerous because this polished presentation can mask underlying flaws in the information itself, creating a false sense of confidence for users.
+Large language models excel at generating well-structured, grammatically correct output. They make neat tables, tell good stories, and generally sound confident. That's what makes them dangerous because this polished presentation can mask underlying flaws in the information itself, creating a false sense of confidence for users.
 
 One of our early testers, Pablo, encountered this firsthand. He posed a query to Pulumi Copilot, asking for a summary of resources within a specific project. The response he received was impeccably formatted, neatly categorizing resources by type and providing counts for each. It *looked* right, and for us humans sometimes looking right carries a lot of weight.
 
