@@ -128,7 +128,7 @@ Complete schema examples that include a much wider range of schema configuration
 | `config`            | [`Config`](#config)                        | No       | Config describes the set of configuration variables defined by this package.                                                      |
 | `types`             | [`map[ComplexType]`](#complextype)         | No       | Types is a map from type token to ComplexType that describes the set of complex types (ie. object, enum) defined by this package. |
 | `provider`          | [`Resource`](#resource)                    | No       | Provider describes the provider type for this package.                                                                            |
-| `resources`         | [`map[Resource]`](#resource)               | No       | Resources is a map from type token to Resourc that describes the set of resources defined by this package.                        |
+| `resources`         | [`map[Resource]`](#resource)               | No       | Resources is a map from type token to Resource that describes the set of resources defined by this package.                       |
 | `functions`         | [`map[Function]`](#function)               | No       | Functions is a map from token to Function that describes the set of functions defined by this package.                            |
 | `language`          | [`map[PackageLanguage]`](#packagelanguage) | No       | Language specifies additional language-specific data about the package.                                                           |
 
@@ -227,7 +227,7 @@ An object or resource property.
 | `language`                                  | [`map[PropertyLanguage]`](#propertylanguage) | No       | Language specifies additional language-specific data about the property.                                                      |
 | `secret`                                    | `boolean`                                    | No       | Secret specifies if the property is secret (default false).                                                                   |
 | `replaceOnChanges`                          | `boolean`                                    | No       | ReplaceOnChanges specifies if the associated object should be updated with a replace operation instead of a update operation. |
-| `willReplaceOnChanges`                      | `boolean`                                    | No       | WillReplaceOnChanges indiciates that the provider will replace the resource when this property is changed. |
+| `willReplaceOnChanges`                      | `boolean`                                    | No       | WillReplaceOnChanges indicates that the provider will replace the resource when this property is changed. |
 
 ### EnumValue
 

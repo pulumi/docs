@@ -84,7 +84,7 @@ The AWS implementation of the Cloud Framework accepts the following configuratio
 * `externalSubnets`: (Optional) Provide subnets ids for the VPC as a comma-separated string.  Required if using an existing VPC.
 * `externalPublicSubnets`: (Optional) Provide public subnets ids for the VPC as a comma-separated string.  Required if using an existing VPC.
 * `externalSecurityGroups`: (Optional) Provide securityGroup ids for the VPC as a comma-separated string.  Required if using an existing VPC.
-* `useFargate`: (Optional) Wse Fargate-based container compute. All tasks must be Fargate-compatible. One of `useFargate`, `ecsClusterARN`, or `ecsAutoCluster` must be provided to use container-based resources like `cloud.Service` and `cloud.Task.
+* `useFargate`: (Optional) AWS Fargate-based container compute. All tasks must be Fargate-compatible. One of `useFargate`, `ecsClusterARN`, or `ecsAutoCluster` must be provided to use container-based resources like `cloud.Service` and `cloud.Task`.
 * `ecsAutoCluster`: (Optional) Auto-provision an ECS Cluster.  If set to true, parameters for the cluster can be provided via the other "ecsAutoCluster*" configuration variables. One of `useFargate`, `ecsClusterARN`, or `ecsAutoCluster` must be provided to use container-based resources like `cloud.Service` and `cloud.Task.
 * `ecsAutoClusterNumberOfAZs`: (Optional) The number of AZs to create subnets in as part of the cluster.  Defaults to `2`.
 * `ecsAutoClusterInstanceType`: (Optional) The EC2 instance type to use for the cluster.  Defaults to `t2.micro`.
@@ -95,5 +95,5 @@ The AWS implementation of the Cloud Framework accepts the following configuratio
 * `ecsAutoClusterMinSize`: (Optional) The minimum size of the cluster. Defaults to `2`.
 * `ecsAutoClusterMaxSize`: (Optional) The maximum size of the cluster. Defaults to `100`.
 * `ecsAutoClusterPublicKey`: (Optional) Public key material for SSH access to the cluster. See [allowed formats](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html). If not provided, no SSH access is enabled on VMs.
-* `ecsAutoClusterECSOptimizedAMIName`: (Optional) The name of the ECS-optimzed AMI to use for the Container Instances in this cluster, e.g. `amzn-ami-2017.09.l-amazon-ecs-optimized`. See [valid values](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html).
+* `ecsAutoClusterECSOptimizedAMIName`: (Optional) The name of the ECS-optimized AMI to use for the Container Instances in this cluster, e.g. `amzn-ami-2017.09.l-amazon-ecs-optimized`. See [valid values](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html).
 * `ecsAutoClusterUseEFS`: (Optional) Optionally auto-provision an Elastic File System for the Cluster.  Defaults to `false`.
