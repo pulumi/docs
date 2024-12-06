@@ -33,10 +33,14 @@ Building and maintaining your own Infrastructure as Code backend involves a sign
 
 One of the primary functions of IaC backends is managing state. State management involves managing concurrency controls, preventing state corruption, ensuring backup and recovery, maintaining high availability of the state service, and providing consistent visibility across all managed resources; this is easy to get wrong. For instance, an incorrect Git merge of your state can result in outages, as evidenced by [Spotify speaking publicly](https://www.youtube.com/watch?v=ix0Tw8uinWs) about accidentally deleting two-thirds of their production Kubernetes clusters due to a faulty state merge.
 
+![placeholder](placeholder.png)
+
 Pulumi Cloud offers total visibility into changes within your organization, allowing you to track who is deploying what, when, and where, down to the individual cloud infrastructure properties being changed and the source commits triggering them. If issues arise and you need to revert to a prior known state, Pulumi Cloud's transactional state checkpointing protocol ensures automatic recovery from failures, and failures are common with transient cloud and networking issues. In contrast, DIY backends require manual human intervention to recover and repair state files, a process that is time-consuming, extends outages, and carries significant risk. Pulumi Cloud also automatically backs up and replicates your state checkpoints, facilitating easy recovery for audits or rollbacks, potentially preventing outages or meeting audit standards.
 
 Managing your infrastructure by IaC demands considerable time and energy. Pulumi Cloud provides Pulumi Insights, offering search, analytics, and AI-driven insights over your infrastructure. If you're using a DIY backend, you'll need to build your own search clusters and grep systems. With Insights, you can instantly search for critical information - like finding MySQL databases on end-of-life versions across all your cloud assets. You can also have a conversation with Pulumi Copilot about your infrastructure in plain English and get
 answers to operational questions that would take hours to piece together from other sources.
+
+![placeholder](placeholder.png)
 
 With this total visibility, Pulumi Insights helps you reduce waste by showing you usage information and identifying potentially stale infrastructure, leading to substantial cost savings.
 
@@ -53,6 +57,8 @@ When you build and operate your own IaC backend, you'll need to dedicate one ful
 ### Security and Compliance
 
 IaC backends are mission-critical components that require robust security measures to protect the backend service, cloud assets, and applications running on the infrastructure.
+
+![placeholder](placeholder.png)
 
 At the backend service layer, you must design and manage the service to adhere to numerous IT security standards, including SOC 1/SSAE 16/ISAE 3402, SOC 2, SOC 3, FISMA, FedRAMP, DOD SRG Levels 2 and 4, PCI DSS Level 1, EU Model Clauses, ISO 9001 / ISO 27001 / ISO 27017 / ISO 27018, ITAR, IRAP, FIPS 140-2, MLPS Level 3, and MTCS. This involves a manual assessment and validation process for each standard, which can be time-consuming and complex.
 
