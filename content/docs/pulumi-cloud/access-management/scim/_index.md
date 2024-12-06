@@ -24,6 +24,8 @@ The [Pulumi Cloud](https://app.pulumi.com) supports System for Cross-domain Iden
 If desired, in addition to the SCIM-managed teams, one can also configure and manage Pulumi-local teams in the Pulumi Cloud. See [Teams](/docs/pulumi-cloud/access-management/teams/) for how to configure teams in the Pulumi Cloud.
     {{% /notes %}}
 
+{{< sso-scim-limits-info idp="your Identity Provider" >}}
+
 To set up synchronization between Pulumi and your SAML 2.0 identity provider, refer to one of our example guides:
 
 - [Azure Active Directory](/docs/pulumi-cloud/access-management/scim/azuread/)
