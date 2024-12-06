@@ -2,6 +2,7 @@
 title: "The Hidden Costs of Infrastructure Management"
 date: 2024-12-09T09:00:00-08:00
 meta_desc: "nfrastructure as Code (IaC) has revolutionized how cloud resources are managed, allowing for more efficient, scalable, and repeatable deployments."
+meta_image: meta.png
 authors:
     - aaron-kao
 tags:
