@@ -44,7 +44,7 @@ When you find yourself writing elaborate prompts to handle structured data trans
 
 To validate this approach, we tested Copilot ourselves to see what worked.
 
-## Copilot in Action: Real-World dogfooding
+## Copilot in Action: Real-World Dogfooding
 
 The internal testing phase taught us invaluable lessons about how people would actually use the tool. We watched our team try Copilot in their daily work, and three common use cases emerged:
 
