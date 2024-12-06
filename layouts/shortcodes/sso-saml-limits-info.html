@@ -1,0 +1,4 @@
+{{- $idp := .Get "idp" | default "your Identity Provider" -}}
+<div class="note info">
+  <p><strong>Note:</strong> A single SAML application in {{ $idp }} can support multiple Pulumi organizations. This allows you to manage authentication for multiple teams from one centralized configuration.</p>
+</div>
