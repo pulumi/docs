@@ -11,9 +11,9 @@ tags:
   - secrets
 ---
 
-Managing secrets in modern cloud applications is challenging, particularly when it comes to rotation policies. While dynamic secrets (like AWS IAM temporary credentials) handle this automatically, many systems still rely on static secrets that need periodic rotation.
+Managing secrets in modern cloud applications can be challenging, particularly when it comes to rotation policies. While dynamic secrets (like AWS IAM temporary credentials) handle this automatically, many systems still rely on static secrets that require periodic rotation.
 
-Static secrets, like database passwords or API keys, [should be rotated regularly to maintain security](https://cheatsheetseries.owasp.org/cheatsheets/Secrets_Management_Cheat_Sheet.html#272-rotation), but services depending on these secrets need time to transition to new credentials to avoid downtime. This makes rotating credentials error-prone, and often forgotten.
+Static secrets, like database passwords or API keys, [should be rotated regularly to maintain security](https://cheatsheetseries.owasp.org/cheatsheets/Secrets_Management_Cheat_Sheet.html#272-rotation), and services depending on these secrets need time to transition to new credentials to avoid downtime. This makes rotating credentials error-prone, and often forgotten.
 
 In this post, we'll explore an approach for automating static secret rotation using [Pulumi ESC](https://www.pulumi.com/docs/esc/).
 
@@ -21,7 +21,7 @@ In this post, we'll explore an approach for automating static secret rotation us
 
 ## A pattern for extending ESC
 
-ESC does not currently have built-in support for automatic static secret rotation, however, we can take advantage of ESC’s integration with [Pulumi Deployments](https://www.pulumi.com/docs/pulumi-cloud/deployments/) to create an ergonomic way of managing rotation schedules ourselves.
+We can take advantage of ESC’s integration with [Pulumi Deployments](https://www.pulumi.com/docs/pulumi-cloud/deployments/) to create an ergonomic way of managing rotation schedules ourselves.
 
 We’ll start by defining a custom declarative configuration format for managing a rotation schedule:
 
@@ -36,7 +36,7 @@ xfn::pulumi-scheduled-update:
   trigger: "break-glass"
 ```
 
-Using webhooks, we’ll monitor when the environment is updated, search for these configuration blocks, and use them to drive scheduled deployments of a stack that rotates credentials for us. Then, using ESC’s composition primitives, we combine this rotation schedule config with a `fn::open::pulumi-stacks` provider to read the current secret value from the rotator stack to provide to our application.
+Using webhooks, we’ll monitor when the environment is updated, then search for these configuration blocks, and use them to drive scheduled deployments of a stack that rotates credentials. Using ESC’s composition primitives, we can  combine this rotation schedule config with a `fn::open::pulumi-stacks` provider to read the current secret value from the rotator stack to provide to our application.
 
 Here is how the solution fits together:
 ![Architecture](architecture.svg)
@@ -44,7 +44,7 @@ Let's break down each component and see how they work together to solve our rota
 
 ### The Rotator: Managing Credential Lifecycles
 
-At the heart of our solution is a [generic `Rotator` component](https://github.com/pulumi/esc-examples/blob/claire/esc-rotation-example/rotate/example/rotator/rotator.ts) that manages credential pairs. It's designed to handle any type of static secret while ensuring zero-downtime rotations. The way it does this is by maintaining two versions of each secret: “current” and “previous”.  Each time the stack is deployed, “current” is replaced with a newly provisioned credential, the old value is demoted to “previous”, and the old previous credential is decommissioned. Crucially, the demoted secret _remains valid_, which allows consuming services time to switch to using the new secret.
+At the heart of our solution is a [generic `Rotator` component](https://github.com/pulumi/esc-examples/blob/claire/esc-rotation-example/rotate/example/rotator/rotator.ts) that manages credential pairs. It's designed to handle any type of static secret while ensuring zero-downtime rotations. The way it does this is by maintaining two versions of each secret: “current” and “previous”.  Each time the stack is deployed, “current” is replaced with a newly provisioned credential, the old value is demoted to “previous”, and the old previous credential is decommissioned. Crucially, the demoted secret _remains valid_, which allows consuming services enough time to switch over to the new secret.
 
 ```typescript
 const creds = new Rotator("rotating-creds", {
@@ -133,7 +133,7 @@ Now lets force a rotation by changing the manual trigger:
     break-glass2
 ```
 
-After a few minutes we can see that the secret has rotated successfully! We can also see that the previous secret remains valid, giving currently deployed consumers time to update to the new credentials.
+After a few minutes we can see that the secret has rotated successfully! We can also observe that the previous secret remains valid, giving currently deployed consumers time to update to the new credentials.
 
 ```
 $ pulumi env open esc-rotation-demo/test db-credentials.secrets
