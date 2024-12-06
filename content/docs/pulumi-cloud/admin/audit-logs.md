@@ -31,7 +31,7 @@ organization. They display what a user did, when
 they did it and where by recording user actions.
 
 Pulumi's audit logs allow you to account for the activity your
-users are taking within your organization. The logs are immutable and
+users are taking within your organization. The logs are immutable
 and record all user actions. Auditing makes the activity
 of members in an organization attributable.
 The logs capture the UNIX timestamp of the event, the user
