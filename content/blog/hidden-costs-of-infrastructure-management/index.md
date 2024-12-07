@@ -113,7 +113,7 @@ We built Pulumi Cloud as a fully managed service to address these concerns by pr
 
 ## Next Steps
 
-Each unique variable in your environment - cloud providers, languages, team structure, business objective, etc. - makes realizing the full benefits of Pulumi Cloud different for each organization.
+Each unique variable in your environment –— cloud providers, languages, team structure, business objective, etc. –— makes realizing the full benefits of Pulumi Cloud different for each organization.
 
 Our newly launched program called Immersion Days, is a customizable, half-day event designed to expand Pulumi’s impact across your organization.
 
