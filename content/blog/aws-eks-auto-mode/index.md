@@ -32,8 +32,8 @@ This automation significantly reduces the operational overhead of running Kubern
 
 We have added EKS Auto Mode support across our AWS provider ecosystem:
 
-- AWS Native Provider (v6.63.0+)
-- AWS Cloud Control Provider (v1.13.0+)
+- Pulumi AWS Provider (v6.63.0+)
+- Pulumi AWS Cloud Control Provider (v1.13.0+)
 - Pulumi EKS Provider (TODO: upcoming release)
 
 ## Creating an EKS Auto Mode Cluster
@@ -386,9 +386,9 @@ resources:
 
 ## Deploying a Load-Balanced Application
 
-Let's deploy a simple web application fronted by an Application Load Balancer now that EKS Auto Mode is enabled.
-EKS Auto Mode will automatically provisions appropriately sized nodes for your workload, set up the Application Load Balancer according
-to the Ingress configuration and manage ongoing maintenance and updates.
+Now that we have provisioned an EKS cluster with Auto Mode enabled, let's deploy a web application fronted by an Application Load Balancer.
+EKS Auto Mode will automatically provision appropriately sized nodes for your workload, set up the Application Load Balancer according
+to the Ingress configuration, and manage ongoing maintenance and updates.
 
 {{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
@@ -1340,7 +1340,7 @@ Hello, Pulumi!
 
 ## Deploying a Stateful Workload
 
-EKS Auto Mode simplifies persistent storage management by automatically handling EBS volume provisioning for your stateful workloads. To leverage this feature you can create a `StorageClass` that uses the EBS CSI driver (`ebs.csi.eks.amazonaws.com`) as its provisioner. EKS Auto Mode will then automatically manage the lifecycle of your persistent volumes, including provisioning, attaching, and cleanup.
+EKS Auto Mode simplifies persistent storage management by automatically handling EBS volume provisioning for your stateful workloads. To leverage this feature, you can create a `StorageClass` that uses the EBS CSI driver (`ebs.csi.eks.amazonaws.com`) as its provisioner. EKS Auto Mode will then automatically manage the lifecycle of your persistent volumes, including provisioning, attaching, and cleanup.
 
 This is how you'd configure persistent storage for a sample application:
 

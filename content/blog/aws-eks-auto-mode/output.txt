@@ -1,0 +1,1730 @@
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+
+{{% choosable language typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as awsx from "@pulumi/awsx";
+import * as eks from "@pulumi/eks";
+import * as kubernetes from "@pulumi/kubernetes";
+
+const eksVpc = new awsx.ec2.Vpc("eksVpc", {
+    enableDnsHostnames: true,
+    cidrBlock: "10.0.0.0/16",
+    subnetSpecs: [
+        {
+            type: awsx.ec2.SubnetType.Public,
+            tags: {
+                "kubernetes.io/cluster/eks-auto-mode-demo": "shared",
+                "kubernetes.io/role/elb": "1",
+            },
+        },
+        {
+            type: awsx.ec2.SubnetType.Private,
+            tags: {
+                "kubernetes.io/cluster/eks-auto-mode-demo": "shared",
+                "kubernetes.io/role/internal-elb": "1",
+            },
+        },
+    ],
+    subnetStrategy: awsx.ec2.SubnetAllocationStrategy.Auto,
+});
+const cluster = new eks.Cluster("cluster", {
+    name: "eks-auto-mode-demo",
+    authenticationMode: eks.AuthenticationMode.Api,
+    skipDefaultNodeGroup: true,
+    skipDefaultSecurityGroups: true,
+    vpcId: eksVpc.vpcId,
+    publicSubnetIds: eksVpc.publicSubnetIds,
+    privateSubnetIds: eksVpc.privateSubnetIds,
+    autoMode: {
+        enabled: true,
+    },
+});
+const k8SProvider = new kubernetes.Provider("k8sProvider", {kubeconfig: cluster.kubeconfig});
+const ns = new kubernetes.core.v1.Namespace("ns", {metadata: {
+    name: "nginx",
+}}, {
+    provider: k8SProvider,
+});
+const indexContent = new kubernetes.core.v1.ConfigMap("index-content", {
+    metadata: {
+        namespace: ns.metadata.apply(metadata => metadata.name),
+    },
+    data: {
+        "index.html": "<html><body><h1>Hello, Pulumi!</h1></body></html>",
+    },
+}, {
+    provider: k8SProvider,
+});
+const deployment = new kubernetes.apps.v1.Deployment("deployment", {
+    metadata: {
+        namespace: ns.metadata.apply(metadata => metadata.name),
+    },
+    spec: {
+        selector: {
+            matchLabels: {
+                app: "nginx",
+            },
+        },
+        replicas: 3,
+        template: {
+            metadata: {
+                labels: {
+                    app: "nginx",
+                },
+            },
+            spec: {
+                containers: [{
+                    name: "nginx",
+                    image: "nginx",
+                    ports: [{
+                        containerPort: 80,
+                    }],
+                    volumeMounts: [{
+                        name: "nginx-index",
+                        mountPath: "/usr/share/nginx/html",
+                    }],
+                }],
+                volumes: [{
+                    name: "nginx-index",
+                    configMap: {
+                        name: indexContent.metadata.apply(metadata => metadata.name),
+                    },
+                }],
+            },
+        },
+    },
+}, {
+    provider: k8SProvider,
+});
+const service = new kubernetes.core.v1.Service("service", {
+    metadata: {
+        name: "nginx",
+        namespace: ns.metadata.apply(metadata => metadata.name),
+    },
+    spec: {
+        selector: {
+            app: "nginx",
+        },
+        ports: [{
+            port: 80,
+            targetPort: 80,
+        }],
+    },
+}, {
+    provider: k8SProvider,
+    dependsOn: [deployment],
+});
+const ingressClass = new kubernetes.networking.v1.IngressClass("ingressClass", {
+    metadata: {
+        namespace: ns.metadata.apply(metadata => metadata.name),
+        labels: {
+            "app.kubernetes.io/name": "LoadBalancerController",
+        },
+        name: "alb",
+    },
+    spec: {
+        controller: "eks.amazonaws.com/alb",
+    },
+}, {
+    provider: k8SProvider,
+});
+const ingress = new kubernetes.networking.v1.Ingress("ingress", {
+    metadata: {
+        namespace: ns.metadata.apply(metadata => metadata.name),
+        annotations: {
+            "alb.ingress.kubernetes.io/scheme": "internet-facing",
+            "alb.ingress.kubernetes.io/target-type": "ip",
+        },
+    },
+    spec: {
+        ingressClassName: ingressClass.metadata.apply(metadata => metadata.name),
+        rules: [{
+            http: {
+                paths: [{
+                    path: "/",
+                    pathType: "Prefix",
+                    backend: {
+                        service: {
+                            name: service.metadata.apply(metadata => metadata.name),
+                            port: {
+                                number: 80,
+                            },
+                        },
+                    },
+                }],
+            },
+        }],
+    },
+}, {
+    provider: k8SProvider,
+});
+const storageClass = new kubernetes.storage.v1.StorageClass("storage-class", {
+    metadata: {
+        name: "auto-ebs-sc",
+        annotations: {
+            "storageclass.kubernetes.io/is-default-class": "true",
+        },
+    },
+    provisioner: "ebs.csi.eks.amazonaws.com",
+    volumeBindingMode: "WaitForFirstConsumer",
+    parameters: {
+        type: "gp3",
+        encrypted: "true",
+    },
+}, {
+    provider: k8SProvider,
+});
+const pvc = new kubernetes.core.v1.PersistentVolumeClaim("pvc", {
+    metadata: {
+        name: "auto-ebs-claim",
+        namespace: ns.metadata.apply(metadata => metadata.name),
+    },
+    spec: {
+        accessModes: ["ReadWriteOnce"],
+        storageClassName: storageClass.metadata.apply(metadata => metadata.name),
+        resources: {
+            requests: {
+                storage: "8Gi",
+            },
+        },
+    },
+}, {
+    provider: k8SProvider,
+});
+const statefulWorkload = new kubernetes.apps.v1.Deployment("stateful-workload", {
+    metadata: {
+        name: "inflate-stateful",
+        namespace: ns.metadata.apply(metadata => metadata.name),
+    },
+    spec: {
+        replicas: 1,
+        selector: {
+            matchLabels: {
+                app: "inflate-stateful",
+            },
+        },
+        template: {
+            metadata: {
+                labels: {
+                    app: "inflate-stateful",
+                },
+            },
+            spec: {
+                terminationGracePeriodSeconds: 0,
+                nodeSelector: {
+                    "eks.amazonaws.com/compute-type": "auto",
+                },
+                containers: [{
+                    name: "bash",
+                    image: "public.ecr.aws/docker/library/bash:4.4",
+                    command: ["/usr/local/bin/bash"],
+                    args: [
+                        "-c",
+                        "while true; do echo $(date -u) >> /data/out.txt; sleep 60; done",
+                    ],
+                    resources: {
+                        requests: {
+                            cpu: "1",
+                        },
+                    },
+                    volumeMounts: [{
+                        name: "persistent-storage",
+                        mountPath: "/data",
+                    }],
+                }],
+                volumes: [{
+                    name: "persistent-storage",
+                    persistentVolumeClaim: {
+                        claimName: pvc.metadata.apply(metadata => metadata.name),
+                    },
+                }],
+            },
+        },
+    },
+}, {
+    provider: k8SProvider,
+});
+
+export const nodeRoleName = cluster.autoModeNodeRoleName;
+export const url = ingress.status.apply(status => status?.loadBalancer?.ingress?.[0]?.hostname);
+
+```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+```python
+import pulumi
+import pulumi_awsx as awsx
+import pulumi_eks as eks
+import pulumi_kubernetes as kubernetes
+
+eks_vpc = awsx.ec2.Vpc("eksVpc",
+    enable_dns_hostnames=True,
+    cidr_block="10.0.0.0/16",
+    subnet_specs=[
+        {
+            "type": awsx.ec2.SubnetType.PUBLIC,
+            "tags": {
+                "kubernetes_io_cluster_eks_auto_mode_demo": "shared",
+                "kubernetes_io_role_elb": "1",
+            },
+        },
+        {
+            "type": awsx.ec2.SubnetType.PRIVATE,
+            "tags": {
+                "kubernetes_io_cluster_eks_auto_mode_demo": "shared",
+                "kubernetes_io_role_internal_elb": "1",
+            },
+        },
+    ],
+    subnet_strategy=awsx.ec2.SubnetAllocationStrategy.AUTO)
+cluster = eks.Cluster("cluster",
+    name="eks-auto-mode-demo",
+    authentication_mode=eks.AuthenticationMode.API,
+    skip_default_node_group=True,
+    skip_default_security_groups=True,
+    vpc_id=eks_vpc.vpc_id,
+    public_subnet_ids=eks_vpc.public_subnet_ids,
+    private_subnet_ids=eks_vpc.private_subnet_ids,
+    auto_mode={
+        "enabled": True,
+    })
+k8_s_provider = kubernetes.Provider("k8sProvider", kubeconfig=cluster.kubeconfig)
+ns = kubernetes.core.v1.Namespace("ns", metadata={
+    "name": "nginx",
+},
+opts = pulumi.ResourceOptions(provider=k8_s_provider))
+index_content = kubernetes.core.v1.ConfigMap("index-content",
+    metadata={
+        "namespace": ns.metadata.name,
+    },
+    data={
+        "index.html": "<html><body><h1>Hello, Pulumi!</h1></body></html>",
+    },
+    opts = pulumi.ResourceOptions(provider=k8_s_provider))
+deployment = kubernetes.apps.v1.Deployment("deployment",
+    metadata={
+        "namespace": ns.metadata.name,
+    },
+    spec={
+        "selector": {
+            "match_labels": {
+                "app": "nginx",
+            },
+        },
+        "replicas": 3,
+        "template": {
+            "metadata": {
+                "labels": {
+                    "app": "nginx",
+                },
+            },
+            "spec": {
+                "containers": [{
+                    "name": "nginx",
+                    "image": "nginx",
+                    "ports": [{
+                        "container_port": 80,
+                    }],
+                    "volume_mounts": [{
+                        "name": "nginx-index",
+                        "mount_path": "/usr/share/nginx/html",
+                    }],
+                }],
+                "volumes": [{
+                    "name": "nginx-index",
+                    "config_map": {
+                        "name": index_content.metadata.name,
+                    },
+                }],
+            },
+        },
+    },
+    opts = pulumi.ResourceOptions(provider=k8_s_provider))
+service = kubernetes.core.v1.Service("service",
+    metadata={
+        "name": "nginx",
+        "namespace": ns.metadata.name,
+    },
+    spec={
+        "selector": {
+            "app": "nginx",
+        },
+        "ports": [{
+            "port": 80,
+            "target_port": 80,
+        }],
+    },
+    opts = pulumi.ResourceOptions(provider=k8_s_provider,
+        depends_on=[deployment]))
+ingress_class = kubernetes.networking.v1.IngressClass("ingressClass",
+    metadata={
+        "namespace": ns.metadata.name,
+        "labels": {
+            "app_kubernetes_io_name": "LoadBalancerController",
+        },
+        "name": "alb",
+    },
+    spec={
+        "controller": "eks.amazonaws.com/alb",
+    },
+    opts = pulumi.ResourceOptions(provider=k8_s_provider))
+ingress = kubernetes.networking.v1.Ingress("ingress",
+    metadata={
+        "namespace": ns.metadata.name,
+        "annotations": {
+            "alb_ingress_kubernetes_io_scheme": "internet-facing",
+            "alb_ingress_kubernetes_io_target_type": "ip",
+        },
+    },
+    spec={
+        "ingress_class_name": ingress_class.metadata.name,
+        "rules": [{
+            "http": {
+                "paths": [{
+                    "path": "/",
+                    "path_type": "Prefix",
+                    "backend": {
+                        "service": {
+                            "name": service.metadata.name,
+                            "port": {
+                                "number": 80,
+                            },
+                        },
+                    },
+                }],
+            },
+        }],
+    },
+    opts = pulumi.ResourceOptions(provider=k8_s_provider))
+storage_class = kubernetes.storage.v1.StorageClass("storage-class",
+    metadata={
+        "name": "auto-ebs-sc",
+        "annotations": {
+            "storageclass_kubernetes_io_is_default_class": "true",
+        },
+    },
+    provisioner="ebs.csi.eks.amazonaws.com",
+    volume_binding_mode="WaitForFirstConsumer",
+    parameters={
+        "type": "gp3",
+        "encrypted": "true",
+    },
+    opts = pulumi.ResourceOptions(provider=k8_s_provider))
+pvc = kubernetes.core.v1.PersistentVolumeClaim("pvc",
+    metadata={
+        "name": "auto-ebs-claim",
+        "namespace": ns.metadata.name,
+    },
+    spec={
+        "access_modes": ["ReadWriteOnce"],
+        "storage_class_name": storage_class.metadata.name,
+        "resources": {
+            "requests": {
+                "storage": "8Gi",
+            },
+        },
+    },
+    opts = pulumi.ResourceOptions(provider=k8_s_provider))
+stateful_workload = kubernetes.apps.v1.Deployment("stateful-workload",
+    metadata={
+        "name": "inflate-stateful",
+        "namespace": ns.metadata.name,
+    },
+    spec={
+        "replicas": 1,
+        "selector": {
+            "match_labels": {
+                "app": "inflate-stateful",
+            },
+        },
+        "template": {
+            "metadata": {
+                "labels": {
+                    "app": "inflate-stateful",
+                },
+            },
+            "spec": {
+                "termination_grace_period_seconds": 0,
+                "node_selector": {
+                    "eks_amazonaws_com_compute_type": "auto",
+                },
+                "containers": [{
+                    "name": "bash",
+                    "image": "public.ecr.aws/docker/library/bash:4.4",
+                    "command": ["/usr/local/bin/bash"],
+                    "args": [
+                        "-c",
+                        "while true; do echo $(date -u) >> /data/out.txt; sleep 60; done",
+                    ],
+                    "resources": {
+                        "requests": {
+                            "cpu": "1",
+                        },
+                    },
+                    "volume_mounts": [{
+                        "name": "persistent-storage",
+                        "mount_path": "/data",
+                    }],
+                }],
+                "volumes": [{
+                    "name": "persistent-storage",
+                    "persistent_volume_claim": {
+                        "claim_name": pvc.metadata.name,
+                    },
+                }],
+            },
+        },
+    },
+    opts = pulumi.ResourceOptions(provider=k8_s_provider))
+pulumi.export("nodeRoleName", cluster.auto_mode_node_role_name)
+pulumi.export("url", ingress.status.load_balancer.ingress[0].hostname)
+
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-awsx/sdk/v2/go/awsx/ec2"
+	"github.com/pulumi/pulumi-eks/sdk/v3/go/eks"
+	"github.com/pulumi/pulumi-kubernetes/sdk/v4/go/kubernetes"
+	appsv1 "github.com/pulumi/pulumi-kubernetes/sdk/v4/go/kubernetes/apps/v1"
+	corev1 "github.com/pulumi/pulumi-kubernetes/sdk/v4/go/kubernetes/core/v1"
+	metav1 "github.com/pulumi/pulumi-kubernetes/sdk/v4/go/kubernetes/meta/v1"
+	networkingv1 "github.com/pulumi/pulumi-kubernetes/sdk/v4/go/kubernetes/networking/v1"
+	storagev1 "github.com/pulumi/pulumi-kubernetes/sdk/v4/go/kubernetes/storage/v1"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		eksVpc, err := ec2.NewVpc(ctx, "eksVpc", &ec2.VpcArgs{
+			EnableDnsHostnames: pulumi.Bool(true),
+			CidrBlock:          "10.0.0.0/16",
+			SubnetSpecs: []ec2.SubnetSpecArgs{
+				{
+					Type: ec2.SubnetTypePublic,
+					Tags: {
+						"kubernetes.io/cluster/eks-auto-mode-demo": pulumi.String("shared"),
+						"kubernetes.io/role/elb":                   pulumi.String("1"),
+					},
+				},
+				{
+					Type: ec2.SubnetTypePrivate,
+					Tags: {
+						"kubernetes.io/cluster/eks-auto-mode-demo": pulumi.String("shared"),
+						"kubernetes.io/role/internal-elb":          pulumi.String("1"),
+					},
+				},
+			},
+			SubnetStrategy: ec2.SubnetAllocationStrategyAuto,
+		})
+		if err != nil {
+			return err
+		}
+		cluster, err := eks.NewCluster(ctx, "cluster", &eks.ClusterArgs{
+			Name:                      pulumi.String("eks-auto-mode-demo"),
+			AuthenticationMode:        eks.AuthenticationModeApi,
+			SkipDefaultNodeGroup:      true,
+			SkipDefaultSecurityGroups: true,
+			VpcId:                     eksVpc.VpcId,
+			PublicSubnetIds:           eksVpc.PublicSubnetIds,
+			PrivateSubnetIds:          eksVpc.PrivateSubnetIds,
+			AutoMode: &eks.AutoModeOptionsArgs{
+				Enabled: true,
+			},
+		})
+		if err != nil {
+			return err
+		}
+		k8SProvider, err := kubernetes.NewProvider(ctx, "k8sProvider", &kubernetes.ProviderArgs{
+			Kubeconfig: cluster.Kubeconfig,
+		})
+		if err != nil {
+			return err
+		}
+		ns, err := corev1.NewNamespace(ctx, "ns", &corev1.NamespaceArgs{
+			Metadata: &metav1.ObjectMetaArgs{
+				Name: pulumi.String("nginx"),
+			},
+		}, pulumi.Provider(k8SProvider))
+		if err != nil {
+			return err
+		}
+		indexContent, err := corev1.NewConfigMap(ctx, "index-content", &corev1.ConfigMapArgs{
+			Metadata: &metav1.ObjectMetaArgs{
+				Namespace: ns.Metadata.ApplyT(func(metadata metav1.ObjectMeta) (*string, error) {
+					return &metadata.Name, nil
+				}).(pulumi.StringPtrOutput),
+			},
+			Data: pulumi.StringMap{
+				"index.html": pulumi.String("<html><body><h1>Hello, Pulumi!</h1></body></html>"),
+			},
+		}, pulumi.Provider(k8SProvider))
+		if err != nil {
+			return err
+		}
+		deployment, err := appsv1.NewDeployment(ctx, "deployment", &appsv1.DeploymentArgs{
+			Metadata: &metav1.ObjectMetaArgs{
+				Namespace: ns.Metadata.ApplyT(func(metadata metav1.ObjectMeta) (*string, error) {
+					return &metadata.Name, nil
+				}).(pulumi.StringPtrOutput),
+			},
+			Spec: &appsv1.DeploymentSpecArgs{
+				Selector: &metav1.LabelSelectorArgs{
+					MatchLabels: pulumi.StringMap{
+						"app": pulumi.String("nginx"),
+					},
+				},
+				Replicas: pulumi.Int(3),
+				Template: &corev1.PodTemplateSpecArgs{
+					Metadata: &metav1.ObjectMetaArgs{
+						Labels: pulumi.StringMap{
+							"app": pulumi.String("nginx"),
+						},
+					},
+					Spec: &corev1.PodSpecArgs{
+						Containers: corev1.ContainerArray{
+							&corev1.ContainerArgs{
+								Name:  pulumi.String("nginx"),
+								Image: pulumi.String("nginx"),
+								Ports: corev1.ContainerPortArray{
+									&corev1.ContainerPortArgs{
+										ContainerPort: pulumi.Int(80),
+									},
+								},
+								VolumeMounts: corev1.VolumeMountArray{
+									&corev1.VolumeMountArgs{
+										Name:      pulumi.String("nginx-index"),
+										MountPath: pulumi.String("/usr/share/nginx/html"),
+									},
+								},
+							},
+						},
+						Volumes: corev1.VolumeArray{
+							&corev1.VolumeArgs{
+								Name: pulumi.String("nginx-index"),
+								ConfigMap: &corev1.ConfigMapVolumeSourceArgs{
+									Name: indexContent.Metadata.ApplyT(func(metadata metav1.ObjectMeta) (*string, error) {
+										return &metadata.Name, nil
+									}).(pulumi.StringPtrOutput),
+								},
+							},
+						},
+					},
+				},
+			},
+		}, pulumi.Provider(k8SProvider))
+		if err != nil {
+			return err
+		}
+		service, err := corev1.NewService(ctx, "service", &corev1.ServiceArgs{
+			Metadata: &metav1.ObjectMetaArgs{
+				Name: pulumi.String("nginx"),
+				Namespace: ns.Metadata.ApplyT(func(metadata metav1.ObjectMeta) (*string, error) {
+					return &metadata.Name, nil
+				}).(pulumi.StringPtrOutput),
+			},
+			Spec: &corev1.ServiceSpecArgs{
+				Selector: pulumi.StringMap{
+					"app": pulumi.String("nginx"),
+				},
+				Ports: corev1.ServicePortArray{
+					&corev1.ServicePortArgs{
+						Port:       pulumi.Int(80),
+						TargetPort: pulumi.Any(80),
+					},
+				},
+			},
+		}, pulumi.Provider(k8SProvider), pulumi.DependsOn([]pulumi.Resource{
+			deployment,
+		}))
+		if err != nil {
+			return err
+		}
+		ingressClass, err := networkingv1.NewIngressClass(ctx, "ingressClass", &networkingv1.IngressClassArgs{
+			Metadata: &metav1.ObjectMetaArgs{
+				Namespace: ns.Metadata.ApplyT(func(metadata metav1.ObjectMeta) (*string, error) {
+					return &metadata.Name, nil
+				}).(pulumi.StringPtrOutput),
+				Labels: pulumi.StringMap{
+					"app.kubernetes.io/name": pulumi.String("LoadBalancerController"),
+				},
+				Name: pulumi.String("alb"),
+			},
+			Spec: &networkingv1.IngressClassSpecArgs{
+				Controller: pulumi.String("eks.amazonaws.com/alb"),
+			},
+		}, pulumi.Provider(k8SProvider))
+		if err != nil {
+			return err
+		}
+		ingress, err := networkingv1.NewIngress(ctx, "ingress", &networkingv1.IngressArgs{
+			Metadata: &metav1.ObjectMetaArgs{
+				Namespace: ns.Metadata.ApplyT(func(metadata metav1.ObjectMeta) (*string, error) {
+					return &metadata.Name, nil
+				}).(pulumi.StringPtrOutput),
+				Annotations: pulumi.StringMap{
+					"alb.ingress.kubernetes.io/scheme":      pulumi.String("internet-facing"),
+					"alb.ingress.kubernetes.io/target-type": pulumi.String("ip"),
+				},
+			},
+			Spec: &networkingv1.IngressSpecArgs{
+				IngressClassName: ingressClass.Metadata.ApplyT(func(metadata metav1.ObjectMeta) (*string, error) {
+					return &metadata.Name, nil
+				}).(pulumi.StringPtrOutput),
+				Rules: networkingv1.IngressRuleArray{
+					&networkingv1.IngressRuleArgs{
+						Http: &networkingv1.HTTPIngressRuleValueArgs{
+							Paths: networkingv1.HTTPIngressPathArray{
+								&networkingv1.HTTPIngressPathArgs{
+									Path:     pulumi.String("/"),
+									PathType: pulumi.String("Prefix"),
+									Backend: &networkingv1.IngressBackendArgs{
+										Service: &networkingv1.IngressServiceBackendArgs{
+											Name: service.Metadata.ApplyT(func(metadata metav1.ObjectMeta) (*string, error) {
+												return &metadata.Name, nil
+											}).(pulumi.StringPtrOutput),
+											Port: &networkingv1.ServiceBackendPortArgs{
+												Number: pulumi.Int(80),
+											},
+										},
+									},
+								},
+							},
+						},
+					},
+				},
+			},
+		}, pulumi.Provider(k8SProvider))
+		if err != nil {
+			return err
+		}
+		storageClass, err := storagev1.NewStorageClass(ctx, "storage-class", &storagev1.StorageClassArgs{
+			Metadata: &metav1.ObjectMetaArgs{
+				Name: pulumi.String("auto-ebs-sc"),
+				Annotations: pulumi.StringMap{
+					"storageclass.kubernetes.io/is-default-class": pulumi.String("true"),
+				},
+			},
+			Provisioner:       pulumi.String("ebs.csi.eks.amazonaws.com"),
+			VolumeBindingMode: pulumi.String("WaitForFirstConsumer"),
+			Parameters: pulumi.StringMap{
+				"type":      pulumi.String("gp3"),
+				"encrypted": pulumi.String("true"),
+			},
+		}, pulumi.Provider(k8SProvider))
+		if err != nil {
+			return err
+		}
+		pvc, err := corev1.NewPersistentVolumeClaim(ctx, "pvc", &corev1.PersistentVolumeClaimArgs{
+			Metadata: &metav1.ObjectMetaArgs{
+				Name: pulumi.String("auto-ebs-claim"),
+				Namespace: ns.Metadata.ApplyT(func(metadata metav1.ObjectMeta) (*string, error) {
+					return &metadata.Name, nil
+				}).(pulumi.StringPtrOutput),
+			},
+			Spec: &corev1.PersistentVolumeClaimSpecArgs{
+				AccessModes: pulumi.StringArray{
+					pulumi.String("ReadWriteOnce"),
+				},
+				StorageClassName: storageClass.Metadata.ApplyT(func(metadata metav1.ObjectMeta) (*string, error) {
+					return &metadata.Name, nil
+				}).(pulumi.StringPtrOutput),
+				Resources: &corev1.VolumeResourceRequirementsArgs{
+					Requests: pulumi.StringMap{
+						"storage": pulumi.String("8Gi"),
+					},
+				},
+			},
+		}, pulumi.Provider(k8SProvider))
+		if err != nil {
+			return err
+		}
+		_, err = appsv1.NewDeployment(ctx, "stateful-workload", &appsv1.DeploymentArgs{
+			Metadata: &metav1.ObjectMetaArgs{
+				Name: pulumi.String("inflate-stateful"),
+				Namespace: ns.Metadata.ApplyT(func(metadata metav1.ObjectMeta) (*string, error) {
+					return &metadata.Name, nil
+				}).(pulumi.StringPtrOutput),
+			},
+			Spec: &appsv1.DeploymentSpecArgs{
+				Replicas: pulumi.Int(1),
+				Selector: &metav1.LabelSelectorArgs{
+					MatchLabels: pulumi.StringMap{
+						"app": pulumi.String("inflate-stateful"),
+					},
+				},
+				Template: &corev1.PodTemplateSpecArgs{
+					Metadata: &metav1.ObjectMetaArgs{
+						Labels: pulumi.StringMap{
+							"app": pulumi.String("inflate-stateful"),
+						},
+					},
+					Spec: &corev1.PodSpecArgs{
+						TerminationGracePeriodSeconds: pulumi.Int(0),
+						NodeSelector: pulumi.StringMap{
+							"eks.amazonaws.com/compute-type": pulumi.String("auto"),
+						},
+						Containers: corev1.ContainerArray{
+							&corev1.ContainerArgs{
+								Name:  pulumi.String("bash"),
+								Image: pulumi.String("public.ecr.aws/docker/library/bash:4.4"),
+								Command: pulumi.StringArray{
+									pulumi.String("/usr/local/bin/bash"),
+								},
+								Args: pulumi.StringArray{
+									pulumi.String("-c"),
+									pulumi.String("while true; do echo $(date -u) >> /data/out.txt; sleep 60; done"),
+								},
+								Resources: &corev1.ResourceRequirementsArgs{
+									Requests: pulumi.StringMap{
+										"cpu": pulumi.String("1"),
+									},
+								},
+								VolumeMounts: corev1.VolumeMountArray{
+									&corev1.VolumeMountArgs{
+										Name:      pulumi.String("persistent-storage"),
+										MountPath: pulumi.String("/data"),
+									},
+								},
+							},
+						},
+						Volumes: corev1.VolumeArray{
+							&corev1.VolumeArgs{
+								Name: pulumi.String("persistent-storage"),
+								PersistentVolumeClaim: &corev1.PersistentVolumeClaimVolumeSourceArgs{
+									ClaimName: pvc.Metadata.ApplyT(func(metadata metav1.ObjectMeta) (*string, error) {
+										return &metadata.Name, nil
+									}).(pulumi.StringPtrOutput),
+								},
+							},
+						},
+					},
+				},
+			},
+		}, pulumi.Provider(k8SProvider))
+		if err != nil {
+			return err
+		}
+		ctx.Export("nodeRoleName", cluster.AutoModeNodeRoleName)
+		ctx.Export("url", ingress.Status.ApplyT(func(status networkingv1.IngressStatus) (*string, error) {
+			return &status.LoadBalancer.Ingress[0].Hostname, nil
+		}).(pulumi.StringPtrOutput))
+		return nil
+	})
+}
+
+```
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+```csharp
+using System.Collections.Generic;
+using System.Linq;
+using Pulumi;
+using Awsx = Pulumi.Awsx;
+using Eks = Pulumi.Eks;
+using Kubernetes = Pulumi.Kubernetes;
+
+return await Deployment.RunAsync(() => 
+{
+    var eksVpc = new Awsx.Ec2.Vpc("eksVpc", new()
+    {
+        EnableDnsHostnames = true,
+        CidrBlock = "10.0.0.0/16",
+        SubnetSpecs = new()
+        {
+            new Awsx.Ec2.Inputs.SubnetSpecArgs
+            {
+                Type = Awsx.Ec2.SubnetType.Public,
+                Tags = 
+                {
+                    { "kubernetes.io/cluster/eks-auto-mode-demo", "shared" },
+                    { "kubernetes.io/role/elb", "1" },
+                },
+            },
+            new Awsx.Ec2.Inputs.SubnetSpecArgs
+            {
+                Type = Awsx.Ec2.SubnetType.Private,
+                Tags = 
+                {
+                    { "kubernetes.io/cluster/eks-auto-mode-demo", "shared" },
+                    { "kubernetes.io/role/internal-elb", "1" },
+                },
+            },
+        },
+        SubnetStrategy = Awsx.Ec2.SubnetAllocationStrategy.Auto,
+    });
+
+    var cluster = new Eks.Cluster("cluster", new()
+    {
+        Name = "eks-auto-mode-demo",
+        AuthenticationMode = Eks.AuthenticationMode.Api,
+        SkipDefaultNodeGroup = true,
+        SkipDefaultSecurityGroups = true,
+        VpcId = eksVpc.VpcId,
+        PublicSubnetIds = eksVpc.PublicSubnetIds,
+        PrivateSubnetIds = eksVpc.PrivateSubnetIds,
+        AutoMode = new Eks.Inputs.AutoModeOptionsArgs
+        {
+            Enabled = true,
+        },
+    });
+
+    var k8SProvider = new Kubernetes.Provider.Provider("k8sProvider", new()
+    {
+        KubeConfig = cluster.Kubeconfig,
+    });
+
+    var ns = new Kubernetes.Core.V1.Namespace("ns", new()
+    {
+        Metadata = new Kubernetes.Types.Inputs.Meta.V1.ObjectMetaArgs
+        {
+            Name = "nginx",
+        },
+    }, new CustomResourceOptions
+    {
+        Provider = k8SProvider,
+    });
+
+    var indexContent = new Kubernetes.Core.V1.ConfigMap("index-content", new()
+    {
+        Metadata = new Kubernetes.Types.Inputs.Meta.V1.ObjectMetaArgs
+        {
+            Namespace = ns.Metadata.Apply(metadata => metadata.Name),
+        },
+        Data = 
+        {
+            { "index.html", "<html><body><h1>Hello, Pulumi!</h1></body></html>" },
+        },
+    }, new CustomResourceOptions
+    {
+        Provider = k8SProvider,
+    });
+
+    var deployment = new Kubernetes.Apps.V1.Deployment("deployment", new()
+    {
+        Metadata = new Kubernetes.Types.Inputs.Meta.V1.ObjectMetaArgs
+        {
+            Namespace = ns.Metadata.Apply(metadata => metadata.Name),
+        },
+        Spec = new Kubernetes.Types.Inputs.Apps.V1.DeploymentSpecArgs
+        {
+            Selector = new Kubernetes.Types.Inputs.Meta.V1.LabelSelectorArgs
+            {
+                MatchLabels = 
+                {
+                    { "app", "nginx" },
+                },
+            },
+            Replicas = 3,
+            Template = new Kubernetes.Types.Inputs.Core.V1.PodTemplateSpecArgs
+            {
+                Metadata = new Kubernetes.Types.Inputs.Meta.V1.ObjectMetaArgs
+                {
+                    Labels = 
+                    {
+                        { "app", "nginx" },
+                    },
+                },
+                Spec = new Kubernetes.Types.Inputs.Core.V1.PodSpecArgs
+                {
+                    Containers = new[]
+                    {
+                        new Kubernetes.Types.Inputs.Core.V1.ContainerArgs
+                        {
+                            Name = "nginx",
+                            Image = "nginx",
+                            Ports = new[]
+                            {
+                                new Kubernetes.Types.Inputs.Core.V1.ContainerPortArgs
+                                {
+                                    ContainerPortValue = 80,
+                                },
+                            },
+                            VolumeMounts = new[]
+                            {
+                                new Kubernetes.Types.Inputs.Core.V1.VolumeMountArgs
+                                {
+                                    Name = "nginx-index",
+                                    MountPath = "/usr/share/nginx/html",
+                                },
+                            },
+                        },
+                    },
+                    Volumes = new[]
+                    {
+                        new Kubernetes.Types.Inputs.Core.V1.VolumeArgs
+                        {
+                            Name = "nginx-index",
+                            ConfigMap = new Kubernetes.Types.Inputs.Core.V1.ConfigMapVolumeSourceArgs
+                            {
+                                Name = indexContent.Metadata.Apply(metadata => metadata.Name),
+                            },
+                        },
+                    },
+                },
+            },
+        },
+    }, new CustomResourceOptions
+    {
+        Provider = k8SProvider,
+    });
+
+    var service = new Kubernetes.Core.V1.Service("service", new()
+    {
+        Metadata = new Kubernetes.Types.Inputs.Meta.V1.ObjectMetaArgs
+        {
+            Name = "nginx",
+            Namespace = ns.Metadata.Apply(metadata => metadata.Name),
+        },
+        Spec = new Kubernetes.Types.Inputs.Core.V1.ServiceSpecArgs
+        {
+            Selector = 
+            {
+                { "app", "nginx" },
+            },
+            Ports = new[]
+            {
+                new Kubernetes.Types.Inputs.Core.V1.ServicePortArgs
+                {
+                    Port = 80,
+                    TargetPort = 80,
+                },
+            },
+        },
+    }, new CustomResourceOptions
+    {
+        Provider = k8SProvider,
+        DependsOn =
+        {
+            deployment,
+        },
+    });
+
+    var ingressClass = new Kubernetes.Networking.V1.IngressClass("ingressClass", new()
+    {
+        Metadata = new Kubernetes.Types.Inputs.Meta.V1.ObjectMetaArgs
+        {
+            Namespace = ns.Metadata.Apply(metadata => metadata.Name),
+            Labels = 
+            {
+                { "app.kubernetes.io/name", "LoadBalancerController" },
+            },
+            Name = "alb",
+        },
+        Spec = new Kubernetes.Types.Inputs.Networking.V1.IngressClassSpecArgs
+        {
+            Controller = "eks.amazonaws.com/alb",
+        },
+    }, new CustomResourceOptions
+    {
+        Provider = k8SProvider,
+    });
+
+    var ingress = new Kubernetes.Networking.V1.Ingress("ingress", new()
+    {
+        Metadata = new Kubernetes.Types.Inputs.Meta.V1.ObjectMetaArgs
+        {
+            Namespace = ns.Metadata.Apply(metadata => metadata.Name),
+            Annotations = 
+            {
+                { "alb.ingress.kubernetes.io/scheme", "internet-facing" },
+                { "alb.ingress.kubernetes.io/target-type", "ip" },
+            },
+        },
+        Spec = new Kubernetes.Types.Inputs.Networking.V1.IngressSpecArgs
+        {
+            IngressClassName = ingressClass.Metadata.Apply(metadata => metadata.Name),
+            Rules = new[]
+            {
+                new Kubernetes.Types.Inputs.Networking.V1.IngressRuleArgs
+                {
+                    Http = new Kubernetes.Types.Inputs.Networking.V1.HTTPIngressRuleValueArgs
+                    {
+                        Paths = new[]
+                        {
+                            new Kubernetes.Types.Inputs.Networking.V1.HTTPIngressPathArgs
+                            {
+                                Path = "/",
+                                PathType = "Prefix",
+                                Backend = new Kubernetes.Types.Inputs.Networking.V1.IngressBackendArgs
+                                {
+                                    Service = new Kubernetes.Types.Inputs.Networking.V1.IngressServiceBackendArgs
+                                    {
+                                        Name = service.Metadata.Apply(metadata => metadata.Name),
+                                        Port = new Kubernetes.Types.Inputs.Networking.V1.ServiceBackendPortArgs
+                                        {
+                                            Number = 80,
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
+            },
+        },
+    }, new CustomResourceOptions
+    {
+        Provider = k8SProvider,
+    });
+
+    var storageClass = new Kubernetes.Storage.V1.StorageClass("storage-class", new()
+    {
+        Metadata = new Kubernetes.Types.Inputs.Meta.V1.ObjectMetaArgs
+        {
+            Name = "auto-ebs-sc",
+            Annotations = 
+            {
+                { "storageclass.kubernetes.io/is-default-class", "true" },
+            },
+        },
+        Provisioner = "ebs.csi.eks.amazonaws.com",
+        VolumeBindingMode = "WaitForFirstConsumer",
+        Parameters = 
+        {
+            { "type", "gp3" },
+            { "encrypted", "true" },
+        },
+    }, new CustomResourceOptions
+    {
+        Provider = k8SProvider,
+    });
+
+    var pvc = new Kubernetes.Core.V1.PersistentVolumeClaim("pvc", new()
+    {
+        Metadata = new Kubernetes.Types.Inputs.Meta.V1.ObjectMetaArgs
+        {
+            Name = "auto-ebs-claim",
+            Namespace = ns.Metadata.Apply(metadata => metadata.Name),
+        },
+        Spec = new Kubernetes.Types.Inputs.Core.V1.PersistentVolumeClaimSpecArgs
+        {
+            AccessModes = new[]
+            {
+                "ReadWriteOnce",
+            },
+            StorageClassName = storageClass.Metadata.Apply(metadata => metadata.Name),
+            Resources = new Kubernetes.Types.Inputs.Core.V1.VolumeResourceRequirementsArgs
+            {
+                Requests = 
+                {
+                    { "storage", "8Gi" },
+                },
+            },
+        },
+    }, new CustomResourceOptions
+    {
+        Provider = k8SProvider,
+    });
+
+    var statefulWorkload = new Kubernetes.Apps.V1.Deployment("stateful-workload", new()
+    {
+        Metadata = new Kubernetes.Types.Inputs.Meta.V1.ObjectMetaArgs
+        {
+            Name = "inflate-stateful",
+            Namespace = ns.Metadata.Apply(metadata => metadata.Name),
+        },
+        Spec = new Kubernetes.Types.Inputs.Apps.V1.DeploymentSpecArgs
+        {
+            Replicas = 1,
+            Selector = new Kubernetes.Types.Inputs.Meta.V1.LabelSelectorArgs
+            {
+                MatchLabels = 
+                {
+                    { "app", "inflate-stateful" },
+                },
+            },
+            Template = new Kubernetes.Types.Inputs.Core.V1.PodTemplateSpecArgs
+            {
+                Metadata = new Kubernetes.Types.Inputs.Meta.V1.ObjectMetaArgs
+                {
+                    Labels = 
+                    {
+                        { "app", "inflate-stateful" },
+                    },
+                },
+                Spec = new Kubernetes.Types.Inputs.Core.V1.PodSpecArgs
+                {
+                    TerminationGracePeriodSeconds = 0,
+                    NodeSelector = 
+                    {
+                        { "eks.amazonaws.com/compute-type", "auto" },
+                    },
+                    Containers = new[]
+                    {
+                        new Kubernetes.Types.Inputs.Core.V1.ContainerArgs
+                        {
+                            Name = "bash",
+                            Image = "public.ecr.aws/docker/library/bash:4.4",
+                            Command = new[]
+                            {
+                                "/usr/local/bin/bash",
+                            },
+                            Args = new[]
+                            {
+                                "-c",
+                                "while true; do echo $(date -u) >> /data/out.txt; sleep 60; done",
+                            },
+                            Resources = new Kubernetes.Types.Inputs.Core.V1.ResourceRequirementsArgs
+                            {
+                                Requests = 
+                                {
+                                    { "cpu", "1" },
+                                },
+                            },
+                            VolumeMounts = new[]
+                            {
+                                new Kubernetes.Types.Inputs.Core.V1.VolumeMountArgs
+                                {
+                                    Name = "persistent-storage",
+                                    MountPath = "/data",
+                                },
+                            },
+                        },
+                    },
+                    Volumes = new[]
+                    {
+                        new Kubernetes.Types.Inputs.Core.V1.VolumeArgs
+                        {
+                            Name = "persistent-storage",
+                            PersistentVolumeClaim = new Kubernetes.Types.Inputs.Core.V1.PersistentVolumeClaimVolumeSourceArgs
+                            {
+                                ClaimName = pvc.Metadata.Apply(metadata => metadata.Name),
+                            },
+                        },
+                    },
+                },
+            },
+        },
+    }, new CustomResourceOptions
+    {
+        Provider = k8SProvider,
+    });
+
+    return new Dictionary<string, object?>
+    {
+        ["nodeRoleName"] = cluster.AutoModeNodeRoleName,
+        ["url"] = ingress.Status.Apply(status => status?.LoadBalancer?.Ingress[0]?.Hostname),
+    };
+});
+
+
+```
+
+{{% /choosable %}}
+
+{{% choosable language java %}}
+
+```java
+package generated_program;
+
+import com.pulumi.Context;
+import com.pulumi.Pulumi;
+import com.pulumi.core.Output;
+import com.pulumi.awsx.ec2.Vpc;
+import com.pulumi.awsx.ec2.VpcArgs;
+import com.pulumi.awsx.ec2.inputs.SubnetSpecArgs;
+import com.pulumi.eks.Cluster;
+import com.pulumi.eks.ClusterArgs;
+import com.pulumi.eks.inputs.AutoModeOptionsArgs;
+import com.pulumi.kubernetes.Provider;
+import com.pulumi.kubernetes.ProviderArgs;
+import com.pulumi.kubernetes.core_v1.Namespace;
+import com.pulumi.kubernetes.core_v1.NamespaceArgs;
+import com.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
+import com.pulumi.kubernetes.core_v1.ConfigMap;
+import com.pulumi.kubernetes.core_v1.ConfigMapArgs;
+import com.pulumi.kubernetes.apps_v1.Deployment;
+import com.pulumi.kubernetes.apps_v1.DeploymentArgs;
+import com.pulumi.kubernetes.apps_v1.inputs.DeploymentSpecArgs;
+import com.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;
+import com.pulumi.kubernetes.core_v1.inputs.PodTemplateSpecArgs;
+import com.pulumi.kubernetes.core_v1.inputs.PodSpecArgs;
+import com.pulumi.kubernetes.core_v1.Service;
+import com.pulumi.kubernetes.core_v1.ServiceArgs;
+import com.pulumi.kubernetes.core_v1.inputs.ServiceSpecArgs;
+import com.pulumi.kubernetes.networking.k8s.io_v1.IngressClass;
+import com.pulumi.kubernetes.networking.k8s.io_v1.IngressClassArgs;
+import com.pulumi.kubernetes.networking.k8s.io_v1.inputs.IngressClassSpecArgs;
+import com.pulumi.kubernetes.networking.k8s.io_v1.Ingress;
+import com.pulumi.kubernetes.networking.k8s.io_v1.IngressArgs;
+import com.pulumi.kubernetes.networking.k8s.io_v1.inputs.IngressSpecArgs;
+import com.pulumi.kubernetes.storage.k8s.io_v1.StorageClass;
+import com.pulumi.kubernetes.storage.k8s.io_v1.StorageClassArgs;
+import com.pulumi.kubernetes.core_v1.PersistentVolumeClaim;
+import com.pulumi.kubernetes.core_v1.PersistentVolumeClaimArgs;
+import com.pulumi.kubernetes.core_v1.inputs.PersistentVolumeClaimSpecArgs;
+import com.pulumi.kubernetes.core_v1.inputs.VolumeResourceRequirementsArgs;
+import com.pulumi.resources.CustomResourceOptions;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Map;
+import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
+public class App {
+    public static void main(String[] args) {
+        Pulumi.run(App::stack);
+    }
+
+    public static void stack(Context ctx) {
+        var eksVpc = new Vpc("eksVpc", VpcArgs.builder()
+            .enableDnsHostnames(true)
+            .cidrBlock("10.0.0.0/16")
+            .subnetSpecs(            
+                SubnetSpecArgs.builder()
+                    .type("Public")
+                    .tags(Map.ofEntries(
+                        Map.entry("kubernetes.io/cluster/eks-auto-mode-demo", "shared"),
+                        Map.entry("kubernetes.io/role/elb", "1")
+                    ))
+                    .build(),
+                SubnetSpecArgs.builder()
+                    .type("Private")
+                    .tags(Map.ofEntries(
+                        Map.entry("kubernetes.io/cluster/eks-auto-mode-demo", "shared"),
+                        Map.entry("kubernetes.io/role/internal-elb", "1")
+                    ))
+                    .build())
+            .subnetStrategy("Auto")
+            .build());
+
+        var cluster = new Cluster("cluster", ClusterArgs.builder()
+            .name("eks-auto-mode-demo")
+            .authenticationMode("API")
+            .skipDefaultNodeGroup(true)
+            .skipDefaultSecurityGroups(true)
+            .vpcId(eksVpc.vpcId())
+            .publicSubnetIds(eksVpc.publicSubnetIds())
+            .privateSubnetIds(eksVpc.privateSubnetIds())
+            .autoMode(AutoModeOptionsArgs.builder()
+                .enabled(true)
+                .build())
+            .build());
+
+        var k8SProvider = new Provider("k8SProvider", ProviderArgs.builder()
+            .kubeconfig(cluster.kubeconfig())
+            .build());
+
+        var ns = new Namespace("ns", NamespaceArgs.builder()
+            .metadata(ObjectMetaArgs.builder()
+                .name("nginx")
+                .build())
+            .build(), CustomResourceOptions.builder()
+                .provider(k8SProvider)
+                .build());
+
+        var indexContent = new ConfigMap("indexContent", ConfigMapArgs.builder()
+            .metadata(ObjectMetaArgs.builder()
+                .namespace(ns.metadata().applyValue(metadata -> metadata.name()))
+                .build())
+            .data(Map.of("index.html", "<html><body><h1>Hello, Pulumi!</h1></body></html>"))
+            .build(), CustomResourceOptions.builder()
+                .provider(k8SProvider)
+                .build());
+
+        var deployment = new Deployment("deployment", DeploymentArgs.builder()
+            .metadata(ObjectMetaArgs.builder()
+                .namespace(ns.metadata().applyValue(metadata -> metadata.name()))
+                .build())
+            .spec(DeploymentSpecArgs.builder()
+                .selector(LabelSelectorArgs.builder()
+                    .matchLabels(Map.of("app", "nginx"))
+                    .build())
+                .replicas(3)
+                .template(PodTemplateSpecArgs.builder()
+                    .metadata(ObjectMetaArgs.builder()
+                        .labels(Map.of("app", "nginx"))
+                        .build())
+                    .spec(PodSpecArgs.builder()
+                        .containers(ContainerArgs.builder()
+                            .name("nginx")
+                            .image("nginx")
+                            .ports(ContainerPortArgs.builder()
+                                .containerPort(80)
+                                .build())
+                            .volumeMounts(VolumeMountArgs.builder()
+                                .name("nginx-index")
+                                .mountPath("/usr/share/nginx/html")
+                                .build())
+                            .build())
+                        .volumes(VolumeArgs.builder()
+                            .name("nginx-index")
+                            .configMap(ConfigMapVolumeSourceArgs.builder()
+                                .name(indexContent.metadata().applyValue(metadata -> metadata.name()))
+                                .build())
+                            .build())
+                        .build())
+                    .build())
+                .build())
+            .build(), CustomResourceOptions.builder()
+                .provider(k8SProvider)
+                .build());
+
+        var service = new Service("service", ServiceArgs.builder()
+            .metadata(ObjectMetaArgs.builder()
+                .name("nginx")
+                .namespace(ns.metadata().applyValue(metadata -> metadata.name()))
+                .build())
+            .spec(ServiceSpecArgs.builder()
+                .selector(Map.of("app", "nginx"))
+                .ports(ServicePortArgs.builder()
+                    .port(80)
+                    .targetPort(80)
+                    .build())
+                .build())
+            .build(), CustomResourceOptions.builder()
+                .provider(k8SProvider)
+                .dependsOn(deployment)
+                .build());
+
+        var ingressClass = new IngressClass("ingressClass", IngressClassArgs.builder()
+            .metadata(ObjectMetaArgs.builder()
+                .namespace(ns.metadata().applyValue(metadata -> metadata.name()))
+                .labels(Map.of("app.kubernetes.io/name", "LoadBalancerController"))
+                .name("alb")
+                .build())
+            .spec(IngressClassSpecArgs.builder()
+                .controller("eks.amazonaws.com/alb")
+                .build())
+            .build(), CustomResourceOptions.builder()
+                .provider(k8SProvider)
+                .build());
+
+        var ingress = new Ingress("ingress", IngressArgs.builder()
+            .metadata(ObjectMetaArgs.builder()
+                .namespace(ns.metadata().applyValue(metadata -> metadata.name()))
+                .annotations(Map.ofEntries(
+                    Map.entry("alb.ingress.kubernetes.io/scheme", "internet-facing"),
+                    Map.entry("alb.ingress.kubernetes.io/target-type", "ip")
+                ))
+                .build())
+            .spec(IngressSpecArgs.builder()
+                .ingressClassName(ingressClass.metadata().applyValue(metadata -> metadata.name()))
+                .rules(IngressRuleArgs.builder()
+                    .http(HTTPIngressRuleValueArgs.builder()
+                        .paths(HTTPIngressPathArgs.builder()
+                            .path("/")
+                            .pathType("Prefix")
+                            .backend(IngressBackendArgs.builder()
+                                .service(IngressServiceBackendArgs.builder()
+                                    .name(service.metadata().applyValue(metadata -> metadata.name()))
+                                    .port(ServiceBackendPortArgs.builder()
+                                        .number(80)
+                                        .build())
+                                    .build())
+                                .build())
+                            .build())
+                        .build())
+                    .build())
+                .build())
+            .build(), CustomResourceOptions.builder()
+                .provider(k8SProvider)
+                .build());
+
+        var storageClass = new StorageClass("storageClass", StorageClassArgs.builder()
+            .metadata(ObjectMetaArgs.builder()
+                .name("auto-ebs-sc")
+                .annotations(Map.of("storageclass.kubernetes.io/is-default-class", "true"))
+                .build())
+            .provisioner("ebs.csi.eks.amazonaws.com")
+            .volumeBindingMode("WaitForFirstConsumer")
+            .parameters(Map.ofEntries(
+                Map.entry("type", "gp3"),
+                Map.entry("encrypted", "true")
+            ))
+            .build(), CustomResourceOptions.builder()
+                .provider(k8SProvider)
+                .build());
+
+        var pvc = new PersistentVolumeClaim("pvc", PersistentVolumeClaimArgs.builder()
+            .metadata(ObjectMetaArgs.builder()
+                .name("auto-ebs-claim")
+                .namespace(ns.metadata().applyValue(metadata -> metadata.name()))
+                .build())
+            .spec(PersistentVolumeClaimSpecArgs.builder()
+                .accessModes("ReadWriteOnce")
+                .storageClassName(storageClass.metadata().applyValue(metadata -> metadata.name()))
+                .resources(VolumeResourceRequirementsArgs.builder()
+                    .requests(Map.of("storage", "8Gi"))
+                    .build())
+                .build())
+            .build(), CustomResourceOptions.builder()
+                .provider(k8SProvider)
+                .build());
+
+        var statefulWorkload = new Deployment("statefulWorkload", DeploymentArgs.builder()
+            .metadata(ObjectMetaArgs.builder()
+                .name("inflate-stateful")
+                .namespace(ns.metadata().applyValue(metadata -> metadata.name()))
+                .build())
+            .spec(DeploymentSpecArgs.builder()
+                .replicas(1)
+                .selector(LabelSelectorArgs.builder()
+                    .matchLabels(Map.of("app", "inflate-stateful"))
+                    .build())
+                .template(PodTemplateSpecArgs.builder()
+                    .metadata(ObjectMetaArgs.builder()
+                        .labels(Map.of("app", "inflate-stateful"))
+                        .build())
+                    .spec(PodSpecArgs.builder()
+                        .terminationGracePeriodSeconds(0)
+                        .nodeSelector(Map.of("eks.amazonaws.com/compute-type", "auto"))
+                        .containers(ContainerArgs.builder()
+                            .name("bash")
+                            .image("public.ecr.aws/docker/library/bash:4.4")
+                            .command("/usr/local/bin/bash")
+                            .args(                            
+                                "-c",
+                                "while true; do echo $(date -u) >> /data/out.txt; sleep 60; done")
+                            .resources(ResourceRequirementsArgs.builder()
+                                .requests(Map.of("cpu", "1"))
+                                .build())
+                            .volumeMounts(VolumeMountArgs.builder()
+                                .name("persistent-storage")
+                                .mountPath("/data")
+                                .build())
+                            .build())
+                        .volumes(VolumeArgs.builder()
+                            .name("persistent-storage")
+                            .persistentVolumeClaim(PersistentVolumeClaimVolumeSourceArgs.builder()
+                                .claimName(pvc.metadata().applyValue(metadata -> metadata.name()))
+                                .build())
+                            .build())
+                        .build())
+                    .build())
+                .build())
+            .build(), CustomResourceOptions.builder()
+                .provider(k8SProvider)
+                .build());
+
+        ctx.export("nodeRoleName", cluster.autoModeNodeRoleName());
+        ctx.export("url", ingress.status().applyValue(status -> status.loadBalancer().ingress()[0].hostname()));
+    }
+}
+
+```
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+```yaml
+name: eks-auto-mode-yaml
+description: A Pulumi YAML program to deploy a Kubernetes cluster on AWS
+runtime: yaml
+resources:
+  eksVpc:
+    type: awsx:ec2:Vpc
+    properties:
+      enableDnsHostnames: true
+      cidrBlock: "10.0.0.0/16"
+      subnetSpecs:
+        - type: "Public"
+          tags:
+            kubernetes.io/cluster/eks-auto-mode-demo: shared
+            kubernetes.io/role/elb: "1"
+        - type: "Private"
+          tags:
+            kubernetes.io/cluster/eks-auto-mode-demo: shared
+            kubernetes.io/role/internal-elb: "1"
+      subnetStrategy: "Auto"
+  cluster:
+    type: eks:Cluster
+    properties:
+      name: eks-auto-mode-demo
+      authenticationMode: API
+      skipDefaultNodeGroup: true
+      skipDefaultSecurityGroups: true
+      vpcId: ${eksVpc.vpcId}
+      publicSubnetIds: ${eksVpc.publicSubnetIds}
+      privateSubnetIds: ${eksVpc.privateSubnetIds}
+      autoMode:
+        enabled: true
+  k8sProvider:
+    type: pulumi:providers:kubernetes
+    properties:
+      kubeconfig: ${cluster.kubeconfig}
+  ns:
+    type: kubernetes:core/v1:Namespace
+    properties:
+      metadata:
+        name: nginx
+    options:
+      provider: ${k8sProvider}
+  index-content:
+    type: kubernetes:core/v1:ConfigMap
+    properties:
+      metadata:
+        namespace: ${ns.metadata.name}
+      data:
+        "index.html": "<html><body><h1>Hello, Pulumi!</h1></body></html>"
+    options:
+      provider: ${k8sProvider}
+  deployment:
+    type: kubernetes:apps/v1:Deployment
+    properties:
+      metadata:
+        namespace: ${ns.metadata.name}
+      spec:
+        selector:
+          matchLabels:
+            app: nginx
+        replicas: 3
+        template:
+          metadata:
+            labels:
+              app: nginx
+          spec:
+            containers:
+              - name: nginx
+                image: nginx
+                ports:
+                  - containerPort: 80
+                volumeMounts:
+                  - name: nginx-index
+                    mountPath: /usr/share/nginx/html
+            volumes:
+              - name: nginx-index
+                configMap:
+                  name: ${index-content.metadata.name}
+    options:
+      provider: ${k8sProvider}
+  service:
+    type: kubernetes:core/v1:Service
+    properties:
+      metadata:
+        name: nginx
+        namespace: ${ns.metadata.name}
+      spec:
+        selector:
+          app: nginx
+        ports:
+          - port: 80
+            targetPort: 80
+    options:
+      provider: ${k8sProvider}
+      dependsOn:
+        - ${deployment}
+  ingressClass:
+    type: kubernetes:networking.k8s.io/v1:IngressClass
+    properties:
+      metadata:
+        namespace: ${ns.metadata.name}
+        labels:
+          app.kubernetes.io/name: LoadBalancerController
+        name: alb
+      spec:
+        controller: eks.amazonaws.com/alb
+    options:
+      provider: ${k8sProvider}
+  ingress:
+    type: kubernetes:networking.k8s.io/v1:Ingress
+    properties:
+      metadata:
+        namespace: ${ns.metadata.name}
+        annotations:
+          alb.ingress.kubernetes.io/scheme: internet-facing
+          alb.ingress.kubernetes.io/target-type: ip
+      spec:
+        ingressClassName: ${ingressClass.metadata.name}
+        rules:
+          - http:
+              paths:
+                - path: /
+                  pathType: Prefix
+                  backend:
+                    service:
+                      name: ${service.metadata.name}
+                      port:
+                        number: 80
+    options:
+      provider: ${k8sProvider}
+  storage-class:
+    type: kubernetes:storage.k8s.io/v1:StorageClass
+    properties:
+      metadata:
+        name: auto-ebs-sc
+        annotations:
+          storageclass.kubernetes.io/is-default-class: "true"
+      provisioner: ebs.csi.eks.amazonaws.com
+      volumeBindingMode: WaitForFirstConsumer
+      parameters:
+        type: gp3
+        encrypted: "true"
+    options:
+      provider: ${k8sProvider}
+  pvc:
+    type: kubernetes:core/v1:PersistentVolumeClaim
+    properties:
+      metadata:
+        name: auto-ebs-claim
+        namespace: ${ns.metadata.name}
+      spec:
+        accessModes:
+          - ReadWriteOnce
+        storageClassName: ${storage-class.metadata.name}
+        resources:
+          requests:
+            storage: 8Gi
+    options:
+      provider: ${k8sProvider}
+  stateful-workload:
+    type: kubernetes:apps/v1:Deployment
+    properties:
+      metadata:
+        name: inflate-stateful
+        namespace: ${ns.metadata.name}
+      spec:
+        replicas: 1
+        selector:
+          matchLabels:
+            app: inflate-stateful
+        template:
+          metadata:
+            labels:
+              app: inflate-stateful
+          spec:
+            terminationGracePeriodSeconds: 0
+            nodeSelector:
+              eks.amazonaws.com/compute-type: auto
+            containers:
+              - name: bash
+                image: public.ecr.aws/docker/library/bash:4.4
+                command: ["/usr/local/bin/bash"]
+                args: ["-c", "while true; do echo $(date -u) >> /data/out.txt; sleep 60; done"]
+                resources:
+                  requests:
+                    cpu: "1"
+                volumeMounts:
+                  - name: persistent-storage
+                    mountPath: /data
+            volumes:
+              - name: persistent-storage
+                persistentVolumeClaim:
+                  claimName: ${pvc.metadata.name}
+    options:
+      provider: ${k8sProvider}
+outputs:
+  nodeRoleName: ${cluster.autoModeNodeRoleName}
+  url: ${ingress.status.loadBalancer.ingress[0].hostname}
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
