@@ -108,7 +108,6 @@ We build and host language-specific SDK documentation for the following Pulumi p
 
 * [pulumi](https://github.com/pulumi/pulumi)
 * [pulumi-awsx](https://github.com/pulumi/pulumi-awsx)
-* [pulumi-cloud](https://github.com/pulumi/pulumi-cloud)
 * [pulumi-kubernetesx](https://github.com/pulumi/pulumi-kubernetesx)
 * [pulumi-policy](https://github.com/pulumi/pulumi-policy)
 * [pulumi-terraform](https://github.com/pulumi/pulumi-terraform)

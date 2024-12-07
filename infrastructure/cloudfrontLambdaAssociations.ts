@@ -30,7 +30,7 @@ export function getEdgeRedirectAssociation(): aws.types.input.cloudfront.Distrib
     };
 }
 
-export async function getAnswersEdgeRedirectAssociation(websiteDomain: string): Promise<aws.types.input.cloudfront.DistributionDefaultCacheBehaviorLambdaFunctionAssociation> {    
+export async function getAnswersEdgeRedirectAssociation(websiteDomain: string): Promise<aws.types.input.cloudfront.DistributionDefaultCacheBehaviorLambdaFunctionAssociation> {
     const response = await axios.get(`https://${websiteDomain}/answers/redirects.json`);
     if (response.status !== 200) {
         throw new pulumi.RunError(`Failed to fetch answers redirects: HTTP ${response.status}`);
@@ -121,7 +121,7 @@ function getAIAnswersRewritesLambdaCallback(): aws.lambda.Callback<CloudFrontReq
 }
 
 function getAnswersRedirectsLambdaCallback(redirects: Record<string, string>): aws.lambda.Callback<CloudFrontRequestEvent, CloudFrontRequest | CloudFrontResponse> {
-    
+
     return (event: CloudFrontRequestEvent, context, callback) => {
         const request = event.Records[0].cf.request;
         // Check for a redirect that matches the request URL.
@@ -220,11 +220,6 @@ function getTutorialsRedirect(uri: string): string | undefined {
 
     if (tutorialsPage) {
         const packageName = tutorialsPage[1];
-
-        // Don't redirect cloudfx, as we don't have a new home for its tutorial content yet.
-        if (packageName === "cloudfx") {
-            return undefined;
-        }
 
         const isAWSNativeGuide = AWS_NATIVE_TUTORIALS.some((awsNativeGuide) => uri.includes(awsNativeGuide))
         if (isAWSNativeGuide) {
