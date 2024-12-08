@@ -1,0 +1,7 @@
+name: k8s-deployment-service-for-minikube-go
+description: An example that deploys a Deployment and Service for Minikube on Kubernetes.
+runtime: go
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: kubernetes-go
