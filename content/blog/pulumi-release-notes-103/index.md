@@ -18,7 +18,7 @@ As always, we have been actively rolling out new features in response to the inv
 
 - [Pulumi Cloud](#pulumi-cloud)
   - [Pulumi ESC 1Password Support](#pulumi-esc-1password-support)
-  - [Pulumi ESC Key-Value Table Editor](#pulumi-esc-key-value-table-editor)
+  - [Pulumi ESC Table view](#pulumi-esc-key-value-table-editor)
   - [Pulumi ESC YAML Code Editor Enhancements](#pulumi-esc-yaml-code-editor-enhancements)
   - [Pulumi ESC OIDC customization](#pulumi-esc-oidc-customization)
   - [Pulumi ESC Audit Logs](#pulumi-esc-audit-logs)
@@ -42,11 +42,11 @@ In collaboration with 1Password, we've launched the [1Password provider](/docs/e
 
 {{< video title="Pulumi ESC 1Password Provider Demo" src="https://www.pulumi.com/uploads/esc-1password-provider-demo.mp4" controls="false" autoplay="true" loop="true" >}}
 
-### Pulumi ESC Key-Value Table Editor
+### Pulumi ESC Table view
 
-We've rolled out the [Pulumi ESC Key-Value Table Editor](/blog/esc-key-value-table-editor-launch/), offering a novel, user-friendly interface for managing secrets and configurations. This addition complements the existing YAML-based editor, providing intuitive and familiar experiences for your workflows with secrets and configurations. Table Editor supports capabilities including CRUD operations for secrets and plaintext values, secret decryption, [environment imports](/docs/esc/environments/imports/), variable projections, and [interpolations](/docs/esc/environments/working-with-environments/#interpolating-values).
+We've rolled out the [Pulumi ESC Table view](/blog/esc-key-value-table-editor-launch/), offering a novel, user-friendly interface for managing secrets and configurations. This addition complements the existing YAML-based editor, providing intuitive and familiar experiences for your workflows with secrets and configurations. Table Editor supports capabilities including CRUD operations for secrets and plaintext values, secret decryption, [environment imports](/docs/esc/environments/imports/), variable projections, and [interpolations](/docs/esc/environments/working-with-environments/#interpolating-values).
 
-![Key-Value Table Editor](/blog/esc-key-value-table-editor-launch/esc-key-value-table-editor.png)
+![Table view](/blog/esc-key-value-table-editor-launch/esc-key-value-table-editor.png)
 
 ### Pulumi ESC YAML Code Editor Enhancements
 
