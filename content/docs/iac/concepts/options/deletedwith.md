@@ -18,7 +18,7 @@ The `deletedWith` resource option allows you to skip resource deletion if a anot
 
 Pulumi will normally call the provider's delete action for every resource during a delete operation. Sometimes, this is redundant if another resource is also deleted, such as a parent container resource, and can cause your delete or destroy operations to take longer than needed.
 
-For example, if you are deleting a Kubernetes cluster or Kubernetes namespace, you might want to speed up deletion by skipping delete on any Pulumi managed resources created in that Kubernetes cluster or namespace since they will be deleted implicitely.
+For example, if you are deleting a Kubernetes cluster or Kubernetes namespace, you might want to speed up deletion by skipping delete on any Pulumi managed resources created in that Kubernetes cluster or namespace since they will be deleted implicitly.
 
 {{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
 

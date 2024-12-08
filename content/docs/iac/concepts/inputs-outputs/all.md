@@ -1,5 +1,5 @@
 ---
-title_tag: "Accessing Multple Outputs with All | Inputs and Outputs"
+title_tag: "Accessing Multiple Outputs with All | Inputs and Outputs"
 meta_desc: "Learn how to access multiple output values using the All method in Pulumi."
 title: Accessing multiple outputs with All
 h1: Accessing multiple outputs with All

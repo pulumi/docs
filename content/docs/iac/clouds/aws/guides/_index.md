@@ -137,7 +137,7 @@ const vpc = new awsx.ec2.Vpc("classic-vpc", {});
 ```
 
 Any resource that you use from the existing library can continue to be used from that `classic` namespace. All of the classic
-functionality is available in that namesoace.
+functionality is available in that namespace.
 
 ### Is Support or Training Available for Pulumi Crosswalk for AWS?
 

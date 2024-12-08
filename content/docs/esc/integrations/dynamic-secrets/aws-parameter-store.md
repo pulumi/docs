@@ -80,7 +80,7 @@ Make sure to replace `<org>`, `<project>`, and `<environment>` with the values o
 |----------|--------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
 | `region` | string                                                   | The AWS region to use.                                                                                                    |
 | `login`  | [AWSParameterStoreLogin](#awsparameterstorelogin)        | Credentials to use to log in to AWS.                                                                                      |
-| `get`    | map[string][AWSParameterStoreGet](#awsparameterstoreget) | A map from names to parameters to read from AWS Parameter Store. The outputs will map each name to the parameters's data. |
+| `get`    | map[string][AWSParameterStoreGet](#awsparameterstoreget) | A map from names to parameters to read from AWS Parameter Store. The outputs will map each name to the parameter's data.  |
 
 ### AWSParameterStoreLogin
 

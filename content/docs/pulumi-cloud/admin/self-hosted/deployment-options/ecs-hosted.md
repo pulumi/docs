@@ -30,7 +30,7 @@ The customer is required to provide and manage the following:
   * At least 2 isolated subnets available.
     * An "isolated" subnet means it can only route traffic within the subnet. So there is no NAT gateway.
 * Route53 hosted zone.
-* ACM Certiciate that covers FQDNs of the following form, where `{subdomain}` is optional:
+* ACM Certificate that covers FQDNs of the following form, where `{subdomain}` is optional:
   * `{subdomain}.{zoneDomainName}`
   * `api.{subdomain}.{zoneDomainName}`
   * `app.{subdomain}.{zoneDomainName}`

@@ -126,7 +126,7 @@ Policies can be written in TypeScript/JavaScript (Node.js) or Python and can be 
     ```python
     # The validation function is called before each resource is created or updated.
     # In this case, the rule only applies to S3 buckets and reports a violation if the
-    # acle is "public-read" or "public-read-write".
+    # acl is "public-read" or "public-read-write".
     def s3_no_public_read_validator(args: ResourceValidationArgs, report_violation: ReportViolation):
         if args.resource_type == "aws:s3/bucket:Bucket" and "acl" in args.props:
             acl = args.props["acl"]

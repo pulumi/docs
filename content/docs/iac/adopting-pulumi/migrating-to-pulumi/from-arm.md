@@ -27,7 +27,7 @@ If your team has already provisioned infrastructure using Azure Resource Manager
 
 ## Referencing Stack Outputs
 
-It is possible to reference existing Azure Resource Manager (ARM) template deployments from your program. It doesn't mattter how these templates and deployments were created. This lets you read properties of a deployment for use within your Pulumi program. This includes output values computed from resources provisioned that stack.
+It is possible to reference existing Azure Resource Manager (ARM) template deployments from your program. It doesn't matter how these templates and deployments were created. This lets you read properties of a deployment for use within your Pulumi program. This includes output values computed from resources provisioned that stack.
 
 For instance, let's say your infrastructure team has provisioned your Azure storage account using ARM and you need to use the Storage Account name to provision something new from your Pulumi program. One approach is to hardcode the name but this is brittle and, if it ever changes, you'd need to go and manually update the hardcoded value.
 
@@ -462,6 +462,6 @@ Diagnostics:
     warning: inputs to import do not match the existing resource; importing this resource will fail
 ```
 
-This is because the import operation requires explicit definitions for all properties that may have been auto-populated by Azure during the resource creation. You can supress the warning by setting the [`ignoreChanges`](/docs/concepts/resources/#ignorechanges) option to `["accessTier","enableHttpsTrafficOnly","encryption","networkRuleSet"]`.
+This is because the import operation requires explicit definitions for all properties that may have been auto-populated by Azure during the resource creation. You can suppress the warning by setting the [`ignoreChanges`](/docs/concepts/resources/#ignorechanges) option to `["accessTier","enableHttpsTrafficOnly","encryption","networkRuleSet"]`.
 
 After running `pulumi up` again, your storage account will become under the control of Pulumi without any disruption. All subsequent infrastructure changes you'd like to be made can happen within Pulumi instead of ARM template deployments.
