@@ -1,0 +1,20 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.13.6/.schema/devbox.schema.json",
+  "packages": [
+    "pulumi",
+    "nodejs@18",
+    "yarn@1.22",
+    "hugo@0.136.4",
+    "bash",
+    "python@3.7",
+    "go@1.21",
+    "dotnet-sdk@6"
+  ],
+  "env": {},
+  "shell": {
+    "init_hook": [
+      "make ensure"
+    ],
+    "scripts": {}
+  }
+}

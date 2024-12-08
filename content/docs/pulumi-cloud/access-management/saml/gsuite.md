@@ -28,6 +28,8 @@ This guide walks you through configuring your Google Workspace (formerly known a
 
 - [Single Sign-On](/docs/pulumi-cloud/access-management/saml/sso/)
 
+{{< sso-saml-limits-info idp="Google Workspace" >}}
+
 ## Creating the SAML Application
 
 1. In the [administrator console](https://admin.google.com/) for your Google Workspace domain, open the flyout menu

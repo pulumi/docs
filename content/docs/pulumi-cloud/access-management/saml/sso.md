@@ -31,6 +31,8 @@ with the [Pulumi Cloud](/docs/pulumi-cloud/).
 > - [Auth0](/docs/pulumi-cloud/access-management/saml/auth0/)
 > - [OneLogin](/docs/pulumi-cloud/access-management/saml/onelogin/)
 
+{{< sso-saml-limits-info type="SAML" >}}
+
 ## Terminology
 
 - **IdP** stands for Identity Provider. An IdP is a service that acts as a user directory.
