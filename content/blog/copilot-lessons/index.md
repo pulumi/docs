@@ -1,5 +1,5 @@
 ---
-title: "Engineering Lessons from Building Pulumi Copilot"
+title: "AI Engineering Lessons from Building Pulumi Copilot"
 date: 2024-12-12T13:56:13-05:00
 draft: false
 meta_desc: Learn key engineering lessons from building Pulumi Copilot, including how to minimize LLM workload, validate outputs, and deal with hallucination.
@@ -13,8 +13,8 @@ tags:
     - ai
     - iac
 social:
-    twitter: 🚀 Building Pulumi Copilot taught us key AI engineering insights – Minimize LLM workload, validate outputs rigorously & use "skills" for modular tasks. Plus, sometimes when AI hallucinates features, it reveals exactly what users want! 
-    linkedin: 🚀 Building Pulumi Copilot taught us key AI engineering insights – Minimize LLM workload, validate outputs rigorously & use "skills" for modular tasks. Plus, sometimes when AI hallucinates features (like a "--force" flag), it reveals exactly what users want! 
+    twitter: Discover engineering strategies from Pulumi Copilot - Minimize LLM workloads, tackle hallucinations, and ensure AI accuracy.
+    linkedin: Discover engineering strategies from Pulumi Copilot - Minimize LLM workloads, tackle hallucinations, and ensure AI accuracy.
 ---
 Building AI-powered developer tools comes with unique challenges, and now that we've **[launched our REST API](/blog/pulumi-copilot-rest/)**, we want to share some lessons we've learned building Pulumi Copilot, an AI assistant for cloud infrastructure.
 
@@ -26,7 +26,7 @@ The user was attempting to force-delete a stack that still contained resources. 
 
 To understand how we got here - and why this "error" actually taught us something valuable about our product - let's start with the core challenge we faced: balancing traditional software engineering with this new world of prompt engineering.
 
-## Engineering for Reality: Software Engineering vs Prompt Engineering
+## Engineering for Reality: Prompt Engineering vs Software Engineering
 
 ![Software Engineering vs Prompt Engineering](soft-eng.png)
 
