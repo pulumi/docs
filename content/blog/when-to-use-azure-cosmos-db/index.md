@@ -29,6 +29,8 @@ I'm going to break all that down. Here's a roadmap:
 
 The short version is: **you should use it on Azure when you'd use DynamoDB on AWS.** That's to say, you should use it when you're OK with being cloud-specific, when you want hands-off scalability, and when you know the query pattern and potential cost ramifications ahead of time.
 
+{{< youtube "XcB1Prpx-OE?rel=0" >}}
+
 But let's start at the beginning.
 
 ## What is Cosmos DB

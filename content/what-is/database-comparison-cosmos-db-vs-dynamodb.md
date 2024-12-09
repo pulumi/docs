@@ -28,6 +28,9 @@ customer_logos:
       - supabase
       - ro
 ---
+{{% notes type="info" %}}
+**This document has been updated and expanded into [Cosmos DB vs DynamoDB](https://www.pulumi.com/blog/when-to-use-azure-cosmos-db/#dynamo-db-vs-cosmos-db) section of the [When to use Cosmos DB Guide](https://www.pulumi.com/blog/when-to-use-azure-cosmos-db/).**
+{{% /notes %}}
 
 ## Cosmos DB vs DynamoDB: What Are The Similarities?
 

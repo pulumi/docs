@@ -28,6 +28,9 @@ customer_logos:
       - supabase
       - ro
 ---
+{{% notes type="info" %}}
+**This document has been updated and expanded into [Cosmos DB vs Mongo DB](https://www.pulumi.com/blog/when-to-use-azure-cosmos-db/#cosmos-db-vs-mongodb) section of the [When to use Cosmos DB Guide](https://www.pulumi.com/blog/when-to-use-azure-cosmos-db/).**
+{{% /notes %}}
 
 Both Cosmos DB and MongoDB are [NoSQL](/tutorials/glossary/nosql/), or non-relational, databases. This concept means their data is stored in some format other than two-dimensional tables. Some commonly-used formats for NoSQL databases in general are documents, key-value pairs, graphs, and columns, each with different strengths and tradeoffs. Cosmos DB and MongoDB are both highly-available, scalable, globally distributed and fully-managed NoSQL databases.
 
