@@ -74,8 +74,8 @@ main:
 # The right hand side form section.
 form:
     # HubSpot form id.
-    HubSpot Form ID: 2ca022a2-1604-4236-95c7-1e74a63bfe8f
-    Salesforce Campaign ID: 701PQ00000ObL1IYAV
+    hubspot_form_id: 2ca022a2-1604-4236-95c7-1e74a63bfe8f
+    salesforce_campaign_id: 701PQ00000ObL1IYAV
 
 event_data:
   name: "Migrating from Console Deployments to Infrastructure as Code"

@@ -65,6 +65,7 @@ main:
     presenters:
         - name: James Connell
           role: Sr Solutions Architect, Pulumi
+          photo: /images/team/James-Connell.jpg
 
     # case-sensitive
     tags:
@@ -76,8 +77,8 @@ main:
 # The right hand side form section.
 form:
     # HubSpot form id.
-    HubSpot Form ID: 37582977-ca15-467e-9238-900a45939faf
-    Salesforce Campaign ID: 701PQ00000ObegbYAB
+    hubspot_form_id: 37582977-ca15-467e-9238-900a45939faf
+    salesforce_campaign_id: 701PQ00000ObegbYAB
 
 event_data:
   name: "Automate Cloud Compliance with Policy as Code"
