@@ -26,7 +26,7 @@ a shortcode in the URL and then redirects a user to the full URL
 associated with the given short code.
 
 I start simple and make a non-distributed version of the application
-first. It consists of two main components: a Cosmos DB container to
+first. It consists of two main components: a [Cosmos DB](https://www.pulumi.com/blog/when-to-use-azure-cosmos-db/) container to
 store URL mappings and two Azure Functions to handle HTTP requests:
 
 ![The basic version of URL Shortener with Azure and Pulumi](./pulumi-azure-url-shortener-basic.png)
@@ -343,7 +343,7 @@ target scenarios without trusting the providers blindly.
 More importantly, I walked you through a scenario of developing an
 end-to-end application with Pulumi. I highlighted the power of
 leveraging familiar techniques coming from the TypeScript realm. You can
-find the full code in [Pulumi examples](https://github.com/pulumi/examples/tree/master/classic-azure-ts-serverless-url-shortener-global).
+find the full code in [Pulumi examples](https://github.com/pulumi/examples/tree/master/classic-azure-ts-serverless-url-shortener-global) and more on [Cosmos DB](https://www.pulumi.com/blog/when-to-use-azure-cosmos-db/) in the [Azure Provider](https://www.pulumi.com/registry/packages/azure-native/).
 
 Cloud brings superpowers to developer's hands. You just need to use
 those efficiently.
