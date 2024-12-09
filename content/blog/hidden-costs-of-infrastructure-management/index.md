@@ -33,14 +33,12 @@ Building and maintaining your own Infrastructure as Code backend involves a sign
 
 One of the primary functions of IaC backends is managing state. State management involves managing concurrency controls, preventing state corruption, ensuring backup and recovery, maintaining high availability of the state service, and providing consistent visibility across all managed resources; this is easy to get wrong. For instance, an incorrect Git merge of your state can result in outages, as evidenced by [Spotify speaking publicly](https://www.youtube.com/watch?v=ix0Tw8uinWs) about accidentally deleting two-thirds of their production Kubernetes clusters due to a faulty state merge.
 
-![placeholder](placeholder.png)
-
 Pulumi Cloud offers total visibility into changes within your organization, allowing you to track who is deploying what, when, and where, down to the individual cloud infrastructure properties being changed and the source commits triggering them. If issues arise and you need to revert to a prior known state, Pulumi Cloud's transactional state checkpointing protocol ensures automatic recovery from failures, and failures are common with transient cloud and networking issues. In contrast, DIY backends require manual human intervention to recover and repair state files, a process that is time-consuming, extends outages, and carries significant risk. Pulumi Cloud also automatically backs up and replicates your state checkpoints, facilitating easy recovery for audits or rollbacks, potentially preventing outages or meeting audit standards.
 
 Managing your infrastructure by IaC demands considerable time and energy. Pulumi Cloud provides [Pulumi Insights](/product/pulumi-insights/), offering search, analytics, and AI-driven insights over your infrastructure. If you're using a DIY backend, you'll need to build your own search clusters and grep systems. With Insights, you can instantly search for critical information - like finding MySQL databases on end-of-life versions across all your cloud assets. You can also have a conversation with [Pulumi Copilot](/product/copilot/) about your infrastructure in plain English and get
 answers to operational questions that would take hours to piece together from other sources.
 
-![placeholder](copilot.png)
+![Pulumi Copilot example prompt](copilot.png)
 
 With this total visibility, Pulumi Insights helps you reduce waste by showing you usage information and identifying potentially stale infrastructure, leading to substantial cost savings.
 
@@ -108,6 +106,8 @@ When you choose between managing your own backend and using Pulumi Cloud, you ne
 Moreover, the cost of an engineer dedicated to managing the backend can be nearly 10% of your engineering budget, a significant investment for any organization. Figuring it out on your own adds to the complexity and potential for errors, increasing the risk of costly mistakes. Invisible excess waste in terms of unused or underutilized infrastructure can also accumulate, leading to unnecessary expenses.
 
 When it comes to scaling, the cost of onboarding new teams or users onto a DIY system can be high due to the need for custom documentation, training, and support. Security is another critical area where the costs can escalate, with the need to comply with numerous IT security standards, manage access control, and ensure robust secrets management.
+
+![Pulumi Cloud vs DIY IaC backend](backend-comparison.png)
 
 We built Pulumi Cloud as a fully managed service to address these concerns by providing a platform that automates deployments, ensures compliance, and offers comprehensive security features out-of-the-box. You’ll reduce your operational burden, minimize your risk of outages, and make scaling and onboarding easier, ultimately leading to cost savings and increased productivity. By choosing Pulumi Cloud, your organization can focus on innovation and growth rather than the intricacies of IaC backend management. You get to optimize your infrastructure without the overhead of running your own DIY solution.
 
