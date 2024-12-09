@@ -18,15 +18,23 @@ AWS recently announced [Amazon EKS Auto Mode](https://aws.amazon.com/eks/auto-mo
 
 ## What is EKS Auto Mode?
 
-EKS Auto Mode extends AWS management beyond the Kubernetes control plane to the underlying infrastructure that powers your workloads. It automates critical aspects of cluster operations including:
+EKS Auto Mode extends AWS management beyond the Kubernetes control plane to the underlying infrastructure that powers your workloads. While traditional EKS requires you to make numerous infrastructure decisions and maintain various components, Auto Mode simplifies this by automating these choices based on AWS's operational expertise.
 
-- Compute provisioning, autoscaling and ongoing optimization
-- Storage configuration and management
-- Load balancer setup and integration
-- Network Policy enforcement
-- OS update and patch management
+Instead of manually configuring and managing cluster add-ons, node groups, and infrastructure components, Auto Mode handles:
 
-This automation significantly reduces the operational overhead of running Kubernetes clusters, allowing teams to focus on application development rather than infrastructure management.
+- **Compute Management**: Automatically provisions and scales EC2 instances based on your workload demands while selecting optimal instance types and sizes. It also handles node lifecycle management, including OS updates and security patches.
+- **Storage Automation**: Eliminates the need to manually set up and configure the EBS CSI driver for block storage. Auto Mode manages volume provisioning, attachment, and cleanup for your persistent workloads.
+- **Networking Simplification**: Automatically configures and manages core networking components like Load Balancers.
+
+This significantly reduces the operational overhead of running Kubernetes clusters. Instead of spending time on infrastructure decisions and maintenance, teams can now focus on their applications. For example, deploying a stateful application with load balancing no longer requires setting up and maintaining multiple add-ons and configurations - Auto Mode handles this automatically while following AWS best practices.
+
+Common tasks that previously required significant expertise and time are now managed by AWS, making it simpler to run production-grade Kubernetes workloads. This includes:
+
+- Setting up and maintaining cluster autoscaling
+- Configuring and updating networking plugins
+- Managing storage drivers and volume provisioning
+- Handling node updates and security patches
+- Optimizing instance selection and placement
 
 ## Pulumi Support for EKS Auto Mode
 
