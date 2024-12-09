@@ -75,8 +75,8 @@ main:
 # The right hand side form section.
 form:
     # HubSpot form id.
-    HubSpot Form ID: 9e1cd3e2-bf83-4b19-a5d1-4a0520e54226
-    Salesforce Campaign ID: 701PQ00000Oba3XYAR
+    hubspot_form_id: 9e1cd3e2-bf83-4b19-a5d1-4a0520e54226
+    salesforce_campaign_id: 701PQ00000Oba3XYAR
 
 event_data:
   name: "Implementing Centralized Secrets Management for Your Team"

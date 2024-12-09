@@ -65,6 +65,7 @@ main:
     presenters:
         - name: Rob Smith 
           role: Solutions Architect, Pulumi
+          photo: /images/team/Rob-Smith.png
 
     # case-sensitive
     tags:
@@ -76,8 +77,8 @@ main:
 # The right hand side form section.
 form:
     # HubSpot form id.
-    HubSpot Form ID: a44783df-451c-4d8a-9785-005304e4c7a5
-    Salesforce Campaign ID: 701PQ00000ObSHGYA3
+    hubspot_form_id: a44783df-451c-4d8a-9785-005304e4c7a5
+    salesforce_campaign_id: 701PQ00000ObSHGYA3
 
 event_data:
   name: "Automating Deployments with IaC & GitHub Actions"
