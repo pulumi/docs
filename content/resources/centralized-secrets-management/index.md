@@ -40,7 +40,7 @@ main:
     youtube_url: 
 
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2025-03-12T09:00:00-08:00
+    sortable_date: 2025-03-12T09:00:00-07:00
 
     # Duration of the webinar.
     duration: 90 minutes
@@ -57,7 +57,7 @@ main:
     learn:
         - Design and implement a centralized secrets management architecture that reduces operational overhead while enhancing security posture
         - Master techniques for managing different types of secrets (static, dynamic, and configuration) across multiple environments and applications
-        - Establish effective access controls and audit procedures that align with security best practices while maintaining developer velocit
+        - Establish effective access controls and audit procedures that align with security best practices while maintaining developer velocity
 
     # The webinar presenters
     presenters:
@@ -80,8 +80,8 @@ form:
 
 event_data:
   name: "Implementing Centralized Secrets Management for Your Team"
-  start_date: 2025-03-12T09:00:00-08:00
-  end_date: 2025-03-12T10:00:00-08:00
+  start_date: 2025-03-12T09:00:00-07:00
+  end_date: 2025-03-12T09:00:00-07:00
   url: "https://www.pulumi.com/resources/centralized-secrets-management/"
   description: |
     In modern cloud-native environments, managing secrets across multiple teams, applications, and environments has become increasingly complex. This workshop explores best practices for implementing centralized secrets management that balances security requirements with developer productivity. You'll learn how to establish a unified approach to handling configuration values, static secrets, and dynamic credentials while maintaining proper access controls and audit capabilities.

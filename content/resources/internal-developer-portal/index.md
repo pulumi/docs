@@ -40,7 +40,7 @@ main:
     youtube_url: 
 
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2025-03-26T09:00:00-08:00
+    sortable_date: 2025-03-26T09:00:00-07:00
 
     # Duration of the webinar.
     duration: 90 minutes
@@ -80,8 +80,8 @@ form:
 
 event_data:
   name: "Building an Internal Developer Portal"
-  start_date: 2025-03-26T09:00:00-08:00
-  end_date: 2025-03-26T10:00:00-08:00
+  start_date: 2025-03-26T09:00:00-07:00
+  end_date: 2025-03-26T09:00:00-07:00
   url: "https://www.pulumi.com/resources/internal-developer-portal/"
   description: |
     In today's cloud-native landscape, organizations struggle to balance developer autonomy with operational control. This workshop explores how to build an Internal Developer Portal (IDP) that transforms infrastructure provisioning from a bottleneck into a competitive advantage. You'll learn how to create a self-service platform that enables developers to safely deploy infrastructure while maintaining governance and cost control.
