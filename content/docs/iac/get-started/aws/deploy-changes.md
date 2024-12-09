@@ -144,8 +144,8 @@ const website = new aws.s3.BucketWebsiteConfigurationV2("website", {
 {{% choosable language python %}}
 
 ```python
-website = aws.s3.BucketWebsiteConfigurationV2("website",
-    bucket=my_bucket.id,
+website = s3.BucketWebsiteConfigurationV2("website",
+    bucket=bucket.id,
     index_document={
         "suffix": "index.html",
     })
