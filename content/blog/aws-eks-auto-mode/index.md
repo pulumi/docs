@@ -85,8 +85,6 @@ const cluster = new eks.Cluster("eks-auto-mode", {
     name: clusterName,
     // EKS Auto Mode requires Access Entries, use either the `Api` or `ApiAndConfigMap` authentication mode.
     authenticationMode: eks.AuthenticationMode.Api,
-    skipDefaultNodeGroup: true,
-    skipDefaultSecurityGroups: true,
     vpcId: eksVpc.vpcId,
     publicSubnetIds: eksVpc.publicSubnetIds,
     privateSubnetIds: eksVpc.privateSubnetIds,
@@ -133,8 +131,6 @@ cluster = eks.Cluster("cluster",
     name="eks-auto-mode-demo",
     # EKS Auto Mode requires Access Entries, use either the `Api` or `ApiAndConfigMap` authentication mode.
     authentication_mode=eks.AuthenticationMode.API,
-    skip_default_node_group=True,
-    skip_default_security_groups=True,
     vpc_id=eks_vpc.vpc_id,
     public_subnet_ids=eks_vpc.public_subnet_ids,
     private_subnet_ids=eks_vpc.private_subnet_ids,
@@ -195,8 +191,6 @@ func main() {
 			Name:                      pulumi.String("eks-auto-mode-demo"),
             // EKS Auto Mode requires Access Entries, use either the `Api` or `ApiAndConfigMap` authentication mode.
 			AuthenticationMode:        eks.AuthenticationModeApi,
-			SkipDefaultNodeGroup:      true,
-			SkipDefaultSecurityGroups: true,
 			VpcId:                     eksVpc.VpcId,
 			PublicSubnetIds:           eksVpc.PublicSubnetIds,
 			PrivateSubnetIds:          eksVpc.PrivateSubnetIds,
@@ -263,8 +257,6 @@ return await Deployment.RunAsync(() =>
         Name = "eks-auto-mode-demo",
         // EKS Auto Mode requires Access Entries, use either the `Api` or `ApiAndConfigMap` authentication mode.
         AuthenticationMode = Eks.AuthenticationMode.Api,
-        SkipDefaultNodeGroup = true,
-        SkipDefaultSecurityGroups = true,
         VpcId = eksVpc.VpcId,
         PublicSubnetIds = eksVpc.PublicSubnetIds,
         PrivateSubnetIds = eksVpc.PrivateSubnetIds,
@@ -331,8 +323,6 @@ public class App {
             .name("eks-auto-mode-demo")
             // EKS Auto Mode requires Access Entries, use either the `Api` or `ApiAndConfigMap` authentication mode.
             .authenticationMode("API")
-            .skipDefaultNodeGroup(true)
-            .skipDefaultSecurityGroups(true)
             .vpcId(eksVpc.vpcId())
             .publicSubnetIds(eksVpc.publicSubnetIds())
             .privateSubnetIds(eksVpc.privateSubnetIds())
@@ -378,8 +368,6 @@ resources:
       name: eks-auto-mode-demo
       # EKS Auto Mode requires Access Entries, use either the `Api` or `ApiAndConfigMap` authentication mode.
       authenticationMode: API
-      skipDefaultNodeGroup: true
-      skipDefaultSecurityGroups: true
       vpcId: ${eksVpc.vpcId}
       publicSubnetIds: ${eksVpc.publicSubnetIds}
       privateSubnetIds: ${eksVpc.privateSubnetIds}
