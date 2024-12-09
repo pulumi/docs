@@ -40,9 +40,9 @@ Common tasks that previously required significant expertise and time are now man
 
 We have added EKS Auto Mode support across our AWS provider ecosystem:
 
-- Pulumi AWS Provider (v6.63.0+)
-- Pulumi AWS Cloud Control Provider (v1.13.0+)
-- Pulumi EKS Provider (TODO: upcoming release)
+- [Pulumi AWS Provider](/registry/packages/aws/) (v6.63.0+)
+- [Pulumi AWS Cloud Control Provider](/registry/packages/aws-native/) (previously known as Pulumi AWS Native) (v1.13.0+)
+- [Pulumi EKS Provider](/registry/packages/eks/) (TODO: upcoming release)
 
 ## Creating an EKS Auto Mode Cluster
 
