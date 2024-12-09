@@ -44,8 +44,6 @@ Note: You can obtain your `PULUMI_ACCESS_TOKEN` from the Pulumi Console.
 
 ### Understanding Cloud Context
 
-### Understanding Cloud Context
-
 All Copilot API interactions require two essential parameters:
 
 1. Organization context through the `orgId` field - this is conceptually similar to the organization you select in the dropdown menu on the left-hand side of the Pulumi Console
