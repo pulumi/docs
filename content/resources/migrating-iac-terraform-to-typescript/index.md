@@ -76,8 +76,8 @@ main:
 # The right hand side form section.
 form:
     # HubSpot form id.
-    HubSpot Form ID: 53f23815-4b41-45ce-a926-1dc69e5a50b5
-    Salesforce Campaign ID: 701PQ00000Obc8XYAR
+    hubspot_form_id: 53f23815-4b41-45ce-a926-1dc69e5a50b5
+    salesforce_campaign_id: 701PQ00000Obc8XYAR
 
 event_data:
   name: "Migrating IaC from Terraform to TypeScript"

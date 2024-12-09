@@ -75,8 +75,8 @@ main:
 # The right hand side form section.
 form:
     # HubSpot form id.
-    HubSpot Form ID: ea7ab56d-8cff-4a2e-9988-760278326548
-    Salesforce Campaign ID: 701PQ00000ObZInYAN
+    hubspot_form_id: ea7ab56d-8cff-4a2e-9988-760278326548
+    salesforce_campaign_id: 701PQ00000ObZInYAN
 
 event_data:
   name: "Building an Internal Developer Portal"
