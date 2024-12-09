@@ -1,6 +1,6 @@
 ---
 title: "The Hidden Costs of Infrastructure as Code"
-date: 2024-12-09T09:00:00-08:00
+date: 2024-12-10T09:00:00-08:00
 meta_desc: "IaC backends have hidden costs. Learn how Pulumi Cloud reduces operational burden, minimizes risk of outages, and make scaling easier."
 meta_image: meta.png
 authors:
