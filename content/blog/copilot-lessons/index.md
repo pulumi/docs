@@ -16,15 +16,15 @@ social:
     twitter: 🚀 Building Pulumi Copilot taught us key AI engineering insights – Minimize LLM workload, validate outputs rigorously & use "skills" for modular tasks. Plus, sometimes when AI hallucinates features, it reveals exactly what users want! 
     linkedin: 🚀 Building Pulumi Copilot taught us key AI engineering insights – Minimize LLM workload, validate outputs rigorously & use "skills" for modular tasks. Plus, sometimes when AI hallucinates features (like a "--force" flag), it reveals exactly what users want! 
 ---
-Building AI-powered developer tools comes with unique challenges, and today we want to share some key insights from our journey creating Pulumi Copilot, an AI assistant for cloud infrastructure.
+Building AI-powered developer tools comes with unique challenges, and now that we’ve **[launched our REST API](/blog/pulumi-copilot-rest/)**, we want to share some lessons we’ve learned building Pulumi Copilot, an AI assistant for cloud infrastructure.
 
-Consider this user feedback we received:  "Your tool doesn't know anything!". Having just made some changes, we braced for the worst. But the evals were still looking strong, so what was going on?
+One of the big challenges was determinging what 'working' really means. So when a message landed in our feedback channel after months of rigorous testing - 'Your tool doesn't know anything!' - it caused some mild panic. We'd just made some changes so we braced for the worst. But our evals were still looking strong, so what was going on?
 
 <!--more-->
 
-The user was attempting to force-delete a stack that still contained resources. Copilot confidently suggested utilizing a `--force` flag, which would have been a logical solution... except this flag doesn't exist in Pulumi. This was a pure hallucination! Such occurrences are typical when building with LLMs. However, this particular error was more than a simple glitch - it revealed something about the product, and our customer expectations.
+The user was attempting to force-delete a stack that still contained resources. But when we dug deeper, we found something fascinating: Copilot had confidently suggested a '--force' flag , which would have been a logical solution... except this flag doesn't exist in Pulumi. Our AI was hallucinating exactly what the user wanted. But this wasn't just a bug - it was the first of many insights that would reshape how we approach AI-powered tools.
 
-To understand how we got here - and why this "error" actually taught us something valuable about our product - let's start with the core challenge we faced: balancing traditional software engineering with the new world of prompt engineering.
+To understand how we got here - and why this "error" actually taught us something valuable about our product - let's start with the core challenge we faced: balancing traditional software engineering with this new world of prompt engineering.
 
 ## Engineering for Reality: Software Engineering vs Prompt Engineering
 
@@ -89,7 +89,7 @@ But while minimizing the LLM workload helped with efficiency, we soon faced an e
 
 Large language models excel at generating well-structured, grammatically correct output. They make neat tables, tell good stories, and generally sound confident. That's what makes them dangerous because this polished presentation can mask underlying flaws in the information itself, creating a false sense of confidence for users.
 
-One of our early testers, Pablo, encountered this firsthand. He posed a query to Pulumi Copilot, asking for a summary of resources within a specific project. The response he received was impeccably formatted, neatly categorizing resources by type and providing counts for each. It *looked* right, and for us humans sometimes looking right carries a lot of weight.
+One of our early testers, Pablo, a data engineer at Pulumi, encountered this firsthand. He posed a query to Pulumi Copilot, asking for a summary of resources within a specific project. The response he received was impeccably formatted, neatly categorizing resources by type and providing counts for each. It *looked* right, and for us humans sometimes looking right carries a lot of weight.
 
 However, a closer inspection revealed the numbers were way off. Copilot had asked for the wrong data and then summarized it beautifully - but incorrectly. This highlighted our next challenge: how do you systematically test a system that can be confidently wrong while sounding completely right?
 
@@ -121,6 +121,6 @@ This insight is one of the key lessons of building Copilot:
 4. **Learn from Hallucinations:** Sometimes incorrect outputs reveal user expectations
 5. **Learn from Users Continuously:** User interactions improve our AI systems - from training better skills to catching hallucinations and revealing product opportunities.
 
-These lessons helped shape our latest release: the Pulumi Copilot REST API, now available in preview. You can integrate these same capabilities and skills into your own tools and workflows. Whether you're building CLI extensions, chat integrations, or automated deployment checks, the API provides the contextual understanding of Copilot. [Try it out](docs.pulumi.com/Copilot-api).
+These lessons helped shape our latest release: **[the Pulumi Copilot REST API](/blog/pulumi-copilot-rest/)**, now available in preview. You can integrate these same capabilities and skills into your own tools and workflows. Whether you're building CLI extensions, chat integrations, or automated deployment checks, the API provides the contextual understanding of Copilot. **[Try it out](docs.pulumi.com/Copilot-api).**
 
 We can't wait to see what you build!
