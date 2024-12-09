@@ -124,4 +124,3 @@ This insight is one of the key lessons of building Copilot:
 These lessons helped shape our latest release: **[the Pulumi Copilot REST API](/blog/pulumi-copilot-rest/)**, now available in preview. You can integrate these same capabilities and skills into your own tools and workflows. Whether you're building CLI extensions, chat integrations, or automated deployment checks, the API provides a contextual understanding of Copilot. **[Try it out](docs.pulumi.com/Copilot-api).**
 
 We can't wait to see what you build!
-
