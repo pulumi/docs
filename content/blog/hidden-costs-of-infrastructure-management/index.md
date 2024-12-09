@@ -56,7 +56,7 @@ When you build and operate your own IaC backend, you'll need to dedicate one ful
 
 IaC backends are mission-critical components that require robust security measures to protect the backend service, cloud assets, and applications running on the infrastructure.
 
-![placeholder](placeholder.png)
+![3 layers of security](security-layers.png)
 
 At the backend service layer, you must design and manage the service to adhere to numerous IT security standards, including SOC 1/SSAE 16/ISAE 3402, SOC 2, SOC 3, FISMA, FedRAMP, DOD SRG Levels 2 and 4, PCI DSS Level 1, EU Model Clauses, ISO 9001 / ISO 27001 / ISO 27017 / ISO 27018, ITAR, IRAP, FIPS 140-2, MLPS Level 3, and MTCS. This involves a manual assessment and validation process for each standard, which can be time-consuming and complex.
 
