@@ -1,0 +1,11 @@
+name: helm-kubernetes-javascript
+description: A minimal Kubernetes JavaScript Pulumi program
+runtime:
+  name: nodejs
+  options:
+    typescript: false
+    packagemanager: npm
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: kubernetes-javascript
