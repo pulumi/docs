@@ -91,7 +91,7 @@ With Pulumi IaC, your teams can tackle the growing complexity of modern architec
 
 When you’re scaling your organization, you’ll need an IaC backend that makes team onboarding efficient. DIY backends often involve ad-hoc onboarding with bespoke identity solutions, requiring custom documentation and training to troubleshoot unique problems. This can slow down onboarding and reduce end-user productivity. Additionally, DIY backends place the internal support burden on your team, requiring them to assist users in navigating the system.
 
-In contrast, Pulumi Cloud offers standardized, well-documented capabilities and integrates seamlessly with identity systems, leading to efficient onboarding and increased productivity for new employees. Pulumi Cloud provides 12x5 or 24x7 support, ensuring your organization receives immediate assistance with any architectural, cloud-related, or Pulumi best-practices issues. Furthermore, Pulumi Cloud includes built-in role-based access control (RBAC), simplifying the onboarding and scaling of new users.
+In contrast, Pulumi Cloud offers standardized, well-documented capabilities and integrates seamlessly with identity systems, leading to efficient onboarding and increased productivity for new employees. Pulumi Cloud provides [12x5 or 24x7 support](https://support.pulumi.com/hc/en-us), ensuring your organization receives immediate assistance with any architectural, cloud-related, or Pulumi best-practices issues. Furthermore, Pulumi Cloud includes built-in role-based access control (RBAC), simplifying the onboarding and scaling of new users.
 
 {{% notes type="tip" %}}
 **BMW Group** used Pulumi to build a scalable and resilient hybrid cloud implementation that could handle more than eleven thousand developers.
