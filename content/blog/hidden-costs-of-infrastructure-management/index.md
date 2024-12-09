@@ -26,7 +26,7 @@ Building and maintaining your own Infrastructure as Code backend involves a sign
 
 –— Paul Hemberger, Engineering Manager for Materialize’s cloud team  
 
-[Learn more.](/case-studies/materialize/)
+[Learn more](/case-studies/materialize/)
 {{% /notes %}}
 
 ### Operational Excellence
@@ -40,7 +40,7 @@ Pulumi Cloud offers total visibility into changes within your organization, allo
 Managing your infrastructure by IaC demands considerable time and energy. Pulumi Cloud provides [Pulumi Insights](/product/pulumi-insights/), offering search, analytics, and AI-driven insights over your infrastructure. If you're using a DIY backend, you'll need to build your own search clusters and grep systems. With Insights, you can instantly search for critical information - like finding MySQL databases on end-of-life versions across all your cloud assets. You can also have a conversation with [Pulumi Copilot](/product/copilot/) about your infrastructure in plain English and get
 answers to operational questions that would take hours to piece together from other sources.
 
-![placeholder](placeholder.png)
+![placeholder](copilot.png)
 
 With this total visibility, Pulumi Insights helps you reduce waste by showing you usage information and identifying potentially stale infrastructure, leading to substantial cost savings.
 
@@ -51,7 +51,7 @@ When you build and operate your own IaC backend, you'll need to dedicate one ful
 
 *"Terraform relies on HCL and lacks support for concepts like classes, objects and inheritance. An equivalent deployment would take more lines of code while yielding IaC that is less reusable."*  
 
-[Learn more.](/case-studies/unity/)
+[Learn more](/case-studies/unity/)
 {{% /notes %}}
 
 ### Security and Compliance
@@ -80,7 +80,7 @@ Pulumi Cloud further enhances security with [Pulumi ESC](/product/secrets-manage
 
 –— Liam White, Platform Lead  
 
-[Learn more.](/product/secrets-management/)
+[Learn more](/product/secrets-management/)
 {{% /notes %}}
 
 ### Organizational Scaling
@@ -98,7 +98,7 @@ In contrast, Pulumi Cloud offers standardized, well-documented capabilities and 
 
 *“Quote”*  
 
-[Learn more.](/case-studies/bmw/)
+[Learn more](/case-studies/bmw/)
 {{% /notes %}}
 
 ## Conclusion
@@ -119,12 +119,12 @@ Our newly launched program called Immersion Days, is a customizable, half-day ev
 
 The program has 3 key components:  
 
-1. Strategic Leadership Engagement: Address key business challenges like security posture, cost optimization, and developer productivity.
-2. Architectural Review: Evaluate and refine platform engineering projects to enhance efficiency and scalability.
-3. Hands-On Workshops: Equip your engineering teams with practical Pulumi skills through interactive technical sessions.
+1. **Strategic Leadership Engagement:** Address key business challenges like security posture, cost optimization, and developer productivity.
+2. **Architectural Review:** Evaluate and refine platform engineering projects to enhance efficiency and scalability.
+3. **Hands-On Workshops:** Equip your engineering teams with practical Pulumi skills through interactive technical sessions.
 
 This program will help strengthen executive buy-in for your infrastructure initiatives while showcasing Pulumi's value to your peer engineering teams.
 
 If this sounds valuable, let’s discuss tailoring the agenda to fit your organization’s priorities.
 
-Register now, or contact your Pulumi sales team.
+Register now or contact your Pulumi sales team.
