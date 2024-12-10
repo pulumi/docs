@@ -40,7 +40,7 @@ answers to operational questions that would take hours to piece together from ot
 
 ![Pulumi Copilot example prompt](copilot.png)
 
-With this total visibility, Pulumi Insights helps you reduce waste by showing you usage information and identifying potentially stale infrastructure, leading to substantial cost savings.
+With this total visibility, Pulumi Insights helps you reduce waste by showing you usage information and identifying potentially stale infrastructure, which can lead to substantial cost savings.
 
 When you build and operate your own IaC backend, you'll need to dedicate one full-time engineer for every team of ten - that's nearly 10% of your engineering expense. Pulumi Cloud, as a fully managed service, frees up your team's time from the operational and maintenance burdens of managing an IaC backend.
 
