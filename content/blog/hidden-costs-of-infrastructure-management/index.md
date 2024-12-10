@@ -129,6 +129,6 @@ This program will help strengthen executive buy-in for your infrastructure initi
 
 If this sounds valuable, let’s discuss tailoring the agenda to fit your organization’s priorities.
 
-Register now or contact your Pulumi sales team.
+[Register now](https://info.pulumi.com/pulumi-platform-engineering-immersion-days) or contact your Pulumi sales team.
 
 _Meta image credit: [ESO/L. Calçada](https://www.eso.org/public/images/eso0942a/)_
