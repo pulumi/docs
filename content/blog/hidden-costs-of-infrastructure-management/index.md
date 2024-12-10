@@ -94,7 +94,7 @@ In contrast, Pulumi Cloud offers standardized, well-documented capabilities and 
 {{% notes type="tip" %}}
 **BMW Group** used Pulumi to build a scalable and resilient hybrid cloud implementation that could handle more than eleven thousand developers.
 
-*“When we started to use Terraform to deploy our first cloud services with AWS, it didn’t scale quickly enough for our needs. With Pulumi we’re really speeding up development. We can use any language instead of some Special language like HCL and by automating policies, we have compliant and secure systems from the beginning.”*  
+*“When we started to use Terraform to deploy our first cloud services with AWS, it didn’t scale quickly enough for our needs. With Pulumi we’re really speeding up development. We can use any language instead of some special language like HCL and by automating policies, we have compliant and secure systems from the beginning.”*  
 
 –— Jan-Peter Alten, DevOps Engineer
 
