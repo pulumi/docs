@@ -1,0 +1,10 @@
+name: helm-kubernetes-typescript
+description: Kubernetes Operator
+runtime:
+  name: nodejs
+  options:
+    packagemanager: npm
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: helm-kubernetes-typescript
