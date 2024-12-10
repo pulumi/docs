@@ -1,7 +1,7 @@
 ---
 title: "The Hidden Costs of Infrastructure as Code"
 date: 2024-12-10T09:00:00-08:00
-meta_desc: "IaC backends have hidden costs. Learn how Pulumi Cloud reduces operational burden, minimizes risk of outages, and make scaling easier."
+meta_desc: "IaC backends have hidden costs. Learn how Pulumi Cloud reduces operational burden, minimizes risk of outages, and makes scaling easier."
 meta_image: meta.png
 authors:
     - aaron-kao
@@ -65,9 +65,9 @@ Pulumi, as an Amazon Web Services Advanced Partner, undergoes a thorough review 
 Access control at the backend service layer is crucial for enforcing least privilege access. Pulumi Cloud integrates seamlessly with various identity providers like Azure ActiveDirectory, Okta, G Suite, or any SAML/SSO provider, offering deep support for role-based access control (RBAC) and SCIM for automatic synchronization and revocation of access based on identity provider groups. This fine-grained control over state access is a significant advantage over DIY backends, where all access control mechanisms would need to be built from scratch.
 Audit logs play a vital role in tracking user activity within an organization, recording what actions were taken, when, and by whom. Pulumi's audit logs are immutable, capturing the UNIX timestamp of events, the user who invoked the action, the event itself, and the source IP of the call. This level of auditing ensures that the activities of organization members are attributable, enhancing security and compliance.
 
-At the cloud asset level, you and your team need to prevent infrastructure deployments that violate policies related to security, reliability, cost, or compliance. Pulumi Cloud, through [Pulumi CrossGuard](/crossguard/), provides out-of-the-box support for common security and compliance policies, ensuring PCIDSS, ISO27001, SOC2, and CIS compliance for cloud applications and infrastructure. Such organization-wide enforcement and specific policy support are not readily available with DIY backends.
+At the cloud asset layer, you and your team need to prevent infrastructure deployments that violate policies related to security, reliability, cost, or compliance. Pulumi Cloud, through [Pulumi CrossGuard](/crossguard/), provides out-of-the-box support for common security and compliance policies, ensuring PCIDSS, ISO27001, SOC2, and CIS compliance for cloud applications and infrastructure. Such organization-wide enforcement and specific policy support are not readily available with DIY backends.
 
-At the application level, securing sensitive information like database passwords, cloud credentials, and API keys is paramount. Secrets can inadvertently end up in insecurely stored state files, leading to potential breaches, as highlighted by a [Sysdig article](*https://sysdig.com/blog/cloud-breach-terraform-data-theft/) where an attacker exploited a manually managed state file to gain control over an entire AWS account. Pulumi Cloud, however, encrypts all data in transit and at rest, utilizing hardware security module (HSM) based encryption. It also avoids capturing cloud credentials, instead relying on client-side authentication, as detailed in the [Pulumi Cloud Security Whitepaper](/security/pulumi-cloud-security-whitepaper.pdf).
+At the application layer, securing sensitive information like database passwords, cloud credentials, and API keys is paramount. Secrets can inadvertently end up in insecurely stored state files, leading to potential breaches, as highlighted by a [Sysdig article](*https://sysdig.com/blog/cloud-breach-terraform-data-theft/) where an attacker exploited a manually managed state file to gain control over an entire AWS account. Pulumi Cloud, however, encrypts all data in transit and at rest, utilizing hardware security module (HSM) based encryption. It also avoids capturing cloud credentials, instead relying on client-side authentication, as detailed in the [Pulumi Cloud Security Whitepaper](/security/pulumi-cloud-security-whitepaper.pdf).
 
 Pulumi Cloud further enhances security with [Pulumi ESC](/product/secrets-management/), a centralized secrets management and orchestration service. This service allows for pulling and syncing secrets from various stores like HashiCorp Vault, AWS Secrets Manager, Azure Key Vault, GCP Secret Manager, and 1Password, making it easy to adopt dynamic, short-lived secrets on demand. Pulumi ESC leverages the same identity, RBAC, Teams, SAML/SCIM, OIDC, and scoped access tokens used for Pulumi IaC, ensuring that secrets management complies with enterprise security policies. Every access or change to secrets or configuration values is logged for auditing, providing a secure and auditable environment for you and your team to access secrets via CLI, API, Kubernetes operator, the Pulumi Cloud UI, and in-code with TypeScript/JavaScript, Python, and Go SDKs. With a DIY backend, you have to manage integration and access controls with individual secrets stores, with potential secrets sprawl and operational overhead.
 
@@ -129,6 +129,6 @@ This program will help strengthen executive buy-in for your infrastructure initi
 
 If this sounds valuable, let’s discuss tailoring the agenda to fit your organization’s priorities.
 
-[Register now](https://info.pulumi.com/pulumi-platform-engineering-immersion-days) or contact your Pulumi sales team.
+[Register now](https://info.pulumi.com/pulumi-platform-engineering-immersion-days) or [contact your Pulumi sales team](/contact).
 
 _Meta image credit: [ESO/L. Calçada](https://www.eso.org/public/images/eso0942a/)_
