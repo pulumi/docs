@@ -1,0 +1,11 @@
+id = "claire-gaestel"
+name = "Claire Gaestel"
+title = "Software Engineer"
+company = "Pulumi"
+weight = 1
+
+status = "active"
+
+[social]
+github = "nyobe"
+linkedin = "claire-gaestel-01420046"
