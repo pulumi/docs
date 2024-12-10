@@ -18,7 +18,11 @@ social:
 # See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md
 # for details, and please remove these comments before submitting for review.
 ---
-Since its initial release in June 2024, Pulumi Copilot has seen strong adoption, helping teams understand and manage their cloud infrastructure more effectively. Today, we're excited to announce the availability of the Pulumi Copilot REST API in preview. This release enables developers to integrate Pulumi Copilot's powerful capabilities directly into their own tools, applications, and workplace collaboration platforms. While currently in preview, we plan to quickly move the API to production as we gather feedback from early adopters and ensure it meets our community's needs.
+We built Pulumi Copilot to automate a broad spectrum of cloud management activities using the power of LLMs. Since its initial release earlier this year, hundreds of customers have used Pulumi Copilot to understand and manage cloud infrastructure more effectively and securely, and it is only getting better by the day.
+
+Today, we're excited to announce the availability of the Pulumi Copilot REST API. This new API exposes the full power of Pulumi Copilot, enabling you to integrate infrastructure AI into your own tools, applications, and platforms. While currently in preview, we are eager to get your feedback to ensure it works for anything you can dream up.
+
+<!--more-->
 
 ## Enhancing Copilot Capabilities
 
