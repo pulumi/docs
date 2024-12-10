@@ -27,10 +27,6 @@ This guide walks you through configuring your Azure Active Directory (Azure AD) 
 
 - [Single Sign-On](/docs/pulumi-cloud/access-management/saml/sso/)
 
-{{% notes "info" %}}
-{{< sso-scim-limits-info idp="Azure AD" >}}
-{{% /notes %}}
-
 ## Configuring Azure AD
 
 ### Add an application to your Azure AD tenant

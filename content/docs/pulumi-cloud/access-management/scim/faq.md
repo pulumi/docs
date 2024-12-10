@@ -18,10 +18,6 @@ aliases:
   - /docs/guides/scim/faq/
 ---
 
-{{% notes "info" %}}
-{{< sso-scim-limits-info idp="your Identity Provider" >}}
-{{% /notes %}}
-
 ## FAQ
 
 This page contains information on how to resolve issues that may occur when configuring SCIM provisioning.

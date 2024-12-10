@@ -27,10 +27,6 @@ This guide walks you through configuring Okta as a SAML SSO identity provider (I
 
 - [Single Sign-On](/docs/pulumi-cloud/access-management/saml/sso/)
 
-{{% notes "info" %}}
-{{< sso-scim-limits-info idp="Okta" >}}
-{{% /notes %}}
-
 ## Creating the Okta Application
 
 The first step is to create a new Okta Application Integration. Of the various "sign-in methods"
