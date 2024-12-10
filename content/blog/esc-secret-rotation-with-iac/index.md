@@ -36,7 +36,7 @@ xfn::pulumi-scheduled-update:
   trigger: "break-glass"
 ```
 
-Using webhooks, we’ll monitor when the environment is updated, then search for these configuration blocks, and use them to drive scheduled deployments of a stack that rotates credentials. Using ESC’s composition primitives, we can  combine this rotation schedule config with a `fn::open::pulumi-stacks` provider to read the current secret value from the rotator stack to provide to our application.
+Using webhooks, we’ll monitor when the environment is updated, then search for these configuration blocks, and use them to drive scheduled deployments of a stack that rotates credentials. Using ESC’s composition primitives, we can combine this rotation schedule config with a `fn::open::pulumi-stacks` provider to read the current secret value from the rotator stack to provide to our application.
 
 Here is how the solution fits together:
 ![Architecture](architecture.svg)
@@ -51,7 +51,7 @@ const creds = new Rotator("rotating-creds", {
     // rotate credentials on every deployment.
     trigger: Date().toString(),
     // create a set of equivalent credentials that will be rotated between.
-    // a particular credential should be replaced whenever`trigger` is updated.
+    // a particular credential should be replaced whenever `trigger` is updated.
     construct: (name, trigger) => {
         // in this example we're just creating passwords,
         // but these could be mysql users or anything else.
