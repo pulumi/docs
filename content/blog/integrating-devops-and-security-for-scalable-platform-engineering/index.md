@@ -157,13 +157,21 @@ While the benefits of integrating DevOps and security in platform engineering ar
 
 The primary goal is to empower developers to be more productive and proactive. However, this autonomy needs to be balanced with necessary security controls and governance measures.
 
-As Jess Mink, Director of Platform Engineering at [Honeycomb](https://www.pulumi.com/blog/observability-with-infrastructure-as-code/), explains: "*It's a delicate balance - you want to make things easy for developers, but you also need to maintain the right level of control and security. It's about finding the right abstractions and interfaces that give developers the freedom they need while still ensuring the platform remains secure and compliant.*"
+{{% notes type="tip" %}}
+As Jess Mink, Director of Platform Engineering at [Honeycomb](https://www.pulumi.com/blog/observability-with-infrastructure-as-code/), explains: 
+
+"*It's a delicate balance - you want to make things easy for developers, but you also need to maintain the right level of control and security. It's about finding the right abstractions and interfaces that give developers the freedom they need while still ensuring the platform remains secure and compliant.*"
+{{% /notes %}}
 
 ### Driving Adoption and Changing Mindsets
 
 Integrating security into the platform engineering workflow can often be met with resistance from developers accustomed to moving quickly and may view security as an obstacle to their productivity.
 
-As Nariman, a Software Security Architect, notes: "*The challenge is not just about the tools or the technology - it's about changing the mindset and getting people to understand the importance of security. You need to find ways to motivate developers and make them feel like they're part of the solution rather than just imposing more rules and processes.*"
+{{% notes type="tip" %}}
+As Nariman, a Software Security Architect, notes: 
+
+"*The challenge is not just about the tools or the technology - it's about changing the mindset and getting people to understand the importance of security. You need to find ways to motivate developers and make them feel like they're part of the solution rather than just imposing more rules and processes.*"
+{{% /notes %}}
 
 Effective communication, education, and a focus on the business value of security are key to driving adoption and fostering a culture of shared responsibility.
 
@@ -171,7 +179,11 @@ Effective communication, education, and a focus on the business value of securit
 
 As organizations grow and their technology stacks evolve, the demands on the platform engineering team can shift rapidly. Keeping up with these changes, while maintaining a secure and reliable platform, can be a significant challenge.
 
-Lindsay Jack, VP of Engineering for the Platform Division at [Snyk](https://partners.snyk.io/English/solutions/solution/2908/pulumi), explains: "*You might have a platform team that's really good at a certain set of technologies, but then the organization starts moving in a new direction, and suddenly those skills don't match up anymore. It's about being agile and adaptable and making sure you have the right mix of skills and expertise to support the organization's evolving needs*."
+{{% notes type="tip" %}}
+Lindsay Jack, VP of Engineering for the Platform Division at [Snyk](https://partners.snyk.io/English/solutions/solution/2908/pulumi), explains: 
+
+"*You might have a platform team that's really good at a certain set of technologies, but then the organization starts moving in a new direction, and suddenly those skills don't match up anymore. It's about being agile and adaptable and making sure you have the right mix of skills and expertise to support the organization's evolving needs*."
+{{% /notes %}}
 
 Fostering internal mobility, continuous learning, and a flexible, modular platform architecture can help platform engineering teams navigate these changes more effectively.
 
@@ -185,7 +197,11 @@ Measuring the success of a platform engineering initiative can be a complex as i
 - **Automation and Tooling**: Metrics like the percentage of infrastructure provisioned through code, the frequency of platform updates, and the time saved through automation can demonstrate the platform's operational efficiency.
 - **Observability and Monitoring**: Measuring the effectiveness of observability tools, the time to detect and resolve issues, and the quality of incident reports can [provide insights into the platform's overall health](https://www.pulumi.com/blog/insights-cloud-account-discovery/) and performance.
 
-As Jess Mink emphasizes, it's important to not just collect these metrics, but to use them to drive meaningful action and improvement: "*We actually look at all of those [metric categories] every quarter and write summaries that go up to the executive level. This creates that visibility and shared understanding of problems, so that there's room for movement and change in the right ways.*"
+{{% notes type="tip" %}}
+As Jess Mink emphasizes, it's important to not just collect these metrics, but to use them to drive meaningful action and improvement: 
+
+"*We actually look at all of those [metric categories] every quarter and write summaries that go up to the executive level. This creates that visibility and shared understanding of problems, so that there's room for movement and change in the right ways.*"
+{{% /notes %}}
 
 ## The Future of Secure Platform Engineering
 
