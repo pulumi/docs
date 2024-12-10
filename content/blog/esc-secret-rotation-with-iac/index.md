@@ -15,7 +15,7 @@ Managing secrets in modern cloud applications can be challenging, particularly w
 
 Static secrets, like database passwords or API keys, [should be rotated regularly to maintain security](https://cheatsheetseries.owasp.org/cheatsheets/Secrets_Management_Cheat_Sheet.html#272-rotation), and services depending on these secrets need time to transition to new credentials to avoid downtime. This makes rotating credentials error-prone, and often forgotten.
 
-In this post, we'll explore an approach for automating static secret rotation using [Pulumi ESC](https://www.pulumi.com/docs/esc/).
+In this post, we'll explore an approach for automating static secret rotation using [Pulumi ESC](https://www.pulumi.com/docs/esc/) combined with [Pulumi IaC](https://www.pulumi.com/docs/iac/).
 
 <!--more-->
 
@@ -44,7 +44,7 @@ Let's break down each component and see how they work together to solve our rota
 
 ### The Rotator: Managing Credential Lifecycles
 
-At the heart of our solution is a [generic `Rotator` component](https://github.com/pulumi/esc-examples/blob/claire/esc-rotation-example/rotate/example/rotator/rotator.ts) that manages credential pairs. It's designed to handle any type of static secret while ensuring zero-downtime rotations. The way it does this is by maintaining two versions of each secret: “current” and “previous”.  Each time the stack is deployed, “current” is replaced with a newly provisioned credential, the old value is demoted to “previous”, and the old previous credential is decommissioned. Crucially, the demoted secret _remains valid_, which allows consuming services enough time to switch over to the new secret.
+At the heart of our solution is a [generic `Rotator` component](https://github.com/pulumi/esc-examples/blob/f8a0c47da556aebb74d3ac2d6491f897271bfa27/rotate/example/rotator/rotator.ts) that manages credential pairs. It's designed to handle any type of static secret while ensuring zero-downtime rotations. The way it does this is by maintaining two versions of each secret: “current” and “previous”.  Each time the stack is deployed, “current” is replaced with a newly provisioned credential, the old value is demoted to “previous”, and the old previous credential is decommissioned. Crucially, the demoted secret _remains valid_, which allows consuming services enough time to switch over to the new secret.
 
 ```typescript
 const creds = new Rotator("rotating-creds", {
@@ -70,7 +70,7 @@ export const current = creds.current.result;
 
 ### The Scheduler: Orchestrating Rotations
 
-The [scheduler component](https://github.com/pulumi/esc-examples/blob/claire/esc-rotation-example/rotate/example/scheduler/index.ts) acts as an orchestrator, watching an ESC environment for updates and managing deployment schedules of the rotator stacks. Whenever a change to the environment is saved, a webhook invokes the scheduler, which parses the environment definition to find `xfn::pulumi-scheduled-update` configuration blocks. Based on these schedule configurations, it creates [scheduled deployments](https://www.pulumi.com/docs/pulumi-cloud/deployments/schedules/) for the referenced rotator stacks automatically.
+The [scheduler component](https://github.com/pulumi/esc-examples/blob/f8a0c47da556aebb74d3ac2d6491f897271bfa27/rotate/example/scheduler/index.ts) acts as an orchestrator, watching an ESC environment for updates and managing deployment schedules of the rotator stacks. Whenever a change to the environment is saved, a webhook invokes the scheduler, which parses the environment definition to find `xfn::pulumi-scheduled-update` configuration blocks. Based on these schedule configurations, it creates [scheduled deployments](https://www.pulumi.com/docs/pulumi-cloud/deployments/schedules/) for the referenced rotator stacks automatically.
 
 ### Bringing It Together: Environment Configuration
 
@@ -157,6 +157,6 @@ Secret rotation doesn't have to be a manual, error-prone process. By leveraging 
 - Auditable: Clear tracking of rotation history
 - Scalable: Easy to manage across multiple environments
 
-[The complete example is available for your perusal here.](https://github.com/pulumi/esc-examples/pull/3)
+[The complete example is available for your perusal here.](https://github.com/pulumi/esc-examples/tree/main/rotate/example)
 
 This pattern of extending ESC through configuration-driven components is a powerful technique that can be applied to other use cases. We’re excited to see what else you come up with 🙂
