@@ -60,17 +60,17 @@ social:
 # for details, and please remove these comments before submitting for review.
 ---
 
-Platform engineering has transitioned from an emerging trend in DevOps and infrastructure to a critical function for mid-to-large organizations. By 2026, Gartner predicts that 80% of software development companies will have internal platform services and dedicated teams to streamline development processes.
-One of the main goals of Platform engineering is to empower developers by providing self-service and autonomy while maintaining guardrails for security, compliance, and reliability. Achieving this balance requires integrating DevOps and security practices, referred to as DevSecOps best practices.
-During PulumiUP Europe 2024, the panel of industry experts explored this integration, including:
+Platform engineering has become essential for mid-to-large organizations, moving beyond a DevOps trend. Gartner predicts that by 2026, 80% of software companies will have internal platform services to streamline development. The goal is to empower developers with self-service tools while maintaining security, compliance, and reliability through DevSecOps practices.
+
+At PulumiUP Europe 2024, experts shared insights on aligning DevOps with security to build scalable, secure platforms:
 
 - Jess Mink, Sr. Director of Platform Engineering at Honeycomb
 - Kief Morris, Global Head of Infrastructure Engineering at ThoughtWorks
 - Lindsay Jack, VP of Engineering & Security at Snyk
 - Nariman Aga-Tagiyev, Application Security Architect at WiseFrog Security
-- [Komal Ali](https://www.pulumi.com/blog/author/komal-ali/), Engineering Manager at Pulumi
+- Komal Ali, Engineering Manager at Pulumi
   
-This discussion centered on the core pillars of platform engineering, strategies for aligning DevOps and security, and overcoming challenges to build scalable, secure platforms.
+The panel discussed key strategies, challenges, and pillars of successful platform engineering.
 
 <!--more-->
 
