@@ -1,6 +1,6 @@
 ---
 title: "Secret Rotation with Pulumi ESC"
-date: 2024-12-02T11:23:17-08:00
+date: 2024-12-10T15:43:02-08:00
 draft: false
 meta_desc: "Extending ESC to perform automated secret rotation."
 meta_image: meta.png
