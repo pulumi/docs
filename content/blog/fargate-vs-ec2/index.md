@@ -145,6 +145,16 @@ Fargate on EKS could be a great solution for this type of chunky, resource-heavy
 
 But there are lots of situations where Fargate is less of a fit.
 
+{{% notes type="tip" %}}
+
+**You Might Also Like:**
+
+- [Pulumi for AWS: Automate, Secure, and Manage Your Cloud](/blog/pulumi-for-aws-automate-secure-manage/)
+- [Easy LangServe Apps with Pulumi on AWS](/blog/easy-ai-apps-with-langserve-and-pulumi/)
+- [Advanced AWS Networking, Part 2](/blog/advanced-aws-networking-part-2/)
+
+{{% /notes %}}
+
 ## Example: Go Services for E-commerce
 
 <img src="cash-register.webp" alt="sketch of fog clearing" style="width: 30%; float: right; margin-left: 10px;">

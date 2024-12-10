@@ -7,11 +7,13 @@ meta_image: meta.png
 authors:
     - adam-gordon-bell
 tags:
-    - k8s, containers, cloud-native, docker
+    - k8s
+    - containers
+    - cloud-native
+    - docker
 social:
     twitter: There are 105+ ways to run containers in production! From familiar cloud providers to quantum computers, smart toasters, and even phone farms. 
     linkedin: There are 105+ ways to run containers in production! From familiar cloud providers to quantum computers, smart toasters, and even phone farms. 
-
 ---
 If a computer can be connected to the internet, someone has tried to run a [container](https://www.pulumi.com/containers) on it. From quantum computers to smart toasters, from phones in AWS racks to CI pipelines, there's many ways to deploy containers. While most people only know about the mainstream cloud providers at the surface, there's actually a vast world of increasingly unusual and specialized options beneath.
 
@@ -89,6 +91,16 @@ Let's plunge deeper. Because one Kubernetes cluster is never enough, why not spr
 - **Hetzner Cloud Managed Kubernetes** – German engineering for your clusters
 - **Nutanix Karbon** - Because regular Kubernetes wasn't converged enough
 - **Metal Stack Cloud Kubernetes** - For when virtual machines are too virtual
+
+{{% notes type="tip" %}}
+
+**You Might Also Like:**
+
+- [Unified and Programmatic Approach to Infrastructure Management at BMW Using Pulumi](/blog/unified-programmatic-approach-infrastructure-management-bmw-using-pulumi/)
+- [Introducing the new Docker Build provider](/blog/docker-build/)
+- [Getting Started with ECS Anywhere](/blog/ecs-anywhere-launch/)
+
+{{% /notes %}}
 
 ## Middle of the Iceberg – Serverless and Function Containers – Now You See Me, Now You Don't
 
