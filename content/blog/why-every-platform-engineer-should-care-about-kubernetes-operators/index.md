@@ -1,9 +1,9 @@
 ---
 title: "Why Every Platform Engineer Should Care About Kubernetes Operators"
-date: 2024-12-06T09:31:38+01:00
+date: 2024-12-10T09:31:38+01:00
 allow_long_title: true
 draft: false
-meta_desc: "Elaborating on the importance of Kubernetes Operators for platform engineers and how they can leverage the advanced automation capabilities of operators to simplify the deployment, management, and scaling of applications and services on Kubernetes."
+meta_desc: "Highlighting how Kubernetes Operators empower platform engineers to automate and streamline application deployment, management, and scaling on Kubernetes."
 meta_image: meta.png
 
 authors:
@@ -89,7 +89,7 @@ Operators are custom-built controllers that focus on the deployment, management,
 
 | Function                      | Description                                                                                                                                                                                                                                 |
 |-------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Security                      | Operators integrate security best practices and policies, such as encryption, access control, and secret management, to protect the application. You can customise these measures and adjust them to the specific needs of the application. |
+| Security                      | Operators integrate security best practices and policies, such as encryption, access control, and [secret management](/what-is/what-is-secrets-management/), to protect the application. You can customise these measures and adjust them to the specific needs of the application. |
 | Workload Lifecycle management | Operators manages the full lifecycle of complex stateful applications through deployment, upgrades, and scaling. It even applies logic to automate operations like backup and restore.                                                      |
 | Error Handling                | Operators detects and handles errors, such as application crashes, network failures, and resource constraints.                                                                                                                              |
 | Migration                     | Operators help to migrate the application to a new version, a new cluster, or a new cloud provider.                                                                                                                                         |
