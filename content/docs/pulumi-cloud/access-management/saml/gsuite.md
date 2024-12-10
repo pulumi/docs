@@ -28,7 +28,9 @@ This guide walks you through configuring your Google Workspace (formerly known a
 
 - [Single Sign-On](/docs/pulumi-cloud/access-management/saml/sso/)
 
-{{< sso-saml-limits-info idp="Google Workspace" >}}
+{{% notes "info" %}}
+{{< sso-scim-limits-info idp="Google Workspace" >}}
+{{% /notes %}}
 
 ## Creating the SAML Application
 

@@ -31,7 +31,9 @@ The [Pulumi Cloud](https://app.pulumi.com) can be configured to work with any SA
 
 If you're a member of a SAML-based Pulumi organization, you can sign in to [your account](/docs/pulumi-cloud/accounts/) via Single Sign-On. To learn about the important aspects of configuring SSO for your IdP, refer to the [SSO page](sso/).
 
-{{< sso-saml-limits-info >}}
+{{% notes "info" %}}
+{{< sso-scim-limits-info >}}
+{{% /notes %}}
 
 ## Integration Guides
 

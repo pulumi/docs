@@ -26,7 +26,9 @@ This guide walks you through configuring OneLogin as a SAML SSO identity provide
 
 - [Single Sign-On](/docs/pulumi-cloud/access-management/saml/sso/)
 
-{{< sso-saml-limits-info idp="OneLogin" >}}
+{{% notes "info" %}}
+{{< sso-scim-limits-info idp="OneLogin" >}}
+{{% /notes %}}
 
 ## Creating the OneLogin Application
 

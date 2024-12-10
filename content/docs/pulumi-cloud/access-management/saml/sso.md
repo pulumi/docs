@@ -31,7 +31,9 @@ with the [Pulumi Cloud](/docs/pulumi-cloud/).
 > - [Auth0](/docs/pulumi-cloud/access-management/saml/auth0/)
 > - [OneLogin](/docs/pulumi-cloud/access-management/saml/onelogin/)
 
-{{< sso-saml-limits-info type="SAML" >}}
+{{% notes "info" %}}
+{{< sso-scim-limits-info type="SAML" >}}
+{{% /notes %}}
 
 ## Terminology
 

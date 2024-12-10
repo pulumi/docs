@@ -29,7 +29,9 @@ This guide walks you through configuring your Auth0 Authentication Platform as a
 * You must be an admin of your Pulumi organization.
 * (Optional, but highly recommended) You should have more than one admin for your Pulumi organization.
 
-{{< sso-saml-limits-info idp="Auth0" >}}
+{{% notes "info" %}}
+{{< sso-scim-limits-info idp="Auth0" >}}
+{{% /notes %}}
 
 ## Enabling SAML For Your Auth0 Authentication Platform
 

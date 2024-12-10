@@ -18,7 +18,9 @@ aliases:
   - /docs/guides/scim/faq/
 ---
 
+{{% notes "info" %}}
 {{< sso-scim-limits-info idp="your Identity Provider" >}}
+{{% /notes %}}
 
 ## FAQ
 

@@ -20,7 +20,9 @@ aliases:
 
 This document outlines the steps required to configure automatic provisioning/deprovisioning of your users in Pulumi using SCIM 2.0.
 
+{{% notes "info" %}}
 {{< sso-scim-limits-info idp="Azure AD" >}}
+{{% /notes %}}
 
 Please note that some advanced SCIM features aren't supported yet. For more information, see [Known Limitations](#known-limitations).
 
