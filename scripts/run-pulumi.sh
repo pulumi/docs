@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 #
 # Run Pulumi to update the stack targeted by the given branch.
 

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 MAX_RETRIES=3
 RETRY_COUNT=0

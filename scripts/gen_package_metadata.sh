@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # A script that facilitates generating package metadata files using the tools/resourcedocsgen Go-based
 # tool. This script optionally allows passing the provider name (without the "pulumi-" prefix.)
