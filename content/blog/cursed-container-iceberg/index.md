@@ -7,11 +7,13 @@ meta_image: meta.png
 authors:
     - adam-gordon-bell
 tags:
-    - k8s, containers, cloud-native, docker
+    - k8s
+    - containers
+    - cloud-native
+    - docker
 social:
     twitter: There are 105+ ways to run containers in production! From familiar cloud providers to quantum computers, smart toasters, and even phone farms. 
     linkedin: There are 105+ ways to run containers in production! From familiar cloud providers to quantum computers, smart toasters, and even phone farms. 
-
 ---
 If a computer can be connected to the internet, someone has tried to run a [container](https://www.pulumi.com/containers) on it. From quantum computers to smart toasters, from phones in AWS racks to CI pipelines, there's many ways to deploy containers. While most people only know about the mainstream cloud providers at the surface, there's actually a vast world of increasingly unusual and specialized options beneath.
 
@@ -90,6 +92,16 @@ Let's plunge deeper. Because one Kubernetes cluster is never enough, why not spr
 - **Nutanix Karbon** - Because regular Kubernetes wasn't converged enough
 - **Metal Stack Cloud Kubernetes** - For when virtual machines are too virtual
 
+{{% notes type="tip" %}}
+
+**You Might Also Like:**
+
+- [Unified and Programmatic Approach to Infrastructure Management at BMW Using Pulumi](/blog/unified-programmatic-approach-infrastructure-management-bmw-using-pulumi/)
+- [Introducing the new Docker Build provider](/blog/docker-build/)
+- [Getting Started with ECS Anywhere](/blog/ecs-anywhere-launch/)
+
+{{% /notes %}}
+
 ## Middle of the Iceberg – Serverless and Function Containers – Now You See Me, Now You Don't
 
 As we descend to the depths, we find containers with commitment issues. They appear, do their job, and disappear.
@@ -147,6 +159,22 @@ There you have it, the container iceberg. And I didn't even have room to add the
 - **Cloud IDEs and Workspaces** – Want to turn your development environment into a sneaky container platform? Take your pick: GitHub Codespaces, GitPod for the GitLab enthusiasts, or Eclipse Che for the masochists who miss Eclipse crashing locally. JetBrains Space or Replit? All this lets you run a container until you close your browser tab.
 
 - **GitHub Actions et al.** – Ever wanted to run a production service disguised as a CI job? Just label your production API start-up script as "integration_test_step_42", add a `sleep 21600` and a call to retrigger itself, and hope nobody notices your "test" has been running for months. Apply this same trick to AWS CodeBuild, GitLab CI/CD, CircleCI, Azure Pipelines, Travis CI, Bitbucket Pipelines, Drone CI, Jenkins Cloud, TeamCity Cloud, and Google Cloud Build for Bonus points.
+
+## Managing Your Container Zoo with Pulumi
+
+Whether you're deploying containers to mainstream cloud providers or attempting to run them on quantum computers (really, please let us know how that goes), Pulumi helps you manage it all with real code instead of config file soup. Our [Kubernetes support](/registry/packages/kubernetes/) means you can wrangle your containers wherever they might roam – from AWS to Azure, GCP to Kubernetes, or even that smart toaster you're eyeing for production deployment.
+
+With Pulumi, you get:
+
+- [Cloud-native container orchestration](https://www.pulumi.com/registry/) across all major platforms and Kubernetes distributions
+- [Infrastructure testing](/docs/iac/concepts/testing/) to ensure your containers deploy correctly (even in the weird places)
+- [Provider templates](/blog/pulumi-go-boilerplate-v2/) for when you invent yet another way to run containers
+- [Stack references](/docs/concepts/stack/#stackreferences) for managing multiple environments without losing your mind
+- [Automation API](/docs/iac/packages-and-automation/automation-api/) for programmatically herding your container fleets
+
+Ready to bring some sanity to your container deployment strategy? Get started with Pulumi:
+
+{{< blog/cta-button "Try Pulumi for Free" "/docs/get-started/" >}}
 
 ## The Final Word
 
