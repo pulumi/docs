@@ -200,6 +200,21 @@ But really, pure compute cost calculations are an insufficient metric for making
 - **It's simpler and more reliable**
   It may be, but it may not be. The complexity shifts to networking, pod configuration, and working within Fargate's constraints. You trade node management for new operational challenges like slower startups and possible networking complexity.
 
+## Managing Container Orchestration with Pulumi
+
+Whether you choose EC2 or Fargate, Pulumi makes it easy to manage in your favorite programming languages. With its rich AWS support and infrastructure as code capabilities, you can define, deploy, and manage your entire Kubernetes infrastructure using familiar tools and practices. Pulumi's [AWS provider](/docs/iac/clouds/aws/) helps you implement the right solution for your needs.
+
+With Pulumi, you get:
+
+- [Complete control over EKS cluster configuration](/docs/iac/clouds/aws/guides/eks/), including node types, scaling policies, and networking setup
+- [Built-in support for both EC2 node groups and Fargate profiles](/docs/iac/clouds/kubernetes/guides/worker-nodes/) within the same cluster
+- [Infrastructure testing capabilities](/docs/iac/concepts/testing/) to validate your cluster configuration before deployment
+- [Automation APIs](/docs/iac/packages-and-automation/automation-api/) for programmatic infrastructure management and custom tooling
+
+Ready to streamline your EKS infrastructure management?
+
+{{< blog/cta-button "Try Pulumi for Free" "/docs/get-started/" >}}
+
 ## Why Not Both
 
 I hope my examples point to a pragmatic approach: use EC2 as your foundation for efficient microservices that can share resources, like our Go e-commerce setup. Add Fargate when you need isolation or flexible scaling - like for the static analysis workload. Better yet, combine both approaches in the same cluster, for cost-efficency and isolation where needed.
