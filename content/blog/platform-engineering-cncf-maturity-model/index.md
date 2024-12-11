@@ -1,5 +1,5 @@
 ---
-title: "The Path to Platform Engineering: Insights from a CNCF Platform Working Group Member"
+title: "Platform Engineering: Cloud-Native, Maturity Models, and Platforms as Products"
 allow_long_title: true
 
 # The date represents the post's publish date, and by default corresponds with
@@ -127,10 +127,9 @@ This article and Dominik Kress's talk highlighted the importance of platform eng
 
 If you're interested in learning more about platform engineering and getting involved in CNCF's initiatives, there are several ways to participate:
 
-- Attend a Platform Engineering & DevOps in-person meetup, [find a location near you](https://info.pulumi.com/platform-engineering-devops-series).
+- Register for the [Platform Engineering workshop series course](https://info.pulumi.com/platform-engineering-workshop-series).
 - Join the bi-weekly [CNCF Platform Working Group meetings](https://tag-app-delivery.cncf.io/wgs/platforms/#meetings) every other Tuesday at 5 PM Berlin time (11 AM ET).
 - Learn how to [build Developer Portals with Pulumi](https://www.pulumi.com/docs/pulumi-cloud/developer-portals/). You can get off the ground faster with organization templates, a new project wizard, or leveraging the backstage plugin.
-- Register for one of our [Platform Engineering or DevOps workshops](https://www.pulumi.com/resources/#upcoming).
 
 ---
 
