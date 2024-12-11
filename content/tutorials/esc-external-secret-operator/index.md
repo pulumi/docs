@@ -9,7 +9,13 @@ meta_desc: Pulumi ESC integrates with the External Secrets Operator (ESO) to man
 weight: 999
 meta_image: meta.png
 summary: |
-  In this tutorial, you will learn how to deploy the External Secrets Operator and use it to manage secrets stored in Pulumi ESC.
+  [External Secrets Operator](https://external-secrets.io/latest/) is a Kubernetes operator that integrates external secret management systems with Kubernetes. By using External Secrets Operator, you have several advantages over Kubernetes native secrets:
+
+  - Sensitive data is stored and managed by an external service outside the Kubernetes cluster and this leads to better security and compliance.
+  - External Secrets Operator supports multiple different sources, so you can use the same operator to manage secrets and configuration from different sources.
+  - Take advantage of the advanced features of the secret provider, such as encryption of data at rest and scenarios like secret rotation.
+
+  Since version `0.10.0` External Secrets Operator supports Pulumi ESC as a secret provider.
 youll_learn:
 - How to deploy the External Secrets Operator using Helm or Pulumi
 - How to manage secrets stored in Pulumi ESC using External Secrets Operator
@@ -19,26 +25,12 @@ collections:
 - pulumi-esc
 - kubernetes
 collections_weight: 2
+prereqs:
+- "The [Pulumi ESC CLI](/docs/esc-cli/)"
+- "A Kubernetes cluster (for example, [kind](https://kind.sigs.k8s.io/))"
+- "[kubectl](https://kubernetes.io/releases/download/#kubectl)"
+- "[helm](https://helm.sh/docs/intro/install/)"
 ---
-
-## Overview
-
-[External Secrets Operator](https://external-secrets.io/latest/) is a Kubernetes operator that integrates external secret management systems with Kubernetes. By using External Secrets Operator, you have several advantages over Kubernetes native secrets:
-
-- Sensitive data is stored and managed by an external service outside the Kubernetes cluster and this leads to better security and compliance.
-- External Secrets Operator supports multiple different sources, so you can use the same operator to manage secrets and configuration from different sources.
-- Take advantage of the advanced features of the secret provider, such as encryption of data at rest and scenarios like secret rotation.
-
-Since version `0.10.0` External Secrets Operator supports Pulumi ESC as a secret provider.
-
-## Prerequisites
-
-In this guide, you will learn how to deploy the External Secrets Operator and use it to manage secrets stored in Pulumi ESC. Before you start, make sure you have the following prerequisites:
-
-- the [Pulumi ESC CLI](/docs/esc-cli/)
-- a Kubernetes cluster
-- [kubectl](https://kubernetes.io/releases/download/#kubectl)
-- [helm](https://helm.sh/docs/intro/install/)
 
 ## Deploy External Secrets Operator
 
@@ -91,7 +83,7 @@ EOF
 
 Please replace `${PULUMI_ORG}`, `${ESC_PROJECT}`, `${ESC_ENV}` with your Pulumi organization, project, and environment names.
 
-For demo purposes, we assume that we already have an ESC environment `my-org/my-project/my-env` with a secret `my-secret` that we want to manage using External Secrets Operator.
+For demo purposes, we assume that we already have an [ESC environment](/docs/esc/get-started/create-environment/) `my-org/my-project/my-env` with a secret `my-secret` that we want to manage using External Secrets Operator.
 
 ```yaml
 values:
@@ -477,6 +469,56 @@ spec:
       remoteRef:
         remoteKey: <PULUMI_PATH_SYNTAX>
 ```
+
+Let's see `PushSecret` in action:
+
+This is how out demo Pulumi ESC environment looks like before we push the secret:
+
+![img.png](pushsecret_before.png)
+
+Only one configuration `hello: world` is present. Now, assume that another process (for example an application, operator, etc.) creates during runtime a Kubernetes secret.
+
+This secret is called `my-secret` and contains the following data:
+
+```yaml
+apiVersion: v1
+data:
+  world: aGVsbG8=
+kind: Secret
+metadata:
+  name: test-cred
+  namespace: default
+type: Opaque
+```
+
+The `world` key contains the value `hello`. We can now create a `PushSecret` resource that will select the secret `test-cred` and push the `world` key to the Pulumi ESC environment.
+
+```yaml
+apiVersion: external-secrets.io/v1alpha1
+kind: PushSecret
+metadata:
+  name: pushsecret-example # Customisable
+  namespace: default # Same of the SecretStores
+spec:
+  refreshInterval: 10s
+  selector:
+    secret:
+      name: test-cred
+  secretStoreRefs:
+  - kind: ClusterSecretStore
+    name: secret-store
+  data:
+  - match:
+      secretKey: world
+      remoteRef:
+        remoteKey: world
+```
+
+This `PushSecret` resource will push the `world` key from the `test-cred` secret to the Pulumi ESC environment. After applying this resource, the Pulumi ESC environment will look like this:
+
+![img.png](pushsecret_after.png)
+
+This is a great way to manage secrets that are created by other processes in the cluster and ensure that they are stored in a secure and compliant way reducing the risk of [secret sprawl](/blog/how-secrets-sprawl-is-slowing-you-down/).
 
 ## Next steps
 

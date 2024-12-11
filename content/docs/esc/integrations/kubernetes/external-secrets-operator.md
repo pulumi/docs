@@ -95,23 +95,23 @@ spec:
 
 ### Examples
 
-- root
-- root.nested
-- root["nested"]
-- root.double.nest
-- root["double"].nest
-- root["double"]["nest"]
-- root.array[0]
-- root.array[100]
-- root.array[0].nested
-- root.array[0][1].nested
-- root.nested.array[0].double[1]
-- root["key with \"escaped\" quotes"]
-- root["key with a ."]
-- ["root key with \"escaped\" quotes"].nested
-- ["root key with a ."][100]
-- root.array[*].field
-- root.array["*"].field
+- `root`
+- `root.nested`
+- `root["nested"]`
+- `root.double.nest`
+- `root["double"].nest`
+- `root["double"]["nest"]`
+- `root.array[0]`
+- `root.array[100]`
+- `root.array[0].nested`
+- `root.array[0][1].nested`
+- `root.nested.array[0].double[1]`
+- `root["key with \"escaped\" quotes"]`
+- `root["key with a ."]`
+- `["root key with \"escaped\" quotes"].nested`
+- `["root key with a ."][100]`
+- `root.array[*].field`
+- `root.array["*"].field`
 
 ## PushSecrets
 
