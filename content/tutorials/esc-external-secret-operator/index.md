@@ -23,7 +23,6 @@ youll_learn:
 estimated_time: 15
 collections:
 - pulumi-esc
-- kubernetes
 collections_weight: 2
 prereqs:
 - "The [Pulumi ESC CLI](/docs/esc-cli/)"
