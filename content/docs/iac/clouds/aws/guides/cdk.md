@@ -2,7 +2,7 @@
 title_tag: "Using CDK Constructs with Pulumi"
 title: Pulumi CDK Adapter
 h1: Pulumi CDK Adapter
-meta_desc: Use AWS CDK Constructs with Pulumi
+meta_desc: Using CDK Constructs with Pulumi provides a significantly easier way of creating infrastructure for AWS. Here is how.
 meta_image: /images/docs/meta-images/docs-clouds-aws-meta-image.png
 menu:
   iac:
@@ -18,7 +18,6 @@ teams at AWS and by the AWS CDK community.
 The adapter allows writing [AWS CDK](https://docs.aws.amazon.com/cdk/v2/guide/home.html) code as part of an AWS CDK Stack inside a
 Pulumi program, and having the resulting AWS resources be deployed and managed via Pulumi.  Outputs of resources defined in a
 Pulumi program can be passed into AWS CDK Constructs, and outputs from AWS CDK stacks can be used as inputs to other Pulumi resources.
-
 
 ## Getting Started
 
@@ -174,6 +173,7 @@ reference to a CDK L2 Construct. You can do this by using `asString` in
 combination with CDK `fromXXX` methods.
 
 **Example**
+
 ```ts
 import * as pulumicdk from '@pulumi/cdk';
 import * as aws from '@pulumi/aws';
@@ -386,6 +386,7 @@ Instead of using CDK Lookups you can use Pulumi functions along with CDK
 `fromXXX` methods.
 
 **Example**
+
 ```ts
 import * as pulumicdk from '@pulumi/cdk';
 import * as aws from '@pulumi/aws';
@@ -424,6 +425,7 @@ allow lookups to run during preview operations, but will require you to execute
 Pulumi twice (the first execution will fail).
 
 **Example**
+
 ```ts
 import * as pulumicdk from '@pulumi/cdk';
 import * as aws_route53 from 'aws-cdk-lib/aws-route53';
@@ -478,6 +480,7 @@ const app = new pulumicdk.App('app', (scope: pulumicdk.App): pulumicdk.AppOutput
 ```
 
 **Example output**
+
 ```console
 Policies:
     ❌ aws-compliance-ready-policies-typescript@v0.0.1 (local: ../policypack)
@@ -504,6 +507,7 @@ const app = new pulumicdk.App('app', (scope: pulumicdk.App): pulumicdk.AppOutput
 ```
 
 **Example Output**
+
 ```console
 [Error at /test-stack/bucket/Resource] AwsSolutions-S1: The S3 Bucket has server access logs disabled. The bucket should have server access logging enabled to provide detailed records for the requests that are made to the bucket.
 [Error at /test-stack/bucket/Resource] AwsSolutions-S10: The S3 Bucket or bucket policy does not require requests to use SSL. You can use HTTPS (TLS) to help prevent potential attackers from eavesdropping on or manipulating network traffic using person-in-the-middle or similar attacks. You should allow only encrypted connections over HTTPS (TLS) using the aws:SecureTransport condition on Amazon S3 bucket policies.
@@ -531,6 +535,7 @@ const app = new pulumicdk.App('app', (scope: pulumicdk.App): pulumicdk.AppOutput
 ```
 
 **Example Output**
+
 ```console
 Diagnostics:
   pulumi:pulumi:Stack (pulumi-typescript-app-dev):
@@ -807,16 +812,16 @@ When any file assets are added to your application, CDK will automatically
 create the following staging resources.
 
 1. [aws.s3.BucketV2](https://www.pulumi.com/registry/packages/aws/api-docs/s3/bucketv2/)
-  - `forceDestroy`: true
+  1a. `forceDestroy`: true
 2. [aws.s3.BucketServerSideEncryptionConfigurationV2](https://www.pulumi.com/registry/packages/aws/api-docs/s3/bucketserversideencryptionconfigurationv2/)
-  - `AES256`
+  2a. `AES256`
 3. [aws.s3.BucketVersioningV2](https://www.pulumi.com/registry/packages/aws/api-docs/s3/bucketversioningv2/)
-  - `Enabled`
+  3a. `Enabled`
 4. [aws.s3.BucketLifecycleConfigurationV2](https://www.pulumi.com/registry/packages/aws/api-docs/s3/bucketlifecycleconfigurationv2/)
-  - Expire old versions > 365 days
-  - Expire deploy-time assets > 30 days
+  4a. Expire old versions > 365 days
+  5b. Expire deploy-time assets > 30 days
 5. [aws.s3.BucketPolicy](https://www.pulumi.com/registry/packages/aws/api-docs/s3/bucketpolicy/)
-  - Require SSL
+  5a. Require SSL
 
 ### ECR Resources
 
@@ -824,7 +829,6 @@ When any image assets are added to your application, CDK will automatically
 create the following staging resources.
 
 1. [aws.ecr.Repository](https://www.pulumi.com/registry/packages/aws/api-docs/ecr/repository/)
-  - `imageTagMutability`: `IMMUTABLE`
+  1a. `imageTagMutability`: `IMMUTABLE`
 2. [aws.ecr.LifecyclePolicy](https://www.pulumi.com/registry/packages/aws/api-docs/ecr/lifecyclepolicy/)
-  - Expire old images when the number of images > 3
-
+  2a. Expire old images when the number of images > 3
