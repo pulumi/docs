@@ -6,7 +6,6 @@ meta_desc: |
 aliases:
   - /webinar
   - /webinars
-  - /events
   # stale events urls redirect to the list to prevent 404s
   - /resources/advanced-infrastructure-as-code-2020-04-08
   - /resources/advanced-infrastructure-as-code-2020-04-16
