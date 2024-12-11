@@ -76,12 +76,12 @@ The panel discussed key strategies, challenges, and pillars of successful platfo
 
 ## In this article:
 
-- [The Core Pillars of Platform Engineering](/blog/integrating-devops-and-security-for-scalable-platform-engineering/the-core-pillars-of-platform-engineering)
-- [Aligning DevOps and Security for Secure Platform Engineering](/blog/integrating-devops-and-security-for-scalable-platform-engineering/aligning-devops-and-security-for-secure-platform-engineering)
-- [Shift Left Security](/blog/integrating-devops-and-security-for-scalable-platform-engineering/shift-left-security)
-- [Embrace Automation and Standardization](/blog/integrating-devops-and-security-for-scalable-platform-engineering/embrace-automation-and-standardization)
-- [Prioritize Observability and Monitoring](/blog/integrating-devops-and-security-for-scalable-platform-engineering/prioritize-observability-and-monitoring)
-- [Foster a Culture of Collaboration](/blog/integrating-devops-and-security-for-scalable-platform-engineering/foster-a-culturecof-collaboration)
+- [The Core Pillars of Platform Engineering](/blog/integrating-devops-and-security-for-scalable-platform-engineering/#the-core-pillars-of-platform-engineering)
+- [Aligning DevOps and Security for Secure Platform Engineering](/blog/integrating-devops-and-security-for-scalable-platform-engineering/#aligning-devops-and-security-for-secure-platform-engineering)
+- [Shift Left Security](/blog/integrating-devops-and-security-for-scalable-platform-engineering/#shift-left-security)
+- [Embrace Automation and Standardization](/blog/integrating-devops-and-security-for-scalable-platform-engineering/#embrace-automation-and-standardization)
+- [Prioritize Observability and Monitoring](/blog/integrating-devops-and-security-for-scalable-platform-engineering/#prioritize-observability-and-monitoring)
+- [Foster a Culture of Collaboration](/blog/integrating-devops-and-security-for-scalable-platform-engineering/#foster-a-culturecof-collaboration)
 - [Challenges of Integrating Security in Platform Engineering](/blog/integrating-devops-and-security-for-scalable-platform-engineering/#challenges-of-integrating-security-in-platform-engineering)
 - [Balancing Autonomy and Control](/blog/integrating-devops-and-security-for-scalable-platform-engineering/#balancing-autonomy-and-control)
 - [Driving Adoption and Changing Mindsets](/blog/integrating-devops-and-security-for-scalable-platform-engineering/#driving-adoption-and-changing-mindsets)
