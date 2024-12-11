@@ -14,7 +14,7 @@ youll_learn:
 - How to deploy the External Secrets Operator using Helm or Pulumi
 - How to manage secrets stored in Pulumi ESC using External Secrets Operator
 - How to push secrets from Kubernetes to Pulumi ESC
-estimated_time: 15 minutes
+estimated_time: 15
 collections:
 - pulumi-esc
 - kubernetes
