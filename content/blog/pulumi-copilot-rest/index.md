@@ -12,8 +12,10 @@ tags:
     - llm
     - copilot
 social:
-    twitter:
-    linkedin:
+    twitter: |
+        The Pulumi Copilot REST API is here! Integrate Copilot’s AI-powered cloud management into your tools, apps, and workflows. Automate tasks, streamline processes, and build smarter cloud solutions. Learn more: https://www.pulumi.com/blog/pulumi-copilot-rest/
+    linkedin: |
+        The Pulumi Copilot REST API is now available. It allows you to integrate Copilot’s AI-powered cloud management into your own tools, apps, and workflows. Automate tasks, streamline processes, and extend cloud management capabilities to fit your needs. With features like multi-turn conversations and the ability to query specific resources, the API is built for flexibility and ease of integration. If you're looking to bring AI-driven infrastructure management into your stack, this API is a great starting point. Learn more and get started: https://www.pulumi.com/blog/pulumi-copilot-rest/
 
 # See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md
 # for details, and please remove these comments before submitting for review.
