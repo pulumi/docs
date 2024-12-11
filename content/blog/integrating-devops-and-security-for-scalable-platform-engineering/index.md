@@ -103,6 +103,12 @@ The panel discussed key strategies, challenges, and pillars of successful platfo
 
 These pillars work together to create a platform that empowers developers to innovate and deliver value to the organization and customers while maintaining the necessary controls and safeguards.
 
+{{% notes type="tip" %}}
+As Jess Mink, Director of Platform Engineering at [Honeycomb](https://www.pulumi.com/blog/observability-with-infrastructure-as-code/), explains:
+
+"*The goal of platform engineering is to help the company to run smoother and faster and unlock things people didn't know were possible [...] We tend to focus on tools and software, but it's really about people, processes, and tools. If you consider this, platforms are responsible for social and technical support across the organization. A common pitfall is building tools no one uses because you didn’t meet people where they are.*"
+{{% /notes %}}
+
 ## Aligning DevOps and Security for Secure Platform Engineering
 
 Integrating security into platform engineering ensures it becomes a proactive part of the development lifecycle and ensures that "[DevSecOps](https://www.pulumi.com/blog/devsecops-strategy-security-automation-tivity-health/)" is not an afterthought but a core consideration.
@@ -143,11 +149,18 @@ By integrating security-focused monitoring and alerting into the platform, organ
 
 Platform engineering is often referred to as being the practical application of DevOps practices. Integrating security practices often requires a cultural shift towards collaboration and shared responsibility between all teams in development, operations, and security, thus the name DevSecOps. Platform engineering teams can facilitate this by:
 
+- Treating [Platforms as Products](https://www.pulumi.com/blog/platform-engineering-cncf-maturity-model/#platforms-as-products-driving-success)
 - Involving security stakeholders in the design and planning of platform initiatives
 - Providing security training and education to developers to empower them to make informed decisions
 - Establishing communication channels and feedback loops between teams
 
-By breaking down silos and fostering communication and a shared understanding of all the required best practices for a robust, secure, and scalable platform, organizations can support the needs of multiple users, from developers, platform engineers, infrastructure architects, and security professionals.
+By breaking down silos and fostering communication and a shared understanding of all the required best practices for a robust, secure, and scalable platform, organizations can support the needs of multiple users, from developers to platform engineers, infrastructure architects, and security professionals.
+
+{{% notes type="tip" %}}
+As Kief Morris, Global Head of Infrastructure Engineering at [ThoughtWorks](https://www.thoughtworks.com/en-us), explains:
+
+"*There is a new way of thinking trying to avoid that "build it, and they will come mentality," which leads to building it and nobody using it. One of the trends we are seeing is product thinking [...]—using techniques like creating user personas of different types of users in the organization, conducting research to understand their needs, and talking with them.*"
+{{% /notes %}}
 
 ## Challenges of Integrating Security in Platform Engineering
 
@@ -158,7 +171,7 @@ While the benefits of integrating DevOps and security in platform engineering ar
 The primary goal is to empower developers to be more productive and proactive. However, this autonomy needs to be balanced with necessary security controls and governance measures.
 
 {{% notes type="tip" %}}
-As Jess Mink, Director of Platform Engineering at [Honeycomb](https://www.pulumi.com/blog/observability-with-infrastructure-as-code/), explains: 
+Jess Mink points out the importance of achieving harmony between developer autonomy and operational control, stating:
 
 "*It's a delicate balance - you want to make things easy for developers, but you also need to maintain the right level of control and security. It's about finding the right abstractions and interfaces that give developers the freedom they need while still ensuring the platform remains secure and compliant.*"
 {{% /notes %}}
@@ -189,7 +202,7 @@ Fostering internal mobility, continuous learning, and a flexible, modular platfo
 
 ## Measuring Success in Secure Platform Engineering
 
-Measuring the success of a platform engineering initiative can be a complex as it involves balancing a range of technical, operational, and business-oriented metrics, but also consider human factors. According to our panel, some key metrics to include:
+Measuring the success of a platform engineering initiative can be complex as it involves balancing a range of technical, operational, and business-oriented metrics but also considers human factors. According to our panel, some key metrics to include:
 
 - **Developer Experience**: Metrics such as developer satisfaction surveys, time-to-onboard new developers, and the number of self-service platform capabilities can provide insights into the effectiveness of the platform in supporting developer productivity and autonomy.
 - **Reliability and Scalability**: Monitoring service-level objectives (SLOs), incident response times, and the ability to handle increased traffic or user demands can help assess the platform's reliability and scalability.
@@ -198,9 +211,9 @@ Measuring the success of a platform engineering initiative can be a complex as i
 - **Observability and Monitoring**: Measuring the effectiveness of observability tools, the time to detect and resolve issues, and the quality of incident reports can [provide insights into the platform's overall health](https://www.pulumi.com/blog/insights-cloud-account-discovery/) and performance.
 
 {{% notes type="tip" %}}
-As Jess Mink emphasizes, it's important to not just collect these metrics, but to use them to drive meaningful action and improvement: 
+As Jess Mink emphasizes, it's important not just to collect these metrics but to use them to drive meaningful action and improvement: 
 
-"*We actually look at all of those [metric categories] every quarter and write summaries that go up to the executive level. This creates that visibility and shared understanding of problems, so that there's room for movement and change in the right ways.*"
+"*We look at all of those [metric categories] every quarter and write summaries that go up to the executive level. This creates visibility and a shared understanding of problems so that there's room for movement and change in the right ways.*"
 {{% /notes %}}
 
 ## The Future of Secure Platform Engineering
@@ -215,4 +228,4 @@ Learn how Pulumi customers build secure, scalable platforms and empower their de
 
 Discover platform engineering best practices in [The Guide to Platform Engineering: 7 Steps to Get It Right](https://www.pulumi.com/blog/the-guide-platform-engineering-idp-steps-best-practices/) and learn  through hands-on workshops on how to apply them by registering to one of our upcoming [platform engineering workshops and Q&A sessions](https://www.pulumi.com/resources/#upcoming).
 
-***Build secure, scalable platforms with confidence—get started with Pulumi today.***
+***Build secure, scalable platforms with confidence—get started with the [Platform Engineering Workshop Series & Course](https://info.pulumi.com/platform-engineering-workshop-series)***
