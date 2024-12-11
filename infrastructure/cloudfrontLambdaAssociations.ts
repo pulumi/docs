@@ -157,7 +157,7 @@ function getAnswersRedirectsLambdaCallback(redirects: Record<string, string>): a
 }
 
 function getRedirect(uri: string): string | undefined {
-    return getRegistryRedirect(uri) || getSDKRedirect(uri);
+    return getRegistryRedirect(uri) || getSDKRedirect(uri) || getResourcesRedirect(uri);
 }
 
 function getRegistryRedirect(uri: string): string | undefined {
@@ -259,6 +259,15 @@ function getSDKRedirect(uri: string): string | undefined {
         return undefined;
     }
     return nodeSDKRedirect(uri) || pythonSDKRedirect(uri) || dotnetSDKRedirect(uri) || undefined;
+}
+
+// redirect /resources/* to /events/* following workshop+event URL rename to capture orphaned links
+function getResourcesRedirect(uri: string): string | undefined {
+    if (uri.includes("/resources/")) {
+        return uri.replace("/resources/", "/events/");
+    }
+
+    return undefined;
 }
 
 function nodeSDKRedirect(uri: string): string | undefined {
