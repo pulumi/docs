@@ -13,8 +13,12 @@ tags:
     - ai
     - iac
 social:
-    twitter: Discover engineering strategies from Pulumi Copilot - Minimize LLM workloads, tackle hallucinations, and ensure AI accuracy.
-    linkedin: Discover engineering strategies from Pulumi Copilot - Minimize LLM workloads, tackle hallucinations, and ensure AI accuracy.
+    twitter: > 
+        Building Pulumi Copilot taught us key lessons about AI-powered tools: hallucinations reveal missing features, prompt engineering isn’t always the answer, and balancing LLMs with traditional code is critical. Learn more: https://www.pulumi.com/blog/copilot-lessons/
+    linkedin: |
+        Building AI-powered tools often brings unexpected challenges—and valuable lessons. While developing Pulumi Copilot, we encountered surprising insights: hallucinations revealed missing product features, prompt engineering wasn't always the fix, and balancing LLM capabilities with traditional code proved essential.
+        One memorable turning point came from user feedback: "Your tool doesn't know anything!" Instead of seeing it as failure, we saw opportunity—leading to significant improvements.
+        Curious how we turned unexpected challenges into product breakthroughs? Learn more: https://www.pulumi.com/blog/copilot-lessons/
 ---
 Building AI-powered developer tools comes with unique challenges, and now that we've **[launched our REST API](/blog/pulumi-copilot-rest/)**, we want to share some lessons we've learned building Pulumi Copilot, an AI assistant for cloud infrastructure.
 
@@ -48,7 +52,7 @@ To validate this approach, we tested Copilot ourselves to see what worked.
 
 The internal testing phase taught us invaluable lessons about how people would actually use the tool. We watched our team try Copilot in their daily work, and three common use cases emerged:
 
-**Debugging Deployments:** One of the first questions our internal users asked was, 'Why did my latest infrastructure deployment fail?' LLMs clearly excel at summarization and extracting a clear natural language explanation from stack traces, and logs is a clear win.
+**Debugging Deployments:** LLMs clearly excel at summarization. One of the first questions our internal users asked was, 'Why did my latest infrastructure deployment fail?' Using Copilot to extract a clear natural language explanation requests like these has been a clear win.
 
 **Understanding Complex Infrastructure:** Copilot helped our engineers gain insights into Pulumi's own infrastructure. Asking, 'How many resources are in production?' 'What expensive compute is running' or 'What version are the EKS clusters in EU?" shows the value of allowing users to express infrastructure questions in natural language.
 
@@ -60,7 +64,7 @@ These early experiences showed the value of Copilot. But they also revealed the 
 
 As Copilot grew, we broke it into smaller pieces we call skills. Each skill does one specific job. The Insights skill handles queries about resource usage and configuration ("How many S3 buckets do I have?"), the Cloud Skill interacts with the Pulumi Service API to manage infrastructure ("Show me my stacks."), the Code Skill generates Pulumi code snippets ("Write a Typescript program..."), and the Docs Skill retrieves information from Pulumi documentation ("How do I use [update plans](https://www.pulumi.com/docs/iac/concepts/update-plans/)?").  
 
-When you ask Copilot something, it figures out what you need and picks the right skill for the job – like a manager deciding which expert to send your question to. This function-calling approach, orchestrated by a component we call the "outer loop," allows Copilot to access and process information beyond its internal knowledge base.
+When you ask Copilot something, it figures out what you need and picks the right skill for the job – like a manager deciding which expert to send your question to. This [function-calling](https://platform.openai.com/docs/guides/function-calling) approach, orchestrated by a component we call the "outer loop," allows Copilot to access and process information beyond its internal knowledge base.
 
 Fortunately, Pulumi Cloud already exposes a [rich API](https://www.pulumi.com/docs/pulumi-cloud/reference/cloud-rest-api/) - in fact, this is what powers the Pulumi Console and the Pulumi CLI - so all we had to do is to build a *skill* that maps the user query to the appropriate Pulumi Cloud REST API. A question like "Show me my stacks" translates into the [List Stacks](https://www.pulumi.com/docs/pulumi-cloud/reference/cloud-rest-api/#list-stacks) API call. A question like 'Show me my untagged EC2 instances' is a bit more complex but it breaks down into clear components - resource type (EC2), filter condition (untagged) - that route to the Insights skill. This mapping helped us handle the many ways users phrase the same technical request.
 
@@ -121,6 +125,6 @@ This insight is one of the key lessons of building Copilot:
 4. **Learn from Hallucinations:** Sometimes incorrect outputs reveal user expectations
 5. **Learn from Users Continuously:** User interactions improve our AI systems - from training better skills to catching hallucinations and revealing product opportunities.
 
-These lessons helped shape our latest release: **[the Pulumi Copilot REST API](/blog/pulumi-copilot-rest/)**, now available in preview. You can integrate these same capabilities and skills into your own tools and workflows. Whether you're building CLI extensions, chat integrations, or automated deployment checks, the API provides a contextual understanding of Copilot. **[Try it out](docs.pulumi.com/Copilot-api).**
+These lessons helped shape our latest release: **[the Pulumi Copilot REST API](/blog/pulumi-copilot-rest/)**, now available in preview. You can integrate these same capabilities and skills into your own tools and workflows. Whether you're building CLI extensions, chat integrations, or automated deployment checks, the API provides a contextual understanding of Copilot. **[Try it out](https://www.pulumi.com/docs/pulumi-cloud/copilot/api/).**
 
 We can't wait to see what you build!
