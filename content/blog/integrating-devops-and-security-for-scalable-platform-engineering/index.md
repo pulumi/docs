@@ -106,7 +106,7 @@ These pillars work together to create a platform that empowers developers to inn
 {{% notes type="tip" %}}
 As Jess Mink, Director of Platform Engineering at [Honeycomb](https://www.pulumi.com/blog/observability-with-infrastructure-as-code/), explains:
 
-"*The goal of platform engineering is to help the company to run smoother and faster and unlock things people didn't know were possible [...] We tend to focus on tools and software, but it's really about people, processes, and tools. If you consider this, platforms are responsible for social and technical support across the organization. A common pitfall is building tools no one uses because you didn’t meet people where they are.*"
+"*The goal of platform engineering is to help the company run smoother and faster and unlock things people didn't know were possible [...] We tend to focus on tools and software, but it's really about people, processes, and tools. If you consider this, platforms are responsible for social and technical support across the organization. A common pitfall is building tools no one uses because you didn’t meet people where they are.*"
 {{% /notes %}}
 
 ## Aligning DevOps and Security for Secure Platform Engineering
@@ -154,13 +154,13 @@ Platform engineering is often referred to as being the practical application of 
 - Providing security training and education to developers to empower them to make informed decisions
 - Establishing communication channels and feedback loops between teams
 
-By breaking down silos and fostering communication and a shared understanding of all the required best practices for a robust, secure, and scalable platform, organizations can support the needs of multiple users, from developers to platform engineers, infrastructure architects, and security professionals.
-
 {{% notes type="tip" %}}
 As Kief Morris, Global Head of Infrastructure Engineering at [ThoughtWorks](https://www.thoughtworks.com/en-us), explains:
 
-"*There is a new way of thinking trying to avoid that "build it, and they will come mentality," which leads to building it and nobody using it. One of the trends we are seeing is product thinking [...]—using techniques like creating user personas of different types of users in the organization, conducting research to understand their needs, and talking with them.*"
+"*There is a new way of thinking that is trying to avoid that "build it, and they will come mentality," which leads to building it and nobody using it. One of the trends we are seeing is product thinking [...]—using techniques like creating user personas of different types of users in the organization, conducting research to understand their needs, and talking with them.*"
 {{% /notes %}}
+
+Breaking silos and fostering communication helps organizations build secure, scalable platforms that support the needs of developers, platform engineers, architects, and security teams.
 
 ## Challenges of Integrating Security in Platform Engineering
 
@@ -226,6 +226,6 @@ Learn how Pulumi customers build secure, scalable platforms and empower their de
 - **BMW Group**: [Unified and Programmatic Approach to Infrastructure Management at BMW Using Pulumi](https://www.pulumi.com/blog/unified-programmatic-approach-infrastructure-management-bmw-using-pulumi/)
 - **Lemonade**: [How the DevOps team supports a much larger group of developers](https://www.pulumi.com/case-studies/lemonade/) using by Pulumi to standardize infrastructure components and enforce best practices.
 
-Discover platform engineering best practices in [The Guide to Platform Engineering: 7 Steps to Get It Right](https://www.pulumi.com/blog/the-guide-platform-engineering-idp-steps-best-practices/) and learn  through hands-on workshops on how to apply them by registering to one of our upcoming [platform engineering workshops and Q&A sessions](https://www.pulumi.com/resources/#upcoming).
+Discover platform engineering best practices in [The Guide to Platform Engineering: 7 Steps to Get It Right](https://www.pulumi.com/blog/the-guide-platform-engineering-idp-steps-best-practices/).
 
 ***Build secure, scalable platforms with confidence—get started with the [Platform Engineering Workshop Series & Course](https://info.pulumi.com/platform-engineering-workshop-series)***
