@@ -97,4 +97,3 @@ jobs:
 
       - name: Run the tests
         run: make test
-        
