@@ -62,9 +62,6 @@ main:
         - name: Simon Barendse
           role: Team Lead, Engineering - Programmatic Interfaces @ 1Password
           photo: /images/people/simon-barendse.jpg
-        - name: Diana Esteves
-          role: Solutions Architect, Pulumi
-          photo: /images/team/diana-esteves.jpg
 
     # case-sensitive
     tags:
