@@ -59,9 +59,6 @@ main:
 
     # The webinar presenters
     presenters:
-        - name: Diana Esteves
-          role: Solutions Architect, Pulumi
-          photo: /images/team/diana-esteves.jpg
         - name: Jason Smith
           role: Sr. Cloud Customer Engineer, Google
           photo: /images/team/jay-smith-google-jpeg.jpg

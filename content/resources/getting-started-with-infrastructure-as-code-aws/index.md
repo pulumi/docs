@@ -60,9 +60,9 @@ main:
 
     # The webinar presenters
     presenters:
-        - name: Diana Esteves
-          role: Solutions Architect, Pulumi
-          photo: /images/team/diana-esteves.jpg
+        - name: TBD
+          role: TBD
+          photo: TBD
 
     # case-sensitive
     tags:
