@@ -62,7 +62,6 @@ main:
     presenters:
         - name: TBD
           role: TBD
-          photo: TBD
 
     # case-sensitive
     tags:
