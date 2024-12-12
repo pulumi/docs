@@ -58,9 +58,6 @@ main:
 
     # The webinar presenters
     presenters:
-        - name: Diana Esteves
-          role: Solutions Architect, Pulumi
-          photo: /images/team/diana-esteves.jpg
         - name: Michael Irwin
           role: Senior Manager, Developer Relations, Docker
           photo: /images/people/michael-irwin.jpg

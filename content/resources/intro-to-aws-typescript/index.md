@@ -58,9 +58,6 @@ main:
 
     # The webinar presenters
     presenters:
-        - name: Diana Esteves
-          role: Solutions Architect, Pulumi
-          photo: /images/team/diana-esteves.jpg
         - name: Marina Novikova
           role: Sr. Partner Solutions Architect, AWS
           photo: /images/team/marina-novikova.jpg
