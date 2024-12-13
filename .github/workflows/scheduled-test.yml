@@ -24,7 +24,6 @@ jobs:
     permissions:
       contents: read
       id-token: write
-    environment: "testing"
     strategy:
       matrix:
         platform:
