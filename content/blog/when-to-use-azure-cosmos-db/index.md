@@ -199,6 +199,16 @@ See also [Cosmos DB vs MongoDB, Know The Differences](/what-is/cosmos-db-vs-mong
 
 After learning about partitioning and seeing the Cassandra API, you might think Cosmos DB is basically managed by Cassandra. And there are some key similarities. In many ways, Cosmos DB is Cassandra-inspired, but there are key differences.
 
+{{% notes type="tip" %}}
+
+**You might also like:**
+
+- [Pulumi + Azure Deployment Environments: Better Together for Enterprise Developers](/blog/azure-deployment-environments/)
+- [Infrastructure Testing Best Practices of Sam Cogan, Puluminary & Azure MVP](/blog/sam-cogan-testing-best-practices/)
+- [Azure Native Provider 2.0: Streamlined, Expanded, and More Powerful than Ever](/blog/introducing-azure-native-v2/)
+
+{{% /notes %}}
+
 ### How Cosmos DB and Cassandra Relate
 
 1. **Partitioning**: Both use logical partition keys for scalability to distribute data across nodes. Cassandra requires manual management, while Cosmos DB automates partitioning and scaling, reducing operational burdens, though at the cost of flexibility.
@@ -313,6 +323,22 @@ Since this article came out, I've had a chance to talk to several Cosmos DB user
 
 - **Guaranteed Low Latency:** Cosmos DB offers SLAs on read and write latency (<10ms P99), a guarantee few other databases can match.  This speed is achieved by co-locating compute and storage on the same cluster, minimizing data access times.
 {{% /notes %}}
+
+## Managing Database Infrastructure with Pulumi
+
+Whether you choose Cosmos DB, PostgreSQL, or Azure Table Storage Pulumi simplifies the process of provisioning and managing database infrastructure on Azure. With infrastructure as code in your favorite programming languages, you can define, deploy, and maintain your entire database infrastructure using familiar development practices. Pulumi's [Azure Native provider](/docs/iac/clouds/aws/) helps you implement the right database solution for your specific needs.
+
+With Pulumi, you get:
+
+- [Rich Azure database provisioning](/docs/iac/clouds/azure/) capabilities for Cosmos DB, PostgreSQL, and Azure SQL
+- [Automated configuration management](/docs/iac/concepts/config/) to handle connection strings and secrets securely
+- [Infrastructure testing capabilities](/docs/iac/concepts/testing/) to validate your database configuration before deployment
+- [Stack references](/docs/concepts/stack/#stackreferences) for managing multiple database environments
+- [Custom components](/docs/concepts/resources/components/) for creating reusable database infrastructure patterns
+
+Ready to streamline your database infrastructure management?
+
+{{< blog/cta-button "Try Pulumi for Free" "/docs/get-started/" >}}
 
 ## Summary
 
