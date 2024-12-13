@@ -147,7 +147,7 @@ But there are lots of situations where Fargate is less of a fit.
 
 {{% notes type="tip" %}}
 
-**You Might Also Like:**
+**You might also like:**
 
 - [Pulumi for AWS: Automate, Secure, and Manage Your Cloud](/blog/pulumi-for-aws-automate-secure-manage/)
 - [Easy LangServe Apps with Pulumi on AWS](/blog/easy-ai-apps-with-langserve-and-pulumi/)

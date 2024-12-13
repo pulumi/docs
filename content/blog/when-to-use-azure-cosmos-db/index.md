@@ -201,7 +201,7 @@ After learning about partitioning and seeing the Cassandra API, you might think 
 
 {{% notes type="tip" %}}
 
-**You Might Also Like:**
+**You might also like:**
 
 - [Pulumi + Azure Deployment Environments: Better Together for Enterprise Developers](/blog/azure-deployment-environments/)
 - [Infrastructure Testing Best Practices of Sam Cogan, Puluminary & Azure MVP](/blog/sam-cogan-testing-best-practices/)
