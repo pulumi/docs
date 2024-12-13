@@ -1,6 +1,6 @@
 ---
 title: "Your Perfect Infrastructure Sucks"
-date: 2024-12-11T10:43:07Z
+date: 2024-12-16T10:43:07Z
 draft: false
 
 meta_desc: |
@@ -60,10 +60,11 @@ social:
 # See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md
 # for details, and please remove these comments before submitting for review.
 ---
+**Guest Article:** *Simen A. W. Olsen from [Bjerk](https://bjerk.io), is here to share his lessons learned on why designing the perfect architecture for your future needs might be a mistake*
 
 I remember standing in front of our engineering team in 2018, proudly presenting what I believed was the future-proof architectural design for our new distributed system. The diagrams were immaculate, the technology choices were cutting-edge, and the scalability patterns were ready for any possible future scenario.
 
-I was basically the Leonardo da Vinci of system design… if Leonardo had been really into Kubernetes and had a concerning addiction to coffee. Six months later, that “future-proof” architecture had become a constraint rather than an enabler, and my masterpiece was looking more like a finger painting done by a caffeinated raccoon.
+I was basically the Leonardo da Vinci of system design… if Leonardo had been really into Kubernetes and had a concerning addiction to coffee. But six months later, that “future-proof” architecture had become a constraint rather than an enabler, and my masterpiece was looking more like a finger painting done by a caffeinated raccoon.
 
 <!--more-->
 
@@ -81,7 +82,7 @@ Through both failures and successes, I’ve identified three principles that def
 
 - **Embrace simplicity.** I think it makes sense to start with the simplest architecture that could possibly work for your current needs. Complexity should be earned, not presumed. If your architecture diagram looks like a plate of spaghetti that’s been hit by lightning, you might be doing it wrong.
 - **Make change cheap.** Instead of trying to avoid change, make it inexpensive. This means investing in automated testing, continuous deployment, and monitoring. When change is cheap, you don’t need to fear it.
-- **Learn through action.** Rather than trying to predict the future, build mechanisms that help you learn quickly about real needs. It includes feature toggles (Protip: Try [Unleash][unleash]. Pretty Chad software.), A/B testing, and robust monitoring of how your system is actually being used. You know, actual data, not just what that one loud guy in planning insists will definitely happen.
+- **Learn through action.** Rather than trying to predict the future, build mechanisms that help you learn quickly about real needs. It includes feature toggles (Protip: Try [Unleash][unleash].), A/B testing, and robust monitoring of how your system is actually being used. You know, actual data, not just what that one loud guy in planning insists will definitely happen.
 
 [unleash]: https://www.getunleash.io/
 
