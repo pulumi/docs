@@ -1,5 +1,5 @@
 ---
-title: "Why Every Cloud Engineer Needs Pulumi Esc for Secrets Management"
+title: "Why Every Cloud Engineer Needs Pulumi ESC for Secrets Management"
 allow_long_title: true
 
 # The date represents the post's publish date, and by default corresponds with
