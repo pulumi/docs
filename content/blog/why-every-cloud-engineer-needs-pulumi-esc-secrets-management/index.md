@@ -88,18 +88,19 @@ Pulumi ESC addresses these issues head-on, redefining how cloud engineers manage
 
 Pulumi ESC simplifies how organizations manage secrets and configurations. It is designed to secure sensitive configurations across modern cloud environments and supports seamless integration, enabling engineers to:
 
-- Centrally manage secrets for applications and infrastructure.
-- Synchronize secrets dynamically across Kubernetes and other environments with platforms like ESO.
-- Implement automated secret rotation, ensuring compliance and minimizing vulnerabilities.
-- Access secrets securely through Pulumi's SDKs, CLI, or API.
-- 
+- Access, share, and manage secrets, passwords, API keys, and configuration settings like network and deployment options.
+- Synchronize secrets and configuration from any store to any app, tool, or CI/CD platform.
+- Access secrets securely through CLI, API, Kubernetes operator, the Pulumi Cloud UI, and in-code with Typescript/Javascript, Python, and Go SDKs.
+- Connect to cloud providers and secrets stores via OIDC to generate dynamic, short-lived, auto-expiring credentials.
+- Set role-based access controls (RBAC), making securing secrets and configurations easy by assigning permissions to users based on their roles.
+
 Whether integrated with Pulumi's Infrastructure as Code (IaC) platform or used as a standalone service, Pulumi ESC enables cloud engineers to streamline secrets management with centralized control.
 
 ## Key Features of Pulumi ESC
 
 ### 1. Seamless Integration with External Platforms
 
-Pulumi ESC integrates with popular secrets providers, including AWS Secrets Manager, Azure Key Vault, GCP Secret Manager, and HashiCorp Vault, making it adaptable for multi-cloud and hybrid cloud architectures.
+Pulumi ESC integrates with popular secrets providers, including AWS Secrets Manager, Azure Key Vault, GCP Secret Manager, 1Password, and HashiCorp Vault, making it adaptable for multi-cloud and hybrid cloud architectures.
 
 ### 2. Dynamic Secrets Synchronization with ESO
 
@@ -162,7 +163,7 @@ External Secrets Operator is an open-source Kubernetes operator that syncs secre
 3. Granular Management: Define which secrets are synchronized and to which namespaces, ensuring tight access controls and minimizing risk.
 4. Automated Secret Rotation: By leveraging ESC's rotation capabilities, ESO ensures Kubernetes receives refreshed credentials without requiring downtime.
 
-### Example Use Case
+#### Example Use Case
 
 Consider a cloud engineer deploying an application in Kubernetes that requires database credentials. Instead of hardcoding these credentials, the engineer can:
 
@@ -182,6 +183,6 @@ With rising cyber threats and stricter data regulations, adopting tools like Pul
 
 Secrets management doesn't have to be a headache! With **Pulumi ESC**, you can safeguard your infrastructure, ensure compliance, and eliminate manual errors—all while enhancing security and agility.
 
-[Get started with Pulumi ESC today(https://www.pulumi.com/docs/esc/get-started/begin/) and experience the future of secrets management. Take control of your cloud environment—securely and effortlessly.
+[Get started with Pulumi ESC today](https://www.pulumi.com/docs/esc/get-started/begin/) and experience the future of secrets management. Take control of your cloud environment—securely and effortlessly.
 
-[Sign up for Pulumi ESC Free ➡️](https://app.pulumi.com/signup)
+[Sign up for Pulumi ➡️](https://app.pulumi.com/signup)
