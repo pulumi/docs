@@ -77,12 +77,6 @@ In the **Provider type** section, click the radio button next to **OpenID Connec
 https://api.pulumi.com/oidc
 ```
 
-Then click the **Get thumbprint** button. The thumbprint value that you will be presented with is what you can use to verify the certificate of the provider i.e. Pulumi.
-
-{{< notes type="info" >}}
-The AWS console generates the thumbprint value on your behalf. However, if you are creating the OIDC provider programmatically, you will need to generate this value yourself and provide the thumbprint value as a part of your resource definition. You can learn more about what a thumbprint is and how to generate/verify it by referring to the [relevant AWS documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_create_oidc_verify-thumbprint.html).
-{{< /notes >}}
-
 For the **Audience** field, provide the name of your Pulumi organization. Then scroll down to the bottom of the page and click **Add provider**.
 
 {{< video title="Filling out the fields of the Create Identity Provider wizard" src="https://www.pulumi.com/uploads/create-idp-wizard.mp4" autoplay="true" loop="true" >}}
@@ -122,13 +116,13 @@ After creating your role, make sure to make a note of your role’s ARN value as
 
 ### Step 3: Create a new environment
 
-Now that we’ve created all the necessary AWS resources, let’s move over to the Pulumi side of things. You’ll first want to create a new environment in the [Pulumi Cloud](https://app.pulumi.com/). Make sure that you have the correct organization selected in the left-hand navigation menu. Then click the **Environments** link, and click the **Create environment** button. In the following pop-up, provide a name for your environment before clicking the  **Create environment** button.
+Now that we’ve created all the necessary AWS resources, let’s move over to the Pulumi side of things. You’ll first want to create a new environment in the [Pulumi Cloud](https://app.pulumi.com/). Make sure that you have the correct organization selected in the left-hand navigation menu. Then click the **Environments** link, and click the **Create environment** button. In the following pop-up, provide a name for your environment before clicking the **Create environment** button.
 
 {{< video title="Creating a new Pulumi ESC environment" src="https://www.pulumi.com/uploads/create-new-environment.mp4" autoplay="true" loop="true" >}}
 
 ### Step 4: Add the AWS provider integration
 
-Once you’ve created your new environment, you will be presented with a split-pane editor view. You’ll want to clear out the default placeholder content in the editor on the left-hand side and replace it with the following code, making sure to replace `<your-oidc-iam-role-arn>` with the value of your IAM role ARN from the previous step:
+Once you’ve created your new environment, you will be presented with a split-pane document view. You’ll want to clear out the default placeholder content in the editor on the left-hand side and replace it with the following code, making sure to replace `<your-oidc-iam-role-arn>` with the value of your IAM role ARN from the previous step:
 
 ```yaml
 values:
