@@ -86,7 +86,7 @@ Pulumi ESC addresses these issues head-on, redefining how cloud engineers manage
 
 ## What is Pulumi ESC?
 
-Pulumi ESC is a secrets management and orchestration service from Pulumi designed to secure sensitive configurations across modern cloud environments. It supports seamless integration, enabling engineers to:
+Pulumi ESC simplifies how organizations manage secrets and configurations. It is designed to secure sensitive configurations across modern cloud environments and supports seamless integration, enabling engineers to:
 
 - Centrally manage secrets for applications and infrastructure.
 - Synchronize secrets dynamically across Kubernetes and other environments with platforms like ESO.
@@ -105,17 +105,17 @@ Pulumi ESC integrates with popular secrets providers, including AWS Secrets Mana
 
 Partnering with the External Secrets Operator, Pulumi ESC synchronizes secrets securely into Kubernetes clusters. This eliminates hardcoding secrets into manifests or relying on unsecured manual processes.
 
-### 3. Automated Rotation and Expiry
+### 3. Safely Roll Back to a Previous Version
 
-Pulumi ESC minimizes security risks by automating the rotation of secrets. This feature aligns secrets management with CI/CD processes for cloud engineers focused on DevOps, ensuring credentials remain valid only when needed.
+Pulumi ESC Versioning gives you unprecedented control over your secrets and configuration. Every change is captured in an immutable revision history, allowing you to audit modifications, compare versions, and safely roll back.
 
 ### 4. Secure by Design
 
-Pulumi ESC follows a "secure by default" model by employing encryption, fine-grained access control, and detailed audit trails. Engineers can meet compliance regulations effortlessly while gaining full visibility into secret access patterns.
+Pulumi ESC follows a "secure by default" model, employing encryption, access control, and detailed audit trails. Engineers can meet compliance regulations effortlessly while gaining full visibility into secret access patterns.
 
 ### 5. Language Flexibility
 
-With SDKs available for Python, Go, JavaScript, and other major languages, cloud engineers can integrate Pulumi ESC directly into their CI/CD pipelines or custom applications.
+With SDKs available for Python, Go, JavaScript, and TypeScript, cloud engineers can integrate Pulumi ESC directly into their CI/CD pipelines or custom applications.
 
 ## Why Cloud Engineers Need Pulumi ESC
 
