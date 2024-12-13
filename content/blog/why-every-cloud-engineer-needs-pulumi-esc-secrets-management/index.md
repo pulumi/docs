@@ -163,7 +163,7 @@ This approach not only boosts security but also ensures compliance with enterpri
 
 ## The Future of Secrets Management with Pulumi ESC
 
-Pulumi ESC is more than just a secrets management tool—it's the foundation of secure, scalable, and agile cloud operations. For cloud engineers grappling with multi-cloud complexity, Kubernetes deployments, and compliance concerns, it provides a streamlined, automated approach that enhances efficiency and security.
+Pulumi ESC is more than just a secrets management tool — it's the foundation of secure, scalable, and agile cloud operations. For cloud engineers grappling with multi-cloud complexity, Kubernetes deployments, and compliance concerns, it provides a streamlined, automated approach that enhances efficiency and security.
 
 With rising cyber threats and stricter data regulations, adopting tools like Pulumi ESC is no longer optional. It's a competitive advantage for cloud engineers and organizations aiming to lead in today's cloud-native world.
 
