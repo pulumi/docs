@@ -1,0 +1,7 @@
+name: helm-kubernetes-part-one-go
+description: Demo Code Part 1 of the Tutorial around Helm in Kubernetes
+runtime: go
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: helm-kubernetes-go
