@@ -113,9 +113,17 @@ Pulumi ESC Versioning gives you unprecedented control over your secrets and conf
 
 Pulumi ESC follows a "secure by default" model, employing encryption, access control, and detailed audit trails. Engineers can meet compliance regulations effortlessly while gaining full visibility into secret access patterns.
 
-### 5. Language Flexibility
+### 5. Configuration-as-Code, Automation, and Integration Everywhere
 
-With SDKs available for Python, Go, JavaScript, and TypeScript, cloud engineers can integrate Pulumi ESC directly into their CI/CD pipelines or custom applications.
+Pulumi ESC embraces an "as-code" approach, enabling configuration and secrets management using TypeScript, JavaScript, Go, Python, or YAML. The 'esc' CLI and API support automation in CI/CD environments, reducing credential duplication and ensuring a single source of truth.
+
+### 6. Dev Tools Integrations
+
+Pulumi ESC’s metadata and support for popular configuration formats enable seamless integration with tools like Direnv, Docker, and GitHub, allowing easy management of environment variables, secrets, and configurations.
+
+### 7. Infrastructure Tools Integrations
+
+Pulumi ESC extends its capabilities beyond Pulumi IaC by integrating with other infrastructure tools such as Cloudflare, Terraform, and OpenTofu. These integrations enable seamless provisioning of cloud credentials and input variables directly from ESC environments.
 
 ## Why Cloud Engineers Need Pulumi ESC
 
