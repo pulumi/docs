@@ -10,9 +10,6 @@ menu:
         parent: pulumi-cloud-admin
         weight: 2
         identifier: pulumi-cloud-admin-self-hosted
-    pulumicloud:
-        identifier: self-hosted
-        weight: 11
 aliases:
   - /docs/guides/self-hosted/
   - /docs/pulumi-cloud/self-hosted/

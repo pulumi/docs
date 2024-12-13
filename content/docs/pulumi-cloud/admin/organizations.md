@@ -10,8 +10,6 @@ menu:
         parent: pulumi-cloud-admin
         weight: 1
         identifier: pulumi-cloud-admin-organizations
-    pulumicloud:
-        weight: 2
 aliases:
 - /docs/reference/service/orgs/
 - /docs/console/accounts/organizations/

@@ -10,10 +10,6 @@ menu:
     parent: pulumi-cloud-access-management-scim
     weight: 3
     identifier: pulumi-cloud-access-management-scim-onelogin
-  pulumicloud:
-    identifier: onelogin-scim
-    parent: scim
-    weight: 3
 aliases:
   - /docs/guides/scim/onelogin/
 ---

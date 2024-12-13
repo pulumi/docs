@@ -9,9 +9,6 @@ menu:
     parent: pulumi-cloud-developer-portals
     weight: 2
     identifier: pulumi-cloud-developer-portals-npw
-  pulumicloud:
-    weight: 2
-    parent: developer-portals
 ---
 
 Pulumi Cloud provides a New Project Wizard to help walk your organization's members through the process of creating new Pulumi projects. This provides a more turnkey alternative to the [Pulumi Backstage Plugin](/docs/pulumi-cloud/developer-portals/backstage) or custom-built integrations.

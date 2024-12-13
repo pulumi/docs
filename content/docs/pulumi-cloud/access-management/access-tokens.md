@@ -10,10 +10,6 @@ menu:
     parent: pulumi-cloud-access-management
     weight: 3
     identifier: pulumi-cloud-access-management-access-tokens
-  pulumicloud:
-    parent: access-management
-    weight: 2
-    identifier: pulumi-cloud-access-tokens
 aliases:
 - /docs/intro/pulumi-service/organization-access-tokens/
 - /docs/intro/pulumi-cloud/organization-access-tokens/

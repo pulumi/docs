@@ -10,10 +10,6 @@ menu:
     parent: pulumi-cloud-access-management-oidc-provider
     weight: 3
     identifier: pulumi-cloud-access-management-oidc-provider-gcp
-  pulumicloud:
-    parent: openid-connect-provider
-    weight: 1
-
 aliases:
 - /docs/guides/oidc/provider/gcp
 - /docs/intro/deployments/oidc/provider/gcp/

@@ -10,9 +10,6 @@ menu:
     parent: pulumi-cloud-deployments
     weight: 7
     identifier: pulumi-cloud-deployments-api
-  pulumicloud:
-    parent: deployments
-    weight: 4
 aliases:
 - /docs/reference/deployments-rest-api/
 - /docs/intro/deployments/api/
