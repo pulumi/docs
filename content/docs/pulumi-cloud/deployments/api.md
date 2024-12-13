@@ -1180,7 +1180,7 @@ The `token` is a string that contains the `job`, `offset` and `step` of the next
 
 The following query parameters are available:
 
-* **nextToken**: A string returned by the previous response, that can be used to get the next set of logs.
+* **continuationToken**: A string returned by the previous response, that can be used to get the next set of logs.
 
 ##### Example
 
@@ -1230,12 +1230,12 @@ Response
 }
 ```
 
-Following request (using `nextToken`)
+Following request (using the returned `nextToken`)
 
 ```shell
 curl -XGET -H "Content-Type: application/json" \
 -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
---location "https://api.pulumi.com/api/stacks/my-org/aws-ts-s3-folder/dev/deployments/6b1ec06b-4f41-4cce-a7c9-13ceded14db2/logs?nextToken=0.2.1"
+--location "https://api.pulumi.com/api/stacks/my-org/aws-ts-s3-folder/dev/deployments/6b1ec06b-4f41-4cce-a7c9-13ceded14db2/logs?continuationToken=0.2.1"
 ```
 
 Response
