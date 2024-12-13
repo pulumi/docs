@@ -1,5 +1,5 @@
 ---
-title: "Year in Review 2024"
+title: "2024 Year in Review: Growth, Innovation and Appreciation"
 
 # The date represents the post's publish date, and by default corresponds with
 # the date and time this file was generated. Dates are used for display and
@@ -7,7 +7,7 @@ title: "Year in Review 2024"
 # published. To influence the ordering of posts published on the same date, use
 # the time portion of the date value; posts are sorted in descending order by
 # date/time.
-date: 2024-12-13T22:11:09Z
+date: 2024-12-30T06:11:09Z
 
 # The draft setting determines whether a post is published. Set it to true if
 # you want to be able to merge the post without publishing it.
@@ -28,11 +28,12 @@ meta_image: meta.png
 # `id` properties of the team member files at /data/team/team. Create a file for
 # yourself if you don't already have one.
 authors:
-    - joe-duffy
+    - sara-huddleston
 
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
-    - change-me
+    - community
+    - features
 
 
 # The social copy used to promote this post on Twitter and Linkedin. These
@@ -55,31 +56,71 @@ social:
 # for details, and please remove these comments before submitting for review.
 ---
 
-What you put here will appear on the index page. In most cases, you'll also want to add a Read More link after this paragraph (though technically, that's optional. To do that, just add an HTML comment like the one below.
+It's the end of 2024, and like everyone, we're counting down until 2025 while looking back at our year. We've had a very exciting year, from unveiling a bold new vision for Pulumi to delivering cutting-edge updates across our Pulumi Cloud. 
+
+Here's a look at how Pulumi has grown, evolved, and continued empowering teams worldwide.
 
 <!--more-->
 
-And then everything _after_ that comment will appear on the post page itself.
+## A Unified Vision: The Pulumi Platform
 
-Either way, avoid using images or code samples [in the first 70 words](https://gohugo.io/content-management/summaries/#automatic-summary-splitting) of your post, as these may not render properly in summary contexts (e.g., on the blog home page or in social-media previews).
+This year, Pulumi introduced a comprehensive product suite that goes beyond infrastructure as code to address the full spectrum of cloud infrastructure management. The Pulumi platform now consists of three core products:
 
-## Writing the Post
+- **Pulumi IaC**: Open source infrastructure as code in any programming language. With over 100M downloads, 167% growth in contributions, and industry-leading innovations, Pulumi IaC continues to redefine cloud automation.
+- **Pulumi ESC**: Centralized secrets management and orchestration that scales. General availability this year brought features like SDKs, versioning, tagging, and integrations with 1Password and Kubernetes secrets operators.
+- **Pulumi Insights**: Visibility, intelligence, and control over all infrastructure resources. Insights 2.0 expanded support for resources created outside Pulumi IaC, delivering advanced graph visualizations and policy enforcement powered by Pulumi CrossGuard.
 
-For help assembling the content of your post, see [BLOGGING.md](https://github.com/pulumi/docs/blob/master/BLOGGING.md). For general formatting guidelines, see the [Style Guide](https://github.com/pulumi/docs/blob/master/STYLE-GUIDE.md).
+{{< youtube "AepHQaXeNX0?rel=0" >}}
 
-## Code Samples
+Three core capabilities unite these products:
+- **Pulumi Copilot**: Generative AI for managing cloud resources.
+- **Pulumi CrossGuard**: A policy-as-code engine for compliance and best practices.
+- **Pulumi Deployments**: Infrastructure task orchestration.
 
-```typescript
-let bucket = new aws.s3.Bucket("stuff");
-...
-```
-
-## Images
+## Highlights Across the Product Innovation
 
 ![Placeholder Image](meta.png)
 
-## Videos
+Pulumi's product innovations this year have empowered teams to automate, secure, and manage cloud infrastructure with confidence:
 
-{{< youtube "kDB-YRKFfYE?rel=0" >}}
+- **Pulumi ESC achieved general availability**, redefining secrets management with features like dynamic credentials and hierarchical environments. New capabilities include secrets syncing with external stores like AWS Secrets Manager and Kubernetes operators for runtime integration.
+- **Pulumi Insights 2.0** delivers AI-powered search, a comprehensive inventory for resources created by other tools like Terraform and CloudFormation, and automated remediation capabilities powered by CrossGuard.
+- **Pulumi Copilot** leverages Generative AI to transform how teams diagnose and resolve IaC issues, providing instant feedback and deployment recommendations.
+- **Pulumi Kubernetes Operator 2.0** introduced scalable, secure deployments with dedicated workspace pods, enhanced customization options, and improved stability under dynamic conditions.
+- **Drift Detection and Remediation** in Pulumi Cloud now automates drift detection for all 180+ supported providers, ensuring infrastructure consistency, enhanced security, and reduced operational risks.
+- **Azure Classic Provider v6.0.0** updates included the latest upstream changes and ensured compatibility with Pulumi Azure Native Provider.
+- **Google Cloud Provider v8.0.0** provides full resource coverage for the latest Google Cloud updates.
+- **Pulumi Visual Studio Code Extension** empowers developers with tools for debugging Pulumi programs, YAML language support, and direct ESC management within the IDE.
+- **AWS CDK on Pulumi 1.0** expands compatibility with AWS CDK features, bridging the CDK and Pulumi ecosystems and enabling integration with constructs from AWS's construct hub.
+- **Pulumi Docker Containers** enhances CI/CD workflows with versioned images, pre-installed tools like Poetry and ppm, and runtime flexibility for Python, Node.js, and .NET.
 
-Note the `?rel=0` param, which tells YouTube to suggest only videos from same channel.
+## By the Numbers
+
+![Placeholder Image](meta.png)
+
+Pulumi's growth and impact this year have been amazing:
+
+- **22,000 GitHub Stars**: Supported by 4,400 contributors and 75,000 pull requests.
+- **3,000+ Customers**: Empowering industries like AI, gaming, finance, and healthcare.
+- **100M+ Downloads**: Pulumi IaC adoption soared globally.
+- **71% Cloud Cost Savings**: Customers like Tivity Health saved millions with Pulumi.
+- **167% Contribution Growth**: Outpacing other IaC tools like Terraform and OpenTofu.
+
+## Community Achievements
+
+![Placeholder Image](meta.png)
+
+Pulumi's vibrant community has been at the heart of everything we've accomplished:
+
+- **Global Pulumi User Groups (Meetups)**: With 20 groups across 9 countries, including new meetups in Chicago, Columbus, São Paulo, and Tel Aviv, our community continues to grow. These meetups collectively host over 6,396 members.
+- **PulumiUP 2024**: Over 7,000 registrants globally, and nearly 1,000 for the first-ever PulumiUP Europe.
+- **Workshops**: Several workshops?!!? Ask Tej
+- **22,000 GitHub Stars**: A testament to our community's passion and dedication, driven by 4,400+ contributors.
+
+## Looking Ahead to 2025
+
+To our users, customers, partners, Puluminaries, and employees, "thank you!" Your support has made 2024 an amazing year, and we're excited for what's ahead in 2025. Together, we'll continue to build the future of cloud infrastructure and security.
+
+Stay tuned for more innovations, community events, and collaboration opportunities. Here's to another year of growth, transformation, and success!
+
+[Explore Pulumi ➡️](https://www.pulumi.com/docs/)
