@@ -39,7 +39,6 @@ tags:
     - kubernetes
     - secrets-management
 
-
 # The social copy used to promote this post on Twitter and Linkedin. These
 # properties do not actually create the post and have no effect on the
 # generated blog page. They are here strictly for reference.
