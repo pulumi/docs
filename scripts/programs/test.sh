@@ -137,6 +137,8 @@ pushd "$programs_dir"
         # Destroy and remove.
         pulumi -C "$project" destroy --yes --remove
 
+        passing_projects+=("$project")
+        
         # Clean up artifacts.
         git clean -fdX .
     done
