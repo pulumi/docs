@@ -10,9 +10,6 @@ menu:
         parent: pulumi-cloud-admin-self-hosted
         weight: 3
         identifier: pulumi-cloud-admin-self-hosted-saml-sso
-    pulumicloud:
-        parent: self-hosted
-        weight: 2
 aliases:
   - /docs/guides/self-hosted/saml-sso/
   - /docs/pulumi-cloud/self-hosted/saml-sso/

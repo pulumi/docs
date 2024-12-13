@@ -11,10 +11,6 @@ menu:
     parent: pulumi-cloud-access-management-saml
     weight: 5
     identifier: pulumi-cloud-access-management-saml-okta
-  pulumicloud:
-    parent: saml
-    weight: 2
-
 aliases:
 - /docs/reference/service/saml-okta/
 - /docs/console/accounts/saml/okta/

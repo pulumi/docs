@@ -10,9 +10,6 @@ menu:
         parent: pulumi-cloud-admin-self-hosted-deployment-options
         weight: 7
         identifier: pulumi-cloud-admin-self-hosted-deployment-options-byo-infra-hosted
-    pulumicloud:
-        parent: deployment-options
-        weight: 7
 aliases:
   - /docs/guides/self-hosted/byo-infra-hosted/
   - /docs/pulumi-cloud/self-hosted/deployment-options/byo-infra-hosted/

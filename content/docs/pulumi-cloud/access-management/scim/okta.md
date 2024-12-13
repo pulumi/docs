@@ -10,10 +10,6 @@ menu:
     parent: pulumi-cloud-access-management-scim
     weight: 2
     identifier: pulumi-cloud-access-management-scim-okta
-  pulumicloud:
-    identifier: okta-scim
-    parent: scim
-    weight: 2
 aliases:
   - /docs/guides/scim/okta/
 ---

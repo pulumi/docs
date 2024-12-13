@@ -10,8 +10,6 @@ menu:
         parent: pulumi-cloud-admin
         weight: 3
         identifier: pulumi-cloud-admin-audit-logs
-    pulumicloud:
-        weight: 8
 aliases:
 - /docs/intro/console/collaboration/auditing/
 - /docs/intro/console/auditing/
