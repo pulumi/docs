@@ -10,9 +10,6 @@ menu:
     parent: pulumi-cloud-insights
     weight: 2
     identifier: pulumi-cloud-insights-export
-  pulumicloud:
-    parent: insights
-    weight: 2
 aliases:
   - /docs/intro/insights/export/
 ---

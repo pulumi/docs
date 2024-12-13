@@ -10,9 +10,6 @@ menu:
     parent: cloud-home
     identifier: pulumi-cloud-insights
     weight: 4
-  pulumicloud:
-    identifier: insights
-    weight: 7
 aliases:
 - /docs/intro/insights/
 ---

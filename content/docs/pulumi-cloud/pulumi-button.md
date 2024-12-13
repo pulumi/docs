@@ -10,8 +10,6 @@ menu:
     parent: cloud-home
     weight: 8
     identifier: pulumi-cloud-pulumi-button
-  pulumicloud:
-    weight: 10
 aliases:
 - /docs/reference/service/pulumi-button/
 - /docs/console/extensions/pulumi-button/

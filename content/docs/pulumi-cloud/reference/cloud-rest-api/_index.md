@@ -10,9 +10,6 @@ menu:
         parent: pulumi-cloud-reference
         weight: 1
         identifier: pulumi-cloud-reference-cloud-rest-api
-    pulumicloud:
-        weight: 12
-        identifier: pulumi-cloud-rest-api
 aliases:
   - /docs/reference/service-rest-api/
   - /docs/intro/insights/api/

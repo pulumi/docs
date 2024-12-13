@@ -10,9 +10,6 @@ menu:
         parent: pulumi-cloud-admin-self-hosted-deployment-options
         weight: 4
         identifier: pulumi-cloud-admin-self-hosted-deployment-options-aks
-    pulumicloud:
-        parent: deployment-options
-        weight: 4
 aliases:
   - /docs/guides/self-hosted/aks-hosted/
   - /docs/pulumi-cloud/self-hosted/deployment-options/aks-hosted/

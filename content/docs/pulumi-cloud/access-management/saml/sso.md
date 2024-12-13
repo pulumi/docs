@@ -12,9 +12,6 @@ menu:
     parent: pulumi-cloud-access-management-saml
     weight: 1
     identifier: pulumi-cloud-access-management-saml-sso
-  pulumicloud:
-    parent: saml
-    weight: 1
 aliases:
 - /docs/intro/pulumi-cloud/accounts/saml/
 - /docs/guides/saml/sso/

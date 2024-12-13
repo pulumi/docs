@@ -10,9 +10,6 @@ menu:
     parent: pulumi-cloud-access-management-oidc-client
     weight: 1
     identifier: pulumi-cloud-access-management-oidc-client-github
-  pulumicloud:
-    parent: openid-connect-client
-    weight: 1
 aliases:
 - /docs/pulumi-cloud/oidc/client/github/
 ---
