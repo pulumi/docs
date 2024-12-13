@@ -30,10 +30,10 @@ By using [version tags](/docs/esc/environments/versioning/#tagging-versions), im
 
 We've added powerful visualization features to give you clear insight into your environment dependencies:
 
-- **New "Imported By" Tab**: Easily understand downstream dependencies by clicking the "Imported By" tab for each environment. This tab shows all environments and stacks that import a specific environment, including the specific version tag used. Filter and sort by imported versions and downstream resources to narrow in on the resources that will be affected by a change you are trying to make. 
-- **Warnings for Deletions and Tag Movements**: Pulumi ESC now warns you about the potential impact of deleting an environment or modifying version tags before you make the change, helping you avoid disruptions.
-- **Enhanced Environment Page**: The Environments page now clearly indicates if an environment is used by other environments, stacks, or insights accounts, providing valuable relationship context at a glance.
-- **Pulumi IaC Stack Visibility**: Environment usage information is also available on the Stacks page and within individual stack overview pages.
+- **New "Imported By" tab**: Easily understand downstream dependencies by clicking the "Imported By" tab for each environment. This tab shows all environments and stacks that import a specific environment, including the specific version tag used. Filter and sort by imported versions and downstream resources to narrow in on the resources that will be affected by a change you are trying to make. 
+- **Warnings for deletions and tag movements**: Pulumi ESC now warns you about the potential impact of deleting an environment or modifying version tags before you make the change, helping you avoid disruptions.
+- **Enhanced environment page**: The Environments page now clearly indicates if an environment is used by other environments, stacks, or insights accounts, providing valuable relationship context at a glance.
+- **Pulumi IaC stack visibility**: Environment usage information is also available on the Stacks page and within individual stack overview pages.
 
 ![Imported by Visual](imported-by.png)
 
