@@ -33,7 +33,11 @@ authors:
 
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
-    - change-me
+    - security
+    - esc
+    - external-secrets-operator
+    - kubernetes
+    - secrets-management
 
 
 # The social copy used to promote this post on Twitter and Linkedin. These
