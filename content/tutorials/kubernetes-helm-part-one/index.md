@@ -36,6 +36,8 @@ prereqs:
 - "A Kubernetes cluster (for example, [kind](https://kind.sigs.k8s.io/))"
 - "[kubectl](https://kubernetes.io/releases/download/#kubectl)"
 - "[helm](https://helm.sh/docs/intro/install/)"
+collections:
+- kubernetes
 ---
 
 ## Never heard of Helm?
@@ -64,48 +66,7 @@ This will create a new Pulumi project with the necessary files to deploy Kuberne
 {{% choosable language typescript %}}
 
 ```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as kubernetes from "@pulumi/kubernetes";
-
-const config = new pulumi.Config();
-const k8sNamespace = config.get("k8sNamespace") || "nginx-ingress";
-const appLabels = {
-    app: "nginx-ingress",
-};
-
-// Create a namespace (user supplies the name of the namespace)
-const ingressNs = new kubernetes.core.v1.Namespace("ingressns", {metadata: {
-    labels: appLabels,
-    name: k8sNamespace,
-}});
-
-// Use Helm to install the Nginx ingress controller
-const ingressController = new kubernetes.helm.v3.Release("ingresscontroller", {
-    chart: "nginx-ingress",
-    namespace: ingressNs.metadata.name,
-    repositoryOpts: {
-        repo: "https://helm.nginx.com/stable",
-    },
-    skipCrds: true,
-    values: {
-        controller: {
-            enableCustomResources: false,
-            appprotect: {
-                enable: false,
-            },
-            appprotectdos: {
-                enable: false,
-            },
-            service: {
-                extraLabels: appLabels,
-            },
-        },
-    },
-    version: "0.14.1",
-});
-
-// Export some values for use elsewhere
-export const name = ingressController.name;
+{{< example-program-snippet path="helm-kubernetes-part-one" language="typescript" from="1" to="45" >}}
 ```
 
 {{% /choosable %}}
@@ -113,52 +74,7 @@ export const name = ingressController.name;
 {{% choosable language python %}}
 
 ```python
-import pulumi
-import pulumi_kubernetes as kubernetes
-
-config = pulumi.Config()
-k8s_namespace = config.get("k8sNamespace", "default")
-app_labels = {
-    "app": "nginx-ingress",
-}
-
-# Create a namespace (user supplies the name of the namespace)
-ingress_ns = kubernetes.core.v1.Namespace(
-    "ingressns",
-    metadata=kubernetes.meta.v1.ObjectMetaArgs(
-        labels=app_labels,
-        name=k8s_namespace,
-    )
-)
-
-# Use Helm to install the Nginx ingress controller
-ingresscontroller = kubernetes.helm.v3.Release(
-    "ingresscontroller",
-    chart="nginx-ingress",
-    namespace=ingress_ns.metadata.name,
-    repository_opts={
-        "repo": "https://helm.nginx.com/stable",
-    },
-    skip_crds=True,
-    values={
-        "controller": {
-            "enableCustomResources": False,
-            "appprotect": {
-                "enable": False,
-            },
-            "appprotectdos": {
-                "enable": False,
-            },
-            "service": {
-                "extraLabels": app_labels,
-            },
-        },
-    },
-    version="0.14.1"
-)
-
-# Export some values for use elsewhere
-pulumi.export("name", ingresscontroller.name)
+{{< example-program-snippet path="helm-kubernetes-part-one" language="python" from="1" to="47" >}}
 ```
 
 {{% /choosable %}}
@@ -166,71 +82,7 @@ pulumi.export("name", ingresscontroller.name)
 {{% choosable language go %}}
 
 ```go
-package main
-
-import (
-	corev1 "github.com/pulumi/pulumi-kubernetes/sdk/v4/go/kubernetes/core/v1"
-	helmv3 "github.com/pulumi/pulumi-kubernetes/sdk/v4/go/kubernetes/helm/v3"
-	metav1 "github.com/pulumi/pulumi-kubernetes/sdk/v4/go/kubernetes/meta/v1"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi/config"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		cfg := config.New(ctx, "")
-		k8sNamespace, err := cfg.Try("k8sNamespace")
-		if err != nil {
-			k8sNamespace = "nginx-ingress"
-		}
-		appLabels := pulumi.StringMap{
-			"app": pulumi.String("nginx-ingress"),
-		}
-
-		// Create a new namespace (user supplies the name of the namespace)
-		ingressNs, err := corev1.NewNamespace(ctx, "ingressns", &corev1.NamespaceArgs{
-			Metadata: &metav1.ObjectMetaArgs{
-				Labels: pulumi.StringMap(appLabels),
-				Name:   pulumi.String(k8sNamespace),
-			},
-		})
-		if err != nil {
-			return err
-		}
-
-		// Use Helm to install the Nginx ingress controller
-		ingresscontroller, err := helmv3.NewRelease(ctx, "ingresscontroller", &helmv3.ReleaseArgs{
-			Chart:     pulumi.String("nginx-ingress"),
-			Namespace: ingressNs.Metadata.Name(),
-			RepositoryOpts: &helmv3.RepositoryOptsArgs{
-				Repo: pulumi.String("https://helm.nginx.com/stable"),
-			},
-			SkipCrds: pulumi.Bool(true),
-			Values: pulumi.Map{
-				"controller": pulumi.Map{
-					"enableCustomResources": pulumi.Bool(false),
-					"appprotect": pulumi.Map{
-						"enable": pulumi.Bool(false),
-					},
-					"appprotectdos": pulumi.Map{
-						"enable": pulumi.Bool(false),
-					},
-					"service": pulumi.Map{
-						"extraLabels": appLabels,
-					},
-				},
-			},
-			Version: pulumi.String("0.14.1"),
-		})
-		if err != nil {
-			return err
-		}
-
-		// Export some values for use elsewhere
-		ctx.Export("name", ingresscontroller.Name)
-		return nil
-	})
-}
+{{< example-program-snippet path="helm-kubernetes-part-one" language="go" from="1" to="66" >}}
 ```
 
 {{% /choosable %}}
@@ -238,64 +90,7 @@ func main() {
 {{% choosable language csharp %}}
 
 ```csharp
-using System.Collections.Generic;
-using Pulumi;
-using Kubernetes = Pulumi.Kubernetes;
-
-return await Deployment.RunAsync(() =>
-{
-    var config = new Config();
-    var k8sNamespace = config.Get("k8sNamespace") ?? "nginx-ingress";
-    var appLabels = new InputMap<string>
-    {
-        { "app", "nginx-ingress" },
-    };
-
-    var ingressns = new Kubernetes.Core.V1.Namespace("ingressns", new()
-    {
-        Metadata = new Kubernetes.Types.Inputs.Meta.V1.ObjectMetaArgs
-        {
-            Labels = appLabels,
-            Name = k8sNamespace,
-        },
-    });
-
-    var ingresscontroller = new Kubernetes.Helm.V3.Release("ingresscontroller", new()
-    {
-        Chart = "nginx-ingress",
-        Namespace = ingressns.Metadata.Apply(m => m.Name),
-        RepositoryOpts = new Kubernetes.Types.Inputs.Helm.V3.RepositoryOptsArgs
-        {
-            Repo = "https://helm.nginx.com/stable",
-        },
-        SkipCrds = true,
-        Values = new Dictionary<string, object>
-        {
-            ["controller"] = new Dictionary<string, object>
-            {
-                ["enableCustomResources"] = "false",
-                ["appprotect"] = new Dictionary<string, object>
-                {
-                    ["enable"] = "false"
-                },
-                ["appprotectdos"] = new Dictionary<string, object>
-                {
-                    ["enable"] = "false"
-                },
-                ["service"] = new Dictionary<string, object>
-                {
-                    ["extraLabels"] = appLabels
-                },
-            },
-        },
-        Version = "0.14.1",
-    });
-
-    return new Dictionary<string, object?>
-    {
-        ["name"] = ingresscontroller.Name,
-    };
-});
+{{< example-program-snippet path="helm-kubernetes-part-one" language="csharp" from="1" to="59" >}}
 ```
 
 {{% /choosable %}}
@@ -303,58 +98,7 @@ return await Deployment.RunAsync(() =>
 {{% choosable language yaml %}}
 
 ```yaml
-name: ${PROJECT}
-description: ${DESCRIPTION}
-runtime: yaml
-template:
-  description: A Pulumi YAML program to deploy a Helm chart onto a Kubernetes cluster
-  config:
-    k8sNamespace:
-      default: nginx-ingress
-      description: The Kubernetes namespace to deploy into
-
-config:
-  # Use this user-supplied value to create a Kubernetes namespace later
-  k8sNamespace:
-    default: nginx-ingress
-    type: string
-
-variables:
-  # Define some labels that will be applied to resources
-  appLabels:
-    app: nginx-ingress
-
-resources:
-  # Create a namespace (name of the namespace supplied by the user)
-  ingressns:
-    type: kubernetes:core/v1:Namespace
-    properties:
-      metadata:
-        labels: ${appLabels}
-        name: ${k8sNamespace}
-  # Use Helm to install the Nginx ingress controller
-  ingresscontroller:
-    type: kubernetes:helm.sh/v3:Release
-    properties:
-      chart: nginx-ingress
-      namespace: ${ingressns.metadata.name}
-      repositoryOpts:
-        repo: https://helm.nginx.com/stable
-      skipCrds: true
-      values:
-        controller:
-          enableCustomResources: false
-          appprotect:
-            enable: false
-          appprotectdos:
-            enable: false
-          service:
-            extraLabels: ${appLabels}
-      version: "0.14.1"
-
-# Export some values for use elsewhere
-outputs:
-    name: ${ingresscontroller.name}
+{{< example-program-snippet path="helm-kubernetes-part-one" language="yaml" from="1" to="53" >}}
 ```
 
 {{% /choosable %}}
@@ -448,3 +192,7 @@ Before moving on, tear down the resources that are part of your stack to avoid i
 ## Next steps
 
 In this tutorial, you learned how to install Helm on Kubernetes using the Kubernetes provider from Pulumi and the `Release` resource.
+
+- Learn more about Pulumi and Kubernetes in the [Kubernetes documentation](/docs/iac/clouds/kubernetes/).
+- Learn more about the `Release` resource in the [Pulumi Kubernetes API documentation](/registry/packages/kubernetes/api-docs/helm/v3/release/).
+- Or give the tutorial about [Creating Resources on Kubernetes](/tutorials/creating-resources-kubernetes/) a try.
