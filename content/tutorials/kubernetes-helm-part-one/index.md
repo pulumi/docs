@@ -36,6 +36,7 @@ prereqs:
 - "A Kubernetes cluster (for example, [kind](https://kind.sigs.k8s.io/))"
 - "[kubectl](https://kubernetes.io/releases/download/#kubectl)"
 - "[helm](https://helm.sh/docs/intro/install/)"
+
 collections:
 - kubernetes
 ---
