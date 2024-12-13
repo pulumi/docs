@@ -7,6 +7,7 @@ meta_image: meta.png
 authors:
     - adam-gordon-bell
 tags:
+    - k8s, containers, cloud-native, docker
     - k8s
     - kubernetes
     - containers
