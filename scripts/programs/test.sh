@@ -24,6 +24,9 @@ else
     org="$(pulumi whoami -v --json | jq -r .user)"
 fi
 
+failed_projects=()
+passing_projects=()
+
 pushd "$programs_dir"
     found_first_program=false
 
@@ -69,7 +72,10 @@ pushd "$programs_dir"
         fqsn="${org}/${project}/${stack}"
 
         # Install dependencies.
-        pulumi -C "$project" install
+        if ! pulumi -C "$project" install; then
+            failed_projects+=("$project")
+            continue
+        fi
 
         # Skip programs we know don't successfully preview.
 
@@ -117,9 +123,15 @@ pushd "$programs_dir"
                 continue
             fi
 
-            pulumi -C "$project" up --yes
+            if ! pulumi -C "$project" up --yes; then
+                failed_projects+=("$project")
+                continue
+            fi
         else
-            pulumi -C "$project" preview
+            if ! pulumi -C "$project" preview; then
+                failed_projects+=("$project")
+                continue
+            fi
         fi
 
         # Destroy and remove.
@@ -136,4 +148,19 @@ clean_gomods
 if [[ "$mode" == "preview" ]]; then
     unset PULUMI_CONFIG_PASSPHRASE
     pulumi logout --local
+fi
+
+# Report passing and failing projects.
+if [ ${#failed_projects[@]} -ne 0 ]; then
+    echo "The following projects failed:"
+    for project in "${failed_projects[@]}"; do
+        echo "- $project"
+    done
+    echo "The following projects passed:"
+    for project in "${passing_projects[@]}"; do
+        echo "- $project"
+    done
+    exit 1
+else
+    echo "All projects completed successfully :)"
 fi
