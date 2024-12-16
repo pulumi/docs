@@ -6,5 +6,6 @@ tags:
     - architecture
 authors:
     - simen-a-w-olsen
+
 redirect_to: /blog/your-perfect-infrastructure/
 ---

@@ -55,7 +55,8 @@ social:
         "future-proof" architecture became a constraint rather
         than an enabler, and why trying to predict every future need
         is like bringing a fully packed suitcase to a first date.
-
+aliases:
+  - /blog/your-perfect-infrastructure-sucks/
 
 # See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md
 # for details, and please remove these comments before submitting for review.
