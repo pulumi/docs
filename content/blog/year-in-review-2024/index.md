@@ -120,7 +120,7 @@ Pulumi's vibrant community has been at the heart of everything we've accomplishe
 
 - **Global Pulumi User Groups (Meetups)**: With 20 groups across 9 countries, including new meetups in Chicago, Columbus, São Paulo, and Tel Aviv, our community continues to grow. These meetups collectively host over 6,396 members.
 - **PulumiUP 2024**: Over 8,000 registrants globally, with nearly 1,000 for the first-ever PulumiUP Europe.
-- **Workshops**: 72 workshops with 14,500+ registrations to learn Pulumi from intro to advanced topics
+- **Workshops**: 72 workshops with 14,500+ registrations from engineers wanting to learn Pulumi.
 - **22,000 GitHub Stars**: A testament to our community's passion and dedication.
 
 ## Looking Ahead to 2025
