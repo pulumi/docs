@@ -15,8 +15,8 @@ menu:
 The pulumi-cdk library provides access to the many high-level libraries ('constructs') built by service
 teams at AWS and by the AWS CDK community.
 
-The adapter allows writing [AWS CDK](https://docs.aws.amazon.com/cdk/v2/guide/home.html) code as part of an AWS CDK Stack inside a
-Pulumi program, and having the resulting AWS resources be deployed and managed via Pulumi.  Outputs of resources defined in a
+The adapter allows writing [AWS CDK](https://docs.aws.amazon.com/cdk/v2/guide/home.html) code inside a
+Pulumi program, and having the resulting AWS resources be deployed and managed via Pulumi. Outputs of resources defined in a
 Pulumi program can be passed into AWS CDK Constructs, and outputs from AWS CDK stacks can be used as inputs to other Pulumi resources.
 
 ## Getting Started
