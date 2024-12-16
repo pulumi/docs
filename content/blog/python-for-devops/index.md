@@ -27,8 +27,52 @@ So here's my list of Python libraries for DevOps work, starting from 15 to the m
 
 Let's start with building web dashboards. Long-term, it's usually better if there's an off-the-shelf tool for that specific dashboard you need. But if you can create a quick visual on a Django endpoint, you can move on to the next issue.
 
+<img src="github-dashboard.png" alt="gha dash" style="width: 50%; float: left; margin-right: 10px;">
+
 - **15/14. Django/Flask:** ([Django](https://www.djangoproject.com/), [Flask](https://flask.palletsprojects.com/)) While tools like Grafana excel at metrics visualization, sometimes you need custom dashboards that integrate with internal systems. These frameworks let you build dashboards to track and visualize various aspects of your systems. I find Django a great fit here.
 - **13\. Prometheus:** ([prometheus-client](https://github.com/prometheus/client_python)) This library is a versatile tool for metrics. Want to expose custom metrics to Prometheus? Use the client to create counters, gauges, or histograms. Need to pull data from a weird API and expose it as metrics? Write a quick exporter that fetches from your API every few minutes and translates the responses into Prometheus metrics.
+
+```python
+from flask import Flask, render_template_string
+import requests
+
+app = Flask(__name__)
+
+@app.route("/")
+def index():
+    try:
+        response = requests.get("https://www.githubstatus.com/api/v2/status.json", timeout=5)
+        if response.status_code == 200:
+            data = response.json()
+            status = data["status"]["indicator"]
+            description = data["status"]["description"]
+        else:
+            status = "critical"
+            description = "Unable to reach GitHub API"
+    except Exception as e:
+        status = "critical"
+        description = f"Error: {e}"
+
+    color = {
+        "none": "bg-green-500",
+        "minor": "bg-yellow-500",
+        "major": "bg-red-500",
+        "critical": "bg-red-700",
+    }.get(status, "bg-gray-500")
+
+    return render_template_string(
+        """
+            ... 
+        """,
+        color=color,
+        description=description,
+    )
+```
+<span style="text-align:center">
+    <figcaption>
+    <i>Code for a simple Dashboard</i>
+    </figcaption>
+</span>
 
 ### Task Scheduling and Orchestration
 
