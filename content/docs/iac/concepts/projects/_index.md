@@ -166,6 +166,7 @@ variables:
 ## Stack settings files {#stack-settings-file}
 
 Each stack that is created in a project will have a file named `Pulumi.<stackname>.yaml` that contains the configuration specific to this stack. This file typically resides in the root of the project directory.
+To change the location where stack configuration files are stored for a given project, set the `stackConfigDir` metadata attribute to a relative directory.
 
 For stacks that are actively developed by multiple members of a team, the recommended practice is to check them into source control as a means of collaboration. Since secret values are encrypted, it is safe to check in these stack settings. When using ephemeral stacks, the stack settings are typically not checked into source control.
 
