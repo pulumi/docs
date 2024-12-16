@@ -1,0 +1,7 @@
+name: helm-kubernetes-part-two-csharp
+description: Demo Code Part 2 of the Tutorial around Helm in Kubernetes
+runtime: dotnet
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: kubernetes-csharp
