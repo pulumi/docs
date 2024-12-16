@@ -15,7 +15,7 @@ aliases:
 
 ## Overview
 
-[Sensitive Store CSI Driver](https://secrets-store-csi-driver.sigs.k8s.io/introduction) is a Kubernetes project that allows you to mount secrets stored in external secret management systems into your Kubernetes pods. By using the Secrets Store CSI Driver, you can:
+[Secrets Store CSI Driver](https://secrets-store-csi-driver.sigs.k8s.io/introduction) is a Kubernetes project that allows you to mount secrets stored in external secret management systems into your Kubernetes pods. By using the Secrets Store CSI Driver, you can:
 
 - Store and manage sensitive data in an external service outside the Kubernetes cluster, which leads to better security and compliance.
 - Use the same driver to manage secrets and configuration from different sources.
