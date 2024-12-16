@@ -1,7 +1,7 @@
 ---
 title: Secrets Store CSI Driver
 title_tag: Integrate with Secrets Store CSI Driver | Pulumi ESC
-h1: "Pulumi ESC: Integrate with Secrets Store CSI Driver"
+h1: "Pulumi ESC Integration with the Kubernetes Secrets Store CSI Driver"
 meta_desc: Pulumi ESC integrates with the Secrets Store CSI driver to mount Pulumi ESC secrets directly into Kubernetes pods.
 weight: 2
 menu:
