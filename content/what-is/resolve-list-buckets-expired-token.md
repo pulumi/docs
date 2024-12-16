@@ -17,9 +17,9 @@ The error message "An error occurred (ExpiredToken) when calling the ListBuckets
 
 - Securely share credentials with teammates in a consistent way.
 - Minimize the risks associated with locally configured, long-lived and highly privileged credentials.
-- Ensure teams can easily and safely run commands like  without requiring deep security expertise.
+- Ensure teams can easily and safely run commands like without requiring deep security expertise.
 
-## What is the esc run command?
+## What is the ESC run command?
 
 The [Pulumi documentation for the `esc run` command](/docs/esc/cli/commands/esc_run/) states the following:
 
@@ -33,7 +33,7 @@ But what does this actually mean? If we use AWS as an example, it means that we 
 
 - **Streamlined Collaboration** - Because credentials will be centralized, `esc run` facilitates smoother team collaboration by providing a consistent environment for all team members to run commands with. Everyone can access the same secure environment which reduces the complexities of coordinating credentials and configurations across teams.
 
-## Getting started with esc run
+## Getting started with ESC run
 
 ### Step 1: Install and login to Pulumi ESC
 
@@ -62,7 +62,7 @@ Once OIDC has been configured between Pulumi and AWS, the next steps is to creat
 
 ### Step 4: Add the AWS provider integration
 
-Once you’ve created your new environment, you will be presented with a split-pane editor view. You’ll want to clear out the default placeholder content in the editor on the left-hand side and replace it with the following code, making sure to replace <your-oidc-iam-role-arn> with the value of your IAM role ARN from the configure OIDC step:
+Once you’ve created your new environment, you will be presented with a split-pane document view. You’ll want to clear out the default placeholder content in the editor on the left-hand side and replace it with the following code, making sure to replace <your-oidc-iam-role-arn> with the value of your IAM role ARN from the configure OIDC step:
 
 ```yaml
 values:
@@ -79,15 +79,13 @@ values:
     AWS_SESSION_TOKEN: ${aws.login.sessionToken}
 ```
 
-### Step 5: Run the aws CLI command
+### Step 5: Run the AWS CLI command
 
 With your environment set up, you can validate your configuration and verify that the error has been resolved by running the `aws s3 ls` command using `esc run` as shown below, making sure to replace `<your-pulumi-org-name>`, `<your-project-name>`, and `<your-environment-name>` with the names of your own Pulumi organization and environment respectively:
 
 ```bash
 esc run <your-pulumi-org-name>/<your-project-name>/<your-environment-name> -i aws s3 ls --query "Buckets[].Name"
 ```
-
-
 
 ## Conclusion
 

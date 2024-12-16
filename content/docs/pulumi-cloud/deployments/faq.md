@@ -10,9 +10,6 @@ menu:
     parent: pulumi-cloud-deployments
     weight: 9
     identifier: pulumi-cloud-deployments-faq
-  pulumicloud:
-    parent: deployments
-    weight: 6
 aliases:
   - /docs/intro/deployments/faq/
 ---

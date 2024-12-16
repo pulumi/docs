@@ -10,9 +10,6 @@ menu:
         parent: pulumi-cloud-admin-self-hosted-deployment-options
         weight: 3
         identifier: pulumi-cloud-admin-self-hosted-deployment-options-eks
-    pulumicloud:
-        parent: deployment-options
-        weight: 3
 aliases:
   - /docs/guides/self-hosted/eks-hosted/
   - /docs/pulumi-cloud/self-hosted/deployment-options/eks-hosted/

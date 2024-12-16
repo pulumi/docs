@@ -1,0 +1,7 @@
+name: helm-kubernetes-csharp
+description: Kubernetes Operator
+runtime: dotnet
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: helm-kubernetes-csharp

@@ -10,9 +10,6 @@ menu:
         parent: pulumi-cloud-admin-self-hosted-deployment-options
         weight: 6
         identifier: pulumi-cloud-admin-self-hosted-deployment-options-local-docker
-    pulumicloud:
-        parent: deployment-options
-        weight: 6
 aliases:
   - /docs/guides/self-hosted/local-docker/
   - /docs/pulumi-cloud/self-hosted/deployment-options/local-docker/

@@ -1,6 +1,8 @@
 module aws-s3bucket-bucketpolicy-go
 
-go 1.21
+go 1.21.12
+
+toolchain go1.23.4
 
 require (
 	github.com/pulumi/pulumi-aws/sdk/v6 v6.47.0

@@ -10,9 +10,6 @@ menu:
         parent: pulumi-cloud-admin-self-hosted
         weight: 4
         identifier: pulumi-cloud-admin-self-hosted-network
-    pulumicloud:
-        parent: self-hosted
-        weight: 4
 aliases:
   - /docs/guides/self-hosted/requirements/
   - /docs/guides/self-hosted/requirements/network/

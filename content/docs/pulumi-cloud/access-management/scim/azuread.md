@@ -10,10 +10,6 @@ menu:
     parent: pulumi-cloud-access-management-scim
     weight: 1
     identifier: pulumi-cloud-access-management-scim-azuread
-  pulumicloud:
-    identifier: azuread-scim
-    parent: scim
-    weight: 1
 aliases:
   - /docs/guides/scim/azuread/
 ---

@@ -10,10 +10,6 @@ menu:
     parent: cloud-home
     identifier: pulumi-cloud-deployments
     weight: 3
-  pulumicloud:
-    identifier: deployments
-    weight: 5
-
 aliases:
 - /docs/intro/pulumi-service/deployments/
 - /docs/intro/deployments/

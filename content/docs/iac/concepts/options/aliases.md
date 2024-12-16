@@ -165,3 +165,5 @@ resources:
 {{< /chooser >}}
 
 Aliases are implicitly inherited from a [parent](/docs/concepts/options/parent/) so that if a parent is moved (new name, new type, etc.) all children will also be aliased appropriately. This includes both updating the parent type in the qualified type in the child's URN, as well as updating the child name prefix if the name starts with the parent name. If there are aliases for both the parent and the child, all combinations of parent and child aliases are computed, allowing any combination of these previous parent and child identities to be treated as the same as the new identity. This process is inherited through any number of levels of parent/child relationships.
+
+Once a resource has been migrated on all stacks, the alias can be removed from the resource declaration.

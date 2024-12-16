@@ -1,0 +1,7 @@
+name: helm-kubernetes-go
+description: Kubernetes Operator
+runtime: go
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: helm-kubernetes-go

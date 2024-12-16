@@ -8,6 +8,11 @@ layout: community-engineering/single
 aliases:
   - /engin
 talks:
+- event: "apidays Paris 2024"
+  title: "Got a Secret, Can You Keep It? - Secrets on Kubernetes"
+  url: "https://www.apidays.global/paris/"
+  date: 2024-12-04T15:00:00.000-07:00
+  slides: null
 - event: "ArgoCon NA 2025"
   title: "⚡ Lightning Talk: Progressive Infrastructure Delivery Using Kargo and Argo CD"
   url: "https://colocatedeventsna2024.sched.com/event/1izrk/cl-lightning-talk-progressive-infrastructure-delivery-using-kargo-and-argo-cd-engin-diri-pulumi"
