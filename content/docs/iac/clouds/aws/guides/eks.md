@@ -2565,7 +2565,7 @@ var guestbook = new K8sYaml.ConfigGroup("guestbook",
                 if (state["kind"] != null && state["kind"].Equals("Service") &&
                         state["apiVersion"] != null && state["apiVersion"].Equals("v1")) {
                     var spec = (ImmutableDictionary<string, object>)state["spec"];
-                    return state.SetItem("spec", spec.SetItem("type", "ClustertIP"));
+                    return state.SetItem("spec", spec.SetItem("type", "ClusterIP"));
                 }
                 return state;
             },

@@ -493,7 +493,7 @@ Call `pulumi import --from terraform ./terraform.tfstate` ensuring a valid locat
 
 This will read the resources and their ID's out of the terraform state file and run a standard Pulumi import deployment to read them into the Pulumi state.
 
-Before running the deployment the import file generated will be writen out to the current directory, if there are issues importing you can manually edit this file and try again with `pulumi import --file`.
+Before running the deployment the import file generated will be written out to the current directory, if there are issues importing you can manually edit this file and try again with `pulumi import --file`.
 
 ### Example Conversion
 
