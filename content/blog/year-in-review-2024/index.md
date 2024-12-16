@@ -79,6 +79,8 @@ Three core capabilities unite these products:
 - **[Pulumi CrossGuard](https://www.pulumi.com/docs/iac/using-pulumi/crossguard/)**: A policy-as-code engine for compliance and best practices.
 - **[Pulumi Deployments](https://www.pulumi.com/docs/pulumi-cloud/deployments/)**: Infrastructure task orchestration.
 
+Over 3,000 customers, including Nvidia, BMW, Unity Games, and Tivity Health, leveraged these solutions to enhance velocity, save costs, and secure their infrastructure.
+
 ## Highlights Across the Product Innovation
 
 ![Placeholder Image](meta.png)
