@@ -42,7 +42,7 @@ We have added EKS Auto Mode support across our AWS provider ecosystem:
 
 - [Pulumi AWS Provider](/registry/packages/aws/) (v6.63.0+)
 - [Pulumi AWS Cloud Control Provider](/registry/packages/aws-native/) (previously known as Pulumi AWS Native) (v1.13.0+)
-- [Pulumi EKS Provider](/registry/packages/eks/) (TODO: upcoming release)
+- [Pulumi EKS Provider](/registry/packages/eks/) (v3.5.0+)
 
 ## Creating an EKS Auto Mode Cluster
 
