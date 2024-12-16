@@ -18,7 +18,7 @@ draft: false
 # of the content of the post, which is useful for targeting search results or
 # social-media previews. This field is required or the build will fail the
 # linter test. Max length is 160 characters.
-meta_desc: Pulumi 2024: Innovation, growth, and community. Discover ESC, Insights 2.0, Copilot, Kubernetes Operator, Drift Detection, and more from a transformative year!
+meta_desc: "Pulumi 2024: Innovation, growth, and community. Discover ESC, Insights 2.0, Copilot, Kubernetes Operator, Drift Detection, and more from a transformative year!"
 
 # The meta_image appears in social-media previews and on the blog home page. A
 # placeholder image representing the recommended format, dimensions and aspect
@@ -57,7 +57,7 @@ social:
 # for details, and please remove these comments before submitting for review.
 ---
 
-It's the end of 2024, and like everyone, we're counting down until 2025 while looking back at our year. We've had a very exciting year, from unveiling a bold new vision for Pulumi to delivering cutting-edge updates across our Pulumi Cloud. 
+It's the end of 2024, and like everyone, we're counting down until 2025 while looking back at our year. We've had a very exciting year, from unveiling a bold new vision for Pulumi to delivering cutting-edge updates across our Pulumi Cloud.
 
 Here's a look at how Pulumi has grown, evolved, and continued empowering teams worldwide.
 
@@ -74,6 +74,7 @@ This year, Pulumi unveiled a bold new vision for Pulumi—[a comprehensive produ
 {{< youtube "AepHQaXeNX0?rel=0" >}}
 
 Three core capabilities unite these products:
+
 - **[Pulumi Copilot](https://www.pulumi.com/docs/pulumi-cloud/copilot/)**: Generative AI is used to manage cloud resources.
 - **[Pulumi CrossGuard](https://www.pulumi.com/docs/iac/using-pulumi/crossguard/)**: A policy-as-code engine for compliance and best practices.
 - **[Pulumi Deployments](https://www.pulumi.com/docs/pulumi-cloud/deployments/)**: Infrastructure task orchestration.
@@ -115,7 +116,7 @@ Pulumi's vibrant community has been at the heart of everything we've accomplishe
 
 - **Global Pulumi User Groups (Meetups)**: With 20 groups across 9 countries, including new meetups in Chicago, Columbus, São Paulo, and Tel Aviv, our community continues to grow. These meetups collectively host over 6,396 members.
 - **PulumiUP 2024**: Over 8,000 registrants globally, with nearly 1,000 for the first-ever PulumiUP Europe.
-- **Workshops**: 72 workshops with 14,500+ registrations to learn Pulumi from intro to advanced topis
+- **Workshops**: 72 workshops with 14,500+ registrations to learn Pulumi from intro to advanced topics
 - **22,000 GitHub Stars**: A testament to our community's passion and dedication.
 
 ## Looking Ahead to 2025
