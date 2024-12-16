@@ -106,7 +106,7 @@ In `main.go`, create the `BucketObject` right after creating the bucket itself:
 ```go
 // Create an S3 Bucket object
 _, err = s3.NewBucketObject(ctx, "index.html", &s3.BucketObjectArgs{
-    Bucket:  bucket.ID(),
+    Bucket: bucket.ID(),
     Source: pulumi.NewFileAsset("./index.html"),
 })
 if err != nil {
