@@ -1,5 +1,5 @@
 ---
-title: "Your Perfect Infrastructure May Be Not So Perfect"
+title: "Your Perfect Infrastructure May Not Be So Perfect"
 date: 2024-12-16T10:43:07Z
 draft: false
 
