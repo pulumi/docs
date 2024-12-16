@@ -97,7 +97,7 @@ and the policy is returned. If not found, the `undefined` is returned.
 ### policyManager.selectPoliciesByName(names, enforcementLevel) ⇒
 
 Takes an array of policy names and set the desired enforcement level on each policy.
-If a provided policy name has alread been selected, then the matching policy is not
+If a provided policy name has already been selected, then the matching policy is not
 returned as part of the result.
 
 **Kind**: instance method of [`PolicyManager`](#PolicyManager)
@@ -112,11 +112,11 @@ returned as part of the result.
 
 ### policyManager.selectPolicies(args, enforcementLevel) ⇒
 
-Select policies based on criterias provided as arguments. The selectiopn filter only
+Select policies based on criteria provided as arguments. The selection filter only
 returns policies that match selection criterias. Effectively, this function performs
 an `or` operation within each selection criteria, and an `and` operation between
 selection criterias.
-You may also provide an array of cherry-picked polcies. The function takes care of
+You may also provide an array of cherry-picked policies. The function takes care of
 removing duplicates as well as ignoring already selected policies from previous calls.
 Note: Criterias are all case-insensitive.
 Note: Call `resetPolicyfilter()` to reset the selection filter and consider all

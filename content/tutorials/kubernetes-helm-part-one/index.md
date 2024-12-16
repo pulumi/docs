@@ -1,17 +1,17 @@
 ---
-title_tag: How to Install Helm Charts on Kubernetes with Pulumi - Part 1
+title_tag: Install Helm Charts using the Release resource
 allow_long_title: true
-title: How to Install Helm Charts on Kubernetes with Pulumi - Part 1
+title: Install Helm Charts using the Release resource
 layout: single
 description: |
-  Using Pulumi to install Helm Charts on Kubernetes is a great way to manage to install third-party applications on your Kubernetes cluster.
+  Learn how to use the `Release` resource from the Pulumi Kubernetes provider to install Helm charts on Kubernetes.
 meta_desc: Using Pulumi to install Helm Charts on Kubernetes is a great way to manage to install third-party applications on your Kubernetes cluster.
 meta_image: meta.png
 weight: 999
 summary: |
   If you worked with Pulumi and [Kubernetes](https://kubernetes.io/), you probably know that Pulumi has a [Kubernetes provider](/docs/iac/get-started/kubernetes/) that allows you to deploy Kubernetes resources.
 
-  In this tutorial, we will learn how to install Helm on Kubernetes using Pulumi. [Helm](https://helm.sh/) is a package manager for Kubernetes that allows you to install and manage applications on your Kubernetes cluster.
+  In this tutorial, we will learn how to install Helm chart on Kubernetes using Pulumi. [Helm](https://helm.sh/) is a package manager for Kubernetes that allows you to install and manage applications on your Kubernetes cluster.
 
   Most of the third-party applications that you want to install on your Kubernetes cluster, like whole monitoring stacks, databases, and other applications, are most likely available as Helm charts.
 
@@ -167,7 +167,7 @@ NAME                                                                  DESIRED   
 replicaset.apps/ingresscontroller-b5455c41-nginx-ingress-5987c7bd56   1         1         1       104s
 ```
 
-## Deploying a OCI Helm chart with Pulumi
+## Deploying an OCI Helm chart with Pulumi
 
 In the previous example, we deployed a Helm chart from a Helm repository. Helm supports also [OCI registries](https://helm.sh/blog/storing-charts-in-oci/) as a way to share Helm charts. The changes in the Pulumi program are minimal.
 
@@ -196,4 +196,5 @@ In this tutorial, you learned how to install Helm on Kubernetes using the Kubern
 
 - Learn more about Pulumi and Kubernetes in the [Kubernetes documentation](/docs/iac/clouds/kubernetes/).
 - Learn more about the `Release` resource in the [Pulumi Kubernetes API documentation](/registry/packages/kubernetes/api-docs/helm/v3/release/).
+- Try the out the `Chart` [tutorial](/tutorials/kubernetes-helm-part-two) to learn how to install Helm charts on Kubernetes using the `Chart` resource.
 - Or give the tutorial about [Creating Resources on Kubernetes](/tutorials/creating-resources-kubernetes/) a try.

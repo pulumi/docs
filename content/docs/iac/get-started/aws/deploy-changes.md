@@ -132,7 +132,7 @@ Add a new `BucketWebsiteConfiguration` resource to make `index.html` the home pa
 
 ```typescript
 const website = new aws.s3.BucketWebsiteConfigurationV2("website", {
-    bucket: myBucket.id,
+    bucket: bucket.id,
     indexDocument: {
         suffix: "index.html",
     },
@@ -144,8 +144,8 @@ const website = new aws.s3.BucketWebsiteConfigurationV2("website", {
 {{% choosable language python %}}
 
 ```python
-website = aws.s3.BucketWebsiteConfigurationV2("website",
-    bucket=my_bucket.id,
+website = s3.BucketWebsiteConfigurationV2("website",
+    bucket=bucket.id,
     index_document={
         "suffix": "index.html",
     })
@@ -157,7 +157,7 @@ website = aws.s3.BucketWebsiteConfigurationV2("website",
 
 ```go
 website, err := s3.NewBucketWebsiteConfigurationV2(ctx, "website", &s3.BucketWebsiteConfigurationV2Args{
-    Bucket: myBucket.ID(),
+    Bucket: bucket.ID(),
     IndexDocument: &s3.BucketWebsiteConfigurationV2IndexDocumentArgs{
         Suffix: pulumi.String("index.html"),
     },
@@ -174,7 +174,7 @@ if err != nil {
 ```csharp
 var website = new Aws.S3.BucketWebsiteConfigurationV2("website", new()
 {
-    Bucket = myBucket.Id,
+    Bucket = bucket.Id,
     IndexDocument = new Aws.S3.Inputs.BucketWebsiteConfigurationV2IndexDocumentArgs
     {
         Suffix = "index.html",
@@ -192,7 +192,7 @@ import com.pulumi.aws.s3.BucketWebsiteConfigurationV2Args;
 import com.pulumi.aws.s3.inputs.BucketWebsiteConfigurationV2IndexDocumentArgs;
 
 var website = new BucketWebsiteConfigurationV2("website", BucketWebsiteConafigurationV2Args.builder()
-    .bucket(myBucket.id())
+    .bucket(bucket.id())
     .indexDocument(BucketWebsiteConfigurationV2IndexDocumentArgs.builder()
         .suffix("index.html")
         .build())

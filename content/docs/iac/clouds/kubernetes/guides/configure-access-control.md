@@ -96,7 +96,7 @@ $ kubectl run --namespace=`pulumi stack output appsNamespaceName` --generator=ru
 Error from server (Forbidden): pods is forbidden: User "pulumi:alice" cannot create resource "pods" in API group "" in the namespace "apps-x1z818eg"
 ```
 
-Below is an example of how to create a Kubernetes Role and RoleBiding for the `devs` to **only** deploy common
+Below is an example of how to create a Kubernetes Role and RoleBinding for the `devs` to **only** deploy common
 workloads in the `apps` namespace (created in  [cluster defaults][crosswalk-configure-defaults]).
 
 Assume the `admin` user.

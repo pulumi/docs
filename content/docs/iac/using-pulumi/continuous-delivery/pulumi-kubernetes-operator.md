@@ -68,7 +68,7 @@ with a supported programming language or `kubectl` with YAML.
 When launched, the operator invokes the `StackController` to manages updates to
 `Stack` CustomResources created, updated, or deleted in Kubernetes.
 
-These updates are run in the form of reconcilation loops that attempt to update a Stack until success
+These updates are run in the form of reconciliation loops that attempt to update a Stack until success
 is reached for the Git commit SHA provided, also known as the `desired state`.
 
 ## Create a Stack CustomResource
@@ -465,7 +465,7 @@ Stack CustomResources provide the following properties to configure the Stack up
   in the repo for use within the Stack.
 - Project repo settings like the repo URL, the commit to deploy, and a repo
   access token for private repos or rate-limiting.
-- Lifecyle control such as creating the stack if it does not exist,
+- Lifecycle control such as creating the stack if it does not exist,
   issuing a refresh before the update, and destroying the Stack's resources
   and stack itself upon deletion of the CR.
 - Switching to an open source backend.

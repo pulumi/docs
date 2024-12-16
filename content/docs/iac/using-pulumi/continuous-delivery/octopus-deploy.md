@@ -52,7 +52,7 @@ A project represents the application being deployed and uses versioned packages 
 
 ### Packages
 
-Packages can be your source code bundled-up in one of the [supported formats](https://octopus.com/docs/packaging-applications#supported-formats). They can also just be a handlful of scripts that you may want to use during your deployment process.
+Packages can be your source code bundled-up in one of the [supported formats](https://octopus.com/docs/packaging-applications#supported-formats). They can also just be a handful of scripts that you may want to use during your deployment process.
 
 In order to create a package, Octopus offers several ways that you can integrate into your existing build (CI) system. [Learn more](https://octopus.com/docs/packaging-applications/create-packages) about the options available to you for packaging your apps.
 
