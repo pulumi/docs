@@ -65,6 +65,8 @@ Here's a look at how Pulumi has grown, evolved, and continued empowering teams w
 
 ## A Unified Vision: The Pulumi Platform
 
+![Placeholder Image](pulumi-platform-vision.png)
+
 This year, Pulumi unveiled a bold new vision for Pulumi—[a comprehensive product suite](https://www.pulumi.com/blog/pulumi-up-2024/) that extends far beyond infrastructure as code.. The Pulumi platform now consists of three core products:
 
 - **[Pulumi IaC](https://www.pulumi.com/docs/iac/)**: Open source infrastructure as code in any programming language. With over 100M downloads, 167% growth in contributions, and industry-leading innovations, Pulumi IaC continues to redefine cloud automation.
@@ -83,7 +85,7 @@ Over 3,000 customers, including Nvidia, BMW, Unity Games, and Tivity Health, lev
 
 ## Highlights Across the Product Innovation
 
-![Placeholder Image](meta.png)
+![Placeholder Image](pulumi-platform-vision.png)
 
 Pulumi's product innovations this year have empowered teams to automate, secure, and manage cloud infrastructure with confidence:
 
@@ -100,7 +102,7 @@ Pulumi's product innovations this year have empowered teams to automate, secure,
 
 ## By the Numbers
 
-![Placeholder Image](meta.png)
+![Placeholder Image](3000-customers.png)
 
 Pulumi's growth and impact this year have been amazing:
 
@@ -112,7 +114,7 @@ Pulumi's growth and impact this year have been amazing:
 
 ## Community Achievements
 
-![Placeholder Image](meta.png)
+![Placeholder Image](community-highlights.png)
 
 Pulumi's vibrant community has been at the heart of everything we've accomplished:
 
