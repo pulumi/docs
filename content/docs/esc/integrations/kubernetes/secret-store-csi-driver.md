@@ -71,7 +71,7 @@ spec:
 
 See the [SecretProviderClass configuration](#secretproviderclass) table for additional customization options.
 
-**Note:** `secretKey` is not following the JSON Path syntax, but rather the Pulumi path syntax.
+**Note:** `secretKey` does not follow the JSON Path syntax, but rather the Pulumi path syntax.
 
 ### `SecretProviderClass`
 
