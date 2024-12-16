@@ -106,7 +106,7 @@ Pulumi's product innovations this year have empowered teams to automate, secure,
 
 Pulumi's growth and impact this year have been amazing:
 
-- **75,000+ Pull Requests**: Driven by 4,400+ contributors.
+- **75,000+ Pull Requests**: Driven by 5,600+ contributors.
 - **3,000+ Customers**: Empowering industries like AI, gaming, finance, and healthcare.
 - **100M+ Downloads**: Pulumi IaC adoption soared globally.
 - **167% Contribution Growth**: Outpacing other IaC tools like Terraform and OpenTofu.
