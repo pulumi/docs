@@ -1180,7 +1180,7 @@ The `token` is a string that contains the `job`, `offset` and `step` of the next
 
 The following query parameters are available:
 
-* **continuationToken**: A string returned by the previous response, that can be used to get the next set of logs.
+* **continuationToken**: The `nextToken` value from the previous response, that can be used to get the next set of logs.
 
 ##### Example
 
