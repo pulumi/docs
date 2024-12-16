@@ -539,8 +539,8 @@ The possible fields of a resource are:
 | `protect` |  A boolean indicating whether or not this resource is protected. Protected resources can not be deleted. |
 | `external` | A boolean indicating whether or not this resource is external to Pulumi. If a resource is external, Pulumi does not own its life cycle and it will not ever delete or update the resource. Resources that are read using the `get` function are external. |
 | `dependencies` | A list of URNs indicating the resources that this resource depends on. Pulumi tracks dependencies between resources. It is important that this list be the full list of resources upon which this resource depends. |
-| `initErrors` | A list of errors that occured that prevented the resource from initializing. Some resource providers (most notably Kubernetes) populate this field to indicate that a resource was created but failed to initialize. |
-| `provider` | Reference to the provider esponsible for the resource. |
+| `initErrors` | A list of errors that occurred that prevented the resource from initializing. Some resource providers (most notably Kubernetes) populate this field to indicate that a resource was created but failed to initialize. |
+| `provider` | Reference to the provider responsible for the resource. |
 
 The `resources` field is a list, not a set. The order of resources in the list is important and is enforced by
 the Pulumi engine. Resources in a deployment must be in *dependency order* - if resource A depends on resource B,

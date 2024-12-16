@@ -150,7 +150,7 @@ In addition to the Pulumi Console, deployment settings including OIDC can be con
 2. Open the stack's **Settings** tab.
 3. Choose the **Deploy** panel.
 4. Under the **OpenID Connect** header, toggle **Enable Azure Integration**.
-5. Enter the client and tenant IDs for the app registration created above in the **Client ID** and **Tenant ID** fields, repsectively.
+5. Enter the client and tenant IDs for the app registration created above in the **Client ID** and **Tenant ID** fields, respectively.
 6. Enter the ID of the subscription you want to use in the **Subscription ID** field.
 7. Click the **Save deployment configuration** button.
 

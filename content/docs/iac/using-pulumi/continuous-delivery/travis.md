@@ -96,7 +96,7 @@ script:
 
 ### scripts/travis_push.sh
 
-`scripts/travis_push.sh` is the script that is executed on `push` jobs. And for the push-to-deploy stategy,
+`scripts/travis_push.sh` is the script that is executed on `push` jobs. And for the push-to-deploy strategy,
 is when we will run `pulumi up`. For `push` jobs, the `TRAVIS_BRANCH` environment variable is the
 pushed branch. So we use that to determine which stack to update, e.g. pushes to `master` update the
 staging stack and `production` update the production stack.
