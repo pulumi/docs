@@ -3,6 +3,7 @@ title: Get started
 title_tag: Get Started with Pulumi Insights Account Discovery
 h1: Get Started with Pulumi Insights Account Discovery
 meta_desc: Learn how to set up and manage Pulumi Insights accounts to gain visibility into your cloud infrastructure.
+weight: 1
 menu:
   insights:
     parent: insights-home

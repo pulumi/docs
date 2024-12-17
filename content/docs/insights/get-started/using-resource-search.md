@@ -3,6 +3,7 @@ title_tag: Using Research Search | Pulumi Insights
 title: Using Insights Resource Search
 h1: "Pulumi Insights: Using Resources Search"
 meta_desc: This page provides an overview on how to get started with Pulumi Insights Accounts.
+weight: 4
 menu:
   insights:
     parent: insights-get-started

@@ -3,11 +3,12 @@ title_tag: View and query infrastructure resources | Pulumi Insights
 title: Using Insights Resources view
 h1: "Pulumi Insights: Using Resources view"
 meta_desc: This page provides an overview on how to get started with Pulumi Insights Accounts.
+weight: 3
 menu:
   insights:
     parent: insights-get-started
     identifier: insights-get-started-resources
-    weight: 4
+    weight: 3
 ---
 
 Now that you scan is underway you can view the **Accounts** page to see a list of all your created accounts along with the current status of the latest account scans.
