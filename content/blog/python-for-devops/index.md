@@ -17,6 +17,17 @@ social:
 ---
 Have you ever had one of those moments: Elasticsearch is crashing, logs are filling up too fast, or a deployment needs data from three different APIs. The big enterprise solutions aren't quite right, and your team estimates six months to build something proper. But you know that with Python and a few choice libraries, you could hack something together by tomorrow.
 
+
+
+<span style="width: 40%; float: left; margin-right: 20px;">
+<span style="text-align:center">
+    <img src="web-dashboard.png" alt="gha dash">
+    <figcaption>
+    <i><a href="https://github.com/adamgordonbell/service-status-monitor">Let's build a little web dashboard.</a></i>
+    </figcaption>
+</span>
+</span>
+
 That's where Python really shines. It lets you be the scrappy problem-solver who can travel up and down the stack. But Python isn't just for quick fixes. The same language that helps you hack tomorrow's solution can also build your company's long-term infrastructure.
 
 This guide covers both ends of that spectrum. I'll show you tools for "we need it yesterday" moments, and then move into solutions that can grow with your team. Some are perfect for quick wins (and that's okay—you're an adult who can decide when that's appropriate), while others, like Pulumi, are built for the long haul.
@@ -25,9 +36,11 @@ So here's my list of Python libraries for DevOps work, starting from 15 to the m
 
 ### Dashboards / Monitoring
 
+
+
 Let's start with building web dashboards. Long-term, it's usually better if there's an off-the-shelf tool for that specific dashboard you need. But if you can create a quick visual on a Django endpoint, you can move on to the next issue.
 
-<img src="github-dashboard.png" alt="gha dash" style="width: 50%; float: left; margin-right: 10px;">
+
 
 - **15/14. Django/Flask:** ([Django](https://www.djangoproject.com/), [Flask](https://flask.palletsprojects.com/)) While tools like Grafana excel at metrics visualization, sometimes you need custom dashboards that integrate with internal systems. These frameworks let you build dashboards to track and visualize various aspects of your systems. I find Django a great fit here.
 - **13\. Prometheus:** ([prometheus-client](https://github.com/prometheus/client_python)) This library is a versatile tool for metrics. Want to expose custom metrics to Prometheus? Use the client to create counters, gauges, or histograms. Need to pull data from a weird API and expose it as metrics? Write a quick exporter that fetches from your API every few minutes and translates the responses into Prometheus metrics.
@@ -70,7 +83,7 @@ def index():
 ```
 <span style="text-align:center">
     <figcaption>
-    <i>Code for a simple Dashboard</i>
+    <i><a href="https://github.com/adamgordonbell/service-status-monitor">Code</a> for a simple Dashboard</i>
     </figcaption>
 </span>
 
@@ -82,12 +95,53 @@ Sometimes you need to run things on a schedule. And while I love cron, sometimes
 - **11\. RQ (Redis Queue):** ([rq](https://python-rq.org/)) Perfect for local development queues. Need to prototype a GitHub webhook handler that'll eventually use SQS? With Redis in Docker and RQ, you can have a working queue in minutes. No AWS needed until production.
 - **10\. Airflow:** ([airflow](https://airflow.apache.org/)) The big gun of scheduling. Yes, it's complex, but sometimes you need that power. I've seen teams replace entire ETL systems with a few Airflow DAGs. When you need to coordinate multiple steps, handle failures gracefully, and have everything visible in a nice UI, it delivers.
 
+```python
+def schedule_url_checks():
+    for url in urls.values():
+        schedule.every(30).seconds.do(lambda url=url: check_url_status(url))
+
+def run_scheduler():
+    while True:
+        schedule.run_pending()
+        time.sleep(1)
+
+if __name__ == "__main__":
+    schedule_url_checks()
+    threading.Thread(target=run_scheduler, daemon=True).start()
+```
+<span style="text-align:center">
+    <figcaption>
+    <i>Adding Schedule to our <a href="https://github.com/adamgordonbell/service-status-monitor">code</a></i>
+    </figcaption>
+</span>
+
 ### Network Analysis and Security
 
 When your network issues go beyond what tcpdump can tell you, or when you need to automate security checks, Python is here to help:
 
 - **9\. Scapy:** ([scapy](https://scapy.net/)) The Python alternative to Wireshark for programmatic network traffic analysis. Need to figure out why your microservices aren't talking to each other? Want to check your load balancer? Use it to capture and analyze packets with a few lines of code.
 - **8\. Bandit:** ([bandit](https://github.com/PyCQA/bandit)) Security scanning for your CI pipeline. Point it at your Python codebase and it'll flag common issues like hardcoded credentials or unsafe deserialization.
+
+
+```python
+def packet_callback(packet):
+    global packet_stats
+    packet_stats["total_packets"] += 1
+    if packet.haslayer("HTTPRequest"):
+        packet_stats["http_requests"] += 1
+
+def start_packet_sniffer():
+    sniff(prn=packet_callback, store=False, timeout=60)  # Capture packets every 60 seconds
+
+if __name__ == "__main__":
+    threading.Thread(target=start_packet_sniffer, daemon=True).start()
+```
+<span style="text-align:center">
+    <figcaption>
+    <i>Adding packet sniffing to our <a href="https://github.com/adamgordonbell/service-status-monitor">code</a></i>
+    </figcaption>
+</span>
+
 
 ### Containerization and Cloud Interaction
 
@@ -96,7 +150,43 @@ Sometimes you need more control over your containers than Dockerfiles can provid
 - **7\. Docker SDK for Python:** ([docker-py](https://docker-py.readthedocs.io/)) When you need to automate Docker operations programmatically. I use it to clean up old containers and images, check container health, and build images dynamically from configuration files. More powerful than chaining Docker CLI commands.
 - **6\. Dagger:** ([dagger-io](https://dagger.io/)) Write container build logic in Python instead of Dockerfiles. Need to build multiple similar containers with slight variations? Want to pull in files from different sources based on environment? It lets you programmatically define container contents and build steps. (Bonus: this same code can later be used in CI/CD pipelines.)
 
+```python
+import dagger
+
+async def main():
+    # Connect to the Dagger Engine
+    async with dagger.Connection() as client:
+        container = (
+            client.container()
+            .from_("python:3.11-slim")
+            .with_exec(["python", "-c", "print('Hello from Dagger!')"])
+        )
+        
+        # Execute the container and get the output
+        output = await container.stdout()
+        print(output)
+
+if __name__ == "__main__":
+    import asyncio
+    asyncio.run(main())
+```
+<span style="text-align:center">
+    <figcaption>
+    <i>Using Dagger from Python</i>
+    </figcaption>
+</span>
+
 ### Building Command-Line Tools
+
+
+<span style="width: 50%; float: right; margin-left: 20px;">
+<span style="text-align:center">
+    <img src="cli.png" alt="gha dash">
+    <figcaption>
+    <i><a href="https://github.com/adamgordonbell/service-status-monitor">Let's build a CLI version in Python</a></i>
+    </figcaption>
+</span>
+</span>
 
 Every useful script eventually needs to become a proper tool. When your team starts asking "can I use that script too?" it's time to enhance your CLI skills:
 
