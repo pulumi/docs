@@ -1,0 +1,7 @@
+name: kubernetes-csi-driver-csharp
+description: Example on how to deploy the Pulumi ESC CSI Provider
+runtime: dotnet
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: kubernetes-csharp
