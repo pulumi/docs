@@ -7,10 +7,10 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   insights:
     parent: insights-home
-    weight: 2
+    weight: 6
 aliases:
   - /docs/intro/insights/export/
-  - /docs/pulumi-cloud/insights/export/f
+  - /docs/pulumi-cloud/insights/export/
 ---
 
 ## CSV Format

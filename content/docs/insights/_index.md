@@ -7,12 +7,14 @@ menu:
   insights:
     identifier: insights-home
     weight: 1
-
+expanded_menu_ids:
+    - insights-get-started
+    - insights-concepts
 meta_desc: Pulumi Insights provides intelligent infrastructure management with AI-powered, asset management, and compliance remediation across all your cloud resources.
 meta_image: /images/docs/meta-images/insights-meta.png
 h1: Pulumi Insights Documentation
 description: |
-  Pulumi Insights offers an intelligent platform for discovering, understanding, and managing cloud infrastructure with AI-driven analysis, compliance enforcement, and efficiency improvements.
+  Pulumi Insights offers an intelligent platform for discovering, understanding, and managing cloud infrastructure with AI-driven analysis, compliance enforcement, and more!
 
 link_buttons:
   primary:
@@ -66,7 +68,7 @@ sections:
 
 - type: blue-sparkle
   heading: Why Pulumi Insights?
-  description: Pulumi Insights transforms cloud management with a focus on security, compliance, and efficiency. By integrating resources across multiple platforms and accounts, it simplifies managing complex cloud environments, helping teams make informed decisions and reduce costs.
+  description: Pulumi Insights transforms cloud management with a focus on security, compliance, and efficiency. By discovering resources across multiple providers and accounts, it simplifies managing complex cloud environments, helping teams make informed business decisions and moving their projects forward.
 
 - type: flat
   heading: Get Started

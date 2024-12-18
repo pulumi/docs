@@ -11,13 +11,17 @@ menu:
     weight: 1
 ---
  
-Pulumi Insights is an intelligent infrastructure management service that helps you discover, understand, manage, and improve your cloud infrastructure. It provides comprehensive visibility across all your cloud resources - whether they're provisioned through Pulumi, other IaC tools like AWS CloudFormation and Terraform, or created manually.
-With AI-powered asset and compliance management, Pulumi Insights give you the tools to:
+Pulumi Insights is an intelligent infrastructure management service that helps you discover, understand, manage, and improve your cloud infrastructure. Insights improves security, compliance, and efficiency through AI-powered asset and compliance management.
 
-- **Discover and track** Scan and sync all of your infrastructure to bring it under a single pane of glass, so you can understand the structure and status of your cloud footprint.
-- **Search resources** using natural language with AI Copilot and find important insights about your cloud infrastructure.
-- **Monitor and remediate** security and compliance violations and refactor and structure your infrastructure into logical resource groups that map key insights with business needs.
-- **Make data-driven decisions** about your infrastructure and execute improvement plans for each logical resource group to support business priorities.
+Pulumi Insights give you the tools to:
+
+- **Discover**: Scan and sync all your cloud infrastructure – including resources provisioned manually or through other tools like Terraform, CloudFormation, and ARM – to bring everything under a single pane of glass. Gain complete visibility across clouds, regions, and accounts.
+
+- **Understand**: Analyze your cloud infrastructure with powerful search and AI-driven insights. Use natural language queries to find resources, identify underutilized or untagged assets, and uncover trends that help you align with business goals.
+
+- **Manage**: Group related resources into logical units that reflect your business priorities. Use these groupings to identify policy violations, enforce tagging standards, and ensure compliance across your organization.
+
+- **Improve**: Optimize your cloud infrastructure with actionable recommendations. Detect and remediate security violations, reduce costs by identifying inefficient resources, and enforce compliance policies.
 
 For an overview of how Pulumi Insights works, check out the following 5-min video:
 
@@ -30,6 +34,11 @@ For an overview of how Pulumi Insights works, check out the following 5-min vide
     </iframe>
 </div>
 
-In this guide, you will learn how to get started with Pulumi Insights by setting up your cloud account discovery. Next, you will scan and sync your resources, bringing them into a single pane of glass for comprehensive visibility and management and learn how to find insights about your cloud infrastructure through filters and natural language search.
+This guide will take you through the following steps to easily get started with Pulumi Insights Account Discovery and Resource Explorer:
+
+1. Setting up and configuring Pulumi to access your cloud accounts.
+2. Create a new Insights Account
+3. Use Insights Resource Explorer to understand your infrastructure.
+4. Ask natural language questions about your resources using Pulumi Copilot.
 
 {{< get-started-stepper >}}

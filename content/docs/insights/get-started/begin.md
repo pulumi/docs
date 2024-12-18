@@ -13,34 +13,37 @@ menu:
 
 ## Before you begin
 
-Before you get started using Pulumi Insights, let's run through a few prerequisites and quick steps to ensure you ready to create your first Insights account and scan.
+First, let's run through a few prerequisites and quick steps to ensure you ready to create your first Account Discovery scan.
 
 - Ensure you’re an admin of your Pulumi organization.
 - Verify you have permissions to create credentials in the provider account you want to scan.
-- Use a **Team**, **Enterprise**, or **Business Critical** edition of Pulumi. [Start a free trial](https://app.pulumi.com/?create-organization).
+- You're using Pulumi's **Team**, **Enterprise**, or **Business Critical** edition.
+
+If you're new to Pulumi you can click here to [start a free trial](https://app.pulumi.com/?create-organization).
 
 ## Create an ESC Environment
 
-Pulumi Insights Account Discovery requires read-only access to your cloud accounts and is granted by [creating an ESC environment](/docs/esc/get-started/create-environment/) that when opened, produces valid credentials to use the corresponding Pulumi provider.
+Pulumi Insights Account Discovery requires read-only access to your cloud accounts. This access is granted by [creating an ESC environment](/docs/esc/get-started/create-environment/) that generates valid credentials for the corresponding Pulumi provider when accessed.
 
 {{% notes "info" %}}
-Account Discovery uses Pulumi ESC to manage the credentials needed to find and read infrastructure resources. This approach follows enterprise best practices for managing application secrets.
+Account Discovery leverages Pulumi ESC to securely manage the credentials required to discover and read infrastructure resources, aligning with enterprise best practices for managing application secrets.
 {{% /notes %}}
 
 To create an environment, [sign into the Pulumi cloud](https://app.pulumi.com/) console and navigate to **Pulumi ESC** and select **Environments** in the left-hand menu.
 
 Next, click **Create Environment** and enter a name for the project and environment, such as `insights-discovery-project` and `insights-environment` and then click **Create**.
 
-Leave the default environment definition for now, and you will return to finish configuring ESC after you create the required credentials within the provider account.
+Leave the default environment definition for now, and you will return to finish configuring ESC after you create the required credentials.
 
-## Create and configure cloud credentials with ESC
+## Create and configure cloud credentials
+
+<!-- TODO: get oracle cloud chooser working -->
 
 {{% chooser cloud "aws,azure,oracle,kubernetes" %}}
 
 {{% choosable cloud aws %}}
 
-Configure Pulumi Insights to use OpenID Connect to authenticate with AWS.
-For a more detailed step-by-step guide, including screenshots see the [Configuring OpenID Connect for AWS](/docs/pulumi-cloud/access-management/oidc/provider/aws/) Pulumi documentation.
+To configure Pulumi Insights with AWS, you will use [OpenID Connect (OIDC)](docs/pulumi-cloud/access-management/oidc/) for authentication. Follow these steps:
 
 1. Log in to the [AWS Management Console](https://console.aws.amazon.com/iam/).
 2. Go to the **Roles** section and create a new role.
@@ -49,7 +52,7 @@ For a more detailed step-by-step guide, including screenshots see the [Configuri
 5. Filter to the `ReadOnlyAccess` policy name.
 6. Click **Create**.
 
-This will set up a **trust relationship** to allow Pulumi Cloud to assume the role using the following trust policy:
+This will set up a trust relationship to allow Pulumi Cloud to assume the role using the following trust policy:
 
 ```json
 {
@@ -73,7 +76,9 @@ This will set up a **trust relationship** to allow Pulumi Cloud to assume the ro
 }
 ```
 
-Next, return to Pulumi ESC and use the following ESC configuration to provide the required credentials:
+For a more detailed step-by-step guide, including screenshots see the [Configuring OpenID Connect for AWS](/docs/pulumi-cloud/access-management/oidc/provider/aws/) Pulumi documentation.
+
+Next, go back to Pulumi ESC and configure your cloud credentials using the role ARN and trust relationship you just created:
 
 ```yaml
 
@@ -95,7 +100,7 @@ values:
 
 {{% choosable cloud azure %}}
 
-Configure Pulumi Insights to use OpenID Connect to authenticate with Azure. For a more detailed step-by-step guide, including screenshots see the [Configuring OpenID Connect for Azure](docs/pulumi-cloud/access-management/oidc/provider/azure/) Pulumi documentation.
+To configure Pulumi Insights with Azure, you will use [OpenID Connect (OIDC)(docs/pulumi-cloud/access-management/oidc/) for authentication. Follow these steps:
 
 1. Create a Service Principal in Azure, then generate the following values:
    - **clientId** (also called **appId** in the Azure UI)
@@ -103,7 +108,7 @@ Configure Pulumi Insights to use OpenID Connect to authenticate with Azure. For 
    - **subscriptionId**
    - **clientSecret** (also called **password** in the Azure UI)
 
-Next, return to Pulumi ESC and use the following ESC configuration to provide the required credentials:
+Next, go back to Pulumi ESC and configure your cloud credentials and trust relationship you just created:
 
 ```yaml
 values:
@@ -132,6 +137,8 @@ values:
 
 {{% choosable cloud oracle %}}
 
+To configure Pulumi Insights with OCI, you will use [OpenID Connect (OIDC)](docs/pulumi-cloud/access-management/oidc/) for authentication.
+
 1. Set up API Key authentication by providing the following credentials:
 
 - **OCI_TENANCY_OCID**: OCID of the tenancy. To get the value, see [Where to Get the Tenancy's OCID and User's OCID](https://docs.oracle.com/iaas/Content/API/Concepts/apisigningkey.htm#five).
@@ -141,7 +148,7 @@ values:
 - **OCI_REGION**: The OCI region where your resources are located. See [Regions and Availability Domains](https://docs.oracle.com/iaas/Content/General/Concepts/regions.htm).
 - **OCI_PRIVATE_KEY_PATH**: The private key is required to be listed as an ESC file. To create a private key and integrate it with ESC, see [How to Generate an API Signing Key](https://docs.oracle.com/iaas/Content/API/Concepts/apisigningkey.htm#two) and [how to upload the public key](https://docs.oracle.com/iaas/Content/API/Concepts/apisigningkey.htm#three)
 
-Next, return to Pulumi ESC and use the following ESC configuration to provide the required credentials:
+Next, go back to Pulumi ESC and configure your cloud credentials and trust relationship you just created:
 
 ```yaml
 values:
@@ -179,6 +186,6 @@ For a detailed guide on configuring ESC credentials for Insights with Kubernetes
 
 {{% /chooser %}}
 
-Next, you'll create a Pulumi insights account used for scanning provider resources.
+Next, you'll create a Pulumi Insights account used for scanning provider resources.
 
 {{< get-started-stepper >}}

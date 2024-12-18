@@ -1,17 +1,11 @@
 ---
 title_tag: "Pulumi Insights Overview"
 meta_desc: Pulumi Insights provides advanced search, analytics, and AI for your infrastructure as code.
-title: Insights
-h1: Pulumi Insights
+title: Pulumi Insights Concepts
+h1: Pulumi Insights Concepts
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  cloud:
-    name: Insights
-    parent: cloud-home
-    identifier: pulumi-cloud-insights
-    weight: 4
 aliases:
-- /docs/intro/insights/
 ---
 
 Pulumi Insights provides advanced search, analytics, and AI for your infrastructure as code.

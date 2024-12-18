@@ -7,7 +7,7 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   insights:
     parent: insights-home
-    weight: 3
+    weight: 5
 aliases:
   - /docs/intro/insights/import/
   - /docs/pulumi-cloud/insights/import/
