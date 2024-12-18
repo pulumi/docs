@@ -8,7 +8,7 @@ allow_long_title: true
 # published. To influence the ordering of posts published on the same date, use
 # the time portion of the date value; posts are sorted in descending order by
 # date/time.
-date: 2025-01-07T17:28:56Z
+date: 2025-02-05T17:28:56Z
 
 # The draft setting determines whether a post is published. Set it to true if
 # you want to be able to merge the post without publishing it.
@@ -114,15 +114,19 @@ Pulumi ESC Versioning gives you unprecedented control over your secrets and conf
 
 Pulumi ESC follows a "secure by default" model, employing encryption, access control, and detailed audit trails. Engineers can meet compliance regulations effortlessly while gaining full visibility into secret access patterns.
 
-### 5. Configuration-as-Code, Automation, and Integration Everywhere
+### 5. Automated Rotation and Expiry
+
+Pulumi ESC minimizes security risks by automating the rotation of secrets. This feature aligns secrets management with CI/CD processes for cloud engineers focused on DevOps, ensuring credentials remain valid only when needed.
+
+### 6. Configuration-as-Code, Automation, and Integration Everywhere
 
 Pulumi ESC embraces an "as-code" approach, enabling configuration and secrets management using TypeScript, JavaScript, Go, Python, or YAML. The 'esc' CLI and API support automation in CI/CD environments, reducing credential duplication and ensuring a single source of truth.
 
-### 6. Dev Tools Integrations
+### 7. Dev Tools Integrations
 
 Pulumi ESC’s metadata and support for popular configuration formats enable seamless integration with tools like Direnv, Docker, and GitHub, allowing easy management of environment variables, secrets, and configurations.
 
-### 7. Infrastructure Tools Integrations
+### 8. Infrastructure Tools Integrations
 
 Pulumi ESC extends its capabilities beyond Pulumi IaC by integrating with other infrastructure tools such as Cloudflare, Terraform, and OpenTofu. These integrations enable seamless provisioning of cloud credentials and input variables directly from ESC environments.
 
