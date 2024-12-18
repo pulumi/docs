@@ -110,7 +110,7 @@ Pulumi's growth and impact this year have been amazing:
 - **3,000+ Customers**: Empowering industries like AI, gaming, finance, and healthcare.
 - **100M+ Downloads**: Pulumi IaC adoption soared globally.
 - **167% Contribution Growth**: Outpacing other IaC tools like Terraform and OpenTofu.
-- **71% Cloud Cost Savings**: Customers like Tivity Health saved millions with Pulumi.
+- **71% Cloud Cost Savings**: Customers like [Tivity Health saved millions](https://www.pulumi.com/blog/devsecops-strategy-security-automation-tivity-health/) with Pulumi.
 
 ## Community Achievements
 
@@ -118,9 +118,9 @@ Pulumi's growth and impact this year have been amazing:
 
 Pulumi's vibrant community has been at the heart of everything we've accomplished:
 
-- **Global Pulumi User Groups (Meetups)**: With 20 groups across 9 countries, including new meetups in Chicago, Columbus, São Paulo, and Tel Aviv, our community continues to grow. These meetups collectively hosted over 6,396 members.
+- **Global [Pulumi User Groups](https://www.meetup.com/pro/pugs/) (PUGs)**: With 20 groups across 9 countries, including new meetups in [Chicago](https://www.meetup.com/chicago-pulumi-user-group/), [Columbus](https://www.meetup.com/columbus-pulumi-user-group), [São Paulo](https://www.meetup.com/sao-paulo-pulumi-user-group), and [Tel Aviv](https://www.meetup.com/tel-aviv-pulumi-user-group), our community continues to grow. These meetups collectively hosted over 6,396 members.
 - **PulumiUP 2024**: Over 8,000 registrants globally, with nearly 1,000 for the first-ever PulumiUP Europe.
-- **Workshops**: 72 workshops with 14,500+ registrations from engineers wanting to learn Pulumi.
+- **[Workshops](https://www.pulumi.com/resources/#upcoming)**: 72 workshops with 14,500+ registrations from engineers wanting to learn Pulumi.
 - **22,000 GitHub Stars**: A testament to our community's passion and dedication.
 
 ## Looking Ahead to 2025
