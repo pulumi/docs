@@ -11,6 +11,14 @@ menu:
         weight: 13
     concepts:
         weight: 13
+search:
+   keywords:
+      - FileAsset
+      - StringAsset
+      - RemoteAsset
+      - FileArchive
+      - RemoteArchive
+      - AssetArchive
 aliases:
 - /docs/intro/concepts/assets-archives/
 - /docs/concepts/inputs-outputs/assets-archives/
