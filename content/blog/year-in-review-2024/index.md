@@ -67,7 +67,7 @@ Here's a look at how Pulumi has grown, evolved, and continued empowering teams w
 
 ![Placeholder Image](pulumi-platform-vision.png)
 
-This year, Pulumi unveiled a bold new vision for Pulumi—[a comprehensive product suite](https://www.pulumi.com/blog/pulumi-up-2024/) that extends far beyond infrastructure as code.. The Pulumi platform now consists of three core products:
+This year, Pulumi unveiled a bold new vision for Pulumi—[a comprehensive product suite](https://www.pulumi.com/blog/pulumi-up-2024/) that extends far beyond infrastructure as code. The Pulumi platform now consists of three core products:
 
 - **[Pulumi IaC](https://www.pulumi.com/docs/iac/)**: Open source infrastructure as code in any programming language. With over 100M downloads, 167% growth in contributions, and industry-leading innovations, Pulumi IaC continues to redefine cloud automation.
 - **[Pulumi ESC](https://www.pulumi.com/docs/esc/)**: Centralized secrets management and orchestration that scales. General availability this year brought features like SDKs, versioning, tagging, and integrations with 1Password and Kubernetes secrets operators.
@@ -83,14 +83,14 @@ Three core capabilities unite these products:
 
 Over 3,000 customers, including Nvidia, BMW, Unity Games, and Tivity Health, leveraged these solutions to enhance velocity, save costs, and secure their infrastructure.
 
-## Highlights Across the Product Innovation
+## Highlights of Releases and Enhancements 
 
 ![Placeholder Image](pulumi-platform-vision.png)
 
 Pulumi's product innovations this year have empowered teams to automate, secure, and manage cloud infrastructure with confidence:
 
 - **[Pulumi ESC General Availability](https://www.pulumi.com/blog/pulumi-esc-ga/)**, redefining secrets management with features like dynamic credentials and hierarchical environments. New capabilities include secrets syncing with external stores like AWS Secrets Manager and Kubernetes operators for runtime integration.
-- **[Pulumi Insights 2.0](https://www.pulumi.com/blog/pulumi-insights-2/)** delivers AI-powered search, a comprehensive inventory for resources created by other tools like Terraform and CloudFormation, and automated remediation capabilities powered by CrossGuard.
+- **[Pulumi Insights 2.0](https://www.pulumi.com/blog/pulumi-insights-2/)** delivers AI-powered search, a comprehensive inventory of resources created by Pulumi IaC as well as other tools like Terraform and CloudFormation, and automated remediation capabilities powered by CrossGuard.
 - **[Pulumi Copilot](https://www.pulumi.com/product/copilot/)** leverages Generative AI to transform how teams diagnose and resolve IaC issues, providing instant feedback and deployment recommendations.
 - **[Pulumi Kubernetes Operator 2.0](https://www.pulumi.com/blog/pulumi-kubernetes-operator-2-0/)** introduced scalable, secure deployments with dedicated workspace pods, enhanced customization options, and improved stability under dynamic conditions.
 - **[Drift Detection and Remediation](https://www.pulumi.com/blog/drift-detection/)** in Pulumi Cloud now automates drift detection for all 180+ supported providers, ensuring infrastructure consistency, enhanced security, and reduced operational risks.
@@ -118,7 +118,7 @@ Pulumi's growth and impact this year have been amazing:
 
 Pulumi's vibrant community has been at the heart of everything we've accomplished:
 
-- **Global Pulumi User Groups (Meetups)**: With 20 groups across 9 countries, including new meetups in Chicago, Columbus, São Paulo, and Tel Aviv, our community continues to grow. These meetups collectively host over 6,396 members.
+- **Global Pulumi User Groups (Meetups)**: With 20 groups across 9 countries, including new meetups in Chicago, Columbus, São Paulo, and Tel Aviv, our community continues to grow. These meetups collectively hosted over 6,396 members.
 - **PulumiUP 2024**: Over 8,000 registrants globally, with nearly 1,000 for the first-ever PulumiUP Europe.
 - **Workshops**: 72 workshops with 14,500+ registrations from engineers wanting to learn Pulumi.
 - **22,000 GitHub Stars**: A testament to our community's passion and dedication.
