@@ -1,8 +1,8 @@
 ---
-title: "The DevOps Python Toolkit"
-date: 2024-12-10T09:23:24-05:00
+title: "Python for DevOps"
+date: 2024-12-23T09:23:24-05:00
 draft: false
-meta_desc: From quick fixes to enterprise solutions, discover 15 essential python tools 
+meta_desc: From quick fixes to enterprise solutions, discover 15 essential python tools. 
 meta_image: meta.png
 authors:
     - adam-gordon-bell
@@ -17,32 +17,26 @@ social:
 ---
 Have you ever had one of those moments: Elasticsearch is crashing, logs are filling up too fast, or a deployment needs data from three different APIs. The big enterprise solutions aren't quite right, and your team estimates six months to build something proper. But you know that with Python and a few choice libraries, you could hack something together by tomorrow.
 
-
-
 <span style="width: 40%; float: left; margin-right: 20px;">
 <span style="text-align:center">
     <img src="web-dashboard.png" alt="gha dash">
     <figcaption>
-    <i><a href="https://github.com/adamgordonbell/service-status-monitor">Let's build a little web dashboard.</a></i>
+    <i><a href="https://github.com/adamgordonbell/service-status-monitor">Let's build a little web dashboard in Python.</a></i>
     </figcaption>
 </span>
 </span>
 
 That's where Python really shines. It lets you be the scrappy problem-solver who can travel up and down the stack. But Python isn't just for quick fixes. The same language that helps you hack tomorrow's solution can also build your company's long-term infrastructure.
 
-This guide covers both ends of that spectrum. I'll show you tools for "we need it yesterday" moments, and then move into solutions that can grow with your team. Some are perfect for quick wins (and that's okay—you're an adult who can decide when that's appropriate), while others, like Pulumi, are built for the long haul.
+This guide covers both ends of that spectrum. I'll show you python packages for "we need it yesterday" moments, and then move into solutions that can grow with your team. And along the way I'll build [a little example service monitor and package capturer](https://github.com/adamgordonbell/service-status-monitor) to demostrate the python packages I'm covering. I'll wrap it in a CLI, in a web dashboard and deploy it to AWS, all while staying in Python.
 
 So here's my list of Python libraries for DevOps work, starting from 15 to the most important last at number 1.
 
 ### Dashboards / Monitoring
 
-
-
 Let's start with building web dashboards. Long-term, it's usually better if there's an off-the-shelf tool for that specific dashboard you need. But if you can create a quick visual on a Django endpoint, you can move on to the next issue.
 
-
-
-- **15/14. Django/Flask:** ([Django](https://www.djangoproject.com/), [Flask](https://flask.palletsprojects.com/)) While tools like Grafana excel at metrics visualization, sometimes you need custom dashboards that integrate with internal systems. These frameworks let you build dashboards to track and visualize various aspects of your systems. I find Django a great fit here.
+- **15 and 14. Django and Flask:** ([Django](https://www.djangoproject.com/), [Flask](https://flask.palletsprojects.com/)) While tools like Grafana excel at metrics visualization, sometimes you need custom dashboards that integrate with internal systems. These frameworks let you build dashboards to track and visualize various aspects of your systems. I find Django a great fit here.
 - **13\. Prometheus:** ([prometheus-client](https://github.com/prometheus/client_python)) This library is a versatile tool for metrics. Want to expose custom metrics to Prometheus? Use the client to create counters, gauges, or histograms. Need to pull data from a weird API and expose it as metrics? Write a quick exporter that fetches from your API every few minutes and translates the responses into Prometheus metrics.
 
 ```python
@@ -75,12 +69,13 @@ def index():
 
     return render_template_string(
         """
-            ... 
+            ...
         """,
         color=color,
         description=description,
     )
 ```
+
 <span style="text-align:center">
     <figcaption>
     <i><a href="https://github.com/adamgordonbell/service-status-monitor">Code</a> for a simple Dashboard</i>
@@ -109,9 +104,10 @@ if __name__ == "__main__":
     schedule_url_checks()
     threading.Thread(target=run_scheduler, daemon=True).start()
 ```
+
 <span style="text-align:center">
     <figcaption>
-    <i>Adding Schedule to our <a href="https://github.com/adamgordonbell/service-status-monitor">code</a></i>
+    <i>Adding Schedule to our <a href="https://github.com/adamgordonbell/service-status-monitor">code, so we can request in the background.</a></i>
     </figcaption>
 </span>
 
@@ -121,7 +117,6 @@ When your network issues go beyond what tcpdump can tell you, or when you need t
 
 - **9\. Scapy:** ([scapy](https://scapy.net/)) The Python alternative to Wireshark for programmatic network traffic analysis. Need to figure out why your microservices aren't talking to each other? Want to check your load balancer? Use it to capture and analyze packets with a few lines of code.
 - **8\. Bandit:** ([bandit](https://github.com/PyCQA/bandit)) Security scanning for your CI pipeline. Point it at your Python codebase and it'll flag common issues like hardcoded credentials or unsafe deserialization.
-
 
 ```python
 def packet_callback(packet):
@@ -136,12 +131,12 @@ def start_packet_sniffer():
 if __name__ == "__main__":
     threading.Thread(target=start_packet_sniffer, daemon=True).start()
 ```
+
 <span style="text-align:center">
     <figcaption>
-    <i>Adding packet sniffing to our <a href="https://github.com/adamgordonbell/service-status-monitor">code</a></i>
+    <i>Adding packet sniffing to our <a href="https://github.com/adamgordonbell/service-status-monitor">code, mainly just because we can.</a></i>
     </figcaption>
 </span>
-
 
 ### Containerization and Cloud Interaction
 
@@ -161,7 +156,7 @@ async def main():
             .from_("python:3.11-slim")
             .with_exec(["python", "-c", "print('Hello from Dagger!')"])
         )
-        
+
         # Execute the container and get the output
         output = await container.stdout()
         print(output)
@@ -170,20 +165,20 @@ if __name__ == "__main__":
     import asyncio
     asyncio.run(main())
 ```
+
 <span style="text-align:center">
     <figcaption>
-    <i>Using Dagger from Python</i>
+    <i>Using Dagger makes it easy to stay in Python while building containers.</i>
     </figcaption>
 </span>
 
 ### Building Command-Line Tools
 
-
 <span style="width: 50%; float: right; margin-left: 20px;">
 <span style="text-align:center">
     <img src="cli.png" alt="gha dash">
     <figcaption>
-    <i><a href="https://github.com/adamgordonbell/service-status-monitor">Let's build a CLI version in Python</a></i>
+    <i><a href="https://github.com/adamgordonbell/service-status-monitor">Let's build a CLI version of our service status dashboard in Python.</a></i>
     </figcaption>
 </span>
 </span>
@@ -202,17 +197,80 @@ The foundation of any DevOps tooling consists of these essential libraries:
 - **logging** ([Python logging](https://docs.python.org/3/library/logging.html)) - For structured logging
 - **YAML/JSON/TOML parsers** ([PyYAML](https://pyyaml.org/), [json](https://docs.python.org/3/library/json.html), [toml](https://github.com/uiri/toml)) - For config file handling
 
-While not flashy, these libraries form the backbone of every tool I build.
+While not flashy, these libraries form the backbone of every tool I build. And so I update my little tool to have some tests, some logging and store the api status urls in a toml file.
 
-Now, #1 and it’s IaC time. No more Terraform for me, my infrastructure is all in Pulumi.
+Now, #1 and it’s IaC time. I can get my dashboard onto AWS in a lambda using Pulumi.
+
+<span style="width: 50%; float: left; margin-right: 20px;">
+<span style="text-align:center">
+
+```python
+# Build and push the Docker image to ECR
+image = awsx.ecr.Image("app-server-image",
+    repository_url=repository.repository_url,
+    context="..",  
+    dockerfile="Dockerfile",
+    platform="linux/amd64"
+)
+```
+
+  <figcaption>
+   <i>Push my Image to ECR</i>
+  </figcaption>
+</span>
+</span>
 
 ### Infrastructure as Code (#1)
 
 While most tools in this list excel at quick solutions, infrastructure demands a more robust approach. This is where **Pulumi** stands apart. It's not just another scrappy tool—it's an enterprise-grade Infrastructure as Code platform that happens to harness Python's power and flexibility.
 
-When you need to provision cloud resources, **Pulumi** lets you use real Python instead of yet another config language. Want to use normal Python loops instead of count indexes? Need to reference existing functions in your infrastructure code? Pulumi brings all of Python's power to infrastructure definition. The ability to use actual programming concepts - functions, classes, loops - makes infrastructure code much more maintainable than template languages.
+With support for real Python code instead of configuration languages, you can define, deploy, and manage your cloud resources using familiar programming concepts and practices.
+
+With Pulumi, you get:
+
+- [Complete programming language support](/docs/iac/concepts/) for using loops, functions, and classes in your infrastructure code
+
+- [Infrastructure testing capabilities](/docs/iac/concepts/testing/) to validate your deployments before they go live
+
+- [Container deployment solutions](/containers) for managing Docker images and Lambda functions
+
+- [Rich AWS integration](/registry/packages/aws/) for comprehensive cloud resource management
+
+- [Infrastructure automation](/docs/iac/packages-and-automation/automation-api/) to streamline your deployment workflows
+
+```python
+# Create a Lambda function
+lambda_function = aws.lambda_.Function("custom-lambda",
+    name="custom-lambda",
+    package_type="Image",
+    image_uri=image.image_uri,
+    role=lambda_role.arn,
+    timeout=30,
+    memory_size=512,
+    environment={
+        "variables": {
+            "FLASK_ENV": "production"
+        }
+    }
+)
+```
+
+<span style="text-align:center">
+  <figcaption>
+    <i>Start it up in a Lambda</i>
+  </figcaption>
+</span>
 
 ## Bringing It All Together
+
+<span style="width: 50%; float: right; margin-left: 20px;">
+<span style="text-align:center">
+    <img src="lambda.png" alt="dashboard deployed as lambda">
+    <figcaption>
+    <i>Dashboard is still pretty basic, but now it's on AWS with a little Python infrastructure code.</i>
+    </figcaption>
+</span>
+</span>
 
 Here's where Python excels - combining these tools to solve real problems. For example:
 
@@ -222,22 +280,11 @@ Here's where Python excels - combining these tools to solve real problems. For e
 
 Start simple (maybe just a script with Requests and PyYAML), then gradually add more tools as needed. That's the beauty of Python in DevOps - you can start small and grow your solution naturally.
 
-### Bonus: The Automation API
-
-The Pulumi Automation API elevates IaC to platform building. Imagine a webhook handler that:
-
-1. Receives GitHub push events via Flask
-2. Uses RQ to process them asynchronously.
-3. Runs Pulumi programmatically to create preview environments.
-4. Reports back to GitHub using Rich-formatted output
-
-That's the power of combining these tools - turning infrastructure management into a programmable service.
-
 ## The Art of Getting Things Done
 
 The tools I've covered span the full spectrum of DevOps needs—from quick scripts to enterprise-grade solutions. Python's versatility makes it uniquely suited for both ends of this spectrum:
 
-- For urgent needs, tools like Schedule, Rich, and the Docker SDK let you rapidly prototype solutions.
+- For urgent needs, tools like Schedule, Rich, and Click let you rapidly prototype solutions.
 - For long-term infrastructure, Pulumi and Airflow provide the robustness needed for production systems.
 - For everything in between, Python's extensive library ecosystem helps you gradually evolve quick fixes into mature tools.
 
