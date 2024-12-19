@@ -591,6 +591,31 @@ To install, run our installation script:
 
 {{% /chooser %}}
 
+## Minimum system requirements
+
+<!--
+## Rationale for Minimum System Requirements
+
+Please see https://github.com/pulumi/pulumi-benchmarking where we have a benchmarking codebase to represent typical pulumi actions.
+
+The results from this benchmark were 10% CPU utilization on a Apple M1 Pro for the apply and 20% CPU utilization for the destroy.
+The memory usage for both was 1.5GB.
+
+So the following recommendations were made to add some headroom for the typical pulumi actions, espciailly for larger projects.
+-->
+
+The following are general recommendations for minimum system requirements when using Pulumi. Actual performance may vary based on the SDK runtime, providers used, operating system and the size and complexity of your infrastructure deployments. However, the following requirements should be considered a minimum to account for typical usage.
+
+| Component      | Recommendation                                                                                                              |
+|----------------|-----------------------------------------------------------------------------------------------------------------------------|
+| **CPU**        | 2 GHz or faster processor (or equivalent vCPUs for cloud environments)                                                      |
+| **RAM**        | 4 GB or more                                                                                                                |
+| **Disk Space** | 1 GB or more free disk space (additional space may be required when using multiple runtimes, providers, or large codebases) |
+
+{{% notes "info" %}}
+System requirements can vary significantly depending on the providers used and how packages/plugins are managed. Using multiple providers or large plugins may require additional disk space. Performance may also be impacted by the runtime for the SDK you are using (e.g., Node.js, Python, Go), the operating system, and how packages are managed in your development environment. Additionally, CPU and RAM requirements can be influenced by the complexity of your infrastructure, the runtimes, and the packages/plugins used, as well as the ability to take advantage of parallel processing during `pulumi plan` and `pulumi apply` operations.
+{{% /notes %}}
+
 ## Uninstalling Pulumi
 
 To uninstall Pulumi, use your installation method's command of choice. If you installed Pulumi manually, delete the `pulumi` directory that you created. Afterwards, remove the `.pulumi` folder from your home directory which contains plugins and other cached metadata.
