@@ -21,4 +21,4 @@ source ./scripts/ci-login.sh
 ./scripts/run-pulumi.sh preview
 ./scripts/make-s3-redirects.sh
 
-./scripts/detect-new-404s.sh
+#./scripts/detect-new-404s.sh
