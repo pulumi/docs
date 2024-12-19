@@ -449,7 +449,7 @@ These are common installation-related errors or warnings you may encounter.
 
 #### Pulumi not found error
 
-If you get an error that `pulumi` could not be found, it means your path has not been configured correctly. Verify that your system's `$PATH$` contains the directory containing the `pulumi` CLI installed earlier.
+If you get an error that `pulumi` could not be found, it means your path has not been configured correctly. Verify that your system's `$PATH` contains the directory containing the `pulumi` CLI installed earlier.
 
 #### New version warning
 
