@@ -5,13 +5,12 @@ title: Data export
 h1: Data export
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  cloud:
-    name: Data export
-    parent: pulumi-cloud-insights
-    weight: 2
-    identifier: pulumi-cloud-insights-export
+  insights:
+    parent: insights-home
+    weight: 6
 aliases:
   - /docs/intro/insights/export/
+  - /docs/pulumi-cloud/insights/export/
 ---
 
 ## CSV Format

@@ -5,13 +5,12 @@ title: Cloud import
 h1: Cloud import
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  cloud:
-    name: Cloud import
-    parent: pulumi-cloud-insights
-    weight: 4
-    identifier: pulumi-cloud-insights-import
+  insights:
+    parent: insights-home
+    weight: 5
 aliases:
   - /docs/intro/insights/import/
+  - /docs/pulumi-cloud/insights/import/
 ---
 
 Cloud Import lets you bring resources managed outside of Pulumi into the resource graph to make them available for everything Insights has to offer including search and analytics. Cloud Import also has a workflow for taking these resources and generating infrastructure as code. Whether your resources were created with ClickOps, Terraform, Clourformation, or any other tool, you can bring them into Pulumi with Cloud Import.
@@ -97,29 +96,29 @@ This managed experience uses [Pulumi Deployments](/docs/pulumi-cloud/deployments
 2. Deployment Settings for that stack that contain all configuration necessary to run the import program against your cloud account.
 3. A new Deployment that will start running the Cloud Import program.
 
-!["A Cloud Import program running from Pulumi Deployments."](../deployment.png)
+!["A Cloud Import program running from Pulumi Deployments."](/docs/insights/assets/deployment.png)
 
 ### AWS
 
 Cloud Import for AWS within the Pulumi Cloud requires that you configure OIDC to enable a secure, temporary credential exchange workflow. See [the guide on configuring OIDC for AWS with Pulumi Deployments](/docs/pulumi-cloud/oidc/provider/aws/) for more details.
 
-!["The Cloud Import for AWS configuration form within the Pulumi Cloud"](../cloud-import-aws.png)
+!["The Cloud Import for AWS configuration form within the Pulumi Cloud"](/docs/insights/assets/cloud-import-aws.png)
 
 ### Azure
 
 Cloud Import for Azure within the Pulumi Cloud requires that you configure OIDC to enable a secure, temporary credential exchange workflow. See [the guide on configuring OIDC for Azure with Pulumi Deployments](/docs/pulumi-cloud/oidc/provider/azure/) for more details.
 
-!["The Cloud Import for Azure configuration form within the Pulumi Cloud."](../cloud-import-azure.png)
+!["The Cloud Import for Azure configuration form within the Pulumi Cloud."](/docs/insights/assets/cloud-import-azure.png)
 
 ### Using Search
 
 Once your resources are in the Pulumi Cloud, you can use the full Insights platform including Resource Search. You can search for `project:pulumi-cloud-import` to see resources across all of your Cloud Import stacks.
 
-!["The Cloud Import for Azure configuration form within the Pulumi Cloud."](../cloud-import-search.png)
+!["The Cloud Import for Azure configuration form within the Pulumi Cloud."](/docs/insights/assets/cloud-import-search.png)
 
 Azure resources are parented by Resource Group, so you can issue parent queries to show all resources. For example, `parent:"urn:pulumi:PulumiSubscription::pulumi-cloud-import-azure::azure-native:resources:ResourceGroup::pulumidevshared".
 
-!["The Cloud Import for Azure configuration form within the Pulumi Cloud."](../cloud-import-search-parent.png)
+!["The Cloud Import for Azure configuration form within the Pulumi Cloud."](/docs/insights/assets/cloud-import-search-parent.png)
 
 ## Generating Pulumi Code
 
