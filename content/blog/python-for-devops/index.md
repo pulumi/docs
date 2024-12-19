@@ -17,6 +17,7 @@ social:
 ---
 Have you ever had one of those moments: Elasticsearch is crashing, logs are filling up too fast, or a deployment needs data from three different APIs. The big enterprise solutions aren't quite right, and your team estimates six months to build something proper. But you know that with Python and a few choice libraries, you could hack something together by tomorrow.
 
+<!--more-->
 <span style="width: 40%; float: left; margin-right: 20px;">
 <span style="text-align:center">
     <img src="web-dashboard.png" alt="gha dash">
