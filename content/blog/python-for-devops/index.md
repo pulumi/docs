@@ -188,7 +188,7 @@ Every useful script eventually needs to become a proper tool. When your team sta
 - **5/4. Click/Typer:** ([Click](https://click.palletsprojects.com/), [Typer](https://typer.tiangolo.com/)) Turn your quick scripts into proper CLI tools. Instead of remembering "python [cleanup.py](http://cleanup.py) --older-than 7 --dry-run", you get tab completion, help text, and proper argument handling. Typer is particularly nice if you're using modern Python - it uses type hints to build the CLI interface.
 - **3\. Rich:** ([rich](https://rich.readthedocs.io/)) Make your terminal output actually readable. Need to display tables of data? Want progress bars for long-running tasks? Rich makes it easy to build user-friendly CLIs. I use it to turn wall-of-text logs into colored, formatted output that helps spot problems quickly.
 
-### 2\. The Essential Toolkit
+### 2. The Essential Toolkit
 
 The foundation of any DevOps tooling consists of these essential libraries:
 
@@ -220,7 +220,7 @@ image = awsx.ecr.Image("app-server-image",
 </span>
 </span>
 
-### Infrastructure as Code (#1)
+### 1. Pulumi
 
 While most tools in this list excel at quick solutions, infrastructure demands a more robust approach. This is where **Pulumi** stands apart. It's not just another scrappy tool—it's an enterprise-grade Infrastructure as Code platform that happens to harness Python's power and flexibility.
 
