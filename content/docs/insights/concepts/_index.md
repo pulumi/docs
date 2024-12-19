@@ -5,7 +5,12 @@ title: Pulumi Insights Concepts
 h1: Pulumi Insights Concepts
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
+  insights:
+    parent: insights-home
+    identifier: insights-concepts
+    weight: 2
 aliases:
+- /docs/intro/insights/
 ---
 
 Pulumi Insights provides advanced search, analytics, and AI for your infrastructure as code.
