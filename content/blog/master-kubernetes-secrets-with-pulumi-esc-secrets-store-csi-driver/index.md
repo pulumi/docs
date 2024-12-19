@@ -15,8 +15,21 @@ tags:
 - esc
 
 social:
-  twitter:
-  linkedin:
+  twitter: |
+    Learn how to manage @kubernetesio secrets securely with @PulumiCorp ESC and the Secrets Store CSI Driver.
+  linkedin: |
+    Securely managing Kubernetes secrets is a critical challenge. In my latest blog post, I cover how to use Pulumi ESC with the Secrets Store CSI Driver to enhance security and scalability.
+
+    Key takeaways:
+    
+    - Why avoiding native Kubernetes secrets can improve security.
+    - How the Secrets Store CSI Driver works to mount secrets directly into pods.
+    - A step-by-step guide to integrating Pulumi ESC for seamless secret management.
+    - A comparison of the Secrets Store CSI Driver and External Secrets Operator.
+    
+    Read the full post here: <link>
+    
+    Let me know how you're managing secrets in your Kubernetes clusters.
 
 ---
 
