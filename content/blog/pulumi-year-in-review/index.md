@@ -85,7 +85,7 @@ Over 3,000 customers, including Nvidia, BMW, Unity Games, and Tivity Health, lev
 
 ## Highlights of Releases and Enhancements 
 
-![Placeholder Image](pulumi-platform-vision.png)
+![Placeholder Image](any-language-any-cloud.png)
 
 Pulumi's product innovations this year have empowered teams to automate, secure, and manage cloud infrastructure with confidence:
 
