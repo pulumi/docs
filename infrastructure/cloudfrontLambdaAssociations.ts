@@ -264,7 +264,7 @@ function getSDKRedirect(uri: string): string | undefined {
 
 // redirect /resources/* to /events/* following workshop+event URL rename to capture orphaned links
 function getResourcesRedirect(uri: string): string | undefined {
-    if (uri.includes("/resources/")) {
+    if (uri.startsWith("/resources/")) {
         return uri.replace("/resources/", "/events/");
     }
 
