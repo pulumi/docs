@@ -10,9 +10,6 @@ menu:
         parent: cloud-home
         weight: 10
         identifier: pulumi-cloud-access-management
-    pulumicloud:
-        weight: 7
-        identifier: access-management
 ---
 
 Pulumi Cloud offers a number of identity and access management controls.

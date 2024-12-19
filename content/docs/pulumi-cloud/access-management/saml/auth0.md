@@ -10,10 +10,6 @@ menu:
     parent: pulumi-cloud-access-management-saml
     weight: 2
     identifier: pulumi-cloud-access-management-saml-auth0
-  pulumicloud:
-    parent: saml
-    weight: 2
-
 aliases:
 - /docs/reference/service/saml-auth0/
 - /docs/console/accounts/saml/auth0/

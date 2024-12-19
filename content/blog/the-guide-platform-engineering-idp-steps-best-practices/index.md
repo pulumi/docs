@@ -172,7 +172,7 @@ Building a successful platform engineering strategy involves following a clear r
 
 With the right approach and mindset, your platform engineering efforts will become a strategic enabler for your organization's digital transformation.
 
-Check out [Pulumi's upcoming workshops](https://www.pulumi.com/resources/#upcoming) and resources to learn more about the [hands-on approach to platform engineering](https://www.pulumi.com/product/internal-developer-platforms/).
+***Build secure, scalable platforms with confidence—[register for the Platform Engineering Course](https://info.pulumi.com/platform-engineering-workshop-series)***
 
 ---
 

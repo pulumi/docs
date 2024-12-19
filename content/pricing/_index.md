@@ -612,7 +612,7 @@ faq:
           answer: |
             Resources are billed hourly as Pulumi Credits. 1 Pulumi Credit is the price for managing one resource for one hour. The Price per credit for Team and Enterprise is $0.0005 and $0.0015 respectively.
 
-            For billing purposes, partial resource hour used is billed as a full hour and we count any resource that's declared in a Pulumi program. This includes [provider resources](/docs/concepts/resources#custom-resources) (e.g., an Amazon S3 bucket), [component resources](/docs/concepts/resources#components) which are groupings of resources (e.g., an Amazon EKS cluster), and [stacks](/docs/concepts/stack) which contain resources (e.g., dev, test, prod stacks).
+            For billing purposes, a partial resource hour used is billed as a full hour and we count any resource that's declared in a Pulumi program. This includes [provider resources](/docs/concepts/resources#custom-resources) (e.g., an Amazon S3 bucket), [component resources](/docs/concepts/resources#components) which are groupings of resources (e.g., an Amazon EKS cluster), and [stacks](/docs/concepts/stack) which contain resources (e.g., dev, test, prod stacks).
 
             You consume one Pulumi Credit to manage each resource for an hour. For example, one stack containing one S3 bucket and one EC2 instance is three resources that are counted in your bill.
         - question: How are secrets billed?

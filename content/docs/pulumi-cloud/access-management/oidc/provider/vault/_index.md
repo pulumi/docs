@@ -10,9 +10,6 @@ menu:
     parent: pulumi-cloud-access-management-oidc-provider
     weight: 4
     identifier: pulumi-cloud-access-management-oidc-provider-vault
-  pulumicloud:
-    parent: openid-connect-provider
-    weight: 1
 aliases:
 - /docs/pulumi-cloud/oidc/provider/vault/
 ---
@@ -76,7 +73,7 @@ Success! Data written to: auth/jwt/config
 Vault and Pulumi Cloud use the `jwt` path by default.
 {{% /notes %}}
 
-### Create Vault Policy
+### Create Vault policy
 
 For our example we will create a simple readonly policy (called `reader`) that allows read/list permissions to the `secret` path in Vault.
 
@@ -91,7 +88,7 @@ EOF
 
 For more advanced use cases see [Vault documentation](https://developer.hashicorp.com/vault/docs/concepts/policies).
 
-### Create Vault JWT Role
+### Create Vault JWT role
 
 To create a [role](https://developer.hashicorp.com/vault/api-docs/auth/jwt#create-update-role) using the CLI:
 
@@ -146,11 +143,11 @@ To configure OIDC for Pulumi ESC, create a new environment in the [Pulumi Cloud 
   1. Click the **Environments** link.
   2. Click the **Create environment** button.
   3. Provide a project to create your new environment in and a name for your environment.
-  4. Click the  **Create environment** button.
+  4. Click the **Create environment** button.
 
       {{< video title="Creating a new Pulumi ESC environment" src="https://www.pulumi.com/uploads/create-new-environment.mp4" autoplay="true" loop="true" >}}
 
-  5. You will be presented with a split-pane editor view. Delete the default placeholder content in the editor and replace it with the following code:
+  5. You will be presented with a split-pane document view. Delete the default placeholder content in the editor and replace it with the following code:
 
       ```yaml
       values:
@@ -219,7 +216,7 @@ To learn more about how to set up and use the various providers in Pulumi ESC, p
 
 It is possible to customize the OIDC token subject claim by setting configuring the `subjectAttributes` setting. It expects an array of keys to include in it:
 
-* `rootEnvironment.name`: the name of the root evironment being evaluated
+* `rootEnvironment.name`: the name of the root environment being evaluated
 * `currentEnvironment.name`: the name of the current environment being evaluated
 * `pulumi.user.login`: the login identifier of the user opening the environment
 * `pulumi.organization.login`: the login identifier of the organization

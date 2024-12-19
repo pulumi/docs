@@ -10,9 +10,6 @@ menu:
         parent: pulumi-cloud-admin-self-hosted-deployment-options
         weight: 2
         identifier: pulumi-cloud-admin-self-hosted-deployment-options-ecs
-    pulumicloud:
-        parent: deployment-options
-        weight: 2
 aliases:
   - /docs/guides/self-hosted/ecs-hosted/
   - /docs/pulumi-cloud/self-hosted/deployment-options/ecs-hosted/
@@ -30,7 +27,7 @@ The customer is required to provide and manage the following:
   * At least 2 isolated subnets available.
     * An "isolated" subnet means it can only route traffic within the subnet. So there is no NAT gateway.
 * Route53 hosted zone.
-* ACM Certiciate that covers FQDNs of the following form, where `{subdomain}` is optional:
+* ACM Certificate that covers FQDNs of the following form, where `{subdomain}` is optional:
   * `{subdomain}.{zoneDomainName}`
   * `api.{subdomain}.{zoneDomainName}`
   * `app.{subdomain}.{zoneDomainName}`

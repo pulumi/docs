@@ -10,9 +10,6 @@ menu:
     parent: pulumi-cloud-insights
     weight: 1
     identifier: pulumi-cloud-insights-search
-  pulumicloud:
-    parent: insights
-    weight: 1
 aliases:
   - /docs/intro/insights/search/
 ---

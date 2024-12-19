@@ -10,10 +10,6 @@ menu:
     parent: pulumi-cloud-access-management-scim
     weight: 4
     identifier: pulumi-cloud-access-management-scim-faq
-  pulumicloud:
-    identifier: faq-scim
-    parent: scim
-    weight: 4
 aliases:
   - /docs/guides/scim/faq/
 ---

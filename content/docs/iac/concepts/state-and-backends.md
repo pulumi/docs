@@ -258,7 +258,7 @@ Versions of Pulumi prior to v3.61.0 placed stacks in a global namespace in self-
 Existing self-managed backends will continue to use the global namespace for stacks. You can upgrade an existing self-managed backend to use project-scoped stacks using the `pulumi state upgrade` command. This command will upgrade all stacks in the backend to be scoped by project.
 
 {{% notes type="info"%}}
-`pulumi state upgrade` will make upgraded stacks inaccesible to older versions of Pulumi. This is a one-way operation. Once you have upgraded your backend, you cannot downgrade to the previous version.
+`pulumi state upgrade` will make upgraded stacks inaccessible to older versions of Pulumi. This is a one-way operation. Once you have upgraded your backend, you cannot downgrade to the previous version.
 {{% /notes %}}
 
 ## Migrating Between State Backends

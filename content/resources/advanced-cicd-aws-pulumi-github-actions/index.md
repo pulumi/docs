@@ -64,9 +64,6 @@ main:
 
     # The webinar presenters
     presenters:
-        - name: Diana Esteves
-          role: Solutions Architect, Pulumi
-          photo: /images/team/diana-esteves.jpg
         - name: Ben De St Paer-Gotch
           role: Staff Product Manager, GitHub
           photo: /images/people/ben-de-st-paer-gotch.jpg

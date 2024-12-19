@@ -195,7 +195,7 @@ Resources:
 
 The `ConfigGroup` resource type is similar to `ConfigFile`. Instead of a single file, it accepts a `files` parameter that contains a list of file paths, file globs, and/or URLs from which to read the YAML configuration from. By default, names are used as-is, however you can specify a `resourcePrefix` to rewrite the names. One or more `transformations` callbacks can be supplied to arbitrarily rewrite resource configurations on-the-fly before deploying them.
 
-To deploy the Kubernetes Guestbook Application using a colllection of YAML files, first create a `yaml` directory and download them into it:
+To deploy the Kubernetes Guestbook Application using a collection of YAML files, first create a `yaml` directory and download them into it:
 
 ```bash
 $ mkdir yaml

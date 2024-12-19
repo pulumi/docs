@@ -10,9 +10,6 @@ menu:
     parent: pulumi-cloud-access-management
     weight: 2
     identifier: pulumi-cloud-access-management-teams
-  pulumicloud:
-    weight: 1
-    parent: access-management
 aliases:
 - /docs/reference/service/teams/
 - /docs/console/collaboration/teams/

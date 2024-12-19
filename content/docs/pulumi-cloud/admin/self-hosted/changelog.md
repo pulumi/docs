@@ -10,9 +10,6 @@ menu:
         parent: pulumi-cloud-admin-self-hosted
         weight: 5
         identifier: pulumi-cloud-admin-self-hosted-changelog
-    pulumicloud:
-        parent: self-hosted
-        weight: 5
 aliases:
   - /docs/pulumi-cloud/self-hosted/changelog/
 ---

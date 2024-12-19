@@ -286,6 +286,8 @@ const opts = {
         MD007: false,
         // Allow bare URLs.
         MD034: false,
+        // Allow bold/italicized paragraphs
+        MD036: false,
     },
     customRules: [
         {

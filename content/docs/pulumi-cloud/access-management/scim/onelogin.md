@@ -10,10 +10,6 @@ menu:
     parent: pulumi-cloud-access-management-scim
     weight: 3
     identifier: pulumi-cloud-access-management-scim-onelogin
-  pulumicloud:
-    identifier: onelogin-scim
-    parent: scim
-    weight: 3
 aliases:
   - /docs/guides/scim/onelogin/
 ---
@@ -101,7 +97,7 @@ For the first step, you need to obtain the IDP metadata document from OneLogin a
 1. Select **Apply changes** at the bottom of the card.
 1. Refresh the browser to see that SAML is configured.
 
-At this point Pulumi is able to accept communications from OneLogin. The next step is to provide OneLogin a token to allow Pulumi to authenticaticate the communications from OneLogin.
+At this point Pulumi is able to accept communications from OneLogin. The next step is to provide OneLogin a token to allow Pulumi to authenticate the communications from OneLogin.
 
 1. Navigate to the Pulumi Cloud, then **Settings**, then **Access management**.
 1. Scroll to the *SCIM* block at the bottom of the page.
