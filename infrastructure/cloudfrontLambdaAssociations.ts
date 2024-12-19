@@ -11,6 +11,7 @@ import {
 import * as URLPattern from "url-pattern";
 import { LambdaEdge } from "./lambdaEdge";
 import axios from "axios";
+import { getResources } from "@pulumi/aws/resourcegroupstaggingapi/getResources";
 
 // Edge functions must be defined in us-east-1.
 const usEast1Provider = new aws.Provider("usEast1", {
@@ -157,7 +158,7 @@ function getAnswersRedirectsLambdaCallback(redirects: Record<string, string>): a
 }
 
 function getRedirect(uri: string): string | undefined {
-    return getRegistryRedirect(uri) || getSDKRedirect(uri);
+    return getRegistryRedirect(uri) || getSDKRedirect(uri) || getResourcesRedirect(uri);
 }
 
 function getRegistryRedirect(uri: string): string | undefined {
@@ -259,6 +260,15 @@ function getSDKRedirect(uri: string): string | undefined {
         return undefined;
     }
     return nodeSDKRedirect(uri) || pythonSDKRedirect(uri) || dotnetSDKRedirect(uri) || undefined;
+}
+
+// redirect /resources/* to /events/* following workshop+event URL rename to capture orphaned links
+function getResourcesRedirect(uri: string): string | undefined {
+    if (uri.includes("/resources/")) {
+        return uri.replace("/resources/", "/events/");
+    }
+
+    return undefined;
 }
 
 function nodeSDKRedirect(uri: string): string | undefined {
