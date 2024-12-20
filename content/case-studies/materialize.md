@@ -23,9 +23,9 @@ exec_summary: |
 sections:
     - label: Exec Summary
       anchor: executive-summary
-    - label: Database-as-a-Service Infrastructure Challenges
+    - label: Challenges
       anchor: infrastructure-challenges
-    - label: Automated Infrastructure Management with Pulumi
+    - label: Automation with Pulumi
       anchor: automated-infratructure-management
     - label: Benefits of Using Pulumi
       anchor: benefits
