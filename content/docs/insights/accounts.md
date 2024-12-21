@@ -1,58 +1,46 @@
 ---
-title_tag: Create and manage insights accounts
-meta_desc: This page describes how to create insights accounts for scanning provider account resources to use within Pulumi Cloud.
 title: Accounts
+title_tag: Create and manage insights accounts | Pulumi Insights
 h1: Create and manage insights accounts
+meta_desc: This page describes how to create insights accounts for scanning provider account resources to use within Pulumi Cloud.
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  cloud:
-    name: Accounts
-    parent: pulumi-cloud-insights
+  insights:
+    parent: insights-home
     weight: 3
-    identifier: pulumi-cloud-insights-accounts
+aliases:
+  - /docs/pulumi-cloud/insights/accounts/
 ---
 
 This document outlines the steps required to create and manage a Pulumi insights account used for scanning provider resources.
-<!-- markdownlint-disable MD029 -->
+
 ## Prerequisites
 
 * You must be an admin of your Pulumi organization.
-* Permissions required to create credentials within the provider account you want to scan
+* Permissions required to create credentials within the provider account you want to scan.
 
 ## Account creation
 
+{{< video title="Column Selection" src="https://pulumi.com/uploads/insights-create-account.mp4" autoplay="true" loop="false" >}}
+
 1. After logging into the Pulumi Cloud Console, navigate to the **Accounts** tab.  
-    ![Accounts tab](../account-left-tab-button.png)
-
 2. On this page, click the **Create Account** button to access the account creation screen.  
-    ![Create accounts button](../create-accounts-button.png)  
-    ![Accounts creation screen](../accounts-creation-screen.png)
-
 3. Select your provider.
 {{< notes type="info" >}}  
   Currently, Pulumi supports AWS, Azure, Oracle Cloud, and Kubernetes as providers for insights accounts.  
 {{< /notes >}}
-
 4. Select or create an ESC environment that has the correct credentials to scan the selected provider.  
 {{< notes type="info" >}}  
   See below for details on how to set up the ESC environment for each provider.  
 {{< /notes >}}
-
 5. Enter a unique name for the account. The name cannot contain a `/`.
 {{< notes type="info" >}}  
   Pulumi automatically names child accounts using `/`. For more information, see **Account Hierarchies** below.  
 {{< /notes >}}
 6. Add any provider-specific configuration, such as the regions to scan for AWS.
-    ![Account configuration tab for AWS](../account-configuration-aws.png)
-
 7. Choose whether to enable scheduled scans or run them manually.
-    ![Accounts scheduled scans](../accounts-scheduled-scan.png)  
-{{< notes type="info" >}}  
-  When scheduled scans are enabled, Pulumi automatically scans the account every 24 hours.  
-{{< /notes >}}
-
+When scheduled scans are enabled, Pulumi automatically scans the account every 24 hours.  
 8. Click `create`. You should see a success notification and arrive on the details page of the account you have created.
-![Account details page](../accounts-details-page.png)
 
 {{< notes type="info" >}}  
   A scan should be kicked off immediately, if you are creating a new insights account for AWS, see the **child accounts** (one for each region) for scan status.
@@ -93,14 +81,14 @@ All scanned resources are displayed on the **Resources** page in Pulumi Cloud.
     * **Project**: `my-aws-account`  
     * **Stack/Account**: `us-east-1/my-cluster`
 
-![Resources page](../account-resource-list-page.png)
+![Resources page](/docs/insights/assets/account-resource-list-page.png)
 
 * **Resource navigation**: Click on a resource's name to view its **Resource Details** page. This page includes:  
   * **Resource history**: Pulumi tracks and displays all versions of a resource, with changes based on property updates.  
   * **Properties**: View detailed properties for each resource version.  
   * **References**: See edges (relationships) to other resources in the same account.
 
-![Resource details page](../account-resource-detail-page.png)
+![Resource details page](/docs/insights/assets/account-resource-detail-page.png)
 
 ## Configure ESC credentials
 
@@ -148,7 +136,6 @@ The Azure scanner for Pulumi Cloud requires access to your Azure account. This a
    * **tenantId**
    * **subscriptionId**
    * **clientSecret** (also called **password** in the Azure UI)
-
 2. Use the following ESC configuration to provide the required credentials:
 
 ```yaml
@@ -173,7 +160,6 @@ values:
 {{< notes type="info" >}}
   For more details on configuring Azure credentials with ESC, refer to [ESC Azure provider documentation](/docs/pulumi-cloud/access-management/oidc/provider/azure/).
 {{< /notes >}}
-
 3. Once the ESC environment is set up with the proper credentials, assign it to your insights account during the account creation phase.
 
 ### OCI
@@ -269,8 +255,7 @@ roleRef:
   apiGroup: rbac.authorization.k8s.io
 ```
 
-2. Verify Service Account Access
-
+1. Verify service account access.
 Use the following command to verify the service account's permissions:
 
 ```bash
@@ -279,8 +264,7 @@ kubectl auth can-i list pods --as=system:serviceaccount:default:my-service-accou
 
 For more details, see the Kubernetes documentation: [kubectl auth can-i](https://kubernetes.io/docs/reference/access-authn-authz/rbac/#checking-api-access).
 
-3. Retrieve Service Account Details
-
+1. Retrieve Service Account Details.
 Fetch the details required for creating a kubeconfig:
 
 * **Token**:
@@ -301,8 +285,7 @@ Fetch the details required for creating a kubeconfig:
   kubectl config view --minify --flatten -o jsonpath='{.clusters[0].cluster.server}'
   ```
 
-4. Create Kubeconfig
-
+1. Create Kubeconfig
 Using the retrieved details, create the following kubeconfig:
 
 ```yaml
@@ -326,8 +309,7 @@ users:
     token: <SERVICE_ACCOUNT_TOKEN>  # Replace with the decoded service account token
 ```
 
-5. (Optional) Streamline the Process with a Script
-
+1. (Optional) Streamline the process with a script.
 Use the following script to automate the creation of the kubeconfig file:
 
 ```bash
@@ -365,4 +347,3 @@ EOF
 
 echo "Kubeconfig written to $KUBECONFIG_PATH"
 ```
-<!-- markdownlint-enable MD029 -->

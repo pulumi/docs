@@ -6,7 +6,7 @@
     <div id="docs-home-banner" class="header bg-blue-100 bg-right">
         {{ $h1 := split .Params.h1 " " }}
         <h1>{{ index $h1 0 }}<strong> {{ index $h1 1 }}</strong> docs</h1>
-        <div class="w-full lg:w-2/3">
+        <div class="w-full md:w-2/3">
             {{ .Params.description | safeHTML }}
         </div>
         <div class="link-buttons">

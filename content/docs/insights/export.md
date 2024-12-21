@@ -1,17 +1,16 @@
 ---
-title_tag: "Pulumi Insights: Data export"
-meta_desc: Documentation and schema for the Pulumi Insights CSV Data Export feature.
 title: Data export
+title_tag: Data export | Pulumi Insights
 h1: Data export
+meta_desc: Documentation and schema for the Pulumi Insights CSV Data Export feature.
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  cloud:
-    name: Data export
-    parent: pulumi-cloud-insights
-    weight: 2
-    identifier: pulumi-cloud-insights-export
+  insights:
+    parent: insights-home
+    weight: 6
 aliases:
   - /docs/intro/insights/export/
+  - /docs/pulumi-cloud/insights/export/
 ---
 
 ## CSV Format
