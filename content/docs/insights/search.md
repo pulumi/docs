@@ -1,15 +1,13 @@
 ---
-title_tag: "Pulumi Insights: Resource search"
-meta_desc: Documentation and query syntax for the Pulumi Insights search feature.
 title: Resource search
+title_tag: "Pulumi Insights: Resource search"
 h1: Resource search
+meta_desc: Documentation and query syntax for the Pulumi Insights search feature.
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   insights:
-    name: Resource search
     parent: insights-home
     weight: 4
-    identifier: pulumi-insights-search
 aliases:
   - /docs/intro/insights/search/
   - /docs/pulumi

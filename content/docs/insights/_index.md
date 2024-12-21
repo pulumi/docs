@@ -14,7 +14,7 @@ meta_desc: Pulumi Insights provides intelligent infrastructure management with A
 meta_image: /images/docs/meta-images/insights-meta.png
 h1: Pulumi Insights Documentation
 description: |
-  Pulumi Insights offers an intelligent platform for discovering, understanding, and managing cloud infrastructure with AI-driven analysis, compliance enforcement, and more!
+  Pulumi Insights offers an intelligent platform for discovering, understanding, and managing cloud infrastructure with AI-powered asset and compliance management.
 
 link_buttons:
   primary:
@@ -28,40 +28,43 @@ sections:
 - type: flat
   heading: Overview
   description_md: |
-    Pulumi Insights enables you to manage and optimize cloud infrastructure with AI-powered tools for discovery, compliance, and cost efficiency. It brings visibility across all resources, including those not provisioned by Pulumi, such as AWS CloudFormation, Microsoft ARM, and Terraform-managed infrastructure.
+    Pulumi Insights is an intelligent infrastructure management service to discover, understand, manage, and improve any cloud infrastructure, including resources not provisioned by Pulumi IaC such as AWS CloudFormation, Microsoft ARM, HashiCorp Terraform, or even manually. Insights improves security, compliance, and efficiency through AI-powered asset and compliance management.
 
     With Pulumi Insights, you can:
-    - Detect and remediate security violations.
-    - Enforce compliance policies across your organization.
-    - Analyze cloud usage trends to optimize costs.
+    - **Stay secure**: Detect security violations and remediate using security best practices.
+    - **Enforce compliance**: Gain a comprehensive view of compliance policy violations across your organization and automate remediation.
+    - **Improve efficiency**: Analyze and dig into your organization’s cloud usage and trends to optimize costs and improve productivity.
 
     Insights is your single pane of glass for understanding and improving your cloud infrastructure.
 
 - type: button-cards
   heading: Featured Capabilities
   cards:
-  - heading: Enforce Compliance
-    link: /docs/insights/dashboard/
-    description: Gain a comprehensive view of compliance policy violations across your organization and automate remediation effectively.
-  - heading: AI-Powered Analysis
-    description: Leverage Pulumi Copilot to ask natural language questions about your infrastructure, identify cost-saving opportunities, and debug deployments seamlessly.
-    link: /docs/pulumi-cloud/copilot/
+  - heading: Discover
+    link: /docs/insights/concepts/
+    description: Scan and sync all of your infrastructure to bring it under a single pane of glass, so you can understand the structure and status of your cloud footprint.
   - heading: Advanced Resource Search
-    description: Search across more than 100 cloud platforms using structured queries or natural language to locate and manage resources.
+    description: Find important insights about your cloud infrastructure using structured queries or natural language Pulumi AI assist to quickly locate resources.
     link: /docs/insights/resource-search/
+  - heading: Manage
+    description: Refactor and structure your infrastructure into logical resource groups that map key insights with business needs.
+    link: /docs/pulumi-cloud/copilot/
+  - heading: Improve
+    description: Execute improvement plans for each logical resource group to support business priorities.
+    link: /docs/pulumi-cloud/copilot/
 
 - type: full-width-cards
-  heading: Key Features
+  heading: Featured docs
   cards:
   - icon: lightbulb-blue-21-21
     heading: Account Discovery
     description: Automatically scan and sync your accounts to bring all cloud resources into the Insights platform.
-    link: /docs/insights/account-discovery/
-  - icon: terminal-blue-21-21
+    link: /docs/insights/accounts/
+  - icon: magnifying-glass
     heading: Resource Explorer
-    description: Visualize your infrastructure and group resources logically to meet business needs.
-    link: /docs/insights/resource-explorer/
-  - icon: swap-blue-21-21
+    description: Resource Search allows you to explore your resources, stacks and projects in detail.
+    link: /docs/insights/search/
+  - icon: robot-blue-21-21
     heading: Pulumi Copilot AI
     description: Ask detailed questions like "Find all untagged resources in AWS" to uncover insights and actionable recommendations.
     link: /docs/insights/copilot-ai/
