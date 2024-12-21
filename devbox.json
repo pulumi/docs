@@ -1,0 +1,21 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.13.6/.schema/devbox.schema.json",
+  "packages": [
+    "go@1.21",
+    "python@3.7",
+    "hugo@0.126",
+    "nodejs@18",
+    "dotnet-sdk@6",
+    "pulumi@3.99",
+    "pulumi-esc@latest"
+  ],
+  "env": {
+    "DEVBOX_COREPACK_ENABLED": "true",
+    "VENV_DIR": "venv"
+  },
+  "shell": {
+    "init_hook": [
+      ". $VENV_DIR/bin/activate"
+    ]
+  }
+}
