@@ -45,29 +45,29 @@ sections:
     description: Scan and sync all of your infrastructure to bring it under a single pane of glass, so you can understand the structure and status of your cloud footprint.
   - heading: Advanced Resource Search
     description: Find important insights about your cloud infrastructure using structured queries or natural language Pulumi AI assist to quickly locate resources.
-    link: /docs/insights/resource-search/
+    link: /docs/insights/search/
   - heading: Manage
     description: Refactor and structure your infrastructure into logical resource groups that map key insights with business needs.
-    link: /docs/pulumi-cloud/copilot/
+    link: /docs/insights/get-started/account-management/
   - heading: Improve
     description: Execute improvement plans for each logical resource group to support business priorities.
-    link: /docs/pulumi-cloud/copilot/
+    link: /docs/insights/get-started/using-resource-explorer/
 
 - type: full-width-cards
   heading: Featured docs
   cards:
-  - icon: lightbulb-blue-21-21
+  - icon: cloud-blue-21-21
     heading: Account Discovery
     description: Automatically scan and sync your accounts to bring all cloud resources into the Insights platform.
     link: /docs/insights/accounts/
-  - icon: magnifying-glass
+  - icon: code-tree-blue-21-21
     heading: Resource Explorer
     description: Resource Search allows you to explore your resources, stacks and projects in detail.
     link: /docs/insights/search/
-  - icon: robot-blue-21-21
+  - icon: lightbulb-blue-21-21
     heading: Pulumi Copilot AI
-    description: Ask detailed questions like "Find all untagged resources in AWS" to uncover insights and actionable recommendations.
-    link: /docs/insights/copilot-ai/
+    description: Use Pulumi Copilot to ask detailed questions like "Find all untagged resources in AWS" to uncover insights and actionable recommendations.
+    link: /docs/pulumi-cloud/copilot/
 
 - type: blue-sparkle
   heading: Why Pulumi Insights?
@@ -80,6 +80,5 @@ sections:
 
 - type: flat
   heading: Have questions?
-  description: |
-    For questions or feedback, reach out on [community Slack](https://slack.pulumi.com), [GitHub](https://github.com/pulumi), or [contact support](/support/).
+  description: <p>For questions or feedback, reach out on <a href="https://slack.pulumi.com" target="_blank">community Slack</a>, <a href="https://github.com/pulumi" target="_blank">GitHub</a>, or <a href="/support/">contact support</a>.</p>
 ---
