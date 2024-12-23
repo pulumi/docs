@@ -793,3 +793,8 @@ create the following staging resources.
   1a. `imageTagMutability`: `IMMUTABLE`
 2. [aws.ecr.LifecyclePolicy](https://www.pulumi.com/registry/packages/aws/api-docs/ecr/lifecyclepolicy/)
   2a. Expire old images when the number of images > 3
+
+## Migrating from AWS CDK
+
+For a detailed guide on migrating from AWS CDK applications to Pulumi check out
+the [Migration Guide](https://www.pulumi.com/docs/iac/adopting-pulumi/migrating-to-pulumi/from-cdk/).

@@ -326,3 +326,9 @@ $ pulumi plugin run cdk-importer -- -stack $StackName
 
 If there are any issues with importing, the tool can be run again to try the
 import again without it affecting previously imported resources.
+
+## More Info
+
+For more info on using Pulumi CDK check out the [Pulumi CDK
+Guide](https://www.pulumi.com/docs/iac/clouds/aws/guides/cdk/) or the [Pulumi
+CDK GitHub Repository](https://github.com/pulumi/pulumi-cdk) for more info.
