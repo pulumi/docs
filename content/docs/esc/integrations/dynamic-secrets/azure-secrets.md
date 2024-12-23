@@ -18,6 +18,7 @@ The `azure-secrets` provider enables you to dynamically import Secrets and Confi
 ## Example
 
 ```yaml
+values:
   azure:
     login:
       fn::open::azure-login:
