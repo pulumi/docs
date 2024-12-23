@@ -177,7 +177,7 @@ new AppStack(app, 'app-stack', {
 });
 ```
 
-To convert this to a Pulumi CDK, you would combine the two stacks into a single
+To convert this to a Pulumi CDK app, you would combine the two stacks into a single
 stack and then use `transforms` to set `protect: true` on the `DbCluster`.
 
 ```ts
@@ -240,7 +240,7 @@ class StackEast1 extends cdk.Stack {
   }
 }
 
-class AppStack extends cdk.Stack {
+class StackEast2 extends cdk.Stack {
   constructor(scope: Construct, id: string) {
     super(scope, id, {
       env: { region: 'us-east-2' },
@@ -284,7 +284,7 @@ class StackEast1 extends pulumicdk.Stack {
   }
 }
 
-class AppStack extends pulumicdk.Stack {
+class StackEast2 extends pulumicdk.Stack {
   constructor(scope: pulumicdk.App, id: string) {
     super(scope, id, {
       env: { region: 'us-east-2' },
