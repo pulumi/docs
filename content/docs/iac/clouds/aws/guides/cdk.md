@@ -796,5 +796,4 @@ create the following staging resources.
 
 ## Migrating from AWS CDK
 
-For a detailed guide on migrating from AWS CDK applications to Pulumi check out
-the [Migration Guide](https://www.pulumi.com/docs/iac/adopting-pulumi/migrating-to-pulumi/from-cdk/).
+For a detailed guide on migrating from AWS CDK applications to Pulumi check out the [Migration Guide](https://www.pulumi.com/docs/iac/adopting-pulumi/migrating-to-pulumi/from-cdk/).

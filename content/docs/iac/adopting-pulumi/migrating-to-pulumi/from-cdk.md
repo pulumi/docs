@@ -52,8 +52,7 @@ All we need to do is run `pulumi up` and the Pulumi runtime will know how to que
 
 Let's say you want to migrate from AWS CDK to Pulumi and that simply co-existing side-by-side as shown above isn't sufficient. In this case you can convert your AWS CDK application to a Pulumi CDK application using the [Pulumi CDK Adapter](https://github.com/pulumi/pulumi-cdk).
 
-Using the below example as a starting point, we will convert this CDK
-application to use Pulumi CDK.
+Using the below example as a starting point, we will convert this CDK application to use Pulumi CDK.
 
 ```ts
 import * as cdk from 'aws-cdk-lib/core';
@@ -88,8 +87,7 @@ npm install @pulumi/aws @pulumi/aws-native @pulumi/docker-build @pulumi/pulumi
 
 ### Convert the CDK Stack and App
 
-Replace the CDK `Stack` and `App` classes with Pulumi CDK `Stack` and `App`
-classes.
+Replace the CDK `Stack` and `App` classes with Pulumi CDK `Stack` and `App` classes.
 
 ```ts
 import * as pulumicdk from '@pulumi/cdk';
@@ -111,8 +109,7 @@ const app = new pulumicdk.App('app', (scope: pulumicdk.App) => {
 
 ### Deploy the Pulumi Stack
 
-Now that you have converted your AWS CDK application to a Pulumi CDK application
-you can use the Pulumi CLI to create a Pulumi Stack and deploy.
+Now that you have converted your AWS CDK application to a Pulumi CDK application you can use the Pulumi CLI to create a Pulumi Stack and deploy.
 
 ```console
 $ pulumi up
@@ -120,23 +117,18 @@ $ pulumi up
 
 ## Converting Multi-Stack CDK Applications
 
-If your CDK application contains multiple CDK Stacks they may fall into a couple
-of scenarios.
+If your CDK application contains multiple CDK Stacks they may fall into a couple of scenarios.
 
 1. You have multiple CDK Stacks that all deploy to the same environment (AWS account/region).
 2. You have multiple CDK Stacks that deploy to multiple environments
 
 ### Converting Same Environment Stacks
 
-If all of your CDK Stacks deploy to the same environment you can combine them
-all into a single Pulumi CDK Stack. Pulumi CDK Stacks do not have the same
-resource limits that CloudFormation Stacks have. You can also control
-termination protection at the resource level in Pulumi instead of at the
-CloudFormation Stack level in CDK.
+If all of your CDK Stacks deploy to the same environment you can combine them all into a single Pulumi CDK Stack.
+Pulumi CDK Stacks do not have the same resource limits that CloudFormation Stacks have.
+You can also control termination protection at the resource level in Pulumi instead of at the CloudFormation Stack level in CDK.
 
-Consider a common scenario of creating your stateful resources (e.g. an RDS
-database) in one stack and your non-stateful resources (e.g. a Lambda Function)
-in a separate Stack.
+Consider a common scenario of creating your stateful resources (e.g. an RDS database) in one stack and your non-stateful resources (e.g. a Lambda Function) in a separate Stack.
 
 ```ts
 import * as cdk from 'aws-cdk-lib/core';
@@ -177,8 +169,7 @@ new AppStack(app, 'app-stack', {
 });
 ```
 
-To convert this to a Pulumi CDK app, you would combine the two stacks into a single
-stack and then use `transforms` to set `protect: true` on the `DbCluster`.
+To convert this to a Pulumi CDK app, you would combine the two stacks into a single stack and then use `transforms` to set `protect: true` on the `DbCluster`.
 
 ```ts
 import * as pulumi from '@pulumi/pulumi';
@@ -219,9 +210,8 @@ const app = new pulumicdk.App('app', (scope: pulumicdk.App) => {
 
 ### Converting Stacks with Different Environments
 
-If your application has stacks in different environments you can convert it to
-Pulumi CDK as long as there are no dependencies between the stacks. You would
-convert each individual CDK Stack to a Pulumi CDK Stack.
+If your application has stacks in different environments you can convert it to Pulumi CDK as long as there are no dependencies between the stacks.
+You would convert each individual CDK Stack to a Pulumi CDK Stack.
 
 For example, this:
 
@@ -302,10 +292,9 @@ const app = new pulumicdk.App('app', (scope: pulumicdk.App) => {
 
 ## Converting CDK Stages
 
-An AWS CDK [Stage](https://docs.aws.amazon.com/cdk/v2/guide/stages.html) represents a group of one or more AWS CDK Stacks that are configured
-to deploy together to a particular environment. For example, taking the example
-from above where we deploy a `StatefulStack` and an `AppStack`, we would use
-stages to deploy these to different environments.
+An AWS CDK [Stage](https://docs.aws.amazon.com/cdk/v2/guide/stages.html) represents a group of one or more AWS CDK Stacks that are configured to deploy together to a particular environment.
+For example, taking the example from above where we deploy a `StatefulStack` and an `AppStack`,
+we would use stages to deploy these to different environments.
 
 ```ts
 import * as cdk from 'aws-cdk-lib/core';
@@ -359,7 +348,7 @@ class MyStage extends cdk.Stage {
   constructor(scope: Construct, id: string, props: MyStageProps) {
     super(scope, id, props);
       const stateful = new StatefulStack(app, 'stateful-stack', {
-        instanceType: props.instanceSize,
+        instanceType: props.instanceType,
       });
       new AppStack(app, 'app-stack', {
           cluster: stateful.cluster,
@@ -377,14 +366,12 @@ new MyStage(app, 'prod', {
 });
 ```
 
-The AWS CDK Stages can be converted to [Pulumi Stacks](https://www.pulumi.com/docs/iac/concepts/stacks/). Similar to CDK
-Stages, Pulumi Stacks can be used to deploy groups of resources to different environments.
+The AWS CDK Stages can be converted to [Pulumi Stacks](https://www.pulumi.com/docs/iac/concepts/stacks/).
+Similar to CDK Stages, Pulumi Stacks can be used to deploy groups of resources to different environments.
 
-In AWS CDK applications differences in configuration between environments are
-typically configured through input parameters on the Stage. In the above
-example, the `DatabaseCluster` uses a different `InstanceType` between the `dev` and `prod` environments.
-When we convert this application to Pulumi, we will move this configuration from
-the Stage input properties to [Stack Configuration](https://www.pulumi.com/docs/iac/concepts/config/)
+In AWS CDK applications differences in configuration between environments are typically configured through input parameters on the Stage.
+In the above example, the `DatabaseCluster` uses a different `InstanceType` between the `dev` and `prod` environments.
+When we convert this application to Pulumi, we will move this configuration from the Stage input properties to [Stack Configuration](https://www.pulumi.com/docs/iac/concepts/config/)
 
 When we convert the AWS CDK application we will:
 
@@ -441,16 +428,14 @@ const app = new pulumicdk.App('app', (scope: pulumicdk.App) => {
 });
 ```
 
-Once we have converted the code, we create the `dev` Pulumi Stack and set the
-`instanceType` config property.
+Once we have converted the code, we create the `dev` Pulumi Stack and set the `instanceType` config property.
 
 ```console
 $ pulumi stack init dev
 $ pulumi config set instanceType r6g.medium
 ```
 
-Then we create the `prod` Pulumi Stack and set the `instanceType` config
-property.
+Then we create the `prod` Pulumi Stack and set the `instanceType` config property.
 
 ```console
 $ pulumi stack init prod
@@ -459,13 +444,9 @@ $ pulumi config set instanceType r6g.xlarge
 
 ## Importing CDK Resources
 
-All the prior examples in this guide discuss standing up a new Pulumi CDK Stack
-and creating new AWS resources. If you want to instead have Pulumi import the
-state of your existing resources you can try the experimental [Pulumi CDK Import
-Tool](https://github.com/pulumi/pulumi-tool-cdk-importer). This tool allows you
-to specify a CDK stack to import and then the resources in that stack will be
-imported into your Pulumi Stack so that Pulumi can take over management of those
-resources.
+All the prior examples in this guide discuss standing up a new Pulumi CDK Stack and creating new AWS resources.
+If you want to instead have Pulumi import the state of your existing resources you can try the experimental [Pulumi CDK Import Tool](https://github.com/pulumi/pulumi-tool-cdk-importer).
+This tool allows you to specify a CDK stack to import and then the resources in that stack will be imported into your Pulumi Stack so that Pulumi can take over management of those resources.
 
 **1. Install the tool**
 
@@ -481,11 +462,8 @@ $ pulumi plugin run cdk-importer -- -stack $StackName
 
 **3. Run `pulumi preview` to ensure there are no diffs**
 
-If there are any issues with importing, the tool can be run again to try the
-import again without it affecting previously imported resources.
+If there are any issues with importing, the tool can be run again to try the import again without it affecting previously imported resources.
 
 ## More Info
 
-For more info on using Pulumi CDK check out the [Pulumi CDK
-Guide](https://www.pulumi.com/docs/iac/clouds/aws/guides/cdk/) or the [Pulumi
-CDK GitHub Repository](https://github.com/pulumi/pulumi-cdk) for more info.
+For more info on using Pulumi CDK check out the [Pulumi CDK Guide](https://www.pulumi.com/docs/iac/clouds/aws/guides/cdk/) or the [Pulumi CDK GitHub Repository](https://github.com/pulumi/pulumi-cdk) for more info.
