@@ -359,7 +359,7 @@ class MyStage extends cdk.Stage {
   constructor(scope: Construct, id: string, props: MyStageProps) {
     super(scope, id, props);
       const stateful = new StatefulStack(app, 'stateful-stack', {
-        instanceSize: props.instanceSize,
+        instanceType: props.instanceSize,
       });
       new AppStack(app, 'app-stack', {
           cluster: stateful.cluster,
