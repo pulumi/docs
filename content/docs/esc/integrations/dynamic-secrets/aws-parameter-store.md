@@ -18,29 +18,29 @@ The `aws-parameter-store` provider enables you to dynamically import parameters 
 ## Example
 
 ```yaml
-aws:
-  login:
-    fn::open::aws-login:
-      oidc:
-        roleArn: arn:aws:iam::123456789:role/esc-oidc
-        sessionName: pulumi-environments-session
-  params:
-    fn::open::aws-parameter-store:
-      region: us-west-1
-      login: ${aws.login}
-      get:
-        myKey:
-          name: /myNamespace/myKey
-        myKeyByVersion:
-          name: /myNamespace/myKey:1
-        myKeyByVersionLabel:
-          name: /myNamespace/myKey:stable
-        secureKey:
-          name: /myNamespace/secureKey
-          decrypt: true
-        myList:
-          name: /myNamespace/myList
-
+values:
+  aws:
+    login:
+      fn::open::aws-login:
+        oidc:
+          roleArn: arn:aws:iam::123456789:role/esc-oidc
+          sessionName: pulumi-environments-session
+    params:
+      fn::open::aws-parameter-store:
+        region: us-west-1
+        login: ${aws.login}
+        get:
+          myKey:
+            name: /myNamespace/myKey
+          myKeyByVersion:
+            name: /myNamespace/myKey:1
+          myKeyByVersionLabel:
+            name: /myNamespace/myKey:stable
+          secureKey:
+            name: /myNamespace/secureKey
+            decrypt: true
+          myList:
+            name: /myNamespace/myList
 ```
 
 ## Configuring OIDC

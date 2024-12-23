@@ -19,6 +19,7 @@ The `azure-login` provider enables you to log in to Azure using OpenID Connect o
 ## Example
 
 ```yaml
+values:
   azure:
     login:
       fn::open::azure-login:

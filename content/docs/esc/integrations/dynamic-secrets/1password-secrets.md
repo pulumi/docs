@@ -23,6 +23,7 @@ This provider is currently in **preview**.
 ## Example
 
 ```yaml
+values:
   1password:
     secrets:
       fn::open::1password-secrets:
