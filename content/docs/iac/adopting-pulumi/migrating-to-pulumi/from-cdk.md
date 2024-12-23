@@ -300,6 +300,163 @@ const app = new pulumicdk.App('app', (scope: pulumicdk.App) => {
 });
 ```
 
+## Converting CDK Stages
+
+An AWS CDK [Stage](https://docs.aws.amazon.com/cdk/v2/guide/stages.html) represents a group of one or more AWS CDK Stacks that are configured
+to deploy together to a particular environment. For example, taking the example
+from above where we deploy a `StatefulStack` and an `AppStack`, we would use
+stages to deploy these to different environments.
+
+```ts
+import * as cdk from 'aws-cdk-lib/core';
+import { Construct } from 'constructs';
+import * as s3 from 'aws-cdk-lib/aws-s3';
+import * as ec2 from 'aws-cdk-lib/aws-ec2';
+import * as rds from 'aws-cdk-lib/aws-rds';
+
+
+interface StatefulStackProps extends cdk.StackProps {
+  instanceType: ec2.InstanceType;
+}
+
+class StatefulStack extends cdk.Stack {
+  public readonly cluster: rds.IDatabaseCluster;
+  constructor(scope: Construct, id: string, props: StatefulStackProps) {
+    super(scope, id, {
+      ...props,
+      terminationProtection: true,
+    });
+
+    this.cluster = new rds.DatabaseCluster(this, 'cluster', {
+      writer: rds.ClusterInstance.provisioned('writer', {
+        instanceType: props.instanceType,
+      }),
+      ...
+    });
+  }
+}
+
+interface AppStackProps extends cdk.StackProps {
+    cluster: rds.IDatabaseCluster
+}
+
+class AppStack extends cdk.Stack {
+  constructor(scope: Construct, id: string, props: AppStackProps) {
+    super(scope, id, props);
+
+    new AppConstruct(this, 'app-construct', {
+        cluster: props.cluster,
+    })
+
+  }
+}
+
+interface MyStageProps extends cdk.StageProps {
+  instanceType: ec2.InstanceType;
+}
+
+class MyStage extends cdk.Stage {
+  constructor(scope: Construct, id: string, props: MyStageProps) {
+    super(scope, id, props);
+      const stateful = new StatefulStack(app, 'stateful-stack', {
+        instanceSize: props.instanceSize,
+      });
+      new AppStack(app, 'app-stack', {
+          cluster: stateful.cluster,
+      });
+  }
+}
+
+const app = new cdk.App();
+new MyStage(app, 'dev', {
+  instanceType: ec2.InstanceType.of(ec2.InstanceClass.R6G, ec2.InstanceSize.MEDIUM),
+});
+
+new MyStage(app, 'prod', {
+  instanceType: ec2.InstanceType.of(ec2.InstanceClass.R6G, ec2.InstanceSize.XLARGE),
+});
+```
+
+The AWS CDK Stages can be converted to [Pulumi Stacks](https://www.pulumi.com/docs/iac/concepts/stacks/). Similar to CDK
+Stages, Pulumi Stacks can be used to deploy groups of resources to different environments.
+
+In AWS CDK applications differences in configuration between environments are
+typically configured through input parameters on the Stage. In the above
+example, the `DatabaseCluster` uses a different `InstanceType` between the `dev` and `prod` environments.
+When we convert this application to Pulumi, we will move this configuration from
+the Stage input properties to [Stack Configuration](https://www.pulumi.com/docs/iac/concepts/config/)
+
+When we convert the AWS CDK application we will:
+
+* Combining the Stacks like we did in the [Multi Stack example](#converting-same-environment-stacks)
+* Remove the use of CDK Stages
+* Read the instance type from the [Pulumi Configuration](https://www.pulumi.com/docs/iac/concepts/config/).
+
+```ts
+import * as pulumi from '@pulumi/pulumi';
+import * as pulumicdk from '@pulumi/cdk';
+import * as s3 from 'aws-cdk-lib/aws-s3';
+import * as rds from 'aws-cdk-lib/aws-rds';
+
+const config = new pulumi.Config();
+const instanceType = config.require('instanceType');
+
+interface AppStackProps extends pulumicdk.StackProps {
+  instanceType: ec2.InstanceType;
+}
+
+class AppStack extends pulumicdk.Stack {
+  constructor(scope: pulumicdk.App, id: string, props: AppStackProps) {
+    super(scope, id, props);
+
+    const cluster = new rds.DatabaseCluster(this, 'cluster', {
+      writer: rds.ClusterInstance.provisioned('writer', {
+        instanceType: props.instanceType,
+      }),
+      ...
+    });
+    new AppConstruct(this, 'app-construct', {
+        cluster: cluster,
+    })
+
+  }
+}
+
+const app = new pulumicdk.App('app', (scope: pulumicdk.App) => {
+  new AppStack(app, 'app-stack', {
+    instanceType: new ec2.InstanceType(instanceType),
+  });
+}, {
+    transforms: [
+        (args: pulumi.ResourceTransformArgs): pulumi.ResourceTransformResult => {
+            if (args.type === 'aws-native:rds:DbCluster') {
+                return {
+                    props: args.props,
+                    opts: pulumi.mergeOptions(args.opts, { protect: true }),
+                };
+            }
+            return undefined;
+        },
+    ]
+});
+```
+
+Once we have converted the code, we create the `dev` Pulumi Stack and set the
+`instanceType` config property.
+
+```console
+$ pulumi stack init dev
+$ pulumi config set instanceType r6g.medium
+```
+
+Then we create the `prod` Pulumi Stack and set the `instanceType` config
+property.
+
+```console
+$ pulumi stack init prod
+$ pulumi config set instanceType r6g.xlarge
+```
+
 ## Importing CDK Resources
 
 All the prior examples in this guide discuss standing up a new Pulumi CDK Stack
