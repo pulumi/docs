@@ -79,6 +79,10 @@ As we wrap up 2024, let's look back at the significant features and improvements
   Organize secrets and configurations at scale with new grouping capabilities.
 - **[ESC Webhooks](/blog/esc-webhooks-launch/)**  
   Real-time notifications and automated actions based on environment changes.
+- **[AWS Parameter Store Integration](/blog/pulumi-esc-aws-parameter-store-support/)**  
+  Native integration with AWS Systems Manager Parameter Store for seamless import of parameters and secrets into ESC environments.
+- **[Environment Import Discovery](/blog/esc-imports-discoverability/)**  
+  Enhanced visibility into environment dependencies with new features to track downstream usage, version tags, and impact analysis for configuration changes.
 
 ### Deployment Improvements
 
