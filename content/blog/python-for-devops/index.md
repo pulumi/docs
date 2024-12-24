@@ -1,6 +1,6 @@
 ---
 title: "Python for DevOps"
-date: 2024-12-23T09:23:24-05:00
+date: 2025-1-06T09:23:24-05:00
 draft: false
 meta_desc: From quick fixes to enterprise solutions, discover 15 essential python tools. 
 meta_image: meta.png
@@ -8,6 +8,8 @@ authors:
     - adam-gordon-bell
 tags:
     - python
+    - devops
+    - iac
 social:
     twitter: >
         🚀 Unlock the power of Python for DevOps! From quick fixes to enterprise solutions, discover 15 essential tools including Django for custom dashboards, Airflow for workflow automation, and Pulumi for infrastructure as code. Transform your DevOps game with the perfect mix of rapid solutions and scalable architecture.
@@ -28,11 +30,11 @@ Have you ever had one of those moments: Elasticsearch is crashing, logs are fill
 
 That's where Python really shines. It lets you be the scrappy problem-solver who can travel up and down the stack. But Python isn't just for quick fixes. The same language that helps you hack tomorrow's solution can also build your company's long-term infrastructure.
 
-This guide covers both ends of that spectrum. I'll show you python packages for "we need it yesterday" moments, and then move into solutions that can grow with your team. And along the way I'll build [a little example service monitor and package capturer](https://github.com/adamgordonbell/service-status-monitor) to demostrate the python packages I'm covering. I'll wrap it in a CLI, in a web dashboard and deploy it to AWS, all while staying in Python.
+This guide covers both ends of that spectrum. I'll show you python packages for "we need it yesterday" moments, and then move into solutions that can grow with your team. And along the way I'll build [a little example service monitor and package capturer](https://github.com/adamgordonbell/service-status-monitor) to demonstrate the python packages I'm covering. I'll wrap it in a CLI, in a web dashboard and deploy it to AWS, all while staying in Python.
 
-So here's my list of Python libraries for DevOps work, starting from 15 to the most important last at number 1.
+So here's my list of Python libraries for DevOps work, starting from #15 to the most important last at number #1.
 
-### Dashboards / Monitoring
+### Dashboards / monitoring
 
 Let's start with building web dashboards. Long-term, it's usually better if there's an off-the-shelf tool for that specific dashboard you need. But if you can create a quick visual on a Django endpoint, you can move on to the next issue.
 
@@ -82,7 +84,7 @@ def index():
     </figcaption>
 </span>
 
-### Task Scheduling and Orchestration
+### Task scheduling and orchestration
 
 Sometimes you need to run things on a schedule. And while I love cron, sometimes you need more. Maybe you need to coordinate multiple tasks, handle retries, or manage complex job dependencies. Here's where Python can help:
 
@@ -111,7 +113,7 @@ if __name__ == "__main__":
     </figcaption>
 </span>
 
-### Network Analysis and Security
+### Network analysis and security
 
 When your network issues go beyond what tcpdump can tell you, or when you need to automate security checks, Python is here to help:
 
@@ -138,7 +140,7 @@ if __name__ == "__main__":
     </figcaption>
 </span>
 
-### Containerization and Cloud Interaction
+### Containerization and cloud interaction
 
 Sometimes you need more control over your containers than Dockerfiles can provide. Maybe you need to dynamically build images based on environment variables, or automate container management:
 
@@ -172,7 +174,7 @@ if __name__ == "__main__":
     </figcaption>
 </span>
 
-### Building Command-Line Tools
+### Building command-line tools
 
 <span style="width: 50%; float: right; margin-left: 20px;">
 <span style="text-align:center">
@@ -188,7 +190,7 @@ Every useful script eventually needs to become a proper tool. When your team sta
 - **5/4. Click/Typer:** ([Click](https://click.palletsprojects.com/), [Typer](https://typer.tiangolo.com/)) Turn your quick scripts into proper CLI tools. Instead of remembering "python [cleanup.py](http://cleanup.py) --older-than 7 --dry-run", you get tab completion, help text, and proper argument handling. Typer is particularly nice if you're using modern Python - it uses type hints to build the CLI interface.
 - **3\. Rich:** ([rich](https://rich.readthedocs.io/)) Make your terminal output actually readable. Need to display tables of data? Want progress bars for long-running tasks? Rich makes it easy to build user-friendly CLIs. I use it to turn wall-of-text logs into colored, formatted output that helps spot problems quickly.
 
-### 2. The Essential Toolkit
+### 2. The essential toolkit
 
 The foundation of any DevOps tooling consists of these essential libraries:
 
@@ -261,7 +263,7 @@ lambda_function = aws.lambda_.Function("custom-lambda",
   </figcaption>
 </span>
 
-## Bringing It All Together
+## Bringing it all together
 
 <span style="width: 50%; float: right; margin-left: 20px;">
 <span style="text-align:center">
@@ -280,7 +282,7 @@ Here's where Python excels - combining these tools to solve real problems. For e
 
 Start simple (maybe just a script with Requests and PyYAML), then gradually add more tools as needed. That's the beauty of Python in DevOps - you can start small and grow your solution naturally.
 
-## The Art of Getting Things Done
+## The art of getting things done
 
 The tools I've covered span the full spectrum of DevOps needs—from quick scripts to enterprise-grade solutions. Python's versatility makes it uniquely suited for both ends of this spectrum:
 
