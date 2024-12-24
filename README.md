@@ -75,7 +75,7 @@ The `Makefile` exposes a number of useful helpers for authoring:
 * `make ensure` resolves and installs all dependencies
 * `make lint` checks all Markdown files for correctness
 * `make format` formats all applicable files to ensure they conform to style guidelines
-* `make serve` runs the Hugo server locally at http://localhost:1313 and watches for changes
+* `make serve` runs the Hugo server locally at http://localhost:1313 and watches for changes. You can set `BUILD_FUTURE=false` to simulate production behavior by excluding future-dated content (e.g., `BUILD_FUTURE=false make serve`)
 * `make serve-all` does the same as `make serve`, but also watches for changes to CSS and JS source files
 * `make build` generates the website and writes it to `./public`
 * `make build-assets` builds only the CSS and JavaScript asset bundles
@@ -237,7 +237,7 @@ Engage with our community to elevate your developer experience:
 Delve deeper into Pulumi with additional resources:
 
 - [Get Started with Pulumi](https://www.pulumi.com/docs/get-started/?utm_campaign=pulumi-docs-github-repo&utm_source=github.com&utm_medium=docs-resources): Deploy a simple application in AWS, Azure, Google Cloud, or Kubernetes using Pulumi.
-- [Registry](https://www.pulumi.com/registry/?utm_campaign=pulumi-docs-github-repo&utm_source=github.com&utm_medium=docs-resources): Search for packages and learn about the supported resources you need. Install the package directly into your project, browse the API documentation, and start building.
+- [Registry](https://www.pulumi.com/registry/?utm_campaign=pulumi-docs-github-repo&utm_source=github.com&utm_medium=docs-resources) - Search for packages and learn about the supported resources you need. Install the package directly into your project, browse the API documentation, and start building.
 - [Pulumi Blog](https://www.pulumi.com/blog/?utm_campaign=pulumi-docs-github-repo&utm_source=github.com&utm_medium=docs-resources) - Stay in the loop with our latest tech announcements, insightful articles, and updates.
 - [Try Pulumi AI](https://www.pulumi.com/ai/?utm_campaign=pulumi-docs-github-repo&utm_source=github.com&utm_medium=docs-resources) - Use natural-language prompts to generate Pulumi infrastructure-as-code programs in any language.
 
