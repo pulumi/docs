@@ -1,6 +1,6 @@
 ---
 title: "Python for DevOps"
-date: 2025-1-06T09:23:24-05:00
+date: 2025-01-06T00:23:24-05:00
 draft: false
 meta_desc: From quick fixes to enterprise solutions, discover 15 essential python tools. 
 meta_image: meta.png
