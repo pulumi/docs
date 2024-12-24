@@ -74,7 +74,7 @@ As we wrap up 2024, let's look back at the significant features and improvements
 ### General Availability & Key Enhancements
 
 - **[ESC General Availability](/blog/pulumi-esc-ga/)**  
-  GA of Pulumi ESC -redefining secrets management with features like dynamic credentials, hierarchical environments, a secrets broker with external stores like AWS Secrets Manager, and Kubernetes operators for runtime integration.
+  GA of Pulumi ESC - redefining secrets management with features like dynamic credentials, hierarchical environments, a secrets broker with external stores like AWS Secrets Manager, and Kubernetes operators for runtime integration.
 - **[ESC Projects & Environment Tags](/blog/esc-projects-environment-tags-launch/)**  
   Organize secrets and configurations at scale with new grouping capabilities.
 - **[ESC Webhooks](/blog/esc-webhooks-launch/)**  
