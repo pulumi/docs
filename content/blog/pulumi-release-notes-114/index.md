@@ -9,22 +9,26 @@ authors:
 tags:
   - releases
 social:
-  twitter: "🚀 From IaC enhancements to expanded ESC capabilities, Pulumi Insights 2.0 and key AI innovations - walk through the product release notes for a summary of what's been shipped this year"
-  linkedin: "As we wrap up 2024, let's look back at the significant features and improvements Pulumi has delivered- from Infrastructure as Code enhancements to expanded Pulumi ESC capabilities to the launch of Pulumi Insights 2.0 and key AI innovations, here's what's new in Pulumi:
+  twitter: "🚀 From IaC enhancements to expanded ESC capabilities, Pulumi Insights 2.0 and key AI innovations - see what's new in Pulumi since July →"
+  linkedin: "From Infrastructure as Code (IaC) enhancements to expanded Environment as Code (ESC) capabilities, the launch of Pulumi Insights 2.0 and key AI innovations, here's what's new in Pulumi since July:
 
 Key highlights include:
-• AWS Cloud Control Provider GA
-• ESC Projects & Groups
-• Pulumi Copilot REST API & System Prompts
+• Pulumi ESC General Availability
+• Pulumi Insights 2.0 with Resource Explorer
 • Enhanced Kubernetes support with Auto Mode & Operator 2.0
-• Insights 2.0 with Resource Explorer
+• Visual Studio Code Extension
 
-Check out all the new features empowering teams to build better cloud infrastructure, and faster."
+Check out all the new features empowering teams to build better cloud infrastructure."
 ---
 
-As we wrap up 2024, let's look back at the significant features and improvements Pulumi has delivered since July. From Infrastructure as Code (IaC) enhancements to expanded Environment as Code (ESC) capabilities, the launch of Pulumi Insights 2.0 and key AI innovations, here’s what’s new:
+As we wrap up 2024, let's look back at the significant features and improvements Pulumi has delivered in the last half of the year. Some key highlights:
 
----
+• Pulumi ESC General Availability
+• Pulumi Insights 2.0 with Resource Explorer
+• Enhanced Kubernetes support
+• Pulumi Visual Studio Code Extension
+
+<!--more-->
 
 ## Pulumi Infrastructure as Code
 
