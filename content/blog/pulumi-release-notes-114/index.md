@@ -102,7 +102,7 @@ As we wrap up 2024, let's look back at the significant features and improvements
 - **[Account Discovery Preview](/blog/insights-cloud-account-discovery/)**  
   New capability to discover and manage all cloud resources regardless of how they were created, with AI-powered search and comprehensive resource visibility across your infrastructure.
 
-### Pulumi Pulumi Copilot Enhancements
+### Pulumi Copilot Enhancements
 
 - **[REST API Integration](/blog/pulumi-copilot-rest/)**: Enabling programmatic access to Pulumi Copilot's AI capabilities through a REST API, supporting multi-user interactions, automation of queries, and integration with workplace collaboration platforms.
 - **[System Prompts](/blog/copilot-system-prompts/)**: New organization-level customization allowing teams to set default preferences for programming languages, cloud providers, compliance guidelines, and infrastructure standards.
