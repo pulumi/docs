@@ -38,9 +38,9 @@ As we wrap up 2024, let's look back at the significant features and improvements
   Major update introducing a horizontally scalable architecture, enhanced security features, and improved customization for the Pulumi Kubernetes Operator.
 - **[EKS Auto Mode](/blog/aws-eks-auto-mode/)**  
   A groundbreaking feature that simplifies EKS cluster management by automatically handling compute, storage, and networking configurations based on AWS’s operational expertise.
-- **[Pulumi EKS V3 Release](/blog/eks-v3-release/)**  
+- **[Pulumi EKS 3.0 Release](/blog/eks-v3-release/)**  
   Update introducing support for Amazon Linux 2023, Access Entries for IAM integration, EKS managed addons, and enhanced security features.
-- **[Improved Kubernetes Await Logic](/blog/improved-kubernetes-await-logic/)**
+- **[Pulumi Kubernetes Await Logic](/blog/improved-kubernetes-await-logic/)**
   Better resource dependency tracking, improved error reporting, faster deletions with propagation policies, and custom readiness criteria support.
 
 ### Provider Updates
