@@ -2,24 +2,24 @@
 title: "The Past 6 Months of Pulumi Releases"
 date: 2024-12-23T13:35:41-08:00
 draft: false
-meta_desc: A comprehensive overview of Pulumi's major feature releases from July to December 2024, including Infrastructure as Code improvements, ESC enhancements, and Pulumi AI innovations.
+meta_desc: Explore Pulumi's major releases from July to December 2024, featuring Infrastructure as Code improvements, ESC enhancements, and AI innovations.
 meta_image: meta.png
 authors:
   - meagan-cojocar
 tags:
   - releases
 social:
-  twitter: "🚀 Check out Pulumi's biggest releases from H2 2024! From CDK on Pulumi GA to ESC enhancements and AI-powered features, see what's new in cloud engineering."
-  linkedin: "Exciting updates from Pulumi in H2 2024! 
+  twitter: "🚀 From IaC enhancements to expanded ESC capabilities, Pulumi Insights 2.0 and key AI innovations - walk through the product release notes for a summary of what's been shipped this year"
+  linkedin: "As we wrap up 2024, let's look back at the significant features and improvements Pulumi has delivered- from Infrastructure as Code enhancements to expanded Pulumi ESC capabilities to the launch of Pulumi Insights 2.0 and key AI innovations, here's what's new in Pulumi:
 
-We've shipped major improvements across our Infrastructure as Code platform, Environment as Code (ESC), and AI capabilities. Highlights include:
+Key highlights include:
+• AWS Cloud Control Provider GA
+• ESC Projects & Groups
+• Pulumi Copilot REST API & System Prompts
+• Enhanced Kubernetes support with Auto Mode & Operator 2.0
+• Insights 2.0 with Resource Explorer
 
-• CDK on Pulumi GA
-• Enhanced Kubernetes support
-• ESC Projects and Groups
-• Pulumi Copilot new features and improvements
-
-Read the full release notes to learn more about our latest innovations in cloud engineering."
+Check out all the new features empowering teams to build better cloud infrastructure, and faster."
 ---
 
 As we wrap up 2024, let's look back at the significant features and improvements Pulumi has delivered since July. From Infrastructure as Code (IaC) enhancements to expanded Environment as Code (ESC) capabilities, the launch of Pulumi Insights 2.0 and key AI innovations, here’s what’s new:
@@ -54,14 +54,14 @@ As we wrap up 2024, let's look back at the significant features and improvements
 
 ### Core Platform Features
 
-- **[DependsOn for Provider Functions](https://www.pulumi.com/blog/dependson-provider-functions/)**  
-  Manage explicit dependencies between provider functions for more accurate execution in complex deployments.
 - **[Import Improvements](https://www.pulumi.com/blog/import-improvements/)**  
   Simplify bringing existing cloud resources under Pulumi management.
 - **[Pulumi Visual Studio Code Extension](https://www.pulumi.com/blog/pulumi-vscode-extension/)**  
   Enhanced debugging in the IDE, Pulumi YAML support, and ESC management within VS Code.
-- **[Pulumi Docker Containers](https://www.pulumi.com/blog/docker-containers/)**  
-  Versioned images with pre-installed tools for Python, Node.js, and .NET.
+- **[Pulumi Docker Image Improvements](https://www.pulumi.com/blog/docker-containers/)**  
+  Versioned images with pre-installed tools for Python, Node.js, and .NET. Pulumi Deployments now supports setting the version of the Node.js and Python runtimes used in the Deployment environment.
+- **DependsOn for Provider Functions**  
+  Manage explicit dependencies between provider functions for more accurate execution in complex deployments.
 
 ---
 
