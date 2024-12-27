@@ -82,7 +82,23 @@ Because you were looking for the word "pie", you also retrieved a recipe for a S
 
 Now let's formalize this a bit. Recall measures the ratio of the relevant documents retrieved to the total number of relevant docuemtns in RAG:
 
+TODO
+
+old:
+
 $$Recall = \frac{N(Retrieved\_documents \cap Relevant\_documents)}{N(Relevant\_documents)}$$
+
+fixed1:
+
+$$Recall = \frac{N(\text{Retrieved\_documents} \cap \text{Relevant\_documents})}{N(\text{Relevant\_documents})}$$
+
+fixed2:
+
+$$Recall = \frac{N(Retrieved\text{\_}documents \cap Relevant\text{\_}documents)}{N(Relevant\text{\_}documents)}$$
+
+alternative
+
+$$Recall = \frac{N(\text{RetrievedDocuments} \cap \text{RelevantDocuments})}{N(\text{RelevantDocuments})}$$
 
 Where
 
