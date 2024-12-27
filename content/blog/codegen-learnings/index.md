@@ -64,15 +64,7 @@ While all three of the above can be conceptually called the RAG, only the last i
 > "Generate TypeScript code for S3 Bucket, the AWS resource defined in package `@pulumi/aws`, type `aws.s3.Bucket`
 > with its schema defined as follows: ...
 
-While we had to rely on some guesswork to come up with this prompt, the good thing is that this process can be iterative - if we don't get all of it right the first time, we can try again with additional information that will help us refine the results. This is an important point we return to later in the post. <!-- ref to self-debugging -->
-
-### Full text vs semantic search
-
-The "S3 Bucket" search term happens to be easily searchable using traditional text search operations (such as SQL `LIKE` operator).
-
-But imagine if the user had asked for a "simple storage solution in AWS". Generating code for such a query requires a _semantic_ understanding of the query, i.e. the fact that "simple storage" likely refers to AWS' Simple Storage Service, i.e. the S3.
-
-To support both types of search, the industry has adopted an approach known as the "hybrid search", in which the results of full-text search and semantic search are combined to provide the final result. We will cover that in more detail later in the post, but we need to take another digression that will help us understand the challenges with the search - good ingredients take time so stay patient!
+While we had to rely on some guesswork to come up with this prompt, fortunately this process can be iterative - if we don't get all of it right the first time, we can try again with additional information that will help us refine the results. This is an important point we return to later in the post. <!-- ref to self-debugging -->
 
 ### Assessing search quality using recall and precision
 
@@ -93,7 +85,7 @@ Good recall means that many documents relevant to the query were retrieved.
 
 $$Precision = \frac{N(Retrieved \cap Relevant)}{N(Retrieved)}$$
 
-Where $N(Retrieved\_documents)$ is the total number of documents that were retrieved.
+Where $N(Retrieved)$ is the total number of documents that were retrieved.
 
 High precision means that many of the retrieved documents were relevant.
 
@@ -106,61 +98,112 @@ Precision and recall are essential in understanding the information retrieval qu
 Fortunately, other metrics that often can effectively estimate retrieval quality have been developed. We have found a metric that can predict, with some degree of accuracy, whether the generated code will successfully compile. For this metric, we compare the _tokens_ present in the prompted produced by the LLM with the number of tokens present in the actually generated code. (By token here we understand a compiler token - an identifier such as the name of a class, method or a field and not a traditional LLM token concept),
 Intuitively, if a token present in the prompt also appears in the generated program, we can assume that the token effectively contributed to the generated program. Tokens in the generated program that were not part of the prompt are not necessarily wrong but they are less trusted (they can come from the LLM built-in knowledge or were, ahem, hallucinated)
 
-1:
-$$prompt \ coverage = \frac{N(Tokens\_in\_prompt \cap Tokens\_in\_code)}{N(Tokens\_in\_code)}$$
-
-2:
-$$prompt \ coverage = \frac{N(\text{Tokens\_in\_prompt} \cap \text{Tokens\_in\_code})}{N(\text{Tokens\_in\_code})}$$
-
-3:
-
-$$prompt \ coverage = \frac{N(\text{Tokens_in_prompt} \cap \text{Tokens_in_code})}{N(\text{Tokens_in_code})}$$
-
-4:
 $$prompt \ coverage = \frac{N(\text{Tokens in prompt} \cap \text{Tokens in code})}{N(\text{Tokens in code})}$$
 
 <!-- Note: our documents call is Recall, which is not how industry uses this term (see above) -->
 
 Prompt coverage is a metric we can observe in production, and it's one of several metrics we use when updating providers to ensure we haven't regressed the quality of the RAG.
 
+### Semantic search with vector embeddings
+
+Semantic search is based on the conceptual similarity of the term you're looking for with the elements in the data store. For example, searching for "dumplings" can return terms like pierogi and gyoza - words with different spelling but both representing different types of filled dough preparations.
+
+A common way to determine the similarity between the two strings is to first turn these strings into _vector embeddings_ - arrays of floating point values representing the semantic meaning of each string - and then calculate the _cosine similarity_ between the two vectors, which is the cosine of the angle between the vectors. [Various methods](https://huggingface.co/blog/matryoshka) of producing vector embeddings are fascinating but cannot be covered here in depth.
+
+For Pulumi code generation we are using the OpenAI's [Ada-002 embedding model](https://medium.com/@siladityaghosh/a-deep-dive-into-openais-text-embedding-ada-002-the-power-of-semantic-understanding-7072c0386f83) which at this moment represents a good balance between performance and cost, but is by no means the only model available.
+
+Producing vector embeddings from the user query is the standard approach in this situation, however for Pulumi code generator we added a little twist - to increase the odds of getting more relevant information from the Registry (i.e. to increase the recall, see above) we first make an LLM call to generate a small set of relevant search terms that will produce an array of vector embeddings.
+
 <div style="text-align: center; width: 50%; margin: 0 auto;">
-    <img src="flow.png" alt="" style="width: 100%;">
+    <img src="flow-embeddings.png" alt="" style="width: 100%;">
     <figcaption>
-        <i>Flow of blah</i>
+        <i>Getting vector embeddings from user query</i>
     </figcaption>
 </div>
 
-more text...
+We then use the array of vector embeddings to retrieve the set of relevant documents from the Registry.
+
+### Full text vs semantic search
+
+While semantic search is essential for any "intelligent" information retrieval system, we must not forget that there exist simple and effective methods for text search. The "S3 Bucket" part of the user search happens to be easily searchable using traditional text search operations (such as SQL `LIKE` operator).
+
+To be effective, our RAG must be able to handle queries that require semantic understanding (such as "simple storage service in AWS") as well as the traditional text search to support situations where the user knows exactly what they are looking for. To that end, the industry has adopted an approach known as the "hybrid search", in which the results of full-text search and semantic search are combined to provide the final result.
+
+For each of these search terms we generate a query that combines the full text search with the semantic search. The resulting documents are then evaluated based on the following parameters:
+
+- _Dense score_: Vector similarity using cosine distance between query embedding and stored embeddings
+- _Sparse score_: Text search relevance using PostgreSQL's full-text search (ts_rank_cd)
+
+Both the dense and the sparse scores contribute to the final score that is used to sort the documents. Even though the final score is the average of the two in our current implementation, it would not be correct to say that they have the same weight, or the influence on the end result. This is so because the normalization of the scores must take into account their distribution in the real-world queries and calculating that is quite complex.
+
+Boosting the influence of one score relative to the other is an area we're actively exploring, and achieving the optimal result depends highly on what parameters we decide to optimize for - we will touch on that later in the post.
+
+Finally, we apply the rank-based decay process - a scoring technique where results are penalized based on their position in the ranking. This creates separation between results that might have similar initial scores and gives preference to results that appear earlier in the ranking.
+
+### Pruning the results
+
+The approach we've taken for Pulumi code generator is to first get as many relevant documents as possible (thus increasing the recall) and then reduce that set to only retain the most relevant documents (thus increasing the precision).
+
+Filtering out irrelevant documents is important because many providers have similarly-named types and adding them to the prompt would confuse the LLM leading to hallucinations. There is also a practical concern - large prompts are slow and expensive, even within the limits of the supported context window limits.
+
+In Pulumi registry search, we limit the number of documents to 10 based on their relevance score, and limit the total number of tokens for the prompt to 20K. These numbers are something we continue to experiment with and represent something we've seen good results with, but likely are not optimal.
+
+### Prompt generation
+
+We're now ready to create the system prompt for the LLM! We've already discussed some of the elements needed to build the effective prompt - the original user query, the search terms and the vector embeddings that produce the set of documents that will guide the code generation process.
+
+There is another element that goes into the prompt - a concise set of instructions produced by an LLM call based on the original user's query. The approach when the output of one prompt is used as input for another is known as "prompt chaining", and we used it to guide the code generator to produce the code that satisfies the requirements of the user and their organization. For our query, this set of instructions can look as follows:
+
+> Create an S3 bucket using Pulumi in TypeScript using the following steps:
+>
+> 1. Import the necessary Pulumi AWS package.
+> 2. Define a new S3 bucket resource with basic configuration.
+> 3. Export the bucket name as an output.
+
+<div style="text-align: center; width: 50%; margin: 0 auto;">
+    <img src="retrieval.png" alt="" style="width: 100%;">
+    <figcaption>
+        <i>Composition of the system prompt for code generation</i>
+    </figcaption>
+</div>
+
+Finally, we use the resulting prompt to call the LLM and ask it to generate the code. We're done!
+
+### Self-debugging
+
+Unfortunately, this isn't always the final step of the process. Despite our best efforts, the code produced by the LLM will not always be correct.
+
+At this point, it's worth pondering what "correct code" means. The generated program might have following problems:
+
+- It might be syntactically or semantically incorrect, i.e. it might not compile or fail to typecheck.
+- It might fail at runtime - for example if refers to a non-existing resource, a region and so on.
+- It might run "successfully" but not do what the user intended - either because the user did not express themselves clearly or because their request was misunderstood.
+- Finally, the code might run and do exactly what the user wants, but the user's intent leads to an undesired outcome, for example a loss of an asset or a security vulnerability.
+
+Most of these problems can be solved but many solutions go well outside of the domain of code generation. The first of these problems can be addressed by the approach known as "self-debugging": we try to typecheck the generated program, and if it doesn't compile, feed the errors back into the prompt and ask the LLM to try again. We repeat the process until the program typechecks, or until the final number of iterations has been reached.
+
+In our experience with Pulumi code generator, many generated TypeScript programs that fail to typecheck contain only a few errors, and can be fixed in one or two self-debug iterations.
+
+Monitoring these typechecking errors in production can also provide valuable insight into the quality of the RAG, and even suggest specific solutions. For example, failure to typecheck a member-access expression is a likely indicator of a missing type schema (a recall problem), or a "wrong" schema brought in by an irrelevant document (a precision problem).
+
+Self-debugging can also be extended to include the `pulumi preview` command, which is a "dry run" operation before the actual deployment and can detect many real or potential problems such as destructive actions, incorrect configurations that cannot be detected at compile time, dependency conflicts and policy violations.
+
+## Running Pulumi code generator in production
+
+TODO
+
+### Evaluate code quality in production
+
+When dealing with an inherently probabalistic system, no amount of pre-production testing can guarantee the correct behavior of the tool when it runs in production. The testing is necessarily a defense in depth. What's needed is:
+
+1. Experimentation framework to run "what if" scenarios against a large enough test bed.
+2. Local evals - "it works on my machine" but it's better than nothing.
+3. Consistent and repeatable results (use 0 temperature).
+4. Component testing to test RAG quality, such as recall, precision and prompt coverage.
+5. Production monitoring
+6. Customer reports and anecdotal data. TODO: we look at every "thumbs down" report
 
 <!--raw material 
-
-1.1. "generate code for S3 bucket" -> get search terms:
-
-```
-[
-  "AWS S3 bucket",
-  "Pulumi AWS S3",
-  "create S3 bucket Pulumi TypeScript",
-]
-```
-
-For each of these search terms we generate a vector embedding, which is an array of 1536 elements. 
-These vector embeddings serve as input for the registry search, together with the search terms themselves.
-
-For each of these search terms we generate a combined fullTextSearchQuery + semanticSearchQuery
-
-- dense_score: Vector similarity using cosine distance (<#> operator) between query embedding and stored embeddings
-- sparse_score: Text search relevance using PostgreSQL's full-text search (ts_rank_cd)
-- Rank-based decay
-
-Rank-based decay is a scoring technique where results are penalized based on their position in the ranking, using an exponential decay function: score * (0.9 ^ rank)
-
-Each subsequent result gets increasingly penalized. This achieves two things:
-Creates separation between results that might have similar initial scores
-Gives preference to results that appear earlier in the ranking
-This is useful in search systems to help differentiate between similarly scored results while maintaining a reasonable scoring range.
-
-In Pulumi registry search, rank-based decay is used when we need to limit the size of the resulting prompt to 20K tokens (TODO: no need to mention the size)
 
 1.2. get multiple "Pulumi Registry schema" elements (40 in our case, 29 unique) - some of them less relevant. 
 (We call them tokens internally but they are really type names)
@@ -209,13 +252,6 @@ They are then sorted by their density score.
 
 Resulting generated prompt can be 1K or more lines of Yaml
 
-2. Hybrid search - why is it needed?
-  Examples: 
-    - "I want a simple storage solution for AWS", vector search
-    - "Create an S3 BucketV2", FTS
-
-3. Explain vector embeddings
-
 4. Full text search and BM25
 
 BM25: 
@@ -254,19 +290,5 @@ How do we assess the quality of our RAG? Intuitively, we want two things to be t
 - Recall
 - Typecheck
 - `pulumi up` - a "dry run" before the actual deployment and can detect many real or potential problems such potentially destructive actions, incorrect configurations that cannot be detected at compile time, dependency conflicts and policy violations. 
-
-## Self-debugging
-
-aa
-
-## Evaluate code quality in production
-
-When dealing with an inherently probabalistic system, no amount of testing can really ensure correct behavior of the tool when it runs in production. The testing is necessarily a defense in depth:
-
-1. Experimentation framework to run "what if" scenarios against a large enough test bed.
-2. Local evals - "it works on my machine" but it's better than nothing.
-3. Component testing to test RAG quality, such as recall
-4. Production monitoring
-5. Customer reports and anecdotal data.
 
 -->
