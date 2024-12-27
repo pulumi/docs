@@ -82,32 +82,16 @@ Because you were looking for the word "pie", you also retrieved a recipe for a S
 
 Now let's formalize this a bit. Recall measures the ratio of the relevant documents retrieved to the total number of relevant docuemtns in RAG:
 
-TODO
-
-old:
-
-$$Recall = \frac{N(Retrieved\_documents \cap Relevant\_documents)}{N(Relevant\_documents)}$$
-
-fixed1:
-
-$$Recall = \frac{N(\text{Retrieved\_documents} \cap \text{Relevant\_documents})}{N(\text{Relevant\_documents})}$$
-
-fixed2:
-
-$$Recall = \frac{N(Retrieved\text{\_}documents \cap Relevant\text{\_}documents)}{N(Relevant\text{\_}documents)}$$
-
-alternative
-
-$$Recall = \frac{N(\text{RetrievedDocuments} \cap \text{RelevantDocuments})}{N(\text{RelevantDocuments})}$$
+$$Recall = \frac{N(Retrieved \cap Relevant)}{N(Relevant)}$$
 
 Where
 
-- $N(Retrieved\_documents \cap Relevant\_documents)$ is the number of documents that are both retrieved and relevant.
-- $N(Relevant\_documents)$ is the total number of relevant documents in the database.
+- $N(Retrieved \cap Relevant)$ is the number of documents that are both retrieved and relevant.
+- $N(Relevant)$ is the total number of relevant documents in the database.
 
 Good recall means that many documents relevant to the query were retrieved.
 
-$$Precision = \frac{N(Retrieved\_documents \cap Relevant\_documents)}{N(Retrieved\_documents)}$$
+$$Precision = \frac{N(Retrieved \cap Relevant)}{N(Retrieved)}$$
 
 Where $N(Retrieved\_documents)$ is the total number of documents that were retrieved.
 
@@ -117,16 +101,36 @@ Naturally, an effective RAG maximizes both the recall and the precision. It's [b
 
 ### Practical concerns
 
-Precision and recall are essential in understanding the information retrieval quality, they are quite hard to measure in practice. Unlike a cookbook, Pulumi registry contains thousands of ever changing documents, and evaluating how many of them are relevant for every user-submitted query is impractical making recall evaluation for live traffic next to impossible. Things a little easier with precision, where we're dealing with a small number of documents, but even that metric requires a non-trivial evaluation of relevance, which requires an LLM call or a human judge where the number of documents is small.
+Precision and recall are essential in understanding the information retrieval quality, but they are quite hard to measure in practice. Unlike a cookbook, Pulumi registry contains thousands of ever changing documents, and evaluating how many of them are relevant for every user-submitted query is impractical making recall evaluation for live traffic next to impossible. Things a little easier with precision, where we're dealing with a small number of documents, but even that metric requires a non-trivial evaluation of relevance, which requires an LLM call or a human judge where the number of documents is small.
 
 Fortunately, other metrics that often can effectively estimate retrieval quality have been developed. We have found a metric that can predict, with some degree of accuracy, whether the generated code will successfully compile. For this metric, we compare the _tokens_ present in the prompted produced by the LLM with the number of tokens present in the actually generated code. (By token here we understand a compiler token - an identifier such as the name of a class, method or a field and not a traditional LLM token concept),
 Intuitively, if a token present in the prompt also appears in the generated program, we can assume that the token effectively contributed to the generated program. Tokens in the generated program that were not part of the prompt are not necessarily wrong but they are less trusted (they can come from the LLM built-in knowledge or were, ahem, hallucinated)
 
-$$prompt \ coverage = \frac{N(Tokens\_in\_prompt \cap Tokens\_in\_code)}{N(Tokens\_in\_code)} $$
+1:
+$$prompt \ coverage = \frac{N(Tokens\_in\_prompt \cap Tokens\_in\_code)}{N(Tokens\_in\_code)}$$
+
+2:
+$$prompt \ coverage = \frac{N(\text{Tokens\_in\_prompt} \cap \text{Tokens\_in\_code})}{N(\text{Tokens\_in\_code})}$$
+
+3:
+
+$$prompt \ coverage = \frac{N(\text{Tokens_in_prompt} \cap \text{Tokens_in_code})}{N(\text{Tokens_in_code})}$$
+
+4:
+$$prompt \ coverage = \frac{N(\text{Tokens in prompt} \cap \text{Tokens in code})}{N(\text{Tokens in code})}$$
 
 <!-- Note: our documents call is Recall, which is not how industry uses this term (see above) -->
 
 Prompt coverage is a metric we can observe in production, and it's one of several metrics we use when updating providers to ensure we haven't regressed the quality of the RAG.
+
+<div style="text-align: center; width: 50%; margin: 0 auto;">
+    <img src="flow.png" alt="" style="width: 100%;">
+    <figcaption>
+        <i>Flow of blah</i>
+    </figcaption>
+</div>
+
+more text...
 
 <!--raw material 
 
