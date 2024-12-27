@@ -25,7 +25,7 @@ For example, AWS enables you to divide you infrastructure into regions and Insig
 - Child account (region): `insights-aws-account/us-central-1`
 - Child account (region): `insights-aws-account/us-west-1`
 
-It's important to note that if you **San** or **Delete** the `insights-aws-account` account, Pulumi applies this action to all child accounts.
+It's important to note that if you **Scan** or **Delete** the `insights-aws-account` account, Pulumi applies this action to all child accounts.
 
 For a detailed explanation and more examples of how child accounts and hierarchies work see the [Insights accounts documentation](/docs/pulumi-cloud/insights/accounts/#account-hierarchies)
 

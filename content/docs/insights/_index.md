@@ -10,7 +10,7 @@ menu:
 expanded_menu_ids:
     - insights-get-started
     - insights-concepts
-meta_desc: Pulumi Insights provides intelligent infrastructure management with AI-powered, asset management, and compliance remediation across all your cloud resources.
+meta_desc: Pulumi Insights is an intelligent infrastructure management service to discover, understand, manage, and improve any cloud infrastructure.
 meta_image: /images/docs/meta-images/insights-meta.png
 h1: Pulumi Insights Documentation
 description: |
@@ -28,7 +28,7 @@ sections:
 - type: flat
   heading: Overview
   description_md: |
-    Pulumi Insights is an intelligent infrastructure management service to discover, understand, manage, and improve any cloud infrastructure, including resources not provisioned by Pulumi IaC such as AWS CloudFormation, Microsoft ARM, HashiCorp Terraform, or even manually. Insights improves security, compliance, and efficiency through AI-powered asset and compliance management.
+    Pulumi Insights is an intelligent infrastructure management service to discover, understand, manage, and improve any cloud infrastructure, including resources not provisioned by Pulumi IaC such as AWS CloudFormation, Microsoft ARM, Terraform, or those created manually. Insights improves security, compliance, and efficiency through AI-powered asset and compliance management.
 
     With Pulumi Insights, you can:
     - **Stay secure**: Detect security violations and remediate using security best practices.
@@ -42,7 +42,7 @@ sections:
   cards:
   - heading: Discover
     link: /docs/insights/concepts/
-    description: Scan and sync all of your infrastructure to bring it under a single pane of glass, so you can understand the structure and status of your cloud footprint.
+    description: Scan and sync all of your infrastructure to bring it under a single pane of glass, so you can understand the structure and status of your with footprint.
   - heading: Advanced Resource Search
     description: Find important insights about your cloud infrastructure using structured queries or natural language Pulumi AI assist to quickly locate resources.
     link: /docs/insights/search/

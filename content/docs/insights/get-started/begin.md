@@ -66,9 +66,7 @@ This will set up a trust relationship to allow Pulumi Cloud to assume the role u
             },
             "Condition": {
                 "StringEquals": {
-                    "api.pulumi.com/oidc:aud": [
-                        "pulumi"
-                    ]
+                    "api.pulumi.com/oidc:aud": "aws:<ORG_NAME>"
                 }
             }
         }

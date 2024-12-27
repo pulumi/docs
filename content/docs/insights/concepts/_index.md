@@ -17,19 +17,19 @@ Pulumi Insights provides advanced search, analytics, and AI for your infrastruct
 
 It provides:
 
-- **Resource Search**: Explore all of your resources under management.
+- **Resource Search**: Explore all of your resources under management by stack or account.
   Filter, group, search, and sort resources by stack, project, or a number of other dimensions.
 
 - **Resource Search Aggregates**: See aggregates at a glance for your resources under management.
   Start with a birds-eye view of your infrastructure, and leverage features like search, grouping, and filtering to dig deeper.
+
+- **Cloud Import**: Bring your own cloud provider account and import all your existing resources into Pulumi to see how things break down. Zero code required.
 
 - **Resource Search Favoriting and Sharing**: Save your updated view as a favorite in the left nav like stacks or share it with your teammates.
 
 - **Resource Search AI Assist**: (experimental) Use natural language processing to help craft search queries to explore your data.
 
 - **Data Export**: Export your Pulumi resources into your business intelligence tool of choice to go even further.
-
-- **Cloud Import**: Bring your own cloud provider account and import all your existing resources into Pulumi to see how things break down. Zero code required.
 
 ## Resource search
 
