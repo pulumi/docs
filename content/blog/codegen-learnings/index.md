@@ -59,7 +59,9 @@ To fulfil the request, the system needs to intuit the following:
 - The **programming language**. This information can again come directly from the organizational preferences, or from the user's prior conversations.
 - The information about the **type** (or types) that must be created - its name and schema, the package it is in, and the capabilities it supports.
 
-While all three of the above can be conceptually called the RAG, only the last information is actually stored in the Registry. We can now expand the original user query into the following system prompt that is going to guide the code generation:
+While all three of the above can be conceptually called the RAG, only the last information is actually stored in the Registry.
+
+Putting it all together, we can now expand the original user query into the following prompt that is going to guide the code generation:
 
 > "Generate TypeScript code for S3 Bucket, the AWS resource defined in package `@pulumi/aws`, type `aws.s3.Bucket`
 > with its schema defined as follows: ...
@@ -68,9 +70,9 @@ While we had to rely on some guesswork to come up with this prompt, fortunately 
 
 ### Assessing search quality using recall and precision
 
-To assess how good our RAG is, we need to first understand the two fundamental concepts used in the information retrieval systems: the _precision_ and the _recall_. Imagine that you're looking for an apple pie recipes in one of Jamie Oliver's cookbooks. The book has a recipe for a classic American apple, a Dutch apple pie and a modern take on a French apple tart. Due to the book's narrative approach with the recipes woven into the stories and context, you've managed to retrieve only the first two recipes but failed to consider the French apple tart. Having succeeded in retrieving 2 ouf 3 relevant documents, you have achieved a **67% recall**.
+To assess how good our RAG is, we need to first understand the two fundamental concepts used in the information retrieval systems: the _recall_ and the _precision_. Imagine that you're looking for apple pie recipes in one of Jamie Oliver's cookbooks. The book has a recipe for a classic American apple pie, a Dutch apple pie and a modern take on a French apple tart. Due to the book's narrative approach with the recipes woven into the stories and context, you've managed to retrieve only the first two recipes but missed the French apple tart. Having retrieved 2 ouf 3 relevant documents, you have achieved a **67% recall**.
 
-Because you were looking for the word "pie", you also retrieved a recipe for a Shepherd's pie, which, while delicious, does not qualify as an apple pie. Another document that came up was a fish pie - a classic British dish that, alas, does not contain apples or even a pastry crust. Since only 2 of your 4 retrieved documents can be legitimately classified as apple pies, you have achieved a **50% precision**.
+Because you were looking for the word "pie", you also retrieved a recipe for a Shepherd's pie, which, while delicious, does not qualify as an apple pie. Another document that came up was a fish pie - a classic British dish that does not contain apples or even a pastry crust. Since only 2 of your 4 retrieved documents can be legitimately classified as apple pies, you have achieved a **50% precision**.
 
 Now let's formalize this a bit. Recall measures the ratio of the relevant documents retrieved to the total number of relevant docuemtns in RAG:
 
@@ -95,8 +97,8 @@ Naturally, an effective RAG maximizes both the recall and the precision. It's [b
 
 Precision and recall are essential in understanding the information retrieval quality, but they are quite hard to measure in practice. Unlike a cookbook, Pulumi registry contains thousands of ever changing documents, and evaluating how many of them are relevant for every user-submitted query is impractical. This makes recall evaluation for live traffic next to impossible. Things are a little easier with precision, where we're dealing with a small number of documents, but even that metric requires a non-trivial evaluation of relevance, which needs an LLM call or a human judge.
 
-Fortunately, other metrics that often can effectively estimate retrieval quality have been developed. We have found a metric that can predict, with some degree of accuracy, whether the generated code will successfully compile. For this metric, we compare the _tokens_ present in the prompted produced by the LLM with the number of tokens present in the actually generated code. (By token here we understand a compiler token - an identifier such as the name of a class, method or a field and not a traditional LLM token concept),
-Intuitively, if a token present in the prompt also appears in the generated program, we can assume that the token effectively contributed to the generated program. Tokens in the generated program that were not part of the prompt are not necessarily wrong but they are less trusted (they can come from the LLM built-in knowledge or were guessed)
+Fortunately, other metrics that often can effectively estimate retrieval quality have been developed. We have found a metric that can predict, with some degree of accuracy, whether the generated code will successfully compile. For this metric, we compare the _tokens_ present in the prompted produced by the LLM with the number of tokens present in the generated code. (By token here we understand a compiler token - an identifier such as the name of a class, method or a field and not a traditional LLM token concept),
+Intuitively, if a token present in the prompt also appears in the generated program, it can be assumed that the token contributed to the generated program. Tokens in the generated program that were not part of the prompt are not necessarily wrong but they are less trusted (they can come from the LLM built-in knowledge or were guessed)
 
 $$prompt \ coverage = \frac{N(\text{Tokens in prompt} \cap \text{Tokens in code})}{N(\text{Tokens in code})}$$
 
@@ -108,11 +110,11 @@ Prompt coverage is a metric we can observe in production, and it's one of severa
 
 Semantic search is based on the conceptual similarity of the term you're looking for with the elements in the data store. For example, searching for "dumplings" can return terms like pierogi and gyoza - words with different spelling but both representing different types of filled dough preparations.
 
-A common way to determine the similarity between the two strings is to first turn these strings into _vector embeddings_ - arrays of floating point values representing the semantic meaning of each string - and then calculate the _cosine similarity_ between the two vectors, which is the cosine of the angle between the vectors. [Various methods](https://huggingface.co/blog/matryoshka) of producing vector embeddings are fascinating but cannot be covered here in depth.
+A common way to determine the similarity between the two strings is to first turn these strings into _vector embeddings_ - arrays of floating point values representing the semantic meaning of each string - and then calculate the _cosine similarity_ between the two vectors, which is the cosine of the angle between the vectors. [Various methods](https://huggingface.co/blog/matryoshka) of producing vector embeddings are fascinating but we will not cover them here in depth.
 
 For Pulumi code generation we are using the OpenAI's [Ada-002 embedding model](https://medium.com/@siladityaghosh/a-deep-dive-into-openais-text-embedding-ada-002-the-power-of-semantic-understanding-7072c0386f83) which at this moment represents a good balance between performance and cost.
 
-Producing vector embeddings from the user query is the standard approach in this situation, however for Pulumi code generator we added a little twist - to increase the odds of getting more relevant information from the Registry (i.e. to increase the recall, see above) we first make an LLM call to generate a small set of relevant search terms that will produce an array of vector embeddings.
+Producing vector embeddings from the user query is the standard approach in this situation. However, for Pulumi code generator we added a little twist - to increase the odds of getting more relevant information from the Registry (i.e. to increase the recall) we first make an LLM call to generate a small set of relevant search terms that will produce an array of vector embeddings.
 
 <div style="text-align: center; width: 100%; margin: 0 auto;">
     <img src="flow-embeddings.png" alt="" style="width: 100%;">
@@ -125,7 +127,7 @@ We then use the array of vector embeddings to retrieve the set of relevant docum
 
 ### Full text vs semantic search
 
-While semantic search is essential for any "intelligent" information retrieval system, we must not forget that there exist simple and effective methods for text search. The "S3 Bucket" part of the user search happens to be easily searchable using traditional text search operations (such as SQL `LIKE` operator).
+While semantic search is essential for any modern information retrieval system, we should not forget simple and effective methods for text search already exist. The "S3 Bucket" part of the user search happens to be easily searchable using traditional text search operations (such as SQL `LIKE` operator).
 
 To be effective, our RAG must be able to handle queries that require semantic understanding (such as "simple storage service in AWS") as well as the traditional text search to support situations where the user knows exactly what they are looking for. To that end, the industry has adopted an approach known as the "hybrid search", in which the results of full-text search and semantic search are combined to provide the final result.
 
