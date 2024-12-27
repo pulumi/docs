@@ -93,10 +93,10 @@ Naturally, an effective RAG maximizes both the recall and the precision. It's [b
 
 ### Practical concerns
 
-Precision and recall are essential in understanding the information retrieval quality, but they are quite hard to measure in practice. Unlike a cookbook, Pulumi registry contains thousands of ever changing documents, and evaluating how many of them are relevant for every user-submitted query is impractical making recall evaluation for live traffic next to impossible. Things a little easier with precision, where we're dealing with a small number of documents, but even that metric requires a non-trivial evaluation of relevance, which requires an LLM call or a human judge where the number of documents is small.
+Precision and recall are essential in understanding the information retrieval quality, but they are quite hard to measure in practice. Unlike a cookbook, Pulumi registry contains thousands of ever changing documents, and evaluating how many of them are relevant for every user-submitted query is impractical. This makes recall evaluation for live traffic next to impossible. Things are a little easier with precision, where we're dealing with a small number of documents, but even that metric requires a non-trivial evaluation of relevance, which needs an LLM call or a human judge.
 
 Fortunately, other metrics that often can effectively estimate retrieval quality have been developed. We have found a metric that can predict, with some degree of accuracy, whether the generated code will successfully compile. For this metric, we compare the _tokens_ present in the prompted produced by the LLM with the number of tokens present in the actually generated code. (By token here we understand a compiler token - an identifier such as the name of a class, method or a field and not a traditional LLM token concept),
-Intuitively, if a token present in the prompt also appears in the generated program, we can assume that the token effectively contributed to the generated program. Tokens in the generated program that were not part of the prompt are not necessarily wrong but they are less trusted (they can come from the LLM built-in knowledge or were, ahem, hallucinated)
+Intuitively, if a token present in the prompt also appears in the generated program, we can assume that the token effectively contributed to the generated program. Tokens in the generated program that were not part of the prompt are not necessarily wrong but they are less trusted (they can come from the LLM built-in knowledge or were guessed)
 
 $$prompt \ coverage = \frac{N(\text{Tokens in prompt} \cap \text{Tokens in code})}{N(\text{Tokens in code})}$$
 
@@ -110,7 +110,7 @@ Semantic search is based on the conceptual similarity of the term you're looking
 
 A common way to determine the similarity between the two strings is to first turn these strings into _vector embeddings_ - arrays of floating point values representing the semantic meaning of each string - and then calculate the _cosine similarity_ between the two vectors, which is the cosine of the angle between the vectors. [Various methods](https://huggingface.co/blog/matryoshka) of producing vector embeddings are fascinating but cannot be covered here in depth.
 
-For Pulumi code generation we are using the OpenAI's [Ada-002 embedding model](https://medium.com/@siladityaghosh/a-deep-dive-into-openais-text-embedding-ada-002-the-power-of-semantic-understanding-7072c0386f83) which at this moment represents a good balance between performance and cost, but is by no means the only model available.
+For Pulumi code generation we are using the OpenAI's [Ada-002 embedding model](https://medium.com/@siladityaghosh/a-deep-dive-into-openais-text-embedding-ada-002-the-power-of-semantic-understanding-7072c0386f83) which at this moment represents a good balance between performance and cost.
 
 Producing vector embeddings from the user query is the standard approach in this situation, however for Pulumi code generator we added a little twist - to increase the odds of getting more relevant information from the Registry (i.e. to increase the recall, see above) we first make an LLM call to generate a small set of relevant search terms that will produce an array of vector embeddings.
 
@@ -129,16 +129,16 @@ While semantic search is essential for any "intelligent" information retrieval s
 
 To be effective, our RAG must be able to handle queries that require semantic understanding (such as "simple storage service in AWS") as well as the traditional text search to support situations where the user knows exactly what they are looking for. To that end, the industry has adopted an approach known as the "hybrid search", in which the results of full-text search and semantic search are combined to provide the final result.
 
-For each of these search terms we generate a query that combines the full text search with the semantic search. The resulting documents are then evaluated based on the following parameters:
+For each of these search terms we generate a query that combines the full text search with the semantic search. The resulting documents are then evaluated based on the following criteria:
 
 - _Dense score_: Vector similarity using cosine distance between query embedding and stored embeddings
-- _Sparse score_: Text search relevance using PostgreSQL's full-text search (ts_rank_cd)
+- _Sparse score_: Text search relevance according to the full-using algorithm (PostgreSQL full-text search in our case)
 
 Both the dense and the sparse scores contribute to the final score that is used to sort the documents. Even though the final score is the average of the two in our current implementation, it would not be correct to say that they have the same weight, or the influence on the end result. This is so because the normalization of the scores must take into account their distribution in the real-world queries and calculating that is quite complex.
 
-Boosting the influence of one score relative to the other is an area we're actively exploring, and achieving the optimal result depends highly on what parameters we decide to optimize for - we will touch on that later in the post.
+Boosting the influence of one score relative to the other is an area we're actively exploring, and achieving the optimal result depends highly on what parameters we decide to optimize for - high quality code, time to result and so on.
 
-Finally, we apply the rank-based decay process - a scoring technique where results are penalized based on their position in the ranking. This creates separation between results that might have similar initial scores and gives preference to results that appear earlier in the ranking.
+Finally, we apply the rank-based scoring technique in which the results are penalized based on their position in the ranking. This creates separation between results that might have similar initial scores and gives preference to results that appear earlier in the ranking.
 
 ### Pruning the results
 
@@ -146,13 +146,13 @@ Our Pulumi code generator employs a two-phase document selection strategy. The f
 
 This filtering step serves two purposes. First, it prevents LLM hallucinations that arise from similarly-named types across different providers. Second, it optimizes performance by keeping prompts concise - a critical consideration given that larger prompts increase both latency and computational costs, even when within context window constraints.
 
-Through empirical testing with the Pulumi Registry search, we've established these baseline parameters: a maximum of 10 documents selected by relevance score, and a 20K token ceiling for prompts. While these parameters have yielded good results in practice, they are likely not optimal for scenarios. We continue to iterate on these values through ongoing experimentation.
+Through empirical testing with the Pulumi Registry search, we've established these baseline parameters: a maximum of 10 documents selected by relevance score, and a 20K token ceiling for prompts. While these parameters have yielded good results in practice, they are likely not optimal for all scenarios. We continue to iterate on these values through ongoing experimentation.
 
 ### Prompt generation
 
-We're now ready to create the system prompt for the LLM! We've already discussed some of the elements needed to build the effective prompt - the original user query, the search terms and the vector embeddings that produce the set of documents that will guide the code generation process.
+We're now ready to create the system prompt for the code generation LLM call! We've already discussed some of the elements needed to build the effective prompt - the original user query, the search terms and the vector embeddings that produce the set of documents that will guide the code generation process.
 
-There is another element that goes into the prompt - a concise set of instructions produced by an LLM call based on the original user's query. The approach when the output of one prompt is used as input for another is known as "prompt chaining", and we used it to guide the code generator to produce the code that satisfies the requirements of the user and their organization. For our query, this set of instructions can look as follows:
+There is another element that goes into the prompt - a concise set of instructions produced by an LLM call based on the original user's query. The approach when the output of one prompt is used as input for another is known as "prompt chaining", and we used it to provide step-by-step instructions to the code generator. For our query, this set of instructions can look as follows:
 
 > Create an S3 bucket using Pulumi in TypeScript using the following steps:
 >
@@ -173,16 +173,18 @@ Finally, we use the resulting prompt to call the LLM and ask it to generate the 
 
 Unfortunately, this isn't always the final step of the process. Despite our best efforts, the code produced by the LLM will not always be correct.
 
-At this point, it's worth pondering what "correct code" means. The generated program might have following problems:
+At this point, it's worth pondering what "correct code" means. The generated program might have the following problems:
 
 - It might be syntactically or semantically incorrect, i.e. it might not compile or fail to typecheck.
-- It might fail at runtime - for example if refers to a non-existing resource, a region and so on.
-- It might run "successfully" but not do what the user intended - either because the user did not express themselves clearly or because their request was misunderstood.
-- Finally, the code might run and do exactly what the user wants, but the user's intent leads to an undesired outcome, for example a loss of an asset or a security vulnerability.
+- It might fail at runtime - for example by referring to a non-existing resource, a region and so on.
+- It might run "successfully" but not do what the user intended - either because the user did not express themselves clearly or because the request was misunderstood.
+- Finally, the code might run and do exactly what the user wants, but lead to an undesired outcome, for example loss of an asset, or a security vulnerability.
 
-Most of these problems can be solved but many solutions go well outside of the domain of code generation. The first of these problems can be addressed by the approach known as "self-debugging": we try to typecheck the generated program, and if it doesn't compile, feed the errors back into the prompt and ask the LLM to try again. We repeat the process until the program typechecks, or until the final number of iterations has been reached.
+Solutions to many of these problems go well beyond the domain of code generation.
 
-In our experience with Pulumi code generator, many generated TypeScript programs that fail to typecheck contain only a few errors, and can be fixed in one or two self-debug iterations.
+However, the first of these problems can be addressed by the approach known as "self-debugging". We try to typecheck the generated program, and if it doesn't compile, feed the errors back into the prompt and ask the LLM to try again. We repeat the process until the program typechecks, or until the final number of iterations has been reached.
+
+In our experience with Pulumi code generator, many generated TypeScript programs that fail to typecheck contain only a few errors, and can be fixed in one or two self-debugging iterations.
 
 Monitoring these typechecking errors in production can also provide valuable insight into the quality of the RAG, and even suggest specific solutions. For example, failure to typecheck a member-access expression is a likely indicator of a missing type schema (a recall problem), or a "wrong" schema brought in by an irrelevant document (a precision problem).
 
@@ -196,9 +198,9 @@ The probabilistic nature of LLM-based code generation means we can't rely solely
 
 Our testing strategy combines several approaches:
 
-1. **Systematic experimentation**: We run extensive "what-if" scenarios against large test datasets to understand how the system behaves under different conditions.
+1. **Systematic experimentation**: We run "what-if" scenarios against various test datasets to understand how the system behaves under different conditions.
 
-2. **Local evaluation pipeline**: While local testing has its limitations, it helps catch obvious issues early in development. We evaluate the performance of the generated code and run it through the typechecker.
+2. **Local evaluation pipeline**: While local testing has its limitations, it helps catch obvious issues early in development. We evaluate the performance of code generator, and run the code through the typechecker.
 
 3. **Deterministic generation**: We set the LLM temperature to 0 to ensure consistent outputs. For code generation, consistency and repeatability matters more than creative variations.
 
@@ -212,9 +214,7 @@ We track several key metrics to ensure the system performs well:
 
 3. **User feedback**: Every "thumbs down" report gets analyzed to identify patterns and potential improvements. This direct user feedback has been invaluable in refining our system.
 
-This multi-layered approach helps us maintain high quality while continuously improving the system.
-
-In professional kitchens, chefs talk about 'mise en place' - having everything in its place before service begins. But the real craft is in the constant tasting, adjusting, and refining during service. Running a code generator in production follows the same rhythm: careful preparation paired with continuous observation and adjustment. Every output - be it a soufflé or a storage bucket - must meet the mark.
+This multi-layered approach helps us maintain high quality through continuous monitoring and improvement. It's not unlike a professional kitchen, where chefs talk about 'mise en place' - having everything in its place before service begins. But the real craft is in the constant tasting, adjusting, and refining during service. Running a code generator in production follows the same rhythm: careful preparation paired with continuous observation and adjustment. Every output - be it a soufflé or a storage bucket - must meet the mark.
 
 <!--raw material 
 
