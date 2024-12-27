@@ -10,6 +10,7 @@ menu:
     weight: 3
 aliases:
   - /docs/pulumi-cloud/insights/accounts/
+  - /docs/pulumi-cloud/insights/import/
 ---
 
 This document outlines the steps required to create and manage a Pulumi insights account used for scanning provider resources.
