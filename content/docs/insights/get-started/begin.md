@@ -39,7 +39,7 @@ Leave the default environment definition for now, and you will return to finish 
 
 <!-- TODO: get oracle cloud chooser working -->
 
-{{% chooser cloud "aws,azure,oracle,kubernetes" %}}
+{{% chooser cloud "aws,azure,oci,kubernetes" %}}
 
 {{% choosable cloud aws %}}
 
@@ -135,7 +135,7 @@ values:
 
 {{% /choosable %}}
 
-{{% choosable cloud oracle %}}
+{{% choosable cloud oci %}}
 
 To configure Pulumi Insights with OCI, you will use [OpenID Connect (OIDC)](docs/pulumi-cloud/access-management/oidc/) for authentication.
 
