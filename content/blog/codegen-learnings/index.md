@@ -33,7 +33,7 @@ LLMs are great at generating code however they are limited to what they have lea
 
 To help us solve this, we rely on the technique known as the _Retrieval Augmented Generation_ (RAG). RAG helps code generation by integrating information retrieved from external data sources. In Pulumi, we call this data source the _Registry_ - it's the database we maintain that containing type schema and usage information for every provider.
 
-At a high level, using RAG involves following steps:
+At a high level, using RAG involves the following steps:
 
 1. Analyze user's question.
 2. Look up the pertinent information from the Registry.
@@ -68,7 +68,7 @@ While we had to rely on some guesswork to come up with this prompt, fortunately 
 
 ### Assessing search quality using recall and precision
 
-To assess how good our RAG is, we need to first understand the two fundamental concepts used in the information retrieval systems: the _precision_ and the _recall_. Imagine that you're looking for an apple pie recipes in one of Jamie Oliver's cookbooks. The book has a recipe for a classic American apple, a Dutch apple pie and a modern take on a French apple tart. Due to the book's narrative approach with the recipes woven into the stories and context, you've managed to retrieve only the first two recipes but failed to consider the French apple tart. Having succeeded in retrieving 2 ouf 3 relevant documents, you have achieved a **66% recall**.
+To assess how good our RAG is, we need to first understand the two fundamental concepts used in the information retrieval systems: the _precision_ and the _recall_. Imagine that you're looking for an apple pie recipes in one of Jamie Oliver's cookbooks. The book has a recipe for a classic American apple, a Dutch apple pie and a modern take on a French apple tart. Due to the book's narrative approach with the recipes woven into the stories and context, you've managed to retrieve only the first two recipes but failed to consider the French apple tart. Having succeeded in retrieving 2 ouf 3 relevant documents, you have achieved a **67% recall**.
 
 Because you were looking for the word "pie", you also retrieved a recipe for a Shepherd's pie, which, while delicious, does not qualify as an apple pie. Another document that came up was a fish pie - a classic British dish that, alas, does not contain apples or even a pastry crust. Since only 2 of your 4 retrieved documents can be legitimately classified as apple pies, you have achieved a **50% precision**.
 
@@ -114,7 +114,7 @@ For Pulumi code generation we are using the OpenAI's [Ada-002 embedding model](h
 
 Producing vector embeddings from the user query is the standard approach in this situation, however for Pulumi code generator we added a little twist - to increase the odds of getting more relevant information from the Registry (i.e. to increase the recall, see above) we first make an LLM call to generate a small set of relevant search terms that will produce an array of vector embeddings.
 
-<div style="text-align: center; width: 50%; margin: 0 auto;">
+<div style="text-align: center; width: 100%; margin: 0 auto;">
     <img src="flow-embeddings.png" alt="" style="width: 100%;">
     <figcaption>
         <i>Getting vector embeddings from user query</i>
@@ -142,11 +142,11 @@ Finally, we apply the rank-based decay process - a scoring technique where resul
 
 ### Pruning the results
 
-The approach we've taken for Pulumi code generator is to first get as many relevant documents as possible (thus increasing the recall) and then reduce that set to only retain the most relevant documents (thus increasing the precision).
+Our Pulumi code generator employs a two-phase document selection strategy. The first phase casts a wide net, gathering all potentially relevant documentation to maximize recall. The second phase applies precision-focused filtering to distill this collection down to the most pertinent documents.
 
-Filtering out irrelevant documents is important because many providers have similarly-named types and adding them to the prompt would confuse the LLM leading to hallucinations. There is also a practical concern - large prompts are slow and expensive, even within the limits of the supported context window limits.
+This filtering step serves two purposes. First, it prevents LLM hallucinations that arise from similarly-named types across different providers. Second, it optimizes performance by keeping prompts concise - a critical consideration given that larger prompts increase both latency and computational costs, even when within context window constraints.
 
-In Pulumi registry search, we limit the number of documents to 10 based on their relevance score, and limit the total number of tokens for the prompt to 20K. These numbers are something we continue to experiment with and represent something we've seen good results with, but likely are not optimal.
+Through empirical testing with the Pulumi Registry search, we've established these baseline parameters: a maximum of 10 documents selected by relevance score, and a 20K token ceiling for prompts. While these parameters have yielded good results in practice, they are likely not optimal for scenarios. We continue to iterate on these values through ongoing experimentation.
 
 ### Prompt generation
 
@@ -160,7 +160,7 @@ There is another element that goes into the prompt - a concise set of instructio
 > 2. Define a new S3 bucket resource with basic configuration.
 > 3. Export the bucket name as an output.
 
-<div style="text-align: center; width: 50%; margin: 0 auto;">
+<div style="text-align: center; width: 100%; margin: 0 auto;">
     <img src="retrieval.png" alt="" style="width: 100%;">
     <figcaption>
         <i>Composition of the system prompt for code generation</i>
@@ -190,18 +190,31 @@ Self-debugging can also be extended to include the `pulumi preview` command, whi
 
 ## Running Pulumi code generator in production
 
-TODO
+The probabilistic nature of LLM-based code generation means we can't rely solely on pre-production testing. Instead, we need multiple layers of quality control working together. Here's what we've learned works best:
 
-### Evaluate code quality in production
+### Building confidence through testing
 
-When dealing with an inherently probabalistic system, no amount of pre-production testing can guarantee the correct behavior of the tool when it runs in production. The testing is necessarily a defense in depth. What's needed is:
+Our testing strategy combines several approaches:
 
-1. Experimentation framework to run "what if" scenarios against a large enough test bed.
-2. Local evals - "it works on my machine" but it's better than nothing.
-3. Consistent and repeatable results (use 0 temperature).
-4. Component testing to test RAG quality, such as recall, precision and prompt coverage.
-5. Production monitoring
-6. Customer reports and anecdotal data. TODO: we look at every "thumbs down" report
+1. **Systematic experimentation**: We run extensive "what-if" scenarios against large test datasets to understand how the system behaves under different conditions.
+
+2. **Local evaluation pipeline**: While local testing has its limitations, it helps catch obvious issues early in development. We evaluate the performance of the generated code and run it through the typechecker.
+
+3. **Deterministic generation**: We set the LLM temperature to 0 to ensure consistent outputs. For code generation, consistency and repeatability matters more than creative variations.
+
+### Monitoring quality in production
+
+We track several key metrics to ensure the system performs well:
+
+1. **RAG effectiveness**: We measure prompt coverage to evaluate how well our retrieval system performs.
+
+2. **Code quality indicators**: We track the percentage of generated code that successfully typechecks for all supported language, along with how this metric responds to system changes.
+
+3. **User feedback**: Every "thumbs down" report gets analyzed to identify patterns and potential improvements. This direct user feedback has been invaluable in refining our system.
+
+This multi-layered approach helps us maintain high quality while continuously improving the system.
+
+In professional kitchens, chefs talk about 'mise en place' - having everything in its place before service begins. But the real craft is in the constant tasting, adjusting, and refining during service. Running a code generator in production follows the same rhythm: careful preparation paired with continuous observation and adjustment. Every output - be it a soufflé or a storage bucket - must meet the mark.
 
 <!--raw material 
 
