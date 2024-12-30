@@ -13,7 +13,7 @@ menu:
  
 Pulumi Insights is an intelligent infrastructure management service that helps you discover, understand, manage, and improve your cloud infrastructure. Insights improves security, compliance, and efficiency through AI-powered asset and compliance management.
 
-Pulumi Insights give you the tools to:
+Pulumi Insights gives you the tools to:
 
 - **Discover**: Scan and sync all your cloud infrastructure – including resources provisioned manually or through other tools like Terraform, CloudFormation, Kubernetes and ARM – to bring everything under a single pane of glass. Gain complete visibility across clouds, regions, and accounts.
 
