@@ -39,7 +39,7 @@ else
         export HUGO_BASEURL="https://www.pulumi-test.io"
         GOGC=3 hugo --minify --buildFuture --templateMetrics -e "preview"
     else
-        GOGC=3 hugo --minify --buildFuture --templateMetrics -e "production"
+        GOGC=3 hugo --minify --templateMetrics -e "production"
     fi
 fi
 
