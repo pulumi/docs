@@ -216,7 +216,7 @@ body.section-registry {
                 }
             }
 
-            @media (min-width: 1280px) {
+            @media (min-width: 1024px) {
                 width: 240px;
                 flex-basis: 240px;
                 box-shadow: none;
@@ -354,7 +354,7 @@ body.section-registry {
                 flex-direction: column;
             }
 
-            @media (min-width: 1280px) {
+            @media (min-width: 1024px) {
                 margin-left: 24px;
                 max-width: 700px;
                 min-width: 0;
@@ -422,7 +422,7 @@ body.section-registry {
                 width: 240px;
             }
 
-            @media (min-width: 1280px) {
+            @media (min-width: 1024px) {
                 min-width: 340px;
             }
         }
