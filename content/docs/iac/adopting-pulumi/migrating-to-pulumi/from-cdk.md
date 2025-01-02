@@ -22,7 +22,7 @@ If your team has already provisioned infrastructure using AWS CDK, and you'd lik
 
 ## Referencing Stack Outputs
 
-It is possible to reference existing AWS CDK stacks from your program. It doesn't matter how these stacks were created. This lets you read properties of that CloudFormation stack for use within your Pulumi program. This includes output values computed from resources provisioned that stack.
+It is possible to reference existing AWS CDK stacks from your program. It doesn't matter how these stacks were created. This lets you read properties of that CloudFormation stack for use within your Pulumi program. This includes output values computed from resources provisioned by that stack.
 
 For instance, let's say your infrastructure team has provisioned your network infrastructure using CDK and you need to use the Subnet ID to provision something new from your Pulumi program. One approach is to hardcode that ID but this is brittle and, if it ever changes, you'd need to go and manually update the hardcoded value.
 
