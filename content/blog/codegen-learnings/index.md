@@ -186,9 +186,9 @@ At this point, it's worth pondering what "correct code" means. The generated pro
 
 Solutions to many of these problems go well beyond the domain of code generation.
 
-However, the first of these problems can be addressed by the approach known as "self-debugging". We try to typecheck the generated program, and if it doesn't compile, feed the errors back into the prompt and ask the LLM to try again. We repeat the process until the program typechecks, or until the final number of iterations has been reached.
+However, the first of these problems can be addressed by the approach known as "self-debugging".
 
-In our experience with Pulumi code generator, many generated TypeScript programs that fail to typecheck contain only a few errors, and can be fixed in one or two self-debugging iterations.
+We observed that many generated TypeScript programs that fail to typecheck contain only a few errors, and asking LLM to fix these errors often produces a valid program. While this approach is still experimental, we see promising results where getting to a correct program requires only 1-2 iterations of self-debugging. The biggest challenge with this approach is doing it in real time. The user is staring at the screen waiting for an answer, so latency is a major concern.
 
 Monitoring these typechecking errors in production can also provide valuable insight into the quality of the RAG, and even suggest specific solutions. For example, failure to typecheck a member-access expression is a likely indicator of a missing type schema (a recall problem), or a "wrong" schema brought in by an irrelevant document (a precision problem).
 
