@@ -9,6 +9,10 @@ menu:
         identifier: pulumi-cloud-get-started
 ---
 
+{{% notes type="info" %}}
+An **onboarding guide** is available to guide you through setting up Pulumi Cloud for your whole team. It not only walks you comprehensively through the full capabilities of Pulumi Cloud, but also recommended best practices. [Read the onboarding guide here](./onboarding-guide). For a briefer introduction to Pulumi Cloud, see the overview below instead. [Contact us](/contact) if you'd like assistance with any of this.
+{{% /notes %}}
+
 In your browser, navigate to <a href="https://app.pulumi.com" target="_blank">app.pulumi.com</a> and create an account.
 
 <a class="btn btn-secondary" href="https://app.pulumi.com/signup" target="_blank">Create an Account</a>
