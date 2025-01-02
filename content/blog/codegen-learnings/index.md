@@ -74,7 +74,7 @@ To assess how good our RAG is, we need to first understand the two fundamental c
 
 Because you were looking for the word "pie", you also retrieved a recipe for a Shepherd's pie, which, while delicious, does not qualify as an apple pie. Another document that came up was a fish pie - a classic British dish that does not contain apples or even a pastry crust. Since only 2 of your 4 retrieved documents can be legitimately classified as apple pies, you have achieved a **50% precision**.
 
-Now let's formalize this a bit. Recall measures the ratio of the relevant documents retrieved to the total number of relevant docuemtns in RAG:
+Now let's formalize this a bit. Recall measures the ratio of the relevant documents retrieved to the total number of relevant documents in RAG:
 
 $$Recall = \frac{N(Retrieved \cap Relevant)}{N(Relevant)}$$
 
@@ -84,6 +84,8 @@ Where
 - $N(Relevant)$ is the total number of relevant documents in the database.
 
 Good recall means that many documents relevant to the query were retrieved.
+
+Precision is the ratio of the relevant documents retrieved to the total number of retrieved documents:
 
 $$Precision = \frac{N(Retrieved \cap Relevant)}{N(Retrieved)}$$
 
@@ -97,7 +99,7 @@ Naturally, an effective RAG maximizes both the recall and the precision. It's [b
 
 Precision and recall are essential in understanding the information retrieval quality, but they are quite hard to measure in practice. Unlike a cookbook, Pulumi registry contains thousands of ever changing documents, and evaluating how many of them are relevant for every user-submitted query is impractical. This makes recall evaluation for live traffic next to impossible. Things are a little easier with precision, where we're dealing with a small number of documents, but even that metric requires a non-trivial evaluation of relevance, which needs an LLM call or a human judge.
 
-Fortunately, other metrics that often can effectively estimate retrieval quality have been developed. We have found a metric that can predict, with some degree of accuracy, whether the generated code will successfully compile. For this metric, we compare the _tokens_ present in the prompted produced by the LLM with the number of tokens present in the generated code. (By token here we understand a compiler token - an identifier such as the name of a class, method or a field and not a traditional LLM token concept),
+Fortunately, other metrics that often can effectively estimate retrieval quality have been developed. We have found a metric that can predict, with some degree of accuracy, whether the generated code will successfully compile. For this metric, we compare the _tokens_ present in the LLM-produced prompt with the number of tokens present in the generated code. (By token here we understand a compiler token - an identifier such as the name of a class, method or a field and not a traditional LLM token concept),
 Intuitively, if a token present in the prompt also appears in the generated program, it can be assumed that the token contributed to the generated program. Tokens in the generated program that were not part of the prompt are not necessarily wrong but they are less trusted (they can come from the LLM built-in knowledge or were guessed)
 
 $$prompt \ coverage = \frac{N(\text{Tokens in prompt} \cap \text{Tokens in code})}{N(\text{Tokens in code})}$$
@@ -148,7 +150,7 @@ Our Pulumi code generator employs a two-phase document selection strategy. The f
 
 This filtering step serves two purposes. First, it prevents LLM hallucinations that arise from similarly-named types across different providers. Second, it optimizes performance by keeping prompts concise - a critical consideration given that larger prompts increase both latency and computational costs, even when within context window constraints.
 
-Through empirical testing with the Pulumi Registry search, we've established these baseline parameters: a maximum of 10 documents selected by relevance score, and a 20K token ceiling for prompts. While these parameters have yielded good results in practice, they are likely not optimal for all scenarios. We continue to iterate on these values through ongoing experimentation.
+Through empirical testing with the Pulumi Registry search, we've established these baseline parameters: a maximum of 10 documents per query term selected by relevance score, and a 20K token ceiling for prompts. While these parameters have yielded good results in practice, they are likely not optimal for all scenarios. We continue to iterate on these values through ongoing experimentation.
 
 ### Prompt generation
 
