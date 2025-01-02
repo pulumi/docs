@@ -74,7 +74,7 @@ markup:
       autoHeadingID: true
       autoHeadingIDType: "github"
       attribute:
-        block: false
+        block: true
         title: true
     renderer:
       hardWraps: false
