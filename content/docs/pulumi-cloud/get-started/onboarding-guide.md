@@ -18,10 +18,12 @@ In this guide, you’ll find everything you need to know about using Pulumi with
 * Understand and adopt recommended practices for Pulumi’s suite of products
 * Work through (and prepare for) common first-time user challenges
 
-## Pro tips
+{{% notes type="tip" %}}
+**Pro tips**
 
 * To help everyone quickly adopt Pulumi in your organization, identify a group of “Pulumi champions” across your organization who will encourage other team members to get started right away. The faster your team uses Pulumi, the faster you can ship.
 * Check out the [Pulumi Glossary](/docs/iac/concepts/glossary/) for specific terms we use across our sites and documentation.
+{{% /notes %}}
 
 ## Part one: Setting up Pulumi Cloud
 
