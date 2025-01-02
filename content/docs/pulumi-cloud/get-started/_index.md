@@ -10,7 +10,7 @@ menu:
 ---
 
 {{% notes type="info" %}}
-An **onboarding guide** is available to guide you through setting up Pulumi Cloud for your whole team. It not only walks comprehensively through the full capabilities of Pulumi Cloud, but also recommended best practices. [Read the onboarding guide here](./onboarding-guide). For a briefer introduction to Pulumi Cloud, see the overview below instead.
+An **onboarding guide** is available to guide you through setting up Pulumi Cloud for your whole team. It not only walks you comprehensively through the full capabilities of Pulumi Cloud, but also recommended best practices. [Read the onboarding guide here](./onboarding-guide). For a briefer introduction to Pulumi Cloud, see the overview below instead.
 {{% /notes %}}
 
 In your browser, navigate to <a href="https://app.pulumi.com" target="_blank">app.pulumi.com</a> and create an account.

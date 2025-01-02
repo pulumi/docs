@@ -31,9 +31,9 @@ Setting up your Pulumi Cloud account will lay the foundation for onboarding your
 
 Pulumi Cloud is available in two flavors: 1\) a multi-tenanted, secure, and compliant software-as-a-service (SaaS), and 2\) a self-hosted edition. These are referred to as simply Pulumi Cloud and Self-Hosted Pulumi Cloud, respectively.
 
-The easiest option is to choose SaaS, as things like high availability, disaster recovery, geo-replication, and more, are available out of the box. It is secure and compliant and its unique architecture allows you precise control over security, as described in the [Pulumi Cloud Security Whitepaper](https://www.pulumi.com/security/pulumi-cloud-security-whitepaper.pdf). To choose this option, simply log into [pulumi.com](http://pulumi.com).
+The easiest option is to choose SaaS, as things like high availability, disaster recovery, geo-replication, and more are available out of the box. It is secure and compliant and its unique architecture allows you precise control over security, as described in the [Pulumi Cloud Security Whitepaper](https://www.pulumi.com/security/pulumi-cloud-security-whitepaper.pdf). To choose this option, simply log into [pulumi.com](http://pulumi.com).
 
-For companies who require more control over the Pulumi Cloud hosting environment, such as would be the case for airgapped or or other highly regulated environments like FedRAMP, the self-hosted edition can be hosted anywhere: on-premises, in your cloud account, on a virtual machine, in a Kubernetes cluster, and so on. Learn more about [self-hosting Pulumi Cloud here](https://www.pulumi.com/product/self-hosted/).
+For companies who require more control over the Pulumi Cloud hosting environment, such as would be the case for air-gapped or other highly regulated environments like FedRAMP, the self-hosted edition can be hosted anywhere: on-premises, in your cloud account, on a virtual machine, in a Kubernetes cluster, and so on. Learn more about [self-hosting Pulumi Cloud here](https://www.pulumi.com/product/self-hosted/).
 
 ### Signing up for an account
 
@@ -49,7 +49,7 @@ Pulumi Cloud makes it easy to collaborate on your cloud projects faster and with
 
 ### Organizing people for collaboration
 
-Your Pulumi Cloud hierarchy is made up of individual **users**, **organizations**, and **teams**. Each plays a critical role in how your team collaborates and enforcing security and best practices.
+Your Pulumi Cloud hierarchy is made up of individual **users**, **organizations**, and **teams**. Each plays a critical role in how your team collaborates and enforces security and best practices.
 
 You will begin by creating an organization. An organization is first and foremost a collection of individual user members. It is a container for IaC projects and stacks, ESC projects and environments, and Insights accounts and discovered resources. Most companies only need a single organization, although it is possible to have multiple if you need extra separation or multiple identity providers. Learn more about [organizations here](https://www.pulumi.com/docs/pulumi-cloud/admin/organizations/).
 
@@ -63,7 +63,7 @@ Many organizations prefer to use Single Sign-On (SSO) to leverage an identity pr
 
 ### Inviting your teammates
 
-As soon as you’ve completed these set up steps, you are ready to invite your team\! If you are using SSO with System for Cross-domain Identity Management (SCIM) enabled, onboarding and offboarding happen automatically. Otherwise, refer to [Inviting members to an organization](https://www.pulumi.com/docs/pulumi-cloud/admin/organizations/#inviting-members-to-an-organization).
+As soon as you’ve completed these set up steps, you are ready to invite your team\! If you have SSO with System for Cross-domain Identity Management (SCIM) enabled, onboarding and offboarding happen automatically. Otherwise, refer to [Inviting members to an organization](https://www.pulumi.com/docs/pulumi-cloud/admin/organizations/#inviting-members-to-an-organization).
 
 ## Part three: Building securely
 
@@ -81,11 +81,11 @@ Pulumi Cloud also keeps an audit log of every activity and who performed it. Rea
 
 ### Setting up cloud access methods
 
-Pulumi supports hundreds of cloud providers, but most organizations will end up using at least AWS, Azure, Google Cloud, and/or Kubernetes. Other supported providers include SaaS infrastructure products, such as Cloudflare, DataDog, MongoDB, and Snowflake, as well as on-premises technologies such as VMWare vSphere. For a complete list of Pulumi providers, check out the [Pulumi Registry](https://pulumi.com/registry). The registry is your one- stop shop for provider documentation, including how to configure access to each of the clouds, as well as resource APIs.
+Pulumi supports hundreds of cloud providers, but most organizations will end up using at least AWS, Azure, Google Cloud, and/or Kubernetes. Other supported providers include SaaS infrastructure products, such as Cloudflare, DataDog, MongoDB, and Snowflake, as well as on-premises technologies such as VMWare vSphere. For a complete list of Pulumi providers, check out the [Pulumi Registry](https://pulumi.com/registry). The registry is your one-stop shop for provider documentation, including how to configure access to each of the clouds, as well as resource APIs.
 
 Although each cloud offers flexible authentication unique to that cloud, Pulumi ESC offers rich OpenID Connect (OIDC) support for several popular providers, ensuring dynamic, short-lived credentials. This technique is the most secure and should be preferred for those providers that have support. Learn more about [dynamic login credentials here](https://www.pulumi.com/docs/esc/integrations/dynamic-login-credentials/).
 
-In the event your chosen cloud doesn’t have a Pulumi ESC OIDC provider, refer to the registry documentation. Each provider has an “Install & config” section on the left- hand navigation. See [AWS Installation & Configuration](https://www.pulumi.com/docs/esc/integrations/dynamic-login-credentials/) as an example. Pulumi generally uses native tools and techniques for authenticating so it is idiomatic and consistent with your other usage patterns.
+In the event your chosen cloud doesn’t have a Pulumi ESC OIDC provider, refer to the registry documentation. Each provider has an “Install & config” section on the left-hand navigation. See [AWS Installation & Configuration](https://www.pulumi.com/docs/esc/integrations/dynamic-login-credentials/) as an example. Pulumi generally uses native tools and techniques for authenticating so it is idiomatic and consistent with your other usage patterns.
 
 ## Part four: Structuring your projects
 
@@ -179,7 +179,7 @@ Although most teams will get started by running the Pulumi CLI and performing ac
 
 The most common workflow is deploying changes to your IaC configurations. The Pulumi CLI can be used to preview and deploy changes. But most teams will prefer to trigger deployments using a Git-based workflow using one of Pulumi’s many continuous integration and deployment (CI/CD) integrations. This approach generally delivers previews in your pull requests, facilitating code reviews and testing, and then performs updates upon merging. Once your organization is comfortable with this basic CI/CD workflow, Pulumi recommends adding drift detection to your stacks on a scheduled basis. (We’ll show you how to do this later on.)
 
-Commonly a team’s “official” stacks like staging and production will use CI/CD-based approach while individual developers still work on development stacks manually. Many teams already use CI/CD for application delivery and adopting it for infrastructure delivery helps to unify practices.
+Commonly, a team’s “official” stacks, like staging and production, will use a CI/CD-based approach while individual developers still work on development stacks manually. Many teams already use CI/CD for application delivery and adopting it for infrastructure delivery helps to unify practices.
 
 If you are using GitHub, installing the Pulumi GitHub App will deliver instantaneous support for basic GitOps workflows including deployment previews in your pull requests. [Learn more here](https://www.pulumi.com/docs/iac/packages-and-automation/continuous-delivery/github-app/).
 
@@ -259,11 +259,11 @@ These workloads should be automated with CI/CD pipelines and generally use as ma
 
 This initial beachhead win will inform where you go from here. Rather than starting out by creating dozens of abstractly-useful and broad components, it is better to take a “workload-first” strategy, and inform very specific component requirements from real world applications.
 
-We also recommend resisting the temptation to conflate redesigning your projects to use new cloud architectures with the migration to your platform. This adds risk. Sometimes this is inevitable, especially if the shift to a platform coincides with a major initiative like moving from on-prem to the cloud, but avoid it if you can. If possible, get workloads onto Pulumi and your platform first – from there it is then easier to refactor and redesign projects in place.
+We also recommend resisting the temptation to conflate redesigning your projects to use new cloud architectures with the migration to your platform. This adds risk. Sometimes this is inevitable, especially if the shift to a platform coincides with a major initiative like moving from on-prem to the cloud, but avoid it if you can. If possible, get workloads onto Pulumi and your platform first. From there, it is easier to refactor and redesign projects in place.
 
 ### Treat your platform like a product
 
-An internal cloud platform is a product – and, as such, calls for superb end user developer experiences. Although self-service is a primary goal of our platforms, in our experience, self-service is a journey. You should start by getting your platform well-architected as outlined in this guide, and then crawl, walk, and run: Begin by documenting your components and templates, instituting an internal open source strategy so developers can find and collaborate on the code … and then evolving and building it into a more comprehensive platform over time.
+An internal cloud platform is a product – and, as such, calls for superb end user developer experiences. Although self-service is a primary goal of our platforms, in our experience, self-service is a journey. You should start by getting your platform well-architected as outlined in this guide, and then crawl, walk, and run: Begin by documenting your components and templates, instituting an internal open source strategy so developers can find and collaborate on the code and then you can evolve and building it into a more comprehensive platform over time.
 
 ### Don’t kick the security can down the road
 
@@ -279,7 +279,7 @@ We aspire to make Pulumi as easy to use as possible, and hope that this guide he
 
 ### Learning your way around examples
 
-One of the most challenging aspects of any IaC solution, Pulumi included, is learning how to configure the cloud resources you desire to use. Between 100s of clouds, and 100s or 1,000s of services in each of them, and dozens of configuration settings per service, there are endless ways to configure them. Pulumi supports containerized workloads in the cloud as well as serverless and on-premises VM-based workloads. This is very powerful–but can be daunting\!
+One of the most challenging aspects of any IaC solution, Pulumi included, is learning how to configure the cloud resources you desire to use. Between 100s of clouds, and 100s or 1,000s of services in each of them, and dozens of configuration settings per service, there are endless ways to configure them. Pulumi supports containerized workloads in the cloud as well as serverless and on-premises VM-based workloads. This is very powerful–but can be daunting!
 
 The Pulumi AI assistant was created to help you write IaC. You can describe any cloud architecture in natural language and it will create the code in your chosen programming language. It is getting better and more accurate over time. [Try out Pulumi AI here](https://pulumi.com/ai).
 
