@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Runs typedoc on various Pulumi repos and copies them to
 # the /libraries folder.
