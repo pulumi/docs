@@ -82,14 +82,14 @@ All scanned resources are displayed on the **Resources** page in Pulumi Cloud.
     * **Project**: `my-aws-account`  
     * **Stack/Account**: `us-east-1/my-cluster`
 
-![Resources page](/docs/insights/assets/account-resource-list-page.png)
+![Resources page](/docs/insights/assets/insights-resource-explorer.png)
 
 * **Resource navigation**: Click on a resource's name to view its **Resource Details** page. This page includes:  
   * **Resource history**: Pulumi tracks and displays all versions of a resource, with changes based on property updates.  
   * **Properties**: View detailed properties for each resource version.  
   * **References**: See edges (relationships) to other resources in the same account.
 
-![Resource details page](/docs/insights/assets/account-resource-detail-page.png)
+![Resource details page](/docs/insights/assets/insights-resources.png)
 
 ## Configure ESC credentials
 

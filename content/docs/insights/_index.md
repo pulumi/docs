@@ -76,7 +76,7 @@ sections:
 - type: flat
   heading: Get Started
   description: |
-    Check out the [Getting Started Guide](/docs/insights/get-started/) to set up Pulumi Insights and explore its powerful features.
+    <p>Check out the <a href="/docs/insights/get-started/">getting started guide</a> to set up Pulumi Insights and explore its powerful features.</p>
 
 - type: flat
   heading: Have questions?
