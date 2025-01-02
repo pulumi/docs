@@ -1,46 +1,42 @@
 ---
-title_tag: Configuring Azure Active Directory | SAML SSO
-meta_desc: This page provides a walkthrough important aspects of configuring
-           Azure Active Directory (Azure AD) as a SAML SSO identity provider (IDP).
-title: Azure AD
-h1: "SAML: Configuring Azure Active Directory"
+title_tag: Configuring Microsoft Entra ID | SAML SSO
+meta_desc: This page provides a walkthrough important aspects of configuring 
+           Entra ID as a SAML SSO identity provider (IDP).
+title: Microsoft Entra ID
+h1: "SAML: Configuring Microsoft Entra ID"
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   cloud:
-    name: Azure AD
+    name: Entra ID
     parent: pulumi-cloud-access-management-saml
     weight: 3
-    identifier: pulumi-cloud-access-management-saml-aad
+    identifier: pulumi-cloud-access-management-saml-entra
 aliases:
 - /docs/reference/service/saml-aad/
 - /docs/console/accounts/saml/aad/
 - /docs/guides/saml/aad/
+- /docs/pulumi-cloud/access-management/saml/aad/
 ---
 
-This guide walks you through configuring your Azure Active Directory (Azure AD) as a SAML SSO identity provider
+This guide walks you through configuring Microsoft Entra ID as a SAML SSO identity provider
 (IDP) for the Pulumi Cloud.
 
 ## Prerequisites
 
 - [Single Sign-On](/docs/pulumi-cloud/access-management/saml/sso/)
 
-## Configuring Azure AD
+## Configuring Microsoft Entra ID
 
-### Add an application to your Azure AD tenant
+### Add an application to your Entra ID tenant
 
-1. In the Azure portal, on the left navigation panel, select **Azure Active Directory**.
+1. In the Azure portal, on the left navigation panel, select **Microsoft Entra ID**.
 
-1. Select **Enterprise applications**. It will show some of the existing applications in your Azure
-  AD tenant.
-
-    ![Enterprise applications section](/images/docs/reference/service/saml-aad/enterprise-applications.png)
-
-1. Select **New application**.
+1. Select **Add** then in the dropdown, select **Enterprise application**. It will take you to the Microsoft Entra Gallery.
 
     ![New application](/images/docs/reference/service/saml-aad/new-application.png)
 
-1. Select **Non-gallery application** tile and in the **Add your own application** panel, enter
-   _Pulumi Cloud_ as the application name then select **Add**.
+1. Select **Create your own application** and in the **Create your own application** panel, enter
+   _Pulumi Cloud_ as the application name. Make sure the **Non-gallery** option is selected, then select **Create**.
 
     ![Non-gallery application](/images/docs/reference/service/saml-aad/non-gallery-application.png)
 
@@ -53,7 +49,7 @@ This guide walks you through configuring your Azure Active Directory (Azure AD) 
 
     ![SAML configuration](/images/docs/reference/service/saml-aad/saml-configuration.png)
 
-### Enter Pulumi configuration into your Azure AD application
+### Enter Pulumi configuration into your Entra ID application
 
 {{< saml-warning >}}
 
@@ -85,19 +81,19 @@ This guide walks you through configuring your Azure Active Directory (Azure AD) 
 <br />
 > **Note:** Be sure to assign users and groups to use your new _Pulumi Cloud_ SAML application.
 > That is how you can control membership access to your Pulumi organization. See the
-> [Azure AD documentation](https://docs.microsoft.com/en-us/azure/active-directory/manage-apps/configure-single-sign-on-non-gallery-applications#assign-users-and-groups-to-your-saml-application)
+> [Entra ID documentation](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/assign-user-or-group-access-portal)
 > for more information.
 
-Now that the Azure AD-side of the SAML SSO configuration is complete, you will need
+Now that the Entra ID side of the SAML SSO configuration is complete, you will need
 to configure the Pulumi Cloud to receive SAML SSO requests from your
-Azure AD.
+Entra ID application.
 
 ## Configuring Your Pulumi Organization
 
-To configure your Pulumi organization to accept SAML SSO requests from Azure AD, you will need to
+To configure your Pulumi organization to accept SAML SSO requests from Entra ID, you will need to
 download the SAML application's configuration data and then pass that to Pulumi.
 
-1. Back on the Azure AD's application settings page, select the **SAML Signing Certificate** panel.
+1. Back on the Entra ID application's settings page, select the **SAML Signing Certificate** panel.
   Then select **Download** next to **Federated Metadata XML** and save the resulting file.
 
     ![Download XML](/images/docs/reference/service/saml-aad/download-xml.png)
@@ -107,25 +103,24 @@ download the SAML application's configuration data and then pass that to Pulumi.
 
 1. Select the **Change Requirements** button and then **SAML SSO**.
 
-1. Open up the XML document you downloaded from the Azure AD portal, and paste its full contents
-  into the **Identity Provider Metadata** field.
+1. Open up the XML document you downloaded from the Entra ID portal, and paste its full contents into the text box.
 
     ![Provide the XML IDP descriptor](/images/docs/reference/service/saml-aad/pulumi-saml-settings-page.png)
 
-1. Select **Save**.
+1. Select **Apply changes**.
 
-## Signing into Pulumi using Azure AD
+## Signing into Pulumi using Entra ID
 
-Once your Azure AD application is created, and its configuration data passed to Pulumi, you can now
+Once your Entra ID application is created, and its configuration data passed to Pulumi, you can now
 sign in to the Pulumi Cloud using your SAML SSO credentials.
 
 Navigate to [https://app.pulumi.com/signin/sso/](https://app.pulumi.com/signin/sso/) and enter the
 name of your Pulumi organization. If everything is configured correctly, you should be prompted to
-sign in to your Azure AD instance, and then immediately be redirected back to the Pulumi Cloud.
+sign in to your Entra ID instance, and then immediately be redirected back to the Pulumi Cloud.
 
 ![Pulumi Cloud](/images/docs/reference/service/saml-aad/pulumi-console-signin.png)
 
 ## Troubleshooting
 
-If you have any trouble configuring Azure AD, signing into Pulumi, or need additional assistance, please
+If you have any trouble configuring Entra ID, signing into Pulumi, or need additional assistance, please
 [contact support](https://support.pulumi.com/).
