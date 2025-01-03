@@ -89,6 +89,26 @@ Example of the `AuthnStatement` element with session lifetime configured:
 
 If `SessionNotOnAfter` isn't specified, then the Pulumi Cloud will use the default session lifetime of 12 hours.
 
+## SAML Admin
+
+A SAML admin can log in to your Pulumi organization using an alternative login method. This ensures someone can always log in to your organization to help resolve errors with the SAML configuration.
+
+Whoever configures SAML for your organization is automatically made the SAML admin. To change the SAML admin:
+
+1. Navigate to **Settings** > **Access Management**.
+1. In the **SAML SSO** section, select the **SAML Admin** button.
+1. Select a new SAML admin from the list.
+
+{{% notes type="info" %}}
+Only organization admins can be SAML admins. If you want to designate a member or billing manager as the SAML admin, you will first need to change their role to admin, then make them a SAML admin.
+{{% /notes %}}
+
+{{% notes type="warning" %}}
+When a user stops being a SAML admin, they will automatically lose all other login methods.
+{{% /notes %}}
+
+Only one SAML admin per organization is supported at this time.
+
 ## Troubleshooting
 
 ### Validation error while trying to save an IdP-provided metadata XML in the Pulumi Cloud
