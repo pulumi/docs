@@ -103,6 +103,10 @@ Whoever configures SAML for your organization is automatically made the SAML adm
 Only organization admins can be SAML admins. If you want to designate a member or billing manager as the SAML admin, you will first need to change their role to admin, then make them a SAML admin.
 {{% /notes %}}
 
+{{% notes type="warning" %}}
+When a user stops being a SAML admin, they will automatically lose all other login methods.
+{{% /notes %}}
+
 Only one SAML admin per organization is supported at this time.
 
 ## Troubleshooting
