@@ -1,17 +1,17 @@
 ---
-title_tag: "Pulumi Insights: Resource search"
-meta_desc: Documentation and query syntax for the Pulumi Insights search feature.
 title: Resource search
+title_tag: "Pulumi Insights: Resource search"
 h1: Resource search
+meta_desc: Documentation and query syntax for the Pulumi Insights search feature.
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  cloud:
-    name: Resource search
-    parent: pulumi-cloud-insights
-    weight: 1
-    identifier: pulumi-cloud-insights-search
+  insights:
+    parent: insights-home
+    weight: 4
 aliases:
   - /docs/intro/insights/search/
+  - /docs/pulumi
+  - /docs/pulumi-cloud/insights/search/
 ---
 
 Resource Search allows you to explore your resources, stacks and projects in detail.
@@ -330,7 +330,7 @@ Existence queries do not return resources where the property is an empty object 
 Expanding the "Column Filter" menu shows you the set of values found for that column along with a count for each value.
 You can then select a specific value or collection of values to filter your result set.
 
-![Resource Search Column Filter](/docs/pulumi-cloud/insights/column-filter.png)
+![Resource Search Column Filter](/docs/esc/assets/column-filter.png)
 
 In the example above, the query has been restricted to the "dev" stack.
 
@@ -378,7 +378,7 @@ You may want to expand the "Advanced filtering" menu if you are interested in sp
 
 You do not need to query AI Assist with English:
 
-![AI Assist](../search-ai.png)
+![AI Assist](/docs/esc/assets/search-ai.png)
 
 > (type:aws:ec2/instance:Instance OR type:azure:compute:VirtualMachine OR type:gcp:compute:Instance)
 
