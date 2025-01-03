@@ -35,7 +35,7 @@ Finally, you can select whether to enable scheduled scans or run them manually, 
 When scheduled scans are enabled, Pulumi automatically scans the account every 24 hours.
 {{< /notes >}}
 
-To finish creating this new account lick **Create** and you will see a success notification and arrive on the details page of the account.
+To finish creating this new account click **Create** and you will see a success notification and arrive on the details page of the account.
 
 Next, you will learn how to manage your accounts, and manually launch a scan.
 
