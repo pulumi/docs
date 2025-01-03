@@ -63,11 +63,11 @@ This guide walks you through configuring Microsoft Entra ID as a SAML SSO identi
 
 ### Configure the name identifier format
 
-1. Select the **Edit** icon on the **User Attributes & Claims** panel.
+1. Select the **Edit** icon on the **Attributes & Claims** panel.
 
     ![User Attributes & Claims Panel](/images/docs/reference/service/saml-aad/attributes-and-claims-panel.png)
 
-1. Then, select the **Edit** icon next to **Name identifier value**.
+1. Then, select **Unique User Identifier (Name ID)** under **Required claim**.
 
     ![User Attributes & Claims](/images/docs/reference/service/saml-aad/attributes-and-claims.png)
 
@@ -93,7 +93,7 @@ Entra ID application.
 To configure your Pulumi organization to accept SAML SSO requests from Entra ID, you will need to
 download the SAML application's configuration data and then pass that to Pulumi.
 
-1. Back on the Entra ID application's settings page, select the **SAML Signing Certificate** panel.
+1. Back on the Entra ID application's settings page, select the **SAML Certificates** panel.
   Then select **Download** next to **Federated Metadata XML** and save the resulting file.
 
     ![Download XML](/images/docs/reference/service/saml-aad/download-xml.png)
