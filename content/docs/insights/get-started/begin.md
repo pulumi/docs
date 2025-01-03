@@ -23,7 +23,7 @@ If you're new to Pulumi you can click here to [start a free trial](https://app.p
 
 ## Create an ESC Environment
 
-Pulumi Insights Account Discovery requires read-only access to your cloud accounts. This access is granted by [creating an ESC environment](docs/esc/get-started/create-environment/) that generates valid credentials for the corresponding Pulumi provider when accessed.
+Pulumi Insights Account Discovery requires read-only access to your cloud accounts. This access is granted by [creating an ESC environment](/docs/esc/get-started/create-environment/) that generates valid credentials for the corresponding Pulumi provider when accessed.
 
 {{% notes "info" %}}
 Account Discovery leverages Pulumi ESC to securely manage the credentials required to discover and read infrastructure resources, aligning with enterprise best practices for managing application secrets.
@@ -43,7 +43,7 @@ Leave the default environment definition for now, and you will return to finish 
 
 {{% choosable cloud aws %}}
 
-To configure Pulumi Insights with AWS, you will use [OpenID Connect (OIDC)](docs/pulumi-cloud/access-management/oidc/) for authentication. Follow these steps:
+To configure Pulumi Insights with AWS, you will use [OpenID Connect (OIDC)](/docs/pulumi-cloud/access-management/oidc/) for authentication. Follow these steps:
 
 1. Log in to the [AWS Management Console](https://console.aws.amazon.com/iam/).
 2. Go to the **Roles** section and create a new role.
