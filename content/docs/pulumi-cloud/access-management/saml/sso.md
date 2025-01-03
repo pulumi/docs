@@ -22,7 +22,7 @@ with the [Pulumi Cloud](/docs/pulumi-cloud/).
 
 > For a specific example, refer to one of our integration guides:
 >
-> - [Azure Active Directory](/docs/pulumi-cloud/access-management/saml/aad/)
+> - [Microsoft Entra ID](/docs/pulumi-cloud/access-management/saml/entra/)
 > - [Google Workspace](/docs/pulumi-cloud/access-management/saml/gsuite/)
 > - [Okta](/docs/pulumi-cloud/access-management/saml/okta/)
 > - [Auth0](/docs/pulumi-cloud/access-management/saml/auth0/)

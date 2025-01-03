@@ -1,17 +1,18 @@
 ---
-title_tag: Configuring Azure Active Directory | SCIM
-meta_desc: This page describes how to support SCIM 2.0 functionality between Pulumi and Azure AD.
-title: Azure AD
-h1: "SCIM: Configuring Azure Active Directory"
+title_tag: Configuring Microsoft Entra ID | SCIM
+meta_desc: This page describes how to support SCIM 2.0 functionality between Pulumi and Entra ID.
+title: Microsoft Entra ID
+h1: "SCIM: Configuring Microsoft Entra ID"
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   cloud:
-    name: Azure AD
+    name: Entra ID
     parent: pulumi-cloud-access-management-scim
     weight: 1
-    identifier: pulumi-cloud-access-management-scim-azuread
+    identifier: pulumi-cloud-access-management-scim-entra
 aliases:
   - /docs/guides/scim/azuread/
+  - /docs/pulumi-cloud/access-management/scim/azuread
 ---
 
 This document outlines the steps required to configure automatic provisioning/deprovisioning of your users in Pulumi using SCIM 2.0.
@@ -26,7 +27,7 @@ Please note that some advanced SCIM features aren't supported yet. For more info
 
 ## Enabling Automatic Provisioning
 
-1. Navigate to the Azure Active Directory where you have configured Single Sign On using SAML with Pulumi.
+1. Navigate to the Microsoft Entra ID application where you have configured Single Sign On using SAML with Pulumi.
 2. Select **Enterprise Applications** and select the app in which you configured Single Sign On with Pulumi earlier.
 3. Select the **Provisioning** feature, and change the value of **Provisioning Mode** to **Automatic**.
 
@@ -45,7 +46,7 @@ Select **Test Connection**. You should get a success notification once the conne
 
 ### Mappings
 
-Make sure the **Provision Azure Active Directory _Users_** mapping is enabled.
+Make sure the **Provision Microsoft Entra ID _Users_** mapping is enabled.
 
     {{% notes "info" %}}
 If you are not yet ready to enable provisioning for Groups, disable that.
@@ -55,7 +56,7 @@ If you are not yet ready to enable provisioning for Groups, disable that.
 
 ### Adjust User Attribute Mappings
 
-Update the mapping for **userName** so that is applied **Only during object creation**. In the **Mappings** expansion panel, click **Provision Azure Active Directory _Users_** and then click on the corresponding attribute mapping as shown below.
+Update the mapping for **userName** so that is applied **Only during object creation**. In the **Mappings** expansion panel, click **Provision Microsoft Entra ID _Users_** and then click on the corresponding attribute mapping as shown below.
 
 In the configuration window, change the value of the **Apply this mapping** drop-down to **Only during object creation**.
 
@@ -90,7 +91,7 @@ You are now done with the Mappings configuration. Click **Save** and close the c
 
 ## Enable Group Provisioning
 
-To enable the provisioning of Azure AD groups to Pulumi Cloud, select **Edit Provisioning** and then select the **Provision Azure Active Directory Groups** setting under the **Mappings**
+To enable the provisioning of Entra ID groups to Pulumi Cloud, select **Edit Provisioning** and then select the **Provision Microsoft Entra ID Groups** setting under the **Mappings**
 expansion panel and switch the **Enabled** setting to **Yes**.
 
 ### Update Group Attribute Mappings
@@ -100,7 +101,7 @@ between `objectId` and `externalId`. Click **Save** once you are done.
 
 ## Enable Provisioning
 
-Under the **Settings** expansion panel, the **Scope** drop-down should be set to **Sync only assigned users and groups**. This ensures that only the users who are assigned to this application are synced with Pulumi, and not everyone in your Azure Active Directory.
+Under the **Settings** expansion panel, the **Scope** drop-down should be set to **Sync only assigned users and groups**. This ensures that only the users who are assigned to this application are synced with Pulumi, and not everyone in your Entra ID account.
 
 ![settings scope](/images/docs/reference/service/scim/azuread/settings_scope.png)
 
@@ -108,10 +109,10 @@ Set the **Provisioning Status** to **On** and then click **Save**.
 
 ## Assign Users and/or Groups
 
-You must assign users to the Azure AD enterprise application to have them provisioned with an account in Pulumi. Click on the **Users and groups** feature in the left nav, and assign users and/or groups to the application by searching for them.
+You must assign users to the Entra ID enterprise application to have them provisioned with an account in Pulumi. Click on the **Users and groups** feature in the left nav, and assign users and/or groups to the application by searching for them.
 
     {{% notes "info" %}}
-If you did not enable group provisioning while you were editing the provisioning setup, click on **Edit Provisioning** and enable the **Provision Azure Active Directory Groups** setting as well under the **Mappings** expansion panel.
+If you did not enable group provisioning while you were editing the provisioning setup, click on **Edit Provisioning** and enable the **Provision Microsoft Entra ID Groups** setting as well under the **Mappings** expansion panel.
     {{% /notes %}}
 
 Review the **Provisioning logs** to ensure there were no errors while provisioning the users. It may take a few minutes for logs to appear. If there were validation errors, you can correct them and try again, or contact Pulumi for support.

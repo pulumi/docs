@@ -490,9 +490,9 @@ comparison_table:
                     - content: _blank
                     - content: _blank
                     - content: Many
-                      tooltip: Azure Active Directory, Google Workspace, Okta, OneLogin, and more
+                      tooltip: Microsoft Entra ID, Google Workspace, Okta, OneLogin, and more
                     - content: Many
-                      tooltip: Azure Active Directory, Google Workspace, Okta, OneLogin, and more
+                      tooltip: Microsoft Entra ID, Google Workspace, Okta, OneLogin, and more
                 - title: SCIM integration
                   link: /docs/pulumi-cloud/access-management/scim/
                   items:
