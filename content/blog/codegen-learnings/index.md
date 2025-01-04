@@ -189,7 +189,7 @@ However, the first of these problems can be addressed by the approach known as "
 
 We observed that many generated TypeScript programs that fail to typecheck contain only a few errors, and asking the LLM to fix these errors often produces a valid program. While this approach is still experimental, we see promising results where getting to a correct program requires only 1-2 iterations of self-debugging. The biggest challenge with this approach is doing it in real-time. The user is staring at the screen waiting for an answer, so latency is a major concern.
 
-Monitoring these typechecking errors in production can also provide valuable insight into the quality of the RAG, and even suggest specific solutions. For example, failure to typecheck a member-access expression is a likely indicator of a missing type schema (a recall problem), or a "wrong" schema brought in by an irrelevant document (a precision problem).
+Monitoring these typechecking errors in production can also provide valuable insight into the quality of the RAG and even suggest specific solutions. For example, failure to typecheck a member-access expression is a likely indicator of a missing type schema (a recall problem) or a "wrong" schema brought in by an irrelevant document (a precision problem).
 
 Self-debugging can also be extended to include the `pulumi preview` command, which is a "dry run" operation before the actual deployment and can detect many real or potential problems such as destructive actions, incorrect configurations that cannot be detected at compile time, dependency conflicts and policy violations.
 
