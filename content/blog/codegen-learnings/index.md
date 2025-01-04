@@ -26,7 +26,7 @@ In this post, we want to share the learnings from developing code generation for
 
 Pulumi supports over [120 providers](https://www.pulumi.com/registry/), including major cloud providers such as AWS, Azure, Google Cloud, and Kubernetes, as well as many other services and platforms. New providers are continuously added, and existing providers change as their capabilities grow.
 
-Our goals is to to generate the most accurate code for every provider -- code that is not only correct but also reflects their latest capabilities.
+Our goal is to generate the most accurate code for every provider - code that is not only correct but also reflects their latest capabilities.
 
 LLMs are great at generating code however they are limited to what they have learned before their knowledge cutoff date. This means that the latest changes in the providers will not be reflected in the generated code. This also could lead to hallucinations when the model struggles to answer a question that requires up to date knowledge.
 
