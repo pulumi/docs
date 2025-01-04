@@ -24,7 +24,7 @@ In this post, we want to share the learnings from developing code generation for
 
 ## Using RAG for code generation
 
-Pulumi supports over [120 providers](https://www.pulumi.com/registry/), including major cloud providers such as AWS, Azure, Google Cloud, and Kubernetes, as well as many other services and platforms. New providers are being added continuously, and the existing providers change as their capabilities grow.
+Pulumi supports over [120 providers](https://www.pulumi.com/registry/), including major cloud providers such as AWS, Azure, Google Cloud, and Kubernetes, as well as many other services and platforms. New providers are continuously added, and existing providers change as their capabilities grow.
 
 Our goals is to to generate the most accurate code for every provider -- code that is not only correct but also reflects their latest capabilities.
 
