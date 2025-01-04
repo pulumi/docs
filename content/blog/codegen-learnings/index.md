@@ -203,7 +203,7 @@ Our testing strategy combines several approaches:
 
 1. **Systematic experimentation**: We run "what-if" scenarios against various test datasets to understand how the system behaves under different conditions.
 
-2. **Local evaluation pipeline**: While local testing has its limitations, it helps catch obvious issues early in development. We evaluate the performance of code generator, and run the code through the typechecker.
+2. **Local evaluation pipeline**: While local testing has its limitations, it helps catch obvious issues early in development. We evaluate the performance of the code generator and run the code through the typechecker.
 
 3. **Deterministic generation**: We set the LLM temperature to 0 to ensure consistent outputs. For code generation, consistency and repeatability matters more than creative variations.
 
