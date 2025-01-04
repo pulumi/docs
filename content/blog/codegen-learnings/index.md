@@ -213,7 +213,7 @@ We track several key metrics to ensure the system performs well:
 
 1. **RAG effectiveness**: We measure prompt coverage to evaluate how well our retrieval system performs.
 
-2. **Code quality indicators**: We track the percentage of generated code that successfully typechecks for all supported language, along with how this metric responds to system changes.
+2. **Code quality indicators**: We track the percentage of generated code that successfully typechecks for all supported languages along with how this metric responds to system changes.
 
 3. **User feedback**: Every "thumbs down" report gets analyzed to identify patterns and potential improvements. This direct user feedback has been invaluable in refining our system.
 
