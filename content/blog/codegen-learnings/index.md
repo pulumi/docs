@@ -191,7 +191,7 @@ We observed that many generated TypeScript programs that fail to typecheck conta
 
 Monitoring these typechecking errors in production can also provide valuable insight into the quality of the RAG and even suggest specific solutions. For example, failure to typecheck a member-access expression is a likely indicator of a missing type schema (a recall problem) or a "wrong" schema brought in by an irrelevant document (a precision problem).
 
-Self-debugging can also be extended to include the `pulumi preview` command, which is a "dry run" operation before the actual deployment and can detect many real or potential problems such as destructive actions, incorrect configurations that cannot be detected at compile time, dependency conflicts and policy violations.
+Self-debugging can also be extended to include the `pulumi preview` command, which is a "dry run" operation before the actual deployment and can detect many real or potential problems such as destructive actions, incorrect configurations that cannot be detected at compile time, dependency conflicts, and policy violations.
 
 ## Running Pulumi code generator in production
 
