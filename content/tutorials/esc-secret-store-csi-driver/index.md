@@ -1,7 +1,7 @@
 ---
-title: "Integrate with Secret Store CSI Driver"
-title_tag: "Integrate with Secret Store CSI Driver | Learn Pulumi"
-h1: "Integrate with Secret Store CSI Driver"
+title: "Integrate Pulumi with Secret Store CSI Driver in Kubernetes"
+title_tag: "Integrate Pulumi with Secret Store CSI Driver in Kubernetes"
+h1: "Integrate Pulumi with Secret Store CSI Driver in Kubernetes"
 layout: single
 description: |
     Learn how to integrate the Secret Store CSI Driver with Pulumi ESC to securely manage your secrets in Kubernetes.
@@ -9,15 +9,19 @@ meta_desc: "Learn how to integrate the Secret Store CSI Driver with Pulumi ESC t
 weight: 999
 meta_image: meta.png
 summary: |
+  ### Container Storage Interface (CSI)
+
+  The Container Storage Interface (CSI) is a standard to unify the interface between container orchestrators (like Kubernetes) and different storage vendors (like NetApp, Ceph, etc.). This helps to guarantee that implementing a CSI for a storage vendor is going to work with all orchestrators that support CSI.
+
   ## Combining CSI, Kubernetes and Secrets = Secret Store CSI Driver
 
-  The Secret Store CSI Driver is a CSI driver that allows you to mount many secrets, certificates, and keys from external secret stores into Kubernetes pods as volumes. After attaching the volume, the system mounts the secrets into the container file system.
-
+  The Kubernetes Secret Store CSI Driver allows you to mount secrets, certificates, and keys from external secret stores into Kubernetes pods as volumes. After attaching the volume, the system mounts the secrets into the container file system.
+  
   The benefits of using the Secret Store CSI Driver are that you manage the lifecycle of the secrets outside of Kubernetes while still providing a Kubernetes-native experience of using the secrets in your pods.    
 
 youll_learn:
   - How to deploy the Secret Store CSI Driver and Pulumi ESC Provider using Helm or Pulumi
-  - How to mount secretes stored in Pulumi ESC as volumes in your Kubernetes pods
+  - How to mount secrets stored in Pulumi ESC as volumes in your Kubernetes pods
 estimated_time: 15
 collections:
 - pulumi-esc
@@ -57,7 +61,7 @@ NAME                                               READY   STATUS    RESTARTS   
 csi-secrets-store-secrets-store-csi-driver-drv44   3/3     Running   0          54s
 ```
 
-Additionally, you should see following CRDs installed:
+Additionally, you should see the following CRDs installed:
 
 ```bash
 kubectl get crds | grep secrets-store
@@ -79,7 +83,7 @@ NAME                            READY   STATUS    RESTARTS   AGE
 pulumi-esc-csi-provider-l8w5f   1/1     Running   0          76s
 ```
 
-Now with everything running, we can start using the Pulumi ESC provider for getting our secrets from Pulumi ESC.
+Now with everything running, we can start using the Pulumi ESC provider to retrieve our secrets from Pulumi ESC.
 
 #### Create secret containing Pulumi access token
 
@@ -188,9 +192,9 @@ spec:
             secretProviderClass: "example-provider-pulumi-esc"
 ```
 
-Important part of the deployment is the `secretProviderClass: "example-provider-pulumi-esc"` attribute in the `volumeAttributes` section. This tells the Secret Store CSI Driver to use the `example-provider-pulumi-esc` provider to retrieve the secrets.
+An important part of the deployment is the `secretProviderClass: "example-provider-pulumi-esc"` attribute in the `volumeAttributes` section. This tells the Secret Store CSI Driver to use the `example-provider-pulumi-esc` provider to retrieve the secrets.
 
-On pod start or restart, the Secret Store CSI Driver will commmunicate with the Pulumi ESC provider to retrieve the secrets content from Pulumi ESC as defined in the `SecretProviderClass` object.
+On pod start or restart, the Secret Store CSI Driver will communicate with the Pulumi ESC provider to retrieve the secrets content from Pulumi ESC as defined in the `SecretProviderClass` object.
 
 Then the volume is mounted in the pod as `tmpfs` and the secret contents are written to the mounted volume.
 
@@ -321,7 +325,7 @@ Deploy the stack by running:
 pulumi up
 ```
 
-And you should see that the secret was created in the Kubernetes cluster and the ESO instance was deployed successfully.
+You will see that the secret was created in the Kubernetes cluster and the ESO instance was deployed successfully.
 
 ```bash
 kubectl get secret pulumi-access-token -o jsonpath='{.data.PULUMI_ACCESS_TOKEN}' | base64 -d
@@ -471,5 +475,5 @@ As we continue to improve the Pulumi ESC provider, we would love to hear your fe
 To dive deeper into using Pulumi ESC for advanced scenarios, check out the following resources:
 
 - **Pulumi ESC and External Secrets Operator**: Learn how to use the External Secrets Operator to manage secrets in Pulumi ESC and synchronize them with your Kubernetes cluster. Check out the [Pulumi ESC and External Secrets Operator tutorial](/tutorials/esc-external-secret-operator/).
-- **Environment Composition**: Learn more about to effectively compose multiple environments to manage configurations across your infrastructure. Explore the [Pulumi documentation on environment imports](/docs/esc/environments/imports/).
+- **Environment Composition**: Learn more about how to effectively compose multiple environments to manage configurations across your infrastructure. Explore the [Pulumi documentation on environment imports](/docs/esc/environments/imports/).
 - **Managing Secrets**: Learn how to securely manage and adopt dynamic, short-lived secrets on demand using Pulumi ESC, ensuring sensitive information is protected across different environments. Read more in the [Pulumi ESC documentation](/docs/esc/).
