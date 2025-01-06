@@ -20,7 +20,7 @@ This fusion of base knowledge with contextual understanding is especially valuab
 
 The role of IaC won't diminish in the age of AI - if anything, it will become even more central as systems grow increasingly complex and automated. Trustworthy code generators will be a key ingredient in the recipe for modern infrastructure management.
 
-In this post, we want to share the learnings from developing code generation for Pulumi, based on both our production IaC generator powering [Pulumi AI](www.pulumi.com/ai) and [Pulumi Copilot](https://www.pulumi.com/product/copilot/), as well as features and approaches we're still exploring.
+In this post, we share how we developed code generation for Pulumi and what we learned, based on both our production IaC generator powering [Pulumi AI](www.pulumi.com/ai) and [Pulumi Copilot](https://www.pulumi.com/product/copilot/), as well as features and approaches we're still exploring.
 
 ## Using RAG for code generation
 
