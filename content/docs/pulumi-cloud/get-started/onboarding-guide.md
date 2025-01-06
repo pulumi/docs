@@ -61,7 +61,7 @@ Start by creating [your organization here](https://app.pulumi.com/?create-organi
 
 ### Configuring Single Sign-On (SSO)
 
-Many organizations prefer to use Single Sign-On (SSO) to leverage an identity provider such as Azure Active Directory, Google Workspace, Okta, or any other SAML 2.0 compliant provider. To learn about configuring SSO for your organization, [read Pulumi Cloud SAML(SSO)](https://www.pulumi.com/docs/pulumi-cloud/access-management/saml/). If you’d like to continue using email, GitHub, GitLab, or Atlassian identity, you can skip this step.
+Many organizations prefer to use Single Sign-On (SSO) to leverage an identity provider such as Microsoft Entra ID, Google Workspace, Okta, or any other SAML 2.0 compliant provider. To learn about configuring SSO for your organization, [read Pulumi Cloud SAML(SSO)](https://www.pulumi.com/docs/pulumi-cloud/access-management/saml/). If you’d like to continue using email, GitHub, GitLab, or Atlassian identity, you can skip this step.
 
 ### Inviting your teammates
 
