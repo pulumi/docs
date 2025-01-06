@@ -191,11 +191,11 @@ Monitoring these typechecking errors in production can also provide valuable ins
 
 Self-debugging can also be extended to include the `pulumi preview` command, which is a "dry run" operation before the actual deployment and can detect many real or potential problems such as destructive actions, incorrect configurations that cannot be detected at compile time, dependency conflicts, and policy violations.
 
-## Wrapping up: the lessons for building reliable code generator
+## From kitchen to table: testing what works
 
 The landscape of LLM-based code generation is moving fast, and we need to keep learning and adapting as we go. But with all this rapid technological change, it's crucial to ground our decisions in real numbers. We need to make sure each new advancement actually makes things better, both in our test environments and out in the real world.
 
-The probabilistic nature of LLM-based code generation means we can't rely solely on pre-production testing. Instead, we need multiple layers of quality control working together. Here's what we've learned works best:
+The probabilistic nature of LLM-based code generation means we can't rely solely on pre-production testing. Instead, we adopt multiple layers of quality control working together. Here's what we've learned works best:
 
 ### Building confidence through testing
 
@@ -217,7 +217,19 @@ We track several key metrics to ensure the system performs well:
 
 3. **User feedback**: Every "thumbs down" report gets analyzed to identify patterns and potential improvements. This direct user feedback has been invaluable in refining our system.
 
-This multi-layered approach helps us maintain high quality through continuous monitoring and improvement. It's not unlike a professional kitchen, where chefs talk about 'mise en place' - having everything in its place before service begins. But the real craft is in the constant tasting, adjusting, and refining during service. Running a code generator in production follows the same rhythm: careful preparation paired with continuous observation and adjustment. Every output - be it a soufflé or a storage bucket - must meet the mark.
+## Wrapping up
+
+Building an effective AI-powered code generator requires carefully balancing multiple concerns: the raw capabilities of LLMs with retrieved contextual knowledge, semantic search with traditional text matching, and thorough testing with real-world scenarios.
+
+Our experience has taught us that success lies in treating code generation like a delicate soufflé - it requires precise measurements, careful monitoring, and constant refinement of technique. The key ingredients are:
+
+- A robust RAG system with well-tuned recall and precision.
+- End-to-end testing and monitoring across development and production.
+- Self-debugging capabilities to handle common issues like type checking errors.
+
+As we continue to evolve Pulumi's code generation capabilities, we're excited about expanding our self-debugging features and further refining our RAG implementation.
+
+We invite you to try these capabilities in your own projects and share your experiences. Your feedback helps us continue improving and advancing the state of AI-assisted infrastructure development.
 
 <!--raw material 
 
