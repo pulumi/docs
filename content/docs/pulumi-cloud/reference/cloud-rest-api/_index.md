@@ -928,7 +928,48 @@ curl \
   https://api.pulumi.com/api/stacks/{organization}/{project}/{stack}/updates?output-type=service
 ```
 
-#### Default response
+#### Default response (output type = cli)
+
+```
+Status: 200 OK
+```
+
+```
+{
+  "updates": [
+    {
+      "kind": "update",
+      "startTime": 1733780162,
+      "message": "",
+      "environment": {},
+      "config": {
+        "aws:region": {
+          "string": "us-east-1",
+          "secret": false,
+          "object": false
+        },
+        "pulumi:template": {
+          "string": "aws-typescript",
+          "secret": false,
+          "object": false
+        }
+      },
+      "result": "succeeded",
+      "endTime": 1733780162,
+      "version": 1,
+      "resourceChanges": {
+        "create": 1,
+        "delete": 0,
+        "same": 0,
+        "update": 0
+      },
+      "resourceCount": 1
+    }
+  ]
+}
+```
+
+#### Example response (output type = service)
 
 ```
 Status: 200 OK
@@ -2218,6 +2259,63 @@ Status: 200 OK
       "avatarUrl": "https://en.gravatar.com/userimage/17756222/cabc55626abae89ebe2d8ae946521e15.png?size=300"
     }
   ]
+}
+```
+
+<!-- ###################################################################### -->
+
+
+### Get Team
+
+```
+Get /api/orgs/{org}/teams/{teamName}
+```
+
+#### Parameters
+
+| Parameter      | Type   | In   | Description                                                         |
+|----------------|--------|------|---------------------------------------------------------------------|
+| `organization` | string | path | organization name                                                   |
+| `teamName`     | string | body | team name                                                           |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  --request GET \
+  https://api.pulumi.com/api/orgs/{org}/teams/{teamName}
+```
+
+#### Default response
+
+```
+Status: 200 OK
+```
+
+```
+{
+  "kind": "github",
+  "name": "example-team",
+  "displayName": "My Example Team",
+  "description": "An example team of exemplary people",
+  "members": [
+    {
+      "name": "First Last",
+      "githubLogin": "user1",
+      "avatarUrl": "https://en.gravatar.com/userimage/17756222/cabc55626abae89ebe2d8ae946521e15.png?size=300",
+      "role": "member"
+    },
+    {
+      "name": "First Last",
+      "githubLogin": "user2",
+      "avatarUrl": "https://en.gravatar.com/userimage/17756222/cabc55626abae89ebe2d8ae946521e15.png?size=300",
+      "role": "admin"
+    }
+  ],
+  "userRole": "admin"
 }
 ```
 
@@ -5194,7 +5292,7 @@ Status: 200 OK
 ### List issuers
 
 ```
-GET /api/org/{organization}/oidc/issuers
+GET /api/orgs/{organization}/oidc/issuers
 ```
 
 #### Parameters
