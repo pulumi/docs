@@ -1,6 +1,6 @@
 ---
 title: "Learnings from building AI-based code generator"
-date: 2024-12-31T20:00:00-05:00
+date: 2025-01-07T20:00:00-05:00
 draft: false
 meta_desc: Learnings from building a RAG for Pulumi code generator
 meta_image: meta.png
