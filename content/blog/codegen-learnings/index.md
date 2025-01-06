@@ -43,7 +43,7 @@ There is lot of fascinating details here, so let's dig in!
 
 ## The anatomy of Pulumi Copilot RAG
 
-Before going into the details, let’s consider a simple yet essential insight: for a RAG corpus to be useful, it must meet two key requirements:
+Before going into the details, let’s consider a simple yet essential insight: an effective dataset for RAG must meet two key requirements:
 
 1. It must _contain_ the necessary information.
 2. The information must be easily _searchable_.
@@ -56,9 +56,7 @@ To fulfil the request, the system needs to intuit the following:
 
 - The **cloud provider**. This can be determined based on the fact that S3 is a common storage solution in AWS, and possibly the fact that the user's [organization has stated](https://www.pulumi.com/blog/copilot-system-prompts/) AWS as their preferred cloud provider.
 - The **programming language**. This information can again come directly from the organizational preferences, or from the user's prior conversations.
-- The information about the **type** (or types) that must be created - its name and schema, the package it is in, and the capabilities it supports.
-
-While all three of the above can be conceptually called the RAG, only the last information is actually stored in the Registry.
+- The information about the **type** (or types) that must be created - its name and schema, the package it is in, and the capabilities it supports. Some of this information comes from the built-in LLM knowledge, supported and augmented by the Registry.
 
 Putting it all together, we can now expand the original user query into the following prompt that is going to guide the code generation:
 
@@ -69,11 +67,11 @@ While we had to rely on some guesswork to come up with this prompt, fortunately 
 
 ### Assessing search quality using recall and precision
 
-To assess how good our RAG is, we need to first understand the two fundamental concepts used in the information retrieval systems: the _recall_ and the _precision_. Imagine that you're looking for apple pie recipes in one of Jamie Oliver's cookbooks. The book has a recipe for a classic American apple pie, a Dutch apple pie and a modern take on a French apple tart. Due to the book's narrative approach with the recipes woven into the stories and context, you've managed to retrieve only the first two recipes but missed the French apple tart. Having retrieved 2 ouf 3 relevant documents, you have achieved a **67% recall**.
+To assess how effective the RAG is, we need to first understand the two fundamental concepts used in the information retrieval systems: the _recall_ and the _precision_. Imagine that you're looking for apple pie recipes in one of Jamie Oliver's cookbooks. The book has a recipe for a classic American apple pie, a Dutch apple pie and a modern take on a French apple tart. Due to the book's narrative approach with the recipes woven into the stories and context, you've managed to retrieve only the first two recipes but missed the French apple tart. Having retrieved 2 ouf 3 relevant documents, you have achieved a **67% recall**.
 
 Because you were looking for the word "pie", you also retrieved a recipe for a Shepherd's pie, which, while delicious, does not qualify as an apple pie. Another document that came up was a fish pie - a classic British dish that does not contain apples or even a pastry crust. Since only 2 of your 4 retrieved documents can be legitimately classified as apple pies, you have achieved a **50% precision**.
 
-Now let's formalize this a bit. Recall measures the ratio of the relevant documents retrieved to the total number of relevant documents in RAG:
+Now let's formalize this a bit. Recall measures the ratio of the relevant documents retrieved to the total number of relevant documents in RAG dataset:
 
 $$Recall = \frac{N(Retrieved \cap Relevant)}{N(Relevant)}$$
 
@@ -92,7 +90,7 @@ Where $N(Retrieved)$ is the total number of documents that were retrieved.
 
 High precision means that many of the retrieved documents were relevant.
 
-Naturally, an effective RAG maximizes both the recall and the precision. It's [been said](https://buduroiu.com/blog/rag-llm-recall-problem) that high recall is essential to ensure relevant content is available to the code generator while precision is the parameter you want to optimize for to avoid hallucinations.
+Naturally, we want to maximizes both the recall and the precision. It's [been said](https://buduroiu.com/blog/rag-llm-recall-problem) that high recall is essential to ensure relevant content is available to the code generator while precision is the parameter you want to optimize for to avoid hallucinations.
 
 ### Practical concerns
 
@@ -189,11 +187,13 @@ However, the first of these problems can be addressed by the approach known as "
 
 We observed that many generated TypeScript programs that fail to typecheck contain only a few errors, and asking the LLM to fix these errors often produces a valid program. While this approach is still experimental, we see promising results where getting to a correct program requires only 1-2 iterations of self-debugging. The biggest challenge with this approach is doing it in real-time. The user is staring at the screen waiting for an answer, so latency is a major concern.
 
-Monitoring these typechecking errors in production can also provide valuable insight into the quality of the RAG and even suggest specific solutions. For example, failure to typecheck a member-access expression is a likely indicator of a missing type schema (a recall problem) or a "wrong" schema brought in by an irrelevant document (a precision problem).
+Monitoring these typechecking errors in production can also provide valuable insight into the quality of the data used by the RAG and even suggest specific solutions. For example, failure to typecheck a member-access expression is a likely indicator of a missing type schema (a recall problem) or a "wrong" schema brought in by an irrelevant document (a precision problem).
 
 Self-debugging can also be extended to include the `pulumi preview` command, which is a "dry run" operation before the actual deployment and can detect many real or potential problems such as destructive actions, incorrect configurations that cannot be detected at compile time, dependency conflicts, and policy violations.
 
-## Running Pulumi code generator in production
+## Wrapping up: the lessons for building reliable code generator
+
+The landscape of LLM-based code generation is moving fast, and we need to keep learning and adapting as we go. But with all this rapid technological change, it's crucial to ground our decisions in real numbers. We need to make sure each new advancement actually makes things better, both in our test environments and out in the real world.
 
 The probabilistic nature of LLM-based code generation means we can't rely solely on pre-production testing. Instead, we need multiple layers of quality control working together. Here's what we've learned works best:
 
