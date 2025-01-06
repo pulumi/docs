@@ -43,7 +43,7 @@ There is lot of fascinating details here, so let's dig in!
 
 ## The anatomy of Pulumi Copilot RAG
 
-Before going into the details, let’s consider a simple yet essential insight: for a RAG to be useful, it must meet two key requirements:
+Before going into the details, let’s consider a simple yet essential insight: for a RAG corpus to be useful, it must meet two key requirements:
 
 1. It must _contain_ the necessary information.
 2. The information must be easily _searchable_.
