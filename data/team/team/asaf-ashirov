@@ -1,7 +1,8 @@
 id = "asaf-ashirov"
 name = "Asaf Ashirov"
-status = "active"
 title = "Head of SEO"
-weight = 1
+
+status = "active"
+
 [social]
 linkedin = "asafashirov"
