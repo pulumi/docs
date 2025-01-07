@@ -136,3 +136,7 @@ for tag in tags.tags:
 
 {{% /choosable %}}
 {{< /chooser >}}
+
+## Documentation
+
+* [API Reference Documentation](/docs/reference/pkg/python/pulumi_esc_sdk/)

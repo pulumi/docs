@@ -153,3 +153,7 @@ async function main() {
 
 {{% /choosable %}}
 {{< /chooser >}}
+
+## Documentation
+
+* [API Reference Documentation](/docs/reference/pkg/nodejs/pulumi/esc-sdk/)

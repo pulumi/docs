@@ -170,3 +170,7 @@ func main() {
 
 {{% /choosable %}}
 {{< /chooser >}}
+
+## Documentation
+
+* [API Reference Documentation](https://pkg.go.dev/github.com/pulumi/esc-sdk/sdk/go)
