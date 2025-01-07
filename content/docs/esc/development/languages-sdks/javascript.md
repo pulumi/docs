@@ -6,7 +6,7 @@ meta_desc: This page provides an overview on how to use Pulumi ESC TypeScript/Ja
 menu:
   esc:
     parent: esc-languages-sdks
-    identifier: typescript-sdk
+    identifier: esc-typescript-sdk
     weight: 1
 aliases:
   - /docs/esc/sdk/javascript/
