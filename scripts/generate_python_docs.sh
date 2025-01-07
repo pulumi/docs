@@ -7,6 +7,7 @@ PACKAGES=(
   "pulumi"
   "pulumi_policy"
   "pulumi_terraform"
+  "pulumi_esc_sdk"
 )
 
 OUTDIR="../../static-prebuilt/docs/reference/pkg/python"
