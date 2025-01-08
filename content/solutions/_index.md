@@ -1,6 +1,6 @@
 ---
 title: Solutions
-meta_desc: This is a description about the solutions page and it does a good job of describing what this page is.
+meta_desc: Solutions to deliver and manage modern cloud applications.
 
 type: page
 layout: solutions
