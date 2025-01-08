@@ -6,7 +6,7 @@ meta_desc: This page provides an overview on how to use Pulumi ESC Go SDK.
 menu:
   esc:
     parent: esc-languages-sdks
-    identifier: go-sdk
+    identifier: esc-go-sdk
     weight: 3
 aliases:
   - /docs/esc/sdk/go/
@@ -170,3 +170,7 @@ func main() {
 
 {{% /choosable %}}
 {{< /chooser >}}
+
+## Documentation
+
+* [API Reference Documentation](https://pkg.go.dev/github.com/pulumi/esc-sdk/sdk/go)

@@ -78,6 +78,7 @@ REPOS=(
     "policy,index.ts,pulumi-policy,sdk/nodejs/policy"
     "pulumi,index.ts,pulumi/sdk/nodejs"
     "terraform,index.ts,pulumi-terraform,sdk/nodejs"
+    "esc-sdk,index.ts,esc-sdk/sdk/typescript/esc"
 )
 
 PIDS=()
