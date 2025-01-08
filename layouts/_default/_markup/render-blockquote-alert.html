@@ -1,19 +1,18 @@
-{{ $emojis := dict
-"caution" ":exclamation:"
-"important" ":zap:"
-"note" ":information_source:"
-"tip" ":bulb:"
-"warning" ":warning:"
+{{ $icon := dict
+"caution" "exclamation-triangle"
+"important" "star"
+"note" "pencil-alt"
+"info" "info-circle"
+"tip" "lightbulb"
+"warning" "exclamation-triangle"
 }}
 
-<blockquote class="alert alert-{{ .AlertType }}">
-    <p class="alert-heading">
-        {{ transform.Emojify (index $emojis .AlertType) }}
-        {{ with .AlertTitle }}
-            {{ . }}
-        {{ else }}
-            {{ or (i18n .AlertType) (title .AlertType) }}
-        {{ end }}
-    </p>
-    {{ .Text }}
-</blockquote>
+<div class="note note-{{ .AlertType }}">
+    <div class="icon-and-line">
+        <i class="fas fa-{{ index $icon .AlertType }}"></i>
+        <div class="line"></div>
+    </div>
+    <div class="content">
+        {{- .Text -}}
+    </div>
+</div>
