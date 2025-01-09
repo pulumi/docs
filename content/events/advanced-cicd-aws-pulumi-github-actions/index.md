@@ -53,7 +53,7 @@ main:
 
         This workshop introduces users to advanced DevOps best practices. You will add compliance checks via policies, drift detection, and isolated test environments to an existing GitHub Actions pipeline. Accelerate your AWS projects with the [code examples provided](https://github.com/pulumi/workshops/tree/main/github-aws-cicd-advanced).
 
-        Did you miss Part 1 of the DevOps workshop series? Start with [Get started with CI/CD for AWS using Pulumi & GitHub Actions before diving into advanced techniques.](/resources/cicd-for-aws-with-pulumi-and-github-actions/)
+        Did you miss Part 1 of the DevOps workshop series? Start with [Get started with CI/CD for AWS using Pulumi & GitHub Actions before diving into advanced techniques.](/events/cicd-for-aws-with-pulumi-and-github-actions/)
 
     learn:
         - How to build an advanced CI pipeline to enforce compliance and correct drift
