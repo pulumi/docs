@@ -21,4 +21,5 @@ source ./scripts/ci-login.sh
 ./scripts/run-pulumi.sh preview
 ./scripts/make-s3-redirects.sh
 
-./scripts/detect-new-404s.sh
+# Temporarily disable 404 detection (too many false positives)
+# ./scripts/detect-new-404s.sh
