@@ -11,6 +11,7 @@ menu:
     weight: 2
 aliases:
 - /docs/intro/insights/
+- /docs/pulumi-cloud/insights/
 ---
 
 Pulumi Insights provides advanced search, analytics, and AI for your infrastructure as code.
