@@ -178,6 +178,6 @@ resources:
     other:
         title: Other resources
         items:
-            - "[Watch a workshop](/resources/#upcoming)"
+            - "[Watch a workshop](/events/#upcoming)"
             - "[Convert an existing ARM template](/arm2pulumi/)"
 ---
