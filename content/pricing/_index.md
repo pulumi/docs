@@ -288,7 +288,7 @@ comparison_table:
             - header: Pulumi Insights
               rows:
                 - title: Resource search
-                  link: /docs/pulumi-cloud/insights/search/
+                  link: /docs/insights/search/
                   items:
                     - content: _check
                     - content: _check
@@ -301,14 +301,14 @@ comparison_table:
                     - content: 10K results
                     - content: 10K results
                 - title: Data export
-                  link: /docs/pulumi-cloud/insights/#data-export
+                  link: /docs/insights/#data-export
                   items:
                     - content: _blank
                     - content: _blank
                     - content: _check
                     - content: _check
                 - title: Property search
-                  link: /docs/pulumi-cloud/insights/search/#property-queries
+                  link: /docs/insights/search/#property-queries
                   items:
                     - content: _blank
                     - content: _blank
