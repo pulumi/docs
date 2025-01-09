@@ -34,4 +34,4 @@ The combination of EKS Hybrid Nodes and Pulumi's infrastructure as code platform
 
 Stay tuned for upcoming Pulumi examples for managing EKS Hybrid Nodes, which will enable you to manage your hybrid Kubernetes infrastructure using your preferred programming language, complete with type safety, testing capabilities, and modern development practices.
 
-If you’d like to learn more about how you can harness the power of EKS with Pulumi, check out [the latest version of our EKS package](/blog/eks-v3-release/) or [join us for our AWS Immersion Day workshop following re:Invent 2024](/resources/aws-immersion-day-platform-engineering/).
+If you’d like to learn more about how you can harness the power of EKS with Pulumi, check out [the latest version of our EKS package](/blog/eks-v3-release/) or [join us for our AWS Immersion Day workshop following re:Invent 2024](/events/aws-immersion-day-platform-engineering/).

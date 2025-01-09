@@ -14,7 +14,7 @@ tags:
 
 Pulumi is excited to be at [AWS re:Invent](/reinvent/) this week, where we’re showcasing our broad and deep support for AWS across all our products. From automating infrastructure with Pulumi IaC to securing secrets with Pulumi ESC to managing cloud assets with Pulumi Insights, Pulumi makes AWS a competitive advantage. Whether you’re a developer, DevOps pro, or platform engineer, Pulumi delivers the tools you need to build and manage modern cloud applications with ease.
 
-Stop by the Pulumi re:Invent booth #370 this week to chat with experts on the Pulumi team. If you can’t make it to re:Invent, join our workshop, [_Accelerating Platform Engineering with Pulumi on AWS_](/resources/aws-immersion-day-platform-engineering/), on December 11, 2024, to see how Pulumi can enhance your cloud operations on AWS.
+Stop by the Pulumi re:Invent booth #370 this week to chat with experts on the Pulumi team. If you can’t make it to re:Invent, join our workshop, [_Accelerating Platform Engineering with Pulumi on AWS_](/events/aws-immersion-day-platform-engineering/), on December 11, 2024, to see how Pulumi can enhance your cloud operations on AWS.
 
 <!--more-->
 
