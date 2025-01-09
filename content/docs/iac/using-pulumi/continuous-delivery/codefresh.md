@@ -8,7 +8,7 @@ menu:
     iac:
         name: Codefresh
         parent: iac-using-pulumi-cicd
-        weight: 4
+        weight: 5
 aliases:
 - /docs/reference/cd-codefresh/
 - /docs/console/continuous-delivery/codefresh/
