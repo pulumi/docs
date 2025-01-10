@@ -11,4 +11,4 @@ aliases:
 
 Adam Gordon Bell is a Community Engineer at Pulumi. With a background in software development and a passion for developer tooling, Adam brings practical insights to the infrastructure as code space.
 
-Adam is known for his work in the developer community, sharing knowledge through technical content, videos, and podcasts.
+Adam is known for his work in the developer community and sharing knowledge through technical content, videos, and podcasts.
