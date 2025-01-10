@@ -12,7 +12,7 @@ tags:
 
 At Pulumi, we want to provide access to manage **any** cloud infrastructure
 with a single unified programming model.  
-To that end, we've already added support for [any Terraform/OpenTofu provider](/home/brpol/src/pulumi/docs/content/blog/any-terraform-provider/).
+To that end, we've already added support for [any Terraform/OpenTofu provider](blog/any-terraform-provider/).
 This works great if you already have an existing Pulumi project and want to
 leverage providers from the Terraform ecosystem that aren't yet available for
 Pulumi natively! However, what if you are trying to move your existing
@@ -73,9 +73,8 @@ pulumi convert --from terraform --language go
 
 {{% /chooser %}}
 
-This will download the necessary converter and language plugins, run the
-conversion and output it in the current directory, generating all necessary
-project files.
+This will download the necessary plugins, run the conversion and output it in
+the current directory, generating all necessary project files.
 
 If all went well you can run `pulumi preview` to see if the project can deploy
 successfully. Truth be told, there are still [a few scenarios](#limitations)
@@ -212,7 +211,7 @@ You can convert this into a new project with the following command:
 {{% choosable language typescript %}}
 
 ```shell
-pulumi convert --from terraform --language typescript --out ts
+pulumi convert --from terraform --language typescript --out pulumi-ts-program
 ```
 
 I have opted to output it to a different directory to preserve the contents of my Terraform project.
@@ -230,7 +229,7 @@ If we navigate to the `ts` directory, we can see a few things:
 {{% choosable language python %}}
 
 ```shell
-pulumi convert --from terraform --language python --out python
+pulumi convert --from terraform --language python --out pulumi-python-program
 ```
 
 I have opted to output it to a different directory to preserve the contents of my Terraform project.
@@ -264,7 +263,7 @@ metadata={
 {{% choosable language go %}}
 
 ```shell
-pulumi convert --from terraform --language go --out golang
+pulumi convert --from terraform --language go --out pulumi-go-program
 ```
 
 I have opted to output it to a different directory to preserve the contents of my Terraform project.
