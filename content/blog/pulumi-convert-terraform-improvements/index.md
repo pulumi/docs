@@ -1,7 +1,7 @@
 ---
 title: "Pulumi Convert Terraform Improvements"
 date: 2025-01-08T14:47:13+09:00
-meta_desc: "Pulumi convert now supports a number of enhancements and bug fixes for terraform, including automatically bridging providers"
+meta_desc: "Pulumi convert now supports a number of enhancements and bug fixes for Terraform, including automatically bridging providers"
 meta_image: meta.png
 authors:
     - brandon-pollack
@@ -13,16 +13,16 @@ tags:
 At Pulumi, we want to provide access to manage **any** cloud infrastructure
 with a single unified programming model.  
 To that end, we've already added support for [any Terraform/OpenTofu provider](/home/brpol/src/pulumi/docs/content/blog/any-terraform-provider/).
-This works great if you already have an existing pulumi project and want to
-utilize some providers from the Terraform ecosystem that aren't yet available for
-Pulumi natively! However, What if you are trying to move your already existing
-Infrastructure as Code solution to Pulumi IaC?
+This works great if you already have an existing Pulumi project and want to
+leverage providers from the Terraform ecosystem that aren't yet available for
+Pulumi natively! However, what if you are trying to move your existing
+infrastructure as code solution to Pulumi IaC?
 
 We already have a [handy
 utility](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-terraform/)
-called `pulumi convert` built into the cli to convert terraform projects to any
+called `pulumi convert` built into the CLI to convert Terraform projects to any
 Pulumi language, but up until now it didn't handle dependencies on external
-terraform providers which don't have a known Pulumi native equivalent.
+Terraform providers which don't have a known Pulumi native equivalent.
 
 We're happy to announce that with the release of [Pulumi
 3.145](https://github.com/pulumi/pulumi/releases/tag/v3.145.0), we now support
@@ -86,11 +86,11 @@ attention before you're off to the races.
 
 In order to illustrate the example further, I've thrown together a simple
 Terraform project that sets up a Google Compute Engine virtual machine, a
-Planetscale database, and wires them together.  At the time of writing, there
-is no Planetscale provider in the pulumi registry, and the project will specify
+PlanetScale database, and wires them together.  At the time of writing, there
+is no PlanetScale provider in the Pulumi registry, and the project will specify
 using a specific version of the Terraform provider.
 
-Here is the terraform code in a single main.tf file:
+Here is the Terraform code in a single main.tf file:
 
 ```terraform
 terraform {
@@ -198,10 +198,10 @@ secrets (and any other configuration!) and access them directly from your Pulumi
 {{% /notes %}}
 
 This alone works if you run `terraform plan`, however without *real*
-credentials nothing will really deploy, of course! You can set these in tfvars,
+credentials nothing will really deploy, of course! You can set these in `.tfvars`,
 environmental variables, command line, etc.  
 
-Even if you use a tfvars file, converting this is not currently supported, so
+Even if you use a `.tfvars` file, converting this is not currently supported, so
 the configuration will need to be moved to stack files in your
 new Pulumi project (eg `Pulumi.dev.yaml`, `Pulumi.prod.yaml`, etc).
 
@@ -281,7 +281,7 @@ If we navigate to the `golang` directory, we can see a few things:
 
 The go code generator outputs everything in the Terraform code, even if it is
 unused. This is an error in a go program, so I had to manually remove
-unreferenced variables like GCP project, region, and planetscale service token.
+unreferenced variables like GCP project, region, and PlanetScale service token.
 
 These are part of the output because in it's current iteration the code
 converter will convert everything, even if ultimately it is provider
@@ -294,7 +294,7 @@ configuration (see [cleanup](#cleanup)) and not actual code.
 ### Cleanup
 
 If we simply run `pulumi preview` this project unfortunately won't run right away.  
-We need to create our stack configuration that contains the GCP and Planetscale credentials.
+We need to create our stack configuration that contains the GCP and PlanetScale credentials.
 
 These were part of our `main.tf` file, but the code generator doesn't
 distinguish between provider config and code, so we need to handle this
@@ -346,7 +346,7 @@ are some unused variables, etc.
 
 ## Limitations
 
-* We still have a bit of [unimplemented Terraform functionality](https://github.com/pulumi/pulumi-converter-terraform/issues/65) that we're tracking and are evaluating how to move forward.  For now when these functions are detected it will require some manual intervention on the converted project before you're ready to deploy.
-* If you define your terraform module in a parent directory of your deployment code, you'll encounter a [known bug](https://github.com/pulumi/pulumi-converter-terraform/issues/194), but a simple workaround is to restructure your Terraform code before running a conversion.
-* Terraform programs are dynamically typed, when converting to a type safe language sometimes a type is unknown and still needs to be added manually (as in the typescript example above).
-* Variables/Configuration are not yet converted automatically, so tfvars files etc will need to be manually converted into pulumi stack configurations.
+- We still have a bit of [unimplemented Terraform functionality](https://github.com/pulumi/pulumi-converter-terraform/issues/65) that we're tracking and are evaluating how to move forward.  For now when these functions are detected it will require some manual intervention on the converted project before you're ready to deploy.
+- If you define your terraform module in a parent directory of your deployment code, you'll encounter a [known bug](https://github.com/pulumi/pulumi-converter-terraform/issues/194), but a simple workaround is to restructure your Terraform code before running a conversion.
+- Terraform programs are dynamically typed, when converting to a type safe language sometimes a type is unknown and still needs to be added manually (as in the typescript example above).
+- Variables and configuration are not yet converted automatically, so `.tfvars` files etc will need to be manually converted into Pulumi stack configurations.
