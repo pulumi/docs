@@ -178,7 +178,7 @@ This configuration projects the kubeconfig file contents to a temporary file tha
   The scanner agent does not have access to external binaries (e.g., `aws`, `gcloud`), so kubeconfig files relying on [client-go credential plugins](https://kubernetes.io/docs/reference/access-authn-authz/authentication/#client-go-credential-plugins) are not supported. We recommend creating a service account with the necessary cluster-scoped permissions (**`get`** and **`list`**) and using its token for authentication.
 {{< /notes >}}
 
-For a detailed guide on configuring ESC credentials for Insights with Kubernetes see the [following documentation](/docs/pulumi-cloud/insights/accounts/#kubernetes-k8s).
+For a detailed guide on configuring ESC credentials for Insights with Kubernetes see the [following documentation](/docs/insights/accounts/#kubernetes-k8s).
 
 {{% /choosable %}}
 

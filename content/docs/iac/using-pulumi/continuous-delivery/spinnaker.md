@@ -8,7 +8,7 @@ menu:
     iac:
         name: Spinnaker
         parent: iac-using-pulumi-cicd
-        weight: 12
+        weight: 14
 aliases:
 - /docs/guides/continuous-delivery/spinnaker/
 - /docs/using-pulumi/continuous-delivery/spinnaker/
