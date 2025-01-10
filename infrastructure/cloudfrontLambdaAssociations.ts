@@ -281,6 +281,7 @@ function nodeSDKRedirect(uri: string): string | undefined {
         "awsx",
         "kubernetesx",
         "terraform",
+        "esc-sdk",
     ];
 
     if (match && match.provider && !exceptions.includes(match.provider)) {
@@ -300,6 +301,7 @@ function pythonSDKRedirect(uri: string): string | undefined {
         "pulumi",
         "policy",
         "terraform",
+        "esc_sdk",
     ];
 
     if (match && match.provider && !exceptions.includes(match.provider)) {
