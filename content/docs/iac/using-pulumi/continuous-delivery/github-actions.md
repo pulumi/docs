@@ -9,7 +9,7 @@ menu:
     iac:
         name: GitHub Actions
         parent: iac-using-pulumi-cicd
-        weight: 5
+        weight: 6
 aliases:
 - /docs/reference/cd-github-actions/
 - /docs/console/continuous-delivery/github-actions/

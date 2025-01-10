@@ -9,7 +9,7 @@ menu:
     iac:
         name: GitLab Integration
         parent: iac-using-pulumi-cicd
-        weight: 7
+        weight: 8
 aliases:
 - /docs/guides/continuous-delivery/gitlab-app/
 - /docs/using-pulumi/continuous-delivery/gitlab-app/
