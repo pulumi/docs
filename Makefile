@@ -31,6 +31,11 @@ serve:
 serve-static:
 	yarn run http-server public
 
+.PHONY: recent-posts
+recent-posts:
+	@echo -e "\033[0;32mRecent blog posts:\033[0m"
+	cd scripts/python && pipenv install && pipenv run python list_recent_posts.py --format full
+
 .PHONY: generate
 generate:
 	@echo -e "\033[0;32mGENERATE:\033[0m"
