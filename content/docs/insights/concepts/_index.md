@@ -11,6 +11,7 @@ menu:
     weight: 2
 aliases:
 - /docs/intro/insights/
+- /docs/pulumi-cloud/insights/
 ---
 
 Pulumi Insights provides advanced search, analytics, and AI for your infrastructure as code.
@@ -44,7 +45,7 @@ A count is shown in the upper-right corner with the total number of resources ma
 The table of resources is paginated using infinite scroll so you are able to view up to **10,000** resources without needing to go page by page:
 
 {{% notes "info" %}}
-If you need access to more resources, you can use the [Data Export](export) feature or access them programmatically via the [Pulumi Cloud Rest API](/docs/pulumi-cloud/cloud-rest-api#resource-search).
+If you need access to more resources, you can use the [Data Export](/docs/insights/export/) feature or access them programmatically via the [Pulumi Cloud Rest API](/docs/pulumi-cloud/cloud-rest-api#resource-search).
 {{% /notes %}}
 
 Use the **search bar**, **row grouping**, or **column filters** to refine the resources displayed on the page.
@@ -100,7 +101,7 @@ If you don't see it in your organization, [contact us](/contact?form=sales).
 
 Organizations with Data Export enabled are able to export all resources matching a particular query in CSV format.
 
-For a more detailed description of CSV schema, see the [export documentation](export).
+For a more detailed description of CSV schema, see the [export documentation](/docs/insights/export/).
 
 ## APIs
 
