@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # This script takes an input video path (relative is fine) and converts it to H.264 MP4 format with AAC audio,
 # downscaling to 1200-pixel max-width where necessary. Converted files are written to ${filename}-${video_codec}.${extension}.
