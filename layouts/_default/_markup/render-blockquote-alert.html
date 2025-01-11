@@ -1,0 +1,18 @@
+{{ $icon := dict
+"caution" "exclamation-triangle"
+"important" "star"
+"note" "pencil-alt"
+"info" "info-circle"
+"tip" "lightbulb"
+"warning" "exclamation-triangle"
+}}
+
+<div class="note note-{{ .AlertType }}">
+    <div class="icon-and-line">
+        <i class="fas fa-{{ index $icon .AlertType }}"></i>
+        <div class="line"></div>
+    </div>
+    <div class="content">
+        {{- .Text -}}
+    </div>
+</div>
