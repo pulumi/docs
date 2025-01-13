@@ -85,6 +85,8 @@ def index():
     </figcaption>
 </span>
 
+{{< related-posts >}}
+
 ### Task scheduling and orchestration
 
 Sometimes you need to run things on a schedule. And while I love cron, sometimes you need more. Maybe you need to coordinate multiple tasks, handle retries, or manage complex job dependencies. Here's where Python can help:

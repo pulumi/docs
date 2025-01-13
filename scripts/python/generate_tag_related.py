@@ -20,10 +20,8 @@ class CustomDumper(yaml.Dumper):
         
     def write_line_break(self, data=None):
         super().write_line_break(data)
-        # Add extra line break for top-level entries
         if len(self.indents) == 1:
             super().write_line_break()
-        # Add extra line break between tag entries
         elif len(self.indents) == 3 and isinstance(self.event, yaml.events.SequenceEndEvent):
             super().write_line_break()
 
@@ -44,7 +42,6 @@ def normalize_date(d):
     if isinstance(d, date) and not isinstance(d, datetime):
         return datetime.combine(d, datetime.min.time())
     
-    # If it's a datetime, ensure it's naive by converting to naive UTC
     if hasattr(d, 'tzinfo') and d.tzinfo is not None:
         return d.astimezone().replace(tzinfo=None)
     
@@ -54,7 +51,6 @@ def normalize_tag(tag: str) -> str:
     """Convert a tag to a normalized format"""
     # Handle non-string tags
     tag = str(tag)
-    # Remove whitespace and convert to lowercase
     return tag.strip().lower().replace(' ', '-')
 
 def get_blog_posts():
@@ -99,14 +95,19 @@ def get_blog_posts():
 def get_posts_by_tag(posts: List[dict]) -> Dict[str, List[dict]]:
     """Group posts by tag"""
     posts_by_tag = defaultdict(list)
+    
     for post in posts:
+        if post.get('draft', False):
+            continue
+            
         for tag in post.get('tags', []):
+            tag = normalize_tag(tag)
             posts_by_tag[tag].append(post)
-    return posts_by_tag
+            
+    return dict(posts_by_tag)
 
 def select_related_posts(posts: List[dict]) -> List[str]:
     """Select the most recent posts for a tag"""
-    # Sort by date and take the most recent ones
     sorted_posts = sorted(posts, key=lambda x: x['date'], reverse=True)
     return [post['slug'] for post in sorted_posts[:POSTS_PER_TAG]]
 
@@ -123,7 +124,6 @@ def generate_yaml(posts_by_tag: Dict[str, List[dict]]) -> str:
     existing_content = load_existing_yaml()
     existing_tags = existing_content.get('tags', {})
     
-    # Generate new tags section for tags that don't exist yet
     new_tags = {
         tag: select_related_posts(posts)
         for tag, posts in posts_by_tag.items()

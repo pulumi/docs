@@ -62,7 +62,7 @@ def get_blog_posts(include_drafts=False):
     return sorted(posts, key=lambda x: x['date'], reverse=True)
 
 @click.command()
-@click.option('--count', '-n', default=5, help='Number of posts to show')
+@click.option('--count', '-n', default=15, help='Number of posts to show')
 @click.option('--include-drafts/--no-drafts', default=False, help='Include draft posts')
 @click.option('--format', '-f', type=click.Choice(['path', 'full']), default='path',
               help='Output format (path or full details)')
