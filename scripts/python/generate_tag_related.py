@@ -133,37 +133,32 @@ def generate_yaml(posts_by_tag: Dict[str, List[dict]]) -> str:
     # Combine existing and new tags
     tags_section = {**existing_tags, **new_tags}
     
-    # Create content in specific order:
-    # 1. default
-    # 2. tags
-    # 3. specific entries
-    content = {
+    # Generate YAML with custom dumper
+    yaml_str = yaml.dump({
         'default': existing_content.get('default', []),
         'tags': tags_section,
-    }
+    }, Dumper=CustomDumper, sort_keys=False, allow_unicode=True, indent=2)
     
-    # Add specific post entries (everything except default and tags)
-    specific_entries = {
-        key: value 
-        for key, value in existing_content.items() 
-        if key not in ['default', 'tags']
-    }
-    content.update(sorted(specific_entries.items()))
-    
-    # Generate YAML with custom dumper
-    yaml_str = yaml.dump(content, Dumper=CustomDumper, sort_keys=False, allow_unicode=True, indent=2)
-    
-    # Add blank lines between tag entries
+    # Add comments and format
     lines = yaml_str.split('\n')
     result = []
     in_tags = False
     last_indent = 0
     
+    # Add default section comment
+    result.append('# Default related posts shown as last resort when no specific entry or tag matches are found')
+    result.append('')
+    
+    # Process the YAML content
     for line in lines:
         indent = len(line) - len(line.lstrip())
         
-        # Track when we enter/exit the tags section
+        # Add tags section comment before tags
         if line.startswith('tags:'):
+            result.append('')
+            result.append('# Tag-based related posts - Run make generate-related-tags to add entries for new tags')
+            result.append('# These entries can be manually edited after generation')
+            result.append('')
             in_tags = True
             result.append(line)
             continue
@@ -178,6 +173,25 @@ def generate_yaml(posts_by_tag: Dict[str, List[dict]]) -> str:
         if line.strip():
             last_indent = indent
     
+    # Add specific entries
+    result.append('')
+    result.append('# Specific related posts for individual blog posts - manually curated')
+    result.append('# These take precedence over tag-based entries')
+    result.append('')
+    
+    # Add specific post entries
+    specific_entries = {
+        key: value 
+        for key, value in existing_content.items() 
+        if key not in ['default', 'tags'] and not key.startswith('#')  # Skip comment keys
+    }
+    specific_yaml = yaml.dump(dict(sorted(specific_entries.items())), 
+                            Dumper=CustomDumper, 
+                            sort_keys=False, 
+                            allow_unicode=True, 
+                            indent=2)
+    result.extend(specific_yaml.split('\n'))
+    
     return '\n'.join(result)
 
 def main():
@@ -185,7 +199,11 @@ def main():
     posts = get_blog_posts()
     posts_by_tag = get_posts_by_tag(posts)
     yaml_output = generate_yaml(posts_by_tag)
-    print(yaml_output)
+    
+    # Write directly to related.yaml
+    with open(RELATED_YAML, 'w') as f:
+        f.write(yaml_output)
+        f.write('\n')  # Add final newline
 
 if __name__ == '__main__':
     main()

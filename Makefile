@@ -39,8 +39,8 @@ recent-posts:
 .PHONY: generate-related-tags
 generate-related-tags:
 	@echo -e "\033[0;32mGenerating tag-based related posts...\033[0m"
-	cd scripts/python && pipenv install && pipenv run python generate_tag_related.py > ../../data/related.yaml.new
-	@echo -e "\033[0;32mDone! Review data/related.yaml.new and copy it to related.yaml if it looks good.\033[0m"
+	cd scripts/python && pipenv install && pipenv run python generate_tag_related.py
+	@echo -e "\033[0;32mDone! Updated data/related.yaml\033[0m"
 
 .PHONY: generate
 generate:
