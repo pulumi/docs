@@ -36,6 +36,12 @@ recent-posts:
 	@echo -e "\033[0;32mRecent blog posts:\033[0m"
 	cd scripts/python && pipenv install && pipenv run python list_recent_posts.py --format full
 
+.PHONY: generate-related-tags
+generate-related-tags:
+	@echo -e "\033[0;32mGenerating tag-based related posts...\033[0m"
+	cd scripts/python && pipenv install && pipenv run python generate_tag_related.py > ../../data/related.yaml.new
+	@echo -e "\033[0;32mDone! Review data/related.yaml.new and copy it to related.yaml if it looks good.\033[0m"
+
 .PHONY: generate
 generate:
 	@echo -e "\033[0;32mGENERATE:\033[0m"
