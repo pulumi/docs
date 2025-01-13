@@ -129,8 +129,8 @@ let secret = config.requireSecret("secret");
 {{% choosable language python %}}
 
 ```python
-config = pulumi.Config();
-name = config.require('name');
+config = pulumi.Config()
+name = config.require('name')
 lucky = config.get_int('lucky') or 42
 secret = config.require_secret('secret')
 ```
@@ -222,8 +222,8 @@ let awsRegion = awsConfig.require("region");
 {{% choosable language python %}}
 
 ```python
-aws_config = pulumi.Config("aws");
-aws_region = aws_config.require("region");
+aws_config = pulumi.Config("aws")
+aws_region = aws_config.require("region")
 ```
 
 {{% /choosable %}}
