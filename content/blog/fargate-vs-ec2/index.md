@@ -145,7 +145,7 @@ Fargate on EKS could be a great solution for this type of chunky, resource-heavy
 
 But there are lots of situations where Fargate is less of a fit.
 
-{{< related-external >}}
+{{< related-posts >}}
 
 ## Example: Go Services for E-commerce
 

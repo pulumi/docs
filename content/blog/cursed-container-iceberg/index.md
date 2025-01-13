@@ -94,7 +94,7 @@ Let's plunge deeper. Because one Kubernetes cluster is never enough, why not spr
 - **Nutanix Karbon** - Because regular Kubernetes wasn't converged enough
 - **Metal Stack Cloud Kubernetes** - For when virtual machines are too virtual
 
-{{< related-external >}}
+{{< related-posts >}}
 
 ## Middle of the iceberg – Serverless and function containers – Now you see me, now you don't
 
