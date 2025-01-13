@@ -133,21 +133,25 @@ def generate_yaml(posts_by_tag: Dict[str, List[dict]]) -> str:
     # Combine existing and new tags
     tags_section = {**existing_tags, **new_tags}
     
-    # Update existing content
+    # Create content in specific order:
+    # 1. default
+    # 2. tags
+    # 3. specific entries
     content = {
         'default': existing_content.get('default', []),
+        'tags': tags_section,
     }
     
-    # Add specific post entries
-    for key, value in existing_content.items():
-        if key not in ['default', 'tags']:
-            content[key] = value
-            
-    # Add tags section last
-    content['tags'] = tags_section
+    # Add specific post entries (everything except default and tags)
+    specific_entries = {
+        key: value 
+        for key, value in existing_content.items() 
+        if key not in ['default', 'tags']
+    }
+    content.update(sorted(specific_entries.items()))
     
     # Generate YAML with custom dumper
-    yaml_str = yaml.dump(content, Dumper=CustomDumper, sort_keys=True, allow_unicode=True, indent=2)
+    yaml_str = yaml.dump(content, Dumper=CustomDumper, sort_keys=False, allow_unicode=True, indent=2)
     
     # Add blank lines between tag entries
     lines = yaml_str.split('\n')
