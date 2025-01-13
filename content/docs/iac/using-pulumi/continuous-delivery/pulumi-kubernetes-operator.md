@@ -40,6 +40,7 @@ To work with the operator, we'll need to follow these steps.
 - [Create a Stack CustomResource](#create-a-stack-customresource)
   - [Using a git repository](#using-a-git-repository)
   - [Using a Flux source](#using-a-flux-source)
+  - [Using Argo CD](#using-argo-cd)
   - [Using a Program object](#using-a-program-object)
   - [Stack Settings](#stack-settings)
   - [Extended Examples](#extended-examples)
@@ -374,6 +375,111 @@ const mystack = new k8s.apiextensions.CustomResource("my-stack", {
     }
 });
 ```
+
+### Using Argo CD
+
+Much like Flux, we can use ArgoCD to manage the lifetime of the Stack via a GitOps paradigm.  This will give us the advantage of using the ArgoCD UI or CLI to interact with the Stack, and allowing ArgoCD to reconcile changes to the repo.
+
+First, we need to define a Pulumi Stack as a kubernetes manifest that ArgoCD can understand.  We assume here that this manifest lives in the same repository as the Pulumi program, in the subfolder `deploy/`.  However, this manifest could live in a separate repository, such as an "app-of-apps" repo. In this example, the manifest declares a service account and cluster role bindings to allow the stack to create resources in the cluster. Additionally, we expect a Secret to exist on the cluster containing a valid Pulumi access token
+
+Note specifically that the Stack's `projectRepo` and `branch` point to the location of the Pulumi program to be executed by the Pulumi Kubernetes Operator.
+
+```yaml
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: pulumi-application:system:auth-delegator
+  annotations:
+    argocd.argoproj.io/sync-wave: "2"
+  labels:
+    app.kubernetes.io/instance: pulumi-application
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: system:auth-delegator
+subjects:
+- kind: ServiceAccount
+  name: pulumi-application
+  namespace: some-namepace
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: pulumi-application:cluster-admin
+  annotations:
+    argocd.argoproj.io/sync-wave: "2"
+  labels:
+    app.kubernetes.io/instance: pulumi-application
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: cluster-admin
+subjects:
+- kind: ServiceAccount
+  name: pulumi-application
+  namespace: some-namepace
+---
+apiVersion: pulumi.com/v1
+kind: Stack
+metadata:
+  name: pulumi-application-dev
+  namespace: some-namepace
+  labels:
+    app.kubernetes.io/instance: pulumi-application
+  annotations:
+    argocd.argoproj.io/sync-wave: "3" 
+    pulumi.com/reconciliation-request: "before-first-update"
+    link.argocd.argoproj.io/external-link: http://app.pulumi.com/my-org/my-prject/dev
+spec:
+  serviceAccountName: pulumi-application
+  stack: my-org/my-prjoect/dev
+  projectRepo: "https://github.com/my-repo/my-pulumi-application.git"
+  branch: main
+  refresh: true
+  resyncFrequencySeconds: 60
+  destroyOnFinalize: true
+  envRefs:
+    PULUMI_ACCESS_TOKEN:
+      type: Secret
+      secret:
+        name: pulumi-access-token-secret
+        key: PULUMI_ACCESS_TOKEN
+  workspaceTemplate:
+    spec:
+      image: pulumi/pulumi:3.134.1-nonroot`
+```
+
+Next we instantiate an ArgoCD Application kind using the following manifest, `application.yaml`:
+
+```yaml
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: pulumi-application
+  namespace: argocd
+  finalizers:
+    # note: the finalizer must be background to allow Pulumi to invoke the shutdown of the workspace (pulumi down)
+    - resources-finalizer.argocd.argoproj.io/background 
+spec:
+  destination:
+    namespace: default
+    server: "https://kubernetes.default.svc"
+  syncPolicy:
+    automated:
+      prune: true
+  project: default
+  source:
+    repoURL: "https://github.com/my-repo/my-pulumi-application.git"
+    path: "./deploy"  # the location of the Stack maifest
+    targetRevision: main
+```
+
+Deploy in the usual way `kubectl apply -f application.yaml -n default`.  ArgoCD will take care of instantiation of the Stack object which will in turn invoke the PKO Workspace.  The result will look something like this in the ArgoCD UI:
+
+![ArgoCD PKO Example](/images/docs/reference/argocd/pko-example.png)
+
+
 
 ### Using a Program object
 
