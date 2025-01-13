@@ -322,6 +322,8 @@ Or use Pulumi:
 
 CloudNativePG Operator is a great way to deploy and manage PostgreSQL databases on Kubernetes. It simplifies a wide range of tasks, including backups, high availability, and scaling, making it a must-have for PostgreSQL users.
 
+{{< related-posts >}}
+
 ### Flux Operator
 
 {{< figure alt="Flux Operator Credit: fluxcd.control-plane.io/operator" src="flux-operator.png" caption="Flux Operator Credit: fluxcd.control-plane.io/operator" width=100% >}}
