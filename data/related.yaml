@@ -1,0 +1,19 @@
+default:
+  - unified-programmatic-approach-infrastructure-management-bmw-using-pulumi
+  - docker-build
+  - ecs-anywhere-launch
+
+cursed-container-iceberg:
+  - unified-programmatic-approach-infrastructure-management-bmw-using-pulumi
+  - docker-build
+  - ecs-anywhere-launch
+
+when-to-use-azure-cosmos-db:
+  - azure-deployment-environments
+  - sam-cogan-testing-best-practices
+  - introducing-azure-native-v2
+
+fargate-vs-ec2:
+  - pulumi-for-aws-automate-secure-manage
+  - easy-ai-apps-with-langserve-and-pulumi
+  - advanced-aws-networking-part-2

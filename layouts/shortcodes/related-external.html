@@ -1,0 +1,37 @@
+{{/* layouts/shortcodes/related-external.html */}}
+
+{{- /* 1. Determine the post's slug. Adjust if you prefer .Page.Slug, etc. */ -}}
+{{- $slug := .Page.File.BaseFileName -}}
+
+{{- /* 2. Load the data file (data/related.yaml) into a variable. */ -}}
+{{- $allRelated := site.Data.related -}}
+
+{{- /* 3. Attempt to find an entry for $slug in the map. 
+      If nothing is found, default to the "default" key. */ -}}
+{{- $postRelated := index $allRelated $slug | default (index $allRelated "default") -}}
+
+{{ if $postRelated }}
+  <div class="note note-tip">
+    <div class="icon-and-line">
+      <i class="fas fa-lightbulb"></i>
+      <div class="line"></div>
+    </div>
+    <div class="content">
+      <p><strong>You might also like:</strong></p>
+      <ul>
+      {{ range $postRelated }}
+        {{- /* Attempt to get the page by slug. 
+              Adjust "/blog/%s" or "/post/%s" depending on your content path. */ -}}
+        {{- $relatedPage := site.GetPage (printf "/blog/%s" .) }}
+        {{ if $relatedPage }}
+          <li>
+            <a href="{{ $relatedPage.Permalink }}">
+              {{ $relatedPage.Title }}
+            </a>
+          </li>
+        {{ end }}
+      {{ end }}
+      </ul>
+    </div>
+  </div>
+{{ end }}
