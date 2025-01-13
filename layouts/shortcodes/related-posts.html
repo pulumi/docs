@@ -13,11 +13,13 @@
       3. Default entry */ -}}
 {{- $postRelated := index $allRelated $slug | default (index (index $allRelated "tags" | default dict) $firstTag) | default (index $allRelated "default") -}}
 
-{{- /* 4. Filter out the current post from the related posts */ -}}
+{{- /* 4. Filter out the current post from the related posts and limit to 3 */ -}}
 {{- $filteredRelated := slice -}}
+{{- $count := 0 -}}
 {{- range $postRelated -}}
-  {{- if ne . $slug -}}
+  {{- if and (ne . $slug) (lt $count 3) -}}
     {{- $filteredRelated = $filteredRelated | append . -}}
+    {{- $count = add $count 1 -}}
   {{- end -}}
 {{- end -}}
 

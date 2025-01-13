@@ -1,17 +1,18 @@
 #!/usr/bin/env python3
 
-import click
-from pathlib import Path
-import frontmatter
-from datetime import datetime, date
-import sys
+import os
 import yaml
+import click
+import frontmatter
+from pathlib import Path
+from datetime import date, datetime
 from collections import defaultdict
-from typing import Dict, List, Set
+from typing import Dict, List, Union
 
+# Constants
 BLOG_DIR = Path(__file__).parent.parent.parent / "content" / "blog"
 RELATED_YAML = Path(__file__).parent.parent.parent / "data" / "related.yaml"
-POSTS_PER_TAG = 3
+POSTS_PER_TAG = 4  # Generate 4 posts per tag to allow for self-exclusion
 
 # Custom YAML dumper to add blank lines between entries
 class CustomDumper(yaml.Dumper):
@@ -25,8 +26,11 @@ class CustomDumper(yaml.Dumper):
         elif len(self.indents) == 3 and isinstance(self.event, yaml.events.SequenceEndEvent):
             super().write_line_break()
 
-def normalize_date(d):
-    """Convert various date formats to naive datetime objects"""
+def normalize_date(d: Union[date, datetime, None]) -> datetime:
+    """Convert a date or datetime to a naive datetime"""
+    if d is None:
+        return datetime.min
+        
     if isinstance(d, str):
         try:
             # Try parsing ISO format first
@@ -36,7 +40,7 @@ def normalize_date(d):
                 # Try common date formats
                 d = datetime.strptime(d, '%Y-%m-%d')
             except ValueError:
-                print(f"Warning: Could not parse date string: {d}", file=sys.stderr)
+                print(f"Warning: Could not parse date string: {d}")
                 return datetime.min  # Return minimum date for unparseable dates
     
     if isinstance(d, date) and not isinstance(d, datetime):
@@ -49,55 +53,39 @@ def normalize_date(d):
 
 def normalize_tag(tag: str) -> str:
     """Convert a tag to a normalized format"""
-    # Handle non-string tags
     tag = str(tag)
     return tag.strip().lower().replace(' ', '-')
 
-def get_blog_posts():
+def get_blog_posts() -> List[dict]:
     """Get all blog posts with their metadata"""
     posts = []
-    for post_dir in BLOG_DIR.iterdir():
-        if not post_dir.is_dir():
-            continue
-            
-        index_file = post_dir / "index.md"
-        if not index_file.exists():
-            continue
-            
-        try:
-            post = frontmatter.load(index_file)
-            if post.get('draft', False):
-                continue
-                
-            date = post.get('date')
-            if not date:
-                continue
-            
-            # Split tags on commas and normalize each tag
-            raw_tags = post.get('tags', [])
-            if isinstance(raw_tags, str):
-                tags = [normalize_tag(t) for t in raw_tags.split(',')]
-            else:
-                tags = [normalize_tag(t) for t in raw_tags]
-                
-            posts.append({
-                'date': normalize_date(date),
-                'title': post.get('title', ''),
-                'slug': post_dir.name,
-                'tags': tags,
-            })
-        except Exception as e:
-            print(f"Error processing {index_file}: {e}", file=sys.stderr)
-            continue
     
-    return sorted(posts, key=lambda x: x['date'], reverse=True)
+    # Walk through all directories in the blog directory
+    for root, _, files in os.walk(BLOG_DIR):
+        for file in files:
+            if file == "index.md":
+                post_path = os.path.join(root, file)
+                try:
+                    post = frontmatter.load(post_path)
+                    post_dict = {
+                        'title': post.get('title', ''),
+                        'date': normalize_date(post.get('date')),
+                        'draft': post.get('draft', False),
+                        'tags': [normalize_tag(tag) for tag in post.get('tags', [])],
+                        'slug': os.path.basename(os.path.dirname(post_path))
+                    }
+                    posts.append(post_dict)
+                except Exception as e:
+                    print(f"Error processing {post_path}: {e}")
+                    
+    return posts
 
 def get_posts_by_tag(posts: List[dict]) -> Dict[str, List[dict]]:
     """Group posts by tag"""
     posts_by_tag = defaultdict(list)
     
     for post in posts:
-        if post.get('draft', False):
+        if post.get('draft', False):  # Skip draft posts
             continue
             
         for tag in post.get('tags', []):
@@ -112,26 +100,28 @@ def select_related_posts(posts: List[dict]) -> List[str]:
     return [post['slug'] for post in sorted_posts[:POSTS_PER_TAG]]
 
 def load_existing_yaml() -> dict:
-    """Load the existing related.yaml file"""
+    """Load the existing YAML file"""
     try:
-        with open(RELATED_YAML, 'r') as f:
+        with open(RELATED_YAML) as f:
             return yaml.safe_load(f) or {}
     except FileNotFoundError:
         return {}
 
-def generate_yaml(posts_by_tag: Dict[str, List[dict]]) -> str:
+def generate_yaml(posts_by_tag: Dict[str, List[dict]], preserve_existing: bool = True) -> str:
     """Generate YAML for the tags section while preserving existing content"""
     existing_content = load_existing_yaml()
     existing_tags = existing_content.get('tags', {})
     
+    # Generate new tags
     new_tags = {
         tag: select_related_posts(posts)
         for tag, posts in posts_by_tag.items()
-        if len(posts) >= POSTS_PER_TAG and tag not in existing_tags
+        if not preserve_existing or tag not in existing_tags
     }
     
-    # Combine existing and new tags
-    tags_section = {**existing_tags, **new_tags}
+    # Combine existing and new tags if preserving
+    tags_section = existing_tags if preserve_existing else {}
+    tags_section.update(new_tags)
     
     # Generate YAML with custom dumper
     yaml_str = yaml.dump({
@@ -194,11 +184,14 @@ def generate_yaml(posts_by_tag: Dict[str, List[dict]]) -> str:
     
     return '\n'.join(result)
 
-def main():
+@click.command()
+@click.option('--preserve-existing/--no-preserve-existing', default=True,
+              help='Preserve existing tag entries (default: True)')
+def main(preserve_existing: bool):
     """Generate YAML for tag-based related posts"""
     posts = get_blog_posts()
     posts_by_tag = get_posts_by_tag(posts)
-    yaml_output = generate_yaml(posts_by_tag)
+    yaml_output = generate_yaml(posts_by_tag, preserve_existing)
     
     # Write directly to related.yaml
     with open(RELATED_YAML, 'w') as f:
