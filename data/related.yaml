@@ -3,6 +3,16 @@ default:
   - docker-build
   - ecs-anywhere-launch
 
+tags:
+  azure:
+    - azure-deployment-environments
+    - introducing-azure-native-v2
+    - sam-cogan-testing-best-practices
+  kubernetes:
+    - unified-programmatic-approach-infrastructure-management-bmw-using-pulumi
+    - docker-build
+    - ecs-anywhere-launch
+
 cursed-container-iceberg:
   - unified-programmatic-approach-infrastructure-management-bmw-using-pulumi
   - docker-build

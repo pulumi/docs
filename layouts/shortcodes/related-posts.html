@@ -1,14 +1,17 @@
-{{/* layouts/shortcodes/related-external.html */}}
+{{/* layouts/shortcodes/related-posts.html */}}
 
-{{- /* 1. Determine the post's slug. Adjust if you prefer .Page.Slug, etc. */ -}}
+{{- /* 1. Determine the post's slug and first tag */ -}}
 {{- $slug := .Page.File.BaseFileName -}}
+{{- $firstTag := index .Page.Params.tags 0 | default "" -}}
 
-{{- /* 2. Load the data file (data/related.yaml) into a variable. */ -}}
+{{- /* 2. Load the data file (data/related.yaml) into a variable */ -}}
 {{- $allRelated := site.Data.related -}}
 
-{{- /* 3. Attempt to find an entry for $slug in the map. 
-      If nothing is found, default to the "default" key. */ -}}
-{{- $postRelated := index $allRelated $slug | default (index $allRelated "default") -}}
+{{- /* 3. Try to find related posts in this order:
+      1. Specific entry for the post's slug
+      2. Entry for the post's first tag
+      3. Default entry */ -}}
+{{- $postRelated := index $allRelated $slug | default (index (index $allRelated "tags" | default dict) $firstTag) | default (index $allRelated "default") -}}
 
 {{ if $postRelated }}
   <div class="note note-tip">
@@ -20,8 +23,7 @@
       <p><strong>You might also like:</strong></p>
       <ul>
       {{ range $postRelated }}
-        {{- /* Attempt to get the page by slug. 
-              Adjust "/blog/%s" or "/post/%s" depending on your content path. */ -}}
+        {{- /* Attempt to get the page by slug */ -}}
         {{- $relatedPage := site.GetPage (printf "/blog/%s" .) }}
         {{ if $relatedPage }}
           <li>
