@@ -123,7 +123,7 @@ This approach definitely works --- but it presents at least a few problems:
 
     But if they didn't, the developer's ad-hoc deployment would be lost. At best, it'd force both team members to drop what they were doing and get in touch to figure out what to do next. At worst, it could lead to confusion and the potential for shipping untested code.
 
-3. In addition to raising the risk of developers overwriting each other's work, active collaboration the same stack increases the likelihood of deployment conflicts. On the one hand, this is a good thing in that Pulumi prevents same-stack updates from running concurrently:
+3. In addition to raising the risk of developers overwriting each other's work, active collaboration on the same stack increases the likelihood of deployment conflicts. On the one hand, this is a good thing in that Pulumi prevents same-stack updates from running concurrently:
 
     ```
     $ pulumi up
