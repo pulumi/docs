@@ -42,7 +42,7 @@ main:
     sortable_date: 2025-02-26T09:00:00-08:00
 
     # Duration of the webinar.
-    duration: 90 minutes
+    duration: 60 minutes
 
     # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
     location: virtual
@@ -62,7 +62,8 @@ main:
           role: Principal Solutions Architect, Pulumi
           photo: /images/team/josh-kodroff.jpg
         - name: Ryan Pierce
-          role: Chronosphere
+          role: Channel & Alliances Senior Sales Engineer, Chronosphere
+          photo: /images/people/ryan-pierce.jpg
 
     # case-sensitive
     tags:
@@ -80,7 +81,7 @@ form:
 event_data:
   name: Harnessing Observability for Platform Engineering
   start_date: 2025-02-26T09:00:00-08:00
-  end_date: 2025-02-26T10:30:00-08:00
+  end_date: 2025-02-26T10:00:00-08:00
   url: "https://www.pulumi.com/resources/harnessing-observability-for-platform-engineering/"
   description: |
     Platform engineering teams are at the forefront of driving modern, scalable infrastructure, where observability plays a crucial role. As systems grow increasingly complex, ensuring their health and performance can be challenging, but it doesn’t have to be! With Chronosphere and Pulumi, teams are equipped to define observability as code, staying ahead of issues, reducing resource sprawl, and delivering reliable systems at scale.
