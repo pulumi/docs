@@ -365,7 +365,7 @@ The following expressions are supported in patterns:
 | config.key | Config value of key | ${config.region}_${name} |
 
 {{% notes type="warning" %}}
-When using verbatim names or patterns without random components, resources that need to be replaced will require delete-before-replace behavior, which can lead to downtime. Consider including random components in your naming pattern for resources that may need replacement.
+When an update requires replacing the resource, Pulumi's default behavior is to create the new resource and then deleting the old resource. However, when using verbatim names or patterns without random components, resources that need to be replaced will be deleted before creating the new resource. This can lead to downtime.
 {{% /notes %}}
 
 ### Provider-Specific Configuration

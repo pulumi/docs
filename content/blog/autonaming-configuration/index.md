@@ -45,7 +45,7 @@ pulumi:autonaming:
 
 No random suffixes will be added to the resource names.
 
-Note that when using verbatim names or patterns without random components, resources that need to be replaced will require delete-before-replace behavior, which can lead to downtime.
+Note, when an update requires replacing the resource, Pulumi's default behavior is to create the new resource and then deleting the old resource. However, when using verbatim names or patterns without random components, resources that need to be replaced will be deleted before creating the new resource. This can lead to downtime.
 
 ### Custom Naming Patterns
 
@@ -85,12 +85,13 @@ The same applies to other configuration patterns shown above - use the `value:` 
 
 To use the auto-naming configuration feature, you'll need:
 
-1. Pulumi CLI 3.143.0 or later
+1. Pulumi CLI 3.146.0 or later
 2. The following minimum provider versions:
    - AWS provider 6.66.0 or later
    - Azure Native provider 2.78.0 or later
    - Azure Classic provider 6.14.0 or later
    - Google Cloud Platform provider 8.11.0 or later
+   - AWS Cloud Control provider 1.21.0 or later
 
 Once you have the required versions installed, simply add your desired auto-naming configuration to your Pulumi configuration file.
 
