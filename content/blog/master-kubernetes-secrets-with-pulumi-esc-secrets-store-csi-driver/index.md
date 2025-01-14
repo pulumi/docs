@@ -284,6 +284,8 @@ We can check that the secret was successfully synchronized by running:
 kubectl get secretproviderclasses example-provider-pulumi-esc
 ```
 
+{{< related-posts >}}
+
 ### Step 3: Deploy an Application and Mount the Secret
 
 Now, we can deploy an application that references the secret from the Kubernetes cluster. I am going to use `busybox` that reads mounted file in.

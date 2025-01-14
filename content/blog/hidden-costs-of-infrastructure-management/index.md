@@ -85,6 +85,8 @@ Pulumi Cloud further enhances security with [Pulumi ESC](/product/secrets-manage
 
 As your organization grows, you need an IaC backend that scales with the organization and makes it easy to onboard new teams.  Pulumi IaC brings your development, infrastructure and security teams together. Your infrastructure teams can define and manage common infrastructure across the organization, collaborate with security teams to establish security and compliance guardrails, and enable easy self-service of infrastructure through custom developer platforms or shared infrastructure libraries. Teams that prefer not to program can use YAML, while those who do can leverage Python, TypeScript, Golang, or C# to define organization-wide components.
 
+{{< related-posts >}}
+
 With Pulumi IaC, your teams can tackle the growing complexity of modern architectures using familiar software engineering principles. Programming languages offer loops, conditional logic, class inheritance, and object-oriented design, allowing your organization to craft more sophisticated infrastructure compared to legacy IaC tools.
 
 When you’re scaling your organization, you’ll need an IaC backend that makes team onboarding efficient. DIY backends often involve ad-hoc onboarding with bespoke identity solutions, requiring custom documentation and training to troubleshoot unique problems. This can slow down onboarding and reduce end-user productivity. Additionally, DIY backends place the internal support burden on your team, requiring them to assist users in navigating the system.

@@ -1,0 +1,49 @@
+{{/* layouts/shortcodes/related-posts.html */}}
+
+{{- /* 1. Determine the post's slug and first tag */ -}}
+{{- $slug := .Page.File.ContentBaseName -}}
+{{- $firstTag := index .Page.Params.tags 0 | default "" -}}
+
+{{- /* 2. Load the data file (data/related.yaml) into a variable */ -}}
+{{- $allRelated := site.Data.related -}}
+
+{{- /* 3. Try to find related posts in this order:
+      1. Specific entry for the post's slug
+      2. Entry for the post's first tag
+      3. Default entry */ -}}
+{{- $postRelated := index $allRelated $slug | default (index (index $allRelated "tags" | default dict) $firstTag) | default (index $allRelated "default") -}}
+
+{{- /* 4. Filter out the current post from the related posts and limit to 3 */ -}}
+{{- $filteredRelated := slice -}}
+{{- $count := 0 -}}
+{{- range $postRelated -}}
+  {{- if and (ne . $slug) (lt $count 3) -}}
+    {{- $filteredRelated = $filteredRelated | append . -}}
+    {{- $count = add $count 1 -}}
+  {{- end -}}
+{{- end -}}
+
+{{ if $filteredRelated }}
+  <div class="note note-tip">
+    <div class="icon-and-line">
+      <i class="fas fa-lightbulb"></i>
+      <div class="line"></div>
+    </div>
+    <div class="content">
+      <p><strong>You might also like:</strong></p>
+      <ul>
+      {{ range $filteredRelated }}
+        {{- /* Attempt to get the page by slug */ -}}
+        {{- $relatedPage := site.GetPage (printf "/blog/%s" .) }}
+        {{ if $relatedPage }}
+          <li>
+            <a href="{{ $relatedPage.Permalink }}">
+              {{ $relatedPage.Title }}
+            </a>
+          </li>
+        {{ end }}
+      {{ end }}
+      </ul>
+    </div>
+  </div>
+{{ end }}

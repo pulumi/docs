@@ -27,6 +27,11 @@ node_modules
 # Python's virtual env dir.
 venv/
 
+# Pipenv
+.env
+Pipfile.lock
+.python-version
+
 # Ignore the Stencil component bundle.
 /static/js/components.js
 /static/js/components/
