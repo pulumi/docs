@@ -37,7 +37,7 @@ If you're anxious to try this out on your own Terraform codebase, you need only
 to navigate to your project directory and run the following command with the
 latest version of Pulumi installed:
 
-{{% chooser language "javascript,typescript,python,go" %}}
+{{% chooser language "javascript,typescript,python,go,yaml" %}}
 
 {{% choosable language javascript %}}
 
@@ -67,6 +67,14 @@ pulumi convert --from terraform --language python
 
 ```shell
 pulumi convert --from terraform --language go
+```
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+```shell
+pulumi convert --from terraform --language yaml
 ```
 
 {{% /choosable %}}
@@ -206,7 +214,7 @@ new Pulumi project (eg `Pulumi.dev.yaml`, `Pulumi.prod.yaml`, etc).
 
 You can convert this into a new project with the following command:
 
-{{% chooser language "typescript,python,go" %}}
+{{% chooser language "typescript,python,go,yaml" %}}
 
 {{% choosable language typescript %}}
 
@@ -218,11 +226,12 @@ I have opted to output it to a different directory to preserve the contents of m
 
 ### Project structure
 
-If we navigate to the `ts` directory, we can see a few things:
+If we navigate to the `pulumi-ts-program` directory, we can see a few things:
 
-- index.ts, our equivalent to main.tf for typescript projects
-- sdks directory, where the generated bridged provider is output
-- other node project artifacts such as package.json, node_modules, tsconfig.json, etc.
+- Pulumi.yaml, the pulumi configuration file.
+- index.ts, our equivalent to main.tf for typescript projects.
+- sdks directory, where the generated bridged provider is output.
+- other node project artifacts such as package.json, node_modules, tsconfig.json, etc..
 
 {{% /choosable %}}
 
@@ -236,11 +245,12 @@ I have opted to output it to a different directory to preserve the contents of m
 
 ### Project structure
 
-If we navigate to the `python` directory, we can see a few things:
+If we navigate to the `pulumi-python-program` directory, we can see a few things:
 
-- \_\_main\_\_.py, our equivalent to main.tf for python projects
-- sdks directory, where the generated bridged provider is output
-- other python project artifacts (eg requirments.txt, pyproject.toml, etc)
+- Pulumi.yaml, the pulumi configuration file.
+- \_\_main\_\_.py, our equivalent to main.tf for python projects.
+- sdks directory, where the generated bridged provider is output.
+- other python project artifacts (eg requirments.txt, pyproject.toml, etc).
 
 ### Python specific cleanup
 
@@ -270,7 +280,7 @@ I have opted to output it to a different directory to preserve the contents of m
 
 ### Project structure
 
-If we navigate to the `golang` directory, we can see a few things:
+If we navigate to the `pulumi-go-program` directory, we can see a few things:
 
 - main.go, our equivalent to main.tf for golang projects
 - sdks directory, where the generated bridged provider is output
@@ -285,6 +295,24 @@ unreferenced variables like GCP project, region, and PlanetScale service token.
 These are part of the output because in it's current iteration the code
 converter will convert everything, even if ultimately it is provider
 configuration (see [cleanup](#cleanup)) and not actual code.
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+```shell
+pulumi convert --from terraform --language yaml --out pulumi-yaml-program
+```
+
+I have opted to output it to a different directory to preserve the contents of my Terraform project.
+
+### Project structure
+
+If we navigate to the `pulumi-yaml-program` directory, we can see a few things:
+
+- Pulumi.yaml, the pulumi configuration file.
+- Main.yaml, our equivalent to main.tf for golang projects.
+- sdks directory, where the generated bridged provider is output.
 
 {{% /choosable %}}
 
