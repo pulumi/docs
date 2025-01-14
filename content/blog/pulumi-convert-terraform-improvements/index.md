@@ -37,7 +37,7 @@ If you're anxious to try this out on your own Terraform codebase, you need only
 to navigate to your project directory and run the following command with the
 latest version of Pulumi installed:
 
-{{% chooser language "javascript,typescript,python,go,yaml" %}}
+{{% chooser language "javascript,typescript,python,go,java,yaml" %}}
 
 {{% choosable language javascript %}}
 
@@ -67,6 +67,14 @@ pulumi convert --from terraform --language python
 
 ```shell
 pulumi convert --from terraform --language go
+```
+
+{{% /choosable %}}
+
+{{% choosable language java %}}
+
+```shell
+pulumi convert --from terraform --language java
 ```
 
 {{% /choosable %}}
@@ -214,7 +222,7 @@ new Pulumi project (eg `Pulumi.dev.yaml`, `Pulumi.prod.yaml`, etc).
 
 You can convert this into a new project with the following command:
 
-{{% chooser language "typescript,python,go,yaml" %}}
+{{% chooser language "typescript,python,go,java,yaml" %}}
 
 {{% choosable language typescript %}}
 
@@ -295,6 +303,52 @@ unreferenced variables like GCP project, region, and PlanetScale service token.
 These are part of the output because in it's current iteration the code
 converter will convert everything, even if ultimately it is provider
 configuration (see [cleanup](#cleanup)) and not actual code.
+
+{{% /choosable %}}
+
+{{% choosable language java %}}
+
+```shell
+pulumi convert --from terraform --language go --out pulumi-go-program
+```
+
+I have opted to output it to a different directory to preserve the contents of my Terraform project.
+
+### Project structure
+
+If we navigate to the `pulumi-go-program` directory, we can see a few things:
+
+- main.go, our equivalent to main.tf for golang projects
+- sdks directory, where the generated bridged provider is output
+- other golang project artifacts (go.mod, go.sum)
+
+### Go specific cleanup
+
+The java code generator does not set up the maven dependencies for you so you
+need to copy the code into your source directory (as the printed instructions
+say) in the output directory.
+
+```sh
+cp -r sdks/planetscale/src/* src/
+```
+
+You also might notice the generated code is using the wrong overload for
+setting the metadata in your GCP instance to set environmental variables.
+Quickly making sure you call "toString" on all values in the map fixes the
+issue.  The code generator does it's best to make compilable code from the get
+go, but sometimes there is ambiguity like these types that the user needs to go
+in and fix.
+
+```diff
+.metadata(Map.ofEntries(
++    Map.entry("DB_HOST", db.url().toString()),
+-    Map.entry("DB_HOST", db.url()),
+    Map.entry("DB_USER", "root"),
++   Map.entry("DB_PASS", dbPassword.plaintext().toString()),
+-   Map.entry("DB_PASS", dbPassword.plaintext()),
++   Map.entry("DB_NAME", db.name().toString())
+-   Map.entry("DB_NAME", db.name())
+))
 
 {{% /choosable %}}
 
