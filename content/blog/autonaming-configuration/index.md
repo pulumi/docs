@@ -7,6 +7,30 @@ authors:
     - mikhail-shilkov
 tags:
     - features
+social:
+    twitter: |
+        🎉 New in Pulumi: Auto-naming Configuration!
+        
+        Take full control of your cloud resource names with:
+        - Custom naming patterns
+        - Verbatim mode
+        - Disabled auto-naming option
+
+        A highly requested feature that makes resource management even better.
+
+        Read more ⬇️
+    linkedin: >
+        🚀 Excited to announce Pulumi's Auto-naming Configuration! 
+        
+        This highly anticipated feature gives you complete control over how your cloud resources are named across all cloud providers. Whether you want to disable auto-naming entirely, use logical names as-is, or create custom naming patterns that match your organization's conventions - we've got you covered.
+        
+        Key capabilities:
+        - Custom naming patterns with static text, resource information, and random components
+        - Verbatim mode for exact logical name matching
+        - Option to disable auto-naming entirely
+        - Support across all cloud providers
+        
+        Ready to try it out? Check out our latest blog post to learn more about this game-changing feature for infrastructure management.
 ---
 
 I'm thrilled to announce the release of our auto-naming configuration feature. This highly anticipated capability addresses one of our most requested features [pulumi/pulumi#1518](https://github.com/pulumi/pulumi/issues/1518) and gives you complete control over how Pulumi names your cloud resources.
