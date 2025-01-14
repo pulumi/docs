@@ -82,6 +82,58 @@ pulumi:autonaming:
 
 See the [auto-naming configuration documentation](/docs/concepts/resources/names/#autonaming-configuration) to see the full list of available expressions.
 
+## See It In Action
+
+Let's look at a practical example. Say you're creating an S3 bucket and a DynamoDB table in your Pulumi program:
+
+```typescript
+import * as aws from "@pulumi/aws";
+
+// Create an S3 bucket
+const bucket = new aws.s3.Bucket("uploads");
+
+// Create a DynamoDB table
+const table = new aws.dynamodb.Table("users", {
+    hashKey: "id",
+    attributes: [{
+        name: "id",
+        type: "S",
+    }],
+    billingMode: "PAY_PER_REQUEST",
+});
+```
+
+By default, Pulumi would generate names like `uploads-ae26f3b` and `users-4c2dd09`. But let's say you want your resources to follow a pattern that includes your project and stack name. You can configure this in your stack configuration file (`Pulumi.<stack-name>.yaml`):
+
+```yaml
+config:
+  pulumi:autonaming:
+    pattern: ${project}-${stack}-${name}
+```
+
+Now when you run `pulumi up`, your resources will be created with predictable names:
+
+- S3 bucket: `myproject-dev-uploads`
+- DynamoDB table: `myproject-dev-users`
+
+You can also set different patterns for specific providers or resource types:
+
+```yaml
+config:
+  pulumi:autonaming:
+    pattern: ${project}-${stack}-${name}
+    providers:
+      aws:
+        resources:
+          "aws:s3/bucket:Bucket":
+            pattern: ${name}-${stack}-${alphanum(6)}
+```
+
+With this configuration, you'll get:
+
+- S3 bucket: `uploads-dev-x7yz9n` (with a random suffix for global uniqueness)
+- DynamoDB table: `myproject-dev-users` (following the default pattern)
+
 ### Configuration Syntax
 
 The configuration syntax differs slightly depending on where you define it:
