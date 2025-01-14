@@ -428,7 +428,7 @@ metadata:
   labels:
     app.kubernetes.io/instance: pulumi-application
   annotations:
-    argocd.argoproj.io/sync-wave: "3" 
+    argocd.argoproj.io/sync-wave: "3"
     pulumi.com/reconciliation-request: "before-first-update"
     link.argocd.argoproj.io/external-link: http://app.pulumi.com/my-org/my-prject/dev
 spec:
@@ -460,7 +460,7 @@ metadata:
   namespace: argocd
   finalizers:
     # note: the finalizer must be background to allow Pulumi to invoke the shutdown of the workspace (pulumi down)
-    - resources-finalizer.argocd.argoproj.io/background 
+    - resources-finalizer.argocd.argoproj.io/background
 spec:
   destination:
     namespace: default
@@ -478,8 +478,6 @@ spec:
 Deploy in the usual way `kubectl apply -f application.yaml -n default`.  ArgoCD will take care of instantiation of the Stack object which will in turn invoke the PKO Workspace.  The result will look something like this in the ArgoCD UI:
 
 ![ArgoCD PKO Example](/images/docs/reference/argocd/pko-example.png)
-
-
 
 ### Using a Program object
 
