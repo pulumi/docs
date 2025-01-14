@@ -1,7 +1,7 @@
 ---
-title: "Pulumi Convert Terraform Improvements"
+title: "Pulumi↔Terraform Convert and Import Supercharged!"
 date: 2025-01-08T14:47:13+09:00
-meta_desc: "Pulumi convert now supports a number of enhancements and bug fixes for Terraform, including automatically bridging providers"
+meta_desc: "Pulumi convert and import now support automatically bridging terraform providers when converting and importing"
 meta_image: meta.png
 authors:
     - brandon-pollack
@@ -342,6 +342,21 @@ and if you run `pulumi preview` it successfully generates a plan!
 
 There is still more you can do, the generated code could be cleaned up some as there
 are some unused variables, etc.
+
+## Importing Resources from Bridged Terraform Providers
+
+Up until now, Terraform providers bridged this way using our parameterized
+[Pulumi Terraform Provider](https://github.com/pulumi/pulumi-terraform-bridge)
+could not be
+[imported](https://www.pulumi.com/docs/iac/cli/commands/pulumi_import/)
+correctly into other stacks (or any other parameterizable provier for that
+matter).
+
+With the release of [Pulumi 3.146.0](https://github.com/pulumi/pulumi/releases/tag/v3.146.0), we have also
+addressed this limitation, and you can now import resources that will be
+managed by the Pulumi Terraform parameterized provider and code will also be
+generated to manage these resources from within Pulumi.  See the [documentation for `pulumi import`](https://www.pulumi.com/docs/iac/cli/commands/pulumi_import/)
+for more details.
 
 ## Limitations
 
