@@ -189,8 +189,8 @@ function getCloudProvidersRedirect(uri: string): string | undefined {
             .replace("setup", "installation-configuration");
     }
 
-    if (uri.includes("/registry/packages/azure-native-v2")) {
-        return uri.replace("azure-native-v2", "azure-native")
+    if (uri.includes("/registry/packages/azure-native-v3")) {
+        return uri.replace("azure-native-v3", "azure-native")
     }
 
     return undefined;
