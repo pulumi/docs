@@ -1,7 +1,7 @@
 ---
-title: "Pulumi↔Terraform Convert and Import Supercharged!"
-date: 2025-01-08T14:47:13+09:00
-meta_desc: "Pulumi convert and import now support automatically bridging terraform providers when converting and importing"
+title: "Converting Terraform to Pulumi Just Got Easier"
+date: 2025-01-15
+meta_desc: "Pulumi's conversion tools now automatically handle any Terraform provider, making migration easier than ever"
 meta_image: meta.png
 authors:
     - brandon-pollack
@@ -9,33 +9,21 @@ tags:
   - terraform
   - features
 ---
+Big news for infrastructure teams looking to migrate- we've just supercharged Pulumi's Terraform conversion capabilities, making it easier than ever to modernize your infrastructure as code.
 
-At Pulumi, we want to provide access to manage **any** cloud infrastructure
-with a single unified programming model.  To that end, we've already added
-support for [any Terraform/OpenTofu provider](blog/any-terraform-provider/).
-This works great if you already have an existing Pulumi project and want to
-leverage providers from the Terraform ecosystem that aren't yet available for
-Pulumi natively! However, what if you are trying to move your existing
-infrastructure as code solution to Pulumi IaC?
-
-We already have a [handy
-utility](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-terraform/)
-called `pulumi convert` built into the CLI to convert Terraform projects to any
-Pulumi language, but up until now it didn't handle dependencies on external
-Terraform providers which don't have a known Pulumi native equivalent.
-
-We're happy to announce that with the release of [Pulumi
-3.145](https://github.com/pulumi/pulumi/releases/tag/v3.145.0), we now support
-the same automatic bridging we brought to existing Pulumi projects to projects
-being converted from Terraform into Pulumi!
+Pulumi already lets you use [any Terraform/OpenTofu provider](/blog/any-terraform-provider/) in your existing projects, and now we've taken it to the next level. With [Pulumi CLI version 3.145.0](https://github.com/pulumi/pulumi/releases/tag/v3.145.0), you can now automatically convert **ANY** Terraform project to Pulumi - even if it uses providers that don't have native Pulumi equivalents!
 
 <!--more-->
 
-## Quickstart
+This means you can finally:
 
-If you're anxious to try this out on your own Terraform codebase, you need only
-to navigate to your project directory and run the following command with the
-latest version of Pulumi installed:
+- Convert your entire Terraform codebase without provider limitations
+- Maintain access to the Terraform providers you leverage
+- Modernize your infrastructure while keeping your existing resources
+
+## Try It Now (It's Easy!)
+
+Ready to see it in action? Just grab the latest version of Pulumi and run:
 
 {{% chooser language "javascript,typescript,python,go,java,yaml" %}}
 
@@ -92,18 +80,12 @@ pulumi convert --from terraform --language yaml
 This will download the necessary plugins, run the conversion and output it in
 the current directory, generating all necessary project files.
 
-If all went well you can run `pulumi preview` to see if the project can deploy
-successfully. Truth be told, there are still [a few scenarios](#limitations)
-where the conversion will succeed but the generated code needs a little bit of
-attention before you're off to the races.
+You can then run `pulumi preview` to see if the project can deploy
+successfully.
 
-## Detailed Example
+## See It In Action: A Real-World Example
 
-In order to illustrate the example further, I've thrown together a simple
-Terraform project that sets up a Google Compute Engine virtual machine, a
-PlanetScale database, and wires them together.  At the time of writing, there
-is no PlanetScale provider in the Pulumi registry, and the project will specify
-using a specific version of the Terraform provider.
+Let's look at something cool - we'll convert a project that combines Google Cloud with PlanetScale (a provider that isn't available in the Pulumi registry yet!). This example shows how the new converter handles mixed provider scenarios effortlessly.
 
 Here is the Terraform code in a single main.tf file:
 
@@ -202,7 +184,6 @@ resource "google_compute_instance" "vm" {
   }
 }
 ```
-
 {{% notes type="warning" %}}
 **Never** store secrets or keys in plain text in your code or commited
 configuration files. I only have a db_password stored here in plain text for
@@ -283,8 +264,6 @@ metadata={
 ```shell
 pulumi convert --from terraform --language go --out pulumi-go-program
 ```
-
-I have opted to output it to a different directory to preserve the contents of my Terraform project.
 
 ### Project structure
 
@@ -431,7 +410,7 @@ Up until now, Terraform providers bridged this way using our parameterized
 [Pulumi Terraform Provider](https://github.com/pulumi/pulumi-terraform-bridge)
 could not be
 [imported](https://www.pulumi.com/docs/iac/cli/commands/pulumi_import/)
-correctly into other stacks (or any other parameterizable provier for that
+correctly into other stacks (or any other parameterizable provider for that
 matter).
 
 With the release of [Pulumi 3.146.0](https://github.com/pulumi/pulumi/releases/tag/v3.146.0), we have also
@@ -440,9 +419,19 @@ managed by the Pulumi Terraform parameterized provider and code will also be
 generated to manage these resources from within Pulumi.  See the [documentation for `pulumi import`](https://www.pulumi.com/docs/iac/cli/commands/pulumi_import/)
 for more details.
 
-## Limitations
+## Considerations
 
-- We still have a bit of [unimplemented Terraform functionality](https://github.com/pulumi/pulumi-converter-terraform/issues/65) that we're tracking and are evaluating how to move forward.  For now when these functions are detected it will require some manual intervention on the converted project before you're ready to deploy.
-- If you define your terraform module in a parent directory of your deployment code, you'll encounter a [known bug](https://github.com/pulumi/pulumi-converter-terraform/issues/194), but a simple workaround is to restructure your Terraform code before running a conversion.
+- We still have a bit of [unimplemented Terraform functionality](https://github.com/pulumi/pulumi-converter-terraform/issues/65) that we're tracking.  For now when these functions are detected, but require some manual intervention on the converted project.
+- If you define your Terraform Module in a parent directory of your deployment code, you'll encounter a [known bug](https://github.com/pulumi/pulumi-converter-terraform/issues/194), but a simple workaround is to restructure your Terraform code before running a conversion.
 - Terraform programs are dynamically typed, when converting to a type safe language sometimes a type is unknown and still needs to be added manually (as in the typescript example above).
 - Variables and configuration are not yet converted automatically, so `.tfvars` files etc will need to be manually converted into Pulumi stack configurations.
+
+## What's Really New Here? 🚀
+
+1. **Automatic Provider Bridging**: The converter now automatically handles any Terraform provider, even ones without Pulumi equivalents
+2. **Improved Import Support**: With [Pulumi 3.146.0](https://github.com/pulumi/pulumi/releases/tag/v3.146.0), you can now import resources from any bridged provider
+3. **Seamless Integration**: Generated code works right out of the box with minimal tweaking needed
+
+## The Road Ahead
+
+Stay tuned for even more improvements to make your infrastructure modernization journey smoother!
