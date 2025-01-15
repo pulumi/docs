@@ -74,7 +74,7 @@ main:
 # The right hand side form section.
 form:
     # HubSpot form id.
-    hubspot_form_id: 60fc5939-0493-4e0c-9157-799e2ca73d7
+    hubspot_form_id: 60fc5939-0493-4e0c-9157-799e2ca73d7a
     salesforce_campaign_id: 701PQ00000QinAwYAJ
 
 event_data:
