@@ -194,7 +194,7 @@ class Program
 
 ### AWS Native provider supports auto-naming
 
-Most Pulumi providers support [auto-naming for resources](/docs/concepts/resources#autonaming), which makes it easier to have multiple stacks of the same Pulumi program by avoiding naming conflicts, among other benefits. Now, our AWS Native provider joins the club with full auto-naming support.
+Most Pulumi providers support [auto-naming for resources](/docs/concepts/resources/names/#autonaming), which makes it easier to have multiple stacks of the same Pulumi program by avoiding naming conflicts, among other benefits. Now, our AWS Native provider joins the club with full auto-naming support.
 
 [Learn more about AWS auto-naming in this GitHub issue](https://github.com/pulumi/pulumi-aws-native/issues/156)
 

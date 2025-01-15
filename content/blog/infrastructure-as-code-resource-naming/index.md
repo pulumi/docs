@@ -9,6 +9,10 @@ tags:
     - features
 ---
 
+{{% notes %}}
+We've introduced a new way to customize or disable auto-naming with a configuration option. See [Auto-naming Configuration](/blog/autonaming-configuration/) for more information about all the ways you can customize auto-naming.
+{{% /notes %}}
+
 "What's in a name? That which we call a rose by any other name would smell as sweet."  William Shakespeare's oft repeated quote was used to help Juliet explain that a "Montague" is worthy of love.  Juliet may have underestimated the importance of a name, however, since things didn't work out so well for everyone in Verona!  Many customers have questions about "names" in Pulumi -- and in an effort to make sure that things work out better for them than they did for Romeo, here's a quick note on naming!
 
 <!--more-->
@@ -26,6 +30,10 @@ First and foremost, Pulumi Stacks are often instanced multiple times.  Choosing 
 Second, physical names are used in important ways when we update our resources.  Sometimes, updates can happen in place, however, often updates require a resource to be replaced.  Auto-naming helps ensure that Pulumi can stand up the new resource first and update any references to the new name, before deleting the old resource.  This allows for zero-downtime updates, which is something we usually want to take advantage of.  Indeed, customers often start to override auto-naming, only to realize that it's much easier to let the platform manage this for you, and then revert back to auto-naming.
 
 ## Controlled Naming
+
+{{% notes %}}
+We've introduced a new way to customize or disable auto-naming with a configuration option. See [Auto-naming Configuration](/blog/autonaming-configuration/) for more information about all the ways you can customize auto-naming.
+{{% /notes %}}
 
 There are times, however, where precise naming is important.  You might need to match an existing environment, or want to explicitly control other behavior.  If you know for certain that you want to control the naming yourself, you can indeed override auto-naming.  Simply specify the physical name on your resource during creation. Most resources expose a `name` property that may be specified in the argument object to the constructor:
 
