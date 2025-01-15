@@ -5,6 +5,7 @@ meta_desc: "Pulumi's conversion tools now automatically handle any Terraform pro
 meta_image: meta.png
 authors:
     - brandon-pollack
+    - meagan-cojocar
 tags:
   - terraform
   - features
