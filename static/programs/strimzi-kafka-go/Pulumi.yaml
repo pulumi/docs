@@ -1,0 +1,7 @@
+name: strimzi-kafka-go
+description: Example on how to deploy Strimzi Kafka
+runtime: go
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: kubernetes-go
