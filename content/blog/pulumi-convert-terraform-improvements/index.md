@@ -184,6 +184,7 @@ resource "google_compute_instance" "vm" {
   }
 }
 ```
+
 {{% notes type="warning" %}}
 **Never** store secrets or keys in plain text in your code or commited
 configuration files. I only have a db_password stored here in plain text for
