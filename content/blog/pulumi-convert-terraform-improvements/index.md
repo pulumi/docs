@@ -11,8 +11,8 @@ tags:
 ---
 
 At Pulumi, we want to provide access to manage **any** cloud infrastructure
-with a single unified programming model.  
-To that end, we've already added support for [any Terraform/OpenTofu provider](blog/any-terraform-provider/).
+with a single unified programming model.  To that end, we've already added
+support for [any Terraform/OpenTofu provider](blog/any-terraform-provider/).
 This works great if you already have an existing Pulumi project and want to
 leverage providers from the Terraform ecosystem that aren't yet available for
 Pulumi natively! However, what if you are trying to move your existing
