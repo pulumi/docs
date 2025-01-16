@@ -406,20 +406,81 @@ and if you run `pulumi preview` it successfully generates a plan!
 There is still more you can do, the generated code could be cleaned up some as there
 are some unused variables, etc.
 
-## Importing Resources from Bridged Terraform Providers
-
-Up until now, Terraform providers bridged this way using our parameterized
-[Pulumi Terraform Provider](https://github.com/pulumi/pulumi-terraform-bridge)
-could not be
-[imported](https://www.pulumi.com/docs/iac/cli/commands/pulumi_import/)
-correctly into other stacks (or any other parameterizable provider for that
-matter).
+## Importing Resources from Any Terraform Providers
 
 With the release of [Pulumi 3.146.0](https://github.com/pulumi/pulumi/releases/tag/v3.146.0), we have also
-addressed this limitation, and you can now import resources that will be
-managed by the Pulumi Terraform parameterized provider and code will also be
-generated to manage these resources from within Pulumi.  See the [documentation for `pulumi import`](https://www.pulumi.com/docs/iac/cli/commands/pulumi_import/)
+added the ability to import resources from any Terraform provider. 
+These will be managed by the Pulumi Terraform parameterized provider and code will also be
+generated to manage these resources from within Pulumi.  
+See the [documentation for `pulumi import`](https://www.pulumi.com/docs/iac/cli/commands/pulumi_import/)
 for more details.
+
+Here is an example of importing a resource using [Backblaze](https://backblaze.com), a block storage service.
+
+1. First create your application keys on the Backblaze portal.
+2. Run `terraform apply` on the following:
+```terraform
+terraform {
+  required_version = ">= 1.0.0"
+  required_providers {
+    b2 = {
+      source = "Backblaze/b2"
+    }
+  }
+}
+
+provider "b2" {
+  application_key_id = "YOUR_KEY_ID"
+  application_key = "YOUR_KEY"
+}
+
+resource "b2_bucket" "example_bucket" {
+  bucket_name = "pulumi-import-test"
+  bucket_type = "allPublic"
+}
+```
+
+3. Now from your Pulumi project be sure to add the Terraform provider, this is
+   not automatic on import yet because the Pulumi project needs to be made
+   aware of which particular package contains the providers.
+```
+pulumi package add terraform-provider backblaze/b2
+```
+4. Configure the stack for your provider by adding the appropriate keys to the configuration:
+```yaml
+name: pulumi_project
+description: A minimal AWS TypeScript Pulumi program
+runtime:
+  name: nodejs
+  options:
+    packagemanager: npm
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: aws-typescript
+  b2:applicationKeyId:
+    value: 'YOUR_KEY_ID'
+  b2:applicationKey:
+    value: 'YOUR_KEY'
+```
+5. Get the `type` that you are importing, you can confirm this by inspecting the schema.
+```
+pulumi package get-schema terraform-provider backblaze/b2
+```
+Inside this json response you can find the "types" section and it contains
+"b2:index/bucket:Bucket", the type corresponding to "b2_bucket" in Terraform.
+
+6. Find the internal provider ID to import into the Pulumi
+   project.  This can usually be found by running `terraform show` and copying
+   the ID.
+7. Use this ID in the `import` command
+```
+pulumi import "b2:index/bucket:Bucket" example_bucket "YOUR_BUCKET_ID"
+```
+8. After import, code will be generated for you to add to your project as you
+   see fit to manage this resource from Pulumi.  Be default it is created as
+   `protected`, you can use `--protect=false` to disable that.
+
 
 ## Considerations
 
