@@ -24,13 +24,34 @@ else
     org="$(pulumi whoami -v --json | jq -r .user)"
 fi
 
+# Get the list of changed directories in the static/programs directory
+changed_dirs=()
+
+while IFS= read -r line; do
+    changed_dirs+=("$line")
+done <<< "$(git diff --name-only master | grep "^static/programs/" | cut -d'/' -f4 | sort | uniq)"
+
+# Check if the array is empty and exit with code 0 if it is
+if [ ${#changed_dirs[@]} -eq 0 ]; then
+    echo "No new programs to test in static/programs directories."
+    exit 0
+fi
+
 failed_projects=()
 passing_projects=()
 
 pushd "$programs_dir"
     found_first_program=false
 
-    for dir in */; do
+    # Choose which directories to iterate over based on TEST_MODE. We only want to test 
+    # the new/changed directories in a pull request. Otherwise, we want to test all programs.
+    if [[ "$TEST_MODE" == "pull_request" ]]; then
+        dirs=( */ )
+    else
+        dirs=( "${changed_dirs[@]}" )
+    fi
+
+    for dir in "${dirs[@]}"; do
         project="$(basename $dir)"
 
         # Optionally test only selected examples by setting an ONLY_TEST="<example-path>"
