@@ -42,11 +42,9 @@ As our customers have grown with Pulumi, they've shared how they'd love to combi
 
 Today, I'm excited to introduce resource auto-naming, which delivers this flexibility while preserving all the benefits of our existing naming system. This [highly requested feature](https://github.com/pulumi/pulumi/issues/1518)(with 50 upvotes!) gives you full control over how Pulumi names your cloud resources, allowing you to seamlessly integrate Pulumi into your organization's resource management practices.
 
-## The Journey to Better Resource Naming
+## The Road to Better Resource Naming
 
-Since Pulumi's early days, auto-naming has been a core feature that ensures unique names for cloud resources by generating random name suffixes. While this approach solved many challenges around zero-downtime deployments and stack co-existence, we heard consistently from our community that you needed more control over how your resources are named.
-
-The original [feature request](https://github.com/pulumi/pulumi/issues/1518) I opened in June 2018 has generated extensive discussion, with users sharing various use cases and requirements. Today, I'm happy to finally close that issue with a solution that addresses the community's needs while maintaining Pulumi's robust resource management capabilities.
+The original [feature request](https://github.com/pulumi/pulumi/issues/1518) I opened in June 2018 when I was a Pulumi customer. It has generated extensive discussion, with users sharing various use cases and requirements. Today, I'm happy to finally close that issue with a solution that addresses the community's needs while maintaining Pulumi's robust resource management capabilities.
 
 ## Introducing Auto-naming Configuration
 
@@ -54,7 +52,7 @@ With the new auto-naming configuration feature, you now have full control over h
 
 ### Disable Auto-naming
 
-If you want complete control over your resource names, you can disable auto-naming entirely:
+If you want complete control over your resource names, you can disable Pulumi auto-naming entirely:
 
 ```yaml
 pulumi:autonaming:
