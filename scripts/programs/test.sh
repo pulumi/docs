@@ -22,7 +22,7 @@ if [ "$TEST_MODE" == "pull_request" ]; then
 
     echo "Number of new programs to test: ${#dirs_to_test[@]}"
 
-    # Check if the array is empty and exit with code 0 if it is
+    # Check if the array is empty and if it is exit.
     if [ ${#dirs_to_test[@]} -eq 0 ]; then
         echo "No new programs to test in static/programs directories."
         exit 0
