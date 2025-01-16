@@ -123,7 +123,7 @@ jobs:
         goversion:
           - 1.16.x
         pythonversion:
-          - "3.7"
+          - "3.14"
         nodeversion:
           - "18.x"
   notify:
