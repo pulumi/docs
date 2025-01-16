@@ -73,7 +73,7 @@ jobs:
         with:
           python-version: ${{matrix.pythonversion}}
       - name: Install Pipenv
-        run:  pip3 install pipenv==2022.10.12
+        run:  pip3 install pipenv
       - name: Install dotnet
         uses: actions/setup-dotnet@v1
         with:
