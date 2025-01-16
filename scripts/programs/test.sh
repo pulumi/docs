@@ -53,10 +53,10 @@ pushd "$programs_dir"
     # Choose which directories to iterate over based on TEST_MODE. We only want to test 
     # the new/changed directories in a pull request. Otherwise, we want to test all programs.
     if [[ "$TEST_MODE" != "pull_request" ]]; then
-        dirs=( $(find . -maxdepth 1 -type d -not -path '*/\.*' -not -path '.') )
+        dirs_to_test=( $(find . -maxdepth 1 -type d -not -path '*/\.*' -not -path '.') )
     fi
 
-    for dir in "${dirs[@]}"; do
+    for dir in "${dirs_to_test[@]}"; do
         project="$(basename $dir)"
 
         # Optionally test only selected examples by setting an ONLY_TEST="<example-path>"
