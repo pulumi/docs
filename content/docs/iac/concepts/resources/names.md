@@ -19,7 +19,7 @@ aliases:
 
 Each resource in Pulumi has a [logical name](#logicalname) and a [physical name](#autonaming).  The logical name is how the resource is known inside Pulumi, and establishes a notion of identity within Pulumi even when the physical resource might need to change (for example, during a replacement).  The physical name is the name used for the resource in the cloud provider that a Pulumi program is deploying to.
 
-Pulumi [auto-names](#autonaming) most resources by default, using the logical name and a random suffix to construct a unique physical name for a resource.  Users can provide explicit names to override this default.
+Pulumi [auto-names](#autonaming) most resources by default, using the logical name and a random suffix to construct a unique physical name for a resource.  Users can provide explicit names to override this default.  Users can also [customize or disable auto-naming](#autonaming-configuration) globally, per provider, or per resource type.
 
 Each resource also has a [Uniform Resource Name (URN)](#urns) which is a unique name derived from both the logical name of the resource and the type of the resource and, in the case of components, its parents.
 
@@ -278,6 +278,127 @@ resources:
 {{% /choosable %}}
 
 {{< /chooser >}}
+
+## Configuring Auto-Naming {#autonaming-configuration}
+
+You can customize how Pulumi generates resource names through the `pulumi:autonaming` configuration setting. This can be set at the stack, project, or organization level.
+
+{{% notes %}}
+When configuring auto-naming in your project configuration (`Pulumi.yaml`), you need to wrap the configuration in a `value` key:
+
+```yaml
+config:
+  pulumi:autonaming:
+    value:
+      mode: verbatim
+```
+
+However, when configuring it in a stack configuration file (`Pulumi.<stack-name>.yaml`), you can specify the configuration directly:
+
+```yaml
+config:
+  pulumi:autonaming:
+    mode: verbatim
+```
+
+{{% /notes %}}
+
+Here are the key ways to configure auto-naming:
+
+### Default Auto-Naming
+
+The default behavior adds a random suffix to resource names:
+
+```yaml
+config:
+  pulumi:autonaming:
+    mode: default
+```
+
+This is equivalent to having no configuration at all.
+
+### Verbatim Names
+
+To use the logical name exactly as specified, without any modifications:
+
+```yaml
+config:
+  pulumi:autonaming:
+    mode: verbatim
+```
+
+No random suffixes will be added to the resource names.
+
+### Disable Auto-Naming
+
+To require explicit names for all resources:
+
+```yaml
+config:
+  pulumi:autonaming:
+    mode: disabled
+```
+
+### Custom Naming Pattern
+
+You can specify a template pattern for generating names:
+
+```yaml
+config:
+  pulumi:autonaming:
+    pattern: ${name}-${hex(8)}
+```
+
+The following expressions are supported in patterns:
+
+| Expression | Description | Example |
+| :---- | :---- | :---- |
+| name | Logical resource name | ${name} |
+| hex(n) | Hexadecimal random string of length n | ${name}-${hex(5)} |
+| alphanum(n) | Alphanumeric random string of length n | ${name}${alphanum(4)} |
+| string(n) | Random string of letters of length n | ${name}${string(6)} |
+| num(n) | Random string of digits of length n | ${name}${num(4)} |
+| uuid | UUID | ${uuid} |
+| organization | Organization name | ${organization}_${name} |
+| project | Project name | ${project}_${name} |
+| stack | Stack name | ${stack}_${name} |
+| config.key | Config value of key | ${config.region}_${name} |
+
+{{% notes type="warning" %}}
+When an update requires replacing the resource, Pulumi's default behavior is to create the new resource and then deleting the old resource. However, when using verbatim names or patterns without random components, resources that need to be replaced will be deleted before creating the new resource. This can lead to downtime.
+{{% /notes %}}
+
+### Provider-Specific Configuration
+
+You can configure auto-naming differently for specific providers or resource types:
+
+```yaml
+config:
+  pulumi:autonaming:
+    mode: default
+    providers:
+      aws:
+        pattern: ${name}_${hex(4)}  # AWS resources use underscore and shorter suffix
+      azure-native:
+        mode: verbatim  # Azure resources use exact names
+        resources:
+          "azure-native:storage:Account": ${name}${string(6)}  # Storage accounts need unique names
+```
+
+### Strict Name Pattern Enforcement
+
+By default, providers may modify the generated names to comply with resource-specific requirements. To prevent this and enforce your exact pattern:
+
+```yaml
+config:
+  pulumi:autonaming:
+    pattern: ${name}-${hex(8)}
+    enforce: true
+```
+
+### Migration
+
+Changing the autonaming setting on an existing stack doesn't cause any immediate changes. It will only affect any newly created resources on this stack, including resources being replaced for unrelated reasons. To re-create resources with new names, e.g. on a dev stack, you would need to destroy the stack and update it again.
 
 ## Resource Types {#types}
 
