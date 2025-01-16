@@ -30,7 +30,7 @@ Our goal is to generate the most accurate code for every provider - code that is
 
 LLMs are great at generating code however they are limited to what they have learned before their knowledge cutoff date. This means that the latest changes in the providers will not be reflected in the generated code. This also could lead to hallucinations when the model struggles to answer a question that requires up to date knowledge.
 
-To help us solve this, we rely on the technique known as the _Retrieval Augmented Generation_ (RAG). RAG helps code generation by integrating information retrieved from external data sources. In Pulumi, we call this data source the _Registry_ - it's the database we maintain that containing type schema and usage information for every provider.
+To help us solve this, we rely on the technique known as the _Retrieval Augmented Generation_ (RAG). RAG helps code generation by integrating information retrieved from external data sources. In Pulumi, we call this data source the _Registry_ - it's the database we maintain that contains type schema and usage information for every provider.
 
 At a high level, using RAG involves the following steps:
 
@@ -90,7 +90,7 @@ Where $N(Retrieved)$ is the total number of documents that were retrieved.
 
 High precision means that many of the retrieved documents were relevant.
 
-Naturally, we want to maximizes both the recall and the precision. It's [been said](https://buduroiu.com/blog/rag-llm-recall-problem) that high recall is essential to ensure relevant content is available to the code generator while precision is the parameter you want to optimize for to avoid hallucinations.
+Naturally, we want to maximize both the recall and the precision. It's [been said](https://buduroiu.com/blog/rag-llm-recall-problem) that high recall is essential to ensure relevant content is available to the code generator while precision is the parameter you want to optimize for to avoid hallucinations.
 
 ### Practical concerns
 
