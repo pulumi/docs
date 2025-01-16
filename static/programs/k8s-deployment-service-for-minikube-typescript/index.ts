@@ -1,6 +1,5 @@
-"use strict";
-const pulumi = require("@pulumi/pulumi");
-const k8s = require("@pulumi/kubernetes");
+import * as pulumi from "@pulumi/pulumi";
+import * as k8s from "@pulumi/kubernetes";
 
 const appName = "nginx";
 const appLabels = { app: appName };
