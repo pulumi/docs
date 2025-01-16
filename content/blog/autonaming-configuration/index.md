@@ -1,28 +1,29 @@
 ---
-title: "Introducing Auto-naming Configuration in Pulumi"
-date: 2025-01-16T08:00:00-07:00
-meta_desc: "Learn how to configure Pulumi's resource naming to match your organization's naming conventions and requirements across all cloud providers."
+title: "Introducing Flexible Resource Auto-naming in Pulumi"
+date: 2025-01-16
+meta_desc: "Discover how to customize Pulumi's resource naming to align with your organization's standards and naming conventions."
 meta_image: meta.png
 authors:
     - mikhail-shilkov
 tags:
     - features
+    - releases
 social:
     twitter: |
-        🎉 New in Pulumi: Auto-naming Configuration!
+        🎉 New in Pulumi: Flexible Resource Auto-naming!
         
-        Take full control of your cloud resource names with:
-        - Custom naming patterns
-        - Verbatim mode
-        - Disabled auto-naming option
+        Finally, full control over your cloud resource names:
+        ✨ Custom naming patterns
+        🎯 Verbatim mode
+        🔧 Flexible configuration
 
-        A highly requested feature that makes resource management even better.
+        No more compromises between naming standards and uniqueness.
 
         Read more ⬇️
     linkedin: >
-        🚀 Excited to announce Pulumi's Auto-naming Configuration! 
+        🚀 We're excited to announce Flexible Resource Auto-naming in Pulumi! 
         
-        This highly anticipated feature gives you complete control over how your cloud resources are named across all cloud providers. Whether you want to disable auto-naming entirely, use logical names as-is, or create custom naming patterns that match your organization's conventions - we've got you covered.
+        This highly anticipated feature gives you complete control over how your cloud resources are named across all cloud providers. Whether you want to enforce enterprise naming standards, ensure compliance, or maintain consistent naming patterns - we've got you covered.
         
         Key capabilities:
         - Custom naming patterns with static text, resource information, and random components
@@ -33,9 +34,13 @@ social:
         Ready to try it out? Check out our latest blog post to learn more about this game-changing feature for infrastructure management.
 ---
 
-I'm thrilled to announce the release of our auto-naming configuration feature. This highly anticipated capability addresses one of our most requested features [pulumi/pulumi#1518](https://github.com/pulumi/pulumi/issues/1518) and gives you complete control over how Pulumi names your cloud resources.
+I'm thrilled to announce the release of our resource auto-naming feature, which builds upon one of Pulumi's beloved capabilities. Our default auto-naming feature has helped thousands of customers successfully manage cloud resources at scale by automatically ensuring unique, conflict-free resource names across their cloud deployments. This robust naming system has been particularly valuable for teams managing multiple environments, handling zero-downtime deployments, and maintaining clear resource organization.
 
 <!--more-->
+
+As our customers have grown with Pulumi, they've shared how they'd love to combine this reliable naming system with their organization's specific naming conventions and requirements. Whether it's adding cost center identifiers, incorporating compliance tags, or matching existing naming patterns, teams want the flexibility to customize how their resources are named.
+
+Today, I'm excited to introduce resource auto-naming, which delivers this flexibility while preserving all the benefits of our existing naming system. This [highly requested feature](https://github.com/pulumi/pulumi/issues/1518)(with 50 upvotes!) gives you full control over how Pulumi names your cloud resources, allowing you to seamlessly integrate Pulumi into your organization's resource management practices.
 
 ## The Journey to Better Resource Naming
 
@@ -80,7 +85,7 @@ pulumi:autonaming:
   pattern: ${project}-${stack}-${name}${alphanum(6)}
 ```
 
-See the [auto-naming configuration documentation](/docs/concepts/resources/names/#autonaming-configuration) to see the full list of available expressions.
+See the [auto-naming configuration documentation](/docs/concepts/resources/names/#auto-naming-configuration) to see the full list of available expressions.
 
 ## See It In Action
 
@@ -162,7 +167,7 @@ The same applies to other configuration patterns shown above - use the `value:` 
 To use the auto-naming configuration feature, you'll need:
 
 1. Pulumi CLI 3.146.0 or later
-2. The following minimum provider versions:
+2. The following minimum provider versions (as applicable):
    - AWS provider 6.66.0 or later
    - Azure Native provider 2.78.0 or later
    - Azure Classic provider 6.14.0 or later
@@ -171,12 +176,12 @@ To use the auto-naming configuration feature, you'll need:
 
 Once you have the required versions installed, simply add your desired auto-naming configuration to your Pulumi configuration file.
 
-For complete documentation and advanced usage scenarios, visit our [auto-naming configuration documentation](/docs/intro/concepts/resources/names/#auto-naming-configuration).
+For complete documentation and advanced usage scenarios, visit our [resource auto-naming documentation](/docs/intro/concepts/resources/names/#auto-naming-configuration).
 
 ## General Availability
 
-We're excited to announce that the auto-naming configuration feature is now generally available across our major cloud providers. This release marks an important milestone in Pulumi's evolution, delivering a robust and flexible solution for resource naming that our community has been asking for.
+We're excited to announce that the auto-naming feature is now generally available across our major cloud providers. This release marks an important milestone in Pulumi's evolution, delivering a robust and flexible solution for resource naming.
 
-Thank you to everyone who participated in the [RFC discussion](https://github.com/pulumi/pulumi/discussions/17592) and preview period and provided valuable feedback. Your input has been invaluable in creating a solution that works for diverse use cases while maintaining Pulumi's core strengths.
+Thank you to everyone who participated in the [RFC discussion](https://github.com/pulumi/pulumi/discussions/17592) and the preview period and for providing valuable feedback. Your input has been invaluable in creating a solution that works for diverse use cases while maintaining Pulumi's core strengths.
 
-If you have any questions or feedback about the auto-naming configuration feature, please don't hesitate to reach out to us on GitHub or in the [Pulumi Community Slack](https://slack.pulumi.com).
+If you have any questions or feedback about the resource auto-naming feature, please don't hesitate to reach out to us on GitHub or in the [Pulumi Community Slack](https://slack.pulumi.com).
