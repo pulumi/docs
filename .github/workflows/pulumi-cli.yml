@@ -6,8 +6,6 @@ on:
   repository_dispatch:
     types:
       - pulumi-cli
-
-on:
   workflow_dispatch:
     inputs:
       ref:
