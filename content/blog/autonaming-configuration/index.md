@@ -89,7 +89,7 @@ See the [auto-naming configuration documentation](/docs/concepts/resources/names
 
 Let's look at a practical example. Say you're creating an S3 bucket and a DynamoDB table in your Pulumi program:
 
-{{< chooser language "typescript,python" >}}
+{{< chooser language "typescript,python,csharp,go,java,yaml" >}}
 
 {{% choosable language typescript %}}
 
@@ -235,6 +235,27 @@ public class App {
         });
     }
 }
+```
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+```yaml
+resources:
+  # Create an S3 bucket
+  uploads:
+    type: aws:s3:Bucket
+
+  # Create a DynamoDB table
+  users:
+    type: aws:dynamodb:Table
+    properties:
+      hashKey: id
+      attributes:
+        - name: id
+          type: S
+      billingMode: PAY_PER_REQUEST
 ```
 
 {{% /choosable %}}
