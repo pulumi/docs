@@ -69,7 +69,7 @@ pulumi:autonaming:
 
 No random suffixes will be added to the resource names.
 
-Note, when an update requires replacing the resource, Pulumi's default behavior is to create the new resource and then deleting the old resource. However, when using verbatim names or patterns without random components, resources that need to be replaced will be deleted before creating the new resource. This can lead to downtime.
+Note, when an update requires replacing the resource, Pulumi's default behavior is to create the new resource and then delete the old resource. However, when using verbatim names or patterns without random components, resources that need to be replaced will be deleted before creating the new resource. This can lead to downtime.
 
 ### Custom Naming Patterns
 
