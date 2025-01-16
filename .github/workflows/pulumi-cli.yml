@@ -6,6 +6,14 @@ on:
   repository_dispatch:
     types:
       - pulumi-cli
+
+on:
+  workflow_dispatch:
+    inputs:
+      ref:
+        required: true
+        description: "Git Tag"
+        type: string
 jobs:
   pull-request:
     runs-on: ubuntu-latest
@@ -15,7 +23,7 @@ jobs:
         uses: actions/checkout@v2
       - name: set the pulumi version
         run: |
-          echo "PULUMI_VERSION=${{ github.event.client_payload.ref }}" >> $GITHUB_ENV
+          echo "PULUMI_VERSION=${{ inputs.ref }}" >> $GITHUB_ENV
       - name: pull-request
         uses: repo-sync/pull-request@v2
         with:
@@ -30,7 +38,7 @@ jobs:
     steps:
       - name: set the pulumi version
         run: |
-          echo "PULUMI_VERSION=${{ github.event.client_payload.ref }}" >> $GITHUB_ENV
+          echo "PULUMI_VERSION=${{ inputs.ref }}" >> $GITHUB_ENV
       - name: checkout docs repo
         uses: actions/checkout@v2
         with:
@@ -40,7 +48,7 @@ jobs:
         with:
           repository: pulumi/pulumi
           path: pulumi
-          ref: v${{ github.event.client_payload.ref }}
+          ref: v${{ inputs.ref }}
       - name: Install pulumictl
         uses: jaxxstorm/action-install-gh-release@v1.1.0
         with:
@@ -123,7 +131,7 @@ jobs:
         goversion:
           - 1.16.x
         pythonversion:
-          - "3.7"
+          - "3.13"
         nodeversion:
           - "18.x"
   notify:
