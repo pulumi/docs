@@ -1,5 +1,5 @@
 ---
-title: "Introducing Flexible Resource Auto-naming in Pulumi"
+title: "Introducing Customizable Resource Auto-naming in Pulumi"
 date: 2025-01-16
 meta_desc: "Discover how to customize Pulumi's resource naming to align with your organization's standards and naming conventions."
 meta_image: meta.png
@@ -34,13 +34,13 @@ social:
         Ready to try it out? Check out our latest blog post to learn more about this game-changing feature for infrastructure management.
 ---
 
-I'm thrilled to announce the release of our resource auto-naming feature, which builds upon one of Pulumi's beloved capabilities. Our default auto-naming feature has helped thousands of customers successfully manage cloud resources at scale by automatically ensuring unique, conflict-free resource names across their cloud deployments. This robust naming system has been particularly valuable for teams managing multiple environments, handling zero-downtime deployments, and maintaining clear resource organization.
+I'm thrilled to announce that you can now customize how Pulumi names your cloud resources! Our default auto-naming feature has helped thousands of customers successfully manage cloud resources at scale by automatically ensuring unique, conflict-free resource names across their cloud deployments. This robust naming system has been particularly valuable for teams managing multiple environments, handling zero-downtime deployments, and maintaining clear resource organization. Today, we're taking it to the next level by giving you control over how these names are generated.
 
 <!--more-->
 
-As our customers have grown with Pulumi, they've shared how they'd love to combine this reliable naming system with their organization's specific naming conventions and requirements. Whether it's adding cost center identifiers, incorporating compliance tags, or matching existing naming patterns, teams want the flexibility to customize how their resources are named.
+Over the years, we've heard from many teams using Pulumi that while they love the power and convenience of our auto-naming system, they need it to work with their organization's naming standards - whether that's adding cost center identifiers, following compliance rules, or matching existing naming patterns. The [GitHub issue tracking this feature](https://github.com/pulumi/pulumi/issues/1518) has gathered quite some attention (50 thumbs up!) and lots of great input from the community.
 
-Today, I'm excited to introduce resource auto-naming, which delivers this flexibility while preserving all the benefits of our existing naming system. This [highly requested feature](https://github.com/pulumi/pulumi/issues/1518)(with 50 upvotes!) gives you full control over how Pulumi names your cloud resources, allowing you to seamlessly integrate Pulumi into your organization's resource management practices.
+Today, I'm excited to introduce resource auto-naming configuration. Now you can have the best of both worlds: keep the robustness of Pulumi's auto-naming while making it follow your team's naming conventions. Want your resources to include environment tags? Project prefixes? Random suffixes of specific length? Disable auto-naming entirely? It's all possible now, and it works across all major cloud providers.
 
 ## The Road to Better Resource Naming
 
@@ -89,6 +89,10 @@ See the [auto-naming configuration documentation](/docs/concepts/resources/names
 
 Let's look at a practical example. Say you're creating an S3 bucket and a DynamoDB table in your Pulumi program:
 
+{{< chooser language "typescript,python" >}}
+
+{{% choosable language typescript %}}
+
 ```typescript
 import * as aws from "@pulumi/aws";
 
@@ -105,6 +109,137 @@ const table = new aws.dynamodb.Table("users", {
     billingMode: "PAY_PER_REQUEST",
 });
 ```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+```python
+import pulumi_aws as aws
+
+# Create an S3 bucket
+bucket = aws.s3.Bucket("uploads")
+
+# Create a DynamoDB table
+table = aws.dynamodb.Table("users",
+    hash_key="id",
+    attributes=[aws.dynamodb.TableAttributeArgs(
+        name="id",
+        type="S"
+    )],
+    billing_mode="PAY_PER_REQUEST"
+)
+```
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+```csharp
+using Pulumi;
+using Pulumi.Aws.S3;
+using Pulumi.Aws.DynamoDB;
+using Pulumi.Aws.DynamoDB.Inputs;
+
+return await Deployment.RunAsync(() =>
+{
+    // Create an S3 bucket
+    var bucket = new Bucket("uploads");
+
+    // Create a DynamoDB table
+    var table = new Table("users", new TableArgs
+    {
+        HashKey = "id",
+        Attributes = new[]
+        {
+            new TableAttributeArgs
+            {
+                Name = "id",
+                Type = "S"
+            }
+        },
+        BillingMode = "PAY_PER_REQUEST"
+    });
+});
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```go
+package main
+
+import (
+    "github.com/pulumi/pulumi-aws/sdk/v5/go/aws/dynamodb"
+    "github.com/pulumi/pulumi-aws/sdk/v5/go/aws/s3"
+    "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+    pulumi.Run(func(ctx *pulumi.Context) error {
+        // Create an S3 bucket
+        bucket, err := s3.NewBucket(ctx, "uploads", nil)
+        if err != nil {
+            return err
+        }
+
+        // Create a DynamoDB table
+        table, err := dynamodb.NewTable(ctx, "users", &dynamodb.TableArgs{
+            HashKey: pulumi.String("id"),
+            Attributes: dynamodb.TableAttributeArray{
+                &dynamodb.TableAttributeArgs{
+                    Name: pulumi.String("id"),
+                    Type: pulumi.String("S"),
+                },
+            },
+            BillingMode: pulumi.String("PAY_PER_REQUEST"),
+        })
+        if err != nil {
+            return err
+        }
+
+        return nil
+    })
+}
+```
+
+{{% /choosable %}}
+
+{{% choosable language java %}}
+
+```java
+package myproject;
+
+import com.pulumi.Pulumi;
+import com.pulumi.aws.s3.Bucket;
+import com.pulumi.aws.dynamodb.Table;
+import com.pulumi.aws.dynamodb.TableArgs;
+import com.pulumi.aws.dynamodb.inputs.TableAttributeArgs;
+
+public class App {
+    public static void main(String[] args) {
+        Pulumi.run(ctx -> {
+            // Create an S3 bucket
+            var bucket = new Bucket("uploads");
+
+            // Create a DynamoDB table
+            var table = new Table("users", TableArgs.builder()
+                .hashKey("id")
+                .attributes(TableAttributeArgs.builder()
+                    .name("id")
+                    .type("S")
+                    .build())
+                .billingMode("PAY_PER_REQUEST")
+                .build());
+        });
+    }
+}
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 By default, Pulumi would generate names like `uploads-ae26f3b` and `users-4c2dd09`. But let's say you want your resources to follow a pattern that includes your project and stack name. You can configure this in your stack configuration file (`Pulumi.<stack-name>.yaml`):
 
@@ -170,6 +305,7 @@ To use the auto-naming configuration feature, you'll need:
    - Azure Native provider 2.78.0 or later
    - Azure Classic provider 6.14.0 or later
    - Google Cloud Platform provider 8.11.0 or later
+   - Kubernetes provider 4.20.0 or later
    - AWS Cloud Control provider 1.21.0 or later
 
 Once you have the required versions installed, simply add your desired auto-naming configuration to your Pulumi configuration file.
