@@ -199,15 +199,7 @@ See also [Cosmos DB vs MongoDB, Know The Differences](/what-is/cosmos-db-vs-mong
 
 After learning about partitioning and seeing the Cassandra API, you might think Cosmos DB is basically managed by Cassandra. And there are some key similarities. In many ways, Cosmos DB is Cassandra-inspired, but there are key differences.
 
-{{% notes type="tip" %}}
-
-**You might also like:**
-
-- [Pulumi + Azure Deployment Environments: Better Together for Enterprise Developers](/blog/azure-deployment-environments/)
-- [Infrastructure Testing Best Practices of Sam Cogan, Puluminary & Azure MVP](/blog/sam-cogan-testing-best-practices/)
-- [Azure Native Provider 2.0: Streamlined, Expanded, and More Powerful than Ever](/blog/introducing-azure-native-v2/)
-
-{{% /notes %}}
+{{< related-posts >}}
 
 ### How Cosmos DB and Cassandra Relate
 
