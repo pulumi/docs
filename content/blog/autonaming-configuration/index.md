@@ -33,7 +33,7 @@ social:
         Ready to try it out? Check out our latest blog post to learn more about this game-changing feature for infrastructure management.
 ---
 
-I'm thrilled to announce the release of our auto-naming configuration feature. This highly anticipated capability addresses one of our most requested features [pulumi/pulumi#1518](https://github.com/pulumi/pulumi/issues/1518) and gives you complete control over how Pulumi names your cloud resources.
+I'm thrilled to announce the release of our auto-naming configuration feature. This highly anticipated capability addresses one of our [most requested features](https://github.com/pulumi/pulumi/issues/1518) and gives you complete control over how Pulumi names your cloud resources.
 
 <!--more-->
 
