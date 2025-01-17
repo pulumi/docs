@@ -42,7 +42,7 @@ Terraform integrates well with existing development workflows and CI/CD pipeline
 
 ### [Pulumi](https://www.pulumi.com/)
 
-Pulumi is another popular IaC tool that let's you define infrastructure in your programming lanaguage of choice and using real programming constructs, such as loops and functions. Pulumi excels in multi-cloud support, integrating with major cloud providers such as AWS, Azure, Google Cloud, and many others.
+Pulumi is another popular IaC tool that let's you define infrastructure in your programming language of choice and using real programming constructs, such as loops and functions. Pulumi excels in multi-cloud support, integrating with major cloud providers such as AWS, Azure, Google Cloud, and many others.
 
 Pulumi's state management is easy to use as it automatically handles your infrastructure state and stores it in the Pulumi Cloud backend by default. With built-in state locking and encryption, this approach simplifies collaboration and reduces the risk of state corruption, ensuring secure and consistent state management. For those who prefer more control over their state, Pulumi also supports self-managed backends.
 
