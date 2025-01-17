@@ -8,7 +8,7 @@ page_title: "What is Continuous Integration/Continuous Delivery (CI/CD)?"
 
 Continuous integration/continuous delivery (CI/CD) is a methodology in software development that emphasizes frequent, automated integration of code changes into a shared repository, followed by automated and reliable software release processes. As a foundational component of [modern DevOps practices](/what-is/what-is-devops/) CI/CD practices and tools increase efficiency, reduce bugs, and enable faster release cycles, thereby enhancing overall software quality and accelerating time-to-market for new features.
 
-In Continous Integration (CI), developers frequently merge code changes, often multiple times a day, which are immediately tested to identify and fix integration issues early. Continuous Delivery (CD) builds on this by ensuring that the codebase is always in a deployable state, automating the deployment process to enable rapid and safe release to production. This approach enables developers to deliver features and fixes more quickly and reliably, reducing manual efforts and enhancing the quality of software deployments.
+In Continuous Integration (CI), developers frequently merge code changes, often multiple times a day, which are immediately tested to identify and fix integration issues early. Continuous Delivery (CD) builds on this by ensuring that the codebase is always in a deployable state, automating the deployment process to enable rapid and safe release to production. This approach enables developers to deliver features and fixes more quickly and reliably, reducing manual efforts and enhancing the quality of software deployments.
 
 In this article, we'll touch on the following key areas:
 
