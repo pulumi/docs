@@ -13,7 +13,7 @@ aliases:
   - /docs/pulumi-cloud/insights/import/
 ---
 
-This document outlines the steps required to create and manage a Pulumi Insights account used for scanning provider resources.
+This document outlines the steps required to create and manage a Pulumi Insights account used to scan provider resources.
 
 ## Prerequisites
 
