@@ -152,22 +152,20 @@ Manual secrets management often leads to errors such as expired credentials or o
 
 Tools should make engineers' lives easier, not harder. Pulumi ESC's CLI, SDKs, and API provide intuitive ways to integrate into existing workflows. For cloud engineers leveraging Infrastructure as Code with Pulumi, managing secrets alongside the stack becomes effortless.
 
-### Using Pulumi ESC with External Secrets Operator (ESO)
+### Kubernetes Integration with External Secrets Operator (ESO) and Secrets Store CSI Driver
 
-For secrets management in Kubernetes environments, Pulumi ESC becomes even more powerful when paired with ESO. Here's how it works:
+For secrets management in Kubernetes environments, Pulumi ESC becomes even more powerful when paired with External Secrets Operator (ESO) or the Secrets Store CSI Driver. Here's how it works:
 
-#### What is ESO?
+#### Using Pulumi ESC with External Secrets Operator
 
 External Secrets Operator is an open-source Kubernetes operator that syncs secrets from external providers (like Pulumi ESC) into Kubernetes as native secrets.
 
-#### Benefits of Using Pulumi ESC with ESO:
+1. **Centralized Storage**: Store secrets securely in Pulumi ESC and synchronize them with Kubernetes across multiple clusters.
+2. **Dynamic Updates**: Whenever a secret is updated in ESC, ESO automatically replicates the changes into Kubernetes, eliminating manual intervention.
+3. **Granular Management**: Define which secrets are synchronized and to which namespaces, ensuring tight access controls and minimizing risk.
+4. **Automated Secret Rotation**: By leveraging ESC's rotation capabilities, ESO ensures Kubernetes receives refreshed credentials without requiring downtime.
 
-1. Centralized Storage: Store secrets securely in Pulumi ESC and synchronize them with Kubernetes across multiple clusters.
-2. Dynamic Updates: Whenever a secret is updated in ESC, ESO automatically replicates the changes into Kubernetes, eliminating manual intervention.
-3. Granular Management: Define which secrets are synchronized and to which namespaces, ensuring tight access controls and minimizing risk.
-4. Automated Secret Rotation: By leveraging ESC's rotation capabilities, ESO ensures Kubernetes receives refreshed credentials without requiring downtime.
-
-#### Example Use Case
+##### Example Use Case
 
 Consider a cloud engineer deploying an application in Kubernetes that requires database credentials. Instead of hardcoding these credentials, the engineer can:
 
@@ -176,6 +174,20 @@ Consider a cloud engineer deploying an application in Kubernetes that requires d
 3. Access these secrets securely from within the application.
 
 This approach not only boosts security but also ensures compliance with enterprise-grade standards.
+
+#### Using Pulumi ESC with Secrets Store CSI Driver
+
+External Secrets Operator is an open-source Kubernetes operator that syncs secrets from external providers (like Pulumi ESC) into Kubernetes as native secrets.
+
+1. **Automated Secrets Injection**: Secrets Store CSI Driver enables Pulumi ESC to automatically inject secrets into Kubernetes pods as mounted volumes or environment variables. This reduces the manual overhead of managing secrets directly in Kubernetes.
+2. **Secure and Dynamic Secret Access**: By leveraging Pulumi ESC, Kubernetes applications can securely fetch secrets from external providers, ensuring dynamic access without exposing credentials in pod specifications.
+3. **Streamlined Operations**: This integration simplifies the process of synchronizing secrets from Pulumi ESC with Kubernetes-native constructs. The automation reduces errors and boosts efficiency.
+
+##### Example Use Case
+
+1. Use Pulumi with the pulumi-kubernetes provider to deploy the Secrets Store CSI Driver and the Pulumi ESC CSI Provider to your Kubernetes cluster.
+2. Create a SecretProviderClass. Define an external secret in Pulumi ESC.
+3. Deploy an application pod configured to access the mounted secret.
 
 ## The Future of Secrets Management with Pulumi ESC
 
