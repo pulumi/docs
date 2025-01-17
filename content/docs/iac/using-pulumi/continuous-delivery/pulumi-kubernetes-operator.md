@@ -380,7 +380,7 @@ const mystack = new k8s.apiextensions.CustomResource("my-stack", {
 
 Much like Flux, we can use ArgoCD to manage the lifetime of the Stack via a GitOps paradigm.  This will give us the advantage of using the ArgoCD UI or CLI to interact with the Stack, and allowing ArgoCD to reconcile changes to the repo.
 
-First, we need to define a Pulumi Stack as a kubernetes manifest that ArgoCD can understand.  We assume here that this manifest lives in the same repository as the Pulumi program, in the subfolder `deploy/`.  However, this manifest could live in a separate repository, such as an "app-of-apps" repo. In this example, the manifest declares a service account and cluster role bindings to allow the stack to create resources in the cluster. Additionally, we expect a Secret to exist on the cluster containing a valid Pulumi access token
+First, we need to define a Pulumi stack as a Kubernetes manifest that ArgoCD can understand. We assume here that this manifest lives in the same repository as the Pulumi program, in the subfolder `deploy/`.  However, this manifest could live in a separate repository, such as an "app-of-apps" repo. In this example, the manifest declares a service account and cluster role bindings to allow the stack to create resources in the cluster. Additionally, we expect a Secret to exist on the cluster containing a valid Pulumi access token
 
 Note specifically that the Stack's `projectRepo` and `branch` point to the location of the Pulumi program to be executed by the Pulumi Kubernetes Operator.
 
