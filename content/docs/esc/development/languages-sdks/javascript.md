@@ -17,7 +17,7 @@ The [JavaScript/TypeScript SDK](https://www.npmjs.com/package/@pulumi/esc-sdk) f
 Here are some of the scenarios the SDK can automate:
 
 * List environments and read environment definitions
-* Open enviroments to access config and resolve secrets
+* Open environments to access config and resolve secrets
 * Create, update, decrypt, and delete environment definitions
     * Supports both structured types and yaml text
 * List environment revisions and create new revision tags
