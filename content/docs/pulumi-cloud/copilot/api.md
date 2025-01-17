@@ -112,7 +112,7 @@ Each message in the messages array contains:
     - `response`: User queries or assistant responses.
     - `status`: Status updates about operations being performed.
     - `program`: Generated code when requested by the user.
-    - `content`: The actual message content.
+- `content`: The actual message content.
 
 Messages returned by the "assistant" of type "response" represent the responses from the Copilot to the user query.
 
