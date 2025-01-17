@@ -78,7 +78,7 @@ Then replace the default code with the following code snippet to scaffold your p
 {{% choosable language typescript %}}
 
 ```typescript
-{{< example-program-snippet path="k8s-deployment-service-for-minikube" language="typescript" from="1" to="16" >}}
+{{< example-program-snippet path="k8s-deployment-service-for-minikube" language="typescript" from="1" to="15" >}}
 ```
 
 {{% /choosable %}}
@@ -96,7 +96,7 @@ Then replace the default code with the following code snippet to scaffold your p
 ```go
 {{< example-program-snippet path="k8s-deployment-service-for-minikube" language="go" from="1" to="39" >}}
 
-{{< example-program-snippet path="k8s-deployment-service-for-minikube" language="go" from="63" to="66" >}}
+{{< example-program-snippet path="k8s-deployment-service-for-minikube" language="go" from="63" to="65" >}}
 ```
 
 {{% /choosable %}}
@@ -106,7 +106,7 @@ Then replace the default code with the following code snippet to scaffold your p
 ```csharp
 {{< example-program-snippet path="k8s-deployment-service-for-minikube" language="csharp" from="1" to="52" >}}
 
-{{< example-program-snippet path="k8s-deployment-service-for-minikube" language="csharp" from="73" to="73" >}}
+{{< example-program-snippet path="k8s-deployment-service-for-minikube" language="csharp" from="75" to="75" >}}
 ```
 
 {{% /choosable %}}
@@ -204,7 +204,7 @@ To demonstrate how this works, let's export the name of your deployment which ca
 ```javascript
 {{< example-program-snippet path="k8s-deployment-service-for-minikube" language="javascript" from="1" to="16" >}}
 
-exports.deploymentName = deployment.metadata["name"];
+exports.deploymentName = deployment.metadata.name;
 ```
 
 {{% /choosable %}}
@@ -212,9 +212,9 @@ exports.deploymentName = deployment.metadata["name"];
 {{% choosable language typescript %}}
 
 ```typescript
-{{< example-program-snippet path="k8s-deployment-service-for-minikube" language="typescript" from="1" to="16" >}}
+{{< example-program-snippet path="k8s-deployment-service-for-minikube" language="typescript" from="1" to="15" >}}
 
-expors const deploymentName = deployment.metadata["name"]
+exports const deploymentName = deployment.metadata.name;
 ```
 
 {{% /choosable %}}
@@ -234,8 +234,8 @@ pulumi.export("deploymentName", deployment.metadata["name"])
 ```go
 {{< example-program-snippet path="k8s-deployment-service-for-minikube" language="go" from="1" to="39" >}}
 
-        ctx.Export("deploymentName", deployment.Metadata["name"])
-{{< example-program-snippet path="k8s-deployment-service-for-minikube" language="go" from="63" to="66" >}}
+        ctx.Export("name", deployment.Metadata.Name())
+{{< example-program-snippet path="k8s-deployment-service-for-minikube" language="go" from="63" to="65" >}}
 ```
 
 {{% /choosable %}}
@@ -247,10 +247,10 @@ pulumi.export("deploymentName", deployment.metadata["name"])
 
     return new Dictionary<string, object?>
     {
-        ["deploymentName"] = deployment.Metadata["name"],
+        ["deploymentName"] = deployment.Metadata.Apply(m => m.Name),
 
     };
-{{< example-program-snippet path="k8s-deployment-service-for-minikube" language="csharp" from="73" to="73" >}}
+{{< example-program-snippet path="k8s-deployment-service-for-minikube" language="csharp" from="75" to="75" >}}
 ```
 
 {{% /choosable %}}
@@ -261,7 +261,7 @@ pulumi.export("deploymentName", deployment.metadata["name"])
 {{< example-program-snippet path="k8s-deployment-service-for-minikube" language="yaml" from="1" to="23" >}}
 
 outputs:
-  deploymentName: ${deployment.metadata["name"]}
+  deploymentName: ${deployment.metadata.name}
 ```
 
 {{% /choosable %}}
@@ -677,7 +677,7 @@ You can view the code for the complete solution below.
 ```javascript
 {{< example-program-snippet path="k8s-deployment-service-for-minikube" language="javascript" from="1" to="16" >}}
 
-exports.deploymentName = deployment.metadata["name"];
+exports.deploymentLabels = deployment.spec.template.metadata.labels;
 ```
 
 {{% /choosable %}}
@@ -686,8 +686,7 @@ exports.deploymentName = deployment.metadata["name"];
 
 ```typescript
 {{< example-program-snippet path="k8s-deployment-service-for-minikube" language="typescript" from="1" to="16" >}}
-
-expors const deploymentName = deployment.metadata["name"]
+exports const deploymentLabels = deployment.spec.template.metadata.labels
 ```
 
 {{% /choosable %}}
@@ -697,7 +696,7 @@ expors const deploymentName = deployment.metadata["name"]
 ```python
 {{< example-program-snippet path="k8s-deployment-service-for-minikube" language="python" from="1" to="17" >}}
 
-pulumi.export("deploymentName", deployment.metadata["name"])
+pulumi.export("deploymentLabels", deployment.spec["template"]["metadata"]["labels"])
 ```
 
 {{% /choosable %}}
@@ -707,8 +706,14 @@ pulumi.export("deploymentName", deployment.metadata["name"])
 ```go
 {{< example-program-snippet path="k8s-deployment-service-for-minikube" language="go" from="1" to="39" >}}
 
-        ctx.Export("deploymentName", deployment.Metadata["name"])
-{{< example-program-snippet path="k8s-deployment-service-for-minikube" language="go" from="63" to="66" >}}
+        template := deployment.Spec.ApplyT(func(v appsv1.DeploymentSpec) *corev1.PodTemplateSpec {
+			return &v.Template
+		}).(corev1.PodTemplateSpecPtrOutput)
+
+		appLabels := template.ApplyT(func(v *corev1.PodTemplateSpec) *metav1.ObjectMeta { return v.Metadata.Labels }).(metav1.ObjectMetaPtrOutput)
+
+        ctx.Export("deploymentLabels", appLabels)
+{{< example-program-snippet path="k8s-deployment-service-for-minikube" language="go" from="63" to="65" >}}
 ```
 
 {{% /choosable %}}
@@ -718,12 +723,14 @@ pulumi.export("deploymentName", deployment.metadata["name"])
 ```csharp
 {{< example-program-snippet path="k8s-deployment-service-for-minikube" language="csharp" from="1" to="52" >}}
 
+    var appLabels = deployment.Spec.Apply(spec => spec.Template.Metadata.Labels)
+
     return new Dictionary<string, object?>
     {
-        ["deploymentName"] = deployment.Metadata["name"],
+        ["deploymentLabels"] = appLabels,
 
     };
-{{< example-program-snippet path="k8s-deployment-service-for-minikube" language="csharp" from="73" to="73" >}}
+{{< example-program-snippet path="k8s-deployment-service-for-minikube" language="csharp" from="75" to="75" >}}
 ```
 
 {{% /choosable %}}
@@ -734,7 +741,7 @@ pulumi.export("deploymentName", deployment.metadata["name"])
 {{< example-program-snippet path="k8s-deployment-service-for-minikube" language="yaml" from="1" to="23" >}}
 
 outputs:
-  deploymentName: ${deployment.metadata["name"]}
+  deploymentLabels: ${deployment.spec.template.metadata.labels}
 ```
 
 {{% /choosable %}}
@@ -748,14 +755,13 @@ outputs:
 ```javascript
 "use strict";
 const pulumi = require("@pulumi/pulumi");
+const k8s = require("@pulumi/kubernetes");
 
 const stackRef = new pulumi.StackReference("acmecorp/infra/dev");
 
-const deploymentName = stackRef.getOutput("deploymentName");
-const storageAccountName = stackRef.getOutput("storageAccountName");
-const blobContainerName = stackRef.getOutput("blobContainerName");
+const appLabels = stackRef.getOutput("deploymentLabels");
 
-{{< example-program-snippet path="k8s-deployment-service-for-minikube" language="javascript" from="25" to="32" >}}
+{{< example-program-snippet path="k8s-deployment-service-for-minikube" language="javascript" from="18" to="25" >}}
 ```
 
 {{% /choosable %}}
@@ -764,14 +770,12 @@ const blobContainerName = stackRef.getOutput("blobContainerName");
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
+import * as k8s from "@pulumi/kubernetes";
 
 const stackRef = new pulumi.StackReference("acmecorp/infra/dev");
+const appLabels = stackRef.getOutput("deploymentLabels");
 
-const deploymentName2 = stackRef.getOutput("deploymentName");
-const storageAccountName2 = stackRef.getOutput("storageAccountName");
-const blobContainerName2 = stackRef.getOutput("blobContainerName");
-
-{{< example-program-snippet path="k8s-deployment-service-for-minikube" language="typescript" from="24" to="31" >}}
+{{< example-program-snippet path="k8s-deployment-service-for-minikube" language="typescript" from="17" to="24" >}}
 ```
 
 {{% /choosable %}}
@@ -780,14 +784,12 @@ const blobContainerName2 = stackRef.getOutput("blobContainerName");
 
 ```python
 import pulumi
+from pulumi_kubernetes.core.v1 import Service
 
 stack_ref = pulumi.StackReference("acmecorp/infra/dev")
+app_labels = stack_ref.get_output("deploymentLabels")
 
-resource_group_name = stack_ref.get_output("deploymentName")
-storage_account_name = stack_ref.get_output("storageAccountName")
-blob_container_name = stack_ref.get_output("blobContainerName")
-
-{{< example-program-snippet path="k8s-deployment-service-for-minikube" language="python" from="24" to="31" >}}
+{{< example-program-snippet path="k8s-deployment-service-for-minikube" language="python" from="19" to="28" >}}
 ```
 
 {{% /choosable %}}
@@ -799,6 +801,9 @@ package main
 
 import (
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+    corev1 "github.com/pulumi/pulumi-kubernetes/sdk/v4/go/kubernetes/core/v1"
+	metav1 "github.com/pulumi/pulumi-kubernetes/sdk/v4/go/kubernetes/meta/v1"
+    "github.com/pulumi/pulumi/sdk/v3/go/pulumi/config"
 )
 
 func main() {
@@ -808,15 +813,9 @@ func main() {
             return err
         }
 
-        deploymentName := stackRef.GetOutput(pulumi.String("deploymentName"))
-        storageAccountName := stackRef.GetOutput(pulumi.String("storageAccountName"))
-        blobContainerName := stackRef.GetOutput(pulumi.String("blobContainerName"))
+        appLabels := stackRef.GetOutput(pulumi.String("deploymentLabels"))
 
-{{< example-program-snippet path="k8s-deployment-service-for-minikube" language="go" from="39" to="46" >}}
-
-		return nil
-	})
-}
+{{< example-program-snippet path="k8s-deployment-service-for-minikube" language="go" from="53" to="75" >}}
 ```
 
 {{% /choosable %}}
@@ -825,19 +824,18 @@ func main() {
 
 ```csharp
 using Pulumi;
+using Pulumi.Kubernetes.Core.V1;
+using Pulumi.Kubernetes.Types.Inputs.Core.V1;
+using Pulumi.Kubernetes.Types.Inputs.Meta.V1;
+using System.Collections.Generic;
 
 return await Pulumi.Deployment.RunAsync(() =>
 {
 
     var stackRef = new StackReference("acmecorp/infra/dev");
+    var appLabels = stackRef.GetOutput("deploymentLabels");
 
-    var deploymentName = stackRef.GetOutput("deploymentName");
-    var storageAccountName = stackRef.GetOutput("storageAccountName");
-    var blobContainerName = stackRef.GetOutput("blobContainerName");
-
-{{< example-program-snippet path="k8s-deployment-service-for-minikube" language="csharp" from="31" to="39" >}}
-
-});
+{{< example-program-snippet path="k8s-deployment-service-for-minikube" language="csharp" from="53" to="75" >}}
 ```
 
 {{% /choosable %}}
@@ -849,18 +847,16 @@ name: infra
 runtime: yaml
 description: A program to create a Stack Reference
 
+variables:
+  appLabels: ${stack-ref.outputs["deploymentLabels"]}
+
 resources:
   stack-ref:
     type: pulumi:pulumi:StackReference
     properties:
       name: acmecorp/infra/dev
 
-{{< example-program-snippet path="k8s-deployment-service-for-minikube" language="yaml" from="20" to="29" >}}
-
-variables:
-  deploymentName: ${stack-ref.outputs["deploymentName"]}
-  storageAccountName: ${stack-ref.outputs["storageAccountName"]}
-  blobContainerName: ${stack-ref.outputs["blobContainerName"]}
+{{< example-program-snippet path="k8s-deployment-service-for-minikube" language="yaml" from="24" to="35" >}}
 ```
 
 {{% /choosable %}}
@@ -871,10 +867,10 @@ variables:
 
 ## Next steps
 
-In this tutorial, you created an Azure Blob Storage and Container resource. You also referenced the documentation to create a Blob object that would upload a file to the container. You exported resource properties into stack outputs, and referenced those outputs across stacks using stack references.
+In this tutorial, you created a Kubernetes deployment resource and a service resource. You exported resource properties into stack outputs, and referenced those outputs across stacks using stack references.
 
 To learn more about creating and managing resources in Pulumi, take a look at the following resources:
 
-- Learn more about creating resources in the [Creating Resources on Azure tutorial](/tutorials/creating-resources-azure/).
+- Learn more about creating resources in the [Creating Resources on Kubernetes](/tutorials/creating-resources-kubernetes/).
 - Learn more about [stack outputs and references](/docs/concepts/stack/#stackreferences) in the Pulumi documentation.
 - Learn more about [Pulumi inputs and outputs](/docs/concepts/inputs-outputs/) in the Pulumi documentation.

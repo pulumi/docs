@@ -119,7 +119,7 @@ Then replace the default code with the following code snippet to scaffold your p
 
         // Create a service
 
-{{< example-program-snippet path="k8s-deployment-service-for-minikube" language="go" from="72" to="74" >}}  
+{{< example-program-snippet path="k8s-deployment-service-for-minikube" language="go" from="63" to="65" >}}  
 ```
 
 {{% /choosable %}}
@@ -133,7 +133,7 @@ Then replace the default code with the following code snippet to scaffold your p
 
     // Create a service
 
-{{< example-program-snippet path="k8s-deployment-service-for-minikube" language="csharp" from="80" to="80" >}}
+{{< example-program-snippet path="k8s-deployment-service-for-minikube" language="csharp" from="74" to="75" >}}
 ```
 
 {{% /choosable %}}
@@ -222,7 +222,7 @@ The first resource you will create will be a Kubernetes deployment. The [Pulumi 
 
         // Create a service
 
-{{< example-program-snippet path="k8s-deployment-service-for-minikube" language="go" from="72" to="74" >}}  
+{{< example-program-snippet path="k8s-deployment-service-for-minikube" language="go" from="63" to="65" >}}  
 ```
 
 {{% /choosable %}}
@@ -234,7 +234,7 @@ The first resource you will create will be a Kubernetes deployment. The [Pulumi 
 
     // Create a service
 
-{{< example-program-snippet path="k8s-deployment-service-for-minikube" language="csharp" from="80" to="80" >}}
+{{< example-program-snippet path="k8s-deployment-service-for-minikube" language="csharp" from="74" to="75" >}}
 ```
 
 {{% /choosable %}}

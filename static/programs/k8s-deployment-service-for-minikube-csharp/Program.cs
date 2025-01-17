@@ -52,11 +52,13 @@ return await Deployment.RunAsync(() =>
 
     var frontend = new Service(appName, new ServiceArgs
     {
+        Selector = new LabelSelectorArgs
+        {
+            MatchLabels = appLabels,
+        },
         Metadata = new ObjectMetaArgs
         {
-            Labels = deployment.Spec.Apply(spec =>
-                spec.Template.Metadata.Labels
-            ),
+            Labels = appLabels,
         },
         Spec = new ServiceSpecArgs
         {

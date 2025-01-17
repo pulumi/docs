@@ -19,7 +19,7 @@ deployment = Deployment(
 frontend = Service(
     app_name,
     metadata={
-        "labels": deployment.spec["template"]["metadata"]["labels"],
+        "labels": app_labels,
     },
     spec={
         "type": "ClusterIP",

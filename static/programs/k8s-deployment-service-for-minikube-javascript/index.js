@@ -16,7 +16,7 @@ const deployment = new k8s.apps.v1.Deployment(appName, {
 });
 
 const frontend = new k8s.core.v1.Service(appName, {
-    metadata: { labels: deployment.spec.template.metadata.labels },
+    metadata: { labels: appLabels },
     spec: {
         type: "ClusterIP",
         ports: [{ port: 80, targetPort: 80, protocol: "TCP" }],
