@@ -31,6 +31,17 @@ serve:
 serve-static:
 	yarn run http-server public
 
+.PHONY: recent-posts
+recent-posts:
+	@echo -e "\033[0;32mRecent blog posts:\033[0m"
+	cd scripts/python && pipenv install && pipenv run python list_recent_posts.py --format full
+
+.PHONY: generate-related-tags
+generate-related-tags:
+	@echo -e "\033[0;32mGenerating tag-based related posts...\033[0m"
+	cd scripts/python && pipenv install && pipenv run python generate_tag_related.py
+	@echo -e "\033[0;32mDone! Updated data/related.yaml\033[0m"
+
 .PHONY: generate
 generate:
 	@echo -e "\033[0;32mGENERATE:\033[0m"
