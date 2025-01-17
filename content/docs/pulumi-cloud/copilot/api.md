@@ -38,7 +38,7 @@ The `Authorization` header must be in the form below with the literal string `to
 Authorization: token {token}
 ```
 
-To view your access tokens, or create a new one, view the <a href="https://app.pulumi.com/account/tokens" target="_blank">Access Tokens</a> page. You will see a list of past tokens, when they were last used, and have the ability to revoke them.
+To view your access tokens, or create a new one, view the [Access Tokens](https://app.pulumi.com/user/settings/tokens) page. You will see a list of past tokens, when they were last used, and have the ability to revoke them.
 
 The Pulumi Copilot REST API will return a 401 status code if the token is missing or invalid.
 
