@@ -4,6 +4,7 @@ set -o errexit -o pipefail
 
 source ./scripts/programs/common.sh
 
+# The directory containing the example code programs to test.
 programs_dir="static/programs"
 
 # Directories that need to be tested
@@ -20,12 +21,15 @@ if [[ "$TEST_MODE" == "pull_request" ]]; then
     dirs_to_test=()
     # Get the list of changed directories in the static/programs directory.
     git_changes="$(git diff --name-only master)"
+    # Filter out only the static/programs directories from the git diff output.
+    # Use or true to ignore grep errors when grep comes up empty.
     grep_result="$(echo "$git_changes" | grep "^static/programs/" || true)"
     # Extract only the program directory from the git diff output.
     dirs="$(echo "$grep_result" | cut -d'/' -f3)"
     # Pipe to sort and uniq to deduplicate the list of directories.
     programs="$(echo "$dirs" | sort | uniq)"
     
+    # If there are programs to test, add them to the dirs_to_test array.
     if [[ -n "$programs" ]]; then
         while IFS= read -r line; do
             dirs_to_test+=("$line")
@@ -62,6 +66,7 @@ fi
 pushd "$programs_dir"
     found_first_program=false
 
+    # Iterate over the dirs_to_test array and test each program.
     for dir in "${dirs_to_test[@]}"; do
         project="$(basename $dir)"
 
@@ -197,5 +202,5 @@ if [ ${#failed_projects[@]} -ne 0 ]; then
     done
     exit 1
 else
-    echo "All projects completed successfully :)"
+    echo "All projects passed successfully :)"
 fi
