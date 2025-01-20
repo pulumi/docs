@@ -17,18 +17,23 @@ tags:
 - k8s
 - devops
 social:
-  twitter:
-  linkedin:
+  twitter: |
+    Learn best practices for Kubernetes that I wish I had known earlier. Avoid common pitfalls and save time, money, and headaches.
+    <link>
+  linkedin: |
+    Kubernetes Best Practices I Wish I Had Known Before
+
+    Embarking on your Kubernetes journey? Trust me, it can feel like climbing Mount Everest in flip-flops! Through years of hands-on experience in production environments, I've compiled a list of essential Kubernetes best practices that can save you time, money, and countless headaches.
+    
+    Whether you're just starting or looking to refine your Kubernetes setup, these insights will help you navigate the complexities and harness the full power of Kubernetes.
+    <link>
 ---
 
-Kubernetes has undeniably transformed the way we build, ship, and run applications. But let’s be honest, getting started with Kubernetes can feel like wrestling an octopus. No matter how many arms you manage to pin down, a few more are flailing around somewhere else!
+Kubernetes has undeniably transformed the way we build, ship, and run applications. But let’s be honest, getting started with Kubernetes can feel like climbing Mount Everest in flip-flops.
 
 As a cloud-native citizen and Kubernetes enthusiast, I’ve learned the hard way that there are a bunch of "wish I had known that earlier" best practices. They could have saved me time, money, and headaches.
 
-_The "Kubernetes is easy"-iceberg meme is a classic example of how Kubernetes can be deceivingly complex:_
-<div style="display: flex; align-items: center; justify-content: center; height: 100%;">
-    <img src="img.png" alt="Description of image" style="width: 70%; height: 100%">
-</div>
+{{< figure alt="The 'Kubernetes is easy'-iceberg meme is a classic example of how Kubernetes can be deceivingly complex" src="img.png" caption="The 'Kubernetes is easy'-iceberg meme is a classic example of how Kubernetes can be deceivingly complex" width=100% >}}
 
 In this post, I will highlight some crucial Kubernetes best practices. They are from my years of experience with Kubernetes in production. Think of this as the curated “Kubernetes cheat sheet” you wish you had from Day 1. Buckle up; it’s going to be an exciting ride.
 
@@ -36,8 +41,8 @@ In this post, I will highlight some crucial Kubernetes best practices. They are 
 
 One of the first “aha!” moments in Kubernetes is realizing you can define how much CPU and memory your containers request (guaranteed resources) versus limit (the maximum they’re allowed). Here’s the tricky part: skipping these settings can get you in trouble.
 
-- Resource Requests: This is basically your container’s baseline. If your container requests 200m CPU and 512Mi of memory, the Kubernetes scheduler will place your Pod on a node with at least that much capacity available.
-- Resource Limits: This is the upper bound. If your container tries to exceed the limit, it might get throttled (CPU) or even evicted (memory).
+- **Resource Requests:** This is basically your container’s baseline. If your container requests 200m CPU and 512Mi of memory, the Kubernetes scheduler will place your Pod on a node with at least that much capacity available.
+- **Resource Limits:** This is the upper bound. If your container tries to exceed the limit, it might get throttled (CPU) or even evicted (memory).
 
 {{% notes type="info" %}}
 Pro Tip:
@@ -50,9 +55,9 @@ Pro Tip:
 
 If you’re deploying everything into the default namespace, oh boy, it’s time for an intervention. Namespaces are a simple yet powerful mechanism to organize (and isolate) resources in your cluster.
 
-- Team-based namespaces: Dev, QA, Prod, or per microservice if that makes sense.
-- Access Control: Combine namespaces with RBAC (Role-Based Access Control) policies to ensure that only the right people (and services) can mess with your stuff.
-- Resource Quotas: You can set quotas (e.g., CPU, memory) per namespace, preventing one rogue microservice from hogging all resources.
+- **Team-based namespaces**: Dev, QA, Prod, or per microservice if that makes sense.
+- **Access Control**: Combine namespaces with RBAC (Role-Based Access Control) policies to ensure that only the right people (and services) can mess with your stuff.
+- **Resource Quotas**: You can set quotas (e.g., CPU, memory) per namespace, preventing one rogue microservice from hogging all resources.
 
 Take a step back and design your namespace strategy; future you will say thanks.
 
@@ -62,10 +67,12 @@ Yes, a Pod can contain multiple containers. But should it? Typically, you only w
 
 Why avoid multi-container Pods?
 
-- Complexity: Troubleshooting multiple containers within a single Pod can be a pain.
-- Coupling: You lose the advantage of scaling containers independently. If you need to scale one container, you end up scaling everything in that Pod.
+- **Complexity**: Troubleshooting multiple containers within a single Pod can be a pain.
+- **Coupling**: You lose the advantage of scaling containers independently. If you need to scale one container, you end up scaling everything in that Pod.
 
 Follow the “one-container-per-Pod” rule of thumb unless you have a compelling reason (like a sidecar pattern).
+
+{{< related-posts >}}
 
 ## 4. Use a Package Manager for Your YAML Files
 
@@ -96,11 +103,11 @@ In Kubernetes, networking can get complicated fast. Between Services, Ingress Co
 
 ## 6. Lean On Liveness, Readiness, and Startup Probes
 
-Kubernetes is a bit like a personal assistant, but it needs clear instructions. Without properly configured liveness, readiness, and startup probes, your cluster will be left guessing about the health of your containers.
+Kubernetes is a bit like a personal assistant, but it needs clear instructions. Without properly configured [liveness, readiness, and startup probes](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/), your cluster will be left guessing about the health of your containers.
 
-- Liveness Probe: Checks if your container is alive. If it fails, Kubernetes restarts the container.
-- Readiness Probe: Checks if your container is ready to serve traffic. Until it’s ready, it doesn’t get traffic.
-- Startup Probe: Useful for applications that take a while to start up. It prevents the container from being killed prematurely during initial loading.
+- **Liveness Probe**: Checks if your container is alive. If it fails, Kubernetes restarts the container.
+- **Readiness Probe**: Checks if your container is ready to serve traffic. Until it’s ready, it doesn’t get traffic.
+- **Startup Probe**: Useful for applications that take a while to start up. It prevents the container from being killed prematurely during initial loading.
 
 Pro Tip: Start with readiness probes before liveness probes. You don’t want your containers to get killed simply because they’re not ready yet. Fine-tune the threshold, period, and timeout parameters.
 
@@ -108,17 +115,17 @@ Pro Tip: Start with readiness probes before liveness probes. You don’t want yo
 
 Security isn’t just a nice-to-have in Kubernetes—it’s critical. If your cluster is compromised, it’s game over.
 
-1. RBAC (Role-Based Access Control):
+1. **RBAC (Role-Based Access Control)**:
     - Implement it from Day 1.
     - Use the Principle of Least Privilege. Give each user, service account, or application only the access they need.
 
-1. Pod Security:
-    - Use Pod Security Policies or the newer Pod Security Admission features to enforce standards (e.g., not allowing privileged containers).
+1. **Pod Security**:
+    - Use [Pod Security Admission](https://kubernetes.io/docs/concepts/security/pod-security-admission/) features to enforce standards (e.g., not allowing privileged containers).
     - Ensure you’re not running containers as root unless absolutely necessary.
 
-1. Manage Secrets Properly:
+1. **Manage Secrets Properly**:
     - Don’t store credentials or API keys in plain text inside your container images or environment variables.
-    - Use Kubernetes Secrets, or better yet, integrate with a secret manager like HashiCorp Vault or AWS Secrets Manager.
+    - Do not use Kubernetes Secrets, instead use [External Secret Operator](/docs/esc/integrations/kubernetes/external-secrets-operator/) or [Secret Store CSI Driver](/docs/esc/integrations/kubernetes/secret-store-csi-driver/) to store secrets in external secret stores like [AWS Secrets Manager](https://aws.amazon.com/secrets-manager/), [Pulumi ESC](/docs/esc/), or [HashiCorp Vault](https://www.vaultproject.io/).
 
 ## 8. Monitor Everything (And Then Monitor Some More)
 
@@ -134,8 +141,8 @@ Set up alerts early. You don’t want your first sign of trouble to be “why is
 
 One of the biggest advantages of Kubernetes is that it becomes easier to automate your entire release process. If you’re still doing manual deploys, now’s the time to move to a CI/CD pipeline.
 
-- Jenkins, GitLab CI, GitHub Actions, the choice is yours.
-- Embrace GitOps: store all manifests in Git, and let a tool like [Flux](https://fluxcd.io/) or [Argo CD](https://argoproj.github.io/cd/) synchronize them to your cluster.
+- Jenkins, [GitLab](https://docs.gitlab.com/ee/ci/), GitHub Actions, the choice is yours.
+- Embrace [GitOps](https://opengitops.dev/): store all manifests in Git, and let a tool like [Flux](https://fluxcd.io/) or [Argo CD](https://argoproj.github.io/cd/) synchronize them to your cluster.
 - Automated rollbacks if a deployment fails.
 - Automation not only speeds up delivery but also drastically reduces the room for human error.
 
@@ -143,8 +150,8 @@ One of the biggest advantages of Kubernetes is that it becomes easier to automat
 
 Running an outdated Kubernetes version is like using a phone running iOS 6 in 2025. Not advisable.
 
-- Kubernetes Release Cycle: Minor versions come out roughly every three months, with patches more frequently.
-- Upgrade Strategies:
+- **Kubernetes Release Cycle**: Minor versions come out roughly [every three months](https://kubernetes.io/releases/release/), with patches more frequently.
+- **Upgrade Strategies**:
     - Test in a dev environment first.
     - Backup your etcd (the key-value store).
     - Upgrade the control plane, then worker nodes, or use managed services that handle part of this for you (e.g., EKS, GKE, AKS).
@@ -153,10 +160,10 @@ Keep your dependencies updated (e.g., container runtime, CNI plugins, etc.) to b
 
 ## 11. Use Labels and Annotations Wisely
 
-Labels and annotations might seem trivial at first, but they’re game-changers for a well-organized cluster.
+[Labels](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/) and [annotations](https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/) might seem trivial at first, but they’re game-changers for a well-organized cluster.
 
-- Labels: Key-value pairs used for grouping and selecting Kubernetes objects. For instance, app=my-app, env=staging, team=payments.
-- Annotations: Key-value pairs for attaching non-identifying metadata (e.g., version info, contact email, or last-deployed timestamp).
+- **Labels**: Key-value pairs used for grouping and selecting Kubernetes objects. For instance, app=my-app, env=staging, team=payments.
+- **Annotations**: Key-value pairs for attaching non-identifying metadata (e.g., version info, contact email, or last-deployed timestamp).
 
 A consistent labeling strategy helps you filter resources quickly and maintain a clear mental map of your cluster.
 
@@ -164,8 +171,8 @@ A consistent labeling strategy helps you filter resources quickly and maintain a
 
 If your dev, staging, and prod environments share a single cluster, you’re playing with fire. While it can be done, best practice is to isolate production workloads from the playground.
 
-- Separate Clusters: Have at least one cluster for dev/staging and one for production. There are create tools like [vCluster](https://www.vcluster.com/) to create virtual clusters within a single cluster.
-- Namespace Segregation: If you must run them in the same cluster, use strict namespace-based isolation and RBAC rules.
+- **Separate Clusters**: Have at least one cluster for dev/staging and one for production. There are create tools like [vCluster](https://www.vcluster.com/) to create virtual clusters within a single cluster.
+- **Namespace Segregation**: If you must run them in the same cluster, use strict namespace-based isolation and RBAC rules.
 
 Keeping environments separate reduces risk and makes it easier to test new features in a sandbox.
 
@@ -177,23 +184,29 @@ Don’t ship monstrous container images with half of Ubuntu plus random leftover
 - Clean up temporary files and dependencies within Dockerfiles.
 - Scan your images regularly for vulnerabilities using tools like [Trivy](https://trivy.dev/latest/) or [Anchore](https://anchore.com/).
 
+{{% notes type="info" %}}
+
 Smaller images = faster pull times = less time to scale your app = better user experience.
+
+{{% /notes %}}
 
 ## 14. Implement a Reliable Logging Strategy
 
 Logs are your go-to for troubleshooting—and in Kubernetes, you need a solution that can handle ephemeral Pods.
 
-- Centralized Logging: Whether it’s ELK/EFK, Splunk, or a managed service, make sure logs aren’t just sitting in ephemeral container storage.
-- Structured Logging: JSON or another structured format helps your logging system parse and filter logs more effectively.
-- Log Retention and Rotation: Define clear policies to prevent your log storage from ballooning.
+- **Centralized Logging**: Whether it’s ELK/EFK, Splunk, or a managed service, make sure logs aren’t just sitting in ephemeral container storage.
+- **Structured Logging**: JSON or another structured format helps your logging system parse and filter logs more effectively.
+- **Log Retention and Rotation**: Define clear policies to prevent your log storage from ballooning.
 
 Trust me, you don’t want to scramble for logs in the midst of a production incident.
+
+{{< related-posts >}}
 
 ## 15. Treat Kubernetes Like Cattle, Not a Pet
 
 The old adage for servers—“treat them like cattle, not pets”—applies to Kubernetes too. Don’t rely on manual fixes or human intervention. Strive for immutable infrastructure where possible:
 
-- If something is wrong with a Pod, fix it in the YAML or container image, redeploy, and let the old one go away.
+- If something is wrong with a Pod, fix it in the YAML, [Code](/product/infrastructure-as-code/) or container image, redeploy, and let the old one go away.
 - Avoid sneaky “quick fixes” on a running container—those changes will vanish the moment Kubernetes restarts the Pod.
 - Embrace ephemeral environments and dynamic scaling. That’s what Kubernetes does best!
 
@@ -201,10 +214,10 @@ The old adage for servers—“treat them like cattle, not pets”—applies to 
 
 While native YAML manifests can work for smaller Kubernetes deployments, they often become unwieldy as your projects and teams grow. [Pulumi](/blog/yaml-terraform-pulumi-whats-the-smart-choice-for-deployment-automation-with-kubernetes/) provides a powerful alternative for deployment automation, offering:
 
-- **Real Programming Languages**: Use TypeScript, Python, Go, or C# for type-safe, testable infrastructure code.
-- **Cross-Cloud Flexibility**: Manage resources across multiple cloud providers and Kubernetes with a single tool.
-- **Reusable Modules**: Abstract common patterns into reusable components, reducing boilerplate and preventing drift.
-- **Strong Tooling & Ecosystem**: Benefit from package managers, IDE integration, and a rich library of shared Pulumi components.
+- **Real Programming Languages**: Use TypeScript, JavaScript, Python, Go, Java, or C# [for type-safe, testable infrastructure code](/docs/iac/languages-sdks/).
+- **Cross-Cloud Flexibility**: Manage resources across [multiple cloud providers](/docs/iac/clouds/) and Kubernetes with a single tool.
+- **Reusable Modules**: Abstract common patterns into [reusable components](/docs/iac/using-pulumi/pulumi-packages/), reducing boilerplate and preventing drift.
+- **Strong Tooling & Ecosystem**: Benefit from package managers, [IDE integration](/docs/iac/concepts/testing/), and a rich library of shared Pulumi components.
 
 By adopting Pulumi, you can avoid the complexity of juggling endless YAML files and gain a more streamlined, maintainable workflow for your Kubernetes infrastructure.
 
@@ -220,6 +233,6 @@ If you’ve already learned some lessons the hard way, you’re not alone. But t
 
 Now it’s your turn. Have a burning Kubernetes best practice you wish you had known earlier? Drop it in the comments or share on Twitter and tag me.
 
-Let’s learn (and unlearn) together, so we can keep taming this octopus called Kubernetes one tentacle at a time.
+Let’s learn (and unlearn) together, so we can keep taming this Kubernetes beast like the pros we are. Or at least, like the pros we will be!
 
 {{< blog/cta-button "Try Pulumi for Free" "/docs/get-started/" >}}
