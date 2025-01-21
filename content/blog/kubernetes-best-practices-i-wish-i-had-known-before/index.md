@@ -134,7 +134,7 @@ Security isn’t just a nice-to-have in Kubernetes—it’s critical. If your cl
 Monitoring in Kubernetes isn’t optional—it’s mandatory. With containers popping in and out of existence, you need robust observability to see what’s happening behind the scenes.
 
 - [Prometheus + Grafana](https://github.com/prometheus-operator/kube-prometheus): A classic combo for metrics and dashboards.
-- ELK / EFK / [Grafana Loki](https://grafana.com/oss/loki/)Stack: Elastic (or OpenSearch) for logs, plus Kibana and Fluentd/Fluent Bit for log collection or Grafana Loki for logs.
+- ELK / EFK / [Grafana Loki](https://grafana.com/oss/loki/) Stack: Elastic (or OpenSearch) for logs, plus Kibana and Fluentd/Fluent Bit for log collection or Grafana Loki for logs.
 - Jaeger / Zipkin / Tempo: For distributed tracing if you have microservices that call each other.
 
 Set up alerts early. You don’t want your first sign of trouble to be “why is the app so slow?” from an angry user at midnight.
@@ -232,8 +232,6 @@ By adopting Pulumi, you can avoid the complexity of juggling endless YAML files 
 Kubernetes is like a Swiss Army knife: powerful, versatile, but also easy to misuse if you’re not careful. By adopting these best practices, declarative configuration, sensible resource allocations, strong security, robust observability, and automated deployments, you’ll keep your cluster humming smoothly.
 
 If you’ve already learned some lessons the hard way, you’re not alone. But the beauty of Kubernetes is that with each setback, you gain more experience to fine-tune your approach.
-
-Now it’s your turn. Have a burning Kubernetes best practice you wish you had known earlier? Drop it in the comments or share on Twitter and tag me.
 
 Let’s learn (and unlearn) together, so we can keep taming this Kubernetes beast like the pros we are. Or at least, like the pros we will be!
 
