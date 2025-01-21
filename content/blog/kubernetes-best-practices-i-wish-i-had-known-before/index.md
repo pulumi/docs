@@ -87,7 +87,7 @@ Manually wrangling a hundred YAML files across multiple microservices is about a
 {{% notes type="info" %}}
 Pro Tip: If you’re new to Helm, start with an official chart from the Helm Hub or Artifact Hub. Then customize to your heart’s content. You’ll save yourself from YAML duplication mania.
 
-Or, test-drive [Pulumi](/docs/get-started/") and use real programming languages to manage your Kubernetes infrastructure.
+Or, test-drive [Pulumi](/docs/get-started/) and use real programming languages to manage your Kubernetes infrastructure.
 {{% /notes %}}
 
 ## 5. Ingress and Networking Best Practices
