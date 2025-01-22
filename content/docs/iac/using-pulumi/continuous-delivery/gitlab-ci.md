@@ -9,7 +9,7 @@ menu:
     iac:
         name: GitLab CI
         parent: iac-using-pulumi-cicd
-        weight: 7
+        weight: 9
 aliases:
 - /docs/reference/cd-gitlab-ci/
 - /docs/console/continuous-delivery/gitlab-ci/

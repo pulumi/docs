@@ -6,7 +6,7 @@ meta_desc: This page provides an overview on how to use Pulumi ESC TypeScript/Ja
 menu:
   esc:
     parent: esc-languages-sdks
-    identifier: typescript-sdk
+    identifier: esc-typescript-sdk
     weight: 1
 aliases:
   - /docs/esc/sdk/javascript/
@@ -17,7 +17,7 @@ The [JavaScript/TypeScript SDK](https://www.npmjs.com/package/@pulumi/esc-sdk) f
 Here are some of the scenarios the SDK can automate:
 
 * List environments and read environment definitions
-* Open enviroments to access config and resolve secrets
+* Open environments to access config and resolve secrets
 * Create, update, decrypt, and delete environment definitions
     * Supports both structured types and yaml text
 * List environment revisions and create new revision tags
@@ -153,3 +153,7 @@ async function main() {
 
 {{% /choosable %}}
 {{< /chooser >}}
+
+## Documentation
+
+* [API Reference Documentation](/docs/reference/pkg/nodejs/pulumi/esc-sdk/)

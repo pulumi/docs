@@ -74,4 +74,4 @@ Many industry-leading AI technology providers such as Snowflake have already bas
 
 Learn more about how Pulumi and Platform Engineering can help your organization in the same way it [helped Snowflake speed up its deployment by 10x](/case-studies/snowflake/). Or take a look at [how Aptos Labs achieved 10x faster development cycles](/case-studies/aptos/).
 
-If you are ready to talk to an expert about how platform engineering can help your organization, [click here](/contact/?form=sales). For practitioners on your team, here are some [events and learning assets](/resources/) to get up to speed quickly on platform engineering and infrastructure as code.
+If you are ready to talk to an expert about how platform engineering can help your organization, [click here](/contact/?form=sales). For practitioners on your team, here are some [events and learning assets](/events/) to get up to speed quickly on platform engineering and infrastructure as code.

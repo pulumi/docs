@@ -34,7 +34,7 @@ If you're a member of a SAML-based Pulumi organization, you can sign in to [your
 
 If you're looking to integrate Pulumi with your SAML 2.0 identity provider, refer to one of our example guides:
 
-- [Azure Active Directory](aad/)
+- [Microsoft Entra ID (formerly Azure Active Directory)](entra/)
 - [Google Workspace (formerly G Suite)](gsuite)
 - [Okta](okta/)
 - [Auth0](auth0/)

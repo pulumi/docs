@@ -6,7 +6,7 @@ meta_desc: This page provides an overview on how to use Pulumi ESC Python SDK.
 menu:
   esc:
     parent: esc-languages-sdks
-    identifier: python-sdk
+    identifier: esc-python-sdk
     weight: 2
 aliases:
   - /docs/esc/sdk/python/
@@ -17,7 +17,7 @@ The [Python SDK](https://pypi.org/project/pulumi-esc-sdk/) for [Pulumi ESC (Envi
 Here are some of the scenarios the SDK can automate:
 
 * List environments and read environment definitions
-* Open enviroments to access config and resolve secrets
+* Open environments to access config and resolve secrets
 * Create, update, decrypt, and delete environment definitions
     * Supports both structured types and yaml text
 * List environment revisions and create new revision tags
@@ -136,3 +136,7 @@ for tag in tags.tags:
 
 {{% /choosable %}}
 {{< /chooser >}}
+
+## Documentation
+
+* [API Reference Documentation](/docs/reference/pkg/python/pulumi_esc_sdk/)

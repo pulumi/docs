@@ -1,4 +1,16 @@
 [[awards]]
+title = "Technology Fast 500, 2024"
+featured = true
+img = "/logos/press/awards/fast-500-2024.png"
+url = "https://www2.deloitte.com/us/en/pages/technology-media-and-telecommunications/articles/fast500-winners.html"
+
+[[awards]]
+title = "Coolest Cloud Computing Startup Companies of 2024"
+featured = true
+img = "/logos/press/crn.png"
+url = "https://www.crn.com/news/cloud/2024/the-10-coolest-cloud-computing-startup-companies-of-2024"
+
+[[awards]]
 title = "Intellyx Digital Innovator Award, 2024"
 featured = true
 img = "/logos/press/awards/intellyx-2024.png"

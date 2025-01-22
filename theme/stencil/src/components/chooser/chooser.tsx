@@ -6,7 +6,7 @@ import { setLanguage, setK8sLanguage, setOS, setCloud, setPersona, setBackEnd } 
 export type LanguageKey = "javascript" | "typescript" | "python" | "go" | "csharp" | "fsharp" | "visualbasic" | "java" | "yaml";
 export type K8sLanguageKey = "typescript" | "yaml" | "typescript-kx";
 export type OSKey = "macos" | "linux" | "windows";
-export type CloudKey = "aws" | "azure" | "gcp" | "kubernetes" | "digitalocean" | "docker";
+export type CloudKey = "aws" | "azure" | "gcp" | "kubernetes" | "digitalocean" | "oci" | "docker";
 export type PersonaKey = "developer" | "devops" | "security" | "leader";
 export type BackEndKey = "service" | "self-managed";
 
@@ -516,6 +516,11 @@ export class Chooser {
         {
             key: "digitalocean",
             name: "DigitalOcean",
+            preview: false,
+        },
+        {
+            key: "oci",
+            name: "Oracle Cloud",
             preview: false,
         },
         {

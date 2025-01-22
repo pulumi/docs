@@ -19,15 +19,15 @@ The `gcp-login` provider enables you to log in to Google Cloud using OpenID Conn
 ## Example
 
 ```yaml
-  values:
-    gcp:
-      login:
-        fn::open::gcp-login:
-          project: 123456789
-          oidc:
-            workloadPoolId: pulumi-esc
-            providerId: pulumi-esc
-            serviceAccount: pulumi-esc@foo-bar-123456.iam.gserviceaccount.com
+values:
+  gcp:
+    login:
+      fn::open::gcp-login:
+        project: 123456789
+        oidc:
+          workloadPoolId: pulumi-esc
+          providerId: pulumi-esc
+          serviceAccount: pulumi-esc@foo-bar-123456.iam.gserviceaccount.com
 ```
 
 ## Configuring OIDC

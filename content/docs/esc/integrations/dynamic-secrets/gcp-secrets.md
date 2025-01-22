@@ -19,6 +19,7 @@ The `gcp-secrets` provider enables you to dynamically import Secrets from Google
 ## Example
 
 ```yaml
+values:
   gcp:
     login:
       fn::open::gcp-login:

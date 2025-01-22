@@ -46,7 +46,7 @@ The most common commands in the CLI that you'll be using are as follows:
 To see a full list of Pulumi ESC CLI commands, you can run the following command:
 
 ```bash
-pulumi esc --help
+esc --help
 ```
 
 For more detailed help on a specific command, you can append `--help` to any command.

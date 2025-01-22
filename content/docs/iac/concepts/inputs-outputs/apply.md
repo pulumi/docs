@@ -982,7 +982,7 @@ export const InstanceUrl = url;
 {{< example-program-snippet path="aws-ec2-instance-with-sg" language="python" from="17" to="20" >}}
 {{< example-program-snippet path="aws-ec2-instance-with-sg" language="python" from="22" to="22" >}}
 
-url = instance.public_dns.apply(
+url = server.public_dns.apply(
     lambda dns_name: "https://" + dns_name
 )
 
