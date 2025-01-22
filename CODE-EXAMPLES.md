@@ -54,14 +54,23 @@ Per language, the file that will be displayed is as follows:
 | `go`         | `main.go`                          |
 | `yaml`       | `Pulumi.yaml`                      |
 
-**NOTE:** Import and display of other files in the example directory is not supported at this time.
-
 If you do not want to show all languages of the example, you can limit it using the `languages` parameter on the shortcode. This parameter accepts a comma separated list of languages:
 
 ```go
 // Only show the TypeScript and Python examples
 {{< example-program path="aws-s3-bucket" languages="typescript,python">}}
 ```
+
+It can also specify a non-default file and/or a range of lines from the file using the following format:
+`<language>:<filename>:<from_n>-<to_n>`
+
+For example. To show only lines 3-10 in the file `package.json` from the TypeScript version of an example called `aws-s3-bucket`, and also show all lines from the `requirements.txt` in the Python example, include the following `language` string:
+
+```go
+{{< example-program path="aws-s3-bucket" languages="typescript:package.json:3-10,python:requirements.txt:">}}
+```
+
+Note the trailing `:` on the Python segment. The format requires that *if* you use a filename, it *must* have a trailing colon, even if you don't want to specify a range of lines. However, if you don't want to specify a filename, you can add a line-range with only a single colon separating the language and the line range. 
 
 ### The `example-program-snippet` shortcode
 
@@ -75,7 +84,8 @@ For example, to include only lines 10 through 20 from the TypeScript example:
 
 Parameters:
 - `path`: the name of the program subdirectory 
-- `language`: the language of the code snippet 
+- `language`: the language of the code snippet
+- `file`: specify a different file than the default for the language
 - `from`: the line number at the start of the included block of code
 - `to`: the line number at the end of the included block of code
 
