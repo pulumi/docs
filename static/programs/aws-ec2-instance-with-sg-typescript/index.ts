@@ -19,7 +19,5 @@ const server = new aws.ec2.Instance("web-server", {
     vpcSecurityGroupIds: [group.id],
 });
 
-console.log("test");
-
 export const publicIp = server.publicIp;
 export const publicDns = server.publicDns;

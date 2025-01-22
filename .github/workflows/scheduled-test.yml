@@ -1,4 +1,4 @@
-name: "Scheduled Jobs: Run Tests"
+name: "Run Example Code Tests"
 on:
   schedule:
     - cron: "0 8 * * *"
@@ -80,6 +80,9 @@ jobs:
 
       - name: Check out the code
         uses: actions/checkout@v3
+      
+      - name: Fetch master branch
+        run: git fetch origin master:master
 
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1

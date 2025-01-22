@@ -4,26 +4,42 @@ set -o errexit -o pipefail
 
 source ./scripts/programs/common.sh
 
+# The directory containing the example code programs to test.
 programs_dir="static/programs"
 
-dirs_to_test=()
+# Directories that need to be tested
+dirs_to_test=( $(find "${programs_dir}" -maxdepth 1 -type d -not -path '*/\.*' -not -path "${programs_dir}") )
+# Track projects that failed tests
 failed_projects=()
+# Track projects that passed tests
 passing_projects=()
 
 # Get the list of changed directories in the static/programs directory. 
-if [ "$TEST_MODE" == "pull_request" ]; then
-    # Using or true to avoid grep errors if when grep comes up empty.
-    git_diff="$(git diff --name-only master | grep "^static/programs/" | cut -d'/' -f3 || true)"
-    if [ -n "$git_diff" ]; then
+if [[ "$TEST_MODE" == "pull_request" ]]; then
+
+    # Clear the dirs_to_test array  
+    dirs_to_test=()
+    # Get the list of changed directories in the static/programs directory.
+    git_changes="$(git diff --name-only master)"
+    # Filter out only the static/programs directories from the git diff output.
+    # Use or true to ignore grep errors when grep comes up empty.
+    grep_result="$(echo "$git_changes" | grep "^static/programs/" || true)"
+    # Extract only the program directory from the git diff output.
+    dirs="$(echo "$grep_result" | cut -d'/' -f3)"
+    # Pipe to sort and uniq to deduplicate the list of directories.
+    programs="$(echo "$dirs" | sort | uniq)"
+    
+    # If there are programs to test, add them to the dirs_to_test array.
+    if [[ -n "$programs" ]]; then
         while IFS= read -r line; do
             dirs_to_test+=("$line")
-        done <<< "$git_diff"
+        done <<< "$programs"
     fi
 
-    echo "Number of new programs to test: ${#dirs_to_test[@]}"
+    echo "Number of programs to test: ${#dirs_to_test[@]}"
 
     # Check if the array is empty and if it is exit.
-    if [ ${#dirs_to_test[@]} -eq 0 ]; then
+    if [[ ${#dirs_to_test[@]} -eq 0 ]]; then
         echo "No new programs to test in static/programs directories."
         exit 0
     fi
@@ -50,12 +66,7 @@ fi
 pushd "$programs_dir"
     found_first_program=false
 
-    # Choose which directories to iterate over based on TEST_MODE. We only want to test 
-    # the new/changed directories in a pull request. Otherwise, we want to test all programs.
-    if [[ "$TEST_MODE" != "pull_request" ]]; then
-        dirs_to_test=( $(find . -maxdepth 1 -type d -not -path '*/\.*' -not -path '.') )
-    fi
-
+    # Iterate over the dirs_to_test array and test each program.
     for dir in "${dirs_to_test[@]}"; do
         project="$(basename $dir)"
 
@@ -191,5 +202,5 @@ if [ ${#failed_projects[@]} -ne 0 ]; then
     done
     exit 1
 else
-    echo "All projects completed successfully :)"
+    echo "All projects passed successfully :)"
 fi
