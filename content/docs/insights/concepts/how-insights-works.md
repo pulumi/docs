@@ -45,7 +45,7 @@ Once scanning is complete, your resources become available through three main in
 
 1. [Resource Explorer](/docs/insights/search/) provides a structured view of your infrastructure, with capabilities for grouping, filtering, and sorting resources
 2. [Resource Search](/docs/insights/search/) enables you to find specific resources or groups of resources
-3. Pulumi [AI assist](/docs/insights/get-started/using-resource-explorer/#ai-assist-examples) and Copilot allows natural language queries about your infrastructure, such as "Find all public IP addresses"
+3. Pulumi [AI assist](/docs/insights/get-started/using-resource-explorer/#ai-assist-examples) and [Copilot](/docs/pulumi-cloud/copilot/) allow natural language queries about your infrastructure, such as "Find all public IP addresses"
 
 The Resource Explorer interface supports:
 
