@@ -25,7 +25,7 @@ Pulumi CrossGuard is a product that provides gated deployments via Policy as Cod
 
 Often organizations want to empower developers to manage their infrastructure yet are concerned about giving them full access. CrossGuard allows administrators to provide autonomy to their developers while ensuring compliance to defined organization policies.
 
-Using Policy as Code, users can express business or security rules as functions that are executed against resources in their stacks. Then using CrossGuard, organization administrators can apply these rules to particular stacks within their organization. When policies are executed as part of your Pulumi deployments, any violation will gate or block that update from proceeding.
+Using Policy as Code, users can express business or security rules as functions that are executed against resources in their stacks or accounts. Then using CrossGuard, organization administrators can apply these rules to particular stacks or accounts within their organization. When policies are executed as part of your Pulumi deployments, any violation will gate or block that update from proceeding.
 
 Policies can be written in TypeScript/JavaScript (Node.js) or Python and can be applied to Pulumi stacks written in any language. Learn more about [language support for policies](/docs/guides/crossguard#languages).
 
@@ -166,6 +166,8 @@ Policies can be written in TypeScript/JavaScript (Node.js) or Python and can be 
 You can find more example Policy Packs in the [examples repo](https://github.com/pulumi/examples/tree/master/policy-packs). [Policy Pack best practices](/docs/using-pulumi/crossguard/best-practices/) details the best practices for writing a Policy Pack.
 
 ### Running Locally {#running-locally}
+
+TODO: this only applies to IaC. Insights is cloud-only.
 
 Now let's take a look at how to run the Policy Pack locally against a Pulumi program.
 
@@ -326,6 +328,8 @@ Once you’ve validated the behavior of your policies, an organization administr
     ```
 
     The CLI by default enables the Policy Pack to your default Policy Group. If you would like to add the Policy Pack to a different Policy Group, you can use the `--policy-group` flag.
+
+TODO: May want to add a section about Policy Groups or link to the info under core-concepts.md
 
 ## Next Steps
 

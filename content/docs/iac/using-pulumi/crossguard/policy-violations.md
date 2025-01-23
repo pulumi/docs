@@ -17,11 +17,11 @@ aliases:
 
 ## Overview
 
-Policy Violations occur when your stack does not comply with the policies defined in your Policy Packs. These violations are logged during deployments and can either block the update (mandatory) or issue a warning (advisory), depending on the enforcement level you have set.
+Policy Violations occur when a resource in a stack or account does not comply with the policies defined in your Policy Packs. These violations are logged during deployments and can either block the update (mandatory) or issue a warning (advisory), depending on the enforcement level you have set.
 
 ## How to See Policy Violations
 
-Policy Violations can be viewed in the Pulumi Cloud via the Policy Violations page. This page provides a centralized view of all violations across your organization, allowing you to filter and group them by various criteria such as Policy Pack, Project, Stack, and Enforcement Level.
+Policy Violations can be viewed in the Pulumi Cloud via the Policy Violations page. This page provides a centralized view of all violations across your organization, allowing you to filter and group them by various criteria such as Policy Pack, Project, Stack/Account, and Enforcement Level.
 
 ### Accessing the Policy Violations Page
 
