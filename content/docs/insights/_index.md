@@ -42,9 +42,10 @@ sections:
   cards:
   - heading: Discover
     link: /docs/insights/concepts/
-    description: Scan and sync all of your infrastructure to bring it under a single pane of glass, so you can understand the structure and status of your with footprint.
+    description: Scan and sync all of your infrastructure to bring it under a single pane of glass, so you can understand the structure and status of your footprint.
   - heading: Advanced Resource Search
-    description: Find important insights about your cloud infrastructure using structured queries or natural language Pulumi AI assist to quickly locate resources.
+    description: Find important insights about your cloud infrastructure using structured queries or natural language via Pulumi AI Assist to quickly locate resources.
+    
     link: /docs/insights/search/
   - heading: Manage
     description: Refactor and structure your infrastructure into logical resource groups that map key insights with business needs.
