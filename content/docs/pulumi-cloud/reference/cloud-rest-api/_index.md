@@ -3840,7 +3840,7 @@ Status: 200 OK
 ### List Policy Violations
 
 ```
-GET /api/orgs/{organization}/policyresults/violations
+GET /api/orgs/{organization}/policyresults/violationsv2
 ```
 
 #### Parameters
@@ -3856,7 +3856,7 @@ curl \
   -H "Accept: application/vnd.pulumi+8" \
   -H "Content-Type: application/json" \
   -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
-  https://api.pulumi.com/api/orgs/{organization}/policyresults/violations
+  https://api.pulumi.com/api/orgs/{organization}/policyresults/violationsv2
 ```
 
 #### Default response
@@ -3867,25 +3867,37 @@ Status: 200 OK
 
 ```
 {
-	"continuationToken": "",
-	"policyViolations": [
-		{
-			"level": "advisory",
-			"message": "Checks that Kubernetes Pods are not being used directly.
-Kubernetes Pods should not be used directly. Instead, you may want to use a Deployment, ReplicaSet or Job.
-",
-			"observedAt": "2024-08-20T20:59:41Z",
-			"policyName": "pods-are-prohibited",
-			"policyPack": "kubernetes",
-			"policyPackTag": "0.0.2",
-			"projectName": "pulumi-k8s-test",
-			"resourceName": "pod-test",
-			"resourceType": "kubernetes:core/v1:Pod",
-			"resourceURN": "urn:pulumi:dev::pulumi-k8s-test::kubernetes:core/v1:Pod::pod-test",
-			"stackName": "dev",
-			"updateVersion": 7
-		}
-	]
+    "policyViolations": [
+        {
+            "projectName": "pulumi-k8s-test",
+            "stackName": "test",
+            "stackVersion": 11,
+            "policyPack": "kubernetes",
+            "policyPackTag": "0.0.2",
+            "policyName": "minimum-replica-count",
+            "resourceURN": "urn:pulumi:test::pulumi-k8s-test::kubernetes:apps/v1:Deployment::nginx",
+            "resourceType": "kubernetes:apps/v1:Deployment",
+            "resourceName": "nginx",
+            "message": "Checks that Kubernetes Deployments and ReplicaSets have at least three replicas.\nKubernetes Deployments should have at least three replicas.\n",
+            "observedAt": "2025-01-16T23:44:13Z",
+            "level": "advisory"
+        },
+        {
+            "projectName": "test",
+            "accountName": "us-west-1",
+            "resourceVersion": 1,
+            "policyPack": "aws-typescript",
+            "policyPackTag": "0.0.1",
+            "policyName": "s3-no-public-read",
+            "resourceURN": "urn:insights:test/us-west-1::aws::aws:s3/bucket:Bucket::my-super-bucket-1234567890",
+            "resourceType": "aws:s3/bucket:Bucket",
+            "resourceName": "my-super-bucket-1234567890",
+            "message": "Prohibits setting the publicRead or publicReadWrite permission on AWS S3 buckets.\nTest violation",
+            "observedAt": "2025-01-16T23:08:28Z",
+            "level": "advisory"
+        },
+    ],
+    "continuationToken": ""
 }
 ```
 
