@@ -90,7 +90,7 @@ You can target the pod name by defining the path as `"kubernetes.io".pod.name`.
 
 Note the use of quotes to escape dots in the object keys.
 
-For the claim values, it is possible to use the following wildcard notation for flexible matching:
+It is possible to use the following wildcard notation for flexible matching for the claim values and team name:
 
 - `*`: match zero or more characters
 - `?`: match zero or one character
