@@ -11,10 +11,10 @@ authors:
 - engin-diri
 
 tags:
+- ai
 - deepseek
 - pulumi
 - aws
-- ai
 - ec2
 - ollama
 
@@ -229,6 +229,8 @@ Next, we need to create a VPC, subnet, Internet Gateway, and route table. Copy t
 #### Create the EC2 Instance
 
 Finally, we need to create the EC2 instance. For this, we need to create our SSH key pair and retrieve the Amazon Machine Images to use in our instances. We are going to use `Amazon Linux`, as it is the most common and has all the necessary packages installed for us.
+
+I also use a `g4dn.xlarge`, but you can change the instance type to any other instance type that supports GPU. You can find more information about the [instance types](https://aws.amazon.com/ec2/instance-types/g4/).
 
 If you need to create the key pair, run the following command:
 
