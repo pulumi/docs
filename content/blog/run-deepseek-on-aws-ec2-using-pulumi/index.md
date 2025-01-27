@@ -131,7 +131,7 @@ To download the NVIDIA drivers we need to create an instance role with S3 access
 {{% choosable language typescript %}}
 
 ```typescript
-{{< example-program-snippet path="deepseek-ollama" language="typescript" from="1" to="27" >}}
+{{< example-program-snippet path="deepseek-ollama" language="typescript" from="1" to="30" >}}
 ```
 
 {{% /choosable %}}
@@ -181,7 +181,7 @@ Next, we need to create a VPC, subnet, Internet Gateway, and route table. Copy t
 {{% choosable language typescript %}}
 
 ```typescript
-{{< example-program-snippet path="deepseek-ollama" language="typescript" from="29" to="84" >}}
+{{< example-program-snippet path="deepseek-ollama" language="typescript" from="31" to="94" >}}
 ```
 
 {{% /choosable %}}
@@ -241,7 +241,7 @@ ssh-keygen -f mykey.pub -i -mPKCS8 > deepseek.pem
 {{% choosable language typescript %}}
 
 ```typescript
-{{< example-program-snippet path="deepseek-ollama" language="typescript" from="84" to="121" >}}
+{{< example-program-snippet path="deepseek-ollama" language="typescript" from="95" to="136" >}}
 ```
 
 {{% /choosable %}}

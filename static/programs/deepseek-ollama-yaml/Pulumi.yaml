@@ -14,8 +14,8 @@ variables:
       function: aws:ec2:getAmi
       arguments:
         filters:
-        - name: name
-          values: ["${amiFilter}"]
+          - name: name
+            values: ["${amiFilter}"]
         owners: ["${amiOwner}"]
         mostRecent: true
       return: id
@@ -76,8 +76,8 @@ resources:
     properties:
       vpcId: ${deepSeekVpc.id}
       routes:
-      - cidrBlock: 0.0.0.0/0
-        gatewayId: ${deepSeekInternetGateway.id}
+        - cidrBlock: 0.0.0.0/0
+          gatewayId: ${deepSeekInternetGateway.id}
 
   deepSeekRouteTableAssociation:
     type: aws:ec2:RouteTableAssociation
@@ -90,33 +90,33 @@ resources:
     properties:
       vpcId: ${deepSeekVpc.id}
       ingress:
-      - fromPort: 22
-        toPort: 22
-        protocol: tcp
-        cidrBlocks:
-        - 0.0.0.0/0
-      - fromPort: 3000
-        toPort: 3000
-        protocol: tcp
-        cidrBlocks:
-        - 0.0.0.0/0
-      - fromPort: 11434
-        toPort: 11434
-        protocol: tcp
-        cidrBlocks:
-        - 0.0.0.0/0
+        - fromPort: 22
+          toPort: 22
+          protocol: tcp
+          cidrBlocks:
+            - 0.0.0.0/0
+        - fromPort: 3000
+          toPort: 3000
+          protocol: tcp
+          cidrBlocks:
+            - 0.0.0.0/0
+        - fromPort: 11434
+          toPort: 11434
+          protocol: tcp
+          cidrBlocks:
+            - 0.0.0.0/0
       egress:
-      - fromPort: 0
-        toPort: 0
-        protocol: -1
-        cidrBlocks:
-        - 0.0.0.0/0
-  
+        - fromPort: 0
+          toPort: 0
+          protocol: -1
+          cidrBlocks:
+            - 0.0.0.0/0
+
   deepSeekKey:
     type: aws:ec2:KeyPair
     properties:
       publicKey: ${publicKey}
-  
+
   deepSeekInstance:
     type: aws:ec2:Instance
     properties:
@@ -128,7 +128,7 @@ resources:
         volumeType: gp3
       subnetId: ${deepSeekSubnet.id}
       vpcSecurityGroupIds:
-      - ${deepSeekSecurityGroup.id}
+        - ${deepSeekSecurityGroup.id}
       iamInstanceProfile: ${deepSeekProfile.name}
       userData: ${userData}
       tags:

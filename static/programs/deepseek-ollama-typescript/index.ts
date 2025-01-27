@@ -6,13 +6,15 @@ const role = new aws.iam.Role("deepSeekRole", {
     name: "deepseek-role",
     assumeRolePolicy: JSON.stringify({
         Version: "2012-10-17",
-        Statement: [{
-            Action: "sts:AssumeRole",
-            Effect: "Allow",
-            Principal: {
-                Service: "ec2.amazonaws.com",
+        Statement: [
+            {
+                Action: "sts:AssumeRole",
+                Effect: "Allow",
+                Principal: {
+                    Service: "ec2.amazonaws.com",
+                },
             },
-        }],
+        ],
     }),
 });
 
@@ -45,10 +47,12 @@ const internetGateway = new aws.ec2.InternetGateway("deepSeekInternetGateway", {
 
 const routeTable = new aws.ec2.RouteTable("deepSeekRouteTable", {
     vpcId: vpc.id,
-    routes: [{
-        cidrBlock: "0.0.0.0/0",
-        gatewayId: internetGateway.id,
-    }],
+    routes: [
+        {
+            cidrBlock: "0.0.0.0/0",
+            gatewayId: internetGateway.id,
+        },
+    ],
 });
 
 const routeTableAssociation = new aws.ec2.RouteTableAssociation("deepSeekRouteTableAssociation", {
@@ -58,46 +62,56 @@ const routeTableAssociation = new aws.ec2.RouteTableAssociation("deepSeekRouteTa
 
 const securityGroup = new aws.ec2.SecurityGroup("deepSeekSecurityGroup", {
     vpcId: vpc.id,
-    egress: [{
-        fromPort: 0,
-        toPort: 0,
-        protocol: "-1",
-        cidrBlocks: ["0.0.0.0/0"],
-    }],
-    ingress: [{
-        fromPort: 22,
-        toPort: 22,
-        protocol: "tcp",
-        cidrBlocks: ["0.0.0.0/0"],
-    }, {
-        fromPort: 3000,
-        toPort: 3000,
-        protocol: "tcp",
-        cidrBlocks: ["0.0.0.0/0"],
-    }, {
-        fromPort: 11434,
-        toPort: 11434,
-        protocol: "tcp",
-        cidrBlocks: ["0.0.0.0/0"],
-    }],
+    egress: [
+        {
+            fromPort: 0,
+            toPort: 0,
+            protocol: "-1",
+            cidrBlocks: ["0.0.0.0/0"],
+        },
+    ],
+    ingress: [
+        {
+            fromPort: 22,
+            toPort: 22,
+            protocol: "tcp",
+            cidrBlocks: ["0.0.0.0/0"],
+        },
+        {
+            fromPort: 3000,
+            toPort: 3000,
+            protocol: "tcp",
+            cidrBlocks: ["0.0.0.0/0"],
+        },
+        {
+            fromPort: 11434,
+            toPort: 11434,
+            protocol: "tcp",
+            cidrBlocks: ["0.0.0.0/0"],
+        },
+    ],
 });
 
 const keyPair = new aws.ec2.KeyPair("deepSeekKey", {
     publicKey: pulumi.output(fs.readFileSync("deepseek.rsa", "utf-8")),
 });
 
-
-const deepSeekAmi = aws.ec2.getAmi({
-    filters: [{
-        name: "name",
-        values: ["amzn2-ami-hvm-2.0.*-x86_64-gp2"],
-    }, {
-        name: "architecture",
-        values: ["x86_64"],
-    }],
-    owners: ["137112412989"], // Amazon
-    mostRecent: true,
-}).then(ami => ami.id);
+const deepSeekAmi = aws.ec2
+    .getAmi({
+        filters: [
+            {
+                name: "name",
+                values: ["amzn2-ami-hvm-2.0.*-x86_64-gp2"],
+            },
+            {
+                name: "architecture",
+                values: ["x86_64"],
+            },
+        ],
+        owners: ["137112412989"], // Amazon
+        mostRecent: true,
+    })
+    .then(ami => ami.id);
 
 const deepSeekInstance = new aws.ec2.Instance("deepSeekInstance", {
     ami: deepSeekAmi,
