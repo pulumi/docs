@@ -1,6 +1,6 @@
 ---
 title: "Scale to Zero with Serverless APIs"
-date: 2025-01-24T13:25:44-05:00
+date: 2025-01-27T00:00:00
 draft: false
 meta_desc: How to run web services for practically nothing. AWS Lambda hosting for containers
 meta_image: meta.png
