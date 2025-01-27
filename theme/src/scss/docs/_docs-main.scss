@@ -418,11 +418,11 @@ body.section-registry {
                 padding: 8px 0;
             }
 
-            @media (min-width: 1024px) {
+            @media (min-width: 1280px) {
                 width: 240px;
             }
 
-            @media (min-width: 1024px) {
+            @media (min-width: 1280px) {
                 min-width: 340px;
             }
         }
@@ -444,7 +444,7 @@ body.section-registry {
         }
 
 
-        @media (min-width: 1024px) {
+        @media (min-width: 1280px) {
             flex-direction: row;
             gap: 24px;
 
@@ -695,7 +695,7 @@ body.section-registry {
             }
         }
 
-        @media (min-width: 1024px) {
+        @media (min-width: 1280px) {
             display: flex;
             flex-direction: column;
             gap: 24px;
@@ -744,7 +744,7 @@ body.section-registry {
             }
         }
 
-        @media (min-width: 1024px) {
+        @media (min-width: 1280px) {
             .accordion-checkbox-table-of-contents,
             label {
                 pointer-events: none;
