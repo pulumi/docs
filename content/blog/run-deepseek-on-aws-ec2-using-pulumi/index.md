@@ -72,6 +72,8 @@ OpenAI o1-1217 excels in factual queries (GPQA Diamond) with **75.7%**, outperfo
 broader academic coverage (MMLU), the margin is still tight: **91.8%** (OpenAI o1-1217) vs. **90.8%** (DeepSeek-R1),
 indicating near-parity in multitask language understanding.
 
+{{< related-posts >}}
+
 ## DeepSeek R1 Model
 
 DeepSeek R1 is a large language model developed with a strong focus on reasoning tasks. It excels at problems requiring multi-step analysis and logical thinking. Unlike typical models that rely heavily on Supervised Fine-Tuning (SFT), DeepSeek R1 uses Reinforcement Learning (RL) as its primary training strategy. This emphasis on RL empowers it to figure out solutions with greater independence.
@@ -325,6 +327,8 @@ runcmd:
 - docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:main
 ```
 
+{{< related-posts >}}
+
 #### Using DeepSeek Models via Ollama
 
 DeepSeek provides a diverse range of models in the Ollama library, each tailored to different resource requirements and use cases. Below is a concise overview:
@@ -494,3 +498,5 @@ This post demonstrated how easy it is to set up and run DeepSeek on an AWS EC2 i
 If you have any questions or need help with the code, feel free to reach out to me and if you want to give DeepSeek with Pulumi a try, head over to the [Pulumi documentation](/docs/get-started/).
 
 {{< blog/cta-button "Try Pulumi for Free" "/docs/get-started/" >}}
+
+If you want to learn more about what we learned from using GenAI in production, head to this [blog post](/blog/codegen-learnings/)
