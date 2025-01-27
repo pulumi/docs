@@ -6,7 +6,7 @@ In order to get automated testing of your code example, the code must be added t
 
 ## How it works
 
-The testing process is limited to verifying code examples in the `/static/programs` directory. It verifies them by running [`pulumi preview`](https://www.pulumi.com/docs/iac/cli/commands/pulumi_preview) on every example contributed to that directory. The `/static/programs` directory can house examples written in any of the Pulumi-supported languages.
+The testing process is limited to verifying code examples in the `/static/programs` directory. It verifies them by running either [`pulumi preview`](https://www.pulumi.com/docs/iac/cli/commands/pulumi_preview) or `make test` (if a `Makefile` is provided) on every example contributed to that directory. The `/static/programs` directory can house examples written in any of the Pulumi-supported languages.
 
 The Hugo shortcode `{{< example-program ...>}}` imports the program into your Markdown file. It also handles the creation of the multi-language chooser widget for examples written in more than one language.
 
@@ -27,7 +27,7 @@ The language identifier must be one of:
 - `go`
 - `yaml`
 
-The files checked in under these directories should be *complete* Pulumi programs, including all files necessary for the program to run (and can contain appropriate subdirectories, hidden files, etc as needed per language).
+The files checked in under these directories should be *complete* programs, including all files necessary for the program to run (and can contain appropriate subdirectories, hidden files, etc as needed per language).
 
 ## Including tested code examples in Markdown
 
@@ -123,6 +123,21 @@ For this example we'll show how to add an example of a program that uses Pulumi 
     ```
 6. Run `make serve` to render the documentation website locally, and very that it renders as expected
 
+## Using a Makefile
+
+If you're working with a code example that is not testable w/ `pulumi preview`, we also support including a `Makefile`. The `Makefile` should be located in the root directory of the example, and should include a `test` target. 
+
+***Example:*** *A `Makefile` with a `test` target that runs TypeScript unit tests using `mocha`*
+```make
+test:
+	npm install -g mocha
+	npm install
+	npm test
+.PHONY: test
+```
+
+An example of a use case where this would be important would be a Pulumi Crossguard policy pack. This is something that needs to be documented, but it's not directly testable with `pulumi preview`. At minimum you'd need to add the `--policy` flag to do an integration test. Instead, it's better to run unit tests written in the same language that the policy pack is written in. You can use a `Makefile` to run anything we need to test that code. 
+
 ## Testing code examples locally
 
 Generally it is not necessary to test all the code examples locally. This is a time consuming process as there are many examples. Instead, test only the programs that have changed, by navigating to each directory and running `pulumi preview`. You can get a list of the programs that have been changed before submitting a PR by first using `git add` to stage them, then running the following command from the root of the docs repo:
@@ -134,3 +149,15 @@ $ git diff --staged --name-only master | grep 'static/programs' | cut -d'/' -f3 
 This should output a list of just the program directories that have changes in the current branch.
 
 If for some reason you *do* want to re-run tests for all example programs, run `make test`. Note that this will require that you have all the necessary runtimes and dependencies for **all** example programs, which could be a large amount of runtimes, provider packages, language modules, etc, and may take more than an hour to run.
+
+Another option is to run the `test.sh` script directly.
+
+```sh
+$ ./scripts/programs/test.sh
+```
+
+By default the script will run all tests. To run tests only for a specific example, use the `ONLY_TEST` environment variable.
+
+```sh
+$ ONLY_TEST="unit-test-policy-typescript" ./scripts/programs/test.sh
+```

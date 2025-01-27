@@ -105,6 +105,20 @@ pushd "$programs_dir"
         echo "***"
         echo
 
+        # Check for a Makefile. If one exists, run `make test`, otherwise,
+        # try to run as a Pulumi program
+        makefile="${project}/Makefile"
+        if [ -f "${makefile}" ]; then
+            echo "File ${makefile} exists. Running 'make test' in ${dir} "
+            if ! make -C ${project} test; then
+                failed_projects+=("$project")
+                continue
+            fi
+
+            passing_projects+=("$project")
+            continue
+        fi
+
         stack="dev"
         fqsn="${org}/${project}/${stack}"
 
