@@ -2,23 +2,51 @@
 title: "Scale to Zero with Serverless APIs"
 date: 2025-01-24T13:25:44-05:00
 draft: false
-meta_desc:
+meta_desc: How to run web services for practically nothing. AWS Lambda hosting for containers
 meta_image: meta.png
 authors:
     - adam-gordon-bell
 tags:
-    - change-me
+    - python
+    - serverless
 social:
-    twitter:
-    linkedin:
+    twitter: >
+            🚀 Transform your low-traffic Flask APIs into cost-efficient serverless apps! Package your entire REST API as a container, deploy to AWS Lambda, and pay $0 when idle. Simple local development, standard Flask patterns, and automatic scaling - all with minimal serverless expertise needed. 
+    linkedin: >
+            Ever wondered how to run web services for practically nothing? Adam shares an approach that's perfect for side projects and low-traffic applications.
 
+            💡 The Challenge:
+            Running services 24/7 that barely get used, but need to be reliable when called.
+            🎯 The Solution:
+            Package your entire web app as a container and run it on AWS Lambda!
+            ✨ Why This Works:
+
+            Zero cost when idle - literally $0!
+            Instant activation when needed
+            Pennies per month for low traffic
+            Compatible with all web frameworks
+
+            🛠️ The Beauty of Simplicity:
+            No serverless expertise needed! Just:
+
+            Write your code normally
+            Containerize it
+            Deploy to Lambda
+            Add API Gateway
+            You're live!
+
+            💰 Real Cost Example:
+            Flask app running with:
+
+            512MB memory
+            40,000 requests/month
+            Total cost: $0.28/month (!!)
+            Zero traffic = Zero cost
 ---
-<!-- ## $0 a month flask hosting with a Lambdalith -->
-
 Every developer has that service that needs to exist but barely gets used. Maybe it's an internal reporting API that get hourly requests but just from a handful of client, or maybe a side project you want hosted somewhere, but that is rarely used.
 
 These services present a unique challenge: they need to be reliable when called, but actually keeping them always on and running seems like overkill.
-
+<!--more-->
 {{< youtube "cjLpOJn0B6g?rel=0" >}}
 
 What if you could maintain these low-traffic services with zero cost when they're idle, while ensuring they spring to life exactly when needed? This is where AWS Lambda's container support shines. While many developers think of Lambda primarily for individual functions, it's equally capable of hosting complete REST APIs in containers.
@@ -41,6 +69,7 @@ The trade-off? Cold starts when Lambda spins up a new container instance. But fo
 My experience shows a Flask app on AWS Lambda with 512 MB memory and 40,000 requests per month would cost approximately **$0.28 per month**. A go service I created costs me even less, because memory usage and CPU usage is lower. And if your service is just a side project that gets no requests, your cost will be **~ $0 / month**.
 
 {{< notes type="info" >}}
+
 ## Why containers?
 
 Containers let us package everything—code, system dependencies, runtime—into one unit. Any HTTP service that fits in a container will work: Flask, Express, Rails, plus whatever system tools you need. Local testing? Just start the container. No Lambda-specific configuration needed.
@@ -51,10 +80,10 @@ Containers let us package everything—code, system dependencies, runtime—into
 
 Let's start with the fun part - writing some Python code, but I’m going to keep it really simple. We'll build a simple Flask application that demonstrates why running a full web framework in Lambda makes sense. Instead of splitting everything into separate functions, we'll create a proper web application with multiple endpoints, error handling, and middleware.
 
-Here's our starting point:
+Here's our starting point in `scripts/simple_server.py`
 
 ```python
-from flask import Flask, jsonify
+from flask import Flask, jsonify, request
 from mangum import Mangum
 
 # Create Flask app
@@ -80,12 +109,11 @@ Notice a few key things about this code:
 
 1. **It's Just Flask**: This is a standard Flask application. No Lambda-specific code, no special frameworks. If you know Flask, you know how to modify this.
 2. **Multiple Endpoints**: We have several routes demonstrating different HTTP methods and URL patterns. In traditional Lambda, each of these would be a separate function.
-3. **Middleware**: We're using `ProxyFix` because our app will run behind API Gateway. This ensures we get correct protocol and host information.
-4. **Error Handling**: Global error handling works just like in any Flask app. No need to handle errors differently for Lambda.
+3. **Error Handling**: Global error handling works just like in any Flask app. No need to handle errors differently for Lambda.
 
 ## **Containerizing for Lambda**
 
-Here's where things get interesting. AWS Lambda has specific requirements for container images, but once you understand them, they're not complicated. The key is using the right base image and adapting our application to work with Lambda's runtime interface.
+Let's look at Lambda's container requirements - they're straightforward once we break them down. The key is using the right base image and adapting our application to work with Lambda's runtime interface.
 
 First, let's create our Dockerfile:
 
@@ -109,6 +137,7 @@ RUN chmod +x scripts/simple_entrypoint.sh
 ENV FLASK_APP=scripts/simple_server.py
 ENV PYTHONPATH=/app
 ENV RUN_MODE=lambda
+EXPOSE 3000
 
 # Use our entrypoint script
 ENTRYPOINT ["/app/scripts/simple_entrypoint.sh"]
@@ -143,8 +172,8 @@ This means locally, you don't need to know about lambdas at all if you supply `R
 #!/bin/bash
 
 # Build the container
- docker build -t simple-flask -f infra/Dockerfile .
- docker run -d -p 3000:3000 -e RUN_MODE=local simple-flask
+docker build -t simple-flask -f infra/Dockerfile .
+docker run -d -p 3000:3000 -e RUN_MODE=local simple-flask
 
 # Test the endpoints:
 # 1. Test GET /hello
@@ -302,15 +331,23 @@ domain_mapping = aws.apigatewayv2.ApiMapping("api-mapping",
 )
 ```
 
-The really cool thing about using Pulumi is that it makes complex infrastructure changes safe and repeatable. Want to increase the Lambda memory? Change one number and run `pulumi up`.
+Setup some Route53 records and cname a domain name appropratelly and you'll have a container backed by a custom domain name.
 
-You can find code for this pattern in the [service status monitor repo](https://github.com/adamgordonbell/service-status-monitor) from my [python devops article](https://www.pulumi.com/blog/python-for-devops/).
+## Why I love this approach
+
+The really cool thing about using Pulumi and lambdas is that it makes complex infrastructure changes safe and repeatable.
+
+- Want to increase the Lambda memory? Change one number and run `pulumi up`.
+- You get [complete AWS Lambda and API Gateway management](/registry/packages/aws/) for your low-traffic REST APIs
+- And [Infrastructure testing capabilities](/docs/iac/concepts/testing/) mean you can validate your serverless configuration before deployment
+
+You can find code for article in the [service status monitor repo](https://github.com/adamgordonbell/service-status-monitor) from my [python devops article](https://www.pulumi.com/blog/python-for-devops/). A larger version with rolling updates is coming soon.
 
 {{< notes type="info" >}}
 
 ## **Alternative Approaches**
 
-There are other ways to run containers that scale to zero. Google Cloud Run offers similar functionality on GCP, and AWS App Runner is another AWS service that can do this. Both have similar pricing models—very cheap for low-volume services.
+There are other ways to run containers that scale to zero. [Google Cloud Run](https://www.pulumi.com/registry/packages/gcp/api-docs/cloudrun/service/) offers similar functionality on GCP, and [AWS App Runner](https://www.pulumi.com/blog/deploy-applications-with-aws-app-runner/) is another AWS service that can do this. Both have similar pricing models—very cheap for low-volume services.
 
 The beauty of the container approach is that switching between these services is straightforward. Since we're just running a standard container with a REST endpoint, there's nothing AWS-specific in our application code. If you need to move to a different platform later, you can take your container with you.
 
