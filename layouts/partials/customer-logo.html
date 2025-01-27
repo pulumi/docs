@@ -17,14 +17,14 @@
         {{ end }}
     </span>
 {{ else if eq .logo "panther-labs" }}
-    <span class="w-full h-full flex">
+    <span class="w-full h-full flex justify-center">
         {{ if eq .hoverable true }}
             <span class="ro-hoverable content-center">
-                <span class="ro-gray">{{ partial "customer-logos/panther-labs-gray" }}</span>
-                <span class="ro-color">{{ partial "customer-logos/panther-labs-color" }}</span>
+                <span class="ro-gray">{{ partial "customer-logos/panther" }}</span>
+                <span class="ro-color">{{ partial "customer-logos/panther" }}</span>
             </span>
         {{ else }}
-            {{ partial "customer-logos/panther-labs-color" }}
+            {{ partial "customer-logos/panther" }}
         {{ end }}
     </span>
 {{ else if eq .logo "mercedes-benz" }}
