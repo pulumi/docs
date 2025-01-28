@@ -41,7 +41,7 @@ case_studies:
 
         - name: Panther Labs
           link: /case-studies/panther-labs/
-          logo: /logos/customers/panther-labs-wordmark.svg
+          logo: /logos/customers/panther.png
           description: |
             __10x more productivity__ seen by Panther Labs in their deployment speeds.
 
