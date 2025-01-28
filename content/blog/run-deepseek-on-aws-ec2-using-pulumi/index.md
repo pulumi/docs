@@ -46,7 +46,7 @@ This weekend, my "for you" page on all of my social media accounts was filled wi
 
 **But why?** The answer is simple: DeepSeek entered the market as an open-source (MIT license) project with excellent performance and reasoning capabilities.
 
-## The Company Behind DeepSeek
+## The company behind DeepSeek
 
 DeepSeek is a Chinese AI startup founded in 2023 by Lian Wenfeng. One interesting fact about DeepSeek is that the cost of training and developing DeepSeek's models was only a fraction of what OpenAI or Meta spent on their models.
 
@@ -60,13 +60,13 @@ DeepSeek-R1 shows robust multi-step reasoning, scoring **79.8%** on AIME 2024, e
 On MATH-500—which tests a wide range of high-school-level problems—DeepSeek-R1 again leads with **97.3%**, slightly
 above OpenAI o1-1217’s **96.4%**.
 
-### Coding: Codeforces & SWE-bench Verified
+### Coding: Codeforces & SWE-bench verified
 
 In algorithmic reasoning (Codeforces), OpenAI o1-1217 stands at **96.6%**, marginally ahead of DeepSeek-R1’s **96.3%**.
 Yet on SWE-bench Verified, which focuses on software engineering reasoning, DeepSeek-R1 scores **49.2%**, surpassing
 OpenAI o1-1217’s **48.9%** and showcasing strong software verification capabilities.
 
-### General Knowledge: GPQA Diamond & MMLU
+### General knowledge: GPQA Diamond & MMLU
 
 OpenAI o1-1217 excels in factual queries (GPQA Diamond) with **75.7%**, outperforming DeepSeek-R1 at **71.5%**. For
 broader academic coverage (MMLU), the margin is still tight: **91.8%** (OpenAI o1-1217) vs. **90.8%** (DeepSeek-R1),
@@ -74,11 +74,11 @@ indicating near-parity in multitask language understanding.
 
 {{< related-posts >}}
 
-## DeepSeek R1 Model
+## DeepSeek R1 model
 
 DeepSeek R1 is a large language model developed with a strong focus on reasoning tasks. It excels at problems requiring multi-step analysis and logical thinking. Unlike typical models that rely heavily on Supervised Fine-Tuning (SFT), DeepSeek R1 uses Reinforcement Learning (RL) as its primary training strategy. This emphasis on RL empowers it to figure out solutions with greater independence.
 
-## What Are Distilled Models?
+## What Are Distilled models?
 
 Besides the main model, DeepSeek AI has introduced distilled versions in various parameter sizes—1.5B, 7B, 8B, 14B, 32B, and 70B. These distilled models draw on Qwen and Llama architectures, preserving much of the original model’s reasoning capabilities while being more accessible for personal computer use.
 
@@ -86,7 +86,7 @@ Notably, the 8B and smaller models can operate on standard CPUs, GPUs, or Apple 
 
 That's why I decided to run DeepSeek on an AWS EC2 instance using Pulumi. I wanted to see how easy it is to set up and run DeepSeek on the cloud using Infrastructure as Code (IaC). So, let's get started!
 
-## Setting Up the Environment
+## Setting up the environment
 
 ### Prerequisites
 
@@ -120,13 +120,13 @@ pulumi new aws-<language>
 
 Please choose the [language you are most comfortable with](/docs/iac/languages-sdks/).
 
-This will create a new Pulumi project with the necessary files and configurations and a sample code. In our example code, it will also install the [AWS provider](/registry/packages/aws/) for us.
+This will create a new Pulumi project with the necessary files and configurations and a sample code. In our example code, it will also install the [AWS provider](/registry/packages/aws/) for you.
 
-Ase we are not going to use the sample code, so you can delete it. You can then copy & paste the following code snippets to your Pulumi project.
+Since you will not be using the sample code, feel free to delete it. After that, you can copy and paste the following code snippets into your Pulumi project.
 
-#### Create an Instance Role with S3 Access
+#### Create an instance role with S3 access
 
-To download the NVIDIA drivers we need to create an instance role with S3 access. Copy the following code to your Pulumi project:
+To download the NVIDIA drivers needed to create an instance role with S3 access. Copy the following code to your Pulumi project:
 
 {{< chooser language "typescript,python,go,csharp,yaml" />}}
 
@@ -174,7 +174,7 @@ To download the NVIDIA drivers we need to create an instance role with S3 access
 
 {{% /choosable %}}
 
-#### Create the Network
+#### Create the network
 
 Next, we need to create a VPC, subnet, Internet Gateway, and route table. Copy the following code to your Pulumi project:
 
@@ -226,7 +226,7 @@ Next, we need to create a VPC, subnet, Internet Gateway, and route table. Copy t
 
 {{% /choosable %}}
 
-#### Create the EC2 Instance
+#### Create the EC2 instance
 
 Finally, we need to create the EC2 instance. For this, we need to create our SSH key pair and retrieve the Amazon Machine Images to use in our instances. We are going to use `Amazon Linux`, as it is the most common and has all the necessary packages installed for us.
 
@@ -288,7 +288,7 @@ ssh-keygen -f mykey.pub -i -mPKCS8 > deepseek.pem
 
 {{% /choosable %}}
 
-#### Install Ollama and Run DeepSeek
+#### Install Ollama and run DeepSeek
 
 After we set up all the infrastructure needed for our GPU-powered EC2 instance, we can install Ollama and run DeepSeek. This will all be done as part of the user data script we pass to the EC2 instance.
 
@@ -331,19 +331,19 @@ runcmd:
 
 {{< related-posts >}}
 
-#### Using DeepSeek Models via Ollama
+#### Using DeepSeek models via Ollama
 
 DeepSeek provides a diverse range of models in the Ollama library, each tailored to different resource requirements and use cases. Below is a concise overview:
 
-##### Model Sizes
+##### Model sizes
 
 The library offers models in sizes like 1.5B, 7B, 8B, 14B, 32B, 70B, and even 671B parameters (where “B” indicates billions). While larger models tend to deliver stronger performance, they also demand more computational power.
 
-##### Quantized Models
+##### Quantized models
 
 Certain DeepSeek models come in quantized variants (for example, q4_K_M or q8_0). These are optimized to use less memory and may run faster, though there can be a minor trade-off in quality.
 
-##### Distilled Versions
+##### Distilled versions
 
 DeepSeek also releases distilled models (e.g., qwen-distill, llama-distill). These versions are lighter, having been trained to mimic the behavior of larger models and offering a more balanced mix of performance and resource efficiency.
 
@@ -364,7 +364,7 @@ In our case, we will pull the 7B model:
 ollama pull deepseek-r1:7b
 ```
 
-### Deploy the Infrastructure
+### Deploy the infrastructure
 
 Before deploying the infrastructure, make sure you have the necessary AWS credentials set up. You can do this by running the following command:
 
@@ -445,9 +445,9 @@ Resources:
 Duration: 42s
 ```
 
-While the infrastructure is relatively quick installed, the user data script will take some time to download the necessary packages and run the containers.
+While the infrastructure is relatively quickly deployed, the user data script will take some time to download the necessary packages and run the containers.
 
-You can check that that everything is up and running by either connection via `ssh` to the instance or navigating to the public IP address of the instance in your browser.
+You can check that everything is up and running by either connecting via `ssh` to the instance or navigating to the public IP address of the instance in your browser.
 
 ```
 ssh -i deepseek.pem ec2-user@<instance-public-ip>
@@ -463,7 +463,7 @@ bf4bb3b7ede1   ollama/ollama                        "/bin/ollama serve"   8 minu
 [ec2-user@ip-10-0-58-122 ~]$
 ```
 
-### Accessing the Web UI
+### Accessing the web UI
 
 When the EC2 instance is up and running and the containers are started, you can access the Ollama Web UI by navigating to `http://<ec2-public-ip>:3000`.
 
@@ -477,15 +477,15 @@ We can give it a spin by running a few queries. For example, we can ask DeepSeek
 
 ![img_6.png](img_6.png)
 
-What is nice also on DeepSeek is that we can also see the reasoning behind the answer. This is very helpful to understand how the model came to the conclusion.
+What is nice about DeepSeek is that we can also see the reasoning behind the answer. This is very helpful to understand how the model came to a conclusion.
 
-### Accessing DeepSeek with Ollama OpenAI-Compatible API
+### Accessing DeepSeek with Ollama OpenAI-compatible API
 
 Ollama provides an OpenAI-compatible API that allows you to interact with DeepSeek models programmatically. This allows you to use existing OpenAI-compatible tools and applications with your local Ollama server.
 
 I am not going to cover how to use the API in this post, but you can find more information in the [Ollama documentation](https://github.com/ollama/ollama/blob/main/docs/api.md).
 
-### Cleaning Up
+### Cleaning up
 
 After you are done experimenting with DeepSeek, you can clean up the resources by running the following command:
 
