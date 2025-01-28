@@ -6,7 +6,7 @@ description: |
 meta_desc: Learn how Panther Labs worked with Pulumi to increase deployment speeds by 10x and reduce the size of its infrastructure codebase by over 50%.
 
 customer_name: Panther Labs
-customer_logo: /logos/customers/panther-labs-wordmark.svg
+customer_logo: /logos/customers/panther.svg
 customer_url: https://runpanther.io/
 
 quote_block:
