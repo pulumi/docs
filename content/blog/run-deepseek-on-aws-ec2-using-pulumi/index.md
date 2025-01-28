@@ -325,7 +325,7 @@ runcmd:
 - systemctl restart docker
 - docker run -d --gpus=all -v ollama:/root/.ollama -p 11434:11434 --name ollama --restart always ollama/ollama
 - sleep 120
-- docker exec -it ollama ollama pull deepseek-r1:7b
+- docker exec ollama ollama pull deepseek-r1:7b
 - docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:main
 ```
 
