@@ -8,167 +8,208 @@ weight: 2
 estimated_time: 5
 ---
 
----
-
 ## Test the Policy Pack
 
-Now that you’ve created your Policy Pack, let’s see it in action. We’ll create some AWS resources that violate the policies, run the Policy Pack to check compliance, and then fix the resources to adhere to the policies.
+In the previous step we created a custom policy pack. Now, let's see it in action. We'll create some AWS resources that violate the policies, run our custom policy pack to check compliance, and then fix the resources to adhere to the policies.
 
 ### Step 1: Create Non-Compliant Resources
 
-Below are examples of non-compliant resources defined in Pulumi. Save these in a file, e.g., `non_compliant_resources.py` or `non_compliant_resources.ts`, based on your language preference.
+First, create a new Pulumi project from a template:
 
 {{< chooser language "typescript,python" />}}
 
 {{% choosable language typescript %}}
 
+```sh
+$ mkdir custom-policy-pack-integration-test-typescript && cd custom-policy-pack-integration-test-typescript
+$ pulumi new aws-typescript
+```
+
+Follow the prompts as usual to set up your project.
+
+Below are examples of non-compliant resources defined in Pulumi. Replace to contents of `index.ts` with this code.
+
 ```typescript
-import * as aws from "@pulumi/aws";
-
-// S3 bucket without versioning enabled
-const s3Bucket = new aws.s3.Bucket("nonCompliantBucket", {
-    versioning: {
-        enabled: false, // Policy violation
-    },
-});
-
-// EC2 instance with a non-compliant instance type
-const ec2Instance = new aws.ec2.Instance("nonCompliantInstance", {
-    instanceType: "m5.large", // Policy violation
-    ami: "ami-0c55b159cbfafe1f0", // Replace with a valid AMI ID
-});
-
-// Resource with no tags
-const untaggedResource = new aws.s3.Bucket("untaggedBucket", {
-    tags: {}, // Policy violation
-});
+{{< example-program-snippet path="custom-policy-pack-integration-test-typescript" file="index.non-compliant.ts" language="typescript" >}}
 ```
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
+```sh
+$ mkdir custom-policy-pack-integration-test-python && cd custom-policy-pack-integration-test-python
+$ pulumi new aws-python
+```
+
+Follow the prompts as usual to set up your project.
+
+Below are examples of non-compliant resources defined in Pulumi. Replace to contents of `__main__.py` with this code.
+
 ```python
-import pulumi_aws as aws
-
-# S3 bucket without versioning enabled
-s3_bucket = aws.s3.Bucket("nonCompliantBucket",
-    versioning={
-        "enabled": False,  # Policy violation
-    }
-)
-
-# EC2 instance with a non-compliant instance type
-ec2_instance = aws.ec2.Instance("nonCompliantInstance",
-    instance_type="m5.large",  # Policy violation
-    ami="ami-0c55b159cbfafe1f0",  # Replace with a valid AMI ID
-)
-
-# Resource with no tags
-untagged_resource = aws.s3.Bucket("untaggedBucket",
-    tags={}  # Policy violation
-)
+{{< example-program-snippet path="custom-policy-pack-integration-test-python" file="non-compliant.py" language="python" >}}
 ```
 
 {{% /choosable %}}
+
+This Pulumi project defines an S3 Bucket, a Security Group, and an EC2 instance. As written, these violate our custom policies in the following ways:
+
+- The Bucket has a `tag` property, but it's empty.
+- The Bucket has a non-compliant prefix.
+- The Security Group has no `tags` property.
+- The EC2 instance uses a non-compliant instance type.
+
+So, if we run `pulumi preview` on these with our custom policy pack applied, we should see four policy violations. Let's try it!
 
 ### Step 2: Run the Policy Pack
 
-Run `pulumi up` in the directory where you defined the non-compliant resources. Pulumi will evaluate the Policy Pack against these resources and report any violations.
-
-```bash
-pulumi up
-```
-
-Example output for violations:
-
-```plaintext
-Policy violations:
-- s3-versioning-enabled: S3 buckets must have versioning enabled.
-- ec2-instance-type-restricted: EC2 instances must use the 't2.micro' instance type.
-- all-resources-must-have-tags: All resources must have at least one tag.
-```
-
-### Step 3: Fix the Resources
-
-Update the resources to comply with the policies.
+From the root of the Pulumi project, run `pulumi preview` with the `--policy-pack` option, pointing to the directory containing our custom policies. Pulumi will evaluate the policy pack against these resources and report any violations.
 
 {{< chooser language "typescript,python" />}}
 
 {{% choosable language typescript %}}
 
-```typescript
-// S3 bucket with versioning enabled
-const compliantS3Bucket = new aws.s3.Bucket("compliantBucket", {
-    versioning: {
-        enabled: true, // Compliant
-    },
-});
+```sh
+$ pulumi preview --policy-pack ../custom-policy-pack-typescript
+Loading policy packs...
 
-// EC2 instance with a compliant instance type
-const compliantEc2Instance = new aws.ec2.Instance("compliantInstance", {
-    instanceType: "t2.micro", // Compliant
-    ami: "ami-0c55b159cbfafe1f0", // Replace with a valid AMI ID
-});
+     Type                      Name                                                Plan
+ +   pulumi:pulumi:Stack       custom-policy-pack-integration-test-typescript-dev  create
+ +   ├─ aws:s3:BucketV2        my-bucket                                           create
+ +   ├─ aws:ec2:Instance       web-server                                          create
+ +   └─ aws:ec2:SecurityGroup  ssh-security-group                                  create
 
-// Resource with tags
-const taggedResource = new aws.s3.Bucket("taggedBucket", {
-    tags: {
-        Environment: "Production", // Compliant
-    },
-});
+Policies:
+    ❌ custom-policy-pack@v0.0.1 (local: ../custom-policy-pack-typescript)
+        - [mandatory]  all-aws-resources-must-have-tags  (aws:ec2/securityGroup:SecurityGroup: ssh-security-group)
+          Ensures all AWS resources have at least one tag.
+          All AWS resources must have at least one tag.
+        - [mandatory]  all-aws-resources-must-have-tags  (aws:s3/bucketV2:BucketV2: my-bucket)
+          Ensures all AWS resources have at least one tag.
+          All AWS resources must have at least one tag.
+        - [mandatory]  ec2-instance-type-restricted  (aws:ec2/instance:Instance: web-server)
+          Ensures EC2 instances use approved instance type.
+          Invalid instance type: 't3.micro'. EC2 instances must use 't2.micro' instance type.
+        - [mandatory]  s3-product-prefix  (aws:s3/bucketV2:BucketV2: my-bucket)
+          Ensures S3 buckets have the correct product prefix.
+          Invalid prefix: 'something-unexpected-'. S3 buckets must use 'myproduct-' prefix.
 ```
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
+```sh
+$ pulumi preview --policy-pack ../custom-policy-pack-python
+
+Loading policy packs...
+
+     Type                      Name                                            Plan
+ +   pulumi:pulumi:Stack       custom-policy-pack-integration-test-python-dev  create
+ +   ├─ aws:s3:BucketV2        my-bucket                                       create
+ +   ├─ aws:ec2:Instance       web-server                                      create
+ +   └─ aws:ec2:SecurityGroup  ssh-security-group                              create
+
+Policies:
+    ❌ custom-policy-pack@v0.0.1 (local: ../custom-policy-pack-python)
+        - [mandatory]  all-aws-resources-must-have-tags  (aws:ec2/securityGroup:SecurityGroup: ssh-security-group)
+          Ensures all AWS resources have at least one tag.
+          All AWS resources must have at least one tag.
+        - [mandatory]  all-aws-resources-must-have-tags  (aws:s3/bucketV2:BucketV2: my-bucket)
+          Ensures all AWS resources have at least one tag.
+          All AWS resources must have at least one tag.
+        - [mandatory]  ec2-instance-type-restricted  (aws:ec2/instance:Instance: web-server)
+          Ensures EC2 instances use approved instance type.
+          Invalid instance type: 't3.micro'. EC2 instances must use 't2.micro' instance type.
+        - [mandatory]  s3-product-prefix  (aws:s3/bucketV2:BucketV2: my-bucket)
+          Ensures S3 buckets have the correct product prefix.
+          Invalid prefix: 'something-unexpected-'. S3 buckets must use 'myproduct-' prefix.
+```
+
+{{% /choosable %}}
+
+### Step 3: Fix the Resources
+
+Ok, now that we see the expected violations, let's update the resources to comply with the policies.
+
+We need to:
+
+- Update the Bucket to use the correct prefix: `myproduct-`
+- Update the Bucket to have at least one tag
+- Update the Security Group to have at least one tag
+- Update the EC2 instance to use the correct instance type: `t2.micro`
+
+{{< chooser language "typescript,python" />}}
+
+{{% choosable language typescript %}}
+
+Replace to contents of `index.ts` with this code.
+
 ```python
-# S3 bucket with versioning enabled
-compliant_s3_bucket = aws.s3.Bucket("compliantBucket",
-    versioning={
-        "enabled": True,  # Compliant
-    }
-)
+{{< example-program-snippet path="custom-policy-pack-integration-test-typescript" file="index.ts" language="typescript" >}}
+```
 
-# EC2 instance with a compliant instance type
-compliant_ec2_instance = aws.ec2.Instance("compliantInstance",
-    instance_type="t2.micro",  # Compliant
-    ami="ami-0c55b159cbfafe1f0",  # Replace with a valid AMI ID
-)
+{{% /choosable %}}
 
-# Resource with tags
-tagged_resource = aws.s3.Bucket("taggedBucket",
-    tags={
-        "Environment": "Production",  # Compliant
-    }
-)
+{{% choosable language python %}}
+
+Replace to contents of `__main__.py` with this code.
+
+```python
+{{< example-program-snippet path="custom-policy-pack-integration-test-python" file="__main__.py" language="python" >}}
 ```
 
 {{% /choosable %}}
 
 ### Step 4: Verify Compliance
 
-Run `pulumi up` again. This time, no policy violations should be reported.
+Run `pulumi preview` again. This time, no policy violations should be reported.
 
-```bash
-pulumi up
+{{< chooser language "typescript,python" />}}
+
+{{% choosable language typescript %}}
+
+```sh
+$ pulumi preview --policy-pack ../custom-policy-pack-typescript
+
+Loading policy packs...
+
+     Type                      Name                                                Plan
+ +   pulumi:pulumi:Stack       custom-policy-pack-integration-test-typescript-dev  create
+ +   ├─ aws:s3:BucketV2        my-bucket                                           create
+ +   ├─ aws:ec2:Instance       web-server                                          create
+ +   └─ aws:ec2:SecurityGroup  ssh-security-group                                  create
+
+Policies:
+    ✅ custom-policy-pack@v0.0.1 (local: ../custom-policy-pack-typescript)
 ```
 
-Expected output:
+{{% /choosable %}}
 
-```plaintext
-Resources:
-    3 created
+{{% choosable language python %}}
 
-No policy violations found. The deployment is compliant with all policies.
+```sh
+$ pulumi preview --policy-pack ../custom-policy-pack-python
+
+Loading policy packs...
+
+     Type                      Name                                            Plan
+ +   pulumi:pulumi:Stack       custom-policy-pack-integration-test-python-dev  create
+ +   ├─ aws:s3:BucketV2        my-bucket                                       create
+ +   ├─ aws:ec2:Instance       web-server                                      create
+ +   └─ aws:ec2:SecurityGroup  ssh-security-group                              create
+
+Policies:
+    ✅ custom-policy-pack@v0.0.1 (local: ../custom-policy-pack-python)
 ```
 
-Congratulations! You’ve successfully created and tested a Policy Pack with Pulumi CrossGuard.
+{{% /choosable %}}
+
+Congratulations! You've successfully created and tested a policy pack with Pulumi CrossGuard.
 
 ## Next Steps
 
-You have successfully created, deployed, and tested a custom policy pack. To learn more about using Pulumi CrossGuard and policies, explore the following:
+To learn more about using Pulumi CrossGuard and policies, explore the following:
 
 - [Pulumi Crossguard: Policy as Code Documentation](https://www.pulumi.com/docs/guides/crossguard/)
 - [Advanced Policy Examples](https://github.com/pulumi/examples/tree/master/policy)

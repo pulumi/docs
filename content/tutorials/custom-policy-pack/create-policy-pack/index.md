@@ -10,9 +10,9 @@ estimated_time: 5
 
 In this step, we'll create a policy pack to enforce the following rules for AWS resources:
 
-1. S3 buckets must have versioning enabled.
+1. S3 buckets must be prefixed with the product name `myproduct-`.
 2. EC2 instances must use the `t2.micro` instance type.
-3. All resources must have at least one tag defined.
+3. All AWS resources must have at least one tag defined.
 
 ### Set up your policy pack project
 
@@ -43,20 +43,20 @@ pulumi policy new aws-python
 
 {{% /choosable %}}
 
-This will initialize your project, creating the necessary files and module dependencies to interact with AWS resources.
-
+This will initialize your project, creating the necessary files for Pulumi to use this as a policy, including module dependencies to the providers that will let us interact with AWS resources.
 
 ### Define Policies
 
-Policies are written in Python or TypeScript. Like Pulumi Programs, you can use the full power of your preferred language, including standard features like leveraging third-party modules, using sophisticated conditional logic and control flow, validating with unit testing frameworks, and everything else available to you as a developer.
+Policies are written in Python or TypeScript. Like Pulumi Programs, you can use the full power of your preferred language, including standard features like leveraging third-party modules, using conditional logic and control flow, and can be validated with unit testing frameworks.
 
-By default the template sets up a simple policy example that prevents S3 buckets from being publically readable:
+By default the template sets up an example *resource policy* that prevents S3 buckets from being publically readable:
 
 {{< chooser language "typescript,python" />}}
 
 {{% choosable language typescript %}}
 
 **File: `custom-policy-pack/index.ts`**
+
 ```typescript
 import * as aws from "@pulumi/aws";
 import { PolicyPack, validateResourceOfType } from "@pulumi/policy";
@@ -82,6 +82,7 @@ new PolicyPack("aws-typescript", {
 {{% choosable language python %}}
 
 **File: `custom-policy-pack/__main__.py`**
+
 ```python
 from pulumi_policy import (
     EnforcementLevel,
@@ -102,24 +103,26 @@ def s3_no_public_read_validator(args: ResourceValidationArgs, report_violation: 
 s3_no_public_read = ResourceValidationPolicy(
     name="s3-no-public-read",
     description="Prohibits setting the publicRead or publicReadWrite permission on AWS S3 buckets.",
+    enforcement_level=EnforcementLevel.MANDATORY,
     validate=s3_no_public_read_validator,
 )
 
 PolicyPack(
     name="aws-python",
-    enforcement_level=EnforcementLevel.MANDATORY,
     policies=[
         s3_no_public_read,
     ],
 )
 ```
+
 {{% /choosable %}}
 
-Here you can see the basic structure of a policy pack: 
+Here you can see the basic structure of a policy pack:
+
 - Some imports from the Pulumi Crossguard SDK
 - a *function* that implements the policy
 - a *policy* definition that wraps the implementation and describes the policy
-- a *policy pack* definition that defines the policies to use, and at what level to enforce them
+- a *policy pack* definition that packages the policies together
 
 While this example is a useful policy, it's not what we need right now. Let's delete all of that code and create some new custom policies.
 
@@ -130,74 +133,45 @@ While this example is a useful policy, it's not what we need right now. Let's de
 Replace the contents of `index.ts` with the following:
 
 ```typescript
-import { ResourceValidationPolicy, PolicyPack, ReportViolation } from "@pulumi/policy";
-
-// Policy: Ensure S3 buckets have versioning enabled
-const s3VersioningEnabled = new ResourceValidationPolicy("s3-versioning-enabled", {
-    description: "Ensures S3 buckets have versioning enabled.",
-    validate: (args, reportViolation: ReportViolation) => {
-        if (args.type === "aws:s3/bucket:Bucket") {
-            const versioning = args.props.versioning || {};
-            if (!versioning.enabled) {
-                reportViolation("Policy Violation: S3 buckets must have versioning enabled.");
-            }
-        }
-    },
-});
-
-// Policy: Restrict EC2 instance types
-const ec2InstanceTypeRestricted = new ResourceValidationPolicy("ec2-instance-type-restricted", {
-    description: "Ensures EC2 instances use 't2.micro' instance type.",
-    validate: (args, reportViolation: ReportViolation) => {
-        if (args.type === "aws:ec2/instance:Instance") {
-            const instanceType = args.props.instanceType || "";
-            if (instanceType !== "t2.micro") {
-                reportViolation("Policy Violation: EC2 instances must use the 't2.micro' instance type.");
-            }
-        }
-    },
-});
-
-// Policy: Ensure all resources have at least one tag
-const allResourcesMustHaveTags = new ResourceValidationPolicy("all-resources-must-have-tags", {
-    description: "Ensures all resources have at least one tag.",
-    validate: (args, reportViolation: ReportViolation) => {
-        const tags = args.props.tags || {};
-        if (Object.keys(tags).length === 0) {
-            reportViolation("Policy Violation: All resources must have at least one tag.");
-        }
-    },
-});
-
-// Create and export the policy pack
-new PolicyPack("custom-policy-pack", {
-    enforcementLevel: "mandatory",
-    policies: [
-        s3VersioningEnabled,
-        ec2InstanceTypeRestricted,
-        allResourcesMustHaveTags,
-    ],
-});
+{{< example-program-snippet path="custom-policy-pack-typescript" language="typescript">}}
 ```
 
 Here we define three different policies:
-- **s3-versioning-enabled**: Ensures S3 buckets have versioning enabled by checking the `versioning` property on all `aws:s3/bucket:Bucket` resources.
+
+- **s3-product-prefix**: Ensures S3 buckets are prefixed with the product name by checking the `bucketPrefix` property on all `aws:s3/bucket:BucketV2` resources.
 - **ec2-instance-type-restricted**: Restricts EC2 instance types to only use the affordable `t2.micro` type, by checking the `instanceType` property on all `aws:ec2/instance:Instance` resources.
-- **all-resources-must-have-tags**: Ensure all resources have at least one tag by checking the `tags` property on all taggable resources, of all types.
+- **all-aws-resources-must-have-tags**: Ensures all AWS resources have at least one tag by checking the `tags` property on all resources who's type starts with `aws`.
 
 Each of the policies uses the same pattern:
-1. Check the *resource type* by inspecting `args.type` to filter for only the resources we want to check. 
-The way Crossguard policies work, every resource in the project will be passed to every policy, so, for performance purposes, the first step should always be to check the resource type(s) to make sure its something you want to act on. 
-1. Check one or more properties on the resource using `args.props`. We always check that the property exists first, and then inspect/validate the value of the property.
-1. If there is a problem with the property value or some other aspect of the resource is out of compliance, we use the `reportViolation` function from the Crossguard SDK to throw an error. The error message should be a full sentence and give useful information on how to remediate the problem.
 
-A note on strong typing: In the above example, we are not typing the The Crossguard SDK for TypeScript allows you to use strong typing by referenci
+1. Define a `ResourceValidationPolicy` with a bit of metadata and a validation function. Each policy can have an individual enforcement level, name, and description.
+1. The validation function is defined inline using the `validateResourceOfType` helper function. The way Crossguard *resource policies* work, each resource in the project will be passed to every policy in the pack. This strongly-typed helper function creates a filter that checks the resource type (e.g. `aws.ec2.Instance` from the `pulumi-aws` provider library) and will only run the validation function on resources that match the type.
+1. The validation functions take an instance of the resource, an args property bag, and a function for reporting policy violations. Inside the validation function, we can check one or more properties on the strongly-typed resource instance.
+1. If there is a problem with the a property value, or some other aspect of the resource is out of compliance, we use the `reportViolation` function that was passed in to indicate that there's a problem. The error message should be a full sentence and give useful information on how to remediate the problem.
+
+What's great about the strong typing in our SDK is that your IDE's intellisense knows the type defintion and can give you dot-completion for properties on the resource instance, so there's no guessing about what the property is called, or what its type should be.
+
+That said, sometimes you might need to write a policy that works against more than one resource type. For example, the `all-aws-resources-must-have-tags` policy checks every kind of AWS resource. In this case, instead of using the `validateResourceOfType` helper function, we just pass the anonymous function directly. Then, in the function we need to check the resource type *as a string* by inspecting the value of `args.type`.
+
+If you're not sure what the correct resource type string is for your particular set of resources, you can run `pulumi stack` to list the resources in your current stack. The `TYPE` column of the output contains the same resource types strings that you would use to filter on inside of a policy. In our above example, we apply the policy to any resource who's type starts with `aws`.
+
+```sh
+$ pulumi stack
+[...]
+Current stack resources (5):
+    TYPE                                    NAME
+    pulumi:pulumi:Stack                     custom-policy-pack-integration-test-dev
+    ├─ aws:s3/bucketV2:BucketV2             my-bucket
+    ├─ aws:ec2/securityGroup:SecurityGroup  ssh-security-group
+    ├─ aws:ec2/instance:Instance            web-server
+    └─ pulumi:providers:aws                 default_6_65_0
+```
+
+Finally we assemble the policies into a policy pack object, giving it the name `custom-policy-pack`.
 
 {{% notes type="tip" %}}
-**Writing Testable Code**: We've structured this code to be a little bit more readable than the template example. Instead of defining everything in one big nested object, we break each policy out into its own definition and then assemble the policy pack at the end. However, this still isn't very testable code. The implementation functions are anonymous lambda functions that are defined inline when setting the `validate` property of the `ResourceValidationPolicy` wrapper. Instead, you could pull that anonymous function out and give it a name, then write unit tests against each function. We'll leave that as an exercise for the reader.
+**Writing Testable Code**: We've structured this code to be a little bit more readable than the template example, and also more testable. Instead of defining everything in one big nested object, we break each policy out into its own definition and then assemble the policy pack at the end. We use the `export` keyword to make these policies available to the testing framework (although not technically necessary for the policy pack itself). Have a look at the `tests` directory to see an example of writing tests for each policy.
 {{% /notes %}}
-
-Finally we assemble the policies into a policy pack object, giving a name `custom-policy-pack` and setting its `enforcementLevel` to `mandatory`. 
 
 {{% /choosable %}}
 
@@ -206,51 +180,48 @@ Finally we assemble the policies into a policy pack object, giving a name `custo
 Replace the contents of `__main__.py` with the following:
 
 ```python
-from pulumi_policy import ResourceValidationPolicy, PolicyPack, ReportViolation
-
-# Policy: Ensure S3 buckets have versioning enabled
-def s3_versioning_enabled(args, report_violation: ReportViolation):
-    if args.resource_type == "aws:s3/bucket:Bucket":
-        versioning = args.props.get("versioning", {})
-        if not versioning.get("enabled"):
-            report_violation("S3 buckets must have versioning enabled.")
-
-# Policy: Restrict EC2 instance types
-def ec2_instance_type_restricted(args, report_violation: ReportViolation):
-    if args.resource_type == "aws:ec2/instance:Instance":
-        instance_type = args.props.get("instanceType", "")
-        if instance_type != "t2.micro":
-            report_violation("EC2 instances must use the 't2.micro' instance type.")
-
-# Policy: Ensure all resources have at least one tag
-def all_resources_must_have_tags(args, report_violation: ReportViolation):
-    tags = args.props.get("tags", {})
-    if not tags:
-        report_violation("All resources must have at least one tag.")
-
-# Create and export the Policy Pack
-PolicyPack(
-    name="custom-policy-pack",
-    enforcement_level=EnforcementLevel.MANDATORY,
-    policies=[
-        ResourceValidationPolicy(
-            name="s3-versioning-enabled",
-            description="Ensures S3 buckets have versioning enabled.",
-            validate=s3_versioning_enabled,
-        ),
-        ResourceValidationPolicy(
-            name="ec2-instance-type-restricted",
-            description="Ensures EC2 instances use 't2.micro' instance type.",
-            validate=ec2_instance_type_restricted,
-        ),
-        ResourceValidationPolicy(
-            name="all-resources-must-have-tags",
-            description="Ensures all resources have at least one tag.",
-            validate=all_resources_must_have_tags,
-        ),
-    ],
-)
+{{< example-program-snippet path="custom-policy-pack-python" file="policies.py" language="python">}}
 ```
+
+Here we define three different policies:
+
+- **s3-product-prefix**: Ensures S3 buckets are prefixed with the product name by checking the `bucketPrefix` property on all `aws:s3/bucket:BucketV2` resources.
+- **ec2-instance-type-restricted**: Restricts EC2 instance types to only use the affordable `t2.micro` type, by checking the `instanceType` property on all `aws:ec2/instance:Instance` resources.
+- **all-aws-resources-must-have-tags**: Ensures all AWS resources have at least one tag by checking the `tags` property on all resources who's type starts with `aws`.
+
+Each of the policies uses the same pattern:
+
+1. Define a `ResourceValidationPolicy` with a bit of metadata and a validation function. Each policy can have an individual enforcement level, name, and description.
+1. The validation function is defined separately and takes as its inputs an `args` object of type `ResourceValidationArgs` and `report_violation`, a function of type `ReportViolation`. The `args` object contains information about the resource to test, and the `report_violation` function is used to report policy violations.
+1. The first step in a *resource policy* should always be to check the resource type using the `args.resource_type` property, to make sure it is something you want to act on. The way Crossguard *resource policies* work, each resource in the stack will be passed to every policy in the pack, so filtering out resources that don't relate to this check allows the policy engine to move on to the next policy/resource quickly.
+1. Inside the validation function, we can check one or more properties on via the `args.props` property bag.
+1. If there is a problem with the a property value, or some other aspect of the resource is out of compliance, we use the `reportViolation` function that was passed in to indicate that there's a problem. The error message should be a full sentence and give useful information on how to remediate the problem.
+
+If you're not sure what the correct resource type string is for your particular set of resources, you can run `pulumi stack` to list the resources in your current stack. The `TYPE` column of the output contains the same resource types strings that you would use to filter on inside of a policy.
+
+Sometimes you might need to write a policy that works against more than one type of resource. For example, the `all-aws-resources-must-have-tags` policy applies to every kind of AWS resource by checking if the resource type string starts with `aws`.
+
+```sh
+$ pulumi stack
+[...]
+Current stack resources (5):
+    TYPE                                    NAME
+    pulumi:pulumi:Stack                     custom-policy-pack-integration-test-dev
+    ├─ aws:s3/bucketV2:BucketV2             my-bucket
+    ├─ aws:ec2/securityGroup:SecurityGroup  ssh-security-group
+    ├─ aws:ec2/instance:Instance            web-server
+    └─ pulumi:providers:aws                 default_6_65_0
+```
+
+Finally we assemble the policies into a policy pack object in `__main__.py`, giving it the name `custom-policy-pack`.
+
+```python
+{{< example-program-snippet path="custom-policy-pack-python" file="__main__.py" language="python">}}
+```
+
+{{% notes type="tip" %}}
+**Writing Testable Code**: We've structured this code to be a little bit more readable and testable than the template example. The `PolicyPack` definition is in `__main__.py` while the policies are in `policies.py`. This allows us to import the policies into to the testing framework, without including the `PolicyPack`, which would cause a unit test run to hang. Have a look at the `policy_tests.py` file to see an example of writing tests for each policy.
+{{% /notes %}}
 
 {{% /choosable %}}
 
