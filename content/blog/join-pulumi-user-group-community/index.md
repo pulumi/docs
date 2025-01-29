@@ -15,7 +15,7 @@ We have a global community made up of people from many different countries, but 
 
 Members of PUGs will have access to a global network of experts who can offer help, advice, and support on using Pulumi effectively. The PUGs will also feature regular in-person meetups, webinars, in-person and virtual workshops, and other events to help members stay up-to-date with the latest cloud infrastructure and Pulumi developments.
 
-## 20 Pulumi User Groups (PUGs) Meetups in 9 countries
+## 23 Pulumi User Groups (PUGs) Meetups in 10 countries
 
 PUGs are led by Pulumi employees and [Puluminaries](/community/puluminaries/), who are passionate community members that are experts in topics related to cloud infrastructure, Pulumi Cloud, cloud-native software development, and much more, and are willing to share their knowledge with the community.
 
@@ -31,6 +31,8 @@ PUGs are led by Pulumi employees and [Puluminaries](/community/puluminaries/), w
 * [Columbus Pulumi User Group](https://www.meetup.com/columbus-pulumi-user-group/)
 * [Philadelphia Pulumi User Group](https://www.meetup.com/philadelphia-pulumi-user-group/)
 * [Boston Pulumi User Group](https://www.meetup.com/boston-pulumi-user-group)
+* [Detroit Pulumi User Group](https://www.meetup.com/detroit-pulumi-user-group)
+* [Nashville Pulumi User Group](https://www.meetup.com/nashville-pulumi-user-group)
 
 ### South America Pulumi User Groups
 
@@ -47,6 +49,7 @@ PUGs are led by Pulumi employees and [Puluminaries](/community/puluminaries/), w
 ### Asia Pulumi User Groups
 
 * [Tel Aviv Pulumi User Group](https://www.meetup.com/tel-aviv-pulumi-user-group/)
+* [Singapore Pulumi User Group](https://www.meetup.com/singapore-pulumi-user-group/)
 
 ### Oceania Pulumi User Groups
 
