@@ -37,7 +37,7 @@ const vpc = new aws.ec2.Vpc("deepSeekVpc", {
 const subnet = new aws.ec2.Subnet("deepSeekSubnet", {
     vpcId: vpc.id,
     cidrBlock: "10.0.48.0/20",
-    availabilityZone: "eu-central-1a",
+    availabilityZone: pulumi.interpolate`${aws.getAvailabilityZones().then(it => it.names[0])}`,
     mapPublicIpOnLaunch: true,
 });
 
