@@ -149,7 +149,7 @@ Each of the policies uses the same pattern:
 1. The validation functions take an instance of the resource, an args property bag, and a function for reporting policy violations. Inside the validation function, we can check one or more properties on the strongly-typed resource instance.
 1. If there is a problem with the property value, or some other aspect of the resource is out of compliance, we use the `reportViolation` function that was passed in to indicate that there's a problem. The error message should be a full sentence and give useful information on how to remediate the problem.
 
-What's great about the strong typing in our SDK is that your IDE's intellisense knows the type defintion and can give you dot-completion for properties on the resource instance, so there's no guessing about what the property is called, or what its type should be.
+What's great about the strong typing in our SDK is that your IDE's intellisense knows the type definition and can give you dot-completion for properties on the resource instance, so there's no guessing about what the property is called, or what its type should be.
 
 That said, sometimes you might need to write a policy that works against more than one resource type. For example, the `all-aws-resources-must-have-tags` policy checks every kind of AWS resource. In this case, instead of using the `validateResourceOfType` helper function, we just pass the anonymous function directly. Then, in the function we need to check the resource type *as a string* by inspecting the value of `args.type`.
 
