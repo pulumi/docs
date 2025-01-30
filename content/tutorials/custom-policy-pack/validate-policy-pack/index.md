@@ -44,7 +44,7 @@ $ pulumi new aws-python
 
 Follow the prompts as usual to set up your project.
 
-Below are examples of non-compliant resources defined in Pulumi. Replace to contents of `__main__.py` with this code.
+Below are examples of non-compliant resources defined in Pulumi. Replace the contents of `__main__.py` with this code.
 
 ```python
 {{< example-program-snippet path="custom-policy-pack-integration-test-python" file="non-compliant.py" language="python" >}}
