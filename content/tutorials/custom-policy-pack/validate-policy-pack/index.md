@@ -153,7 +153,7 @@ Replace to contents of `index.ts` with this code.
 
 {{% choosable language python %}}
 
-Replace to contents of `__main__.py` with this code.
+Replace the contents of `__main__.py` with this code.
 
 ```python
 {{< example-program-snippet path="custom-policy-pack-integration-test-python" file="__main__.py" language="python" >}}
