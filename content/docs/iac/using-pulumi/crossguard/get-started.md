@@ -167,8 +167,6 @@ You can find more example Policy Packs in the [examples repo](https://github.com
 
 ### Running Locally {#running-locally}
 
-TODO: this only applies to IaC. Insights is cloud-only.
-
 Now let's take a look at how to run the Policy Pack locally against a Pulumi program.
 
 {{< chooser language "typescript,python" >}}
@@ -329,7 +327,7 @@ Once you’ve validated the behavior of your policies, an organization administr
 
     The CLI by default enables the Policy Pack to your default Policy Group. If you would like to add the Policy Pack to a different Policy Group, you can use the `--policy-group` flag.
 
-TODO: May want to add a section about Policy Groups or link to the info under core-concepts.md
+Learn more about Policy Groups and other core concepts in the [Policy as Code core concepts](/docs/using-pulumi/crossguard/core-concepts/) documentation.
 
 ## Next Steps
 
