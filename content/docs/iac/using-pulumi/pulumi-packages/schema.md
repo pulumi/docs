@@ -390,7 +390,7 @@ Parameterized packages should populate `ParameterizationSpec` with concrete para
 read this section to emit SDKs that preserves the parameter values and communicates them back to the provider at runtime
 when the code is in use.
 
-Complex parameter values should be stored as base64-encoded JSON under `parameter`.
+Parameter values should be stored as a base64-encoded string under `parameter`.
 
 | Property       | Type                                    | Required | Description                                          |
 |----------------|-----------------------------------------|----------|------------------------------------------------------|
