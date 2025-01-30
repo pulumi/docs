@@ -1,7 +1,10 @@
-name: "Scheduled Jobs: Run Tests"
+name: "Run Example Code Tests"
 on:
   schedule:
     - cron: "0 8 * * *"
+  pull_request:
+    branches:
+      - master
   workflow_dispatch: {}
 
 env:
@@ -77,6 +80,9 @@ jobs:
 
       - name: Check out the code
         uses: actions/checkout@v3
+      
+      - name: Fetch master branch
+        run: git fetch origin master:master
 
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
@@ -96,3 +102,5 @@ jobs:
 
       - name: Run the tests
         run: make test
+        env:
+          TEST_MODE: ${{ github.event_name }}

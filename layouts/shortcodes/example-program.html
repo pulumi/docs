@@ -20,7 +20,15 @@
 {{ range $i, $language := split $languages "," }}
     {{ $range := split $language ":" }}
     {{ $language = index $range 0 }}
-    {{ $lineRange := split (index $range 1) "-" }}
+    {{ $specifiedFilename := "" }}
+    {{ $lineRange := "" }}
+    {{ $specifiesFilename := gt (len $range) 2 }}
+    {{ if $specifiesFilename }}
+        {{ $specifiedFilename = index $range 1 }}
+        {{ $lineRange = split (index $range 2) "-" }}
+    {{ else }}
+        {{ $lineRange = split (index $range 1) "-" }}
+    {{ end }}
     {{ $from := default 1 (index $lineRange 0) }}
     {{ $to := default 9999 (index $lineRange 1) }}
 
@@ -58,6 +66,10 @@
             {{ $deplang = "xml" }}
         {{ else if eq $language "yaml" }}
             {{ $program = "Pulumi.yaml" }}
+        {{ end }}
+        
+        {{ if ne $specifiedFilename "" }}
+            {{ $program = $specifiedFilename  }}
         {{ end }}
 
         {{ if ne $program "" }}
