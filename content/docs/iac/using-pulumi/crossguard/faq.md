@@ -30,15 +30,15 @@ Policy Packs enforced by the Pulumi Cloud are always run by the Pulumi CLI.
 
 Therefore, if a Policy Pack is specified locally using `--policy-pack`, the Pulumi CLI will run the local Policy Pack as well as the Policy Packs enforced by the Pulumi Cloud. A violation by any of the Policy Packs would halt an update.
 
-## What happens if a stack belongs to multiple Policy Groups?
+## What happens if a stack or account belongs to multiple Policy Groups?
 
-If a stack belongs to multiple Policy Groups, the Pulumi Cloud will aggregate all required Policy Packs from those Policy Groups. Only one of version of each Policy Pack will be run per update.
+If a stack or account belongs to multiple Policy Groups, the Pulumi Cloud will aggregate all required Policy Packs from those Policy Groups. Only one of version of each Policy Pack will be run per update.
 
 This means that if a stack belongs to multiple Policy Groups that specify different versions of a Policy Pack, only the newest version of that pack will be run. For example, if a stack `my-stack` belongs to Policy Group `production-stacks` that requires Policy Pack `aws-policies` version 2 and Policy Group `platform-stacks` that requires Policy Pack `aws-policies` version 4, only version 4 of `aws-policies` would be run. In the case that a stack has the same version of a Policy Pack with different configuration enabled, the most recently modified Policy Pack and configuration will be enforced.
 
 Under a stack's "Settings" tab you can take a look at the Policy Packs that would be enforced on a `preview` or `update` as well as the Policy Groups that the stack belongs to.
 
-![Stack Policy Settings](/images/docs/guides/crossguard/stack-policies.jpg)
+![Stack Policy Settings](/images/docs/guides/crossguard/stack-policies.png)
 
 ## How does Policy as Code work during a stack import or refresh?
 
@@ -48,9 +48,13 @@ During `pulumi refresh`, no resources are modified. This command updates the sta
 
 ## What happens if I add a Policy Pack that causes an existing resource to become out-of-compliance?
 
-The next preview or update of the stack with fail due to the policy violation. The stack will need to be fixed before it can be updated.
+For stacks:
 
-A stack with out-of-compliance resources can be destroyed.
+The next preview or update of the stack with fail due to the policy violation. The stack will need to be fixed before it can be updated. A stack with out-of-compliance resources can be destroyed.
+
+For accounts:
+
+A policy violation will be added to any account resources that are out of compliance. Policy violations for Insights resources are informational rather than preventative since the resource state is discovered, but not managed, by Pulumi.
 
 ## How do I version a Policy Pack?
 
