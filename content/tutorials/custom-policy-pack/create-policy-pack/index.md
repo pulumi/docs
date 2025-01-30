@@ -133,7 +133,7 @@ While this example is a useful policy, it's not what we need right now. Let's de
 Replace the contents of `index.ts` with the following:
 
 ```typescript
-{{< example-program-snippet path="custom-policy-pack-typescript" language="typescript">}}
+{{< example-program-snippet path="custom-policy-pack" language="typescript">}}
 ```
 
 Here we define three different policies:
@@ -170,7 +170,10 @@ Current stack resources (5):
 Finally we assemble the policies into a policy pack object, giving it the name `custom-policy-pack`.
 
 {{% notes type="tip" %}}
-**Writing Testable Code**: We've structured this code to be a little bit more readable than the template example, and also more testable. Instead of defining everything in one big nested object, we break each policy out into its own definition and then assemble the policy pack at the end. We use the `export` keyword to make these policies available to the testing framework (although not technically necessary for the policy pack itself). Have a look at the `tests` directory to see an example of writing tests for each policy.
+**Writing Testable Code**: We've structured this code to be a little bit more readable than the template example, and also more testable. Instead of defining everything in one big nested object, we break each policy out into its own definition and then assemble the policy pack at the end. We use the `export` keyword to make these policies available to the testing framework (although not technically necessary for the policy pack itself).
+
+Have a look at the [`tests`](https://github.com/pulumi/docs/blob/master/static/programs/custom-policy-pack-typescript/tests/) directory in the [full version of this example](https://github.com/pulumi/docs/blob/master/static/programs/custom-policy-pack-typescript/) to see how you can write unit tests for each policy.
+
 {{% /notes %}}
 
 {{% /choosable %}}
@@ -180,7 +183,7 @@ Finally we assemble the policies into a policy pack object, giving it the name `
 Replace the contents of `__main__.py` with the following:
 
 ```python
-{{< example-program-snippet path="custom-policy-pack-python" file="policies.py" language="python">}}
+{{< example-program-snippet path="custom-policy-pack" file="policies.py" language="python">}}
 ```
 
 Here we define three different policies:
@@ -216,11 +219,11 @@ Current stack resources (5):
 Finally we assemble the policies into a policy pack object in `__main__.py`, giving it the name `custom-policy-pack`.
 
 ```python
-{{< example-program-snippet path="custom-policy-pack-python" file="__main__.py" language="python">}}
+{{< example-program-snippet path="custom-policy-pack" file="__main__.py" language="python">}}
 ```
 
 {{% notes type="tip" %}}
-**Writing Testable Code**: We've structured this code to be a little bit more readable and testable than the template example. The `PolicyPack` definition is in `__main__.py` while the policies are in `policies.py`. This allows us to import the policies into to the testing framework, without including the `PolicyPack`, which would cause a unit test run to hang. Have a look at the `policy_tests.py` file to see an example of writing tests for each policy.
+**Writing Testable Code**: We've structured this code to be a little bit more readable and testable than the template example. In the [full version of this example](https://github.com/pulumi/docs/blob/master/static/programs/custom-policy-pack-python/), the `PolicyPack` definition is in [`__main__.py`](https://github.com/pulumi/docs/blob/master/static/programs/custom-policy-pack-python/__main__.py) while the policies are in [`policies.py`](https://github.com/pulumi/docs/blob/master/static/programs/custom-policy-pack-python/policies.py). This allows us to import the policies into to the testing framework, without including the `PolicyPack`, which would cause a unit test run to hang. Have a look at the [`policy_tests.py`](https://github.com/pulumi/docs/blob/master/static/programs/custom-policy-pack-python/policy_tests.py) file to see how you can write unit tests for each policy.
 {{% /notes %}}
 
 {{% /choosable %}}

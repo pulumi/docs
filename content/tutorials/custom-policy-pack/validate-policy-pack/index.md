@@ -30,7 +30,7 @@ Follow the prompts as usual to set up your project.
 Below are examples of non-compliant resources defined in Pulumi. Replace the contents of `index.ts` with this code.
 
 ```typescript
-{{< example-program-snippet path="custom-policy-pack-integration-test-typescript" file="index.non-compliant.ts" language="typescript" >}}
+{{< example-program-snippet path="custom-policy-pack-integration-test" file="index.non-compliant.ts" language="typescript" >}}
 ```
 
 {{% /choosable %}}
@@ -47,7 +47,7 @@ Follow the prompts as usual to set up your project.
 Below are examples of non-compliant resources defined in Pulumi. Replace the contents of `__main__.py` with this code.
 
 ```python
-{{< example-program-snippet path="custom-policy-pack-integration-test-python" file="non-compliant.py" language="python" >}}
+{{< example-program-snippet path="custom-policy-pack-integration-test" file="non_compliant.py" language="python" >}}
 ```
 
 {{% /choosable %}}
@@ -71,6 +71,7 @@ From the root of the Pulumi project, run `pulumi preview` with the `--policy-pac
 
 ```sh
 $ pulumi preview --policy-pack ../custom-policy-pack-typescript
+
 Loading policy packs...
 
      Type                      Name                                                Plan
@@ -146,7 +147,7 @@ We need to:
 Replace the contents of `index.ts` with this code.
 
 ```python
-{{< example-program-snippet path="custom-policy-pack-integration-test-typescript" file="index.ts" language="typescript" >}}
+{{< example-program-snippet path="custom-policy-pack-integration-test" file="index.ts" language="typescript" >}}
 ```
 
 {{% /choosable %}}
@@ -156,7 +157,7 @@ Replace the contents of `index.ts` with this code.
 Replace the contents of `__main__.py` with this code.
 
 ```python
-{{< example-program-snippet path="custom-policy-pack-integration-test-python" file="__main__.py" language="python" >}}
+{{< example-program-snippet path="custom-policy-pack-integration-test" file="__main__.py" language="python" >}}
 ```
 
 {{% /choosable %}}
