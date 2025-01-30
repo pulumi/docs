@@ -33,6 +33,19 @@ Then, initialize your project. Choose Python or TypeScript based on your preferr
 pulumi policy new aws-typescript
 ```
 
+This will create the following files and directories: 
+
+- `PulumiPolicy.yaml`: A [Pulumi project file](https://www.pulumi.com/docs/iac/concepts/projects/) that indicates this a policy pack.
+- `index.ts`: The TypeScript entry point where the policies will be defined in code.
+- `node_modules/`: The [NPM modules directory](https://docs.npmjs.com/cli/v9/configuring-npm/folders#node-modules)
+- `package-lock.json`: A list of the module dependencies used by [`npm`](https://docs.npmjs.com/cli/v11/configuring-npm/package-lock-json).
+- `package.json`: The [`npm` package description file](https://docs.npmjs.com/cli/v11/configuring-npm/package-json).
+- `tsconfig.json`: The [TypeScript configuration file](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html).
+
+{{% notes type="info" %}}
+In this example, we are using the [`aws-typescript`](https://github.com/pulumi/templates-policy/tree/master/aws-typescript) policy pack template. To see the full list of available policy pack templates, check out the [`pulumi/templates-policy`](https://github.com/pulumi/templates-policy) GitHub repository.
+{{% /notes %}}
+
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -40,6 +53,17 @@ pulumi policy new aws-typescript
 ```bash
 pulumi policy new aws-python
 ```
+
+This will create the following files and directories: 
+
+- `PulumiPolicy.yaml`: A [Pulumi project file](https://www.pulumi.com/docs/iac/concepts/projects/) that indicates this a policy pack.
+- `__main__.py`: The Python entry point where the policies will be defined in code. 
+- `requirements.txt`: A list of the module dependencies used by [`pip`](https://pip.pypa.io/en/stable/reference/requirements-file-format/).
+- `venv/`: The Python [virtual environment](https://docs.python.org/3/library/venv.html).
+
+{{% notes type="info" %}}
+In this example, we are using the [`aws-python`](https://github.com/pulumi/templates-policy/tree/master/aws-python) policy pack template. To see the full list of available policy pack templates, check out the [`pulumi/templates-policy`](https://github.com/pulumi/templates-policy) GitHub repository.
+{{% /notes %}}
 
 {{% /choosable %}}
 
