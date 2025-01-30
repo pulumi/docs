@@ -33,7 +33,7 @@ Then, initialize your project. Choose Python or TypeScript based on your preferr
 pulumi policy new aws-typescript
 ```
 
-This will create the following files and directories: 
+This will create the following files and directories:
 
 - `PulumiPolicy.yaml`: A [Pulumi project file](https://www.pulumi.com/docs/iac/concepts/projects/) that indicates this a policy pack.
 - `index.ts`: The TypeScript entry point where the policies will be defined in code.
@@ -54,10 +54,10 @@ In this example, we are using the [`aws-typescript`](https://github.com/pulumi/t
 pulumi policy new aws-python
 ```
 
-This will create the following files and directories: 
+This will create the following files and directories:
 
 - `PulumiPolicy.yaml`: A [Pulumi project file](https://www.pulumi.com/docs/iac/concepts/projects/) that indicates this a policy pack.
-- `__main__.py`: The Python entry point where the policies will be defined in code. 
+- `__main__.py`: The Python entry point where the policies will be defined in code.
 - `requirements.txt`: A list of the module dependencies used by [`pip`](https://pip.pypa.io/en/stable/reference/requirements-file-format/).
 - `venv/`: The Python [virtual environment](https://docs.python.org/3/library/venv.html).
 
