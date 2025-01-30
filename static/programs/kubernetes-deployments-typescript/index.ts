@@ -34,7 +34,7 @@ export const _ = nginxDeployment.metadata.name;
 
 let config = new pulumi.Config();
 
-const namespace = config.get("namespace") || "namespace";;
+const namespace = config.get("namespace") || "namespace";
 const nginxImage = config.get("nginxImage") || "nginx:latest";
 const replicas = config.getNumber("replicas") || 1;
 const numberOfDeployments = config.getNumber("numberOfDeployments") || 1;
