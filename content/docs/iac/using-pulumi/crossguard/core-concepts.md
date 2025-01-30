@@ -42,7 +42,7 @@ Policies may also define *remediations* to automatically fix violations rather t
 
 ### Insights Policies
 
-When used with Pulumi Insights account discovery, policies provide visibility into compliance issues across your entire cloud footprint regardless of how they were created such as with Terraform, CloudFormation, or click-ops. Policies are executed during each time your accounts are scanned. Policy violations can be viewed in the Pulumi Cloud via the Policy Violations page.
+When used with Pulumi Insights account discovery, policies provide visibility into compliance issues across your entire cloud footprint regardless of how they were created such as with Terraform, CloudFormation, or click-ops. Policies are executed whenever a scanned resource changes or the policy configuration is updated. Policy violations can be viewed in the Pulumi Cloud via the Policy Violations page.
 
 ### Policy Packs
 
