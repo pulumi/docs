@@ -143,7 +143,7 @@ We need to:
 
 {{% choosable language typescript %}}
 
-Replace to contents of `index.ts` with this code.
+Replace the contents of `index.ts` with this code.
 
 ```python
 {{< example-program-snippet path="custom-policy-pack-integration-test-typescript" file="index.ts" language="typescript" >}}
