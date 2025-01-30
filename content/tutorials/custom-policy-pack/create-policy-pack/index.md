@@ -147,7 +147,7 @@ Each of the policies uses the same pattern:
 1. Define a `ResourceValidationPolicy` with a bit of metadata and a validation function. Each policy can have an individual enforcement level, name, and description.
 1. The validation function is defined inline using the `validateResourceOfType` helper function. The way Crossguard *resource policies* work, each resource in the project will be passed to every policy in the pack. This strongly-typed helper function creates a filter that checks the resource type (e.g. `aws.ec2.Instance` from the `pulumi-aws` provider library) and will only run the validation function on resources that match the type.
 1. The validation functions take an instance of the resource, an args property bag, and a function for reporting policy violations. Inside the validation function, we can check one or more properties on the strongly-typed resource instance.
-1. If there is a problem with the a property value, or some other aspect of the resource is out of compliance, we use the `reportViolation` function that was passed in to indicate that there's a problem. The error message should be a full sentence and give useful information on how to remediate the problem.
+1. If there is a problem with the property value, or some other aspect of the resource is out of compliance, we use the `reportViolation` function that was passed in to indicate that there's a problem. The error message should be a full sentence and give useful information on how to remediate the problem.
 
 What's great about the strong typing in our SDK is that your IDE's intellisense knows the type defintion and can give you dot-completion for properties on the resource instance, so there's no guessing about what the property is called, or what its type should be.
 
