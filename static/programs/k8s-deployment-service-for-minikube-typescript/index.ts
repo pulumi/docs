@@ -1,6 +1,5 @@
-"use strict";
-const pulumi = require("@pulumi/pulumi");
-const k8s = require("@pulumi/kubernetes");
+import * as pulumi from "@pulumi/pulumi";
+import * as k8s from "@pulumi/kubernetes";
 
 const appName = "nginx";
 const appLabels = { app: appName };
@@ -16,7 +15,7 @@ const deployment = new k8s.apps.v1.Deployment(appName, {
 });
 
 const frontend = new k8s.core.v1.Service(appName, {
-    metadata: { labels: deployment.spec.template.metadata.labels },
+    metadata: { labels: appLabels },
     spec: {
         type: "ClusterIP",
         ports: [{ port: 80, targetPort: 80, protocol: "TCP" }],
