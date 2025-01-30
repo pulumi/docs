@@ -27,7 +27,7 @@ $ pulumi new aws-typescript
 
 Follow the prompts as usual to set up your project.
 
-Below are examples of non-compliant resources defined in Pulumi. Replace to contents of `index.ts` with this code.
+Below are examples of non-compliant resources defined in Pulumi. Replace the contents of `index.ts` with this code.
 
 ```typescript
 {{< example-program-snippet path="custom-policy-pack-integration-test-typescript" file="index.non-compliant.ts" language="typescript" >}}
