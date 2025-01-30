@@ -4,7 +4,46 @@ set -o errexit -o pipefail
 
 source ./scripts/programs/common.sh
 
+# The directory containing the example code programs to test.
 programs_dir="static/programs"
+
+# Directories that need to be tested
+dirs_to_test=( $(find "${programs_dir}" -maxdepth 1 -type d -not -path '*/\.*' -not -path "${programs_dir}") )
+# Track projects that failed tests
+failed_projects=()
+# Track projects that passed tests
+passing_projects=()
+
+# Get the list of changed directories in the static/programs directory. 
+if [[ "$TEST_MODE" == "pull_request" ]]; then
+
+    # Clear the dirs_to_test array  
+    dirs_to_test=()
+    # Get the list of changed directories in the static/programs directory.
+    git_changes="$(git diff --name-only master)"
+    # Filter out only the static/programs directories from the git diff output.
+    # Use or true to ignore grep errors when grep comes up empty.
+    grep_result="$(echo "$git_changes" | grep "^static/programs/" || true)"
+    # Extract only the program directory from the git diff output.
+    dirs="$(echo "$grep_result" | cut -d'/' -f3)"
+    # Pipe to sort and uniq to deduplicate the list of directories.
+    programs="$(echo "$dirs" | sort | uniq)"
+    
+    # If there are programs to test, add them to the dirs_to_test array.
+    if [[ -n "$programs" ]]; then
+        while IFS= read -r line; do
+            dirs_to_test+=("$line")
+        done <<< "$programs"
+    fi
+
+    echo "Number of programs to test: ${#dirs_to_test[@]}"
+
+    # Check if the array is empty and if it is exit.
+    if [[ ${#dirs_to_test[@]} -eq 0 ]]; then
+        echo "No new programs to test in static/programs directories."
+        exit 0
+    fi
+fi
 
 # Delete install artifacts.
 git clean -fdX "${programs_dir}/*"
@@ -24,13 +63,11 @@ else
     org="$(pulumi whoami -v --json | jq -r .user)"
 fi
 
-failed_projects=()
-passing_projects=()
-
 pushd "$programs_dir"
     found_first_program=false
 
-    for dir in */; do
+    # Iterate over the dirs_to_test array and test each program.
+    for dir in "${dirs_to_test[@]}"; do
         project="$(basename $dir)"
 
         # Optionally test only selected examples by setting an ONLY_TEST="<example-path>"
@@ -67,6 +104,20 @@ pushd "$programs_dir"
         echo "* $project"
         echo "***"
         echo
+
+        # Check for a Makefile. If one exists, run `make test`, otherwise,
+        # try to run as a Pulumi program
+        makefile="${project}/Makefile"
+        if [ -f "${makefile}" ]; then
+            echo "File ${makefile} exists. Running 'make test' in ${dir} "
+            if ! make -C ${project} test; then
+                failed_projects+=("$project")
+                continue
+            fi
+
+            passing_projects+=("$project")
+            continue
+        fi
 
         stack="dev"
         fqsn="${org}/${project}/${stack}"
@@ -165,5 +216,5 @@ if [ ${#failed_projects[@]} -ne 0 ]; then
     done
     exit 1
 else
-    echo "All projects completed successfully :)"
+    echo "All projects passed successfully :)"
 fi
