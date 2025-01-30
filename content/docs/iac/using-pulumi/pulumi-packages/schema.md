@@ -129,6 +129,7 @@ Complete schema examples that include a much wider range of schema configuration
 | `resources`         | [`map[Resource]`](#resource)               | No       | Resources is a map from type token to Resource that describes the set of resources defined by this package.                       |
 | `functions`         | [`map[Function]`](#function)               | No       | Functions is a map from token to Function that describes the set of functions defined by this package.                            |
 | `language`          | [`map[PackageLanguage]`](#packagelanguage) | No       | Language specifies additional language-specific data about the package.                                                           |
+| `parameterization`  | [`ParameterizationSpec`](#parameterizationspec) | No  | Specifies the parameters for the package to specialize a parameterized provider for a concrete use case.                          |
 
 ### Metadata
 
@@ -380,3 +381,25 @@ Not yet supported in any target languages.
 ### ObjectTypeLanguage
 
 Not yet supported in any target languages.
+
+### ParameterizationSpec
+
+NOTE: this is an advanced feature.
+
+Parameterized packages should populate `ParameterizationSpec` with concrete parameter values. Pulumi code generators
+read this section to emit SDKs that preserves the parameter values and communicates them back to the provider at runtime
+when the code is in use.
+
+Parameter values should be stored as a base64-encoded string under `parameter`.
+
+| Property       | Type                                    | Required | Description                                          |
+|----------------|-----------------------------------------|----------|------------------------------------------------------|
+| `baseProvider` | [`BaseProviderSpec`](#baseproviderspec) | No       | The base provider to parameterize.                   |
+| `parameter`    | `string`                                | No       | Base64-encoded string of provider parameters.        |
+
+### BaseProviderSpec
+
+| Property   | Type     | Required | Description                                                                     |
+|------------|----------|----------|---------------------------------------------------------------------------------|
+| `name`     | `string` | No       | The base provider name, such as "myprov" for a `pulumi-resource-myprov` binary. |
+| `version`  | `string` | No       | The base provider version, such as "1.2.3" without the leading "v".             |
