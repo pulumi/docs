@@ -285,18 +285,18 @@ Be sure to tidy up as before with `pulumi destroy` when you're done.
 
 In addition to the CLI, your users can also create new projects in the Pulumi Service with the [Deploy with Pulumi button](/docs/pulumi-cloud/pulumi-button/). This is a great option for making your project installable from GitHub READMEs and other team docs. Here, for example, is a Deploy button that creates a new project using my version of the gist we created above:
 
-[![Deploy with Pulumi](https://get.pulumi.com/new/button.svg)](https://app.pulumi.com/new?template=https://gist.github.com/cnunciato/b331efae6a4740c237a0364d17fe220f)
+[![Deploy with Pulumi](/images/deploy-with-pulumi/dark.svg)](https://app.pulumi.com/new?template=https://gist.github.com/cnunciato/b331efae6a4740c237a0364d17fe220f)
 
 Embedding these buttons yourself is easy --- just use one of the snippets below, swapping the values of `{template-url}` for the URL of your template's gist or Git repository:
 
 ```html
 <a href="https://app.pulumi.com/new?template={template-url}">
-    <img src="https://get.pulumi.com/new/button.svg" title="Deploy with Pulumi">
+    <img src="/images/deploy-with-pulumi/dark.svg" title="Deploy with Pulumi">
 </a>
 ```
 
 ```markdown
-[![Deploy with Pulumi](https://get.pulumi.com/new/button.svg)](https://app.pulumi.com/new?template={template-url})
+[![Deploy with Pulumi](/images/deploy-with-pulumi/dark.svg)](https://app.pulumi.com/new?template={template-url})
 ```
 
 Project creators who go down this path will be prompted in the browser for the same configuration values as they would with the CLI, and afterward, they'll be able to deploy the project either with the Pulumi CLI or with [Pulumi Deployments](https://www.pulumi.com/docs/pulumi-cloud/deployments/).
