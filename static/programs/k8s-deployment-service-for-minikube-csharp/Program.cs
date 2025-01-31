@@ -60,7 +60,7 @@ return await Deployment.RunAsync(() =>
         },
         Spec = new ServiceSpecArgs
         {
-            Type = "ClusterIP"
+            Type = "ClusterIP",
             Selector = appLabels,
             Ports = new ServicePortArgs
             {
