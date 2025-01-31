@@ -7,7 +7,7 @@ install:
 	./venv/bin/pip install -r requirements.txt
 
 test: ensure
-	./venv/bin/pytest --spec --disable-warnings
+	. venv/bin/activate; pytest --spec --disable-warnings policy_tests.py
 
 clean:
 	rm -rf venv
