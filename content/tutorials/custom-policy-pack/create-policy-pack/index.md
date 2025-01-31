@@ -67,7 +67,7 @@ In this example, we are using the [`aws-python`](https://github.com/pulumi/templ
 
 {{% /choosable %}}
 
-This will initialize your project, creating the necessary files for Pulumi to use this as a policy, including module dependencies to the providers that will let us interact with AWS resources.
+This will initialize your project, creating the necessary files for Pulumi to use as a policy, including module dependencies to the providers that will let us interact with AWS resources.
 
 ### Define Policies
 
