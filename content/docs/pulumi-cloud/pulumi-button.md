@@ -81,10 +81,12 @@ Or, the equivalent HTML:
 Pulumi provides both SVG and PNG versions of the button image at the following URLs in both light and dark themes:
 
 **Dark Theme**
+
 - `https://pulumi.com/images/deploy-with-pulumi/dark.svg`
 - `https://pulumi.com/images/deploy-with-pulumi/dark.png`
 
 **Light Theme**
+
 - `https://pulumi.com/images/deploy-with-pulumi/light.svg`
 - `https://pulumi.com/images/deploy-with-pulumi/light.png`
 
