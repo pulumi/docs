@@ -86,7 +86,7 @@ class MyStack : Stack
 
         var release = new Release("cloudnativepg", new ReleaseArgs
         {
-            Chart = "cloudnative-pg/cloudnative-pg",
+            Chart = "oci://ghcr.io/cloudnative-pg/charts/cloudnative-pg",
             Namespace = ns.Metadata.Apply(m => m.Name),
             CreateNamespace = true
         });
@@ -101,13 +101,8 @@ class MyStack : Stack
 
         var fluxOperator = new Release("flux-operator", new ReleaseArgs
         {
-            Chart = "flux-operator",
-            Version = "latest",
+            Chart = "oci://ghcr.io/controlplaneio-fluxcd/charts/flux-operator",
             Namespace = namespaceFluxSystem.Metadata.Apply(metadata => metadata.Name),
-            RepositoryOpts = new RepositoryOptsArgs
-            {
-                Repo = "oci://ghcr.io/controlplaneio-fluxcd/charts",
-            },
             CreateNamespace = true,
         });
         var namespaceKafka = new Namespace("kafka", new NamespaceArgs
@@ -121,7 +116,6 @@ class MyStack : Stack
         var strimziKafkaOperator = new Release("strimzi-kafka-operator", new ReleaseArgs
         {
             Chart = "strimzi-kafka-operator",
-            Version = "latest",
             Namespace = namespaceKafka.Metadata.Apply(ns => ns.Name),
             RepositoryOpts = new RepositoryOptsArgs
             {
@@ -195,7 +189,7 @@ class MyStack : Stack
                     { "fluxcd.controlplane.io/reconcileTimeout", "5m" },
                 }
             },
-            Spec =
+            Spec = new Dictionary<string, object>
             {
                 { "distribution", new Dictionary<string, object>
                     {
