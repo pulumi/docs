@@ -59,18 +59,35 @@ social:
 
 <!--more-->
 
+## List the major features introduced during v2
+
+- Intro: We minimize major versions to avoid disruption
+
+- Custom resources (phrase differently)
+  - WebApp slots
+  - Key Vault access policies
+  - Blob container legal holds
+  - Fileshare support in Recovery Services
+- Windows binaries are now signed
+- Maintain nested resources which are also settable on the parent resource #2755
+- Better diffs through support for "keyed arrays" (sets) #2968
+- Large investments in end-to-end testing, in particular for all authentication methods. (Does it look bad to call out that we _didn't_ have coverage before this?)
+- Retry Conflicts for AnotherOperationInProgress #3653
+
 ## SDK size
 
-## Refreshed default API versions
+Reduced by roughly 45%.
 
-## Expanded coverage (stats by modules and resources)
+## Refreshed default API versions
 
 ## Improved correctness
 
 - "Force new from subtypes" #3006
 - De-duplicating resources by API path
 - Skip flattening when properties clash #3195
+- Up to date module naming: Network, CosmosDB
 
 ## Migrating from 2.x to 3.x
 
 - All 2.x default API versions are preserved
+- **Clearly** point to the migration guide
