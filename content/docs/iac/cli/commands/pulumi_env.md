@@ -19,7 +19,7 @@ Opening an environment may involve generating new dynamic data.
 To begin working with environments, run the `pulumi env init` command:
 
 ```
-    pulumi env init
+pulumi env init
 ```
 
 This will prompt you to create a new environment to hold secrets and configuration.
