@@ -56,6 +56,16 @@ The colon cannot be followed by whitespace.
 
 The complete list of available fields is below.
 
+#### category
+
+The category the resource belongs to.
+
+Examples:
+
+- category:compute
+- category:storage
+- category:data
+
 #### created
 
 The UTC time when the resource was created.
@@ -126,7 +136,7 @@ Example: _name:my-bucket_
 
 The package component of the resource's [type][types].
 
-This is `aws` for a resource of type `aws:s3/bucket:Bucket`.
+This is `aws` for a resource of type `aws:s3/bucket:Bucket`. Can be combined with the `version` field to find resources using specific package versions.
 
 Examples:
 
@@ -207,15 +217,13 @@ Examples:
 - _urn:my-log-group_
 - _urn:my-org:my-stack::my-project::aws:cloudwatch/logGroup:LogGroup::my-log-group_
 
-#### Category
+#### version
 
-The category the resource belongs to.
+The version of the package used by the resource. This allows you to find resources using specific versions of packages, which is useful for identifying resources that may need updates.
 
 Examples:
 
-- compute
-- storage
-- data
+- _package:awsx version:<2.0_
 
 ### Exact matching
 
