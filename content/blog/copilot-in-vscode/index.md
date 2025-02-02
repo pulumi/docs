@@ -76,7 +76,7 @@ Using Pulumi Copilot in Visual Studio Code (VS Code) is as simple as 1-2-3:
 
 You can then ask questions about your infrastructure, generate IaC, check deployment status, debug Pulumi errors, and more
 
-This seamless integration brings Pulumi's intelligence directly into the developer workflow. 
+This seamless integration brings Pulumi's intelligence directly into the developer workflow.
 
 Pulumi Copilot respects all role-based access control (RBAC) settings in Pulumi Cloud, ensuring that AI-generated responses are scoped only to authorized users within an organization.
 
