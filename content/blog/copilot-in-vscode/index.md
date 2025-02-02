@@ -51,9 +51,9 @@ Programming languages offer dozens of advantages for writing Infrastructure as C
 
 Today, we are thrilled to announce that Pulumi Copilot is now available directly within Visual Studio Code Copilot. By simply typing @pulumi in Copilot Chat, developers can now access the power of Pulumi Copilot right within their IDE, saving them time on writing IaC and getting infrastructure deployed.
 
-TODO Adam and Eron video {{< youtube "kDB-YRKFfYE?rel=0" >}}
-
 <!--more-->
+
+TODO Adam and Eron video {{< youtube "kDB-YRKFfYE?rel=0" >}}
 
 ## What is Pulumi Copilot?
 
