@@ -7,7 +7,7 @@ title: "Pulumi Copilot is Now Available in VS Code"
 # published. To influence the ordering of posts published on the same date, use
 # the time portion of the date value; posts are sorted in descending order by
 # date/time.
-date: 2025-02-02
+date: 2025-02-03
 
 # The draft setting determines whether a post is published. Set it to true if
 # you want to be able to merge the post without publishing it.
