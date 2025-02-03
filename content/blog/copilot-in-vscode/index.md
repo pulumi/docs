@@ -81,7 +81,7 @@ Using Pulumi Copilot in Visual Studio Code (VS Code) is as simple as 1-2-3:
 2. Open VS Code and navigate to Copilot Chat (icon to the right of the search bar)
 3. Type `@pulumi` to activate Pulumi Copilot
 
-You can then ask questions about your infrastructure, generate IaC, check deployment status, debug Pulumi errors, and more
+You can then ask questions about your infrastructure, generate code, check deployment status, debug Pulumi errors, and more.
 
 This seamless integration brings Pulumi's intelligence directly into the developer workflow.
 
