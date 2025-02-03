@@ -41,7 +41,7 @@ tags:
 # generated blog page. They are here strictly for reference.
 
 social:
-    twitter: "🎉 Pulumi Copilot is now available in Visal Studio Code! Offload tasks to Pulumi Copilot right in your IDE by typing @pulumi in Copilot Chat. Build, deploy, and manage cloud infrastructure more efficiently than ever."
+    twitter: "🎉 Pulumi Copilot is now available in Visual Studio Code! Offload tasks to Pulumi Copilot right in your IDE by typing @pulumi in Copilot Chat. Build, deploy, and manage cloud infrastructure more efficiently than ever."
     linkedin: "Exciting news! Pulumi Copilot is now available in Visual Studio Code Copilot, bringing AI-powered cloud infrastructure management directly to your IDE. Simply install the Pulumi extension and type @pulumi in Copilot Chat to access Pulumi's cloud intelligence and streamline your infrastructure workflows. 
     
     Learn how Pulumi Copilot is revolutionizing cloud development: [Link]"
@@ -49,13 +49,14 @@ social:
 ---
 Programming languages offer dozens of advantages for writing Infrastructure as Code (IaC). One of them is that Large Language Models are more effective with general-purpose programming languages than Domain Specific Languages (DSLs), thanks to the vast amount of high-quality training data available. Building on this advantage, we introduced Pulumi AI and Pulumi Copilot last year to enhance Infrastructure-as-Code development with generative AI capabilities. These tools have significantly streamlined infrastructure deployment for tens of thousands of developers.
 
-Today, we are thrilled to announce that Pulumi Copilot is now available directly within Visual Studio Code Copilot. By simply typing @pulumi in Copilot Chat, developers can now access the power of Pulumi Copilot right within their IDE, saving them time on writing IaC and getting infrastructure deployed.
-
-This Visual Studio Code integration is powered by the recently announced [Pulumi Copilot REST API](https://www.pulumi.com/blog/pulumi-copilot-rest), which enables developers to integrate Pulumi Copilot's capabilities into their own tools and platforms. Just as we've built this VS Code extension to bring Pulumi Copilot directly into your development environment, you can use the same REST API to create your own innovative integrations, whether that's a custom CLI tool, a chat bot, or another IDE extension. The API's support for multi-turn conversations and contextual understanding makes it possible to build rich, interactive experiences like the one we're delivering in VS Code today.
+Today, we are thrilled to announce that Pulumi Copilot is now available directly within [Visual Studio Code Copilot](https://marketplace.visualstudio.com/items?itemName=pulumi.pulumi-vscode-tools). By simply typing @pulumi in Copilot Chat, developers can now access the power of Pulumi Copilot right within their IDE, saving them time on writing IaC and getting infrastructure deployed.
 
 <!--more-->
+## Video Walk Through
 
-TODO Adam and Eron video {{< youtube "kDB-YRKFfYE?rel=0" >}}
+Hear Adam and Eron from Pulumi walk through this new feature in our PulumiTV introduction to the Visual Studio Code extension.
+
+{{< youtube "v=qdwIImlI-rA?rel=0" >}}
 
 ## What is Pulumi Copilot?
 
@@ -67,6 +68,10 @@ Pulumi Copilot is an AI-powered conversational assistant that seamlessly integra
 * Author and deploy Pulumi IaC more effectively
 
 Pulumi Copilot combines industry-leading AI models with Pulumi specific knowledge like the latest versions of providers, IaC best practices, and context from Pulumi Cloud on your environment.
+
+### The Pulumi Copilot REST API
+
+The [Pulumi Tools Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=pulumi.pulumi-vscode-tools) is powered by the recently announced [Pulumi Copilot REST API](/blog/pulumi-copilot-rest), which enables developers to integrate Pulumi Copilot's capabilities into their own tools and platforms. Just as we've built this extension to bring Pulumi Copilot directly into your development environment, you can use the same REST API to create your own innovative integrations, whether that's a custom CLI tool, a chat bot, or another IDE extension. The API's support for multi-turn conversations and contextual understanding makes it possible to build rich, interactive experiences like the one we're delivering today.
 
 ## How to Use Pulumi Copilot in Visual Studio Code
 
@@ -102,11 +107,11 @@ Migrating from Terraform to Pulumi? Just point Copilot at your Terraform files a
 
 The conversion maintains your existing resource configurations while taking advantage of Pulumi's native programming language features.
 
-### 3. Resource Discovery
+### Resource Discovery
 
 Pulumi Copilot can search across your entire infrastructure to find resource usage patterns. Ask questions like "Do we use AWS Lambda functions in any other stacks?" or "Show me all S3 buckets with public access enabled." Copilot will search your codebase and Pulumi Cloud to provide comprehensive answers about your infrastructure.
 
-### 4. Error Resolution
+### Error Resolution
 
 When you encounter errors in the terminal during Pulumi operations, Copilot can help explain and resolve them. Simply copy the error message and ask Copilot to explain it. For example:
 
