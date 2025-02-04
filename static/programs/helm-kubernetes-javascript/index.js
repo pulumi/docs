@@ -9,7 +9,7 @@ const ns = new k8s.core.v1.Namespace("cnpg-system", {
 });
 
 new k8shelm.Release("cloudnativepg", {
-    chart: "cloudnative-pg/cloudnative-pg",
+    chart: "oci://ghcr.io/cloudnative-pg/charts/cloudnative-pg",
     namespace: ns.metadata.name,
     createNamespace: true,
 });
@@ -21,12 +21,8 @@ const namespace = new k8s.core.v1.Namespace("flux-system", {
 });
 
 new k8s.helm.v3.Release("flux-operator", {
-    chart: "flux-operator",
-    version: "latest",
+    chart: "oci://ghcr.io/controlplaneio-fluxcd/charts/flux-operator",
     namespace: namespace.metadata.name,
-    repositoryOpts: {
-        repo: "oci://ghcr.io/controlplaneio-fluxcd/charts",
-    },
     createNamespace: true,
 });
 
@@ -38,7 +34,6 @@ const namespaceKafka = new k8s.core.v1.Namespace("kafka", {
 
 new k8s.helm.v3.Release("strimzi-kafka-operator", {
     chart: "strimzi-kafka-operator",
-    version: "latest",
     namespace: namespaceKafka.metadata.name,
     repositoryOpts: {
         repo: "https://strimzi.io/charts/",

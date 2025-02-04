@@ -5,7 +5,6 @@ import (
 	corev1 "github.com/pulumi/pulumi-kubernetes/sdk/v4/go/kubernetes/core/v1"
 	metav1 "github.com/pulumi/pulumi-kubernetes/sdk/v4/go/kubernetes/meta/v1"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi/config"
 )
 
 func main() {
@@ -46,7 +45,7 @@ func main() {
 
 		meta := template.ApplyT(func(v *corev1.PodTemplateSpec) *metav1.ObjectMeta { return v.Metadata }).(metav1.ObjectMetaPtrOutput)
 
-		frontend, _ := corev1.NewService(ctx, appName, &corev1.ServiceArgs{
+		_, _ = corev1.NewService(ctx, appName, &corev1.ServiceArgs{
 			Metadata: meta,
 			Spec: &corev1.ServiceSpecArgs{
 				Type: pulumi.String(feType),
@@ -60,7 +59,7 @@ func main() {
 				Selector: appLabels,
 			},
 		})
-		
+
 		return nil
 	})
 }

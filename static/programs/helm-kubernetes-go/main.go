@@ -22,7 +22,7 @@ func main() {
 		}
 
 		_, err = helmv3.NewRelease(ctx, "cloudnativepg", &helmv3.ReleaseArgs{
-			Chart:           pulumi.String("cloudnative-pg/cloudnative-pg"),
+			Chart:           pulumi.String("oci://ghcr.io/cloudnative-pg/charts/cloudnative-pg"),
 			Namespace:       ns.Metadata.Name().Elem(),
 			CreateNamespace: pulumi.Bool(true),
 		})
@@ -40,12 +40,8 @@ func main() {
 		}
 
 		_, err = helmv3.NewRelease(ctx, "flux-operator", &helmv3.ReleaseArgs{
-			Chart:     pulumi.String("flux-operator"),
-			Version:   pulumi.String("latest"),
-			Namespace: namespace.Metadata.Name().Elem(),
-			RepositoryOpts: &helmv3.RepositoryOptsArgs{
-				Repo: pulumi.String("oci://ghcr.io/controlplaneio-fluxcd/charts"),
-			},
+			Chart:           pulumi.String("oci://ghcr.io/controlplaneio-fluxcd/charts/flux-operator"),
+			Namespace:       namespace.Metadata.Name().Elem(),
 			CreateNamespace: pulumi.Bool(true),
 		})
 		if err != nil {
@@ -63,7 +59,6 @@ func main() {
 
 		_, err = helmv3.NewRelease(ctx, "strimzi-kafka-operator", &helmv3.ReleaseArgs{
 			Chart:     pulumi.String("strimzi-kafka-operator"),
-			Version:   pulumi.String("latest"),
 			Namespace: namespaceKafka.Metadata.Name(),
 			RepositoryOpts: helmv3.RepositoryOptsArgs{
 				Repo: pulumi.String("https://strimzi.io/charts/"),

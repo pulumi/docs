@@ -18,19 +18,31 @@ aliases:
 - /docs/iac/packages-and-automation/crossguard/core-concepts/
 ---
 
-Policies can be written in TypeScript/JavaScript (Node.js) or Python and can be applied to Pulumi stacks written in any language. More information on [language support for policies](/docs/using-pulumi/crossguard#languages).
+Pulumi CrossGuard provides policy as code capabilities that can be used in two key ways:
+
+**Infrastructure as Code (IaC) policies**: Validate and enforce policies during resource creation and updates through Pulumi deployments. These policies can prevent non-compliant resources from being created and automatically remediate violations.
+
+**Insights Account policies**: Scan and identify policy violations in existing cloud resources discovered through Pulumi Insights account discovery. These policies provide visibility into compliance issues across your entire cloud footprint, regardless of how resources were created.
+
+Policies can be written in TypeScript/JavaScript (Node.js) or Python and can be applied to Pulumi stacks written in any language and cloud resources discovered through [Pulumi Insights](/docs/insights/) accounts. More information on [language support for policies](/docs/using-pulumi/crossguard#languages).
 
 {{< chooser language "typescript,python" />}}
 
-## Policies
+## Policy Fundamentals
 
 A *Policy* contains specific logic you would like to enforce. For example, you may want to prevent the creation of public, world-readable storage objects. (e.g. on AWS S3, Azure BlobStore, etc.) or prevent the creation of a virtual machine without the proper security groups in-place.
 
-Policies are written as validation functions that are evaluated against resources in your Pulumi stack. If the validation function calls {{< policy-reportviolation >}}, the associated resource will be considered in violation of the policy. {{< policy-reportviolation >}} can be called multiple times to report multiple violations.
+Policies are written as validation functions that are evaluated against resources in your Pulumi stack or account. If the validation function calls {{< policy-reportviolation >}}, the associated resource will be considered in violation of the policy. {{< policy-reportviolation >}} can be called multiple times to report multiple violations.
+
+### IaC Policies
+
+When used with Pulumi IaC, policies are executed during `pulumi preview` and `pulumi up`, ensuring that cloud resource definitions comply with the policy immediately before they are created or updated. During preview, every resource is checked for policy violations, which are batched up into a final report. Policy violations may show up as warnings, or errors which halt the deployment.
 
 Policies may also define *remediations* to automatically fix violations rather than report them. A remediation is written as a function that transforms a resource's state so that it complies with the policy. The resource will be configured using the transformed state.
 
-Policies are executed during `pulumi preview` and `pulumi up`, ensuring that cloud resource definitions comply with the policy immediately before they are created or updated. During preview, every resource is checked for policy violations, which are batched up into a final report. Policy violations may show up as warnings, or errors which halt the deployment.
+### Insights Policies
+
+When used with Pulumi Insights account discovery, policies provide visibility into compliance issues across your entire cloud footprint regardless of how they were created such as with Terraform, CloudFormation, or click-ops. Policies are executed whenever a scanned resource changes or the policy configuration is updated. Policy violations can be viewed in the Pulumi Cloud via the Policy Violations page.
 
 ### Policy Packs
 
@@ -78,18 +90,19 @@ There are no restrictions on which policies you combine within a pack, and you s
 
 There are two broad types of policies:
 
-1. *Resource Policies*: These validate a particular resource in a stack before the resource is created or updated, looking at the resource's _input_ properties.
-2. *Stack Policies*: These validate validates all resources in the stack after they've been created/updated, but before the Pulumi preview/update has completed, looking at each resource's _output_ properties.
+1. *Resource Policies*: These validate a particular resource in a stack or account before the resource is created or updated, looking at the resource's _input_ properties.
+2. *Stack Policies*: These validate all resources in the stack after they've been created/updated, but before the Pulumi preview/update has completed, looking at each resource's _output_ properties.
 
 This table summarizes the primary differences between the two types:
 
-|                                | Resource Policies                     | Stack Policies                                                                       |
-|--------------------------------|---------------------------------------|--------------------------------------------------------------------------------------|
-| What does it check?            | Individual resources                  | All resources in the stack                                                           |
-| When is the check performed?   | Before resources are created/modified | After all stack resources have been created/modified                                 |
-| Can it remediate?              | Yes                                   | No                                                                                   |
-| What information is available? | Resource _input_ properties           | Resource _output_ properties (Note: inputs are propagated to outputs during preview) |
-| What is the type name?         | `ResourceValidationPolicy`            | `StackValidationPolicy`                                                              |
+|                                | Resource Policies                     | Stack Policies                                                                        |
+|--------------------------------|---------------------------------------|---------------------------------------------------------------------------------------|
+| What does it check?            | Individual resources                  | All resources in the stack                                                            |
+| When is the check performed?   | Before resources are created/modified | After all stack resources have been created/modified                                  |
+| Can it remediate?              | Yes                                   | No                                                                                    |
+| What information is available? | Resource _input_ properties           | Resource _output_ properties (Note: inputs are propagated to outputs during preview)  |
+| What is the type name?         | `ResourceValidationPolicy`            | `StackValidationPolicy`                                                               |
+| Supported for Insights?        | Yes                                   | No - IaC-specific feature                                                             |
 
 ### Enforcement Levels
 
@@ -104,7 +117,11 @@ The enforcement level can be specified in multiple ways: on the definition of a 
 
 ### Resource Policies
 
-Policies of `ResourceValidationPolicy` validate against a particular resource in a stack. These policies are run before a resource is registered and thus block an out-of-compliance resource from ever being created. Resource policies can validate compliance and report violations, remediate violations automatically, or do both.
+Policies of `ResourceValidationPolicy` validate against a particular resource in a stack or account.
+
+When used with Pulumi IaC, policies are run before a resource is registered and thus block an out-of-compliance resource from ever being created. Resource policies can validate compliance and report violations, remediate violations automatically, or do both.
+
+When used with Insights account discovery, policy violations indicates that the most recent version of a discovered resource failed a policy check. Policy violations for Insights resources are informational rather than preventative since the resource state is discovered, but not managed, by Pulumi.
 
 #### Resource Validation
 
@@ -218,9 +235,9 @@ elb_logging_enabled = ResourceValidationPolicy(
 
 {{< /chooser >}}
 
-#### Resource Remediation
+#### Resource Remediation with IaC
 
-A policy may define a remediation which is similarly given `args` with information about the resource. Instead of reporting violations, however, the remediation may alter and return resource properties. The Pulumi engine will use these new properties in place of the original ones passed to the remediation function.
+With Pulumi IaC a policy may define a remediation which is similarly given `args` with information about the resource. Instead of reporting violations, however, the remediation may alter and return resource properties. The Pulumi engine will use these new properties in place of the original ones passed to the remediation function.
 
 Here is an example resource policy remediation. Similar to resource validation, in TypeScript/JavaScript this example uses the `remediateResourceOfType` helper to filter and add strong typing:
 
@@ -273,7 +290,7 @@ Remediations are order dependent because multiple remediations may mutate the sa
 
 #### Defining Resource Validations and Remediations Together
 
-It is possible to define a resource validation and remediation together. This allows a policy to function as both when the enforcement level is set to {{< policy-enforcementlevel-remediate >}} in addition to when it is not. It also serves as a sort of belts-and-suspenders "test" since, if the validation fails, it means the remediation failed to do its job.
+It is possible to define a resource validation and remediation together with Pulumi IaC. This allows a policy to function as both when the enforcement level is set to {{< policy-enforcementlevel-remediate >}} in addition to when it is not. It also serves as a sort of belts-and-suspenders "test" since, if the validation fails, it means the remediation failed to do its job.
 
 This can be done simply by specifying both a `validate` and a `remediate` on the policy definition. However, this can lead to code duplication. That is sometimes unavoidably, but it is also possible to remediate and validate with a single function:
 
@@ -387,7 +404,7 @@ rds_default_password = ResourceValidationPolicy(
 
 In this example, the `password` property will be encrypted using the stack's secrets manager.
 
-### Stack Policies
+### Stack Policies with IaC
 
 Policies of `StackValidationPolicy` are run against all the resources in a stack. These policies are run after all stack resources are registered and thus *do not* block an out-of-compliance resource from being created, but do fail the preview or update. To avoid creating out-of-compliance resources, we recommend always running a preview command before an update. This allows you to write policies where one resource depends on the state or existence of another resource.
 
@@ -455,14 +472,16 @@ The [Pulumi Policy Packs examples repository](https://github.com/pulumi/examples
 
 ## Policy Groups
 
-A *Policy Group* is a group of stacks with the same set of Policy Packs enforced. Policy Groups are only available from within the Pulumi Cloud when CrossGuard is enabled. A stack may belong to multiple Policy Groups. An example use of Policy Groups is to have a different group per environment. For example, you can have one for your stacks in production and a more permissive Policy Group for your other environments such as `staging` and `dev`.
+A *Policy Group* is a group of stacks and accounts with the same set of Policy Packs enforced. Policy Groups are only available from within the Pulumi Cloud when CrossGuard is enabled. A stack or account may belong to multiple Policy Groups. An example use of Policy Groups is to have a different group per environment. For example, you can have one for your stacks in production and a more permissive Policy Group for your other environments such as `staging` and `dev`.
 
-Organization admins can create new Policy Groups, add stacks to a Policy Group, or remove stacks from a group.
+Organization admins can create new Policy Groups, add stacks and accounts to a Policy Group, or remove stacks and accounts from a group.
 
 Each Policy Group has its own set of enforced Policy Packs. An organization administrator can add, remove, or update the version of the Policy Pack enforced on the Policy Group.
 
-In cases where a stack belongs to multiple Policy Groups and is therefore required to run multiple versions of the same Policy Pack, only the latest version of the Policy Pack gets enforced. For example, if `my-stack` belongs to two Policy Groups and you want to enforce `my-aws-policy-pack` versions 2 and 3, only version 3 will be enforced. You may view the Policy Groups a stack belongs to as well as the currently enforced Policy Packs for the stack by navigating to a stack’s `Settings` tab and then `Policies`.
+In cases where a stack or account belongs to multiple Policy Groups and is therefore required to run multiple versions of the same Policy Pack, only the latest version of the Policy Pack gets enforced. For example, if `my-stack` belongs to two Policy Groups and you want to enforce `my-aws-policy-pack` versions 2 and 3, only version 3 will be enforced.
+
+You may view the Policy Groups a stack belongs to as well as the currently enforced Policy Packs for the stack by navigating to a stack’s `Settings` tab and then `Policies`.
 
 ### Default Policy Group
 
-Every organization has a default Policy Group. When the default Policy Group is created, all stacks in your organization are automatically added to that Policy Group. Additionally, all stacks that are created after adding the default Policy Group are automatically added to it. Organization admins can remove stacks from the default Policy Group as desired.
+Every organization has a default Policy Group. When the default Policy Group is created, all stacks and accounts in your organization are automatically added to that Policy Group. Additionally, all stacks and accounts that are created after adding the default Policy Group are automatically added to it. Organization admins can remove stacks and accounts from the default Policy Group as desired.
