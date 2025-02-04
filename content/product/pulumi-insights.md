@@ -6,7 +6,6 @@ meta_desc: Pulumi Insights is Intelligent Cloud Management. Gain security, compl
 
 aliases:
 - /insights
-- /product/waitlist/
 
 overview:
     header: Intelligent Cloud Management
