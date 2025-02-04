@@ -141,8 +141,7 @@ new-example-program:
 
 .PHONY: new-blog-post
 new-blog-post:
-	hugo new --kind blog-post --contentDir content \
-	"blog/$(shell bash -c 'read -p "Slug (e.g., 'my-new-post'): " slug; echo $$slug')"
+	./scripts/new-blog-post.sh
 
 .PHONY: lint
 lint:

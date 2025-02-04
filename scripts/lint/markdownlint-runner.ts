@@ -1,5 +1,5 @@
 import * as path from 'path';
-import { findMarkdownFiles } from './find-markdown';
+import { findMarkdownFiles, FinderMode } from './find-markdown';
 
 // Types for markdownlint
 type Token = {
@@ -61,7 +61,7 @@ function groupLintErrorOutput(result: Record<string, LintError[]>): LintResult[]
 import { debug } from './utils';
 
 // Get mode from command line args, defaulting to 'standard'
-const mode = (process.argv[2] as 'git' | 'gha' | 'standard') || 'standard';
+const mode = (process.argv[2] as FinderMode) || 'git';
 debug('Running in mode:', mode);
 
 // Get markdown files to lint
