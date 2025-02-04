@@ -28,7 +28,8 @@ One of Pulumi’s core features is the ability to [model infrastructure](https:/
 We introduced Java in preview in 2022. Since then, we’ve grown our Java support based on feedback from the expanding set of companies that have adopted Pulumi Java in production workloads. Let’s look at some examples of using Java to power your Pulumi programs.
 
 ## Familiar Composability
-Using Java with Pulumi lets you model your infrastructure using familiar patterns. Paired with our rich abstractions, you can efficiently build Pulumi programs. For instance, let’s take a look at an example from our docs that shows how, in a few lines of code, you can: 
+
+Using Java with Pulumi lets you model your infrastructure using familiar patterns. Paired with our rich abstractions, you can efficiently build Pulumi programs. For instance, let’s take a look at an example from our docs that shows how, in a few lines of code, you can:
 
 1. Instantiate and override the defaults for the default Pulumi AWS Provider
 
@@ -70,6 +71,7 @@ var listener = new Listener("listener",
 With just a few lines of code (especially by Java standards), we were able to use out-of-the-box abstractions (Pulumi providers) and the builder pattern (a Java favorite) to compose a set of strongly typed, easy-to-reason about resources.
 
 ## Automation Abstractions with the Pulumi Automation API
+
 With the introduction of Java 1.0, we’re also excited to announce that the [Automation API](https://www.pulumi.com/docs/iac/using-pulumi/automation-api/) is now supported in Java. The Automation API is a fully typed SDK that allows you to interact with Pulumi programs outside the Pulumi CLI. You can directly access and orchestrate your Pulumi projects and stacks with the SDK. This allows you to integrate Pulumi into other systems, such as CI/CD pipelines or internal tooling.
 
 ```java
