@@ -33,40 +33,40 @@ Using Java with Pulumi lets you model your infrastructure using familiar pattern
 
 1. Instantiate and override the defaults for the default Pulumi AWS Provider
 
-```java
-var useast1 = new Provider("useast1",
-        ProviderArgs.builder().region("us-east-1").build());
-```
+    ```java
+    var useast1 = new Provider("useast1",
+            ProviderArgs.builder().region("us-east-1").build());
+    ```
 
 2. Define an ACM certificate, passing along the defaults defined in Step 1
 
-```java
-var cert = new Certificate("cert",
-   CertificateArgs.builder()
-       .domainName("pulumi.com")
-       .validationMethod("EMAIL")
-       .build(),
-   CustomResourceOptions.builder()
-       .provider(useast1)
-       .build());
-```
+    ```java
+    var cert = new Certificate("cert",
+    CertificateArgs.builder()
+        .domainName("pulumi.com")
+        .validationMethod("EMAIL")
+        .build(),
+    CustomResourceOptions.builder()
+        .provider(useast1)
+        .build());
+    ```
 
 3. Instantiate an ELB listener, injecting the cert from above
 
-```java
-var listener = new Listener("listener",
-       ListenerArgs.builder()
-           .loadBalancerArn(loadBalancerArn)
-           .port(443)
-           .protocol("HTTPS")
-           .sslPolicy("ELBSecurityPolicy-2016-08")
-           .certificateArn(cert.arn())
-           .defaultActions(ListenerDefaultActionArgs.builder()
-                   .targetGroupArn(targetGroupArn)
-                   .type("forward")
-                   .build())
-           .build());
-```
+    ```java
+    var listener = new Listener("listener",
+        ListenerArgs.builder()
+            .loadBalancerArn(loadBalancerArn)
+            .port(443)
+            .protocol("HTTPS")
+            .sslPolicy("ELBSecurityPolicy-2016-08")
+            .certificateArn(cert.arn())
+            .defaultActions(ListenerDefaultActionArgs.builder()
+                    .targetGroupArn(targetGroupArn)
+                    .type("forward")
+                    .build())
+            .build());
+    ```
 
 With just a few lines of code (especially by Java standards), we were able to use out-of-the-box abstractions (Pulumi providers) and the builder pattern (a Java favorite) to compose a set of strongly typed, easy-to-reason about resources.
 
