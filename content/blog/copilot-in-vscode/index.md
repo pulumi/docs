@@ -56,7 +56,7 @@ Today, we are thrilled to announce that Pulumi Copilot is now available directly
 
 Hear Adam and Eron from Pulumi walk through this new feature in our PulumiTV introduction to the Visual Studio Code extension.
 
-{{< youtube "v=qdwIImlI-rA?rel=0" >}}
+{{< youtube "qdwIImlI-rA?rel=0" >}}
 
 ## What is Pulumi Copilot?
 
