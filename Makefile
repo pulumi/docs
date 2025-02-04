@@ -146,7 +146,7 @@ new-blog-post:
 
 .PHONY: lint
 lint:
-	./scripts/lint.sh
+	./scripts/lint/lint.sh
 
 .PHONY: format
 format:
