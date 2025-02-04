@@ -20,7 +20,7 @@ This guide provides examples for integrating Bitbucket Pipelines with a [Pulumi 
 - Sign up for a [Pulumi account](https://app.pulumi.com)
 - Create a [Pulumi Access Token](https://app.pulumi.com/account/tokens)
 - Install the [latest Pulumi CLI](/docs/install/)
-- Create a [Bitbucket account](bitbucket.org) with Pipelines enabled
+- Create a [Bitbucket account](https://bitbucket.org) with Pipelines enabled
 - Create a [new Bitbucket repository](https://support.atlassian.com/bitbucket-cloud/docs/create-a-git-repository/), and ensure you do not initialize it with a README
 
 - Create a [new Pulumi project](/tutorials/pulumi-fundamentals/create-a-pulumi-project/) and [initialize it as a git repository](https://git-scm.com/docs/git-init)
