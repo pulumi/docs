@@ -83,6 +83,10 @@ We'll start with an enforcement level of **advisory** then click **Enable** to c
 
 1. Now add your insights account to the policy group. Click **Add accounts** and type the name of the account you want to include for Insights policies. (e.g. insights-aws-account/us-west-2) Finally, click **Add account to policy group**
 
+{{% notes type="info" %}}
+By default, all accounts and stacks are automatically added to the `default-policy-group`.
+{{% /notes %}}
+
 ![Insights Policies - New Policy Pack](/docs/insights/assets/new-policy-pack.png)
 
 {{< notes type="info" >}}
