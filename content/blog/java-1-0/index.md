@@ -78,6 +78,8 @@ With the introduction of Java 1.0, we’re also excited to announce that the [Au
     TODO
 ```
 
+We're excited to bring the Automation API to the Java SDK for the first time and anticipate rapid iterations as feedback comes in.
+
 ## Get Started with Pulumi Java
 
 To learn more about and to get started with Pulumi Java, you can check out the following resources:
