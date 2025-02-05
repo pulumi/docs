@@ -37,7 +37,7 @@ After you have added an account, you can integrate it with one or multiple Polic
 
 ### Setting Up Policy Groups for Discovered Resources
 
-To apply policies to your discovered resources, you first need to set up a **Policy Group**. A Policy Group in Pulumi enforces policies across a group of stacks and accounts in your organization. Each Policy Group can contain multiple of each stacks and acconts, and you can assign multiple Policy Packs to these groups.
+To apply policies to your discovered resources, you first need to set up a **Policy Group**. A Policy Group in Pulumi enforces policies across a group of stacks and accounts in your organization. Each Policy Group can contain multiple stacks and accounts, and you can assign multiple Policy Packs to these groups.
 
 Here’s a screenshot of the **Policy Group** configuration page, where you can create and manage policy groups:
 
