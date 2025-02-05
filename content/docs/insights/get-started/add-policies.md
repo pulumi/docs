@@ -29,7 +29,7 @@ pulumi policy new aws-typescript
 
 This will initialize your project, creating the necessary files for Pulumi to use as a policy, including module dependencies to the providers that will let us interact with AWS resources.
 
-This template sets up an example resource policy that prevents S3 buckets from being publically readable:
+This template sets up an example resource policy that prevents S3 buckets from being publicly readable:
 
 ```typescript
 import * as aws from "@pulumi/aws";
