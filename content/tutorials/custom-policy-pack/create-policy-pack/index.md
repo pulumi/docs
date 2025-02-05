@@ -196,7 +196,7 @@ Finally we assemble the policies into a policy pack object, giving it the name `
 {{% notes type="tip" %}}
 **Writing Testable Code**: We've structured this code to be a little bit more readable than the template example, and also more testable. Instead of defining everything in one big nested object, we break each policy out into its own definition and then assemble the policy pack at the end. We use the `export` keyword to make these policies available to the testing framework (although not technically necessary for the policy pack itself).
 
-Have a look at the [`tests`](https://github.com/pulumi/docs/blob/master/static/programs/custom-policy-pack-typescript/tests/) directory in the [full version of this example](https://github.com/pulumi/docs/blob/master/static/programs/custom-policy-pack-typescript/) to see how you can write unit tests for each policy.
+Have a look at the [`test`](https://github.com/pulumi/docs/blob/master/static/programs/custom-policy-pack-typescript/test/) directory in the [full version of this example](https://github.com/pulumi/docs/blob/master/static/programs/custom-policy-pack-typescript/) to see how you can write unit tests for each policy.
 
 {{% /notes %}}
 
