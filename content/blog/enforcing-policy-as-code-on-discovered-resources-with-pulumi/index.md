@@ -4,7 +4,7 @@ date: 2025-02-04
 meta_desc: "Learn how Pulumi's new feature enables policy as code on discovered resources, including how to set it up and view policy violations."  
 meta_image: crossguard-meta.png  
 authors:  
-   - Tyler D
+   - tyler-dunkel
 tags:  
    - "Policy as Code"  
    - "Pulumi"  
