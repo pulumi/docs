@@ -31,7 +31,7 @@ Before diving into how you can configure PaC for discovered resources, it's impo
 
 ![Accounts Page](accounts-list-page.png)
 
-After you have added an account, you can integrate it with one or multiple Policy Groups to enforce the policies within those groups across your stacks and insights accounts. Once linked to a Policy Group, your resources will be automatically evaluated against the policies you define whenever those policies or resources are updated.
+After you have added an account, you can connect it with one or multiple Policy Groups to enforce the policies within those groups across your stacks and insights accounts. Once linked to a Policy Group, your resources will be automatically evaluated against the policies you define whenever those policies or resources are updated.
 
 ---
 
