@@ -51,7 +51,7 @@ Once your Policy Group is set up, you can add Insights Accounts to the group, wh
 
 ### Running Policies on Discovered Resources
 
-Now that your Policy Group is set up, you can start running policies against your discovered resources. Currently Pulumi Insights supports running **resource** policies against all resource types supported by Pulumi Insights. Currently, **stack policies** are not supported. Pulumi Insights will evaluate each resource against the policies defined in your Policy Pack. If the resources violate any of the defined policies, those violations will show up on the **Policy Violations** page, which gives you a detailed view of any non-compliant resources.
+Now that your Policy Group is set up, you can start running policies against your discovered resources. Currently, Pulumi Insights supports running **resource** policies against all resource types supported by Pulumi Insights. Currently, **stack policies** are not supported. Pulumi Insights will evaluate each resource against the policies defined in your Policy Pack. If the resources violate any of the defined policies, those violations will show up on the **Policy Violations** page, which gives you a detailed view of any non-compliant resources.
 
 ![Policy Violations](policy-violations-page.png)
 
