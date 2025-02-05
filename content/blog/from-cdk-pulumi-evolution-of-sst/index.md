@@ -101,7 +101,7 @@ This paradigm shift had several important implications for SST and its users:
 
 ## Transitioning to Pulumi
 
-Transitioning SST [from CDK to Pulumi](https://www.pulumi.com/tutorials/importing/) was not a trivial undertaking. Still, they knew it was a necessary step to truly fulfill their mission of empowering application developers with powerful infrastructure management capabilities.
+Transitioning SST [from CDK to Pulumi](https://www.pulumi.com/tutorials/importing-aws-infrastructure/) was not a trivial undertaking. Still, they knew it was a necessary step to truly fulfill their mission of empowering application developers with powerful infrastructure management capabilities.
 
 One key challenge they faced was re-implementing the higher-level components and abstractions they had built on top of CDK. These components were designed to simplify the infrastructure management experience for their users, and they wanted to ensure that they could provide a similar level of abstraction and ease of use with Pulumi.
 
