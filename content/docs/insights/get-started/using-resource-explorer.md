@@ -3,7 +3,7 @@ title_tag: Using Research Explorer | Pulumi Insights
 title: Using Insights Resource Explorer
 h1: "Pulumi Insights: Using Resources Explorer"
 meta_desc: This page provides an overview on how to get started with Pulumi Insights Accounts.
-weight: 54
+weight: 5
 menu:
   insights:
     parent: insights-get-started
