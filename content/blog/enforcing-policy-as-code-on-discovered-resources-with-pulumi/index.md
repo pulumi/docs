@@ -15,7 +15,7 @@ tags:
    - "K8s" 
 ---
 
-In this post, we’re introducing a powerful new feature in Pulumi that allows you to run policy as code (PaC) on discovered resources. Previously, PaC was limited to infrastructure as code (IaC) resources. Now, you can extend policy enforcement to resources discovered in your cloud environment. This new feature allows you to ensure that your cloud resources remain compliant with your policies, even if they have been provisioned outside of Pulumi.
+In this post, we're introducing a powerful new capability in Pulumi Insights that extends policy as code (PaC) beyond infrastructure as code to automatically govern all cloud resources in your environment. By unifying policy enforcement across both IaC and discovered resources, you can now write policies once and apply them universally - dramatically simplifying how organizations maintain security and compliance standards at scale.
 
 ### What is Policy as Code (PaC)?
 
@@ -51,7 +51,7 @@ Once your Policy Group is set up, you can add Insights Accounts to the group, wh
 
 ### Running Policies on Discovered Resources
 
-Now that your Policy Group is set up, you can start running policies against your discovered resources. Currently, Pulumi Insights supports running **resource** policies against all resource types supported by Pulumi Insights. Currently, **stack policies** are not supported. Pulumi Insights will evaluate each resource against the policies defined in your Policy Pack. If the resources violate any of the defined policies, those violations will show up on the **Policy Violations** page, which gives you a detailed view of any non-compliant resources.
+Now that your Policy Group is set up, you can start running policies against your discovered resources. Currently, Pulumi Insights supports running **resource** policies against all resource types supported by Pulumi Insights with support for **stack policies** coming soon. Pulumi Insights will evaluate each resource against the policies defined in your Policy Pack. If the resources violate any of the defined policies, those violations will show up on the **Policy Violations** page, which gives you a detailed view of any non-compliant resources.
 
 ![Policy Violations](policy-violations-page.png)
 
@@ -68,6 +68,8 @@ With Pulumi’s new PaC over discovered resources feature, you can now apply the
 - **View violations** on the Policy Violations page and take action to resolve them.
 
 This new capability is available for AWS, Azure, OCI, and Kubernetes. Stay tuned for more updates on policy enforcement and discover how you can leverage Pulumi for cloud security and compliance.
+
+**Try it yourself**: Start enforcing policies across your discovered resources in minutes with Pulumi Insights. Check out our [getting started guide](/docs/insights/get-started/)to begin securing your entire cloud environment with policy as code.
 
 For more information on getting started with Policy as Code, check out the following resources:
 
