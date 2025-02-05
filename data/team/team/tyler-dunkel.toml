@@ -1,10 +1,9 @@
 id = "tyler-dunkel"
-name = "tyler-dunkel"
+name = "Tyler"
 title = "Engineering Manager"
 weight = 1
 
 status = "active"
 
 [social]
-linkedin = "tylerdunkel"
 github = "tyler-dunkel"
