@@ -69,7 +69,7 @@ With Pulumi’s new PaC over discovered resources feature, you can now apply the
 
 This new capability is available for AWS, Azure, OCI, and Kubernetes. Stay tuned for more updates on policy enforcement and discover how you can leverage Pulumi for cloud security and compliance.
 
-**Try it yourself**: Start enforcing policies across your discovered resources in minutes with Pulumi Insights. Check out our [getting started guide](/docs/insights/get-started/)to begin securing your entire cloud environment with policy as code.
+**Try it yourself**: Start enforcing policies across your discovered resources in minutes with Pulumi Insights. Check out our [getting started guide](/docs/insights/get-started/) to begin securing your entire cloud environment with policy as code.
 
 For more information on getting started with Policy as Code, check out the following resources:
 
