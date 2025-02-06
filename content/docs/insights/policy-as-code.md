@@ -28,7 +28,7 @@ On the **Policies** page, under Pulumi Insights, you can click the **New policy 
 
 If the selected Policy Pack has configuration, a dialog will appear for you to enter the configuration such as enforcement level.
 
-![Insights Policies - New Policy Pack](/docs/insights/assets/enable-policy-pack.png)
+![Insights Policies - Policy Pack configuration](/docs/insights/assets/enable-policy-pack.png)
 
 Once your Policy Group is set up, you can add discovered accounts to the group, which will ensure that the resources in those accounts are evaluated against the policies in the group.
 
@@ -47,6 +47,9 @@ Violation includes details about the resource and the reason for the violation, 
 ## Policy violations
 
 Policy Violations can be viewed in the Pulumi Cloud via the Policy Violations page. This page provides a centralized view of all violations across your organization, allowing you to filter and group them by various criteria such as Policy Pack, Project, Stack/Account, and Enforcement Level.
+
+![Insights Policy Violations](/docs/insights/assets/insights-policy-violations.png)
+
 
 Policy Violations can also be accessed programmatically via the Pulumi API for custom workflows and integrations.
 
