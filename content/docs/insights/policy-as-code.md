@@ -50,7 +50,6 @@ Policy Violations can be viewed in the Pulumi Cloud via the Policy Violations pa
 
 ![Insights Policy Violations](/docs/insights/assets/insights-policy-violations.png)
 
-
 Policy Violations can also be accessed programmatically via the Pulumi API for custom workflows and integrations.
 
 For more details on using the API, refer to the [Pulumi API documentation](/docs/pulumi-cloud/cloud-rest-api/#list-policy-violations).
