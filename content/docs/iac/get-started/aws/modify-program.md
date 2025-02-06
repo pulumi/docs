@@ -10,7 +10,7 @@ aliases:
 - /docs/clouds/aws/get-started/modify-program/
 ---
 
-Now that your S3 bucket is provisioned, let's add a file to it. First, from within your project directory, create a new file called `index.html` file along with some content:
+Now that your S3 bucket is provisioned, let's add a file to it. First, from within your project directory, create a new file called `index.html` along with some content:
 
 {{< chooser os "macos,linux,windows" / >}}
 
