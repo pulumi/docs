@@ -25,7 +25,7 @@ One of Pulumi’s core features is the ability to [model infrastructure](https:/
 
 <!--more-->
 
-We introduced Java in preview in 2022. Since then, we’ve grown our Java support based on feedback from the expanding set of companies that have adopted Pulumi Java in production workloads. Let’s look at some examples of using Java to power your Pulumi programs.
+We’ve grown our Java support based on feedback from the expanding set of companies that have adopted Pulumi Java in production workloads. Let’s look at some examples of using Java to power your Pulumi programs.
 
 ## Familiar Composability
 
