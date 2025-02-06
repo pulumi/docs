@@ -29,7 +29,7 @@ We’ve grown our Java support based on feedback from the expanding set of compa
 
 ## Familiar Composability
 
-Using Java with Pulumi lets you model your infrastructure using familiar patterns. Paired with our rich abstractions, you can efficiently build Pulumi programs. For instance, let’s take a look at an example from our docs that shows how, in a few lines of code, you can:
+Using Java with Pulumi lets you model your infrastructure using familiar patterns. Paired with rich abstractions, you can efficiently build Pulumi programs. For instance, let’s take a look at an example from our docs that shows how, in a few lines of code, you can:
 
 1. Instantiate and override the defaults for the default Pulumi AWS Provider
 
