@@ -28,7 +28,7 @@ Let's review some of the generated project files:
 
 {{% choosable language csharp %}}
 
-- `Program.cs` is the Pulumi program that defines your stack resources.
+- `Program.cs` is the Pulumi program that defines your stack [resources](/docs/iac/concepts/resources/).
 
 {{% /choosable %}}
 
