@@ -63,6 +63,8 @@ Each violation includes details about the resource and the reason for the violat
 
 With Pulumi’s new PaC over discovered resources feature, you can now apply the same policies to both IaC and discovered resources across your cloud environment. This enables you to write a policy once and have it apply across all of your cloud resources. The result being a consistent, compliant infrastructure no matter how resources are provisioned.
 
+To begin securing your cloud infrastructure, here are the steps to take:
+
 - **Set up Policy Groups** to enforce policies across stacks and accounts.
 - **Link Insights Accounts** to your Policy Groups.
 - **View violations** on the Policy Violations page and take action to resolve them.
