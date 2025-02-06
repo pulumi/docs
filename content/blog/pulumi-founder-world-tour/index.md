@@ -51,11 +51,7 @@ tags:
 
 social:
     twitter: Pulumi’s 2025 World Tour is here! 🌍 Join Joe Duffy in cities worldwide to discuss best practices lessons learned & shape the future of infrastructure platforms 🚀 
-    linkedin: Pulumi’s 2025 World Tour is an opportunity to meet Joe Duffy, an industry leader in cloud infrastructure, and gain insights into best practices, lessons learned, and how leading companies like BMW, Snowflake, and NVIDIA are building scalable, secure platforms.
-    
-    This tour is about exchanging ideas, learning from real-world experiences, and shaping the future of cloud infrastructure and platform engineering practices together. 
-    
-    Engage with Joe and the Pulumi community at meetups across five continents and be part of the conversation driving innovation.
+    linkedin: Pulumi’s 2025 World Tour is an opportunity to meet Joe Duffy, an industry leader in cloud infrastructure, and gain insights into best practices, lessons learned, and how leading companies like BMW, Snowflake, and NVIDIA are building scalable, secure platforms. This tour is about exchanging ideas, learning from real-world experiences, and shaping the future of cloud infrastructure and platform engineering practices together.  Engage with Joe and the Pulumi community at meetups across five continents and be part of the conversation driving innovation.
 
 # See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md
 # for details, and please remove these comments before submitting for review.
@@ -84,9 +80,10 @@ Pulumi is committed to **meeting developers, infrastructure teams, and platform 
 Feedback from the community and customers directly influences Pulumi's product innovations. Every meeting, discussion, and shared experience helps refine our roadmap for building **better infrastructure platforms together**.
 
 ## A Global Exchange: Connecting Across Five Continents
+
 Joe Duffy's World Tour spans **five continents**, bringing together **users, customers, and industry leaders** to enrich the conversation around modern infrastructure as code, platform engineering, and cloud security.
 
-Joe will also launch the **Pulumi User Group (PUG) meetups** in **Tel Aviv**, **Chicago**, **São Paulo**, and **Detroit**, meeting with developers, platform engineers, and engineering leaders to discuss shared challenges and ideas for the future. 
+Joe will also launch the **Pulumi User Group (PUG) meetups** in **Tel Aviv**, **Chicago**, **São Paulo**, and **Detroit**, meeting with developers, platform engineers, and engineering leaders to discuss shared challenges and ideas for the future.
 
 Join us in one of the following cities:
 
