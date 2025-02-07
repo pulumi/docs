@@ -364,14 +364,3 @@ In addition to the standard and cloud-agnostic packages the [Pulumi Registry](/r
     <dt>Pulumi Terraform</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/terraform">@pulumi/terraform</a></dd>
 </dl>
-
-### Cloud-Agnostic Packages
-
-<dl class="tabular">
-    <dt>Pulumi Cloud Framework</dt>
-    <dd>
-        <a href="/docs/reference/pkg/nodejs/pulumi/cloud">@pulumi/cloud</a>
-        <span class="ml-2 badge badge-preview">PREVIEW</span>
-        <p>A highly productive, cloud-agnostic package for container and serverless programming.</p>
-    </dd>
-</dl>
