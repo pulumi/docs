@@ -29,46 +29,59 @@ We’ve grown our Java support based on feedback from the expanding set of compa
 
 ## Familiar Composability
 
-Using Java with Pulumi lets you model your infrastructure using familiar patterns. Paired with rich abstractions, you can efficiently build Pulumi programs. For instance, let’s take a look at an example from our docs that shows how, in a few lines of code, you can:
+Using Java with Pulumi lets you model your infrastructure using familiar patterns. Paired with rich abstractions, you can efficiently build Pulumi programs. It only seems appropriate that we take a look at a Java example using Oracle Cloud:
 
-1. Instantiate and override the defaults for the default Pulumi AWS Provider
-
-    ```java
-    var useast1 = new Provider("useast1",
-            ProviderArgs.builder().region("us-east-1").build());
-    ```
-
-2. Define an ACM certificate, passing along the defaults defined in Step 1
+1. We start our program by grabbing our [configuration](https://www.pulumi.com/docs/iac/concepts/config/) values that describe which distro and AD to use.
 
     ```java
-    var cert = new Certificate("cert",
-    CertificateArgs.builder()
-        .domainName("pulumi.com")
-        .validationMethod("EMAIL")
-        .build(),
-    CustomResourceOptions.builder()
-        .provider(useast1)
-        .build());
+        var config = ctx.config();
+        var compartmentId =  config.require("compartmentId");
+        var availabilityDomain =  config.require("availabilityDomain");
+        var ubuntuId =  config.require("ubuntuId");
     ```
 
-3. Instantiate an ELB listener, injecting the cert from above
+2. Next, we create a set of abstractions to describe the networking and OS.
 
     ```java
-    var listener = new Listener("listener",
-        ListenerArgs.builder()
-            .loadBalancerArn(loadBalancerArn)
-            .port(443)
-            .protocol("HTTPS")
-            .sslPolicy("ELBSecurityPolicy-2016-08")
-            .certificateArn(cert.arn())
-            .defaultActions(ListenerDefaultActionArgs.builder()
-                    .targetGroupArn(targetGroupArn)
-                    .type("forward")
-                    .build())
-            .build());
+        var javaVCN = new VirtualNetwork("virtualNetworkResource", VirtualNetworkArgs.builder()
+                        .compartmentId(compartmentId)
+                        .cidrBlock("10.0.0.0/16")
+                        .build());
+
+        var javaSubnet = new Subnet("testSubnet", SubnetArgs.builder()
+                        .cidrBlock("10.0.0.0/24")
+                        .compartmentId(compartmentId)
+                        .vcnId(javaVCN.id())
+                        .availabilityDomain(availabilityDomain)
+                        .build());
+
+        var javaVNIC = InstanceCreateVnicDetailsArgs.builder()
+                        .subnetId(javaSubnet.id())
+                        .assignPublicIp("true")
+                        .build();
+
+        var ubuntu24 = InstanceSourceDetailsArgs.builder()
+                        .sourceType("image")
+                        .sourceId(ubuntuId)
+                        .build();
     ```
 
-With just a few lines of code (especially by Java standards), we were able to use out-of-the-box abstractions (Pulumi providers) and the builder pattern (a Java favorite) to compose a set of strongly typed, easy-to-reason about resources.
+3. Finally, we compose our instance.
+
+    ```java
+        var instance = new Instance("instanceResource", 
+                        InstanceArgs.builder()
+                            .availabilityDomain(availabilityDomain)     
+                            .compartmentId(compartmentId)
+                            .shape("VM.Standard.E2.1.Micro")
+                            .preserveBootVolume(false)
+                            .createVnicDetails(javaVNIC)
+                            .sourceDetails(ubuntu24)
+                        .build()
+                );;
+    ```
+
+With just a few lines of code (especially by Java standards), we composed a set of strongly typed, easy-to-reason about resources using the builder pattern (a Java favorite) and zero new paradigms.
 
 ## Automation Abstractions with the Pulumi Automation API
 
