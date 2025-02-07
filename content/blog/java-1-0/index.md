@@ -78,10 +78,10 @@ Using Java with Pulumi lets you model your infrastructure using familiar pattern
                             .createVnicDetails(javaVNIC)
                             .sourceDetails(ubuntu24)
                         .build()
-                );;
+                );
     ```
 
-With just a few lines of code (especially by Java standards), we composed a set of strongly typed, easy-to-reason about resources using the builder pattern (a Java favorite) and zero new paradigms.
+With just a few lines of code (especially by Java standards), we composed a set of strongly typed, easy-to-reason about resources using the builder pattern (a Java favorite) and without introducing any new language paradigms.
 
 ## Automation Abstractions with the Pulumi Automation API
 
