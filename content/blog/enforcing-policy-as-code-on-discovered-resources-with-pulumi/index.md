@@ -19,6 +19,8 @@ tags:
 
 In this post, we're introducing a powerful new capability in Pulumi Insights that extends policy as code (PaC) beyond infrastructure as code to automatically govern all cloud resources in your environment. By unifying policy enforcement across both IaC and discovered resources, you can now write policies once and apply them universally - dramatically simplifying how organizations maintain security and compliance standards at scale.
 
+<!--more-->
+
 ---
 
 ### What is Policy as Code (PaC)?
