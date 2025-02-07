@@ -69,9 +69,9 @@ Using Java with Pulumi lets you model your infrastructure using familiar pattern
 3. Finally, we compose our instance.
 
     ```java
-        var instance = new Instance("instanceResource", 
+        var instance = new Instance("instanceResource",
                         InstanceArgs.builder()
-                            .availabilityDomain(availabilityDomain)     
+                            .availabilityDomain(availabilityDomain)
                             .compartmentId(compartmentId)
                             .shape("VM.Standard.E2.1.Micro")
                             .preserveBootVolume(false)
