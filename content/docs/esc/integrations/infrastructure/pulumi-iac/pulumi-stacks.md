@@ -30,7 +30,6 @@ values:
     privateSubnetIds: ${stackRefs.vpcInfra.privateSubnetIds}
 ```
 
-
 ## Inputs
 
 | Property | Type                                   | Description                                                                                  |
