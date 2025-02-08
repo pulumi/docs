@@ -324,6 +324,31 @@ const opts = {
                     });
             },
         },
+        {
+            names: ["internalurls"],
+            description: "Don't give the full path for internal URLs",
+            tags: ["internalURL"],
+            function: (params, onError) => {
+                params.tokens
+                    .filter(token => {
+                        return token.type === "inline";
+                    })
+                    .forEach(inline => {
+                        const search = /]\((https?:\/\/)?(www\.pulumi\.com)\/(docs|registry)\/.*?\)/;
+                        const match = search.exec(inline.content);
+                        if (match) {
+                            var length = match[2].length;
+                            if (match[1] !== undefined) {
+                                length += match[1].length;
+                            }
+                            onError({
+                                lineNumber: inline.lineNumber,
+                                context: inline.content.substr(match.index, match.index+match[0].length),
+                            });
+                        }
+                    });
+            },
+        },
     ],
 };
 
