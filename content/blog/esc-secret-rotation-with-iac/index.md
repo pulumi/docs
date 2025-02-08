@@ -15,13 +15,13 @@ Managing secrets in modern cloud applications can be challenging, particularly w
 
 Static secrets, like database passwords or API keys, [should be rotated regularly to maintain security](https://cheatsheetseries.owasp.org/cheatsheets/Secrets_Management_Cheat_Sheet.html#272-rotation), and services depending on these secrets need time to transition to new credentials to avoid downtime. This makes rotating credentials error-prone, and often forgotten.
 
-In this post, we'll explore an approach for automating static secret rotation using [Pulumi ESC](https://www.pulumi.com/docs/esc/) combined with [Pulumi IaC](https://www.pulumi.com/docs/iac/).
+In this post, we'll explore an approach for automating static secret rotation using [Pulumi ESC](/docs/esc/) combined with [Pulumi IaC](/docs/iac/).
 
 <!--more-->
 
 ## A pattern for extending ESC
 
-We can take advantage of ESC’s integration with [Pulumi Deployments](https://www.pulumi.com/docs/pulumi-cloud/deployments/) to create an ergonomic way of managing rotation schedules ourselves.
+We can take advantage of ESC’s integration with [Pulumi Deployments](/docs/pulumi-cloud/deployments/) to create an ergonomic way of managing rotation schedules ourselves.
 
 We’ll start by defining a custom declarative configuration format for managing a rotation schedule:
 
@@ -70,7 +70,7 @@ export const current = creds.current.result;
 
 ### The Scheduler: Orchestrating Rotations
 
-The [scheduler component](https://github.com/pulumi/esc-examples/blob/f8a0c47da556aebb74d3ac2d6491f897271bfa27/rotate/example/scheduler/index.ts) acts as an orchestrator, watching an ESC environment for updates and managing deployment schedules of the rotator stacks. Whenever a change to the environment is saved, a webhook invokes the scheduler, which parses the environment definition to find `xfn::pulumi-scheduled-update` configuration blocks. Based on these schedule configurations, it creates [scheduled deployments](https://www.pulumi.com/docs/pulumi-cloud/deployments/schedules/) for the referenced rotator stacks automatically.
+The [scheduler component](https://github.com/pulumi/esc-examples/blob/f8a0c47da556aebb74d3ac2d6491f897271bfa27/rotate/example/scheduler/index.ts) acts as an orchestrator, watching an ESC environment for updates and managing deployment schedules of the rotator stacks. Whenever a change to the environment is saved, a webhook invokes the scheduler, which parses the environment definition to find `xfn::pulumi-scheduled-update` configuration blocks. Based on these schedule configurations, it creates [scheduled deployments](/docs/pulumi-cloud/deployments/schedules/) for the referenced rotator stacks automatically.
 
 ### Bringing It Together: Environment Configuration
 

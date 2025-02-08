@@ -27,7 +27,7 @@ Let's get going!
 
 ## Create a new project
 
-We'll begin, as always, by creating a new Pulumi project. (And if you haven't already, make sure you've [installed Pulumi](https://www.pulumi.com/docs/install/) and [configured your AWS credentials](https://www.pulumi.com/registry/packages/aws/installation-configuration/) in the usual way.)
+We'll begin, as always, by creating a new Pulumi project. (And if you haven't already, make sure you've [installed Pulumi](/docs/install/) and [configured your AWS credentials](/registry/packages/aws/installation-configuration/) in the usual way.)
 
 {{< chooser language "typescript,python" />}}
 

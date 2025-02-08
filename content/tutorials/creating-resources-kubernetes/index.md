@@ -249,7 +249,7 @@ The first resource you will create will be a Kubernetes deployment. The [Pulumi 
 
 {{% /choosable %}}
 
-All resources have a required [`name`](https://www.pulumi.com/docs/concepts/resources/names/) argument. Each resource has both a [logical name](https://www.pulumi.com/docs/concepts/resources/names/#logicalname) and a [physical name](https://www.pulumi.com/docs/concepts/resources/names/#autonaming). The **logical name** is how the resource is known inside Pulumi. This is the value provided to the required `name` argument. The **physical name** is the name used for the resource in the cloud provider that a Pulumi program is deploying to. It is a combination of the logical name plus a random suffix which helps to prevent resource naming collisions.
+All resources have a required [`name`](/docs/concepts/resources/names/) argument. Each resource has both a [logical name](/docs/concepts/resources/names/#logicalname) and a [physical name](/docs/concepts/resources/names/#autonaming). The **logical name** is how the resource is known inside Pulumi. This is the value provided to the required `name` argument. The **physical name** is the name used for the resource in the cloud provider that a Pulumi program is deploying to. It is a combination of the logical name plus a random suffix which helps to prevent resource naming collisions.
 
 In the above example, the logical name for our `deployment` resource is **"nginx"**, and the physical name might typically look something like **"nginx-d7c2fa0"**.
 

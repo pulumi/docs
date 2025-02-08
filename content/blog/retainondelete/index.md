@@ -34,7 +34,7 @@ Using this new feature it is now possible to uncouple resource lifecycles from d
 
 Another workflow this option enables is the ability to manage externally owned resources via Pulumi deployments. You may have an external long lived resource that you want to temporarily manage via a Pulumi program, but then relinquish back to the external owner rather than deleting when you're finished with it.
 
-Using a combination of [import](https://www.pulumi.com/docs/iac/adopting-pulumi/import/) and `RetainOnDelete` you can bring a resource under management and then relinquish it back to the external owner.
+Using a combination of [import](/docs/iac/adopting-pulumi/import/) and `RetainOnDelete` you can bring a resource under management and then relinquish it back to the external owner.
 
 ### Working around provider issues
 

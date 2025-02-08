@@ -31,7 +31,7 @@ Please find the [repository with the full version of the code here.](https://git
 
 ## Part One: Create a component
 
-A [Component Resource](https://www.pulumi.com/docs/concepts/resources/components/) is an abstraction on top of
+A [Component Resource](/docs/concepts/resources/components/) is an abstraction on top of
 other Pulumi packages, often combining a few different providers into something that fits your infrastructure needs
 precisely.
 
@@ -40,17 +40,17 @@ precisely.
 In our example, we are using three separate clouds, one of these being a local KinD cluster.
 
 - [Nodejs](https://nodejs.org/en/download/)
-- [Pulumi CLI](https://www.pulumi.com/docs/install/)
+- [Pulumi CLI](/docs/install/)
 - Have the Pulumi Registry documentation handy for some Pulumi providers:
-    - [Pulumi Civo Provider](https://www.pulumi.com/registry/packages/civo/)
-    - [Pulumi Linode Provider](https://www.pulumi.com/registry/packages/linode/)
-    - [Pulumi Kubernetes Provider](https://www.pulumi.com/registry/packages/kubernetes/)
+    - [Pulumi Civo Provider](/registry/packages/civo/)
+    - [Pulumi Linode Provider](/registry/packages/linode/)
+    - [Pulumi Kubernetes Provider](/registry/packages/kubernetes/)
     - [Pulumi KinD Provider](https://github.com/frezbo/pulumi-provider-kind) (Kubernetes-in-Docker)
       _Note: As this is a community package, follow installation instructions from the README. This provider only supports
       Go and Nodejs._
 
 Gather access tokens for Linode and Civo, if using, and set them in the environment or as
-[secrets](https://www.pulumi.com/docs/concepts/secrets/#using-configuration-and-secrets-in-code).
+[secrets](/docs/concepts/secrets/#using-configuration-and-secrets-in-code).
 
 ### Start by writing the code for each cloud
 
@@ -317,7 +317,7 @@ infrastructure.
 The purpose of this demo is not focused on the details of deploying a web app on Kubernetes with Pulumi, so we won't
 go into too much detail here.
 We created a [shinyapp folder](https://github.com/pulumi/demo-kubecrash-2022/tree/main/shinyapp) to hold a Pulumi program (written in yaml!)
-We could now follow the [Kubernetes provider configuration steps](https://www.pulumi.com/registry/packages/kubernetes/installation-configuration/#configuration)
+We could now follow the [Kubernetes provider configuration steps](/registry/packages/kubernetes/installation-configuration/#configuration)
 to set up and deploy our `shinyapp` to each of our clusters.
 
 But if we have multiple Kubernetes backends, and would like to deploy our `shinyapp` to each of them, this would get
@@ -325,7 +325,7 @@ tedious soon. Here is where we automate deploying our frontend as well.
 
 ## Part 2: Leverage the Automation API
 
-The [Pulumi Automation API](https://www.pulumi.com/docs/using-pulumi/automation-api/) allows us to run Pulumi commands
+The [Pulumi Automation API](/docs/using-pulumi/automation-api/) allows us to run Pulumi commands
 without using the CLI manually.
 
 Let's review our basic project file structure first, for context.

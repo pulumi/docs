@@ -35,7 +35,7 @@ Together, these additions make Pulumi’s support for Kubernetes even more Kuber
 
 ## Server-Side Apply, Upserts and Patch Resources
 
-Kubernetes [Server-side Apply](https://kubernetes.io/docs/reference/using-api/server-side-apply/) (SSA) mode is now default in the v4 provider. SSA mode enables several useful new features: Kubernetes resources can be safely managed by more than one controller. Any conflicting fields will produce a detailed error message which avoids accidentally overriding changes made by other controllers. Resources can be “upserted”; in other words, create the resource if it does not exist, or apply the specified configuration to an existing resource. Patch resources add a new way to manage shared Kubernetes resources. Patch resources can be used to make targeted changes, and do not require the entire resource to be specified. This is a convenient way to update shared resources; a common example is resources that are provisioned by the cloud provider rather than as part of the Pulumi stack. Deleting a Patch resource undoes the patched change, but does not remove the shared Kubernetes resource. See the [SSA how-to guide](https://www.pulumi.com/registry/packages/kubernetes/how-to-guides/managing-resources-with-server-side-apply/) for more details and usage examples for SSA mode.
+Kubernetes [Server-side Apply](https://kubernetes.io/docs/reference/using-api/server-side-apply/) (SSA) mode is now default in the v4 provider. SSA mode enables several useful new features: Kubernetes resources can be safely managed by more than one controller. Any conflicting fields will produce a detailed error message which avoids accidentally overriding changes made by other controllers. Resources can be “upserted”; in other words, create the resource if it does not exist, or apply the specified configuration to an existing resource. Patch resources add a new way to manage shared Kubernetes resources. Patch resources can be used to make targeted changes, and do not require the entire resource to be specified. This is a convenient way to update shared resources; a common example is resources that are provisioned by the cloud provider rather than as part of the Pulumi stack. Deleting a Patch resource undoes the patched change, but does not remove the shared Kubernetes resource. See the [SSA how-to guide](/registry/packages/kubernetes/how-to-guides/managing-resources-with-server-side-apply/) for more details and usage examples for SSA mode.
 
 > Note: Users may opt into the previous default Client-side Apply (CSA) mode by setting the `enableServerSideApply` provider configuration to “false”.
 
@@ -220,7 +220,7 @@ As part of this work, we removed the use of the `kubectl.kubernetes.io/last-appl
 
 You can migrate your existing Pulumi Kubernetes projects to 4.0 today, or start a new project targeting 4.0 with any of the Pulumi templates.
 
-For users migrating to 4.0, check out the [v4 Provider Migration Guide](https://www.pulumi.com/registry/packages/kubernetes/how-to-guides/v4-migration/) with full details of the additional changes in this release.
+For users migrating to 4.0, check out the [v4 Provider Migration Guide](/registry/packages/kubernetes/how-to-guides/v4-migration/) with full details of the additional changes in this release.
 
 ## Getting Started
 

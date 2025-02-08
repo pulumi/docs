@@ -133,7 +133,7 @@ If you are integrating Pulumi ESC with Pulumi IaC, the default subject identifie
 ### Pulumi Deployments
 
 {{% notes "info" %}}
-In addition to the Pulumi Console, deployment settings including OIDC can be configured for a stack using the [pulumiservice.DeploymentSettings](https://www.pulumi.com/registry/packages/pulumiservice/api-docs/deploymentsettings/) resource or via the [REST API](/docs/pulumi-cloud/deployments/api/#patchsettings).
+In addition to the Pulumi Console, deployment settings including OIDC can be configured for a stack using the [pulumiservice.DeploymentSettings](/registry/packages/pulumiservice/api-docs/deploymentsettings/) resource or via the [REST API](/docs/pulumi-cloud/deployments/api/#patchsettings).
 {{% /notes %}}
 
 1. Navigate to your stack in the Pulumi Console.

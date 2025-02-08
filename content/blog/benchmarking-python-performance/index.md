@@ -213,4 +213,4 @@ Here are some useful links:
 * [More statistics](https://app.warp.dev/block/F6KkbWHvDVWLwtYFKq08Q2) about the first experiment.
 * [Artifacts from the second experiment](https://github.com/pulumi/python-concurrency-experiments/releases/tag/TypeScript-vs-Python)
 * [More statistics](https://app.warp.dev/block/gspCIKn10y9bEvZDMWHe4Q) about the second experiment.
-* [Pulumi Internals](https://www.pulumi.com/docs/intro/concepts/how-pulumi-works/)
+* [Pulumi Internals](/docs/intro/concepts/how-pulumi-works/)

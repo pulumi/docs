@@ -362,7 +362,7 @@ Success! A Lambda was created and a function URL was configured for it in just a
 
 AWS Lambda functions are an incredibly easy and powerful way to stand up serverless capabilities which is why they are easily one of the most popular resources deployed by Pulumi users today. With the addition of Lambda Function URLs, end-users no longer need to set up an [Amazon API Gateway](https://aws.amazon.com/api-gateway) to provide an HTTPS endpoint for their functions - further simplifying deployments. You can learn more about Lambda Function URLs by reading the AWS and Pulumi documentation:
 
-[Pulumi API Documentation](https://www.pulumi.com/registry/packages/aws-native/api-docs/lambda/url/)
+[Pulumi API Documentation](/registry/packages/aws-native/api-docs/lambda/url/)
 
 [Configuring URLs](https://docs.aws.amazon.com/lambda/latest/dg/configuration-function-urls.html)
 

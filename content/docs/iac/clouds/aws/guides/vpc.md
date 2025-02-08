@@ -61,7 +61,7 @@ such resources inside of your VPC so network traffic are isolated from other VPC
 
 Each AWS account has a default VPC per region. Using the default VPC is often the easiest path when you're just getting up and running or don't yet understand your specific networking requirements. Most resources will use this default VPC automatically if you leave it unspecified. In other cases, you may be required to pass it explicitly, in which case you'll need to get it programmatically.
 
-The following example will [read the default VPC](https://www.pulumi.com/registry/packages/awsx/api-docs/ec2/defaultvpc/) and export some of its properties for easy consumption.
+The following example will [read the default VPC](/registry/packages/awsx/api-docs/ec2/defaultvpc/) and export some of its properties for easy consumption.
 
 {{< example-program path="awsx-vpc-default" >}}
 

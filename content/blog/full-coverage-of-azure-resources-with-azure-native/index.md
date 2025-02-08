@@ -196,7 +196,7 @@ Pass an explicit value to the `resourceGroupName` property if you want to contro
 
 However, suppose you create a sub-resource, e.g., a container under a storage account, a database under a database account, or a slot under a web app. In that case, Pulumi will not append a random suffix because those resources names don’t have to be globally unique.
 
-You can also apply [transformations](https://www.pulumi.com/docs/concepts/resources/#transformations) to define your own naming schemas: see [this example](https://github.com/matwilko/Pulumi.AzureNextGen.Ambient/blob/434c4beccffdd8d1180e385ff5fe298867a285af/AutoNaming.cs) from our community.
+You can also apply [transformations](/docs/concepts/resources/#transformations) to define your own naming schemas: see [this example](https://github.com/matwilko/Pulumi.AzureNextGen.Ambient/blob/434c4beccffdd8d1180e385ff5fe298867a285af/AutoNaming.cs) from our community.
 
 ### Auto-Location
 
@@ -278,4 +278,4 @@ Several more extensive examples are available in the Pulumi Examples repo:
 - Web Application with Azure Container Instances: [TypeScript](https://github.com/pulumi/examples/tree/master/azure-ts-aci), [C#](https://github.com/pulumi/examples/tree/master/azure-cs-aci), [Python](https://github.com/pulumi/examples/tree/master/azure-py-aci), [Go](https://github.com/pulumi/examples/tree/master/azure-go-aci)
 - Web Server Using Azure Virtual Machine: [TypeScript](https://github.com/pulumi/examples/tree/master/azure-ts-webserver), [Python](https://github.com/pulumi/examples/tree/master/azure-py-webserver)
 
-You can browse [API reference docs](https://www.pulumi.com/registry/packages/azure-native/) with inline examples or explore the [Pulumi Azure-Native SDKs](https://github.com/pulumi/pulumi-azure-native) repository.
+You can browse [API reference docs](/registry/packages/azure-native/) with inline examples or explore the [Pulumi Azure-Native SDKs](https://github.com/pulumi/pulumi-azure-native) repository.

@@ -372,7 +372,7 @@ differences:
     all the time. CDK depends on CloudFormation as the deployment
     engine; it shares many of the same benefits and limitations as
     CloudFormation (see [Pulumi vs.
-    CloudFormation](https://www.pulumi.com/docs/concepts/vs/cloud-templates/cloudformation/))
+    CloudFormation](/docs/concepts/vs/cloud-templates/cloudformation/))
 
 - **Execution > Translation.** Pulumi and CDK support similar
     programming languages but differ fundamentally in their deployment
@@ -441,7 +441,7 @@ CloudFormation, Azure Resource Manager (ARM) templates, or Kubernetes
 YAML.
 
 [Self-service Tool
-Guide](https://www.pulumi.com/docs/iac/adopting-pulumi/)
+Guide](/docs/iac/adopting-pulumi/)
 
 If you need help, we have a team of cloud experts who can answer your
 questions, give you a demo, or roll up their sleeves to get your

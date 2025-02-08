@@ -36,7 +36,7 @@ This article will show you how to make your Pulumi deployment observable with [@
 
 - [Node.js](https://nodejs.org/en/)
 - [A Pulumi account](https://www.pulumi.com/)
-- [The Pulumi CLI](https://www.pulumi.com/docs/install/)
+- [The Pulumi CLI](/docs/install/)
 - A Pulumi stack
 - [A Honeycomb account](https://www.honeycomb.io/)
 

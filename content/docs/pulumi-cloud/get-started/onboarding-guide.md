@@ -39,7 +39,7 @@ For companies who require more control over the Pulumi Cloud hosting environment
 
 ### Signing up for an account
 
-Every user of Pulumi Cloud has an account. As you get started, you will sign up with either an email address and password, or use your GitHub, GitLab, or Atlassian identity. After signing up, you will have the ability to configure a SAML/SSO identity provider for subsequent onboarding of your teammates, if you so desire. Learn more about [Pulumi Cloud accounts here](https://www.pulumi.com/docs/pulumi-cloud/access-management/teams/) and, to sign up, go to [app.pulumi.com/signup](http://app.pulumi.com/signup).
+Every user of Pulumi Cloud has an account. As you get started, you will sign up with either an email address and password, or use your GitHub, GitLab, or Atlassian identity. After signing up, you will have the ability to configure a SAML/SSO identity provider for subsequent onboarding of your teammates, if you so desire. Learn more about [Pulumi Cloud accounts here](/docs/pulumi-cloud/access-management/teams/) and, to sign up, go to [app.pulumi.com/signup](http://app.pulumi.com/signup).
 
 ### Getting familiar with the management console
 
@@ -53,19 +53,19 @@ Pulumi Cloud makes it easy to collaborate on your cloud projects faster and with
 
 Your Pulumi Cloud hierarchy is made up of individual **users**, **organizations**, and **teams**. Each plays a critical role in how your team collaborates and enforces security and best practices.
 
-You will begin by creating an organization. An organization is first and foremost a collection of individual user members. It is a container for IaC projects and stacks, ESC projects and environments, and Insights accounts and discovered resources. Most companies only need a single organization, although it is possible to have multiple if you need extra separation or multiple identity providers. Learn more about [organizations here](https://www.pulumi.com/docs/pulumi-cloud/admin/organizations/).
+You will begin by creating an organization. An organization is first and foremost a collection of individual user members. It is a container for IaC projects and stacks, ESC projects and environments, and Insights accounts and discovered resources. Most companies only need a single organization, although it is possible to have multiple if you need extra separation or multiple identity providers. Learn more about [organizations here](/docs/pulumi-cloud/admin/organizations/).
 
-An organization can also contain teams. A team is a group of individual users that typically reflects your company’s structure or working groups. By grouping members into teams, you can control which projects, stacks, and environments they have access to, and with what permissions, through role-based-access-control (RBAC). We know that teams and roles change frequently, so Pulumi Cloud makes it easy to reconfigure teams as needed, or even have them automatically sync with your identity provider of choice. Learn more about [teams here](https://www.pulumi.com/docs/pulumi-cloud/access-management/teams/).
+An organization can also contain teams. A team is a group of individual users that typically reflects your company’s structure or working groups. By grouping members into teams, you can control which projects, stacks, and environments they have access to, and with what permissions, through role-based-access-control (RBAC). We know that teams and roles change frequently, so Pulumi Cloud makes it easy to reconfigure teams as needed, or even have them automatically sync with your identity provider of choice. Learn more about [teams here](/docs/pulumi-cloud/access-management/teams/).
 
 Start by creating [your organization here](https://app.pulumi.com/?create-organization=1). Organizations and their capabilities are a paid feature of Pulumi Cloud, so you will notice that creating an organization starts a free trial. Pulumi has a generous free tier when the trial expires and you can always [contact us](https://pulumi.com/contact) if you need more time.
 
 ### Configuring Single Sign-On (SSO)
 
-Many organizations prefer to use Single Sign-On (SSO) to leverage an identity provider such as Microsoft Entra ID, Google Workspace, Okta, or any other SAML 2.0 compliant provider. To learn about configuring SSO for your organization, [read Pulumi Cloud SAML(SSO)](https://www.pulumi.com/docs/pulumi-cloud/access-management/saml/). If you’d like to continue using email, GitHub, GitLab, or Atlassian identity, you can skip this step.
+Many organizations prefer to use Single Sign-On (SSO) to leverage an identity provider such as Microsoft Entra ID, Google Workspace, Okta, or any other SAML 2.0 compliant provider. To learn about configuring SSO for your organization, [read Pulumi Cloud SAML(SSO)](/docs/pulumi-cloud/access-management/saml/). If you’d like to continue using email, GitHub, GitLab, or Atlassian identity, you can skip this step.
 
 ### Inviting your teammates
 
-As soon as you’ve completed these set up steps, you are ready to invite your team\! If you have SSO with System for Cross-domain Identity Management (SCIM) enabled, onboarding and offboarding happen automatically. Otherwise, refer to [Inviting members to an organization](https://www.pulumi.com/docs/pulumi-cloud/admin/organizations/#inviting-members-to-an-organization).
+As soon as you’ve completed these set up steps, you are ready to invite your team\! If you have SSO with System for Cross-domain Identity Management (SCIM) enabled, onboarding and offboarding happen automatically. Otherwise, refer to [Inviting members to an organization](/docs/pulumi-cloud/admin/organizations/#inviting-members-to-an-organization).
 
 ## Part three: Building securely
 
@@ -79,15 +79,15 @@ Pulumi’s Policy as Code engine, CrossGuard, enables teams to enforce compliant
 
 Pulumi CrossGuard finds issues with existing cloud infrastructure as well as gating attempts to introduce new problems. It can be configured at various warning and error levels, and flexibly applied to projects differently – e.g., GDPR rules might only apply to infrastructure in European regions. CrossGuardPaC also features automatic remediations. Learn more about [Pulumi CrossGuard here](https://www.pulumi.com/security/).
 
-Pulumi Cloud also keeps an audit log of every activity and who performed it. Read more about [Pulumi Cloud audit logs here](https://www.pulumi.com/docs/pulumi-cloud/admin/audit-logs/).
+Pulumi Cloud also keeps an audit log of every activity and who performed it. Read more about [Pulumi Cloud audit logs here](/docs/pulumi-cloud/admin/audit-logs/).
 
 ### Setting up cloud access methods
 
 Pulumi supports hundreds of cloud providers, but most organizations will end up using at least AWS, Azure, Google Cloud, and/or Kubernetes. Other supported providers include SaaS infrastructure products, such as Cloudflare, DataDog, MongoDB, and Snowflake, as well as on-premises technologies such as VMWare vSphere. For a complete list of Pulumi providers, check out the [Pulumi Registry](https://pulumi.com/registry). The registry is your one-stop shop for provider documentation, including how to configure access to each of the clouds, as well as resource APIs.
 
-Although each cloud offers flexible authentication unique to that cloud, Pulumi ESC offers rich OpenID Connect (OIDC) support for several popular providers, ensuring dynamic, short-lived credentials. This technique is the most secure and should be preferred for those providers that have support. Learn more about [dynamic login credentials here](https://www.pulumi.com/docs/esc/integrations/dynamic-login-credentials/).
+Although each cloud offers flexible authentication unique to that cloud, Pulumi ESC offers rich OpenID Connect (OIDC) support for several popular providers, ensuring dynamic, short-lived credentials. This technique is the most secure and should be preferred for those providers that have support. Learn more about [dynamic login credentials here](/docs/esc/integrations/dynamic-login-credentials/).
 
-In the event your chosen cloud doesn’t have a Pulumi ESC OIDC provider, refer to the registry documentation. Each provider has an “Install & config” section on the left-hand navigation. See [AWS Installation & Configuration](https://www.pulumi.com/docs/esc/integrations/dynamic-login-credentials/) as an example. Pulumi generally uses native tools and techniques for authenticating so it is idiomatic and consistent with your other usage patterns.
+In the event your chosen cloud doesn’t have a Pulumi ESC OIDC provider, refer to the registry documentation. Each provider has an “Install & config” section on the left-hand navigation. See [AWS Installation & Configuration](/docs/esc/integrations/dynamic-login-credentials/) as an example. Pulumi generally uses native tools and techniques for authenticating so it is idiomatic and consistent with your other usage patterns.
 
 ## Part four: Structuring your projects
 
@@ -119,11 +119,11 @@ For IaC stacks, we may have some shared stacks across all of these projects:
 
 Each of our IaC projects has their own set of stacks, despite them clearly sharing a logical grouping, so we may then want ESC environments representing each logical grouping.
 
-Learn more about Pulumi IaC [projects](https://www.pulumi.com/docs/iac/concepts/projects/) and [stacks](https://www.pulumi.com/docs/iac/concepts/stacks/), and check out the [Organizing Pulumi projects & stacks](https://www.pulumi.com/docs/iac/packages-and-automation/organizing-projects-stacks/) guide for much more detailed guidance on how to choose to structure your projects. Learn more about Pulumi ESC [projects and environments here](https://www.pulumi.com/docs/esc/environments/).
+Learn more about Pulumi IaC [projects](/docs/iac/concepts/projects/) and [stacks](/docs/iac/concepts/stacks/), and check out the [Organizing Pulumi projects & stacks](/docs/iac/packages-and-automation/organizing-projects-stacks/) guide for much more detailed guidance on how to choose to structure your projects. Learn more about Pulumi ESC [projects and environments here](/docs/esc/environments/).
 
 ### Deciding on a language strategy
 
-Pulumi IaC’s main strength compared to competitive IaC technologies is its inherent polyglot nature. It supports the Top 5 languages according to GitHub, including Python, Go, any Node.js language (JavaScript, TypeScript, etc), any .NET language (C\#, F\#, etc), and any JVM language (Java, Groovy, Scala, Clojure, etc). Pulumi even supports YAML for simple use cases. Pulumi’s language support is not just limited to the languages themselves, but rather, the entire ecosystem around those languages. To learn more about Pulumi’s support for these languages, see [Pulumi Languages & SDKs](https://www.pulumi.com/docs/iac/languages-sdks/).
+Pulumi IaC’s main strength compared to competitive IaC technologies is its inherent polyglot nature. It supports the Top 5 languages according to GitHub, including Python, Go, any Node.js language (JavaScript, TypeScript, etc), any .NET language (C\#, F\#, etc), and any JVM language (Java, Groovy, Scala, Clojure, etc). Pulumi even supports YAML for simple use cases. Pulumi’s language support is not just limited to the languages themselves, but rather, the entire ecosystem around those languages. To learn more about Pulumi’s support for these languages, see [Pulumi Languages & SDKs](/docs/iac/languages-sdks/).
 
 As part of adopting Pulumi in your organization, you will want to decide your language strategy. Broadly speaking there are two options: 1\) single-language or 2\) multi-language.
 
@@ -131,7 +131,7 @@ For most teams getting started, single-language is the way to go. This makes it 
 
 In large organizations, however, multi-language is often the eventual outcome, even if teams begin with single-language. The risk of this approach is fragmentation between different teams who use different languages. To address this risk, Pulumi offers many consistent experiences for managing all of your projects, regardless of their language of choice. Pulumi Cloud works consistently regardless of language, in addition to Pulumi CrossGuard policies.
 
-Pulumi Packages provide a way to author packages in one language and consume them in another. This enables, for instance, a central infrastructure platform team to write shared components in Go, and then have other engineers in the organization consume them from their own native language, such as Python and/or Java. For even simpler use cases, perhaps they will get consumed with a dozen lines of YAML. Learn more about [Pulumi packages here](https://www.pulumi.com/docs/iac/packages-and-automation/pulumi-packages/).
+Pulumi Packages provide a way to author packages in one language and consume them in another. This enables, for instance, a central infrastructure platform team to write shared components in Go, and then have other engineers in the organization consume them from their own native language, such as Python and/or Java. For even simpler use cases, perhaps they will get consumed with a dozen lines of YAML. Learn more about [Pulumi packages here](/docs/iac/packages-and-automation/pulumi-packages/).
 
 ### Creating and executing a migration strategy
 
@@ -141,7 +141,7 @@ Pulumi has tools to import any cloud infrastructure no matter how it was created
 
 In addition to migration tools, Pulumi supports coexisting with many existing ecosystems. For instance, you may deploy Helm charts as-is, or consume Terraform workspace outputs. This enables you to migrate pieces incrementally and over time, when the value for doing so is right.
 
-To learn more about creating and executing your migration strategy, plus coexistence, check out the [Pulumi Migration Hub](https://www.pulumi.com/migrate/) or [detailed migration tooling documentation](https://www.pulumi.com/docs/iac/adopting-pulumi/).
+To learn more about creating and executing your migration strategy, plus coexistence, check out the [Pulumi Migration Hub](https://www.pulumi.com/migrate/) or [detailed migration tooling documentation](/docs/iac/adopting-pulumi/).
 
 ## Part five: Ensuring best practices
 
@@ -153,7 +153,7 @@ IaC is code and as such it should be tested. This will yield more predictable de
 
 There are three primary ways to test your IaC. First, **unit tests** test targeted functionality without needing to actually deploy cloud infrastructure. These are part of the inner loop and are fast to run. Pulumi makes it easy to mock certain cloud capabilities to facilitate this sort of testing. Next, **Policy as Code**, mentioned earlier, is actually a form of testing, and can block deployments that do not comply with predetermined policies. Finally, **integration tests** coordinate with actual Pulumi deployments to test that real infrastructure is provisioned to specification.
 
-It is possible to build more sophisticated test strategies atop this foundation. For instance, you could fuzz test that your infrastructure configurations react to varying inputs correctly. This might even entail chaos testing by destroying bits of infrastructure and testing how the system responds. To learn more about these capabilities, [see the Testing Pulumi programs guide](https://www.pulumi.com/docs/iac/concepts/testing/).
+It is possible to build more sophisticated test strategies atop this foundation. For instance, you could fuzz test that your infrastructure configurations react to varying inputs correctly. This might even entail chaos testing by destroying bits of infrastructure and testing how the system responds. To learn more about these capabilities, [see the Testing Pulumi programs guide](/docs/iac/concepts/testing/).
 
 Beyond these testing techniques, you can also consider using linters and static analysis tools to enforce industry standards as well as your own team’s coding guidelines.
 
@@ -163,13 +163,13 @@ Pulumi projects, stacks, and environments help to reduce “sprawl”: that is, 
 
 Pulumi offers two additional facilities for ensuring consistency and best practices in your team.
 
-First, **components** are IaC resources that you define to abstract and encapsulate the usage of one or more other resources. For instance, an AWS Virtual Private Cloud (VPC) might consist of dozens of resources: public and private subnets, Internet and NAT Gateways, the VPC itself, and more. Rather than open coding the VPC definition in every project that needs one – something that can be hundreds or even thousands of lines of code – you can use a component. It turns out the Pulumi component package [AWSX](https://www.pulumi.com/registry/packages/awsx/) offers such a VPC component out of the box, but your organization can create your own components. This just requires subclassing the component resource base class.
+First, **components** are IaC resources that you define to abstract and encapsulate the usage of one or more other resources. For instance, an AWS Virtual Private Cloud (VPC) might consist of dozens of resources: public and private subnets, Internet and NAT Gateways, the VPC itself, and more. Rather than open coding the VPC definition in every project that needs one – something that can be hundreds or even thousands of lines of code – you can use a component. It turns out the Pulumi component package [AWSX](/registry/packages/awsx/) offers such a VPC component out of the box, but your organization can create your own components. This just requires subclassing the component resource base class.
 
-Components enjoy all of the benefits of native language packages, such as the ability to store them in package managers, version them, ensure secure dependencies, and so on. [Read more about component resources here](https://www.pulumi.com/docs/iac/concepts/resources/components).
+Components enjoy all of the benefits of native language packages, such as the ability to store them in package managers, version them, ensure secure dependencies, and so on. [Read more about component resources here](/docs/iac/concepts/resources/components).
 
-By default, component resources are single-language, which is often fine. For organizations that require multi-language usage, however, components can be made multi-language as noted earlier. The [Pulumi Packages](https://www.pulumi.com/docs/iac/packages-and-automation/pulumi-packages/) guide describes how.
+By default, component resources are single-language, which is often fine. For organizations that require multi-language usage, however, components can be made multi-language as noted earlier. The [Pulumi Packages](/docs/iac/packages-and-automation/pulumi-packages/) guide describes how.
 
-Next, **templates** are blueprints that help scaffold entirely new projects. Although a component often encapsulates a cloud resource usage pattern, templates are standard “starting points” for entire projects that typically consist of many resources. [Pulumi Templates](https://pulumi.com/templates), for instance, are available for many common architectures and patterns, but you can create your own. You can also register your own organization’s templates so they’re easily available in the Pulumi Cloud New Project Wizard. Learn more about [building your own templates here](https://www.pulumi.com/docs/pulumi-cloud/developer-portals/templates/).
+Next, **templates** are blueprints that help scaffold entirely new projects. Although a component often encapsulates a cloud resource usage pattern, templates are standard “starting points” for entire projects that typically consist of many resources. [Pulumi Templates](https://pulumi.com/templates), for instance, are available for many common architectures and patterns, but you can create your own. You can also register your own organization’s templates so they’re easily available in the Pulumi Cloud New Project Wizard. Learn more about [building your own templates here](/docs/pulumi-cloud/developer-portals/templates/).
 
 ## Part six: Working together
 
@@ -183,15 +183,15 @@ The most common workflow is deploying changes to your IaC configurations. The Pu
 
 Commonly, a team’s “official” stacks, like staging and production, will use a CI/CD-based approach while individual developers still work on development stacks manually. Many teams already use CI/CD for application delivery and adopting it for infrastructure delivery helps to unify practices.
 
-If you are using GitHub, installing the Pulumi GitHub App will deliver instantaneous support for basic GitOps workflows including deployment previews in your pull requests. [Learn more here](https://www.pulumi.com/docs/iac/packages-and-automation/continuous-delivery/github-app/).
+If you are using GitHub, installing the Pulumi GitHub App will deliver instantaneous support for basic GitOps workflows including deployment previews in your pull requests. [Learn more here](/docs/iac/packages-and-automation/continuous-delivery/github-app/).
 
-The steps to accomplishing complete CI/CD entail first choosing your platform. [Pulumi Deployments](https://www.pulumi.com/docs/pulumi-cloud/deployments/) is a purpose built delivery model for IaC deployments and built into Pulumi Cloud – we recommend using it as your first choice. The [Pulumi Kubernetes Operator](https://www.pulumi.com/docs/iac/packages-and-automation/continuous-delivery/pulumi-kubernetes-operator/) lets you trigger deployments from within your Kubernetes clusters. Alternatively, you can choose an existing CI/CD solution such as GitHub Actions, GitLab CI, Octopus Deploy, or one of many others. See the [full list of integrations here](https://www.pulumi.com/docs/iac/packages-and-automation/continuous-delivery/). Next, you’ll need to define your branching strategy, such as whether main maps to production, or if you’ll have a dedicated branch you merge into for production releases. After that you’ll configure your pipelines, including any testing strategies, and define your workflows. Read more about [Infrastructure CI/CD here](https://www.pulumi.com/solutions/infrastructure-ci-cd/).
+The steps to accomplishing complete CI/CD entail first choosing your platform. [Pulumi Deployments](/docs/pulumi-cloud/deployments/) is a purpose built delivery model for IaC deployments and built into Pulumi Cloud – we recommend using it as your first choice. The [Pulumi Kubernetes Operator](/docs/iac/packages-and-automation/continuous-delivery/pulumi-kubernetes-operator/) lets you trigger deployments from within your Kubernetes clusters. Alternatively, you can choose an existing CI/CD solution such as GitHub Actions, GitLab CI, Octopus Deploy, or one of many others. See the [full list of integrations here](/docs/iac/packages-and-automation/continuous-delivery/). Next, you’ll need to define your branching strategy, such as whether main maps to production, or if you’ll have a dedicated branch you merge into for production releases. After that you’ll configure your pipelines, including any testing strategies, and define your workflows. Read more about [Infrastructure CI/CD here](https://www.pulumi.com/solutions/infrastructure-ci-cd/).
 
-To automate your Pulumi activities, you’ll need a Pulumi Cloud access token. These tokens can be generated with various permissions and scopes. Beyond personal tokens, Pulumi also supports team and organization tokens which you’ll want to use for CI/CD. [Learn more here](https://www.pulumi.com/docs/pulumi-cloud/access-management/access-tokens/).
+To automate your Pulumi activities, you’ll need a Pulumi Cloud access token. These tokens can be generated with various permissions and scopes. Beyond personal tokens, Pulumi also supports team and organization tokens which you’ll want to use for CI/CD. [Learn more here](/docs/pulumi-cloud/access-management/access-tokens/).
 
 ### Guarding against drift
 
-Drift is when a change happens outside of your IaC pipeline, causing a conflict between your last known deployment in IaC and the reality of your cloud resources’ current state. This could have been because of a manual change someone made in your cloud account but forgot to reconcile, for instance. Drift can be very problematic as it can cause security mistakes and/or outages the next time you deploy. Pulumi supports [detecting and remediating drift](https://www.pulumi.com/docs/pulumi-cloud/deployments/drift).
+Drift is when a change happens outside of your IaC pipeline, causing a conflict between your last known deployment in IaC and the reality of your cloud resources’ current state. This could have been because of a manual change someone made in your cloud account but forgot to reconcile, for instance. Drift can be very problematic as it can cause security mistakes and/or outages the next time you deploy. Pulumi supports [detecting and remediating drift](/docs/pulumi-cloud/deployments/drift).
 
 ### Accomplishing productive developer experiences
 
@@ -199,9 +199,9 @@ As mentioned earlier, it’s common to give developers their own stacks for deve
 
 If some infrastructure is heavyweight or costly, however, it may be impractical for every developer to have an entire copy of your environment. In such cases, Pulumi’s flexible projects model makes it possible to factor out shared infrastructure. For instance, each developer may have their own instance of a containerized application and some of its related services, but ultimately share access to databases and clusters. [This article shows off](https://www.pulumi.com/blog/iac-recommended-practices-using-stack-references/) how we might use Pulumi stack references to facilitate factoring our projects in this way.
 
-Another common pattern is to create short-lived **review stacks** for every proposed change in a pull request. The idea here is that an independent stack can be spun up for each pull request so that the changes can be fully tested end to end. As soon as the pull request is closed, the stack will be torn down so there is no long-term cost. [Learn more about review stacks here](https://www.pulumi.com/docs/pulumi-cloud/deployments/review-stacks/).
+Another common pattern is to create short-lived **review stacks** for every proposed change in a pull request. The idea here is that an independent stack can be spun up for each pull request so that the changes can be fully tested end to end. As soon as the pull request is closed, the stack will be torn down so there is no long-term cost. [Learn more about review stacks here](/docs/pulumi-cloud/deployments/review-stacks/).
 
-**Time-to-live (TTL) stacks** are another helpful feature to ensure you don’t build up cloud waste as a result of letting engineers spin up their own environments. Each TTL stack is given a timeframe that, once exceeded, results in the stack being automatically destroyed. This can increase your confidence in letting developers have their own stacks. [Learn more here](https://www.pulumi.com/docs/pulumi-cloud/deployments/ttl/).
+**Time-to-live (TTL) stacks** are another helpful feature to ensure you don’t build up cloud waste as a result of letting engineers spin up their own environments. Each TTL stack is given a timeframe that, once exceeded, results in the stack being automatically destroyed. This can increase your confidence in letting developers have their own stacks. [Learn more here](/docs/pulumi-cloud/deployments/ttl/).
 
 ### Enabling developer self-service
 
@@ -213,9 +213,9 @@ First is having developers interface with Pulumi IaC directly. In this model, yo
 
 In this model, your choice of single- versus multi-language will also play a role in how you architect the components and templates your developers will use.
 
-The second model is to give developers a simpler YAML interface where they can just check in YAML files to a Git repository and have the CI/CD pipeline take care of the rest. This model is enabled much like the first, in that you will write components, templates, and policies, with the difference that you will want very simplistic interfaces conducive to YAML usage. [Learn more about Pulumi YAML here](https://www.pulumi.com/docs/iac/languages-sdks/yaml/).
+The second model is to give developers a simpler YAML interface where they can just check in YAML files to a Git repository and have the CI/CD pipeline take care of the rest. This model is enabled much like the first, in that you will write components, templates, and policies, with the difference that you will want very simplistic interfaces conducive to YAML usage. [Learn more about Pulumi YAML here](/docs/iac/languages-sdks/yaml/).
 
-The final model to choose from is giving developers a UI-based experience for provisioning infrastructure environments. Rather than using code, or even YAML, developers will log into a portal and click a button to spin up or update infrastructure. Pulumi offers a variety of techniques for this use case, ranging from just using Pulumi’s organization templates and New Project Wizard directly, to Pulumi’s Backstage plugin, to hand rolling your own UI portal that is powered by Pulumi’s Automation API. Learn more about [building developer portals with Pulumi here](https://www.pulumi.com/docs/pulumi-cloud/developer-portals/).
+The final model to choose from is giving developers a UI-based experience for provisioning infrastructure environments. Rather than using code, or even YAML, developers will log into a portal and click a button to spin up or update infrastructure. Pulumi offers a variety of techniques for this use case, ranging from just using Pulumi’s organization templates and New Project Wizard directly, to Pulumi’s Backstage plugin, to hand rolling your own UI portal that is powered by Pulumi’s Automation API. Learn more about [building developer portals with Pulumi here](/docs/pulumi-cloud/developer-portals/).
 
 ## Part seven: Integrating with and extending Pulumi
 
@@ -225,21 +225,21 @@ Pulumi was built with extensibility in mind. Our philosophy is one of “buildin
 
 There are three primary ways to extend Pulumi with custom workflows.
 
-The first is that the entire **Pulumi Cloud REST API** is well-documented, powerful, and easy to use. These are the very APIs that power the CLI and cloud console experiences. [Learn more about the Pulumi Cloud REST API in the documentation here](https://www.pulumi.com/docs/pulumi-cloud/reference/cloud-rest-api).
+The first is that the entire **Pulumi Cloud REST API** is well-documented, powerful, and easy to use. These are the very APIs that power the CLI and cloud console experiences. [Learn more about the Pulumi Cloud REST API in the documentation here](/docs/pulumi-cloud/reference/cloud-rest-api).
 
-Next up is the **Pulumi Automation API**. This capability allows you to embed IaC capabilities into any piece of software, enabling custom tools, self-serve portals, complex deployment orchestrations, and even entire SaaS products that themselves need to provision or integrate with cloud resources. [Learn more about the Automation API here](https://www.pulumi.com/docs/pulumi-cloud/reference/cloud-rest-api).
+Next up is the **Pulumi Automation API**. This capability allows you to embed IaC capabilities into any piece of software, enabling custom tools, self-serve portals, complex deployment orchestrations, and even entire SaaS products that themselves need to provision or integrate with cloud resources. [Learn more about the Automation API here](/docs/pulumi-cloud/reference/cloud-rest-api).
 
-Finally, **Pulumi Cloud Webhooks** allow you to tap into any lifecycle events in the Pulumi Cloud to invoke a custom REST API endpoint that you control. Using these you can react with your own custom workflows including doing things like posting to Slack channels, triggering test runs after a deployment completes, and more. [Learn more about Pulumi Cloud Webhooks here](https://www.pulumi.com/docs/pulumi-cloud/webhooks/).
+Finally, **Pulumi Cloud Webhooks** allow you to tap into any lifecycle events in the Pulumi Cloud to invoke a custom REST API endpoint that you control. Using these you can react with your own custom workflows including doing things like posting to Slack channels, triggering test runs after a deployment completes, and more. [Learn more about Pulumi Cloud Webhooks here](/docs/pulumi-cloud/webhooks/).
 
 ### Writing your own IaC providers
 
 Pulumi has support for hundreds of providers out of the box. But what if it is missing one that you need? There are a few options.
 
-Pulumi’s **provider model** is extensible and you can implement your own providers. These providers can manage new or internal systems where neither a Terraform nor Pulumi provider exists. Creating a Pulumi provider entails creating resource schemas for the resource types and properties the provider will expose, as well as create, read, update, delete (CRUD) operations for those resources. This can be considerable work but it’s the most robust approach for providers that are important to you. [Learn how to author and publish your own providers here](https://www.pulumi.com/docs/iac/packages-and-automation/pulumi-packages/authoring/).
+Pulumi’s **provider model** is extensible and you can implement your own providers. These providers can manage new or internal systems where neither a Terraform nor Pulumi provider exists. Creating a Pulumi provider entails creating resource schemas for the resource types and properties the provider will expose, as well as create, read, update, delete (CRUD) operations for those resources. This can be considerable work but it’s the most robust approach for providers that are important to you. [Learn how to author and publish your own providers here](/docs/iac/packages-and-automation/pulumi-packages/authoring/).
 
 Pulumi can also bridge **any Terraform provider** in the ecosystem at development time so that it can be used from any Pulumi IaC program without needing to write a provider by hand. If a provider already exists in Terraform, it can be consumed from Pulumi IaC. [Learn more here](https://www.pulumi.com/blog/any-terraform-provider/).
 
-Pulumi also supports **dynamic providers** or providers built “on the fly” with very simple logic. This lets you write CRUD logic right inline in your Pulumi IaC program without needing to author, build, and package an entirely separate provider. [Learn more about dynamic providers here.](https://www.pulumi.com/docs/iac/concepts/resources/dynamic-providers/)
+Pulumi also supports **dynamic providers** or providers built “on the fly” with very simple logic. This lets you write CRUD logic right inline in your Pulumi IaC program without needing to author, build, and package an entirely separate provider. [Learn more about dynamic providers here.](/docs/iac/concepts/resources/dynamic-providers/)
 
 ### Contributing to open source
 
@@ -285,7 +285,7 @@ One of the most challenging aspects of any IaC solution, Pulumi included, is lea
 
 The Pulumi AI assistant was created to help you write IaC. You can describe any cloud architecture in natural language and it will create the code in your chosen programming language. It is getting better and more accurate over time. [Try out Pulumi AI here](https://pulumi.com/ai).
 
-The Pulumi Registry contains detailed documentation for every provider Pulumi supports. For instance, [this page](https://www.pulumi.com/registry/packages/aws/api-docs/s3/bucket/#example-usage) shows numerous ways to configure AWS S3 Buckets. Most resources in the registry will have examples showing common ways to configure them.
+The Pulumi Registry contains detailed documentation for every provider Pulumi supports. For instance, [this page](/registry/packages/aws/api-docs/s3/bucket/#example-usage) shows numerous ways to configure AWS S3 Buckets. Most resources in the registry will have examples showing common ways to configure them.
 
 The Pulumi examples repo on GitHub contains hundreds of complex examples covering common use cases. These go beyond individual single resource examples to entire cloud architectures. [Check out the examples repo here](https://github.com/pulumi/examples).
 
@@ -319,7 +319,7 @@ Pulumi Enterprise and Business Critical customers have the option of purchasing 
 
 Pulumi offers two methods of purchasing: Billed in arrears, monthly, on a credit card, and paid upfront with invoicing. Invoiced purchases benefit from commitment pricing which delivers considerable savings. If you’re on a monthly plan and would like to explore commitment pricing, [Contact Us](https://www.pulumi.com/contact/).
 
-Pulumi Cloud gives you detailed insights into your usage and billing on the Billing & usage page on your organization’s settings left-hand navigation. This includes IaC resources, deployment minutes, ESC secrets, and more. There you will be able to see and/or download a full history of usage. Only organization administrators and designated billing administrators are able to access these pages. [Learn more about how to designate billing administrators here](https://www.pulumi.com/docs/pulumi-cloud/access-management/billing-managers/).
+Pulumi Cloud gives you detailed insights into your usage and billing on the Billing & usage page on your organization’s settings left-hand navigation. This includes IaC resources, deployment minutes, ESC secrets, and more. There you will be able to see and/or download a full history of usage. Only organization administrators and designated billing administrators are able to access these pages. [Learn more about how to designate billing administrators here](/docs/pulumi-cloud/access-management/billing-managers/).
 
 Your organization and billing administrators will also receive a monthly usage report over email.
 

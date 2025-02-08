@@ -27,7 +27,7 @@ Output form that accepts `Input`-typed arguments and returns an
 `Output`-wrapped result.
 
 For a quick example, here is how you can call
-[aws.ecr.getCredentials](https://www.pulumi.com/registry/packages/aws/api-docs/ecr/getcredentials/)
+[aws.ecr.getCredentials](/registry/packages/aws/api-docs/ecr/getcredentials/)
 with a `registryId` of type `Output<string>`:
 
 {{< chooser language "typescript,python,go,csharp" / >}}
@@ -88,7 +88,7 @@ registry.
 - Because the ECR registry ID is only known once the actual repository
   is provisioned in the cloud, the registryId property of the
   ecr.Repository resource has the type `Output<string>` rather than
-  string (see [Inputs and Outputs](https://www.pulumi.com/docs/concepts/inputs-outputs/)).
+  string (see [Inputs and Outputs](/docs/concepts/inputs-outputs/)).
 
 In the code below, note how `getCredentialsOutput` now accepts
 `appRepo.registryId` directly:

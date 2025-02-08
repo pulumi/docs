@@ -118,7 +118,7 @@ Date:   2024-09-18 15:04:20.07 -0700 PDT
 
 ## Version tagging
 
-In the output above, you may also have noticed that version `3` is now [_tagged_](https://www.pulumi.com/docs/esc/environments/versioning/#tagging-versions) with a label of `latest`. Every environment has a built-in `latest` that always points to the most recent version of the environment. You can fetch an environment by tag by adding an `@` symbol with the tag name to the end of the environment name. For example, to pull the `latest` version explicitly:
+In the output above, you may also have noticed that version `3` is now [_tagged_](/docs/esc/environments/versioning/#tagging-versions) with a label of `latest`. Every environment has a built-in `latest` that always points to the most recent version of the environment. You can fetch an environment by tag by adding an `@` symbol with the tag name to the end of the environment name. For example, to pull the `latest` version explicitly:
 
 ```bash
 $ esc env get tutorials/messages/dev@latest motd --value json

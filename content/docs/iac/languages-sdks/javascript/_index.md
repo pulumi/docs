@@ -241,7 +241,7 @@ Install a recent version of `ts-node` to use its [ESM loader](https://typestrong
 npm install ts-node@^10
 ```
 
-Lastly, you need to instruct Pulumi to use the `ts-node/esm` loader by setting the `nodeargs` option in the [`runtime`](https://www.pulumi.com/docs/iac/concepts/projects/project-file/#runtime-options) options in `Pulumi.yaml`.
+Lastly, you need to instruct Pulumi to use the `ts-node/esm` loader by setting the `nodeargs` option in the [`runtime`](/docs/iac/concepts/projects/project-file/#runtime-options) options in `Pulumi.yaml`.
 
 ```yaml
 name: project-using-native-esm

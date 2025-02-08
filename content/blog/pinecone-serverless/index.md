@@ -29,7 +29,7 @@ A key advantage of this true-serverless experience is its cost-effectiveness, ac
 
 ## Getting Started 🤖
 
-Using the Pinecone Provider for Pulumi is as easy as it can be. You can install the Pinecone Provider following the documentation for the Pinecone Provider in the [Pulumi Registry](https://www.pulumi.com/registry/packages/pinecone/) or by using dedicated starter templates.
+Using the Pinecone Provider for Pulumi is as easy as it can be. You can install the Pinecone Provider following the documentation for the Pinecone Provider in the [Pulumi Registry](/registry/packages/pinecone/) or by using dedicated starter templates.
 
 The starter templates are specially designed for you to bootstrap a Pulumi program with a Pinecone index. Once you have your bootstrap program, you can use this as a starting point to create your own Pinecone Serverless indexes.
 

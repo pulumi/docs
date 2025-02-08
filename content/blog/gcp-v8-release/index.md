@@ -21,9 +21,9 @@ The provider is open source and available on GitHub so you can always follow alo
 
 Here are a few links to help you get started if you are new to Pulumi:
 
-- [Getting Started](https://www.pulumi.com/docs/iac/get-started/gcp/) - A guided walkthrough for creating your first project
-- [Setup & Install](https://www.pulumi.com/registry/packages/gcp/installation-configuration/) - Instructions on installing the Google Cloud provider
-- [How-to guides](https://www.pulumi.com/registry/packages/gcp/how-to-guides/) - Learn how to use the Google Cloud provider to provision specific resources
+- [Getting Started](/docs/iac/get-started/gcp/) - A guided walkthrough for creating your first project
+- [Setup & Install](/registry/packages/gcp/installation-configuration/) - Instructions on installing the Google Cloud provider
+- [How-to guides](/registry/packages/gcp/how-to-guides/) - Learn how to use the Google Cloud provider to provision specific resources
 - [Templates](https://www.pulumi.com/templates/serverless-application/gcp/) - Use a quickstart template to create a new project
 - [Pulumi AI](https://www.pulumi.com/ai) - Ask Pulumi AI to create a new project
 
@@ -37,22 +37,22 @@ Additionally we have improved accuracy and coverage for registry documentation, 
 
 Over the last year, we have added support for several new modules. Among these are:
 
-- [App Hub](https://www.pulumi.com/registry/packages/gcp/api-docs/apphub/)
-- [Application Integration](https://www.pulumi.com/registry/packages/gcp/api-docs/applicationintegration/)
-- [Blockchain Node Engine](https://www.pulumi.com/registry/packages/gcp/api-docs/blockchainnodeengine/)
-- [Cloud Quota](https://www.pulumi.com/registry/packages/gcp/api-docs/cloudquota/)
-- [Discovery Engine](https://www.pulumi.com/registry/packages/gcp/api-docs/discoveryengine/)
-- [Edge Container](https://www.pulumi.com/registry/packages/gcp/api-docs/edgecontainer/)
-- [Integration Connectors](https://www.pulumi.com/registry/packages/gcp/api-docs/integrationconnectors/)
-- [Managed Kafka](https://www.pulumi.com/registry/packages/gcp/api-docs/managedkafka/)
-- [Migration Center](https://www.pulumi.com/registry/packages/gcp/api-docs/migrationcenter/)
-- [Netapp](https://www.pulumi.com/registry/packages/gcp/api-docs/netapp/)
-- [Parallelstore](https://www.pulumi.com/registry/packages/gcp/api-docs/parallelstore/)
-- [Privileged Access Manager](https://www.pulumi.com/registry/packages/gcp/api-docs/privilegedaccessmanager/)
-- [Secure Source Manager](https://www.pulumi.com/registry/packages/gcp/api-docs/securesourcemanager/)
-- [Security Posture](https://www.pulumi.com/registry/packages/gcp/api-docs/securityposture/)
-- [Site Verification](https://www.pulumi.com/registry/packages/gcp/api-docs/siteverification/)
-- [Workbench](https://www.pulumi.com/registry/packages/gcp/api-docs/workbench/)
+- [App Hub](/registry/packages/gcp/api-docs/apphub/)
+- [Application Integration](/registry/packages/gcp/api-docs/applicationintegration/)
+- [Blockchain Node Engine](/registry/packages/gcp/api-docs/blockchainnodeengine/)
+- [Cloud Quota](/registry/packages/gcp/api-docs/cloudquota/)
+- [Discovery Engine](/registry/packages/gcp/api-docs/discoveryengine/)
+- [Edge Container](/registry/packages/gcp/api-docs/edgecontainer/)
+- [Integration Connectors](/registry/packages/gcp/api-docs/integrationconnectors/)
+- [Managed Kafka](/registry/packages/gcp/api-docs/managedkafka/)
+- [Migration Center](/registry/packages/gcp/api-docs/migrationcenter/)
+- [Netapp](/registry/packages/gcp/api-docs/netapp/)
+- [Parallelstore](/registry/packages/gcp/api-docs/parallelstore/)
+- [Privileged Access Manager](/registry/packages/gcp/api-docs/privilegedaccessmanager/)
+- [Secure Source Manager](/registry/packages/gcp/api-docs/securesourcemanager/)
+- [Security Posture](/registry/packages/gcp/api-docs/securityposture/)
+- [Site Verification](/registry/packages/gcp/api-docs/siteverification/)
+- [Workbench](/registry/packages/gcp/api-docs/workbench/)
 
 ### API Coverage Growth
 
@@ -82,4 +82,4 @@ This label is available as an Output only and can be disabled in your provider c
 
 ### Upgrading
 
-You can find our v7 -> v8 Migration Guide [on the Pulumi Registry](https://www.pulumi.com/registry/packages/gcp/how-to-guides/8-0-migration/).
+You can find our v7 -> v8 Migration Guide [on the Pulumi Registry](/registry/packages/gcp/how-to-guides/8-0-migration/).

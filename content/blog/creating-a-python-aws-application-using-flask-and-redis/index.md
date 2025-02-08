@@ -13,9 +13,9 @@ tags: ["aws", "python", "containers", "docker", "ecs"]
 
 I've recently started developing with Pulumi, and have begun to explore its inner workings and mechanisms. I decided to construct a production-level application and to document each step that I take and my progress as I go along.
 
-This blog post recreates the existing [Typescript voting app example](https://www.pulumi.com/docs/tutorials/aws/aws-ts-voting-app/) step by step in Python with Flask as the frontend and Redis as the backend. In future blog posts, we will explore how to change the front and backends, how to upgrade the app with additional AWS services, and migrating from one cloud provider to another.
+This blog post recreates the existing [Typescript voting app example](/docs/tutorials/aws/aws-ts-voting-app/) step by step in Python with Flask as the frontend and Redis as the backend. In future blog posts, we will explore how to change the front and backends, how to upgrade the app with additional AWS services, and migrating from one cloud provider to another.
 
-The first step is to clone the [Typescript voting app example](https://www.pulumi.com/docs/tutorials/aws/aws-ts-voting-app/). We'll use a sparse clone to copy only the `aws-ts-voting-app` directory.
+The first step is to clone the [Typescript voting app example](/docs/tutorials/aws/aws-ts-voting-app/). We'll use a sparse clone to copy only the `aws-ts-voting-app` directory.
 
 ```bash
 $ mkdir examples && cd examples

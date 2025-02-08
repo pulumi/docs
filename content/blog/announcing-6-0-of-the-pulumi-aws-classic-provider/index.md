@@ -13,7 +13,7 @@ tags:
 
 ---
 
-We are excited to announce 6.0 of the [Pulumi AWS provider](https://www.pulumi.com/registry/packages/aws/). The AWS provider is the most heavily used provider across the entire Pulumi ecosystem, and offers access to the full surface area of the upstream Terraform AWS Provider in Pulumi projects in all supported languages. The [6.0 release](https://github.com/pulumi/pulumi-aws/releases/tag/v6.0.2) brings a substantial set of fixes and improvements to the provider, including a number of breaking changes as part of the major version release.
+We are excited to announce 6.0 of the [Pulumi AWS provider](/registry/packages/aws/). The AWS provider is the most heavily used provider across the entire Pulumi ecosystem, and offers access to the full surface area of the upstream Terraform AWS Provider in Pulumi projects in all supported languages. The [6.0 release](https://github.com/pulumi/pulumi-aws/releases/tag/v6.0.2) brings a substantial set of fixes and improvements to the provider, including a number of breaking changes as part of the major version release.
 
 This blog post walks you through the list of notable changes in the new major version.
 
@@ -61,8 +61,8 @@ We also shipped a few, small breaking changes to properties that may allow one o
 
 ### Migration Guide
 
-You can see a full list of changes and learn more about migrating your existing programs in our [Migration Guide](https://www.pulumi.com/registry/packages/aws/how-to-guides/6-0-migration).
+You can see a full list of changes and learn more about migrating your existing programs in our [Migration Guide](/registry/packages/aws/how-to-guides/6-0-migration).
 
 ### Get Started Today
 
-You can browse our [API reference docs](https://www.pulumi.com/registry/packages/aws/) with inline examples or explore the [Pulumi AWS Provider](https://github.com/pulumi/pulumi-aws) repository to get started today! And don't forget [to register for the live workshop](/events/getting-started-with-iac-pulumi-aws/) on September 7, 2023 to see AWS 6.0 in action!
+You can browse our [API reference docs](/registry/packages/aws/) with inline examples or explore the [Pulumi AWS Provider](https://github.com/pulumi/pulumi-aws) repository to get started today! And don't forget [to register for the live workshop](/events/getting-started-with-iac-pulumi-aws/) on September 7, 2023 to see AWS 6.0 in action!

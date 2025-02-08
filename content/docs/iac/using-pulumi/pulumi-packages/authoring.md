@@ -47,7 +47,7 @@ If you need access to a terraform provider, but don't need the full customisatio
 
 ### Name your provider and repository
 
-If publishing to the [Pulumi Package Registry](https://www.pulumi.com/registry/), you will need to pick a unique name. This is normally named after the cloud provider or service the provider configures.
+If publishing to the [Pulumi Package Registry](/registry/), you will need to pick a unique name. This is normally named after the cloud provider or service the provider configures.
 
 Your repository name should start with `pulumi-` followed by the name of your provider e.g. [`pulumi-aws`](https://github.com/pulumi/pulumi-aws) for AWS, or [`pulumi-kubernetes`](https://github.com/pulumi/pulumi-kubernetes) for the Kubernetes provider.
 

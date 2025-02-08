@@ -21,8 +21,8 @@ AWS recently announced the deprecation of two features used by default in Pulumi
 
 Here are a few links to help you get started if you are new to Pulumi:
 
-- [EKS Setup & Installation](https://www.pulumi.com/registry/packages/eks/installation-configuration/) - Instructions on installing and configuring the Pulumi EKS provider
-- [EKS How-to Guides](https://www.pulumi.com/registry/packages/kubernetes/how-to-guides/eks/) - Learn how to use the EKS provider to provision and manage Kubernetes clusters on AWS
+- [EKS Setup & Installation](/registry/packages/eks/installation-configuration/) - Instructions on installing and configuring the Pulumi EKS provider
+- [EKS How-to Guides](/registry/packages/kubernetes/how-to-guides/eks/) - Learn how to use the EKS provider to provision and manage Kubernetes clusters on AWS
 - [Pulumi AI](https://www.pulumi.com/ai) - Ask Pulumi AI to help you create a new EKS project
 
 ## Key Highlights of EKS V3
@@ -66,7 +66,7 @@ To help you transition smoothly, we've prepared a migration guide with these key
 3. Update your code to handle new output types for certain properties.
 4. Review and update your use of default security groups, which can now be disabled.
 
-Please refer to our [EKS v3 Migration Documentation](https://www.pulumi.com/registry/packages/eks/how-to-guides/v3-migration/) for a detailed guide.
+Please refer to our [EKS v3 Migration Documentation](/registry/packages/eks/how-to-guides/v3-migration/) for a detailed guide.
 
 ## Conclusion
 
@@ -74,6 +74,6 @@ Pulumi EKS v3 represents a significant step forward in managing Kubernetes clust
 
 We encourage all users to upgrade to this latest version to take advantage of these improvements and ensure your EKS deployments remain secure and up-to-date.
 
-For more information on getting started with Pulumi EKS v3, check out our [documentation](https://www.pulumi.com/registry/packages/eks/) or join our [community Slack](https://slack.pulumi.com/) for support and discussions.
+For more information on getting started with Pulumi EKS v3, check out our [documentation](/registry/packages/eks/) or join our [community Slack](https://slack.pulumi.com/) for support and discussions.
 
 Happy clustering with Pulumi EKS v3!

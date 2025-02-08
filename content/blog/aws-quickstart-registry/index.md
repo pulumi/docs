@@ -29,7 +29,7 @@ Common AWS infrastructure problems:
 
 The underlying cause of these problems is that AWS's core services are designed for modularity within the AWS ecosystem, which is great for flexibility and experienced AWS developers, but it makes building best-practice AWS environments surprisingly difficult. Most "best practice" features on AWS, like email alarms when a database goes down, should really be the standard practice, but those features currently require complicated cross-service relationships that are difficult to implement correctly. The AWS ecosystem has been waiting for a layer of abstraction on top of these resources.
 
-Pulumi and the AWS Quick Starts in the [Pulumi Registry](https://www.pulumi.com/registry/) use higher-order components to abstract away that underlying complexity which makes configuring, deploying, and managing critical AWS resources straightforward -- like it should be.
+Pulumi and the AWS Quick Starts in the [Pulumi Registry](/registry/) use higher-order components to abstract away that underlying complexity which makes configuring, deploying, and managing critical AWS resources straightforward -- like it should be.
 
 Configuring an Aurora Postgresql database with best practices (again, what should really just be the standard practices) requires specialized AWS knowledge and provisioning a zoo of other critical resources:
 

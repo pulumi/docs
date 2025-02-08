@@ -25,7 +25,7 @@ Pulumi allows you to use the best features of programming languages to build you
 
 Each new release of TypeScript comes with new features and improved type checking, as well as support for the latest JavaScript features. Using the latest version of TypeScript provides you with the maximum flexibility for creating types and gives you more confidence that your program will behave as expected.
 
-Until now, Pulumi's seamless experience was limited to using Pulumi's builtin TypeScript version 3.8. If you wanted to use a more recent version, you had to introduce a build step to your project and let Pulumi run in [plain Javascript mode](https://www.pulumi.com/docs/languages-sdks/javascript/#disabling-built-in-typescript-support). With the release of the [Pulumi Node.js SDK 3.113.0](https://www.npmjs.com/package/@pulumi/pulumi) you can now use any version of TypeScript by adding it as a dependency to your project's `package.json` file.
+Until now, Pulumi's seamless experience was limited to using Pulumi's builtin TypeScript version 3.8. If you wanted to use a more recent version, you had to introduce a build step to your project and let Pulumi run in [plain Javascript mode](/docs/languages-sdks/javascript/#disabling-built-in-typescript-support). With the release of the [Pulumi Node.js SDK 3.113.0](https://www.npmjs.com/package/@pulumi/pulumi) you can now use any version of TypeScript by adding it as a dependency to your project's `package.json` file.
 
 Pulumi supports all TypeScript versions from 3.8 and up, including [TypeScript 5.4](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-5-4.html).
 

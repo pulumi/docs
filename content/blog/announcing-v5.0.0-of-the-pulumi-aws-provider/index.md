@@ -9,7 +9,7 @@ tags:
 - aws
 ---
 
-We are excited to announce v5.0.0 of the Pulumi [AWS](https://www.pulumi.com/registry/packages/aws/) provider. The AWS provider is one of the most heavily used providers across the Pulumi ecosystem, and offers access to the full surface area of the upstream Terraform AWS Provider from within Pulumi projects in all supported Pulumi languages. The v5.0.0 release brings a substantial set of [fixes and improvements](https://github.com/hashicorp/terraform-provider-aws/blob/main/CHANGELOG.md#400-february-10-2022) to the provider, including a number of breaking
+We are excited to announce v5.0.0 of the Pulumi [AWS](/registry/packages/aws/) provider. The AWS provider is one of the most heavily used providers across the Pulumi ecosystem, and offers access to the full surface area of the upstream Terraform AWS Provider from within Pulumi projects in all supported Pulumi languages. The v5.0.0 release brings a substantial set of [fixes and improvements](https://github.com/hashicorp/terraform-provider-aws/blob/main/CHANGELOG.md#400-february-10-2022) to the provider, including a number of breaking
 changes as part of the major version release.
 
 <!--more-->
@@ -241,5 +241,5 @@ Your existing infrastructure is not going to change and thus we can easily migra
 
 ## Get Started Today!
 
-You can browse our [API reference docs](https://www.pulumi.com/registry/packages/aws/) with inline examples or explore
+You can browse our [API reference docs](/registry/packages/aws/) with inline examples or explore
 the [Pulumi AWS SDKs](https://github.com/pulumi/pulumi-aws) repository to get started today!

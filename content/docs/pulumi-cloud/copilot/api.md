@@ -16,7 +16,7 @@ menu:
 Pulumi Copilot's API is currently in preview and subject to change. It is not currently suitable for production use.
 {{% /notes %}}
 
-The Pulumi Copilot REST API (currently in Preview) is part of the [Pulumi Cloud REST API](https://www.pulumi.com/docs/pulumi-cloud/reference/cloud-rest-api) that is used to integrate Pulumi Copilot capabilities with other applications or tools.
+The Pulumi Copilot REST API (currently in Preview) is part of the [Pulumi Cloud REST API](/docs/pulumi-cloud/reference/cloud-rest-api) that is used to integrate Pulumi Copilot capabilities with other applications or tools.
 
 ## Endpoint URL
 
@@ -159,7 +159,7 @@ curl -L https://api.pulumi.com/api/ai/chat/preview \
     {
       "role": "assistant",
       "kind": "response",
-      "content": "The update for the stack 'project1/dev' has failed. The failure is due to an error in creating a Virtual Network resource in Azure. The specific error is related to the incorrect handling of an Output<T> type in Pulumi. The error message indicates that calling 'ToString' on an Output<T> is not supported, which leads to a bad request error (HTTP 400) when trying to create the resource.\n\n**How to resolve the issue:**\n- Review the code where the resourceGroupName is being set. Ensure that you are not directly converting an Output<T> to a string using 'ToString'.\n- Use the 'Apply' method or 'Output.Format' to correctly handle the Output<T> type. For example, use `o.Apply(v => $\"prefix{v}suffix\")` or `Output.Format($\"prefix{hostname}suffix\")`.\n- Refer to the Pulumi documentation on [Inputs and Outputs](https://www.pulumi.com/docs/concepts/inputs-outputs) for more guidance on handling Output<T> types properly."
+      "content": "The update for the stack 'project1/dev' has failed. The failure is due to an error in creating a Virtual Network resource in Azure. The specific error is related to the incorrect handling of an Output<T> type in Pulumi. The error message indicates that calling 'ToString' on an Output<T> is not supported, which leads to a bad request error (HTTP 400) when trying to create the resource.\n\n**How to resolve the issue:**\n- Review the code where the resourceGroupName is being set. Ensure that you are not directly converting an Output<T> to a string using 'ToString'.\n- Use the 'Apply' method or 'Output.Format' to correctly handle the Output<T> type. For example, use `o.Apply(v => $\"prefix{v}suffix\")` or `Output.Format($\"prefix{hostname}suffix\")`.\n- Refer to the Pulumi documentation on [Inputs and Outputs](/docs/concepts/inputs-outputs) for more guidance on handling Output<T> types properly."
     }
   ]
 }
@@ -237,7 +237,7 @@ curl -L https://api.pulumi.com/api/ai/chat/preview \
     {
       "role": "assistant",
       "kind": "response",
-      "content": "In Pulumi, an `Output<T>` represents a value that is computed asynchronously, which means the actual value isn't available until the resource is provisioned. This is why you can't directly convert an `Output<T>` to a string. Instead, you should use the `apply` method to specify a function that will be executed once the value is available. This ensures that any code dependent on the `Output`'s value only runs after the value is resolved.\n\nHere's a brief example in TypeScript:\n\n```typescript\nimport * as pulumi from \"@pulumi/pulumi\";\n\nconst bucket = new aws.s3.Bucket(\"my-bucket\");\n\nconst bucketNameString: pulumi.Output<string> = bucket.id.apply(id => {\n    if (typeof id === 'string') return id;\n    throw new Error(`Expected a string but got: ${id}`);\n});\n```\n\nIn this example, `bucket.id` is an `Output`. The `apply` method is used to transform it into a string. For more information, you can refer to Pulumi's documentation on [Outputs](https://www.pulumi.com/docs/intro/concepts/inputs-outputs/)."
+      "content": "In Pulumi, an `Output<T>` represents a value that is computed asynchronously, which means the actual value isn't available until the resource is provisioned. This is why you can't directly convert an `Output<T>` to a string. Instead, you should use the `apply` method to specify a function that will be executed once the value is available. This ensures that any code dependent on the `Output`'s value only runs after the value is resolved.\n\nHere's a brief example in TypeScript:\n\n```typescript\nimport * as pulumi from \"@pulumi/pulumi\";\n\nconst bucket = new aws.s3.Bucket(\"my-bucket\");\n\nconst bucketNameString: pulumi.Output<string> = bucket.id.apply(id => {\n    if (typeof id === 'string') return id;\n    throw new Error(`Expected a string but got: ${id}`);\n});\n```\n\nIn this example, `bucket.id` is an `Output`. The `apply` method is used to transform it into a string. For more information, you can refer to Pulumi's documentation on [Outputs](/docs/intro/concepts/inputs-outputs/)."
     }
   ]
 }

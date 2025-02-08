@@ -366,18 +366,18 @@ new MyStage(app, 'prod', {
 });
 ```
 
-The AWS CDK Stages can be converted to [Pulumi Stacks](https://www.pulumi.com/docs/iac/concepts/stacks/).
+The AWS CDK Stages can be converted to [Pulumi Stacks](/docs/iac/concepts/stacks/).
 Similar to CDK Stages, Pulumi Stacks can be used to deploy groups of resources to different environments.
 
 In AWS CDK applications differences in configuration between environments are typically configured through input parameters on the Stage.
 In the above example, the `DatabaseCluster` uses a different `InstanceType` between the `dev` and `prod` environments.
-When we convert this application to Pulumi, we will move this configuration from the Stage input properties to [Stack Configuration](https://www.pulumi.com/docs/iac/concepts/config/)
+When we convert this application to Pulumi, we will move this configuration from the Stage input properties to [Stack Configuration](/docs/iac/concepts/config/)
 
 When we convert the AWS CDK application we will:
 
 * Combining the Stacks like we did in the [Multi Stack example](#converting-same-environment-stacks)
 * Remove the use of CDK Stages
-* Read the instance type from the [Pulumi Configuration](https://www.pulumi.com/docs/iac/concepts/config/).
+* Read the instance type from the [Pulumi Configuration](/docs/iac/concepts/config/).
 
 ```ts
 import * as pulumi from '@pulumi/pulumi';
@@ -466,4 +466,4 @@ If there are any issues with importing, the tool can be run again to try the imp
 
 ## More Info
 
-For more info on using Pulumi CDK check out the [Pulumi CDK Guide](https://www.pulumi.com/docs/iac/clouds/aws/guides/cdk/) or the [Pulumi CDK GitHub Repository](https://github.com/pulumi/pulumi-cdk) for more info.
+For more info on using Pulumi CDK check out the [Pulumi CDK Guide](/docs/iac/clouds/aws/guides/cdk/) or the [Pulumi CDK GitHub Repository](https://github.com/pulumi/pulumi-cdk) for more info.

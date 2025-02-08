@@ -47,7 +47,7 @@ One crucial aspect of securing applications is managing sensitive data. We will 
 
 To use Kubernetes Secrets, a Kubernetes Cluster, and the [kubectl](https://kubernetes.io/docs/reference/kubectl/) CLI are required.
 
-Consider using [minikube](https://minikube.sigs.k8s.io/docs/start/) as a starting option to getting a local Kubernetes Cluster installed. Alternatively, you can use [Pulumi](https://www.pulumi.com/kubernetes/) to deploy a Kubernetes Cluster in [Azure](https://www.pulumi.com/registry/packages/kubernetes/how-to-guides/aks/), [GCP](https://www.pulumi.com/registry/packages/kubernetes/how-to-guides/gke/), or [AWS](https://www.pulumi.com/registry/packages/kubernetes/how-to-guides/eks/).
+Consider using [minikube](https://minikube.sigs.k8s.io/docs/start/) as a starting option to getting a local Kubernetes Cluster installed. Alternatively, you can use [Pulumi](https://www.pulumi.com/kubernetes/) to deploy a Kubernetes Cluster in [Azure](/registry/packages/kubernetes/how-to-guides/aks/), [GCP](/registry/packages/kubernetes/how-to-guides/gke/), or [AWS](/registry/packages/kubernetes/how-to-guides/eks/).
 
 Let's look at a practical example of how to create, read, update, and delete a Kubernetes Secret via the `kubectl` CLI.
 

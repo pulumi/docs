@@ -150,7 +150,7 @@ Securing secrets in CircleCI is crucial for reinforcing the security of your CI/
 
 Now that you know about CircleCI secrets, take your cloud infrastructure management to the next level with Pulumi:
 
-- **Connect [Pulumi IaC to CircleCI](https://www.pulumi.com/docs/iac/packages-and-automation/continuous-delivery/circleci/)**. Use Pulumi Orbs to create, deploy, and manage cloud-native applications and infrastructure in your favorite language.
+- **Connect [Pulumi IaC to CircleCI](/docs/iac/packages-and-automation/continuous-delivery/circleci/)**. Use Pulumi Orbs to create, deploy, and manage cloud-native applications and infrastructure in your favorite language.
 - **Integrate Pulumi in your pipelines**: Review a comprehensive guide on how to [build cloud infrastructure from your CI pipeline with Pulumi](https://circleci.com/blog/reusable-ci-cd-components-with-circleci-orbs-and-pulumi/)
 - **Use Pulumi ESC**: Discover how to manage sensitive information in your cloud applications. Dive into Pulumi's [Secrets management guide](/blog/managing-secrets-with-pulumi/) for in-depth information on encrypting specific values for added security and ensuring that these values never appear in plain text in your state file​.
 

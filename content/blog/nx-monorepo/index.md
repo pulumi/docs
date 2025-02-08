@@ -46,7 +46,7 @@ In the Node.js ecosystem, we've seen an explosion of great tooling over the last
 
 While it has always been possible to apply these tools to Pulumi Node.js projects in TypeScript or JavaScript just like any other Node.js project, we've recently made [a](https://github.com/pulumi/pulumi/issues/15436) [number](https://github.com/pulumi/pulumi/issues/2661) [of](https://github.com/pulumi/pulumi/issues/7168) [enhancements](https://github.com/pulumi/pulumi/issues/3013) [and](https://github.com/pulumi/pulumi/issues/15455) [fixes](https://github.com/pulumi/examples/issues/1605) to make sure that Pulumi works truly seamlessly with these tools.
 
-In this post, we'll show how you can build a seamless development workflow by integrating Pulumi code level abstractions, such as [Component Resources](https://www.pulumi.com/docs/concepts/resources/components/), with a monorepo-based build system like [Nx](https://nx.dev).
+In this post, we'll show how you can build a seamless development workflow by integrating Pulumi code level abstractions, such as [Component Resources](/docs/concepts/resources/components/), with a monorepo-based build system like [Nx](https://nx.dev).
 
 <!--more-->
 

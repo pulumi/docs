@@ -68,7 +68,7 @@ $ cd pulumi-tutorial-import
 $ pulumi new python
 ```
 
-This tutorial will define the S3 bucket resource using the AWS Classic provider, so you will also need to make sure to [install the AWS Classic dependency into your project](https://www.pulumi.com/registry/packages/aws/installation-configuration/).
+This tutorial will define the S3 bucket resource using the AWS Classic provider, so you will also need to make sure to [install the AWS Classic dependency into your project](/registry/packages/aws/installation-configuration/).
 
 ## Importing a resource
 
@@ -288,7 +288,7 @@ The third method to import existing cloud resources into a Pulumi project is by 
 
 To demonstrate, you will start by creating a simple IAM role in the AWS Console. For the purposes of this tutorial, you can follow the steps in AWS's [Creating an execution role in the IAM console guide](https://docs.aws.amazon.com/lambda/latest/dg/lambda-intro-execution-role.html#permissions-executionrole-console) to create your IAM role resource. When doing so, select the **AWSLambdaDynamoDBExecutionRole** managed policy on the **Add permissions** page and enter **pulumi-tutorial-iam-role** for the role name.
 
-Once that is complete, you will need to identify the lookup property (e.g. the `id`) of the IAM role resource. To do so, navigate to the **Import** section of the [AWS IAM Role resource page](https://www.pulumi.com/registry/packages/aws/api-docs/iam/role/#import) in the Pulumi documentation. You will notice that the lookup property is the `name`, which corresponds to the name of the IAM role.
+Once that is complete, you will need to identify the lookup property (e.g. the `id`) of the IAM role resource. To do so, navigate to the **Import** section of the [AWS IAM Role resource page](/registry/packages/aws/api-docs/iam/role/#import) in the Pulumi documentation. You will notice that the lookup property is the `name`, which corresponds to the name of the IAM role.
 
 Now, navigate to your program code file and update the code with the following resource definition:
 

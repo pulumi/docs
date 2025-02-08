@@ -10,7 +10,7 @@ tags:
 ---
 
 {{% notes type="warning" %}}
-This blog post is outdated and no longer accurate. Go to our [Azure Classic package page](https://www.pulumi.com/registry/packages/azure) for up to date details.
+This blog post is outdated and no longer accurate. Go to our [Azure Classic package page](/registry/packages/azure) for up to date details.
 {{% /notes %}}
 
 We are happy to announce the release of a new major version of the Pulumi Azure provider. Pulumi Azure 2.0 is based on the 2.0 release of the upstream provider and brings several improvements and breaking changes.

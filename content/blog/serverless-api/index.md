@@ -345,7 +345,7 @@ You can find the full code in the [service status monitor repo](https://github.c
 
 ## **Alternative approaches**
 
-There are other ways to run containers that scale to zero. [Google Cloud Run](https://www.pulumi.com/registry/packages/gcp/api-docs/cloudrun/service/) offers similar functionality on GCP, and [AWS App Runner](https://www.pulumi.com/blog/deploy-applications-with-aws-app-runner/) is another AWS service that can do this. Both have similar pricing models—very cheap for low-volume services. And [SST](https://www.pulumi.com/blog/from-cdk-pulumi-evolution-of-sst/) is a similar solution for getting TypeScript / JavaScript solutions into an AWS Lambda.
+There are other ways to run containers that scale to zero. [Google Cloud Run](/registry/packages/gcp/api-docs/cloudrun/service/) offers similar functionality on GCP, and [AWS App Runner](https://www.pulumi.com/blog/deploy-applications-with-aws-app-runner/) is another AWS service that can do this. Both have similar pricing models—very cheap for low-volume services. And [SST](https://www.pulumi.com/blog/from-cdk-pulumi-evolution-of-sst/) is a similar solution for getting TypeScript / JavaScript solutions into an AWS Lambda.
 
 The beauty of the container approach used here is that switching between these services is straightforward. Since we're just running a standard container with a REST endpoint, there's nothing AWS-specific in our application code. If you need to move to a different platform later, you can take your container with you.
 

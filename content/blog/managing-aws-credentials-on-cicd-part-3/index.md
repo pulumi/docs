@@ -205,7 +205,7 @@ const websiteUpdaterPolicy = new aws.iam.Policy("WebsiteUpdaterRolePolicy", {
 ```
 
 To actually associate the IAM Policy document with the new IAM Role, we need to create a
-[PolicyAttachment](https://www.pulumi.com/registry/packages/aws/api-docs/iam/policyattachment/#policyattachment)
+[PolicyAttachment](/registry/packages/aws/api-docs/iam/policyattachment/#policyattachment)
 associating the two.
 
 ```typescript
@@ -274,7 +274,7 @@ along with the source code for a stack, so that builds and stack updates are rep
 However, what if those configuration settings contain secrets? Like you need to store an API key
 to use a 3rd party API.
 
-Pulumi supports [encrypting sensitive configuration data](https://www.pulumi.com/docs/concepts/config/#secrets).
+Pulumi supports [encrypting sensitive configuration data](/docs/concepts/config/#secrets).
 You just need to add the `--secret` flag.
 
 ```bash

@@ -61,7 +61,7 @@ If you are going to use Cosmos DB, you should probably be using the Core API, al
 
 This is a personal opinion, but if you have a use case that is well served by a traditional relational database, you should choose that. Postgres and SQL Server are both great and both available on Azure ( Postgres as Azure Database for PostgreSQL ). They both have great query planners; they have great tooling for migration and backups, as well as schema management. The SQL API from Cosmos should **not** be considered an alternative to a relational database unless you have specific needs because it's a different type of beast designed for different use cases. But let me show you.
 
-If you grab our [CosmoDB how to guide](https://www.pulumi.com/registry/packages/azure-native/how-to-guides/azure-cs-cosmosdb-logicapp/) and `pulumi up`, you'll see from that, the first hint of its [document roots](https://github.com/pulumi/examples/blob/master/azure-cs-cosmosdb-logicapp/MyStack.cs#L6) in that the pulumi namespace is `Pulumi.AzureNative.DocumentDB`, but it goes deeper because although I can insert and select with sql in Cosmos DB, there is no schema.
+If you grab our [CosmoDB how to guide](/registry/packages/azure-native/how-to-guides/azure-cs-cosmosdb-logicapp/) and `pulumi up`, you'll see from that, the first hint of its [document roots](https://github.com/pulumi/examples/blob/master/azure-cs-cosmosdb-logicapp/MyStack.cs#L6) in that the pulumi namespace is `Pulumi.AzureNative.DocumentDB`, but it goes deeper because although I can insert and select with sql in Cosmos DB, there is no schema.
 
 ### Cosmos DB NoSQL Inserting and Querying
 
@@ -340,7 +340,7 @@ Many times, that cost is not the variable being optimized for. Data is paramount
 
 > We've been using Cosmos DB as a document database since it was called DocumentDB, and it's been fast, reliable, and straightforward for our needs. We store large, arbitrarily structured JSON documents, and Cosmos DB's full indexing has handled that effortlessly. For us, the simplicity works—we don't need to scale to millions of users, and with auto-scaling, each customer's database runs smoothly without any partitioning.
 
-For help provisioning Cosmos DB, check out our [Azure Cosmos DB How to guide](https://www.pulumi.com/registry/packages/azure-native/how-to-guides/azure-cs-cosmosdb-logicapp/) and if you decide to go with Azure Tables instead, our [Azure Native provider](https://www.pulumi.com/registry/packages/azure-native/) is there to help you all the same.
+For help provisioning Cosmos DB, check out our [Azure Cosmos DB How to guide](/registry/packages/azure-native/how-to-guides/azure-cs-cosmosdb-logicapp/) and if you decide to go with Azure Tables instead, our [Azure Native provider](/registry/packages/azure-native/) is there to help you all the same.
 
 And if you have a Cosmos DB experience to share ( or I got something wrong ): [reach out](/blog/author/adam-gordon-bell/). And, if you haven't already, give Pulumi IaC a try:
 

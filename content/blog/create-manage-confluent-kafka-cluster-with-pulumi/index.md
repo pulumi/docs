@@ -9,7 +9,7 @@ tags: ["confluent", "kafka"]
 
 Event streaming is used across diverse industries that demand real-time data processing. Apache Kafka is the most popular open-source streaming platform. Confluent Cloud lets you run Kafka on the cloud provider of your choice.
 
-In this blog post, you'll use the [Confluent Cloud Pulumi provider](https://www.pulumi.com/registry/packages/confluentcloud/) and Pulumi to create a Kafka cluster, topic, and customer account.
+In this blog post, you'll use the [Confluent Cloud Pulumi provider](/registry/packages/confluentcloud/) and Pulumi to create a Kafka cluster, topic, and customer account.
 
 <!--more-->
 

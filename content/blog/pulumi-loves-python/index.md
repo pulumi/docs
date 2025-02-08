@@ -40,7 +40,7 @@ The result has been strong and steady growth of Python Pulumi usage.  This has b
 
 Pulumi has long had support to create and manage virtual environments using Python's builtin package manager [pip](https://pip.pypa.io/en/stable/). With the [latest release of Pulumi](https://github.com/pulumi/pulumi/releases/tag/v3.121.0), we are excited to announce that we now support [Poetry](https://python-poetry.org) as well. Poetry is a popular Python dependency management tool that allows you to declare your dependencies in a simple and concise way and manage your virtual environment with ease.
 
-When creating a new Pulumi project, the Pulumi CLI will now ask you if you want to use Poetry to manage your dependencies. If you choose to use Poetry, the Pulumi CLI will automatically create a new Poetry project for you and install the necessary dependencies. To opt-in to using Poetry for an existing Pulumi project, set the [`toolchain` runtime option](https://www.pulumi.com/docs/concepts/projects/project-file/#runtime-options) to `poetry` and run `pulumi install`.
+When creating a new Pulumi project, the Pulumi CLI will now ask you if you want to use Poetry to manage your dependencies. If you choose to use Poetry, the Pulumi CLI will automatically create a new Poetry project for you and install the necessary dependencies. To opt-in to using Poetry for an existing Pulumi project, set the [`toolchain` runtime option](/docs/concepts/projects/project-file/#runtime-options) to `poetry` and run `pulumi install`.
 
 ```yaml
 name: python-and-poetry-are-best-friends
@@ -54,7 +54,7 @@ runtime:
 
 Pulumi Python SDKs include type hints compatible with type checkers such as [MyPy](https://www.mypy-lang.org) and [Pyright](https://microsoft.github.io/pyright/#/). In the latest release of Pulumi, you can ask Pulumi to run your typechecker of choice for you as part of Pulumi operations and fail if there are any type errors. This can help you catch type errors earlier and ensure that your Pulumi programs are type-safe.
 
-Add the typechecker of your choice to [your dependencies](https://www.pulumi.com/docs/languages-sdks/python/#packages) and set the [`typechecker` runtime option](https://www.pulumi.com/docs/concepts/projects/project-file/#runtime-options) in your project file to `mypy` or `pyright` to enable automatic type checking.
+Add the typechecker of your choice to [your dependencies](/docs/languages-sdks/python/#packages) and set the [`typechecker` runtime option](/docs/concepts/projects/project-file/#runtime-options) in your project file to `mypy` or `pyright` to enable automatic type checking.
 
 ```yaml
 name: python-with-typechecking
@@ -122,7 +122,7 @@ deployment = Deployment(
 )
 ```
 
-The new Pythonic input types are available in the latest release of the Pulumi SDKs for [Kubernetes](https://www.pulumi.com/registry/packages/kubernetes/), [AWS](https://www.pulumi.com/registry/packages/aws/) and [GCP](https://www.pulumi.com/registry/packages/gcp/), with more provider SDKs to follow soon.
+The new Pythonic input types are available in the latest release of the Pulumi SDKs for [Kubernetes](/registry/packages/kubernetes/), [AWS](/registry/packages/aws/) and [GCP](/registry/packages/gcp/), with more provider SDKs to follow soon.
 
 {{% notes type="info" %}}
 Due to a performance issue in MyPy, type checking of TypedDict-based inputs is currently disabled when using MyPy as a type checker.  We are working on helping resolve [this issue](https://github.com/python/mypy/issues/17231). In the meantime, we recommend using Pyright as a type checker to get the most complete type checking possible for Dict-based Pulumi Python programs.

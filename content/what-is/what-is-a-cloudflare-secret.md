@@ -140,7 +140,7 @@ Following security best practices for Cloudflare secrets are crucial in managing
 
 Now that you know Cloudflare secrets, take your cloud infrastructure management to the next level with [Pulumi](https://www.pulumi.com/):
 
-- **Streamlined infrastructure management with Infrastructure as Code (IaC)**: Learn about other Cloudflare resources using Pulumi’s IaC capabilities. Pulumi lets you define and provision your cloud infrastructure using familiar programming languages, directly integrating secrets management into your workflows. Discover how to integrate Cloudflare secrets into your broader cloud infrastructure with Pulumi by exploring the [Cloudflare Provider documentation](https://www.pulumi.com/registry/packages/cloudflare/). Below are some examples of how to create a Cloudflare secret in several supported programming languages:
+- **Streamlined infrastructure management with Infrastructure as Code (IaC)**: Learn about other Cloudflare resources using Pulumi’s IaC capabilities. Pulumi lets you define and provision your cloud infrastructure using familiar programming languages, directly integrating secrets management into your workflows. Discover how to integrate Cloudflare secrets into your broader cloud infrastructure with Pulumi by exploring the [Cloudflare Provider documentation](/registry/packages/cloudflare/). Below are some examples of how to create a Cloudflare secret in several supported programming languages:
 
 ```bash
 $ pulumi config set secrets-demo --secret
