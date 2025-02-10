@@ -137,27 +137,34 @@ In our Automation API [examples repo](https://github.com/pulumi/automation-api-e
 projects, working across stacks, or in our case, completing a one-time workflow to migrate a database.
 
     ```java
-            var projectName = "database_migration_project";
-            var stackName = "dev";
+    var projectName = "database_migration_project";
+    var stackName = "dev";
 
-            try (var stack = LocalWorkspace.createOrSelectStack(projectName, stackName, program)) {
+    try (var stack = LocalWorkspace.createOrSelectStack(projectName, stackName, program)) {
+        ...
 
-                stack.getWorkspace().installPlugin("aws", "v6.68.0");
+        stack.getWorkspace().installPlugin("aws", "v6.68.0");
 
-                stack.setConfig("aws:region", new ConfigValue("us-west-2"));
+        stack.setConfig("aws:region", new ConfigValue("us-west-2"));
 
-                stack.refresh(RefreshOptions.builder()
-                        .onStandardOutput(System.out::println)
-                        .build());
+        System.out.println("updating stack...");
+        var result = stack.up(UpOptions.builder()
+                .onStandardOutput(System.out::println)
+                .build());
 
-                var result = stack.up(UpOptions.builder()
-                        .onStandardOutput(System.out::println)
-                        .build());
+        var changes = result.getSummary().getResourceChanges();
+        if (!changes.isEmpty()) {
+            System.out.println("update summary:");
+            changes.forEach((key, value) -> {
+                System.out.printf("    %s: $d%n", key, value);
+            });
+        }
 
-                configureDatabase(
-                    ...
-                );
-            }
+        System.out.printf("db host url: %s%n", result.getOutputs().get("host").getValue());
+        configureDatabase(
+            ...
+        );
+    }
     ```
 
 The full example, along with others, is available in our Automation API [examples repo](https://github.com/pulumi/automation-api-examples/tree/main/java). We're excited to bring the Automation API to the Java SDK for the first time and we're looking forward to your feedback.
