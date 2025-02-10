@@ -92,38 +92,45 @@ In our Automation API [examples repo](https://github.com/pulumi/automation-api-e
 1. Like regular Pulumi programs, we're able to obtain the current operating context and use the details to construct new resources
 
     ```java
-                var vpcId = Ec2Functions.getVpc(
-                        GetVpcArgs.builder().default_(true).build()
-                        ).applyValue(GetVpcResult::id);
+    Consumer<Context> program = ctx -> {
+        ...
 
-                var subnetIds = Ec2Functions.getSubnets(GetSubnetsArgs.builder()
-                    .filters(GetSubnetsFilterArgs.builder()
-                    ...
-                    .collect(Collectors.toList()));
+        var subnetGroup = new SubnetGroup("db-subnet", ...);
 
-                var subnetGroup = new SubnetGroup("db-subnet", SubnetGroupArgs.builder()
-                        .subnetIds(subnetIds)
-                        .build());
+        // Make a public security group for our cluster for the migration
+        var securityGroup = new SecurityGroup("public-security-group", ...);
 
-                var securityGroup = new SecurityGroup("public-security-group", SecurityGroupArgs.builder()
-                        .ingress(SecurityGroupIngressArgs.builder()
-                            ...
-                        .build());
+        // Example values for our db
+        var dbName = "hellosql";
+        var dbUser = "hellosql";
+        var dbPassword = "hellosql";
 
-                var cluster = new Cluster("db", ClusterArgs.builder()
-                    ...
-                    .build());
+        // Provision our db
+        var cluster = new Cluster("db", ClusterArgs.builder()
+                .engine(EngineType.AuroraMysql)
+                .engineVersion("8.0.mysql_aurora.3.08.0")
+                .databaseName(dbName)
+                .masterUsername(dbUser)
+                .masterPassword(dbPassword)
+                .skipFinalSnapshot(true)
+                .dbSubnetGroupName(subnetGroup.name())
+                .vpcSecurityGroupIds(securityGroup.id().applyValue(List::of))
+                .build());
 
-                var clusterInstance = new ClusterInstance("db-instance", ClusterInstanceArgs.builder()
-                    .clusterIdentifier(cluster.clusterIdentifier())
-                    ...
-                    .dbSubnetGroupName(subnetGroup.name())
-                    .build());
+        var clusterInstance = new ClusterInstance("db-instance", ClusterInstanceArgs.builder()
+                .clusterIdentifier(cluster.clusterIdentifier())
+                .instanceClass("db.t3.medium")
+                .engine(EngineType.AuroraMysql.getValue())
+                .engineVersion("8.0.mysql_aurora.3.08.0")
+                .publiclyAccessible(true)
+                .dbSubnetGroupName(subnetGroup.name())
+                .build());
 
-                ctx.export("host", cluster.endpoint());
-                ctx.export("db_name", dbName);
-                ctx.export("db_user", dbUser);
-                ctx.export("db_pass", dbPassword);
+        ctx.export("host", cluster.endpoint());
+        ctx.export("db_name", dbName);
+        ctx.export("db_user", dbUser);
+        ctx.export("db_pass", dbPassword);
+    };
     ```
 
 2. With the Automation API, however, we're also able to directly interact with project and stack objects, giving us the opportunity to orchestrate workflows. This could include scaffolding
