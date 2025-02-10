@@ -154,7 +154,7 @@ projects, working across stacks, or in our case, completing a one-time workflow 
         if (!changes.isEmpty()) {
             System.out.println("update summary:");
             changes.forEach((key, value) -> {
-                System.out.printf("    %s: $d%n", key, value);
+                System.out.printf("    %s: %d%n", key, value);
             });
         }
 
