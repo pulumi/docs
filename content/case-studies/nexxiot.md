@@ -10,8 +10,13 @@ customer_logo: /logos/customers/nexxiot.svg
 customer_url: https://www.nexxiot.com/
 
 quote_block:
-  quote: |
-        "I would recommend using Pulumi for everybody who starts on a Green Field approach with infrastructure as code because I'm quite sure and confident to be able to say that it is the most powerful and versatile tool out there. You will run into limits with Terraform, you will run into limits with CDK mostly because it's based on CloudFormation. Your biggest chance to not run into troubles and limitations is to use Pulumi."
+  quote: >
+        "
+        You will run into limits with Terraform. 
+        
+        You will run into limits with CDK. 
+        
+        Your biggest chance to not run into troubles and limitations is to use Pulumi. It is the most powerful and versatile tool out there."
   quote_attrib: Alexander Berger, Site Reliability Engineer, Nexxiot
   headline_stat: 100%
   headline: Infrastructure reliability since adoption
