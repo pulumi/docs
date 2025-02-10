@@ -114,6 +114,6 @@ Automation API supports cross-language implementations where it runs in a progra
 
 For more ideas of what's possible with Automation API, [check out](/blog/tag/automation-api/) some of the ways we and community members use it in different use cases.
 
-## Known issues
+## Giving feedback
 
-The GA release of Automation API is stable; however, we know bugs can pop up. We are tracking a list of [known issues](https://github.com/pulumi/pulumi/issues?q=is%3Aissue+is%3Aopen+label%3Aarea%2Fautomation-api) and encourage you to [file additional issues](https://github.com/pulumi/pulumi/issues/new?assignees=&labels=needs-triage&template=bug_report.md&title=) as you find them.
+We encourage you to [file an issue](https://github.com/pulumi/pulumi/issues/new?assignees=&labels=needs-triage&template=bug_report.md&title=) if you have feedback on using Automation API.
