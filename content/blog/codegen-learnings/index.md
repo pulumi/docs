@@ -4,6 +4,7 @@ date: 2025-01-07T20:00:00-05:00
 draft: false
 meta_desc: Learnings from building a RAG for Pulumi code generator
 meta_image: meta.png
+math: true
 authors:
     - artur-laksberg
     - simon-howe
