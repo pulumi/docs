@@ -365,8 +365,8 @@ export class Chooser {
             preview: false,
         },
         {
-            key: "DIY backend",
-            name: "DIY backend",
+            key: "self-managed",
+            name: "Self Managed",
             preview: false,
         },
     ];
