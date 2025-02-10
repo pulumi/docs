@@ -33,7 +33,7 @@ sections:
     
     It manages deployment state and secrets, enables search across your clouds, runs deployments, integrates with CI/CD, and enforces policies and access controls.
 
-    The Pulumi CLI automatically uses Pulumi Cloud unless you set up a [self-managed backend](/docs/concepts/state/#using-a-self-managed-backend).
+    The Pulumi CLI automatically uses Pulumi Cloud unless you set up a [DIY backend](/docs/concepts/state/#using-a-diy-backend).
 - type: button-cards
   heading: Featured Capabilities
   cards:
