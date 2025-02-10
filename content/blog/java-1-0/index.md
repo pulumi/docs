@@ -167,7 +167,7 @@ projects, working across stacks, or in our case, completing a one-time workflow 
     }
     ```
 
-The full example, along with others, is available in our Automation API [examples repo](https://github.com/pulumi/automation-api-examples/tree/main/java). We're excited to bring the Automation API to the Java SDK for the first time and we're looking forward to your feedback.
+The full example, along with others, is available in our Automation API [examples repo](https://github.com/pulumi/automation-api-examples/tree/main/java). We're excited to bring the Automation API to the [Java SDK](https://www.pulumi.com/docs/iac/languages-sdks/java/) for the first time and we're looking forward to your feedback.
 
 ## Get Started with Pulumi Java
 
