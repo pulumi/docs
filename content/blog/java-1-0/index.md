@@ -7,8 +7,8 @@ meta_desc: "Pulumi’s Java SDK is now generally available. It enables organizat
 meta_image: meta.png
 
 authors:
-    - justin-vanpatten
     - mark-huber
+    - justin-vanpatten
 tags:
     - java
     - features
