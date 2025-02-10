@@ -43,27 +43,27 @@ Using Java with Pulumi lets you model your infrastructure using familiar pattern
 2. Next, we create a set of abstractions to describe the networking and OS.
 
     ```java
-        var javaVCN = new VirtualNetwork("virtualNetworkResource", VirtualNetworkArgs.builder()
-                        .compartmentId(compartmentId)
-                        .cidrBlock("10.0.0.0/16")
-                        .build());
+    var vcn = new VirtualNetwork("virtualNetworkResource", VirtualNetworkArgs.builder()
+            .compartmentId(compartmentId)
+            .cidrBlock("10.0.0.0/16")
+            .build());
 
-        var javaSubnet = new Subnet("testSubnet", SubnetArgs.builder()
-                        .cidrBlock("10.0.0.0/24")
-                        .compartmentId(compartmentId)
-                        .vcnId(javaVCN.id())
-                        .availabilityDomain(availabilityDomain)
-                        .build());
+    var subnet = new Subnet("testSubnet", SubnetArgs.builder()
+            .cidrBlock("10.0.0.0/24")
+            .compartmentId(compartmentId)
+            .vcnId(vcn.id())
+            .availabilityDomain(availabilityDomain)
+            .build());
 
-        var javaVNIC = InstanceCreateVnicDetailsArgs.builder()
-                        .subnetId(javaSubnet.id())
-                        .assignPublicIp("true")
-                        .build();
+    var vnicDetails = InstanceCreateVnicDetailsArgs.builder()
+            .subnetId(subnet.id())
+            .assignPublicIp("true")
+            .build();
 
-        var ubuntu24 = InstanceSourceDetailsArgs.builder()
-                        .sourceType("image")
-                        .sourceId(ubuntuId)
-                        .build();
+    var sourceDetails = InstanceSourceDetailsArgs.builder()
+            .sourceType("image")
+            .sourceId(ubuntuId)
+            .build();
     ```
 
 3. Finally, we compose our instance.
