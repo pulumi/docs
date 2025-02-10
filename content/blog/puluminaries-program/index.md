@@ -1,6 +1,6 @@
 ---
 title: "Introducing the Pulumi Puluminaries 2.0 Program"
-date: 2025-01-11
+date: 2025-02-10
 allow_long_title: true
 meta_desc: |
     We are excited to announce the Pulumi Puluminaries 2.0 Program. This is a fresh and revitalized way to celebrate and support Pulumi’s most passionate community members. Pulumi Puluminaries are individuals who demonstrate leadership in the Pulumi ecosystem by sharing best practices, creating valuable content, and helping fellow practitioners succeed.
@@ -75,4 +75,6 @@ As a Pulumi Puluminary, you will be expected to engage with the community atleas
 
 We are looking for Pulumi enthusiasts who have shown dedication and passion for empowering others in the Pulumi community. Whether you have built cutting-edge projects, delivered insightful conference talks, or helped users overcome technical hurdles, we would love to hear your story.
 
-Stay tuned for more details on how to apply or nominate someone for the Pulumi Puluminaries 2.0 Program. In the meantime, keep innovating and sharing your Pulumi journey, and do not forget to learn more about our current Pulumi Puluminaries [here](/community/puluminaries/).
+Whether you want to apply for yourself or nominate someone else, we’d love to hear from you!
+
+{{< blog/cta-button "Apply or Nominate Now" "https://docs.google.com/forms/d/e/1FAIpQLSecSYwLCF-flsYxcdjY4pBYmz-RupZaAf0NzXSW2y6hUTrQuQ/viewform" >}}
