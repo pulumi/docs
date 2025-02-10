@@ -113,7 +113,7 @@ In our Automation API [examples repo](https://github.com/pulumi/automation-api-e
                 var cluster = new Cluster("db", ClusterArgs.builder()
                     ...
                     .build());
-                
+
                 var clusterInstance = new ClusterInstance("db-instance", ClusterInstanceArgs.builder()
                     .clusterIdentifier(cluster.clusterIdentifier())
                     ...
