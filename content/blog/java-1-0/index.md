@@ -150,7 +150,7 @@ projects, working across stacks, or in our case, completing a one-time workflow 
                 .onStandardOutput(System.out::println)
                 .build());
 
-        var changes = result.getSummary().getResourceChanges();
+        var changes = result.summary().resourceChanges();
         if (!changes.isEmpty()) {
             System.out.println("update summary:");
             changes.forEach((key, value) -> {
