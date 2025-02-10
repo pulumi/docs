@@ -34,7 +34,7 @@ To learn how to use Automation API, see [Getting Started with Automation API](/d
 
 The following examples demonstrate how to use Automation API in various use cases.
 
-{{< chooser language "typescript,javascript,python,go,csharp" >}}
+{{< chooser language "typescript,javascript,python,go,csharp,java" >}}
 
 {{% choosable language typescript %}}
 
@@ -85,13 +85,19 @@ The following examples demonstrate how to use Automation API in various use case
 
 {{% /choosable %}}
 
+{{% choosable language java %}}
+
+* [Inline Program](https://github.com/pulumi/automation-api-examples/blob/main/java/InlineProgram)
+
+{{% /choosable %}}
+
 {{% /chooser %}}
 
 Visit the [examples repo](https://github.com/pulumi/automation-api-examples) for more code examples and links to projects using Automation API.
 
 ## Languages
 
-Like all of Pulumi, Automation API is available in multiple languages, so you can create applications that use it in TypeScript/JavaScript, Python, Go, and C#.
+Like all of Pulumi, Automation API is available in multiple languages, so you can create applications that use it in TypeScript/JavaScript, Python, Go, C#, and Java.
 
 Automation API supports cross-language implementations where it runs in a program of a different language than the Pulumi programs it manages.
 
@@ -102,6 +108,7 @@ Automation API supports cross-language implementations where it runs in a progra
 | <img src="/logos/tech/logo-python.png" class="h-10" /> | [Python](/docs/reference/pkg/python/pulumi/#module-pulumi.automation) | Stable                                                           |
 | <img src="/logos/tech/dotnet.png" class="h-10" />      | [.NET](/docs/reference/pkg/dotnet/Pulumi.Automation/Pulumi.Automation.html) | Stable |
 | <img src="/logos/tech/logo-golang.png" class="h-10" /> | [Go](https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/auto?tab=doc) | Stable |
+| <img src="/logos/tech/java.svg" class="h-10" /> | [Java](https://github.com/pulumi/pulumi-java/tree/main/sdk/java/pulumi/src/main/java/com/pulumi/experimental/automation) | *Experimental* |
 
 ## Blog Posts
 
