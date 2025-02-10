@@ -87,7 +87,9 @@ The following examples demonstrate how to use Automation API in various use case
 
 {{% choosable language java %}}
 
-* [Inline Program](https://github.com/pulumi/automation-api-examples/blob/main/java/InlineProgram)
+* [Inline Program](https://github.com/pulumi/automation-api-examples/blob/main/java/inlineProgram)
+* [Local Program](https://github.com/pulumi/automation-api-examples/blob/main/java/localProgram)
+* [Database Migration](https://github.com/pulumi/automation-api-examples/blob/main/java/databaseMigration)
 
 {{% /choosable %}}
 
@@ -108,7 +110,7 @@ Automation API supports cross-language implementations where it runs in a progra
 | <img src="/logos/tech/logo-python.png" class="h-10" /> | [Python](/docs/reference/pkg/python/pulumi/#module-pulumi.automation) | Stable                                                           |
 | <img src="/logos/tech/dotnet.png" class="h-10" />      | [.NET](/docs/reference/pkg/dotnet/Pulumi.Automation/Pulumi.Automation.html) | Stable |
 | <img src="/logos/tech/logo-golang.png" class="h-10" /> | [Go](https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/auto?tab=doc) | Stable |
-| <img src="/logos/tech/java.svg" class="h-10" /> | [Java](https://github.com/pulumi/pulumi-java/tree/main/sdk/java/pulumi/src/main/java/com/pulumi/experimental/automation) | *Experimental* |
+| <img src="/logos/tech/java.svg" class="h-10" /> | [Java](/docs/reference/pkg/java/com/pulumi/automation/package-summary.html) | Stable |
 
 ## Blog Posts
 
