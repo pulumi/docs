@@ -69,16 +69,14 @@ Using Java with Pulumi lets you model your infrastructure using familiar pattern
 3. Finally, we compose our instance.
 
     ```java
-        var instance = new Instance("instanceResource",
-                        InstanceArgs.builder()
-                            .availabilityDomain(availabilityDomain)
-                            .compartmentId(compartmentId)
-                            .shape("VM.Standard.E2.1.Micro")
-                            .preserveBootVolume(false)
-                            .createVnicDetails(javaVNIC)
-                            .sourceDetails(ubuntu24)
-                        .build()
-                );
+    var instance = new Instance("instanceResource", InstanceArgs.builder()
+            .availabilityDomain(availabilityDomain)
+            .compartmentId(compartmentId)
+            .shape("VM.Standard.E2.1.Micro")
+            .preserveBootVolume(false)
+            .createVnicDetails(vnicDetails)
+            .sourceDetails(sourceDetails)
+            .build());
     ```
 
 With just a few lines of code (especially by Java standards), we composed a set of strongly typed, easy-to-reason about resources using the builder pattern (a Java favorite) and without introducing any new language paradigms.
