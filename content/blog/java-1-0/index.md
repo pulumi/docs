@@ -87,11 +87,73 @@ With just a few lines of code (especially by Java standards), we composed a set 
 
 With the introduction of our Java language support, we’re also excited to announce that the [Automation API](https://www.pulumi.com/docs/iac/using-pulumi/automation-api/) is now supported in Java. The Automation API is a fully typed SDK that allows you to interact with Pulumi programs outside the Pulumi CLI. You can directly access and orchestrate your Pulumi projects and stacks with the SDK. This allows you to integrate Pulumi into other systems, such as CI/CD pipelines or internal tooling.
 
-```java
-    TODO
-```
+In our Automation API [examples repo](https://github.com/pulumi/automation-api-examples), we have an example demonstrating how you could construct a Pulumi program with the Automation API to [perform a database migration](https://github.com/pulumi/automation-api-examples/java-databaseMigration). Let's take a look at a few of the interesting aspects:
 
-We're excited to bring the Automation API to the Java SDK for the first time and anticipate rapid iterations as feedback comes in.
+1. Like regular Pulumi programs, we're able to obtain the current operating context and use the details to construct new resources
+
+    ```java
+                var vpcId = Ec2Functions.getVpc(
+                        GetVpcArgs.builder().default_(true).build()
+                        ).applyValue(GetVpcResult::id);
+
+                var subnetIds = Ec2Functions.getSubnets(GetSubnetsArgs.builder()
+                    .filters(GetSubnetsFilterArgs.builder()
+                    ...
+                    .collect(Collectors.toList()));
+
+                var subnetGroup = new SubnetGroup("db-subnet", SubnetGroupArgs.builder()
+                        .subnetIds(subnetIds)
+                        .build());
+
+                var securityGroup = new SecurityGroup("public-security-group", SecurityGroupArgs.builder()
+                        .ingress(SecurityGroupIngressArgs.builder()
+                            ...
+                        .build());
+
+                var cluster = new Cluster("db", ClusterArgs.builder()
+                    ...
+                    .build());
+                
+                var clusterInstance = new ClusterInstance("db-instance", ClusterInstanceArgs.builder()
+                    .clusterIdentifier(cluster.clusterIdentifier())
+                    ...
+                    .dbSubnetGroupName(subnetGroup.name())
+                    .build());
+
+                ctx.export("host", cluster.endpoint());
+                ctx.export("db_name", dbName);
+                ctx.export("db_user", dbUser);
+                ctx.export("db_pass", dbPassword);
+    ```
+
+2. With the Automation API, however, we're also able to directly interact with project and stack objects, giving us the opportunity to orchestrate workflows. This could include scaffolding
+projects, working across stacks, or in our case, completing a one-time workflow to migrate a database.
+
+    ```java
+            var projectName = "database_migration_project";
+            var stackName = "dev";
+
+            try (var stack = LocalWorkspace.createOrSelectStack(projectName, stackName, program)) {
+
+                stack.getWorkspace().installPlugin("aws", "v6.68.0");
+
+                stack.setConfig("aws:region", new ConfigValue("us-west-2"));
+
+                stack.refresh(RefreshOptions.builder()
+                        .onStandardOutput(System.out::println)
+                        .build());
+
+                var result = stack.up(UpOptions.builder()
+                        .onStandardOutput(System.out::println)
+                        .build());
+
+                configureDatabase(
+                    ...
+                );
+            }
+    ```
+
+The full example, along with many others, is available in our Automation API [examples repo](https://github.com/pulumi/automation-api-examples/java-databaseMigration). We're excited to bring the Automation API to the Java SDK for the first time and anticipate rapid iterations as feedback comes in.
 
 ## Get Started with Pulumi Java
 
