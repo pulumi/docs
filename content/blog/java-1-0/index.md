@@ -83,7 +83,7 @@ With just a few lines of code (especially by Java standards), we composed a set 
 
 ## New: Java Automation API
 
-With the introduction of our Java language support, we’re also excited to announce that the [Automation API](https://www.pulumi.com/docs/iac/using-pulumi/automation-api/) is now supported in Java. The Automation API is a fully typed SDK that allows you to interact with Pulumi programs outside the Pulumi CLI. You can directly access and orchestrate your Pulumi projects and stacks with the SDK. This allows you to integrate Pulumi into other systems, such as CI/CD pipelines or internal tooling.
+With the general availability of our Java language support, we’re also excited to announce that the [Automation API](https://www.pulumi.com/docs/iac/using-pulumi/automation-api/) is now supported in Java. The Automation API is a fully typed SDK that allows you to interact with Pulumi programs outside the Pulumi CLI. You can directly access and orchestrate your Pulumi projects and stacks with the SDK, allowing you to supercharge your Infrastructure as Code.
 
 In our Automation API [examples repo](https://github.com/pulumi/automation-api-examples), we have an example demonstrating how you could construct a Pulumi program with the Automation API to [perform a database migration](https://github.com/pulumi/automation-api-examples/tree/main/java/databaseMigration). Let's take a look at a few of the interesting aspects:
 
