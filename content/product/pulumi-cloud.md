@@ -242,11 +242,11 @@ products:
               more_info: |
                 **Example Pulumi Copilot prompts:**
 
-                *"Create a new serverless application on AWS"*
+                *“Create a new serverless application on AWS”*
 
-                *"Configure a Kubernetes cluster with best practices on Azure"*
+                *“Configure a Kubernetes cluster with best practices on Azure”*
 
-                *"Deploy a Cloudflare worker that uses sticky load balancing to distribute traffic to my Google Cloud backend"*
+                *“Deploy a Cloudflare worker that uses sticky load balancing to distribute traffic to my Google Cloud backend”*
 
             - title: Understand your team's cloud usage
               description: |
@@ -255,13 +255,13 @@ products:
               more_info: |
                 **Example Pulumi Copilot prompts:**
 
-                *"What versions of Kubernetes do I currently have deployed?"*
+                *“What versions of Kubernetes do I currently have deployed?”*
 
-                *"What AWS account does VPC vpc-04a11 live within?"*
+                *“What AWS account does VPC vpc-04a11 live within?”*
 
-                *"What environments do we have related to Azure?"*
+                *“What environments do we have related to Azure?”*
 
-                *"Describe the architecture of my www-frontend project."*
+                *“Describe the architecture of my www-frontend project.”*
 
             - title: Discover cost savings opportunities
               description: |
@@ -270,24 +270,24 @@ products:
               more_info: |
                 **Example Pulumi Copilot prompts:**
 
-                *"What are my least used, most expensive resources?"*
+                *“What are my least used, most expensive resources?”*
 
-                *"What are my top 10 most expensive cloud resources?"*
+                *“What are my top 10 most expensive cloud resources?”*
 
-                *"How much did my cloud costs increase month over month – and what team was responsible for driving them upwards?"*
+                *“How much did my cloud costs increase month over month – and what team was responsible for driving them upwards?”*
 
             - title: Stay secure
               description: |
-                Pulumi Copilot leverages knowledge about security best practices by combining Pulumi's supergraph and cloud skills.
+                Pulumi Copilot leverages knowledge about security best practices by combining Pulumi’s supergraph and cloud skills.
 
               more_info: |
                 **Example Pulumi Copilot prompts:**
 
-                *"Do I have any insecure endpoints open to the Internet?"*
+                *“Do I have any insecure endpoints open to the Internet?”*
 
-                *"Do any of my S3 buckets have public-read access? If yes, help me make them private."*
+                *“Do any of my S3 buckets have public-read access? If yes, help me make them private.”*
 
-                *"Do you see any anomalous activity within the past 48 hours?"*
+                *“Do you see any anomalous activity within the past 48 hours?”*
 
             - title: Debug cloud failures
               description: |
@@ -296,11 +296,11 @@ products:
               more_info: |
                 **Example Pulumi Copilot prompts:**
 
-                *"Why did my deployment yesterday fail?"*
+                *“Why did my deployment yesterday fail?”*
 
-                *"We had an outage Thursday evening around 11pm. Do you understand why?"*
+                *“We had an outage Thursday evening around 11pm. Do you understand why?”*
 
-                *"I can't access my EC2 instance i-3f8e over the Internet, why?"*
+                *“I can’t access my EC2 instance i-3f8e over the Internet, why?”*
         - header: Team Management
           tabid: management-select
           image: /images/product/pulumi-cloud-access.png
@@ -332,15 +332,15 @@ open_source:
     title: The easiest way to use Pulumi open source
     image: /images/product/service-open-source-diagram.svg
     description: |
-        Pulumi Cloud is a managed service for Pulumi IaC's open source CLI and SDK. It tracks your [infrastructure's state](/docs/iac/concepts/state-and-backends/) and coordinates updates with the CLI, which creates or updates resources to reach your infrastructure's [desired state](/docs/concepts/how-pulumi-works/).
+        Pulumi Cloud is a managed service for Pulumi IaC's open source CLI and SDK. It tracks your [infrastructure’s state](/docs/iac/concepts/state-and-backends/) and coordinates updates with the CLI, which creates or updates resources to reach your infrastructure’s [desired state](/docs/concepts/how-pulumi-works/).
 
-        You can also use any cloud or on-premises storage to build and [run your own backend](/docs/iac/concepts/state-and-backends/#logging-into-a-self-managed-backend).
+        You can also use any cloud or on-premises storage to build and [run your own backend](/docs/iac/concepts/state-and-backends/#using-a-diy-backend).
 
 security:
     title: Pulumi takes security seriously
     image: /images/product/soc-aicpa.svg
     description: |
-        Pulumi Cloud runs in an AWS VPC and our architecture follows industry best practices. All network communication is encrypted using TLS and Pulumi's endpoints are only accessible via HTTPS. Your data is also encrypted at-rest and Pulumi is compliant with SOC 2 Type II.
+        Pulumi Cloud runs in an AWS VPC and our architecture follows industry best practices. All network communication is encrypted using TLS and Pulumi’s endpoints are only accessible via HTTPS. Your data is also encrypted at-rest and Pulumi is compliant with SOC 2 Type II.
 
 deployment:
     title: Deployment options
