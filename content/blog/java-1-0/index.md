@@ -141,7 +141,7 @@ projects, working across stacks, or in our case, completing a one-time workflow 
     try (var stack = LocalWorkspace.createOrSelectStack(projectName, stackName, program)) {
         ...
 
-        stack.getWorkspace().installPlugin("aws", "v6.68.0");
+        stack.workspace().installPlugin("aws", "v6.68.0");
 
         stack.setConfig("aws:region", new ConfigValue("us-west-2"));
 
