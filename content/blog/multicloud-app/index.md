@@ -44,7 +44,7 @@ instantiation and management while gaining best-practices as defaults.
 Check out the [`pulumi/awsx`](https://github.com/pulumi/pulumi-awsx) SDK to get
 started.
 
-For local clusters such as those that are self-managed, or provisioned by a
+For local clusters such as those that are DIY backend, or provisioned by a
 tool like Docker Desktop, Pulumi can still deploy workloads to these these
 systems given that the [`pulumi/kubernetes`][pulumi-kubernetes] workload SDK only requires a valid `kubeconfig`
 file. For more information on Pulumi's Kubernetes support, check out the [Kubernetes reference page](/registry/packages/kubernetes/).
@@ -76,7 +76,7 @@ much anywhere `kubectl` works, even if Pulumi was not used to create the cluster
 
 As shown in the code samples, it becomes relatively easy to provision and
 manage Kubernetes clusters across multiple clouds, as well as deploy workloads to the cluster
-regardless if they are managed by a cloud provider, or self-managed.
+regardless if they are managed by a cloud provider, or DIY backend.
 
 The various SDKS allow you to leverage industry standard best-practices and
 defaults, in addition to allowing you to further configure and customize how your clusters

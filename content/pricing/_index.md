@@ -634,9 +634,9 @@ faq:
           answer: |
             There are several ways you can estimate the number of resources you have managed with Pulumi.
 
-            - <u>If you are using Pulumi Cloud</u>: Navigate to the dashboard and review the resource graph titled “Resource Count over Time.”
+            - <u>If you are using Pulumi Cloud</u>: Navigate to the dashboard and review the resource graph titled "Resource Count over Time."
 
-            - <u>If using Pulumi with a self-managed backend</u>: Export your stack state and count the number of lines with a universal resource name (URN). You can pipe the state through a grep command for "urn" to estimate the number of resources.
+            - <u>If using Pulumi with a DIY backend</u>: Export your stack state and count the number of lines with a universal resource name (URN). You can pipe the state through a grep command for "urn" to estimate the number of resources.
 
             - <u>If you haven't deployed anything with Pulumi</u>: See the previous FAQ for a few examples of applications and their number of resources.
         - question: What are some examples of how many resources are needed for my use case?
@@ -660,7 +660,7 @@ faq:
       items:
         - question: What are Pulumi open source and Pulumi Cloud?
           answer: |
-            Pulumi's Infrastructure as Code CLI and SDK are an open-source project that is supported by an active community. Pulumi Cloud is a managed service for the open source CLI and SDK. It tracks your infrastructure’s state and coordinates updates with the CLI, which creates or updates resources to reach your infrastructure’s desired state. It also manages secrets, supports SAML SSO, integrates with CI/CD pipelines, enforces compliance rules, and much more.
+            Pulumi's Infrastructure as Code CLI and SDK are an open-source project that is supported by an active community. Pulumi Cloud is a managed service for the open source CLI and SDK. It tracks your infrastructure's state and coordinates updates with the CLI, which creates or updates resources to reach your infrastructure's desired state. It also manages secrets, supports SAML SSO, integrates with CI/CD pipelines, enforces compliance rules, and much more.
 
             You're not required to use [Pulumi Cloud](/product/pulumi-service/). You can use any cloud or on-premises storage to build and run your own backend.
         - question: Can I use Pulumi for Free?
@@ -669,7 +669,7 @@ faq:
 
             First, Pulumi Cloud is free to use, now and forever, for individuals. You get all of the convenience of automatic state management, unlimited updates, and many other great features without needing to pay anything at all for it.
 
-            Second, Pulumi is an [open-source project](https://github.com/pulumi/pulumi). You can [run Pulumi entirely offline](/docs/iac/concepts/state-and-backends#using-a-self-managed-backend) without the online service’s features, and manage state yourself, instead of using the online service. There are no restrictions — it's all there in the open for you to use freely as you'd like.
+            Second, Pulumi is an [open-source project](https://github.com/pulumi/pulumi). You can [run Pulumi entirely offline](/docs/iac/concepts/state-and-backends#using-a-DIY-backend) without the online service's features, and manage state yourself, instead of using the online service. There are no restrictions — it's all there in the open for you to use freely as you'd like.
 
             Finally, we offer a 14-day free trial for the Business-critical Edition. Once the trial is over, you can continue to use the Business-critical Edition by chatting with sales or changing to Team or Enterprise Edition. After your trial expires, no data will be lost, and there is a grace period.
         - question: What is an organization? What are projects and stacks?
@@ -684,7 +684,7 @@ faq:
         - question: Is Pulumi SOC 2 compliant?
           answer: Yes, Pulumi has completed the SOC 2 Type 2 compliance process. Pulumi is committed to operational excellence for our customers.
         - question: Can I host Pulumi Cloud in my cloud or datacenter?
-          answer: Yes, we offer a self-hosted Pulumi Cloud for companies that have specific data control requirements and want to maintain complete control over hosting Pulumi Cloud. This option is available in Business Critical Edition. You can get started with a [30-day free trial here](/product/self-hosted/#self-hosted-trial).
+          answer: Yes, we offer a DIY backend Pulumi Cloud for companies that have specific data control requirements and want to maintain complete control over hosting Pulumi Cloud. This option is available in Business Critical Edition. You can get started with a [30-day free trial here](/product/self-hosted/#self-hosted-trial).
         - question: How do I convince my boss?
           answer: |
             Do you want to use Pulumi in your organization, but aren't sure how to bring it up with your boss? We've created a sample email to help you explain its benefits. Feel free to use the full letter or pieces of it. We are always happy to meet to learn more about your needs and explain these benefits in person — just [contact us](/contact/?form=sales).
@@ -719,7 +719,7 @@ faq:
         - question: How can I keep track of my usage?
           answer: You can keep track of current usage and upcoming charges by navigating to Settings and then Billing & Usage in the Pulumi Cloud.
         - question: When will I be billed for using Team or Enterprise Edition?
-          answer: You will be billed for the previous month’s usage on the first day of each month.
+          answer: You will be billed for the previous month's usage on the first day of each month.
         - question: How can groups not seeking a profit use Pulumi for free?
           answer: The [Open-Source Free Edition](/pricing/open-source-free-tier/) allows organizations not seeking a profit with projects under an open-source license to use Pulumi for free.
         - question: What payment options do you accept?
