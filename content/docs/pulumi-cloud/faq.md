@@ -42,7 +42,7 @@ If app.pulumi.com is down, you'll be unable to preview, update, or destroy a sta
 
 Using the Pulumi Cloud with Pulumi provide a good combination of usability, safety, and security. However, for users with especially unique requirements, it is possible to use Pulumi apart from the Pulumi Cloud.
 
-When you use Pulumi without the Pulumi Cloud, the checkpoint for your stack is stored locally or in your own external self-managed state storage. If that file is lost or outdated, Pulumi can no longer operate on your stack. To collaborate with others on your stack, you must host this file yourself and protect against conflicting updates to it. If you use your own checkpoint file, the Pulumi Cloud features, such as the deployment history and resource view, will not be available.
+When you use Pulumi without the Pulumi Cloud, the checkpoint for your stack is stored locally or in your own external [DIY backend](/docs/concepts/state/#using-a-diy-backend). If that file is lost or outdated, Pulumi can no longer operate on your stack. To collaborate with others on your stack, you must host this file yourself and protect against conflicting updates to it. If you use your own checkpoint file, the Pulumi Cloud features, such as the deployment history and resource view, will not be available.
 
 To use Pulumi without the Pulumi Cloud, log in using `pulumi login --local` or by logging in to an alternative backend. For more information, read more at [State and Backends](/docs/concepts/state/).
 
@@ -50,7 +50,7 @@ To use Pulumi without the Pulumi Cloud, log in using `pulumi login --local` or b
 
 Run `pulumi login`, and you’ll be back to using the Pulumi Cloud. You will need to migrate any existing stacks to the Pulumi Cloud.
 
-### How to migrate from a self-managed backend to the Pulumi Cloud?
+### How to migrate from a DIY backend to the Pulumi Cloud?
 
 The Pulumi CLI allows you to export and import checkpoints so you can do the following. Suppose the stack “my-app-production” has been managed with a local checkpoint file, and you want to migrate it to pulumi.com. If you are currently logged in to the local endpoint, run the following commands:
 
