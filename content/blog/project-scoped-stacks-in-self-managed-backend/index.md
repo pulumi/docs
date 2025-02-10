@@ -87,7 +87,7 @@ where stack names were global across all projects.
 To work around this, users resorted to qualifying stack names
 in the form `<project>-<stack>` when using the DIY backend.
 
-![Multiple qualified stacks in a DIY backend](DIY-unscoped-stacks.png)
+![Multiple qualified stacks in a DIY backend](self-managed-unscoped-stacks.png)
 
 We're pleased to announce that such workarounds are no longer necessary!
 
