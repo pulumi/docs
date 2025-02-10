@@ -53,7 +53,7 @@ As a Pulumi Puluminary, you will be expected to engage with the community atleas
     - Participate in Pulumi’s community forums, Slack channels, and social media discussions.
 
 2. **Thought Leadership**
-    - Write blog posts (like [Simen A. W. Olsen](/blog/author/simen-a-w-olsen/) did in his latest post [Your Perfect Infrastructure May Not Be So Perfect](/blog/your-perfect-infrastructure/) or [Tyler Mulligan](/author/tyler-mulligan/)) or create [videos showcasing](https://www.youtube.com/playlist?list=PLyy8Vx2ZoWlqxDJjRRhgLGu1_Oct0VVhN) innovative ways to use Pulumi.
+    - Write blog posts (like [Simen A. W. Olsen](/blog/author/simen-a-w-olsen/) did in his latest post [Your Perfect Infrastructure May Not Be So Perfect](/blog/your-perfect-infrastructure/) or [Tyler Mulligan](/blog/author/tyler-mulligan/)) or create [videos showcasing](https://www.youtube.com/playlist?list=PLyy8Vx2ZoWlqxDJjRRhgLGu1_Oct0VVhN) innovative ways to use Pulumi.
     - Contribute to discussions around best practices and patterns for cloud engineering with Pulumi.
 
 3. **Product Feedback**
