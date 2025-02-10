@@ -34,10 +34,10 @@ Using Java with Pulumi lets you model your infrastructure using familiar pattern
 1. We start our program by grabbing our [configuration](https://www.pulumi.com/docs/iac/concepts/config/) values that describe which distro and AD to use.
 
     ```java
-        var config = ctx.config();
-        var compartmentId =  config.require("compartmentId");
-        var availabilityDomain =  config.require("availabilityDomain");
-        var ubuntuId =  config.require("ubuntuId");
+    var config = ctx.config();
+    var compartmentId =  config.require("compartmentId");
+    var availabilityDomain =  config.require("availabilityDomain");
+    var ubuntuId =  config.require("ubuntuId");
     ```
 
 2. Next, we create a set of abstractions to describe the networking and OS.
