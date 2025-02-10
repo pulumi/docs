@@ -256,6 +256,6 @@ iac:
     identifier: iac-languages-dotnet-sdk
   - name: SDK docs
     parent: iac-languages-java
-    url: https://github.com/pulumi/pulumi-java/tree/main/sdk/java
+    url: https://www.pulumi.com/docs/reference/pkg/java/
     weight: 1
     identifier: iac-languages-java-sdk

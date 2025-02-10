@@ -44,7 +44,7 @@ Pulumi Puluminaries serve as champions of cloud engineering. They help users nav
 
 **Key Responsibilities for Pulumi Puluminaries:**
 
-As a Pulumi Puluminary, you will be expected to engage with the community atleast once a quarter. Here are some ways you can contribute:
+As a Pulumi Puluminary, you will be expected to engage with the community at least once a quarter. Here are some ways you can contribute:
 
 1. **Community Engagement**
     - Actively share Pulumi-related articles, tutorials, and project stories.
@@ -62,14 +62,10 @@ As a Pulumi Puluminary, you will be expected to engage with the community atleas
 
 #### Benefits of Joining the Program
 
-- **Early Access**
-  Get sneak peeks at new Pulumi features and releases before they are publicly announced.
-- **Direct Collaboration**
-  Collaborate one-on-one with Pulumi engineers and product managers, influencing future capabilities.
-- **Recognition and Swag**
-  Receive official Pulumi Puluminaries 2.0 digital badges, exclusive swag, and spotlight opportunities on Pulumi’s blog and at events.
-- **Networking and Growth**
-  Build relationships with peers in the Pulumi ecosystem, deepen your technical expertise, and grow your professional network.
+- **Early Access**: Get sneak peeks at new Pulumi features and releases before they are publicly announced.
+- **Direct Collaboration**: Collaborate one-on-one with Pulumi engineers and product managers, influencing future capabilities.
+- **Recognition and Swag**: Receive official Pulumi Puluminaries 2.0 digital badges, exclusive swag, and spotlight opportunities on Pulumi’s blog and at events.
+- **Networking and Growth**: Build relationships with peers in the Pulumi ecosystem, deepen your technical expertise, and grow your professional network.
 
 #### How to Get Involved
 

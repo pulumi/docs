@@ -136,6 +136,13 @@ The Pulumi programming model includes a core concept of `Output` values, which a
 
 Unlike other Pulumi languages, Pulumi Java does not have a dedicated `Input<T> = T | Output<T>` type. Instead, when constructing resource arguments, builders have overloads that accept both a `T` and an `Output<T>` value.
 
-## Java Packages
+## Package Documentation
 
-The [Pulumi Registry](/registry/) houses 100+ Java packages.
+In addition to the standard packages the [Pulumi Registry](/registry/) houses 100+ Java packages.
+
+### Standard Packages
+
+<dl class="tabular">
+    <dt>Pulumi SDK</dt>
+    <dd><a href="/docs/reference/pkg/java/">pulumi</a></dd>
+</dl>
