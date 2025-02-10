@@ -158,7 +158,7 @@ projects, working across stacks, or in our case, completing a one-time workflow 
             });
         }
 
-        System.out.printf("db host url: %s%n", result.getOutputs().get("host").getValue());
+        System.out.printf("db host url: %s%n", result.outputs().get("host").value());
         configureDatabase(
             ...
         );
