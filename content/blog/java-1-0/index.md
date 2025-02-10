@@ -87,7 +87,7 @@ With the general availability of our Java language support, we’re also excited
 
 In our Automation API [examples repo](https://github.com/pulumi/automation-api-examples), we have an example demonstrating how you could construct a Pulumi program with the Automation API to [perform a database migration](https://github.com/pulumi/automation-api-examples/tree/main/java/databaseMigration). Let's take a look at a few of the interesting aspects:
 
-1. Like regular Pulumi programs, we're able to obtain the current operating context and use the details to construct new resources
+1. Like regular Pulumi programs, we're able to obtain the current operating context and use the details to construct new resources, inline with the rest of the Automation API program.
 
     ```java
     Consumer<Context> program = ctx -> {
