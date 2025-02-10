@@ -5,7 +5,9 @@ meta_desc: "Learn how Pulumi's new feature enables policy as code on discovered 
 meta_image: crossguard-meta.png  
 authors:  
    - tyler-dunkel
-tags:  
+tags: 
+   - features
+   - releases 
    - "Policy as Code"  
    - "Pulumi"  
    - "CrossGuard"  
@@ -17,13 +19,15 @@ tags:
 
 In this post, we're introducing a powerful new capability in Pulumi Insights that extends policy as code (PaC) beyond infrastructure as code to automatically govern all cloud resources in your environment. By unifying policy enforcement across both IaC and discovered resources, you can now write policies once and apply them universally - dramatically simplifying how organizations maintain security and compliance standards at scale.
 
-### What is Policy as Code (PaC)?
-
-Policy as Code (PaC) is a way to define and enforce infrastructure policies using code. Instead of relying on manual processes or static configuration files, PaC enables automated policy enforcement in a consistent, versioned way. Pulumi’s CrossGuard feature allows you to write policies in general purpose programing languages, applying them across various cloud platforms such as AWS, Azure, GCP, and Kubernetes.
-
-You can read more about CrossGuard in Pulumi’s documentation [here](/docs/iac/using-pulumi/crossguard/).
+<!--more-->
 
 ---
+
+### What is Policy as Code (PaC)?
+
+Policy as Code (PaC) is a way to define and enforce infrastructure policies using code. Instead of relying on manual processes or static configuration files, PaC enables automated policy enforcement in a consistent, versioned way. Pulumi’s CrossGuard feature allows you to write policies in general purpose programming languages, applying them across various cloud platforms such as AWS, Azure, GCP, and Kubernetes.
+
+You can read more about CrossGuard in [Pulumi’s CrossGuard documentation](/docs/iac/using-pulumi/crossguard/).
 
 ### Accounts and Insights
 
@@ -61,7 +65,7 @@ Each violation includes details about the resource and the reason for the violat
 
 ### Key Takeaways
 
-With Pulumi’s new PaC over discovered resources feature, you can now apply the same policies to both IaC and discovered resources across your cloud environment. This enables you to write a policy once and have it apply across all of your cloud resources. The result being a consistent, compliant infrastructure no matter how resources are provisioned.
+With Pulumi’s new PaC over discovered resources feature, you can now apply the same policies to both IaC and discovered resources across your cloud environment. This enables you to write a policy once and have it apply across all of your cloud resources. This results in consistent, compliant infrastructure no matter how resources are provisioned.
 
 To begin securing your cloud infrastructure, here are the steps to take:
 
