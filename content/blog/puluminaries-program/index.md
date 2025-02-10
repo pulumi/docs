@@ -44,9 +44,13 @@ Pulumi Puluminaries serve as champions of cloud engineering. They help users nav
 
 **Key Responsibilities for Pulumi Puluminaries:**
 
+As a Pulumi Puluminary, you will be expected to engage with the community atleast once a quarter. Here are some ways you can contribute:
+
 1. **Community Engagement**
     - Actively share Pulumi-related articles, tutorials, and project stories.
     - Present at conferences, meetups, or webinars on topics that highlight Pulumi’s value.
+    - Mentor new users and help them get started with Pulumi.
+    - Participate in Pulumi’s community forums, Slack channels, and social media discussions.
 
 2. **Thought Leadership**
     - Write blog posts (like [Simen A. W. Olsen](/blog/author/simen-a-w-olsen/) did in his latest post [Your Perfect Infrastructure May Not Be So Perfect](/blog/your-perfect-infrastructure/) or [Tyler Mulligan](/author/tyler-mulligan/)) or create [videos showcasing](https://www.youtube.com/playlist?list=PLyy8Vx2ZoWlqxDJjRRhgLGu1_Oct0VVhN) innovative ways to use Pulumi.
@@ -58,13 +62,13 @@ Pulumi Puluminaries serve as champions of cloud engineering. They help users nav
 
 #### Benefits of Joining the Program
 
-- **Early Access**  
+- **Early Access**
   Get sneak peeks at new Pulumi features and releases before they are publicly announced.
-- **Direct Collaboration**  
+- **Direct Collaboration**
   Collaborate one-on-one with Pulumi engineers and product managers, influencing future capabilities.
-- **Recognition and Swag**  
+- **Recognition and Swag**
   Receive official Pulumi Puluminaries 2.0 digital badges, exclusive swag, and spotlight opportunities on Pulumi’s blog and at events.
-- **Networking and Growth**  
+- **Networking and Growth**
   Build relationships with peers in the Pulumi ecosystem, deepen your technical expertise, and grow your professional network.
 
 #### How to Get Involved
