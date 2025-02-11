@@ -1,6 +1,6 @@
 ---
 title: "Pulumi's Java SDK is Now Generally Available"
-date: 2025-02-10
+date: 2025-02-10T16:15:00-08:00
 draft: false
 
 meta_desc: "Pulumi’s Java SDK is now generally available. It enables organizations of all sizes to build infrastructure using a proven, safe, and familiar language."
