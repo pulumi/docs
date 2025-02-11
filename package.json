@@ -6,6 +6,8 @@
   "scripts": {
     "minify-css": "node scripts/minify-css.cjs",
     "lint-markdown": "tsx ./scripts/lint/lint-markdown.ts",
+    "build-search-index": "tsx ./scripts/search/main.ts",
+    "check-urls": "tsx ./scripts/search/check-urls.ts",
     "prepare": "husky"
   },
   "type": "module",
