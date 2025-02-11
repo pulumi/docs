@@ -1,6 +1,6 @@
 ---
 title: "Introducing the Pulumi Puluminaries 2.0 Program"
-date: 2025-02-10
+date: 2025-02-10T12:15:00-08:00
 allow_long_title: true
 meta_desc: |
     We are excited to announce the Pulumi Puluminaries 2.0 Program. This is a fresh and revitalized way to celebrate and support Pulumi’s most passionate community members. Pulumi Puluminaries are individuals who demonstrate leadership in the Pulumi ecosystem by sharing best practices, creating valuable content, and helping fellow practitioners succeed.
