@@ -274,8 +274,6 @@ const opts = {
         // Allow all code block styles in a file. Code block styles
         // are created equal and we shall not discriminate.
         MD046: false,
-        // Allow indents on unordered lists to be 4 spaces instead of 2.
-        MD007: { indent: 4 },
         // Allow duplicate headings.
         MD024: false,
         // Allow headings to be indendented.
