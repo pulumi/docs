@@ -1,6 +1,6 @@
 const fs = require("fs");
 const yaml = require("js-yaml");
-const markdownlint = require("markdownlint");
+const markdownlint = require("markdownlint/sync");
 const path = require("path");
 
 /**
@@ -288,6 +288,20 @@ const opts = {
         MD034: false,
         // Allow bold/italicized paragraphs
         MD036: false,
+        // Images should have alternate text (alt text)
+        MD045: false,
+        // Emphasis style
+        MD049: false,
+        // Strong style
+        MD050: false,
+        // Link fragments should be valid
+        MD051: false,
+        // Link and image reference definitions should be needed
+        MD053: false,
+        // Table pipe style
+        MD055: false,
+        // Table column count
+        MD056: false,
     },
     customRules: [
         {
@@ -313,7 +327,7 @@ const opts = {
 };
 
 // Lint the markdown files.
-const result = markdownlint.sync(opts);
+const result = markdownlint.lint(opts);
 
 // Group the lint errors by file.
 const errors = groupLintErrorOutput(result);
