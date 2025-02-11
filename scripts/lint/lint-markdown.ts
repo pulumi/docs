@@ -1,7 +1,10 @@
-const fs = require("fs");
-const yaml = require("js-yaml");
-const markdownlint = require("markdownlint/sync");
-const path = require("path");
+import * as fs from "fs";
+import * as yaml from "js-yaml";
+import * as markdownlint from "markdownlint/sync";
+import * as path from "path";
+import { fileURLToPath } from 'url';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 /**
  * REGEX for grabbing the front matter of a Hugo markdown file. Example:

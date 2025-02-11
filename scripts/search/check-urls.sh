@@ -13,4 +13,4 @@ algolia objects browse "$index" \
     --admin-api-key "$ALGOLIA_APP_ADMIN_KEY" \
     --application-id "$ALGOLIA_APP_ID" > ./public/search-index.json
 
-node "./scripts/search/check-urls.js" "$base_url"
+node "./scripts/search/check-urls.cjs" "$base_url"

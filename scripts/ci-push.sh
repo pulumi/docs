@@ -9,7 +9,7 @@ source ./scripts/ci-login.sh
 
 ./scripts/generate-search-index.sh
 
-node ./scripts/await-in-progress.js
+node ./scripts/await-in-progress.cjs
 
 ./scripts/run-pulumi.sh update
 ./scripts/make-s3-redirects.sh
