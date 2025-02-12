@@ -1,37 +1,14 @@
 {{ define "hero" }}
     <header class="page-hero py-0 lg:h-76 bg-black">
-        <img class="mx-auto w-full" src="/images/kubecon/kubecon-hero-24.png" alt="Pulumi - Universal Infrastructure as Code for Kubernetes - KubeCon | Pulumi Booth R1"/>
+        <img class="mx-auto w-full" src="/images/kubecon/kubecon-hero-25.png" alt="Pulumi - Universal Infrastructure as Code for Kubernetes - KubeCon Europe 2025 | Pulumi Booth S450"/>
     </header>
 {{ end }}
 
 {{ define "main" }}
-    {{ range $index, $item := .Params.detail_sections }}
-        <section class="mt-4 mb-16 px-4">
-            <div class="container mx-auto">
-                <!-- <div class="w-full max-w-2xl mx-auto text-center">
-                    <h3>{{ $item.title }}</h3>
-                    <p class="md:px-24 lg:px-0">{{ $item.description | markdownify }}</p>
-                </div> -->
-                <div class="lg:flex flex-wrap justify-center">
-                    {{ range $i, $row := $item.items }}
-                        <div class="lg:w-1/3 lg:pr-4 mb-8 lg:mb-0">
-                            <div class="w-full px-8 text-center my-4">
-                                {{ partial "color-icon.html" (dict "icon" $row.icon "icon_color" $row.icon_color) }}
-                                <h5>{{ $row.title }}</h5>
-                                <p>{{ $row.description | markdownify }}</p>
-                                <a class="btn-primary" href="{{ $row.link }}">{{ $row.cta }} &rarr;</a>
-                            </div>
-                        </div>
-                    {{ end }}
-                </div>
-            </div>
-        </section>
-    {{ end }}
-
     <section id="kubernetes-overview" class="py-8 px-4 lg:px-0">
         <div class="container mx-auto flex flex-col lg:mx-auto lg:flex lg:flex-row lg:items-center lg:justify-center">
             {{ with .Params.kubernetes_overview }}
-                <div class="lg:w-1/4">
+                <div class="hidden lg:block lg:w-1/4">
                     <div class="w-2/3 mx-auto">
                         <img src="/images/mascot/hoodie-kubernetes.png"/>
                     </div>
@@ -46,23 +23,42 @@
         </div>
     </section>
 
-    <section id="superpowers" class="bg-white pt-24 px-4 justify-center" id="editions">
-        <div class="container mx-auto lg:flex justify-center">
-            <ul class="flex flex-col lg:flex-row lg:flex-wrap items-start list-none p-0">
-                {{ $powers := .Params.superpowers }}
-                {{ range $i, $item := $powers }}
-                    <li class="lg:w-1/2 lg:flex items-start mt-0">
+    <section class="container mx-auto mb-18 text-center">
+        <h2>{{ .Params.event_links.title }}</h2>
+        <div class="lg:flex lg:flex-wrap justify-center items-stretch">
+            {{ range $item := .Params.event_links.items }}
+            <div class="lg:w-1/3 px-3 py-6">
+                <div class="card text-center p-6 relative h-full">
+                    <div class="icon-section">
+                        {{ partial "color-icon.html" (dict "icon" $item.icon "icon_color" $item.icon_color) }}
+                    </div>
+                    <div>
+                        <h5>{{ $item.title }}</h5>
+                    </div>
+                    <div class="description">
+                        <p>{{ $item.description }}</p>
+                    </div>
+                    <div class="card-cta-btn">
+                        <a href="{{ $item.link}}" target="_blank" class="btn-primary">{{ $item.cta }}</a>
+                    </div>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </section>
+
+    <section class="my-16 px-4">
+        <div class="container mx-auto">
+            <div class="my-8 lg:flex flex-wrap">
+                {{ range $item := .Params.superpowers }}
+                    <div class="lg:w-1/2 lg:flex items-start p-6">
                         <div class="text-center lg:text-left mb-4 lg:mb-0">
-                            <div class="inline-block bg-blue-100 border-4 border-blue-200 rounded-full p-6" style="fill: #4387c7;">
-                                {{ partial "superpower-icon" (dict "type" $item.icon_type) }}
+                            <div class="inline-block">
+                                {{ partial "color-icon.html" (dict "icon" $item.icon "icon_color" $item.icon_color) }}
                             </div>
                         </div>
                         <div class="lg:pl-6 lg:pr-12">
-                            <h4 class="text-center lg:text-left mt-0">
-                                <a class="link" href="{{ $item.cta_url }}">
-                                    <span class="align-middle">{{ $item.title }}</span>
-                                </a>
-                            </h4>
+                            <h5>{{ $item.title }}</h5>
                             <ul class="leading-relaxed md:px-24 lg:px-0">
                                 {{ range $point := $item.description }}
                                     <li class="ml-5">
@@ -70,17 +66,10 @@
                                     </li>
                                 {{ end }}
                             </ul>
-                            {{ $borderBottom := "border-b" }}
-                            {{ if eq $i (sub (len $powers) 2) }}
-                                {{ $borderBottom = "border-b md:border-none" }}
-                            {{ else if eq $i (sub (len $powers) 1) }}
-                                {{ $borderBottom = "border-none" }}
-                            {{ end }}
-                            <div class="mb-12 pb-12 border-gray-300 {{ $borderBottom }}"></div>
                         </div>
-                    </li>
+                    </div>
                 {{ end }}
-            </ul>
+            </div>
         </div>
     </section>
 {{ end }}

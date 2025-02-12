@@ -1,71 +1,72 @@
 ---
 title: KubeCon Europe 2025
-meta_desc: Discover Pulumi's game-changing Kubernetes solutions at KubeCon booth R1.
-meta_image: /images/kubecon/kubecon-meta-24.png
+meta_desc: Discover Pulumi's Kubernetes solutions at KubeCon booth S450. Learn how our enhanced security and insights can revolutionize your infrastructure management.
+meta_image: /images/kubecon/kubecon-meta-25.png
 type: page
-layout: kubecon
+layout: kubecon-europe
 
 kubernetes_overview:
-    title: Ready to streamline your Kubernetes setup?
+    title: Meet us at KubeCon Europe Booth S450
     description: |
-      **Fly to Pulumi booth R1 at KubeCon** and discover how to tame your infrastructure with actual code! We're not just talking YAML alternatives – we're talking a full-blown IaC powerhouse with first-class K8s support across all Pulumi products.
+      **Fly to Pulumi booth S450 at KubeCon** and see how universal Infrastructure as Code gives you full control over Kubernetes. Whether you prefer YAML or a programming language like TypeScript, Python, Go, .NET, or Java, Pulumi adapts to your workflow – no trade-offs required.
 
-      Don't just manage your infrastructure – engineer it. With Pulumi, you'll bring software development practices to your DevOps, boosting efficiency and reducing errors. Stop by booth R1 and see how Pulumi can transform your Kubernetes workflow!
+      This isn't just infrastructure management; it's engineering. With first-class Kubernetes support across all Pulumi products, you can automate, secure, and manage your clusters with software development best practices.
 
-      Here's why Pulumi is turning heads:
+event_links:
+    title: Pulumi at KubeCon Europe
+    description: |
+      Pulumi streamlines Kubernetes cluster configuration, management, and app workload deployments to your clusters.
+    items:
+        # - title: RSVP to “Down the Rabbit Hole” Happy Hour
+        #   icon: security
+        #   icon_color: violet
+        #   description: with Pulumi, Oso and Apollo GraphGL for an evening of mountain magic Wednesday, November 13, 8-10pm MT at Lake Effect, 155 W 200 S, Salt Lake City
+        #   link: https://lu.ma/qzgd18gp
+        #   cta: RSVP to Happy Hour
+
+        - title: Request a 1:1 demo
+          icon: pen
+          icon_color: yellow
+          description: See how Pulumi can help you ship infrastructure faster and manage your resources at scale.  Reserve your time today.
+          link: https://info.pulumi.com/kubecon-na?hs_preview=KRDQSZjg-181026154277
+          cta: Schedule a Meeting
+
+        - title: "Workshop - Pulumi and Kubernetes:  Better Together"
+          icon: team
+          icon_color: salmon
+          description: |
+            Nov 18, 2024 9 am PT/Noon ET
+
+            Learn how to use Pulumi's integrations with Kubernetes to ensure that your clusters and containerized workloads are managed with maximum ease and efficiency!
+          link: /resources/pulumi-kubernetes-better-together/
+          cta: RSVP for Workshop
 
 superpowers:
     - title: Powerful Native Kubernetes Provider
-      icon_type: provisioning
+      icon: rocketship
+      icon_color: violet
       description:
         - Pulumi IaC offers a native Kubernetes provider more powerful and flexible than any Terraform alternative
         - Full support for CustomResourceDefinitions, ConfigGroups, and ConfigFiles, enabling complex K8s setups
 
     - title: Faster Updates and Deployment
-      icon_type: delivery
+      icon: delivery
+      icon_color: yellow
       description:
         - Aims for same-day support of new Kubernetes releases, keeping you on the cutting edge
         - Server-Side Apply (SSA) by default, allowing for more efficient and conflict-free updates
 
     - title: Enhanced Security and Ease of Use
-      icon_type: policy
+      icon: shield
+      icon_color: salmon
       description:
         - Pulumi ESC auto-generates kubeconfig files and enables easy authentication with cloud providers using just-in-time, short-lived credentials
         - Seamlessly integrate kubeconfig from cloud-provisioned clusters, simplifying multi-cloud setups
 
     - title: Comprehensive Insights and Management
-      icon_type: cloud
+      icon: cloud
+      icon_color: fuchsia
       description:
         - Pulumi Insights offers full support for searching, filtering, and importing resources across Kubernetes clusters
         - Brings Kubernetes support to the same level as major cloud providers, enabling unified management and visibility
-
-detail_sections:
-    - title: Pulumi at KubeCon North America
-      description: |
-        Pulumi streamlines Kubernetes cluster configuration, management, and app workload deployments to your clusters.
-      items:
-          - title: RSVP to “Down the Rabbit Hole” Happy Hour
-            icon: security
-            icon_color: violet
-            description: with Pulumi, Oso and Apollo GraphGL for an evening of mountain magic Wednesday, November 13, 8-10pm MT at Lake Effect, 155 W 200 S, Salt Lake City
-            link: https://lu.ma/qzgd18gp
-            cta: RSVP to Happy Hour
-
-          - title: Request a 1:1 demo
-            icon: pen
-            icon_color: yellow
-            description: See how Pulumi can help you ship infrastructure faster and manage your resources at scale.  Reserve your time today.
-            link: https://info.pulumi.com/kubecon-na?hs_preview=KRDQSZjg-181026154277
-            cta: Schedule a Meeting
-
-          - title: "Workshop - Pulumi and Kubernetes:  Better Together"
-            icon: team
-            icon_color: salmon
-            description: |
-              Nov 18, 2024 9 am PT/Noon ET
-
-              Learn how to use Pulumi's integrations with Kubernetes to ensure that your clusters and containerized workloads are managed with maximum ease and efficiency!
-            link: /resources/pulumi-kubernetes-better-together/
-            cta: RSVP for Workshop
-
 ---
