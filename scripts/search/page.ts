@@ -1,16 +1,14 @@
-const fs = require("fs");
-const path = require("path");
-const crypto = require("crypto");
-const cheerio = require("cheerio");
-const rank = require("./rank");
-
-module.exports = {
+import * as fs from "fs";
+import * as path from "path";
+import * as crypto from "crypto";
+import * as cheerio from "cheerio";
+import * as rank from "./rank";
 
     // Return the top-level section the page belongs to. Note that these sections are used for
     // faceting (i.e., filtering the results returned by Algolia as well as how they appear in the
     // autocomplete UI), so changes to this code should be made extra care. (Any change made here
     // without an accompanying change to the UI will likely break the UI.)
-    getTopLevelSection({ href }) {
+    export function getTopLevelSection({ href }) {
         if (href.startsWith("/docs")) {
             return "Docs";
         } else if (href.startsWith("/blog")) {
@@ -26,17 +24,17 @@ module.exports = {
 
         }
         return "General";
-    },
+    }
 
     // Fetch a list of the explicit and implicit keywords associated with the page.
-    getKeywords(page) {
+    export function getKeywords(page) {
         return (page.params?.search?.keywords || []).concat(rank.getImplicitKeywords(page));
-    },
+    }
 
     // Fetch a summary of any DOM content to use for the index. Things like H2s, their immediately
     // following paragraphs, and any of their explicitly provided keywords (as we also support this
     // also) are included.
-    getDOMContent({ href }) {
+    export function getDOMContent({ href }) {
         // Assemble the local path to the file using its href.
         const filePath = path.join("public", href, "index.html");
 
@@ -79,20 +77,20 @@ module.exports = {
         });
 
         return { subheads };
-    },
+    }
 
     // Return the page's (explicit or implicit) ranking.
-    getRank(page) {
+    export function getRank(page) {
         return rank.get(page);
-    },
+    }
 
     // Return whether the specified page should be "boosted".
-    isBoosted(page) {
+    export function isBoosted(page) {
         return rank.isImplicitlyBoosted(page) || rank.isExplicitlyBoosted(page) || undefined;
-    },
+    }
 
     // Fetch a list of primary objects. These objects are generated directly from Hugo-rendered JSON.
-    getPrimaryObjects(hugoPageItems) {
+    export function getPrimaryObjects(hugoPageItems) {
         return hugoPageItems
 
             // Exclude drafts, pages blocked from external search listings, those missing object IDs
@@ -102,7 +100,7 @@ module.exports = {
                 const isDraft = !!item.params.draft;
                 const isBlockedFromExternalSearch = item.block_external_search_index === true;
                 const isMissingObjectID = item.objectID === "";
-                const isZeroRanked = this.getRank(item) === 0;
+                const isZeroRanked = getRank(item) === 0;
                 const isRedirect = (item.params.redirect_to && item.params.redirect_to !== "");
 
                 if (isDraft || isBlockedFromExternalSearch || isRedirect || isMissingObjectID || isZeroRanked) {
@@ -115,32 +113,32 @@ module.exports = {
             // Convert Hugo page items into Algolia index objects.
             .map(item => {
                 return {
-                    objectID: this.getObjectID(item),
-                    section: this.getTopLevelSection(item),
+                    objectID: getObjectID(item),
+                    section: getTopLevelSection(item),
                     title: item.title,
                     h1: item.params.h1,
                     description: item.params.meta_desc,
                     href: item.href,
                     authors: item.params.authors,
                     tags: item.params.tags,
-                    rank: this.getRank(item),
-                    boosted: this.isBoosted(item),
-                    keywords: this.getKeywords(item),
-                    ancestors: this.makeAncestorsList(item.ancestors),
+                    rank: getRank(item),
+                    boosted: isBoosted(item),
+                    keywords: getKeywords(item),
+                    ancestors: makeAncestorsList(item.ancestors),
                 };
             });
-    },
+    }
 
     // Fetch a list of secondary objects. These are things like H2 headings (along with any
     // explicitly defined keywords, associated content, etc.) that we want to be findable in
     // addition to page titles, descriptions, and keywords.
-    getSecondaryObjects(sitePageObjects) {
+    export function getSecondaryObjects(sitePageObjects) {
         const secondaries = [];
 
         sitePageObjects
             .filter(pageObject => !pageObject.href.match(/registry|pkg|blog/))
             .forEach(pageObject => {
-                const domContent = this.getDOMContent(pageObject);
+                const domContent = getDOMContent(pageObject);
                 const ancestors = pageObject.ancestors;
 
                 if (domContent.subheads) {
@@ -148,9 +146,9 @@ module.exports = {
                         const href = `${ pageObject.href }#${ subhead.anchor }`;
 
                         secondaries.push({
-                            objectID: this.getObjectID({ href }),
+                            objectID: getObjectID({ href }),
                             section: pageObject.section,
-                            ancestors: this.makeAncestorsList([ ...ancestors, pageObject.title ]),
+                            ancestors: makeAncestorsList([ ...ancestors, pageObject.title ]),
                             title: subhead.title,
                             description: (subhead.content || "").substr(0, 200),
                             href,
@@ -161,10 +159,10 @@ module.exports = {
         });
 
         return secondaries;
-    },
+    }
 
     // Clean up (i.e., de-dupe, simplify, etc.) the items in a breadcrumb list.
-    makeAncestorsList(rawList) {
+    export function makeAncestorsList(rawList) {
         return [ ...new Set(rawList) ]
             .filter(s => s?.trim() !== "")
             .map(s => {
@@ -173,14 +171,13 @@ module.exports = {
                 }
                 return s;
             });
-    },
+    }
 
     // Every Algolia record requires a unique ID. Since every record should also have a unique URL,
     // we use the URL to generate the unique ID.
     //
     // If, at some point, we find that we need to have two records pointing to the same URL, we can
     // add another parameter to the list and hash both.
-    getObjectID({ href }) {
+    export function getObjectID({ href }) {
         return crypto.createHash("md5").update(href).digest("hex");
     }
-};
