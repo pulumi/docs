@@ -4,7 +4,7 @@ set -o errexit -o pipefail
 
 source ./scripts/common.sh
 
-node ./scripts/search/main.js
+yarn run build-search-index
 
 # Fetch the name of the bucket from the metadata file.
 destination_bucket="$(cat "$(origin_bucket_metadata_filepath)" | jq -r ".bucket")"

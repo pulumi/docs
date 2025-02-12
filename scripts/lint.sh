@@ -2,5 +2,5 @@
 
 set -o errexit -o pipefail
 
-node ./scripts/lint/lint-markdown.js
+yarn run lint-markdown
 yarn prettier --check .

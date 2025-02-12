@@ -44,7 +44,7 @@ else
 fi
 
 # Generate docs JSON.
-node scripts/content/generate-docs-content.js
+node scripts/content/generate-docs-content.cjs
 
 # Purge unused CSS.
 yarn run minify-css
