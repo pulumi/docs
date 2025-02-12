@@ -1,22 +1,21 @@
-const page = require("./page");
+import * as page from "./page";
 
 // Algolia index settings.
 //
 // Changes to this file should be made with extreme care.
-module.exports = {
 
     // Attributes for faceting are the properties to use for top-level filtering of results -- for
     // example, whether a given record is returned for a "Docs" query, "Registry" query, and so on.
     // https://www.algolia.com/doc/api-reference/api-parameters/attributesForFaceting/
-    getAttributesForFaceting() {
+    export function getAttributesForFaceting() {
         return [
             "searchable(section)",
         ];
-    },
+    }
 
     // Synonyms allow us to surface content that may not directly match users' queries.
     // https://www.algolia.com/doc/api-reference/api-methods/save-synonyms/#save-synonyms
-    getSynonyms() {
+    export function getSynonyms() {
         return [
             [".NET", "dotnet"],
             ["aws", "aws classic"],
@@ -48,7 +47,7 @@ module.exports = {
                 synonyms,
             };
         });
-    },
+    }
 
     // Searchable attributes control the fields that Algolia uses for query matching, as well as how
     // relevant those fields are in relation to one another.
@@ -58,7 +57,7 @@ module.exports = {
     // the change on an index that isn't production.
     //
     // https://www.algolia.com/doc/guides/sending-and-managing-data/prepare-your-data/how-to/setting-searchable-attributes/#set-searchable-attributes-with-the-api
-    getSearchableAttributes() {
+    export function getSearchableAttributes() {
         return [
             "title,h1",            // Title and H1 are considered of equal relevance, so they're listed on the same level.
             "keywords",            // Keywords are treated as ordered. Those higher up in the list are considered more relevant.
@@ -69,17 +68,17 @@ module.exports = {
             "section",             // Section is the primary "facet" of a record -- Docs, Registry, Blog, Examples, etc.
             "unordered(authors)",  // Blog-post authors are occasionally useful for searching, but their order is considered irrelevant.
         ];
-    },
+    }
 
     // Attributes to highlight contains the list of searchable attributes that might be used to highlight query matches in the UI.
     // https://www.algolia.com/doc/api-reference/api-parameters/attributesToHighlight/
-    getAttributesToHighlight() {
+    export function getAttributesToHighlight() {
         return [
             "title",
             "h1",
             "description",
         ];
-    },
+    }
 
     // Custom rankings are the attributes that Algolia uses for determining relative ranking --
     // specifically for breaking ties between records that rank similarly for text matching. Similar
@@ -87,7 +86,7 @@ module.exports = {
     // equal care.
     //
     // https://www.algolia.com/doc/guides/managing-results/must-do/custom-ranking/how-to/configure-custom-ranking
-    getCustomRanking() {
+    export function getCustomRanking() {
         return [
 
             // https://www.algolia.com/doc/guides/managing-results/must-do/custom-ranking/how-to/configure-custom-ranking/#configure-custom-ranking-with-the-api
@@ -96,12 +95,12 @@ module.exports = {
             // https://www.algolia.com/doc/guides/managing-results/must-do/custom-ranking/how-to/boost-or-penalize-some-records/#using-the-api
             "desc(boosted)",
         ];
-    },
+    }
 
     // Rules are explicit instructions that apply fine-grained control over how certain queries are handled.
     // https://www.algolia.com/doc/guides/managing-results/rules/rules-overview/
     // https://www.algolia.com/doc/api-reference/api-methods/save-rule
-    getRules() {
+    export function getRules() {
         return [
 
             // When the query is for "cloud", deliver the Pulumi Cloud overview page as the top result.
@@ -208,5 +207,4 @@ module.exports = {
                 },
             },
         ];
-    },
-};
+    }
