@@ -126,23 +126,23 @@ Then run the `terraform apply` command to have the following resources deployed 
 
 Now that you have deployed your resources, you will run a Pulumi Insights scan to retrieve a list of the resources in your account. To do so, navigate to the **Accounts** page in the [Pulumi Console](https://app.pulumi.com/) and click on your Pulumi Insights account. For the purposes of this tutorial, we have created an account named `pulumi-tutorials-insights`.
 
-{{< video title="Navigating to Pulumi Insights accounts page" src="/tutorials/eval-compliance-terraform/insights-nav-to-accounts.mp4" autoplay="true" loop="true" >}}
+{{< video title="Navigating to Pulumi Insights accounts page" src="/tutorials/eval-compliance-terraform/assets/insights-nav-to-accounts.mp4" autoplay="true" loop="true" >}}
 
 Once there, click on the **Actions** dropdown and select the `Scan` radio button, then click **Scan**. You will see a status message that says ""Scan started a few seconds ago" once the scan has started.
 
-{{< video title="Initializing account scan" src="/tutorials/eval-compliance-terraform/insights-start-account-scan.mp4" autoplay="true" loop="true" >}}
+{{< video title="Initializing account scan" src="/tutorials/eval-compliance-terraform/assets/insights-start-account-scan.mp4" autoplay="true" loop="true" >}}
 
 To check on the status of the scan, you will need to navigate to the individual sub-accounts of your Pulumi insights account and click the **Scans** tab.
 
-{{< video title="View sub-account scans" src="/tutorials/eval-compliance-terraform/insights-view-sub-acct-scan.mp4" autoplay="true" loop="true" >}}
+{{< video title="View sub-account scans" src="/tutorials/eval-compliance-terraform/assets/insights-view-sub-acct-scan.mp4" autoplay="true" loop="true" >}}
 
 Once the scan has completed, the outline color of the scan will change to green, and the status will change to say "Scan #X succeeded in X minutes".
 
-![Insights scan success message""](insights-scan-success.png)
+![Insights scan success message""](/tutorials/eval-compliance-terraform/assets/insights-scan-success.png)
 
 Now you can view a list of your account resources by navigating to the **Resources** page in the console.
 
-!["List of account resources in Insights"](insights-resources-list.png)
+!["List of account resources in Insights"](/tutorials/eval-compliance-terraform/assets/insights-resources-list.png)
 
 > If you have multiple Insights accounts, you can filter by your account name using the **Project** column filter. You can learn more about querying and filtering your resources by reviewing the [Pulumi Insights: Using Resources Explorer](/docs/insights/get-started/using-resource-explorer/) documentation
 
@@ -209,15 +209,15 @@ With your policy pack published, you’ll need to create a Policy Group that ass
 
 Next, click **Create policy group** and provide a descriptive name, such as "sg-security-policy-group" Then click **Add policy group**. Once your policy group has been created, click on the name of the policy group to open its configuration page, and then click **Add policy pack**.
 
-!["Adding a policy pack"](insights-add-policy-pack.png)
+!["Adding a policy pack"](/tutorials/eval-compliance-terraform/assets/insights-add-policy-pack.png)
 
 Select your newly published policy pack from the dropdown and choose the version you want to enforce. Here you can configure the enforcement level at either a global level for all policies in your policy pack, or a granular level for each individual policy check. For the purposes of this tutorial, select the enforcement level of `advisory` under **All**, then click **Enable** to confirm your settings.
 
-!["Configuring the policy pack"](insights-configure-policy-pack.png)
+!["Configuring the policy pack"](/tutorials/eval-compliance-terraform/assets/insights-configure-policy-pack.png)
 
 The last thing you need to do in this section is add your insights account to the policy group. On your Policy Group configuration page, click **Add accounts**, and type the name of the account you want to include for Insights policies (e.g. pulumi-tutorials-insights/us-west-2). Then click **Add account to policy group**.
 
-!["Adding an account to the policy group"](insights-add-policy-group-acct.png)
+!["Adding an account to the policy group"](/tutorials/eval-compliance-terraform/assets/insights-add-policy-group-acct.png)
 
 > If you want to learn more about creating custom Policy Packs in Pulumi, you can refer to our [Creating a Custom Policy Pack](/tutorials/custom-policy-pack/) tutorial series.
 
@@ -225,4 +225,37 @@ The last thing you need to do in this section is add your insights account to th
 
 Now that your policy pack has been deployed and your account has been associated with it, you can now evaluate your discovered AWS resources against the policy. To do so, navigate back to the **Accounts** section and select your account. Click the **Actions** dropdown button, select the **Scan** radio button, and then click **Scan**.
 
-Just like earlier in the tutorial, the scanning process will run until it is complete.
+As the scan progresses, you can monitor policy compliance in real-time through the **Policy Violations** page in the Pulumi Cloud Console. This view provides several ways to analyze your compliance status:
+
+![Insights Policies - Policy Violations](/tutorials/eval-compliance-terraform/assets/policy-violations.png)
+
+Filter policy violations by:
+
+- Policy Pack
+- Policy
+- Project
+- Enforcement levels (advisory vs mandatory)
+- Account
+- Resource
+- Type
+- Violation date
+
+Each violation entry provides detailed information about:
+
+- The specific resource that triggered the violation
+- Which policy rule was violated
+- Contextual information to help understand why the resource is non-compliant
+
+## Clean up
+
+If needed, you can tear down the example Terraform resources by running the `terraform destroy` command.
+
+## Next steps
+
+In this tutorial, you used Pulumi Insights to scan your AWS account for resources that were deployed using Terraform. You also created and deployed a policy pack and evaluated your resources against the defined policy.
+
+To learn more about Pulumi services, take a look at the following resources:
+
+- Learn more about the Pulumi Cloud in the [Pulumi Cloud](/docs/pulumi-cloud/) documentation.
+- Learn more about how you can use Pulumi to centrally manage configuration and secrets in the [Pulumi ESC](/docs/esc/) documentation.
+- Learn how you can deploy cloud resources uses modern programming languages in the [Pulumi IaC](/docs/iac/) documentation.
