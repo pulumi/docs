@@ -24,7 +24,7 @@ weight: 999
 
 # A brief summary of the tutorial. It appears at the top of the tutorial page. Markdown is fine.
 summary: |
-    In this tutorial, you will learn how to use Pulumi Insights to evaluate compliance of cloud resources, specifically resources that have been deployed using Terraform. The examples in this tutorial will demonstrate how to scan and evaluate resources in the AWS cloud, but the steps are equally applicable to the other major cloud providers.
+    In this tutorial, you will learn how to use Pulumi Insights to discover and evaluate cloud resources for compliance, regardless of how they were deployed. While Pulumi is often used for infrastructure as code (IaC), [Pulumi Insights](/docs/insights/) can scan resources provisioned by any IaC tool, or even resources that were deployed manually. This tutorial will focus on scanning and evaluating AWS resources that are deployed using Terraform in particular, but the same approach applies to other major cloud providers and deployment methods.
 
 # A list of three to five things the reader will have learned by the end of the tutorial.
 youll_learn:
@@ -35,7 +35,6 @@ youll_learn:
 prereqs:
     - The [Pulumi CLI](/docs/install/)
     - A [Pulumi Cloud Team, Enterprise, or Business Critical account](https://app.pulumi.com/signup)
-    - A Pulumi Cloud [access token](/docs/pulumi-cloud/accounts/#access-tokens)
     - An [ESC environment and AWS credentials created and configured](/docs/insights/get-started/begin/)
     - A [Pulumi Insights account](/docs/insights/get-started/create-accounts/)
     - An [Amazon Web Services](https://aws.amazon.com/) account
@@ -125,12 +124,105 @@ Then run the `terraform apply` command to have the following resources deployed 
 
 ## Scan Terraform resources
 
-TBD
+Now that you have deployed your resources, you will run a Pulumi Insights scan to retrieve a list of the resources in your account. To do so, navigate to the **Accounts** page in the [Pulumi Console](https://app.pulumi.com/) and click on your Pulumi Insights account. For the purposes of this tutorial, we have created an account named `pulumi-tutorials-insights`.
 
-## Deploy compliance policies
+{{< video title="Navigating to Pulumi Insights accounts page" src="/tutorials/eval-compliance-terraform/insights-nav-to-accounts.mp4" autoplay="true" loop="true" >}}
 
-TBD
+Once there, click on the **Actions** dropdown and select the `Scan` radio button, then click **Scan**. You will see a status message that says ""Scan started a few seconds ago" once the scan has started.
+
+{{< video title="Initializing account scan" src="/tutorials/eval-compliance-terraform/insights-start-account-scan.mp4" autoplay="true" loop="true" >}}
+
+To check on the status of the scan, you will need to navigate to the individual sub-accounts of your Pulumi insights account and click the **Scans** tab.
+
+{{< video title="View sub-account scans" src="/tutorials/eval-compliance-terraform/insights-view-sub-acct-scan.mp4" autoplay="true" loop="true" >}}
+
+Once the scan has completed, the outline color of the scan will change to green, and the status will change to say "Scan #X succeeded in X minutes".
+
+![Insights scan success message""](insights-scan-success.png)
+
+Now you can view a list of your account resources by navigating to the **Resources** page in the console.
+
+!["List of account resources in Insights"](insights-resources-list.png)
+
+> If you have multiple Insights accounts, you can filter by your account name using the **Project** column filter. You can learn more about querying and filtering your resources by reviewing the [Pulumi Insights: Using Resources Explorer](/docs/insights/get-started/using-resource-explorer/) documentation
+
+## Configure compliance policies
+
+Before you can evaluate your Terraform resources for policy violations, you must first create and deploy a Pulumi Insights Policy Pack. In this section, you will create a policy that enforces specific compliance for one of your AWS resources, more specifically for Security Groups.
+
+### Create and publish a policy pack
+
+To start, open your terminal and run the following command:
+
+```bash
+pulumi policy new aws-python
+```
+
+This will initialize your project, creating the necessary files for policy creation. Next, open the `main.py` file, paste in the following configuration, and save the file.
+
+```python
+from pulumi_policy import (
+    EnforcementLevel,
+    PolicyPack,
+    ReportViolation,
+    ResourceValidationArgs,
+    ResourceValidationPolicy,
+)
+
+def security_group_no_public_ingress_validator(args: ResourceValidationArgs, report_violation: ReportViolation):
+    if args.resource_type == "aws:ec2/securityGroup:SecurityGroup":
+        ingress_rules = args.props.get("ingress", [])
+        for rule in ingress_rules:
+            cidr_blocks = rule.get("cidrBlocks", [])
+            if "0.0.0.0/0" in cidr_blocks:
+                report_violation(
+                    "Ingress rule allows public access from 0.0.0.0/0, which is prohibited. "
+                    "Please restrict the CIDR blocks to specific IP ranges."
+                )
+
+security_group_no_public_ingress = ResourceValidationPolicy(
+    name="security-group-no-public-ingress",
+    description="Prohibits security group ingress rules that allow public access.",
+    validate=security_group_no_public_ingress_validator,
+)
+
+PolicyPack(
+    name="aws-security",
+    enforcement_level=EnforcementLevel.MANDATORY,
+    policies=[
+        security_group_no_public_ingress,
+    ],
+)
+```
+
+This template sets up an example resource policy that prevents Security Groups from allowing public access, and it names the Policy Pack `aws-security`. To publish this template to your Pulumi organization, run the following command:
+
+```bash
+pulumi policy publish
+```
+
+### Add policy pack to Account
+
+With your policy pack published, you’ll need to create a Policy Group that associates your Insights account with a policy pack. In the Pulumi Cloud console, navigate to **Policies** under the **Pulumi Insights** section.
+
+![Insights Policies - New Policy Pack](/docs/insights/assets/create-policy-group.png)
+
+Next, click **Create policy group** and provide a descriptive name, such as "sg-security-policy-group" Then click **Add policy group**. Once your policy group has been created, click on the name of the policy group to open its configuration page, and then click **Add policy pack**.
+
+!["Adding a policy pack"](insights-add-policy-pack.png)
+
+Select your newly published policy pack from the dropdown and choose the version you want to enforce. Here you can configure the enforcement level at either a global level for all policies in your policy pack, or a granular level for each individual policy check. For the purposes of this tutorial, select the enforcement level of `advisory` under **All**, then click **Enable** to confirm your settings.
+
+!["Configuring the policy pack"](insights-configure-policy-pack.png)
+
+The last thing you need to do in this section is add your insights account to the policy group. On your Policy Group configuration page, click **Add accounts**, and type the name of the account you want to include for Insights policies (e.g. pulumi-tutorials-insights/us-west-2). Then click **Add account to policy group**.
+
+!["Adding an account to the policy group"](insights-add-policy-group-acct.png)
+
+> If you want to learn more about creating custom Policy Packs in Pulumi, you can refer to our [Creating a Custom Policy Pack](/tutorials/custom-policy-pack/) tutorial series.
 
 ## Evaluate Terraform resources
 
-TBD
+Now that your policy pack has been deployed and your account has been associated with it, you can now evaluate your discovered AWS resources against the policy. To do so, navigate back to the **Accounts** section and select your account. Click the **Actions** dropdown button, select the **Scan** radio button, and then click **Scan**.
+
+Just like earlier in the tutorial, the scanning process will run until it is complete.
