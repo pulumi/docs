@@ -119,7 +119,7 @@ resource "aws_s3_bucket" "tf-tutorial-test-s3-bucket" {
 Then run the `terraform apply` command to have the following resources deployed into your account:
 
 - An EC2 instance
-- A Security Group
+- A Security Group configured for public access
 - An S3 bucket
 
 ## Scan Terraform resources
@@ -229,18 +229,7 @@ As the scan progresses, you can monitor policy compliance in real-time through t
 
 ![Insights Policies - Policy Violations](/tutorials/eval-compliance-terraform/assets/insights-policy-violations.png)
 
-This view provides several ways to analyze your compliance status. You can filter policy violations by:
-
-- Policy Pack
-- Policy
-- Project
-- Enforcement levels (advisory vs mandatory)
-- Account
-- Resource
-- Type
-- Violation date
-
-Each violation entry provides detailed information about:
+You should see a violation entry for the publically accessible security group in the list. Each violation entry provides detailed information about:
 
 - The specific resource that triggered the violation
 - Which policy rule was violated
