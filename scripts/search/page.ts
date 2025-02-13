@@ -45,7 +45,7 @@ import * as rank from "./rank";
         const $ = cheerio.load(content, {
             _useHtmlParser2: true,
             decodeEntities: true
-        });
+        } as any /* We are using a hidden option: _useHtmlParser2: https://github.com/cheeriojs/cheerio/discussions/1271 */);
         
         const subheads = [];
 
@@ -161,23 +161,23 @@ import * as rank from "./rank";
         return secondaries;
     }
 
-    // Clean up (i.e., de-dupe, simplify, etc.) the items in a breadcrumb list.
-    export function makeAncestorsList(rawList) {
-        return [ ...new Set(rawList) ]
-            .filter(s => s?.trim() !== "")
-            .map(s => {
-                if (s === "Pulumi Registry") {
-                    return "Registry";
-                }
-                return s;
-            });
-    }
+// Clean up (i.e., de-dupe, simplify, etc.) the items in a breadcrumb list.
+export function makeAncestorsList(rawList: string[]) {
+    return Array.from(new Set(rawList).values())
+        .filter(s => s?.trim() !== "")
+        .map(s => {
+            if (s === "Pulumi Registry") {
+                return "Registry";
+            }
+            return s;
+        });
+}
 
-    // Every Algolia record requires a unique ID. Since every record should also have a unique URL,
-    // we use the URL to generate the unique ID.
-    //
-    // If, at some point, we find that we need to have two records pointing to the same URL, we can
-    // add another parameter to the list and hash both.
-    export function getObjectID({ href }) {
-        return crypto.createHash("md5").update(href).digest("hex");
-    }
+// Every Algolia record requires a unique ID. Since every record should also have a unique URL,
+// we use the URL to generate the unique ID.
+//
+// If, at some point, we find that we need to have two records pointing to the same URL, we can
+// add another parameter to the list and hash both.
+export function getObjectID({ href }) {
+    return crypto.createHash("md5").update(href).digest("hex");
+}
