@@ -1,4 +1,4 @@
-import * as axios from "axios";
+import { default as axios } from "axios";
 import * as settings from "./settings";
 import * as algoliasearch from "algoliasearch";
 
