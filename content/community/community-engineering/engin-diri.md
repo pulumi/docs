@@ -8,6 +8,10 @@ layout: community-engineering/single
 aliases:
   - /engin
 talks:
+- event: "Konstruct Live Stream"
+  title: "Progressive Infrastructure Delivery using Kargo and Argo CD"
+  url: "https://www.youtube.com/watch?v=zoL4N7EyLGU"
+  date: 2025-02-13T15:00:00.000-07:00  
 - event: "CfgMgmtCamp 2025 Ghent"
   title: "Discover Pulumi Through Hands-On Practice"
   url: "https://cfp.cfgmgmtcamp.org/ghent2025/talk/SAMLJM/"
