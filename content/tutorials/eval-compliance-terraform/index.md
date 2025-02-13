@@ -227,7 +227,7 @@ Now that your policy pack has been deployed and your account has been associated
 
 As the scan progresses, you can monitor policy compliance in real-time through the **Policy Violations** page in the Pulumi Cloud Console.
 
-![Insights Policies - Policy Violations](/tutorials/eval-compliance-terraform/assets/policy-violations.png)
+![Insights Policies - Policy Violations](/tutorials/eval-compliance-terraform/assets/insights-policy-violations.png)
 
 This view provides several ways to analyze your compliance status. You can filter policy violations by:
 
