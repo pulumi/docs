@@ -1,6 +1,7 @@
 ---
-title_tag: "Pulumi Cloud: Environment Permissions"
+title_tag: Pulumi Cloud Environment Permissions
 meta_desc: Learn how to set organization wide environment permissions for the Pulumi Cloud.
+title: Environment Permissions
 h1: Environment organization permissions
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
