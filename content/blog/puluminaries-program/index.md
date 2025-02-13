@@ -73,4 +73,4 @@ We are looking for Pulumi enthusiasts who have shown dedication and passion for 
 
 Whether you want to apply for yourself or nominate someone else, we’d love to hear from you!
 
-{{< blog/cta-button "Apply or Nominate Now" "https://docs.google.com/forms/d/e/1FAIpQLSecSYwLCF-flsYxcdjY4pBYmz-RupZaAf0NzXSW2y6hUTrQuQ/viewform" >}}
+{{< blog/cta-button "Apply or Nominate Now" "https://docs.google.com/forms/d/e/1FAIpQLScdi58QR5SYDYoXhceFumlrjsVxHOOCgCICNw_t3V3qSK3K6w/viewform" >}}
