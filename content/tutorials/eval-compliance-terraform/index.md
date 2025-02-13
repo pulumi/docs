@@ -225,11 +225,11 @@ The last thing you need to do in this section is add your insights account to th
 
 Now that your policy pack has been deployed and your account has been associated with it, you can now evaluate your discovered AWS resources against the policy. To do so, navigate back to the **Accounts** section and select your account. Click the **Actions** dropdown button, select the **Scan** radio button, and then click **Scan**.
 
-As the scan progresses, you can monitor policy compliance in real-time through the **Policy Violations** page in the Pulumi Cloud Console. This view provides several ways to analyze your compliance status:
+As the scan progresses, you can monitor policy compliance in real-time through the **Policy Violations** page in the Pulumi Cloud Console.
 
 ![Insights Policies - Policy Violations](/tutorials/eval-compliance-terraform/assets/policy-violations.png)
 
-Filter policy violations by:
+This view provides several ways to analyze your compliance status. You can filter policy violations by:
 
 - Policy Pack
 - Policy
