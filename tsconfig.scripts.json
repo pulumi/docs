@@ -1,0 +1,7 @@
+{
+    "compilerOptions": {
+        "module": "preserve"
+    },
+    "include": ["scripts"],
+    "exclude": ["node_modules"]
+}
