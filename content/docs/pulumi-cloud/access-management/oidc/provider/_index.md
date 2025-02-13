@@ -35,16 +35,7 @@ The token contains the standard audience, issuer, and subject claims:
 
 ### Pulumi ESC
 
-The token contains the following claims:
-
-| Claim         | Description |
-|:--------------|:------------|
-| aud           | _(Audience)_ The name of the organization associated with the environment prefixed with the provider's platform name (`aws:{org}`, `azure:{org}`, `gcp:{org}`). |
-| iss           | _(Issuer)_ The issuer of the OIDC token: `https://api.pulumi.com/oidc`. |
-| current_env   | _(Current Environment)_ The name of the environment where the [ESC OIDC provider configuration](/docs/esc/integrations/) is defined. |
-| root_env      | _(Root Environment)_ The name of the environment that is opened first. This Root Environment in turn opens other imported environments. |
-| trigger_user  | _(Trigger User)_ The user whose credentials are used to open an environment. |
-| sub           | _(Subject)_ The subject of the OIDC token. Often used for configuring trust relationships, it contains information about the associated service. Each component is also available as a custom claim. |
+For details on how Pulumi ESC environments interact with OIDC token claims, see [Configuring OIDC for Pulumi ESC](/docs/esc/access-management/oidc/).
 
 ## Custom claims
 
@@ -70,51 +61,7 @@ Valid custom claims for this service are listed in the table below:
 
 ### Pulumi ESC
 
-The default format of the subject claim for this service is:
-
-`pulumi:environments:org:<organization name>:env:<project name>/<environment name>`
-
-If you want to have granular permissions, then we recommend using `subjectAttributes` property to customize the OIDC subject claims if you plan to use subject claims in your cloud provider trust policy. The default prefix when using `subjectAttributes` will be
-
-`pulumi:environments:pulumi.organization.login:{ORGANIZATION_NAME}`
-
-Additional options for customization include:
-
-* `rootEnvironment.name`: the name of the environment that is opened first. This root environment in turn opens other imported environments
-* `currentEnvironment.name`: the name of the environment where the ESC login provider and `subjectAttributes` are defined
-* `pulumi.user.login`: the login identifier of the user opening the environment
-* `pulumi.organization.login`: the login identifier of the organization
-
-Let's explain how `rootEnvironment.name` and `currentEnvironment.name` work with an example. Consider the following definitions for two environments, `Project/Environment-A` and `Project/Environment-B`:
-
-```yaml
-#Project/Environment-A
-values:
-  enva-rootEnv: ${context.rootEnvironment.name}
-  enva-currentEnv: ${context.currentEnvironment.name}
-
-#Project/Environment-B
-imports:
-- Project/EnvironmentA
-values:
-  envb-rootEnv: ${context.rootEnvironment.name}
-  envb-currentEnv: ${context.currentEnvironment.name}
-```
-
-If you open `Project/Environment-B`, the output would be:
-
-```
-{
-  "enva-currentEnv-name": "Project/Environment-A",
-  "enva-rootEnv-name": "Project/Environment-B",
-  "envb-currentEnv": "Project/Environment-B",
-  "envb-rootEnv": "Project/Environment-B"
-}
-```
-
-Notice how `enva-rootEnv-name` is resolved to `Project/Environment-B`. That's because Project/Environment-A is opened from Project/Environment-B which is the root, i.e. the top-level environment to be opened.
-
-When importing multiple environments into Pulumi IaC Stack Config, each environment is resolved separately. For example, if you import multiple environments into your Pulumi Stack with `rootEnvironment.name` attribute defined in all of them, then each `rootEnvironment.name` will resolve to the environment name where it is defined.
+For details on how Pulumi ESC environments interact with OIDC custom claims, see [Configuring OIDC for Pulumi ESC](/docs/esc/access-management/oidc/).
 
 ## Configuring trust relationships
 
