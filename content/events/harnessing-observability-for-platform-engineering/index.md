@@ -63,7 +63,7 @@ main:
           photo: /images/team/josh-kodroff.jpg
         - name: Ryan Peirce
           role: Channel & Alliances Senior Sales Engineer, Chronosphere
-          photo: /images/people/ryan-pierce.jpg
+          photo: /images/people/ryan-peirce.jpg
 
     # case-sensitive
     tags:
