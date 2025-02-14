@@ -61,7 +61,7 @@ main:
         - name: Josh Kodroff 
           role: Principal Solutions Architect, Pulumi
           photo: /images/team/josh-kodroff.jpg
-        - name: Ryan Pierce
+        - name: Ryan Peirce
           role: Channel & Alliances Senior Sales Engineer, Chronosphere
           photo: /images/people/ryan-pierce.jpg
 
