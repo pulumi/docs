@@ -11,7 +11,7 @@ menu:
     weight: 2
 ---
 
-Pulumi ESC Rotators enable you to rotate credentials both automatically or manually for a number of supported services.
+Pulumi ESC Rotators enable you to rotate credentials both automatically and manually for a number of supported services.
 
 To learn how to set up and use each rotator, follow the links below. To learn how to configure OpenID Connect (OIDC) for the rotators that support it, see [OpenID Connect integration](/docs/pulumi-cloud/oidc/) in the Pulumi Cloud documentation.
 

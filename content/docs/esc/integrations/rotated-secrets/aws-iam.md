@@ -10,7 +10,7 @@ menu:
     weight: 1
 ---
 
-The `aws-iam` rotator enables you to rotate access credentials for an AWS IAM user in your Environment.
+The `aws-iam` rotator enables you to rotate access credentials for an AWS IAM user in your Environment. Check out the [aws-login documentation](/docs/esc/integrations/dynamic-login-credentials/aws-login/) to learn more about authenticating with AWS.
 
 ## Example
 
@@ -54,7 +54,7 @@ values:
             accessKeyId: <access key>
             secretAccessKey:
               fn::secret: <secret key>
-
+```
 
 ## Configuring OIDC
 
