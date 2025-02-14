@@ -210,7 +210,7 @@ if [ ${#failed_projects[@]} -ne 0 ]; then
     for project in "${failed_projects[@]}"; do
         echo "- $project"
     done
-    echo "The following projects passed:"
+    echo "\nThe following projects passed:"
     for project in "${passing_projects[@]}"; do
         echo "- $project"
     done
