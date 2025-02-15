@@ -16,9 +16,11 @@ An environment is a named collection of possibly-secret, possibly-dynamic data.
 Each environment has a definition and may be opened in order to access its contents.
 Opening an environment may involve generating new dynamic data.
 
-To begin working with environments, run the `env init` command:
+To begin working with environments, run the `pulumi env init` command:
 
-    env init
+```
+pulumi env init
+```
 
 This will prompt you to create a new environment to hold secrets and configuration.
 
