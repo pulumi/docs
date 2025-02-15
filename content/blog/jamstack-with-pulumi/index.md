@@ -162,7 +162,7 @@ $ pulumi stack init website-testing
     $ pulumi config set aws:region us-east-1
     ```
 
-1. Install [dependencies](https://www.pulumi.com/docs/concepts/how-pulumi-works/) for our Pulumi program.
+1. Install [dependencies](/docs/concepts/how-pulumi-works/) for our Pulumi program.
 
     {{< chooser language "typescript,python" >}}
     {{% choosable language typescript %}}

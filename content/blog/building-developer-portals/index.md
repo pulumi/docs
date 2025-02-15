@@ -54,7 +54,7 @@ Pulumi launched [Pulumi Templates](/templates) last year, out of the box templat
 
 {{< video title="The New Project Wizard in Pulumi Cloud" src="https://www.pulumi.com/uploads/npw.mp4" controls="false" autoplay="true" loop="true" >}}
 
-Many of our customers are building their own developer portals on top of [Pulumi Automation API](https://www.pulumi.com/docs/using-pulumi/automation-api/) and [Pulumi Deployments](https://www.pulumi.com/docs/pulumi-cloud/deployments), but we also wanted to offer options for teams that cannot (or do not want to) build a custom solution. The suite of tools for building internal developer portals include:
+Many of our customers are building their own developer portals on top of [Pulumi Automation API](/docs/using-pulumi/automation-api/) and [Pulumi Deployments](/docs/pulumi-cloud/deployments), but we also wanted to offer options for teams that cannot (or do not want to) build a custom solution. The suite of tools for building internal developer portals include:
 
 1. New Project Wizard: Showcased in the GIF above, Pulumi Cloud now enables developers to provision infrastructure entirely via point-and-click in Pulumi Cloud with the new New Project Wizard experience. This offers a great out-of-the box developer portal experience for any team using Pulumi Cloud.
 2. Organization Templates: Pulumi Cloud now supports registering your own custom templates for your organization which will be made available in the New Project Wizard. This enables platform teams to standardize infrastructure creation and distribute those best practices where developers are already spending their time.

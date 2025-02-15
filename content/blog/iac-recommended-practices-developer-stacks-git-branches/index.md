@@ -60,7 +60,7 @@ The deployment process is still a bit more manual than the team would like --- b
 
 A few more details worth noting out about Team Zephyr's current setup:
 
-* Both of the project's stack-configuration files, `Pulumi.dev.yaml` and `Pulumi.prod.yaml`, are checked into version control. This is safe and considered good practice (even with [secrets](https://www.pulumi.com/docs/concepts/secrets/)) because it allows the team to review or change the configuration of a given stack easily by viewing or editing the code in each file.
+* Both of the project's stack-configuration files, `Pulumi.dev.yaml` and `Pulumi.prod.yaml`, are checked into version control. This is safe and considered good practice (even with [secrets](/docs/concepts/secrets/)) because it allows the team to review or change the configuration of a given stack easily by viewing or editing the code in each file.
 
 * The `main` branch is the only long-lived branch in the repository; all others (e.g., developers' feature branches) are deleted once they're merged into `main`.
 

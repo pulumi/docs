@@ -394,4 +394,4 @@ To learn more about creating and managing resources in Pulumi, take a look a the
 - Learn more about Pulumi state and backends in the [Managing Pulumi State and Backend Options documentation](/docs/iac/concepts/state-and-backends/).
 - Learn more about the `pulumi state` command and its subcommands in the [Pulumi State CLI documentation](/docs/cli/commands/pulumi_state/).
 - Learn more about Pulumi stacks in the [Stacks concept documentation](/docs/concepts/stack/).
-- Learn more about the `pulumi stack` command and its subcommands in the [Pulumi Stack CLI documentation](https://www.pulumi.com/docs/cli/commands/pulumi_stack/).
+- Learn more about the `pulumi stack` command and its subcommands in the [Pulumi Stack CLI documentation](/docs/cli/commands/pulumi_stack/).

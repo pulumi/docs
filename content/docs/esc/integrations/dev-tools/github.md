@@ -18,16 +18,16 @@ Pulumi ESC integrates with the GitHub in a variety of ways. In this article we w
 
 Ensure you have:
 
-- installed [Pulumi ESC](https://www.pulumi.com/docs/install/esc/)
+- installed [Pulumi ESC](/docs/install/esc/)
 - installed [GitHub CLI](https://cli.github.com/)
 - a Pulumi Cloud account. You can sign up for an [always-free, individual account](https://app.pulumi.com/signup).
 - a GitHub account. You can sign up for an [account here](https://github.com/join).
 
 {{< notes type="info" >}}
-**New to Pulumi ESC?** Complete the [Getting Started tutorial](https://www.pulumi.com/docs/esc/get-started/)
+**New to Pulumi ESC?** Complete the [Getting Started tutorial](/docs/esc/get-started/)
 {{< /notes >}}
 
-In addition to the GitHub CLI and GitHub Actions integrations below, consider authenticating to your Pulumi Cloud with GitHub OIDC. [Follow the guide](https://www.pulumi.com/docs/pulumi-cloud/oidc/client/github/) to enable the [Pulumi Auth Action](https://github.com/marketplace/actions/pulumi-auth-action).
+In addition to the GitHub CLI and GitHub Actions integrations below, consider authenticating to your Pulumi Cloud with GitHub OIDC. [Follow the guide](/docs/pulumi-cloud/oidc/client/github/) to enable the [Pulumi Auth Action](https://github.com/marketplace/actions/pulumi-auth-action).
 
 ## GitHub Actions Integration
 
@@ -37,14 +37,14 @@ Using Pulumi Infrastructure as Code (IaC) within GitHub Actions? This section de
 
 The [Pulumi CLI Action](https://github.com/marketplace/actions/pulumi-cli-action#pulumi-github-actions) is a GitHub Action available in the [GitHub Marketplace](https://github.com/marketplace). It allows you to run Pulumi Infrastructure as Code (IaC) deployments directly from GitHub.
 
-We showed how to use this in the Pulumi IaC documentation article "[GitHub Actions for Pulumi](https://www.pulumi.com/docs/iac/packages-and-automation/continuous-delivery/github-actions/)". However, that article only shows how to [configure your cloud credentials as GitHub secrets](https://www.pulumi.com/docs/iac/packages-and-automation/continuous-delivery/github-actions/#configuring-your-secrets), making them available to your Pulumi Program.
+We showed how to use this in the Pulumi IaC documentation article "[GitHub Actions for Pulumi](/docs/iac/packages-and-automation/continuous-delivery/github-actions/)". However, that article only shows how to [configure your cloud credentials as GitHub secrets](/docs/iac/packages-and-automation/continuous-delivery/github-actions/#configuring-your-secrets), making them available to your Pulumi Program.
 
 A better approach is to manage those secrets with Pulumi ESC by providing them to a Pulumi Program directly, without the need to store them separately in GitHub secrets. This means you have a central place to manage and share those secrets via Pulumi ESC, making updates a much easier and safer process.
 
-Using this approach you can also take advantage of Pulumi ESC's support for AWS OIDC to provide dynamically generated temporary credentials rather than static token values. Read more about that in our [OpenID Connect for AWS Configuration guide](https://www.pulumi.com/docs/pulumi-cloud/oidc/provider/aws/#configuring-openid-connect-for-aws).
+Using this approach you can also take advantage of Pulumi ESC's support for AWS OIDC to provide dynamically generated temporary credentials rather than static token values. Read more about that in our [OpenID Connect for AWS Configuration guide](/docs/pulumi-cloud/oidc/provider/aws/#configuring-openid-connect-for-aws).
 
 {{< notes type="info" >}}
-**New to Pulumi IaC?** Complete a [Getting Started tutorial](https://www.pulumi.com/docs/get-started/).
+**New to Pulumi IaC?** Complete a [Getting Started tutorial](/docs/get-started/).
 {{< /notes >}}
 
 Learn how to:
@@ -57,7 +57,7 @@ You may follow a similar approach for Google Cloud, Azure, and any other configu
 
 ### Create an ESC Environment
 
-Use the Pulumi ESC CLI to create and configure an Environment. Alternatively, follow the [Pulumi Cloud console instructions](https://www.pulumi.com/docs/esc/get-started/create-environment/#create-via-the-console).
+Use the Pulumi ESC CLI to create and configure an Environment. Alternatively, follow the [Pulumi Cloud console instructions](/docs/esc/get-started/create-environment/#create-via-the-console).
 
 ```bash
 # ensure you're logged in
@@ -73,7 +73,7 @@ $ esc env init ${ESC_ENV}
 ### Add AWS Credentials to your ESC Environment
 
 {{< notes type="warning" >}}
-**Recommended** Per AWS, it is strongly recommended that you use temporary credentials provided by IAM roles and federated users instead of the long-term credentials provided by IAM users and access keys. Complete the [OpenID Connect for AWS Configuration guide](https://www.pulumi.com/docs/pulumi-cloud/oidc/provider/aws/#configuring-openid-connect-for-aws) to adopt this security best practice.
+**Recommended** Per AWS, it is strongly recommended that you use temporary credentials provided by IAM roles and federated users instead of the long-term credentials provided by IAM users and access keys. Complete the [OpenID Connect for AWS Configuration guide](/docs/pulumi-cloud/oidc/provider/aws/#configuring-openid-connect-for-aws) to adopt this security best practice.
 {{< /notes >}}
 
 The example below stores static AWS credentials in Pulumi ESC. These will be accessed programmatically in a workflow.
@@ -87,12 +87,12 @@ $ esc env set ${ESC_ENV} pulumiConfig.AWS_REGION us-west-2
 
 ### Add ESC to a Pulumi program
 
-Pulumi ESC can be added to any existing Pulumi program. Any configurations defined under `environmentVariables`, `pulumiConfig`, or `files` will be available to your program at runtime. Visit the [Pulumi ESC Syntax Reference](https://www.pulumi.com/docs/esc/reference/) for more options.
+Pulumi ESC can be added to any existing Pulumi program. Any configurations defined under `environmentVariables`, `pulumiConfig`, or `files` will be available to your program at runtime. Visit the [Pulumi ESC Syntax Reference](/docs/esc/reference/) for more options.
 
 In addition to the [prerequisites above](#prerequisites), ensure you have:
 
-- installed [Pulumi CLI](https://www.pulumi.com/docs/install/)
-- installed a [Pulumi-supported programming language](https://www.pulumi.com/docs/languages-sdks/)
+- installed [Pulumi CLI](/docs/install/)
+- installed a [Pulumi-supported programming language](/docs/languages-sdks/)
 
 If needed, create a new Pulumi program. The example below defines an AWS S3 Bucket in Golang.
 
@@ -130,7 +130,7 @@ Below is a simple example of a workflow using the [Pulumi CLI Action](https://gi
 You will need to [create a new Pulumi Access Token](https://app.pulumi.com/account/tokens) for this example.
 
 {{< notes type="info" >}}
-**Recommended** Consider authenticating to your Pulumi Cloud with GitHub OIDC instead.  Complete the [Configuring OpenID Connect for GitHub guide](https://www.pulumi.com/docs/pulumi-cloud/oidc/client/github/) to enable the [Pulumi Auth Action](https://github.com/marketplace/actions/pulumi-auth-action)
+**Recommended** Consider authenticating to your Pulumi Cloud with GitHub OIDC instead.  Complete the [Configuring OpenID Connect for GitHub guide](/docs/pulumi-cloud/oidc/client/github/) to enable the [Pulumi Auth Action](https://github.com/marketplace/actions/pulumi-auth-action)
 {{< /notes >}}
 
 In your GitHub repo, provide the Pulumi Cloud token as a `PULUMI_ACCESS_TOKEN` secret. This enables your GitHub Action to communicate with the Pulumi Cloud on your behalf.
@@ -165,7 +165,7 @@ jobs:
           PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
 ```
 
-For more examples, see the [GitHub Actions for Pulumi](https://www.pulumi.com/docs/iac/packages-and-automation/continuous-delivery/github-actions/) page.
+For more examples, see the [GitHub Actions for Pulumi](/docs/iac/packages-and-automation/continuous-delivery/github-actions/) page.
 
 ## GitHub CLI Integration
 
@@ -175,7 +175,7 @@ Note, that a fine-grained GitHub personal access token is required. Follow the [
 
 ### Create an ESC Environment
 
-Use the Pulumi ESC CLI to create and configure an Environment. Alternatively, follow the [Pulumi Cloud console instructions](https://www.pulumi.com/docs/esc/get-started/create-environment/#create-via-the-console).
+Use the Pulumi ESC CLI to create and configure an Environment. Alternatively, follow the [Pulumi Cloud console instructions](/docs/esc/get-started/create-environment/#create-via-the-console).
 
 ```bash
 # ensure you're logged in

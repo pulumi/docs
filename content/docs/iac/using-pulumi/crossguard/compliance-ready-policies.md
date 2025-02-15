@@ -313,7 +313,7 @@ If a Policy Pack needs to be installed at a time of a preview or an update, the 
 take care of those steps on behalf of the user.
 
 Before enforcing your Policy Pack, you may evaluate it locally using `pulumi preview --policy-pack <path-to-policy-pack-directory>`.
-For additional details, please refer to our [documentation](https://www.pulumi.com/docs/using-pulumi/crossguard/get-started/#running-locally).
+For additional details, please refer to our [documentation](/docs/using-pulumi/crossguard/get-started/#running-locally).
 
 When your Policy Pack is ready, you should publish it in your Pulumi Organization with the aim to enforce
 it. To publish your Policy Pack, run `pulumi policy publish <org-name>`.
@@ -326,7 +326,7 @@ Publishing "my-policy-pack" - version 1.0.0 to "myorg"
 Published as version 1.0.0
 ```
 
-Additional details are available in our [documentation](https://www.pulumi.com/docs/using-pulumi/crossguard/get-started/#enforcing-a-policy-pack).
+Additional details are available in our [documentation](/docs/using-pulumi/crossguard/get-started/#enforcing-a-policy-pack).
 
 ## Performance
 

@@ -16,7 +16,7 @@ tags:
 
 Deploying and managing containerized workloads is one of Pulumi's fastest-growing areas. Standing up managed container services and Kubernetes clusters is a common area for automation, and many of our customers use Pulumi to automate building and publishing images to their registry of choice.
 
-Given this critical use case, we are thrilled to introduce the latest addition to the Pulumi ecosystem: the new [Docker Build provider](https://www.pulumi.com/registry/packages/docker-build/), designed to streamline and modernize Docker image builds from your Pulumi programs.
+Given this critical use case, we are thrilled to introduce the latest addition to the Pulumi ecosystem: the new [Docker Build provider](/registry/packages/docker-build/), designed to streamline and modernize Docker image builds from your Pulumi programs.
 
 This new addition expands upon the solid foundation of our highly utilized [Docker provider]. It elevates the `docker.Image` resource, one of the most heavily used and most powerful resources in the Pulumi ecosystem, into its very own dedicated package. By fully embracing the power of [BuildKit], the Docker Build provider brings many new features to support the best-in-class Docker capabilities developers love.
 
@@ -490,7 +490,7 @@ public class App {
 
 {{% /choosable %}}
 
-The Pulumi output, `ref`, provides a convenient way to reference the pushed image in downstream Pulumi resources like [ECS TaskDefinitions](https://www.pulumi.com/registry/packages/aws/api-docs/ecs/taskdefinition/) or [Kubernetes Deployments](https://www.pulumi.com/registry/packages/kubernetes/api-docs/apps/v1/deployment/).
+The Pulumi output, `ref`, provides a convenient way to reference the pushed image in downstream Pulumi resources like [ECS TaskDefinitions](/registry/packages/aws/api-docs/ecs/taskdefinition/) or [Kubernetes Deployments](/registry/packages/kubernetes/api-docs/apps/v1/deployment/).
 
 ## Migrating from docker.Image to docker_build.Image
 
@@ -498,18 +498,18 @@ The new `docker_build.Image` replaces the old `docker.Image` resource. It adds n
 
 We do not expect to make further changes to `docker.Image`. It will remain available for the foreseeable future, so you can continue using it if it meets your needs. However, we **recommend** you migrate your images to `docker_build.Image` to get the best possible support, features, and performance. We expect to deprecate the `docker.Image` resource in the future.
 
-The migration process is straightforward and detailed in the [API documentation](https://www.pulumi.com/registry/packages/docker-build/api-docs/image/). Docker Build provides a superset functionality over the previous
+The migration process is straightforward and detailed in the [API documentation](/registry/packages/docker-build/api-docs/image/). Docker Build provides a superset functionality over the previous
 `docker.Image` resource; thus, you can migrate existing resources without issue. The new Docker Build Image options will look very familiar if you use the Docker command-line tool.
 
 {{% notes %}}
 
-The new Docker Build provider matches the Docker CLI behavior. Thus, it does **not** push images by default. If you want to push to a registry, include [`push: true`](https://www.pulumi.com/registry/packages/docker-build/api-docs/image/#push_nodejs) in the code just as you would include `--push` on the command line.
+The new Docker Build provider matches the Docker CLI behavior. Thus, it does **not** push images by default. If you want to push to a registry, include [`push: true`](/registry/packages/docker-build/api-docs/image/#push_nodejs) in the code just as you would include `--push` on the command line.
 
 {{% /notes %}}
 
 {{% notes %}}
 
-The new Docker Build provider builds images by default during [previews](https://www.pulumi.com/docs/cli/commands/pulumi_preview/) to reduce the risk of merging broken images as part of CI pipelines. You can change the default behavior by specifying a [`buildOnPreview`](https://www.pulumi.com/registry/packages/docker-build/api-docs/image/#buildonpreview_nodejs) flag.
+The new Docker Build provider builds images by default during [previews](/docs/cli/commands/pulumi_preview/) to reduce the risk of merging broken images as part of CI pipelines. You can change the default behavior by specifying a [`buildOnPreview`](/registry/packages/docker-build/api-docs/image/#buildonpreview_nodejs) flag.
 
 {{% /notes %}}
 
@@ -663,7 +663,7 @@ const v4Migrated = new dockerbuild.Image("v4-to-buildx", {
 
 Launching the new [Docker Build provider] marks a significant milestone in modernizing container management for developers. The new package, which contains the `docker_build.Image` resource reflects our commitment to innovation and user-centric development. By incorporating the latest [BuildKit] technology, the Docker Build provider supports the newest features, enhances multi-architecture builds, and improves caching strategies. Moreover, its integration with [Docker Build Cloud](https://www.docker.com/products/build-cloud/) underscores our dedication to providing a cutting-edge toolset for developers. This launch is a testament to our ongoing efforts to modernize and improve how developers build images.
 
-Check out our [documentation](https://www.pulumi.com/registry/packages/docker-build/) for more details on utilizing the Docker Build provider.
+Check out our [documentation](/registry/packages/docker-build/) for more details on utilizing the Docker Build provider.
 
 If you are still wondering, "Which provider should I use?" the answer depends on whether you are doing anything related to `docker build`.
 

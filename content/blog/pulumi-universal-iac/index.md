@@ -381,7 +381,7 @@ Every package in the Pulumi Registry supports all Pulumi programming languages, 
 
 Pulumi’s users love managing __*all*__ of their cloud infrastructure using Pulumi, and that includes managing the state of the [Pulumi Service](/product/pulumi-service/) itself.
 
-Today, we released a new [Pulumi provider for the Pulumi Service](/registry/packages/pulumiservice/), supporting configuration of [Teams](/docs/pulumi-cloud/access-management/teams/), [Access Tokens](https://www.pulumi.com/docs/pulumi-cloud/accounts/#access-tokens), [Stack Tags](/docs/cli/commands/pulumi_stack_tag/) and [Webhooks](/docs/pulumi-cloud/webhooks/) using infrastructure as code.
+Today, we released a new [Pulumi provider for the Pulumi Service](/registry/packages/pulumiservice/), supporting configuration of [Teams](/docs/pulumi-cloud/access-management/teams/), [Access Tokens](/docs/pulumi-cloud/accounts/#access-tokens), [Stack Tags](/docs/cli/commands/pulumi_stack_tag/) and [Webhooks](/docs/pulumi-cloud/webhooks/) using infrastructure as code.
 
 For example, you can create a webhook that is notified whenever a Pulumi Update completes, and log it using an AWS Lambda, with just a few lines of code using the new Pulumi Service provider along with the API Gateway package.
 

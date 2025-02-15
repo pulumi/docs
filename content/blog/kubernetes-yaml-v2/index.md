@@ -49,7 +49,7 @@ The `ConfigGroup` resource accepts the following input properties:
 | `skipAwait`      | Skips over the readiness checks on the child resources.                                                                                                  |
 
 Note that all objects defined within the manifest must have a `metadata.name` field;
-Pulumi [autonaming](https://www.pulumi.com/docs/concepts/resources/names/#autonaming) is not supported.
+Pulumi [autonaming](/docs/concepts/resources/names/#autonaming) is not supported.
 
 See the [API Reference documentation](/registry/packages/kubernetes/api-docs/yaml/v2/configgroup/)
 for more information.
@@ -143,7 +143,7 @@ For resources in the “core” group, the empty string is used instead (for exa
 ### Resource Prefixes
 
 The purpose of the resource prefix is to ensure the uniqueness
-of child resource names, as described in [Pulumi: Resource Names](https://www.pulumi.com/docs/concepts/resources/names/#urns).
+of child resource names, as described in [Pulumi: Resource Names](/docs/concepts/resources/names/#urns).
 The best practice is to use the component name as a prefix, and now that's the default behavior.
 
 Note that the resource prefix is __not__ applied to the Kubernetes object names.

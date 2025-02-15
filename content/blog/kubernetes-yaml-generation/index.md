@@ -17,10 +17,10 @@ generate Kubernetes manifests that easily integrate into existing CI/CD workflow
 
 <!--more-->
 
-While Pulumi has [excellent support](https://www.pulumi.com/docs/iac/get-started/kubernetes/) for deploying and updating
+While Pulumi has [excellent support](/docs/iac/get-started/kubernetes/) for deploying and updating
 Kubernetes resources on a cluster, many users have asked for the option to render YAML that they can integrate into
 existing workflows. The [v1.5.4](https://github.com/pulumi/pulumi-kubernetes/releases/tag/v1.5.4) release of
-`pulumi-kubernetes` adds the [renderYamlToDirectory](https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/kubernetes/#ProviderArgs-renderYamlToDirectory)
+`pulumi-kubernetes` adds the [renderYamlToDirectory](/docs/reference/pkg/nodejs/pulumi/kubernetes/#ProviderArgs-renderYamlToDirectory)
 option, which enables this feature. This option is available in every Pulumi-supported language, including
 TypeScript/JavaScript, Python, and .NET ([Go support is coming soon!](https://github.com/pulumi/pulumi-kubernetes/issues/70)).
 

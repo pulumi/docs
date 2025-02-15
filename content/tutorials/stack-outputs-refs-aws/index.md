@@ -183,7 +183,7 @@ def lambda_handler(event, context):
     object.put(Body=data_string)
 ```
 
-Now, you can add the [Lambda function resource definition](https://www.pulumi.com/registry/packages/aws/api-docs/lambda/function/) and its corresponding [IAM role](https://www.pulumi.com/registry/packages/aws/api-docs/iam/role/) to your main project file.
+Now, you can add the [Lambda function resource definition](/registry/packages/aws/api-docs/lambda/function/) and its corresponding [IAM role](/registry/packages/aws/api-docs/iam/role/) to your main project file.
 
 {{< chooser language "typescript,python,yaml" / >}}
 
@@ -309,7 +309,7 @@ When defining these exports, you'll need to provide two arguments:
 | Output name | This is the name you will use as the identifier of your output value |
 | Output value | This is the actual value of your output |
 
-To demonstrate how this works, let's export the names of your Lambda function and S3 bucket. The [Pulumi documentation](https://www.pulumi.com/registry/packages/aws/api-docs/lambda/function/#outputs) provides more information about what properties are available to export for each resource.
+To demonstrate how this works, let's export the names of your Lambda function and S3 bucket. The [Pulumi documentation](/registry/packages/aws/api-docs/lambda/function/#outputs) provides more information about what properties are available to export for each resource.
 
 You can reference both your Lambda function name and bucket name via their `id` property, and you'll update your code to reflect that as shown below:
 
@@ -661,7 +661,7 @@ Use the following steps as a guide for adding the scheduling functionality:
 
 - Export the Lambda function ARN from the Lambda project
 - Create a stack reference for the Lambda function ARN in your Scheduler project code
-- Navigate to the [AWS Registry documentation page](https://www.pulumi.com/registry/packages/aws/)
+- Navigate to the [AWS Registry documentation page](/registry/packages/aws/)
 - Search for the Scheduler Schedule resource
 - Define the Schedule resource in your Scheduler project code
 - [Configure the Schedule](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-create-rule-schedule.html#eb-create-scheduled-rule-schedule) to trigger the Lambda function once every minute

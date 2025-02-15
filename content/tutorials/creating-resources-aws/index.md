@@ -106,7 +106,7 @@ Amazon Elastic Compute Cloud (EC2) provides managed virtual server hosting that 
 
 ### Define an EC2 instance
 
-The Pulumi Registry provides the documentation for all of the Pulumi providers and their associated resources. Open the [`aws.ec2.Instance` documentation page](https://www.pulumi.com/registry/packages/aws/api-docs/ec2/instance/) to view a description of this resource, example usage, the resource definition, and supported properties.
+The Pulumi Registry provides the documentation for all of the Pulumi providers and their associated resources. Open the [`aws.ec2.Instance` documentation page](/registry/packages/aws/api-docs/ec2/instance/) to view a description of this resource, example usage, the resource definition, and supported properties.
 
 You will now define your EC2 instance resource below.
 
@@ -149,7 +149,7 @@ You will now define your EC2 instance resource below.
 If you are deploying resources in a region other than the `us-east-1` region, make sure to replace the AMI ID value with the ID that is [specific to your region](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/finding-an-ami.html). Otherwise you may run into an `InvalidAMIID.NotFound` error.
 {{< /notes >}}
 
-All resources have a required [`name`](https://www.pulumi.com/docs/concepts/resources/names/) argument. Each resource has both a [logical name](https://www.pulumi.com/docs/concepts/resources/names/#logicalname) and a [physical name](https://www.pulumi.com/docs/concepts/resources/names/#autonaming).
+All resources have a required [`name`](/docs/concepts/resources/names/) argument. Each resource has both a [logical name](/docs/concepts/resources/names/#logicalname) and a [physical name](/docs/concepts/resources/names/#autonaming).
 
 The logical name is how the resource is known inside Pulumi. This is the value provided to the required `name` argument.
 
@@ -248,7 +248,7 @@ If you place the security group resource definition after the EC2 instance and t
 
 Use the following steps as a guide for adding the Security Group resource:
 
-- Navigate to the [AWS Registry documentation page](https://www.pulumi.com/registry/packages/aws/)
+- Navigate to the [AWS Registry documentation page](/registry/packages/aws/)
 - Search for the EC2 Security Group resource
 - Define the EC2 Security Group resource in your project code
 - Configure the security group to allow traffic on port 80

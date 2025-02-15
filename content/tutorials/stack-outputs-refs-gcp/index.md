@@ -127,7 +127,7 @@ This baseline code defines the following on your behalf:
 
 ## Export resource values
 
-As mentioned in the [Creating Resources on Google Cloud tutorial](/tutorials/creating-resources-gcp/), every resource has various properties. For any resources that you define in your Pulumi projects, you can [export the values](/docs/iac/concepts/stacks/#outputs) of its properties from your program as outputs. You can view a list of available properties that can be exported by referring to the resource properties section of a particular resource's API documentation (e.g. [Bucket properties](https://www.pulumi.com/registry/packages/gcp/api-docs/storage/bucket/#properties)). The `export` syntax is as follows:
+As mentioned in the [Creating Resources on Google Cloud tutorial](/tutorials/creating-resources-gcp/), every resource has various properties. For any resources that you define in your Pulumi projects, you can [export the values](/docs/iac/concepts/stacks/#outputs) of its properties from your program as outputs. You can view a list of available properties that can be exported by referring to the resource properties section of a particular resource's API documentation (e.g. [Bucket properties](/registry/packages/gcp/api-docs/storage/bucket/#properties)). The `export` syntax is as follows:
 
 {{< chooser language "javascript,typescript,python,go,csharp,yaml" / >}}
 

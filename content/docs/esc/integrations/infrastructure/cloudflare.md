@@ -13,10 +13,10 @@ aliases:
 
 ## Overview
 
-Pulumi ESC integrates with [Cloudflare](https://www.cloudflare.com/) to help developers automatically manage configuration and secrets when running [`wrangler`](https://developers.cloudflare.com/workers/wrangler/install-and-update/) commands. Additionally, Pulumi ESC works with the [Pulumi Cloudflare SDK](https://www.pulumi.com/registry/packages/cloudflare/installation-configuration/) to provide secrets to defined Cloudflare resources, such as Workers.
+Pulumi ESC integrates with [Cloudflare](https://www.cloudflare.com/) to help developers automatically manage configuration and secrets when running [`wrangler`](https://developers.cloudflare.com/workers/wrangler/install-and-update/) commands. Additionally, Pulumi ESC works with the [Pulumi Cloudflare SDK](/registry/packages/cloudflare/installation-configuration/) to provide secrets to defined Cloudflare resources, such as Workers.
 
 {{< notes type="info" >}}
-**What is Pulumi ESC?** Pulumi ESC (Environments, Secrets, and Configuration) allows you to define collections of configuration settings and secrets, known as environments, and utilize them in any application or service. [Learn more](https://www.pulumi.com/docs/esc/)
+**What is Pulumi ESC?** Pulumi ESC (Environments, Secrets, and Configuration) allows you to define collections of configuration settings and secrets, known as environments, and utilize them in any application or service. [Learn more](/docs/esc/)
 {{< /notes >}}
 
 ## Manage secrets for Wrangler commands
@@ -31,18 +31,18 @@ Learn how to:
 
 Ensure you have:
 
-- installed [Pulumi ESC](https://www.pulumi.com/docs/install/esc/)
+- installed [Pulumi ESC](/docs/install/esc/)
 - installed [Wrangler](https://developers.cloudflare.com/workers/wrangler/install-and-update/#install-wrangler/)
 - a valid and properly scoped [Cloudflare API token](https://developers.cloudflare.com/workers/wrangler/ci-cd/#api-token)
 - a Pulumi Cloud account. You can sign up for an [always-free, individual tier](https://app.pulumi.com/signup)
 
 {{< notes type="info" >}}
-**New to Pulumi ESC?** Complete the [Getting Started tutorial](https://www.pulumi.com/docs/esc/get-started/)
+**New to Pulumi ESC?** Complete the [Getting Started tutorial](/docs/esc/get-started/)
 {{< /notes >}}
 
 ### 1. Create an ESC Environment
 
-Use the Pulumi ESC CLI to create and configure an Environment. Alternatively, to use the Pulumi Cloud console follow the [console instructions](https://www.pulumi.com/docs/esc/get-started/create-environment/#create-via-the-console).
+Use the Pulumi ESC CLI to create and configure an Environment. Alternatively, to use the Pulumi Cloud console follow the [console instructions](/docs/esc/get-started/create-environment/#create-via-the-console).
 
 ```bash
 esc login # if needed
@@ -174,7 +174,7 @@ Using Infrastructure as Code (IaC) to manage Workers? See the next section to se
 
 ## Manage Cloudflare Worker Secrets in IaC
 
-Pulumi ESC works hand-in-hand with [Pulumi IaC](https://www.pulumi.com/docs/get-started/) to simplify configuration management.
+Pulumi ESC works hand-in-hand with [Pulumi IaC](/docs/get-started/) to simplify configuration management.
 
 Learn how to:
 
@@ -186,8 +186,8 @@ Learn how to:
 
 In addition to the [prerequisites above](#prerequisites), ensure you have:
 
-- installed [Pulumi CLI](https://www.pulumi.com/docs/install/)
-- installed a [Pulumi-supported programming language](https://www.pulumi.com/docs/languages-sdks/)
+- installed [Pulumi CLI](/docs/install/)
+- installed a [Pulumi-supported programming language](/docs/languages-sdks/)
 
 {{< notes type="info" >}}
 **New to Pulumi IaC?** Complete the [Getting Started tutorial](https://developers.cloudflare.com/pulumi/tutorial/hello-world/).
@@ -195,7 +195,7 @@ In addition to the [prerequisites above](#prerequisites), ensure you have:
 
 ### 1. Create (or Modify) an ESC Environment
 
-Use the Pulumi ESC CLI to create and configure an Environment. Alternatively, to use the Pulumi Cloud console follow the [console instructions](https://www.pulumi.com/docs/esc/get-started/create-environment/#create-via-the-console).
+Use the Pulumi ESC CLI to create and configure an Environment. Alternatively, to use the Pulumi Cloud console follow the [console instructions](/docs/esc/get-started/create-environment/#create-via-the-console).
 
 ```bash
 esc login # if needed
@@ -205,7 +205,7 @@ ESC_ENV=my-project/pulumi-environment
 esc env init ${ESC_ENV}
 ```
 
-Paste the contents below in the editor and replace the `abc...` API token and Account ID value with yours. These values are to be consumed by a Pulumi program hence they are placed under the `pulumiConfig` section. See the [syntax reference](https://www.pulumi.com/docs/esc/reference/) for more options.
+Paste the contents below in the editor and replace the `abc...` API token and Account ID value with yours. These values are to be consumed by a Pulumi program hence they are placed under the `pulumiConfig` section. See the [syntax reference](/docs/esc/reference/) for more options.
 
 ```yaml
 values:
@@ -228,7 +228,7 @@ pulumi stack init my-esc-stack
 pulumi config env add ${ESC_ENV}
 ```
 
-### 3. Assign an ESC Secret to a [Worker Secret Binding](https://www.pulumi.com/registry/packages/cloudflare/api-docs/workerscript/#inputs)
+### 3. Assign an ESC Secret to a [Worker Secret Binding](/registry/packages/cloudflare/api-docs/workerscript/#inputs)
 
 With the ESC Environment referenced in the Stack, you'll be able to consume ESC values to assign them to a Secret Binding Input. Here is an example Pulumi program written in TypeScript:
 

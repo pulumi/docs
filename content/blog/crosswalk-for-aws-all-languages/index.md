@@ -44,7 +44,7 @@ Crosswalk for AWS is the easiest way to get started with core compute and applic
 
 These libraries use automatic well-architected best practices to make common infrastructure as code tasks in AWS easier and more secure.
 
-Crosswalk for AWS is available to users in all Pulumi languages, [TypeScript](https://www.pulumi.com/docs/languages-sdks/javascript), [Python](https://www.pulumi.com/docs/languages-sdks/python), [.NET](https://www.pulumi.com/docs/languages-sdks/dotnet), [Go](https://www.pulumi.com/docs/languages-sdks/go), [Java](https://www.pulumi.com/docs/languages-sdks/java) and [YAML](https://www.pulumi.com/docs/languages-sdks/yaml). The AWSx package now joins the existing API Gateway and EKS packages in the Pulumi Registry, available in all Pulumi languages.
+Crosswalk for AWS is available to users in all Pulumi languages, [TypeScript](/docs/languages-sdks/javascript), [Python](/docs/languages-sdks/python), [.NET](/docs/languages-sdks/dotnet), [Go](/docs/languages-sdks/go), [Java](/docs/languages-sdks/java) and [YAML](/docs/languages-sdks/yaml). The AWSx package now joins the existing API Gateway and EKS packages in the Pulumi Registry, available in all Pulumi languages.
 
 ![Crosswalk for AWS diagram](arch.png)
 
@@ -851,7 +851,7 @@ export const vpcId = vpc.Id;
 
 ## What’s Next?
 
-Crosswalk for AWS is free and open source, and you can [get started](https://www.pulumi.com/docs/iac/clouds/aws/guides/) today.
+Crosswalk for AWS is free and open source, and you can [get started](/docs/iac/clouds/aws/guides/) today.
 
 For more on Crosswalk for AWS see:
 

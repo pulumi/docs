@@ -10,7 +10,7 @@ tags: ["features", "migration", "import"]
 Most infrastructure projects require working with existing cloud resources, either by building on top of existing resources
 or adopting existing resources under management with a new and more robust infrastructure provisioning solution.
 
-In June 2019, Pulumi introduced the ability to [import existing infrastructure resources to be under Pulumi management](https://www.pulumi.com/docs/iac/adopting-pulumi/import/)
+In June 2019, Pulumi introduced the ability to [import existing infrastructure resources to be under Pulumi management](/docs/iac/adopting-pulumi/import/)
 no matter how you’ve provisioned these resources — manually in your cloud provider’s console or CLI, using an infrastructure
 as code tool like Terraform or AWS CloudFormation. Today, we are happy to announce a richer resource import experience.
 
@@ -29,7 +29,7 @@ part of your infrastructure project. The `pulumi import` command is made of the 
 pulumi import [type] [name] [id]
 ```
 
-When Pulumi performs an import, the resource is added to the Pulumi [state](https://www.pulumi.com/docs/iac/concepts/state-and-backends/#state),
+When Pulumi performs an import, the resource is added to the Pulumi [state](/docs/iac/concepts/state-and-backends/#state),
 it is marked as a [protected](/docs/concepts/resources#protect) resource (by default),
 and it will emit the generated code that the user can add to their program before running a `pulumi up`. The resources are
 marked as protected to ensure that imported infrastructure is not accidentally deleted if the user forgets to include
@@ -427,7 +427,7 @@ Check out the video clip below for a demo.
 
 ## Documentation
 
-Full CLI Documentation is [available](https://www.pulumi.com/docs/cli/commands/pulumi_import/), showing all of the different
+Full CLI Documentation is [available](/docs/cli/commands/pulumi_import/), showing all of the different
 import command flags. The flags include writing directly to a file and the ability to ensure
 a resource is not protected on import. Examples of importing resources can be found on their specifc resource documentation
-pages. Such an example for importing a VPC can be found in the [VPC import documentation](https://www.pulumi.com/registry/packages/aws/api-docs/ec2/vpc/#import).
+pages. Such an example for importing a VPC can be found in the [VPC import documentation](/registry/packages/aws/api-docs/ec2/vpc/#import).

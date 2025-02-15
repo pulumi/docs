@@ -71,7 +71,7 @@ There’s several advantages to this architecture:
 
 ## Creating the first Transit Gateway resources
 
-After initializing your Pulumi project and adding the necessary references to the [AWS](https://www.pulumi.com/registry/packages/aws/) and [AWSX](https://www.pulumi.com/registry/packages/awsx/), you can add the resources relating to your Transit Gateway.
+After initializing your Pulumi project and adding the necessary references to the [AWS](/registry/packages/aws/) and [AWSX](/registry/packages/awsx/), you can add the resources relating to your Transit Gateway.
 
 You'll need to configure a CIDR block for your network's supernet. All spoke VPCs in this codebase must fall under the supernet CIDR block. You will use the supernet CIDR to create a route in the inspection VPC that will route traffic returning from the internet to the Transit Gateway. The Transit Gateway will, in turn, route the traffic back to the specific originating spoke VPC.
 
@@ -135,7 +135,7 @@ The code samples in this section are not exhaustive. That is, they do not contai
 
 Now that you've added some foundational Transit Gateway resources, you can create your inspection VPC.
 
-The inspection VPC is implemented as a [Pulumi component resource](https://www.pulumi.com/docs/concepts/resources/components/). While we do not need to create multiple inspection VPCs in this codebase, implementing the inspection VPC as a component resource enhances the readability of both the code and the output by grouping all resources that belong to the inspection VPC in the output of `pulumi up`. You can also improve the component's readability by placing its code in a separate file (in this case, `inspection.py`).
+The inspection VPC is implemented as a [Pulumi component resource](/docs/concepts/resources/components/). While we do not need to create multiple inspection VPCs in this codebase, implementing the inspection VPC as a component resource enhances the readability of both the code and the output by grouping all resources that belong to the inspection VPC in the output of `pulumi up`. You can also improve the component's readability by placing its code in a separate file (in this case, `inspection.py`).
 
 When you create a component resource in Python, it's helpful to create a class that contains the arguments to the component resource. This allows you to pass the arguments to the component resource as a single object, which makes the code easier to read and understand. You can create a terse and easily readable arguments class in Python with the [`@dataclass` decorator](https://docs.python.org/3/library/dataclasses.html):
 
@@ -158,7 +158,7 @@ class InspectionVpc(pulumi.ComponentResource):
         super().__init__("awsAdvancedNetworking:index:InspectionVpc", name, None, opts)
 ```
 
-You'll start by creating a VPC with the [AWSX VPC component](https://www.pulumi.com/registry/packages/awsx/api-docs/ec2/vpc/). We'll leverage the sensible defaults the component provides to create a VPC across 3 availability zones for high availability. You can either create a single NAT gateway in our inspection VPC to save costs, or create 3 NAT gateways, one in each availability zone, to provide high availability. See the code for details.
+You'll start by creating a VPC with the [AWSX VPC component](/registry/packages/awsx/api-docs/ec2/vpc/). We'll leverage the sensible defaults the component provides to create a VPC across 3 availability zones for high availability. You can either create a single NAT gateway in our inspection VPC to save costs, or create 3 NAT gateways, one in each availability zone, to provide high availability. See the code for details.
 
 After creating the VPC, you'll then need to attach the inspection VPC to the Transit Gateway. This is how the inspection VPC will be able to utilize the Transit Gateway and accept traffic from the spoke VPCs:
 
@@ -245,7 +245,7 @@ for subnet_id in public_subnet_ids:
     )
 ```
 
-You need to create both sets of these routes within an [apply](https://www.pulumi.com/docs/concepts/inputs-outputs/#apply) because of the need to access the raw values of each of the subnet ids. Apply can be conceptually difficult for beginners in Pulumi to grasp, but it essentially means "once you know all of the values that needed, pass them on to this function".
+You need to create both sets of these routes within an [apply](/docs/concepts/inputs-outputs/#apply) because of the need to access the raw values of each of the subnet ids. Apply can be conceptually difficult for beginners in Pulumi to grasp, but it essentially means "once you know all of the values that needed, pass them on to this function".
 
 ## Final steps
 

@@ -50,7 +50,7 @@ If you are looking for Environment Webhook documentation, it's [here](/docs/esc/
 ### Create a Webhook
 
 Pulumi Webhooks may be created through the UI using the steps outlined below, by using the
-[Webhook resource](https://www.pulumi.com/registry/packages/pulumiservice/api-docs/webhook/) from the Pulumi provider
+[Webhook resource](/registry/packages/pulumiservice/api-docs/webhook/) from the Pulumi provider
 or by [using the API](/docs/pulumi-cloud/cloud-rest-api/#create-webhook) directly.
 
 {{< chooser language "typescript,python,go,csharp" >}}

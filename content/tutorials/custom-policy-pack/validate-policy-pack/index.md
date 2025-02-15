@@ -212,7 +212,7 @@ Congratulations! You've successfully created and tested a policy pack with Pulum
 
 To learn more about using Pulumi CrossGuard and policies, explore the following:
 
-- [Pulumi Crossguard: Policy as Code Documentation](https://www.pulumi.com/docs/guides/crossguard/)
+- [Pulumi Crossguard: Policy as Code Documentation](/docs/guides/crossguard/)
 - [Advanced Policy Examples](https://github.com/pulumi/examples/tree/master/policy-packs)
 
 If you are using *Pulumi Business Critical* edition, you can also publish this policy to your Pulumi Cloud organization, which enables server-side policy enforcement on all Pulumi projects in your organization. See [pricing](/pricing/) for more details.

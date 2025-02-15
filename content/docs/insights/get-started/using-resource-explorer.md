@@ -20,7 +20,7 @@ Pulumi Resource Explorer is composed of:
 - **Query syntax**: Infrastructure can be discovered interactively with a rich, structured query language, for example package:snowflake.
 - **AI Assist**: A natural language query interface that generates the query syntax for you. You can use it to express queries where you might not know the exact syntax, type tokens, or package names.
 - **Search advanced filtering**: Advanced filtering allows you to see aggregations over your data at a glance, such as top stacks, projects, providers, teams and types by resource count. Additionally, if you are searching for something specific they can help you understand the shape of your search results and further refine them.
-- **Search API**: Allows you to integrate Resource Search into your internal systems and workflows. Use the API to add search functionality to your Internal Developer Platform or create automation around search results. To learn more about the API spec details view the [Pulumi Service REST API documentation](https://www.pulumi.com/docs/pulumi-cloud/cloud-rest-api/#resource-search).
+- **Search API**: Allows you to integrate Resource Search into your internal systems and workflows. Use the API to add search functionality to your Internal Developer Platform or create automation around search results. To learn more about the API spec details view the [Pulumi Service REST API documentation](/docs/pulumi-cloud/cloud-rest-api/#resource-search).
 - **Data Export**: Export resource data to ingest in your data warehouse.
 
 ## Example use cases
