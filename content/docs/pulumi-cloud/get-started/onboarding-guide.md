@@ -313,7 +313,7 @@ For Pulumi Enterprise and Business Critical customers, we offer custom tailored 
 
 ### Using premium support plans
 
-Pulumi Enterprise and Business Critical customers have the option of purchasing 12x5 or 24x7 support. This support comes with ticketing, guaranteed SLAs, product roadmap reviews, prioritized bugs and feature requests, private Slack channels, and more. Organizations with support plans also have dedicated account managers and architects who are ready to roll up their sleeves and help with any problem you may encounter. If you are on a support plan, you can [file a ticket or view the current system status on the support page here](https://pulumi.com/support).
+Pulumi Enterprise and Business Critical customers have the option of purchasing 12x5 or 24x7 support. This support comes with ticketing, guaranteed SLAs, product roadmap reviews, prioritized bugs and feature requests, private Slack channels, and more. Organizations with support plans also have dedicated account managers and architects who are ready to roll up their sleeves and help with any problem you may encounter. If you are on a support plan, you can [file a ticket or view the current system status on the support page here](https://support.pulumi.com/hc/en-us).
 
 ### Understanding your usage and billing
 
