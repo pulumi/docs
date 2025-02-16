@@ -200,6 +200,96 @@ Status: 200 OK
 
 <!-- ###################################################################### -->
 
+### Get Stack Downstream References
+
+```
+GET /api/stacks/{organization}/{project}/{stack}/downstreamreferences
+```
+
+#### Parameters
+
+| Parameter      | Type   | In   | Description       |
+|----------------|--------|------|-------------------|
+| `organization` | string | path | organization name |
+| `project`      | string | path | project name      |
+| `stack`        | string | path | stack name        |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  https://api.pulumi.com/api/stacks/{organization}/{project}/{stack}/downstreamreferences
+```
+
+#### Default Response
+
+```
+Status: 200 OK
+```
+
+```
+{
+  "referencedStacks": [
+    {
+      "organization": "demo",
+      "routingProject": "demo-aws-ts-webserver",
+      "name": "dev-user1",
+      "version": 3
+    }
+  ]
+}
+```
+
+<!-- ###################################################################### -->
+
+### Get Stack Metadata
+
+```
+GET /api/stacks/{organization}/{project}/{stack}/metadata
+```
+
+#### Parameters
+
+| Parameter      | Type   | In   | Description       |
+|----------------|--------|------|-------------------|
+| `organization` | string | path | organization name |
+| `project`      | string | path | project name      |
+| `stack`        | string | path | stack name        |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  https://api.pulumi.com/api/stacks/{organization}/{project}/{stack}/metadata
+```
+
+#### Default Response
+
+```
+Status: 200 OK
+```
+
+```
+{
+  "orgName": "demo",
+  "projectName": "demo-aws-ts-webserver",
+  "stackName": "dev-user1",
+  "userPermission": 103,
+  "notificationSettings": {
+    "notifyUpdateFailure": false,
+    "notifyUpdateSuccess": false
+  }
+}
+```
+
+<!-- ###################################################################### -->
+
 ### Get Stack State
 
 ```
