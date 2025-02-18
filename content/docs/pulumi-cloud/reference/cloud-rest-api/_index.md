@@ -5132,14 +5132,14 @@ POST /api/orgs/{organization}/oidc/issuers
 
 #### Parameters
 
-| Parameter           | Type          | In    | Description         |
-|---------------------|---------------|-------|---------------------|
-| `organization`      | string        | path  | organization name   |
-| `name`              | string        | body  | oidc issuer name    |
-| `url`               | string        | body  | issuer base url (this will be used as a base to build the OIDC configuration url, `url + /.well-known/openid-configuration`) |
-| `thumbprints`       | array[string] | body  | **Optional.** issuer TLS certificate thumbprints |
-| `maxExpiration`     | int           | body  | **Optional.** max expiration for tokens issued for this issuer in seconds    |
-| `jwks`              | json ([jwks format](https://datatracker.ietf.org/doc/html/rfc7517)) | body  | **Optional.** JWK Set from the OIDC issuer    |
+| Parameter       | Type                                                                | In   | Description                                                                                                                  |
+|-----------------|---------------------------------------------------------------------|------|------------------------------------------------------------------------------------------------------------------------------|
+| `organization`  | string                                                              | path | organization name                                                                                                            |
+| `name`          | string                                                              | body | oidc issuer name                                                                                                             |
+| `url`           | string                                                              | body | issuer base url (this will be used as a base to build the OIDC configuration url, `url + /.well-known/openid-configuration`) |
+| `thumbprints`   | array[string]                                                       | body | **Optional.** issuer TLS certificate thumbprints                                                                             |
+| `maxExpiration` | int                                                                 | body | **Optional.** max expiration for tokens issued for this issuer in seconds                                                    |
+| `jwks`          | json ([jwks format](https://datatracker.ietf.org/doc/html/rfc7517)) | body | **Optional.** JWK Set from the OIDC issuer                                                                                   |
 
 #### Example
 
@@ -5182,14 +5182,14 @@ PATCH /api/orgs/{organization}/oidc/issuers/{issuerId}
 
 #### Parameters
 
-| Parameter           | Type          | In    | Description         |
-|---------------------|---------------|-------|---------------------|
-| `organization`      | string        | path  | organization name   |
-| `issuerId`          | string        | path  | issuer id to update |
-| `name`              | string        | body  | oidc issuer name    |
-| `thumbprints`       | array[string] | body  | **Optional.** issuer TLS certificate thumbprints |
-| `maxExpiration`     | int           | body  | **Optional.** max expiration for tokens issued for this issuer in seconds    |
-| `jwks`              | json ([jwks format](https://datatracker.ietf.org/doc/html/rfc7517)) | body  | **Optional.** JWK Set from the OIDC issuer    |
+| Parameter       | Type                                                                | In   | Description                                                               |
+|-----------------|---------------------------------------------------------------------|------|---------------------------------------------------------------------------|
+| `organization`  | string                                                              | path | organization name                                                         |
+| `issuerId`      | string                                                              | path | issuer id to update                                                       |
+| `name`          | string                                                              | body | oidc issuer name                                                          |
+| `thumbprints`   | array[string]                                                       | body | **Optional.** issuer TLS certificate thumbprints                          |
+| `maxExpiration` | int                                                                 | body | **Optional.** max expiration for tokens issued for this issuer in seconds |
+| `jwks`          | json ([jwks format](https://datatracker.ietf.org/doc/html/rfc7517)) | body | **Optional.** JWK Set from the OIDC issuer                                |
 
 #### Example
 
@@ -5403,18 +5403,18 @@ PATCH /api/orgs/{organization}/auth/policies/{policyId}
 
 #### Parameters
 
-| Parameter           | Type          | In    | Description         |
-|---------------------|---------------|-------|---------------------|
-| `organization`      | string        | path  | organization name   |
-| `policyId`          | string        | path  | policy id to update |
-| `policies`          | array[object] | body  | array of policies   |
-| `policy.decision`   | string        | body  | `deny`/`allow`   |
-| `policy.tokenType`  | string        | body  | `organization`/`team`/`personal`/`runner`   |
-| `policy.teamName`   | string        | body  | the team name to issue tokens on behalf of, required for team token type  |
-| `policy.userLogin`  | string        | body  | the user login to issue tokens on behalf of, required for personal token type  |
-| `policy.runnerID`   | string        | body  | the runner name to issue tokens for, required for runner token type  |
-| `policy.authorizedPermissions`  | array[string] | body  | permissions allowed by the policy (only `admin` is supported for organization tokens)  |
-| `policy.rules`      | object        | body  |  rules to match the token claims |
+| Parameter                      | Type          | In   | Description                                                                           |
+|--------------------------------|---------------|------|---------------------------------------------------------------------------------------|
+| `organization`                 | string        | path | organization name                                                                     |
+| `policyId`                     | string        | path | policy id to update                                                                   |
+| `policies`                     | array[object] | body | array of policies                                                                     |
+| `policy.decision`              | string        | body | `deny`/`allow`                                                                        |
+| `policy.tokenType`             | string        | body | `organization`/`team`/`personal`/`runner`                                             |
+| `policy.teamName`              | string        | body | the team name to issue tokens on behalf of, required for team token type              |
+| `policy.userLogin`             | string        | body | the user login to issue tokens on behalf of, required for personal token type         |
+| `policy.runnerID`              | string        | body | the runner name to issue tokens for, required for runner token type                   |
+| `policy.authorizedPermissions` | array[string] | body | permissions allowed by the policy (only `admin` is supported for organization tokens) |
+| `policy.rules`                 | object        | body | rules to match the token claims                                                       |
 
 For more information about authorization rules, refer to [its documentation](/docs/pulumi-cloud/access-management/oidc/client/#configure-the-authorization-policies).
 
@@ -5470,14 +5470,14 @@ POST /api/oauth/token
 
 #### Parameters
 
-| Parameter              | Type   | In    | Description                                                                                                      |
-|------------------------|--------|-------|------------------------------------------------------------------------------------------------------------------|
-| `audience`             | string | body  | OAuth audience in the form `urn:pulumi:org:ORG_NAME`                                                             |
-| `grant_type`           | string | body  | OAuth grant type (only `urn:ietf:params:oauth:grant-type:token-exchange` is supported)                           |
-| `subject_token_type`   | string | body  | OAuth subject token type (only `urn:ietf:params:oauth:token-type:id_token` is supported)                         |
-| `requested_token_type` | string | body  | OAuth requested token type (prefix of `urn:pulumi:token-type:access_token:TOKEN_TYPE` where TOKEN_TYPE is `organization`, `team`, `personal`, or `runner`) |
-| `expiration`           | number | body  | OAuth token expiration in seconds                                                                                |
-| `scope`                | string | body  | OAuth scope as a comma-separated array. This depends on the requested token type. For requested token type `organization`, scopes must be empty or `admin`. For `team`, the scope must be `team:TEAM_NAME`. For `personal`, it must be `user:USER_LOGIN`. For `runner`, it must be `runner:RUNNER_NAME`. |
+| Parameter              | Type   | In   | Description                                                                                                                                                                                                                                                                                              |
+|------------------------|--------|------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `audience`             | string | body | OAuth audience in the form `urn:pulumi:org:ORG_NAME`                                                                                                                                                                                                                                                     |
+| `grant_type`           | string | body | OAuth grant type (only `urn:ietf:params:oauth:grant-type:token-exchange` is supported)                                                                                                                                                                                                                   |
+| `subject_token_type`   | string | body | OAuth subject token type (only `urn:ietf:params:oauth:token-type:id_token` is supported)                                                                                                                                                                                                                 |
+| `requested_token_type` | string | body | OAuth requested token type (prefix of `urn:pulumi:token-type:access_token:TOKEN_TYPE` where TOKEN_TYPE is `organization`, `team`, `personal`, or `runner`)                                                                                                                                               |
+| `expiration`           | number | body | OAuth token expiration in seconds                                                                                                                                                                                                                                                                        |
+| `scope`                | string | body | OAuth scope as a comma-separated array. This depends on the requested token type. For requested token type `organization`, scopes must be empty or `admin`. For `team`, the scope must be `team:TEAM_NAME`. For `personal`, it must be `user:USER_LOGIN`. For `runner`, it must be `runner:RUNNER_NAME`. |
 
 #### Example
 
