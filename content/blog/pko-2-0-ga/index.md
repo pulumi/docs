@@ -69,6 +69,14 @@ Here's a practical example of deploying an NGINX stack using the operator. This 
 
 <!-- TODO, potential example, we can do any Eron thinks is best -->
 
+## Additional Resources
+
+To help you get the most out of Pulumi Kubernetes Operator 2.0, we've prepared comprehensive documentation:
+
+- [Migration Guide](https://github.com/pulumi/pulumi-kubernetes-operator/blob/v2.0.0/docs/migration.md): Step-by-step instructions for upgrading from v1.x to v2.0
+- [Troubleshooting Guide](https://github.com/pulumi/pulumi-kubernetes-operator/blob/v2.0.0/docs/troubleshooting.md): Common issues and their solutions
+- [Release Notes](https://github.com/pulumi/pulumi-kubernetes-operator/releases/tag/v2.0.0): Full details of what's new in version 2.0
+
 ## Start Using It Today
 
 We are excited to see how you will use these new features to transform your cloud operations. Share your experiences, questions, and insights with us through our community forums or Slack channel.
