@@ -19,7 +19,7 @@ To address these challenges, Pulumi ESC allows you to identify common or closely
 
 ## Explicit imports
 
-Explicit imports are defined in the `imports` section of an environment. The `imports` section is a list of environment paths that are resolved at runtime. The values from the imported environments are merged into the current environment, with the current values overwriting the imported environment's values where keys are redefined.
+Explicit imports are defined in the `imports` section of an environment. The `imports` section is a list of environment paths that are resolved at runtime. The values from the imported environments are merged into the current environment using a [JSON Merge Patch](https://www.rfc-editor.org/rfc/rfc7396), with the current values overwriting the imported environment's values where keys are redefined.
 
 In the following example, two environments, `aws/dev` and `stripe/dev`, are used to compose a third environment, `myapp/dev`:
 
@@ -154,3 +154,16 @@ Compare this to the resolved value of the `myapp/dev` environment example from t
   }
 }
 ```
+
+## Evaluation
+
+Note that each distinct reference is evaluated exactly once. Consider the following case:
+
+```yaml
+imports:
+  - default/foo
+values:
+  a: ${environments.default.foo.bar}
+```
+
+In the environment definition above, `default/foo` is evaluated only once.

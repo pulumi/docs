@@ -43,7 +43,7 @@ values:
               ciphertext: ...
 ```
 
-In the above example, note the `${environments.credentials.production.aws.login}` reference. This is implicit import of the `credentials/production` environment's aws.login path.
+In the above example, note the `${environments.credentials.production.aws.login}` reference. This is an implicit import of the `credentials/production` environment's aws.login path.
 
 This import is only resolved at `rotate` time, meaning that the value is not available during `open` time, making it possible for a user to access the rotated secret without needing access to the managing credentials.
 
@@ -73,7 +73,7 @@ The minimum required permissions for each rotation function are documented in th
 
 ### Separation of concerns
 
-It is recommended that the login credentials required to perform the rotation action are stored in a separate environment, and imported via an [implicit import](/docs/esc/environments/imports#implicit-imports), as shown in the example above. This ensures that the credentials are not exposed to users who do not have access to the managing environment.
+It is recommended that the login credentials required to perform the rotation action are stored in a separate environment, and imported via an [implicit import](/docs/esc/environments/imports#implicit-imports), as shown in the example above. This ensures that the credentials are not exposed to users who are unable to open the managing environment.
 
 ### Composition
 
