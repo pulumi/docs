@@ -19,7 +19,7 @@ To address these challenges, Pulumi ESC allows you to identify common or closely
 
 ## Explicit imports
 
-Explicit imports are defined in the `imports` section of an environment. The `imports` section is a list of environment paths that are resolved at runtime. The values from the imported environments are merged into the current environment using a [JSON Merge Patch](https://www.rfc-editor.org/rfc/rfc7396), with the current values overwriting the imported environment's values where keys are redefined.
+Explicit imports are defined in the `imports` section of an environment. The `imports` section is a list of environments that are resolved at runtime. The values from the imported environments are merged into the current environment using a [JSON Merge Patch](https://www.rfc-editor.org/rfc/rfc7396), with the current values overwriting the imported environment's values where keys are redefined.
 
 In the following example, two environments, `aws/dev` and `stripe/dev`, are used to compose a third environment, `myapp/dev`:
 
@@ -89,6 +89,8 @@ Notice in the example that the `environmentVariables` were exposed to the `bash`
 ## Implicit imports
 
 Implicit imports are used to reference values from other environments without having to explicitly import them. This is useful when you want to reference a value from another environment without needing to expose the entire environment.
+
+Implicit imports take the form of a reference to the special `environments` key like `${environments.PROJECT.ENV.VALUEPATH}`.
 
 In the following example, the `aws/dev` environment is implicitly imported into the `myapp/dev` environment:
 
