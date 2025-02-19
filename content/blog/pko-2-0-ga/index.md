@@ -1,5 +1,5 @@
 ---
-title: "Announcing GA: Pulumi Kubernetes Operator 2.0 is Here!"
+title: "Pulumi Kubernetes Operator 2.0 is Now Generally Avilable!"
 date: 2025-02-20
 draft: false
 meta_desc: "Today, we're announcing the GA of Pulumi Kubernetes Operator 2.0! Discover the new features and improvements that make managing Kubernetes easier than ever."
@@ -36,7 +36,7 @@ Imagine having a dedicated infrastructure automation engine running within your 
 Pulumi Kubernetes Operator 2.0 introduces a completely new architecture for running Pulumi programs. The key changes include:
 
 - Each Stack now runs in its own dedicated Workspace pod, rather than within the Operator pod
-- A new Workspace custom resource manages the workspace pod lifecycle
+- A new Workspace custom resource manages the Workspace pod lifecycle
 - Stack operations are coordinated through a new Update custom resource
 - The Stack custom resource API remains the primary interface, maintaining backward compatibility
 
