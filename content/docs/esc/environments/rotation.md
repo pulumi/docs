@@ -49,9 +49,19 @@ This import is only resolved at `rotate` time, meaning that the value is not ava
 
 ### Rotation
 
-Once a rotation function is configured within the environment definition, you can manually rotate your secrets by running the `esc rotate` command, or by clicking the `Rotate secrets` button in the Pulumi Cloud UI.
+Once a rotation function is configured within the environment definition, you can manually rotate your secrets by running the `esc env rotate` command, or by clicking the `Rotate secrets` button in the Pulumi Cloud UI.
 
-TODO: Add example of manual rotation
+#### Via the CLI
+
+```bash
+esc env rotate rotators/pulumi-ci
+Environment 'rotators/pulumi-ci' rotated.
+New revision '19' was created.
+```
+
+#### Via the Pulumi Cloud UI
+
+![button.png](../button.png)
 
 ### Schedule
 
@@ -97,9 +107,13 @@ Alternatively, you may want to keep a separate environment for each rotated secr
 
 If multiple rotation functions are defined in a single environment, it is possible that some fail while others succeed. In these cases, a partial failure will be reported.
 
-To handle partial failures, failed keys can be individually retried using the `esc rotate` command with the `--path` flag. This will allow you to retry the rotation of a specific key without affecting the rotation of other keys in the environment.
+To handle partial failures, failed keys can be individually retried using the `esc env rotate [envName] [path(s)-to-rotate]` command. This will allow you to retry the rotation of a specific key without affecting the rotation of other keys in the environment.
 
-TODO: Add example of retrying a failed key
+```bash
+esc env rotate rotators/pulumi-ci credentials.bot.aws
+Environment 'rotators/pulumi-ci' rotated.
+New revision '23' was created.
+```
 
 {{% notes type="warning" %}}
 **WARNING** Beware of double rotation in the case of partial failures. If a key is rotated twice, the first rotation will be invalidated and the second rotation will be active. This can lead to unexpected behavior if not handled correctly, for example if the rotated secret has not been updated at the consumer.
