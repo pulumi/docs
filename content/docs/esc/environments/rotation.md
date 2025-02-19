@@ -30,15 +30,17 @@ values:
         login: ${environments.credentials.production.aws.login}
         userArn: arn:aws:iam::123456789012:user/username
       # If there are existing credentials, it's possible to specify them in the state - but this section is optional
-    state:
-      previous:
-        accessKeyId: AKIAIOSFODNN7EXAMPLE
-        secretAccessKey: 
-          fn::secret: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLE
-      current:
-        accessKeyId: AKIAIOSFODNN8EXAMPLE
-        secretAccessKey: 
-          fn::secret: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLE
+      state:
+        previous:
+          accessKeyId: AKIA...
+          secretAccessKey: 
+            fn::secret: 
+              ciphertext: ...
+        current:
+          accessKeyId: AKIA...
+          secretAccessKey: 
+            fn::secret: 
+              ciphertext: ...
 ```
 
 In the above example, note the `${environments.credentials.production.aws.login}` reference. This is implicit import of the `credentials/production` environment's aws.login path.
@@ -55,13 +57,23 @@ TODO: Add example of manual rotation
 
 TODO: Add schedule example
 
+## Permissions
+
+- To `rotate` an environment, a user must have `WRITE` permissions on the environment, and `OPEN` permissions on any imported environment.
+- To `open` an environment, a user must have `OPEN` permissions on the environment (and does not need any permissions for the implicitly imported environment which provides the rotation credentials).
+- To configure a rotation schedule for an environment, the user must have `WRITE` permissions on the environment.
+
 ## Best practices
 
 ### Least privilege
 
-It is recommended to follow the principle of least privilege when defining the permissions for the role that will be used to rotate the secret. The role should have only the necessary permissions to perform the rotation action, and no more.
+It is recommended to follow the principle of least privilege when defining the permissions for the user or role that will be used to rotate the secret. The user or role should have only the necessary permissions to perform the rotation action, and no more.
 
-Additionally, it is recommended that the login credentials required to perform the rotation action are stored in a separate environment, and imported via an implicit import, as shown in the example above. This ensures that the credentials are not exposed to users who do not have access to the managing environment.
+The minimum required permissions for each rotation function are documented in the [Rotated Secret](/docs/esc/integrations/rotated-secrets) provider documentation.
+
+### Separation of concerns
+
+It is recommended that the login credentials required to perform the rotation action are stored in a separate environment, and imported via an implicit import, as shown in the example above. This ensures that the credentials are not exposed to users who do not have access to the managing environment.
 
 ### Composition
 
@@ -71,13 +83,17 @@ Another reason to keep your rotated functions in a separate environment is that 
 
 ### Organization
 
+There are a few options for how you might organize your rotated environments.
+
 You may want to organize your rotated environment by rotation schedule. Since a single environment can only have one rotation schedule, you can group your rotated environments by the frequency at which they need to be rotated. For example, you may have a `daily` environment, a `weekly` environment, and a `monthly` environment, each with their own rotation schedule.
+
+Alternatively, you may want to keep a separate environment for each rotated secret. This avoids the potential for partial failures, described in more detail below.
 
 ### Handling partial failures
 
 If multiple rotation functions are defined in a single environment, it is possible that some fail while others succeed. In these cases, a partial failure will be reported.
 
-To handle partial failures, failed keys can be individually retried using the `esc rotate` command with the `--key` flag. This will allow you to retry the rotation of a specific key without affecting the rotation of the other keys in the environment.
+To handle partial failures, failed keys can be individually retried using the `esc rotate` command with the `--path` flag. This will allow you to retry the rotation of a specific key without affecting the rotation of other keys in the environment.
 
 TODO: Add example of retrying a failed key
 
