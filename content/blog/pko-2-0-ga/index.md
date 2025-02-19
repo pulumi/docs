@@ -1,6 +1,6 @@
 ---
 title: "Announcing GA: Pulumi Kubernetes Operator 2.0 is Here!"
-date: 2025-02-19
+date: 2025-02-20
 draft: false
 meta_desc: "Today, we're announcing the GA of Pulumi Kubernetes Operator 2.0! Discover the new features and improvements that make managing Kubernetes easier than ever."
 meta_image: "meta.png"
