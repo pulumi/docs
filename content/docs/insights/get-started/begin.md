@@ -98,7 +98,7 @@ values:
 
 {{% choosable cloud azure %}}
 
-To configure Pulumi Insights with Azure, you will use [OpenID Connect (OIDC)(docs/pulumi-cloud/access-management/oidc/) for authentication. Follow these steps:
+To configure Pulumi Insights with Azure, you will use [OpenID Connect (OIDC)](/docs/pulumi-cloud/access-management/oidc/) for authentication. Follow these steps:
 
 1. Create a Service Principal in Azure, then generate the following values:
    - **clientId** (also called **appId** in the Azure UI)
@@ -135,7 +135,7 @@ values:
 
 {{% choosable cloud oci %}}
 
-To configure Pulumi Insights with OCI, you will use [OpenID Connect (OIDC)](docs/pulumi-cloud/access-management/oidc/) for authentication.
+To configure Pulumi Insights with OCI, you will use [OpenID Connect (OIDC)](/docs/pulumi-cloud/access-management/oidc/) for authentication.
 
 1. Set up API Key authentication by providing the following credentials:
 

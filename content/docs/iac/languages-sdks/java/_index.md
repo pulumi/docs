@@ -19,17 +19,11 @@ aliases:
     - /docs/languages-sdks/java/
 ---
 
-<img src="/logos/tech/java.svg" align="right" width="90" style="padding:8px; margin-top: -64px">
+<img src="/logos/tech/java.svg" alt="java" align="right" width="90" style="padding:8px; margin-top: -64px">
 
 Pulumi supports writing your infrastructure as code using the Java language running on any [supported version](https://www.oracle.com/java/technologies/java-se-support-roadmap.html) of Java 11 or later.
 
 We support running Maven Pulumi programs, Gradle Pulumi programs, and Pulumi programs packaged as JAR files.
-
-{{% notes "info" %}}
-Java is currently in preview. Feedback is greatly appreciated!
-
-Please post any Bug Reports or Feature Requests in [GitHub Issues](https://github.com/pulumi/pulumi-java/issues/new/choose).
-{{% /notes %}}
 
 ## Prerequisites
 
@@ -105,11 +99,6 @@ In order to get information from cloud providers, there are classes that allow y
 
 ## Pulumi Java implementation details
 
-{{% notes "info" %}}
-Java is currently in preview. These implementation details around how Pulumi integrates with the Java ecosystem are subject to change based on community feedback which is greatly appreciated!
-
-Please post any Bug Reports or Feature Requests in [GitHub Issues](https://github.com/pulumi/pulumi-java/issues/new/choose).
-{{% /notes %}}
 The Java Pulumi SDK is available to Go/Java developers in source form on [GitHub](https://github.com/pulumi/pulumi-java).
 
 ### Plugin Acquisition
@@ -147,6 +136,13 @@ The Pulumi programming model includes a core concept of `Output` values, which a
 
 Unlike other Pulumi languages, Pulumi Java does not have a dedicated `Input<T> = T | Output<T>` type. Instead, when constructing resource arguments, builders have overloads that accept both a `T` and an `Output<T>` value.
 
-## Java Packages
+## Package Documentation
 
-The [Pulumi Registry](/registry/) houses 100+ Java packages.
+In addition to the standard packages the [Pulumi Registry](/registry/) houses 100+ Java packages.
+
+### Standard Packages
+
+<dl class="tabular">
+    <dt>Pulumi SDK</dt>
+    <dd><a href="/docs/reference/pkg/java/">pulumi</a></dd>
+</dl>
