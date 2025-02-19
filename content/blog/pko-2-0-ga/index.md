@@ -56,7 +56,12 @@ Additional controller events have been introduced to provide richer instrumentat
 
 ### Workspace Reclaim Policy
 
-Managing workspace lifecycles is now even more flexible with the new `WorkspaceReclaimPolicy` field in the Stack specification. This enhancement allows you to define policies for reclaiming workspaces, ensuring optimal resource management and cleanup.
+Managing workspace lifecycles is now even more flexible with the new `workspaceReclaimPolicy` field in the Stack specification. This enhancement allows you to define how workspace resources should be handled after stack deployment. The supported policies are:
+
+- `Retain`: Keeps the workspace and its resources after deployment (default)
+- `Delete`: Automatically removes the workspace once the stack is fully deployed
+
+This gives you fine-grained control over resource cleanup and helps prevent workspace sprawl in your cluster.
 
 ## See It in Action
 
