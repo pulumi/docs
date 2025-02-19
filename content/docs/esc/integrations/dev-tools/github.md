@@ -125,7 +125,7 @@ $ pulumi config env add ${ESC_ENV} --stack dev --yes
 
 ### Define a workflow that uses the Pulumi CLI Action
 
-Below is a simple example of a workflow using the [Pulumi CLI Action](https://github.com/marketplace/actions/pulumi-cli-action#pulumi-github-actions). This workflow will be triggered upon a push to the `main` branch. It uses `pulumi/actions@v5` to perform a `pulumi up` command against the `dev` stack.
+Below is a simple example of a workflow using the [Pulumi CLI Action](https://github.com/marketplace/actions/pulumi-cli-action#pulumi-github-actions). This workflow will be triggered upon a push to the `main` branch. It uses `pulumi/actions@v6` to perform a `pulumi up` command against the `dev` stack.
 
 You will need to [create a new Pulumi Access Token](https://app.pulumi.com/account/tokens) for this example.
 
@@ -153,7 +153,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: pulumi/actions@v5
+      - uses: pulumi/actions@v6
         with:
           command: up
           # Provide the fully qualified stack name
