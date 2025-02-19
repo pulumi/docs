@@ -73,7 +73,7 @@ The minimum required permissions for each rotation function are documented in th
 
 ### Separation of concerns
 
-It is recommended that the login credentials required to perform the rotation action are stored in a separate environment, and imported via an implicit import, as shown in the example above. This ensures that the credentials are not exposed to users who do not have access to the managing environment.
+It is recommended that the login credentials required to perform the rotation action are stored in a separate environment, and imported via an [implicit import](/docs/esc/environments/imports#implicit-imports), as shown in the example above. This ensures that the credentials are not exposed to users who do not have access to the managing environment.
 
 ### Composition
 
