@@ -1,5 +1,5 @@
 ---
-title: "Pulumi Kubernetes Operator 2.0 is Now Generally Avilable!"
+title: "Pulumi Kubernetes Operator 2.0 is Now Generally Available!"
 date: 2025-02-20
 draft: false
 meta_desc: "Today, we're announcing the GA of Pulumi Kubernetes Operator 2.0! Discover the new features and improvements that make managing Kubernetes easier than ever."
@@ -40,7 +40,7 @@ Pulumi Kubernetes Operator 2.0 introduces a completely new architecture for runn
 - Stack operations are coordinated through a new Update custom resource
 - The Stack custom resource API remains the primary interface, maintaining backward compatibility
 
-This architecture delivers improved resource isolation, better secrets management, and flexible workspace customization options. The pod-per-stack model ensures reliable resource allocation and clear operational boundaries for each deployment.
+This architecture delivers improved resource isolation, better secrets management, and flexible Workspace customization options. The pod-per-stack model ensures reliable resource allocation and clear operational boundaries for each deployment.
 
 ## What's New in GA?
 
@@ -48,7 +48,7 @@ The GA release introduces three powerful capabilities that give you more control
 
 ### Enhanced Logging Control
 
-You can now set the log verbosity level of the Pulumi CLI for any given stack or workspace. This feature offers granular control over logging output, making debugging and fine-tuning your deployment process more efficient.
+You can now set the log verbosity level of the Pulumi CLI for any given stack or Workspace. This feature offers granular control over logging output, making debugging and fine-tuning your deployment process more efficient.
 
 ### New Controller Events for Better Instrumentation
 
@@ -56,10 +56,10 @@ Additional controller events have been introduced to provide richer instrumentat
 
 ### Workspace Reclaim Policy
 
-Managing workspace lifecycles is now even more flexible with the new `workspaceReclaimPolicy` field in the Stack specification. This enhancement allows you to define how workspace resources should be handled after stack deployment. The supported policies are:
+Managing Workspace lifecycles is now even more flexible with the new `workspaceReclaimPolicy` field in the Stack specification. This enhancement allows you to define how workspace resources should be handled after stack deployment. The supported policies are:
 
-- `Retain`: Keeps the workspace and its resources after deployment (default)
-- `Delete`: Automatically removes the workspace once the stack is fully deployed
+- `Retain`: Keeps the Workspace and its resources after deployment (default)
+- `Delete`: Automatically removes the Workspace once the stack is fully deployed
 
 This gives you fine-grained control over resource cleanup and helps prevent workspace sprawl in your cluster.
 
@@ -72,7 +72,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as k8s from "@pulumi/kubernetes";
 import * as pulumiservice from "@pulumi/pulumiservice";
 
-// Create a Kubernetes ServiceAccount for the Pulumi workspace pod
+// Create a Kubernetes ServiceAccount for the Pulumi Workspace pod
 const sa = new k8s.core.v1.ServiceAccount("random-yaml", {});
 
 // Grant system:auth-delegator to the ServiceAccount
