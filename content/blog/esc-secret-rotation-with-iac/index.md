@@ -11,6 +11,10 @@ tags:
   - secrets
 ---
 
+{{% notes "info" %}}
+Pulumi ESC now natively supports secrets rotation that makes secrets lifecycle management much easier. Check out the [launch blogpost](/blog/esc-rotated-secrets-launch/) and [docs](/docs/esc/environments/rotation).
+{{% /notes %}}
+
 Managing secrets in modern cloud applications can be challenging, particularly when it comes to rotation policies. While dynamic secrets (like AWS IAM temporary credentials) handle this automatically, many systems still rely on static secrets that require periodic rotation.
 
 Static secrets, like database passwords or API keys, [should be rotated regularly to maintain security](https://cheatsheetseries.owasp.org/cheatsheets/Secrets_Management_Cheat_Sheet.html#272-rotation), and services depending on these secrets need time to transition to new credentials to avoid downtime. This makes rotating credentials error-prone, and often forgotten.
