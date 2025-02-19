@@ -24,7 +24,7 @@ The pulumi-cdk library provides access to the many high-level libraries ('constr
 
 With the new 1.0 release, pulumi-cdk has greatly expanded compatibility with all CDK features. Users can now confidently use Pulumi to deploy constructs they have written themselves or any of the 1600+ constructs in AWS's [construct hub](https://constructs.dev/search?cdk=aws-cdk&sort=downloadsDesc&offset=0). We're excited to bring Pulumi users access to all the high level interfaces curated by AWS and the CDK community.
 
-Additionally, existing AWS CDK users now have an easier path to transition from CloudFormation to Pulumi, unlocking faster deployments, integration with Pulumi's vast provider ecosystem and all of the features of Pulumi's Cloud Engineering Platform (like [Policy as Code](https://www.pulumi.com/docs/using-pulumi/crossguard/), [Audit Logs](https://www.pulumi.com/docs/pulumi-cloud/audit-logs/), [Drift detection](https://www.pulumi.com/docs/pulumi-cloud/deployments/drift/), [Secrets](https://www.pulumi.com/docs/esc/get-started/), and much more).
+Additionally, existing AWS CDK users now have an easier path to transition from CloudFormation to Pulumi, unlocking faster deployments, integration with Pulumi's vast provider ecosystem and all of the features of Pulumi's Cloud Engineering Platform (like [Policy as Code](/docs/using-pulumi/crossguard/), [Audit Logs](/docs/pulumi-cloud/audit-logs/), [Drift detection](/docs/pulumi-cloud/deployments/drift/), [Secrets](/docs/esc/get-started/), and much more).
 
 ## Deploying CDK Constructs with Pulumi
 
@@ -197,9 +197,9 @@ new MyApp();
 
 Pulumi let's you read and create any resource type across thousands of different cloud service providers and integrate them with your CDK stacks.  Building CDK apps on Pulumi brings a host of other benefits too, including:
 
-- Customize [resource options](https://www.pulumi.com/docs/iac/concepts/options/) (eg. to protect a database against accidental deletion or deploy to multiple regions in the same program)
-- [Detect and manage drift](https://www.pulumi.com/docs/pulumi-cloud/deployments/drift/) with Pulumi deployments
-- Track and store user actions and change history with [Audit Logs](https://www.pulumi.com/docs/pulumi-cloud/audit-logs/)
+- Customize [resource options](/docs/iac/concepts/options/) (eg. to protect a database against accidental deletion or deploy to multiple regions in the same program)
+- [Detect and manage drift](/docs/pulumi-cloud/deployments/drift/) with Pulumi deployments
+- Track and store user actions and change history with [Audit Logs](/docs/pulumi-cloud/audit-logs/)
 - And a host of other benefits from [Pulumi Cloud](https://www.pulumi.com/product/pulumi-cloud/)
 
 ## Expanded Features in pulumi-cdk 1.0

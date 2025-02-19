@@ -82,9 +82,9 @@ GitHub Actions secrets are encrypted and only exposed to workflow runs. They are
 
 Now that you know about GitHub Actions secrets, take your cloud infrastructure management to the next level with Pulumi:
 
-- **Integrate your [continuous delivery with Pulumi](https://www.pulumi.com/docs/iac/packages-and-automation/continuous-delivery/github-actions/)**: Ship software faster and more safely by combining Pulumi with the other components of your automated infrastructure.
-- **Install the [Pulumi GitHub App](https://www.pulumi.com/docs/iac/packages-and-automation/continuous-delivery/github-app/)**:  Once installed, the Pulumi GitHub app will submit rich, inline comments on any pull request or commit that introduces a change to your Pulumi-managed infrastructure.
+- **Integrate your [continuous delivery with Pulumi](/docs/iac/packages-and-automation/continuous-delivery/github-actions/)**: Ship software faster and more safely by combining Pulumi with the other components of your automated infrastructure.
+- **Install the [Pulumi GitHub App](/docs/iac/packages-and-automation/continuous-delivery/github-app/)**:  Once installed, the Pulumi GitHub app will submit rich, inline comments on any pull request or commit that introduces a change to your Pulumi-managed infrastructure.
 - **Manage sensitive data and secrets with Pulumi**: Dive into Pulumi's [Secrets Management guide](/blog/managing-secrets-with-pulumi/) for in-depth information on encrypting specific values for added security and ensuring that these values never appear in plain text in your state file​.
-- **Use the [GitHub provider for Pulumi](https://www.pulumi.com/registry/packages/github/#github)**: Provision any of the cloud resources available in GitHub.
+- **Use the [GitHub provider for Pulumi](/registry/packages/github/#github)**: Provision any of the cloud resources available in GitHub.
 
 Our [community on Slack](https://slack.pulumi.com/) is always open for discussions, questions, and sharing experiences. Join us there and become part of our growing community of cloud professionals!

@@ -27,21 +27,21 @@ If this is your first time using Pulumi, you likely want to begin with [the Gett
 
 Pulumi is an [infrastructure as code](/what-is/what-is-infrastructure-as-code/) platform that allows you to use familiar programming languages and tools to build, deploy, and manage cloud infrastructure.
 
-Pulumi is free, [open source](https://github.com/pulumi/pulumi), and optionally pairs with the [Pulumi Cloud](https://www.pulumi.com/docs/pulumi-cloud/) to make managing infrastructure secure, reliable, and hassle-free.
+Pulumi is free, [open source](https://github.com/pulumi/pulumi), and optionally pairs with the [Pulumi Cloud](/docs/pulumi-cloud/) to make managing infrastructure secure, reliable, and hassle-free.
 
 ## Supported languages and SDKs
 
 As a multi-language infrastructure as code tool, Pulumi supports many of today's most common general-purpose programming and markup languages. Every Pulumi-supported language is equally capable of provisioning and managing infrastructure across all major clouds, though some languages may provide functionality that's not yet available in others. The following languages and runtimes are currently supported:
 
-- [TypeScript & JavaScript (Node.js)](https://www.pulumi.com/docs/languages-sdks/javascript/)
-- [Python](https://www.pulumi.com/docs/languages-sdks/python/)
-- [Go](https://www.pulumi.com/docs/languages-sdks/go/)
-- [C#, VB, F# (.NET)](https://www.pulumi.com/docs/languages-sdks/dotnet/)
-- [Java](https://www.pulumi.com/docs/languages-sdks/java/)
-- [Pulumi YAML](https://www.pulumi.com/docs/languages-sdks/yaml/)
+- [TypeScript & JavaScript (Node.js)](/docs/languages-sdks/javascript/)
+- [Python](/docs/languages-sdks/python/)
+- [Go](/docs/languages-sdks/go/)
+- [C#, VB, F# (.NET)](/docs/languages-sdks/dotnet/)
+- [Java](/docs/languages-sdks/java/)
+- [Pulumi YAML](/docs/languages-sdks/yaml/)
 
 {{< notes >}}
-If you don't see your favorite language listed, it may be on its way soon. [Pulumi is open source](https://github.com/pulumi/pulumi), and it is possible to [add your own language](https://www.pulumi.com/docs/support/faq/#how-can-i-add-support-for-my-favorite-language). For additional language questions, visit [Pulumi's languages and SDK docs](https://www.pulumi.com/docs/languages-sdks/).
+If you don't see your favorite language listed, it may be on its way soon. [Pulumi is open source](https://github.com/pulumi/pulumi), and it is possible to [add your own language](/docs/support/faq/#how-can-i-add-support-for-my-favorite-language). For additional language questions, visit [Pulumi's languages and SDK docs](/docs/languages-sdks/).
 {{< /notes >}}
 
 ## How does Pulumi work?
@@ -50,7 +50,7 @@ The Pulumi platform comprises several components:
 
 - **Software development kit (SDK)**: Pulumi Software Development Kit (SDK) provides bindings for each type of resource that the provider can manage. This provides the necessary tools and libraries for defining and managing cloud resources on any cloud and with any provider.
 
-- **Command-Line interface (CLI)**: Pulumi is controlled primarily using the command line interface [(CLI)](https://www.pulumi.com/docs/cli/). It works in conjunction with the [Pulumi Cloud](https://www.pulumi.com/docs/pulumi-cloud/) to deploy changes to your cloud apps and infrastructure. It keeps a history of who updated what in your team and when. This CLI has been designed for great inner loop productivity, in addition to continuous integration and delivery scenarios.
+- **Command-Line interface (CLI)**: Pulumi is controlled primarily using the command line interface [(CLI)](/docs/cli/). It works in conjunction with the [Pulumi Cloud](/docs/pulumi-cloud/) to deploy changes to your cloud apps and infrastructure. It keeps a history of who updated what in your team and when. This CLI has been designed for great inner loop productivity, in addition to continuous integration and delivery scenarios.
 
 - **Deployment engine** The deployment engine is responsible for computing the set of operations needed to drive the current state of your infrastructure into the desired state expressed by your program.
 

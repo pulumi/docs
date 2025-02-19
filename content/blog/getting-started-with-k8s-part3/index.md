@@ -25,7 +25,7 @@ This series walks you through:
 
 This article reviews three types of application deployment scenarios with commonly used examples. The first scenario is a [12-factor](https://12factor.net/) microservices multi-tier application consisting of multiple frontend and backend services backed by databases and a messaging queue to handle requests. The second scenario takes the Kubernetes guestbook and turns the Service and Deployment into a single component, demonstrating another pattern for organizing your stack. The third scenario shows how to deploy a popular web application using a [Helm](https://helm.sh/), the package manager for Kubernetes.
 
-In this article, we’ll assume that we already have a Kubernetes cluster available. You will have to set the [context](https://www.pulumi.com/registry/packages/kubernetes/installation-configuration/#kubernetes-configuration) with *kubectl* to deploy the examples in this article. Because of Kubernetes’ OpenAPI, we can use the same Typescript application code on any compliant instance.
+In this article, we’ll assume that we already have a Kubernetes cluster available. You will have to set the [context](/registry/packages/kubernetes/installation-configuration/#kubernetes-configuration) with *kubectl* to deploy the examples in this article. Because of Kubernetes’ OpenAPI, we can use the same Typescript application code on any compliant instance.
 
 ## Sock Shop Microservices
 

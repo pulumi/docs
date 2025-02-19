@@ -19,7 +19,7 @@ Here's a list of ESC resources available through Pulumi Service Provider:
 - **Environment Revision Tag**: Add tags to your environment revision for flexible environment import and version control. Learn more [here](/registry/packages/pulumiservice/api-docs/environmentversiontag/).
 - **ESC Webhook**: Create webhooks to monitor or react to events on your environments. This can be configured for specific environments or at the organization level. Learn more [here](/docs/esc/webhooks).
 
-If you haven't used Pulumi Service Provider before, see this [installation and configuration guide](https://www.pulumi.com/registry/packages/pulumiservice/installation-configuration/).
+If you haven't used Pulumi Service Provider before, see this [installation and configuration guide](/registry/packages/pulumiservice/installation-configuration/).
 
 Pulumi Service Provider ESC capabilities are available for TypeScript/JavaScript, Go, Python, C#, Java, and YAML. Here are examples of creating environments in TypeScript/JavaScript, Go, and Python:
 

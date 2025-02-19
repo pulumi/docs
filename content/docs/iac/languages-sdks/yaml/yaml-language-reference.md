@@ -212,7 +212,7 @@ resources:
 
 ### Outputs and Stack References
 
-The value of [`outputs`](https://www.pulumi.com/docs/concepts/stack/#outputs) is an object whose keys are the logical names of the outputs that are available from outside the Pulumi stack (via [`pulumi stack output`](https://www.pulumi.com/docs/cli/commands/pulumi_stack_output/)), and whose values are potentially computed expressions that resolve to the values of the desired outputs.
+The value of [`outputs`](/docs/concepts/stack/#outputs) is an object whose keys are the logical names of the outputs that are available from outside the Pulumi stack (via [`pulumi stack output`](/docs/cli/commands/pulumi_stack_output/)), and whose values are potentially computed expressions that resolve to the values of the desired outputs.
 
 ```yaml
 outputs:
@@ -371,7 +371,7 @@ The expression `${item}` will return a JSON value `{ "key1": "value1", "key2": 1
 
 ##### `fn::invoke`
 
-Calls a function from a package and returns either the whole object or a single field if given the `return` property. This can be any of the functions in the [registry providers](https://www.pulumi.com/registry/) as well as functions found in the [pulumi-std](https://github.com/pulumi/pulumi-std/blob/master/FUNCTION_LIST.md) package that includes math functions such as `sum` and `abs`, logic functions such as `anytrue`, and string functions such as `split`.
+Calls a function from a package and returns either the whole object or a single field if given the `return` property. This can be any of the functions in the [registry providers](/registry/) as well as functions found in the [pulumi-std](https://github.com/pulumi/pulumi-std/blob/master/FUNCTION_LIST.md) package that includes math functions such as `sum` and `abs`, logic functions such as `anytrue`, and string functions such as `split`.
 
 The schema is:
 
@@ -382,7 +382,7 @@ The schema is:
 | `options` | [Invoke Options](#invoke-options) | No | No | Options for the provider calling the function. |
 | `return` | string | No | No | Return the value of the field with this name. |
 
-Example calling the [getAmi](https://www.pulumi.com/registry/packages/aws/api-docs/ec2/getami/) function in the AWS provider package:
+Example calling the [getAmi](/registry/packages/aws/api-docs/ec2/getami/) function in the AWS provider package:
 
 ```yaml
 variables:

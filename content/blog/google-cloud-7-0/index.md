@@ -14,7 +14,7 @@ tags:
 
 The latest major release of the Pulumi Google Cloud Classic Provider is available now! This [7.0 release](https://github.com/pulumi/pulumi-gcp/releases/tag/v7.0.0) contains the latest upstream changes to keep you up-to-date along with a highly requested bug fix, keeping your journey in managing Google Cloud resources fresh and smooth.
 
-The Pulumi Google Cloud Classic provider can be used to provision any of the cloud resources available in the upstream provider. It is part of the suite of [Pulumi official providers](https://www.pulumi.com/docs/intro/cloud-providers/), which means that it is officially maintained and supported by Pulumi. The provider is also open source and available on [GitHub](https://github.com/pulumi/pulumi-gcp) for you to contribute and grow.
+The Pulumi Google Cloud Classic provider can be used to provision any of the cloud resources available in the upstream provider. It is part of the suite of [Pulumi official providers](/docs/intro/cloud-providers/), which means that it is officially maintained and supported by Pulumi. The provider is also open source and available on [GitHub](https://github.com/pulumi/pulumi-gcp) for you to contribute and grow.
 
 <!--more-->
 
@@ -24,9 +24,9 @@ Join Pulumi on Thursday, November 30, 2023 for a live workshop on [getting start
 
 If you are new to Pulumi and would like to get started with the Google Cloud provider, visit any of these pages to jump right in!
 
-- [Getting Started](https://www.pulumi.com/docs/iac/get-started/gcp/) - A guided walkthrough for creating your first project
-- [Setup & Install](https://www.pulumi.com/registry/packages/gcp/installation-configuration/) - Instructions on installing the Google Cloud provider
-- [How-to guides](https://www.pulumi.com/registry/packages/gcp/how-to-guides/) - Learn how to use the Google Cloud provider to provision specific resources
+- [Getting Started](/docs/iac/get-started/gcp/) - A guided walkthrough for creating your first project
+- [Setup & Install](/registry/packages/gcp/installation-configuration/) - Instructions on installing the Google Cloud provider
+- [How-to guides](/registry/packages/gcp/how-to-guides/) - Learn how to use the Google Cloud provider to provision specific resources
 - [Templates](https://www.pulumi.com/templates/serverless-application/gcp/) - Use a quickstart template to create a new project
 - [Pulumi AI](https://www.pulumi.com/ai) - Ask Pulumi AI to create a new project
 
@@ -44,31 +44,31 @@ The Google Cloud provider now supports 250+ functions, 800+ resources, 10,000+ i
 
 Version 6.0 of the Google Cloud provider introduced support for several new modules, including:
 
-- [Alloy DB](https://www.pulumi.com/registry/packages/gcp/api-docs/alloydb/)
-- [Assured Workloads](https://www.pulumi.com/registry/packages/gcp/api-docs/assuredworkloads/)
-- [Backup Disaster Recovery](https://www.pulumi.com/registry/packages/gcp/api-docs/backupdisasterrecovery/)
-- [BeyondCorp](https://www.pulumi.com/registry/packages/gcp/api-docs/beyondcorp/)
-- [BigLake](https://www.pulumi.com/registry/packages/gcp/api-docs/biglake/)
-- [BigQuery Analytics Hub](https://www.pulumi.com/registry/packages/gcp/api-docs/bigqueryanalyticshub/)
-- [Certificate Manager](https://www.pulumi.com/registry/packages/gcp/api-docs/certificatemanager/)
-- [Cloud Deploy](https://www.pulumi.com/registry/packages/gcp/api-docs/clouddeploy/)
-- [Cloud IDS](https://www.pulumi.com/registry/packages/gcp/api-docs/cloudids/)
-- [Database Migration Service](https://www.pulumi.com/registry/packages/gcp/api-docs/databasemigrationservice/)
-- [Dataflow](https://www.pulumi.com/registry/packages/gcp/api-docs/dataflow/)
-- [Dataform](https://www.pulumi.com/registry/packages/gcp/api-docs/dataform/)
-- [DataPlex](https://www.pulumi.com/registry/packages/gcp/api-docs/dataplex/)
-- [Datastream](https://www.pulumi.com/registry/packages/gcp/api-docs/datastream/)
-- [Edge Network](https://www.pulumi.com/registry/packages/gcp/api-docs/edgenetwork/)
-- [GKE Backup](https://www.pulumi.com/registry/packages/gcp/api-docs/gkebackup/)
-- [GKE On-Prem](https://www.pulumi.com/registry/packages/gcp/api-docs/gkeonprem/)
-- [Looker](https://www.pulumi.com/registry/packages/gcp/api-docs/looker/)
-- [Network Connectivity](https://www.pulumi.com/registry/packages/gcp/api-docs/networkconnectivity/)
-- [Network Security](https://www.pulumi.com/registry/packages/gcp/api-docs/networksecurity/)
-- [Network Services](https://www.pulumi.com/registry/packages/gcp/api-docs/networkservices/)
-- [VMware Engine](https://www.pulumi.com/registry/packages/gcp/api-docs/vmwareengine/)
-- [Workstations](https://www.pulumi.com/registry/packages/gcp/api-docs/workstations/)
+- [Alloy DB](/registry/packages/gcp/api-docs/alloydb/)
+- [Assured Workloads](/registry/packages/gcp/api-docs/assuredworkloads/)
+- [Backup Disaster Recovery](/registry/packages/gcp/api-docs/backupdisasterrecovery/)
+- [BeyondCorp](/registry/packages/gcp/api-docs/beyondcorp/)
+- [BigLake](/registry/packages/gcp/api-docs/biglake/)
+- [BigQuery Analytics Hub](/registry/packages/gcp/api-docs/bigqueryanalyticshub/)
+- [Certificate Manager](/registry/packages/gcp/api-docs/certificatemanager/)
+- [Cloud Deploy](/registry/packages/gcp/api-docs/clouddeploy/)
+- [Cloud IDS](/registry/packages/gcp/api-docs/cloudids/)
+- [Database Migration Service](/registry/packages/gcp/api-docs/databasemigrationservice/)
+- [Dataflow](/registry/packages/gcp/api-docs/dataflow/)
+- [Dataform](/registry/packages/gcp/api-docs/dataform/)
+- [DataPlex](/registry/packages/gcp/api-docs/dataplex/)
+- [Datastream](/registry/packages/gcp/api-docs/datastream/)
+- [Edge Network](/registry/packages/gcp/api-docs/edgenetwork/)
+- [GKE Backup](/registry/packages/gcp/api-docs/gkebackup/)
+- [GKE On-Prem](/registry/packages/gcp/api-docs/gkeonprem/)
+- [Looker](/registry/packages/gcp/api-docs/looker/)
+- [Network Connectivity](/registry/packages/gcp/api-docs/networkconnectivity/)
+- [Network Security](/registry/packages/gcp/api-docs/networksecurity/)
+- [Network Services](/registry/packages/gcp/api-docs/networkservices/)
+- [VMware Engine](/registry/packages/gcp/api-docs/vmwareengine/)
+- [Workstations](/registry/packages/gcp/api-docs/workstations/)
 
-If you haven't used these modules yet, now is a great time to try them out! Check out the [Pulumi Registry](https://www.pulumi.com/registry/packages/gcp/) for more information on how to get started or ask [Pulumi AI](https://www.pulumi.com/ai) to create a new project for you.
+If you haven't used these modules yet, now is a great time to try them out! Check out the [Pulumi Registry](/registry/packages/gcp/) for more information on how to get started or ask [Pulumi AI](https://www.pulumi.com/ai) to create a new project for you.
 
 ## What's New in 7.0
 
@@ -122,7 +122,7 @@ You can find more information about this change in the [upstream documentation](
 
 ## Upgrading
 
-Upgrading from the previous version of the Google Cloud provider is straightforward. Simply update the version in your dependency manifest file, install the new package based on your language and package manager, then run `pulumi up` to migrate your existing stack. For Go programs, you will need to update specific imports within your program as well. This information is also available in our [migration guide](https://www.pulumi.com/registry/packages/gcp/how-to-guides/7-0-migration) in the Pulumi Registry.
+Upgrading from the previous version of the Google Cloud provider is straightforward. Simply update the version in your dependency manifest file, install the new package based on your language and package manager, then run `pulumi up` to migrate your existing stack. For Go programs, you will need to update specific imports within your program as well. This information is also available in our [migration guide](/registry/packages/gcp/how-to-guides/7-0-migration) in the Pulumi Registry.
 
 {{< chooser language "typescript,python,go,csharp,java" >}}
 

@@ -83,7 +83,7 @@ Let's track our DevOps journey in typical "DevOps Day" style. Because we're [cou
 
 Day zero is going to be your design, planning, and prep phase. Sometimes this includes various stages of research and other times it is a matter of just getting started with hands-on investigation.
 
-Every journey includes a beginning and an end. To demonstrate the Pulumi *Push to Start* developer workflow, we need a project to develop! For this adventure let's use the [Pulumi Kubernetes Provider](https://www.pulumi.com/registry/packages/kubernetes) from the Pulumi Providers registry to deploy an app on Kubernetes. This provider is one of our most popular providers, as you might guess.
+Every journey includes a beginning and an end. To demonstrate the Pulumi *Push to Start* developer workflow, we need a project to develop! For this adventure let's use the [Pulumi Kubernetes Provider](/registry/packages/kubernetes) from the Pulumi Providers registry to deploy an app on Kubernetes. This provider is one of our most popular providers, as you might guess.
 
 In this case, we can practice with a new project from the [Community Engineering](https://www.pulumi.com/community/) team. The GitHub [pulumi/devcontainer](https://github.com/pulumi/devcontainer) repository is a GitHub [template repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) containing all the fundamentals of a new Pulumi infrastructure as code GitOps project. Let's begin with a quick tour of the GitOps repo boilerplate.
 
@@ -256,7 +256,7 @@ Let's check on the status of our deployment.
 kubectl get po
 ```
 
-With any luck, our [Pulumi AI](https://pulumi.com/ai) gave you a working program right out of the gate. For references on Kubernetes Pulumi package resources to expand your infrastructure from here head to the [Pulumi Registry Kubernetes Provider](https://www.pulumi.com/registry/packages/kubernetes/) page for more.
+With any luck, our [Pulumi AI](https://pulumi.com/ai) gave you a working program right out of the gate. For references on Kubernetes Pulumi package resources to expand your infrastructure from here head to the [Pulumi Registry Kubernetes Provider](/registry/packages/kubernetes/) page for more.
 
 Sharing Pulumi with people is a genuine passion found among Pulumians all around the globe but we all know evidence reigns king among engineers who, like any good practitioner, expect proof. Evolving your developer workflow with Pulumi gets even better than just easy, it's remarkably powerful and ready for you to adopt in your daily workflows right away too.
 

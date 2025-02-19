@@ -160,7 +160,7 @@ Whether you're deploying containers to mainstream cloud providers or attempting 
 
 With Pulumi, you get:
 
-- [Cloud-native container orchestration](https://www.pulumi.com/registry/) across all major platforms and Kubernetes distributions
+- [Cloud-native container orchestration](/registry/) across all major platforms and Kubernetes distributions
 - [Infrastructure testing](/docs/iac/concepts/testing/) to ensure your containers deploy correctly (even in the weird places)
 - [Provider templates](/blog/pulumi-go-boilerplate-v2/) for when you invent yet another way to run containers
 - [Stack references](/docs/concepts/stack/#stackreferences) for managing multiple environments without losing your mind
@@ -174,6 +174,6 @@ Ready to bring some sanity to your container deployment strategy? Get started wi
 
 At this point, **105** options in, you might wonder: "Has cloud container hosting gone too far?" Well, I've a solution to propose:
 
-At Pulumi, we've got providers for [all](https://www.pulumi.com/registry/packages/aws/api-docs/provider/) [the](https://www.pulumi.com/registry/packages/azure-native/) [usual](https://www.pulumi.com/registry/packages/gcp/) [suspects](https://www.pulumi.com/registry/packages/kubernetes/) and, surprisingly, many more in this container circus. And if you've figured out how to run containers on a quantum computer inside a data pipeline in New Zealand, you can write [a provider](https://github.com/pulumi/pulumi-provider-boilerplate/) for that, too.
+At Pulumi, we've got providers for [all](/registry/packages/aws/api-docs/provider/) [the](/registry/packages/azure-native/) [usual](/registry/packages/gcp/) [suspects](/registry/packages/kubernetes/) and, surprisingly, many more in this container circus. And if you've figured out how to run containers on a quantum computer inside a data pipeline in New Zealand, you can write [a provider](https://github.com/pulumi/pulumi-provider-boilerplate/) for that, too.
 
 So, use Pulumi and we will figure out how *RedHat-Tanzu-Greengrass-Icecore-Device-Farm* works and provide you a sane interface to it. You've got other things to worry about.

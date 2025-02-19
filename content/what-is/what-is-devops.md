@@ -49,13 +49,13 @@ Implementing and scaling a culture of DevOps is enabled by tools that can reliab
 
 For a detailed exploration and implementation of DevOps practices, refer to the following Pulumi tools and resources:
 
-* **Infrastructure as code (IaC)**: Start with Infrastructure as Code using Pulumi by accessing our [getting started guide](https://www.pulumi.com/docs/get-started/).
+* **Infrastructure as code (IaC)**: Start with Infrastructure as Code using Pulumi by accessing our [getting started guide](/docs/get-started/).
 
-* **Continuous integration and continuous delivery (CI/CD)**: For integrating CI/CD processes with Pulumi, visit our [CI/CD integration documentation](https://www.pulumi.com/docs/guides/continuous-delivery/).
+* **Continuous integration and continuous delivery (CI/CD)**: For integrating CI/CD processes with Pulumi, visit our [CI/CD integration documentation](/docs/guides/continuous-delivery/).
 
-* **Policy as code**: To manage policies using Pulumi CrossGuard, visit the [Pulumi CrossGuard documentation](https://www.pulumi.com/docs/guides/crossguard/).
+* **Policy as code**: To manage policies using Pulumi CrossGuard, visit the [Pulumi CrossGuard documentation](/docs/guides/crossguard/).
 
-* **Version control**: Learn about version control systems supported by Pulumi in our [version control documentation](https://www.pulumi.com/docs/intro/concepts/state/#backends).
+* **Version control**: Learn about version control systems supported by Pulumi in our [version control documentation](/docs/intro/concepts/state/#backends).
 
 ## Learn more
 

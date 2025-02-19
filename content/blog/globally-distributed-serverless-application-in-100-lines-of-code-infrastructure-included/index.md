@@ -343,7 +343,7 @@ target scenarios without trusting the providers blindly.
 More importantly, I walked you through a scenario of developing an
 end-to-end application with Pulumi. I highlighted the power of
 leveraging familiar techniques coming from the TypeScript realm. You can
-find the full code in [Pulumi examples](https://github.com/pulumi/examples/tree/master/classic-azure-ts-serverless-url-shortener-global) and more on [Cosmos DB](https://www.pulumi.com/blog/when-to-use-azure-cosmos-db/) in the [Azure Provider](https://www.pulumi.com/registry/packages/azure-native/).
+find the full code in [Pulumi examples](https://github.com/pulumi/examples/tree/master/classic-azure-ts-serverless-url-shortener-global) and more on [Cosmos DB](https://www.pulumi.com/blog/when-to-use-azure-cosmos-db/) in the [Azure Provider](/registry/packages/azure-native/).
 
 Cloud brings superpowers to developer's hands. You just need to use
 those efficiently.

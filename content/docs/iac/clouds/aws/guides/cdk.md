@@ -22,7 +22,7 @@ and outputs from AWS CDK stacks can be used as inputs to other Pulumi resources.
 
 ## Getting Started
 
-To get started with CDK on Pulumi first [download and install Pulumi](https://www.pulumi.com/docs/install/), and [configure it to work with your AWS account](https://www.pulumi.com/registry/packages/aws/installation-configuration/).
+To get started with CDK on Pulumi first [download and install Pulumi](/docs/install/), and [configure it to work with your AWS account](/registry/packages/aws/installation-configuration/).
 Next, create a Pulumi TypeScript project, install the required packages, and
 ensure you have configured the AWS providers.
 
@@ -209,7 +209,7 @@ const app = new pulumicdk.App('app', (scope: pulumicdk.App) => {
 
 ## Create Pulumi Outputs
 
-In order to create Pulumi [Stack outputs](https://www.pulumi.com/docs/iac/concepts/stacks/#outputs)
+In order to create Pulumi [Stack outputs](/docs/iac/concepts/stacks/#outputs)
 you also need to propagate the `App outputs` all the way to the Pulumi Stack
 outputs. You can do this in one of two ways.
 
@@ -253,9 +253,9 @@ export const bucketName = app.outputs['bucketName'];
 
 Currently Pulumi CDK utilizes three Pulumi providers.
 
-1. [AWS Provider](https://www.pulumi.com/registry/packages/aws/)
-2. [AWS Cloud Control Provider](https://www.pulumi.com/registry/packages/aws-native/)
-3. [Docker Build Provider](https://www.pulumi.com/registry/packages/docker-build/)
+1. [AWS Provider](/registry/packages/aws/)
+2. [AWS Cloud Control Provider](/registry/packages/aws-native/)
+3. [Docker Build Provider](/registry/packages/docker-build/)
 
 If you want to customize any of these providers you can create your own and pass
 them to the `AppResourceOptions`
@@ -421,13 +421,13 @@ Pulumi commands without errors.
 
 ## Using Pulumi Policy Packs
 
-You can use [Policy Packs](https://www.pulumi.com/docs/iac/packages-and-automation/crossguard/get-started/#get-started-with-pulumi-policy-as-code)
+You can use [Policy Packs](/docs/iac/packages-and-automation/crossguard/get-started/#get-started-with-pulumi-policy-as-code)
 with your Pulumi CDK Application. It is also possible to use CDK specific policy
 validation tools (a couple are discussed below), but it is recommended to use
 Pulumi specific tools, especially if you are creating Pulumi resources outside
 of CDK.
 
-Below is an example output using Pulumi's [Compliance Ready Policies](https://www.pulumi.com/docs/iac/packages-and-automation/crossguard/compliance-ready-policies/)
+Below is an example output using Pulumi's [Compliance Ready Policies](/docs/iac/packages-and-automation/crossguard/compliance-ready-policies/)
 
 ```ts
 import * as pulumicdk from '@pulumi/cdk';
@@ -540,14 +540,14 @@ Diagnostics:
 
 ## Mapping AWS Resources
 
-Pulumi CDK automatically maps CDK resources to [AWS CCAPI](https://www.pulumi.com/registry/packages/aws-native/)
+Pulumi CDK automatically maps CDK resources to [AWS CCAPI](/registry/packages/aws-native/)
 resources, but there are some resources that are not yet available in CCAPI. In
-these cases it is possible to manually map the CloudFormation resource to an [AWS Provider](https://www.pulumi.com/registry/packages/aws/) resource.
+these cases it is possible to manually map the CloudFormation resource to an [AWS Provider](/registry/packages/aws/) resource.
 
 ### Simple Mapping
 
 In this example we are manually mapping any CloudFormation resources with the
-`AWS::ApiGatewayV2::Stage` type to the [AWS ApiGatewayV2 Stage](https://www.pulumi.com/registry/packages/aws/api-docs/apigatewayv2/stage/) resource.
+`AWS::ApiGatewayV2::Stage` type to the [AWS ApiGatewayV2 Stage](/registry/packages/aws/api-docs/apigatewayv2/stage/) resource.
 
 ```ts
 import * as pulumicdk from '@pulumi/cdk';
@@ -655,7 +655,7 @@ set of feature flags [here](https://github.com/aws/aws-cdk/blob/main/packages/aw
 
 ## Setting Pulumi Options for CDK resources
 
-You can set Pulumi resource options for CDK resources by using [Transforms](https://www.pulumi.com/docs/iac/concepts/options/transforms/).
+You can set Pulumi resource options for CDK resources by using [Transforms](/docs/iac/concepts/options/transforms/).
 For example, if you wanted to set `protect` on database resources you could use
 a transform like this.
 
@@ -732,7 +732,7 @@ These features of CloudFormation are currently not supported.
 
 ## AWS Cloud Control AutoNaming Config
 
-Sometimes CDK constructs can create resource names that are too long for the [AWS Cloud Control provider](https://www.pulumi.com/registry/packages/aws-native/).
+Sometimes CDK constructs can create resource names that are too long for the [AWS Cloud Control provider](/registry/packages/aws-native/).
 When this happens you can configure the `autoTrim` feature to have the generated
 names be automatically trimmed to fit within the name requirements. If you are
 not configuring your own `aws-native` provider then this feature is enabled by
@@ -772,16 +772,16 @@ automatically and dynamically create the bootstrap resources as needed.
 When any file assets are added to your application, CDK will automatically
 create the following staging resources.
 
-1. [aws.s3.BucketV2](https://www.pulumi.com/registry/packages/aws/api-docs/s3/bucketv2/)
+1. [aws.s3.BucketV2](/registry/packages/aws/api-docs/s3/bucketv2/)
   1a. `forceDestroy`: true
-2. [aws.s3.BucketServerSideEncryptionConfigurationV2](https://www.pulumi.com/registry/packages/aws/api-docs/s3/bucketserversideencryptionconfigurationv2/)
+2. [aws.s3.BucketServerSideEncryptionConfigurationV2](/registry/packages/aws/api-docs/s3/bucketserversideencryptionconfigurationv2/)
   2a. `AES256`
-3. [aws.s3.BucketVersioningV2](https://www.pulumi.com/registry/packages/aws/api-docs/s3/bucketversioningv2/)
+3. [aws.s3.BucketVersioningV2](/registry/packages/aws/api-docs/s3/bucketversioningv2/)
   3a. `Enabled`
-4. [aws.s3.BucketLifecycleConfigurationV2](https://www.pulumi.com/registry/packages/aws/api-docs/s3/bucketlifecycleconfigurationv2/)
+4. [aws.s3.BucketLifecycleConfigurationV2](/registry/packages/aws/api-docs/s3/bucketlifecycleconfigurationv2/)
   4a. Expire old versions > 365 days
   5b. Expire deploy-time assets > 30 days
-5. [aws.s3.BucketPolicy](https://www.pulumi.com/registry/packages/aws/api-docs/s3/bucketpolicy/)
+5. [aws.s3.BucketPolicy](/registry/packages/aws/api-docs/s3/bucketpolicy/)
   5a. Require SSL
 
 ### ECR Resources
@@ -789,11 +789,11 @@ create the following staging resources.
 When any image assets are added to your application, CDK will automatically
 create the following staging resources.
 
-1. [aws.ecr.Repository](https://www.pulumi.com/registry/packages/aws/api-docs/ecr/repository/)
+1. [aws.ecr.Repository](/registry/packages/aws/api-docs/ecr/repository/)
   1a. `imageTagMutability`: `IMMUTABLE`
-2. [aws.ecr.LifecyclePolicy](https://www.pulumi.com/registry/packages/aws/api-docs/ecr/lifecyclepolicy/)
+2. [aws.ecr.LifecyclePolicy](/registry/packages/aws/api-docs/ecr/lifecyclepolicy/)
   2a. Expire old images when the number of images > 3
 
 ## Migrating from AWS CDK
 
-For a detailed guide on migrating from AWS CDK applications to Pulumi check out the [Migration Guide](https://www.pulumi.com/docs/iac/adopting-pulumi/migrating-to-pulumi/from-cdk/).
+For a detailed guide on migrating from AWS CDK applications to Pulumi check out the [Migration Guide](/docs/iac/adopting-pulumi/migrating-to-pulumi/from-cdk/).

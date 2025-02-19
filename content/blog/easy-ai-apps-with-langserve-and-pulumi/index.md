@@ -197,7 +197,7 @@ databases. The clue of this example here is to show you how easy you can extend 
 additional cloud resources. In this case, we will deploy a Pinecone index to use it in our LangServe app. Pulumi and
 Pinecone recently [released a dedicated Pulumi provider](/blog/pinecone-serverless/)
 for Pinecone. This provider allows you to create and
-manage [Pinecone indexes](https://www.pulumi.com/registry/packages/pinecone/) with Pulumi.
+manage [Pinecone indexes](/registry/packages/pinecone/) with Pulumi.
 
 As an external knowledge base, we will use Wikipedia to load information
 about [Gandalf the Grey](https://en.wikipedia.org/wiki/Gandalf) and ingest them into our Pinecone index.

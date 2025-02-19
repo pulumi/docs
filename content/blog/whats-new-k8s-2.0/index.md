@@ -34,7 +34,7 @@ unify this resource management using a programming language of your choice.
 
 Some of the recent highlights for the [pulumi/kubernetes](https://github.com/pulumi/pulumi-kubernetes) package include:
 
-* Added [language support](https://www.pulumi.com/registry/packages/kubernetes/#library-packages) for Go and .NET
+* Added [language support](/registry/packages/kubernetes/#library-packages) for Go and .NET
 
 ```go
 // Create an EKS cluster in Go.
@@ -120,12 +120,12 @@ across the respective cloud provider packages.
 
 * [pulumi/eks](https://github.com/pulumi/pulumi-eks)
     * More [examples](https://github.com/pulumi/pulumi-eks/tree/master/examples) are provided to cover various EKS-specific scenarios.
-    * Support for [additional security groups](https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/eks/#NodeGroup-extraNodeSecurityGroups) for node groups to attach to user-specified rules
-    * Support for [envelope encrypted secrets](https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/eks/#ClusterOptions-encryptionConfigKeyArn) so that Kubernetes Secrets are encrypted in etcd
-    * Support for [alternative authentication](https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/eks/#ClusterOptions-providerCredentialOpts) approaches on the cluster and infrastructure created, such as using AWS named profiles
-    * Create [kubeconfig files](https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/eks/#Cluster-getKubeconfig) that are scoped to IAM users or roles -- this is used to limit access to the cluster.
-    * Use the EKS package on clients operating in [HTTP proxy](https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/eks/#ClusterOptions-proxy) environments, such as corporate proxies.
-    * [Default to the latest AMIs](https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/eks/#ClusterNodeGroupOptions-amiId) for node groups, using the latest release from the AWS SSM parameter store.
+    * Support for [additional security groups](/docs/reference/pkg/nodejs/pulumi/eks/#NodeGroup-extraNodeSecurityGroups) for node groups to attach to user-specified rules
+    * Support for [envelope encrypted secrets](/docs/reference/pkg/nodejs/pulumi/eks/#ClusterOptions-encryptionConfigKeyArn) so that Kubernetes Secrets are encrypted in etcd
+    * Support for [alternative authentication](/docs/reference/pkg/nodejs/pulumi/eks/#ClusterOptions-providerCredentialOpts) approaches on the cluster and infrastructure created, such as using AWS named profiles
+    * Create [kubeconfig files](/docs/reference/pkg/nodejs/pulumi/eks/#Cluster-getKubeconfig) that are scoped to IAM users or roles -- this is used to limit access to the cluster.
+    * Use the EKS package on clients operating in [HTTP proxy](/docs/reference/pkg/nodejs/pulumi/eks/#ClusterOptions-proxy) environments, such as corporate proxies.
+    * [Default to the latest AMIs](/docs/reference/pkg/nodejs/pulumi/eks/#ClusterNodeGroupOptions-amiId) for node groups, using the latest release from the AWS SSM parameter store.
 
 ## Wrap-Up
 
@@ -133,9 +133,9 @@ As our community continues to grow, we’re committed to improving our Kubernete
 experience even further. You can help to shape this experience directly by
 providing feedback on [GitHub](https://github.com/pulumi/pulumi-kubernetes/). We love to hear from our users!
 
-Learn more about how [Pulumi works with Kubernetes](https://www.pulumi.com/registry/packages/kubernetes/), and [Get Started](https://www.pulumi.com/docs/iac/get-started/kubernetes/) if you're
+Learn more about how [Pulumi works with Kubernetes](/registry/packages/kubernetes/), and [Get Started](/docs/iac/get-started/kubernetes/) if you're
 new.
 
 You can explore more content by checking out [PulumiTV on YouTube](https://www.youtube.com/pulumitv), work through
-Kubernetes [tutorials](https://www.pulumi.com/docs/tutorials/kubernetes/) to dive deeper, and join the [Community Slack](https://slack.pulumi.com/) to engage
+Kubernetes [tutorials](/docs/tutorials/kubernetes/) to dive deeper, and join the [Community Slack](https://slack.pulumi.com/) to engage
 with users and the Pulumi team.

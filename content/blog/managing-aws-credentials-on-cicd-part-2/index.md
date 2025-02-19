@@ -151,7 +151,7 @@ With the mechanics of updating an AWS access key out of the way, the next step i
 systems.
 
 The following snippet shows how the `CredentialPusher` is configured in the key rotator app. We load a Travis CI access token from the
-[Pulumi stack's configuration](https://www.pulumi.com/docs/concepts/config/), and hard-code the specific set of projects and encrypted environment variables to
+[Pulumi stack's configuration](/docs/concepts/config/), and hard-code the specific set of projects and encrypted environment variables to
 store the new access key.
 
 ```ts

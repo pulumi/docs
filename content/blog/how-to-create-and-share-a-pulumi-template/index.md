@@ -299,7 +299,7 @@ Embedding these buttons yourself is easy --- just use one of the snippets below,
 [![Deploy with Pulumi](/images/deploy-with-pulumi/dark.svg)](https://app.pulumi.com/new?template={template-url})
 ```
 
-Project creators who go down this path will be prompted in the browser for the same configuration values as they would with the CLI, and afterward, they'll be able to deploy the project either with the Pulumi CLI or with [Pulumi Deployments](https://www.pulumi.com/docs/pulumi-cloud/deployments/).
+Project creators who go down this path will be prompted in the browser for the same configuration values as they would with the CLI, and afterward, they'll be able to deploy the project either with the Pulumi CLI or with [Pulumi Deployments](/docs/pulumi-cloud/deployments/).
 
 ## See it in action
 

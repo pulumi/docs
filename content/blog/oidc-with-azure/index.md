@@ -36,7 +36,7 @@ tags:
 
 ---
 
-We are happy to announce the delivery of Azure OIDC authentication, one of the [most requested features](https://github.com/pulumi/pulumi-azure-native/issues/1324) for the [Pulumi Azure Native Provider](https://www.pulumi.com/registry/packages/azure-native/). With the v1.100.0 release, OpenID Connect (OIDC) authentication is now fully supported in both the Azure Native and [Azure Classic](https://www.pulumi.com/registry/packages/azure/) providers. Let’s dig in to learn what it is, how it works, and why it’s useful.
+We are happy to announce the delivery of Azure OIDC authentication, one of the [most requested features](https://github.com/pulumi/pulumi-azure-native/issues/1324) for the [Pulumi Azure Native Provider](/registry/packages/azure-native/). With the v1.100.0 release, OpenID Connect (OIDC) authentication is now fully supported in both the Azure Native and [Azure Classic](/registry/packages/azure/) providers. Let’s dig in to learn what it is, how it works, and why it’s useful.
 
 <!--more-->
 
