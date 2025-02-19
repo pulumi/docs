@@ -65,9 +65,52 @@ This gives you fine-grained control over resource cleanup and helps prevent work
 
 ## See It in Action
 
-Here's a practical example of deploying an NGINX stack using the operator. This code creates a Stack resource that pulls a Pulumi program directly from a Git repository:
+Here's an example that demonstrates how to deploy a Pulumi stack using the operator. This configuration creates a service account with appropriate permissions and defines a Stack resource that deploys a sample project from the Pulumi examples repository:
 
-<!-- TODO, potential example, we can do any Eron thinks is best -->
+```yaml
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: random-yaml-git
+  namespace: default
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: random-yaml-git:system:auth-delegator
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: system:auth-delegator
+subjects:
+- kind: ServiceAccount
+  name: random-yaml-git
+  namespace: default
+---
+apiVersion: pulumi.com/v1
+kind: Stack
+metadata:
+  name: random-yaml-git
+  namespace: default
+spec:
+  serviceAccountName: random-yaml-git
+  projectRepo: https://github.com/pulumi/examples
+  branch: master
+  shallow: true
+  repoDir: random-yaml/
+  stack: random-yaml-git
+  refresh: true
+  destroyOnFinalize: true
+  envRefs:
+    PULUMI_ACCESS_TOKEN:
+      type: Secret
+      secret:
+        name: pulumi-api-secret
+        key: accessToken
+  workspaceTemplate:
+    spec:
+      image: pulumi/pulumi:3.147.0-nonroot
+```
 
 ## Additional Resources
 
