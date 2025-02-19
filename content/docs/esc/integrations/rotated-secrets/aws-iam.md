@@ -15,45 +15,50 @@ The `aws-iam` rotator enables you to rotate access credentials for an AWS IAM us
 ## Example
 
 ```yaml
+# my-org/logins/production
 values:
   aws:
+    region: us-west-2
     login:
       fn::open::aws-login:
         oidc:
           roleArn: arn:aws:iam::123456789:role/esc-oidc
           sessionName: pulumi-environments-session
-    iam:
-      fn::rotate::aws-iam:
-        inputs:
-            login: ${aws.login}
-            userArn: arn:aws:iam::<account id>:user/<username>
+          subjectAttributes:
+            - currentEnvironment.name
+```
 
+```yaml
+# my-org/rotators/key-rotator
+values:
+  iam:
+    fn::rotate::aws-iam:
+      inputs:
+        region: ${environments.logins.production.aws.region}
+        login: ${environments.logins.production.aws.login}
+        userArn: arn:aws:iam::<account id>:user/<username>
 ```
 
 If you have existing access and secret key(s) you want ESC to keep track of, you can optionally provide an initial `state`.
 
 ```yaml
+# my-org/rotators/key-rotator
 values:
-  aws:
-    login:
-      fn::open::aws-login:
-        oidc:
-          roleArn: arn:aws:iam::123456789:role/esc-oidc
-          sessionName: pulumi-environments-session
-    iam:
-      fn::rotate::aws-iam:
-        inputs:
-          login: ${aws.login}
-          userArn: arn:aws:iam::<account id>:user/<username>
-        state:
-          current:
-            accessKeyId: <access key>
-            secretAccessKey:
-              fn::secret: <secret key>
-          previous:
-            accessKeyId: <access key>
-            secretAccessKey:
-              fn::secret: <secret key>
+  iam:
+    fn::rotate::aws-iam:
+      inputs:
+        region: ${environments.logins.production.aws.region}
+        login: ${environments.logins.production.aws.login}
+        userArn: arn:aws:iam::<account id>:user/<username>
+      state:
+        current:
+          accessKeyId: <access key>
+          secretAccessKey:
+            fn::secret: <secret key>
+        previous:
+          accessKeyId: <access key>
+          secretAccessKey:
+            fn::secret: <secret key>
 ```
 
 ## Configuring OIDC
@@ -86,6 +91,29 @@ Make sure to replace `<org>`, `<project>`, and `<environment>` with the values o
       "secretAccessKey": "[secret]"
     }
   }
+}
+```
+
+### Permissions
+
+The minimum permissions required for the rotation role are:
+
+```json
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "iam:ListAccessKeys",
+        "iam:CreateAccessKey",
+        "iam:DeleteAccessKey",
+        "iam:GetUser",
+        "iam:TagUser"
+      ],
+      "Resource": "arn:aws:iam::<account id>:user/<username>"
+    }
+  ]
 }
 ```
 
