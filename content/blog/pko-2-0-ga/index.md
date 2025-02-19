@@ -35,7 +35,7 @@ Imagine having a dedicated infrastructure automation engine running within your 
 
 Pulumi Kubernetes Operator 2.0 introduces a completely new architecture for running Pulumi programs. The key changes include:
 
-- Each Stack now runs in its own dedicated workspace pod, rather than within the Operator pod
+- Each Stack now runs in its own dedicated Workspace pod, rather than within the Operator pod
 - A new Workspace Custom Resource manages the workspace pod lifecycle
 - Stack operations are coordinated through a new Update custom resource
 - The Stack Custom Resource API remains the primary interface, maintaining backward compatibility
