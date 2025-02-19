@@ -51,7 +51,9 @@ Here’s how to configure [AWS IAM user](https://docs.aws.amazon.com/IAM/latest/
 [Create an AWS IAM user](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html) whose access keys you want to rotate.
 
 #### 2. Create a new environment with managing user credentials
-In the example environment `credentials/aws-creds` below, we use the ESC’s [aws-login provider](/docs/esc/integrations/dynamic-login-credentials/aws-login/) using OIDC. This credential configured has the privileged access to be able to rotate the IAM user credentials. 
+In the example environment `credentials/aws-creds` below, we use the ESC’s [aws-login provider](/docs/esc/integrations/dynamic-login-credentials/aws-login/) using OIDC. This credential was configured with the privileged access to be able to rotate the IAM user credentials. 
+
+The minimal permissions the managing credential requires are IAM List, Create, and DeleteAccessKeys over the IAM user you created.
 
 ```yaml
 # credentials/aws-creds
