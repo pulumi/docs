@@ -55,7 +55,11 @@ TODO: Add example of manual rotation
 
 ### Schedule
 
-TODO: Add schedule example
+You can create a schedule for automatic rotation of your secrets in the Pulumi Cloud UI by navigating to the `Rotated secrets` tab of your environment, and clicking the `Create rotation schedule` button.
+
+The rotation schedule can be defined as a [cron expression](https://crontab.cronhub.io/).
+
+![schedule.png](../schedule.png)
 
 ## Permissions
 
