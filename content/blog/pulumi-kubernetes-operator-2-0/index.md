@@ -218,7 +218,7 @@ spec:
 ### Install a Pulumi Access Token
 
 Create a `Secret` containing a Pulumi access token to be used by the stack to authenticate to Pulumi Cloud.
-Follow [these instructions](https://www.pulumi.com/docs/pulumi-cloud/access-management/access-tokens/) to create a
+Follow [these instructions](/docs/pulumi-cloud/access-management/access-tokens/) to create a
 personal, organization, or team access token.
 
 Store the access token into a Kubernetes Secret. Here's an easy way to create a Secret named `pulumi-api-secret`.

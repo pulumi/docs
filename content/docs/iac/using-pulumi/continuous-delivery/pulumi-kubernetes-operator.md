@@ -46,13 +46,14 @@ To work with the operator, we'll need to follow these steps.
   - [Using a Git repository](#using-a-git-repository)
   - [Using a Flux source](#using-a-flux-source)
   - [Using a Program object](#using-a-program-object)
-- [Configure your Stack Resource](#configure-your-stack-resource)
+- [Explore other Features](#explore-other-features)
   - [Stack Configuration Values](#stack-configuration-values)
   - [Environment Variables](#environment-variables)
   - [Drift Detection](#drift-detection)
   - [State Refresh](#state-refresh)
   - [Stack Cleanup](#stack-cleanup)
   - [Stack Prerequisites](#stack-prerequisites)
+  - [External Triggers](#external-triggers)
 - [Use With Argo CD](#use-with-argo-cd)
 - [More Information](#more-information)
   - [Examples](#examples)
@@ -547,7 +548,7 @@ spec:
     aws:region: us-east-1
 ```
 
-## Configure your Stack Resource
+## Explore other Features
 
 Here's some advanced options provided by the `Stack` resource.
 Detailed documentation on the Stack API is available [here][pko-stacks].
@@ -611,6 +612,17 @@ when the `Stack` object is deleted. Enable this option to link the lifecycle of 
 It is possible to declare that a particular `Stack` be dependent on another `Stack`.
 The dependent stack waits for the other stack to be successfully deployed.
 Use the `succeededWithinDuration` field to set a duration within which the prerequisite must have reached success; otherwise the dependency is automatically re-synced.
+
+### External Triggers
+
+It is possible to trigger a stack update for a stack at any time by applying
+the `pulumi.com/reconciliation-request` annotation:
+
+```bash
+kubectl annotate stack $STACK_NAME "pulumi.com/reconciliation-request=$(date)" --overwrite  
+```
+
+The value of the annotation is arbitrary, and we recommend using a timestamp.
 
 ## Use With Argo CD
 
@@ -720,7 +732,7 @@ which will in turn effect a Pulumi deployment. The result will look something li
 
 ### Examples
 
-More examples are available in the [pulumi/pulumi-kubernetes-operator](pko-examples) repository.
+More examples are available in the [pulumi/pulumi-kubernetes-operator][pko-examples] repository.
 
 [pko-examples]: https://github.com/pulumi/pulumi-kubernetes-operator/tree/master/examples
 
