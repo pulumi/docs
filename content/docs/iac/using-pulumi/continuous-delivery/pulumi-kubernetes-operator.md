@@ -25,6 +25,7 @@ Operator](https://github.com/pulumi/pulumi-kubernetes-operator) (PKO) to automat
 ## Overview
 
 The Pulumi Kubernetes Operator provides [custom resources][k8s-ext-pattern] to:
+
 - Provision a workspace (an execution environment) for a Pulumi project
 - Keep a Pulumi stack up-to-date using gitops
 - Write [Pulumi YAML][] programs as Kubernetes objects
@@ -117,12 +118,11 @@ subjects:
 ```
 
  If your Pulumi program uses the [Kubernetes Provider][] to manage resources within the cluster, the stack’s service account will need extra permissions, e.g. a `ClusterRoleBinding` to the `cluster-admin` cluster role.
- 
+
  See [“Kubernetes: Service Accounts”][service-accounts] for more information.
 
 [Kubernetes Provider]: https://www.pulumi.com/registry/packages/kubernetes/
 [service-accounts]: https://kubernetes.io/docs/concepts/security/service-accounts/
-
 
 ## Configure Pulumi Cloud Access
 
@@ -155,7 +155,6 @@ See ["States & Backends"][states-backends] for more information.
 
 [tokens]: https://www.pulumi.com/docs/pulumi-cloud/access-management/access-tokens/
 [states-backends]: https://www.pulumi.com/docs/iac/concepts/state-and-backends/
-
 
 ## Create a Stack Resource
 
@@ -403,7 +402,7 @@ func main() {
 
 {{% /choosable %}}
 {{% /chooser %}}
-G
+
 ### Using a Flux source
 
 [Flux][] offers a powerful alternative for fetching Pulumi program source code from
@@ -548,7 +547,6 @@ spec:
     aws:region: us-east-1
 ```
 
-
 ## Configure your Stack Resource
 
 Here's some advanced options provided by the `Stack` resource.
@@ -558,9 +556,10 @@ Detailed documentation on the Stack API is available [here][pko-stacks].
 
 ### Stack Configuration Values
 
-In many cases, different stacks for a single project will need differing values. 
-For instance, you may want to use a different size for your AWS EC2 instance, or a different number of replicas 
-for a particular Kubernetes deployment. Pulumi offers a configuration system for managing such differences; see ["Configuration"][iac-config] for more information.
+In many cases, different stacks for a single project will need differing values.
+For instance, you may want to use a different size for your AWS EC2 instance, or a different number of replicas
+for a particular Kubernetes deployment. Pulumi offers a configuration system for managing such differences;
+see ["Configuration"][iac-config] for more information.
 
 Use the `spec.config` block to set stack configuration values. The values are merged
 into your project’s stack settings file.
@@ -612,7 +611,6 @@ when the `Stack` object is deleted. Enable this option to link the lifecycle of 
 It is possible to declare that a particular `Stack` be dependent on another `Stack`.
 The dependent stack waits for the other stack to be successfully deployed.
 Use the `succeededWithinDuration` field to set a duration within which the prerequisite must have reached success; otherwise the dependency is automatically re-synced.
-
 
 ## Use With Argo CD
 
@@ -713,7 +711,6 @@ spec:
     targetRevision: main
 ```
 
-
 ArgoCD will sync the `Application` by applying the `Stack` object,
 which will in turn effect a Pulumi deployment. The result will look something like this in the ArgoCD UI:
 
@@ -728,5 +725,6 @@ More examples are available in the [pulumi/pulumi-kubernetes-operator](pko-examp
 [pko-examples]: https://github.com/pulumi/pulumi-kubernetes-operator/tree/master/examples
 
 ### Getting Help
+
 Check out [troubleshooting](https://github.com/pulumi/pulumi-kubernetes-operator/blob/master/docs/troubleshooting.md) for more details, look at [known issues](https://github.com/pulumi/pulumi-kubernetes-operator/issues/) or
 open a [new issue](https://github.com/pulumi/pulumi-kubernetes-operator/issues/new) in GitHub.
