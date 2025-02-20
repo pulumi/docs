@@ -36,7 +36,7 @@
                         <h5>{{ $item.title }}</h5>
                     </div>
                     <div class="description">
-                        <p>{{ $item.description }}</p>
+                        <p>{{ $item.description | markdownify }}</p>
                     </div>
                     <div class="card-cta-btn">
                         <a href="{{ $item.link}}" target="_blank" class="btn-primary">{{ $item.cta }}</a>

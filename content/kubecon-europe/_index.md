@@ -28,17 +28,17 @@ event_links:
           icon: pen
           icon_color: yellow
           description: See how Pulumi can help you ship infrastructure faster and manage your resources at scale.  Reserve your time today.
-          link: https://info.pulumi.com/kubecon-na?hs_preview=KRDQSZjg-181026154277
+          link: https://calendly.com/pulumi-meetings/kubecon-booth-demo
           cta: Schedule a Meeting
 
-        - title: "Workshop - Pulumi and Kubernetes:  Better Together"
+        - title: Workshop - Advanced Secrets Management on Kubernetes
           icon: team
           icon_color: salmon
           description: |
-            Nov 18, 2024 9 am PT/Noon ET
+            Apr 9, 2025 3 pm CEST
 
-            Learn how to use Pulumi's integrations with Kubernetes to ensure that your clusters and containerized workloads are managed with maximum ease and efficiency!
-          link: /resources/pulumi-kubernetes-better-together/
+            Discover how to securely manage and inject secrets in Kubernetes applications with this hands-on Platform Engineering workshop.
+          link: /events/advanced-secrets-management-kubernetes/
           cta: RSVP for Workshop
 
 superpowers:
