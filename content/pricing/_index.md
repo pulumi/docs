@@ -62,6 +62,7 @@ tiers:
                   Everything in **Team**, plus:
                   - Unlimited members & teams
                   - Role-based access control (RBAC)
+                  - Organization Access Tokens
                   - SAML/SSO
                   - Secrets versioning
                   - Audit logs
