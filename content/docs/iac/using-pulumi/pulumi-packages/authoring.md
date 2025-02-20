@@ -170,7 +170,7 @@ From there, a Pulumi employee will work with you to get your Pulumi Package publ
 
 1. Review your pull request and trigger the automation that builds the package listing and the API docs from your schema.
 1. Merge upon approval of your PR
-1. Merge the resulting pull request in `pulumi/docs` that pulls the latest Registry content into pulumi.com and publishes it.
+1. On merging, CI will automatically publish your package listing and API docs to pulumi.com/registry.
 
 ## Congratulations
 
