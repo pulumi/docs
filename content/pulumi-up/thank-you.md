@@ -2,11 +2,11 @@
 title: "PulumiUP Registration Confirmation"
 type: page
 layout: pulumi-up-2023-confirmation
-meta_image: /images/pulumiup-2023/meta.png
+meta_image: /images/pulumiup-2023/2025-meta-thank-you.png
 meta_desc: |
     PulumiUP is a virtual conference with industry-recognized leaders, demos, and panel discussions about the future of IaC, Platform Engineering & DevOps and Cloud
 
-event_date: 2023-06-15T08:00:00-07:00
+event_date: 2025-05-06T08:00:00-07:00
 
 speakers:
   - name: Dax Raad
