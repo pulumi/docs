@@ -52,6 +52,10 @@ Moreover, because CDK depends on CloudFormation as the deployment engine, it sha
 
 Finally, while both CDK and Pulumi support automated testing, the scenarios they're able to support are quite different. For example, both CDK and Pulumi support unit testing, but Pulumi offers significant advantages as a result of the deep integration between language host and runtime. With Pulumi, you can run fast, in-memory (offline) unit tests that mock external calls to cloud providers, whereas with CDK, you're only able to run assertions against the rendered CloudFormation template synthesized by the CDK app, and there is no equivalent option for offline testing.
 
+## Pulumi vs. CDK: Better Together {#better-together}
+
+While there are differences and similiarities between Pulumi and AWS CDK, they can actually be used together for a more power experience in managing infrastructure. The pulumi-cdk library allows CDK code and constructs to be used directly in Pulumi programs, resulting in AWS resources being deployed and managed via Pulumi. Outputs of resources defined in a Pulumi program can be passed into AWS CDK constructs, and outputs from AWS CDK stacks can be used as inputs to other Pulumi resources. This allows CDK users to be able to use their existing constructs and access all the features of Pulumi Cloud (e.g., policy as code, drift detection, Insights and Copilot).
+
 The following table summarizes some additional similarities and differences between Pulumi and CDK, and the sections below the table go into more detail.
 
 ### Feature Comparisons
@@ -75,7 +79,7 @@ The following table summarizes some additional similarities and differences betw
 | [Adopt Existing Resources](#adopting) | Yes. Generates code as part of the import process | No |
 | [Import code from other IaC Tools](#import) | Yes | No |
 
-Getting started with Pulumi is easy if you already have experience with CDK or a general-purpose programming language. Follow our [Adopting Pulumi from AWS CloudFormation](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-aws/) or try our [CloudFormation conversion tool](/cf2pulumi/). You can also deploy almost any existing CDK construct with Pulumi. Follow our [Pulumi CDK Adapter documentation](/docs/iac/clouds/aws/guides/cdk/).
+Getting started with Pulumi is easy if you already have experience with CDK or a general-purpose programming language. Follow our [Adopting Pulumi from AWS CloudFormation](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-aws/) or try our [CloudFormation conversion tool](/cf2pulumi/). You can also deploy almost any existing CDK construct with Pulumi, allowing interoperability between the two IaC tools. Follow our [Pulumi CDK Adapter documentation](/docs/iac/clouds/aws/guides/cdk/).
 
 To deploy a simple program, follow our Get Started guide:
 
