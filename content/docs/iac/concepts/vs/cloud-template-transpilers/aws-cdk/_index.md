@@ -34,6 +34,10 @@ Choosing the right infrastructure as code tool is important, and we want you to 
 
 AWS Cloud Development Kit (CDK) is an open-source software development framework for defining AWS cloud resources with general-purpose programming languages. CDK is a transpiler that converts program code into AWS CloudFormation JSON/YAML templates and other assets and then submits them to AWS and the CloudFormation deployment service.
 
+## Why Choose Pulumi over AWS CDK?
+
+Pulumi has various benefits over AWS CDK across dimensions of speed, security, savings, and scale.
+
 ## Pulumi vs. CDK: Similarities {#similarities}
 
 Both Pulumi and CDK allow you to build and deploy infrastructure on AWS using familiar programming languages and tools, and both use a declarative infrastructure as code model built on the concept of _desired state_. In both Pulumi and CDK, desired state is expressed by declaring one or more cloud resources in code that’s evaluated by the deployment engine (though with CDK, that code is rendered CloudFormation text), and the deployment engine determines whether to create, update or destroy the resources of an infrastructure stack by comparing its last known state with the new state expressed by the code. Both have similar concepts for modularity and higher-level abstractions that encapsulate multiple resources. These are known as constructs in CDK and as Component Resources in Pulumi.
@@ -71,7 +75,9 @@ The following table summarizes some additional similarities and differences betw
 | [Adopt Existing Resources](#adopting) | Yes. Generates code as part of the import process | No |
 | [Import code from other IaC Tools](#import) | Yes | No |
 
-Getting started with Pulumi is easy if you already have experience with CDK or a general-purpose programming language. Follow our [Adopting Pulumi from AWS CloudFormation](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-aws/) or try our [CloudFormation conversion tool](/cf2pulumi/). To deploy a simple program, follow our Get Started guide:
+Getting started with Pulumi is easy if you already have experience with CDK or a general-purpose programming language. Follow our [Adopting Pulumi from AWS CloudFormation](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-aws/) or try our [CloudFormation conversion tool](/cf2pulumi/). You can also deploy almost any existing CDK construct with Pulumi. Follow our [Pulumi CDK Adapter documentation](/docs/iac/clouds/aws/guides/cdk/).
+
+To deploy a simple program, follow our Get Started guide:
 
 {{< get-started >}}
 
