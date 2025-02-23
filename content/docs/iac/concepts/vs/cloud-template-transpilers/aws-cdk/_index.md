@@ -38,6 +38,37 @@ AWS Cloud Development Kit (CDK) is an open-source software development framework
 
 Pulumi has various benefits over AWS CDK across dimensions of speed, security, savings, and scale.
 
+### Speed
+
+Pulumi offers faster development and deployment workflows compared to CDK due to its direct integration with cloud providers without going through a transpiler.
+
+- __Deployment__. Pulumi communicates directly with cloud providers, bypassing the intermediate step of generating CloudFormation templates as required by CDK. CDK depends on CloudFormation as the deployment engine, so it shares many of the speed limitations of CloudFormation (see [Pulumi vs. CloudFormation](/docs/concepts/vs/cloud-templates/cloudformation/).
+- __Development__. Pulumi's runtime engine allows for immediate feedback during deployment, enabling developers to debug and iterate more quickly. In contrast, CDK's reliance on CloudFormation introduces delays due to template synthesis and longer error resolution times.
+- __Testing__. Pulumi supports fast, in-memory unit tests that mock external calls, enabling developers to validate infrastructure without deploying it. CDK testing is limited to assertions against synthesized CloudFormation templates, which slows down the feedback loop.
+
+### Security
+
+Pulumi natively integrates security features with infrastructure provisioning.
+
+- Secrets Management. Pulumi has built-in secrets management that encrypts secrets both in transit and at rest. It also integrates seamlessly with external secrets managers like AWS Secrets Manager. CDK has no built-in support for managing or handling encrypted secrets.
+- Policy as Code. Pulumi enables your organization to enforce security and compliance policies during deployment using Pulumi CrossGuard's policy as code. This feature is tightly integrated into Pulumi's workflows, whereas CDK offers only limited support for such policies.
+
+### Savings
+
+Pulumi can deliver cost svaings over CDK due to its multi-cloud support and efficiency gains in inner development loop.
+
+- Multi-Cloud Support. Pulumi supports over 160 cloud providers, allowing your organization to optimize costs by choosing the most cost-effective provider for your needs. CDK is limited to AWS, which may lock you into higher costs AWS services. CDK usage will also require the use of another IaC system to manage non-AWS resources which will increase training time for new engineers and operational complexity.
+- Operational Efficiency. Pulumi’s faster deployments reduce engineering time spent on debugging and iteration cycles. This translates into lower development time costs compared to the more time-intensive workflows required by CDK.
+- Interoperability. Pulumi can adopt existing resources from other IaC tools, avoiding the need for costly migration and refactoring of existing IaC code. CDK lacks interoperability with other IaC tools, which requires full migration to CDK code in order to interact with existing resources.
+
+### Scale
+
+Pulumi is better equipped to handle large-scale deployments across multi-cloud environments.
+
+- Provider Ecosystem. Pulumi supports multi-cloud environments, Kubernetes, SaaS providers, and on-premises infrastructure. This flexibility enables organizations to scale across different platforms without being constrained by a single provider like AWS in the case of CDK.
+- Resource Limits. Pulumi does not impose hard limits on the number of resources in a stack, unlike CloudFormation (and by extension CDK), which has a cap of 500 resources in a template which hinders scalability in complex deployments.
+- Workflow Orchestration. With its Automation API, Pulumi allows programmatic management of infrastructure at scale. This feature enables dynamic orchestration workflows that are not possible with CDK's CLI-based execution model.
+
 ## Pulumi vs. CDK: Similarities {#similarities}
 
 Both Pulumi and CDK allow you to build and deploy infrastructure on AWS using familiar programming languages and tools, and both use a declarative infrastructure as code model built on the concept of _desired state_. In both Pulumi and CDK, desired state is expressed by declaring one or more cloud resources in code that’s evaluated by the deployment engine (though with CDK, that code is rendered CloudFormation text), and the deployment engine determines whether to create, update or destroy the resources of an infrastructure stack by comparing its last known state with the new state expressed by the code. Both have similar concepts for modularity and higher-level abstractions that encapsulate multiple resources. These are known as constructs in CDK and as Component Resources in Pulumi.
@@ -79,7 +110,7 @@ The following table summarizes some additional similarities and differences betw
 | [Adopt Existing Resources](#adopting) | Yes. Generates code as part of the import process | No |
 | [Import code from other IaC Tools](#import) | Yes | No |
 
-Getting started with Pulumi is easy if you already have experience with CDK or a general-purpose programming language. Follow our [Adopting Pulumi from AWS CloudFormation](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-aws/) or try our [CloudFormation conversion tool](/cf2pulumi/). You can also deploy almost any existing CDK construct with Pulumi, allowing interoperability between the two IaC tools. Follow our [Pulumi CDK Adapter documentation](/docs/iac/clouds/aws/guides/cdk/).
+Getting started with Pulumi is easy if you already have experience with CDK or a general-purpose programming language. Follow our [Adopting Pulumi from AWS CloudFormation](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-aws/) or try our [CloudFormation conversion tool](/cf2pulumi/). To deploy CDK constructs with Pulumi, follow our [Pulumi CDK Adapter documentation](/docs/iac/clouds/aws/guides/cdk/).
 
 To deploy a simple program, follow our Get Started guide:
 
