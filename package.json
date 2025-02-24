@@ -4,14 +4,9 @@
   "private": true,
   "license": "Apache-2.0",
   "scripts": {
-    "minify-css": "node scripts/minify-css.cjs",
-    "lint-markdown": "tsx ./scripts/lint/lint-markdown.ts",
-    "build-search-index": "tsx ./scripts/search/main.ts",
-    "check-urls": "tsx ./scripts/search/check-urls.ts",
-    "update-search-index": "tsx ./scripts/search/update-search-index.ts",
+    "minify-css": "node scripts/minify-css.js",
     "prepare": "husky"
   },
-  "type": "module",
   "dependencies": {
     "@aws-sdk/client-s3": "^3.427.0",
     "@fullhuman/postcss-purgecss": "^4.0.3",
@@ -20,7 +15,6 @@
     "@octokit/graphql": "^4.6.2",
     "@octokit/rest": "^18.5.3",
     "@slack/web-api": "^5.12.0",
-    "@types/node": "^22.13.1",
     "algoliasearch": "^4.17.0",
     "axios": "^1.7.4",
     "axios-retry": "^3.5.1",
@@ -34,19 +28,18 @@
     "http-server": "^0.12.1",
     "js-yaml": "^4.1.0",
     "jsdom": "^22.0.0",
+    "markdownlint": "^0.17.2",
     "parse-diff": "^0.8.1",
     "postcss": "^8.3.7",
     "postcss-cli": "^8.3.1",
     "sitemapper": "^3.2.2",
     "turndown": "^7.2.0",
-    "typedoc": "^0.27.0",
-    "typedoc-plugin-script-inject": "^1.0.0"
+    "typedoc": "^0.25.11",
+    "typedoc-plugin-script-inject": "^1.0.0",
+    "typescript": "^4.9.5"
   },
   "devDependencies": {
     "husky": "^9.0.11",
-    "markdownlint": "^0.37.4",
-    "prettier": "^2.6.2",
-    "tsx": "^4.19.2",
-    "typescript": "^5.7.0"
+    "prettier": "^2.6.2"
   }
 }

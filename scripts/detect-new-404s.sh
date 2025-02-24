@@ -11,4 +11,4 @@ s3_website_url="http://${destination_bucket}.s3-website.$(aws_region).amazonaws.
 
 echo "Checking ${s3_website_url} for new 404s..."
 # For now we don't want this to fail the build due to lots of flakiness, so always exit successfully.
-node scripts/detect-new-404s.cjs "https://pulumi.com" "${s3_website_url}" || true
+node scripts/detect-new-404s.js "https://pulumi.com" "${s3_website_url}" || true

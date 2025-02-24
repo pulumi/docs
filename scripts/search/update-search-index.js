@@ -1,6 +1,6 @@
-import { default as axios } from "axios";
-import * as settings from "./settings";
-import * as algoliasearch from "algoliasearch";
+const axios = require('axios');
+const settings = require("./settings");
+const algoliasearch = require("algoliasearch");
 
 // URL of the JSON file
 const registrySearchIndexUrl = "https://www.pulumi.com/registry/search-index.json";
@@ -19,7 +19,7 @@ if (!config.appID || !config.searchAPIKey || !config.adminAPIKey || !config.inde
 }
 
 // Initialize the Algolia search client.
-const client = algoliasearch.default(config.appID, config.adminAPIKey);
+const client = algoliasearch(config.appID, config.adminAPIKey);
 const algoliaIndex = client.initIndex(config.indexName);
 
 async function publishIndex() {

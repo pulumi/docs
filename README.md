@@ -211,7 +211,7 @@ search:
 
 In this case, the optional `search.keywords` field is included to cover the terms `data warehouse`, as those terms don't exist in the page's title or description. If it weren't, queries for `data warehouse` would fail to match this particular page.
 
-Certain fields also rank higher than others in terms of their overall relevance. (Titles and keywords, for example, are considered more relevant than descriptions.) For a full list of these rankings, along with all of the rules we apply to the search index, see the [search app in pulumi/docs](https://github.com/pulumi/docs/blob/master/scripts/search/settings.cjs).
+Certain fields also rank higher than others in terms of their overall relevance. (Titles and keywords, for example, are considered more relevant than descriptions.) For a full list of these rankings, along with all of the rules we apply to the search index, see the [search app in pulumi/docs](https://github.com/pulumi/docs/blob/master/scripts/search/settings.js).
 
 ### Keeping pages out of search results
 

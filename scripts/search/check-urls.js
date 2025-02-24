@@ -1,6 +1,6 @@
-import * as fs from "fs";
-import { default as axios } from "axios";
-import retry from 'axios-retry';
+const fs = require("fs");
+const axios = require("axios").default;
+const retry = require("axios-retry");
 
 async function checkSearchURLs(baseURL) {
 
@@ -76,6 +76,6 @@ checkSearchURLs(process.argv[2] || "https://www.pulumi.com")
     });
 
 // Exit non-zero when something goes wrong in the promise chain.
-process.on("unhandledRejection", (err: string) => {
-    throw new Error(err);
+process.on("unhandledRejection", error => {
+    throw new Error(error);
 });

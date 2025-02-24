@@ -288,13 +288,13 @@ $ kubectl delete --namespace=`pulumi stack output appsNamespaceName` pod/nginx s
 
 For a complete example of this in action, see [Simplifying Kubernetes
 RBAC in Amazon EKS][simplify-rbac].
+[simplify-rbac]: /blog/simplify-kubernetes-rbac-in-amazon-eks-with-open-source-pulumi-packages/
 
 {{% /choosable %}}
 
 See the [official Kubernetes RBAC docs][k8s-rbac-docs] for more details.
 
 <!-- markdownlint-disable url -->
-[simplify-rbac]: /blog/simplify-kubernetes-rbac-in-amazon-eks-with-open-source-pulumi-packages/
 [crosswalk-identity]: /docs/clouds/kubernetes/guides/identity/
 [k8s-rbac-docs]: https://kubernetes.io/docs/reference/access-authn-authz/rbac/
 [crosswalk-configure-defaults]: /docs/clouds/kubernetes/guides/configure-defaults/

@@ -2,7 +2,5 @@
 
 set -o errexit -o pipefail
 
-yarn run lint-markdown
+node ./scripts/lint/lint-markdown.js
 yarn prettier --check .
-# shellcheck disable=SC2046 # Intended splitting of file names
-yarn tsc --project tsconfig.scripts.json --noEmit
