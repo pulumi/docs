@@ -76,6 +76,6 @@ checkSearchURLs(process.argv[2] || "https://www.pulumi.com")
     });
 
 // Exit non-zero when something goes wrong in the promise chain.
-process.on("unhandledRejection", (err: string) => {
-    throw new Error(err);
+process.on("unhandledRejection", error => {
+    throw new Error(error);
 });
