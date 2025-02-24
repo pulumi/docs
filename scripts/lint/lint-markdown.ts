@@ -257,9 +257,7 @@ const filesToLint = getMarkdownFiles(`../../content`);
  *
  * See: https://github.com/DavidAnson/markdownlint
  */
-
-// Lint the markdown files.
-const result = markdownlint.lint({
+const opts = {
     // The array of markdown files to lint.
     files: filesToLint.files,
     config: {
@@ -308,12 +306,11 @@ const result = markdownlint.lint({
     },
     customRules: [
         {
-            parser: "markdownit",
             names: ["relref"],
             description: "Hugo relrefs are no longer supported. Use standard [Markdown](/links) instead",
             tags: ["hugo-relref"],
             function: (params, onError) => {
-                params.parsers.markdownit.tokens
+                params.tokens
                     .filter(token => {
                         return token.type === "inline";
                     })
@@ -328,7 +325,10 @@ const result = markdownlint.lint({
             },
         },
     ],
-});
+};
+
+// Lint the markdown files.
+const result = markdownlint.lint(opts);
 
 // Group the lint errors by file.
 const errors = groupLintErrorOutput(result);
