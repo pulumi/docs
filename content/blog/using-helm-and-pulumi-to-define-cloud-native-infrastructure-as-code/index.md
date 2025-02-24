@@ -42,7 +42,7 @@ Specifically, we:
 If you have the Azure command line, try [running the example](https://github.com/pulumi/examples/tree/master/classic-azure-ts-aks-mean)
 with `pulumi up`!
 
-```javascript
+{{< highlight javascript >}}
 import * as k8s from "@pulumi/kubernetes";
 import * as azure from "@pulumi/azure";
 import * as mongoHelpers from "./mongoHelpers";
@@ -90,7 +90,7 @@ const node = new k8s.helm.v2.Chart(
     },
     { providers: { kubernetes: k8sProvider }, dependsOn: mongoConnStrings }
 );
-```
+{{< /highlight >}}
 
 Pulumi supports deploying resources to all the major cloud vendors, as
 well as Kubernetes. Using the Pulumi programming model, it is possible

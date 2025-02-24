@@ -1,6 +1,6 @@
-import * as fs from "fs";
-import { default as axios } from "axios";
-import retry from 'axios-retry';
+const fs = require("fs");
+const axios = require("axios").default;
+const retry = require("axios-retry");
 
 async function checkSearchURLs(baseURL) {
 

@@ -1,10 +1,7 @@
-import * as fs from "fs";
-import * as yaml from "js-yaml";
-import * as markdownlint from "markdownlint/sync";
-import * as path from "path";
-import { fileURLToPath } from 'url';
-
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const fs = require("fs");
+const yaml = require("js-yaml");
+const markdownlint = require("markdownlint");
+const path = require("path");
 
 /**
  * REGEX for grabbing the front matter of a Hugo markdown file. Example:
@@ -277,6 +274,8 @@ const opts = {
         // Allow all code block styles in a file. Code block styles
         // are created equal and we shall not discriminate.
         MD046: false,
+        // Allow indents on unordered lists to be 4 spaces instead of 2.
+        MD007: { indent: 4 },
         // Allow duplicate headings.
         MD024: false,
         // Allow headings to be indendented.
@@ -289,20 +288,6 @@ const opts = {
         MD034: false,
         // Allow bold/italicized paragraphs
         MD036: false,
-        // Images should have alternate text (alt text)
-        MD045: false,
-        // Emphasis style
-        MD049: false,
-        // Strong style
-        MD050: false,
-        // Link fragments should be valid
-        MD051: false,
-        // Link and image reference definitions should be needed
-        MD053: false,
-        // Table pipe style
-        MD055: false,
-        // Table column count
-        MD056: false,
     },
     customRules: [
         {
@@ -328,7 +313,7 @@ const opts = {
 };
 
 // Lint the markdown files.
-const result = markdownlint.lint(opts);
+const result = markdownlint.sync(opts);
 
 // Group the lint errors by file.
 const errors = groupLintErrorOutput(result);

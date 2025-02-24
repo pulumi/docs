@@ -11,7 +11,7 @@ Heading to AWS re:Invent? Concerned about how you'll manage to get
 on bag? Or maybe you just like purple.
 
 Whatever the reason, the Pulumi team will be there all week at **Booth
-316, Startup Central, Aria Quad,** and we'd love to chat with you about
+316, Startup Central, Aria Quad, **and we'd love to chat with you about
 [AWS and Pulumi](/crosswalk/aws/).
 
 Catch up with us on serverless functions, [containers](/containers/) and

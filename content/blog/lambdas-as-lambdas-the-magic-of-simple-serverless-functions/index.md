@@ -96,7 +96,7 @@ look at how they look in action:
 
 Let's still walk through it to see what's happening. It can be a little
 subtle because we are mixing *deployment-time* code -- code that
-declares infrastructure as code resources -- and *runtime* code --
+declares infrastructure as code resources -- and *runtime *code --
 application code that runs as a function.
 
 First, we're just defining two simple resources: 1) an `s3.Bucket`,
