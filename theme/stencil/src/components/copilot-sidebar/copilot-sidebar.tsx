@@ -10,20 +10,32 @@ const ATLAS_LOCAL_STORAGE_KEY = "pulumi-ai-use-atlas";
     shadow: false,
 })
 export class CopilotSidebar {
+
+    //
+    // Props
+    //
+
     // The copilotSrc is URL where the copilot sidebar is hosted
     @Prop()
     copilotSrc: string;
 
+    // The atlasUrl is the URL where the Atlas web component is hosted
     @Prop()
     atlasUrl: string;
 
+    //
+    // Internal state
+    //
+
+    // Whether to show the sidebar (growthbook flag)
     @State()
     showSidebar = false;
 
+    // Whether to show the Atlas web component (local storage flag)
     @State()
     showAtlas = false;
 
-    // Add new state to track script loading
+    // Whether the Atlas scripts have been loaded
     @State()
     atlasScriptsLoaded = false;
 
@@ -31,7 +43,6 @@ export class CopilotSidebar {
         this.showSidebar = gb.isOn("copilot-on-docs");
         gb.setRenderer(() => (this.showSidebar = gb.isOn("copilot-on-docs")));
 
-        // pulumi-ai-use-atlas
         this.showAtlas = this.atlasUrl && window.localStorage.getItem(ATLAS_LOCAL_STORAGE_KEY) === "true";
         if (this.showAtlas) {
             await this.loadAtlasScripts();
@@ -55,10 +66,6 @@ export class CopilotSidebar {
             return;
         }
 
-        // Using import() requires
-        // 1. Telling webpack to ignore the module.
-        // 2. Telling tsconfig to ignore the module.
-        // So we use a simple promise to load the script.
         return new Promise((resolve, reject) => {
             const script = document.createElement("script");
             script.src = src;
@@ -76,6 +83,7 @@ export class CopilotSidebar {
             if (!this.atlasScriptsLoaded) {
                 return <Host></Host>;
             }
+
             return (
                 <Host>
                     <pulumi-copilot hostApp="docs" apiUrl={this.atlasUrl} />
