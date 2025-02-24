@@ -6,8 +6,8 @@ h1: Pulumi vs AWS Cloud Development Kit (CDK)
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
-        name: AWS CDK
-        parent: iac-concepts-compare
+        name: Pulumi vs AWS Cloud Development Kit (CDK)
+        parent: cloud-template-transpilers
         weight: 3
     concepts:
         parent: vs
