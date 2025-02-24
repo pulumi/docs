@@ -1,7 +1,8 @@
-import { Component, h, Prop, State, Host } from "@stencil/core";
+import { Component, h, Host, Prop, State } from "@stencil/core";
 import { gb } from "../../util/util";
 
 const ATLAS_LOCAL_STORAGE_KEY = "pulumi-ai-use-atlas";
+
 
 @Component({
     tag: "copilot-sidebar",
@@ -28,11 +29,7 @@ export class CopilotSidebar {
 
     async componentWillLoad() {
         this.showSidebar = gb.isOn("copilot-on-docs");
-        gb.setRenderer(() => {
-            const v = gb.isOn("copilot-on-docs");
-            console.log("gb.isOn", v);
-            return (this.showSidebar = v);
-        });
+        gb.setRenderer(() => (this.showSidebar = gb.isOn("copilot-on-docs")));
 
         // pulumi-ai-use-atlas
         this.showAtlas = this.atlasUrl && window.localStorage.getItem(ATLAS_LOCAL_STORAGE_KEY) === "true";
@@ -75,19 +72,19 @@ export class CopilotSidebar {
     }
 
     render() {
-        if (!this.showSidebar) {
-            return <Host></Host>;
-        }
-
         if (this.showAtlas) {
             if (!this.atlasScriptsLoaded) {
-                return <Host>Loading Copilot...</Host>;
+                return <Host></Host>;
             }
             return (
                 <Host>
-                    <pulumi-copilot hostApp="docs" orgId="Anonymous" apiUrl={this.atlasUrl} />
+                    <pulumi-copilot hostApp="docs" apiUrl={this.atlasUrl} />
                 </Host>
             );
+        }
+
+        if (!this.showSidebar) {
+            return <Host></Host>;
         }
 
         return (
