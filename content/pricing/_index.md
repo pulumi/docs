@@ -306,12 +306,6 @@ comparison_table:
                     - content: $0.37, after 200 free
                     - content: $1.10 / Custom
                     - content: Custom
-                - title: Cost per minute
-                  items:
-                    - content: _blank
-                    - content: $0.01
-                    - content: $0.01 / Custom
-                    - content: $0.01 / Custom
                 - title: Minutes included/month
                   items:
                     - content: 500
