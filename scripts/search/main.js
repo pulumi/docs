@@ -1,5 +1,5 @@
-import * as fs from "fs";
-import { getPrimaryObjects, getSecondaryObjects, getObjectID } from "./page";
+const fs = require("fs");
+const page = require("./page");
 
 // As part of the Hugo build, we generate a JSON file at /index.json containing a record for every
 // page of the website. We use this file to generate primary search records for Algolia.
@@ -9,12 +9,12 @@ const hugoPageItems = JSON.parse(fs.readFileSync(pathToFullSiteJSON, "utf-8").to
 // Generate a list of primary page objects. This list contains one record for every page of the site.
 console.log("\nBuilding search index...");
 console.log(" ↳ Building primary page objects...");
-const primaryPageObjects = getPrimaryObjects(hugoPageItems);
+const primaryPageObjects = page.getPrimaryObjects(hugoPageItems);
 
 // Generate a list of secondary objects. This list contains additional records for things like H2
 // headings and other DOM-resident content that we can't get as easily by other means.
 console.log(" ↳ Building secondary page objects...");
-const secondaryPageObjects = getSecondaryObjects(primaryPageObjects);
+const secondaryPageObjects = page.getSecondaryObjects(primaryPageObjects);
 
 // Incorporate any additional objects. This list is provided as a hand-crafted list for now, because pragmatism,
 // but it should probably be pulled out into a proper module at some point.
@@ -93,7 +93,7 @@ const additionalObjects = [
     },
 ].map(item => {
     return {
-        "objectID": getObjectID({ href: item.href }),
+        "objectID": page.getObjectID({ href: item.href }),
         ...item,
     };
 });
