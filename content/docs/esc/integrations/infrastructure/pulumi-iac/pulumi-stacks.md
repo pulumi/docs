@@ -32,9 +32,9 @@ values:
 
 ## Inputs
 
-| Property | Type                                   | Description                                   |
-|----------|----------------------------------------|-----------------------------------------------|
-| `stacks` | map[string][PulumiStack](#pulumistack) | A map of names to stacks to get outputs from. |
+| Property | Type                                   | Description                                                                                  |
+|----------|----------------------------------------|----------------------------------------------------------------------------------------------|
+| `stacks` | map[string][PulumiStack](#pulumistack) | A map of names to stacks to get outputs from. The names contains all outputs from the stack. |
 
 ### PulumiStack
 
