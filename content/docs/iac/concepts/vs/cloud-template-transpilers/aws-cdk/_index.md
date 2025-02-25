@@ -40,7 +40,7 @@ Pulumi and AWS CDK both utilize general-purpose programming languages for infras
 
 ### Scale
 
-## Why choose Pulumi over AWS CDK?
+Pulumi is better equipped to handle large-scale deployments across multi-cloud environments.
 
 - __Workflow orchestration__: With its Automation API, Pulumi allows for the programmatic management of infrastructure at scale. This feature enables dynamic orchestration workflows that are not possible with CDK's CLI-based execution model.
 - __Multi-cloud support__: Pulumi supports multi-cloud environments, Kubernetes, SaaS providers (e.g., Datadog, Databricks, Okta), and on-premises infrastructure. This flexibility enables organizations to scale across different platforms without being constrained by a single provider like AWS in the case of CDK.
