@@ -104,7 +104,7 @@ Perhaps the best feature of Pulumi Cloud is that "it just works" so you can get 
 
 Pulumi Cloud is the easiest way to adopt Pulumi's open source IaC tool at scale, securely, reliably, and collaboratively.
 
-That said, DIY backends are fully supported and this article's goal is to ensure you can make an educated decision about what is better suited for your use case. The[state and backends topic](/docs/iac/concepts/state-and-backends/) describes in-depth how Pulumi IaC uses Pulumi Cloud and DIY backends and other architectural considerations.
+That said, DIY backends are fully supported and this article's goal is to ensure you can make an educated decision about what is better suited for your use case. The [state and backends topic](/docs/iac/concepts/state-and-backends/) describes in-depth how Pulumi IaC uses Pulumi Cloud and DIY backends and other architectural considerations.
 
 A complete list of Pulumi Cloud's features and capabilities is available [on the pricing page](/pricing#compare). For more details about adopting Pulumi Cloud in your team, [see the onboarding guide](/docs/pulumi-cloud/get-started/onboarding-guide). This guide also includes best practices to help you completely adopt the full platform.
 
