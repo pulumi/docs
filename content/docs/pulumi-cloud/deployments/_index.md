@@ -38,7 +38,7 @@ Pulumi Deployments is a managed CI/CD platform purpose-built for infrastructure 
 ### Platform engineering features
 
 - **REST API**: Automate infrastructure operations with our [REST API](/docs/pulumi-cloud/deployments/api/) to build custom workflows and self-service platforms.
-- **Deployment Settings**: Define all deployment requirements (source code, credentials, environment variables) in a single configuration, either through the UI or declaratively using the [Pulumi Cloud Provider](/docs/providers/pulumiservice).
+- **Deployment Settings**: Define all deployment requirements (source code, credentials, environment variables) in a single configuration, either through the UI or declaratively using the [Pulumi Cloud Provider](/registry/packages/pulumiservice).
 - **Multiple Triggers**: Trigger deployments via git push, REST API, UI button, or schedule to support any workflow.
 - **Best Practices Built-in**: Follow our [deployment patterns](/docs/pulumi-cloud/deployments/reference/) to implement infrastructure automation at scale.
 
