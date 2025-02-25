@@ -302,26 +302,26 @@ comparison_table:
               rows:
                 - title: Price per resource/month
                   items:
-                    - content: 200 free
+                    - content: _blank
                     - content: $0.37, after 200 free
                     - content: $1.10 / Custom
                     - content: Custom
                 - title: Minutes included/month
                   items:
-                    - content: 500
+                    - content: _blank
                     - content: 3,000
                     - content: 3,000
                     - content: 3,000                  
                 - title: Resource search
                   link: /docs/insights/search/
                   items:
-                    - content: _check
+                    - content: _blank
                     - content: _check
                     - content: _check
                     - content: _check
                 - title: Per query limits in UI
                   items:
-                    - content: 2K results
+                    - content: _blank
                     - content: 2K results
                     - content: 10K results
                     - content: 10K results
@@ -344,7 +344,7 @@ comparison_table:
                   items:
                     - content: _blank
                     - content: _blank
-                    - content: _check
+                    - content: Available
                     - content: _check
         ####
         # Key Capabilities
