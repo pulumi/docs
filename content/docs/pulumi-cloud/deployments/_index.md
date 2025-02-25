@@ -73,7 +73,7 @@ Pulumi Deployments combines three key components to enable secure, scalable infr
 
 The fastest way to get started with Pulumi Deployments is to:
 
-1. Create a new project using our [New Project Wizard](link-to-wizard), which will automatically configure Deployments for your repository
+1. Create a new project using the Pulumi Cloud [New Project Wizard](/docs/pulumi-cloud/developer-portals/new-project-wizard), which will automatically configure Deployments for your repository
 1. Follow our [Getting Started guide](/docs/pulumi-cloud/deployments/get-started) to configure an existing project
 1. Explore our [deployment patterns](/docs/pulumi-cloud/deployments/using) to implement common infrastructure automation scenarios
 
