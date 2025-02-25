@@ -1,20 +1,20 @@
 ---
-title_tag: Configure OpenID Connect | Pulumi ESC
-meta_desc: This page provides an overview of how Pulumi ESC can integrate with OIDC providers
-title: Configure OpenID with ESC
-h1: Configure OpenID Connect Provider with ESC
+title_tag: OpenID Connect provider integration | Pulumi ESC
+meta_desc: This page provides an overview of how to configure OpenID Connect integration between
+           Pulumi ESC and supported cloud providers.
+title: OpenID Connect provider integration with ESC
+h1: OpenID Connect provider integration for ESC
 meta_image: /images/docs/meta-images/docs-meta.png
-
 menu:
   esc:
-    name: OIDC
-    parent: pulumi-esc-access-management
-    weight: 2
+    name: OIDC Provider
+    parent: esc-integrations
+    weight: 5
 ---
 
-Pulumi ESC supports [OpenID Connect (OIDC) integration](/docs/pulumi-cloud/oidc/), enabling secure user authentication and authorization across various services by leveraging signed, short-lived tokens issued by the Pulumi Cloud.
+Pulumi can be configured to act as an OpenID Connect (OIDC) provider, issuing signed, short-lived tokens. These tokens can then be exchanged by external systems for temporary cloud provider credentials, eliminating the need for hardcoded credentials.
 
-## OIDC configuration
+## OIDC authentication configuration
 
 Set up OIDC between Pulumi ESC and your cloud provider:
 
@@ -88,13 +88,13 @@ When importing multiple environments into Pulumi IaC Stack Config, each environm
 
 ## Configuring trust relationships
 
-As part of the process that exchanges your service's OIDC token for cloud provider credentials, the cloud provider must check the OIDC token's claims against the conditions configured in the provider's trust relationship. The configuration of a trust relationship varies depending on the cloud provider, but typically uses at least the Audience, Subject, and Issuer claims. These claims can be used to restrict trust to specific organizations, projects, stacks, environments:
+As part of the process that exchanges your service's OIDC token for cloud provider credentials, the cloud provider must check the OIDC token's claims against the conditions configured in the provider's trust relationship. The configuration of a trust relationship varies depending on the cloud provider, but typically uses at least the **Audience**, **Subject**, and **Issuer** claims. These claims can be used to restrict trust to specific organizations, projects, stacks, environments:
 
 - The Issuer claim is typically used to validate that the token is properly signed. The issuer's public signing key is fetched and used to validate the token's signature.
-- The Audience claim can vary between Deployment and ESC. For deployments this claim contains the name of the organization associated with the deployment. For ESC this claim contains the name of the organization, prefixed with the provider's platform (`aws`, `azure`, `gcp`). You can use this claim to restrict credentials to a specific organization or organizations.
+- The Audience claim contains the name of the organization, prefixed with the provider's platform (`aws`, `azure`, `gcp`). You can use this claim to restrict credentials to a specific organization or organizations.
 - The Subject claim contains a variety of information about the service. You can use this claim to restrict credentials to a specific organization/scope.
 - The various custom claims contain the same information as the Subject claim. If your cloud provider supports configuring trust relationships based on custom claims, you can use these claims for the same purposes as the Subject claim.
 
-The Subject and custom claims are particularly useful for configuring trust relationships, as they allow you to set very fine-grained conditions for credentials.
+The subject and custom claims are particularly useful for configuring trust relationships, as they allow you to set very fine-grained conditions for credentials.
 
-For further details on OIDC integration and managing Pulumi Cloud access see our [OIDC Overview documentation](/docs/pulumi-cloud/access-management/oidc/).
+For further details on additional OIDC integration and managing Pulumi Cloud access see our [OIDC Overview documentation](/docs/pulumi-cloud/access-management/oidc/).

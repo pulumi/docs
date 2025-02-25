@@ -18,6 +18,8 @@ Pulumi ESC provides identity and access management (IAM) controls to secure your
 
 - [Teams and Role-based access control(RBAC)](/docs/pulumi-cloud/access-management/teams/): Manage permissions at the organization and environment levels.
 - [Access tokens](/docs/pulumi-cloud/access-management/access-tokens/): Securely authenticate and automate ESC operations.
-- [OpenID Connect (OIDC)](/docs/esc/access-management/oidc/): Enable single sign-on (SSO) and federated authentication.
+- [OpenID Connect (OIDC)](/docs/esc/access-management/oidc/): Integrate with trusted third-party identity providers to authenticate users.
+- [SAML single sign-on (SSO)](saml/): Configure SAML-based authentication for centralized access management.
+- [SCIM](scim/): Simplify user provisioning with the SCIM protocol
 
-For a deeper dive into environment-specific access control, see the [Pulumi ESC access control](/docs/esc/access-management/access-control/) documentation.
+For additional details on configuring environment-specific access controls, refer to the [Pulumi ESC access control](/docs/esc/access-management/access-control/) documentation.

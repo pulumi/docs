@@ -5,10 +5,12 @@ title: Environment Permissions
 h1: Environment organization permissions
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  cloud:
+  esc:
     name: Environment permissions
-    parent: pulumi-cloud-access-management
+    parent: pulumi-esc-access-management
     weight: 3
+aliases:
+  - /docs/pulumi-cloud/access-management/environment-permissions/
 ---
 
 Pulumi ESC provides role-based access control (RBAC) to manage access to environments and their secrets and configurations. This ensures that users and teams only have the necessary permissions to view, modify, or use specific environments in infrastructure deployments.
