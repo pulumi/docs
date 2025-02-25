@@ -6,6 +6,9 @@ meta_desc: |
     reduce costs and scale their services.
 meta_image: "/images/case-studies/case-studies-logos.png"
 
+aliases:
+    - /case-studies/lykke/
+
 featured_customer:
   name: unity
   headline_stat: 80%
