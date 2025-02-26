@@ -157,6 +157,20 @@
         width: auto !important;
         margin-top: 4px;
     }
+
+    .hs-form-radio {
+        @apply list-none;
+
+        .hs-form-radio-display {
+            @apply inline-flex;
+        }
+
+        .hs-input {
+            @apply mr-3;
+
+            width: fit-content !important;
+        }
+    }
 }
 
 .waitlist-form {
