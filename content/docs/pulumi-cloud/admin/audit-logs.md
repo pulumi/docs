@@ -38,7 +38,7 @@ of the call the user made.
 
 ## View Audit Logs
 
-Audit logs are a Enterprise Edition and Business Critical feature. Only organization admins can view audit logs.
+Audit logs are an  Enterprise Edition and Business Critical feature. Only organization admins can view audit logs.
 
 To view audit logs:
 
@@ -207,7 +207,7 @@ Custom defined keys:
 | Stack Update Completed                   | indicates the completion of a stack update                                                                       |
 | Stack Update Started                     | indicates the starting of a stack update                                                                         |
 | Team Created                             | indicates the creation of a team in an organization                                                              |
-| Team Deleted                             | indicates the deletion of a team from organization                                                               |
+| Team Deleted                             | indicates the deletion of a team from an organization                                                            |
 | Team Updated                             | indicates the updating of a team in an organization                                                              |
 | User Added New Identity to Their Account | indicates a user has associated a new identity with their Pulumi account                                         |
 | User Login                               | indicates a user has successfully logged into the Pulumi Cloud                                                   |
