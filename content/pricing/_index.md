@@ -20,6 +20,9 @@ tiers:
               esc_price: $0
               esc_unit:
               esc_note:
+              insights_price: $0
+              insights_unit:
+              insights_note:
               primary_cta: Create a free organization
               primary_cta_link: /docs/quickstart
               items: |
@@ -36,6 +39,9 @@ tiers:
               esc_price: $0.50
               esc_unit: per secret/month
               esc_note:
+              insights_price: $0.37
+              insights_unit: per resource/month
+              insights_note:
               primary_cta: Start free trial
               primary_cta_link: https://app.pulumi.com/signup
               items: |
@@ -54,6 +60,9 @@ tiers:
               esc_price: $0.75
               esc_unit: per secret/month
               esc_note: (Volume pricing available)
+              insights_price: $1.10
+              insights_unit: per resource/month
+              insights_note: (Volume pricing available)
               primary_cta: Start free trial
               primary_cta_link: https://app.pulumi.com/signup
               secondary_cta: Contact Sales
@@ -76,6 +85,9 @@ tiers:
               esc_price: Custom
               esc_unit:
               esc_note:
+              insights_price: Custom
+              insights_unit:
+              insights_note:
               primary_cta: Contact Sales
               primary_cta_link: /contact/?form=sales
               items: |
@@ -288,16 +300,28 @@ comparison_table:
             ## Pulumi Insights Table
             - header: Pulumi Insights
               rows:
+                - title: Price per resource/month
+                  items:
+                    - content: _blank
+                    - content: $0.37, after 200 free
+                    - content: $1.10 / Custom
+                    - content: Custom
+                - title: Minutes included/month
+                  items:
+                    - content: _blank
+                    - content: 3,000
+                    - content: 3,000
+                    - content: 3,000                  
                 - title: Resource search
                   link: /docs/insights/search/
                   items:
-                    - content: _check
+                    - content: _blank
                     - content: _check
                     - content: _check
                     - content: _check
                 - title: Per query limits in UI
                   items:
-                    - content: 2K results
+                    - content: _blank
                     - content: 2K results
                     - content: 10K results
                     - content: 10K results
@@ -314,6 +338,13 @@ comparison_table:
                     - content: _blank
                     - content: _blank
                     - content: _check
+                    - content: _check
+                - title: Policy enforcement
+                  link: /docs/insights/policy-as-code/
+                  items:
+                    - content: _blank
+                    - content: _blank
+                    - content: Available
                     - content: _check
         ####
         # Key Capabilities
