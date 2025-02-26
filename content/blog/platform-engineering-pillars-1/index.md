@@ -110,7 +110,7 @@ This data flood without clear insights leaves developers reactive rather than pr
 
 By improving observability in your platform, you transform it from an operations function into a developer superpower. Developers gain the insights they need to build better applications with greater confidence, using AI to focus on what truly matters.
 
-<img align="right" style="margin: 15px;" width="300px" src="goverance.png">
+<img align="left" style="margin: 15px;" width="300px" src="goverance.png">
 
 ### **Problem: Balancing Autonomy with Control and Cost Efficiency**
 
@@ -134,4 +134,15 @@ These six challenges represent the core obstacles standing between your organiza
 
 The upcoming articles in this series will explore each area in depth, with practical strategies and real-world examples to help you build an effective internal developer platform.
 
-Provisioning automation forms the foundation for all other platform capabilities, making it the natural starting point for your platform engineering journey and that’s what’ss up next in the series.
+Ready to implement these principles in your organization? Check out "Platform Engineering: Recommended Practices for Infrastructure as Code". It provides detailed guidance on building scalable internal developer platforms.
+
+* How to structure infrastructure code for scalability
+* Managing development environments with developer stacks and Git branches
+* Designing modular and reusable Pulumi projects
+* Implementing cross-stack dependencies with stack references
+* Setting up RBAC, security, and governance at scale
+* Automating infrastructure management with stack orchestration
+
+[**Get the Free Platform Engineering Ebook →**](https://info.pulumi.com/ebook/platform-engineering-iac-recommended-practices)
+
+And don't miss the next article in this series, where we'll explore Provisioning as the foundation of your developer platform journey.
