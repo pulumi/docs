@@ -8,6 +8,10 @@ layout: community-engineering/single
 aliases:
   - /engin
 talks:
+- event: Kargo Community Meeting
+  title: Pulumi + Kargo
+  url: https://x.com/akuityio/status/1894765745499689426
+  date: 2025-02-26T15:00:00.000-07:00  
 - event: "Konstruct Live Stream"
   title: "Progressive Infrastructure Delivery using Kargo and Argo CD"
   url: "https://www.youtube.com/watch?v=zoL4N7EyLGU"
