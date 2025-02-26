@@ -9,19 +9,21 @@ authors:
 tags:
     - platform-engineering
 social:
-    twitter: "🏗️ Introducing our new series on Platform Engineering Pillars! Learn how to transform infrastructure chaos and developer friction into a streamlined development experience. Dive into the 6 essential capabilities every successful platform needs."
-    linkedin: "Platform Engineering is transforming how organizations build and deliver software. But what makes a successful developer platform?
+    twitter: >
+        Introducing our new series on Platform Engineering Pillars! Learn how to transform infrastructure chaos and developer friction into a streamlined development experience. Dive into the 6 essential capabilities every successful platform needs.
+    linkedin: > 
+        Platform Engineering is transforming how organizations build and deliver software. But what makes a successful developer platform?
 
-In this new series, we explore the 6 essential pillars of Platform Engineering - from infrastructure automation to governance at scale. Learn how to overcome common challenges and create a platform that truly empowers developers.
+        In this new series, we explore the 6 essential pillars of Platform Engineering - from infrastructure automation to governance at scale. Learn how to overcome common challenges and create a platform that truly empowers developers.
 
-Read the first article to discover:
-• Why traditional approaches create friction
-• The core capabilities every platform needs
-• How to start your platform engineering journey"
+        Read the first article to discover:
+        • Why traditional approaches create friction
+        • The core capabilities every platform needs
+        • How to start your platform engineering journey
 ---
 Software drives innovation. Development teams face pressure to ship features faster. But speed collides with infrastructure complexity. Developers struggle with cloud setups, juggle scattered tools, and wait on operations teams for resources. The result is friction and slower innovation.
 
-This is where Platform Engineering comes in. It helps developers move faster by creating tools that actually work. A good internal platform lets teams self-serve infrastructure, find documentation, follow best practices, and focus on what they do best: writing useful software.
+This is where [Platform Engineering](https://www.pulumi.com/what-is/what-is-platform-engineering/) comes in. It helps developers move faster by creating tools that actually work. A good internal platform lets teams self-serve infrastructure, find documentation, follow best practices, and focus on what they do best: writing useful software.
 
 Building a platform isn't about finding one perfect tool. It's about assembling the right pieces, or pillars. These pillars define what every successful internal developer platform needs.
 
@@ -33,7 +35,7 @@ This series explores these key pillars of Platform Engineering, offering a pract
 
 ### **Problem: Infrastructure Chaos and Bottlenecks**
 
-Developers face many pain points with manual provisioning:
+Developers face many pain points with manual provisioning, which is why [Infrastructure as Code](https://www.pulumi.com/what-is/what-is-infrastructure-as-code/) has become so essential:
 
 * Inconsistent Environments: Dev, staging, and production drift apart. "Works on my machine" becomes everyone's excuse.
 * Slow Processes: Console clicking and waiting on ops creates bottlenecks. Developers wait days for basic infrastructure.
