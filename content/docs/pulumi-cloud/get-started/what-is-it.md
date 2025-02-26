@@ -16,9 +16,9 @@ So you've chosen to use Pulumi infrastructure as code, and are now deciding how 
 
 ## In Summary
 
-Pulumi Cloud helps teams adopt collaborative, secure, and robust cloud engineering practices. Pulumi's infrastructure as code tool is [open source](https://github.com/pulumi), and by default it leverages Pulumi Cloud to make adopting IaC in your team easier, secure, and reliable out-of-the-box.
+Pulumi Cloud is a managed service that helps teams adopt collaborative, secure, and robust cloud engineering practices. This includes infrastructure as code, secrets management, and continuous enforcement of cloud policies. Pulumi's flagship infrastructure as code tool is [open source](https://github.com/pulumi) and is how many community members initially learn about Pulumi. The two are related in that Pulumi IaC uses Pulumi Cloud by default to make adopting IaC in your team easier, secure, and reliable out-of-the-box and automatically.
 
-Pulumi IaC can be used with a so-called "DIY" backend if you prefer, but it comes with some tradeoffs outlined below. From a numbers perspective, Pulumi Cloud is the most popular way to use Pulumi -- so if you choose it, you're in good company.
+Pulumi IaC can be used with a so-called "DIY" backend if you prefer, which comes with some tradeoffs outlined below. From an adoption perspective, Pulumi Cloud is the most popular way to use Pulumi, especially within a team -- so if you choose it, you're in good company.
 
 {{% notes "info" %}}
 An analogy to other software you may be familiar with is that, just like Git is fully open source and you can host, secure, and manage repositories yourself, so too can you with hosting your Pulumi infrastructure as code projects and stacks. It is much easier, especially in a team, however, to use Git in conjunction with GitHub, as it features easy security, reliability, and collaboration, as well as powerful features like Pull Requests. A similar dynamic exists with Pulumi and Pulumi Cloud.
