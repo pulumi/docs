@@ -2,6 +2,7 @@ config:
   aws:region: us-west-2
   www.pulumi.com:addSecurityHeaders: "true"
   www.pulumi.com:copilotUrl: https://app.pulumi.com/ai
+  www.pulumi.com:atlasUrl: https://app.pulumi.com/pulumi-ai/atlas
   www.pulumi.com:certificateArn: "arn:aws:acm:us-east-1:388588623842:certificate/9db6a76b-f7ba-465b-ab96-ce1d3b8ae02c"
   www.pulumi.com:doAIAnswersRewrites: "true"
   www.pulumi.com:doEdgeRedirects: "true"
