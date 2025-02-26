@@ -1,7 +1,7 @@
 ---
 # Name of the event, <= 60 characters
-title: PulumiUP 2025 - Asia Pacific
-meta_desc: Attend to hear from industry leaders and learn best practices, real-world solutions, and lessons learned in DevOps, Platform Engineering, and Security.
+title: PulumiUP 2025 - Asia Pacific Edition
+meta_desc: Join our flagship virtual event to explore enterprise platform engineering stories, demos, and expert insights on automating infrastructure with Pulumi.
 meta_image:
 
 # A featured webinar will display first in the list.
@@ -31,7 +31,7 @@ url_slug: /pulumi-up
 # Content for the left hand side section of the page.
 main:
     # Webinar title.
-    title: PulumiUP 2025 - Asia Pacific
+    title: PulumiUP 2025 - Asia Pacific Edition
 
     event_type: event # workshop | event
 
