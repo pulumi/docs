@@ -8,6 +8,7 @@ authors:
     - adam-gordon-bell
 tags:
     - platform-engineering
+    - platform-engineering-pillars
 social:
     twitter: >
         Introducing our new series on Platform Engineering Pillars! Learn how to transform infrastructure chaos and developer friction into a streamlined development experience. Dive into the 6 essential capabilities every successful platform needs.
@@ -27,7 +28,7 @@ This is where [Platform Engineering](https://www.pulumi.com/what-is/what-is-plat
 
 Building a platform isn't about finding one perfect tool. It's about assembling the right pieces, or pillars. These pillars define what every successful internal developer platform needs.
 
-This series explores these key pillars of Platform Engineering, offering a practical guide to building platforms that remove barriers to developer speed. Each pillar addresses a specific challenge organizations face when scaling developer productivity. The first challenge is overcoming infrastructure chaos.
+[This series](/blog/tag/platform-engineering-pillars/) explores these key pillars of Platform Engineering, offering a practical guide to building platforms that remove barriers to developer speed. Each pillar addresses a specific challenge organizations face when scaling developer productivity. The first challenge is overcoming infrastructure chaos.
 
 <!--more-->
 
