@@ -8,31 +8,67 @@
             <div class="lg:w-7/12">
                 {{ $authorData := index $.Site.Data.team.team .Data.Term }}
                 {{ $blogPosts := where .Data.Pages "Section" "blog" }}
-                {{ $paginator := .Paginate $blogPosts.ByDate.Reverse }}
+                
+                <!-- List of tags that should be displayed in chronological order (oldest first) -->
+                {{ $chronologicalTags := slice "platform-engineering-pillars" "zephyr" }}
+                
+                <!-- Conditionally set sort order but keep everything else the same -->
+                {{ if in $chronologicalTags .Data.Term }}
+                    <!-- Chronological order (oldest first) -->
+                    {{ $blogPosts := where .Data.Pages "Section" "blog" }}
+                    {{ $paginator := .Paginate $blogPosts.ByDate }}
 
+                    <header>
+                        <h1 class="no-anchor">
+                            Posts Tagged
+                            <span class="text-blue-600">
+                                {{ .Data.Term | lower }}
+                            </span>
+                        </h1>
+                    </header>
 
-                <header>
-                    <h1 class="no-anchor">
-                        Posts Tagged
-                        <span class="text-blue-600">
-                            {{ .Data.Term | lower }}
-                        </span>
-                    </h1>
-                </header>
+                    {{ range $paginator.Pages }}
+                        <article class="my-8 pb-8 border-b border-gray-200">
+                            <h2><a data-track="{{ .Title | urlize }}" href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+                            <div class="flex items-center">
+                                <time>
+                                    {{ .Date.Format "Monday, Jan 2, 2006" }}
+                                </time>
+                            </div>
+                            <section>
+                                {{ partial "blog/poster" . }}
+                                {{ partial "blog/summary" . }}
+                            </section>
+                        </article>
+                    {{ end }}
+                {{ else }}
+                    <!-- Default reverse chronological order (newest first) -->
+                    {{ $blogPosts := where .Data.Pages "Section" "blog" }}
+                    {{ $paginator := .Paginate $blogPosts.ByDate.Reverse }}
 
-                {{ range $paginator.Pages }}
-                    <article class="my-8 pb-8 border-b border-gray-200">
-                        <h2><a data-track="{{ .Title | urlize }}" href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-                        <div class="flex items-center">
-                            <time>
-                                {{ .Date.Format "Monday, Jan 2, 2006" }}
-                            </time>
-                        </div>
-                        <section>
-                            {{ partial "blog/poster" . }}
-                            {{ partial "blog/summary" . }}
-                        </section>
-                    </article>
+                    <header>
+                        <h1 class="no-anchor">
+                            Posts Tagged
+                            <span class="text-blue-600">
+                                {{ .Data.Term | lower }}
+                            </span>
+                        </h1>
+                    </header>
+
+                    {{ range $paginator.Pages }}
+                        <article class="my-8 pb-8 border-b border-gray-200">
+                            <h2><a data-track="{{ .Title | urlize }}" href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+                            <div class="flex items-center">
+                                <time>
+                                    {{ .Date.Format "Monday, Jan 2, 2006" }}
+                                </time>
+                            </div>
+                            <section>
+                                {{ partial "blog/poster" . }}
+                                {{ partial "blog/summary" . }}
+                            </section>
+                        </article>
+                    {{ end }}
                 {{ end }}
 
                 {{ partial "blog/paginator.html" . }}

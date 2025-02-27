@@ -47,12 +47,9 @@ outputs:
   section:
     - HTML
 
-disableKinds:
-  - taxonomy
-
 taxonomies:
-  author: authors
   tag: tags
+  author: authors
   collection: collections
 
 permalinks:
