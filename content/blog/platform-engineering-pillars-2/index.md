@@ -17,7 +17,7 @@ Provisioning is the first [pillar of platform engineering](/blog/tag/platform-en
 
 By defining cloud resources as code and automating deployments, platform engineering teams ensure every environment – development, staging, and production – stays consistent and maintainable. This cuts down on configuration drift, reduces manual work, and supports auditable, collaborative workflows for every change.
 
-Let’s explore how platform engineering teams can achieve this by version-controlling infrastructure, automating deployments, separating environments properly, and limiting console interventions. By applying these principles, teams can create a platform where developers can move fast without breaking things—and where infrastructure supports innovation rather than slowing it down.
+Let’s explore how platform engineering teams can achieve this by version-controlling infrastructure, automating deployments, separating environments properly, and limiting console interventions. By applying these principles, teams can create a platform where developers can move fast without breaking things, and where infrastructure supports innovation rather than slowing it down.
 
 <!--more-->
 {{% notes type="warning" %}}
@@ -29,6 +29,9 @@ Let’s explore how platform engineering teams can achieve this by version-contr
 * **Copy-Paste Config:** Reusing half-baked snippets across projects creates cruft. Break out shared modules or templates.
 * **No Clear File Structure:** Throwing all configs into a single file or folder obscures dependencies. Organize by environment, service, or module.
 * **Skipping Peer Reviews:** Infrastructure mistakes can be costly. A simple pull request process can catch errors before deployment.
+
+#### 💡 Tip: Read our list of [IaC Best Practices](/blog/iac-recommended-practices-code-organization-and-stacks/) 💡
+
 {{% /notes %}}
 
 ## Building a reliable IaC foundation
@@ -96,7 +99,7 @@ IAM roles are one of the most commonly misconfigured AWS resources, making them 
 3. **Directly Attaching Policies to Users** – Instead of assigning roles to groups, users might manually attach policies, leading to hard-to-audit permission structures.
 4. **Lack of Naming Conventions & Tagging** – Unstructured role names and missing tags make governance difficult.
 
-#### **How a reusable IAM module fixes this**
+#### How a reusable IAM module fixes this
 
 A platform team can provide a self-service IAM role module that enforces best practices while still allowing customization. This module would:
 
@@ -128,29 +131,19 @@ The classic [DORA metrics](https://dora.dev/guides/dora-metrics-four-keys/) focu
 
 ## Common roadblocks
 
-Adopting Infrastructure as Code helps teams automate provisioning, but common pitfalls can slow progress before they see results. Left unaddressed, problems hidden configuration tweaks, scattered code, or reliance on a single “infrastructure hero” make it hard to keep environments consistent and secure.
+Adopting Infrastructure as Code helps teams automate provisioning, but common pitfalls can slow progress before they see results. Left unaddressed, problems hidden configuration tweaks, scattered code, or reliance on a single "infrastructure hero" make it hard to keep environments consistent and secure.
 
 By spotting these roadblocks early, teams can build a stronger foundation for a repeatable, collaborative IaC workflow.
 
-### Knowledge silos
+* **Knowledge silos:** Relying on just one person ("Go ask Sarah") for all infrastructure tasks creates a risky bottleneck. The broader team can't replicate or improve the process, slowing new initiatives and leaving you vulnerable if that individual is out of office or leaves the company. Moving to a collaborative, version-controlled IaC model ensures that no single engineer is a gatekeeper for new environments or configuration changes.
 
-Relying on just one person (“Go ask Sarah”) for all infrastructure tasks creates a risky bottleneck. The broader team can’t replicate or improve the process, slowing new initiatives and leaving you vulnerable if that individual is out of office or leaves the company. Moving to a collaborative, version-controlled IaC model ensures that no single engineer is a gatekeeper for new environments or configuration changes.
+* **Overly complex or unstructured IaC:** Bloated or disorganized infrastructure code leads to confusion, duplication, and frequent errors. Engineers might copy-paste configurations from previous projects or cram all resources into a single file. By refactoring IaC into smaller modules, adopting a clear folder structure, and removing dead code, teams gain consistency and accelerate ramp-up times for new services.
 
-### Overly complex or unstructured IaC
+* **Learning curves:** Teams new to IaC often encounter a steep learning curve. There is initially a lot to learn, and resistance from people used to quickly working through cloud UI can slow down full adoption. But time invested in learning tools and setting cultural norms pay off in agility and a platform strategy with guidance and golden paths can help reduce the burden.
 
-Bloated or disorganized infrastructure code leads to confusion, duplication, and frequent errors. Engineers might copy-paste configurations from previous projects or cram all resources into a single file. By refactoring IaC into smaller modules, adopting a clear folder structure, and removing dead code, teams gain consistency and accelerate ramp-up times for new services.
+* **Cultural inertia:** The adoption of a platform engineering approach is a shift in how organizations manage infrastructure, and like all, change is not merely technical but also organizational. Resistance to change and organizational inertia can make it difficult to implement new ways of getting work done. Expecting, understanding, and working through this resistance is key to overcoming it.
 
-### Learning curves
-
-Teams new to IaC often encounter a steep learning curve. There is initially a lot to learn, and resistance from people used to quickly working through cloud UI can slow down full adoption. But time invested in learning tools and setting cultural norms pay off in agility and a platform strategy with guidance and golden paths can help reduce the burden.
-
-### Cultural inertia
-
-The adoption of a platform engineering approach is a shift in how organizations manage infrastructure, and like all, change is not merely technical but also organizational. Resistance to change and organizational inertia can make it difficult to implement new ways of getting work done. Expecting, understanding, and working through this resistance is key to overcoming it.
-
-### Lack of comprehensive approach
-
-IaC tools are great for provisioning, but without a full platform approach, covering monitoring, logging, and the full life cycle of cloud resources, provisioning efforts may fall short. We will see in this series how the pillars of a comprehensive approach strengthen themselves.
+* **Lack of comprehensive approach:** IaC tools are great for provisioning, but without a full platform approach, covering monitoring, logging, and the full life cycle of cloud resources, provisioning efforts may fall short. We will see in this series how the pillars of a comprehensive approach strengthen themselves.
 
 These roadblocks highlight why a thoughtful, well-structured approach to provisioning is essential.  But that’s not enough because the next step is to make these consistent patterns easily accessible so teams can spin up entire services without starting from scratch.  And that’s where “golden path” templates come in.
 
@@ -177,7 +170,7 @@ Think of service templates as the next step up from the reusable components we d
 
 Beyond bundling your organization’s best practices into a single repository, these service templates can also include a preconfigured CI/CD pipeline.
 
-This means that when a team spins up a new service from the template, they inherit not just the infrastructure modules and best-practice configurations, but a fully operational CI/CD workflow. No extra setup is required—developers get immediate feedback on their changes, and the merge to main triggers automatic deployments that keep every environment consistent.
+This means that when a team spins up a new service from the template, they inherit not just the infrastructure modules and best-practice configurations, but a fully operational CI/CD workflow. No extra setup is required. Developers get immediate feedback on their changes, and the merge to main triggers automatic deployments that keep every environment consistent.
 
 Instead of cobbling together snippets from old repos, teams can scaffold out a service by simply selecting the template that fits their need – whether it’s a containerized web app, a serverless function, or a data-processing pipeline – and providing a few key parameters.
 
@@ -209,4 +202,4 @@ Reliable infrastructure provisioning is the cornerstone that supports your entir
 
 But provisioning alone isn’t enough. In upcoming articles, we’ll explore how policy-as-code and broader governance tie into this foundation, ensuring that all those newly created services meet security and compliance standards from the moment they’re deployed. But first, we’ll look at expanding the provisioning foundation covered here into a true self-service platform, so teams can quickly spin up services without risking the organizational chaos that often accompanies speed.
 
-Provisioning is the foundation – next we’ll build on it.
+Provisioning is the foundation – [next in this series](/blog/tag/platform-engineering-pillars/) we’ll build on it.
