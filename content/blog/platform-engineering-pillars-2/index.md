@@ -8,11 +8,12 @@ authors:
     - adam-gordon-bell
 tags:
     - platform-engineering
+    - platform-engineering-pillars
 social:
     twitter:
     linkedin:
 ---
-Provisioning is the first pillar of platform engineering. Without consistent infrastructure provisioning – the automated creation and management of the underlying cloud resources – the rest of the platform suffers. Self-service, governance, and streamlined developer workflows all depend on it. Ultimately, a self-service layer on top of your cloud infrastructure is the goal, enabling developers to quickly and safely provision the resources they need, while adhering to organizational best practices and policies. But before self-service, the foundation of a good IDP is a robust and reliable provisioning system.
+Provisioning is the first [pillar of platform engineering](/blog/tag/platform-engineering-pillars/). Without consistent infrastructure provisioning – the automated creation and management of the underlying cloud resources – the rest of the platform suffers. Self-service, governance, and streamlined developer workflows all depend on it. Ultimately, a self-service layer on top of your cloud infrastructure is the goal, enabling developers to quickly and safely provision the resources they need, while adhering to organizational best practices and policies. But before self-service, the foundation of a good IDP is a robust and reliable provisioning system.
 
 By defining cloud resources as code and automating deployments, platform engineering teams ensure every environment – development, staging, and production – stays consistent and maintainable. This cuts down on configuration drift, reduces manual work, and supports auditable, collaborative workflows for every change.
 
@@ -68,21 +69,21 @@ Not all environments have the same requirements or budgets, so it’s wise to se
 
 A key principle of effective IaC, and a cornerstone of any good Internal Developer Platform, is reusability. You shouldn't be copying and pasting large chunks of infrastructure code. Instead, you should build reusable components (or modules, or constructs, depending on the tool's terminology) that encapsulate best practices and can be easily consumed by developers. This achieves several critical goals:
 
-* Consistency: Ensures that similar resources are provisioned in the same way, reducing configuration drift.
-* Abstraction: Hides complexity from developers. They don't need to know how a secure, compliant database is created, just that it is.
-* Maintainability: Changes to the underlying implementation of a component can be rolled out to all consumers of that component.
-* Speed: Developers can provision infrastructure faster by using pre-built components.
-* Reduced Errors: Standard components means that there will be less opportunities to make mistakes.
+* **Consistency:** Ensures that similar resources are provisioned in the same way, reducing configuration drift.
+* **Abstraction:** Hides complexity from developers. They don't need to know how a secure, compliant database is created, just that it is.
+* **Maintainability:** Changes to the underlying implementation of a component can be rolled out to all consumers of that component.
+* **Speed:** Developers can provision infrastructure faster by using pre-built components.
+* **Reduced Errors:** Standard components means that there will be less opportunities to make mistakes.
 
 Think of these reusable components as the "building blocks" of your IDP. Your platform team creates and maintains them, and developers use them to assemble their applications.
 
 Regardless of the specific IaC tool you choose, reusable components generally share these characteristics:
 
-* Parameterized Inputs: Components accept inputs (parameters, properties, configuration – the term varies) that allow users to customize their behavior. For example, a "database" component might accept a database_size parameter.
-* Defined Outputs: Components expose outputs that other parts of the infrastructure can consume. For example, a "database" component might output the database's connection string.
-* Encapsulation: The internal implementation details of the component are hidden from the consumer. The consumer interacts with a well-defined interface (inputs and outputs).
-* Versioned: Components should be versioned (e.g., using semantic versioning) to allow for controlled updates and rollbacks.
-* Discoverable: Components should be easily discoverable by developers, often through a central catalog or registry.
+* **Parameterized Inputs:** Components accept inputs (parameters, properties, configuration – the term varies) that allow users to customize their behavior. For example, a "database" component might accept a database_size parameter.
+* **Defined Outputs:** Components expose outputs that other parts of the infrastructure can consume. For example, a "database" component might output the database's connection string.
+* **Encapsulation:** The internal implementation details of the component are hidden from the consumer. The consumer interacts with a well-defined interface (inputs and outputs).
+* **Versioned:** Components should be versioned (e.g., using semantic versioning) to allow for controlled updates and rollbacks.
+* **Discoverable:** Components should be easily discoverable by developers, often through a central catalog or registry.
 
 ### Example: An IAM roles component
 
@@ -117,7 +118,7 @@ But first, let's cover some metrics and roadblocks.
 
 ### Metrics that matter
 
-The classic DORA metrics focus on software delivery. Adapting and modifying them for infrastructure provisioning can help measure how effectively your platform delivers reliable, self-service cloud resources:
+The classic [DORA metrics](https://dora.dev/guides/dora-metrics-four-keys/) focus on software delivery. Adapting and modifying them for infrastructure provisioning can help measure how effectively your platform delivers reliable, self-service cloud resources:
 
 * **Lead Time for Infrastructure Changes:** How fast does a merged PR turn into running infrastructure? Shorter indicates efficient automation and fewer manual steps.
 * **Infrastructure Drift Frequency:** Are developers constantly making console tweaks, or does your infrastructure stay in sync with code? A low drift rate means your code and actual resources stay aligned.
