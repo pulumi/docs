@@ -9,53 +9,42 @@
                 {{ $authorData := index $.Site.Data.team.team .Data.Term }}
                 {{ $blogPosts := where .Data.Pages "Section" "blog" }}
                 
-                {{ if eq .Data.Term "platform-engineering-pillars" }}
-                    <!-- For platform-engineering-pillars, show in chronological order -->
+                <!-- List of tags that should be displayed in chronological order (oldest first) -->
+                {{ $chronologicalTags := slice "platform-engineering-pillars" }}
+                
+                <!-- Conditionally set sort order but keep everything else the same -->
+                {{ if in $chronologicalTags .Data.Term }}
+                    <!-- Chronological order (oldest first) -->
+                    {{ $blogPosts := where .Data.Pages "Section" "blog" }}
                     {{ $paginator := .Paginate $blogPosts.ByDate }}
-                    
-                    <header class="mb-12 pb-6 border-b border-gray-200">
-                        <h1 class="no-anchor text-4xl font-bold mb-4">
-                            Platform Engineering Pillars
+
+                    <header>
+                        <h1 class="no-anchor">
+                            Posts Tagged
+                            <span class="text-blue-600">
+                                {{ .Data.Term | lower }}
+                            </span>
                         </h1>
-                        <p class="text-xl text-gray-600 mb-6">A comprehensive guide to building successful internal developer platforms.</p>
-                        <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
-                            <h2 class="text-lg font-semibold mb-3">In this series:</h2>
-                            <ol class="list-decimal list-inside space-y-2">
-                                <li>Introduction to Platform Engineering Pillars</li>
-                                <li>Infrastructure Provisioning</li>
-                                <li>Policy and Governance</li>
-                                <li>Self-Service Developer Experience</li>
-                                <li>Observability and Monitoring</li>
-                                <li>Cost Management and Optimization</li>
-                            </ol>
-                        </div>
                     </header>
-                    
-                    {{ $count := 0 }}
+
                     {{ range $paginator.Pages }}
-                        {{ $count = add $count 1 }}
                         <article class="my-8 pb-8 border-b border-gray-200">
-                            <div class="flex items-center text-sm text-gray-600 mb-2">
-                                <span class="mr-3">Part {{ $count }}</span>
+                            <h2><a data-track="{{ .Title | urlize }}" href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+                            <div class="flex items-center">
                                 <time>
-                                    {{ .Date.Format "January 2, 2006" }}
+                                    {{ .Date.Format "Monday, Jan 2, 2006" }}
                                 </time>
                             </div>
-                            <h2 class="text-2xl font-bold mb-4"><a data-track="{{ .Title | urlize }}" href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
                             <section>
                                 {{ partial "blog/poster" . }}
-                                <div class="prose max-w-none mt-4">
-                                    {{ partial "blog/summary" . }}
-                                </div>
-                                <div class="mt-4">
-                                    <a href="{{ .RelPermalink }}" class="text-blue-600 hover:text-blue-800 font-medium">Read more →</a>
-                                </div>
+                                {{ partial "blog/summary" . }}
                             </section>
                         </article>
                     {{ end }}
                 {{ else }}
+                    <!-- Default reverse chronological order (newest first) -->
+                    {{ $blogPosts := where .Data.Pages "Section" "blog" }}
                     {{ $paginator := .Paginate $blogPosts.ByDate.Reverse }}
-
 
                     <header>
                         <h1 class="no-anchor">
